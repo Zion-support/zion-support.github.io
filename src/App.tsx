@@ -12,7 +12,7 @@ import { AccessibilityEnhancer } from './components/AccessibilityEnhancer';
 // Lazy load pages - only import existing ones
 const Home = React.lazy(() => import('./pages/Home'));
 const About = React.lazy(() => import('./pages/About'));
-const Contact = React.lazy(() => import('./pages/Contact'));
+
 const Blog = React.lazy(() => import('./pages/Blog'));
 const BlogPost = React.lazy(() => import('./pages/BlogPost'));
 const Services = React.lazy(() => import('./pages/Services'));
@@ -46,7 +46,7 @@ const RevolutionaryServices2030 = React.lazy(() => import('./pages/Revolutionary
 const InnovativeServicesShowcase2027 = React.lazy(() => import('./pages/InnovativeServicesShowcase2027'));
 const ComprehensivePricingGuide2027 = React.lazy(() => import('./pages/ComprehensivePricingGuide2027'));
 const ComprehensiveServicesLanding2027 = React.lazy(() => import('./pages/ComprehensiveServicesLanding2027'));
-const InnovativeServices2025 = React.lazy(() => import('./pages/InnovativeServices2025'));
+
 const ComprehensivePricingGuide2025 = React.lazy(() => import('./pages/ComprehensivePricingGuide2025'));
 const ComprehensivePricingGuide2030 = React.lazy(() => import('./pages/ComprehensivePricingGuide2030'));
 const ComprehensiveServicesLanding2025 = React.lazy(() => import('./pages/ComprehensiveServicesLanding2025'));
@@ -119,7 +119,7 @@ function App() {
                 <Route path="/innovative-micro-saas-services-2025" element={<InnovativeMicroSAASServices2025 />} />
                 <Route path="/innovative-services-showcase-2027" element={<InnovativeServicesShowcase2027 />} />
                 <Route path="/comprehensive-services-landing-2027" element={<ComprehensiveServicesLanding2027 />} />
-                <Route path="/services/innovative-2025" element={<InnovativeServices2025 />} />
+
                 <Route path="/schedule-demo" element={<ScheduleDemo />} />
                 <Route path="/community" element={<Community />} />
                 <Route path="/developers" element={<Developers />} />

@@ -1,626 +1,748 @@
-import { ProductListing } from "@/types/listings";
+// Comprehensive Pricing Guide 2027 - Zion Tech Group
+// Complete pricing information for all innovative micro SAAS services
 
-export const COMPREHENSIVE_PRICING_GUIDE_2027: ProductListing[] = [
-  // AI-Powered Micro SAAS Services
+export interface PricingTier {
+  name: string;
+  price: number;
+  billingCycle: string;
+  features: string[];
+  limitations: string[];
+  recommendedFor: string[];
+  savings?: string;
+  popular?: boolean;
+}
+
+export interface ServicePricing {
+  serviceId: number;
+  serviceName: string;
+  category: string;
+  description: string;
+  pricingTiers: PricingTier[];
+  marketPrice: string;
+  competitors: string[];
+  roi: string;
+  setupTime: string;
+  freeTier: boolean;
+  trialPeriod: string;
+  contactInfo: ServiceContact;
+}
+
+export interface ServiceContact {
+  phone: string;
+  email: string;
+  website: string;
+  address: string;
+}
+
+// Zion Tech Group Contact Information
+const zionContact: ServiceContact = {
+  phone: "+1 302 464 0950",
+  email: "kleber@ziontechgroup.com",
+  website: "https://ziontechgroup.com",
+  address: "364 E Main St STE 1008 Middletown DE 19709"
+};
+
+export const COMPREHENSIVE_PRICING_GUIDE_2027: ServicePricing[] = [
   {
-    id: "ai-autonomous-code-reviewer",
-    title: "AI Autonomous Code Reviewer & Quality Assurance Platform",
-    description: "Advanced AI-powered code review system that automatically analyzes code quality, identifies security vulnerabilities, suggests optimizations, and enforces coding standards across multiple programming languages.",
-    category: "AI Development",
-    subcategory: "Code Quality",
-    price: 2999,
-    currency: "$",
-    tags: ["AI Code Review", "Security Analysis", "Code Quality", "Automation", "Multi-language Support"],
-    author: { name: "Zion Tech Group", id: "zion-tech-group", email: "kleber@ziontechgroup.com", avatarUrl: "https://ziontechgroup.com/logo.png" },
-    images: ["https://ziontechgroup.com/images/ai-code-reviewer.jpg"],
-    createdAt: "2024-01-15T10:00:00.000Z",
-    rating: 4.9,
-    reviewCount: 234,
-    featured: true,
-    location: "Global",
-    availability: "2-3 Weeks",
-    aiScore: 98,
-    contactInfo: {
-      phone: "+1 302 464 0950",
-      email: "kleber@ziontechgroup.com",
-      website: "https://ziontechgroup.com/ai-code-reviewer",
-      address: "364 E Main St STE 1008 Middletown DE 19709"
-    },
-    marketPrice: "$2,500-5,000",
-    competitors: ["SonarQube", "CodeClimate", "DeepCode"],
-    roi: "400% within 4 months",
-    setupTime: "2-3 weeks",
-    integrations: ["GitHub", "GitLab", "Bitbucket", "Azure DevOps", "Jira", "Slack"]
+    serviceId: 1,
+    serviceName: "AI-Powered Legal Document Analyzer",
+    category: "Legal Technology",
+    description: "Advanced AI platform that analyzes legal documents, contracts, and agreements to identify risks, compliance issues, and optimization opportunities",
+    pricingTiers: [
+      {
+        name: "Starter",
+        price: 99,
+        billingCycle: "monthly",
+        features: [
+          "Document analysis (up to 50/month)",
+          "Basic risk assessment",
+          "Compliance checking",
+          "Email support",
+          "Standard integrations"
+        ],
+        limitations: [
+          "Limited document types",
+          "Basic reporting",
+          "No collaboration tools"
+        ],
+        recommendedFor: ["Small law firms", "Individual lawyers", "Startups"]
+      },
+      {
+        name: "Professional",
+        price: 299,
+        billingCycle: "monthly",
+        features: [
+          "Document analysis (unlimited)",
+          "Advanced risk assessment",
+          "Compliance monitoring",
+          "Contract optimization",
+          "Collaboration tools",
+          "Priority support",
+          "Advanced integrations"
+        ],
+        limitations: [
+          "No custom AI training",
+          "Limited API access"
+        ],
+        recommendedFor: ["Medium law firms", "Corporate legal departments", "Growing businesses"],
+        popular: true
+      },
+      {
+        name: "Enterprise",
+        price: 599,
+        billingCycle: "monthly",
+        features: [
+          "Everything in Professional",
+          "Custom AI training",
+          "Full API access",
+          "White-label options",
+          "Dedicated support",
+          "Custom integrations",
+          "Advanced analytics"
+        ],
+        limitations: [],
+        recommendedFor: ["Large law firms", "Enterprise legal teams", "Government agencies"],
+        savings: "Save 20% with annual billing"
+      }
+    ],
+    marketPrice: "$500-800/month",
+    competitors: ["DocuSign", "ContractPodAi", "Evisort"],
+    roi: "300-500% within 6 months",
+    setupTime: "2-3 business days",
+    freeTier: true,
+    trialPeriod: "14 days",
+    contactInfo: zionContact
   },
   {
-    id: "ai-powered-seo-optimization",
-    title: "AI-Powered SEO Optimization & Content Strategy Platform",
-    description: "Intelligent SEO platform that uses machine learning to analyze search trends, optimize content, track rankings, and provide actionable insights for improving search engine visibility and organic traffic.",
-    category: "Digital Marketing",
-    subcategory: "SEO",
-    price: 1999,
-    currency: "$",
-    tags: ["AI SEO", "Content Optimization", "Ranking Tracking", "Keyword Research", "Analytics"],
-    author: { name: "Zion Tech Group", id: "zion-tech-group", email: "kleber@ziontechgroup.com", avatarUrl: "https://ziontechgroup.com/logo.png" },
-    images: ["https://ziontechgroup.com/images/ai-seo-platform.jpg"],
-    createdAt: "2024-01-20T10:00:00.000Z",
-    rating: 4.8,
-    reviewCount: 156,
-    featured: true,
-    location: "Global",
-    availability: "1-2 Weeks",
-    aiScore: 95,
-    contactInfo: {
-      phone: "+1 302 464 0950",
-      email: "kleber@ziontechgroup.com",
-      website: "https://ziontechgroup.com/ai-seo-platform",
-      address: "364 E Main St STE 1008 Middletown DE 19709"
-    },
-    marketPrice: "$1,500-3,500",
-    competitors: ["Ahrefs", "SEMrush", "Moz Pro"],
-    roi: "350% within 6 months",
+    serviceId: 2,
+    serviceName: "AI Supply Chain Optimization Platform",
+    category: "Supply Chain Management",
+    description: "Intelligent supply chain platform that uses AI to predict demand, optimize inventory, reduce costs, and improve supplier relationships",
+    pricingTiers: [
+      {
+        name: "Basic",
+        price: 199,
+        billingCycle: "monthly",
+        features: [
+          "Demand forecasting",
+          "Basic inventory optimization",
+          "Supplier analytics",
+          "Email support",
+          "Standard reports"
+        ],
+        limitations: [
+          "Up to 1000 SKUs",
+          "Basic integrations",
+          "Limited customization"
+        ],
+        recommendedFor: ["Small retailers", "Startup e-commerce", "Local businesses"]
+      },
+      {
+        name: "Professional",
+        price: 599,
+        billingCycle: "monthly",
+        features: [
+          "Everything in Basic",
+          "Advanced inventory optimization",
+          "Real-time tracking",
+          "Risk assessment",
+          "Sustainability metrics",
+          "Priority support",
+          "Advanced integrations"
+        ],
+        limitations: [
+          "Up to 10,000 SKUs",
+          "No custom AI models"
+        ],
+        recommendedFor: ["Medium retailers", "Manufacturing companies", "Distribution centers"],
+        popular: true
+      },
+      {
+        name: "Enterprise",
+        price: 1299,
+        billingCycle: "monthly",
+        features: [
+          "Everything in Professional",
+          "Unlimited SKUs",
+          "Custom AI models",
+          "Full API access",
+          "White-label options",
+          "Dedicated support",
+          "Custom integrations"
+        ],
+        limitations: [],
+        recommendedFor: ["Large retailers", "Global manufacturers", "Logistics providers"],
+        savings: "Save 25% with annual billing"
+      }
+    ],
+    marketPrice: "$800-1200/month",
+    competitors: ["SAP", "Oracle", "Blue Yonder"],
+    roi: "400-600% within 8 months",
     setupTime: "1-2 weeks",
-    integrations: ["Google Analytics", "Google Search Console", "WordPress", "Shopify", "HubSpot"]
+    freeTier: false,
+    trialPeriod: "30 days",
+    contactInfo: zionContact
   },
   {
-    id: "ai-customer-support-automation",
-    title: "AI Customer Support Automation & Chatbot Platform",
-    description: "Intelligent customer support automation system with AI chatbots, ticket routing, sentiment analysis, and automated responses that reduce support costs while improving customer satisfaction.",
-    category: "Customer Service",
-    subcategory: "Automation",
-    price: 2499,
-    currency: "$",
-    tags: ["AI Chatbot", "Support Automation", "Ticket Management", "Sentiment Analysis", "24/7 Support"],
-    author: { name: "Zion Tech Group", id: "zion-tech-group", email: "kleber@ziontechgroup.com", avatarUrl: "https://ziontechgroup.com/logo.png" },
-    images: ["https://ziontechgroup.com/images/ai-support-automation.jpg"],
-    createdAt: "2024-01-25T10:00:00.000Z",
-    rating: 4.7,
-    reviewCount: 189,
-    featured: true,
-    location: "Global",
-    availability: "2-3 Weeks",
-    aiScore: 94,
-    contactInfo: {
-      phone: "+1 302 464 0950",
-      email: "kleber@ziontechgroup.com",
-      website: "https://ziontechgroup.com/ai-support-automation",
-      address: "364 E Main St STE 1008 Middletown DE 19709"
-    },
-    marketPrice: "$2,000-4,500",
-    competitors: ["Zendesk", "Intercom", "Freshdesk"],
-    roi: "300% within 5 months",
-    setupTime: "2-3 weeks",
-    integrations: ["Slack", "Microsoft Teams", "Zapier", "Salesforce", "HubSpot", "Shopify"]
-  },
-  {
-    id: "ai-financial-analytics-platform",
-    title: "AI Financial Analytics & Predictive Modeling Platform",
-    description: "Advanced financial analytics platform that uses machine learning to analyze financial data, predict market trends, identify investment opportunities, and provide risk assessment for businesses and investors.",
-    category: "Financial Technology",
-    subcategory: "Analytics",
-    price: 3999,
-    currency: "$",
-    tags: ["Financial Analytics", "Predictive Modeling", "Risk Assessment", "Investment Analysis", "Market Trends"],
-    author: { name: "Zion Tech Group", id: "zion-tech-group", email: "kleber@ziontechgroup.com", avatarUrl: "https://ziontechgroup.com/logo.png" },
-    images: ["https://ziontechgroup.com/images/ai-financial-analytics.jpg"],
-    createdAt: "2024-01-30T10:00:00.000Z",
-    rating: 4.9,
-    reviewCount: 98,
-    featured: true,
-    location: "Global",
-    availability: "4-5 Weeks",
-    aiScore: 97,
-    contactInfo: {
-      phone: "+1 302 464 0950",
-      email: "kleber@ziontechgroup.com",
-      website: "https://ziontechgroup.com/ai-financial-analytics",
-      address: "364 E Main St STE 1008 Middletown DE 19709"
-    },
-    marketPrice: "$3,500-7,000",
-    competitors: ["Bloomberg Terminal", "Refinitiv", "FactSet"],
-    roi: "500% within 8 months",
-    setupTime: "4-5 weeks",
-    integrations: ["Bloomberg API", "Reuters API", "Excel", "Tableau", "Power BI", "Salesforce"]
-  },
-  {
-    id: "ai-marketing-automation-suite",
-    title: "AI Marketing Automation & Campaign Optimization Suite",
-    description: "Comprehensive marketing automation platform that uses AI to optimize email campaigns, social media posts, ad targeting, and customer segmentation for maximum ROI and engagement.",
-    category: "Digital Marketing",
-    subcategory: "Automation",
-    price: 3499,
-    currency: "$",
-    tags: ["Marketing Automation", "Campaign Optimization", "Email Marketing", "Social Media", "Ad Targeting"],
-    author: { name: "Zion Tech Group", id: "zion-tech-group", email: "kleber@ziontechgroup.com", avatarUrl: "https://ziontechgroup.com/logo.png" },
-    images: ["https://ziontechgroup.com/images/ai-marketing-automation.jpg"],
-    createdAt: "2024-02-05T10:00:00.000Z",
-    rating: 4.8,
-    reviewCount: 167,
-    featured: true,
-    location: "Global",
-    availability: "3-4 Weeks",
-    aiScore: 96,
-    contactInfo: {
-      phone: "+1 302 464 0950",
-      email: "kleber@ziontechgroup.com",
-      website: "https://ziontechgroup.com/ai-marketing-automation",
-      address: "364 E Main St STE 1008 Middletown DE 19709"
-    },
-    marketPrice: "$3,000-6,000",
-    competitors: ["HubSpot", "Marketo", "Pardot"],
-    roi: "400% within 6 months",
-    setupTime: "3-4 weeks",
-    integrations: ["Salesforce", "HubSpot", "Mailchimp", "Facebook Ads", "Google Ads", "LinkedIn Ads"]
-  },
-  {
-    id: "ai-project-management-intelligence",
-    title: "AI Project Management Intelligence & Resource Optimization Platform",
-    description: "Smart project management platform that uses AI to predict project timelines, optimize resource allocation, identify potential risks, and provide real-time insights for better decision-making.",
-    category: "Project Management",
-    subcategory: "AI Intelligence",
-    price: 2799,
-    currency: "$",
-    tags: ["Project Management", "Resource Optimization", "Risk Assessment", "Timeline Prediction", "Team Collaboration"],
-    author: { name: "Zion Tech Group", id: "zion-tech-group", email: "kleber@ziontechgroup.com", avatarUrl: "https://ziontechgroup.com/logo.png" },
-    images: ["https://ziontechgroup.com/images/ai-project-management.jpg"],
-    createdAt: "2024-02-10T10:00:00.000Z",
-    rating: 4.7,
-    reviewCount: 145,
-    featured: true,
-    location: "Global",
-    availability: "2-3 Weeks",
-    aiScore: 93,
-    contactInfo: {
-      phone: "+1 302 464 0950",
-      email: "kleber@ziontechgroup.com",
-      website: "https://ziontechgroup.com/ai-project-management",
-      address: "364 E Main St STE 1008 Middletown DE 19709"
-    },
-    marketPrice: "$2,500-5,000",
-    competitors: ["Asana", "Monday.com", "ClickUp"],
-    roi: "350% within 5 months",
-    setupTime: "2-3 weeks",
-    integrations: ["Slack", "Microsoft Teams", "Jira", "Trello", "Notion", "Google Workspace"]
-  },
-  {
-    id: "ai-supply-chain-optimization",
-    title: "AI Supply Chain Optimization & Demand Forecasting Platform",
-    description: "Intelligent supply chain management platform that uses machine learning to optimize inventory levels, predict demand, reduce costs, and improve supply chain efficiency for manufacturing and retail businesses.",
-    category: "Supply Chain",
-    subcategory: "Optimization",
-    price: 4499,
-    currency: "$",
-    tags: ["Supply Chain", "Demand Forecasting", "Inventory Optimization", "Cost Reduction", "Efficiency"],
-    author: { name: "Zion Tech Group", id: "zion-tech-group", email: "kleber@ziontechgroup.com", avatarUrl: "https://ziontechgroup.com/logo.png" },
-    images: ["https://ziontechgroup.com/images/ai-supply-chain.jpg"],
-    createdAt: "2024-02-15T10:00:00.000Z",
-    rating: 4.9,
-    reviewCount: 78,
-    featured: true,
-    location: "Global",
-    availability: "5-6 Weeks",
-    aiScore: 96,
-    contactInfo: {
-      phone: "+1 302 464 0950",
-      email: "kleber@ziontechgroup.com",
-      website: "https://ziontechgroup.com/ai-supply-chain",
-      address: "364 E Main St STE 1008 Middletown DE 19709"
-    },
-    marketPrice: "$4,000-8,000",
-    competitors: ["SAP", "Oracle", "Manhattan Associates"],
-    roi: "450% within 10 months",
-    setupTime: "5-6 weeks",
-    integrations: ["SAP", "Oracle", "NetSuite", "QuickBooks", "Shopify", "WooCommerce"]
-  },
-  {
-    id: "ai-content-marketing-suite",
-    title: "AI Content Marketing Suite & Creative Intelligence Platform",
-    description: "Comprehensive content marketing platform that uses AI to generate content ideas, optimize headlines, analyze performance, and provide creative insights for better content strategy and engagement.",
-    category: "Content Marketing",
-    subcategory: "AI Intelligence",
-    price: 1999,
-    currency: "$",
-    tags: ["Content Marketing", "Content Generation", "Performance Analytics", "Creative Intelligence", "SEO Optimization"],
-    author: { name: "Zion Tech Group", id: "zion-tech-group", email: "kleber@ziontechgroup.com", avatarUrl: "https://ziontechgroup.com/logo.png" },
-    images: ["https://ziontechgroup.com/images/ai-content-marketing.jpg"],
-    createdAt: "2024-02-20T10:00:00.000Z",
-    rating: 4.8,
-    reviewCount: 134,
-    featured: true,
-    location: "Global",
-    availability: "1-2 Weeks",
-    aiScore: 95,
-    contactInfo: {
-      phone: "+1 302 464 0950",
-      email: "kleber@ziontechgroup.com",
-      website: "https://ziontechgroup.com/ai-content-marketing",
-      address: "364 E Main St STE 1008 Middletown DE 19709"
-    },
-    marketPrice: "$1,500-3,500",
-    competitors: ["Grammarly", "Jasper", "Copy.ai"],
-    roi: "300% within 4 months",
-    setupTime: "1-2 weeks",
-    integrations: ["WordPress", "Medium", "LinkedIn", "Facebook", "Twitter", "Google Docs"]
-  },
-  {
-    id: "ai-quantum-hybrid-platform",
-    title: "AI-Quantum Hybrid Computing & Optimization Platform",
-    description: "Revolutionary platform that combines AI and quantum computing to solve complex optimization problems, perform advanced simulations, and accelerate machine learning tasks for research and enterprise applications.",
-    category: "Quantum Computing",
-    subcategory: "AI Integration",
-    price: 8999,
-    currency: "$",
-    tags: ["Quantum Computing", "AI Integration", "Optimization", "Simulation", "Machine Learning"],
-    author: { name: "Zion Tech Group", id: "zion-tech-group", email: "kleber@ziontechgroup.com", avatarUrl: "https://ziontechgroup.com/logo.png" },
-    images: ["https://ziontechgroup.com/images/ai-quantum-hybrid.jpg"],
-    createdAt: "2024-02-25T10:00:00.000Z",
-    rating: 4.9,
-    reviewCount: 45,
-    featured: true,
-    location: "Global",
-    availability: "8-10 Weeks",
-    aiScore: 99,
-    contactInfo: {
-      phone: "+1 302 464 0950",
-      email: "kleber@ziontechgroup.com",
-      website: "https://ziontechgroup.com/ai-quantum-hybrid",
-      address: "364 E Main St STE 1008 Middletown DE 19709"
-    },
-    marketPrice: "$8,000-15,000",
-    competitors: ["IBM Quantum", "Google Quantum", "Microsoft Azure Quantum"],
-    roi: "600% within 12 months",
-    setupTime: "8-10 weeks",
-    integrations: ["IBM Quantum", "Google Quantum", "Microsoft Azure", "AWS", "Python", "Jupyter"]
-  },
-  {
-    id: "ai-cybersecurity-intelligence",
-    title: "AI Cybersecurity Intelligence & Threat Prevention Platform",
-    description: "Advanced cybersecurity platform that uses artificial intelligence to detect, prevent, and respond to cyber threats in real-time, providing comprehensive protection for businesses and organizations.",
-    category: "Cybersecurity",
-    subcategory: "AI Intelligence",
-    price: 5499,
-    currency: "$",
-    tags: ["Cybersecurity", "Threat Detection", "AI Security", "Real-time Protection", "Incident Response"],
-    author: { name: "Zion Tech Group", id: "zion-tech-group", email: "kleber@ziontechgroup.com", avatarUrl: "https://ziontechgroup.com/logo.png" },
-    images: ["https://ziontechgroup.com/images/ai-cybersecurity.jpg"],
-    createdAt: "2024-03-01T10:00:00.000Z",
-    rating: 4.9,
-    reviewCount: 89,
-    featured: true,
-    location: "Global",
-    availability: "6-7 Weeks",
-    aiScore: 97,
-    contactInfo: {
-      phone: "+1 302 464 0950",
-      email: "kleber@ziontechgroup.com",
-      website: "https://ziontechgroup.com/ai-cybersecurity",
-      address: "364 E Main St STE 1008 Middletown DE 19709"
-    },
-    marketPrice: "$5,000-10,000",
-    competitors: ["CrowdStrike", "SentinelOne", "Darktrace"],
-    roi: "500% within 8 months",
-    setupTime: "6-7 weeks",
-    integrations: ["SIEM Systems", "EDR Solutions", "Firewall Management", "Cloud Security", "Identity Management"]
-  },
-  {
-    id: "ai-healthcare-diagnostics",
-    title: "AI Healthcare Diagnostics & Medical Imaging Analysis Platform",
-    description: "Revolutionary healthcare platform that uses AI to analyze medical images, assist in diagnosis, predict patient outcomes, and improve healthcare decision-making for medical professionals.",
+    serviceId: 3,
+    serviceName: "AI Healthcare Analytics Platform",
     category: "Healthcare Technology",
-    subcategory: "AI Diagnostics",
-    price: 6999,
-    currency: "$",
-    tags: ["Healthcare", "Medical Imaging", "AI Diagnostics", "Patient Care", "Medical Analysis"],
-    author: { name: "Zion Tech Group", id: "zion-tech-group", email: "kleber@ziontechgroup.com", avatarUrl: "https://ziontechgroup.com/logo.png" },
-    images: ["https://ziontechgroup.com/images/ai-healthcare.jpg"],
-    createdAt: "2024-03-05T10:00:00.000Z",
-    rating: 4.9,
-    reviewCount: 67,
-    featured: true,
-    location: "Global",
-    availability: "7-8 Weeks",
-    aiScore: 98,
-    contactInfo: {
-      phone: "+1 302 464 0950",
-      email: "kleber@ziontechgroup.com",
-      website: "https://ziontechgroup.com/ai-healthcare",
-      address: "364 E Main St STE 1008 Middletown DE 19709"
-    },
-    marketPrice: "$6,000-12,000",
-    competitors: ["IBM Watson Health", "Google Health", "Microsoft Healthcare"],
-    roi: "550% within 10 months",
-    setupTime: "7-8 weeks",
-    integrations: ["PACS Systems", "EHR Systems", "DICOM", "HL7", "Medical Devices", "Telemedicine Platforms"]
+    description: "Comprehensive healthcare analytics platform that provides insights into patient outcomes, operational efficiency, and predictive healthcare",
+    pricingTiers: [
+      {
+        name: "Practice",
+        price: 199,
+        billingCycle: "monthly",
+        features: [
+          "Patient analytics (up to 1000 patients)",
+          "Basic reporting",
+          "Performance metrics",
+          "Email support",
+          "Standard integrations"
+        ],
+        limitations: [
+          "Limited analytics depth",
+          "Basic dashboards",
+          "No custom reports"
+        ],
+        recommendedFor: ["Small medical practices", "Dental offices", "Specialty clinics"]
+      },
+      {
+        name: "Professional",
+        price: 399,
+        billingCycle: "monthly",
+        features: [
+          "Everything in Practice",
+          "Advanced patient analytics",
+          "Operational insights",
+          "Resource optimization",
+          "Custom dashboards",
+          "Priority support",
+          "Advanced integrations"
+        ],
+        limitations: [
+          "Up to 10,000 patients",
+          "No custom AI models"
+        ],
+        recommendedFor: ["Medium practices", "Medical groups", "Urgent care centers"],
+        popular: true
+      },
+      {
+        name: "Enterprise",
+        price: 899,
+        billingCycle: "monthly",
+        features: [
+          "Everything in Professional",
+          "Unlimited patients",
+          "Custom AI models",
+          "Predictive analytics",
+          "Full API access",
+          "Dedicated support",
+          "Custom integrations"
+        ],
+        limitations: [],
+        recommendedFor: ["Large hospitals", "Healthcare networks", "Medical systems"],
+        savings: "Save 20% with annual billing"
+      }
+    ],
+    marketPrice: "$600-900/month",
+    competitors: ["Epic", "Cerner", "Allscripts"],
+    roi: "250-400% within 12 months",
+    setupTime: "2-4 weeks",
+    freeTier: true,
+    trialPeriod: "21 days",
+    contactInfo: zionContact
   },
   {
-    id: "ai-business-intelligence",
-    title: "AI Business Intelligence & Predictive Analytics Platform",
-    description: "Comprehensive business intelligence platform that uses AI to analyze business data, predict trends, generate insights, and provide actionable recommendations for strategic decision-making.",
-    category: "Business Intelligence",
-    subcategory: "AI Analytics",
-    price: 3999,
-    currency: "$",
-    tags: ["Business Intelligence", "Predictive Analytics", "Data Analysis", "Strategic Insights", "Decision Support"],
-    author: { name: "Zion Tech Group", id: "zion-tech-group", email: "kleber@ziontechgroup.com", avatarUrl: "https://ziontechgroup.com/logo.png" },
-    images: ["https://ziontechgroup.com/images/ai-business-intelligence.jpg"],
-    createdAt: "2024-03-10T10:00:00.000Z",
-    rating: 4.8,
-    reviewCount: 123,
-    featured: true,
-    location: "Global",
-    availability: "4-5 Weeks",
-    aiScore: 96,
-    contactInfo: {
-      phone: "+1 302 464 0950",
-      email: "kleber@ziontechgroup.com",
-      website: "https://ziontechgroup.com/ai-business-intelligence",
-      address: "364 E Main St STE 1008 Middletown DE 19709"
-    },
-    marketPrice: "$3,500-7,000",
-    competitors: ["Tableau", "Power BI", "Qlik"],
-    roi: "450% within 7 months",
-    setupTime: "4-5 weeks",
-    integrations: ["Salesforce", "HubSpot", "QuickBooks", "Excel", "Google Analytics", "SQL Databases"]
+    serviceId: 4,
+    serviceName: "AI Financial Trading Assistant",
+    category: "Financial Technology",
+    description: "Intelligent trading assistant that analyzes market data, identifies opportunities, and provides real-time trading recommendations",
+    pricingTiers: [
+      {
+        name: "Individual",
+        price: 99,
+        billingCycle: "monthly",
+        features: [
+          "Market analysis",
+          "Basic trading signals",
+          "Portfolio tracking",
+          "Email alerts",
+          "Mobile app access"
+        ],
+        limitations: [
+          "Up to 5 portfolios",
+          "Basic analytics",
+          "Limited market data"
+        ],
+        recommendedFor: ["Individual traders", "Retail investors", "Hobby traders"]
+      },
+      {
+        name: "Professional",
+        price: 199,
+        billingCycle: "monthly",
+        features: [
+          "Everything in Individual",
+          "Advanced analytics",
+          "Real-time alerts",
+          "Risk assessment",
+          "Strategy backtesting",
+          "Priority support",
+          "Advanced integrations"
+        ],
+        limitations: [
+          "Up to 20 portfolios",
+          "No custom strategies"
+        ],
+        recommendedFor: ["Active traders", "Investment advisors", "Small funds"],
+        popular: true
+      },
+      {
+        name: "Institutional",
+        price: 499,
+        billingCycle: "monthly",
+        features: [
+          "Everything in Professional",
+          "Unlimited portfolios",
+          "Custom strategies",
+          "Full API access",
+          "White-label options",
+          "Dedicated support",
+          "Custom integrations"
+        ],
+        limitations: [],
+        recommendedFor: ["Hedge funds", "Investment firms", "Financial institutions"],
+        savings: "Save 30% with annual billing"
+      }
+    ],
+    marketPrice: "$300-500/month",
+    competitors: ["Bloomberg", "Reuters", "TradingView"],
+    roi: "200-350% within 6 months",
+    setupTime: "1-2 business days",
+    freeTier: true,
+    trialPeriod: "7 days",
+    contactInfo: zionContact
   },
   {
-    id: "ai-autonomous-research-assistant",
-    title: "AI Autonomous Research Assistant & Knowledge Discovery Platform",
-    description: "Intelligent research platform that uses AI to automate literature reviews, discover research gaps, analyze trends, and accelerate scientific discovery across multiple disciplines.",
-    category: "Research & Development",
-    subcategory: "AI Assistant",
-    price: 3499,
-    currency: "$",
-    tags: ["Research Assistant", "Knowledge Discovery", "Literature Review", "Scientific Research", "Trend Analysis"],
-    author: { name: "Zion Tech Group", id: "zion-tech-group", email: "kleber@ziontechgroup.com", avatarUrl: "https://ziontechgroup.com/logo.png" },
-    images: ["https://ziontechgroup.com/images/ai-research-assistant.jpg"],
-    createdAt: "2024-03-15T10:00:00.000Z",
-    rating: 4.8,
-    reviewCount: 78,
-    featured: true,
-    location: "Global",
-    availability: "3-4 Weeks",
-    aiScore: 95,
-    contactInfo: {
-      phone: "+1 302 464 0950",
-      email: "kleber@ziontechgroup.com",
-      website: "https://ziontechgroup.com/ai-research-assistant",
-      address: "364 E Main St STE 1008 Middletown DE 19709"
-    },
-    marketPrice: "$3,000-6,000",
-    competitors: ["Semantic Scholar", "ResearchGate", "Google Scholar"],
-    roi: "400% within 6 months",
-    setupTime: "3-4 weeks",
-    integrations: ["PubMed", "arXiv", "IEEE", "ACM", "Research Databases", "Citation Managers"]
-  },
-  // Emerging Technology Services 2030
-  {
-    id: "quantum-ai-hybrid-computing",
-    title: "Quantum-AI Hybrid Computing & Optimization Platform",
-    description: "Revolutionary computing platform that combines quantum computing with artificial intelligence to solve previously intractable problems in optimization, cryptography, drug discovery, and financial modeling.",
-    category: "Quantum Computing",
-    subcategory: "AI Integration",
-    price: 15999,
-    currency: "$",
-    tags: ["Quantum Computing", "AI Integration", "Optimization", "Cryptography", "Drug Discovery"],
-    author: { name: "Zion Tech Group", id: "zion-tech-group", email: "kleber@ziontechgroup.com", avatarUrl: "https://ziontechgroup.com/logo.png" },
-    images: ["https://ziontechgroup.com/images/quantum-ai-hybrid.jpg"],
-    createdAt: "2024-01-15T10:00:00.000Z",
-    rating: 4.9,
-    reviewCount: 67,
-    featured: true,
-    location: "Global",
-    availability: "10-12 Weeks",
-    aiScore: 99,
-    contactInfo: {
-      phone: "+1 302 464 0950",
-      email: "kleber@ziontechgroup.com",
-      website: "https://ziontechgroup.com/quantum-ai-hybrid",
-      address: "364 E Main St STE 1008 Middletown DE 19709"
-    },
-    marketPrice: "$15,000-25,000",
-    competitors: ["IBM Quantum", "Google Quantum", "Microsoft Azure Quantum"],
-    roi: "800% within 18 months",
-    setupTime: "10-12 weeks",
-    integrations: ["IBM Quantum", "Google Quantum", "Microsoft Azure", "AWS", "Python", "Jupyter"]
-  },
-  {
-    id: "neuromorphic-computing-platform",
-    title: "Neuromorphic Computing & Brain-Inspired AI Platform",
-    description: "Advanced computing platform that mimics the human brain's neural structure to process information more efficiently, enabling faster AI training, lower power consumption, and real-time learning capabilities.",
-    category: "Neuromorphic Computing",
-    subcategory: "AI Platform",
-    price: 12999,
-    currency: "$",
-    tags: ["Neuromorphic Computing", "Brain-Inspired AI", "Neural Networks", "Real-time Learning", "Low Power"],
-    author: { name: "Zion Tech Group", id: "zion-tech-group", email: "kleber@ziontechgroup.com", avatarUrl: "https://ziontechgroup.com/logo.png" },
-    images: ["https://ziontechgroup.com/images/neuromorphic-computing.jpg"],
-    createdAt: "2024-01-20T10:00:00.000Z",
-    rating: 4.8,
-    reviewCount: 45,
-    featured: true,
-    location: "Global",
-    availability: "8-10 Weeks",
-    aiScore: 98,
-    contactInfo: {
-      phone: "+1 302 464 0950",
-      email: "kleber@ziontechgroup.com",
-      website: "https://ziontechgroup.com/neuromorphic-computing",
-      address: "364 E Main St STE 1008 Middletown DE 19709"
-    },
-    marketPrice: "$12,000-20,000",
-    competitors: ["Intel Loihi", "IBM TrueNorth", "BrainChip"],
-    roi: "600% within 15 months",
-    setupTime: "8-10 weeks",
-    integrations: ["Intel Loihi", "IBM TrueNorth", "BrainChip", "Python", "TensorFlow", "PyTorch"]
+    serviceId: 5,
+    serviceName: "AI Content Creation Studio",
+    category: "Content Marketing",
+    description: "Comprehensive content creation platform that generates high-quality articles, social media posts, and marketing materials using AI",
+    pricingTiers: [
+      {
+        name: "Creator",
+        price: 79,
+        billingCycle: "monthly",
+        features: [
+          "AI content generation (up to 100 pieces/month)",
+          "Basic templates",
+          "SEO optimization",
+          "Email support",
+          "Standard integrations"
+        ],
+        limitations: [
+          "Limited content types",
+          "Basic customization",
+          "No team collaboration"
+        ],
+        recommendedFor: ["Bloggers", "Content creators", "Small businesses"]
+      },
+      {
+        name: "Professional",
+        price: 149,
+        billingCycle: "monthly",
+        features: [
+          "Everything in Creator",
+          "Unlimited content generation",
+          "Advanced templates",
+          "Brand voice consistency",
+          "Team collaboration",
+          "Priority support",
+          "Advanced integrations"
+        ],
+        limitations: [
+          "Up to 10 team members",
+          "No custom AI training"
+        ],
+        recommendedFor: ["Marketing agencies", "Content teams", "Growing businesses"],
+        popular: true
+      },
+      {
+        name: "Enterprise",
+        price: 299,
+        billingCycle: "monthly",
+        features: [
+          "Everything in Professional",
+          "Unlimited team members",
+          "Custom AI training",
+          "White-label options",
+          "Full API access",
+          "Dedicated support",
+          "Custom integrations"
+        ],
+        limitations: [],
+        recommendedFor: ["Large agencies", "Enterprise marketing", "Publishing companies"],
+        savings: "Save 25% with annual billing"
+      }
+    ],
+    marketPrice: "$200-400/month",
+    competitors: ["Jasper", "Copy.ai", "Writesonic"],
+    roi: "300-500% within 4 months",
+    setupTime: "1 business day",
+    freeTier: true,
+    trialPeriod: "14 days",
+    contactInfo: zionContact
   },
   {
-    id: "edge-ai-computing-platform",
-    title: "Edge AI Computing & Distributed Intelligence Platform",
-    description: "Intelligent edge computing platform that brings AI processing closer to data sources, enabling real-time decision making, reduced latency, and improved privacy for IoT devices and edge networks.",
-    category: "Edge Computing",
-    subcategory: "AI Platform",
-    price: 8999,
-    currency: "$",
-    tags: ["Edge Computing", "Distributed AI", "Real-time Processing", "IoT", "Privacy"],
-    author: { name: "Zion Tech Group", id: "zion-tech-group", email: "kleber@ziontechgroup.com", avatarUrl: "https://ziontechgroup.com/logo.png" },
-    images: ["https://ziontechgroup.com/images/edge-ai-computing.jpg"],
-    createdAt: "2024-01-25T10:00:00.000Z",
-    rating: 4.7,
-    reviewCount: 89,
-    featured: true,
-    location: "Global",
-    availability: "6-8 Weeks",
-    aiScore: 96,
-    contactInfo: {
-      phone: "+1 302 464 0950",
-      email: "kleber@ziontechgroup.com",
-      website: "https://ziontechgroup.com/edge-ai-computing",
-      address: "364 E Main St STE 1008 Middletown DE 19709"
-    },
-    marketPrice: "$8,000-15,000",
-    competitors: ["AWS Greengrass", "Azure IoT Edge", "Google Cloud IoT"],
-    roi: "500% within 12 months",
-    setupTime: "6-8 weeks",
-    integrations: ["AWS IoT", "Azure IoT", "Google Cloud IoT", "Docker", "Kubernetes", "MQTT"]
-  },
-  // IT Infrastructure Services
-  {
-    id: "cloud-migration-automation",
-    title: "Enterprise Cloud Migration & Automation Suite",
-    description: "Comprehensive cloud migration platform that automates the transition to AWS, Azure, and Google Cloud with zero-downtime deployment, cost optimization, and performance monitoring.",
-    category: "Cloud Services",
-    subcategory: "Migration",
-    price: 15999,
-    currency: "$",
-    tags: ["Cloud Migration", "AWS", "Azure", "Google Cloud", "Automation", "Zero Downtime"],
-    author: { name: "Zion Tech Group", id: "zion-tech-group", email: "kleber@ziontechgroup.com", avatarUrl: "https://ziontechgroup.com/logo.png" },
-    images: ["https://ziontechgroup.com/images/cloud-migration.jpg"],
-    createdAt: "2024-01-15T10:00:00.000Z",
-    rating: 4.8,
-    reviewCount: 156,
-    featured: true,
-    location: "Global",
-    availability: "8-10 Weeks",
-    aiScore: 94,
-    contactInfo: {
-      phone: "+1 302 464 0950",
-      email: "kleber@ziontechgroup.com",
-      website: "https://ziontechgroup.com/cloud-migration",
-      address: "364 E Main St STE 1008 Middletown DE 19709"
-    },
-    marketPrice: "$15,000-25,000",
-    competitors: ["AWS Migration Hub", "Azure Migrate", "Google Cloud Migrate"],
-    roi: "300% within 12 months",
-    setupTime: "8-10 weeks",
-    integrations: ["AWS Services", "Azure Services", "Google Cloud", "Monitoring Tools", "CI/CD Pipelines"]
-  },
-  {
-    id: "devops-automation-platform",
-    title: "DevOps Automation & CI/CD Platform",
-    description: "Advanced DevOps platform that automates software development, testing, and deployment processes with intelligent pipeline management, automated testing, and continuous integration.",
-    category: "DevOps",
-    subcategory: "Automation",
-    price: 8999,
-    currency: "$",
-    tags: ["DevOps", "CI/CD", "Automation", "Testing", "Deployment", "Pipeline Management"],
-    author: { name: "Zion Tech Group", id: "zion-tech-group", email: "kleber@ziontechgroup.com", avatarUrl: "https://ziontechgroup.com/logo.png" },
-    images: ["https://ziontechgroup.com/images/devops-automation.jpg"],
-    createdAt: "2024-01-20T10:00:00.000Z",
-    rating: 4.7,
-    reviewCount: 234,
-    featured: true,
-    location: "Global",
-    availability: "4-6 Weeks",
-    aiScore: 93,
-    contactInfo: {
-      phone: "+1 302 464 0950",
-      email: "kleber@ziontechgroup.com",
-      website: "https://ziontechgroup.com/devops-automation",
-      address: "364 E Main St STE 1008 Middletown DE 19709"
-    },
-    marketPrice: "$8,000-15,000",
-    competitors: ["Jenkins", "GitLab CI", "GitHub Actions"],
-    roi: "400% within 8 months",
-    setupTime: "4-6 weeks",
-    integrations: ["GitHub", "GitLab", "Bitbucket", "Docker", "Kubernetes", "AWS", "Azure"]
+    serviceId: 6,
+    serviceName: "AI Customer Support Automation",
+    category: "Customer Service",
+    description: "Intelligent customer support platform that automates responses, routes inquiries, and provides 24/7 customer assistance",
+    pricingTiers: [
+      {
+        name: "Starter",
+        price: 149,
+        billingCycle: "monthly",
+        features: [
+          "Chatbot automation",
+          "Basic ticket routing",
+          "Knowledge base (up to 100 articles)",
+          "Email support",
+          "Standard integrations"
+        ],
+        limitations: [
+          "Up to 1000 conversations/month",
+          "Basic customization",
+          "Limited analytics"
+        ],
+        recommendedFor: ["Small businesses", "Startups", "E-commerce stores"]
+      },
+      {
+        name: "Professional",
+        price: 249,
+        billingCycle: "monthly",
+        features: [
+          "Everything in Starter",
+          "Advanced automation",
+          "Unlimited conversations",
+          "Customer sentiment analysis",
+          "Multi-channel support",
+          "Priority support",
+          "Advanced integrations"
+        ],
+        limitations: [
+          "Up to 50 agents",
+          "No custom workflows"
+        ],
+        recommendedFor: ["Medium businesses", "SaaS companies", "Service providers"],
+        popular: true
+      },
+      {
+        name: "Enterprise",
+        price: 499,
+        billingCycle: "monthly",
+        features: [
+          "Everything in Professional",
+          "Unlimited agents",
+          "Custom workflows",
+          "Full API access",
+          "White-label options",
+          "Dedicated support",
+          "Custom integrations"
+        ],
+        limitations: [],
+        recommendedFor: ["Large businesses", "Enterprise companies", "Global brands"],
+        savings: "Save 20% with annual billing"
+      }
+    ],
+    marketPrice: "$400-700/month",
+    competitors: ["Zendesk", "Intercom", "Freshdesk"],
+    roi: "250-400% within 6 months",
+    setupTime: "1-2 weeks",
+    freeTier: true,
+    trialPeriod: "21 days",
+    contactInfo: zionContact
   },
   {
-    id: "cybersecurity-threat-intelligence",
-    title: "Advanced Cybersecurity & Threat Intelligence Platform",
-    description: "Comprehensive cybersecurity platform that provides real-time threat detection, automated incident response, and intelligent security monitoring for enterprise networks and applications.",
+    serviceId: 7,
+    serviceName: "AI Project Management Platform",
+    category: "Project Management",
+    description: "Intelligent project management platform that uses AI to optimize workflows, predict delays, and improve team collaboration",
+    pricingTiers: [
+      {
+        name: "Team",
+        price: 99,
+        billingCycle: "monthly",
+        features: [
+          "AI-powered scheduling",
+          "Basic project tracking",
+          "Team collaboration (up to 10 users)",
+          "Email support",
+          "Standard integrations"
+        ],
+        limitations: [
+          "Basic reporting",
+          "Limited customization",
+          "No advanced analytics"
+        ],
+        recommendedFor: ["Small teams", "Startups", "Freelancers"]
+      },
+      {
+        name: "Professional",
+        price: 179,
+        billingCycle: "monthly",
+        features: [
+          "Everything in Team",
+          "Advanced analytics",
+          "Risk prediction",
+          "Resource optimization",
+          "Unlimited users",
+          "Priority support",
+          "Advanced integrations"
+        ],
+        limitations: [
+          "No custom AI models",
+          "Limited API access"
+        ],
+        recommendedFor: ["Medium teams", "Agencies", "Growing companies"],
+        popular: true
+      },
+      {
+        name: "Enterprise",
+        price: 399,
+        billingCycle: "monthly",
+        features: [
+          "Everything in Professional",
+          "Custom AI models",
+          "Full API access",
+          "White-label options",
+          "Advanced security",
+          "Dedicated support",
+          "Custom integrations"
+        ],
+        limitations: [],
+        recommendedFor: ["Large teams", "Enterprise companies", "Government agencies"],
+        savings: "Save 25% with annual billing"
+      }
+    ],
+    marketPrice: "$250-450/month",
+    competitors: ["Asana", "Monday.com", "ClickUp"],
+    roi: "200-350% within 8 months",
+    setupTime: "1-2 weeks",
+    freeTier: true,
+    trialPeriod: "14 days",
+    contactInfo: zionContact
+  },
+  {
+    serviceId: 8,
+    serviceName: "AI Cybersecurity Platform",
     category: "Cybersecurity",
-    subcategory: "Threat Intelligence",
-    price: 12999,
-    currency: "$",
-    tags: ["Cybersecurity", "Threat Detection", "Incident Response", "Security Monitoring", "AI Security"],
-    author: { name: "Zion Tech Group", id: "zion-tech-group", email: "kleber@ziontechgroup.com", avatarUrl: "https://ziontechgroup.com/logo.png" },
-    images: ["https://ziontechgroup.com/images/cybersecurity-platform.jpg"],
-    createdAt: "2024-01-25T10:00:00.000Z",
-    rating: 4.9,
-    reviewCount: 189,
-    featured: true,
-    location: "Global",
-    availability: "6-8 Weeks",
-    aiScore: 96,
-    contactInfo: {
-      phone: "+1 302 464 0950",
-      email: "kleber@ziontechgroup.com",
-      website: "https://ziontechgroup.com/cybersecurity",
-      address: "364 E Main St STE 1008 Middletown DE 19709"
-    },
-    marketPrice: "$12,000-20,000",
-    competitors: ["CrowdStrike", "SentinelOne", "Carbon Black"],
-    roi: "450% within 10 months",
-    setupTime: "6-8 weeks",
-    integrations: ["SIEM Systems", "EDR Solutions", "Firewall Management", "Cloud Security", "Identity Management"]
+    description: "Advanced cybersecurity platform that uses AI to detect threats, prevent attacks, and provide real-time security monitoring",
+    pricingTiers: [
+      {
+        name: "Business",
+        price: 299,
+        billingCycle: "monthly",
+        features: [
+          "Threat detection",
+          "Basic behavioral analysis",
+          "Incident response",
+          "Email support",
+          "Standard integrations"
+        ],
+        limitations: [
+          "Up to 100 endpoints",
+          "Basic reporting",
+          "Limited customization"
+        ],
+        recommendedFor: ["Small businesses", "Startups", "Local companies"]
+      },
+      {
+        name: "Professional",
+        price: 499,
+        billingCycle: "monthly",
+        features: [
+          "Everything in Business",
+          "Advanced behavioral analysis",
+          "Vulnerability assessment",
+          "Compliance monitoring",
+          "Advanced analytics",
+          "Priority support",
+          "Advanced integrations"
+        ],
+        limitations: [
+          "Up to 1000 endpoints",
+          "No custom AI models"
+        ],
+        recommendedFor: ["Medium businesses", "Financial institutions", "Healthcare organizations"],
+        popular: true
+      },
+      {
+        name: "Enterprise",
+        price: 999,
+        billingCycle: "monthly",
+        features: [
+          "Everything in Professional",
+          "Unlimited endpoints",
+          "Custom AI models",
+          "Full API access",
+          "White-label options",
+          "Dedicated support",
+          "Custom integrations"
+        ],
+        limitations: [],
+        recommendedFor: ["Large enterprises", "Government agencies", "Global corporations"],
+        savings: "Save 30% with annual billing"
+      }
+    ],
+    marketPrice: "$800-1500/month",
+    competitors: ["CrowdStrike", "SentinelOne", "Darktrace"],
+    roi: "400-600% within 12 months",
+    setupTime: "2-4 weeks",
+    freeTier: false,
+    trialPeriod: "30 days",
+    contactInfo: zionContact
   },
   {
-    id: "data-analytics-platform",
-    title: "Enterprise Data Analytics & Business Intelligence Platform",
-    description: "Powerful data analytics platform that transforms raw data into actionable insights with advanced visualization, predictive analytics, and real-time reporting capabilities.",
-    category: "Data Analytics",
-    subcategory: "Business Intelligence",
-    price: 9999,
-    currency: "$",
-    tags: ["Data Analytics", "Business Intelligence", "Data Visualization", "Predictive Analytics", "Real-time Reporting"],
-    author: { name: "Zion Tech Group", id: "zion-tech-group", email: "kleber@ziontechgroup.com", avatarUrl: "https://ziontechgroup.com/logo.png" },
-    images: ["https://ziontechgroup.com/images/data-analytics.jpg"],
-    createdAt: "2024-01-30T10:00:00.000Z",
-    rating: 4.8,
-    reviewCount: 167,
-    featured: true,
-    location: "Global",
-    availability: "5-7 Weeks",
-    aiScore: 95,
-    contactInfo: {
-      phone: "+1 302 464 0950",
-      email: "kleber@ziontechgroup.com",
-      website: "https://ziontechgroup.com/data-analytics",
-      address: "364 E Main St STE 1008 Middletown DE 19709"
-    },
-    marketPrice: "$9,000-16,000",
-    competitors: ["Tableau", "Power BI", "Qlik"],
-    roi: "350% within 9 months",
-    setupTime: "5-7 weeks",
-    integrations: ["SQL Databases", "NoSQL Databases", "Cloud Storage", "CRM Systems", "ERP Systems"]
+    serviceId: 9,
+    serviceName: "AI Workflow Orchestrator",
+    category: "Business Process Automation",
+    description: "Intelligent workflow automation platform that orchestrates complex business processes and eliminates manual tasks",
+    pricingTiers: [
+      {
+        name: "Starter",
+        price: 199,
+        billingCycle: "monthly",
+        features: [
+          "Basic workflow automation",
+          "Pre-built templates",
+          "Standard integrations",
+          "Email support",
+          "Basic reporting"
+        ],
+        limitations: [
+          "Up to 10 workflows",
+          "Limited customization",
+          "Basic integrations"
+        ],
+        recommendedFor: ["Small businesses", "Startups", "Individual users"]
+      },
+      {
+        name: "Professional",
+        price: 329,
+        billingCycle: "monthly",
+        features: [
+          "Everything in Starter",
+          "Advanced automation",
+          "Custom workflows",
+          "Performance monitoring",
+          "Advanced integrations",
+          "Priority support",
+          "Custom dashboards"
+        ],
+        limitations: [
+          "Up to 100 workflows",
+          "No custom AI models"
+        ],
+        recommendedFor: ["Medium businesses", "Operations teams", "Growing companies"],
+        popular: true
+      },
+      {
+        name: "Enterprise",
+        price: 699,
+        billingCycle: "monthly",
+        features: [
+          "Everything in Professional",
+          "Unlimited workflows",
+          "Custom AI models",
+          "Full API access",
+          "White-label options",
+          "Advanced security",
+          "Dedicated support"
+        ],
+        limitations: [],
+        recommendedFor: ["Large enterprises", "Global operations", "Complex organizations"],
+        savings: "Save 25% with annual billing"
+      }
+    ],
+    marketPrice: "$500-800/month",
+    competitors: ["UiPath", "Automation Anywhere", "Blue Prism"],
+    roi: "300-500% within 10 months",
+    setupTime: "2-3 weeks",
+    freeTier: true,
+    trialPeriod: "21 days",
+    contactInfo: zionContact
+  },
+  {
+    serviceId: 10,
+    serviceName: "AI Predictive Maintenance Platform",
+    category: "Industrial IoT",
+    description: "Intelligent predictive maintenance platform that monitors equipment health and predicts failures before they occur",
+    pricingTiers: [
+      {
+        name: "Industrial",
+        price: 299,
+        billingCycle: "monthly",
+        features: [
+          "Equipment monitoring (up to 50 devices)",
+          "Basic failure prediction",
+          "Maintenance scheduling",
+          "Email support",
+          "Standard integrations"
+        ],
+        limitations: [
+          "Basic analytics",
+          "Limited customization",
+          "No custom models"
+        ],
+        recommendedFor: ["Small manufacturers", "Local facilities", "Startup operations"]
+      },
+      {
+        name: "Professional",
+        price: 449,
+        billingCycle: "monthly",
+        features: [
+          "Everything in Industrial",
+          "Advanced analytics",
+          "Custom alerts",
+          "Performance optimization",
+          "Advanced integrations",
+          "Priority support",
+          "Custom dashboards"
+        ],
+        limitations: [
+          "Up to 500 devices",
+          "No custom AI training"
+        ],
+        recommendedFor: ["Medium manufacturers", "Industrial facilities", "Growing operations"],
+        popular: true
+      },
+      {
+        name: "Enterprise",
+        price: 899,
+        billingCycle: "monthly",
+        features: [
+          "Everything in Professional",
+          "Unlimited devices",
+          "Custom AI training",
+          "Full API access",
+          "White-label options",
+          "Advanced security",
+          "Dedicated support"
+        ],
+        limitations: [],
+        recommendedFor: ["Large manufacturers", "Global facilities", "Complex operations"],
+        savings: "Save 30% with annual billing"
+      }
+    ],
+    marketPrice: "$700-1200/month",
+    competitors: ["GE Digital", "Siemens", "ABB"],
+    roi: "350-550% within 12 months",
+    setupTime: "3-4 weeks",
+    freeTier: false,
+    trialPeriod: "30 days",
+    contactInfo: zionContact
   }
 ];
-export const getComprehensivePricingGuide2027 = () => comprehensivePricingGuide2027;
-export const getComprehensivePricingGuide2027ByCategory = (category: string) =>
-  comprehensivePricingGuide2027.filter(item => item.category === category);
-export const getComprehensivePricingGuide2027ById = (id: string) =>
-  comprehensivePricingGuide2027.find(item => item.id === id);
-export const pricingCategories2027 = [
-  'Metaverse Solutions',
-  'Web3 Solutions',
-  'Sustainable Tech',
-  'NeuroTech Solutions',
-  'Fusion Energy Solutions'
-];
-export const pricingSubcategories2027 = {
-  'Metaverse Solutions': ['E-commerce', 'Gaming', 'Social', 'Education'],
-  'Web3 Solutions': ['DeFi', 'NFTs', 'Blockchain', 'Cryptocurrency'],
-  'Sustainable Tech': ['Cloud Computing', 'Energy Management', 'Waste Management', 'Carbon Tracking'],
-  'NeuroTech Solutions': ['Medical Technology', 'Research', 'Accessibility', 'Gaming'],
-  'Fusion Energy Solutions': ['Energy Research', 'Plasma Physics', 'Reactor Design', 'Simulation']
-};
+
+export default COMPREHENSIVE_PRICING_GUIDE_2027;

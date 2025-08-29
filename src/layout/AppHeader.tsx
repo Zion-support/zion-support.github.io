@@ -53,52 +53,92 @@ export function AppHeader() {
       color: 'from-purple-500 to-pink-500'
     },
     { 
-      name: 'AI Business Intelligence', 
-      href: '/services/ai-business-intelligence', 
-      icon: Brain, 
-      description: 'Machine Learning & Data Science',
+      name: 'AI Legal Document Analysis', 
+      href: '/services/ai-legal-document-analysis', 
+      icon: Scale, 
+      description: 'Legal Tech & Compliance',
       featured: true,
-      color: 'from-purple-500 to-cyan-500'
+      color: 'from-purple-500 to-pink-500'
     },
     { 
-      name: 'AI Healthcare Platform', 
-      href: '/services/ai-healthcare-platform', 
+      name: 'AI Supply Chain Optimization', 
+      href: '/services/ai-supply-chain-optimization', 
+      icon: Truck, 
+      description: 'Supply Chain Intelligence',
+      featured: true,
+      color: 'from-blue-500 to-cyan-500'
+    },
+    { 
+      name: 'AI Healthcare Analytics', 
+      href: '/services/ai-healthcare-analytics', 
       icon: Heart, 
-      description: 'Medical AI & Diagnostics',
+      description: 'Healthcare AI & Analytics',
       featured: true,
       color: 'from-red-500 to-pink-500'
     },
     { 
-      name: 'AI Content Creation', 
+      name: 'AI Financial Trading', 
+      href: '/services/ai-financial-trading', 
+      icon: DollarSign, 
+      description: 'Financial AI & Trading',
+      featured: true,
+      color: 'from-green-500 to-emerald-500'
+    },
+    { 
+      name: 'AI Content Creation Studio', 
       href: '/services/ai-content-creation', 
       icon: PenTool, 
       description: 'Content Generation & Optimization',
       featured: true,
-      color: 'from-blue-500 to-indigo-500'
+      color: 'from-orange-500 to-red-500'
     },
     { 
-      name: 'AI Cybersecurity', 
+      name: 'AI Customer Support Automation', 
+      href: '/services/ai-customer-support-automation', 
+      icon: MessageSquare, 
+      description: 'Customer Service AI',
+      featured: true,
+      color: 'from-indigo-500 to-purple-500'
+    },
+    { 
+      name: 'AI Project Management', 
+      href: '/services/ai-project-management', 
+      icon: Target, 
+      description: 'Project Management AI',
+      featured: true,
+      color: 'from-yellow-500 to-orange-500'
+    },
+    { 
+      name: 'AI Cybersecurity Platform', 
       href: '/services/ai-cybersecurity', 
       icon: Shield, 
       description: 'AI-Powered Security',
       featured: true,
-      color: 'from-green-500 to-blue-500'
+      color: 'from-red-500 to-orange-500'
     },
     { 
-      name: 'Quantum Computing', 
+      name: 'AI Workflow Orchestrator', 
+      href: '/services/ai-workflow-orchestrator', 
+      icon: Zap, 
+      description: 'Business Process Automation',
+      featured: true,
+      color: 'from-blue-500 to-indigo-500'
+    },
+    { 
+      name: 'AI Predictive Maintenance', 
+      href: '/services/ai-predictive-maintenance', 
+      icon: Cpu, 
+      description: 'Industrial IoT & Maintenance',
+      featured: true,
+      color: 'from-gray-500 to-blue-500'
+    },
+    { 
+      name: 'Quantum Computing Solutions', 
       href: '/services/quantum-computing', 
       icon: Atom, 
       description: 'Quantum AI & Optimization',
       featured: true,
       color: 'from-purple-500 to-pink-500'
-    },
-    { 
-      name: 'IoT Edge Computing', 
-      href: '/services/iot-edge-computing', 
-      icon: Cpu, 
-      description: 'IoT & Real-time Processing',
-      featured: true,
-      color: 'from-blue-500 to-cyan-500'
     },
     { 
       name: 'Digital Twin Platform', 
@@ -109,20 +149,12 @@ export function AppHeader() {
       color: 'from-green-500 to-emerald-500'
     },
     { 
-      name: 'Cloud DevOps', 
+      name: 'Cloud DevOps Services', 
       href: '/services/cloud-devops', 
       icon: Cloud, 
       description: 'DevOps & Infrastructure',
       featured: true,
       color: 'from-blue-500 to-cyan-500'
-    },
-    { 
-      name: 'Micro SaaS Products', 
-      href: '/services/micro-saas', 
-      icon: ShoppingCart, 
-      description: 'AI automations with transparent pricing',
-      featured: true,
-      color: 'from-orange-500 to-red-500'
     },
     { 
       name: 'Revolutionary Services 2030', 
