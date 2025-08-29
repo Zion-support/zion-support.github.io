@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 import { SEO } from '@/components/SEO';
 import { 
   Brain, 
-  Truck, 
+  PenTool, 
   TrendingUp, 
   Target, 
   Users, 
@@ -25,102 +25,89 @@ import {
   DollarSign,
   Shield,
   Headphones,
-  Rocket,
-  Package,
-  Route,
-  Warehouse,
-  Factory,
-  Ship,
-  Plane,
-  Car,
-  Train
+  Rocket
 } from 'lucide-react';
 
-export default function AISupplyChainOptimization() {
+export default function AIContentMarketingAutomation() {
   const features = [
-    "AI-powered demand forecasting and planning",
-    "Real-time inventory optimization and management",
-    "Intelligent route optimization and logistics",
-    "Supplier performance monitoring and analytics",
-    "Risk assessment and mitigation strategies",
-    "Cost optimization and budget management",
-    "Multi-warehouse network optimization",
-    "Real-time tracking and visibility",
-    "Automated reorder point calculations",
-    "Supply chain disruption prediction",
-    "Sustainability and carbon footprint tracking",
-    "Compliance and regulatory monitoring"
+    "AI-powered content generation for multiple formats",
+    "Multi-channel content distribution automation",
+    "Intelligent audience targeting and segmentation",
+    "Real-time performance analytics and optimization",
+    "SEO-optimized content creation",
+    "Social media scheduling and automation",
+    "Email marketing campaign automation",
+    "Content calendar management",
+    "Brand voice consistency maintenance",
+    "A/B testing and optimization",
+    "Competitor analysis and insights",
+    "ROI tracking and attribution modeling"
   ];
 
   const benefits = [
-    "Reduce inventory costs by 25-40%",
-    "Improve delivery times by 30-50%",
-    "Increase supply chain efficiency by 35%",
-    "Reduce stockouts by 60%",
-    "Lower transportation costs by 20-30%"
+    "Increase content production by 300%",
+    "Improve engagement rates by 45%",
+    "Reduce content creation costs by 60%",
+    "Boost SEO rankings by 35%",
+    "Automate 80% of marketing workflows"
   ];
 
   const useCases = [
-    "E-commerce fulfillment",
-    "Manufacturing supply chains",
-    "Retail inventory management",
-    "Healthcare supply chains",
-    "Food and beverage distribution",
-    "Automotive parts management",
-    "Pharmaceutical logistics",
-    "Cold chain management"
+    "E-commerce content marketing",
+    "B2B lead generation campaigns",
+    "Social media management",
+    "Email marketing automation",
+    "Blog and article creation",
+    "Video content marketing",
+    "Influencer collaboration",
+    "Event marketing campaigns"
   ];
 
   const pricing = [
     {
       name: "Starter",
-      price: "$499",
+      price: "$299",
       period: "/month",
-      description: "Perfect for small businesses with basic supply chain needs",
+      description: "Perfect for small businesses and startups",
       features: [
-        "AI demand forecasting (up to 100 SKUs)",
-        "Basic inventory optimization",
-        "Route optimization (up to 50 routes/day)",
+        "AI content generation (50 pieces/month)",
+        "Basic social media automation",
+        "Email campaign templates",
         "Basic analytics dashboard",
-        "Email support",
-        "API access (1,000 calls/month)"
+        "Email support"
       ],
       cta: "Start Free Trial",
       popular: false
     },
     {
       name: "Professional",
-      price: "$1,299",
+      price: "$799",
       period: "/month",
-      description: "Ideal for growing businesses with complex supply chains",
+      description: "Ideal for growing businesses and marketing teams",
       features: [
-        "AI demand forecasting (up to 1,000 SKUs)",
-        "Advanced inventory optimization",
-        "Route optimization (unlimited routes)",
-        "Supplier performance monitoring",
-        "Risk assessment tools",
+        "AI content generation (200 pieces/month)",
+        "Advanced social media automation",
+        "Multi-channel distribution",
         "Advanced analytics and reporting",
-        "Priority support",
-        "API access (10,000 calls/month)"
+        "SEO optimization tools",
+        "Priority support"
       ],
       cta: "Start Free Trial",
       popular: true
     },
     {
       name: "Enterprise",
-      price: "$2,999",
+      price: "$1,999",
       period: "/month",
-      description: "For large organizations with global supply chains",
+      description: "For large organizations with complex needs",
       features: [
-        "Unlimited AI demand forecasting",
-        "Multi-warehouse optimization",
-        "Global route optimization",
-        "Advanced risk management",
+        "Unlimited AI content generation",
         "Custom AI model training",
+        "Advanced audience targeting",
         "White-label solutions",
+        "API access",
         "Dedicated account manager",
-        "24/7 phone support",
-        "Unlimited API access"
+        "24/7 phone support"
       ],
       cta: "Contact Sales",
       popular: false
@@ -130,8 +117,8 @@ export default function AISupplyChainOptimization() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO 
-        title="AI Supply Chain Optimization Platform - Zion Tech Group"
-        description="Optimize your supply chain with AI-powered forecasting, inventory management, and logistics optimization. Reduce costs and improve efficiency."
+        title="AI Content Marketing Automation Platform - Zion Tech Group"
+        description="Transform your content marketing with AI-powered automation. Generate, distribute, and optimize content across all channels automatically."
       />
       
       {/* Hero Section */}
@@ -142,25 +129,25 @@ export default function AISupplyChainOptimization() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
-            <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-blue-600 to-cyan-600 text-white text-sm font-medium mb-6">
+            <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-purple-600 to-pink-600 text-white text-sm font-medium mb-6">
               <Brain className="w-4 h-4 mr-2" />
-              AI-Powered Supply Chain
+              AI-Powered Marketing
             </div>
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
-              AI Supply Chain
-              <span className="bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
-                {" "}Optimization Platform
+              AI Content Marketing
+              <span className="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
+                {" "}Automation Platform
               </span>
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Transform your supply chain operations with AI that predicts demand, optimizes inventory, and streamlines logistics. 
-              Reduce costs, improve efficiency, and gain competitive advantage in today's complex global markets.
+              Revolutionize your content marketing with AI that generates, distributes, and optimizes content across all channels automatically. 
+              Increase engagement, reduce costs, and scale your marketing efforts effortlessly.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="px-8 py-4 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-cyan-700 transition-all duration-200"
+                className="px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-semibold rounded-lg hover:from-purple-700 hover:to-pink-700 transition-all duration-200"
               >
                 Start Free Trial
               </motion.button>
@@ -186,10 +173,10 @@ export default function AISupplyChainOptimization() {
             className="text-center mb-16"
           >
             <h2 className="text-4xl font-bold text-white mb-4">
-              Comprehensive Supply Chain Intelligence
+              Powerful Features for Modern Marketing
             </h2>
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              Everything you need to optimize your entire supply chain from end to end
+              Everything you need to automate and optimize your content marketing strategy
             </p>
           </motion.div>
 
@@ -200,9 +187,9 @@ export default function AISupplyChainOptimization() {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700 hover:border-blue-500 transition-all duration-300"
+                className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700 hover:border-purple-500 transition-all duration-300"
               >
-                <div className="w-12 h-12 bg-gradient-to-r from-blue-600 to-cyan-600 rounded-lg flex items-center justify-center mb-4">
+                <div className="w-12 h-12 bg-gradient-to-r from-purple-600 to-pink-600 rounded-lg flex items-center justify-center mb-4">
                   <CheckCircle className="w-6 h-6 text-white" />
                 </div>
                 <h3 className="text-lg font-semibold text-white mb-2">{feature}</h3>
@@ -222,10 +209,10 @@ export default function AISupplyChainOptimization() {
             className="text-center mb-16"
           >
             <h2 className="text-4xl font-bold text-white mb-4">
-              Measurable Business Impact
+              Transform Your Marketing Results
             </h2>
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              See real improvements in your supply chain performance and bottom line
+              See measurable improvements in your content marketing performance
             </p>
           </motion.div>
 
@@ -238,7 +225,7 @@ export default function AISupplyChainOptimization() {
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 className="text-center"
               >
-                <div className="w-20 h-20 bg-gradient-to-r from-blue-600 to-cyan-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                <div className="w-20 h-20 bg-gradient-to-r from-purple-600 to-pink-600 rounded-full flex items-center justify-center mx-auto mb-4">
                   <TrendingUp className="w-10 h-10 text-white" />
                 </div>
                 <p className="text-lg text-white font-medium">{benefit}</p>
@@ -248,7 +235,7 @@ export default function AISupplyChainOptimization() {
         </div>
       </section>
 
-      {/* Use Cases Section */}
+      {/* Pricing Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <motion.div
@@ -258,46 +245,10 @@ export default function AISupplyChainOptimization() {
             className="text-center mb-16"
           >
             <h2 className="text-4xl font-bold text-white mb-4">
-              Industry-Leading Solutions
+              Simple, Transparent Pricing
             </h2>
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              Proven solutions across diverse industries and supply chain complexities
-            </p>
-          </motion.div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {useCases.map((useCase, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700 text-center hover:border-blue-500 transition-all duration-300"
-              >
-                <div className="w-16 h-16 bg-gradient-to-r from-blue-600 to-cyan-600 rounded-lg flex items-center justify-center mx-auto mb-4">
-                  <Package className="w-8 h-8 text-white" />
-                </div>
-                <h3 className="text-lg font-semibold text-white">{useCase}</h3>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Pricing Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-800/30">
-        <div className="max-w-7xl mx-auto">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-4xl font-bold text-white mb-4">
-              Flexible Pricing for Every Business
-            </h2>
-            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              Scale your supply chain optimization as your business grows
+              Choose the plan that fits your business needs and scale as you grow
             </p>
           </motion.div>
 
@@ -310,13 +261,13 @@ export default function AISupplyChainOptimization() {
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 className={`relative bg-gray-800/50 backdrop-blur-sm rounded-xl p-8 border ${
                   plan.popular 
-                    ? 'border-blue-500 ring-2 ring-blue-500/20' 
+                    ? 'border-purple-500 ring-2 ring-purple-500/20' 
                     : 'border-gray-700'
                 }`}
               >
                 {plan.popular && (
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                    <span className="bg-gradient-to-r from-blue-600 to-cyan-600 text-white px-4 py-2 rounded-full text-sm font-medium">
+                    <span className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-4 py-2 rounded-full text-sm font-medium">
                       Most Popular
                     </span>
                   </div>
@@ -345,12 +296,48 @@ export default function AISupplyChainOptimization() {
                   whileTap={{ scale: 0.98 }}
                   className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-200 ${
                     plan.popular
-                      ? 'bg-gradient-to-r from-blue-600 to-cyan-600 text-white hover:from-blue-700 hover:to-cyan-700'
+                      ? 'bg-gradient-to-r from-purple-600 to-pink-600 text-white hover:from-purple-700 hover:to-pink-700'
                       : 'bg-gray-700 text-white hover:bg-gray-600'
                   }`}
                 >
                   {plan.cta}
                 </motion.button>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Use Cases Section */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-800/30">
+        <div className="max-w-7xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-4xl font-bold text-white mb-4">
+              Perfect for Every Marketing Need
+            </h2>
+            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
+              From startups to enterprises, our platform adapts to your business requirements
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {useCases.map((useCase, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700 text-center hover:border-purple-500 transition-all duration-300"
+              >
+                <div className="w-16 h-16 bg-gradient-to-r from-purple-600 to-pink-600 rounded-lg flex items-center justify-center mx-auto mb-4">
+                  <Target className="w-8 h-8 text-white" />
+                </div>
+                <h3 className="text-lg font-semibold text-white">{useCase}</h3>
               </motion.div>
             ))}
           </div>
@@ -366,16 +353,16 @@ export default function AISupplyChainOptimization() {
             transition={{ duration: 0.8 }}
           >
             <h2 className="text-4xl font-bold text-white mb-6">
-              Ready to Optimize Your Supply Chain?
+              Ready to Transform Your Content Marketing?
             </h2>
             <p className="text-xl text-gray-300 mb-8">
-              Join industry leaders who have already transformed their supply chain operations with AI
+              Join thousands of businesses that have already automated their content marketing with AI
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="px-8 py-4 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-cyan-700 transition-all duration-200"
+                className="px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-semibold rounded-lg hover:from-purple-700 hover:to-pink-700 transition-all duration-200"
               >
                 Start Free Trial
               </motion.button>

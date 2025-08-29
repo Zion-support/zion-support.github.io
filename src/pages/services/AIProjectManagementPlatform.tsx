@@ -3,9 +3,8 @@ import { motion } from 'framer-motion';
 import { SEO } from '@/components/SEO';
 import { 
   Brain, 
-  Truck, 
-  TrendingUp, 
   Target, 
+  TrendingUp, 
   Users, 
   BarChart3, 
   Calendar,
@@ -26,101 +25,97 @@ import {
   Shield,
   Headphones,
   Rocket,
-  Package,
-  Route,
-  Warehouse,
-  Factory,
-  Ship,
-  Plane,
-  Car,
-  Train
+  Calendar as CalendarIcon,
+  CheckSquare,
+  GitBranch,
+  FileText,
+  Users as UsersIcon,
+  PieChart,
+  Activity
 } from 'lucide-react';
 
-export default function AISupplyChainOptimization() {
+export default function AIProjectManagementPlatform() {
   const features = [
-    "AI-powered demand forecasting and planning",
-    "Real-time inventory optimization and management",
-    "Intelligent route optimization and logistics",
-    "Supplier performance monitoring and analytics",
-    "Risk assessment and mitigation strategies",
-    "Cost optimization and budget management",
-    "Multi-warehouse network optimization",
-    "Real-time tracking and visibility",
-    "Automated reorder point calculations",
-    "Supply chain disruption prediction",
-    "Sustainability and carbon footprint tracking",
-    "Compliance and regulatory monitoring"
+    "AI-powered project planning and scheduling",
+    "Intelligent resource allocation and optimization",
+    "Automated task assignment and prioritization",
+    "Real-time progress tracking and analytics",
+    "Risk prediction and mitigation strategies",
+    "Smart time estimation and deadline management",
+    "Collaborative team communication tools",
+    "Advanced reporting and insights",
+    "Integration with development tools",
+    "Mobile and desktop applications",
+    "Custom workflow automation",
+    "Multi-project portfolio management"
   ];
 
   const benefits = [
-    "Reduce inventory costs by 25-40%",
-    "Improve delivery times by 30-50%",
-    "Increase supply chain efficiency by 35%",
-    "Reduce stockouts by 60%",
-    "Lower transportation costs by 20-30%"
+    "Increase project success rate by 45%",
+    "Reduce project delivery time by 30%",
+    "Improve team productivity by 40%",
+    "Reduce project costs by 25%",
+    "Enhance stakeholder communication"
   ];
 
   const useCases = [
-    "E-commerce fulfillment",
-    "Manufacturing supply chains",
-    "Retail inventory management",
-    "Healthcare supply chains",
-    "Food and beverage distribution",
-    "Automotive parts management",
-    "Pharmaceutical logistics",
-    "Cold chain management"
+    "Software development teams",
+    "Marketing agencies",
+    "Construction companies",
+    "Consulting firms",
+    "Healthcare organizations",
+    "Financial services",
+    "Educational institutions",
+    "Non-profit organizations"
   ];
 
   const pricing = [
     {
-      name: "Starter",
-      price: "$499",
+      name: "Team",
+      price: "$299",
       period: "/month",
-      description: "Perfect for small businesses with basic supply chain needs",
+      description: "Perfect for small teams and startups",
       features: [
-        "AI demand forecasting (up to 100 SKUs)",
-        "Basic inventory optimization",
-        "Route optimization (up to 50 routes/day)",
-        "Basic analytics dashboard",
+        "AI project planning (up to 10 projects)",
+        "Basic resource management",
+        "Task tracking and collaboration",
+        "Basic reporting dashboard",
         "Email support",
-        "API access (1,000 calls/month)"
+        "Up to 20 team members"
       ],
       cta: "Start Free Trial",
       popular: false
     },
     {
-      name: "Professional",
-      price: "$1,299",
+      name: "Business",
+      price: "$799",
       period: "/month",
-      description: "Ideal for growing businesses with complex supply chains",
+      description: "Ideal for growing businesses and project teams",
       features: [
-        "AI demand forecasting (up to 1,000 SKUs)",
-        "Advanced inventory optimization",
-        "Route optimization (unlimited routes)",
-        "Supplier performance monitoring",
-        "Risk assessment tools",
+        "AI project planning (unlimited projects)",
+        "Advanced resource optimization",
+        "Risk management tools",
         "Advanced analytics and reporting",
         "Priority support",
-        "API access (10,000 calls/month)"
+        "Up to 100 team members",
+        "API access"
       ],
       cta: "Start Free Trial",
       popular: true
     },
     {
       name: "Enterprise",
-      price: "$2,999",
+      price: "$1,999",
       period: "/month",
-      description: "For large organizations with global supply chains",
+      description: "For large organizations with complex project portfolios",
       features: [
-        "Unlimited AI demand forecasting",
-        "Multi-warehouse optimization",
-        "Global route optimization",
-        "Advanced risk management",
         "Custom AI model training",
         "White-label solutions",
+        "Advanced integrations",
+        "Custom workflow automation",
         "Dedicated account manager",
         "24/7 phone support",
-        "Unlimited API access"
+        "Unlimited team members"
       ],
       cta: "Contact Sales",
       popular: false
@@ -130,8 +125,8 @@ export default function AISupplyChainOptimization() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO 
-        title="AI Supply Chain Optimization Platform - Zion Tech Group"
-        description="Optimize your supply chain with AI-powered forecasting, inventory management, and logistics optimization. Reduce costs and improve efficiency."
+        title="AI Project Management Platform - Zion Tech Group"
+        description="Transform your project management with AI-powered planning, resource optimization, and intelligent automation. Increase success rates and reduce delivery times."
       />
       
       {/* Hero Section */}
@@ -142,25 +137,25 @@ export default function AISupplyChainOptimization() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
-            <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-blue-600 to-cyan-600 text-white text-sm font-medium mb-6">
+            <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-violet-600 to-purple-600 text-white text-sm font-medium mb-6">
               <Brain className="w-4 h-4 mr-2" />
-              AI-Powered Supply Chain
+              AI-Powered Project Management
             </div>
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
-              AI Supply Chain
-              <span className="bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
-                {" "}Optimization Platform
+              AI Project
+              <span className="bg-gradient-to-r from-violet-400 to-purple-400 bg-clip-text text-transparent">
+                {" "}Management Platform
               </span>
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Transform your supply chain operations with AI that predicts demand, optimizes inventory, and streamlines logistics. 
-              Reduce costs, improve efficiency, and gain competitive advantage in today's complex global markets.
+              Revolutionize your project management with AI that plans, schedules, and optimizes resources automatically. 
+              Increase success rates, reduce delivery times, and empower your teams to deliver exceptional results.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="px-8 py-4 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-cyan-700 transition-all duration-200"
+                className="px-8 py-4 bg-gradient-to-r from-violet-600 to-purple-600 text-white font-semibold rounded-lg hover:from-violet-700 hover:to-purple-700 transition-all duration-200"
               >
                 Start Free Trial
               </motion.button>
@@ -186,10 +181,10 @@ export default function AISupplyChainOptimization() {
             className="text-center mb-16"
           >
             <h2 className="text-4xl font-bold text-white mb-4">
-              Comprehensive Supply Chain Intelligence
+              Comprehensive Project Intelligence
             </h2>
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              Everything you need to optimize your entire supply chain from end to end
+              Everything you need to plan, execute, and deliver successful projects
             </p>
           </motion.div>
 
@@ -200,9 +195,9 @@ export default function AISupplyChainOptimization() {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700 hover:border-blue-500 transition-all duration-300"
+                className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700 hover:border-violet-500 transition-all duration-300"
               >
-                <div className="w-12 h-12 bg-gradient-to-r from-blue-600 to-cyan-600 rounded-lg flex items-center justify-center mb-4">
+                <div className="w-12 h-12 bg-gradient-to-r from-violet-600 to-purple-600 rounded-lg flex items-center justify-center mb-4">
                   <CheckCircle className="w-6 h-6 text-white" />
                 </div>
                 <h3 className="text-lg font-semibold text-white mb-2">{feature}</h3>
@@ -222,10 +217,10 @@ export default function AISupplyChainOptimization() {
             className="text-center mb-16"
           >
             <h2 className="text-4xl font-bold text-white mb-4">
-              Measurable Business Impact
+              Transform Your Project Outcomes
             </h2>
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              See real improvements in your supply chain performance and bottom line
+              See measurable improvements in project success and team productivity
             </p>
           </motion.div>
 
@@ -238,7 +233,7 @@ export default function AISupplyChainOptimization() {
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 className="text-center"
               >
-                <div className="w-20 h-20 bg-gradient-to-r from-blue-600 to-cyan-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                <div className="w-20 h-20 bg-gradient-to-r from-violet-600 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
                   <TrendingUp className="w-10 h-10 text-white" />
                 </div>
                 <p className="text-lg text-white font-medium">{benefit}</p>
@@ -261,7 +256,7 @@ export default function AISupplyChainOptimization() {
               Industry-Leading Solutions
             </h2>
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              Proven solutions across diverse industries and supply chain complexities
+              Proven solutions across diverse industries and project types
             </p>
           </motion.div>
 
@@ -272,10 +267,10 @@ export default function AISupplyChainOptimization() {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700 text-center hover:border-blue-500 transition-all duration-300"
+                className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700 text-center hover:border-violet-500 transition-all duration-300"
               >
-                <div className="w-16 h-16 bg-gradient-to-r from-blue-600 to-cyan-600 rounded-lg flex items-center justify-center mx-auto mb-4">
-                  <Package className="w-8 h-8 text-white" />
+                <div className="w-16 h-16 bg-gradient-to-r from-violet-600 to-purple-600 rounded-lg flex items-center justify-center mx-auto mb-4">
+                  <Target className="w-8 h-8 text-white" />
                 </div>
                 <h3 className="text-lg font-semibold text-white">{useCase}</h3>
               </motion.div>
@@ -294,10 +289,10 @@ export default function AISupplyChainOptimization() {
             className="text-center mb-16"
           >
             <h2 className="text-4xl font-bold text-white mb-4">
-              Flexible Pricing for Every Business
+              Flexible Pricing for Every Team
             </h2>
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              Scale your supply chain optimization as your business grows
+              Scale your project management platform as your team grows
             </p>
           </motion.div>
 
@@ -310,13 +305,13 @@ export default function AISupplyChainOptimization() {
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 className={`relative bg-gray-800/50 backdrop-blur-sm rounded-xl p-8 border ${
                   plan.popular 
-                    ? 'border-blue-500 ring-2 ring-blue-500/20' 
+                    ? 'border-violet-500 ring-2 ring-violet-500/20' 
                     : 'border-gray-700'
                 }`}
               >
                 {plan.popular && (
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                    <span className="bg-gradient-to-r from-blue-600 to-cyan-600 text-white px-4 py-2 rounded-full text-sm font-medium">
+                    <span className="bg-gradient-to-r from-violet-600 to-purple-600 text-white px-4 py-2 rounded-full text-sm font-medium">
                       Most Popular
                     </span>
                   </div>
@@ -345,7 +340,7 @@ export default function AISupplyChainOptimization() {
                   whileTap={{ scale: 0.98 }}
                   className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-200 ${
                     plan.popular
-                      ? 'bg-gradient-to-r from-blue-600 to-cyan-600 text-white hover:from-blue-700 hover:to-cyan-700'
+                      ? 'bg-gradient-to-r from-violet-600 to-purple-600 text-white hover:from-violet-700 hover:to-purple-700'
                       : 'bg-gray-700 text-white hover:bg-gray-600'
                   }`}
                 >
@@ -366,16 +361,16 @@ export default function AISupplyChainOptimization() {
             transition={{ duration: 0.8 }}
           >
             <h2 className="text-4xl font-bold text-white mb-6">
-              Ready to Optimize Your Supply Chain?
+              Ready to Transform Your Project Management?
             </h2>
             <p className="text-xl text-gray-300 mb-8">
-              Join industry leaders who have already transformed their supply chain operations with AI
+              Join thousands of teams that have already revolutionized their project delivery with AI
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="px-8 py-4 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-cyan-700 transition-all duration-200"
+                className="px-8 py-4 bg-gradient-to-r from-violet-600 to-purple-600 text-white font-semibold rounded-lg hover:from-violet-700 hover:to-purple-700 transition-all duration-200"
               >
                 Start Free Trial
               </motion.button>
