@@ -14,25 +14,7 @@ module.exports = {
         PORT: 3000
       }
     },
-    
-    // Backend services
-    {
-      name: 'zion-backend',
-      script: 'npm',
-      args: 'run dev',
-      instances: 1,
-      autorestart: true,
-      watch: false,
-      max_memory_restart: '512M',
-      env: {
-        NODE_ENV: 'development',
-        PORT: 5000
-      }
-    }
-  ],
 
-  // Enhanced Automation Processes
-  automation: [
     // Core automation processes
     {
       name: 'console-error-fixer',

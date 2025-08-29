@@ -10,7 +10,11 @@
 
 | Test Suite | Status | Details |
 |------------|--------|---------|
-| Unit | ✅ PASS | No unit tests found
+| Unit | ✅ PASS | 
+> bolt.new.zion.app@0.1.0 test
+> vitest
+
+No unit tests found
 ... |
 | Integration | ✅ PASS | No integration tests found
 ... |
@@ -18,8 +22,13 @@
 | Performance | ✅ PASS | Hello, this is AnupamAS01!
 ... |
 | Accessibility | ✅ PASS | Lint check failed: Command failed: npm run lint
-(node:31284) [MODULE_TYPELESS_PACKAGE_JSON] Warning:... |
-| Coverage | ✅ PASS | Coverage generation failed
+sh: 1: eslint: not found
+... |
+| Coverage | ✅ PASS | 
+> bolt.new.zion.app@0.1.0 test
+> vitest --coverage
+
+Coverage generation failed
 ... |
 
 ## Quality Gates
