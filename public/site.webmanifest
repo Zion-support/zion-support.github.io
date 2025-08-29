@@ -1,7 +1,7 @@
 {
-  "name": "Zion Tech Group - AI & Technology Solutions",
+  "name": "Zion Tech Group",
   "short_name": "Zion Tech",
-  "description": "Leading AI-powered technology solutions, expert talent, and innovative IT services. Transform your business with Zion Tech Group's comprehensive tech ecosystem.",
+  "description": "Leading AI & Technology Solutions provider specializing in artificial intelligence, quantum technology, and innovative IT services.",
   "start_url": "/",
   "display": "standalone",
   "background_color": "#0f172a",
@@ -9,114 +9,115 @@
   "orientation": "portrait-primary",
   "scope": "/",
   "lang": "en",
-  "categories": ["business", "productivity", "technology", "utilities"],
+  "categories": ["business", "productivity", "technology"],
   "icons": [
     {
-      "src": "/android-chrome-192x192.png",
+      "src": "/images/logo-192x192.png",
       "sizes": "192x192",
       "type": "image/png",
       "purpose": "any maskable"
     },
     {
-      "src": "/android-chrome-512x512.png",
+      "src": "/images/logo-512x512.png",
       "sizes": "512x512",
       "type": "image/png",
       "purpose": "any maskable"
     },
     {
-      "src": "/apple-touch-icon.png",
-      "sizes": "180x180",
+      "src": "/images/logo-72x72.png",
+      "sizes": "72x72",
       "type": "image/png"
     },
     {
-      "src": "/favicon-32x32.png",
-      "sizes": "32x32",
+      "src": "/images/logo-96x96.png",
+      "sizes": "96x96",
       "type": "image/png"
     },
     {
-      "src": "/favicon-16x16.png",
-      "sizes": "16x16",
+      "src": "/images/logo-128x128.png",
+      "sizes": "128x128",
       "type": "image/png"
-    }
-  ],
-  "shortcuts": [
-    {
-      "name": "Services",
-      "short_name": "Services",
-      "description": "View our technology services",
-      "url": "/services",
-      "icons": [
-        {
-          "src": "/icons/services-icon.png",
-          "sizes": "96x96"
-        }
-      ]
     },
     {
-      "name": "AI Services",
-      "short_name": "AI",
-      "description": "Explore AI-powered solutions",
-      "url": "/ai-services",
-      "icons": [
-        {
-          "src": "/icons/ai-icon.png",
-          "sizes": "96x96"
-        }
-      ]
+      "src": "/images/logo-144x144.png",
+      "sizes": "144x144",
+      "type": "image/png"
     },
     {
-      "name": "Contact",
-      "short_name": "Contact",
-      "description": "Get in touch with us",
-      "url": "/contact",
-      "icons": [
-        {
-          "src": "/icons/contact-icon.png",
-          "sizes": "96x96"
-        }
-      ]
+      "src": "/images/logo-152x152.png",
+      "sizes": "152x152",
+      "type": "image/png"
     },
     {
-      "name": "Request Quote",
-      "short_name": "Quote",
-      "description": "Request a custom quote",
-      "url": "/request-quote",
-      "icons": [
-        {
-          "src": "/icons/quote-icon.png",
-          "sizes": "96x96"
-        }
-      ]
+      "src": "/images/logo-384x384.png",
+      "sizes": "384x384",
+      "type": "image/png"
     }
   ],
   "screenshots": [
     {
-      "src": "/screenshots/desktop-home.png",
+      "src": "/images/screenshot-wide.png",
       "sizes": "1280x720",
       "type": "image/png",
       "form_factor": "wide",
-      "label": "Homepage on desktop"
+      "label": "Zion Tech Group Homepage"
     },
     {
-      "src": "/screenshots/mobile-home.png",
-      "sizes": "390x844",
+      "src": "/images/screenshot-narrow.png",
+      "sizes": "750x1334",
       "type": "image/png",
       "form_factor": "narrow",
-      "label": "Homepage on mobile"
+      "label": "Zion Tech Group Mobile View"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "AI Services",
+      "short_name": "AI",
+      "description": "Explore our AI-powered solutions",
+      "url": "/ai-services",
+      "icons": [
+        {
+          "src": "/images/ai-icon-96x96.png",
+          "sizes": "96x96"
+        }
+      ]
     },
     {
-      "src": "/screenshots/desktop-services.png",
-      "sizes": "1280x720",
-      "type": "image/png",
-      "form_factor": "wide",
-      "label": "Services page on desktop"
+      "name": "IT Services",
+      "short_name": "IT",
+      "description": "Browse our IT services",
+      "url": "/it-services",
+      "icons": [
+        {
+          "src": "/images/it-icon-96x96.png",
+          "sizes": "96x96"
+        }
+      ]
     },
     {
-      "src": "/screenshots/mobile-services.png",
-      "sizes": "390x844",
-      "type": "image/png",
-      "form_factor": "narrow",
-      "label": "Services page on mobile"
+      "name": "Contact Us",
+      "short_name": "Contact",
+      "description": "Get in touch with our team",
+      "url": "/contact",
+      "icons": [
+        {
+          "src": "/images/contact-icon-96x96.png",
+          "sizes": "96x96"
+        }
+      ]
+    },
+    {
+      "name": "Pricing",
+      "short_name": "Pricing",
+      "description": "View our service pricing",
+      "url": "/pricing-guide",
+      "icons": [
+        {
+          "src": "/images/pricing-icon-96x96.png",
+          "sizes": "96x96"
+        }
+      ]
     }
   ],
   "related_applications": [
@@ -132,11 +133,32 @@
   "launch_handler": {
     "client_mode": "navigate-existing"
   },
-  "handle_links": "preferred",
   "protocol_handlers": [
     {
       "protocol": "web+zion",
       "url": "/?protocol=%s"
     }
-  ]
+  ],
+  "file_handlers": [
+    {
+      "action": "/",
+      "accept": {
+        "text/*": [".txt", ".md", ".json"],
+        "application/pdf": [".pdf"],
+        "image/*": [".png", ".jpg", ".jpeg", ".gif", ".svg"]
+      }
+    }
+  ],
+  "share_target": {
+    "action": "/share",
+    "method": "POST",
+    "enctype": "multipart/form-data",
+    "params": {
+      "title": "title",
+      "text": "text",
+      "url": "url"
+    }
+  },
+  "handle_links": "preferred",
+  "capture_links": "existing-client-navigate"
 } 

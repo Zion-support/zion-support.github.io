@@ -3,9 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Zion Tech Group - Offline</title>
-    <meta name="description" content="You're currently offline. Check your internet connection and try again.">
-    <link rel="icon" href="/favicon.ico">
+    <title>Offline - Zion Tech Group</title>
+    <meta name="description" content="You're currently offline. Check your connection and try again.">
     <style>
         * {
             margin: 0;
@@ -16,7 +15,7 @@
         body {
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
             background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #0f172a 100%);
-            color: white;
+            color: #ffffff;
             min-height: 100vh;
             display: flex;
             align-items: center;
@@ -25,26 +24,27 @@
         }
 
         .offline-container {
-            max-width: 500px;
             text-align: center;
-            background: rgba(30, 41, 59, 0.8);
+            max-width: 500px;
+            background: rgba(255, 255, 255, 0.05);
             backdrop-filter: blur(20px);
             border-radius: 20px;
             padding: 40px;
-            border: 1px solid rgba(148, 163, 184, 0.2);
-            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.3);
         }
 
         .offline-icon {
-            width: 120px;
-            height: 120px;
-            margin: 0 auto 30px;
+            width: 80px;
+            height: 80px;
+            margin: 0 auto 20px;
             background: linear-gradient(135deg, #ef4444, #dc2626);
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 60px;
+            font-size: 40px;
+            color: white;
             animation: pulse 2s infinite;
         }
 
@@ -55,9 +55,8 @@
 
         h1 {
             font-size: 2.5rem;
-            font-weight: 700;
-            margin-bottom: 20px;
-            background: linear-gradient(135deg, #f1f5f9, #cbd5e1);
+            margin-bottom: 15px;
+            background: linear-gradient(135deg, #ef4444, #dc2626);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
@@ -73,14 +72,12 @@
         .status-indicator {
             display: inline-flex;
             align-items: center;
-            gap: 8px;
-            background: rgba(239, 68, 68, 0.2);
-            color: #fca5a5;
-            padding: 8px 16px;
-            border-radius: 20px;
-            font-size: 0.9rem;
-            margin-bottom: 30px;
+            gap: 10px;
+            background: rgba(239, 68, 68, 0.1);
             border: 1px solid rgba(239, 68, 68, 0.3);
+            border-radius: 25px;
+            padding: 10px 20px;
+            margin-bottom: 30px;
         }
 
         .status-dot {
@@ -96,121 +93,76 @@
             51%, 100% { opacity: 0.3; }
         }
 
-        .action-buttons {
-            display: flex;
-            flex-direction: column;
-            gap: 15px;
-            margin-bottom: 30px;
-        }
-
-        .btn {
-            padding: 15px 30px;
+        .retry-button {
+            background: linear-gradient(135deg, #3b82f6, #1d4ed8);
+            color: white;
             border: none;
-            border-radius: 12px;
-            font-size: 1rem;
+            padding: 15px 30px;
+            border-radius: 10px;
+            font-size: 1.1rem;
             font-weight: 600;
             cursor: pointer;
             transition: all 0.3s ease;
-            text-decoration: none;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 10px;
+            margin-bottom: 20px;
         }
 
-        .btn-primary {
-            background: linear-gradient(135deg, #0ea5e9, #0284c7);
-            color: white;
-        }
-
-        .btn-primary:hover {
-            background: linear-gradient(135deg, #0284c7, #0369a1);
+        .retry-button:hover {
             transform: translateY(-2px);
-            box-shadow: 0 10px 25px rgba(14, 165, 233, 0.3);
+            box-shadow: 0 10px 25px rgba(59, 130, 246, 0.4);
         }
 
-        .btn-secondary {
-            background: rgba(148, 163, 184, 0.2);
-            color: #cbd5e1;
-            border: 1px solid rgba(148, 163, 184, 0.3);
+        .retry-button:active {
+            transform: translateY(0);
         }
 
-        .btn-secondary:hover {
-            background: rgba(148, 163, 184, 0.3);
-            color: #f1f5f9;
-            transform: translateY(-2px);
-        }
-
-        .troubleshooting {
-            background: rgba(14, 165, 233, 0.1);
-            border: 1px solid rgba(14, 165, 233, 0.2);
-            border-radius: 12px;
-            padding: 20px;
+        .offline-features {
+            margin-top: 30px;
             text-align: left;
         }
 
-        .troubleshooting h3 {
-            color: #0ea5e9;
+        .offline-features h3 {
+            color: #94a3b8;
             margin-bottom: 15px;
-            font-size: 1.1rem;
+            font-size: 1rem;
+        }
+
+        .feature-list {
+            list-style: none;
+            color: #cbd5e1;
+        }
+
+        .feature-list li {
+            padding: 8px 0;
             display: flex;
             align-items: center;
-            gap: 8px;
+            gap: 10px;
         }
 
-        .troubleshooting ul {
-            list-style: none;
-            padding: 0;
-        }
-
-        .troubleshooting li {
-            color: #94a3b8;
-            margin-bottom: 8px;
-            padding-left: 20px;
-            position: relative;
-        }
-
-        .troubleshooting li::before {
-            content: "•";
-            color: #0ea5e9;
-            position: absolute;
-            left: 0;
+        .feature-list li::before {
+            content: "✓";
+            color: #10b981;
             font-weight: bold;
         }
 
-        .connection-status {
+        .connection-info {
             margin-top: 20px;
             padding: 15px;
-            background: rgba(34, 197, 94, 0.1);
-            border: 1px solid rgba(34, 197, 94, 0.2);
-            border-radius: 8px;
-            display: none;
+            background: rgba(59, 130, 246, 0.1);
+            border: 1px solid rgba(59, 130, 246, 0.3);
+            border-radius: 10px;
+            font-size: 0.9rem;
+            color: #93c5fd;
         }
 
-        .connection-status.online {
-            display: block;
-            animation: slideIn 0.5s ease;
-        }
-
-        @keyframes slideIn {
-            from { opacity: 0; transform: translateY(-10px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-
-        .connection-status h4 {
-            color: #22c55e;
-            margin-bottom: 8px;
-            display: flex;
-            align-items: center;
-            gap: 8px;
-        }
-
-        .connection-status p {
-            color: #86efac;
+        .footer {
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: #64748b;
             font-size: 0.9rem;
         }
 
-        @media (max-width: 600px) {
+        @media (max-width: 768px) {
             .offline-container {
                 padding: 30px 20px;
             }
@@ -219,19 +171,8 @@
                 font-size: 2rem;
             }
 
-            .offline-icon {
-                width: 100px;
-                height: 100px;
-                font-size: 50px;
-            }
-
-            .action-buttons {
-                gap: 12px;
-            }
-
-            .btn {
-                padding: 12px 24px;
-                font-size: 0.9rem;
+            .subtitle {
+                font-size: 1rem;
             }
         }
     </style>
@@ -241,7 +182,6 @@
         <div class="offline-icon">📡</div>
         
         <h1>You're Offline</h1>
-        
         <p class="subtitle">
             It looks like you've lost your internet connection. 
             Don't worry, we're here to help you get back online.
@@ -252,151 +192,77 @@
             <span>No Internet Connection</span>
         </div>
 
-        <div class="action-buttons">
-            <button class="btn btn-primary" onclick="retryConnection()">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                    <path d="M3 12a9 9 0 0 1 9-9 9.75 9.75 0 0 1 6.74 2.74L21 8"></path>
-                    <path d="M21 3v5h-5"></path>
-                    <path d="M21 12a9 9 0 0 1-9 9 9.75 9.75 0 0 1-6.74-2.74L3 16"></path>
-                    <path d="M3 21v-5h5"></path>
-                </svg>
-                Retry Connection
-            </button>
-            
-            <button class="btn btn-secondary" onclick="goHome()">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                    <path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
-                    <polyline points="9,22 9,12 15,12 15,22"></polyline>
-                </svg>
-                Go to Homepage
-            </button>
-        </div>
+        <button class="retry-button" onclick="retryConnection()">
+            🔄 Try Again
+        </button>
 
-        <div class="troubleshooting">
-            <h3>
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                    <circle cx="12" cy="12" r="10"></circle>
-                    <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path>
-                    <path d="M12 17h.01"></path>
-                </svg>
-                Troubleshooting Tips
-            </h3>
-            <ul>
-                <li>Check your Wi-Fi connection</li>
-                <li>Try switching to mobile data</li>
-                <li>Restart your router</li>
-                <li>Check if other websites work</li>
-                <li>Try refreshing the page</li>
+        <div class="offline-features">
+            <h3>While you're offline, you can still:</h3>
+            <ul class="feature-list">
+                <li>View previously cached pages</li>
+                <li>Access your saved data</li>
+                <li>Use offline features</li>
+                <li>Review cached content</li>
             </ul>
         </div>
 
-        <div class="connection-status" id="connectionStatus">
-            <h4>
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                    <path d="M22 12h-4l-3 9L9 3l-3 9H2"></path>
-                </svg>
-                Connection Restored!
-            </h4>
-            <p>You're back online. Redirecting you to the main site...</p>
+        <div class="connection-info">
+            <strong>Connection Tips:</strong><br>
+            • Check your Wi-Fi or mobile data<br>
+            • Try refreshing the page<br>
+            • Restart your device if needed
+        </div>
+
+        <div class="footer">
+            Zion Tech Group - Always here to help, online or offline
         </div>
     </div>
 
     <script>
-        let retryCount = 0;
-        const maxRetries = 5;
-
         function retryConnection() {
-            retryCount++;
-            
-            if (retryCount > maxRetries) {
-                alert('Maximum retry attempts reached. Please check your connection manually.');
-                return;
-            }
+            const button = document.querySelector('.retry-button');
+            button.textContent = '🔄 Checking...';
+            button.disabled = true;
 
-            // Show loading state
-            const retryBtn = document.querySelector('.btn-primary');
-            const originalText = retryBtn.innerHTML;
-            retryBtn.innerHTML = `
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="animate-spin">
-                    <path d="M21 12a9 9 0 11-6.219-8.56"></path>
-                </svg>
-                Checking Connection...
-            `;
-            retryBtn.disabled = true;
-
-            // Check connection
-            checkConnection();
-        }
-
-        function checkConnection() {
-            // Try to fetch a small resource to test connection
-            fetch('/favicon.ico', { 
-                method: 'HEAD',
-                cache: 'no-cache'
-            })
-            .then(response => {
-                if (response.ok) {
-                    connectionRestored();
-                } else {
-                    connectionFailed();
-                }
-            })
-            .catch(() => {
-                connectionFailed();
-            });
-        }
-
-        function connectionRestored() {
-            const status = document.getElementById('connectionStatus');
-            status.classList.add('online');
-            
-            // Redirect after a short delay
-            setTimeout(() => {
-                window.location.href = '/';
-            }, 2000);
-        }
-
-        function connectionFailed() {
-            const retryBtn = document.querySelector('.btn-primary');
-            retryBtn.innerHTML = `
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                    <path d="M3 12a9 9 0 0 1 9-9 9.75 9.75 0 0 1 6.74 2.74L21 8"></path>
-                    <path d="M21 3v5h-5"></path>
-                    <path d="M21 12a9 9 0 0 1-9 9 9.75 9.75 0 0 1-6.74-2.74L3 16"></path>
-                    <path d="M3 21v-5h5"></path>
-                </svg>
-                Retry Connection (${retryCount}/${maxRetries})
-            `;
-            retryBtn.disabled = false;
-        }
-
-        function goHome() {
-            window.location.href = '/';
-        }
-
-        // Auto-check connection every 10 seconds
-        setInterval(() => {
+            // Check connection status
             if (navigator.onLine) {
-                checkConnection();
+                // If we're back online, reload the page
+                window.location.reload();
+            } else {
+                // Still offline, show error
+                setTimeout(() => {
+                    button.textContent = '❌ Still Offline';
+                    button.style.background = 'linear-gradient(135deg, #ef4444, #dc2626)';
+                    
+                    setTimeout(() => {
+                        button.textContent = '🔄 Try Again';
+                        button.style.background = 'linear-gradient(135deg, #3b82f6, #1d4ed8)';
+                        button.disabled = false;
+                    }, 2000);
+                }, 1000);
             }
-        }, 10000);
+        }
 
         // Listen for online/offline events
         window.addEventListener('online', () => {
-            checkConnection();
+            window.location.reload();
         });
 
         window.addEventListener('offline', () => {
-            // Reset retry count when going offline
-            retryCount = 0;
+            // Already on offline page, no need to do anything
         });
 
-        // Check connection on page load
-        window.addEventListener('load', () => {
+        // Auto-retry every 30 seconds
+        setInterval(() => {
             if (navigator.onLine) {
-                checkConnection();
+                window.location.reload();
             }
-        });
+        }, 30000);
+
+        // Show connection status in console for debugging
+        console.log('Offline page loaded');
+        console.log('Connection status:', navigator.onLine ? 'Online' : 'Offline');
+        console.log('User agent:', navigator.userAgent);
     </script>
 </body>
 </html>

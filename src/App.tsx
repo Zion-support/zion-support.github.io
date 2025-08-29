@@ -1,11 +1,12 @@
 import React, { Suspense } from 'react';
 import { Routes, Route } from 'react-router-dom';
-import { AppHeader } from './layout/AppHeader';
+import { ResponsiveNavigation } from './components/ResponsiveNavigation';
 import { EnhancedFuturisticFooter } from './components/EnhancedFuturisticFooter';
 import { ChatAssistant } from './components/ChatAssistant';
 import { LoadingSpinner } from './components/ui/LoadingSpinner';
-import { SEO } from './components/SEO';
+import { EnhancedSEO } from './components/EnhancedSEO';
 import { PerformanceOptimizer } from './components/PerformanceOptimizer';
+import { AccessibilityEnhancer } from './components/AccessibilityEnhancer';
 import { ErrorBoundary } from './components/ErrorBoundary';
 
 // Lazy load pages - only import existing ones
@@ -116,9 +117,9 @@ function App() {
   return (
     <ErrorBoundary>
       <div className="min-h-screen bg-futuristic">
-        <AppHeader />
+        <ResponsiveNavigation />
         
-        <main className="flex-1">
+        <main className="flex-1 pt-16 lg:pt-20">
           <Suspense fallback={<LoadingSpinner />}>
             <Routes>
               <Route path="/" element={<Home />} />
@@ -198,6 +199,7 @@ function App() {
         <EnhancedFuturisticFooter />
         <ChatAssistant />
         <PerformanceOptimizer />
+        <AccessibilityEnhancer />
       </div>
     </ErrorBoundary>
   );
