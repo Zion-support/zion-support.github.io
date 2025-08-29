@@ -177,6 +177,7 @@ const AIMetaverseDevelopmentPlatform = lazy(() => import('./pages/services/AIMet
 const ComprehensiveServicesShowcase2027Page = lazy(() => import('./pages/ComprehensiveServicesShowcase2027'));
 const ComprehensiveServicesLanding2025 = lazy(() => import('./pages/ComprehensiveServicesLanding2025'));
 const ComprehensivePricing2026 = lazy(() => import('./pages/ComprehensivePricing2026'));
+const ComprehensiveServicesShowcase2025 = lazy(() => import('./pages/ComprehensiveServicesShowcase2025'));
 const ComprehensivePricing2028 = lazy(() => import('./pages/ComprehensivePricing2028'));
 
 // Innovative services imports
@@ -322,8 +323,9 @@ function App() {
                 <Route path="/services/ai-sustainable-technology" element={<AISustainableTechnology />} />
                 <Route path="/services/ai-quantum-machine-learning" element={<AIQuantumMachineLearning />} />
 
-                {/* Innovative services showcase */}
-                <Route path="/innovative-services-2025" element={<InnovativeServicesShowcase2025 />} />
+                                       {/* Innovative services showcase */}
+                       <Route path="/innovative-services-2025" element={<InnovativeServicesShowcase2025 />} />
+                       <Route path="/comprehensive-services-showcase-2025" element={<ComprehensiveServicesShowcase2025 />} />
                 
                 {/* New 2025 service routes */}
                 <Route path="/ultimate-services-2025" element={<UltimateServicesShowcase2025 />} />
