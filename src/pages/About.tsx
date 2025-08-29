@@ -64,7 +64,7 @@ const About: React.FC = () => {
     }
   ];
 
-  const timeline = [
+  const team = [
     {
       name: 'Kleber Santos',
       role: 'CEO & Founder',
