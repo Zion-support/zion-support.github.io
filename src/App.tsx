@@ -184,6 +184,7 @@ const AIMetaverseDevelopmentPlatform = lazy(() => import('./pages/services/AIMet
 const ComprehensiveServicesShowcase2027Page = lazy(() => import('./pages/ComprehensiveServicesShowcase2027'));
 const ComprehensiveServicesLanding2025 = lazy(() => import('./pages/ComprehensiveServicesLanding2025'));
 const ComprehensivePricing2026 = lazy(() => import('./pages/ComprehensivePricing2026'));
+const ComprehensiveServicesShowcase2025 = lazy(() => import('./pages/ComprehensiveServicesShowcase2025'));
 const ComprehensivePricing2028 = lazy(() => import('./pages/ComprehensivePricing2028'));
 
 // Innovative services imports
@@ -201,7 +202,6 @@ const ITConsulting = lazy(() => import('./pages/ITConsulting'));
 
 // Service showcase pages
 const UltimateServicesShowcase2025 = React.lazy(() => import('./pages/UltimateServicesShowcase2025'));
-const ComprehensiveServicesShowcase2025 = React.lazy(() => import('./pages/ComprehensiveServicesShowcase2025'));
 
 // Additional innovative AI services
 const AIHRTalentAcquisition = React.lazy(() => import('./pages/services/AIHRTalentAcquisition'));
@@ -336,6 +336,35 @@ function App() {
                     {/* 2025 Innovative Services Routes */}
                     <Route path="/innovative-services-landing-2025" element={<InnovativeServicesLanding2025 />} />
                     <Route path="/comprehensive-services-showcase-2025" element={<ComprehensiveServicesShowcase2025 />} />
+                    
+                    {/* Additional AI Service Routes */}
+                    <Route path="/ai-legal-document-automation" element={<AILegalDocumentAutomation />} />
+                    <Route path="/ai-healthcare-analytics" element={<AIHealthcareAnalytics />} />
+                    <Route path="/ai-financial-trading" element={<AIFinancialTrading />} />
+                    <Route path="/ai-content-creation-suite" element={<AIContentCreationSuite />} />
+                    
+                    {/* New innovative AI services */}
+                    <Route path="/services/ai-workflow-orchestrator" element={<AIWorkflowOrchestrator />} />
+                    <Route path="/services/ai-data-governance-platform" element={<AIDataGovernancePlatform />} />
+                    <Route path="/services/ai-customer-experience-analytics" element={<AICustomerExperienceAnalytics />} />
+                    <Route path="/services/ai-financial-risk-management" element={<AIFinancialRiskManagement />} />
+                    <Route path="/services/ai-hr-talent-acquisition" element={<AIHRTalentAcquisition />} />
+                    <Route path="/services/ai-iot-edge-computing" element={<AIIoTEdgeComputing />} />
+                    <Route path="/services/ai-predictive-maintenance" element={<AIPredictiveMaintenance />} />
+                    <Route path="/services/ai-sustainable-technology" element={<AISustainableTechnology />} />
+                    <Route path="/services/ai-quantum-machine-learning" element={<AIQuantumMachineLearning />} />
+
+                    {/* Innovative services showcase */}
+                    <Route path="/innovative-services-2025" element={<InnovativeServicesShowcase2025 />} />
+                    <Route path="/comprehensive-services-showcase-2025" element={<ComprehensiveServicesShowcase2025 />} />
+                    
+                    {/* New 2025 service routes */}
+                    <Route path="/ultimate-services-2025" element={<UltimateServicesShowcase2025 />} />
+                    <Route path="/ultimate-services-2026" element={<UltimateServicesShowcase2026 />} />
+                    <Route path="/comprehensive-pricing-2026" element={<ComprehensivePricing2026 />} />
+                    <Route path="/comprehensive-pricing-2028" element={<ComprehensivePricing2028 />} />
+                    <Route path="/comprehensive-services-showcase-2025" element={<ComprehensiveServicesShowcase2025 />} />
+                    <Route path="/innovative-services-showcase-2025" element={<InnovativeServicesShowcase2025 />} />
                     <Route path="/comprehensive-pricing-guide-2025" element={<ComprehensivePricingGuide2025 />} />
                     
                     {/* Comprehensive Services Routes */}
@@ -484,6 +513,9 @@ function App() {
             />
           </div>
         </Router>
+
+
+
       </ErrorBoundary>
     </HelmetProvider>
   );
