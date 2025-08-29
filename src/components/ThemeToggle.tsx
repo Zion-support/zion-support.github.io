@@ -1,64 +1,69 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
+import { motion } from 'framer-motion';
 import { Sun, Moon, Monitor } from 'lucide-react';
+import { useTheme } from './ThemeProvider';
 
-type Theme = 'dark' | 'light' | 'system';
+export const ThemeToggle: React.FC = () => {
+  const { theme, setTheme, isDark } = useTheme();
 
-export function ThemeToggle() {
-  const [theme, setTheme] = useState<Theme>('system');
-  const [mounted, setMounted] = useState(false);
-
-  useEffect(() => {
-    setMounted(true);
-    const savedTheme = localStorage.getItem('zion-theme') as Theme;
-    if (savedTheme) {
-      setTheme(savedTheme);
-    }
-  }, []);
-
-  useEffect(() => {
-    if (!mounted) return;
-
-    const root = window.document.documentElement;
-    root.classList.remove('light', 'dark');
-
-    if (theme === 'system') {
-      const systemTheme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
-      root.classList.add(systemTheme);
-    } else {
-      root.classList.add(theme);
-    }
-    localStorage.setItem('zion-theme', theme);
-  }, [theme, mounted]);
-
-  const toggleTheme = (newTheme: Theme) => {
-    setTheme(newTheme);
-  };
-
-  if (!mounted) return null;
+  const themes = [
+    { value: 'light', icon: Sun, label: 'Light' },
+    { value: 'dark', icon: Moon, label: 'Dark' },
+    { value: 'system', icon: Monitor, label: 'System' },
+  ] as const;
 
   return (
-    <div className="flex items-center space-x-2 p-1 bg-zion-slate-dark rounded-full border border-zion-slate-light/20">
-      <button
-        onClick={() => toggleTheme('light')}
-        className={`p-2 rounded-full transition-colors duration-200 ${theme === 'light' ? 'bg-zion-cyan text-white' : 'text-zion-slate-light hover:bg-zion-slate-light/10'}`}
-        aria-label="Switch to light theme"
-      >
-        <Sun className="h-5 w-5" />
-      </button>
-      <button
-        onClick={() => toggleTheme('dark')}
-        className={`p-2 rounded-full transition-colors duration-200 ${theme === 'dark' ? 'bg-zion-purple text-white' : 'text-zion-slate-light hover:bg-zion-slate-light/10'}`}
-        aria-label="Switch to dark theme"
-      >
-        <Moon className="h-5 w-5" />
-      </button>
-      <button
-        onClick={() => toggleTheme('system')}
-        className={`p-2 rounded-full transition-colors duration-200 ${theme === 'system' ? 'bg-zion-green text-white' : 'text-zion-slate-light hover:bg-zion-slate-light/10'}`}
-        aria-label="Switch to system theme"
-      >
-        <Monitor className="h-5 w-5" />
-      </button>
+    <div className="relative inline-flex items-center rounded-lg bg-slate-100 dark:bg-slate-800 p-1 shadow-sm">
+      {themes.map(({ value, icon: Icon, label }) => {
+        const isActive = theme === value;
+        return (
+          <motion.button
+            key={value}
+            onClick={() => setTheme(value)}
+            className={`relative flex items-center gap-2 px-3 py-2 text-sm font-medium rounded-md transition-all duration-200 ${
+              isActive
+                ? 'text-white shadow-sm'
+                : 'text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-slate-100'
+            }`}
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+          >
+            {isActive && (
+              <motion.div
+                className="absolute inset-0 bg-gradient-to-r from-blue-500 to-purple-600 rounded-md"
+                layoutId="activeTheme"
+                transition={{ type: "spring", bounce: 0.2, duration: 0.6 }}
+              />
+            )}
+            <Icon className="relative z-10 h-4 w-4" />
+            <span className="relative z-10 hidden sm:inline">{label}</span>
+          </motion.button>
+        );
+      })}
     </div>
   );
-}
+};
+
+export const SimpleThemeToggle: React.FC = () => {
+  const { theme, setTheme } = useTheme();
+
+  const toggleTheme = () => {
+    setTheme(theme === 'light' ? 'dark' : 'light');
+  };
+
+  return (
+    <motion.button
+      onClick={toggleTheme}
+      className="p-2 rounded-lg bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-slate-100 transition-colors duration-200"
+      whileHover={{ scale: 1.1 }}
+      whileTap={{ scale: 0.9 }}
+      title={`Switch to ${theme === 'light' ? 'dark' : 'light'} mode`}
+    >
+      {theme === 'light' ? (
+        <Moon className="h-5 w-5" />
+      ) : (
+        <Sun className="h-5 w-5" />
+      )}
+    </motion.button>
+  );
+};
