@@ -5,38 +5,55 @@ interface SEOProps {
   title: string;
   description: string;
   keywords?: string;
+  author?: string;
   image?: string;
   url?: string;
-  type?: 'website' | 'article' | 'service';
+  type?: 'website' | 'article' | 'product' | 'service';
   publishedTime?: string;
   modifiedTime?: string;
-  author?: string;
   section?: string;
   tags?: string[];
   structuredData?: object;
+  canonical?: string;
+  noindex?: boolean;
+  nofollow?: boolean;
+  ogType?: string;
+  twitterCard?: 'summary' | 'summary_large_image' | 'app' | 'player';
 }
 
 export function SEO({
   title,
   description,
   keywords,
+  author = 'Zion Tech Group',
   image = '/images/zion-tech-group-og.jpg',
-  url = window.location.href,
+  url,
   type = 'website',
   publishedTime,
   modifiedTime,
-  author = 'Zion Tech Group',
   section,
   tags = [],
-  structuredData
+  structuredData,
+  canonical,
+  noindex = false,
+  nofollow = false,
+  ogType,
+  twitterCard = 'summary_large_image'
 }: SEOProps) {
+  const siteName = 'Zion Tech Group';
+  const siteUrl = 'https://ziontechgroup.com';
+  const fullTitle = title.includes(siteName) ? title : `${title} | ${siteName}`;
+  const fullUrl = url ? `${siteUrl}${url}` : siteUrl;
+  const fullImage = image.startsWith('http') ? image : `${siteUrl}${image}`;
+
+  // Default structured data for organization
   const defaultStructuredData = {
     "@context": "https://schema.org",
     "@type": "Organization",
     "name": "Zion Tech Group",
-    "url": "https://ziontechgroup.com",
-    "logo": "https://ziontechgroup.com/images/zion-tech-group-logo.png",
-    "description": "Leading provider of AI-powered business solutions, IT services, and digital transformation consulting.",
+    "url": siteUrl,
+    "logo": `${siteUrl}/images/zion-tech-group-logo.png`,
+    "description": "Leading provider of AI-powered technology solutions and services",
     "address": {
       "@type": "PostalAddress",
       "addressCountry": "US"
@@ -44,89 +61,140 @@ export function SEO({
     "contactPoint": {
       "@type": "ContactPoint",
       "contactType": "customer service",
-      "availableLanguage": "English"
+      "email": "info@ziontechgroup.com"
     },
     "sameAs": [
-      "https://linkedin.com/company/zion-tech-group",
-      "https://twitter.com/ziontechgroup"
+      "https://linkedin.com/company/ziontechgroup",
+      "https://twitter.com/ziontechgroup",
+      "https://facebook.com/ziontechgroup"
     ]
   };
 
-  const pageStructuredData = {
-    "@context": "https://schema.org",
-    "@type": type === 'article' ? 'Article' : 'WebPage',
-    "headline": title,
-    "description": description,
-    "url": url,
-    "image": image,
-    "author": {
-      "@type": "Organization",
-      "name": author
-    },
-    "publisher": {
-      "@type": "Organization",
-      "name": "Zion Tech Group",
-      "logo": {
-        "@type": "ImageObject",
-        "url": "https://ziontechgroup.com/images/zion-tech-group-logo.png"
-      }
-    },
-    ...(type === 'article' && publishedTime && {
-      "datePublished": publishedTime,
-      "dateModified": modifiedTime || publishedTime,
-      "articleSection": section,
-      "keywords": tags.join(', ')
-    })
-  };
+  // Merge with provided structured data
+  const finalStructuredData = structuredData || defaultStructuredData;
 
   return (
     <Helmet>
       {/* Basic Meta Tags */}
-      <title>{title}</title>
+      <title>{fullTitle}</title>
       <meta name="description" content={description} />
       {keywords && <meta name="keywords" content={keywords} />}
       <meta name="author" content={author} />
       
+      {/* Robots Meta */}
+      <meta name="robots" content={`${noindex ? 'noindex' : 'index'}, ${nofollow ? 'nofollow' : 'follow'}`} />
+      
+      {/* Canonical URL */}
+      {canonical && <link rel="canonical" href={canonical} />}
+      
       {/* Open Graph Meta Tags */}
-      <meta property="og:title" content={title} />
+      <meta property="og:title" content={fullTitle} />
       <meta property="og:description" content={description} />
-      <meta property="og:type" content={type} />
-      <meta property="og:url" content={url} />
-      <meta property="og:image" content={image} />
-      <meta property="og:site_name" content="Zion Tech Group" />
+      <meta property="og:type" content={ogType || type} />
+      <meta property="og:url" content={fullUrl} />
+      <meta property="og:image" content={fullImage} />
+      <meta property="og:site_name" content={siteName} />
       <meta property="og:locale" content="en_US" />
       
       {/* Twitter Card Meta Tags */}
-      <meta name="twitter:card" content="summary_large_image" />
-      <meta name="twitter:title" content={title} />
-      <meta name="twitter:description" content={description} />
-      <meta name="twitter:image" content={image} />
+      <meta name="twitter:card" content={twitterCard} />
       <meta name="twitter:site" content="@ziontechgroup" />
+      <meta name="twitter:creator" content="@ziontechgroup" />
+      <meta name="twitter:title" content={fullTitle} />
+      <meta name="twitter:description" content={description} />
+      <meta name="twitter:image" content={fullImage} />
       
       {/* Additional Meta Tags */}
-      <meta name="robots" content="index, follow" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <meta name="theme-color" content="#2e73ea" />
-      <meta name="msapplication-TileColor" content="#2e73ea" />
+      <meta name="theme-color" content="#007bff" />
+      <meta name="msapplication-TileColor" content="#007bff" />
+      <meta name="apple-mobile-web-app-capable" content="yes" />
+      <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+      <meta name="apple-mobile-web-app-title" content={siteName} />
       
-      {/* Canonical URL */}
-      <link rel="canonical" href={url} />
+      {/* Article specific meta tags */}
+      {type === 'article' && publishedTime && (
+        <meta property="article:published_time" content={publishedTime} />
+      )}
+      {type === 'article' && modifiedTime && (
+        <meta property="article:modified_time" content={modifiedTime} />
+      )}
+      {type === 'article' && section && (
+        <meta property="article:section" content={section} />
+      )}
+      {type === 'article' && tags.length > 0 && (
+        tags.map((tag, index) => (
+          <meta key={index} property="article:tag" content={tag} />
+        ))
+      )}
       
-      {/* Favicon */}
+      {/* Preconnect to external domains for performance */}
+      <link rel="preconnect" href="https://fonts.googleapis.com" />
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+      <link rel="preconnect" href="https://cdn.gpteng.co" />
+      
+      {/* DNS prefetch for performance */}
+      <link rel="dns-prefetch" href="//fonts.googleapis.com" />
+      <link rel="dns-prefetch" href="//fonts.gstatic.com" />
+      <link rel="dns-prefetch" href="//cdn.gpteng.co" />
+      
+      {/* Favicon and app icons */}
       <link rel="icon" type="image/x-icon" href="/favicon.ico" />
-      <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
       <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
       <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+      <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+      <link rel="manifest" href="/site.webmanifest" />
       
       {/* Structured Data */}
       <script type="application/ld+json">
-        {JSON.stringify(structuredData || pageStructuredData)}
+        {JSON.stringify(finalStructuredData)}
       </script>
       
-      {/* Organization Structured Data */}
-      <script type="application/ld+json">
-        {JSON.stringify(defaultStructuredData)}
-      </script>
+      {/* Additional structured data for specific page types */}
+      {type === 'service' && (
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Service",
+            "name": title,
+            "description": description,
+            "provider": {
+              "@type": "Organization",
+              "name": "Zion Tech Group"
+            },
+            "serviceType": section || "Technology Service",
+            "areaServed": "Worldwide",
+            "availableChannel": {
+              "@type": "ServiceChannel",
+              "serviceUrl": fullUrl
+            }
+          })}
+        </script>
+      )}
+      
+      {/* Breadcrumb structured data */}
+      {url && url !== '/' && (
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": siteUrl
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "name": title,
+                "item": fullUrl
+              }
+            ]
+          })}
+        </script>
+      )}
     </Helmet>
   );
 }
