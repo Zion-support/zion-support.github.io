@@ -58,6 +58,14 @@ const SpaceTech = React.lazy(() => import('./pages/services/SpaceTech'));
 const Sustainability = React.lazy(() => import('./pages/services/Sustainability'));
 const ZeroTrustNetworkArchitecture = React.lazy(() => import('./pages/services/ZeroTrustNetworkArchitecture'));
 
+// New service pages
+const AIHealthcarePlatform = React.lazy(() => import('./pages/services/ai-healthcare-platform'));
+const AIContentCreation = React.lazy(() => import('./pages/services/ai-content-creation'));
+const AICybersecurity = React.lazy(() => import('./pages/services/ai-cybersecurity'));
+const IoTEdgeComputing = React.lazy(() => import('./pages/services/iot-edge-computing'));
+const CloudDevOps = React.lazy(() => import('./pages/services/cloud-devops'));
+const AISalesCopilot = React.lazy(() => import('./pages/services/ai-sales-copilot'));
+
 // Advanced AI services that exist
 const AICybersecuritySuite = React.lazy(() => import('./pages/services/ai-cybersecurity-threat-detection'));
 const QuantumAIPlatform = React.lazy(() => import('./pages/services/QuantumAIPlatform'));
@@ -101,6 +109,9 @@ const AIHealthcarePredictiveAnalytics = React.lazy(() => import('./pages/service
 const AIFinancialTradingRiskManagement = React.lazy(() => import('./pages/services/AIFinancialTradingRiskManagement'));
 const ComprehensiveAIServicesShowcase2025 = React.lazy(() => import('./pages/ComprehensiveAIServicesShowcase2025'));
 
+// Innovative Micro SAAS Services 2025
+const InnovativeMicroSaasServices2025 = React.lazy(() => import('./pages/innovative-micro-saas-services-2025'));
+
 function App() {
   return (
     <ErrorBoundary>
@@ -143,6 +154,14 @@ function App() {
                 <Route path="/services/sustainability" element={<Sustainability />} />
                 <Route path="/services/zero-trust-network-architecture" element={<ZeroTrustNetworkArchitecture />} />
                 
+                {/* New Service Routes */}
+                <Route path="/services/ai-healthcare-platform" element={<AIHealthcarePlatform />} />
+                <Route path="/services/ai-content-creation" element={<AIContentCreation />} />
+                <Route path="/services/ai-cybersecurity" element={<AICybersecurity />} />
+                <Route path="/services/iot-edge-computing" element={<IoTEdgeComputing />} />
+                <Route path="/services/cloud-devops" element={<CloudDevOps />} />
+                <Route path="/services/ai-sales-copilot" element={<AISalesCopilot />} />
+                
                 {/* Advanced AI Service Routes */}
                 <Route path="/services/ai-cybersecurity-suite" element={<AICybersecuritySuite />} />
                 <Route path="/services/quantum-ai-platform" element={<QuantumAIPlatform />} />
@@ -176,6 +195,9 @@ function App() {
                 
                 {/* New comprehensive pricing guide 2026 */}
                 <Route path="/comprehensive-pricing-guide-2026" element={<ComprehensivePricingGuide2026 />} />
+                
+                {/* Innovative Micro SAAS Services 2025 */}
+                <Route path="/innovative-micro-saas-services-2025" element={<InnovativeMicroSaasServices2025 />} />
                 
                 {/* New comprehensive pricing guide 2027 */}
                 <Route path="/comprehensive-pricing-guide-2027" element={<ComprehensivePricingGuide2027 />} />
