@@ -66,41 +66,16 @@ export const EnhancedFuturisticFooter: React.FC = () => {
 
   const footerSections = [
     {
-      title: 'AI & Analytics Services',
-      icon: Brain,
+      title: 'Revolutionary 2030',
+      icon: Rocket,
       color: 'from-purple-600 to-pink-600',
       links: [
-        { name: 'AI Business Intelligence Platform', href: '/services/ai-business-intelligence-platform' },
-        { name: 'AI Sales Copilot', href: '/services/ai-sales-copilot' },
-        { name: 'AI Compliance Assistant', href: '/services/ai-compliance-assistant' },
-        { name: 'AI Auto Email Responder', href: '/services/ai-auto-email-responder' },
-        { name: 'LLM Content Studio', href: '/services/llm-content-studio' },
-        { name: 'AI Compliance Copilot', href: '/services/ai-compliance-copilot' },
-        { name: 'AI Customer Success Platform', href: '/services/ai-customer-success-platform' },
-        { name: 'AI Workflow Orchestrator', href: '/services/ai-workflow-orchestrator' },
-        { name: 'AI Data Governance Platform', href: '/services/ai-data-governance-platform' },
-        { name: 'AI Healthcare Analytics', href: '/services/ai-healthcare-analytics' },
-        { name: 'AI Financial Trading Platform', href: '/services/ai-financial-trading-platform' },
-        { name: 'AI Supply Chain Optimization', href: '/services/ai-supply-chain-optimization' },
-        { name: 'AI HR Platform', href: '/services/ai-hr-platform' },
-        { name: 'AI Marketing Automation', href: '/services/ai-marketing-automation' },
-        { name: 'AI Legal Research Platform', href: '/services/ai-legal-research-platform' },
-        { name: 'AI Education Platform', href: '/services/ai-education-platform' }
-      ]
-    },
-    {
-      title: 'Cybersecurity & IT Services',
-      icon: Shield,
-      color: 'from-red-600 to-pink-600',
-      links: [
-        { name: 'AI Cybersecurity Suite', href: '/services/ai-cybersecurity-suite' },
-        { name: 'Zero Trust Network Architecture', href: '/services/zero-trust-network-architecture' },
-        { name: 'IT Infrastructure', href: '/services/it-infrastructure' },
-        { name: 'IT Consulting', href: '/services/it-consulting' },
-        { name: 'Cloud DevOps', href: '/services/cloud-devops' },
-        { name: 'Data Analytics', href: '/services/data-analytics' },
-        { name: 'Digital Transformation', href: '/services/digital-transformation' },
-        { name: 'Onsite Support', href: '/services/onsite-support' }
+        { name: 'Quantum AI Hybrid Platform', href: '/revolutionary-services-2030' },
+        { name: 'AI Cybersecurity Platform', href: '/revolutionary-services-2030' },
+        { name: 'Autonomous AI Operations', href: '/revolutionary-services-2030' },
+        { name: 'Quantum Financial Trading', href: '/revolutionary-services-2030' },
+        { name: 'AI Healthcare Diagnostics', href: '/revolutionary-services-2030' },
+        { name: 'Smart City Platform', href: '/revolutionary-services-2030' }
       ]
     },
     {

@@ -21,6 +21,40 @@ export const servicesCatalog: ServiceCategory[] = [
 		slug: 'micro-saas',
 		items: [
 			{
+				id: 'pdf-render-api',
+				title: 'PDF Render API',
+				description: 'Reliable HTML-to-PDF rendering with templates, assets, async callbacks, and storage destinations.',
+				category: 'Micro SaaS',
+				price: '$29',
+				billing: 'month',
+				features: [
+					'Chromium-based rendering',
+					'Templates and asset hosting',
+					'Async callbacks and webhooks',
+					'S3/GCS/Azure storage targets',
+					'Usage analytics and quotas'
+				],
+				ctaLabel: 'Generate PDFs',
+				href: 'https://ziontechgroup.com/services/pdf-render-api'
+			},
+			{
+				id: 'api-documentation-generator',
+				title: 'API Documentation Generator',
+				description: 'Turn OpenAPI/GraphQL schemas into beautiful, versioned docs with SDK snippets and search.',
+				category: 'Micro SaaS',
+				price: '$49',
+				billing: 'month',
+				features: [
+					'Schema parsing (OAS/GraphQL)',
+					'SDK snippets and examples',
+					'Changelogs and versioning',
+					'Full-text search and themes',
+					'CI publish workflows'
+				],
+				ctaLabel: 'Publish Docs',
+				href: 'https://ziontechgroup.com/services/api-documentation-generator'
+			},
+			{
 				id: 'smart-contract-risk-scanner',
 				title: 'Smart Contract Risk Scanner',
 				description: 'Continuous vulnerability scanning and risk assessment for blockchain smart contracts with automated security recommendations.',
@@ -249,6 +283,23 @@ export const servicesCatalog: ServiceCategory[] = [
 		slug: 'ai-solutions',
 		items: [
 			{
+				id: 'vector-search-starter',
+				title: 'Vector Search Starter',
+				description: 'Production-ready semantic search with multi-model embeddings, hybrid search, and relevance tuning.',
+				category: 'AI Solutions',
+				price: '$59',
+				billing: 'month',
+				features: [
+					'Multi-model embeddings',
+					'Hybrid + rerank search',
+					'SDKs and relevance tuning',
+					'Observability and quotas',
+					'Pinecone/Weaviate/Postgres integrations'
+				],
+				ctaLabel: 'Launch Search',
+				href: 'https://ziontechgroup.com/services/vector-search-starter'
+			},
+			{
 				id: 'autonomous-business-manager',
 				title: 'Autonomous Business Manager',
 				description: 'AI-powered business management system that autonomously handles operations, decision-making, and strategic planning.',
@@ -426,6 +477,23 @@ export const servicesCatalog: ServiceCategory[] = [
 		slug: 'it-services',
 		items: [
 			{
+				id: 'email-deliverability-monitor',
+				title: 'Email Deliverability Monitor',
+				description: 'Inbox placement checks, DMARC/SPF/DKIM verification, and blocklist alerts with actionable guidance.',
+				category: 'IT Services',
+				price: '$39',
+				billing: 'month',
+				features: [
+					'DMARC/SPF/DKIM verification',
+					'Inbox placement tests',
+					'Blocklist monitoring',
+					'Domain reputation scoring',
+					'Alerting and weekly reports'
+				],
+				ctaLabel: 'Improve Inbox Rate',
+				href: 'https://ziontechgroup.com/services/email-deliverability-monitor'
+			},
+			{
 				id: 'zero-trust-architecture',
 				title: 'Zero Trust Network Architecture',
 				description: 'Comprehensive zero trust security implementation with continuous verification and adaptive access control.',
@@ -518,6 +586,23 @@ export const servicesCatalog: ServiceCategory[] = [
 		slug: 'cybersecurity',
 		items: [
 			{
+				id: 'm365-security-hardening-kit',
+				title: 'M365 Security Hardening Kit',
+				description: 'Baseline hardening, drift detection, and auto-remediation for Microsoft 365 tenants with executive reporting.',
+				category: 'Cybersecurity',
+				price: '$199',
+				billing: 'month',
+				features: [
+					'Secure baseline as code',
+					'Misconfiguration detection',
+					'Auto-remediation playbooks',
+					'Graph API integrations',
+					'Compliance-ready reports'
+				],
+				ctaLabel: 'Harden M365',
+				href: 'https://ziontechgroup.com/services/m365-security-hardening'
+			},
+			{
 				id: 'ai-threat-intelligence',
 				title: 'AI Threat Intelligence Suite',
 				description: 'Advanced threat detection and response system using AI to identify and neutralize cyber threats in real-time.',
@@ -593,6 +678,23 @@ export const servicesCatalog: ServiceCategory[] = [
 		slug: 'data-analytics',
 		items: [
 			{
+				id: 'synthetic-data-generator',
+				title: 'Synthetic Data Generator',
+				description: 'Privacy-safe synthetic tabular/time-series/text data with utility/drift reports and DP options.',
+				category: 'Data & Analytics',
+				price: '$119',
+				billing: 'month',
+				features: [
+					'Differential privacy & masking',
+					'Tabular/time-series/text modes',
+					'Utility and drift reports',
+					'APIs and SDKs',
+					'S3/Snowflake/BigQuery connectors'
+				],
+				ctaLabel: 'Generate Data',
+				href: 'https://ziontechgroup.com/services/synthetic-data-generator'
+			},
+			{
 				id: 'quantum-data-analytics',
 				title: 'Quantum Data Analytics Platform',
 				description: 'Revolutionary data analytics platform leveraging quantum computing for complex pattern recognition and insights.',
@@ -667,6 +769,40 @@ export const servicesCatalog: ServiceCategory[] = [
 		name: 'Cloud & DevOps',
 		slug: 'cloud-devops',
 		items: [
+			{
+				id: 'uptime-slo-monitor',
+				title: 'Uptime & SLO Monitor',
+				description: 'Multi-region synthetic checks with SLO dashboards, error budgets, and burn rate alerts.',
+				category: 'Cloud & DevOps',
+				price: '$49',
+				billing: 'month',
+				features: [
+					'Multi-region probes',
+					'SLO calculation and burn rates',
+					'Error budget policy',
+					'Alerts and dashboards',
+					'CI/CD release gates'
+				],
+				ctaLabel: 'Monitor Reliability',
+				href: 'https://ziontechgroup.com/services/uptime-slo-monitor'
+			},
+			{
+				id: 'kubernetes-cost-analyzer',
+				title: 'Kubernetes Cost Analyzer',
+				description: 'Allocation, rightsizing, and bin‑packing insights by team/namespace with chargeback reports.',
+				category: 'Cloud & DevOps',
+				price: '$99',
+				billing: 'month',
+				features: [
+					'Cost allocation by namespace/team',
+					'Requests/limits advisor',
+					'Bin‑packing recommendations',
+					'Chargeback/showback reports',
+					'Slack/Grafana integrations'
+				],
+				ctaLabel: 'Cut K8s Spend',
+				href: 'https://ziontechgroup.com/services/kubernetes-cost-analyzer'
+			},
 			{
 				id: 'autonomous-devops-platform',
 				title: 'Autonomous DevOps Platform',

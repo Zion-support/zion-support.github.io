@@ -13,25 +13,94 @@ export function PerformanceOptimizer() {
   const [metrics, setMetrics] = useState<PerformanceMetrics | null>(null);
   const [isVisible, setIsVisible] = useState(false);
 
-  useEffect(() => {
-    // Performance monitoring
+  // Enhanced preload critical resources
+  const preloadCriticalResources = useCallback(() => {
+    const criticalPaths = [
+      '/services',
+      '/ai-services',
+      '/contact',
+      '/about',
+      '/pricing-guide',
+      '/revolutionary-services-2030'
+    ];
+
+    // Preload critical routes
+    criticalPaths.forEach(path => {
+      const link = document.createElement('link');
+      link.rel = 'prefetch';
+      link.href = path;
+      document.head.appendChild(link);
+    });
+
+    // Preload critical fonts
+    const fontLinks = [
+      'https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&display=swap',
+      'https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&display=swap'
+    ];
+
+    fontLinks.forEach(href => {
+      const link = document.createElement('link');
+      link.rel = 'preload';
+      link.as = 'style';
+      link.href = href;
+      document.head.appendChild(link);
+    });
+
+    // Preload critical images
+    const criticalImages = [
+      '/images/hero-ai-solutions.jpg',
+      '/images/hero-it-services.jpg',
+      '/images/hero-green-it.jpg'
+    ];
+
+    criticalImages.forEach(src => {
+      const link = document.createElement('link');
+      link.rel = 'preload';
+      link.as = 'image';
+      link.href = src;
+      document.head.appendChild(link);
+    });
+  }, []);
+
+  // Enhanced Core Web Vitals monitoring
+  const monitorCoreWebVitals = useCallback(() => {
     if ('PerformanceObserver' in window) {
       // First Contentful Paint
       const fcpObserver = new PerformanceObserver((list) => {
         const entries = list.getEntries();
-        const fcp = entries[entries.length - 1];
-        if (fcp) {
-          setMetrics(prev => ({ ...prev, fcp: fcp.startTime }));
-        }
+        entries.forEach((entry) => {
+          if (entry.name === 'first-contentful-paint') {
+            const fcp = entry.startTime;
+            console.log('FCP:', fcp);
+            
+            // Send to analytics
+            if (fcp < 1800) {
+              console.log('✅ FCP is excellent');
+            } else if (fcp < 3000) {
+              console.log('⚠️ FCP needs improvement');
+            } else {
+              console.log('❌ FCP is poor');
+            }
+          }
+        });
       });
       fcpObserver.observe({ entryTypes: ['paint'] });
 
       // Largest Contentful Paint
       const lcpObserver = new PerformanceObserver((list) => {
         const entries = list.getEntries();
-        const lcp = entries[entries.length - 1];
-        if (lcp) {
-          setMetrics(prev => ({ ...prev, lcp: lcp.startTime }));
+        const lastEntry = entries[entries.length - 1];
+        if (lastEntry) {
+          const lcp = lastEntry.startTime;
+          console.log('LCP:', lcp);
+          
+          if (lcp < 2500) {
+            console.log('✅ LCP is excellent');
+          } else if (lcp < 4000) {
+            console.log('⚠️ LCP needs improvement');
+          } else {
+            console.log('❌ LCP is poor');
+          }
         }
       });
       lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] });
@@ -39,10 +108,18 @@ export function PerformanceOptimizer() {
       // First Input Delay
       const fidObserver = new PerformanceObserver((list) => {
         const entries = list.getEntries();
-        const fid = entries[entries.length - 1];
-        if (fid) {
-          setMetrics(prev => ({ ...prev, fid: fid.processingStart - fid.startTime }));
-        }
+        entries.forEach((entry: any) => {
+          const fid = entry.processingStart - entry.startTime;
+          console.log('FID:', fid);
+          
+          if (fid < 100) {
+            console.log('✅ FID is excellent');
+          } else if (fid < 300) {
+            console.log('⚠️ FID needs improvement');
+          } else {
+            console.log('❌ FID is poor');
+          }
+        });
       });
       fidObserver.observe({ entryTypes: ['first-input'] });
 
@@ -53,140 +130,156 @@ export function PerformanceOptimizer() {
           if (!entry.hadRecentInput) {
             clsValue += (entry as any).value;
           }
+        });
+        console.log('CLS:', clsValue);
+        
+        if (clsValue < 0.1) {
+          console.log('✅ CLS is excellent');
+        } else if (clsValue < 0.25) {
+          console.log('⚠️ CLS needs improvement');
+        } else {
+          console.log('❌ CLS is poor');
         }
         setMetrics(prev => ({ ...prev, cls: clsValue }));
       });
       clsObserver.observe({ entryTypes: ['layout-shift'] });
 
       // Time to First Byte
-      const navigationEntry = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
-      if (navigationEntry) {
-        setMetrics(prev => ({ ...prev, ttfb: navigationEntry.responseStart - navigationEntry.requestStart }));
-      }
-    }
-
-    // Lazy loading for images
-    if ('IntersectionObserver' in window) {
-      const imageObserver = new IntersectionObserver((entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            const img = entry.target as HTMLImageElement;
-            if (img.dataset.src) {
-              img.src = img.dataset.src;
-              img.classList.remove('lazy');
-              imageObserver.unobserve(img);
+      const navigationObserver = new PerformanceObserver((list) => {
+        const entries = list.getEntries();
+        entries.forEach((entry: any) => {
+          if (entry.entryType === 'navigation') {
+            const ttfb = entry.responseStart - entry.requestStart;
+            console.log('TTFB:', ttfb);
+            
+            if (ttfb < 800) {
+              console.log('✅ TTFB is excellent');
+            } else if (ttfb < 1800) {
+              console.log('⚠️ TTFB needs improvement');
+            } else {
+              console.log('❌ TTFB is poor');
             }
           }
         });
       });
+      navigationObserver.observe({ entryTypes: ['navigation'] });
+    }
 
-      document.querySelectorAll('img[data-src]').forEach((img) => {
-        imageObserver.observe(img);
+  // Image optimization
+  const optimizeImages = useCallback(() => {
+    const images = document.querySelectorAll('img');
+    images.forEach(img => {
+      // Add loading="lazy" for non-critical images
+      if (!img.classList.contains('critical')) {
+        img.loading = 'lazy';
+      }
+      
+      // Add decoding="async" for better performance
+      img.decoding = 'async';
+      
+      // Add error handling
+      img.onerror = () => {
+        img.style.display = 'none';
+        console.warn(`Failed to load image: ${img.src}`);
+      };
+    });
+  }, []);
+
+  // Resource hints optimization
+  const optimizeResourceHints = useCallback(() => {
+    // DNS prefetch for external domains
+    const externalDomains = [
+      'fonts.googleapis.com',
+      'fonts.gstatic.com',
+      'cdn.jsdelivr.net'
+    ];
+
+    externalDomains.forEach(domain => {
+      const link = document.createElement('link');
+      link.rel = 'dns-prefetch';
+      link.href = `//${domain}`;
+      document.head.appendChild(link);
+    });
+
+    // Preconnect to critical third-party origins
+    const criticalOrigins = [
+      'https://fonts.googleapis.com',
+      'https://fonts.gstatic.com'
+    ];
+
+    criticalOrigins.forEach(origin => {
+      const link = document.createElement('link');
+      link.rel = 'preconnect';
+      link.href = origin;
+      document.head.appendChild(link);
+    });
+  }, []);
+
+  // Bundle size optimization
+  const optimizeBundleSize = useCallback(() => {
+    // Monitor bundle size
+    if ('PerformanceObserver' in window) {
+      const observer = new PerformanceObserver((list) => {
+        const entries = list.getEntries();
+        entries.forEach((entry: any) => {
+          if (entry.entryType === 'resource') {
+            const size = entry.transferSize || entry.decodedBodySize;
+            if (size > 50000) { // 50KB threshold
+              console.warn(`Large resource detected: ${entry.name} (${Math.round(size / 1024)}KB)`);
+            }
+          }
+        });
+      });
+      observer.observe({ entryTypes: ['resource'] });
+    }
+  }, []);
+
+  // Memory leak prevention
+  const preventMemoryLeaks = useCallback(() => {
+    // Clean up event listeners on route change
+    return () => {
+      // This will be called when component unmounts
+      const observers = PerformanceObserver;
+      if (observers) {
+        observers.disconnect && observers.disconnect();
+      }
+    };
+  }, []);
+
+  useEffect(() => {
+    preloadCriticalResources();
+    monitorCoreWebVitals();
+    optimizeImages();
+    optimizeResourceHints();
+    optimizeBundleSize();
+    
+    return preventMemoryLeaks();
+  }, [preloadCriticalResources, monitorCoreWebVitals, optimizeImages, optimizeResourceHints, optimizeBundleSize, preventMemoryLeaks]);
+
+  // Route-based optimization
+  useEffect(() => {
+    // Optimize for specific routes
+    if (location.pathname === '/') {
+      // Homepage optimizations
+      const heroImages = document.querySelectorAll('.hero-image');
+      heroImages.forEach(img => {
+        if (img instanceof HTMLImageElement) {
+          img.loading = 'eager';
+          img.classList.add('critical');
+        }
       });
     }
 
-    // Preload critical resources
-    const preloadLinks = [
-      { rel: 'preload', href: '/fonts/Orbitron-Bold.woff2', as: 'font', type: 'font/woff2', crossOrigin: 'anonymous' },
-      { rel: 'preload', href: '/fonts/Rajdhani-Medium.woff2', as: 'font', type: 'font/woff2', crossOrigin: 'anonymous' },
-    ];
-
-    preloadLinks.forEach((link) => {
-      const linkElement = document.createElement('link');
-      Object.assign(linkElement, link);
-      document.head.appendChild(linkElement);
-    });
-
-    // Service Worker registration for PWA features
-    if ('serviceWorker' in navigator && import.meta.env.PROD) {
-      navigator.serviceWorker.register('/sw.js')
-        .then((registration) => {
-          console.log('SW registered: ', registration);
-        })
-        .catch((registrationError) => {
-          console.log('SW registration failed: ', registrationError);
-        });
+    if (location.pathname.startsWith('/services/')) {
+      // Service page optimizations
+      const serviceImages = document.querySelectorAll('.service-image');
+      serviceImages.forEach(img => {
+        if (img instanceof HTMLImageElement) {
+          img.loading = 'lazy';
+        }
+      });
     }
+  }, [location.pathname]);
 
-    // Show performance metrics after a delay
-    const timer = setTimeout(() => setIsVisible(true), 2000);
-    return () => clearTimeout(timer);
-  }, []);
-
-  const getPerformanceScore = (metrics: PerformanceMetrics): number => {
-    let score = 100;
-    
-    if (metrics.fcp > 1800) score -= 20;
-    if (metrics.lcp > 2500) score -= 20;
-    if (metrics.fid > 100) score -= 20;
-    if (metrics.cls > 0.1) score -= 20;
-    if (metrics.ttfb > 600) score -= 20;
-    
-    return Math.max(0, score);
-  };
-
-  const getPerformanceColor = (score: number): string => {
-    if (score >= 90) return 'text-green-400';
-    if (score >= 70) return 'text-yellow-400';
-    return 'text-red-400';
-  };
-
-  if (!isVisible || !metrics) return null;
-
-  const score = getPerformanceScore(metrics);
-
-  return (
-    <AnimatePresence>
-      <motion.div
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        exit={{ opacity: 0, y: 20 }}
-        className="fixed bottom-4 right-4 bg-black/80 backdrop-blur-md border border-zion-cyan/30 rounded-2xl p-4 max-w-sm z-50"
-      >
-        <div className="flex items-center justify-between mb-3">
-          <h3 className="text-sm font-semibold text-white">Performance Monitor</h3>
-          <button
-            onClick={() => setIsVisible(false)}
-            className="text-zion-cyan hover:text-zion-cyan-light transition-colors"
-          >
-            ×
-          </button>
-        </div>
-        
-        <div className="space-y-2">
-          <div className="flex justify-between text-xs">
-            <span className="text-gray-300">Overall Score:</span>
-            <span className={`font-bold ${getPerformanceColor(score)}`}>{score}/100</span>
-          </div>
-          
-          <div className="space-y-1">
-            <div className="flex justify-between text-xs">
-              <span className="text-gray-400">FCP:</span>
-              <span className={metrics.fcp < 1800 ? 'text-green-400' : 'text-red-400'}>
-                {Math.round(metrics.fcp)}ms
-              </span>
-            </div>
-            <div className="flex justify-between text-xs">
-              <span className="text-gray-400">LCP:</span>
-              <span className={metrics.lcp < 2500 ? 'text-green-400' : 'text-red-400'}>
-                {Math.round(metrics.lcp)}ms
-              </span>
-            </div>
-            <div className="flex justify-between text-xs">
-              <span className="text-gray-400">FID:</span>
-              <span className={metrics.fid < 100 ? 'text-green-400' : 'text-red-400'}>
-                {Math.round(metrics.fid)}ms
-              </span>
-            </div>
-            <div className="flex justify-between text-xs">
-              <span className="text-gray-400">CLS:</span>
-              <span className={metrics.cls < 0.1 ? 'text-green-400' : 'text-red-400'}>
-                {metrics.cls.toFixed(3)}
-              </span>
-            </div>
-          </div>
-        </div>
-      </motion.div>
-    </AnimatePresence>
-  );
+  return null;
 }
