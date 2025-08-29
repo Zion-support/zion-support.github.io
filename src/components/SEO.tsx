@@ -50,16 +50,16 @@ export function SEO({
     ],
     "contactPoint": {
       "@type": "ContactPoint",
-      "telephone": "+1-555-123-4567",
+      "telephone": "+1-302-464-0950",
       "contactType": "customer service",
-      "email": "info@ziontechgroup.com"
+      "email": "kleber@ziontechgroup.com"
     },
     "address": {
       "@type": "PostalAddress",
-      "streetAddress": "123 Innovation Drive",
-      "addressLocality": "Tech City",
-      "addressRegion": "CA",
-      "postalCode": "90210",
+      "streetAddress": "364 E Main St STE 1008",
+      "addressLocality": "Middletown",
+      "addressRegion": "DE",
+      "postalCode": "19709",
       "addressCountry": "US"
     }
   };
