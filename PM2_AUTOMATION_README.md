@@ -1,335 +1,99 @@
-# PM2 Automation System - Zion Tech Group
+# PM2 Automation Setup
 
-## 🚀 Overview
+This document describes the PM2 automation system that has replaced the GitHub Actions workflows.
 
-The PM2 Automation System provides continuous monitoring, maintenance, and improvement of the Zion Tech Group website. It consists of 11 automated processes that run continuously to ensure optimal performance, security, and quality.
+## Overview
 
-## 📊 Automation Processes
+The following GitHub Actions workflows have been replaced with PM2 automation:
 
-### Core Automation Services
+- **CI Workflow** → `ci-automation` (runs every 6 hours)
+- **Deploy Workflow** → `deploy-automation` (runs on demand)
+- **Dependencies Workflow** → `dependency-automation` (runs every Monday at 2 AM)
 
-| Process | Purpose | Status | Memory | CPU |
-|---------|---------|--------|--------|-----|
-| **console-error-fixer** | Continuously fixes console errors and build issues | 🟢 Online | ~71MB | 0.3% |
-| **link-checker** | Monitors and reports broken internal/external links | 🟢 Online | ~61MB | 0.3% |
-| **continuous-improvement** | Implements ongoing website enhancements | 🟢 Online | ~61MB | 0.3% |
-| **daily-build-test** | Ensures daily builds complete successfully | 🟢 Online | ~61MB | 0.3% |
-| **security-audit** | Continuous security monitoring and updates | 🟢 Online | ~61MB | 0.3% |
-| **dependency-updates** | Manages package updates and security patches | 🟢 Online | ~60MB | 0.2% |
-| **performance-monitor** | Tracks website performance metrics | 🟢 Online | ~60MB | 0.3% |
-| **quality-checks** | Runs automated quality assurance tests | 🟢 Online | ~60MB | 0.3% |
-| **link-integrity** | Validates internal link structure | 🟢 Online | ~61MB | 0.2% |
-| **front-maximizer** | Optimizes frontend performance | 🟢 Online | ~60MB | 0.2% |
-| **sitemap-runner** | Generates and updates sitemaps | 🟢 Online | ~60MB | 0.3% |
+## PM2 Processes
 
-## 🛠️ Management Commands
+### Current Running Processes
 
-### Quick Commands
+1. **zion-app** - Main application (development mode)
+2. **ci-automation** - Continuous Integration automation
+3. **dependency-automation** - Dependency management automation
+4. **deploy-automation** - Deployment automation
 
+### Automation Scripts
+
+- `scripts/ci-automation.sh` - Runs linting, type checking, building, and testing
+- `scripts/deploy-automation.sh` - Handles deployment process
+- `scripts/dependency-automation.sh` - Updates dependencies and runs security audits
+
+## Commands
+
+### Check Status
 ```bash
-# Start all automation processes
-npm run automation:start
-
-# Stop all automation processes
-npm run automation:stop
-
-# Restart all automation processes
-npm run automation:restart
-
-# Check automation status
-npm run automation:status
-
-# View recent logs
-npm run automation:logs
-
-# Open PM2 monitoring interface
-npm run automation:monit
-
-# Check automation health
-npm run automation:health
-
-# Generate reports
-npm run automation:reports
+pm2 status
 ```
 
-### Direct PM2 Commands
-
+### View Logs
 ```bash
-# Start automation only
-npm run pm2:start
-
-# Stop automation only
-npm run pm2:stop
-
-# Restart automation only
-npm run pm2:restart
-
-# View all PM2 processes
-npm run pm2:status
-
-# View PM2 logs
-npm run pm2:logs
-
-# Open PM2 monitoring
-npm run pm2:monit
+pm2 logs [process-name]
 ```
 
-### Shell Script Commands
-
+### Restart Process
 ```bash
-# Using the shell script directly
-./scripts/start-automation.sh start
-./scripts/start-automation.sh status
-./scripts/start-automation.sh logs
-./scripts/start-automation.sh monit
-./scripts/start-automation.sh health
-./scripts/start-automation.sh reports
+pm2 restart [process-name]
 ```
 
-## 📁 File Structure
-
-```
-scripts/
-├── automation-manager.js          # Node.js automation manager
-├── start-automation.sh            # Shell script for automation management
-├── automation-dashboard.js        # Real-time monitoring dashboard
-└── automation/
-    ├── console-error-fixer.cjs    # Console error fixing automation
-    ├── link-checker.cjs           # Link validation automation
-    ├── continuous-improvement.cjs # Continuous improvement automation
-    ├── daily-build-test.cjs       # Daily build testing automation
-    ├── security-audit.cjs         # Security monitoring automation
-    ├── dependency-updates.cjs     # Dependency management automation
-    ├── performance-monitor.cjs    # Performance monitoring automation
-    ├── quality-checks.cjs         # Quality assurance automation
-    ├── link-integrity.cjs         # Link integrity validation
-    ├── front-maximizer.cjs        # Frontend optimization automation
-    └── sitemap-runner.cjs         # Sitemap generation automation
-
-ecosystem.config.cjs               # PM2 configuration file
-```
-
-## 🔧 Configuration
-
-### PM2 Ecosystem Configuration
-
-The `ecosystem.config.cjs` file configures all automation processes with:
-
-- **Memory limits**: 512MB per process
-- **Auto-restart**: Enabled for all processes
-- **Environment**: Production mode with 15-minute intervals
-- **Monitoring**: Full process monitoring and logging
-
-### Environment Variables
-
-- `NODE_ENV`: Set to 'production' for all automation processes
-- `AUTOMATION_INTERVAL`: 900000ms (15 minutes) between automation cycles
-
-## 📊 Monitoring & Reporting
-
-### Real-time Dashboard
-
+### Stop Process
 ```bash
-# Start the real-time monitoring dashboard
-node scripts/automation-dashboard.js
+pm2 stop [process-name]
 ```
 
-The dashboard provides:
-- Live process status updates
-- Memory and CPU usage monitoring
-- Recent log activity
-- Health recommendations
-- Performance metrics
-
-### Health Reports
-
+### Start Process
 ```bash
-# Generate health report
-npm run automation:health
-
-# Generate performance report
-npm run automation:reports
+pm2 start [process-name]
 ```
 
-Reports are saved as:
-- `automation-health-report.json` - Process health status
-- `automation-performance-report.json` - Performance metrics
-- `automation-status-report.txt` - Human-readable status
-
-## 🚨 Troubleshooting
-
-### Common Issues
-
-1. **Process Not Starting**
-   ```bash
-   # Check PM2 installation
-   npm install -g pm2
-   
-   # Restart all processes
-   npm run automation:restart
-   ```
-
-2. **High Memory Usage**
-   ```bash
-   # Check memory usage
-   npm run pm2:status
-   
-   # Restart specific process
-   npm run pm2:restart <process-name>
-   ```
-
-3. **Process Errors**
-   ```bash
-   # Check process logs
-   npm run automation:logs
-   
-   # Auto-fix failed processes
-   node scripts/automation-manager.js fix
-   ```
-
-### Log Management
-
+### Save Configuration
 ```bash
-# View specific process logs
-pm2 logs <process-name>
-
-# View all logs
-pm2 logs
-
-# Clear logs
-pm2 flush
+pm2 save
 ```
 
-## 🔄 Automation Workflows
-
-### Console Error Fixing
-- **Frequency**: Every 15 minutes
-- **Process**: Builds project, scans for errors, applies fixes
-- **Output**: Error reports and fix confirmations
-
-### Link Validation
-- **Frequency**: Every 15 minutes
-- **Process**: Scans internal and external links
-- **Output**: Broken link reports and status updates
-
-### Security Auditing
-- **Frequency**: Every 15 minutes
-- **Process**: Dependency vulnerability scanning
-- **Output**: Security alerts and update recommendations
-
-### Performance Monitoring
-- **Frequency**: Every 15 minutes
-- **Process**: Website performance metrics collection
-- **Output**: Performance reports and optimization suggestions
-
-## 📈 Performance Metrics
-
-### Current System Status
-- **Total Processes**: 11
-- **Online Processes**: 11 (100%)
-- **Total Memory Usage**: ~670MB
-- **Average CPU Usage**: 0.3%
-- **Uptime**: Continuous operation
-- **Restart Count**: 0 (stable)
-
-### Resource Optimization
-- Each process runs independently
-- Memory limits prevent resource exhaustion
-- Auto-restart ensures continuous operation
-- Efficient logging and monitoring
-
-## 🚀 Getting Started
-
-### First Time Setup
-
-1. **Install PM2 globally**
-   ```bash
-   npm install -g pm2
-   ```
-
-2. **Start automation system**
-   ```bash
-   npm run automation:start
-   ```
-
-3. **Verify status**
-   ```bash
-   npm run automation:status
-   ```
-
-4. **Monitor processes**
-   ```bash
-   npm run automation:monit
-   ```
-
-### Daily Operations
-
-1. **Check status**: `npm run automation:status`
-2. **View logs**: `npm run automation:logs`
-3. **Monitor health**: `npm run automation:health`
-4. **Generate reports**: `npm run automation:reports`
-
-## 🔒 Security Features
-
-- **Process isolation**: Each automation runs independently
-- **Memory limits**: Prevents resource exhaustion attacks
-- **Auto-restart**: Ensures continuous operation
-- **Logging**: Full audit trail of all operations
-- **Error handling**: Graceful failure recovery
-
-## 📋 Maintenance Schedule
-
-### Daily
-- Status checks and health monitoring
-- Log review and error analysis
-- Performance metric collection
-
-### Weekly
-- Comprehensive health reports
-- Performance optimization analysis
-- Security audit reviews
-
-### Monthly
-- System performance review
-- Automation process optimization
-- Resource usage analysis
-
-## 🆘 Support & Troubleshooting
-
-### Quick Diagnostics
-
+### Load Configuration
 ```bash
-# Check system health
-npm run automation:health
-
-# View recent activity
-npm run automation:logs
-
-# Monitor real-time
-npm run automation:monit
+pm2 resurrect
 ```
 
-### Advanced Troubleshooting
+## Scheduling
 
+- **CI Automation**: Every 6 hours (`0 */6 * * *`)
+- **Dependency Management**: Every Monday at 2 AM (`0 2 * * 1`)
+- **Deploy Automation**: Manual trigger only
+
+## Benefits of PM2 over GitHub Actions
+
+1. **Faster execution** - No need to wait for GitHub Actions queue
+2. **Cost effective** - No GitHub Actions minutes consumed
+3. **Real-time monitoring** - Live process monitoring and logs
+4. **Immediate feedback** - Instant execution and results
+5. **Resource control** - Better resource management and optimization
+
+## Maintenance
+
+The PM2 processes are configured to auto-restart on failure and are saved to persist across server reboots.
+
+To ensure the automation continues working after server restarts:
 ```bash
-# Use automation manager
-node scripts/automation-manager.js help
-
-# Check specific process
-node scripts/automation-manager.js logs <process-name>
-
-# Auto-fix issues
-node scripts/automation-manager.js fix
+pm2 startup
+pm2 save
 ```
 
-## 📚 Additional Resources
+## Troubleshooting
 
-- [PM2 Documentation](https://pm2.keymetrics.io/docs/)
-- [Node.js Process Management](https://nodejs.org/api/process.html)
-- [Automation Best Practices](https://github.com/Zion-Holdings/zion.app)
+If a process fails:
+1. Check logs: `pm2 logs [process-name]`
+2. Restart: `pm2 restart [process-name]`
+3. Check status: `pm2 status`
 
----
-
-**Last Updated**: $(date)
-**System Version**: PM2 v5.x
-**Status**: All systems operational ✅
+For dependency issues:
+1. Run: `npm ci` to clean install
+2. Check for conflicts: `npm ls`
+3. Update lockfile: `rm package-lock.json && npm install`
