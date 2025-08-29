@@ -276,6 +276,58 @@ export const servicesCatalog: ServiceCategory[] = [
 				ctaLabel: 'Boost Engagement',
 				href: 'https://ziontechgroup.com/contact'
 			}
+			,
+			{
+				id: 'meeting-notes-copilot',
+				title: 'AI Meeting Notes & Summaries',
+				description: 'Auto-capture meetings, generate action items, and sync to CRM and project tools.',
+				category: 'Micro SaaS',
+				price: '$29',
+				billing: 'month',
+				features: [
+					'Transcription and speaker diarization',
+					'Auto summaries and follow-ups',
+					'CRM/Jira/Asana sync',
+					'Multi-language support',
+					'Admin analytics'
+				],
+				ctaLabel: 'Try Meeting Copilot',
+				href: 'https://ziontechgroup.com/services/ai-meeting-notes'
+			},
+			{
+				id: 'smart-forms-intake',
+				title: 'Smart Forms & Intake',
+				description: 'Conditional logic, AI validation, and workflow routing to accelerate onboarding and lead capture.',
+				category: 'Micro SaaS',
+				price: '$49',
+				billing: 'month',
+				features: [
+					'AI field validation',
+					'Conditional branching',
+					'Webhook and Zapier integrations',
+					'Analytics and conversion funnels',
+					'Export to PDF/CSV'
+				],
+				ctaLabel: 'Launch Smart Forms',
+				href: 'https://ziontechgroup.com/services/smart-forms-intake'
+			},
+			{
+				id: 'reviews-social-proof',
+				title: 'Reviews & Social Proof Widget',
+				description: 'Aggregate reviews, render trust badges, and add schema markup for higher CTR and SEO.',
+				category: 'Micro SaaS',
+				price: '$19',
+				billing: 'month',
+				features: [
+					'Integrations: Google, G2, Trustpilot',
+					'Carousel and badge components',
+					'Schema.org rich snippets',
+					'Moderation and alerts',
+					'Multi-brand support'
+				],
+				ctaLabel: 'Boost Conversion',
+				href: 'https://ziontechgroup.com/services/reviews-widget'
+			}
 		]
 	},
 	{
@@ -578,6 +630,58 @@ export const servicesCatalog: ServiceCategory[] = [
 				],
 				ctaLabel: 'Cut Cloud Costs',
 				href: 'https://ziontechgroup.com/services'
+			}
+			,
+			{
+				id: 'k8s-platform-ready',
+				title: 'Kubernetes Platform Ready',
+				description: 'Design and implement a production-grade Kubernetes platform with GitOps, observability, and security guardrails.',
+				category: 'IT Services',
+				price: '$24,000',
+				billing: 'project',
+				features: [
+					'Cluster design and HA',
+					'GitOps with Argo CD/Flux',
+					'Observability stack (Prom/Grafana/ELK)',
+					'Cost and security guardrails',
+					'Runbooks and enablement'
+				],
+				ctaLabel: 'Get K8s Ready',
+				href: 'https://ziontechgroup.com/services/k8s-platform-ready'
+			},
+			{
+				id: 'zero-trust-readiness',
+				title: 'Zero Trust Readiness Assessment',
+				description: 'Evaluate identity, device, network, and data posture with an actionable Zero Trust roadmap.',
+				category: 'IT Services',
+				price: '$9,000',
+				billing: 'project',
+				features: [
+					'Maturity model and gap analysis',
+					'Identity and device posture review',
+					'Network segmentation plan',
+					'Policy-as-code recommendations',
+					'Executive findings workshop'
+				],
+				ctaLabel: 'Start Assessment',
+				href: 'https://ziontechgroup.com/services/zero-trust-assessment'
+			},
+			{
+				id: 'dwh-modernization',
+				title: 'Data Warehouse Modernization',
+				description: 'Migrate to Snowflake/BigQuery with ELT, lineage, and governance for trusted analytics.',
+				category: 'IT Services',
+				price: '$35,000',
+				billing: 'project',
+				features: [
+					'ELT pipelines and dbt',
+					'Lineage and data contracts',
+					'Cost/perf benchmarks',
+					'Role-based access control',
+					'Cut-over and training'
+				],
+				ctaLabel: 'Modernize DWH',
+				href: 'https://ziontechgroup.com/services/dwh-modernization'
 			}
 		]
 	},

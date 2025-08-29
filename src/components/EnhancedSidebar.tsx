@@ -89,7 +89,11 @@ export const EnhancedSidebar: React.FC = () => {
         { name: "Website AI Chatbot", href: "/services/website-ai-chatbot", icon: MessageCircle },
         { name: "RAG Search", href: "/services/rag-search", icon: BookOpen },
         { name: "MLOps Pipeline", href: "/services/mlops-pipeline", icon: Settings },
-        { name: "eCommerce Personalization", href: "/services/ecommerce-personalization", icon: ShoppingCart }
+        { name: "eCommerce Personalization", href: "/services/ecommerce-personalization", icon: ShoppingCart },
+        { name: "Vendor Risk Management", href: "/services/vendor-risk-management", icon: Shield },
+        { name: "AI SEO Optimizer", href: "/services/ai-seo-optimizer", icon: TrendingUp },
+        { name: "SaaS Churn Predictor", href: "/services/saas-churn-predictor", icon: Award },
+        { name: "AI Incident Postmortems", href: "/services/ai-incident-postmortems", icon: BookOpen }
       ]
     },
     {

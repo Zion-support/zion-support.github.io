@@ -59,7 +59,7 @@ const InnovativeServicesShowcase2025 = React.lazy(() => import('./pages/Innovati
 const InnovativeServicesShowcase2028 = React.lazy(() => import('./pages/InnovativeServicesShowcase2028'));
 const ComprehensivePricingGuide2028 = React.lazy(() => import('./pages/ComprehensivePricingGuide2028'));
 const ComprehensiveServicesLanding2028 = React.lazy(() => import('./pages/ComprehensiveServicesLanding2028'));
-// duplicate removed: ServicesComparisonPage already declared above
+
 
 // Service pages - only import existing ones
 const CloudDevOps = React.lazy(() => import('./pages/services/CloudDevOps'));
@@ -87,6 +87,21 @@ const WebsiteAiChatbot = React.lazy(() => import('./pages/services/WebsiteAiChat
 const RagSearch = React.lazy(() => import('./pages/services/RagSearch'));
 const MlopsPipeline = React.lazy(() => import('./pages/services/MlopsPipeline'));
 const EcommercePersonalization = React.lazy(() => import('./pages/services/EcommercePersonalization'));
+const ReturnsManagementSaaS = React.lazy(() => import('./pages/services/ReturnsManagementSaaS'));
+
+// Newly created service pages (this commit)
+const VendorRiskManagement = React.lazy(() => import('./pages/services/VendorRiskManagement'));
+const AISEOOptimizer = React.lazy(() => import('./pages/services/AISEOOptimizer'));
+const SaaSChurnPredictor = React.lazy(() => import('./pages/services/SaaSChurnPredictor'));
+const AIIncidentPostmortems = React.lazy(() => import('./pages/services/AIIncidentPostmortems'));
+
+// New services added in this iteration
+const APIMonitoringSaaS = React.lazy(() => import('./pages/services/APIMonitoringSaaS'));
+const GDPRCookieCompliance = React.lazy(() => import('./pages/services/GDPRCookieCompliance'));
+const AIProofreadingStudio = React.lazy(() => import('./pages/services/AIProofreadingStudio'));
+
+// Catalog page
+const ServicesCatalog = React.lazy(() => import('./pages/ServicesCatalog'));
 
 // Additional service pages
 const DigitalTransformation = React.lazy(() => import('./pages/services/DigitalTransformation'));
@@ -184,8 +199,10 @@ function App() {
               <Route path="/pricing" element={<ComprehensivePricingGuide2027 />} />
               <Route path="/pricing-2030" element={<ComprehensivePricingGuide2030 />} />
               <Route path="/pricing-guide" element={<PricingGuide />} />
-              <Route path="/services-comparison" element={<ServicesComparisonPage />} />
               <Route path="/services" element={<Services />} />
+              <Route path="/services-catalog" element={<ServicesCatalog />} />
+              <Route path="/services-overview" element={<ServicesOverview />} />
+              <Route path="/services-comparison" element={<ServicesComparisonPage />} />
               <Route path="/revolutionary-services-2030" element={<RevolutionaryServices2030 />} />
               <Route path="/comprehensive-services" element={<ComprehensiveServicesLanding2025 />} />
               {/** duplicate comprehensive-services route removed */}
@@ -233,6 +250,11 @@ function App() {
               <Route path="/services/ai-compliance-copilot" element={<AIComplianceCopilot />} />
               <Route path="/services/llm-content-studio" element={<LLMContentStudio />} />
               <Route path="/services/finops-advisor" element={<FinOpsAdvisor />} />
+              {/* New concrete services */}
+              <Route path="/services/vendor-risk-management" element={<VendorRiskManagement />} />
+              <Route path="/services/ai-seo-optimizer" element={<AISEOOptimizer />} />
+              <Route path="/services/saas-churn-predictor" element={<SaaSChurnPredictor />} />
+              <Route path="/services/ai-incident-postmortems" element={<AIIncidentPostmortems />} />
 
               {/* New concrete services */}
               <Route path="/services/ai-lead-scoring" element={<AiLeadScoring />} />
@@ -240,6 +262,10 @@ function App() {
               <Route path="/services/rag-search" element={<RagSearch />} />
               <Route path="/services/mlops-pipeline" element={<MlopsPipeline />} />
               <Route path="/services/ecommerce-personalization" element={<EcommercePersonalization />} />
+              <Route path="/services/returns-management" element={<ReturnsManagementSaaS />} />
+              <Route path="/services/api-monitoring" element={<APIMonitoringSaaS />} />
+              <Route path="/services/gdpr-cookie-compliance" element={<GDPRCookieCompliance />} />
+              <Route path="/services/ai-proofreading-studio" element={<AIProofreadingStudio />} />
               
               {/* Additional Service Routes */}
               <Route path="/services/digital-transformation" element={<DigitalTransformation />} />

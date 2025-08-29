@@ -1,4 +1,15 @@
 import React from 'react';
+
+export default function Privacy() {
+  return (
+    <div className="container mx-auto px-4 py-16">
+      <h1 className="text-3xl font-bold text-white mb-4">Privacy Policy</h1>
+      <p className="text-zion-slate-light">We respect your privacy and protect your data.</p>
+    </div>
+  );
+}
+
+import React from 'react';
 import { motion } from 'framer-motion';
 import { 
   Shield, 
