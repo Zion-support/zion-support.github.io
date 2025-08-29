@@ -92,8 +92,8 @@ export function Footer() {
       title: "Services",
       links: [
         { label: "AI Solutions", path: "/services/ai" },
-        { label: "Cloud & DevOps", path: "/services/cloud" },
-        { label: "Cybersecurity", path: "/services/cybersecurity" },
+        { label: "Cloud & DevOps", path: "/services/cloud-devops" },
+        { label: "Cybersecurity", path: "/services/ai-cybersecurity-suite" },
         { label: "IT Infrastructure", path: "/services/infrastructure" },
         { label: "Digital Transformation", path: "/services/transformation" },
         { label: "Quantum Neural Network", path: "/quantum-neural-network-platform" },
