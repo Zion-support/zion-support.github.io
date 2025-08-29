@@ -64,6 +64,8 @@ export function AppHeader() {
     { name: 'RAG Search', href: '/services/rag-search', icon: BookOpen, description: 'AI answers with citations' },
     { name: 'MLOps Pipeline', href: '/services/mlops-pipeline', icon: Settings, description: 'Train, deploy, monitor' },
     { name: 'eCommerce Personalization', href: '/services/ecommerce-personalization', icon: ShoppingCart, description: 'Recos & search' },
+    { name: 'AI Project Management', href: '/services/ai-project-management', icon: Target, description: 'Smart project optimization' },
+    { name: 'AI Supply Chain', href: '/services/ai-supply-chain-optimization', icon: Truck, description: 'End-to-end optimization' },
   ];
 
   const servicesCategories = [
@@ -86,7 +88,9 @@ export function AppHeader() {
         { name: 'AI Business Intelligence', href: '/services/ai-business-intelligence', description: 'Machine Learning & Data Science' },
         { name: 'AI Sales Copilot', href: '/services/ai-sales-copilot', description: 'AI-powered sales automation' },
         { name: 'AI Compliance Assistant', href: '/services/ai-compliance-assistant', description: 'Regulatory compliance automation' },
-        { name: 'LLM Content Studio', href: '/services/llm-content-studio', description: 'AI content generation' }
+        { name: 'LLM Content Studio', href: '/services/llm-content-studio', description: 'AI content generation' },
+        { name: 'AI Project Management', href: '/services/ai-project-management', description: 'Smart project optimization' },
+        { name: 'AI Supply Chain', href: '/services/ai-supply-chain-optimization', description: 'End-to-end optimization' }
       ]
     },
     {

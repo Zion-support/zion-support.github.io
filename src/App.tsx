@@ -86,6 +86,10 @@ const RagSearch = React.lazy(() => import('./pages/services/RagSearch'));
 const MlopsPipeline = React.lazy(() => import('./pages/services/MlopsPipeline'));
 const EcommercePersonalization = React.lazy(() => import('./pages/services/EcommercePersonalization'));
 
+// Additional innovative AI services
+const AIProjectManagement = React.lazy(() => import('./pages/services/AIProjectManagement'));
+const AISupplyChainOptimization = React.lazy(() => import('./pages/services/AISupplyChainOptimization'));
+
 // Additional service pages
 const DigitalTransformation = React.lazy(() => import('./pages/services/DigitalTransformation'));
 const ITConsulting = React.lazy(() => import('./pages/services/ITConsulting'));
@@ -232,6 +236,10 @@ function App() {
               <Route path="/services/rag-search" element={<RagSearch />} />
               <Route path="/services/mlops-pipeline" element={<MlopsPipeline />} />
               <Route path="/services/ecommerce-personalization" element={<EcommercePersonalization />} />
+              
+              {/* Additional innovative AI services */}
+              <Route path="/services/ai-project-management" element={<AIProjectManagement />} />
+              <Route path="/services/ai-supply-chain-optimization" element={<AISupplyChainOptimization />} />
               
               {/* Additional Service Routes */}
               <Route path="/services/digital-transformation" element={<DigitalTransformation />} />

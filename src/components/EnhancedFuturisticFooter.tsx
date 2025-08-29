@@ -92,6 +92,19 @@ export const EnhancedFuturisticFooter: React.FC = () => {
       ]
     },
     {
+      title: 'AI Innovation',
+      icon: Brain,
+      color: 'from-purple-600 to-pink-600',
+      links: [
+        { name: 'AI Project Management', href: '/services/ai-project-management' },
+        { name: 'AI Supply Chain Optimization', href: '/services/ai-supply-chain-optimization' },
+        { name: 'AI Customer Success Platform', href: '/services/ai-customer-success-platform' },
+        { name: 'AI Workflow Orchestrator', href: '/services/ai-workflow-orchestrator' },
+        { name: 'AI Data Governance', href: '/services/ai-data-governance' },
+        { name: 'AI Healthcare Analytics', href: '/services/ai-healthcare-analytics' }
+      ]
+    },
+    {
       title: 'IoT & Digital Twin',
       icon: Rocket,
       color: 'from-green-600 to-emerald-600',

@@ -38,12 +38,36 @@ export default function ServicesOverview() {
       color: 'from-purple-500 to-pink-500',
       services: [
         {
+          title: 'AI Project Management',
+          description: 'Revolutionary AI-powered project management platform that optimizes workflows and predicts risks',
+          price: 'From $299/month',
+          features: ['AI task prioritization', 'Predictive risk assessment', 'Resource optimization'],
+          link: '/services/ai-project-management',
+          popular: true
+        },
+        {
+          title: 'AI Supply Chain Optimization',
+          description: 'End-to-end supply chain optimization with AI-powered demand forecasting and route optimization',
+          price: 'From $499/month',
+          features: ['95% forecast accuracy', '20% fuel savings', 'Real-time visibility'],
+          link: '/services/ai-supply-chain-optimization',
+          popular: true
+        },
+        {
+          title: 'AI Customer Success Platform',
+          description: 'AI-powered customer success platform that predicts churn and optimizes onboarding',
+          price: 'From $399/month',
+          features: ['Predictive churn prevention', 'Intelligent routing', 'Sentiment analysis'],
+          link: '/services/ai-customer-success-platform',
+          popular: false
+        },
+        {
           title: 'AI Workflow Automation',
           description: 'Intelligent process automation with AI-powered optimization',
           price: 'From $3,500',
           features: ['Process mapping', 'AI implementation', 'Ongoing optimization'],
           link: '/services/ai-workflow-automation',
-          popular: true
+          popular: false
         },
         {
           title: 'AI Customer Experience Platform',
@@ -53,14 +77,7 @@ export default function ServicesOverview() {
           link: '/services/ai-customer-experience-platform',
           popular: false
         },
-        {
-          title: 'AI Supply Chain Optimization',
-          description: 'Intelligent supply chain management and logistics optimization',
-          price: 'From $5,500',
-          features: ['Supply chain assessment', 'AI platform implementation', 'Continuous optimization'],
-          link: '/services/ai-supply-chain-optimization',
-          popular: false
-        },
+
         {
           title: 'AI Cybersecurity Suite',
           description: 'Advanced AI-powered threat detection and security automation',
@@ -187,6 +204,90 @@ export default function ServicesOverview() {
           price: 'From $2,500/month',
           features: ['Cost optimization', 'Financial planning', 'Performance analytics'],
           link: '/services/finops-advisor',
+          popular: false
+        },
+        {
+          title: 'AI Lead Scoring',
+          description: 'AI-powered lead scoring and prioritization system',
+          price: 'From $1,299/month',
+          features: ['ML lead scoring', 'CRM integration', 'Performance analytics'],
+          link: '/services/ai-lead-scoring',
+          popular: false
+        },
+        {
+          title: 'Website AI Chatbot',
+          description: 'Intelligent website chatbot with 24/7 customer support',
+          price: 'From $899/month',
+          features: ['Natural language processing', 'CRM integration', 'Analytics dashboard'],
+          link: '/services/website-ai-chatbot',
+          popular: false
+        },
+        {
+          title: 'RAG Search Engine',
+          description: 'AI-powered search with retrieval-augmented generation',
+          price: 'From $1,599/month',
+          features: ['Semantic search', 'Document processing', 'AI-powered answers'],
+          link: '/services/rag-search',
+          popular: false
+        },
+        {
+          title: 'MLOps Pipeline',
+          description: 'Complete machine learning operations platform',
+          price: 'From $2,999/month',
+          features: ['Model training', 'Deployment automation', 'Monitoring & scaling'],
+          link: '/services/mlops-pipeline',
+          popular: false
+        },
+        {
+          title: 'E-commerce Personalization',
+          description: 'AI-powered e-commerce personalization and recommendations',
+          price: 'From $1,799/month',
+          features: ['Product recommendations', 'Personalized search', 'A/B testing'],
+          link: '/services/ecommerce-personalization',
+          popular: false
+        }
+      ]
+    },
+    ...innovativeServices
+  ];
+
+  const innovativeServices = [
+    {
+      name: 'Emerging Technologies',
+      description: 'Cutting-edge technology solutions for the future',
+      icon: Rocket,
+      color: 'from-orange-500 to-red-500',
+      services: [
+        {
+          title: 'Quantum Computing Solutions',
+          description: 'Next-generation quantum computing solutions and consulting',
+          price: 'From $25,000',
+          features: ['Quantum algorithm development', 'Hardware optimization', 'Research collaboration'],
+          link: '/services/quantum-computing',
+          popular: false
+        },
+        {
+          title: 'Space Technology Solutions',
+          description: 'Innovative space technology solutions and satellite systems',
+          price: 'From $50,000',
+          features: ['Satellite design', 'Ground station systems', 'Space data analytics'],
+          link: '/services/space-tech',
+          popular: false
+        },
+        {
+          title: 'AI Workflow Orchestrator',
+          description: 'Advanced AI workflow automation and orchestration platform',
+          price: 'From $3,999/month',
+          features: ['Workflow automation', 'AI decision making', 'Process optimization'],
+          link: '/services/ai-workflow-orchestrator',
+          popular: false
+        },
+        {
+          title: 'Edge Computing Platform',
+          description: 'Edge computing solutions for IoT and real-time processing',
+          price: 'From $15,000',
+          features: ['Edge deployment', 'Real-time processing', 'IoT integration'],
+          link: '/services/edge-computing-platform',
           popular: false
         }
       ]

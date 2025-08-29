@@ -361,6 +361,123 @@ const ComprehensivePricingGuide2027: React.FC = () => {
       icon: Cpu,
       color: 'from-slate-500 to-gray-600',
       featured: false
+    },
+    {
+      id: 'ai-project-management',
+      title: 'AI Project Management Platform',
+      category: 'AI Services',
+      description: 'Revolutionary AI-powered project management platform that optimizes workflows and predicts risks',
+      monthlyPrice: 599,
+      yearlyPrice: 5990,
+      marketPrice: '$299 - $1,299/month',
+      features: [
+        'AI task prioritization',
+        'Predictive risk assessment',
+        'Resource optimization',
+        'Real-time progress analytics',
+        'Automated reporting',
+        'Smart communication hub',
+        'Team collaboration tools',
+        'Performance insights'
+      ],
+      benefits: [
+        '20% faster project completion',
+        '15% improved efficiency',
+        'Proactive risk mitigation',
+        'Better resource utilization'
+      ],
+      useCases: [
+        'Software development',
+        'Marketing campaigns',
+        'Construction projects',
+        'Event planning'
+      ],
+      targetAudience: 'Project managers, Team leaders, Business owners',
+      roi: '200-300%',
+      implementationTime: '2-4 weeks',
+      trainingIncluded: true,
+      customizationLevel: 'Medium',
+      icon: Target,
+      color: 'from-purple-500 to-pink-600',
+      featured: true
+    },
+    {
+      id: 'ai-supply-chain-optimization',
+      title: 'AI Supply Chain Optimization Platform',
+      category: 'AI Services',
+      description: 'End-to-end supply chain optimization with AI-powered demand forecasting and route optimization',
+      monthlyPrice: 999,
+      yearlyPrice: 9990,
+      marketPrice: '$499 - $2,499/month',
+      features: [
+        'AI-powered demand forecasting',
+        'Intelligent route optimization',
+        'Predictive risk management',
+        'Real-time supply chain visibility',
+        'Automated inventory management',
+        'Supplier performance analytics',
+        'Cost optimization',
+        'Sustainability tracking'
+      ],
+      benefits: [
+        '25% reduction in supply chain costs',
+        '40% faster delivery times',
+        '95% forecast accuracy',
+        '30% reduction in stockouts'
+      ],
+      useCases: [
+        'Manufacturing',
+        'Retail & E-commerce',
+        'Logistics & Transportation',
+        'Healthcare & Pharmaceuticals'
+      ],
+      targetAudience: 'Supply chain managers, Logistics companies, Manufacturers',
+      roi: '250-400%',
+      implementationTime: '1-3 months',
+      trainingIncluded: true,
+      customizationLevel: 'High',
+      icon: Truck,
+      color: 'from-green-500 to-emerald-600',
+      featured: true
+    },
+    {
+      id: 'ai-customer-success-platform',
+      title: 'AI Customer Success Platform',
+      category: 'AI Services',
+      description: 'AI-powered customer success platform that predicts churn and optimizes onboarding',
+      monthlyPrice: 799,
+      yearlyPrice: 7990,
+      marketPrice: '$399 - $1,599/month',
+      features: [
+        'AI-powered customer journey mapping',
+        'Predictive churn prevention',
+        'Intelligent ticket routing',
+        'Sentiment analysis & monitoring',
+        'Automated customer onboarding',
+        'Smart success metrics',
+        'Customer health scoring',
+        'Proactive engagement'
+      ],
+      benefits: [
+        '25% reduction in customer churn',
+        '40% faster customer onboarding',
+        '35% increase in customer lifetime value',
+        '50% reduction in support tickets'
+      ],
+      useCases: [
+        'SaaS Companies',
+        'E-commerce Platforms',
+        'Financial Services',
+        'Healthcare Providers'
+      ],
+      targetAudience: 'Customer success managers, SaaS companies, Service businesses',
+      roi: '200-350%',
+      implementationTime: '2-4 weeks',
+      trainingIncluded: true,
+      customizationLevel: 'Medium',
+      icon: Users,
+      color: 'from-blue-500 to-cyan-600',
+      featured: true
     }
   ];
 
