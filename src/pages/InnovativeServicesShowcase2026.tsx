@@ -219,7 +219,7 @@ export default function InnovativeServicesShowcase2026() {
             </div>
           </div>
         </div>
-      </section>
+      </motion.div>
 
       {/* Services Grid */}
       <section

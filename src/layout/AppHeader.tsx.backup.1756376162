@@ -6,7 +6,6 @@ import { ThemeToggle } from '../components/ThemeToggle';
 import { ZionLoadingSpinner } from '../components/ui/EnhancedLoadingSpinner';
 import { Sidebar } from '../components/Sidebar';
 import { EnhancedSearch } from '../components/EnhancedSearch';
-
 export function AppHeader() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [sidebarOpen, setSidebarOpen] = useState(false);
@@ -15,41 +14,27 @@ export function AppHeader() {
   const [scrolled, setScrolled] = useState(false);
   const [isSearching, setIsSearching] = useState(false);
   const [hoveredNav, setHoveredNav] = useState<string | null>(null);
-
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 50);
     };
-
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
-
   const { user, logout } = useAuth();
-
   const navigation = [
     { name: 'Home', href: '/', current: true },
     { name: 'Services', href: '/services', current: false },
-<<<<<<< HEAD
-    { name: '2028 Services', href: '/ultimate-services-showcase-2028', current: false, featured: true, new: true },
-    { name: '2027 Services', href: '/services2027', current: false, featured: true },
-    { name: 'AI Services', href: '/ai-services', current: false },
-    { name: 'IT Services', href: '/it-services', current: false },
-    { name: 'Micro SaaS', href: '/micro-saas', current: false },
-=======
->>>>>>> origin/cursor/website-audit-and-enhancement-e48b
     { name: 'Solutions', href: '/solutions', current: false },
     { name: 'About', href: '/about', current: false },
     { name: 'Contact', href: '/contact', current: false },
   ];
-
   // Organized services by category - only include existing pages
   const services = [
     // Featured & New Services
     { name: '2028 Services Overview', href: '/ultimate-services-showcase-2028', icon: Crown, description: 'Revolutionary Emerging Tech & AI Solutions', category: 'Featured', featured: true, new: true },
     { name: '2027 Services Overview', href: '/services2027', icon: Star, description: 'Cutting-edge Innovation & Emerging Tech', category: 'Featured', featured: true },
     { name: '2026 Services Overview', href: '/services2026', icon: Star, description: 'Revolutionary AI & Quantum Solutions', category: 'Featured', featured: true },
-    
     // AI & Machine Learning
     { name: 'AI Business Intelligence', href: '/services/ai-business-intelligence', icon: Brain, description: 'Advanced analytics & ML insights', category: 'AI & ML' },
     { name: 'AI Project Management', href: '/services/ai-project-management', icon: Target, description: 'AI-powered project management & optimization', category: 'AI & ML' },
@@ -62,43 +47,31 @@ export function AppHeader() {
     { name: 'Interview Assessment AI', href: '/services/interview-assessment', icon: Users, description: 'AI-powered candidate evaluation', category: 'AI & ML' },
     { name: 'AI Legal Document Analyzer', href: '/services/ai-legal-document-analyzer', icon: FileText, description: 'Legal document analysis & compliance', category: 'AI & ML' },
     { name: 'AI Healthcare Diagnostics', href: '/services/ai-healthcare-diagnostics', icon: Heart, description: 'Medical image analysis & diagnostics', category: 'AI & ML' },
-    
     // Cloud & DevOps
     { name: 'Cloud DevOps Platform', href: '/services/cloud-devops-platform', icon: Cloud, description: 'Infrastructure automation & scaling', category: 'Cloud & DevOps' },
     { name: 'IT Infrastructure', href: '/services/it-infrastructure', icon: Server, description: 'Enterprise infrastructure solutions', category: 'Cloud & DevOps' },
     { name: 'FinOps Advisor', href: '/services/finops-advisor', icon: DollarSign, description: 'Cloud cost optimization', category: 'Cloud & DevOps' },
     { name: 'Cloud FinOps Optimizer', href: '/services/cloud-finops-optimizer', icon: BarChart3, description: 'Financial operations automation', category: 'Cloud & DevOps' },
-    
     // Cybersecurity
     { name: 'AI Cybersecurity Platform', href: '/services/ai-cybersecurity-platform', icon: Shield, description: 'Advanced AI security solutions', category: 'Cybersecurity' },
     { name: 'Security Headers & CSP', href: '/services/security-headers-csp', icon: Lock, description: 'Web security hardening', category: 'Cybersecurity' },
     { name: 'DSR Privacy Portal', href: '/services/dsr-portal', icon: Shield, description: 'GDPR/CCPA compliance', category: 'Cybersecurity' },
     { name: 'Zero Trust Network Access', href: '/services/zero-trust-network-access', icon: Lock, description: 'Advanced network security', category: 'Cybersecurity' },
-    
     // Digital Transformation
     { name: 'Digital Twin', href: '/services/digital-twin', icon: Eye, description: 'Virtual system replicas', category: 'Digital Transformation' },
     { name: 'Digital Transformation', href: '/services/digital-transformation', icon: Zap, description: 'Strategic technology consulting', category: 'Digital Transformation' },
-    
     // Emerging Technologies
     { name: 'IoT Edge Computing', href: '/services/iot-edge-computing', icon: Network, description: 'Smart device networks', category: 'Emerging Tech' },
     { name: 'AI Quantum Hybrid Platform', href: '/services/ai-quantum-hybrid-platform', icon: Cpu, description: 'Quantum-AI integration', category: 'Emerging Tech' },
-    
     // Data & Analytics
     { name: 'AI Data Analytics & BI', href: '/services/ai-data-analytics-bi', icon: BarChart3, description: 'AI-powered business intelligence', category: 'Data & Analytics', featured: true },
     { name: 'Data Analytics', href: '/services/data-analytics', icon: BarChart3, description: 'Business intelligence & insights', category: 'Data & Analytics' },
     { name: 'Website Analytics', href: '/services/website-analytics', icon: TrendingUp, description: 'Performance metrics & reporting', category: 'Data & Analytics' },
-    
     // Micro SaaS Solutions
     { name: 'Micro SaaS Platform', href: '/services/micro-saas-solutions', icon: ShoppingCart, description: 'Niche software solutions', category: 'Micro SaaS' },
-<<<<<<< HEAD
-    { name: 'Micro CRM', href: '/services/micro-crm', icon: Users, description: 'Customer relationship management', category: 'Micro SaaS' },
-    { name: 'Customer Feedback Surveys', href: '/services/customer-feedback-surveys', icon: MessageCircle, description: 'Intelligent feedback collection', category: 'Micro SaaS' },
-=======
     { name: 'AI Content Generator', href: '/services/ai-content-generator', icon: PenTool, description: 'Automated content creation', category: 'Micro SaaS' },
     { name: 'AI Customer Support', href: '/services/ai-customer-support-automation', icon: MessageCircle, description: 'Intelligent support automation', category: 'Micro SaaS' },
->>>>>>> origin/cursor/website-audit-and-enhancement-e48b
   ];
-
   // Quick links for easy access
   const quickLinks = [
     { name: 'Marketplace', href: '/marketplace', icon: ShoppingCart },
@@ -110,24 +83,14 @@ export function AppHeader() {
     { name: 'Website Analyzer', href: '/website-analyzer', icon: Search },
     { name: 'Sitemap Generator', href: '/sitemap-generator', icon: FileText },
   ];
-
   const featuredServices = [
     { name: '2026 Services', href: '/services2026', icon: Star, description: 'Revolutionary AI, Quantum & Micro SaaS', category: 'Featured', featured: true },
-<<<<<<< HEAD
-    { name: '2027 Services', href: '/services2027', icon: Star, description: 'Cutting-edge Innovation & Emerging Tech', category: 'Featured', featured: true },
-    { name: 'AI Business Intelligence', href: '/services/ai-business-intelligence', icon: Brain, description: 'Advanced AI-powered analytics', category: 'AI & Analytics', featured: true },
-    { name: 'Quantum Computing', href: '/services/quantum-computing', icon: Zap, description: 'Next-generation quantum solutions', category: 'Quantum Computing', featured: true },
-    { name: 'AI Cybersecurity Platform', href: '/services/ai-cybersecurity-platform', icon: Shield, description: 'Advanced AI security solutions', category: 'Cybersecurity', featured: true },
-    { name: 'Digital Twin', href: '/services/digital-twin', icon: Eye, description: 'Virtual system replicas', category: 'Digital Transformation', featured: true },
-=======
     { name: '2027 Services', href: '/services2027', icon: Star, description: 'Cutting-edge Innovation & Emerging Tech', category: 'Featured', true },
     { name: 'AI Services', href: '/ai-services', icon: Brain, description: 'Comprehensive AI solutions', category: 'AI & ML', featured: true },
     { name: 'IT Services', href: '/it-services', icon: Cpu, description: 'Enterprise IT solutions', category: 'IT & Infrastructure', featured: true },
     { name: 'Micro SaaS', href: '/micro-saas', icon: Zap, description: 'Niche software solutions', category: 'Micro SaaS', featured: true },
     { name: 'AI Solutions', href: '/ai-solutions', icon: Brain, description: 'AI-powered business solutions', category: 'AI & ML', featured: true },
->>>>>>> origin/cursor/website-audit-and-enhancement-e48b
   ];
-
   // Group services by category for better organization
   const servicesByCategory = services.reduce((acc, service) => {
     if (!acc[service.category]) {
@@ -136,7 +99,6 @@ export function AppHeader() {
     acc[service.category].push(service);
     return acc;
   }, {} as Record<string, typeof services>);
-
   return (
     <>
       <header role="banner" className={`sticky top-0 z-50 w-full transition-all duration-300 ${
@@ -170,7 +132,6 @@ export function AppHeader() {
               >
                 <PanelLeft className="w-5 h-5" />
               </button>
-              
               {/* Logo */}
               <Link to="/" className="flex-shrink-0 group">
                 <div className="flex items-center space-x-3">
@@ -196,7 +157,6 @@ export function AppHeader() {
               </div>
             </Link>
           </div>
-
           {/* Desktop Navigation */}
           <nav className="hidden lg:flex items-center space-x-8">
             {/* Main Navigation */}
@@ -217,7 +177,6 @@ export function AppHeader() {
                 </Link>
               ))}
             </div>
-
             {/* Services Dropdown */}
             <div className="relative">
               <button
@@ -227,7 +186,6 @@ export function AppHeader() {
                 <span>Services</span>
                 <ChevronDown className={`w-4 h-4 transition-transform duration-300 ${servicesDropdownOpen ? 'rotate-180' : ''}`} />
               </button>
-
               <AnimatePresence>
                 {servicesDropdownOpen && (
                   <motion.div
@@ -262,7 +220,6 @@ export function AppHeader() {
                         ))}
                       </div>
                     </div>
-
                     {/* Service Categories */}
                     <div className="p-4">
                       <h3 className="text-sm font-semibold text-zion-cyan mb-3">All Services</h3>
@@ -296,7 +253,6 @@ export function AppHeader() {
                 )}
               </AnimatePresence>
             </div>
-
             {/* Quick Links */}
             <div className="flex items-center space-x-4">
               {quickLinks.map((link) => (
@@ -310,7 +266,6 @@ export function AppHeader() {
               ))}
             </div>
           </nav>
-
           {/* Right Side Actions */}
           <div className="flex items-center space-x-4">
             {/* Search */}
@@ -326,10 +281,8 @@ export function AppHeader() {
                 />
               </div>
             </form>
-
             {/* Theme Toggle */}
             <ThemeToggle />
-
             {/* Mobile Menu Button */}
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
@@ -344,7 +297,6 @@ export function AppHeader() {
           </div>
         </div>
       </div>
-
       {/* Mobile Menu */}
       <AnimatePresence>
         {mobileMenuOpen && (
@@ -369,7 +321,6 @@ export function AppHeader() {
                   />
                 </div>
               </form>
-
               {/* Mobile Navigation */}
               <nav className="space-y-2">
                 {navigation.map((item) => (
@@ -390,7 +341,6 @@ export function AppHeader() {
                   </Link>
                 ))}
               </nav>
-
               {/* Mobile Quick Links */}
               <div className="pt-4 border-t border-zion-cyan/20">
                 <h3 className="text-sm font-semibold text-zion-cyan mb-3">Quick Links</h3>
@@ -412,13 +362,11 @@ export function AppHeader() {
           </motion.div>
         )}
       </AnimatePresence>
-
       {/* Sidebar */}
       <Sidebar open={sidebarOpen} onClose={() => setSidebarOpen(false)} />
     </header>
   );
 }
-
 // Robot icon component for autonomous AI agents
 const Robot = ({ className }: { className?: string }) => (
   <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24">

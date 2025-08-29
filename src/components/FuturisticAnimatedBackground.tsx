@@ -29,25 +29,41 @@ export const FuturisticAnimatedBackground: React.FC<FuturisticAnimatedBackground
     resizeCanvas();
     window.addEventListener('resize', resizeCanvas);
 
-    // Particle system
-    const particles: Array<{
-      x: number;
-      y: number;
-      vx: number;
-      vy: number;
-      size: number;
-      opacity: number;
-    }> = [];
+    // Initialize particles based on intensity
+    const particleCount = intensity === 'low' ? 50 : intensity === 'medium' ? 150 : 300;
+    const particles: Particle[] = [];
 
-    // Initialize particles
-    for (let i = 0; i < (intensity === 'high' ? 100 : intensity === 'medium' ? 60 : 30); i++) {
+    for (let i = 0; i < particleCount; i++) {
+      particles.push({
+        x: Math.random() * canvas.width,
+        y: Math.random() * canvas.height,
+        vx: (Math.random() - 0.5) * (intensity === 'high' ? 1 : 0.5),
+        vy: (Math.random() - 0.5) * (intensity === 'high' ? 1 : 0.5),
+        size: Math.random() * 2 + 1,
+        opacity: Math.random() * 0.8 + 0.2,
+        color: ['#22ddd2', '#8c15e9', '#2e73ea'][Math.floor(Math.random() * 3)]
+      });
+    }
+
+    // Animation variables
+    let animationId: number;
+    let time = 0;
+
+    // Create particles
+    const createParticle = () => {
+      const x = Math.random() * canvas.width;
+      const y = Math.random() * canvas.height;
+      const angle = Math.random() * Math.PI * 2;
+      const speed = Math.random() * 0.5 + 0.1;
+      
       particles.push({
         x: Math.random() * canvas.width,
         y: Math.random() * canvas.height,
         vx: (Math.random() - 0.5) * 2,
         vy: (Math.random() - 0.5) * 2,
         size: Math.random() * 3 + 1,
-        opacity: Math.random() * 0.5 + 0.2
+        opacity: Math.random() * 0.8 + 0.2,
+        color: `hsl(${200 + Math.random() * 60}, 70%, 60%)`
       });
     }
 
@@ -82,6 +98,25 @@ export const FuturisticAnimatedBackground: React.FC<FuturisticAnimatedBackground
         ctx.fill();
         ctx.restore();
 
+      // Update and draw particles
+      particles.forEach((particle, index) => {
+        // Update particle position
+        particle.x += particle.vx;
+        particle.y += particle.vy;
+
+        // Wrap particles around screen
+        if (particle.x < 0) particle.x = canvas.width;
+        if (particle.x > canvas.width) particle.x = 0;
+        if (particle.y < 0) particle.y = canvas.height;
+        if (particle.y > canvas.height) particle.y = 0;
+
+        // Draw particle
+        ctx.globalAlpha = particle.opacity;
+        ctx.fillStyle = particle.color;
+        ctx.beginPath();
+        ctx.arc(particle.x, particle.y, particle.size, 0, Math.PI * 2);
+        ctx.fill();
+
         // Draw connections for intense variant
         if (intensity === 'high') {
           particles.forEach((otherParticle, otherIndex) => {
@@ -104,21 +139,9 @@ export const FuturisticAnimatedBackground: React.FC<FuturisticAnimatedBackground
         }
       });
 
-      // Draw energy waves for standard and intense variants
-      if (variant !== 'minimal') {
-        ctx.strokeStyle = 'rgba(56, 189, 248, 0.2)';
-        ctx.lineWidth = 3;
-        
-        for (let i = 0; i < 3; i++) {
-          const waveOffset = (time * 50 + i * 100) % (canvas.width + 200);
-          const waveY = canvas.height * 0.5 + Math.sin(time + i) * 50;
-          
-          ctx.beginPath();
-          ctx.moveTo(waveOffset - 100, waveY);
-          ctx.lineTo(waveOffset, waveY + 20);
-          ctx.lineTo(waveOffset + 100, waveY);
-          ctx.stroke();
-        }
+      // Create new particles if needed
+      if (particles.length < particleCount) {
+        createParticle();
       }
 
       animationRef.current = requestAnimationFrame(animate);

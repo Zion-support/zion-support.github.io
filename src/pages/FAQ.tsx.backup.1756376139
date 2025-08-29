@@ -1,56 +1,7 @@
 import React, { useState } from 'react';
-<<<<<<< HEAD
-import { motion, AnimatePresence } from 'framer-motion';
-import { 
-  Search, 
-  ChevronDown, 
-  ChevronUp,
-  HelpCircle,
-  Brain,
-  Cloud,
-  Shield,
-  Rocket,
-  Atom,
-  Zap,
-  Users,
-  DollarSign,
-  Clock,
-  CheckCircle,
-  ArrowRight,
-  Star,
-  BookOpen,
-  MessageCircle,
-  Phone,
-  Mail,
-  Globe,
-  Building,
-  Code,
-  Database,
-  Network,
-  Lock,
-  Eye,
-  Heart,
-  Factory,
-  ShoppingCart,
-  Leaf,
-  Gamepad2,
-  Coins,
-  Satellite,
-  TrendingUp,
-  BarChart3,
-  PenTool,
-  Server,
-  Smartphone,
-  Cpu,
-  Truck
-} from 'lucide-react';
-import { SEO } from '@/components/SEO';
-=======
 import { motion } from 'framer-motion';
 import { ChevronDown, ChevronUp, HelpCircle, Search, Zap, Shield, Cloud, Brain } from 'lucide-react';
 import SEO from '../components/SEO';
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-4b87
-
 interface FAQItem {
   question: string;
   answer: string;
@@ -58,12 +9,10 @@ interface FAQItem {
   tags: string[];
   featured?: boolean;
 }
-
 const FAQ: React.FC = () => {
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [expandedItems, setExpandedItems] = useState<Set<string>>(new Set());
-
   const categories = [
     { id: 'all', name: 'All Questions', icon: HelpCircle, count: 0, color: 'from-cyan-500 to-blue-500' },
     { id: 'general', name: 'General', icon: Globe, count: 0, color: 'from-blue-500 to-indigo-500' },
@@ -75,7 +24,6 @@ const FAQ: React.FC = () => {
     { id: 'pricing', name: 'Pricing & Billing', icon: DollarSign, count: 0, color: 'from-green-500 to-emerald-500' },
     { id: 'support', name: 'Support & Contact', icon: MessageCircle, count: 0, color: 'from-blue-500 to-cyan-500' }
   ];
-
   const faqItems: FAQItem[] = [
     // General Questions
     {
@@ -100,7 +48,6 @@ const FAQ: React.FC = () => {
       category: 'general',
       tags: ['contact', 'phone', 'email', 'support']
     },
-
     // AI & Machine Learning
     {
       id: '4',
@@ -124,7 +71,6 @@ const FAQ: React.FC = () => {
       category: 'ai',
       tags: ['industries', 'healthcare', 'finance', 'manufacturing', 'retail']
     },
-
     // Quantum Computing
     {
       id: '7',
@@ -141,7 +87,6 @@ const FAQ: React.FC = () => {
       category: 'quantum',
       tags: ['quantum readiness', 'hybrid solutions', 'security', 'preparation']
     },
-
     // Cloud & DevOps
     {
       id: '9',
@@ -158,7 +103,6 @@ const FAQ: React.FC = () => {
       category: 'cloud',
       tags: ['cost optimization', 'FinOps', 'cloud efficiency', 'savings']
     },
-
     // Cybersecurity
     {
       id: '11',
@@ -175,7 +119,6 @@ const FAQ: React.FC = () => {
       category: 'security',
       tags: ['data privacy', 'compliance', 'GDPR', 'CCPA', 'encryption']
     },
-
     // Services
     {
       id: '13',
@@ -192,7 +135,6 @@ const FAQ: React.FC = () => {
       category: 'services',
       tags: ['digital transformation', 'consulting', 'strategy', 'change management']
     },
-
     // Pricing & Billing
     {
       id: '15',
@@ -209,7 +151,6 @@ const FAQ: React.FC = () => {
       category: 'pricing',
       tags: ['payment plans', 'financing', 'flexible options', 'budget']
     },
-
     // Support & Contact
     {
       id: '17',
@@ -226,7 +167,6 @@ const FAQ: React.FC = () => {
       tags: ['response time', 'support tiers', 'priority support', 'dedicated engineers']
     }
   ];
-
   // Update category counts
   categories.forEach(category => {
     if (category.id === 'all') {
@@ -235,7 +175,6 @@ const FAQ: React.FC = () => {
       category.count = faqItems.filter(item => item.category === category.id).length;
     }
   });
-
   const filteredItems = faqItems.filter(item => {
     const matchesSearch = item.question.toLowerCase().includes(searchQuery.toLowerCase()) ||
                          item.answer.toLowerCase().includes(searchQuery.toLowerCase()) ||
@@ -243,7 +182,6 @@ const FAQ: React.FC = () => {
     const matchesCategory = selectedCategory === 'all' || item.category === selectedCategory;
     return matchesSearch && matchesCategory;
   });
-
   const toggleItem = (itemId: string) => {
     const newExpanded = new Set(expandedItems);
     if (newExpanded.has(itemId)) {
@@ -253,7 +191,6 @@ const FAQ: React.FC = () => {
     }
     setExpandedItems(newExpanded);
   };
-
   const getCategoryIcon = (category: string) => {
     switch (category) {
       case 'ai': return <Brain className="w-4 h-4" />;
@@ -267,7 +204,6 @@ const FAQ: React.FC = () => {
       default: return <HelpCircle className="w-4 h-4" />;
     }
   };
-
   const filteredCategories = faqCategories.map(category => ({
     ...category,
     items: category.items.filter(item => {
@@ -277,7 +213,6 @@ const FAQ: React.FC = () => {
       return matchesSearch && matchesCategory;
     })
   })).filter(category => category.items.length > 0);
-
   const allCategories = [
     { value: 'all', label: 'All Categories', icon: <Globe className="w-4 h-4" /> },
     { value: 'general', label: 'General', icon: <Globe className="w-4 h-4" /> },
@@ -288,7 +223,6 @@ const FAQ: React.FC = () => {
     { value: 'pricing', label: 'Pricing', icon: <DollarSign className="w-4 h-4" /> },
     { value: 'support', label: 'Support', icon: <Users className="w-4 h-4" /> }
   ];
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
       <SEO 
@@ -296,7 +230,6 @@ const FAQ: React.FC = () => {
         description="Find answers to common questions about Zion Tech Group's AI services, quantum computing, cybersecurity, and technology solutions."
         keywords="FAQ, Zion Tech Group, AI services, quantum computing, cybersecurity, support, questions"
       />
-      
       {/* Hero Section */}
       <section className="relative pt-32 pb-20 px-4 sm:px-6 lg:px-8 overflow-hidden">
         <div className="max-w-7xl mx-auto">
@@ -317,7 +250,6 @@ const FAQ: React.FC = () => {
               transform your business with cutting-edge AI and quantum computing solutions.
             </p>
           </motion.div>
-
           {/* Search Bar */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -337,7 +269,6 @@ const FAQ: React.FC = () => {
             </div>
           </motion.div>
         </div>
-
         {/* Background Elements */}
         <div className="absolute inset-0 -z-10">
           <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/5 to-blue-500/5" />
@@ -345,7 +276,6 @@ const FAQ: React.FC = () => {
           <div className="absolute bottom-20 right-20 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl" />
         </div>
       </section>
-
       {/* Category Filters */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -363,7 +293,6 @@ const FAQ: React.FC = () => {
               Find answers organized by topic and service area
             </p>
           </motion.div>
-
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
             {categories.map((category) => (
               <motion.button
@@ -389,7 +318,6 @@ const FAQ: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* FAQ Items */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto">
@@ -461,7 +389,6 @@ const FAQ: React.FC = () => {
                       )}
                     </div>
                   </button>
-
                   <AnimatePresence>
                     {expandedItems.has(item.id) && (
                       <motion.div
@@ -505,7 +432,6 @@ const FAQ: React.FC = () => {
           )}
         </div>
       </section>
-
       {/* Still Have Questions CTA */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto">
@@ -545,5 +471,4 @@ const FAQ: React.FC = () => {
     </div>
   );
 };
-
 export default FAQ;

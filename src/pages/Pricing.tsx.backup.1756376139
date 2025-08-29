@@ -1,9 +1,6 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-<<<<<<< HEAD
-=======
 import SEO from '@/components/SEO';
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-4b87
 import { 
   DollarSign, 
   Check, 
@@ -51,7 +48,6 @@ import {
   Leaf,
   Satellite
 } from 'lucide-react';
-
 interface PricingPlan {
   id: string;
   name: string;
@@ -67,14 +63,12 @@ interface PricingPlan {
   cta: string;
   ctaLink: string;
 }
-
 interface ServicePricing {
   category: string;
   icon: any;
   description: string;
   plans: PricingPlan[];
 }
-
 const servicePricing: ServicePricing[] = [
   {
     category: 'AI & Machine Learning',
@@ -423,7 +417,6 @@ const servicePricing: ServicePricing[] = [
     ]
   }
 ];
-
 const addOnServices = [
   {
     name: 'Custom Development',
@@ -458,19 +451,15 @@ const addOnServices = [
     color: 'from-orange-500 to-red-500'
   }
 ];
-
 export function Pricing() {
   const [selectedCategory, setSelectedCategory] = useState('AI & Machine Learning');
   const [billingCycle, setBillingCycle] = useState<'monthly' | 'annual'>('monthly');
-
   const selectedService = servicePricing.find(service => service.category === selectedCategory);
-
   const getAnnualDiscount = (monthlyPrice: string) => {
     const price = parseInt(monthlyPrice.replace(/[^0-9]/g, ''));
     const annualPrice = price * 12 * 0.8; // 20% discount
     return `$${Math.round(annualPrice / 1000)}K`;
   };
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       {/* Header */}
@@ -489,7 +478,6 @@ export function Pricing() {
               Choose the perfect plan for your business needs. All plans include our commitment to quality and success.
             </p>
           </motion.div>
-
           {/* Billing Toggle */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -525,7 +513,6 @@ export function Pricing() {
           </motion.div>
         </div>
       </div>
-
       {/* Service Category Selector */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         <motion.div
@@ -552,7 +539,6 @@ export function Pricing() {
           ))}
         </motion.div>
       </div>
-
       {/* Pricing Plans */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         {selectedService && (
@@ -566,7 +552,6 @@ export function Pricing() {
               <h2 className="text-3xl font-bold text-white mb-4">{selectedService.category}</h2>
               <p className="text-xl text-gray-300 max-w-2xl mx-auto">{selectedService.description}</p>
             </div>
-
             <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
               {selectedService.plans.map((plan, index) => (
                 <motion.div
@@ -587,7 +572,6 @@ export function Pricing() {
                       </span>
                     </div>
                   )}
-
                   <div className="text-center mb-6">
                     <div className={`w-16 h-16 bg-gradient-to-r ${plan.color} rounded-xl flex items-center justify-center mx-auto mb-4`}>
                       <plan.icon className="w-8 h-8 text-white" />
@@ -607,7 +591,6 @@ export function Pricing() {
                     )}
                   </div>
                 )}
-                
                 <div className="text-center mb-8">
                   <div className={`w-16 h-16 bg-gradient-to-r ${tier.color} rounded-2xl flex items-center justify-center mx-auto mb-4`}>
                     <tier.icon className="w-8 h-8 text-white" />
@@ -619,7 +602,6 @@ export function Pricing() {
                     <span className="text-gray-400">{tier.period}</span>
                   </div>
                 </div>
-
                   <div className="mb-6">
                     <h4 className="font-semibold text-white mb-3">Key Features:</h4>
                     <ul className="space-y-2">
@@ -631,7 +613,6 @@ export function Pricing() {
                       ))}
                     </ul>
                   </div>
-
                   <div className="mb-6">
                     <h4 className="font-semibold text-white mb-3">Highlights:</h4>
                     <ul className="space-y-2">
@@ -643,7 +624,6 @@ export function Pricing() {
                       ))}
                     </ul>
                   </div>
-
                   <a
                     href={plan.ctaLink}
                     className={`w-full py-3 px-6 rounded-lg font-semibold text-center transition-all duration-300 ${
@@ -659,7 +639,6 @@ export function Pricing() {
             </div>
           </motion.div>
         )}
-
         {/* Add-on Services */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -673,7 +652,6 @@ export function Pricing() {
               Enhance your solution with our specialized add-on services
             </p>
           </div>
-
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {addOnServices.map((service, index) => (
               <motion.div
@@ -703,7 +681,6 @@ export function Pricing() {
             ))}
           </div>
         </motion.div>
-
         {/* CTA Section */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -716,7 +693,6 @@ export function Pricing() {
             <p className="text-gray-300 mb-6 max-w-2xl mx-auto">
               Can't find the perfect plan? We offer custom solutions tailored to your specific needs. Let's discuss your requirements and create a personalized proposal.
             </p>
-            
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
                 href="/contact"
@@ -739,5 +715,4 @@ export function Pricing() {
     </div>
   );
 }
-
 export default Pricing;

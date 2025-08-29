@@ -1,18 +1,18 @@
 import React, { useState } from 'react';
-import { ENHANCED_SERVICES, ENHANCED_SERVICE_CATEGORIES, SERVICE_PRICING_TIERS, CONTACT_INFO } from '@/data/enhancedServices';
-import { Button } from '@/components/ui/button';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
-import { Badge } from '@/components/ui/badge';
-import { Input } from '@/components/ui/input';
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
-import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
+import { COMPREHENSIVE_SERVICES_EXPANSION_2025, SERVICE_CATEGORIES, FEATURED_SERVICES, SERVICES_BY_PRICE } from '../data/comprehensiveServicesExpansion2025';
+import { Button } from '../components/ui/button';
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '../components/ui/card';
+import { Badge } from '../components/ui/badge';
+import { Input } from '../components/ui/Input';
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '../components/ui/select';
+import { Tabs, TabsContent, TabsList, TabsTrigger } from '../components/ui/tabs';
 import { Search, Star, Globe, Phone, Mail, MapPin, ExternalLink, TrendingUp, Shield, Cloud, Brain, Database, Code, Zap, Heart, DollarSign, Link, Users, CheckCircle } from 'lucide-react';
-import SEO from '@/components/SEO';
+import { SEO } from '../components/SEO';
 export default function EnhancedServicesPage() {
     const [searchTerm, setSearchTerm] = useState('');
     const [selectedCategory, setSelectedCategory] = useState('all');
     const [selectedPriceRange, setSelectedPriceRange] = useState('all');
-    const filteredServices = ENHANCED_SERVICES.filter(service => {
+    const filteredServices = COMPREHENSIVE_SERVICES_EXPANSION_2025.filter(service => {
         const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
             service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
             service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()));
@@ -123,7 +123,7 @@ export default function EnhancedServicesPage() {
               </SelectTrigger>
               <SelectContent>
                 <SelectItem value="all">All Categories</SelectItem>
-                {ENHANCED_SERVICE_CATEGORIES.map(category => (<SelectItem key={category.value} value={category.value}>
+                {SERVICE_CATEGORIES.map(category => (<SelectItem key={category.value} value={category.value}>
                     {category.label}
                   </SelectItem>))}
               </SelectContent>
@@ -230,14 +230,14 @@ export default function EnhancedServicesPage() {
           </h2>
           <Tabs defaultValue="ai-ml" className="w-full">
             <TabsList className="grid w-full grid-cols-2 md:grid-cols-4 lg:grid-cols-6 bg-zion-blue-dark">
-              {ENHANCED_SERVICE_CATEGORIES.slice(0, 6).map(category => (<TabsTrigger key={category.value} value={category.value} className="text-zion-slate-light data-[state=active]:text-zion-cyan">
+              {SERVICE_CATEGORIES.slice(0, 6).map(category => (<TabsTrigger key={category.value} value={category.value} className="text-zion-slate-light data-[state=active]:text-zion-cyan">
                   {category.label}
                 </TabsTrigger>))}
             </TabsList>
             
-            {ENHANCED_SERVICE_CATEGORIES.slice(0, 6).map(category => (<TabsContent key={category.value} value={category.value} className="mt-8">
+                          {SERVICE_CATEGORIES.slice(0, 6).map(category => (<TabsContent key={category.value} value={category.value} className="mt-8">
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                  {ENHANCED_SERVICES
+                  {COMPREHENSIVE_SERVICES_EXPANSION_2025
                 .filter(service => service.category.toLowerCase().includes(category.value.toLowerCase()))
                 .slice(0, 6)
                 .map(service => (<Card key={service.id} className="bg-zion-blue-dark border-zion-blue-light text-white">

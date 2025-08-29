@@ -1,8 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
-import SEO from '@/components/SEO';
-import { Target, BarChart3, Users, Zap, Check, ExternalLink, Phone, Mail, ArrowRight, TrendingUp, MessageSquare, Mail as MailIcon, Share2, Filter } from 'lucide-react';
-=======
 import { motion } from 'framer-motion';
 import { 
   Target, 
@@ -27,8 +23,6 @@ import {
   Eye
 } from 'lucide-react';
 import { SEO } from '../../components/SEO';
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-aaf9
-
 const AIMarketingAutomation = () => {
   const features = [
     {
@@ -68,7 +62,6 @@ const AIMarketingAutomation = () => {
       price: "$119/month"
     }
   ];
-
   const pricingPlans = [
     {
       name: "Starter",
@@ -112,7 +105,6 @@ const AIMarketingAutomation = () => {
       popular: false
     }
   ];
-
   const benefits = [
     {
       icon: TrendingUp,
@@ -135,14 +127,12 @@ const AIMarketingAutomation = () => {
       description: "Every customer receives relevant, personalized content"
     }
   ];
-
   return (
     <>
       <SEO 
         title="AI Marketing Automation - Zion Tech Group"
         description="Revolutionary AI-powered marketing automation platform that personalizes campaigns, optimizes performance, and delivers exceptional ROI through intelligent automation."
       />
-      
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
         {/* Hero Section */}
         <section className="relative overflow-hidden py-20 px-4">
@@ -189,7 +179,6 @@ const AIMarketingAutomation = () => {
             </motion.div>
           </div>
         </section>
-
         {/* Benefits Section */}
         <section className="py-20 px-4">
           <div className="container mx-auto max-w-7xl">
@@ -206,7 +195,6 @@ const AIMarketingAutomation = () => {
                 See measurable improvements in ROI, customer engagement, and campaign performance
               </p>
             </motion.div>
-
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
               {benefits.map((benefit, index) => (
                 <motion.div
@@ -226,7 +214,6 @@ const AIMarketingAutomation = () => {
             </div>
           </div>
         </section>
-
         {/* Features Section */}
         <section className="py-20 px-4 bg-slate-800/30">
           <div className="container mx-auto max-w-7xl">
@@ -243,7 +230,6 @@ const AIMarketingAutomation = () => {
                 Our AI doesn't just automate—it personalizes, optimizes, and delivers results that matter
               </p>
             </motion.div>
-
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               {features.map((feature, index) => (
                 <motion.div
@@ -264,7 +250,6 @@ const AIMarketingAutomation = () => {
             </div>
           </div>
         </section>
-
         {/* Pricing Section */}
         <section className="py-20 px-4">
           <div className="container mx-auto max-w-7xl">
@@ -281,7 +266,6 @@ const AIMarketingAutomation = () => {
                 Start with our free trial and scale as you grow. All plans include our core AI features.
               </p>
             </motion.div>
-
             <div className="grid md:grid-cols-3 gap-8">
               {pricingPlans.map((plan, index) => (
                 <motion.div
@@ -302,7 +286,6 @@ const AIMarketingAutomation = () => {
                       </span>
                     </div>
                   )}
-                  
                   <div className="text-center mb-6">
                     <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
                     <div className="flex items-baseline justify-center mb-2">
@@ -311,7 +294,6 @@ const AIMarketingAutomation = () => {
                     </div>
                     <p className="text-gray-300">{plan.description}</p>
                   </div>
-
                   <ul className="space-y-3 mb-8">
                     {plan.features.map((feature, featureIndex) => (
                       <li key={featureIndex} className="flex items-center text-gray-300">
@@ -320,7 +302,6 @@ const AIMarketingAutomation = () => {
                       </li>
                     ))}
                   </ul>
-
                   <motion.button
                     whileHover={{ scale: 1.02 }}
                     whileTap={{ scale: 0.98 }}
@@ -337,7 +318,6 @@ const AIMarketingAutomation = () => {
             </div>
           </div>
         </section>
-
         {/* CTA Section */}
         <section className="py-20 px-4 bg-slate-800/30">
           <div className="container mx-auto max-w-4xl text-center">
@@ -376,5 +356,4 @@ const AIMarketingAutomation = () => {
     </>
   );
 };
-
 export default AIMarketingAutomation;

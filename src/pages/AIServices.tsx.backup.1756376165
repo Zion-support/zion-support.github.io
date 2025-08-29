@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-export { default } from './services/AI';
-=======
 import React from 'react'
 import { SEO } from '@/components/SEO'
 // Prefer the existing implementation if present
@@ -10,7 +7,6 @@ try {
 	// @ts-ignore
 	Impl = (await import('./services/AI')).default
 } catch {}
-
 const Fallback: React.FC = () => (
 	<div className="min-h-screen bg-slate-950 text-white py-16">
 		<SEO title="AI Services" description="Explore our AI-powered services and solutions." />
@@ -20,7 +16,4 @@ const Fallback: React.FC = () => (
 		</div>
 	</div>
 )
-
 export default (Impl || Fallback)
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-c82d
-

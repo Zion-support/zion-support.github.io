@@ -1,19 +1,10 @@
-<<<<<<< HEAD
-import React from 'react';
-import SEO from '@/components/SEO';
-
-=======
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-c82d
-
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Video, Calendar, Clock, Users, Play, Download, Search, Filter, Star, ExternalLink, ArrowRight, BookOpen, Brain, Cloud, Shield, Database, Zap, Globe, Target, TrendingUp, Award, CheckCircle } from 'lucide-react';
-
 export default function Webinars() {
   const [searchQuery, setSearchQuery] = useState('');
   const [activeCategory, setActiveCategory] = useState('all');
   const [filterType, setFilterType] = useState('all');
-
   const categories = [
     { id: 'all', name: 'All Categories', icon: <Video className="w-5 h-5" />, count: 0 },
     { id: 'ai-ml', name: 'AI & Machine Learning', icon: <Brain className="w-5 h-5" />, count: 6 },
@@ -23,14 +14,12 @@ export default function Webinars() {
     { id: 'emerging', name: 'Emerging Technologies', icon: <Zap className="w-5 h-5" />, count: 2 },
     { id: 'strategy', name: 'Digital Strategy', icon: <Target className="w-5 h-5" />, count: 4 }
   ];
-
   const filterTypes = [
     { id: 'all', name: 'All Webinars', count: 0 },
     { id: 'upcoming', name: 'Upcoming', count: 0 },
     { id: 'on-demand', name: 'On-Demand', count: 0 },
     { id: 'live', name: 'Live Now', count: 0 }
   ];
-
   const webinars = [
     {
       id: 1,
@@ -101,13 +90,11 @@ export default function Webinars() {
       recordingAvailable: false
     }
   ];
-
   // Update counts
   React.useEffect(() => {
     categories.forEach(cat => {
       cat.count = webinars.filter(w => w.category === cat.id).length;
     });
-
     filterTypes.forEach(type => {
       if (type.id === 'all') {
         type.count = webinars.length;
@@ -116,18 +103,14 @@ export default function Webinars() {
       }
     });
   }, []);
-
   const filteredWebinars = webinars.filter(webinar => {
     const matchesSearch = webinar.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
                          webinar.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
                          webinar.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()));
-
     const matchesCategory = activeCategory === 'all' || webinar.category === activeCategory;
     const matchesType = filterType === 'all' || webinar.type === filterType;
-
     return matchesSearch && matchesCategory && matchesType;
   });
-
   const formatDate = (dateString: string) => {
     return new Date(dateString).toLocaleDateString('en-US', {
       weekday: 'long',
@@ -136,24 +119,20 @@ export default function Webinars() {
       day: 'numeric'
     });
   };
-
   const formatTimeUntil = (dateString: string) => {
     const now = new Date();
     const webinarDate = new Date(dateString);
     const diffTime = webinarDate.getTime() - now.getTime();
     const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
-
     if (diffDays < 0) return 'Past';
     if (diffDays === 0) return 'Today';
     if (diffDays < 7) return `${diffDays} days`;
     if (diffDays < 30) return `${Math.ceil(diffDays / 7)} weeks`;
     return `${Math.ceil(diffDays / 30)} months`;
   };
-
   const getCategoryIcon = (categoryId: string) => {
     return categories.find(c => c.id === categoryId)?.icon || <Video className="w-5 h-5" />;
   };
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
       {/* Hero Section */}
@@ -173,7 +152,6 @@ export default function Webinars() {
               from industry experts and technology leaders. Get notified about upcoming
               sessions and access to exclusive content.
             </p>
-
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <motion.button
                 className="px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-purple text-white rounded-xl font-semibold text-lg hover:scale-105 transition-all duration-300 shadow-2xl hover:shadow-zion-cyan/25"
@@ -189,7 +167,6 @@ export default function Webinars() {
           </motion.div>
         </div>
       </section>
-
       {/* Search and Filters */}
       <section className="py-12 bg-zion-slate">
         <div className="container mx-auto px-4">
@@ -205,7 +182,6 @@ export default function Webinars() {
                 className="w-full pl-12 pr-4 py-4 bg-zion-slate-dark border border-zion-slate-light/20 rounded-xl text-white placeholder-zion-slate-light focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent"
               />
             </div>
-
             {/* Category Filters */}
             <div className="flex flex-wrap gap-3 mb-6">
               {categories.map((category) => (
@@ -224,7 +200,6 @@ export default function Webinars() {
                 </button>
               ))}
             </div>
-
             {/* Type Filters */}
             <div className="flex flex-wrap gap-3">
               {filterTypes.map((type) => (
@@ -244,7 +219,6 @@ export default function Webinars() {
           </div>
         </div>
       </section>
-
       {/* Webinars Grid */}
       <section className="py-16 bg-zion-slate-light">
         <div className="container mx-auto px-4">
@@ -287,7 +261,6 @@ export default function Webinars() {
                         </div>
                       )}
                     </div>
-
                     {/* Content */}
                     <div className="p-6">
                       <div className="flex items-center gap-2 mb-3">
@@ -296,15 +269,12 @@ export default function Webinars() {
                           {categories.find(c => c.id === webinar.category)?.name}
                         </span>
                       </div>
-
                       <h3 className="text-xl font-semibold text-white mb-3 line-clamp-2">
                         {webinar.title}
                       </h3>
-
                       <p className="text-zion-slate-light mb-4 line-clamp-3">
                         {webinar.description}
                       </p>
-
                       {/* Meta Info */}
                       <div className="space-y-2 mb-4">
                         <div className="flex items-center gap-2 text-sm text-zion-slate-light">
@@ -320,7 +290,6 @@ export default function Webinars() {
                           <span>{webinar.currentAttendees}/{webinar.maxAttendees} attendees</span>
                         </div>
                       </div>
-
                       {/* Tags */}
                       <div className="flex flex-wrap gap-2 mb-6">
                         {webinar.tags.slice(0, 3).map((tag, index) => (
@@ -332,7 +301,6 @@ export default function Webinars() {
                           </span>
                         ))}
                       </div>
-
                       {/* Actions */}
                       <div className="flex gap-3">
                         {webinar.registrationRequired ? (

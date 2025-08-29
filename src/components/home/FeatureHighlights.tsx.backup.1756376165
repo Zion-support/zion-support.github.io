@@ -1,7 +1,5 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-<<<<<<< HEAD
-=======
 import {
   Brain,
   Globe,
@@ -16,7 +14,6 @@ import {
   Clock,
   Heart
 } from 'lucide-react';
-
 const highlights = [
   {
     icon: Brain,
@@ -46,8 +43,6 @@ const highlights = [
     borderColor: 'border-zion-blue/20'
   }
 ];
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-c82d
-
 const features = [
   {
     icon: "🚀",
@@ -80,7 +75,6 @@ const features = [
     description: "Comprehensive insights and reporting to make data-driven decisions instantly"
   }
 ];
-
 export function FeatureHighlights() {
   return (
     <section className="py-20 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
@@ -92,43 +86,18 @@ export function FeatureHighlights() {
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
-<<<<<<< HEAD
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
-            Why Choose Zion Tech Group?
-          </h2>
-          <p className="text-gray-300 text-lg max-w-3xl mx-auto">
-            Our innovative solutions combine cutting-edge technology with proven business value to deliver exceptional results
-          </p>
-        </motion.div>
-
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {features.map((feature, index) => (
-            <motion.div
-              key={feature.title}
-              className="text-center group"
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: index * 0.1 }}
-            >
-              <div className="w-20 h-20 bg-gradient-to-br from-blue-500 to-purple-600 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
-                <span className="text-3xl">{feature.icon}</span>
-=======
           <div className="inline-flex items-center gap-2 px-4 py-2 bg-zion-purple/10 border border-zion-purple/20 rounded-full text-zion-purple text-sm font-medium mb-6">
             <Award className="w-4 h-4" />
             <span>Why Choose Zion</span>
           </div>
-
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
             Built for the Future of Work
           </h2>
-
           <p className="text-lg md:text-xl text-zion-slate-light max-w-3xl mx-auto leading-relaxed">
             Experience the next generation of talent marketplace with cutting-edge AI,
             global reach, and enterprise-grade security.
           </p>
         </motion.div>
-
         {/* Feature Highlights Grid */}
         <motion.div
           variants={containerVariants}
@@ -151,22 +120,18 @@ export function FeatureHighlights() {
               <div className={`h-full p-8 rounded-3xl ${highlight.bgColor} ${highlight.borderColor} border-2 hover:border-opacity-40 transition-all duration-300 backdrop-blur-sm relative overflow-hidden`}>
                 {/* Background gradient overlay */}
                 <div className={`absolute inset-0 bg-gradient-to-br ${highlight.color} opacity-5 group-hover:opacity-10 transition-opacity duration-300`}></div>
-
                 <div className="relative z-10">
                   {/* Icon */}
                   <div className={`inline-flex p-4 rounded-2xl bg-white/10 mb-6 group-hover:scale-110 transition-transform duration-300`}>
                     <highlight.icon className="w-8 h-8 text-white" />
                   </div>
-
                   {/* Content */}
                   <h3 className="text-2xl font-bold text-white mb-4 group-hover:text-zion-cyan transition-colors duration-200">
                     {highlight.title}
                   </h3>
-
                   <p className="text-zion-slate-light leading-relaxed mb-6">
                     {highlight.description}
                   </p>
-
                   {/* Features */}
                   <ul className="space-y-3">
                     {highlight.features.map((feature, idx) => (
@@ -181,7 +146,6 @@ export function FeatureHighlights() {
             </motion.div>
           ))}
         </motion.div>
-
         {/* Core Features Grid */}
         <motion.div
           variants={containerVariants}
@@ -205,32 +169,22 @@ export function FeatureHighlights() {
                 <div className={`w-12 h-12 bg-gradient-to-r ${feature.color} rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300`}>
                   <feature.icon className={`w-6 h-6 ${feature.iconColor}`} />
                 </div>
-
                 <h3 className="text-xl font-semibold text-white mb-2 group-hover:text-blue-400 transition-colors duration-300">
                   {feature.title}
                 </h3>
-
                 <p className="text-gray-400 group-hover:text-gray-300 transition-colors duration-300">
                   {feature.description}
                 </p>
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-c82d
               </div>
-              
               <h3 className="text-xl font-bold text-white mb-3 group-hover:text-blue-400 transition-colors duration-200">
                 {feature.title}
               </h3>
-              
               <p className="text-gray-400 text-sm leading-relaxed">
                 {feature.description}
               </p>
             </motion.div>
           ))}
         </div>
-
-<<<<<<< HEAD
-        <motion.div 
-          className="mt-16 text-center"
-=======
         {/* Achievements Section */}
         <motion.div
           variants={containerVariants}
@@ -242,7 +196,6 @@ export function FeatureHighlights() {
           <h3 className="text-2xl font-bold text-white mb-12">
             Trusted by Industry Leaders
           </h3>
-
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             {achievements.map((achievement, index) => (
               <motion.div
@@ -263,7 +216,6 @@ export function FeatureHighlights() {
             ))}
           </div>
         </motion.div>
-
         {/* Technology Stack */}
         <motion.div
           variants={containerVariants}
@@ -275,7 +227,6 @@ export function FeatureHighlights() {
           <h3 className="text-2xl font-bold text-white mb-8">
             Cutting-Edge Technology Stack
           </h3>
-
           <motion.div
             variants={techVariants}
             className="flex flex-wrap justify-center gap-4"
@@ -291,10 +242,8 @@ export function FeatureHighlights() {
             ))}
           </motion.div>
         </motion.div>
-
         {/* CTA Section */}
         <motion.div
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-c82d
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -308,10 +257,4 @@ export function FeatureHighlights() {
       </div>
     </section>
   );
-<<<<<<< HEAD
 }
-=======
-}
-
-
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-c82d

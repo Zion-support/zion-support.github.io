@@ -6,6 +6,7 @@ Sitemap: https://ziontechgroup.com/sitemap.xml
 
 # Crawl-delay
 Crawl-delay: 1
+
 # Disallow admin and private areas
 Disallow: /admin/
 Disallow: /private/

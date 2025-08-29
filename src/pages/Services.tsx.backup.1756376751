@@ -1,9 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
-import { motion } from 'framer-motion';
-import { SEO } from '../components/SEO';
-=======
-
 const services = [
   {
     category: 'Micro SaaS',
@@ -98,7 +93,6 @@ const services = [
     ]
   }
 ];
-
 const Services: React.FC = () => {
   return (
     <div className="min-h-screen bg-futuristic">
@@ -116,7 +110,6 @@ const Services: React.FC = () => {
             <a href="/request-quote" className="px-4 py-2 rounded-lg bg-gradient-to-r from-cyan-400 to-blue-500 text-black font-semibold hover:from-cyan-300 hover:to-blue-400">Request a Quote</a>
           </div>
         </div>
-
         <div className="mt-16 space-y-16">
           {services.map((group) => (
             <section key={group.category}>
@@ -136,7 +129,6 @@ const Services: React.FC = () => {
             </section>
           ))}
         </div>
-
         <div className="mt-20 text-center">
           <p className="text-gray-400 text-sm">
             For full capabilities, visit our site at <a className="underline decoration-dotted hover:text-cyan-300" href="https://ziontechgroup.com" target="_blank" rel="noreferrer">ziontechgroup.com</a>.
@@ -146,12 +138,9 @@ const Services: React.FC = () => {
     </div>
   );
 };
-
 export default Services;
-
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-0528
 import { Link } from 'react-router-dom';
 import { 
   Brain, 
@@ -184,7 +173,6 @@ import {
   Globe2,
   Leaf
 } from 'lucide-react';
-
 export default function Services() {
   const serviceCategories = [
     {
@@ -350,7 +338,6 @@ export default function Services() {
       ]
     }
   ];
-
   const benefits = [
     {
       icon: TrendingUp,
@@ -373,14 +360,12 @@ export default function Services() {
       description: 'Track record of successful implementations'
     }
   ];
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO 
         title="Our Services - Zion Tech Group"
         description="Discover Zion Tech Group's comprehensive range of AI, cloud, and technology services designed to transform your business."
       />
-      
       {/* Hero Section */}
       <section className="relative py-20 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/10 via-blue-500/10 to-purple-500/10"></div>
@@ -401,7 +386,6 @@ export default function Services() {
           </motion.div>
         </div>
       </section>
-
       {/* Service Categories */}
       <section className="py-20">
         <div className="container mx-auto px-6">
@@ -420,7 +404,6 @@ export default function Services() {
                   <h2 className="text-4xl font-bold text-white mb-4">{category.title}</h2>
                   <p className="text-xl text-gray-300 max-w-2xl mx-auto">{category.description}</p>
                 </div>
-
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                   {category.services.map((service, serviceIndex) => (
                     <motion.div
@@ -460,7 +443,6 @@ export default function Services() {
           </div>
         </div>
       </section>
-
       {/* Benefits Section */}
       <section className="py-20 bg-gradient-to-r from-slate-800/50 to-slate-700/50">
         <div className="container mx-auto px-6">
@@ -473,7 +455,6 @@ export default function Services() {
             <h2 className="text-4xl font-bold text-white mb-4">Why Choose Our Services?</h2>
             <p className="text-xl text-gray-300">Delivering value through innovation and expertise</p>
           </motion.div>
-
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {benefits.map((benefit, index) => (
               <motion.div
@@ -493,7 +474,6 @@ export default function Services() {
           </div>
         </div>
       </section>
-
       {/* CTA Section */}
       <section className="py-20">
         <div className="container mx-auto px-6 text-center">
@@ -527,7 +507,6 @@ export default function Services() {
           </motion.div>
         </div>
       </section>
-
       {/* Why Choose Our Services */}
       <section className="py-16">
         <div className="container mx-auto px-4">
@@ -578,7 +557,6 @@ export default function Services() {
           </div>
         </div>
       </section>
-
       {/* CTA Section */}
       <section className="py-16 bg-slate-800/30">
         <div className="container mx-auto px-4 text-center">
@@ -607,5 +585,4 @@ export default function Services() {
     </>
   );
 }
-
 export default Services;

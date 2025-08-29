@@ -41,7 +41,6 @@ import {
 } from 'lucide-react';
 import UltimateServicesShowcase2025 from '../components/UltimateServicesShowcase2025';
 import { TestimonialsSection } from '../components/TestimonialsSection';
-
 // Enhanced loading component with better UX and accessibility
 const EnhancedLoadingSpinner = () => (
   <div 
@@ -62,16 +61,13 @@ const EnhancedLoadingSpinner = () => (
     </div>
   </div>
 );
-
 // Enhanced futuristic animated background component with better performance
 const FuturisticBackground = React.memo(() => {
   const particleCount = useMemo(() => Math.min(30, Math.floor(window.innerWidth / 50)), []);
-  
   return (
     <div className="fixed inset-0 overflow-hidden pointer-events-none" aria-hidden="true">
       {/* Animated grid with neon effect */}
       <div className="absolute inset-0 bg-[linear-gradient(rgba(6,182,212,0.15)_1px,transparent_1px),linear-gradient(90deg,rgba(6,182,212,0.15)_1px,transparent_1px)] bg-[size:50px_50px] animate-pulse"></div>
-      
       {/* Enhanced floating particles with neon glow - optimized for performance */}
       <div className="absolute inset-0">
         {Array.from({ length: particleCount }).map((_, i) => (
@@ -97,7 +93,6 @@ const FuturisticBackground = React.memo(() => {
           />
         ))}
       </div>
-      
       {/* Enhanced gradient orbs with neon glow */}
       <motion.div 
         className="absolute top-20 left-20 w-72 h-72 bg-gradient-to-r from-cyan-500/30 to-blue-500/30 rounded-full blur-3xl"
@@ -124,7 +119,6 @@ const FuturisticBackground = React.memo(() => {
           delay: 1
         }}
       />
-      
       {/* New neon accent orbs */}
       <motion.div 
         className="absolute top-1/2 left-1/4 w-48 h-48 bg-gradient-to-r from-green-500/20 to-emerald-500/20 rounded-full blur-2xl"
@@ -139,7 +133,6 @@ const FuturisticBackground = React.memo(() => {
           delay: 2
         }}
       />
-      
       {/* Animated neon lines */}
       <div className="absolute inset-0">
         {Array.from({ length: 5 }).map((_, i) => (
@@ -164,7 +157,6 @@ const FuturisticBackground = React.memo(() => {
           />
         ))}
       </div>
-      
       {/* Floating geometric shapes */}
       <div className="absolute inset-0">
         {Array.from({ length: 8 }).map((_, i) => (
@@ -193,15 +185,12 @@ const FuturisticBackground = React.memo(() => {
     </div>
   );
 });
-
 FuturisticBackground.displayName = 'FuturisticBackground';
-
 export default function Home() {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [isVisible, setIsVisible] = useState(false);
   const [isLoading, setIsLoading] = useState(true);
   const [autoplayEnabled, setAutoplayEnabled] = useState(true);
-
   // Memoized hero slides for better performance
   const heroSlides = useMemo(() => [
     {
@@ -238,7 +227,6 @@ export default function Home() {
       color: "from-green-500 to-emerald-500"
     }
   ], []);
-
   // Memoized stats for better performance
   const stats = useMemo(() => [
     { icon: Users, value: "500+", label: "Happy Clients", description: "Trusted by businesses worldwide" },
@@ -246,70 +234,9 @@ export default function Home() {
     { icon: Award, value: "10+", label: "Years Experience", description: "Deep industry expertise" },
     { icon: Globe, value: "25+", label: "Countries Served", description: "Global reach and support" }
   ], []);
-
   // Memoized featured services for better performance
   const featuredServices = useMemo(() => [
     {
-<<<<<<< HEAD
-      title: "AI Autonomous Business Operations",
-      description: "Next-generation autonomous business operations platform that uses advanced AI to automate complex business processes and make intelligent decisions in real-time. Transform your business with 24/7 autonomous operations, AI decision making, and process optimization.",
-      icon: Rocket,
-      path: "/services/ai-autonomous-research-assistant",
-      rating: 4.9,
-      reviewCount: 127,
-      highlights: ["24/7 Autonomous Operations", "AI Decision Making", "Process Optimization", "Real-time Analytics", "Cost Reduction by 60%"],
-      price: "From $2,500/month"
-    },
-    {
-      title: "Quantum Financial Trading Platform",
-      description: "Revolutionary trading platform that leverages quantum computing for ultra-fast market analysis, risk assessment, and algorithmic trading. Gain quantum advantage with 1000x faster processing and 40% improved trading accuracy.",
-      icon: Cpu,
-      path: "/services/quantum-financial-trading-platform",
-      rating: 4.8,
-      reviewCount: 89,
-      highlights: ["Quantum Processing", "40% Trading Accuracy", "60% Risk Reduction", "Ultra-fast Execution", "Portfolio Optimization"],
-      price: "From $8,999/month"
-    },
-    {
-      title: "AI-Powered Healthcare Analytics",
-      description: "Advanced healthcare analytics platform that uses AI to analyze patient data, predict outcomes, and optimize treatment plans. Improve patient outcomes by 45% and reduce readmission rates by 30%.",
-      icon: Shield,
-      path: "/services/ai-powered-healthcare-analytics-platform",
-      rating: 4.9,
-      reviewCount: 156,
-      highlights: ["45% Better Outcomes", "30% Fewer Readmissions", "AI Treatment Plans", "Real-time Monitoring", "HIPAA Compliant"],
-      price: "From $3,299/month"
-    },
-    {
-      title: "AI Autonomous Supply Chain",
-      description: "Intelligent supply chain platform that autonomously optimizes logistics, inventory, and demand forecasting. Reduce inventory costs by 30%, improve delivery times by 40%, and optimize routes by 25%.",
-      icon: Workflow,
-      path: "/services/ai-autonomous-supply-chain-optimization",
-      rating: 4.7,
-      reviewCount: 98,
-      highlights: ["30% Cost Reduction", "40% Faster Delivery", "25% Route Optimization", "AI Forecasting", "Sustainability Metrics"],
-      price: "From $2,499/month"
-    },
-    {
-      title: "AI Content Marketing Suite",
-      description: "Comprehensive content marketing platform that automates content creation, distribution, and performance optimization. Increase engagement by 60%, reduce creation time by 70%, and improve SEO by 45%.",
-      icon: Brain,
-      path: "/services/ai-content-marketing-automation-suite",
-      rating: 4.6,
-      reviewCount: 134,
-      highlights: ["60% More Engagement", "70% Time Savings", "45% SEO Improvement", "Multi-channel", "ROI Tracking"],
-      price: "From $1,599/month"
-    },
-    {
-      title: "Quantum Machine Learning",
-      description: "Revolutionary platform that combines quantum computing with machine learning for solving complex computational problems. Solve problems 1000x faster with breakthrough computational power.",
-      icon: Zap,
-      path: "/services/quantum-machine-learning-platform",
-      rating: 4.9,
-      reviewCount: 67,
-      highlights: ["1000x Faster Processing", "60% Accuracy Improvement", "Quantum Algorithms", "Research Ready", "Future-proof Tech"],
-      price: "From $6,999/month"
-=======
       title: "AI Business Intelligence Dashboard",
       description: "Transform your business data into actionable insights with AI-powered analytics, predictive insights, and automated reporting that drives growth.",
       icon: BarChart3,
@@ -338,10 +265,8 @@ export default function Home() {
       reviewCount: 189,
       highlights: ["24/7 Availability", "Instant Responses", "Smart Routing", "Cost Reduction"],
       price: "From $199/month"
->>>>>>> origin/cursor/expand-services-and-deploy-updates-1e87
     }
   ], []);
-
   // Memoized technologies for better performance
   const technologies = useMemo(() => [
     { name: "AI/ML", icon: Brain, description: "Advanced machine learning algorithms" },
@@ -351,7 +276,6 @@ export default function Home() {
     { name: "Analytics", icon: BarChart3, description: "Real-time data insights" },
     { name: "Automation", icon: Workflow, description: "Intelligent process automation" }
   ], []);
-
   // Memoized features for better performance
   const features = useMemo(() => [
     {
@@ -375,7 +299,6 @@ export default function Home() {
       description: "Scale your operations worldwide with our distributed infrastructure"
     }
   ], []);
-
   // Memoized animation variants for better performance
   const containerVariants = useMemo(() => ({
     hidden: { opacity: 0 },
@@ -386,12 +309,10 @@ export default function Home() {
       }
     }
   }), []);
-
   const itemVariants = useMemo(() => ({
     hidden: { opacity: 0, y: 20 },
     visible: { opacity: 1, y: 0 }
   }), []);
-
   // Enhanced slide navigation with accessibility
   const goToSlide = useCallback((index: number) => {
     setCurrentSlide(index);
@@ -399,20 +320,16 @@ export default function Home() {
     // Re-enable autoplay after user interaction
     setTimeout(() => setAutoplayEnabled(true), 5000);
   }, []);
-
   const nextSlide = useCallback(() => {
     setCurrentSlide((prev) => (prev + 1) % heroSlides.length);
   }, [heroSlides.length]);
-
   const prevSlide = useCallback(() => {
     setCurrentSlide((prev) => (prev - 1 + heroSlides.length) % heroSlides.length);
   }, [heroSlides.length]);
-
   // Initialize component
   useEffect(() => {
     setIsVisible(true);
     setIsLoading(false);
-    
     // Enhanced autoplay with pause on hover
     let interval: NodeJS.Timeout;
     if (autoplayEnabled) {
@@ -420,12 +337,10 @@ export default function Home() {
         setCurrentSlide((prev) => (prev + 1) % heroSlides.length);
       }, 5000);
     }
-
     return () => {
       if (interval) clearInterval(interval);
     };
   }, [autoplayEnabled, heroSlides.length]);
-
   // Keyboard navigation for slides
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
@@ -435,36 +350,29 @@ export default function Home() {
         nextSlide();
       }
     };
-
     document.addEventListener('keydown', handleKeyDown);
     return () => document.removeEventListener('keydown', handleKeyDown);
   }, [prevSlide, nextSlide]);
-
   // Skip to main content functionality for accessibility
   useEffect(() => {
     const skipLink = document.createElement('a');
     skipLink.href = '#main-content';
     skipLink.textContent = 'Skip to main content';
     skipLink.className = 'skip-link sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-cyan-500 text-white px-4 py-2 rounded z-50';
-    
     document.body.insertBefore(skipLink, document.body.firstChild);
-    
     return () => {
       if (document.body.contains(skipLink)) {
         document.body.removeChild(skipLink);
       }
     };
   }, []);
-
   if (isLoading) {
     return <EnhancedLoadingSpinner />;
   }
-
   return (
     <div className="fixed inset-0 overflow-hidden pointer-events-none" aria-hidden="true">
       {/* Animated grid with neon effect */}
       <div className="absolute inset-0 bg-[linear-gradient(rgba(6,182,212,0.15)_1px,transparent_1px),linear-gradient(90deg,rgba(6,182,212,0.15)_1px,transparent_1px)] bg-[size:50px_50px] animate-pulse"></div>
-      
       {/* Enhanced floating particles with neon glow - optimized for performance */}
       <div className="absolute inset-0">
         {particles.map((_, i) => (
@@ -490,7 +398,6 @@ export default function Home() {
           />
         ))}
       </div>
-      
       {/* Enhanced gradient orbs with neon glow */}
       <motion.div 
         className="absolute top-20 left-20 w-96 h-96 bg-gradient-to-r from-cyan-500/30 to-blue-500/30 rounded-full blur-3xl"
@@ -504,7 +411,6 @@ export default function Home() {
           ease: "easeInOut"
         }}
       />
-      
       <motion.div 
         className="absolute bottom-20 right-20 w-80 h-80 bg-gradient-to-r from-purple-500/30 to-pink-500/30 rounded-full blur-3xl"
         animate={{
@@ -517,7 +423,6 @@ export default function Home() {
           ease: "easeInOut"
         }}
       />
-      
       {/* New neon accent orbs */}
       <motion.div 
         className="absolute top-1/2 left-1/4 w-64 h-64 bg-gradient-to-r from-green-500/20 to-emerald-500/20 rounded-full blur-2xl"
@@ -532,7 +437,6 @@ export default function Home() {
           delay: 2
         }}
       />
-      
       {/* Animated neon lines */}
       <div className="absolute inset-0">
         {lines.map((_, i) => (
@@ -557,7 +461,6 @@ export default function Home() {
           />
         ))}
       </div>
-      
       {/* Floating geometric shapes */}
       <div className="absolute inset-0">
         {shapes.map((_, i) => (
@@ -586,9 +489,7 @@ export default function Home() {
     </div>
   );
 });
-
 FuturisticBackground.displayName = 'FuturisticBackground';
-
 // Enhanced hero slides data with better structure
 const heroSlides = [
   {
@@ -632,7 +533,6 @@ const heroSlides = [
     features: ["Cloud Migration", "DevOps Implementation", "Data Strategy", "Process Automation"]
   }
 ];
-
 // Enhanced stats data
 const stats = [
   { number: "500+", label: "AI Models Deployed", icon: Brain, description: "Advanced AI solutions" },
@@ -640,7 +540,6 @@ const stats = [
   { number: "50+", label: "Micro SAAS Services", icon: Zap, description: "Scalable solutions" },
   { number: "24/7", label: "Global Support", icon: Globe, description: "Always available" }
 ];
-
 // Enhanced testimonials data
 const testimonials = [
   {
@@ -671,7 +570,6 @@ const testimonials = [
     industry: "Logistics"
   }
 ];
-
 // Enhanced contact information
 const contactInfo = [
   {
@@ -699,7 +597,6 @@ const contactInfo = [
     description: "Visit our headquarters"
   }
 ];
-
 // Enhanced accessibility features
 const AccessibilityFeatures = () => (
   <div className="fixed bottom-4 right-4 z-50 flex flex-col gap-2">
@@ -721,7 +618,6 @@ const AccessibilityFeatures = () => (
     </button>
   </div>
 );
-
 // Enhanced performance monitoring
 const PerformanceMonitor = () => {
   useEffect(() => {
@@ -737,59 +633,46 @@ const PerformanceMonitor = () => {
       return () => observer.disconnect();
     }
   }, []);
-
   return null;
 };
-
 // Enhanced Home component with better performance and accessibility
 const Home = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [isLoading, setIsLoading] = useState(true);
   const [isMobile, setIsMobile] = useState(false);
-
   // Performance optimization: Memoize expensive calculations
   const currentSlideData = useMemo(() => heroSlides[currentSlide], [currentSlide]);
-
   // Handle mobile detection
   useEffect(() => {
     const checkMobile = () => {
       setIsMobile(window.innerWidth < 768);
     };
-    
     checkMobile();
     window.addEventListener('resize', checkMobile);
-    
     return () => window.removeEventListener('resize', checkMobile);
   }, []);
-
   // Auto-advance slides with pause on hover
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentSlide((prev) => (prev + 1) % heroSlides.length);
     }, 5000);
-
     return () => clearInterval(interval);
   }, []);
-
   // Loading state management
   useEffect(() => {
     const timer = setTimeout(() => setIsLoading(false), 1000);
     return () => clearTimeout(timer);
   }, []);
-
   // Enhanced slide navigation
   const goToSlide = useCallback((index: number) => {
     setCurrentSlide(index);
   }, []);
-
   const nextSlide = useCallback(() => {
     setCurrentSlide((prev) => (prev + 1) % heroSlides.length);
   }, []);
-
   const prevSlide = useCallback(() => {
     setCurrentSlide((prev) => (prev - 1 + heroSlides.length) % heroSlides.length);
   }, []);
-
   // Enhanced accessibility: Keyboard navigation
   useEffect(() => {
     const handleKeyPress = (e: KeyboardEvent) => {
@@ -797,15 +680,12 @@ const Home = () => {
       if (e.key === 'ArrowRight') nextSlide();
       if (e.key === 'Escape') document.activeElement?.blur();
     };
-
     window.addEventListener('keydown', handleKeyPress);
     return () => window.removeEventListener('keydown', handleKeyPress);
   }, [nextSlide, prevSlide]);
-
   if (isLoading) {
     return <EnhancedLoadingSpinner />;
   }
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light text-white relative overflow-hidden">
       {/* SEO Component */}
@@ -816,10 +696,8 @@ const Home = () => {
         ogImage="/zion-tech-group-og.jpg"
         canonicalUrl="https://ziontechgroup.com"
       />
-
       {/* Performance Monitor */}
       <PerformanceMonitor />
-
       {/* Enhanced Animated Background */}
       <FuturisticBackground />
       <div className="relative min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white overflow-hidden">
@@ -854,7 +732,6 @@ const Home = () => {
                       Next-Generation Technology Solutions
                     </span>
                   </motion.div>
-                  
                   <motion.h1 
                     className="text-5xl md:text-7xl lg:text-8xl font-bold mb-8 leading-tight"
                     initial={{ opacity: 0, y: 30 }}
@@ -865,7 +742,6 @@ const Home = () => {
                       {heroSlides[currentSlide].title}
                     </span>
                   </motion.h1>
-                  
                   <motion.p 
                     className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto mb-8 leading-relaxed"
                     initial={{ opacity: 0, y: 30 }}
@@ -874,7 +750,6 @@ const Home = () => {
                   >
                     {heroSlides[currentSlide].description}
                   </motion.p>
-                  
                   <motion.div 
                     className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12"
                     initial={{ opacity: 0, y: 30 }}
@@ -897,7 +772,6 @@ const Home = () => {
                       Watch Demo
                     </button>
                   </motion.div>
-                  
                   {/* Feature highlights */}
                   <motion.div 
                     className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-2xl mx-auto"
@@ -920,7 +794,6 @@ const Home = () => {
                 </div>
               </motion.div>
             </AnimatePresence>
-            
             {/* Enhanced slide navigation with accessibility */}
             <div className="flex justify-center items-center space-x-4 mt-8">
               <button
@@ -930,7 +803,6 @@ const Home = () => {
               >
                 <ChevronLeft className="w-6 h-6" />
               </button>
-              
               <div className="flex space-x-2" role="tablist" aria-label="Slide navigation">
                 {heroSlides.map((_, index) => (
                   <button
@@ -947,7 +819,6 @@ const Home = () => {
                   />
                 ))}
               </div>
-              
               <button
                 onClick={nextSlide}
                 className="p-2 text-cyan-400 hover:text-cyan-300 transition-colors focus:outline-none focus:ring-2 focus:ring-cyan-400/50 rounded-lg"
@@ -959,7 +830,6 @@ const Home = () => {
           </div>
         </div>
       </section>
-
       {/* Enhanced Contact Information Section */}
       <section className="relative py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -977,7 +847,6 @@ const Home = () => {
               Ready to transform your business with cutting-edge technology? Let's discuss how we can help you achieve your goals.
             </p>
           </motion.div>
-
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {contactInfo.map((contact, index) => (
               <motion.div
@@ -1008,7 +877,6 @@ const Home = () => {
           </div>
         </div>
       </section>
-
         {/* Enhanced Featured Services Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5 relative" aria-label="Featured Services">
           <div className="max-w-7xl mx-auto">
@@ -1028,7 +896,6 @@ const Home = () => {
                 Discover our most innovative and powerful solutions that are transforming businesses worldwide
               </p>
             </motion.div>
-            
             <motion.div 
               className="grid grid-cols-1 lg:grid-cols-3 gap-8"
               variants={containerVariants}
@@ -1052,7 +919,6 @@ const Home = () => {
                     <p className="text-gray-300 mb-6 leading-relaxed">
                       {service.description}
                     </p>
-                    
                     {/* Rating and price */}
                     <div className="flex items-center justify-between mb-6">
                       <div className="flex items-center space-x-1" aria-label={`Rating: ${service.rating} out of 5 stars`}>
@@ -1067,7 +933,6 @@ const Home = () => {
                       </div>
                       <div className="text-cyan-400 font-semibold text-sm">{service.price}</div>
                     </div>
-                    
                     {/* Key highlights */}
                     <div className="mb-6">
                       <h4 className="text-sm font-semibold text-cyan-400 mb-3">Key Highlights:</h4>
@@ -1080,7 +945,6 @@ const Home = () => {
                         ))}
                       </ul>
                     </div>
-                    
                     <Link
                       to={service.path}
                       className="w-full bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-6 py-3 rounded-xl font-semibold hover:from-cyan-400 hover:to-blue-400 transition-all duration-300 text-center block group-hover:shadow-lg group-hover:shadow-cyan-500/25 focus:outline-none focus:ring-4 focus:ring-cyan-400/50"
@@ -1094,7 +958,6 @@ const Home = () => {
             </motion.div>
           </div>
         </section>
-
         {/* Enhanced Technology Stack Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 relative" aria-label="Technology Stack">
           <div className="max-w-7xl mx-auto">
@@ -1114,7 +977,6 @@ const Home = () => {
                 We leverage the latest technologies to deliver innovative solutions that give your business a competitive edge
               </p>
             </motion.div>
-            
             <motion.div 
               className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8"
               variants={containerVariants}
@@ -1140,13 +1002,10 @@ const Home = () => {
             </motion.div>
           </div>
         </section>
-
         {/* Ultimate Services Showcase */}
         <UltimateServicesShowcase2025 />
-        
         {/* Testimonials Section */}
         <TestimonialsSection />
-        
         {/* Enhanced Features Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5 relative" aria-label="Why Choose Zion Tech Group">
           <div className="max-w-7xl mx-auto">
@@ -1166,7 +1025,6 @@ const Home = () => {
                 We combine cutting-edge technology with proven business expertise to deliver solutions that drive real results
               </p>
             </motion.div>
-            
             <motion.div 
               className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"
               variants={containerVariants}
@@ -1196,7 +1054,6 @@ const Home = () => {
             </motion.div>
           </div>
         </section>
-
         {/* Enhanced CTA Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 relative" aria-label="Call to Action">
           <div className="max-w-4xl mx-auto text-center">
@@ -1215,7 +1072,6 @@ const Home = () => {
               <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
                 Join hundreds of forward-thinking companies that have already revolutionized their operations with our cutting-edge solutions
               </p>
-              
               <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
                 <Link 
                   to="/contact"
@@ -1233,7 +1089,6 @@ const Home = () => {
                   Request Free Quote
                 </Link>
               </div>
-              
               <p className="text-sm text-gray-400 mt-6">
                 No credit card required • Free consultation • 30-day money-back guarantee
               </p>
@@ -1241,7 +1096,6 @@ const Home = () => {
           </div>
         </div>
       </section>
-
       {/* Enhanced CTA Section */}
       <section className="relative py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto text-center">
@@ -1279,7 +1133,6 @@ const Home = () => {
           </motion.div>
         </div>
       </section>
-
       {/* Enhanced Mobile Experience Notice */}
       {isMobile && (
         <motion.div
@@ -1296,5 +1149,4 @@ const Home = () => {
     </div>
   );
 };
-
 export default Home;

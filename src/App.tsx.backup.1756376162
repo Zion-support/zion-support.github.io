@@ -1,7 +1,6 @@
 import { Suspense, lazy } from 'react';
 import { Routes, Route } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
-
 // Layout Components
 import { AppHeader } from './layout/AppHeader';
 import { EnhancedFooter } from './components/EnhancedFooter';
@@ -13,7 +12,6 @@ import { PerformanceMonitor } from './components/PerformanceMonitor';
 import { ErrorBoundary } from './utils/errorBoundary';
 import { AccessibilityEnhancer } from './components/AccessibilityEnhancer';
 import { MobileExperienceEnhancer } from './components/MobileExperienceEnhancer';
-
 // Lazy load pages - only import existing ones
 const Home = React.lazy(() => import('./pages/Home'));
 const Home2026 = React.lazy(() => import('./pages/Home2026'));
@@ -63,7 +61,6 @@ const SystemStatus = React.lazy(() => import('./pages/SystemStatus'));
 const Sitemap = React.lazy(() => import('./pages/Sitemap'));
 const WebsiteAnalyzer = React.lazy(() => import('./components/WebsiteAnalyzer'));
 const SitemapGenerator = React.lazy(() => import('./components/SitemapGenerator'));
-
 // Additional simple pages
 const Events = React.lazy(() => import('./pages/Events'));
 const Help = React.lazy(() => import('./pages/Help'));
@@ -79,7 +76,6 @@ const MarketplaceTalent = React.lazy(() => import('./pages/marketplace/Talent'))
 const MarketplaceEquipment = React.lazy(() => import('./pages/marketplace/Equipment'));
 const MarketplaceServices = React.lazy(() => import('./pages/marketplace/Services'));
 const LoginPage = React.lazy(() => import('./pages/Login'));
-
 // New 2025 service imports
 const UltimateServicesShowcase2025 = React.lazy(() => import('./pages/UltimateServicesShowcase2025'));
 const UltimateServicesShowcase2026 = React.lazy(() => import('./pages/UltimateServicesShowcase2026'));
@@ -87,22 +83,18 @@ const UltimateServicesShowcase2028 = React.lazy(() => import('./pages/UltimateSe
 const ComprehensivePricing2026 = React.lazy(() => import('./pages/ComprehensivePricing2026'));
 const ComprehensivePricing2028 = React.lazy(() => import('./pages/ComprehensivePricing2028'));
 const UltimateServicesShowcase2028 = React.lazy(() => import('./pages/UltimateServicesShowcase2028'));
-
 // New innovative services showcase and pricing guide
 const InnovativeServicesShowcase2025 = React.lazy(() => import('./pages/InnovativeServicesShowcase2025'));
 const InnovativeServicesShowcase2028 = React.lazy(() => import('./pages/InnovativeServicesShowcase2028'));
 const ComprehensivePricingGuide2027 = React.lazy(() => import('./pages/ComprehensivePricingGuide2027'));
 const ComprehensiveServicesLanding2025 = React.lazy(() => import('./pages/ComprehensiveServicesLanding2025'));
-
 // Sitemap-aligned pages
 const AiSolutions = React.lazy(() => import('./pages/AiSolutions'));
 const SolutionsEnterprise = React.lazy(() => import('./pages/solutions/Enterprise'));
 const SolutionsHealthcare = React.lazy(() => import('./pages/solutions/Healthcare'));
-
 // Enhanced services pages - only import existing ones
 const ComprehensivePricingGuide2027 = React.lazy(() => import('./pages/ComprehensivePricingGuide2027.tsx'));
 const ComprehensiveServicesLanding2025 = React.lazy(() => import('./pages/ComprehensiveServicesLanding2025.jsx'));
-
 // Service pages - only import existing ones
 const CloudDevOps = React.lazy(() => import('./pages/services/CloudDevOps'));
 const ITInfrastructure = React.lazy(() => import('./pages/services/ITInfrastructure'));
@@ -139,13 +131,11 @@ const AIFinancialAnalytics = React.lazy(() => import('./pages/services/AIFinanci
 const AIMarketingAutomation = React.lazy(() => import('./pages/services/AIMarketingAutomation'));
 const AIBusinessIntelligenceDashboard = React.lazy(() => import('./pages/services/AIBusinessIntelligenceDashboard'));
 const NewServicesShowcase2025 = React.lazy(() => import('./pages/NewServicesShowcase2025'));
-
 // Comprehensive improvements components
 const AdvancedAIServicesHub = React.lazy(() => import('./components/AdvancedAIServicesHub'));
 const PerformanceAnalytics = React.lazy(() => import('./components/PerformanceAnalytics'));
 const EnhancedSEOManager = React.lazy(() => import('./components/EnhancedSEOManager'));
 const ComprehensiveImprovements2025 = React.lazy(() => import('./pages/ComprehensiveImprovements2025'));
-
 // New innovative AI services
 const AIAutonomousResearchAssistant = React.lazy(() => import('./pages/services/AIAutonomousResearchAssistant'));
 const QuantumAITradingPlatform = React.lazy(() => import('./pages/services/QuantumAITradingPlatform'));
@@ -159,34 +149,26 @@ const DigitalTransformation = React.lazy(() => import('./pages/services/DigitalT
 const AIContentGenerator = React.lazy(() => import('./pages/services/ai-content-generator'));
 const AICustomerSupport = React.lazy(() => import('./pages/services/ai-customer-support'));
 const Cybersecurity = React.lazy(() => import('./pages/services/cybersecurity'));
-
 // Revolutionary 2029 Services Showcase
 const RevolutionaryServicesShowcase2029 = React.lazy(() => import('./pages/RevolutionaryServicesShowcase2029'));
 const ComprehensivePricingGuide2029 = React.lazy(() => import('./pages/ComprehensivePricingGuide2029'));
-
 // Additional new innovative AI services
 const AILegalDocumentAutomation = React.lazy(() => import('./pages/services/AILegalDocumentAutomation'));
 const AIHealthcareAnalytics = React.lazy(() => import('./pages/services/AIHealthcareAnalytics'));
 const AIFinancialTrading = React.lazy(() => import('./pages/services/AIFinancialTrading'));
 const AIContentCreationSuite = React.lazy(() => import('./pages/services/AIContentCreationSuite'));
-
 // 2028 Innovative Services Showcase
 const InnovativeServicesShowcase2028 = React.lazy(() => import('./pages/InnovativeServicesShowcase2028'));
-
 // Comprehensive services showcase
 const ComprehensiveServicesShowcase2025Page = React.lazy(() => import('./pages/ComprehensiveServicesShowcase2025'));
-
 // Innovative services showcase
 const InnovativeServicesShowcase2025 = React.lazy(() => import('./pages/InnovativeServicesShowcase2025'));
-
 // Additional innovative services
 const AILegalDocumentAnalyzer = React.lazy(() => import('./pages/services/AILegalDocumentAnalyzer'));
 const AIHealthcareDiagnostics = React.lazy(() => import('./pages/services/AIHealthcareDiagnostics'));
-
 // Additional service pages
 const DigitalTwin = React.lazy(() => import('./pages/services/DigitalTwin'));
 const DataAnalytics = React.lazy(() => import('./pages/services/DataAnalytics'));
-
 // 2026 Services pages
 const QuantumComputing = React.lazy(() => import('./pages/services/quantum-computing'));
 const AICybersecurity = React.lazy(() => import('./pages/services/ai-cybersecurity'));
@@ -196,36 +178,28 @@ const AIHRPlatform = React.lazy(() => import('./pages/services/ai-hr-platform'))
 const SustainableTechnology = React.lazy(() => import('./pages/services/sustainable-technology'));
 const AIPredictiveMaintenance = React.lazy(() => import('./pages/services/ai-predictive-maintenance'));
 const QuantumMachineLearning = React.lazy(() => import('./pages/services/quantum-machine-learning'));
-
 // New 2026 service routes
 const UltimateServicesShowcase2026 = React.lazy(() => import('./pages/UltimateServicesShowcase2026'));
 const ComprehensivePricing2026 = React.lazy(() => import('./pages/ComprehensivePricing2026'));
-
 // 2028 Pricing
 const ComprehensivePricing2028 = React.lazy(() => import('./pages/ComprehensivePricing2028'));
-
 // Additional routes
 const API = React.lazy(() => import('./pages/API'));
 const DeveloperPortal = React.lazy(() => import('./pages/DeveloperPortal'));
 const ApiDemo = React.lazy(() => import('./components/ApiDemo'));
-
 // Service pages
 const AIServices = createLazyComponent(() => import('./pages/AIServices'));
 const ITServices = createLazyComponent(() => import('./pages/ITServices'));
 const MicroSaaS = createLazyComponent(() => import('./pages/MicroSaaS'));
-
 // 2029 Revolutionary Services
 const RevolutionaryServices2029 = React.lazy(() => import('./pages/RevolutionaryServices2029'));
-
 // Sitemap-aligned pages
 const AiSolutions = React.lazy(() => import('./pages/AiSolutions'));
 const SolutionsEnterprise = React.lazy(() => import('./pages/solutions/Enterprise'));
 const SolutionsHealthcare = React.lazy(() => import('./pages/solutions/Healthcare'));
-
 // Enhanced services pages - only import existing ones
 const ComprehensivePricingGuide2027 = React.lazy(() => import('./pages/ComprehensivePricingGuide2027'));
 const ComprehensiveServicesLanding2025 = React.lazy(() => import('./pages/ComprehensiveServicesLanding2025'));
-
 // Service pages - only import existing ones
 const CloudDevOps = React.lazy(() => import('./pages/services/CloudDevOps'));
 const ITInfrastructure = React.lazy(() => import('./pages/services/ITInfrastructure'));
@@ -247,14 +221,12 @@ const AffiliateTracking = React.lazy(() => import('./pages/services/AffiliateTra
 const MobileSurvey = React.lazy(() => import('./pages/services/MobileSurvey'));
 const AIAutonomousCodeReviewer = React.lazy(() => import('./pages/services/AIAutonomousCodeReviewer'));
 const ZeroTrustNetworkAccess = React.lazy(() => import('./pages/services/ZeroTrustNetworkAccess'));
-
 // Additional new service imports
 const AIPoweredSEO = React.lazy(() => import('./pages/services/AIPoweredSEO'));
 const InterviewAssessmentAI = React.lazy(() => import('./pages/services/InterviewAssessmentAI'));
 const HelpdeskPlatform = React.lazy(() => import('./pages/services/HelpdeskPlatform'));
 const DSRPortal = React.lazy(() => import('./pages/services/DSRPortal'));
 const SecurityHeadersCSP = React.lazy(() => import('./pages/services/SecurityHeadersCSP'));
-
 // New AI-powered micro SAAS service imports
 const AIProjectManagement = React.lazy(() => import('./pages/services/AIProjectManagement'));
 const AICustomerSupportAutomation = React.lazy(() => import('./pages/services/AICustomerSupportAutomation'));
@@ -267,13 +239,11 @@ const AIFinancialAnalyticsPlatform = React.lazy(() => import('./pages/services/A
 const AICustomerSupportAutomationService = React.lazy(() => import('./pages/services/AICustomerSupportAutomation'));
 const AIProjectManagementPlatform = React.lazy(() => import('./pages/services/AIProjectManagementPlatform'));
 const NewServicesShowcase2025 = React.lazy(() => import('./pages/NewServicesShowcase2025'));
-
 // Advanced AI services imports
 const AdvancedAIServicesHub = React.lazy(() => import('./components/AdvancedAIServicesHub'));
 const PerformanceAnalytics = React.lazy(() => import('./components/PerformanceAnalytics'));
 const EnhancedSEOManager = React.lazy(() => import('./components/EnhancedSEOManager'));
 const ComprehensiveImprovements2025 = React.lazy(() => import('./pages/ComprehensiveImprovements2025'));
-
 // New innovative AI services imports
 const AIAutonomousResearchAssistant = React.lazy(() => import('./pages/services/AIAutonomousResearchAssistant'));
 const AISupplyChainOptimization = React.lazy(() => import('./pages/services/AISupplyChainOptimization'));
@@ -281,19 +251,16 @@ const AIContentMarketingSuite = React.lazy(() => import('./pages/services/AICont
 const AIQuantumHybridPlatform = React.lazy(() => import('./pages/services/AIQuantumHybridPlatform'));
 const AICybersecurityPlatform = React.lazy(() => import('./pages/services/AICybersecurityPlatform'));
 const AIHealthcarePlatform = React.lazy(() => import('./pages/services/AIHealthcarePlatform'));
-
 // Additional new innovative AI services imports
 const AILegalDocumentAutomation = React.lazy(() => import('./pages/services/AILegalDocumentAutomation'));
 const AIHealthcareAnalytics = React.lazy(() => import('./pages/services/AIHealthcareAnalytics'));
 const AIFinancialTrading = React.lazy(() => import('./pages/services/AIFinancialTrading'));
 const AIContentCreationSuite = React.lazy(() => import('./pages/services/AIContentCreationSuite'));
-
 // Additional service imports
 const DigitalTwin = React.lazy(() => import('./pages/services/DigitalTwin'));
 const AIBusinessIntelligence = React.lazy(() => import('./pages/services/AIBusinessIntelligence'));
 const DataAnalytics = React.lazy(() => import('./pages/services/DataAnalytics'));
 const DigitalTransformation = React.lazy(() => import('./pages/services/DigitalTransformation'));
-
 // 2026 Services imports - only import existing files
 const QuantumComputing = React.lazy(() => import('./pages/services/quantum-computing'));
 const AICybersecurity = React.lazy(() => import('./pages/services/ai-cybersecurity'));
@@ -303,17 +270,13 @@ const AIHRPlatform = React.lazy(() => import('./pages/services/ai-hr-platform'))
 const SustainableTechnology = React.lazy(() => import('./pages/services/sustainable-technology'));
 const AIPredictiveMaintenance = React.lazy(() => import('./pages/services/ai-predictive-maintenance'));
 const QuantumMachineLearning = React.lazy(() => import('./pages/services/quantum-machine-learning'));
-
 // Additional route imports
 const API = React.lazy(() => import('./pages/API'));
 const DeveloperPortal = React.lazy(() => import('./pages/DeveloperPortal'));
-
 // Innovative services imports
 const InnovativeServicesShowcase2025 = React.lazy(() => import('./pages/InnovativeServicesShowcase2025'));
 const ComprehensiveServicesShowcase2025Page = React.lazy(() => import('./pages/ComprehensiveServicesShowcase2025'));
-
 // All imports are now handled above - no duplicates needed
-
 // Accessibility page
 const Accessibility = () => (
   <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 flex items-center justify-center">
@@ -327,7 +290,6 @@ const Accessibility = () => (
     </div>
   </div>
 );
-
 function App() {
   return (
     <ErrorBoundary 
@@ -337,17 +299,12 @@ function App() {
     >
       <div className="min-h-screen bg-futuristic">
         <AppHeader />
-        
         <main className="relative">
           <Suspense fallback={<EnhancedLoadingSpinner />}>
             <Routes>
               {/* Core Routes */}
               <Route path="/" element={<Home />} />
-<<<<<<< HEAD
-              <Route path="/home2026" element={<Home2026 />} />
-=======
               <Route path="/home2026" element={<Home />} />
->>>>>>> origin/cursor/website-audit-and-enhancement-e48b
               <Route path="/about" element={<About />} />
               <Route path="/contact" element={<Contact />} />
               <Route path="/blog" element={<Blog />} />
@@ -374,7 +331,6 @@ function App() {
               <Route path="/sitemap" element={<Sitemap />} />
               <Route path="/website-analyzer" element={<WebsiteAnalyzer />} />
               <Route path="/sitemap-generator" element={<SitemapGenerator />} />
-              
               {/* Additional Routes */}
               <Route path="/events" element={<Events />} />
               <Route path="/help" element={<Help />} />
@@ -399,7 +355,6 @@ function App() {
               <Route path="/it-services" element={<ITServices />} />
               <Route path="/micro-saas" element={<MicroSaaS />} />
               <Route path="/comprehensive-services" element={<ComprehensiveServices />} />
-              
               {/* New Innovative Services Showcase */}
               <Route path="/innovative-services-2025" element={<InnovativeServicesShowcase2025 />} />
               <Route path="/innovative-services-showcase-2025" element={<InnovativeServicesShowcase2025 />} />
@@ -407,7 +362,6 @@ function App() {
               <Route path="/services-showcase-2025" element={<ComprehensiveServicesShowcase2025 />} />
               <Route path="/comprehensive-services-2025" element={<ComprehensiveServicesShowcase2025 />} />
               <Route path="/innovative-services-2025" element={<InnovativeServicesShowcase2025 />} />
-              
               {/* Additional Routes */}
               <Route path="/dashboard" element={<Dashboard />} />
               <Route path="/login" element={<Login />} />
@@ -417,12 +371,10 @@ function App() {
               <Route path="/news" element={<News />} />
               <Route path="/case-studies" element={<CaseStudies />} />
               <Route path="/help" element={<HelpCenter />} />
-              
               {/* New sitemap routes */}
               <Route path="/ai-solutions" element={<AiSolutions />} />
               <Route path="/solutions/enterprise" element={<SolutionsEnterprise />} />
               <Route path="/solutions/healthcare" element={<SolutionsHealthcare />} />
-              
               {/* Service Routes - only for existing pages */}
               <Route path="/services/cloud-devops" element={<CloudDevOps />} />
               <Route path="/services/it-infrastructure" element={<ITInfrastructure />} />
@@ -459,7 +411,6 @@ function App() {
               <Route path="/services/ai-business-intelligence-dashboard" element={<AIBusinessIntelligenceDashboard />} />
               <Route path="/services/ai-financial-analytics" element={<AIFinancialAnalytics />} />
               <Route path="/new-services-showcase-2025" element={<NewServicesShowcase2025 />} />
-              
               {/* New innovative AI services */}
               <Route path="/services/ai-autonomous-research-assistant" element={<AIAutonomousResearchAssistant />} />
               <Route path="/services/quantum-ai-trading-platform" element={<QuantumAITradingPlatform />} />
@@ -468,11 +419,9 @@ function App() {
               <Route path="/services/ai-quantum-hybrid-platform" element={<AIQuantumHybridPlatform />} />
               <Route path="/services/ai-cybersecurity-platform" element={<AICybersecurityPlatform />} />
               <Route path="/services/ai-healthcare-platform" element={<AIHealthcarePlatform />} />
-              
               {/* Additional innovative services */}
               <Route path="/services/ai-legal-document-analyzer" element={<AILegalDocumentAnalyzer />} />
               <Route path="/services/ai-healthcare-diagnostics" element={<AIHealthcareDiagnostics />} />
-              
               {/* New 2025 service routes */}
               <Route path="/ultimate-services-2025" element={<UltimateServicesShowcase2025 />} />
               <Route path="/ultimate-services-showcase-2025" element={<UltimateServicesShowcase2025 />} />
@@ -480,46 +429,38 @@ function App() {
               <Route path="/innovative-services-showcase-2025" element={<InnovativeServicesShowcase2025 />} />
               <Route path="/comprehensive-services-showcase-2025" element={<ComprehensiveServicesShowcase2025Page />} />
               <Route path="/services-showcase-2025" element={<ComprehensiveServicesShowcase2025Page />} />
-              
               {/* 2028 Innovative Services Showcase */}
               <Route path="/innovative-services-2028" element={<InnovativeServicesShowcase2028 />} />
               <Route path="/services-showcase-2028" element={<InnovativeServicesShowcase2028 />} />
-              
               {/* New 2026 service routes */}
               <Route path="/ultimate-services-showcase-2026" element={<UltimateServicesShowcase2026 />} />
               <Route path="/ultimate-services-2026" element={<UltimateServicesShowcase2026 />} />
               <Route path="/comprehensive-pricing-2026" element={<ComprehensivePricing2026 />} />
               <Route path="/pricing-2026" element={<ComprehensivePricing2026 />} />
-              
               {/* New 2028 service routes */}
               <Route path="/ultimate-services-showcase-2028" element={<UltimateServicesShowcase2028 />} />
               <Route path="/ultimate-services-2028" element={<UltimateServicesShowcase2028 />} />
               <Route path="/services-2028" element={<UltimateServicesShowcase2028 />} />
-              
               {/* 2028 Pricing */}
               <Route path="/comprehensive-pricing-2028" element={<ComprehensivePricing2028 />} />
               <Route path="/pricing-2028" element={<ComprehensivePricing2028 />} />
               <Route path="/pricing-guide-2028" element={<ComprehensivePricing2028 />} />
-              
               {/* 2029 Innovative Services */}
               <Route path="/innovative-services-2029" element={<InnovativeServicesShowcase2029 />} />
               <Route path="/services-2029" element={<InnovativeServicesShowcase2029 />} />
               <Route path="/comprehensive-pricing-2029" element={<ComprehensivePricing2029 />} />
               <Route path="/pricing-2029" element={<ComprehensivePricing2029 />} />
-              
               {/* Revolutionary 2029 Services Showcase */}
               <Route path="/revolutionary-services-2029" element={<RevolutionaryServicesShowcase2029 />} />
               <Route path="/revolutionary-2029" element={<RevolutionaryServicesShowcase2029 />} />
               <Route path="/comprehensive-pricing-2029" element={<ComprehensivePricingGuide2029 />} />
               <Route path="/pricing-2029" element={<ComprehensivePricingGuide2029 />} />
-              
               {/* Additional service routes */}
               <Route path="/services/digital-twin" element={<DigitalTwin />} />
               <Route path="/services/ai-business-intelligence" element={<AIBusinessIntelligence />} />
               <Route path="/services/data-analytics" element={<DataAnalytics />} />
               <Route path="/services/digital-transformation" element={<DigitalTransformation />} />
               <Route path="/services/ai" element={<AiSolutions />} />
-              
               {/* 2026 Services routes */}
               <Route path="/services/quantum-computing" element={<QuantumComputing />} />
               <Route path="/services/ai-cybersecurity" element={<AICybersecurity />} />
@@ -529,14 +470,11 @@ function App() {
               <Route path="/services/sustainable-technology" element={<SustainableTechnology />} />
               <Route path="/services/ai-predictive-maintenance" element={<AIPredictiveMaintenance />} />
               <Route path="/services/quantum-machine-learning" element={<QuantumMachineLearning />} />
-              
               {/* Additional routes */}
               <Route path="/api" element={<API />} />
               <Route path="/developers" element={<DeveloperPortal />} />
-              
               {/* Hybrid App Demo */}
               <Route path="/hybrid-demo" element={<ApiDemo />} />
-              
               {/* Catch-all route */}
               <Route path="*" element={<Home />} />
             </Routes>

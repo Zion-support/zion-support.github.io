@@ -1,33 +1,6 @@
 import React, { Suspense, useState, useEffect, useCallback, useMemo } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Link } from 'react-router-dom';
-<<<<<<< HEAD
-import { CheckCircle } from 'lucide-react';
-import { CategoriesSection } from "@/components/CategoriesSection";
-import { BenefitsSection } from "@/components/BenefitsSection";
-import { HowItWorksSection } from "@/components/HowItWorksSection";
-import NewsletterSection from "@/components/NewsletterSection";
-import { FeaturedListingsSection } from "@/components/FeaturedListingsSection";
-import { SEO } from "@/components/SEO";
-import { HeroSection } from "@/components/HeroSection";
-import { QuickAccess } from "@/components/home/QuickAccess";
-import { FeatureCTAs } from "@/components/home/FeatureCTAs";
-import { FeatureHighlights } from "@/components/home/FeatureHighlights";
-import { ITServiceRequestHero } from "@/components/home/ITServiceRequestHero";
-import { FloatingCTA } from "@/components/FloatingCTA";
-import { PricingSection } from "@/components/PricingSection";
-import { TechSolutionsSection } from "@/components/TechSolutionsSection";
-import { CaseStudiesSection } from "@/components/CaseStudiesSection";
-import { TeamExpertiseSection } from "@/components/TeamExpertiseSection";
-import { GlobalPresenceSection } from "@/components/GlobalPresenceSection";
-import { InnovationResearchSection } from "@/components/InnovationResearchSection";
-import { ClientSuccessStoriesSection } from "@/components/ClientSuccessStoriesSection";
-import { TechnologyStackSection } from "@/components/TechnologyStackSection";
-import { SecurityComplianceSection } from "@/components/SecurityComplianceSection";
-import { AIServicesShowcase } from "@/components/AIServicesShowcase";
-import { InteractiveTestimonials } from "@/components/InteractiveTestimonials";
-import { ServicesShowcase } from "@/components/ServicesShowcase";
-=======
 import { 
   Users, 
   TrendingUp, 
@@ -67,7 +40,6 @@ import {
 } from 'lucide-react';
 import UltimateServicesShowcase2025 from '../components/UltimateServicesShowcase2025';
 import { HomePageSEO } from '../components/SEO';
-
 // Enhanced loading component with better UX
 const EnhancedLoadingSpinner = () => (
   <div className="flex items-center justify-center min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
@@ -83,13 +55,11 @@ const EnhancedLoadingSpinner = () => (
     </div>
   </div>
 );
-
 // Futuristic animated background component
 const FuturisticBackground = () => (
   <div className="fixed inset-0 overflow-hidden pointer-events-none">
     {/* Animated grid */}
     <div className="absolute inset-0 bg-[linear-gradient(rgba(6,182,212,0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(6,182,212,0.1)_1px,transparent_1px)] bg-[size:50px_50px] animate-pulse"></div>
-    
     {/* Floating particles */}
     <div className="absolute inset-0">
       {[...Array(20)].map((_, i) => (
@@ -113,29 +83,20 @@ const FuturisticBackground = () => (
         />
       ))}
     </div>
-    
     {/* Gradient orbs */}
     <div className="absolute top-20 left-20 w-72 h-72 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 rounded-full blur-3xl animate-pulse"></div>
     <div className="absolute bottom-20 right-20 w-96 h-96 bg-gradient-to-r from-purple-500/20 to-pink-500/20 rounded-full blur-3xl animate-pulse delay-1000"></div>
   </div>
 );
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-4acd
-
 export default function Home() {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [isVisible, setIsVisible] = useState(false);
   const [isLoading, setIsLoading] = useState(true);
   const [autoplayEnabled, setAutoplayEnabled] = useState(true);
-
-<<<<<<< HEAD
-  // Memoized hero slides for better performance
-  const heroSlides = useMemo(() => [
-=======
   return (
     <>
       <HomePageSEO />
       <div className="min-h-screen">
-
   useEffect(() => {
     setIsVisible(true);
     const interval = setInterval(() => {
@@ -143,9 +104,7 @@ export default function Home() {
     }, 5000);
     return () => clearInterval(interval);
   }, []);
-
   const heroSlides = [
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-4acd
     {
       title: "AI-Powered Business Solutions",
       subtitle: "Transform your business with cutting-edge artificial intelligence",
@@ -180,7 +139,6 @@ export default function Home() {
       color: "from-green-500 to-emerald-500"
     }
   ], []);
-
   // Memoized stats for better performance
   const stats = useMemo(() => [
     { icon: Users, value: "500+", label: "Happy Clients", description: "Trusted by businesses worldwide" },
@@ -188,7 +146,6 @@ export default function Home() {
     { icon: Award, value: "10+", label: "Years Experience", description: "Deep industry expertise" },
     { icon: Globe, value: "25+", label: "Countries Served", description: "Global reach and support" }
   ], []);
-
   // Memoized featured services for better performance
   const featuredServices = useMemo(() => [
     {
@@ -222,7 +179,6 @@ export default function Home() {
       price: "From $199/month"
     }
   ], []);
-
   // Memoized technologies for better performance
   const technologies = useMemo(() => [
     { name: "AI/ML", icon: Brain, description: "Advanced machine learning algorithms" },
@@ -232,7 +188,6 @@ export default function Home() {
     { name: "Analytics", icon: BarChart3, description: "Real-time data insights" },
     { name: "Automation", icon: Workflow, description: "Intelligent process automation" }
   ], []);
-
   // Memoized features for better performance
   const features = useMemo(() => [
     {
@@ -256,7 +211,6 @@ export default function Home() {
       description: "Scale your operations worldwide with our distributed infrastructure"
     }
   ], []);
-
   // Memoized animation variants for better performance
   const containerVariants = useMemo(() => ({
     hidden: { opacity: 0 },
@@ -267,12 +221,10 @@ export default function Home() {
       }
     }
   }), []);
-
   const itemVariants = useMemo(() => ({
     hidden: { opacity: 0, y: 20 },
     visible: { opacity: 1, y: 0 }
   }), []);
-
   // Enhanced slide navigation with accessibility
   const goToSlide = useCallback((index: number) => {
     setCurrentSlide(index);
@@ -280,20 +232,16 @@ export default function Home() {
     // Re-enable autoplay after user interaction
     setTimeout(() => setAutoplayEnabled(true), 5000);
   }, []);
-
   const nextSlide = useCallback(() => {
     setCurrentSlide((prev) => (prev + 1) % heroSlides.length);
   }, [heroSlides.length]);
-
   const prevSlide = useCallback(() => {
     setCurrentSlide((prev) => (prev - 1 + heroSlides.length) % heroSlides.length);
   }, [heroSlides.length]);
-
   // Initialize component
   useEffect(() => {
     setIsVisible(true);
     setIsLoading(false);
-    
     // Enhanced autoplay with pause on hover
     let interval: NodeJS.Timeout;
     if (autoplayEnabled) {
@@ -301,12 +249,10 @@ export default function Home() {
         setCurrentSlide((prev) => (prev + 1) % heroSlides.length);
       }, 5000);
     }
-
     return () => {
       if (interval) clearInterval(interval);
     };
   }, [autoplayEnabled, heroSlides.length]);
-
   // Keyboard navigation for slides
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
@@ -316,94 +262,26 @@ export default function Home() {
         nextSlide();
       }
     };
-
     document.addEventListener('keydown', handleKeyDown);
     return () => document.removeEventListener('keydown', handleKeyDown);
   }, [prevSlide, nextSlide]);
-
   // Skip to main content functionality for accessibility
   useEffect(() => {
     const skipLink = document.createElement('a');
     skipLink.href = '#main-content';
     skipLink.textContent = 'Skip to main content';
     skipLink.className = 'skip-link sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-cyan-500 text-white px-4 py-2 rounded z-50';
-    
     document.body.insertBefore(skipLink, document.body.firstChild);
-    
     return () => {
       if (document.body.contains(skipLink)) {
         document.body.removeChild(skipLink);
       }
     };
   }, []);
-
   if (isLoading) {
     return <EnhancedLoadingSpinner />;
   }
-
   return (
-<<<<<<< HEAD
-    <div className="min-h-screen bg-background relative overflow-hidden">
-      <SEO
-        title="Zion Tech Group - Leading AI & Technology Solutions"
-        description="Transform your business with Zion's cutting-edge AI solutions, cloud services, cybersecurity, and digital transformation expertise. Join the future of technology."
-        keywords="AI solutions, cloud services, cybersecurity, digital transformation, technology consulting, Zion Tech Group"
-        canonical="https://ziontechgroup.com/"
-      />
-
-      {/* Performance Monitor */}
-      <PerformanceMonitor />
-
-      {/* Enhanced Animated Background */}
-      <div className="absolute inset-0 bg-futuristic">
-        <div className="absolute inset-0 bg-[url('/images/grid-pattern.svg')] bg-center opacity-10"></div>
-        <div className="absolute top-20 left-10 animate-float">
-          <div className="w-4 h-4 bg-cyan-400 rounded-full opacity-60 neon-glow"></div>
-        </div>
-        <div className="absolute top-40 right-20 animate-float-delayed">
-          <div className="w-3 h-3 bg-blue-400 rounded-full opacity-60 neon-glow"></div>
-        </div>
-        <div className="absolute bottom-40 left-20 animate-float">
-          <div className="w-2 h-2 bg-purple-400 rounded-full opacity-60 neon-glow"></div>
-        </div>
-      </div>
-
-      {/* IT Service Request Hero - Enhanced */}
-      <ITServiceRequestHero />
-
-      {/* Main Hero Section */}
-      <HeroSection />
-
-      {/* Enhanced Service Categories Overview */}
-      <motion.section
-        className="py-24 bg-gradient-to-b from-white/5 to-white/10 backdrop-blur-sm relative"
-        variants={containerVariants}
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true, margin: "-100px" }}
-      >
-        {/* Background decoration */}
-        <div className="absolute inset-0 bg-gradient-to-r from-zion-cyan/10 via-transparent to-zion-purple/10" />
-
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <motion.div className="text-center mb-20" variants={itemVariants}>
-            <h2 className="text-5xl md:text-6xl font-bold text-white mb-8">
-              Our <span className="bg-gradient-to-r from-zion-cyan via-zion-blue to-zion-purple bg-clip-text text-transparent">Service Categories</span>
-            </h2>
-            <p className="text-xl md:text-2xl text-zion-slate-light max-w-4xl mx-auto leading-relaxed">
-              Explore our comprehensive range of technology solutions designed to transform your business and drive innovation
-            </p>
-          </motion.div>
-
-          <motion.div
-            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-10"
-            variants={containerVariants}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, margin: "-50px" }}
-          >
-            {serviceCategories.map((category, index) => (
-=======
     <>
       <HomePageSEO />
       <FuturisticBackground />
@@ -412,7 +290,6 @@ export default function Home() {
         <section className="relative pt-32 pb-20 px-4 sm:px-6 lg:px-8 min-h-screen flex items-center">
           <div className="max-w-7xl mx-auto w-full">
             <AnimatePresence mode="wait">
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-4acd
               <motion.div
                 key={currentSlide}
                 initial={{ opacity: 0, y: 50 }}
@@ -435,7 +312,6 @@ export default function Home() {
                       Next-Generation Technology Solutions
                     </span>
                   </motion.div>
-                  
                   <motion.h1 
                     className="text-5xl md:text-7xl lg:text-8xl font-bold mb-8 leading-tight futuristic-heading neon-text-cyan"
                     initial={{ opacity: 0, y: 30 }}
@@ -446,7 +322,6 @@ export default function Home() {
                       {heroSlides[currentSlide].title}
                     </span>
                   </motion.h1>
-                  
                   <motion.p 
                     className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto mb-8 leading-relaxed"
                     initial={{ opacity: 0, y: 30 }}
@@ -455,7 +330,6 @@ export default function Home() {
                   >
                     {heroSlides[currentSlide].description}
                   </motion.p>
-                  
                   <motion.div 
                     className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12"
                     initial={{ opacity: 0, y: 30 }}
@@ -474,7 +348,6 @@ export default function Home() {
                       Watch Demo
                     </button>
                   </motion.div>
-                  
                   {/* Feature highlights */}
                   <motion.div 
                     className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-2xl mx-auto"
@@ -497,7 +370,6 @@ export default function Home() {
                 </div>
               </motion.div>
             </AnimatePresence>
-            
             {/* Enhanced slide navigation with accessibility */}
             <div className="flex justify-center items-center space-x-4 mt-8">
               <button
@@ -507,7 +379,6 @@ export default function Home() {
               >
                 <ChevronLeft className="w-6 h-6" />
               </button>
-              
               <div className="flex space-x-2" role="tablist" aria-label="Slide navigation">
                 {heroSlides.map((_, index) => (
                   <button
@@ -524,7 +395,6 @@ export default function Home() {
                   />
                 ))}
               </div>
-              
               <button
                 onClick={nextSlide}
                 className="p-2 text-cyan-400 hover:text-cyan-300 transition-colors focus:outline-none focus:ring-2 focus:ring-cyan-400/50 rounded-lg"
@@ -552,7 +422,6 @@ export default function Home() {
                 Discover our most innovative and powerful solutions that are transforming businesses worldwide
               </p>
             </motion.div>
-
             <motion.div
               className="grid grid-cols-1 lg:grid-cols-2 gap-12"
               variants={containerVariants}
@@ -576,7 +445,6 @@ export default function Home() {
                     <p className="text-gray-300 mb-6 leading-relaxed">
                       {service.description}
                     </p>
-                    
                     {/* Rating and price */}
                     <div className="flex items-center justify-between mb-6">
                       <div className="flex items-center space-x-1" aria-label={`Rating: ${service.rating} out of 5 stars`}>
@@ -591,7 +459,6 @@ export default function Home() {
                       </div>
                       <div className="text-cyan-400 font-semibold text-sm">{service.price}</div>
                     </div>
-                    
                     {/* Key highlights */}
                     <div className="mb-6">
                       <h4 className="text-sm font-semibold text-cyan-400 mb-3">Key Highlights:</h4>
@@ -604,7 +471,6 @@ export default function Home() {
                         ))}
                       </ul>
                     </div>
-                    
                     <Link
                       to={service.path}
                       className="w-full bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-6 py-3 rounded-xl font-semibold hover:from-cyan-400 hover:to-blue-400 transition-all duration-300 text-center block group-hover:shadow-lg group-hover:shadow-cyan-500/25 focus:outline-none focus:ring-4 focus:ring-cyan-400/50"
@@ -627,7 +493,6 @@ export default function Home() {
                   </Link>
                 </div>
               </motion.div>
-
               {/* Cloud & DevOps */}
               <motion.div variants={itemVariants} className="group">
                 <div className="card-futuristic hover-lift">
@@ -657,7 +522,6 @@ export default function Home() {
             </motion.div>
           </div>
         </section>
-
         {/* Enhanced Technology Stack Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 relative" aria-label="Technology Stack">
           <div className="max-w-7xl mx-auto">
@@ -677,7 +541,6 @@ export default function Home() {
                 We leverage the latest technologies to deliver innovative solutions that give your business a competitive edge
               </p>
             </motion.div>
-            
             <motion.div 
               className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8"
               variants={containerVariants}
@@ -703,13 +566,10 @@ export default function Home() {
             </motion.div>
           </div>
         </section>
-
         {/* Ultimate Services Showcase */}
         <UltimateServicesShowcase2025 />
-        
         {/* Testimonials Section */}
         <TestimonialsSection />
-        
         {/* Enhanced Features Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5 relative" aria-label="Why Choose Zion Tech Group">
           <div className="max-w-7xl mx-auto">
@@ -729,7 +589,6 @@ export default function Home() {
                 We combine cutting-edge technology with proven business expertise to deliver solutions that drive real results
               </p>
             </motion.div>
-            
             <motion.div 
               className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"
               variants={containerVariants}
@@ -759,7 +618,6 @@ export default function Home() {
             </motion.div>
           </div>
         </section>
-
         {/* Enhanced CTA Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 relative" aria-label="Call to Action">
           <div className="max-w-4xl mx-auto text-center">
@@ -778,7 +636,6 @@ export default function Home() {
               <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
                 Join hundreds of forward-thinking companies that have already revolutionized their operations with our cutting-edge solutions
               </p>
-              
               <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
                 <Link 
                   to="/contact"
@@ -796,75 +653,15 @@ export default function Home() {
                   Request Free Quote
                 </Link>
               </div>
-              
               <p className="text-sm text-gray-400 mt-6">
                 No credit card required • Free consultation • 30-day money-back guarantee
               </p>
             </motion.div>
           </div>
-<<<<<<< HEAD
-        </div>
-      </section>
-
-      {/* Enhanced CTA Section */}
-      <section className="relative py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-          >
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-              Ready to Transform Your Business?
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-              Join the future of technology with Zion Tech Group. Our innovative solutions are designed to drive growth, 
-              efficiency, and competitive advantage for your business.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-              <Link
-                to="/contact"
-                className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 text-white font-bold rounded-xl transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-cyan-500/25 flex items-center space-x-2 focus:outline-none focus:ring-4 focus:ring-cyan-500/50"
-                aria-label="Get started with Zion Tech Group today"
-              >
-                <span>Get Started Today</span>
-                <ArrowRight className="w-5 h-5" />
-              </Link>
-              <Link
-                to="/services"
-                className="px-8 py-4 bg-white/10 backdrop-blur-sm border border-cyan-400/30 hover:bg-white/20 text-white font-bold rounded-xl transition-all duration-300 hover:border-cyan-400/50 flex items-center space-x-2 focus:outline-none focus:ring-4 focus:ring-cyan-400/50"
-                aria-label="Explore our comprehensive service offerings"
-              >
-                <span>Explore Services</span>
-                <ArrowRight className="w-5 h-5" />
-              </Link>
-            </div>
-          </motion.div>
-        </div>
-      </section>
-
-      {/* Enhanced Mobile Experience Notice */}
-      {isMobile && (
-        <motion.div
-          initial={{ opacity: 0, y: 50 }}
-          animate={{ opacity: 1, y: 0 }}
-          className="fixed bottom-4 left-4 bg-cyan-500 text-white px-4 py-2 rounded-lg shadow-lg z-40"
-        >
-          <div className="flex items-center space-x-2">
-            <MobileIcon className="w-4 h-4" />
-            <span className="text-sm">Mobile Optimized</span>
-          </div>
-        </motion.div>
-      )}
-    </div>
-=======
         </section>
       </div>
       </div>
     </>
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-4acd
   );
 };
-
 export default Home;

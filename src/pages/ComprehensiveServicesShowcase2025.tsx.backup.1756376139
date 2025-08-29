@@ -1,92 +1,12 @@
 import React from 'react';
-<<<<<<< HEAD
-import { motion } from 'framer-motion';
-import { 
-  Search, 
-  ArrowRight, 
-  DollarSign, 
-  ExternalLink, 
-  Workflow, 
-  MessageSquare, 
-  Globe, 
-  TrendingUp, 
-  Sparkles,
-  Shield,
-  Bot,
-  BarChart3,
-  Users,
-  Cloud,
-  Server,
-  Database,
-  Network,
-  Rocket,
-  Mail,
-  Calendar,
-  FileText,
-  CreditCard,
-  Package,
-  Zap,
-  Target,
-  Award,
-  Phone,
-  Mail as MailIcon
-} from 'lucide-react';
-import { SEO } from '@/components/SEO';
-import { REAL_INNOVATIVE_SERVICES_2025 } from '../data/realInnovativeServices2025';
-import { COMPREHENSIVE_MICRO_SAAS_SERVICES_2025 } from '../data/comprehensiveMicroSaasServices2025';
-
-export default function ComprehensiveServicesShowcase2025() {
-  const [searchTerm, setSearchTerm] = React.useState('');
-  const [selectedCategory, setSelectedCategory] = React.useState('all');
-
-  const allServices = [...REAL_INNOVATIVE_SERVICES_2025, ...COMPREHENSIVE_MICRO_SAAS_SERVICES_2025];
-  
-  const categories = [
-    { id: 'all', name: 'All Services', icon: Sparkles },
-    { id: 'AI & Analytics', name: 'AI & Analytics', icon: Bot },
-    { id: 'AI & Security', name: 'AI & Security', icon: Shield },
-    { id: 'AI & Marketing', name: 'AI & Marketing', icon: TrendingUp },
-    { id: 'AI & Sales', name: 'AI & Sales', icon: Users },
-    { id: 'AI & Support', name: 'AI & Support', icon: MessageSquare },
-    { id: 'IT & Infrastructure', name: 'IT & Infrastructure', icon: Server },
-    { id: 'IT & Support', name: 'IT & Support', icon: Workflow },
-    { id: 'IT & Data', name: 'IT & Data', icon: Database },
-    { id: 'IT & Networking', name: 'IT & Networking', icon: Network },
-    { id: 'IT & Consulting', name: 'IT & Consulting', icon: Rocket },
-    { id: 'Micro SaaS & Marketing', name: 'Micro SaaS & Marketing', icon: Globe },
-    { id: 'Micro SaaS & Analytics', name: 'Micro SaaS & Analytics', icon: BarChart3 },
-    { id: 'Micro SaaS & Productivity', name: 'Micro SaaS & Productivity', icon: Zap },
-    { id: 'Micro SaaS & Sales', name: 'Micro SaaS & Sales', icon: Target },
-    { id: 'Micro SaaS & Finance', name: 'Micro SaaS & Finance', icon: CreditCard },
-    { id: 'Micro SaaS & Operations', name: 'Micro SaaS & Operations', icon: Package }
-  ];
-
-  const filteredServices = allServices.filter(service => {
-    const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                         service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                         service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()));
-    
-    const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory;
-    
-    return matchesSearch && matchesCategory;
-  });
-
-  const getCategoryIcon = (category: string) => {
-    const categoryData = categories.find(cat => cat.id === category);
-    return categoryData ? categoryData.icon : Sparkles;
-  };
-=======
 import ComprehensiveServicesShowcase2025 from '../components/ComprehensiveServicesShowcase2025';
 import SEO from '../components/SEO';
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-4b87
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO 
         title="Comprehensive Services Showcase 2025 - Zion Tech Group"
         description="Discover our comprehensive range of AI-powered services, IT solutions, and micro SAAS tools designed to transform your business operations and drive growth."
       />
-      
       {/* Hero Section */}
       <section className="relative py-20 px-6 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-zion-blue/20 to-zion-cyan/20"></div>
@@ -126,7 +46,6 @@ import SEO from '../components/SEO';
           </motion.div>
         </div>
       </section>
-
       {/* Search and Filter Section */}
       <section className="py-12 px-6">
         <div className="max-w-7xl mx-auto">
@@ -145,7 +64,6 @@ import SEO from '../components/SEO';
                   />
                 </div>
               </div>
-              
               {/* Category Filter */}
               <div className="lg:w-80">
                 <select
@@ -164,7 +82,6 @@ import SEO from '../components/SEO';
           </div>
         </div>
       </section>
-
       {/* Services Grid */}
       <section className="py-16 px-6">
         <div className="max-w-7xl mx-auto">
@@ -200,7 +117,6 @@ import SEO from '../components/SEO';
                       </div>
                     </div>
                   </div>
-
                   {/* Service Title & Description */}
                   <h3 className="text-xl font-semibold text-white mb-3 line-clamp-2">
                     {service.title}
@@ -208,7 +124,6 @@ import SEO from '../components/SEO';
                   <p className="text-zion-slate-light mb-4 line-clamp-3">
                     {service.description}
                   </p>
-
                   {/* Key Features */}
                   <div className="mb-4">
                     <h4 className="text-sm font-semibold text-white mb-2">Key Features:</h4>
@@ -226,7 +141,6 @@ import SEO from '../components/SEO';
                       )}
                     </div>
                   </div>
-
                   {/* Benefits */}
                   <div className="mb-4">
                     <h4 className="text-sm font-semibold text-white mb-2">Benefits:</h4>
@@ -239,7 +153,6 @@ import SEO from '../components/SEO';
                       ))}
                     </div>
                   </div>
-
                   {/* ROI & Market Info */}
                   <div className="grid grid-cols-2 gap-3 mb-4 text-sm">
                     <div className="bg-white/5 rounded-lg p-2">
@@ -251,7 +164,6 @@ import SEO from '../components/SEO';
                       <div className="text-white font-semibold">{service.marketPrice}</div>
                     </div>
                   </div>
-
                   {/* Action Buttons */}
                   <div className="flex flex-col space-y-2">
                     <a
@@ -267,7 +179,6 @@ import SEO from '../components/SEO';
                       Call Now
                     </a>
                   </div>
-
                   {/* Contact Info */}
                   <div className="mt-4 pt-4 border-t border-white/10 text-xs text-zion-slate-light">
                     <div className="flex items-center justify-between">
@@ -279,7 +190,6 @@ import SEO from '../components/SEO';
               );
             })}
           </div>
-
           {filteredServices.length === 0 && (
             <div className="text-center py-16">
               <div className="text-zion-slate-light text-lg mb-4">
@@ -298,7 +208,6 @@ import SEO from '../components/SEO';
           )}
         </div>
       </section>
-
       {/* Contact CTA Section */}
       <section className="py-20 px-6">
         <div className="max-w-4xl mx-auto text-center">

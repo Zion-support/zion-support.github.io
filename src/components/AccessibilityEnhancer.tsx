@@ -1,167 +1,230 @@
-import React, { useEffect, useState, useCallback } from 'react';
+import React, { useEffect, useState, useCallback, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+import { 
+  Eye, 
+  EyeOff, 
+  Volume2, 
+  VolumeX, 
+  Type, 
+  Contrast, 
+  MousePointer, 
+  Keyboard,
+  ZoomIn,
+  ZoomOut,
+  RotateCcw,
+  Settings,
+  X,
+  CheckCircle,
+  AlertTriangle,
+  Info,
+  Sun,
+  Moon,
+  Monitor,
+  Accessibility,
+  Braille,
+  Headphones
+} from 'lucide-react';
 
 interface AccessibilitySettings {
   highContrast: boolean;
   largeText: boolean;
   reducedMotion: boolean;
-  focusIndicator: boolean;
   screenReader: boolean;
+  keyboardNavigation: boolean;
+  focusIndicator: boolean;
+  colorBlindMode: boolean;
+  dyslexiaFriendly: boolean;
+  zoomLevel: number;
+  theme: 'light' | 'dark' | 'auto';
 }
 
-interface AccessibilityEnhancerProps {
-  children: React.ReactNode;
+interface AccessibilityFeatures {
+  skipLinks: boolean;
+  landmarks: boolean;
+  altText: boolean;
+  ariaLabels: boolean;
+  semanticHTML: boolean;
 }
 
-export const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children }) => {
-  const [settings, setSettings] = useState<AccessibilitySettings>({
-    highContrast: false,
-    largeText: false,
-    reducedMotion: false,
-    focusIndicator: true,
-    screenReader: false
-  });
+const DEFAULT_SETTINGS: AccessibilitySettings = {
+  highContrast: false,
+  largeText: false,
+  reducedMotion: false,
+  screenReader: false,
+  keyboardNavigation: false,
+  focusIndicator: true,
+  colorBlindMode: false,
+  dyslexiaFriendly: false,
+  zoomLevel: 100,
+  theme: 'auto'
+};
 
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [announcement, setAnnouncement] = useState<string>('');
+const DEFAULT_FEATURES: AccessibilityFeatures = {
+  skipLinks: true,
+  landmarks: true,
+  altText: true,
+  ariaLabels: true,
+  semanticHTML: true
+};
 
-  // Initialize accessibility features
+export const AccessibilityEnhancer: React.FC = () => {
+  const [isVisible, setIsVisible] = useState(false);
+  const [isExpanded, setIsExpanded] = useState(false);
+  const [settings, setSettings] = useState<AccessibilitySettings>(DEFAULT_SETTINGS);
+  const [features, setFeatures] = useState<AccessibilityFeatures>(DEFAULT_FEATURES);
+  const [currentFocus, setCurrentFocus] = useState<HTMLElement | null>(null);
+  const [accessibilityScore, setAccessibilityScore] = useState(85);
+  const [issues, setIssues] = useState<string[]>([]);
+  
+  const settingsRef = useRef<HTMLDivElement>(null);
+  const focusableElementsRef = useRef<HTMLElement[]>([]);
+
+  // Load settings from localStorage
   useEffect(() => {
-    // Check user preferences
-    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-    const prefersHighContrast = window.matchMedia('(prefers-contrast: high)').matches;
-    
-    setSettings(prev => ({
-      ...prev,
-      reducedMotion: prefersReducedMotion,
-      highContrast: prefersHighContrast
-    }));
-
-    // Apply initial settings
-    applyAccessibilitySettings({
-      ...settings,
-      reducedMotion: prefersReducedMotion,
-      highContrast: prefersHighContrast
-    });
+    const savedSettings = localStorage.getItem('accessibility-settings');
+    if (savedSettings) {
+      try {
+        const parsed = JSON.parse(savedSettings);
+        setSettings(prev => ({ ...prev, ...parsed }));
+      } catch (error) {
+        console.warn('Failed to load accessibility settings:', error);
+      }
+    }
   }, []);
 
-  // Apply accessibility settings to the document
-  const applyAccessibilitySettings = useCallback((newSettings: AccessibilitySettings) => {
+  // Save settings to localStorage
+  useEffect(() => {
+    localStorage.setItem('accessibility-settings', JSON.stringify(settings));
+  }, [settings]);
+
+  // Apply accessibility settings
+  useEffect(() => {
     const root = document.documentElement;
     
-    // High contrast mode
-    if (newSettings.highContrast) {
-      root.classList.add('high-contrast');
-      root.style.setProperty('--text-color', '#ffffff');
-      root.style.setProperty('--bg-color', '#000000');
-      root.style.setProperty('--accent-color', '#ffff00');
+    // High contrast
+    if (settings.highContrast) {
+      root.style.setProperty('--contrast-ratio', '1.5');
+      root.style.setProperty('--text-color', '#000000');
+      root.style.setProperty('--bg-color', '#ffffff');
     } else {
-      root.classList.remove('high-contrast');
+      root.style.removeProperty('--contrast-ratio');
       root.style.removeProperty('--text-color');
       root.style.removeProperty('--bg-color');
-      root.style.removeProperty('--accent-color');
     }
 
-    // Large text mode
-    if (newSettings.largeText) {
+    // Large text
+    if (settings.largeText) {
       root.style.fontSize = '18px';
-      root.classList.add('large-text');
+      root.style.setProperty('--line-height', '1.6');
     } else {
       root.style.fontSize = '16px';
-      root.classList.remove('large-text');
+      root.style.setProperty('--line-height', '1.5');
     }
 
     // Reduced motion
-    if (newSettings.reducedMotion) {
-      root.classList.add('reduced-motion');
+    if (settings.reducedMotion) {
+      root.style.setProperty('--animation-duration', '0.1s');
+      root.style.setProperty('--transition-duration', '0.1s');
     } else {
-      root.classList.remove('reduced-motion');
+      root.style.removeProperty('--animation-duration');
+      root.style.removeProperty('--transition-duration');
     }
 
     // Focus indicator
-    if (newSettings.focusIndicator) {
-      root.classList.add('focus-visible');
+    if (settings.focusIndicator) {
+      root.style.setProperty('--focus-outline', '3px solid #0066cc');
+      root.style.setProperty('--focus-outline-offset', '2px');
     } else {
-      root.classList.remove('focus-visible');
+      root.style.removeProperty('--focus-outline');
+      root.style.removeProperty('--focus-outline-offset');
     }
 
-    // Screen reader announcements
-    if (newSettings.screenReader) {
-      announceToScreenReader('Accessibility settings updated');
+    // Color blind mode
+    if (settings.colorBlindMode) {
+      root.style.setProperty('--color-blind-filter', 'grayscale(100%)');
+    } else {
+      root.style.removeProperty('--color-blind-filter');
     }
-  }, []);
 
-  // Update settings and apply them
-  const updateSettings = useCallback((key: keyof AccessibilitySettings, value: boolean) => {
-    const newSettings = { ...settings, [key]: value };
-    setSettings(newSettings);
-    applyAccessibilitySettings(newSettings);
-    
-    // Announce changes to screen readers
-    if (newSettings.screenReader) {
-      announceToScreenReader(`${key} ${value ? 'enabled' : 'disabled'}`);
+    // Dyslexia friendly
+    if (settings.dyslexiaFriendly) {
+      root.style.setProperty('--font-family', 'OpenDyslexic, Arial, sans-serif');
+      root.style.setProperty('--letter-spacing', '0.1em');
+      root.style.setProperty('--word-spacing', '0.2em');
+    } else {
+      root.style.removeProperty('--font-family');
+      root.style.removeProperty('--letter-spacing');
+      root.style.removeProperty('--word-spacing');
     }
-  }, [settings, applyAccessibilitySettings]);
 
-  // Screen reader announcement
-  const announceToScreenReader = useCallback((message: string) => {
-    setAnnouncement(message);
-    
-    // Create live region for screen readers
-    let liveRegion = document.getElementById('accessibility-live-region');
-    if (!liveRegion) {
-      liveRegion = document.createElement('div');
-      liveRegion.id = 'accessibility-live-region';
-      liveRegion.setAttribute('aria-live', 'polite');
-      liveRegion.setAttribute('aria-atomic', 'true');
-      liveRegion.className = 'sr-only';
-      document.body.appendChild(liveRegion);
+    // Zoom level
+    root.style.setProperty('--zoom-level', `${settings.zoomLevel}%`);
+    root.style.transform = `scale(${settings.zoomLevel / 100})`;
+    root.style.transformOrigin = 'top left';
+
+    // Theme
+    if (settings.theme === 'dark') {
+      root.classList.add('dark');
+      root.classList.remove('light');
+    } else if (settings.theme === 'light') {
+      root.classList.add('light');
+      root.classList.remove('dark');
+    } else {
+      // Auto theme based on system preference
+      const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+      if (prefersDark) {
+        root.classList.add('dark');
+        root.classList.remove('light');
+      } else {
+        root.classList.add('light');
+        root.classList.remove('dark');
+      }
     }
-    
-    liveRegion.textContent = message;
-    
-    // Clear announcement after a delay
-    setTimeout(() => {
-      setAnnouncement('');
-    }, 3000);
-  }, []);
+  }, [settings]);
 
   // Keyboard navigation enhancement
   useEffect(() => {
+    if (!settings.keyboardNavigation) return;
+
     const handleKeyDown = (event: KeyboardEvent) => {
-      // Skip if user is typing in an input field
-      if (event.target instanceof HTMLInputElement || event.target instanceof HTMLTextAreaElement) {
-        return;
-      }
+      const focusableElements = Array.from(
+        document.querySelectorAll(
+          'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
+        )
+      ) as HTMLElement[];
+
+      focusableElementsRef.current = focusableElements;
+      const currentIndex = focusableElements.indexOf(document.activeElement as HTMLElement);
 
       switch (event.key) {
         case 'Tab':
-          // Enhanced focus management
-          enhanceFocusManagement();
+          // Enhanced tab navigation
+          if (event.shiftKey) {
+            if (currentIndex <= 0) {
+              event.preventDefault();
+              focusableElements[focusableElements.length - 1]?.focus();
+            }
+          } else {
+            if (currentIndex >= focusableElements.length - 1) {
+              event.preventDefault();
+              focusableElements[0]?.focus();
+            }
+          }
           break;
+        
+        case 'ArrowUp':
+        case 'ArrowDown':
+          event.preventDefault();
+          const direction = event.key === 'ArrowUp' ? -1 : 1;
+          const nextIndex = (currentIndex + direction + focusableElements.length) % focusableElements.length;
+          focusableElements[nextIndex]?.focus();
+          break;
+        
         case 'Escape':
-          // Close modals and menus
-          closeAllModals();
-          break;
-        case 'h':
-          if (event.ctrlKey || event.metaKey) {
-            // Ctrl/Cmd + H to toggle high contrast
-            event.preventDefault();
-            updateSettings('highContrast', !settings.highContrast);
-          }
-          break;
-        case 'l':
-          if (event.ctrlKey || event.metaKey) {
-            // Ctrl/Cmd + L to toggle large text
-            event.preventDefault();
-            updateSettings('largeText', !settings.largeText);
-          }
-          break;
-        case 'm':
-          if (event.ctrlKey || event.metaKey) {
-            // Ctrl/Cmd + M to toggle reduced motion
-            event.preventDefault();
-            updateSettings('reducedMotion', !settings.reducedMotion);
+          // Close modals, dropdowns, etc.
+          const activeModals = document.querySelectorAll('[role="dialog"][aria-modal="true"]');
+          if (activeModals.length > 0) {
+            (activeModals[activeModals.length - 1] as HTMLElement).focus();
           }
           break;
       }
@@ -169,309 +232,416 @@ export const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ ch
 
     document.addEventListener('keydown', handleKeyDown);
     return () => document.removeEventListener('keydown', handleKeyDown);
-  }, [settings, updateSettings]);
+  }, [settings.keyboardNavigation]);
 
-  // Enhanced focus management
-  const enhanceFocusManagement = useCallback(() => {
-    // Add focus indicators to all focusable elements
-    const focusableElements = document.querySelectorAll(
-      'a, button, input, textarea, select, [tabindex]:not([tabindex="-1"])'
-    );
-
-    focusableElements.forEach(element => {
-      element.addEventListener('focus', () => {
-        element.classList.add('focused');
-        element.setAttribute('aria-describedby', 'focus-description');
-      });
-
-      element.addEventListener('blur', () => {
-        element.classList.remove('focused');
-        element.removeAttribute('aria-describedby');
-      });
-    });
-  }, []);
-
-  // Close all modals and menus
-  const closeAllModals = useCallback(() => {
-    const modals = document.querySelectorAll('[role="dialog"], [role="menu"]');
-    modals.forEach(modal => {
-      if (modal instanceof HTMLElement) {
-        modal.style.display = 'none';
-        modal.setAttribute('aria-hidden', 'true');
+  // Focus tracking
+  useEffect(() => {
+    const handleFocusChange = (event: FocusEvent) => {
+      const target = event.target as HTMLElement;
+      setCurrentFocus(target);
+      
+      // Enhanced focus indicator
+      if (settings.focusIndicator) {
+        target.style.outline = '3px solid #0066cc';
+        target.style.outlineOffset = '2px';
+        
+        // Remove outline after focus
+        setTimeout(() => {
+          if (target !== document.activeElement) {
+            target.style.outline = '';
+            target.style.outlineOffset = '';
+          }
+        }, 2000);
       }
+    };
+
+    document.addEventListener('focusin', handleFocusChange);
+    return () => document.removeEventListener('focusin', handleFocusChange);
+  }, [settings.focusIndicator]);
+
+  // Screen reader announcements
+  useEffect(() => {
+    if (!settings.screenReader) return;
+
+    const announce = (message: string) => {
+      const announcement = document.createElement('div');
+      announcement.setAttribute('aria-live', 'polite');
+      announcement.setAttribute('aria-atomic', 'true');
+      announcement.className = 'sr-only';
+      announcement.textContent = message;
+      
+      document.body.appendChild(announcement);
+      setTimeout(() => {
+        document.body.removeChild(announcement);
+      }, 1000);
+    };
+
+    // Announce page changes
+    const observer = new MutationObserver((mutations) => {
+      mutations.forEach((mutation) => {
+        if (mutation.type === 'childList' && mutation.addedNodes.length > 0) {
+          const newContent = Array.from(mutation.addedNodes)
+            .filter(node => node.nodeType === Node.ELEMENT_NODE)
+            .map(node => (node as Element).textContent)
+            .join(' ');
+          
+          if (newContent.trim()) {
+            announce(`New content loaded: ${newContent.substring(0, 100)}`);
+          }
+        }
+      });
     });
-    setIsMenuOpen(false);
+
+    observer.observe(document.body, { childList: true, subtree: true });
+    return () => observer.disconnect();
+  }, [settings.screenReader]);
+
+  // Accessibility audit
+  const runAccessibilityAudit = useCallback(() => {
+    const newIssues: string[] = [];
+    let score = 100;
+
+    // Check for alt text on images
+    const images = document.querySelectorAll('img');
+    const imagesWithoutAlt = Array.from(images).filter(img => !img.alt);
+    if (imagesWithoutAlt.length > 0) {
+      newIssues.push(`${imagesWithoutAlt.length} images missing alt text`);
+      score -= 10;
+    }
+
+    // Check for form labels
+    const formInputs = document.querySelectorAll('input, select, textarea');
+    const inputsWithoutLabels = Array.from(formInputs).filter(input => {
+      const id = input.id;
+      const label = document.querySelector(`label[for="${id}"]`);
+      return !label && !input.getAttribute('aria-label');
+    });
+    if (inputsWithoutLabels.length > 0) {
+      newIssues.push(`${inputsWithoutLabels.length} form inputs missing labels`);
+      score -= 10;
+    }
+
+    // Check for heading structure
+    const headings = document.querySelectorAll('h1, h2, h3, h4, h5, h6');
+    let previousLevel = 0;
+    let hasH1 = false;
+    
+    headings.forEach(heading => {
+      const level = parseInt(heading.tagName.charAt(1));
+      if (level === 1) hasH1 = true;
+      if (level > previousLevel + 1) {
+        newIssues.push('Heading structure is not hierarchical');
+        score -= 5;
+      }
+      previousLevel = level;
+    });
+
+    if (!hasH1) {
+      newIssues.push('Page missing main heading (h1)');
+      score -= 5;
+    }
+
+    // Check for ARIA landmarks
+    const landmarks = document.querySelectorAll('[role="banner"], [role="main"], [role="navigation"], [role="contentinfo"]');
+    if (landmarks.length < 2) {
+      newIssues.push('Page missing essential ARIA landmarks');
+      score -= 5;
+    }
+
+    // Check for skip links
+    const skipLinks = document.querySelectorAll('a[href^="#"], a[href^="/#"]');
+    if (skipLinks.length === 0) {
+      newIssues.push('No skip navigation links found');
+      score -= 5;
+    }
+
+    setIssues(newIssues);
+    setAccessibilityScore(Math.max(0, score));
   }, []);
 
-  // Skip to main content link
-  const skipToMainContent = useCallback(() => {
-    const mainContent = document.querySelector('main');
-    if (mainContent) {
-      mainContent.focus();
-      mainContent.scrollIntoView({ behavior: 'smooth' });
-      announceToScreenReader('Moved to main content');
-    }
-  }, [announceToScreenReader]);
+  // Run audit on mount and when features change
+  useEffect(() => {
+    runAccessibilityAudit();
+  }, [runAccessibilityAudit]);
 
-  // Toggle accessibility menu
-  const toggleAccessibilityMenu = useCallback(() => {
-    setIsMenuOpen(!isMenuOpen);
-    if (!isMenuOpen) {
-      announceToScreenReader('Accessibility menu opened');
-    }
-  }, [isMenuOpen, announceToScreenReader]);
+  // Toggle functions
+  const toggleVisibility = () => setIsVisible(!isVisible);
+  const toggleExpanded = () => setIsExpanded(!isExpanded);
+  const toggleSetting = (key: keyof AccessibilitySettings) => {
+    setSettings(prev => ({ ...prev, [key]: !prev[key] }));
+  };
+
+  const updateSetting = (key: keyof AccessibilitySettings, value: any) => {
+    setSettings(prev => ({ ...prev, [key]: value }));
+  };
+
+  const resetSettings = () => {
+    setSettings(DEFAULT_SETTINGS);
+  };
+
+  const zoomIn = () => {
+    setSettings(prev => ({ ...prev, zoomLevel: Math.min(prev.zoomLevel + 10, 200) }));
+  };
+
+  const zoomOut = () => {
+    setSettings(prev => ({ ...prev, zoomLevel: Math.max(prev.zoomLevel - 10, 50) }));
+  };
+
+  const resetZoom = () => {
+    setSettings(prev => ({ ...prev, zoomLevel: 100 }));
+  };
+
+  if (!isVisible) {
+    return (
+      <button
+        onClick={toggleVisibility}
+        className="fixed bottom-4 left-4 z-50 p-3 bg-blue-600 hover:bg-blue-700 text-white rounded-full shadow-lg transition-all duration-200 hover:scale-110"
+        title="Accessibility Settings"
+        aria-label="Open accessibility settings"
+      >
+        <Accessibility className="w-5 h-5" />
+      </button>
+    );
+  }
 
   return (
-    <>
-      {children}
-      
-      {/* Skip to main content link */}
-      <a
-        href="#main-content"
-        className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-blue-600 text-white px-4 py-2 rounded z-50"
-        onClick={skipToMainContent}
+    <AnimatePresence>
+      <motion.div
+        initial={{ opacity: 0, x: -20 }}
+        animate={{ opacity: 1, x: 0 }}
+        exit={{ opacity: 0, x: -20 }}
+        className="fixed bottom-4 left-4 z-50 w-80 bg-white dark:bg-slate-800 rounded-xl border border-slate-200 dark:border-slate-700 shadow-2xl"
+        ref={settingsRef}
       >
-        Skip to main content
-      </a>
+        {/* Header */}
+        <div className="flex items-center justify-between p-4 border-b border-slate-200 dark:border-slate-700">
+          <div className="flex items-center space-x-2">
+            <Accessibility className="w-5 h-5 text-blue-600 dark:text-blue-400" />
+            <h3 className="text-slate-900 dark:text-white font-semibold">Accessibility</h3>
+          </div>
+          <div className="flex items-center space-x-2">
+            <button
+              onClick={toggleExpanded}
+              className="p-1 text-slate-400 hover:text-slate-600 dark:hover:text-slate-300 transition-colors"
+              title={isExpanded ? 'Collapse' : 'Expand'}
+            >
+              <Settings className="w-4 h-4" />
+            </button>
+            <button
+              onClick={toggleVisibility}
+              className="p-1 text-slate-400 hover:text-slate-600 dark:hover:text-slate-300 transition-colors"
+              title="Close"
+            >
+              <X className="w-4 h-4" />
+            </button>
+          </div>
+        </div>
 
-      {/* Accessibility menu button */}
-      <button
-        aria-label="Accessibility settings"
-        aria-expanded={isMenuOpen}
-        aria-controls="accessibility-menu"
-        onClick={toggleAccessibilityMenu}
-        className="fixed top-4 right-4 bg-blue-600 text-white p-3 rounded-full shadow-lg z-50 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-300"
-      >
-        <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 100 4m0-4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 100 4m0-4v2m0-6V4" />
-        </svg>
-      </button>
-
-      {/* Accessibility menu */}
-      <AnimatePresence>
-        {isMenuOpen && (
-          <motion.div
-            initial={{ opacity: 0, y: -20 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -20 }}
-            transition={{ duration: 0.2 }}
-            id="accessibility-menu"
-            role="dialog"
-            aria-labelledby="accessibility-menu-title"
-            className="fixed top-20 right-4 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg shadow-xl p-6 z-50 min-w-[300px]"
-          >
-            <h2 id="accessibility-menu-title" className="text-lg font-semibold mb-4 text-gray-900 dark:text-white">
-              Accessibility Settings
-            </h2>
-            
-            <div className="space-y-4">
-              {/* High Contrast */}
-              <label className="flex items-center space-x-3">
-                <input
-                  type="checkbox"
-                  checked={settings.highContrast}
-                  onChange={(e) => updateSettings('highContrast', e.target.checked)}
-                  className="rounded border-gray-300 text-blue-600 focus:ring-blue-500"
-                />
-                <span className="text-gray-900 dark:text-white">High Contrast</span>
-              </label>
-
-              {/* Large Text */}
-              <label className="flex items-center space-x-3">
-                <input
-                  type="checkbox"
-                  checked={settings.largeText}
-                  onChange={(e) => updateSettings('largeText', e.target.checked)}
-                  className="rounded border-gray-300 text-blue-600 focus:ring-blue-500"
-                />
-                <span className="text-gray-900 dark:text-white">Large Text</span>
-              </label>
-
-              {/* Reduced Motion */}
-              <label className="flex items-center space-x-3">
-                <input
-                  type="checkbox"
-                  checked={settings.reducedMotion}
-                  onChange={(e) => updateSettings('reducedMotion', e.target.checked)}
-                  className="rounded border-gray-300 text-blue-600 focus:ring-blue-500"
-                />
-                <span className="text-gray-900 dark:text-white">Reduced Motion</span>
-              </label>
-
-              {/* Focus Indicator */}
-              <label className="flex items-center space-x-3">
-                <input
-                  type="checkbox"
-                  checked={settings.focusIndicator}
-                  onChange={(e) => updateSettings('focusIndicator', e.target.checked)}
-                  className="rounded border-gray-300 text-blue-600 focus:ring-blue-500"
-                />
-                <span className="text-gray-900 dark:text-white">Enhanced Focus</span>
-              </label>
-
-              {/* Screen Reader */}
-              <label className="flex items-center space-x-3">
-                <input
-                  type="checkbox"
-                  checked={settings.screenReader}
-                  onChange={(e) => updateSettings('screenReader', e.target.checked)}
-                  className="rounded border-gray-300 text-blue-600 focus:ring-blue-500"
-                />
-                <span className="text-gray-900 dark:text-white">Screen Reader</span>
-              </label>
+        {/* Quick Actions */}
+        <div className="p-4 space-y-3">
+          {/* Zoom Controls */}
+          <div className="flex items-center justify-between">
+            <span className="text-sm text-slate-600 dark:text-slate-300">Zoom: {settings.zoomLevel}%</span>
+            <div className="flex items-center space-x-1">
+              <button
+                onClick={zoomOut}
+                className="p-1 text-slate-400 hover:text-slate-600 dark:hover:text-slate-300"
+                title="Zoom out"
+              >
+                <ZoomOut className="w-4 h-4" />
+              </button>
+              <button
+                onClick={resetZoom}
+                className="p-1 text-slate-400 hover:text-slate-600 dark:hover:text-slate-300"
+                title="Reset zoom"
+              >
+                <RotateCcw className="w-4 h-4" />
+              </button>
+              <button
+                onClick={zoomIn}
+                className="p-1 text-slate-400 hover:text-slate-600 dark:hover:text-slate-300"
+                title="Zoom in"
+              >
+                <ZoomIn className="w-4 h-4" />
+              </button>
             </div>
+          </div>
 
-            {/* Keyboard shortcuts help */}
-            <div className="mt-6 pt-4 border-t border-gray-200 dark:border-gray-700">
-              <h3 className="text-sm font-medium text-gray-900 dark:text-white mb-2">Keyboard Shortcuts</h3>
-              <div className="text-xs text-gray-600 dark:text-gray-400 space-y-1">
-                <div>Ctrl/Cmd + H: Toggle High Contrast</div>
-                <div>Ctrl/Cmd + L: Toggle Large Text</div>
-                <div>Ctrl/Cmd + M: Toggle Reduced Motion</div>
-                <div>Tab: Navigate elements</div>
-                <div>Escape: Close menus</div>
+          {/* Theme Toggle */}
+          <div className="flex items-center justify-between">
+            <span className="text-sm text-slate-600 dark:text-slate-300">Theme</span>
+            <div className="flex items-center space-x-1 bg-slate-100 dark:bg-slate-700 rounded-lg p-1">
+              {(['light', 'auto', 'dark'] as const).map((theme) => (
+                <button
+                  key={theme}
+                  onClick={() => updateSetting('theme', theme)}
+                  className={`p-2 rounded-md text-xs transition-colors ${
+                    settings.theme === theme
+                      ? 'bg-white dark:bg-slate-600 text-slate-900 dark:text-white shadow-sm'
+                      : 'text-slate-500 dark:text-slate-400 hover:text-slate-700 dark:hover:text-slate-300'
+                  }`}
+                  title={`${theme.charAt(0).toUpperCase() + theme.slice(1)} theme`}
+                >
+                  {theme === 'light' && <Sun className="w-3 h-3" />}
+                  {theme === 'auto' && <Monitor className="w-3 h-3" />}
+                  {theme === 'dark' && <Moon className="w-3 h-3" />}
+                </button>
+              ))}
+            </div>
+          </div>
+
+          {/* Quick Toggles */}
+          <div className="grid grid-cols-2 gap-2">
+            <button
+              onClick={() => toggleSetting('highContrast')}
+              className={`flex items-center justify-center space-x-2 p-2 rounded-lg text-xs transition-colors ${
+                settings.highContrast
+                  ? 'bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-200'
+                  : 'bg-slate-100 text-slate-600 dark:bg-slate-700 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-600'
+              }`}
+            >
+              <Contrast className="w-3 h-3" />
+              <span>High Contrast</span>
+            </button>
+            
+            <button
+              onClick={() => toggleSetting('largeText')}
+              className={`flex items-center justify-center space-x-2 p-2 rounded-lg text-xs transition-colors ${
+                settings.largeText
+                  ? 'bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-200'
+                  : 'bg-slate-100 text-slate-600 dark:bg-slate-700 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-600'
+              }`}
+            >
+              <Type className="w-3 h-3" />
+              <span>Large Text</span>
+            </button>
+            
+            <button
+              onClick={() => toggleSetting('reducedMotion')}
+              className={`flex items-center justify-center space-x-2 p-2 rounded-lg text-xs transition-colors ${
+                settings.reducedMotion
+                  ? 'bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-200'
+                  : 'bg-slate-100 text-slate-600 dark:bg-slate-700 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-600'
+              }`}
+            >
+              <Eye className="w-3 h-3" />
+              <span>Reduced Motion</span>
+            </button>
+            
+            <button
+              onClick={() => toggleSetting('focusIndicator')}
+              className={`flex items-center justify-center space-x-2 p-2 rounded-lg text-xs transition-colors ${
+                settings.focusIndicator
+                  ? 'bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-200'
+                  : 'bg-slate-100 text-slate-600 dark:bg-slate-700 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-600'
+              }`}
+            >
+              <MousePointer className="w-3 h-3" />
+              <span>Focus Indicator</span>
+            </button>
+          </div>
+        </div>
+
+        {/* Expanded Settings */}
+        {isExpanded && (
+          <>
+            {/* Advanced Settings */}
+            <div className="p-4 border-t border-slate-200 dark:border-slate-700 space-y-3">
+              <h4 className="text-slate-900 dark:text-white font-medium">Advanced Settings</h4>
+              
+              <div className="space-y-2">
+                <label className="flex items-center space-x-2">
+                  <input
+                    type="checkbox"
+                    checked={settings.screenReader}
+                    onChange={() => toggleSetting('screenReader')}
+                    className="rounded border-slate-300 text-blue-600 focus:ring-blue-500"
+                  />
+                  <span className="text-sm text-slate-600 dark:text-slate-300">Screen Reader Support</span>
+                </label>
+                
+                <label className="flex items-center space-x-2">
+                  <input
+                    type="checkbox"
+                    checked={settings.keyboardNavigation}
+                    onChange={() => toggleSetting('keyboardNavigation')}
+                    className="rounded border-slate-300 text-blue-600 focus:ring-blue-500"
+                  />
+                  <span className="text-sm text-slate-600 dark:text-slate-300">Enhanced Keyboard Navigation</span>
+                </label>
+                
+                <label className="flex items-center space-x-2">
+                  <input
+                    type="checkbox"
+                    checked={settings.colorBlindMode}
+                    onChange={() => toggleSetting('colorBlindMode')}
+                    className="rounded border-slate-300 text-blue-600 focus:ring-blue-500"
+                  />
+                  <span className="text-sm text-slate-600 dark:text-slate-300">Color Blind Mode</span>
+                </label>
+                
+                <label className="flex items-center space-x-2">
+                  <input
+                    type="checkbox"
+                    checked={settings.dyslexiaFriendly}
+                    onChange={() => toggleSetting('dyslexiaFriendly')}
+                    className="rounded border-slate-300 text-blue-600 focus:ring-blue-500"
+                  />
+                  <span className="text-sm text-slate-600 dark:text-slate-300">Dyslexia Friendly Font</span>
+                </label>
               </div>
             </div>
-          </motion.div>
+
+            {/* Accessibility Score */}
+            <div className="p-4 border-t border-slate-200 dark:border-slate-700">
+              <div className="flex items-center justify-between mb-2">
+                <h4 className="text-slate-900 dark:text-white font-medium">Accessibility Score</h4>
+                <span className={`text-sm font-medium ${
+                  accessibilityScore >= 90 ? 'text-green-600' :
+                  accessibilityScore >= 70 ? 'text-yellow-600' : 'text-red-600'
+                }`}>
+                  {accessibilityScore}/100
+                </span>
+              </div>
+              
+              <div className="w-full bg-slate-200 dark:bg-slate-700 rounded-full h-2 mb-3">
+                <div
+                  className={`h-2 rounded-full transition-all duration-500 ${
+                    accessibilityScore >= 90 ? 'bg-green-500' :
+                    accessibilityScore >= 70 ? 'bg-yellow-500' : 'bg-red-500'
+                  }`}
+                  style={{ width: `${accessibilityScore}%` }}
+                />
+              </div>
+
+              {/* Issues */}
+              {issues.length > 0 && (
+                <div className="space-y-2">
+                  <h5 className="text-sm font-medium text-slate-700 dark:text-slate-300">Issues Found:</h5>
+                  <ul className="space-y-1">
+                    {issues.map((issue, index) => (
+                      <li key={index} className="text-xs text-red-600 dark:text-red-400 flex items-start space-x-2">
+                        <AlertTriangle className="w-3 h-3 mt-0.5 flex-shrink-0" />
+                        <span>{issue}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              )}
+            </div>
+
+            {/* Reset Button */}
+            <div className="p-4 border-t border-slate-200 dark:border-slate-700">
+              <button
+                onClick={resetSettings}
+                className="w-full px-4 py-2 bg-slate-100 hover:bg-slate-200 dark:bg-slate-700 dark:hover:bg-slate-600 text-slate-700 dark:text-slate-300 rounded-lg transition-colors text-sm"
+              >
+                Reset to Defaults
+              </button>
+            </div>
+          </>
         )}
-      </AnimatePresence>
-
-      {/* Screen reader announcements */}
-      {announcement && (
-        <div
-          id="accessibility-live-region"
-          aria-live="polite"
-          aria-atomic="true"
-          className="sr-only"
-        >
-          {announcement}
-        </div>
-      )}
-
-      {/* Focus description */}
-      <div id="focus-description" className="sr-only">
-        This element is currently focused
-      </div>
-
-      {/* High contrast styles */}
-      <style jsx>{`
-        .high-contrast {
-          --text-color: #ffffff !important;
-          --bg-color: #000000 !important;
-          --accent-color: #ffff00 !important;
-        }
-        
-        .high-contrast * {
-          color: var(--text-color) !important;
-          background-color: var(--bg-color) !important;
-          border-color: var(--accent-color) !important;
-        }
-        
-        .large-text {
-          font-size: 18px !important;
-        }
-        
-        .large-text * {
-          font-size: 1.125em !important;
-        }
-        
-        .reduced-motion * {
-          animation-duration: 0.01ms !important;
-          animation-iteration-count: 1 !important;
-          transition-duration: 0.01ms !important;
-        }
-        
-        .focus-visible {
-          outline: 3px solid var(--accent-color, #3b82f6) !important;
-          outline-offset: 2px !important;
-        }
-        
-        .sr-only {
-          position: absolute;
-          width: 1px;
-          height: 1px;
-          padding: 0;
-          margin: -1px;
-          overflow: hidden;
-          clip: rect(0, 0, 0, 0);
-          white-space: nowrap;
-          border: 0;
-        }
-        
-        .focused {
-          outline: 3px solid #3b82f6 !important;
-          outline-offset: 2px !important;
-        }
-      `}</style>
-    </>
-  );
-};
-
-// Accessibility hook for components
-export const useAccessibility = () => {
-  const [announcement, setAnnouncement] = useState<string>('');
-
-  const announce = useCallback((message: string) => {
-    setAnnouncement(message);
-    setTimeout(() => setAnnouncement(''), 3000);
-  }, []);
-
-  const enhanceFocus = useCallback((element: HTMLElement) => {
-    element.addEventListener('focus', () => {
-      element.classList.add('focused');
-    });
-    
-    element.addEventListener('blur', () => {
-      element.classList.remove('focused');
-    });
-  }, []);
-
-  return { announcement, announce, enhanceFocus };
-};
-
-// Accessible button component
-export const AccessibleButton: React.FC<{
-  children: React.ReactNode;
-  onClick: () => void;
-  ariaLabel?: string;
-  ariaDescribedBy?: string;
-  disabled?: boolean;
-  className?: string;
-}> = ({ children, onClick, ariaLabel, ariaDescribedBy, disabled, className }) => {
-  return (
-    <button
-      onClick={onClick}
-      disabled={disabled}
-      aria-label={ariaLabel}
-      aria-describedby={ariaDescribedBy}
-      className={`px-4 py-2 rounded-lg transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 ${className || ''}`}
-    >
-      {children}
-    </button>
-  );
-};
-
-// Accessible link component
-export const AccessibleLink: React.FC<{
-  children: React.ReactNode;
-  href: string;
-  ariaLabel?: string;
-  ariaDescribedBy?: string;
-  className?: string;
-  external?: boolean;
-}> = ({ children, href, ariaLabel, ariaDescribedBy, className, external }) => {
-  return (
-    <a
-      href={href}
-      aria-label={ariaLabel}
-      aria-describedby={ariaDescribedBy}
-      className={`text-blue-600 hover:text-blue-800 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 ${className || ''}`}
-      {...(external && { target: '_blank', rel: 'noopener noreferrer' })}
-    >
-      {children}
-      {external && (
-        <span className="sr-only"> (opens in new window)</span>
-      )}
-    </a>
+      </motion.div>
+    </AnimatePresence>
   );
 };

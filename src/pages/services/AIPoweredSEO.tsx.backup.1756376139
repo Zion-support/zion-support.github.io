@@ -1,39 +1,8 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-<<<<<<< HEAD
-import { 
-  Search, 
-  TrendingUp, 
-  Target, 
-  BarChart3, 
-  CheckCircle, 
-  ArrowRight,
-  Play,
-  Settings,
-  Cpu,
-  Cloud,
-  Activity,
-  Sparkles,
-  Zap,
-  Globe,
-  Building,
-  DollarSign,
-  Lock,
-  Eye,
-  FileText,
-  Brain,
-  Users,
-  Phone,
-  Mail,
-  Monitor,
-  Smartphone
-} from 'lucide-react';
-=======
 import { Search, Brain, TrendingUp, BarChart3, Target, Zap, CheckCircle, ArrowRight, Globe, Users, Clock, Shield, Eye, MousePointer, Smartphone } from 'lucide-react';
 import SEO from '@/components/SEO';
 import { Link } from 'react-router-dom';
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-4b87
-
 const AIPoweredSEO = () => {
   const features = [
     {
@@ -67,7 +36,6 @@ const AIPoweredSEO = () => {
       description: 'AI-driven mobile-first SEO strategies and testing'
     }
   ];
-
   const benefits = [
     'Increase organic traffic by 150%',
     'Improve search rankings by 200%',
@@ -76,7 +44,6 @@ const AIPoweredSEO = () => {
     'Automate 80% of SEO tasks',
     'Enhance user experience and engagement'
   ];
-
   const useCases = [
     {
       industry: 'E-commerce',
@@ -95,7 +62,6 @@ const AIPoweredSEO = () => {
       description: 'Property listing SEO, local search optimization, and lead generation'
     }
   ];
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       {/* Hero Section */}
@@ -112,17 +78,14 @@ const AIPoweredSEO = () => {
               <Search className="w-4 h-4 mr-2" />
               AI-Powered Search Engine Optimization
             </div>
-            
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
               AI-Powered
               <span className="bg-gradient-to-r from-orange-400 to-red-500 bg-clip-text text-transparent"> SEO</span>
             </h1>
-            
             <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
               Revolutionize your search engine optimization with AI-powered intelligence that 
               automatically discovers opportunities, optimizes content, and drives organic growth.
             </p>
-            
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="px-8 py-4 bg-gradient-to-r from-orange-500 to-red-500 text-white font-semibold rounded-lg hover:from-orange-600 hover:to-red-600 transition-all duration-200 flex items-center justify-center">
                 <Play className="w-5 h-5 mr-2" />
@@ -136,7 +99,6 @@ const AIPoweredSEO = () => {
           </motion.div>
         </div>
       </section>
-
       {/* Features Section */}
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -154,7 +116,6 @@ const AIPoweredSEO = () => {
               your search engine optimization and drive organic growth.
             </p>
           </motion.div>
-
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index) => (
               <motion.div
@@ -174,7 +135,6 @@ const AIPoweredSEO = () => {
           </div>
         </div>
       </section>
-
       {/* Benefits Section */}
       <section className="py-20 bg-slate-800/30">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -191,7 +151,6 @@ const AIPoweredSEO = () => {
               Experience measurable improvements in organic traffic, search rankings, and user engagement.
             </p>
           </motion.div>
-
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <div className="space-y-6">
               {benefits.slice(0, 3).map((benefit, index) => (
@@ -224,7 +183,6 @@ const AIPoweredSEO = () => {
           </div>
         </div>
       </section>
-
       {/* Use Cases Section */}
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -242,7 +200,6 @@ const AIPoweredSEO = () => {
               optimization strategies for your specific business needs.
             </p>
           </motion.div>
-
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {useCases.map((useCase, index) => (
               <motion.div
@@ -262,7 +219,6 @@ const AIPoweredSEO = () => {
           </div>
         </div>
       </section>
-
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-orange-500/10 to-red-500/10">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -293,5 +249,4 @@ const AIPoweredSEO = () => {
     </div>
   );
 };
-
 export default AIPoweredSEO;

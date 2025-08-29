@@ -248,7 +248,7 @@ export default function SystemStatus() {
               </div>
               <p className="text-gray-400">Updates every 30s</p>
             </div>
-          </motion.div>
+          </div>
         </div>
       </div>
 

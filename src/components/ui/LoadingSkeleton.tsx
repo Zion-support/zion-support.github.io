@@ -168,14 +168,12 @@ interface GridSkeletonProps {
   items?: number;
   columns?: number;
   className?: string;
-  showImage?: boolean;
 }
 
 export function GridSkeleton({ 
   items = 6, 
   columns = 3, 
-  className = '',
-  showImage = true 
+  className = ''
 }: GridSkeletonProps) {
   return (
     <div className={`grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-${columns} gap-6 ${className}`}>
