@@ -92,18 +92,14 @@ const Security = React.lazy(() => import('./pages/Security'));
 const Compliance = React.lazy(() => import('./pages/Compliance'));
 const OnsiteSupport = React.lazy(() => import('./pages/OnsiteSupport'));
 
-const Careers = () => (
-  <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 flex items-center justify-center">
-    <SEO 
-      title="Careers - Zion Tech Group"
-      description="Join our team of technology experts and help shape the future of AI-powered business solutions."
-    />
-    <div className="text-center text-white">
-      <h1 className="text-4xl font-bold mb-4">Careers</h1>
-      <p className="text-xl text-gray-300">Join our team</p>
-    </div>
-  </div>
-);
+const Careers = React.lazy(() => import('./pages/Careers'));
+
+// Company/resources simple pages
+const Team = React.lazy(() => import('./pages/Team'));
+const Press = React.lazy(() => import('./pages/Press'));
+const CaseStudies = React.lazy(() => import('./pages/CaseStudies'));
+const WhitePapers = React.lazy(() => import('./pages/WhitePapers'));
+const Webinars = React.lazy(() => import('./pages/Webinars'));
 
 const Marketplace = () => (
   <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 flex items-center justify-center">
@@ -142,6 +138,11 @@ function App() {
               <Route path="/security" element={<Security />} />
               <Route path="/compliance" element={<Compliance />} />
               <Route path="/careers" element={<Careers />} />
+              <Route path="/team" element={<Team />} />
+              <Route path="/press" element={<Press />} />
+              <Route path="/case-studies" element={<CaseStudies />} />
+              <Route path="/white-papers" element={<WhitePapers />} />
+              <Route path="/webinars" element={<Webinars />} />
               <Route path="/privacy" element={<Privacy />} />
               <Route path="/terms" element={<Terms />} />
               <Route path="/cookies" element={<Cookies />} />

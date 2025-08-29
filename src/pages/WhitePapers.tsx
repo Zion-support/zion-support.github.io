@@ -1,3 +1,6 @@
+import React from 'react';
+import { SEO } from '../components/SEO';
+
 import React, { useState } from 'react';
 import { FileText, Download, Search, Filter, Calendar, Clock, Users, Star, Eye, ArrowRight, BookOpen, Brain, Cloud, Shield, Database, Zap, Globe, Target, TrendingUp, Award } from 'lucide-react';
 
