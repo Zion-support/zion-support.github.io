@@ -100,6 +100,34 @@ h1, h2, h3, h4, h5, h6 {
   background-color: #ffffff !important;
 }
 
+/* Floating animations for footer elements */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+@keyframes float-delayed {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-15px);
+  }
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+.animate-float-delayed {
+  animation: float-delayed 8s ease-in-out infinite;
+  animation-delay: 2s;
+}
+
 .high-contrast * {
   border-color: #000000 !important;
   color: #000000 !important;
