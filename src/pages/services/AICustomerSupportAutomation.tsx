@@ -1,34 +1,22 @@
-import React from 'react';
 import { motion } from 'framer-motion';
-import { 
-  MessageCircle, 
-  Bot, 
-  Brain, 
-  Zap, 
-  Shield, 
-  Globe, 
-  Users, 
-  Clock,
-  CheckCircle,
-  Star,
+import {
   ArrowRight,
-  Play,
-  Phone,
+  BarChart3,
+  Bot,
+  Brain,
+  CheckCircle,
+  Clock,
+  Headphones,
   Mail,
   MapPin,
-  Headphones,
-  Smartphone,
+  MessageCircle,
   Monitor,
+  Phone,
+  Play,
+  Shield,
+  Star,
   TrendingUp,
-  BarChart3,
-  Target,
-  Settings,
-  Database,
-  Cloud,
-  AlertCircle,
-  FileText,
-  Calendar,
-  UserCheck
+  Users
 } from 'lucide-react';
 import { SEO } from '../../components/SEO';
 
@@ -205,7 +193,7 @@ const AICustomerSupportAutomation = () => {
   ];
 
   return (
-    <>
+    <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light text-white relative overflow-hidden">
       <SEO 
         title="AI-Powered Customer Support Automation - Zion Tech Group"
         description="Transform customer support with AI automation. 24/7 availability, instant responses, and 60-80% cost reduction. Start from $199/month."
@@ -636,7 +624,8 @@ const AICustomerSupportAutomation = () => {
               </div>
             </div>
           </div>
-        </section>
+        </div>
+      </section>
 
         {/* CTA Section */}
         <section className="py-20 px-4 bg-slate-800/30">
@@ -674,7 +663,6 @@ const AICustomerSupportAutomation = () => {
         </section>
       </div>
     </div>
-    </>
   );
 };
 
