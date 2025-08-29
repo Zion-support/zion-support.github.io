@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 
 import { SEO } from "@/components/SEO";
-import { HeroSection } from "@/components/HeroSection";
+import { EnhancedHeroSection } from "@/components/EnhancedHeroSection";
 import { LoadingSpinner } from "@/components/ui/LoadingSpinner";
 
 // Lazy load components for better performance
@@ -29,7 +29,7 @@ const TechnologyStackSection = React.lazy(() => import("@/components/TechnologyS
 const SecurityComplianceSection = React.lazy(() => import("@/components/SecurityComplianceSection"));
 const AIServicesShowcase = React.lazy(() => import("@/components/AIServicesShowcase"));
 const InteractiveTestimonials = React.lazy(() => import("@/components/InteractiveTestimonials"));
-const ServicesShowcase = React.lazy(() => import("@/components/ServicesShowcase"));
+const EnhancedServicesShowcase = React.lazy(() => import("@/components/EnhancedServicesShowcase"));
 
 // Loading fallback component
 const LoadingFallback = ({ message }: { message: string }) => (
@@ -76,7 +76,7 @@ const serviceCategories = [
     name: "Cybersecurity",
     description: "Advanced security protocols and threat protection systems",
     icon: "🔒",
-    href: "/services/ai-compliance-copilot",
+    href: "/services/ai-cybersecurity-suite",
     count: 10,
     color: "from-red-500 to-orange-600"
   },
@@ -97,648 +97,6 @@ const serviceCategories = [
     color: "from-yellow-500 to-orange-600"
   }
 ];
-              <span className="block bg-gradient-to-r from-purple-400 via-pink-500 to-cyan-400 bg-clip-text text-transparent">
-                2030
-              </span>
-            </h2>
-            <p className="text-xl text-slate-300 max-w-3xl mx-auto mb-8">
-              Experience the future of technology with our cutting-edge AI, quantum computing, and innovative solutions 
-              designed to transform industries and drive unprecedented growth.
-            </p>
-            <Link 
-              to="/revolutionary-services-2030" 
-              className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-600 rounded-lg font-semibold hover:from-purple-600 hover:to-pink-700 transition-all duration-300 transform hover:scale-105"
-            >
-              Explore Revolutionary Services
-              <ArrowRight className="ml-2 w-5 h-5" />
-            </Link>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {[
-              {
-                title: "Quantum AI Hybrid Platform",
-                description: "Revolutionary platform combining quantum computing with advanced AI",
-                icon: Brain,
-                color: "from-cyan-500 to-blue-600",
-                price: "$25,000/month"
-              },
-              {
-                title: "AI Cybersecurity Platform",
-                description: "Next-generation cybersecurity using AI and machine learning",
-                icon: Shield,
-                color: "from-red-500 to-orange-600",
-                price: "$8,999/month"
-              },
-              {
-                title: "Autonomous AI Operations",
-                description: "Platform that autonomously manages business operations",
-                icon: Zap,
-                color: "from-green-500 to-emerald-600",
-                price: "$15,999/month"
-              }
-            ].map((service, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="group bg-slate-800/60 backdrop-blur border border-purple-400/20 hover:border-purple-400/40 transition-all duration-300 rounded-2xl p-6 hover:shadow-2xl hover:shadow-purple-400/10"
-              >
-                <div className={`w-16 h-16 bg-gradient-to-br ${service.color} rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300`}>
-                  <service.icon className="w-8 h-8 text-white" />
-                </div>
-                <h3 className="text-xl font-semibold mb-3 group-hover:text-purple-300 transition-colors">
-                  {service.title}
-                </h3>
-                <p className="text-slate-300 text-sm mb-4">
-                  {service.description}
-                </p>
-                <div className="text-2xl font-bold text-purple-400 mb-2">
-                  {service.price}
-                </div>
-                <div className="text-sm text-slate-400">
-                  Starting price • Enterprise support included
-                </div>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Stats Section */}
-      <section className="py-20 bg-black/50">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-            {stats.map((stat, index) => (
-              <div key={index} className="text-center group">
-                <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-br from-cyan-500 to-blue-600 rounded-full mb-4 group-hover:scale-110 transition-transform duration-300">
-                  <stat.icon className="w-8 h-8 text-white" />
-                </div>
-                <div className="text-3xl md:text-4xl font-bold text-cyan-400 mb-2">{stat.value}</div>
-                <div className="text-lg font-semibold mb-2">{stat.label}</div>
-                <div className="text-sm text-gray-400">{stat.description}</div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* AI Services Section */}
-      <section className="py-20">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
-              AI-Powered Solutions
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Discover how artificial intelligence can transform your business operations and drive innovation
-            </p>
-          </div>
-          
-          <div className="grid md:grid-cols-3 gap-8">
-            {aiServices.map((service, index) => (
-              <div key={index} className="bg-gradient-to-br from-gray-800 to-gray-900 p-8 rounded-2xl border border-gray-700 hover:border-cyan-500 transition-all duration-300 hover:transform hover:scale-105">
-                <div className="w-16 h-16 bg-gradient-to-br from-cyan-500 to-blue-600 rounded-2xl flex items-center justify-center mb-6">
-                  <service.icon className="w-8 h-8 text-white" />
-                </div>
-                <h3 className="text-2xl font-bold mb-4">{service.title}</h3>
-                <p className="text-gray-300 mb-6">{service.description}</p>
-                <ul className="space-y-2 mb-6">
-                  {service.features.map((feature, idx) => (
-                    <li key={idx} className="flex items-center text-gray-300">
-                      <CheckCircle className="w-5 h-5 text-cyan-400 mr-3 flex-shrink-0" />
-                      {feature}
-                    </li>
-                  ))}
-                </ul>
-                <Link 
-                  to={service.path}
-                  className="inline-flex items-center text-cyan-400 hover:text-cyan-300 font-semibold group"
-                >
-                  Learn More
-                  <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
-                </Link>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Featured Services Section */}
-      <section className="py-20 bg-black/30">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
-              Featured Services
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Our most popular solutions trusted by businesses worldwide
-            </p>
-          </div>
-          
-          <div className="grid lg:grid-cols-3 gap-8">
-            {featuredServices.map((service, index) => (
-              <div key={index} className="bg-gradient-to-br from-gray-800 to-gray-900 rounded-2xl border border-gray-700 overflow-hidden hover:border-cyan-500 transition-all duration-300 hover:transform hover:scale-105">
-                <div className="p-8">
-                  <div className="flex items-center justify-between mb-4">
-                    <div className="w-12 h-12 bg-gradient-to-br from-cyan-500 to-blue-600 rounded-xl flex items-center justify-center">
-                      <service.icon className="w-6 h-6 text-white" />
-                    </div>
-                    <div className="text-right">
-                      <div className="text-2xl font-bold text-cyan-400">{service.price}</div>
-                      <div className="text-sm text-gray-400">{service.category}</div>
-                    </div>
-                  </div>
-                  
-                  <h3 className="text-2xl font-bold mb-3">{service.title}</h3>
-                  <p className="text-gray-300 mb-6">{service.description}</p>
-                  
-                  <div className="flex items-center mb-4">
-                    <div className="flex items-center mr-4">
-                      {[...Array(5)].map((_, i) => (
-                        <Star key={i} className={`w-5 h-5 ${i < Math.floor(service.rating) ? 'text-yellow-400 fill-current' : 'text-gray-600'}`} />
-                      ))}
-                    </div>
-                    <span className="text-gray-400">({service.reviewCount} reviews)</span>
-                  </div>
-                  
-                  <div className="grid grid-cols-2 gap-2 mb-6">
-                    {service.highlights.map((highlight, idx) => (
-                      <div key={idx} className="flex items-center text-sm text-gray-300">
-                        <CheckCircle className="w-4 h-4 text-cyan-400 mr-2 flex-shrink-0" />
-                        {highlight}
-                      </div>
-                    ))}
-                  </div>
-                  
-                  <Link 
-                    to={service.path}
-                    className="w-full bg-gradient-to-r from-cyan-500 to-blue-600 text-white py-3 rounded-lg font-semibold text-center block hover:from-cyan-600 hover:to-blue-700 transition-all duration-300"
-                  >
-                    Get Started
-                  </Link>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Cutting-Edge Technology Showcase */}
-      <section className="py-20">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
-              Cutting-Edge Technology
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Revolutionary solutions that define the future of technology and business innovation
-            </p>
-          </div>
-          
-          <div className="grid lg:grid-cols-2 gap-8">
-            <div className="bg-gradient-to-br from-gray-800 to-gray-900 p-8 rounded-2xl border border-gray-700 hover:border-cyan-500 transition-all duration-300">
-              <div className="flex items-center mb-6">
-                <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-pink-600 rounded-2xl flex items-center justify-center mr-4">
-                  <div className="text-2xl">⚛️</div>
-                </div>
-                <div>
-                  <h3 className="text-2xl font-bold text-white">Quantum Computing</h3>
-                  <p className="text-cyan-400 font-semibold">Revolutionary Technology</p>
-                </div>
-              </div>
-              <p className="text-gray-300 mb-6">
-                Access quantum computing power for cryptography, machine learning, and optimization problems that are impossible for classical computers.
-              </p>
-              <div className="grid grid-cols-2 gap-4 mb-6">
-                <div className="bg-gray-700/50 p-3 rounded-lg">
-                  <div className="text-sm text-gray-400">Starting Price</div>
-                  <div className="text-lg font-bold text-cyan-400">$2,500/month</div>
-                </div>
-                <div className="bg-gray-700/50 p-3 rounded-lg">
-                  <div className="text-sm text-gray-400">ROI</div>
-                  <div className="text-lg font-bold text-green-400">200-400%</div>
-                </div>
-              </div>
-              <Link 
-                to="/services"
-                className="inline-flex items-center text-cyan-400 hover:text-cyan-300 font-semibold group"
-              >
-                Explore Quantum Solutions
-                <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
-              </Link>
-            </div>
-
-            <div className="bg-gradient-to-br from-gray-800 to-gray-900 p-8 rounded-2xl border border-gray-700 hover:border-cyan-500 transition-all duration-300">
-              <div className="flex items-center mb-6">
-                <div className="w-16 h-16 bg-gradient-to-br from-green-500 to-teal-600 rounded-2xl flex items-center justify-center mr-4">
-                  <div className="text-2xl">🧠</div>
-                </div>
-                <div>
-                  <h3 className="text-2xl font-bold text-white">AI Healthcare Diagnostics</h3>
-                  <p className="text-cyan-400 font-semibold">Medical Innovation</p>
-                </div>
-              </div>
-              <p className="text-gray-300 mb-6">
-                Advanced medical diagnostics using AI to analyze medical images, predict diseases, and provide treatment recommendations.
-              </p>
-              <div className="grid grid-cols-2 gap-4 mb-6">
-                <div className="bg-gray-700/50 p-3 rounded-lg">
-                  <div className="text-sm text-gray-400">Starting Price</div>
-                  <div className="text-lg font-bold text-cyan-400">$4,500/month</div>
-                </div>
-                <div className="bg-gray-700/50 p-3 rounded-lg">
-                  <div className="text-sm text-gray-400">ROI</div>
-                  <div className="text-lg font-bold text-green-400">350-600%</div>
-                </div>
-              </div>
-              <Link 
-                to="/services"
-                className="inline-flex items-center text-cyan-400 hover:text-cyan-300 font-semibold group"
-              >
-                Explore Healthcare AI
-                <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
-              </Link>
-            </div>
-
-            <div className="bg-gradient-to-br from-gray-800 to-gray-900 p-8 rounded-2xl border border-gray-700 hover:border-cyan-500 transition-all duration-300">
-              <div className="flex items-center mb-6">
-                <div className="w-16 h-16 bg-gradient-to-br from-red-500 to-orange-600 rounded-2xl flex items-center justify-center mr-4">
-                  <div className="text-2xl">🛡️</div>
-                </div>
-                <div>
-                  <h3 className="text-2xl font-bold text-white">AI Threat Detection</h3>
-                  <p className="text-cyan-400 font-semibold">Cybersecurity</p>
-                </div>
-              </div>
-              <p className="text-gray-300 mb-6">
-                Real-time cybersecurity threat detection using machine learning to identify and respond to advanced persistent threats.
-              </p>
-              <div className="grid grid-cols-2 gap-4 mb-6">
-                <div className="bg-gray-700/50 p-3 rounded-lg">
-                  <div className="text-sm text-gray-400">Starting Price</div>
-                  <div className="text-lg font-bold text-cyan-400">$3,999/month</div>
-                </div>
-                <div className="bg-gray-700/50 p-3 rounded-lg">
-                  <div className="text-sm text-gray-400">ROI</div>
-                  <div className="text-lg font-bold text-green-400">300-500%</div>
-                </div>
-              </div>
-              <Link 
-                to="/services"
-                className="inline-flex items-center text-cyan-400 hover:text-cyan-300 font-semibold group"
-              >
-                Explore Security Solutions
-                <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
-              </Link>
-            </div>
-
-            <div className="bg-gradient-to-br from-gray-800 to-gray-900 p-8 rounded-2xl border border-gray-700 hover:border-cyan-500 transition-all duration-300">
-              <div className="flex items-center mb-6">
-                <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-indigo-600 rounded-2xl flex items-center justify-center mr-4">
-                  <div className="text-2xl">🏗️</div>
-                </div>
-                <div>
-                  <h3 className="text-2xl font-bold text-white">Smart City IoT</h3>
-                  <p className="text-cyan-400 font-semibold">Urban Innovation</p>
-                </div>
-              </div>
-              <p className="text-gray-300 mb-6">
-                Comprehensive IoT platform for smart cities that optimizes urban services and improves citizen quality of life.
-              </p>
-              <div className="grid grid-cols-2 gap-4 mb-6">
-                <div className="bg-gray-700/50 p-3 rounded-lg">
-                  <div className="text-sm text-gray-400">Starting Price</div>
-                  <div className="text-lg font-bold text-cyan-400">$3,800/month</div>
-                </div>
-                <div className="bg-gray-700/50 p-3 rounded-lg">
-                  <div className="text-sm text-gray-400">ROI</div>
-                  <div className="text-lg font-bold text-green-400">280-450%</div>
-                </div>
-              </div>
-              <Link 
-                to="/services"
-                className="inline-flex items-center text-cyan-400 hover:text-cyan-300 font-semibold group"
-              >
-                Explore Smart City Solutions
-                <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
-              </Link>
-            </div>
-          </div>
-
-          <div className="text-center mt-12">
-            <Link 
-              to="/services"
-              className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105"
-            >
-              View All Cutting-Edge Solutions
-              <ArrowRight className="w-5 h-5 ml-2" />
-            </Link>
-          </div>
-        </div>
-      </section>
-
-      {/* Industry Solutions Section */}
-      <section className="py-20">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
-              Industry Solutions
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Tailored solutions designed for specific industry challenges and opportunities
-            </p>
-          </div>
-          
-          <div className="grid md:grid-cols-3 gap-8">
-            {industrySolutions.map((solution, index) => (
-              <div key={index} className="bg-gradient-to-br from-gray-800 to-gray-900 p-8 rounded-2xl border border-gray-700 hover:border-cyan-500 transition-all duration-300 hover:transform hover:scale-105">
-                <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-pink-600 rounded-2xl flex items-center justify-center mb-6">
-                  <solution.icon className="w-8 h-8 text-white" />
-                </div>
-                <h3 className="text-2xl font-bold mb-4">{solution.title}</h3>
-                <p className="text-gray-300 mb-6">{solution.description}</p>
-                <ul className="space-y-2 mb-6">
-                  {solution.features.map((feature, idx) => (
-                    <li key={idx} className="flex items-center text-gray-300">
-                      <CheckCircle className="w-5 h-5 text-purple-400 mr-3 flex-shrink-0" />
-                      {feature}
-                    </li>
-                  ))}
-                </ul>
-                <Link 
-                  to={solution.path}
-                  className="inline-flex items-center text-purple-400 hover:text-purple-300 font-semibold group"
-                >
-                  Explore Solutions
-                  <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
-                </Link>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Why Choose Us Section */}
-      <section className="py-20 bg-black/30">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
-              Why Choose Zion Tech Group?
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              We combine cutting-edge technology with proven expertise to deliver exceptional results
-            </p>
-          </div>
-          
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {whyChooseUs.map((reason, index) => (
-              <div key={index} className="text-center group">
-                <div className="w-20 h-20 bg-gradient-to-br from-cyan-500 to-blue-600 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
-                  <reason.icon className="w-10 h-10 text-white" />
-                </div>
-                <h3 className="text-xl font-bold mb-3">{reason.title}</h3>
-                <p className="text-gray-300">{reason.description}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Trust Signals Section */}
-      <section className="py-20">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
-              Trusted by Businesses Worldwide
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Our commitment to excellence and customer success has made us a trusted partner
-            </p>
-          </div>
-          
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {trustSignals.map((signal, index) => (
-              <div key={index} className="text-center group">
-                <div className="w-16 h-16 bg-gradient-to-br from-green-500 to-emerald-600 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
-                  <signal.icon className="w-8 h-8 text-white" />
-                </div>
-                <h3 className="text-xl font-bold mb-3">{signal.label}</h3>
-                <p className="text-gray-300">{signal.description}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-cyan-600 to-blue-700">
-        <div className="max-w-4xl mx-auto text-center px-6">
-          <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white">
-            Ready to Transform Your Business?
-          </h2>
-          <p className="text-xl text-cyan-100 mb-8">
-            Join hundreds of businesses that have already revolutionized their operations with our AI-powered solutions
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link 
-              to="/contact" 
-              className="px-8 py-4 bg-white text-cyan-600 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300 transform hover:scale-105"
-            >
-              Start Your Journey
-            </Link>
-            <Link 
-              to="/services" 
-              className="px-8 py-4 border-2 border-white text-white rounded-lg font-semibold hover:bg-white hover:text-cyan-600 transition-all duration-300"
-            >
-              Explore Services
-            </Link>
-          </div>
-        </div>
-      </section>
-
-      {/* Lazy Loaded Sections */}
-      <Suspense fallback={<LoadingFallback message="Loading services..." />}>
-        <LazyServicesSection />
-      </Suspense>
-      
-      <Suspense fallback={<LoadingFallback message="Loading features..." />}>
-        <LazyFeaturesSection />
-      </Suspense>
-      
-      <Suspense fallback={<LoadingFallback message="Loading testimonials..." />}>
-        <LazyTestimonialsSection />
-      </Suspense>
-      
-      <Suspense fallback={<LoadingFallback message="Loading CTA..." />}>
-        <LazyCTASection />
-      </Suspense>
-
-      <FeatureHighlights />
-      <CategoriesSection />
-      <BenefitsSection />
-      <HowItWorksSection />
-      <TechSolutionsSection />
-      <CaseStudiesSection />
-      <TeamExpertiseSection />
-      <GlobalPresenceSection />
-      <InnovationResearchSection />
-      <ClientSuccessStoriesSection />
-      <InteractiveTestimonials />
-      <TechnologyStackSection />
-      <SecurityComplianceSection />
-      <PricingSection />
-      <FeaturedListingsSection />
-      <NewsletterSection />
-      <ITServiceRequestHero />
-      <FloatingCTA />
-    </>
-import { AnimatedBackground, FloatingParticles } from "@/components/ui/AnimatedBackground";
-
-// Lazy load heavy components for better performance
-const InteractiveServiceShowcase = React.lazy(() => import('@/components/InteractiveServiceShowcase'));
->>>>>>> 829a8669c1e (Add cutting-edge technology showcase section to Home page)
-
-// Animation variants for smooth performance
-const containerVariants = {
-  hidden: { opacity: 0 },
-  visible: {
-    opacity: 1,
-    transition: {
-      staggerChildren: 0.1,
-      delayChildren: 0.2
-    }
-  }
-};
-
-const itemVariants = {
-  hidden: { opacity: 0, y: 20 },
-  visible: {
-    opacity: 1,
-    y: 0,
-    transition: {
-      duration: 0.6,
-      ease: "easeOut"
-    }
-  }
-};
-
-// Stats data
-const stats = [
-  {
-    icon: Users,
-    value: "500+",
-    label: "Global Clients",
-    description: "Trusted worldwide"
-  },
-  {
-    icon: Rocket,
-    value: "1000+",
-    label: "Projects Delivered",
-    description: "Successfully completed"
-  },
-  {
-    icon: TrendingUp,
-    value: "99.9%",
-    label: "Uptime SLA",
-    description: "Enterprise reliability"
-  },
-  {
-    icon: Star,
-    value: "24/7",
-    label: "Expert Support",
-    description: "Always available"
-  }
-];
-
-// AI Services data
-const aiServices = [
-  {
-    icon: Brain,
-    title: "AI Business Intelligence",
-    description: "Transform your data into actionable insights with our advanced AI analytics platform.",
-    path: "/services/ai-business-intelligence",
-    features: [
-      "Predictive Analytics",
-      "Real-time Dashboards",
-      "Automated Reporting",
-      "Custom ML Models"
-    ]
-  },
-  {
-    icon: Cloud,
-    title: "Cloud DevOps",
-    description: "Streamline your development pipeline with automated cloud infrastructure.",
-    path: "/services/cloud-devops",
-    features: [
-      "CI/CD Automation",
-      "Infrastructure as Code",
-      "Container Orchestration",
-      "Security Integration"
-    ]
-  },
-  {
-    icon: Shield,
-    title: "AI Cybersecurity",
-    description: "Protect your business with intelligent threat detection and response systems.",
-    path: "/services/ai-cybersecurity-suite",
-    features: [
-      "Threat Intelligence",
-      "Automated Response",
-      "Zero Trust Architecture",
-      "Compliance Monitoring"
-    ]
-  }
-];
-
-// Why Choose Us data
-const whyChooseUs = [
-  {
-    icon: Award,
-    title: "Industry Expertise",
-    description: "15+ years of proven technology leadership and innovation"
-  },
-  {
-    icon: Globe,
-    title: "Global Reach",
-    description: "Serving clients across 50+ countries with 24/7 support"
-  },
-  {
-    icon: Shield,
-    title: "Enterprise Security",
-    description: "Bank-grade security and compliance standards"
-  },
-  {
-    icon: Heart,
-    title: "Customer Success",
-    description: "98% customer satisfaction with dedicated success managers"
-  }
-];
-
-// Trust Signals data
-const trustSignals = [
-  {
-    icon: Award,
-    label: "ISO 27001 Certified",
-    description: "Information security management"
-  },
-  {
-    icon: Shield,
-    label: "SOC 2 Compliant",
-    description: "Security, availability, and confidentiality"
-  },
-  {
-    icon: Globe,
-    label: "GDPR Ready",
-    description: "Data protection compliance"
-  },
-  {
-    icon: Star,
-    label: "99.9% Uptime",
-    description: "Enterprise-grade reliability"
-  }
-];
 
 export default function Home() {
   const [isVisible, setIsVisible] = useState(false);
@@ -747,28 +105,29 @@ export default function Home() {
     setIsVisible(true);
   }, []);
 
-
   return (
-    <div className="min-h-screen bg-slate-900 relative overflow-hidden">
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO 
-        title="Zion Tech Group - Leading AI & Technology Solutions" 
-        description="Transform your business with Zion's cutting-edge AI solutions, cloud services, cybersecurity, and digital transformation expertise. Join the future of technology."
-        keywords="AI solutions, cloud services, cybersecurity, digital transformation, technology consulting, Zion Tech Group"
-        canonical="https://ziontechgroup.com/"
+        title="Zion Tech Group - AI-Powered Business Solutions & Technology Services"
+        description="Transform your business with cutting-edge AI solutions, cloud services, cybersecurity, and digital transformation. Expert technology consulting for modern enterprises."
+        keywords="AI solutions, cloud services, cybersecurity, digital transformation, technology consulting, business intelligence, IoT, blockchain, quantum computing"
+        image="/images/zion-tech-group-hero.jpg"
+        url="https://ziontechgroup.com"
+        type="website"
       />
 
-      {/* Hero Section */}
-      <HeroSection />
+      {/* Enhanced Hero Section */}
+      <EnhancedHeroSection />
 
-      {/* Service Categories Overview */}
+      {/* Service Categories Section */}
       <motion.section 
-        className="py-24 bg-gradient-to-b from-slate-800/50 to-slate-900/50 backdrop-blur-sm relative"
+        className="py-24 bg-gradient-to-b from-slate-800 to-slate-900"
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         viewport={{ once: true, margin: "-100px" }}
         transition={{ duration: 0.8 }}
       >
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div 
             className="text-center mb-20"
             initial={{ y: 30, opacity: 0 }}
@@ -777,26 +136,24 @@ export default function Home() {
             transition={{ duration: 0.8 }}
           >
             <h2 className="text-5xl md:text-6xl font-bold text-white mb-8">
-              Our <span className="bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent">Service Categories</span>
+              Explore Our <span className="bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">Services</span>
             </h2>
-            <p className="text-xl md:text-2xl text-slate-300 max-w-4xl mx-auto leading-relaxed">
-              Explore our comprehensive range of technology solutions designed to transform your business and drive innovation
+            <p className="text-xl md:text-2xl text-slate-300 max-w-3xl mx-auto">
+              Comprehensive technology solutions designed to drive innovation and business growth
             </p>
           </motion.div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-10">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {serviceCategories.map((category, index) => (
               <motion.div
                 key={category.name}
                 initial={{ y: 30, opacity: 0 }}
                 whileInView={{ y: 0, opacity: 1 }}
                 viewport={{ once: true }}
-                transition={{ duration: 0.8, delay: index * 0.1 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
                 className="group"
-                whileHover={{ y: -8, scale: 1.02 }}
-                transition={{ type: "spring", stiffness: 300, damping: 20 }}
               >
-                <Link to={category.href} className="block h-full">
+                <Link to={category.href} className="block">
                   <div className="bg-slate-800/50 backdrop-blur-md p-8 rounded-3xl border border-slate-700/50 hover:border-cyan-500/50 transition-all duration-500 hover:shadow-2xl hover:shadow-cyan-500/25 h-full flex flex-col justify-between">
                     <div>
                       <div className={`w-20 h-20 bg-gradient-to-r ${category.color} rounded-2xl flex items-center justify-center mb-6 mx-auto group-hover:scale-110 transition-transform duration-500 shadow-lg`}>
@@ -822,6 +179,10 @@ export default function Home() {
         </div>
       </motion.section>
 
+      {/* Enhanced Services Showcase */}
+      <Suspense fallback={<LoadingFallback message="Loading services showcase..." />}>
+        <EnhancedServicesShowcase />
+      </Suspense>
 
       {/* Featured Services Section */}
       <motion.section 
