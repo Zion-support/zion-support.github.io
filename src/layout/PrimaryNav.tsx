@@ -156,7 +156,7 @@ export function PrimaryNav() {
                   </Link>
                 </>
               )}
-              {isLoggedIn && <UserMenu />}
+            {isLoggedIn && <UserMenu />}
             </div>
           </div>
           

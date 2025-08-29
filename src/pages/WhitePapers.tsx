@@ -1,38 +1,7 @@
+
 import React, { useState } from 'react';
-import { SEO } from '../components/SEO';
-import { 
-  BookOpen, 
-  Download, 
-  Search, 
-  Filter, 
-  ArrowRight, 
-  Calendar, 
-  User, 
-  Eye, 
-  Star,
-  TrendingUp,
-  FileText,
-  Globe,
-  Building,
-  Brain,
-  Shield,
-  Zap,
-  Rocket,
-  Cpu,
-  Database,
-  Network,
-  Lock,
-  Heart,
-  Leaf,
-  Sun,
-  Moon,
-  Star as StarIcon,
-  Award,
-  CheckCircle,
-  ExternalLink,
-  ChevronDown,
-  ChevronUp
-} from 'lucide-react';
+import { FileText, Download, Search, Filter, Calendar, Clock, Users, Star, Eye, ArrowRight, BookOpen, Brain, Cloud, Shield, Database, Zap, Globe, Target, TrendingUp, Award } from 'lucide-react';
+import { SEO } from '@/components/SEO';
 
 export default function WhitePapers() {
   const [selectedCategory, setSelectedCategory] = useState('All');
