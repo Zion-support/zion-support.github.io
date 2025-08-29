@@ -8,25 +8,17 @@ export const loginUser = createAsyncThunk(
       // Simulate API call
       const response = await new Promise((resolve) => {
         setTimeout(() => {
-          if (credentials.email && credentials.password) {
-            resolve({
-              user: {
-                id: 1,
-                email: credentials.email,
-                name: 'John Doe',
-                role: 'user'
-              },
-              token: 'mock-jwt-token'
-            });
-          } else {
-            reject(new Error('Invalid credentials'));
-          }
+          resolve({
+            user: {
+              id: 1,
+              email: credentials.email,
+              name: 'John Doe',
+              role: 'user'
+            },
+            token: 'mock-jwt-token'
+          });
         }, 1000);
       });
-      
-      // Store token in localStorage
-      localStorage.setItem('token', response.token);
-      localStorage.setItem('user', JSON.stringify(response.user));
       
       return response;
     } catch (error) {
@@ -75,9 +67,11 @@ export const logoutUser = createAsyncThunk(
   'auth/logoutUser',
   async (_, { rejectWithValue }) => {
     try {
-      // Clear localStorage
-      localStorage.removeItem('token');
-      localStorage.removeItem('user');
+      // Simulate API call
+      await new Promise((resolve) => {
+        setTimeout(resolve, 500);
+      });
+      
       return null;
     } catch (error) {
       return rejectWithValue(error.message);
@@ -109,7 +103,7 @@ export const checkAuthStatus = createAsyncThunk(
 
 const initialState = {
   user: null,
-  token: localStorage.getItem('token'),
+  token: null,
   isAuthenticated: false,
   isLoading: false,
   error: null
@@ -139,9 +133,9 @@ const authSlice = createSlice({
       })
       .addCase(loginUser.fulfilled, (state, action) => {
         state.isLoading = false;
-        state.isAuthenticated = true;
         state.user = action.payload.user;
         state.token = action.payload.token;
+        state.isAuthenticated = true;
         state.error = null;
       })
       .addCase(loginUser.rejected, (state, action) => {
@@ -174,9 +168,9 @@ const authSlice = createSlice({
       })
       .addCase(logoutUser.fulfilled, (state) => {
         state.isLoading = false;
-        state.isAuthenticated = false;
         state.user = null;
         state.token = null;
+        state.isAuthenticated = false;
         state.error = null;
       })
       .addCase(logoutUser.rejected, (state, action) => {
