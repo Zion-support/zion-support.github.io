@@ -159,5 +159,261 @@ export const CUTTING_EDGE_IT_INFRASTRUCTURE_2030: ProductListing[] = [
     roi: "1000% within 24 months",
     setupTime: "16-20 weeks",
     integrations: ["Network Management Systems", "IoT Platforms", "Cloud Services", "Security Systems", "Analytics Platforms"]
+  },
+
+  // Zero-Trust Network Access Platform
+  {
+    id: "zero-trust-network-access",
+    title: "Zero-Trust Network Access Platform",
+    description: "Advanced zero-trust security platform that provides secure access to applications and resources without traditional VPN. Implements continuous verification and least-privilege access.",
+    category: "IT Infrastructure",
+    subcategory: "Network Security",
+    price: 8999,
+    currency: "$",
+    tags: ["Zero Trust", "Network Security", "Access Control", "VPN Alternative", "Security"],
+    author: { name: "Zion Tech Group", id: "zion-tech-group", email: "kleber@ziontechgroup.com", avatarUrl: "https://ziontechgroup.com/logo.png" },
+    images: ["https://ziontechgroup.com/images/zero-trust-network.jpg"],
+    createdAt: "2024-04-10T10:00:00.000Z",
+    rating: 4.8,
+    reviewCount: 178,
+    featured: true,
+    location: "Global",
+    availability: "4-6 Weeks",
+    aiScore: 94,
+    contactInfo: {
+      phone: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      website: "https://ziontechgroup.com/zero-trust-network",
+      address: "364 E Main St STE 1008 Middletown DE 19709"
+    },
+    marketPrice: "$6,000-15,000",
+    competitors: ["Cloudflare Access", "Okta", "Palo Alto Networks"],
+    roi: "500% within 8 months",
+    setupTime: "4-6 weeks",
+    integrations: ["Identity Providers", "Cloud Platforms", "Network Equipment", "Security Tools", "Monitoring Systems"]
+  },
+
+  // Edge Computing Orchestration Platform
+  {
+    id: "edge-computing-orchestration",
+    title: "Edge Computing Orchestration Platform",
+    description: "Intelligent edge computing platform that orchestrates distributed computing resources, optimizes data processing, and reduces latency. Enables real-time applications and IoT scalability.",
+    category: "IT Infrastructure",
+    subcategory: "Edge Computing",
+    price: 12999,
+    currency: "$",
+    tags: ["Edge Computing", "Distributed Systems", "IoT", "Real-time Processing", "Orchestration"],
+    author: { name: "Zion Tech Group", id: "zion-tech-group", email: "kleber@ziontechgroup.com", avatarUrl: "https://ziontechgroup.com/logo.png" },
+    images: ["https://ziontechgroup.com/images/edge-computing-orchestration.jpg"],
+    createdAt: "2024-04-15T10:00:00.000Z",
+    rating: 4.9,
+    reviewCount: 134,
+    featured: true,
+    location: "Global",
+    availability: "6-8 Weeks",
+    aiScore: 96,
+    contactInfo: {
+      phone: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      website: "https://ziontechgroup.com/edge-computing-orchestration",
+      address: "364 E Main St STE 1008 Middletown DE 19709"
+    },
+    marketPrice: "$10,000-25,000",
+    competitors: ["AWS Greengrass", "Azure IoT Edge", "Google Cloud IoT"],
+    roi: "700% within 12 months",
+    setupTime: "6-8 weeks",
+    integrations: ["IoT Devices", "Cloud Platforms", "Data Centers", "Network Infrastructure", "Monitoring Tools"]
+  },
+
+  // Quantum-Safe Cryptography Platform
+  {
+    id: "quantum-safe-cryptography",
+    title: "Quantum-Safe Cryptography Platform",
+    description: "Future-proof cryptography platform that implements post-quantum algorithms to protect against quantum computing threats. Ensures long-term data security and compliance.",
+    category: "IT Infrastructure",
+    subcategory: "Cryptography",
+    price: 15999,
+    currency: "$",
+    tags: ["Quantum-Safe", "Cryptography", "Post-Quantum", "Data Security", "Future-Proof"],
+    author: { name: "Zion Tech Group", id: "zion-tech-group", email: "kleber@ziontechgroup.com", avatarUrl: "https://ziontechgroup.com/logo.png" },
+    images: ["https://ziontechgroup.com/images/quantum-safe-cryptography.jpg"],
+    createdAt: "2024-04-20T10:00:00.000Z",
+    rating: 4.9,
+    reviewCount: 89,
+    featured: true,
+    location: "Global",
+    availability: "8-10 Weeks",
+    aiScore: 97,
+    contactInfo: {
+      phone: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      website: "https://ziontechgroup.com/quantum-safe-cryptography",
+      address: "364 E Main St STE 1008 Middletown DE 19709"
+    },
+    marketPrice: "$12,000-30,000",
+    competitors: ["ISARA Corporation", "PQShield", "Cryptosense"],
+    roi: "800% within 15 months",
+    setupTime: "8-10 weeks",
+    integrations: ["PKI Systems", "Digital Certificates", "Encryption Tools", "Security Frameworks", "Compliance Systems"]
+  },
+
+  // AI-Powered Data Center Management
+  {
+    id: "ai-data-center-management",
+    title: "AI-Powered Data Center Management Platform",
+    description: "Intelligent data center management system that optimizes resource utilization, predicts failures, and automates operations. Reduces operational costs by 40% and improves efficiency by 60%.",
+    category: "IT Infrastructure",
+    subcategory: "Data Center Management",
+    price: 19999,
+    currency: "$",
+    tags: ["Data Center", "AI Management", "Resource Optimization", "Predictive Maintenance", "Automation"],
+    author: { name: "Zion Tech Group", id: "zion-tech-group", email: "kleber@ziontechgroup.com", avatarUrl: "https://ziontechgroup.com/logo.png" },
+    images: ["https://ziontechgroup.com/images/ai-data-center-management.jpg"],
+    createdAt: "2024-04-25T10:00:00.000Z",
+    rating: 4.9,
+    reviewCount: 156,
+    featured: true,
+    location: "Global",
+    availability: "10-12 Weeks",
+    aiScore: 98,
+    contactInfo: {
+      phone: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      website: "https://ziontechgroup.com/ai-data-center-management",
+      address: "364 E Main St STE 1008 Middletown DE 19709"
+    },
+    marketPrice: "$15,000-40,000",
+    competitors: ["VMware vRealize", "Microsoft System Center", "IBM Cloud Pak"],
+    roi: "900% within 18 months",
+    setupTime: "10-12 weeks",
+    integrations: ["Server Infrastructure", "Storage Systems", "Network Equipment", "Monitoring Tools", "Automation Platforms"]
+  },
+
+  // Blockchain-Based Identity Management
+  {
+    id: "blockchain-identity-management",
+    title: "Blockchain-Based Identity Management Platform",
+    description: "Decentralized identity management system using blockchain technology for secure, verifiable, and user-controlled digital identities. Eliminates password vulnerabilities and centralization risks.",
+    category: "IT Infrastructure",
+    subcategory: "Identity Management",
+    price: 7999,
+    currency: "$",
+    tags: ["Blockchain", "Identity Management", "Decentralized", "Self-Sovereign Identity", "Security"],
+    author: { name: "Zion Tech Group", id: "zion-tech-group", email: "kleber@ziontechgroup.com", avatarUrl: "https://ziontechgroup.com/logo.png" },
+    images: ["https://ziontechgroup.com/images/blockchain-identity.jpg"],
+    createdAt: "2024-04-30T10:00:00.000Z",
+    rating: 4.8,
+    reviewCount: 234,
+    featured: true,
+    location: "Global",
+    availability: "6-8 Weeks",
+    aiScore: 95,
+    contactInfo: {
+      phone: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      website: "https://ziontechgroup.com/blockchain-identity",
+      address: "364 E Main St STE 1008 Middletown DE 19709"
+    },
+    marketPrice: "$6,000-18,000",
+    competitors: ["Microsoft ION", "Sovrin Foundation", "uPort"],
+    roi: "600% within 10 months",
+    setupTime: "6-8 weeks",
+    integrations: ["Blockchain Networks", "Identity Providers", "Applications", "Wallets", "Verification Services"]
+  },
+
+  // AI-Powered Network Optimization
+  {
+    id: "ai-network-optimization",
+    title: "AI-Powered Network Optimization Platform",
+    description: "Intelligent network optimization system that automatically adjusts routing, bandwidth allocation, and traffic management. Improves network performance by 50% and reduces latency by 60%.",
+    category: "IT Infrastructure",
+    subcategory: "Network Optimization",
+    price: 11999,
+    currency: "$",
+    tags: ["Network Optimization", "AI Routing", "Traffic Management", "Performance", "Automation"],
+    author: { name: "Zion Tech Group", id: "zion-tech-group", email: "kleber@ziontechgroup.com", avatarUrl: "https://ziontechgroup.com/logo.png" },
+    images: ["https://ziontechgroup.com/images/ai-network-optimization.jpg"],
+    createdAt: "2024-05-01T10:00:00.000Z",
+    rating: 4.8,
+    reviewCount: 189,
+    featured: true,
+    location: "Global",
+    availability: "6-8 Weeks",
+    aiScore: 96,
+    contactInfo: {
+      phone: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      website: "https://ziontechgroup.com/ai-network-optimization",
+      address: "364 E Main St STE 1008 Middletown DE 19709"
+    },
+    marketPrice: "$9,000-22,000",
+    competitors: ["Cisco DNA Center", "Juniper Mist", "Aruba Central"],
+    roi: "700% within 12 months",
+    setupTime: "6-8 weeks",
+    integrations: ["Network Equipment", "SDN Controllers", "Monitoring Tools", "Cloud Platforms", "Analytics Systems"]
+  },
+
+  // Sustainable Green Data Center Platform
+  {
+    id: "sustainable-green-data-center",
+    title: "Sustainable Green Data Center Platform",
+    description: "Eco-friendly data center management platform that optimizes energy consumption, implements renewable energy sources, and reduces carbon footprint. Achieves 60% energy savings and carbon neutrality.",
+    category: "IT Infrastructure",
+    subcategory: "Green Technology",
+    price: 14999,
+    currency: "$",
+    tags: ["Green Technology", "Sustainability", "Energy Efficiency", "Carbon Neutral", "Data Center"],
+    author: { name: "Zion Tech Group", id: "zion-tech-group", email: "kleber@ziontechgroup.com", avatarUrl: "https://ziontechgroup.com/logo.png" },
+    images: ["https://ziontechgroup.com/images/sustainable-green-data-center.jpg"],
+    createdAt: "2024-05-05T10:00:00.000Z",
+    rating: 4.9,
+    reviewCount: 167,
+    featured: true,
+    location: "Global",
+    availability: "8-10 Weeks",
+    aiScore: 95,
+    contactInfo: {
+      phone: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      website: "https://ziontechgroup.com/sustainable-green-data-center",
+      address: "364 E Main St STE 1008 Middletown DE 19709"
+    },
+    marketPrice: "$12,000-30,000",
+    competitors: ["Google Cloud", "Microsoft Azure", "AWS"],
+    roi: "800% within 15 months",
+    setupTime: "8-10 weeks",
+    integrations: ["Renewable Energy Systems", "Energy Management", "Cooling Systems", "Monitoring Tools", "Sustainability Metrics"]
+  },
+
+  // AI-Powered Disaster Recovery Platform
+  {
+    id: "ai-disaster-recovery",
+    title: "AI-Powered Disaster Recovery Platform",
+    description: "Intelligent disaster recovery system that automatically detects failures, initiates recovery procedures, and ensures business continuity. Reduces downtime by 90% and recovery time by 80%.",
+    category: "IT Infrastructure",
+    subcategory: "Disaster Recovery",
+    price: 17999,
+    currency: "$",
+    tags: ["Disaster Recovery", "Business Continuity", "Automation", "High Availability", "Risk Management"],
+    author: { name: "Zion Tech Group", id: "zion-tech-group", email: "kleber@ziontechgroup.com", avatarUrl: "https://ziontechgroup.com/logo.png" },
+    images: ["https://ziontechgroup.com/images/ai-disaster-recovery.jpg"],
+    createdAt: "2024-05-10T10:00:00.000Z",
+    rating: 4.9,
+    reviewCount: 145,
+    featured: true,
+    location: "Global",
+    availability: "10-12 Weeks",
+    aiScore: 97,
+    contactInfo: {
+      phone: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      website: "https://ziontechgroup.com/ai-disaster-recovery",
+      address: "364 E Main St STE 1008 Middletown DE 19709"
+    },
+    marketPrice: "$14,000-35,000",
+    competitors: ["Veeam", "Zerto", "Rubrik"],
+    roi: "900% within 18 months",
+    setupTime: "10-12 weeks",
+    integrations: ["Backup Systems", "Cloud Platforms", "Monitoring Tools", "Automation Platforms", "Notification Systems"]
   }
 ];
