@@ -519,6 +519,6 @@ export const COMPREHENSIVE_PRICING_GUIDE_2025 = {
       "Vulnerability assessments"
     ]
   }
-};
+];
 
 export default COMPREHENSIVE_PRICING_GUIDE_2025;

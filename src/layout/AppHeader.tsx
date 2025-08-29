@@ -1,4 +1,4 @@
-import { ArrowRight, Atom, BookOpen, Brain, Building, Building2, ChevronDown, Cloud, Code, Cpu, DollarSign, FileText, Globe, HeartHandshake, Heart, HelpCircle, Leaf, Lock, Mail, MapPin, Menu, MessageCircle, PenTool, Phone, Rocket, Scale, Search, Settings, Shield, ShoppingCart, Star, Target, TrendingUp, Users, X, Zap } from 'lucide-react';
+import { ArrowRight, Atom, BarChart3, BookOpen, Brain, Building, Building2, ChevronDown, Cloud, Code, Cpu, DollarSign, FileText, Globe, HeartHandshake, Heart, HelpCircle, Leaf, Lock, Mail, MapPin, Menu, MessageCircle, PenTool, Phone, Rocket, Scale, Search, Server, Settings, Shield, ShoppingCart, Star, Target, TrendingUp, Users, X, Zap } from 'lucide-react';
 import React, { useEffect, useState, useRef, useCallback } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { ThemeToggle } from '../components/ThemeToggle';
@@ -171,15 +171,41 @@ export function AppHeader() {
       icon: Globe, 
       description: 'Virtual Replicas & Simulation',
       featured: true,
-      color: 'from-indigo-500 to-purple-500'
+      color: 'from-blue-500 to-cyan-500',
+      price: 'Custom Pricing',
+      category: 'IoT & Edge Computing'
     },
     { 
       name: 'Cloud & DevOps', 
       href: '/services/cloud-devops', 
       icon: Cloud, 
       description: 'Infrastructure & Automation',
-      featured: false,
+      featured: true,
       color: 'from-blue-500 to-cyan-500'
+    },
+    { 
+      name: 'Data Analytics & BI', 
+      href: '/services/data-analytics', 
+      icon: BarChart3, 
+      description: 'Business Intelligence & Analytics',
+      featured: true,
+      color: 'from-purple-500 to-pink-500'
+    },
+    { 
+      name: 'IT Infrastructure', 
+      href: '/services/it-infrastructure', 
+      icon: Server, 
+      description: 'Server & Network Management',
+      featured: true,
+      color: 'from-green-500 to-emerald-500'
+    },
+    { 
+      name: 'Micro SaaS Products', 
+      href: '/services/micro-saas', 
+      icon: Zap, 
+      description: 'Specialized Software Solutions',
+      featured: true,
+      color: 'from-orange-500 to-red-500'
     }
   ];
 
@@ -213,8 +239,24 @@ export function AppHeader() {
       href: '/solutions/government-defense', 
       icon: Shield, 
       description: 'Secure government solutions',
-      featured: false,
+      featured: true,
       color: 'from-red-500 to-orange-500'
+    },
+    { 
+      name: 'Healthcare Solutions', 
+      href: '/solutions/healthcare', 
+      icon: Heart, 
+      description: 'Medical & health technology',
+      featured: true,
+      color: 'from-red-500 to-pink-500'
+    },
+    { 
+      name: 'Financial Services', 
+      href: '/solutions/financial', 
+      icon: DollarSign, 
+      description: 'Fintech & banking solutions',
+      featured: true,
+      color: 'from-yellow-500 to-orange-500'
     }
   ];
 
@@ -248,7 +290,7 @@ export function AppHeader() {
       href: '/webinars', 
       icon: Users, 
       description: 'Live events & training',
-      featured: false,
+      featured: true,
       color: 'from-orange-500 to-red-500'
     },
     { 
@@ -256,8 +298,32 @@ export function AppHeader() {
       href: '/white-papers', 
       icon: FileText, 
       description: 'In-depth research & analysis',
-      featured: false,
+      featured: true,
       color: 'from-indigo-500 to-purple-500'
+    },
+    { 
+      name: 'FAQ', 
+      href: '/faq', 
+      icon: HelpCircle, 
+      description: 'Frequently asked questions',
+      featured: true,
+      color: 'from-cyan-500 to-blue-500'
+    },
+    { 
+      name: 'Pricing', 
+      href: '/pricing', 
+      icon: DollarSign, 
+      description: 'Transparent pricing plans',
+      featured: true,
+      color: 'from-yellow-500 to-orange-500'
+    },
+    { 
+      name: 'Get Support', 
+      href: '/support', 
+      icon: MessageCircle, 
+      description: 'Technical support & help',
+      featured: true,
+      color: 'from-green-500 to-cyan-500'
     }
   ];
 

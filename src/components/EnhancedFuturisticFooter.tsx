@@ -162,13 +162,14 @@ export const EnhancedFuturisticFooter: React.FC = () => {
         { name: 'About Us', href: '/about', featured: true },
         { name: 'Contact', href: '/contact', featured: true },
         { name: 'Partners', href: '/partners', featured: true },
-        { name: 'Careers', href: '/careers', featured: false },
+        { name: 'Careers', href: '/careers', featured: true },
+        { name: 'Support Center', href: '/support', featured: true },
         { name: 'Privacy Policy', href: '/privacy', featured: false },
         { name: 'Terms of Service', href: '/terms', featured: false },
         { name: 'Cookie Policy', href: '/cookies', featured: false },
         { name: 'Dashboard', href: '/dashboard', featured: false },
         { name: 'Login', href: '/login', featured: false },
-        { name: 'Marketplace', href: '/marketplace', featured: false }
+        { name: 'Marketplace', href: '/marketplace', featured: true }
       ]
     }
   ];
@@ -191,11 +192,11 @@ export const EnhancedFuturisticFooter: React.FC = () => {
 
   const quickActions = [
     { name: 'Request Quote', href: '/request-quote', icon: MessageCircle, featured: true },
-    { name: 'View Pricing', href: '/pricing', icon: DollarSign, featured: false },
-    { name: 'Schedule Demo', href: '/demo', icon: Play, featured: false },
-    { name: 'Get Support', href: '/support', icon: HelpCircle, featured: false },
-    { name: 'Join Community', href: '/community', icon: Users, featured: false },
-    { name: 'Partner Program', href: '/partners', icon: Users, featured: false }
+    { name: 'View Pricing', href: '/pricing', icon: DollarSign, featured: true },
+    { name: 'Schedule Demo', href: '/demo', icon: Play, featured: true },
+    { name: 'Get Support', href: '/support', icon: HelpCircle, featured: true },
+    { name: 'Join Community', href: '/community', icon: Users, featured: true },
+    { name: 'Partner Program', href: '/partners', icon: Users, featured: true }
   ];
 
   const scrollToTop = () => {
