@@ -474,5 +474,3 @@ export default function Cookies() {
     </div>
   );
 };
-
-export default Cookies;
