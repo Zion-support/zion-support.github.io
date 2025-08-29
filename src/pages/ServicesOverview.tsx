@@ -542,7 +542,7 @@ export default function ServicesOverview() {
                     {/* Description */}
                     <p className="text-gray-300 text-sm mb-4 line-clamp-3">
                       {service.description}
-                    </div>
+                    </p>
 
                     {/* Key Features */}
                     <div className="mb-4">

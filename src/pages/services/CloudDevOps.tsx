@@ -1,7 +1,7 @@
 import React from 'react';
 import { SEO } from '../../components/SEO';
 import { motion } from 'framer-motion';
-import { Cloud, Zap, Shield, Cpu, Database, Server, GitBranch, Docker, Kubernetes, Aws, Azure, Gcp, Monitor, BarChart3, Settings, Users, Globe, Lock, RefreshCw, TrendingUp } from 'lucide-react';
+import { Cloud, Zap, Shield, Cpu, Database, Server, GitBranch, Package, Box, Monitor, BarChart3, Settings, Users, Globe, Lock, RefreshCw, TrendingUp } from 'lucide-react';
 
 export default function CloudDevOps() {
   const features = [
@@ -12,7 +12,7 @@ export default function CloudDevOps() {
       color: 'from-blue-500 to-cyan-500'
     },
     {
-      icon: Docker,
+      icon: Package,
       title: 'Container Orchestration',
       description: 'Kubernetes and Docker expertise for scalable microservices architecture',
       color: 'from-indigo-500 to-purple-500'
@@ -71,11 +71,11 @@ export default function CloudDevOps() {
   ];
 
   const technologies = [
-    { name: 'AWS', icon: Aws, description: 'Amazon Web Services' },
-    { name: 'Azure', icon: Azure, description: 'Microsoft Azure' },
-    { name: 'GCP', icon: Gcp, description: 'Google Cloud Platform' },
-    { name: 'Kubernetes', icon: Kubernetes, description: 'Container orchestration' },
-    { name: 'Docker', icon: Docker, description: 'Containerization' },
+    { name: 'AWS', icon: Cloud, description: 'Amazon Web Services' },
+    { name: 'Azure', icon: Cloud, description: 'Microsoft Azure' },
+    { name: 'GCP', icon: Cloud, description: 'Google Cloud Platform' },
+    { name: 'Kubernetes', icon: Box, description: 'Container orchestration' },
+    { name: 'Docker', icon: Package, description: 'Containerization' },
     { name: 'Terraform', icon: Settings, description: 'Infrastructure as Code' }
   ];
 
