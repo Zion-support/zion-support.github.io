@@ -186,7 +186,8 @@ export const EnhancedFuturisticFooter: React.FC = () => {
 
   const quickLinks = [
     { name: 'Services Overview', href: '/services-overview' },
-    { name: 'Pricing Guide', href: '/pricing-guide' },
+    { name: 'Pricing Guide', href: '/pricing' },
+    { name: 'Services Comparison', href: '/services-comparison' },
     { name: 'Help Center', href: '/help' },
     { name: 'FAQ', href: '/faq' },
     { name: 'About Us', href: '/about' },
@@ -199,6 +200,7 @@ export const EnhancedFuturisticFooter: React.FC = () => {
     { name: 'About Us', href: '/about', description: 'Our story and mission' },
     { name: 'Team', href: '/team', description: 'Meet our experts' },
     { name: 'Careers', href: '/careers', description: 'Join our team' },
+    { name: 'News', href: '/news', description: 'Company updates' },
     { name: 'Blog', href: '/blog', description: 'Latest insights' },
     { name: 'Press', href: '/press', description: 'Media resources' },
     { name: 'Partners', href: '/partners', description: 'Strategic partnerships' }
@@ -208,9 +210,11 @@ export const EnhancedFuturisticFooter: React.FC = () => {
     { name: 'Help Center', href: '/help', description: 'Find answers to questions' },
     { name: 'Support Portal', href: '/support', description: 'Technical assistance' },
     { name: 'FAQ', href: '/faq', description: 'Frequently asked questions' },
+    { name: 'Status Page', href: '/status', description: 'System status' },
     { name: 'Documentation', href: '/docs', description: 'Technical guides' },
     { name: 'Training', href: '/training', description: 'Learning resources' },
-    { name: 'Webinars', href: '/webinars', description: 'Educational sessions' }
+    { name: 'Webinars', href: '/webinars', description: 'Educational sessions' },
+    { name: 'Community', href: '/community', description: 'User community' }
   ];
 
   const legalLinks = [
@@ -219,7 +223,8 @@ export const EnhancedFuturisticFooter: React.FC = () => {
     { name: 'Cookie Policy', href: '/cookies', description: 'Cookie usage' },
     { name: 'Accessibility', href: '/accessibility', description: 'Accessibility statement' },
     { name: 'Security', href: '/security', description: 'Security practices' },
-    { name: 'Compliance', href: '/compliance', description: 'Regulatory compliance' }
+    { name: 'Compliance', href: '/compliance', description: 'Regulatory compliance' },
+    { name: 'Sitemap', href: '/sitemap', description: 'Site navigation' }
   ];
 
   return (

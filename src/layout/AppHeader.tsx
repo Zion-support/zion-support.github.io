@@ -1,12 +1,14 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { Menu, X, Search, User, Bell, ChevronDown, Zap, Brain, Shield, Cloud, Rocket, Globe, Cpu, Lock, Heart, Users, ShoppingCart, BookOpen, MessageCircle, HelpCircle, DollarSign, Star, TrendingUp, Award, Settings, Phone, Mail, MapPin, Building } from 'lucide-react';
+import { Menu, X, Search, User, Bell, ChevronDown, Zap, Brain, Shield, Cloud, Rocket, Globe, Cpu, Lock, Heart, Users, ShoppingCart, BookOpen, MessageCircle, HelpCircle, DollarSign, Star, TrendingUp, Award, Settings, Phone, Mail, MapPin, Building, Sidebar as SidebarIcon } from 'lucide-react';
 import { ThemeToggle } from '../components/ThemeToggle';
 import { ZionLoadingSpinner } from '../components/ui/EnhancedLoadingSpinner';
 import { motion, AnimatePresence } from 'framer-motion';
+import { Sidebar } from '../components/Sidebar';
 
 export function AppHeader() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [sidebarOpen, setSidebarOpen] = useState(false);
   const [searchQuery, setSearchQuery] = useState('');
   const [servicesDropdownOpen, setServicesDropdownOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
@@ -38,7 +40,7 @@ export function AppHeader() {
     { name: 'Home', href: '/', current: true },
     { name: 'Services', href: '/services-overview', current: false, hasDropdown: true },
     { name: 'Solutions', href: '/ai-services', current: false, hasDropdown: true },
-    { name: 'Pricing', href: '/pricing-guide', current: false },
+    { name: 'Pricing', href: '/pricing', current: false },
     { name: 'Company', href: '/about', current: false, hasDropdown: true },
     { name: 'Support', href: '/help', current: false, hasDropdown: true },
     { name: 'Contact', href: '/contact', current: false },
@@ -75,7 +77,8 @@ export function AppHeader() {
         { name: 'Services Overview', href: '/services-overview', description: 'Complete service portfolio' },
         { name: 'AI Services', href: '/ai-services', description: 'AI-powered solutions' },
         { name: 'IT Services', href: '/it-services', description: 'Enterprise IT solutions' },
-        { name: 'Micro SaaS', href: '/micro-saas', description: 'Scalable software solutions' }
+        { name: 'Micro SaaS', href: '/micro-saas', description: 'Scalable software solutions' },
+        { name: 'Services Catalog', href: '/services-catalog', description: 'Browse all services' }
       ]
     },
     {
@@ -86,7 +89,8 @@ export function AppHeader() {
         { name: 'AI Business Intelligence', href: '/services/ai-business-intelligence', description: 'Machine Learning & Data Science' },
         { name: 'AI Sales Copilot', href: '/services/ai-sales-copilot', description: 'AI-powered sales automation' },
         { name: 'AI Compliance Assistant', href: '/services/ai-compliance-assistant', description: 'Regulatory compliance automation' },
-        { name: 'LLM Content Studio', href: '/services/llm-content-studio', description: 'AI content generation' }
+        { name: 'LLM Content Studio', href: '/services/llm-content-studio', description: 'AI content generation' },
+        { name: 'AI Content Generation', href: '/services/ai-content-generation-platform', description: 'Advanced content creation' }
       ]
     },
     {
@@ -96,7 +100,8 @@ export function AppHeader() {
       services: [
         { name: 'Cloud DevOps', href: '/services/cloud-devops', description: 'Infrastructure & Automation' },
         { name: 'Cloud FinOps Optimizer', href: '/services/cloud-finops-optimizer', description: 'Cost optimization' },
-        { name: 'FinOps Advisor', href: '/services/finops-advisor', description: 'Financial operations' }
+        { name: 'FinOps Advisor', href: '/services/finops-advisor', description: 'Financial operations' },
+        { name: 'Edge Computing', href: '/services/edge-computing-platform', description: 'Edge infrastructure' }
       ]
     },
     {
@@ -106,7 +111,8 @@ export function AppHeader() {
       services: [
         { name: 'Digital Twin', href: '/services/digital-twin', description: 'Simulation & Monitoring' },
         { name: 'IT Infrastructure', href: '/services/it-infrastructure', description: 'Enterprise infrastructure' },
-        { name: 'Data Analytics', href: '/services/data-analytics', description: 'Business intelligence' }
+        { name: 'Data Analytics', href: '/services/data-analytics', description: 'Business intelligence' },
+        { name: 'IoT Edge Computing', href: '/services/iot-edge', description: 'IoT solutions' }
       ]
     },
     {
@@ -115,7 +121,8 @@ export function AppHeader() {
       color: 'from-indigo-600 to-purple-600',
       services: [
         { name: 'AI Compliance Copilot', href: '/services/ai-compliance-copilot', description: 'AI-Powered Security' },
-        { name: 'Zero Trust Architecture', href: '/services/zero-trust-network-architecture', description: 'Advanced security' }
+        { name: 'Zero Trust Architecture', href: '/services/zero-trust-network-architecture', description: 'Advanced security' },
+        { name: 'AI Cybersecurity Suite', href: '/services/ai-cybersecurity-suite', description: 'Comprehensive security' }
       ]
     }
   ];
@@ -129,7 +136,8 @@ export function AppHeader() {
         { name: 'AI Business Intelligence', href: '/services/ai-business-intelligence', description: 'Machine Learning & Data Science' },
         { name: 'AI Sales Copilot', href: '/services/ai-sales-copilot', description: 'AI-powered sales automation' },
         { name: 'AI Compliance Assistant', href: '/services/ai-compliance-assistant', description: 'Regulatory compliance automation' },
-        { name: 'LLM Content Studio', href: '/services/llm-content-studio', description: 'AI content generation' }
+        { name: 'LLM Content Studio', href: '/services/llm-content-studio', description: 'AI content generation' },
+        { name: 'AI Content Generation', href: '/services/ai-content-generation-platform', description: 'Advanced content creation' }
       ]
     },
     {
@@ -139,7 +147,8 @@ export function AppHeader() {
       solutions: [
         { name: 'Quantum AI Platform', href: '/services/quantum-ai-platform', description: 'Next-gen quantum computing' },
         { name: 'AI Cybersecurity Suite', href: '/services/ai-cybersecurity-suite', description: 'Advanced security solutions' },
-        { name: 'AI Healthcare Analytics', href: '/services/ai-healthcare-analytics', description: 'Healthcare data insights' }
+        { name: 'AI Healthcare Analytics', href: '/services/ai-healthcare-analytics', description: 'Healthcare data insights' },
+        { name: 'Quantum Computing', href: '/services/quantum-computing', description: 'Quantum solutions' }
       ]
     },
     {
@@ -147,9 +156,10 @@ export function AppHeader() {
       icon: TrendingUp,
       color: 'from-green-600 to-emerald-600',
       solutions: [
-        { name: 'Innovative Services 2025', href: '/innovative-services-showcase-2025', icon: Star, description: 'Latest cutting-edge solutions' },
-        { name: 'Revolutionary Services 2030', href: '/revolutionary-services-showcase-2030', icon: TrendingUp, description: 'Future-ready services' },
-        { name: 'Pricing Guide 2030', href: '/pricing-2030', icon: DollarSign, description: 'Advanced pricing strategies' }
+        { name: 'Innovative Services 2025', href: '/innovative-services-showcase-2025', description: 'Latest cutting-edge solutions' },
+        { name: 'Revolutionary Services 2030', href: '/revolutionary-services-showcase-2030', description: 'Future-ready services' },
+        { name: 'Pricing Guide 2030', href: '/pricing-2030', description: 'Advanced pricing strategies' },
+        { name: 'Services Comparison', href: '/services-comparison', description: 'Compare all services' }
       ]
     }
   ];
@@ -158,6 +168,7 @@ export function AppHeader() {
     { name: 'Innovative Services 2025', href: '/innovative-services-showcase-2025', icon: Star, description: 'Latest cutting-edge solutions' },
     { name: 'Services Showcase', href: '/revolutionary-services-showcase-2030', icon: TrendingUp, description: 'Future-ready services' },
     { name: 'Pricing Guide 2030', href: '/pricing-2030', icon: DollarSign, description: 'Advanced pricing strategies' },
+    { name: 'Services Comparison', href: '/services-comparison', icon: TrendingUp, description: 'Compare all services' },
     { name: 'Request Quote', href: '/request-quote', icon: MessageCircle, description: 'Get custom pricing' },
   ];
 
@@ -170,7 +181,8 @@ export function AppHeader() {
         { name: 'About Us', href: '/about', description: 'Our story and mission' },
         { name: 'Team', href: '/team', description: 'Meet our experts' },
         { name: 'Careers', href: '/careers', description: 'Join our team' },
-        { name: 'Partners', href: '/partners', description: 'Strategic partnerships' }
+        { name: 'Partners', href: '/partners', description: 'Strategic partnerships' },
+        { name: 'News', href: '/news', description: 'Company updates' }
       ]
     },
     {
@@ -181,7 +193,8 @@ export function AppHeader() {
         { name: 'Blog', href: '/blog', description: 'Latest insights and news' },
         { name: 'Press', href: '/press', description: 'Media resources' },
         { name: 'Case Studies', href: '/case-studies', description: 'Success stories' },
-        { name: 'White Papers', href: '/white-papers', description: 'In-depth research' }
+        { name: 'White Papers', href: '/white-papers', description: 'In-depth research' },
+        { name: 'Webinars', href: '/webinars', description: 'Educational sessions' }
       ]
     }
   ];
@@ -195,7 +208,8 @@ export function AppHeader() {
         { name: 'Help Center', href: '/help', description: 'Find answers to questions' },
         { name: 'Support Portal', href: '/support', description: 'Technical assistance' },
         { name: 'FAQ', href: '/faq', description: 'Frequently asked questions' },
-        { name: 'Contact Support', href: '/contact', description: 'Get in touch' }
+        { name: 'Contact Support', href: '/contact', description: 'Get in touch' },
+        { name: 'Status Page', href: '/status', description: 'System status' }
       ]
     },
     {
@@ -206,7 +220,8 @@ export function AppHeader() {
         { name: 'Documentation', href: '/docs', description: 'Technical guides' },
         { name: 'Training', href: '/training', description: 'Learning resources' },
         { name: 'Webinars', href: '/webinars', description: 'Educational sessions' },
-        { name: 'Community', href: '/community', description: 'User community' }
+        { name: 'Community', href: '/community', description: 'User community' },
+        { name: 'Sitemap', href: '/sitemap', description: 'Site navigation' }
       ]
     }
   ];
@@ -270,6 +285,15 @@ export function AppHeader() {
 
             {/* Right side actions */}
             <div className="flex items-center space-x-4">
+              {/* Sidebar Toggle */}
+              <button
+                onClick={() => setSidebarOpen(!sidebarOpen)}
+                className="hidden lg:block p-2 rounded-lg text-slate-300 hover:text-white hover:bg-slate-800 transition-colors"
+                title="Toggle Sidebar"
+              >
+                <SidebarIcon className="w-5 h-5" />
+              </button>
+
               {/* Search */}
               <form onSubmit={handleSearch} className="hidden md:block relative">
                 <Search className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-slate-400" />
@@ -496,6 +520,9 @@ export function AppHeader() {
           </motion.div>
         )}
       </AnimatePresence>
+
+      {/* Sidebar */}
+      <Sidebar isOpen={sidebarOpen} onClose={() => setSidebarOpen(false)} />
     </>
   );
 }

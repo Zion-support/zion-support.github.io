@@ -37,6 +37,7 @@ export default function SitemapPage() {
         { name: "About Us", path: "/about", description: "Learn about our company and mission" },
         { name: "Contact", path: "/contact", description: "Get in touch with our team" },
         { name: "Services Overview", path: "/services-overview", description: "Explore all our services" },
+        { name: "Services Comparison", path: "/services-comparison", description: "Compare different service tiers" },
         { name: "Partners", path: "/partners", description: "Strategic partnerships and collaborations" },
         { name: "Careers", path: "/careers", description: "Join our team of experts" },
         { name: "Team", path: "/team", description: "Meet our leadership and experts" },
@@ -89,7 +90,7 @@ export default function SitemapPage() {
       title: "Pricing & Solutions",
       icon: DollarSign,
       links: [
-        { name: "Pricing Guide", path: "/pricing-guide", description: "Comprehensive pricing information" },
+        { name: "Pricing Guide", path: "/pricing", description: "Comprehensive pricing information" },
         { name: "Pricing 2027", path: "/pricing", description: "Current year pricing strategies" },
         { name: "Pricing 2030", path: "/pricing-2030", description: "Advanced pricing strategies" },
         { name: "Request Quote", path: "/request-quote", description: "Get custom pricing" },
@@ -129,7 +130,7 @@ export default function SitemapPage() {
     { name: "Request Quote", path: "/request-quote", description: "Get a custom quote", icon: DollarSign },
     { name: "Services Overview", path: "/services-overview", description: "Explore all services", icon: Settings },
     { name: "AI Solutions", path: "/ai-services", description: "Discover AI capabilities", icon: Brain },
-    { name: "Pricing Guide", path: "/pricing-guide", description: "View pricing options", icon: DollarSign },
+    { name: "Pricing Guide", path: "/pricing", description: "View pricing options", icon: DollarSign },
     { name: "Support Center", path: "/help", description: "Get help and support", icon: HelpCircle },
     { name: "Documentation", path: "/docs", description: "Technical resources", icon: BookOpen },
     { name: "Contact Sales", path: "/contact", description: "Talk to our experts", icon: Phone }
