@@ -1,5 +1,5 @@
-import { QuoteFormSection } from '@/components/QuoteFormSection';
-import { TrustedBySection } from '@/components/TrustedBySection';
+import { QuoteRequestForm } from '@/components/QuoteRequestForm';
+import { TestimonialsSection } from '@/components/TestimonialsSection';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
@@ -32,7 +32,7 @@ import {
 } from 'lucide-react';
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { SEOHead } from '../components/seo/SEOHead';
+import { SEO } from '../components/SEO';
 
 // Filter cybersecurity services
 const CYBERSECURITY_SERVICES = COMPREHENSIVE_SERVICES.filter(service =>
@@ -142,10 +142,10 @@ export default function CybersecurityServicesPage() {
   };
   return (
     <>
-      <SEOHead
+      <SEO
         title="Cybersecurity Services - Zion Tech Group"
         description="Comprehensive cybersecurity solutions including zero trust security, threat detection, and compliance services to protect your business."
-        keywords={['cybersecurity', 'security services', 'threat detection', 'compliance', 'zero trust']}
+        keywords="cybersecurity, security services, threat detection, compliance, zero trust"
         structuredData={{
           "@context": "https://schema.org",
           "@type": "Service",
@@ -1283,7 +1283,7 @@ export default function CybersecurityServicesPage() {
           </div>
         </div>
       </div>
-      <TrustedBySection />
+      <TestimonialsSection />
     </>
   );
 }
