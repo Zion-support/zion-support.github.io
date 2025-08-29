@@ -1,112 +1,100 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { SEO } from '../../components/SEO';
+import { SEO } from '../components/SEO';
 import { 
-  Rocket, 
-  Satellite, 
-  Globe, 
-  Zap, 
+  Wrench, 
+  Clock, 
   Shield, 
-  Brain,
-  CheckCircle,
-  Users,
-  Database,
+  Users, 
+  CheckCircle, 
+  AlertTriangle,
+  Phone,
+  Mail,
+  MapPin,
+  Zap,
+  Server,
   Network,
-  Cpu,
-  Orbit
+  Database,
+  Monitor,
+  HardDrive,
+  Router
 } from 'lucide-react';
 
-export default function SpaceTech() {
+export default function OnsiteSupport() {
   const services = [
     {
-      icon: Satellite,
-      title: 'Satellite Technology',
-      description: 'Advanced satellite systems for communication, navigation, and Earth observation',
-      features: ['Communication satellites', 'GPS and navigation systems', 'Earth observation platforms', 'Weather monitoring']
-    },
-    {
-      icon: Rocket,
-      title: 'Launch Systems',
-      description: 'Innovative launch vehicle technology and space transportation solutions',
-      features: ['Reusable launch vehicles', 'Small satellite launchers', 'Space tourism platforms', 'Cargo delivery systems']
-    },
-    {
-      icon: Globe,
-      title: 'Earth Observation',
-      description: 'Comprehensive Earth monitoring and environmental analysis systems',
-      features: ['Climate change monitoring', 'Natural disaster detection', 'Agricultural monitoring', 'Urban planning data']
+      icon: Server,
+      title: 'Server Maintenance',
+      description: 'Proactive server monitoring, updates, and optimization',
+      features: ['Hardware diagnostics', 'Performance tuning', 'Security patches', 'Backup verification']
     },
     {
       icon: Network,
-      title: 'Space Communications',
-      description: 'Next-generation space-based communication networks and infrastructure',
-      features: ['Global internet coverage', 'Low-latency communications', 'Emergency communications', 'IoT connectivity']
+      title: 'Network Infrastructure',
+      description: 'Complete network setup, troubleshooting, and optimization',
+      features: ['WiFi optimization', 'Cable management', 'Switch configuration', 'Network security']
     },
     {
       icon: Database,
-      title: 'Space Data Analytics',
-      description: 'Advanced analytics and AI for space data processing and insights',
-      features: ['Satellite imagery analysis', 'Predictive modeling', 'Real-time monitoring', 'Data visualization']
+      title: 'Database Management',
+      description: 'Database optimization, backup, and recovery services',
+      features: ['Performance tuning', 'Backup strategies', 'Recovery procedures', 'Security hardening']
+    },
+    {
+      icon: Monitor,
+      title: 'Workstation Support',
+      description: 'Desktop and laptop setup, maintenance, and troubleshooting',
+      features: ['OS installation', 'Software deployment', 'Hardware upgrades', 'Virus removal']
+    },
+    {
+      icon: HardDrive,
+      title: 'Storage Solutions',
+      description: 'Storage system design, implementation, and maintenance',
+      features: ['RAID configuration', 'Backup systems', 'Cloud integration', 'Data recovery']
+    },
+    {
+      icon: Router,
+      title: 'Security Implementation',
+      description: 'Comprehensive security setup and monitoring',
+      features: ['Firewall configuration', 'VPN setup', 'Access control', 'Security audits']
+    }
+  ];
+
+  const benefits = [
+    {
+      icon: Clock,
+      title: '24/7 Response',
+      description: 'Emergency support available around the clock'
     },
     {
       icon: Shield,
-      title: 'Space Security',
-      description: 'Cybersecurity and protection systems for space infrastructure',
-      features: ['Satellite cybersecurity', 'Signal protection', 'Anti-jamming systems', 'Threat detection']
-    }
-  ];
-
-  const technologies = [
-    {
-      icon: Cpu,
-      title: 'AI & Machine Learning',
-      description: 'Artificial intelligence for autonomous space operations and data analysis'
+      title: 'Certified Technicians',
+      description: 'Microsoft, Cisco, and CompTIA certified experts'
     },
-    {
-      icon: Orbit,
-      title: 'Orbital Mechanics',
-      description: 'Advanced orbital calculations and trajectory optimization'
-    },
-    {
-      icon: Zap,
-      title: 'Propulsion Systems',
-      description: 'Next-generation propulsion technologies for space exploration'
-    },
-    {
-      icon: Brain,
-      title: 'Autonomous Systems',
-      description: 'Self-operating space systems with minimal human intervention'
-    }
-  ];
-
-  const applications = [
     {
       icon: Users,
-      title: 'Commercial Space',
-      description: 'Space tourism, mining, and commercial satellite services'
+      title: 'Dedicated Team',
+      description: 'Assigned technicians familiar with your infrastructure'
     },
     {
-      icon: Globe,
-      title: 'Scientific Research',
-      description: 'Space exploration, astronomy, and scientific missions'
-    },
-    {
-      icon: Shield,
-      title: 'Defense & Security',
-      description: 'National security, surveillance, and defense applications'
-    },
-    {
-      icon: Database,
-      title: 'Environmental Monitoring',
-      description: 'Climate research, pollution tracking, and ecosystem monitoring'
+      icon: CheckCircle,
+      title: 'Preventive Maintenance',
+      description: 'Regular checkups to prevent issues before they occur'
     }
+  ];
+
+  const responseTimes = [
+    { priority: 'Critical', time: '2-4 hours', description: 'System down, business impact' },
+    { priority: 'High', time: '4-8 hours', description: 'Major functionality affected' },
+    { priority: 'Medium', time: '24 hours', description: 'Minor issues, some impact' },
+    { priority: 'Low', time: '48 hours', description: 'General maintenance, no impact' }
   ];
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO 
-        title="Space Technology Services - Zion Tech Group"
-        description="Advanced space technology solutions including satellite systems, launch vehicles, Earth observation, and space communications. Cutting-edge space innovation."
+        title="Onsite IT Support Services - Zion Tech Group"
+        description="Professional onsite IT support services with certified technicians. 24/7 emergency response, preventive maintenance, and comprehensive infrastructure support."
       />
       
       {/* Hero Section */}
@@ -119,28 +107,28 @@ export default function SpaceTech() {
           >
             <div className="flex justify-center mb-6">
               <div className="w-20 h-20 bg-gradient-to-br from-cyan-400 via-blue-500 to-purple-600 rounded-2xl flex items-center justify-center">
-                <Rocket className="w-10 h-10 text-white" />
+                <Wrench className="w-10 h-10 text-white" />
               </div>
             </div>
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
-              Space Technology
+              Onsite IT Support
             </h1>
             <p className="text-xl text-slate-300 max-w-3xl mx-auto mb-8">
-              Pioneering the future of space exploration and technology. From satellite systems 
-              to launch vehicles, we're advancing humanity's presence in space.
+              Professional onsite technical support with certified engineers. 
+              We bring expertise directly to your location for immediate problem resolution.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
                 href="/contact"
                 className="px-8 py-4 bg-gradient-to-r from-cyan-400 to-blue-500 text-white font-semibold rounded-lg hover:from-cyan-500 hover:to-blue-600 transition-all duration-300 transform hover:scale-105"
               >
-                Explore Space Solutions
+                Schedule Onsite Visit
               </a>
               <a
-                href="/services-overview"
+                href="tel:+13024640950"
                 className="px-8 py-4 border-2 border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400 hover:text-white transition-all duration-300"
               >
-                View All Services
+                Call Now: +1 302 464 0950
               </a>
             </div>
           </motion.div>
@@ -157,11 +145,11 @@ export default function SpaceTech() {
             className="text-center mb-16"
           >
             <h2 className="text-4xl font-bold text-white mb-4">
-              Space Technology Services
+              Comprehensive Onsite Services
             </h2>
             <p className="text-xl text-slate-300 max-w-2xl mx-auto">
-              Comprehensive space technology solutions covering all aspects of space operations, 
-              from launch to data analysis and beyond.
+              From emergency repairs to preventive maintenance, our certified technicians 
+              handle all aspects of your IT infrastructure.
             </p>
           </motion.div>
 
@@ -193,7 +181,7 @@ export default function SpaceTech() {
         </div>
       </section>
 
-      {/* Technologies Section */}
+      {/* Benefits Section */}
       <section className="py-20 px-4 bg-slate-800/30">
         <div className="container mx-auto">
           <motion.div
@@ -203,35 +191,35 @@ export default function SpaceTech() {
             className="text-center mb-16"
           >
             <h2 className="text-4xl font-bold text-white mb-4">
-              Cutting-Edge Technologies
+              Why Choose Our Onsite Support?
             </h2>
             <p className="text-xl text-slate-300 max-w-2xl mx-auto">
-              Leveraging the latest advancements in AI, propulsion, and autonomous systems 
-              to push the boundaries of space technology.
+              Experience the difference of having certified technicians at your location 
+              with our comprehensive onsite support services.
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {technologies.map((tech, index) => (
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {benefits.map((benefit, index) => (
               <motion.div
-                key={tech.title}
+                key={benefit.title}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700/50 text-center"
+                className="text-center"
               >
-                <div className="w-16 h-16 bg-gradient-to-br from-purple-400 to-pink-500 rounded-xl flex items-center justify-center mx-auto mb-4">
-                  <tech.icon className="w-8 h-8 text-white" />
+                <div className="w-16 h-16 bg-gradient-to-br from-purple-400 to-pink-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <benefit.icon className="w-8 h-8 text-white" />
                 </div>
-                <h3 className="text-lg font-semibold text-white mb-2">{tech.title}</h3>
-                <p className="text-slate-300 text-sm">{tech.description}</p>
+                <h3 className="text-xl font-semibold text-white mb-2">{benefit.title}</h3>
+                <p className="text-slate-300">{benefit.description}</p>
               </motion.div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Applications Section */}
+      {/* Response Times */}
       <section className="py-20 px-4">
         <div className="container mx-auto">
           <motion.div
@@ -241,28 +229,33 @@ export default function SpaceTech() {
             className="text-center mb-16"
           >
             <h2 className="text-4xl font-bold text-white mb-4">
-              Space Technology Applications
+              Guaranteed Response Times
             </h2>
             <p className="text-xl text-slate-300 max-w-2xl mx-auto">
-              Our space technology solutions serve diverse industries and applications, 
-              from commercial ventures to scientific research and national security.
+              We understand the critical nature of IT issues and provide 
+              guaranteed response times based on priority levels.
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {applications.map((app, index) => (
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {responseTimes.map((item, index) => (
               <motion.div
-                key={app.title}
+                key={item.priority}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700/50"
+                className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700/50 text-center"
               >
-                <div className="w-16 h-16 bg-gradient-to-br from-green-400 to-emerald-500 rounded-xl flex items-center justify-center mb-4">
-                  <app.icon className="w-8 h-8 text-white" />
+                <div className={`w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 ${
+                  item.priority === 'Critical' ? 'bg-red-500' :
+                  item.priority === 'High' ? 'bg-orange-500' :
+                  item.priority === 'Medium' ? 'bg-yellow-500' : 'bg-green-500'
+                }`}>
+                  <AlertTriangle className="w-8 h-8 text-white" />
                 </div>
-                <h3 className="text-xl font-semibold text-white mb-3">{app.title}</h3>
-                <p className="text-slate-300">{app.description}</p>
+                <h3 className="text-xl font-semibold text-white mb-2">{item.priority}</h3>
+                <div className="text-2xl font-bold text-cyan-400 mb-2">{item.time}</div>
+                <p className="text-slate-300 text-sm">{item.description}</p>
               </motion.div>
             ))}
           </div>
@@ -278,24 +271,24 @@ export default function SpaceTech() {
             transition={{ duration: 0.6 }}
           >
             <h2 className="text-4xl font-bold text-white mb-6">
-              Ready to Explore Space Technology?
+              Ready for Professional Onsite Support?
             </h2>
             <p className="text-xl text-slate-300 max-w-2xl mx-auto mb-8">
-              Join us in advancing humanity's presence in space with cutting-edge 
-              technology and innovative solutions.
+              Don't let IT issues slow down your business. Our certified technicians 
+              are ready to provide immediate onsite support and solutions.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
                 href="/contact"
                 className="px-8 py-4 bg-gradient-to-r from-cyan-400 to-blue-500 text-white font-semibold rounded-lg hover:from-cyan-500 hover:to-blue-600 transition-all duration-300 transform hover:scale-105"
               >
-                Start Your Space Journey
+                Get Started Today
               </a>
               <a
                 href="/services-overview"
                 className="px-8 py-4 border-2 border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400 hover:text-white transition-all duration-300"
               >
-                Discover More Services
+                View All Services
               </a>
             </div>
           </motion.div>

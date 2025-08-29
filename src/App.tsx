@@ -66,6 +66,13 @@ const AIComplianceCopilot = React.lazy(() => import('./pages/services/AIComplian
 const LLMContentStudio = React.lazy(() => import('./pages/services/LLMContentStudio'));
 const FinOpsAdvisor = React.lazy(() => import('./pages/services/FinOpsAdvisor'));
 
+// Additional service pages
+const DigitalTransformation = React.lazy(() => import('./pages/services/DigitalTransformation'));
+const ITConsulting = React.lazy(() => import('./pages/services/ITConsulting'));
+const GreenIT = React.lazy(() => import('./pages/services/GreenIT'));
+const QuantumComputing = React.lazy(() => import('./pages/services/QuantumComputing'));
+const SpaceTech = React.lazy(() => import('./pages/services/SpaceTech'));
+
 // New AI Services
 const AICybersecuritySuite = React.lazy(() => import('./pages/services/AICybersecuritySuite'));
 const QuantumAIPlatform = React.lazy(() => import('./pages/services/QuantumAIPlatform'));
@@ -75,6 +82,9 @@ const AIHealthcareAnalytics = React.lazy(() => import('./pages/services/AIHealth
 const Community = React.lazy(() => import('./pages/Community'));
 const Documentation = React.lazy(() => import('./pages/Documentation'));
 const Training = React.lazy(() => import('./pages/Training'));
+const OnsiteSupport = React.lazy(() => import('./pages/OnsiteSupport'));
+const Accessibility = React.lazy(() => import('./pages/Accessibility'));
+const Compliance = React.lazy(() => import('./pages/Compliance'));
 
 const Careers = () => (
   <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 flex items-center justify-center">
@@ -125,6 +135,9 @@ function App() {
               <Route path="/privacy" element={<Privacy />} />
               <Route path="/terms" element={<Terms />} />
               <Route path="/cookies" element={<Cookies />} />
+              <Route path="/accessibility" element={<Accessibility />} />
+              <Route path="/compliance" element={<Compliance />} />
+              <Route path="/onsite-support" element={<OnsiteSupport />} />
               <Route path="/pricing" element={<ComprehensivePricingGuide2027 />} />
               <Route path="/pricing-2030" element={<ComprehensivePricingGuide2030 />} />
               <Route path="/pricing-guide" element={<PricingGuide />} />
@@ -162,6 +175,14 @@ function App() {
               <Route path="/services/ai-compliance-copilot" element={<AIComplianceCopilot />} />
               <Route path="/services/llm-content-studio" element={<LLMContentStudio />} />
               <Route path="/services/finops-advisor" element={<FinOpsAdvisor />} />
+              
+              {/* Additional Service Routes */}
+              <Route path="/services/digital-transformation" element={<DigitalTransformation />} />
+              <Route path="/services/it-consulting" element={<ITConsulting />} />
+              <Route path="/services/onsite-support" element={<OnsiteSupport />} />
+              <Route path="/services/green-it" element={<GreenIT />} />
+              <Route path="/services/quantum-computing" element={<QuantumComputing />} />
+              <Route path="/services/space-tech" element={<SpaceTech />} />
 
               {/* New AI Services Routes */}
               <Route path="/services/ai-cybersecurity-suite" element={<AICybersecuritySuite />} />
