@@ -62,6 +62,9 @@ const InnovativeServicesShowcase2028 = React.lazy(() => import('./pages/Innovati
 const ComprehensivePricingGuide2028 = React.lazy(() => import('./pages/ComprehensivePricingGuide2028'));
 const ComprehensiveServicesLanding2028 = React.lazy(() => import('./pages/ComprehensiveServicesLanding2028'));
 
+// Comprehensive Services Showcase 2025
+const ComprehensiveServicesShowcase2025 = React.lazy(() => import('./pages/ComprehensiveServicesShowcase2025'));
+
 // Service pages - only import existing ones
 const CloudDevOps = React.lazy(() => import('./pages/services/CloudDevOps'));
 const DigitalTwin = React.lazy(() => import('./pages/services/DigitalTwin'));
@@ -200,6 +203,7 @@ function App() {
               <Route path="/innovative-services-showcase-2028" element={<InnovativeServicesShowcase2028 />} />
               <Route path="/pricing-guide-2028" element={<ComprehensivePricingGuide2028 />} />
               <Route path="/comprehensive-services-landing-2028" element={<ComprehensiveServicesLanding2028 />} />
+              <Route path="/comprehensive-services-showcase-2025" element={<ComprehensiveServicesShowcase2025 />} />
               <Route path="/comprehensive-services-showcase-2025" element={<ComprehensiveServicesShowcase2025 />} />
               <Route path="/advanced-services-showcase-2025" element={<AdvancedServicesShowcase2025 />} />
               <Route path="/ai-services" element={<AIServices />} />
