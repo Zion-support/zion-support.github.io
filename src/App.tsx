@@ -92,10 +92,6 @@ const EdgeComputingPlatform = React.lazy(() => import('./pages/services/EdgeComp
 const AICustomerSuccessPlatform = React.lazy(() => import('./pages/services/AICustomerSuccessPlatform'));
 
 // New innovative services
-const BlockchainEnterpriseSolutions = React.lazy(() => import('./pages/services/BlockchainEnterpriseSolutions'));
-const HealthcareTech = React.lazy(() => import('./pages/services/HealthcareTech'));
-const Sustainability = React.lazy(() => import('./pages/services/Sustainability'));
-const SpaceTech = React.lazy(() => import('./pages/services/SpaceTech'));
 const SmartContractRiskScanner = React.lazy(() => import('./pages/services/SmartContractRiskScanner'));
 
 // Simple placeholder pages for missing ones
