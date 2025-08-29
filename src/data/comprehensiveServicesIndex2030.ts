@@ -1,19 +1,25 @@
 import { ProductListing } from "@/types/listings";
+import { COMPREHENSIVE_INNOVATIVE_SERVICES_2030 } from "./comprehensiveInnovativeServices2030";
 import { ADVANCED_AI_SERVICES_2030 } from "./advancedAIServices2030";
+import { INNOVATIVE_MICRO_SAAS_SERVICES_2030 } from "./innovativeMicroSaasServices2030";
 import { CUTTING_EDGE_IT_INFRASTRUCTURE_2030 } from "./cuttingEdgeITInfrastructure2030";
 import { EMERGING_TECHNOLOGY_SERVICES_2030 } from "./emergingTechnologyServices2030";
-import { SPECIALIZED_FINANCIAL_AI_SERVICES_2028 } from "./specializedFinancialAIServices2028";
-import { SPECIALIZED_HEALTHCARE_AI_SERVICES_2028 } from "./specializedHealthcareAIServices2028";
+import { INNOVATIVE_MICRO_SAAS_SERVICES_2025 } from "./innovativeMicroSaasServices2025";
+import { INNOVATIVE_MICRO_SAAS_SERVICES_2026 } from "./innovativeMicroSaasServices2026";
+import { INNOVATIVE_MICRO_SAAS_SERVICES_2027 } from "./innovativeMicroSaasServices2027";
 
 // Comprehensive Services Index 2030 - Zion Tech Group
 // This file combines all services for easy access and management
 
 export const COMPREHENSIVE_SERVICES_INDEX_2030: ProductListing[] = [
+  ...COMPREHENSIVE_INNOVATIVE_SERVICES_2030,
   ...ADVANCED_AI_SERVICES_2030,
+  ...INNOVATIVE_MICRO_SAAS_SERVICES_2030,
   ...CUTTING_EDGE_IT_INFRASTRUCTURE_2030,
   ...EMERGING_TECHNOLOGY_SERVICES_2030,
-  ...SPECIALIZED_FINANCIAL_AI_SERVICES_2028,
-  ...SPECIALIZED_HEALTHCARE_AI_SERVICES_2028
+  ...INNOVATIVE_MICRO_SAAS_SERVICES_2025,
+  ...INNOVATIVE_MICRO_SAAS_SERVICES_2026,
+  ...INNOVATIVE_MICRO_SAAS_SERVICES_2027
 ];
 
 // Service Categories for easy filtering
@@ -37,6 +43,11 @@ export const SERVICE_CATEGORIES_2030 = [
   "AI & Development",
   "AI & Education",
   "AI & Entertainment",
+  "AI & Neural Technology",
+  "AI & Holographic Technology",
+  "AI & BioDigital Technology",
+  "AI & Ethics",
+  "AI & Project Management",
   "Cybersecurity",
   "Cloud & DevOps",
   "Quantum Computing",
@@ -95,9 +106,12 @@ export const QUICK_SETUP_SERVICES_2030 = COMPREHENSIVE_SERVICES_INDEX_2030.filte
 
 // Export individual service arrays for specific use cases
 export {
+  COMPREHENSIVE_INNOVATIVE_SERVICES_2030,
   ADVANCED_AI_SERVICES_2030,
+  INNOVATIVE_MICRO_SAAS_SERVICES_2030,
   CUTTING_EDGE_IT_INFRASTRUCTURE_2030,
   EMERGING_TECHNOLOGY_SERVICES_2030,
-  SPECIALIZED_FINANCIAL_AI_SERVICES_2028,
-  SPECIALIZED_HEALTHCARE_AI_SERVICES_2028
+  INNOVATIVE_MICRO_SAAS_SERVICES_2025,
+  INNOVATIVE_MICRO_SAAS_SERVICES_2026,
+  INNOVATIVE_MICRO_SAAS_SERVICES_2027
 };
