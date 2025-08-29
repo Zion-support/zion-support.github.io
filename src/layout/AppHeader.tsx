@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { Menu, X, Search, User, Bell, ChevronDown, Zap, Brain, Shield, Cloud, Rocket, Globe, Cpu, Lock, Heart, Users, ShoppingCart, BookOpen, MessageCircle, HelpCircle, DollarSign, Star, TrendingUp, Award, Settings, Phone, Mail, MapPin, Building } from 'lucide-react';
+import { Menu, X, Search, User, Bell, ChevronDown, Zap, Brain, Shield, Cloud, Rocket, Globe, Cpu, Lock, Heart, Users, ShoppingCart, BookOpen, MessageCircle, HelpCircle, DollarSign, Star, TrendingUp, Award, Settings, Phone, Mail, MapPin, Building, Briefcase, Target, Lightbulb, Code, Database, Network, Server, Smartphone, Globe2, ShieldCheck, BarChart3, Palette, Zap2 } from 'lucide-react';
 import { ThemeToggle } from '../components/ThemeToggle';
 import { ZionLoadingSpinner } from '../components/ui/EnhancedLoadingSpinner';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -148,10 +148,10 @@ export function AppHeader() {
   ];
 
   const quickLinks = [
-    { name: 'Innovative Services 2025', href: '/innovative-services-showcase-2025', icon: Star, description: 'Latest cutting-edge solutions' },
-    { name: 'Services Showcase', href: '/revolutionary-services-showcase-2030', icon: TrendingUp, description: 'Future-ready services' },
-    { name: 'Pricing Guide 2030', href: '/pricing-2030', icon: DollarSign, description: 'Advanced pricing strategies' },
     { name: 'Request Quote', href: '/request-quote', icon: MessageCircle, description: 'Get custom pricing' },
+    { name: 'Pricing Guide', href: '/pricing', icon: DollarSign, description: 'View our pricing' },
+    { name: 'Innovative Services 2025', href: '/innovative-services-showcase-2025', icon: Star, description: 'Latest cutting-edge solutions' },
+    { name: 'Revolutionary Services 2030', href: '/revolutionary-services-showcase-2030', icon: TrendingUp, description: 'Future-ready services' },
   ];
 
   const companyCategories = [
@@ -172,9 +172,9 @@ export function AppHeader() {
       color: 'from-green-600 to-emerald-600',
       items: [
         { name: 'Blog', href: '/blog', description: 'Latest insights and news' },
-        { name: 'Press', href: '/press', description: 'Media resources' },
-        { name: 'Case Studies', href: '/case-studies', description: 'Success stories' },
-        { name: 'White Papers', href: '/white-papers', description: 'In-depth research' }
+        { name: 'News', href: '/news', description: 'Company updates' },
+        { name: 'Events', href: '/events', description: 'Upcoming events' },
+        { name: 'Marketplace', href: '/marketplace', description: 'Our products' }
       ]
     }
   ];
@@ -198,8 +198,8 @@ export function AppHeader() {
       items: [
         { name: 'Documentation', href: '/docs', description: 'Technical guides' },
         { name: 'Training', href: '/training', description: 'Learning resources' },
-        { name: 'Webinars', href: '/webinars', description: 'Educational sessions' },
-        { name: 'Community', href: '/community', description: 'User community' }
+        { name: 'Community', href: '/community', description: 'User community' },
+        { name: 'Status', href: '/status', description: 'System status' }
       ]
     }
   ];

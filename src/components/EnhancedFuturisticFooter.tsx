@@ -58,7 +58,14 @@ import {
   Award,
   Users,
   TrendingUp,
-  CheckCircle
+  CheckCircle,
+  Settings,
+  DollarSign,
+  HelpCircle,
+  MessageCircle,
+  Building,
+  BookOpen,
+  Briefcase
 } from 'lucide-react';
 
 export const EnhancedFuturisticFooter: React.FC = () => {
@@ -120,15 +127,15 @@ export const EnhancedFuturisticFooter: React.FC = () => {
   ];
 
   const quickLinks = [
-    { name: 'Services Overview', href: '/services-overview' },
-    { name: 'Pricing Guide', href: '/pricing-guide' },
-    { name: 'Help Center', href: '/help' },
-    { name: 'FAQ', href: '/faq' },
-    { name: 'About Us', href: '/about' },
-    { name: 'Contact', href: '/contact' },
-    { name: 'Blog', href: '/blog' },
-    { name: 'Careers', href: '/careers' },
-    { name: 'Sitemap', href: '/sitemap' }
+    { name: 'Services Overview', href: '/services-overview', icon: Settings, description: 'Complete service portfolio' },
+    { name: 'Pricing Guide', href: '/pricing', icon: DollarSign, description: 'View our pricing' },
+    { name: 'Help Center', href: '/help', icon: HelpCircle, description: 'Find answers' },
+    { name: 'FAQ', href: '/faq', icon: MessageCircle, description: 'Common questions' },
+    { name: 'About Us', href: '/about', icon: Building, description: 'Our story' },
+    { name: 'Contact', href: '/contact', icon: Mail, description: 'Get in touch' },
+    { name: 'Blog', href: '/blog', icon: BookOpen, description: 'Latest insights' },
+    { name: 'Careers', href: '/careers', icon: Briefcase, description: 'Join our team' },
+    { name: 'Sitemap', href: '/sitemap', icon: Globe, description: 'Site navigation' }
   ];
 
   const companyLinks = [
@@ -136,7 +143,7 @@ export const EnhancedFuturisticFooter: React.FC = () => {
     { name: 'Team', href: '/team', description: 'Meet our experts' },
     { name: 'Careers', href: '/careers', description: 'Join our team' },
     { name: 'Blog', href: '/blog', description: 'Latest insights' },
-    { name: 'Press', href: '/press', description: 'Media resources' },
+    { name: 'News', href: '/news', description: 'Company updates' },
     { name: 'Partners', href: '/partners', description: 'Strategic partnerships' }
   ];
 
@@ -146,7 +153,7 @@ export const EnhancedFuturisticFooter: React.FC = () => {
     { name: 'FAQ', href: '/faq', description: 'Frequently asked questions' },
     { name: 'Documentation', href: '/docs', description: 'Technical guides' },
     { name: 'Training', href: '/training', description: 'Learning resources' },
-    { name: 'Webinars', href: '/webinars', description: 'Educational sessions' }
+    { name: 'Community', href: '/community', description: 'User community' }
   ];
 
   const legalLinks = [
