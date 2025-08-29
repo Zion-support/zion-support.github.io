@@ -1,6 +1,6 @@
 import { GetStaticPaths, GetStaticProps } from 'next'
-import Head from 'next/head'
-import Link from 'next/link'
+import { Helmet } from 'react-helmet-async';
+import { Link } from 'react-router-dom';
 import React from 'react'
 import { innovativeRealMicroSaasServices2025 } from '../../data/2025-innovative-real-micro-saas-services'
 import { advancedITServices } from '../../data/advanced-it-services'

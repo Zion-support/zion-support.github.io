@@ -1,4 +1,4 @@
-import { useRouter } from 'next/router'; // Changed from useParams
+import { useNavigate } from 'react-router-dom'; // Changed from useParams
 import { useEffect, useState } from 'react';
 import { Elements } from '@stripe/react-stripe-js';
 import { getStripe } from '@/utils/getStripe';

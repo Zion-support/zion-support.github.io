@@ -1,5 +1,5 @@
 import React from 'react';
-import Head from 'next/head';
+import { Helmet } from 'react-helmet-async';
 import { 
   innovativeMicroSaasServices2031, 
   innovativeITInfrastructureServices2031, 

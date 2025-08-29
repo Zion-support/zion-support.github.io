@@ -1,4 +1,4 @@
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 import { Heart } from 'lucide-react';
 import { useWishlist } from '@/hooks/useWishlist';
 import { Button } from '@/components/ui/button';
@@ -8,7 +8,7 @@ import { addItem } from '@/store/cartSlice';
 import Image from 'next/image';
 import React, { useState } from 'react';
 import { useAuth } from '@/context/auth/AuthProvider';
-import { useRouter } from 'next/router';
+import { useNavigate } from 'react-router-dom';
 import { useMediaQuery } from 'usehooks-ts';
 import { useEnqueueSnackbar } from '@/context/SnackbarContext';
 import { captureException } from '@/utils/sentry';

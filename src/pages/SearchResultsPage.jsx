@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from "react";
-import { useRouter } from "next/router";
+import { useNavigate } from 'react-router-dom';
 import { useInfiniteQuery } from "@tanstack/react-query";
 import { generateSearchSuggestions } from "@/data/marketplaceData";
 import { SearchResultCard } from "@/components/search/SearchResultCard";

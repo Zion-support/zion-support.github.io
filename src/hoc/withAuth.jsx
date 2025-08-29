@@ -1,5 +1,5 @@
 import { useEffect } from 'react';
-import { useRouter } from 'next/router';
+import { useNavigate } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 function withAuth(Component) {
     const Wrapped = (props) => {
