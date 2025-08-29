@@ -1,0 +1,1477 @@
+{
+  "timestamp": "2025-08-29T16:30:27.417Z",
+  "linting": {
+    "issues": 1,
+    "details": "Command failed: npm run lint\nsh: 1: eslint: not found\n"
+  },
+  "typeChecking": {
+    "issues": 1,
+    "details": "Command failed: npm run type-check"
+  },
+  "build": {
+    "success": false,
+    "details": "Command failed: npm run build"
+  },
+  "coverage": {
+    "available": false,
+    "coverage": 0,
+    "details": ""
+  },
+  "qualityIssues": 251,
+  "fileAnalysis": {
+    "totalFiles": 513,
+    "largeFiles": [
+      {
+        "file": "src/App.tsx",
+        "lines": 208
+      },
+      {
+        "file": "src/components/AIChatbotSystem.tsx",
+        "lines": 513
+      },
+      {
+        "file": "src/components/AccessibilityEnhancer.tsx",
+        "lines": 436
+      },
+      {
+        "file": "src/components/AccessibilityProvider.tsx",
+        "lines": 295
+      },
+      {
+        "file": "src/components/AdvancedPerformanceMonitor.tsx",
+        "lines": 340
+      },
+      {
+        "file": "src/components/AdvancedReportingDashboard.tsx",
+        "lines": 846
+      },
+      {
+        "file": "src/components/BenefitsSection.tsx",
+        "lines": 309
+      },
+      {
+        "file": "src/components/CategoriesSection.tsx",
+        "lines": 315
+      },
+      {
+        "file": "src/components/ComprehensivePricingGuide2027.tsx",
+        "lines": 415
+      },
+      {
+        "file": "src/components/ComprehensiveServicesShowcase.tsx",
+        "lines": 432
+      },
+      {
+        "file": "src/components/ComprehensiveServicesShowcase2027.tsx",
+        "lines": 401
+      },
+      {
+        "file": "src/components/CustomerFeedbackSystem.tsx",
+        "lines": 605
+      },
+      {
+        "file": "src/components/DataVisualization.tsx",
+        "lines": 486
+      },
+      {
+        "file": "src/components/EnhancedAccessibility.tsx",
+        "lines": 256
+      },
+      {
+        "file": "src/components/EnhancedAccessibilityPanel.tsx",
+        "lines": 527
+      },
+      {
+        "file": "src/components/EnhancedContact.tsx",
+        "lines": 449
+      },
+      {
+        "file": "src/components/EnhancedFuturisticFooter.tsx",
+        "lines": 313
+      },
+      {
+        "file": "src/components/EnhancedFuturisticNavigation.tsx",
+        "lines": 634
+      },
+      {
+        "file": "src/components/EnhancedHeroSection.tsx",
+        "lines": 293
+      },
+      {
+        "file": "src/components/EnhancedLoading.tsx",
+        "lines": 217
+      },
+      {
+        "file": "src/components/EnhancedMobileNavigation.tsx",
+        "lines": 368
+      },
+      {
+        "file": "src/components/EnhancedNewsletter.tsx",
+        "lines": 354
+      },
+      {
+        "file": "src/components/EnhancedSearch.tsx",
+        "lines": 440
+      },
+      {
+        "file": "src/components/EnhancedServiceShowcase.tsx",
+        "lines": 370
+      },
+      {
+        "file": "src/components/EnhancedServicesShowcase.tsx",
+        "lines": 333
+      },
+      {
+        "file": "src/components/EnhancedSidebar.tsx",
+        "lines": 264
+      },
+      {
+        "file": "src/components/EnhancedStatsSection.tsx",
+        "lines": 290
+      },
+      {
+        "file": "src/components/EnhancedTestimonialsSection.tsx",
+        "lines": 340
+      },
+      {
+        "file": "src/components/ErrorBoundary.tsx",
+        "lines": 293
+      },
+      {
+        "file": "src/components/FeaturedListingsSection.tsx",
+        "lines": 205
+      },
+      {
+        "file": "src/components/FloatingCTA.tsx",
+        "lines": 275
+      },
+      {
+        "file": "src/components/Footer.tsx",
+        "lines": 286
+      },
+      {
+        "file": "src/components/FuturisticFooter.tsx",
+        "lines": 285
+      },
+      {
+        "file": "src/components/FuturisticNavigation.tsx",
+        "lines": 446
+      },
+      {
+        "file": "src/components/FuturisticServicesShowcase.tsx",
+        "lines": 347
+      },
+      {
+        "file": "src/components/GlobalPresenceSection.tsx",
+        "lines": 212
+      },
+      {
+        "file": "src/components/HowItWorksSection.tsx",
+        "lines": 269
+      },
+      {
+        "file": "src/components/InnovationResearchSection.tsx",
+        "lines": 203
+      },
+      {
+        "file": "src/components/InnovativeServicesShowcase2027.tsx",
+        "lines": 361
+      },
+      {
+        "file": "src/components/InteractiveTestimonials.tsx",
+        "lines": 273
+      },
+      {
+        "file": "src/components/InteractiveUserExperience.tsx",
+        "lines": 478
+      },
+      {
+        "file": "src/components/MobileSidebarToggle.tsx",
+        "lines": 240
+      },
+      {
+        "file": "src/components/NotificationSystem.tsx",
+        "lines": 534
+      },
+      {
+        "file": "src/components/PerformanceOptimizer.tsx",
+        "lines": 352
+      },
+      {
+        "file": "src/components/ProductListingCard.tsx",
+        "lines": 209
+      },
+      {
+        "file": "src/components/ProjectManagementTimeline.tsx",
+        "lines": 587
+      },
+      {
+        "file": "src/components/ResourceManagementSystem.tsx",
+        "lines": 667
+      },
+      {
+        "file": "src/components/SEOOptimizer.tsx",
+        "lines": 520
+      },
+      {
+        "file": "src/components/SearchAndFilterSystem.tsx",
+        "lines": 469
+      },
+      {
+        "file": "src/components/SecurityEnhancer.tsx",
+        "lines": 428
+      },
+      {
+        "file": "src/components/ServicesOverview.tsx",
+        "lines": 355
+      },
+      {
+        "file": "src/components/ServicesShowcase.tsx",
+        "lines": 355
+      },
+      {
+        "file": "src/components/Sidebar.tsx",
+        "lines": 386
+      },
+      {
+        "file": "src/components/TeamCollaborationTools.tsx",
+        "lines": 1037
+      },
+      {
+        "file": "src/components/TeamExpertiseSection.tsx",
+        "lines": 205
+      },
+      {
+        "file": "src/components/UltimateServicesShowcase.tsx",
+        "lines": 501
+      },
+      {
+        "file": "src/components/UltimateServicesShowcase2025.tsx",
+        "lines": 450
+      },
+      {
+        "file": "src/components/home/FeatureCTAs.tsx",
+        "lines": 236
+      },
+      {
+        "file": "src/components/home/FeatureHighlights.tsx",
+        "lines": 364
+      },
+      {
+        "file": "src/components/home/ITServiceRequestHero.tsx",
+        "lines": 217
+      },
+      {
+        "file": "src/components/home/QuickAccess.tsx",
+        "lines": 283
+      },
+      {
+        "file": "src/components/home/Testimonials.tsx",
+        "lines": 213
+      },
+      {
+        "file": "src/components/layout/MainSidebar.tsx",
+        "lines": 513
+      },
+      {
+        "file": "src/components/services/InnovativeServicesOverview.tsx",
+        "lines": 228
+      },
+      {
+        "file": "src/components/ui/EnhancedNotificationSystem.tsx",
+        "lines": 213
+      },
+      {
+        "file": "src/components/ui/LoadingSpinner.tsx",
+        "lines": 400
+      },
+      {
+        "file": "src/data/ComprehensivePricingGuide2030.tsx",
+        "lines": 627
+      },
+      {
+        "file": "src/data/ComprehensiveServicesShowcase2030.tsx",
+        "lines": 564
+      },
+      {
+        "file": "src/data/advancedAIServices2025.ts",
+        "lines": 361
+      },
+      {
+        "file": "src/data/advancedAIServices2030.ts",
+        "lines": 230
+      },
+      {
+        "file": "src/data/advancedEnterpriseSolutions2025.ts",
+        "lines": 382
+      },
+      {
+        "file": "src/data/advancedITServices2025.ts",
+        "lines": 533
+      },
+      {
+        "file": "src/data/advancedInnovativeServices2026.ts",
+        "lines": 627
+      },
+      {
+        "file": "src/data/advancedMicroSaasServices2025.ts",
+        "lines": 361
+      },
+      {
+        "file": "src/data/comprehensiveAIServices2030.ts",
+        "lines": 641
+      },
+      {
+        "file": "src/data/comprehensiveITServices2030.ts",
+        "lines": 620
+      },
+      {
+        "file": "src/data/comprehensivePricingGuide2025.ts",
+        "lines": 460
+      },
+      {
+        "file": "src/data/comprehensivePricingGuide2026.ts",
+        "lines": 869
+      },
+      {
+        "file": "src/data/comprehensivePricingGuide2027.ts",
+        "lines": 1385
+      },
+      {
+        "file": "src/data/comprehensivePricingGuide2030.ts",
+        "lines": 385
+      },
+      {
+        "file": "src/data/comprehensiveServices.js",
+        "lines": 383
+      },
+      {
+        "file": "src/data/comprehensiveServices2026.ts",
+        "lines": 414
+      },
+      {
+        "file": "src/data/comprehensiveServicesCatalog2025.ts",
+        "lines": 1298
+      },
+      {
+        "file": "src/data/cuttingEdgeITInfrastructure2030.ts",
+        "lines": 230
+      },
+      {
+        "file": "src/data/emergingTechServices2025.ts",
+        "lines": 611
+      },
+      {
+        "file": "src/data/emergingTechServices2027.ts",
+        "lines": 409
+      },
+      {
+        "file": "src/data/emergingTechServices2030.ts",
+        "lines": 493
+      },
+      {
+        "file": "src/data/emergingTechnologyServices2030.ts",
+        "lines": 230
+      },
+      {
+        "file": "src/data/enhanced-services-2025.ts",
+        "lines": 733
+      },
+      {
+        "file": "src/data/enhancedInnovativeServices2025.ts",
+        "lines": 454
+      },
+      {
+        "file": "src/data/enhancedInnovativeServices2027.ts",
+        "lines": 703
+      },
+      {
+        "file": "src/data/enhancedMicroSaasServices2025.js",
+        "lines": 682
+      },
+      {
+        "file": "src/data/enhancedServices.ts",
+        "lines": 1270
+      },
+      {
+        "file": "src/data/expandedInnovativeServices2025.ts",
+        "lines": 1171
+      },
+      {
+        "file": "src/data/expandedInnovativeServices2027.ts",
+        "lines": 1096
+      },
+      {
+        "file": "src/data/expandedServices2025.ts",
+        "lines": 595
+      },
+      {
+        "file": "src/data/expandedServicesPricing2027.ts",
+        "lines": 1182
+      },
+      {
+        "file": "src/data/innovativeBlockchainWeb3Services2025.ts",
+        "lines": 361
+      },
+      {
+        "file": "src/data/innovativeITInfrastructure2025.ts",
+        "lines": 361
+      },
+      {
+        "file": "src/data/innovativeMicroSaasServices2025.js",
+        "lines": 719
+      },
+      {
+        "file": "src/data/innovativeMicroSaasServices2025.ts",
+        "lines": 2282
+      },
+      {
+        "file": "src/data/innovativeMicroSaasServices2027.ts",
+        "lines": 507
+      },
+      {
+        "file": "src/data/innovativeMicroSaasServices2028.ts",
+        "lines": 674
+      },
+      {
+        "file": "src/data/innovativeMicroSaasServices2030.ts",
+        "lines": 612
+      },
+      {
+        "file": "src/data/innovativeServices2025.ts",
+        "lines": 624
+      },
+      {
+        "file": "src/data/innovativeServices2026.ts",
+        "lines": 634
+      },
+      {
+        "file": "src/data/innovativeServices2028.ts",
+        "lines": 588
+      },
+      {
+        "file": "src/data/innovativeServices2031.ts",
+        "lines": 804
+      },
+      {
+        "file": "src/data/iotEdgeComputingServices2025.ts",
+        "lines": 383
+      },
+      {
+        "file": "src/data/marketplaceData.ts",
+        "lines": 235
+      },
+      {
+        "file": "src/data/microSaasServices.ts",
+        "lines": 1313
+      },
+      {
+        "file": "src/data/nextGenAIServices2025.ts",
+        "lines": 382
+      },
+      {
+        "file": "src/data/nextGenInnovativeServices2025.ts",
+        "lines": 643
+      },
+      {
+        "file": "src/data/onsiteServicePricing.js",
+        "lines": 233
+      },
+      {
+        "file": "src/data/revolutionaryPricingGuide2030.ts",
+        "lines": 573
+      },
+      {
+        "file": "src/data/revolutionaryServices2030.ts",
+        "lines": 675
+      },
+      {
+        "file": "src/data/servicesCatalog.ts",
+        "lines": 1571
+      },
+      {
+        "file": "src/data/servicesData.js",
+        "lines": 327
+      },
+      {
+        "file": "src/data/servicesData.ts",
+        "lines": 357
+      },
+      {
+        "file": "src/data/specializedFinancialAIServices2025.ts",
+        "lines": 302
+      },
+      {
+        "file": "src/data/specializedFinancialAIServices2028.ts",
+        "lines": 230
+      },
+      {
+        "file": "src/data/specializedHealthcareAIServices2025.ts",
+        "lines": 302
+      },
+      {
+        "file": "src/data/specializedHealthcareAIServices2028.ts",
+        "lines": 230
+      },
+      {
+        "file": "src/data/specializedITServices2025.ts",
+        "lines": 361
+      },
+      {
+        "file": "src/data/specializedIndustrySolutions2025.ts",
+        "lines": 468
+      },
+      {
+        "file": "src/data/ultimateInnovativeServices2025.ts",
+        "lines": 633
+      },
+      {
+        "file": "src/data/ultimateInnovativeServices2026.ts",
+        "lines": 765
+      },
+      {
+        "file": "src/data/ultimateInnovativeServices2027.ts",
+        "lines": 1035
+      },
+      {
+        "file": "src/data/ultimateZionServices2025.ts",
+        "lines": 772
+      },
+      {
+        "file": "src/hooks/useAccessibility.ts",
+        "lines": 342
+      },
+      {
+        "file": "src/hooks/usePerformance.ts",
+        "lines": 218
+      },
+      {
+        "file": "src/hooks/usePerformanceOptimization.ts",
+        "lines": 241
+      },
+      {
+        "file": "src/hooks/useSEO.ts",
+        "lines": 334
+      },
+      {
+        "file": "src/layout/AppHeader.tsx",
+        "lines": 367
+      },
+      {
+        "file": "src/layout/MainNavigation.tsx",
+        "lines": 302
+      },
+      {
+        "file": "src/pages/AIServices.tsx",
+        "lines": 438
+      },
+      {
+        "file": "src/pages/AIServicesPage.tsx",
+        "lines": 316
+      },
+      {
+        "file": "src/pages/AISolutions.tsx",
+        "lines": 234
+      },
+      {
+        "file": "src/pages/AIWorkflowAutomation.tsx",
+        "lines": 873
+      },
+      {
+        "file": "src/pages/API.tsx",
+        "lines": 356
+      },
+      {
+        "file": "src/pages/About.tsx",
+        "lines": 466
+      },
+      {
+        "file": "src/pages/Accessibility.tsx",
+        "lines": 407
+      },
+      {
+        "file": "src/pages/AdvancedInnovativeServicesShowcase2026.tsx",
+        "lines": 379
+      },
+      {
+        "file": "src/pages/AdvancedServicesShowcase2025.tsx",
+        "lines": 334
+      },
+      {
+        "file": "src/pages/AllServices2027.tsx",
+        "lines": 505
+      },
+      {
+        "file": "src/pages/ApiPlayground.tsx",
+        "lines": 662
+      },
+      {
+        "file": "src/pages/BlockchainEnterpriseSolutions.tsx",
+        "lines": 873
+      },
+      {
+        "file": "src/pages/BlockchainServicesPage.tsx",
+        "lines": 416
+      },
+      {
+        "file": "src/pages/Blog.tsx",
+        "lines": 379
+      },
+      {
+        "file": "src/pages/BlogPost.tsx",
+        "lines": 476
+      },
+      {
+        "file": "src/pages/Careers.tsx",
+        "lines": 589
+      },
+      {
+        "file": "src/pages/CaseStudies.tsx",
+        "lines": 457
+      },
+      {
+        "file": "src/pages/Categories.tsx",
+        "lines": 397
+      },
+      {
+        "file": "src/pages/CloudSolutions.tsx",
+        "lines": 321
+      },
+      {
+        "file": "src/pages/Community.tsx",
+        "lines": 510
+      },
+      {
+        "file": "src/pages/Compliance.tsx",
+        "lines": 555
+      },
+      {
+        "file": "src/pages/ComprehensiveAIServicesShowcase2025.tsx",
+        "lines": 428
+      },
+      {
+        "file": "src/pages/ComprehensivePricing.tsx",
+        "lines": 397
+      },
+      {
+        "file": "src/pages/ComprehensivePricing2027.tsx",
+        "lines": 498
+      },
+      {
+        "file": "src/pages/ComprehensivePricingGuide2025.tsx",
+        "lines": 657
+      },
+      {
+        "file": "src/pages/ComprehensivePricingGuide2026.tsx",
+        "lines": 601
+      },
+      {
+        "file": "src/pages/ComprehensivePricingGuide2027.tsx",
+        "lines": 495
+      },
+      {
+        "file": "src/pages/ComprehensivePricingGuide2028.tsx",
+        "lines": 729
+      },
+      {
+        "file": "src/pages/ComprehensivePricingGuide2030.tsx",
+        "lines": 627
+      },
+      {
+        "file": "src/pages/ComprehensiveServices.tsx",
+        "lines": 316
+      },
+      {
+        "file": "src/pages/ComprehensiveServicesLanding2025.tsx",
+        "lines": 522
+      },
+      {
+        "file": "src/pages/ComprehensiveServicesLanding2028.tsx",
+        "lines": 742
+      },
+      {
+        "file": "src/pages/ComprehensiveServicesLanding2030.tsx",
+        "lines": 648
+      },
+      {
+        "file": "src/pages/ComprehensiveServicesOverview2026.tsx",
+        "lines": 534
+      },
+      {
+        "file": "src/pages/ComprehensiveServicesOverview2027.tsx",
+        "lines": 482
+      },
+      {
+        "file": "src/pages/ComprehensiveServicesShowcase2025.tsx",
+        "lines": 482
+      },
+      {
+        "file": "src/pages/ComprehensiveServicesShowcase2026.tsx",
+        "lines": 583
+      },
+      {
+        "file": "src/pages/ComprehensiveServicesShowcase2027.tsx",
+        "lines": 606
+      },
+      {
+        "file": "src/pages/ComprehensiveServicesShowcase2030.tsx",
+        "lines": 564
+      },
+      {
+        "file": "src/pages/Consulting.tsx",
+        "lines": 291
+      },
+      {
+        "file": "src/pages/Contact.tsx",
+        "lines": 401
+      },
+      {
+        "file": "src/pages/Cookies.tsx",
+        "lines": 606
+      },
+      {
+        "file": "src/pages/CybersecurityServicesPage.tsx",
+        "lines": 204
+      },
+      {
+        "file": "src/pages/CybersecuritySolutions.tsx",
+        "lines": 617
+      },
+      {
+        "file": "src/pages/Dashboard.tsx",
+        "lines": 595
+      },
+      {
+        "file": "src/pages/DeveloperPortal.tsx",
+        "lines": 441
+      },
+      {
+        "file": "src/pages/DigitalTransformation.tsx",
+        "lines": 393
+      },
+      {
+        "file": "src/pages/Documentation.tsx",
+        "lines": 467
+      },
+      {
+        "file": "src/pages/EmergingTech2030.tsx",
+        "lines": 343
+      },
+      {
+        "file": "src/pages/EmergingTechShowcase2025.tsx",
+        "lines": 482
+      },
+      {
+        "file": "src/pages/EnhancedComprehensiveServices2026.tsx",
+        "lines": 718
+      },
+      {
+        "file": "src/pages/EnhancedInnovativeServicesShowcase2027.tsx",
+        "lines": 470
+      },
+      {
+        "file": "src/pages/EnhancedServicesPage.tsx",
+        "lines": 556
+      },
+      {
+        "file": "src/pages/Events.tsx",
+        "lines": 563
+      },
+      {
+        "file": "src/pages/ExpandedServicesPricingGuide2027.tsx",
+        "lines": 603
+      },
+      {
+        "file": "src/pages/ExpandedServicesShowcase2027.tsx",
+        "lines": 583
+      },
+      {
+        "file": "src/pages/FAQ.tsx",
+        "lines": 494
+      },
+      {
+        "file": "src/pages/ForgotPassword.tsx",
+        "lines": 556
+      },
+      {
+        "file": "src/pages/Help.tsx",
+        "lines": 667
+      },
+      {
+        "file": "src/pages/HelpCenter.tsx",
+        "lines": 543
+      },
+      {
+        "file": "src/pages/Home.tsx",
+        "lines": 392
+      },
+      {
+        "file": "src/pages/ITConsulting.tsx",
+        "lines": 318
+      },
+      {
+        "file": "src/pages/ITServices.tsx",
+        "lines": 475
+      },
+      {
+        "file": "src/pages/ITServices2028.tsx",
+        "lines": 443
+      },
+      {
+        "file": "src/pages/InnovativeServices.tsx",
+        "lines": 326
+      },
+      {
+        "file": "src/pages/InnovativeServices2028.tsx",
+        "lines": 463
+      },
+      {
+        "file": "src/pages/InnovativeServicesHub.tsx",
+        "lines": 413
+      },
+      {
+        "file": "src/pages/InnovativeServicesShowcase.tsx",
+        "lines": 293
+      },
+      {
+        "file": "src/pages/InnovativeServicesShowcase2025.tsx",
+        "lines": 595
+      },
+      {
+        "file": "src/pages/InnovativeServicesShowcase2026.tsx",
+        "lines": 324
+      },
+      {
+        "file": "src/pages/InnovativeServicesShowcase2027.tsx",
+        "lines": 406
+      },
+      {
+        "file": "src/pages/InnovativeServicesShowcase2028.tsx",
+        "lines": 596
+      },
+      {
+        "file": "src/pages/Login.tsx",
+        "lines": 616
+      },
+      {
+        "file": "src/pages/Marketplace.tsx",
+        "lines": 438
+      },
+      {
+        "file": "src/pages/MicroSAASPage.tsx",
+        "lines": 294
+      },
+      {
+        "file": "src/pages/MicroSAASServices2028.tsx",
+        "lines": 768
+      },
+      {
+        "file": "src/pages/MicroSAASSolutions.tsx",
+        "lines": 355
+      },
+      {
+        "file": "src/pages/News.tsx",
+        "lines": 486
+      },
+      {
+        "file": "src/pages/NotFound.tsx",
+        "lines": 352
+      },
+      {
+        "file": "src/pages/OnsiteSupport.tsx",
+        "lines": 609
+      },
+      {
+        "file": "src/pages/Partners.tsx",
+        "lines": 480
+      },
+      {
+        "file": "src/pages/Press.tsx",
+        "lines": 546
+      },
+      {
+        "file": "src/pages/Pricing.tsx",
+        "lines": 327
+      },
+      {
+        "file": "src/pages/PricingGuide.tsx",
+        "lines": 383
+      },
+      {
+        "file": "src/pages/Privacy.tsx",
+        "lines": 593
+      },
+      {
+        "file": "src/pages/PrivacyPolicy.tsx",
+        "lines": 494
+      },
+      {
+        "file": "src/pages/Profile.tsx",
+        "lines": 869
+      },
+      {
+        "file": "src/pages/QuantumTechnology.tsx",
+        "lines": 601
+      },
+      {
+        "file": "src/pages/RequestQuote.tsx",
+        "lines": 624
+      },
+      {
+        "file": "src/pages/Research.tsx",
+        "lines": 616
+      },
+      {
+        "file": "src/pages/ResearchDevelopment.tsx",
+        "lines": 972
+      },
+      {
+        "file": "src/pages/Resources.tsx",
+        "lines": 574
+      },
+      {
+        "file": "src/pages/Revolutionary2025ServicesShowcase.tsx",
+        "lines": 1634
+      },
+      {
+        "file": "src/pages/RevolutionaryServices2030.tsx",
+        "lines": 398
+      },
+      {
+        "file": "src/pages/RevolutionaryServicesShowcase2030.tsx",
+        "lines": 764
+      },
+      {
+        "file": "src/pages/ScheduleDemo.tsx",
+        "lines": 459
+      },
+      {
+        "file": "src/pages/Search.tsx",
+        "lines": 350
+      },
+      {
+        "file": "src/pages/SearchPage.tsx",
+        "lines": 675
+      },
+      {
+        "file": "src/pages/Security.tsx",
+        "lines": 502
+      },
+      {
+        "file": "src/pages/Services.tsx",
+        "lines": 628
+      },
+      {
+        "file": "src/pages/ServicesOverview.tsx",
+        "lines": 590
+      },
+      {
+        "file": "src/pages/ServicesPage.tsx",
+        "lines": 511
+      },
+      {
+        "file": "src/pages/ServicesPricingPage.tsx",
+        "lines": 371
+      },
+      {
+        "file": "src/pages/Signup.tsx",
+        "lines": 608
+      },
+      {
+        "file": "src/pages/Sitemap.tsx",
+        "lines": 328
+      },
+      {
+        "file": "src/pages/Solutions.tsx",
+        "lines": 435
+      },
+      {
+        "file": "src/pages/Status.tsx",
+        "lines": 270
+      },
+      {
+        "file": "src/pages/Support.tsx",
+        "lines": 489
+      },
+      {
+        "file": "src/pages/SystemStatus.tsx",
+        "lines": 420
+      },
+      {
+        "file": "src/pages/Team.tsx",
+        "lines": 478
+      },
+      {
+        "file": "src/pages/Terms.tsx",
+        "lines": 673
+      },
+      {
+        "file": "src/pages/TermsOfService.tsx",
+        "lines": 548
+      },
+      {
+        "file": "src/pages/Training.tsx",
+        "lines": 504
+      },
+      {
+        "file": "src/pages/Tutorials.tsx",
+        "lines": 324
+      },
+      {
+        "file": "src/pages/UltimateInnovativeServices2026.tsx",
+        "lines": 504
+      },
+      {
+        "file": "src/pages/UltimateInnovativeServicesShowcase2025.tsx",
+        "lines": 412
+      },
+      {
+        "file": "src/pages/UltimateZionServicesShowcase2025.tsx",
+        "lines": 453
+      },
+      {
+        "file": "src/pages/Webinars.tsx",
+        "lines": 703
+      },
+      {
+        "file": "src/pages/WhitePapers.tsx",
+        "lines": 493
+      },
+      {
+        "file": "src/pages/about.tsx",
+        "lines": 466
+      },
+      {
+        "file": "src/pages/accessibility-auditor.tsx",
+        "lines": 253
+      },
+      {
+        "file": "src/pages/admin/SupportRequests.tsx",
+        "lines": 352
+      },
+      {
+        "file": "src/pages/case-studies.tsx",
+        "lines": 407
+      },
+      {
+        "file": "src/pages/contact.tsx",
+        "lines": 501
+      },
+      {
+        "file": "src/pages/events.tsx",
+        "lines": 534
+      },
+      {
+        "file": "src/pages/it-services/Infrastructure.tsx",
+        "lines": 206
+      },
+      {
+        "file": "src/pages/marketplace/Products.tsx",
+        "lines": 293
+      },
+      {
+        "file": "src/pages/micro-saas/AIBusinessIntelligence.tsx",
+        "lines": 330
+      },
+      {
+        "file": "src/pages/micro-saas/CustomerExperience.tsx",
+        "lines": 206
+      },
+      {
+        "file": "src/pages/research-development.tsx",
+        "lines": 837
+      },
+      {
+        "file": "src/pages/services/AI.tsx",
+        "lines": 305
+      },
+      {
+        "file": "src/pages/services/AIAnalytics.tsx",
+        "lines": 206
+      },
+      {
+        "file": "src/pages/services/AIAutonomousBusinessOperations.tsx",
+        "lines": 710
+      },
+      {
+        "file": "src/pages/services/AIBusinessIntelligence.tsx",
+        "lines": 454
+      },
+      {
+        "file": "src/pages/services/AIBusinessIntelligencePlatform.tsx",
+        "lines": 446
+      },
+      {
+        "file": "src/pages/services/AIComplianceAssistant.tsx",
+        "lines": 485
+      },
+      {
+        "file": "src/pages/services/AIContentGenerationPlatform.tsx",
+        "lines": 562
+      },
+      {
+        "file": "src/pages/services/AIContentGenerator.tsx",
+        "lines": 458
+      },
+      {
+        "file": "src/pages/services/AIContentMarketingAutomation.tsx",
+        "lines": 399
+      },
+      {
+        "file": "src/pages/services/AICustomerChurnPrediction.tsx",
+        "lines": 383
+      },
+      {
+        "file": "src/pages/services/AICustomerExperienceAnalytics.tsx",
+        "lines": 562
+      },
+      {
+        "file": "src/pages/services/AICustomerExperiencePlatform.tsx",
+        "lines": 461
+      },
+      {
+        "file": "src/pages/services/AICustomerSuccessPlatform.tsx",
+        "lines": 406
+      },
+      {
+        "file": "src/pages/services/AICybersecuritySuite.tsx",
+        "lines": 504
+      },
+      {
+        "file": "src/pages/services/AICybersecurityThreatIntelligence.tsx",
+        "lines": 562
+      },
+      {
+        "file": "src/pages/services/AIDataGovernance.tsx",
+        "lines": 519
+      },
+      {
+        "file": "src/pages/services/AIEducationPlatform.tsx",
+        "lines": 408
+      },
+      {
+        "file": "src/pages/services/AIEnterpriseOrchestrator.tsx",
+        "lines": 426
+      },
+      {
+        "file": "src/pages/services/AIFinancialFraudDetection.tsx",
+        "lines": 433
+      },
+      {
+        "file": "src/pages/services/AIFinancialTradingPlatform.tsx",
+        "lines": 409
+      },
+      {
+        "file": "src/pages/services/AIFinancialTradingRiskManagement.tsx",
+        "lines": 494
+      },
+      {
+        "file": "src/pages/services/AIHRPlatform.tsx",
+        "lines": 407
+      },
+      {
+        "file": "src/pages/services/AIHRTalentAcquisition.tsx",
+        "lines": 434
+      },
+      {
+        "file": "src/pages/services/AIHealthcareAnalytics.tsx",
+        "lines": 503
+      },
+      {
+        "file": "src/pages/services/AIHealthcarePredictiveAnalytics.tsx",
+        "lines": 494
+      },
+      {
+        "file": "src/pages/services/AILegalDocumentAutomation.tsx",
+        "lines": 490
+      },
+      {
+        "file": "src/pages/services/AILegalResearchPlatform.tsx",
+        "lines": 407
+      },
+      {
+        "file": "src/pages/services/AIMarketingAutomation.tsx",
+        "lines": 406
+      },
+      {
+        "file": "src/pages/services/AIProjectManagementPlatform.tsx",
+        "lines": 407
+      },
+      {
+        "file": "src/pages/services/AISalesCopilot.tsx",
+        "lines": 482
+      },
+      {
+        "file": "src/pages/services/AISupplyChainOptimization.tsx",
+        "lines": 416
+      },
+      {
+        "file": "src/pages/services/AISupportHelpdesk.tsx",
+        "lines": 460
+      },
+      {
+        "file": "src/pages/services/AIWorkflowAutomation.tsx",
+        "lines": 392
+      },
+      {
+        "file": "src/pages/services/AIWorkflowOrchestrator.tsx",
+        "lines": 431
+      },
+      {
+        "file": "src/pages/services/AffiliateMarketingTracker.tsx",
+        "lines": 327
+      },
+      {
+        "file": "src/pages/services/Blockchain.tsx",
+        "lines": 206
+      },
+      {
+        "file": "src/pages/services/BlockchainEnterpriseSolutions.tsx",
+        "lines": 296
+      },
+      {
+        "file": "src/pages/services/Cloud.tsx",
+        "lines": 222
+      },
+      {
+        "file": "src/pages/services/CloudDevOps.tsx",
+        "lines": 295
+      },
+      {
+        "file": "src/pages/services/CustomDevelopment.tsx",
+        "lines": 396
+      },
+      {
+        "file": "src/pages/services/Cybersecurity.tsx",
+        "lines": 298
+      },
+      {
+        "file": "src/pages/services/DataAnalytics.tsx",
+        "lines": 297
+      },
+      {
+        "file": "src/pages/services/DigitalTransformation.tsx",
+        "lines": 345
+      },
+      {
+        "file": "src/pages/services/DigitalTwin.tsx",
+        "lines": 297
+      },
+      {
+        "file": "src/pages/services/EdgeComputingPlatform.tsx",
+        "lines": 532
+      },
+      {
+        "file": "src/pages/services/EmployeeSchedulingSaaS.tsx",
+        "lines": 460
+      },
+      {
+        "file": "src/pages/services/GreenIT.tsx",
+        "lines": 224
+      },
+      {
+        "file": "src/pages/services/HealthcareTech.tsx",
+        "lines": 297
+      },
+      {
+        "file": "src/pages/services/ITConsulting.tsx",
+        "lines": 394
+      },
+      {
+        "file": "src/pages/services/ITInfrastructure.tsx",
+        "lines": 255
+      },
+      {
+        "file": "src/pages/services/Infrastructure.tsx",
+        "lines": 223
+      },
+      {
+        "file": "src/pages/services/IoTEdge.tsx",
+        "lines": 296
+      },
+      {
+        "file": "src/pages/services/IoTServices.tsx",
+        "lines": 224
+      },
+      {
+        "file": "src/pages/services/MicroSAAS.tsx",
+        "lines": 294
+      },
+      {
+        "file": "src/pages/services/QuantumAIPlatform.tsx",
+        "lines": 499
+      },
+      {
+        "file": "src/pages/services/QuantumComputing.tsx",
+        "lines": 206
+      },
+      {
+        "file": "src/pages/services/QuantumComputingSolutions.tsx",
+        "lines": 451
+      },
+      {
+        "file": "src/pages/services/QuantumTechnology.tsx",
+        "lines": 264
+      },
+      {
+        "file": "src/pages/services/SOC2ComplianceTracker.tsx",
+        "lines": 460
+      },
+      {
+        "file": "src/pages/services/SmartContractRiskScanner.tsx",
+        "lines": 538
+      },
+      {
+        "file": "src/pages/services/SpaceTech.tsx",
+        "lines": 551
+      },
+      {
+        "file": "src/pages/services/Sustainability.tsx",
+        "lines": 298
+      },
+      {
+        "file": "src/pages/services/Transformation.tsx",
+        "lines": 223
+      },
+      {
+        "file": "src/pages/services/UptimeSLAMonitor.tsx",
+        "lines": 395
+      },
+      {
+        "file": "src/pages/services/ZeroTrustNetworkArchitecture.tsx",
+        "lines": 297
+      },
+      {
+        "file": "src/pages/services/ai-auto-email-responder.tsx",
+        "lines": 380
+      },
+      {
+        "file": "src/pages/services/ai-business-intelligence.tsx",
+        "lines": 264
+      },
+      {
+        "file": "src/pages/services/ai-content-optimizer-pro.tsx",
+        "lines": 522
+      },
+      {
+        "file": "src/pages/services/ai-cybersecurity-suite.tsx",
+        "lines": 314
+      },
+      {
+        "file": "src/pages/services/ai-cybersecurity-threat-detection.tsx",
+        "lines": 468
+      },
+      {
+        "file": "src/pages/services/ai-enterprise-orchestrator.tsx",
+        "lines": 239
+      },
+      {
+        "file": "src/pages/services/ai-financial-trading-platform.tsx",
+        "lines": 451
+      },
+      {
+        "file": "src/pages/services/ai-healthcare-analytics-platform.tsx",
+        "lines": 468
+      },
+      {
+        "file": "src/pages/services/ai-project-management-platform.tsx",
+        "lines": 422
+      },
+      {
+        "file": "src/pages/services/ai-supply-chain-optimization.tsx",
+        "lines": 381
+      },
+      {
+        "file": "src/pages/services/blockchain-enterprise-solutions.tsx",
+        "lines": 368
+      },
+      {
+        "file": "src/pages/services/cloud-devops.tsx",
+        "lines": 381
+      },
+      {
+        "file": "src/pages/services/digital-transformation.tsx",
+        "lines": 381
+      },
+      {
+        "file": "src/pages/services/digital-twin.tsx",
+        "lines": 318
+      },
+      {
+        "file": "src/pages/services/finops-advisor.tsx",
+        "lines": 423
+      },
+      {
+        "file": "src/pages/services/healthcare-tech.tsx",
+        "lines": 382
+      },
+      {
+        "file": "src/pages/services/iot-edge.tsx",
+        "lines": 352
+      },
+      {
+        "file": "src/pages/services/llm-content-studio.tsx",
+        "lines": 415
+      },
+      {
+        "file": "src/pages/services/micro-saas-solutions.tsx",
+        "lines": 412
+      },
+      {
+        "file": "src/pages/services/sustainability.tsx",
+        "lines": 435
+      },
+      {
+        "file": "src/pages/services.tsx",
+        "lines": 687
+      },
+      {
+        "file": "src/pages/solutions/Enterprise.tsx",
+        "lines": 292
+      },
+      {
+        "file": "src/pages/solutions/Healthcare.tsx",
+        "lines": 292
+      },
+      {
+        "file": "src/pages/solutions.tsx",
+        "lines": 654
+      },
+      {
+        "file": "src/routes/DashboardRoutes.tsx",
+        "lines": 228
+      },
+      {
+        "file": "src/services/auth.js",
+        "lines": 291
+      },
+      {
+        "file": "src/store/authSlice.js",
+        "lines": 217
+      },
+      {
+        "file": "src/utils/cartUtils.js",
+        "lines": 319
+      },
+      {
+        "file": "src/utils/passwordStrength.js",
+        "lines": 355
+      },
+      {
+        "file": "src/utils/seoOptimizer.js",
+        "lines": 212
+      }
+    ],
+    "totalLines": 179358,
+    "averageLinesPerFile": "349.63"
+  },
+  "summary": "Quality checks completed",
+  "status": "completed",
+  "recommendations": [
+    "Fix linting issues to improve code quality",
+    "Resolve TypeScript type checking issues",
+    "Fix build issues to ensure project compiles",
+    "Address code quality issues found in source code",
+    "Consider splitting large files for better maintainability"
+  ]
+}

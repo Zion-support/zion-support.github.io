@@ -1,5 +1,37 @@
 {
-  "timestamp": "2025-08-29T10:24:45.601Z",
+  "timestamp": "2025-08-29T16:30:47.871Z",
+  "vulnerabilities": 0,
+  "outdatedPackages": 0,
+  "packageLockIssues": 0,
+  "details": {
+    "audit": {
+      "auditReportVersion": 2,
+      "vulnerabilities": {},
+      "metadata": {
+        "vulnerabilities": {
+          "info": 0,
+          "low": 0,
+          "moderate": 0,
+          "high": 0,
+          "critical": 0,
+          "total": 0
+        },
+        "dependencies": {
+          "prod": 109,
+          "dev": 785,
+          "optional": 54,
+          "peer": 0,
+          "peerOptional": 0,
+          "total": 895
+        }
+      }
+    },
+    "outdated": [],
+    "packageLockIssues": []
+  },
   "summary": "Security audit completed",
-  "status": "completed"
+  "status": "completed",
+  "recommendations": [
+    "No immediate security actions required"
+  ]
 }
