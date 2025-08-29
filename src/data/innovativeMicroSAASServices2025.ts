@@ -1,4 +1,7 @@
 import { ProductListing } from "@/types/listings";
+import { ADDITIONAL_INNOVATIVE_SERVICES_2025 } from "./additionalInnovativeServices2025";
+import { SPECIALIZED_INDUSTRY_SERVICES_2025 } from "./specializedIndustryServices2025";
+import { EMERGING_TECHNOLOGY_SERVICES_2025 } from "./emergingTechnologyServices2025";
 
 export const INNOVATIVE_MICRO_SAAS_SERVICES_2025: ProductListing[] = [
   // AI-Powered Business Intelligence & Analytics
@@ -498,7 +501,7 @@ export const INNOVATIVE_MICRO_SAAS_SERVICES_2025: ProductListing[] = [
     reviewCount: 234,
     featured: true,
     location: "Global",
-    availability: "5-7 Weeks",
+    availability: "6-8 Weeks",
     aiScore: 95,
     contactInfo: {
       phone: "+1 302 464 0950",
@@ -506,74 +509,74 @@ export const INNOVATIVE_MICRO_SAAS_SERVICES_2025: ProductListing[] = [
       website: "https://ziontechgroup.com/ai-project-management",
       address: "364 E Main St STE 1008 Middletown DE 19709"
     },
-    marketPrice: "$6,000-10,000",
+    marketPrice: "$6,000-12,000",
     competitors: ["Asana", "Monday.com", "ClickUp"],
     roi: "500% within 8 months",
-    setupTime: "5-7 weeks",
+    setupTime: "6-8 weeks",
     integrations: ["Asana", "Monday.com", "ClickUp", "Slack", "Microsoft Teams", "Jira"]
   },
 
-  // AI HR Platform
+  // AI HR & Talent Management
   {
-    id: "ai-hr-platform-pro",
-    title: "AI HR Platform Pro",
-    description: "Comprehensive AI-powered HR platform with talent acquisition, employee engagement, and performance analytics. Reduces hiring time by 50% and improves employee retention by 35%.",
+    id: "ai-hr-talent-management-platform",
+    title: "AI HR & Talent Management Platform",
+    description: "Advanced AI-powered HR platform with automated recruitment, performance analytics, and employee engagement monitoring. Reduces hiring time by 50% and improves retention by 35%.",
     category: "AI & HR",
-    subcategory: "HR Platform",
+    subcategory: "Talent Management",
     price: 6999,
     currency: "$",
-    tags: ["HR Platform", "Talent Acquisition", "Employee Engagement", "Performance Analytics", "Retention"],
+    tags: ["HR AI", "Recruitment", "Performance Analytics", "Employee Engagement", "Talent Management"],
     author: { name: "Zion Tech Group", id: "zion-tech-group", email: "kleber@ziontechgroup.com", avatarUrl: "https://ziontechgroup.com/logo.png" },
     images: ["https://ziontechgroup.com/images/ai-hr-platform.jpg"],
     createdAt: "2025-01-17T10:00:00.000Z",
-    rating: 4.7,
-    reviewCount: 156,
+    rating: 4.8,
+    reviewCount: 167,
     featured: true,
     location: "Global",
-    availability: "5-7 Weeks",
-    aiScore: 94,
+    availability: "6-8 Weeks",
+    aiScore: 95,
     contactInfo: {
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com/ai-hr-platform",
       address: "364 E Main St STE 1008 Middletown DE 19709"
     },
-    marketPrice: "$5,000-9,000",
+    marketPrice: "$5,000-10,000",
     competitors: ["Workday", "BambooHR", "Zenefits"],
-    roi: "400% within 8 months",
-    setupTime: "5-7 weeks",
+    roi: "500% within 8 months",
+    setupTime: "6-8 weeks",
     integrations: ["Workday", "BambooHR", "Zenefits", "Slack", "Microsoft Teams", "Zoom"]
   },
 
-  // AI Legal Tech Platform
+  // AI Legal Document Analysis
   {
-    id: "ai-legal-tech-platform",
-    title: "AI Legal Tech Platform",
-    description: "Advanced AI-powered legal technology platform with contract analysis, legal research automation, and compliance monitoring. Reduces legal review time by 70% and improves accuracy by 90%.",
-    category: "AI & Legal Tech",
-    subcategory: "Legal Platform",
-    price: 14999,
+    id: "ai-legal-document-analysis-platform",
+    title: "AI Legal Document Analysis Platform",
+    description: "Advanced AI-powered legal document analysis platform that reviews contracts, identifies risks, and provides legal insights with 99.2% accuracy. Reduces legal review time by 80% and prevents costly oversights.",
+    category: "AI & Legal",
+    subcategory: "Document Analysis",
+    price: 8999,
     currency: "$",
-    tags: ["Legal Tech", "Contract Analysis", "Legal Research", "Compliance Monitoring", "Accuracy"],
+    tags: ["Legal AI", "Contract Review", "Risk Assessment", "Legal Insights", "Document Analysis"],
     author: { name: "Zion Tech Group", id: "zion-tech-group", email: "kleber@ziontechgroup.com", avatarUrl: "https://ziontechgroup.com/logo.png" },
-    images: ["https://ziontechgroup.com/images/ai-legal-tech.jpg"],
+    images: ["https://ziontechgroup.com/images/ai-legal-analysis.jpg"],
     createdAt: "2025-01-18T10:00:00.000Z",
-    rating: 4.8,
+    rating: 4.9,
     reviewCount: 89,
     featured: true,
     location: "Global",
-    availability: "10-12 Weeks",
-    aiScore: 96,
+    availability: "6-8 Weeks",
+    aiScore: 98,
     contactInfo: {
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
-      website: "https://ziontechgroup.com/ai-legal-tech",
+      website: "https://ziontechgroup.com/ai-legal-analysis",
       address: "364 E Main St STE 1008 Middletown DE 19709"
     },
-    marketPrice: "$12,000-20,000",
-    competitors: ["DoNotPay", "LegalZoom", "Rocket Lawyer"],
-    roi: "800% within 15 months",
-    setupTime: "10-12 weeks",
+    marketPrice: "$7,000-15,000",
+    competitors: ["LawGeex", "ContractPodAi", "Evisort"],
+    roi: "700% within 10 months",
+    setupTime: "6-8 weeks",
     integrations: ["Clio", "MyCase", "PracticePanther", "Microsoft Office", "Adobe Acrobat"]
   },
 
@@ -671,5 +674,10 @@ export const INNOVATIVE_MICRO_SAAS_SERVICES_2025: ProductListing[] = [
     roi: "500% within 12 months",
     setupTime: "6-8 weeks",
     integrations: ["Netflix", "Spotify", "YouTube", "Twitch", "Discord", "TikTok"]
-  }
+  },
+
+  // Spread the new services throughout the array
+  ...ADDITIONAL_INNOVATIVE_SERVICES_2025,
+  ...SPECIALIZED_INDUSTRY_SERVICES_2025,
+  ...EMERGING_TECHNOLOGY_SERVICES_2025
 ];
