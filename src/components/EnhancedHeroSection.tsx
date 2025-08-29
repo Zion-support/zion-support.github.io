@@ -1,381 +1,298 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import {
-  ArrowRight,
-  Play,
-  Star,
-  CheckCircle,
-  ChevronLeft,
-  ChevronRight,
-  Zap,
+import { 
+  ArrowRight, 
+  Play, 
+  Star, 
+  Users, 
+  TrendingUp, 
   Shield,
-  Globe,
+  Zap,
   Brain,
-  Rocket,
-  Target,
-  TrendingUp
+  Globe
 } from 'lucide-react';
+import { ModernButton } from './ui/ModernButton';
+import { ModernCard } from './ui/ModernCard';
 
-interface HeroSlide {
-  title: string;
-  subtitle: string;
-  description: string;
-  image: string;
-  cta: string;
-  path: string;
-  features: string[];
-  gradient: string;
-  icon: React.ComponentType<any>;
-  stats: { label: string; value: string; icon: React.ComponentType<any> }[];
-}
+const stats = [
+  { label: 'Global Clients', value: '500+', icon: Users, color: 'from-blue-500 to-cyan-500' },
+  { label: 'Success Rate', value: '98%', icon: TrendingUp, color: 'from-green-500 to-emerald-500' },
+  { label: 'AI Solutions', value: '50+', icon: Brain, color: 'from-purple-500 to-pink-500' },
+  { label: 'Countries', value: '25+', icon: Globe, color: 'from-orange-500 to-red-500' }
+];
 
-export default function EnhancedHeroSection() {
-  const [currentSlide, setCurrentSlide] = useState(0);
-  const [isAutoPlaying, setIsAutoPlaying] = useState(true);
+const features = [
+  {
+    title: 'AI-Powered Solutions',
+    description: 'Cutting-edge artificial intelligence for modern businesses',
+    icon: Brain,
+    color: 'from-purple-500 to-pink-500'
+  },
+  {
+    title: 'Global Expertise',
+    description: 'Worldwide presence with local market knowledge',
+    icon: Globe,
+    color: 'from-blue-500 to-cyan-500'
+  },
+  {
+    title: 'Innovation First',
+    description: 'Pioneering the future of technology',
+    icon: Zap,
+    color: 'from-yellow-500 to-orange-500'
+  }
+];
 
-  const heroSlides: HeroSlide[] = [
-    {
-      title: "AI-Powered Business Solutions",
-      subtitle: "Transform your business with cutting-edge artificial intelligence",
-      description: "Leverage the power of AI to automate processes, gain insights, and drive innovation across your organization. Our solutions are designed to scale with your business needs.",
-      image: "/images/hero-ai-solutions.jpg",
-      cta: "Explore AI Solutions",
-      path: "/services/ai-business-intelligence",
-      features: ["Machine Learning", "Predictive Analytics", "Process Automation", "Real-time Insights"],
-      gradient: "from-zion-cyan via-zion-purple to-zion-blue",
-      icon: Brain,
-      stats: [
-        { label: "Accuracy Rate", value: "95%+", icon: Target },
-        { label: "ROI Increase", value: "450%", icon: TrendingUp },
-        { label: "Market Growth", value: "280%", icon: Rocket }
-      ]
-    },
-    {
-      title: "Comprehensive IT Services",
-      subtitle: "End-to-end technology solutions for modern businesses",
-      description: "From infrastructure management to digital transformation, we provide the expertise you need to succeed in today's competitive landscape.",
-      image: "/images/hero-it-services.jpg",
-      cta: "View Our Services",
-      path: "/services",
-      features: ["Cloud Infrastructure", "Cybersecurity", "DevOps Automation", "24/7 Support"],
-      gradient: "from-zion-blue via-zion-cyan to-zion-purple",
-      icon: Shield,
-      stats: [
-        { label: "Uptime", value: "99.99%", icon: Target },
-        { label: "Cost Savings", value: "700%", icon: TrendingUp },
-        { label: "Response Time", value: "<5min", icon: Rocket }
-      ]
-    },
-    {
-      title: "Green IT Solutions",
-      subtitle: "Sustainable technology for a better future",
-      description: "Implement eco-friendly IT solutions that reduce your carbon footprint while maintaining performance and driving business value.",
-      image: "/images/hero-green-it.jpg",
-      cta: "Learn More",
-      path: "/green-it",
-      features: ["Energy Efficiency", "Carbon Reduction", "Sustainable Practices", "Cost Savings"],
-      gradient: "from-zion-cyan via-zion-blue to-zion-purple",
-      icon: Globe,
-      stats: [
-        { label: "Energy Savings", value: "60%", icon: Target },
-        { label: "Carbon Reduction", value: "75%", icon: TrendingUp },
-        { label: "Cost Reduction", value: "40%", icon: Rocket }
-      ]
-    }
-  ];
+export const EnhancedHeroSection: React.FC = () => {
+  const [currentFeature, setCurrentFeature] = useState(0);
+  const [isVideoPlaying, setIsVideoPlaying] = useState(false);
 
   useEffect(() => {
-    if (!isAutoPlaying) return;
-
     const interval = setInterval(() => {
-      setCurrentSlide((prev) => (prev + 1) % heroSlides.length);
-    }, 6000);
-
+      setCurrentFeature((prev) => (prev + 1) % features.length);
+    }, 4000);
     return () => clearInterval(interval);
-  }, [isAutoPlaying, heroSlides.length]);
-
-  const nextSlide = () => {
-    setCurrentSlide((prev) => (prev + 1) % heroSlides.length);
-    setIsAutoPlaying(false);
-  };
-
-  const prevSlide = () => {
-    setCurrentSlide((prev) => (prev - 1 + heroSlides.length) % heroSlides.length);
-    setIsAutoPlaying(false);
-  };
-
-  const goToSlide = (index: number) => {
-    setCurrentSlide(index);
-    setIsAutoPlaying(false);
-  };
-
-  const currentSlideData = heroSlides[currentSlide];
+  }, []);
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
-      {/* Enhanced animated background elements */}
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-futuristic">
+      {/* Animated background elements */}
       <div className="absolute inset-0">
-        <div className="absolute inset-0 bg-gradient-to-r from-zion-cyan/10 via-zion-purple/10 to-zion-cyan/10"></div>
-        <motion.div
-          className="absolute top-20 left-20 w-72 h-72 bg-zion-cyan/20 rounded-full blur-3xl"
-          animate={{
-            scale: [1, 1.2, 1],
-            opacity: [0.3, 0.6, 0.3]
-          }}
-          transition={{ duration: 4, repeat: Infinity }}
-        ></motion.div>
-        <motion.div
-          className="absolute bottom-20 right-20 w-96 h-96 bg-zion-purple/20 rounded-full blur-3xl"
-          animate={{
-            scale: [1.2, 1, 1.2],
-            opacity: [0.6, 0.3, 0.6]
-          }}
-          transition={{ duration: 4, repeat: Infinity, delay: 1 }}
-        ></motion.div>
-        <motion.div
-          className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-zion-blue/10 rounded-full blur-3xl"
-          animate={{
-            rotate: [0, 360],
-            scale: [1, 1.1, 1]
-          }}
-          transition={{ duration: 20, repeat: Infinity }}
-        ></motion.div>
-
-        {/* Floating particles */}
-        {[...Array(6)].map((_, i) => (
-          <motion.div
-            key={i}
-            className="absolute w-2 h-2 bg-zion-cyan/40 rounded-full"
-            style={{
-              left: `${20 + i * 15}%`,
-              top: `${30 + i * 10}%`,
-            }}
-            animate={{
-              y: [0, -20, 0],
-              opacity: [0.4, 1, 0.4],
-            }}
-            transition={{
-              duration: 3 + i * 0.5,
-              repeat: Infinity,
-              delay: i * 0.3,
-            }}
-          />
-        ))}
+        <div className="absolute top-0 left-0 w-96 h-96 bg-gradient-to-br from-zion-cyan/20 to-transparent rounded-full blur-3xl animate-float" />
+        <div className="absolute top-1/4 right-0 w-80 h-80 bg-gradient-to-bl from-zion-purple/20 to-transparent rounded-full blur-3xl animate-float-delayed" />
+        <div className="absolute bottom-0 left-1/3 w-72 h-72 bg-gradient-to-tr from-zion-blue/20 to-transparent rounded-full blur-3xl animate-float" />
       </div>
 
-      {/* Hero content */}
-      <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8">
+      {/* Grid pattern overlay */}
+      <div className="absolute inset-0 bg-grid-pattern opacity-5" />
+
+      <div className="container-responsive relative z-10">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Left content */}
           <motion.div
             initial={{ opacity: 0, x: -50 }}
             animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8 }}
+            transition={{ duration: 0.8, ease: 'easeOut' }}
             className="text-center lg:text-left"
           >
-            <AnimatePresence mode="wait">
-              <motion.div
-                key={currentSlide}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                exit={{ opacity: 0, y: -20 }}
-                transition={{ duration: 0.5 }}
-              >
-                {/* Icon and category */}
-                <motion.div
-                  className="flex items-center justify-center lg:justify-start mb-6"
-                  whileHover={{ scale: 1.05 }}
-                >
-                  <div className={`p-3 rounded-2xl bg-gradient-to-r ${currentSlideData.gradient} bg-opacity-20 border border-zion-cyan/30`}>
-                    {React.createElement(currentSlideData.icon, { className: "w-8 h-8 text-white" })}
-                  </div>
-                  <span className="ml-3 text-zion-cyan font-medium bg-zion-cyan/10 px-3 py-1 rounded-full">Featured Service</span>
-                </motion.div>
-
-                {/* Title */}
-                <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
-                  {currentSlideData.title}
-                </h1>
-
-                {/* Subtitle */}
-                <p className="text-xl sm:text-2xl text-zion-cyan font-semibold mb-4">
-                  {currentSlideData.subtitle}
-                </p>
-
-                {/* Description */}
-                <p className="text-lg text-gray-300 mb-8 leading-relaxed max-w-2xl mx-auto lg:mx-0">
-                  {currentSlideData.description}
-                </p>
-
-                {/* Features */}
-                <div className="grid grid-cols-2 gap-3 mb-8 max-w-md mx-auto lg:mx-0">
-                  {currentSlideData.features.map((feature, index) => (
-                    <motion.div
-                      key={feature}
-                      initial={{ opacity: 0, x: -20 }}
-                      animate={{ opacity: 1, x: 0 }}
-                      transition={{ delay: index * 0.1 }}
-                      className="flex items-center text-sm text-gray-300 bg-white/5 px-3 py-2 rounded-lg border border-white/10"
-                    >
-                      <CheckCircle className="w-4 h-4 text-zion-cyan mr-2 flex-shrink-0" />
-                      {feature}
-                    </motion.div>
-                  ))}
-                </div>
-
-                {/* CTA Button */}
-                <motion.div
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
-                  className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start"
-                >
-                  <Link
-                    to={currentSlideData.path}
-                    className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-purple text-white font-semibold rounded-2xl hover:shadow-2xl hover:shadow-zion-cyan/25 transition-all duration-300 transform hover:-translate-y-1 border border-zion-cyan/30"
-                  >
-                    {currentSlideData.cta}
-                    <ArrowRight className="ml-2 w-5 h-5" />
-                  </Link>
-                  <button className="inline-flex items-center px-8 py-4 border-2 border-zion-cyan/30 text-zion-cyan font-semibold rounded-2xl hover:bg-zion-cyan/10 transition-all duration-300 backdrop-blur-sm">
-                    <Play className="mr-2 w-5 h-5" />
-                    Watch Demo
-                  </button>
-                </motion.div>
-              </motion.div>
-            </AnimatePresence>
-          </motion.div>
-
-          {/* Right content - Image and stats */}
-          <motion.div
-            initial={{ opacity: 0, x: 50 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
-            className="relative"
-          >
-            {/* Main image */}
-            <div className="relative">
-              <motion.div
-                className={`w-full h-96 lg:h-[500px] rounded-3xl bg-gradient-to-br ${currentSlideData.gradient} bg-opacity-20 border border-zion-cyan/20 overflow-hidden`}
-                whileHover={{ scale: 1.02 }}
-                transition={{ duration: 0.3 }}
-              >
-                <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
-                <div className="absolute inset-0 flex items-center justify-center">
-                  <div className="text-center text-white">
-                    <motion.div
-                      className="w-24 h-24 bg-zion-cyan/20 rounded-full flex items-center justify-center mx-auto mb-4 border border-zion-cyan/30"
-                      animate={{ rotate: [0, 360] }}
-                      transition={{ duration: 20, repeat: Infinity }}
-                    >
-                      {React.createElement(currentSlideData.icon, { className: "w-12 h-12 text-zion-cyan" })}
-                    </motion.div>
-                    <p className="text-lg font-medium">Visual Representation</p>
-                  </div>
-                </div>
-              </motion.div>
-            </div>
-
-            {/* Enhanced floating stats cards */}
-            <div className="absolute -bottom-6 -left-6 space-y-4">
-              {currentSlideData.stats.map((stat, index) => (
-                <motion.div
-                  key={stat.label}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ delay: 0.5 + index * 0.1 }}
-                  className="bg-white/10 backdrop-blur-lg border border-white/20 rounded-2xl p-4 shadow-2xl hover:bg-white/20 transition-all duration-300"
-                >
-                  <div className="flex items-center space-x-3">
-                    <div className="p-2 bg-zion-cyan/20 rounded-xl">
-                      {React.createElement(stat.icon, { className: "w-5 h-5 text-zion-cyan" })}
-                    </div>
-                    <div>
-                      <p className="text-xl font-bold text-white">{stat.value}</p>
-                      <p className="text-xs text-gray-300">{stat.label}</p>
-                    </div>
-                  </div>
-                </motion.div>
-              ))}
-            </div>
-
-            {/* Rating card */}
+            {/* Badge */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.8 }}
-              className="absolute -top-6 -right-6 bg-white/10 backdrop-blur-lg border border-white/20 rounded-2xl p-6 shadow-2xl"
+              transition={{ delay: 0.2, duration: 0.6 }}
+              className="inline-flex items-center gap-2 px-4 py-2 bg-zion-cyan/10 border border-zion-cyan/30 rounded-full text-zion-cyan text-sm font-medium mb-6"
             >
-              <div className="flex items-center space-x-4">
-                <div className="p-3 bg-zion-cyan/20 rounded-xl">
-                  <Star className="w-6 h-6 text-zion-cyan" />
+              <Star className="w-4 h-4" />
+              Leading AI Technology Solutions
+            </motion.div>
+
+            {/* Main heading */}
+            <motion.h1
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.3, duration: 0.8 }}
+              className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight"
+            >
+              Transform Your Business with{' '}
+              <span className="bg-gradient-to-r from-zion-cyan via-zion-blue to-zion-purple bg-clip-text text-transparent">
+                AI-Powered
+              </span>{' '}
+              Solutions
+            </motion.h1>
+
+            {/* Subtitle */}
+            <motion.p
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.4, duration: 0.8 }}
+              className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto lg:mx-0"
+            >
+              Zion Tech Group delivers cutting-edge artificial intelligence, cloud solutions, and digital transformation services to help businesses thrive in the digital age.
+            </motion.p>
+
+            {/* CTA buttons */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.5, duration: 0.8 }}
+              className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start mb-8"
+            >
+              <ModernButton
+                size="lg"
+                onClick={() => window.location.href = '/services'}
+                icon={<ArrowRight className="w-5 h-5" />}
+                iconPosition="right"
+              >
+                Explore Services
+              </ModernButton>
+              
+              <ModernButton
+                variant="outline"
+                size="lg"
+                onClick={() => setIsVideoPlaying(true)}
+                icon={<Play className="w-5 h-5" />}
+              >
+                Watch Demo
+              </ModernButton>
+            </motion.div>
+
+            {/* Trust indicators */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.6, duration: 0.8 }}
+              className="flex items-center justify-center lg:justify-start gap-6 text-sm text-gray-400"
+            >
+              <div className="flex items-center gap-2">
+                <Shield className="w-4 h-4 text-zion-cyan" />
+                <span>ISO 27001 Certified</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <Users className="w-4 h-4 text-zion-purple" />
+                <span>500+ Happy Clients</span>
+              </div>
+            </motion.div>
+          </motion.div>
+
+          {/* Right content */}
+          <motion.div
+            initial={{ opacity: 0, x: 50 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.8, ease: 'easeOut' }}
+            className="relative"
+          >
+            {/* Main showcase card */}
+            <ModernCard
+              variant="elevated"
+              className="relative overflow-hidden"
+            >
+              <div className="relative z-10">
+                <div className="text-center mb-6">
+                  <h3 className="text-2xl font-bold text-white mb-2">
+                    {features[currentFeature].title}
+                  </h3>
+                  <p className="text-gray-300">
+                    {features[currentFeature].description}
+                  </p>
                 </div>
-                <div>
-                  <p className="text-2xl font-bold text-white">4.9/5</p>
-                  <p className="text-sm text-gray-300">Client Rating</p>
+
+                <div className="flex justify-center mb-6">
+                  <div className={`w-20 h-20 rounded-2xl bg-gradient-to-br ${features[currentFeature].color} flex items-center justify-center`}>
+                    <features[currentFeature].icon className="w-10 h-10 text-white" />
+                  </div>
+                </div>
+
+                {/* Feature indicators */}
+                <div className="flex justify-center gap-2">
+                  {features.map((_, index) => (
+                    <button
+                      key={index}
+                      onClick={() => setCurrentFeature(index)}
+                      className={`w-2 h-2 rounded-full transition-all duration-300 ${
+                        index === currentFeature 
+                          ? 'bg-zion-cyan w-6' 
+                          : 'bg-gray-600 hover:bg-gray-500'
+                      }`}
+                      aria-label={`Go to feature ${index + 1}`}
+                    />
+                  ))}
                 </div>
               </div>
+            </ModernCard>
+
+            {/* Floating stats cards */}
+            <motion.div
+              initial={{ opacity: 0, scale: 0.8 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ delay: 0.8, duration: 0.6 }}
+              className="absolute -top-4 -left-4"
+            >
+              <ModernCard
+                variant="glass"
+                className="w-32 h-32 p-4 text-center"
+              >
+                <div className="text-2xl font-bold text-zion-cyan">98%</div>
+                <div className="text-xs text-gray-300">Success Rate</div>
+              </ModernCard>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, scale: 0.8 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ delay: 1, duration: 0.6 }}
+              className="absolute -bottom-4 -right-4"
+            >
+              <ModernCard
+                variant="glass"
+                className="w-32 h-32 p-4 text-center"
+              >
+                <div className="text-2xl font-bold text-zion-purple">25+</div>
+                <div className="text-xs text-gray-300">Countries</div>
+              </ModernCard>
             </motion.div>
           </motion.div>
         </div>
 
-        {/* Enhanced slide navigation */}
-        <div className="flex items-center justify-center mt-16 space-x-4">
-          <motion.button
-            onClick={prevSlide}
-            className="p-3 rounded-full bg-white/10 hover:bg-white/20 transition-colors duration-200 border border-white/20"
-            whileHover={{ scale: 1.1 }}
-            whileTap={{ scale: 0.9 }}
-          >
-            <ChevronLeft className="w-6 h-6 text-white" />
-          </motion.button>
-
-          <div className="flex space-x-2">
-            {heroSlides.map((_, index) => (
-              <motion.button
-                key={index}
-                onClick={() => goToSlide(index)}
-                className={`w-3 h-3 rounded-full transition-all duration-300 ${
-                  index === currentSlide
-                    ? 'bg-zion-cyan w-8'
-                    : 'bg-white/30 hover:bg-white/50'
-                }`}
-                whileHover={{ scale: 1.2 }}
-              />
-            ))}
-          </div>
-
-          <motion.button
-            onClick={nextSlide}
-            className="p-3 rounded-full bg-white/10 hover:bg-white/20 transition-colors duration-200 border border-white/20"
-            whileHover={{ scale: 1.1 }}
-            whileTap={{ scale: 0.9 }}
-          >
-            <ChevronRight className="w-6 h-6 text-white" />
-          </motion.button>
-        </div>
+        {/* Stats section */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 1.2, duration: 0.8 }}
+          className="mt-20 grid grid-cols-2 md:grid-cols-4 gap-6"
+        >
+          {stats.map((stat, index) => (
+            <motion.div
+              key={stat.label}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 1.4 + index * 0.1, duration: 0.6 }}
+              className="text-center"
+            >
+              <div className={`w-16 h-16 mx-auto mb-4 rounded-2xl bg-gradient-to-br ${stat.color} flex items-center justify-center`}>
+                <stat.icon className="w-8 h-8 text-white" />
+              </div>
+              <div className="text-3xl font-bold text-white mb-2">{stat.value}</div>
+              <div className="text-sm text-gray-400">{stat.label}</div>
+            </motion.div>
+          ))}
+        </motion.div>
       </div>
 
-      {/* Enhanced scroll indicator */}
-      <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ delay: 1 }}
-        className="absolute bottom-8 left-1/2 transform -translate-x-1/2"
-      >
-        <motion.div
-          animate={{ y: [0, 10, 0] }}
-          transition={{ duration: 2, repeat: Infinity }}
-          className="w-6 h-10 border-2 border-zion-cyan/50 rounded-full flex justify-center cursor-pointer hover:border-zion-cyan transition-colors duration-300"
-        >
+      {/* Video modal */}
+      <AnimatePresence>
+        {isVideoPlaying && (
           <motion.div
-            animate={{ y: [0, 12, 0] }}
-            transition={{ duration: 2, repeat: Infinity }}
-            className="w-1 h-3 bg-zion-cyan rounded-full mt-2"
-          />
-        </motion.div>
-        <p className="text-xs text-zion-cyan/70 text-center mt-2">Scroll to explore</p>
-      </motion.div>
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            className="fixed inset-0 bg-black/80 z-50 flex items-center justify-center p-4"
+            onClick={() => setIsVideoPlaying(false)}
+          >
+            <motion.div
+              initial={{ scale: 0.8, opacity: 0 }}
+              animate={{ scale: 1, opacity: 1 }}
+              exit={{ scale: 0.8, opacity: 0 }}
+              className="relative w-full max-w-4xl aspect-video bg-zion-slate rounded-2xl overflow-hidden"
+              onClick={(e) => e.stopPropagation()}
+            >
+              <div className="absolute inset-0 flex items-center justify-center">
+                <div className="text-center text-white">
+                  <Play className="w-20 h-20 mx-auto mb-4 text-zion-cyan" />
+                  <p className="text-xl">Video Demo Coming Soon</p>
+                  <p className="text-gray-400">Experience our solutions in action</p>
+                </div>
+              </div>
+              <button
+                onClick={() => setIsVideoPlaying(false)}
+                className="absolute top-4 right-4 w-8 h-8 bg-white/10 hover:bg-white/20 rounded-full flex items-center justify-center text-white transition-colors"
+                aria-label="Close video"
+              >
+                ×
+              </button>
+            </motion.div>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </section>
   );
-}
+};
