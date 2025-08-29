@@ -2,7 +2,6 @@ import React from 'react';
 import { SEO } from '../components/SEO';
 import { motion } from 'framer-motion';
 import { Calendar, MapPin, Clock, Users, ArrowRight, ExternalLink } from 'lucide-react';
-
 export default function Events() {
   const upcomingEvents = [
     {
@@ -54,7 +53,6 @@ export default function Events() {
       href: '/events/edge-computing-iot-summit'
     }
   ];
-
   const pastEvents = [
     {
       id: 5,
@@ -77,7 +75,6 @@ export default function Events() {
       status: 'Completed'
     }
   ];
-
   const eventTypes = [
     'All Events',
     'Conference',
@@ -86,14 +83,12 @@ export default function Events() {
     'Summit',
     'Webinar'
   ];
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO 
         title="Events - Zion Tech Group"
         description="Join us at upcoming events, conferences, and workshops. Discover the latest in AI, quantum computing, and emerging technologies."
       />
-      
       {/* Hero Section */}
       <section className="relative py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto text-center">
@@ -129,7 +124,6 @@ export default function Events() {
           </motion.div>
         </div>
       </section>
-
       {/* Upcoming Events */}
       <section id="upcoming-events" className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -147,7 +141,6 @@ export default function Events() {
               hands-on workshops, and cutting-edge technology demonstrations.
             </p>
           </motion.div>
-
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
             {upcomingEvents.map((event, index) => (
               <motion.div
@@ -194,7 +187,6 @@ export default function Events() {
           </div>
         </div>
       </section>
-
       {/* Past Events */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-800/30">
         <div className="max-w-7xl mx-auto">
@@ -212,7 +204,6 @@ export default function Events() {
               from industry leaders and technology experts.
             </p>
           </motion.div>
-
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {pastEvents.map((event, index) => (
               <motion.div
@@ -249,7 +240,6 @@ export default function Events() {
           </div>
         </div>
       </section>
-
       {/* Event Types */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -267,7 +257,6 @@ export default function Events() {
               and industry requirements.
             </p>
           </motion.div>
-
           <div className="grid grid-cols-2 md:grid-cols-3 gap-6">
             {eventTypes.slice(1).map((type, index) => (
               <motion.div
@@ -283,7 +272,6 @@ export default function Events() {
           </div>
         </div>
       </section>
-
       {/* CTA Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">

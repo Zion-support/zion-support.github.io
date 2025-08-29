@@ -2,7 +2,6 @@ import React from 'react';
 import { SEO } from '../components/SEO';
 import { motion } from 'framer-motion';
 import { Flask, Brain, Rocket, Globe, Users, TrendingUp, CheckCircle, ArrowRight } from 'lucide-react';
-
 export default function ResearchDevelopment() {
   const researchAreas = [
     {
@@ -48,7 +47,6 @@ export default function ResearchDevelopment() {
       href: '/services/sustainability'
     }
   ];
-
   const capabilities = [
     'Advanced AI/ML Research',
     'Quantum Computing Development',
@@ -57,7 +55,6 @@ export default function ResearchDevelopment() {
     'Human-Computer Interaction',
     'Sustainable Technology'
   ];
-
   const partnerships = [
     'Academic Institutions',
     'Research Organizations',
@@ -66,21 +63,21 @@ export default function ResearchDevelopment() {
     'Startup Incubators',
     'Technology Companies'
   ];
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO 
         title="Research & Development - Zion Tech Group"
         description="Leading-edge research and development in AI, quantum computing, and emerging technologies. Discover our innovative R&D initiatives and partnerships."
       />
-      
       {/* Hero Section */}
-      <section className="relative py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto text-center">
+      <section className="relative py-20 overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-r from-cyan-400/10 via-blue-500/10 to-purple-600/10"></div>
+        <div className="container mx-auto px-4 relative z-10">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
+            className="text-center max-w-4xl mx-auto"
           >
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
               Research & Development for
@@ -109,12 +106,11 @@ export default function ResearchDevelopment() {
           </motion.div>
         </div>
       </section>
-
       {/* Research Areas Grid */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
@@ -127,7 +123,6 @@ export default function ResearchDevelopment() {
               driving innovation and discovery across multiple domains.
             </p>
           </motion.div>
-
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {researchAreas.map((area, index) => (
               <motion.div
@@ -170,7 +165,6 @@ export default function ResearchDevelopment() {
           </div>
         </div>
       </section>
-
       {/* Capabilities Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-800/30">
         <div className="max-w-7xl mx-auto">
@@ -188,7 +182,6 @@ export default function ResearchDevelopment() {
               challenges and drive innovation across multiple technology domains.
             </p>
           </motion.div>
-
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {capabilities.map((capability, index) => (
               <motion.div
@@ -204,7 +197,6 @@ export default function ResearchDevelopment() {
           </div>
         </div>
       </section>
-
       {/* Partnerships Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -222,7 +214,6 @@ export default function ResearchDevelopment() {
               to advance technology research and drive innovation.
             </p>
           </motion.div>
-
           <div className="grid grid-cols-2 md:grid-cols-3 gap-6">
             {partnerships.map((partner, index) => (
               <motion.div
@@ -238,12 +229,11 @@ export default function ResearchDevelopment() {
           </div>
         </div>
       </section>
-
       {/* CTA Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-4xl mx-auto text-center">
+      <section className="py-20 bg-gradient-to-r from-cyan-400/10 via-blue-500/10 to-purple-600/10">
+        <div className="container mx-auto px-4 text-center">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >

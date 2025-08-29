@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { Plus, Minus, Search, MessageCircle, Phone, Mail, MapPin, ArrowRight, Star, Shield, Brain, Cloud, Zap, Users, CheckCircle } from 'lucide-react';
+import { Plus, Minus, Search, MessageCircle, Phone, Mail, MapPin, ArrowRight, Star, Shield, Brain, Cloud, Zap, Users, CheckCircle, ChevronUp, ChevronDown, HelpCircle } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 export default function FAQ() {
@@ -100,53 +100,50 @@ export default function FAQ() {
     { key: 'technical', name: 'Technical Support', icon: Shield, color: 'from-orange-500 to-red-500' }
   ];
 
-  const contactInfo = {
-    phone: '+1 302 464 0950',
-    email: 'kleber@ziontechgroup.com',
-    address: '364 E Main St STE 1008 Middletown DE 19709'
-  };
-
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+    <div className="min-h-screen bg-slate-900 text-white">
       {/* Hero Section */}
-      <section className="relative overflow-hidden py-20 lg:py-32">
-        <div className="absolute inset-0 bg-gradient-to-r from-indigo-900/20 via-purple-900/20 to-pink-900/20"></div>
+      <section className="relative py-20 overflow-hidden">
+        {/* Background Elements */}
+        <div className="absolute inset-0">
+          <div className="absolute top-0 left-0 w-96 h-96 bg-gradient-to-br from-indigo-500/20 to-purple-500/20 rounded-full blur-3xl"></div>
+          <div className="absolute bottom-0 right-0 w-96 h-96 bg-gradient-to-br from-pink-500/20 to-rose-500/20 rounded-full blur-3xl"></div>
+        </div>
+
         <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-center max-w-4xl mx-auto"
-          >
-            <div className="inline-flex items-center gap-2 bg-indigo-500/10 border border-indigo-500/20 rounded-full px-4 py-2 text-indigo-400 text-sm font-medium mb-6">
-              <MessageCircle className="w-4 h-4" />
-              Frequently Asked Questions
-            </div>
-            <h1 className="text-4xl lg:text-6xl font-bold text-white mb-6">
-              How Can We
-              <span className="bg-gradient-to-r from-indigo-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
-                {' '}Help You?
-              </span>
-            </h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Find answers to common questions about our AI-powered solutions, services, 
-              and how we can help transform your business with cutting-edge technology.
-            </p>
-            
-            {/* Search Bar */}
-            <div className="max-w-2xl mx-auto mb-8">
-              <div className="relative">
-                <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
-                <input
-                  type="text"
-                  placeholder="Search for answers..."
-                  value={searchQuery}
-                  onChange={(e) => setSearchQuery(e.target.value)}
-                  className="w-full pl-12 pr-4 py-4 bg-slate-700/50 border border-slate-600 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent text-lg"
-                />
+          <div className="text-center max-w-4xl mx-auto">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              className="mb-8"
+            >
+              <h1 className="text-4xl lg:text-6xl font-bold text-white mb-6">
+                How Can We
+                <span className="bg-gradient-to-r from-indigo-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
+                  {' '}Help You?
+                </span>
+              </h1>
+              <p className="text-xl text-slate-300 mb-8 max-w-3xl mx-auto">
+                Find answers to common questions about our AI-powered solutions, services, 
+                and how we can help transform your business with cutting-edge technology.
+              </p>
+              
+              {/* Search Bar */}
+              <div className="max-w-2xl mx-auto mb-8">
+                <div className="relative">
+                  <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
+                  <input
+                    type="text"
+                    placeholder="Search for answers..."
+                    value={searchQuery}
+                    onChange={(e) => setSearchQuery(e.target.value)}
+                    className="w-full pl-12 pr-4 py-4 bg-slate-700/50 border border-slate-600 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent text-lg"
+                  />
+                </div>
               </div>
-            </div>
-          </motion.div>
+            </motion.div>
+          </div>
         </div>
       </section>
 
@@ -207,98 +204,53 @@ export default function FAQ() {
                 </motion.div>
               );
             })}
-          </div>
-        </div>
-      </section>
 
-      {/* Contact Section */}
-      <section className="py-20 bg-slate-800/50">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
-              Still Have Questions?
-            </h2>
-            <p className="text-xl text-gray-400 max-w-3xl mx-auto">
-              Can't find what you're looking for? Our team is here to help. 
-              Get in touch with us for personalized assistance.
-            </p>
-          </motion.div>
-
-          <div className="max-w-4xl mx-auto">
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: 0.1 }}
-                className="text-center"
-              >
-                <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Phone className="w-8 h-8 text-white" />
-                </div>
-                <h3 className="text-xl font-semibold text-white mb-2">Call Us</h3>
-                <p className="text-gray-400 mb-4">Speak with our experts</p>
-                <a
-                  href={`tel:${contactInfo.phone}`}
-                  className="text-blue-400 hover:text-blue-300 font-medium transition-colors"
-                >
-                  {contactInfo.phone}
-                </a>
-              </motion.div>
-
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: 0.2 }}
-                className="text-center"
-              >
-                <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-pink-500 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Mail className="w-8 h-8 text-white" />
-                </div>
-                <h3 className="text-xl font-semibold text-white mb-2">Email Us</h3>
-                <p className="text-gray-400 mb-4">Send us a message</p>
-                <a
-                  href={`mailto:${contactInfo.email}`}
-                  className="text-purple-400 hover:text-purple-300 font-medium transition-colors"
-                >
-                  {contactInfo.email}
-                </a>
-              </motion.div>
-
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: 0.3 }}
-                className="text-center"
-              >
-                <div className="w-16 h-16 bg-gradient-to-br from-green-500 to-emerald-500 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <MapPin className="w-8 h-8 text-white" />
-                </div>
-                <h3 className="text-xl font-semibold text-white mb-2">Visit Us</h3>
-                <p className="text-gray-400 mb-4">Our office location</p>
-                <p className="text-green-400 font-medium">
-                  {contactInfo.address}
+            {/* No Results */}
+            {Object.keys(filteredFAQ).length === 0 && searchQuery !== '' && (
+              <div className="text-center py-12">
+                <HelpCircle className="w-16 h-16 text-slate-400 mx-auto mb-4" />
+                <h3 className="text-xl font-semibold mb-2">No FAQ items found</h3>
+                <p className="text-slate-400 mb-6">
+                  Try adjusting your search terms or browse our help categories
                 </p>
-              </motion.div>
-            </div>
+                <button
+                  onClick={() => setSearchQuery('')}
+                  className="px-6 py-3 bg-cyan-500 hover:bg-cyan-600 text-white rounded-lg transition-colors"
+                >
+                  Clear Search
+                </button>
+              </div>
+            )}
 
+            {/* Contact Section */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.4 }}
               className="text-center"
             >
-              <Link
-                to="/contact"
-                className="inline-flex items-center gap-2 bg-gradient-to-r from-indigo-500 to-purple-600 hover:from-indigo-600 hover:to-purple-700 text-white px-8 py-4 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-indigo-500/25"
-              >
-                Contact Our Team
-                <ArrowRight className="w-5 h-5" />
-              </Link>
+              <div className="bg-slate-800/50 rounded-lg p-8 border border-slate-700">
+                <h3 className="text-2xl font-bold mb-4">Still Have Questions?</h3>
+                <p className="text-slate-300 mb-6 max-w-2xl mx-auto">
+                  Can't find the answer you're looking for? Our support team is here to help.
+                  Get in touch with us for personalized assistance.
+                </p>
+                <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                  <Link
+                    to="/contact"
+                    className="inline-flex items-center gap-2 bg-gradient-to-r from-indigo-500 to-purple-600 hover:from-indigo-600 hover:to-purple-700 text-white px-8 py-4 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-indigo-500/25"
+                  >
+                    Contact Our Team
+                    <ArrowRight className="w-5 h-5" />
+                  </Link>
+                  <Link
+                    to="/help"
+                    className="px-6 py-3 border border-cyan-500 text-cyan-400 hover:bg-cyan-500 hover:text-white rounded-lg transition-colors font-medium"
+                  >
+                    Browse Help Center
+                  </Link>
+                </div>
+              </div>
             </motion.div>
           </div>
         </div>

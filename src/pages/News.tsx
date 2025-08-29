@@ -72,7 +72,6 @@ export default function News() {
       href: '/news/european-market-expansion'
     }
   ];
-
   const categories = [
     'All News',
     'Product Launch',
@@ -82,16 +81,13 @@ export default function News() {
     'Technology',
     'Business'
   ];
-
   const featuredArticle = newsArticles[0];
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO 
         title="News - Zion Tech Group"
         description="Stay updated with the latest news, product launches, research breakthroughs, and company updates from Zion Tech Group."
       />
-      
       {/* Hero Section */}
       <section className="relative py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto text-center">
@@ -113,7 +109,6 @@ export default function News() {
           </motion.div>
         </div>
       </section>
-
       {/* Featured Article */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -130,7 +125,6 @@ export default function News() {
               Our latest breakthrough in AI-powered healthcare analytics
             </p>
           </motion.div>
-
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -174,11 +168,14 @@ export default function News() {
                 </div>
                 <p className="text-gray-300">Featured Article</p>
               </div>
+              <h1 className="text-5xl md:text-6xl font-bold text-white">
+                Latest
+                <span className="bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent"> News</span>
+              </h1>
             </div>
           </motion.div>
         </div>
       </section>
-
       {/* News Grid */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -196,7 +193,6 @@ export default function News() {
               and company announcements.
             </p>
           </motion.div>
-
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {newsArticles.slice(1).map((article, index) => (
               <motion.div
@@ -237,9 +233,22 @@ export default function News() {
               </motion.div>
             ))}
           </div>
+          {filteredArticles.length === 0 && (
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              className="text-center py-16"
+            >
+              <div className="w-16 h-16 bg-slate-700/50 rounded-full flex items-center justify-center mx-auto mb-4">
+                <Search className="w-8 h-8 text-slate-400" />
+              </div>
+              <h3 className="text-xl font-semibold text-white mb-2">No news articles found</h3>
+              <p className="text-slate-400">Try adjusting your filters or search terms</p>
+            </motion.div>
+          )}
         </div>
       </section>
-
       {/* Newsletter Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-800/30">
         <div className="max-w-4xl mx-auto text-center">
@@ -268,7 +277,6 @@ export default function News() {
           </motion.div>
         </div>
       </section>
-
       {/* CTA Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
@@ -303,4 +311,4 @@ export default function News() {
       </section>
     </div>
   );
-}
+  }

@@ -72,7 +72,6 @@ import {
 } from 'lucide-react';
 import { SEO } from '../components/SEO';
 import { servicesCatalog } from '../data/servicesCatalog';
-
 // Enhanced pricing tiers
 const pricingTiers = [
   {
@@ -103,7 +102,6 @@ const pricingTiers = [
     popular: false
   }
 ];
-
 // Service comparison features
 const comparisonFeatures = [
   'AI-Powered Analytics',
@@ -117,11 +115,9 @@ const comparisonFeatures = [
   'SLA Guarantees',
   'Custom Development'
 ];
-
 // Enhanced service card component
 const ServicePricingCard = ({ service, showDetails = false }: { service: any; showDetails?: boolean }) => {
   const [expanded, setExpanded] = useState(false);
-  
   const getCategoryIcon = (category: string) => {
     const iconMap: Record<string, any> = {
       'Micro SaaS': ShoppingCart,
@@ -141,7 +137,6 @@ const ServicePricingCard = ({ service, showDetails = false }: { service: any; sh
     };
     return iconMap[category] || Grid;
   };
-
   const getCategoryColor = (category: string) => {
     const colorMap: Record<string, string> = {
       'Micro SaaS': 'from-purple-600 to-pink-600',
@@ -161,7 +156,6 @@ const ServicePricingCard = ({ service, showDetails = false }: { service: any; sh
     };
     return colorMap[category] || 'from-gray-600 to-gray-700';
   };
-
   return (
     <motion.div
       initial={{ opacity: 0, y: 20 }}
@@ -182,7 +176,6 @@ const ServicePricingCard = ({ service, showDetails = false }: { service: any; sh
         <h3 className="text-xl font-bold mb-2">{service.title}</h3>
         <p className="text-white/80 text-sm leading-relaxed">{service.description}</p>
       </div>
-
       {/* Service Content */}
       <div className="p-6">
         {/* Pricing */}
@@ -190,7 +183,6 @@ const ServicePricingCard = ({ service, showDetails = false }: { service: any; sh
           <div className="text-3xl font-bold text-gray-900">{service.price}</div>
           <span className="text-sm text-gray-500 capitalize">per {service.billing}</span>
         </div>
-
         {/* Features */}
         <div className="mb-6">
           <h4 className="font-semibold text-gray-900 mb-3 flex items-center">
@@ -221,7 +213,6 @@ const ServicePricingCard = ({ service, showDetails = false }: { service: any; sh
             ))}
           </div>
         </div>
-
         {/* CTA Button */}
         <a
           href={service.href}
@@ -234,11 +225,9 @@ const ServicePricingCard = ({ service, showDetails = false }: { service: any; sh
     </motion.div>
   );
 };
-
 // Pricing comparison table
 const PricingComparisonTable = ({ services }: { services: any[] }) => {
   const [selectedServices, setSelectedServices] = useState<string[]>([]);
-
   const toggleService = (serviceId: string) => {
     setSelectedServices(prev => 
       prev.includes(serviceId) 
@@ -246,13 +235,10 @@ const PricingComparisonTable = ({ services }: { services: any[] }) => {
         : [...prev, serviceId]
     );
   };
-
   const filteredServices = services.filter(service => selectedServices.includes(service.id));
-
   return (
     <div className="bg-white rounded-2xl shadow-xl p-6 border border-gray-100">
       <h3 className="text-2xl font-bold text-gray-900 mb-6 text-center">Service Comparison</h3>
-      
       {/* Service Selection */}
       <div className="mb-6">
         <h4 className="text-lg font-semibold text-gray-700 mb-3">Select Services to Compare</h4>
@@ -272,7 +258,6 @@ const PricingComparisonTable = ({ services }: { services: any[] }) => {
           ))}
         </div>
       </div>
-
       {/* Comparison Table */}
       {filteredServices.length > 0 && (
         <div className="overflow-x-auto">
@@ -313,7 +298,6 @@ const PricingComparisonTable = ({ services }: { services: any[] }) => {
     </div>
   );
 };
-
 // Contact information section
 const ContactSection = () => {
   const contactInfo = {
@@ -322,7 +306,6 @@ const ContactSection = () => {
     website: "https://ziontechgroup.com",
     address: "364 E Main St STE 1008 Middletown DE 19709"
   };
-
   return (
     <div className="bg-gradient-to-r from-blue-900 to-purple-900 text-white py-16">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -334,7 +317,6 @@ const ContactSection = () => {
             Contact our team to discuss your specific needs and get a customized quote for your business
           </p>
         </div>
-
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           <div className="text-center">
             <Phone className="w-12 h-12 text-blue-400 mx-auto mb-4" />
@@ -343,7 +325,6 @@ const ContactSection = () => {
               {contactInfo.phone}
             </a>
           </div>
-          
           <div className="text-center">
             <Mail className="w-12 h-12 text-purple-400 mx-auto mb-4" />
             <h3 className="text-lg font-semibold mb-2">Email Us</h3>
@@ -351,7 +332,6 @@ const ContactSection = () => {
               {contactInfo.email}
             </a>
           </div>
-          
           <div className="text-center">
             <Globe className="w-12 h-12 text-green-400 mx-auto mb-4" />
             <h3 className="text-lg font-semibold mb-2">Visit Website</h3>
@@ -359,14 +339,12 @@ const ContactSection = () => {
               {contactInfo.website.replace('https://', '')}
             </a>
           </div>
-          
           <div className="text-center">
             <MapPin className="w-12 h-12 text-red-400 mx-auto mb-4" />
             <h3 className="text-lg font-semibold mb-2">Address</h3>
             <p className="text-red-300 text-sm">{contactInfo.address}</p>
           </div>
         </div>
-
         <div className="text-center mt-12">
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
@@ -389,33 +367,27 @@ const ContactSection = () => {
     </div>
   );
 };
-
 export default function ComprehensivePricingGuide2027() {
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [priceRange, setPriceRange] = useState('all');
   const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
-
   // Flatten all services from the catalog
   const allServices = useMemo(() => {
     return servicesCatalog.flatMap(category => category.items);
   }, []);
-
   // Get unique categories
   const categories = useMemo(() => {
     const cats = [...new Set(allServices.map(service => service.category))];
     return cats.sort();
   }, [allServices]);
-
   // Filter services based on search, category, and price
   const filteredServices = useMemo(() => {
     return allServices.filter(service => {
       const matchesSearch = service.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
                            service.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
                            service.category.toLowerCase().includes(searchQuery.toLowerCase());
-      
       const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory;
-      
       const matchesPrice = priceRange === 'all' || (() => {
         const price = parseInt(service.price.replace(/[^0-9]/g, ''));
         switch (priceRange) {
@@ -426,11 +398,9 @@ export default function ComprehensivePricingGuide2027() {
           default: return true;
         }
       })();
-      
       return matchesSearch && matchesCategory && matchesPrice;
     });
   }, [allServices, searchQuery, selectedCategory, priceRange]);
-
   return (
     <>
       <SEO 
@@ -438,7 +408,6 @@ export default function ComprehensivePricingGuide2027() {
         description="Explore our complete pricing guide for AI solutions, IT services, and Micro SaaS platforms. Get detailed pricing, features, and comparison information for all our services."
         keywords="pricing guide, service pricing, AI solutions pricing, IT services cost, Micro SaaS pricing, technology pricing"
       />
-      
       <div className="min-h-screen bg-gradient-to-br from-gray-50 via-white to-blue-50">
         {/* Hero Section */}
         <div className="bg-gradient-to-r from-blue-900 via-purple-900 to-indigo-900 text-white">
@@ -473,7 +442,6 @@ export default function ComprehensivePricingGuide2027() {
             </motion.div>
           </div>
         </div>
-
         {/* Pricing Tiers Overview */}
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
           <div className="text-center mb-12">
@@ -482,7 +450,6 @@ export default function ComprehensivePricingGuide2027() {
               Choose the pricing tier that best fits your business needs and scale as you grow
             </p>
           </div>
-
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {pricingTiers.map((tier, index) => (
               <motion.div
@@ -501,18 +468,15 @@ export default function ComprehensivePricingGuide2027() {
                     </span>
                   </div>
                 )}
-
                 <div className={`w-16 h-16 bg-gradient-to-r ${tier.color} rounded-xl flex items-center justify-center mx-auto mb-6`}>
                   <Star className="w-8 h-8 text-white" />
                 </div>
-
                 <h3 className="text-2xl font-bold text-gray-900 mb-2">{tier.name}</h3>
                 <div className="mb-4">
                   <span className="text-4xl font-bold text-gray-900">{tier.price}</span>
                   <span className="text-gray-600">/{tier.period}</span>
                 </div>
                 <p className="text-gray-600 mb-6">{tier.description}</p>
-
                 <ul className="space-y-3 mb-8">
                   {tier.features.map((feature, idx) => (
                     <li key={idx} className="flex items-center space-x-3">
@@ -521,7 +485,6 @@ export default function ComprehensivePricingGuide2027() {
                     </li>
                   ))}
                 </ul>
-
                 <button className={`w-full py-3 px-6 rounded-xl font-semibold transition-all duration-300 ${
                   tier.popular
                     ? 'bg-gradient-to-r from-blue-600 to-purple-600 text-white hover:from-blue-700 hover:to-purple-700'
@@ -533,7 +496,6 @@ export default function ComprehensivePricingGuide2027() {
             ))}
           </div>
         </div>
-
         {/* Search and Filter Section */}
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
           <div className="bg-white rounded-2xl shadow-xl p-6 mb-8 border border-gray-100">
@@ -551,7 +513,6 @@ export default function ComprehensivePricingGuide2027() {
                   />
                 </div>
               </div>
-
               {/* Category Filter */}
               <div>
                 <select
@@ -565,7 +526,6 @@ export default function ComprehensivePricingGuide2027() {
                   ))}
                 </select>
               </div>
-
               {/* Price Range Filter */}
               <div>
                 <select
@@ -581,7 +541,6 @@ export default function ComprehensivePricingGuide2027() {
                 </select>
               </div>
             </div>
-
             {/* View Mode Toggle */}
             <div className="flex items-center justify-between mt-4 pt-4 border-t border-gray-200">
               <div className="flex items-center space-x-2">
@@ -603,14 +562,12 @@ export default function ComprehensivePricingGuide2027() {
                   </button>
                 </div>
               </div>
-
               <div className="text-sm text-gray-600">
                 Showing {filteredServices.length} of {allServices.length} services
               </div>
             </div>
           </div>
         </div>
-
         {/* Services Display */}
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
           {filteredServices.length > 0 ? (
@@ -639,12 +596,10 @@ export default function ComprehensivePricingGuide2027() {
             </div>
           )}
         </div>
-
         {/* Service Comparison */}
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
           <PricingComparisonTable services={allServices} />
         </div>
-
         {/* Contact Section */}
         <ContactSection />
       </div>
