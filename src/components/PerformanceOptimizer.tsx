@@ -1,5 +1,5 @@
-import React, { useEffect, useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import React, { useEffect, useCallback } from 'react';
+import { useLocation } from 'react-router-dom';
 
 interface PerformanceMetrics {
   fcp: number;
@@ -10,77 +10,53 @@ interface PerformanceMetrics {
 }
 
 export function PerformanceOptimizer() {
-  const [metrics, setMetrics] = useState<PerformanceMetrics | null>(null);
-  const [isVisible, setIsVisible] = useState(false);
+  const location = useLocation();
 
-  // Enhanced preload critical resources
-  const preloadCriticalResources = useCallback(() => {
-    const criticalPaths = [
+  // Preload critical routes
+  const preloadCriticalRoutes = useCallback(() => {
+    const criticalRoutes = [
       '/services',
       '/ai-services',
       '/contact',
-      '/about',
-      '/pricing-guide',
-      '/revolutionary-services-2030'
+      '/about'
     ];
+    
+    criticalRoutes.forEach(route => {
+      if (route !== location.pathname) {
+        const link = document.createElement('link');
+        link.rel = 'prefetch';
+        link.href = route;
+        document.head.appendChild(link);
+      }
+    });
+  }, [location.pathname]);
 
-    // Preload critical routes
-    criticalPaths.forEach(path => {
-      const link = document.createElement('link');
-      link.rel = 'prefetch';
-      link.href = path;
-      document.head.appendChild(link);
+  // Optimize images with intersection observer
+  const optimizeImages = useCallback(() => {
+    const images = document.querySelectorAll('img[data-src]');
+    const imageObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const img = entry.target as HTMLImageElement;
+          img.src = img.dataset.src || '';
+          img.classList.remove('lazy');
+          imageObserver.unobserve(img);
+        }
+      });
     });
 
-    // Preload critical fonts
-    const fontLinks = [
-      'https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&display=swap',
-      'https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&display=swap'
-    ];
-
-    fontLinks.forEach(href => {
-      const link = document.createElement('link');
-      link.rel = 'preload';
-      link.as = 'style';
-      link.href = href;
-      document.head.appendChild(link);
-    });
-
-    // Preload critical images
-    const criticalImages = [
-      '/images/hero-ai-solutions.jpg',
-      '/images/hero-it-services.jpg',
-      '/images/hero-green-it.jpg'
-    ];
-
-    criticalImages.forEach(src => {
-      const link = document.createElement('link');
-      link.rel = 'preload';
-      link.as = 'image';
-      link.href = src;
-      document.head.appendChild(link);
-    });
+    images.forEach(img => imageObserver.observe(img));
   }, []);
 
-  // Enhanced Core Web Vitals monitoring
-  const monitorCoreWebVitals = useCallback(() => {
+  // Monitor Core Web Vitals
+  const monitorPerformance = useCallback(() => {
     if ('PerformanceObserver' in window) {
       // First Contentful Paint
       const fcpObserver = new PerformanceObserver((list) => {
         const entries = list.getEntries();
         entries.forEach((entry) => {
           if (entry.name === 'first-contentful-paint') {
-            const fcp = entry.startTime;
-            console.log('FCP:', fcp);
-            
-            // Send to analytics
-            if (fcp < 1800) {
-              console.log('✅ FCP is excellent');
-            } else if (fcp < 3000) {
-              console.log('⚠️ FCP needs improvement');
-            } else {
-              console.log('❌ FCP is poor');
-            }
+            console.log('FCP:', entry.startTime);
           }
         });
       });
@@ -89,36 +65,19 @@ export function PerformanceOptimizer() {
       // Largest Contentful Paint
       const lcpObserver = new PerformanceObserver((list) => {
         const entries = list.getEntries();
-        const lastEntry = entries[entries.length - 1];
-        if (lastEntry) {
-          const lcp = lastEntry.startTime;
-          console.log('LCP:', lcp);
-          
-          if (lcp < 2500) {
-            console.log('✅ LCP is excellent');
-          } else if (lcp < 4000) {
-            console.log('⚠️ LCP needs improvement');
-          } else {
-            console.log('❌ LCP is poor');
+        entries.forEach((entry) => {
+          if (entry.name === 'largest-contentful-paint') {
+            console.log('LCP:', entry.startTime);
           }
-        }
+        });
       });
       lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] });
 
       // First Input Delay
       const fidObserver = new PerformanceObserver((list) => {
         const entries = list.getEntries();
-        entries.forEach((entry: any) => {
-          const fid = entry.processingStart - entry.startTime;
-          console.log('FID:', fid);
-          
-          if (fid < 100) {
-            console.log('✅ FID is excellent');
-          } else if (fid < 300) {
-            console.log('⚠️ FID needs improvement');
-          } else {
-            console.log('❌ FID is poor');
-          }
+        entries.forEach((entry) => {
+          console.log('FID:', entry.processingStart - entry.startTime);
         });
       });
       fidObserver.observe({ entryTypes: ['first-input'] });
@@ -126,160 +85,94 @@ export function PerformanceOptimizer() {
       // Cumulative Layout Shift
       const clsObserver = new PerformanceObserver((list) => {
         let clsValue = 0;
-        for (const entry of list.getEntries()) {
+        const entries = list.getEntries();
+        entries.forEach((entry: any) => {
           if (!entry.hadRecentInput) {
-            clsValue += (entry as any).value;
+            clsValue += entry.value;
           }
         });
         console.log('CLS:', clsValue);
-        
-        if (clsValue < 0.1) {
-          console.log('✅ CLS is excellent');
-        } else if (clsValue < 0.25) {
-          console.log('⚠️ CLS needs improvement');
-        } else {
-          console.log('❌ CLS is poor');
-        }
-        setMetrics(prev => ({ ...prev, cls: clsValue }));
       });
       clsObserver.observe({ entryTypes: ['layout-shift'] });
-
-      // Time to First Byte
-      const navigationObserver = new PerformanceObserver((list) => {
-        const entries = list.getEntries();
-        entries.forEach((entry: any) => {
-          if (entry.entryType === 'navigation') {
-            const ttfb = entry.responseStart - entry.requestStart;
-            console.log('TTFB:', ttfb);
-            
-            if (ttfb < 800) {
-              console.log('✅ TTFB is excellent');
-            } else if (ttfb < 1800) {
-              console.log('⚠️ TTFB needs improvement');
-            } else {
-              console.log('❌ TTFB is poor');
-            }
-          }
-        });
-      });
-      navigationObserver.observe({ entryTypes: ['navigation'] });
-    }
-
-  // Image optimization
-  const optimizeImages = useCallback(() => {
-    const images = document.querySelectorAll('img');
-    images.forEach(img => {
-      // Add loading="lazy" for non-critical images
-      if (!img.classList.contains('critical')) {
-        img.loading = 'lazy';
-      }
-      
-      // Add decoding="async" for better performance
-      img.decoding = 'async';
-      
-      // Add error handling
-      img.onerror = () => {
-        img.style.display = 'none';
-        console.warn(`Failed to load image: ${img.src}`);
-      };
-    });
-  }, []);
-
-  // Resource hints optimization
-  const optimizeResourceHints = useCallback(() => {
-    // DNS prefetch for external domains
-    const externalDomains = [
-      'fonts.googleapis.com',
-      'fonts.gstatic.com',
-      'cdn.jsdelivr.net'
-    ];
-
-    externalDomains.forEach(domain => {
-      const link = document.createElement('link');
-      link.rel = 'dns-prefetch';
-      link.href = `//${domain}`;
-      document.head.appendChild(link);
-    });
-
-    // Preconnect to critical third-party origins
-    const criticalOrigins = [
-      'https://fonts.googleapis.com',
-      'https://fonts.gstatic.com'
-    ];
-
-    criticalOrigins.forEach(origin => {
-      const link = document.createElement('link');
-      link.rel = 'preconnect';
-      link.href = origin;
-      document.head.appendChild(link);
-    });
-  }, []);
-
-  // Bundle size optimization
-  const optimizeBundleSize = useCallback(() => {
-    // Monitor bundle size
-    if ('PerformanceObserver' in window) {
-      const observer = new PerformanceObserver((list) => {
-        const entries = list.getEntries();
-        entries.forEach((entry: any) => {
-          if (entry.entryType === 'resource') {
-            const size = entry.transferSize || entry.decodedBodySize;
-            if (size > 50000) { // 50KB threshold
-              console.warn(`Large resource detected: ${entry.name} (${Math.round(size / 1024)}KB)`);
-            }
-          }
-        });
-      });
-      observer.observe({ entryTypes: ['resource'] });
     }
   }, []);
 
-  // Memory leak prevention
-  const preventMemoryLeaks = useCallback(() => {
-    // Clean up event listeners on route change
-    return () => {
-      // This will be called when component unmounts
-      const observers = PerformanceObserver;
-      if (observers) {
-        observers.disconnect && observers.disconnect();
+  // Optimize bundle loading
+  const optimizeBundleLoading = useCallback(() => {
+    // Preload critical CSS
+    const criticalCSS = document.createElement('link');
+    criticalCSS.rel = 'preload';
+    criticalCSS.as = 'style';
+    criticalCSS.href = '/src/index.css';
+    document.head.appendChild(criticalCSS);
+
+    // Preload critical fonts
+    const fontPreload = document.createElement('link');
+    fontPreload.rel = 'preload';
+    fontPreload.as = 'font';
+    fontPreload.crossOrigin = 'anonymous';
+    fontPreload.href = 'https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Rajdhani:wght@300;400;500;600;700&display=swap';
+    document.head.appendChild(fontPreload);
+  }, []);
+
+  // Debounced scroll optimization
+  const optimizeScroll = useCallback(() => {
+    let ticking = false;
+    
+    const updateScroll = () => {
+      ticking = false;
+      // Optimize scroll-based animations here
+    };
+
+    const requestTick = () => {
+      if (!ticking) {
+        requestAnimationFrame(updateScroll);
+        ticking = true;
       }
     };
+
+    window.addEventListener('scroll', requestTick, { passive: true });
+    
+    return () => window.removeEventListener('scroll', requestTick);
   }, []);
 
   useEffect(() => {
-    preloadCriticalResources();
-    monitorCoreWebVitals();
+    // Initialize performance optimizations
+    preloadCriticalRoutes();
     optimizeImages();
-    optimizeResourceHints();
-    optimizeBundleSize();
+    monitorPerformance();
+    optimizeBundleLoading();
     
-    return preventMemoryLeaks();
-  }, [preloadCriticalResources, monitorCoreWebVitals, optimizeImages, optimizeResourceHints, optimizeBundleSize, preventMemoryLeaks]);
+    // Cleanup scroll optimization
+    const cleanupScroll = optimizeScroll();
+    
+    return () => {
+      cleanupScroll();
+    };
+  }, [preloadCriticalRoutes, optimizeImages, monitorPerformance, optimizeBundleLoading, optimizeScroll]);
 
-  // Route-based optimization
+  // Route change optimization
   useEffect(() => {
-    // Optimize for specific routes
-    if (location.pathname === '/') {
-      // Homepage optimizations
-      const heroImages = document.querySelectorAll('.hero-image');
-      heroImages.forEach(img => {
-        if (img instanceof HTMLImageElement) {
-          img.loading = 'eager';
-          img.classList.add('critical');
-        }
-      });
-    }
-
-    if (location.pathname.startsWith('/services/')) {
-      // Service page optimizations
-      const serviceImages = document.querySelectorAll('.service-image');
-      serviceImages.forEach(img => {
-        if (img instanceof HTMLImageElement) {
-          img.loading = 'lazy';
-        }
-      });
+    // Preload next likely route
+    const nextRoute = getNextLikelyRoute(location.pathname);
+    if (nextRoute) {
+      const link = document.createElement('link');
+      link.rel = 'prefetch';
+      link.href = nextRoute;
+      document.head.appendChild(link);
     }
   }, [location.pathname]);
 
-  return null;
+  // Helper function to predict next route
+  const getNextLikelyRoute = (currentPath: string): string | null => {
+    const routeMap: Record<string, string> = {
+      '/': '/services',
+      '/services': '/ai-services',
+      '/ai-services': '/contact',
+      '/contact': '/about'
+    };
+    return routeMap[currentPath] || null;
+  };
+
+  return null; // This component doesn't render anything
 }

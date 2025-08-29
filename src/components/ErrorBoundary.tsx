@@ -1,11 +1,12 @@
 import React, { Component, ErrorInfo, ReactNode } from 'react';
-import { motion } from 'framer-motion';
-import { AlertTriangle, RefreshCw, Home, Mail, Phone, ArrowLeft } from 'lucide-react';
-import { Link } from 'react-router-dom';
+import { AlertTriangle, RefreshCw, Home, ArrowLeft, Bug, Shield, Zap } from 'lucide-react';
 
 interface Props {
   children: ReactNode;
   fallback?: ReactNode;
+  onError?: (error: Error, errorInfo: ErrorInfo) => void;
+  showDetails?: boolean;
+  enableRecovery?: boolean;
 }
 
 interface State {
@@ -13,6 +14,8 @@ interface State {
   error: Error | null;
   errorInfo: ErrorInfo | null;
   errorId: string | null;
+  retryCount: number;
+  isRecovering: boolean;
 }
 
 export class ErrorBoundary extends Component<Props, State> {
@@ -22,136 +25,128 @@ export class ErrorBoundary extends Component<Props, State> {
       hasError: false,
       error: null,
       errorInfo: null,
-      errorId: null
+      errorId: null,
+      retryCount: 0,
+      isRecovering: false
     };
   }
 
-  static getDerivedStateFromError(error: Error): State {
+  static getDerivedStateFromError(error: Error): Partial<State> {
     return {
       hasError: true,
       error,
-      errorInfo: null,
-      errorId: `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`
+      errorId: this.generateErrorId()
     };
   }
 
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {
     this.setState({
-      error,
       errorInfo,
-      errorId: `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`
+      errorId: this.generateErrorId()
     });
 
-    // Log error to console for debugging
-    console.error('Error caught by ErrorBoundary:', error);
-    console.error('Error info:', errorInfo);
+    // Log error to console in development
+    if (process.env.NODE_ENV === 'development') {
+      console.error('ErrorBoundary caught an error:', error, errorInfo);
+    }
 
-    // Send error to monitoring service (e.g., Sentry, LogRocket)
+    // Call custom error handler if provided
+    if (this.props.onError) {
+      this.props.onError(error, errorInfo);
+    }
+
+    // Send error to error reporting service (if configured)
     this.reportError(error, errorInfo);
-
-    // Store error in localStorage for offline access
-    this.storeError(error, errorInfo);
   }
 
-  reportError = (error: Error, errorInfo: ErrorInfo) => {
-    try {
-      // Send to analytics or monitoring service
-      if (typeof window !== 'undefined' && window.gtag) {
-        window.gtag('event', 'exception', {
-          description: error.message,
-          fatal: false,
-          custom_map: {
-            error_id: this.state.errorId
-          }
-        });
+  private static generateErrorId(): string {
+    return `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
+  }
+
+  private reportError(error: Error, errorInfo: ErrorInfo) {
+    // In a real application, you would send this to your error reporting service
+    // For example: Sentry, LogRocket, Bugsnag, etc.
+    
+    const errorReport = {
+      errorId: this.state.errorId,
+      message: error.message,
+      stack: error.stack,
+      componentStack: errorInfo.componentStack,
+      timestamp: new Date().toISOString(),
+      url: window.location.href,
+      userAgent: navigator.userAgent,
+      viewport: {
+        width: window.innerWidth,
+        height: window.innerHeight
       }
+    };
 
-      // Send to error reporting service
-      const errorReport = {
-        errorId: this.state.errorId,
-        message: error.message,
-        stack: error.stack,
-        componentStack: errorInfo.componentStack,
-        userAgent: navigator.userAgent,
-        url: window.location.href,
-        timestamp: new Date().toISOString(),
-        userId: this.getUserId()
-      };
+    // Send to console for now (replace with actual error reporting service)
+    console.group('🚨 Error Report');
+    console.log('Error ID:', errorReport.errorId);
+    console.log('Error Details:', errorReport);
+    console.groupEnd();
 
-      // Example: Send to your error reporting endpoint
-      fetch('/api/errors', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(errorReport)
-      }).catch(() => {
-        // Silently fail if error reporting fails
-        console.warn('Failed to send error report');
-      });
-    } catch (reportingError) {
-      console.warn('Error reporting failed:', reportingError);
-    }
-  };
+    // You could also send to localStorage for offline error collection
+    this.storeErrorLocally(errorReport);
+  }
 
-  storeError = (error: Error, errorInfo: ErrorInfo) => {
+  private storeErrorLocally(errorReport: any) {
     try {
-      const storedErrors = JSON.parse(localStorage.getItem('zion-errors') || '[]');
-      const errorData = {
-        id: this.state.errorId,
-        message: error.message,
-        stack: error.stack,
-        componentStack: errorInfo.componentStack,
-        timestamp: new Date().toISOString(),
-        url: window.location.href
-      };
-
-      storedErrors.push(errorData);
+      const storedErrors = JSON.parse(localStorage.getItem('zion-error-log') || '[]');
+      storedErrors.push(errorReport);
       
       // Keep only last 10 errors
       if (storedErrors.length > 10) {
         storedErrors.splice(0, storedErrors.length - 10);
       }
-
-      localStorage.setItem('zion-errors', JSON.stringify(storedErrors));
-    } catch (storageError) {
-      console.warn('Failed to store error:', storageError);
+      
+      localStorage.setItem('zion-error-log', JSON.stringify(storedErrors));
+    } catch (e) {
+      console.warn('Failed to store error locally:', e);
     }
-  };
+  }
 
-  getUserId = (): string | null => {
+  private handleRetry = async () => {
+    this.setState({ isRecovering: true });
+    
     try {
-      // Get user ID from your auth system
-      return localStorage.getItem('zion-user-id');
-    } catch {
-      return null;
+      // Wait a bit to simulate recovery
+      await new Promise(resolve => setTimeout(resolve, 1000));
+      
+      this.setState({
+        hasError: false,
+        error: null,
+        errorInfo: null,
+        errorId: null,
+        retryCount: this.state.retryCount + 1,
+        isRecovering: false
+      });
+    } catch (e) {
+      this.setState({ isRecovering: false });
+      console.error('Recovery failed:', e);
     }
   };
 
-  handleRetry = () => {
-    this.setState({
-      hasError: false,
-      error: null,
-      errorInfo: null,
-      errorId: null
-    });
-  };
-
-  handleGoHome = () => {
+  private handleGoHome = () => {
     window.location.href = '/';
   };
 
-  handleContactSupport = () => {
-    const subject = encodeURIComponent(`Error Report - ${this.state.errorId}`);
-    const body = encodeURIComponent(
-      `Error ID: ${this.state.errorId}\n` +
-      `Error Message: ${this.state.error?.message}\n` +
-      `URL: ${window.location.href}\n` +
-      `User Agent: ${navigator.userAgent}\n\n` +
-      `Please provide any additional context about what you were doing when this error occurred.`
-    );
-    
-    window.location.href = `mailto:support@ziontechgroup.com?subject=${subject}&body=${body}`;
+  private handleGoBack = () => {
+    window.history.back();
+  };
+
+  private handleReportBug = () => {
+    const errorDetails = {
+      errorId: this.state.errorId,
+      message: this.state.error?.message,
+      url: window.location.href,
+      timestamp: new Date().toISOString()
+    };
+
+    // In a real app, this would open a bug report form or send to support
+    const mailtoLink = `mailto:support@ziontechgroup.com?subject=Error Report - ${errorDetails.errorId}&body=${encodeURIComponent(JSON.stringify(errorDetails, null, 2))}`;
+    window.open(mailtoLink);
   };
 
   render() {
@@ -162,34 +157,37 @@ export class ErrorBoundary extends Component<Props, State> {
       }
 
       return (
-        <div className="min-h-screen bg-slate-900 flex items-center justify-center p-4">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            className="max-w-md w-full"
-          >
-            {/* Error Icon */}
+        <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light flex items-center justify-center p-4">
+          <div className="max-w-2xl w-full bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-zion-cyan/20 shadow-2xl">
+            {/* Error Header */}
             <div className="text-center mb-8">
-              <div className="w-20 h-20 bg-red-500/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                <AlertTriangle className="w-10 h-10 text-red-500" />
+              <div className="inline-flex items-center justify-center w-20 h-20 bg-red-500/20 rounded-full mb-6">
+                <AlertTriangle className="w-10 h-10 text-red-400" />
               </div>
-              <h1 className="text-2xl font-bold text-white mb-2">Oops! Something went wrong</h1>
-              <p className="text-slate-400">
+              <h1 className="text-3xl font-bold text-white mb-2">
+                Oops! Something went wrong
+              </h1>
+              <p className="text-zion-slate-light text-lg">
                 We've encountered an unexpected error. Our team has been notified.
               </p>
             </div>
 
-            {/* Error Details (Development Only) */}
-            {process.env.NODE_ENV === 'development' && this.state.error && (
-              <div className="bg-slate-800 rounded-lg p-4 mb-6">
-                <h3 className="text-sm font-semibold text-white mb-2">Error Details (Development)</h3>
-                <div className="text-xs text-slate-400 space-y-1">
-                  <div><strong>Message:</strong> {this.state.error.message}</div>
-                  <div><strong>Error ID:</strong> {this.state.errorId}</div>
+            {/* Error Details */}
+            {this.props.showDetails && this.state.error && (
+              <div className="bg-zion-slate-dark/50 rounded-lg p-4 mb-6 border border-zion-slate-light/20">
+                <h3 className="text-white font-semibold mb-2 flex items-center gap-2">
+                  <Bug className="w-4 h-4 text-zion-cyan" />
+                  Error Details
+                </h3>
+                <div className="text-sm text-zion-slate-light space-y-2">
+                  <p><strong>Message:</strong> {this.state.error.message}</p>
+                  <p><strong>Error ID:</strong> <code className="bg-zion-slate-light/20 px-2 py-1 rounded">{this.state.errorId}</code></p>
                   {this.state.errorInfo && (
-                    <details className="mt-2">
-                      <summary className="cursor-pointer text-slate-300">Component Stack</summary>
-                      <pre className="mt-2 text-xs text-slate-400 whitespace-pre-wrap">
+                    <details className="mt-3">
+                      <summary className="cursor-pointer text-zion-cyan hover:text-zion-cyan-light">
+                        Component Stack Trace
+                      </summary>
+                      <pre className="mt-2 text-xs bg-zion-slate-dark p-3 rounded overflow-x-auto">
                         {this.state.errorInfo.componentStack}
                       </pre>
                     </details>
@@ -199,76 +197,70 @@ export class ErrorBoundary extends Component<Props, State> {
             )}
 
             {/* Action Buttons */}
-            <div className="space-y-3">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
               <button
                 onClick={this.handleRetry}
-                className="w-full flex items-center justify-center gap-2 px-4 py-3 bg-zion-purple text-white rounded-lg hover:bg-zion-purple/80 transition-colors"
+                disabled={this.state.isRecovering}
+                className="flex items-center justify-center gap-2 px-6 py-3 bg-zion-cyan hover:bg-zion-cyan-dark disabled:bg-zion-slate-light disabled:cursor-not-allowed text-white font-semibold rounded-lg transition-all duration-200 transform hover:scale-105 disabled:transform-none"
               >
-                <RefreshCw className="w-4 h-4" />
-                Try Again
-              </motion.button>
+                {this.state.isRecovering ? (
+                  <RefreshCw className="w-4 h-4 animate-spin" />
+                ) : (
+                  <Zap className="w-4 h-4" />
+                )}
+                {this.state.isRecovering ? 'Recovering...' : 'Try Again'}
+              </button>
 
-              <Link
-                to="/"
-                className="w-full flex items-center justify-center gap-2 px-4 py-3 bg-slate-700 text-white rounded-lg hover:bg-slate-600 transition-colors"
+              <button
+                onClick={this.handleGoHome}
+                className="flex items-center justify-center gap-2 px-6 py-3 bg-zion-purple hover:bg-zion-purple-dark text-white font-semibold rounded-lg transition-all duration-200 transform hover:scale-105"
               >
                 <Home className="w-4 h-4" />
                 Go Home
-              </Link>
+              </button>
+            </div>
 
+            {/* Secondary Actions */}
+            <div className="flex flex-col sm:flex-row gap-3 justify-center">
               <button
-                onClick={() => window.history.back()}
-                className="w-full flex items-center justify-center gap-2 px-4 py-3 bg-slate-700 text-white rounded-lg hover:bg-slate-600 transition-colors"
+                onClick={this.handleGoBack}
+                className="flex items-center justify-center gap-2 px-4 py-2 bg-zion-slate-light hover:bg-zion-slate text-white font-medium rounded-lg transition-colors duration-200"
               >
                 <ArrowLeft className="w-4 h-4" />
                 Go Back
               </button>
 
               <button
-                onClick={this.handleContactSupport}
-                className="w-full flex items-center justify-center gap-2 px-4 py-3 bg-zion-cyan/20 text-zion-cyan rounded-lg hover:bg-zion-cyan/30 transition-colors"
+                onClick={this.handleReportBug}
+                className="flex items-center justify-center gap-2 px-4 py-2 bg-zion-slate-light hover:bg-zion-slate text-white font-medium rounded-lg transition-colors duration-200"
               >
-                <Mail className="w-4 h-4" />
-                Contact Support
+                <Shield className="w-4 h-4" />
+                Report Bug
               </button>
             </div>
 
-            {/* Support Information */}
-            <div className="mt-8 p-4 bg-slate-800/50 rounded-lg">
-              <h3 className="text-sm font-semibold text-white mb-3">Need Help?</h3>
-              <div className="space-y-2 text-sm text-slate-400">
-                <div className="flex items-center gap-2">
-                  <Phone className="w-4 h-4" />
-                  <span>+1 (555) 123-4567</span>
-                </div>
-                <div className="flex items-center gap-2">
-                  <Mail className="w-4 h-4" />
-                  <span>support@ziontechgroup.com</span>
-                </div>
+            {/* Recovery Information */}
+            {this.state.retryCount > 0 && (
+              <div className="mt-6 text-center">
+                <p className="text-zion-slate-light text-sm">
+                  Recovery attempts: {this.state.retryCount}
+                </p>
               </div>
-              
-              {this.state.errorId && (
-                <div className="mt-3 p-2 bg-slate-700 rounded text-xs text-slate-300">
-                  <strong>Error ID:</strong> {this.state.errorId}
-                </div>
-              )}
-            </div>
+            )}
 
-            {/* Additional Help Links */}
-            <div className="mt-6 text-center">
-              <div className="flex justify-center gap-4 text-sm">
-                <Link to="/help" className="text-zion-cyan hover:text-zion-cyan/80 transition-colors">
-                  Help Center
-                </Link>
-                <Link to="/contact" className="text-zion-cyan hover:text-zion-cyan/80 transition-colors">
-                  Contact Us
-                </Link>
-                <Link to="/status" className="text-zion-cyan hover:text-zion-cyan/80 transition-colors">
-                  System Status
-                </Link>
-              </div>
+            {/* Support Information */}
+            <div className="mt-8 text-center">
+              <p className="text-zion-slate-light text-sm">
+                Need help? Contact our support team at{' '}
+                <a 
+                  href="mailto:support@ziontechgroup.com" 
+                  className="text-zion-cyan hover:text-zion-cyan-light underline"
+                >
+                  support@ziontechgroup.com
+                </a>
+              </p>
             </div>
-          </motion.div>
+          </div>
         </div>
       );
     }
