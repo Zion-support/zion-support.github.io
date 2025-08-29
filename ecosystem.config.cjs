@@ -187,6 +187,76 @@ module.exports = {
         NODE_ENV: 'production',
         AUTOMATION_INTERVAL: '21600000' // 6 hours
       }
+    },
+
+    // AI-Powered Code Quality Analyzer - runs every 2 hours
+    {
+      name: 'ai-code-analyzer',
+      script: './scripts/automation/ai-code-analyzer.cjs',
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      max_memory_restart: '512M',
+      env: {
+        NODE_ENV: 'production',
+        AUTOMATION_INTERVAL: '7200000' // 2 hours
+      }
+    },
+
+    // Intelligent Test Coverage Analyzer - runs every 3 hours
+    {
+      name: 'intelligent-test-analyzer',
+      script: './scripts/automation/intelligent-test-analyzer.cjs',
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      max_memory_restart: '512M',
+      env: {
+        NODE_ENV: 'production',
+        AUTOMATION_INTERVAL: '10800000' // 3 hours
+      }
+    },
+
+    // Smart Dependency Health Monitor - runs every 4 hours
+    {
+      name: 'smart-dependency-monitor',
+      script: './scripts/automation/smart-dependency-monitor.cjs',
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      max_memory_restart: '512M',
+      env: {
+        NODE_ENV: 'production',
+        AUTOMATION_INTERVAL: '14400000' // 4 hours
+      }
+    },
+
+    // Enhanced Performance Optimizer - runs every 2 hours
+    {
+      name: 'enhanced-performance-optimizer',
+      script: './scripts/automation/enhanced-performance-optimizer.cjs',
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      max_memory_restart: '512M',
+      env: {
+        NODE_ENV: 'production',
+        AUTOMATION_INTERVAL: '7200000' // 2 hours
+      }
+    },
+
+    // Intelligent Automation Orchestrator - runs every hour
+    {
+      name: 'intelligent-automation-orchestrator',
+      script: './scripts/automation/intelligent-automation-orchestrator.cjs',
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      max_memory_restart: '1G',
+      env: {
+        NODE_ENV: 'production',
+        AUTOMATION_INTERVAL: '3600000' // 1 hour
+      }
     }
   ]
 };
