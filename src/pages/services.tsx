@@ -90,7 +90,8 @@ export default function Services() {
           price: 'From $2,500',
           rating: 4.7,
           reviewCount: 203
-        }
+        },
+
       ]
     },
     {
@@ -195,6 +196,93 @@ export default function Services() {
           price: 'From $18,000',
           rating: 4.9,
           reviewCount: 134
+        },
+        {
+          name: 'AI Cybersecurity Threat Detection',
+          description: 'Advanced AI-powered cybersecurity platform with 99.9% threat detection rate',
+          features: ['AI-Powered Threat Detection', '24/7 Network Monitoring', 'Zero-Day Attack Prevention', 'Automated Response'],
+          href: '/services/ai-cybersecurity-threat-detection',
+          price: 'From $499/month',
+          rating: 4.9,
+          reviewCount: 234
+        }
+      ]
+    },
+    {
+      name: 'Project Management',
+      icon: Target,
+      description: 'AI-powered project management and team collaboration solutions',
+      color: 'from-purple-600 to-pink-600',
+      services: [
+        {
+          name: 'AI Project Management Platform',
+          description: 'Revolutionize project delivery with AI-powered task prioritization and predictive analytics',
+          features: ['AI-Powered Task Prioritization', 'Smart Team Collaboration', 'Predictive Timeline Management', 'Performance Analytics'],
+          href: '/services/ai-project-management-platform',
+          price: 'From $299/month',
+          rating: 4.9,
+          reviewCount: 156
+        },
+        {
+          name: 'Team Collaboration Suite',
+          description: 'Advanced team collaboration and project tracking tools',
+          features: ['Task Management', 'Team Communication', 'Progress Tracking', 'Resource Allocation'],
+          href: '/services/team-collaboration-suite',
+          price: 'From $2,500',
+          rating: 4.7,
+          reviewCount: 134
+        }
+      ]
+    },
+    {
+      name: 'Financial Services',
+      icon: DollarSign,
+      description: 'AI-powered financial technology and trading solutions',
+      color: 'from-green-600 to-blue-600',
+      services: [
+        {
+          name: 'AI Financial Trading Platform',
+          description: 'Revolutionary AI-powered trading platform delivering 25% higher returns',
+          features: ['AI-Powered Market Analysis', 'Automated Trading Strategies', 'Real-Time Portfolio Optimization', 'Risk Management'],
+          href: '/services/ai-financial-trading-platform',
+          price: 'From $199/month',
+          rating: 4.8,
+          reviewCount: 189
+        },
+        {
+          name: 'AI Financial Analytics',
+          description: 'Advanced financial modeling and predictive analytics',
+          features: ['Risk Assessment', 'Portfolio Optimization', 'Market Forecasting', 'Compliance Monitoring'],
+          href: '/services/ai-financial-analytics',
+          price: 'From $4,500',
+          rating: 4.8,
+          reviewCount: 145
+        }
+      ]
+    },
+    {
+      name: 'Healthcare Technology',
+      icon: Heart,
+      description: 'AI-powered healthcare solutions and medical technology',
+      color: 'from-red-600 to-pink-600',
+      services: [
+        {
+          name: 'AI Healthcare Analytics Platform',
+          description: 'Transform healthcare delivery with AI-powered diagnosis support and predictive analytics',
+          features: ['AI-Powered Diagnosis Support', 'Predictive Health Analytics', 'Patient Outcome Prediction', 'Real-Time Monitoring'],
+          href: '/services/ai-healthcare-analytics-platform',
+          price: 'From $799/month',
+          rating: 4.9,
+          reviewCount: 167
+        },
+        {
+          name: 'Healthcare Tech Solutions',
+          description: 'Comprehensive healthcare technology and digital health platforms',
+          features: ['Patient Management', 'Telemedicine', 'Health Records', 'Medical Analytics'],
+          href: '/services/healthcare-tech',
+          price: 'From $8,500',
+          rating: 4.8,
+          reviewCount: 98
         }
       ]
     },

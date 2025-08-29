@@ -1,5 +1,5 @@
 {
-  "name": "bolt.new.zion.app",
+  "name": "zion-tech-group-app",
   "version": "0.1.0",
   "private": true,
   "packageManager": "yarn@1.22.22",
@@ -19,15 +19,19 @@
     "automation:restart": "./scripts/start-automation.sh restart",
     "automation:status": "./scripts/start-automation.sh status",
     "automation:logs": "./scripts/start-automation.sh logs",
-    "automation:monit": "./scripts/start-automation.sh monit",
-    "automation:health": "./scripts/start-automation.sh health",
+    "automation:monit": "./scripts/start-automation.sh status",
     "automation:reports": "./scripts/start-automation.sh reports",
     "pm2:start": "pm2 start ecosystem.config.cjs --only automation",
     "pm2:stop": "pm2 stop ecosystem.config.cjs --only automation",
     "pm2:restart": "pm2 restart ecosystem.config.cjs --only automation",
     "pm2:status": "pm2 status",
     "pm2:logs": "pm2 logs --lines 50",
-    "pm2:monit": "pm2 monit"
+    "pm2:monit": "pm2 monit",
+    "automation:enhanced-testing": "node scripts/automation/enhanced-testing-automation.cjs",
+    "automation:enhanced-security": "node scripts/automation/enhanced-security-automation.cjs",
+    "automation:enhanced-links": "node scripts/automation/enhanced-link-checker.cjs",
+    "automation:enhanced-ci-cd": "node scripts/automation/enhanced-ci-cd-automation.cjs",
+    "automation:run-all-enhanced": "npm run automation:enhanced-testing && npm run automation:enhanced-security && npm run automation:enhanced-links && npm run automation:enhanced-ci-cd"
   },
   "dependencies": {
     "@hookform/resolvers": "^5.2.1",

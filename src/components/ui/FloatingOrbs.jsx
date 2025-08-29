@@ -17,13 +17,6 @@ export function FloatingOrbs({ count = 6, className = '' }) {
         window.addEventListener('resize', resizeCanvas);
         // Orb class
         class Orb {
-            x;
-            y;
-            radius;
-            vx;
-            vy;
-            opacity;
-            color;
             constructor() {
                 this.x = Math.random() * canvas.width;
                 this.y = Math.random() * canvas.height;

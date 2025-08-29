@@ -1,5 +1,5 @@
-import { useRouter } from 'next/router';
-import Link from 'next/link';
+import { useNavigate, useLocation, useParams } from "react-router-dom";
+import { Link } from "react-router-dom";
 import CheckoutProgress from '@/components/checkout/CheckoutProgress';
 export default function OrderConfirmation() {
     const router = useRouter();

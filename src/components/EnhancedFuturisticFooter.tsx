@@ -118,6 +118,19 @@ export const EnhancedFuturisticFooter: React.FC = () => {
       ]
     },
     {
+      title: 'Innovative AI Services',
+      icon: Brain,
+      color: 'from-cyan-600 to-blue-600',
+      links: [
+        { name: 'AI Content Generation Platform', href: '/services/ai-content-generation-platform' },
+        { name: 'AI Cybersecurity Threat Intelligence', href: '/services/ai-cybersecurity-threat-intelligence' },
+        { name: 'AI Customer Experience Analytics', href: '/services/ai-customer-experience-analytics' },
+        { name: 'AI Business Intelligence', href: '/services/ai-business-intelligence' },
+        { name: 'AI Sales Copilot', href: '/services/ai-sales-copilot' },
+        { name: 'AI Compliance Assistant', href: '/services/ai-compliance-assistant' }
+      ]
+    },
+    {
       title: 'AI & Machine Learning',
       icon: Brain,
       color: 'from-indigo-600 to-purple-600',
@@ -127,7 +140,11 @@ export const EnhancedFuturisticFooter: React.FC = () => {
         { name: 'AI Workflow Orchestrator', href: '/services/ai-workflow-orchestrator' },
         { name: 'AI Customer Success Platform', href: '/services/ai-customer-success-platform' },
         { name: 'AI Data Governance', href: '/services/ai-data-governance' },
-        { name: 'AI Healthcare Analytics', href: '/services/ai-healthcare-analytics' }
+        { name: 'AI Healthcare Analytics', href: '/services/ai-healthcare-analytics' },
+        { name: 'AI Project Management Platform', href: '/services/ai-project-management-platform' },
+        { name: 'AI Cybersecurity Threat Detection', href: '/services/ai-cybersecurity-threat-detection' },
+        { name: 'AI Financial Trading Platform', href: '/services/ai-financial-trading-platform' },
+        { name: 'AI Healthcare Analytics Platform', href: '/services/ai-healthcare-analytics-platform' }
       ]
     },
     {
@@ -138,6 +155,7 @@ export const EnhancedFuturisticFooter: React.FC = () => {
         { name: 'AI Compliance Copilot', href: '/services/ai-compliance-copilot' },
         { name: 'Zero Trust Architecture', href: '/services/zero-trust-network-architecture' },
         { name: 'AI Cybersecurity Suite', href: '/services/ai-cybersecurity-suite' },
+        { name: 'AI Cybersecurity Threat Detection', href: '/services/ai-cybersecurity-threat-detection' },
         { name: 'Quantum AI Platform', href: '/services/quantum-ai-platform' },
         { name: 'Security & Compliance', href: '/security' },
         { name: 'Privacy & Data Protection', href: '/privacy' }

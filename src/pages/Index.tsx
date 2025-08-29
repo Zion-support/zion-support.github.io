@@ -40,13 +40,13 @@ export default function Index() {
       title: t("home.tool_ai_matcher"),
       description: t("home.tool_ai_matcher_desc"),
       icon: <Sparkles className="h-6 w-6 text-zion-cyan" />,
-      link: "/ai-services"
+      link: "/match"
     },
     {
       title: t("home.tool_talent"),
       description: t("home.tool_talent_desc"),
       icon: <Users className="h-6 w-6 text-zion-purple" />,
-      link: "/partners"
+      link: "/talent"
     },
     {
       title: t("home.tool_services"),
@@ -55,8 +55,8 @@ export default function Index() {
       link: "/services"
     },
     {
-      title: "Services Catalog",
-      description: "Explore our complete portfolio of micro SaaS, IT and AI solutions",
+      title: "Comprehensive Services",
+      description: "Explore our complete portfolio of innovative technology solutions and micro SAAS services",
       icon: <Sparkles className="h-6 w-6 text-zion-purple" />,
       link: "/comprehensive-services"
     },
@@ -64,19 +64,19 @@ export default function Index() {
       title: t("home.tool_equipment"),
       description: t("home.tool_equipment_desc"),
       icon: <Settings className="h-6 w-6 text-zion-purple" />,
-      link: "/services/it-infrastructure"
+      link: "/equipment"
     },
     {
       title: t("home.tool_analytics"),
       description: t("home.tool_analytics_desc"),
       icon: <BarChart3 className="h-6 w-6 text-zion-cyan" />,
-      link: "/services/data-analytics"
+      link: "/analytics"
     },
     {
       title: "Mobile App",
       description: "Take Zion with you on the go with our mobile app for iOS and Android",
       icon: <Smartphone className="h-6 w-6 text-zion-purple" />,
-      link: "/support"
+      link: "/mobile-launch"
     }
   ];
 
