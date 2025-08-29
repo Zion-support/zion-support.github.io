@@ -1,516 +1,664 @@
+import { ProductListing } from "@/types/listings";
+
 export interface PricingTier {
   id: string;
   name: string;
   price: number;
   currency: string;
-  billingCycle: string;
+  billing: string;
+  description: string;
   features: string[];
-  bestFor: string;
   popular?: boolean;
+  recommended?: boolean;
+  savings?: string;
+  setupFee?: number;
+  contractLength?: string;
 }
 
 export interface ServicePricing {
-  id: string;
-  title: string;
+  serviceId: string;
+  serviceName: string;
   category: string;
-  subcategory: string;
   description: string;
   pricingTiers: PricingTier[];
-  marketPrice: string;
-  roi: string;
-  innovationLevel: string;
-  estimatedDelivery: string;
-  supportLevel: string;
-  contactInfo: {
-    phone: string;
-    email: string;
-    website: string;
+  marketComparison: {
+    averagePrice: string;
+    competitors: string[];
+    valueProposition: string;
+  };
+  roi: {
+    timeframe: string;
+    percentage: string;
+    savings: string;
+  };
+  features: {
+    core: string[];
+    advanced: string[];
+    enterprise: string[];
+  };
+  integrations: string[];
+  support: {
+    responseTime: string;
+    channels: string[];
+    sla: string;
   };
 }
 
 export const COMPREHENSIVE_PRICING_GUIDE_2025: ServicePricing[] = [
-  // AI Business Intelligence Platform
   {
-    id: "ai-business-intelligence-platform",
-    title: "AI Business Intelligence Platform",
-    category: "AI & Analytics",
-    subcategory: "Business Intelligence",
-    description: "Next-generation business intelligence platform that uses AI to automatically analyze data, generate insights, and create actionable reports for business decision-making.",
+    serviceId: "ai-revenue-optimization-platform",
+    serviceName: "AI Revenue Optimization Platform",
+    category: "AI & Business Intelligence",
+    description: "Intelligent revenue optimization platform that analyzes customer behavior, pricing strategies, and market trends to maximize profitability.",
     pricingTiers: [
       {
         id: "starter",
         name: "Starter",
         price: 999,
         currency: "$",
-        billingCycle: "monthly",
+        billing: "monthly",
+        description: "Perfect for small businesses starting their revenue optimization journey",
         features: [
-          "AI-powered data analysis",
-          "Basic dashboard creation",
-          "Data integration (up to 5 sources)",
+          "Basic revenue analytics",
+          "Customer behavior insights",
+          "Pricing recommendations",
           "Email support",
-          "Standard reports"
+          "Monthly reports",
+          "Up to 1,000 customers"
         ],
-        bestFor: "Small businesses and startups"
+        setupFee: 0,
+        contractLength: "Month-to-month"
       },
       {
         id: "professional",
         name: "Professional",
         price: 2999,
         currency: "$",
-        billingCycle: "monthly",
+        billing: "monthly",
+        description: "Ideal for growing businesses with advanced revenue optimization needs",
         features: [
-          "All Starter features",
-          "Advanced analytics",
-          "Custom dashboard creation",
-          "Multi-source data integration",
+          "Advanced revenue analytics",
+          "Predictive modeling",
+          "A/B testing tools",
           "Priority support",
-          "Advanced reporting",
-          "API access"
+          "Weekly reports",
+          "Up to 10,000 customers",
+          "Custom integrations",
+          "ROI tracking"
         ],
-        bestFor: "Growing businesses and teams",
-        popular: true
+        popular: true,
+        recommended: true,
+        setupFee: 500,
+        contractLength: "12 months"
+      },
+      {
+        id: "enterprise",
+        name: "Enterprise",
+        price: 7999,
+        currency: "$",
+        billing: "monthly",
+        description: "Comprehensive solution for large enterprises with complex revenue streams",
+        features: [
+          "Full revenue optimization suite",
+          "AI-powered insights",
+          "Advanced reporting",
+          "24/7 dedicated support",
+          "Custom development",
+          "Unlimited customers",
+          "White-label options",
+          "API access",
+          "SLA guarantees"
+        ],
+        setupFee: 2000,
+        contractLength: "24 months"
+      }
+    ],
+    marketComparison: {
+      averagePrice: "$2,500-8,000/month",
+      competitors: ["Gainsight", "ProfitWell", "ChartMogul"],
+      valueProposition: "40% better ROI than competitors with AI-powered insights and faster implementation"
+    },
+    roi: {
+      timeframe: "4 months",
+      percentage: "400%",
+      savings: "$50,000+ annually"
+    },
+    features: {
+      core: [
+        "Revenue analytics dashboard",
+        "Customer segmentation",
+        "Pricing optimization",
+        "Performance tracking"
+      ],
+      advanced: [
+        "Predictive analytics",
+        "Machine learning models",
+        "Custom reporting",
+        "Integration APIs"
+      ],
+      enterprise: [
+        "White-label solutions",
+        "Custom algorithms",
+        "Dedicated support team",
+        "SLA guarantees"
+      ]
+    },
+    integrations: ["Salesforce", "HubSpot", "QuickBooks", "NetSuite", "AWS", "Google Analytics"],
+    support: {
+      responseTime: "2 hours",
+      channels: ["Email", "Phone", "Chat", "Video"],
+      sla: "99.9% uptime"
+    }
+  },
+
+  {
+    serviceId: "ai-customer-journey-orchestrator",
+    serviceName: "AI Customer Journey Orchestrator",
+    category: "AI & Customer Support",
+    description: "Intelligent customer journey mapping and orchestration platform that personalizes experiences across all touchpoints.",
+    pricingTiers: [
+      {
+        id: "starter",
+        name: "Starter",
+        price: 1499,
+        currency: "$",
+        billing: "monthly",
+        description: "Basic customer journey orchestration for small teams",
+        features: [
+          "Journey mapping tools",
+          "Basic personalization",
+          "Email automation",
+          "Standard support",
+          "Up to 5,000 contacts"
+        ],
+        setupFee: 0,
+        contractLength: "Month-to-month"
+      },
+      {
+        id: "professional",
+        name: "Professional",
+        price: 3999,
+        currency: "$",
+        billing: "monthly",
+        description: "Advanced journey orchestration with AI-powered insights",
+        features: [
+          "AI-powered journey optimization",
+          "Advanced personalization",
+          "Multi-channel orchestration",
+          "Priority support",
+          "Up to 50,000 contacts",
+          "Custom workflows",
+          "A/B testing"
+        ],
+        popular: true,
+        recommended: true,
+        setupFee: 750,
+        contractLength: "12 months"
+      },
+      {
+        id: "enterprise",
+        name: "Enterprise",
+        price: 9999,
+        currency: "$",
+        billing: "monthly",
+        description: "Full-scale customer journey orchestration for enterprise organizations",
+        features: [
+          "Enterprise journey orchestration",
+          "Custom AI models",
+          "Advanced analytics",
+          "24/7 dedicated support",
+          "Unlimited contacts",
+          "White-label options",
+          "Custom integrations",
+          "SLA guarantees"
+        ],
+        setupFee: 3000,
+        contractLength: "24 months"
+      }
+    ],
+    marketComparison: {
+      averagePrice: "$3,000-12,000/month",
+      competitors: ["Segment", "Amplitude", "Mixpanel"],
+      valueProposition: "30% better customer engagement with AI-powered journey optimization"
+    },
+    roi: {
+      timeframe: "5 months",
+      percentage: "350%",
+      savings: "$75,000+ annually"
+    },
+    features: {
+      core: [
+        "Customer journey mapping",
+        "Personalization engine",
+        "Automation workflows",
+        "Basic analytics"
+      ],
+      advanced: [
+        "AI-powered optimization",
+        "Predictive analytics",
+        "Multi-channel orchestration",
+        "Advanced reporting"
+      ],
+      enterprise: [
+        "Custom AI models",
+        "White-label solutions",
+        "Enterprise integrations",
+        "Dedicated support"
+      ]
+    },
+    integrations: ["Intercom", "Zendesk", "HubSpot", "Salesforce", "Shopify", "WooCommerce", "Google Analytics"],
+    support: {
+      responseTime: "4 hours",
+      channels: ["Email", "Phone", "Chat", "Video"],
+      sla: "99.8% uptime"
+    }
+  },
+
+  {
+    serviceId: "ai-marketing-attribution-engine",
+    serviceName: "AI Marketing Attribution Engine",
+    category: "AI & Marketing",
+    description: "Advanced marketing attribution platform that uses machine learning to accurately track and attribute conversions across all marketing channels.",
+    pricingTiers: [
+      {
+        id: "starter",
+        name: "Starter",
+        price: 799,
+        currency: "$",
+        billing: "monthly",
+        description: "Basic attribution tracking for small marketing teams",
+        features: [
+          "Multi-touch attribution",
+          "Basic reporting",
+          "Standard support",
+          "Up to 3 marketing channels",
+          "Monthly data updates"
+        ],
+        setupFee: 0,
+        contractLength: "Month-to-month"
+      },
+      {
+        id: "professional",
+        name: "Professional",
+        price: 2499,
+        currency: "$",
+        billing: "monthly",
+        description: "Advanced attribution with AI-powered insights and unlimited channels",
+        features: [
+          "AI-powered attribution",
+          "Unlimited marketing channels",
+          "Advanced reporting",
+          "Priority support",
+          "Real-time data",
+          "Custom dashboards",
+          "ROI optimization"
+        ],
+        popular: true,
+        recommended: true,
+        setupFee: 500,
+        contractLength: "12 months"
+      },
+      {
+        id: "enterprise",
+        name: "Enterprise",
+        price: 5999,
+        currency: "$",
+        billing: "monthly",
+        description: "Enterprise-grade attribution with custom models and dedicated support",
+        features: [
+          "Custom attribution models",
+          "Advanced AI algorithms",
+          "Enterprise reporting",
+          "24/7 dedicated support",
+          "Custom integrations",
+          "White-label options",
+          "SLA guarantees"
+        ],
+        setupFee: 1500,
+        contractLength: "24 months"
+      }
+    ],
+    marketComparison: {
+      averagePrice: "$2,000-6,000/month",
+      competitors: ["AppsFlyer", "Branch", "Adjust"],
+      valueProposition: "25% more accurate attribution with AI-powered machine learning models"
+    },
+    roi: {
+      timeframe: "3 months",
+      percentage: "300%",
+      savings: "$40,000+ annually"
+    },
+    features: {
+      core: [
+        "Multi-touch attribution",
+        "Channel performance tracking",
+        "Basic reporting",
+        "Data integration"
+      ],
+      advanced: [
+        "AI-powered attribution",
+        "Advanced analytics",
+        "Custom dashboards",
+        "ROI optimization"
+      ],
+      enterprise: [
+        "Custom models",
+        "White-label solutions",
+        "Enterprise integrations",
+        "Dedicated support"
+      ]
+    },
+    integrations: ["Google Ads", "Facebook Ads", "LinkedIn Ads", "TikTok Ads", "Google Analytics", "HubSpot", "Salesforce"],
+    support: {
+      responseTime: "6 hours",
+      channels: ["Email", "Phone", "Chat"],
+      sla: "99.7% uptime"
+    }
+  },
+
+  {
+    serviceId: "ai-content-performance-optimizer",
+    serviceName: "AI Content Performance Optimizer",
+    category: "AI & Content",
+    description: "Intelligent content optimization platform that analyzes content performance and automatically suggests improvements for better engagement, SEO, and conversion rates.",
+    pricingTiers: [
+      {
+        id: "starter",
+        name: "Starter",
+        price: 499,
+        currency: "$",
+        billing: "monthly",
+        description: "Basic content optimization for small content teams",
+        features: [
+          "Content performance analysis",
+          "Basic SEO suggestions",
+          "Standard support",
+          "Up to 100 content pieces",
+          "Monthly reports"
+        ],
+        setupFee: 0,
+        contractLength: "Month-to-month"
+      },
+      {
+        id: "professional",
+        name: "Professional",
+        price: 1999,
+        currency: "$",
+        billing: "monthly",
+        description: "Advanced content optimization with AI-powered insights and unlimited content",
+        features: [
+          "AI-powered optimization",
+          "Unlimited content pieces",
+          "Advanced SEO analysis",
+          "Priority support",
+          "Real-time optimization",
+          "Custom reports",
+          "A/B testing tools"
+        ],
+        popular: true,
+        recommended: true,
+        setupFee: 300,
+        contractLength: "12 months"
+      },
+      {
+        id: "enterprise",
+        name: "Enterprise",
+        price: 4999,
+        currency: "$",
+        billing: "monthly",
+        description: "Enterprise-grade content optimization with custom AI models and dedicated support",
+        features: [
+          "Custom AI models",
+          "Advanced analytics",
+          "Enterprise reporting",
+          "24/7 dedicated support",
+          "Custom integrations",
+          "White-label options",
+          "SLA guarantees"
+        ],
+        setupFee: 1000,
+        contractLength: "24 months"
+      }
+    ],
+    marketComparison: {
+      averagePrice: "$1,500-4,500/month",
+      competitors: ["Clearscope", "Frase", "MarketMuse"],
+      valueProposition: "35% better content performance with AI-powered optimization"
+    },
+    roi: {
+      timeframe: "2 months",
+      percentage: "250%",
+      savings: "$30,000+ annually"
+    },
+    features: {
+      core: [
+        "Content performance tracking",
+        "Basic SEO analysis",
+        "Performance reports",
+        "Content suggestions"
+      ],
+      advanced: [
+        "AI-powered optimization",
+        "Advanced analytics",
+        "Custom reports",
+        "A/B testing"
+      ],
+      enterprise: [
+        "Custom AI models",
+        "White-label solutions",
+        "Enterprise integrations",
+        "Dedicated support"
+      ]
+    },
+    integrations: ["WordPress", "Shopify", "HubSpot", "Mailchimp", "Google Analytics", "SEMrush", "Ahrefs"],
+    support: {
+      responseTime: "8 hours",
+      channels: ["Email", "Chat", "Video"],
+      sla: "99.5% uptime"
+    }
+  },
+
+  {
+    serviceId: "ai-talent-acquisition-platform",
+    serviceName: "AI Talent Acquisition Platform",
+    category: "AI & HR",
+    description: "Intelligent recruitment platform that uses AI to source, screen, and match candidates with job requirements. Automates the hiring process and improves candidate quality.",
+    pricingTiers: [
+      {
+        id: "starter",
+        name: "Starter",
+        price: 1199,
+        currency: "$",
+        billing: "monthly",
+        description: "Basic AI recruitment for small HR teams",
+        features: [
+          "AI candidate screening",
+          "Basic matching algorithms",
+          "Standard support",
+          "Up to 50 job postings",
+          "Monthly reports"
+        ],
+        setupFee: 0,
+        contractLength: "Month-to-month"
+      },
+      {
+        id: "professional",
+        name: "Professional",
+        price: 3499,
+        currency: "$",
+        billing: "monthly",
+        description: "Advanced AI recruitment with comprehensive automation and unlimited job postings",
+        features: [
+          "Advanced AI screening",
+          "Unlimited job postings",
+          "Automated workflows",
+          "Priority support",
+          "Advanced analytics",
+          "Custom integrations",
+          "ROI tracking"
+        ],
+        popular: true,
+        recommended: true,
+        setupFee: 750,
+        contractLength: "12 months"
       },
       {
         id: "enterprise",
         name: "Enterprise",
         price: 8999,
         currency: "$",
-        billingCycle: "monthly",
+        billing: "monthly",
+        description: "Enterprise-grade AI recruitment with custom models and dedicated support",
         features: [
-          "All Professional features",
-          "Unlimited data sources",
           "Custom AI models",
-          "White-label solutions",
-          "Dedicated support",
-          "Advanced security",
-          "Custom integrations"
+          "Advanced automation",
+          "Enterprise analytics",
+          "24/7 dedicated support",
+          "Custom development",
+          "White-label options",
+          "SLA guarantees"
         ],
-        bestFor: "Large enterprises and corporations"
+        setupFee: 2000,
+        contractLength: "24 months"
       }
     ],
-    marketPrice: "$2,999 - $8,999/month",
-    roi: "250-400%",
-    innovationLevel: "Advanced",
-    estimatedDelivery: "6-8 weeks",
-    supportLevel: "enterprise",
-    contactInfo: {
-      phone: "+1 302 464 0950",
-      email: "kleber@ziontechgroup.com",
-      website: "https://ziontechgroup.com"
+    marketComparison: {
+      averagePrice: "$2,800-8,000/month",
+      competitors: ["HireVue", "Pymetrics", "HiredScore"],
+      valueProposition: "50% faster hiring with 40% better candidate quality using AI"
+    },
+    roi: {
+      timeframe: "4 months",
+      percentage: "400%",
+      savings: "$100,000+ annually"
+    },
+    features: {
+      core: [
+        "AI candidate screening",
+        "Job matching algorithms",
+        "Basic analytics",
+        "Standard workflows"
+      ],
+      advanced: [
+        "Advanced AI models",
+        "Automated workflows",
+        "Advanced analytics",
+        "Custom integrations"
+      ],
+      enterprise: [
+        "Custom AI models",
+        "White-label solutions",
+        "Enterprise integrations",
+        "Dedicated support"
+      ]
+    },
+    integrations: ["Workday", "BambooHR", "Greenhouse", "Lever", "LinkedIn", "Indeed", "ZipRecruiter"],
+    support: {
+      responseTime: "4 hours",
+      channels: ["Email", "Phone", "Chat", "Video"],
+      sla: "99.8% uptime"
     }
   },
 
-  // AI Quantum Financial Modeling Platform
   {
-    id: "ai-quantum-financial-modeling-platform",
-    title: "AI Quantum Financial Modeling Platform",
-    category: "Quantum Finance",
-    subcategory: "Financial Modeling",
-    description: "Revolutionary platform combining quantum computing and AI for ultra-accurate financial modeling, risk assessment, and investment optimization.",
+    serviceId: "ai-financial-fraud-detection",
+    serviceName: "AI Financial Fraud Detection",
+    category: "FinTech",
+    description: "Advanced fraud detection platform that uses machine learning to identify and prevent financial fraud in real-time. Provides comprehensive risk assessment and automated fraud prevention.",
     pricingTiers: [
       {
-        id: "quantum-starter",
-        name: "Quantum Starter",
-        price: 2499,
+        id: "starter",
+        name: "Starter",
+        price: 1999,
         currency: "$",
-        billingCycle: "monthly",
+        billing: "monthly",
+        description: "Basic fraud detection for small financial institutions",
         features: [
-          "Basic quantum risk modeling",
-          "AI-driven market prediction",
-          "Portfolio optimization",
+          "Real-time fraud detection",
+          "Basic risk assessment",
           "Standard support",
-          "Basic API access"
+          "Up to 10,000 transactions/month",
+          "Monthly reports"
         ],
-        bestFor: "Small investment firms and individual investors"
+        setupFee: 0,
+        contractLength: "Month-to-month"
       },
       {
-        id: "quantum-professional",
-        name: "Quantum Professional",
-        price: 4999,
-        currency: "$",
-        billingCycle: "monthly",
-        features: [
-          "All Starter features",
-          "Advanced quantum algorithms",
-          "Real-time market analysis",
-          "Advanced hedging strategies",
-          "Priority support",
-          "Full API access"
-        ],
-        bestFor: "Medium investment firms and hedge funds",
-        popular: true
-      },
-      {
-        id: "quantum-enterprise",
-        name: "Quantum Enterprise",
-        price: 15999,
-        currency: "$",
-        billingCycle: "monthly",
-        features: [
-          "All Professional features",
-          "Custom quantum algorithms",
-          "Multi-asset class support",
-          "Regulatory compliance tools",
-          "Dedicated support",
-          "Custom integrations"
-        ],
-        bestFor: "Large investment banks and institutional investors"
-      }
-    ],
-    marketPrice: "$4,999 - $15,999/month",
-    roi: "600-1000%",
-    innovationLevel: "Revolutionary",
-    estimatedDelivery: "12-16 weeks",
-    supportLevel: "enterprise",
-    contactInfo: {
-      phone: "+1 302 464 0950",
-      email: "kleber@ziontechgroup.com",
-      website: "https://ziontechgroup.com"
-    }
-  },
-
-  // AI Autonomous Drone Fleet Management
-  {
-    id: "ai-autonomous-drone-fleet-management",
-    title: "AI Autonomous Drone Fleet Management",
-    category: "Autonomous Systems",
-    subcategory: "Drone Management",
-    description: "Intelligent platform for managing autonomous drone fleets for delivery, surveillance, agriculture, and industrial applications.",
-    pricingTiers: [
-      {
-        id: "drone-basic",
-        name: "Basic Fleet",
-        price: 999,
-        currency: "$",
-        billingCycle: "monthly",
-        features: [
-          "Up to 10 drones",
-          "Basic flight planning",
-          "Fleet monitoring",
-          "Email support",
-          "Standard safety protocols"
-        ],
-        bestFor: "Small businesses and startups"
-      },
-      {
-        id: "drone-professional",
-        name: "Professional Fleet",
-        price: 1999,
-        currency: "$",
-        billingCycle: "monthly",
-        features: [
-          "All Basic features",
-          "Up to 50 drones",
-          "AI-powered obstacle avoidance",
-          "Weather integration",
-          "Priority support",
-          "Advanced analytics"
-        ],
-        bestFor: "Medium businesses and delivery companies",
-        popular: true
-      },
-      {
-        id: "drone-enterprise",
-        name: "Enterprise Fleet",
+        id: "professional",
+        name: "Professional",
         price: 5999,
         currency: "$",
-        billingCycle: "monthly",
+        billing: "monthly",
+        description: "Advanced fraud detection with comprehensive risk management and unlimited transactions",
         features: [
-          "All Professional features",
-          "Unlimited drones",
+          "Advanced AI detection",
+          "Unlimited transactions",
+          "Comprehensive risk assessment",
+          "Priority support",
+          "Advanced analytics",
+          "Custom rules engine",
+          "ROI tracking"
+        ],
+        popular: true,
+        recommended: true,
+        setupFee: 1500,
+        contractLength: "12 months"
+      },
+      {
+        id: "enterprise",
+        name: "Enterprise",
+        price: 14999,
+        currency: "$",
+        billing: "monthly",
+        description: "Enterprise-grade fraud detection with custom models and dedicated support",
+        features: [
           "Custom AI models",
-          "Emergency protocols",
-          "Dedicated support",
-          "Custom integrations"
+          "Advanced risk management",
+          "Enterprise analytics",
+          "24/7 dedicated support",
+          "Custom development",
+          "White-label options",
+          "SLA guarantees"
         ],
-        bestFor: "Large logistics companies and government agencies"
+        setupFee: 5000,
+        contractLength: "24 months"
       }
     ],
-    marketPrice: "$1,999 - $5,999/month",
-    roi: "300-500%",
-    innovationLevel: "Advanced",
-    estimatedDelivery: "8-12 weeks",
-    supportLevel: "premium",
-    contactInfo: {
-      phone: "+1 302 464 0950",
-      email: "kleber@ziontechgroup.com",
-      website: "https://ziontechgroup.com"
-    }
-  },
-
-  // AI Predictive Healthcare Analytics
-  {
-    id: "ai-predictive-healthcare-analytics",
-    title: "AI Predictive Healthcare Analytics",
-    category: "AI & Healthcare",
-    subcategory: "Predictive Analytics",
-    description: "Advanced healthcare analytics platform that predicts patient outcomes, disease progression, and treatment effectiveness using AI and machine learning.",
-    pricingTiers: [
-      {
-        id: "healthcare-basic",
-        name: "Basic Analytics",
-        price: 1999,
-        currency: "$",
-        billingCycle: "monthly",
-        features: [
-          "Basic patient outcome prediction",
-          "Risk assessment",
-          "Standard reports",
-          "Email support",
-          "Basic EHR integration"
-        ],
-        bestFor: "Small clinics and medical practices"
-      },
-      {
-        id: "healthcare-professional",
-        name: "Professional Analytics",
-        price: 3499,
-        currency: "$",
-        billingCycle: "monthly",
-        features: [
-          "All Basic features",
-          "Advanced disease modeling",
-          "Treatment optimization",
-          "Priority support",
-          "Full EHR integration",
-          "Custom dashboards"
-        ],
-        bestFor: "Medium hospitals and healthcare systems",
-        popular: true
-      },
-      {
-        id: "healthcare-enterprise",
-        name: "Enterprise Analytics",
-        price: 9999,
-        currency: "$",
-        billingCycle: "monthly",
-        features: [
-          "All Professional features",
-          "Custom AI models",
-          "Population health insights",
-          "Dedicated support",
-          "Advanced security",
-          "Custom integrations"
-        ],
-        bestFor: "Large healthcare systems and research institutions"
-      }
-    ],
-    marketPrice: "$3,499 - $9,999/month",
-    roi: "400-700%",
-    innovationLevel: "Advanced",
-    estimatedDelivery: "10-14 weeks",
-    supportLevel: "enterprise",
-    contactInfo: {
-      phone: "+1 302 464 0950",
-      email: "kleber@ziontechgroup.com",
-      website: "https://ziontechgroup.com"
-    }
-  },
-
-  // AI Neuromorphic Computing Platform
-  {
-    id: "ai-neuromorphic-computing-platform",
-    title: "AI Neuromorphic Computing Platform",
-    category: "Neuromorphic Computing",
-    subcategory: "Brain-Inspired AI",
-    description: "Revolutionary neuromorphic computing platform that mimics the human brain's neural structure for ultra-efficient AI processing and edge computing applications.",
-    pricingTiers: [
-      {
-        id: "neuro-basic",
-        name: "Basic Neuro",
-        price: 3999,
-        currency: "$",
-        billingCycle: "monthly",
-        features: [
-          "Basic neuromorphic processing",
-          "Edge computing optimization",
-          "Standard AI models",
-          "Email support",
-          "Basic API access"
-        ],
-        bestFor: "Research institutions and startups"
-      },
-      {
-        id: "neuro-professional",
-        name: "Professional Neuro",
-        price: 7999,
-        currency: "$",
-        billingCycle: "monthly",
-        features: [
-          "All Basic features",
-          "Advanced neural networks",
-          "Real-time learning",
-          "Priority support",
-          "Full API access",
-          "Custom models"
-        ],
-        bestFor: "Technology companies and research labs",
-        popular: true
-      },
-      {
-        id: "neuro-enterprise",
-        name: "Enterprise Neuro",
-        price: 25000,
-        currency: "$",
-        billingCycle: "monthly",
-        features: [
-          "All Professional features",
-          "Custom neuromorphic chips",
-          "Advanced algorithms",
-          "Dedicated support",
-          "Hardware integration",
-          "Custom solutions"
-        ],
-        bestFor: "Large tech companies and government agencies"
-      }
-    ],
-    marketPrice: "$7,999 - $25,000/month",
-    roi: "800-1500%",
-    innovationLevel: "Revolutionary",
-    estimatedDelivery: "16-20 weeks",
-    supportLevel: "enterprise",
-    contactInfo: {
-      phone: "+1 302 464 0950",
-      email: "kleber@ziontechgroup.com",
-      website: "https://ziontechgroup.com"
-    }
-  },
-
-  // AI Synthetic Biology Platform
-  {
-    id: "ai-synthetic-biology-platform",
-    title: "AI Synthetic Biology Platform",
-    category: "Synthetic Biology",
-    subcategory: "AI-Driven Design",
-    description: "Advanced platform combining AI and synthetic biology to design, simulate, and optimize biological systems for healthcare, agriculture, and industrial applications.",
-    pricingTiers: [
-      {
-        id: "bio-basic",
-        name: "Basic Bio",
-        price: 2999,
-        currency: "$",
-        billingCycle: "monthly",
-        features: [
-          "Basic DNA design tools",
-          "Simple simulations",
-          "Standard templates",
-          "Email support",
-          "Basic lab integration"
-        ],
-        bestFor: "Small biotech startups and research labs"
-      },
-      {
-        id: "bio-professional",
-        name: "Professional Bio",
-        price: 5999,
-        currency: "$",
-        billingCycle: "monthly",
-        features: [
-          "All Basic features",
-          "Advanced AI design",
-          "Complex simulations",
-          "Priority support",
-          "Full lab integration",
-          "Custom workflows"
-        ],
-        bestFor: "Medium biotech companies and research institutions",
-        popular: true
-      },
-      {
-        id: "bio-enterprise",
-        name: "Enterprise Bio",
-        price: 18000,
-        currency: "$",
-        billingCycle: "monthly",
-        features: [
-          "All Professional features",
-          "Custom AI models",
-          "Advanced CRISPR tools",
-          "Dedicated support",
-          "Custom integrations",
-          "Expert consultation"
-        ],
-        bestFor: "Large pharmaceutical companies and research institutions"
-      }
-    ],
-    marketPrice: "$5,999 - $18,000/month",
-    roi: "500-1000%",
-    innovationLevel: "Revolutionary",
-    estimatedDelivery: "14-18 weeks",
-    supportLevel: "enterprise",
-    contactInfo: {
-      phone: "+1 302 464 0950",
-      email: "kleber@ziontechgroup.com",
-      website: "https://ziontechgroup.com"
-    }
-  },
-
-  // AI Quantum Internet Platform
-  {
-    id: "ai-quantum-internet-platform",
-    title: "AI Quantum Internet Platform",
-    category: "Quantum Internet",
-    subcategory: "Quantum Networking",
-    description: "Next-generation quantum internet platform that enables ultra-secure communication, quantum networking, and distributed quantum computing across global networks.",
-    pricingTiers: [
-      {
-        id: "quantum-net-basic",
-        name: "Basic Quantum Net",
-        price: 4999,
-        currency: "$",
-        billingCycle: "monthly",
-        features: [
-          "Basic quantum encryption",
-          "Limited network access",
-          "Standard security",
-          "Email support",
-          "Basic API access"
-        ],
-        bestFor: "Small companies and research institutions"
-      },
-      {
-        id: "quantum-net-professional",
-        name: "Professional Quantum Net",
-        price: 9999,
-        currency: "$",
-        billingCycle: "monthly",
-        features: [
-          "All Basic features",
-          "Advanced quantum protocols",
-          "Global network access",
-          "Priority support",
-          "Full API access",
-          "Custom security"
-        ],
-        bestFor: "Medium companies and government agencies",
-        popular: true
-      },
-      {
-        id: "quantum-net-enterprise",
-        name: "Enterprise Quantum Net",
-        price: 35000,
-        currency: "$",
-        billingCycle: "monthly",
-        features: [
-          "All Professional features",
-          "Custom quantum protocols",
-          "Global infrastructure",
-          "Dedicated support",
-          "Custom solutions",
-          "Expert consultation"
-        ],
-        bestFor: "Large corporations and government agencies"
-      }
-    ],
-    marketPrice: "$9,999 - $35,000/month",
-    roi: "1000-2000%",
-    innovationLevel: "Revolutionary",
-    estimatedDelivery: "20-24 weeks",
-    supportLevel: "enterprise",
-    contactInfo: {
-      phone: "+1 302 464 0950",
-      email: "kleber@ziontechgroup.com",
-      website: "https://ziontechgroup.com"
+    marketComparison: {
+      averagePrice: "$4,500-15,000/month",
+      competitors: ["Sift", "Signifyd", "Forter"],
+      valueProposition: "99.9% fraud detection accuracy with 80% fewer false positives"
+    },
+    roi: {
+      timeframe: "6 months",
+      percentage: "500%",
+      savings: "$500,000+ annually"
+    },
+    features: {
+      core: [
+        "Real-time fraud detection",
+        "Risk assessment",
+        "Basic reporting",
+        "Standard integrations"
+      ],
+      advanced: [
+        "Advanced AI models",
+        "Custom rules engine",
+        "Advanced analytics",
+        "Custom integrations"
+      ],
+      enterprise: [
+        "Custom AI models",
+        "White-label solutions",
+        "Enterprise integrations",
+        "Dedicated support"
+      ]
+    },
+    integrations: ["Stripe", "PayPal", "Square", "Adyen", "Shopify", "WooCommerce", "Magento"],
+    support: {
+      responseTime: "2 hours",
+      channels: ["Email", "Phone", "Chat", "Video"],
+      sla: "99.99% uptime"
     }
   }
 ];

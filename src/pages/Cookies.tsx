@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
-import { SEO } from '../components/SEO';
 import { 
   Cookie, 
   CheckCircle, 
@@ -8,8 +7,12 @@ import {
   Eye, 
   Globe, 
   Info, 
-  Shield 
+  Shield,
+  Clock,
+  Target,
+  ExternalLink
 } from 'lucide-react';
+import { SEO } from '../components/SEO';
 
 interface CookiePreferences {
   essential: boolean;
@@ -23,7 +26,7 @@ interface CookieType {
   name: string;
   description: string;
   color: string;
-  icon: any;
+  icon: React.ComponentType<any>;
   examples: string[];
   alwaysActive: boolean;
 }
@@ -60,8 +63,8 @@ const cookieTypes: CookieType[] = [
     name: 'Marketing Cookies',
     description: 'Used to deliver personalized advertisements',
     color: 'from-orange-500/20 to-red-500/20',
-    icon: Cookie,
-    examples: ['Targeted ads', 'Social media integration', 'Campaign tracking'],
+    icon: Target,
+    examples: ['Ad targeting', 'Campaign tracking', 'Conversion analysis'],
     alwaysActive: false
   },
   {
@@ -278,7 +281,7 @@ export default function Cookies() {
                 </button>
                 <button
                   onClick={savePreferences}
-                  className="px-8 py-3 border border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400 hover:text-white transition-all duration-200"
+                  className="px-8 py-3 border border-white/20 text-white font-semibold rounded-lg hover:bg-white/10 transition-all duration-200"
                 >
                   Save Preferences
                 </button>
@@ -470,4 +473,6 @@ export default function Cookies() {
       </section>
     </div>
   );
-}
+};
+
+export default Cookies;
