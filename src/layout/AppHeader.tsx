@@ -88,7 +88,10 @@ export function AppHeader() {
         { name: 'AI Sales Copilot', href: '/services/ai-sales-copilot', description: 'Sales automation & optimization' },
         { name: 'AI Compliance Assistant', href: '/services/ai-compliance-assistant', description: 'Regulatory compliance automation' },
         { name: 'AI Auto Email Responder', href: '/services/ai-auto-email-responder', description: 'Smart email management' },
-        { name: 'LLM Content Studio', href: '/services/llm-content-studio', description: 'AI-powered content creation' }
+        { name: 'LLM Content Studio', href: '/services/llm-content-studio', description: 'AI-powered content creation' },
+        { name: 'AI Marketing Automation', href: '/services/ai-marketing-automation', description: 'Automated marketing campaigns' },
+        { name: 'AI Lead Scoring', href: '/services/ai-lead-scoring', description: 'Intelligent lead qualification' },
+        { name: 'AI SEO Optimizer', href: '/services/ai-seo-optimizer', description: 'Search engine optimization' }
       ]
     },
     {
@@ -99,7 +102,9 @@ export function AppHeader() {
       services: [
         { name: 'Cloud DevOps', href: '/services/cloud-devops', description: 'Infrastructure automation' },
         { name: 'Cloud FinOps Optimizer', href: '/services/cloud-finops-optimizer', description: 'Cost optimization' },
-        { name: 'FinOps Advisor', href: '/services/finops-advisor', description: 'Financial operations guidance' }
+        { name: 'FinOps Advisor', href: '/services/finops-advisor', description: 'Financial operations guidance' },
+        { name: 'API Monitoring', href: '/services/api-monitoring', description: 'API performance tracking' },
+        { name: 'MLOps Pipeline', href: '/services/mlops-pipeline', description: 'Machine learning operations' }
       ]
     },
     {
@@ -123,7 +128,9 @@ export function AppHeader() {
       services: [
         { name: 'AI Compliance Copilot', href: '/services/ai-compliance-copilot', description: 'AI-powered security' },
         { name: 'Zero Trust Architecture', href: '/services/zero-trust-network-architecture', description: 'Modern security framework' },
-        { name: 'Incident Response', href: '/services/incident-response-platform', description: 'Security incident management' }
+        { name: 'Incident Response', href: '/services/incident-response-platform', description: 'Security incident management' },
+        { name: 'AI Cybersecurity Suite', href: '/services/ai-cybersecurity-suite', description: 'Comprehensive AI security' },
+        { name: 'SOC2 Compliance Tracker', href: '/services/soc2-compliance-tracker', description: 'Compliance monitoring' }
       ]
     },
     {
@@ -136,6 +143,20 @@ export function AppHeader() {
         { name: 'Blockchain Solutions', href: '/services/blockchain-enterprise-solutions', description: 'Distributed ledger tech' },
         { name: 'Space Technology', href: '/services/space-tech', description: 'Space-based solutions' },
         { name: 'Sustainability Tech', href: '/services/sustainability', description: 'Green technology solutions' }
+      ]
+    },
+    {
+      name: 'Micro SaaS',
+      description: 'Specialized micro-services & solutions',
+      color: 'from-amber-500 to-yellow-600',
+      icon: Star,
+      services: [
+        { name: 'Micro SaaS Solutions', href: '/services/micro-saas-solutions', description: 'Custom micro-applications' },
+        { name: 'Employee Scheduling', href: '/services/employee-scheduling-saas', description: 'Staff scheduling automation' },
+        { name: 'Affiliate Marketing Tracker', href: '/services/affiliate-marketing-tracker', description: 'Track affiliate performance' },
+        { name: 'Uptime SLA Monitor', href: '/services/uptime-sla-monitor', description: 'Service availability monitoring' },
+        { name: 'Returns Management', href: '/services/returns-management', description: 'E-commerce returns processing' },
+        { name: 'Customer Feedback Surveys', href: '/services/mobile-feedback-surveys', description: 'Mobile survey platform' }
       ]
     }
   ];

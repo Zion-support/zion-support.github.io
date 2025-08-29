@@ -1,7 +1,7 @@
 import React from 'react';
-import { SEO } from '@/components/SEO';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
-import { Button } from '@/components/ui/button';
+import { SEO } from '../components/SEO';
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '../components/ui/card';
+import { Button } from '../components/ui/button';
 import { Code, ExternalLink, Book, Terminal, Download, Github } from 'lucide-react';
 
 export default function DeveloperPortal() {

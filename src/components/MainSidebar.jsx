@@ -46,6 +46,14 @@ export function MainSidebar() {
                 { key: 'demo', href: '/demo', icon: <Code className="w-4 h-4"/>, label: 'Demo' },
                 { key: 'sitemap', href: '/sitemap', icon: <Globe className="w-4 h-4"/>, label: 'Sitemap' },
             ]
+        },
+        {
+            title: 'Developer',
+            items: [
+                { key: 'developer-portal', href: '/developer-portal', icon: <Code className="w-4 h-4"/>, label: 'Developer Portal' },
+                { key: 'marketplace', href: '/marketplace', icon: <ShoppingCart className="w-4 h-4"/>, label: 'Marketplace' },
+                { key: 'status', href: '/status', icon: <BarChart3 className="w-4 h-4"/>, label: 'System Status' },
+            ]
         }
     ];
     const isActive = (href) => {

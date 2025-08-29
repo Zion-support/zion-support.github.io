@@ -129,6 +129,21 @@ export const EnhancedFuturisticFooter: React.FC = () => {
       ]
     },
     {
+      title: 'AI Platform Services',
+      icon: Brain,
+      color: 'from-purple-600 to-pink-600',
+      links: [
+        { name: 'AI Business Intelligence Platform', href: '/services/ai-business-intelligence-platform' },
+        { name: 'AI Financial Trading Platform', href: '/services/ai-financial-trading-platform' },
+        { name: 'AI Customer Success Platform', href: '/services/ai-customer-success-platform' },
+        { name: 'AI Healthcare Analytics', href: '/services/ai-healthcare-analytics' },
+        { name: 'AI HR Platform', href: '/services/ai-hr-platform' },
+        { name: 'AI Legal Research Platform', href: '/services/ai-legal-research-platform' },
+        { name: 'AI Education Platform', href: '/services/ai-education-platform' },
+        { name: 'AI Data Governance', href: '/services/ai-data-governance' }
+      ]
+    },
+    {
       title: 'Company & Support',
       icon: Users,
       color: 'from-indigo-600 to-purple-600',
@@ -165,7 +180,11 @@ export const EnhancedFuturisticFooter: React.FC = () => {
     { name: 'Blog', href: '/blog' },
     { name: 'Careers', href: '/careers' },
     { name: 'Demo', href: '/demo' },
-    { name: 'Request Quote', href: '/request-quote' }
+    { name: 'Request Quote', href: '/request-quote' },
+    { name: 'Marketplace', href: '/marketplace' },
+    { name: 'Developer Portal', href: '/developer-portal' },
+    { name: 'Status', href: '/status' },
+    { name: 'Sitemap', href: '/sitemap' }
   ];
 
   const companyLinks = [
