@@ -58,6 +58,21 @@ const ITInfrastructure = lazy(() => import('./pages/services/ITInfrastructure'))
 const AIBusinessIntelligence = lazy(() => import('./pages/services/AIBusinessIntelligence'));
 const MicroSaaSProducts = lazy(() => import('./pages/services/MicroSaaSProducts'));
 
+// Additional service pages
+const BlockchainWeb3Platform = lazy(() => import('./pages/services/blockchain-web3-platform'));
+const AIHealthcareDiagnosticsPlatform = lazy(() => import('./pages/services/ai-healthcare-diagnostics-platform'));
+const AIEducationPlatform = lazy(() => import('./pages/services/ai-education-platform'));
+const AIMetaversePlatform = lazy(() => import('./pages/services/ai-metaverse-platform'));
+const AISpaceTechnologyPlatform = lazy(() => import('./pages/services/ai-space-technology-platform'));
+const AIGreenTechnologyPlatform = lazy(() => import('./pages/services/ai-green-technology-platform'));
+const AIDevelopmentPlatform = lazy(() => import('./pages/services/ai-development-platform'));
+const AIContentCreation = lazy(() => import('./pages/services/ai-content-creation'));
+const AICybersecurity = lazy(() => import('./pages/services/ai-cybersecurity'));
+const QuantumComputing = lazy(() => import('./pages/services/quantum-computing'));
+const IoTEdgeComputing = lazy(() => import('./pages/services/iot-edge-computing'));
+const Showcase2025 = lazy(() => import('./pages/services/showcase-2025'));
+const MicroSAAS = lazy(() => import('./pages/services/micro-saas'));
+
 // Simple placeholder pages for missing ones
 const Careers = () => (
   <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 flex items-center justify-center">
@@ -138,6 +153,21 @@ function App() {
                 <Route path="/services/data-analytics" element={<DataAnalytics />} />
                 <Route path="/services/it-infrastructure" element={<ITInfrastructure />} />
                 <Route path="/services/ai-business-intelligence" element={<AIBusinessIntelligence />} />
+                
+                {/* Additional service routes */}
+                <Route path="/services/blockchain-web3-platform" element={<BlockchainWeb3Platform />} />
+                <Route path="/services/ai-healthcare-diagnostics-platform" element={<AIHealthcareDiagnosticsPlatform />} />
+                <Route path="/services/ai-education-platform" element={<AIEducationPlatform />} />
+                <Route path="/services/ai-metaverse-platform" element={<AIMetaversePlatform />} />
+                <Route path="/services/ai-space-technology-platform" element={<AISpaceTechnologyPlatform />} />
+                <Route path="/services/ai-green-technology-platform" element={<AIGreenTechnologyPlatform />} />
+                <Route path="/services/ai-development-platform" element={<AIDevelopmentPlatform />} />
+                <Route path="/services/ai-content-creation" element={<AIContentCreation />} />
+                <Route path="/services/ai-cybersecurity" element={<AICybersecurity />} />
+                <Route path="/services/quantum-computing" element={<QuantumComputing />} />
+                <Route path="/services/iot-edge-computing" element={<IoTEdgeComputing />} />
+                <Route path="/services/showcase-2025" element={<Showcase2025 />} />
+                <Route path="/services/micro-saas" element={<MicroSAAS />} />
                 
                 {/* New innovative service routes */}
                 <Route path="/services/ai-contract-analysis" element={<AIContractAnalysis />} />

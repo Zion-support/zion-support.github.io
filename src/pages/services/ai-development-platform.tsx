@@ -2,7 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { 
-  Atom, 
+  Code, 
   Brain, 
   Zap, 
   ArrowRight,
@@ -17,98 +17,98 @@ import {
   Network,
   Target,
   TrendingUp,
-  AlertTriangle,
-  Eye
+  GitBranch,
+  Terminal
 } from 'lucide-react';
 import { SEO } from '@/components/SEO';
 
-export default function QuantumComputing() {
+export default function AIDevelopmentPlatform() {
   const features = [
     {
-      title: "Quantum Algorithms",
-      description: "Advanced quantum algorithms for optimization and simulation",
-      icon: Brain,
-      color: "from-purple-500 to-pink-500"
+      title: "AI Code Generation",
+      description: "Intelligent code generation and completion using advanced language models",
+      icon: Code,
+      color: "from-cyan-500 to-blue-500"
     },
     {
-      title: "Quantum Machine Learning",
-      description: "AI-powered quantum computing solutions",
-      icon: Atom,
-      color: "from-blue-500 to-cyan-500"
-    },
-    {
-      title: "Quantum Cryptography",
-      description: "Unbreakable encryption using quantum principles",
+      title: "Automated Testing",
+      description: "AI-powered test case generation and automated quality assurance",
       icon: Shield,
       color: "from-green-500 to-emerald-500"
     },
     {
-      title: "Quantum Simulation",
-      description: "Complex system simulation with quantum computers",
-      icon: Monitor,
-      color: "from-orange-500 to-red-500"
+      title: "Code Review & Analysis",
+      description: "Intelligent code review with automated suggestions and best practices",
+      icon: Brain,
+      color: "from-purple-500 to-pink-500"
     },
     {
-      title: "Quantum Optimization",
-      description: "Solving complex optimization problems",
-      icon: Target,
-      color: "from-indigo-500 to-purple-500"
-    },
-    {
-      title: "Quantum Sensing",
-      description: "Ultra-sensitive quantum measurement systems",
-      icon: Eye,
+      title: "Performance Optimization",
+      description: "AI-driven performance analysis and optimization recommendations",
+      icon: Zap,
       color: "from-yellow-500 to-orange-500"
+    },
+    {
+      title: "Debugging Assistant",
+      description: "Intelligent debugging with automated error detection and resolution",
+      icon: Target,
+      color: "from-red-500 to-pink-500"
+    },
+    {
+      title: "Project Management",
+      description: "AI-powered project planning, estimation, and resource allocation",
+      icon: Building,
+      color: "from-indigo-500 to-purple-500"
     }
   ];
 
   const benefits = [
-    "Exponential speedup for specific problems",
-    "Unbreakable quantum encryption",
-    "Advanced machine learning capabilities",
-    "Complex system simulation",
-    "Revolutionary optimization solutions",
-    "Future-proof technology investment"
+    "Faster development cycles and reduced time to market",
+    "Improved code quality and reduced bugs",
+    "Automated testing and quality assurance",
+    "Enhanced developer productivity and collaboration",
+    "Intelligent project management and planning",
+    "Cost-effective development solutions"
   ];
 
   const useCases = [
     {
-      title: "Financial Services",
-      description: "Portfolio optimization and risk analysis",
-      icon: Building
+      title: "Software Development",
+      description: "AI-powered coding assistance and automation",
+      icon: Code
     },
     {
-      title: "Drug Discovery",
-      description: "Molecular simulation and drug design",
-      icon: Atom
+      title: "Web Development",
+      description: "Intelligent frontend and backend development tools",
+      icon: Monitor
     },
     {
-      title: "Logistics",
-      description: "Route optimization and supply chain",
-      icon: Network
+      title: "Mobile Development",
+      description: "Cross-platform mobile app development with AI",
+      icon: Smartphone
     },
     {
-      title: "Cybersecurity",
-      description: "Quantum-resistant encryption",
-      icon: Lock
+      title: "DevOps & CI/CD",
+      description: "Automated deployment and continuous integration",
+      icon: GitBranch
     }
   ];
 
   const technologies = [
-    "Quantum Gates & Circuits",
-    "Quantum Error Correction",
-    "Quantum Machine Learning",
-    "Quantum Cryptography",
-    "Quantum Simulation",
-    "Quantum Optimization"
+    "Machine Learning & Deep Learning",
+    "Natural Language Processing",
+    "Code Analysis & Parsing",
+    "Automated Testing Frameworks",
+    "Cloud Computing & Containers",
+    "Version Control & Collaboration Tools"
   ];
 
   return (
     <>
       <SEO 
-        title="Quantum Computing Solutions | Zion Tech Group"
-        description="Build quantum computing solutions with AI-powered algorithms, quantum machine learning, and advanced quantum applications."
-        keywords="quantum computing, quantum algorithms, quantum machine learning, quantum cryptography, quantum simulation"
+        title="AI Development Platform Development | Zion Tech Group"
+        description="Build intelligent development platforms with AI-powered coding assistance, automated testing, and project management tools."
+        keywords="ai development platform, code generation, automated testing, code review, debugging, project management"
       />
       
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
@@ -121,32 +121,32 @@ export default function QuantumComputing() {
               transition={{ duration: 0.8 }}
               className="text-center"
             >
-              <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-purple-400 to-pink-500 text-white text-sm font-medium mb-6">
-                <Atom className="w-4 h-4 mr-2" />
-                Quantum Computing Solutions
+              <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-cyan-400 to-blue-500 text-white text-sm font-medium mb-6">
+                <Code className="w-4 h-4 mr-2" />
+                AI-Powered Development Platform
               </div>
               
               <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-                The Future of
-                <span className="bg-gradient-to-r from-purple-400 to-pink-500 bg-clip-text text-transparent"> Computing</span>
+                Code Smarter with
+                <span className="bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent"> AI</span>
               </h1>
               
               <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-                Revolutionize computing with quantum technology. From advanced algorithms to quantum machine learning, 
-                unlock unprecedented computational power.
+                Revolutionize software development with AI-powered platforms. From intelligent code generation to 
+                automated testing, build better software faster.
               </p>
               
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link
                   to="/request-quote"
-                  className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-400 to-pink-500 text-white font-semibold rounded-lg hover:from-purple-500 hover:to-pink-600 transition-all duration-200 transform hover:scale-105"
+                  className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-400 to-blue-500 text-white font-semibold rounded-lg hover:from-cyan-500 hover:to-blue-600 transition-all duration-200 transform hover:scale-105"
                 >
                   Start Your Project
                   <ArrowRight className="ml-2 w-5 h-5" />
                 </Link>
                 <Link
                   to="/demo"
-                  className="inline-flex items-center px-8 py-4 border-2 border-purple-400 text-purple-400 font-semibold rounded-lg hover:bg-purple-400 hover:text-white transition-all duration-200"
+                  className="inline-flex items-center px-8 py-4 border-2 border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400 hover:text-white transition-all duration-200"
                 >
                   Schedule Demo
                 </Link>
@@ -165,10 +165,10 @@ export default function QuantumComputing() {
               className="text-center mb-16"
             >
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Advanced Quantum Computing Features
+                Advanced Development Platform Features
               </h2>
               <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-                Cutting-edge quantum capabilities designed for next-generation computing
+                Cutting-edge AI capabilities designed for modern software development
               </p>
             </motion.div>
 
@@ -179,7 +179,7 @@ export default function QuantumComputing() {
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
-                  className="bg-gradient-to-br from-slate-800 to-slate-700 p-6 rounded-xl border border-slate-600 hover:border-purple-400 transition-all duration-300 hover:transform hover:scale-105"
+                  className="bg-gradient-to-br from-slate-800 to-slate-700 p-6 rounded-xl border border-slate-600 hover:border-cyan-400 transition-all duration-300 hover:transform hover:scale-105"
                 >
                   <div className={`w-12 h-12 bg-gradient-to-r ${feature.color} rounded-lg flex items-center justify-center mb-4`}>
                     <feature.icon className="w-6 h-6 text-white" />
@@ -202,10 +202,10 @@ export default function QuantumComputing() {
               className="text-center mb-16"
             >
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Why Choose Quantum Computing?
+                Why Choose AI-Powered Development?
               </h2>
               <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-                Discover the advantages of next-generation quantum technology
+                Discover the advantages of intelligent development platforms
               </p>
             </motion.div>
 
@@ -219,7 +219,7 @@ export default function QuantumComputing() {
                     transition={{ duration: 0.6, delay: index * 0.1 }}
                     className="flex items-start space-x-3"
                   >
-                    <CheckCircle className="w-6 h-6 text-purple-400 mt-1 flex-shrink-0" />
+                    <CheckCircle className="w-6 h-6 text-cyan-400 mt-1 flex-shrink-0" />
                     <span className="text-gray-200 text-lg">{benefit}</span>
                   </motion.div>
                 ))}
@@ -233,7 +233,7 @@ export default function QuantumComputing() {
                     transition={{ duration: 0.6, delay: index * 0.1 }}
                     className="flex items-start space-x-3"
                   >
-                    <CheckCircle className="w-6 h-6 text-purple-400 mt-1 flex-shrink-0" />
+                    <CheckCircle className="w-6 h-6 text-cyan-400 mt-1 flex-shrink-0" />
                     <span className="text-gray-200 text-lg">{benefit}</span>
                   </motion.div>
                 ))}
@@ -252,10 +252,10 @@ export default function QuantumComputing() {
               className="text-center mb-16"
             >
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Quantum Computing Applications
+                Development Platform Applications
               </h2>
               <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-                Versatile quantum solutions for diverse industry challenges
+                Versatile AI-powered solutions for modern software development
               </p>
             </motion.div>
 
@@ -266,9 +266,9 @@ export default function QuantumComputing() {
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
-                  className="bg-gradient-to-br from-slate-800 to-slate-700 p-6 rounded-xl border border-slate-600 text-center hover:border-purple-400 transition-all duration-300"
+                  className="bg-gradient-to-br from-slate-800 to-slate-700 p-6 rounded-xl border border-slate-600 text-center hover:border-cyan-400 transition-all duration-300"
                 >
-                  <div className="w-16 h-16 bg-gradient-to-r from-purple-400 to-pink-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <div className="w-16 h-16 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-full flex items-center justify-center mx-auto mb-4">
                     <useCase.icon className="w-8 h-8 text-white" />
                   </div>
                   <h3 className="text-lg font-semibold text-white mb-2">{useCase.title}</h3>
@@ -292,7 +292,7 @@ export default function QuantumComputing() {
                 Cutting-Edge Technologies
               </h2>
               <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-                Built with the latest quantum computing innovations
+                Built with the latest AI and development technology innovations
               </p>
             </motion.div>
 
@@ -303,9 +303,9 @@ export default function QuantumComputing() {
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
-                  className="bg-gradient-to-br from-slate-700 to-slate-600 p-6 rounded-xl border border-slate-500 text-center hover:border-purple-400 transition-all duration-300"
+                  className="bg-gradient-to-br from-slate-700 to-slate-600 p-6 rounded-xl border border-slate-500 text-center hover:border-cyan-400 transition-all duration-300"
                 >
-                  <div className="w-12 h-12 bg-gradient-to-r from-purple-400 to-pink-500 rounded-lg flex items-center justify-center mx-auto mb-4">
+                  <div className="w-12 h-12 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-lg flex items-center justify-center mx-auto mb-4">
                     <Zap className="w-6 h-6 text-white" />
                   </div>
                   <h3 className="text-lg font-semibold text-white">{tech}</h3>
@@ -324,22 +324,22 @@ export default function QuantumComputing() {
               transition={{ duration: 0.8 }}
             >
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-                Ready to Embrace Quantum Computing?
+                Ready to Revolutionize Development?
               </h2>
               <p className="text-xl text-gray-300 mb-8">
-                Let's build quantum solutions that revolutionize computing capabilities
+                Let's build intelligent development platforms that transform how software is created
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link
                   to="/contact"
-                  className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-400 to-pink-500 text-white font-semibold rounded-lg hover:from-purple-500 hover:to-pink-600 transition-all duration-200 transform hover:scale-105"
+                  className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-400 to-blue-500 text-white font-semibold rounded-lg hover:from-cyan-500 hover:to-blue-600 transition-all duration-200 transform hover:scale-105"
                 >
                   Get Started Today
                   <ArrowRight className="ml-2 w-5 h-5" />
                 </Link>
                 <Link
                   to="/demo"
-                  className="inline-flex items-center px-8 py-4 border-2 border-purple-400 text-purple-400 font-semibold rounded-lg hover:bg-purple-400 hover:text-white transition-all duration-200"
+                  className="inline-flex items-center px-8 py-4 border-2 border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400 hover:text-white transition-all duration-200"
                 >
                   Schedule Consultation
                 </Link>

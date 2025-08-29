@@ -2,7 +2,9 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { 
-  Atom, 
+  Rocket, 
+  Satellite, 
+  Globe, 
   Brain, 
   Zap, 
   ArrowRight,
@@ -15,100 +17,97 @@ import {
   Cpu,
   Database,
   Network,
-  Target,
-  TrendingUp,
-  AlertTriangle,
-  Eye
+  Target
 } from 'lucide-react';
 import { SEO } from '@/components/SEO';
 
-export default function QuantumComputing() {
+export default function AISpaceTechnologyPlatform() {
   const features = [
     {
-      title: "Quantum Algorithms",
-      description: "Advanced quantum algorithms for optimization and simulation",
-      icon: Brain,
-      color: "from-purple-500 to-pink-500"
-    },
-    {
-      title: "Quantum Machine Learning",
-      description: "AI-powered quantum computing solutions",
-      icon: Atom,
+      title: "Satellite Data Analysis",
+      description: "AI-powered processing of satellite imagery and space data for insights",
+      icon: Satellite,
       color: "from-blue-500 to-cyan-500"
     },
     {
-      title: "Quantum Cryptography",
-      description: "Unbreakable encryption using quantum principles",
-      icon: Shield,
+      title: "Space Mission Planning",
+      description: "Intelligent mission design and trajectory optimization using AI algorithms",
+      icon: Rocket,
+      color: "from-purple-500 to-pink-500"
+    },
+    {
+      title: "Astronomical Research",
+      description: "AI-driven analysis of celestial data and space phenomena",
+      icon: Globe,
       color: "from-green-500 to-emerald-500"
     },
     {
-      title: "Quantum Simulation",
-      description: "Complex system simulation with quantum computers",
-      icon: Monitor,
+      title: "Space Weather Monitoring",
+      description: "Real-time monitoring and prediction of space weather events",
+      icon: Zap,
       color: "from-orange-500 to-red-500"
     },
     {
-      title: "Quantum Optimization",
-      description: "Solving complex optimization problems",
-      icon: Target,
+      title: "Autonomous Space Systems",
+      description: "AI-powered autonomous navigation and decision-making for space vehicles",
+      icon: Brain,
       color: "from-indigo-500 to-purple-500"
     },
     {
-      title: "Quantum Sensing",
-      description: "Ultra-sensitive quantum measurement systems",
-      icon: Eye,
+      title: "Space Debris Tracking",
+      description: "Intelligent monitoring and collision avoidance for space debris",
+      icon: Target,
       color: "from-yellow-500 to-orange-500"
     }
   ];
 
   const benefits = [
-    "Exponential speedup for specific problems",
-    "Unbreakable quantum encryption",
-    "Advanced machine learning capabilities",
-    "Complex system simulation",
-    "Revolutionary optimization solutions",
-    "Future-proof technology investment"
+    "Advanced space data analysis and insights",
+    "Improved mission success rates and efficiency",
+    "Real-time space weather monitoring and alerts",
+    "Enhanced satellite operations and maintenance",
+    "Autonomous space system capabilities",
+    "Cost-effective space exploration solutions"
   ];
 
   const useCases = [
     {
-      title: "Financial Services",
-      description: "Portfolio optimization and risk analysis",
-      icon: Building
+      title: "Satellite Operations",
+      description: "AI-powered satellite management and data processing",
+      icon: Satellite
     },
     {
-      title: "Drug Discovery",
-      description: "Molecular simulation and drug design",
-      icon: Atom
+      title: "Space Exploration",
+      description: "Mission planning and autonomous navigation systems",
+      icon: Rocket
     },
     {
-      title: "Logistics",
-      description: "Route optimization and supply chain",
-      icon: Network
+      title: "Earth Observation",
+      description: "Environmental monitoring and climate change analysis",
+      icon: Globe
     },
     {
-      title: "Cybersecurity",
-      description: "Quantum-resistant encryption",
-      icon: Lock
+      title: "Space Research",
+      description: "Astronomical data analysis and scientific discovery",
+      icon: Star
     }
   ];
 
   const technologies = [
-    "Quantum Gates & Circuits",
-    "Quantum Error Correction",
-    "Quantum Machine Learning",
-    "Quantum Cryptography",
-    "Quantum Simulation",
-    "Quantum Optimization"
+    "Machine Learning & Deep Learning",
+    "Computer Vision & Image Processing",
+    "Autonomous Navigation Systems",
+    "Real-time Data Processing",
+    "Cloud Computing & Edge Processing",
+    "Satellite Communication Protocols"
   ];
 
   return (
     <>
       <SEO 
-        title="Quantum Computing Solutions | Zion Tech Group"
-        description="Build quantum computing solutions with AI-powered algorithms, quantum machine learning, and advanced quantum applications."
-        keywords="quantum computing, quantum algorithms, quantum machine learning, quantum cryptography, quantum simulation"
+        title="AI Space Technology Platform Development | Zion Tech Group"
+        description="Revolutionize space technology with AI-powered platforms. Satellite operations, space mission planning, and autonomous space systems."
+        keywords="ai space technology, satellite operations, space mission planning, autonomous space systems, space data analysis"
       />
       
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
@@ -121,32 +120,33 @@ export default function QuantumComputing() {
               transition={{ duration: 0.8 }}
               className="text-center"
             >
-              <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-purple-400 to-pink-500 text-white text-sm font-medium mb-6">
-                <Atom className="w-4 h-4 mr-2" />
-                Quantum Computing Solutions
+              <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-indigo-400 to-purple-500 text-white text-sm font-medium mb-6">
+                <Rocket className="w-4 h-4 mr-2" />
+                AI-Powered Space Technology
               </div>
               
               <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-                The Future of
-                <span className="bg-gradient-to-r from-purple-400 to-pink-500 bg-clip-text text-transparent"> Computing</span>
+                Explore the
+                <span className="bg-gradient-to-r from-indigo-400 to-purple-500 bg-clip-text text-transparent"> Universe</span>
+                with AI
               </h1>
               
               <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-                Revolutionize computing with quantum technology. From advanced algorithms to quantum machine learning, 
-                unlock unprecedented computational power.
+                Revolutionize space technology with AI-powered platforms. From satellite operations to space mission planning, 
+                create the future of space exploration and research.
               </p>
               
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link
                   to="/request-quote"
-                  className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-400 to-pink-500 text-white font-semibold rounded-lg hover:from-purple-500 hover:to-pink-600 transition-all duration-200 transform hover:scale-105"
+                  className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-indigo-400 to-purple-500 text-white font-semibold rounded-lg hover:from-indigo-500 hover:to-purple-600 transition-all duration-200 transform hover:scale-105"
                 >
                   Start Your Project
                   <ArrowRight className="ml-2 w-5 h-5" />
                 </Link>
                 <Link
                   to="/demo"
-                  className="inline-flex items-center px-8 py-4 border-2 border-purple-400 text-purple-400 font-semibold rounded-lg hover:bg-purple-400 hover:text-white transition-all duration-200"
+                  className="inline-flex items-center px-8 py-4 border-2 border-indigo-400 text-indigo-400 font-semibold rounded-lg hover:bg-indigo-400 hover:text-white transition-all duration-200"
                 >
                   Schedule Demo
                 </Link>
@@ -165,10 +165,10 @@ export default function QuantumComputing() {
               className="text-center mb-16"
             >
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Advanced Quantum Computing Features
+                Advanced Space Technology Features
               </h2>
               <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-                Cutting-edge quantum capabilities designed for next-generation computing
+                Cutting-edge AI capabilities designed for space exploration and satellite operations
               </p>
             </motion.div>
 
@@ -179,7 +179,7 @@ export default function QuantumComputing() {
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
-                  className="bg-gradient-to-br from-slate-800 to-slate-700 p-6 rounded-xl border border-slate-600 hover:border-purple-400 transition-all duration-300 hover:transform hover:scale-105"
+                  className="bg-gradient-to-br from-slate-800 to-slate-700 p-6 rounded-xl border border-slate-600 hover:border-indigo-400 transition-all duration-300 hover:transform hover:scale-105"
                 >
                   <div className={`w-12 h-12 bg-gradient-to-r ${feature.color} rounded-lg flex items-center justify-center mb-4`}>
                     <feature.icon className="w-6 h-6 text-white" />
@@ -202,10 +202,10 @@ export default function QuantumComputing() {
               className="text-center mb-16"
             >
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Why Choose Quantum Computing?
+                Why Choose AI-Powered Space Technology?
               </h2>
               <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-                Discover the advantages of next-generation quantum technology
+                Discover the advantages of intelligent space technology platforms
               </p>
             </motion.div>
 
@@ -219,7 +219,7 @@ export default function QuantumComputing() {
                     transition={{ duration: 0.6, delay: index * 0.1 }}
                     className="flex items-start space-x-3"
                   >
-                    <CheckCircle className="w-6 h-6 text-purple-400 mt-1 flex-shrink-0" />
+                    <CheckCircle className="w-6 h-6 text-indigo-400 mt-1 flex-shrink-0" />
                     <span className="text-gray-200 text-lg">{benefit}</span>
                   </motion.div>
                 ))}
@@ -233,7 +233,7 @@ export default function QuantumComputing() {
                     transition={{ duration: 0.6, delay: index * 0.1 }}
                     className="flex items-start space-x-3"
                   >
-                    <CheckCircle className="w-6 h-6 text-purple-400 mt-1 flex-shrink-0" />
+                    <CheckCircle className="w-6 h-6 text-indigo-400 mt-1 flex-shrink-0" />
                     <span className="text-gray-200 text-lg">{benefit}</span>
                   </motion.div>
                 ))}
@@ -252,10 +252,10 @@ export default function QuantumComputing() {
               className="text-center mb-16"
             >
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Quantum Computing Applications
+                Space Technology Applications
               </h2>
               <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-                Versatile quantum solutions for diverse industry challenges
+                Versatile AI-powered solutions for space exploration and satellite operations
               </p>
             </motion.div>
 
@@ -266,9 +266,9 @@ export default function QuantumComputing() {
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
-                  className="bg-gradient-to-br from-slate-800 to-slate-700 p-6 rounded-xl border border-slate-600 text-center hover:border-purple-400 transition-all duration-300"
+                  className="bg-gradient-to-br from-slate-800 to-slate-700 p-6 rounded-xl border border-slate-600 text-center hover:border-indigo-400 transition-all duration-300"
                 >
-                  <div className="w-16 h-16 bg-gradient-to-r from-purple-400 to-pink-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <div className="w-16 h-16 bg-gradient-to-r from-indigo-400 to-purple-500 rounded-full flex items-center justify-center mx-auto mb-4">
                     <useCase.icon className="w-8 h-8 text-white" />
                   </div>
                   <h3 className="text-lg font-semibold text-white mb-2">{useCase.title}</h3>
@@ -292,7 +292,7 @@ export default function QuantumComputing() {
                 Cutting-Edge Technologies
               </h2>
               <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-                Built with the latest quantum computing innovations
+                Built with the latest AI and space technology innovations
               </p>
             </motion.div>
 
@@ -303,9 +303,9 @@ export default function QuantumComputing() {
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
-                  className="bg-gradient-to-br from-slate-700 to-slate-600 p-6 rounded-xl border border-slate-500 text-center hover:border-purple-400 transition-all duration-300"
+                  className="bg-gradient-to-br from-slate-700 to-slate-600 p-6 rounded-xl border border-slate-500 text-center hover:border-indigo-400 transition-all duration-300"
                 >
-                  <div className="w-12 h-12 bg-gradient-to-r from-purple-400 to-pink-500 rounded-lg flex items-center justify-center mx-auto mb-4">
+                  <div className="w-12 h-12 bg-gradient-to-r from-indigo-400 to-purple-500 rounded-lg flex items-center justify-center mx-auto mb-4">
                     <Zap className="w-6 h-6 text-white" />
                   </div>
                   <h3 className="text-lg font-semibold text-white">{tech}</h3>
@@ -324,22 +324,22 @@ export default function QuantumComputing() {
               transition={{ duration: 0.8 }}
             >
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-                Ready to Embrace Quantum Computing?
+                Ready to Explore Space with AI?
               </h2>
               <p className="text-xl text-gray-300 mb-8">
-                Let's build quantum solutions that revolutionize computing capabilities
+                Let's build the future of space technology together with AI-powered platforms
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link
                   to="/contact"
-                  className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-400 to-pink-500 text-white font-semibold rounded-lg hover:from-purple-500 hover:to-pink-600 transition-all duration-200 transform hover:scale-105"
+                  className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-indigo-400 to-purple-500 text-white font-semibold rounded-lg hover:from-indigo-500 hover:to-purple-600 transition-all duration-200 transform hover:scale-105"
                 >
                   Get Started Today
                   <ArrowRight className="ml-2 w-5 h-5" />
                 </Link>
                 <Link
                   to="/demo"
-                  className="inline-flex items-center px-8 py-4 border-2 border-purple-400 text-purple-400 font-semibold rounded-lg hover:bg-purple-400 hover:text-white transition-all duration-200"
+                  className="inline-flex items-center px-8 py-4 border-2 border-indigo-400 text-indigo-400 font-semibold rounded-lg hover:bg-indigo-400 hover:text-white transition-all duration-200"
                 >
                   Schedule Consultation
                 </Link>

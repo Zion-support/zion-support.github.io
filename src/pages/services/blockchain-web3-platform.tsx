@@ -2,113 +2,102 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { 
-  Atom, 
-  Brain, 
+  Globe2, 
+  Shield, 
   Zap, 
+  Lock, 
+  Users, 
+  Database, 
+  Network, 
   ArrowRight,
   CheckCircle,
   Star,
-  Monitor,
-  Shield,
-  Lock,
+  TrendingUp,
   Building,
   Cpu,
-  Database,
-  Network,
-  Target,
-  TrendingUp,
-  AlertTriangle,
-  Eye
+  Brain,
+  Rocket
 } from 'lucide-react';
 import { SEO } from '@/components/SEO';
 
-export default function QuantumComputing() {
+export default function BlockchainWeb3Platform() {
   const features = [
     {
-      title: "Quantum Algorithms",
-      description: "Advanced quantum algorithms for optimization and simulation",
-      icon: Brain,
-      color: "from-purple-500 to-pink-500"
-    },
-    {
-      title: "Quantum Machine Learning",
-      description: "AI-powered quantum computing solutions",
-      icon: Atom,
+      title: "Smart Contract Development",
+      description: "Custom smart contracts for DeFi, NFTs, and enterprise applications",
+      icon: Cpu,
       color: "from-blue-500 to-cyan-500"
     },
     {
-      title: "Quantum Cryptography",
-      description: "Unbreakable encryption using quantum principles",
-      icon: Shield,
+      title: "DeFi Platform Solutions",
+      description: "Decentralized finance platforms with advanced trading features",
+      icon: TrendingUp,
       color: "from-green-500 to-emerald-500"
     },
     {
-      title: "Quantum Simulation",
-      description: "Complex system simulation with quantum computers",
-      icon: Monitor,
+      title: "NFT Marketplace Development",
+      description: "Complete NFT creation, trading, and management platforms",
+      icon: Star,
+      color: "from-purple-500 to-pink-500"
+    },
+    {
+      title: "Web3 Infrastructure",
+      description: "Scalable blockchain infrastructure and node management",
+      icon: Network,
       color: "from-orange-500 to-red-500"
     },
     {
-      title: "Quantum Optimization",
-      description: "Solving complex optimization problems",
-      icon: Target,
+      title: "Cross-Chain Integration",
+      description: "Seamless interoperability between multiple blockchain networks",
+      icon: Globe2,
       color: "from-indigo-500 to-purple-500"
     },
     {
-      title: "Quantum Sensing",
-      description: "Ultra-sensitive quantum measurement systems",
-      icon: Eye,
-      color: "from-yellow-500 to-orange-500"
+      title: "Security & Auditing",
+      description: "Comprehensive security audits and penetration testing",
+      icon: Shield,
+      color: "from-red-500 to-pink-500"
     }
   ];
 
   const benefits = [
-    "Exponential speedup for specific problems",
-    "Unbreakable quantum encryption",
-    "Advanced machine learning capabilities",
-    "Complex system simulation",
-    "Revolutionary optimization solutions",
-    "Future-proof technology investment"
+    "Decentralized and trustless operations",
+    "Enhanced security through cryptography",
+    "Transparent and immutable transactions",
+    "Reduced intermediary costs",
+    "Global accessibility and inclusivity",
+    "Programmable money and assets"
   ];
 
   const useCases = [
     {
       title: "Financial Services",
-      description: "Portfolio optimization and risk analysis",
+      description: "DeFi lending, borrowing, and yield farming platforms",
       icon: Building
     },
     {
-      title: "Drug Discovery",
-      description: "Molecular simulation and drug design",
-      icon: Atom
+      title: "Gaming & Metaverse",
+      description: "Play-to-earn games and virtual asset ownership",
+      icon: Users
     },
     {
-      title: "Logistics",
-      description: "Route optimization and supply chain",
+      title: "Supply Chain",
+      description: "Transparent tracking and verification systems",
       icon: Network
     },
     {
-      title: "Cybersecurity",
-      description: "Quantum-resistant encryption",
+      title: "Identity Management",
+      description: "Self-sovereign identity and credential verification",
       icon: Lock
     }
-  ];
-
-  const technologies = [
-    "Quantum Gates & Circuits",
-    "Quantum Error Correction",
-    "Quantum Machine Learning",
-    "Quantum Cryptography",
-    "Quantum Simulation",
-    "Quantum Optimization"
   ];
 
   return (
     <>
       <SEO 
-        title="Quantum Computing Solutions | Zion Tech Group"
-        description="Build quantum computing solutions with AI-powered algorithms, quantum machine learning, and advanced quantum applications."
-        keywords="quantum computing, quantum algorithms, quantum machine learning, quantum cryptography, quantum simulation"
+        title="Blockchain & Web3 Platform Development | Zion Tech Group"
+        description="Build next-generation blockchain and Web3 applications with our expert development team. Smart contracts, DeFi platforms, NFTs, and more."
+        keywords="blockchain, web3, smart contracts, defi, nft, cryptocurrency, ethereum, solana, polygon"
       />
       
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
@@ -121,32 +110,32 @@ export default function QuantumComputing() {
               transition={{ duration: 0.8 }}
               className="text-center"
             >
-              <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-purple-400 to-pink-500 text-white text-sm font-medium mb-6">
-                <Atom className="w-4 h-4 mr-2" />
-                Quantum Computing Solutions
+              <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-yellow-400 to-orange-500 text-black text-sm font-medium mb-6">
+                <Globe2 className="w-4 h-4 mr-2" />
+                Web3 & Blockchain Solutions
               </div>
               
               <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-                The Future of
-                <span className="bg-gradient-to-r from-purple-400 to-pink-500 bg-clip-text text-transparent"> Computing</span>
+                Build the Future of
+                <span className="bg-gradient-to-r from-yellow-400 to-orange-500 bg-clip-text text-transparent"> Web3</span>
               </h1>
               
               <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-                Revolutionize computing with quantum technology. From advanced algorithms to quantum machine learning, 
-                unlock unprecedented computational power.
+                Transform your business with cutting-edge blockchain technology. From smart contracts to DeFi platforms, 
+                we build secure, scalable Web3 solutions that drive innovation.
               </p>
               
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link
                   to="/request-quote"
-                  className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-400 to-pink-500 text-white font-semibold rounded-lg hover:from-purple-500 hover:to-pink-600 transition-all duration-200 transform hover:scale-105"
+                  className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-yellow-400 to-orange-500 text-black font-semibold rounded-lg hover:from-yellow-500 hover:to-orange-600 transition-all duration-200 transform hover:scale-105"
                 >
                   Start Your Project
                   <ArrowRight className="ml-2 w-5 h-5" />
                 </Link>
                 <Link
                   to="/demo"
-                  className="inline-flex items-center px-8 py-4 border-2 border-purple-400 text-purple-400 font-semibold rounded-lg hover:bg-purple-400 hover:text-white transition-all duration-200"
+                  className="inline-flex items-center px-8 py-4 border-2 border-yellow-400 text-yellow-400 font-semibold rounded-lg hover:bg-yellow-400 hover:text-black transition-all duration-200"
                 >
                   Schedule Demo
                 </Link>
@@ -165,10 +154,10 @@ export default function QuantumComputing() {
               className="text-center mb-16"
             >
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Advanced Quantum Computing Features
+                Comprehensive Web3 Development Services
               </h2>
               <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-                Cutting-edge quantum capabilities designed for next-generation computing
+                From concept to deployment, we provide end-to-end blockchain and Web3 development solutions
               </p>
             </motion.div>
 
@@ -179,7 +168,7 @@ export default function QuantumComputing() {
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
-                  className="bg-gradient-to-br from-slate-800 to-slate-700 p-6 rounded-xl border border-slate-600 hover:border-purple-400 transition-all duration-300 hover:transform hover:scale-105"
+                  className="bg-gradient-to-br from-slate-800 to-slate-700 p-6 rounded-xl border border-slate-600 hover:border-yellow-400 transition-all duration-300 hover:transform hover:scale-105"
                 >
                   <div className={`w-12 h-12 bg-gradient-to-r ${feature.color} rounded-lg flex items-center justify-center mb-4`}>
                     <feature.icon className="w-6 h-6 text-white" />
@@ -202,10 +191,10 @@ export default function QuantumComputing() {
               className="text-center mb-16"
             >
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Why Choose Quantum Computing?
+                Why Choose Blockchain & Web3?
               </h2>
               <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-                Discover the advantages of next-generation quantum technology
+                Discover the transformative benefits of decentralized technology
               </p>
             </motion.div>
 
@@ -219,7 +208,7 @@ export default function QuantumComputing() {
                     transition={{ duration: 0.6, delay: index * 0.1 }}
                     className="flex items-start space-x-3"
                   >
-                    <CheckCircle className="w-6 h-6 text-purple-400 mt-1 flex-shrink-0" />
+                    <CheckCircle className="w-6 h-6 text-yellow-400 mt-1 flex-shrink-0" />
                     <span className="text-gray-200 text-lg">{benefit}</span>
                   </motion.div>
                 ))}
@@ -233,7 +222,7 @@ export default function QuantumComputing() {
                     transition={{ duration: 0.6, delay: index * 0.1 }}
                     className="flex items-start space-x-3"
                   >
-                    <CheckCircle className="w-6 h-6 text-purple-400 mt-1 flex-shrink-0" />
+                    <CheckCircle className="w-6 h-6 text-yellow-400 mt-1 flex-shrink-0" />
                     <span className="text-gray-200 text-lg">{benefit}</span>
                   </motion.div>
                 ))}
@@ -252,10 +241,10 @@ export default function QuantumComputing() {
               className="text-center mb-16"
             >
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Quantum Computing Applications
+                Real-World Applications
               </h2>
               <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-                Versatile quantum solutions for diverse industry challenges
+                Explore how blockchain technology is revolutionizing various industries
               </p>
             </motion.div>
 
@@ -266,10 +255,10 @@ export default function QuantumComputing() {
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
-                  className="bg-gradient-to-br from-slate-800 to-slate-700 p-6 rounded-xl border border-slate-600 text-center hover:border-purple-400 transition-all duration-300"
+                  className="bg-gradient-to-br from-slate-800 to-slate-700 p-6 rounded-xl border border-slate-600 text-center hover:border-yellow-400 transition-all duration-300"
                 >
-                  <div className="w-16 h-16 bg-gradient-to-r from-purple-400 to-pink-500 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <useCase.icon className="w-8 h-8 text-white" />
+                  <div className="w-16 h-16 bg-gradient-to-r from-yellow-400 to-orange-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <useCase.icon className="w-8 h-8 text-black" />
                   </div>
                   <h3 className="text-lg font-semibold text-white mb-2">{useCase.title}</h3>
                   <p className="text-gray-300 text-sm">{useCase.description}</p>
@@ -279,44 +268,8 @@ export default function QuantumComputing() {
           </div>
         </section>
 
-        {/* Technology Stack Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-slate-800 to-slate-700">
-          <div className="max-w-7xl mx-auto">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              className="text-center mb-16"
-            >
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Cutting-Edge Technologies
-              </h2>
-              <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-                Built with the latest quantum computing innovations
-              </p>
-            </motion.div>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {technologies.map((tech, index) => (
-                <motion.div
-                  key={tech}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
-                  className="bg-gradient-to-br from-slate-700 to-slate-600 p-6 rounded-xl border border-slate-500 text-center hover:border-purple-400 transition-all duration-300"
-                >
-                  <div className="w-12 h-12 bg-gradient-to-r from-purple-400 to-pink-500 rounded-lg flex items-center justify-center mx-auto mb-4">
-                    <Zap className="w-6 h-6 text-white" />
-                  </div>
-                  <h3 className="text-lg font-semibold text-white">{tech}</h3>
-                </motion.div>
-              ))}
-            </div>
-          </div>
-        </section>
-
         {/* CTA Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-slate-800 to-slate-700">
           <div className="max-w-4xl mx-auto text-center">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -324,22 +277,22 @@ export default function QuantumComputing() {
               transition={{ duration: 0.8 }}
             >
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-                Ready to Embrace Quantum Computing?
+                Ready to Build Your Web3 Future?
               </h2>
               <p className="text-xl text-gray-300 mb-8">
-                Let's build quantum solutions that revolutionize computing capabilities
+                Let's discuss how blockchain technology can transform your business and create new opportunities
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link
                   to="/contact"
-                  className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-400 to-pink-500 text-white font-semibold rounded-lg hover:from-purple-500 hover:to-pink-600 transition-all duration-200 transform hover:scale-105"
+                  className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-yellow-400 to-orange-500 text-black font-semibold rounded-lg hover:from-yellow-500 hover:to-orange-600 transition-all duration-200 transform hover:scale-105"
                 >
                   Get Started Today
                   <ArrowRight className="ml-2 w-5 h-5" />
                 </Link>
                 <Link
                   to="/demo"
-                  className="inline-flex items-center px-8 py-4 border-2 border-purple-400 text-purple-400 font-semibold rounded-lg hover:bg-purple-400 hover:text-white transition-all duration-200"
+                  className="inline-flex items-center px-8 py-4 border-2 border-yellow-400 text-yellow-400 font-semibold rounded-lg hover:bg-yellow-400 hover:text-black transition-all duration-200"
                 >
                   Schedule Consultation
                 </Link>

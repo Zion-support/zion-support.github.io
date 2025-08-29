@@ -2,113 +2,112 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { 
-  Atom, 
+  Heart, 
   Brain, 
-  Zap, 
+  Activity, 
+  Shield, 
   ArrowRight,
   CheckCircle,
   Star,
-  Monitor,
-  Shield,
-  Lock,
-  Building,
-  Cpu,
-  Database,
-  Network,
-  Target,
   TrendingUp,
-  AlertTriangle,
-  Eye
+  Users,
+  Target,
+  Zap,
+  Eye,
+  Stethoscope,
+  Microscope,
+  Pill,
+  Syringe
 } from 'lucide-react';
 import { SEO } from '@/components/SEO';
 
-export default function QuantumComputing() {
+export default function AIHealthcareDiagnosticsPlatform() {
   const features = [
     {
-      title: "Quantum Algorithms",
-      description: "Advanced quantum algorithms for optimization and simulation",
+      title: "AI-Powered Diagnosis",
+      description: "Advanced machine learning algorithms for accurate medical diagnosis",
       icon: Brain,
-      color: "from-purple-500 to-pink-500"
+      color: "from-pink-500 to-red-500"
     },
     {
-      title: "Quantum Machine Learning",
-      description: "AI-powered quantum computing solutions",
-      icon: Atom,
-      color: "from-blue-500 to-cyan-500"
+      title: "Medical Image Analysis",
+      description: "Deep learning for X-rays, MRIs, CT scans, and pathology images",
+      icon: Eye,
+      color: "from-blue-500 to-indigo-500"
     },
     {
-      title: "Quantum Cryptography",
-      description: "Unbreakable encryption using quantum principles",
-      icon: Shield,
+      title: "Predictive Analytics",
+      description: "Early disease detection and risk assessment using patient data",
+      icon: TrendingUp,
       color: "from-green-500 to-emerald-500"
     },
     {
-      title: "Quantum Simulation",
-      description: "Complex system simulation with quantum computers",
-      icon: Monitor,
+      title: "Clinical Decision Support",
+      description: "AI-assisted treatment recommendations and care planning",
+      icon: Stethoscope,
+      color: "from-purple-500 to-pink-500"
+    },
+    {
+      title: "Patient Monitoring",
+      description: "Real-time health monitoring and alert systems",
+      icon: Activity,
       color: "from-orange-500 to-red-500"
     },
     {
-      title: "Quantum Optimization",
-      description: "Solving complex optimization problems",
-      icon: Target,
-      color: "from-indigo-500 to-purple-500"
-    },
-    {
-      title: "Quantum Sensing",
-      description: "Ultra-sensitive quantum measurement systems",
-      icon: Eye,
-      color: "from-yellow-500 to-orange-500"
+      title: "Drug Discovery Support",
+      description: "AI-powered pharmaceutical research and development",
+      icon: Pill,
+      color: "from-cyan-500 to-blue-500"
     }
   ];
 
   const benefits = [
-    "Exponential speedup for specific problems",
-    "Unbreakable quantum encryption",
-    "Advanced machine learning capabilities",
-    "Complex system simulation",
-    "Revolutionary optimization solutions",
-    "Future-proof technology investment"
+    "Improved diagnostic accuracy and early detection",
+    "Reduced healthcare costs and resource utilization",
+    "Enhanced patient outcomes and survival rates",
+    "Streamlined clinical workflows and efficiency",
+    "Personalized medicine and treatment plans",
+    "24/7 diagnostic support and monitoring"
   ];
 
   const useCases = [
     {
-      title: "Financial Services",
-      description: "Portfolio optimization and risk analysis",
-      icon: Building
+      title: "Radiology",
+      description: "AI-powered image analysis for X-rays, MRIs, and CT scans",
+      icon: Eye
     },
     {
-      title: "Drug Discovery",
-      description: "Molecular simulation and drug design",
-      icon: Atom
+      title: "Pathology",
+      description: "Digital pathology and tissue analysis",
+      icon: Microscope
     },
     {
-      title: "Logistics",
-      description: "Route optimization and supply chain",
-      icon: Network
+      title: "Cardiology",
+      description: "Heart disease detection and monitoring",
+      icon: Heart
     },
     {
-      title: "Cybersecurity",
-      description: "Quantum-resistant encryption",
-      icon: Lock
+      title: "Oncology",
+      description: "Cancer detection and treatment planning",
+      icon: Target
     }
   ];
 
   const technologies = [
-    "Quantum Gates & Circuits",
-    "Quantum Error Correction",
-    "Quantum Machine Learning",
-    "Quantum Cryptography",
-    "Quantum Simulation",
-    "Quantum Optimization"
+    "Deep Learning & Neural Networks",
+    "Computer Vision & Image Processing",
+    "Natural Language Processing",
+    "Predictive Analytics & ML",
+    "Cloud Computing & Security",
+    "IoT & Wearable Integration"
   ];
 
   return (
     <>
       <SEO 
-        title="Quantum Computing Solutions | Zion Tech Group"
-        description="Build quantum computing solutions with AI-powered algorithms, quantum machine learning, and advanced quantum applications."
-        keywords="quantum computing, quantum algorithms, quantum machine learning, quantum cryptography, quantum simulation"
+        title="AI Healthcare Diagnostics Platform | Zion Tech Group"
+        description="Revolutionary AI-powered medical diagnostics platform for accurate disease detection, medical image analysis, and clinical decision support."
+        keywords="ai healthcare, medical diagnostics, medical ai, disease detection, medical imaging, clinical decision support, zion tech group"
       />
       
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
@@ -121,32 +120,33 @@ export default function QuantumComputing() {
               transition={{ duration: 0.8 }}
               className="text-center"
             >
-              <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-purple-400 to-pink-500 text-white text-sm font-medium mb-6">
-                <Atom className="w-4 h-4 mr-2" />
-                Quantum Computing Solutions
+              <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-pink-400 to-red-500 text-white text-sm font-medium mb-6">
+                <Heart className="w-4 h-4 mr-2" />
+                AI Healthcare Diagnostics
               </div>
               
               <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-                The Future of
-                <span className="bg-gradient-to-r from-purple-400 to-pink-500 bg-clip-text text-transparent"> Computing</span>
+                Revolutionize
+                <span className="bg-gradient-to-r from-pink-400 to-red-500 bg-clip-text text-transparent"> Healthcare</span>
+                with AI
               </h1>
               
               <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-                Revolutionize computing with quantum technology. From advanced algorithms to quantum machine learning, 
-                unlock unprecedented computational power.
+                Transform medical diagnostics with our AI-powered platform. From image analysis to predictive analytics, 
+                deliver accurate, timely, and personalized healthcare solutions.
               </p>
               
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link
                   to="/request-quote"
-                  className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-400 to-pink-500 text-white font-semibold rounded-lg hover:from-purple-500 hover:to-pink-600 transition-all duration-200 transform hover:scale-105"
+                  className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-pink-400 to-red-500 text-white font-semibold rounded-lg hover:from-pink-500 hover:to-red-600 transition-all duration-200 transform hover:scale-105"
                 >
                   Start Your Project
                   <ArrowRight className="ml-2 w-5 h-5" />
                 </Link>
                 <Link
                   to="/demo"
-                  className="inline-flex items-center px-8 py-4 border-2 border-purple-400 text-purple-400 font-semibold rounded-lg hover:bg-purple-400 hover:text-white transition-all duration-200"
+                  className="inline-flex items-center px-8 py-4 border-2 border-pink-400 text-pink-400 font-semibold rounded-lg hover:bg-pink-400 hover:text-white transition-all duration-200"
                 >
                   Schedule Demo
                 </Link>
@@ -165,10 +165,10 @@ export default function QuantumComputing() {
               className="text-center mb-16"
             >
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Advanced Quantum Computing Features
+                Advanced Healthcare AI Features
               </h2>
               <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-                Cutting-edge quantum capabilities designed for next-generation computing
+                Cutting-edge capabilities designed for modern medical diagnostics
               </p>
             </motion.div>
 
@@ -179,7 +179,7 @@ export default function QuantumComputing() {
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
-                  className="bg-gradient-to-br from-slate-800 to-slate-700 p-6 rounded-xl border border-slate-600 hover:border-purple-400 transition-all duration-300 hover:transform hover:scale-105"
+                  className="bg-gradient-to-br from-slate-800 to-slate-700 p-6 rounded-xl border border-slate-600 hover:border-pink-400 transition-all duration-300 hover:transform hover:scale-105"
                 >
                   <div className={`w-12 h-12 bg-gradient-to-r ${feature.color} rounded-lg flex items-center justify-center mb-4`}>
                     <feature.icon className="w-6 h-6 text-white" />
@@ -202,10 +202,10 @@ export default function QuantumComputing() {
               className="text-center mb-16"
             >
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Why Choose Quantum Computing?
+                Why Choose AI Healthcare Diagnostics?
               </h2>
               <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-                Discover the advantages of next-generation quantum technology
+                Discover the advantages of intelligent medical technology
               </p>
             </motion.div>
 
@@ -219,7 +219,7 @@ export default function QuantumComputing() {
                     transition={{ duration: 0.6, delay: index * 0.1 }}
                     className="flex items-start space-x-3"
                   >
-                    <CheckCircle className="w-6 h-6 text-purple-400 mt-1 flex-shrink-0" />
+                    <CheckCircle className="w-6 h-6 text-pink-400 mt-1 flex-shrink-0" />
                     <span className="text-gray-200 text-lg">{benefit}</span>
                   </motion.div>
                 ))}
@@ -233,7 +233,7 @@ export default function QuantumComputing() {
                     transition={{ duration: 0.6, delay: index * 0.1 }}
                     className="flex items-start space-x-3"
                   >
-                    <CheckCircle className="w-6 h-6 text-purple-400 mt-1 flex-shrink-0" />
+                    <CheckCircle className="w-6 h-6 text-pink-400 mt-1 flex-shrink-0" />
                     <span className="text-gray-200 text-lg">{benefit}</span>
                   </motion.div>
                 ))}
@@ -252,10 +252,10 @@ export default function QuantumComputing() {
               className="text-center mb-16"
             >
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Quantum Computing Applications
+                Healthcare Applications
               </h2>
               <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-                Versatile quantum solutions for diverse industry challenges
+                Versatile AI solutions for diverse medical specialties
               </p>
             </motion.div>
 
@@ -266,9 +266,9 @@ export default function QuantumComputing() {
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
-                  className="bg-gradient-to-br from-slate-800 to-slate-700 p-6 rounded-xl border border-slate-600 text-center hover:border-purple-400 transition-all duration-300"
+                  className="bg-gradient-to-br from-slate-800 to-slate-700 p-6 rounded-xl border border-slate-600 text-center hover:border-pink-400 transition-all duration-300"
                 >
-                  <div className="w-16 h-16 bg-gradient-to-r from-purple-400 to-pink-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <div className="w-16 h-16 bg-gradient-to-r from-pink-400 to-red-500 rounded-full flex items-center justify-center mx-auto mb-4">
                     <useCase.icon className="w-8 h-8 text-white" />
                   </div>
                   <h3 className="text-lg font-semibold text-white mb-2">{useCase.title}</h3>
@@ -292,7 +292,7 @@ export default function QuantumComputing() {
                 Cutting-Edge Technologies
               </h2>
               <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-                Built with the latest quantum computing innovations
+                Built with the latest AI and healthcare innovations
               </p>
             </motion.div>
 
@@ -303,9 +303,9 @@ export default function QuantumComputing() {
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
-                  className="bg-gradient-to-br from-slate-700 to-slate-600 p-6 rounded-xl border border-slate-500 text-center hover:border-purple-400 transition-all duration-300"
+                  className="bg-gradient-to-br from-slate-700 to-slate-600 p-6 rounded-xl border border-slate-500 text-center hover:border-pink-400 transition-all duration-300"
                 >
-                  <div className="w-12 h-12 bg-gradient-to-r from-purple-400 to-pink-500 rounded-lg flex items-center justify-center mx-auto mb-4">
+                  <div className="w-12 h-12 bg-gradient-to-r from-pink-400 to-red-500 rounded-lg flex items-center justify-center mx-auto mb-4">
                     <Zap className="w-6 h-6 text-white" />
                   </div>
                   <h3 className="text-lg font-semibold text-white">{tech}</h3>
@@ -324,22 +324,22 @@ export default function QuantumComputing() {
               transition={{ duration: 0.8 }}
             >
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-                Ready to Embrace Quantum Computing?
+                Ready to Transform Healthcare?
               </h2>
               <p className="text-xl text-gray-300 mb-8">
-                Let's build quantum solutions that revolutionize computing capabilities
+                Let's create AI-powered diagnostic solutions that save lives
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link
                   to="/contact"
-                  className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-400 to-pink-500 text-white font-semibold rounded-lg hover:from-purple-500 hover:to-pink-600 transition-all duration-200 transform hover:scale-105"
+                  className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-pink-400 to-red-500 text-white font-semibold rounded-lg hover:from-pink-500 hover:to-red-600 transition-all duration-200 transform hover:scale-105"
                 >
                   Get Started Today
                   <ArrowRight className="ml-2 w-5 h-5" />
                 </Link>
                 <Link
                   to="/demo"
-                  className="inline-flex items-center px-8 py-4 border-2 border-purple-400 text-purple-400 font-semibold rounded-lg hover:bg-purple-400 hover:text-white transition-all duration-200"
+                  className="inline-flex items-center px-8 py-4 border-2 border-pink-400 text-pink-400 font-semibold rounded-lg hover:bg-pink-400 hover:text-white transition-all duration-200"
                 >
                   Schedule Consultation
                 </Link>
