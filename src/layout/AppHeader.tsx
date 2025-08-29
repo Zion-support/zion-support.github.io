@@ -131,6 +131,14 @@ export function AppHeader() {
       description: 'Future Technology Solutions',
       featured: true,
       color: 'from-indigo-500 to-purple-500'
+    },
+    { 
+      name: 'Enhanced Services Showcase 2025', 
+      href: '/enhanced-services-showcase-2025', 
+      icon: Star, 
+      description: 'Comprehensive Service Portfolio',
+      featured: true,
+      color: 'from-yellow-500 to-orange-500'
     }
   ];
 
