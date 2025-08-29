@@ -41,7 +41,6 @@ const Demo = React.lazy(() => import('./pages/Demo'));
 // Import real pages
 const Careers = React.lazy(() => import('./pages/Careers'));
 const Marketplace = React.lazy(() => import('./pages/Marketplace'));
-const ComprehensiveServicesShowcase2026 = React.lazy(() => import('./pages/ComprehensiveServicesShowcase2026'));
 const ComprehensivePricingGuide2026 = React.lazy(() => import('./pages/ComprehensivePricingGuide2026'));
 const ComprehensivePricingGuide2027 = React.lazy(() => import('./pages/ComprehensivePricingGuide2027'));
 const RevolutionaryServices2030 = React.lazy(() => import('./pages/RevolutionaryServices2030'));
@@ -100,6 +99,16 @@ const AILegalDocumentAutomation = React.lazy(() => import('./pages/services/AILe
 const AIHealthcarePredictiveAnalytics = React.lazy(() => import('./pages/services/AIHealthcarePredictiveAnalytics'));
 const AIFinancialTradingRiskManagement = React.lazy(() => import('./pages/services/AIFinancialTradingRiskManagement'));
 const ComprehensiveAIServicesShowcase2025 = React.lazy(() => import('./pages/ComprehensiveAIServicesShowcase2025'));
+
+// New comprehensive services showcase 2026
+const ComprehensiveServicesShowcase2026 = React.lazy(() => import('./pages/ComprehensiveServicesShowcase2026'));
+
+// New innovative micro SAAS services
+const AIEnergyOptimizationPlatform = React.lazy(() => import('./pages/services/AIEnergyOptimizationPlatform'));
+const AISupplyChainRiskManagement = React.lazy(() => import('./pages/services/AISupplyChainRiskManagement'));
+const AIPredictiveMaintenancePlatform = React.lazy(() => import('./pages/services/AIPredictiveMaintenancePlatform'));
+const AIFraudDetectionPlatform = React.lazy(() => import('./pages/services/AIFraudDetectionPlatform'));
+const AICustomerExperienceOptimization = React.lazy(() => import('./pages/services/AICustomerExperienceOptimization'));
 
 function App() {
   return (
@@ -171,11 +180,21 @@ function App() {
                 <Route path="/services/ai-financial-trading-risk-management" element={<AIFinancialTradingRiskManagement />} />
                 <Route path="/comprehensive-ai-services-showcase-2025" element={<ComprehensiveAIServicesShowcase2025 />} />
                 
+                {/* New innovative micro SAAS services */}
+                <Route path="/services/ai-energy-optimization-platform" element={<AIEnergyOptimizationPlatform />} />
+                <Route path="/services/ai-supply-chain-risk-management" element={<AISupplyChainRiskManagement />} />
+                <Route path="/services/ai-predictive-maintenance-platform" element={<AIPredictiveMaintenancePlatform />} />
+                <Route path="/services/ai-fraud-detection-platform" element={<AIFraudDetectionPlatform />} />
+                <Route path="/services/ai-customer-experience-optimization" element={<AICustomerExperienceOptimization />} />
+                
                 {/* Emerging Tech 2030 */}
                 <Route path="/emerging-tech-2030" element={<EmergingTech2030 />} />
                 
                 {/* New comprehensive pricing guide 2026 */}
                 <Route path="/comprehensive-pricing-guide-2026" element={<ComprehensivePricingGuide2026 />} />
+                
+                {/* New comprehensive services showcase 2026 */}
+                <Route path="/comprehensive-services-showcase-2026" element={<ComprehensiveServicesShowcase2026 />} />
                 
                 {/* New comprehensive pricing guide 2027 */}
                 <Route path="/comprehensive-pricing-guide-2027" element={<ComprehensivePricingGuide2027 />} />
