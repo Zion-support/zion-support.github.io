@@ -98,7 +98,7 @@ import {
   Cloud,
   CheckCircle
 } from 'lucide-react';
-import { SEO } from '../components/EnhancedSEO';
+import { EnhancedSEO as SEO } from '../components/EnhancedSEO';
 
 // Animation variants
 const containerVariants = {
@@ -285,7 +285,7 @@ const HeroSection: React.FC = () => {
           {/* Icon */}
           <motion.div variants={itemVariants} className="flex justify-center">
             <div className="w-20 h-20 bg-gradient-to-br from-zion-cyan to-zion-blue rounded-2xl flex items-center justify-center shadow-glow-blue-lg">
-              <heroSlides[currentSlide].icon className="w-10 h-10 text-white" />
+              {React.createElement(heroSlides[currentSlide].icon, { className: "w-10 h-10 text-white" })}
             </div>
           </motion.div>
 
@@ -360,7 +360,7 @@ const QuickAccess: React.FC = () => {
                 className="glass-card hover:scale-105 transition-all duration-300 text-center group"
               >
                 <div className={`w-12 h-12 bg-gradient-to-r ${action.color} rounded-xl flex items-center justify-center mx-auto mb-3 group-hover:scale-110 transition-transform duration-300`}>
-                  <action.icon className="w-6 h-6 text-white" />
+                  {React.createElement(action.icon, { className: "w-6 h-6 text-white" })}
                 </div>
                 <span className="text-white font-semibold">{action.label}</span>
               </Link>
