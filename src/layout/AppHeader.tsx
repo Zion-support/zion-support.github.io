@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { Menu, X, Search, User, Bell, ChevronDown, Zap, Brain, Shield, Cloud, Rocket, Globe, Cpu, Lock, Heart, Users, ShoppingCart, BookOpen, MessageCircle, HelpCircle, DollarSign, Star, TrendingUp, Award, Settings, Phone, Mail, MapPin, Building } from 'lucide-react';
 import { ThemeToggle } from '../components/ThemeToggle';
+import { EnhancedSearch } from '../components/EnhancedSearch';
 import { ZionLoadingSpinner } from '../components/ui/EnhancedLoadingSpinner';
 import { motion, AnimatePresence } from 'framer-motion';
 
@@ -264,16 +265,9 @@ export function AppHeader() {
             {/* Right side actions */}
             <div className="flex items-center space-x-4">
               {/* Search */}
-              <form onSubmit={handleSearch} className="hidden md:block relative">
-                <Search className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-slate-400" />
-                <input
-                  type="text"
-                  placeholder="Search services..."
-                  value={searchQuery}
-                  onChange={(e) => setSearchQuery(e.target.value)}
-                  className="w-64 pl-10 pr-4 py-2 rounded-lg bg-slate-800/70 border border-slate-600 focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20 outline-none text-white placeholder-slate-400 text-sm"
-                />
-              </form>
+              <div className="hidden md:block">
+                <EnhancedSearch />
+              </div>
 
               {/* Theme Toggle */}
               <ThemeToggle />
@@ -395,18 +389,9 @@ export function AppHeader() {
                 </div>
 
                 {/* Mobile Search */}
-                <form onSubmit={handleSearch} className="mb-6">
-                  <div className="relative">
-                    <Search className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-slate-400" />
-                    <input
-                      type="text"
-                      placeholder="Search services..."
-                      value={searchQuery}
-                      onChange={(e) => setSearchQuery(e.target.value)}
-                      className="w-full pl-10 pr-4 py-3 rounded-lg bg-slate-800 border border-slate-600 focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20 outline-none text-white placeholder-slate-400"
-                    />
-                  </div>
-                </form>
+                <div className="mb-6">
+                  <EnhancedSearch />
+                </div>
 
                 {/* Mobile Navigation */}
                 <nav className="space-y-4">
