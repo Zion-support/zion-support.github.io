@@ -35,7 +35,6 @@ const ServicesOverview = React.lazy(() => import('./pages/ServicesOverview'));
 const PricingGuide = React.lazy(() => import('./pages/PricingGuide'));
 const Help = React.lazy(() => import('./pages/Help'));
 const Partners = React.lazy(() => import('./pages/Partners'));
-const ServicesComparisonPage = React.lazy(() => import('./pages/ServicesComparisonPage'));
 const Team = React.lazy(() => import('./pages/Team'));
 const Press = React.lazy(() => import('./pages/Press'));
 const Webinars = React.lazy(() => import('./pages/Webinars'));
@@ -60,7 +59,6 @@ const InnovativeServicesShowcase2025 = React.lazy(() => import('./pages/Innovati
 const InnovativeServicesShowcase2028 = React.lazy(() => import('./pages/InnovativeServicesShowcase2028'));
 const ComprehensivePricingGuide2028 = React.lazy(() => import('./pages/ComprehensivePricingGuide2028'));
 const ComprehensiveServicesLanding2028 = React.lazy(() => import('./pages/ComprehensiveServicesLanding2028'));
-const ServicesComparisonPage = React.lazy(() => import('./pages/ServicesComparisonPage'));
 
 // Service pages - only import existing ones
 const CloudDevOps = React.lazy(() => import('./pages/services/CloudDevOps'));
@@ -190,9 +188,7 @@ function App() {
               <Route path="/services-overview" element={<ServicesOverview />} />
               <Route path="/revolutionary-services-2030" element={<RevolutionaryServices2030 />} />
               <Route path="/comprehensive-services" element={<ComprehensiveServicesLanding2025 />} />
-              <Route path="/services" element={<Services />} />
-              {/** duplicate comprehensive-services route removed */}
-              <Route path="/services-overview" element={<ServicesOverview />} />
+              {/** duplicates removed */}
               
               <Route path="/revolutionary-services-showcase-2030" element={<RevolutionaryServicesShowcase2030 />} />
               <Route path="/innovative-services-showcase-2025" element={<InnovativeServicesShowcase2025 />} />
@@ -267,7 +263,6 @@ function App() {
               
               {/* Additional innovative services routes */}
               <Route path="/services/ai-business-intelligence-platform" element={<AIBusinessIntelligencePlatform />} />
-              <Route path="/services/ai-cybersecurity-suite" element={<AICybersecuritySuite />} />
               <Route path="/services/ai-customer-success-platform" element={<AICustomerSuccessPlatform />} />
               <Route path="/services/ai-workflow-orchestrator" element={<AIWorkflowOrchestrator />} />
               <Route path="/services/ai-data-governance" element={<AIDataGovernance />} />
