@@ -94,6 +94,12 @@ const Solutions = createLazyComponent(() => import('./pages/solutions'));
 // Enhanced Services Showcase 2025
 const EnhancedServicesShowcase2025 = lazy(() => import('./pages/EnhancedServicesShowcase2025'));
 
+// Enhanced Services Showcase 2026
+const EnhancedServicesShowcase2026 = lazy(() => import('./pages/EnhancedServicesShowcase2026'));
+
+// Comprehensive Pricing Showcase 2026
+const ComprehensivePricingShowcase2026 = lazy(() => import('./pages/ComprehensivePricingShowcase2026'));
+
 // Sitemap-aligned pages
 const AiSolutions = lazy(() => import('./pages/AiSolutions'));
 const SolutionsEnterprise = lazy(() => import('./pages/solutions/Enterprise'));
@@ -401,6 +407,8 @@ function App() {
                     <Route path="/comprehensive-pricing-2026" element={<ComprehensivePricing2026 />} />
                     <Route path="/comprehensive-pricing-2028" element={<ComprehensivePricing2028 />} />
                     <Route path="/innovative-services-2025" element={<InnovativeServicesLanding2025 />} />
+                    <Route path="/enhanced-services-showcase-2026" element={<EnhancedServicesShowcase2026 />} />
+                    <Route path="/comprehensive-pricing-showcase-2026" element={<ComprehensivePricingShowcase2026 />} />
                     
                     {/* 2029 Cutting-Edge Services */}
                     <Route path="/zion-cutting-edge-services-2029" element={<ZionCuttingEdgeServices2029 />} />

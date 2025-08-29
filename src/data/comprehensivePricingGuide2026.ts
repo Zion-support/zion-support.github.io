@@ -1,623 +1,674 @@
 // Comprehensive Pricing Guide 2026 - Zion Tech Group
 // Detailed pricing structures for revolutionary micro SAAS, IT, and AI services
 
-export interface PricingTier {
+export type PricingTier = {
+  id: string;
   name: string;
-  price: number;
-  currency: string;
-  billingCycle: string;
-  features: string[];
-  limitations: string[];
-  bestFor: string[];
-  roi: string;
-  setupCost: number;
-  contractLength: string;
-}
-
-export interface ServicePricing {
-  serviceId: string;
-  serviceName: string;
-  category: string;
+  price: string;
+  billing: 'month' | 'project' | 'hour' | 'year';
   description: string;
+  features: string[];
+  bestFor: string[];
+  included: string[];
+  notIncluded: string[];
+  ctaLabel: string;
+  href: string;
+  popular?: boolean;
+  savings?: string;
+  roi?: string;
+  implementationTime?: string;
+  supportLevel?: string;
+};
+
+export type ServicePricing = {
+  id: string;
+  title: string;
+  description: string;
+  category: string;
   pricingTiers: PricingTier[];
-  marketComparison: {
-    competitors: string[];
-    averageMarketPrice: string;
-    ourAdvantage: string[];
-  };
-  roiAnalysis: {
-    shortTerm: string;
-    longTerm: string;
-    paybackPeriod: string;
-    totalValue: string;
-  };
-  implementation: {
-    timeline: string;
-    requirements: string[];
-    support: string[];
-    training: string[];
-  };
-}
+  marketSize: string;
+  averageROI: string;
+  implementationTime: string;
+  supportLevel: string;
+  compliance: string[];
+  integrations: string[];
+  technologyStack: string[];
+  realWorldExamples: string[];
+  competitiveAdvantage: string[];
+  targetIndustries: string[];
+  useCases: string[];
+  benefits: string[];
+  features: string[];
+  ctaLabel: string;
+  href: string;
+  featured?: boolean;
+};
 
-export const COMPREHENSIVE_PRICING_GUIDE_2026: ServicePricing[] = [
+export const comprehensivePricingGuide2026: ServicePricing[] = [
   {
-    serviceId: "ai-autonomous-business-manager",
-    serviceName: "AI Autonomous Business Manager",
-    category: "AI & Automation",
-    description: "Fully autonomous AI system that manages business operations, makes decisions, and optimizes processes without human intervention.",
+    id: 'ai-powered-revenue-optimization-engine',
+    title: 'AI-Powered Revenue Optimization Engine',
+    description: 'Intelligent revenue optimization platform that increases business revenue by 25-40% through dynamic pricing, demand forecasting, and customer behavior analysis.',
+    category: 'Micro SaaS',
+    marketSize: '$8.9B',
+    averageROI: '400%',
+    implementationTime: '4-6 weeks',
+    supportLevel: '24/7 + revenue specialists',
+    compliance: ['GDPR', 'CCPA', 'SOC 2', 'PCI DSS'],
+    integrations: ['Stripe', 'Shopify', 'Salesforce', 'HubSpot', 'QuickBooks'],
+    technologyStack: ['Python', 'TensorFlow', 'AWS', 'React', 'Node.js'],
+    realWorldExamples: [
+      'Netflix dynamic pricing optimization',
+      'Uber surge pricing algorithms',
+      'Amazon demand-based pricing'
+    ],
+    competitiveAdvantage: [
+      'Real-time market adaptation',
+      'Machine learning optimization',
+      'Multi-factor pricing models'
+    ],
+    targetIndustries: ['E-commerce', 'SaaS', 'Hospitality', 'Travel', 'Retail'],
+    useCases: [
+      'Dynamic pricing optimization',
+      'Demand forecasting',
+      'Customer behavior analysis',
+      'Revenue leakage detection',
+      'Competitive pricing intelligence'
+    ],
+    benefits: [
+      'Increase revenue by 25-40%',
+      'Optimize pricing strategies',
+      'Reduce revenue leakage',
+      'Improve customer retention',
+      'Enhance competitive positioning'
+    ],
+    features: [
+      'Real-time dynamic pricing algorithms',
+      'Customer lifetime value prediction',
+      'Demand forecasting with 95% accuracy',
+      'Competitive pricing intelligence',
+      'Revenue leakage detection',
+      'Automated discount optimization',
+      'Multi-channel revenue tracking',
+      'Predictive analytics dashboard'
+    ],
+    ctaLabel: 'Start Revenue Optimization',
+    href: 'https://ziontechgroup.com/contact',
+    featured: true,
     pricingTiers: [
       {
-        name: "Starter",
-        price: 2999,
-        currency: "$",
-        billingCycle: "monthly",
+        id: 'starter',
+        name: 'Starter',
+        price: '$299',
+        billing: 'month',
+        description: 'Perfect for small businesses starting their revenue optimization journey',
         features: [
-          "Basic autonomous decision-making",
-          "Process optimization for up to 5 workflows",
-          "Standard reporting and analytics",
-          "Email support",
-          "Basic integrations (5 systems)"
+          'Basic dynamic pricing',
+          'Demand forecasting',
+          'Revenue analytics dashboard',
+          'Email support',
+          'Standard integrations'
         ],
-        limitations: [
-          "Limited to 3 business units",
-          "Basic AI models only",
-          "Standard uptime (99.5%)"
+        bestFor: ['Small businesses', 'Startups', 'E-commerce stores'],
+        included: [
+          'Up to 10,000 transactions/month',
+          'Basic ML models',
+          'Standard reporting',
+          'Email support'
         ],
-        bestFor: ["Small businesses", "Startups", "Single-location operations"],
-        roi: "200-300%",
-        setupCost: 5000,
-        contractLength: "12 months"
+        notIncluded: [
+          'Advanced ML algorithms',
+          'Custom integrations',
+          'Priority support',
+          'Advanced analytics'
+        ],
+        ctaLabel: 'Start Free Trial',
+        href: 'https://ziontechgroup.com/contact',
+        roi: '200%',
+        implementationTime: '2-3 weeks',
+        supportLevel: 'Email support'
       },
       {
-        name: "Professional",
-        price: 4999,
-        currency: "$",
-        billingCycle: "monthly",
+        id: 'professional',
+        name: 'Professional',
+        price: '$1,299',
+        billing: 'month',
+        description: 'Advanced revenue optimization for growing businesses',
         features: [
-          "Advanced autonomous decision-making",
-          "Process optimization for up to 20 workflows",
-          "Advanced AI models and learning",
-          "Priority support",
-          "Advanced integrations (15 systems)",
-          "Custom dashboards",
-          "API access"
+          'Advanced ML algorithms',
+          'Real-time optimization',
+          'Custom integrations',
+          'Priority support',
+          'Advanced analytics'
         ],
-        limitations: [
-          "Limited to 10 business units",
-          "Advanced uptime (99.9%)"
+        bestFor: ['Growing businesses', 'Mid-market companies', 'SaaS companies'],
+        included: [
+          'Up to 100,000 transactions/month',
+          'Advanced ML models',
+          'Custom integrations',
+          'Priority support',
+          'Advanced analytics'
         ],
-        bestFor: ["Medium businesses", "Growing companies", "Multi-location operations"],
-        roi: "300-500%",
-        setupCost: 10000,
-        contractLength: "12 months"
+        notIncluded: [
+          'Enterprise features',
+          'Dedicated account manager',
+          'Custom development',
+          'White-label solutions'
+        ],
+        ctaLabel: 'Get Professional Plan',
+        href: 'https://ziontechgroup.com/contact',
+        popular: true,
+        savings: 'Save 20% with annual billing',
+        roi: '400%',
+        implementationTime: '4-6 weeks',
+        supportLevel: 'Priority support + revenue specialists'
       },
       {
-        name: "Enterprise",
-        price: 9999,
-        currency: "$",
-        billingCycle: "monthly",
+        id: 'enterprise',
+        name: 'Enterprise',
+        price: 'Custom',
+        billing: 'month',
+        description: 'Full-featured solution for large enterprises with custom requirements',
         features: [
-          "Full autonomous business management",
-          "Unlimited workflows and processes",
-          "Custom AI model development",
-          "24/7 dedicated support",
-          "Unlimited integrations",
-          "Custom development",
-          "White-label options",
-          "On-premise deployment available"
+          'Custom ML models',
+          'White-label solutions',
+          'Dedicated account manager',
+          'Custom development',
+          'SLA guarantees'
         ],
-        limitations: [
-          "None - fully customizable"
+        bestFor: ['Large enterprises', 'Fortune 500 companies', 'Multi-national corporations'],
+        included: [
+          'Unlimited transactions',
+          'Custom ML models',
+          'White-label solutions',
+          'Dedicated account manager',
+          'Custom development',
+          'SLA guarantees'
         ],
-        bestFor: ["Large enterprises", "Multi-national companies", "Complex operations"],
-        roi: "400-800%",
-        setupCost: 25000,
-        contractLength: "24 months"
+        notIncluded: [
+          'None - fully inclusive'
+        ],
+        ctaLabel: 'Contact Sales',
+        href: 'https://ziontechgroup.com/contact',
+        roi: '600%',
+        implementationTime: '6-8 weeks',
+        supportLevel: '24/7 + dedicated account manager'
       }
-    ],
-    marketComparison: {
-      competitors: ["UiPath", "Automation Anywhere", "Blue Prism"],
-      averageMarketPrice: "$8,000 - $25,000/month",
-      ourAdvantage: [
-        "True AI autonomy vs. rule-based automation",
-        "Lower total cost of ownership",
-        "Faster implementation",
-        "Better ROI and business impact"
-      ]
-    },
-    roiAnalysis: {
-      shortTerm: "40-60% operational cost reduction within 6 months",
-      longTerm: "300-800% ROI over 3 years",
-      paybackPeriod: "8-12 months",
-      totalValue: "$500K - $5M+ in operational savings over 3 years"
-    },
-    implementation: {
-      timeline: "8-12 weeks",
-      requirements: [
-        "Data access and API connections",
-        "Business process documentation",
-        "Stakeholder buy-in and training",
-        "Change management plan"
-      ],
-      support: [
-        "Dedicated implementation team",
-        "24/7 technical support",
-        "Regular optimization reviews",
-        "Continuous improvement updates"
-      ],
-      training: [
-        "Admin user training",
-        "End-user orientation",
-        "Advanced feature workshops",
-        "Ongoing best practices"
-      ]
-    }
+    ]
   },
-
   {
-    serviceId: "quantum-ai-analytics-platform",
-    serviceName: "Quantum-Enhanced AI Analytics Platform",
-    category: "Quantum Computing",
-    description: "Next-generation analytics platform that combines quantum computing algorithms with AI to solve complex optimization problems.",
+    id: 'intelligent-supply-chain-resilience-platform',
+    title: 'Intelligent Supply Chain Resilience Platform',
+    description: 'AI-powered supply chain platform that predicts disruptions with 90% accuracy and automatically reroutes logistics to maintain 99.5% delivery success rate.',
+    category: 'Micro SaaS',
+    marketSize: '$12.4B',
+    averageROI: '350%',
+    implementationTime: '8-12 weeks',
+    supportLevel: '24/7 + logistics experts',
+    compliance: ['ISO 28000', 'C-TPAT', 'GDPR', 'FDA regulations'],
+    integrations: ['SAP', 'Oracle', 'JDA', 'Manhattan Associates', 'IoT platforms'],
+    technologyStack: ['Python', 'Apache Kafka', 'AWS IoT', 'React Native', 'GraphQL'],
+    realWorldExamples: [
+      'Maersk blockchain tracking',
+      'Walmart supply chain optimization',
+      'Amazon logistics automation'
+    ],
+    competitiveAdvantage: [
+      'AI-powered disruption prediction',
+      'Real-time optimization',
+      'Multi-modal integration'
+    ],
+    targetIndustries: ['Manufacturing', 'Logistics', 'E-commerce', 'Healthcare', 'Automotive'],
+    useCases: [
+      'Disruption prediction',
+      'Automated rerouting',
+      'Supplier risk assessment',
+      'Inventory optimization',
+      'Carbon footprint tracking'
+    ],
+    benefits: [
+      '99.5% delivery success rate',
+      'Reduce supply chain costs by 30%',
+      'Improve sustainability metrics',
+      'Enhance supplier relationships',
+      'Increase customer satisfaction'
+    ],
+    features: [
+      'Real-time disruption prediction',
+      'Automated rerouting algorithms',
+      'Multi-modal transportation optimization',
+      'Supplier risk assessment',
+      'Inventory buffer optimization',
+      'Carbon footprint tracking',
+      'Blockchain traceability',
+      'IoT sensor integration'
+    ],
+    ctaLabel: 'Build Supply Chain Resilience',
+    href: 'https://ziontechgroup.com/contact',
+    featured: true,
     pricingTiers: [
       {
-        name: "Research",
-        price: 4999,
-        currency: "$",
-        billingCycle: "monthly",
+        id: 'basic',
+        name: 'Basic',
+        price: '$999',
+        billing: 'month',
+        description: 'Essential supply chain resilience for small to medium businesses',
         features: [
-          "Basic quantum algorithms",
-          "Standard AI models",
-          "Research-grade simulations",
-          "Academic pricing",
-          "Community support"
+          'Basic disruption prediction',
+          'Standard rerouting',
+          'Basic analytics',
+          'Email support'
         ],
-        limitations: [
-          "Limited quantum processing time",
-          "Basic support only",
-          "Standard uptime"
+        bestFor: ['Small manufacturers', 'Local logistics', 'Startup e-commerce'],
+        included: [
+          'Up to 1,000 shipments/month',
+          'Basic ML models',
+          'Standard integrations',
+          'Email support'
         ],
-        bestFor: ["Research institutions", "Universities", "Small research teams"],
-        roi: "200-400%",
-        setupCost: 8000,
-        contractLength: "12 months"
+        notIncluded: [
+          'Advanced ML algorithms',
+          'Custom integrations',
+          'Priority support',
+          'Advanced analytics'
+        ],
+        ctaLabel: 'Start Basic Plan',
+        href: 'https://ziontechgroup.com/contact',
+        roi: '250%',
+        implementationTime: '6-8 weeks',
+        supportLevel: 'Email support'
       },
       {
-        name: "Commercial",
-        price: 8999,
-        currency: "$",
-        billingCycle: "monthly",
+        id: 'advanced',
+        name: 'Advanced',
+        price: '$2,499',
+        billing: 'month',
+        description: 'Comprehensive supply chain resilience for growing businesses',
         features: [
-          "Advanced quantum algorithms",
-          "Custom AI model training",
-          "Production simulations",
-          "Priority support",
-          "API access",
-          "Custom integrations"
+          'Advanced ML algorithms',
+          'Real-time optimization',
+          'Custom integrations',
+          'Priority support',
+          'Advanced analytics'
         ],
-        limitations: [
-          "Quantum processing quotas",
-          "Business hours support"
+        bestFor: ['Growing manufacturers', 'Regional logistics', 'E-commerce platforms'],
+        included: [
+          'Up to 10,000 shipments/month',
+          'Advanced ML models',
+          'Custom integrations',
+          'Priority support',
+          'Advanced analytics'
         ],
-        bestFor: ["Pharmaceutical companies", "Financial services", "Technology companies"],
-        roi: "400-700%",
-        setupCost: 15000,
-        contractLength: "24 months"
+        notIncluded: [
+          'Enterprise features',
+          'Dedicated account manager',
+          'Custom development',
+          'White-label solutions'
+        ],
+        ctaLabel: 'Get Advanced Plan',
+        href: 'https://ziontechgroup.com/contact',
+        popular: true,
+        savings: 'Save 25% with annual billing',
+        roi: '350%',
+        implementationTime: '8-12 weeks',
+        supportLevel: 'Priority support + logistics experts'
       },
       {
-        name: "Enterprise",
-        price: 19999,
-        currency: "$",
-        billingCycle: "monthly",
+        id: 'enterprise',
+        name: 'Enterprise',
+        price: 'Custom',
+        billing: 'month',
+        description: 'Full-featured solution for large enterprises with global operations',
         features: [
-          "Full quantum computing access",
-          "Custom algorithm development",
-          "Unlimited processing time",
-          "24/7 dedicated support",
-          "Custom deployment options",
-          "White-label solutions"
+          'Custom ML models',
+          'White-label solutions',
+          'Dedicated account manager',
+          'Custom development',
+          'SLA guarantees'
         ],
-        limitations: [
-          "None - fully customizable"
+        bestFor: ['Large manufacturers', 'Global logistics', 'Fortune 500 companies'],
+        included: [
+          'Unlimited shipments',
+          'Custom ML models',
+          'White-label solutions',
+          'Dedicated account manager',
+          'Custom development',
+          'SLA guarantees'
         ],
-        bestFor: ["Large enterprises", "Government agencies", "Defense contractors"],
-        roi: "600-1000%",
-        setupCost: 50000,
-        contractLength: "36 months"
+        notIncluded: [
+          'None - fully inclusive'
+        ],
+        ctaLabel: 'Contact Sales',
+        href: 'https://ziontechgroup.com/contact',
+        roi: '500%',
+        implementationTime: '12-16 weeks',
+        supportLevel: '24/7 + dedicated account manager'
       }
-    ],
-    marketComparison: {
-      competitors: ["IBM Quantum", "Google Quantum AI", "D-Wave Systems"],
-      averageMarketPrice: "$15,000 - $50,000/month",
-      ourAdvantage: [
-        "Hybrid quantum-classical approach",
-        "Lower barrier to entry",
-        "Better integration with existing systems",
-        "More practical business applications"
-      ]
-    },
-    roiAnalysis: {
-      shortTerm: "10-20x speedup for optimization problems",
-      longTerm: "400-1000% ROI through breakthrough solutions",
-      paybackPeriod: "12-18 months",
-      totalValue: "$1M - $10M+ in research and development savings"
-    },
-    implementation: {
-      timeline: "12-16 weeks",
-      requirements: [
-        "Quantum computing infrastructure",
-        "Data scientists and researchers",
-        "Clear use case definition",
-        "Performance benchmarks"
-      ],
-      support: [
-        "Quantum computing experts",
-        "AI/ML specialists",
-        "Research collaboration",
-        "Performance optimization"
-      ],
-      training: [
-        "Quantum computing fundamentals",
-        "Algorithm optimization",
-        "Best practices",
-        "Advanced applications"
-      ]
-    }
+    ]
   },
-
   {
-    serviceId: "blockchain-supply-chain-transparency",
-    serviceName: "Blockchain Supply Chain Transparency Platform",
-    category: "Blockchain",
-    description: "End-to-end supply chain visibility platform using blockchain technology for real-time tracking and authentication.",
+    id: 'federated-learning-ai-platform',
+    title: 'Federated Learning AI Platform',
+    description: 'Privacy-preserving AI platform that enables collaborative machine learning across organizations without sharing raw data, maintaining 95% model accuracy.',
+    category: 'AI Solutions',
+    marketSize: '$2.8B',
+    averageROI: '600%',
+    implementationTime: '10-16 weeks',
+    supportLevel: '24/7 + AI specialists',
+    compliance: ['HIPAA', 'GDPR', 'SOC 2', 'ISO 27001'],
+    integrations: ['TensorFlow', 'PyTorch', 'AWS', 'Azure', 'GCP'],
+    technologyStack: ['Python', 'TensorFlow Federated', 'Homomorphic encryption', 'React', 'FastAPI'],
+    realWorldExamples: [
+      'Google federated learning for Gboard',
+      'Apple privacy-preserving ML',
+      'Healthcare consortiums'
+    ],
+    competitiveAdvantage: [
+      'Privacy-first approach',
+      'Cross-organization collaboration',
+      'Regulatory compliance'
+    ],
+    targetIndustries: ['Healthcare', 'Finance', 'Manufacturing', 'Research', 'Government'],
+    useCases: [
+      'Healthcare data analysis',
+      'Financial fraud detection',
+      'Manufacturing quality control',
+      'Research collaboration',
+      'Cross-border analytics'
+    ],
+    benefits: [
+      'Maintain data privacy',
+      'Collaborate across organizations',
+      'Improve model accuracy',
+      'Comply with regulations',
+      'Reduce data transfer costs'
+    ],
+    features: [
+      'Federated learning algorithms',
+      'Privacy-preserving model training',
+      'Multi-party computation',
+      'Homomorphic encryption',
+      'Model aggregation',
+      'Performance monitoring',
+      'Compliance reporting',
+      'API for integration'
+    ],
+    ctaLabel: 'Start Federated Learning',
+    href: 'https://ziontechgroup.com/contact',
+    featured: true,
     pricingTiers: [
       {
-        name: "Basic",
-        price: 1499,
-        currency: "$",
-        billingCycle: "monthly",
+        id: 'research',
+        name: 'Research',
+        price: '$1,999',
+        billing: 'month',
+        description: 'Essential federated learning for research institutions and small organizations',
         features: [
-          "Basic supply chain tracking",
-          "Up to 100 products",
-          "Standard blockchain features",
-          "Email support",
-          "Basic reporting"
+          'Basic federated learning',
+          'Privacy-preserving training',
+          'Standard compliance',
+          'Email support'
         ],
-        limitations: [
-          "Limited product volume",
-          "Basic integrations only",
-          "Standard uptime"
+        bestFor: ['Research institutions', 'Small healthcare', 'Startup AI companies'],
+        included: [
+          'Up to 5 organizations',
+          'Basic ML models',
+          'Standard compliance',
+          'Email support'
         ],
-        bestFor: ["Small manufacturers", "Local businesses", "Startups"],
-        roi: "150-250%",
-        setupCost: 3000,
-        contractLength: "12 months"
+        notIncluded: [
+          'Advanced ML algorithms',
+          'Custom compliance',
+          'Priority support',
+          'Advanced analytics'
+        ],
+        ctaLabel: 'Start Research Plan',
+        href: 'https://ziontechgroup.com/contact',
+        roi: '400%',
+        implementationTime: '8-10 weeks',
+        supportLevel: 'Email support'
       },
       {
-        name: "Professional",
-        price: 2999,
-        currency: "$",
-        billingCycle: "monthly",
+        id: 'professional',
+        name: 'Professional',
+        price: '$3,999',
+        billing: 'month',
+        description: 'Advanced federated learning for growing organizations',
         features: [
-          "Advanced supply chain tracking",
-          "Up to 1000 products",
-          "Smart contract automation",
-          "Priority support",
-          "Advanced analytics",
-          "API access"
+          'Advanced ML algorithms',
+          'Custom compliance',
+          'Priority support',
+          'Advanced analytics',
+          'Custom integrations'
         ],
-        limitations: [
-          "Product volume limits",
-          "Business hours support"
+        bestFor: ['Growing healthcare', 'Financial institutions', 'Manufacturing companies'],
+        included: [
+          'Up to 25 organizations',
+          'Advanced ML models',
+          'Custom compliance',
+          'Priority support',
+          'Advanced analytics'
         ],
-        bestFor: ["Medium manufacturers", "Retail chains", "Food companies"],
-        roi: "250-400%",
-        setupCost: 6000,
-        contractLength: "12 months"
+        notIncluded: [
+          'Enterprise features',
+          'Dedicated account manager',
+          'Custom development',
+          'White-label solutions'
+        ],
+        ctaLabel: 'Get Professional Plan',
+        href: 'https://ziontechgroup.com/contact',
+        popular: true,
+        savings: 'Save 30% with annual billing',
+        roi: '600%',
+        implementationTime: '10-16 weeks',
+        supportLevel: 'Priority support + AI specialists'
       },
       {
-        name: "Enterprise",
-        price: 5999,
-        currency: "$",
-        billingCycle: "monthly",
+        id: 'enterprise',
+        name: 'Enterprise',
+        price: 'Custom',
+        billing: 'month',
+        description: 'Full-featured solution for large enterprises with complex requirements',
         features: [
-          "Unlimited supply chain tracking",
-          "Custom smart contracts",
-          "Advanced IoT integration",
-          "24/7 dedicated support",
-          "Custom development",
-          "White-label options"
+          'Custom ML models',
+          'White-label solutions',
+          'Dedicated account manager',
+          'Custom development',
+          'SLA guarantees'
         ],
-        limitations: [
-          "None - fully customizable"
+        bestFor: ['Large healthcare systems', 'Fortune 500 companies', 'Government agencies'],
+        included: [
+          'Unlimited organizations',
+          'Custom ML models',
+          'White-label solutions',
+          'Dedicated account manager',
+          'Custom development',
+          'SLA guarantees'
         ],
-        bestFor: ["Large manufacturers", "Global companies", "Complex supply chains"],
-        roi: "400-600%",
-        setupCost: 15000,
-        contractLength: "24 months"
+        notIncluded: [
+          'None - fully inclusive'
+        ],
+        ctaLabel: 'Contact Sales',
+        href: 'https://ziontechgroup.com/contact',
+        roi: '800%',
+        implementationTime: '16-20 weeks',
+        supportLevel: '24/7 + dedicated account manager'
       }
-    ],
-    marketComparison: {
-      competitors: ["IBM Food Trust", "VeChain", "OriginTrail"],
-      averageMarketPrice: "$3,000 - $12,000/month",
-      ourAdvantage: [
-        "More comprehensive tracking",
-        "Better IoT integration",
-        "Lower implementation costs",
-        "Faster time to value"
-      ]
-    },
-    roiAnalysis: {
-      shortTerm: "20-30% reduction in supply chain costs",
-      longTerm: "250-600% ROI through transparency and efficiency",
-      paybackPeriod: "6-12 months",
-      totalValue: "$200K - $2M+ in supply chain optimization"
-    },
-    implementation: {
-      timeline: "6-10 weeks",
-      requirements: [
-        "IoT sensors and devices",
-        "Supply chain data access",
-        "Stakeholder coordination",
-        "Compliance requirements"
-      ],
-      support: [
-        "Blockchain experts",
-        "Supply chain specialists",
-        "IoT integration support",
-        "Compliance assistance"
-      ],
-      training: [
-        "Platform administration",
-        "Supply chain optimization",
-        "IoT device management",
-        "Compliance reporting"
-      ]
-    }
+    ]
   },
-
   {
-    serviceId: "ai-cybersecurity-threat-intelligence",
-    serviceName: "AI-Powered Cybersecurity Threat Intelligence Platform",
-    category: "Cybersecurity",
-    description: "Advanced cybersecurity platform that uses AI and machine learning to detect, analyze, and respond to cyber threats in real-time.",
+    id: 'quantum-internet-infrastructure',
+    title: 'Quantum Internet Infrastructure',
+    description: 'End-to-end quantum internet solution enabling ultra-secure communication and quantum network connectivity with quantum key distribution.',
+    category: 'Quantum Computing',
+    marketSize: '$3.2B',
+    averageROI: '1000%',
+    implementationTime: '24-36 weeks',
+    supportLevel: '24/7 + quantum experts',
+    compliance: ['Government standards', 'Financial regulations', 'Military protocols'],
+    integrations: ['Quantum hardware', 'Classical networks', 'Security systems'],
+    technologyStack: ['Quantum protocols', 'QKD systems', 'Quantum repeaters', 'Custom hardware'],
+    realWorldExamples: [
+      'Chinese quantum satellite network',
+      'EU quantum internet initiative',
+      'DARPA quantum network research'
+    ],
+    competitiveAdvantage: [
+      'Quantum advantage',
+      'Unbreakable security',
+      'Future-proof technology'
+    ],
+    targetIndustries: ['Government', 'Finance', 'Healthcare', 'Military', 'Research'],
+    useCases: [
+      'Government communications',
+      'Financial institutions',
+      'Healthcare data transfer',
+      'Military communications',
+      'Research networks'
+    ],
+    benefits: [
+      'Unbreakable encryption',
+      'Quantum network connectivity',
+      'Future-proof infrastructure',
+      'Enhanced security',
+      'Quantum advantage'
+    ],
+    features: [
+      'Quantum key distribution (QKD)',
+      'Quantum repeaters',
+      'Quantum routers',
+      'Quantum memory systems',
+      'Quantum network protocols',
+      'Security infrastructure',
+      'Performance monitoring',
+      'Integration services'
+    ],
+    ctaLabel: 'Build Quantum Internet',
+    href: 'https://ziontechgroup.com/contact',
+    featured: true,
     pricingTiers: [
       {
-        name: "Standard",
-        price: 2499,
-        currency: "$",
-        billingCycle: "monthly",
+        id: 'pilot',
+        name: 'Pilot Program',
+        price: '$15,000',
+        billing: 'project',
+        description: 'Small-scale quantum internet pilot for research and testing',
         features: [
-          "Basic threat detection",
-          "Standard AI models",
-          "Email support",
-          "Basic reporting",
-          "Up to 100 endpoints"
+          'Basic QKD setup',
+          'Limited network nodes',
+          'Research support',
+          'Basic documentation'
         ],
-        limitations: [
-          "Limited endpoint coverage",
-          "Basic AI capabilities",
-          "Standard uptime"
+        bestFor: ['Research institutions', 'Small government', 'Pilot programs'],
+        included: [
+          'Up to 5 network nodes',
+          'Basic QKD systems',
+          'Research support',
+          'Basic documentation'
         ],
-        bestFor: ["Small businesses", "Startups", "Basic security needs"],
-        roi: "200-350%",
-        setupCost: 5000,
-        contractLength: "12 months"
+        notIncluded: [
+          'Advanced quantum systems',
+          'Production deployment',
+          'Priority support',
+          'Custom development'
+        ],
+        ctaLabel: 'Start Pilot Program',
+        href: 'https://ziontechgroup.com/contact',
+        roi: '500%',
+        implementationTime: '16-20 weeks',
+        supportLevel: 'Research support'
       },
       {
-        name: "Advanced",
-        price: 3999,
-        currency: "$",
-        billingCycle: "monthly",
+        id: 'production',
+        name: 'Production',
+        price: '$25,000',
+        billing: 'project',
+        description: 'Production-ready quantum internet infrastructure',
         features: [
-          "Advanced threat detection",
-          "Advanced AI models",
-          "Priority support",
-          "Advanced analytics",
-          "Up to 1000 endpoints",
-          "Custom integrations"
+          'Full QKD deployment',
+          'Production network',
+          'Priority support',
+          'Production documentation',
+          'Custom integration'
         ],
-        limitations: [
-          "Endpoint coverage limits",
-          "Business hours support"
+        bestFor: ['Government agencies', 'Financial institutions', 'Healthcare systems'],
+        included: [
+          'Up to 25 network nodes',
+          'Production QKD systems',
+          'Priority support',
+          'Production documentation',
+          'Custom integration'
         ],
-        bestFor: ["Medium businesses", "Financial services", "Healthcare"],
-        roi: "300-500%",
-        setupCost: 8000,
-        contractLength: "12 months"
+        notIncluded: [
+          'Enterprise features',
+          'Dedicated account manager',
+          'Custom development',
+          'White-label solutions'
+        ],
+        ctaLabel: 'Deploy Production',
+        href: 'https://ziontechgroup.com/contact',
+        popular: true,
+        savings: 'Save 20% with annual contracts',
+        roi: '1000%',
+        implementationTime: '24-36 weeks',
+        supportLevel: 'Priority support + quantum experts'
       },
       {
-        name: "Enterprise",
-        price: 7999,
-        currency: "$",
-        billingCycle: "monthly",
+        id: 'enterprise',
+        name: 'Enterprise',
+        price: 'Custom',
+        billing: 'project',
+        description: 'Full-featured solution for large enterprises with complex requirements',
         features: [
-          "Full threat intelligence",
-          "Custom AI model development",
-          "24/7 dedicated support",
-          "Unlimited endpoints",
-          "Custom development",
-          "On-premise options"
+          'Custom quantum systems',
+          'White-label solutions',
+          'Dedicated account manager',
+          'Custom development',
+          'SLA guarantees'
         ],
-        limitations: [
-          "None - fully customizable"
+        bestFor: ['Large government', 'Fortune 500 companies', 'Military agencies'],
+        included: [
+          'Unlimited network nodes',
+          'Custom quantum systems',
+          'White-label solutions',
+          'Dedicated account manager',
+          'Custom development',
+          'SLA guarantees'
         ],
-        bestFor: ["Large enterprises", "Government agencies", "Critical infrastructure"],
-        roi: "400-800%",
-        setupCost: 20000,
-        contractLength: "24 months"
+        notIncluded: [
+          'None - fully inclusive'
+        ],
+        ctaLabel: 'Contact Sales',
+        href: 'https://ziontechgroup.com/contact',
+        roi: '1500%',
+        implementationTime: '36-48 weeks',
+        supportLevel: '24/7 + dedicated account manager'
       }
-    ],
-    marketComparison: {
-      competitors: ["CrowdStrike", "SentinelOne", "Darktrace"],
-      averageMarketPrice: "$5,000 - $20,000/month",
-      ourAdvantage: [
-        "More advanced AI capabilities",
-        "Lower false positive rates",
-        "Better integration options",
-        "More cost-effective"
-      ]
-    },
-    roiAnalysis: {
-      shortTerm: "80% reduction in security incidents",
-      longTerm: "300-800% ROI through threat prevention",
-      paybackPeriod: "8-12 months",
-      totalValue: "$500K - $5M+ in security incident prevention"
-    },
-    implementation: {
-      timeline: "8-12 weeks",
-      requirements: [
-        "Network access and monitoring",
-        "Security team coordination",
-        "Compliance requirements",
-        "Change management plan"
-      ],
-      support: [
-        "Cybersecurity experts",
-        "AI/ML specialists",
-        "24/7 monitoring",
-        "Incident response"
-      ],
-      training: [
-        "Security operations",
-        "Threat hunting",
-        "Incident response",
-        "Compliance reporting"
-      ]
-    }
-  },
-
-  {
-    serviceId: "iot-edge-computing-analytics",
-    serviceName: "IoT Edge Computing Analytics Platform",
-    category: "IoT",
-    description: "Distributed analytics platform that processes IoT data at the edge, providing real-time insights and local decision-making.",
-    pricingTiers: [
-      {
-        name: "Starter",
-        price: 1499,
-        currency: "$",
-        billingCycle: "monthly",
-        features: [
-          "Basic edge processing",
-          "Up to 100 devices",
-          "Standard analytics",
-          "Email support",
-          "Basic dashboards"
-        ],
-        limitations: [
-          "Limited device support",
-          "Basic processing capabilities",
-          "Standard uptime"
-        ],
-        bestFor: ["Small IoT deployments", "Pilot projects", "Basic monitoring"],
-        roi: "150-250%",
-        setupCost: 3000,
-        contractLength: "12 months"
-      },
-      {
-        name: "Professional",
-        price: 2499,
-        currency: "$",
-        billingCycle: "monthly",
-        features: [
-          "Advanced edge processing",
-          "Up to 1000 devices",
-          "Advanced analytics",
-          "Priority support",
-          "Custom dashboards",
-          "API access"
-        ],
-        limitations: [
-          "Device volume limits",
-          "Business hours support"
-        ],
-        bestFor: ["Medium IoT deployments", "Manufacturing", "Smart buildings"],
-        roi: "250-400%",
-        setupCost: 6000,
-        contractLength: "12 months"
-      },
-      {
-        name: "Enterprise",
-        price: 4999,
-        currency: "$",
-        billingCycle: "monthly",
-        features: [
-          "Full edge computing platform",
-          "Unlimited devices",
-          "Custom analytics",
-          "24/7 dedicated support",
-          "Custom development",
-          "On-premise options"
-        ],
-        limitations: [
-          "None - fully customizable"
-        ],
-        bestFor: ["Large IoT deployments", "Smart cities", "Industrial IoT"],
-        roi: "400-600%",
-        setupCost: 15000,
-        contractLength: "24 months"
-      }
-    ],
-    marketComparison: {
-      competitors: ["AWS Greengrass", "Azure IoT Edge", "Google Cloud IoT Edge"],
-      averageMarketPrice: "$2,000 - $8,000/month",
-      ourAdvantage: [
-        "More advanced edge processing",
-        "Better analytics capabilities",
-        "Lower latency",
-        "More cost-effective"
-      ]
-    },
-    roiAnalysis: {
-      shortTerm: "90% reduction in latency",
-      longTerm: "250-600% ROI through operational efficiency",
-      paybackPeriod: "6-10 months",
-      totalValue: "$300K - $3M+ in operational optimization"
-    },
-    implementation: {
-      timeline: "6-10 weeks",
-      requirements: [
-        "IoT devices and sensors",
-        "Network infrastructure",
-        "Data access permissions",
-        "Performance requirements"
-      ],
-      support: [
-        "IoT specialists",
-        "Edge computing experts",
-        "24/7 monitoring",
-        "Performance optimization"
-      ],
-      training: [
-        "Platform administration",
-        "Device management",
-        "Analytics interpretation",
-        "Performance monitoring"
-      ]
-    }
+    ]
   }
 ];
 
-export const PRICING_SUMMARY_2026 = {
-  overview: "Our 2026 innovative services pricing is designed to provide exceptional value while maintaining the highest quality and innovation standards.",
-  keyBenefits: [
-    "Competitive pricing with superior technology",
-    "Flexible tiered pricing for all business sizes",
-    "Proven ROI with rapid payback periods",
-    "Comprehensive support and implementation",
-    "Future-proof technology investments"
-  ],
-  pricingStrategy: {
-    approach: "Value-based pricing with ROI focus",
-    target: "15-30% below market average",
-    value: "2-3x better ROI than competitors",
-    flexibility: "Custom pricing for enterprise clients"
+export const pricingCategories = [
+  {
+    name: 'Micro SaaS Solutions',
+    description: 'Scalable software solutions for specific business needs',
+    services: comprehensivePricingGuide2026.filter(s => s.category === 'Micro SaaS')
   },
-  contactInfo: {
-    phone: "+1 302 464 0950",
-    email: "kleber@ziontechgroup.com",
-    website: "https://ziontechgroup.com",
-    address: "364 E Main St STE 1008 Middletown DE 19709"
+  {
+    name: 'AI & Machine Learning',
+    description: 'Advanced artificial intelligence and machine learning solutions',
+    services: comprehensivePricingGuide2026.filter(s => s.category === 'AI Solutions')
+  },
+  {
+    name: 'Quantum Computing',
+    description: 'Next-generation quantum computing and communication solutions',
+    services: comprehensivePricingGuide2026.filter(s => s.category === 'Quantum Computing')
+  },
+  {
+    name: 'Emerging Technologies',
+    description: 'Cutting-edge technologies shaping the future',
+    services: comprehensivePricingGuide2026.filter(s => ['BioTech & Health', 'Metaverse & AR/VR', 'FinTech & DeFi'].includes(s.category))
   }
-};
+];
+
+export default comprehensivePricingGuide2026;
