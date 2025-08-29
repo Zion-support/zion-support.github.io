@@ -1,6 +1,16 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { motion } from 'framer-motion';
 
+interface Particle {
+  x: number;
+  y: number;
+  vx: number;
+  vy: number;
+  size: number;
+  opacity: number;
+  color: string;
+}
+
 interface FuturisticAnimatedBackgroundProps {
   variant?: 'minimal' | 'standard' | 'intense';
   intensity?: 'low' | 'medium' | 'high';
@@ -45,17 +55,8 @@ export const FuturisticAnimatedBackground: React.FC<FuturisticAnimatedBackground
       });
     }
 
-    // Animation variables
-    let animationId: number;
-    let time = 0;
-
     // Create particles
     const createParticle = () => {
-      const x = Math.random() * canvas.width;
-      const y = Math.random() * canvas.height;
-      const angle = Math.random() * Math.PI * 2;
-      const speed = Math.random() * 0.5 + 0.1;
-      
       particles.push({
         x: Math.random() * canvas.width,
         y: Math.random() * canvas.height,
@@ -65,42 +66,15 @@ export const FuturisticAnimatedBackground: React.FC<FuturisticAnimatedBackground
         opacity: Math.random() * 0.8 + 0.2,
         color: `hsl(${200 + Math.random() * 60}, 70%, 60%)`
       });
-    }
-
-    let time = 0;
+    };
 
     const animate = () => {
-      time += 0.01;
-      
       // Clear canvas
       ctx.clearRect(0, 0, canvas.width, canvas.height);
 
       // Update and draw particles
       particles.forEach((particle, index) => {
         // Update position
-        particle.x += particle.vx;
-        particle.y += particle.vy;
-
-        // Bounce off edges
-        if (particle.x <= 0 || particle.x >= canvas.width) particle.vx *= -1;
-        if (particle.y <= 0 || particle.y >= canvas.height) particle.vy *= -1;
-
-        // Keep particles in bounds
-        particle.x = Math.max(0, Math.min(canvas.width, particle.x));
-        particle.y = Math.max(0, Math.min(canvas.height, particle.y));
-
-        // Draw particle
-        ctx.save();
-        ctx.globalAlpha = particle.opacity;
-        ctx.fillStyle = variant === 'minimal' ? 'rgba(56, 189, 248, 0.3)' : 'rgba(34, 221, 210, 0.6)';
-        ctx.beginPath();
-        ctx.arc(particle.x, particle.y, particle.size, 0, Math.PI * 2);
-        ctx.fill();
-        ctx.restore();
-
-      // Update and draw particles
-      particles.forEach((particle, index) => {
-        // Update particle position
         particle.x += particle.vx;
         particle.y += particle.vy;
 
