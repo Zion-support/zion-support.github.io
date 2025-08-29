@@ -147,6 +147,12 @@ export const EnhancedSearch: React.FC = () => {
 
     setResults(searchResults);
   }, [debouncedQuery, filters]);
+}
+
+interface SearchResult {
+  id: string;
+  title: string;
+  description: string;
   type: 'service' | 'page' | 'article' | 'ai-suggestion';
   url: string;
   icon?: React.ComponentType<any>;
