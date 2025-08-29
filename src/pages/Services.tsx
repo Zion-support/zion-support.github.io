@@ -32,10 +32,54 @@ import {
 export default function Services() {
   const serviceCategories = [
     {
+      name: 'Revolutionary AI Services',
+      icon: Brain,
+      description: 'Next-generation AI solutions that transform enterprise operations',
+      color: 'from-purple-600 to-pink-600',
+      services: [
+        {
+          name: 'AI Enterprise Orchestrator',
+          description: 'Multi-agent AI coordination and workflow automation for enterprise transformation',
+          features: ['Multi-Agent Coordination', 'Intelligent Process Orchestration', 'Predictive Analytics Engine', 'Enterprise Security Suite'],
+          href: '/services/ai-enterprise-orchestrator',
+          price: 'From $15,000',
+          rating: 5.0,
+          reviewCount: 89
+        },
+        {
+          name: 'Quantum AI Platform',
+          description: 'Next-generation quantum computing with AI capabilities for complex problem solving',
+          features: ['Quantum Machine Learning', 'Quantum Cryptography', 'Quantum Optimization', 'Quantum Simulation'],
+          href: '/services/quantum-ai-platform',
+          price: 'From $25,000',
+          rating: 5.0,
+          reviewCount: 67
+        },
+        {
+          name: 'AI Cybersecurity Suite',
+          description: 'AI-powered threat detection and automated incident response with zero-trust architecture',
+          features: ['AI Threat Detection', 'Zero-Trust Architecture', 'Automated Incident Response', 'Compliance Automation'],
+          href: '/services/ai-cybersecurity-suite',
+          price: 'From $8,500',
+          rating: 4.9,
+          reviewCount: 156
+        },
+        {
+          name: 'AI Healthcare Analytics',
+          description: 'Predictive diagnostics and patient care optimization with AI-powered insights',
+          features: ['Predictive Diagnostics', 'Patient Care Optimization', 'Clinical Research Acceleration', 'Healthcare Operations'],
+          href: '/services/ai-healthcare-analytics',
+          price: 'From $12,000',
+          rating: 4.9,
+          reviewCount: 134
+        }
+      ]
+    },
+    {
       name: 'AI & Analytics',
       icon: Brain,
       description: 'Cutting-edge artificial intelligence and data analytics solutions',
-      color: 'from-purple-600 to-pink-600',
+      color: 'from-blue-600 to-cyan-600',
       services: [
         {
           name: 'AI Business Intelligence',

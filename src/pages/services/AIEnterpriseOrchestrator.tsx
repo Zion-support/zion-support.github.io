@@ -23,110 +23,104 @@ import {
   Eye,
   Target,
   Rocket,
-  Sparkles,
-  Atom,
-  Infinity,
-  CpuIcon,
-  CircuitBoard
+  Sparkles
 } from 'lucide-react';
 
-export default function QuantumAIPlatform() {
+export default function AIEnterpriseOrchestrator() {
   const features = [
     {
-      title: "Quantum Machine Learning",
-      description: "Leverage quantum computing power for unprecedented AI model training and optimization",
+      title: "Intelligent Process Orchestration",
+      description: "AI-powered workflow automation with dynamic adaptation and real-time optimization",
+      icon: Zap,
+      benefits: [
+        "Reduce manual tasks by 85%",
+        "Improve process efficiency by 60%",
+        "Real-time performance monitoring",
+        "Predictive failure prevention"
+      ]
+    },
+    {
+      title: "Multi-Agent Coordination",
+      description: "Advanced AI agents working together to solve complex business problems",
       icon: Brain,
       benefits: [
-        "1000x faster training times",
-        "Quantum advantage in optimization",
-        "Hybrid classical-quantum algorithms",
-        "Scalable quantum neural networks"
+        "Coordinated decision making",
+        "Intelligent resource allocation",
+        "Cross-functional collaboration",
+        "Scalable problem solving"
       ]
     },
     {
-      title: "Quantum Cryptography",
-      description: "Unbreakable encryption using quantum key distribution and quantum-resistant algorithms",
-      icon: Shield,
-      benefits: [
-        "Unhackable communication",
-        "Quantum key distribution",
-        "Post-quantum cryptography",
-        "Zero-knowledge proofs"
-      ]
-    },
-    {
-      title: "Quantum Optimization",
-      description: "Solve complex optimization problems that are impossible for classical computers",
+      title: "Predictive Analytics Engine",
+      description: "Machine learning models that forecast trends and optimize business outcomes",
       icon: TrendingUp,
       benefits: [
-        "NP-hard problem solving",
-        "Portfolio optimization",
-        "Supply chain optimization",
-        "Route optimization"
+        "95% prediction accuracy",
+        "Real-time trend analysis",
+        "Automated optimization",
+        "Risk assessment and mitigation"
       ]
     },
     {
-      title: "Quantum Simulation",
-      description: "Accurate simulation of quantum systems for drug discovery and materials science",
-      icon: Atom,
+      title: "Enterprise Security Suite",
+      description: "AI-powered threat detection and response with zero-trust architecture",
+      icon: Shield,
       benefits: [
-        "Molecular modeling",
-        "Chemical reaction simulation",
-        "Material property prediction",
-        "Drug discovery acceleration"
+        "99.9% threat detection rate",
+        "Zero-day attack prevention",
+        "Automated incident response",
+        "Compliance automation"
       ]
     }
   ];
 
   const pricingPlans = [
     {
-      name: "Quantum Starter",
-      price: "$25,000",
+      name: "Starter",
+      price: "$15,000",
       period: "/month",
-      description: "Perfect for research institutions and startups",
+      description: "Perfect for small to medium enterprises",
       features: [
-        "Basic quantum computing access",
-        "Up to 100 qubits",
-        "Standard quantum algorithms",
+        "Basic AI orchestration",
+        "Up to 10 workflows",
+        "Standard security features",
         "Email support",
-        "Basic quantum simulator",
-        "API access"
+        "Basic analytics dashboard"
       ],
       cta: "Get Started",
       popular: false
     },
     {
-      name: "Quantum Professional",
-      price: "$75,000",
+      name: "Professional",
+      price: "$35,000",
       period: "/month",
-      description: "Ideal for growing companies and research labs",
+      description: "Ideal for growing businesses",
       features: [
-        "Advanced quantum computing",
-        "Up to 1000 qubits",
-        "Custom quantum algorithms",
+        "Advanced AI orchestration",
+        "Up to 50 workflows",
+        "Enhanced security suite",
         "Priority support",
-        "Advanced simulators",
+        "Advanced analytics",
         "Custom integrations",
-        "Performance optimization",
-        "Quantum consulting"
+        "Performance optimization"
       ],
       cta: "Start Free Trial",
       popular: true
     },
     {
-      name: "Quantum Enterprise",
-      price: "$200,000",
+      name: "Enterprise",
+      price: "$75,000",
       period: "/month",
-      description: "For large-scale quantum operations",
+      description: "For large-scale operations",
       features: [
-        "Full quantum platform access",
-        "Unlimited qubits",
-        "Custom quantum hardware",
+        "Full AI orchestration suite",
+        "Unlimited workflows",
+        "Enterprise security",
         "24/7 dedicated support",
+        "Custom AI models",
         "White-label solutions",
         "On-premise deployment",
-        "SLA guarantees",
-        "Quantum strategy consulting"
+        "SLA guarantees"
       ],
       cta: "Contact Sales",
       popular: false
@@ -137,73 +131,46 @@ export default function QuantumAIPlatform() {
     {
       industry: "Financial Services",
       applications: [
-        "Portfolio optimization",
-        "Risk assessment",
-        "Fraud detection",
-        "Algorithmic trading"
+        "Fraud detection and prevention",
+        "Risk assessment automation",
+        "Regulatory compliance",
+        "Trading optimization"
       ]
     },
     {
-      industry: "Healthcare & Pharma",
+      industry: "Healthcare",
       applications: [
-        "Drug discovery",
-        "Protein folding",
-        "Genomic analysis",
-        "Clinical trial optimization"
+        "Patient care coordination",
+        "Diagnostic assistance",
+        "Resource optimization",
+        "Compliance monitoring"
       ]
     },
     {
       industry: "Manufacturing",
       applications: [
         "Supply chain optimization",
-        "Production scheduling",
+        "Predictive maintenance",
         "Quality control",
-        "Logistics optimization"
+        "Production planning"
       ]
     },
     {
-      industry: "Energy & Utilities",
+      industry: "Retail",
       applications: [
-        "Grid optimization",
-        "Energy trading",
-        "Resource allocation",
-        "Climate modeling"
+        "Customer behavior analysis",
+        "Inventory optimization",
+        "Personalized marketing",
+        "Demand forecasting"
       ]
-    }
-  ];
-
-  const quantumAdvantages = [
-    {
-      title: "Exponential Speedup",
-      description: "Quantum algorithms provide exponential speedup for specific problems",
-      icon: Zap,
-      metric: "1000x+"
-    },
-    {
-      title: "Quantum Supremacy",
-      description: "Achieve computational tasks impossible for classical computers",
-      icon: Star,
-      metric: "Unlimited"
-    },
-    {
-      title: "Parallel Processing",
-      description: "Process multiple possibilities simultaneously using superposition",
-      icon: CpuIcon,
-      metric: "∞"
-    },
-    {
-      title: "Quantum Entanglement",
-      description: "Leverage quantum correlations for secure communication",
-      icon: Network,
-      metric: "100%"
     }
   ];
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO 
-        title="Quantum AI Platform - Zion Tech Group"
-        description="Revolutionize your business with quantum computing and AI. Access unprecedented computational power for optimization, cryptography, and machine learning."
+        title="AI Enterprise Orchestrator - Zion Tech Group"
+        description="Transform your enterprise with AI-powered orchestration, multi-agent coordination, and predictive analytics. Streamline operations and drive innovation."
       />
       
       {/* Hero Section */}
@@ -215,32 +182,32 @@ export default function QuantumAIPlatform() {
             transition={{ duration: 0.8 }}
             className="text-center"
           >
-            <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-blue-600 to-cyan-600 text-white text-sm font-medium mb-6">
-              <Atom className="w-4 h-4 mr-2" />
-              Next-Generation Quantum Technology
+            <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-purple-600 to-pink-600 text-white text-sm font-medium mb-6">
+              <Sparkles className="w-4 h-4 mr-2" />
+              Revolutionary AI Technology
             </div>
             
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
-              Quantum AI Platform
+              AI Enterprise Orchestrator
             </h1>
             
             <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-              Harness the power of quantum computing combined with artificial intelligence to solve 
-              the world's most complex problems. Experience computational capabilities beyond imagination.
+              Unlock the full potential of your enterprise with our AI-powered orchestration platform. 
+              Coordinate multiple AI agents, automate complex workflows, and drive unprecedented efficiency.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="px-8 py-4 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-cyan-700 transition-all duration-300"
+                className="px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-semibold rounded-lg hover:from-purple-700 hover:to-pink-700 transition-all duration-300"
               >
                 Start Free Trial
               </motion.button>
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="px-8 py-4 border-2 border-blue-600 text-blue-400 font-semibold rounded-lg hover:bg-blue-600 hover:text-white transition-all duration-300"
+                className="px-8 py-4 border-2 border-purple-600 text-purple-400 font-semibold rounded-lg hover:bg-purple-600 hover:text-white transition-all duration-300"
               >
                 Schedule Demo
               </motion.button>
@@ -249,11 +216,11 @@ export default function QuantumAIPlatform() {
         </div>
         
         {/* Floating Elements */}
-        <div className="absolute top-20 left-10 w-20 h-20 bg-blue-600/20 rounded-full blur-xl"></div>
-        <div className="absolute bottom-20 right-10 w-32 h-32 bg-cyan-600/20 rounded-full blur-xl"></div>
+        <div className="absolute top-20 left-10 w-20 h-20 bg-purple-600/20 rounded-full blur-xl"></div>
+        <div className="absolute bottom-20 right-10 w-32 h-32 bg-pink-600/20 rounded-full blur-xl"></div>
       </section>
 
-      {/* Quantum Advantages Section */}
+      {/* Features Section */}
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
@@ -263,51 +230,11 @@ export default function QuantumAIPlatform() {
             className="text-center mb-16"
           >
             <h2 className="text-4xl font-bold text-white mb-4">
-              Quantum Computing Advantages
+              Revolutionary AI Capabilities
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Experience computational power that transcends classical computing limitations 
-              and opens new frontiers in problem-solving.
-            </p>
-          </motion.div>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {quantumAdvantages.map((advantage, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: index * 0.1 }}
-                className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700 hover:border-blue-500 transition-all duration-300 text-center"
-              >
-                <div className="p-3 bg-gradient-to-r from-blue-600 to-cyan-600 rounded-lg mx-auto mb-4 w-fit">
-                  <advantage.icon className="w-8 h-8 text-white" />
-                </div>
-                
-                <div className="text-4xl font-bold text-blue-400 mb-2">{advantage.metric}</div>
-                <h3 className="text-xl font-semibold text-white mb-2">{advantage.title}</h3>
-                <p className="text-gray-300 text-sm">{advantage.description}</p>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Features Section */}
-      <section className="py-20 bg-slate-800/30">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-4xl font-bold text-white mb-4">
-              Revolutionary Quantum Capabilities
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Our Quantum AI Platform combines cutting-edge quantum computing with advanced 
-              artificial intelligence to deliver unprecedented computational power.
+              Our AI Enterprise Orchestrator combines cutting-edge technologies to deliver 
+              unprecedented business transformation and operational excellence.
             </p>
           </motion.div>
 
@@ -318,10 +245,10 @@ export default function QuantumAIPlatform() {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
-                className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-8 border border-slate-700 hover:border-blue-500 transition-all duration-300"
+                className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-8 border border-slate-700 hover:border-purple-500 transition-all duration-300"
               >
                 <div className="flex items-center mb-4">
-                  <div className="p-3 bg-gradient-to-r from-blue-600 to-cyan-600 rounded-lg mr-4">
+                  <div className="p-3 bg-gradient-to-r from-purple-600 to-pink-600 rounded-lg mr-4">
                     <feature.icon className="w-6 h-6 text-white" />
                   </div>
                   <h3 className="text-2xl font-semibold text-white">{feature.title}</h3>
@@ -344,7 +271,7 @@ export default function QuantumAIPlatform() {
       </section>
 
       {/* Pricing Section */}
-      <section className="py-20">
+      <section className="py-20 bg-slate-800/30">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -353,11 +280,11 @@ export default function QuantumAIPlatform() {
             className="text-center mb-16"
           >
             <h2 className="text-4xl font-bold text-white mb-4">
-              Quantum Computing Pricing
+              Transparent Pricing
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Access the future of computing with our flexible quantum platform pricing. 
-              Scale from research to enterprise deployment.
+              Choose the plan that best fits your enterprise needs. All plans include 
+              our core AI orchestration capabilities with scalable features.
             </p>
           </motion.div>
 
@@ -370,13 +297,13 @@ export default function QuantumAIPlatform() {
                 transition={{ duration: 0.8, delay: index * 0.1 }}
                 className={`relative bg-slate-800/50 backdrop-blur-sm rounded-xl p-8 border ${
                   plan.popular 
-                    ? 'border-blue-500 ring-2 ring-blue-500/20' 
+                    ? 'border-purple-500 ring-2 ring-purple-500/20' 
                     : 'border-slate-700'
                 }`}
               >
                 {plan.popular && (
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                    <span className="bg-gradient-to-r from-blue-600 to-cyan-600 text-white px-4 py-2 rounded-full text-sm font-semibold">
+                    <span className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-4 py-2 rounded-full text-sm font-semibold">
                       Most Popular
                     </span>
                   </div>
@@ -405,7 +332,7 @@ export default function QuantumAIPlatform() {
                   whileTap={{ scale: 0.98 }}
                   className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
                     plan.popular
-                      ? 'bg-gradient-to-r from-blue-600 to-cyan-600 text-white hover:from-blue-700 hover:to-cyan-700'
+                      ? 'bg-gradient-to-r from-purple-600 to-pink-600 text-white hover:from-purple-700 hover:to-pink-700'
                       : 'bg-slate-700 text-white hover:bg-slate-600'
                   }`}
                 >
@@ -418,7 +345,7 @@ export default function QuantumAIPlatform() {
       </section>
 
       {/* Use Cases Section */}
-      <section className="py-20 bg-slate-800/30">
+      <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -430,8 +357,8 @@ export default function QuantumAIPlatform() {
               Industry Applications
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Our Quantum AI Platform is revolutionizing industries by solving previously 
-              intractable problems with unprecedented speed and accuracy.
+              Our AI Enterprise Orchestrator is transforming industries across the globe, 
+              delivering measurable results and competitive advantages.
             </p>
           </motion.div>
 
@@ -442,13 +369,13 @@ export default function QuantumAIPlatform() {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
-                className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700 hover:border-blue-500 transition-all duration-300"
+                className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700 hover:border-purple-500 transition-all duration-300"
               >
                 <h3 className="text-xl font-semibold text-white mb-4">{useCase.industry}</h3>
                 <ul className="space-y-2">
                   {useCase.applications.map((application, appIndex) => (
                     <li key={appIndex} className="text-gray-300 text-sm flex items-center">
-                      <ArrowRight className="w-4 h-4 text-blue-400 mr-2 flex-shrink-0" />
+                      <ArrowRight className="w-4 h-4 text-purple-400 mr-2 flex-shrink-0" />
                       {application}
                     </li>
                   ))}
@@ -460,7 +387,7 @@ export default function QuantumAIPlatform() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-blue-900/50 to-cyan-900/50">
+      <section className="py-20 bg-gradient-to-r from-purple-900/50 to-pink-900/50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -468,27 +395,27 @@ export default function QuantumAIPlatform() {
             transition={{ duration: 0.8 }}
           >
             <h2 className="text-4xl font-bold text-white mb-6">
-              Ready for the Quantum Revolution?
+              Ready to Transform Your Enterprise?
             </h2>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Join the quantum computing revolution and unlock computational capabilities 
-              that will transform your industry and accelerate innovation.
+              Join the AI revolution and unlock unprecedented efficiency, innovation, and growth 
+              with our Enterprise Orchestrator platform.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="px-8 py-4 bg-white text-blue-600 font-semibold rounded-lg hover:bg-gray-100 transition-all duration-300"
+                className="px-8 py-4 bg-white text-purple-600 font-semibold rounded-lg hover:bg-gray-100 transition-all duration-300"
               >
                 Start Free Trial
               </motion.button>
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="px-8 py-4 border-2 border-white text-white font-semibold rounded-lg hover:bg-white hover:text-blue-600 transition-all duration-300"
+                className="px-8 py-4 border-2 border-white text-white font-semibold rounded-lg hover:bg-white hover:text-purple-600 transition-all duration-300"
               >
-                Contact Quantum Experts
+                Contact Sales Team
               </motion.button>
             </div>
           </motion.div>

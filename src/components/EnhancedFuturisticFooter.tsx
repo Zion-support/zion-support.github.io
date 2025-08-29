@@ -70,12 +70,12 @@ export const EnhancedFuturisticFooter: React.FC = () => {
       icon: Brain,
       color: 'from-purple-600 to-pink-600',
       links: [
+        { name: 'AI Enterprise Orchestrator', href: '/services/ai-enterprise-orchestrator' },
         { name: 'AI Business Intelligence', href: '/services/ai-business-intelligence' },
         { name: 'AI Sales Copilot', href: '/services/ai-sales-copilot' },
         { name: 'AI Compliance Assistant', href: '/services/ai-compliance-assistant' },
         { name: 'AI Auto Email Responder', href: '/services/ai-auto-email-responder' },
-        { name: 'LLM Content Studio', href: '/services/llm-content-studio' },
-        { name: 'AI Compliance Copilot', href: '/services/ai-compliance-copilot' }
+        { name: 'LLM Content Studio', href: '/services/llm-content-studio' }
       ]
     },
     {
@@ -109,12 +109,12 @@ export const EnhancedFuturisticFooter: React.FC = () => {
       icon: Crown,
       color: 'from-indigo-600 to-purple-600',
       links: [
-        { name: 'Quantum Computing', href: '/services/quantum-computing' },
+        { name: 'Quantum AI Platform', href: '/services/quantum-ai-platform' },
+        { name: 'AI Healthcare Analytics', href: '/services/ai-healthcare-analytics' },
+        { name: 'AI Cybersecurity Suite', href: '/services/ai-cybersecurity-suite' },
+        { name: 'Edge Computing Platform', href: '/services/edge-computing-platform' },
         { name: 'Blockchain Solutions', href: '/services/blockchain-enterprise-solutions' },
-        { name: 'Space Technology', href: '/services/space-tech' },
-        { name: 'Sustainability', href: '/services/sustainability' },
-        { name: 'Digital Twin', href: '/services/digital-twin' },
-        { name: 'Cloud DevOps', href: '/services/cloud-devops' }
+        { name: 'Space Technology', href: '/services/space-tech' }
       ]
     }
   ];
