@@ -42,11 +42,9 @@ import {
   Cpu,
   Rocket
 } from 'lucide-react';
-import { 
-  revolutionaryMicroSaasServices2028, 
-  revolutionaryITInfrastructureServices2028, 
-  revolutionaryAIServices2028 
-} from '@/data/innovativeMicroSaasServices2028';
+import { INNOVATIVE_MICRO_SAAS_SERVICES_2028 } from '../data/innovativeMicroSaasServices2028';
+import { INNOVATIVE_IT_SERVICES_2028 } from '../data/innovativeITServices2028';
+import { INNOVATIVE_AI_SERVICES_2028 } from '../data/innovativeAIServices2028';
 import { SEO } from '@/components/SEO';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
@@ -57,15 +55,15 @@ export default function ComprehensivePricingGuide2028() {
   const [showComparison, setShowComparison] = useState(false);
 
   const allServices = [
-    ...revolutionaryMicroSaasServices2028.map(s => ({ ...s, type: 'Micro SaaS' })),
-    ...revolutionaryITInfrastructureServices2028.map(s => ({ ...s, type: 'IT Infrastructure' })),
-    ...revolutionaryAIServices2028.map(s => ({ ...s, type: 'AI Services' }))
+    ...INNOVATIVE_MICRO_SAAS_SERVICES_2028.map(s => ({ ...s, type: 'Micro SaaS' })),
+    ...INNOVATIVE_IT_SERVICES_2028.map(s => ({ ...s, type: 'IT Services' })),
+    ...INNOVATIVE_AI_SERVICES_2028.map(s => ({ ...s, type: 'AI Services' }))
   ];
 
   const categories = [
     { id: 'all', name: 'All Services', icon: Rocket, color: 'from-zion-blue to-zion-purple' },
     { id: 'Micro SaaS', name: 'Micro SaaS', icon: Cpu, color: 'from-zion-cyan to-zion-blue' },
-    { id: 'IT Infrastructure', name: 'IT Infrastructure', icon: Server, color: 'from-zion-purple to-zion-cyan' },
+    { id: 'IT Services', name: 'IT Services', icon: Server, color: 'from-zion-purple to-zion-cyan' },
     { id: 'AI Services', name: 'AI Services', icon: Brain, color: 'from-zion-blue to-zion-purple' }
   ];
 
