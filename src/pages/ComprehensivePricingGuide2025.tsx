@@ -1,550 +1,526 @@
 import React from 'react';
-import { SEO } from '../components/SEO';
-import { innovativeMicroSaasServices2025, innovativeITInfrastructureServices2025, innovativeAIServices2025 } from '../data/innovativeMicroSAASServices2025';
+import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
+import { 
+  DollarSign, 
+  CheckCircle, 
+  Star, 
+  Zap, 
+  Brain, 
+  Cloud, 
+  Shield, 
+  Rocket,
+  ArrowRight,
+  Users,
+  Building,
+  Globe,
+  Cpu,
+  Heart,
+  Scale,
+  PenTool,
+  TrendingUp,
+  Lock,
+  Server,
+  Smartphone,
+  Atom,
+  Leaf,
+  Building2,
+  Play,
+  Phone,
+  Mail,
+  MapPin,
+  ExternalLink,
+  Calculator,
+  BarChart3,
+  Target,
+  Award,
+  Clock,
+  Calendar,
+  FileText,
+  Settings,
+  Key,
+  ShieldCheck,
+  Globe2,
+  Home,
+  Car,
+  Factory,
+  City,
+  GraduationCap,
+  ShoppingCart,
+  Factory as FactoryIcon,
+  City as CityIcon,
+  Home as HomeIcon,
+  Car as CarIcon,
+  Factory as FactoryIcon2,
+  City as CityIcon2,
+  Home as HomeIcon2,
+  Car as CarIcon2
+} from 'lucide-react';
 
-const ComprehensivePricingGuide2025: React.FC = () => {
+export default function ComprehensivePricingGuide2025() {
+  const pricingTiers = [
+    {
+      name: 'Starter',
+      price: '$99',
+      period: 'month',
+      description: 'Perfect for small businesses and startups',
+      color: 'from-blue-500 to-cyan-500',
+      features: [
+        'AI Content Creation (5 articles/month)',
+        'Basic Analytics Dashboard',
+        'Email Support',
+        'Standard Security',
+        '5GB Storage',
+        'Basic API Access'
+      ],
+      popular: false,
+      cta: 'Get Started',
+      href: '/request-quote'
+    },
+    {
+      name: 'Professional',
+      price: '$299',
+      period: 'month',
+      description: 'Ideal for growing businesses',
+      color: 'from-purple-500 to-pink-500',
+      features: [
+        'AI Content Creation (25 articles/month)',
+        'Advanced Analytics & Reporting',
+        'Priority Support',
+        'Enhanced Security',
+        '25GB Storage',
+        'Full API Access',
+        'Custom Integrations',
+        'Training Sessions'
+      ],
+      popular: true,
+      cta: 'Get Professional',
+      href: '/request-quote'
+    },
+    {
+      name: 'Enterprise',
+      price: '$999',
+      period: 'month',
+      description: 'For large organizations',
+      color: 'from-emerald-500 to-green-500',
+      features: [
+        'Unlimited AI Content Creation',
+        'Custom Analytics Platform',
+        '24/7 Dedicated Support',
+        'Enterprise Security',
+        'Unlimited Storage',
+        'Custom API Development',
+        'White-label Solutions',
+        'Dedicated Account Manager',
+        'Custom Training Programs',
+        'SLA Guarantees'
+      ],
+      popular: false,
+      cta: 'Contact Sales',
+      href: '/contact'
+    }
+  ];
+
+  const serviceCategories = [
+    {
+      title: 'AI & Machine Learning',
+      icon: Brain,
+      color: 'from-purple-500 to-pink-500',
+      services: [
+        { name: 'AI Content Creation', price: '$50-500', description: 'Per article or monthly package' },
+        { name: 'AI Business Intelligence', price: '$200-2000', description: 'Monthly subscription' },
+        { name: 'Machine Learning Models', price: '$500-5000', description: 'Custom development' },
+        { name: 'AI Automation', price: '$100-1000', description: 'Per workflow/month' }
+      ]
+    },
+    {
+      title: 'Cloud & Infrastructure',
+      icon: Cloud,
+      color: 'from-blue-500 to-cyan-500',
+      services: [
+        { name: 'Cloud Migration', price: '$1000-10000', description: 'One-time project' },
+        { name: 'DevOps Automation', price: '$200-2000', description: 'Monthly service' },
+        { name: 'Infrastructure Management', price: '$500-5000', description: 'Monthly service' },
+        { name: 'Security Audits', price: '$500-3000', description: 'Per audit' }
+      ]
+    },
+    {
+      title: 'Cybersecurity',
+      icon: Shield,
+      color: 'from-red-500 to-orange-500',
+      services: [
+        { name: 'Security Assessment', price: '$1000-5000', description: 'Per assessment' },
+        { name: 'Penetration Testing', price: '$2000-10000', description: 'Per test' },
+        { name: 'Security Monitoring', price: '$200-2000', description: 'Monthly service' },
+        { name: 'Incident Response', price: '$500-5000', description: 'Per incident' }
+      ]
+    },
+    {
+      title: 'Data & Analytics',
+      icon: BarChart3,
+      color: 'from-green-500 to-emerald-500',
+      services: [
+        { name: 'Data Analytics Platform', price: '$300-3000', description: 'Monthly subscription' },
+        { name: 'Business Intelligence', price: '$500-5000', description: 'Monthly service' },
+        { name: 'Data Migration', price: '$1000-10000', description: 'One-time project' },
+        { name: 'Custom Dashboards', price: '$200-2000', description: 'Per dashboard' }
+      ]
+    }
+  ];
+
+  const industrySolutions = [
+    {
+      title: 'Healthcare',
+      icon: Heart,
+      color: 'from-red-500 to-pink-500',
+      pricing: 'Custom pricing based on patient volume and requirements'
+    },
+    {
+      title: 'Financial Services',
+      icon: TrendingUp,
+      color: 'from-green-500 to-blue-500',
+      pricing: 'Enterprise pricing with compliance requirements'
+    },
+    {
+      title: 'Manufacturing',
+      icon: Factory,
+      color: 'from-orange-500 to-red-500',
+      pricing: 'Volume-based pricing for production scale'
+    },
+    {
+      title: 'Retail & E-commerce',
+      icon: ShoppingCart,
+      color: 'from-purple-500 to-indigo-500',
+      pricing: 'Revenue-based pricing model'
+    }
+  ];
+
+  const contactInfo = {
+    phone: '+1 302 464 0950',
+    email: 'kleber@ziontechgroup.com',
+    address: '364 E Main St STE 1008 Middletown DE 19709'
+  };
+
   return (
-    <>
-      <SEO
-        title="Comprehensive Pricing Guide 2025 | Zion Tech Group Services & Solutions"
-        description="Complete pricing guide for Zion Tech Group's innovative micro SAAS, IT infrastructure, and AI services. Compare features, pricing, and ROI for all our solutions."
-        keywords="pricing guide, micro SAAS pricing, IT services pricing, AI services pricing, Zion Tech Group pricing"
-        canonical="https://ziontechgroup.com/comprehensive-pricing-guide-2025"
-      />
-      
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        {/* Hero Section */}
-        <section className="relative py-20 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-7xl mx-auto text-center">
-            <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 to-purple-600/20 rounded-3xl"></div>
-            <div className="relative z-10">
-              <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
-                Comprehensive Pricing Guide 2025
-              </h1>
-              <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
-                Transparent pricing for all our innovative services. Compare features, 
-                understand costs, and discover the perfect solution for your business needs.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <a
-                  href="tel:+13024640950"
-                  className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-full hover:from-blue-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105"
-                >
-                  <svg className="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20">
-                    <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" />
-                  </svg>
-                  Call for Custom Quote
-                </a>
-                <a
-                  href="mailto:kleber@ziontechgroup.com"
-                  className="inline-flex items-center px-8 py-4 bg-transparent border-2 border-purple-400 text-purple-400 font-semibold rounded-full hover:bg-purple-400 hover:text-white transition-all duration-300"
-                >
-                  <svg className="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20">
-                    <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z" />
-                    <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z" />
-                  </svg>
-                  Request Pricing
-                </a>
-              </div>
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+      {/* Hero Section */}
+      <section className="relative py-20 overflow-hidden">
+        <div className="container-responsive">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="text-center"
+          >
+            <h1 className="text-5xl md:text-6xl font-bold bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent mb-6">
+              Comprehensive Pricing Guide 2025
+            </h1>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8 leading-relaxed">
+              Transparent pricing for all our AI-powered technology solutions. 
+              Choose the plan that fits your business needs and budget.
+            </p>
+            <div className="flex flex-wrap justify-center gap-4">
+              <Link
+                to="/request-quote"
+                className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-semibold rounded-xl transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-cyan-500/25"
+              >
+                Get Custom Quote
+              </Link>
+              <Link
+                to="/demo"
+                className="px-8 py-4 border border-cyan-400/50 text-cyan-400 hover:bg-cyan-400/10 font-semibold rounded-xl transition-all duration-300"
+              >
+                Schedule Demo
+              </Link>
             </div>
-          </div>
-        </section>
+          </motion.div>
+        </div>
+        
+        {/* Background Elements */}
+        <div className="absolute inset-0 overflow-hidden pointer-events-none">
+          <div className="absolute top-20 left-10 w-72 h-72 bg-cyan-500/10 rounded-full blur-3xl"></div>
+          <div className="absolute bottom-20 right-10 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl"></div>
+        </div>
+      </section>
 
-        {/* Pricing Overview */}
-        <section className="py-16 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-12">
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Pricing Overview
-              </h2>
-              <p className="text-lg text-gray-300 max-w-3xl mx-auto">
-                Our pricing is designed to be competitive, transparent, and value-driven. 
-                All services include comprehensive support and regular updates.
-              </p>
-            </div>
-            
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              <div className="bg-gradient-to-br from-blue-600/20 to-blue-700/20 p-6 rounded-2xl border border-blue-500/30 text-center">
-                <div className="w-16 h-16 bg-blue-500 rounded-2xl flex items-center justify-center mx-auto mb-4">
-                  <svg className="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 20 20">
-                    <path fillRule="evenodd" d="M3 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clipRule="evenodd" />
-                  </svg>
-                </div>
-                <h3 className="text-xl font-semibold text-white mb-2">Micro SAAS Services</h3>
-                <p className="text-gray-300 mb-4">Starting from $199/month</p>
-                <p className="text-sm text-gray-400">AI-powered business solutions with proven ROI</p>
-              </div>
-              
-              <div className="bg-gradient-to-br from-purple-600/20 to-purple-700/20 p-6 rounded-2xl border border-purple-500/30 text-center">
-                <div className="w-16 h-16 bg-purple-500 rounded-2xl flex items-center justify-center mx-auto mb-4">
-                  <svg className="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 20 20">
-                    <path fillRule="evenodd" d="M3 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clipRule="evenodd" />
-                  </svg>
-                </div>
-                <h3 className="text-xl font-semibold text-white mb-2">IT Infrastructure</h3>
-                <p className="text-gray-300 mb-4">Starting from $140/hour</p>
-                <p className="text-sm text-gray-400">Professional IT services with guaranteed SLAs</p>
-              </div>
-              
-              <div className="bg-gradient-to-br from-pink-600/20 to-pink-700/20 p-6 rounded-2xl border border-pink-500/30 text-center">
-                <div className="w-16 h-16 bg-pink-500 rounded-2xl flex items-center justify-center mx-auto mb-4">
-                  <svg className="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 20 20">
-                    <path fillRule="evenodd" d="M12.316 3.051a1 1 0 01.633 1.265l-4 12a1 1 0 11-1.898-.632l4-12a1 1 0 011.265-.633zM5.707 6.293a1 1 0 010 1.414L3.414 10l2.293 2.293a1 1 0 11-1.414 1.414l-3-3a1 1 0 010-1.414l3-3a1 1 0 011.414 0zm8.586 0a1 1 0 011.414 0l3 3a1 1 0 010 1.414l-3 3a1 1 0 11-1.414-1.414L16.586 13l-2.293-2.293a1 1 0 010-1.414z" clipRule="evenodd" />
-                  </svg>
-                </div>
-                <h3 className="text-xl font-semibold text-white mb-2">AI Development</h3>
-                <p className="text-gray-300 mb-4">Starting from $2,999/month</p>
-                <p className="text-sm text-gray-400">Custom AI solutions with enterprise-grade features</p>
-              </div>
-            </div>
-          </div>
-        </section>
+      {/* Pricing Tiers */}
+      <section className="py-20">
+        <div className="container-responsive">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-4xl font-bold text-white mb-4">
+              Choose Your Plan
+            </h2>
+            <p className="text-xl text-gray-400 max-w-2xl mx-auto">
+              Flexible pricing options designed to scale with your business
+            </p>
+          </motion.div>
 
-        {/* Micro SAAS Services Pricing */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-slate-900/50 to-slate-900">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-                Micro SAAS Services Pricing
-              </h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Affordable, scalable solutions designed for businesses of all sizes. 
-                Each service includes free trials and comprehensive support.
-              </p>
-            </div>
-            
-            <div className="overflow-x-auto">
-              <table className="w-full bg-gradient-to-br from-slate-800/50 to-slate-700/50 rounded-2xl border border-slate-600/30">
-                <thead>
-                  <tr className="border-b border-slate-600/30">
-                    <th className="text-left p-6 text-white font-semibold">Service</th>
-                    <th className="text-center p-6 text-white font-semibold">Price</th>
-                    <th className="text-center p-6 text-white font-semibold">Market Price</th>
-                    <th className="text-center p-6 text-white font-semibold">ROI</th>
-                    <th className="text-center p-6 text-white font-semibold">Free Tier</th>
-                    <th className="text-center p-6 text-white font-semibold">Action</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  {innovativeMicroSaasServices2025.map((service, index) => (
-                    <tr key={service.id} className={`border-b border-slate-600/30 ${index % 2 === 0 ? 'bg-slate-700/20' : ''}`}>
-                      <td className="p-6">
-                        <div>
-                          <h3 className="text-lg font-semibold text-white mb-2">{service.name}</h3>
-                          <p className="text-sm text-gray-300 mb-2">{service.description}</p>
-                          <div className="flex flex-wrap gap-2">
-                            {service.tags.slice(0, 3).map((tag, tagIndex) => (
-                              <span key={tagIndex} className="px-2 py-1 bg-blue-500/20 text-blue-300 text-xs rounded-full border border-blue-500/30">
-                                {tag}
-                              </span>
-                            ))}
-                          </div>
-                        </div>
-                      </td>
-                      <td className="p-6 text-center">
-                        <div className="text-2xl font-bold text-blue-400">${service.price}</div>
-                        <div className="text-sm text-gray-400">{service.pricingModel}</div>
-                      </td>
-                      <td className="p-6 text-center">
-                        <div className="text-sm text-gray-300">{service.marketPrice}</div>
-                        <div className="text-xs text-gray-400">Competitive</div>
-                      </td>
-                      <td className="p-6 text-center">
-                        <div className="text-sm text-green-400 font-medium">{service.roi}</div>
-                        <div className="text-xs text-gray-400">Proven Results</div>
-                      </td>
-                      <td className="p-6 text-center">
-                        <div className={`inline-flex items-center px-3 py-1 rounded-full text-sm font-medium ${
-                          service.freeTier 
-                            ? 'bg-green-500/20 text-green-400 border border-green-500/30' 
-                            : 'bg-gray-500/20 text-gray-400 border border-gray-500/30'
-                        }`}>
-                          {service.freeTier ? 'Yes' : 'No'}
-                        </div>
-                        {service.freeTier && (
-                          <div className="text-xs text-gray-400 mt-1">{service.trialPeriod}</div>
-                        )}
-                      </td>
-                      <td className="p-6 text-center">
-                        <a
-                          href={`mailto:kleber@ziontechgroup.com?subject=Inquiry about ${service.name}`}
-                          className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-medium rounded-full hover:from-blue-700 hover:to-purple-700 transition-all duration-300 text-sm"
-                        >
-                          Get Started
-                        </a>
-                      </td>
-                    </tr>
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+            {pricingTiers.map((tier, index) => (
+              <motion.div
+                key={tier.name}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                viewport={{ once: true }}
+                className={`relative group ${
+                  tier.popular ? 'lg:scale-105' : ''
+                }`}
+              >
+                {tier.popular && (
+                  <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
+                    <div className="bg-gradient-to-r from-yellow-400 to-orange-500 text-white px-4 py-2 rounded-full text-sm font-medium flex items-center gap-2">
+                      <Star className="w-4 h-4" />
+                      Most Popular
+                    </div>
+                  </div>
+                )}
+                
+                <div className={`p-8 rounded-2xl bg-gradient-to-br ${tier.color} bg-opacity-10 border border-${tier.color.split('-')[1]}-500/20 hover:bg-opacity-20 transition-all duration-300 transform hover:scale-105`}>
+                  <div className="text-center mb-8">
+                    <h3 className="text-2xl font-bold text-white mb-2">{tier.name}</h3>
+                    <p className="text-gray-300 mb-6">{tier.description}</p>
+                    
+                    <div className="mb-6">
+                      <span className="text-4xl font-bold text-white">{tier.price}</span>
+                      <span className="text-gray-400 ml-2">/{tier.period}</span>
+                    </div>
+                  </div>
+                  
+                  <ul className="space-y-4 mb-8">
+                    {tier.features.map((feature, idx) => (
+                      <li key={idx} className="flex items-center gap-3">
+                        <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0" />
+                        <span className="text-gray-300">{feature}</span>
+                      </li>
+                    ))}
+                  </ul>
+                  
+                  <Link
+                    to={tier.href}
+                    className={`w-full inline-flex items-center justify-center px-6 py-3 rounded-xl font-semibold transition-all duration-300 transform hover:scale-105 ${
+                      tier.popular
+                        ? 'bg-gradient-to-r from-cyan-500 to-blue-600 text-white hover:from-cyan-600 hover:to-blue-700 shadow-lg hover:shadow-cyan-500/25'
+                        : 'bg-white/10 text-white hover:bg-white/20 border border-white/20'
+                    }`}
+                  >
+                    {tier.cta}
+                  </Link>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Service Categories Pricing */}
+      <section className="py-20">
+        <div className="container-responsive">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-4xl font-bold text-white mb-4">
+              Service-Specific Pricing
+            </h2>
+            <p className="text-xl text-gray-400 max-w-2xl mx-auto">
+              Detailed pricing for individual services and solutions
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+            {serviceCategories.map((category, index) => (
+              <motion.div
+                key={category.title}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                viewport={{ once: true }}
+                className="bg-slate-800/50 rounded-2xl p-8 border border-slate-700/50"
+              >
+                <div className={`w-16 h-16 bg-gradient-to-br ${category.color} rounded-xl flex items-center justify-center mb-6`}>
+                  <category.icon className="w-8 h-8 text-white" />
+                </div>
+                
+                <h3 className="text-2xl font-bold text-white mb-6">{category.title}</h3>
+                
+                <div className="space-y-4">
+                  {category.services.map((service, idx) => (
+                    <div key={idx} className="flex items-center justify-between p-4 bg-slate-700/30 rounded-lg">
+                      <div>
+                        <h4 className="font-semibold text-white">{service.name}</h4>
+                        <p className="text-sm text-gray-400">{service.description}</p>
+                      </div>
+                      <div className="text-right">
+                        <div className="text-lg font-bold text-cyan-400">{service.price}</div>
+                      </div>
+                    </div>
                   ))}
-                </tbody>
-              </table>
-            </div>
-          </div>
-        </section>
-
-        {/* IT Infrastructure Services Pricing */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-                IT Infrastructure Services Pricing
-              </h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Professional IT services with transparent pricing, guaranteed SLAs, 
-                and certified experts. Choose hourly rates or project-based pricing.
-              </p>
-            </div>
-            
-            <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-              {innovativeITInfrastructureServices2025.map((service) => (
-                <div key={service.id} className="bg-gradient-to-br from-slate-800/50 to-slate-700/50 p-8 rounded-2xl border border-slate-600/30 hover:border-purple-500/50 transition-all duration-300">
-                  <h3 className="text-2xl font-bold text-white mb-4">{service.name}</h3>
-                  <p className="text-gray-300 mb-6">{service.description}</p>
-                  
-                  <div className="space-y-4 mb-6">
-                    <div className="flex justify-between items-center">
-                      <span className="text-gray-400">Hourly Rate:</span>
-                      <span className="text-2xl font-bold text-purple-400">${service.hourlyRate}</span>
-                    </div>
-                    <div className="flex justify-between items-center">
-                      <span className="text-gray-400">Project Rate:</span>
-                      <span className="text-xl font-bold text-white">${service.projectRate.toLocaleString()}</span>
-                    </div>
-                    <div className="flex justify-between items-center">
-                      <span className="text-gray-400">Response Time:</span>
-                      <span className="text-green-400">{service.responseTime}</span>
-                    </div>
-                    <div className="flex justify-between items-center">
-                      <span className="text-gray-400">SLA:</span>
-                      <span className="text-blue-400">{service.sla}</span>
-                    </div>
-                  </div>
-                  
-                  <div className="mb-6">
-                    <h4 className="text-sm font-semibold text-white mb-2">Certifications</h4>
-                    <div className="flex flex-wrap gap-2">
-                      {service.certifications.map((cert, index) => (
-                        <span key={index} className="px-2 py-1 bg-purple-500/20 text-purple-300 text-xs rounded border border-purple-500/30">
-                          {cert}
-                        </span>
-                      ))}
-                    </div>
-                  </div>
-                  
-                  <div className="mb-6">
-                    <h4 className="text-sm font-semibold text-white mb-2">Compliance</h4>
-                    <div className="flex flex-wrap gap-2">
-                      {service.compliance.map((comp, index) => (
-                        <span key={index} className="px-2 py-1 bg-green-500/20 text-green-300 text-xs rounded border border-green-500/30">
-                          {comp}
-                        </span>
-                      ))}
-                    </div>
-                  </div>
-                  
-                  <a
-                    href={`mailto:kleber@ziontechgroup.com?subject=Quote request for ${service.name}`}
-                    className="w-full px-6 py-3 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-semibold rounded-full hover:from-purple-700 hover:to-pink-700 transition-all duration-300 text-center block"
-                  >
-                    Get Quote
-                  </a>
                 </div>
-              ))}
-            </div>
+              </motion.div>
+            ))}
           </div>
-        </section>
+        </div>
+      </section>
 
-        {/* AI Services Pricing */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-slate-900/50 to-slate-900">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-                AI Development Services Pricing
-              </h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Custom AI solutions tailored to your business needs. 
-                From model development to deployment with proven accuracy and ethical AI practices.
-              </p>
-            </div>
-            
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-              {innovativeAIServices2025.map((service) => (
-                <div key={service.id} className="bg-gradient-to-br from-slate-800/50 to-slate-700/50 p-8 rounded-2xl border border-slate-600/30 hover:border-pink-500/50 transition-all duration-300">
-                  <div className="flex justify-between items-start mb-4">
-                    <h3 className="text-2xl font-bold text-white">{service.name}</h3>
-                    <div className="text-right">
-                      <div className="text-3xl font-bold text-pink-400">${service.price.toLocaleString()}</div>
-                      <div className="text-sm text-gray-400">{service.pricingModel}</div>
-                    </div>
-                  </div>
-                  
-                  <p className="text-gray-300 mb-6">{service.description}</p>
-                  
-                  <div className="grid grid-cols-2 gap-4 mb-6">
-                    <div>
-                      <h4 className="text-sm font-semibold text-pink-400 mb-2">AI Score</h4>
-                      <p className="text-2xl font-bold text-white">{service.aiScore}/100</p>
-                    </div>
-                    <div>
-                      <h4 className="text-sm font-semibold text-blue-400 mb-2">Accuracy</h4>
-                      <p className="text-sm text-gray-300">{service.accuracy}</p>
-                    </div>
-                    <div>
-                      <h4 className="text-sm font-semibold text-purple-400 mb-2">Market Price</h4>
-                      <p className="text-sm text-gray-300">{service.marketPrice}</p>
-                    </div>
-                    <div>
-                      <h4 className="text-sm font-semibold text-green-400 mb-2">Innovation Level</h4>
-                      <p className="text-sm text-gray-300">{service.innovationLevel}</p>
-                    </div>
-                  </div>
-                  
-                  <div className="mb-6">
-                    <h4 className="text-sm font-semibold text-white mb-2">AI Models</h4>
-                    <div className="flex flex-wrap gap-2">
-                      {service.aiModels.map((model, index) => (
-                        <span key={index} className="px-2 py-1 bg-pink-500/20 text-pink-300 text-xs rounded border border-pink-500/30">
-                          {model}
-                        </span>
-                      ))}
-                    </div>
-                  </div>
-                  
-                  <div className="mb-6">
-                    <h4 className="text-sm font-semibold text-white mb-2">Use Cases</h4>
-                    <div className="flex flex-wrap gap-2">
-                      {service.useCases.map((useCase, index) => (
-                        <span key={index} className="px-2 py-1 bg-blue-500/20 text-blue-300 text-xs rounded border border-blue-500/30">
-                          {useCase}
-                        </span>
-                      ))}
-                    </div>
-                  </div>
-                  
-                  <a
-                    href={`mailto:kleber@ziontechgroup.com?subject=Project inquiry for ${service.name}`}
-                    className="w-full px-6 py-3 bg-gradient-to-r from-pink-600 to-red-600 text-white font-semibold rounded-full hover:from-pink-700 hover:to-red-700 transition-all duration-300 text-center block"
-                  >
-                    Start Project
-                  </a>
+      {/* Industry Solutions Pricing */}
+      <section className="py-20">
+        <div className="container-responsive">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-4xl font-bold text-white mb-4">
+              Industry-Specific Pricing
+            </h2>
+            <p className="text-xl text-gray-400 max-w-2xl mx-auto">
+              Custom pricing models for different industries and use cases
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {industrySolutions.map((solution, index) => (
+              <motion.div
+                key={solution.title}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                viewport={{ once: true }}
+                className="bg-slate-800/50 rounded-xl p-6 border border-slate-700/50 text-center"
+              >
+                <div className={`w-16 h-16 bg-gradient-to-br ${solution.color} rounded-xl flex items-center justify-center mx-auto mb-4`}>
+                  <solution.icon className="w-8 h-8 text-white" />
                 </div>
-              ))}
-            </div>
+                
+                <h3 className="text-xl font-bold text-white mb-3">{solution.title}</h3>
+                <p className="text-sm text-gray-400 leading-relaxed">{solution.pricing}</p>
+                
+                <Link
+                  to="/request-quote"
+                  className="inline-flex items-center gap-2 text-cyan-400 hover:text-cyan-300 transition-colors font-medium text-sm mt-4"
+                >
+                  Get Custom Quote
+                  <ArrowRight className="w-4 h-4" />
+                </Link>
+              </motion.div>
+            ))}
           </div>
-        </section>
+        </div>
+      </section>
 
-        {/* Pricing Comparison Table */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-                Service Comparison
-              </h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Compare our services with market alternatives. 
-                See why Zion Tech Group offers the best value and ROI.
-              </p>
-            </div>
-            
-            <div className="overflow-x-auto">
-              <table className="w-full bg-gradient-to-br from-slate-800/50 to-slate-700/50 rounded-2xl border border-slate-600/30">
-                <thead>
-                  <tr className="border-b border-slate-600/30">
-                    <th className="text-left p-6 text-white font-semibold">Service Category</th>
-                    <th className="text-center p-6 text-white font-semibold">Zion Tech Group</th>
-                    <th className="text-center p-6 text-white font-semibold">Market Average</th>
-                    <th className="text-center p-6 text-white font-semibold">Savings</th>
-                    <th className="text-center p-6 text-white font-semibold">ROI Advantage</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr className="border-b border-slate-600/30">
-                    <td className="p-6">
-                      <div className="text-lg font-semibold text-white">Content Creation</div>
-                      <div className="text-sm text-gray-400">AI-Powered Content Studio Pro</div>
-                    </td>
-                    <td className="p-6 text-center">
-                      <div className="text-2xl font-bold text-blue-400">$299/month</div>
-                      <div className="text-sm text-gray-400">Professional Plan</div>
-                    </td>
-                    <td className="p-6 text-center">
-                      <div className="text-lg text-gray-300">$350/month</div>
-                      <div className="text-sm text-gray-400">Market Average</div>
-                    </td>
-                    <td className="p-6 text-center">
-                      <div className="text-lg text-green-400 font-bold">15% Savings</div>
-                    </td>
-                    <td className="p-6 text-center">
-                      <div className="text-sm text-blue-400">400% ROI in 6 months</div>
-                    </td>
-                  </tr>
-                  <tr className="border-b border-slate-600/30 bg-slate-700/20">
-                    <td className="p-6">
-                      <div className="text-lg font-semibold text-white">Customer Support</div>
-                      <div className="text-sm text-gray-400">AI Customer Support Hub</div>
-                    </td>
-                    <td className="p-6 text-center">
-                      <div className="text-2xl font-bold text-blue-400">$499/month</div>
-                      <div className="text-sm text-gray-400">Enterprise Plan</div>
-                    </td>
-                    <td className="p-6 text-center">
-                      <div className="text-lg text-gray-300">$600/month</div>
-                      <div className="text-sm text-gray-400">Market Average</div>
-                    </td>
-                    <td className="p-6 text-center">
-                      <div className="text-lg text-green-400 font-bold">17% Savings</div>
-                    </td>
-                    <td className="p-6 text-center">
-                      <div className="text-sm text-blue-400">350% ROI in 12 months</div>
-                    </td>
-                  </tr>
-                  <tr className="border-b border-slate-600/30">
-                    <td className="p-6">
-                      <div className="text-lg font-semibold text-white">Cloud Migration</div>
-                      <div className="text-sm text-gray-400">Cloud Migration & Optimization</div>
-                    </td>
-                    <td className="p-6 text-center">
-                      <div className="text-2xl font-bold text-purple-400">$150/hour</div>
-                      <div className="text-sm text-gray-400">Professional Rate</div>
-                    </td>
-                    <td className="p-6 text-center">
-                      <div className="text-lg text-gray-300">$180/hour</div>
-                      <div className="text-sm text-gray-400">Market Average</div>
-                    </td>
-                    <td className="p-6 text-center">
-                      <div className="text-lg text-green-400 font-bold">17% Savings</div>
-                    </td>
-                    <td className="p-6 text-center">
-                      <div className="text-sm text-purple-400">40% cost reduction</div>
-                    </td>
-                  </tr>
-                  <tr className="border-b border-slate-600/30 bg-slate-700/20">
-                    <td className="p-6">
-                      <div className="text-lg font-semibold text-white">AI Development</div>
-                      <div className="text-sm text-gray-400">Custom AI Model Development</div>
-                    </td>
-                    <td className="p-6 text-center">
-                      <div className="text-2xl font-bold text-pink-400">$50,000</div>
-                      <div className="text-sm text-gray-400">Project-based</div>
-                    </td>
-                    <td className="p-6 text-center">
-                      <div className="text-lg text-gray-300">$70,000</div>
-                      <div className="text-sm text-gray-400">Market Average</div>
-                    </td>
-                    <td className="p-6 text-center">
-                      <div className="text-lg text-green-400 font-bold">29% Savings</div>
-                    </td>
-                    <td className="p-6 text-center">
-                      <div className="text-sm text-pink-400">95%+ accuracy</div>
-                    </td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-          </div>
-        </section>
-
-        {/* Contact Information */}
-        <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-blue-900/50 to-purple-900/50 border-y border-blue-500/30">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-12">
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+      {/* Pricing Calculator CTA */}
+      <section className="py-20">
+        <div className="container-responsive">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="text-center"
+          >
+            <div className="bg-gradient-to-r from-slate-800/50 to-slate-700/50 rounded-3xl p-12 border border-slate-600/50">
+              <div className="w-20 h-20 bg-gradient-to-br from-cyan-500 to-blue-500 rounded-2xl flex items-center justify-center mx-auto mb-6">
+                <Calculator className="w-10 h-10 text-white" />
+              </div>
+              
+              <h2 className="text-4xl font-bold text-white mb-6">
                 Need a Custom Quote?
               </h2>
-              <p className="text-lg text-gray-300 max-w-2xl mx-auto">
-                Our pricing is flexible and can be customized to meet your specific needs. 
-                Contact us for a personalized quote and consultation.
+              <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
+                Our pricing is flexible and can be customized to meet your specific requirements. 
+                Contact us for a personalized quote.
               </p>
+              
+              <div className="flex flex-wrap justify-center gap-4">
+                <Link
+                  to="/request-quote"
+                  className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-semibold rounded-xl transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-cyan-500/25"
+                >
+                  Get Custom Quote
+                </Link>
+                <Link
+                  to="/contact"
+                  className="px-8 py-4 border border-cyan-400/50 text-cyan-400 hover:bg-cyan-400/10 font-semibold rounded-xl transition-all duration-300"
+                >
+                  Contact Sales Team
+                </Link>
+                <Link
+                  to="/demo"
+                  className="px-8 py-4 border border-purple-400/50 text-purple-400 hover:bg-purple-400/10 font-semibold rounded-xl transition-all duration-300"
+                >
+                  <Play className="w-5 h-5 inline mr-2" />
+                  Schedule Demo
+                </Link>
+              </div>
             </div>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Contact Section */}
+      <section className="py-20">
+        <div className="container-responsive">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="text-center"
+          >
+            <h2 className="text-4xl font-bold text-white mb-6">
+              Questions About Pricing?
+            </h2>
+            <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
+              Our team is here to help you understand our pricing and find the best solution for your needs.
+            </p>
             
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {/* Contact Information */}
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
               <div className="text-center">
-                <div className="w-16 h-16 bg-blue-500 rounded-2xl flex items-center justify-center mx-auto mb-4">
-                  <svg className="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 20 20">
-                    <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" />
-                  </svg>
+                <div className="w-12 h-12 bg-gradient-to-br from-cyan-500 to-blue-500 rounded-lg flex items-center justify-center mx-auto mb-4">
+                  <Phone className="w-6 h-6 text-white" />
                 </div>
-                <h3 className="text-xl font-semibold text-white mb-2">Phone</h3>
-                <a href="tel:+13024640950" className="text-blue-300 hover:text-white transition-colors text-lg">
-                  +1 302 464 0950
+                <h3 className="text-lg font-semibold text-white mb-2">Call Us</h3>
+                <a href={`tel:${contactInfo.phone}`} className="text-cyan-400 hover:text-cyan-300 transition-colors">
+                  {contactInfo.phone}
                 </a>
-                <p className="text-sm text-gray-400 mt-2">Available 24/7</p>
               </div>
               
               <div className="text-center">
-                <div className="w-16 h-16 bg-purple-500 rounded-2xl flex items-center justify-center mx-auto mb-4">
-                  <svg className="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 20 20">
-                    <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z" />
-                    <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z" />
-                  </svg>
+                <div className="w-12 h-12 bg-gradient-to-br from-purple-500 to-pink-500 rounded-lg flex items-center justify-center mx-auto mb-4">
+                  <Mail className="w-6 h-6 text-white" />
                 </div>
-                <h3 className="text-xl font-semibold text-white mb-2">Email</h3>
-                <a href="mailto:kleber@ziontechgroup.com" className="text-purple-300 hover:text-white transition-colors text-lg">
-                  kleber@ziontechgroup.com
+                <h3 className="text-lg font-semibold text-white mb-2">Email Us</h3>
+                <a href={`mailto:${contactInfo.email}`} className="text-cyan-400 hover:text-cyan-300 transition-colors">
+                  {contactInfo.email}
                 </a>
-                <p className="text-sm text-gray-400 mt-2">Response within 2 hours</p>
               </div>
               
               <div className="text-center">
-                <div className="w-16 h-16 bg-pink-500 rounded-2xl flex items-center justify-center mx-auto mb-4">
-                  <svg className="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 20 20">
-                    <path fillRule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clipRule="evenodd" />
-                  </svg>
+                <div className="w-12 h-12 bg-gradient-to-br from-green-500 to-teal-500 rounded-lg flex items-center justify-center mx-auto mb-4">
+                  <MapPin className="w-6 h-6 text-white" />
                 </div>
-                <h3 className="text-xl font-semibold text-white mb-2">Address</h3>
-                <p className="text-pink-300 text-sm">
-                  364 E Main St STE 1008<br />
-                  Middletown DE 19709
+                <h3 className="text-lg font-semibold text-white mb-2">Visit Us</h3>
+                <p className="text-slate-300 text-sm">
+                  {contactInfo.address}
                 </p>
-                <p className="text-sm text-gray-400 mt-2">Global Service</p>
               </div>
             </div>
-          </div>
-        </section>
-
-        {/* Call to Action */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-4xl mx-auto text-center">
-            <div className="bg-gradient-to-r from-blue-600/20 to-purple-600/20 p-12 rounded-3xl border border-blue-500/30">
-              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-                Ready to Get Started?
-              </h2>
-              <p className="text-xl text-gray-300 mb-8">
-                Choose the perfect plan for your business needs. All our services include 
-                comprehensive support, regular updates, and proven ROI guarantees.
-              </p>
-              
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <a
-                  href="tel:+13024640950"
-                  className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-full hover:from-blue-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105"
-                >
-                  <svg className="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20">
-                    <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" />
-                  </svg>
-                  Call +1 302 464 0950
-                </a>
-                <a
-                  href="mailto:kleber@ziontechgroup.com"
-                  className="inline-flex items-center px-8 py-4 bg-transparent border-2 border-purple-400 text-purple-400 font-semibold rounded-full hover:bg-purple-400 hover:text-white transition-all duration-300"
-                >
-                  <svg className="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20">
-                    <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z" />
-                    <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z" />
-                  </svg>
-                  Request Custom Quote
-                </a>
-              </div>
-              
-              <div className="mt-8 text-sm text-gray-400">
-                <p>Visit our website: <a href="https://ziontechgroup.com" className="text-blue-400 hover:text-white transition-colors">https://ziontechgroup.com</a></p>
-                <p className="mt-2">All prices are in USD and subject to change. Contact us for current pricing.</p>
-              </div>
-            </div>
-          </div>
-        </section>
-      </div>
-    </>
+          </motion.div>
+        </div>
+      </section>
+    </div>
   );
-};
-
-export default ComprehensivePricingGuide2025;
+}
