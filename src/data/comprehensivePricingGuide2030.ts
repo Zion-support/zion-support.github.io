@@ -1,15 +1,16 @@
 import { ProductListing } from "@/types/listings";
 import { COMPREHENSIVE_SERVICES_INDEX_2030 } from "./comprehensiveServicesIndex2030";
 
+// Comprehensive Pricing Guide 2030 - Zion Tech Group
+// Complete pricing information for all services with market analysis and ROI projections
+
 export interface PricingTier {
   name: string;
   price: number;
-  currency: string;
-  billingCycle: string;
   features: string[];
-  limitations: string[];
   bestFor: string;
-  popular?: boolean;
+  setupTime: string;
+  support: string;
 }
 
 export interface ServicePricing {
@@ -17,370 +18,319 @@ export interface ServicePricing {
   serviceName: string;
   category: string;
   basePrice: number;
-  currency: string;
-  pricingModel: string;
-  tiers: PricingTier[];
+  pricingTiers: PricingTier[];
   marketPrice: string;
   competitors: string[];
   roi: string;
   setupTime: string;
-  customPricing: boolean;
-  volumeDiscounts: boolean;
-  enterpriseOptions: boolean;
+  paymentOptions: string[];
+  volumeDiscounts: string[];
+  enterpriseFeatures: string[];
 }
 
 export const COMPREHENSIVE_PRICING_GUIDE_2030: ServicePricing[] = [
-  // AI-Powered Business Intelligence Suite
+  // AI-Powered Autonomous Research Assistant
   {
-    serviceId: "ai-powered-business-intelligence-suite",
-    serviceName: "AI-Powered Business Intelligence Suite",
-    category: "AI & Business Intelligence",
-    basePrice: 4999,
-    currency: "$",
-    pricingModel: "Subscription + Usage",
-    tiers: [
+    serviceId: "ai-autonomous-research-assistant",
+    serviceName: "AI Autonomous Research Assistant",
+    category: "AI & Research",
+    basePrice: 8999,
+    pricingTiers: [
       {
         name: "Starter",
-        price: 4999,
-        currency: "$",
-        billingCycle: "monthly",
+        price: 8999,
         features: [
-          "Basic AI analytics",
-          "Up to 5 data sources",
-          "Standard reporting",
-          "Email support"
+          "Basic research automation",
+          "Data analysis tools",
+          "Report generation",
+          "Email support",
+          "5 research projects/month"
         ],
-        limitations: [
-          "Limited AI models",
-          "Basic integrations",
-          "Standard SLA"
-        ],
-        bestFor: "Small businesses starting with AI"
+        bestFor: "Small research teams",
+        setupTime: "6-8 weeks",
+        support: "Email support"
       },
       {
         name: "Professional",
-        price: 8999,
-        currency: "$",
-        billingCycle: "monthly",
+        price: 15999,
         features: [
-          "Advanced AI analytics",
-          "Up to 20 data sources",
-          "Custom dashboards",
+          "Advanced research automation",
+          "AI-powered insights",
+          "Custom report templates",
           "Priority support",
-          "Advanced integrations"
+          "Unlimited research projects",
+          "API access"
         ],
-        limitations: [
-          "Limited custom models",
-          "Standard compliance"
-        ],
-        bestFor: "Growing businesses with data needs",
-        popular: true
+        bestFor: "Medium research organizations",
+        setupTime: "6-8 weeks",
+        support: "Priority support + phone"
       },
       {
         name: "Enterprise",
-        price: 15999,
-        currency: "$",
-        billingCycle: "monthly",
+        price: 29999,
         features: [
-          "Full AI suite",
-          "Unlimited data sources",
+          "Full research automation",
           "Custom AI models",
-          "24/7 support",
-          "Enterprise compliance",
+          "White-label solutions",
+          "Dedicated support",
+          "On-premise deployment",
           "Custom integrations"
         ],
-        limitations: [],
-        bestFor: "Large enterprises with complex needs"
+        bestFor: "Large research institutions",
+        setupTime: "8-10 weeks",
+        support: "Dedicated account manager"
       }
     ],
-    marketPrice: "$4,000-8,000",
-    competitors: ["Tableau", "Power BI", "Qlik"],
-    roi: "500% within 6 months",
-    setupTime: "4-6 weeks",
-    customPricing: true,
-    volumeDiscounts: true,
-    enterpriseOptions: true
+    marketPrice: "$7,000-15,000",
+    competitors: ["OpenAI Research", "Anthropic Claude", "Google DeepMind"],
+    roi: "800% within 12 months",
+    setupTime: "6-8 weeks",
+    paymentOptions: ["One-time payment", "Annual subscription", "Monthly payment"],
+    volumeDiscounts: ["10% off for 3+ licenses", "20% off for 10+ licenses", "Custom pricing for enterprise"],
+    enterpriseFeatures: ["Custom AI models", "On-premise deployment", "Dedicated support", "White-label solutions"]
   },
 
-  // AI Autonomous Vehicle Fleet Management
+  // AI-Powered Metaverse Development Platform
   {
-    serviceId: "ai-autonomous-vehicle-fleet-management",
-    serviceName: "AI Autonomous Vehicle Fleet Management Platform",
-    category: "AI & Autonomous Systems",
-    basePrice: 15999,
-    currency: "$",
-    pricingModel: "Subscription + Per Vehicle",
-    tiers: [
+    serviceId: "ai-metaverse-development-platform",
+    serviceName: "AI Metaverse Development Platform",
+    category: "AI & Metaverse",
+    basePrice: 12999,
+    pricingTiers: [
       {
-        name: "Fleet Starter",
-        price: 15999,
-        currency: "$",
-        billingCycle: "monthly",
+        name: "Creator",
+        price: 12999,
         features: [
-          "Up to 50 vehicles",
-          "Basic route optimization",
-          "Standard monitoring",
+          "Basic metaverse creation tools",
+          "3D environment builder",
+          "Asset library",
+          "Basic AI integration",
+          "Community support"
+        ],
+        bestFor: "Individual creators",
+        setupTime: "8-10 weeks",
+        support: "Community support"
+      },
+      {
+        name: "Studio",
+        price: 24999,
+        features: [
+          "Advanced metaverse tools",
+          "AI-powered content generation",
+          "Multi-user environments",
+          "Analytics dashboard",
+          "Priority support"
+        ],
+        bestFor: "Small studios",
+        setupTime: "8-10 weeks",
+        support: "Priority support"
+      },
+      {
+        name: "Enterprise",
+        price: 49999,
+        features: [
+          "Full metaverse platform",
+          "Custom AI models",
+          "Scalable infrastructure",
+          "White-label solutions",
+          "Dedicated support"
+        ],
+        bestFor: "Large companies",
+        setupTime: "10-12 weeks",
+        support: "Dedicated support"
+      }
+    ],
+    marketPrice: "$10,000-25,000",
+    competitors: ["Unity", "Unreal Engine", "Roblox Studio"],
+    roi: "1000% within 18 months",
+    setupTime: "8-10 weeks",
+    paymentOptions: ["One-time payment", "Annual subscription", "Revenue sharing"],
+    volumeDiscounts: ["15% off for 5+ licenses", "25% off for 20+ licenses", "Custom enterprise pricing"],
+    enterpriseFeatures: ["Custom AI models", "White-label solutions", "Enterprise support", "Custom integrations"]
+  },
+
+  // Zero-Trust Network Access Platform
+  {
+    serviceId: "zero-trust-network-access-platform",
+    serviceName: "Zero-Trust Network Access Platform",
+    category: "IT Infrastructure",
+    basePrice: 12999,
+    pricingTiers: [
+      {
+        name: "Basic",
+        price: 12999,
+        features: [
+          "Basic zero-trust access",
+          "Identity verification",
+          "Access control",
+          "Basic monitoring",
           "Email support"
         ],
-        limitations: [
-          "Limited AI features",
-          "Basic reporting"
-        ],
-        bestFor: "Small fleet operators"
+        bestFor: "Small businesses",
+        setupTime: "6-8 weeks",
+        support: "Email support"
       },
       {
-        name: "Fleet Professional",
-        price: 24999,
-        currency: "$",
-        billingCycle: "monthly",
+        name: "Professional",
+        price: 21999,
         features: [
-          "Up to 200 vehicles",
-          "Advanced AI optimization",
-          "Predictive maintenance",
-          "Priority support",
-          "Advanced analytics"
+          "Advanced zero-trust",
+          "Multi-factor authentication",
+          "Advanced monitoring",
+          "Compliance reporting",
+          "Priority support"
         ],
-        limitations: [
-          "Limited custom features"
-        ],
-        bestFor: "Medium-sized fleets",
-        popular: true
+        bestFor: "Medium enterprises",
+        setupTime: "6-8 weeks",
+        support: "Priority support"
       },
       {
-        name: "Fleet Enterprise",
+        name: "Enterprise",
         price: 39999,
-        currency: "$",
-        billingCycle: "monthly",
         features: [
-          "Unlimited vehicles",
-          "Full AI suite",
-          "Custom algorithms",
-          "24/7 support",
-          "Enterprise integrations"
+          "Full zero-trust platform",
+          "Custom integrations",
+          "Advanced analytics",
+          "White-label solutions",
+          "Dedicated support"
         ],
-        limitations: [],
-        bestFor: "Large fleet operations"
+        bestFor: "Large enterprises",
+        setupTime: "8-10 weeks",
+        support: "Dedicated support"
       }
     ],
-    marketPrice: "$12,000-25,000",
-    competitors: ["Tesla Fleet", "Waymo", "Cruise"],
+    marketPrice: "$10,000-25,000",
+    competitors: ["Okta", "Palo Alto Networks", "Cisco"],
     roi: "800% within 12 months",
-    setupTime: "8-12 weeks",
-    customPricing: true,
-    volumeDiscounts: true,
-    enterpriseOptions: true
+    setupTime: "6-8 weeks",
+    paymentOptions: ["One-time payment", "Annual subscription", "Per-user pricing"],
+    volumeDiscounts: ["20% off for 100+ users", "30% off for 500+ users", "Custom enterprise pricing"],
+    enterpriseFeatures: ["Custom integrations", "White-label solutions", "Enterprise support", "Custom compliance"]
   },
 
-  // AI Medical Imaging Diagnostic Platform
+  // AI-Powered Medical Imaging Analysis
   {
-    serviceId: "ai-medical-imaging-diagnostic-platform",
-    serviceName: "AI Medical Imaging Diagnostic Platform",
+    serviceId: "ai-medical-imaging-analysis",
+    serviceName: "AI Medical Imaging Analysis Platform",
     category: "AI & Healthcare",
     basePrice: 24999,
-    currency: "$",
-    pricingModel: "Subscription + Per Scan",
-    tiers: [
+    pricingTiers: [
       {
-        name: "Clinical",
+        name: "Clinic",
         price: 24999,
-        currency: "$",
-        billingCycle: "monthly",
         features: [
-          "Basic diagnostic AI",
-          "Up to 1000 scans/month",
-          "Standard accuracy",
-          "Email support"
+          "Basic image analysis",
+          "Common diagnostic tools",
+          "Basic reporting",
+          "Email support",
+          "Up to 1000 images/month"
         ],
-        limitations: [
-          "Limited AI models",
-          "Basic compliance"
-        ],
-        bestFor: "Small clinics"
+        bestFor: "Small clinics",
+        setupTime: "10-12 weeks",
+        support: "Email support"
       },
       {
         name: "Hospital",
-        price: 39999,
-        currency: "$",
-        billingCycle: "monthly",
+        price: 44999,
         features: [
-          "Advanced diagnostic AI",
-          "Up to 10000 scans/month",
-          "High accuracy models",
+          "Advanced image analysis",
+          "Full diagnostic suite",
+          "Advanced reporting",
           "Priority support",
-          "Full compliance"
-        ],
-        limitations: [
-          "Limited custom models"
+          "Unlimited images",
+          "API access"
         ],
         bestFor: "Medium hospitals",
-        popular: true
+        setupTime: "10-12 weeks",
+        support: "Priority support"
       },
       {
         name: "Medical Center",
-        price: 59999,
-        currency: "$",
-        billingCycle: "monthly",
+        price: 79999,
         features: [
-          "Full AI diagnostic suite",
-          "Unlimited scans",
+          "Full medical imaging platform",
           "Custom AI models",
-          "24/7 support",
-          "Research capabilities"
-        ],
-        limitations: [],
-        bestFor: "Large medical centers"
-      }
-    ],
-    marketPrice: "$20,000-40,000",
-    competitors: ["IBM Watson Health", "Google Health", "Microsoft Healthcare"],
-    roi: "1000% within 18 months",
-    setupTime: "12-16 weeks",
-    customPricing: true,
-    volumeDiscounts: true,
-    enterpriseOptions: true
-  },
-
-  // Quantum-Safe Cybersecurity Infrastructure
-  {
-    serviceId: "quantum-safe-cybersecurity-infrastructure",
-    serviceName: "Quantum-Safe Cybersecurity Infrastructure",
-    category: "IT Infrastructure",
-    basePrice: 19999,
-    currency: "$",
-    pricingModel: "Subscription + Implementation",
-    tiers: [
-      {
-        name: "Basic Security",
-        price: 19999,
-        currency: "$",
-        billingCycle: "monthly",
-        features: [
-          "Basic quantum-safe encryption",
-          "Standard security protocols",
-          "Email support",
-          "Basic compliance"
-        ],
-        limitations: [
-          "Limited security features",
-          "Basic monitoring"
-        ],
-        bestFor: "Small organizations"
-      },
-      {
-        name: "Advanced Security",
-        price: 29999,
-        currency: "$",
-        billingCycle: "monthly",
-        features: [
-          "Advanced quantum-safe protocols",
-          "Advanced monitoring",
-          "Priority support",
-          "Full compliance",
-          "Custom security rules"
-        ],
-        limitations: [
-          "Limited custom features"
-        ],
-        bestFor: "Medium organizations",
-        popular: true
-      },
-      {
-        name: "Enterprise Security",
-        price: 44999,
-        currency: "$",
-        billingCycle: "monthly",
-        features: [
-          "Full quantum-safe suite",
-          "Custom security protocols",
-          "24/7 monitoring",
-          "24/7 support",
+          "White-label solutions",
+          "Dedicated support",
           "Custom integrations"
         ],
-        limitations: [],
-        bestFor: "Large enterprises"
+        bestFor: "Large medical centers",
+        setupTime: "12-16 weeks",
+        support: "Dedicated support"
       }
     ],
-    marketPrice: "$15,000-35,000",
-    competitors: ["IBM Quantum", "Microsoft Quantum", "Google Quantum"],
-    roi: "700% within 18 months",
-    setupTime: "10-14 weeks",
-    customPricing: true,
-    volumeDiscounts: true,
-    enterpriseOptions: true
+    marketPrice: "$20,000-50,000",
+    competitors: ["IBM Watson Health", "Google Health", "Microsoft Healthcare"],
+    roi: "1000% within 20 months",
+    setupTime: "10-12 weeks",
+    paymentOptions: ["One-time payment", "Annual subscription", "Per-image pricing"],
+    volumeDiscounts: ["25% off for 5+ licenses", "40% off for 20+ licenses", "Custom enterprise pricing"],
+    enterpriseFeatures: ["Custom AI models", "White-label solutions", "Enterprise support", "Custom integrations"]
   },
 
-  // Metaverse Development Platform
+  // AI-Powered Risk Assessment Platform
   {
-    serviceId: "metaverse-development-platform",
-    serviceName: "Metaverse Development Platform",
-    category: "Emerging Technology",
-    basePrice: 17999,
-    currency: "$",
-    pricingModel: "Subscription + Development",
-    tiers: [
+    serviceId: "ai-risk-assessment-platform",
+    serviceName: "AI Risk Assessment Platform",
+    category: "AI & FinTech",
+    basePrice: 18999,
+    pricingTiers: [
       {
-        name: "Creator",
-        price: 17999,
-        currency: "$",
-        billingCycle: "monthly",
+        name: "Basic",
+        price: 18999,
         features: [
-          "Basic 3D tools",
-          "VR/AR support",
-          "Basic templates",
-          "Email support"
+          "Basic risk assessment",
+          "Portfolio analysis",
+          "Basic reporting",
+          "Email support",
+          "Up to 100 portfolios"
         ],
-        limitations: [
-          "Limited customization",
-          "Basic integrations"
-        ],
-        bestFor: "Individual creators"
+        bestFor: "Small investment firms",
+        setupTime: "8-10 weeks",
+        support: "Email support"
       },
       {
-        name: "Developer",
-        price: 27999,
-        currency: "$",
-        billingCycle: "monthly",
+        name: "Professional",
+        price: 32999,
         features: [
-          "Advanced 3D tools",
-          "Full VR/AR suite",
-          "Custom templates",
+          "Advanced risk assessment",
+          "Real-time monitoring",
+          "Advanced analytics",
           "Priority support",
-          "Advanced integrations"
+          "Unlimited portfolios",
+          "API access"
         ],
-        limitations: [
-          "Limited custom features"
-        ],
-        bestFor: "Development teams",
-        popular: true
+        bestFor: "Medium investment firms",
+        setupTime: "8-10 weeks",
+        support: "Priority support"
       },
       {
         name: "Enterprise",
-        price: 44999,
-        currency: "$",
-        billingCycle: "monthly",
+        price: 59999,
         features: [
-          "Full metaverse suite",
-          "Custom development tools",
-          "Enterprise integrations",
-          "24/7 support",
-          "Custom solutions"
+          "Full risk management platform",
+          "Custom risk models",
+          "White-label solutions",
+          "Dedicated support",
+          "Custom integrations"
         ],
-        limitations: [],
-        bestFor: "Large organizations"
+        bestFor: "Large financial institutions",
+        setupTime: "10-12 weeks",
+        support: "Dedicated support"
       }
     ],
-    marketPrice: "$15,000-35,000",
-    competitors: ["Unity", "Unreal Engine", "Roblox"],
-    roi: "700% within 18 months",
-    setupTime: "12-16 weeks",
-    customPricing: true,
-    volumeDiscounts: true,
-    enterpriseOptions: true
+    marketPrice: "$15,000-40,000",
+    competitors: ["Bloomberg Risk", "Reuters Risk", "S&P Global"],
+    roi: "900% within 18 months",
+    setupTime: "8-10 weeks",
+    paymentOptions: ["One-time payment", "Annual subscription", "Per-portfolio pricing"],
+    volumeDiscounts: ["20% off for 10+ licenses", "35% off for 50+ licenses", "Custom enterprise pricing"],
+    enterpriseFeatures: ["Custom risk models", "White-label solutions", "Enterprise support", "Custom integrations"]
   }
 ];
 
 // Pricing Analysis and Insights
-export const PRICING_INSIGHTS_2030 = {
+export const PRICING_ANALYSIS_2030 = {
   averagePrice: Math.round(
     COMPREHENSIVE_PRICING_GUIDE_2030.reduce((sum, service) => sum + service.basePrice, 0) / 
     COMPREHENSIVE_PRICING_GUIDE_2030.length
@@ -389,25 +339,47 @@ export const PRICING_INSIGHTS_2030 = {
     min: Math.min(...COMPREHENSIVE_PRICING_GUIDE_2030.map(s => s.basePrice)),
     max: Math.max(...COMPREHENSIVE_PRICING_GUIDE_2030.map(s => s.basePrice))
   },
-  popularPricingModels: [
-    "Subscription + Usage",
-    "Subscription + Per Unit",
-    "Subscription + Implementation",
-    "Tiered Subscription"
+  categoryPricing: COMPREHENSIVE_PRICING_GUIDE_2030.reduce((acc, service) => {
+    if (!acc[service.category]) {
+      acc[service.category] = [];
+    }
+    acc[service.category].push(service.basePrice);
+    return acc;
+  }, {} as Record<string, number[]>),
+  roiAnalysis: COMPREHENSIVE_PRICING_GUIDE_2030.map(service => ({
+    serviceName: service.serviceName,
+    roi: service.roi,
+    setupTime: service.setupTime,
+    price: service.basePrice
+  }))
+};
+
+// Payment and Discount Information
+export const PAYMENT_OPTIONS_2030 = {
+  paymentMethods: ["Credit Card", "Bank Transfer", "Wire Transfer", "Cryptocurrency"],
+  installmentPlans: ["3-month plan", "6-month plan", "12-month plan"],
+  volumeDiscounts: [
+    "5-10 licenses: 15% discount",
+    "11-25 licenses: 25% discount",
+    "26-50 licenses: 35% discount",
+    "51+ licenses: Custom pricing"
   ],
-  commonFeatures: [
-    "AI-powered capabilities",
-    "Enterprise-grade security",
+  enterpriseFeatures: [
+    "Custom development",
+    "White-label solutions",
+    "Dedicated support",
+    "On-premise deployment",
     "Custom integrations",
-    "Priority support",
-    "ROI tracking",
-    "Compliance certifications"
-  ],
-  marketTrends: [
-    "AI services commanding premium pricing",
-    "Quantum computing services at premium rates",
-    "Emerging technology services with high value",
-    "Healthcare AI services with regulatory compliance",
-    "Autonomous systems with safety certifications"
+    "SLA guarantees"
   ]
+};
+
+// Contact Information for Pricing Inquiries
+export const PRICING_CONTACT_2030 = {
+  phone: "+1 302 464 0950",
+  email: "kleber@ziontechgroup.com",
+  website: "https://ziontechgroup.com",
+  address: "364 E Main St STE 1008 Middletown DE 19709",
+  businessHours: "Monday - Friday: 9:00 AM - 6:00 PM EST",
+  responseTime: "Within 24 hours for pricing inquiries"
 };

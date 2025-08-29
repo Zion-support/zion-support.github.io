@@ -105,6 +105,7 @@ function App() {
                 <Route path="/revolutionary-services-2030" element={<RevolutionaryServices2030 />} />
                 <Route path="/services/enhanced" element={<EnhancedServicesLanding />} />
                 <Route path="/services/comprehensive-2030" element={<ComprehensiveServicesLanding2030 />} />
+                <Route path="/comprehensive-services-2030" element={<ComprehensiveServicesLanding2030 />} />
                 <Route path="/services/micro-saas" element={<MicroSaaSProducts />} />
                 <Route path="/services/comprehensive-advertising" element={<ComprehensiveServicesAdvertising />} />
                 <Route path="/services/showcase-2030" element={<ComprehensiveServicesShowcase2030 />} />
