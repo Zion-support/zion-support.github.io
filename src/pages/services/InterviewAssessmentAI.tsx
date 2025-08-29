@@ -1,130 +1,203 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import { SEO } from '../../components/SEO';
 import { 
   Users, 
   Brain, 
   Target, 
+  Zap, 
   BarChart3, 
-  CheckCircle, 
-  ArrowRight,
-  Play,
-  Settings,
-  Cpu,
-  Cloud,
-  Activity,
-  Sparkles,
-  Search,
-  Zap,
-  Globe,
-  Building,
-  DollarSign,
-  Lock,
-  Eye,
-  FileText,
-  Phone,
-  Mail,
-  Clock,
+  Clock, 
+  Award, 
   Star,
-  Award
+  Globe,
+  Cpu,
+  Database,
+  CheckCircle,
+  Eye,
+  MessageCircle,
+  FileText,
+  Shield,
+  TrendingUp,
+  UserCheck,
+  Calendar,
+  Video,
+  Download,
+  Share2
 } from 'lucide-react';
 
-const InterviewAssessmentAI = () => {
+export default function InterviewAssessmentAI() {
   const features = [
     {
       icon: Brain,
-      title: 'AI-Powered Evaluation',
-      description: 'Intelligent assessment of candidate responses using advanced natural language processing'
+      title: "AI-Powered Assessment",
+      description: "Intelligent evaluation of candidate skills, personality, and cultural fit."
+    },
+    {
+      icon: Video,
+      title: "Video Interview Analysis",
+      description: "Advanced video processing for facial expressions, tone, and communication skills."
     },
     {
       icon: Target,
-      title: 'Skills Assessment',
-      description: 'Comprehensive evaluation of technical and soft skills through AI analysis'
+      title: "Skills Evaluation",
+      description: "Comprehensive assessment of technical and soft skills through AI analysis."
     },
     {
       icon: BarChart3,
-      title: 'Performance Analytics',
-      description: 'Detailed insights and scoring with automated feedback generation'
+      title: "Performance Analytics",
+      description: "Detailed insights and scoring with automated feedback generation."
     },
     {
       icon: Users,
-      title: 'Candidate Matching',
-      description: 'AI-driven candidate-job fit analysis and recommendation engine'
+      title: "Candidate Matching",
+      description: "AI-driven candidate-job fit analysis and recommendation engine."
     },
     {
       icon: Clock,
-      title: 'Automated Scheduling',
-      description: 'Intelligent interview scheduling and coordination across teams'
-    },
-    {
-      icon: Star,
-      title: 'Quality Assurance',
-      description: 'Consistent evaluation standards and bias-free assessment processes'
+      title: "Automated Scheduling",
+      description: "Intelligent interview scheduling and coordination across teams."
     }
   ];
 
   const benefits = [
-    'Reduce hiring time by 60%',
-    'Improve candidate quality by 80%',
-    'Eliminate unconscious bias by 90%',
-    'Increase hiring accuracy by 75%',
-    'Automate 70% of assessment tasks',
-    'Enhance candidate experience significantly'
+    {
+      icon: Zap,
+      title: "Faster Hiring",
+      description: "Reduce time-to-hire by 60% with AI-powered assessment automation."
+    },
+    {
+      icon: Shield,
+      title: "Bias Elimination",
+      description: "Ensure fair and consistent evaluation standards across all candidates."
+    },
+    {
+      icon: BarChart3,
+      title: "Better Decisions",
+      description: "Make data-driven hiring decisions with comprehensive candidate insights."
+    },
+    {
+      icon: Clock,
+      title: "Cost Reduction",
+      description: "Lower recruitment costs through automated screening and assessment."
+    },
+    {
+      icon: Star,
+      title: "Quality Hires",
+      description: "Improve hire quality and retention with better candidate-job matching."
+    },
+    {
+      icon: Award,
+      title: "Compliance",
+      description: "Maintain hiring compliance and audit trails for regulatory requirements."
+    }
+  ];
+
+  const assessmentTypes = [
+    {
+      type: "Technical Skills",
+      description: "Evaluate coding, problem-solving, and domain-specific technical abilities",
+      icon: Cpu
+    },
+    {
+      type: "Soft Skills",
+      description: "Assess communication, leadership, teamwork, and emotional intelligence",
+      icon: Users
+    },
+    {
+      type: "Cultural Fit",
+      description: "Analyze values alignment and organizational culture compatibility",
+      icon: Globe
+    },
+    {
+      type: "Personality Assessment",
+      description: "Evaluate personality traits and work style preferences",
+      icon: Brain
+    },
+    {
+      type: "Behavioral Analysis",
+      description: "Assess past behavior patterns and situational responses",
+      icon: TrendingUp
+    },
+    {
+      type: "Cognitive Ability",
+      description: "Measure problem-solving, reasoning, and learning capabilities",
+      icon: Target
+    }
   ];
 
   const useCases = [
     {
-      industry: 'Technology',
-      description: 'Technical skills assessment, coding challenges, and problem-solving evaluation'
+      industry: "Technology",
+      description: "Software engineering, data science, and technical role assessments",
+      icon: Cpu
     },
     {
-      industry: 'Finance',
-      description: 'Financial analysis skills, risk assessment, and compliance knowledge testing'
+      industry: "Finance",
+      description: "Risk assessment, compliance, and financial analysis role evaluations",
+      icon: DollarSign
     },
     {
-      industry: 'Healthcare',
-      description: 'Clinical knowledge, patient care scenarios, and medical decision-making'
+      industry: "Healthcare",
+      description: "Medical professional, nursing, and healthcare administration assessments",
+      icon: Heart
     },
     {
-      industry: 'Sales & Marketing',
-      description: 'Communication skills, sales scenarios, and market analysis capabilities'
+      industry: "Sales & Marketing",
+      description: "Sales performance, customer relationship, and marketing role evaluations",
+      icon: TrendingUp
+    },
+    {
+      industry: "Education",
+      description: "Teaching, administration, and educational leadership assessments",
+      icon: GraduationCap
+    },
+    {
+      industry: "Manufacturing",
+      description: "Production, quality control, and operational role assessments",
+      icon: Settings
     }
   ];
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+      <SEO
+        title="Interview Assessment AI - Zion Tech Group"
+        description="Transform your hiring process with AI-powered interview assessment. Evaluate candidates intelligently, eliminate bias, and make better hiring decisions."
+      />
+      
       {/* Hero Section */}
-      <section className="relative pt-32 pb-20 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-blue-500/10 to-cyan-500/10"></div>
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="relative overflow-hidden py-20 lg:py-32">
+        <div className="absolute inset-0 bg-gradient-to-br from-emerald-900/20 via-transparent to-teal-900/20"></div>
+        
+        <div className="relative max-w-7xl mx-auto text-center px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            className="text-center"
           >
-            <div className="inline-flex items-center px-4 py-2 bg-blue-500/10 border border-blue-500/20 rounded-full text-blue-400 text-sm font-medium mb-6">
-              <Users className="w-4 h-4 mr-2" />
-              AI-Powered Interview Assessment
+            <div className="inline-flex items-center px-4 py-2 bg-emerald-600/20 text-emerald-400 rounded-full text-sm font-medium mb-6">
+              <Brain className="w-4 h-4 mr-2" />
+              AI-Powered Assessment
             </div>
-            
-            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
-              Interview Assessment
-              <span className="bg-gradient-to-r from-blue-400 to-cyan-500 bg-clip-text text-transparent"> AI</span>
+            <h1 className="text-4xl md:text-7xl font-bold text-white mb-6">
+              Interview
+              <span className="bg-gradient-to-r from-emerald-400 to-teal-400 bg-clip-text text-transparent">
+                {' '}Assessment AI
+              </span>
             </h1>
-            
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-              Revolutionize your hiring process with AI-powered interview assessment that 
-              automatically evaluates candidates, eliminates bias, and identifies top talent.
+            <p className="text-xl text-gray-300 max-w-4xl mx-auto mb-8">
+              Transform your hiring process with intelligent AI-powered assessment tools. 
+              Evaluate candidates fairly, eliminate bias, and make data-driven hiring decisions.
             </p>
-            
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="px-8 py-4 bg-gradient-to-r from-blue-500 to-cyan-500 text-white font-semibold rounded-lg hover:from-blue-600 hover:to-cyan-600 transition-all duration-200 flex items-center justify-center">
-                <Play className="w-5 h-5 mr-2" />
+              <button className="bg-gradient-to-r from-emerald-600 to-teal-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-emerald-700 hover:to-teal-700 transition-all duration-300 text-lg flex items-center justify-center">
+                <Video className="w-5 h-5 mr-2" />
                 Start Free Trial
               </button>
-              <button className="px-8 py-4 border border-blue-500/30 text-blue-400 font-semibold rounded-lg hover:bg-blue-500/10 transition-all duration-200 flex items-center justify-center">
-                <Settings className="w-5 h-5 mr-2" />
-                Schedule Demo
+              <button className="border border-emerald-500 text-emerald-400 px-8 py-4 rounded-lg font-semibold hover:bg-emerald-500 hover:text-white transition-all duration-300 text-lg">
+                <Download className="w-5 h-5 mr-2 inline" />
+                Download Brochure
               </button>
             </div>
           </motion.div>
@@ -132,37 +205,53 @@ const InterviewAssessmentAI = () => {
       </section>
 
       {/* Features Section */}
-      <section className="py-20">
+      <section className="py-20 bg-slate-800/50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
             className="text-center mb-16"
           >
-            <h2 className="text-4xl font-bold text-white mb-4">
-              Advanced Assessment Features
+            <h2 className="text-3xl md:text-5xl font-bold text-white mb-6">
+              Key Features
             </h2>
-            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              Our AI-powered platform provides comprehensive interview assessment capabilities 
-              that transform your hiring process and improve candidate selection.
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Our AI-powered assessment platform provides comprehensive tools to evaluate 
+              candidates and streamline your hiring process.
             </p>
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index) => (
               <motion.div
-                key={index}
+                key={feature.title}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 hover:border-blue-500/30 transition-all duration-200"
+                viewport={{ once: true }}
+                className="group relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-all duration-300 hover:border-emerald-500/50"
               >
-                <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-lg flex items-center justify-center mb-4">
-                  <feature.icon className="w-6 h-6 text-white" />
+                {/* Icon */}
+                <div className="mb-6">
+                  <div className="w-16 h-16 bg-gradient-to-r from-emerald-500 to-teal-500 rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                    <feature.icon className="w-8 h-8 text-white" />
+                  </div>
                 </div>
-                <h3 className="text-xl font-semibold text-white mb-2">{feature.title}</h3>
-                <p className="text-gray-300">{feature.description}</p>
+
+                {/* Content */}
+                <div>
+                  <h3 className="text-xl font-bold text-white mb-3 group-hover:text-emerald-400 transition-colors duration-300">
+                    {feature.title}
+                  </h3>
+                  <p className="text-gray-300 text-sm leading-relaxed">
+                    {feature.description}
+                  </p>
+                </div>
+
+                {/* Hover Effect */}
+                <div className="absolute inset-0 bg-gradient-to-r from-emerald-500/5 to-teal-500/5 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               </motion.div>
             ))}
           </div>
@@ -170,51 +259,109 @@ const InterviewAssessmentAI = () => {
       </section>
 
       {/* Benefits Section */}
-      <section className="py-20 bg-slate-800/30">
+      <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
             className="text-center mb-16"
           >
-            <h2 className="text-4xl font-bold text-white mb-4">
-              Transform Your Hiring Process
+            <h2 className="text-3xl md:text-5xl font-bold text-white mb-6">
+              Platform Benefits
             </h2>
-            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              Experience measurable improvements in hiring efficiency, candidate quality, and recruitment outcomes.
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Experience the advantages of AI-powered assessment that drives 
+              efficiency and improves hiring quality.
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div className="space-y-6">
-              {benefits.slice(0, 3).map((benefit, index) => (
-                <motion.div
-                  key={index}
-                  initial={{ opacity: 0, x: -20 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
-                  className="flex items-start space-x-3"
-                >
-                  <CheckCircle className="w-6 h-6 text-blue-400 mt-1 flex-shrink-0" />
-                  <span className="text-gray-300 text-lg">{benefit}</span>
-                </motion.div>
-              ))}
-            </div>
-            <div className="space-y-6">
-              {benefits.slice(3).map((benefit, index) => (
-                <motion.div
-                  key={index + 3}
-                  initial={{ opacity: 0, x: 20 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
-                  className="flex items-start space-x-3"
-                >
-                  <CheckCircle className="w-6 h-6 text-blue-400 mt-1 flex-shrink-0" />
-                  <span className="text-gray-300 text-lg">{benefit}</span>
-                </motion.div>
-              ))}
-            </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {benefits.map((benefit, index) => (
+              <motion.div
+                key={benefit.title}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                viewport={{ once: true }}
+                className="group relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-all duration-300 hover:border-emerald-500/50"
+              >
+                {/* Icon */}
+                <div className="mb-6">
+                  <div className="w-16 h-16 bg-gradient-to-r from-emerald-500 to-teal-500 rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                    <benefit.icon className="w-8 h-8 text-white" />
+                  </div>
+                </div>
+
+                {/* Content */}
+                <div>
+                  <h3 className="text-xl font-bold text-white mb-3 group-hover:text-emerald-400 transition-colors duration-300">
+                    {benefit.title}
+                  </h3>
+                  <p className="text-gray-300 text-sm leading-relaxed">
+                    {benefit.description}
+                  </p>
+                </div>
+
+                {/* Hover Effect */}
+                <div className="absolute inset-0 bg-gradient-to-r from-emerald-500/5 to-teal-500/5 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Assessment Types Section */}
+      <section className="py-20 bg-slate-800/50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-3xl md:text-5xl font-bold text-white mb-6">
+              Assessment Types
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Our platform supports comprehensive assessment types to evaluate 
+              all aspects of candidate suitability and fit.
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {assessmentTypes.map((type, index) => (
+              <motion.div
+                key={type.type}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                viewport={{ once: true }}
+                className="group relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-all duration-300 hover:border-emerald-500/50"
+              >
+                {/* Icon */}
+                <div className="mb-6">
+                  <div className="w-16 h-16 bg-gradient-to-r from-emerald-500 to-teal-500 rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                    <type.icon className="w-8 h-8 text-white" />
+                  </div>
+                </div>
+
+                {/* Content */}
+                <div>
+                  <h3 className="text-xl font-bold text-white mb-3 group-hover:text-emerald-400 transition-colors duration-300">
+                    {type.type}
+                  </h3>
+                  <p className="text-gray-300 text-sm leading-relaxed">
+                    {type.description}
+                  </p>
+                </div>
+
+                {/* Hover Effect */}
+                <div className="absolute inset-0 bg-gradient-to-r from-emerald-500/5 to-teal-500/5 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+              </motion.div>
+            ))}
           </div>
         </div>
       </section>
@@ -226,31 +373,47 @@ const InterviewAssessmentAI = () => {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
             className="text-center mb-16"
           >
-            <h2 className="text-4xl font-bold text-white mb-4">
-              Industry Applications
+            <h2 className="text-3xl md:text-5xl font-bold text-white mb-6">
+              Industry Use Cases
             </h2>
-            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              Our Interview Assessment AI platform adapts to various industries, providing tailored 
-              evaluation strategies for your specific hiring needs.
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Discover how organizations across industries leverage our AI assessment 
+              platform to improve hiring quality and efficiency.
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {useCases.map((useCase, index) => (
               <motion.div
-                key={index}
+                key={useCase.industry}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 text-center hover:border-blue-500/30 transition-all duration-200"
+                viewport={{ once: true }}
+                className="group relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-all duration-300 hover:border-emerald-500/50"
               >
-                <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Target className="w-8 h-8 text-white" />
+                {/* Icon */}
+                <div className="mb-6">
+                  <div className="w-16 h-16 bg-gradient-to-r from-emerald-500 to-teal-500 rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                    <useCase.icon className="w-8 h-8 text-white" />
+                  </div>
                 </div>
-                <h3 className="text-xl font-semibold text-white mb-2">{useCase.industry}</h3>
-                <p className="text-gray-300 text-sm">{useCase.description}</p>
+
+                {/* Content */}
+                <div>
+                  <h3 className="text-xl font-bold text-white mb-3 group-hover:text-emerald-400 transition-colors duration-300">
+                    {useCase.industry}
+                  </h3>
+                  <p className="text-gray-300 text-sm leading-relaxed">
+                    {useCase.description}
+                  </p>
+                </div>
+
+                {/* Hover Effect */}
+                <div className="absolute inset-0 bg-gradient-to-r from-emerald-500/5 to-teal-500/5 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               </motion.div>
             ))}
           </div>
@@ -258,27 +421,29 @@ const InterviewAssessmentAI = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-blue-500/10 to-cyan-500/10">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <section className="py-20 bg-gradient-to-r from-emerald-900/20 to-teal-900/20">
+        <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
           >
-            <h2 className="text-4xl font-bold text-white mb-4">
-              Transform Your Hiring Today
+            <h2 className="text-3xl md:text-5xl font-bold text-white mb-6">
+              Ready to Transform Your Hiring?
             </h2>
-            <p className="text-xl text-gray-300 mb-8">
-              Join forward-thinking organizations that use AI-powered assessment to hire 
-              better talent faster and more efficiently.
+            <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
+              Join organizations already leveraging AI-powered assessment to improve 
+              hiring quality and eliminate bias.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="px-8 py-4 bg-gradient-to-r from-blue-500 to-cyan-500 text-white font-semibold rounded-lg hover:from-blue-600 hover:to-cyan-600 transition-all duration-200 flex items-center justify-center">
+              <button className="bg-gradient-to-r from-emerald-600 to-teal-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-emerald-700 hover:to-teal-700 transition-all duration-300 text-lg flex items-center justify-center">
+                <Star className="w-5 h-5 mr-2" />
                 Get Started Today
-                <ArrowRight className="w-5 h-5 ml-2" />
               </button>
-              <button className="px-8 py-4 border border-blue-500/30 text-blue-400 font-semibold rounded-lg hover:bg-blue-500/10 transition-all duration-200">
-                Contact Sales
+              <button className="border border-emerald-500 text-emerald-400 px-8 py-4 rounded-lg font-semibold hover:bg-emerald-500 hover:text-white transition-all duration-300 text-lg">
+                <Share2 className="w-5 h-5 mr-2 inline" />
+                Schedule Demo
               </button>
             </div>
           </motion.div>
@@ -286,6 +451,4 @@ const InterviewAssessmentAI = () => {
       </section>
     </div>
   );
-};
-
-export default InterviewAssessmentAI;
+}

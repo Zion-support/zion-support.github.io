@@ -1,129 +1,207 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import { SEO } from '../../components/SEO';
 import { 
   Users, 
-  Target, 
   TrendingUp, 
+  Target, 
+  Zap, 
   MessageCircle, 
   BarChart3, 
-  CheckCircle, 
-  ArrowRight,
-  Play,
-  Settings,
-  Cpu,
-  Cloud,
-  Activity,
-  Sparkles,
-  Search,
-  Zap,
+  Clock, 
+  Award, 
+  Star,
   Globe,
-  Building,
-  DollarSign,
-  Lock,
-  Eye,
-  FileText,
-  Brain,
+  Cpu,
+  Database,
+  Search,
+  Filter,
+  Download,
+  Share2,
   Phone,
-  Mail
+  Mail,
+  Calendar,
+  CheckCircle,
+  Shield,
+  FileText,
+  ShoppingCart,
+  Home,
+  DollarSign,
+  Heart
 } from 'lucide-react';
 
-const AISalesCopilot = () => {
+export default function AISalesCopilot() {
   const features = [
     {
-      icon: Brain,
-      title: 'AI-Powered Lead Scoring',
-      description: 'Intelligent lead qualification and prioritization using machine learning algorithms'
-    },
-    {
-      icon: Target,
-      title: 'Predictive Sales Analytics',
-      description: 'Forecast sales outcomes and identify high-probability opportunities'
+      icon: Users,
+      title: "Lead Scoring & Qualification",
+      description: "AI-powered lead analysis and prioritization to focus on high-value prospects."
     },
     {
       icon: MessageCircle,
-      title: 'Automated Follow-ups',
-      description: 'Smart email sequences and follow-up scheduling based on prospect behavior'
-    },
-    {
-      icon: BarChart3,
-      title: 'Performance Insights',
-      description: 'Real-time sales metrics and performance optimization recommendations'
-    },
-    {
-      icon: Users,
-      title: 'Customer Segmentation',
-      description: 'AI-driven customer classification for personalized sales strategies'
+      title: "Intelligent Conversation AI",
+      description: "Natural language processing for personalized customer interactions and support."
     },
     {
       icon: TrendingUp,
-      title: 'Revenue Optimization',
-      description: 'Data-driven strategies to maximize deal size and win rates'
+      title: "Predictive Analytics",
+      description: "Forecast sales outcomes and identify high-probability opportunities with AI insights."
+    },
+    {
+      icon: Target,
+      title: "Automated Follow-ups",
+      description: "Smart email sequences and follow-up scheduling based on prospect behavior patterns."
+    },
+    {
+      icon: BarChart3,
+      title: "Performance Insights",
+      description: "Real-time sales metrics and performance optimization recommendations."
+    },
+    {
+      icon: Zap,
+      title: "Revenue Optimization",
+      description: "Data-driven strategies to maximize deal size and improve win rates."
     }
   ];
 
   const benefits = [
-    'Increase sales conversion rates by 35%',
-    'Reduce sales cycle time by 40%',
-    'Improve lead qualification accuracy by 80%',
-    'Boost average deal size by 25%',
-    'Automate 70% of repetitive sales tasks',
-    'Enhance customer relationship management'
+    {
+      icon: TrendingUp,
+      title: "Increased Sales Productivity",
+      description: "Automate repetitive tasks and focus on high-value sales activities."
+    },
+    {
+      icon: Target,
+      title: "Better Lead Conversion",
+      description: "Improve conversion rates with AI-powered lead scoring and qualification."
+    },
+    {
+      icon: Users,
+      title: "Enhanced Customer Experience",
+      description: "Provide personalized interactions and faster response times to prospects."
+    },
+    {
+      icon: BarChart3,
+      title: "Data-Driven Decisions",
+      description: "Make informed sales decisions based on AI analytics and insights."
+    },
+    {
+      icon: Clock,
+      title: "Time Optimization",
+      description: "Reduce manual work and focus on building relationships and closing deals."
+    },
+    {
+      icon: Award,
+      title: "Competitive Advantage",
+      description: "Stay ahead of competitors with AI-powered sales intelligence and automation."
+    }
+  ];
+
+  const salesProcess = [
+    {
+      stage: "Lead Generation",
+      description: "AI-powered prospecting and lead identification from multiple sources",
+      icon: Search
+    },
+    {
+      stage: "Qualification",
+      description: "Automated lead scoring and prioritization using machine learning",
+      icon: Target
+    },
+    {
+      stage: "Engagement",
+      description: "Intelligent conversation AI and personalized communication",
+      icon: MessageCircle
+    },
+    {
+      stage: "Opportunity Management",
+      description: "Track and manage sales opportunities with predictive analytics",
+      icon: TrendingUp
+    },
+    {
+      stage: "Closing",
+      description: "AI-assisted deal closing with optimized pricing and negotiation",
+      icon: CheckCircle
+    },
+    {
+      stage: "Retention",
+      description: "Customer success monitoring and expansion opportunity identification",
+      icon: Users
+    }
   ];
 
   const useCases = [
     {
-      industry: 'B2B Sales',
-      description: 'Enterprise sales optimization, lead nurturing, and account-based marketing'
+      industry: "B2B Sales",
+      description: "Enterprise sales teams and complex deal management",
+      icon: Users
     },
     {
-      industry: 'E-commerce',
-      description: 'Customer segmentation, personalized recommendations, and cart abandonment recovery'
+      industry: "E-commerce",
+      description: "Online retail sales and customer relationship management",
+      icon: ShoppingCart
     },
     {
-      industry: 'Real Estate',
-      description: 'Lead qualification, market analysis, and client relationship management'
+      industry: "SaaS",
+      description: "Software subscription sales and customer lifecycle management",
+      icon: Cpu
     },
     {
-      industry: 'Financial Services',
-      description: 'Investment recommendations, client onboarding, and portfolio management'
+      industry: "Real Estate",
+      description: "Property sales and client relationship management",
+      icon: Home
+    },
+    {
+      industry: "Financial Services",
+      description: "Investment and insurance sales with compliance support",
+      icon: DollarSign
+    },
+    {
+      industry: "Healthcare",
+      description: "Medical device and service sales with regulatory compliance",
+      icon: Heart
     }
   ];
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+      <SEO
+        title="AI Sales Copilot - Zion Tech Group"
+        description="Transform your sales process with AI-powered automation. Increase productivity, improve conversions, and drive revenue growth."
+      />
+      
       {/* Hero Section */}
-      <section className="relative pt-32 pb-20 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-purple-500/10 to-pink-500/10"></div>
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="relative overflow-hidden py-20 lg:py-32">
+        <div className="absolute inset-0 bg-gradient-to-br from-blue-900/20 via-transparent to-indigo-900/20"></div>
+        
+        <div className="relative max-w-7xl mx-auto text-center px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            className="text-center"
           >
-            <div className="inline-flex items-center px-4 py-2 bg-purple-500/10 border border-purple-500/20 rounded-full text-purple-400 text-sm font-medium mb-6">
+            <div className="inline-flex items-center px-4 py-2 bg-blue-600/20 text-blue-400 rounded-full text-sm font-medium mb-6">
               <Users className="w-4 h-4 mr-2" />
-              AI-Powered Sales Intelligence
+              AI-Powered Sales
             </div>
-            
-            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
+            <h1 className="text-4xl md:text-7xl font-bold text-white mb-6">
               AI Sales
-              <span className="bg-gradient-to-r from-purple-400 to-pink-500 bg-clip-text text-transparent"> Copilot</span>
+              <span className="bg-gradient-to-r from-blue-400 to-indigo-400 bg-clip-text text-transparent">
+                {' '}Copilot
+              </span>
             </h1>
-            
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-              Revolutionize your sales process with AI-powered intelligence that identifies opportunities, 
-              optimizes strategies, and drives revenue growth through data-driven insights.
+            <p className="text-xl text-gray-300 max-w-4xl mx-auto mb-8">
+              Transform your sales process with intelligent AI automation that qualifies leads, 
+              personalizes interactions, and drives revenue growth through data-driven insights.
             </p>
-            
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-500 text-white font-semibold rounded-lg hover:from-purple-600 hover:to-pink-600 transition-all duration-200 flex items-center justify-center">
-                <Play className="w-5 h-5 mr-2" />
+              <button className="bg-gradient-to-r from-blue-600 to-indigo-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-blue-700 hover:to-indigo-700 transition-all duration-300 text-lg flex items-center justify-center">
+                <TrendingUp className="w-5 h-5 mr-2" />
                 Start Free Trial
               </button>
-              <button className="px-8 py-4 border border-purple-500/30 text-purple-400 font-semibold rounded-lg hover:bg-purple-500/10 transition-all duration-200 flex items-center justify-center">
-                <Settings className="w-5 h-5 mr-2" />
-                Schedule Demo
+              <button className="border border-blue-500 text-blue-400 px-8 py-4 rounded-lg font-semibold hover:bg-blue-500 hover:text-white transition-all duration-300 text-lg">
+                <Download className="w-5 h-5 mr-2 inline" />
+                Download Brochure
               </button>
             </div>
           </motion.div>
@@ -131,37 +209,53 @@ const AISalesCopilot = () => {
       </section>
 
       {/* Features Section */}
-      <section className="py-20">
+      <section className="py-20 bg-slate-800/50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
             className="text-center mb-16"
           >
-            <h2 className="text-4xl font-bold text-white mb-4">
-              Advanced Sales Intelligence Features
+            <h2 className="text-3xl md:text-5xl font-bold text-white mb-6">
+              Key Features
             </h2>
-            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              Our AI-powered platform provides comprehensive sales optimization capabilities 
-              that transform your sales process and drive results.
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Our AI Sales Copilot provides comprehensive tools to automate and optimize 
+              your sales process for maximum efficiency and results.
             </p>
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index) => (
               <motion.div
-                key={index}
+                key={feature.title}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 hover:border-purple-500/30 transition-all duration-200"
+                viewport={{ once: true }}
+                className="group relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-all duration-300 hover:border-blue-500/50"
               >
-                <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-500 rounded-lg flex items-center justify-center mb-4">
-                  <feature.icon className="w-6 h-6 text-white" />
+                {/* Icon */}
+                <div className="mb-6">
+                  <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-indigo-500 rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                    <feature.icon className="w-8 h-8 text-white" />
+                  </div>
                 </div>
-                <h3 className="text-xl font-semibold text-white mb-2">{feature.title}</h3>
-                <p className="text-gray-300">{feature.description}</p>
+
+                {/* Content */}
+                <div>
+                  <h3 className="text-xl font-bold text-white mb-3 group-hover:text-blue-400 transition-colors duration-300">
+                    {feature.title}
+                  </h3>
+                  <p className="text-gray-300 text-sm leading-relaxed">
+                    {feature.description}
+                  </p>
+                </div>
+
+                {/* Hover Effect */}
+                <div className="absolute inset-0 bg-gradient-to-r from-blue-500/5 to-indigo-500/5 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               </motion.div>
             ))}
           </div>
@@ -169,51 +263,109 @@ const AISalesCopilot = () => {
       </section>
 
       {/* Benefits Section */}
-      <section className="py-20 bg-slate-800/30">
+      <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
             className="text-center mb-16"
           >
-            <h2 className="text-4xl font-bold text-white mb-4">
-              Transform Your Sales Performance
+            <h2 className="text-3xl md:text-5xl font-bold text-white mb-6">
+              Platform Benefits
             </h2>
-            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              Experience measurable improvements in sales efficiency, conversion rates, and revenue growth.
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Experience the advantages of AI-powered sales automation that drives 
+              efficiency and improves your sales performance.
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div className="space-y-6">
-              {benefits.slice(0, 3).map((benefit, index) => (
-                <motion.div
-                  key={index}
-                  initial={{ opacity: 0, x: -20 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
-                  className="flex items-start space-x-3"
-                >
-                  <CheckCircle className="w-6 h-6 text-purple-400 mt-1 flex-shrink-0" />
-                  <span className="text-gray-300 text-lg">{benefit}</span>
-                </motion.div>
-              ))}
-            </div>
-            <div className="space-y-6">
-              {benefits.slice(3).map((benefit, index) => (
-                <motion.div
-                  key={index + 3}
-                  initial={{ opacity: 0, x: 20 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
-                  className="flex items-start space-x-3"
-                >
-                  <CheckCircle className="w-6 h-6 text-purple-400 mt-1 flex-shrink-0" />
-                  <span className="text-gray-300 text-lg">{benefit}</span>
-                </motion.div>
-              ))}
-            </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {benefits.map((benefit, index) => (
+              <motion.div
+                key={benefit.title}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                viewport={{ once: true }}
+                className="group relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-all duration-300 hover:border-blue-500/50"
+              >
+                {/* Icon */}
+                <div className="mb-6">
+                  <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-indigo-500 rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                    <benefit.icon className="w-8 h-8 text-white" />
+                  </div>
+                </div>
+
+                {/* Content */}
+                <div>
+                  <h3 className="text-xl font-bold text-white mb-3 group-hover:text-blue-400 transition-colors duration-300">
+                    {benefit.title}
+                  </h3>
+                  <p className="text-gray-300 text-sm leading-relaxed">
+                    {benefit.description}
+                  </p>
+                </div>
+
+                {/* Hover Effect */}
+                <div className="absolute inset-0 bg-gradient-to-r from-blue-500/5 to-indigo-500/5 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Sales Process Section */}
+      <section className="py-20 bg-slate-800/50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-3xl md:text-5xl font-bold text-white mb-6">
+              Sales Process
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Our comprehensive sales process ensures systematic optimization 
+              and continuous improvement of your sales performance.
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {salesProcess.map((stage, index) => (
+              <motion.div
+                key={stage.stage}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                viewport={{ once: true }}
+                className="group relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-all duration-300 hover:border-blue-500/50"
+              >
+                {/* Icon */}
+                <div className="mb-6">
+                  <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-indigo-500 rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                    <stage.icon className="w-8 h-8 text-white" />
+                  </div>
+                </div>
+
+                {/* Content */}
+                <div>
+                  <h3 className="text-xl font-bold text-white mb-3 group-hover:text-blue-400 transition-colors duration-300">
+                    {stage.stage}
+                  </h3>
+                  <p className="text-gray-300 text-sm leading-relaxed">
+                    {stage.description}
+                  </p>
+                </div>
+
+                {/* Hover Effect */}
+                <div className="absolute inset-0 bg-gradient-to-r from-blue-500/5 to-indigo-500/5 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+              </motion.div>
+            ))}
           </div>
         </div>
       </section>
@@ -225,31 +377,47 @@ const AISalesCopilot = () => {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
             className="text-center mb-16"
           >
-            <h2 className="text-4xl font-bold text-white mb-4">
-              Industry Applications
+            <h2 className="text-3xl md:text-5xl font-bold text-white mb-6">
+              Industry Use Cases
             </h2>
-            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              Our AI Sales Copilot adapts to various industries, providing tailored sales 
-              optimization strategies for your specific business needs.
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Discover how organizations across industries leverage our AI Sales Copilot 
+              to improve sales performance and drive revenue growth.
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {useCases.map((useCase, index) => (
               <motion.div
-                key={index}
+                key={useCase.industry}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 text-center hover:border-purple-500/30 transition-all duration-200"
+                viewport={{ once: true }}
+                className="group relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-all duration-300 hover:border-blue-500/50"
               >
-                <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Target className="w-8 h-8 text-white" />
+                {/* Icon */}
+                <div className="mb-6">
+                  <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-indigo-500 rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                    <useCase.icon className="w-8 h-8 text-white" />
+                  </div>
                 </div>
-                <h3 className="text-xl font-semibold text-white mb-2">{useCase.industry}</h3>
-                <p className="text-gray-300 text-sm">{useCase.description}</p>
+
+                {/* Content */}
+                <div>
+                  <h3 className="text-xl font-bold text-white mb-3 group-hover:text-blue-400 transition-colors duration-300">
+                    {useCase.industry}
+                  </h3>
+                  <p className="text-gray-300 text-sm leading-relaxed">
+                    {useCase.description}
+                  </p>
+                </div>
+
+                {/* Hover Effect */}
+                <div className="absolute inset-0 bg-gradient-to-r from-blue-500/5 to-indigo-500/5 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               </motion.div>
             ))}
           </div>
@@ -257,27 +425,29 @@ const AISalesCopilot = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-purple-500/10 to-pink-500/10">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <section className="py-20 bg-gradient-to-r from-blue-900/20 to-indigo-900/20">
+        <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
           >
-            <h2 className="text-4xl font-bold text-white mb-4">
-              Boost Your Sales Performance Today
+            <h2 className="text-3xl md:text-5xl font-bold text-white mb-6">
+              Ready to Transform Your Sales?
             </h2>
-            <p className="text-xl text-gray-300 mb-8">
-              Join forward-thinking sales teams that use AI-powered intelligence to close 
-              more deals and drive sustainable revenue growth.
+            <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
+              Join organizations already leveraging AI-powered sales automation to improve 
+              performance and drive revenue growth.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-500 text-white font-semibold rounded-lg hover:from-purple-600 hover:to-pink-600 transition-all duration-200 flex items-center justify-center">
+              <button className="bg-gradient-to-r from-blue-600 to-indigo-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-blue-700 hover:to-indigo-700 transition-all duration-300 text-lg flex items-center justify-center">
+                <Star className="w-5 h-5 mr-2" />
                 Get Started Today
-                <ArrowRight className="w-5 h-5 ml-2" />
               </button>
-              <button className="px-8 py-4 border border-purple-500/30 text-purple-400 font-semibold rounded-lg hover:bg-purple-500/10 transition-all duration-200">
-                Contact Sales
+              <button className="border border-blue-500 text-blue-400 px-8 py-4 rounded-lg font-semibold hover:bg-blue-500 hover:text-white transition-all duration-300 text-lg">
+                <Share2 className="w-5 h-5 mr-2 inline" />
+                Schedule Demo
               </button>
             </div>
           </motion.div>
@@ -285,7 +455,5 @@ const AISalesCopilot = () => {
       </section>
     </div>
   );
-};
-
-export default AISalesCopilot;
+}
 

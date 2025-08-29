@@ -1,132 +1,211 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import { SEO } from '../../components/SEO';
 import { 
   MessageCircle, 
-  Users, 
+  Brain, 
   Target, 
+  Zap, 
   BarChart3, 
-  CheckCircle, 
-  ArrowRight,
-  Play,
-  Settings,
-  Cpu,
-  Cloud,
-  Activity,
-  Sparkles,
-  Search,
-  Zap,
+  Clock, 
+  Award, 
+  Star,
   Globe,
-  Building,
-  DollarSign,
-  Lock,
+  Cpu,
+  Database,
+  CheckCircle,
   Eye,
+  Users,
   FileText,
+  Shield,
+  TrendingUp,
   Phone,
   Mail,
-  Clock,
-  Star,
-  Award,
+  Calendar,
+  Search,
   Ticket,
-  Headphones
+  Headphones,
+  Download,
+  Share2,
+  ShoppingCart,
+  Heart,
+  GraduationCap,
+  Settings,
+  Smartphone
 } from 'lucide-react';
 
-const HelpdeskPlatform = () => {
+export default function HelpdeskPlatform() {
   const features = [
     {
-      icon: Ticket,
-      title: 'Ticket Management',
-      description: 'Comprehensive ticket creation, tracking, and resolution workflow management'
-    },
-    {
-      icon: Users,
-      title: 'Agent Management',
-      description: 'Efficient agent assignment, workload balancing, and performance tracking'
+      icon: Brain,
+      title: "AI-Powered Support",
+      description: "Intelligent chatbots and virtual assistants for instant customer support."
     },
     {
       icon: MessageCircle,
-      title: 'Multi-Channel Support',
-      description: 'Unified support across email, chat, phone, and social media channels'
+      title: "Multi-Channel Support",
+      description: "Unified support across email, chat, phone, and social media channels."
+    },
+    {
+      icon: Ticket,
+      title: "Ticket Management",
+      description: "Comprehensive ticket creation, tracking, and resolution workflow management."
+    },
+    {
+      icon: Users,
+      title: "Agent Management",
+      description: "Efficient agent assignment, workload balancing, and performance tracking."
     },
     {
       icon: BarChart3,
-      title: 'Analytics & Reporting',
-      description: 'Real-time insights into support performance and customer satisfaction metrics'
+      title: "Analytics & Reporting",
+      description: "Real-time insights into support performance and customer satisfaction metrics."
     },
     {
       icon: Clock,
-      title: 'SLA Management',
-      description: 'Automated service level agreement monitoring and escalation workflows'
-    },
-    {
-      icon: Star,
-      title: 'Customer Satisfaction',
-      description: 'Built-in CSAT surveys and feedback collection for continuous improvement'
+      title: "SLA Management",
+      description: "Automated service level agreement monitoring and escalation workflows."
     }
   ];
 
   const benefits = [
-    'Reduce response time by 70%',
-    'Improve customer satisfaction by 60%',
-    'Increase agent productivity by 80%',
-    'Streamline support workflows',
-    'Automate repetitive tasks',
-    'Enhance team collaboration'
+    {
+      icon: Zap,
+      title: "Improved Response Times",
+      description: "Reduce customer wait times with AI-powered automation and intelligent routing."
+    },
+    {
+      icon: Users,
+      title: "Enhanced Customer Experience",
+      description: "Provide consistent, high-quality support across all channels and touchpoints."
+    },
+    {
+      icon: BarChart3,
+      title: "Better Performance Insights",
+      description: "Track key metrics and identify areas for improvement with detailed analytics."
+    },
+    {
+      icon: Clock,
+      title: "Increased Efficiency",
+      description: "Automate repetitive tasks and focus agents on complex customer issues."
+    },
+    {
+      icon: Star,
+      title: "Higher Customer Satisfaction",
+      description: "Improve CSAT scores through faster resolution and personalized support."
+    },
+    {
+      icon: Award,
+      title: "Cost Optimization",
+      description: "Reduce support costs while maintaining or improving service quality."
+    }
+  ];
+
+  const supportChannels = [
+    {
+      channel: "Email Support",
+      description: "Professional email ticketing with automated categorization and routing",
+      icon: Mail
+    },
+    {
+      channel: "Live Chat",
+      description: "Real-time chat support with AI assistance and agent handoff",
+      icon: MessageCircle
+    },
+    {
+      channel: "Phone Support",
+      description: "Voice support with intelligent call routing and quality monitoring",
+      icon: Phone
+    },
+    {
+      channel: "Social Media",
+      description: "Monitor and respond to customer inquiries across social platforms",
+      icon: Globe
+    },
+    {
+      channel: "Self-Service Portal",
+      description: "Knowledge base and FAQ management for customer self-help",
+      icon: Search
+    },
+    {
+      channel: "Mobile App",
+      description: "Mobile-optimized support interface for on-the-go customers",
+      icon: Smartphone
+    }
   ];
 
   const useCases = [
     {
-      industry: 'Technology',
-      description: 'Software support, bug tracking, and technical issue resolution'
+      industry: "E-commerce",
+      description: "Customer service and order support for online retail businesses",
+      icon: ShoppingCart
     },
     {
-      industry: 'E-commerce',
-      description: 'Order support, product inquiries, and customer service management'
+      industry: "SaaS",
+      description: "Technical support and customer success for software companies",
+      icon: Cpu
     },
     {
-      industry: 'Healthcare',
-      description: 'Patient support, appointment scheduling, and medical inquiries'
+      industry: "Healthcare",
+      description: "Patient support and medical information assistance",
+      icon: Heart
     },
     {
-      industry: 'Financial Services',
-      description: 'Account support, transaction inquiries, and financial guidance'
+      industry: "Financial Services",
+      description: "Customer support and account management for financial institutions",
+      icon: DollarSign
+    },
+    {
+      industry: "Education",
+      description: "Student and faculty support for educational institutions",
+      icon: GraduationCap
+    },
+    {
+      industry: "Manufacturing",
+      description: "Product support and technical assistance for manufacturing companies",
+      icon: Settings
     }
   ];
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+      <SEO
+        title="Helpdesk Platform - Zion Tech Group"
+        description="Transform customer support with our AI-powered helpdesk platform. Streamline ticket management, improve response times, and enhance customer satisfaction."
+      />
+      
       {/* Hero Section */}
-      <section className="relative pt-32 pb-20 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-green-500/10 to-emerald-500/10"></div>
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="relative overflow-hidden py-20 lg:py-32">
+        <div className="absolute inset-0 bg-gradient-to-br from-orange-900/20 via-transparent to-red-900/20"></div>
+        
+        <div className="relative max-w-7xl mx-auto text-center px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            className="text-center"
           >
-            <div className="inline-flex items-center px-4 py-2 bg-green-500/10 border border-green-500/20 rounded-full text-green-400 text-sm font-medium mb-6">
-              <MessageCircle className="w-4 h-4 mr-2" />
-              AI-Powered Helpdesk Platform
+            <div className="inline-flex items-center px-4 py-2 bg-orange-600/20 text-orange-400 rounded-full text-sm font-medium mb-6">
+              <Headphones className="w-4 h-4 mr-2" />
+              AI-Powered Support
             </div>
-            
-            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
+            <h1 className="text-4xl md:text-7xl font-bold text-white mb-6">
               Helpdesk
-              <span className="bg-gradient-to-r from-green-400 to-emerald-500 bg-clip-text text-transparent"> Platform</span>
+              <span className="bg-gradient-to-r from-orange-400 to-red-400 bg-clip-text text-transparent">
+                {' '}Platform
+              </span>
             </h1>
-            
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-              Transform your customer support with a comprehensive helpdesk platform that 
-              streamlines workflows, improves efficiency, and enhances customer satisfaction.
+            <p className="text-xl text-gray-300 max-w-4xl mx-auto mb-8">
+              Transform customer support with our AI-powered helpdesk platform. 
+              Streamline ticket management, improve response times, and enhance customer satisfaction.
             </p>
-            
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="px-8 py-4 bg-gradient-to-r from-green-500 to-emerald-500 text-white font-semibold rounded-lg hover:from-green-600 hover:to-emerald-600 transition-all duration-200 flex items-center justify-center">
-                <Play className="w-5 h-5 mr-2" />
+              <button className="bg-gradient-to-r from-orange-600 to-red-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-orange-700 hover:to-red-700 transition-all duration-300 text-lg flex items-center justify-center">
+                <MessageCircle className="w-5 h-5 mr-2" />
                 Start Free Trial
               </button>
-              <button className="px-8 py-4 border border-green-500/30 text-green-400 font-semibold rounded-lg hover:bg-green-500/10 transition-all duration-200 flex items-center justify-center">
-                <Settings className="w-5 h-5 mr-2" />
-                Schedule Demo
+              <button className="border border-orange-500 text-orange-400 px-8 py-4 rounded-lg font-semibold hover:bg-orange-500 hover:text-white transition-all duration-300 text-lg">
+                <Download className="w-5 h-5 mr-2 inline" />
+                Download Brochure
               </button>
             </div>
           </motion.div>
@@ -134,37 +213,53 @@ const HelpdeskPlatform = () => {
       </section>
 
       {/* Features Section */}
-      <section className="py-20">
+      <section className="py-20 bg-slate-800/50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
             className="text-center mb-16"
           >
-            <h2 className="text-4xl font-bold text-white mb-4">
-              Comprehensive Helpdesk Features
+            <h2 className="text-3xl md:text-5xl font-bold text-white mb-6">
+              Key Features
             </h2>
-            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              Our platform provides all the tools you need to deliver exceptional customer 
-              support and manage your support team efficiently.
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Our helpdesk platform provides comprehensive tools to streamline customer support 
+              and improve service delivery.
             </p>
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index) => (
               <motion.div
-                key={index}
+                key={feature.title}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 hover:border-green-500/30 transition-all duration-200"
+                viewport={{ once: true }}
+                className="group relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-all duration-300 hover:border-orange-500/50"
               >
-                <div className="w-12 h-12 bg-gradient-to-r from-green-500 to-emerald-500 rounded-lg flex items-center justify-center mb-4">
-                  <feature.icon className="w-6 h-6 text-white" />
+                {/* Icon */}
+                <div className="mb-6">
+                  <div className="w-16 h-16 bg-gradient-to-r from-orange-500 to-red-500 rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                    <feature.icon className="w-8 h-8 text-white" />
+                  </div>
                 </div>
-                <h3 className="text-xl font-semibold text-white mb-2">{feature.title}</h3>
-                <p className="text-gray-300">{feature.description}</p>
+
+                {/* Content */}
+                <div>
+                  <h3 className="text-xl font-bold text-white mb-3 group-hover:text-orange-400 transition-colors duration-300">
+                    {feature.title}
+                  </h3>
+                  <p className="text-gray-300 text-sm leading-relaxed">
+                    {feature.description}
+                  </p>
+                </div>
+
+                {/* Hover Effect */}
+                <div className="absolute inset-0 bg-gradient-to-r from-orange-500/5 to-red-500/5 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               </motion.div>
             ))}
           </div>
@@ -172,51 +267,109 @@ const HelpdeskPlatform = () => {
       </section>
 
       {/* Benefits Section */}
-      <section className="py-20 bg-slate-800/30">
+      <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
             className="text-center mb-16"
           >
-            <h2 className="text-4xl font-bold text-white mb-4">
-              Transform Your Customer Support
+            <h2 className="text-3xl md:text-5xl font-bold text-white mb-6">
+              Platform Benefits
             </h2>
-            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              Experience measurable improvements in support efficiency, customer satisfaction, and team productivity.
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Experience the advantages of AI-powered helpdesk management that drives 
+              efficiency and improves customer satisfaction.
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div className="space-y-6">
-              {benefits.slice(0, 3).map((benefit, index) => (
-                <motion.div
-                  key={index}
-                  initial={{ opacity: 0, x: -20 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
-                  className="flex items-start space-x-3"
-                >
-                  <CheckCircle className="w-6 h-6 text-green-400 mt-1 flex-shrink-0" />
-                  <span className="text-gray-300 text-lg">{benefit}</span>
-                </motion.div>
-              ))}
-            </div>
-            <div className="space-y-6">
-              {benefits.slice(3).map((benefit, index) => (
-                <motion.div
-                  key={index + 3}
-                  initial={{ opacity: 0, x: 20 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
-                  className="flex items-start space-x-3"
-                >
-                  <CheckCircle className="w-6 h-6 text-green-400 mt-1 flex-shrink-0" />
-                  <span className="text-gray-300 text-lg">{benefit}</span>
-                </motion.div>
-              ))}
-            </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {benefits.map((benefit, index) => (
+              <motion.div
+                key={benefit.title}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                viewport={{ once: true }}
+                className="group relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-all duration-300 hover:border-orange-500/50"
+              >
+                {/* Icon */}
+                <div className="mb-6">
+                  <div className="w-16 h-16 bg-gradient-to-r from-orange-500 to-red-500 rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                    <benefit.icon className="w-8 h-8 text-white" />
+                  </div>
+                </div>
+
+                {/* Content */}
+                <div>
+                  <h3 className="text-xl font-bold text-white mb-3 group-hover:text-orange-400 transition-colors duration-300">
+                    {benefit.title}
+                  </h3>
+                  <p className="text-gray-300 text-sm leading-relaxed">
+                    {benefit.description}
+                  </p>
+                </div>
+
+                {/* Hover Effect */}
+                <div className="absolute inset-0 bg-gradient-to-r from-orange-500/5 to-red-500/5 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Support Channels Section */}
+      <section className="py-20 bg-slate-800/50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-3xl md:text-5xl font-bold text-white mb-6">
+              Support Channels
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Our platform supports multiple communication channels to meet customers 
+              where they are and provide seamless support experiences.
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {supportChannels.map((channel, index) => (
+              <motion.div
+                key={channel.channel}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                viewport={{ once: true }}
+                className="group relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-all duration-300 hover:border-orange-500/50"
+              >
+                {/* Icon */}
+                <div className="mb-6">
+                  <div className="w-16 h-16 bg-gradient-to-r from-orange-500 to-red-500 rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                    <channel.icon className="w-8 h-8 text-white" />
+                  </div>
+                </div>
+
+                {/* Content */}
+                <div>
+                  <h3 className="text-xl font-bold text-white mb-3 group-hover:text-orange-400 transition-colors duration-300">
+                    {channel.channel}
+                  </h3>
+                  <p className="text-gray-300 text-sm leading-relaxed">
+                    {channel.description}
+                  </p>
+                </div>
+
+                {/* Hover Effect */}
+                <div className="absolute inset-0 bg-gradient-to-r from-orange-500/5 to-red-500/5 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+              </motion.div>
+            ))}
           </div>
         </div>
       </section>
@@ -228,31 +381,47 @@ const HelpdeskPlatform = () => {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
             className="text-center mb-16"
           >
-            <h2 className="text-4xl font-bold text-white mb-4">
-              Industry Applications
+            <h2 className="text-3xl md:text-5xl font-bold text-white mb-6">
+              Industry Use Cases
             </h2>
-            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              Our Helpdesk Platform adapts to various industries, providing tailored 
-              support solutions for your specific business needs.
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Discover how organizations across industries leverage our helpdesk platform 
+              to improve customer support and service delivery.
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {useCases.map((useCase, index) => (
               <motion.div
-                key={index}
+                key={useCase.industry}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 text-center hover:border-green-500/30 transition-all duration-200"
+                viewport={{ once: true }}
+                className="group relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-all duration-300 hover:border-orange-500/50"
               >
-                <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-emerald-500 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Target className="w-8 h-8 text-white" />
+                {/* Icon */}
+                <div className="mb-6">
+                  <div className="w-16 h-16 bg-gradient-to-r from-orange-500 to-red-500 rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                    <useCase.icon className="w-8 h-8 text-white" />
+                  </div>
                 </div>
-                <h3 className="text-xl font-semibold text-white mb-2">{useCase.industry}</h3>
-                <p className="text-gray-300 text-sm">{useCase.description}</p>
+
+                {/* Content */}
+                <div>
+                  <h3 className="text-xl font-bold text-white mb-3 group-hover:text-orange-400 transition-colors duration-300">
+                    {useCase.industry}
+                  </h3>
+                  <p className="text-gray-300 text-sm leading-relaxed">
+                    {useCase.description}
+                  </p>
+                </div>
+
+                {/* Hover Effect */}
+                <div className="absolute inset-0 bg-gradient-to-r from-orange-500/5 to-red-500/5 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               </motion.div>
             ))}
           </div>
@@ -260,27 +429,29 @@ const HelpdeskPlatform = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-green-500/10 to-emerald-500/10">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <section className="py-20 bg-gradient-to-r from-orange-900/20 to-red-900/20">
+        <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
           >
-            <h2 className="text-4xl font-bold text-white mb-4">
-              Upgrade Your Support Today
+            <h2 className="text-3xl md:text-5xl font-bold text-white mb-6">
+              Ready to Transform Your Support?
             </h2>
-            <p className="text-xl text-gray-300 mb-8">
-              Join forward-thinking organizations that use our Helpdesk Platform to deliver 
-              exceptional customer support and drive business growth.
+            <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
+              Join organizations already leveraging our helpdesk platform to improve 
+              customer support and service delivery.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="px-8 py-4 bg-gradient-to-r from-green-500 to-emerald-500 text-white font-semibold rounded-lg hover:from-green-600 hover:to-emerald-600 transition-all duration-200 flex items-center justify-center">
+              <button className="bg-gradient-to-r from-orange-600 to-red-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-orange-700 hover:to-red-700 transition-all duration-300 text-lg flex items-center justify-center">
+                <Star className="w-5 h-5 mr-2" />
                 Get Started Today
-                <ArrowRight className="w-5 h-5 ml-2" />
               </button>
-              <button className="px-8 py-4 border border-green-500/30 text-green-400 font-semibold rounded-lg hover:bg-green-500/10 transition-all duration-200">
-                Contact Sales
+              <button className="border border-orange-500 text-orange-400 px-8 py-4 rounded-lg font-semibold hover:bg-orange-500 hover:text-white transition-all duration-300 text-lg">
+                <Share2 className="w-5 h-5 mr-2 inline" />
+                Schedule Demo
               </button>
             </div>
           </motion.div>
@@ -288,6 +459,4 @@ const HelpdeskPlatform = () => {
       </section>
     </div>
   );
-};
-
-export default HelpdeskPlatform;
+}
