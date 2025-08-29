@@ -7,6 +7,7 @@ const ComprehensiveServicesShowcase2025 = () => {
     const [searchTerm, setSearchTerm] = useState('');
     const [selectedCategory, setSelectedCategory] = useState('all');
     const [selectedIndustry, setSelectedIndustry] = useState('all');
+    const [searchTerm, setSearchTerm] = useState('');
     const allServices = [...CUTTING_EDGE_SERVICES_2025, ...SPECIALIZED_INDUSTRY_SOLUTIONS_2025];
     const categories = ['all', ...Array.from(new Set(allServices.map(service => service.category)))];
     const industries = ['all', ...Array.from(new Set(SPECIALIZED_INDUSTRY_SOLUTIONS_2025.map(service => service.industry)))];
@@ -269,7 +270,7 @@ const ComprehensiveServicesShowcase2025 = () => {
             </motion.button>
           </div>
         </div>
-      </div>
+      </motion.section>
     </div>);
 };
 export default ComprehensiveServicesShowcase2025;

@@ -3,7 +3,7 @@ import React, { Suspense, useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 
-
+>>>>>>> cursor/website-audit-content-update-and-deployment-c7b2
 import { SEO } from "@/components/SEO";
 import { HeroSection } from "@/components/HeroSection";
 import { LoadingSpinner } from "@/components/ui/LoadingSpinner";
@@ -54,16 +54,8 @@ const serviceCategories = [
     description: "Cutting-edge artificial intelligence services for business transformation",
     icon: "🤖",
     href: "/ai-services",
-    count: 20,
+    count: 15,
     color: "from-cyan-500 to-blue-600"
-  },
-  {
-    name: "Edge & IoT",
-    description: "Ultra-low latency edge computing and IoT platform solutions",
-    icon: "⚡",
-    href: "/services/edge-computing-platform",
-    count: 8,
-    color: "from-blue-500 to-purple-600"
   },
   {
     name: "Cloud & DevOps",
@@ -71,31 +63,39 @@ const serviceCategories = [
     icon: "☁️",
     href: "/services/cloud-devops",
     count: 12,
-    color: "from-green-500 to-emerald-600"
+    color: "from-blue-500 to-purple-600"
   },
   {
     name: "Cybersecurity",
     description: "Advanced security protocols and threat protection systems",
     icon: "🔒",
     href: "/services/ai-compliance-copilot",
-    count: 10,
+    count: 8,
     color: "from-red-500 to-orange-600"
   },
   {
-    name: "Data Governance",
-    description: "AI-powered data protection and compliance management",
-    icon: "🛡️",
-    href: "/services/ai-data-governance",
+    name: "Digital Transformation",
+    description: "End-to-end business process modernization and optimization",
+    icon: "🚀",
+    href: "/services/digital-transformation",
+    count: 10,
+    color: "from-green-500 to-cyan-600"
+  },
+  {
+    name: "Infrastructure",
+    description: "Robust IT infrastructure and network management solutions",
+    icon: "🏗️",
+    href: "/services/it-infrastructure",
     count: 6,
     color: "from-purple-500 to-pink-600"
   },
   {
-    name: "Customer Success",
-    description: "AI-driven customer engagement and retention platforms",
-    icon: "💝",
-    href: "/services/ai-customer-success-platform",
-    count: 5,
-    color: "from-yellow-500 to-orange-600"
+    name: "Consulting",
+    description: "Strategic technology consulting and implementation guidance",
+    icon: "💡",
+    href: "/services/it-consulting",
+    count: 9,
+    color: "from-orange-500 to-green-600"
   }
 ];
 

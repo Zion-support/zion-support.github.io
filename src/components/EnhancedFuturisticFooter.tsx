@@ -71,9 +71,6 @@ export const EnhancedFuturisticFooter: React.FC = () => {
       color: 'from-purple-600 to-pink-600',
       links: [
         { name: 'AI Business Intelligence', href: '/services/ai-business-intelligence' },
-        { name: 'AI Workflow Orchestrator', href: '/services/ai-workflow-orchestrator' },
-        { name: 'AI Data Governance', href: '/services/ai-data-governance' },
-        { name: 'AI Customer Success Platform', href: '/services/ai-customer-success-platform' },
         { name: 'AI Sales Copilot', href: '/services/ai-sales-copilot' },
         { name: 'AI Compliance Assistant', href: '/services/ai-compliance-assistant' },
         { name: 'AI Auto Email Responder', href: '/services/ai-auto-email-responder' },
@@ -95,13 +92,10 @@ export const EnhancedFuturisticFooter: React.FC = () => {
       ]
     },
     {
-      title: 'Edge & IoT Services',
-      icon: Server,
-      color: 'from-blue-600 to-cyan-600',
+      title: 'IoT & Digital Twin',
+      icon: Rocket,
+      color: 'from-green-600 to-emerald-600',
       links: [
-        { name: 'IoT & Edge Computing', href: '/services/iot-edge' },
-        { name: 'Edge Computing Platform', href: '/services/edge-computing-platform' },
-        { name: 'Digital Twin', href: '/services/digital-twin' },
         { name: 'IT Infrastructure', href: '/services/it-infrastructure' },
         { name: 'Digital Transformation', href: '/services/digital-transformation' },
         { name: 'IT Consulting', href: '/services/it-consulting' },
@@ -133,8 +127,7 @@ export const EnhancedFuturisticFooter: React.FC = () => {
     { name: 'About Us', href: '/about' },
     { name: 'Contact', href: '/contact' },
     { name: 'Blog', href: '/blog' },
-    { name: 'Careers', href: '/careers' },
-    { name: 'Sitemap', href: '/sitemap' }
+    { name: 'Careers', href: '/careers' }
   ];
 
   const companyLinks = [
@@ -163,21 +156,6 @@ export const EnhancedFuturisticFooter: React.FC = () => {
     { name: 'Security', href: '/security', description: 'Security practices' },
     { name: 'Compliance', href: '/compliance', description: 'Regulatory compliance' }
   ];
-
-  // Create missing pages for broken links
-  const createMissingPage = (name: string, href: string) => {
-    // For now, we'll create placeholder pages for missing routes
-    // These will be created as separate components
-    return (
-      <Link
-        key={name}
-        to={href}
-        className="block text-sm text-slate-300 hover:text-cyan-400 transition-colors"
-      >
-        {name}
-      </Link>
-    );
-  };
 
   return (
     <footer className="bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white border-t border-cyan-400/20">
@@ -249,14 +227,14 @@ export const EnhancedFuturisticFooter: React.FC = () => {
                     className="flex items-center space-x-3 p-3 rounded-lg hover:bg-slate-800/50 transition-colors group"
                   >
                     <div className="w-8 h-8 rounded-lg bg-slate-800 flex items-center justify-center group-hover:bg-cyan-400/20 transition-colors">
-                      <Star className="w-4 h-4 text-cyan-400" />
+                      <link.icon className="w-4 h-4 text-cyan-400" />
                     </div>
                     <div>
                       <div className="font-medium text-white group-hover:text-cyan-400 transition-colors">
                         {link.name}
                       </div>
                       <div className="text-xs text-slate-400">
-                        Quick access
+                        {link.description}
                       </div>
                     </div>
                   </Link>
@@ -467,16 +445,16 @@ export const EnhancedFuturisticFooter: React.FC = () => {
 
       {/* Floating Elements */}
       <div className="absolute top-10 left-10 opacity-20">
-        <Brain className="w-8 h-8 text-cyan-400 animate-bounce" />
+        <Brain className="w-8 h-8 text-zion-cyan animate-bounce" />
       </div>
       <div className="absolute top-20 right-20 opacity-20">
-        <Rocket className="w-8 h-8 text-purple-400 animate-pulse" />
+        <Rocket className="w-8 h-8 text-zion-purple animate-pulse" />
       </div>
       <div className="absolute bottom-20 left-20 opacity-20">
-        <Brain className="w-8 h-8 text-cyan-400 animate-spin" />
+        <Brain className="w-8 h-8 text-zion-cyan animate-spin" />
       </div>
       <div className="absolute bottom-10 right-10 opacity-20">
-        <Shield className="w-8 h-8 text-purple-400 animate-bounce delay-1000" />
+        <Shield className="w-8 h-8 text-zion-purple animate-bounce delay-1000" />
       </div>
     </footer>
   );
