@@ -95,10 +95,10 @@ const EnhancedAccessibility = () => {
     };
     const speakText = (text) => {
         if ('speechSynthesis' in window) {
-            const utterance = new (window as any).SpeechSynthesisUtterance(text);
+            const utterance = new window.SpeechSynthesisUtterance(text);
             utterance.rate = 0.9;
             utterance.pitch = 1;
-            (window as any).speechSynthesis.speak(utterance);
+            window.speechSynthesis.speak(utterance);
         }
     };
     const announcePageChange = (pageName) => {

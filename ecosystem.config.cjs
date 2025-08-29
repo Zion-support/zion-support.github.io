@@ -313,6 +313,20 @@ module.exports = {
         NODE_ENV: 'production',
         AUTOMATION_INTERVAL: '7200000' // 2 hours
       }
+    },
+
+    // 🎯 NEW: Automation Orchestrator - coordinates all automation processes
+    {
+      name: 'automation-orchestrator',
+      script: './scripts/automation/automation-orchestrator.cjs',
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      max_memory_restart: '1G',
+      env: {
+        NODE_ENV: 'production',
+        AUTOMATION_INTERVAL: '3600000' // 1 hour
+      }
     }
   ]
 };

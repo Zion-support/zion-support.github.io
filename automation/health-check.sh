@@ -184,7 +184,11 @@ EOF
     # Display summary
     echo ""
     echo -e "${BLUE}📊 Health Check Summary${NC}"
-    echo -e "  Overall Status: ${health_overall == "healthy" ? GREEN : RED}${health_overall^^}${NC}"
+    if [ "$health_overall" = "healthy" ]; then
+        echo -e "  Overall Status: ${GREEN}${health_overall}${NC}"
+    else
+        echo -e "  Overall Status: ${RED}${health_overall}${NC}"
+    fi
     echo -e "  Healthy: ${GREEN}$healthy${NC}"
     echo -e "  Unhealthy: ${RED}$unhealthy${NC}"
     echo -e "  Unknown: ${YELLOW}$unknown${NC}"

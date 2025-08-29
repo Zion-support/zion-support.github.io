@@ -1,450 +1,322 @@
 #!/usr/bin/env node
 
-/**
- * Zion Tech Group - PM2 Automation Orchestrator
- * Intelligent coordination and scheduling of automation processes
- */
-
-const pm2 = require('pm2');
-const fs = require('fs').promises;
+const fs = require('fs');
 const path = require('path');
+const { execSync } = require('child_process');
 
 class AutomationOrchestrator {
   constructor() {
-    this.processes = new Map();
-    this.schedules = new Map();
-    this.dependencies = new Map();
-    this.healthChecks = new Map();
-    this.config = {
-      maxConcurrentProcesses: 5,
-      healthCheckInterval: 30000, // 30 seconds
-      retryAttempts: 3,
-      retryDelay: 5000, // 5 seconds
-      logLevel: 'info'
-    };
+    this.projectRoot = process.cwd();
+    this.logFile = path.join(this.projectRoot, 'logs/automation/automation-orchestrator.log');
+    this.reportFile = path.join(this.projectRoot, 'logs/automation/automation-report.json');
+    this.startTime = Date.now();
+    this.processes = [];
   }
 
-  async initialize() {
-    return new Promise((resolve, reject) => {
-      pm2.connect((err) => {
-        if (err) {
-          console.error('❌ Failed to connect to PM2');
-          reject(err);
-          return;
-        }
-        console.log('✅ Connected to PM2');
-        this.setupProcessMonitoring();
-        this.initializeSchedules();
-        this.startHealthMonitoring();
-        resolve();
-      });
-    });
+  log(message) {
+    const timestamp = new Date().toISOString();
+    const logMessage = `[${timestamp}] ${message}\n`;
+
+    try {
+      fs.appendFileSync(this.logFile, logMessage);
+      console.log(logMessage.trim());
+    } catch (error) {
+      console.error('Failed to write to log file:', error.message);
+    }
   }
 
-  setupProcessMonitoring() {
-    pm2.launchBus((err, bus) => {
-      if (err) {
-        console.error('❌ Failed to launch PM2 bus');
-        return;
+  async runProcess(scriptName, description) {
+    try {
+      this.log(`🚀 Running ${description}...`);
+      
+      const scriptPath = path.join(this.projectRoot, 'scripts/automation', scriptName);
+      if (!fs.existsSync(scriptPath)) {
+        this.log(`❌ Script not found: ${scriptPath}`);
+        return { success: false, error: 'Script not found' };
       }
 
-      bus.on('process:event', (data) => {
-        this.handleProcessEvent(data);
+      const startTime = Date.now();
+      const result = execSync(`node ${scriptPath}`, { 
+        cwd: this.projectRoot, 
+        stdio: 'pipe',
+        timeout: 300000 // 5 minutes timeout
       });
-
-      bus.on('log:err', (data) => {
-        this.handleProcessError(data);
-      });
-
-      bus.on('log:out', (data) => {
-        this.handleProcessLog(data);
-      });
-    });
+      
+      const duration = Date.now() - startTime;
+      this.log(`✅ ${description} completed successfully in ${duration}ms`);
+      
+      return { success: true, duration, output: result.toString() };
+    } catch (error) {
+      this.log(`❌ ${description} failed: ${error.message}`);
+      return { success: false, error: error.message };
+    }
   }
 
-  handleProcessEvent(data) {
-    const { event, process } = data;
+  async runSequentialProcesses() {
+    this.log('🔄 Running sequential processes...');
     
-    switch (event) {
-      case 'start':
-        console.log(`🚀 Process ${process.name} started`);
-        this.processes.set(process.name, { ...process, status: 'online' });
-        break;
-      case 'stop':
-        console.log(`⏸️  Process ${process.name} stopped`);
-        this.processes.set(process.name, { ...process, status: 'stopped' });
-        break;
-      case 'restart':
-        console.log(`🔄 Process ${process.name} restarted`);
-        this.processes.set(process.name, { ...process, status: 'online' });
-        break;
-      case 'exit':
-        console.log(`❌ Process ${process.name} exited`);
-        this.processes.set(process.name, { ...process, status: 'errored' });
-        this.handleProcessFailure(process.name);
-        break;
-    }
-  }
-
-  handleProcessError(data) {
-    const { process, log } = data;
-    console.error(`❌ Error in ${process.name}:`, log);
-    
-    // Update process status
-    if (this.processes.has(process.name)) {
-      this.processes.get(process.name).status = 'errored';
-    }
-  }
-
-  handleProcessLog(data) {
-    const { process, log } = data;
-    
-    // Log important messages
-    if (log.includes('ERROR') || log.includes('CRITICAL')) {
-      console.error(`⚠️  ${process.name}:`, log);
-    } else if (log.includes('SUCCESS') || log.includes('COMPLETED')) {
-      console.log(`✅ ${process.name}:`, log);
-    }
-  }
-
-  handleProcessFailure(processName) {
-    const process = this.processes.get(processName);
-    if (!process) return;
-
-    // Check if this is a critical process
-    if (this.isCriticalProcess(processName)) {
-      console.log(`🚨 Critical process ${processName} failed, attempting recovery...`);
-      this.attemptRecovery(processName);
-    }
-  }
-
-  isCriticalProcess(processName) {
-    const criticalProcesses = [
-      'console-error-fixer',
-      'security-audit',
-      'performance-monitor'
+    const sequentialScripts = [
+      { script: 'file-integrity-monitor.cjs', description: 'File Integrity Monitor' },
+      { script: 'typescript-syntax-fixer.cjs', description: 'TypeScript Syntax Fixer' },
+      { script: 'build-health-monitor.cjs', description: 'Build Health Monitor' },
+      { script: 'lint-fixer.cjs', description: 'Lint Fixer' },
+      { script: 'code-quality-monitor.cjs', description: 'Code Quality Monitor' }
     ];
-    return criticalProcesses.includes(processName);
-  }
 
-  async attemptRecovery(processName) {
-    try {
-      console.log(`🔄 Attempting to restart ${processName}...`);
-      await this.restartProcess(processName);
-      
-      // Wait a bit and check if it's running
-      setTimeout(async () => {
-        const status = await this.getProcessStatus(processName);
-        if (status === 'online') {
-          console.log(`✅ ${processName} recovered successfully`);
-        } else {
-          console.error(`❌ ${processName} recovery failed`);
-        }
-      }, 10000);
-    } catch (error) {
-      console.error(`❌ Failed to recover ${processName}:`, error.message);
-    }
-  }
-
-  initializeSchedules() {
-    // Define process schedules and dependencies
-    this.schedules.set('console-error-fixer', {
-      interval: 900000, // 15 minutes
-      priority: 'high',
-      dependencies: []
-    });
-
-    this.schedules.set('link-checker', {
-      interval: 1800000, // 30 minutes
-      priority: 'medium',
-      dependencies: []
-    });
-
-    this.schedules.set('continuous-improvement', {
-      interval: 7200000, // 2 hours
-      priority: 'medium',
-      dependencies: ['console-error-fixer']
-    });
-
-    this.schedules.set('daily-build-test', {
-      interval: 3600000, // 1 hour
-      priority: 'medium',
-      dependencies: []
-    });
-
-    this.schedules.set('security-audit', {
-      interval: 14400000, // 4 hours
-      priority: 'high',
-      dependencies: []
-    });
-
-    this.schedules.set('dependency-updates', {
-      interval: 21600000, // 6 hours
-      priority: 'low',
-      dependencies: ['security-audit']
-    });
-
-    this.schedules.set('performance-monitor', {
-      interval: 7200000, // 2 hours
-      priority: 'medium',
-      dependencies: []
-    });
-
-    this.schedules.set('quality-checks', {
-      interval: 10800000, // 3 hours
-      priority: 'medium',
-      dependencies: ['console-error-fixer']
-    });
-
-    this.schedules.set('link-integrity', {
-      interval: 7200000, // 2 hours
-      priority: 'low',
-      dependencies: ['link-checker']
-    });
-
-    this.schedules.set('front-maximizer', {
-      interval: 14400000, // 4 hours
-      priority: 'low',
-      dependencies: []
-    });
-
-    this.schedules.set('sitemap-runner', {
-      interval: 21600000, // 6 hours
-      priority: 'low',
-      dependencies: ['link-checker']
-    });
-  }
-
-  startHealthMonitoring() {
-    setInterval(() => {
-      this.performHealthCheck();
-    }, this.config.healthCheckInterval);
-  }
-
-  async performHealthCheck() {
-    try {
-      const processes = await this.getProcessList();
-      
-      for (const process of processes) {
-        const health = this.assessProcessHealth(process);
-        this.healthChecks.set(process.name, health);
-        
-        if (health.status === 'unhealthy') {
-          console.warn(`⚠️  Unhealthy process detected: ${process.name}`);
-          this.handleUnhealthyProcess(process.name, health);
-        }
-      }
-    } catch (error) {
-      console.error('❌ Health check failed:', error.message);
-    }
-  }
-
-  assessProcessHealth(process) {
-    const health = {
-      status: 'healthy',
-      issues: [],
-      metrics: {}
-    };
-
-    // Check memory usage
-    const memoryMB = process.monit.memory / (1024 * 1024);
-    if (memoryMB > 100) {
-      health.status = 'unhealthy';
-      health.issues.push('High memory usage');
-    }
-    health.metrics.memory = memoryMB;
-
-    // Check CPU usage
-    if (process.monit.cpu > 80) {
-      health.status = 'unhealthy';
-      health.issues.push('High CPU usage');
-    }
-    health.metrics.cpu = process.monit.cpu;
-
-    // Check restart count
-    if (process.pm2_env.restart_time > 5) {
-      health.status = 'unhealthy';
-      health.issues.push('Excessive restarts');
-    }
-    health.metrics.restarts = process.pm2_env.restart_time;
-
-    // Check uptime
-    const uptimeHours = (Date.now() - process.pm2_env.pm_uptime) / (1000 * 60 * 60);
-    if (uptimeHours < 0.1) { // Less than 6 minutes
-      health.status = 'unhealthy';
-      health.issues.push('Low uptime');
-    }
-    health.metrics.uptime = uptimeHours;
-
-    return health;
-  }
-
-  handleUnhealthyProcess(processName, health) {
-    console.warn(`🚨 Process ${processName} is unhealthy:`, health.issues);
+    const results = [];
     
-    // Attempt to restart unhealthy processes
-    if (health.issues.includes('Excessive restarts') || health.issues.includes('Low uptime')) {
-      console.log(`🔄 Attempting to restart unhealthy process ${processName}...`);
-      this.restartProcess(processName).catch(error => {
-        console.error(`❌ Failed to restart ${processName}:`, error.message);
+    for (const script of sequentialScripts) {
+      const result = await this.runProcess(script.script, script.description);
+      results.push({
+        script: script.script,
+        description: script.description,
+        ...result
       });
+      
+      // Wait a bit between processes to avoid overwhelming the system
+      await new Promise(resolve => setTimeout(resolve, 2000));
     }
+
+    return results;
   }
 
-  async getProcessList() {
-    return new Promise((resolve, reject) => {
-      pm2.list((err, processes) => {
-        if (err) {
-          reject(err);
-          return;
-        }
-        resolve(processes);
-      });
+  async runParallelProcesses() {
+    this.log('⚡ Running parallel processes...');
+    
+    const parallelScripts = [
+      { script: 'dependency-monitor.cjs', description: 'Dependency Monitor' },
+      { script: 'performance-monitor.cjs', description: 'Performance Monitor' },
+      { script: 'auto-commit-fixes.cjs', description: 'Auto Commit Fixes' }
+    ];
+
+    const promises = parallelScripts.map(script => 
+      this.runProcess(script.script, script.description)
+        .then(result => ({ script: script.script, description: script.description, ...result }))
+    );
+
+    const results = await Promise.allSettled(promises);
+    
+    return results.map((result, index) => {
+      if (result.status === 'fulfilled') {
+        return result.value;
+      } else {
+        return {
+          script: parallelScripts[index].script,
+          description: parallelScripts[index].description,
+          success: false,
+          error: result.reason.message
+        };
+      }
     });
   }
 
-  async getProcessStatus(processName) {
+  async checkSystemHealth() {
+    this.log('🏥 Checking system health...');
+    
+    const healthChecks = [];
+    
+    // Check disk space
     try {
-      const processes = await this.getProcessList();
-      const process = processes.find(p => p.name === processName);
-      return process ? process.pm2_env.status : 'unknown';
+      const diskSpace = execSync('df -h .', { cwd: this.projectRoot, stdio: 'pipe' }).toString();
+      const availableSpace = diskSpace.split('\n')[1].split(/\s+/)[3];
+      healthChecks.push({
+        type: 'disk-space',
+        status: 'ok',
+        message: `Available disk space: ${availableSpace}`,
+        value: availableSpace
+      });
     } catch (error) {
-      console.error(`❌ Failed to get status for ${processName}:`, error.message);
-      return 'unknown';
+      healthChecks.push({
+        type: 'disk-space',
+        status: 'error',
+        message: 'Could not check disk space',
+        error: error.message
+      });
     }
-  }
 
-  async restartProcess(processName) {
-    return new Promise((resolve, reject) => {
-      pm2.restart(processName, (err) => {
-        if (err) {
-          reject(err);
-          return;
-        }
-        resolve();
+    // Check git status
+    try {
+      const gitStatus = execSync('git status --porcelain', { cwd: this.projectRoot, stdio: 'pipe' }).toString();
+      const hasChanges = gitStatus.trim().length > 0;
+      
+      healthChecks.push({
+        type: 'git-status',
+        status: hasChanges ? 'warning' : 'ok',
+        message: hasChanges ? 'Uncommitted changes detected' : 'Git repository is clean',
+        value: hasChanges
       });
-    });
-  }
-
-  async stopProcess(processName) {
-    return new Promise((resolve, reject) => {
-      pm2.stop(processName, (err) => {
-        if (err) {
-          reject(err);
-          return;
-        }
-        resolve();
+    } catch (error) {
+      healthChecks.push({
+        type: 'git-status',
+        status: 'error',
+        message: 'Could not check git status',
+        error: error.message
       });
-    });
-  }
+    }
 
-  async startProcess(processName) {
-    return new Promise((resolve, reject) => {
-      pm2.start(processName, (err) => {
-        if (err) {
-          reject(err);
-          return;
-        }
-        resolve();
+    // Check PM2 status
+    try {
+      const pm2Status = execSync('pm2 status', { stdio: 'pipe' }).toString();
+      const runningProcesses = pm2Status.split('\n').filter(line => line.includes('online')).length;
+      
+      healthChecks.push({
+        type: 'pm2-status',
+        status: 'ok',
+        message: `${runningProcesses} PM2 processes running`,
+        value: runningProcesses
       });
-    });
+    } catch (error) {
+      healthChecks.push({
+        type: 'pm2-status',
+        status: 'error',
+        message: 'Could not check PM2 status',
+        error: error.message
+      });
+    }
+
+    return healthChecks;
   }
 
-  getProcessInfo(processName) {
-    return this.processes.get(processName) || null;
-  }
+  async generateReport(sequentialResults, parallelResults, healthChecks) {
+    const totalProcesses = sequentialResults.length + parallelResults.length;
+    const successfulProcesses = sequentialResults.filter(r => r.success).length + 
+                               parallelResults.filter(r => r.success).length;
+    const failedProcesses = totalProcesses - successfulProcesses;
 
-  getHealthStatus(processName) {
-    return this.healthChecks.get(processName) || { status: 'unknown' };
-  }
-
-  getSchedule(processName) {
-    return this.schedules.get(processName) || null;
-  }
-
-  async generateReport() {
     const report = {
       timestamp: new Date().toISOString(),
       summary: {
-        totalProcesses: this.processes.size,
-        healthyProcesses: 0,
-        unhealthyProcesses: 0,
-        erroredProcesses: 0
+        totalProcesses,
+        successfulProcesses,
+        failedProcesses,
+        successRate: Math.round((successfulProcesses / totalProcesses) * 100)
       },
-      processes: [],
+      sequentialProcesses: sequentialResults,
+      parallelProcesses: parallelResults,
+      systemHealth: healthChecks,
       recommendations: []
     };
 
-    for (const [name, process] of this.processes) {
-      const health = this.healthChecks.get(name) || { status: 'unknown' };
-      const schedule = this.schedules.get(name) || {};
-      
-      if (health.status === 'healthy') {
-        report.summary.healthyProcesses++;
-      } else if (health.status === 'unhealthy') {
-        report.summary.unhealthyProcesses++;
-      } else if (process.status === 'errored') {
-        report.summary.erroredProcesses++;
-      }
-
-      report.processes.push({
-        name,
-        status: process.status,
-        health: health.status,
-        schedule: schedule.interval ? `${schedule.interval / 1000}s` : 'N/A',
-        priority: schedule.priority || 'N/A'
+    // Generate recommendations based on results
+    if (failedProcesses > 0) {
+      report.recommendations.push({
+        priority: 'high',
+        message: `${failedProcesses} processes failed`,
+        action: 'Review failed processes and fix underlying issues'
       });
     }
 
-    // Generate recommendations
-    if (report.summary.unhealthyProcesses > 0) {
-      report.recommendations.push('Review and optimize unhealthy processes');
+    if (report.summary.successRate < 80) {
+      report.recommendations.push({
+        priority: 'medium',
+        message: 'Low success rate detected',
+        action: 'Investigate and improve automation reliability'
+      });
     }
-    if (report.summary.erroredProcesses > 0) {
-      report.recommendations.push('Investigate and fix errored processes');
+
+    const healthIssues = healthChecks.filter(check => check.status !== 'ok');
+    if (healthIssues.length > 0) {
+      report.recommendations.push({
+        priority: 'medium',
+        message: `${healthIssues.length} system health issues detected`,
+        action: 'Address system health issues to improve automation performance'
+      });
     }
 
     return report;
   }
 
-  async saveReport() {
+  async saveReport(report) {
     try {
-      const report = await this.generateReport();
-      const reportPath = path.join(__dirname, '..', 'reports', 'automation-report.json');
-      
-      // Ensure reports directory exists
-      await fs.mkdir(path.dirname(reportPath), { recursive: true });
-      
-      await fs.writeFile(reportPath, JSON.stringify(report, null, 2));
-      console.log(`📊 Report saved to ${reportPath}`);
+      const reportDir = path.dirname(this.reportFile);
+      if (!fs.existsSync(reportDir)) {
+        fs.mkdirSync(reportDir, { recursive: true });
+      }
+
+      fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2));
+      this.log(`Report saved to: ${this.reportFile}`);
     } catch (error) {
-      console.error('❌ Failed to save report:', error.message);
+      this.log(`Error saving report: ${error.message}`);
     }
   }
 
   async run() {
+    this.log('🎯 Starting Automation Orchestrator...');
+    this.log(`Project root: ${this.projectRoot}`);
+
     try {
-      await this.initialize();
-      console.log('🚀 Automation Orchestrator started');
-      
-      // Generate initial report
-      await this.saveReport();
-      
-      // Keep the orchestrator running
-      setInterval(async () => {
-        await this.saveReport();
-      }, 300000); // Every 5 minutes
-      
+      // Create logs directory if it doesn't exist
+      const logsDir = path.dirname(this.logFile);
+      if (!fs.existsSync(logsDir)) {
+        fs.mkdirSync(logsDir, { recursive: true });
+      }
+
+      // Check system health first
+      const healthChecks = await this.checkSystemHealth();
+
+      // Run sequential processes (critical fixes first)
+      this.log('\n🔄 Phase 1: Running critical fixes sequentially...');
+      const sequentialResults = await this.runSequentialProcesses();
+
+      // Run parallel processes (monitoring and maintenance)
+      this.log('\n⚡ Phase 2: Running monitoring processes in parallel...');
+      const parallelResults = await this.runParallelProcesses();
+
+      // Generate comprehensive report
+      this.log('\n📊 Generating automation report...');
+      const report = await this.generateReport(sequentialResults, parallelResults, healthChecks);
+
+      // Save report
+      await this.saveReport(report);
+
+      const duration = Date.now() - this.startTime;
+
+      // Log summary
+      this.log('\n🎯 Automation Orchestrator Summary:');
+      this.log(`Total processes: ${report.summary.totalProcesses}`);
+      this.log(`Successful: ${report.summary.successfulProcesses}`);
+      this.log(`Failed: ${report.summary.failedProcesses}`);
+      this.log(`Success rate: ${report.summary.successRate}%`);
+      this.log(`Duration: ${duration}ms`);
+
+      // Log system health
+      this.log('\n🏥 System Health:');
+      healthChecks.forEach(check => {
+        const status = check.status === 'ok' ? '✅' : check.status === 'warning' ? '⚠️' : '❌';
+        this.log(`  ${status} ${check.type}: ${check.message}`);
+      });
+
+      // Log process results
+      this.log('\n📋 Process Results:');
+      [...sequentialResults, ...parallelResults].forEach(result => {
+        const status = result.success ? '✅' : '❌';
+        this.log(`  ${status} ${result.description}: ${result.success ? 'Success' : result.error}`);
+      });
+
+      if (report.recommendations.length > 0) {
+        this.log('\n💡 Recommendations:');
+        report.recommendations.forEach(rec => {
+          this.log(`  [${rec.priority.toUpperCase()}] ${rec.message}`);
+          this.log(`    Action: ${rec.action}`);
+        });
+      }
+
+      if (report.summary.successRate === 100) {
+        this.log('\n🎉 All automation processes completed successfully!');
+      } else {
+        this.log(`\n⚠️  ${report.summary.failedProcesses} processes failed. Check logs for details.`);
+      }
+
     } catch (error) {
-      console.error('❌ Orchestrator error:', error.message);
+      this.log(`❌ Error running automation orchestrator: ${error.message}`);
+      process.exit(1);
     }
   }
 }
 
-// Run the orchestrator
-if (require.main === module) {
-  const orchestrator = new AutomationOrchestrator();
-  orchestrator.run().catch(console.error);
-}
-
-module.exports = AutomationOrchestrator;
+// Run the automation orchestrator
+const orchestrator = new AutomationOrchestrator();
+orchestrator.run().catch(error => {
+  console.error('Fatal error:', error);
+  process.exit(1);
+});
