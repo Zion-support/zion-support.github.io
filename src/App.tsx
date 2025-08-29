@@ -36,7 +36,6 @@ const RevolutionaryServices2030 = React.lazy(() => import('./pages/Revolutionary
 const InnovativeServicesShowcase2027 = React.lazy(() => import('./pages/InnovativeServicesShowcase2027'));
 const ComprehensivePricingGuide2027 = React.lazy(() => import('./pages/ComprehensivePricingGuide2027'));
 const ComprehensiveServicesLanding2027 = React.lazy(() => import('./pages/ComprehensiveServicesLanding2027'));
-const Sitemap = React.lazy(() => import('./pages/sitemap'));
 const Support = React.lazy(() => import('./pages/Support'));
 const EnhancedServicesShowcase2025 = React.lazy(() => import('./pages/EnhancedServicesShowcase2025'));
 const ComprehensivePricing2025 = React.lazy(() => import('./pages/ComprehensivePricing2025'));
@@ -117,7 +116,6 @@ function App() {
                 <Route path="/login" element={<Login />} />
                 <Route path="/marketplace" element={<Marketplace />} />
                 <Route path="/innovative-micro-saas-services-2025" element={<InnovativeMicroSAASServices2025 />} />
-                <Route path="/sitemap" element={<Sitemap />} />
                 <Route path="/support" element={<Support />} />
                 <Route path="/enhanced-services-2025" element={<EnhancedServicesShowcase2025 />} />
                 <Route path="/comprehensive-pricing-2025-new" element={<ComprehensivePricing2025 />} />
