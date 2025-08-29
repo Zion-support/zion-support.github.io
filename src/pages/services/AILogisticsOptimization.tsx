@@ -2,10 +2,12 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { SEO } from '../../components/SEO';
 import { 
-  Shield, 
-  Eye, 
-  AlertTriangle, 
+  Truck, 
+  Route, 
+  Package, 
+  Globe, 
   Brain, 
+  Shield, 
   Zap, 
   Users, 
   CheckCircle, 
@@ -17,9 +19,11 @@ import {
   ArrowRight,
   Building,
   Calculator,
-  ChartBar,
+  BarChart3,
+  Eye,
   Search,
   Filter,
+  AlertTriangle,
   Award,
   Phone,
   Mail,
@@ -36,118 +40,105 @@ import {
   Monitor,
   Activity,
   Gauge,
-  Bug,
-  Virus,
-  LockKeyhole,
-  Fingerprint,
-  Scan,
-  AlertCircle,
-  ShieldCheck,
-  Globe,
-  Wifi,
-  Smartphone,
-  Laptop
+  ShoppingCart,
+  Snowflake
 } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
-const AICybersecurityThreatIntelligence: React.FC = () => {
+const AILogisticsOptimization: React.FC = () => {
   const features = [
     {
-      title: 'AI-Powered Threat Detection',
-      description: 'Advanced machine learning algorithms detect and analyze cyber threats in real-time with 99.9% accuracy',
+      title: 'AI Route Optimization',
+      description: 'Advanced algorithms optimize delivery routes in real-time, reducing fuel costs and delivery times by up to 30%',
+      icon: Route,
+      color: 'from-blue-500 to-cyan-500'
+    },
+    {
+      title: 'Predictive Demand Forecasting',
+      description: 'Machine learning models predict demand patterns, enabling proactive inventory management and resource allocation',
       icon: Brain,
       color: 'from-purple-500 to-indigo-500'
     },
     {
-      title: 'Real-time Threat Intelligence',
-      description: 'Continuous monitoring and analysis of global threat landscape with instant alerts and response recommendations',
-      icon: Eye,
-      color: 'from-blue-500 to-cyan-500'
-    },
-    {
-      title: 'Behavioral Analytics',
-      description: 'AI-driven user behavior analysis to identify anomalous activities and potential insider threats',
-      icon: Activity,
+      title: 'Real-time Fleet Management',
+      description: 'Live tracking and monitoring of vehicles with AI-powered performance analytics and maintenance predictions',
+      icon: Truck,
       color: 'from-green-500 to-emerald-500'
     },
     {
-      title: 'Automated Incident Response',
-      description: 'Intelligent automation of threat containment, investigation, and remediation processes',
-      icon: Zap,
+      title: 'Smart Warehouse Automation',
+      description: 'AI-driven warehouse optimization with automated picking, packing, and inventory management systems',
+      icon: Package,
       color: 'from-orange-500 to-red-500'
     },
     {
-      title: 'Predictive Threat Modeling',
-      description: 'AI-powered prediction of potential attack vectors and proactive security recommendations',
-      icon: TrendingUp,
+      title: 'Supply Chain Intelligence',
+      description: 'End-to-end visibility across the supply chain with AI-powered risk assessment and disruption prediction',
+      icon: Network,
       color: 'from-indigo-500 to-purple-500'
     },
     {
-      title: 'Zero-Day Exploit Detection',
-      description: 'Advanced signature-less detection of unknown threats using behavioral analysis and AI patterns',
-      icon: Bug,
+      title: 'Cost Optimization Engine',
+      description: 'Intelligent cost analysis and optimization recommendations for maximum efficiency and profitability',
+      icon: Calculator,
       color: 'from-red-500 to-pink-500'
     }
   ];
 
   const pricingPlans = [
     {
-      name: 'Essential',
-      price: 399,
+      name: 'Starter',
+      price: 299,
       period: 'month',
-      description: 'Perfect for small businesses and startups',
+      description: 'Perfect for small logistics operations and startups',
       features: [
-        'Up to 100 endpoints protected',
-        'Basic threat detection',
-        'Real-time alerts',
+        'Up to 50 vehicles tracked',
+        'Basic route optimization',
+        'Real-time GPS tracking',
         'Email support',
-        'Web dashboard access',
-        'Basic reporting',
-        'Up to 1,000 events/month',
-        'Standard threat intelligence feeds'
+        'Mobile app access',
+        'Basic reporting dashboard',
+        'Up to 1,000 shipments/month'
       ],
       color: 'from-blue-500 to-cyan-500',
       popular: false
     },
     {
       name: 'Professional',
-      price: 999,
+      price: 799,
       period: 'month',
-      description: 'Ideal for growing companies and mid-size organizations',
+      description: 'Ideal for growing logistics companies and mid-size operations',
       features: [
-        'Up to 500 endpoints protected',
-        'Advanced AI threat detection',
-        'Behavioral analytics',
+        'Up to 200 vehicles tracked',
+        'Advanced AI route optimization',
+        'Predictive analytics',
         'Priority support',
         'API access',
         'Advanced reporting suite',
         'Custom integrations',
-        'Up to 10,000 events/month',
-        'Premium threat intelligence feeds',
-        'Automated incident response',
-        '24/7 monitoring'
+        'Up to 10,000 shipments/month',
+        'Real-time alerts',
+        'Performance analytics'
       ],
       color: 'from-purple-500 to-pink-500',
       popular: true
     },
     {
       name: 'Enterprise',
-      price: 2499,
+      price: 1999,
       period: 'month',
-      description: 'Comprehensive solution for large enterprises and government organizations',
+      description: 'Comprehensive solution for large logistics corporations and global operations',
       features: [
-        'Unlimited endpoints protected',
+        'Unlimited vehicles tracked',
         'Custom AI model training',
         'White-label solutions',
         'Dedicated account manager',
         'Custom integrations',
         'Advanced analytics platform',
-        'Multi-tenant support',
-        'Unlimited events',
+        'Multi-location support',
+        'Unlimited shipments',
         'Onsite training',
-        'Custom SLA agreements',
-        'Compliance reporting',
-        'Threat hunting services'
+        'Custom SLA agreements'
       ],
       color: 'from-amber-500 to-orange-500',
       popular: false
@@ -156,54 +147,54 @@ const AICybersecurityThreatIntelligence: React.FC = () => {
 
   const useCases = [
     {
-      title: 'Financial Services',
-      description: 'Protect critical financial systems and customer data from sophisticated cyber attacks',
-      icon: DollarSign,
-      color: 'from-green-500 to-emerald-500'
-    },
-    {
-      title: 'Healthcare Organizations',
-      description: 'Secure patient data and medical systems from ransomware and data breaches',
-      icon: Shield,
+      title: 'E-commerce Logistics',
+      description: 'Optimize last-mile delivery and warehouse operations for online retail businesses',
+      icon: Package,
       color: 'from-blue-500 to-cyan-500'
     },
     {
-      title: 'Government Agencies',
-      description: 'Defend national security systems and critical infrastructure from state-sponsored attacks',
+      title: 'Manufacturing Supply Chain',
+      description: 'Streamline production logistics and optimize supplier networks for manufacturing companies',
       icon: Building,
+      color: 'from-green-500 to-emerald-500'
+    },
+    {
+      title: 'Retail Distribution',
+      description: 'Efficient store replenishment and multi-location inventory management',
+      icon: ShoppingCart,
       color: 'from-purple-500 to-pink-500'
     },
     {
-      title: 'Manufacturing & Industrial',
-      description: 'Protect OT systems and industrial control systems from cyber threats',
-      icon: Cpu,
-      color: 'from-orange-500 to-red-500'
+      title: 'Cold Chain Logistics',
+      description: 'Specialized temperature-controlled logistics for pharmaceuticals and food industries',
+      icon: Snowflake,
+      color: 'from-indigo-500 to-purple-500'
     }
   ];
 
   const benefits = [
     {
-      title: '99.9% Threat Detection',
-      description: 'Industry-leading accuracy in detecting and preventing cyber attacks',
-      icon: ShieldCheck,
+      title: '30% Cost Reduction',
+      description: 'Significant savings on fuel, maintenance, and operational costs',
+      icon: DollarSign,
       color: 'from-green-500 to-emerald-500'
     },
     {
-      title: '60% Faster Response',
-      description: 'AI automation reduces incident response time significantly',
+      title: '50% Faster Delivery',
+      description: 'Optimized routes and real-time adjustments for faster service',
       icon: Zap,
       color: 'from-blue-500 to-cyan-500'
     },
     {
-      title: '24/7 Protection',
-      description: 'Round-the-clock monitoring and protection against cyber threats',
-      icon: Monitor,
+      title: '99.9% Uptime',
+      description: 'Reliable platform with enterprise-grade infrastructure and support',
+      icon: Shield,
       color: 'from-purple-500 to-pink-500'
     },
     {
-      title: 'Zero False Positives',
-      description: 'Advanced AI reduces false alarms and improves security team efficiency',
-      icon: CheckCircle,
+      title: '24/7 Monitoring',
+      description: 'Round-the-clock visibility and control over your logistics operations',
+      icon: Monitor,
       color: 'from-orange-500 to-red-500'
     }
   ];
@@ -218,13 +209,13 @@ const AICybersecurityThreatIntelligence: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
       <SEO 
-        title="AI Cybersecurity Threat Intelligence Platform | Zion Tech Group"
-        description="Advanced AI-powered cybersecurity threat intelligence platform with 99.9% detection accuracy. Protect your organization from sophisticated cyber attacks with real-time monitoring and automated response."
-        keywords="AI cybersecurity, threat intelligence, threat detection, cybersecurity platform, AI security, cyber threat prevention"
+        title="AI Logistics Optimization Platform | Zion Tech Group"
+        description="Revolutionize your logistics operations with AI-powered route optimization, predictive analytics, and real-time fleet management. Reduce costs by 30% and improve delivery efficiency."
+        keywords="AI logistics optimization, route optimization, fleet management, supply chain AI, logistics automation, predictive analytics"
       />
       
       {/* Hero Section */}
-      <section className="relative overflow-hidden bg-gradient-to-r from-red-900 via-purple-900 to-indigo-900 text-white">
+      <section className="relative overflow-hidden bg-gradient-to-r from-blue-900 via-purple-900 to-indigo-900 text-white">
         <div className="absolute inset-0 bg-black/20"></div>
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
           <motion.div
@@ -234,21 +225,21 @@ const AICybersecurityThreatIntelligence: React.FC = () => {
             className="text-center"
           >
             <h1 className="text-4xl md:text-6xl font-bold mb-6">
-              AI Cybersecurity Threat Intelligence Platform
+              AI Logistics Optimization Platform
             </h1>
             <p className="text-xl md:text-2xl mb-8 max-w-4xl mx-auto text-blue-100">
-              Protect your organization from sophisticated cyber attacks with AI-powered threat detection, real-time monitoring, and automated response
+              Transform your logistics operations with AI-powered route optimization, predictive analytics, and real-time fleet management
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 to="/request-quote"
-                className="bg-gradient-to-r from-red-500 to-purple-600 hover:from-red-600 hover:to-purple-700 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 transform hover:scale-105"
+                className="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 transform hover:scale-105"
               >
                 Get Started Today
               </Link>
               <Link
                 to="/schedule-demo"
-                className="border-2 border-white text-white hover:bg-white hover:text-red-900 px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300"
+                className="border-2 border-white text-white hover:bg-white hover:text-blue-900 px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300"
               >
                 Schedule Demo
               </Link>
@@ -267,10 +258,10 @@ const AICybersecurityThreatIntelligence: React.FC = () => {
             className="text-center mb-16"
           >
             <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-6">
-              Industry-Leading Cybersecurity Protection
+              Transform Your Logistics Operations
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Our AI platform delivers unmatched security performance and protection
+              Our AI platform delivers measurable results that directly impact your bottom line
             </p>
           </motion.div>
 
@@ -304,10 +295,10 @@ const AICybersecurityThreatIntelligence: React.FC = () => {
             className="text-center mb-16"
           >
             <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-6">
-              AI-Powered Security Intelligence
+              AI-Powered Logistics Intelligence
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Our advanced AI platform provides comprehensive cybersecurity protection with intelligent threat detection and response
+              Our advanced AI platform provides comprehensive logistics optimization, real-time monitoring, and predictive analytics
             </p>
           </motion.div>
 
@@ -344,7 +335,7 @@ const AICybersecurityThreatIntelligence: React.FC = () => {
               Industry Solutions
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Our platform serves diverse industries with specialized cybersecurity solutions
+              Our platform serves diverse industries with specialized logistics optimization solutions
             </p>
           </motion.div>
 
@@ -381,7 +372,7 @@ const AICybersecurityThreatIntelligence: React.FC = () => {
               Transparent Pricing Plans
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Choose the perfect plan for your cybersecurity needs with no hidden fees
+              Choose the perfect plan for your logistics optimization needs with no hidden fees
             </p>
           </motion.div>
 
@@ -439,7 +430,7 @@ const AICybersecurityThreatIntelligence: React.FC = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-red-900 to-purple-900 text-white">
+      <section className="py-20 bg-gradient-to-r from-blue-900 to-purple-900 text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -447,21 +438,21 @@ const AICybersecurityThreatIntelligence: React.FC = () => {
             transition={{ duration: 0.8 }}
           >
             <h2 className="text-3xl md:text-5xl font-bold mb-6">
-              Ready to Secure Your Organization?
+              Ready to Optimize Your Logistics?
             </h2>
             <p className="text-xl mb-8 max-w-3xl mx-auto text-blue-100">
-              Join thousands of organizations who trust our AI platform for cybersecurity protection
+              Join hundreds of companies who trust our AI platform for logistics optimization
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 to="/request-quote"
-                className="bg-white text-red-900 hover:bg-gray-100 px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300"
+                className="bg-white text-blue-900 hover:bg-gray-100 px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300"
               >
                 Get Started Today
               </Link>
               <Link
                 to="/contact"
-                className="border-2 border-white text-white hover:bg-white hover:text-red-900 px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300"
+                className="border-2 border-white text-white hover:bg-white hover:text-blue-900 px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300"
               >
                 Contact Sales
               </Link>
@@ -498,4 +489,4 @@ const AICybersecurityThreatIntelligence: React.FC = () => {
   );
 };
 
-export default AICybersecurityThreatIntelligence;
+export default AILogisticsOptimization;

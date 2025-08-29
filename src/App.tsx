@@ -101,6 +101,11 @@ const AIHealthcarePredictiveAnalytics = React.lazy(() => import('./pages/service
 const AIFinancialTradingRiskManagement = React.lazy(() => import('./pages/services/AIFinancialTradingRiskManagement'));
 const ComprehensiveAIServicesShowcase2025 = React.lazy(() => import('./pages/ComprehensiveAIServicesShowcase2025'));
 
+// New innovative micro SAAS services
+const AIRealEstateAnalytics = React.lazy(() => import('./pages/services/AIRealEstateAnalytics'));
+const AILogisticsOptimization = React.lazy(() => import('./pages/services/AILogisticsOptimization'));
+const AICybersecurityThreatIntelligence = React.lazy(() => import('./pages/services/AICybersecurityThreatIntelligence'));
+
 function App() {
   return (
     <ErrorBoundary>
@@ -170,6 +175,11 @@ function App() {
                 <Route path="/services/ai-healthcare-predictive-analytics" element={<AIHealthcarePredictiveAnalytics />} />
                 <Route path="/services/ai-financial-trading-risk-management" element={<AIFinancialTradingRiskManagement />} />
                 <Route path="/comprehensive-ai-services-showcase-2025" element={<ComprehensiveAIServicesShowcase2025 />} />
+                
+                {/* New innovative micro SAAS services */}
+                <Route path="/services/ai-real-estate-analytics" element={<AIRealEstateAnalytics />} />
+                <Route path="/services/ai-logistics-optimization" element={<AILogisticsOptimization />} />
+                <Route path="/services/ai-cybersecurity-threat-intelligence" element={<AICybersecurityThreatIntelligence />} />
                 
                 {/* Emerging Tech 2030 */}
                 <Route path="/emerging-tech-2030" element={<EmergingTech2030 />} />
