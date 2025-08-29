@@ -75,20 +75,21 @@ export const EnhancedFuturisticFooter: React.FC = () => {
 
   const footerSections = [
     {
-      title: 'Revolutionary 2030 Services',
+      title: 'Innovative Services 2027',
       featured: true,
       links: [
-        { name: 'Revolutionary Services 2030', href: '/revolutionary-services-2030', featured: true },
-        { name: 'Quantum AI Trading Platform', href: '/services#quantum-ai-trading', featured: true },
-        { name: 'Neural Interface Platform', href: '/services#neural-interface', featured: true },
-        { name: 'Holographic Workspace Platform', href: '/services#holographic-workspace', featured: true },
-        { name: 'BioDigital Twin Platform', href: '/services#biodigital-twin', featured: true },
-        { name: 'Space Debris Tracking System', href: '/services#space-debris-tracking', featured: true },
-        { name: 'AI Ethics Guardian Platform', href: '/services#ai-ethics-guardian', featured: true },
-        { name: 'Metaverse Builder Platform', href: '/services#metaverse-builder', featured: true },
-        { name: 'AI Autonomous Operations', href: '/revolutionary-services-2030#ai-autonomous-business-operations-2030' },
-        { name: 'Quantum AI Cybersecurity', href: '/revolutionary-services-2030#quantum-ai-cybersecurity-2030' },
-        { name: 'AI Content Creation Studio', href: '/revolutionary-services-2030#ai-content-creation-studio-2030' }
+        { name: 'Innovative Services Showcase 2027', href: '/innovative-services-showcase-2027', featured: true },
+        { name: 'Comprehensive Pricing Guide 2027', href: '/comprehensive-pricing-guide-2027', featured: true },
+        { name: 'AI Legal Document Analysis', href: '/services/ai-legal-document-analysis', featured: true },
+        { name: 'AI Supply Chain Optimization', href: '/services/ai-supply-chain-optimization', featured: true },
+        { name: 'AI Healthcare Analytics', href: '/services/ai-healthcare-analytics', featured: true },
+        { name: 'AI Financial Trading', href: '/services/ai-financial-trading', featured: true },
+        { name: 'Quantum AI Trading Platform', href: '/services/quantum-ai-trading-platform', featured: true },
+        { name: 'AI Workflow Orchestrator', href: '/services/ai-workflow-orchestrator', featured: true },
+        { name: 'AI-Powered Cybersecurity', href: '/services/cybersecurity', featured: true },
+        { name: 'Digital Twin Platform', href: '/services/digital-twin', featured: true },
+        { name: 'AI-Powered Micro CRM', href: '/services/micro-crm', featured: true },
+        { name: 'Space Technology Platform', href: '/services/space-tech', featured: true }
       ]
     },
     {
@@ -96,8 +97,7 @@ export const EnhancedFuturisticFooter: React.FC = () => {
       featured: true,
       links: [
         { name: 'All Services', href: '/services', featured: true },
-        { name: 'Innovative Services 2025', href: '/services/innovative-2025', featured: true },
-        { name: 'AI Business Intelligence', href: '/services#ai-business-intelligence', featured: true },
+        { name: 'AI Business Intelligence', href: '/services/ai-business-intelligence', featured: true },
         { name: 'AI Healthcare Diagnostics', href: '/services#ai-healthcare', featured: true },
         { name: 'AI Legal Tech Platform', href: '/services#ai-legal-tech', featured: true },
         { name: 'AI Research & Discovery', href: '/services#ai-research', featured: true },

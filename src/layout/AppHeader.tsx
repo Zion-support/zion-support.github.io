@@ -45,90 +45,98 @@ export function AppHeader() {
 
   const services = [
     { 
-      name: 'Innovative Micro SAAS 2025', 
-      href: '/innovative-micro-saas-services-2025', 
+      name: 'Innovative Services Showcase 2027', 
+      href: '/innovative-services-showcase-2027', 
       icon: Rocket, 
-      description: 'Cutting-edge AI Services',
+      description: 'Complete Services Portfolio',
       featured: true,
       color: 'from-purple-500 to-pink-500'
     },
     { 
-      name: 'AI Business Intelligence', 
-      href: '/services/ai-business-intelligence', 
-      icon: Brain, 
-      description: 'Machine Learning & Data Science',
+      name: 'Comprehensive Pricing Guide 2027', 
+      href: '/comprehensive-pricing-guide-2027', 
+      icon: DollarSign, 
+      description: 'Transparent Pricing & Plans',
       featured: true,
-      color: 'from-purple-500 to-cyan-500'
+      color: 'from-green-500 to-emerald-500'
     },
     { 
-      name: 'AI Healthcare Platform', 
-      href: '/services/ai-healthcare-platform', 
-      icon: Heart, 
-      description: 'Medical AI & Diagnostics',
-      featured: true,
-      color: 'from-red-500 to-pink-500'
-    },
-    { 
-      name: 'AI Content Creation', 
-      href: '/services/ai-content-creation', 
-      icon: PenTool, 
-      description: 'Content Generation & Optimization',
+      name: 'AI Legal Document Analysis', 
+      href: '/services/ai-legal-document-analysis', 
+      icon: Scale, 
+      description: 'Legal AI & Compliance',
       featured: true,
       color: 'from-blue-500 to-indigo-500'
     },
     { 
-      name: 'AI Cybersecurity', 
-      href: '/services/ai-cybersecurity', 
-      icon: Shield, 
-      description: 'AI-Powered Security',
+      name: 'AI Supply Chain Optimization', 
+      href: '/services/ai-supply-chain-optimization', 
+      icon: Truck, 
+      description: 'Supply Chain AI & Analytics',
       featured: true,
-      color: 'from-green-500 to-blue-500'
+      color: 'from-green-500 to-teal-500'
     },
     { 
-      name: 'Quantum Computing', 
-      href: '/services/quantum-computing', 
+      name: 'AI Healthcare Analytics', 
+      href: '/services/ai-healthcare-analytics', 
+      icon: Heart, 
+      description: 'Healthcare AI & Diagnostics',
+      featured: true,
+      color: 'from-red-500 to-pink-500'
+    },
+    { 
+      name: 'AI Financial Trading', 
+      href: '/services/ai-financial-trading', 
+      icon: TrendingUp, 
+      description: 'Trading AI & Risk Management',
+      featured: true,
+      color: 'from-yellow-500 to-orange-500'
+    },
+    { 
+      name: 'Quantum AI Trading Platform', 
+      href: '/services/quantum-ai-trading-platform', 
       icon: Atom, 
-      description: 'Quantum AI & Optimization',
+      description: 'Quantum Computing Trading',
       featured: true,
       color: 'from-purple-500 to-pink-500'
     },
     { 
-      name: 'IoT Edge Computing', 
-      href: '/services/iot-edge-computing', 
-      icon: Cpu, 
-      description: 'IoT & Real-time Processing',
+      name: 'AI Workflow Orchestrator', 
+      href: '/services/ai-workflow-orchestrator', 
+      icon: GitFork, 
+      description: 'Workflow Automation AI',
       featured: true,
-      color: 'from-blue-500 to-cyan-500'
+      color: 'from-indigo-500 to-blue-500'
+    },
+    { 
+      name: 'AI-Powered Cybersecurity', 
+      href: '/services/cybersecurity', 
+      icon: Shield, 
+      description: 'AI Security & Threat Detection',
+      featured: true,
+      color: 'from-green-500 to-teal-500'
     },
     { 
       name: 'Digital Twin Platform', 
       href: '/services/digital-twin', 
       icon: Globe, 
-      description: 'Virtual Replicas & Simulation',
+      description: 'IoT & Virtual Replicas',
       featured: true,
-      color: 'from-green-500 to-emerald-500'
+      color: 'from-teal-500 to-cyan-500'
     },
     { 
-      name: 'Cloud DevOps', 
-      href: '/services/cloud-devops', 
-      icon: Cloud, 
-      description: 'DevOps & Infrastructure',
+      name: 'AI-Powered Micro CRM', 
+      href: '/services/micro-crm', 
+      icon: Users, 
+      description: 'CRM with AI Insights',
       featured: true,
-      color: 'from-blue-500 to-cyan-500'
+      color: 'from-blue-500 to-purple-500'
     },
     { 
-      name: 'Micro SaaS Products', 
-      href: '/services/micro-saas', 
-      icon: ShoppingCart, 
-      description: 'AI automations with transparent pricing',
-      featured: true,
-      color: 'from-orange-500 to-red-500'
-    },
-    { 
-      name: 'Revolutionary Services 2030', 
-      href: '/revolutionary-services-2030', 
+      name: 'Space Technology Platform', 
+      href: '/services/space-tech', 
       icon: Rocket, 
-      description: 'Future Technology Solutions',
+      description: 'Satellite & Space Solutions',
       featured: true,
       color: 'from-indigo-500 to-purple-500'
     }
