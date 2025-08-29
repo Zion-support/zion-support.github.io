@@ -189,7 +189,7 @@ export default function EnhancedHeroSection() {
                 >
                   <div className="text-center max-w-4xl">
                     <div className={`w-20 h-20 bg-gradient-to-br ${heroSlides[currentSlide].gradient} rounded-2xl flex items-center justify-center mx-auto mb-6`}>
-                      <heroSlides[currentSlide].icon className="w-10 h-10 text-white" />
+                      {heroSlides[currentSlide].icon && <heroSlides[currentSlide].icon className="w-10 h-10 text-white" />}
                     </div>
                     <h2 className="text-3xl md:text-4xl font-bold mb-4 bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
                       {heroSlides[currentSlide].title}

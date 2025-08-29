@@ -99,6 +99,7 @@ export function BenefitsSection() {
     { value: "99.9%", label: "Client Satisfaction", icon: <CheckCircle className="w-6 h-6" /> },
     { value: "24/7", label: "Support Availability", icon: <Clock className="w-6 h-6" /> }
   ];
+  ];
 
   return (
     <section className="py-20 bg-gradient-to-br from-zion-blue via-zion-slate-dark to-zion-blue-dark relative overflow-hidden">
