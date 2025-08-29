@@ -54,7 +54,7 @@ const serviceCategories = [
     description: "Cutting-edge artificial intelligence services for business transformation",
     icon: "🤖",
     href: "/ai-services",
-    count: 15,
+    count: 25,
     color: "from-cyan-500 to-blue-600"
   },
   {
@@ -62,7 +62,7 @@ const serviceCategories = [
     description: "Scalable cloud infrastructure and automated deployment solutions",
     icon: "☁️",
     href: "/services/cloud-devops",
-    count: 12,
+    count: 18,
     color: "from-blue-500 to-purple-600"
   },
   {
@@ -70,7 +70,7 @@ const serviceCategories = [
     description: "Advanced security protocols and threat protection systems",
     icon: "🔒",
     href: "/services/ai-compliance-copilot",
-    count: 8,
+    count: 12,
     color: "from-red-500 to-orange-600"
   },
   {
@@ -78,7 +78,7 @@ const serviceCategories = [
     description: "End-to-end business process modernization and optimization",
     icon: "🚀",
     href: "/services/digital-transformation",
-    count: 10,
+    count: 15,
     color: "from-green-500 to-cyan-600"
   },
   {
@@ -86,7 +86,7 @@ const serviceCategories = [
     description: "Robust IT infrastructure and network management solutions",
     icon: "🏗️",
     href: "/services/it-infrastructure",
-    count: 6,
+    count: 10,
     color: "from-purple-500 to-pink-600"
   },
   {
@@ -94,8 +94,24 @@ const serviceCategories = [
     description: "Strategic technology consulting and implementation guidance",
     icon: "💡",
     href: "/services/it-consulting",
-    count: 9,
+    count: 14,
     color: "from-orange-500 to-green-600"
+  },
+  {
+    name: "Emerging Tech",
+    description: "Quantum computing, blockchain, and space technology solutions",
+    icon: "⚡",
+    href: "/services/quantum-computing",
+    count: 8,
+    color: "from-yellow-500 to-orange-600"
+  },
+  {
+    name: "Healthcare Tech",
+    description: "AI-powered healthcare and biotechnology solutions",
+    icon: "🏥",
+    href: "/services/healthcare-tech",
+    count: 6,
+    color: "from-pink-500 to-red-600"
   }
 ];
 

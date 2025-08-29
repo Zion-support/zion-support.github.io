@@ -75,7 +75,13 @@ export const EnhancedFuturisticFooter: React.FC = () => {
         { name: 'AI Compliance Assistant', href: '/services/ai-compliance-assistant' },
         { name: 'AI Auto Email Responder', href: '/services/ai-auto-email-responder' },
         { name: 'LLM Content Studio', href: '/services/llm-content-studio' },
-        { name: 'AI Compliance Copilot', href: '/services/ai-compliance-copilot' }
+        { name: 'AI Compliance Copilot', href: '/services/ai-compliance-copilot' },
+        { name: 'Autonomous BI Platform', href: '/services/autonomous-business-intelligence' },
+        { name: 'Consciousness Simulation', href: '/services/consciousness-simulation' },
+        { name: 'Quantum Neural Networks', href: '/services/quantum-neural-network' },
+        { name: 'Emotional Intelligence AI', href: '/services/ai-emotional-intelligence' },
+        { name: 'AI Creativity Platform', href: '/services/ai-creativity-platform' },
+        { name: 'AI Education Platform', href: '/services/ai-education-platform' }
       ]
     },
     {
@@ -88,7 +94,9 @@ export const EnhancedFuturisticFooter: React.FC = () => {
         { name: 'Customer Feedback Surveys', href: '/services/mobile-feedback-surveys' },
         { name: 'Cloud FinOps Optimizer', href: '/services/cloud-finops-optimizer' },
         { name: 'FinOps Advisor', href: '/services/finops-advisor' },
-        { name: 'Digital Transformation', href: '/services/digital-transformation' }
+        { name: 'Digital Transformation', href: '/services/digital-transformation' },
+        { name: 'AI DevOps Automation', href: '/services/ai-devops-automation' },
+        { name: 'Quantum-Ready Data Centers', href: '/services/quantum-ready-data-center' }
       ]
     },
     {
@@ -98,23 +106,70 @@ export const EnhancedFuturisticFooter: React.FC = () => {
       links: [
         { name: 'IT Infrastructure', href: '/services/it-infrastructure' },
         { name: 'Digital Transformation', href: '/services/digital-transformation' },
-        { name: 'IT Consulting', href: '/services/it-consulting' },
-        { name: 'Onsite Support', href: '/services/onsite-support' },
-        { name: 'Green IT Solutions', href: '/services/green-it' },
-        { name: 'IoT Edge Computing', href: '/services/iot-edge' }
+        { name: 'Digital Twin', href: '/services/digital-twin' },
+        { name: 'IoT Edge Computing', href: '/services/iot-edge' },
+        { name: 'Autonomous IoT Platform', href: '/services/autonomous-iot-edge-computing' },
+        { name: 'Space Technology', href: '/services/space-tech' },
+        { name: 'Autonomous Vehicles', href: '/services/ai-autonomous-vehicle' }
       ]
     },
     {
-      title: 'Quantum & Emerging Tech',
-      icon: Crown,
-      color: 'from-indigo-600 to-purple-600',
+      title: 'Cybersecurity & Identity',
+      icon: Shield,
+      color: 'from-red-600 to-pink-600',
+      links: [
+        { name: 'Zero Trust Security', href: '/services/zero-trust-network-architecture' },
+        { name: 'AI Compliance Copilot', href: '/services/ai-compliance-copilot' },
+        { name: 'AI Threat Hunter', href: '/services/ai-cybersecurity-threat-hunter' },
+        { name: 'Quantum Cryptography', href: '/services/quantum-enhanced-cryptography' },
+        { name: 'Blockchain Identity', href: '/services/blockchain-identity-verification' }
+      ]
+    },
+    {
+      title: 'Emerging Technologies',
+      icon: Zap,
+      color: 'from-yellow-600 to-orange-600',
       links: [
         { name: 'Quantum Computing', href: '/services/quantum-computing' },
+        { name: 'Quantum AI Platform', href: '/services/quantum-ai-platform' },
         { name: 'Blockchain Solutions', href: '/services/blockchain-enterprise-solutions' },
-        { name: 'Space Technology', href: '/services/space-tech' },
-        { name: 'Sustainability', href: '/services/sustainability' },
-        { name: 'Digital Twin', href: '/services/digital-twin' },
-        { name: 'Cloud DevOps', href: '/services/cloud-devops' }
+        { name: 'Green IT Solutions', href: '/services/green-it' },
+        { name: 'AI Sustainability', href: '/services/ai-sustainability-platform' }
+      ]
+    },
+    {
+      title: 'Healthcare & Biotech',
+      icon: Heart,
+      color: 'from-pink-600 to-rose-600',
+      links: [
+        { name: 'Healthcare Technology', href: '/services/healthcare-tech' },
+        { name: 'AI Healthcare Analytics', href: '/services/ai-healthcare-analytics' },
+        { name: 'AI Healthcare Diagnostics', href: '/services/ai-healthcare-diagnostic' },
+        { name: 'Biotech Solutions', href: '/services/biotech-healthcare-technology' }
+      ]
+    },
+    {
+      title: 'Business Solutions',
+      icon: TrendingUp,
+      color: 'from-teal-600 to-green-600',
+      links: [
+        { name: 'Customer Success AI', href: '/services/ai-customer-success-platform' },
+        { name: 'AI Workflow Orchestrator', href: '/services/ai-workflow-orchestrator' },
+        { name: 'AI Data Governance', href: '/services/ai-data-governance' },
+        { name: 'Enterprise RAG Search', href: '/services/enterprise-rag-search' },
+        { name: 'Agentic Copilot Suite', href: '/services/agentic-copilot-suite' }
+      ]
+    },
+    {
+      title: 'Specialized Services',
+      icon: Star,
+      color: 'from-indigo-600 to-purple-600',
+      links: [
+        { name: 'Legal AI Automation', href: '/services/ai-legal-document-automation' },
+        { name: 'Quantum Supply Chain', href: '/services/quantum-supply-chain-optimizer' },
+        { name: 'AI Sales Copilot', href: '/services/ai-sales-copilot' },
+        { name: 'Customer Feedback Surveys', href: '/services/mobile-feedback-surveys' },
+        { name: 'AI Auto Email Responder', href: '/services/ai-auto-email-responder' }
       ]
     }
   ];

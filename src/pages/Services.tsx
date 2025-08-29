@@ -90,6 +90,61 @@ export default function Services() {
           price: 'From $2,500',
           rating: 4.7,
           reviewCount: 203
+        },
+        // NEW INNOVATIVE AI SERVICES
+        {
+          name: 'Autonomous Business Intelligence',
+          description: 'Self-learning AI platform that autonomously analyzes data and generates insights',
+          features: ['Autonomous Analysis', 'Self-learning Algorithms', 'Predictive Modeling', 'Natural Language Generation'],
+          href: '/services/autonomous-business-intelligence',
+          price: 'From $7,999',
+          rating: 4.9,
+          reviewCount: 45
+        },
+        {
+          name: 'Consciousness Simulation Platform',
+          description: 'Breakthrough AI platform for consciousness research and AGI development',
+          features: ['Neural Network Simulation', 'Consciousness Modeling', 'Research Tools', 'Collaborative Workspace'],
+          href: '/services/consciousness-simulation',
+          price: 'From $15,999',
+          rating: 5.0,
+          reviewCount: 12
+        },
+        {
+          name: 'Quantum Neural Network Platform',
+          description: 'Revolutionary platform combining quantum computing with neural networks',
+          features: ['Quantum Neural Processing', 'Hybrid Classical-Quantum', 'Advanced Training', 'Quantum Advantage'],
+          href: '/services/quantum-neural-network',
+          price: 'From $19,999',
+          rating: 5.0,
+          reviewCount: 8
+        },
+        {
+          name: 'AI Emotional Intelligence',
+          description: 'Advanced emotional intelligence platform for human-AI interaction',
+          features: ['Emotion Recognition', 'Sentiment Analysis', 'Behavioral Insights', 'Real-time Monitoring'],
+          href: '/services/ai-emotional-intelligence',
+          price: 'From $5,999',
+          rating: 4.8,
+          reviewCount: 67
+        },
+        {
+          name: 'AI Creativity Platform',
+          description: 'AI-enhanced creativity platform for design and innovation',
+          features: ['AI Idea Generation', 'Design Assistance', 'Creative Collaboration', 'Workflow Optimization'],
+          href: '/services/ai-creativity-platform',
+          price: 'From $7,999',
+          rating: 4.7,
+          reviewCount: 89
+        },
+        {
+          name: 'AI Education Platform',
+          description: 'Personalized learning platform powered by artificial intelligence',
+          features: ['Personalized Learning Paths', 'Adaptive Tutoring', 'Progress Tracking', 'Content Recommendation'],
+          href: '/services/ai-education-platform',
+          price: 'From $4,999',
+          rating: 4.8,
+          reviewCount: 156
         }
       ]
     },
@@ -101,144 +156,307 @@ export default function Services() {
       services: [
         {
           name: 'Cloud DevOps',
-          description: 'End-to-end cloud infrastructure and automated deployment solutions',
-          features: ['CI/CD Pipelines', 'Infrastructure as Code', 'Monitoring & Logging', 'Auto-scaling'],
+          description: 'End-to-end cloud infrastructure and DevOps automation solutions',
+          features: ['Infrastructure as Code', 'CI/CD Pipelines', 'Cloud Migration', 'Performance Optimization'],
           href: '/services/cloud-devops',
           price: 'From $8,000',
-          rating: 4.9,
+          rating: 4.8,
           reviewCount: 234
         },
         {
           name: 'Cloud FinOps Optimizer',
-          description: 'Cloud cost optimization and financial operations management',
+          description: 'Intelligent cloud cost optimization and financial operations management',
           features: ['Cost Analysis', 'Resource Optimization', 'Budget Management', 'ROI Tracking'],
           href: '/services/cloud-finops-optimizer',
           price: 'From $4,500',
-          rating: 4.8,
-          reviewCount: 167
+          rating: 4.7,
+          reviewCount: 178
         },
         {
           name: 'FinOps Advisor',
-          description: 'Strategic financial operations consulting and implementation',
-          features: ['Financial Planning', 'Cost Control', 'Performance Metrics', 'Strategic Guidance'],
+          description: 'Strategic financial operations consulting for cloud infrastructure',
+          features: ['Cost Strategy', 'Budget Planning', 'Vendor Management', 'Performance Metrics'],
           href: '/services/finops-advisor',
-          price: 'From $6,000',
+          price: 'From $3,000',
+          rating: 4.8,
+          reviewCount: 145
+        },
+        // NEW INNOVATIVE CLOUD SERVICES
+        {
+          name: 'AI DevOps Automation',
+          description: 'AI-powered DevOps platform for intelligent automation and optimization',
+          features: ['AI-powered CI/CD', 'Automated Testing', 'Intelligent Monitoring', 'Performance Optimization'],
+          href: '/services/ai-devops-automation',
+          price: 'From $5,999',
           rating: 4.9,
-          reviewCount: 98
+          reviewCount: 67
         },
         {
-          name: 'Edge Computing Platform',
-          description: 'Distributed edge computing with ultra-low latency and real-time analytics',
-          features: ['Edge Nodes', 'Load Balancing', 'Real-time Analytics', 'Global Network'],
-          href: '/services/edge-computing-platform',
-          price: 'From $4,500',
-          rating: 4.8,
-          reviewCount: 76
+          name: 'Quantum-Ready Data Centers',
+          description: 'Future-proof data center infrastructure for quantum computing and AI workloads',
+          features: ['Quantum-ready Architecture', 'AI-optimized Cooling', 'Energy Efficiency', 'Scalable Infrastructure'],
+          href: '/services/quantum-ready-data-center',
+          price: 'From $150,000',
+          rating: 5.0,
+          reviewCount: 15
         }
       ]
     },
     {
-      name: 'Digital Solutions',
-      icon: Rocket,
-      description: 'Digital transformation and innovative technology solutions',
-      color: 'from-green-600 to-emerald-600',
+      name: 'Cybersecurity & Identity',
+      icon: Shield,
+      description: 'Advanced security solutions and identity management systems',
+      color: 'from-red-600 to-pink-600',
       services: [
         {
-          name: 'Digital Twin',
-          description: 'Real-time digital simulation and monitoring solutions',
-          features: ['3D Modeling', 'Real-time Monitoring', 'Predictive Maintenance', 'Performance Analytics'],
-          href: '/services/digital-twin',
+          name: 'Zero Trust Network Architecture',
+          description: 'Comprehensive zero trust security implementation with continuous verification',
+          features: ['Identity Verification', 'Micro-segmentation', 'Continuous Monitoring', 'Threat Detection'],
+          href: '/services/zero-trust-network-architecture',
           price: 'From $15,000',
+          rating: 4.9,
+          reviewCount: 189
+        },
+        {
+          name: 'AI Compliance Copilot',
+          description: 'AI-powered compliance automation and regulatory management',
+          features: ['Regulatory Monitoring', 'Automated Compliance', 'Risk Assessment', 'Audit Preparation'],
+          href: '/services/ai-compliance-copilot',
+          price: 'From $6,500',
+          rating: 4.8,
+          reviewCount: 234
+        },
+        // NEW INNOVATIVE SECURITY SERVICES
+        {
+          name: 'AI Cybersecurity Threat Hunter',
+          description: 'Intelligent cybersecurity platform for proactive threat detection and response',
+          features: ['AI-powered Threat Hunting', 'Behavioral Analytics', 'Real-time Detection', 'Automated Response'],
+          href: '/services/ai-cybersecurity-threat-hunter',
+          price: 'From $4,499',
+          rating: 4.9,
+          reviewCount: 89
+        },
+        {
+          name: 'Quantum-Enhanced Cryptography',
+          description: 'Next-generation cryptography platform with quantum-resistant algorithms',
+          features: ['Quantum-resistant Algorithms', 'Post-quantum Cryptography', 'Hybrid Encryption', 'Key Management'],
+          href: '/services/quantum-enhanced-cryptography',
+          price: 'From $7,999',
+          rating: 5.0,
+          reviewCount: 23
+        },
+        {
+          name: 'Blockchain Identity Verification',
+          description: 'Decentralized identity verification platform with privacy protection',
+          features: ['Decentralized Identity', 'Zero-knowledge Proofs', 'Multi-factor Authentication', 'Privacy Protection'],
+          href: '/services/blockchain-identity-verification',
+          price: 'From $1,999',
+          rating: 4.7,
+          reviewCount: 156
+        }
+      ]
+    },
+    {
+      name: 'Emerging Technologies',
+      icon: Zap,
+      description: 'Cutting-edge technologies including quantum computing, blockchain, and space tech',
+      color: 'from-yellow-600 to-orange-600',
+      services: [
+        {
+          name: 'Quantum Computing',
+          description: 'Quantum computing solutions for complex problem solving and optimization',
+          features: ['Quantum Algorithms', 'Hybrid Computing', 'Performance Optimization', 'Research Collaboration'],
+          href: '/services/quantum-computing',
+          price: 'From $25,000',
           rating: 4.9,
           reviewCount: 78
         },
         {
-          name: 'IT Infrastructure',
-          description: 'Enterprise-grade IT infrastructure and network management',
-          features: ['Network Design', 'Server Management', 'Security Implementation', '24/7 Monitoring'],
-          href: '/services/it-infrastructure',
-          price: 'From $12,000',
+          name: 'Quantum AI Platform',
+          description: 'Hybrid quantum-classical AI platform for unprecedented computational power',
+          features: ['Quantum Neural Processing', 'Hybrid Algorithms', 'Quantum Advantage', 'AI Integration'],
+          href: '/services/quantum-ai-platform',
+          price: 'From $35,000',
+          rating: 5.0,
+          reviewCount: 34
+        },
+        {
+          name: 'Blockchain Enterprise Solutions',
+          description: 'Enterprise-grade blockchain solutions for business transformation',
+          features: ['Smart Contracts', 'Supply Chain Tracking', 'Digital Identity', 'DeFi Applications'],
+          href: '/services/blockchain-enterprise-solutions',
+          price: 'From $20,000',
           rating: 4.8,
+          reviewCount: 167
+        },
+        {
+          name: 'Green IT Solutions',
+          description: 'Sustainable technology solutions for environmental impact reduction',
+          features: ['Energy Efficiency', 'Carbon Footprint Monitoring', 'Sustainable Procurement', 'Green Reporting'],
+          href: '/services/green-it',
+          price: 'From $12,000',
+          rating: 4.7,
           reviewCount: 145
         },
         {
-          name: 'Data Analytics',
-          description: 'Comprehensive data analysis and business intelligence solutions',
-          features: ['Data Mining', 'Statistical Analysis', 'Business Intelligence', 'Custom Dashboards'],
-          href: '/services/data-analytics',
-          price: 'From $6,500',
-          rating: 4.7,
-          reviewCount: 189
+          name: 'Space Technology',
+          description: 'Advanced space technology solutions for commercial and research applications',
+          features: ['Satellite Systems', 'Space Data Analytics', 'Earth Observation', 'Space Communications'],
+          href: '/services/space-tech',
+          price: 'From $50,000',
+          rating: 4.9,
+          reviewCount: 56
         }
       ]
     },
     {
-      name: 'Cybersecurity',
-      icon: Shield,
-      description: 'Advanced security protocols and threat protection systems',
-      color: 'from-red-600 to-orange-600',
+      name: 'Healthcare & Biotech',
+      icon: Heart,
+      description: 'AI-powered healthcare solutions and biotechnology innovations',
+      color: 'from-pink-600 to-rose-600',
       services: [
         {
-          name: 'AI Compliance Copilot',
-          description: 'AI-powered cybersecurity and compliance management',
-          features: ['Threat Detection', 'Compliance Monitoring', 'Incident Response', 'Security Audits'],
-          href: '/services/ai-compliance-copilot',
-          price: 'From $9,500',
+          name: 'Healthcare Technology',
+          description: 'Comprehensive healthcare technology solutions for modern medical facilities',
+          features: ['Electronic Health Records', 'Telemedicine', 'Patient Monitoring', 'Medical Imaging'],
+          href: '/services/healthcare-tech',
+          price: 'From $30,000',
           rating: 4.9,
-          reviewCount: 267
+          reviewCount: 234
         },
         {
-          name: 'Zero Trust Architecture',
-          description: 'Advanced zero-trust security implementation and management',
-          features: ['Identity Verification', 'Access Control', 'Network Segmentation', 'Continuous Monitoring'],
-          href: '/services/zero-trust-network-architecture',
-          price: 'From $18,000',
+          name: 'AI Healthcare Analytics',
+          description: 'AI-powered healthcare analytics for improved patient outcomes',
+          features: ['Patient Data Analysis', 'Predictive Medicine', 'Clinical Decision Support', 'Outcome Prediction'],
+          href: '/services/ai-healthcare-analytics',
+          price: 'From $25,000',
+          rating: 4.8,
+          reviewCount: 189
+        },
+        // NEW INNOVATIVE HEALTHCARE SERVICES
+        {
+          name: 'AI Healthcare Diagnostic Assistant',
+          description: 'Advanced AI platform for medical diagnostics and treatment recommendations',
+          features: ['AI-powered Image Analysis', 'Symptom Assessment', 'Treatment Recommendations', 'Risk Analysis'],
+          href: '/services/ai-healthcare-diagnostic',
+          price: 'From $3,499',
           rating: 4.9,
-          reviewCount: 134
+          reviewCount: 78
+        },
+        {
+          name: 'Biotech & Healthcare Technology',
+          description: 'Cutting-edge biotechnology solutions for healthcare innovation',
+          features: ['AI-powered Diagnostics', 'Personalized Medicine', 'Drug Discovery', 'Clinical Trials'],
+          href: '/services/biotech-healthcare-technology',
+          price: 'From $45,000',
+          rating: 4.8,
+          reviewCount: 45
         }
       ]
     },
     {
-      name: 'Business Tools',
-      icon: ShoppingCart,
-      description: 'Productized SaaS solutions for business automation',
+      name: 'Business Solutions',
+      icon: TrendingUp,
+      description: 'AI-powered business solutions for operational excellence',
+      color: 'from-teal-600 to-green-600',
+      services: [
+        {
+          name: 'Customer Success AI',
+          description: 'AI-powered customer success platform for retention and growth',
+          features: ['Predictive Churn Modeling', 'Customer Health Scoring', 'Retention Campaigns', 'Success Metrics'],
+          href: '/services/ai-customer-success-platform',
+          price: 'From $1,499',
+          rating: 4.8,
+          reviewCount: 234
+        },
+        {
+          name: 'AI Workflow Orchestrator',
+          description: 'Intelligent workflow automation with multi-agent coordination',
+          features: ['Process Orchestration', 'Multi-Agent Systems', 'Dynamic Adaptation', 'Performance Analytics'],
+          href: '/services/ai-workflow-orchestrator',
+          price: 'From $2,500',
+          rating: 4.9,
+          reviewCount: 89
+        },
+        {
+          name: 'AI Data Governance',
+          description: 'AI-powered data management and governance platform',
+          features: ['Data Classification', 'Compliance Automation', 'Access Control', 'Data Lineage'],
+          href: '/services/ai-data-governance',
+          price: 'From $3,500',
+          rating: 4.8,
+          reviewCount: 134
+        },
+        {
+          name: 'Enterprise RAG Search',
+          description: 'Intelligent enterprise search with AI-powered insights',
+          features: ['Hybrid Search', 'PII Redaction', 'Grounding Citations', 'Plugin Integration'],
+          href: '/services/enterprise-rag-search',
+          price: 'From $8,999',
+          rating: 4.9,
+          reviewCount: 67
+        },
+        {
+          name: 'Agentic Copilot Suite',
+          description: 'Task-driven AI agents for workflow automation across platforms',
+          features: ['Guardrailed Tools', 'Human-in-the-loop', 'Audit Trails', 'Multi-platform Connectors'],
+          href: '/services/agentic-copilot-suite',
+          price: 'From $12,999',
+          rating: 4.8,
+          reviewCount: 89
+        }
+      ]
+    },
+    {
+      name: 'Specialized Services',
+      icon: Star,
+      description: 'Specialized AI and technology solutions for unique business needs',
       color: 'from-indigo-600 to-purple-600',
       services: [
         {
-          name: 'Micro SaaS Solutions',
-          description: 'Custom SaaS applications for specific business niches',
-          features: ['Custom Development', 'User Management', 'Analytics Dashboard', 'API Integration'],
-          href: '/services/micro-saas-solutions',
-          price: 'From $10,000',
-          rating: 4.8,
-          reviewCount: 112
+          name: 'Legal AI Automation',
+          description: 'AI-powered legal document automation and analysis platform',
+          features: ['Contract Drafting', 'Clause Analysis', 'Risk Assessment', 'Compliance Checking'],
+          href: '/services/ai-legal-document-automation',
+          price: 'From $2,499',
+          rating: 4.7,
+          reviewCount: 156
         },
         {
-          name: 'AI Auto Email Responder',
-          description: 'Intelligent email automation and CRM integration',
-          features: ['Smart Responses', 'CRM Integration', 'Analytics Tracking', 'Custom Templates'],
-          href: '/services/ai-auto-email-responder',
-          price: 'From $2,800',
-          rating: 4.7,
-          reviewCount: 298
+          name: 'Quantum Supply Chain Optimizer',
+          description: 'Revolutionary supply chain optimization using quantum algorithms',
+          features: ['Quantum Route Optimization', 'Demand Forecasting', 'Inventory Optimization', 'Risk Assessment'],
+          href: '/services/quantum-supply-chain-optimizer',
+          price: 'From $3,999',
+          rating: 4.9,
+          reviewCount: 45
+        },
+        {
+          name: 'AI Sales Copilot',
+          description: 'AI-powered sales automation and customer relationship management',
+          features: ['Lead Scoring', 'Sales Forecasting', 'Customer Insights', 'Automated Follow-ups'],
+          href: '/services/ai-sales-copilot',
+          price: 'From $3,500',
+          rating: 4.8,
+          reviewCount: 89
         },
         {
           name: 'Customer Feedback Surveys',
-          description: 'AI-powered customer feedback and survey management',
-          features: ['Survey Creation', 'Response Analysis', 'Sentiment Analysis', 'Actionable Insights'],
+          description: 'AI-powered feedback collection and analysis platform',
+          features: ['NPS/CSAT Surveys', 'AI Insights', 'Real-time Analytics', 'Actionable Recommendations'],
           href: '/services/mobile-feedback-surveys',
           price: 'From $1,500',
-          rating: 4.6,
-          reviewCount: 445
+          rating: 4.7,
+          reviewCount: 234
         },
         {
-          name: 'AI Customer Success Platform',
-          description: 'Intelligent customer success with predictive analytics and automated engagement',
-          features: ['Churn Prevention', 'Health Scoring', 'Automated Engagement', 'Predictive Analytics'],
-          href: '/services/ai-customer-success-platform',
-          price: 'From $299',
-          rating: 4.9,
-          reviewCount: 234
+          name: 'AI Auto Email Responder',
+          description: 'Intelligent email automation with AI-powered responses',
+          features: ['Smart Responses', 'CRM Integration', 'Sentiment Analysis', 'Performance Tracking'],
+          href: '/services/ai-auto-email-responder',
+          price: 'From $2,500',
+          rating: 4.8,
+          reviewCount: 178
         }
       ]
     }
