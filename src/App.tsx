@@ -103,6 +103,9 @@ const NewServicesShowcase2025 = lazy(() => import('./pages/NewServicesShowcase20
 // Enhanced Services Showcase 2025
 const EnhancedServicesShowcase2025 = lazy(() => import('./pages/EnhancedServicesShowcase2025'));
 
+// Zion Tech Group 2025 Comprehensive Showcase
+const ZionTechGroup2025ComprehensiveShowcase = lazy(() => import('./pages/ZionTechGroup2025ComprehensiveShowcase'));
+
 // 2025 New Innovative Services
 const AIWorkflowOrchestrator = lazy(() => import('./pages/services/AIWorkflowOrchestrator'));
 const AIDataGovernancePlatform = lazy(() => import('./pages/services/AIDataGovernancePlatform'));
@@ -486,6 +489,9 @@ function App() {
                   
                   {/* Enhanced Services Showcase 2025 */}
                   <Route path="/services/enhanced-services-showcase-2025" element={<EnhancedServicesShowcase2025 />} />
+                  
+                  {/* Zion Tech Group 2025 Comprehensive Showcase */}
+                  <Route path="/zion-tech-group-2025-comprehensive-showcase" element={<ZionTechGroup2025ComprehensiveShowcase />} />
                   
                   {/* 404 Page */}
                   <Route 
