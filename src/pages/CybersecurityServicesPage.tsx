@@ -5,30 +5,30 @@ import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { COMPREHENSIVE_SERVICES } from '@/data/comprehensiveServices';
 import {
-    AlertTriangle,
-    ArrowRight,
-    Brain,
-    CheckCircle,
-    Clock,
-    Code,
-    Database,
-    DollarSign,
-    Eye,
-    FileText,
-    Globe,
-    Key,
-    Lock,
-    Mail,
-    MapPin,
-    Monitor,
-    Network,
-    Phone,
-    Server,
-    Shield,
-    ShieldCheck,
-    Star,
-    Users,
-    Zap
+  AlertTriangle,
+  ArrowRight,
+  Brain,
+  CheckCircle,
+  Clock,
+  Code,
+  Database,
+  DollarSign,
+  Eye,
+  FileText,
+  Globe,
+  Key,
+  Lock,
+  Mail,
+  MapPin,
+  Monitor,
+  Network,
+  Phone,
+  Server,
+  Shield,
+  ShieldCheck,
+  Star,
+  Users,
+  Zap
 } from 'lucide-react';
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
@@ -1282,7 +1282,8 @@ export default function CybersecurityServicesPage() {
           </div>
         </div>
       </div>
+      </div>
       <TrustedBySection />
-    </div>
+    </>
   );
 }
