@@ -16,7 +16,7 @@ const ITServices = () => {
               IT Services
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Comprehensive IT solutions that keep your business running smoothly. From infrastructure 
+              Comprehensive IT solutions that keep your business running smoothly. From infrastructure
               management to cybersecurity, we provide end-to-end IT support for modern enterprises.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -40,12 +40,12 @@ const ITServices = () => {
                 Complete IT Infrastructure Solutions
               </h2>
               <p className="text-lg text-gray-300 mb-6">
-                Zion Tech Group delivers enterprise-grade IT services designed to optimize your technology 
-                infrastructure, enhance security, and drive operational efficiency. Our team of certified 
+                Zion Tech Group delivers enterprise-grade IT services designed to optimize your technology
+                infrastructure, enhance security, and drive operational efficiency. Our team of certified
                 professionals ensures your IT systems are always up-to-date, secure, and performing at peak levels.
               </p>
               <p className="text-lg text-gray-300 mb-6">
-                Whether you need ongoing IT support, infrastructure upgrades, or strategic technology 
+                Whether you need ongoing IT support, infrastructure upgrades, or strategic technology
                 consulting, we provide scalable solutions that grow with your business.
               </p>
               <div className="grid grid-cols-2 gap-4">
@@ -114,7 +114,7 @@ const ITServices = () => {
               </div>
               <h3 className="text-xl font-semibold mb-3">Infrastructure Management</h3>
               <p className="text-gray-300 mb-4">
-                Comprehensive management of your IT infrastructure including servers, networks, storage, 
+                Comprehensive management of your IT infrastructure including servers, networks, storage,
                 and data centers.
               </p>
               <ul className="space-y-2 text-sm text-gray-300">
@@ -131,7 +131,7 @@ const ITServices = () => {
               </div>
               <h3 className="text-xl font-semibold mb-3">Cybersecurity</h3>
               <p className="text-gray-300 mb-4">
-                Advanced security solutions to protect your business from cyber threats and ensure 
+                Advanced security solutions to protect your business from cyber threats and ensure
                 compliance with industry standards.
               </p>
               <ul className="space-y-2 text-sm text-gray-300">
@@ -148,7 +148,7 @@ const ITServices = () => {
               </div>
               <h3 className="text-xl font-semibold mb-3">Cloud Services</h3>
               <p className="text-gray-300 mb-4">
-                Strategic cloud solutions to modernize your infrastructure and improve scalability 
+                Strategic cloud solutions to modernize your infrastructure and improve scalability
                 and cost efficiency.
               </p>
               <ul className="space-y-2 text-sm text-gray-300">
@@ -165,7 +165,7 @@ const ITServices = () => {
               </div>
               <h3 className="text-xl font-semibold mb-3">Technical Support</h3>
               <p className="text-gray-300 mb-4">
-                Round-the-clock technical support to resolve issues quickly and keep your systems 
+                Round-the-clock technical support to resolve issues quickly and keep your systems
                 running smoothly.
               </p>
               <ul className="space-y-2 text-sm text-gray-300">
@@ -182,7 +182,7 @@ const ITServices = () => {
               </div>
               <h3 className="text-xl font-semibold mb-3">System Administration</h3>
               <p className="text-gray-300 mb-4">
-                Expert administration of your critical systems including user management, updates, 
+                Expert administration of your critical systems including user management, updates,
                 and performance optimization.
               </p>
               <ul className="space-y-2 text-sm text-gray-300">
@@ -222,7 +222,7 @@ const ITServices = () => {
             <div className="bg-slate-800/50 p-8 rounded-xl border border-slate-700">
               <h3 className="text-2xl font-semibold mb-4 text-blue-400">Enterprise IT</h3>
               <p className="text-gray-300 mb-6">
-                Scalable IT solutions designed for large enterprises with complex infrastructure needs. 
+                Scalable IT solutions designed for large enterprises with complex infrastructure needs.
                 Our enterprise-grade solutions ensure reliability, security, and performance at scale.
               </p>
               <ul className="space-y-3 text-gray-300">
@@ -248,7 +248,7 @@ const ITServices = () => {
             <div className="bg-slate-800/50 p-8 rounded-xl border border-slate-700">
               <h3 className="text-2xl font-semibold mb-4 text-green-400">Green IT</h3>
               <p className="text-gray-300 mb-6">
-                Sustainable IT solutions that reduce environmental impact while improving efficiency 
+                Sustainable IT solutions that reduce environmental impact while improving efficiency
                 and reducing costs. Our green IT initiatives help businesses meet sustainability goals.
               </p>
               <ul className="space-y-3 text-gray-300">
@@ -274,7 +274,7 @@ const ITServices = () => {
             <div className="bg-slate-800/50 p-8 rounded-xl border border-slate-700">
               <h3 className="text-2xl font-semibold mb-4 text-purple-400">IoT Services</h3>
               <p className="text-gray-300 mb-6">
-                Internet of Things solutions that connect devices and systems to create intelligent, 
+                Internet of Things solutions that connect devices and systems to create intelligent,
                 automated environments. Our IoT expertise drives innovation and operational efficiency.
               </p>
               <ul className="space-y-3 text-gray-300">
@@ -300,7 +300,7 @@ const ITServices = () => {
             <div className="bg-slate-800/50 p-8 rounded-xl border border-slate-700">
               <h3 className="text-2xl font-semibold mb-4 text-orange-400">Mobile Services</h3>
               <p className="text-gray-300 mb-6">
-                Mobile-first IT solutions that enable your workforce to be productive anywhere, anytime. 
+                Mobile-first IT solutions that enable your workforce to be productive anywhere, anytime.
                 Our mobile services ensure secure, seamless access to business resources.
               </p>
               <ul className="space-y-3 text-gray-300">
@@ -339,7 +339,7 @@ const ITServices = () => {
               </div>
               <h3 className="text-xl font-semibold mb-3">Assessment</h3>
               <p className="text-gray-300">
-                Comprehensive evaluation of your current IT infrastructure, identifying areas for 
+                Comprehensive evaluation of your current IT infrastructure, identifying areas for
                 improvement and optimization opportunities.
               </p>
             </div>
@@ -350,7 +350,7 @@ const ITServices = () => {
               </div>
               <h3 className="text-xl font-semibold mb-3">Strategy</h3>
               <p className="text-gray-300">
-                Development of a customized IT strategy aligned with your business objectives, 
+                Development of a customized IT strategy aligned with your business objectives,
                 including technology roadmap and implementation plan.
               </p>
             </div>
@@ -361,7 +361,7 @@ const ITServices = () => {
               </div>
               <h3 className="text-xl font-semibold mb-3">Implementation</h3>
               <p className="text-gray-300">
-                Expert execution of your IT strategy with minimal disruption, ensuring smooth 
+                Expert execution of your IT strategy with minimal disruption, ensuring smooth
                 transitions and optimal system performance.
               </p>
             </div>
@@ -372,7 +372,7 @@ const ITServices = () => {
               </div>
               <h3 className="text-xl font-semibold mb-3">Support</h3>
               <p className="text-gray-300">
-                Ongoing support and maintenance to ensure your IT systems continue to perform 
+                Ongoing support and maintenance to ensure your IT systems continue to perform
                 optimally and adapt to changing business needs.
               </p>
             </div>
@@ -395,7 +395,7 @@ const ITServices = () => {
                 <div>
                   <h3 className="text-xl font-semibold mb-2">Certified Expertise</h3>
                   <p className="text-gray-300">
-                    Our team holds industry-leading certifications and stays current with the latest 
+                    Our team holds industry-leading certifications and stays current with the latest
                     technology trends and best practices.
                   </p>
                 </div>
@@ -408,7 +408,7 @@ const ITServices = () => {
                 <div>
                   <h3 className="text-xl font-semibold mb-2">Proactive Approach</h3>
                   <p className="text-gray-300">
-                    We don't just fix problems - we prevent them through proactive monitoring, 
+                    We don't just fix problems - we prevent them through proactive monitoring,
                     maintenance, and strategic planning.
                   </p>
                 </div>
@@ -421,7 +421,7 @@ const ITServices = () => {
                 <div>
                   <h3 className="text-xl font-semibold mb-2">Scalable Solutions</h3>
                   <p className="text-gray-300">
-                    Our IT services grow with your business, providing flexible solutions that 
+                    Our IT services grow with your business, providing flexible solutions that
                     adapt to changing needs and requirements.
                   </p>
                 </div>
@@ -436,7 +436,7 @@ const ITServices = () => {
                 <div>
                   <h3 className="text-xl font-semibold mb-2">24/7 Support</h3>
                   <p className="text-gray-300">
-                    Round-the-clock support ensures your IT systems are always running smoothly, 
+                    Round-the-clock support ensures your IT systems are always running smoothly,
                     with rapid response times for critical issues.
                   </p>
                 </div>
@@ -449,7 +449,7 @@ const ITServices = () => {
                 <div>
                   <h3 className="text-xl font-semibold mb-2">Cost Optimization</h3>
                   <p className="text-gray-300">
-                    Strategic IT planning and implementation that reduces costs while improving 
+                    Strategic IT planning and implementation that reduces costs while improving
                     efficiency and system reliability.
                   </p>
                 </div>
@@ -462,7 +462,7 @@ const ITServices = () => {
                 <div>
                   <h3 className="text-xl font-semibold mb-2">Business Alignment</h3>
                   <p className="text-gray-300">
-                    IT solutions that are directly aligned with your business objectives, driving 
+                    IT solutions that are directly aligned with your business objectives, driving
                     growth and competitive advantage.
                   </p>
                 </div>
@@ -479,7 +479,7 @@ const ITServices = () => {
             Ready to Optimize Your IT Infrastructure?
           </h2>
           <p className="text-xl text-gray-300 mb-8">
-            Let Zion Tech Group transform your IT operations with comprehensive, reliable, and 
+            Let Zion Tech Group transform your IT operations with comprehensive, reliable, and
             cost-effective solutions that drive business success.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">

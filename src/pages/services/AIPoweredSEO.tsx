@@ -136,7 +136,7 @@ export default function AIPoweredSEO() {
 
   return (
     <div className="min-h-screen bg-futuristic relative overflow-hidden">
-      <SEO 
+      <SEO
         title="AI-Powered SEO Services - Zion Tech Group"
         description="Revolutionize your search rankings with our AI-powered SEO services. Machine learning algorithms that adapt and optimize for maximum visibility."
         keywords="AI SEO, machine learning SEO, semantic search optimization, AI content analysis, SEO automation"
@@ -157,7 +157,7 @@ export default function AIPoweredSEO() {
         {/* Hero Section */}
         <section className="pt-32 pb-20">
           <div className="container-responsive">
-            <motion.div 
+            <motion.div
               className="text-center max-w-4xl mx-auto"
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
@@ -171,18 +171,18 @@ export default function AIPoweredSEO() {
                 <span className="bg-gradient-to-r from-purple-400 via-cyan-500 to-blue-500 bg-clip-text text-transparent">AI-Powered</span> SEO That Ranks
               </h1>
               <p className="text-xl text-zinc-300 mb-8 leading-relaxed">
-                Revolutionize your search engine optimization with machine learning algorithms that adapt, 
+                Revolutionize your search engine optimization with machine learning algorithms that adapt,
                 learn, and optimize your content for maximum visibility. Stay ahead of the competition with AI-driven insights.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Link 
+                <Link
                   to="/contact"
                   className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-500 to-cyan-500 text-white font-semibold rounded-lg hover:from-purple-600 hover:to-cyan-600 transition-all duration-300 transform hover:scale-105"
                 >
                   Get Started
                   <ArrowRight className="w-5 h-5 ml-2" />
                 </Link>
-                <Link 
+                <Link
                   to="/request-quote"
                   className="inline-flex items-center px-8 py-4 border border-purple-500/30 text-purple-400 font-semibold rounded-lg hover:bg-purple-500/10 transition-all duration-300"
                 >
@@ -196,7 +196,7 @@ export default function AIPoweredSEO() {
         {/* AI Capabilities Section */}
         <section className="py-20">
           <div className="container-responsive">
-            <motion.div 
+            <motion.div
               className="text-center mb-16"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -235,7 +235,7 @@ export default function AIPoweredSEO() {
         {/* Features Section */}
         <section className="py-20 bg-white/5">
           <div className="container-responsive">
-            <motion.div 
+            <motion.div
               className="text-center mb-16"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -274,7 +274,7 @@ export default function AIPoweredSEO() {
         {/* Pricing Section */}
         <section className="py-20">
           <div className="container-responsive">
-            <motion.div 
+            <motion.div
               className="text-center mb-16"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -294,8 +294,8 @@ export default function AIPoweredSEO() {
                 <motion.div
                   key={index}
                   className={`relative p-8 rounded-2xl ${
-                    plan.popular 
-                      ? 'bg-gradient-to-br from-purple-500/20 to-cyan-500/20 border-2 border-purple-500/50' 
+                    plan.popular
+                      ? 'bg-gradient-to-br from-purple-500/20 to-cyan-500/20 border-2 border-purple-500/50'
                       : 'bg-white/5 border border-white/10'
                   } backdrop-blur-sm`}
                   initial={{ opacity: 0, y: 30 }}
@@ -310,7 +310,7 @@ export default function AIPoweredSEO() {
                       </span>
                     </div>
                   )}
-                  
+
                   <div className="text-center mb-6">
                     <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
                     <div className="flex items-baseline justify-center mb-2">
@@ -348,7 +348,7 @@ export default function AIPoweredSEO() {
         {/* Benefits Section */}
         <section className="py-20 bg-white/5">
           <div className="container-responsive">
-            <motion.div 
+            <motion.div
               className="text-center mb-16"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -402,14 +402,14 @@ export default function AIPoweredSEO() {
                 Join hundreds of companies that have already transformed their SEO with AI-powered optimization
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Link 
+                <Link
                   to="/contact"
                   className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-500 to-cyan-500 text-white font-semibold rounded-lg hover:from-purple-600 hover:to-cyan-600 transition-all duration-300 transform hover:scale-105"
                 >
                   Start Your Journey
                   <ArrowRight className="w-5 h-5 ml-2" />
                 </Link>
-                <Link 
+                <Link
                   to="/request-quote"
                   className="inline-flex items-center px-8 py-4 border border-purple-500/30 text-purple-400 font-semibold rounded-lg hover:bg-purple-500/10 transition-all duration-300"
                 >

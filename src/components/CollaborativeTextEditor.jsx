@@ -154,7 +154,7 @@ export const CollaborativeTextEditor = ({ roomId, userId, userName, initialConte
             trackEvent('editor', 'ai_suggestions_generated', 'suggestions_created', suggestions.length);
         }
         catch (error) {
-            console.error('Failed to generate AI suggestions:', error);
+            // console.error('Failed to generate AI suggestions:', error);
             trackEvent('editor', 'ai_suggestions_failed', 'generation_error', undefined, {
                 error: error instanceof Error ? error.message : 'Unknown error'
             });
@@ -278,20 +278,20 @@ export const CollaborativeTextEditor = ({ roomId, userId, userName, initialConte
                 Live
               </div>)}
           </h3>
-          
+
           <div className="flex items-center gap-2">
             {/* Collaboration Status */}
             {enableCollaboration && (<button onClick={() => setShowCollaborators(!showCollaborators)} className="px-3 py-1 bg-white/20 hover:bg-white/30 rounded text-sm transition-colors flex items-center gap-2">
                 <Users className="w-4 h-4"/>
                 {collaboration.onlineUsers.length}
               </button>)}
-            
+
             {/* AI Suggestions */}
             {enableAI && (<button onClick={generateAISuggestions} disabled={isProcessing} className="px-3 py-1 bg-white/20 hover:bg-white/30 rounded text-sm transition-colors flex items-center gap-2 disabled:opacity-50">
                 {isProcessing ? (<Loader2 className="w-4 h-4 animate-spin"/>) : (<Sparkles className="w-4 h-4"/>)}
                 AI
               </button>)}
-            
+
             {/* Save Button */}
             <button onClick={handleSave} className="px-3 py-1 bg-green-500 hover:bg-green-600 rounded text-sm transition-colors flex items-center gap-2">
               <Save className="w-4 h-4"/>
@@ -306,7 +306,7 @@ export const CollaborativeTextEditor = ({ roomId, userId, userName, initialConte
         {/* Editor */}
         <div className="flex-1 p-4">
           <textarea ref={editorRef} value={editorState.content} onChange={handleTextChange} onSelect={handleSelectionChange} onMouseMove={handleCursorMove} placeholder="Start typing your document..." className="w-full h-full p-4 border border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent bg-white dark:bg-gray-700 text-gray-900 dark:text-gray-100 resize-none font-mono text-sm"/>
-          
+
           {/* Status Bar */}
           <div className="flex items-center justify-between mt-2 text-xs text-gray-500">
             <span>
@@ -327,7 +327,7 @@ export const CollaborativeTextEditor = ({ roomId, userId, userName, initialConte
                 <Sparkles className="w-4 h-4"/>
                 AI Suggestions
               </h4>
-              
+
               <div className="space-y-3">
                 {editorState.suggestions.map(suggestion => (<motion.div key={suggestion.id} initial={{ opacity: 0, x: 20 }} animate={{ opacity: 1, x: 0 }} className="p-3 bg-white dark:bg-gray-600 rounded-lg border border-gray-200 dark:border-gray-500">
                     <div className="flex items-start justify-between mb-2">
@@ -340,20 +340,20 @@ export const CollaborativeTextEditor = ({ roomId, userId, userName, initialConte
                         {Math.round(suggestion.confidence * 100)}%
                       </span>
                     </div>
-                    
+
                     <p className="text-sm text-gray-700 dark:text-gray-300 mb-2">
                       {suggestion.reason}
                     </p>
-                    
+
                     <div className="text-sm font-medium text-gray-900 dark:text-white mb-2">
                       {suggestion.text}
                     </div>
-                    
+
                     <button onClick={() => applySuggestion(suggestion)} className="w-full px-2 py-1 bg-blue-500 hover:bg-blue-600 text-white text-xs rounded transition-colors">
                       Apply Suggestion
                     </button>
                   </motion.div>))}
-                
+
                 {editorState.suggestions.length === 0 && (<p className="text-sm text-gray-500 text-center py-4">
                     No suggestions yet. Start typing to get AI-powered recommendations.
                   </p>)}
@@ -366,7 +366,7 @@ export const CollaborativeTextEditor = ({ roomId, userId, userName, initialConte
                 <Users className="w-4 h-4"/>
                 Collaborators ({collaboration.onlineUsers.length})
               </h4>
-              
+
               <div className="space-y-2">
                 {collaboration.onlineUsers.map(user => (<div key={user.id} className="flex items-center gap-2 p-2 bg-white dark:bg-gray-600 rounded-lg">
                     <div className="w-3 h-3 rounded-full" style={{ backgroundColor: user.color }}></div>
@@ -375,7 +375,7 @@ export const CollaborativeTextEditor = ({ roomId, userId, userName, initialConte
                     </span>
                     <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>
                   </div>))}
-                
+
                 {collaboration.offlineUsers.map(user => (<div key={user.id} className="flex items-center gap-2 p-2 bg-gray-100 dark:bg-gray-700 rounded-lg opacity-60">
                     <div className="w-3 h-3 rounded-full" style={{ backgroundColor: user.color }}></div>
                     <span className="text-sm text-gray-500 dark:text-gray-400">
@@ -391,18 +391,18 @@ export const CollaborativeTextEditor = ({ roomId, userId, userName, initialConte
           {/* Actions */}
           <div className="p-4">
             <h4 className="font-medium text-gray-900 dark:text-white mb-3">Actions</h4>
-            
+
             <div className="space-y-2">
               <button onClick={() => handleExport('txt')} className="w-full px-3 py-2 bg-gray-500 hover:bg-gray-600 text-white text-sm rounded transition-colors flex items-center justify-center gap-2">
                 <Download className="w-4 h-4"/>
                 Export as TXT
               </button>
-              
+
               <button onClick={() => handleExport('md')} className="w-full px-3 py-2 bg-blue-500 hover:bg-blue-600 text-white text-sm rounded transition-colors flex items-center justify-center gap-2">
                 <Download className="w-4 h-4"/>
                 Export as MD
               </button>
-              
+
               <button onClick={() => handleExport('html')} className="w-full px-3 py-2 bg-purple-500 hover:bg-purple-600 text-white text-sm rounded transition-colors flex items-center justify-center gap-2">
                 <Download className="w-4 h-4"/>
                 Export as HTML

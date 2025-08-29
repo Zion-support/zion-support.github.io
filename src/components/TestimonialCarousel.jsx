@@ -194,7 +194,7 @@ export function TestimonialCarousel() {
           <button className="absolute left-4 top-1/2 transform -translate-y-1/2 w-12 h-12 bg-zion-blue-dark/80 hover:bg-zion-blue-dark border border-zion-blue-light/30 hover:border-zion-cyan/50 rounded-full flex items-center justify-center text-white transition-all duration-300 hover:scale-110 hover:shadow-lg hover:shadow-zion-cyan/25 z-10" onClick={() => paginate(-1)}>
             <ChevronLeft className="w-6 h-6"/>
           </button>
-          
+
           <button className="absolute right-4 top-1/2 transform -translate-y-1/2 w-12 h-12 bg-zion-blue-dark/80 hover:bg-zion-blue-dark border border-zion-blue-light/30 hover:border-zion-cyan/50 rounded-full flex items-center justify-center text-white transition-all duration-300 hover:scale-110 hover:shadow-lg hover:shadow-zion-cyan/25 z-10" onClick={() => paginate(1)}>
             <ChevronRight className="w-6 h-6"/>
           </button>

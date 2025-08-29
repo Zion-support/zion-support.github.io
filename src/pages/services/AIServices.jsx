@@ -45,7 +45,7 @@ const AIServices = () => {
             </span>
           </motion.h1>
           <motion.p className="text-xl md:text-2xl text-pink-100 max-w-4xl mx-auto leading-relaxed mb-8" initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, delay: 0.2 }}>
-            Harness the power of artificial intelligence to transform your business operations, 
+            Harness the power of artificial intelligence to transform your business operations,
             enhance customer experiences, and drive innovation across all departments.
           </motion.p>
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, delay: 0.4 }}>

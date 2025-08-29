@@ -156,9 +156,9 @@ export default function Documentation() {
     const matchesSearch = item.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
                          item.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
                          item.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()));
-    
+
     const matchesCategory = activeCategory === 'all' || item.category === activeCategory;
-    
+
     return matchesSearch && matchesCategory;
   });
 
@@ -287,7 +287,7 @@ export default function Documentation() {
           <h2 className="text-3xl font-bold text-center text-white mb-12">
             Documentation Library
           </h2>
-          
+
           {filteredItems.length > 0 ? (
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 max-w-6xl mx-auto">
               {filteredItems.map((item) => (
@@ -370,13 +370,13 @@ export default function Documentation() {
             Can't find what you're looking for? Our support team is here to help you succeed.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a 
+            <a
               href="/support"
               className="bg-zion-cyan text-zion-slate-dark px-8 py-3 rounded-lg font-semibold hover:bg-zion-cyan-light transition-colors"
             >
               Contact Support
             </a>
-            <a 
+            <a
               href="/help"
               className="border border-zion-cyan text-zion-cyan px-8 py-3 rounded-lg font-semibold hover:bg-zion-cyan hover:text-zion-slate-dark transition-colors"
             >

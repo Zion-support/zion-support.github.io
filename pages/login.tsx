@@ -22,7 +22,7 @@ export default function Login() {
 
   const [showPassword, setShowPassword] = useState(false)
   const [isSubmitting, setIsSubmitting] = useState(false)
-  const [errors, setErrors] = useState<Record<string, string>>({})
+  const [errors, setErrors] = useState<Record<string, string>>({ /* empty */ })
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value } = e.target
@@ -34,11 +34,11 @@ export default function Login() {
   }
 
   const validateForm = () => {
-    const newErrors: Record<string, string> = {}
+    const newErrors: Record<string, string> = { /* empty */ }
 
     if (!formData.email.trim()) newErrors.email = 'Email is required'
     else if (!/\S+@\S+\.\S+/.test(formData.email)) newErrors.email = 'Email is invalid'
-    
+
     if (!formData.password) newErrors.password = 'Password is required'
 
     setErrors(newErrors)
@@ -47,20 +47,20 @@ export default function Login() {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
-    
+
     if (!validateForm()) return
 
     setIsSubmitting(true)
-    
+
     try {
       // Simulate API call
       await new Promise(resolve => setTimeout(resolve, 2000))
-      
+
       // Success - redirect or show success message
-      console.log('Login successful:', formData)
-      
+      // console.log('Login successful:', formData)
+
     } catch (error) {
-      console.error('Login error:', error)
+      // console.error('Login error:', error)
     } finally {
       setIsSubmitting(false)
     }
@@ -76,13 +76,13 @@ export default function Login() {
         <meta name="description" content={description} />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="canonical" href="https://ziontechgroup.com/login" />
-        
+
         {/* Open Graph */}
         <meta property="og:title" content={title} />
         <meta property="og:description" content={description} />
         <meta property="og:url" content="https://ziontechgroup.com/login" />
         <meta property="og:type" content="website" />
-        
+
         {/* Twitter */}
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content={title} />
@@ -97,7 +97,7 @@ export default function Login() {
             <div className="absolute bottom-20 right-20 w-24 h-24 border border-zion-purple rounded-full"></div>
             <div className="absolute top-1/2 left-1/2 w-16 h-16 border border-zion-cyan-light rounded-full"></div>
           </div>
-          
+
           <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -109,10 +109,10 @@ export default function Login() {
                 Welcome Back
               </h1>
               <p className="text-xl md:text-2xl text-zion-slate-light mb-8 max-w-3xl mx-auto">
-                Access your Zion Tech Group dashboard and continue building the future with 
+                Access your Zion Tech Group dashboard and continue building the future with
                 our cutting-edge technology solutions.
               </p>
-              
+
               <div className="flex flex-wrap justify-center gap-6 mb-12">
                 <div className="flex items-center gap-3 text-zion-cyan">
                   <Shield className="w-6 h-6" />

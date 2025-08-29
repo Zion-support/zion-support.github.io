@@ -142,46 +142,46 @@ export function FeaturedListingsSection() {
         <div className="absolute top-20 right-20 w-96 h-96 bg-zion-purple rounded-full blur-3xl"></div>
         <div className="absolute bottom-20 left-20 w-80 h-80 bg-zion-cyan rounded-full blur-3xl"></div>
       </div>
-      
+
       <div className="container mx-auto px-4 relative z-10">
-        <motion.div 
-          className="text-center mb-16" 
-          initial={{ opacity: 0, y: 20 }} 
-          whileInView={{ opacity: 1, y: 0 }} 
-          viewport={{ once: true }} 
+        <motion.div
+          className="text-center mb-16"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">
             Featured <span className="bg-gradient-to-r from-zion-cyan to-zion-purple bg-clip-text text-transparent">Projects</span>
           </h2>
           <p className="text-zion-slate-light text-lg md:text-xl max-w-4xl mx-auto leading-relaxed">
-            Discover our most successful and innovative projects that showcase our expertise 
+            Discover our most successful and innovative projects that showcase our expertise
             and commitment to delivering exceptional results.
           </p>
         </motion.div>
 
-        <motion.div 
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto" 
-          variants={containerVariants} 
-          initial="hidden" 
-          whileInView="visible" 
+        <motion.div
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto"
+          variants={containerVariants}
+          initial="hidden"
+          whileInView="visible"
           viewport={{ once: true }}
         >
           {featuredListings.map((listing, index) => (
-            <motion.div 
-              key={listing.id} 
-              variants={itemVariants} 
-              onHoverStart={() => setHoveredListing(listing.id)} 
-              onHoverEnd={() => setHoveredListing(null)} 
-              whileHover={{ y: -8 }} 
+            <motion.div
+              key={listing.id}
+              variants={itemVariants}
+              onHoverStart={() => setHoveredListing(listing.id)}
+              onHoverEnd={() => setHoveredListing(null)}
+              whileHover={{ y: -8 }}
               transition={{ type: "spring", stiffness: 300 }}
               className="group relative"
             >
               <div className="bg-gradient-to-br from-zion-blue-dark/80 to-zion-blue-dark/40 backdrop-blur-sm border border-zion-blue-light/30 rounded-2xl overflow-hidden hover:border-zion-cyan/50 transition-all duration-300 hover:shadow-2xl hover:shadow-zion-cyan/20 h-full">
                 {/* Image */}
                 <div className="relative h-48 overflow-hidden">
-                  <img 
-                    src={listing.image} 
+                  <img
+                    src={listing.image}
                     alt={listing.title}
                     className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                   />
@@ -200,7 +200,7 @@ export function FeaturedListingsSection() {
                   <h3 className="text-xl font-bold text-white mb-3 group-hover:text-zion-cyan transition-colors">
                     {listing.title}
                   </h3>
-                  
+
                   <p className="text-zion-slate-light text-sm mb-4 line-clamp-2">
                     {listing.description}
                   </p>
@@ -216,7 +216,7 @@ export function FeaturedListingsSection() {
                       <span>{listing.team}</span>
                     </div>
                   </div>
-                  
+
                   {/* Tags */}
                   <div className="flex flex-wrap gap-2 mb-4">
                     {listing.tags.slice(0, 3).map((tag, index) => (
@@ -230,7 +230,7 @@ export function FeaturedListingsSection() {
                       </span>
                     )}
                   </div>
-                  
+
                   {/* Stats */}
                   <div className="flex items-center justify-between mb-4 text-sm text-zion-slate-light">
                     <div className="flex items-center gap-1">
@@ -249,7 +249,7 @@ export function FeaturedListingsSection() {
                       </div>
                     </div>
                   </div>
-                  
+
                   {/* Price and CTA */}
                   <div className="flex items-center justify-between mt-auto">
                     <span className="text-2xl font-bold text-zion-cyan">
@@ -264,21 +264,21 @@ export function FeaturedListingsSection() {
                   {/* Expanded details on hover */}
                   <AnimatePresence>
                     {hoveredListing === listing.id && (
-                      <motion.div 
-                        className="mt-4 p-4 rounded-xl bg-zion-blue-dark/60 backdrop-blur-sm border border-zion-cyan/30" 
-                        initial={{ opacity: 0, height: 0, y: 10 }} 
-                        animate={{ opacity: 1, height: "auto", y: 0 }} 
-                        exit={{ opacity: 0, height: 0, y: 10 }} 
+                      <motion.div
+                        className="mt-4 p-4 rounded-xl bg-zion-blue-dark/60 backdrop-blur-sm border border-zion-cyan/30"
+                        initial={{ opacity: 0, height: 0, y: 10 }}
+                        animate={{ opacity: 1, height: "auto", y: 0 }}
+                        exit={{ opacity: 0, height: 0, y: 10 }}
                         transition={{ duration: 0.3 }}
                       >
                         <h4 className="text-zion-cyan font-semibold text-sm mb-3">Key Highlights:</h4>
                         <div className="space-y-2 mb-4">
                           {listing.highlights.map((highlight, idx) => (
-                            <motion.div 
-                              key={idx} 
-                              className="flex items-center gap-2 text-zion-slate-light/80 text-xs" 
-                              initial={{ opacity: 0, x: -10 }} 
-                              animate={{ opacity: 1, x: 0 }} 
+                            <motion.div
+                              key={idx}
+                              className="flex items-center gap-2 text-zion-slate-light/80 text-xs"
+                              initial={{ opacity: 0, x: -10 }}
+                              animate={{ opacity: 1, x: 0 }}
                               transition={{ delay: idx * 0.1 }}
                             >
                               <div className="w-2 h-2 bg-zion-cyan rounded-full"></div>
@@ -290,11 +290,11 @@ export function FeaturedListingsSection() {
                         <h4 className="text-zion-cyan font-semibold text-sm mb-3">Technologies:</h4>
                         <div className="flex flex-wrap gap-2">
                           {listing.technologies.slice(0, 4).map((tech, idx) => (
-                            <motion.span 
-                              key={idx} 
-                              className="px-2 py-1 bg-zion-blue-light/20 text-zion-cyan text-xs rounded-full border border-zion-cyan/30" 
-                              initial={{ opacity: 0, scale: 0.8 }} 
-                              animate={{ opacity: 1, scale: 1 }} 
+                            <motion.span
+                              key={idx}
+                              className="px-2 py-1 bg-zion-blue-light/20 text-zion-cyan text-xs rounded-full border border-zion-cyan/30"
+                              initial={{ opacity: 0, scale: 0.8 }}
+                              animate={{ opacity: 1, scale: 1 }}
                               transition={{ delay: idx * 0.1 }}
                             >
                               {tech}
@@ -309,13 +309,13 @@ export function FeaturedListingsSection() {
             </motion.div>
           ))}
         </motion.div>
-        
+
         {/* Enhanced bottom CTA */}
-        <motion.div 
-          className="text-center mt-20" 
-          initial={{ opacity: 0, y: 20 }} 
-          whileInView={{ opacity: 1, y: 0 }} 
-          viewport={{ once: true }} 
+        <motion.div
+          className="text-center mt-20"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.3 }}
         >
           <div className="inline-block p-1 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-2xl">

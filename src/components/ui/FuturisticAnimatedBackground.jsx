@@ -124,7 +124,7 @@ export const FuturisticAnimatedBackground = ({ variant = 'cyberpunk', intensity 
             ctx.strokeStyle = `rgba(0, 255, 255, ${intensity === 'low' ? 0.1 : intensity === 'medium' ? 0.2 : 0.3})`;
             ctx.lineWidth = 0.5;
             for (let i = 0; i < particlesRef.current.length; i++) {
-                for (let j = i + 1; j < particlesRef.current.length; j++) {
+                for (const j = i + 1; j < particlesRef.current.length; j++) {
                     const dx = particlesRef.current[i].x - particlesRef.current[j].x;
                     const dy = particlesRef.current[i].y - particlesRef.current[j].y;
                     const distance = Math.sqrt(dx * dx + dy * dy);
@@ -207,7 +207,7 @@ export const FuturisticAnimatedBackground = ({ variant = 'cyberpunk', intensity 
                         ? 'linear-gradient(45deg, #000428 0%, #004e92 50%, #000428 100%)'
                         : 'linear-gradient(180deg, #000000 0%, #1a0033 50%, #000000 100%)'
         }}/>
-      
+
       {/* Overlay effects */}
       <div className="absolute inset-0 pointer-events-none">
         {variant === 'cyberpunk' && (<div className="absolute inset-0 bg-gradient-to-r from-transparent via-cyan-500/5 to-transparent animate-pulse"/>)}

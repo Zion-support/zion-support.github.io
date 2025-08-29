@@ -38,7 +38,7 @@ const RevolutionaryServicesShowcase2025 = () => {
             <p className="text-xl text-gray-300 mb-8 max-w-4xl mx-auto">
               Discover our cutting-edge micro SAAS services, specialized IT solutions, and innovative AI platforms designed to transform your business in 2025 and beyond.
             </p>
-            
+
             {/* Contact Information */}
             <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 mb-8">
               <h2 className="text-2xl font-semibold text-white mb-4">Contact Zion Tech Group</h2>
@@ -218,7 +218,7 @@ const RevolutionaryServicesShowcase2025 = () => {
           <div className="bg-gradient-to-r from-blue-600/20 to-purple-600/20 backdrop-blur-sm rounded-2xl p-8 border border-white/10">
             <h2 className="text-3xl font-bold text-white mb-4">Ready to Transform Your Business?</h2>
             <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
-              Our revolutionary services are designed to give you a competitive edge in 2025 and beyond. 
+              Our revolutionary services are designed to give you a competitive edge in 2025 and beyond.
               Contact us today to discuss how we can help you achieve your goals.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">

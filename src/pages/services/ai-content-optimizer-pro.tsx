@@ -1,14 +1,14 @@
 import React from 'react';
 import { SEO } from '../../components/SEO';
 import { motion } from 'framer-motion';
-import { 
-  CheckCircle, 
-  TrendingUp, 
-  Zap, 
-  Globe, 
-  BarChart3, 
-  Target, 
-  Users, 
+import {
+  CheckCircle,
+  TrendingUp,
+  Zap,
+  Globe,
+  BarChart3,
+  Target,
+  Users,
   Award,
   Phone,
   Mail,
@@ -181,7 +181,7 @@ const AIContentOptimizerPro: React.FC = () => {
         keywords="AI content optimization, SEO optimization, content readability, content marketing, AI writing tools, content analytics"
         canonical="https://ziontechgroup.com/services/ai-content-optimizer-pro"
       />
-      
+
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         {/* Hero Section */}
         <section className="relative py-20 px-4 sm:px-6 lg:px-8">
@@ -197,7 +197,7 @@ const AIContentOptimizerPro: React.FC = () => {
               <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
                 Transform your content with AI-powered optimization. Improve SEO rankings, enhance readability, and boost engagement across all digital platforms.
               </p>
-              
+
               {/* Key Metrics */}
               <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-8">
                 <div className="bg-white/10 backdrop-blur-sm rounded-xl p-4 border border-white/20">
@@ -348,8 +348,8 @@ const AIContentOptimizerPro: React.FC = () => {
                   transition={{ duration: 0.6, delay: index * 0.1 }}
                   viewport={{ once: true }}
                   className={`relative rounded-xl p-8 ${
-                    plan.popular 
-                      ? 'bg-gradient-to-br from-blue-600 to-purple-600 border-2 border-blue-400' 
+                    plan.popular
+                      ? 'bg-gradient-to-br from-blue-600 to-purple-600 border-2 border-blue-400'
                       : 'bg-white/10 backdrop-blur-sm border border-white/20'
                   }`}
                 >
@@ -360,7 +360,7 @@ const AIContentOptimizerPro: React.FC = () => {
                       </span>
                     </div>
                   )}
-                  
+
                   <div className="text-center mb-6">
                     <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
                     <div className="flex items-baseline justify-center">
@@ -369,7 +369,7 @@ const AIContentOptimizerPro: React.FC = () => {
                     </div>
                     <p className="text-gray-300 mt-2">{plan.description}</p>
                   </div>
-                  
+
                   <ul className="space-y-3 mb-8">
                     {plan.features.map((feature, featureIndex) => (
                       <li key={featureIndex} className="flex items-center text-white">
@@ -378,7 +378,7 @@ const AIContentOptimizerPro: React.FC = () => {
                       </li>
                     ))}
                   </ul>
-                  
+
                   <button className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
                     plan.popular
                       ? 'bg-white text-blue-600 hover:bg-gray-100'
@@ -389,7 +389,7 @@ const AIContentOptimizerPro: React.FC = () => {
                 </motion.div>
               ))}
             </div>
-            
+
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -467,7 +467,7 @@ const AIContentOptimizerPro: React.FC = () => {
               <p className="text-xl text-gray-300 mb-8">
                 Join thousands of content creators and marketers who are already using AI Content Optimizer Pro to achieve remarkable results.
               </p>
-              
+
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
                 <div className="bg-white/10 backdrop-blur-sm rounded-xl p-4 border border-white/20">
                   <Phone className="text-blue-400 w-8 h-8 mx-auto mb-3" />
@@ -487,21 +487,21 @@ const AIContentOptimizerPro: React.FC = () => {
               </div>
 
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <a 
+                <a
                   href={`tel:${contactInfo.phone}`}
                   className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-semibold py-3 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 flex items-center justify-center space-x-2"
                 >
                   <Phone className="w-4 h-4" />
                   <span>Call Now</span>
                 </a>
-                <a 
+                <a
                   href={`mailto:${contactInfo.email}`}
                   className="border-2 border-white text-white font-semibold py-3 px-8 rounded-lg hover:bg-white hover:text-gray-900 transition-all duration-300 flex items-center justify-center space-x-2"
                 >
                   <Mail className="w-4 h-4" />
                   <span>Send Email</span>
                 </a>
-                <a 
+                <a
                   href={contactInfo.website}
                   target="_blank"
                   rel="noopener noreferrer"

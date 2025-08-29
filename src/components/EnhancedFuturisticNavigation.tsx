@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
-import { 
-  Menu, 
-  X, 
-  Search, 
-  User, 
-  Bell, 
+import {
+  Menu,
+  X,
+  Search,
+  User,
+  Bell,
   ChevronDown,
   Brain,
   Shield,
@@ -363,8 +363,8 @@ export const EnhancedFuturisticNavigation: React.FC = () => {
     <>
       {/* Desktop Navigation */}
       <nav className={`hidden lg:block fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
-        scrolled 
-          ? 'bg-zion-slate-dark/95 backdrop-blur-xl border-b border-zion-cyan/20 shadow-2xl shadow-zion-cyan/10' 
+        scrolled
+          ? 'bg-zion-slate-dark/95 backdrop-blur-xl border-b border-zion-cyan/20 shadow-2xl shadow-zion-cyan/10'
           : 'bg-transparent'
       }`}>
         <div className="max-w-7xl mx-auto px-6">
@@ -491,8 +491,8 @@ export const EnhancedFuturisticNavigation: React.FC = () => {
       {/* Mobile Navigation */}
       <nav className="lg:hidden fixed top-0 left-0 right-0 z-50">
         <div className={`transition-all duration-500 ${
-          scrolled 
-            ? 'bg-zion-slate-dark/95 backdrop-blur-xl border-b border-zion-cyan/20 shadow-2xl shadow-zion-cyan/10' 
+          scrolled
+            ? 'bg-zion-slate-dark/95 backdrop-blur-xl border-b border-zion-cyan/20 shadow-2xl shadow-zion-cyan/10'
             : 'bg-transparent'
         }`}>
           <div className="max-w-7xl mx-auto px-6">
@@ -566,7 +566,7 @@ export const EnhancedFuturisticNavigation: React.FC = () => {
                               activeDropdown === item.name ? 'rotate-180' : ''
                             }`} />
                           </button>
-                          
+
                           {/* Mobile Dropdown */}
                           <AnimatePresence>
                             {activeDropdown === item.name && (

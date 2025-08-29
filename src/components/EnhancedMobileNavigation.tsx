@@ -1,14 +1,14 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Link, useLocation } from 'react-router-dom';
-import { 
-  Menu, 
-  X, 
-  ChevronDown, 
-  Home, 
-  Users, 
-  Briefcase, 
-  Phone, 
+import {
+  Menu,
+  X,
+  ChevronDown,
+  Home,
+  Users,
+  Briefcase,
+  Phone,
   Info,
   Settings,
   HelpCircle,
@@ -203,15 +203,15 @@ export const EnhancedMobileNavigation: React.FC = () => {
             to={item.path}
             onClick={() => handleNavigation(item.path)}
             className={`flex items-center justify-between w-full p-4 text-left transition-all duration-200 ${
-              isItemActive 
-                ? 'text-zion-cyan border-l-2 border-zion-cyan' 
+              isItemActive
+                ? 'text-zion-cyan border-l-2 border-zion-cyan'
                 : 'text-white hover:text-zion-cyan'
             }`}
           >
             <div className="flex items-center gap-3">
-              <item.icon 
-                size={20} 
-                className={isItemActive ? 'text-zion-cyan' : 'text-zion-slate-light'} 
+              <item.icon
+                size={20}
+                className={isItemActive ? 'text-zion-cyan' : 'text-zion-slate-light'}
               />
               <div>
                 <span className="font-medium">{item.label}</span>
@@ -229,7 +229,7 @@ export const EnhancedMobileNavigation: React.FC = () => {
               />
             )}
           </Link>
-          
+
           {hasChildren && (
             <button
               onClick={() => toggleExpanded(item.label)}

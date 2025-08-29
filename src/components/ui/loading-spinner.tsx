@@ -35,7 +35,7 @@ export const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
       <div className="relative">
         {/* Outer ring */}
         <div className={`${sizeClasses[size]} border-4 border-gray-200 rounded-full opacity-20`}></div>
-        
+
         {/* Animated spinner */}
         <motion.div
           className={`absolute top-0 left-0 ${sizeClasses[size]} border-4 border-t-transparent ${colorClasses[color]} rounded-full`}
@@ -46,7 +46,7 @@ export const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
             ease: "linear"
           }}
         />
-        
+
         {/* Center dot for larger sizes */}
         {size === 'xl' && (
           <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
@@ -54,7 +54,7 @@ export const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
           </div>
         )}
       </div>
-      
+
       {/* Loading text */}
       {showText && text && (
         <motion.div
@@ -68,7 +68,7 @@ export const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
           </div>
         </motion.div>
       )}
-      
+
       {/* Screen reader text */}
       <span className="sr-only">Loading, please wait</span>
     </div>
@@ -76,9 +76,9 @@ export const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
 };
 
 // Optimized spinner for inline use
-export const InlineSpinner: React.FC<{ size?: 'sm' | 'md'; className?: string }> = ({ 
-  size = 'sm', 
-  className = '' 
+export const InlineSpinner: React.FC<{ size?: 'sm' | 'md'; className?: string }> = ({
+  size = 'sm',
+  className = ''
 }) => (
   <div className={`inline-flex items-center ${className}`} role="status" aria-label="Loading">
     <motion.div
@@ -95,12 +95,12 @@ export const InlineSpinner: React.FC<{ size?: 'sm' | 'md'; className?: string }>
 );
 
 // Full-screen loading overlay
-export const FullScreenLoader: React.FC<{ 
-  text?: string; 
+export const FullScreenLoader: React.FC<{
+  text?: string;
   showLogo?: boolean;
   className?: string;
-}> = ({ 
-  text = 'Loading amazing experiences...', 
+}> = ({
+  text = 'Loading amazing experiences...',
   showLogo = true,
   className = ''
 }) => (
@@ -115,19 +115,19 @@ export const FullScreenLoader: React.FC<{
           </div>
         </div>
       )}
-      
+
       <LoadingSpinner size="lg" color="cyan" text={text} />
     </div>
   </div>
 );
 
 // Skeleton loading component
-export const SkeletonLoader: React.FC<{ 
+export const SkeletonLoader: React.FC<{
   className?: string;
   lines?: number;
-}> = ({ 
-  className = '', 
-  lines = 3 
+}> = ({
+  className = '',
+  lines = 3
 }) => (
   <div className={`animate-pulse ${className}`}>
     {Array.from({ length: lines }).map((_, index) => (

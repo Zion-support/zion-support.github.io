@@ -17,7 +17,7 @@ export default function Services() {
 
 	// Filter and sort services
 	const filteredServices = additionalEnhancedServices
-		.filter(service => 
+		.filter(service =>
 			(selectedCategory === 'all' || service.category === selectedCategory) &&
 			(service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
 			 service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
@@ -304,7 +304,7 @@ export default function Services() {
 						<p className="mx-auto mt-6 max-w-xl text-lg leading-8 text-blue-100">
 							Let's discuss your project and how our innovative services can help you achieve your goals.
 						</p>
-						
+
 						{/* Contact Details */}
 						<div className="mt-8 grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
 							<div>

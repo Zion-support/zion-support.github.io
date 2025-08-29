@@ -1053,7 +1053,7 @@ export const getRevolutionaryServicesByCategory = (category: string): Revolution
 };
 
 export const getRevolutionaryServicesByPriceRange = (minPrice: number, maxPrice: number): RevolutionaryService2030[] => {
-  return REVOLUTIONARY_SERVICES_2030.filter(service => 
+  return REVOLUTIONARY_SERVICES_2030.filter(service =>
     service.pricing.monthly >= minPrice && service.pricing.monthly <= maxPrice
   );
 };

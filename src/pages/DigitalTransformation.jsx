@@ -113,7 +113,7 @@ export default function DigitalTransformation() {
               </span>
             </h1>
             <p className="text-xl md:text-2xl text-zion-slate-light max-w-4xl mx-auto mb-8">
-              Transform your business for the digital age with comprehensive modernization strategies, 
+              Transform your business for the digital age with comprehensive modernization strategies,
               process automation, and technology innovation that drives real results.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">

@@ -13,20 +13,20 @@ export default function AITransportation() {
   ];
 
   const tiers = [
-    { 
-      name: 'Small Fleet', 
-      price: '$399/mo', 
-      details: ['Up to 25 vehicles', 'Basic AI features', 'Standard reports', 'Email support'] 
+    {
+      name: 'Small Fleet',
+      price: '$399/mo',
+      details: ['Up to 25 vehicles', 'Basic AI features', 'Standard reports', 'Email support']
     },
-    { 
-      name: 'Medium Fleet', 
-      price: '$999/mo', 
-      details: ['Up to 100 vehicles', 'Advanced AI features', 'Custom reports', 'Priority support'] 
+    {
+      name: 'Medium Fleet',
+      price: '$999/mo',
+      details: ['Up to 100 vehicles', 'Advanced AI features', 'Custom reports', 'Priority support']
     },
-    { 
-      name: 'Large Fleet', 
-      price: '$2,499/mo', 
-      details: ['Unlimited vehicles', 'Custom AI models', 'Full system integration', '24/7 dedicated support'] 
+    {
+      name: 'Large Fleet',
+      price: '$2,499/mo',
+      details: ['Unlimited vehicles', 'Custom AI models', 'Full system integration', '24/7 dedicated support']
     },
   ];
 

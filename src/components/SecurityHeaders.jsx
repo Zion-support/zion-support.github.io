@@ -46,7 +46,7 @@ export function SecurityHeaders({ className }) {
             Enterprise Security & Compliance
           </h2>
           <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
-            Zion Tech Group maintains the highest standards of security and compliance 
+            Zion Tech Group maintains the highest standards of security and compliance
             to protect your business data and ensure regulatory adherence.
           </p>
         </div>

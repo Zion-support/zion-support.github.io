@@ -12,7 +12,7 @@ function fixFunctionName(filePath) {
     if (!functionMatch) return false;
     const currentFunctionName = functionMatch[1];
     // Convert filename to valid function name
-    let functionName = fileName
+    const functionName = fileName
       .replace(/[^a-zA-Z0-9]/g, "")
       .replace(/^(\d)/, (match, digit) => {
         const numberWords = {
@@ -30,40 +30,40 @@ function fixFunctionName(filePath) {
     // Replace the function name throughout the file
     let fixedContent = content.replace(
       new RegExp(
-        `const\\s+${currentFunctionName.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")}:\\s*NextPage\\s*=\\s*\\(\\)\\s*=>\\s*{`,
+        `const\\s+${currentFunctionName.replace(/[.*+?^${ /* empty */ }()|[\]\\]/g, "\\$&")}:\\s*NextPage\\s*=\\s*\\(\\)\\s*=>\\s*{`,
       ),
       `const ${functionName}: NextPage = () => {`,
     );
     // Also replace the export default
     fixedContent = fixedContent.replace(
       new RegExp(
-        `export\\s+default\\s+${currentFunctionName.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")}`,
+        `export\\s+default\\s+${currentFunctionName.replace(/[.*+?^${ /* empty */ }()|[\]\\]/g, "\\$&")}`,
       ),
       `export default ${functionName}`,
     );
     // Replace in title and description
     fixedContent = fixedContent.replace(
       new RegExp(
-        `<title>${currentFunctionName.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")}`,
+        `<title>${currentFunctionName.replace(/[.*+?^${ /* empty */ }()|[\]\\]/g, "\\$&")}`,
       ),
       `<title>${fileName.replace(/-/g, " ").replace(/\b\w/g, (l) => l.toUpperCase())}`,
     );
     fixedContent = fixedContent.replace(
       new RegExp(
-        `content="${currentFunctionName.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")}`,
+        `content="${currentFunctionName.replace(/[.*+?^${ /* empty */ }()|[\]\\]/g, "\\$&")}`,
       ),
       `content="${fileName.replace(/-/g, " ").replace(/\b\w/g, (l) => l.toUpperCase())}`,
     );
     if (fixedContent !== content) {
       fs.writeFileSync(filePath, fixedContent, "utf8");
-      console.log(
+      // console.log(
         `Fixed function name in: ${filePath} (${currentFunctionName} -> ${functionName})`,
       );
       return true;
     }
     return false;
   } catch (error) {
-    console.error(`Error processing ${filePath}:`, error.message);
+    // console.error(`Error processing ${filePath}:`, error.message);
     return false;
   }
 }
@@ -71,12 +71,12 @@ async function fixAllFiles() {
   const files = await glob("pages/**/*.{ts,tsx}", {
     ignore: ["node_modules/**", ".next/**"],
   });
-  let fixedCount = 0;
+  const fixedCount = 0;
   for (const file of files) {
     if (fixFunctionName(file)) {
       fixedCount++;
     }
   }
-  console.log(`Fixed ${fixedCount} files.`);
+  // console.log(`Fixed ${fixedCount} files.`);
 }
 fixAllFiles();

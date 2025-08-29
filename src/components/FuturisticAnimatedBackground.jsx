@@ -104,7 +104,7 @@ export const FuturisticAnimatedBackground = ({ className = '', intensity = 'medi
             ctx.strokeStyle = `rgba(0, 255, 255, ${gridOpacity * 0.5})`;
             ctx.lineWidth = 0.5;
             for (let i = 0; i < particles.length; i++) {
-                for (let j = i + 1; j < particles.length; j++) {
+                for (const j = i + 1; j < particles.length; j++) {
                     const dx = particles[i].x - particles[j].x;
                     const dy = particles[i].y - particles[j].y;
                     const distance = Math.sqrt(dx * dx + dy * dy);

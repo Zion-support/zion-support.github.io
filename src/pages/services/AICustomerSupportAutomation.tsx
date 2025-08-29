@@ -63,7 +63,7 @@ export default function AICustomerSupportAutomation() {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white">
-      <SEO 
+      <SEO
         title="AI-Powered Customer Support Automation - Zion Tech Group"
         description="Revolutionary AI customer support platform that provides 24/7 automated assistance, intelligent routing, and seamless human handoffs."
       />
@@ -79,20 +79,20 @@ export default function AICustomerSupportAutomation() {
             AI Customer Support
           </h1>
           <p className="text-xl md:text-2xl text-slate-300 mb-8 max-w-4xl mx-auto">
-            Transform your customer support with AI that works 24/7, understands emotions, and provides instant, 
+            Transform your customer support with AI that works 24/7, understands emotions, and provides instant,
             accurate responses while seamlessly connecting to human agents when needed.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a 
-              href="https://ziontechgroup.com/contact" 
-              target="_blank" 
+            <a
+              href="https://ziontechgroup.com/contact"
+              target="_blank"
               rel="noopener noreferrer"
               className="px-8 py-4 bg-gradient-to-r from-green-500 to-blue-600 rounded-lg font-semibold hover:from-green-600 hover:to-blue-700 transition-all duration-300 inline-flex items-center"
             >
               Start Free Trial <ArrowRight className="ml-2 w-5 h-5" />
             </a>
-            <a 
-              href="tel:+13024640950" 
+            <a
+              href="tel:+13024640950"
               className="px-8 py-4 border border-green-400/30 rounded-lg font-semibold hover:bg-green-500/10 transition-all duration-300 inline-flex items-center"
             >
               <Phone className="w-5 h-5 mr-2" /> Call Now
@@ -107,7 +107,7 @@ export default function AICustomerSupportAutomation() {
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold mb-6">Why Choose AI Customer Support?</h2>
             <p className="text-xl text-slate-300 max-w-3xl mx-auto">
-              Our AI platform revolutionizes customer support by providing instant, intelligent responses 
+              Our AI platform revolutionizes customer support by providing instant, intelligent responses
               while maintaining the human touch when needed.
             </p>
           </div>
@@ -162,7 +162,7 @@ export default function AICustomerSupportAutomation() {
               <h3 className="text-xl font-semibold mb-2">Customer Inquiry</h3>
               <p className="text-slate-300">Customer asks a question through any channel (chat, email, social media)</p>
             </div>
-            
+
             <div className="text-center">
               <div className="w-20 h-20 bg-blue-500/20 rounded-full flex items-center justify-center mx-auto mb-4">
                 <Bot className="w-10 h-10 text-blue-400" />
@@ -170,7 +170,7 @@ export default function AICustomerSupportAutomation() {
               <h3 className="text-xl font-semibold mb-2">AI Processing</h3>
               <p className="text-slate-300">AI analyzes the request, understands context, and generates appropriate response</p>
             </div>
-            
+
             <div className="text-center">
               <div className="w-20 h-20 bg-purple-500/20 rounded-full flex items-center justify-center mx-auto mb-4">
                 <Headphones className="w-10 h-10 text-purple-400" />
@@ -192,11 +192,11 @@ export default function AICustomerSupportAutomation() {
 
           <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
             {pricingTiers.map((tier, index) => (
-              <div 
-                key={index} 
+              <div
+                key={index}
                 className={`bg-slate-800/50 border rounded-xl p-8 ${
-                  tier.name === 'Professional' 
-                    ? 'border-green-500/50 bg-green-500/5' 
+                  tier.name === 'Professional'
+                    ? 'border-green-500/50 bg-green-500/5'
                     : 'border-slate-700/50'
                 }`}
               >
@@ -207,7 +207,7 @@ export default function AICustomerSupportAutomation() {
                   </div>
                   <p className="text-slate-400">{tier.conversations}</p>
                 </div>
-                
+
                 <ul className="space-y-3 mb-8">
                   {tier.features.map((feature, featureIndex) => (
                     <li key={featureIndex} className="flex items-center">
@@ -217,9 +217,9 @@ export default function AICustomerSupportAutomation() {
                   ))}
                 </ul>
 
-                <a 
-                  href="https://ziontechgroup.com/contact" 
-                  target="_blank" 
+                <a
+                  href="https://ziontechgroup.com/contact"
+                  target="_blank"
                   rel="noopener noreferrer"
                   className={`w-full py-3 px-6 rounded-lg font-semibold text-center block transition-all duration-300 ${
                     tier.name === 'Professional'
@@ -279,18 +279,18 @@ export default function AICustomerSupportAutomation() {
           <p className="text-xl text-slate-300 mb-8 max-w-3xl mx-auto">
             Join thousands of businesses already using AI to provide exceptional customer support 24/7.
           </p>
-          
+
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
-            <a 
-              href="https://ziontechgroup.com/contact" 
-              target="_blank" 
+            <a
+              href="https://ziontechgroup.com/contact"
+              target="_blank"
               rel="noopener noreferrer"
               className="px-8 py-4 bg-gradient-to-r from-green-500 to-blue-600 rounded-lg font-semibold hover:from-green-600 hover:to-blue-700 transition-all duration-300 inline-flex items-center"
             >
               Start Free Trial <ArrowRight className="ml-2 w-5 h-5" />
             </a>
-            <a 
-              href="mailto:kleber@ziontechgroup.com" 
+            <a
+              href="mailto:kleber@ziontechgroup.com"
               className="px-8 py-4 border border-green-400/30 rounded-lg font-semibold hover:bg-green-500/10 transition-all duration-300 inline-flex items-center"
             >
               <Mail className="w-5 h-5 mr-2" /> Schedule Demo
@@ -321,9 +321,9 @@ export default function AICustomerSupportAutomation() {
               </div>
               <div>
                 <h4 className="font-semibold text-green-400 mb-2">Website</h4>
-                <a 
-                  href="https://ziontechgroup.com" 
-                  target="_blank" 
+                <a
+                  href="https://ziontechgroup.com"
+                  target="_blank"
                   rel="noopener noreferrer"
                   className="text-slate-300 hover:text-green-400 inline-flex items-center"
                 >

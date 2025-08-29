@@ -6,10 +6,10 @@ export function TalentResults({ talents, totalCount, isLoading, viewProfile, han
     return (<div className="flex-1">
       {/* Active filters */}
       <ActiveFilters {...activeFiltersProps}/>
-      
+
       {/* Results count */}
       <ResultsHeader isLoading={isLoading} resultCount={totalCount}/>
-      
+
       {/* Talents grid */}
       <TalentGrid talents={talents} isLoading={isLoading} onTalentClick={viewProfile} handleBook={handleBook} handleMessage={handleMessage} isAuthenticated={isAuthenticated} clearFilters={activeFiltersProps.clearFilters}/>
     </div>);

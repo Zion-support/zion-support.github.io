@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { 
-  BarChart3, 
-  PieChart, 
-  TrendingUp, 
-  Activity, 
-  Users, 
+import {
+  BarChart3,
+  PieChart,
+  TrendingUp,
+  Activity,
+  Users,
   DollarSign,
   Calendar,
   Target,
@@ -107,7 +107,7 @@ export const DataVisualization: React.FC<DataVisualizationProps> = ({
     setIsLoading(true);
     // Simulate API call
     await new Promise(resolve => setTimeout(resolve, 1000));
-    
+
     // Update chart data with new random values
     setChartData(prev => ({
       ...prev,
@@ -120,10 +120,10 @@ export const DataVisualization: React.FC<DataVisualizationProps> = ({
     // Update metrics with new random values
     setMetrics(prev => prev.map(metric => ({
       ...metric,
-      change: Math.random() > 0.5 ? 
-        (Math.random() * 20 - 10) : 
+      change: Math.random() > 0.5 ?
+        (Math.random() * 20 - 10) :
         (Math.random() * 15 - 7.5),
-      changeType: Math.random() > 0.6 ? 'increase' : 
+      changeType: Math.random() > 0.6 ? 'increase' :
                  Math.random() > 0.3 ? 'decrease' : 'neutral'
     })));
 
@@ -135,11 +135,11 @@ export const DataVisualization: React.FC<DataVisualizationProps> = ({
     const icon = changeType === 'increase' ? <ArrowUp className="w-4 h-4" /> :
                  changeType === 'decrease' ? <ArrowDown className="w-4 h-4" /> :
                  <Minus className="w-4 h-4" />;
-    
+
     const color = changeType === 'increase' ? 'text-green-400' :
                   changeType === 'decrease' ? 'text-red-400' :
                   'text-zinc-400';
-    
+
     return { icon, color };
   };
 
@@ -188,7 +188,7 @@ export const DataVisualization: React.FC<DataVisualizationProps> = ({
           <h1 className="text-3xl font-bold text-white mb-2">{title}</h1>
           <p className="text-zinc-400">Comprehensive analytics and insights for your business</p>
         </div>
-        
+
         {showActions && (
           <div className="flex items-center gap-3 mt-4 sm:mt-0">
             {/* Time Range Selector */}
@@ -251,7 +251,7 @@ export const DataVisualization: React.FC<DataVisualizationProps> = ({
                     <span>{Math.abs(metric.change).toFixed(1)}%</span>
                   </div>
                 </div>
-                
+
                 <h3 className="text-2xl font-bold text-white mb-1">{metric.value}</h3>
                 <p className="text-zinc-400 text-sm">{metric.title}</p>
               </motion.div>
@@ -342,14 +342,14 @@ export const DataVisualization: React.FC<DataVisualizationProps> = ({
                           const startAngle = pieChartData.datasets[0].data
                             .slice(0, index)
                             .reduce((a, b) => a + (b / pieChartData.datasets[0].data.reduce((c, d) => c + d, 0)) * 360, 0);
-                          
+
                           const x1 = 128 + 100 * Math.cos(startAngle * Math.PI / 180);
                           const y1 = 128 + 100 * Math.sin(startAngle * Math.PI / 180);
                           const x2 = 128 + 100 * Math.cos((startAngle + angle) * Math.PI / 180);
                           const y2 = 128 + 100 * Math.sin((startAngle + angle) * Math.PI / 180);
-                          
+
                           const largeArcFlag = angle > 180 ? 1 : 0;
-                          
+
                           return (
                             <path
                               key={index}
@@ -361,12 +361,12 @@ export const DataVisualization: React.FC<DataVisualizationProps> = ({
                           );
                         })}
                       </svg>
-                      
+
                       {/* Legend */}
                       <div className="absolute -right-32 top-0 space-y-2">
                         {pieChartData.labels.map((label, index) => (
                           <div key={label} className="flex items-center gap-2">
-                            <div 
+                            <div
                               className="w-3 h-3 rounded"
                               style={{ backgroundColor: pieChartData.datasets[0].backgroundColor[index] }}
                             />
@@ -406,17 +406,17 @@ export const DataVisualization: React.FC<DataVisualizationProps> = ({
                             strokeWidth="1"
                           />
                         ))}
-                        
+
                         {/* Line chart */}
                         <polyline
                           fill="none"
                           stroke="rgba(34, 221, 210, 1)"
                           strokeWidth="3"
-                          points={lineChartData.datasets[0].data.map((value, index) => 
+                          points={lineChartData.datasets[0].data.map((value, index) =>
                             `${index * 85.7 + 42.85},${300 - (value / 100) * 300}`
                           ).join(' ')}
                         />
-                        
+
                         {/* Data points */}
                         {lineChartData.datasets[0].data.map((value, index) => (
                           <circle
@@ -427,7 +427,7 @@ export const DataVisualization: React.FC<DataVisualizationProps> = ({
                             fill="rgba(34, 221, 210, 1)"
                           />
                         ))}
-                        
+
                         {/* Labels */}
                         {lineChartData.labels.map((label, index) => (
                           <text

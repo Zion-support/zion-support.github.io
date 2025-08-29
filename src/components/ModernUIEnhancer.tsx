@@ -1,11 +1,11 @@
 import React, { useEffect, useState, useRef } from 'react';
 import { motion, AnimatePresence, useScroll, useTransform } from 'framer-motion';
-import { 
-  Sparkles, 
-  Zap, 
-  Star, 
-  Palette, 
-  Eye, 
+import {
+  Sparkles,
+  Zap,
+  Star,
+  Palette,
+  Eye,
   Layers,
   Settings,
   X
@@ -32,7 +32,7 @@ export const ModernUIEnhancer: React.FC = () => {
     colorThemes: true,
     depthLayers: true
   });
-  
+
   const [activeTheme, setActiveTheme] = useState('default');
   const [particles, setParticles] = useState<Array<{ id: number; x: number; y: number; vx: number; vy: number }>>([]);
   const containerRef = useRef<HTMLDivElement>(null);
@@ -42,20 +42,20 @@ export const ModernUIEnhancer: React.FC = () => {
   useEffect(() => {
     // Initialize UI enhancements
     initializeUIEnhancements();
-    
+
     // Setup particle system
     if (settings.particleEffects) {
       setupParticleSystem();
     }
-    
+
     // Setup smooth scrolling
     if (settings.smoothScrolling) {
       setupSmoothScrolling();
     }
-    
+
     // Apply initial settings
     applyUISettings();
-    
+
     return () => {
       cleanupUIEnhancements();
     };
@@ -69,16 +69,16 @@ export const ModernUIEnhancer: React.FC = () => {
   const initializeUIEnhancements = () => {
     // Add CSS custom properties
     addCSSVariables();
-    
+
     // Add glassmorphism styles
     addGlassmorphismStyles();
-    
+
     // Add modern shadow styles
     addModernShadowStyles();
-    
+
     // Add depth layer styles
     addDepthLayerStyles();
-    
+
     // Add color theme styles
     addColorThemeStyles();
   };
@@ -95,7 +95,7 @@ export const ModernUIEnhancer: React.FC = () => {
         --accent-glow: 0 0 20px rgba(6, 182, 212, 0.5);
         --text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
       }
-      
+
       .glass-effect {
         background: var(--glass-bg);
         backdrop-filter: blur(20px);
@@ -103,28 +103,28 @@ export const ModernUIEnhancer: React.FC = () => {
         border: 1px solid var(--glass-border);
         box-shadow: var(--glass-shadow);
       }
-      
+
       .modern-shadow {
         box-shadow: var(--modern-shadow);
       }
-      
+
       .depth-layer {
         box-shadow: var(--depth-shadow);
         transform: translateZ(0);
       }
-      
+
       .accent-glow {
         box-shadow: var(--accent-glow);
       }
-      
+
       .text-shadow {
         text-shadow: var(--text-shadow);
       }
-      
+
       .smooth-scroll {
         scroll-behavior: smooth;
       }
-      
+
       .enhanced-animation {
         transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
       }
@@ -144,14 +144,14 @@ export const ModernUIEnhancer: React.FC = () => {
         box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
         transition: all 0.3s ease;
       }
-      
+
       .glass-card:hover {
         background: rgba(255, 255, 255, 0.15);
         border-color: rgba(255, 255, 255, 0.3);
         box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
         transform: translateY(-2px);
       }
-      
+
       .glass-button {
         background: rgba(6, 182, 212, 0.2);
         backdrop-filter: blur(20px);
@@ -164,7 +164,7 @@ export const ModernUIEnhancer: React.FC = () => {
         transition: all 0.3s ease;
         cursor: pointer;
       }
-      
+
       .glass-button:hover {
         background: rgba(6, 182, 212, 0.3);
         border-color: rgba(6, 182, 212, 0.5);
@@ -181,27 +181,27 @@ export const ModernUIEnhancer: React.FC = () => {
       .shadow-elevation-1 {
         box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
       }
-      
+
       .shadow-elevation-2 {
         box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
       }
-      
+
       .shadow-elevation-3 {
         box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
       }
-      
+
       .shadow-elevation-4 {
         box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
       }
-      
+
       .shadow-elevation-5 {
         box-shadow: 0 19px 38px rgba(0, 0, 0, 0.30), 0 15px 12px rgba(0, 0, 0, 0.22);
       }
-      
+
       .hover-lift {
         transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
       }
-      
+
       .hover-lift:hover {
         transform: translateY(-4px);
         box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
@@ -217,26 +217,26 @@ export const ModernUIEnhancer: React.FC = () => {
         transform: translateZ(10px);
         box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
       }
-      
+
       .depth-2 {
         transform: translateZ(20px);
         box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
       }
-      
+
       .depth-3 {
         transform: translateZ(30px);
         box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
       }
-      
+
       .parallax-layer {
         transform-style: preserve-3d;
         will-change: transform;
       }
-      
+
       .floating-element {
         animation: float 6s ease-in-out infinite;
       }
-      
+
       @keyframes float {
         0%, 100% { transform: translateY(0px) translateZ(0); }
         50% { transform: translateY(-10px) translateZ(10px); }
@@ -255,7 +255,7 @@ export const ModernUIEnhancer: React.FC = () => {
         --background: #000000;
         --surface: #111111;
       }
-      
+
       .theme-nature {
         --primary: #4ade80;
         --secondary: #22c55e;
@@ -263,7 +263,7 @@ export const ModernUIEnhancer: React.FC = () => {
         --background: #f0fdf4;
         --surface: #ffffff;
       }
-      
+
       .theme-sunset {
         --primary: #f97316;
         --secondary: #ec4899;
@@ -271,7 +271,7 @@ export const ModernUIEnhancer: React.FC = () => {
         --background: #fef3c7;
         --surface: #ffffff;
       }
-      
+
       .theme-ocean {
         --primary: #06b6d4;
         --secondary: #0891b2;
@@ -279,7 +279,7 @@ export const ModernUIEnhancer: React.FC = () => {
         --background: #f0f9ff;
         --surface: #ffffff;
       }
-      
+
       .theme-dark {
         --primary: #6366f1;
         --secondary: #8b5cf6;
@@ -295,8 +295,8 @@ export const ModernUIEnhancer: React.FC = () => {
     // Create floating particles
     const particleCount = 50;
     const newParticles = [];
-    
-    for (let i = 0; i < particleCount; i++) {
+
+    for (const i = 0; i < particleCount; i++) {
       newParticles.push({
         id: i,
         x: Math.random() * window.innerWidth,
@@ -305,9 +305,9 @@ export const ModernUIEnhancer: React.FC = () => {
         vy: (Math.random() - 0.5) * 0.5
       });
     }
-    
+
     setParticles(newParticles);
-    
+
     // Animate particles
     const animateParticles = () => {
       setParticles(prev => prev.map(particle => ({
@@ -318,22 +318,22 @@ export const ModernUIEnhancer: React.FC = () => {
         vy: particle.y <= 0 || particle.y >= window.innerHeight ? -particle.vy : particle.vy
       })));
     };
-    
+
     const interval = setInterval(animateParticles, 50);
-    
+
     return () => clearInterval(interval);
   };
 
   const setupSmoothScrolling = () => {
     // Add smooth scrolling to all anchor links
     const links = document.querySelectorAll('a[href^="#"]');
-    
+
     links.forEach(link => {
       link.addEventListener('click', (e) => {
         e.preventDefault();
         const targetId = link.getAttribute('href')?.substring(1);
         const targetElement = document.getElementById(targetId || '');
-        
+
         if (targetElement) {
           targetElement.scrollIntoView({
             behavior: 'smooth',
@@ -346,42 +346,42 @@ export const ModernUIEnhancer: React.FC = () => {
 
   const applyUISettings = () => {
     const root = document.documentElement;
-    
+
     // Apply glassmorphism
     if (settings.glassmorphism) {
       root.classList.add('glassmorphism-enabled');
     } else {
       root.classList.remove('glassmorphism-enabled');
     }
-    
+
     // Apply enhanced animations
     if (settings.enhancedAnimations) {
       root.classList.add('enhanced-animations');
     } else {
       root.classList.remove('enhanced-animations');
     }
-    
+
     // Apply modern shadows
     if (settings.modernShadows) {
       root.classList.add('modern-shadows');
     } else {
       root.classList.remove('modern-shadows');
     }
-    
+
     // Apply depth layers
     if (settings.depthLayers) {
       root.classList.add('depth-layers');
     } else {
       root.classList.remove('depth-layers');
     }
-    
+
     // Apply color themes
     if (settings.colorThemes) {
       root.classList.add('color-themes');
     } else {
       root.classList.remove('color-themes');
     }
-    
+
     // Apply active theme
     root.className = root.className.replace(/theme-\w+/g, '');
     root.classList.add(`theme-${activeTheme}`);
@@ -391,7 +391,7 @@ export const ModernUIEnhancer: React.FC = () => {
     // Remove added styles
     const addedStyles = document.querySelectorAll('style[data-ui-enhancer]');
     addedStyles.forEach(style => style.remove());
-    
+
     // Remove added classes
     const root = document.documentElement;
     root.className = root.className.replace(/ui-enhanced|glassmorphism-enabled|enhanced-animations|modern-shadows|depth-layers|color-themes|theme-\w+/g, '');
@@ -445,7 +445,7 @@ export const ModernUIEnhancer: React.FC = () => {
                 <X size={20} />
               </button>
             </div>
-            
+
             <p id="ui-enhancement-description" className="text-sm text-gray-600 dark:text-gray-300 mb-4">
               Customize the visual experience with modern UI effects
             </p>

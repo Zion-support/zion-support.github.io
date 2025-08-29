@@ -24,7 +24,7 @@ export function UpcomingInterviewsCard() {
                 setUpcomingInterviews(upcoming);
             }
             catch (error) {
-                console.error("Error loading upcoming interviews:", error);
+                // console.error("Error loading upcoming interviews:", error);
             }
             finally {
                 setIsLoading(false);
@@ -112,7 +112,7 @@ export function UpcomingInterviewsCard() {
               </div>);
         })}
         </div>
-        
+
         <div className="mt-4 pt-3 border-t border-zion-blue-light/40">
           <Button asChild size="sm" variant="outline" className="w-full">
             <Link href="/interviews">

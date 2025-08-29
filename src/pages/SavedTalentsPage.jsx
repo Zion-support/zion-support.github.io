@@ -15,7 +15,7 @@ export default function SavedTalentsPage() {
             setIsLoading(true);
             try {
                 if (!user) {
-                    console.warn("User not authenticated.");
+                    // console.warn("User not authenticated.");
                     return;
                 }
                 const { data, error } = await supabase
@@ -48,7 +48,7 @@ export default function SavedTalentsPage() {
                 }
             }
             catch (error) {
-                console.error("Error fetching saved talents:", error);
+                // console.error("Error fetching saved talents:", error);
                 toast({
                     title: "Error",
                     description: "Failed to load saved talents. Please try again later.",
@@ -65,7 +65,7 @@ export default function SavedTalentsPage() {
         navigate(`/talent/${talentId}`);
     };
     const handleRequestHire = (talent) => {
-        console.log("Request to hire:", talent);
+        // console.log("Request to hire:", talent);
         toast({
             title: "Hire Request Sent",
             description: `A hire request has been sent to ${talent.full_name}.`,
@@ -74,7 +74,7 @@ export default function SavedTalentsPage() {
     const handleToggleSave = async (talentId, isCurrentlySaved) => {
         try {
             if (!user) {
-                console.warn("User not authenticated.");
+                // console.warn("User not authenticated.");
                 return;
             }
             if (isCurrentlySaved) {
@@ -108,7 +108,7 @@ export default function SavedTalentsPage() {
                     .eq('id', talentId)
                     .single();
                 if (talentError) {
-                    console.error("Error fetching talent profile:", talentError);
+                    // console.error("Error fetching talent profile:", talentError);
                     toast({
                         title: "Error",
                         description: "Failed to update saved talents. Please try again later.",
@@ -126,7 +126,7 @@ export default function SavedTalentsPage() {
             }
         }
         catch (error) {
-            console.error("Error toggling saved talent:", error);
+            // console.error("Error toggling saved talent:", error);
             toast({
                 title: "Error",
                 description: "Failed to update saved talents. Please try again later.",
@@ -136,17 +136,17 @@ export default function SavedTalentsPage() {
     };
     return (<>
       <SEO title="Saved Talents | Zion AI Marketplace" description="View and manage your saved talents in the Zion AI Marketplace"/>
-      
+
       <div className="container mx-auto px-4 py-8">
         <h1 className="text-3xl font-bold mb-4">Saved Talents</h1>
         <p className="text-muted-foreground">
           Here are the talents you've saved for future reference.
         </p>
-        
+
         {isLoading ? (<div className="text-center py-8">Loading saved talents...</div>) : savedTalents.length === 0 ? (<div className="text-center py-8">No talents saved yet.</div>) : (<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-8">
             {savedTalents.map((talent) => (<TalentCard key={talent.id} talent={talent} onViewProfile={handleViewProfile} onRequestHire={handleRequestHire} isSaved={true} onToggleSave={handleToggleSave} isAuthenticated={!!user}/>))}
           </div>)}
       </div>
-      
+
     </>);
 }

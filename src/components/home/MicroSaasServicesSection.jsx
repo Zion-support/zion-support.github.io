@@ -70,7 +70,7 @@ export function MicroSaasServicesSection() {
     return (<section className="py-20 bg-gradient-to-br from-zion-slate-dark via-zion-blue-dark to-zion-slate-dark relative overflow-hidden">
       {/* Animated background pattern */}
       <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxnIGZpbGw9IiNmZmZmZmYiIGZpbGwtb3BhY2l0eT0iMC4wMiI+PGNpcmNsZSBjeD0iMzAiIGN5PSIzMCIgcj0iMiIvPjwvZz48L2c+PC9zdmc+')] opacity-30"/>
-      
+
       <div className="container mx-auto px-4 relative z-10">
         {/* Section Header */}
         <div className="text-center mb-16">
@@ -82,7 +82,7 @@ export function MicroSaasServicesSection() {
             Micro SAAS Solutions
           </h2>
           <p className="text-xl text-zion-slate-light max-w-3xl mx-auto leading-relaxed">
-            Transform your business with our cutting-edge micro SAAS services. From AI-powered automation 
+            Transform your business with our cutting-edge micro SAAS services. From AI-powered automation
             to enterprise IT solutions, we provide innovative tools that drive growth and efficiency.
           </p>
         </div>
@@ -131,7 +131,7 @@ export function MicroSaasServicesSection() {
               Ready to Get Started?
             </h3>
             <p className="text-zion-slate-light mb-6 max-w-2xl mx-auto">
-              Explore our complete range of micro SAAS services and find the perfect solution for your business needs. 
+              Explore our complete range of micro SAAS services and find the perfect solution for your business needs.
               Our team is ready to help you implement and optimize these tools.
             </p>
             <div className="flex flex-wrap justify-center gap-4">

@@ -131,10 +131,10 @@ const IncidentResponsePlatform = () => {
               </span>
             </motion.h1>
             <motion.p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto" initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.4 }}>
-              Comprehensive incident management platform that uses AI to detect, respond to, and analyze 
+              Comprehensive incident management platform that uses AI to detect, respond to, and analyze
               security incidents in real-time, reducing response time and improving resolution quality.
             </motion.p>
-            
+
             {/* Key Metrics */}
             <motion.div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-8 max-w-4xl mx-auto" initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.6 }}>
               {benefits.map((benefit, index) => (<div key={index} className="text-center">
@@ -165,7 +165,7 @@ const IncidentResponsePlatform = () => {
                 Comprehensive incident response capabilities that protect your organization 24/7
               </p>
             </motion.div>
-            
+
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               {features.map((feature, index) => (<motion.div key={index} className="bg-white/10 backdrop-blur-lg rounded-xl p-8 border border-white/20 hover:border-white/40 transition-all duration-300" initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: index * 0.1 }}>
                   <div className="text-red-400 mb-4">{feature.icon}</div>
@@ -187,7 +187,7 @@ const IncidentResponsePlatform = () => {
                 Choose the security level that matches your organization's needs
               </p>
             </motion.div>
-            
+
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {pricingPlans.map((plan, index) => (<motion.div key={index} className={`bg-white/10 backdrop-blur-lg rounded-xl p-8 border transition-all duration-300 ${plan.popular
                 ? 'border-red-400 bg-red-900/20'
@@ -197,7 +197,7 @@ const IncidentResponsePlatform = () => {
                         Most Popular
                       </span>
                     </div>)}
-                  
+
                   <div className="text-center mb-6">
                     <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
                     <div className="text-4xl font-bold text-red-400 mb-2">
@@ -206,14 +206,14 @@ const IncidentResponsePlatform = () => {
                     </div>
                     <p className="text-gray-300">{plan.description}</p>
                   </div>
-                  
+
                   <ul className="space-y-3 mb-8">
                     {plan.features.map((feature, idx) => (<li key={idx} className="flex items-center text-gray-300">
                         <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0"/>
                         {feature}
                       </li>))}
                   </ul>
-                  
+
                   <Link to="/contact" className={`w-full text-center py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${plan.popular
                 ? 'bg-red-600 hover:bg-red-700 text-white'
                 : 'bg-white/10 hover:bg-white/20 text-white border border-white/20'}`}>
@@ -262,7 +262,7 @@ const IncidentResponsePlatform = () => {
             <motion.p className="text-xl text-gray-300 mb-8" initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.2 }}>
               Join organizations already using our intelligent incident response platform
             </motion.p>
-            
+
             <motion.div className="flex flex-col sm:flex-row gap-4 justify-center mb-8" initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.4 }}>
               <Link to="/contact" className="inline-flex items-center px-8 py-3 bg-gradient-to-r from-red-600 to-pink-600 text-white font-semibold rounded-lg hover:from-red-700 hover:to-pink-700 transition-all duration-300">
                 Start Free Trial

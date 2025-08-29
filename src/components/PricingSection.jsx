@@ -182,10 +182,10 @@ export function PricingSection() {
                       {plan.icon}
                     </div>
                   </div>
-                  
+
                   <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
                   <p className="text-zion-slate-light mb-6">{plan.description}</p>
-                  
+
                   <div className="mb-6">
                     <span className="text-4xl font-bold text-white">${getDiscountedPrice(plan.price)}</span>
                     <span className="text-zion-slate-light">/{billingPeriod}</span>
@@ -200,7 +200,7 @@ export function PricingSection() {
                       </div>
                       <span className="text-zion-slate-light text-sm">{feature}</span>
                     </div>))}
-                  
+
                   {plan.notIncluded.map((feature, idx) => (<div key={idx} className="flex items-center gap-3 opacity-50">
                       <div className="w-5 h-5 rounded-full bg-zion-slate-light/30 flex items-center justify-center flex-shrink-0">
                         <X className="w-3 h-3 text-zion-slate-light"/>
@@ -239,10 +239,10 @@ export function PricingSection() {
                       {addon.icon}
                     </div>
                   </div>
-                  
+
                   <h4 className="text-lg font-semibold text-white mb-2">{addon.name}</h4>
                   <p className="text-zion-slate-light text-sm mb-4">{addon.description}</p>
-                  
+
                   <div className="mb-4">
                     <span className="text-2xl font-bold text-zion-cyan">${addon.price}</span>
                     <span className="text-zion-slate-light">/{addon.period}</span>

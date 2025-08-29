@@ -10,7 +10,7 @@ export const MobileEmailCapture = () => {
     if (!email) return;
 
     setStatus('loading');
-    
+
     // Simulate API call
     setTimeout(() => {
       if (email.includes('@')) {
@@ -64,11 +64,11 @@ export const MobileEmailCapture = () => {
               {getStatusIcon()}
             </div>
           </div>
-          
+
           <h3 className="text-2xl font-bold text-white mb-4">
             {getStatusText()}
           </h3>
-          
+
           {status === 'idle' && (
             <form onSubmit={handleSubmit} className="space-y-4">
               <div className="flex flex-col sm:flex-row gap-3">

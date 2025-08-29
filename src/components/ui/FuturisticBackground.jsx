@@ -237,7 +237,7 @@ style.textContent = `
       text-shadow: 0 0 5px currentColor, 0 0 10px currentColor, 0 0 15px currentColor;
     }
   }
-  
+
   @keyframes shimmer {
     0% {
       transform: translateX(-100%);

@@ -1,12 +1,12 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { SEO } from '@/components/SEO';
-import { 
-  TrendingUp, 
-  Shield, 
-  Clock, 
-  Zap, 
-  Search, 
+import {
+  TrendingUp,
+  Shield,
+  Clock,
+  Zap,
+  Search,
   Eye,
   CheckCircle,
   ArrowRight,
@@ -138,13 +138,13 @@ export default function AIFinancialTradingRiskManagement() {
 
   return (
     <>
-      <SEO 
+      <SEO
         title="AI Financial Trading & Risk Management - Zion Tech Group"
         description="Transform your trading operations with AI-powered algorithms, comprehensive risk management, and real-time market analysis. Maximize returns while minimizing risks."
         canonical="/services/ai-financial-trading-risk-management"
         url="https://ziontechgroup.com/services/ai-financial-trading-risk-management"
       />
-      
+
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900/20 to-slate-900">
         {/* Hero Section */}
         <section className="relative py-20 px-6 overflow-hidden">
@@ -159,7 +159,7 @@ export default function AIFinancialTradingRiskManagement() {
                 AI Financial Trading & Risk Management
               </h1>
               <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
-                Revolutionize your trading operations with AI-powered algorithms, 
+                Revolutionize your trading operations with AI-powered algorithms,
                 comprehensive risk management, and real-time market analysis
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -195,7 +195,7 @@ export default function AIFinancialTradingRiskManagement() {
                 Advanced Trading & Risk Management Features
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Our AI platform provides comprehensive trading capabilities with 
+                Our AI platform provides comprehensive trading capabilities with
                 advanced risk management and market analysis
               </p>
             </motion.div>
@@ -233,7 +233,7 @@ export default function AIFinancialTradingRiskManagement() {
                 Comprehensive Trading Solutions
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Choose the perfect AI trading solution for your organization 
+                Choose the perfect AI trading solution for your organization
                 with scalable pricing and advanced features
               </p>
             </motion.div>
@@ -283,7 +283,7 @@ export default function AIFinancialTradingRiskManagement() {
                 Multi-Asset Trading Support
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Our AI platform supports trading across all major asset classes 
+                Our AI platform supports trading across all major asset classes
                 with unified risk management and analysis
               </p>
             </motion.div>
@@ -318,7 +318,7 @@ export default function AIFinancialTradingRiskManagement() {
                 Transform Your Trading Operations
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Experience significant improvements in trading performance, 
+                Experience significant improvements in trading performance,
                 risk management, and operational efficiency
               </p>
             </motion.div>
@@ -355,7 +355,7 @@ export default function AIFinancialTradingRiskManagement() {
                 Cutting-Edge Trading Technology
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Built with the latest AI and high-frequency trading technologies for 
+                Built with the latest AI and high-frequency trading technologies for
                 maximum performance and reliability
               </p>
             </motion.div>
@@ -394,7 +394,7 @@ export default function AIFinancialTradingRiskManagement() {
               transition={{ duration: 0.6, delay: 0.2 }}
               className="text-xl text-cyan-100 mb-8"
             >
-              Join leading financial institutions that have already 
+              Join leading financial institutions that have already
               revolutionized trading with AI-powered algorithms
             </motion.p>
             <motion.div
@@ -434,7 +434,7 @@ export default function AIFinancialTradingRiskManagement() {
                 Get in Touch
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Ready to discuss how AI Financial Trading & Risk Management can transform 
+                Ready to discuss how AI Financial Trading & Risk Management can transform
                 your trading operations? Contact our experts today.
               </p>
             </motion.div>

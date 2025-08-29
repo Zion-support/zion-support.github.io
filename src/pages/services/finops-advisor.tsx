@@ -22,17 +22,17 @@ export default function FinOpsAdvisor() {
                 <DollarSign className="w-4 h-4 mr-2" />
                 Cloud Financial Operations
               </div>
-              
+
               <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
                 FinOps
                 <span className="bg-gradient-to-r from-emerald-400 to-teal-500 bg-clip-text text-transparent"> Advisor</span>
               </h1>
-              
+
               <p className="text-xl text-slate-300 mb-8 max-w-3xl mx-auto">
-                Optimize your cloud costs with AI-powered FinOps advisory services. Reduce spending, 
+                Optimize your cloud costs with AI-powered FinOps advisory services. Reduce spending,
                 improve resource utilization, and maximize your cloud investment ROI.
               </p>
-              
+
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link
                   to="/contact"
@@ -58,7 +58,7 @@ export default function FinOpsAdvisor() {
                 Cloud Financial Optimization
               </h2>
               <p className="text-xl text-slate-300 max-w-2xl mx-auto">
-                Our FinOps platform provides comprehensive tools for managing cloud costs, 
+                Our FinOps platform provides comprehensive tools for managing cloud costs,
                 optimizing resources, and improving financial operations.
               </p>
             </div>

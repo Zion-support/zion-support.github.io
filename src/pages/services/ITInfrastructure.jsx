@@ -66,7 +66,7 @@ const ITInfrastructure = () => {
               </span>
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Build a solid foundation for your business with enterprise-grade IT infrastructure. 
+              Build a solid foundation for your business with enterprise-grade IT infrastructure.
               Our comprehensive services ensure reliability, scalability, and security.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -91,7 +91,7 @@ const ITInfrastructure = () => {
                 Comprehensive IT infrastructure services for modern businesses
               </p>
             </div>
-            
+
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {features.map((feature, index) => (
                 <div key={index} className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20">
@@ -123,7 +123,7 @@ const ITInfrastructure = () => {
                 Multi-layered approach to building robust IT infrastructure
               </p>
             </div>
-            
+
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               {infrastructureAreas.map((area, index) => (
                 <div key={index} className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20">
@@ -153,7 +153,7 @@ const ITInfrastructure = () => {
                 Proven expertise and cutting-edge technology for reliable infrastructure
               </p>
             </div>
-            
+
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               <div className="text-center">
                 <div className="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
@@ -164,7 +164,7 @@ const ITInfrastructure = () => {
                 <h3 className="text-xl font-semibold text-white mb-3">Reliability</h3>
                 <p className="text-gray-300">99.9% uptime guarantee with redundant systems</p>
               </div>
-              
+
               <div className="text-center">
                 <div className="w-16 h-16 bg-cyan-600 rounded-full flex items-center justify-center mx-auto mb-4">
                   <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -174,7 +174,7 @@ const ITInfrastructure = () => {
                 <h3 className="text-xl font-semibold text-white mb-3">Scalability</h3>
                 <p className="text-gray-300">Grow your infrastructure as your business expands</p>
               </div>
-              
+
               <div className="text-center">
                 <div className="w-16 h-16 bg-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
                   <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">

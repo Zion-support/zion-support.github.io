@@ -1,14 +1,14 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import { 
-  Brain, 
-  Zap, 
-  Lock, 
-  Cloud, 
-  Shield, 
-  Users, 
-  Database, 
+import {
+  Brain,
+  Zap,
+  Lock,
+  Cloud,
+  Shield,
+  Users,
+  Database,
   Network,
   ArrowRight,
   CheckCircle,
@@ -36,7 +36,7 @@ export default function InnovativeServices2028() {
   const [expandedService, setExpandedService] = useState<number | null>(null);
 
   const filteredServices = innovativeServices2028.filter(service => {
-    const matchesCategory = selectedCategory === 'all' || 
+    const matchesCategory = selectedCategory === 'all' ||
       serviceCategories.find(cat => cat.id === selectedCategory)?.services.includes(service.id);
     const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
       service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
@@ -60,7 +60,7 @@ export default function InnovativeServices2028() {
   const getCategoryIcon = (categoryName: string) => {
     const category = serviceCategories.find(cat => cat.name === categoryName);
     if (!category) return Brain;
-    
+
     const iconMap: { [key: string]: any } = {
       'Brain': Brain,
       'Zap': Zap,
@@ -71,7 +71,7 @@ export default function InnovativeServices2028() {
       'Database': Database,
       'Network': Network
     };
-    
+
     return iconMap[category.icon] || Brain;
   };
 
@@ -86,12 +86,12 @@ export default function InnovativeServices2028() {
       <div className="fixed inset-0 pointer-events-none z-[-1]">
         {/* Animated grid */}
         <div className="absolute inset-0 bg-[linear-gradient(rgba(6,182,212,0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(6,182,212,0.1)_1px,transparent_1px)] bg-[size:50px_50px] animate-pulse-slow"></div>
-        
+
         {/* Floating particles */}
         <div className="absolute top-1/4 left-1/4 w-2 h-2 bg-cyan-400 rounded-full animate-float opacity-60"></div>
         <div className="absolute top-3/4 right-1/4 w-1 h-1 bg-blue-400 rounded-full animate-float animation-delay-1000 opacity-40"></div>
         <div className="absolute top-1/2 left-3/4 w-1.5 h-1.5 bg-purple-400 rounded-full animate-float animation-delay-2000 opacity-50"></div>
-        
+
         {/* Gradient orbs */}
         <div className="absolute top-1/4 right-1/4 w-64 h-64 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 rounded-full blur-3xl animate-pulse-slow"></div>
         <div className="absolute bottom-1/4 left-1/4 w-96 h-96 bg-gradient-to-r from-purple-500/20 to-pink-500/20 rounded-full blur-3xl animate-pulse-slow animation-delay-2000"></div>
@@ -110,14 +110,14 @@ export default function InnovativeServices2028() {
               Innovative Services 2028
             </h1>
             <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
-              Discover the future of technology with our cutting-edge micro SAAS services, 
+              Discover the future of technology with our cutting-edge micro SAAS services,
               AI solutions, and innovative IT services designed to transform your business
             </p>
             <p className="text-lg text-gray-400 max-w-3xl mx-auto mb-12">
-              From AI-powered business intelligence to quantum computing solutions, 
+              From AI-powered business intelligence to quantum computing solutions,
               we're pioneering the next generation of digital transformation
             </p>
-            
+
             {/* Contact CTA */}
             <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
               <div className="flex items-center space-x-4 text-cyan-400">
@@ -199,7 +199,7 @@ export default function InnovativeServices2028() {
               >
                 {/* Background glow */}
                 <div className={`absolute inset-0 bg-gradient-to-r ${getCategoryColor(service.category)} rounded-2xl blur-xl opacity-20 group-hover:opacity-30 transition-opacity duration-300`}></div>
-                
+
                 {/* Card content */}
                 <div className="relative bg-slate-800/50 p-8 rounded-2xl border border-slate-700/50 hover:border-cyan-500/50 transition-all duration-300 group-hover:bg-slate-800/70 backdrop-blur-sm h-full">
                   {/* Header */}

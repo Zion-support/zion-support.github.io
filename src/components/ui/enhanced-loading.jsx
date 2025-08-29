@@ -112,7 +112,7 @@ export function EnhancedLoading({ size = 'md', variant = 'default', text = 'Load
           <div className="absolute inset-0 bg-gradient-to-br from-zion-cyan/20 to-zion-purple/20 rounded-full animate-pulse"></div>
           <Sparkles className={`${iconSizes[size]} text-zion-cyan relative z-10`}/>
         </motion.div>
-        
+
         {showIcons && (<div className="absolute inset-0">
             {icons.map((Icon, index) => (<motion.div key={index} className="absolute" style={{
                     top: '50%',
@@ -135,7 +135,7 @@ export function EnhancedLoading({ size = 'md', variant = 'default', text = 'Load
               </motion.div>))}
           </div>)}
       </div>
-      
+
       {text && (<motion.div variants={iconVariants} className="mt-6 text-center">
           <motion.p className="text-zion-slate-light font-medium text-lg" animate={{ opacity: [0.5, 1, 0.5] }} transition={{ duration: 2, repeat: Infinity }}>
             {text}

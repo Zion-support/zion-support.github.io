@@ -1,8 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { 
-  Zap, Bot, TrendingUp, Target, MessageCircle, BarChart3, 
+import {
+  Zap, Bot, TrendingUp, Target, MessageCircle, BarChart3,
   DollarSign, Users, Check, ArrowRight, ExternalLink, Phone, Mail,
   Calendar, Shield, Filter, Headphones, Calculator, PieChart,
   ArrowRight, ExternalLink, Phone, Mail, Globe, TrendingUp, Shield, Leaf, Cpu, Atom, Wifi, CheckCircle, Star
@@ -83,7 +83,7 @@ export default function NewServicesShowcase2025() {
 
   return (
     <div className="min-h-screen bg-white">
-      <SEO 
+      <SEO
         title="New AI-Powered Micro SAAS Services 2025 - Zion Tech Group"
         description="Discover our revolutionary new AI-powered micro SAAS services for project management, customer support, financial analytics, and marketing automation."
       />
@@ -96,7 +96,7 @@ export default function NewServicesShowcase2025() {
           </div>
           <h1 className="text-4xl md:text-6xl font-bold mb-6">New AI-Powered Services 2025</h1>
           <p className="text-xl text-gray-300 mb-8 max-w-4xl mx-auto">
-            Discover our latest cutting-edge AI services designed to transform your business operations, 
+            Discover our latest cutting-edge AI services designed to transform your business operations,
             enhance efficiency, and drive innovation across industries.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -116,7 +116,7 @@ export default function NewServicesShowcase2025() {
           <h2 className="text-3xl font-bold text-gray-900 mb-4">Revolutionary AI Services</h2>
           <p className="text-xl text-gray-600">Transform your business with our latest AI-powered solutions</p>
         </div>
-        
+
         <div className="grid lg:grid-cols-2 gap-8">
           {newServices.map((service, index) => (
             <div key={index} className="bg-white border border-gray-200 rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
@@ -127,7 +127,7 @@ export default function NewServicesShowcase2025() {
                 </div>
                 <p className="text-lg opacity-90">{service.description}</p>
               </div>
-              
+
               <div className="p-8">
                 <div className="mb-6">
                   <h4 className="text-lg font-semibold text-gray-900 mb-3">Key Features</h4>
@@ -140,7 +140,7 @@ export default function NewServicesShowcase2025() {
                     ))}
                   </ul>
                 </div>
-                
+
                 <div className="mb-6">
                   <h4 className="text-lg font-semibold text-gray-900 mb-3">Proven Benefits</h4>
                   <ul className="space-y-2">
@@ -152,11 +152,11 @@ export default function NewServicesShowcase2025() {
                     ))}
                   </ul>
                 </div>
-                
+
                 <div className="border-t border-gray-200 pt-6">
                   <div className="flex items-center justify-between mb-4">
                     <span className="text-2xl font-bold text-gray-900">{service.pricing}</span>
-                    <a 
+                    <a
                       href={service.path}
                       className="inline-flex items-center px-4 py-2 bg-purple-600 text-white rounded-lg hover:bg-purple-700 transition-colors"
                     >
@@ -177,7 +177,7 @@ export default function NewServicesShowcase2025() {
             <h2 className="text-3xl font-bold text-gray-900 mb-4">Industries We Serve</h2>
             <p className="text-xl text-gray-600">Our AI services are designed for organizations across all sectors</p>
           </div>
-          
+
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {industries.map((industry, index) => (
               <div key={index} className="bg-white p-6 rounded-xl shadow-sm border border-gray-100 hover:shadow-md transition-shadow">
@@ -197,7 +197,7 @@ export default function NewServicesShowcase2025() {
           <h2 className="text-3xl font-bold text-gray-900 mb-4">Why Choose Zion Tech Group?</h2>
           <p className="text-xl text-gray-600">Leading the future of AI-powered business solutions</p>
         </div>
-        
+
         <div className="grid md:grid-cols-3 gap-8">
           <div className="text-center">
             <div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
@@ -206,7 +206,7 @@ export default function NewServicesShowcase2025() {
             <h3 className="text-xl font-semibold text-gray-900 mb-2">Innovation First</h3>
             <p className="text-gray-600">Cutting-edge AI technology and innovative solutions that keep you ahead of the competition.</p>
           </div>
-          
+
           <div className="text-center">
             <div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
               <Shield className="w-8 h-8 text-purple-600" />
@@ -214,7 +214,7 @@ export default function NewServicesShowcase2025() {
             <h3 className="text-xl font-semibold text-gray-900 mb-2">Enterprise Grade</h3>
             <p className="text-gray-600">Robust, scalable solutions designed for enterprise environments with enterprise-level support.</p>
           </div>
-          
+
           <div className="text-center">
             <div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
               <TrendingUp className="w-8 h-8 text-purple-600" />
@@ -255,7 +255,7 @@ export default function NewServicesShowcase2025() {
               {contactInfo.phone}
             </a>
           </div>
-          
+
           <div className="bg-white border border-gray-200 rounded-xl p-6 shadow-sm">
             <Mail className="w-8 h-8 text-purple-500 mx-auto mb-4" />
             <h3 className="text-xl font-semibold text-gray-900 mb-2">Email Us</h3>
@@ -265,17 +265,17 @@ export default function NewServicesShowcase2025() {
             </a>
           </div>
         </div>
-        
+
         <div className="bg-gray-50 rounded-xl p-8">
           <h3 className="text-xl font-semibold text-gray-900 mb-4">Visit Our Website</h3>
           <p className="text-gray-600 mb-6">
             Learn more about our complete suite of AI-powered business solutions and discover how we can help transform your organization.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <a 
-              href={contactInfo.website} 
-              target="_blank" 
-              rel="noreferrer" 
+            <a
+              href={contactInfo.website}
+              target="_blank"
+              rel="noreferrer"
               className="inline-flex items-center text-purple-600 hover:text-purple-700 font-semibold"
             >
               Visit ziontechgroup.com <ExternalLink className="w-4 h-4 ml-2" />

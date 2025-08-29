@@ -136,7 +136,7 @@ export const CountryTabs = () => {
             Global Service Coverage
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Zion provides professional IT services across multiple countries and regions. 
+            Zion provides professional IT services across multiple countries and regions.
             Find your local team and get the support you need.
           </p>
         </div>
@@ -189,7 +189,7 @@ export const CountryTabs = () => {
                 {currentCountry.regions.map((region, index) => (
                   <div key={index} className="bg-gray-50 rounded-2xl p-6 border border-gray-200">
                     <h4 className="text-xl font-bold text-gray-900 mb-4">{region.name}</h4>
-                    
+
                     {/* Cities */}
                     <div className="mb-6">
                       <h5 className="text-sm font-semibold text-gray-600 mb-2 uppercase tracking-wide">
@@ -218,7 +218,7 @@ export const CountryTabs = () => {
                           <p className="font-semibold text-gray-900">{region.contact.phone}</p>
                         </div>
                       </div>
-                      
+
                       <div className="flex items-center space-x-3">
                         <div className="w-8 h-8 bg-green-100 rounded-lg flex items-center justify-center">
                           <Mail className="w-4 h-4 text-green-600" />
@@ -228,7 +228,7 @@ export const CountryTabs = () => {
                           <p className="font-semibold text-gray-900">{region.contact.email}</p>
                         </div>
                       </div>
-                      
+
                       <div className="flex items-center space-x-3">
                         <div className="w-8 h-8 bg-purple-100 rounded-lg flex items-center justify-center">
                           <Clock className="w-4 h-4 text-purple-600" />

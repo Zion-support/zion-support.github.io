@@ -111,8 +111,8 @@ export class ContentQualityAnalyzer {
         return syllableCount;
     }
     calculateSeoScore(metrics) {
-        let score = 0;
-        let maxScore = 0;
+        const score = 0;
+        const maxScore = 0;
         // Title optimization (0-20 points)
         maxScore += 20;
         if (metrics.title.length >= 30 && metrics.title.length <= 60) {
@@ -248,7 +248,7 @@ export class ContentQualityAnalyzer {
         const averageSeoScore = Math.round(pageMetrics.reduce((sum, page) => sum + page.seoScore, 0) / totalPages);
         const pagesWithIssues = pageMetrics.filter(page => page.issues.length > 0).length;
         // Collect all issues and count frequency
-        const issueCounts = {};
+        const issueCounts = { /* empty */ };
         pageMetrics.forEach(page => {
             page.issues.forEach(issue => {
                 issueCounts[issue] = (issueCounts[issue] || 0) + 1;

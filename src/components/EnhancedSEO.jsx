@@ -47,13 +47,13 @@ export default function EnhancedSEO({ title = 'Zion Tech Group - Advanced AI, Qu
       <meta name="author" content="Zion Tech Group"/>
       <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
       <meta httpEquiv="Content-Type" content="text/html; charset=utf-8"/>
-      
+
       {/* Canonical URL */}
       {canonical && <link rel="canonical" href={canonical}/>}
-      
+
       {/* Robot Instructions */}
       <meta name="robots" content={`${noindex ? 'noindex' : 'index'}, ${nofollow ? 'nofollow' : 'follow'}, max-snippet:-1, max-image-preview:large, max-video-preview:-1`}/>
-      
+
       {/* Open Graph Tags */}
       <meta property="og:title" content={title}/>
       <meta property="og:description" content={description}/>
@@ -65,7 +65,7 @@ export default function EnhancedSEO({ title = 'Zion Tech Group - Advanced AI, Qu
       <meta property="og:image:alt" content={title}/>
       <meta property="og:site_name" content="Zion Tech Group"/>
       <meta property="og:locale" content="en_US"/>
-      
+
       {/* Twitter Card Tags */}
       <meta name="twitter:card" content={twitterCard}/>
       <meta name="twitter:site" content="@ziontechgroup"/>
@@ -74,28 +74,28 @@ export default function EnhancedSEO({ title = 'Zion Tech Group - Advanced AI, Qu
       <meta name="twitter:description" content={description}/>
       <meta name="twitter:image" content={ogImage}/>
       <meta name="twitter:image:alt" content={title}/>
-      
+
       {/* Additional Meta Tags for Better SEO */}
       <meta name="theme-color" content="#1a1a2e"/>
       <meta name="msapplication-TileColor" content="#1a1a2e"/>
       <meta name="apple-mobile-web-app-capable" content="yes"/>
       <meta name="apple-mobile-web-app-status-bar-style" content="black"/>
       <meta name="format-detection" content="telephone=no"/>
-      
+
       {/* Structured Data */}
       <script type="application/ld+json">
         {JSON.stringify(finalStructuredData)}
       </script>
-      
+
       {/* Preconnect to external domains for performance */}
       <link rel="preconnect" href="https://fonts.googleapis.com"/>
       <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin=""/>
       <link rel="preconnect" href="https://www.google-analytics.com"/>
-      
+
       {/* DNS Prefetch for external resources */}
       <link rel="dns-prefetch" href="https://www.googletagmanager.com"/>
       <link rel="dns-prefetch" href="https://www.google-analytics.com"/>
-      
+
       {/* Security Headers */}
       <meta httpEquiv="X-Content-Type-Options" content="nosniff"/>
       <meta httpEquiv="X-Frame-Options" content="DENY"/>

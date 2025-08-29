@@ -1,16 +1,16 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import { 
-  Search, 
-  Filter, 
-  Star, 
-  TrendingUp, 
-  Zap, 
-  Shield, 
-  Brain, 
-  Globe, 
-  Cpu, 
+import {
+  Search,
+  Filter,
+  Star,
+  TrendingUp,
+  Zap,
+  Shield,
+  Brain,
+  Globe,
+  Cpu,
   Lock,
   ArrowRight,
   CheckCircle,
@@ -114,11 +114,11 @@ const ComprehensiveServicesLanding2025: React.FC = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      <SEO 
+      <SEO
         title="Comprehensive Services Landing 2025 - Zion Tech Group"
         description="Discover our complete portfolio of innovative technology services. From AI and Quantum Computing to IoT and Blockchain solutions - transform your business with cutting-edge technology."
       />
-      
+
       {/* Hero Section */}
       <section className="pt-20 pb-16 px-4">
         <div className="max-w-7xl mx-auto">
@@ -132,19 +132,19 @@ const ComprehensiveServicesLanding2025: React.FC = () => {
               <Sparkles className="w-5 h-5 text-blue-400 mr-2" />
               <span className="text-blue-300 font-medium">Comprehensive Services 2025</span>
             </div>
-            
+
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
               Complete Technology
               <span className="block text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-purple-500 to-pink-400">
                 Solutions Portfolio
               </span>
             </h1>
-            
+
             <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-              Explore our comprehensive suite of innovative technology services designed to transform 
+              Explore our comprehensive suite of innovative technology services designed to transform
               your business operations and drive digital innovation across all industries.
             </p>
-            
+
             {/* Stats */}
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8 max-w-4xl mx-auto">
               <div className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700/50">
@@ -160,7 +160,7 @@ const ComprehensiveServicesLanding2025: React.FC = () => {
                 <div className="text-gray-300">Average ROI</div>
               </div>
             </div>
-            
+
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 to="/innovative-services-showcase-2025"
@@ -210,15 +210,15 @@ const ComprehensiveServicesLanding2025: React.FC = () => {
                         {categoryData.icon}
                       </div>
                     </div>
-                    
+
                     <h3 className="text-2xl font-bold text-white mb-4 group-hover:text-blue-400 transition-colors">
                       {categoryData.category}
                     </h3>
-                    
+
                     <p className="text-gray-300 mb-6">
                       {categoryData.services.length} innovative services designed to transform your {categoryData.category.toLowerCase()} operations
                     </p>
-                    
+
                     <div className="space-y-3 mb-6">
                       {categoryData.services.slice(0, 3).map((service, idx) => (
                         <div key={idx} className="flex items-center text-sm text-gray-400">
@@ -232,7 +232,7 @@ const ComprehensiveServicesLanding2025: React.FC = () => {
                         </div>
                       )}
                     </div>
-                    
+
                     <div className="flex items-center justify-center text-blue-400 group-hover:text-blue-300 transition-colors">
                       <span className="text-sm font-medium">Explore Services</span>
                       <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
@@ -286,7 +286,7 @@ const ComprehensiveServicesLanding2025: React.FC = () => {
                 <h3 className="text-xl font-bold text-white mb-3 group-hover:text-blue-400 transition-colors">
                   {service.title}
                 </h3>
-                
+
                 <p className="text-gray-300 text-sm mb-4 line-clamp-3">
                   {service.description}
                 </p>
@@ -344,7 +344,7 @@ const ComprehensiveServicesLanding2025: React.FC = () => {
               Why Choose Zion Tech Group?
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              We combine cutting-edge technology with proven business expertise to deliver 
+              We combine cutting-edge technology with proven business expertise to deliver
               solutions that drive real results and measurable ROI
             </p>
           </div>
@@ -403,10 +403,10 @@ const ComprehensiveServicesLanding2025: React.FC = () => {
               Ready to Transform Your Business?
             </h2>
             <p className="text-gray-300 mb-6 max-w-2xl mx-auto">
-              Our team of technology experts is ready to help you select the perfect solution 
+              Our team of technology experts is ready to help you select the perfect solution
               and provide a customized implementation plan for your business needs.
             </p>
-            
+
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
               <div className="flex items-center justify-center space-x-3 text-blue-400">
                 <Phone className="w-5 h-5" />
@@ -436,7 +436,7 @@ const ComprehensiveServicesLanding2025: React.FC = () => {
                 Email Sales
               </a>
             </div>
-            
+
             <div className="mt-6 text-sm text-gray-400">
               <p>364 E Main St STE 1008, Middletown DE 19709</p>
               <p>Visit us at: <a href="https://ziontechgroup.com" className="text-blue-400 hover:underline">ziontechgroup.com</a></p>

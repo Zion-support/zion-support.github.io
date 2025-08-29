@@ -64,13 +64,13 @@ export function ITServiceRequestHero() {
                 Global IT Services
               </span>
             </div>
-            
+
             <GradientHeading className="mb-6 text-4xl md:text-5xl lg:text-6xl leading-tight">
               24x7 Global IT Onsite Services
             </GradientHeading>
-            
+
             <p className="text-lg md:text-xl text-zion-slate-light mb-8 max-w-lg leading-relaxed">
-              Request professional technicians anywhere in the world, anytime you need them. 
+              Request professional technicians anywhere in the world, anytime you need them.
               Fast, reliable, and secure IT solutions for your business.
             </p>
 

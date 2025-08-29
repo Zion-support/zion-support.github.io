@@ -1,12 +1,12 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { SEO } from '@/components/SEO';
-import { 
-  Brain, 
-  Users, 
-  TrendingUp, 
-  Target, 
-  BarChart3, 
+import {
+  Brain,
+  Users,
+  TrendingUp,
+  Target,
+  BarChart3,
   Calendar,
   Zap,
   CheckCircle,
@@ -124,11 +124,11 @@ export default function AIHRPlatform() {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      <SEO 
+      <SEO
         title="AI HR Platform - Zion Tech Group"
         description="Transform your HR operations with AI-powered recruitment, performance management, and employee engagement. Streamline hiring and improve retention."
       />
-      
+
       {/* Hero Section */}
       <section className="relative py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto text-center">
@@ -148,7 +148,7 @@ export default function AIHRPlatform() {
               </span>
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Revolutionize your HR operations with AI that screens candidates, manages performance, and engages employees. 
+              Revolutionize your HR operations with AI that screens candidates, manages performance, and engages employees.
               Streamline hiring, improve retention, and build better teams with intelligent automation.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -304,8 +304,8 @@ export default function AIHRPlatform() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 className={`relative bg-gray-800/50 backdrop-blur-sm rounded-xl p-8 border ${
-                  plan.popular 
-                    ? 'border-indigo-500 ring-2 ring-indigo-500/20' 
+                  plan.popular
+                    ? 'border-indigo-500 ring-2 ring-indigo-500/20'
                     : 'border-gray-700'
                 }`}
               >
@@ -316,7 +316,7 @@ export default function AIHRPlatform() {
                     </span>
                   </div>
                 )}
-                
+
                 <div className="text-center mb-8">
                   <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
                   <p className="text-gray-400 mb-4">{plan.description}</p>

@@ -45,7 +45,7 @@ const services: Service[] = [
 const groupByCategory = (items: Service[]) => items.reduce<Record<string, Service[]>>((acc, s) => {
   (acc[s.category] = acc[s.category] || []).push(s);
   return acc;
-}, {});
+}, { /* empty */ });
 
 const ServicesCatalog: React.FC = () => {
   const grouped = groupByCategory(services);

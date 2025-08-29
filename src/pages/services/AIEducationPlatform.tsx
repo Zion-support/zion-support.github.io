@@ -1,13 +1,13 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { SEO } from '@/components/SEO';
-import { 
-  Brain, 
-  GraduationCap, 
-  TrendingUp, 
-  Target, 
-  Users, 
-  BarChart3, 
+import {
+  Brain,
+  GraduationCap,
+  TrendingUp,
+  Target,
+  Users,
+  BarChart3,
   Calendar,
   Zap,
   CheckCircle,
@@ -125,11 +125,11 @@ export default function AIEducationPlatform() {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      <SEO 
+      <SEO
         title="AI Education Platform - Zion Tech Group"
         description="Transform education with AI-powered personalized learning, intelligent content, and adaptive teaching. Improve outcomes and engage every student."
       />
-      
+
       {/* Hero Section */}
       <section className="relative py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto text-center">
@@ -149,7 +149,7 @@ export default function AIEducationPlatform() {
               </span>
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Revolutionize education with AI that personalizes learning, adapts to each student, and empowers teachers. 
+              Revolutionize education with AI that personalizes learning, adapts to each student, and empowers teachers.
               Improve outcomes, increase engagement, and scale quality education globally.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -305,8 +305,8 @@ export default function AIEducationPlatform() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 className={`relative bg-gray-800/50 backdrop-blur-sm rounded-xl p-8 border ${
-                  plan.popular 
-                    ? 'border-teal-500 ring-2 ring-teal-500/20' 
+                  plan.popular
+                    ? 'border-teal-500 ring-2 ring-teal-500/20'
                     : 'border-gray-700'
                 }`}
               >
@@ -317,7 +317,7 @@ export default function AIEducationPlatform() {
                     </span>
                   </div>
                 )}
-                
+
                 <div className="text-center mb-8">
                   <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
                   <p className="text-gray-400 mb-4">{plan.description}</p>

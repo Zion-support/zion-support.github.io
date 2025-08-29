@@ -33,7 +33,7 @@ const ApiDemo: React.FC = () => {
   const fetchUsers = async () => {
     setLoading(true);
     setError(null);
-    
+
     try {
       const response = await api.getUsers();
       if (response.success && response.data) {
@@ -48,7 +48,7 @@ const ApiDemo: React.FC = () => {
 
   const handleCreateUser = async (e: React.FormEvent) => {
     e.preventDefault();
-    
+
     if (!newUser.name.trim() || !newUser.email.trim()) {
       setError('Name and email are required');
       return;
@@ -76,7 +76,7 @@ const ApiDemo: React.FC = () => {
         <h2 className="text-2xl font-bold text-gray-900 mb-4">
           🚀 Vite + Node.js Hybrid App Demo
         </h2>
-        
+
         {/* API Health Status */}
         <div className="mb-6 p-4 bg-gray-50 rounded-lg">
           <h3 className="text-lg font-semibold text-gray-700 mb-2">API Status</h3>
@@ -134,7 +134,7 @@ const ApiDemo: React.FC = () => {
               {loading ? 'Loading...' : 'Refresh'}
             </button>
           </div>
-          
+
           {loading ? (
             <div className="text-center py-8">
               <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-600 mx-auto"></div>

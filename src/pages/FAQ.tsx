@@ -90,15 +90,15 @@ export default function FAQ() {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      <SEO 
+      <SEO
         title="FAQ - Zion Tech Group"
         description="Frequently asked questions about our AI, cybersecurity, and cloud services. Get answers to common questions about Zion Tech Group solutions."
       />
-      
+
       {/* Header */}
       <div className="relative pt-32 pb-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto text-center">
-          <motion.h1 
+          <motion.h1
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
@@ -106,7 +106,7 @@ export default function FAQ() {
           >
             Frequently Asked Questions
           </motion.h1>
-          <motion.p 
+          <motion.p
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
@@ -119,7 +119,7 @@ export default function FAQ() {
 
       {/* Search and Filters */}
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 mb-12">
-        <motion.div 
+        <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.4 }}
@@ -158,7 +158,7 @@ export default function FAQ() {
 
       {/* FAQ List */}
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 pb-20">
-        <motion.div 
+        <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.6 }}
@@ -188,7 +188,7 @@ export default function FAQ() {
                   <ChevronDown className="w-5 h-5 text-gray-400" />
                 )}
               </button>
-              
+
               {activeItem === faq.id && (
                 <motion.div
                   initial={{ opacity: 0, height: 0 }}
@@ -207,7 +207,7 @@ export default function FAQ() {
         </motion.div>
 
         {/* Contact CTA */}
-        <motion.div 
+        <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 1.2 }}

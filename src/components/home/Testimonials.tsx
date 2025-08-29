@@ -74,7 +74,7 @@ const Testimonials: React.FC = () => {
   return (
     <section className="py-20 bg-gradient-to-b from-zion-slate to-zion-slate-dark" role="region" aria-labelledby="testimonials-heading">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <motion.div 
+        <motion.div
           className="text-center mb-16"
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -85,11 +85,11 @@ const Testimonials: React.FC = () => {
             <Quote className="w-4 h-4 text-zion-cyan mr-2" />
             <span className="text-zion-cyan text-sm font-medium">Client Success Stories</span>
           </div>
-          
+
           <h2 id="testimonials-heading" className="text-4xl md:text-5xl font-bold text-white mb-6">
             What Our <span className="bg-gradient-to-r from-zion-cyan to-zion-blue bg-clip-text text-transparent">Clients Say</span>
           </h2>
-          
+
           <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
             Real results from real businesses. See how Zion Tech Group is transforming industries worldwide.
           </p>
@@ -109,19 +109,19 @@ const Testimonials: React.FC = () => {
               {/* Background decoration */}
               <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-zion-cyan/10 to-zion-blue/10 rounded-full blur-3xl" />
               <div className="absolute bottom-0 left-0 w-24 h-24 bg-gradient-to-br from-zion-purple/10 to-zion-cyan/10 rounded-full blur-3xl" />
-              
+
               {/* Rating */}
               <div className="flex justify-center mb-6">
                 {[...Array(testimonials[currentIndex].rating)].map((_, i) => (
                   <Star key={i} className="w-6 h-6 text-yellow-400 fill-current" />
                 ))}
               </div>
-              
+
               {/* Quote */}
               <blockquote className="text-xl md:text-2xl text-white mb-8 leading-relaxed italic">
                 "{testimonials[currentIndex].content}"
               </blockquote>
-              
+
               {/* Author */}
               <div className="flex flex-col items-center">
                 <div className="w-16 h-16 bg-gradient-to-br from-zion-cyan to-zion-blue rounded-full flex items-center justify-center mb-4 text-white font-bold text-xl">
@@ -151,7 +151,7 @@ const Testimonials: React.FC = () => {
           >
             <ChevronLeft className="w-6 h-6" />
           </button>
-          
+
           <button
             onClick={nextTestimonial}
             className="absolute right-4 top-1/2 transform -translate-y-1/2 w-12 h-12 bg-zion-slate-dark/80 backdrop-blur-xl border border-zion-cyan/20 rounded-full flex items-center justify-center text-zion-cyan hover:bg-zion-cyan hover:text-white transition-all duration-300 hover:scale-110 focus:outline-none focus:ring-2 focus:ring-zion-cyan/50"

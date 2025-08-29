@@ -106,11 +106,11 @@ const UltimateServicesShowcase2026 = () => {
             </span>
           </motion.h1>
           <motion.p className="text-xl text-gray-300 max-w-4xl mx-auto mb-8" initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, delay: 0.2 }}>
-            Discover our comprehensive collection of 20+ cutting-edge innovative services, 
-            from AI-powered business solutions to enterprise IT infrastructure. 
+            Discover our comprehensive collection of 20+ cutting-edge innovative services,
+            from AI-powered business solutions to enterprise IT infrastructure.
             Each service is designed to transform your business and drive innovation with real, market-ready solutions.
           </motion.p>
-          
+
           {/* Contact Information */}
           <motion.div className="bg-white/10 backdrop-blur-md p-6 rounded-2xl border border-white/20 mb-8" initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, delay: 0.4 }}>
             <h3 className="text-2xl font-bold mb-4 text-cyan-400">Contact Zion Tech Group</h3>
@@ -195,7 +195,7 @@ const UltimateServicesShowcase2026 = () => {
                     {service.name}
                   </h3>
                   <p className="text-gray-300 text-sm mb-3">{service.tagline}</p>
-                  
+
                   {/* Price */}
                   <div className="mb-4">
                     <span className="text-2xl font-bold text-cyan-400">{service.price}</span>
@@ -280,7 +280,7 @@ const UltimateServicesShowcase2026 = () => {
               Ready to <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-400">Transform</span> Your Business?
             </h2>
             <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
-              Let's discuss how our innovative technology solutions can drive your business forward. 
+              Let's discuss how our innovative technology solutions can drive your business forward.
               Contact us today for a personalized consultation and demo.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">

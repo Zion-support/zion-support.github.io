@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import { 
-  ArrowRight, 
-  Play, 
-  Star, 
-  CheckCircle, 
-  ChevronLeft, 
+import {
+  ArrowRight,
+  Play,
+  Star,
+  CheckCircle,
+  ChevronLeft,
   ChevronRight,
   Zap,
   Shield,
@@ -117,31 +117,31 @@ export default function EnhancedHeroSection() {
       {/* Enhanced animated background elements */}
       <div className="absolute inset-0">
         <div className="absolute inset-0 bg-gradient-to-r from-zion-cyan/10 via-zion-purple/10 to-zion-cyan/10"></div>
-        <motion.div 
+        <motion.div
           className="absolute top-20 left-20 w-72 h-72 bg-zion-cyan/20 rounded-full blur-3xl"
-          animate={{ 
+          animate={{
             scale: [1, 1.2, 1],
             opacity: [0.3, 0.6, 0.3]
           }}
           transition={{ duration: 4, repeat: Infinity }}
         ></motion.div>
-        <motion.div 
+        <motion.div
           className="absolute bottom-20 right-20 w-96 h-96 bg-zion-purple/20 rounded-full blur-3xl"
-          animate={{ 
+          animate={{
             scale: [1.2, 1, 1.2],
             opacity: [0.6, 0.3, 0.6]
           }}
           transition={{ duration: 4, repeat: Infinity, delay: 1 }}
         ></motion.div>
-        <motion.div 
+        <motion.div
           className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-zion-blue/10 rounded-full blur-3xl"
-          animate={{ 
+          animate={{
             rotate: [0, 360],
             scale: [1, 1.1, 1]
           }}
           transition={{ duration: 20, repeat: Infinity }}
         ></motion.div>
-        
+
         {/* Floating particles */}
         {[...Array(6)].map((_, i) => (
           <motion.div
@@ -183,7 +183,7 @@ export default function EnhancedHeroSection() {
                 transition={{ duration: 0.5 }}
               >
                 {/* Icon and category */}
-                <motion.div 
+                <motion.div
                   className="flex items-center justify-center lg:justify-start mb-6"
                   whileHover={{ scale: 1.05 }}
                 >
@@ -255,7 +255,7 @@ export default function EnhancedHeroSection() {
           >
             {/* Main image */}
             <div className="relative">
-              <motion.div 
+              <motion.div
                 className={`w-full h-96 lg:h-[500px] rounded-3xl bg-gradient-to-br ${currentSlideData.gradient} bg-opacity-20 border border-zion-cyan/20 overflow-hidden`}
                 whileHover={{ scale: 1.02 }}
                 transition={{ duration: 0.3 }}
@@ -263,7 +263,7 @@ export default function EnhancedHeroSection() {
                 <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
                 <div className="absolute inset-0 flex items-center justify-center">
                   <div className="text-center text-white">
-                    <motion.div 
+                    <motion.div
                       className="w-24 h-24 bg-zion-cyan/20 rounded-full flex items-center justify-center mx-auto mb-4 border border-zion-cyan/30"
                       animate={{ rotate: [0, 360] }}
                       transition={{ duration: 20, repeat: Infinity }}
@@ -329,22 +329,22 @@ export default function EnhancedHeroSection() {
           >
             <ChevronLeft className="w-6 h-6 text-white" />
           </motion.button>
-          
+
           <div className="flex space-x-2">
             {heroSlides.map((_, index) => (
               <motion.button
                 key={index}
                 onClick={() => goToSlide(index)}
                 className={`w-3 h-3 rounded-full transition-all duration-300 ${
-                  index === currentSlide 
-                    ? 'bg-zion-cyan w-8' 
+                  index === currentSlide
+                    ? 'bg-zion-cyan w-8'
                     : 'bg-white/30 hover:bg-white/50'
                 }`}
                 whileHover={{ scale: 1.2 }}
               />
             ))}
           </div>
-          
+
           <motion.button
             onClick={nextSlide}
             className="p-3 rounded-full bg-white/10 hover:bg-white/20 transition-colors duration-200 border border-white/20"

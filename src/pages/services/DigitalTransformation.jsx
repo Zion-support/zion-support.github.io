@@ -74,7 +74,7 @@ const DigitalTransformation = () => {
             </span>
           </motion.h1>
           <motion.p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto" initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, delay: 0.2 }}>
-            Embrace the future of business with our comprehensive digital transformation services 
+            Embrace the future of business with our comprehensive digital transformation services
             designed to modernize your operations and drive sustainable growth.
           </motion.p>
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, delay: 0.4 }}>
@@ -103,7 +103,7 @@ const DigitalTransformation = () => {
                 <div className="text-5xl mb-6">{service.icon}</div>
                 <h3 className="text-2xl font-semibold text-white mb-4">{service.title}</h3>
                 <p className="text-gray-300 mb-6">{service.description}</p>
-                
+
                 <div className="mb-6">
                   <h4 className="text-sm font-semibold text-blue-400 mb-3">Key Features:</h4>
                   <ul className="space-y-2">
@@ -129,7 +129,7 @@ const DigitalTransformation = () => {
               Unlock new opportunities and competitive advantages
             </p>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <motion.div className="text-center" initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }} viewport={{ once: true }}>
               <div className="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
@@ -140,7 +140,7 @@ const DigitalTransformation = () => {
               <h3 className="text-xl font-semibold text-white mb-3">Increased Efficiency</h3>
               <p className="text-gray-300">Streamlined processes and automated workflows</p>
             </motion.div>
-            
+
             <motion.div className="text-center" initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.2 }} viewport={{ once: true }}>
               <div className="w-16 h-16 bg-cyan-600 rounded-full flex items-center justify-center mx-auto mb-4">
                 <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -150,7 +150,7 @@ const DigitalTransformation = () => {
               <h3 className="text-xl font-semibold text-white mb-3">Better Customer Experience</h3>
               <p className="text-gray-300">Enhanced engagement and satisfaction</p>
             </motion.div>
-            
+
             <motion.div className="text-center" initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.4 }} viewport={{ once: true }}>
               <div className="w-16 h-16 bg-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
                 <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">

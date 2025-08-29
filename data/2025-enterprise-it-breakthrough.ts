@@ -16,20 +16,20 @@ export const enterpriseITBreakthroughServices2025 = [
       'Custom infrastructure solutions and development'
     ],
     pricing: {
-      starter: { 
-        price: 2999, 
-        period: 'month', 
-        features: ['Basic quantum features', 'Standard security', 'Email support'] 
+      starter: {
+        price: 2999,
+        period: 'month',
+        features: ['Basic quantum features', 'Standard security', 'Email support']
       },
-      professional: { 
-        price: 7999, 
-        period: 'month', 
-        features: ['Advanced quantum features', 'Custom security', 'Priority support'] 
+      professional: {
+        price: 7999,
+        period: 'month',
+        features: ['Advanced quantum features', 'Custom security', 'Priority support']
       },
-      enterprise: { 
-        price: 19999, 
-        period: 'month', 
-        features: ['Full quantum suite', 'Custom development', 'Dedicated support'] 
+      enterprise: {
+        price: 19999,
+        period: 'month',
+        features: ['Full quantum suite', 'Custom development', 'Dedicated support']
       }
     },
     category: 'Cloud Infrastructure',
@@ -69,20 +69,20 @@ export const enterpriseITBreakthroughServices2025 = [
       'Enterprise edge solutions and customization'
     ],
     pricing: {
-      starter: { 
-        price: 1999, 
-        period: 'month', 
-        features: ['Basic edge features', 'Standard optimization', 'Email support'] 
+      starter: {
+        price: 1999,
+        period: 'month',
+        features: ['Basic edge features', 'Standard optimization', 'Email support']
       },
-      professional: { 
-        price: 5999, 
-        period: 'month', 
-        features: ['Advanced edge features', 'Custom optimization', 'Priority support'] 
+      professional: {
+        price: 5999,
+        period: 'month',
+        features: ['Advanced edge features', 'Custom optimization', 'Priority support']
       },
-      enterprise: { 
-        price: 14999, 
-        period: 'month', 
-        features: ['Full edge suite', 'Custom development', 'Dedicated support'] 
+      enterprise: {
+        price: 14999,
+        period: 'month',
+        features: ['Full edge suite', 'Custom development', 'Dedicated support']
       }
     },
     category: 'Edge Computing',
@@ -122,20 +122,20 @@ export const enterpriseITBreakthroughServices2025 = [
       'API for security automation and integration'
     ],
     pricing: {
-      starter: { 
-        price: 1499, 
-        period: 'month', 
-        features: ['Basic zero trust', 'Up to 1000 users', 'Standard monitoring', 'Email support'] 
+      starter: {
+        price: 1499,
+        period: 'month',
+        features: ['Basic zero trust', 'Up to 1000 users', 'Standard monitoring', 'Email support']
       },
-      professional: { 
-        price: 3999, 
-        period: 'month', 
-        features: ['Advanced zero trust', 'Unlimited users', 'Custom policies', 'Priority support', 'API access'] 
+      professional: {
+        price: 3999,
+        period: 'month',
+        features: ['Advanced zero trust', 'Unlimited users', 'Custom policies', 'Priority support', 'API access']
       },
-      enterprise: { 
-        price: 9999, 
-        period: 'month', 
-        features: ['Full zero trust platform', 'White-label solution', 'Dedicated support', 'Custom development', '24/7 monitoring'] 
+      enterprise: {
+        price: 9999,
+        period: 'month',
+        features: ['Full zero trust platform', 'White-label solution', 'Dedicated support', 'Custom development', '24/7 monitoring']
       }
     },
     category: 'Cybersecurity',
@@ -175,20 +175,20 @@ export const enterpriseITBreakthroughServices2025 = [
       'Enterprise-grade reliability and support'
     ],
     pricing: {
-      starter: { 
-        price: 999, 
-        period: 'month', 
-        features: ['Basic AI DevOps', 'Up to 10 applications', 'Standard automation', 'Email support'] 
+      starter: {
+        price: 999,
+        period: 'month',
+        features: ['Basic AI DevOps', 'Up to 10 applications', 'Standard automation', 'Email support']
       },
-      professional: { 
-        price: 2999, 
-        period: 'month', 
-        features: ['Advanced AI DevOps', 'Unlimited applications', 'Custom automation', 'Priority support', 'API access'] 
+      professional: {
+        price: 2999,
+        period: 'month',
+        features: ['Advanced AI DevOps', 'Unlimited applications', 'Custom automation', 'Priority support', 'API access']
       },
-      enterprise: { 
-        price: 7999, 
-        period: 'month', 
-        features: ['Full AI DevOps platform', 'White-label solution', 'Dedicated support', 'Custom development', '24/7 monitoring'] 
+      enterprise: {
+        price: 7999,
+        period: 'month',
+        features: ['Full AI DevOps platform', 'White-label solution', 'Dedicated support', 'Custom development', '24/7 monitoring']
       }
     },
     category: 'DevOps & Automation',
@@ -228,20 +228,20 @@ export const enterpriseITBreakthroughServices2025 = [
       'Enterprise-grade reliability and support'
     ],
     pricing: {
-      starter: { 
-        price: 3999, 
-        period: 'month', 
-        features: ['Basic quantum data center', 'Standard quantum features', 'Email support'] 
+      starter: {
+        price: 3999,
+        period: 'month',
+        features: ['Basic quantum data center', 'Standard quantum features', 'Email support']
       },
-      professional: { 
-        price: 9999, 
-        period: 'month', 
-        features: ['Advanced quantum data center', 'Custom quantum features', 'Priority support', 'API access'] 
+      professional: {
+        price: 9999,
+        period: 'month',
+        features: ['Advanced quantum data center', 'Custom quantum features', 'Priority support', 'API access']
       },
-      enterprise: { 
-        price: 24999, 
-        period: 'month', 
-        features: ['Full quantum data center platform', 'White-label solution', 'Dedicated support', 'Custom development', '24/7 monitoring'] 
+      enterprise: {
+        price: 24999,
+        period: 'month',
+        features: ['Full quantum data center platform', 'White-label solution', 'Dedicated support', 'Custom development', '24/7 monitoring']
       }
     },
     category: 'Data Center',

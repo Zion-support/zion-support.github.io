@@ -190,7 +190,7 @@ export default function BlockchainServicesPage() {
               </span>
             </h1>
             <p className="text-xl text-zion-slate-light mb-8 max-w-3xl mx-auto">
-              Transform your business with cutting-edge blockchain technology. From DeFi platforms to enterprise solutions, 
+              Transform your business with cutting-edge blockchain technology. From DeFi platforms to enterprise solutions,
               we deliver secure, scalable, and innovative blockchain applications.
             </p>
             <div className="flex flex-wrap justify-center gap-4">

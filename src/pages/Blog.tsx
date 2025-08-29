@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { 
-  Calendar, Clock, User, Tag, Search, Filter, 
+import {
+  Calendar, Clock, User, Tag, Search, Filter,
   ArrowRight, BookOpen, TrendingUp, Star, Eye
 } from 'lucide-react';
 
@@ -108,10 +108,10 @@ function Blog() {
 
   const formatDate = (dateString: string) => {
     const date = new Date(dateString);
-    return date.toLocaleDateString('en-US', { 
-      year: 'numeric', 
-      month: 'long', 
-      day: 'numeric' 
+    return date.toLocaleDateString('en-US', {
+      year: 'numeric',
+      month: 'long',
+      day: 'numeric'
     });
   };
 
@@ -129,7 +129,7 @@ function Blog() {
               Zion Tech Blog
             </h1>
             <p className="text-xl text-slate-300 max-w-3xl mx-auto">
-              Insights, trends, and expert analysis on AI, quantum computing, cybersecurity, 
+              Insights, trends, and expert analysis on AI, quantum computing, cybersecurity,
               and the latest technology innovations shaping the future of business.
             </p>
           </motion.div>
@@ -185,7 +185,7 @@ function Blog() {
             >
               Featured Articles
             </motion.h2>
-            
+
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
               {filteredPosts
                 .filter(post => post.featured)
@@ -209,15 +209,15 @@ function Blog() {
                         <span className="text-slate-400 text-sm">•</span>
                         <span className="text-slate-400 text-sm">{post.readTime}</span>
                       </div>
-                      
+
                       <h3 className="text-xl font-bold text-white mb-3 group-hover:text-blue-400 transition-colors">
                         {post.title}
                       </h3>
-                      
+
                       <p className="text-slate-300 mb-4 line-clamp-3">
                         {post.excerpt}
                       </p>
-                      
+
                       <div className="flex items-center justify-between">
                         <div className="flex items-center gap-4 text-sm text-slate-400">
                           <span className="flex items-center gap-1">
@@ -229,13 +229,13 @@ function Blog() {
                             {formatDate(post.date)}
                           </span>
                         </div>
-                        
+
                         <div className="flex items-center gap-2 text-slate-400 text-sm">
                           <Eye className="w-4 h-4" />
                           {post.views}
                         </div>
                       </div>
-                      
+
                       <div className="mt-4 flex flex-wrap gap-2">
                         {post.tags.slice(0, 3).map((tag) => (
                           <span
@@ -266,7 +266,7 @@ function Blog() {
           >
             Latest Articles
           </motion.h2>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {filteredPosts
               .filter(post => !post.featured)
@@ -290,15 +290,15 @@ function Blog() {
                       <span className="text-slate-400 text-sm">•</span>
                       <span className="text-slate-400 text-sm">{post.readTime}</span>
                     </div>
-                    
+
                     <h3 className="text-lg font-bold text-white mb-3 group-hover:text-blue-400 transition-colors line-clamp-2">
                       {post.title}
                     </h3>
-                    
+
                     <p className="text-slate-300 mb-4 line-clamp-3 text-sm">
                       {post.excerpt}
                     </p>
-                    
+
                     <div className="flex items-center justify-between mb-4">
                       <div className="flex items-center gap-3 text-xs text-slate-400">
                         <span className="flex items-center gap-1">
@@ -310,13 +310,13 @@ function Blog() {
                           {formatDate(post.date)}
                         </span>
                       </div>
-                      
+
                       <div className="flex items-center gap-1 text-slate-400 text-xs">
                         <Eye className="w-3 h-3" />
                         {post.views}
                       </div>
                     </div>
-                    
+
                     <div className="flex flex-wrap gap-2 mb-4">
                       {post.tags.slice(0, 2).map((tag) => (
                         <span
@@ -327,7 +327,7 @@ function Blog() {
                         </span>
                       ))}
                     </div>
-                    
+
                     <button className="w-full bg-slate-700/50 hover:bg-slate-700 text-slate-300 hover:text-white py-2 px-4 rounded-lg transition-all duration-200 flex items-center justify-center gap-2 group">
                       Read More
                       <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
@@ -355,7 +355,7 @@ function Blog() {
             <p className="text-xl text-slate-300 mb-8">
               Get the latest articles, research updates, and technology insights delivered to your inbox.
             </p>
-            
+
             <div className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
               <input
                 type="email"
@@ -366,7 +366,7 @@ function Blog() {
                 Subscribe
               </button>
             </div>
-            
+
             <p className="text-sm text-slate-400 mt-4">
               No spam, unsubscribe at any time. We respect your privacy.
             </p>

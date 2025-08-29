@@ -1,15 +1,15 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { 
-  Users, 
-  Award, 
-  Star, 
-  Target, 
-  TrendingUp, 
-  Globe, 
-  Zap, 
-  Shield, 
-  Brain, 
+import {
+  Users,
+  Award,
+  Star,
+  Target,
+  TrendingUp,
+  Globe,
+  Zap,
+  Shield,
+  Brain,
   Rocket,
   Building,
   Heart,
@@ -115,11 +115,11 @@ export default function Leadership() {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      <SEO 
+      <SEO
         title="Leadership - Zion Tech Group"
         description="Meet the visionary leaders driving innovation at Zion Tech Group. Our experienced team is committed to transforming businesses through cutting-edge AI and technology solutions."
       />
-      
+
       {/* Hero Section */}
       <section className="pt-20 pb-16 bg-gradient-to-r from-cyan-900/20 via-blue-900/20 to-purple-900/20">
         <div className="container mx-auto px-4">
@@ -130,7 +130,7 @@ export default function Leadership() {
               <br />Team
             </h1>
             <p className="text-xl text-slate-300 mb-8 leading-relaxed">
-              Visionary leaders with deep expertise in AI, technology innovation, and business transformation. 
+              Visionary leaders with deep expertise in AI, technology innovation, and business transformation.
               Our team is dedicated to revolutionizing how businesses leverage technology.
             </p>
           </div>
@@ -154,8 +154,8 @@ export default function Leadership() {
               <div key={index} className="bg-slate-800/50 border border-slate-700/50 rounded-2xl p-8 hover:border-cyan-400/30 transition-all duration-200 hover:scale-105">
                 <div className="flex flex-col md:flex-row items-start space-y-6 md:space-y-0 md:space-x-6">
                   <div className="flex-shrink-0">
-                    <img 
-                      src={leader.image} 
+                    <img
+                      src={leader.image}
                       alt={leader.name}
                       className="w-32 h-32 rounded-2xl object-cover border-4 border-cyan-400/20"
                     />
@@ -164,12 +164,12 @@ export default function Leadership() {
                     <h3 className="text-2xl font-bold text-white mb-2">{leader.name}</h3>
                     <p className="text-cyan-400 text-lg font-semibold mb-4">{leader.title}</p>
                     <p className="text-slate-300 mb-6 leading-relaxed">{leader.bio}</p>
-                    
+
                     <div className="mb-6">
                       <h4 className="text-white font-semibold mb-3">Areas of Expertise:</h4>
                       <div className="flex flex-wrap gap-2">
                         {leader.expertise.map((skill, skillIndex) => (
-                          <span 
+                          <span
                             key={skillIndex}
                             className="px-3 py-1 bg-cyan-400/10 text-cyan-400 text-sm rounded-full border border-cyan-400/20"
                           >
@@ -270,7 +270,7 @@ export default function Leadership() {
               Join Our Mission
             </h2>
             <p className="text-xl text-slate-300 mb-8 leading-relaxed">
-              We're building a team of passionate innovators who believe in the power of technology 
+              We're building a team of passionate innovators who believe in the power of technology
               to transform businesses and improve lives. If you share our vision, we'd love to hear from you.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -302,7 +302,7 @@ export default function Leadership() {
                 Ready to discuss how our leadership team can help transform your business?
               </p>
             </div>
-            
+
             <div className="grid md:grid-cols-3 gap-8">
               <div className="text-center">
                 <div className="w-16 h-16 bg-gradient-to-br from-cyan-400/20 to-blue-500/20 rounded-xl flex items-center justify-center mx-auto mb-4">
@@ -314,7 +314,7 @@ export default function Leadership() {
                   Middletown DE 19709
                 </p>
               </div>
-              
+
               <div className="text-center">
                 <div className="w-16 h-16 bg-gradient-to-br from-cyan-400/20 to-blue-500/20 rounded-xl flex items-center justify-center mx-auto mb-4">
                   <Phone className="w-8 h-8 text-cyan-400" />
@@ -325,7 +325,7 @@ export default function Leadership() {
                   Mon-Fri 9AM-6PM EST
                 </p>
               </div>
-              
+
               <div className="text-center">
                 <div className="w-16 h-16 bg-gradient-to-br from-cyan-400/20 to-blue-500/20 rounded-xl flex items-center justify-center mx-auto mb-4">
                   <Mail className="w-8 h-8 text-cyan-400" />

@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import { 
-  Sparkles, 
-  Users, 
-  Target, 
-  CheckCircle, 
+import {
+  Sparkles,
+  Users,
+  Target,
+  CheckCircle,
   ArrowRight,
   Star,
   Zap,
@@ -144,7 +144,7 @@ const Match: React.FC = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      <SEO 
+      <SEO
         title="AI Service Matcher - Zion Tech Group"
         description="Find the perfect AI and technology services for your business with our intelligent matching algorithm. Get personalized recommendations based on your needs."
         keywords="AI service matcher, technology matching, business solutions, Zion Tech Group"
@@ -166,19 +166,19 @@ const Match: React.FC = () => {
               </div>
               <h1 className="text-4xl font-bold text-white">AI Service Matcher</h1>
             </div>
-            
+
             <h2 className="text-5xl md:text-6xl font-bold text-white mb-6 leading-tight">
               Find Your Perfect
               <span className="block bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent">
                 Technology Match
               </span>
             </h2>
-            
+
             <p className="text-xl md:text-2xl text-slate-300 mb-8 leading-relaxed">
-              Our AI-powered matching algorithm analyzes your business needs and connects you 
+              Our AI-powered matching algorithm analyzes your business needs and connects you
               with the perfect technology solutions. Get personalized recommendations in seconds.
             </p>
-            
+
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 to="/contact"
@@ -251,7 +251,7 @@ const Match: React.FC = () => {
               Your <span className="text-cyan-400">Perfect Matches</span>
             </h2>
             <p className="text-xl text-slate-300 max-w-3xl mx-auto">
-              Based on your business profile and requirements, here are the services 
+              Based on your business profile and requirements, here are the services
               that best match your needs.
             </p>
           </motion.div>
@@ -288,7 +288,7 @@ const Match: React.FC = () => {
                 {/* Service Info */}
                 <h3 className="text-xl font-bold text-white mb-3">{service.name}</h3>
                 <p className="text-slate-300 mb-4 text-sm leading-relaxed">{service.description}</p>
-                
+
                 {/* Rating and Price */}
                 <div className="flex items-center justify-between mb-4">
                   <div className="flex items-center">
@@ -374,7 +374,7 @@ const Match: React.FC = () => {
               How Our <span className="text-cyan-400">AI Matcher</span> Works
             </h2>
             <p className="text-xl text-slate-300 max-w-3xl mx-auto">
-              Our intelligent matching algorithm uses advanced AI to analyze your business needs 
+              Our intelligent matching algorithm uses advanced AI to analyze your business needs
               and find the perfect technology solutions.
             </p>
           </motion.div>
@@ -431,10 +431,10 @@ const Match: React.FC = () => {
               Ready to Find Your Perfect Match?
             </h2>
             <p className="text-xl text-slate-300 mb-8 max-w-2xl mx-auto">
-              Let our AI matcher find the perfect technology solutions for your business. 
+              Let our AI matcher find the perfect technology solutions for your business.
               Get started today and discover services tailored to your needs.
             </p>
-            
+
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 to="/contact"

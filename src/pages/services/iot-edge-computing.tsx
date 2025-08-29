@@ -61,11 +61,11 @@ const IoTEdgeComputing: React.FC = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      <SEO 
+      <SEO
         title="IoT Edge Computing Services - Zion Tech Group"
         description="Transform your business with IoT edge computing solutions. Process data locally for faster insights and real-time decision making."
       />
-      
+
       {/* Hero Section */}
       <section className="pt-20 pb-16 px-4">
         <div className="max-w-7xl mx-auto">
@@ -79,19 +79,19 @@ const IoTEdgeComputing: React.FC = () => {
               <Cpu className="w-5 h-5 text-green-400 mr-2" />
               <span className="text-green-300 font-medium">IoT Edge Computing</span>
             </div>
-            
+
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
               IoT Edge
               <span className="block text-transparent bg-clip-text bg-gradient-to-r from-green-400 via-blue-500 to-cyan-400">
                 Computing
               </span>
             </h1>
-            
+
             <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-              Bring intelligence to the edge of your network. Our IoT edge computing solutions process data locally 
+              Bring intelligence to the edge of your network. Our IoT edge computing solutions process data locally
               for faster insights, reduced latency, and real-time decision making capabilities.
             </p>
-            
+
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="px-8 py-4 bg-gradient-to-r from-green-500 to-blue-600 text-white font-semibold rounded-lg hover:from-green-400 hover:to-blue-500 transition-all duration-200 hover:scale-105 shadow-lg shadow-green-500/20">
                 Get Started
@@ -223,7 +223,7 @@ const IoTEdgeComputing: React.FC = () => {
             >
               <h3 className="text-2xl font-semibold text-white mb-6">Get Started Today</h3>
               <p className="text-gray-300 mb-6">
-                Ready to bring intelligence to the edge? Our IoT edge computing experts can help you 
+                Ready to bring intelligence to the edge? Our IoT edge computing experts can help you
                 design and implement solutions that transform your business operations.
               </p>
               <button className="w-full px-6 py-3 bg-gradient-to-r from-green-500 to-blue-600 text-white font-semibold rounded-lg hover:from-green-400 hover:to-blue-500 transition-all duration-200 hover:scale-105 shadow-lg shadow-green-500/20">

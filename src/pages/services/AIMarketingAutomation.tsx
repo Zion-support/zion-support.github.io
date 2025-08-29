@@ -62,7 +62,7 @@ export default function AIMarketingAutomation() {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white">
-      <SEO 
+      <SEO
         title="AI-Powered Marketing Automation Platform - Zion Tech Group"
         description="Revolutionary AI marketing automation platform that personalizes campaigns, optimizes performance, and maximizes ROI through intelligent automation."
       />
@@ -78,20 +78,20 @@ export default function AIMarketingAutomation() {
             AI Marketing Automation
           </h1>
           <p className="text-xl md:text-2xl text-slate-300 mb-8 max-w-4xl mx-auto">
-            Transform your marketing with AI that understands your audience, personalizes content, 
+            Transform your marketing with AI that understands your audience, personalizes content,
             and optimizes campaigns in real-time for maximum engagement and ROI.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a 
-              href="https://ziontechgroup.com/contact" 
-              target="_blank" 
+            <a
+              href="https://ziontechgroup.com/contact"
+              target="_blank"
               rel="noopener noreferrer"
               className="px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-600 rounded-lg font-semibold hover:from-purple-600 hover:to-pink-700 transition-all duration-300 inline-flex items-center"
             >
               Start Free Trial <ArrowRight className="ml-2 w-5 h-5" />
             </a>
-            <a 
-              href="tel:+13024640950" 
+            <a
+              href="tel:+13024640950"
               className="px-8 py-4 border border-purple-400/30 rounded-lg font-semibold hover:bg-purple-500/10 transition-all duration-300 inline-flex items-center"
             >
               <Phone className="w-5 h-5 mr-2" /> Call Now
@@ -106,7 +106,7 @@ export default function AIMarketingAutomation() {
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold mb-6">Why Choose AI Marketing Automation?</h2>
             <p className="text-xl text-slate-300 max-w-3xl mx-auto">
-              Our AI platform revolutionizes marketing by providing intelligent automation, 
+              Our AI platform revolutionizes marketing by providing intelligent automation,
               personalization, and optimization that traditional tools simply can't match.
             </p>
           </div>
@@ -161,7 +161,7 @@ export default function AIMarketingAutomation() {
               <h3 className="text-xl font-semibold mb-2">Audience Analysis</h3>
               <p className="text-slate-300">AI analyzes customer behavior, preferences, and engagement patterns</p>
             </div>
-            
+
             <div className="text-center">
               <div className="w-20 h-20 bg-pink-500/20 rounded-full flex items-center justify-center mx-auto mb-4">
                 <Zap className="w-10 h-10 text-pink-400" />
@@ -169,7 +169,7 @@ export default function AIMarketingAutomation() {
               <h3 className="text-xl font-semibold mb-2">Content Personalization</h3>
               <p className="text-slate-300">AI automatically personalizes content and messaging for each segment</p>
             </div>
-            
+
             <div className="text-center">
               <div className="w-20 h-20 bg-orange-500/20 rounded-full flex items-center justify-center mx-auto mb-4">
                 <BarChart3 className="w-10 h-10 text-orange-400" />
@@ -209,11 +209,11 @@ export default function AIMarketingAutomation() {
 
           <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
             {pricingTiers.map((tier, index) => (
-              <div 
-                key={index} 
+              <div
+                key={index}
                 className={`bg-slate-800/50 border rounded-xl p-8 ${
-                  tier.name === 'Professional' 
-                    ? 'border-purple-500/50 bg-purple-500/5' 
+                  tier.name === 'Professional'
+                    ? 'border-purple-500/50 bg-purple-500/5'
                     : 'border-slate-700/50'
                 }`}
               >
@@ -224,7 +224,7 @@ export default function AIMarketingAutomation() {
                   </div>
                   <p className="text-slate-400">{tier.contacts}</p>
                 </div>
-                
+
                 <ul className="space-y-3 mb-8">
                   {tier.features.map((feature, featureIndex) => (
                     <li key={featureIndex} className="flex items-center">
@@ -234,9 +234,9 @@ export default function AIMarketingAutomation() {
                   ))}
                 </ul>
 
-                <a 
-                  href="https://ziontechgroup.com/contact" 
-                  target="_blank" 
+                <a
+                  href="https://ziontechgroup.com/contact"
+                  target="_blank"
                   rel="noopener noreferrer"
                   className={`w-full py-3 px-6 rounded-lg font-semibold text-center block transition-all duration-300 ${
                     tier.name === 'Professional'
@@ -286,7 +286,7 @@ export default function AIMarketingAutomation() {
               </div>
               <h3 className="text-2xl font-bold mb-4">AI-Powered Segmentation</h3>
               <p className="text-slate-300 mb-4">
-                Our AI automatically segments your audience based on behavior, preferences, 
+                Our AI automatically segments your audience based on behavior, preferences,
                 and engagement patterns, ensuring each customer receives the most relevant content.
               </p>
               <ul className="space-y-2 text-slate-300">
@@ -303,7 +303,7 @@ export default function AIMarketingAutomation() {
               </div>
               <h3 className="text-2xl font-bold mb-4">Smart Content Personalization</h3>
               <p className="text-slate-300 mb-4">
-                AI automatically personalizes email content, subject lines, and send times 
+                AI automatically personalizes email content, subject lines, and send times
                 for each individual customer to maximize engagement and conversions.
               </p>
               <ul className="space-y-2 text-slate-300">
@@ -322,21 +322,21 @@ export default function AIMarketingAutomation() {
         <div className="container mx-auto px-6 text-center">
           <h2 className="text-4xl md:text-5xl font-bold mb-6">Ready to Transform Your Marketing?</h2>
           <p className="text-xl text-slate-300 mb-8 max-w-3xl mx-auto">
-            Join thousands of businesses already using AI to create personalized, 
+            Join thousands of businesses already using AI to create personalized,
             high-converting marketing campaigns that drive real results.
           </p>
-          
+
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
-            <a 
-              href="https://ziontechgroup.com/contact" 
-              target="_blank" 
+            <a
+              href="https://ziontechgroup.com/contact"
+              target="_blank"
               rel="noopener noreferrer"
               className="px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-600 rounded-lg font-semibold hover:from-purple-600 hover:to-pink-700 transition-all duration-300 inline-flex items-center"
             >
               Start Free Trial <ArrowRight className="ml-2 w-5 h-5" />
             </a>
-            <a 
-              href="mailto:kleber@ziontechgroup.com" 
+            <a
+              href="mailto:kleber@ziontechgroup.com"
               className="px-8 py-4 border border-purple-400/30 rounded-lg font-semibold hover:bg-purple-500/10 transition-all duration-300 inline-flex items-center"
             >
               <Mail className="w-5 h-5 mr-2" /> Schedule Demo
@@ -367,9 +367,9 @@ export default function AIMarketingAutomation() {
               </div>
               <div>
                 <h4 className="font-semibold text-purple-400 mb-2">Website</h4>
-                <a 
-                  href="https://ziontechgroup.com" 
-                  target="_blank" 
+                <a
+                  href="https://ziontechgroup.com"
+                  target="_blank"
                   rel="noopener noreferrer"
                   className="text-slate-300 hover:text-purple-400 inline-flex items-center"
                 >

@@ -29,10 +29,10 @@ const ExpandedServicesPricingGuide2027: NextPage = () => {
       const matchesSearch = service.serviceName.toLowerCase().includes(searchTerm.toLowerCase()) ||
                            service.category.toLowerCase().includes(searchTerm.toLowerCase()) ||
                            service.subcategory.toLowerCase().includes(searchTerm.toLowerCase());
-      
+
       const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory;
       const matchesSubcategory = selectedSubcategory === 'all' || service.subcategory === selectedSubcategory;
-      
+
       return matchesSearch && matchesCategory && matchesSubcategory;
     });
   }, [searchTerm, selectedCategory, selectedSubcategory]);
@@ -71,10 +71,10 @@ const ExpandedServicesPricingGuide2027: NextPage = () => {
             Expanded Services Pricing Guide 2027
           </h1>
           <p className="text-xl mb-8 max-w-4xl mx-auto">
-            Comprehensive pricing information, ROI analysis, and market positioning for our cutting-edge 
+            Comprehensive pricing information, ROI analysis, and market positioning for our cutting-edge
             technology services. Compare pricing tiers, understand value propositions, and make informed decisions.
           </p>
-          
+
           {/* Contact Information */}
           <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 max-w-2xl mx-auto">
             <h3 className="text-xl font-semibold mb-4">Contact Zion Tech Group</h3>
@@ -106,7 +106,7 @@ const ExpandedServicesPricingGuide2027: NextPage = () => {
               onChange={(e) => setSearchTerm(e.target.value)}
               className="px-4 py-2 rounded-lg bg-white/20 text-white placeholder-white/70 border border-white/30 focus:outline-none focus:ring-2 focus:ring-blue-400"
             />
-            
+
             <select
               value={selectedCategory}
               onChange={(e) => {
@@ -121,7 +121,7 @@ const ExpandedServicesPricingGuide2027: NextPage = () => {
                 </option>
               ))}
             </select>
-            
+
             <select
               value={selectedSubcategory}
               onChange={(e) => setSelectedSubcategory(e.target.value)}
@@ -133,7 +133,7 @@ const ExpandedServicesPricingGuide2027: NextPage = () => {
                 </option>
               ))}
             </select>
-            
+
             <button
               onClick={resetFilters}
               className="px-4 py-2 rounded-lg bg-red-600 hover:bg-red-700 text-white transition-colors"
@@ -141,7 +141,7 @@ const ExpandedServicesPricingGuide2027: NextPage = () => {
               Reset Filters
             </button>
           </div>
-          
+
           <div className="text-white">
             <span className="font-semibold">{filteredServices.length}</span> services found
           </div>
@@ -168,7 +168,7 @@ const ExpandedServicesPricingGuide2027: NextPage = () => {
                       </span>
                     </div>
                   </div>
-                  
+
                   <div className="text-right">
                     <span className={`px-3 py-1 rounded-full text-sm font-semibold text-white ${getMarketPositionColor(service.marketComparison.marketPosition)}`}>
                       {service.marketComparison.marketPosition.toUpperCase()}
@@ -182,7 +182,7 @@ const ExpandedServicesPricingGuide2027: NextPage = () => {
                 {Object.entries(service.pricingTiers).map(([tier, details]) => (
                   <div key={tier} className="bg-white/5 rounded-lg p-6 border border-white/10">
                     <h3 className="text-xl font-bold text-white mb-4 capitalize">{tier}</h3>
-                    
+
                     <div className="mb-4">
                       <div className="text-3xl font-bold text-white">
                         {tier === 'custom' ? details.priceRange : `$${details.price}`}
@@ -309,7 +309,7 @@ const ExpandedServicesPricingGuide2027: NextPage = () => {
                     <div className="text-white font-semibold">{service.implementation.supportIncluded}</div>
                   </div>
                 </div>
-                
+
                 <div className="mt-4">
                   <span className="text-white/70 text-sm">Customization Options:</span>
                   <div className="text-white mt-1">
@@ -328,7 +328,7 @@ const ExpandedServicesPricingGuide2027: NextPage = () => {
               Ready to Get Started?
             </h2>
             <p className="text-white/80 mb-6">
-              Our comprehensive pricing structure is designed to provide maximum value at competitive rates. 
+              Our comprehensive pricing structure is designed to provide maximum value at competitive rates.
               Contact us today to discuss your specific needs and get a customized quote.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">

@@ -1,14 +1,14 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { SEO } from '@/components/SEO';
-import { 
-  Brain, 
-  Users, 
-  Calendar, 
-  TrendingUp, 
-  Shield, 
-  Zap, 
-  CheckCircle, 
+import {
+  Brain,
+  Users,
+  Calendar,
+  TrendingUp,
+  Shield,
+  Zap,
+  CheckCircle,
   ArrowRight,
   Clock,
   Target,
@@ -158,11 +158,11 @@ export default function AIProjectManagementPlatform() {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      <SEO 
+      <SEO
         title="AI Project Management Platform - Zion Tech Group"
         description="Revolutionize your project management with AI-powered task prioritization, predictive analytics, and intelligent team collaboration. Start from $299/month."
       />
-      
+
       {/* Hero Section */}
       <section className="relative overflow-hidden py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto text-center">
@@ -175,17 +175,17 @@ export default function AIProjectManagementPlatform() {
               <Brain className="w-4 h-4 mr-2" />
               AI-Powered Project Management
             </div>
-            
+
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
               The Future of
               <span className="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent"> Project Management</span>
             </h1>
-            
+
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Transform your project delivery with intelligent automation, predictive analytics, and AI-driven insights. 
+              Transform your project delivery with intelligent automation, predictive analytics, and AI-driven insights.
               Manage teams smarter, deliver faster, and achieve more with our cutting-edge platform.
             </p>
-            
+
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-semibold rounded-lg hover:from-purple-700 hover:to-pink-700 transition-all duration-300 transform hover:scale-105">
                 Start Free Trial
@@ -342,8 +342,8 @@ export default function AIProjectManagementPlatform() {
                 transition={{ duration: 0.8, delay: index * 0.1 }}
                 viewport={{ once: true }}
                 className={`relative bg-gray-800/50 backdrop-blur-sm rounded-xl p-8 border ${
-                  plan.popular 
-                    ? 'border-purple-500 ring-2 ring-purple-500/20' 
+                  plan.popular
+                    ? 'border-purple-500 ring-2 ring-purple-500/20'
                     : 'border-gray-700'
                 }`}
               >
@@ -401,7 +401,7 @@ export default function AIProjectManagementPlatform() {
             <p className="text-xl text-gray-300 mb-8">
               Join thousands of teams already experiencing the future of project management
             </p>
-            
+
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-semibold rounded-lg hover:from-purple-700 hover:to-pink-700 transition-all duration-300 transform hover:scale-105">
                 Start Free Trial
@@ -410,7 +410,7 @@ export default function AIProjectManagementPlatform() {
                 Contact Sales
               </button>
             </div>
-            
+
             <p className="text-gray-400 mt-6">
               No credit card required • 14-day free trial • Cancel anytime
             </p>

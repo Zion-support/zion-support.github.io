@@ -1,16 +1,16 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import { 
-  Brain, 
-  Cpu, 
-  Zap, 
-  Target, 
-  CheckCircle, 
-  Star, 
-  Clock, 
-  Users, 
-  Globe, 
+import {
+  Brain,
+  Cpu,
+  Zap,
+  Target,
+  CheckCircle,
+  Star,
+  Clock,
+  Users,
+  Globe,
   Shield,
   BarChart3,
   Rocket,
@@ -130,8 +130,8 @@ const AIQuantumHybridPlatform = () => {
               transition={{ duration: 0.8, delay: 0.4 }}
               className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto"
             >
-              Experience the future of computing with our revolutionary AI Quantum Hybrid Platform. 
-              Combining the power of quantum computing with advanced artificial intelligence for 
+              Experience the future of computing with our revolutionary AI Quantum Hybrid Platform.
+              Combining the power of quantum computing with advanced artificial intelligence for
               unprecedented computational capabilities.
             </motion.p>
             <motion.div
@@ -165,14 +165,14 @@ const AIQuantumHybridPlatform = () => {
                 What is AI Quantum Hybrid Platform?
               </h2>
               <p className="text-lg text-gray-300 mb-6">
-                Our AI Quantum Hybrid Platform represents the convergence of two revolutionary technologies: 
-                quantum computing and artificial intelligence. This platform seamlessly integrates quantum 
-                processing capabilities with advanced AI algorithms to solve complex problems that were 
+                Our AI Quantum Hybrid Platform represents the convergence of two revolutionary technologies:
+                quantum computing and artificial intelligence. This platform seamlessly integrates quantum
+                processing capabilities with advanced AI algorithms to solve complex problems that were
                 previously impossible to tackle.
               </p>
               <p className="text-lg text-gray-300 mb-6">
-                By combining the exponential speed of quantum computing with the pattern recognition 
-                and learning capabilities of AI, we've created a platform that can process massive 
+                By combining the exponential speed of quantum computing with the pattern recognition
+                and learning capabilities of AI, we've created a platform that can process massive
                 datasets, perform complex simulations, and generate insights in real-time.
               </p>
               <div className="flex items-center space-x-4">
@@ -484,7 +484,7 @@ const AIQuantumHybridPlatform = () => {
             viewport={{ once: true }}
             className="text-xl text-gray-300 mb-8"
           >
-            Join the quantum revolution with Zion Tech Group's AI Quantum Hybrid Platform. 
+            Join the quantum revolution with Zion Tech Group's AI Quantum Hybrid Platform.
             Unlock unprecedented computational power and accelerate your innovation timeline.
           </motion.p>
           <motion.div

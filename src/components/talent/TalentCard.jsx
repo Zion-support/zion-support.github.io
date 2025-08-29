@@ -39,7 +39,7 @@ const TalentCardComponent = ({ talent, onBook, onMessage, isAuthenticated }) => 
                 <CheckCircle2 className="w-5 h-5 text-zion-cyan"/>
               </div>)}
           </div>
-          
+
           {/* Main Info */}
           <div className="flex-1">
             <div className="flex justify-between items-start">
@@ -47,7 +47,7 @@ const TalentCardComponent = ({ talent, onBook, onMessage, isAuthenticated }) => 
               <FavoriteButton itemId={talent.id} itemType="talent" className="-mt-1"/>
             </div>
             <p className="text-white font-medium">{talent.professional_title}</p>
-            
+
             {/* Location & Availability */}
             <div className="mt-2 flex flex-wrap gap-3 text-sm">
               {talent.location && (<div className="flex items-center text-zion-slate-light">
@@ -61,7 +61,7 @@ const TalentCardComponent = ({ talent, onBook, onMessage, isAuthenticated }) => 
             </div>
           </div>
         </div>
-        
+
         {/* Skills */}
         {skills.length > 0 && (<div className="mt-4">
             <div className="flex flex-wrap gap-2">
@@ -73,7 +73,7 @@ const TalentCardComponent = ({ talent, onBook, onMessage, isAuthenticated }) => 
                 </span>)}
             </div>
           </div>)}
-        
+
         {/* Hourly Rate & Actions */}
         <div className="mt-5 flex items-center justify-between">
           <div>
@@ -82,7 +82,7 @@ const TalentCardComponent = ({ talent, onBook, onMessage, isAuthenticated }) => 
                 <span className="text-zion-slate-light font-normal">/hr</span>
               </div>) : (<div className="text-zion-slate-light">Rate not specified</div>)}
           </div>
-          
+
           <div className="flex items-center gap-2">
             {isAuthenticated && (<Button size="sm" variant="secondary" onClick={handleBook} className="bg-zion-purple hover:bg-zion-purple-light text-white">
                 Book

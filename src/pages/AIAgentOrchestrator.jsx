@@ -26,7 +26,7 @@ const AIAgentOrchestrator = () => {
                 </span>
               </h1>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
-                Coordinate multiple AI agents seamlessly with our advanced orchestration platform. 
+                Coordinate multiple AI agents seamlessly with our advanced orchestration platform.
                 Manage complex workflows, optimize resource allocation, and achieve unprecedented automation efficiency.
               </p>
             </div>

@@ -102,9 +102,9 @@ export default function EditPostPage() {
           <span className="text-muted-foreground">/</span>
           <span className="text-sm font-medium">Edit</span>
         </div>
-        
+
         <h1 className="text-3xl font-bold mb-8">Edit Post</h1>
-        
+
         <PostForm initialValues={initialValues} onSubmit={handleSubmit} isEditing={true}/>
       </div>);
 }

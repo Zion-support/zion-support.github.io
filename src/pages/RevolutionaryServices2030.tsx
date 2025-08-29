@@ -1,14 +1,14 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import { 
-  Brain, 
-  Rocket, 
-  Zap, 
-  Cpu, 
-  Heart, 
-  Globe, 
-  Shield, 
+import {
+  Brain,
+  Rocket,
+  Zap,
+  Cpu,
+  Heart,
+  Globe,
+  Shield,
   Lock,
   TrendingUp,
   Star,
@@ -75,11 +75,11 @@ export default function RevolutionaryServices2030() {
   // Filter and sort services
   const filteredServices = allServices.filter(service => {
     const categoryMatch = selectedCategory === 'all' || service.category === selectedCategory;
-    const priceMatch = selectedPriceRange === 'all' || 
+    const priceMatch = selectedPriceRange === 'all' ||
       (selectedPriceRange === 'budget' && service.pricing.monthly <= 10000) ||
       (selectedPriceRange === 'mid-range' && service.pricing.monthly > 10000 && service.pricing.monthly <= 25000) ||
       (selectedPriceRange === 'enterprise' && service.pricing.monthly > 25000);
-    
+
     return categoryMatch && priceMatch;
   });
 
@@ -126,11 +126,11 @@ export default function RevolutionaryServices2030() {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      <SEO 
+      <SEO
         title="Revolutionary Services 2030 - Zion Tech Group"
         description="Discover our revolutionary AI, blockchain, cybersecurity, and emerging technology services that will transform your business in 2030 and beyond."
       />
-      
+
       {/* Hero Section */}
       <section className="relative py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto text-center">
@@ -146,7 +146,7 @@ export default function RevolutionaryServices2030() {
               </span>
             </h1>
             <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
-              Experience the future of technology with our groundbreaking AI, blockchain, cybersecurity, and emerging technology services. 
+              Experience the future of technology with our groundbreaking AI, blockchain, cybersecurity, and emerging technology services.
               Transform your business with solutions that were once science fiction.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -275,7 +275,7 @@ export default function RevolutionaryServices2030() {
               {sortedServices.map((service, index) => {
                 const IconComponent = getServiceIcon(service.category);
                 const colorClass = getServiceColor(service.category);
-                
+
                 return (
                   <motion.div
                     key={service.id}
@@ -302,7 +302,7 @@ export default function RevolutionaryServices2030() {
 
                     {/* Service Title */}
                     <h3 className="text-xl font-bold text-white mb-2">{service.title}</h3>
-                    
+
                     {/* Service Description */}
                     <p className="text-gray-400 mb-4 line-clamp-3">{service.description}</p>
 
@@ -313,7 +313,7 @@ export default function RevolutionaryServices2030() {
                         <span className="font-medium">${service.pricing.monthly.toLocaleString()}/month</span>
                         <span className="text-gray-500 ml-2">({service.pricing.marketPrice})</span>
                       </div>
-                      
+
                       <div className="flex items-center text-sm text-gray-300">
                         <BarChart3 className="mr-2 h-4 w-4 text-zion-blue" />
                         <span>Market: {service.marketSize}</span>
@@ -356,7 +356,7 @@ export default function RevolutionaryServices2030() {
                       >
                         Learn More
                       </Link>
-                      
+
                       <div className="flex space-x-2">
                         <Link
                           to="/contact"
@@ -413,7 +413,7 @@ export default function RevolutionaryServices2030() {
             <p className="text-xl text-gray-300 mb-8">
               Contact our team of revolutionary technology experts to discuss how our 2030 services can accelerate your success.
             </p>
-            
+
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
               <div className="text-center">
                 <Phone className="h-8 w-8 text-zion-cyan mx-auto mb-4" />

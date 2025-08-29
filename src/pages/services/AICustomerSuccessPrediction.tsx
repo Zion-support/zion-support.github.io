@@ -1,12 +1,12 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { 
-  Brain, 
-  TrendingUp, 
-  Users, 
-  Zap, 
-  Shield, 
-  Globe, 
+import {
+  Brain,
+  TrendingUp,
+  Users,
+  Zap,
+  Shield,
+  Globe,
   Database,
   Cloud,
   Lock,
@@ -187,7 +187,7 @@ export default function AICustomerSuccessPrediction() {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
-      <SEO 
+      <SEO
         title="AI Customer Success Prediction Platform | Zion Tech Group"
         description="Predict customer churn, identify upsell opportunities, and optimize customer success with our AI-powered prediction platform. 95%+ accuracy in customer behavior forecasting."
         keywords="AI customer success, churn prediction, customer analytics, predictive analytics, customer retention, upsell optimization"
@@ -233,7 +233,7 @@ export default function AICustomerSuccessPrediction() {
               Powerful AI-Powered Features
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Our platform combines cutting-edge AI with deep customer insights to deliver 
+              Our platform combines cutting-edge AI with deep customer insights to deliver
               unprecedented accuracy in customer success prediction and optimization.
             </p>
           </motion.div>
@@ -271,7 +271,7 @@ export default function AICustomerSuccessPrediction() {
               Platform Capabilities
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Comprehensive tools and features designed to transform your customer success operations 
+              Comprehensive tools and features designed to transform your customer success operations
               and drive measurable business outcomes.
             </p>
           </motion.div>
@@ -319,7 +319,7 @@ export default function AICustomerSuccessPrediction() {
               Industry Use Cases
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              AI Customer Success Prediction is transforming industries across the globe, 
+              AI Customer Success Prediction is transforming industries across the globe,
               enabling proactive customer management and driving unprecedented business growth.
             </p>
           </motion.div>
@@ -367,7 +367,7 @@ export default function AICustomerSuccessPrediction() {
               Business Benefits
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Discover how AI Customer Success Prediction can transform your organization 
+              Discover how AI Customer Success Prediction can transform your organization
               and drive measurable business outcomes.
             </p>
           </motion.div>
@@ -405,7 +405,7 @@ export default function AICustomerSuccessPrediction() {
               Transparent Pricing
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Choose the perfect plan for your business needs. All plans include a 14-day free trial 
+              Choose the perfect plan for your business needs. All plans include a 14-day free trial
               and our industry-leading 99.9% uptime guarantee.
             </p>
           </motion.div>
@@ -418,8 +418,8 @@ export default function AICustomerSuccessPrediction() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 className={`relative bg-slate-800/50 p-8 rounded-xl border transition-all duration-300 hover:scale-105 ${
-                  plan.popular 
-                    ? 'border-purple-400/50 bg-gradient-to-br from-purple-500/10 to-pink-500/10' 
+                  plan.popular
+                    ? 'border-purple-400/50 bg-gradient-to-br from-purple-500/10 to-pink-500/10'
                     : 'border-slate-700/50 hover:border-purple-400/50'
                 }`}
               >
@@ -430,7 +430,7 @@ export default function AICustomerSuccessPrediction() {
                     </span>
                   </div>
                 )}
-                
+
                 <div className="text-center mb-8">
                   <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
                   <div className="flex items-baseline justify-center">
@@ -475,7 +475,7 @@ export default function AICustomerSuccessPrediction() {
               Implementation Process
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Our proven methodology ensures successful AI Customer Success Prediction deployment 
+              Our proven methodology ensures successful AI Customer Success Prediction deployment
               and rapid value realization.
             </p>
           </motion.div>
@@ -533,7 +533,7 @@ export default function AICustomerSuccessPrediction() {
               Ready to Transform Your Customer Success?
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-              Discover how AI-powered Customer Success Prediction can revolutionize your customer 
+              Discover how AI-powered Customer Success Prediction can revolutionize your customer
               management and drive unprecedented business growth.
             </p>
             <div className="flex flex-wrap justify-center gap-4">

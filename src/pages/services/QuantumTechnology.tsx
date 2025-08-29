@@ -71,7 +71,7 @@ const QuantumTechnology = () => {
               <span className="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent"> Technology</span>
             </h1>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-              Harness the power of quantum computing to solve complex problems that are impossible 
+              Harness the power of quantum computing to solve complex problems that are impossible
               for classical computers. Experience the future of computation.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -95,8 +95,8 @@ const QuantumTechnology = () => {
                 What is Quantum Computing?
               </h2>
               <p className="text-lg text-gray-300 mb-6">
-                Quantum computing leverages the principles of quantum mechanics to process information in ways that 
-                classical computers cannot. By using quantum bits (qubits) that can exist in multiple states simultaneously, 
+                Quantum computing leverages the principles of quantum mechanics to process information in ways that
+                classical computers cannot. By using quantum bits (qubits) that can exist in multiple states simultaneously,
                 quantum computers can solve complex problems exponentially faster.
               </p>
               <div className="space-y-4">
@@ -135,11 +135,11 @@ const QuantumTechnology = () => {
               Our Quantum Services
             </h2>
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              Cutting-edge quantum technology solutions designed to solve 
+              Cutting-edge quantum technology solutions designed to solve
               the most complex computational challenges.
             </p>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {quantumServices.map((service, index) => (
               <div key={index} className="bg-slate-800/50 border border-white/10 rounded-xl p-6 hover:border-purple-500/50 transition-all duration-300">
@@ -171,11 +171,11 @@ const QuantumTechnology = () => {
               Quantum Technologies We Use
             </h2>
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              Advanced quantum technologies and platforms to build 
+              Advanced quantum technologies and platforms to build
               revolutionary computing solutions.
             </p>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {quantumTechnologies.map((tech, index) => (
               <div key={index} className="bg-slate-800/50 border border-white/10 rounded-xl p-6 text-center hover:border-purple-500/50 transition-all duration-300">
@@ -206,7 +206,7 @@ const QuantumTechnology = () => {
                 Why Choose Quantum Technology?
               </h2>
               <p className="text-lg text-gray-300 mb-6">
-                Quantum technology represents the next frontier in computing, 
+                Quantum technology represents the next frontier in computing,
                 offering unprecedented capabilities for solving complex problems.
               </p>
               <ul className="space-y-3">
@@ -223,7 +223,7 @@ const QuantumTechnology = () => {
                 <Rocket className="w-24 h-24 text-purple-400 mx-auto mb-4"/>
                 <h3 className="text-2xl font-bold text-white mb-2">Quantum Innovation</h3>
                 <p className="text-gray-300 mb-6">
-                  Our team is at the forefront of quantum technology research 
+                  Our team is at the forefront of quantum technology research
                   and development.
                 </p>
                 <div className="text-sm text-gray-400">
@@ -244,7 +244,7 @@ const QuantumTechnology = () => {
             Ready for the Quantum Future?
           </h2>
           <p className="text-xl text-gray-300 mb-8">
-            Let's discuss how quantum technology can solve your most 
+            Let's discuss how quantum technology can solve your most
             complex computational challenges.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">

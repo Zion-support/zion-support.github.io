@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { 
-  BookOpen, 
-  FileText, 
-  Video, 
-  HelpCircle, 
+import {
+  BookOpen,
+  FileText,
+  Video,
+  HelpCircle,
   Search,
   Filter,
   ArrowRight,
@@ -207,10 +207,10 @@ const Resources: React.FC = () => {
 
   const formatDate = (dateString: string) => {
     const date = new Date(dateString);
-    return date.toLocaleDateString('en-US', { 
-      year: 'numeric', 
-      month: 'long', 
-      day: 'numeric' 
+    return date.toLocaleDateString('en-US', {
+      year: 'numeric',
+      month: 'long',
+      day: 'numeric'
     });
   };
 
@@ -245,7 +245,7 @@ const Resources: React.FC = () => {
               <span className="block text-zion-cyan">Resources</span>
             </h1>
             <p className="text-xl md:text-2xl text-zion-slate-light max-w-4xl mx-auto mb-8">
-              Access our comprehensive library of case studies, white papers, webinars, and support materials. 
+              Access our comprehensive library of case studies, white papers, webinars, and support materials.
               Learn from our expertise and stay ahead of the technology curve.
             </p>
             <div className="flex items-center justify-center space-x-8 text-zion-slate-light">
@@ -339,7 +339,7 @@ const Resources: React.FC = () => {
                           </span>
                         </div>
                       </div>
-                      
+
                       <div className="p-6">
                         <div className="flex items-center space-x-4 text-sm text-zion-slate-light mb-4">
                           <span className="flex items-center">
@@ -359,7 +359,7 @@ const Resources: React.FC = () => {
                         <h3 className="text-2xl font-bold text-white mb-3 group-hover:text-zion-cyan transition-colors duration-300">
                           {resource.title}
                         </h3>
-                        
+
                         <p className="text-zion-slate-light mb-4 leading-relaxed">
                           {resource.description}
                         </p>
@@ -429,7 +429,7 @@ const Resources: React.FC = () => {
                     <div className="h-40 bg-gradient-to-br from-zion-cyan/20 to-zion-purple/20 flex items-center justify-center">
                       <ResourceIcon className="w-12 h-12 text-zion-cyan" />
                     </div>
-                    
+
                     <div className="p-6 flex-1">
                       <div className="flex items-center space-x-4 text-sm text-zion-slate-light mb-3">
                         <span className="flex items-center">
@@ -445,7 +445,7 @@ const Resources: React.FC = () => {
                       <h3 className="text-xl font-bold text-white mb-3 group-hover:text-zion-cyan transition-colors duration-300 line-clamp-2">
                         {resource.title}
                       </h3>
-                      
+
                       <p className="text-zion-slate-light mb-4 leading-relaxed line-clamp-3">
                         {resource.description}
                       </p>
@@ -546,7 +546,7 @@ const Resources: React.FC = () => {
               Stay Informed
             </h2>
             <p className="text-xl text-zion-slate-light mb-8">
-              Get notified about new resources, research findings, and industry insights. 
+              Get notified about new resources, research findings, and industry insights.
               Never miss valuable knowledge from Zion Tech Group.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center max-w-md mx-auto">

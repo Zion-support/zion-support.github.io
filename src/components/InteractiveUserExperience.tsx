@@ -4,12 +4,12 @@ import { Button } from './ui/button';
 import { Badge } from './ui/badge';
 import { Progress } from './ui/progress';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from './ui/tabs';
-import { 
-  User, 
-  Settings, 
-  Palette, 
-  Eye, 
-  MousePointer, 
+import {
+  User,
+  Settings,
+  Palette,
+  Eye,
+  MousePointer,
   Smartphone,
   Monitor,
   Zap,
@@ -199,7 +199,7 @@ const InteractiveUserExperience: React.FC = () => {
   }, []);
 
   const updatePreference = useCallback((id: string, value: string | boolean | number) => {
-    setPreferences(prev => prev.map(pref => 
+    setPreferences(prev => prev.map(pref =>
       pref.id === id ? { ...pref, value } : pref
     ));
 
@@ -228,7 +228,7 @@ const InteractiveUserExperience: React.FC = () => {
   }, [preferences]);
 
   const toggleAccessibilityFeature = useCallback((id: string) => {
-    setAccessibilityFeatures(prev => prev.map(feature => 
+    setAccessibilityFeatures(prev => prev.map(feature =>
       feature.id === id ? { ...feature, enabled: !feature.enabled } : feature
     ));
   }, []);
@@ -261,8 +261,8 @@ const InteractiveUserExperience: React.FC = () => {
   const getAverageDuration = () => {
     const activitiesWithDuration = userActivities.filter(activity => activity.duration);
     if (activitiesWithDuration.length === 0) return 0;
-    
-    const totalDuration = activitiesWithDuration.reduce((sum, activity) => 
+
+    const totalDuration = activitiesWithDuration.reduce((sum, activity) =>
       sum + (activity.duration || 0), 0
     );
     return totalDuration / activitiesWithDuration.length;

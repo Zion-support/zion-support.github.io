@@ -1,14 +1,14 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { SEO } from '@/components/SEO';
-import { 
-  Shield, 
-  Eye, 
-  AlertTriangle, 
-  Zap, 
-  Lock, 
-  Activity, 
-  CheckCircle, 
+import {
+  Shield,
+  Eye,
+  AlertTriangle,
+  Zap,
+  Lock,
+  Activity,
+  CheckCircle,
   ArrowRight,
   Clock,
   Target,
@@ -168,11 +168,11 @@ export default function AICybersecurityThreatDetection() {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      <SEO 
+      <SEO
         title="AI Cybersecurity Threat Detection - Zion Tech Group"
         description="Advanced AI-powered cybersecurity platform with 99.9% threat detection rate. Real-time monitoring, automated response, and zero-day attack prevention. Start from $499/month."
       />
-      
+
       {/* Hero Section */}
       <section className="relative overflow-hidden py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto text-center">
@@ -185,17 +185,17 @@ export default function AICybersecurityThreatDetection() {
               <Shield className="w-4 h-4 mr-2" />
               AI-Powered Cybersecurity
             </div>
-            
+
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
               Stop Threats Before They
               <span className="bg-gradient-to-r from-red-400 to-orange-400 bg-clip-text text-transparent"> Stop You</span>
             </h1>
-            
+
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Our AI-powered cybersecurity platform provides 99.9% threat detection with real-time monitoring, 
+              Our AI-powered cybersecurity platform provides 99.9% threat detection with real-time monitoring,
               automated response, and zero-day attack prevention. Protect your business with the future of cybersecurity.
             </p>
-            
+
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="px-8 py-4 bg-gradient-to-r from-red-600 to-orange-600 text-white font-semibold rounded-lg hover:from-red-700 hover:to-orange-700 transition-all duration-300 transform hover:scale-105">
                 Start Free Trial
@@ -388,8 +388,8 @@ export default function AICybersecurityThreatDetection() {
                 transition={{ duration: 0.8, delay: index * 0.1 }}
                 viewport={{ once: true }}
                 className={`relative bg-gray-800/50 backdrop-blur-sm rounded-xl p-8 border ${
-                  plan.popular 
-                    ? 'border-red-500 ring-2 ring-red-500/20' 
+                  plan.popular
+                    ? 'border-red-500 ring-2 ring-red-500/20'
                     : 'border-gray-700'
                 }`}
               >
@@ -447,7 +447,7 @@ export default function AICybersecurityThreatDetection() {
             <p className="text-xl text-gray-300 mb-8">
               Join thousands of organizations already protected by our AI-powered cybersecurity platform
             </p>
-            
+
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="px-8 py-4 bg-gradient-to-r from-red-600 to-orange-600 text-white font-semibold rounded-lg hover:from-red-700 hover:to-orange-700 transition-all duration-300 transform hover:scale-105">
                 Start Free Trial
@@ -456,7 +456,7 @@ export default function AICybersecurityThreatDetection() {
                 Contact Security Team
               </button>
             </div>
-            
+
             <p className="text-gray-400 mt-6">
               No credit card required • 30-day free trial • 24/7 security monitoring
             </p>

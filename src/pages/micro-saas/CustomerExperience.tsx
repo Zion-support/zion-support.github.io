@@ -65,17 +65,17 @@ export default function CustomerExperience() {
               <Heart className="w-5 h-5 text-pink-400" />
               <span className="text-pink-400 font-medium">Customer Experience</span>
             </div>
-            
+
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
               Delight Your
               <span className="text-gradient"> Customers</span>
             </h1>
-            
+
             <p className="text-xl text-zion-slate-light mb-8 max-w-2xl mx-auto">
-              Create exceptional customer experiences that drive loyalty, satisfaction, 
+              Create exceptional customer experiences that drive loyalty, satisfaction,
               and business growth with our comprehensive CX platform.
             </p>
-            
+
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="btn-futuristic px-8 py-4 text-lg">
                 Start Free Trial

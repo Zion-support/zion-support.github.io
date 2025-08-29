@@ -131,7 +131,7 @@ export default function AIBusinessSolutions() {
             AI Business Solutions
           </h1>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-            Transform your business operations with cutting-edge AI solutions designed to 
+            Transform your business operations with cutting-edge AI solutions designed to
             increase efficiency, reduce costs, and drive growth across all departments.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
@@ -238,7 +238,7 @@ export default function AIBusinessSolutions() {
           <div className="bg-gradient-to-r from-cyan-500/10 to-blue-500/10 rounded-2xl p-8 border border-cyan-500/30">
             <h3 className="text-2xl font-bold text-white mb-4">Ready to Transform Your Business?</h3>
             <p className="text-gray-300 mb-6 max-w-2xl mx-auto">
-              Join leading organizations that have already transformed their operations 
+              Join leading organizations that have already transformed their operations
               with our AI business solutions and achieved remarkable results.
             </p>
             <div className="flex flex-wrap justify-center gap-4">

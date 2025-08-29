@@ -1,12 +1,12 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { 
-  BarChart3, 
-  TrendingUp, 
-  Users, 
-  Eye, 
-  MousePointer, 
-  Clock, 
+import {
+  BarChart3,
+  TrendingUp,
+  Users,
+  Eye,
+  MousePointer,
+  Clock,
   Globe,
   X,
   Activity,
@@ -80,7 +80,7 @@ export function AdvancedAnalytics({ enabled = true, showMetrics = true }: Props)
       const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
       const docHeight = document.documentElement.scrollHeight - window.innerHeight;
       const scrollPercent = Math.round((scrollTop / docHeight) * 100);
-      
+
       setAnalyticsData(prev => ({
         ...prev,
         scrollDepth: Math.max(prev.scrollDepth, scrollPercent)
@@ -118,11 +118,11 @@ export function AdvancedAnalytics({ enabled = true, showMetrics = true }: Props)
     const trackUserAgent = () => {
       const userAgent = navigator.userAgent;
       let device = 'Desktop';
-      
+
       if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(userAgent)) {
         device = /iPad/i.test(userAgent) ? 'Tablet' : 'Mobile';
       }
-      
+
       setAnalyticsData(prev => {
         const existingDevice = prev.userAgents.find(d => d.device === device);
         if (existingDevice) {
@@ -139,7 +139,7 @@ export function AdvancedAnalytics({ enabled = true, showMetrics = true }: Props)
       if (document.referrer) {
         const referrer = new URL(document.referrer);
         const source = referrer.hostname;
-        
+
         setAnalyticsData(prev => {
           const existingSource = prev.referrers.find(r => r.source === source);
           if (existingSource) {
@@ -161,7 +161,7 @@ export function AdvancedAnalytics({ enabled = true, showMetrics = true }: Props)
     window.addEventListener('scroll', trackScrollDepth, { passive: true });
     document.addEventListener('click', trackClickEvents);
     document.addEventListener('submit', trackFormSubmissions);
-    
+
     // Update time on page every second
     const timeInterval = setInterval(trackTimeOnPage, 1000);
 
@@ -274,7 +274,7 @@ export function AdvancedAnalytics({ enabled = true, showMetrics = true }: Props)
               <Activity className="w-4 h-4 text-green-500" />
               Real-time Metrics
             </h4>
-            
+
             <div className="grid grid-cols-2 gap-3">
               <div className="p-3 bg-green-50 rounded-lg">
                 <div className="flex items-center gap-2 mb-1">
@@ -283,7 +283,7 @@ export function AdvancedAnalytics({ enabled = true, showMetrics = true }: Props)
                 </div>
                 <span className="text-lg font-bold text-green-700">{analyticsData.pageViews}</span>
               </div>
-              
+
               <div className="p-3 bg-blue-50 rounded-lg">
                 <div className="flex items-center gap-2 mb-1">
                   <Users className="w-4 h-4 text-blue-500" />
@@ -291,7 +291,7 @@ export function AdvancedAnalytics({ enabled = true, showMetrics = true }: Props)
                 </div>
                 <span className="text-lg font-bold text-blue-700">{analyticsData.uniqueVisitors || 1}</span>
               </div>
-              
+
               <div className="p-3 bg-purple-50 rounded-lg">
                 <div className="flex items-center gap-2 mb-1">
                   <Clock className="w-4 h-4 text-purple-500" />
@@ -299,7 +299,7 @@ export function AdvancedAnalytics({ enabled = true, showMetrics = true }: Props)
                 </div>
                 <span className="text-lg font-bold text-purple-700">{Math.floor(analyticsData.sessionDuration / 60)}m {analyticsData.sessionDuration % 60}s</span>
               </div>
-              
+
               <div className="p-3 bg-orange-50 rounded-lg">
                 <div className="flex items-center gap-2 mb-1">
                   <MousePointer className="w-4 h-4 text-orange-500" />
@@ -316,18 +316,18 @@ export function AdvancedAnalytics({ enabled = true, showMetrics = true }: Props)
               <Zap className="w-4 h-4 text-yellow-500" />
               Performance Metrics
             </h4>
-            
+
             <div className="space-y-3">
               <div className="flex items-center justify-between p-3 bg-gray-50 rounded-lg">
                 <span className="text-sm text-gray-700">Scroll Depth</span>
                 <span className="text-sm font-medium text-gray-800">{analyticsData.scrollDepth}%</span>
               </div>
-              
+
               <div className="flex items-center justify-between p-3 bg-gray-50 rounded-lg">
                 <span className="text-sm text-gray-700">Time on Page</span>
                 <span className="text-sm font-medium text-gray-800">{Math.floor(analyticsData.timeOnPage / 60)}m {analyticsData.timeOnPage % 60}s</span>
               </div>
-              
+
               <div className="flex items-center justify-between p-3 bg-gray-50 rounded-lg">
                 <span className="text-sm text-gray-700">Form Submissions</span>
                 <span className="text-sm font-medium text-gray-800">{analyticsData.formSubmissions}</span>
@@ -341,7 +341,7 @@ export function AdvancedAnalytics({ enabled = true, showMetrics = true }: Props)
               <Target className="w-4 h-4 text-red-500" />
               Conversion Metrics
             </h4>
-            
+
             <div className="grid grid-cols-2 gap-3">
               <div className="p-3 bg-red-50 rounded-lg">
                 <div className="text-center">
@@ -349,7 +349,7 @@ export function AdvancedAnalytics({ enabled = true, showMetrics = true }: Props)
                   <div className="text-xs text-red-600">Bounce Rate</div>
                 </div>
               </div>
-              
+
               <div className="p-3 bg-green-50 rounded-lg">
                 <div className="text-center">
                   <div className="text-lg font-bold text-green-700">{analyticsData.conversionRate}%</div>
@@ -365,7 +365,7 @@ export function AdvancedAnalytics({ enabled = true, showMetrics = true }: Props)
               <Award className="w-4 h-4 text-blue-500" />
               Top Pages
             </h4>
-            
+
             <div className="space-y-2">
               {analyticsData.topPages.slice(0, 3).map((page, index) => (
                 <div key={page.path} className="flex items-center justify-between p-2 bg-gray-50 rounded-lg">
@@ -385,7 +385,7 @@ export function AdvancedAnalytics({ enabled = true, showMetrics = true }: Props)
               <Device className="w-4 h-4 text-purple-500" />
               Device Distribution
             </h4>
-            
+
             <div className="space-y-2">
               {analyticsData.userAgents.map((device, index) => (
                 <div key={index} className="flex items-center justify-between p-2 bg-gray-50 rounded-lg">

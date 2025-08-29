@@ -20,16 +20,16 @@ router.get('/users', async (_req, res) => {
       { id: 1, name: 'John Doe', email: 'john@example.com' },
       { id: 2, name: 'Jane Smith', email: 'jane@example.com' }
     ];
-    
-    res.json({ 
-      success: true, 
+
+    res.json({
+      success: true,
       data: users,
-      count: users.length 
+      count: users.length
     });
   } catch (error) {
-    res.status(500).json({ 
-      success: false, 
-      error: 'Failed to fetch users' 
+    res.status(500).json({
+      success: false,
+      error: 'Failed to fetch users'
     });
   }
 });
@@ -42,7 +42,7 @@ router.post('/users', [
 ], async (req: any, res: any) => {
   try {
     const { name, email } = req.body;
-    
+
     // Example user creation - replace with actual database operation
     const newUser = {
       id: Date.now(),
@@ -50,16 +50,16 @@ router.post('/users', [
       email,
       createdAt: new Date().toISOString()
     };
-    
-    res.status(201).json({ 
-      success: true, 
+
+    res.status(201).json({
+      success: true,
       data: newUser,
-      message: 'User created successfully' 
+      message: 'User created successfully'
     });
   } catch (error) {
-    res.status(500).json({ 
-      success: false, 
-      error: 'Failed to create user' 
+    res.status(500).json({
+      success: false,
+      error: 'Failed to create user'
     });
   }
 });
@@ -68,7 +68,7 @@ router.post('/users', [
 router.get('/users/:id', async (req, res) => {
   try {
     const { id } = req.params;
-    
+
     // Example user lookup - replace with actual database query
     const user = {
       id: parseInt(id),
@@ -76,22 +76,22 @@ router.get('/users/:id', async (req, res) => {
       email: 'john@example.com',
       createdAt: new Date().toISOString()
     };
-    
+
     if (!user) {
-      return res.status(404).json({ 
-        success: false, 
-        error: 'User not found' 
+      return res.status(404).json({
+        success: false,
+        error: 'User not found'
       });
     }
-    
-    return res.json({ 
-      success: true, 
-      data: user 
+
+    return res.json({
+      success: true,
+      data: user
     });
   } catch (error) {
-    return res.status(500).json({ 
-      success: false, 
-      error: 'Failed to fetch user' 
+    return res.status(500).json({
+      success: false,
+      error: 'Failed to fetch user'
     });
   }
 });

@@ -80,7 +80,7 @@ const Cybersecurity = () => {
               <span className="bg-gradient-to-r from-red-400 to-orange-400 bg-clip-text text-transparent"> Digital Age</span>
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Protect your digital assets with cutting-edge cybersecurity solutions. 
+              Protect your digital assets with cutting-edge cybersecurity solutions.
               From threat detection to compliance automation, we secure your future.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -103,7 +103,7 @@ const Cybersecurity = () => {
               Comprehensive Security Services
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Our cybersecurity portfolio covers all aspects of digital security, providing comprehensive 
+              Our cybersecurity portfolio covers all aspects of digital security, providing comprehensive
               protection for your organization's most valuable assets.
             </p>
           </div>
@@ -188,7 +188,7 @@ const Cybersecurity = () => {
                 Compliance & Regulatory Excellence
               </h2>
               <p className="text-lg text-gray-600 mb-6">
-                Stay compliant with industry standards and regulations through our automated compliance 
+                Stay compliant with industry standards and regulations through our automated compliance
                 management solutions. From SOC2 to GDPR, we ensure your organization meets all requirements.
               </p>
               <div className="space-y-4">
@@ -247,7 +247,7 @@ const Cybersecurity = () => {
             Ready to Secure Your Digital Future?
           </h2>
           <p className="text-xl text-red-100 mb-8 max-w-3xl mx-auto">
-            Don't wait for a security breach. Protect your organization with our comprehensive 
+            Don't wait for a security breach. Protect your organization with our comprehensive
             cybersecurity solutions today.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">

@@ -68,7 +68,7 @@ const ServiceCategory = ({ category, services }) => {
                 {service.description}
               </CardDescription>
             </CardHeader>
-            
+
             <CardContent className="pt-0">
               <div className="space-y-4">
                 {/* Tags */}
@@ -129,7 +129,7 @@ const BenefitsSection = () => (<section className="py-16 bg-zion-blue-dark borde
       <div className="text-center mb-12">
         <h2 className="text-3xl font-bold text-white mb-4">Why Choose Zion Tech Group Services?</h2>
         <p className="text-zion-slate-light text-lg max-w-3xl mx-auto">
-          Our comprehensive suite of micro SAAS services is designed to transform your business operations 
+          Our comprehensive suite of micro SAAS services is designed to transform your business operations
           with cutting-edge technology and proven solutions.
         </p>
       </div>
@@ -141,7 +141,7 @@ const BenefitsSection = () => (<section className="py-16 bg-zion-blue-dark borde
           </div>
           <h3 className="text-xl font-bold text-white mb-3">AI-Powered Solutions</h3>
           <p className="text-zion-slate-light">
-            Leverage the latest artificial intelligence and machine learning technologies to automate 
+            Leverage the latest artificial intelligence and machine learning technologies to automate
             processes and gain valuable insights.
           </p>
         </div>
@@ -152,7 +152,7 @@ const BenefitsSection = () => (<section className="py-16 bg-zion-blue-dark borde
           </div>
           <h3 className="text-xl font-bold text-white mb-3">Enterprise Security</h3>
           <p className="text-zion-slate-light">
-            Built with enterprise-grade security and compliance standards to protect your data 
+            Built with enterprise-grade security and compliance standards to protect your data
             and meet regulatory requirements.
           </p>
         </div>
@@ -163,7 +163,7 @@ const BenefitsSection = () => (<section className="py-16 bg-zion-blue-dark borde
           </div>
           <h3 className="text-xl font-bold text-white mb-3">Rapid Implementation</h3>
           <p className="text-zion-slate-light">
-            Quick deployment and setup with minimal disruption to your existing operations, 
+            Quick deployment and setup with minimal disruption to your existing operations,
             delivering value in weeks, not months.
           </p>
         </div>
@@ -174,7 +174,7 @@ const BenefitsSection = () => (<section className="py-16 bg-zion-blue-dark borde
           </div>
           <h3 className="text-xl font-bold text-white mb-3">Expert Support</h3>
           <p className="text-zion-slate-light">
-            24/7 technical support and dedicated account management to ensure your success 
+            24/7 technical support and dedicated account management to ensure your success
             and maximize ROI.
           </p>
         </div>
@@ -185,7 +185,7 @@ const BenefitsSection = () => (<section className="py-16 bg-zion-blue-dark borde
           </div>
           <h3 className="text-xl font-bold text-white mb-3">Scalable Architecture</h3>
           <p className="text-zion-slate-light">
-            Cloud-native solutions that grow with your business, from startup to enterprise, 
+            Cloud-native solutions that grow with your business, from startup to enterprise,
             with flexible pricing options.
           </p>
         </div>
@@ -196,7 +196,7 @@ const BenefitsSection = () => (<section className="py-16 bg-zion-blue-dark borde
           </div>
           <h3 className="text-xl font-bold text-white mb-3">Proven Results</h3>
           <p className="text-zion-slate-light">
-            Trusted by thousands of businesses worldwide with proven track records of 
+            Trusted by thousands of businesses worldwide with proven track records of
             improving efficiency and reducing costs.
           </p>
         </div>
@@ -209,7 +209,7 @@ const ContactSection = () => (<section className="py-16 bg-gradient-to-br from-z
       <p className="text-zion-slate-light text-lg max-w-2xl mx-auto mb-8">
         Contact our team to discuss your specific needs and find the perfect solution for your business transformation journey.
       </p>
-      
+
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8 max-w-4xl mx-auto">
         <div className="flex items-center justify-center space-x-3 p-4 bg-zion-blue-dark rounded-lg border border-zion-blue-light">
           <Mail className="w-6 h-6 text-zion-cyan"/>
@@ -220,7 +220,7 @@ const ContactSection = () => (<section className="py-16 bg-gradient-to-br from-z
             </a>
           </div>
         </div>
-        
+
         <div className="flex items-center justify-center space-x-3 p-4 bg-zion-blue-dark rounded-lg border border-zion-blue-light">
           <Phone className="w-6 h-6 text-zion-cyan"/>
           <div className="text-left">
@@ -230,7 +230,7 @@ const ContactSection = () => (<section className="py-16 bg-gradient-to-br from-z
             </a>
           </div>
         </div>
-        
+
         <div className="flex items-center justify-center space-x-3 p-4 bg-zion-blue-dark rounded-lg border border-zion-blue-light">
           <MapPin className="w-6 h-6 text-zion-cyan"/>
           <div className="text-left">
@@ -266,7 +266,7 @@ export default function EnhancedServicesOverview() {
           Comprehensive Micro SAAS Services
         </h1>
         <p className="text-xl text-zion-slate-light max-w-4xl mx-auto mb-8">
-          Transform your business with our innovative suite of micro SAAS solutions, AI-powered services, 
+          Transform your business with our innovative suite of micro SAAS solutions, AI-powered services,
           and cutting-edge IT solutions. From startups to enterprises, we have the tools you need to succeed.
         </p>
         <div className="flex flex-wrap justify-center gap-4">

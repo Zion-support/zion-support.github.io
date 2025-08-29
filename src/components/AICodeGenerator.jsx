@@ -65,7 +65,7 @@ export const AICodeGenerator = () => {
         const codeToTest = generatedCode || customCode;
         const testCode = await generateTests(codeToTest, form.language);
         // In a real implementation, you'd want to display the test code
-        console.log('Generated tests:', testCode);
+        // console.log('Generated tests:', testCode);
         trackEvent('ai_code_generator', 'tests_generated', form.language, testCode.length);
     }, [generatedCode, customCode, generateTests, form.language, trackEvent]);
     // Handle documentation generation
@@ -75,7 +75,7 @@ export const AICodeGenerator = () => {
         const codeToDoc = generatedCode || customCode;
         const docs = await generateDocs(codeToDoc, form.language);
         // In a real implementation, you'd want to display the documentation
-        console.log('Generated docs:', docs);
+        // console.log('Generated docs:', docs);
         trackEvent('ai_code_generator', 'docs_generated', form.language, docs.length);
     }, [generatedCode, customCode, generateDocs, form.language, trackEvent]);
     // Copy code to clipboard
@@ -87,7 +87,7 @@ export const AICodeGenerator = () => {
             trackEvent('ai_code_generator', 'code_copied', 'clipboard', code.length);
         }
         catch (error) {
-            console.error('Failed to copy code:', error);
+            // console.error('Failed to copy code:', error);
         }
     }, [trackEvent]);
     // Apply suggestion
@@ -115,7 +115,7 @@ export const AICodeGenerator = () => {
               Powered by AI
             </div>
           </h2>
-          
+
           <div className="flex items-center gap-2">
             <button onClick={() => exportCode('json')} className="px-4 py-2 bg-white/20 hover:bg-white/30 rounded-lg transition-colors flex items-center gap-2">
               <Download className="w-4 h-4"/>
@@ -264,7 +264,7 @@ export const AICodeGenerator = () => {
                       </button>
                     </div>
                   </div>
-                  
+
                   <div className="bg-gray-900 text-gray-100 p-4 rounded-lg overflow-x-auto">
                     <pre className="text-sm font-mono">
                       <code>{generatedCode}</code>
@@ -437,18 +437,18 @@ export const AICodeGenerator = () => {
                       {Math.round(suggestion.confidence * 100)}% confidence
                     </span>
                   </div>
-                  
+
                   <h4 className="font-medium text-gray-900 dark:text-white mb-2">
                     {suggestion.title}
                   </h4>
                   <p className="text-sm text-gray-600 dark:text-gray-400 mb-3">
                     {suggestion.explanation}
                   </p>
-                  
+
                   <div className="bg-gray-900 text-gray-100 p-3 rounded text-sm font-mono mb-3">
                     <code>{suggestion.code}</code>
                   </div>
-                  
+
                   <div className="flex items-center gap-2">
                     <button onClick={() => handleApplySuggestion(suggestion)} className="px-3 py-1 bg-purple-600 hover:bg-purple-700 text-white text-sm rounded transition-colors">
                       Apply Suggestion
@@ -472,7 +472,7 @@ export const AICodeGenerator = () => {
                 Clear History
               </button>
             </div>
-            
+
             <div className="space-y-3 max-h-64 overflow-y-auto">
               {history.slice(0, 10).map((item) => (<div key={item.id} className="p-3 bg-gray-50 dark:bg-gray-700 rounded-lg border border-gray-200 dark:border-gray-600">
                   <div className="flex items-center justify-between mb-2">
@@ -490,7 +490,7 @@ export const AICodeGenerator = () => {
                       {item.timestamp.toLocaleTimeString()}
                     </span>
                   </div>
-                  
+
                   <div className="flex items-center gap-2">
                     <button onClick={() => copyToClipboard(item.code)} className="px-2 py-1 bg-gray-100 hover:bg-gray-200 dark:bg-gray-600 dark:hover:bg-gray-500 text-gray-700 dark:text-gray-300 text-xs rounded transition-colors">
                       Copy Code

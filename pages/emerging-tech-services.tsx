@@ -79,7 +79,7 @@ const EmergingTechServices: NextPage = () => {
             Emerging Tech Services 2027
           </h1>
           <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
-            Discover the future of technology with our revolutionary emerging tech services. 
+            Discover the future of technology with our revolutionary emerging tech services.
             From quantum computing to biocomputing, we're pioneering the next generation of innovation.
           </p>
           <div className="flex flex-wrap justify-center gap-4 mb-8">

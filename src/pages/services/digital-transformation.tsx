@@ -22,17 +22,17 @@ export default function DigitalTransformation() {
                 <RefreshCw className="w-4 h-4 mr-2" />
                 Business Transformation
               </div>
-              
+
               <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
                 Digital
                 <span className="bg-gradient-to-r from-purple-400 to-pink-500 bg-clip-text text-transparent"> Transformation</span>
               </h1>
-              
+
               <p className="text-xl text-slate-300 mb-8 max-w-3xl mx-auto">
-                Transform your business with comprehensive digital transformation services. Modernize operations, 
+                Transform your business with comprehensive digital transformation services. Modernize operations,
                 enhance customer experience, and drive innovation across your organization.
               </p>
-              
+
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link
                   to="/contact"
@@ -58,7 +58,7 @@ export default function DigitalTransformation() {
                 Comprehensive Digital Transformation
               </h2>
               <p className="text-xl text-slate-300 max-w-2xl mx-auto">
-                Our digital transformation services cover every aspect of modernizing your business 
+                Our digital transformation services cover every aspect of modernizing your business
                 for the digital age.
               </p>
             </div>

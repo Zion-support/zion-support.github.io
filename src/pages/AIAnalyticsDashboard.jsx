@@ -108,7 +108,7 @@ export default function AIAnalyticsDashboard() {
             AI Analytics Dashboard
           </h1>
           <p className="text-xl md:text-2xl text-zion-slate-light mb-8 max-w-4xl mx-auto">
-            Transform your business data into actionable intelligence with our advanced AI-powered analytics platform. 
+            Transform your business data into actionable intelligence with our advanced AI-powered analytics platform.
             Get real-time insights, predictive analytics, and custom dashboards.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -138,7 +138,7 @@ export default function AIAnalyticsDashboard() {
               Our platform combines cutting-edge AI technology with intuitive design to deliver insights that drive business growth.
             </p>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {features.map((feature, index) => (<Card key={index} className="bg-zion-slate-dark/50 border-zion-purple/20 hover:border-zion-purple/40 transition-all duration-300 hover:shadow-2xl hover:shadow-zion-purple/20">
                 <CardHeader className="text-center">
@@ -168,7 +168,7 @@ export default function AIAnalyticsDashboard() {
               Choose the plan that fits your business needs. All plans include our core AI analytics features.
             </p>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
             {pricingPlans.map((plan, index) => (<Card key={index} className={`relative ${plan.popular ? 'border-zion-purple scale-105' : 'border-zion-slate-light'} bg-zion-slate-dark/50 transition-all duration-300 hover:shadow-2xl`}>
                 {plan.popular && (<Badge className="absolute -top-3 left-1/2 transform -translate-x-1/2 bg-gradient-to-r from-zion-purple to-zion-cyan text-white border-0">
@@ -213,7 +213,7 @@ export default function AIAnalyticsDashboard() {
               See what our customers say about the transformative power of AI analytics.
             </p>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
             {testimonials.map((testimonial, index) => (<Card key={index} className="bg-zion-slate-dark/50 border-zion-purple/20 hover:border-zion-purple/40 transition-all duration-300">
                 <CardContent className="pt-6">

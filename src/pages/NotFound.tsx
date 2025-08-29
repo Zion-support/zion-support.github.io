@@ -15,9 +15,9 @@ export default function NotFound() {
         <h1 className="text-4xl md:text-5xl font-bold text-zion-slate-dark mb-6">
           Page Not Found
         </h1>
-        
+
         <p className="text-xl text-zion-slate-light mb-8 leading-relaxed">
-          The page you're looking for doesn't exist or has been moved. 
+          The page you're looking for doesn't exist or has been moved.
           Don't worry, we're here to help you find what you need.
         </p>
 
@@ -30,7 +30,7 @@ export default function NotFound() {
             <Home className="w-8 h-8 text-zion-cyan mb-3 group-hover:scale-110 transition-transform" />
             <span className="font-medium text-zion-slate-dark">Go Home</span>
           </Link>
-          
+
           <Link
             to="/search"
             className="flex flex-col items-center p-6 bg-zion-slate-light/20 rounded-lg hover:bg-zion-slate-light/30 transition-colors group"
@@ -38,7 +38,7 @@ export default function NotFound() {
             <Search className="w-8 h-8 text-zion-cyan mb-3 group-hover:scale-110 transition-transform" />
             <span className="font-medium text-zion-slate-dark">Search Site</span>
           </Link>
-          
+
           <Link
             to="/contact"
             className="flex flex-col items-center p-6 bg-zion-slate-light/20 rounded-lg hover:bg-zion-slate-light/30 transition-colors group"
@@ -63,7 +63,7 @@ export default function NotFound() {
                 Learn about our company, mission, and team
               </p>
             </Link>
-            
+
             <Link
               to="/services"
               className="p-4 bg-white border border-zion-slate-light rounded-lg hover:border-zion-cyan hover:shadow-md transition-all text-left"
@@ -73,7 +73,7 @@ export default function NotFound() {
                 Explore our technology solutions and services
               </p>
             </Link>
-            
+
             <Link
               to="/careers"
               className="p-4 bg-white border border-zion-slate-light rounded-lg hover:border-zion-cyan hover:shadow-md transition-all text-left"
@@ -83,7 +83,7 @@ export default function NotFound() {
                 Join our team and grow with us
               </p>
             </Link>
-            
+
             <Link
               to="/news"
               className="p-4 bg-white border border-zion-slate-light rounded-lg hover:border-zion-cyan hover:shadow-md transition-all text-left"
@@ -122,7 +122,7 @@ export default function NotFound() {
             <ArrowLeft className="w-4 h-4" />
             Go Back
           </button>
-          
+
           <Link
             to="/"
             className="inline-flex items-center gap-2 px-6 py-3 bg-zion-cyan text-white rounded-lg hover:bg-zion-cyan/90 transition-colors"

@@ -81,11 +81,11 @@ export default function ZeroTrustNetworkArchitecture() {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      <SEO 
+      <SEO
         title="Zero Trust Network Architecture - Zion Tech Group"
         description="Transform your security with Zero Trust Network Architecture. Never trust, always verify with our comprehensive security solutions."
       />
-      
+
       {/* Hero Section */}
       <section className="relative overflow-hidden py-20">
         <div className="absolute inset-0 bg-gradient-to-r from-red-600/20 to-pink-600/20"></div>
@@ -108,7 +108,7 @@ export default function ZeroTrustNetworkArchitecture() {
               </span>
             </h1>
             <p className="text-xl text-slate-300 mb-8 max-w-3xl mx-auto">
-              Never trust, always verify. Transform your security posture with Zero Trust principles 
+              Never trust, always verify. Transform your security posture with Zero Trust principles
               that protect your network from modern cyber threats.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
@@ -144,7 +144,7 @@ export default function ZeroTrustNetworkArchitecture() {
               Core Zero Trust Principles
             </h2>
             <p className="text-xl text-slate-300 max-w-3xl mx-auto">
-              Zero Trust is built on fundamental principles that ensure comprehensive 
+              Zero Trust is built on fundamental principles that ensure comprehensive
               security across your entire network infrastructure.
             </p>
           </motion.div>
@@ -182,7 +182,7 @@ export default function ZeroTrustNetworkArchitecture() {
               Our Zero Trust Services
             </h2>
             <p className="text-xl text-slate-300 max-w-3xl mx-auto">
-              Comprehensive Zero Trust implementation services designed to meet your 
+              Comprehensive Zero Trust implementation services designed to meet your
               security requirements and business objectives
             </p>
           </motion.div>
@@ -233,7 +233,7 @@ export default function ZeroTrustNetworkArchitecture() {
               Benefits of Zero Trust
             </h2>
             <p className="text-xl text-slate-300 max-w-3xl mx-auto">
-              Discover how Zero Trust Network Architecture can transform your security 
+              Discover how Zero Trust Network Architecture can transform your security
               posture and protect your business from modern cyber threats
             </p>
           </motion.div>
@@ -270,7 +270,7 @@ export default function ZeroTrustNetworkArchitecture() {
               Ready to Secure Your Network?
             </h2>
             <p className="text-xl text-slate-300 mb-8 max-w-3xl mx-auto">
-              Let's discuss how Zero Trust Network Architecture can protect your business, 
+              Let's discuss how Zero Trust Network Architecture can protect your business,
               improve compliance, and provide peace of mind in today's threat landscape.
             </p>
             <div className="flex flex-wrap justify-center gap-4">

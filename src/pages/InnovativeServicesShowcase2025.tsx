@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { 
+import {
   Brain, Database, Users, Truck, Shield, Briefcase, Cpu, Wrench, Leaf, Atom,
   ArrowRight, ExternalLink, Phone, Mail, Zap, Target, Clock, Globe, Check
 } from 'lucide-react';
@@ -214,14 +214,14 @@ export default function InnovativeServicesShowcase2025() {
 
   return (
     <div className="min-h-screen bg-white">
-      <SEO 
+      <SEO
         title="Innovative AI Services Showcase 2025 - Zion Tech Group"
         description="Discover our cutting-edge AI-powered micro SAAS services and solutions. From workflow orchestration to quantum machine learning, transform your business with intelligent technology."
       />
-      
+
       <section className="bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-slate-dark py-20 text-center">
         <div className="max-w-5xl mx-auto px-6">
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
@@ -229,7 +229,7 @@ export default function InnovativeServicesShowcase2025() {
           >
             <Brain className="w-4 h-4 mr-2" /> Innovative AI Services 2025
           </motion.div>
-          <motion.h1 
+          <motion.h1
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.1 }}
@@ -237,7 +237,7 @@ export default function InnovativeServicesShowcase2025() {
           >
             Innovative AI Services Showcase 2025
           </motion.h1>
-          <motion.p 
+          <motion.p
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
@@ -279,10 +279,10 @@ export default function InnovativeServicesShowcase2025() {
                   </span>
                 </div>
               </div>
-              
+
               <h3 className="text-xl font-bold text-zion-slate-dark mb-3">{service.title}</h3>
               <p className="text-zion-slate-light mb-4">{service.description}</p>
-              
+
               <div className="mb-4">
                 <div className="text-2xl font-bold text-zion-cyan mb-2">{service.price}</div>
                 <div className="text-sm text-zion-slate-light">Starting price</div>
@@ -313,8 +313,8 @@ export default function InnovativeServicesShowcase2025() {
               </div>
 
               <div className="flex flex-col gap-2">
-                <a 
-                  href={service.path} 
+                <a
+                  href={service.path}
                   className="w-full px-4 py-3 bg-zion-cyan text-white rounded-lg hover:bg-zion-cyan-dark transition-colors text-center font-medium inline-flex items-center justify-center"
                 >
                   Learn More <ArrowRight className="w-4 h-4 ml-2" />
@@ -369,7 +369,7 @@ export default function InnovativeServicesShowcase2025() {
         <p className="text-zion-slate-light text-lg mb-8">
           Contact us today to learn how our innovative AI services can revolutionize your operations and drive unprecedented growth.
         </p>
-        
+
         <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
           <a href="tel:+13024640950" className="inline-flex items-center px-6 py-3 bg-zion-cyan text-white rounded-lg hover:bg-zion-cyan-dark transition-colors">
             <Phone className="w-5 h-5 mr-2"/> +1 302 464 0950
@@ -378,7 +378,7 @@ export default function InnovativeServicesShowcase2025() {
             <Mail className="w-5 h-5 mr-2"/> kleber@ziontechgroup.com
           </a>
         </div>
-        
+
         <div className="text-sm text-zion-slate-light">
           Visit us at <a href="https://ziontechgroup.com" target="_blank" rel="noreferrer" className="text-zion-cyan hover:underline">ziontechgroup.com</a>
         </div>

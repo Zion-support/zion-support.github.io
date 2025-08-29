@@ -179,12 +179,12 @@ export default function AISupportHelpdesk() {
 
   return (
     <>
-      <SEO 
+      <SEO
         title="AI Support Helpdesk - Zion Tech Group"
         description="Professional AI-powered support helpdesk platform with intelligent chatbots, multi-channel support, and advanced analytics for exceptional customer service."
         canonical="/services/ai-support-helpdesk"
       />
-      
+
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
         {/* Hero Section */}
         <section className="relative py-20 overflow-hidden">
@@ -202,17 +202,17 @@ export default function AISupportHelpdesk() {
                   </span>
                 </h1>
                 <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
-                  Professional AI-powered support helpdesk platform with intelligent chatbots, multi-channel support, 
+                  Professional AI-powered support helpdesk platform with intelligent chatbots, multi-channel support,
                   and advanced analytics for exceptional customer service. Transform your support operations with AI.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                  <Link 
+                  <Link
                     to="/request-quote"
                     className="px-8 py-4 bg-gradient-to-r from-teal-500 to-cyan-600 rounded-lg font-semibold hover:from-teal-600 hover:to-cyan-700 transition-all duration-300 transform hover:scale-105"
                   >
                     Start Free Trial
                   </Link>
-                  <Link 
+                  <Link
                     to="/contact"
                     className="px-8 py-4 border-2 border-teal-500 text-teal-400 rounded-lg font-semibold hover:bg-teal-500 hover:text-white transition-all duration-300"
                   >
@@ -235,7 +235,7 @@ export default function AISupportHelpdesk() {
                 Everything you need to deliver exceptional customer support with AI assistance
               </p>
             </div>
-            
+
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               {features.map((feature, index) => (
                 <motion.div
@@ -267,7 +267,7 @@ export default function AISupportHelpdesk() {
                 Intelligent automation that understands and helps your customers
               </p>
             </div>
-            
+
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               {aiCapabilities.map((capability, index) => (
                 <motion.div
@@ -299,7 +299,7 @@ export default function AISupportHelpdesk() {
                 Meet your customers where they are with comprehensive support channels
               </p>
             </div>
-            
+
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               {supportChannels.map((channel, index) => (
                 <motion.div
@@ -331,7 +331,7 @@ export default function AISupportHelpdesk() {
                 Professional support tools that transform customer service with AI
               </p>
             </div>
-            
+
             <div className="grid md:grid-cols-2 gap-8">
               {benefits.map((benefit, index) => (
                 <motion.div
@@ -365,7 +365,7 @@ export default function AISupportHelpdesk() {
                 Choose the support plan that fits your team size and requirements
               </p>
             </div>
-            
+
             <div className="grid md:grid-cols-3 gap-8">
               {pricingPlans.map((plan, index) => (
                 <motion.div
@@ -374,8 +374,8 @@ export default function AISupportHelpdesk() {
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
                   className={`relative bg-slate-800/50 backdrop-blur-sm rounded-xl p-8 border ${
-                    plan.popular 
-                      ? 'border-teal-500 ring-2 ring-teal-500/20' 
+                    plan.popular
+                      ? 'border-teal-500 ring-2 ring-teal-500/20'
                       : 'border-slate-700'
                   }`}
                 >
@@ -386,7 +386,7 @@ export default function AISupportHelpdesk() {
                       </span>
                     </div>
                   )}
-                  
+
                   <div className="text-center mb-6">
                     <h3 className="text-2xl font-bold mb-2 text-white">{plan.name}</h3>
                     <div className="mb-4">
@@ -395,7 +395,7 @@ export default function AISupportHelpdesk() {
                     </div>
                     <p className="text-gray-300">{plan.description}</p>
                   </div>
-                  
+
                   <ul className="space-y-3 mb-8">
                     {plan.features.map((feature, featureIndex) => (
                       <li key={featureIndex} className="flex items-center space-x-3">
@@ -404,7 +404,7 @@ export default function AISupportHelpdesk() {
                       </li>
                     ))}
                   </ul>
-                  
+
                   <Link
                     to="/request-quote"
                     className={`w-full block text-center py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
@@ -436,13 +436,13 @@ export default function AISupportHelpdesk() {
                 Join thousands of businesses using our AI platform to deliver exceptional customer service.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Link 
+                <Link
                   to="/request-quote"
                   className="px-8 py-4 bg-gradient-to-r from-teal-500 to-cyan-600 rounded-lg font-semibold hover:from-teal-600 hover:to-cyan-700 transition-all duration-300 transform hover:scale-105"
                 >
                   Start Free Trial
                 </Link>
-                <Link 
+                <Link
                   to="/contact"
                   className="px-8 py-4 border-2 border-teal-500 text-teal-400 rounded-lg font-semibold hover:bg-teal-500 hover:text-white transition-all duration-300"
                 >

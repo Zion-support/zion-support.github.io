@@ -2,11 +2,11 @@ import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { useNavigate } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
-import { 
-  X, Menu, Home, Zap, Brain, Atom, Shield, Rocket, Globe, 
-  Phone, Mail, MapPin, ChevronRight, ChevronDown, 
-  Sparkles, Cpu, Lock, Cloud, BarChart3, Settings, Eye, 
-  Award, Clock, Heart, Lightbulb, Users, FileText, 
+import {
+  X, Menu, Home, Zap, Brain, Atom, Shield, Rocket, Globe,
+  Phone, Mail, MapPin, ChevronRight, ChevronDown,
+  Sparkles, Cpu, Lock, Cloud, BarChart3, Settings, Eye,
+  Award, Clock, Heart, Lightbulb, Users, FileText,
   HelpCircle, BookOpen, Target, TrendingUp, Star
 } from 'lucide-react';
 
@@ -381,10 +381,10 @@ export default function EnhancedSidebar2025({ isOpen, onClose }: EnhancedSidebar
                   </div>
                   <span className="text-white font-semibold">{section.title}</span>
                 </div>
-                <ChevronDown 
+                <ChevronDown
                   className={`w-4 h-4 text-gray-400 transition-transform duration-300 ${
                     expandedSections.has(section.title) ? 'rotate-180' : ''
-                  }`} 
+                  }`}
                 />
               </button>
 
@@ -413,10 +413,10 @@ export default function EnhancedSidebar2025({ isOpen, onClose }: EnhancedSidebar
                             </div>
                           </div>
                           {item.subItems && item.subItems.length > 0 && (
-                            <ChevronRight 
+                            <ChevronRight
                               className={`w-4 h-4 text-gray-500 transition-transform duration-300 ${
                                 expandedItems.has(item.name) ? 'rotate-90' : ''
-                              }`} 
+                              }`}
                             />
                           )}
                         </button>

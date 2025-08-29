@@ -319,7 +319,7 @@ const InnovativeServices2025 = () => {
                 {category.description}
               </p>
             </div>
-            
+
             <div className="space-y-12">
               {category.services.map((service, serviceIndex) => (<div key={serviceIndex} className="bg-white/10 backdrop-blur-lg rounded-xl p-8 border border-white/20 hover:border-white/40 transition-all duration-300">
                   <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
@@ -327,7 +327,7 @@ const InnovativeServices2025 = () => {
                     <div>
                       <h3 className="text-2xl font-bold text-white mb-4">{service.name}</h3>
                       <p className="text-gray-300 mb-6 text-lg">{service.description}</p>
-                      
+
                       <div className="mb-6">
                         <h4 className="text-lg font-semibold text-blue-400 mb-3">Key Features:</h4>
                         <ul className="space-y-2">

@@ -1,11 +1,11 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import { motion } from 'framer-motion';
-import { 
-  Activity, 
-  TrendingUp, 
-  TrendingDown, 
-  Clock, 
-  Zap, 
+import {
+  Activity,
+  TrendingUp,
+  TrendingDown,
+  Clock,
+  Zap,
   AlertTriangle,
   CheckCircle,
   BarChart3,
@@ -175,7 +175,7 @@ const PerformanceAnalytics: React.FC = () => {
               {' '}Monitoring
             </h1>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-              Monitor your application's performance in real-time with advanced analytics, 
+              Monitor your application's performance in real-time with advanced analytics,
               automated alerts, and intelligent recommendations.
             </p>
           </motion.div>
@@ -256,15 +256,15 @@ const PerformanceAnalytics: React.FC = () => {
                   <div className="text-3xl font-bold text-white mb-2">
                     {formatValue(metric.value, metric.unit)}
                   </div>
-                  
+
                   <div className="flex items-center justify-between">
                     <span className="text-sm text-gray-400">
                       {metric.trend === 'up' ? 'Increasing' : metric.trend === 'down' ? 'Decreasing' : 'Stable'}
                     </span>
                     <div className="w-16 h-2 bg-gray-700 rounded-full overflow-hidden">
-                      <div 
+                      <div
                         className={`h-full transition-all duration-300 ${
-                          metric.status === 'good' ? 'bg-green-500' : 
+                          metric.status === 'good' ? 'bg-green-500' :
                           metric.status === 'warning' ? 'bg-yellow-500' : 'bg-red-500'
                         }`}
                         style={{ width: `${Math.min(metric.value, 100)}%` }}
@@ -350,7 +350,7 @@ const PerformanceAnalytics: React.FC = () => {
               Optimize Your Application Performance
             </h2>
             <p className="text-xl text-gray-300 mb-8">
-              Get real-time insights into your application's performance and receive 
+              Get real-time insights into your application's performance and receive
               intelligent recommendations for optimization.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">

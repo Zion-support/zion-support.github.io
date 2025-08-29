@@ -28,8 +28,8 @@ const ModernHeader: React.FC = () => {
   return (
     <motion.header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled 
-          ? 'bg-black/90 backdrop-blur-md border-b border-neon-blue/20' 
+        isScrolled
+          ? 'bg-black/90 backdrop-blur-md border-b border-neon-blue/20'
           : 'bg-transparent'
       }`}
       initial={{ y: -100 }}
@@ -63,7 +63,7 @@ const ModernHeader: React.FC = () => {
             <Link href="/" className="nav-link">
               Home
             </Link>
-            
+
             {/* Services Dropdown */}
             <div className="relative group">
               <button
@@ -74,7 +74,7 @@ const ModernHeader: React.FC = () => {
                 <span>Services</span>
                 <ChevronDown className="w-4 h-4 transition-transform group-hover:rotate-180" />
               </button>
-              
+
               <AnimatePresence>
                 {activeDropdown === 'services' && (
                   <motion.div
@@ -116,11 +116,11 @@ const ModernHeader: React.FC = () => {
             <Link href="/about" className="nav-link">
               About
             </Link>
-            
+
             <Link href="/blog" className="nav-link">
               Blog
             </Link>
-            
+
             <Link href="/contact" className="nav-link">
               Contact
             </Link>

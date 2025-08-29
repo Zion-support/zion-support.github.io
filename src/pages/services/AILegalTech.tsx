@@ -13,20 +13,20 @@ export default function AILegalTech() {
   ];
 
   const tiers = [
-    { 
-      name: 'Solo Practice', 
-      price: '$299/mo', 
-      details: ['Up to 100 documents/month', 'Basic AI analysis', 'Standard templates', 'Email support'] 
+    {
+      name: 'Solo Practice',
+      price: '$299/mo',
+      details: ['Up to 100 documents/month', 'Basic AI analysis', 'Standard templates', 'Email support']
     },
-    { 
-      name: 'Small Firm', 
-      price: '$799/mo', 
-      details: ['Up to 500 documents/month', 'Advanced AI features', 'Custom templates', 'Priority support'] 
+    {
+      name: 'Small Firm',
+      price: '$799/mo',
+      details: ['Up to 500 documents/month', 'Advanced AI features', 'Custom templates', 'Priority support']
     },
-    { 
-      name: 'Enterprise', 
-      price: '$1,999/mo', 
-      details: ['Unlimited documents', 'Custom AI models', 'Full platform integration', '24/7 dedicated support'] 
+    {
+      name: 'Enterprise',
+      price: '$1,999/mo',
+      details: ['Unlimited documents', 'Custom AI models', 'Full platform integration', '24/7 dedicated support']
     },
   ];
 

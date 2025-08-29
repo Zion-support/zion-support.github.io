@@ -232,7 +232,7 @@ export function ClientSuccessStoriesSection() {
             Client <span className="bg-gradient-to-r from-zion-cyan to-zion-purple bg-clip-text text-transparent">Success Stories</span>
           </h2>
           <p className="text-zion-slate-light text-lg md:text-xl max-w-4xl mx-auto leading-relaxed mb-8">
-            Discover how Zion Tech Group has transformed businesses across industries, delivering 
+            Discover how Zion Tech Group has transformed businesses across industries, delivering
             exceptional results and measurable business impact through innovative technology solutions.
           </p>
 
@@ -253,11 +253,11 @@ export function ClientSuccessStoriesSection() {
           <h3 className="text-3xl font-bold text-white text-center mb-12">
             Industry <span className="bg-gradient-to-r from-zion-cyan to-zion-purple bg-clip-text text-transparent">Performance</span>
           </h3>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {industryStats.map((stat, index) => (<motion.div key={index} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.4, delay: index * 0.1 }} onHoverStart={() => setHoveredIndustry(index)} onHoverEnd={() => setHoveredIndustry(null)} whileHover={{ y: -4 }} className="p-6 rounded-2xl bg-gradient-to-br from-zion-blue-dark/80 to-zion-blue-dark/40 backdrop-blur-sm border border-zion-blue-light/30 hover:border-zion-cyan/50 transition-all duration-300 hover:shadow-lg hover:shadow-zion-cyan/20">
                 <h4 className="text-xl font-bold text-white mb-4">{stat.industry}</h4>
-                
+
                 <div className="grid grid-cols-3 gap-4 text-center mb-4">
                   <div>
                     <div className="text-zion-cyan font-bold text-lg">{stat.projects}</div>
@@ -281,7 +281,7 @@ export function ClientSuccessStoriesSection() {
           <h3 className="text-3xl font-bold text-white text-center mb-12">
             Featured <span className="bg-gradient-to-r from-zion-cyan to-zion-purple bg-clip-text text-transparent">Success Stories</span>
           </h3>
-          
+
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
             {successStories.map((story, index) => (<motion.div key={story.id} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.4, delay: index * 0.1 }} whileHover={{ y: -4 }} className="relative">
                 <div className="h-full p-6 rounded-2xl bg-gradient-to-br from-zion-blue-dark/80 to-zion-blue-dark/40 backdrop-blur-sm border border-zion-blue-light/30 hover:border-zion-cyan/50 transition-all duration-300 hover:shadow-lg hover:shadow-zion-cyan/20 group cursor-pointer" onClick={() => setSelectedStory(selectedStory === story.id ? null : story.id)}>
@@ -399,7 +399,7 @@ export function ClientSuccessStoriesSection() {
                 Ready to Write Your Success Story?
               </h3>
               <p className="text-zion-slate-light mb-6 max-w-2xl mx-auto">
-                Join hundreds of successful companies that have transformed their business with Zion Tech Group. 
+                Join hundreds of successful companies that have transformed their business with Zion Tech Group.
                 Let's discuss how we can help you achieve similar results.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">

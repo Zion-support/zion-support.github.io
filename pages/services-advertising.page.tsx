@@ -406,7 +406,7 @@ export default function ServicesAdvertisingPage() {
               <li>References: {ext('https://openai.com/safety')}, {ext('https://github.com/guardrails-ai/guardrails')}</li>
             </ul>
           </section>
-          
+
           <section className="space-y-6">
             <h2 className="text-2xl font-semibold text-white">Identity & SSO/SCIM</h2>
             <p className="text-slate-300">Enterprise SSO and user lifecycle with Okta/Auth0/WorkOS.</p>
@@ -415,7 +415,7 @@ export default function ServicesAdvertisingPage() {
               <li>References: {ext('https://auth0.com/pricing')}, {ext('https://workos.com/pricing')}, {ext('https://www.okta.com/pricing/')}</li>
             </ul>
           </section>
-          
+
           <section className="space-y-6">
             <h2 className="text-2xl font-semibold text-white">Status Page & SLO Monitor</h2>
             <p className="text-slate-300">Public status pages, incident comms, and SLO/error budget tracking.</p>
@@ -448,7 +448,7 @@ export default function ServicesAdvertisingPage() {
               <li>References: {ext('https://stripe.com/pricing')}, {ext('https://pay.google.com/about/business/')}, {ext('https://partnerstack.com/')}</li>
             </ul>
           </section>
-          
+
           <section className="space-y-6">
             <h2 className="text-2xl font-semibold text-white">API Security Scanner</h2>
             <p className="text-slate-300">Continuously discover APIs and detect OWASP API Top 10 risks with CI gating.</p>
@@ -505,7 +505,7 @@ export default function ServicesAdvertisingPage() {
               <li>References: {ext('https://mailshake.com/pricing')}, {ext('https://www.gmass.co/pricing')}</li>
             </ul>
           </section>
-          
+
           <div className="pt-4 text-slate-400 text-sm">See also: <a className="text-cyan-400 underline" href="/market-pricing">Market Pricing</a> for a broader list of benchmarks and links.</div>
           <section id="ai-email-responder" className="space-y-6">
             <h2 className="text-2xl font-semibold text-white">AI Email Responder</h2>

@@ -1,18 +1,18 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { 
-  Code, 
-  Zap, 
-  Shield, 
-  Cloud, 
-  Rocket, 
-  Target, 
-  TrendingUp, 
-  Users, 
-  Globe, 
-  Cpu, 
-  Lock, 
-  Heart, 
+import {
+  Code,
+  Zap,
+  Shield,
+  Cloud,
+  Rocket,
+  Target,
+  TrendingUp,
+  Users,
+  Globe,
+  Cpu,
+  Lock,
+  Heart,
   Star,
   ArrowRight,
   CheckCircle,
@@ -176,11 +176,11 @@ export default function Developers() {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      <SEO 
+      <SEO
         title="Developer Portal - Zion Tech Group"
         description="Access our APIs, SDKs, and developer resources. Build powerful applications with Zion Tech Group's AI and technology platforms."
       />
-      
+
       {/* Hero Section */}
       <section className="pt-20 pb-16 bg-gradient-to-r from-cyan-900/20 via-blue-900/20 to-purple-900/20">
         <div className="container mx-auto px-4">
@@ -195,7 +195,7 @@ export default function Developers() {
               <span className="bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent"> Portal</span>
             </h1>
             <p className="text-xl text-slate-300 mb-8 leading-relaxed">
-              Build powerful applications with our APIs, SDKs, and developer tools. 
+              Build powerful applications with our APIs, SDKs, and developer tools.
               Access cutting-edge AI and technology solutions through simple, well-documented interfaces.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -271,14 +271,14 @@ export default function Developers() {
                     <p className="text-slate-300 text-sm mb-3">{api.description}</p>
                   </div>
                   <span className={`px-3 py-1 text-xs font-medium rounded-full ${
-                    api.status === 'Production' 
-                      ? 'bg-green-400/20 text-green-400 border border-green-400/30' 
+                    api.status === 'Production'
+                      ? 'bg-green-400/20 text-green-400 border border-green-400/30'
                       : 'bg-yellow-400/20 text-yellow-400 border border-yellow-400/30'
                   }`}>
                     {api.status}
                   </span>
                 </div>
-                
+
                 <div className="mb-4">
                   <h4 className="text-white font-semibold mb-2 text-sm">Category: {api.category}</h4>
                   <div className="space-y-1">
@@ -410,7 +410,7 @@ export default function Developers() {
                 Join thousands of developers who are already building amazing applications with our APIs.
               </p>
             </div>
-            
+
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 to="/signup"

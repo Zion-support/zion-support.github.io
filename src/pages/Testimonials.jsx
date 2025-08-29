@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { 
-  Star, 
-  Quote, 
-  Users, 
-  Building, 
-  TrendingUp, 
+import {
+  Star,
+  Quote,
+  Users,
+  Building,
+  TrendingUp,
   Award,
   CheckCircle,
   ArrowRight,
@@ -145,7 +145,7 @@ export default function Testimonials() {
 
   const filteredTestimonials = testimonials.filter(testimonial => {
     const matchesIndustry = selectedIndustry === 'All Industries' || testimonial.industry === selectedIndustry;
-    const matchesRating = selectedRating === 'All Ratings' || 
+    const matchesRating = selectedRating === 'All Ratings' ||
       (selectedRating === '5 Stars' && testimonial.rating === 5) ||
       (selectedRating === '4+ Stars' && testimonial.rating >= 4) ||
       (selectedRating === '3+ Stars' && testimonial.rating >= 3);
@@ -168,7 +168,7 @@ export default function Testimonials() {
           <div className="absolute top-20 left-20 w-72 h-72 bg-zion-cyan/30 rounded-full blur-3xl"></div>
           <div className="absolute bottom-20 right-20 w-96 h-96 bg-zion-purple/30 rounded-full blur-3xl"></div>
         </div>
-        
+
         <div className="container-responsive relative z-10">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -184,17 +184,17 @@ export default function Testimonials() {
             >
               <Quote className="w-10 h-10 text-white" />
             </motion.div>
-            
+
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
               Client
               <span className="text-gradient block">Success Stories</span>
             </h1>
-            
+
             <p className="text-xl text-zion-slate-light leading-relaxed mb-8">
-              Discover how we've helped organizations across industries transform their 
+              Discover how we've helped organizations across industries transform their
               business with cutting-edge technology solutions. Real results from real clients.
             </p>
-            
+
             <div className="flex flex-wrap justify-center gap-4 text-sm">
               <div className="flex items-center gap-2 text-zion-cyan">
                 <Star className="w-4 h-4" />
@@ -228,7 +228,7 @@ export default function Testimonials() {
                   className="pl-10 pr-4 py-2 bg-zion-blue-dark/50 border border-zion-cyan/20 rounded-lg text-white placeholder-zion-slate-light focus:border-zion-cyan focus:outline-none transition-colors duration-300"
                 />
               </div>
-              
+
               <select
                 value={selectedIndustry}
                 onChange={(e) => setSelectedIndustry(e.target.value)}
@@ -238,7 +238,7 @@ export default function Testimonials() {
                   <option key={industry} value={industry}>{industry}</option>
                 ))}
               </select>
-              
+
               <select
                 value={selectedRating}
                 onChange={(e) => setSelectedRating(e.target.value)}
@@ -249,7 +249,7 @@ export default function Testimonials() {
                 ))}
               </select>
             </div>
-            
+
             <div className="text-zion-slate-light text-sm">
               Showing {filteredTestimonials.length} of {testimonials.length} testimonials
             </div>
@@ -269,7 +269,7 @@ export default function Testimonials() {
             >
               <h2 className="text-4xl font-bold text-white mb-4">Featured Success Stories</h2>
               <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
-                Highlighted testimonials showcasing exceptional results and transformative 
+                Highlighted testimonials showcasing exceptional results and transformative
                 impact across different industries and use cases.
               </p>
             </motion.div>
@@ -287,7 +287,7 @@ export default function Testimonials() {
                     <div className="w-16 h-16 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-full flex items-center justify-center text-2xl font-bold text-white flex-shrink-0">
                       {testimonial.name.split(' ').map(n => n[0]).join('')}
                     </div>
-                    
+
                     <div className="flex-1">
                       <h3 className="text-xl font-bold text-white mb-1">{testimonial.name}</h3>
                       <p className="text-zion-cyan font-semibold mb-1">{testimonial.role}</p>
@@ -299,11 +299,11 @@ export default function Testimonials() {
                       </div>
                     </div>
                   </div>
-                  
+
                   <blockquote className="text-zion-slate-light mb-6 leading-relaxed italic">
                     "{testimonial.content}"
                   </blockquote>
-                  
+
                   <div className="mb-6">
                     <h4 className="text-white font-semibold mb-3">Project: {testimonial.project}</h4>
                     <ul className="space-y-2">
@@ -315,7 +315,7 @@ export default function Testimonials() {
                       ))}
                     </ul>
                   </div>
-                  
+
                   <div className="flex items-center justify-between">
                     <span className="px-3 py-1 bg-zion-cyan/20 text-zion-cyan text-xs rounded-full border border-zion-cyan/30">
                       {testimonial.industry}
@@ -342,7 +342,7 @@ export default function Testimonials() {
           >
             <h2 className="text-4xl font-bold text-white mb-4">All Client Testimonials</h2>
             <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
-              Browse through all our client success stories and discover how we can 
+              Browse through all our client success stories and discover how we can
               help transform your business with innovative technology solutions.
             </p>
           </motion.div>
@@ -360,24 +360,24 @@ export default function Testimonials() {
                   <div className="w-12 h-12 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-full flex items-center justify-center text-lg font-bold text-white">
                     {testimonial.name.split(' ').map(n => n[0]).join('')}
                   </div>
-                  
+
                   <div>
                     <h3 className="text-lg font-bold text-white">{testimonial.name}</h3>
                     <p className="text-zion-cyan text-sm">{testimonial.role}</p>
                     <p className="text-zion-slate-light text-xs">{testimonial.company}</p>
                   </div>
                 </div>
-                
+
                 <div className="flex items-center gap-1 mb-3">
                   {[...Array(testimonial.rating)].map((_, i) => (
                     <Star key={i} className="w-4 h-4 text-yellow-400 fill-current" />
                   ))}
                 </div>
-                
+
                 <blockquote className="text-zion-slate-light text-sm mb-4 leading-relaxed italic line-clamp-4">
                   "{testimonial.content}"
                 </blockquote>
-                
+
                 <div className="flex items-center justify-between">
                   <span className="px-2 py-1 bg-zion-cyan/20 text-zion-cyan text-xs rounded-full border border-zion-cyan/30">
                     {testimonial.industry}
@@ -403,10 +403,10 @@ export default function Testimonials() {
           >
             <h2 className="text-4xl font-bold text-white mb-6">Ready to Join Our Success Stories?</h2>
             <p className="text-xl text-zion-slate-light mb-8 leading-relaxed">
-              Let's discuss how our technology solutions can transform your business 
+              Let's discuss how our technology solutions can transform your business
               and help you achieve similar results. Your success story starts here.
             </p>
-            
+
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
                 href="/contact"

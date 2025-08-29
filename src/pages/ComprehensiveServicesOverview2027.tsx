@@ -1,93 +1,93 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import { 
-  Brain, 
-  Shield, 
-  TrendingUp, 
-  Zap, 
-  Globe, 
-  Users, 
-  BarChart3, 
-  Lock, 
-  Eye, 
-  CheckCircle, 
-  ArrowRight, 
-  Star, 
-  Clock, 
-  DollarSign, 
-  Target, 
-  Lightbulb, 
-  Award, 
-  ShieldCheck, 
-  Server, 
-  Smartphone, 
-  Monitor, 
-  Wifi, 
-  Flask, 
-  TestTube, 
-  Syringe, 
-  Stethoscope, 
-  HeartPulse, 
-  BrainCircuit, 
-  Ear, 
-  Hand, 
-  Foot, 
-  Bone, 
-  Tooth, 
-  Pill, 
-  Bandage, 
-  Thermometer, 
-  Scale, 
-  Calculator, 
-  ChartBar, 
-  PieChart, 
-  LineChart, 
-  Activity, 
-  TrendingDown, 
-  Minus, 
-  Plus, 
-  Equal, 
-  Divide, 
-  Percent, 
-  Euro, 
-  Pound, 
-  Yen, 
-  Bitcoin, 
-  Ethereum, 
-  CreditCard, 
-  Wallet, 
-  Banknote, 
-  Coins, 
-  PiggyBank, 
-  Safe, 
-  Vault, 
-  LockKeyhole, 
-  Key, 
-  Fingerprint, 
-  QrCode, 
-  Barcode, 
-  Scan, 
-  Camera, 
-  VideoOff, 
-  Mic, 
-  MicOff, 
-  Volume2, 
-  VolumeX, 
-  Play, 
-  Pause, 
-  Stop, 
-  SkipBack, 
-  SkipForward, 
-  Rewind, 
-  FastForward, 
-  Shuffle, 
-  Repeat, 
-  Repeat1, 
-  Shuffle2, 
-  SkipBack2, 
-  SkipForward2, 
-  PlayCircle, 
+import {
+  Brain,
+  Shield,
+  TrendingUp,
+  Zap,
+  Globe,
+  Users,
+  BarChart3,
+  Lock,
+  Eye,
+  CheckCircle,
+  ArrowRight,
+  Star,
+  Clock,
+  DollarSign,
+  Target,
+  Lightbulb,
+  Award,
+  ShieldCheck,
+  Server,
+  Smartphone,
+  Monitor,
+  Wifi,
+  Flask,
+  TestTube,
+  Syringe,
+  Stethoscope,
+  HeartPulse,
+  BrainCircuit,
+  Ear,
+  Hand,
+  Foot,
+  Bone,
+  Tooth,
+  Pill,
+  Bandage,
+  Thermometer,
+  Scale,
+  Calculator,
+  ChartBar,
+  PieChart,
+  LineChart,
+  Activity,
+  TrendingDown,
+  Minus,
+  Plus,
+  Equal,
+  Divide,
+  Percent,
+  Euro,
+  Pound,
+  Yen,
+  Bitcoin,
+  Ethereum,
+  CreditCard,
+  Wallet,
+  Banknote,
+  Coins,
+  PiggyBank,
+  Safe,
+  Vault,
+  LockKeyhole,
+  Key,
+  Fingerprint,
+  QrCode,
+  Barcode,
+  Scan,
+  Camera,
+  VideoOff,
+  Mic,
+  MicOff,
+  Volume2,
+  VolumeX,
+  Play,
+  Pause,
+  Stop,
+  SkipBack,
+  SkipForward,
+  Rewind,
+  FastForward,
+  Shuffle,
+  Repeat,
+  Repeat1,
+  Shuffle2,
+  SkipBack2,
+  SkipForward2,
+  PlayCircle,
   PauseCircle,
   Mail,
   Phone,
@@ -172,8 +172,8 @@ export default function ComprehensiveServicesOverview2027() {
         </div>
       )}
       <div className="relative mb-6 overflow-hidden rounded-xl">
-        <img 
-          src={service.images[0]} 
+        <img
+          src={service.images[0]}
           alt={service.title}
           className="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-500"
         />
@@ -275,7 +275,7 @@ export default function ComprehensiveServicesOverview2027() {
 const ComprehensiveServicesOverview2027 = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
-      <SEO 
+      <SEO
         title="Comprehensive Services Overview 2027 - Zion Tech Group"
         description="Explore our comprehensive portfolio of innovative AI, IT, and business solutions. From AI-powered chatbots to quantum computing services, discover cutting-edge technology solutions."
         keywords="AI services, IT solutions, business automation, cybersecurity, blockchain, quantum computing, Zion Tech Group"
@@ -427,8 +427,8 @@ const ComprehensiveServicesOverview2027 = () => {
           </div>
           {/* Services Grid */}
           <div className={`grid gap-8 ${
-            viewMode === 'grid' 
-              ? 'grid-cols-1 md:grid-cols-2 lg:grid-cols-3' 
+            viewMode === 'grid'
+              ? 'grid-cols-1 md:grid-cols-2 lg:grid-cols-3'
               : 'grid-cols-1'
           }`}>
             {filteredServices.map((service) => (
@@ -459,7 +459,7 @@ const ComprehensiveServicesOverview2027 = () => {
             Ready to Transform Your Business?
           </h2>
           <p className="text-xl text-zion-slate-light mb-8">
-            Our team of experts is ready to help you implement the perfect solution for your needs. 
+            Our team of experts is ready to help you implement the perfect solution for your needs.
             Get in touch today for a personalized consultation.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">

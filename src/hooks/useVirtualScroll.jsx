@@ -233,7 +233,7 @@ export const useDynamicVirtualScroll = (items, getItemHeight, options) => {
     // Calculate item heights
     useEffect(() => {
         const heights = new Map();
-        let total = 0;
+        const total = 0;
         items.forEach((item, index) => {
             const height = getItemHeight(item, index);
             heights.set(index, height);

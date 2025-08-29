@@ -13,20 +13,20 @@ export default function AIGaming() {
   ];
 
   const tiers = [
-    { 
-      name: 'Indie Developer', 
-      price: '$299/mo', 
-      details: ['Up to 10,000 players', 'Basic AI features', 'Standard reports', 'Email support'] 
+    {
+      name: 'Indie Developer',
+      price: '$299/mo',
+      details: ['Up to 10,000 players', 'Basic AI features', 'Standard reports', 'Email support']
     },
-    { 
-      name: 'Mid-size Studio', 
-      price: '$799/mo', 
-      details: ['Up to 100,000 players', 'Advanced AI features', 'Custom reports', 'Priority support'] 
+    {
+      name: 'Mid-size Studio',
+      price: '$799/mo',
+      details: ['Up to 100,000 players', 'Advanced AI features', 'Custom reports', 'Priority support']
     },
-    { 
-      name: 'Large Studio', 
-      price: '$1,999/mo', 
-      details: ['Unlimited players', 'Custom AI models', 'Full platform integration', '24/7 dedicated support'] 
+    {
+      name: 'Large Studio',
+      price: '$1,999/mo',
+      details: ['Unlimited players', 'Custom AI models', 'Full platform integration', '24/7 dedicated support']
     },
   ];
 

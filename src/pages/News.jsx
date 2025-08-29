@@ -4,7 +4,7 @@ import { Calendar, User, Tag, ArrowRight, Search, Filter, Clock, Eye, ExternalLi
 const News = () => {
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('All');
-  
+
   const categories = [
     'All',
     'Company News',
@@ -131,7 +131,7 @@ const News = () => {
                   className="w-full pl-10 pr-4 py-3 bg-slate-800/50 border border-slate-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                 />
               </div>
-              
+
               <div className="flex flex-wrap gap-3">
                 <select
                   value={selectedCategory}

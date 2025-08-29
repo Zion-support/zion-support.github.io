@@ -1,13 +1,13 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { SEO } from '@/components/SEO';
-import { 
-  Heart, 
-  Brain, 
-  Activity, 
-  Shield, 
-  Zap, 
-  CheckCircle, 
+import {
+  Heart,
+  Brain,
+  Activity,
+  Shield,
+  Zap,
+  CheckCircle,
   ArrowRight,
   Clock,
   Target,
@@ -168,11 +168,11 @@ export default function AIHealthcareAnalyticsPlatform() {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      <SEO 
+      <SEO
         title="AI Healthcare Analytics Platform - Zion Tech Group"
         description="Revolutionary AI-powered healthcare analytics platform with 95% accuracy rate. Diagnostic support, predictive analytics, and patient monitoring. Start from $799/month."
       />
-      
+
       {/* Hero Section */}
       <section className="relative overflow-hidden py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto text-center">
@@ -185,17 +185,17 @@ export default function AIHealthcareAnalyticsPlatform() {
               <Heart className="w-4 h-4 mr-2" />
               AI-Powered Healthcare
             </div>
-            
+
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
               Transform Healthcare with
               <span className="bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent"> AI Intelligence</span>
             </h1>
-            
+
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Our AI-powered healthcare platform delivers 95% accuracy in diagnosis support, predictive analytics, 
+              Our AI-powered healthcare platform delivers 95% accuracy in diagnosis support, predictive analytics,
               and patient monitoring. Revolutionize patient care with the future of medical technology.
             </p>
-            
+
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="px-8 py-4 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-cyan-700 transition-all duration-300 transform hover:scale-105">
                 Start Free Trial
@@ -388,8 +388,8 @@ export default function AIHealthcareAnalyticsPlatform() {
                 transition={{ duration: 0.8, delay: index * 0.1 }}
                 viewport={{ once: true }}
                 className={`relative bg-gray-800/50 backdrop-blur-sm rounded-xl p-8 border ${
-                  plan.popular 
-                    ? 'border-blue-500 ring-2 ring-blue-500/20' 
+                  plan.popular
+                    ? 'border-blue-500 ring-2 ring-blue-500/20'
                     : 'border-gray-700'
                 }`}
               >
@@ -447,7 +447,7 @@ export default function AIHealthcareAnalyticsPlatform() {
             <p className="text-xl text-gray-300 mb-8">
               Join thousands of healthcare providers already using our AI-powered platform
             </p>
-            
+
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="px-8 py-4 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-cyan-700 transition-all duration-300 transform hover:scale-105">
                 Start Free Trial
@@ -456,7 +456,7 @@ export default function AIHealthcareAnalyticsPlatform() {
                 Contact Healthcare Team
               </button>
             </div>
-            
+
             <p className="text-gray-400 mt-6">
               No credit card required • 30-day free trial • HIPAA compliant
             </p>

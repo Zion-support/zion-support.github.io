@@ -1,19 +1,19 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { 
-  Brain, Shield, Cloud, Server, BarChart3, Users, ShoppingCart, 
-  MessageCircle, HelpCircle, DollarSign, Target, TrendingUp, 
-  Atom, Network, Eye, PenTool, Heart, Building, Truck, 
+import {
+  Brain, Shield, Cloud, Server, BarChart3, Users, ShoppingCart,
+  MessageCircle, HelpCircle, DollarSign, Target, TrendingUp,
+  Atom, Network, Eye, PenTool, Heart, Building, Truck,
   Lock, Smartphone, Mail, Video, Satellite, Leaf, Code,
   Zap, Star, Rocket, Globe, Cpu, ArrowRight, FileText,
   CheckCircle, Clock, Users as UsersIcon, Zap as ZapIcon,
   Award, TrendingUp as TrendingUpIcon, Globe as GlobeIcon,
   Calculator, PieChart, BarChart
 } from 'lucide-react';
-import { 
-  revolutionaryMicroSaasServices2025, 
-  advancedITInfrastructureServices2025, 
-  revolutionaryAIServices2025 
+import {
+  revolutionaryMicroSaasServices2025,
+  advancedITInfrastructureServices2025,
+  revolutionaryAIServices2025
 } from '../data/comprehensiveServices2025';
 
 export default function ComprehensivePricingGuide2025() {
@@ -53,7 +53,7 @@ export default function ComprehensivePricingGuide2025() {
 
   const getFilteredServices = () => {
     let services = getServicesByCategory();
-    
+
     if (selectedPricingModel !== 'all') {
       services = services.filter(service => {
         if (selectedPricingModel === 'monthly') return service.pricingModel === 'monthly';
@@ -62,7 +62,7 @@ export default function ComprehensivePricingGuide2025() {
         return true;
       });
     }
-    
+
     return services;
   };
 
@@ -106,7 +106,7 @@ export default function ComprehensivePricingGuide2025() {
             <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
               Comprehensive pricing for all our revolutionary micro SAAS, IT infrastructure, and AI services
             </p>
-            
+
             <div className="flex flex-wrap justify-center gap-4 mb-8">
               {categories.map((category) => (
                 <motion.button
@@ -236,11 +236,11 @@ export default function ComprehensivePricingGuide2025() {
                     </span>
                   </div>
                 </div>
-                
+
                 <h3 className="text-xl font-bold text-white mb-3">
                   {service.name}
                 </h3>
-                
+
                 <p className="text-gray-400 text-sm mb-4 line-clamp-3">
                   {service.description}
                 </p>
@@ -252,7 +252,7 @@ export default function ComprehensivePricingGuide2025() {
                       <span className="text-white font-semibold">{service.pricing}</span>
                     </div>
                   )}
-                  
+
                   {service.price && (
                     <div className="flex items-center justify-between">
                       <span className="text-gray-500 text-sm">Monthly Price:</span>
@@ -300,7 +300,7 @@ export default function ComprehensivePricingGuide2025() {
                     <span className="text-gray-500">Innovation Level:</span>
                     <span className="text-cyan-400 font-semibold">{service.innovationLevel}</span>
                   </div>
-                  
+
                   {service.setupTime && (
                     <div className="flex items-center justify-between text-sm">
                       <span className="text-gray-500">Setup Time:</span>
@@ -357,7 +357,7 @@ export default function ComprehensivePricingGuide2025() {
             <p className="text-xl text-gray-300 mb-8">
               Use our ROI calculator to estimate the potential returns on your investment in Zion Tech Group services
             </p>
-            
+
             <div className="bg-zion-slate-dark/50 rounded-2xl p-8 border border-cyan-400/20">
               <div className="grid md:grid-cols-2 gap-8 mb-8">
                 <div className="text-left">
@@ -377,7 +377,7 @@ export default function ComprehensivePricingGuide2025() {
                     </div>
                   </div>
                 </div>
-                
+
                 <div className="text-left">
                   <h3 className="text-xl font-semibold text-white mb-4">ROI Projections</h3>
                   <div className="space-y-3">
@@ -396,7 +396,7 @@ export default function ComprehensivePricingGuide2025() {
                   </div>
                 </div>
               </div>
-              
+
               <div className="text-center">
                 <p className="text-gray-300 mb-4">
                   Ready to start your transformation journey?
@@ -429,7 +429,7 @@ export default function ComprehensivePricingGuide2025() {
             <p className="text-xl text-gray-300 mb-8">
               Contact Zion Tech Group today to discuss your specific needs and get a customized pricing proposal
             </p>
-            
+
             <div className="grid md:grid-cols-3 gap-8 mb-8">
               <div className="text-center">
                 <div className="w-16 h-16 rounded-full bg-gradient-to-r from-cyan-500 to-blue-500 flex items-center justify-center mx-auto mb-4">
@@ -438,7 +438,7 @@ export default function ComprehensivePricingGuide2025() {
                 <h3 className="text-lg font-semibold text-white mb-2">Phone</h3>
                 <p className="text-cyan-400">+1 302 464 0950</p>
               </div>
-              
+
               <div className="text-center">
                 <div className="w-16 h-16 rounded-full bg-gradient-to-r from-green-500 to-emerald-500 flex items-center justify-center mx-auto mb-4">
                   <Mail className="w-8 h-8 text-white" />
@@ -446,7 +446,7 @@ export default function ComprehensivePricingGuide2025() {
                 <h3 className="text-lg font-semibold text-white mb-2">Email</h3>
                 <p className="text-cyan-400">kleber@ziontechgroup.com</p>
               </div>
-              
+
               <div className="text-center">
                 <div className="w-16 h-16 rounded-full bg-gradient-to-r from-purple-500 to-pink-500 flex items-center justify-center mx-auto mb-4">
                   <Globe className="w-8 h-8 text-white" />

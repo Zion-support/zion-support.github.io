@@ -1,16 +1,16 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { 
-  Twitter, 
-  Linkedin, 
-  Facebook, 
-  Instagram, 
-  Github, 
-  Mail, 
-  Phone, 
-  MapPin, 
-  ArrowUp, 
-  Globe, 
+import {
+  Twitter,
+  Linkedin,
+  Facebook,
+  Instagram,
+  Github,
+  Mail,
+  Phone,
+  MapPin,
+  ArrowUp,
+  Globe,
   Heart,
   Zap,
   Shield,
@@ -119,7 +119,7 @@ const EnhancedFooter: React.FC = () => {
 							</div>
 						</div>
 						<p className="text-zion-slate-light mb-6 max-w-sm leading-relaxed">
-							Leading provider of AI autonomous systems, cloud-native platforms, and 
+							Leading provider of AI autonomous systems, cloud-native platforms, and
 							zero-trust cybersecurity solutions that drive measurable business outcomes.
 						</p>
 
@@ -164,8 +164,8 @@ const EnhancedFooter: React.FC = () => {
 							<ul className="space-y-3">
 								{section.items.map((item) => (
 									<li key={item.name}>
-										<Link 
-											href={item.href} 
+										<Link
+											href={item.href}
 											className="text-zion-slate-light hover:text-zion-cyan transition-colors text-sm hover:translate-x-1 inline-block"
 										>
 											{item.name}
@@ -239,10 +239,10 @@ const EnhancedFooter: React.FC = () => {
 						<Link href="/sitemap" className="hover:text-zion-cyan transition-colors duration-200">
 							Sitemap
 						</Link>
-						<a 
-							href="https://ziontechgroup.com" 
-							target="_blank" 
-							rel="noopener noreferrer" 
+						<a
+							href="https://ziontechgroup.com"
+							target="_blank"
+							rel="noopener noreferrer"
 							className="hover:text-zion-cyan transition-colors duration-200 flex items-center space-x-1"
 						>
 							<Globe className="w-4 h-4" />

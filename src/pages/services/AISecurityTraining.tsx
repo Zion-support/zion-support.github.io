@@ -13,20 +13,20 @@ export default function AISecurityTraining() {
   ];
 
   const tiers = [
-    { 
-      name: 'Developer', 
-      price: '$199/mo', 
-      details: ['Up to 25 users', 'Basic AI features', 'Standard training', 'Email support'] 
+    {
+      name: 'Developer',
+      price: '$199/mo',
+      details: ['Up to 25 users', 'Basic AI features', 'Standard training', 'Email support']
     },
-    { 
-      name: 'Business', 
-      price: '$599/mo', 
-      details: ['Up to 100 users', 'Advanced AI features', 'Enhanced training', 'Priority support'] 
+    {
+      name: 'Business',
+      price: '$599/mo',
+      details: ['Up to 100 users', 'Advanced AI features', 'Enhanced training', 'Priority support']
     },
-    { 
-      name: 'Enterprise', 
-      price: '$1,499/mo', 
-      details: ['Unlimited users', 'Custom AI models', 'Full training suite', '24/7 dedicated support'] 
+    {
+      name: 'Enterprise',
+      price: '$1,499/mo',
+      details: ['Unlimited users', 'Custom AI models', 'Full training suite', '24/7 dedicated support']
     },
   ];
 

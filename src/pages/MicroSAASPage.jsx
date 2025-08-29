@@ -310,7 +310,7 @@ export default function MicroSAASPage() {
             Micro SAAS Hub
           </h1>
           <p className="text-xl md:text-2xl text-zion-slate-light mb-8 max-w-4xl mx-auto">
-            Discover powerful, affordable software solutions designed for growing businesses. 
+            Discover powerful, affordable software solutions designed for growing businesses.
             From marketing automation to project management, find the perfect tools to scale your operations.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
@@ -334,7 +334,7 @@ export default function MicroSAASPage() {
             Micro SAAS solutions offer the perfect balance of functionality, affordability, and scalability for growing businesses.
           </p>
         </div>
-        
+
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div className="text-center p-6">
             <div className="w-16 h-16 bg-zion-purple/20 rounded-full flex items-center justify-center mx-auto mb-4">
@@ -345,7 +345,7 @@ export default function MicroSAASPage() {
               Start small and scale up as your business grows with transparent, predictable pricing.
             </p>
           </div>
-          
+
           <div className="text-center p-6">
             <div className="w-16 h-16 bg-zion-cyan/20 rounded-full flex items-center justify-center mx-auto mb-4">
               <Zap className="h-8 w-8 text-zion-cyan"/>
@@ -355,7 +355,7 @@ export default function MicroSAASPage() {
               Get up and running in days, not months, with intuitive interfaces and comprehensive onboarding.
             </p>
           </div>
-          
+
           <div className="text-center p-6">
             <div className="w-16 h-16 bg-zion-purple/20 rounded-full flex items-center justify-center mx-auto mb-4">
               <Shield className="h-8 w-8 text-zion-purple"/>
@@ -406,7 +406,7 @@ export default function MicroSAASPage() {
                   {service.description}
                 </CardDescription>
               </CardHeader>
-              
+
               <CardContent className="space-y-4">
                 <div>
                   <h4 className="font-semibold text-zion-cyan mb-2">Key Features:</h4>
@@ -417,7 +417,7 @@ export default function MicroSAASPage() {
                       </li>))}
                   </ul>
                 </div>
-                
+
                 <div className="grid grid-cols-2 gap-4">
                   <div>
                     <h4 className="font-semibold text-zion-cyan mb-2">Pricing:</h4>
@@ -442,7 +442,7 @@ export default function MicroSAASPage() {
                   </div>
                 </div>
               </CardContent>
-              
+
               <div className="p-6 pt-0 space-y-3">
                 <Button className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white">
                   <Zap className="h-4 w-4 mr-2"/>
@@ -465,7 +465,7 @@ export default function MicroSAASPage() {
             Understand the differences and choose the right solution for your business needs.
           </p>
         </div>
-        
+
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           <div className="p-6 rounded-lg bg-zion-slate/30 border border-zion-purple/20">
             <h3 className="text-xl font-semibold text-zion-cyan mb-4">Micro SAAS Solutions</h3>
@@ -492,7 +492,7 @@ export default function MicroSAASPage() {
               </li>
             </ul>
           </div>
-          
+
           <div className="p-6 rounded-lg bg-zion-slate/30 border border-zion-purple/20">
             <h3 className="text-xl font-semibold text-zion-purple mb-4">Enterprise Solutions</h3>
             <ul className="space-y-2 text-zion-slate-light">
@@ -526,7 +526,7 @@ export default function MicroSAASPage() {
         <div className="text-center">
           <h2 className="text-3xl font-bold text-white mb-4">Ready to Find Your Perfect SAAS Solution?</h2>
           <p className="text-zion-slate-light mb-8 max-w-2xl mx-auto">
-            Our team of experts can help you identify the right tools for your business needs and guide you through implementation. 
+            Our team of experts can help you identify the right tools for your business needs and guide you through implementation.
             Get in touch today for personalized recommendations.
           </p>
           <div className="flex flex-col sm:flex-row justify-center gap-4">

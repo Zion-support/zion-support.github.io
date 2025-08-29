@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { 
-  Flask, 
-  Brain, 
-  Atom, 
-  Globe, 
-  Zap, 
+import {
+  Flask,
+  Brain,
+  Atom,
+  Globe,
+  Zap,
   Shield,
   TrendingUp,
   Lightbulb,
@@ -124,7 +124,7 @@ const ResearchDevelopment: React.FC = () => {
     }
   ];
 
-  const filteredProjects = researchProjects.filter(project => 
+  const filteredProjects = researchProjects.filter(project =>
     selectedArea === 'all' || project.area === selectedArea
   );
 
@@ -237,7 +237,7 @@ const ResearchDevelopment: React.FC = () => {
             <h2 className="text-4xl font-bold text-white mb-4">Active Research Projects</h2>
             <p className="text-lg text-zion-slate-light">Exploring the frontiers of technology and innovation</p>
           </motion.div>
-          
+
           <div className="grid md:grid-cols-2 gap-8">
             {filteredProjects.map((project, index) => (
               <motion.div
@@ -251,7 +251,7 @@ const ResearchDevelopment: React.FC = () => {
                 <div className="mb-6">
                   <h3 className="text-2xl font-bold text-white mb-3">{project.title}</h3>
                   <p className="text-zion-slate-light leading-relaxed mb-4">{project.description}</p>
-                  
+
                   <div className="grid grid-cols-2 gap-4 text-sm">
                     <div>
                       <span className="text-zion-cyan font-semibold">Status:</span>
@@ -271,7 +271,7 @@ const ResearchDevelopment: React.FC = () => {
                     </div>
                   </div>
                 </div>
-                
+
                 <div>
                   <h4 className="text-white font-semibold mb-3 flex items-center gap-2">
                     <Lightbulb className="w-4 h-4 text-zion-cyan" />
@@ -305,7 +305,7 @@ const ResearchDevelopment: React.FC = () => {
             <h2 className="text-4xl font-bold text-white mb-4">Recent Publications</h2>
             <p className="text-lg text-zion-slate-light">Contributing to the global body of scientific knowledge</p>
           </motion.div>
-          
+
           <div className="space-y-6">
             {publications.map((pub, index) => (
               <motion.div
@@ -329,7 +329,7 @@ const ResearchDevelopment: React.FC = () => {
                       </span>
                     </div>
                   </div>
-                  
+
                   <div className="lg:text-right">
                     <a
                       href={`https://doi.org/${pub.doi}`}
@@ -361,7 +361,7 @@ const ResearchDevelopment: React.FC = () => {
             <h2 className="text-4xl font-bold text-white mb-4">Research Partnerships</h2>
             <p className="text-lg text-zion-slate-light">Collaborating with leading institutions worldwide</p>
           </motion.div>
-          
+
           <div className="grid md:grid-cols-2 gap-8">
             {partnerships.map((partner, index) => (
               <motion.div
@@ -404,7 +404,7 @@ const ResearchDevelopment: React.FC = () => {
             <h2 className="text-4xl font-bold text-white mb-4">Innovation Lab</h2>
             <p className="text-lg text-zion-slate-light">Where ideas become reality</p>
           </motion.div>
-          
+
           <div className="grid md:grid-cols-3 gap-8">
             {[
               {

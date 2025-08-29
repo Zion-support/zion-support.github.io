@@ -14,7 +14,7 @@ const NotFound = () => {
             Page Not Found
           </motion.h1>
           <motion.p initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, delay: 0.6 }} className="text-xl md:text-2xl text-gray-300 mb-12 max-w-2xl mx-auto leading-relaxed">
-            The page you're looking for doesn't exist or has been moved. 
+            The page you're looking for doesn't exist or has been moved.
             Let's get you back on track to exploring our amazing services.
           </motion.p>
           {/* Navigation Options */}

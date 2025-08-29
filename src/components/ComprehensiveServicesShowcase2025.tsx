@@ -1,22 +1,22 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { 
-  Search, 
-  Filter, 
-  Star, 
-  ArrowRight, 
-  ChevronDown, 
-  Globe, 
-  Zap, 
-  Shield, 
-  Brain, 
-  Cloud, 
-  Lock, 
-  Users, 
-  TrendingUp, 
-  Award, 
-  Clock, 
-  DollarSign, 
+import {
+  Search,
+  Filter,
+  Star,
+  ArrowRight,
+  ChevronDown,
+  Globe,
+  Zap,
+  Shield,
+  Brain,
+  Cloud,
+  Lock,
+  Users,
+  TrendingUp,
+  Award,
+  Clock,
+  DollarSign,
   CheckCircle,
   Rocket,
   Target,
@@ -453,7 +453,7 @@ const ComprehensiveServicesShowcase2025: React.FC = () => {
                          service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()));
     const matchesPrice = service.price >= priceRange[0] && service.price <= priceRange[1];
     const matchesInnovation = innovationLevel === 'all' || service.innovationLevel === innovationLevel;
-    
+
     return matchesCategory && matchesSearch && matchesPrice && matchesInnovation;
   });
 
@@ -465,7 +465,7 @@ const ComprehensiveServicesShowcase2025: React.FC = () => {
         return a.title.localeCompare(b.title);
       case 'innovation':
         const innovationOrder = { 'Advanced': 1, 'Cutting-edge': 2, 'Revolutionary': 3 };
-        return (innovationOrder[a.innovationLevel as keyof typeof innovationOrder] || 0) - 
+        return (innovationOrder[a.innovationLevel as keyof typeof innovationOrder] || 0) -
                (innovationOrder[b.innovationLevel as keyof typeof innovationOrder] || 0);
       case 'category':
         return a.category.localeCompare(b.category);
@@ -643,8 +643,8 @@ const ComprehensiveServicesShowcase2025: React.FC = () => {
                 <button
                   onClick={() => setViewMode('grid')}
                   className={`flex-1 px-3 py-2 rounded-lg transition-all ${
-                    viewMode === 'grid' 
-                      ? 'bg-zion-cyan text-white' 
+                    viewMode === 'grid'
+                      ? 'bg-zion-cyan text-white'
                       : 'text-zion-slate-400 hover:text-white'
                   }`}
                 >
@@ -653,8 +653,8 @@ const ComprehensiveServicesShowcase2025: React.FC = () => {
                 <button
                   onClick={() => setViewMode('list')}
                   className={`flex-1 px-3 py-2 rounded-lg transition-all ${
-                    viewMode === 'list' 
-                      ? 'bg-zion-cyan text-white' 
+                    viewMode === 'list'
+                      ? 'bg-zion-cyan text-white'
                       : 'text-zion-slate-400 hover:text-white'
                   }`}
                 >
@@ -706,7 +706,7 @@ const ComprehensiveServicesShowcase2025: React.FC = () => {
             variants={containerVariants}
             initial="hidden"
             animate="visible"
-            className={viewMode === 'grid' 
+            className={viewMode === 'grid'
               ? 'grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'
               : 'space-y-4'
             }
@@ -762,7 +762,7 @@ const ComprehensiveServicesShowcase2025: React.FC = () => {
                         </span>
                         <span className="text-sm text-zion-slate-400">/month</span>
                       </div>
-                      
+
                       <div className="flex items-center gap-2 text-sm text-zion-slate-400">
                         <Clock className="w-4 h-4" />
                         <span>{service.estimatedDelivery}</span>
@@ -796,11 +796,11 @@ const ComprehensiveServicesShowcase2025: React.FC = () => {
                         </div>
                         {getInnovationIcon(service.innovationLevel)}
                       </div>
-                      
+
                       <p className="text-zion-slate-300 mb-3">
                         {service.description}
                       </p>
-                      
+
                       <div className="flex flex-wrap gap-2">
                         {service.tags.slice(0, 5).map((tag, index) => (
                           <span

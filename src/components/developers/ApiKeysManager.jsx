@@ -69,13 +69,13 @@ export default function ApiKeysManager() {
               Create a new API key with specific permissions
             </DialogDescription>
           </DialogHeader>
-          
+
           <div className="space-y-4">
             <div>
               <Label htmlFor="keyName" className="text-white">Key Name</Label>
               <input id="keyName" type="text" value={newKeyName} onChange={(e) => setNewKeyName(e.target.value)} placeholder="e.g., Production API Key" className="w-full px-3 py-2 bg-zinc-800 border border-zinc-700 rounded-md text-white placeholder-zinc-400 focus:outline-none focus:ring-2 focus:ring-zion-cyan"/>
             </div>
-            
+
             <div>
               <Label className="text-white">Permissions</Label>
               <div className="space-y-2 mt-2">
@@ -83,7 +83,7 @@ export default function ApiKeysManager() {
               </div>
             </div>
           </div>
-          
+
           <DialogFooter>
             <Button variant="outline" onClick={() => setShowCreateDialog(false)} className="border-zinc-700 text-white hover:bg-zinc-800">
               Cancel
@@ -124,12 +124,12 @@ export default function ApiKeysManager() {
                     {apiKey.isActive ? 'Active' : 'Inactive'}
                   </span>
                 </div>
-                
+
                 <div className="flex items-center gap-4 text-sm text-zinc-400">
                   <span>Created: {new Date(apiKey.createdAt).toLocaleDateString()}</span>
                   {apiKey.lastUsed && (<span>Last used: {new Date(apiKey.lastUsed).toLocaleDateString()}</span>)}
                 </div>
-                
+
                 <div className="mt-2">
                   <span className="text-zinc-400 text-sm">Permissions: </span>
                   <div className="flex flex-wrap gap-1 mt-1">
@@ -139,12 +139,12 @@ export default function ApiKeysManager() {
                   </div>
                 </div>
               </div>
-              
+
               <div className="flex items-center gap-2">
                 <Button variant="ghost" size="icon" onClick={() => toggleApiKey(apiKey.id)} className="text-zinc-400 hover:text-white">
                   {apiKey.isActive ? <EyeOff className="h-4 w-4"/> : <Eye className="h-4 w-4"/>}
                 </Button>
-                
+
                 <DropdownMenu>
                   <DropdownMenuTrigger asChild>
                     <Button variant="ghost" size="icon" className="text-zinc-400 hover:text-white">
@@ -164,7 +164,7 @@ export default function ApiKeysManager() {
                 </DropdownMenu>
               </div>
             </div>
-            
+
             {/* Key Preview */}
             <div className="mt-3 pt-3 border-t border-zinc-800">
               <Popover>

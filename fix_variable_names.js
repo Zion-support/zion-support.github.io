@@ -12,7 +12,7 @@ function fixFile(filePath) {
     const content = fs.readFileSync(filePath, 'utf8');
     const filename = path.basename(filePath);
     const validName = convertToValidVariableName(filename);
-    
+
     // Replace the invalid variable name with the valid one
     const fixedContent = content.replace(
       new RegExp(`const ${filename.replace('.tsx', '')}: NextPage`, 'g'),
@@ -21,11 +21,11 @@ function fixFile(filePath) {
       new RegExp(`export default ${filename.replace('.tsx', '')};`, 'g'),
       `export default ${validName};`
     );
-    
+
     fs.writeFileSync(filePath, fixedContent);
-    console.log(`Fixed: ${filePath}`);
+    // console.log(`Fixed: ${filePath}`);
   } catch (error) {
-    console.error(`Error fixing ${filePath}:`, error.message);
+    // console.error(`Error fixing ${filePath}:`, error.message);
   }
 }
 // Fix blog pages
@@ -52,4 +52,4 @@ if (fs.existsSync(servicesDir)) {
     fixFile(path.join(servicesDir, file));
   });
 }
-console.log('Variable name fixing completed!');
+// console.log('Variable name fixing completed!');

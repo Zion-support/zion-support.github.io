@@ -18,11 +18,11 @@ self.addEventListener('install', (event) => {
   event.waitUntil(
     caches.open(CACHE_NAME)
       .then((cache) => {
-        console.log('Development SW: Caching static files');
+        // console.log('Development SW: Caching static files');
         return Promise.allSettled(
-          STATIC_FILES.map(url => 
+          STATIC_FILES.map(url =>
             cache.add(url).catch(error => {
-              console.warn(`Dev SW: Failed to cache ${url}:`, error);
+              // console.warn(`Dev SW: Failed to cache ${url}:`, error);
               return null;
             })
           )
@@ -31,11 +31,11 @@ self.addEventListener('install', (event) => {
       .then((results) => {
         const successful = results.filter(r => r.status === 'fulfilled').length;
         const failed = results.filter(r => r.status === 'rejected').length;
-        console.log(`Dev SW: Static files cached: ${successful} successful, ${failed} failed`);
+        // console.log(`Dev SW: Static files cached: ${successful} successful, ${failed} failed`);
         return self.skipWaiting();
       })
       .catch((error) => {
-        console.error('Dev SW: Error in install:', error);
+        // console.error('Dev SW: Error in install:', error);
       })
   );
 });
@@ -48,14 +48,14 @@ self.addEventListener('activate', (event) => {
         return Promise.all(
           cacheNames.map((cacheName) => {
             if (cacheName !== CACHE_NAME) {
-              console.log('Dev SW: Deleting old cache:', cacheName);
+              // console.log('Dev SW: Deleting old cache:', cacheName);
               return caches.delete(cacheName);
             }
           })
         );
       })
       .then(() => {
-        console.log('Dev SW: Activated');
+        // console.log('Dev SW: Activated');
         return self.clients.claim();
       })
   );
@@ -75,7 +75,7 @@ self.addEventListener('fetch', (event) => {
   if (url.origin !== self.location.origin) {
     event.respondWith(
       fetch(request).catch((error) => {
-        console.warn('Dev SW: External request failed:', url.href, error);
+        // console.warn('Dev SW: External request failed:', url.href, error);
         // Return empty response for failed external requests
         return new Response('', { status: 204 });
       })
@@ -97,7 +97,7 @@ self.addEventListener('fetch', (event) => {
         return response;
       })
       .catch((error) => {
-        console.log('Dev SW: Network failed, trying cache:', url.href);
+        // console.log('Dev SW: Network failed, trying cache:', url.href);
         // Try to serve from cache if network fails
         return caches.match(request).then((cachedResponse) => {
           if (cachedResponse) {

@@ -1,13 +1,13 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { 
-  TrendingUp, 
-  Target, 
-  Award, 
-  Zap, 
-  Shield, 
-  Brain, 
-  Rocket, 
+import {
+  TrendingUp,
+  Target,
+  Award,
+  Zap,
+  Shield,
+  Brain,
+  Rocket,
   Globe,
   CheckCircle,
   Star,
@@ -169,7 +169,7 @@ export function ValuePropositionShowcase() {
     <section className="py-20 bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header Section */}
-        <motion.div 
+        <motion.div
           className="text-center mb-16"
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
@@ -179,13 +179,13 @@ export function ValuePropositionShowcase() {
             Unmatched Value & ROI
           </h2>
           <p className="text-xl text-zion-cyan-light max-w-3xl mx-auto">
-            Experience enterprise-grade solutions at micro SAAS prices. Our AI-powered services deliver 
+            Experience enterprise-grade solutions at micro SAAS prices. Our AI-powered services deliver
             exceptional value with proven returns that transform your business operations.
           </p>
         </motion.div>
 
         {/* Value Metrics */}
-        <motion.div 
+        <motion.div
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16"
           variants={containerVariants}
           initial="hidden"
@@ -212,7 +212,7 @@ export function ValuePropositionShowcase() {
         </motion.div>
 
         {/* Competitive Advantages */}
-        <motion.div 
+        <motion.div
           className="mb-16"
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
@@ -240,7 +240,7 @@ export function ValuePropositionShowcase() {
         </motion.div>
 
         {/* Market Comparison */}
-        <motion.div 
+        <motion.div
           className="mb-16"
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
@@ -267,7 +267,7 @@ export function ValuePropositionShowcase() {
                       </div>
                     </div>
                   </div>
-                  
+
                   <div className="lg:col-span-2">
                     <div className="text-zion-cyan-light text-sm mb-2">Competitors:</div>
                     <div className="space-y-1">
@@ -279,13 +279,13 @@ export function ValuePropositionShowcase() {
                       ))}
                     </div>
                   </div>
-                  
+
                   <div className="lg:col-span-1 text-center">
                     <div className="text-zion-cyan-light text-sm mb-1">Our Price:</div>
                     <div className="text-2xl font-bold text-zion-cyan">{comparison.ourPricing}</div>
                     <div className="text-green-400 text-sm font-medium">{comparison.savings} savings</div>
                   </div>
-                  
+
                   <div className="lg:col-span-1">
                     <div className="text-zion-cyan-light text-sm mb-2">Key Advantage:</div>
                     <p className="text-white text-sm">{comparison.advantage}</p>
@@ -297,7 +297,7 @@ export function ValuePropositionShowcase() {
         </motion.div>
 
         {/* Success Stories */}
-        <motion.div 
+        <motion.div
           className="mb-16"
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
@@ -318,18 +318,18 @@ export function ValuePropositionShowcase() {
                   <h4 className="text-lg font-bold text-white mb-1">{story.company}</h4>
                   <span className="text-zion-cyan text-sm">{story.industry}</span>
                 </div>
-                
+
                 <div className="mb-4">
                   <h5 className="text-zion-cyan font-semibold mb-2">Challenge:</h5>
                   <p className="text-zion-cyan-light text-sm mb-3">{story.challenge}</p>
-                  
+
                   <h5 className="text-zion-cyan font-semibold mb-2">Solution:</h5>
                   <p className="text-zion-cyan-light text-sm mb-3">{story.solution}</p>
-                  
+
                   <h5 className="text-zion-cyan font-semibold mb-2">Results:</h5>
                   <p className="text-zion-cyan-light text-sm mb-3">{story.results}</p>
                 </div>
-                
+
                 <div className="bg-gradient-to-r from-green-500/20 to-emerald-500/20 p-3 rounded-lg border border-green-500/30">
                   <div className="text-center">
                     <div className="text-green-400 font-bold text-lg">{story.roi}</div>
@@ -342,7 +342,7 @@ export function ValuePropositionShowcase() {
         </motion.div>
 
         {/* Call to Action */}
-        <motion.div 
+        <motion.div
           className="text-center"
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
@@ -353,7 +353,7 @@ export function ValuePropositionShowcase() {
               Ready to Experience Unmatched Value?
             </h3>
             <p className="text-zion-cyan-light mb-6 max-w-2xl mx-auto">
-              Join hundreds of companies already transforming their operations with our revolutionary services. 
+              Join hundreds of companies already transforming their operations with our revolutionary services.
               Get started today and see the difference AI-powered solutions can make.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">

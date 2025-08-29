@@ -1,13 +1,13 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
-import { 
-  Search, 
-  Filter, 
-  Star, 
-  TrendingUp, 
-  Zap, 
-  Shield, 
-  Brain, 
+import {
+  Search,
+  Filter,
+  Star,
+  TrendingUp,
+  Zap,
+  Shield,
+  Brain,
   Globe,
   Atom,
   Phone,
@@ -148,8 +148,8 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {
   }, [searchTerm, selectedCategory, selectedPriceRange, selectedROI, sortBy]);
   const categories = Array.from(new Set(ALL_SERVICES.map(service => service.category)));
   const handleServiceSelect = (serviceId: string) => {
-    setSelectedServices(prev => 
-      prev.includes(serviceId) 
+    setSelectedServices(prev =>
+      prev.includes(serviceId)
         ? prev.filter(id => id !== serviceId)
         : [...prev, serviceId]
     );
@@ -160,7 +160,7 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {
       {/* Hero Section */}
       <section className="pt-24 pb-20">
         <div className="container mx-auto px-4 text-center">
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
@@ -173,7 +173,7 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {
               Cutting-edge AI, Quantum Computing, and Autonomous Technology Solutions
             </p>
             <p className="text-lg text-gray-400 max-w-2xl mx-auto">
-              Discover our revolutionary micro SAAS services that combine the power of artificial intelligence, 
+              Discover our revolutionary micro SAAS services that combine the power of artificial intelligence,
               quantum computing, and autonomous operations to transform your business.
             </p>
           </motion.div>
@@ -244,8 +244,8 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {
               <button
                 onClick={() => setViewMode('grid')}
                 className={`p-3 rounded-lg transition-colors ${
-                  viewMode === 'grid' 
-                    ? 'bg-cyan-500 text-white' 
+                  viewMode === 'grid'
+                    ? 'bg-cyan-500 text-white'
                     : 'bg-slate-800 text-gray-400 hover:text-white'
                 }`}
               >
@@ -254,8 +254,8 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {
               <button
                 onClick={() => setViewMode('list')}
                 className={`p-3 rounded-lg transition-colors ${
-                  viewMode === 'list' 
-                    ? 'bg-cyan-500 text-white' 
+                  viewMode === 'list'
+                    ? 'bg-cyan-500 text-white'
                     : 'bg-slate-800 text-gray-400 hover:text-white'
                 }`}
               >
@@ -264,8 +264,8 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {
               <button
                 onClick={() => setViewMode('comparison')}
                 className={`p-3 rounded-lg transition-colors ${
-                  viewMode === 'comparison' 
-                    ? 'bg-cyan-500 text-white' 
+                  viewMode === 'comparison'
+                    ? 'bg-cyan-500 text-white'
                     : 'bg-slate-800 text-gray-400 hover:text-white'
                 }`}
               >
@@ -600,7 +600,7 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {
                   </div>
                   <div className="flex items-center justify-between">
                     <span className="text-sm text-gray-400">{service.category}</span>
-                    <a 
+                    <a
                       href={service.link}
                       target="_blank"
                       rel="noopener noreferrer"
@@ -655,7 +655,7 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {
                             </span>
                           ))}
                         </div>
-                        <a 
+                        <a
                           href={service.link}
                           target="_blank"
                           rel="noopener noreferrer"
@@ -1600,13 +1600,13 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {
             </div>
           </div>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a 
+            <a
               href="mailto:kleber@ziontechgroup.com"
               className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg font-semibold text-white hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105"
             >
               Get Started
             </a>
-            <a 
+            <a
               href="https://ziontechgroup.com"
               target="_blank"
               rel="noopener noreferrer"

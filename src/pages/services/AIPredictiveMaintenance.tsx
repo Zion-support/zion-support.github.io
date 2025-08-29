@@ -33,20 +33,20 @@ export default function AIPredictiveMaintenance() {
   ];
 
   const tiers = [
-    { 
-      name: 'Maintenance Starter', 
-      price: '$399/mo', 
-      details: ['Up to 50 assets', 'Basic AI prediction', 'Standard monitoring', 'Email support'] 
+    {
+      name: 'Maintenance Starter',
+      price: '$399/mo',
+      details: ['Up to 50 assets', 'Basic AI prediction', 'Standard monitoring', 'Email support']
     },
-    { 
-      name: 'Maintenance Professional', 
-      price: '$999/mo', 
-      details: ['Up to 500 assets', 'Advanced AI features', 'Custom dashboards', 'Priority support'] 
+    {
+      name: 'Maintenance Professional',
+      price: '$999/mo',
+      details: ['Up to 500 assets', 'Advanced AI features', 'Custom dashboards', 'Priority support']
     },
-    { 
-      name: 'Enterprise Maintenance', 
-      price: '$2,999/mo', 
-      details: ['Unlimited assets', 'Full AI suite', 'White-label options', '24/7 support'] 
+    {
+      name: 'Enterprise Maintenance',
+      price: '$2,999/mo',
+      details: ['Unlimited assets', 'Full AI suite', 'White-label options', '24/7 support']
     },
   ];
 
@@ -74,7 +74,7 @@ export default function AIPredictiveMaintenance() {
                 </li>
               ))}
             </ul>
-            
+
             <div className="mt-8">
               <h3 className="text-xl font-semibold text-zion-slate-dark mb-3">Key Benefits</h3>
               <ul className="space-y-2">
@@ -87,7 +87,7 @@ export default function AIPredictiveMaintenance() {
               </ul>
             </div>
           </div>
-          
+
           <div className="bg-white border border-zion-slate-light/20 rounded-xl p-6 shadow-md">
             <h3 className="text-2xl font-semibold text-zion-slate-dark mb-4">Pricing Plans</h3>
             <div className="grid md:grid-cols-3 gap-4">

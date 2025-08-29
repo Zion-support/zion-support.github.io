@@ -8,7 +8,7 @@ const AIAutonomousDesign = () => {
         <meta name="keywords" content="AI design, autonomous design, design generation, concept creation, autonomous operations, AI design platform"/>
         <link rel="canonical" href="https://ziontechgroup.com/ai-autonomous-design"/>
       </Helmet>
-      
+
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900">
         <div className="container mx-auto px-4 py-16">
           {/* Hero Section */}
@@ -52,31 +52,31 @@ const AIAutonomousDesign = () => {
               <h3 className="text-xl font-semibold text-white mb-3">Design Intelligence</h3>
               <p className="text-gray-300">AI trained on design datasets</p>
             </div>
-            
+
             <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20">
               <div className="text-green-400 text-4xl mb-4">🤖</div>
               <h3 className="text-xl font-semibold text-white mb-3">Autonomous Operation</h3>
               <p className="text-gray-300">AI that designs independently</p>
             </div>
-            
+
             <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20">
               <div className="text-teal-400 text-4xl mb-4">📈</div>
               <h3 className="text-xl font-semibold text-white mb-3">Continuous Design</h3>
               <p className="text-gray-300">24/7 design operations</p>
             </div>
-            
+
             <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20">
               <div className="text-cyan-400 text-4xl mb-4">🔍</div>
               <h3 className="text-xl font-semibold text-white mb-3">Deep Analysis</h3>
               <p className="text-gray-300">Comprehensive design insights</p>
             </div>
-            
+
             <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20">
               <div className="text-blue-400 text-4xl mb-4">🛡️</div>
               <h3 className="text-xl font-semibold text-white mb-3">Proactive Design</h3>
               <p className="text-gray-300">Prevent design gaps</p>
             </div>
-            
+
             <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20">
               <div className="text-indigo-400 text-4xl mb-4">⚡</div>
               <h3 className="text-xl font-semibold text-white mb-3">Adaptive Design</h3>
@@ -93,25 +93,25 @@ const AIAutonomousDesign = () => {
                 <h3 className="text-lg font-semibold text-white mb-2">Research</h3>
                 <p className="text-gray-300 text-sm">Research requirements</p>
               </div>
-              
+
               <div className="text-center">
                 <div className="bg-emerald-600 w-16 h-16 rounded-full flex items-center justify-center text-2xl font-bold text-white mx-auto mb-4">2</div>
                 <h3 className="text-lg font-semibold text-white mb-2">Ideate</h3>
                 <p className="text-gray-300 text-sm">Generate concepts</p>
               </div>
-              
+
               <div className="text-center">
                 <div className="bg-emerald-600 w-16 h-16 rounded-full flex items-center justify-center text-2xl font-bold text-white mx-auto mb-4">3</div>
                 <h3 className="text-lg font-semibold text-white mb-2">Design</h3>
                 <p className="text-gray-300 text-sm">Create designs</p>
               </div>
-              
+
               <div className="text-center">
                 <div className="bg-emerald-600 w-16 h-16 rounded-full flex items-center justify-center text-2xl font-bold text-white mx-auto mb-4">4</div>
                 <h3 className="text-lg font-semibold text-white mb-2">Refine</h3>
                 <p className="text-gray-300 text-sm">Refine designs</p>
               </div>
-              
+
               <div className="text-center">
                 <div className="bg-emerald-600 w-16 h-16 rounded-full flex items-center justify-center text-2xl font-bold text-white mx-auto mb-4">5</div>
                 <h3 className="text-lg font-semibold text-white mb-2">Deliver</h3>
@@ -138,12 +138,12 @@ const AIAutonomousDesign = () => {
                 <h3 className="text-xl font-semibold text-white mb-3">Marketing & Branding</h3>
                 <p className="text-gray-300">Brand and marketing design</p>
               </div>
-              
+
               <div className="bg-white/5 rounded-xl p-6 border border-white/10">
                 <h3 className="text-xl font-semibold text-white mb-3">Web Development</h3>
                 <p className="text-gray-300">Website and app design</p>
               </div>
-              
+
               <div className="bg-white/5 rounded-xl p-6 border border-white/10">
                 <h3 className="text-xl font-semibold text-white mb-3">Product Development</h3>
                 <p className="text-gray-300">Product and packaging design</p>

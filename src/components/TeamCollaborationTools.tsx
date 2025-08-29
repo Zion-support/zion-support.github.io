@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { 
-  Users, 
-  MessageCircle, 
-  FileText, 
-  Calendar, 
-  CheckCircle, 
+import {
+  Users,
+  MessageCircle,
+  FileText,
+  Calendar,
+  CheckCircle,
   Clock,
   AlertCircle,
   Plus,
@@ -690,7 +690,7 @@ export const TeamCollaborationTools: React.FC<TeamCollaborationToolsProps> = ({
                   <div className="flex-1">
                     <h3 className="text-xl font-semibold text-white mb-2">{project.name}</h3>
                     <p className="text-zinc-400 mb-3">{project.description}</p>
-                    
+
                     <div className="flex flex-wrap items-center gap-3">
                       <span className={`px-3 py-1 rounded-full text-xs font-medium ${getProjectStatusColor(project.status)}`}>
                         {project.status.charAt(0).toUpperCase() + project.status.slice(1)}
@@ -741,12 +741,12 @@ export const TeamCollaborationTools: React.FC<TeamCollaborationToolsProps> = ({
                       {new Date(project.startDate).toLocaleDateString()} - {new Date(project.endDate).toLocaleDateString()}
                     </div>
                   </div>
-                  
+
                   <div className="p-3 bg-zinc-800/30 rounded-lg">
                     <div className="text-sm text-zinc-400 mb-1">Budget</div>
                     <div className="text-white font-medium">${project.budget.toLocaleString()}</div>
                   </div>
-                  
+
                   <div className="p-3 bg-zinc-800/30 rounded-lg">
                     <div className="text-sm text-zinc-400 mb-1">Team Size</div>
                     <div className="text-white font-medium">{project.teamMembers.length} members</div>
@@ -840,7 +840,7 @@ export const TeamCollaborationTools: React.FC<TeamCollaborationToolsProps> = ({
                   <div className="w-10 h-10 bg-zinc-800 rounded-full flex items-center justify-center text-zion-cyan font-semibold">
                     {message.sender.split(' ').map(n => n[0]).join('')}
                   </div>
-                  
+
                   <div className="flex-1">
                     <div className="flex items-center gap-3 mb-2">
                       <h4 className="font-semibold text-white">{message.sender}</h4>
@@ -851,9 +851,9 @@ export const TeamCollaborationTools: React.FC<TeamCollaborationToolsProps> = ({
                         </span>
                       )}
                     </div>
-                    
+
                     <p className="text-zinc-300 mb-3">{message.content}</p>
-                    
+
                     {/* Reactions */}
                     <div className="flex items-center gap-2">
                       {message.reactions.map((reaction, idx) => (
@@ -897,11 +897,11 @@ export const TeamCollaborationTools: React.FC<TeamCollaborationToolsProps> = ({
                   className="w-full px-4 py-3 bg-zinc-800/50 border border-zinc-600/50 rounded-lg text-white placeholder-zinc-400 focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent"
                 />
               </div>
-              
+
               <button className="p-3 bg-zion-cyan text-white rounded-lg hover:bg-zion-cyan/80 transition-colors">
                 <Paperclip className="w-4 h-4" />
               </button>
-              
+
               <button className="px-6 py-3 bg-zion-cyan text-white rounded-lg hover:bg-zion-cyan/80 transition-colors flex items-center gap-2">
                 <Send className="w-4 h-4" />
                 Send
@@ -980,7 +980,7 @@ export const TeamCollaborationTools: React.FC<TeamCollaborationToolsProps> = ({
                   <div className="p-3 bg-zinc-800/50 rounded-lg text-zion-cyan">
                     {getFileTypeIcon(file.type)}
                   </div>
-                  
+
                   <div className="flex-1">
                     <h4 className="font-semibold text-white mb-1">{file.name}</h4>
                     <div className="flex items-center gap-4 text-sm text-zinc-400">
@@ -989,7 +989,7 @@ export const TeamCollaborationTools: React.FC<TeamCollaborationToolsProps> = ({
                       <span>Version: {file.version}</span>
                       <span>Modified: {new Date(file.lastModified).toLocaleDateString()}</span>
                     </div>
-                    
+
                     {/* Tags */}
                     <div className="flex flex-wrap gap-2 mt-2">
                       {file.tags.map((tag) => (

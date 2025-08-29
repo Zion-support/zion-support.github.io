@@ -22,17 +22,17 @@ export default function AISupplyChainOptimization() {
                 <Truck className="w-4 h-4 mr-2" />
                 Intelligent Supply Chain
               </div>
-              
+
               <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
                 AI Supply Chain
                 <span className="bg-gradient-to-r from-blue-400 to-indigo-500 bg-clip-text text-transparent"> Optimization</span>
               </h1>
-              
+
               <p className="text-xl text-slate-300 mb-8 max-w-3xl mx-auto">
-                Transform your supply chain with AI-powered optimization. Reduce costs, improve efficiency, 
+                Transform your supply chain with AI-powered optimization. Reduce costs, improve efficiency,
                 and enhance visibility across your entire supply network with intelligent automation.
               </p>
-              
+
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link
                   to="/contact"
@@ -58,7 +58,7 @@ export default function AISupplyChainOptimization() {
                 Intelligent Supply Chain Solutions
               </h2>
               <p className="text-xl text-slate-300 max-w-2xl mx-auto">
-                Our AI platform provides comprehensive supply chain optimization tools for 
+                Our AI platform provides comprehensive supply chain optimization tools for
                 modern businesses seeking operational excellence.
               </p>
             </div>

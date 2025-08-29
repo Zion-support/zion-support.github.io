@@ -79,9 +79,9 @@ const InnovativeServicesShowcase: React.FC = () => {
           <span className="text-xs text-gray-400">({service.reviews})</span>
         </div>
       </div>
-      
+
       <p className="text-gray-600 mb-4">{service.description}</p>
-      
+
       <div className="flex items-center justify-between mb-4">
         <span className="text-2xl font-bold text-blue-600">{service.marketPrice}</span>
         <span className="bg-blue-100 text-blue-800 text-xs font-medium px-2.5 py-0.5 rounded">
@@ -129,7 +129,7 @@ const InnovativeServicesShowcase: React.FC = () => {
           <span>Delivery: {service.estimatedDelivery}</span>
           <span>Support: {service.supportLevel}</span>
         </div>
-        
+
         <div className="flex space-x-3">
           <button className="flex-1 bg-blue-600 text-white py-2 px-4 rounded-lg hover:bg-blue-700 transition-colors">
             Get Quote
@@ -202,7 +202,7 @@ const InnovativeServicesShowcase: React.FC = () => {
                 className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
               />
             </div>
-            
+
             <div>
               <label className="block text-sm font-medium text-gray-700 mb-2">Category</label>
               <select
@@ -217,7 +217,7 @@ const InnovativeServicesShowcase: React.FC = () => {
                 ))}
               </select>
             </div>
-            
+
             <div>
               <label className="block text-sm font-medium text-gray-700 mb-2">Price Range</label>
               <select
@@ -230,7 +230,7 @@ const InnovativeServicesShowcase: React.FC = () => {
                 ))}
               </select>
             </div>
-            
+
             <div>
               <label className="block text-sm font-medium text-gray-700 mb-2">Sort By</label>
               <select

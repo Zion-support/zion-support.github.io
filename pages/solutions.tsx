@@ -85,7 +85,7 @@ export default function Solutions() {
               From AI-powered automation to enterprise-grade security, we provide the tools and expertise to transform your operations.
             </p>
           </div>
-          
+
           <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
             {solutions.map((solution, index) => (
               <div key={index} className="bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 p-8 border border-gray-100">
@@ -94,7 +94,7 @@ export default function Solutions() {
                 </div>
                 <h3 className="text-xl font-semibold text-gray-900 mb-4">{solution.title}</h3>
                 <p className="text-gray-600 mb-6 leading-relaxed">{solution.description}</p>
-                
+
                 <ul className="space-y-2 mb-6">
                   {solution.features.map((feature, featureIndex) => (
                     <li key={featureIndex} className="flex items-center text-sm text-gray-600">
@@ -103,7 +103,7 @@ export default function Solutions() {
                     </li>
                   ))}
                 </ul>
-                
+
                 <Link
                   href={solution.href}
                   className={`inline-flex items-center justify-center w-full px-6 py-3 rounded-lg bg-gradient-to-r ${solution.color} text-white font-semibold hover:shadow-lg transition-all duration-200`}

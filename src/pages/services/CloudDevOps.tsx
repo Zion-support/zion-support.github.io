@@ -134,12 +134,12 @@ export default function CloudDevOps() {
 
   return (
     <>
-      <SEO 
+      <SEO
         title="Cloud DevOps Services | Zion Tech Group"
         description="Transform your infrastructure with our comprehensive Cloud DevOps services. From CI/CD pipelines to infrastructure automation, we help you deploy faster and scale efficiently."
         keywords="cloud devops, infrastructure as code, CI/CD, kubernetes, docker, terraform, aws, azure, gcp"
       />
-      
+
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
         {/* Hero Section */}
         <section className="relative py-20 overflow-hidden">
@@ -162,7 +162,7 @@ export default function CloudDevOps() {
                 </span>
               </h1>
               <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
-                Streamline your development workflow with automated CI/CD pipelines, 
+                Streamline your development workflow with automated CI/CD pipelines,
                 infrastructure as code, and intelligent cloud management solutions.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -198,7 +198,7 @@ export default function CloudDevOps() {
                 Why Choose Our Cloud DevOps Services?
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                We combine cutting-edge technology with proven methodologies to deliver 
+                We combine cutting-edge technology with proven methodologies to deliver
                 scalable, secure, and efficient cloud infrastructure solutions.
               </p>
             </motion.div>
@@ -238,7 +238,7 @@ export default function CloudDevOps() {
                 Transparent Pricing
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Choose the plan that fits your business needs. All plans include 
+                Choose the plan that fits your business needs. All plans include
                 our core DevOps features with enterprise-grade support.
               </p>
             </motion.div>
@@ -252,8 +252,8 @@ export default function CloudDevOps() {
                   transition={{ duration: 0.6, delay: index * 0.1 }}
                   viewport={{ once: true }}
                   className={`relative bg-slate-800/50 border rounded-xl p-8 ${
-                    plan.popular 
-                      ? 'border-cyan-400/50 bg-gradient-to-br from-cyan-500/10 to-blue-500/10' 
+                    plan.popular
+                      ? 'border-cyan-400/50 bg-gradient-to-br from-cyan-500/10 to-blue-500/10'
                       : 'border-slate-700/50'
                   }`}
                 >
@@ -264,7 +264,7 @@ export default function CloudDevOps() {
                       </span>
                     </div>
                   )}
-                  
+
                   <div className="text-center mb-8">
                     <h3 className="text-2xl font-bold text-white mb-4">{plan.name}</h3>
                     <div className="mb-2">
@@ -313,7 +313,7 @@ export default function CloudDevOps() {
                 Benefits of Cloud DevOps
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Discover how our Cloud DevOps services can transform your business 
+                Discover how our Cloud DevOps services can transform your business
                 operations and accelerate your digital transformation journey.
               </p>
             </motion.div>
@@ -353,7 +353,7 @@ export default function CloudDevOps() {
                 Technologies We Work With
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Our team is certified and experienced with the latest cloud and DevOps technologies 
+                Our team is certified and experienced with the latest cloud and DevOps technologies
                 to deliver cutting-edge solutions for your business.
               </p>
             </motion.div>
@@ -393,7 +393,7 @@ export default function CloudDevOps() {
                 Ready to Transform Your Infrastructure?
               </h2>
               <p className="text-xl text-gray-300 mb-8">
-                Join hundreds of companies that have already accelerated their development 
+                Join hundreds of companies that have already accelerated their development
                 and deployment processes with our Cloud DevOps services.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">

@@ -1,15 +1,15 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { 
-  Search, 
-  Filter, 
-  Star, 
-  TrendingUp, 
-  Zap, 
-  Shield, 
-  Brain, 
-  Globe, 
-  Cpu, 
+import {
+  Search,
+  Filter,
+  Star,
+  TrendingUp,
+  Zap,
+  Shield,
+  Brain,
+  Globe,
+  Cpu,
   Lock,
   ArrowRight,
   CheckCircle,
@@ -106,7 +106,7 @@ const ComprehensivePricingGuide2027: React.FC = () => {
                          service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()));
     const matchesCategory = selectedCategory === 'All' || service.category === selectedCategory;
     const matchesPrice = getPriceRangeFilter(selectedPriceRange)(service);
-    
+
     return matchesSearch && matchesCategory && matchesPrice;
   });
 
@@ -143,11 +143,11 @@ const ComprehensivePricingGuide2027: React.FC = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      <SEO 
+      <SEO
         title="Comprehensive Pricing Guide 2027 - Zion Tech Group"
         description="Complete pricing guide for our innovative technology services. Compare features, benefits, and pricing for AI, Quantum Computing, IoT, Blockchain, and more."
       />
-      
+
       {/* Hero Section */}
       <section className="pt-20 pb-16 px-4">
         <div className="max-w-7xl mx-auto">
@@ -161,19 +161,19 @@ const ComprehensivePricingGuide2027: React.FC = () => {
               <DollarSign className="w-5 h-5 text-green-400 mr-2" />
               <span className="text-green-300 font-medium">Comprehensive Pricing Guide 2027</span>
             </div>
-            
+
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
               Complete Pricing
               <span className="block text-transparent bg-clip-text bg-gradient-to-r from-green-400 via-blue-500 to-purple-400">
                 & Service Guide
               </span>
             </h1>
-            
+
             <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-              Explore our comprehensive portfolio of innovative technology services with transparent pricing, 
+              Explore our comprehensive portfolio of innovative technology services with transparent pricing,
               detailed features, and ROI projections. Find the perfect solution for your business needs.
             </p>
-            
+
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="px-8 py-4 bg-gradient-to-r from-green-500 to-blue-600 text-white font-semibold rounded-lg hover:from-green-400 hover:to-blue-500 transition-all duration-200 hover:scale-105 shadow-lg shadow-green-500/20">
                 View All Services
@@ -327,7 +327,7 @@ const ComprehensivePricingGuide2027: React.FC = () => {
                       {/* Features and Benefits */}
                       <div>
                         <h4 className="text-lg font-semibold text-white mb-4">Features & Benefits</h4>
-                        
+
                         <div className="mb-6">
                           <h5 className="text-sm font-semibold text-gray-200 mb-3">Key Features:</h5>
                           <div className="space-y-2">
@@ -368,7 +368,7 @@ const ComprehensivePricingGuide2027: React.FC = () => {
                       {/* Technical Details and Target Audience */}
                       <div>
                         <h4 className="text-lg font-semibold text-white mb-4">Technical Details & Audience</h4>
-                        
+
                         <div className="mb-6">
                           <h5 className="text-sm font-semibold text-gray-200 mb-3">Target Audience:</h5>
                           <div className="space-y-2">
@@ -516,10 +516,10 @@ const ComprehensivePricingGuide2027: React.FC = () => {
               Need Help Choosing the Right Service?
             </h2>
             <p className="text-gray-300 mb-6 max-w-2xl mx-auto">
-              Our team of technology experts is ready to help you select the perfect solution 
+              Our team of technology experts is ready to help you select the perfect solution
               and provide a customized implementation plan for your business needs.
             </p>
-            
+
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
               <div className="flex items-center justify-center space-x-3 text-green-400">
                 <Phone className="w-5 h-5" />
@@ -549,7 +549,7 @@ const ComprehensivePricingGuide2027: React.FC = () => {
                 Email Sales
               </a>
             </div>
-            
+
             <div className="mt-6 text-sm text-gray-400">
               <p>364 E Main St STE 1008, Middletown DE 19709</p>
               <p>Visit us at: <a href="https://ziontechgroup.com" className="text-green-400 hover:underline">ziontechgroup.com</a></p>

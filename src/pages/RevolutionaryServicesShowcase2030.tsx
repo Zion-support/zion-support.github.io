@@ -67,7 +67,7 @@ export default function RevolutionaryServicesShowcase2030() {
     const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()));
-    
+
     return matchesCategory && matchesSearch;
   });
 
@@ -244,7 +244,7 @@ export default function RevolutionaryServicesShowcase2030() {
                 </span>
               </h1>
               <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
-                Discover the future of business technology with our revolutionary micro SAAS, IT, and AI services. 
+                Discover the future of business technology with our revolutionary micro SAAS, IT, and AI services.
                 Transform your operations, boost efficiency, and stay ahead of the competition.
               </p>
               <div className="flex flex-wrap justify-center gap-4 mb-12">
@@ -403,7 +403,7 @@ export default function RevolutionaryServicesShowcase2030() {
                       </div>
                     </div>
                   </div>
-                  
+
                   <div className="p-6">
                     <h3 className="text-xl font-bold text-white mb-3 group-hover:text-purple-400 transition-colors">
                       {service.title}
@@ -411,7 +411,7 @@ export default function RevolutionaryServicesShowcase2030() {
                     <p className="text-gray-400 mb-4 line-clamp-3">
                       {service.description}
                     </p>
-                    
+
                     <div className="space-y-3 mb-6">
                       <div className="flex items-center justify-between">
                         <span className="text-gray-400 text-sm">AI Score:</span>
@@ -472,7 +472,7 @@ export default function RevolutionaryServicesShowcase2030() {
                   >
                     <ChevronLeft className="w-5 h-5" />
                   </button>
-                  
+
                   {Array.from({ length: totalPages }, (_, i) => i + 1).map((page) => (
                     <button
                       key={page}
@@ -486,7 +486,7 @@ export default function RevolutionaryServicesShowcase2030() {
                       {page}
                     </button>
                   ))}
-                  
+
                   <button
                     onClick={() => handlePageChange(currentPage + 1)}
                     disabled={currentPage === totalPages}
@@ -513,7 +513,7 @@ export default function RevolutionaryServicesShowcase2030() {
                 Ready to Revolutionize Your Business?
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Contact our team for personalized consultation, custom solutions, and expert guidance 
+                Contact our team for personalized consultation, custom solutions, and expert guidance
                 on implementing these revolutionary services in your organization.
               </p>
             </motion.div>

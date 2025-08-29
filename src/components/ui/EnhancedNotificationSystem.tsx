@@ -83,8 +83,8 @@ const NotificationContainer: React.FC = () => {
             initial={{ opacity: 0, x: 300, scale: 0.8 }}
             animate={{ opacity: 1, x: 0, scale: 1 }}
             exit={{ opacity: 0, x: 300, scale: 0.8 }}
-            transition={{ 
-              duration: 0.3, 
+            transition={{
+              duration: 0.3,
               delay: index * 0.1,
               type: "spring",
               stiffness: 200
@@ -95,7 +95,7 @@ const NotificationContainer: React.FC = () => {
           </motion.div>
         ))}
       </AnimatePresence>
-      
+
       {notifications.length > 1 && (
         <motion.button
           initial={{ opacity: 0, y: 10 }}
@@ -165,7 +165,7 @@ const NotificationItem: React.FC<NotificationItemProps> = ({ notification, onRem
         <div className="flex-shrink-0 mt-0.5">
           {getIcon(notification.type)}
         </div>
-        
+
         <div className="flex-1 min-w-0">
           <h4 className="text-sm font-medium text-white mb-1">
             {notification.title}
@@ -173,7 +173,7 @@ const NotificationItem: React.FC<NotificationItemProps> = ({ notification, onRem
           <p className="text-sm text-gray-300 leading-relaxed">
             {notification.message}
           </p>
-          
+
           {notification.action && (
             <button
               onClick={notification.action.onClick}
@@ -183,7 +183,7 @@ const NotificationItem: React.FC<NotificationItemProps> = ({ notification, onRem
             </button>
           )}
         </div>
-        
+
         <button
           onClick={() => onRemove(notification.id)}
           className="flex-shrink-0 text-gray-400 hover:text-white transition-colors duration-200"
@@ -199,15 +199,15 @@ const NotificationItem: React.FC<NotificationItemProps> = ({ notification, onRem
 export const notify = {
   success: (title: string, message: string, options?: Partial<Notification>) => {
     // This would be used with the context
-    console.log('Success notification:', { title, message, ...options });
+    // console.log('Success notification:', { title, message, ...options });
   },
   error: (title: string, message: string, options?: Partial<Notification>) => {
-    console.log('Error notification:', { title, message, ...options });
+    // console.log('Error notification:', { title, message, ...options });
   },
   warning: (title: string, message: string, options?: Partial<Notification>) => {
-    console.log('Warning notification:', { title, message, ...options });
+    // console.log('Warning notification:', { title, message, ...options });
   },
   info: (title: string, message: string, options?: Partial<Notification>) => {
-    console.log('Info notification:', { title, message, ...options });
+    // console.log('Info notification:', { title, message, ...options });
   }
 };

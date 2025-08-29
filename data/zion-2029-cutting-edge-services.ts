@@ -736,7 +736,7 @@ export const getServicesByPriceRange = (minPrice: number, maxPrice: number) => {
 };
 
 export const getServicesByTechnology = (technology: string) => {
-  return zionCuttingEdgeServices2029.filter(service => 
+  return zionCuttingEdgeServices2029.filter(service =>
     service.technology.some(tech => tech.toLowerCase().includes(technology.toLowerCase()))
   );
 };

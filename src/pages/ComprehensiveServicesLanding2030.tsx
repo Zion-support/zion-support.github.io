@@ -131,7 +131,7 @@ export default function ComprehensiveServicesLanding2030() {
         description="Discover our cutting-edge AI, IT infrastructure, and emerging technology services for 2030. Transform your business with innovative solutions."
         keywords="AI services, IT infrastructure, emerging technology, Zion Tech Group, 2030 services"
       />
-      
+
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         {/* Hero Section */}
         <section className="relative overflow-hidden">
@@ -149,7 +149,7 @@ export default function ComprehensiveServicesLanding2030() {
                 </span>
               </h1>
               <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
-                Transform your business with cutting-edge AI, IT infrastructure, and emerging technology solutions. 
+                Transform your business with cutting-edge AI, IT infrastructure, and emerging technology solutions.
                 Stay ahead of the curve with Zion Tech Group's innovative services.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -448,7 +448,7 @@ export default function ComprehensiveServicesLanding2030() {
                   <div className="text-4xl font-bold text-blue-400 mb-6">
                     ${service.basePrice.toLocaleString()}
                   </div>
-                  
+
                   <div className="space-y-4 mb-6">
                     {service.pricingTiers[0].features.map((feature, idx) => (
                       <div key={idx} className="flex items-center gap-3">
@@ -484,7 +484,7 @@ export default function ComprehensiveServicesLanding2030() {
               <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
                 Contact our team to discuss your needs and discover how our innovative services can drive your success in 2030 and beyond.
               </p>
-              
+
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
                 <div className="text-center">
                   <div className="w-12 h-12 bg-blue-500 rounded-lg flex items-center justify-center mx-auto mb-4">
@@ -493,7 +493,7 @@ export default function ComprehensiveServicesLanding2030() {
                   <div className="text-white font-semibold">{PRICING_CONTACT_2030.phone}</div>
                   <div className="text-gray-300 text-sm">Phone</div>
                 </div>
-                
+
                 <div className="text-center">
                   <div className="w-12 h-12 bg-purple-500 rounded-lg flex items-center justify-center mx-auto mb-4">
                     <Users className="w-6 h-6 text-white" />
@@ -501,7 +501,7 @@ export default function ComprehensiveServicesLanding2030() {
                   <div className="text-white font-semibold">{PRICING_CONTACT_2030.email}</div>
                   <div className="text-gray-300 text-sm">Email</div>
                 </div>
-                
+
                 <div className="text-center">
                   <div className="w-12 h-12 bg-green-500 rounded-lg flex items-center justify-center mx-auto mb-4">
                     <Globe className="w-6 h-6 text-white" />
@@ -562,7 +562,7 @@ export default function ComprehensiveServicesLanding2030() {
                 <div>
                   <h3 className="text-xl font-semibold text-white mb-4">Description</h3>
                   <p className="text-gray-300 leading-relaxed">{selectedService.description}</p>
-                  
+
                   <div className="mt-6">
                     <h4 className="text-lg font-semibold text-white mb-3">Tags</h4>
                     <div className="flex flex-wrap gap-2">

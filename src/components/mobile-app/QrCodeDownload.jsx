@@ -28,14 +28,14 @@ export const QrCodeDownload = () => {
       setCopied(true);
       setTimeout(() => setCopied(false), 2000);
     } catch (err) {
-      console.error('Failed to copy: ', err);
+      // console.error('Failed to copy: ', err);
     }
   };
 
   const handleShare = async (platform) => {
     const { url, name } = downloadLinks[platform];
     const text = `Download ${name} - Zion IT Asset Management App: ${url}`;
-    
+
     if (navigator.share) {
       try {
         await navigator.share({
@@ -44,7 +44,7 @@ export const QrCodeDownload = () => {
           url: url
         });
       } catch (err) {
-        console.error('Error sharing:', err);
+        // console.error('Error sharing:', err);
       }
     } else {
       // Fallback for browsers that don't support Web Share API
@@ -62,7 +62,7 @@ export const QrCodeDownload = () => {
             Quick Download Access
           </h2>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Scan the QR code with your mobile device or use the direct download links below. 
+            Scan the QR code with your mobile device or use the direct download links below.
             Get Zion mobile app in seconds!
           </p>
         </div>
@@ -76,19 +76,19 @@ export const QrCodeDownload = () => {
                   <QrCode className="w-8 h-8 text-blue-400 mr-3" />
                   <h3 className="text-2xl font-bold text-white">Scan to Download</h3>
                 </div>
-                
+
                 <div className="bg-white rounded-2xl p-6 mb-6 inline-block">
-                  <img 
-                    src={currentPlatform.qrCode} 
+                  <img
+                    src={currentPlatform.qrCode}
                     alt={`QR Code for ${currentPlatform.name}`}
                     className="w-48 h-48 mx-auto"
                   />
                 </div>
-                
+
                 <p className="text-gray-300 mb-4">
                   Point your camera at the QR code above
                 </p>
-                
+
                 <div className="flex items-center justify-center space-x-2 text-sm text-gray-400">
                   <Smartphone className="w-4 h-4" />
                   <span>Works with any QR code scanner app</span>
@@ -129,7 +129,7 @@ export const QrCodeDownload = () => {
                   <p className="text-gray-300">{currentPlatform.description}</p>
                 </div>
               </div>
-              
+
               <div className="space-y-4">
                 <a
                   href={currentPlatform.url}
@@ -140,7 +140,7 @@ export const QrCodeDownload = () => {
                   <Download className="w-5 h-5" />
                   <span>Download Now</span>
                 </a>
-                
+
                 <div className="grid grid-cols-2 gap-3">
                   <button
                     onClick={() => handleShare(activeTab)}
@@ -149,7 +149,7 @@ export const QrCodeDownload = () => {
                     <Share2 className="w-4 h-4" />
                     <span>Share</span>
                   </button>
-                  
+
                   <button
                     onClick={() => handleCopyLink(currentPlatform.url)}
                     className="flex items-center justify-center space-x-2 px-4 py-3 border border-white/30 text-white rounded-lg hover:bg-white/10 transition-all duration-300"

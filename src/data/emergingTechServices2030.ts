@@ -1038,7 +1038,7 @@ export const getEmergingTechServicesByCategory = (category: string): EmergingTec
 };
 
 export const getEmergingTechServicesByPriceRange = (minPrice: number, maxPrice: number): EmergingTechService2030[] => {
-  return EMERGING_TECH_SERVICES_2030.filter(service => 
+  return EMERGING_TECH_SERVICES_2030.filter(service =>
     service.pricing.monthly >= minPrice && service.pricing.monthly <= maxPrice
   );
 };

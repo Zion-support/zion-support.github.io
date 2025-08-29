@@ -2,14 +2,14 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { SEO } from '@/components/SEO';
-import { 
-  Brain, 
-  Zap, 
-  TrendingUp, 
-  Shield, 
-  Users, 
-  BarChart3, 
-  Clock, 
+import {
+  Brain,
+  Zap,
+  TrendingUp,
+  Shield,
+  Users,
+  BarChart3,
+  Clock,
   DollarSign,
   CheckCircle,
   ArrowRight,
@@ -304,16 +304,16 @@ const AIAutonomousBusinessOperations = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      <SEO 
+      <SEO
         title="AI Autonomous Business Operations - Zion Tech Group"
         description="Transform your business with AI-powered autonomous operations. Automate decision-making, optimize processes, and achieve unprecedented efficiency with our cutting-edge platform."
       />
-      
+
       {/* Hero Section */}
       <section className="relative py-20 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 to-blue-600/20"></div>
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <motion.div 
+          <motion.div
             className="mb-6"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
@@ -324,8 +324,8 @@ const AIAutonomousBusinessOperations = () => {
               AI-Powered Platform
             </span>
           </motion.div>
-          
-          <motion.h1 
+
+          <motion.h1
             className="text-5xl md:text-7xl font-bold text-white mb-6"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
@@ -336,18 +336,18 @@ const AIAutonomousBusinessOperations = () => {
               Business Operations
             </span>
           </motion.h1>
-          
-          <motion.p 
+
+          <motion.p
             className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto mb-8"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
           >
-            Transform your business with intelligent automation. Our AI platform makes decisions, 
+            Transform your business with intelligent automation. Our AI platform makes decisions,
             optimizes processes, and operates autonomously 24/7 to maximize efficiency and profitability.
           </motion.p>
-          
-          <motion.div 
+
+          <motion.div
             className="flex flex-col sm:flex-row gap-4 justify-center"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
@@ -374,7 +374,7 @@ const AIAutonomousBusinessOperations = () => {
       {/* Key Benefits */}
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div 
+          <motion.div
             className="text-center mb-16"
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -444,7 +444,7 @@ const AIAutonomousBusinessOperations = () => {
       {/* Features */}
       <section className="py-20 bg-slate-800/30">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div 
+          <motion.div
             className="text-center mb-16"
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -504,7 +504,7 @@ const AIAutonomousBusinessOperations = () => {
       {/* Use Cases */}
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div 
+          <motion.div
             className="text-center mb-16"
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -552,7 +552,7 @@ const AIAutonomousBusinessOperations = () => {
       {/* Pricing */}
       <section className="py-20 bg-slate-800/30">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div 
+          <motion.div
             className="text-center mb-16"
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -572,8 +572,8 @@ const AIAutonomousBusinessOperations = () => {
               <motion.div
                 key={tier.name}
                 className={`bg-slate-800/50 rounded-xl p-8 border ${
-                  tier.popular 
-                    ? 'border-purple-500 ring-2 ring-purple-500/20' 
+                  tier.popular
+                    ? 'border-purple-500 ring-2 ring-purple-500/20'
                     : 'border-slate-700'
                 } hover:border-purple-400 transition-all duration-300`}
                 initial={{ opacity: 0, y: 30 }}
@@ -588,7 +588,7 @@ const AIAutonomousBusinessOperations = () => {
                     </span>
                   </div>
                 )}
-                
+
                 <div className="text-center mb-6">
                   <h3 className="text-2xl font-bold text-white mb-2">{tier.name}</h3>
                   <div className="flex items-baseline justify-center">
@@ -627,7 +627,7 @@ const AIAutonomousBusinessOperations = () => {
       {/* Contact Section */}
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div 
+          <motion.div
             className="text-center mb-16"
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -643,7 +643,7 @@ const AIAutonomousBusinessOperations = () => {
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
-            <motion.div 
+            <motion.div
               className="text-center"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -657,7 +657,7 @@ const AIAutonomousBusinessOperations = () => {
               <p className="text-purple-400 font-semibold">{contactInfo.phone}</p>
             </motion.div>
 
-            <motion.div 
+            <motion.div
               className="text-center"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -671,7 +671,7 @@ const AIAutonomousBusinessOperations = () => {
               <p className="text-blue-400 font-semibold">{contactInfo.email}</p>
             </motion.div>
 
-            <motion.div 
+            <motion.div
               className="text-center"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -686,7 +686,7 @@ const AIAutonomousBusinessOperations = () => {
             </motion.div>
           </div>
 
-          <motion.div 
+          <motion.div
             className="text-center"
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}

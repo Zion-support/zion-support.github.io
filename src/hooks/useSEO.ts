@@ -19,7 +19,7 @@ interface UseSEOOptions {
   enableAnalytics?: boolean;
 }
 
-export const useSEO = (seoData: SEOData, options: UseSEOOptions = {}) => {
+export const useSEO = (seoData: SEOData, options: UseSEOOptions = { /* empty */ }) => {
   const {
     enableAutoTitle = true,
     enableStructuredData = true,
@@ -232,7 +232,7 @@ export const useSEO = (seoData: SEOData, options: UseSEOOptions = {}) => {
     // Core Web Vitals
     if ('web-vital' in window) {
       // This would require the web-vitals library
-      console.log('Web Vitals available');
+      // console.log('Web Vitals available');
     }
 
     // Navigation Timing API

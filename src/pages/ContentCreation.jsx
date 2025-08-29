@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { 
-  PenTool, 
-  Zap, 
-  Shield, 
-  CheckCircle, 
-  ArrowRight, 
+import {
+  PenTool,
+  Zap,
+  Shield,
+  CheckCircle,
+  ArrowRight,
   Star,
   Users,
   Award,
@@ -341,9 +341,9 @@ export default function ContentCreation() {
   const [selectedSolution, setSelectedSolution] = useState(null);
 
   const categories = ['All', 'CMS', 'Video', 'Design', 'Audio', 'Analytics', 'Distribution'];
-  
-  const filteredSolutions = selectedCategory === 'All' 
-    ? contentCreationSolutions 
+
+  const filteredSolutions = selectedCategory === 'All'
+    ? contentCreationSolutions
     : contentCreationSolutions.filter(solution => solution.category === selectedCategory);
 
   return (
@@ -355,7 +355,7 @@ export default function ContentCreation() {
           <div className="absolute top-20 left-20 w-72 h-72 bg-zion-cyan/30 rounded-full blur-3xl"></div>
           <div className="absolute bottom-20 right-20 w-96 h-96 bg-zion-purple/30 rounded-full blur-3xl"></div>
         </div>
-        
+
         <div className="container-responsive relative z-10">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -371,17 +371,17 @@ export default function ContentCreation() {
             >
               <PenTool className="w-10 h-10 text-white" />
             </motion.div>
-            
+
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
               Content Creation &
               <span className="text-gradient block">Digital Media</span>
             </h1>
-            
+
             <p className="text-xl text-zion-slate-light leading-relaxed mb-8">
-              Transform your content creation process with cutting-edge digital tools and platforms. 
+              Transform your content creation process with cutting-edge digital tools and platforms.
               From video production to AI-powered content generation, we help you create engaging content at scale.
             </p>
-            
+
             <div className="flex flex-wrap justify-center gap-4 text-sm">
               <div className="flex items-center gap-2 text-zion-cyan">
                 <PenTool className="w-4 h-4" />
@@ -427,10 +427,10 @@ export default function ContentCreation() {
                 <div className="w-16 h-16 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-2xl flex items-center justify-center mx-auto mb-6">
                   <benefit.icon className="w-8 h-8 text-white" />
                 </div>
-                
+
                 <h3 className="text-2xl font-bold text-white mb-4 text-center">{benefit.title}</h3>
                 <p className="text-zion-slate-light mb-6 leading-relaxed text-center">{benefit.description}</p>
-                
+
                 <div className="space-y-2">
                   <h4 className="text-zion-cyan font-semibold mb-3">Examples:</h4>
                   {benefit.examples.map((example, exampleIndex) => (
@@ -473,13 +473,13 @@ export default function ContentCreation() {
                 <div className="w-16 h-16 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-2xl flex items-center justify-center mx-auto mb-6">
                   <technology.icon className="w-8 h-8 text-white" />
                 </div>
-                
+
                 <h3 className="text-xl font-bold text-white mb-3">{technology.name}</h3>
                 <p className="text-zion-slate-light mb-4 leading-relaxed">{technology.description}</p>
                 <p className="text-zion-cyan font-semibold mb-2">{technology.useCase}</p>
-                
+
                 <span className={`inline-block px-3 py-1 rounded-full text-sm font-semibold ${
-                  technology.reliability === 'Critical' 
+                  technology.reliability === 'Critical'
                     ? 'bg-red-500/20 text-red-400 border border-red-500/30'
                     : technology.reliability === 'High'
                     ? 'bg-yellow-500/20 text-yellow-400 border border-yellow-500/30'
@@ -525,7 +525,7 @@ export default function ContentCreation() {
                     {step.step}
                   </div>
                 </div>
-                
+
                 <h3 className="text-xl font-bold text-white mb-3">{step.title}</h3>
                 <p className="text-zion-slate-light mb-4 leading-relaxed">{step.description}</p>
                 <span className="inline-block px-3 py-1 bg-zion-cyan/20 text-zion-cyan text-sm rounded-full border border-zion-cyan/30">
@@ -582,10 +582,10 @@ export default function ContentCreation() {
                 <div className="w-16 h-16 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-2xl flex items-center justify-center mb-6">
                   <solution.icon className="w-8 h-8 text-white" />
                 </div>
-                
+
                 <h3 className="text-2xl font-bold text-white mb-3">{solution.title}</h3>
                 <p className="text-zion-slate-light mb-6 leading-relaxed">{solution.description}</p>
-                
+
                 <div className="space-y-3 mb-6">
                   {solution.features.map((feature, featureIndex) => (
                     <div key={featureIndex} className="flex items-center gap-3">
@@ -594,7 +594,7 @@ export default function ContentCreation() {
                     </div>
                   ))}
                 </div>
-                
+
                 <div className="flex flex-wrap gap-2 mb-4">
                   {solution.technologies.slice(0, 2).map((tech, techIndex) => (
                     <span
@@ -605,12 +605,12 @@ export default function ContentCreation() {
                     </span>
                   ))}
                 </div>
-                
+
                 <div className="flex items-center justify-between mb-4">
                   <span className="text-zion-cyan font-semibold">{solution.price}</span>
                   <span className="text-zion-slate-light text-sm">{solution.timeline}</span>
                 </div>
-                
+
                 <div className="flex items-center justify-between">
                   <span className="px-3 py-1 bg-zion-cyan/20 text-zion-cyan text-xs rounded-full border border-zion-cyan/30">
                     {solution.category}
@@ -659,7 +659,7 @@ export default function ContentCreation() {
                     <p className="text-zion-slate-light text-sm">{story.industry}</p>
                   </div>
                 </div>
-                
+
                 <div className="space-y-4 mb-6">
                   <div>
                     <h4 className="text-zion-cyan font-semibold mb-2">Challenge</h4>
@@ -674,7 +674,7 @@ export default function ContentCreation() {
                     <p className="text-zion-slate-light text-sm">{story.results}</p>
                   </div>
                 </div>
-                
+
                 <div className="flex items-center gap-2">
                   {[...Array(5)].map((_, i) => (
                     <Star key={i} className="w-4 h-4 text-yellow-400 fill-current" />
@@ -698,10 +698,10 @@ export default function ContentCreation() {
           >
             <h2 className="text-4xl font-bold text-white mb-6">Ready to Transform Your Content Creation?</h2>
             <p className="text-xl text-zion-slate-light mb-8 leading-relaxed">
-              Let's discuss how content creation technology can streamline your workflows, 
+              Let's discuss how content creation technology can streamline your workflows,
               improve quality, and increase your content output.
             </p>
-            
+
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
                 href="/contact"

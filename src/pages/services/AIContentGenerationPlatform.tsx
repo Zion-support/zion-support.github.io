@@ -1,13 +1,13 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { SEO } from '../../components/SEO';
-import { 
-  PenTool, 
-  FileText, 
-  Brain, 
-  Zap, 
-  Shield, 
-  Users, 
+import {
+  PenTool,
+  FileText,
+  Brain,
+  Zap,
+  Shield,
+  Users,
   Globe,
   Star,
   CheckCircle,
@@ -191,11 +191,11 @@ export default function AIContentGenerationPlatform() {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      <SEO 
+      <SEO
         title="AI Content Generation Platform - Zion Tech Group"
         description="Transform your content creation with our AI-powered platform. Generate high-quality text, images, videos, and more with advanced AI technology."
       />
-      
+
       {/* Hero Section */}
       <section className="relative overflow-hidden py-20">
         <div className="container mx-auto px-4">
@@ -215,8 +215,8 @@ export default function AIContentGenerationPlatform() {
               </span>
             </h1>
             <p className="text-xl text-slate-300 max-w-3xl mx-auto mb-8">
-              Revolutionize your content creation with our advanced AI platform. Generate high-quality text, images, 
-              videos, and multimedia content in minutes, not hours. Scale your content production while maintaining 
+              Revolutionize your content creation with our advanced AI platform. Generate high-quality text, images,
+              videos, and multimedia content in minutes, not hours. Scale your content production while maintaining
               exceptional quality and brand consistency.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -280,7 +280,7 @@ export default function AIContentGenerationPlatform() {
               </span>
             </h2>
             <p className="text-xl text-slate-300 max-w-2xl mx-auto">
-              Our AI content generation platform combines cutting-edge technology with intuitive design 
+              Our AI content generation platform combines cutting-edge technology with intuitive design
               to deliver exceptional content creation capabilities.
             </p>
           </motion.div>
@@ -469,8 +469,8 @@ export default function AIContentGenerationPlatform() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
                 className={`relative bg-slate-800/50 backdrop-blur-sm rounded-2xl p-8 border transition-all duration-300 ${
-                  plan.popular 
-                    ? 'border-purple-400/50 scale-105' 
+                  plan.popular
+                    ? 'border-purple-400/50 scale-105'
                     : 'border-slate-700/50 hover:border-purple-400/50'
                 }`}
               >
@@ -481,7 +481,7 @@ export default function AIContentGenerationPlatform() {
                     </span>
                   </div>
                 )}
-                
+
                 <div className="text-center mb-8">
                   <h3 className="text-2xl font-bold text-white mb-4">{plan.plan}</h3>
                   <div className="flex items-baseline justify-center mb-2">
@@ -531,7 +531,7 @@ export default function AIContentGenerationPlatform() {
               </span>
             </h2>
             <p className="text-xl text-slate-300 mb-8 max-w-2xl mx-auto">
-              Join thousands of content creators who have already revolutionized their workflow 
+              Join thousands of content creators who have already revolutionized their workflow
               with our AI-powered content generation platform.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">

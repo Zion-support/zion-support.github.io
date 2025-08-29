@@ -59,7 +59,7 @@ export default function AIResearchAssistant() {
             AI Research Assistant
           </h1>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-            Transform your research process with AI-powered tools that accelerate discovery, 
+            Transform your research process with AI-powered tools that accelerate discovery,
             enhance collaboration, and deliver deeper insights across all domains.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
@@ -124,7 +124,7 @@ export default function AIResearchAssistant() {
           <div className="bg-gradient-to-r from-cyan-500/10 to-blue-500/10 rounded-2xl p-8 border border-cyan-500/30">
             <h3 className="text-2xl font-bold text-white mb-4">Ready to Transform Your Research?</h3>
             <p className="text-gray-300 mb-6 max-w-2xl mx-auto">
-              Join leading researchers and organizations who are already using AI to accelerate 
+              Join leading researchers and organizations who are already using AI to accelerate
               their discoveries and gain competitive advantages.
             </p>
             <div className="flex flex-wrap justify-center gap-4">

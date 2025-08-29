@@ -157,25 +157,25 @@ export default function SystemStatus() {
     return () => clearInterval(interval);
   }, []);
 
-  const overallStatus = services.every(s => s.status === 'operational') 
-    ? 'operational' 
-    : services.some(s => s.status === 'outage') 
-    ? 'outage' 
+  const overallStatus = services.every(s => s.status === 'operational')
+    ? 'operational'
+    : services.some(s => s.status === 'outage')
+    ? 'outage'
     : 'degraded';
 
   const overallUptime = services.reduce((acc, service) => acc + service.uptime, 0) / services.length;
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      <SEO 
+      <SEO
         title="System Status - Zion Tech Group"
         description="Real-time system status and performance metrics for Zion Tech Group services. Monitor uptime, response times, and incident reports."
       />
-      
+
       {/* Header */}
       <div className="relative pt-32 pb-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto text-center">
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
@@ -184,8 +184,8 @@ export default function SystemStatus() {
             <Activity className="w-4 h-4 mr-2 text-cyan-400" />
             System Status
           </motion.div>
-          
-          <motion.h1 
+
+          <motion.h1
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
@@ -193,8 +193,8 @@ export default function SystemStatus() {
           >
             System Status
           </motion.h1>
-          
-          <motion.p 
+
+          <motion.p
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.4 }}
@@ -207,7 +207,7 @@ export default function SystemStatus() {
 
       {/* Overall Status */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-12">
-        <motion.div 
+        <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.6 }}
@@ -245,7 +245,7 @@ export default function SystemStatus() {
 
       {/* Service Status Grid */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-12">
-        <motion.div 
+        <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.8 }}
@@ -299,7 +299,7 @@ export default function SystemStatus() {
       {/* Incidents */}
       {incidents.length > 0 && (
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-12">
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 1.4 }}
@@ -321,7 +321,7 @@ export default function SystemStatus() {
                           {incident.severity.charAt(0).toUpperCase() + incident.severity.slice(1)}
                         </div>
                         <div className={`px-3 py-1 rounded-full text-xs font-medium ${
-                          incident.status === 'resolved' 
+                          incident.status === 'resolved'
                             ? 'text-green-400 bg-green-400/10 border border-green-400/20'
                             : incident.status === 'monitoring'
                             ? 'text-blue-400 bg-blue-400/10 border border-blue-400/20'
@@ -370,7 +370,7 @@ export default function SystemStatus() {
 
       {/* Performance Metrics */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-12">
-        <motion.div 
+        <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 1.8 }}
@@ -412,7 +412,7 @@ export default function SystemStatus() {
 
       {/* Footer CTA */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-20">
-        <motion.div 
+        <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 2.0 }}

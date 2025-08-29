@@ -86,18 +86,18 @@ export default function AIAutonomousBusinessManager() {
               <Brain className="w-4 h-4"/>
               AI-Powered Business Management
             </div>
-            
+
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
               AI Autonomous
               <span className="block bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
                 Business Manager
               </span>
             </h1>
-            
+
             <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8 leading-relaxed">
               Revolutionize your business operations with intelligent AI that manages, analyzes, and optimizes every aspect of your business automatically.
             </p>
-            
+
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <motion.button whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }} className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-500 text-white rounded-lg text-lg font-semibold hover:shadow-xl hover:shadow-cyan-500/25 transition-all duration-300 flex items-center gap-2 justify-center">
                 <Play className="w-5 h-5"/>

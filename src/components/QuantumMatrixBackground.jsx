@@ -52,7 +52,7 @@ export const QuantumMatrixBackground = ({ intensity = 'medium', showParticles = 
         // Neural network connections
         const drawNeuralConnections = () => {
             for (let i = 0; i < particles.length; i++) {
-                for (let j = i + 1; j < particles.length; j++) {
+                for (const j = i + 1; j < particles.length; j++) {
                     const p1 = particles[i];
                     const p2 = particles[j];
                     const distance = Math.sqrt(Math.pow(p1.x - p2.x, 2) + Math.pow(p1.y - p2.y, 2));

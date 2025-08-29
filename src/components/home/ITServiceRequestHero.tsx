@@ -59,7 +59,7 @@ export function ITServiceRequestHero() {
         <div className="absolute bottom-10 left-10 w-48 h-48 bg-zion-purple rounded-full blur-3xl"></div>
       </div>
 
-      <motion.div 
+      <motion.div
         className="container mx-auto px-4 relative z-10"
         variants={containerVariants}
         initial="hidden"
@@ -77,13 +77,13 @@ export function ITServiceRequestHero() {
                 Global IT Services
               </span>
             </div>
-            
+
             <GradientHeading className="mb-6 text-4xl md:text-5xl lg:text-6xl leading-tight">
               24/7 Global IT Onsite Services
             </GradientHeading>
-            
+
             <p className="text-xl text-zion-slate-light mb-8 max-w-2xl leading-relaxed">
-              Get professional IT technicians anywhere in the world, anytime you need them. 
+              Get professional IT technicians anywhere in the world, anytime you need them.
               From emergency repairs to scheduled maintenance, we're there when you need us most.
             </p>
 
@@ -107,14 +107,14 @@ export function ITServiceRequestHero() {
 
             {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row gap-4">
-              <Button 
+              <Button
                 onClick={() => document.getElementById('service-form')?.scrollIntoView({ behavior: 'smooth' })}
                 className="bg-gradient-to-r from-zion-cyan to-zion-blue hover:from-zion-cyan-dark hover:to-zion-blue-dark text-white px-8 py-4 text-lg font-semibold rounded-lg shadow-lg hover:shadow-xl transition-all duration-300"
               >
                 Request Service Now
                 <MapPin className="w-5 h-5 ml-2" />
               </Button>
-              <Button 
+              <Button
                 variant="outline"
                 className="border-zion-cyan/30 text-zion-cyan hover:bg-zion-cyan/10 px-8 py-4 text-lg font-semibold rounded-lg transition-all duration-300"
               >

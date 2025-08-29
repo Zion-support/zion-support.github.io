@@ -16,20 +16,20 @@ export const innovativeMicroSaasBreakthrough2025 = [
       'Custom AI model training for industry-specific content'
     ],
     pricing: {
-      starter: { 
-        price: 99, 
-        period: 'month', 
-        features: ['20 articles/month', 'Basic AI templates', 'SEO suggestions', 'Email support'] 
+      starter: {
+        price: 99,
+        period: 'month',
+        features: ['20 articles/month', 'Basic AI templates', 'SEO suggestions', 'Email support']
       },
-      professional: { 
-        price: 299, 
-        period: 'month', 
-        features: ['100 articles/month', 'Advanced AI models', 'Full SEO suite', 'Team collaboration', 'Priority support'] 
+      professional: {
+        price: 299,
+        period: 'month',
+        features: ['100 articles/month', 'Advanced AI models', 'Full SEO suite', 'Team collaboration', 'Priority support']
       },
-      enterprise: { 
-        price: 899, 
-        period: 'month', 
-        features: ['Unlimited content', 'Custom AI training', 'Full API access', 'Dedicated account manager', '24/7 support'] 
+      enterprise: {
+        price: 899,
+        period: 'month',
+        features: ['Unlimited content', 'Custom AI training', 'Full API access', 'Dedicated account manager', '24/7 support']
       }
     },
     category: 'Content & Marketing',
@@ -69,20 +69,20 @@ export const innovativeMicroSaasBreakthrough2025 = [
       'Mobile-first responsive design and applications'
     ],
     pricing: {
-      starter: { 
-        price: 149, 
-        period: 'month', 
-        features: ['Up to 5,000 contacts', 'Basic automation', 'Email campaigns', 'Standard support'] 
+      starter: {
+        price: 149,
+        period: 'month',
+        features: ['Up to 5,000 contacts', 'Basic automation', 'Email campaigns', 'Standard support']
       },
-      professional: { 
-        price: 399, 
-        period: 'month', 
-        features: ['Up to 50,000 contacts', 'Advanced analytics', 'Sales forecasting', 'Custom workflows', 'Priority support'] 
+      professional: {
+        price: 399,
+        period: 'month',
+        features: ['Up to 50,000 contacts', 'Advanced analytics', 'Sales forecasting', 'Custom workflows', 'Priority support']
       },
-      enterprise: { 
-        price: 999, 
-        period: 'month', 
-        features: ['Unlimited contacts', 'Quantum analytics', 'White-label solution', 'Dedicated support', 'Custom integrations'] 
+      enterprise: {
+        price: 999,
+        period: 'month',
+        features: ['Unlimited contacts', 'Quantum analytics', 'White-label solution', 'Dedicated support', 'Custom integrations']
       }
     },
     category: 'Sales & CRM',
@@ -122,20 +122,20 @@ export const innovativeMicroSaasBreakthrough2025 = [
       'API access for custom integrations'
     ],
     pricing: {
-      starter: { 
-        price: 799, 
-        period: 'month', 
-        features: ['Basic decision engine', 'Up to 1000 decisions/month', 'Standard analytics', 'Email support'] 
+      starter: {
+        price: 799,
+        period: 'month',
+        features: ['Basic decision engine', 'Up to 1000 decisions/month', 'Standard analytics', 'Email support']
       },
-      professional: { 
-        price: 1999, 
-        period: 'month', 
-        features: ['Advanced decision engine', 'Unlimited decisions', 'Custom models', 'Priority support', 'API access'] 
+      professional: {
+        price: 1999,
+        period: 'month',
+        features: ['Advanced decision engine', 'Unlimited decisions', 'Custom models', 'Priority support', 'API access']
       },
-      enterprise: { 
-        price: 4999, 
-        period: 'month', 
-        features: ['Full autonomous platform', 'White-label solution', 'Dedicated support', 'Custom development', '24/7 monitoring'] 
+      enterprise: {
+        price: 4999,
+        period: 'month',
+        features: ['Full autonomous platform', 'White-label solution', 'Dedicated support', 'Custom development', '24/7 monitoring']
       }
     },
     category: 'AI & Automation',
@@ -175,20 +175,20 @@ export const innovativeMicroSaasBreakthrough2025 = [
       'API access for legal software integration'
     ],
     pricing: {
-      starter: { 
-        price: 299, 
-        period: 'month', 
-        features: ['Basic contract analysis', 'Up to 50 contracts/month', 'Standard templates', 'Email support'] 
+      starter: {
+        price: 299,
+        period: 'month',
+        features: ['Basic contract analysis', 'Up to 50 contracts/month', 'Standard templates', 'Email support']
       },
-      professional: { 
-        price: 799, 
-        period: 'month', 
-        features: ['Advanced contract analysis', 'Unlimited contracts', 'Custom templates', 'Priority support', 'API access'] 
+      professional: {
+        price: 799,
+        period: 'month',
+        features: ['Advanced contract analysis', 'Unlimited contracts', 'Custom templates', 'Priority support', 'API access']
       },
-      enterprise: { 
-        price: 1999, 
-        period: 'month', 
-        features: ['Full legal platform', 'White-label solution', 'Dedicated support', 'Custom development', '24/7 monitoring'] 
+      enterprise: {
+        price: 1999,
+        period: 'month',
+        features: ['Full legal platform', 'White-label solution', 'Dedicated support', 'Custom development', '24/7 monitoring']
       }
     },
     category: 'Legal Technology',
@@ -228,20 +228,20 @@ export const innovativeMicroSaasBreakthrough2025 = [
       'HIPAA compliance and security'
     ],
     pricing: {
-      starter: { 
-        price: 599, 
-        period: 'month', 
-        features: ['Basic diagnostics', 'Up to 100 patients/month', 'Standard models', 'Email support'] 
+      starter: {
+        price: 599,
+        period: 'month',
+        features: ['Basic diagnostics', 'Up to 100 patients/month', 'Standard models', 'Email support']
       },
-      professional: { 
-        price: 1499, 
-        period: 'month', 
-        features: ['Advanced diagnostics', 'Unlimited patients', 'Custom models', 'Priority support', 'API access'] 
+      professional: {
+        price: 1499,
+        period: 'month',
+        features: ['Advanced diagnostics', 'Unlimited patients', 'Custom models', 'Priority support', 'API access']
       },
-      enterprise: { 
-        price: 3999, 
-        period: 'month', 
-        features: ['Full healthcare platform', 'White-label solution', 'Dedicated support', 'Custom development', '24/7 monitoring'] 
+      enterprise: {
+        price: 3999,
+        period: 'month',
+        features: ['Full healthcare platform', 'White-label solution', 'Dedicated support', 'Custom development', '24/7 monitoring']
       }
     },
     category: 'Healthcare Technology',

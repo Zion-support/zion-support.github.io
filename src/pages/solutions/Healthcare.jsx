@@ -81,7 +81,7 @@ const HealthcareSolutions = () => {
             Healthcare AI Solutions
           </h1>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-            Revolutionizing healthcare with cutting-edge AI technology. Improve patient outcomes, 
+            Revolutionizing healthcare with cutting-edge AI technology. Improve patient outcomes,
             streamline operations, and ensure compliance with our comprehensive healthcare solutions.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -101,7 +101,7 @@ const HealthcareSolutions = () => {
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">
             Healthcare AI Solutions
           </h2>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {solutions.map((solution, index) => {
             const Icon = solution.icon;
@@ -112,16 +112,16 @@ const HealthcareSolutions = () => {
                     </div>
                     <h3 className="text-2xl font-bold">{solution.title}</h3>
                   </div>
-                  
+
                   <p className="text-gray-300 mb-6">{solution.description}</p>
-                  
+
                   <ul className="space-y-3 mb-6">
                     {solution.features.map((feature, featureIndex) => (<li key={featureIndex} className="flex items-center space-x-3">
                         <div className="w-2 h-2 bg-cyan-400 rounded-full"></div>
                         <span className="text-gray-300">{feature}</span>
                       </li>))}
                   </ul>
-                  
+
                   <Link to={solution.href} className="inline-flex items-center text-cyan-400 hover:text-cyan-300 transition-colors duration-300">
                     Learn More
                     <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -140,7 +140,7 @@ const HealthcareSolutions = () => {
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">
             Benefits for Healthcare Organizations
           </h2>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {benefits.map((benefit, index) => {
             const Icon = benefit.icon;

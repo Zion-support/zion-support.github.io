@@ -45,7 +45,7 @@ export function NewServices() {
       {/* Animated Background */}
       <div className="absolute inset-0 bg-quantum-gradient opacity-20 animate-pulse"></div>
       <div className="absolute inset-0 bg-quantum-mesh"></div>
-      
+
       {/* Matrix Rain Effect */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         {[...Array(20)].map((_, i) => (<div key={i} className="absolute text-zion-cyan text-xs animate-matrix-rain" style={{
@@ -64,10 +64,10 @@ export function NewServices() {
             Revolutionary Tech Services
           </h1>
           <p className="text-xl md:text-2xl text-zion-slate-light mb-8 max-w-4xl mx-auto">
-            Experience the future of technology with our cutting-edge AI, quantum, and blockchain solutions. 
+            Experience the future of technology with our cutting-edge AI, quantum, and blockchain solutions.
             Transform your business with services that were once science fiction.
           </p>
-          
+
           {/* Service Statistics */}
           <div className="grid grid-cols-1 md:grid-cols-4 gap-6 mb-12">
             <div className="bg-zion-blue-light/20 backdrop-blur-sm rounded-lg p-6 border border-zion-cyan/30">
@@ -109,7 +109,7 @@ export function NewServices() {
               </div>
             </div>
           </div>
-          
+
           {/* Search Bar */}
           <div className="max-w-2xl mx-auto mb-8">
             <div className="relative">
@@ -139,7 +139,7 @@ export function NewServices() {
           <h2 className="text-3xl font-bold text-center mb-8 text-zion-cyan">
             Featured Revolutionary Services
           </h2>
-          
+
           {/* Featured Services Grid */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {filteredServices.slice(0, 6).map((service) => (<motion.div key={service.id} variants={itemVariants} className="bg-zion-blue-light/10 backdrop-blur-sm rounded-xl p-6 border border-zion-cyan/20 hover:border-zion-cyan/40 transition-all duration-300 hover:shadow-2xl hover:shadow-zion-cyan/20 group cursor-pointer" onClick={() => setSelectedService(service)}>
@@ -219,7 +219,7 @@ export function NewServices() {
           <h2 className="text-3xl font-bold text-center mb-8 text-zion-cyan">
             Complete Service Portfolio
           </h2>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {filteredServices.map((service) => (<motion.div key={service.id} variants={itemVariants} className="bg-zion-blue-light/10 backdrop-blur-sm rounded-xl p-6 border border-zion-cyan/20 hover:border-zion-cyan/40 transition-all duration-300 hover:shadow-2xl hover:shadow-zion-cyan/20 group cursor-pointer" onClick={() => setSelectedService(service)}>
                 {/* Service Header */}
@@ -323,7 +323,7 @@ export function NewServices() {
               Ready to Transform Your Business?
             </h2>
             <p className="text-xl text-zion-slate-light mb-8 max-w-3xl mx-auto">
-              Let's discuss how our revolutionary technology solutions can accelerate your growth and 
+              Let's discuss how our revolutionary technology solutions can accelerate your growth and
               give you a competitive edge in the market.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -358,7 +358,7 @@ export function NewServices() {
               <div>
                 <h3 className="text-xl font-semibold text-zion-cyan mb-3">Service Details</h3>
                 <p className="text-zion-slate-light mb-4">{selectedService.description}</p>
-                
+
                 <div className="space-y-4">
                   <div>
                     <span className="text-zion-cyan font-medium">Category:</span>
@@ -385,7 +385,7 @@ export function NewServices() {
 
               <div>
                 <h3 className="text-xl font-semibold text-zion-cyan mb-3">Features & Benefits</h3>
-                
+
                 <div className="mb-6">
                   <h4 className="text-white font-medium mb-2">Features:</h4>
                   <ul className="space-y-1">
@@ -440,7 +440,7 @@ export function NewServices() {
               </div>
               <div className="text-center mt-4">
                 <p className="text-zion-slate-light text-sm">
-                  Market Price: {selectedService.marketPrice} | 
+                  Market Price: {selectedService.marketPrice} |
                   Estimated Delivery: {selectedService.estimatedDelivery}
                 </p>
               </div>

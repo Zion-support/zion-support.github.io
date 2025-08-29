@@ -1,14 +1,14 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { SEO } from '@/components/SEO';
-import { 
-  Cpu, 
-  Zap, 
-  Globe, 
-  Server, 
-  Network, 
-  Cloud, 
-  Shield, 
+import {
+  Cpu,
+  Zap,
+  Globe,
+  Server,
+  Network,
+  Cloud,
+  Shield,
   Clock,
   CheckCircle,
   TrendingUp,
@@ -247,11 +247,11 @@ const EdgeComputingPlatform: React.FC = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      <SEO 
+      <SEO
         title="Edge Computing Platform - Zion Tech Group"
         description="Deploy computing power to the edge with our advanced edge computing platform. Ultra-low latency, real-time processing, and global edge network for IoT and AI applications."
       />
-      
+
       {/* Hero Section */}
       <section className="relative overflow-hidden py-20 lg:py-32">
         <div className="absolute inset-0 bg-gradient-to-r from-blue-900/20 to-green-900/20"></div>
@@ -266,17 +266,17 @@ const EdgeComputingPlatform: React.FC = () => {
                 <Cpu className="w-4 h-4 mr-2" />
                 Next-Generation Edge Computing
               </div>
-              
+
               <h1 className="text-4xl lg:text-6xl font-bold text-white mb-6">
                 Edge Computing
                 <span className="bg-gradient-to-r from-blue-400 to-green-400 bg-clip-text text-transparent"> Platform</span>
               </h1>
-              
+
               <p className="text-xl lg:text-2xl text-gray-300 max-w-4xl mx-auto mb-8">
-                Bring computing power to the edge of your network. Ultra-low latency processing, 
+                Bring computing power to the edge of your network. Ultra-low latency processing,
                 real-time AI inference, and global edge infrastructure for the IoT era.
               </p>
-              
+
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <button className="px-8 py-4 bg-gradient-to-r from-blue-500 to-green-500 text-white font-semibold rounded-lg hover:from-blue-600 hover:to-green-600 transition-all duration-300 transform hover:scale-105">
                   Start Free Trial
@@ -301,7 +301,7 @@ const EdgeComputingPlatform: React.FC = () => {
               Everything you need to deploy and manage edge computing infrastructure
             </p>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index) => (
               <motion.div
@@ -335,7 +335,7 @@ const EdgeComputingPlatform: React.FC = () => {
               See how edge computing revolutionizes performance and user experience
             </p>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {benefits.map((benefit, index) => (
               <motion.div
@@ -368,7 +368,7 @@ const EdgeComputingPlatform: React.FC = () => {
               Edge computing solutions for every industry and use case
             </p>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {useCases.map((useCase, index) => (
               <motion.div
@@ -407,7 +407,7 @@ const EdgeComputingPlatform: React.FC = () => {
               Deploy edge nodes worldwide for optimal performance and reliability
             </p>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {edgeLocations.map((location, index) => (
               <motion.div
@@ -447,7 +447,7 @@ const EdgeComputingPlatform: React.FC = () => {
               Choose the plan that fits your edge computing needs
             </p>
           </div>
-          
+
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
             {pricingPlans.map((plan, index) => (
               <motion.div
@@ -456,8 +456,8 @@ const EdgeComputingPlatform: React.FC = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 className={`relative rounded-xl p-8 ${
-                  plan.popular 
-                    ? 'bg-gradient-to-br from-blue-500/20 to-green-500/20 border-2 border-blue-500/50' 
+                  plan.popular
+                    ? 'bg-gradient-to-br from-blue-500/20 to-green-500/20 border-2 border-blue-500/50'
                     : 'bg-slate-800/50 border border-slate-700/50'
                 }`}
               >
@@ -468,7 +468,7 @@ const EdgeComputingPlatform: React.FC = () => {
                     </span>
                   </div>
                 )}
-                
+
                 <div className="text-center mb-8">
                   <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
                   <div className="flex items-baseline justify-center mb-4">
@@ -477,7 +477,7 @@ const EdgeComputingPlatform: React.FC = () => {
                   </div>
                   <p className="text-gray-300">{plan.description}</p>
                 </div>
-                
+
                 <ul className="space-y-4 mb-8">
                   {plan.features.map((feature, featureIndex) => (
                     <li key={featureIndex} className="flex items-center">
@@ -486,7 +486,7 @@ const EdgeComputingPlatform: React.FC = () => {
                     </li>
                   ))}
                 </ul>
-                
+
                 <button className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
                   plan.popular
                     ? 'bg-gradient-to-r from-blue-500 to-green-500 text-white hover:from-blue-600 hover:to-green-600'

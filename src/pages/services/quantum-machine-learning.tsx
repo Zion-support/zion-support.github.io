@@ -61,11 +61,11 @@ const QuantumMachineLearning: React.FC = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      <SEO 
+      <SEO
         title="Quantum Machine Learning Services - Zion Tech Group"
         description="Revolutionize your AI with quantum machine learning. Achieve exponential speedup and solve previously intractable problems with quantum computing."
       />
-      
+
       {/* Hero Section */}
       <section className="pt-20 pb-16 px-4">
         <div className="max-w-7xl mx-auto">
@@ -79,19 +79,19 @@ const QuantumMachineLearning: React.FC = () => {
               <Brain className="w-5 h-5 text-purple-400 mr-2" />
               <span className="text-purple-300 font-medium">Quantum Machine Learning</span>
             </div>
-            
+
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
               Quantum
               <span className="block text-transparent bg-clip-text bg-gradient-to-r from-purple-400 via-indigo-500 to-blue-400">
                 Machine Learning
               </span>
             </h1>
-            
+
             <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-              Revolutionize your AI with quantum machine learning. Achieve exponential speedup and solve 
+              Revolutionize your AI with quantum machine learning. Achieve exponential speedup and solve
               previously intractable problems with the power of quantum computing.
             </p>
-            
+
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="px-8 py-4 bg-gradient-to-r from-purple-500 to-indigo-600 text-white font-semibold rounded-lg hover:from-purple-400 hover:to-indigo-500 transition-all duration-200 hover:scale-105 shadow-lg shadow-purple-500/20">
                 Get Started
@@ -223,7 +223,7 @@ const QuantumMachineLearning: React.FC = () => {
             >
               <h3 className="text-2xl font-semibold text-white mb-6">Get Started Today</h3>
               <p className="text-gray-300 mb-6">
-                Ready to revolutionize your AI with quantum computing? Our quantum ML experts can help you 
+                Ready to revolutionize your AI with quantum computing? Our quantum ML experts can help you
                 implement solutions that provide exponential speedup and solve previously impossible problems.
               </p>
               <button className="w-full px-6 py-3 bg-gradient-to-r from-purple-500 to-indigo-600 text-white font-semibold rounded-lg hover:from-purple-400 hover:to-indigo-500 transition-all duration-200 hover:scale-105 shadow-lg shadow-purple-500/20">

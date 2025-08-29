@@ -44,10 +44,10 @@ export default function AdvancedServicesPage() {
             Advanced AI & IT Solutions
           </h1>
           <p className="text-xl text-zion-slate-light mb-8 max-w-3xl mx-auto">
-            Transform your business with cutting-edge artificial intelligence, cybersecurity, and digital transformation services. 
+            Transform your business with cutting-edge artificial intelligence, cybersecurity, and digital transformation services.
             Expert solutions designed for the modern enterprise.
           </p>
-          
+
           {/* Contact Information */}
           <div className="flex flex-wrap justify-center gap-6 mb-8">
             <div className="flex items-center gap-2 text-zion-cyan">
@@ -83,13 +83,13 @@ export default function AdvancedServicesPage() {
               <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate-light w-5 h-5"/>
               <Input placeholder="Search services, technologies, or solutions..." value={searchQuery} onChange={(e) => setSearchQuery(e.target.value)} className="pl-10 bg-zion-blue border-zion-blue-light text-white placeholder:text-zion-slate-light"/>
             </div>
-            
+
             <div className="flex gap-2">
               <select value={selectedCategory} onChange={(e) => setSelectedCategory(e.target.value)} className="px-4 py-2 bg-zion-blue border border-zion-blue-light text-white rounded-md">
                 <option value="all">All Categories</option>
                 {uniqueCategories.map(category => (<option key={category} value={category}>{category}</option>))}
               </select>
-              
+
               <select value={sortBy} onChange={(e) => setSortBy(e.target.value)} className="px-4 py-2 bg-zion-blue border border-zion-blue-light text-white rounded-md">
                 <option value="featured">Featured</option>
                 <option value="price-low">Price: Low to High</option>
@@ -111,7 +111,7 @@ export default function AdvancedServicesPage() {
               Comprehensive solutions across all major technology domains
             </p>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {SERVICE_CATEGORIES.map((category) => (<Card key={category.id} className="bg-zion-blue-dark border-zion-blue-light text-white hover:border-zion-cyan transition-all duration-300">
                 <CardHeader className="text-center">
@@ -158,7 +158,7 @@ export default function AdvancedServicesPage() {
               Choose the plan that fits your business needs and budget
             </p>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
             {PRICING_TIERS.map((tier, index) => (<Card key={tier.name} className={`bg-zion-blue-dark border-zion-blue-light text-white ${index === 1 ? 'border-zion-cyan scale-105' : ''}`}>
                 <CardHeader className="text-center">
@@ -193,7 +193,7 @@ export default function AdvancedServicesPage() {
               Proven expertise, innovative solutions, and dedicated support
             </p>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             <div className="text-center">
               <div className="w-16 h-16 bg-zion-cyan rounded-full flex items-center justify-center mx-auto mb-4">
@@ -202,7 +202,7 @@ export default function AdvancedServicesPage() {
               <h3 className="text-xl font-semibold text-zion-blue mb-2">AI Expertise</h3>
               <p className="text-zion-slate">Cutting-edge AI solutions with proven results</p>
             </div>
-            
+
             <div className="text-center">
               <div className="w-16 h-16 bg-zion-cyan rounded-full flex items-center justify-center mx-auto mb-4">
                 <Shield className="w-8 h-8 text-zion-blue"/>
@@ -210,7 +210,7 @@ export default function AdvancedServicesPage() {
               <h3 className="text-xl font-semibold text-zion-blue mb-2">Enterprise Security</h3>
               <p className="text-zion-slate">Bank-level security and compliance standards</p>
             </div>
-            
+
             <div className="text-center">
               <div className="w-16 h-16 bg-zion-cyan rounded-full flex items-center justify-center mx-auto mb-4">
                 <Users className="w-8 h-8 text-zion-blue"/>
@@ -218,7 +218,7 @@ export default function AdvancedServicesPage() {
               <h3 className="text-xl font-semibold text-zion-blue mb-2">Expert Team</h3>
               <p className="text-zion-slate">Certified professionals with industry experience</p>
             </div>
-            
+
             <div className="text-center">
               <div className="w-16 h-16 bg-zion-cyan rounded-full flex items-center justify-center mx-auto mb-4">
                 <TrendingUp className="w-8 h-8 text-zion-blue"/>
@@ -237,7 +237,7 @@ export default function AdvancedServicesPage() {
           <p className="text-zion-slate-light text-lg mb-8 max-w-2xl mx-auto">
             Get in touch with our experts to discuss your specific needs and discover how our AI and IT solutions can drive your business forward.
           </p>
-          
+
           <div className="flex flex-wrap justify-center gap-4 mb-8">
             <Button size="lg" className="bg-zion-cyan hover:bg-zion-cyan-dark text-zion-blue font-semibold">
               <Phone className="w-5 h-5 mr-2"/>
@@ -248,7 +248,7 @@ export default function AdvancedServicesPage() {
               Email kleber@ziontechgroup.com
             </Button>
           </div>
-          
+
           <div className="text-zion-slate-light">
             <p>Visit us: 364 E Main St STE 1008, Middletown DE 19709</p>
             <p className="mt-2">
@@ -270,7 +270,7 @@ function ServiceCard({ service }) {
             Featured
           </Badge>)}
       </div>
-      
+
       <CardHeader>
         <div className="flex items-start justify-between mb-2">
           <CardTitle className="text-xl text-zion-blue line-clamp-2">{service.title}</CardTitle>
@@ -281,12 +281,12 @@ function ServiceCard({ service }) {
             <div className="text-sm text-zion-slate">Starting Price</div>
           </div>
         </div>
-        
+
         <CardDescription className="text-zion-slate line-clamp-3">
           {service.description}
         </CardDescription>
       </CardHeader>
-      
+
       <CardContent className="space-y-4">
         {/* Tags */}
         <div className="flex flex-wrap gap-2">
@@ -294,7 +294,7 @@ function ServiceCard({ service }) {
               {tag}
             </Badge>))}
         </div>
-        
+
         {/* Service Details */}
         <div className="grid grid-cols-2 gap-4 text-sm">
           <div className="flex items-center gap-2 text-zion-slate">
@@ -314,13 +314,13 @@ function ServiceCard({ service }) {
             <span>{service.location}</span>
           </div>
         </div>
-        
+
         {/* Category */}
         <div className="text-sm text-zion-slate">
           <strong>Category:</strong> {service.category}
           {service.subcategory && (<span className="ml-2 text-zion-cyan">• {service.subcategory}</span>)}
         </div>
-        
+
         {/* CTA Buttons */}
         <div className="flex gap-2">
           <Button className="flex-1 bg-zion-cyan hover:bg-zion-cyan-dark text-zion-blue font-semibold">

@@ -75,10 +75,10 @@ export default function PricingPage() {
             Transparent Pricing
           </h1>
           <p className="text-xl md:text-2xl text-zion-slate-light mb-8 max-w-4xl mx-auto">
-            Choose the perfect plan for your business. All our micro SAAS services come with 
+            Choose the perfect plan for your business. All our micro SAAS services come with
             enterprise-grade features at startup-friendly prices.
           </p>
-          
+
           {/* Billing Toggle */}
           <div className="flex items-center justify-center gap-4 mb-8">
             <span className={`text-lg ${billingCycle === 'monthly' ? 'text-white' : 'text-zion-slate-light'}`}>
@@ -107,7 +107,7 @@ export default function PricingPage() {
               Start with Basic and scale up as your business grows. All plans include our core features.
             </p>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
             {Object.entries(PRICING_TIERS).map(([key, tier]) => (<Card key={key} className={`relative ${key === 'professional' ? 'border-zion-purple border-2 scale-105 shadow-xl' : ''}`}>
                 {key === 'professional' && (<div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
@@ -150,7 +150,7 @@ export default function PricingPage() {
               Explore our comprehensive range of micro SAAS solutions with transparent pricing
             </p>
           </div>
-          
+
           <Tabs defaultValue="all" className="w-full" onValueChange={(value) => setSelectedCategory(value)}>
             <TabsList className="grid w-full grid-cols-9 bg-zion-blue-dark border-zion-blue-light">
               <TabsTrigger value="all" className="text-white">All</TabsTrigger>
@@ -162,7 +162,7 @@ export default function PricingPage() {
                   </TabsTrigger>);
         })}
             </TabsList>
-            
+
             <TabsContent value={selectedCategory} className="mt-8">
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                 {filteredServices.map((service) => (<Card key={service.id} className="bg-white hover:shadow-lg transition-all duration-300 hover:scale-105">
@@ -224,7 +224,7 @@ export default function PricingPage() {
               See how our plans stack up against each other and the competition
             </p>
           </div>
-          
+
           <div className="overflow-x-auto">
             <table className="w-full border-collapse">
               <thead>
@@ -265,7 +265,7 @@ export default function PricingPage() {
               We deliver enterprise-grade solutions with startup agility and proven results
             </p>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {[
             {
@@ -314,7 +314,7 @@ export default function PricingPage() {
               Get in touch with our team to discuss your needs and find the perfect plan for your business
             </p>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 max-w-6xl mx-auto">
             <div>
               <h3 className="text-2xl font-bold text-zion-blue mb-6">Contact Information</h3>
@@ -351,7 +351,7 @@ export default function PricingPage() {
                 </div>
               </div>
             </div>
-            
+
             <div>
               <h3 className="text-2xl font-bold text-zion-blue mb-6">Quick Actions</h3>
               <div className="space-y-4">
@@ -371,7 +371,7 @@ export default function PricingPage() {
                   </Button>
                 </Link>
               </div>
-              
+
               <div className="mt-8 p-6 bg-zion-blue/5 rounded-lg border border-zion-blue/20">
                 <h4 className="font-medium text-zion-blue mb-2">What's Included:</h4>
                 <ul className="text-sm text-gray-600 space-y-1">
@@ -385,7 +385,7 @@ export default function PricingPage() {
               </div>
             </div>
           </div>
-          
+
           <div className="text-center mt-12">
             <Link to="/micro-saas-services">
               <Button size="lg" className="bg-zion-purple hover:bg-zion-purple-dark">

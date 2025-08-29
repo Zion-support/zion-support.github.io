@@ -231,11 +231,11 @@ export default function Training() {
     const matchesSearch = program.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
                          program.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
                          program.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()));
-    
+
     const matchesCategory = activeCategory === 'all' || program.category === activeCategory;
     const matchesLevel = activeLevel === 'all' || program.level === activeLevel;
     const matchesFormat = activeFormat === 'all' || program.format === activeFormat;
-    
+
     return matchesSearch && matchesCategory && matchesLevel && matchesFormat;
   });
 
@@ -412,7 +412,7 @@ export default function Training() {
                       </div>
                     </div>
                   </div>
-                  
+
                   <div className="p-6">
                     <div className="flex items-center gap-2 mb-3">
                       {getCategoryIcon(program.category)}
@@ -423,10 +423,10 @@ export default function Training() {
                         {levels.find(l => l.id === program.level)?.name}
                       </span>
                     </div>
-                    
+
                     <h3 className="text-xl font-semibold text-white mb-2">{program.title}</h3>
                     <p className="text-zion-slate-light text-sm mb-4">{program.description}</p>
-                    
+
                     <div className="flex items-center justify-between mb-4 text-sm text-zion-slate-light">
                       <div className="flex items-center gap-1">
                         <Users className="w-4 h-4" />
@@ -437,7 +437,7 @@ export default function Training() {
                         ${program.price.toLocaleString()}
                       </div>
                     </div>
-                    
+
                     <button className="w-full bg-zion-cyan text-zion-slate-dark py-2 rounded-lg font-semibold hover:bg-zion-cyan-light transition-colors">
                       Learn More
                     </button>
@@ -455,7 +455,7 @@ export default function Training() {
           <h2 className="text-3xl font-bold text-center text-white mb-12">
             All Training Programs
           </h2>
-          
+
           {filteredPrograms.length > 0 ? (
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-6xl mx-auto">
               {filteredPrograms.map((program) => (

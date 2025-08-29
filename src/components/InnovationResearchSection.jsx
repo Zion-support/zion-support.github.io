@@ -210,7 +210,7 @@ export function InnovationResearchSection() {
             Innovation & <span className="bg-gradient-to-r from-zion-cyan to-zion-purple bg-clip-text text-transparent">Research</span>
           </h2>
           <p className="text-zion-slate-light text-lg md:text-xl max-w-4xl mx-auto leading-relaxed mb-8">
-            At Zion Tech Group, we push the boundaries of technology through cutting-edge research, 
+            At Zion Tech Group, we push the boundaries of technology through cutting-edge research,
             innovative solutions, and collaborative partnerships with leading institutions worldwide.
           </p>
 
@@ -231,7 +231,7 @@ export function InnovationResearchSection() {
           <h3 className="text-3xl font-bold text-white text-center mb-12">
             Research <span className="bg-gradient-to-r from-zion-cyan to-zion-purple bg-clip-text text-transparent">Areas</span>
           </h3>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {researchAreas.map((area, index) => (<motion.div key={area.id} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.4, delay: index * 0.1 }} whileHover={{ y: -4 }} className="relative">
                 <div className="h-full p-6 rounded-2xl bg-gradient-to-br from-zion-blue-dark/80 to-zion-blue-dark/40 backdrop-blur-sm border border-zion-blue-light/30 hover:border-zion-cyan/50 transition-all duration-300 hover:shadow-lg hover:shadow-zion-cyan/20 group cursor-pointer" onClick={() => setSelectedResearch(selectedResearch === area.id ? null : area.id)}>
@@ -242,7 +242,7 @@ export function InnovationResearchSection() {
                         {area.icon}
                       </div>
                     </div>
-                    
+
                     <h4 className="text-xl font-bold text-white mb-3 group-hover:text-zion-cyan transition-colors">
                       {area.title}
                     </h4>
@@ -331,17 +331,17 @@ export function InnovationResearchSection() {
           <h3 className="text-3xl font-bold text-white text-center mb-12">
             Research <span className="bg-gradient-to-r from-zion-cyan to-zion-purple bg-clip-text text-transparent">Labs</span>
           </h3>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {researchLabs.map((lab, index) => (<motion.div key={index} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.4, delay: index * 0.1 }} onHoverStart={() => setHoveredLab(index)} onHoverEnd={() => setHoveredLab(null)} whileHover={{ y: -4 }} className="p-6 rounded-2xl bg-gradient-to-br from-zion-blue-dark/80 to-zion-blue-dark/40 backdrop-blur-sm border border-zion-blue-light/30 hover:border-zion-cyan/50 transition-all duration-300 hover:shadow-lg hover:shadow-zion-cyan/20">
                 <div className="inline-flex items-center justify-center w-12 h-12 rounded-xl bg-gradient-to-br from-zion-cyan to-zion-purple mb-4 shadow-lg">
                   <TestTube className="w-6 h-6 text-white"/>
                 </div>
-                
+
                 <h4 className="text-lg font-bold text-white mb-2">{lab.name}</h4>
                 <div className="text-zion-cyan text-sm mb-2">{lab.location}</div>
                 <p className="text-zion-slate-light text-sm mb-4 leading-relaxed">{lab.focus}</p>
-                
+
                 <div className="grid grid-cols-2 gap-3 mb-4">
                   <div className="text-center p-2 rounded-lg bg-zion-blue-light/20 border border-zion-cyan/30">
                     <div className="text-zion-cyan font-bold text-sm">{lab.projects}</div>
@@ -368,7 +368,7 @@ export function InnovationResearchSection() {
                 Join Our Research Community
               </h3>
               <p className="text-zion-slate-light mb-6 max-w-2xl mx-auto">
-                Collaborate with leading researchers, access cutting-edge facilities, and contribute to 
+                Collaborate with leading researchers, access cutting-edge facilities, and contribute to
                 breakthrough technologies that will shape the future.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">

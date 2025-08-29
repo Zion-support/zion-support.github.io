@@ -123,16 +123,16 @@ export default function Careers() {
             <div>
               <h2 className="text-3xl font-bold text-white mb-6">Why Work at Zion?</h2>
               <p className="text-zion-slate-light text-lg mb-6">
-                At Zion, we're not just building a marketplace; we're creating a new paradigm for how AI and 
+                At Zion, we're not just building a marketplace; we're creating a new paradigm for how AI and
                 technology are accessed, shared, and implemented globally.
               </p>
               <p className="text-zion-slate-light text-lg mb-6">
-                Our team is passionate about democratizing access to cutting-edge technology and connecting 
-                talented individuals with meaningful opportunities. We value innovation, collaboration, and 
+                Our team is passionate about democratizing access to cutting-edge technology and connecting
+                talented individuals with meaningful opportunities. We value innovation, collaboration, and
                 impact in everything we do.
               </p>
               <p className="text-zion-slate-light text-lg">
-                If you're excited about shaping the future of AI and technology while working in a dynamic, 
+                If you're excited about shaping the future of AI and technology while working in a dynamic,
                 remote-first environment with a mission-driven team, we'd love to meet you.
               </p>
             </div>
@@ -186,7 +186,7 @@ export default function Careers() {
           <div className="bg-gradient-to-r from-zion-blue-dark to-zion-blue-light border border-zion-purple/30 rounded-xl p-8 md:p-12 text-center">
             <h2 className="text-3xl font-bold text-white mb-6">Don't see the right position?</h2>
             <p className="text-zion-slate-light text-lg mb-8 max-w-2xl mx-auto">
-              We're always looking for talented individuals who are passionate about AI and technology. 
+              We're always looking for talented individuals who are passionate about AI and technology.
               Send us your resume and let's start a conversation.
             </p>
             <Button className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple">

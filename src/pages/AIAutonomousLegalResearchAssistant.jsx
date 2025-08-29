@@ -128,7 +128,7 @@ const AIAutonomousLegalResearchAssistant = () => {
             AI Autonomous Legal Research Assistant
           </h1>
           <p className="text-xl text-gray-300 max-w-4xl mx-auto mb-8">
-            Advanced AI-powered legal research tool that autonomously analyzes case law, statutes, 
+            Advanced AI-powered legal research tool that autonomously analyzes case law, statutes,
             and legal precedents to provide comprehensive legal insights and accelerate your research.
           </p>
           <div className="flex flex-wrap justify-center gap-4 mb-8">

@@ -93,7 +93,7 @@ const AIAutonomousResearch = () => {
               <span className="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent"> Sleeps</span>
             </h1>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-              Transform your research capabilities with AI-powered autonomous systems 
+              Transform your research capabilities with AI-powered autonomous systems
               that work around the clock to accelerate discoveries and insights.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -116,11 +116,11 @@ const AIAutonomousResearch = () => {
               Autonomous Research Features
             </h2>
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              Comprehensive AI capabilities that enable truly autonomous research 
+              Comprehensive AI capabilities that enable truly autonomous research
               across all domains and disciplines.
             </p>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {researchFeatures.map((feature, index) => (<div key={index} className="bg-slate-800/50 border border-white/10 rounded-xl p-6 hover:border-purple-500/50 transition-all duration-300">
                 <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full flex items-center justify-center mx-auto mb-4">
@@ -147,11 +147,11 @@ const AIAutonomousResearch = () => {
               Research Applications
             </h2>
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              Discover how autonomous AI research systems are transforming 
+              Discover how autonomous AI research systems are transforming
               various fields and accelerating discoveries.
             </p>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {applications.map((app, index) => (<div key={index} className="bg-slate-800/50 border border-white/10 rounded-xl p-6 text-center hover:border-purple-500/50 transition-all duration-300">
                 <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full flex items-center justify-center mx-auto mb-4">
@@ -173,7 +173,7 @@ const AIAutonomousResearch = () => {
                 Why Choose Autonomous Research?
               </h2>
               <p className="text-lg text-gray-300 mb-6">
-                AI-powered autonomous research systems provide unprecedented opportunities 
+                AI-powered autonomous research systems provide unprecedented opportunities
                 to accelerate discoveries and gain competitive advantages.
               </p>
               <ul className="space-y-3">
@@ -188,7 +188,7 @@ const AIAutonomousResearch = () => {
                 <Lightbulb className="w-24 h-24 text-purple-400 mx-auto mb-4"/>
                 <h3 className="text-2xl font-bold text-white mb-2">Research Innovation</h3>
                 <p className="text-gray-300 mb-6">
-                  We're at the forefront of AI autonomous research technology, 
+                  We're at the forefront of AI autonomous research technology,
                   enabling organizations to discover with unprecedented speed.
                 </p>
                 <div className="text-sm text-gray-400">
@@ -209,7 +209,7 @@ const AIAutonomousResearch = () => {
             Ready to Accelerate Your Research?
           </h2>
           <p className="text-xl text-gray-300 mb-8">
-            Let's discuss how AI autonomous research solutions can transform your 
+            Let's discuss how AI autonomous research solutions can transform your
             research capabilities and accelerate discoveries.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">

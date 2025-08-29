@@ -1,14 +1,14 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { SEO } from '@/components/SEO';
-import { 
-  Brain, 
-  Zap, 
-  Shield, 
-  TrendingUp, 
-  Users, 
-  CheckCircle, 
-  ArrowRight, 
+import {
+  Brain,
+  Zap,
+  Shield,
+  TrendingUp,
+  Users,
+  CheckCircle,
+  ArrowRight,
   Star,
   Award,
   Lightbulb,
@@ -201,11 +201,11 @@ export default function QuantumAIPlatform() {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      <SEO 
+      <SEO
         title="Quantum AI Platform - Zion Tech Group"
         description="Revolutionize your business with quantum computing and AI. Access unprecedented computational power for optimization, cryptography, and machine learning."
       />
-      
+
       {/* Hero Section */}
       <section className="relative overflow-hidden py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -219,16 +219,16 @@ export default function QuantumAIPlatform() {
               <Atom className="w-4 h-4 mr-2" />
               Next-Generation Quantum Technology
             </div>
-            
+
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
               Quantum AI Platform
             </h1>
-            
+
             <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-              Harness the power of quantum computing combined with artificial intelligence to solve 
+              Harness the power of quantum computing combined with artificial intelligence to solve
               the world's most complex problems. Experience computational capabilities beyond imagination.
             </p>
-            
+
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <motion.button
                 whileHover={{ scale: 1.05 }}
@@ -247,7 +247,7 @@ export default function QuantumAIPlatform() {
             </div>
           </motion.div>
         </div>
-        
+
         {/* Floating Elements */}
         <div className="absolute top-20 left-10 w-20 h-20 bg-blue-600/20 rounded-full blur-xl"></div>
         <div className="absolute bottom-20 right-10 w-32 h-32 bg-cyan-600/20 rounded-full blur-xl"></div>
@@ -266,7 +266,7 @@ export default function QuantumAIPlatform() {
               Quantum Computing Advantages
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Experience computational power that transcends classical computing limitations 
+              Experience computational power that transcends classical computing limitations
               and opens new frontiers in problem-solving.
             </p>
           </motion.div>
@@ -283,7 +283,7 @@ export default function QuantumAIPlatform() {
                 <div className="p-3 bg-gradient-to-r from-blue-600 to-cyan-600 rounded-lg mx-auto mb-4 w-fit">
                   <advantage.icon className="w-8 h-8 text-white" />
                 </div>
-                
+
                 <div className="text-4xl font-bold text-blue-400 mb-2">{advantage.metric}</div>
                 <h3 className="text-xl font-semibold text-white mb-2">{advantage.title}</h3>
                 <p className="text-gray-300 text-sm">{advantage.description}</p>
@@ -306,7 +306,7 @@ export default function QuantumAIPlatform() {
               Revolutionary Quantum Capabilities
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Our Quantum AI Platform combines cutting-edge quantum computing with advanced 
+              Our Quantum AI Platform combines cutting-edge quantum computing with advanced
               artificial intelligence to deliver unprecedented computational power.
             </p>
           </motion.div>
@@ -326,9 +326,9 @@ export default function QuantumAIPlatform() {
                   </div>
                   <h3 className="text-2xl font-semibold text-white">{feature.title}</h3>
                 </div>
-                
+
                 <p className="text-gray-300 mb-6">{feature.description}</p>
-                
+
                 <ul className="space-y-3">
                   {feature.benefits.map((benefit, benefitIndex) => (
                     <li key={benefitIndex} className="flex items-center text-gray-300">
@@ -356,7 +356,7 @@ export default function QuantumAIPlatform() {
               Quantum Computing Pricing
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Access the future of computing with our flexible quantum platform pricing. 
+              Access the future of computing with our flexible quantum platform pricing.
               Scale from research to enterprise deployment.
             </p>
           </motion.div>
@@ -369,8 +369,8 @@ export default function QuantumAIPlatform() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
                 className={`relative bg-slate-800/50 backdrop-blur-sm rounded-xl p-8 border ${
-                  plan.popular 
-                    ? 'border-blue-500 ring-2 ring-blue-500/20' 
+                  plan.popular
+                    ? 'border-blue-500 ring-2 ring-blue-500/20'
                     : 'border-slate-700'
                 }`}
               >
@@ -430,7 +430,7 @@ export default function QuantumAIPlatform() {
               Industry Applications
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Our Quantum AI Platform is revolutionizing industries by solving previously 
+              Our Quantum AI Platform is revolutionizing industries by solving previously
               intractable problems with unprecedented speed and accuracy.
             </p>
           </motion.div>
@@ -471,10 +471,10 @@ export default function QuantumAIPlatform() {
               Ready for the Quantum Revolution?
             </h2>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Join the quantum computing revolution and unlock computational capabilities 
+              Join the quantum computing revolution and unlock computational capabilities
               that will transform your industry and accelerate innovation.
             </p>
-            
+
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <motion.button
                 whileHover={{ scale: 1.05 }}

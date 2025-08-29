@@ -1,12 +1,12 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { 
-  Brain, 
-  TrendingUp, 
-  Shield, 
-  Zap, 
-  Lock, 
-  Globe, 
+import {
+  Brain,
+  TrendingUp,
+  Shield,
+  Zap,
+  Lock,
+  Globe,
   Database,
   Cloud,
   Rocket,
@@ -198,7 +198,7 @@ export default function AICybersecurityPlatform() {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
-      <SEO 
+      <SEO
         title="AI Cybersecurity Platform | Zion Tech Group"
         description="Protect your organization with AI-powered cybersecurity that detects 99.7% of threats, responds in seconds, and reduces security costs by 40-60%. Advanced threat intelligence and automated incident response."
         keywords="AI cybersecurity, threat detection, incident response, endpoint protection, network security, cloud security, threat intelligence"
@@ -217,7 +217,7 @@ export default function AICybersecurityPlatform() {
               AI Cybersecurity Platform
             </h1>
             <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
-              Protect your organization with AI-powered cybersecurity that detects 99.7% of threats, 
+              Protect your organization with AI-powered cybersecurity that detects 99.7% of threats,
               responds in seconds, and reduces security costs by 40-60%
             </p>
             <div className="flex flex-wrap justify-center gap-4">
@@ -245,7 +245,7 @@ export default function AICybersecurityPlatform() {
               Advanced AI-Powered Security Features
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Our platform combines cutting-edge AI with deep cybersecurity expertise to deliver 
+              Our platform combines cutting-edge AI with deep cybersecurity expertise to deliver
               unprecedented protection and threat intelligence.
             </p>
           </motion.div>
@@ -283,7 +283,7 @@ export default function AICybersecurityPlatform() {
               Comprehensive Security Capabilities
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              End-to-end cybersecurity protection across all your digital assets, 
+              End-to-end cybersecurity protection across all your digital assets,
               from endpoints to cloud infrastructure.
             </p>
           </motion.div>
@@ -331,7 +331,7 @@ export default function AICybersecurityPlatform() {
               Industry Use Cases
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              AI Cybersecurity is protecting critical industries across the globe, 
+              AI Cybersecurity is protecting critical industries across the globe,
               ensuring business continuity and data protection.
             </p>
           </motion.div>
@@ -379,7 +379,7 @@ export default function AICybersecurityPlatform() {
               Business Benefits
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Discover how AI Cybersecurity can transform your security posture 
+              Discover how AI Cybersecurity can transform your security posture
               and drive measurable business outcomes.
             </p>
           </motion.div>
@@ -417,7 +417,7 @@ export default function AICybersecurityPlatform() {
               Transparent Pricing
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Choose the perfect security plan for your business needs. All plans include a 14-day free trial 
+              Choose the perfect security plan for your business needs. All plans include a 14-day free trial
               and our industry-leading 99.9% uptime guarantee.
             </p>
           </motion.div>
@@ -430,8 +430,8 @@ export default function AICybersecurityPlatform() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 className={`relative bg-slate-800/50 p-8 rounded-xl border transition-all duration-300 hover:scale-105 ${
-                  plan.popular 
-                    ? 'border-red-400/50 bg-gradient-to-br from-red-500/10 to-orange-500/10' 
+                  plan.popular
+                    ? 'border-red-400/50 bg-gradient-to-br from-red-500/10 to-orange-500/10'
                     : 'border-slate-700/50 hover:border-red-400/50'
                 }`}
               >
@@ -442,7 +442,7 @@ export default function AICybersecurityPlatform() {
                     </span>
                   </div>
                 )}
-                
+
                 <div className="text-center mb-8">
                   <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
                   <div className="flex items-baseline justify-center">
@@ -487,7 +487,7 @@ export default function AICybersecurityPlatform() {
               Implementation Process
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Our proven methodology ensures successful AI Cybersecurity deployment 
+              Our proven methodology ensures successful AI Cybersecurity deployment
               and rapid security posture improvement.
             </p>
           </motion.div>
@@ -545,7 +545,7 @@ export default function AICybersecurityPlatform() {
               Ready to Secure Your Organization?
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-              Discover how AI-powered Cybersecurity can revolutionize your security posture 
+              Discover how AI-powered Cybersecurity can revolutionize your security posture
               and protect your critical assets from evolving threats.
             </p>
             <div className="flex flex-wrap justify-center gap-4">

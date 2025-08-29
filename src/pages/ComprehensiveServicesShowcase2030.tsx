@@ -11,7 +11,7 @@ const ComprehensiveServicesShowcase2030: React.FC = () => {
 
   const getFilteredServices = () => {
     let services: any[] = [];
-    
+
     switch (activeTab) {
       case 'microsaas':
         services = innovativeMicroSaasServices2030;
@@ -25,7 +25,7 @@ const ComprehensiveServicesShowcase2030: React.FC = () => {
     }
 
     if (searchTerm) {
-      services = services.filter(service => 
+      services = services.filter(service =>
         service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
         service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
         service.tags.some((tag: string) => tag.toLowerCase().includes(searchTerm.toLowerCase()))
@@ -41,7 +41,7 @@ const ComprehensiveServicesShowcase2030: React.FC = () => {
 
   const getCategories = () => {
     let services: any[] = [];
-    
+
     switch (activeTab) {
       case 'microsaas':
         services = innovativeMicroSaasServices2030;
@@ -69,9 +69,9 @@ const ComprehensiveServicesShowcase2030: React.FC = () => {
                 {service.pricing}
               </span>
             </div>
-            
+
             <p className="text-gray-600 mb-4">{service.description}</p>
-            
+
             <div className="mb-4">
               <div className="flex items-center justify-between mb-2">
                 <span className="text-2xl font-bold text-gray-900">${service.price.toLocaleString()}</span>
@@ -140,7 +140,7 @@ const ComprehensiveServicesShowcase2030: React.FC = () => {
                 <span><strong>Market Size:</strong> {service.marketSize}</span>
                 <span><strong>Growth Rate:</strong> {service.growthRate}</span>
               </div>
-              
+
               <div className="flex items-center justify-between">
                 <div className="text-sm text-gray-600">
                   <strong>Contact:</strong><br />
@@ -174,9 +174,9 @@ const ComprehensiveServicesShowcase2030: React.FC = () => {
                 {service.category}
               </span>
             </div>
-            
+
             <p className="text-gray-600 mb-4">{service.description}</p>
-            
+
             <div className="mb-4">
               <div className="grid grid-cols-2 gap-4 mb-4">
                 <div>
@@ -242,7 +242,7 @@ const ComprehensiveServicesShowcase2030: React.FC = () => {
                   <strong>Support:</strong> {service.support}
                 </div>
               </div>
-              
+
               <div className="flex items-center justify-between">
                 <div className="text-sm text-gray-600">
                   <strong>Contact:</strong><br />
@@ -281,9 +281,9 @@ const ComprehensiveServicesShowcase2030: React.FC = () => {
                 </div>
               </div>
             </div>
-            
+
             <p className="text-gray-600 mb-4">{service.description}</p>
-            
+
             <div className="mb-4">
               <div className="flex items-center justify-between mb-2">
                 <span className="text-2xl font-bold text-gray-900">${service.price.toLocaleString()}</span>
@@ -356,7 +356,7 @@ const ComprehensiveServicesShowcase2030: React.FC = () => {
                   <strong>Training Data:</strong> {service.trainingData}
                 </div>
               </div>
-              
+
               <div className="flex items-center justify-between">
                 <div className="text-sm text-gray-600">
                   <strong>Contact:</strong><br />
@@ -392,7 +392,7 @@ const ComprehensiveServicesShowcase2030: React.FC = () => {
         ogImage="https://ziontechgroup.com/images/services-showcase-2030.jpg"
         ogUrl="https://ziontechgroup.com/comprehensive-services-showcase-2030"
       />
-      
+
       <div className="min-h-screen bg-gradient-to-br from-gray-50 via-blue-50 to-purple-50">
         {/* Hero Section */}
         <div className="bg-gradient-to-r from-blue-900 via-purple-900 to-indigo-900 text-white">
@@ -402,7 +402,7 @@ const ComprehensiveServicesShowcase2030: React.FC = () => {
                 Comprehensive Services Showcase 2030
               </h1>
               <p className="text-xl md:text-2xl text-gray-200 mb-8">
-                Discover Zion Tech Group's cutting-edge micro SAAS, IT infrastructure, and AI services. 
+                Discover Zion Tech Group's cutting-edge micro SAAS, IT infrastructure, and AI services.
                 Real solutions with proven ROI, competitive pricing, and market-leading innovation.
               </p>
               <div className="flex flex-wrap justify-center gap-4 text-sm">

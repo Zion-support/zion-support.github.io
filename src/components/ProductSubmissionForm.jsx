@@ -210,7 +210,7 @@ export function ProductSubmissionForm() {
           AI-Powered Creation
         </TabsTrigger>
       </TabsList>
-      
+
       <TabsContent value="manual">
         <Form {...form}>
           <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
@@ -285,7 +285,7 @@ export function ProductSubmissionForm() {
                     Upload a high-quality image of your product (recommended size: 1200x800px)
                   </FormDescription>
                   <FormMessage />
-                  
+
                   {imagePreview && (<div className="mt-2 w-full max-w-md border rounded overflow-hidden">
                       <AspectRatio ratio={3 / 2}>
                         <img src={imagePreview} alt="Preview" className="w-full h-full object-cover"/>
@@ -323,7 +323,7 @@ export function ProductSubmissionForm() {
           </form>
         </Form>
       </TabsContent>
-      
+
       <TabsContent value="ai">
         <AIListingGenerator onApplyGenerated={handleApplyGenerated} initialValues={{
             title: form.getValues("title"),

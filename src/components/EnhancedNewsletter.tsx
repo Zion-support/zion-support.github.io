@@ -31,12 +31,12 @@ export const EnhancedNewsletter: React.FC = () => {
     interests: [],
     frequency: 'monthly'
   });
-  
+
   const [status, setStatus] = useState<'idle' | 'loading' | 'success' | 'error'>('idle');
-  const [errors, setErrors] = useState<Partial<NewsletterFormData>>({});
+  const [errors, setErrors] = useState<Partial<NewsletterFormData>>({ /* empty */ });
 
   const validateForm = (): boolean => {
-    const newErrors: Partial<NewsletterFormData> = {};
+    const newErrors: Partial<NewsletterFormData> = { /* empty */ };
 
     if (!formData.email) {
       newErrors.email = 'Email is required';
@@ -58,7 +58,7 @@ export const EnhancedNewsletter: React.FC = () => {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    
+
     if (!validateForm()) {
       return;
     }
@@ -68,12 +68,12 @@ export const EnhancedNewsletter: React.FC = () => {
     try {
       // Simulate API call
       await new Promise(resolve => setTimeout(resolve, 2000));
-      
+
       // Here you would typically send the data to your newsletter service
-      console.log('Newsletter subscription:', formData);
-      
+      // console.log('Newsletter subscription:', formData);
+
       setStatus('success');
-      
+
       // Reset form after successful submission
       setTimeout(() => {
         setFormData({
@@ -84,10 +84,10 @@ export const EnhancedNewsletter: React.FC = () => {
         });
         setStatus('idle');
       }, 3000);
-      
+
     } catch (error) {
       setStatus('error');
-      console.error('Newsletter subscription error:', error);
+      // console.error('Newsletter subscription error:', error);
     }
   };
 
@@ -98,7 +98,7 @@ export const EnhancedNewsletter: React.FC = () => {
         ? prev.interests.filter(id => id !== interestId)
         : [...prev.interests, interestId]
     }));
-    
+
     // Clear error when user selects an interest
     if (errors.interests) {
       setErrors(prev => ({ ...prev, interests: undefined }));
@@ -107,7 +107,7 @@ export const EnhancedNewsletter: React.FC = () => {
 
   const handleInputChange = (field: keyof NewsletterFormData, value: string | string[]) => {
     setFormData(prev => ({ ...prev, [field]: value }));
-    
+
     // Clear error when user starts typing
     if (errors[field]) {
       setErrors(prev => ({ ...prev, [field]: undefined }));
@@ -147,7 +147,7 @@ export const EnhancedNewsletter: React.FC = () => {
         >
           <Mail className="h-8 w-8 text-white" />
         </motion.div>
-        
+
         <motion.h2
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -156,7 +156,7 @@ export const EnhancedNewsletter: React.FC = () => {
         >
           Stay Ahead with Zion Tech Insights
         </motion.h2>
-        
+
         <motion.p
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -234,7 +234,7 @@ export const EnhancedNewsletter: React.FC = () => {
             {interests.map((interest) => {
               const Icon = interest.icon;
               const isSelected = formData.interests.includes(interest.id);
-              
+
               return (
                 <motion.button
                   key={interest.id}
@@ -313,8 +313,8 @@ export const EnhancedNewsletter: React.FC = () => {
               ? 'bg-slate-400 cursor-not-allowed'
               : 'bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 shadow-lg hover:shadow-xl'
           }`}
-          whileHover={status !== 'loading' ? { scale: 1.02 } : {}}
-          whileTap={status !== 'loading' ? { scale: 0.98 } : {}}
+          whileHover={status !== 'loading' ? { scale: 1.02 } : { /* empty */ }}
+          whileTap={status !== 'loading' ? { scale: 0.98 } : { /* empty */ }}
         >
           {status === 'loading' ? (
             <>
@@ -345,7 +345,7 @@ export const EnhancedNewsletter: React.FC = () => {
 
         {/* Privacy Notice */}
         <p className="text-xs text-slate-500 dark:text-slate-400 text-center">
-          By subscribing, you agree to receive marketing emails from Zion Tech Group. 
+          By subscribing, you agree to receive marketing emails from Zion Tech Group.
           You can unsubscribe at any time. We respect your privacy and will never share your information.
         </p>
       </motion.form>

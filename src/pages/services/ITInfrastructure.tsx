@@ -134,7 +134,7 @@ export default function ITInfrastructure() {
 
   return (
     <div className="min-h-screen bg-futuristic relative overflow-hidden">
-      <SEO 
+      <SEO
         title="IT Infrastructure Services - Zion Tech Group"
         description="Build robust, scalable IT infrastructure with our enterprise-grade solutions. From server management to network optimization, we've got you covered."
         keywords="IT infrastructure, server management, network infrastructure, database administration, IT consulting"
@@ -155,7 +155,7 @@ export default function ITInfrastructure() {
         {/* Hero Section */}
         <section className="pt-32 pb-20">
           <div className="container-responsive">
-            <motion.div 
+            <motion.div
               className="text-center max-w-4xl mx-auto"
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
@@ -169,18 +169,18 @@ export default function ITInfrastructure() {
                 Build <span className="bg-gradient-to-r from-blue-400 via-purple-500 to-cyan-500 bg-clip-text text-transparent">Rock-Solid</span> Infrastructure
               </h1>
               <p className="text-xl text-zinc-300 mb-8 leading-relaxed">
-                Design, build, and maintain enterprise-grade IT infrastructure that scales with your business. 
+                Design, build, and maintain enterprise-grade IT infrastructure that scales with your business.
                 From server management to network optimization, we ensure your technology foundation is robust and reliable.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Link 
+                <Link
                   to="/contact"
                   className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-500 text-white font-semibold rounded-lg hover:from-blue-600 hover:to-purple-600 transition-all duration-300 transform hover:scale-105"
                 >
                   Get Started
                   <ArrowRight className="w-5 h-5 ml-2" />
                 </Link>
-                <Link 
+                <Link
                   to="/request-quote"
                   className="inline-flex items-center px-8 py-4 border border-blue-500/30 text-blue-400 font-semibold rounded-lg hover:bg-blue-500/10 transition-all duration-300"
                 >
@@ -194,7 +194,7 @@ export default function ITInfrastructure() {
         {/* Infrastructure Types Section */}
         <section className="py-20">
           <div className="container-responsive">
-            <motion.div 
+            <motion.div
               className="text-center mb-16"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -241,7 +241,7 @@ export default function ITInfrastructure() {
         {/* Features Section */}
         <section className="py-20 bg-white/5">
           <div className="container-responsive">
-            <motion.div 
+            <motion.div
               className="text-center mb-16"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -280,7 +280,7 @@ export default function ITInfrastructure() {
         {/* Pricing Section */}
         <section className="py-20">
           <div className="container-responsive">
-            <motion.div 
+            <motion.div
               className="text-center mb-16"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -300,8 +300,8 @@ export default function ITInfrastructure() {
                 <motion.div
                   key={index}
                   className={`relative p-8 rounded-2xl ${
-                    plan.popular 
-                      ? 'bg-gradient-to-br from-blue-500/20 to-purple-500/20 border-2 border-blue-500/50' 
+                    plan.popular
+                      ? 'bg-gradient-to-br from-blue-500/20 to-purple-500/20 border-2 border-blue-500/50'
                       : 'bg-white/5 border border-white/10'
                   } backdrop-blur-sm`}
                   initial={{ opacity: 0, y: 30 }}
@@ -316,7 +316,7 @@ export default function ITInfrastructure() {
                       </span>
                     </div>
                   )}
-                  
+
                   <div className="text-center mb-6">
                     <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
                     <div className="flex items-baseline justify-center mb-2">
@@ -354,7 +354,7 @@ export default function ITInfrastructure() {
         {/* Benefits Section */}
         <section className="py-20 bg-white/5">
           <div className="container-responsive">
-            <motion.div 
+            <motion.div
               className="text-center mb-16"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -408,14 +408,14 @@ export default function ITInfrastructure() {
                 Join hundreds of companies that trust Zion Tech Group with their critical infrastructure needs
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Link 
+                <Link
                   to="/contact"
                   className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-500 text-white font-semibold rounded-lg hover:from-blue-600 hover:to-purple-600 transition-all duration-300 transform hover:scale-105"
                 >
                   Start Your Journey
                   <ArrowRight className="w-5 h-5 ml-2" />
                 </Link>
-                <Link 
+                <Link
                   to="/request-quote"
                   className="inline-flex items-center px-8 py-4 border border-blue-500/30 text-blue-400 font-semibold rounded-lg hover:bg-blue-500/10 transition-all duration-300"
                 >

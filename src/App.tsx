@@ -204,41 +204,41 @@ const ErrorFallback = ({ error, resetErrorBoundary }: { error: Error; resetError
 function App() {
   return (
     <HelmetProvider>
-      <ErrorBoundary fallback={<ErrorFallback error={new Error()} resetErrorBoundary={() => {}} />}>
+      <ErrorBoundary fallback={<ErrorFallback error={new Error()} resetErrorBoundary={() => { /* empty */ }} />}>
         <Router>
           <div className="App min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
             {/* SEO Component */}
-            <SEO 
+            <SEO
               title="Zion Tech Group - Leading AI & Technology Solutions"
               description="Transform your business with Zion Tech Group's cutting-edge AI solutions, quantum computing, and innovative micro SAAS services. Leading the future of technology."
               keywords="AI solutions, quantum computing, micro SAAS, technology consulting, digital transformation"
               ogImage="/og-image.jpg"
               canonicalUrl="https://ziontechgroup.com"
             />
-            
+
             {/* Performance Optimizer */}
             <PerformanceOptimizer enabled={true} />
-            
+
             {/* Enhanced Accessibility */}
             <EnhancedAccessibilityEnhancer enabled={true} />
-            
+
             {/* Mobile Experience Enhancer */}
             <MobileExperienceEnhancer enabled={true} />
-            
+
             {/* Advanced Analytics */}
             <AdvancedAnalytics enabled={true} showMetrics={true} />
-            
+
             {/* Header */}
             <EnhancedHeader />
-            
+
             {/* Main Content */}
             <main className="flex-1">
               <Suspense fallback={<LoadingSpinner />}>
                 <AnimatePresence mode="wait">
                   <Routes>
                     {/* Core Routes */}
-                    <Route 
-                      path="/" 
+                    <Route
+                      path="/"
                       element={
                         <motion.div
                           initial={{ opacity: 0 }}
@@ -248,7 +248,7 @@ function App() {
                         >
                           <Home />
                         </motion.div>
-                      } 
+                      }
                     />
                     <Route path="/home2026" element={<Home2026 />} />
                     <Route path="/about" element={<About />} />
@@ -274,7 +274,7 @@ function App() {
                     <Route path="/services" element={<Services />} />
                     <Route path="/services2026" element={<Services2026 />} />
                     <Route path="/services2027" element={<Services2027 />} />
-                    
+
                     {/* Service Routes */}
                     <Route path="/ai-services" element={<AIServices />} />
                     <Route path="/ai-solutions" element={<AISolutions />} />
@@ -303,19 +303,19 @@ function App() {
                     <Route path="/quantum-technology" element={<GreenIT />} />
                     <Route path="/financial-solutions" element={<GreenIT />} />
                     <Route path="/mobile" element={<GreenIT />} />
-                    
+
                     {/* 2025 Innovative Services Routes */}
                     <Route path="/innovative-services-landing-2025" element={<InnovativeServicesLanding2025 />} />
                     <Route path="/comprehensive-services-showcase-2025" element={<ComprehensiveServicesShowcase2025 />} />
                     <Route path="/comprehensive-pricing-guide-2025" element={<ComprehensivePricingGuide2025 />} />
-                    
+
                     {/* Enhanced Services Showcase 2025 */}
                     <Route path="/enhanced-services-showcase-2025" element={
                       <Suspense fallback={<div className="loading-spinner mx-auto mt-20"></div>}>
                         <EnhancedServicesShowcase2025 />
                       </Suspense>
                     } />
-                    
+
                     {/* Comprehensive Services Routes */}
                     <Route path="/comprehensive-services-showcase-2025" element={<ComprehensiveServicesShowcase2025Page />} />
                     <Route path="/ultimate-services-showcase-2026" element={<UltimateServicesShowcase2026 />} />
@@ -324,12 +324,12 @@ function App() {
                     <Route path="/comprehensive-pricing-guide-2027" element={<ComprehensivePricingGuide2027 />} />
                     <Route path="/comprehensive-pricing-2026" element={<ComprehensivePricing2026 />} />
                     <Route path="/comprehensive-pricing-2028" element={<ComprehensivePricing2028 />} />
-                    
+
                     {/* Innovative Services Routes */}
                     <Route path="/innovative-services-showcase-2025" element={<InnovativeServicesShowcase2025 />} />
                     <Route path="/ultimate-innovative-services-showcase-2025" element={<UltimateInnovativeServicesShowcase2025 />} />
                     <Route path="/new-services-showcase-2025" element={<NewServicesShowcase2025 />} />
-                    
+
                     {/* Service Detail Routes */}
                     <Route path="/services/ai-business-intelligence" element={<AIBusinessIntelligence />} />
                     <Route path="/services/ai-compliance-assistant" element={<AIComplianceAssistant />} />
@@ -361,7 +361,7 @@ function App() {
                     <Route path="/services/ai-autonomous-research-assistant" element={<AIAutonomousResearchAssistant />} />
                     <Route path="/services/ai-supply-chain-optimization" element={<AISupplyChainOptimization />} />
                     <Route path="/services/ai-healthcare-platform" element={<AIHealthcarePlatform />} />
-                    
+
                     {/* AI Service Routes */}
                     <Route path="/services/ai-legal-document-automation" element={<AILegalDocumentAutomation />} />
                     <Route path="/services/ai-healthcare-analytics" element={<AIHealthcareAnalytics />} />
@@ -376,39 +376,39 @@ function App() {
                     <Route path="/services/ai-predictive-maintenance" element={<AIPredictiveMaintenance />} />
                     <Route path="/services/ai-sustainable-technology" element={<AISustainableTechnology />} />
                     <Route path="/services/ai-quantum-machine-learning" element={<AIQuantumMachineLearning />} />
-                    
+
                     {/* 2025 New Innovative Services */}
                     <Route path="/services/ai-supply-chain-risk-management" element={<AISupplyChainRiskManagement />} />
                     <Route path="/services/ai-esg-compliance-platform" element={<AIESGCompliancePlatform />} />
                     <Route path="/services/ai-digital-twin-platform" element={<AIDigitalTwinPlatform />} />
                     <Route path="/services/ai-quantum-computing-platform" element={<AIQuantumComputingPlatform />} />
                     <Route path="/services/ai-edge-computing-platform" element={<AIEdgeComputingPlatform />} />
-                    
+
                     {/* Additional Service Routes */}
                     <Route path="/services/ai-cybersecurity" element={<AICybersecurity />} />
                     <Route path="/services/ai-hr-platform" element={<AIHRPlatform />} />
                     <Route path="/services/sustainable-technology" element={<SustainableTechnology />} />
                     <Route path="/services/ai-content-creation" element={<AIContentCreation />} />
                     <Route path="/services/quantum-machine-learning" element={<QuantumMachineLearning />} />
-                    
+
                     {/* Additional Pages */}
                     <Route path="/api" element={<API />} />
                     <Route path="/developer-portal" element={<DeveloperPortal />} />
-                    
+
                     {/* Showcase Routes */}
                     <Route path="/ultimate-services-2025" element={<UltimateServicesShowcase2025 />} />
                     <Route path="/ultimate-services-2026" element={<UltimateServicesShowcase2026 />} />
                     <Route path="/comprehensive-pricing-2026" element={<ComprehensivePricing2026 />} />
                     <Route path="/comprehensive-pricing-2028" element={<ComprehensivePricing2028 />} />
                     <Route path="/innovative-services-2025" element={<InnovativeServicesLanding2025 />} />
-                    
+
                     {/* 2029 Cutting-Edge Services */}
                     <Route path="/zion-cutting-edge-services-2029" element={<ZionCuttingEdgeServices2029 />} />
                     <Route path="/cutting-edge-services-2029" element={<ZionCuttingEdgeServices2029 />} />
-                    
+
                     {/* 404 Page */}
-                    <Route 
-                      path="*" 
+                    <Route
+                      path="*"
                       element={
                         <motion.div
                           initial={{ opacity: 0 }}
@@ -437,25 +437,25 @@ function App() {
                             </button>
                           </div>
                         </motion.div>
-                      } 
+                      }
                     />
                   </Routes>
                 </AnimatePresence>
               </Suspense>
             </main>
-            
+
             {/* Footer */}
             <EnhancedFooter />
-            
+
             {/* Floating Action Button */}
             <FloatingActionButton enabled={true} />
-            
+
             {/* Smart Notification System */}
             <SmartNotificationSystem enabled={true} />
-            
+
             {/* Chat Assistant */}
-            <ChatAssistant 
-              enabled={true} 
+            <ChatAssistant
+              enabled={true}
               position="bottom-right"
               theme="auto"
               language="en"

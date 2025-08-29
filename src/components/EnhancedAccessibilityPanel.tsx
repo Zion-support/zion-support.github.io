@@ -1,12 +1,12 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { 
-  Eye, 
-  EyeOff, 
-  Volume2, 
-  VolumeX, 
-  Type, 
-  Contrast, 
+import {
+  Eye,
+  EyeOff,
+  Volume2,
+  VolumeX,
+  Type,
+  Contrast,
   MousePointer,
   Keyboard,
   Monitor,
@@ -52,7 +52,7 @@ export const EnhancedAccessibilityPanel: React.FC = () => {
         setSettings(prev => ({ ...prev, ...parsed }));
         applySettings({ ...prev, ...parsed });
       } catch (error) {
-        console.error('Failed to parse accessibility settings:', error);
+        // console.error('Failed to parse accessibility settings:', error);
       }
     }
   }, []);
@@ -60,7 +60,7 @@ export const EnhancedAccessibilityPanel: React.FC = () => {
   // Apply accessibility settings to the document
   const applySettings = useCallback((newSettings: AccessibilitySettings) => {
     const root = document.documentElement;
-    
+
     // High contrast mode
     if (newSettings.highContrast) {
       root.classList.add('high-contrast');
@@ -134,9 +134,9 @@ export const EnhancedAccessibilityPanel: React.FC = () => {
     const focusableElements = document.querySelectorAll(
       'a[href], button:not([disabled]), input:not([disabled]), textarea:not([disabled]), select:not([disabled]), [tabindex]:not([tabindex="-1"])'
     );
-    
+
     const currentIndex = Array.from(focusableElements).findIndex(el => el === document.activeElement);
-    
+
     switch (event.key) {
       case 'Tab':
         // Let default tab behavior work
@@ -173,9 +173,9 @@ export const EnhancedAccessibilityPanel: React.FC = () => {
     announcement.setAttribute('aria-atomic', 'true');
     announcement.className = 'sr-only';
     announcement.textContent = message;
-    
+
     document.body.appendChild(announcement);
-    
+
     // Remove after announcement
     setTimeout(() => {
       if (announcement.parentNode) {
@@ -193,7 +193,7 @@ export const EnhancedAccessibilityPanel: React.FC = () => {
     const newSettings = { ...settings, [key]: value };
     setSettings(newSettings);
     applySettings(newSettings);
-    
+
     // Announce changes to screen reader
     const settingNames = {
       highContrast: 'high contrast mode',
@@ -205,7 +205,7 @@ export const EnhancedAccessibilityPanel: React.FC = () => {
       colorBlindness: 'color blindness simulation',
       fontSize: 'font size'
     };
-    
+
     announceToScreenReader(`${settingNames[key]} ${value ? 'enabled' : 'disabled'}`);
   }, [settings, applySettings, announceToScreenReader]);
 
@@ -221,7 +221,7 @@ export const EnhancedAccessibilityPanel: React.FC = () => {
       colorBlindness: 'none',
       fontSize: 'medium'
     };
-    
+
     setSettings(defaultSettings);
     applySettings(defaultSettings);
     announceToScreenReader('Accessibility settings reset to defaults');
@@ -299,7 +299,7 @@ export const EnhancedAccessibilityPanel: React.FC = () => {
                   <Monitor className="w-4 h-4" />
                   Visual Settings
                 </h3>
-                
+
                 <div className="space-y-3">
                   <label className="flex items-center justify-between cursor-pointer">
                     <span className="text-sm text-slate-700 dark:text-slate-300">High Contrast</span>
@@ -395,7 +395,7 @@ export const EnhancedAccessibilityPanel: React.FC = () => {
                   <Keyboard className="w-4 h-4" />
                   Navigation Settings
                 </h3>
-                
+
                 <div className="space-y-3">
                   <label className="flex items-center justify-between cursor-pointer">
                     <span className="text-sm text-slate-700 dark:text-slate-300">Keyboard Navigation</span>
@@ -441,7 +441,7 @@ export const EnhancedAccessibilityPanel: React.FC = () => {
                   <Volume2 className="w-4 h-4" />
                   Screen Reader Support
                 </h3>
-                
+
                 <div className="space-y-3">
                   <label className="flex items-center justify-between cursor-pointer">
                     <span className="text-sm text-slate-700 dark:text-slate-300">Screen Reader Mode</span>

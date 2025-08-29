@@ -18,15 +18,15 @@ export default function TranslationManager() {
     const { translateContent, isTranslating } = useTranslationService();
     const [selectedNamespace, setSelectedNamespace] = useState("translation");
     const [searchQuery, setSearchQuery] = useState("");
-    const [translations, setTranslations] = useState({});
+    const [translations, setTranslations] = useState({ /* empty */ });
     const [filteredKeys, setFilteredKeys] = useState([]);
     const [editingKey, setEditingKey] = useState(null);
-    const [editedTranslations, setEditedTranslations] = useState({});
+    const [editedTranslations, setEditedTranslations] = useState({ /* empty */ });
     const [isSaving, setIsSaving] = useState(false);
     // Simulated translation data - in a real app, this would come from your backend
     useEffect(() => {
         // For demo purposes, we're using the loaded translations from i18next
-        const currentTranslations = {};
+        const currentTranslations = { /* empty */ };
         supportedLanguages.forEach(lang => {
             const res = i18n.getResourceBundle(lang.code, selectedNamespace);
             if (res) {
@@ -41,7 +41,7 @@ export default function TranslationManager() {
                             acc[`${pre}${key}`] = obj[key];
                         }
                         return acc;
-                    }, {});
+                    }, { /* empty */ });
                 };
                 currentTranslations[lang.code] = flattenObject(res);
             }
@@ -81,7 +81,7 @@ export default function TranslationManager() {
     const handleEdit = (key) => {
         setEditingKey(key);
         // Initialize edited translations for this key
-        const initialEdits = {};
+        const initialEdits = { /* empty */ };
         supportedLanguages.forEach(lang => {
             initialEdits[lang.code] = translations[lang.code]?.[key] || '';
         });
@@ -98,7 +98,7 @@ export default function TranslationManager() {
             const updatedTranslations = { ...translations };
             supportedLanguages.forEach(lang => {
                 if (!updatedTranslations[lang.code]) {
-                    updatedTranslations[lang.code] = {};
+                    updatedTranslations[lang.code] = { /* empty */ };
                 }
                 updatedTranslations[lang.code][key] = editedTranslations[key][lang.code];
             });
@@ -151,7 +151,7 @@ export default function TranslationManager() {
             });
         }
         catch (error) {
-            console.error(`Error translating key ${key}:`, error);
+            // console.error(`Error translating key ${key}:`, error);
             toast({
                 title: t('translation.translation_failed'),
                 description: error instanceof Error ? error.message : t('translation.unknown_error'),
@@ -178,7 +178,7 @@ export default function TranslationManager() {
     };
     return (<>
       <SEO title={t('translation.manager_title')} description={t('translation.manager_description')}/>
-      
+
       <main className={`container mx-auto px-${isMobile ? '4' : '6'} py-8`}>
         <Card>
           <CardHeader>
@@ -199,7 +199,7 @@ export default function TranslationManager() {
                   </TabsList>
                 </Tabs>
               </div>
-              
+
               {/* Translations table */}
               <div className="border rounded-md">
                 <div className="grid grid-cols-[1fr_2fr] sm:grid-cols-[1fr_2fr_auto] border-b">
@@ -207,7 +207,7 @@ export default function TranslationManager() {
                   <div className="p-3 font-medium">{t('translation.translations')}</div>
                   <div className="hidden sm:block p-3 font-medium">{t('translation.actions')}</div>
                 </div>
-                
+
                 {filteredKeys.length === 0 ? (<div className="p-6 text-center text-muted-foreground">
                     {t('translation.no_results')}
                   </div>) : (<div className="divide-y">
@@ -268,6 +268,6 @@ export default function TranslationManager() {
           </CardContent>
         </Card>
       </main>
-      
+
     </>);
 }

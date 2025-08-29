@@ -229,7 +229,7 @@ const AdvancedServiceInnovationHub = () => {
               Explore cutting-edge innovation trends, future technology roadmaps, and strategic insights for the next generation of services
             </p>
           </div>
-          
+
           <div className="flex gap-2">
             {['trends', 'roadmap', 'insights'].map((mode) => (<Button key={mode} variant={viewMode === mode ? 'default' : 'outline'} size="sm" onClick={() => setViewMode(mode)}>
                 {mode === 'trends' && <TrendingUp className="w-4 h-4 mr-2"/>}
@@ -254,7 +254,7 @@ const AdvancedServiceInnovationHub = () => {
                     </option>))}
                 </select>
               </div>
-              
+
               <div>
                 <label className="block text-sm font-medium text-zion-slate-dark mb-2">Impact</label>
                 <select value={selectedImpact} onChange={(e) => setSelectedImpact(e.target.value)} className="w-full p-2 border border-zion-slate-light rounded-md">
@@ -309,18 +309,18 @@ const AdvancedServiceInnovationHub = () => {
                       </div>
                     </div>
                   </CardHeader>
-                  
+
                   <CardContent>
                     <p className="text-zion-slate-light mb-4">
                       {trend.description}
                     </p>
-                    
+
                     <div className="space-y-3">
                       <div className="flex justify-between items-center">
                         <span className="text-sm text-zion-slate-light">Timeline:</span>
                         <span className="text-sm font-medium text-zion-slate-dark">{trend.timeline}</span>
                       </div>
-                      
+
                       <div className="flex justify-between items-center">
                         <span className="text-sm text-zion-slate-light">Adoption Rate:</span>
                         <div className="flex items-center gap-2">
@@ -330,12 +330,12 @@ const AdvancedServiceInnovationHub = () => {
                           <span className="text-sm font-medium">{trend.adoption}%</span>
                         </div>
                       </div>
-                      
+
                       <div className="flex justify-between items-center">
                         <span className="text-sm text-zion-slate-light">Investment:</span>
                         <span className="text-sm font-medium text-zion-cyan">{trend.investment}</span>
                       </div>
-                      
+
                       <div>
                         <span className="text-sm text-zion-slate-light">Key Technologies:</span>
                         <div className="flex flex-wrap gap-1 mt-1">
@@ -344,7 +344,7 @@ const AdvancedServiceInnovationHub = () => {
                             </Badge>))}
                         </div>
                       </div>
-                      
+
                       <div>
                         <span className="text-sm text-zion-slate-light">Key Players:</span>
                         <div className="flex flex-wrap gap-1 mt-1">
@@ -378,7 +378,7 @@ const AdvancedServiceInnovationHub = () => {
                           <p className="text-zion-slate-light">{roadmap.description}</p>
                         </div>
                       </div>
-                      
+
                       <div className="flex flex-wrap gap-2">
                         <Badge className="bg-zion-blue-light/10 text-zion-blue-dark">
                           Timeline: {roadmap.timeline}
@@ -393,7 +393,7 @@ const AdvancedServiceInnovationHub = () => {
                     </div>
                   </div>
                 </CardHeader>
-                
+
                 <CardContent>
                   <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
                     <div>
@@ -408,7 +408,7 @@ const AdvancedServiceInnovationHub = () => {
                           </li>))}
                       </ul>
                     </div>
-                    
+
                     <div>
                       <h4 className="font-semibold text-zion-slate-dark mb-3 flex items-center gap-2">
                         <Shield className="w-4 h-4 text-orange-500"/>
@@ -421,7 +421,7 @@ const AdvancedServiceInnovationHub = () => {
                           </li>))}
                       </ul>
                     </div>
-                    
+
                     <div>
                       <h4 className="font-semibold text-zion-slate-dark mb-3 flex items-center gap-2">
                         <Star className="w-4 h-4 text-yellow-500"/>
@@ -459,7 +459,7 @@ const AdvancedServiceInnovationHub = () => {
                   <div className="w-full bg-zion-slate-light/20 rounded-full h-2">
                     <div className="bg-zion-cyan h-2 rounded-full" style={{ width: '85%' }}></div>
                   </div>
-                  
+
                   <div className="flex justify-between items-center">
                     <span className="text-zion-slate-light">AI & Machine Learning</span>
                     <span className="font-semibold text-zion-purple">$300B+</span>
@@ -467,7 +467,7 @@ const AdvancedServiceInnovationHub = () => {
                   <div className="w-full bg-zion-slate-light/20 rounded-full h-2">
                     <div className="bg-zion-purple h-2 rounded-full" style={{ width: '95%' }}></div>
                   </div>
-                  
+
                   <div className="flex justify-between items-center">
                     <span className="text-zion-slate-light">Space Technology</span>
                     <span className="font-semibold text-zion-blue">$200B+</span>
@@ -475,7 +475,7 @@ const AdvancedServiceInnovationHub = () => {
                   <div className="w-full bg-zion-slate-light/20 rounded-full h-2">
                     <div className="bg-zion-blue h-2 rounded-full" style={{ width: '70%' }}></div>
                   </div>
-                  
+
                   <div className="flex justify-between items-center">
                     <span className="text-zion-slate-light">Biotech AI</span>
                     <span className="font-semibold text-zion-green">$100B+</span>
@@ -503,7 +503,7 @@ const AdvancedServiceInnovationHub = () => {
                   <div className="w-full bg-zion-slate-light/20 rounded-full h-2">
                     <div className="bg-zion-cyan h-2 rounded-full" style={{ width: '15%' }}></div>
                   </div>
-                  
+
                   <div className="flex justify-between items-center">
                     <span className="text-zion-slate-light">Growing Market</span>
                     <span className="font-semibold text-zion-purple">35%</span>
@@ -511,7 +511,7 @@ const AdvancedServiceInnovationHub = () => {
                   <div className="w-full bg-zion-slate-light/20 rounded-full h-2">
                     <div className="bg-zion-purple h-2 rounded-full" style={{ width: '35%' }}></div>
                   </div>
-                  
+
                   <div className="flex justify-between items-center">
                     <span className="text-zion-slate-light">Mainstream</span>
                     <span className="font-semibold text-zion-blue">40%</span>
@@ -519,7 +519,7 @@ const AdvancedServiceInnovationHub = () => {
                   <div className="w-full bg-zion-slate-light/20 rounded-full h-2">
                     <div className="bg-zion-blue h-2 rounded-full" style={{ width: '40%' }}></div>
                   </div>
-                  
+
                   <div className="flex justify-between items-center">
                     <span className="text-zion-slate-light">Mature Market</span>
                     <span className="font-semibold text-zion-green">10%</span>
@@ -558,7 +558,7 @@ const AdvancedServiceInnovationHub = () => {
                     </li>
                   </ul>
                 </div>
-                
+
                 <div>
                   <h4 className="font-semibold text-zion-slate-dark mb-3">Strategic Planning (2-5 years)</h4>
                   <ul className="space-y-2">
@@ -586,7 +586,7 @@ const AdvancedServiceInnovationHub = () => {
         <div className="bg-gradient-to-r from-zion-purple via-zion-blue-light to-zion-cyan rounded-lg p-8 text-white">
           <h3 className="text-3xl font-bold mb-4">Ready to Shape the Future?</h3>
           <p className="text-xl mb-6 max-w-2xl mx-auto">
-            Our innovation hub provides the insights and strategies you need to stay ahead 
+            Our innovation hub provides the insights and strategies you need to stay ahead
             of emerging technologies and capitalize on future opportunities.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">

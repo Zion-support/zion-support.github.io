@@ -13,20 +13,20 @@ export default function AIFinancialTrading() {
   ];
 
   const tiers = [
-    { 
-      name: 'Individual Trader', 
-      price: '$299/mo', 
-      details: ['Up to $100k portfolio', 'Basic AI analysis', 'Standard reports', 'Email support'] 
+    {
+      name: 'Individual Trader',
+      price: '$299/mo',
+      details: ['Up to $100k portfolio', 'Basic AI analysis', 'Standard reports', 'Email support']
     },
-    { 
-      name: 'Professional Trader', 
-      price: '$799/mo', 
-      details: ['Up to $1M portfolio', 'Advanced AI features', 'Custom strategies', 'Priority support'] 
+    {
+      name: 'Professional Trader',
+      price: '$799/mo',
+      details: ['Up to $1M portfolio', 'Advanced AI features', 'Custom strategies', 'Priority support']
     },
-    { 
-      name: 'Institutional', 
-      price: '$2,499/mo', 
-      details: ['Unlimited portfolio size', 'Custom AI models', 'Full platform integration', '24/7 dedicated support'] 
+    {
+      name: 'Institutional',
+      price: '$2,499/mo',
+      details: ['Unlimited portfolio size', 'Custom AI models', 'Full platform integration', '24/7 dedicated support']
     },
   ];
 

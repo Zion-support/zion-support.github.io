@@ -15,7 +15,7 @@ interface UsePerformanceOptimizationOptions {
   threshold?: number;
 }
 
-export const usePerformanceOptimization = (options: UsePerformanceOptimizationOptions = {}) => {
+export const usePerformanceOptimization = (options: UsePerformanceOptimizationOptions = { /* empty */ }) => {
   const {
     enableLazyLoading = true,
     enableIntersectionObserver = true,
@@ -40,7 +40,7 @@ export const usePerformanceOptimization = (options: UsePerformanceOptimizationOp
     if (typeof window !== 'undefined') {
       const loadTime = performance.now();
       metricsRef.current.loadTime = loadTime;
-      
+
       // Report to analytics if available
       if (window.gtag) {
         window.gtag('event', 'performance_metric', {
@@ -65,13 +65,13 @@ export const usePerformanceOptimization = (options: UsePerformanceOptimizationOp
       if (currentTime - lastTimeRef.current >= 1000) {
         const fps = Math.round((frameCountRef.current * 1000) / (currentTime - lastTimeRef.current));
         metricsRef.current.fps = fps;
-        
+
         frameCountRef.current = 0;
         lastTimeRef.current = currentTime;
 
         // Log low FPS for debugging
         if (fps < 30) {
-          console.warn(`Low FPS detected: ${fps}`);
+          // console.warn(`Low FPS detected: ${fps}`);
         }
       }
 
@@ -98,7 +98,7 @@ export const usePerformanceOptimization = (options: UsePerformanceOptimizationOp
 
         // Warn if memory usage is high
         if (memory.usedJSHeapSize > 100 * 1024 * 1024) { // 100MB
-          console.warn('High memory usage detected:', metricsRef.current.memoryUsage.toFixed(2), 'MB');
+          // console.warn('High memory usage detected:', metricsRef.current.memoryUsage.toFixed(2), 'MB');
         }
       }
     };
@@ -147,7 +147,7 @@ export const usePerformanceOptimization = (options: UsePerformanceOptimizationOp
   // Performance monitoring
   const measureRenderTime = useCallback((componentName: string) => {
     const startTime = performance.now();
-    
+
     return () => {
       const endTime = performance.now();
       const renderTime = endTime - startTime;
@@ -155,7 +155,7 @@ export const usePerformanceOptimization = (options: UsePerformanceOptimizationOp
 
       // Log slow renders
       if (renderTime > 16) { // 60fps threshold
-        console.warn(`Slow render detected in ${componentName}:`, renderTime.toFixed(2), 'ms');
+        // console.warn(`Slow render detected in ${componentName}:`, renderTime.toFixed(2), 'ms');
       }
 
       // Report to analytics if available
@@ -175,7 +175,7 @@ export const usePerformanceOptimization = (options: UsePerformanceOptimizationOp
     delay: number
   ): ((...args: Parameters<T>) => void) => {
     let timeoutId: NodeJS.Timeout;
-    
+
     return (...args: Parameters<T>) => {
       clearTimeout(timeoutId);
       timeoutId = setTimeout(() => func(...args), delay);
@@ -188,7 +188,7 @@ export const usePerformanceOptimization = (options: UsePerformanceOptimizationOp
     delay: number
   ): ((...args: Parameters<T>) => void) => {
     let lastCall = 0;
-    
+
     return (...args: Parameters<T>) => {
       const now = Date.now();
       if (now - lastCall >= delay) {

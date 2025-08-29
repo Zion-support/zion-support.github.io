@@ -1,11 +1,11 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { 
-  Shield, 
-  CheckCircle, 
-  Award, 
-  FileText, 
-  Users, 
+import {
+  Shield,
+  CheckCircle,
+  Award,
+  FileText,
+  Users,
   Globe,
   Lock,
   Eye,
@@ -244,11 +244,11 @@ export default function Compliance() {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      <SEO 
+      <SEO
         title="Compliance - Zion Tech Group"
         description="Learn about Zion Tech Group's compliance certifications, frameworks, and commitment to meeting industry standards and regulatory requirements."
       />
-      
+
       {/* Header */}
       <div className="bg-slate-800/50 border-b border-slate-700">
         <div className="container mx-auto px-4 py-16">
@@ -265,7 +265,7 @@ export default function Compliance() {
               Compliance & Certifications
             </h1>
             <p className="text-xl text-slate-300 max-w-3xl mx-auto">
-              We maintain the highest standards of compliance and certification to ensure your business 
+              We maintain the highest standards of compliance and certification to ensure your business
               operates with confidence and meets all regulatory requirements.
             </p>
           </motion.div>
@@ -284,8 +284,8 @@ export default function Compliance() {
             Our Compliance Commitment
           </h2>
           <p className="text-slate-300 max-w-4xl mx-auto">
-            Compliance is not just about meeting requirements—it's about building trust and ensuring 
-            operational excellence. Our comprehensive compliance program covers international standards, 
+            Compliance is not just about meeting requirements—it's about building trust and ensuring
+            operational excellence. Our comprehensive compliance program covers international standards,
             industry best practices, and regulatory requirements to provide you with confidence in our services.
           </p>
         </motion.div>
@@ -302,7 +302,7 @@ export default function Compliance() {
           >
             Compliance Frameworks & Certifications
           </motion.h2>
-          
+
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
             {complianceFrameworks.map((framework, index) => (
               <motion.div
@@ -321,7 +321,7 @@ export default function Compliance() {
                     <p className="text-slate-400 text-sm">{framework.description}</p>
                   </div>
                 </div>
-                
+
                 <div className="space-y-4">
                   <div className="flex items-center justify-between">
                     <span className="text-slate-400 text-sm">Status:</span>
@@ -332,17 +332,17 @@ export default function Compliance() {
                       {framework.status}
                     </span>
                   </div>
-                  
+
                   <div className="flex items-center justify-between">
                     <span className="text-slate-400 text-sm">Validity:</span>
                     <span className="text-slate-300 text-sm">{framework.validity}</span>
                   </div>
-                  
+
                   <div className="flex items-center justify-between">
                     <span className="text-slate-400 text-sm">Scope:</span>
                     <span className="text-slate-300 text-sm">{framework.scope}</span>
                   </div>
-                  
+
                   <div className="pt-4 border-t border-slate-700">
                     <h4 className="text-slate-300 font-medium mb-3">Key Benefits:</h4>
                     <div className="space-y-2">
@@ -371,7 +371,7 @@ export default function Compliance() {
         >
           Industry Standards & Best Practices
         </motion.h2>
-        
+
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
           {industryStandards.map((standard, index) => (
             <motion.div
@@ -388,7 +388,7 @@ export default function Compliance() {
                 <h3 className="text-xl font-semibold text-white mb-2">{standard.title}</h3>
                 <p className="text-slate-400 text-sm">{standard.description}</p>
               </div>
-              
+
               <div className="space-y-3">
                 {standard.standards.map((item, idx) => (
                   <div key={idx} className="flex items-center space-x-3">
@@ -413,7 +413,7 @@ export default function Compliance() {
           >
             Compliance Processes & Procedures
           </motion.h2>
-          
+
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
             {complianceProcesses.map((process, index) => (
               <motion.div
@@ -433,7 +433,7 @@ export default function Compliance() {
                     Frequency: {process.frequency}
                   </span>
                 </div>
-                
+
                 <div className="space-y-3">
                   {process.process.map((item, idx) => (
                     <div key={idx} className="flex items-center space-x-3">
@@ -458,7 +458,7 @@ export default function Compliance() {
         >
           Compliance Tools & Resources
         </motion.h2>
-        
+
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {complianceTools.map((tool, index) => (
             <motion.div
@@ -472,7 +472,7 @@ export default function Compliance() {
                 <div className={`w-16 h-16 bg-gradient-to-br ${tool.color} rounded-xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300`}>
                   <tool.icon className="w-8 h-8 text-white" />
                 </div>
-                
+
                 <h3 className="text-lg font-semibold text-white mb-2">{tool.title}</h3>
                 <p className="text-slate-400 text-sm">{tool.description}</p>
               </div>
@@ -492,7 +492,7 @@ export default function Compliance() {
           >
             Compliance Support & Inquiries
           </motion.h2>
-          
+
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
             {contactInfo.map((contact, index) => (
               <motion.div
@@ -504,7 +504,7 @@ export default function Compliance() {
               >
                 <h3 className="text-xl font-semibold text-white mb-4">{contact.title}</h3>
                 <p className="text-slate-400 mb-6">{contact.description}</p>
-                
+
                 <div className="space-y-4">
                   <div className="flex items-center space-x-3">
                     <div className="w-8 h-8 bg-slate-700 rounded-lg flex items-center justify-center">
@@ -515,7 +515,7 @@ export default function Compliance() {
                       <div className="text-slate-400 text-sm">Response time: {contact.responseTime}</div>
                     </div>
                   </div>
-                  
+
                   <div className="flex items-center space-x-3">
                     <div className="w-8 h-8 bg-slate-700 rounded-lg flex items-center justify-center">
                       <span className="text-green-400 text-sm font-medium">📞</span>
@@ -544,8 +544,8 @@ export default function Compliance() {
             Continuous Compliance Excellence
           </h2>
           <p className="text-slate-300 max-w-4xl mx-auto">
-            Compliance is an ongoing journey, not a destination. We continuously monitor regulatory changes, 
-            update our processes, and enhance our compliance posture to ensure we always meet and exceed 
+            Compliance is an ongoing journey, not a destination. We continuously monitor regulatory changes,
+            update our processes, and enhance our compliance posture to ensure we always meet and exceed
             industry standards and regulatory requirements.
           </p>
         </motion.div>

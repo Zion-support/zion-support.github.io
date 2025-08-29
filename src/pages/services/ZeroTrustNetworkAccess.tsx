@@ -1,13 +1,13 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
-import { 
-  Shield, 
-  Lock, 
-  Users, 
-  Globe, 
-  Zap, 
-  CheckCircle, 
+import {
+  Shield,
+  Lock,
+  Users,
+  Globe,
+  Zap,
+  CheckCircle,
   ArrowRight,
   Smartphone,
   Monitor,
@@ -192,7 +192,7 @@ const ZeroTrustNetworkAccess: React.FC = () => {
               </div>
               <span className="text-purple-400 text-lg font-medium">Enterprise Security</span>
             </div>
-            
+
             <h1 className="text-4xl md:text-6xl font-bold mb-6">
               Zero Trust
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-blue-400">
@@ -200,8 +200,8 @@ const ZeroTrustNetworkAccess: React.FC = () => {
               </span>
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-4xl mx-auto">
-              Replace traditional VPNs with modern, secure access control. Our Zero Trust Network Access 
-              solution provides identity-based security, micro-segmentation, and continuous verification 
+              Replace traditional VPNs with modern, secure access control. Our Zero Trust Network Access
+              solution provides identity-based security, micro-segmentation, and continuous verification
               to protect your enterprise from modern cyber threats.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -227,7 +227,7 @@ const ZeroTrustNetworkAccess: React.FC = () => {
                 Modern security for the modern enterprise
               </p>
             </div>
-            
+
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {features.map((feature, index) => (
                 <div key={index} className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20 hover:border-purple-400/40 transition-all duration-300">
@@ -261,7 +261,7 @@ const ZeroTrustNetworkAccess: React.FC = () => {
                 Real results from implementing Zero Trust architecture
               </p>
             </div>
-            
+
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               {securityBenefits.map((benefit, index) => (
                 <div key={index} className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20">
@@ -290,7 +290,7 @@ const ZeroTrustNetworkAccess: React.FC = () => {
                 Tailored solutions for various business sectors
               </p>
             </div>
-            
+
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               {useCases.map((useCase, index) => (
                 <div key={index} className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20">
@@ -323,7 +323,7 @@ const ZeroTrustNetworkAccess: React.FC = () => {
                 Built-in compliance features for enterprise requirements
               </p>
             </div>
-            
+
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
               {complianceFeatures.map((feature, index) => (
                 <div key={index} className="bg-white/10 backdrop-blur-lg rounded-lg p-4 border border-white/20 text-center hover:border-purple-400/40 transition-all duration-300">
@@ -346,12 +346,12 @@ const ZeroTrustNetworkAccess: React.FC = () => {
                 Scalable solutions for organizations of all sizes
               </p>
             </div>
-            
+
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {pricingPlans.map((plan, index) => (
                 <div key={index} className={`relative bg-white/10 backdrop-blur-lg rounded-xl p-8 border transition-all duration-300 ${
-                  plan.popular 
-                    ? 'border-purple-400 bg-gradient-to-br from-purple-600/20 to-blue-600/20' 
+                  plan.popular
+                    ? 'border-purple-400 bg-gradient-to-br from-purple-600/20 to-blue-600/20'
                     : 'border-white/20 hover:border-purple-400/40'
                 }`}>
                   {plan.popular && (
@@ -361,7 +361,7 @@ const ZeroTrustNetworkAccess: React.FC = () => {
                       </span>
                     </div>
                   )}
-                  
+
                   <div className="text-center mb-6">
                     <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
                     <div className="flex items-baseline justify-center">
@@ -370,7 +370,7 @@ const ZeroTrustNetworkAccess: React.FC = () => {
                     </div>
                     <p className="text-gray-300 mt-2">{plan.description}</p>
                   </div>
-                  
+
                   <ul className="space-y-3 mb-8">
                     {plan.features.map((feature, idx) => (
                       <li key={idx} className="flex items-center text-gray-300">
@@ -379,8 +379,8 @@ const ZeroTrustNetworkAccess: React.FC = () => {
                       </li>
                     ))}
                   </ul>
-                  
-                  <Link 
+
+                  <Link
                     to="/contact"
                     className={`w-full text-center py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
                       plan.popular

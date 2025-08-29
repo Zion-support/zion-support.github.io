@@ -10,22 +10,22 @@ class PerformanceOptimizer {
   log(message) {
     const timestamp = new Date().toISOString();
     const logMessage = `[${timestamp}] ${message}\n`;
-    console.log(message);
+    // // console.log(message);
     fs.appendFileSync(this.logFile, logMessage);
   }
   async optimizePerformance() {
     try {
       this.log('Starting performance optimization...');
-      
+
       // Analyze bundle size
       const bundleAnalysis = this.analyzeBundleSize();
-      
+
       // Optimize images
       const imageOptimization = this.optimizeImages();
-      
+
       // Check for unused dependencies
       const dependencyAnalysis = this.analyzeDependencies();
-      
+
       // Generate optimization report
       const report = {
         timestamp: new Date().toISOString(),
@@ -34,7 +34,7 @@ class PerformanceOptimizer {
         dependencies: dependencyAnalysis,
         recommendations: this.generateRecommendations()
       };
-      
+
       this.saveReport(report);
       this.log('Performance optimization completed');
       return report;
@@ -70,9 +70,9 @@ class PerformanceOptimizer {
   analyzeDependencies() {
     try {
       const packageJson = JSON.parse(fs.readFileSync(path.resolve(__dirname, '../package.json'), 'utf8'));
-      const dependencies = Object.keys(packageJson.dependencies || {});
-      const devDependencies = Object.keys(packageJson.devDependencies || {});
-      
+      const dependencies = Object.keys(packageJson.dependencies || { /* empty */ });
+      const devDependencies = Object.keys(packageJson.devDependencies || { /* empty */ });
+
       return {
         totalDependencies: dependencies.length + devDependencies.length,
         productionDependencies: dependencies.length,
@@ -104,6 +104,6 @@ class PerformanceOptimizer {
 const optimizer = new PerformanceOptimizer();
 optimizer.optimizePerformance().then(report => {
   if (report) {
-    console.log('Performance report:', report);
+    // // console.log('Performance report:', report);
   }
 });

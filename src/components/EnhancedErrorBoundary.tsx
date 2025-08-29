@@ -1,13 +1,13 @@
 import React, { Component, ErrorInfo, ReactNode } from 'react';
 import { motion } from 'framer-motion';
-import { 
-  AlertTriangle, 
-  RefreshCw, 
-  Home, 
-  Bug, 
-  X, 
-  Info, 
-  Copy, 
+import {
+  AlertTriangle,
+  RefreshCw,
+  Home,
+  Bug,
+  X,
+  Info,
+  Copy,
   ExternalLink,
   Shield,
   Zap
@@ -57,7 +57,7 @@ export class EnhancedErrorBoundary extends Component<Props, State> {
     });
 
     // Log error to console
-    console.error('Error caught by boundary:', error, errorInfo);
+    // console.error('Error caught by boundary:', error, errorInfo);
 
     // Call custom error handler if provided
     if (this.props.onError) {
@@ -104,13 +104,13 @@ export class EnhancedErrorBoundary extends Component<Props, State> {
       errors.push(errorData);
       localStorage.setItem('error-log', JSON.stringify(errors.slice(-10))); // Keep last 10 errors
     } catch (logError) {
-      console.error('Failed to log error:', logError);
+      // console.error('Failed to log error:', logError);
     }
   }
 
   private handleRetry = () => {
     this.setState({ isRecovering: true });
-    
+
     // Attempt to recover by clearing error state
     setTimeout(() => {
       this.setState({
@@ -239,7 +239,7 @@ Timestamp: ${new Date().toISOString()}
                     <div className="text-sm text-gray-400 mb-2">Error ID</div>
                     <div className="font-mono text-white text-sm">{this.state.errorId}</div>
                   </div>
-                  
+
                   <div className="bg-slate-900/50 rounded-lg p-4">
                     <div className="text-sm text-gray-400 mb-2">Error Message</div>
                     <div className="text-white">{this.state.error?.message}</div>

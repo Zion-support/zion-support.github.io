@@ -139,7 +139,7 @@ export function ProjectManagementDashboard() {
               <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-zion-slate-light"/>
               <input type="text" placeholder="Search projects..." value={searchQuery} onChange={(e) => setSearchQuery(e.target.value)} className="pl-10 pr-4 py-2 border border-zion-slate-light rounded-lg bg-white dark:bg-zion-slate text-zion-slate focus:ring-2 focus:ring-zion-gold focus:border-transparent"/>
             </div>
-            
+
             <select value={filterStatus} onChange={(e) => setFilterStatus(e.target.value)} className="px-3 py-2 border border-zion-slate-light rounded-lg bg-white dark:bg-zion-slate text-zion-slate focus:ring-2 focus:ring-zion-gold focus:border-transparent">
               <option value="all">All Status</option>
               <option value="planning">Planning</option>
@@ -148,7 +148,7 @@ export function ProjectManagementDashboard() {
               <option value="completed">Completed</option>
               <option value="on-hold">On Hold</option>
             </select>
-            
+
             <select value={filterPriority} onChange={(e) => setFilterPriority(e.target.value)} className="px-3 py-2 border border-zion-slate-light rounded-lg bg-white dark:bg-zion-slate text-zion-slate focus:ring-2 focus:ring-zion-gold focus:border-transparent">
               <option value="all">All Priority</option>
               <option value="low">Low</option>
@@ -157,7 +157,7 @@ export function ProjectManagementDashboard() {
               <option value="critical">Critical</option>
             </select>
           </div>
-          
+
           <div className="flex items-center gap-2">
             <button onClick={() => setViewMode('grid')} className={`p-2 rounded-lg transition-all duration-200 ${viewMode === 'grid' ? 'bg-zion-gold text-white' : 'bg-zion-slate-light/20 text-zion-slate'}`}>
               <BarChart3 className="w-4 h-4"/>
@@ -347,13 +347,13 @@ export function ProjectManagementDashboard() {
                 <X className="w-6 h-6"/>
               </button>
             </div>
-            
+
             <div className="p-6">
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
                 <div>
                   <h3 className="text-lg font-semibold text-zion-slate mb-3">Project Details</h3>
                   <p className="text-zion-slate-light mb-4">{selectedProject.description}</p>
-                  
+
                   <div className="space-y-3">
                     <div className="flex items-center justify-between">
                       <span className="text-zion-slate-light">Status:</span>
@@ -373,7 +373,7 @@ export function ProjectManagementDashboard() {
                     </div>
                   </div>
                 </div>
-                
+
                 <div>
                   <h3 className="text-lg font-semibold text-zion-slate mb-3">Tasks</h3>
                   <div className="space-y-3">

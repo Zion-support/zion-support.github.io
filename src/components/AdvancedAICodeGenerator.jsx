@@ -24,7 +24,7 @@ export function useApi<T>({ url, method = 'GET', body, headers }: UseApiOptions<
     try {
       setLoading(true);
       setError(null);
-      
+
       const response = await fetch(url, {
         method,
         headers: {
@@ -70,11 +70,11 @@ export function useApi<T>({ url, method = 'GET', body, headers }: UseApiOptions<
   .animate-float {
     animation: float 3s ease-in-out infinite;
   }
-  
+
   .animate-glow {
     animation: glow 2s ease-in-out infinite alternate;
   }
-  
+
   .animate-shimmer {
     background: linear-gradient(
       90deg,
@@ -113,7 +113,7 @@ export function useApi<T>({ url, method = 'GET', body, headers }: UseApiOptions<
         description: 'Comprehensive form validation with custom rules and error handling',
         language: 'javascript',
         code: `class FormValidator {
-  constructor(form, options = {}) {
+  constructor(form, options = { /* empty */ }) {
     this.form = form;
     this.options = {
       validateOnBlur: true,
@@ -121,7 +121,7 @@ export function useApi<T>({ url, method = 'GET', body, headers }: UseApiOptions<
       showErrors: true,
       ...options
     };
-    
+
     this.rules = new Map();
     this.errors = new Map();
     this.init();
@@ -164,7 +164,7 @@ export function useApi<T>({ url, method = 'GET', body, headers }: UseApiOptions<
   updateFieldUI(field) {
     const fieldElement = this.form[field];
     const errors = this.errors.get(field) || [];
-    
+
     if (errors.length > 0) {
       fieldElement.classList.add('error');
       this.showFieldErrors(field, errors);
@@ -254,7 +254,7 @@ export function useLocalStorage<T>(key: string, initialValue: T) {
       const item = window.localStorage.getItem(key);
       return item ? JSON.parse(item) : initialValue;
     } catch (error) {
-      console.error(\`Error reading localStorage key "\${key}":\`, error);
+      // console.error(\`Error reading localStorage key "\${key}":\`, error);
       return initialValue;
     }
   });
@@ -265,7 +265,7 @@ export function useLocalStorage<T>(key: string, initialValue: T) {
       setStoredValue(valueToStore);
       window.localStorage.setItem(key, JSON.stringify(valueToStore));
     } catch (error) {
-      console.error(\`Error setting localStorage key "\${key}":\`, error);
+      // console.error(\`Error setting localStorage key "\${key}":\`, error);
     }
   };
 
@@ -321,7 +321,7 @@ export function AdvancedAICodeGenerator() {
             const newGeneration = {
                 id: Date.now().toString(),
                 prompt: aiPrompt,
-                generatedCode: `// Generated code for: ${aiPrompt}\n\nfunction example() {\n  console.log("Hello from AI!");\n  return "Generated code";\n}`,
+                generatedCode: `// Generated code for: ${aiPrompt}\n\nfunction example() {\n  // console.log("Hello from AI!");\n  return "Generated code";\n}`,
                 language: 'javascript',
                 confidence: 0.87,
                 alternatives: [
@@ -635,7 +635,7 @@ export function AdvancedAICodeGenerator() {
                         {new Date(analysis.timestamp).toLocaleDateString()}
                       </span>
                     </div>
-                    
+
                     {showSuggestions && analysis.suggestions.length > 0 && (<div className="mb-4">
                         <h5 className="text-sm font-medium text-green-700 dark:text-green-400 mb-2">
                           <CheckCircle className="w-4 h-4 inline mr-1"/>
@@ -647,7 +647,7 @@ export function AdvancedAICodeGenerator() {
                             </li>))}
                         </ul>
                       </div>)}
-                    
+
                     {analysis.warnings.length > 0 && (<div>
                         <h5 className="text-sm font-medium text-yellow-700 dark:text-yellow-400 mb-2">
                           <AlertCircle className="w-4 h-4 inline mr-1"/>
@@ -696,11 +696,11 @@ export function AdvancedAICodeGenerator() {
                     </button>
                   </div>
                 </div>
-                
+
                 <div className="bg-gray-900 text-green-400 p-3 rounded-lg overflow-x-auto text-sm max-h-48 overflow-y-auto mb-3">
                   <code>{generation.generatedCode}</code>
                 </div>
-                
+
                 {generation.alternatives.length > 0 && (<div>
                     <h5 className="text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
                       Alternative Approaches:

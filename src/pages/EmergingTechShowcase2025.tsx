@@ -1,16 +1,16 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { 
-  Brain, 
-  Cpu, 
-  Atom, 
-  Zap, 
-  Rocket, 
-  Eye, 
-  Globe, 
-  Car, 
-  Dna, 
-  Microscope, 
+import {
+  Brain,
+  Cpu,
+  Atom,
+  Zap,
+  Rocket,
+  Eye,
+  Globe,
+  Car,
+  Dna,
+  Microscope,
   Bot,
   ArrowRight,
   Star,
@@ -93,8 +93,8 @@ const EmergingTechShowcase2025: React.FC = () => {
               </span>
             </h1>
             <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
-              Discover the cutting-edge technologies that will shape the future. 
-              From quantum computing to synthetic biology, explore revolutionary solutions 
+              Discover the cutting-edge technologies that will shape the future.
+              From quantum computing to synthetic biology, explore revolutionary solutions
               that are transforming industries and creating new possibilities.
             </p>
             <div className="flex flex-wrap justify-center gap-4 mb-12">
@@ -150,7 +150,7 @@ const EmergingTechShowcase2025: React.FC = () => {
             <h2 className="text-4xl font-bold text-white mb-4">Featured Technologies</h2>
             <p className="text-xl text-gray-300">Explore our most revolutionary emerging tech solutions</p>
           </div>
-          
+
           <div className="relative">
             <div className="flex justify-center mb-8">
               <div className="flex gap-4">
@@ -210,7 +210,7 @@ const EmergingTechShowcase2025: React.FC = () => {
                       {filteredServices[currentSlide]?.ctaLabel}
                     </motion.button>
                   </div>
-                  
+
                   <div className="space-y-6">
                     <div>
                       <h4 className="text-lg font-semibold text-white mb-3">Key Features</h4>
@@ -223,7 +223,7 @@ const EmergingTechShowcase2025: React.FC = () => {
                         ))}
                       </div>
                     </div>
-                    
+
                     <div>
                       <h4 className="text-lg font-semibold text-white mb-3">Market Size</h4>
                       <div className="text-2xl font-bold text-green-400">
@@ -257,7 +257,7 @@ const EmergingTechShowcase2025: React.FC = () => {
             <h2 className="text-4xl font-bold text-white mb-4">All Emerging Technologies</h2>
             <p className="text-xl text-gray-300">Comprehensive overview of our cutting-edge solutions</p>
           </div>
-          
+
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {filteredServices.map((service, index) => (
               <motion.div
@@ -279,15 +279,15 @@ const EmergingTechShowcase2025: React.FC = () => {
                     </span>
                   </div>
                 </div>
-                
+
                 <h3 className="text-xl font-bold text-white mb-3">{service.title}</h3>
                 <p className="text-gray-300 mb-4 line-clamp-3">{service.description}</p>
-                
+
                 <div className="flex items-center justify-between mb-4">
                   <div className="text-2xl font-bold text-blue-400">{service.price}</div>
                   <div className="text-sm text-gray-400">per {service.billing}</div>
                 </div>
-                
+
                 <div className="space-y-3 mb-6">
                   <div className="flex items-center gap-2 text-sm text-gray-400">
                     <TrendingUp className="w-4 h-4" />
@@ -298,7 +298,7 @@ const EmergingTechShowcase2025: React.FC = () => {
                     <span>{service.targetAudience}</span>
                   </div>
                 </div>
-                
+
                 <motion.button
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
@@ -319,7 +319,7 @@ const EmergingTechShowcase2025: React.FC = () => {
           <p className="text-xl text-gray-300 mb-8">
             Contact us to learn more about our emerging technology services and how they can transform your business.
           </p>
-          
+
           <div className="grid md:grid-cols-3 gap-8 mb-8">
             <div className="flex flex-col items-center gap-3">
               <div className="p-4 bg-white/10 rounded-full">
@@ -330,7 +330,7 @@ const EmergingTechShowcase2025: React.FC = () => {
                 <p className="text-gray-300">+1 302 464 0950</p>
               </div>
             </div>
-            
+
             <div className="flex flex-col items-center gap-3">
               <div className="p-4 bg-white/10 rounded-full">
                 <Mail className="w-6 h-6 text-purple-400" />
@@ -340,7 +340,7 @@ const EmergingTechShowcase2025: React.FC = () => {
                 <p className="text-gray-300">kleber@ziontechgroup.com</p>
               </div>
             </div>
-            
+
             <div className="flex flex-col items-center gap-3">
               <div className="p-4 bg-white/10 rounded-full">
                 <MapPin className="w-6 h-6 text-green-400" />
@@ -351,7 +351,7 @@ const EmergingTechShowcase2025: React.FC = () => {
               </div>
             </div>
           </div>
-          
+
           <motion.button
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
@@ -382,7 +382,7 @@ const EmergingTechShowcase2025: React.FC = () => {
               {(() => {
                 const service = EMERGING_TECH_SERVICES_2025.find(s => s.id === selectedService);
                 if (!service) return null;
-                
+
                 return (
                   <div>
                     <div className="flex items-center justify-between mb-6">
@@ -403,10 +403,10 @@ const EmergingTechShowcase2025: React.FC = () => {
                         <ChevronLeft className="w-6 h-6 text-white" />
                       </button>
                     </div>
-                    
+
                     <h2 className="text-3xl font-bold text-white mb-4">{service.title}</h2>
                     <p className="text-lg text-gray-300 mb-6">{service.description}</p>
-                    
+
                     <div className="grid md:grid-cols-2 gap-8 mb-8">
                       <div>
                         <h3 className="text-xl font-semibold text-white mb-4">Features</h3>
@@ -419,7 +419,7 @@ const EmergingTechShowcase2025: React.FC = () => {
                           ))}
                         </div>
                       </div>
-                      
+
                       <div>
                         <h3 className="text-xl font-semibold text-white mb-4">Benefits</h3>
                         <div className="space-y-2">
@@ -432,25 +432,25 @@ const EmergingTechShowcase2025: React.FC = () => {
                         </div>
                       </div>
                     </div>
-                    
+
                     <div className="grid md:grid-cols-3 gap-6 mb-8">
                       <div className="bg-white/10 rounded-xl p-4">
                         <h4 className="font-semibold text-white mb-2">Market Size</h4>
                         <p className="text-2xl font-bold text-green-400">{service.marketSize}</p>
                       </div>
-                      
+
                       <div className="bg-white/10 rounded-xl p-4">
                         <h4 className="font-semibold text-white mb-2">Pricing</h4>
                         <p className="text-2xl font-bold text-blue-400">{service.price}</p>
                         <p className="text-sm text-gray-400">per {service.billing}</p>
                       </div>
-                      
+
                       <div className="bg-white/10 rounded-xl p-4">
                         <h4 className="font-semibold text-white mb-2">Target Audience</h4>
                         <p className="text-gray-300 text-sm">{service.targetAudience}</p>
                       </div>
                     </div>
-                    
+
                     <div className="flex gap-4">
                       <motion.button
                         whileHover={{ scale: 1.05 }}

@@ -301,7 +301,7 @@ export function SiteHealthDashboard() {
                   </div>
                 </div>
               </div>
-              
+
               <div className="p-6 space-y-4">
                 {category.metrics.map((metric, metricIndex) => (<div key={metricIndex} className="space-y-2">
                     <div className="flex items-center justify-between">
@@ -327,7 +327,7 @@ export function SiteHealthDashboard() {
           <TrendingUp className="w-6 h-6 text-blue-600"/>
           <span>Priority Action Items</span>
         </h2>
-        
+
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           <div className="space-y-4">
             <h3 className="text-lg font-semibold text-red-600 flex items-center space-x-2">
@@ -345,7 +345,7 @@ export function SiteHealthDashboard() {
               </li>
             </ul>
           </div>
-          
+
           <div className="space-y-4">
             <h3 className="text-lg font-semibold text-yellow-600 flex items-center space-x-2">
               <AlertTriangle className="w-5 h-5"/>

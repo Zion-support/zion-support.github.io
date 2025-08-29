@@ -190,7 +190,7 @@ export default function IoTServicesPage() {
               </span>
             </h1>
             <p className="text-xl text-zion-slate-light mb-8 max-w-3xl mx-auto">
-              Connect, monitor, and optimize your business with cutting-edge IoT technology. From device management to 
+              Connect, monitor, and optimize your business with cutting-edge IoT technology. From device management to
               advanced analytics, we deliver comprehensive IoT solutions that drive innovation and efficiency.
             </p>
             <div className="flex flex-wrap justify-center gap-4">

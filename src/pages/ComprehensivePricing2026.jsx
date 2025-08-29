@@ -69,7 +69,7 @@ const ComprehensivePricing2026 = () => {
             </span>
           </motion.h1>
           <motion.p className="text-xl text-gray-300 max-w-4xl mx-auto mb-8" initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, delay: 0.2 }}>
-            Transparent pricing for all our innovative services. Choose the plan that fits your business needs 
+            Transparent pricing for all our innovative services. Choose the plan that fits your business needs
             with flexible billing options and enterprise-grade support.
           </motion.p>
 
@@ -137,7 +137,7 @@ const ComprehensivePricing2026 = () => {
                     {service.name}
                   </h3>
                   <p className="text-gray-300 text-sm mb-3">{service.tagline}</p>
-                  
+
                   {/* Pricing */}
                   <div className="mb-4">
                     <div className="text-3xl font-bold text-cyan-400">
@@ -225,10 +225,10 @@ const ComprehensivePricing2026 = () => {
               Enterprise <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-400">Solutions</span>
             </h2>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Need custom solutions or enterprise-grade implementations? We offer tailored packages 
+              Need custom solutions or enterprise-grade implementations? We offer tailored packages
               with dedicated support, custom development, and white-label options.
             </p>
-            
+
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
               <div className="bg-white/10 backdrop-blur-md p-6 rounded-2xl border border-white/20">
                 <div className="text-4xl mb-4">🏢</div>
@@ -237,7 +237,7 @@ const ComprehensivePricing2026 = () => {
                 <div className="text-2xl font-bold text-cyan-400 mb-2">Custom Pricing</div>
                 <p className="text-xs text-gray-400">Based on scope and complexity</p>
               </div>
-              
+
               <div className="bg-white/10 backdrop-blur-md p-6 rounded-2xl border border-white/20">
                 <div className="text-4xl mb-4">🤝</div>
                 <h3 className="text-xl font-bold text-white mb-2">White Label</h3>
@@ -245,7 +245,7 @@ const ComprehensivePricing2026 = () => {
                 <div className="text-2xl font-bold text-cyan-400 mb-2">From $5,000</div>
                 <p className="text-xs text-gray-400">Monthly + setup fees</p>
               </div>
-              
+
               <div className="bg-white/10 backdrop-blur-md p-6 rounded-2xl border border-white/20">
                 <div className="text-4xl mb-4">💎</div>
                 <h3 className="text-xl font-bold text-white mb-2">Premium Support</h3>
@@ -266,7 +266,7 @@ const ComprehensivePricing2026 = () => {
               Ready to <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-400">Get Started</span>?
             </h2>
             <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
-              Contact us today for a personalized consultation, demo, or custom quote. 
+              Contact us today for a personalized consultation, demo, or custom quote.
               Our team is ready to help you choose the perfect solution for your business.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">

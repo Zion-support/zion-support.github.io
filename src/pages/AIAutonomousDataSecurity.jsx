@@ -8,7 +8,7 @@ const AIAutonomousDataSecurity = () => {
         <meta name="keywords" content="AI data security, autonomous data security, data protection, breach detection, autonomous operations, AI data security platform"/>
         <link rel="canonical" href="https://ziontechgroup.com/ai-autonomous-data-security"/>
       </Helmet>
-      
+
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-indigo-900 to-slate-900">
         <div className="container mx-auto px-4 py-16">
           {/* Hero Section */}
@@ -52,31 +52,31 @@ const AIAutonomousDataSecurity = () => {
               <h3 className="text-xl font-semibold text-white mb-3">Data Security Intelligence</h3>
               <p className="text-gray-300">AI trained on data security datasets</p>
             </div>
-            
+
             <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20">
               <div className="text-purple-400 text-4xl mb-4">🤖</div>
               <h3 className="text-xl font-semibold text-white mb-3">Autonomous Operation</h3>
               <p className="text-gray-300">AI that protects data independently</p>
             </div>
-            
+
             <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20">
               <div className="text-violet-400 text-4xl mb-4">📈</div>
               <h3 className="text-xl font-semibold text-white mb-3">Continuous Data Security</h3>
               <p className="text-gray-300">24/7 data security operations</p>
             </div>
-            
+
             <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20">
               <div className="text-blue-400 text-4xl mb-4">🔍</div>
               <h3 className="text-xl font-semibold text-white mb-3">Deep Analysis</h3>
               <p className="text-gray-300">Comprehensive data security insights</p>
             </div>
-            
+
             <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20">
               <div className="text-cyan-400 text-4xl mb-4">🛡️</div>
               <h3 className="text-xl font-semibold text-white mb-3">Proactive Data Security</h3>
               <p className="text-gray-300">Prevent data security issues</p>
             </div>
-            
+
             <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20">
               <div className="text-teal-400 text-4xl mb-4">⚡</div>
               <h3 className="text-xl font-semibold text-white mb-3">Adaptive Data Security</h3>
@@ -93,25 +93,25 @@ const AIAutonomousDataSecurity = () => {
                 <h3 className="text-lg font-semibold text-white mb-2">Monitor</h3>
                 <p className="text-gray-300 text-sm">Monitor data</p>
               </div>
-              
+
               <div className="text-center">
                 <div className="bg-indigo-600 w-16 h-16 rounded-full flex items-center justify-center text-2xl font-bold text-white mx-auto mb-4">2</div>
                 <h3 className="text-lg font-semibold text-white mb-2">Detect</h3>
                 <p className="text-gray-300 text-sm">Detect threats</p>
               </div>
-              
+
               <div className="text-center">
                 <div className="bg-indigo-600 w-16 h-16 rounded-full flex items-center justify-center text-2xl font-bold text-white mx-auto mb-4">3</div>
                 <h3 className="text-lg font-semibold text-white mb-2">Protect</h3>
                 <p className="text-gray-300 text-sm">Protect data</p>
               </div>
-              
+
               <div className="text-center">
                 <div className="bg-indigo-600 w-16 h-16 rounded-full flex items-center justify-center text-2xl font-bold text-white mx-auto mb-4">4</div>
                 <h3 className="text-lg font-semibold text-white mb-2">Encrypt</h3>
                 <p className="text-gray-300 text-sm">Encrypt data</p>
               </div>
-              
+
               <div className="text-center">
                 <div className="bg-indigo-600 w-16 h-16 rounded-full flex items-center justify-center text-2xl font-bold text-white mx-auto mb-4">5</div>
                 <h3 className="text-lg font-semibold text-white mb-2">Monitor</h3>
@@ -138,12 +138,12 @@ const AIAutonomousDataSecurity = () => {
                 <h3 className="text-xl font-semibold text-white mb-3">Enterprise Data</h3>
                 <p className="text-gray-300">Enterprise data security</p>
               </div>
-              
+
               <div className="bg-white/5 rounded-xl p-6 border border-white/10">
                 <h3 className="text-xl font-semibold text-white mb-3">Cloud Data</h3>
                 <p className="text-gray-300">Cloud data security</p>
               </div>
-              
+
               <div className="bg-white/5 rounded-xl p-6 border border-white/10">
                 <h3 className="text-xl font-semibold text-white mb-3">Personal Data</h3>
                 <p className="text-gray-300">Personal data security</p>

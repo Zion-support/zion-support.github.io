@@ -1,26 +1,26 @@
 import React, { useState, useMemo } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import { 
-  Search, 
-  Filter, 
-  Star, 
-  TrendingUp, 
-  Clock, 
-  Users, 
-  Target, 
-  Rocket, 
-  Brain, 
-  Shield, 
-  Cloud, 
-  Atom, 
-  Heart, 
-  Satellite, 
-  Zap, 
-  CheckCircle, 
-  ArrowRight, 
-  Phone, 
-  Mail, 
+import {
+  Search,
+  Filter,
+  Star,
+  TrendingUp,
+  Clock,
+  Users,
+  Target,
+  Rocket,
+  Brain,
+  Shield,
+  Cloud,
+  Atom,
+  Heart,
+  Satellite,
+  Zap,
+  CheckCircle,
+  ArrowRight,
+  Phone,
+  Mail,
   MapPin,
   Sparkles,
   Award,
@@ -66,7 +66,7 @@ export default function EnhancedServicesShowcase2025() {
   // Filter and sort services
   const filteredServices = useMemo(() => {
     return enhancedServicesCatalog2025
-      .filter(service => 
+      .filter(service =>
         (selectedCategory === 'all' || service.category === selectedCategory) &&
         (service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
          service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
@@ -141,7 +141,7 @@ export default function EnhancedServicesShowcase2025() {
       <div className="space-y-4">
         <p className="text-lg font-semibold text-gray-200">{service.tagline}</p>
         <p className="text-gray-300 text-sm leading-relaxed">{service.description}</p>
-        
+
         {/* Pricing */}
         <div className="flex items-center justify-between">
           <div className="text-2xl font-bold text-cyan-400 font-orbitron">
@@ -239,7 +239,7 @@ export default function EnhancedServicesShowcase2025() {
     >
       <div className="flex items-center space-x-6">
         <div className="text-4xl">{service.icon}</div>
-        
+
         <div className="flex-1">
           <div className="flex items-start justify-between mb-3">
             <div>
@@ -266,10 +266,10 @@ export default function EnhancedServicesShowcase2025() {
               )}
             </div>
           </div>
-          
+
           <p className="text-lg font-semibold text-gray-200 mb-2">{service.tagline}</p>
           <p className="text-gray-300 text-sm leading-relaxed mb-4">{service.description}</p>
-          
+
           <div className="grid grid-cols-4 gap-4 text-sm">
             <div>
               <p className="text-gray-400">Price</p>
@@ -289,7 +289,7 @@ export default function EnhancedServicesShowcase2025() {
             </div>
           </div>
         </div>
-        
+
         <div className="flex flex-col space-y-3">
           <Link
             to={service.link}
@@ -335,7 +335,7 @@ export default function EnhancedServicesShowcase2025() {
             <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
               Experience the future of technology with our cutting-edge AI, quantum computing, and innovative solutions that transform businesses and drive digital transformation.
             </p>
-            
+
             {/* Stats */}
             <div className="grid grid-cols-1 md:grid-cols-4 gap-6 max-w-4xl mx-auto mb-12">
               {[
@@ -516,7 +516,7 @@ export default function EnhancedServicesShowcase2025() {
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
               Let's discuss how our revolutionary AI, quantum computing, and innovative solutions can help you achieve your technology goals and stay ahead of the competition.
             </p>
-            
+
             <div className="flex flex-col sm:flex-row gap-6 justify-center mb-12">
               <div className="flex items-center justify-center space-x-3 text-gray-300">
                 <Phone className="w-5 h-5 text-cyan-400" />

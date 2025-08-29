@@ -1,12 +1,12 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { 
-  Brain, 
-  BarChart3, 
-  TrendingUp, 
-  Zap, 
-  Shield, 
-  Globe, 
+import {
+  Brain,
+  BarChart3,
+  TrendingUp,
+  Zap,
+  Shield,
+  Globe,
   Database,
   Cloud,
   Lock,
@@ -130,11 +130,11 @@ export default function AIBusinessIntelligence() {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      <SEO 
+      <SEO
         title="AI Business Intelligence Services - Zion Tech Group"
         description="Transform your business data into actionable insights with our AI-powered Business Intelligence solutions. Real-time analytics, predictive modeling, and automated reporting."
       />
-      
+
       {/* Hero Section */}
       <section className="relative py-20 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/10 to-blue-500/10"></div>
@@ -154,7 +154,7 @@ export default function AIBusinessIntelligence() {
               <span className="bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent"> Intelligence</span>
             </h1>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-              Transform your business data into actionable insights with AI-powered analytics. 
+              Transform your business data into actionable insights with AI-powered analytics.
               Make data-driven decisions faster and more accurately than ever before.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
@@ -182,8 +182,8 @@ export default function AIBusinessIntelligence() {
                 What is AI Business Intelligence?
               </h2>
               <p className="text-lg text-gray-300 mb-6">
-                AI Business Intelligence combines traditional BI tools with artificial intelligence 
-                and machine learning to provide deeper insights, predictive capabilities, and 
+                AI Business Intelligence combines traditional BI tools with artificial intelligence
+                and machine learning to provide deeper insights, predictive capabilities, and
                 automated decision-making support.
               </p>
               <div className="space-y-4">
@@ -210,7 +210,7 @@ export default function AIBusinessIntelligence() {
                 </div>
               </div>
             </motion.div>
-            
+
             <motion.div
               initial={{ opacity: 0, x: 20 }}
               whileInView={{ opacity: 1, x: 0 }}
@@ -265,7 +265,7 @@ export default function AIBusinessIntelligence() {
               Key Features
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Our AI Business Intelligence platform provides comprehensive capabilities for 
+              Our AI Business Intelligence platform provides comprehensive capabilities for
               data analysis, visualization, and decision-making support.
             </p>
           </motion.div>
@@ -350,7 +350,7 @@ export default function AIBusinessIntelligence() {
               Industry Use Cases
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              AI Business Intelligence is transforming industries across the globe, 
+              AI Business Intelligence is transforming industries across the globe,
               enabling data-driven decision making and operational excellence.
             </p>
           </motion.div>
@@ -398,7 +398,7 @@ export default function AIBusinessIntelligence() {
               Business Benefits
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Discover how AI Business Intelligence can transform your organization 
+              Discover how AI Business Intelligence can transform your organization
               and drive measurable business outcomes.
             </p>
           </motion.div>
@@ -493,7 +493,7 @@ export default function AIBusinessIntelligence() {
               Ready to Transform Your Business Intelligence?
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-              Discover how AI-powered Business Intelligence can revolutionize your decision-making 
+              Discover how AI-powered Business Intelligence can revolutionize your decision-making
               process and drive unprecedented business growth.
             </p>
             <div className="flex flex-wrap justify-center gap-4">

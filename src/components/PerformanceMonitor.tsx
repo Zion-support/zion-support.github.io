@@ -1,11 +1,11 @@
 import React, { useEffect, useState, useCallback, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { 
-  Activity, 
-  Clock, 
-  Zap, 
-  AlertTriangle, 
-  CheckCircle, 
+import {
+  Activity,
+  Clock,
+  Zap,
+  AlertTriangle,
+  CheckCircle,
   TrendingUp,
   X,
   Settings,
@@ -55,27 +55,27 @@ export const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
   // Calculate performance score
   const calculateScore = useCallback((metrics: PerformanceMetrics) => {
     let score = 100;
-    
+
     // FCP scoring (0-100)
     if (metrics.firstContentfulPaint < 1800) score -= 0;
     else if (metrics.firstContentfulPaint < 3000) score -= 10;
     else score -= 30;
-    
+
     // LCP scoring (0-100)
     if (metrics.largestContentfulPaint < 2500) score -= 0;
     else if (metrics.largestContentfulPaint < 4000) score -= 10;
     else score -= 30;
-    
+
     // CLS scoring (0-100)
     if (metrics.cumulativeLayoutShift < 0.1) score -= 0;
     else if (metrics.cumulativeLayoutShift < 0.25) score -= 10;
     else score -= 30;
-    
+
     // FID scoring (0-100)
     if (metrics.firstInputDelay < 100) score -= 0;
     else if (metrics.firstInputDelay < 300) score -= 10;
     else score -= 30;
-    
+
     return Math.max(0, score);
   }, []);
 
@@ -84,7 +84,7 @@ export const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
     if ('performance' in window) {
       const perf = (window as any).performance;
       const navigation = perf.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
-      
+
       if (navigation) {
         const newMetrics: PerformanceMetrics = {
           loadTime: navigation.loadEventEnd - navigation.loadEventStart,
@@ -111,7 +111,7 @@ export const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
         if ('PerformanceObserver' in window) {
           const clsObserver = new PerformanceObserver((list) => {
             const entries = list.getEntries();
-            let clsValue = 0;
+            const clsValue = 0;
             entries.forEach((entry: any) => {
               if (entry.value) {
                 clsValue += entry.value;
@@ -165,7 +165,7 @@ export const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
   const startMonitoring = useCallback(() => {
     setIsMonitoring(true);
     collectMetrics();
-    
+
     // Monitor continuously
     intervalRef.current = setInterval(() => {
       collectMetrics();

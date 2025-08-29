@@ -13,20 +13,20 @@ export default function AIWorkflowAutomation() {
   ];
 
   const tiers = [
-    { 
-      name: 'Starter', 
-      price: '$199/mo', 
-      details: ['Up to 10 workflows', '5 team members', 'Basic integrations', 'Email support'] 
+    {
+      name: 'Starter',
+      price: '$199/mo',
+      details: ['Up to 10 workflows', '5 team members', 'Basic integrations', 'Email support']
     },
-    { 
-      name: 'Professional', 
-      price: '$499/mo', 
-      details: ['Up to 50 workflows', '25 team members', 'Advanced integrations', 'Priority support'] 
+    {
+      name: 'Professional',
+      price: '$499/mo',
+      details: ['Up to 50 workflows', '25 team members', 'Advanced integrations', 'Priority support']
     },
-    { 
-      name: 'Enterprise', 
-      price: '$1,299/mo', 
-      details: ['Unlimited workflows', 'Unlimited team members', 'Custom integrations', '24/7 support'] 
+    {
+      name: 'Enterprise',
+      price: '$1,299/mo',
+      details: ['Unlimited workflows', 'Unlimited team members', 'Custom integrations', '24/7 support']
     },
   ];
 

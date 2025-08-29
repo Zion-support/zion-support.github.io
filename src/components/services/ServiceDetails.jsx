@@ -54,7 +54,7 @@ export function ServiceDetails({ country }) {
     return (<Card className="bg-zion-blue-dark border-zion-blue-light">
       <CardHeader>
         <CardTitle className="text-white flex items-center">
-          <Server className="mr-2 h-5 w-5 text-zion-cyan"/> 
+          <Server className="mr-2 h-5 w-5 text-zion-cyan"/>
           IT Onsite Service in {country}
         </CardTitle>
         <CardDescription className="text-zion-slate-light">
@@ -65,7 +65,7 @@ export function ServiceDetails({ country }) {
         <div className="overflow-hidden rounded-lg mb-4">
           <img loading="lazy" src={getRegionalImage(country)} alt={`Datacenter in ${country}`} className="w-full object-cover h-48 transform transition-transform duration-500 hover:scale-110"/>
         </div>
-        
+
         <div className="space-y-4">
           <div>
             <h4 className="text-lg font-medium text-white mb-2 flex items-center">
@@ -78,7 +78,7 @@ export function ServiceDetails({ country }) {
                 </div>))}
             </div>
           </div>
-          
+
           <div>
             <h4 className="text-lg font-medium text-white mb-2 flex items-center">
               <Clock className="mr-2 h-4 w-4 text-zion-purple"/>
@@ -88,7 +88,7 @@ export function ServiceDetails({ country }) {
               {getRegionalInstructions(country)}
             </p>
           </div>
-          
+
           <div className="bg-zion-blue rounded-lg p-4 border border-zion-blue-light">
             <h4 className="text-lg font-medium text-white mb-2">What's Included</h4>
             <ul className="list-disc list-inside text-zion-slate-light space-y-1">

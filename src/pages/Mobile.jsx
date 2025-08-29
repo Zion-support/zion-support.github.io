@@ -107,7 +107,7 @@ const Mobile = () => {
     ];
     return (<>
       <SEO title="Mobile-First Solutions - Zion Tech Group" description="Experience mobile-first design and development with Zion Tech Group. From responsive websites to native mobile apps, we ensure optimal mobile experiences." canonical="/mobile"/>
-      
+
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-800">
         <main className="pt-12">
           <div className="container mx-auto px-4 py-16">
@@ -117,8 +117,8 @@ const Mobile = () => {
                 Mobile-First Solutions
               </h1>
               <p className="text-xl text-blue-100 max-w-4xl mx-auto">
-                In today's mobile-first world, we ensure your digital presence is optimized 
-                for mobile devices. From responsive websites to native mobile applications, 
+                In today's mobile-first world, we ensure your digital presence is optimized
+                for mobile devices. From responsive websites to native mobile applications,
                 we deliver exceptional mobile experiences that drive engagement and results.
               </p>
             </div>
@@ -217,7 +217,7 @@ const Mobile = () => {
                     Zion Mobile App
                   </h2>
                   <p className="text-blue-100 mb-6 text-lg">
-                    Access our services and manage your projects on the go with our mobile application. 
+                    Access our services and manage your projects on the go with our mobile application.
                     Available for iOS and Android devices.
                   </p>
                   <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -239,7 +239,7 @@ const Mobile = () => {
                   Ready to Go Mobile?
                 </h2>
                 <p className="text-blue-100 mb-6 text-lg">
-                  Let's discuss your mobile strategy and create solutions that deliver 
+                  Let's discuss your mobile strategy and create solutions that deliver
                   exceptional experiences across all devices.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">

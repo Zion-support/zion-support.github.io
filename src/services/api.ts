@@ -21,10 +21,10 @@ class ApiError extends Error {
 // Generic fetch wrapper with error handling
 async function apiRequest<T>(
   endpoint: string,
-  options: RequestInit = {}
+  options: RequestInit = { /* empty */ }
 ): Promise<ApiResponse<T>> {
   const url = `${API_BASE_URL}${endpoint}`;
-  
+
   const config: RequestInit = {
     headers: {
       'Content-Type': 'application/json',
@@ -35,11 +35,11 @@ async function apiRequest<T>(
 
   try {
     const response = await fetch(url, config);
-    
+
     if (!response.ok) {
       throw new ApiError(response.status, `HTTP error! status: ${response.status}`);
     }
-    
+
     const data = await response.json();
     return data;
   } catch (error) {
@@ -54,11 +54,11 @@ async function apiRequest<T>(
 export const api = {
   // Health check
   health: () => apiRequest('/health'),
-  
+
   // Users
   getUsers: () => apiRequest<Array<{ id: number; name: string; email: string }>>('/users'),
   getUser: (id: number) => apiRequest<{ id: number; name: string; email: string }>(`/users/${id}`),
-  createUser: (userData: { name: string; email: string }) => 
+  createUser: (userData: { name: string; email: string }) =>
     apiRequest<{ id: number; name: string; email: string; createdAt: string }>('/users', {
       method: 'POST',
       body: JSON.stringify(userData),

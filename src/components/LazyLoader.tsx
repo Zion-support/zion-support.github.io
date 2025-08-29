@@ -7,10 +7,10 @@ interface LazyLoaderProps {
   props?: any
 }
 
-export const LazyLoader: React.FC<LazyLoaderProps> = ({ 
-  component: Component, 
-  fallback = <LoadingSpinner />, 
-  props = {} 
+export const LazyLoader: React.FC<LazyLoaderProps> = ({
+  component: Component,
+  fallback = <LoadingSpinner />,
+  props = { /* empty */ }
 }) => {
   return (
     <Suspense fallback={fallback}>

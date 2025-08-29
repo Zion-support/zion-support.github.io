@@ -1,13 +1,13 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { SEO } from '../../components/SEO';
-import { 
-  Shield, 
-  AlertTriangle, 
-  Brain, 
-  Zap, 
-  Eye, 
-  Users, 
+import {
+  Shield,
+  AlertTriangle,
+  Brain,
+  Zap,
+  Eye,
+  Users,
   Globe,
   Star,
   CheckCircle,
@@ -192,11 +192,11 @@ export default function AICybersecurityThreatIntelligence() {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      <SEO 
+      <SEO
         title="AI Cybersecurity Threat Intelligence - Zion Tech Group"
         description="Protect your business with AI-powered cybersecurity threat intelligence. Real-time threat detection, behavioral analytics, and automated response capabilities."
       />
-      
+
       {/* Hero Section */}
       <section className="relative overflow-hidden py-20">
         <div className="container mx-auto px-4">
@@ -216,7 +216,7 @@ export default function AICybersecurityThreatIntelligence() {
               </span>
             </h1>
             <p className="text-xl text-slate-300 max-w-3xl mx-auto mb-8">
-              Stay ahead of cyber threats with our advanced AI-powered cybersecurity platform. Real-time threat detection, 
+              Stay ahead of cyber threats with our advanced AI-powered cybersecurity platform. Real-time threat detection,
               behavioral analytics, and automated response capabilities that protect your business 24/7.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -280,7 +280,7 @@ export default function AICybersecurityThreatIntelligence() {
               </span>
             </h2>
             <p className="text-xl text-slate-300 max-w-2xl mx-auto">
-              Our AI cybersecurity platform combines cutting-edge technology with comprehensive security 
+              Our AI cybersecurity platform combines cutting-edge technology with comprehensive security
               features to protect your business from all types of cyber threats.
             </p>
           </motion.div>
@@ -469,8 +469,8 @@ export default function AICybersecurityThreatIntelligence() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
                 className={`relative bg-slate-800/50 backdrop-blur-sm rounded-2xl p-8 border transition-all duration-300 ${
-                  plan.popular 
-                    ? 'border-red-400/50 scale-105' 
+                  plan.popular
+                    ? 'border-red-400/50 scale-105'
                     : 'border-slate-700/50 hover:border-red-400/50'
                 }`}
               >
@@ -481,7 +481,7 @@ export default function AICybersecurityThreatIntelligence() {
                     </span>
                   </div>
                 )}
-                
+
                 <div className="text-center mb-8">
                   <h3 className="text-2xl font-bold text-white mb-4">{plan.plan}</h3>
                   <div className="flex items-baseline justify-center mb-2">
@@ -531,7 +531,7 @@ export default function AICybersecurityThreatIntelligence() {
               </span>
             </h2>
             <p className="text-xl text-slate-300 mb-8 max-w-2xl mx-auto">
-              Join thousands of businesses that trust our AI-powered cybersecurity platform 
+              Join thousands of businesses that trust our AI-powered cybersecurity platform
               to protect their digital infrastructure and data.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">

@@ -286,7 +286,7 @@ export default function Accessibility() {
           <p className="text-xl text-zion-slate-light mb-8 max-w-2xl mx-auto">
             We value your feedback on accessibility. If you encounter any accessibility barriers or have suggestions for improvement, please let us know.
           </p>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto mb-8">
             <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
               <Mail className="w-8 h-8 text-zion-cyan mx-auto mb-4" />
@@ -299,7 +299,7 @@ export default function Accessibility() {
                 accessibility@ziontechgroup.com
               </a>
             </div>
-            
+
             <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
               <Phone className="w-8 h-8 text-zion-cyan mx-auto mb-4" />
               <h3 className="text-lg font-semibold text-white mb-2">Call Us</h3>
@@ -311,7 +311,7 @@ export default function Accessibility() {
                 +1 (302) 464-0950
               </a>
             </div>
-            
+
             <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
               <Users className="w-8 h-8 text-zion-cyan mx-auto mb-4" />
               <h3 className="text-lg font-semibold text-white mb-2">Accessibility Team</h3>

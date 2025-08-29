@@ -14,7 +14,7 @@ export function ThemeProvider({ children }) {
     }, []);
     const value = {
         theme,
-        setTheme: () => { },
+        setTheme: () => { /* empty */ },
     };
     return (<ThemeContext.Provider value={value}>
       {children}

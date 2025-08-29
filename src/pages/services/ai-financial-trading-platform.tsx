@@ -1,14 +1,14 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { SEO } from '@/components/SEO';
-import { 
-  TrendingUp, 
-  Brain, 
-  DollarSign, 
-  BarChart3, 
-  Shield, 
-  Zap, 
-  CheckCircle, 
+import {
+  TrendingUp,
+  Brain,
+  DollarSign,
+  BarChart3,
+  Shield,
+  Zap,
+  CheckCircle,
   ArrowRight,
   Clock,
   Target,
@@ -166,11 +166,11 @@ export default function AIFinancialTradingPlatform() {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      <SEO 
+      <SEO
         title="AI Financial Trading Platform - Zion Tech Group"
         description="Revolutionary AI-powered financial trading platform with 25% higher returns. Automated trading, real-time optimization, and advanced risk management. Start from $199/month."
       />
-      
+
       {/* Hero Section */}
       <section className="relative overflow-hidden py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto text-center">
@@ -183,17 +183,17 @@ export default function AIFinancialTradingPlatform() {
               <TrendingUp className="w-4 h-4 mr-2" />
               AI-Powered Trading
             </div>
-            
+
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
               Trade Smarter with
               <span className="bg-gradient-to-r from-green-400 to-blue-400 bg-clip-text text-transparent"> AI Intelligence</span>
             </h1>
-            
+
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Our AI-powered trading platform delivers 25% higher returns through intelligent market analysis, 
+              Our AI-powered trading platform delivers 25% higher returns through intelligent market analysis,
               automated strategies, and real-time portfolio optimization. Join the future of algorithmic trading.
             </p>
-            
+
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="px-8 py-4 bg-gradient-to-r from-green-600 to-blue-600 text-white font-semibold rounded-lg hover:from-green-700 hover:to-blue-700 transition-all duration-300 transform hover:scale-105">
                 Start Free Trial
@@ -371,8 +371,8 @@ export default function AIFinancialTradingPlatform() {
                 transition={{ duration: 0.8, delay: index * 0.1 }}
                 viewport={{ once: true }}
                 className={`relative bg-gray-800/50 backdrop-blur-sm rounded-xl p-8 border ${
-                  plan.popular 
-                    ? 'border-green-500 ring-2 ring-green-500/20' 
+                  plan.popular
+                    ? 'border-green-500 ring-2 ring-green-500/20'
                     : 'border-gray-700'
                 }`}
               >
@@ -430,7 +430,7 @@ export default function AIFinancialTradingPlatform() {
             <p className="text-xl text-gray-300 mb-8">
               Join thousands of traders already experiencing the benefits of AI-powered trading
             </p>
-            
+
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="px-8 py-4 bg-gradient-to-r from-green-600 to-blue-600 text-white font-semibold rounded-lg hover:from-green-700 hover:to-blue-700 transition-all duration-300 transform hover:scale-105">
                 Start Free Trial
@@ -439,7 +439,7 @@ export default function AIFinancialTradingPlatform() {
                 Schedule Demo
               </button>
             </div>
-            
+
             <p className="text-gray-400 mt-6">
               No credit card required • 14-day free trial • Cancel anytime
             </p>

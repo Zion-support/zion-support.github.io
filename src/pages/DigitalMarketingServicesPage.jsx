@@ -185,7 +185,7 @@ export default function DigitalMarketingServicesPage() {
             Digital Marketing Services
           </h1>
           <p className="text-xl text-zion-cyan-light max-w-3xl mx-auto mb-8">
-            Drive growth and engagement with our comprehensive digital marketing solutions. 
+            Drive growth and engagement with our comprehensive digital marketing solutions.
             From SEO to social media, we help businesses thrive online.
           </p>
           <div className="flex flex-wrap justify-center gap-4">

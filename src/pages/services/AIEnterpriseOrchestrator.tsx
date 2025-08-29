@@ -1,14 +1,14 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { SEO } from '@/components/SEO';
-import { 
-  Brain, 
-  Zap, 
-  Shield, 
-  TrendingUp, 
-  Users, 
-  CheckCircle, 
-  ArrowRight, 
+import {
+  Brain,
+  Zap,
+  Shield,
+  TrendingUp,
+  Users,
+  CheckCircle,
+  ArrowRight,
   Star,
   Award,
   Lightbulb,
@@ -168,11 +168,11 @@ export default function AIEnterpriseOrchestrator() {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      <SEO 
+      <SEO
         title="AI Enterprise Orchestrator - Zion Tech Group"
         description="Transform your enterprise with AI-powered orchestration, multi-agent coordination, and predictive analytics. Streamline operations and drive innovation."
       />
-      
+
       {/* Hero Section */}
       <section className="relative overflow-hidden py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -186,16 +186,16 @@ export default function AIEnterpriseOrchestrator() {
               <Sparkles className="w-4 h-4 mr-2" />
               Revolutionary AI Technology
             </div>
-            
+
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
               AI Enterprise Orchestrator
             </h1>
-            
+
             <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-              Unlock the full potential of your enterprise with our AI-powered orchestration platform. 
+              Unlock the full potential of your enterprise with our AI-powered orchestration platform.
               Coordinate multiple AI agents, automate complex workflows, and drive unprecedented efficiency.
             </p>
-            
+
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <motion.button
                 whileHover={{ scale: 1.05 }}
@@ -214,7 +214,7 @@ export default function AIEnterpriseOrchestrator() {
             </div>
           </motion.div>
         </div>
-        
+
         {/* Floating Elements */}
         <div className="absolute top-20 left-10 w-20 h-20 bg-purple-600/20 rounded-full blur-xl"></div>
         <div className="absolute bottom-20 right-10 w-32 h-32 bg-pink-600/20 rounded-full blur-xl"></div>
@@ -233,7 +233,7 @@ export default function AIEnterpriseOrchestrator() {
               Revolutionary AI Capabilities
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Our AI Enterprise Orchestrator combines cutting-edge technologies to deliver 
+              Our AI Enterprise Orchestrator combines cutting-edge technologies to deliver
               unprecedented business transformation and operational excellence.
             </p>
           </motion.div>
@@ -253,9 +253,9 @@ export default function AIEnterpriseOrchestrator() {
                   </div>
                   <h3 className="text-2xl font-semibold text-white">{feature.title}</h3>
                 </div>
-                
+
                 <p className="text-gray-300 mb-6">{feature.description}</p>
-                
+
                 <ul className="space-y-3">
                   {feature.benefits.map((benefit, benefitIndex) => (
                     <li key={benefitIndex} className="flex items-center text-gray-300">
@@ -283,7 +283,7 @@ export default function AIEnterpriseOrchestrator() {
               Transparent Pricing
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Choose the plan that best fits your enterprise needs. All plans include 
+              Choose the plan that best fits your enterprise needs. All plans include
               our core AI orchestration capabilities with scalable features.
             </p>
           </motion.div>
@@ -296,8 +296,8 @@ export default function AIEnterpriseOrchestrator() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
                 className={`relative bg-slate-800/50 backdrop-blur-sm rounded-xl p-8 border ${
-                  plan.popular 
-                    ? 'border-purple-500 ring-2 ring-purple-500/20' 
+                  plan.popular
+                    ? 'border-purple-500 ring-2 ring-purple-500/20'
                     : 'border-slate-700'
                 }`}
               >
@@ -357,7 +357,7 @@ export default function AIEnterpriseOrchestrator() {
               Industry Applications
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Our AI Enterprise Orchestrator is transforming industries across the globe, 
+              Our AI Enterprise Orchestrator is transforming industries across the globe,
               delivering measurable results and competitive advantages.
             </p>
           </motion.div>
@@ -398,10 +398,10 @@ export default function AIEnterpriseOrchestrator() {
               Ready to Transform Your Enterprise?
             </h2>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Join the AI revolution and unlock unprecedented efficiency, innovation, and growth 
+              Join the AI revolution and unlock unprecedented efficiency, innovation, and growth
               with our Enterprise Orchestrator platform.
             </p>
-            
+
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <motion.button
                 whileHover={{ scale: 1.05 }}

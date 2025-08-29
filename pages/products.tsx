@@ -1,16 +1,16 @@
 import type { NextPage } from 'next';
 import { Helmet } from 'react-helmet-async';
 import { useState } from 'react';
-import { 
-  Brain, 
-  Cloud, 
-  Shield, 
-  Globe, 
-  Zap, 
-  Database, 
-  Smartphone, 
-  Code, 
-  Lock, 
+import {
+  Brain,
+  Cloud,
+  Shield,
+  Globe,
+  Zap,
+  Database,
+  Smartphone,
+  Code,
+  Lock,
   TrendingUp,
   Rocket,
   Cpu,
@@ -206,8 +206,8 @@ const Products: NextPage = () => {
     }
   ];
 
-  const filteredProducts = activeCategory === 'all' 
-    ? products 
+  const filteredProducts = activeCategory === 'all'
+    ? products
     : products.filter(product => product.category === activeCategory);
 
   return (
@@ -226,18 +226,18 @@ const Products: NextPage = () => {
             Our Products
           </h1>
           <p className="text-xl mb-8 max-w-3xl mx-auto text-gray-300">
-            Revolutionary technology products designed to transform how you work, create, and grow. 
+            Revolutionary technology products designed to transform how you work, create, and grow.
             From AI-powered solutions to enterprise-grade security, we deliver innovation that drives results.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
-            <a 
-              href="tel:+13024640950" 
+            <a
+              href="tel:+13024640950"
               className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-colors"
             >
               📞 Call +1 (302) 464-0950
             </a>
-            <a 
-              href="mailto:kleber@ziontechgroup.com" 
+            <a
+              href="mailto:kleber@ziontechgroup.com"
               className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-blue-900 px-8 py-4 rounded-lg font-semibold text-lg transition-colors"
             >
               ✉️ Request Demo
@@ -286,7 +286,7 @@ const Products: NextPage = () => {
                     <p className="text-gray-400 text-sm">per month</p>
                   </div>
                 </div>
-                
+
                 <h3 className="text-2xl font-bold text-white mb-2">{product.name}</h3>
                 <p className="text-blue-300 font-medium mb-4">{product.tagline}</p>
                 <p className="text-gray-300 mb-6 leading-relaxed">{product.description}</p>
@@ -347,10 +347,10 @@ const Products: NextPage = () => {
               Enterprise Solutions
             </h2>
             <p className="text-xl mb-8 text-gray-300 max-w-3xl mx-auto">
-              Need custom enterprise solutions? We offer tailored development, white-label options, 
+              Need custom enterprise solutions? We offer tailored development, white-label options,
               and dedicated support for large organizations.
             </p>
-            
+
             <div className="grid md:grid-cols-3 gap-8 mb-8">
               <div className="text-center">
                 <div className="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
@@ -376,14 +376,14 @@ const Products: NextPage = () => {
             </div>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a 
-                href="tel:+13024640950" 
+              <a
+                href="tel:+13024640950"
                 className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-colors"
               >
                 📞 Call +1 (302) 464-0950
               </a>
-              <a 
-                href="mailto:kleber@ziontechgroup.com?subject=Enterprise Solutions Inquiry" 
+              <a
+                href="mailto:kleber@ziontechgroup.com?subject=Enterprise Solutions Inquiry"
                 className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-blue-900 px-8 py-4 rounded-lg font-semibold text-lg transition-colors"
               >
                 ✉️ Enterprise Inquiry
@@ -483,19 +483,19 @@ const Products: NextPage = () => {
               Ready to Transform Your Business?
             </h2>
             <p className="text-xl mb-8 text-gray-300">
-              Start your free trial today or schedule a personalized demo to see how our products 
+              Start your free trial today or schedule a personalized demo to see how our products
               can revolutionize your workflow and drive growth.
             </p>
-            
+
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
-              <a 
-                href="tel:+13024640950" 
+              <a
+                href="tel:+13024640950"
                 className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-colors"
               >
                 📞 Call +1 (302) 464-0950
               </a>
-              <a 
-                href="mailto:kleber@ziontechgroup.com" 
+              <a
+                href="mailto:kleber@ziontechgroup.com"
                 className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-blue-900 px-8 py-4 rounded-lg font-semibold text-lg transition-colors"
               >
                 ✉️ Schedule Demo

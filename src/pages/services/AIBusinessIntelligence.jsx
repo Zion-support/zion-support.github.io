@@ -130,7 +130,7 @@ const AIBusinessIntelligence = () => {
       {/* Hero Section */}
       <div className="relative overflow-hidden">
         <div className="absolute inset-0 bg-[linear-gradient(rgba(34,221,210,0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(34,221,210,0.1)_1px,transparent_1px)] bg-[size:50px_50px]"/>
-        
+
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-32 pb-20">
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }} className="text-center">
             <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-r from-blue-600 to-cyan-600 rounded-full mb-6">
@@ -142,7 +142,7 @@ const AIBusinessIntelligence = () => {
               </span>
             </h1>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-              Transform your business data into actionable insights with our AI-powered business intelligence platform. 
+              Transform your business data into actionable insights with our AI-powered business intelligence platform.
               Make data-driven decisions with confidence using advanced analytics and predictive modeling.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
@@ -162,7 +162,7 @@ const AIBusinessIntelligence = () => {
         <motion.div variants={containerVariants} initial="hidden" whileInView="visible" viewport={{ once: true }} className="text-center mb-16">
           <h2 className="text-4xl font-bold text-white mb-6">Key Features</h2>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Our AI Business Intelligence platform combines cutting-edge technology with intuitive design 
+            Our AI Business Intelligence platform combines cutting-edge technology with intuitive design
             to deliver powerful insights that drive business growth.
           </p>
         </motion.div>
@@ -178,7 +178,7 @@ const AIBusinessIntelligence = () => {
                   <p className="text-gray-400 text-sm leading-relaxed">{feature.description}</p>
                 </div>
               </div>
-              
+
               <div className="ml-16">
                 <h4 className="text-sm font-medium text-gray-300 mb-3">Key Benefits:</h4>
                 <ul className="space-y-2">
@@ -198,7 +198,7 @@ const AIBusinessIntelligence = () => {
           <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.8 }} className="text-center mb-16">
             <h2 className="text-4xl font-bold text-white mb-6">Solutions by Industry</h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Tailored AI Business Intelligence solutions designed to address the unique challenges 
+              Tailored AI Business Intelligence solutions designed to address the unique challenges
               and opportunities in your industry.
             </p>
           </motion.div>
@@ -211,7 +211,7 @@ const AIBusinessIntelligence = () => {
                   </div>
                   <h3 className="text-xl font-semibold text-white">{category.category}</h3>
                 </div>
-                
+
                 <ul className="space-y-3">
                   {category.solutions.map((solution, idx) => (<li key={idx} className="flex items-center text-sm text-gray-400">
                       <div className="w-2 h-2 bg-blue-500 rounded-full mr-3"></div>
@@ -228,7 +228,7 @@ const AIBusinessIntelligence = () => {
         <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.8 }} className="text-center mb-16">
           <h2 className="text-4xl font-bold text-white mb-6">Technology Stack</h2>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Built on cutting-edge technologies to ensure scalability, performance, and reliability 
+            Built on cutting-edge technologies to ensure scalability, performance, and reliability
             for enterprise-grade business intelligence.
           </p>
         </motion.div>
@@ -252,7 +252,7 @@ const AIBusinessIntelligence = () => {
               Ready to Transform Your Business Intelligence?
             </h2>
             <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
-              Let our AI experts help you implement a comprehensive business intelligence solution 
+              Let our AI experts help you implement a comprehensive business intelligence solution
               that will drive growth and competitive advantage.
             </p>
             <div className="flex flex-wrap justify-center gap-4">

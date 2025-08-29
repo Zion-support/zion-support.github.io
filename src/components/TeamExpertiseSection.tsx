@@ -1,11 +1,11 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { 
-  Award, 
-  Users, 
-  Brain, 
-  Shield, 
-  Cloud, 
+import {
+  Award,
+  Users,
+  Brain,
+  Shield,
+  Cloud,
   Zap,
   Star,
   CheckCircle,
@@ -85,7 +85,7 @@ export const TeamExpertiseSection: React.FC = () => {
             Meet Our Expert Team
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Our team of certified professionals brings decades of combined experience 
+            Our team of certified professionals brings decades of combined experience
             in cutting-edge technologies and proven methodologies.
           </p>
         </motion.div>
@@ -181,7 +181,7 @@ export const TeamExpertiseSection: React.FC = () => {
               Ready to Work with Experts?
             </h3>
             <p className="text-blue-100 mb-6 max-w-2xl mx-auto">
-              Our certified professionals are ready to bring their expertise 
+              Our certified professionals are ready to bring their expertise
               to your project and help you achieve exceptional results.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">

@@ -109,7 +109,7 @@ export function FeatureHighlights() {
               <div className={`h-full p-8 rounded-3xl ${highlight.bgColor} ${highlight.borderColor} border-2 hover:border-opacity-40 transition-all duration-300 backdrop-blur-sm relative overflow-hidden`}>
                 {/* Background gradient overlay */}
                 <div className={`absolute inset-0 bg-gradient-to-br ${highlight.color} opacity-5 group-hover:opacity-10 transition-opacity duration-300`}></div>
-                
+
                 <div className="relative z-10">
                   {/* Icon */}
                   <div className={`inline-flex p-4 rounded-2xl bg-white/10 mb-6 group-hover:scale-110 transition-transform duration-300`}>
@@ -120,7 +120,7 @@ export function FeatureHighlights() {
                   <h3 className="text-2xl font-bold text-white mb-4 group-hover:text-zion-cyan transition-colors duration-200">
                     {highlight.title}
                   </h3>
-                  
+
                   <p className="text-zion-slate-light leading-relaxed mb-6">
                     {highlight.description}
                   </p>
@@ -164,7 +164,7 @@ export function FeatureHighlights() {
           <h3 className="text-3xl font-bold text-white mb-8">
             Cutting-Edge Technology Stack
           </h3>
-          
+
           <motion.div className="flex flex-wrap justify-center gap-4 mb-12" variants={containerVariants} initial="hidden" whileInView="visible" viewport={{ once: true }}>
             {technologies.map((tech, index) => (<motion.div key={index} variants={techVariants} className="px-6 py-3 bg-zion-blue/20 border border-zion-blue-light/30 rounded-full text-zion-cyan hover:bg-zion-blue/30 hover:border-zion-blue-light/50 transition-all duration-300 cursor-pointer" whileHover={{ scale: 1.05, y: -2 }}>
                 {tech}

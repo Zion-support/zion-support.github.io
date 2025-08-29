@@ -1,10 +1,10 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { 
-  Shield, 
-  Lock, 
-  CheckCircle, 
-  AlertTriangle, 
+import {
+  Shield,
+  Lock,
+  CheckCircle,
+  AlertTriangle,
   Users,
   Award,
   FileText,
@@ -70,7 +70,7 @@ export const SecurityComplianceSection: React.FC = () => {
             Security & Compliance
           </h2>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Enterprise-grade security with industry-leading compliance certifications. 
+            Enterprise-grade security with industry-leading compliance certifications.
             Your data and systems are protected by the highest security standards.
           </p>
         </motion.div>
@@ -176,7 +176,7 @@ export const SecurityComplianceSection: React.FC = () => {
               Secure Your Business Today
             </h3>
             <p className="text-blue-100 mb-6 max-w-2xl mx-auto">
-              Get enterprise-grade security and compliance without the complexity. 
+              Get enterprise-grade security and compliance without the complexity.
               Our experts handle everything while you focus on your business.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">

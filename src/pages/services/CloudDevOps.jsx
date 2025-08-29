@@ -161,14 +161,14 @@ const CloudDevOps = () => {
             Let's discuss how our cloud migration and DevOps services can help you achieve faster deployments, better scalability, and improved security.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a 
-              href="tel:+13024640950" 
+            <a
+              href="tel:+13024640950"
               className="bg-gradient-to-r from-blue-500 to-cyan-500 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all hover:scale-105"
             >
               📞 Call +1 (302) 464-0950
             </a>
-            <a 
-              href="/contact" 
+            <a
+              href="/contact"
               className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-slate-900 px-8 py-4 rounded-lg font-semibold text-lg transition-all"
             >
               Get Started

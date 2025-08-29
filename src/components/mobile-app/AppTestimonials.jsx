@@ -80,7 +80,7 @@ export const AppTestimonials = () => {
                   {renderStars(testimonial.rating)}
                 </div>
               </div>
-              
+
               <div className="relative">
                 <Quote className="absolute -top-2 -left-2 h-6 w-6 text-blue-400/30" />
                 <p className="text-gray-300 leading-relaxed pl-6">

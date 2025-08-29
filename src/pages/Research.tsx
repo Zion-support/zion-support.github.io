@@ -233,11 +233,11 @@ export default function Research() {
     const matchesSearch = project.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
                          project.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
                          project.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()));
-    
+
     const matchesCategory = activeCategory === 'all' || project.category === activeCategory;
     const matchesStatus = activeStatus === 'all' || project.status === activeStatus;
     const matchesType = activeType === 'all' || project.type === activeType;
-    
+
     return matchesSearch && matchesCategory && matchesStatus && matchesType;
   });
 
@@ -423,7 +423,7 @@ export default function Research() {
                       </div>
                     </div>
                   </div>
-                  
+
                   <div className="p-6">
                     <div className="flex items-center gap-2 mb-3">
                       {getCategoryIcon(project.category)}
@@ -434,10 +434,10 @@ export default function Research() {
                         {statuses.find(s => s.id === project.status)?.name}
                       </span>
                     </div>
-                    
+
                     <h3 className="text-xl font-semibold text-white mb-2">{project.title}</h3>
                     <p className="text-zion-slate-light text-sm mb-4">{project.description}</p>
-                    
+
                     <div className="flex items-center justify-between mb-4 text-sm text-zion-slate-light">
                       <div className="flex items-center gap-1">
                         <Users className="w-4 h-4" />
@@ -448,7 +448,7 @@ export default function Research() {
                         {project.publications.length} publications
                       </div>
                     </div>
-                    
+
                     <button className="w-full bg-zion-cyan text-zion-slate-dark py-2 rounded-lg font-semibold hover:bg-zion-cyan-light transition-colors">
                       Learn More
                     </button>
@@ -466,7 +466,7 @@ export default function Research() {
           <h2 className="text-3xl font-bold text-center text-white mb-12">
             All Research Projects
           </h2>
-          
+
           {filteredProjects.length > 0 ? (
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-6xl mx-auto">
               {filteredProjects.map((project) => (
@@ -535,7 +535,7 @@ export default function Research() {
                       <span>{project.progress}%</span>
                     </div>
                     <div className="w-full bg-zion-slate-light/20 rounded-full h-2">
-                      <div 
+                      <div
                         className="bg-zion-cyan h-2 rounded-full transition-all duration-300"
                         style={{ width: `${project.progress}%` }}
                       ></div>

@@ -146,7 +146,7 @@ export default function AIServicesPage() {
             AI Services & Solutions
           </h1>
           <p className="text-xl text-zion-cyan-light max-w-3xl mx-auto mb-8">
-            Transform your business with cutting-edge artificial intelligence services. 
+            Transform your business with cutting-edge artificial intelligence services.
             From strategy to implementation, we've got you covered.
           </p>
           <div className="flex flex-wrap justify-center gap-4">

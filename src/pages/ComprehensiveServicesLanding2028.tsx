@@ -1,14 +1,14 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import { 
-  Brain, 
-  Cloud, 
-  Shield, 
-  Rocket, 
-  Cpu, 
-  Lock, 
-  Heart, 
+import {
+  Brain,
+  Cloud,
+  Shield,
+  Rocket,
+  Cpu,
+  Lock,
+  Heart,
   Globe,
   Zap,
   Users,
@@ -50,10 +50,10 @@ import {
   ChevronRight,
   ChevronLeft
 } from 'lucide-react';
-import { 
-  revolutionaryMicroSaasServices2028, 
-  revolutionaryITInfrastructureServices2028, 
-  revolutionaryAIServices2028 
+import {
+  revolutionaryMicroSaasServices2028,
+  revolutionaryITInfrastructureServices2028,
+  revolutionaryAIServices2028
 } from '@/data/innovativeMicroSaasServices2028';
 import { SEO } from '@/components/SEO';
 import { Button } from '@/components/ui/button';
@@ -144,7 +144,7 @@ export default function ComprehensiveServicesLanding2028() {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple">
-      <SEO 
+      <SEO
         title="Comprehensive Services Landing 2028 - Zion Tech Group"
         description="Discover our comprehensive suite of innovative micro SAAS, IT infrastructure, and AI services for 2028. Transform your business with cutting-edge technology solutions."
         keywords="comprehensive services 2028, micro SAAS, IT services, AI services, technology solutions, business transformation"
@@ -155,7 +155,7 @@ export default function ComprehensiveServicesLanding2028() {
       <section className="relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-zion-blue-dark/80 to-zion-purple/80"></div>
         <div className="relative z-10 container mx-auto px-4 py-24 text-center">
-          <motion.h1 
+          <motion.h1
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
@@ -166,29 +166,29 @@ export default function ComprehensiveServicesLanding2028() {
               Revolutionary Technology Solutions for Business Transformation
             </span>
           </motion.h1>
-          <motion.p 
+          <motion.p
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
             className="text-xl text-zion-slate-light max-w-4xl mx-auto mb-8"
           >
-            Experience the future of technology with our comprehensive suite of micro SAAS, IT infrastructure, 
+            Experience the future of technology with our comprehensive suite of micro SAAS, IT infrastructure,
             and AI services. Each solution is designed for maximum impact with proven ROI and real market pricing.
           </motion.p>
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
             className="flex flex-wrap justify-center gap-4"
           >
-            <Button 
+            <Button
               size="lg"
               className="bg-zion-cyan hover:bg-zion-cyan-light text-white px-8 py-3 rounded-lg font-semibold transition-colors"
               onClick={() => document.getElementById('services-section')?.scrollIntoView({ behavior: 'smooth' })}
             >
               Explore Services
             </Button>
-            <Button 
+            <Button
               size="lg"
               variant="outline"
               className="border-zion-cyan text-zion-cyan hover:bg-zion-cyan hover:text-white px-8 py-3 rounded-lg font-semibold transition-colors"
@@ -226,7 +226,7 @@ export default function ComprehensiveServicesLanding2028() {
       {/* Services Overview */}
       <section id="services-section" className="py-20">
         <div className="container mx-auto px-4">
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
@@ -259,7 +259,7 @@ export default function ComprehensiveServicesLanding2028() {
                 <h3 className="text-xl font-bold text-white mb-2 group-hover:text-zion-cyan transition-colors">
                   {service.name}
                 </h3>
-                
+
                 <p className="text-zion-slate-light text-sm mb-4 line-clamp-3">
                   {service.description}
                 </p>
@@ -269,7 +269,7 @@ export default function ComprehensiveServicesLanding2028() {
                     <span className="text-zion-slate-light text-sm">Category:</span>
                     <span className="text-white font-medium">{service.category}</span>
                   </div>
-                  
+
                   {service.price && (
                     <div className="flex items-center justify-between">
                       <span className="text-zion-slate-light text-sm">Price:</span>
@@ -298,7 +298,7 @@ export default function ComprehensiveServicesLanding2028() {
                   ))}
                 </div>
 
-                <Button 
+                <Button
                   className="w-full bg-gradient-to-r from-zion-cyan to-zion-blue hover:from-zion-cyan-light hover:to-zion-blue-light text-white"
                   onClick={() => setSelectedService(service)}
                 >
@@ -308,13 +308,13 @@ export default function ComprehensiveServicesLanding2028() {
             ))}
           </div>
 
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.6 }}
             className="text-center mt-12"
           >
-            <Button 
+            <Button
               size="lg"
               variant="outline"
               className="border-zion-cyan text-zion-cyan hover:bg-zion-cyan hover:text-white px-8 py-3 rounded-lg font-semibold transition-colors"
@@ -329,7 +329,7 @@ export default function ComprehensiveServicesLanding2028() {
       {/* Testimonials Section */}
       <section className="py-20 bg-white/5 backdrop-blur-sm">
         <div className="container mx-auto px-4">
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
@@ -354,14 +354,14 @@ export default function ComprehensiveServicesLanding2028() {
                   <Star key={i} className="w-6 h-6 text-yellow-400 fill-current" />
                 ))}
               </div>
-              
+
               <blockquote className="text-xl text-white mb-6 italic">
                 "{testimonials[currentTestimonial].content}"
               </blockquote>
-              
+
               <div className="flex items-center justify-center gap-4">
-                <img 
-                  src={testimonials[currentTestimonial].avatar} 
+                <img
+                  src={testimonials[currentTestimonial].avatar}
                   alt={testimonials[currentTestimonial].name}
                   className="w-16 h-16 rounded-full object-cover"
                 />
@@ -382,7 +382,7 @@ export default function ComprehensiveServicesLanding2028() {
               >
                 <ChevronLeft className="w-5 h-5" />
               </Button>
-              
+
               <div className="flex gap-2">
                 {testimonials.map((_, index) => (
                   <button
@@ -394,7 +394,7 @@ export default function ComprehensiveServicesLanding2028() {
                   />
                 ))}
               </div>
-              
+
               <Button
                 variant="ghost"
                 size="sm"
@@ -411,7 +411,7 @@ export default function ComprehensiveServicesLanding2028() {
       {/* Why Choose Us Section */}
       <section className="py-20">
         <div className="container mx-auto px-4">
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
@@ -520,7 +520,7 @@ export default function ComprehensiveServicesLanding2028() {
       {/* Service Details Modal */}
       {selectedService && (
         <div className="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-4">
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
             exit={{ opacity: 0, scale: 0.9 }}
@@ -652,7 +652,7 @@ export default function ComprehensiveServicesLanding2028() {
       {/* Contact Section */}
       <section id="contact-section" className="py-20 bg-white/5 backdrop-blur-sm">
         <div className="container mx-auto px-4">
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
@@ -665,7 +665,7 @@ export default function ComprehensiveServicesLanding2028() {
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
-            <motion.div 
+            <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.1 }}
@@ -675,8 +675,8 @@ export default function ComprehensiveServicesLanding2028() {
                 <Phone className="w-12 h-12 text-zion-cyan mx-auto mb-4" />
                 <h3 className="text-xl font-semibold text-white mb-2">Call Us</h3>
                 <p className="text-zion-slate-light mb-3">Speak directly with our experts</p>
-                <a 
-                  href="tel:+13024640950" 
+                <a
+                  href="tel:+13024640950"
                   className="text-zion-cyan hover:text-zion-cyan-light font-semibold text-lg"
                 >
                   +1 302 464 0950
@@ -684,7 +684,7 @@ export default function ComprehensiveServicesLanding2028() {
               </div>
             </motion.div>
 
-            <motion.div 
+            <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
@@ -694,8 +694,8 @@ export default function ComprehensiveServicesLanding2028() {
                 <Mail className="w-12 h-12 text-zion-cyan mx-auto mb-4" />
                 <h3 className="text-xl font-semibold text-white mb-2">Email Us</h3>
                 <p className="text-zion-slate-light mb-3">Send us a detailed message</p>
-                <a 
-                  href="mailto:kleber@ziontechgroup.com" 
+                <a
+                  href="mailto:kleber@ziontechgroup.com"
                   className="text-zion-cyan hover:text-zion-cyan-light font-semibold text-lg"
                 >
                   kleber@ziontechgroup.com
@@ -703,7 +703,7 @@ export default function ComprehensiveServicesLanding2028() {
               </div>
             </motion.div>
 
-            <motion.div 
+            <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.3 }}
@@ -721,13 +721,13 @@ export default function ComprehensiveServicesLanding2028() {
             </motion.div>
           </div>
 
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.4 }}
             className="text-center mt-12"
           >
-            <Button 
+            <Button
               size="lg"
               className="bg-gradient-to-r from-zion-cyan to-zion-blue hover:from-zion-cyan-light hover:to-zion-blue-light text-white px-8 py-3 rounded-lg font-semibold transition-colors"
               onClick={() => window.location.href = '/contact'}

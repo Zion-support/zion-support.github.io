@@ -1,4 +1,3 @@
-import React from 'react';
 export function StatsSection() {
     const stats = [
         {
@@ -54,29 +53,29 @@ export function StatsSection() {
             Our track record speaks for itself - delivering exceptional results and building lasting partnerships
           </p>
         </div>
-        
+
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {stats.map((stat, index) => (<div key={index} className="text-center group">
               <div className="bg-gray-50 rounded-xl p-8 h-full border border-gray-200 hover:border-gray-300 hover:shadow-lg transition-all duration-300">
                 <div className={`w-20 h-20 bg-gradient-to-r ${stat.color} rounded-full flex items-center justify-center text-3xl mx-auto mb-6 group-hover:scale-110 transition-transform duration-300`}>
                   {stat.icon}
                 </div>
-                
+
                 <div className="text-4xl font-bold text-gray-900 mb-2 group-hover:text-blue-600 transition-colors">
                   {stat.number}
                 </div>
-                
+
                 <h3 className="text-xl font-semibold text-gray-900 mb-3">
                   {stat.label}
                 </h3>
-                
+
                 <p className="text-gray-600 leading-relaxed">
                   {stat.description}
                 </p>
               </div>
             </div>))}
         </div>
-        
+
         <div className="text-center mt-12">
           <div className="bg-gradient-to-r from-blue-50 to-cyan-50 rounded-2xl p-8 border border-blue-200">
             <h3 className="text-2xl font-bold text-gray-900 mb-4">

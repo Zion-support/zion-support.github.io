@@ -64,17 +64,17 @@ export default function AICodeReview() {
               AI Code Review
             </div>
           </motion.div>
-          
+
           <motion.h1 initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.1 }} className="text-4xl md:text-6xl font-bold text-white mb-6">
             AI-Powered
             <span className="bg-gradient-to-r from-zion-cyan via-zion-purple-light to-zion-purple bg-clip-text text-transparent"> Code Review</span>
           </motion.h1>
-          
+
           <motion.p initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.2 }} className="text-xl text-zion-slate-light max-w-3xl mx-auto mb-8">
-            Transform your code review process with AI-powered analysis. Detect bugs, security issues, 
+            Transform your code review process with AI-powered analysis. Detect bugs, security issues,
             and performance problems automatically while maintaining high code quality standards.
           </motion.p>
-          
+
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.3 }} className="flex flex-col sm:flex-row gap-4 justify-center">
             <button className="bg-gradient-to-r from-zion-purple to-zion-cyan text-white px-8 py-3 rounded-lg font-semibold hover:shadow-lg hover:shadow-zion-cyan/30 transition-all duration-300">
               Start Free Trial
@@ -94,11 +94,11 @@ export default function AICodeReview() {
               Revolutionary Code Review
             </h2>
             <p className="text-xl text-zion-slate-light max-w-2xl mx-auto">
-              Our AI code review system combines cutting-edge technology with industry best practices 
+              Our AI code review system combines cutting-edge technology with industry best practices
               to deliver exceptional code quality and security.
             </p>
           </motion.div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index) => (<motion.div key={feature.title} initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: index * 0.1 }} viewport={{ once: true }} className="bg-white/5 backdrop-blur-md rounded-2xl p-8 border border-white/10 hover:border-zion-cyan/50 transition-all duration-300 hover:transform hover:scale-105">
                 <div className="w-16 h-16 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-2xl flex items-center justify-center mb-6">
@@ -122,7 +122,7 @@ export default function AICodeReview() {
               Experience the advantages of AI-powered code review that transforms your development workflow.
             </p>
           </motion.div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
             {benefits.map((benefit, index) => (<motion.div key={benefit} initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }} whileInView={{ opacity: 1, x: 0 }} transition={{ duration: 0.6, delay: index * 0.1 }} viewport={{ once: true }} className="flex items-center space-x-4">
                 <CheckCircle className="w-6 h-6 text-zion-cyan flex-shrink-0"/>
@@ -143,7 +143,7 @@ export default function AICodeReview() {
               Our AI code review system supports a wide range of programming languages and frameworks.
             </p>
           </motion.div>
-          
+
           <div className="grid grid-cols-2 md:grid-cols-5 gap-6 max-w-4xl mx-auto">
             {supportedLanguages.map((language, index) => (<motion.div key={language} initial={{ opacity: 0, scale: 0.8 }} whileInView={{ opacity: 1, scale: 1 }} transition={{ duration: 0.5, delay: index * 0.1 }} viewport={{ once: true }} className="bg-white/5 backdrop-blur-md rounded-xl p-6 border border-white/10 text-center hover:border-zion-cyan/50 transition-all duration-300">
                 <Code className="w-8 h-8 text-zion-cyan mx-auto mb-3"/>
@@ -161,7 +161,7 @@ export default function AICodeReview() {
               Ready to Transform Your Code Review Process?
             </h2>
             <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
-              Join thousands of developers who have already revolutionized their code review workflow 
+              Join thousands of developers who have already revolutionized their code review workflow
               with our AI-powered system. Start improving code quality today.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">

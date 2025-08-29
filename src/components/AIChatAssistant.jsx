@@ -128,7 +128,7 @@ export function AIChatAssistant() {
             {message.type === 'assistant' && (<div className="w-8 h-8 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-full flex items-center justify-center flex-shrink-0">
                 <Bot className="w-4 h-4 text-white"/>
               </div>)}
-            
+
             <div className={`max-w-[80%] p-3 rounded-lg ${message.type === 'user'
                 ? 'bg-gradient-to-r from-zion-cyan to-zion-purple text-white'
                 : 'bg-zion-slate-light/10 text-zion-slate border border-zion-slate-light/20'}`}>
@@ -169,18 +169,18 @@ export function AIChatAssistant() {
                 <X className="w-4 h-4"/>
               </button>)}
           </div>
-          
+
           <button onClick={handleVoiceInput} className={`p-2 rounded-lg transition-all duration-200 ${isListening
             ? 'bg-red-500 text-white animate-pulse'
             : 'bg-zion-slate-light/20 text-zion-slate hover:bg-zion-cyan hover:text-white'}`} title={isListening ? 'Listening...' : 'Voice Input'}>
             {isListening ? <MicOff className="w-4 h-4"/> : <Mic className="w-4 h-4"/>}
           </button>
-          
+
           <button onClick={handleSendMessage} disabled={!inputValue.trim()} className="p-2 bg-gradient-to-r from-zion-cyan to-zion-purple text-white rounded-lg hover:from-zion-cyan-light hover:to-zion-purple-light transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed" title="Send Message">
             <Send className="w-4 h-4"/>
           </button>
         </div>
-        
+
         <div className="flex items-center gap-2 mt-2 text-xs text-zion-slate-light">
           <Sparkles className="w-3 h-3"/>
           <span>Powered by Zion AI • Always learning</span>

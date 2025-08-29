@@ -61,11 +61,11 @@ const QuantumComputing: React.FC = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      <SEO 
+      <SEO
         title="Quantum Computing Services - Zion Tech Group"
         description="Revolutionary quantum computing solutions for AI, cryptography, and scientific research. Achieve quantum supremacy with our cutting-edge technology."
       />
-      
+
       {/* Hero Section */}
       <section className="pt-20 pb-16 px-4">
         <div className="max-w-7xl mx-auto">
@@ -79,19 +79,19 @@ const QuantumComputing: React.FC = () => {
               <Zap className="w-5 h-5 text-purple-400 mr-2" />
               <span className="text-purple-300 font-medium">Quantum Computing</span>
             </div>
-            
+
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
               Quantum Computing
               <span className="block text-transparent bg-clip-text bg-gradient-to-r from-purple-400 via-blue-500 to-cyan-400">
                 Revolution
               </span>
             </h1>
-            
+
             <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-              Unlock the power of quantum mechanics to solve problems that are impossible for classical computers. 
+              Unlock the power of quantum mechanics to solve problems that are impossible for classical computers.
               Our quantum computing services deliver exponential speedup for AI, cryptography, and scientific research.
             </p>
-            
+
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="px-8 py-4 bg-gradient-to-r from-purple-500 to-blue-600 text-white font-semibold rounded-lg hover:from-purple-400 hover:to-blue-500 transition-all duration-200 hover:scale-105 shadow-lg shadow-purple-500/20">
                 Get Started
@@ -223,7 +223,7 @@ const QuantumComputing: React.FC = () => {
             >
               <h3 className="text-2xl font-semibold text-white mb-6">Get Started Today</h3>
               <p className="text-gray-300 mb-6">
-                Ready to experience the future of computing? Our quantum computing experts are here to help you 
+                Ready to experience the future of computing? Our quantum computing experts are here to help you
                 harness the power of quantum mechanics for your business.
               </p>
               <button className="w-full px-6 py-3 bg-gradient-to-r from-purple-500 to-blue-600 text-white font-semibold rounded-lg hover:from-purple-400 hover:to-blue-500 transition-all duration-200 hover:scale-105 shadow-lg shadow-purple-500/20">

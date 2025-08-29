@@ -23,13 +23,13 @@ class LintAutomationManager {
   log(message) {
     const timestamp = new Date().toISOString();
     const logMessage = `[${timestamp}] ${message}\n`;
-    console.log(message);
+    // // console.log(message);
     fs.appendFileSync(this.logFile, logMessage);
   }
   async runLint() {
     try {
       this.log('🔍 Running ESLint...');
-      const result = execSync('npm run lint', { 
+      const result = execSync('npm run lint', {
         encoding: 'utf8',
         stdio: 'pipe'
       });
@@ -43,7 +43,7 @@ class LintAutomationManager {
   async fixLintErrors() {
     try {
       this.log('🔧 Attempting to fix lint errors...');
-      const result = execSync('npm run lint -- --fix', { 
+      const result = execSync('npm run lint -- --fix', {
         encoding: 'utf8',
         stdio: 'pipe'
       });
@@ -56,7 +56,7 @@ class LintAutomationManager {
   }
   startFileWatcher() {
     this.log('👀 Starting file watcher...');
-    
+
     const watcher = chokidar.watch([
       'pages/**/*.{js,jsx,ts,tsx}',
       'components/**/*.{js,jsx,ts,tsx}',
@@ -79,10 +79,10 @@ class LintAutomationManager {
   }
   async handleFileChange(filePath) {
     this.log(`🔍 Checking file: ${filePath}`);
-    
+
     // Run lint on the specific file
     try {
-      const result = execSync(`npx eslint "${filePath}" --fix`, { 
+      const result = execSync(`npx eslint "${filePath}" --fix`, {
         encoding: 'utf8',
         stdio: 'pipe'
       });
@@ -144,7 +144,7 @@ switch (command) {
     process.exit(0);
     break;
   default:
-    console.log('Usage: node lint-automation-manager.js [start|stop|status]');
+    // // console.log('Usage: node lint-automation-manager.js [start|stop|status]');
     process.exit(1);
 }
 // Graceful shutdown

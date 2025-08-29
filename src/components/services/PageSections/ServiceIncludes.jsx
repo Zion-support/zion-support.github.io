@@ -151,7 +151,7 @@ export const ServiceIncludes = () => {
             What's Included in Your Service
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Choose the service package that fits your business needs. All packages include our core services 
+            Choose the service package that fits your business needs. All packages include our core services
             with additional features and support levels.
           </p>
         </div>
@@ -162,8 +162,8 @@ export const ServiceIncludes = () => {
             <div
               key={index}
               className={`relative bg-white rounded-3xl shadow-xl border-2 transition-all duration-300 hover:shadow-2xl ${
-                pkg.popular 
-                  ? 'border-blue-500 scale-105' 
+                pkg.popular
+                  ? 'border-blue-500 scale-105'
                   : 'border-gray-200 hover:border-gray-300'
               }`}
             >
@@ -174,7 +174,7 @@ export const ServiceIncludes = () => {
                   </span>
                 </div>
               )}
-              
+
               <div className="p-8">
                 {/* Package Header */}
                 <div className="text-center mb-8">

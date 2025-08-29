@@ -120,7 +120,7 @@ export default function CybersecuritySuite() {
             Cybersecurity Suite
           </h1>
           <p className="text-xl md:text-2xl text-zion-slate-light mb-8 max-w-4xl mx-auto">
-            Protect your business with comprehensive cybersecurity solutions that detect, prevent, and respond to threats in real-time. 
+            Protect your business with comprehensive cybersecurity solutions that detect, prevent, and respond to threats in real-time.
             Our AI-powered security platform provides enterprise-grade protection at an accessible price.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
@@ -146,7 +146,7 @@ export default function CybersecuritySuite() {
               Our cybersecurity suite covers every aspect of modern security needs, from threat detection to compliance management.
             </p>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {securityServices.map((service, index) => (<Card key={index} className="bg-zion-slate/50 border-red-500/20 hover:border-red-500/40 transition-all duration-300 hover:shadow-lg hover:shadow-red-500/20 text-center">
                 <CardContent className="p-6">
@@ -172,7 +172,7 @@ export default function CybersecuritySuite() {
               Our platform combines cutting-edge technology with expert security knowledge to deliver unmatched protection.
             </p>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {features.map((feature, index) => (<Card key={index} className="bg-zion-slate/50 border-red-500/20 hover:border-red-500/40 transition-all duration-300 hover:shadow-lg hover:shadow-red-500/20">
                 <CardContent className="p-6">
@@ -197,7 +197,7 @@ export default function CybersecuritySuite() {
               Our platform helps you meet and maintain compliance with major industry standards and regulations.
             </p>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
             {complianceFrameworks.map((framework, index) => (<Card key={index} className="bg-zion-slate/50 border-red-500/20 hover:border-red-500/40 transition-all duration-300">
                 <CardContent className="p-4 text-center">
@@ -220,7 +220,7 @@ export default function CybersecuritySuite() {
               Choose the security level that matches your business needs and budget. All plans include our core security features.
             </p>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
             {pricingPlans.map((plan, index) => (<Card key={index} className={`relative ${plan.popular ? 'border-red-500 border-2 scale-105' : 'border-red-500/20'} bg-zion-slate/50 hover:border-red-500/40 transition-all duration-300`}>
                 {plan.popular && (<div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
@@ -259,7 +259,7 @@ export default function CybersecuritySuite() {
             Ready to Secure Your Business?
           </h2>
           <p className="text-lg text-zion-slate-light mb-8 max-w-3xl mx-auto">
-            Join thousands of businesses already protected by our comprehensive cybersecurity suite. 
+            Join thousands of businesses already protected by our comprehensive cybersecurity suite.
             Get started with a free security assessment today.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">

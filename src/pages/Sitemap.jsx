@@ -94,7 +94,7 @@ const Sitemap = () => {
                             <ul className="space-y-3">
                                 {section.links.map((link, linkIndex) => (
                                     <li key={linkIndex}>
-                                        <Link 
+                                        <Link
                                             to={link.path}
                                             className="block text-zion-slate-light hover:text-zion-cyan transition-colors duration-300 group"
                                         >
@@ -115,19 +115,19 @@ const Sitemap = () => {
                 <div className="mt-16 text-center">
                     <h2 className="text-2xl font-bold text-white mb-8">Quick Links</h2>
                     <div className="flex flex-wrap justify-center gap-4">
-                        <Link 
+                        <Link
                             to="/contact"
                             className="px-6 py-3 bg-gradient-to-r from-zion-cyan to-zion-blue text-white rounded-lg font-medium hover:scale-105 transition-transform"
                         >
                             Get Started
                         </Link>
-                        <Link 
+                        <Link
                             to="/services"
                             className="px-6 py-3 border-2 border-zion-cyan text-zion-cyan rounded-lg font-medium hover:bg-zion-cyan hover:text-white transition-colors"
                         >
                             View Services
                         </Link>
-                        <Link 
+                        <Link
                             to="/help"
                             className="px-6 py-3 border-2 border-zion-purple text-zion-purple rounded-lg font-medium hover:bg-zion-purple hover:text-white transition-colors"
                         >

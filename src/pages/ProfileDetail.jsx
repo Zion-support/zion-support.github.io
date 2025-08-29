@@ -69,7 +69,7 @@ export default function ProfileDetail() {
     }
     return (<>
       <SEO title={`${profileData.full_name} | Zion AI Marketplace`} description={profileData.bio || "Check out this talent's profile on Zion!"}/>
-      
+
       <div className="container mx-auto px-4 py-8">
         <div className="grid grid-cols-12 gap-6">
           {/* Main Content */}
@@ -211,6 +211,6 @@ export default function ProfileDetail() {
           </div>
         </div>
       </div>
-      
+
     </>);
 }

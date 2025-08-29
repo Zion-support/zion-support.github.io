@@ -86,8 +86,8 @@ const InnovativeServicesShowcase2026: React.FC = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white">
-      <SEO 
-        title="Innovative Services Showcase 2026 - Zion Tech Group" 
+      <SEO
+        title="Innovative Services Showcase 2026 - Zion Tech Group"
         description="Explore our cutting-edge 2026 innovative micro SAAS services including AI, Quantum Computing, Blockchain, and more. Transform your business with revolutionary technology solutions."
       />
 
@@ -286,10 +286,10 @@ const InnovativeServicesShowcase2026: React.FC = () => {
                       Support: {service.supportLevel}
                     </div>
                   </div>
-                  
+
                   <div className="flex items-center justify-between">
                     <div className="text-xs text-slate-400">
-                      <a 
+                      <a
                         href={`tel:${service.contactInfo.phone}`}
                         className="text-cyan-300 hover:text-cyan-200 transition-colors"
                       >
@@ -328,10 +328,10 @@ const InnovativeServicesShowcase2026: React.FC = () => {
           >
             <h2 className="text-4xl font-bold mb-6">Ready to Transform Your Business?</h2>
             <p className="text-xl text-slate-300 mb-8 max-w-3xl mx-auto">
-              Our innovative services are designed to give you a competitive edge in the rapidly evolving technology landscape. 
+              Our innovative services are designed to give you a competitive edge in the rapidly evolving technology landscape.
               Let's discuss how we can help you achieve your goals.
             </p>
-            
+
             <div className="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto mb-12">
               <div className="text-center">
                 <div className="w-16 h-16 bg-cyan-400/10 rounded-full flex items-center justify-center mx-auto mb-4">
@@ -344,7 +344,7 @@ const InnovativeServicesShowcase2026: React.FC = () => {
                   </a>
                 </p>
               </div>
-              
+
               <div className="text-center">
                 <div className="w-16 h-16 bg-cyan-400/10 rounded-full flex items-center justify-center mx-auto mb-4">
                   <Mail className="w-8 h-8 text-cyan-400" />
@@ -356,7 +356,7 @@ const InnovativeServicesShowcase2026: React.FC = () => {
                   </a>
                 </p>
               </div>
-              
+
               <div className="text-center">
                 <div className="w-16 h-16 bg-cyan-400/10 rounded-full flex items-center justify-center mx-auto mb-4">
                   <MapPin className="w-8 h-8 text-cyan-400" />

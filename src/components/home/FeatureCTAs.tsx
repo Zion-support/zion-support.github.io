@@ -4,14 +4,14 @@ import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle }
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Link } from "react-router-dom";
-import { 
-  ArrowRight, 
-  Users, 
-  Zap, 
-  Settings, 
-  Search, 
-  MessageSquare, 
-  Smartphone, 
+import {
+  ArrowRight,
+  Users,
+  Zap,
+  Settings,
+  Search,
+  MessageSquare,
+  Smartphone,
   Calendar,
   BookOpen,
   Code,
@@ -187,13 +187,13 @@ export function FeatureCTAs() {
                   {feature.description}
                 </CardDescription>
               </CardHeader>
-              
+
               <CardContent className="pb-4">
                 <p className="text-sm text-gray-300 leading-relaxed">
                   {feature.details}
                 </p>
               </CardContent>
-              
+
               <CardFooter>
                 <Link to={feature.link} className="w-full">
                   <Button className="w-full bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 text-white">

@@ -134,7 +134,7 @@ export const ServiceDetailsSection = ({ services = [] }) => {
             Service Details & Specifications
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Get detailed information about our IT services, including features, requirements, 
+            Get detailed information about our IT services, including features, requirements,
             timelines, and estimated costs.
           </p>
         </div>
@@ -159,7 +159,7 @@ export const ServiceDetailsSection = ({ services = [] }) => {
                         </span>
                       </div>
                       <p className="text-gray-600 text-lg">{service.description}</p>
-                      
+
                       {/* Quick Info */}
                       <div className="flex items-center space-x-6 mt-4">
                         <div className="flex items-center space-x-2 text-gray-500">
@@ -177,7 +177,7 @@ export const ServiceDetailsSection = ({ services = [] }) => {
                       </div>
                     </div>
                   </div>
-                  
+
                   <button
                     onClick={() => toggleService(service.id)}
                     className="ml-4 p-2 text-gray-400 hover:text-gray-600 transition-colors"
@@ -252,7 +252,7 @@ export const ServiceDetailsSection = ({ services = [] }) => {
                         <p className="text-2xl font-bold text-blue-600">{service.estimatedCost}</p>
                         <p className="text-sm text-gray-500">*Final cost depends on specific requirements</p>
                       </div>
-                      
+
                       <div className="flex space-x-4">
                         <button className="px-6 py-3 bg-gray-100 text-gray-700 rounded-lg font-medium hover:bg-gray-200 transition-colors">
                           Download Brochure

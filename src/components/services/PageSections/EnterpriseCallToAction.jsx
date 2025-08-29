@@ -77,7 +77,7 @@ export const EnterpriseCallToAction = () => {
             Enterprise Solutions
           </h2>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            For large organizations requiring enterprise-grade IT services, we provide customized solutions, 
+            For large organizations requiring enterprise-grade IT services, we provide customized solutions,
             dedicated support teams, and strategic consulting to drive your digital transformation.
           </p>
         </div>
@@ -136,10 +136,10 @@ export const EnterpriseCallToAction = () => {
             Ready to Transform Your IT Infrastructure?
           </h3>
           <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">
-            Join hundreds of enterprise organizations that trust Zion with their critical IT operations. 
+            Join hundreds of enterprise organizations that trust Zion with their critical IT operations.
             Let's discuss how we can help you achieve your technology goals.
           </p>
-          
+
           <div className="flex flex-col sm:flex-row gap-6 justify-center mb-8">
             <a
               href="#enterprise-demo"
@@ -223,7 +223,7 @@ export const EnterpriseCallToAction = () => {
               Start Your Enterprise Journey
             </h3>
             <p className="text-gray-300 mb-6">
-              Contact our enterprise team today to discuss your requirements and explore how Zion can help 
+              Contact our enterprise team today to discuss your requirements and explore how Zion can help
               you achieve your technology objectives.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">

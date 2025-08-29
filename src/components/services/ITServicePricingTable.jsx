@@ -107,7 +107,7 @@ export const ITServicePricingTable = () => {
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             Choose the IT support plan that fits your business needs. All plans include our core services with flexible options for growth.
           </p>
-          
+
           {/* Billing Toggle */}
           <div className="flex items-center justify-center mt-8">
             <span className={`text-lg font-medium ${billingCycle === 'monthly' ? 'text-gray-900' : 'text-gray-500'}`}>
@@ -136,8 +136,8 @@ export const ITServicePricingTable = () => {
             <div
               key={index}
               className={`relative bg-white rounded-2xl shadow-xl border-2 transition-all duration-300 hover:shadow-2xl ${
-                plan.popular 
-                  ? 'border-blue-500 scale-105' 
+                plan.popular
+                  ? 'border-blue-500 scale-105'
                   : 'border-gray-200 hover:border-gray-300'
               }`}
             >
@@ -148,7 +148,7 @@ export const ITServicePricingTable = () => {
                   </span>
                 </div>
               )}
-              
+
               <div className="p-8">
                 <div className="flex items-center mb-6">
                   <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mr-4">
@@ -159,7 +159,7 @@ export const ITServicePricingTable = () => {
                     <p className="text-gray-600 text-sm">{plan.description}</p>
                   </div>
                 </div>
-                
+
                 <div className="mb-8">
                   <div className="flex items-baseline">
                     <span className="text-5xl font-bold text-gray-900">${plan.price}</span>
@@ -168,7 +168,7 @@ export const ITServicePricingTable = () => {
                     </span>
                   </div>
                 </div>
-                
+
                 <div className="space-y-4 mb-8">
                   <h4 className="font-semibold text-gray-900">What's Included:</h4>
                   {plan.features.map((feature, featureIndex) => (
@@ -178,7 +178,7 @@ export const ITServicePricingTable = () => {
                     </div>
                   ))}
                 </div>
-                
+
                 <div className="space-y-4 mb-8">
                   <h4 className="font-semibold text-gray-900">Not Included:</h4>
                   {plan.notIncluded.map((feature, featureIndex) => (
@@ -188,7 +188,7 @@ export const ITServicePricingTable = () => {
                     </div>
                   ))}
                 </div>
-                
+
                 <button
                   className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
                     plan.popular

@@ -1,24 +1,24 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { 
-  Brain, 
-  Shield, 
-  Cloud, 
-  Rocket, 
-  Globe, 
-  Cpu, 
-  Lock, 
-  Heart, 
-  Users, 
-  ShoppingCart, 
-  BookOpen, 
-  MessageCircle, 
-  HelpCircle, 
-  DollarSign, 
-  Gauge, 
-  Star, 
-  Target, 
-  TrendingUp, 
+import {
+  Brain,
+  Shield,
+  Cloud,
+  Rocket,
+  Globe,
+  Cpu,
+  Lock,
+  Heart,
+  Users,
+  ShoppingCart,
+  BookOpen,
+  MessageCircle,
+  HelpCircle,
+  DollarSign,
+  Gauge,
+  Star,
+  Target,
+  TrendingUp,
   Award,
   Zap,
   Eye,
@@ -91,11 +91,11 @@ export default function InnovativeServices2027() {
 
   return (
     <div className="min-h-screen bg-futuristic">
-      <SEO 
+      <SEO
         title="2027 Innovative Services - Zion Tech Group"
         description="Discover our revolutionary 2027 services portfolio featuring cutting-edge AI, Quantum Computing, Blockchain, and emerging technology solutions."
       />
-      
+
       {/* Hero Section */}
       <section className="relative overflow-hidden py-20">
         <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/20 via-purple-500/20 to-pink-500/20 animate-pulse"></div>
@@ -110,7 +110,7 @@ export default function InnovativeServices2027() {
               2027 Innovative Services
             </h1>
             <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
-              Revolutionary AI, Quantum Computing, Blockchain, and emerging technology solutions 
+              Revolutionary AI, Quantum Computing, Blockchain, and emerging technology solutions
               that are transforming industries worldwide. Experience the future of technology today.
             </p>
             <div className="flex flex-wrap justify-center gap-4 mb-8">
@@ -352,7 +352,7 @@ export default function InnovativeServices2027() {
               Ready to Lead the Future?
             </h2>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Join the elite group of forward-thinking companies that are already leveraging our 
+              Join the elite group of forward-thinking companies that are already leveraging our
               revolutionary 2027 services to gain competitive advantages and drive unprecedented growth.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">

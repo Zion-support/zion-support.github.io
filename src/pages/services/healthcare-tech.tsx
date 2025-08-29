@@ -22,17 +22,17 @@ export default function HealthcareTech() {
                 <Heart className="w-4 h-4 mr-2" />
                 Healthcare Technology
               </div>
-              
+
               <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
                 Healthcare
                 <span className="bg-gradient-to-r from-pink-400 to-red-500 bg-clip-text text-transparent"> Technology</span>
               </h1>
-              
+
               <p className="text-xl text-slate-300 mb-8 max-w-3xl mx-auto">
-                Revolutionize healthcare delivery with cutting-edge technology solutions. AI-powered diagnostics, 
+                Revolutionize healthcare delivery with cutting-edge technology solutions. AI-powered diagnostics,
                 patient monitoring, and digital health platforms for better patient outcomes.
               </p>
-              
+
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link
                   to="/contact"
@@ -58,7 +58,7 @@ export default function HealthcareTech() {
                 Advanced Healthcare Solutions
               </h2>
               <p className="text-xl text-slate-300 max-w-2xl mx-auto">
-                Our healthcare technology platform provides comprehensive solutions for modern healthcare delivery, 
+                Our healthcare technology platform provides comprehensive solutions for modern healthcare delivery,
                 from AI diagnostics to patient management systems.
               </p>
             </div>
@@ -187,7 +187,7 @@ export default function HealthcareTech() {
                 AI-Powered Healthcare
               </h2>
               <p className="text-xl text-slate-300 max-w-2xl mx-auto">
-                Leverage artificial intelligence to enhance diagnostic accuracy, improve patient outcomes, 
+                Leverage artificial intelligence to enhance diagnostic accuracy, improve patient outcomes,
                 and optimize healthcare operations.
               </p>
             </div>

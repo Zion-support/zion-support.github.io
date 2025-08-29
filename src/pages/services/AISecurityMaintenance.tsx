@@ -13,20 +13,20 @@ export default function AISecurityMaintenance() {
   ];
 
   const tiers = [
-    { 
-      name: 'Developer', 
-      price: '$399/mo', 
-      details: ['Up to 10 systems', 'Basic AI features', 'Standard maintenance', 'Email support'] 
+    {
+      name: 'Developer',
+      price: '$399/mo',
+      details: ['Up to 10 systems', 'Basic AI features', 'Standard maintenance', 'Email support']
     },
-    { 
-      name: 'Business', 
-      price: '$999/mo', 
-      details: ['Up to 50 systems', 'Advanced AI features', 'Enhanced maintenance', 'Priority support'] 
+    {
+      name: 'Business',
+      price: '$999/mo',
+      details: ['Up to 50 systems', 'Advanced AI features', 'Enhanced maintenance', 'Priority support']
     },
-    { 
-      name: 'Enterprise', 
-      price: '$2,499/mo', 
-      details: ['Unlimited systems', 'Custom AI models', 'Full maintenance suite', '24/7 dedicated support'] 
+    {
+      name: 'Enterprise',
+      price: '$2,499/mo',
+      details: ['Unlimited systems', 'Custom AI models', 'Full maintenance suite', '24/7 dedicated support']
     },
   ];
 

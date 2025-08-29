@@ -1,13 +1,13 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { 
-  Atom, 
-  Zap, 
-  CheckCircle, 
-  BarChart3, 
-  Sparkles, 
-  ArrowRight, 
+import {
+  Atom,
+  Zap,
+  CheckCircle,
+  BarChart3,
+  Sparkles,
+  ArrowRight,
   Brain,
   Cpu,
   Database,
@@ -116,16 +116,16 @@ export default function QuantumComputingSolutions() {
 
   return (
     <div className="min-h-screen bg-futuristic">
-      <SEO 
+      <SEO
         title="Quantum Computing Solutions - Zion Tech Group"
         description="Unlock the power of quantum computing with our cutting-edge solutions. Solve complex problems 1000x faster and enable breakthrough discoveries."
         canonical="/services/quantum-computing-solutions"
       />
-      
+
       {/* Hero Section */}
       <section className="relative overflow-hidden py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
-          <motion.div 
+          <motion.div
             className="text-center"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -138,17 +138,17 @@ export default function QuantumComputingSolutions() {
               Harness the power of quantum mechanics to solve the world's most complex computational challenges and unlock unprecedented possibilities.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link 
-                to="/contact" 
+              <Link
+                to="/contact"
                 className="inline-flex items-center px-8 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-200 transform hover:scale-105"
               >
                 Explore Quantum Solutions
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Link>
-              <a 
-                href="https://ziontechgroup.com" 
-                target="_blank" 
-                rel="noreferrer" 
+              <a
+                href="https://ziontechgroup.com"
+                target="_blank"
+                rel="noreferrer"
                 className="inline-flex items-center px-8 py-3 border border-cyan-500 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-500 hover:text-white transition-all duration-200"
               >
                 Visit Our Site
@@ -156,16 +156,16 @@ export default function QuantumComputingSolutions() {
             </div>
           </motion.div>
         </div>
-        
+
         {/* Animated Background Elements */}
         <div className="absolute inset-0 -z-10">
           <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/10 to-blue-500/10" />
-          <motion.div 
+          <motion.div
             className="absolute top-20 left-20 w-72 h-72 bg-cyan-500/20 rounded-full blur-3xl"
             animate={{ scale: [1, 1.2, 1], opacity: [0.3, 0.6, 0.3] }}
             transition={{ duration: 4, repeat: Infinity }}
           />
-          <motion.div 
+          <motion.div
             className="absolute bottom-20 right-20 w-96 h-96 bg-blue-500/20 rounded-full blur-3xl"
             animate={{ scale: [1.2, 1, 1.2], opacity: [0.6, 0.3, 0.6] }}
             transition={{ duration: 4, repeat: Infinity, delay: 2 }}
@@ -176,7 +176,7 @@ export default function QuantumComputingSolutions() {
       {/* Quantum Applications Section */}
       <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
-          <motion.div 
+          <motion.div
             className="text-center mb-16"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -190,7 +190,7 @@ export default function QuantumComputingSolutions() {
               Discover how quantum computing is transforming industries and solving previously impossible problems
             </p>
           </motion.div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {quantumApplications.map((app, index) => (
               <motion.div
@@ -228,7 +228,7 @@ export default function QuantumComputingSolutions() {
       {/* Features Section */}
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-slate-900/30">
         <div className="max-w-7xl mx-auto">
-          <motion.div 
+          <motion.div
             className="text-center mb-16"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -242,7 +242,7 @@ export default function QuantumComputingSolutions() {
               Cutting-edge quantum computing features for the most challenging computational problems
             </p>
           </motion.div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {features.map((feature, index) => (
               <motion.div
@@ -266,7 +266,7 @@ export default function QuantumComputingSolutions() {
       {/* Benefits Section */}
       <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
-          <motion.div 
+          <motion.div
             className="text-center mb-16"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -280,7 +280,7 @@ export default function QuantumComputingSolutions() {
               Unprecedented computational power that transforms what's possible
             </p>
           </motion.div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {benefits.map((benefit, index) => (
               <motion.div
@@ -307,7 +307,7 @@ export default function QuantumComputingSolutions() {
       {/* Research Areas Section */}
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-slate-900/30">
         <div className="max-w-7xl mx-auto">
-          <motion.div 
+          <motion.div
             className="text-center mb-16"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -321,7 +321,7 @@ export default function QuantumComputingSolutions() {
               Pioneering research in quantum computing and its applications
             </p>
           </motion.div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {researchAreas.map((area, index) => (
               <motion.div
@@ -345,7 +345,7 @@ export default function QuantumComputingSolutions() {
       {/* Pricing Section */}
       <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
-          <motion.div 
+          <motion.div
             className="text-center mb-16"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -359,14 +359,14 @@ export default function QuantumComputingSolutions() {
               Access to the future of computing with flexible pricing options
             </p>
           </motion.div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {pricing.map((plan, index) => (
               <motion.div
                 key={index}
                 className={`relative bg-slate-800/50 border rounded-xl p-8 ${
-                  plan.recommended 
-                    ? 'border-cyan-500/50 bg-slate-800/70' 
+                  plan.recommended
+                    ? 'border-cyan-500/50 bg-slate-800/70'
                     : 'border-slate-700/50'
                 }`}
                 initial={{ opacity: 0, y: 20 }}
@@ -381,7 +381,7 @@ export default function QuantumComputingSolutions() {
                     </span>
                   </div>
                 )}
-                
+
                 <div className="text-center mb-6">
                   <h3 className="text-2xl font-bold text-white mb-2">{plan.plan}</h3>
                   <div className="flex items-baseline justify-center">
@@ -389,7 +389,7 @@ export default function QuantumComputingSolutions() {
                     <span className="text-slate-400 ml-1">{plan.period}</span>
                   </div>
                 </div>
-                
+
                 <ul className="space-y-3 mb-8">
                   {plan.features.map((feature, idx) => (
                     <li key={idx} className="flex items-center text-slate-300">
@@ -398,8 +398,8 @@ export default function QuantumComputingSolutions() {
                     </li>
                   ))}
                 </ul>
-                
-                <Link 
+
+                <Link
                   to="/contact"
                   className={`w-full py-3 px-6 rounded-lg font-semibold text-center block transition-all duration-300 ${
                     plan.recommended
@@ -418,7 +418,7 @@ export default function QuantumComputingSolutions() {
       {/* Tech Stack Section */}
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-slate-900/30">
         <div className="max-w-7xl mx-auto">
-          <motion.div 
+          <motion.div
             className="text-center mb-16"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -432,7 +432,7 @@ export default function QuantumComputingSolutions() {
               Integration with the world's most advanced quantum computing platforms
             </p>
           </motion.div>
-          
+
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
             {quantumTechnologies.map((tech, index) => (
               <motion.a
@@ -470,14 +470,14 @@ export default function QuantumComputingSolutions() {
               Join the quantum revolution and solve problems that were once considered impossible
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link 
+              <Link
                 to="/contact"
                 className="inline-flex items-center px-8 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-200 transform hover:scale-105"
               >
                 Start Quantum Journey
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Link>
-              <a 
+              <a
                 href="tel:+13024640950"
                 className="inline-flex items-center px-8 py-3 border border-cyan-500 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-500 hover:text-white transition-all duration-200"
               >

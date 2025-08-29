@@ -8,7 +8,7 @@ const AIAutonomousRiskManagement = () => {
         <meta name="keywords" content="AI risk management, autonomous risk management, risk identification, threat assessment, autonomous operations, AI risk management platform"/>
         <link rel="canonical" href="https://ziontechgroup.com/ai-autonomous-risk-management"/>
       </Helmet>
-      
+
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-red-900 to-slate-900">
         <div className="container mx-auto px-4 py-16">
           {/* Hero Section */}
@@ -52,31 +52,31 @@ const AIAutonomousRiskManagement = () => {
               <h3 className="text-xl font-semibold text-white mb-3">Risk Intelligence</h3>
               <p className="text-gray-300">AI trained on risk datasets</p>
             </div>
-            
+
             <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20">
               <div className="text-orange-400 text-4xl mb-4">🤖</div>
               <h3 className="text-xl font-semibold text-white mb-3">Autonomous Operation</h3>
               <p className="text-gray-300">AI that manages risks independently</p>
             </div>
-            
+
             <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20">
               <div className="text-yellow-400 text-4xl mb-4">📈</div>
               <h3 className="text-xl font-semibold text-white mb-3">Continuous Risk Management</h3>
               <p className="text-gray-300">24/7 risk management operations</p>
             </div>
-            
+
             <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20">
               <div className="text-amber-400 text-4xl mb-4">🔍</div>
               <h3 className="text-xl font-semibold text-white mb-3">Deep Analysis</h3>
               <p className="text-gray-300">Comprehensive risk insights</p>
             </div>
-            
+
             <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20">
               <div className="text-lime-400 text-4xl mb-4">🛡️</div>
               <h3 className="text-xl font-semibold text-white mb-3">Proactive Risk Management</h3>
               <p className="text-gray-300">Prevent risk issues</p>
             </div>
-            
+
             <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20">
               <div className="text-green-400 text-4xl mb-4">⚡</div>
               <h3 className="text-xl font-semibold text-white mb-3">Adaptive Risk Management</h3>
@@ -93,25 +93,25 @@ const AIAutonomousRiskManagement = () => {
                 <h3 className="text-lg font-semibold text-white mb-2">Identify</h3>
                 <p className="text-gray-300 text-sm">Identify risks</p>
               </div>
-              
+
               <div className="text-center">
                 <div className="bg-red-600 w-16 h-16 rounded-full flex items-center justify-center text-2xl font-bold text-white mx-auto mb-4">2</div>
                 <h3 className="text-lg font-semibold text-white mb-2">Assess</h3>
                 <p className="text-gray-300 text-sm">Assess threats</p>
               </div>
-              
+
               <div className="text-center">
                 <div className="bg-red-600 w-16 h-16 rounded-full flex items-center justify-center text-2xl font-bold text-white mx-auto mb-4">3</div>
                 <h3 className="text-lg font-semibold text-white mb-2">Mitigate</h3>
                 <p className="text-gray-300 text-sm">Mitigate risks</p>
               </div>
-              
+
               <div className="text-center">
                 <div className="bg-red-600 w-16 h-16 rounded-full flex items-center justify-center text-2xl font-bold text-white mx-auto mb-4">4</div>
                 <h3 className="text-lg font-semibold text-white mb-2">Monitor</h3>
                 <p className="text-gray-300 text-sm">Monitor risks</p>
               </div>
-              
+
               <div className="text-center">
                 <div className="bg-red-600 w-16 h-16 rounded-full flex items-center justify-center text-2xl font-bold text-white mx-auto mb-4">5</div>
                 <h3 className="text-lg font-semibold text-white mb-2">Optimize</h3>
@@ -138,12 +138,12 @@ const AIAutonomousRiskManagement = () => {
                 <h3 className="text-xl font-semibold text-white mb-3">Financial Services</h3>
                 <p className="text-gray-300">Financial risk management</p>
               </div>
-              
+
               <div className="bg-white/5 rounded-xl p-6 border border-white/10">
                 <h3 className="text-xl font-semibold text-white mb-3">Cybersecurity</h3>
                 <p className="text-gray-300">Security risk management</p>
               </div>
-              
+
               <div className="bg-white/5 rounded-xl p-6 border border-white/10">
                 <h3 className="text-xl font-semibold text-white mb-3">Enterprise</h3>
                 <p className="text-gray-300">Enterprise risk management</p>

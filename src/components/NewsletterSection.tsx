@@ -12,7 +12,7 @@ const NewsletterSection: React.FC = () => {
     if (!email) return;
 
     setIsLoading(true);
-    
+
     // Simulate API call
     setTimeout(() => {
       setIsSubscribed(true);
@@ -54,7 +54,7 @@ const NewsletterSection: React.FC = () => {
             </div>
             <h2 className="text-3xl font-bold text-white mb-4">Welcome to the Zion Tech Group Community!</h2>
             <p className="text-gray-300 text-lg mb-6">
-              You're now subscribed to our newsletter. We'll keep you updated with the latest technology insights, 
+              You're now subscribed to our newsletter. We'll keep you updated with the latest technology insights,
               service announcements, and exclusive content.
             </p>
             <button
@@ -83,10 +83,10 @@ const NewsletterSection: React.FC = () => {
               Stay Ahead with Zion Tech Group
             </h2>
             <p className="text-xl text-gray-300 mb-8 leading-relaxed">
-              Get exclusive access to the latest technology insights, service updates, and industry trends. 
+              Get exclusive access to the latest technology insights, service updates, and industry trends.
               Join thousands of professionals who trust us to keep them informed.
             </p>
-            
+
             <div className="space-y-4 mb-8">
               {benefits.map((benefit, index) => (
                 <motion.div

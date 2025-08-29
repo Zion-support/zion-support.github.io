@@ -37,8 +37,7 @@ pm2 start ./scripts/automation/project-health-monitor.cjs --name "project-health
   --cron-restart "*/15 * * * *" \
   --max-memory-restart 1G \
   --log ./logs/project-health-monitor.log \
-  --error ./logs/project-health-monitor-error.log \
-  --out ./logs/project-health-monitor-out.log
+  --error ./logs/project-health-monitor-error.log
 
 # TypeScript Syntax Fixer (every 10 minutes)
 echo "  - Starting TypeScript Syntax Fixer..."
@@ -46,8 +45,7 @@ pm2 start ./scripts/automation/typescript-syntax-fixer.cjs --name "typescript-sy
   --cron-restart "*/10 * * * *" \
   --max-memory-restart 1G \
   --log ./logs/typescript-syntax-fixer.log \
-  --error ./logs/typescript-syntax-fixer-error.log \
-  --out ./logs/typescript-syntax-fixer-out.log
+  --error ./logs/typescript-syntax-fixer-error.log
 
 # Dependency Manager (every 2 hours)
 echo "  - Starting Dependency Manager..."
@@ -55,8 +53,7 @@ pm2 start ./scripts/automation/dependency-manager.cjs --name "dependency-manager
   --cron-restart "0 */2 * * *" \
   --max-memory-restart 1G \
   --log ./logs/dependency-manager.log \
-  --error ./logs/dependency-manager-error.log \
-  --out ./logs/dependency-manager-out.log
+  --error ./logs/dependency-manager-error.log
 
 # Project Health Dashboard (every 5 minutes)
 echo "  - Starting Project Health Dashboard..."
@@ -64,8 +61,7 @@ pm2 start ./scripts/automation/project-health-dashboard.cjs --name "project-heal
   --cron-restart "*/5 * * * *" \
   --max-memory-restart 512M \
   --log ./logs/project-health-dashboard.log \
-  --error ./logs/project-health-dashboard-error.log \
-  --out ./logs/project-health-dashboard-out.log
+  --error ./logs/project-health-dashboard-error.log
 
 # Save PM2 configuration
 echo "💾 Saving PM2 configuration..."

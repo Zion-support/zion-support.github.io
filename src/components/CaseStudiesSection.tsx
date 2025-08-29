@@ -1,11 +1,11 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import { 
-  TrendingUp, 
-  Users, 
-  DollarSign, 
-  Clock, 
+import {
+  TrendingUp,
+  Users,
+  DollarSign,
+  Clock,
   ArrowRight,
   Star,
   CheckCircle
@@ -67,7 +67,7 @@ export const CaseStudiesSection: React.FC = () => {
             Success Stories
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Discover how we've helped businesses across industries achieve 
+            Discover how we've helped businesses across industries achieve
             remarkable results through innovative technology solutions.
           </p>
         </motion.div>
@@ -96,7 +96,7 @@ export const CaseStudiesSection: React.FC = () => {
               <div className="mb-6">
                 <h4 className="font-semibold text-gray-900 mb-2">Challenge:</h4>
                 <p className="text-gray-600 text-sm mb-4">{study.challenge}</p>
-                
+
                 <h4 className="font-semibold text-gray-900 mb-2">Solution:</h4>
                 <p className="text-gray-600 text-sm">{study.solution}</p>
               </div>
@@ -143,7 +143,7 @@ export const CaseStudiesSection: React.FC = () => {
               Ready to Write Your Success Story?
             </h3>
             <p className="text-blue-100 mb-6 max-w-2xl mx-auto">
-              Join hundreds of satisfied clients who have transformed their 
+              Join hundreds of satisfied clients who have transformed their
               businesses with our innovative technology solutions.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">

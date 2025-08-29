@@ -1,18 +1,18 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import { 
-  Brain, 
-  Cloud, 
-  Shield, 
-  Zap, 
-  Users, 
-  Globe, 
-  Cpu, 
-  Lock, 
-  ShoppingCart, 
-  MessageCircle, 
-  BookOpen, 
+import {
+  Brain,
+  Cloud,
+  Shield,
+  Zap,
+  Users,
+  Globe,
+  Cpu,
+  Lock,
+  ShoppingCart,
+  MessageCircle,
+  BookOpen,
   DollarSign,
   Gauge,
   HelpCircle
@@ -242,7 +242,7 @@ export function ServicesShowcase() {
                 <div className="relative overflow-hidden bg-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/10 hover:border-white/20 transition-all duration-300 hover:shadow-2xl hover:shadow-cyan-500/10">
                   {/* Background Gradient */}
                   <div className={`absolute inset-0 bg-gradient-to-br ${service.color} opacity-0 group-hover:opacity-10 transition-opacity duration-300`} />
-                  
+
                   {/* Icon */}
                   <div className={`relative z-10 w-16 h-16 bg-gradient-to-br ${service.color} rounded-2xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300`}>
                     <service.icon className="w-8 h-8 text-white" />

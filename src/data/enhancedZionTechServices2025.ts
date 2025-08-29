@@ -801,7 +801,7 @@ export const getFeaturedEnhancedServices = () => {
 };
 
 export const getEnhancedServicesByPriceRange = (minPrice: number, maxPrice: number) => {
-  return ENHANCED_ZION_TECH_SERVICES_2025.filter(service => 
+  return ENHANCED_ZION_TECH_SERVICES_2025.filter(service =>
     service.price >= minPrice && service.price <= maxPrice
   );
 };

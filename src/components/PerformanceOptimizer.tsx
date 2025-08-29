@@ -1,13 +1,13 @@
 import React, { useEffect, useState, useCallback, useMemo } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { 
-  Activity, 
-  Zap, 
-  Gauge, 
-  TrendingUp, 
-  AlertTriangle, 
-  CheckCircle, 
-  Clock, 
+import {
+  Activity,
+  Zap,
+  Gauge,
+  TrendingUp,
+  AlertTriangle,
+  CheckCircle,
+  Clock,
   HardDrive,
   Cpu,
   Memory,
@@ -57,40 +57,40 @@ export function PerformanceOptimizer() {
     try {
       // Measure page load time
       const loadTime = performance.now();
-      
+
       // Memory usage (if available)
       const memoryInfo = (performance as any).memory;
       const memoryUsage = memoryInfo ? memoryInfo.usedJSHeapSize / 1024 / 1024 : 0;
-      
+
       // CPU usage estimation
       const startTime = performance.now();
       await new Promise(resolve => setTimeout(resolve, 100));
       const endTime = performance.now();
       const cpuUsage = Math.max(0, 100 - (endTime - startTime) / 100 * 100);
-      
+
       // Network latency
-      const networkLatency = navigator.connection ? 
+      const networkLatency = navigator.connection ?
         (navigator.connection as any).rtt || 0 : 0;
-      
+
       // Bundle size estimation
       const bundleSize = performance.getEntriesByType('resource')
         .filter((entry: any) => entry.name.includes('.js') || entry.name.includes('.css'))
         .reduce((total: number, entry: any) => total + (entry.transferSize || 0), 0) / 1024;
-      
+
       // Core Web Vitals simulation
       const coreWebVitals = {
         lcp: Math.random() * 2000 + 500, // Largest Contentful Paint
         fid: Math.random() * 100 + 10,   // First Input Delay
         cls: Math.random() * 0.1 + 0.01  // Cumulative Layout Shift
       };
-      
+
       // Lighthouse score calculation
-      const lighthouseScore = Math.max(0, 100 - 
+      const lighthouseScore = Math.max(0, 100 -
         (coreWebVitals.lcp > 2500 ? 30 : 0) -
         (coreWebVitals.fid > 100 ? 30 : 0) -
         (coreWebVitals.cls > 0.1 ? 40 : 0)
       );
-      
+
       setMetrics({
         loadTime,
         memoryUsage,
@@ -100,7 +100,7 @@ export function PerformanceOptimizer() {
         lighthouseScore,
         coreWebVitals
       });
-      
+
       // Generate optimization suggestions
       generateSuggestions({
         loadTime,
@@ -111,16 +111,16 @@ export function PerformanceOptimizer() {
         lighthouseScore,
         coreWebVitals
       });
-      
+
     } catch (error) {
-      console.error('Performance measurement failed:', error);
+      // console.error('Performance measurement failed:', error);
     }
   }, []);
 
   // Generate intelligent optimization suggestions
   const generateSuggestions = useCallback((metrics: PerformanceMetrics) => {
     const newSuggestions: OptimizationSuggestion[] = [];
-    
+
     if (metrics.loadTime > 3000) {
       newSuggestions.push({
         id: 'lazy-loading',
@@ -131,7 +131,7 @@ export function PerformanceOptimizer() {
         implemented: false
       });
     }
-    
+
     if (metrics.memoryUsage > 50) {
       newSuggestions.push({
         id: 'memory-optimization',
@@ -142,7 +142,7 @@ export function PerformanceOptimizer() {
         implemented: false
       });
     }
-    
+
     if (metrics.bundleSize > 500) {
       newSuggestions.push({
         id: 'bundle-splitting',
@@ -153,7 +153,7 @@ export function PerformanceOptimizer() {
         implemented: false
       });
     }
-    
+
     if (metrics.lighthouseScore < 80) {
       newSuggestions.push({
         id: 'core-web-vitals',
@@ -164,16 +164,16 @@ export function PerformanceOptimizer() {
         implemented: false
       });
     }
-    
+
     setSuggestions(newSuggestions);
   }, []);
 
   // Auto-optimization features
   const implementOptimization = useCallback((suggestionId: string) => {
-    setSuggestions(prev => prev.map(s => 
+    setSuggestions(prev => prev.map(s =>
       s.id === suggestionId ? { ...s, implemented: true } : s
     ));
-    
+
     // Simulate optimization implementation
     setTimeout(() => {
       measurePerformance();
@@ -278,15 +278,15 @@ export function PerformanceOptimizer() {
                     <button
                       onClick={() => setIsMonitoring(!isMonitoring)}
                       className={`flex items-center space-x-2 px-4 py-2 rounded-lg transition-colors ${
-                        isMonitoring 
-                          ? 'bg-green-500 text-white' 
+                        isMonitoring
+                          ? 'bg-green-500 text-white'
                           : 'bg-gray-200 dark:bg-zion-slate-700 text-gray-700 dark:text-gray-300'
                       }`}
                     >
                       <Activity className="w-4 h-4" />
                       <span>{isMonitoring ? 'Monitoring Active' : 'Start Monitoring'}</span>
                     </button>
-                    
+
                     <button
                       onClick={measurePerformance}
                       className="flex items-center space-x-2 px-4 py-2 bg-zion-cyan text-white rounded-lg hover:bg-zion-cyan-dark transition-colors"
@@ -295,7 +295,7 @@ export function PerformanceOptimizer() {
                       <span>Refresh Metrics</span>
                     </button>
                   </div>
-                  
+
                   <label className="flex items-center space-x-2">
                     <input
                       type="checkbox"
@@ -414,7 +414,7 @@ export function PerformanceOptimizer() {
                           {metrics.coreWebVitals.lcp < 2500 ? 'Good' : 'Poor'}
                         </div>
                       </div>
-                      
+
                       <div className="p-4 bg-white dark:bg-zion-slate-800 rounded-xl border border-gray-200 dark:border-zion-slate-700">
                         <div className="text-sm text-gray-500 mb-1">FID</div>
                         <div className={`text-xl font-bold ${metrics.coreWebVitals.fid < 100 ? 'text-green-500' : 'text-red-500'}`}>
@@ -424,7 +424,7 @@ export function PerformanceOptimizer() {
                           {metrics.coreWebVitals.fid < 100 ? 'Good' : 'Poor'}
                         </div>
                       </div>
-                      
+
                       <div className="p-4 bg-white dark:bg-zion-slate-800 rounded-xl border border-gray-200 dark:border-zion-slate-700">
                         <div className="text-sm text-gray-500 mb-1">CLS</div>
                         <div className={`text-xl font-bold ${metrics.coreWebVitals.cls < 0.1 ? 'text-green-500' : 'text-red-500'}`}>
@@ -450,8 +450,8 @@ export function PerformanceOptimizer() {
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
                         className={`p-4 rounded-xl border ${
-                          suggestion.implemented 
-                            ? 'bg-green-50 dark:bg-green-900/20 border-green-200 dark:border-green-800' 
+                          suggestion.implemented
+                            ? 'bg-green-50 dark:bg-green-900/20 border-green-200 dark:border-green-800'
                             : 'bg-white dark:bg-zion-slate-800 border-gray-200 dark:border-zion-slate-700'
                         }`}
                       >
@@ -472,7 +472,7 @@ export function PerformanceOptimizer() {
                               {suggestion.description}
                             </p>
                           </div>
-                          
+
                           {suggestion.implemented ? (
                             <CheckCircle className="w-5 h-5 text-green-500" />
                           ) : (
@@ -486,7 +486,7 @@ export function PerformanceOptimizer() {
                         </div>
                       </motion.div>
                     ))}
-                    
+
                     {suggestions.length === 0 && (
                       <div className="text-center py-8 text-gray-500 dark:text-gray-400">
                         <CheckCircle className="w-12 h-12 mx-auto mb-3 text-green-500" />

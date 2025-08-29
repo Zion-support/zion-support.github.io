@@ -77,7 +77,7 @@ export default function Onboarding() {
             navigate(dashboardRoute);
         }
         catch (error) {
-            console.error('Error updating profile:', error);
+            // console.error('Error updating profile:', error);
             toast({
                 title: 'Error',
                 description: 'There was a problem updating your profile. Please try again.',
@@ -94,7 +94,7 @@ export default function Onboarding() {
         return null;
     }
     return (<>
-      
+
       <div className="min-h-screen bg-zion-blue py-12 px-4">
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-12">
@@ -127,6 +127,6 @@ export default function Onboarding() {
           </div>
         </div>
       </div>
-      
+
     </>);
 }

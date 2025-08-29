@@ -42,9 +42,9 @@ export default function CreatePostPage() {
           <span className="text-muted-foreground">/</span>
           <span className="text-sm font-medium">Create Post</span>
         </div>
-        
+
         <h1 className="text-3xl font-bold mb-8">Create New Post</h1>
-        
+
         <PostForm initialValues={initialValues} onSubmit={handleSubmit}/>
       </div>);
 }

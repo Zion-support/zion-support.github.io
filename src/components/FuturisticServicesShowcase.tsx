@@ -1,15 +1,15 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { 
-	Rocket, 
-	Brain, 
-	Zap, 
-	Shield, 
-	Globe, 
-	TrendingUp, 
-	Heart, 
-	DollarSign, 
-	Eye, 
+import {
+	Rocket,
+	Brain,
+	Zap,
+	Shield,
+	Globe,
+	TrendingUp,
+	Heart,
+	DollarSign,
+	Eye,
 	Bot,
 	ArrowRight,
 	Star,
@@ -119,7 +119,7 @@ export default function FuturisticServicesShowcase() {
 			<div className="container mx-auto px-4">
 				{/* Header */}
 				<div className="text-center mb-16">
-					<motion.h2 
+					<motion.h2
 						initial={{ opacity: 0, y: 20 }}
 						whileInView={{ opacity: 1, y: 0 }}
 						transition={{ duration: 0.6 }}
@@ -130,7 +130,7 @@ export default function FuturisticServicesShowcase() {
 							Service Showcase
 						</span>
 					</motion.h2>
-					<motion.p 
+					<motion.p
 						initial={{ opacity: 0, y: 20 }}
 						whileInView={{ opacity: 1, y: 0 }}
 						transition={{ duration: 0.6, delay: 0.2 }}
@@ -156,8 +156,8 @@ export default function FuturisticServicesShowcase() {
 										key={index}
 										onClick={() => setCurrentService(index)}
 										className={`w-3 h-3 rounded-full transition-all ${
-											index === currentService 
-												? 'bg-zion-cyan scale-125' 
+											index === currentService
+												? 'bg-zion-cyan scale-125'
 												: 'bg-white/30 hover:bg-white/50'
 										}`}
 									/>
@@ -230,14 +230,14 @@ export default function FuturisticServicesShowcase() {
 										</div>
 										{/* Animated particles */}
 										<motion.div
-											animate={{ 
+											animate={{
 												rotate: [0, 360],
 												scale: [1, 1.1, 1]
 											}}
-											transition={{ 
-												duration: 20, 
-												repeat: Infinity, 
-												ease: "linear" 
+											transition={{
+												duration: 20,
+												repeat: Infinity,
+												ease: "linear"
 											}}
 											className="absolute inset-0"
 										>

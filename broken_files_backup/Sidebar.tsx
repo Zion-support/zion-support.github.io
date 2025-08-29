@@ -1,22 +1,22 @@
 import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { 
-  Home, 
-  Briefcase, 
-  Users, 
-  Settings, 
-  FileText, 
-  HelpCircle, 
-  MessageSquare, 
-  BarChart3, 
-  ShoppingCart, 
-  Wrench, 
-  Globe, 
-  Building, 
-  Code, 
-  Shield, 
-  Zap, 
-  ChevronRight, 
+import {
+  Home,
+  Briefcase,
+  Users,
+  Settings,
+  FileText,
+  HelpCircle,
+  MessageSquare,
+  BarChart3,
+  ShoppingCart,
+  Wrench,
+  Globe,
+  Building,
+  Code,
+  Shield,
+  Zap,
+  ChevronRight,
   ChevronDown,
   Star,
   Rocket,
@@ -168,7 +168,7 @@ export function Sidebar() {
   ];
 
   const toggleItem = (itemName: string) => {
-    setExpandedItems(prev => 
+    setExpandedItems(prev =>
       prev.includes(itemName)
         ? prev.filter(name => name !== itemName)
         : [...prev, itemName]
@@ -219,7 +219,7 @@ export function Sidebar() {
                         }`}
                       />
                     </button>
-                    
+
                     {expandedItems.includes(item.name) && (
                       <div className="ml-6 mt-2 space-y-1">
                         {item.children.map((child) => (

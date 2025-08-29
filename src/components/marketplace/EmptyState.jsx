@@ -55,24 +55,24 @@ export function EmptyState({ type, title, description, action, icon }) {
       <div className="mb-4">
         {displayIcon}
       </div>
-      
+
       <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">
         {displayTitle}
       </h3>
-      
+
       <p className="text-gray-600 dark:text-gray-400 max-w-md mb-6">
         {displayDescription}
       </p>
-      
+
       {action && (<Button onClick={action.onClick} variant="outline" className="flex items-center gap-2">
           <RefreshCw className="w-4 h-4"/>
           {action.label}
         </Button>)}
-      
+
       {type === 'error' && (<div className="mt-4 text-sm text-gray-500 dark:text-gray-400">
           <p>If this issue continues, please contact our support team.</p>
         </div>)}
-      
+
       {type === 'network' && (<div className="mt-4 text-sm text-gray-500 dark:text-gray-400">
           <p>
             {t('general.check_status_page')}

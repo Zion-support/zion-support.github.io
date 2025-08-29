@@ -309,14 +309,14 @@ const IndustrySolutions = () => {
             <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5"/>
             <input type="text" placeholder="Search industry solutions..." value={searchTerm} onChange={(e) => setSearchTerm(e.target.value)} className="w-full pl-10 pr-4 py-3 bg-white/10 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"/>
           </div>
-          
+
           <div className="flex flex-wrap gap-4">
             <select value={selectedIndustry} onChange={(e) => setSelectedIndustry(e.target.value)} className="px-4 py-2 bg-white/10 border border-gray-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-blue-500">
               {industries.map(industry => (<option key={industry} value={industry} className="bg-gray-800 text-white">
                   {industry === 'all' ? 'All Industries' : industry}
                 </option>))}
             </select>
-            
+
             <select value={selectedSolutionType} onChange={(e) => setSelectedSolutionType(e.target.value)} className="px-4 py-2 bg-white/10 border border-gray-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-blue-500">
               {solutionTypes.map(type => (<option key={type} value={type} className="bg-gray-800 text-white">
                   {type === 'all' ? 'All Solution Types' : type}
@@ -346,9 +346,9 @@ const IndustrySolutions = () => {
                   </div>
                 </div>
               </div>
-              
+
               <p className="text-gray-300 mb-4">{solution.description}</p>
-              
+
               <div className="mb-4">
                 <div className="text-2xl font-bold text-white mb-2">
                   {formatPrice(solution.price, solution.pricingModel)}

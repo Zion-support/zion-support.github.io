@@ -99,7 +99,7 @@ const AdvancedServiceRecommendation = () => {
         }
     ];
     const calculateMatchScore = (service, profile) => {
-        let score = 0;
+        const score = 0;
         // Industry match
         if (service.targetAudience?.some((audience) => audience.toLowerCase().includes(profile.industry.toLowerCase()))) {
             score += 25;
@@ -215,7 +215,7 @@ const AdvancedServiceRecommendation = () => {
           AI-Powered Service Recommendation Engine
         </h1>
         <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
-          Get personalized service recommendations based on your industry, goals, and requirements. 
+          Get personalized service recommendations based on your industry, goals, and requirements.
           Our AI analyzes your profile to suggest the perfect solutions for your business.
         </p>
       </motion.div>
@@ -226,7 +226,7 @@ const AdvancedServiceRecommendation = () => {
           <Brain className="w-6 h-6 text-zion-cyan"/>
           Tell Us About Your Business
         </h2>
-        
+
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           <div>
             <label className="block text-sm font-medium text-zion-slate-dark mb-2">Industry</label>
@@ -235,7 +235,7 @@ const AdvancedServiceRecommendation = () => {
               {industries.map(industry => (<option key={industry} value={industry}>{industry}</option>))}
             </select>
           </div>
-          
+
           <div>
             <label className="block text-sm font-medium text-zion-slate-dark mb-2">Company Size</label>
             <select value={clientProfile.companySize} onChange={(e) => setClientProfile(prev => ({ ...prev, companySize: e.target.value }))} className="w-full p-3 border border-zion-slate-light rounded-md">
@@ -243,7 +243,7 @@ const AdvancedServiceRecommendation = () => {
               {companySizes.map(size => (<option key={size} value={size}>{size}</option>))}
             </select>
           </div>
-          
+
           <div>
             <label className="block text-sm font-medium text-zion-slate-dark mb-2">Budget Range</label>
             <select value={clientProfile.budget} onChange={(e) => setClientProfile(prev => ({ ...prev, budget: e.target.value }))} className="w-full p-3 border border-zion-slate-light rounded-md">
@@ -251,7 +251,7 @@ const AdvancedServiceRecommendation = () => {
               {budgets.map(budget => (<option key={budget} value={budget}>{budget}</option>))}
             </select>
           </div>
-          
+
           <div>
             <label className="block text-sm font-medium text-zion-slate-dark mb-2">Implementation Timeline</label>
             <select value={clientProfile.timeline} onChange={(e) => setClientProfile(prev => ({ ...prev, timeline: e.target.value }))} className="w-full p-3 border border-zion-slate-light rounded-md">
@@ -259,7 +259,7 @@ const AdvancedServiceRecommendation = () => {
               {timelines.map(timeline => (<option key={timeline} value={timeline}>{timeline}</option>))}
             </select>
           </div>
-          
+
           <div>
             <label className="block text-sm font-medium text-zion-slate-dark mb-2">Technology Maturity Level</label>
             <select value={clientProfile.technologyMaturity} onChange={(e) => setClientProfile(prev => ({ ...prev, technologyMaturity: e.target.value }))} className="w-full p-3 border border-zion-slate-light rounded-md">
@@ -321,7 +321,7 @@ const AdvancedServiceRecommendation = () => {
           <h2 className="text-2xl font-bold text-zion-blue-dark mb-6 text-center">
             Your Personalized Service Recommendations
           </h2>
-          
+
           <div className="space-y-6">
             {recommendations.map((rec, index) => (<motion.div key={rec.service.id} initial={{ opacity: 0, x: -20 }} animate={{ opacity: 1, x: 0 }} transition={{ delay: 0.1 * index }}>
                 <Card className="hover:shadow-lg transition-shadow">
@@ -334,7 +334,7 @@ const AdvancedServiceRecommendation = () => {
                         <p className="text-zion-slate-light mb-3">
                           {rec.service.description}
                         </p>
-                        
+
                         <div className="flex flex-wrap gap-2 mb-4">
                           <Badge className={getPriorityColor(rec.priority)}>
                             Priority: {rec.priority}
@@ -347,7 +347,7 @@ const AdvancedServiceRecommendation = () => {
                           </Badge>
                         </div>
                       </div>
-                      
+
                       <div className="text-right ml-4">
                         <div className="text-2xl font-bold text-zion-cyan mb-1">
                           {rec.service.price}
@@ -358,7 +358,7 @@ const AdvancedServiceRecommendation = () => {
                       </div>
                     </div>
                   </CardHeader>
-                  
+
                   <CardContent>
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
                       <div>
@@ -373,7 +373,7 @@ const AdvancedServiceRecommendation = () => {
                             </li>))}
                         </ul>
                       </div>
-                      
+
                       <div>
                         <h4 className="font-semibold text-zion-slate-dark mb-3 flex items-center gap-2">
                           <BarChart3 className="w-4 h-4 text-zion-cyan"/>
@@ -395,7 +395,7 @@ const AdvancedServiceRecommendation = () => {
                             </Badge>
                           </div>
                         </div>
-                        
+
                         <div className="mt-4">
                           <Button className="w-full bg-gradient-to-r from-zion-cyan to-zion-purple hover:from-zion-cyan-dark hover:to-zion-purple-dark" onClick={() => window.open(rec.service.link, '_blank')}>
                             Learn More
@@ -408,13 +408,13 @@ const AdvancedServiceRecommendation = () => {
                 </Card>
               </motion.div>))}
           </div>
-          
+
           {/* CTA Section */}
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.4 }} className="mt-12 text-center">
             <div className="bg-gradient-to-r from-zion-purple via-zion-blue-light to-zion-cyan rounded-lg p-8 text-white">
               <h3 className="text-3xl font-bold mb-4">Ready to Get Started?</h3>
               <p className="text-xl mb-6 max-w-2xl mx-auto">
-                Our expert team is ready to help you implement the perfect solution 
+                Our expert team is ready to help you implement the perfect solution
                 for your business needs. Contact us today for a personalized consultation.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">

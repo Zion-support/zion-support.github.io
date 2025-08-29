@@ -1,12 +1,12 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { 
-  Shield, 
-  FileText, 
-  TrendingUp, 
-  Users, 
-  Database, 
-  BarChart3, 
+import {
+  Shield,
+  FileText,
+  TrendingUp,
+  Users,
+  Database,
+  BarChart3,
   Zap,
   CheckCircle,
   ArrowRight,
@@ -205,12 +205,12 @@ export default function AIFinancialComplianceAssistant() {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
-      <SEO 
+      <SEO
         title="AI Financial Compliance Assistant | Zion Tech Group"
         description="Revolutionize your financial compliance with AI-powered automation. Monitor regulations, detect risks, and ensure 99.9% compliance accuracy."
         keywords="AI financial compliance, regulatory compliance, SOX compliance, GDPR compliance, PCI DSS, AML KYC, financial regulations"
       />
-      
+
       {/* Hero Section */}
       <section className="relative py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto text-center">
@@ -223,19 +223,19 @@ export default function AIFinancialComplianceAssistant() {
               <Shield className="w-4 h-4 mr-2" />
               AI-Powered Financial Compliance
             </div>
-            
+
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
               AI Financial Compliance
               <span className="block text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">
                 Assistant
               </span>
             </h1>
-            
+
             <p className="text-xl text-slate-300 mb-8 max-w-3xl mx-auto">
-              Transform your financial compliance with AI-powered automation. Monitor regulations in real-time, 
+              Transform your financial compliance with AI-powered automation. Monitor regulations in real-time,
               detect risks proactively, and ensure 99.9% compliance accuracy across all frameworks.
             </p>
-            
+
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="px-8 py-4 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-cyan-700 transition-all duration-300 transform hover:scale-105">
                 Start Free Trial
@@ -265,7 +265,7 @@ export default function AIFinancialComplianceAssistant() {
               Everything you need to stay compliant with evolving financial regulations
             </p>
           </motion.div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index) => (
               <motion.div
@@ -304,7 +304,7 @@ export default function AIFinancialComplianceAssistant() {
               Comprehensive coverage of all major financial compliance requirements
             </p>
           </motion.div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {complianceFrameworks.map((framework, index) => (
               <motion.div
@@ -343,7 +343,7 @@ export default function AIFinancialComplianceAssistant() {
               Transform your compliance process and unlock new levels of efficiency and accuracy
             </p>
           </motion.div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {benefits.map((benefit, index) => (
               <motion.div
@@ -379,7 +379,7 @@ export default function AIFinancialComplianceAssistant() {
               From startups to enterprise institutions, our platform scales with your needs
             </p>
           </motion.div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {useCases.map((useCase, index) => (
               <motion.div
@@ -418,7 +418,7 @@ export default function AIFinancialComplianceAssistant() {
               Choose the plan that fits your organization size and compliance needs
             </p>
           </motion.div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {pricingPlans.map((plan, index) => (
               <motion.div
@@ -428,8 +428,8 @@ export default function AIFinancialComplianceAssistant() {
                 transition={{ duration: 0.8, delay: index * 0.1 }}
                 viewport={{ once: true }}
                 className={`relative bg-slate-800/50 backdrop-blur-sm border rounded-xl p-8 ${
-                  plan.popular 
-                    ? 'border-blue-500/50 bg-gradient-to-br from-blue-900/20 to-cyan-900/20' 
+                  plan.popular
+                    ? 'border-blue-500/50 bg-gradient-to-br from-blue-900/20 to-cyan-900/20'
                     : 'border-slate-700/50'
                 }`}
               >
@@ -440,7 +440,7 @@ export default function AIFinancialComplianceAssistant() {
                     </span>
                   </div>
                 )}
-                
+
                 <div className="text-center mb-8">
                   <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
                   <div className="flex items-baseline justify-center mb-2">
@@ -449,7 +449,7 @@ export default function AIFinancialComplianceAssistant() {
                   </div>
                   <p className="text-slate-300">{plan.description}</p>
                 </div>
-                
+
                 <ul className="space-y-4 mb-8">
                   {plan.features.map((feature, featureIndex) => (
                     <li key={featureIndex} className="flex items-start space-x-3">
@@ -458,7 +458,7 @@ export default function AIFinancialComplianceAssistant() {
                     </li>
                   ))}
                 </ul>
-                
+
                 <button className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
                   plan.popular
                     ? 'bg-gradient-to-r from-blue-600 to-cyan-600 text-white hover:from-blue-700 hover:to-cyan-700'
@@ -487,7 +487,7 @@ export default function AIFinancialComplianceAssistant() {
             <p className="text-xl text-slate-300 mb-8">
               Join hundreds of financial institutions who have already improved their compliance with AI
             </p>
-            
+
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="px-8 py-4 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-cyan-700 transition-all duration-300 transform hover:scale-105">
                 Start Free Trial
@@ -496,7 +496,7 @@ export default function AIFinancialComplianceAssistant() {
                 Schedule Demo
               </button>
             </div>
-            
+
             <p className="text-slate-400 mt-6">
               No credit card required • 14-day free trial • Cancel anytime
             </p>
@@ -519,7 +519,7 @@ export default function AIFinancialComplianceAssistant() {
             <p className="text-xl text-slate-300 mb-8">
               Our compliance experts are here to help you get started and answer any questions
             </p>
-            
+
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
               <div className="flex flex-col items-center">
                 <Phone className="w-8 h-8 text-blue-400 mb-3" />
@@ -537,7 +537,7 @@ export default function AIFinancialComplianceAssistant() {
                 <p className="text-slate-300">{contactInfo.address}</p>
               </div>
             </div>
-            
+
             <a
               href={`mailto:${contactInfo.email}`}
               className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-cyan-700 transition-all duration-300"

@@ -81,11 +81,11 @@ export default function BlockchainEnterpriseSolutions() {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      <SEO 
+      <SEO
         title="Blockchain Enterprise Solutions - Zion Tech Group"
         description="Transform your business with enterprise-grade blockchain solutions. From smart contracts to DeFi applications, we help you leverage the power of distributed ledger technology."
       />
-      
+
       {/* Hero Section */}
       <section className="relative overflow-hidden py-20">
         <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 to-pink-600/20"></div>
@@ -108,7 +108,7 @@ export default function BlockchainEnterpriseSolutions() {
               </span>
             </h1>
             <p className="text-xl text-slate-300 mb-8 max-w-3xl mx-auto">
-              Unlock the potential of distributed ledger technology with our enterprise blockchain solutions. 
+              Unlock the potential of distributed ledger technology with our enterprise blockchain solutions.
               Build trust, transparency, and efficiency into your business processes.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
@@ -144,7 +144,7 @@ export default function BlockchainEnterpriseSolutions() {
               Why Choose Blockchain Technology?
             </h2>
             <p className="text-xl text-slate-300 max-w-3xl mx-auto">
-              Blockchain offers unprecedented opportunities for businesses to create 
+              Blockchain offers unprecedented opportunities for businesses to create
               secure, transparent, and efficient systems that build trust with stakeholders.
             </p>
           </motion.div>
@@ -232,7 +232,7 @@ export default function BlockchainEnterpriseSolutions() {
               Blockchain Use Cases
             </h2>
             <p className="text-xl text-slate-300 max-w-3xl mx-auto">
-              Discover how blockchain technology can transform various industries 
+              Discover how blockchain technology can transform various industries
               and business processes
             </p>
           </motion.div>
@@ -269,7 +269,7 @@ export default function BlockchainEnterpriseSolutions() {
               Ready to Transform Your Business?
             </h2>
             <p className="text-xl text-slate-300 mb-8 max-w-3xl mx-auto">
-              Let's discuss how blockchain technology can revolutionize your operations, 
+              Let's discuss how blockchain technology can revolutionize your operations,
               enhance security, and create new opportunities for growth and innovation.
             </p>
             <div className="flex flex-wrap justify-center gap-4">

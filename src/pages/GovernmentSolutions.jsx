@@ -1,14 +1,14 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { 
-  Building2, 
-  Shield, 
-  Users, 
-  FileText, 
-  BarChart3, 
-  Zap, 
-  CheckCircle, 
-  ArrowRight, 
+import {
+  Building2,
+  Shield,
+  Users,
+  FileText,
+  BarChart3,
+  Zap,
+  CheckCircle,
+  ArrowRight,
   Star,
   Target,
   TrendingUp,
@@ -217,9 +217,9 @@ export default function GovernmentSolutions() {
   const [selectedSolution, setSelectedSolution] = useState(null);
 
   const categories = ['All', 'Citizen Services', 'Security', 'Analytics', 'System Modernization', 'Emergency Management', 'Compliance'];
-  
-  const filteredSolutions = selectedCategory === 'All' 
-    ? governmentSolutions 
+
+  const filteredSolutions = selectedCategory === 'All'
+    ? governmentSolutions
     : governmentSolutions.filter(solution => solution.category === selectedCategory);
 
   return (
@@ -231,7 +231,7 @@ export default function GovernmentSolutions() {
           <div className="absolute top-20 left-20 w-72 h-72 bg-zion-cyan/30 rounded-full blur-3xl"></div>
           <div className="absolute bottom-20 right-20 w-96 h-96 bg-zion-purple/30 rounded-full blur-3xl"></div>
         </div>
-        
+
         <div className="container-responsive relative z-10">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -247,17 +247,17 @@ export default function GovernmentSolutions() {
             >
               <Building2 className="w-10 h-10 text-white" />
             </motion.div>
-            
+
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
               Government
               <span className="text-gradient block">Solutions</span>
             </h1>
-            
+
             <p className="text-xl text-zion-slate-light leading-relaxed mb-8">
-              Secure, compliant, and innovative technology solutions designed specifically for government agencies. 
+              Secure, compliant, and innovative technology solutions designed specifically for government agencies.
               From citizen services to cybersecurity, we help government organizations deliver better public services.
             </p>
-            
+
             <div className="flex flex-wrap justify-center gap-4 text-sm">
               <div className="flex items-center gap-2 text-zion-cyan">
                 <Shield className="w-4 h-4" />
@@ -303,10 +303,10 @@ export default function GovernmentSolutions() {
                 <div className="w-16 h-16 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-2xl flex items-center justify-center mx-auto mb-6">
                   <standard.icon className="w-8 h-8 text-white" />
                 </div>
-                
+
                 <h3 className="text-xl font-bold text-white mb-3">{standard.name}</h3>
                 <p className="text-zion-slate-light mb-4 leading-relaxed">{standard.description}</p>
-                
+
                 <div className="space-y-2">
                   {standard.requirements.map((req, reqIndex) => (
                     <div key={reqIndex} className="flex items-center gap-2 text-zion-slate-light text-sm">
@@ -353,7 +353,7 @@ export default function GovernmentSolutions() {
                     {step.step}
                   </div>
                 </div>
-                
+
                 <h3 className="text-xl font-bold text-white mb-3">{step.title}</h3>
                 <p className="text-zion-slate-light mb-4 leading-relaxed">{step.description}</p>
                 <span className="inline-block px-3 py-1 bg-zion-cyan/20 text-zion-cyan text-sm rounded-full border border-zion-cyan/30">
@@ -410,10 +410,10 @@ export default function GovernmentSolutions() {
                 <div className="w-16 h-16 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-2xl flex items-center justify-center mb-6">
                   <solution.icon className="w-8 h-8 text-white" />
                 </div>
-                
+
                 <h3 className="text-2xl font-bold text-white mb-3">{solution.title}</h3>
                 <p className="text-zion-slate-light mb-6 leading-relaxed">{solution.description}</p>
-                
+
                 <div className="space-y-3 mb-6">
                   {solution.features.map((feature, featureIndex) => (
                     <div key={featureIndex} className="flex items-center gap-3">
@@ -422,7 +422,7 @@ export default function GovernmentSolutions() {
                     </div>
                   ))}
                 </div>
-                
+
                 <div className="flex flex-wrap gap-2 mb-4">
                   {solution.compliance.slice(0, 2).map((comp, compIndex) => (
                     <span
@@ -433,12 +433,12 @@ export default function GovernmentSolutions() {
                     </span>
                   ))}
                 </div>
-                
+
                 <div className="flex items-center justify-between mb-4">
                   <span className="text-zion-cyan font-semibold">{solution.price}</span>
                   <span className="text-zion-slate-light text-sm">{solution.timeline}</span>
                 </div>
-                
+
                 <div className="flex items-center justify-between">
                   <span className="px-3 py-1 bg-zion-cyan/20 text-zion-cyan text-xs rounded-full border border-zion-cyan/30">
                     {solution.category}
@@ -487,7 +487,7 @@ export default function GovernmentSolutions() {
                     <p className="text-zion-slate-light text-sm">{story.industry}</p>
                   </div>
                 </div>
-                
+
                 <div className="space-y-4 mb-6">
                   <div>
                     <h4 className="text-zion-cyan font-semibold mb-2">Challenge</h4>
@@ -502,7 +502,7 @@ export default function GovernmentSolutions() {
                     <p className="text-zion-slate-light text-sm">{story.results}</p>
                   </div>
                 </div>
-                
+
                 <div className="flex items-center gap-2">
                   {[...Array(5)].map((_, i) => (
                     <Star key={i} className="w-4 h-4 text-yellow-400 fill-current" />
@@ -526,10 +526,10 @@ export default function GovernmentSolutions() {
           >
             <h2 className="text-4xl font-bold text-white mb-6">Ready to Transform Government Services?</h2>
             <p className="text-xl text-zion-slate-light mb-8 leading-relaxed">
-              Let's discuss how our government technology solutions can improve public services, 
+              Let's discuss how our government technology solutions can improve public services,
               enhance security, and ensure compliance for your agency.
             </p>
-            
+
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
                 href="/contact"

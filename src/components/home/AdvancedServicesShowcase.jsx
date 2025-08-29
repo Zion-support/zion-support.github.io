@@ -16,10 +16,10 @@ export function AdvancedServicesShowcase() {
             Advanced AI & IT Solutions
           </h2>
           <p className="text-xl text-zion-slate-light mb-8 max-w-3xl mx-auto">
-            Transform your business with cutting-edge artificial intelligence, cybersecurity, and digital transformation services. 
+            Transform your business with cutting-edge artificial intelligence, cybersecurity, and digital transformation services.
             Expert solutions designed for the modern enterprise.
           </p>
-          
+
           {/* Key Benefits */}
           <div className="grid grid-cols-1 md:grid-cols-4 gap-6 mb-8 max-w-4xl mx-auto">
             <div className="text-center">
@@ -29,7 +29,7 @@ export function AdvancedServicesShowcase() {
               <h3 className="text-zion-cyan font-semibold">AI-Powered</h3>
               <p className="text-zion-slate-light text-sm">Intelligent automation & insights</p>
             </div>
-            
+
             <div className="text-center">
               <div className="w-12 h-12 bg-zion-cyan rounded-full flex items-center justify-center mx-auto mb-3">
                 <Shield className="w-6 h-6 text-zion-blue"/>
@@ -37,7 +37,7 @@ export function AdvancedServicesShowcase() {
               <h3 className="text-zion-cyan font-semibold">Enterprise Security</h3>
               <p className="text-zion-slate-light text-sm">Bank-level protection</p>
             </div>
-            
+
             <div className="text-center">
               <div className="w-12 h-12 bg-zion-cyan rounded-full flex items-center justify-center mx-auto mb-3">
                 <TrendingUp className="w-6 h-6 text-zion-blue"/>
@@ -45,7 +45,7 @@ export function AdvancedServicesShowcase() {
               <h3 className="text-zion-cyan font-semibold">Proven Results</h3>
               <p className="text-zion-slate-light text-sm">Track record of success</p>
             </div>
-            
+
             <div className="text-center">
               <div className="w-12 h-12 bg-zion-cyan rounded-full flex items-center justify-center mx-auto mb-3">
                 <Users className="w-6 h-6 text-zion-blue"/>
@@ -70,7 +70,7 @@ export function AdvancedServicesShowcase() {
                   {service.description}
                 </CardDescription>
               </CardHeader>
-              
+
               <CardContent className="space-y-4">
                 {/* Service Details */}
                 <div className="flex items-center justify-between text-sm">
@@ -83,7 +83,7 @@ export function AdvancedServicesShowcase() {
                     <span>AI Score: {service.aiScore}</span>
                   </div>
                 </div>
-                
+
                 {/* Price */}
                 <div className="text-center">
                   <div className="text-2xl font-bold text-zion-cyan">
@@ -91,14 +91,14 @@ export function AdvancedServicesShowcase() {
                   </div>
                   <div className="text-sm text-zion-slate-light">Starting Price</div>
                 </div>
-                
+
                 {/* Tags */}
                 <div className="flex flex-wrap gap-2">
                   {service.tags.slice(0, 2).map((tag, index) => (<Badge key={index} variant="secondary" className="bg-zion-blue-light text-zion-blue text-xs">
                       {tag}
                     </Badge>))}
                 </div>
-                
+
                 {/* CTA */}
                 <Button className="w-full bg-zion-cyan hover:bg-zion-cyan-dark text-zion-blue font-semibold">
                   Learn More
@@ -116,19 +116,19 @@ export function AdvancedServicesShowcase() {
               <h4 className="text-zion-cyan font-semibold">AI Automation</h4>
               <p className="text-zion-slate-light text-sm">Business process automation</p>
             </div>
-            
+
             <div className="text-center p-4 bg-zion-blue-dark rounded-lg border border-zion-blue-light">
               <div className="text-2xl mb-2">🔒</div>
               <h4 className="text-zion-cyan font-semibold">Cybersecurity</h4>
               <p className="text-zion-slate-light text-sm">Threat detection & compliance</p>
             </div>
-            
+
             <div className="text-center p-4 bg-zion-blue-dark rounded-lg border border-zion-blue-light">
               <div className="text-2xl mb-2">☁️</div>
               <h4 className="text-zion-cyan font-semibold">Cloud & DevOps</h4>
               <p className="text-zion-slate-light text-sm">Optimization & automation</p>
             </div>
-            
+
             <div className="text-center p-4 bg-zion-blue-dark rounded-lg border border-zion-blue-light">
               <div className="text-2xl mb-2">📊</div>
               <h4 className="text-zion-cyan font-semibold">Data & Analytics</h4>
@@ -146,7 +146,7 @@ export function AdvancedServicesShowcase() {
             <p className="text-zion-slate-light mb-6">
               Get in touch with our experts to discuss your specific needs and discover how our AI and IT solutions can drive your business forward.
             </p>
-            
+
             <div className="flex flex-wrap justify-center gap-4 mb-6">
               <Button size="lg" className="bg-zion-cyan hover:bg-zion-cyan-dark text-zion-blue font-semibold">
                 Get Free Consultation
@@ -158,7 +158,7 @@ export function AdvancedServicesShowcase() {
                 </Button>
               </Link>
             </div>
-            
+
             {/* Contact Info */}
             <div className="text-zion-slate-light text-sm">
               <p>Call us: +1 302 464 0950 | Email: kleber@ziontechgroup.com</p>

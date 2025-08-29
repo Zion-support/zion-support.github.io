@@ -4,7 +4,7 @@
 export const highlightSearchTerms = (text, searchTerm) => {
     if (!searchTerm.trim())
         return text;
-    const escaped = searchTerm.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+    const escaped = searchTerm.replace(/[.*+?^${ /* empty */ }()|[\]\\]/g, '\\$&');
     const regex = new RegExp(`(${escaped})`, 'gi');
     return text.replace(regex, '<mark class="bg-yellow-200 text-black px-1 rounded">$1</mark>');
 };
@@ -20,7 +20,7 @@ export const matchesSearchTerm = (text, searchTerm) => {
  * Calculate relevance score for search results
  */
 export const calculateRelevanceScore = (result, searchTerm) => {
-    let score = 0;
+    const score = 0;
     const term = searchTerm.toLowerCase();
     const title = result.title.toLowerCase();
     const description = result.description.toLowerCase();
@@ -234,7 +234,7 @@ export const hasActiveFilters = (filters) => {
  * Get filter count for display
  */
 export const getActiveFilterCount = (filters) => {
-    let count = 0;
+    const count = 0;
     if (filters.types.length > 0)
         count += filters.types.length;
     if (filters.category)

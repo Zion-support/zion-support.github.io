@@ -2,7 +2,7 @@
 import React, { useState, useCallback, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Eye, Type, Volume2, Settings, X, Check, AlertTriangle, Info } from 'lucide-react';
-const AccessibilityPanel = ({ enabled = true, defaultSettings = {}, onSettingsChange, className = '' }) => {
+const AccessibilityPanel = ({ enabled = true, defaultSettings = { /* empty */ }, onSettingsChange, className = '' }) => {
     const [isOpen, setIsOpen] = useState(false);
     const [settings, setSettings] = useState({
         highContrast: false,
@@ -203,7 +203,7 @@ const AccessibilityPanel = ({ enabled = true, defaultSettings = {}, onSettingsCh
                   <Eye className="w-5 h-5 text-zion-cyan"/>
                   Visual Settings
                 </h3>
-                
+
                 {/* High Contrast */}
                 <div className="flex items-center justify-between">
                   <label className="text-white cursor-pointer flex items-center gap-2">
@@ -256,7 +256,7 @@ const AccessibilityPanel = ({ enabled = true, defaultSettings = {}, onSettingsCh
                   <Volume2 className="w-5 h-5 text-zion-cyan"/>
                   Motion & Audio
                 </h3>
-                
+
                 {/* Reduced Motion */}
                 <div className="flex items-center justify-between">
                   <label className="text-white cursor-pointer flex items-center gap-2">
@@ -281,7 +281,7 @@ const AccessibilityPanel = ({ enabled = true, defaultSettings = {}, onSettingsCh
                   <Settings className="w-5 h-5 text-zion-cyan"/>
                   Navigation
                 </h3>
-                
+
                 {/* Focus Indicator */}
                 <div className="flex items-center justify-between">
                   <label className="text-white cursor-pointer flex items-center gap-2">

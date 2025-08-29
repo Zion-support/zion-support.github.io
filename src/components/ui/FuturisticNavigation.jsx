@@ -52,7 +52,7 @@ export default function FuturisticNavigation() {
             : 'bg-transparent'}`}>
       {/* Animated Background */}
       <div className="absolute inset-0 bg-gradient-to-r from-cyan-900/10 via-transparent to-blue-900/10 opacity-0 transition-opacity duration-300 hover:opacity-100"/>
-      
+
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}

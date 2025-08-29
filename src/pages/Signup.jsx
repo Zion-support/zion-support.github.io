@@ -80,7 +80,7 @@ export default function Signup() {
                     // Set the session directly if verification is not required
                     const { error: sessionError } = await supabase.auth.setSession(resData.session);
                     if (sessionError) {
-                        console.error("Error setting session:", sessionError);
+                        // console.error("Error setting session:", sessionError);
                         form.setError("root", { message: sessionError.message || "Failed to set session. Please try logging in." });
                         toast.error(sessionError.message || "Failed to set session. Please try logging in.");
                         return;
@@ -93,7 +93,7 @@ export default function Signup() {
                 }
                 else {
                     // This case might indicate an unexpected response from the API
-                    console.error("Registration response did not include session or emailVerificationRequired flag.", resData);
+                    // console.error("Registration response did not include session or emailVerificationRequired flag.", resData);
                     form.setError("root", { message: "Registration complete, but an unexpected issue occurred. Please try logging in." });
                     toast.error("Registration complete, but an unexpected issue occurred. Please try logging in manually.");
                     // Potentially navigate to login or show a more specific error
@@ -109,14 +109,14 @@ export default function Signup() {
                         await mailchimpService.sendWelcomeEmail(data.email, 'NEW10');
                     }
                     catch (err) {
-                        console.error('Mailchimp subscription failed', err);
+                        // console.error('Mailchimp subscription failed', err);
                         // Non-critical error, don't block user flow
                     }
                 }
                 // Toast and navigation are handled above if session is present
                 // If emailVerificationRequired, no toast/navigation here, message is shown
             }
-            try { }
+            try { /* empty */ }
             catch (err) {
                 const message = err.message ?? "Registration failed";
                 form.setError("root", { message });
@@ -126,7 +126,7 @@ export default function Signup() {
                 setIsSubmitting(false);
             }
         }
-        finally { }
+        finally { /* empty */ }
         ;
         const onInvalid = (errors) => {
             const firstError = Object.keys(errors)[0];
@@ -143,7 +143,7 @@ export default function Signup() {
             return <Navigate to="/onboarding"/>;
         }
         return (<>
-      
+
       <div className="flex min-h-screen bg-zion-blue">
         <div className="flex-1 flex flex-col justify-center px-4 py-12 sm:px-6 lg:flex-none lg:px-20 xl:px-24">
           <div className="mx-auto w-full max-w-sm lg:w-96">
@@ -303,7 +303,7 @@ export default function Signup() {
           </div>
         </div>
       </div>
-      
+
     </>);
     };
 }

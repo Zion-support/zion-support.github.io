@@ -60,7 +60,7 @@ export function HeroSection() {
     return (<section ref={containerRef} className="relative overflow-hidden py-20 md:py-32 min-h-screen flex items-center">
       {/* Enhanced background with parallax effect */}
       <motion.div className="absolute inset-0 bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple opacity-90" style={{ y, opacity }}/>
-      
+
       {/* Animated floating particles with better positioning and variety */}
       <div className="absolute inset-0">
         <motion.div className="absolute top-1/4 left-1/4 w-4 h-4 rounded-full bg-zion-purple-light opacity-60" variants={floatingVariants} animate="animate"/>
@@ -74,11 +74,11 @@ export function HeroSection() {
       {/* Enhanced decorative geometric shapes with animations */}
       <motion.div className="absolute top-20 right-20 w-32 h-32 border border-zion-cyan/20 rounded-full opacity-30" animate={{ rotate: 360 }} transition={{ duration: 20, repeat: Infinity, ease: "linear" }}/>
       <motion.div className="absolute bottom-20 left-20 w-24 h-24 border border-zion-purple/20 transform rotate-45 opacity-30" animate={{ rotate: -360 }} transition={{ duration: 25, repeat: Infinity, ease: "linear" }}/>
-      
+
       {/* New floating elements */}
       <motion.div className="absolute top-1/3 left-10 w-16 h-16 border border-zion-cyan/30 rounded-full opacity-20" variants={pulseVariants} animate="animate"/>
       <motion.div className="absolute bottom-1/3 right-10 w-20 h-20 border border-zion-purple/30 rounded-full opacity-20" variants={pulseVariants} animate="animate" style={{ animationDelay: '1s' }}/>
-      
+
       <motion.div className="container relative z-10 px-4 mx-auto text-center" variants={containerVariants} initial="hidden" animate="visible">
         {/* Enhanced title with better typography and animations */}
         <motion.div variants={itemVariants} className="mb-8">
@@ -100,14 +100,14 @@ export function HeroSection() {
             </div>
             <span className="font-medium">AI-Powered Matching</span>
           </motion.div>
-          
+
           <motion.div className="flex items-center gap-3 group" whileHover={{ scale: 1.05 }} transition={{ type: "spring", stiffness: 400 }}>
             <div className="p-2 bg-zion-purple/20 rounded-full group-hover:bg-zion-purple/30 transition-colors">
               <Zap className="w-6 h-6 text-zion-purple"/>
             </div>
             <span className="font-medium">Global Talent Pool</span>
           </motion.div>
-          
+
           <motion.div className="flex items-center gap-3 group" whileHover={{ scale: 1.05 }} transition={{ type: "spring", stiffness: 400 }}>
             <div className="p-2 bg-zion-cyan-light/20 rounded-full group-hover:bg-zion-cyan-light/30 transition-colors">
               <Users className="w-6 h-6 text-zion-cyan-light"/>
@@ -124,7 +124,7 @@ export function HeroSection() {
               <ArrowRight className="w-6 h-6 ml-3 group-hover:translate-x-2 transition-transform duration-300"/>
             </Link>
           </motion.div>
-          
+
           <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }} transition={{ type: "spring", stiffness: 400, damping: 10 }}>
             <Link id="browse-marketplace" to="/marketplace" className="group border-2 border-zion-cyan text-zion-cyan hover:bg-zion-cyan hover:text-zion-blue-dark active:bg-zion-cyan-light text-lg py-6 px-10 rounded-2xl inline-flex items-center justify-center transition-all duration-300 transform hover:shadow-2xl hover:shadow-zion-cyan/25 font-semibold backdrop-blur-sm bg-white/10">
               {t('home.browse_marketplace') || "Explore Marketplace"}
@@ -152,14 +152,14 @@ export function HeroSection() {
             </div>
             <div className="text-zion-slate-light">Active Users</div>
           </motion.div>
-          
+
           <motion.div className="text-center group" whileHover={{ y: -5 }} transition={{ type: "spring", stiffness: 400 }}>
             <div className="text-4xl font-bold text-zion-purple mb-2 group-hover:text-zion-purple-light transition-colors">
               500+
             </div>
             <div className="text-zion-slate-light">AI Services</div>
           </motion.div>
-          
+
           <motion.div className="text-center group" whileHover={{ y: -5 }} transition={{ type: "spring", stiffness: 400 }}>
             <div className="text-4xl font-bold text-zion-cyan-light mb-2 group-hover:text-zion-cyan transition-colors">
               99.9%

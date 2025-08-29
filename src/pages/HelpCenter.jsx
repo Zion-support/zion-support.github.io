@@ -98,7 +98,7 @@ export default function HelpCenter() {
             <p className="text-xl md:text-2xl text-zion-slate-light max-w-4xl mx-auto leading-relaxed mb-8">
               Find answers to common questions, explore tutorials, and get the support you need to succeed with Zion Tech Group.
             </p>
-            
+
             {/* Search Bar */}
             <div className="max-w-2xl mx-auto relative">
               <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 w-5 h-5 text-zion-slate-light"/>
@@ -124,7 +124,7 @@ export default function HelpCenter() {
                       {expandedCategories.includes(key) ? (<ChevronDown className="w-5 h-5"/>) : (<ChevronRight className="w-5 h-5"/>)}
                     </button>
                   </div>
-                  
+
                   {expandedCategories.includes(key) && (<div className="space-y-2">
                       {category.articles.map((article, index) => (<Link key={index} to={article.href} className="block text-zion-slate-light hover:text-zion-cyan transition-colors py-2 px-3 rounded-lg hover:bg-zion-blue-light/10">
                           {article.title}
@@ -158,7 +158,7 @@ export default function HelpCenter() {
             <p className="text-xl text-zion-slate-light mb-8 max-w-2xl mx-auto">
               Our support team is here to help you 24/7. Get in touch with us through any of these channels.
             </p>
-            
+
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
               <div className="bg-zion-blue-light/10 backdrop-blur-sm border border-zion-blue-light/20 rounded-xl p-6">
                 <div className="w-12 h-12 bg-zion-cyan/20 rounded-lg flex items-center justify-center mx-auto mb-4">
@@ -170,7 +170,7 @@ export default function HelpCenter() {
                   Start Chat
                 </button>
               </div>
-              
+
               <div className="bg-zion-blue-light/10 backdrop-blur-sm border border-zion-blue-light/20 rounded-xl p-6">
                 <div className="w-12 h-12 bg-zion-cyan/20 rounded-lg flex items-center justify-center mx-auto mb-4">
                   <Mail className="w-6 h-6 text-zion-cyan"/>
@@ -181,7 +181,7 @@ export default function HelpCenter() {
                   Send Email
                 </Link>
               </div>
-              
+
               <div className="bg-zion-blue-light/10 backdrop-blur-sm border border-zion-blue-light/20 rounded-xl p-6">
                 <div className="w-12 h-12 bg-zion-cyan/20 rounded-lg flex items-center justify-center mx-auto mb-4">
                   <Phone className="w-6 h-6 text-zion-cyan"/>

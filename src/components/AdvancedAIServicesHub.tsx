@@ -1,13 +1,13 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { 
-  Brain, 
-  Zap, 
-  Shield, 
-  TrendingUp, 
-  Users, 
-  Globe, 
-  Cpu, 
+import {
+  Brain,
+  Zap,
+  Shield,
+  TrendingUp,
+  Users,
+  Globe,
+  Cpu,
   Database,
   ArrowRight,
   Star,
@@ -168,7 +168,7 @@ const AdvancedAIServicesHub: React.FC = () => {
               </span>
             </h1>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-              Discover our comprehensive suite of AI-powered micro SAAS solutions designed to transform 
+              Discover our comprehensive suite of AI-powered micro SAAS solutions designed to transform
               your business operations and drive innovation across all industries.
             </p>
           </motion.div>
@@ -190,7 +190,7 @@ const AdvancedAIServicesHub: React.FC = () => {
               />
               <Brain className="absolute right-3 top-3 w-5 h-5 text-gray-400" />
             </div>
-            
+
             <select
               value={selectedCategory}
               onChange={(e) => setSelectedCategory(e.target.value)}
@@ -249,7 +249,7 @@ const AdvancedAIServicesHub: React.FC = () => {
                   {/* Service Content */}
                   <h3 className="text-xl font-semibold text-white mb-2">{service.name}</h3>
                   <p className="text-gray-300 text-sm mb-4">{service.description}</p>
-                  
+
                   {/* Features */}
                   <div className="mb-4">
                     <h4 className="text-sm font-medium text-blue-400 mb-2">Key Features:</h4>
@@ -313,7 +313,7 @@ const AdvancedAIServicesHub: React.FC = () => {
               Ready to Transform Your Business with AI?
             </h2>
             <p className="text-xl text-gray-300 mb-8">
-              Contact our team to discuss how our AI-powered solutions can drive innovation 
+              Contact our team to discuss how our AI-powered solutions can drive innovation
               and growth for your organization.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">

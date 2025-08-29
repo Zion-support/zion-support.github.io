@@ -125,11 +125,11 @@ export default function HowItWorks() {
               <div>
                 <h2 className="text-3xl font-bold text-white mb-6">The Zion Ecosystem</h2>
                 <p className="text-zion-slate-light text-lg mb-6">
-                  Zion is more than just a marketplace – it's a complete ecosystem designed to facilitate 
+                  Zion is more than just a marketplace – it's a complete ecosystem designed to facilitate
                   meaningful connections between AI and tech professionals and the clients who need their expertise.
                 </p>
                 <p className="text-zion-slate-light text-lg mb-6">
-                  Our platform uses advanced AI algorithms to match the right talent with the right projects, 
+                  Our platform uses advanced AI algorithms to match the right talent with the right projects,
                   ensuring successful outcomes for everyone involved.
                 </p>
                 <div className="mt-8">

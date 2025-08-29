@@ -12,8 +12,8 @@ const mockNotifications = [
         isRead: false,
         isArchived: false,
         actions: [
-            { label: 'View Details', action: () => console.log('View project'), variant: 'primary' },
-            { label: 'Archive', action: () => console.log('Archive'), variant: 'secondary' }
+            { label: 'View Details', action: () => // console.log('View project'), variant: 'primary' },
+            { label: 'Archive', action: () => // console.log('Archive'), variant: 'secondary' }
         ]
     },
     {
@@ -27,8 +27,8 @@ const mockNotifications = [
         isRead: false,
         isArchived: false,
         actions: [
-            { label: 'Review Activity', action: () => console.log('Review security'), variant: 'primary' },
-            { label: 'Dismiss', action: () => console.log('Dismiss'), variant: 'secondary' }
+            { label: 'Review Activity', action: () => // console.log('Review security'), variant: 'primary' },
+            { label: 'Dismiss', action: () => // console.log('Dismiss'), variant: 'secondary' }
         ]
     },
     {
@@ -42,8 +42,8 @@ const mockNotifications = [
         isRead: false,
         isArchived: false,
         actions: [
-            { label: 'Investigate', action: () => console.log('Investigate'), variant: 'primary' },
-            { label: 'Acknowledge', action: () => console.log('Acknowledge'), variant: 'secondary' }
+            { label: 'Investigate', action: () => // console.log('Investigate'), variant: 'primary' },
+            { label: 'Acknowledge', action: () => // console.log('Acknowledge'), variant: 'secondary' }
         ]
     },
     {
@@ -57,8 +57,8 @@ const mockNotifications = [
         isRead: true,
         isArchived: false,
         actions: [
-            { label: 'Deploy Now', action: () => console.log('Deploy'), variant: 'primary' },
-            { label: 'Schedule', action: () => console.log('Schedule'), variant: 'secondary' }
+            { label: 'Deploy Now', action: () => // console.log('Deploy'), variant: 'primary' },
+            { label: 'Schedule', action: () => // console.log('Schedule'), variant: 'secondary' }
         ]
     }
 ];
@@ -137,7 +137,7 @@ export function AdvancedNotificationSystem() {
                 groups[category] = [];
             groups[category].push(notification);
             return groups;
-        }, {})
+        }, { /* empty */ })
         : { 'All': filteredNotifications };
     if (!isOpen) {
         return (<button onClick={() => setIsOpen(true)} className="fixed bottom-4 right-36 p-3 bg-zion-emerald hover:bg-zion-emerald-light text-white rounded-full shadow-lg hover:shadow-xl transition-all duration-300 z-50 relative" title="Notifications">
@@ -192,7 +192,7 @@ export function AdvancedNotificationSystem() {
             <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-zion-slate-light"/>
             <input type="text" placeholder="Search notifications..." value={searchQuery} onChange={(e) => setSearchQuery(e.target.value)} className="w-full pl-10 pr-4 py-2 border border-zion-slate-light rounded-lg bg-white dark:bg-zion-slate text-zion-slate focus:ring-2 focus:ring-zion-emerald focus:border-transparent text-sm"/>
           </div>
-          
+
           <div className="flex flex-wrap gap-2">
             <select value={filterType} onChange={(e) => setFilterType(e.target.value)} className="px-2 py-1 border border-zion-slate-light rounded text-xs bg-white dark:bg-zion-slate text-zion-slate focus:ring-1 focus:ring-zion-emerald focus:border-transparent">
               <option value="all">All Types</option>
@@ -201,7 +201,7 @@ export function AdvancedNotificationSystem() {
               <option value="error">Error</option>
               <option value="info">Info</option>
             </select>
-            
+
             <select value={filterPriority} onChange={(e) => setFilterPriority(e.target.value)} className="px-2 py-1 border border-zion-slate-light rounded text-xs bg-white dark:bg-zion-slate text-zion-slate focus:ring-1 focus:ring-zion-emerald focus:border-transparent">
               <option value="all">All Priorities</option>
               <option value="low">Low</option>
@@ -209,13 +209,13 @@ export function AdvancedNotificationSystem() {
               <option value="high">High</option>
               <option value="critical">Critical</option>
             </select>
-            
+
             <button onClick={() => setShowRead(!showRead)} className={`px-2 py-1 rounded text-xs transition-colors ${showRead
             ? 'bg-zion-emerald text-white'
             : 'bg-zion-slate-light/20 text-zion-slate hover:bg-zion-slate-light/30'}`}>
               {showRead ? 'Hide Read' : 'Show Read'}
             </button>
-            
+
             <button onClick={() => setGroupByCategory(!groupByCategory)} className={`px-2 py-1 rounded text-xs transition-colors ${groupByCategory
             ? 'bg-zion-cyan text-white'
             : 'bg-zion-slate-light/20 text-zion-slate hover:bg-zion-slate-light/30'}`}>
@@ -231,12 +231,12 @@ export function AdvancedNotificationSystem() {
             {groupByCategory && (<div className="px-4 py-2 bg-zion-slate-light/10 border-b border-zion-slate-light">
                 <h3 className="text-sm font-medium text-zion-slate capitalize">{category}</h3>
               </div>)}
-            
+
             {categoryNotifications.map((notification) => (<div key={notification.id} className={`border-l-4 ${getPriorityColor(notification.priority)} ${!notification.isRead ? 'bg-zion-emerald/5' : 'bg-white dark:bg-zion-slate'} hover:bg-zion-slate-light/5 transition-colors`}>
                 <div className="p-4 border-b border-zion-slate-light/20">
                   <div className="flex items-start gap-3">
                     {getTypeIcon(notification.type)}
-                    
+
                     <div className="flex-1 min-w-0">
                       <div className="flex items-start justify-between gap-2 mb-2">
                         <h4 className={`text-sm font-medium ${!notification.isRead ? 'text-zion-slate' : 'text-zion-slate-light'}`}>
@@ -254,11 +254,11 @@ export function AdvancedNotificationSystem() {
                           </span>
                         </div>
                       </div>
-                      
+
                       <p className="text-sm text-zion-slate-light mb-3 line-clamp-2">
                         {notification.message}
                       </p>
-                      
+
                       {/* Actions */}
                       {notification.actions && (<div className="flex items-center gap-2">
                           {notification.actions.map((action, index) => (<button key={index} onClick={action.action} className={`px-3 py-1 text-xs rounded transition-colors ${action.variant === 'primary' ? 'bg-zion-emerald text-white hover:bg-zion-emerald-light' :
@@ -269,7 +269,7 @@ export function AdvancedNotificationSystem() {
                         </div>)}
                     </div>
                   </div>
-                  
+
                   {/* Notification Actions */}
                   <div className="flex items-center justify-between mt-3 pt-3 border-t border-zion-slate-light/20">
                     <div className="flex items-center gap-2">
@@ -280,7 +280,7 @@ export function AdvancedNotificationSystem() {
                         Archive
                       </button>
                     </div>
-                    
+
                     <button onClick={() => deleteNotification(notification.id)} className="text-xs text-red-500 hover:text-red-600 transition-colors">
                       <Trash2 className="w-3 h-3"/>
                     </button>
@@ -288,7 +288,7 @@ export function AdvancedNotificationSystem() {
                 </div>
               </div>))}
           </div>))}
-        
+
         {filteredNotifications.length === 0 && (<div className="p-8 text-center">
             <Bell className="w-12 h-12 text-zion-slate-light mx-auto mb-4"/>
             <p className="text-zion-slate-light">No notifications found</p>

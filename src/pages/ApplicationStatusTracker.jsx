@@ -8,7 +8,7 @@ function ApplicationStatusTrackerContent() {
     const isMobile = useIsMobile();
     return (<>
       <SEO title="Application Status Tracker | Zion AI Marketplace" description="Track the status of your job applications in the Zion AI marketplace."/>
-      
+
       <div className="container mx-auto px-4 py-8">
         <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 mb-8">
           <div>
@@ -34,8 +34,8 @@ function ApplicationStatusTrackerContent() {
 }
 export default function ApplicationStatusTracker() {
     return (<ProtectedRoute>
-      
+
         <ApplicationStatusTrackerContent />
-      
+
     </ProtectedRoute>);
 }

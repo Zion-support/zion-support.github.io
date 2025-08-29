@@ -121,7 +121,7 @@ const Consulting = () => {
               <span className="bg-gradient-to-r from-orange-400 to-red-400 bg-clip-text text-transparent"> Consulting</span>
             </h1>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-              Strategic technology consulting to help your organization navigate 
+              Strategic technology consulting to help your organization navigate
               digital transformation and achieve competitive advantages.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -144,11 +144,11 @@ const Consulting = () => {
               Our Consulting Services
             </h2>
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              Comprehensive consulting services designed to address your unique 
+              Comprehensive consulting services designed to address your unique
               technology challenges and opportunities.
             </p>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {consultingServices.map((service, index) => (
               <div key={index} className="bg-slate-800/50 border border-white/10 rounded-xl p-6 hover:border-orange-500/50 transition-all duration-300">
@@ -179,11 +179,11 @@ const Consulting = () => {
               Industry Expertise
             </h2>
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              Deep industry knowledge and experience across multiple sectors 
+              Deep industry knowledge and experience across multiple sectors
               to deliver relevant and effective solutions.
             </p>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {industries.map((industry, index) => (
               <div key={index} className="bg-slate-800/50 border border-white/10 rounded-xl p-6 text-center hover:border-orange-500/50 transition-all duration-300">
@@ -207,7 +207,7 @@ const Consulting = () => {
                 Why Choose Our Consulting?
               </h2>
               <p className="text-lg text-gray-300 mb-6">
-                Our consulting services provide strategic guidance and practical 
+                Our consulting services provide strategic guidance and practical
                 solutions that drive real business value and competitive advantage.
               </p>
               <ul className="space-y-3">
@@ -224,7 +224,7 @@ const Consulting = () => {
                 <Award className="w-24 h-24 text-orange-400 mx-auto mb-4"/>
                 <h3 className="text-2xl font-bold text-white mb-2">Proven Expertise</h3>
                 <p className="text-gray-300 mb-6">
-                  Our consultants bring decades of combined experience 
+                  Our consultants bring decades of combined experience
                   and proven track records of success.
                 </p>
                 <div className="text-sm text-gray-400">
@@ -245,10 +245,10 @@ const Consulting = () => {
             Our Consulting Process
           </h2>
           <p className="text-xl text-gray-300 mb-8">
-            A systematic approach to delivering consulting services that ensures 
+            A systematic approach to delivering consulting services that ensures
             success and maximizes value for our clients.
           </p>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {process.map((phase, index) => (
               <div key={index} className="text-center">
@@ -271,7 +271,7 @@ const Consulting = () => {
             Ready to Transform Your Business?
           </h2>
           <p className="text-xl text-gray-300 mb-8">
-            Let's discuss how our consulting services can help you navigate 
+            Let's discuss how our consulting services can help you navigate
             digital transformation and achieve your business goals.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">

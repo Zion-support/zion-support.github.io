@@ -13,20 +13,20 @@ export default function AISecurityConsulting() {
   ];
 
   const tiers = [
-    { 
-      name: 'Developer', 
-      price: '$799/mo', 
-      details: ['Up to 20 hours/month', 'Basic AI features', 'Standard consulting', 'Email support'] 
+    {
+      name: 'Developer',
+      price: '$799/mo',
+      details: ['Up to 20 hours/month', 'Basic AI features', 'Standard consulting', 'Email support']
     },
-    { 
-      name: 'Business', 
-      price: '$1,999/mo', 
-      details: ['Up to 50 hours/month', 'Advanced AI features', 'Enhanced consulting', 'Priority support'] 
+    {
+      name: 'Business',
+      price: '$1,999/mo',
+      details: ['Up to 50 hours/month', 'Advanced AI features', 'Enhanced consulting', 'Priority support']
     },
-    { 
-      name: 'Enterprise', 
-      price: '$4,999/mo', 
-      details: ['Unlimited hours', 'Custom AI models', 'Full consulting suite', '24/7 dedicated support'] 
+    {
+      name: 'Enterprise',
+      price: '$4,999/mo',
+      details: ['Unlimited hours', 'Custom AI models', 'Full consulting suite', '24/7 dedicated support']
     },
   ];
 

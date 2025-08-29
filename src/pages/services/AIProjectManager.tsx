@@ -25,21 +25,21 @@ export default function AIProjectManager() {
   ];
 
   const pricing = [
-    { 
-      name: 'Starter', 
-      price: '$99/mo', 
+    {
+      name: 'Starter',
+      price: '$99/mo',
       features: ['Up to 10 projects', '5 team members', 'Basic AI insights', 'Email support'],
       popular: false
     },
-    { 
-      name: 'Professional', 
-      price: '$299/mo', 
+    {
+      name: 'Professional',
+      price: '$299/mo',
       features: ['Up to 50 projects', '25 team members', 'Advanced AI analytics', 'Priority support', 'Custom integrations'],
       popular: true
     },
-    { 
-      name: 'Enterprise', 
-      price: '$799/mo', 
+    {
+      name: 'Enterprise',
+      price: '$799/mo',
       features: ['Unlimited projects', 'Unlimited team members', 'Full AI suite', 'Dedicated support', 'Custom AI training', 'SAML/SSO'],
       popular: false
     }
@@ -47,12 +47,12 @@ export default function AIProjectManager() {
 
   return (
     <>
-      <SEO 
+      <SEO
         title="AI Project Manager - Intelligent Project Management Solution"
         description="Transform your project management with AI-powered task prioritization, smart team allocation, and predictive analytics. Boost productivity by 35%."
         canonical="/services/ai-project-manager"
       />
-      
+
       <div className="min-h-screen bg-futuristic">
         {/* Hero Section */}
         <section className="relative py-20 overflow-hidden">
@@ -68,7 +68,7 @@ export default function AIProjectManager() {
                 AI Project Manager
               </h1>
               <p className="text-xl md:text-2xl text-gray-300 mb-8">
-                Intelligent project management powered by artificial intelligence. 
+                Intelligent project management powered by artificial intelligence.
                 Automate workflows, predict risks, and optimize team performance.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -180,8 +180,8 @@ export default function AIProjectManager() {
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
                   className={`relative bg-glass-dark rounded-2xl p-8 border ${
-                    plan.popular 
-                      ? 'border-cyan-500/50 shadow-lg shadow-cyan-500/20' 
+                    plan.popular
+                      ? 'border-cyan-500/50 shadow-lg shadow-cyan-500/20'
                       : 'border-slate-700/50'
                   }`}
                 >
@@ -192,7 +192,7 @@ export default function AIProjectManager() {
                       </span>
                     </div>
                   )}
-                  
+
                   <div className="text-center mb-6">
                     <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
                     <div className="text-3xl font-bold text-cyan-400 mb-2">{plan.price}</div>

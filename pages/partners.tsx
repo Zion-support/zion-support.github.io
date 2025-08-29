@@ -1,11 +1,11 @@
 import { Helmet } from 'react-helmet-async';
 import { motion } from 'framer-motion'
-import { 
-  Handshake, 
-  Shield, 
-  Cloud, 
-  Brain, 
-  Users, 
+import {
+  Handshake,
+  Shield,
+  Cloud,
+  Brain,
+  Users,
   Globe,
   Award,
   Zap,
@@ -18,7 +18,7 @@ import {
 export default function Partners() {
   const title = 'Partners — Zion Tech Group'
   const description = 'Strategic partnerships with leading technology providers, cloud platforms, and cybersecurity experts to deliver comprehensive solutions.'
-  
+
   const partnerCategories = [
     {
       icon: Cloud,
@@ -121,7 +121,7 @@ export default function Partners() {
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://ziontechgroup.com/partners/" />
       </Helmet>
-      
+
       <main className="min-h-screen bg-white text-gray-900">
         {/* Hero Section */}
         <section className="relative overflow-hidden bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-blue-dark text-white py-20">
@@ -130,7 +130,7 @@ export default function Partners() {
             <div className="absolute bottom-20 right-20 w-24 h-24 border border-zion-purple rounded-full"></div>
           </div>
           <div className="relative max-w-7xl mx-auto px-6 text-center">
-            <motion.div 
+            <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
@@ -138,7 +138,7 @@ export default function Partners() {
             >
               <Handshake className="w-20 h-20 mx-auto text-zion-cyan mb-4" />
             </motion.div>
-            <motion.h1 
+            <motion.h1
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
@@ -149,13 +149,13 @@ export default function Partners() {
                 Partnerships
               </span>
             </motion.h1>
-            <motion.p 
+            <motion.p
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.4 }}
               className="text-xl md:text-2xl text-zion-slate-light max-w-4xl mx-auto mb-8"
             >
-              We collaborate with industry leaders to deliver comprehensive, cutting-edge 
+              We collaborate with industry leaders to deliver comprehensive, cutting-edge
               technology solutions that drive business transformation.
             </motion.p>
           </div>
@@ -163,7 +163,7 @@ export default function Partners() {
         {/* Partnership Benefits */}
         <section className="py-20">
           <div className="max-w-7xl mx-auto px-6">
-            <motion.div 
+            <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
@@ -172,11 +172,11 @@ export default function Partners() {
             >
               <h2 className="text-3xl md:text-4xl font-bold mb-6">Why Partner with Zion Tech Group?</h2>
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                Our strategic partnerships enable us to deliver comprehensive solutions 
+                Our strategic partnerships enable us to deliver comprehensive solutions
                 that combine the best technologies and expertise in the industry.
               </p>
             </motion.div>
-            
+
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
               {benefits.map((benefit, index) => (
                 <motion.div
@@ -200,7 +200,7 @@ export default function Partners() {
         {/* Partner Categories */}
         <section className="py-20 bg-gray-50">
           <div className="max-w-7xl mx-auto px-6">
-            <motion.div 
+            <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
@@ -209,11 +209,11 @@ export default function Partners() {
             >
               <h2 className="text-3xl md:text-4xl font-bold mb-6">Our Partner Ecosystem</h2>
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                We've built strategic relationships across the technology landscape 
+                We've built strategic relationships across the technology landscape
                 to provide comprehensive solutions for our clients.
               </p>
             </motion.div>
-            
+
             <div className="space-y-12">
               {partnerCategories.map((category, categoryIndex) => (
                 <motion.div
@@ -233,7 +233,7 @@ export default function Partners() {
                       <p className="text-gray-600">{category.description}</p>
                     </div>
                   </div>
-                  
+
                   <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
                     {category.partners.map((partner, partnerIndex) => (
                       <motion.div
@@ -266,7 +266,7 @@ export default function Partners() {
         {/* Partnership Levels */}
         <section className="py-20">
           <div className="max-w-7xl mx-auto px-6">
-            <motion.div 
+            <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
@@ -275,11 +275,11 @@ export default function Partners() {
             >
               <h2 className="text-3xl md:text-4xl font-bold mb-6">Partnership Tiers</h2>
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                We offer different levels of partnership to accommodate various 
+                We offer different levels of partnership to accommodate various
                 collaboration needs and business objectives.
               </p>
             </motion.div>
-            
+
             <div className="grid md:grid-cols-3 gap-8">
               {partnershipLevels.map((level, index) => (
                 <motion.div
@@ -295,7 +295,7 @@ export default function Partners() {
                       <h3 className="text-2xl font-bold mb-2">{level.name}</h3>
                       <p className="text-white/90">{level.description}</p>
                     </div>
-                    
+
                     <ul className="space-y-3 mb-8">
                       {level.benefits.map((benefit, benefitIndex) => (
                         <li key={benefitIndex} className="flex items-center gap-3">
@@ -315,7 +315,7 @@ export default function Partners() {
         {/* Become a Partner */}
         <section className="py-20 bg-gradient-to-r from-zion-blue-dark to-zion-purple-dark text-white">
           <div className="max-w-4xl mx-auto px-6 text-center">
-            <motion.h2 
+            <motion.h2
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
@@ -324,31 +324,31 @@ export default function Partners() {
             >
               Become a Partner
             </motion.h2>
-            <motion.p 
+            <motion.p
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
               viewport={{ once: true }}
               className="text-xl text-zion-slate-light mb-8"
             >
-              Join our ecosystem of technology leaders and help us deliver 
+              Join our ecosystem of technology leaders and help us deliver
               innovative solutions to businesses worldwide.
             </motion.p>
-            <motion.div 
+            <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.4 }}
               viewport={{ once: true }}
               className="flex flex-col sm:flex-row gap-4 justify-center"
             >
-              <a 
-                href="/contact" 
+              <a
+                href="/contact"
                 className="px-8 py-3 bg-white text-zion-blue-dark rounded-lg hover:bg-gray-100 transition-all duration-300 font-semibold"
               >
                 Contact Us
               </a>
-              <a 
-                href="mailto:partnerships@ziontechgroup.com" 
+              <a
+                href="mailto:partnerships@ziontechgroup.com"
                 className="px-8 py-3 border-2 border-white/30 text-white rounded-lg hover:bg-white/10 transition-all duration-300 font-semibold"
               >
                 partnerships@ziontechgroup.com

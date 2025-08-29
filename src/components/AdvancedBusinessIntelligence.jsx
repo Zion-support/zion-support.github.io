@@ -343,10 +343,10 @@ export function AdvancedBusinessIntelligence() {
               </h3>
               <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
                 {[
-                { label: 'Generate Report', icon: Download, action: () => { } },
-                { label: 'Schedule Review', icon: Calendar, action: () => { } },
-                { label: 'Set Alerts', icon: AlertTriangle, action: () => { } },
-                { label: 'Export Data', icon: Download, action: () => { } }
+                { label: 'Generate Report', icon: Download, action: () => { /* empty */ } },
+                { label: 'Schedule Review', icon: Calendar, action: () => { /* empty */ } },
+                { label: 'Set Alerts', icon: AlertTriangle, action: () => { /* empty */ } },
+                { label: 'Export Data', icon: Download, action: () => { /* empty */ } }
             ].map((item, index) => {
                 const Icon = item.icon;
                 return (<button key={index} onClick={item.action} className="p-3 bg-white dark:bg-zion-slate rounded-lg border border-zion-slate-light hover:border-zion-cyan transition-colors text-sm font-medium text-zion-slate hover:text-zion-cyan">

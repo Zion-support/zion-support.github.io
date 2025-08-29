@@ -244,7 +244,7 @@ export function AdvancedCollaborationPlatform() {
                   <p className="text-sm text-zion-slate-light">Screen sharing active</p>
                 </div>
               </div>
-              
+
               {/* Participant Videos */}
               <div className="grid grid-cols-2 gap-3">
                 {participants.slice(0, 4).map(participant => (<div key={participant.id} className="bg-zion-slate-light/30 rounded-lg p-3">
@@ -303,7 +303,7 @@ export function AdvancedCollaborationPlatform() {
                         </div>
                       </div>
                     </div>
-                    
+
                     <div className="bg-zion-slate-light/30 p-4 rounded-xl">
                       <h4 className="font-semibold text-zion-slate mb-2">Quick Actions</h4>
                       <div className="grid grid-cols-2 gap-2">
@@ -340,7 +340,7 @@ export function AdvancedCollaborationPlatform() {
                             </div>)}
                         </div>))}
                     </div>
-                    
+
                     <div className="flex gap-2">
                       <input type="text" value={chatMessage} onChange={(e) => setChatMessage(e.target.value)} onKeyPress={(e) => e.key === 'Enter' && sendChatMessage()} placeholder="Type a message..." className="flex-1 px-3 py-2 border border-zion-slate-light rounded-lg bg-white dark:bg-zion-slate text-zion-slate text-sm"/>
                       <button onClick={sendChatMessage} className="px-4 py-2 bg-zion-emerald text-white rounded-lg hover:bg-zion-emerald/90 transition-colors">
@@ -356,7 +356,7 @@ export function AdvancedCollaborationPlatform() {
                         <Plus className="w-4 h-4"/>
                       </button>
                     </div>
-                    
+
                     <div className="space-y-2">
                       {filteredDocuments.map(document => (<div key={document.id} className="bg-zion-slate-light/30 p-3 rounded-lg hover:bg-zion-slate-light/50 transition-colors">
                           <div className="flex items-center gap-3">
@@ -384,7 +384,7 @@ export function AdvancedCollaborationPlatform() {
                         <UserPlus className="w-4 h-4"/>
                       </button>
                     </div>
-                    
+
                     <div className="space-y-2">
                       {filteredParticipants.map(participant => (<div key={participant.id} className="bg-zion-slate-light/30 p-3 rounded-lg">
                           <div className="flex items-center gap-3">

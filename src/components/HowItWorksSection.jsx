@@ -130,8 +130,8 @@ export function HowItWorksSection() {
     <section className="py-20 bg-gradient-to-br from-zion-slate-dark via-zion-blue-dark to-zion-blue relative overflow-hidden">
       {/* Enhanced background pattern */}
       <div className="absolute inset-0 opacity-5">
-        <div 
-          className="absolute inset-0" 
+        <div
+          className="absolute inset-0"
           style={{
             backgroundImage: `radial-gradient(circle at 25% 25%, rgba(59, 130, 246, 0.1) 0%, transparent 50%),
                               radial-gradient(circle at 75% 75%, rgba(147, 51, 234, 0.1) 0%, transparent 50%)`
@@ -176,15 +176,15 @@ export function HowItWorksSection() {
               {/* Step Card */}
               <motion.div
                 className={`relative p-6 rounded-2xl border-2 cursor-pointer transition-all duration-300 ${
-                  activeStep === index 
-                    ? 'border-zion-cyan bg-gradient-to-br from-zion-cyan/20 to-zion-cyan-dark/20' 
+                  activeStep === index
+                    ? 'border-zion-cyan bg-gradient-to-br from-zion-cyan/20 to-zion-cyan-dark/20'
                     : 'border-zion-slate/30 bg-gradient-to-br from-zion-slate/10 to-zion-slate/20 hover:border-zion-cyan/50'
                 }`}
                 variants={cardVariants}
                 whileHover={{ y: -5, scale: 1.02 }}
                 style={{
-                  background: hoveredStep === index 
-                    ? `linear-gradient(135deg, ${step.bgColor})` 
+                  background: hoveredStep === index
+                    ? `linear-gradient(135deg, ${step.bgColor})`
                     : undefined
                 }}
               >

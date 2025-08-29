@@ -1,14 +1,14 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { SEO } from '@/components/SEO';
-import { 
-  PenTool, 
-  FileText, 
-  Image, 
-  Video, 
-  Globe, 
-  Zap, 
-  Brain, 
+import {
+  PenTool,
+  FileText,
+  Image,
+  Video,
+  Globe,
+  Zap,
+  Brain,
   Shield,
   CheckCircle,
   TrendingUp,
@@ -120,12 +120,12 @@ export default function AIContentGenerator() {
 
   return (
     <>
-      <SEO 
+      <SEO
         title="AI Content Generator - Create Engaging Content with AI"
         description="Generate high-quality, SEO-optimized content 10x faster with AI. Create articles, images, videos, and more for blogs, social media, and marketing campaigns."
         canonical="/services/ai-content-generator"
       />
-      
+
       <div className="min-h-screen bg-futuristic">
         {/* Hero Section */}
         <section className="relative py-20 overflow-hidden">
@@ -141,7 +141,7 @@ export default function AIContentGenerator() {
                 AI Content Generator
               </h1>
               <p className="text-xl md:text-2xl text-gray-300 mb-8">
-                Create engaging, SEO-optimized content 10x faster with artificial intelligence. 
+                Create engaging, SEO-optimized content 10x faster with artificial intelligence.
                 Generate articles, images, videos, and more for any platform.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -169,7 +169,7 @@ export default function AIContentGenerator() {
                 AI-Powered Content Creation
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Leverage cutting-edge artificial intelligence to create high-quality content 
+                Leverage cutting-edge artificial intelligence to create high-quality content
                 that engages your audience and drives results.
               </p>
             </motion.div>
@@ -207,7 +207,7 @@ export default function AIContentGenerator() {
                 Proven Results
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Join thousands of content creators and marketers who have transformed 
+                Join thousands of content creators and marketers who have transformed
                 their content strategy with AI-powered generation.
               </p>
             </motion.div>
@@ -242,7 +242,7 @@ export default function AIContentGenerator() {
                 Simple, Transparent Pricing
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Choose the plan that fits your content creation needs. 
+                Choose the plan that fits your content creation needs.
                 All plans include a 14-day free trial.
               </p>
             </motion.div>
@@ -255,8 +255,8 @@ export default function AIContentGenerator() {
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
                   className={`relative bg-slate-800/50 backdrop-blur-sm border rounded-xl p-8 ${
-                    plan.popular 
-                      ? 'border-purple-500/50 shadow-lg shadow-purple-500/20' 
+                    plan.popular
+                      ? 'border-purple-500/50 shadow-lg shadow-purple-500/20'
                       : 'border-slate-700/50'
                   }`}
                 >
@@ -267,7 +267,7 @@ export default function AIContentGenerator() {
                       </span>
                     </div>
                   )}
-                  
+
                   <div className="text-center mb-8">
                     <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
                     <div className="flex items-baseline justify-center mb-2">
@@ -312,7 +312,7 @@ export default function AIContentGenerator() {
                 Ready to Revolutionize Your Content Creation?
               </h2>
               <p className="text-xl text-gray-300 mb-8">
-                Join thousands of creators using AI to produce engaging content 
+                Join thousands of creators using AI to produce engaging content
                 faster, smarter, and more effectively than ever before.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">

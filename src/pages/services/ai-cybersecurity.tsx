@@ -61,11 +61,11 @@ const AICybersecurity: React.FC = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      <SEO 
+      <SEO
         title="AI Cybersecurity Services - Zion Tech Group"
         description="Advanced AI-powered cybersecurity solutions for threat detection, prevention, and response. Protect your business with intelligent security systems."
       />
-      
+
       {/* Hero Section */}
       <section className="pt-20 pb-16 px-4">
         <div className="max-w-7xl mx-auto">
@@ -79,19 +79,19 @@ const AICybersecurity: React.FC = () => {
               <Shield className="w-5 h-5 text-red-400 mr-2" />
               <span className="text-red-300 font-medium">AI Cybersecurity</span>
             </div>
-            
+
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
               AI-Powered
               <span className="block text-transparent bg-clip-text bg-gradient-to-r from-red-400 via-orange-500 to-yellow-400">
                 Cybersecurity
               </span>
             </h1>
-            
+
             <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-              Protect your business with intelligent cybersecurity that learns, adapts, and evolves. 
+              Protect your business with intelligent cybersecurity that learns, adapts, and evolves.
               Our AI-powered security solutions detect and prevent threats before they can cause harm.
             </p>
-            
+
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="px-8 py-4 bg-gradient-to-r from-red-500 to-orange-600 text-white font-semibold rounded-lg hover:from-red-400 hover:to-orange-500 transition-all duration-200 hover:scale-105 shadow-lg shadow-red-500/20">
                 Secure Your Business
@@ -223,7 +223,7 @@ const AICybersecurity: React.FC = () => {
             >
               <h3 className="text-2xl font-semibold text-white mb-6">Get Protected Today</h3>
               <p className="text-gray-300 mb-6">
-                Don't wait for a security breach. Our AI cybersecurity experts can assess your current 
+                Don't wait for a security breach. Our AI cybersecurity experts can assess your current
                 security posture and implement advanced protection measures.
               </p>
               <button className="w-full px-6 py-3 bg-gradient-to-r from-red-500 to-orange-600 text-white font-semibold rounded-lg hover:from-red-400 hover:to-orange-500 transition-all duration-200 hover:scale-105 shadow-lg shadow-red-500/20">

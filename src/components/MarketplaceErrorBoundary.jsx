@@ -13,7 +13,7 @@ function MarketplaceErrorFallback({ error, resetErrorBoundary }) {
             resetErrorBoundary();
         }
         catch (retryError) {
-            console.error('Error during retry:', retryError);
+            // console.error('Error during retry:', retryError);
             Sentry.captureException(retryError);
         }
     };
@@ -26,18 +26,18 @@ function MarketplaceErrorFallback({ error, resetErrorBoundary }) {
             {error?.message || 'An unexpected error occurred while loading marketplace content.'}
           </AlertDescription>
         </Alert>
-        
+
         <div className="flex flex-col space-y-2">
           <Button onClick={handleRetry} className="w-full" variant="default">
             <RefreshCcw aria-hidden="true" className="mr-2 h-4 w-4"/>
             Retry
           </Button>
-          
+
           <Button onClick={() => window.location.reload()} variant="outline" className="w-full">
             Reload Page
           </Button>
         </div>
-        
+
         <div className="text-center text-sm text-muted-foreground">
           If the problem persists, please{' '}
           <a href="mailto:support@example.com" className="text-primary hover:underline">
@@ -50,7 +50,7 @@ function MarketplaceErrorFallback({ error, resetErrorBoundary }) {
 export function MarketplaceErrorBoundary({ children }) {
     const handleError = (error, errorInfo) => {
         // Log boundary errors to Sentry
-        console.error('MarketplaceErrorBoundary caught an error:', error, errorInfo);
+        // console.error('MarketplaceErrorBoundary caught an error:', error, errorInfo);
         Sentry.withScope((scope) => {
             scope.setTag('errorBoundary', 'marketplace');
             scope.setContext('errorInfo', {

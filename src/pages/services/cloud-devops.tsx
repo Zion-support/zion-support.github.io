@@ -22,17 +22,17 @@ export default function CloudDevOps() {
                 <Cloud className="w-4 h-4 mr-2" />
                 Cloud-Native DevOps
               </div>
-              
+
               <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
                 Cloud
                 <span className="bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent"> DevOps</span>
               </h1>
-              
+
               <p className="text-xl text-slate-300 mb-8 max-w-3xl mx-auto">
-                Streamline your development and operations with cloud-native DevOps solutions. Automate deployments, 
+                Streamline your development and operations with cloud-native DevOps solutions. Automate deployments,
                 improve collaboration, and accelerate delivery with modern cloud infrastructure.
               </p>
-              
+
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link
                   to="/contact"
@@ -58,7 +58,7 @@ export default function CloudDevOps() {
                 Comprehensive Cloud DevOps Solutions
               </h2>
               <p className="text-xl text-slate-300 max-w-2xl mx-auto">
-                Our cloud DevOps platform provides end-to-end solutions for modern software development 
+                Our cloud DevOps platform provides end-to-end solutions for modern software development
                 and deployment workflows.
               </p>
             </div>

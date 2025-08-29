@@ -185,20 +185,20 @@ export class SEOOptimizer {
     <meta name="description" content="${seoData.description}" />
     <meta name="keywords" content="${seoData.keywords.join(', ')}" />
     <link rel="canonical" href="${seoData.canonicalUrl}" />
-    
+
     <!-- Open Graph -->
     <meta property="og:title" content="${seoData.title}" />
     <meta property="og:description" content="${seoData.description}" />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="${seoData.canonicalUrl}" />
     <meta property="og:image" content="${seoData.ogImage || 'https://drive.google.com/uc?export=view&id=0B0iuzhpa3pD7X0RzZ2lmclN3Ymc'}" />
-    
+
     <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="${seoData.title}" />
     <meta name="twitter:description" content="${seoData.description}" />
     <meta name="twitter:image" content="${seoData.ogImage || 'https://drive.google.com/uc?export=view&id=0B0iuzhpa3pD7X0RzZ2lmclN3Ymc'}" />
-    
+
     <!-- Structured Data -->
     <script type="application/ld+json">
       ${JSON.stringify(seoData.structuredData, null, 2)}

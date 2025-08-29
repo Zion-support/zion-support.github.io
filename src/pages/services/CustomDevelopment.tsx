@@ -1,14 +1,14 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { 
-  Code, 
-  Smartphone, 
-  Globe, 
-  Database, 
-  Zap, 
-  Shield, 
-  Users, 
+import {
+  Code,
+  Smartphone,
+  Globe,
+  Database,
+  Zap,
+  Shield,
+  Users,
   Target,
   ArrowRight,
   CheckCircle,
@@ -115,7 +115,7 @@ export default function CustomDevelopment() {
       <section className="relative overflow-hidden py-20">
         <div className="absolute inset-0 bg-gradient-to-r from-zion-cyan/10 to-zion-purple/10"></div>
         <div className="container mx-auto px-4 relative z-10">
-          <motion.div 
+          <motion.div
             className="text-center max-w-4xl mx-auto"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
@@ -125,18 +125,18 @@ export default function CustomDevelopment() {
               Custom Development
             </h1>
             <p className="text-xl lg:text-2xl text-zion-slate-light mb-8 leading-relaxed">
-              Tailored software solutions designed specifically for your business needs. 
+              Tailored software solutions designed specifically for your business needs.
               From web applications to mobile apps, we build custom software that drives results.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link 
-                to="/contact" 
+              <Link
+                to="/contact"
                 className="px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-blue text-white rounded-lg hover:shadow-lg hover:shadow-zion-cyan/25 transition-all duration-300 transform hover:scale-105 font-semibold"
               >
                 Start Your Project
               </Link>
-              <Link 
-                to="/services" 
+              <Link
+                to="/services"
                 className="px-8 py-4 border-2 border-zion-cyan text-zion-cyan rounded-lg hover:bg-zion-cyan hover:text-white transition-all duration-300 font-semibold"
               >
                 View All Services
@@ -149,7 +149,7 @@ export default function CustomDevelopment() {
       {/* Services Overview */}
       <section className="py-20">
         <div className="container mx-auto px-4">
-          <motion.div 
+          <motion.div
             className="text-center mb-16"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
@@ -159,14 +159,14 @@ export default function CustomDevelopment() {
               Our Custom Development Services
             </h2>
             <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
-              Comprehensive custom development services designed to create software solutions 
+              Comprehensive custom development services designed to create software solutions
               that perfectly align with your business requirements.
             </p>
           </motion.div>
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
             {services.map((service, index) => (
-              <motion.div 
+              <motion.div
                 key={index}
                 className="bg-zion-slate-dark/50 border border-zion-cyan/20 rounded-xl p-8 hover:border-zion-cyan/40 transition-all duration-300 hover:shadow-lg hover:shadow-zion-cyan/10"
                 initial={{ opacity: 0, y: 30 }}
@@ -182,7 +182,7 @@ export default function CustomDevelopment() {
                     <p className="text-zion-slate-light leading-relaxed">{service.description}</p>
                   </div>
                 </div>
-                
+
                 <div className="mb-6">
                   <h4 className="text-zion-cyan font-semibold mb-3">What's Included:</h4>
                   <ul className="space-y-2">
@@ -203,7 +203,7 @@ export default function CustomDevelopment() {
       {/* Technology Stack */}
       <section className="py-20 bg-zion-slate-dark/30">
         <div className="container mx-auto px-4">
-          <motion.div 
+          <motion.div
             className="text-center mb-16"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
@@ -213,14 +213,14 @@ export default function CustomDevelopment() {
               Our Technology Stack
             </h2>
             <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
-              We use cutting-edge technologies and proven frameworks to build robust, 
+              We use cutting-edge technologies and proven frameworks to build robust,
               scalable, and maintainable applications.
             </p>
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {technologies.map((tech, index) => (
-              <motion.div 
+              <motion.div
                 key={index}
                 className="bg-zion-slate-dark/50 border border-zion-cyan/20 rounded-xl p-6 hover:border-zion-cyan/40 transition-all duration-300 hover:shadow-lg hover:shadow-zion-cyan/10 group"
                 initial={{ opacity: 0, y: 30 }}
@@ -230,10 +230,10 @@ export default function CustomDevelopment() {
                 <div className="w-16 h-16 bg-gradient-to-r from-zion-cyan to-zion-blue rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
                   <tech.icon className="w-8 h-8 text-white" />
                 </div>
-                
+
                 <h3 className="text-xl font-bold text-white mb-3">{tech.title}</h3>
                 <p className="text-zion-slate-light mb-4 leading-relaxed text-sm">{tech.description}</p>
-                
+
                 <div className="space-y-2">
                   {tech.stack.map((item, itemIndex) => (
                     <div key={itemIndex} className="text-zion-cyan text-sm font-medium">{item}</div>
@@ -248,7 +248,7 @@ export default function CustomDevelopment() {
       {/* Benefits Section */}
       <section className="py-20">
         <div className="container mx-auto px-4">
-          <motion.div 
+          <motion.div
             className="text-center mb-16"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
@@ -264,7 +264,7 @@ export default function CustomDevelopment() {
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
             {benefits.map((benefit, index) => (
-              <motion.div 
+              <motion.div
                 key={index}
                 className="bg-zion-slate-dark/50 border border-zion-cyan/20 rounded-xl p-6 hover:border-zion-cyan/40 transition-all duration-300"
                 initial={{ opacity: 0, y: 30 }}
@@ -285,7 +285,7 @@ export default function CustomDevelopment() {
       {/* Industries Section */}
       <section className="py-20 bg-zion-slate-dark/30">
         <div className="container mx-auto px-4">
-          <motion.div 
+          <motion.div
             className="text-center mb-16"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
@@ -295,14 +295,14 @@ export default function CustomDevelopment() {
               Industries We Serve
             </h2>
             <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
-              Our custom development expertise spans across multiple industries, 
+              Our custom development expertise spans across multiple industries,
               each with unique software requirements and challenges.
             </p>
           </motion.div>
 
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
             {industries.map((industry, index) => (
-              <motion.div 
+              <motion.div
                 key={index}
                 className="bg-zion-slate-dark/50 border border-zion-cyan/20 rounded-lg p-6 text-center hover:border-zion-cyan/40 transition-all duration-300 hover:shadow-lg hover:shadow-zion-cyan/10"
                 initial={{ opacity: 0, y: 20 }}
@@ -319,7 +319,7 @@ export default function CustomDevelopment() {
       {/* Development Process */}
       <section className="py-20">
         <div className="container mx-auto px-4">
-          <motion.div 
+          <motion.div
             className="text-center mb-16"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
@@ -340,7 +340,7 @@ export default function CustomDevelopment() {
               { step: '03', title: 'Development', description: 'Build the application using agile development practices' },
               { step: '04', title: 'Deployment', description: 'Deploy and launch with ongoing support and maintenance' }
             ].map((phase, index) => (
-              <motion.div 
+              <motion.div
                 key={index}
                 className="text-center"
                 initial={{ opacity: 0, y: 30 }}
@@ -361,7 +361,7 @@ export default function CustomDevelopment() {
       {/* CTA Section */}
       <section className="py-20 bg-zion-slate-dark/30">
         <div className="container mx-auto px-4">
-          <motion.div 
+          <motion.div
             className="bg-gradient-to-r from-zion-cyan/20 to-zion-purple/20 border border-zion-cyan/30 rounded-2xl p-12 text-center"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
@@ -371,18 +371,18 @@ export default function CustomDevelopment() {
               Ready to Build Your Custom Solution?
             </h2>
             <p className="text-xl text-zion-slate-light mb-8 max-w-3xl mx-auto">
-              Let our development experts create the perfect software solution for your business. 
+              Let our development experts create the perfect software solution for your business.
               Get started with a free consultation today.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link 
-                to="/contact" 
+              <Link
+                to="/contact"
                 className="px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-blue text-white rounded-lg hover:shadow-lg hover:shadow-zion-cyan/25 transition-all duration-300 transform hover:scale-105 font-semibold"
               >
                 Start Your Project
               </Link>
-              <Link 
-                to="/services" 
+              <Link
+                to="/services"
                 className="px-8 py-4 border-2 border-zion-cyan text-zion-cyan rounded-lg hover:bg-zion-cyan hover:text-white transition-all duration-300 font-semibold"
               >
                 Explore Services

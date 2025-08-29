@@ -84,7 +84,7 @@ export default function ManufacturingSolutions() {
               Manufacturing Solutions
             </h1>
             <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
-              Transform your manufacturing operations with Industry 4.0 technology. Enhance efficiency, 
+              Transform your manufacturing operations with Industry 4.0 technology. Enhance efficiency,
               quality, and productivity with AI-powered manufacturing solutions.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -107,7 +107,7 @@ export default function ManufacturingSolutions() {
               Industry 4.0 Manufacturing Technology
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Our comprehensive manufacturing solutions combine advanced AI with industrial expertise 
+              Our comprehensive manufacturing solutions combine advanced AI with industrial expertise
               to revolutionize how manufacturers operate and compete in the global market.
             </p>
           </motion.div>
@@ -168,7 +168,7 @@ export default function ManufacturingSolutions() {
               Manufacturing Industries
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Our manufacturing solutions are designed to meet the unique challenges and requirements 
+              Our manufacturing solutions are designed to meet the unique challenges and requirements
               of various manufacturing sectors.
             </p>
           </motion.div>

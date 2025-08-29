@@ -582,7 +582,7 @@ export const getSpecializedServicesByPriceRange = (minPrice: number, maxPrice: n
 
 export const searchSpecializedServices = (query: string) => {
   const lowercaseQuery = query.toLowerCase();
-  return specializedInnovativeServices2027.filter(service => 
+  return specializedInnovativeServices2027.filter(service =>
     service.name.toLowerCase().includes(lowercaseQuery) ||
     service.description.toLowerCase().includes(lowercaseQuery) ||
     service.category.toLowerCase().includes(lowercaseQuery)

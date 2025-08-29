@@ -5,7 +5,7 @@ import { ArrowRight, Play, Star, Zap, Shield, Users, TrendingUp } from 'lucide-r
 
 export function HeroSection() {
   const [currentFeature, setCurrentFeature] = useState(0);
-  
+
   const features = [
     {
       icon: Zap,
@@ -42,7 +42,7 @@ export function HeroSection() {
       <div className="absolute inset-0">
         <div className="absolute inset-0 bg-[url('/images/grid-pattern.svg')] bg-center opacity-10"></div>
         <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/10 via-blue-500/10 to-purple-500/10"></div>
-        
+
         {/* Floating Elements */}
         <motion.div
           animate={{ y: [0, -20, 0] }}
@@ -116,7 +116,7 @@ export function HeroSection() {
                 <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" />
               </span>
             </Link>
-            
+
             <Link
               to="/contact"
               className="group px-8 py-4 border-2 border-cyan-500 text-cyan-400 rounded-xl font-semibold hover:bg-cyan-500 hover:text-white transition-all duration-300 hover:shadow-2xl hover:shadow-cyan-500/25"
@@ -149,8 +149,8 @@ export function HeroSection() {
                     className="flex flex-col items-center text-center"
                   >
                     <div className={`w-12 h-12 rounded-xl flex items-center justify-center mb-3 transition-all duration-300 ${
-                      currentFeature === index 
-                        ? 'bg-gradient-to-r from-cyan-500 to-blue-600 text-white' 
+                      currentFeature === index
+                        ? 'bg-gradient-to-r from-cyan-500 to-blue-600 text-white'
                         : 'bg-white/10 text-gray-400'
                     }`}>
                       <feature.icon className="w-6 h-6" />
@@ -163,7 +163,7 @@ export function HeroSection() {
                   </motion.div>
                 ))}
               </div>
-              
+
               <motion.div
                 key={currentFeature}
                 initial={{ opacity: 0, y: 10 }}

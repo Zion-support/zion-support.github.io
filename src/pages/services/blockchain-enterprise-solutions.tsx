@@ -22,17 +22,17 @@ export default function BlockchainEnterpriseSolutions() {
                 <Lock className="w-4 h-4 mr-2" />
                 Enterprise Blockchain Solutions
               </div>
-              
+
               <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
                 Blockchain
                 <span className="bg-gradient-to-r from-yellow-400 to-orange-500 bg-clip-text text-transparent"> Enterprise</span>
               </h1>
-              
+
               <p className="text-xl text-slate-300 mb-8 max-w-3xl mx-auto">
-                Leverage the power of blockchain technology to transform your enterprise operations. 
+                Leverage the power of blockchain technology to transform your enterprise operations.
                 Secure transactions, smart contracts, and decentralized applications for the modern business.
               </p>
-              
+
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link
                   to="/contact"
@@ -58,7 +58,7 @@ export default function BlockchainEnterpriseSolutions() {
                 Enterprise Blockchain Capabilities
               </h2>
               <p className="text-xl text-slate-300 max-w-2xl mx-auto">
-                Our blockchain platform provides comprehensive enterprise solutions with security, 
+                Our blockchain platform provides comprehensive enterprise solutions with security,
                 scalability, and compliance built-in.
               </p>
             </div>

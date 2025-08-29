@@ -21,7 +21,7 @@ export function ActiveFiltersBar({ filters, onRemoveFilter, onClearAll }: Active
   return (
     <div className="flex flex-wrap items-center gap-2 p-4 bg-zion-blue-dark/40 rounded-lg border border-zion-blue-light/20">
       <span className="text-sm text-zion-slate-light mr-2">Active filters:</span>
-      
+
       {filters.map((filter) => (
         <div
           key={filter.key}
@@ -36,7 +36,7 @@ export function ActiveFiltersBar({ filters, onRemoveFilter, onClearAll }: Active
           </button>
         </div>
       ))}
-      
+
       <button
         onClick={onClearAll}
         className="text-sm text-zion-slate-light hover:text-zion-cyan transition-colors underline"

@@ -81,11 +81,11 @@ export default function HealthcareTech() {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      <SEO 
+      <SEO
         title="Healthcare Technology Services - Zion Tech Group"
         description="Transform healthcare delivery with cutting-edge technology solutions. From AI diagnostics to telemedicine, we help healthcare providers deliver better patient care."
       />
-      
+
       {/* Hero Section */}
       <section className="relative overflow-hidden py-20">
         <div className="absolute inset-0 bg-gradient-to-r from-red-600/20 to-pink-600/20"></div>
@@ -108,7 +108,7 @@ export default function HealthcareTech() {
               </span>
             </h1>
             <p className="text-xl text-slate-300 mb-8 max-w-3xl mx-auto">
-              Revolutionize healthcare delivery with AI-powered diagnostics, telemedicine solutions, 
+              Revolutionize healthcare delivery with AI-powered diagnostics, telemedicine solutions,
               and advanced patient care technologies. Improve outcomes and enhance patient experience.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
@@ -144,7 +144,7 @@ export default function HealthcareTech() {
               Why Choose Healthcare Technology?
             </h2>
             <p className="text-xl text-slate-300 max-w-3xl mx-auto">
-              Modern healthcare technology improves patient outcomes, reduces costs, 
+              Modern healthcare technology improves patient outcomes, reduces costs,
               and enhances the overall quality of care delivery.
             </p>
           </motion.div>
@@ -182,7 +182,7 @@ export default function HealthcareTech() {
               Our Healthcare Technology Services
             </h2>
             <p className="text-xl text-slate-300 max-w-3xl mx-auto">
-              Comprehensive healthcare technology solutions designed to meet the unique 
+              Comprehensive healthcare technology solutions designed to meet the unique
               needs of healthcare providers and patients
             </p>
           </motion.div>
@@ -233,7 +233,7 @@ export default function HealthcareTech() {
               Healthcare Technology Applications
             </h2>
             <p className="text-xl text-slate-300 max-w-3xl mx-auto">
-              Discover how modern technology is transforming various aspects of healthcare 
+              Discover how modern technology is transforming various aspects of healthcare
               and patient care delivery
             </p>
           </motion.div>
@@ -270,7 +270,7 @@ export default function HealthcareTech() {
               Ready to Transform Healthcare?
             </h2>
             <p className="text-xl text-slate-300 mb-8 max-w-3xl mx-auto">
-              Let's discuss how healthcare technology can improve patient outcomes, 
+              Let's discuss how healthcare technology can improve patient outcomes,
               streamline operations, and create a better healthcare experience for everyone.
             </p>
             <div className="flex flex-wrap justify-center gap-4">

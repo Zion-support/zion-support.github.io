@@ -110,12 +110,12 @@ export default function AffiliateMarketingTracker() {
 
   return (
     <>
-      <SEO 
+      <SEO
         title="Affiliate Marketing Tracker - Zion Tech Group"
         description="Advanced affiliate marketing tracking platform with AI-powered analytics, fraud detection, and real-time reporting. Boost your affiliate program ROI."
         canonical="/services/affiliate-marketing-tracker"
       />
-      
+
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
         {/* Hero Section */}
         <section className="relative py-20 overflow-hidden">
@@ -133,17 +133,17 @@ export default function AffiliateMarketingTracker() {
                   </span>
                 </h1>
                 <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
-                  Advanced affiliate tracking platform with AI-powered analytics, real-time reporting, and fraud detection. 
+                  Advanced affiliate tracking platform with AI-powered analytics, real-time reporting, and fraud detection.
                   Optimize your affiliate program and maximize ROI.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                  <Link 
+                  <Link
                     to="/request-quote"
                     className="px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg font-semibold hover:from-blue-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105"
                   >
                     Get Started
                   </Link>
-                  <Link 
+                  <Link
                     to="/contact"
                     className="px-8 py-4 border-2 border-blue-500 text-blue-400 rounded-lg font-semibold hover:bg-blue-500 hover:text-white transition-all duration-300"
                   >
@@ -166,7 +166,7 @@ export default function AffiliateMarketingTracker() {
                 Everything you need to track, manage, and optimize your affiliate marketing campaigns
               </p>
             </div>
-            
+
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               {features.map((feature, index) => (
                 <motion.div
@@ -198,7 +198,7 @@ export default function AffiliateMarketingTracker() {
                 Transform your affiliate marketing with intelligent automation and powerful insights
               </p>
             </div>
-            
+
             <div className="grid md:grid-cols-2 gap-8">
               {benefits.map((benefit, index) => (
                 <motion.div
@@ -232,7 +232,7 @@ export default function AffiliateMarketingTracker() {
                 Choose the plan that fits your affiliate marketing needs and scale as you grow
               </p>
             </div>
-            
+
             <div className="grid md:grid-cols-3 gap-8">
               {pricingPlans.map((plan, index) => (
                 <motion.div
@@ -241,8 +241,8 @@ export default function AffiliateMarketingTracker() {
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
                   className={`relative bg-slate-800/50 backdrop-blur-sm rounded-xl p-8 border ${
-                    plan.popular 
-                      ? 'border-blue-500 ring-2 ring-blue-500/20' 
+                    plan.popular
+                      ? 'border-blue-500 ring-2 ring-blue-500/20'
                       : 'border-slate-700'
                   }`}
                 >
@@ -253,7 +253,7 @@ export default function AffiliateMarketingTracker() {
                       </span>
                     </div>
                   )}
-                  
+
                   <div className="text-center mb-6">
                     <h3 className="text-2xl font-bold mb-2 text-white">{plan.name}</h3>
                     <div className="mb-4">
@@ -262,7 +262,7 @@ export default function AffiliateMarketingTracker() {
                     </div>
                     <p className="text-gray-300">{plan.description}</p>
                   </div>
-                  
+
                   <ul className="space-y-3 mb-8">
                     {plan.features.map((feature, featureIndex) => (
                       <li key={featureIndex} className="flex items-center space-x-3">
@@ -271,7 +271,7 @@ export default function AffiliateMarketingTracker() {
                       </li>
                     ))}
                   </ul>
-                  
+
                   <Link
                     to="/request-quote"
                     className={`w-full block text-center py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
@@ -303,13 +303,13 @@ export default function AffiliateMarketingTracker() {
                 Join thousands of businesses using our platform to optimize their affiliate programs and increase revenue.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Link 
+                <Link
                   to="/request-quote"
                   className="px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg font-semibold hover:from-blue-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105"
                 >
                   Start Free Trial
                 </Link>
-                <Link 
+                <Link
                   to="/contact"
                   className="px-8 py-4 border-2 border-blue-500 text-blue-400 rounded-lg font-semibold hover:bg-blue-500 hover:text-white transition-all duration-300"
                 >

@@ -73,7 +73,7 @@ const AdvancedCybersecurityServices: NextPage = () => {
         <div className="absolute -top-40 -right-40 w-80 h-80 bg-gradient-to-br from-blue-500/20 to-transparent rounded-full blur-3xl animate-pulse"></div>
         <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-gradient-to-tr from-purple-500/20 to-transparent rounded-full blur-3xl animate-pulse delay-1000"></div>
         <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-gradient-to-r from-blue-500/10 to-purple-500/10 rounded-full blur-3xl animate-pulse delay-2000"></div>
-        
+
         {/* Security Pattern Overlay */}
         <div className="absolute inset-0 opacity-5">
           <div className="absolute inset-0" style={{
@@ -103,12 +103,12 @@ const AdvancedCybersecurityServices: NextPage = () => {
               </div>
             </div>
           </div>
-          
+
           <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
             Advanced Cybersecurity Services 2027
           </h1>
           <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
-            Protect your digital assets with cutting-edge cybersecurity solutions. 
+            Protect your digital assets with cutting-edge cybersecurity solutions.
             From AI-powered threat detection to quantum cryptography, we deliver military-grade security for the modern world.
           </p>
           <div className="flex flex-wrap justify-center gap-4 mb-8">

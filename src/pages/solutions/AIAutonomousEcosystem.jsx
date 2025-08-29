@@ -119,7 +119,7 @@ const AIAutonomousEcosystem = () => {
               <span className="bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent"> Ecosystem</span>
             </h1>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-              Create a unified, intelligent ecosystem that seamlessly integrates 
+              Create a unified, intelligent ecosystem that seamlessly integrates
               all your AI systems and applications for maximum efficiency.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -142,11 +142,11 @@ const AIAutonomousEcosystem = () => {
               Ecosystem Features
             </h2>
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              Our AI Autonomous Ecosystem provides comprehensive features to ensure 
+              Our AI Autonomous Ecosystem provides comprehensive features to ensure
               seamless integration and optimal performance across all systems.
             </p>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {ecosystemFeatures.map((feature, index) => (<div key={index} className="bg-slate-800/50 border border-white/10 rounded-xl p-6 hover:border-purple-500/50 transition-all duration-300">
                 <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-blue-500 rounded-full flex items-center justify-center mx-auto mb-4">
@@ -173,11 +173,11 @@ const AIAutonomousEcosystem = () => {
               Ecosystem Components
             </h2>
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              A comprehensive set of integrated components that work together 
+              A comprehensive set of integrated components that work together
               to create a powerful AI ecosystem.
             </p>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {ecosystemComponents.map((component, index) => (<div key={index} className="bg-slate-800/50 border border-white/10 rounded-xl p-6 hover:border-purple-500/50 transition-all duration-300">
                 <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-blue-500 rounded-full flex items-center justify-center mx-auto mb-4">
@@ -205,7 +205,7 @@ const AIAutonomousEcosystem = () => {
                 Why Choose Our Ecosystem?
               </h2>
               <p className="text-lg text-gray-300 mb-6">
-                Our AI Autonomous Ecosystem provides a unified approach to AI 
+                Our AI Autonomous Ecosystem provides a unified approach to AI
                 implementation that delivers measurable business value.
               </p>
               <ul className="space-y-3">
@@ -220,7 +220,7 @@ const AIAutonomousEcosystem = () => {
                 <Lightbulb className="w-24 h-24 text-purple-400 mx-auto mb-4"/>
                 <h3 className="text-2xl font-bold text-white mb-2">Unified Intelligence</h3>
                 <p className="text-gray-300 mb-6">
-                  Connect all your AI systems into one intelligent ecosystem 
+                  Connect all your AI systems into one intelligent ecosystem
                   that learns and adapts together.
                 </p>
                 <div className="text-sm text-gray-400">
@@ -241,10 +241,10 @@ const AIAutonomousEcosystem = () => {
             Implementation Process
           </h2>
           <p className="text-xl text-gray-300 mb-8">
-            A structured approach to building and deploying your AI ecosystem 
+            A structured approach to building and deploying your AI ecosystem
             with minimal disruption to existing operations.
           </p>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {implementation.map((phase, index) => (<div key={index} className="text-center">
                 <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-blue-500 rounded-full flex items-center justify-center mx-auto mb-4 text-2xl font-bold text-white">
@@ -265,7 +265,7 @@ const AIAutonomousEcosystem = () => {
             Ready to Build Your AI Ecosystem?
           </h2>
           <p className="text-xl text-gray-300 mb-8">
-            Transform your organization with a unified AI ecosystem that 
+            Transform your organization with a unified AI ecosystem that
             drives innovation and efficiency across all operations.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">

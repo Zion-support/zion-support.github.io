@@ -1,11 +1,11 @@
 import React from 'react';
 import { ArrowRight, Star, Users, Clock, Shield } from 'lucide-react';
 
-export const PageHero = ({ 
-  title, 
-  subtitle, 
-  description, 
-  features = [], 
+export const PageHero = ({
+  title,
+  subtitle,
+  description,
+  features = [],
   ctaText = "Get Started",
   ctaLink = "#contact",
   backgroundImage = null,
@@ -46,7 +46,7 @@ export const PageHero = ({
     <section className="relative py-20 lg:py-32 overflow-hidden">
       {/* Background */}
       {backgroundImage ? (
-        <div 
+        <div
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
           style={{ backgroundImage: `url(${backgroundImage})` }}
         >
@@ -55,7 +55,7 @@ export const PageHero = ({
       ) : (
         <div className="absolute inset-0 bg-gradient-to-br from-blue-900 via-purple-900 to-slate-900"></div>
       )}
-      
+
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-10">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_1px_1px,rgba(255,255,255,0.15)_1px,transparent_0)] bg-[length:20px_20px]"></div>
@@ -70,11 +70,11 @@ export const PageHero = ({
                 {subtitle}
               </div>
             )}
-            
+
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
               {title}
             </h1>
-            
+
             {description && (
               <p className="text-xl md:text-2xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
                 {description}

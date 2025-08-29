@@ -9,7 +9,7 @@ interface ProgressProps {
 
 const Progress: React.FC<ProgressProps> = ({ value, max = 100, className }) => {
   const percentage = Math.min(Math.max((value / max) * 100, 0), 100);
-  
+
   return (
     <div className={cn("w-full bg-slate-700 rounded-full h-2", className)}>
       <div

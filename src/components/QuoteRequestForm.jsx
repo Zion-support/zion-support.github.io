@@ -26,7 +26,7 @@ export const QuoteRequestForm = () => {
 
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
-  const [errors, setErrors] = useState({});
+  const [errors, setErrors] = useState({ /* empty */ });
 
   const serviceTypes = [
     { value: 'ai-services', label: 'AI & Machine Learning Services' },
@@ -69,7 +69,7 @@ export const QuoteRequestForm = () => {
       ...prev,
       [field]: value
     }));
-    
+
     // Clear error when user starts typing
     if (errors[field]) {
       setErrors(prev => ({
@@ -80,7 +80,7 @@ export const QuoteRequestForm = () => {
   };
 
   const validateForm = () => {
-    const newErrors = {};
+    const newErrors = { /* empty */ };
 
     if (!formData.firstName.trim()) newErrors.firstName = 'First name is required';
     if (!formData.lastName.trim()) newErrors.lastName = 'Last name is required';
@@ -100,20 +100,20 @@ export const QuoteRequestForm = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    
+
     if (!validateForm()) {
       return;
     }
 
     setIsSubmitting(true);
-    
+
     try {
       // Simulate API call
       await new Promise(resolve => setTimeout(resolve, 2000));
-      
+
       // In a real app, you would send the data to your backend
-      console.log('Quote request submitted:', formData);
-      
+      // console.log('Quote request submitted:', formData);
+
       setIsSubmitted(true);
       setFormData({
         firstName: '',
@@ -131,7 +131,7 @@ export const QuoteRequestForm = () => {
         agreeToMarketing: false
       });
     } catch (error) {
-      console.error('Error submitting quote request:', error);
+      // console.error('Error submitting quote request:', error);
       setErrors({ submit: 'Failed to submit request. Please try again.' });
     } finally {
       setIsSubmitting(false);
@@ -150,7 +150,7 @@ export const QuoteRequestForm = () => {
             <p className="text-green-700 mb-6">
               Thank you for your interest! Our team will review your request and get back to you within 24 hours with a detailed quote.
             </p>
-            <Button 
+            <Button
               onClick={() => setIsSubmitted(false)}
               className="bg-green-600 hover:bg-green-700"
             >
@@ -172,7 +172,7 @@ export const QuoteRequestForm = () => {
           Fill out the form below and we'll provide you with a detailed, competitive quote
         </CardDescription>
       </CardHeader>
-      
+
       <CardContent>
         <form onSubmit={handleSubmit} className="space-y-6">
           {/* Personal Information */}
@@ -192,7 +192,7 @@ export const QuoteRequestForm = () => {
                 <p className="text-red-500 text-sm mt-1">{errors.firstName}</p>
               )}
             </div>
-            
+
             <div>
               <label className="block text-sm font-medium text-gray-700 mb-2">
                 Last Name *
@@ -227,7 +227,7 @@ export const QuoteRequestForm = () => {
                 <p className="text-red-500 text-sm mt-1">{errors.email}</p>
               )}
             </div>
-            
+
             <div>
               <label className="block text-sm font-medium text-gray-700 mb-2">
                 Phone Number
@@ -322,7 +322,7 @@ export const QuoteRequestForm = () => {
                 </SelectContent>
               </Select>
             </div>
-            
+
             <div>
               <label className="block text-sm font-medium text-gray-700 mb-2">
                 Budget Range
@@ -367,7 +367,7 @@ export const QuoteRequestForm = () => {
                 </SelectContent>
               </Select>
             </div>
-            
+
             <div>
               <label className="block text-sm font-medium text-gray-700 mb-2">
                 Preferred Contact Method
@@ -409,7 +409,7 @@ export const QuoteRequestForm = () => {
                 *
               </label>
             </div>
-            
+
             <div className="flex items-start space-x-3">
               <Checkbox
                 id="marketing"
@@ -421,7 +421,7 @@ export const QuoteRequestForm = () => {
                 I would like to receive updates about new services and industry insights
               </label>
             </div>
-            
+
             {errors.agreeToTerms && (
               <p className="text-red-500 text-sm">{errors.agreeToTerms}</p>
             )}

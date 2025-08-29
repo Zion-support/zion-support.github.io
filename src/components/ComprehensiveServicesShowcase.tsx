@@ -1,11 +1,11 @@
 import React, { useState, useMemo } from 'react';
 import { motion } from 'framer-motion';
-import { 
-  Brain, 
-  Cpu, 
-  Cloud, 
-  Shield, 
-  Rocket, 
+import {
+  Brain,
+  Cpu,
+  Cloud,
+  Shield,
+  Rocket,
   Zap,
   ArrowRight,
   CheckCircle,
@@ -155,19 +155,19 @@ const ComprehensiveServicesShowcase: React.FC = () => {
               Innovative Technology Solutions
             </h1>
             <p className="text-xl md:text-2xl text-zion-slate-light mb-8 leading-relaxed">
-              Discover our comprehensive portfolio of cutting-edge micro SAAS services, 
+              Discover our comprehensive portfolio of cutting-edge micro SAAS services,
               AI solutions, and emerging technology platforms designed to transform your business.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
-              <Link 
-                to="/contact" 
+              <Link
+                to="/contact"
                 className="inline-flex items-center px-8 py-3 bg-zion-cyan text-white font-semibold rounded-lg hover:bg-zion-cyan-light transition-colors"
               >
                 Get Started
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Link>
-              <Link 
-                to="/request-quote" 
+              <Link
+                to="/request-quote"
                 className="inline-flex items-center px-8 py-3 border-2 border-white text-white font-semibold rounded-lg hover:bg-white hover:text-zion-blue-dark transition-colors"
               >
                 Request Quote
@@ -190,9 +190,9 @@ const ComprehensiveServicesShowcase: React.FC = () => {
             </div>
             <div className="flex items-center gap-2">
               <Globe className="h-5 w-5 text-zion-cyan" />
-              <a 
-                href="https://ziontechgroup.com" 
-                target="_blank" 
+              <a
+                href="https://ziontechgroup.com"
+                target="_blank"
                 rel="noopener noreferrer"
                 className="font-medium text-zion-blue hover:text-zion-cyan transition-colors"
               >
@@ -404,7 +404,7 @@ const ComprehensiveServicesShowcase: React.FC = () => {
             Ready to Transform Your Business?
           </h2>
           <p className="text-xl text-zion-slate-light mb-8 max-w-3xl mx-auto">
-            Our innovative technology solutions are designed to give you a competitive edge. 
+            Our innovative technology solutions are designed to give you a competitive edge.
             Contact us today to discuss how we can help you achieve your goals.
           </p>
           <div className="flex flex-wrap justify-center gap-4">

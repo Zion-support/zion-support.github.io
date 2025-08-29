@@ -179,12 +179,12 @@ export default function EmployeeSchedulingSaaS() {
 
   return (
     <>
-      <SEO 
+      <SEO
         title="Employee Scheduling SaaS - Zion Tech Group"
         description="Professional employee scheduling platform with AI-powered automation, time tracking, and comprehensive workforce management tools."
         canonical="/services/employee-scheduling-saas"
       />
-      
+
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
         {/* Hero Section */}
         <section className="relative py-20 overflow-hidden">
@@ -202,17 +202,17 @@ export default function EmployeeSchedulingSaaS() {
                   </span>
                 </h1>
                 <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
-                  Professional employee scheduling platform with AI-powered automation, time tracking, and comprehensive 
+                  Professional employee scheduling platform with AI-powered automation, time tracking, and comprehensive
                   workforce management tools. Streamline your scheduling process and optimize labor costs.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                  <Link 
+                  <Link
                     to="/request-quote"
                     className="px-8 py-4 bg-gradient-to-r from-orange-500 to-red-600 rounded-lg font-semibold hover:from-orange-600 hover:to-red-700 transition-all duration-300 transform hover:scale-105"
                   >
                     Start Free Trial
                   </Link>
-                  <Link 
+                  <Link
                     to="/contact"
                     className="px-8 py-4 border-2 border-orange-500 text-orange-400 rounded-lg font-semibold hover:bg-orange-500 hover:text-white transition-all duration-300"
                   >
@@ -235,7 +235,7 @@ export default function EmployeeSchedulingSaaS() {
                 Everything you need to manage your workforce efficiently and effectively
               </p>
             </div>
-            
+
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               {features.map((feature, index) => (
                 <motion.div
@@ -267,7 +267,7 @@ export default function EmployeeSchedulingSaaS() {
                 Intelligent tools that make scheduling simple and efficient
               </p>
             </div>
-            
+
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               {schedulingCapabilities.map((capability, index) => (
                 <motion.div
@@ -299,7 +299,7 @@ export default function EmployeeSchedulingSaaS() {
                 Flexible scheduling solutions that adapt to your business needs
               </p>
             </div>
-            
+
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               {industries.map((industry, index) => (
                 <motion.div
@@ -331,7 +331,7 @@ export default function EmployeeSchedulingSaaS() {
                 Professional scheduling tools that transform how you manage your workforce
               </p>
             </div>
-            
+
             <div className="grid md:grid-cols-2 gap-8">
               {benefits.map((benefit, index) => (
                 <motion.div
@@ -365,7 +365,7 @@ export default function EmployeeSchedulingSaaS() {
                 Choose the scheduling plan that fits your business size and needs
               </p>
             </div>
-            
+
             <div className="grid md:grid-cols-3 gap-8">
               {pricingPlans.map((plan, index) => (
                 <motion.div
@@ -374,8 +374,8 @@ export default function EmployeeSchedulingSaaS() {
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
                   className={`relative bg-slate-800/50 backdrop-blur-sm rounded-xl p-8 border ${
-                    plan.popular 
-                      ? 'border-orange-500 ring-2 ring-orange-500/20' 
+                    plan.popular
+                      ? 'border-orange-500 ring-2 ring-orange-500/20'
                       : 'border-slate-700'
                   }`}
                 >
@@ -386,7 +386,7 @@ export default function EmployeeSchedulingSaaS() {
                       </span>
                     </div>
                   )}
-                  
+
                   <div className="text-center mb-6">
                     <h3 className="text-2xl font-bold mb-2 text-white">{plan.name}</h3>
                     <div className="mb-4">
@@ -395,7 +395,7 @@ export default function EmployeeSchedulingSaaS() {
                     </div>
                     <p className="text-gray-300">{plan.description}</p>
                   </div>
-                  
+
                   <ul className="space-y-3 mb-8">
                     {plan.features.map((feature, featureIndex) => (
                       <li key={featureIndex} className="flex items-center space-x-3">
@@ -404,7 +404,7 @@ export default function EmployeeSchedulingSaaS() {
                       </li>
                     ))}
                   </ul>
-                  
+
                   <Link
                     to="/request-quote"
                     className={`w-full block text-center py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
@@ -436,13 +436,13 @@ export default function EmployeeSchedulingSaaS() {
                 Join thousands of businesses using our platform to streamline their workforce management.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Link 
+                <Link
                   to="/request-quote"
                   className="px-8 py-4 bg-gradient-to-r from-orange-500 to-red-600 rounded-lg font-semibold hover:from-orange-600 hover:to-red-700 transition-all duration-300 transform hover:scale-105"
                 >
                   Start Free Trial
                 </Link>
-                <Link 
+                <Link
                   to="/contact"
                   className="px-8 py-4 border-2 border-orange-500 text-orange-400 rounded-lg font-semibold hover:bg-orange-500 hover:text-white transition-all duration-300"
                 >

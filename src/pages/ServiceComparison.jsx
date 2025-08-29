@@ -41,14 +41,14 @@ const ServiceComparison = () => {
           <div className="absolute -top-20 -right-20 w-40 h-40 bg-white/10 rounded-full blur-3xl animate-pulse"></div>
           <div className="absolute -bottom-20 -left-20 w-40 h-40 bg-white/10 rounded-full blur-3xl animate-pulse delay-1000"></div>
         </div>
-        
+
         <div className="max-w-4xl mx-auto text-center relative z-10">
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }}>
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
               Service Comparison
             </h1>
             <p className="text-xl text-white/90 mb-8 max-w-3xl mx-auto leading-relaxed">
-              Make informed decisions with our comprehensive service comparison tool. 
+              Make informed decisions with our comprehensive service comparison tool.
               Compare features, pricing, and complexity levels to find the perfect solution for your business.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -72,7 +72,7 @@ const ServiceComparison = () => {
               Why Use Our Comparison Tool?
             </h2>
             <p className="text-lg text-zion-slate-light max-w-2xl mx-auto">
-              Our advanced comparison platform helps you make the best decisions for your business 
+              Our advanced comparison platform helps you make the best decisions for your business
               with comprehensive analysis and expert insights.
             </p>
           </motion.div>
@@ -128,7 +128,7 @@ const ServiceComparison = () => {
               Start Comparing Services
             </h2>
             <p className="text-lg text-zion-slate-light max-w-2xl mx-auto">
-              Use our advanced comparison tool to evaluate different service tiers, 
+              Use our advanced comparison tool to evaluate different service tiers,
               features, and pricing options to find your perfect match.
             </p>
           </motion.div>
@@ -145,7 +145,7 @@ const ServiceComparison = () => {
               Need Help Choosing?
             </h2>
             <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
-              Our expert team is here to help you navigate through our services 
+              Our expert team is here to help you navigate through our services
               and find the perfect solution for your business needs.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">

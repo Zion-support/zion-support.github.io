@@ -108,10 +108,10 @@ const AdvancedServicesShowcase2025 = () => {
             </span>
           </motion.h1>
           <motion.p className="text-xl text-gray-300 max-w-4xl mx-auto mb-8" initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, delay: 0.2 }}>
-            Discover our comprehensive collection of {allServices.length}+ advanced real micro SAAS, IT, and AI services. 
+            Discover our comprehensive collection of {allServices.length}+ advanced real micro SAAS, IT, and AI services.
             Each solution is market-ready with proven ROI, competitive pricing, and enterprise-grade support.
           </motion.p>
-          
+
           {/* Contact Information */}
           <motion.div className="bg-gradient-to-r from-blue-600/20 to-cyan-600/20 rounded-xl p-6 mb-8 border border-blue-500/30" initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: 0.8, delay: 0.4 }}>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-center">
@@ -290,7 +290,7 @@ const AdvancedServicesShowcase2025 = () => {
               Ready to Transform Your Business?
             </h2>
             <p className="text-xl text-gray-300 mb-8">
-              Our advanced services are designed to drive innovation, improve efficiency, and deliver measurable ROI. 
+              Our advanced services are designed to drive innovation, improve efficiency, and deliver measurable ROI.
               Contact us today to discuss your specific needs and discover how we can help you succeed.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">

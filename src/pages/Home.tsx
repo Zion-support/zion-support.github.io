@@ -1,14 +1,14 @@
 import React, { Suspense, useState, useEffect, useMemo, useCallback } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import { 
-  Users, 
-  TrendingUp, 
-  Award, 
-  Globe, 
-  Brain, 
-  Cloud, 
-  Shield, 
+import {
+  Users,
+  TrendingUp,
+  Award,
+  Globe,
+  Brain,
+  Cloud,
+  Shield,
   Zap,
   ArrowRight,
   CheckCircle,
@@ -60,7 +60,7 @@ import {
 
 // Optimized futuristic animated background component
 const FuturisticBackground = React.memo(() => {
-  const particles = useMemo(() => 
+  const particles = useMemo(() =>
     [...Array(20)].map((_, i) => ({
       id: i,
       left: `${Math.random() * 100}%`,
@@ -74,7 +74,7 @@ const FuturisticBackground = React.memo(() => {
     <div className="fixed inset-0 overflow-hidden pointer-events-none" aria-hidden="true">
       {/* Animated grid with neon effect */}
       <div className="absolute inset-0 bg-[linear-gradient(rgba(6,182,212,0.15)_1px,transparent_1px),linear-gradient(90deg,rgba(6,182,212,0.15)_1px,transparent_1px)] bg-[size:50px_50px] animate-pulse"></div>
-      
+
       {/* Optimized floating particles */}
       {particles.map((particle) => (
         <motion.div
@@ -107,7 +107,7 @@ FuturisticBackground.displayName = 'FuturisticBackground';
 // Enhanced hero section component
 const HeroSection = React.memo(({ onGetStarted }: { onGetStarted: () => void }) => {
   const [currentSlide, setCurrentSlide] = useState(0);
-  
+
   const heroSlides = useMemo(() => [
     {
       title: "AI-Powered Solutions",
@@ -162,12 +162,12 @@ const HeroSection = React.memo(({ onGetStarted }: { onGetStarted: () => void }) 
             <Sparkles className="w-5 h-5 text-cyan-400 mr-2" />
             <span className="text-cyan-400 font-medium">2025 Innovation Hub</span>
           </div>
-          
+
           <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400 bg-clip-text text-transparent">
             Zion Tech Group
           </h1>
           <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed mb-8">
-            Leading the future of technology with cutting-edge AI solutions, quantum computing, 
+            Leading the future of technology with cutting-edge AI solutions, quantum computing,
             and innovative micro SAAS services that transform businesses worldwide.
           </p>
 
@@ -256,8 +256,8 @@ const HeroSection = React.memo(({ onGetStarted }: { onGetStarted: () => void }) 
                   key={index}
                   onClick={() => setCurrentSlide(index)}
                   className={`w-3 h-3 rounded-full transition-all duration-300 ${
-                    index === currentSlide 
-                      ? 'bg-cyan-400 scale-125' 
+                    index === currentSlide
+                      ? 'bg-cyan-400 scale-125'
                       : 'bg-cyan-400/30 hover:bg-cyan-400/50'
                   }`}
                   aria-label={`Go to slide ${index + 1}`}
@@ -367,15 +367,15 @@ const FeaturedServices = React.memo(() => {
               <div className="w-16 h-16 bg-gradient-to-br from-cyan-500 to-purple-500 rounded-lg flex items-center justify-center mb-6">
                 <service.icon className="w-8 h-8 text-white" />
               </div>
-              
+
               <h3 className="text-xl font-bold text-white mb-4 group-hover:text-cyan-400 transition-colors">
                 {service.title}
               </h3>
-              
+
               <p className="text-gray-300 mb-6">
                 {service.description}
               </p>
-              
+
               <div className="mb-6">
                 <div className="text-sm text-gray-400 mb-3">Key Features:</div>
                 <div className="space-y-2">
@@ -387,7 +387,7 @@ const FeaturedServices = React.memo(() => {
                   ))}
                 </div>
               </div>
-              
+
               <Link
                 to={service.path}
                 className="inline-flex items-center w-full justify-center px-4 py-3 bg-gradient-to-r from-cyan-500 to-purple-500 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-purple-600 transition-all duration-200"
@@ -415,13 +415,13 @@ const Home = () => {
 
   const handleGetStarted = () => {
     // Handle get started action
-    console.log('Get Started clicked');
+    // console.log('Get Started clicked');
   };
 
   return (
     <div className="relative min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
       <FuturisticBackground />
-      
+
       <HeroSection onGetStarted={handleGetStarted} />
       <StatsSection />
       <FeaturedServices />
@@ -440,7 +440,7 @@ const Home = () => {
             <p className="text-xl text-gray-300 mb-8">
               Get in touch with our experts to discuss how our innovative services can drive your success
             </p>
-            
+
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
               <div className="flex items-center justify-center space-x-3">
                 <Phone className="h-6 w-6 text-cyan-400" />
@@ -455,7 +455,7 @@ const Home = () => {
                 <span className="text-white">364 E Main St STE 1008 Middletown DE 19709</span>
               </div>
             </div>
-            
+
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 to="/contact"

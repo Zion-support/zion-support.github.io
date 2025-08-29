@@ -34,20 +34,20 @@ export default function AICustomerExperienceAnalytics() {
   ];
 
   const tiers = [
-    { 
-      name: 'CX Starter', 
-      price: '$399/mo', 
-      details: ['Up to 10K customers', 'Basic AI analytics', 'Standard reporting', 'Email support'] 
+    {
+      name: 'CX Starter',
+      price: '$399/mo',
+      details: ['Up to 10K customers', 'Basic AI analytics', 'Standard reporting', 'Email support']
     },
-    { 
-      name: 'CX Professional', 
-      price: '$999/mo', 
-      details: ['Up to 100K customers', 'Advanced AI features', 'Custom dashboards', 'Priority support'] 
+    {
+      name: 'CX Professional',
+      price: '$999/mo',
+      details: ['Up to 100K customers', 'Advanced AI features', 'Custom dashboards', 'Priority support']
     },
-    { 
-      name: 'CX Enterprise', 
-      price: '$2,999/mo', 
-      details: ['Unlimited customers', 'Full AI suite', 'White-label options', '24/7 support'] 
+    {
+      name: 'CX Enterprise',
+      price: '$2,999/mo',
+      details: ['Unlimited customers', 'Full AI suite', 'White-label options', '24/7 support']
     },
   ];
 
@@ -75,7 +75,7 @@ export default function AICustomerExperienceAnalytics() {
                 </li>
               ))}
             </ul>
-            
+
             <div className="mt-8">
               <h3 className="text-xl font-semibold text-zion-slate-dark mb-3">Key Benefits</h3>
               <ul className="space-y-2">
@@ -88,7 +88,7 @@ export default function AICustomerExperienceAnalytics() {
               </ul>
             </div>
           </div>
-          
+
           <div className="bg-white border border-zion-slate-light/20 rounded-xl p-6 shadow-md">
             <h3 className="text-2xl font-semibold text-zion-slate-dark mb-4">Pricing Plans</h3>
             <div className="grid md:grid-cols-3 gap-4">
@@ -126,7 +126,7 @@ export default function AICustomerExperienceAnalytics() {
           <h2 className="text-3xl font-bold text-zion-slate-dark mb-4">Ready to Transform Your Customer Experience?</h2>
           <p className="text-zion-slate-dark/70 text-lg">Get started with AI-powered customer experience analytics today</p>
         </div>
-        
+
         <div className="grid md:grid-cols-2 gap-8">
           <div className="bg-gradient-to-br from-zion-cyan to-zion-blue rounded-xl p-8 text-white text-center">
             <h3 className="text-2xl font-bold mb-4">Start Free Trial</h3>
@@ -135,7 +135,7 @@ export default function AICustomerExperienceAnalytics() {
               Start Free Trial
             </button>
           </div>
-          
+
           <div className="bg-zion-slate-dark rounded-xl p-8 text-white text-center">
             <h3 className="text-2xl font-bold mb-4">Schedule Demo</h3>
             <p className="mb-6">See our platform in action with a personalized demo from our experts</p>

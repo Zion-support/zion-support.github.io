@@ -78,7 +78,7 @@ export function ChatBotPanel() {
             }
         }
         catch (error) {
-            console.error("Error in AI chat:", error);
+            // console.error("Error in AI chat:", error);
             toast({
                 variant: "destructive",
                 title: "Communication Error",
@@ -117,7 +117,7 @@ export function ChatBotPanel() {
             };
         }
         catch (error) {
-            console.error("Error in AI chat:", error);
+            // console.error("Error in AI chat:", error);
             return {
                 success: false,
                 message: "I'm experiencing technical difficulties. Please try again later."
@@ -139,7 +139,7 @@ export function ChatBotPanel() {
         try {
             // Send the conversation to the backend for logging
             // This would be implemented in a real system
-            console.log("Support escalation triggered", {
+            // console.log("Support escalation triggered", {
                 conversationHistory: messages.map(m => ({
                     content: m.content,
                     sender: m.sender,
@@ -148,7 +148,7 @@ export function ChatBotPanel() {
             });
         }
         catch (error) {
-            console.error("Failed to log support escalation:", error);
+            // console.error("Failed to log support escalation:", error);
         }
     };
     const handleQuickReply = (text) => {
@@ -197,13 +197,13 @@ export function ChatBotPanel() {
       <ScrollArea className="flex-1 p-4" ref={scrollAreaRef}>
         <div className="flex flex-col gap-4">
           {messages.map((message) => (<ChatMessage key={message.id} message={message.content} isUser={message.sender === "user"} timestamp={message.timestamp}/>))}
-          
+
           {isLoading && (<div className="flex items-center justify-center py-2">
               <Loader2 className="h-5 w-5 animate-spin text-zion-purple"/>
             </div>)}
         </div>
       </ScrollArea>
-      
+
       {messages.length === 1 && (<div className="px-4 py-3">
           <p className={cn("text-sm mb-2", theme === "dark" ? "text-gray-300" : "text-gray-600")}>
             Suggested questions:
@@ -212,7 +212,7 @@ export function ChatBotPanel() {
             {QUICK_REPLIES.map((reply) => (<QuickReplyButton key={reply.id} text={reply.text} onClick={() => handleQuickReply(reply.text)}/>))}
           </div>
         </div>)}
-      
+
       {failedAttempts >= 3 && (<div className="px-4 py-3 border-t border-zion-purple/10">
           <p className={cn("text-sm mb-2 font-medium", theme === "dark" ? "text-gray-300" : "text-gray-600")}>
             Need more help?
@@ -226,7 +226,7 @@ export function ChatBotPanel() {
             </Button>
           </div>
         </div>)}
-      
+
       <div className={cn("p-4 border-t", theme === "dark" ? "border-zion-blue-light" : "border-gray-200")}>
         <form onSubmit={(e) => {
             e.preventDefault();

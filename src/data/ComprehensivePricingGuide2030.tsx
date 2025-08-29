@@ -11,7 +11,7 @@ const ComprehensivePricingGuide2030: React.FC = () => {
 
   const getFilteredServices = () => {
     let services: any[] = [];
-    
+
     switch (activeTab) {
       case 'microsaas':
         services = innovativeMicroSaasServices2030;
@@ -43,7 +43,7 @@ const ComprehensivePricingGuide2030: React.FC = () => {
 
   const getCategories = () => {
     let services: any[] = [];
-    
+
     switch (activeTab) {
       case 'microsaas':
         services = innovativeMicroSaasServices2030;
@@ -62,7 +62,7 @@ const ComprehensivePricingGuide2030: React.FC = () => {
 
   const getPriceRange = () => {
     let services: any[] = [];
-    
+
     switch (activeTab) {
       case 'microsaas':
         services = innovativeMicroSaasServices2030;
@@ -97,7 +97,7 @@ const ComprehensivePricingGuide2030: React.FC = () => {
                 {service.pricing}
               </span>
             </div>
-            
+
             <div className="text-center mb-6">
               <div className="text-4xl font-bold text-gray-900 mb-2">${service.price.toLocaleString()}</div>
               <div className="text-gray-600">{service.pricingModel}</div>
@@ -144,7 +144,7 @@ const ComprehensivePricingGuide2030: React.FC = () => {
                   <strong>Growth Rate:</strong> {service.growthRate}
                 </div>
               </div>
-              
+
               <div className="flex flex-col gap-2">
                 <a
                   href={`tel:${service.contactInfo.phone}`}
@@ -173,7 +173,7 @@ const ComprehensivePricingGuide2030: React.FC = () => {
                 {service.category}
               </span>
             </div>
-            
+
             <div className="text-center mb-6">
               <div className="grid grid-cols-2 gap-4 mb-4">
                 <div>
@@ -228,7 +228,7 @@ const ComprehensivePricingGuide2030: React.FC = () => {
                   <strong>ROI:</strong> {service.roi}
                 </div>
               </div>
-              
+
               <div className="flex flex-col gap-2">
                 <a
                   href={`tel:${service.contactInfo.phone}`}
@@ -262,7 +262,7 @@ const ComprehensivePricingGuide2030: React.FC = () => {
                 </div>
               </div>
             </div>
-            
+
             <div className="text-center mb-6">
               <div className="text-4xl font-bold text-gray-900 mb-2">${service.price.toLocaleString()}</div>
               <div className="text-gray-600">{service.pricingModel}</div>
@@ -312,7 +312,7 @@ const ComprehensivePricingGuide2030: React.FC = () => {
                   <strong>Training Data:</strong> {service.trainingData}
                 </div>
               </div>
-              
+
               <div className="flex flex-col gap-2">
                 <a
                   href={`tel:${service.contactInfo.phone}`}
@@ -345,7 +345,7 @@ const ComprehensivePricingGuide2030: React.FC = () => {
         ogImage="https://ziontechgroup.com/images/pricing-guide-2030.jpg"
         ogUrl="https://ziontechgroup.com/comprehensive-pricing-guide-2030"
       />
-      
+
       <div className="min-h-screen bg-gradient-to-br from-gray-50 via-blue-50 to-purple-50">
         {/* Hero Section */}
         <div className="bg-gradient-to-r from-blue-900 via-purple-900 to-indigo-900 text-white">
@@ -355,7 +355,7 @@ const ComprehensivePricingGuide2030: React.FC = () => {
                 Comprehensive Pricing Guide 2030
               </h1>
               <p className="text-xl md:text-2xl text-gray-200 mb-8">
-                Transparent pricing for all our micro SAAS, IT infrastructure, and AI services. 
+                Transparent pricing for all our micro SAAS, IT infrastructure, and AI services.
                 Compare costs, ROI, and market data to make informed decisions for your business.
               </p>
               <div className="flex flex-wrap justify-center gap-4 text-sm">
@@ -445,7 +445,7 @@ const ComprehensivePricingGuide2030: React.FC = () => {
           <div className="mb-8">
             <div className="bg-white rounded-xl p-6 shadow-lg">
               <h3 className="text-lg font-semibold text-gray-900 mb-4">Filter Services</h3>
-              
+
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div>
                   <label className="block text-sm font-medium text-gray-700 mb-2">

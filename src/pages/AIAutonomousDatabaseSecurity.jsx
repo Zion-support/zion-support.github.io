@@ -8,7 +8,7 @@ const AIAutonomousDatabaseSecurity = () => {
         <meta name="keywords" content="AI database security, autonomous database security, database protection, threat detection, autonomous operations, AI database security platform"/>
         <link rel="canonical" href="https://ziontechgroup.com/ai-autonomous-database-security"/>
       </Helmet>
-      
+
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-amber-900 to-slate-900">
         <div className="container mx-auto px-4 py-16">
           {/* Hero Section */}
@@ -52,31 +52,31 @@ const AIAutonomousDatabaseSecurity = () => {
               <h3 className="text-xl font-semibold text-white mb-3">Database Security Intelligence</h3>
               <p className="text-gray-300">AI trained on database security datasets</p>
             </div>
-            
+
             <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20">
               <div className="text-orange-400 text-4xl mb-4">🤖</div>
               <h3 className="text-xl font-semibold text-white mb-3">Autonomous Operation</h3>
               <p className="text-gray-300">AI that secures databases independently</p>
             </div>
-            
+
             <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20">
               <div className="text-red-400 text-4xl mb-4">📈</div>
               <h3 className="text-xl font-semibold text-white mb-3">Continuous Database Security</h3>
               <p className="text-gray-300">24/7 database security operations</p>
             </div>
-            
+
             <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20">
               <div className="text-pink-400 text-4xl mb-4">🔍</div>
               <h3 className="text-xl font-semibold text-white mb-3">Deep Analysis</h3>
               <p className="text-gray-300">Comprehensive database security insights</p>
             </div>
-            
+
             <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20">
               <div className="text-rose-400 text-4xl mb-4">🛡️</div>
               <h3 className="text-xl font-semibold text-white mb-3">Proactive Database Security</h3>
               <p className="text-gray-300">Prevent database security issues</p>
             </div>
-            
+
             <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20">
               <div className="text-purple-400 text-4xl mb-4">⚡</div>
               <h3 className="text-xl font-semibold text-white mb-3">Adaptive Database Security</h3>
@@ -93,25 +93,25 @@ const AIAutonomousDatabaseSecurity = () => {
                 <h3 className="text-lg font-semibold text-white mb-2">Monitor</h3>
                 <p className="text-gray-300 text-sm">Monitor databases</p>
               </div>
-              
+
               <div className="text-center">
                 <div className="bg-amber-600 w-16 h-16 rounded-full flex items-center justify-center text-2xl font-bold text-white mx-auto mb-4">2</div>
                 <h3 className="text-lg font-semibold text-white mb-2">Detect</h3>
                 <p className="text-gray-300 text-sm">Detect threats</p>
               </div>
-              
+
               <div className="text-center">
                 <div className="bg-amber-600 w-16 h-16 rounded-full flex items-center justify-center text-2xl font-bold text-white mx-auto mb-4">3</div>
                 <h3 className="text-lg font-semibold text-white mb-2">Analyze</h3>
                 <p className="text-gray-300 text-sm">Analyze threats</p>
               </div>
-              
+
               <div className="text-center">
                 <div className="bg-amber-600 w-16 h-16 rounded-full flex items-center justify-center text-2xl font-bold text-white mx-auto mb-4">4</div>
                 <h3 className="text-lg font-semibold text-white mb-2">Protect</h3>
                 <p className="text-gray-300 text-sm">Protect databases</p>
               </div>
-              
+
               <div className="text-center">
                 <div className="bg-amber-600 w-16 h-16 rounded-full flex items-center justify-center text-2xl font-bold text-white mx-auto mb-4">5</div>
                 <h3 className="text-lg font-semibold text-white mb-2">Respond</h3>
@@ -138,12 +138,12 @@ const AIAutonomousDatabaseSecurity = () => {
                 <h3 className="text-xl font-semibold text-white mb-3">Relational Databases</h3>
                 <p className="text-gray-300">Relational database security</p>
               </div>
-              
+
               <div className="bg-white/5 rounded-xl p-6 border border-white/10">
                 <h3 className="text-xl font-semibold text-white mb-3">Document Databases</h3>
                 <p className="text-gray-300">Document database security</p>
               </div>
-              
+
               <div className="bg-white/5 rounded-xl p-6 border border-white/10">
                 <h3 className="text-xl font-semibold text-white mb-3">Key-Value Stores</h3>
                 <p className="text-gray-300">Key-value store security</p>

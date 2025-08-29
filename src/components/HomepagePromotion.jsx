@@ -67,11 +67,11 @@ export function HomepagePromotion() {
       {/* Background Elements */}
       <div className="absolute inset-0 bg-quantum-gradient opacity-10"></div>
       <div className="absolute inset-0 bg-quantum-mesh"></div>
-      
+
       {/* Floating Elements */}
       <div className="absolute top-20 left-10 w-32 h-32 bg-zion-cyan/20 rounded-full blur-xl animate-pulse"></div>
       <div className="absolute bottom-20 right-10 w-40 h-40 bg-zion-purple/20 rounded-full blur-xl animate-pulse" style={{ animationDelay: '1s' }}></div>
-      
+
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header Section */}
         <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }} className="text-center mb-16">
@@ -82,10 +82,10 @@ export function HomepagePromotion() {
             </span>
           </h2>
           <p className="text-xl md:text-2xl text-zion-slate-light mb-8 max-w-4xl mx-auto">
-            Discover our comprehensive portfolio of AI-powered solutions, innovative IT infrastructure, 
+            Discover our comprehensive portfolio of AI-powered solutions, innovative IT infrastructure,
             and emerging technology services designed to give you a competitive advantage
           </p>
-          
+
           {/* Contact Information */}
           <div className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-6 mb-8 inline-block">
             <div className="grid md:grid-cols-3 gap-6 text-center">
@@ -158,10 +158,10 @@ export function HomepagePromotion() {
               Ready to Accelerate Your Digital Transformation?
             </h3>
             <p className="text-zion-slate-light text-lg mb-6 max-w-2xl mx-auto">
-              Our team of technology experts is ready to help you implement the perfect solution. 
+              Our team of technology experts is ready to help you implement the perfect solution.
               Get a personalized consultation and quote today.
             </p>
-            
+
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-6">
               <a href="mailto:kleber@ziontechgroup.com?subject=Digital Transformation Consultation" className="bg-zion-cyan hover:bg-zion-cyan-light text-zion-blue-dark font-bold py-3 px-8 rounded-lg text-lg transition-colors">
                 Get Free Consultation
@@ -170,7 +170,7 @@ export function HomepagePromotion() {
                 Call +1 302 464 0950
               </a>
             </div>
-            
+
             <div className="text-zion-slate-light text-sm">
               <p>📍 364 E Main St STE 1008, Middletown DE 19709</p>
               <p>🌐 <a href="https://ziontechgroup.com" className="text-zion-cyan hover:text-zion-cyan-light">https://ziontechgroup.com</a></p>

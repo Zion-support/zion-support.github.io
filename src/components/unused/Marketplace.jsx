@@ -285,7 +285,7 @@ export default function Marketplace() {
               Technology Marketplace
             </h1>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Discover cutting-edge technology solutions, AI platforms, and enterprise tools 
+              Discover cutting-edge technology solutions, AI platforms, and enterprise tools
               from Zion Tech Group. Find the perfect solution for your business needs.
             </p>
           </div>
@@ -409,7 +409,7 @@ export default function Marketplace() {
                   <h3 className="text-xl font-bold text-white mb-3 line-clamp-2">
                     {product.name}
                   </h3>
-                  
+
                   <p className="text-gray-300 text-sm mb-4 line-clamp-3">
                     {product.description}
                   </p>
@@ -474,7 +474,7 @@ export default function Marketplace() {
               Need a Custom Solution?
             </h2>
             <p className="text-xl text-gray-300 mb-6 max-w-2xl mx-auto">
-              Can't find exactly what you're looking for? Our team can create custom 
+              Can't find exactly what you're looking for? Our team can create custom
               technology solutions tailored to your specific business requirements.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">

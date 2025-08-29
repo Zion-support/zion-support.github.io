@@ -5,7 +5,7 @@ interface AccessibilityControlsProps {
   className?: string;
   position?: 'top-right' | 'bottom-right' | 'floating';
 }
-export const AccessibilityControls: React.FC<AccessibilityControlsProps> = ({ 
+export const AccessibilityControls: React.FC<AccessibilityControlsProps> = ({
   className = '',
   position = 'floating'
 }) => {
@@ -98,7 +98,7 @@ export const AccessibilityControls: React.FC<AccessibilityControlsProps> = ({
                 <Eye className="w-4 h-4" />
                 Visual Preferences
               </h4>
-              
+
               <div className="space-y-2">
                 <label className="flex items-center gap-3 cursor-pointer">
                   <input
@@ -109,7 +109,7 @@ export const AccessibilityControls: React.FC<AccessibilityControlsProps> = ({
                   />
                   <span className="text-sm text-gray-700 dark:text-gray-300">High Contrast</span>
                 </label>
-                
+
                 <label className="flex items-center gap-3 cursor-pointer">
                   <input
                     type="checkbox"
@@ -127,7 +127,7 @@ export const AccessibilityControls: React.FC<AccessibilityControlsProps> = ({
                 <Zap className="w-4 h-4" />
                 Motion Preferences
               </h4>
-              
+
               <div className="space-y-2">
                 <label className="flex items-center gap-3 cursor-pointer">
                   <input
@@ -146,7 +146,7 @@ export const AccessibilityControls: React.FC<AccessibilityControlsProps> = ({
                 <Keyboard className="w-4 h-4" />
                 Navigation
               </h4>
-              
+
               <div className="space-y-2">
                 <label className="flex items-center gap-3 cursor-pointer">
                   <input
@@ -157,7 +157,7 @@ export const AccessibilityControls: React.FC<AccessibilityControlsProps> = ({
                   />
                   <span className="text-sm text-gray-700 dark:text-gray-300">Focus Indicators</span>
                 </label>
-                
+
                 <label className="flex items-center gap-3 cursor-pointer">
                   <input
                     type="checkbox"
@@ -175,7 +175,7 @@ export const AccessibilityControls: React.FC<AccessibilityControlsProps> = ({
                 <Volume2 className="w-4 h-4" />
                 Screen Reader
               </h4>
-              
+
               <div className="space-y-2">
                 <label className="flex items-center gap-3 cursor-pointer">
                   <input

@@ -69,7 +69,7 @@ export function ContactInfo() {
     return (<section className="py-20 relative">
       {/* Background accent */}
       <div className="absolute inset-0 bg-gradient-to-b from-transparent via-zion-blue-dark/10 to-transparent"/>
-      
+
       <div className="container mx-auto px-4 relative z-10">
         {/* Header */}
         <div className="text-center mb-16">
@@ -102,14 +102,14 @@ export function ContactInfo() {
                   {method.description}
                 </CardDescription>
               </CardHeader>
-              
+
               <CardContent className="space-y-4">
                 <div className="p-4 bg-black/20 rounded-lg border border-zion-cyan/20">
                   <p className="text-lg font-mono text-zion-cyan break-all">
                     {method.value}
                   </p>
                 </div>
-                
+
                 <Button asChild className="w-full group-hover:bg-primary group-hover:text-primary-foreground transition-all duration-300">
                   <a href={method.action} target="_blank" rel="noopener noreferrer">
                     <span>Contact via {method.title.split(' ')[0]}</span>
@@ -157,7 +157,7 @@ export function ContactInfo() {
               Ready to Start Your Project?
             </h3>
             <p className="text-muted-foreground mb-6 max-w-2xl mx-auto">
-              Whether you need a quick consultation or want to discuss a major project, 
+              Whether you need a quick consultation or want to discuss a major project,
               our team is ready to help you achieve your goals.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -172,7 +172,7 @@ export function ContactInfo() {
                 </Link>
               </Button>
             </div>
-            
+
             {/* Additional contact options */}
             <div className="mt-6 pt-6 border-t border-zion-purple/20">
               <p className="text-sm text-muted-foreground mb-3">

@@ -15,16 +15,16 @@ export default function Profile() {
     }, [user, isLoading, navigate]);
     if (isLoading) {
         return (<>
-        
+
         <div className="min-h-screen bg-zion-blue flex items-center justify-center">
           <div className="animate-pulse text-white">Loading profile...</div>
         </div>
-        
+
       </>);
     }
     if (!user) {
         return (<>
-        
+
         <div className="min-h-screen bg-zion-blue flex items-center justify-center">
           <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 max-w-md">
             <h1 className="text-xl font-bold text-white mb-4">Please log in</h1>
@@ -34,11 +34,11 @@ export default function Profile() {
             </Button>
           </div>
         </div>
-        
+
       </>);
     }
     return (<>
-      
+
       <div className="min-h-screen bg-zion-blue">
         <div className="container mx-auto px-4 py-8">
           <h1 className="text-2xl font-bold text-white mb-8">My Profile</h1>
@@ -63,7 +63,7 @@ export default function Profile() {
           </div>
         </div>
       </div>
-      
+
     </>);
 }
 ;

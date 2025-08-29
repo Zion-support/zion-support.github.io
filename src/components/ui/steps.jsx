@@ -1,4 +1,3 @@
-import React from 'react';
 import { cn } from '@/lib/utils';
 export const Steps = ({ children, className, currentStep = 0 }) => {
     return (<div className={cn("flex items-center space-x-2", className)}>

@@ -45,7 +45,7 @@ export function PrimaryNav() {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     if (query.trim()) {
-      console.log('PrimaryNav search submit:', query);
+      // console.log('PrimaryNav search submit:', query);
       router.push(`/search/${slugify(query)}`);
       setQuery('');
     }
@@ -61,12 +61,12 @@ export function PrimaryNav() {
       >
         <div className="container flex flex-wrap items-center justify-between gap-2 min-h-16 px-4 sm:px-6">
           <Logo />
-          
+
           {/* Navigation - hidden on mobile, shown on desktop */}
           <div className="hidden md:block order-1 flex-shrink-0">
             <ResponsiveNavigation />
           </div>
-          
+
           {/* Actions container with responsive layout */}
           <div className="hidden md:flex items-center gap-2 order-2 flex-shrink-0 min-w-0">
             {/* Search form with clamped width */}
@@ -75,7 +75,7 @@ export function PrimaryNav() {
                 value={query}
                 onChange={setQuery}
                 onSelectSuggestion={(sugg) => {
-                  console.log('PrimaryNav search suggestion selected:', sugg);
+                  // console.log('PrimaryNav search suggestion selected:', sugg);
                   // Handle different suggestion types with proper navigation
                   if (sugg.id) {
                     // Product listings with IDs go to product detail page
@@ -91,7 +91,7 @@ export function PrimaryNav() {
                     router.push(`/search/${sugg.slug || slugify(sugg.text)}`);
                   }
                   setQuery('');
-                  
+
                   // Track analytics event
                   if (typeof window !== 'undefined' && window.gtag) {
                     window.gtag('event', 'search_suggestion_click', {
@@ -104,7 +104,7 @@ export function PrimaryNav() {
                 searchSuggestions={suggestions}
               />
             </form>
-            
+
             {/* Compact actions group */}
             <div className="flex items-center gap-1">
               <PointsBadge />
@@ -128,13 +128,13 @@ export function PrimaryNav() {
                 </HoverCardContent>
               </HoverCard>
             </div>
-            
+
             {/* Compact controls group */}
             <div className="flex items-center gap-1 border-l border-primary/20 pl-1 ml-1">
               <ModeToggle />
               <LanguageSelector />
             </div>
-            
+
             {/* Auth links - flex wrap for very small screens */}
             <div className="flex items-center gap-1 flex-wrap">
               {!isLoggedIn && (
@@ -157,7 +157,7 @@ export function PrimaryNav() {
             {isLoggedIn && <UserMenu />}
             </div>
           </div>
-          
+
           {/* Mobile menu button */}
           <button
             className="md:hidden p-2 rounded focus:outline-none flex-shrink-0"

@@ -18,7 +18,7 @@ export default function ComprehensiveContact() {
     const handleSubmit = (e) => {
         e.preventDefault();
         // Handle form submission
-        console.log('Form submitted:', formData);
+        // console.log('Form submitted:', formData);
     };
     const handleChange = (e) => {
         setFormData({
@@ -67,7 +67,7 @@ export default function ComprehensiveContact() {
                       <Input id="email" name="email" type="email" value={formData.email} onChange={handleChange} required className="bg-white/10 border-zion-cyan/30 text-white placeholder:text-zion-cyan-light" placeholder="Enter your email"/>
                     </div>
                   </div>
-                  
+
                   <div className="grid md:grid-cols-2 gap-4">
                     <div>
                       <Label htmlFor="company" className="text-white">Company</Label>
@@ -122,7 +122,7 @@ export default function ComprehensiveContact() {
                     <p className="text-sm text-zion-cyan-light">Mon-Fri 9AM-6PM EST</p>
                   </div>
                 </div>
-                
+
                 <div className="flex items-start gap-4">
                   <Mail className="h-6 w-6 text-zion-cyan mt-1"/>
                   <div>
@@ -131,7 +131,7 @@ export default function ComprehensiveContact() {
                     <p className="text-sm text-zion-cyan-light">24/7 Response</p>
                   </div>
                 </div>
-                
+
                 <div className="flex items-start gap-4">
                   <MapPin className="h-6 w-6 text-zion-cyan mt-1"/>
                   <div>
@@ -140,7 +140,7 @@ export default function ComprehensiveContact() {
                     <p className="text-zion-cyan-light">Middletown DE 19709</p>
                   </div>
                 </div>
-                
+
                 <div className="flex items-start gap-4">
                   <Globe className="h-6 w-6 text-zion-cyan mt-1"/>
                   <div>

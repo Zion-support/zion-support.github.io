@@ -1,14 +1,14 @@
 import React, { useState } from 'react';
 import { SEO } from "@/components/SEO";
 import { Link } from 'react-router-dom';
-import { 
-  Brain, 
-  Zap, 
-  Shield, 
-  Database, 
-  Users, 
-  TrendingUp, 
-  Globe, 
+import {
+  Brain,
+  Zap,
+  Shield,
+  Database,
+  Users,
+  TrendingUp,
+  Globe,
   Lock,
   Cloud,
   Briefcase,
@@ -41,19 +41,19 @@ export default function UltimateServicesShowcase2025() {
 
   const getCategoryIcon = (category: string) => {
     if (category === 'all') return <Rocket className="w-6 h-6" />;
-    return ULTIMATE_SERVICE_CATEGORIES_2025[category]?.icon ? 
-      <span className="text-2xl">{ULTIMATE_SERVICE_CATEGORIES_2025[category].icon}</span> : 
+    return ULTIMATE_SERVICE_CATEGORIES_2025[category]?.icon ?
+      <span className="text-2xl">{ULTIMATE_SERVICE_CATEGORIES_2025[category].icon}</span> :
       <Rocket className="w-6 h-6" />;
   };
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <SEO 
+      <SEO
         title="Ultimate Innovative Services 2025 | Zion Tech Group"
         description="Discover our revolutionary AI-powered, quantum-secure, and autonomous business solutions. Transform your business with cutting-edge technology."
         keywords="AI services, quantum computing, autonomous systems, cybersecurity, business automation, Zion Tech Group"
       />
-      
+
       {/* Hero Section */}
       <div className="relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 to-purple-600/20"></div>
@@ -145,7 +145,7 @@ export default function UltimateServicesShowcase2025() {
                 </div>
               </div>
             </div>
-            
+
             {/* Category Filter */}
             <div className="lg:w-64">
               <select
@@ -419,7 +419,7 @@ export default function UltimateServicesShowcase2025() {
               Ready to Transform Your Business?
             </h2>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Join the future of business with our revolutionary AI-powered, quantum-secure, and autonomous solutions. 
+              Join the future of business with our revolutionary AI-powered, quantum-secure, and autonomous solutions.
               Get in touch today to discover how we can help you achieve unprecedented growth and efficiency.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -450,7 +450,7 @@ export default function UltimateServicesShowcase2025() {
             <div className="lg:col-span-2">
               <h3 className="text-2xl font-bold text-white mb-4">Zion Tech Group</h3>
               <p className="text-gray-300 mb-6 max-w-md">
-                Leading provider of innovative AI, cybersecurity, and digital transformation solutions. 
+                Leading provider of innovative AI, cybersecurity, and digital transformation solutions.
                 We help businesses thrive in the digital age with cutting-edge technology and expert guidance.
               </p>
               <div className="flex space-x-4">

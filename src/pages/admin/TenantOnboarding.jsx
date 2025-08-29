@@ -90,7 +90,7 @@ export default function TenantOnboarding() {
             });
         }
         catch (error) {
-            console.error("Error creating tenant:", error);
+            // console.error("Error creating tenant:", error);
             toast.error("Failed to create tenant", {
                 description: error.message
             });
@@ -101,7 +101,7 @@ export default function TenantOnboarding() {
     };
     return (<>
       <SEO title="Tenant Onboarding - Zion AI Marketplace" description="Onboard a new white-label tenant to the Zion AI Marketplace platform."/>
-      
+
       <main className="flex-1 container max-w-4xl mx-auto py-10 px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col space-y-6">
           <div>
@@ -126,13 +126,13 @@ export default function TenantOnboarding() {
                     <TabsTrigger value="branding">Branding</TabsTrigger>
                     <TabsTrigger value="domain">Domain Setup</TabsTrigger>
                   </TabsList>
-                  
+
                   <TabsContent value="company" className="space-y-4">
                     <div className="space-y-2">
                       <Label htmlFor="brand_name">Company Name</Label>
                       <Input id="brand_name" name="brand_name" value={formData.brand_name} onChange={handleInputChange} placeholder="Acme Corporation" required/>
                     </div>
-                    
+
                     <div className="space-y-2">
                       <Label htmlFor="industry">Industry</Label>
                       <Select name="industry" value={formData.industry} onValueChange={(value) => handleSelectChange("industry", value)}>
@@ -151,7 +151,7 @@ export default function TenantOnboarding() {
                         </SelectContent>
                       </Select>
                     </div>
-                    
+
                     <div className="space-y-2">
                       <Label htmlFor="company_size">Company Size</Label>
                       <Select name="company_size" value={formData.company_size} onValueChange={(value) => handleSelectChange("company_size", value)}>
@@ -169,7 +169,7 @@ export default function TenantOnboarding() {
                       </Select>
                     </div>
                   </TabsContent>
-                  
+
                   <TabsContent value="branding" className="space-y-4">
                     <div className="space-y-2">
                       <Label htmlFor="logo_url">Logo URL</Label>
@@ -178,7 +178,7 @@ export default function TenantOnboarding() {
                         Enter a direct URL to your logo image (SVG or PNG with transparent background recommended)
                       </p>
                     </div>
-                    
+
                     <div className="space-y-2">
                       <Label htmlFor="primary_color">Primary Brand Color</Label>
                       <div className="flex items-center gap-2">
@@ -186,7 +186,7 @@ export default function TenantOnboarding() {
                         <Input name="primary_color" value={formData.primary_color} onChange={handleInputChange} placeholder="#9b87f5"/>
                       </div>
                     </div>
-                    
+
                     <div className="space-y-2">
                       <Label htmlFor="theme_preset">Theme Preset</Label>
                       <Select name="theme_preset" value={formData.theme_preset} onValueChange={(value) => handleSelectChange("theme_preset", value)}>
@@ -202,7 +202,7 @@ export default function TenantOnboarding() {
                         </SelectContent>
                       </Select>
                     </div>
-                    
+
                     <div className="flex items-center justify-between">
                       <div className="space-y-0.5">
                         <Label htmlFor="is_co_branded">Co-branding</Label>
@@ -213,7 +213,7 @@ export default function TenantOnboarding() {
                       <Switch id="is_co_branded" checked={formData.is_co_branded} onCheckedChange={(checked) => handleSwitchChange("is_co_branded", checked)}/>
                     </div>
                   </TabsContent>
-                  
+
                   <TabsContent value="domain" className="space-y-4">
                     <div className="space-y-2">
                       <Label htmlFor="subdomain">Subdomain</Label>
@@ -227,7 +227,7 @@ export default function TenantOnboarding() {
                         Leave blank to auto-generate from company name
                       </p>
                     </div>
-                    
+
                     <div className="space-y-2">
                       <Label htmlFor="custom_domain">Custom Domain (Optional)</Label>
                       <Input id="custom_domain" name="custom_domain" value={formData.custom_domain} onChange={handleInputChange} placeholder="hire.yourcompany.com"/>
@@ -237,7 +237,7 @@ export default function TenantOnboarding() {
                     </div>
                   </TabsContent>
                 </Tabs>
-                
+
                 <div className="flex justify-end space-x-2">
                   <Button type="button" variant="outline" onClick={() => window.history.back()}>
                     Cancel
@@ -251,6 +251,6 @@ export default function TenantOnboarding() {
           </Card>
         </div>
       </main>
-      
+
     </>);
 }

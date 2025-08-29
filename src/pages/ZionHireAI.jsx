@@ -23,16 +23,16 @@ const ZionHireAI = () => {
               Revolutionary AI-powered hiring platform that transforms recruitment, screening, onboarding, and retention
             </p>
             <div className="flex flex-wrap justify-center gap-4">
-              <a 
-                href="https://ziontechgroup.com" 
-                className="px-8 py-4 bg-zion-cyan hover:bg-zion-cyan-light text-white font-semibold rounded-lg transition-colors" 
-                target="_blank" 
+              <a
+                href="https://ziontechgroup.com"
+                className="px-8 py-4 bg-zion-cyan hover:bg-zion-cyan-light text-white font-semibold rounded-lg transition-colors"
+                target="_blank"
                 rel="noopener noreferrer"
               >
                 Start Free Trial
               </a>
-              <a 
-                href="#demo" 
+              <a
+                href="#demo"
                 className="px-8 py-4 border border-zion-cyan text-zion-cyan hover:bg-zion-cyan hover:text-white font-semibold rounded-lg transition-colors"
               >
                 Watch Demo
@@ -57,10 +57,10 @@ const ZionHireAI = () => {
           {/* Demo Section */}
           <div className="relative hidden md:block mb-16">
             <div className="absolute -top-8 -left-8 w-72 h-72 bg-zion-purple/20 rounded-full filter blur-3xl"></div>
-            <img 
-              loading="lazy" 
-              src="https://placehold.co/600x400/192134/9b87f5?text=Zion+Hire+AI" 
-              alt="Zion Hire AI Dashboard" 
+            <img
+              loading="lazy"
+              src="https://placehold.co/600x400/192134/9b87f5?text=Zion+Hire+AI"
+              alt="Zion Hire AI Dashboard"
               className="relative z-10 rounded-lg shadow-xl mx-auto"
             />
           </div>
@@ -73,7 +73,7 @@ const ZionHireAI = () => {
             <p className="text-zion-slate-light text-center mb-6">
               Join hundreds of companies already using Zion Hire AI to revolutionize their recruitment
             </p>
-            
+
             <div className="grid md:grid-cols-3 gap-6 text-center mb-8">
               <div>
                 <Phone className="w-8 h-8 text-zion-cyan mx-auto mb-2"/>
@@ -91,12 +91,12 @@ const ZionHireAI = () => {
                 <p className="text-zion-slate-light">364 E Main St STE 1008<br />Middletown DE 19709</p>
               </div>
             </div>
-            
+
             <div className="text-center">
-              <a 
-                href="https://ziontechgroup.com" 
-                className="inline-flex items-center px-8 py-4 bg-zion-cyan hover:bg-zion-cyan-light text-white font-semibold rounded-lg transition-colors" 
-                target="_blank" 
+              <a
+                href="https://ziontechgroup.com"
+                className="inline-flex items-center px-8 py-4 bg-zion-cyan hover:bg-zion-cyan-light text-white font-semibold rounded-lg transition-colors"
+                target="_blank"
                 rel="noopener noreferrer"
               >
                 Start Your Free Trial Today

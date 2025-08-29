@@ -1,4 +1,3 @@
-import React from 'react';
 import { motion } from 'framer-motion';
 export const FuturisticNeonButton = ({ children, onClick, type = 'button', variant = 'primary', size = 'md', disabled = false, className = '', fullWidth = false, icon, loading = false, glowIntensity = 'medium' }) => {
     const getVariantStyles = () => {
@@ -64,7 +63,7 @@ export const FuturisticNeonButton = ({ children, onClick, type = 'button', varia
         ${styles.hoverGlow} ${sizeStyles} ${fullWidth ? 'w-full' : ''}
         ${disabled ? 'opacity-50 cursor-not-allowed' : 'cursor-pointer hover:scale-105'}
         ${className}
-      `} whileHover={!disabled ? { scale: 1.05 } : {}} whileTap={!disabled ? { scale: 0.95 } : {}} initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.3 }}>
+      `} whileHover={!disabled ? { scale: 1.05 } : { /* empty */ }} whileTap={!disabled ? { scale: 0.95 } : { /* empty */ }} initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.3 }}>
       {/* Animated background */}
       <motion.div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent" initial={{ x: '-100%' }} animate={{ x: '100%' }} transition={{
             duration: 2,

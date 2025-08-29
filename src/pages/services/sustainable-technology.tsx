@@ -61,11 +61,11 @@ const SustainableTechnology: React.FC = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      <SEO 
+      <SEO
         title="Sustainable Technology Services - Zion Tech Group"
         description="Transform your business with sustainable technology solutions. Reduce environmental impact while improving efficiency and cost savings."
       />
-      
+
       {/* Hero Section */}
       <section className="pt-20 pb-16 px-4">
         <div className="max-w-7xl mx-auto">
@@ -79,19 +79,19 @@ const SustainableTechnology: React.FC = () => {
               <Leaf className="w-5 h-5 text-green-400 mr-2" />
               <span className="text-green-300 font-medium">Sustainable Technology</span>
             </div>
-            
+
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
               Sustainable
               <span className="block text-transparent bg-clip-text bg-gradient-to-r from-green-400 via-emerald-500 to-teal-400">
                 Technology
               </span>
             </h1>
-            
+
             <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-              Transform your business with sustainable technology solutions that reduce environmental impact 
+              Transform your business with sustainable technology solutions that reduce environmental impact
               while improving efficiency, cost savings, and brand reputation.
             </p>
-            
+
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="px-8 py-4 bg-gradient-to-r from-green-500 to-emerald-600 text-white font-semibold rounded-lg hover:from-green-400 hover:to-emerald-500 transition-all duration-200 hover:scale-105 shadow-lg shadow-green-500/20">
                 Go Green
@@ -223,7 +223,7 @@ const SustainableTechnology: React.FC = () => {
             >
               <h3 className="text-2xl font-semibold text-white mb-6">Go Green Today</h3>
               <p className="text-gray-300 mb-6">
-                Ready to make your business more sustainable? Our green technology experts can help you 
+                Ready to make your business more sustainable? Our green technology experts can help you
                 implement eco-friendly solutions that benefit both your bottom line and the environment.
               </p>
               <button className="w-full px-6 py-3 bg-gradient-to-r from-green-500 to-emerald-600 text-white font-semibold rounded-lg hover:from-green-400 hover:to-emerald-500 transition-all duration-200 hover:scale-105 shadow-lg shadow-green-500/20">

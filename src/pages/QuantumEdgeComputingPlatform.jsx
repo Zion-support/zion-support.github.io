@@ -116,7 +116,7 @@ const QuantumEdgeComputingPlatform = () => {
             Quantum Edge Computing Platform
           </h1>
           <p className="text-xl text-gray-300 max-w-4xl mx-auto mb-8">
-            Revolutionary edge computing platform that leverages quantum computing principles to deliver 
+            Revolutionary edge computing platform that leverages quantum computing principles to deliver
             unprecedented performance and efficiency for distributed applications.
           </p>
           <div className="flex flex-wrap justify-center gap-4 mb-8">

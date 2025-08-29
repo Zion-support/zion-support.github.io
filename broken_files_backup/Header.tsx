@@ -66,7 +66,7 @@ const Header: React.FC = () => {
         <span>Services</span>
         <ChevronDown className={`h-4 w-4 transition-transform ${isOpen ? 'rotate-180' : ''}`} />
       </button>
-      
+
       {isOpen && (
         <div className="absolute top-full left-0 mt-2 w-80 bg-slate-800/95 backdrop-blur-lg border border-white/10 rounded-lg shadow-xl z-50">
           <div className="p-4">
@@ -177,7 +177,7 @@ const Header: React.FC = () => {
                   {item.name}
                 </Link>
               ))}
-              
+
               {/* Mobile CTA */}
               <div className="pt-4 border-t border-gray-700 space-y-2">
                 <Link

@@ -59,7 +59,7 @@ export const HeroSectionAlt = () => {
       {/* Background Layers */}
       <div className="absolute inset-0 bg-gradient-to-b from-zion-blue-dark via-zion-blue to-zion-blue-light opacity-90"/>
       <div className="absolute inset-0 bg-gradient-to-r from-zion-purple/20 via-transparent to-zion-cyan/20 animate-pulse"/>
-      
+
       {/* Floating Elements */}
       <motion.div className="absolute inset-0" variants={containerVariants} initial="hidden" animate="visible">
         <motion.div className="absolute top-1/4 left-1/4 w-3 h-3 rounded-full bg-zion-purple-light opacity-60" variants={floatingVariants} animate="animate"/>
@@ -97,7 +97,7 @@ export const HeroSectionAlt = () => {
 
           {/* Description */}
           <motion.p variants={itemVariants} className="text-xl md:text-2xl text-zion-slate-light mb-10 max-w-4xl mx-auto leading-relaxed">
-            Discover cutting-edge AI solutions, expert talent, and innovative services that drive digital transformation. 
+            Discover cutting-edge AI solutions, expert talent, and innovative services that drive digital transformation.
             From startups to enterprises, we deliver results that matter.
           </motion.p>
 
@@ -109,7 +109,7 @@ export const HeroSectionAlt = () => {
                 <Rocket className="w-5 h-5 group-hover:translate-x-1 transition-transform"/>
               </Link>
             </Button>
-            
+
             <Button variant="outline" className="border-zion-cyan text-zion-cyan hover:bg-zion-cyan hover:text-white text-lg py-6 px-8 shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300" size="lg" asChild>
               <Link to="/services" role="button" aria-label="Explore Services" className="flex items-center gap-2">
                 Explore Services

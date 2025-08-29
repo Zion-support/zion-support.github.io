@@ -13,20 +13,20 @@ export default function AI5GNetwork() {
   ];
 
   const tiers = [
-    { 
-      name: 'Developer', 
-      price: '$599/mo', 
-      details: ['Up to 100GB storage', 'Basic AI features', 'Standard monitoring', 'Email support'] 
+    {
+      name: 'Developer',
+      price: '$599/mo',
+      details: ['Up to 100GB storage', 'Basic AI features', 'Standard monitoring', 'Email support']
     },
-    { 
-      name: 'Business', 
-      price: '$1,499/mo', 
-      details: ['Up to 1TB storage', 'Advanced AI features', 'Enhanced monitoring', 'Priority support'] 
+    {
+      name: 'Business',
+      price: '$1,499/mo',
+      details: ['Up to 1TB storage', 'Advanced AI features', 'Enhanced monitoring', 'Priority support']
     },
-    { 
-      name: 'Enterprise', 
-      price: '$3,999/mo', 
-      details: ['Unlimited storage', 'Custom AI models', 'Full 5G suite', '24/7 dedicated support'] 
+    {
+      name: 'Enterprise',
+      price: '$3,999/mo',
+      details: ['Unlimited storage', 'Custom AI models', 'Full 5G suite', '24/7 dedicated support']
     },
   ];
 

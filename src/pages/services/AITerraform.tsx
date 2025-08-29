@@ -13,20 +13,20 @@ export default function AITerraform() {
   ];
 
   const tiers = [
-    { 
-      name: 'Developer', 
-      price: '$399/mo', 
-      details: ['Up to 100GB storage', 'Basic AI features', 'Standard monitoring', 'Email support'] 
+    {
+      name: 'Developer',
+      price: '$399/mo',
+      details: ['Up to 100GB storage', 'Basic AI features', 'Standard monitoring', 'Email support']
     },
-    { 
-      name: 'Business', 
-      price: '$999/mo', 
-      details: ['Up to 1TB storage', 'Advanced AI features', 'Enhanced monitoring', 'Priority support'] 
+    {
+      name: 'Business',
+      price: '$999/mo',
+      details: ['Up to 1TB storage', 'Advanced AI features', 'Enhanced monitoring', 'Priority support']
     },
-    { 
-      name: 'Enterprise', 
-      price: '$2,499/mo', 
-      details: ['Unlimited storage', 'Custom AI models', 'Full Terraform suite', '24/7 dedicated support'] 
+    {
+      name: 'Enterprise',
+      price: '$2,499/mo',
+      details: ['Unlimited storage', 'Custom AI models', 'Full Terraform suite', '24/7 dedicated support']
     },
   ];
 

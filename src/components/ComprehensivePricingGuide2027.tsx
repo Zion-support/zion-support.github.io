@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { 
-  DollarSign, 
-  TrendingUp, 
-  Clock, 
-  Users, 
-  Star, 
+import {
+  DollarSign,
+  TrendingUp,
+  Clock,
+  Users,
+  Star,
   CheckCircle,
   ArrowRight,
   ExternalLink,
@@ -53,7 +53,7 @@ export const ComprehensivePricingGuide2027: React.FC = () => {
 
   // Combine all services
   const allServices = [
-    ...servicesCatalog.flatMap(category => 
+    ...servicesCatalog.flatMap(category =>
       category.items.map(item => ({
         ...item,
         source: 'catalog',
@@ -75,10 +75,10 @@ export const ComprehensivePricingGuide2027: React.FC = () => {
     const matchesSearch = service.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
                          service.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
                          service.category.toLowerCase().includes(searchQuery.toLowerCase());
-    
+
     const matchesCategory = selectedCategory === 'All' || service.category === selectedCategory;
-    
-    const matchesPrice = priceRange === 'All' || 
+
+    const matchesPrice = priceRange === 'All' ||
       (priceRange === 'Low' && parseFloat(service.price.replace(/[^0-9.]/g, '')) < 100) ||
       (priceRange === 'Medium' && parseFloat(service.price.replace(/[^0-9.]/g, '')) >= 100 && parseFloat(service.price.replace(/[^0-9.]/g, '')) < 1000) ||
       (priceRange === 'High' && parseFloat(service.price.replace(/[^0-9.]/g, '')) >= 1000);
@@ -172,7 +172,7 @@ export const ComprehensivePricingGuide2027: React.FC = () => {
             <Calculator className="w-5 h-5 text-zion-cyan mr-2" />
             <span className="text-zion-cyan font-semibold">2027 Pricing Guide</span>
           </div>
-          
+
           <h2 className="text-4xl md:text-6xl font-bold text-white mb-6">
             <span className="bg-gradient-to-r from-zion-cyan via-zion-purple to-zion-cyan bg-clip-text text-transparent">
               Comprehensive
@@ -180,9 +180,9 @@ export const ComprehensivePricingGuide2027: React.FC = () => {
             <br />
             <span className="text-white">Pricing & ROI Guide</span>
           </h2>
-          
+
           <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
-            Explore our complete portfolio of innovative services with transparent pricing, 
+            Explore our complete portfolio of innovative services with transparent pricing,
             detailed ROI analysis, and market insights to help you make informed decisions.
           </p>
         </motion.div>
@@ -370,10 +370,10 @@ export const ComprehensivePricingGuide2027: React.FC = () => {
               Need Custom Pricing or Have Questions?
             </h3>
             <p className="text-gray-300 mb-8 max-w-2xl mx-auto">
-              Our team of experts is ready to provide personalized quotes and answer any questions 
+              Our team of experts is ready to provide personalized quotes and answer any questions
               about our services. Get in touch for a detailed consultation.
             </p>
-            
+
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
               <div className="flex items-center justify-center gap-3 text-zion-cyan">
                 <Phone className="w-5 h-5" />

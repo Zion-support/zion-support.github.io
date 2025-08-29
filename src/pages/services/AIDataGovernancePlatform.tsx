@@ -33,20 +33,20 @@ export default function AIDataGovernancePlatform() {
   ];
 
   const tiers = [
-    { 
-      name: 'Compliance Starter', 
-      price: '$499/mo', 
-      details: ['Up to 1TB data', 'Basic AI governance', 'Standard compliance', 'Email support'] 
+    {
+      name: 'Compliance Starter',
+      price: '$499/mo',
+      details: ['Up to 1TB data', 'Basic AI governance', 'Standard compliance', 'Email support']
     },
-    { 
-      name: 'Enterprise Governance', 
-      price: '$1,299/mo', 
-      details: ['Up to 10TB data', 'Advanced AI features', 'Full compliance suite', 'Priority support'] 
+    {
+      name: 'Enterprise Governance',
+      price: '$1,299/mo',
+      details: ['Up to 10TB data', 'Advanced AI features', 'Full compliance suite', 'Priority support']
     },
-    { 
-      name: 'Global Compliance', 
-      price: '$3,999/mo', 
-      details: ['Unlimited data', 'AI-powered governance', 'Global compliance', '24/7 support'] 
+    {
+      name: 'Global Compliance',
+      price: '$3,999/mo',
+      details: ['Unlimited data', 'AI-powered governance', 'Global compliance', '24/7 support']
     },
   ];
 
@@ -74,7 +74,7 @@ export default function AIDataGovernancePlatform() {
                 </li>
               ))}
             </ul>
-            
+
             <div className="mt-8">
               <h3 className="text-xl font-semibold text-zion-slate-dark mb-3">Key Benefits</h3>
               <ul className="space-y-2">
@@ -87,7 +87,7 @@ export default function AIDataGovernancePlatform() {
               </ul>
             </div>
           </div>
-          
+
           <div className="bg-white border border-zion-slate-light/20 rounded-xl p-6 shadow-md">
             <h3 className="text-2xl font-semibold text-zion-slate-dark mb-4">Pricing Plans</h3>
             <div className="grid md:grid-cols-3 gap-4">

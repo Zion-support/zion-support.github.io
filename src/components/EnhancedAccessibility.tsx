@@ -1,14 +1,14 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { 
-  Eye, 
-  EyeOff, 
-  Volume2, 
-  VolumeX, 
-  Type, 
-  Contrast, 
-  ZoomIn, 
-  ZoomOut, 
+import {
+  Eye,
+  EyeOff,
+  Volume2,
+  VolumeX,
+  Type,
+  Contrast,
+  ZoomIn,
+  ZoomOut,
   RotateCcw,
   Accessibility,
   Settings,
@@ -60,7 +60,7 @@ export const EnhancedAccessibility: React.FC<EnhancedAccessibilityProps> = ({
   // Apply accessibility settings to document
   const applySettings = useCallback((newSettings: AccessibilitySettings) => {
     const root = document.documentElement;
-    
+
     // High contrast
     if (newSettings.highContrast) {
       root.classList.add('high-contrast');
@@ -138,9 +138,9 @@ export const EnhancedAccessibility: React.FC<EnhancedAccessibilityProps> = ({
     announcement.setAttribute('aria-atomic', 'true');
     announcement.className = 'sr-only';
     announcement.textContent = message;
-    
+
     document.body.appendChild(announcement);
-    
+
     // Remove after announcement
     setTimeout(() => {
       document.body.removeChild(announcement);
@@ -155,7 +155,7 @@ export const EnhancedAccessibility: React.FC<EnhancedAccessibilityProps> = ({
 
     const handleKeyDown = (e: KeyboardEvent) => {
       const target = e.target as HTMLElement;
-      
+
       // Skip if in input/textarea
       if (target.tagName === 'INPUT' || target.tagName === 'TEXTAREA') return;
 
@@ -165,13 +165,13 @@ export const EnhancedAccessibility: React.FC<EnhancedAccessibilityProps> = ({
           setCurrentFocus(target);
           target.style.outline = '2px solid #3b82f6';
           target.style.outlineOffset = '2px';
-          
+
           setTimeout(() => {
             target.style.outline = '';
             target.style.outlineOffset = '';
           }, 2000);
           break;
-          
+
         case 'Enter':
         case ' ':
           if (target.tagName === 'BUTTON' || target.getAttribute('role') === 'button') {
@@ -180,7 +180,7 @@ export const EnhancedAccessibility: React.FC<EnhancedAccessibilityProps> = ({
             announce(`Activated ${target.textContent || target.getAttribute('aria-label') || 'button'}`);
           }
           break;
-          
+
         case 'Escape':
           // Close modals, dropdowns, etc.
           const modals = document.querySelectorAll('[role="dialog"], [data-modal]');
@@ -205,10 +205,10 @@ export const EnhancedAccessibility: React.FC<EnhancedAccessibilityProps> = ({
       const target = e.target as HTMLElement;
       target.style.outline = '2px solid #3b82f6';
       target.style.outlineOffset = '2px';
-      
+
       if (settings.screenReader) {
-        const label = target.getAttribute('aria-label') || 
-                     target.getAttribute('title') || 
+        const label = target.getAttribute('aria-label') ||
+                     target.getAttribute('title') ||
                      target.textContent;
         if (label) announce(`Focused on ${label}`);
       }
@@ -222,7 +222,7 @@ export const EnhancedAccessibility: React.FC<EnhancedAccessibilityProps> = ({
 
     document.addEventListener('focusin', handleFocusIn);
     document.addEventListener('focusout', handleFocusOut);
-    
+
     return () => {
       document.removeEventListener('focusin', handleFocusIn);
       document.removeEventListener('focusout', handleFocusOut);
@@ -235,9 +235,9 @@ export const EnhancedAccessibility: React.FC<EnhancedAccessibilityProps> = ({
     skipLink.href = '#main-content';
     skipLink.textContent = 'Skip to main content';
     skipLink.className = 'skip-link sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-blue-600 text-white px-4 py-2 rounded z-50';
-    
+
     document.body.insertBefore(skipLink, document.body.firstChild);
-    
+
     return () => {
       if (skipLink.parentNode) {
         skipLink.parentNode.removeChild(skipLink);
@@ -331,8 +331,8 @@ export const EnhancedAccessibility: React.FC<EnhancedAccessibilityProps> = ({
             transition={{ delay: index * 0.1 }}
             onClick={action.action}
             className={`p-3 rounded-full shadow-lg transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-cyan-500/50 ${
-              action.active 
-                ? 'bg-cyan-600 text-white shadow-cyan-500/50' 
+              action.active
+                ? 'bg-cyan-600 text-white shadow-cyan-500/50'
                 : 'bg-slate-800/90 text-gray-300 hover:bg-slate-700/90 hover:text-white'
             }`}
             aria-label={action.label}
@@ -379,13 +379,13 @@ export const EnhancedAccessibility: React.FC<EnhancedAccessibilityProps> = ({
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
                 {Object.entries(settings).map(([key, value]) => {
                   const label = key.replace(/([A-Z])/g, ' $1').replace(/^./, str => str.toUpperCase());
-                  const Icon = key === 'highContrast' ? Contrast : 
-                              key === 'largeText' ? Type : 
-                              key === 'reducedMotion' ? Eye : 
-                              key === 'screenReader' ? Volume2 : 
-                              key === 'keyboardNavigation' ? Keyboard : 
-                              key === 'focusIndicator' ? MousePointer : 
-                              key === 'colorBlind' ? Eye : 
+                  const Icon = key === 'highContrast' ? Contrast :
+                              key === 'largeText' ? Type :
+                              key === 'reducedMotion' ? Eye :
+                              key === 'screenReader' ? Volume2 :
+                              key === 'keyboardNavigation' ? Keyboard :
+                              key === 'focusIndicator' ? MousePointer :
+                              key === 'colorBlind' ? Eye :
                               key === 'dyslexia' ? Type : Settings;
 
                   return (

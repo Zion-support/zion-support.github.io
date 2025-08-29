@@ -47,7 +47,7 @@ export function TrustIndicators({ className, showStats = true, showCertification
             Trusted by Industry Leaders
           </h2>
           <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
-            Zion Tech Group maintains the highest standards of security, compliance, and reliability 
+            Zion Tech Group maintains the highest standards of security, compliance, and reliability
             to ensure your business operations remain secure and uninterrupted.
           </p>
         </div>

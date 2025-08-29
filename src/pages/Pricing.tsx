@@ -1,14 +1,14 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { SEO } from '@/components/SEO';
-import { 
-  Check, 
-  Star, 
-  Zap, 
-  Brain, 
-  Shield, 
-  Users, 
-  Globe, 
+import {
+  Check,
+  Star,
+  Zap,
+  Brain,
+  Shield,
+  Users,
+  Globe,
   Clock,
   TrendingUp,
   Rocket,
@@ -90,12 +90,12 @@ export default function Pricing() {
 
   return (
     <>
-      <SEO 
+      <SEO
         title="Pricing - Zion Tech Group AI Services"
         description="Transparent pricing for our comprehensive suite of AI-powered services. Choose the plan that fits your business needs and scale as you grow."
         canonical="/pricing"
       />
-      
+
       <div className="min-h-screen bg-futuristic">
         {/* Hero Section */}
         <section className="relative py-20 overflow-hidden">
@@ -111,7 +111,7 @@ export default function Pricing() {
                 Transparent Pricing
               </h1>
               <p className="text-xl md:text-2xl text-gray-300 mb-8">
-                Choose the perfect plan for your business. All plans include a 14-day free trial 
+                Choose the perfect plan for your business. All plans include a 14-day free trial
                 and no hidden fees.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -139,7 +139,7 @@ export default function Pricing() {
                 AI Services Pricing
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Explore our comprehensive suite of AI-powered services designed to transform 
+                Explore our comprehensive suite of AI-powered services designed to transform
                 your business operations and drive growth.
               </p>
             </motion.div>
@@ -164,8 +164,8 @@ export default function Pricing() {
                       <div
                         key={planIndex}
                         className={`relative bg-slate-800/50 backdrop-blur-sm border rounded-xl p-6 ${
-                          plan.name === 'Professional' 
-                            ? 'border-cyan-500/50 shadow-lg shadow-cyan-500/20' 
+                          plan.name === 'Professional'
+                            ? 'border-cyan-500/50 shadow-lg shadow-cyan-500/20'
                             : 'border-slate-700/50'
                         }`}
                       >
@@ -176,7 +176,7 @@ export default function Pricing() {
                             </span>
                           </div>
                         )}
-                        
+
                         <div className="text-center mb-6">
                           <h4 className="text-xl font-bold text-white mb-2">{plan.name}</h4>
                           <div className="flex items-baseline justify-center mb-2">

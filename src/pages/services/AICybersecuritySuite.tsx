@@ -1,14 +1,14 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { SEO } from '@/components/SEO';
-import { 
-  Shield, 
-  Zap, 
-  Brain, 
-  TrendingUp, 
-  Users, 
-  CheckCircle, 
-  ArrowRight, 
+import {
+  Shield,
+  Zap,
+  Brain,
+  TrendingUp,
+  Users,
+  CheckCircle,
+  ArrowRight,
   Star,
   Award,
   Lightbulb,
@@ -205,11 +205,11 @@ export default function AICybersecuritySuite() {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      <SEO 
+      <SEO
         title="AI Cybersecurity Suite - Zion Tech Group"
         description="Protect your business with AI-powered cybersecurity. Advanced threat detection, zero-trust architecture, and automated incident response."
       />
-      
+
       {/* Hero Section */}
       <section className="relative overflow-hidden py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -223,17 +223,17 @@ export default function AICybersecuritySuite() {
               <Shield className="w-4 h-4 mr-2" />
               Enterprise-Grade Security
             </div>
-            
+
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
               AI Cybersecurity Suite
             </h1>
-            
+
             <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-              Protect your business with next-generation AI-powered cybersecurity. 
-              Detect threats in real-time, automate incident response, and maintain 
+              Protect your business with next-generation AI-powered cybersecurity.
+              Detect threats in real-time, automate incident response, and maintain
               compliance with zero-trust architecture.
             </p>
-            
+
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <motion.button
                 whileHover={{ scale: 1.05 }}
@@ -252,7 +252,7 @@ export default function AICybersecuritySuite() {
             </div>
           </motion.div>
         </div>
-        
+
         {/* Floating Elements */}
         <div className="absolute top-20 left-10 w-20 h-20 bg-red-600/20 rounded-full blur-xl"></div>
         <div className="absolute bottom-20 right-10 w-32 h-32 bg-orange-600/20 rounded-full blur-xl"></div>
@@ -271,7 +271,7 @@ export default function AICybersecuritySuite() {
               Unmatched Security Performance
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Our AI Cybersecurity Suite delivers industry-leading security metrics 
+              Our AI Cybersecurity Suite delivers industry-leading security metrics
               that protect your business around the clock.
             </p>
           </motion.div>
@@ -288,7 +288,7 @@ export default function AICybersecuritySuite() {
                 <div className="p-3 bg-gradient-to-r from-red-600 to-orange-600 rounded-lg mx-auto mb-4 w-fit">
                   <metric.icon className="w-8 h-8 text-white" />
                 </div>
-                
+
                 <div className="text-4xl font-bold text-red-400 mb-2">{metric.metric}</div>
                 <h3 className="text-xl font-semibold text-white mb-2">{metric.title}</h3>
                 <p className="text-gray-300 text-sm">{metric.description}</p>
@@ -311,7 +311,7 @@ export default function AICybersecuritySuite() {
               Revolutionary Security Features
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Our AI Cybersecurity Suite combines cutting-edge artificial intelligence with 
+              Our AI Cybersecurity Suite combines cutting-edge artificial intelligence with
               proven security methodologies to deliver unmatched protection.
             </p>
           </motion.div>
@@ -331,9 +331,9 @@ export default function AICybersecuritySuite() {
                   </div>
                   <h3 className="text-2xl font-semibold text-white">{feature.title}</h3>
                 </div>
-                
+
                 <p className="text-gray-300 mb-6">{feature.description}</p>
-                
+
                 <ul className="space-y-3">
                   {feature.benefits.map((benefit, benefitIndex) => (
                     <li key={benefitIndex} className="flex items-center text-gray-300">
@@ -361,7 +361,7 @@ export default function AICybersecuritySuite() {
               Transparent Security Pricing
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Choose the security plan that best fits your business needs. All plans include 
+              Choose the security plan that best fits your business needs. All plans include
               our core AI-powered security capabilities with scalable protection.
             </p>
           </motion.div>
@@ -374,8 +374,8 @@ export default function AICybersecuritySuite() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
                 className={`relative bg-slate-800/50 backdrop-blur-sm rounded-xl p-8 border ${
-                  plan.popular 
-                    ? 'border-red-500 ring-2 ring-red-500/20' 
+                  plan.popular
+                    ? 'border-red-500 ring-2 ring-red-500/20'
                     : 'border-slate-700'
                 }`}
               >
@@ -435,7 +435,7 @@ export default function AICybersecuritySuite() {
               Industry Applications
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Our AI Cybersecurity Suite is protecting businesses across industries, 
+              Our AI Cybersecurity Suite is protecting businesses across industries,
               delivering enterprise-grade security with AI-powered intelligence.
             </p>
           </motion.div>
@@ -476,10 +476,10 @@ export default function AICybersecuritySuite() {
               Ready to Secure Your Business?
             </h2>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Join thousands of businesses that trust our AI Cybersecurity Suite to protect 
+              Join thousands of businesses that trust our AI Cybersecurity Suite to protect
               their digital assets and maintain compliance.
             </p>
-            
+
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <motion.button
                 whileHover={{ scale: 1.05 }}

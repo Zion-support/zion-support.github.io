@@ -17,26 +17,26 @@ export function Navigation() {
           </div>
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">
-            <a 
-              href="/multiverse/launch" 
+            <a
+              href="/multiverse/launch"
               className="text-gray-300 hover:text-white transition-colors duration-200 font-medium"
             >
               Launch
             </a>
-            <a 
-              href="/admin/os-deploy" 
+            <a
+              href="/admin/os-deploy"
               className="text-gray-300 hover:text-white transition-colors duration-200 font-medium"
             >
               Deploy
             </a>
-            <a 
-              href="/admin/instances" 
+            <a
+              href="/admin/instances"
               className="text-gray-300 hover:text-white transition-colors duration-200 font-medium"
             >
               Instances
             </a>
-            <a 
-              href="/docs" 
+            <a
+              href="/docs"
               className="text-gray-300 hover:text-white transition-colors duration-200 font-medium"
             >
               Docs
@@ -65,29 +65,29 @@ export function Navigation() {
         {isMobileMenuOpen && (
           <div className="md:hidden animate-fade-in">
             <div className="px-2 pt-2 pb-3 space-y-1 bg-black/90 rounded-lg mt-2 mb-4">
-              <a 
-                href="/multiverse/launch" 
+              <a
+                href="/multiverse/launch"
                 className="block px-3 py-2 text-gray-300 hover:text-white hover:bg-white/10 rounded-md transition-colors"
                 onClick={() => setIsMobileMenuOpen(false)}
               >
                 Launch
               </a>
-              <a 
-                href="/admin/os-deploy" 
+              <a
+                href="/admin/os-deploy"
                 className="block px-3 py-2 text-gray-300 hover:text-white hover:bg-white/10 rounded-md transition-colors"
                 onClick={() => setIsMobileMenuOpen(false)}
               >
                 Deploy
               </a>
-              <a 
-                href="/admin/instances" 
+              <a
+                href="/admin/instances"
                 className="block px-3 py-2 text-gray-300 hover:text-white hover:bg-white/10 rounded-md transition-colors"
                 onClick={() => setIsMobileMenuOpen(false)}
               >
                 Instances
               </a>
-              <a 
-                href="/docs" 
+              <a
+                href="/docs"
                 className="block px-3 py-2 text-gray-300 hover:text-white hover:bg-white/10 rounded-md transition-colors"
                 onClick={() => setIsMobileMenuOpen(false)}
               >

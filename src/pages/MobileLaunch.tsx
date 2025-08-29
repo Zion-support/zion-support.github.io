@@ -1,14 +1,14 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import { 
-  Smartphone, 
-  Download, 
-  Zap, 
-  Shield, 
-  Cloud, 
-  Users, 
-  CheckCircle, 
+import {
+  Smartphone,
+  Download,
+  Zap,
+  Shield,
+  Cloud,
+  Users,
+  CheckCircle,
   ArrowRight,
   Star,
   Globe,
@@ -130,7 +130,7 @@ const MobileLaunch: React.FC = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      <SEO 
+      <SEO
         title="Mobile App - Zion Tech Group"
         description="Take Zion Tech Group with you on the go! Download our mobile app for iOS and Android to access AI services, analytics, and business solutions anywhere."
         keywords="mobile app, iOS app, Android app, Zion Tech Group mobile, business app"
@@ -152,19 +152,19 @@ const MobileLaunch: React.FC = () => {
                 </div>
                 <h1 className="text-4xl font-bold text-white">Mobile App</h1>
               </div>
-              
+
               <h2 className="text-5xl md:text-6xl font-bold text-white mb-6 leading-tight">
                 Take Zion
                 <span className="block bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent">
                   Everywhere
                 </span>
               </h2>
-              
+
               <p className="text-xl text-slate-300 mb-8 leading-relaxed">
-                Access your business solutions, AI services, and analytics on the go with our 
+                Access your business solutions, AI services, and analytics on the go with our
                 powerful mobile application. Available for iOS and Android devices.
               </p>
-              
+
               <div className="flex flex-col sm:flex-row gap-4">
                 <Link
                   to="#download"
@@ -182,7 +182,7 @@ const MobileLaunch: React.FC = () => {
                 </Link>
               </div>
             </motion.div>
-            
+
             <motion.div
               initial={{ opacity: 0, x: 30 }}
               animate={{ opacity: 1, x: 0 }}
@@ -202,7 +202,7 @@ const MobileLaunch: React.FC = () => {
                       <BatteryIcon className="w-4 h-4" />
                     </div>
                   </div>
-                  
+
                   {/* App Content */}
                   <div className="p-6">
                     <div className="text-center mb-6">
@@ -212,7 +212,7 @@ const MobileLaunch: React.FC = () => {
                       <h3 className="text-white font-bold text-lg">Zion Tech</h3>
                       <p className="text-cyan-300 text-sm">AI-Powered Business</p>
                     </div>
-                    
+
                     {/* Quick Actions */}
                     <div className="grid grid-cols-2 gap-3 mb-6">
                       <div className="bg-white/10 rounded-lg p-3 text-center">
@@ -235,7 +235,7 @@ const MobileLaunch: React.FC = () => {
                   </div>
                 </div>
               </div>
-              
+
               {/* Floating Elements */}
               <div className="absolute -top-4 -right-4 w-8 h-8 bg-yellow-400 rounded-full flex items-center justify-center animate-bounce">
                 <Star className="w-4 h-4 text-yellow-900" />
@@ -259,7 +259,7 @@ const MobileLaunch: React.FC = () => {
               Powerful <span className="text-cyan-400">Mobile Features</span>
             </h2>
             <p className="text-xl text-slate-300 max-w-3xl mx-auto">
-              Experience the full power of Zion Tech Group's services in the palm of your hand 
+              Experience the full power of Zion Tech Group's services in the palm of your hand
               with our feature-rich mobile application.
             </p>
           </motion.div>
@@ -276,7 +276,7 @@ const MobileLaunch: React.FC = () => {
                 <div className={`w-12 h-12 bg-gradient-to-br ${feature.color} rounded-lg flex items-center justify-center mb-4`}>
                   <feature.icon className="w-6 h-6 text-white" />
                 </div>
-                
+
                 <h3 className="text-xl font-bold text-white mb-3">{feature.title}</h3>
                 <p className="text-slate-300">{feature.description}</p>
               </motion.div>
@@ -314,10 +314,10 @@ const MobileLaunch: React.FC = () => {
                 <div className="w-16 h-16 bg-gradient-to-br from-cyan-400/20 to-blue-500/20 rounded-xl flex items-center justify-center mb-6">
                   <screen.icon className="w-8 h-8 text-cyan-400" />
                 </div>
-                
+
                 <h3 className="text-2xl font-bold text-white mb-4">{screen.name}</h3>
                 <p className="text-slate-300 mb-6">{screen.description}</p>
-                
+
                 <div className="space-y-3">
                   {screen.features.map((feature, featureIndex) => (
                     <div key={featureIndex} className="flex items-center text-slate-400">
@@ -366,11 +366,11 @@ const MobileLaunch: React.FC = () => {
                     <span className="text-yellow-400 text-sm font-semibold">Recommended</span>
                   </div>
                 )}
-                
+
                 <div className="text-6xl mb-4">{option.icon}</div>
                 <h3 className="text-2xl font-bold text-white mb-3">{option.platform}</h3>
                 <p className="text-slate-300 mb-6">{option.description}</p>
-                
+
                 <Link
                   to={option.link}
                   className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-400 hover:to-blue-500 transition-all duration-200 hover:scale-105"
@@ -430,10 +430,10 @@ const MobileLaunch: React.FC = () => {
               Ready to Go Mobile?
             </h2>
             <p className="text-xl text-slate-300 mb-8 max-w-2xl mx-auto">
-              Download our mobile app today and take Zion Tech Group's powerful solutions 
+              Download our mobile app today and take Zion Tech Group's powerful solutions
               with you wherever you go.
             </p>
-            
+
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 to="#download"

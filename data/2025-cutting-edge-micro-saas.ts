@@ -16,20 +16,20 @@ export const cuttingEdgeMicroSaasServices2025 = [
       'Custom AI model training'
     ],
     pricing: {
-      starter: { 
-        price: 199, 
-        period: 'month', 
-        features: ['Up to 1,000 customers', 'Basic AI features', 'Email support'] 
+      starter: {
+        price: 199,
+        period: 'month',
+        features: ['Up to 1,000 customers', 'Basic AI features', 'Email support']
       },
-      professional: { 
-        price: 499, 
-        period: 'month', 
-        features: ['Up to 10,000 customers', 'Advanced AI features', 'Priority support', 'Custom workflows'] 
+      professional: {
+        price: 499,
+        period: 'month',
+        features: ['Up to 10,000 customers', 'Advanced AI features', 'Priority support', 'Custom workflows']
       },
-      enterprise: { 
-        price: 1299, 
-        period: 'month', 
-        features: ['Unlimited customers', 'Full AI platform', 'Dedicated specialists', '24/7 support'] 
+      enterprise: {
+        price: 1299,
+        period: 'month',
+        features: ['Unlimited customers', 'Full AI platform', 'Dedicated specialists', '24/7 support']
       }
     },
     category: 'Customer Success',
@@ -69,20 +69,20 @@ export const cuttingEdgeMicroSaasServices2025 = [
       'Real-time collaboration tools'
     ],
     pricing: {
-      starter: { 
-        price: 299, 
-        period: 'month', 
-        features: ['Basic optimization features', 'Standard analytics', 'Email support'] 
+      starter: {
+        price: 299,
+        period: 'month',
+        features: ['Basic optimization features', 'Standard analytics', 'Email support']
       },
-      professional: { 
-        price: 799, 
-        period: 'month', 
-        features: ['Advanced optimization', 'Quantum algorithms', 'Priority support', 'Custom modeling'] 
+      professional: {
+        price: 799,
+        period: 'month',
+        features: ['Advanced optimization', 'Quantum algorithms', 'Priority support', 'Custom modeling']
       },
-      enterprise: { 
-        price: 1999, 
-        period: 'month', 
-        features: ['Full quantum platform', 'Custom algorithms', 'Dedicated specialists', '24/7 support'] 
+      enterprise: {
+        price: 1999,
+        period: 'month',
+        features: ['Full quantum platform', 'Custom algorithms', 'Dedicated specialists', '24/7 support']
       }
     },
     category: 'Supply Chain',
@@ -122,20 +122,20 @@ export const cuttingEdgeMicroSaasServices2025 = [
       'White-label solutions'
     ],
     pricing: {
-      starter: { 
-        price: 149, 
-        period: 'month', 
-        features: ['Up to 1,000 verifications', 'Basic verification features', 'Email support'] 
+      starter: {
+        price: 149,
+        period: 'month',
+        features: ['Up to 1,000 verifications', 'Basic verification features', 'Email support']
       },
-      professional: { 
-        price: 399, 
-        period: 'month', 
-        features: ['Up to 10,000 verifications', 'Advanced verification features', 'Priority support', 'Custom workflows'] 
+      professional: {
+        price: 399,
+        period: 'month',
+        features: ['Up to 10,000 verifications', 'Advanced verification features', 'Priority support', 'Custom workflows']
       },
-      enterprise: { 
-        price: 999, 
-        period: 'month', 
-        features: ['Unlimited verifications', 'Full verification platform', 'Dedicated specialists', '24/7 support'] 
+      enterprise: {
+        price: 999,
+        period: 'month',
+        features: ['Unlimited verifications', 'Full verification platform', 'Dedicated specialists', '24/7 support']
       }
     },
     category: 'Identity Verification',
@@ -175,20 +175,20 @@ export const cuttingEdgeMicroSaasServices2025 = [
       'Predictive modeling capabilities'
     ],
     pricing: {
-      starter: { 
-        price: 249, 
-        period: 'month', 
-        features: ['Up to 500 employees', 'Basic analytics features', 'Email support'] 
+      starter: {
+        price: 249,
+        period: 'month',
+        features: ['Up to 500 employees', 'Basic analytics features', 'Email support']
       },
-      professional: { 
-        price: 649, 
-        period: 'month', 
-        features: ['Up to 5,000 employees', 'Advanced analytics features', 'Priority support', 'Custom reporting'] 
+      professional: {
+        price: 649,
+        period: 'month',
+        features: ['Up to 5,000 employees', 'Advanced analytics features', 'Priority support', 'Custom reporting']
       },
-      enterprise: { 
-        price: 1699, 
-        period: 'month', 
-        features: ['Unlimited employees', 'Full analytics platform', 'Dedicated specialists', '24/7 support'] 
+      enterprise: {
+        price: 1699,
+        period: 'month',
+        features: ['Unlimited employees', 'Full analytics platform', 'Dedicated specialists', '24/7 support']
       }
     },
     category: 'HR Analytics',
@@ -228,20 +228,20 @@ export const cuttingEdgeMicroSaasServices2025 = [
       'Comprehensive risk reporting'
     ],
     pricing: {
-      starter: { 
-        price: 399, 
-        period: 'month', 
-        features: ['Basic risk management', 'Standard analytics', 'Email support'] 
+      starter: {
+        price: 399,
+        period: 'month',
+        features: ['Basic risk management', 'Standard analytics', 'Email support']
       },
-      professional: { 
-        price: 999, 
-        period: 'month', 
-        features: ['Advanced risk management', 'Quantum algorithms', 'Priority support', 'Custom models'] 
+      professional: {
+        price: 999,
+        period: 'month',
+        features: ['Advanced risk management', 'Quantum algorithms', 'Priority support', 'Custom models']
       },
-      enterprise: { 
-        price: 2499, 
-        period: 'month', 
-        features: ['Full risk management platform', 'Custom algorithms', 'Dedicated specialists', '24/7 support'] 
+      enterprise: {
+        price: 2499,
+        period: 'month',
+        features: ['Full risk management platform', 'Custom algorithms', 'Dedicated specialists', '24/7 support']
       }
     },
     category: 'Financial Risk Management',

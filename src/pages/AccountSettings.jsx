@@ -26,7 +26,7 @@ export default function AccountSettings() {
             }
         }
         catch (e) {
-            console.error('Error loading account settings', e);
+            // console.error('Error loading account settings', e);
         }
     }, []);
     const handleSave = () => {
@@ -35,11 +35,11 @@ export default function AccountSettings() {
         setTimeout(() => {
             try {
                 localStorage.setItem('account_settings', JSON.stringify({ displayWeb3, didHandle, enableBackup }));
-                console.log('Saved settings', { displayWeb3, didHandle, enableBackup });
+                // console.log('Saved settings', { displayWeb3, didHandle, enableBackup });
                 toast.success('Account settings updated successfully');
             }
             catch (e) {
-                console.error('Failed to save settings', e);
+                // console.error('Failed to save settings', e);
                 toast.error('Failed to save settings');
             }
             finally {
@@ -73,7 +73,7 @@ export default function AccountSettings() {
                 }
             }
             catch (error) {
-                console.error('ENS lookup error:', error);
+                // console.error('ENS lookup error:', error);
             }
             toast.success(`Wallet connected: ${address.slice(0, 6)}...${address.slice(-4)}`);
         }
@@ -83,10 +83,10 @@ export default function AccountSettings() {
     };
     return (<>
       <SEO title="Account Settings" description="Manage your account"/>
-      
+
       <main className="container mx-auto py-8 px-4">
         <h1 className="text-3xl font-bold mb-6 text-white">Account Settings</h1>
-        
+
         <div className="grid gap-6 md:grid-cols-2">
           <Card>
             <CardHeader>
@@ -98,7 +98,7 @@ export default function AccountSettings() {
                 <Label htmlFor="email">Email Address</Label>
                 <Input id="email" value={user?.email || ''} disabled className="bg-gray-100"/>
               </div>
-              
+
               <div className="space-y-2">
                 <Label htmlFor="didHandle">Web3 Identity Handle</Label>
                 <div className="flex gap-2">
@@ -112,7 +112,7 @@ export default function AccountSettings() {
                   Link your decentralized identity to display on your profile
                 </p>
               </div>
-              
+
               <div className="flex items-center justify-between">
                 <div className="space-y-0.5">
                   <Label htmlFor="displayWeb3">Display Web3 Identity</Label>
@@ -120,9 +120,9 @@ export default function AccountSettings() {
                 </div>
                 <Switch id="displayWeb3" checked={displayWeb3} onCheckedChange={setDisplayWeb3}/>
               </div>
-              
+
               <Separator />
-              
+
               <div className="flex items-center justify-between">
                 <div className="space-y-0.5">
                   <Label htmlFor="backup" className="flex items-center gap-1">
@@ -135,18 +135,18 @@ export default function AccountSettings() {
                 </div>
                 <Switch id="backup" checked={enableBackup} onCheckedChange={setEnableBackup}/>
               </div>
-              
+
               {enableBackup && (<div className="rounded-md bg-amber-50 p-3 text-sm text-amber-800">
                   Data will be backed up to decentralized storage. This feature is in beta.
                 </div>)}
-              
+
               <Button onClick={handleSave} disabled={isSubmitting} className="w-full">
                 {isSubmitting ? 'Saving...' : 'Save Settings'}
                 {!isSubmitting && <Save className="ml-2 h-4 w-4"/>}
               </Button>
             </CardContent>
           </Card>
-          
+
           <Card>
             <CardHeader>
               <CardTitle>Web3 Features</CardTitle>
@@ -169,7 +169,7 @@ export default function AccountSettings() {
                     <span>No wallet connected</span>
                   </div>)}
               </div>
-              
+
               <div>
                 <h3 className="font-medium mb-2">Backup Status</h3>
                 <div className="grid grid-cols-2 gap-2">
@@ -199,7 +199,7 @@ export default function AccountSettings() {
                   </div>
                 </div>
               </div>
-              
+
               <div>
                 <h3 className="font-medium mb-2">Recovery Options</h3>
                 <Button variant="outline" className="w-full" disabled={!enableBackup}>
@@ -215,6 +215,6 @@ export default function AccountSettings() {
           </Card>
         </div>
       </main>
-      
+
     </>);
 }

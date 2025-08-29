@@ -22,21 +22,21 @@ export default function AIFinancialAnalytics() {
   ];
 
   const pricing = [
-    { 
-      name: 'Analyst', 
-      price: '$199/mo', 
+    {
+      name: 'Analyst',
+      price: '$199/mo',
       features: ['Up to 10 portfolios', 'Basic AI insights', 'Standard reporting', 'Email support'],
       popular: false
     },
-    { 
-      name: 'Professional', 
-      price: '$499/mo', 
+    {
+      name: 'Professional',
+      price: '$499/mo',
       features: ['Up to 50 portfolios', 'Advanced AI analytics', 'Real-time alerts', 'Priority support', 'Custom dashboards'],
       popular: true
     },
-    { 
-      name: 'Enterprise', 
-      price: '$1,299/mo', 
+    {
+      name: 'Enterprise',
+      price: '$1,299/mo',
       features: ['Unlimited portfolios', 'Full AI suite', 'Custom AI training', 'Dedicated support', 'API access', 'White-label solutions'],
       popular: false
     }
@@ -72,7 +72,7 @@ export default function AIFinancialAnalytics() {
           </div>
           <h1 className="text-4xl md:text-6xl font-bold mb-6">AI Financial Analytics Platform</h1>
           <p className="text-xl text-green-100 mb-8 max-w-3xl mx-auto">
-            Transform your financial decision-making with AI-driven insights, predictive analytics, and automated portfolio optimization. 
+            Transform your financial decision-making with AI-driven insights, predictive analytics, and automated portfolio optimization.
             Stay ahead of the market with intelligent financial intelligence.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -92,7 +92,7 @@ export default function AIFinancialAnalytics() {
           <h2 className="text-3xl font-bold text-gray-900 mb-4">Advanced Financial Intelligence</h2>
           <p className="text-xl text-gray-600">Everything you need to make smarter financial decisions</p>
         </div>
-        
+
         <div className="grid md:grid-cols-2 gap-8">
           <div>
             <h3 className="text-2xl font-semibold text-gray-900 mb-6">Core Capabilities</h3>
@@ -105,7 +105,7 @@ export default function AIFinancialAnalytics() {
               ))}
             </ul>
           </div>
-          
+
           <div className="bg-gray-50 rounded-xl p-8">
             <h3 className="text-2xl font-semibold text-gray-900 mb-6">Key Benefits</h3>
             <ul className="space-y-4">
@@ -127,7 +127,7 @@ export default function AIFinancialAnalytics() {
             <h2 className="text-3xl font-bold text-gray-900 mb-4">Comprehensive Analytics Suite</h2>
             <p className="text-xl text-gray-600">From portfolio analysis to market prediction, we cover all your financial analytics needs</p>
           </div>
-          
+
           <div className="grid md:grid-cols-4 gap-6">
             {analyticsTypes.map((analyticsType, index) => (
               <div key={index} className="bg-white rounded-lg p-6 shadow-sm border border-gray-200 text-center">
@@ -145,7 +145,7 @@ export default function AIFinancialAnalytics() {
           <h2 className="text-3xl font-bold text-gray-900 mb-4">Perfect For</h2>
           <p className="text-xl text-gray-600">Ideal for financial professionals and organizations seeking data-driven insights</p>
         </div>
-        
+
         <div className="grid md:grid-cols-3 gap-6">
           {useCases.map((useCase, index) => (
             <div key={index} className="bg-white rounded-lg p-6 shadow-sm border border-gray-200">
@@ -163,7 +163,7 @@ export default function AIFinancialAnalytics() {
             <h2 className="text-3xl font-bold text-gray-900 mb-4">Enterprise-Grade Security</h2>
             <p className="text-xl text-gray-600">Your financial data is protected with the highest security standards</p>
           </div>
-          
+
           <div className="grid md:grid-cols-3 gap-8">
             <div className="bg-white rounded-lg p-6 shadow-sm text-center">
               <Shield className="w-12 h-12 text-green-500 mx-auto mb-4" />
@@ -191,7 +191,7 @@ export default function AIFinancialAnalytics() {
             <h2 className="text-3xl font-bold text-gray-900 mb-4">Simple, Transparent Pricing</h2>
             <p className="text-xl text-gray-600">Choose the plan that fits your financial analytics needs</p>
           </div>
-          
+
           <div className="grid md:grid-cols-3 gap-8">
             {pricing.map((plan, index) => (
               <div key={index} className={`relative bg-white rounded-xl p-8 shadow-lg border-2 ${
@@ -204,13 +204,13 @@ export default function AIFinancialAnalytics() {
                     </span>
                   </div>
                 )}
-                
+
                 <div className="text-center mb-8">
                   <h3 className="text-2xl font-bold text-gray-900 mb-2">{plan.name}</h3>
                   <div className="text-4xl font-bold text-green-600 mb-2">{plan.price}</div>
                   <p className="text-gray-600">per month</p>
                 </div>
-                
+
                 <ul className="space-y-3 mb-8">
                   {plan.features.map((feature, featureIndex) => (
                     <li key={featureIndex} className="flex items-start">
@@ -219,10 +219,10 @@ export default function AIFinancialAnalytics() {
                     </li>
                   ))}
                 </ul>
-                
+
                 <button className={`w-full py-3 px-6 rounded-lg font-semibold transition-colors ${
-                  plan.popular 
-                    ? 'bg-green-600 text-white hover:bg-green-700' 
+                  plan.popular
+                    ? 'bg-green-600 text-white hover:bg-green-700'
                     : 'bg-gray-100 text-gray-900 hover:bg-gray-200'
                 }`}>
                   Get Started
@@ -230,7 +230,7 @@ export default function AIFinancialAnalytics() {
               </div>
             ))}
           </div>
-          
+
           <div className="text-center mt-12">
             <p className="text-gray-600 mb-4">Need a custom plan? Contact us for enterprise pricing</p>
             <a href="mailto:kleber@ziontechgroup.com" className="text-green-600 hover:text-green-700 font-semibold">
@@ -291,7 +291,7 @@ export default function AIFinancialAnalytics() {
               +1 302 464 0950
             </a>
           </div>
-          
+
           <div className="bg-white border border-gray-200 rounded-xl p-6 shadow-sm">
             <Mail className="w-8 h-8 text-green-500 mx-auto mb-4" />
             <h3 className="text-xl font-semibold text-gray-900 mb-2">Email Us</h3>
@@ -301,16 +301,16 @@ export default function AIFinancialAnalytics() {
             </a>
           </div>
         </div>
-        
+
         <div className="mt-12 p-6 bg-gray-50 rounded-xl">
           <h3 className="text-lg font-semibold text-gray-900 mb-2">Visit Our Website</h3>
           <p className="text-gray-600 mb-4">
             Learn more about our complete suite of AI-powered business solutions
           </p>
-          <a 
-            href="https://ziontechgroup.com" 
-            target="_blank" 
-            rel="noreferrer" 
+          <a
+            href="https://ziontechgroup.com"
+            target="_blank"
+            rel="noreferrer"
             className="inline-flex items-center text-green-600 hover:text-green-700 font-semibold"
           >
             Visit ziontechgroup.com <ExternalLink className="w-4 h-4 ml-2" />

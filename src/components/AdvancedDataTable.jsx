@@ -183,13 +183,13 @@ export const AdvancedDataTable = ({ data, columns, height = 500, enableSearch = 
           <h3 className="text-lg font-semibold text-gray-900 dark:text-white">
             Data Table ({processedData.length} items)
           </h3>
-          
+
           <div className="flex items-center gap-2">
             {enableExport && (<button onClick={handleExport} className="px-3 py-2 bg-green-500 hover:bg-green-600 text-white rounded-lg text-sm font-medium transition-colors flex items-center gap-2">
                 <Download className="w-4 h-4"/>
                 Export
               </button>)}
-            
+
             <button onClick={() => setShowFilters(!showFilters)} className={`px-3 py-2 rounded-lg text-sm font-medium transition-colors flex items-center gap-2 ${showFilters
             ? 'bg-blue-500 text-white'
             : 'bg-gray-200 dark:bg-gray-600 text-gray-700 dark:text-gray-300 hover:bg-gray-300 dark:hover:bg-gray-500'}`}>
@@ -235,7 +235,7 @@ export const AdvancedDataTable = ({ data, columns, height = 500, enableSearch = 
             {enableSelection && (<div className="w-8 mr-2">
                 <input type="checkbox" checked={selectedItems.size === paginatedData.length && paginatedData.length > 0} onChange={(e) => handleSelectAll(e.target.checked)} className="w-4 h-4 text-blue-600 border-gray-300 rounded focus:ring-blue-500"/>
               </div>)}
-            
+
             {columns.map(column => (<div key={String(column.key)} className={`flex-1 px-2 py-1 ${column.width ? `w-${column.width}` : ''}`} style={{ width: column.width }}>
                 <button onClick={() => handleSort(column.key)} disabled={!enableSorting || !column.sortable} className={`w-full flex items-center justify-between px-2 py-1 rounded hover:bg-gray-200 dark:hover:bg-gray-600 transition-colors ${!enableSorting || !column.sortable ? 'cursor-default' : 'cursor-pointer'}`}>
                   <span className="font-medium text-gray-700 dark:text-gray-300 text-sm">
@@ -244,7 +244,7 @@ export const AdvancedDataTable = ({ data, columns, height = 500, enableSearch = 
                   {column.sortable !== false && getSortIcon(column.key)}
                 </button>
               </div>))}
-            
+
             {enableActions && (<div className="w-20 px-2 py-1">
                 <span className="font-medium text-gray-700 dark:text-gray-300 text-sm">Actions</span>
               </div>)}
@@ -258,11 +258,11 @@ export const AdvancedDataTable = ({ data, columns, height = 500, enableSearch = 
                 {enableSelection && (<div className="w-8 mr-2">
                     <input type="checkbox" checked={selectedItems.has(String(item.id || JSON.stringify(item)))} onChange={(e) => handleSelectionChange(item, e.target.checked)} onClick={(e) => e.stopPropagation()} className="w-4 h-4 text-blue-600 border-gray-300 rounded focus:ring-blue-500"/>
                   </div>)}
-                
+
                 {columns.map(column => (<div key={String(column.key)} className={`flex-1 px-2 py-1 ${column.width ? `w-${column.width}` : ''}`} style={{ width: column.width }}>
                     {renderCell(column, item, index)}
                   </div>))}
-                
+
                 {enableActions && (<div className="w-20 px-2 py-1 flex items-center gap-1">
                     <button className="p-1 text-gray-400 hover:text-blue-500 transition-colors">
                       <Eye className="w-4 h-4"/>
@@ -285,12 +285,12 @@ export const AdvancedDataTable = ({ data, columns, height = 500, enableSearch = 
             <div className="text-sm text-gray-700 dark:text-gray-300">
               Showing {((currentPage - 1) * pageSize) + 1} to {Math.min(currentPage * pageSize, processedData.length)} of {processedData.length} results
             </div>
-            
+
             <div className="flex items-center gap-2">
               <button onClick={() => setCurrentPage(prev => Math.max(1, prev - 1))} disabled={currentPage === 1} className="px-3 py-1 text-sm border border-gray-300 dark:border-gray-600 rounded hover:bg-gray-100 dark:hover:bg-gray-600 disabled:opacity-50 disabled:cursor-not-allowed transition-colors">
                 Previous
               </button>
-              
+
               {Array.from({ length: Math.min(5, totalPages) }, (_, i) => {
                 const page = i + 1;
                 return (<button key={page} onClick={() => setCurrentPage(page)} className={`px-3 py-1 text-sm rounded transition-colors ${currentPage === page
@@ -299,7 +299,7 @@ export const AdvancedDataTable = ({ data, columns, height = 500, enableSearch = 
                     {page}
                   </button>);
             })}
-              
+
               <button onClick={() => setCurrentPage(prev => Math.min(totalPages, prev + 1))} disabled={currentPage === totalPages} className="px-3 py-1 text-sm border border-gray-300 dark:border-gray-600 rounded hover:bg-gray-100 dark:hover:bg-gray-600 disabled:opacity-50 disabled:cursor-not-allowed transition-colors">
                 Next
               </button>

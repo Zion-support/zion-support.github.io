@@ -125,7 +125,7 @@ export function ServicesComparisonTable() {
               Our expert team is here to help you select the perfect service for your business needs
             </p>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-6">
             <div className="text-center">
               <Phone className="w-8 h-8 text-blue-600 dark:text-blue-400 mx-auto mb-2"/>
@@ -143,7 +143,7 @@ export function ServicesComparisonTable() {
               <p className="text-blue-600 dark:text-blue-400">{CONTACT_INFO.responseTime}</p>
             </div>
           </div>
-          
+
           <div className="text-center">
             <Button size="lg" className="bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700">
               <Phone className="w-4 h-4 mr-2"/>

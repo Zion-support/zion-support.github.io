@@ -13,20 +13,20 @@ export default function AIInsurance() {
   ];
 
   const tiers = [
-    { 
-      name: 'Small Insurer', 
-      price: '$499/mo', 
-      details: ['Up to 10,000 policies', 'Basic AI features', 'Standard reports', 'Email support'] 
+    {
+      name: 'Small Insurer',
+      price: '$499/mo',
+      details: ['Up to 10,000 policies', 'Basic AI features', 'Standard reports', 'Email support']
     },
-    { 
-      name: 'Medium Insurer', 
-      price: '$1,299/mo', 
-      details: ['Up to 100,000 policies', 'Advanced AI features', 'Custom reports', 'Priority support'] 
+    {
+      name: 'Medium Insurer',
+      price: '$1,299/mo',
+      details: ['Up to 100,000 policies', 'Advanced AI features', 'Custom reports', 'Priority support']
     },
-    { 
-      name: 'Large Insurer', 
-      price: '$3,999/mo', 
-      details: ['Unlimited policies', 'Custom AI models', 'Full system integration', '24/7 dedicated support'] 
+    {
+      name: 'Large Insurer',
+      price: '$3,999/mo',
+      details: ['Unlimited policies', 'Custom AI models', 'Full system integration', '24/7 dedicated support']
     },
   ];
 

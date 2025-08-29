@@ -37,7 +37,7 @@ export function NewsletterSection() {
     const handleSubmit = (e) => {
         e.preventDefault();
         // Here you would typically send the email to your newsletter service
-        console.log('Newsletter subscription:', email);
+        // console.log('Newsletter subscription:', email);
         setIsSubscribed(true);
         setEmail('');
     };
@@ -60,19 +60,19 @@ export function NewsletterSection() {
         <motion.div className="absolute bottom-20 right-20 w-24 h-24 border border-zion-purple/20 rounded-full opacity-30" animate={{ rotate: -360 }} transition={{ duration: 25, repeat: Infinity, ease: "linear" }}/>
         <motion.div className="absolute top-1/2 left-1/2 w-16 h-16 border border-zion-cyan-light/20 rounded-full opacity-20" animate={{ scale: [1, 1.2, 1] }} transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}/>
       </div>
-      
+
       <div className="container mx-auto px-4 relative z-10">
         <motion.div className="text-center max-w-5xl mx-auto" initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
           {/* Enhanced header */}
           <div className="inline-flex items-center justify-center w-24 h-24 rounded-2xl bg-gradient-to-br from-zion-cyan to-zion-blue mb-8 shadow-lg">
             <Mail className="w-12 h-12 text-white"/>
           </div>
-          
+
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">
             Stay <span className="bg-gradient-to-r from-zion-cyan to-zion-blue bg-clip-text text-transparent">Connected</span>
           </h2>
           <p className="text-zion-slate-light text-lg md:text-xl mb-8 max-w-3xl mx-auto leading-relaxed">
-            Get the latest updates on new services, tech insights, and exclusive offers delivered straight to your inbox. 
+            Get the latest updates on new services, tech insights, and exclusive offers delivered straight to your inbox.
             Join thousands of professionals staying ahead of the curve.
           </p>
 
@@ -83,7 +83,7 @@ export function NewsletterSection() {
                 <div className="text-zion-slate-light text-sm">{stat.label}</div>
               </motion.div>))}
           </motion.div>
-          
+
           {/* Benefits toggle */}
           <motion.div className="mb-8" initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6, delay: 0.3 }}>
             <button onClick={() => setShowBenefits(!showBenefits)} className="inline-flex items-center gap-2 text-zion-cyan hover:text-zion-cyan-light transition-colors">
@@ -110,7 +110,7 @@ export function NewsletterSection() {
                   </motion.div>))}
               </motion.div>)}
           </AnimatePresence>
-          
+
           {/* Subscription form or success message */}
           {!isSubscribed ? (<motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6, delay: 0.4 }}>
               <form onSubmit={handleSubmit} className="flex flex-col sm:flex-row gap-4 max-w-lg mx-auto mb-6">
@@ -141,13 +141,13 @@ export function NewsletterSection() {
                 <X className="w-5 h-5"/>
               </button>
             </motion.div>)}
-          
+
           {/* Privacy notice */}
           <motion.div className="text-center" initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6, delay: 0.7 }}>
             <p className="text-zion-slate-light/70 text-sm mb-4">
               No spam, unsubscribe at any time. We respect your privacy.
             </p>
-            
+
             {/* Trust indicators */}
             <div className="flex items-center justify-center gap-6 text-zion-slate-light/50 text-xs">
               <div className="flex items-center gap-2">

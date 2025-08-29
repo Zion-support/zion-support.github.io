@@ -16,20 +16,20 @@ export const cuttingEdgeAIServices2025 = [
       'Consciousness level assessment and progression tracking'
     ],
     pricing: {
-      starter: { 
-        price: 399, 
-        period: 'month', 
-        features: ['Basic consciousness development', 'Up to 200 interactions/month', 'Standard analytics', 'Email support'] 
+      starter: {
+        price: 399,
+        period: 'month',
+        features: ['Basic consciousness development', 'Up to 200 interactions/month', 'Standard analytics', 'Email support']
       },
-      professional: { 
-        price: 999, 
-        period: 'month', 
-        features: ['Advanced consciousness models', 'Unlimited interactions', 'Custom training', 'Priority support', 'API access'] 
+      professional: {
+        price: 999,
+        period: 'month',
+        features: ['Advanced consciousness models', 'Unlimited interactions', 'Custom training', 'Priority support', 'API access']
       },
-      enterprise: { 
-        price: 2499, 
-        period: 'month', 
-        features: ['Custom consciousness models', 'White-label solution', 'Dedicated support', 'On-premise deployment', '24/7 monitoring'] 
+      enterprise: {
+        price: 2499,
+        period: 'month',
+        features: ['Custom consciousness models', 'White-label solution', 'Dedicated support', 'On-premise deployment', '24/7 monitoring']
       }
     },
     category: 'AI Consciousness',
@@ -69,20 +69,20 @@ export const cuttingEdgeAIServices2025 = [
       'API access for quantum computing resources and services'
     ],
     pricing: {
-      starter: { 
-        price: 799, 
-        period: 'month', 
-        features: ['Basic quantum-AI processing', 'Up to 200 quantum operations/month', 'Standard analytics', 'Email support'] 
+      starter: {
+        price: 799,
+        period: 'month',
+        features: ['Basic quantum-AI processing', 'Up to 200 quantum operations/month', 'Standard analytics', 'Email support']
       },
-      professional: { 
-        price: 1999, 
-        period: 'month', 
-        features: ['Advanced quantum-AI models', 'Unlimited quantum operations', 'Custom algorithms', 'Priority support', 'API access'] 
+      professional: {
+        price: 1999,
+        period: 'month',
+        features: ['Advanced quantum-AI models', 'Unlimited quantum operations', 'Custom algorithms', 'Priority support', 'API access']
       },
-      enterprise: { 
-        price: 4999, 
-        period: 'month', 
-        features: ['Custom quantum-AI development', 'White-label solution', 'Dedicated support', 'On-premise deployment', '24/7 monitoring'] 
+      enterprise: {
+        price: 4999,
+        period: 'month',
+        features: ['Custom quantum-AI development', 'White-label solution', 'Dedicated support', 'On-premise deployment', '24/7 monitoring']
       }
     },
     category: 'Quantum AI',
@@ -122,20 +122,20 @@ export const cuttingEdgeAIServices2025 = [
       'Intelligent integration and API management'
     ],
     pricing: {
-      starter: { 
-        price: 599, 
-        period: 'month', 
-        features: ['Basic autonomous features', 'Up to 100 autonomous operations/month', 'Standard monitoring', 'Email support'] 
+      starter: {
+        price: 599,
+        period: 'month',
+        features: ['Basic autonomous features', 'Up to 100 autonomous operations/month', 'Standard monitoring', 'Email support']
       },
-      professional: { 
-        price: 1499, 
-        period: 'month', 
-        features: ['Advanced autonomous capabilities', 'Unlimited operations', 'Custom workflows', 'Priority support', 'API access'] 
+      professional: {
+        price: 1499,
+        period: 'month',
+        features: ['Advanced autonomous capabilities', 'Unlimited operations', 'Custom workflows', 'Priority support', 'API access']
       },
-      enterprise: { 
-        price: 3999, 
-        period: 'month', 
-        features: ['Full autonomous ecosystem', 'White-label solution', 'Dedicated support', 'Custom development', '24/7 monitoring'] 
+      enterprise: {
+        price: 3999,
+        period: 'month',
+        features: ['Full autonomous ecosystem', 'White-label solution', 'Dedicated support', 'Custom development', '24/7 monitoring']
       }
     },
     category: 'AI Autonomy',
@@ -175,20 +175,20 @@ export const cuttingEdgeAIServices2025 = [
       'Integration with regulatory frameworks and standards'
     ],
     pricing: {
-      starter: { 
-        price: 299, 
-        period: 'month', 
-        features: ['Basic ethics monitoring', 'Up to 50 AI models', 'Standard reporting', 'Email support'] 
+      starter: {
+        price: 299,
+        period: 'month',
+        features: ['Basic ethics monitoring', 'Up to 50 AI models', 'Standard reporting', 'Email support']
       },
-      professional: { 
-        price: 799, 
-        period: 'month', 
-        features: ['Advanced ethics tools', 'Unlimited models', 'Custom frameworks', 'Priority support', 'API access'] 
+      professional: {
+        price: 799,
+        period: 'month',
+        features: ['Advanced ethics tools', 'Unlimited models', 'Custom frameworks', 'Priority support', 'API access']
       },
-      enterprise: { 
-        price: 1999, 
-        period: 'month', 
-        features: ['Full ethics platform', 'White-label solution', 'Dedicated support', 'Custom development', '24/7 monitoring'] 
+      enterprise: {
+        price: 1999,
+        period: 'month',
+        features: ['Full ethics platform', 'White-label solution', 'Dedicated support', 'Custom development', '24/7 monitoring']
       }
     },
     category: 'AI Ethics',
@@ -228,20 +228,20 @@ export const cuttingEdgeAIServices2025 = [
       'Real-time creative collaboration and feedback'
     ],
     pricing: {
-      starter: { 
-        price: 199, 
-        period: 'month', 
-        features: ['Basic creative tools', 'Up to 100 creations/month', 'Standard templates', 'Email support'] 
+      starter: {
+        price: 199,
+        period: 'month',
+        features: ['Basic creative tools', 'Up to 100 creations/month', 'Standard templates', 'Email support']
       },
-      professional: { 
-        price: 599, 
-        period: 'month', 
-        features: ['Advanced creative capabilities', 'Unlimited creations', 'Custom models', 'Priority support', 'API access'] 
+      professional: {
+        price: 599,
+        period: 'month',
+        features: ['Advanced creative capabilities', 'Unlimited creations', 'Custom models', 'Priority support', 'API access']
       },
-      enterprise: { 
-        price: 1499, 
-        period: 'month', 
-        features: ['Full creative studio', 'White-label solution', 'Dedicated support', 'Custom development', '24/7 monitoring'] 
+      enterprise: {
+        price: 1499,
+        period: 'month',
+        features: ['Full creative studio', 'White-label solution', 'Dedicated support', 'Custom development', '24/7 monitoring']
       }
     },
     category: 'AI Creativity',

@@ -1,12 +1,12 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { 
-  Heart, 
-  Brain, 
-  TrendingUp, 
-  Users, 
-  Database, 
-  BarChart3, 
+import {
+  Heart,
+  Brain,
+  TrendingUp,
+  Users,
+  Database,
+  BarChart3,
   Zap,
   CheckCircle,
   ArrowRight,
@@ -224,12 +224,12 @@ export default function AIHealthcarePredictiveAnalytics() {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-red-900 to-slate-900">
-      <SEO 
+      <SEO
         title="AI Healthcare Predictive Analytics Platform | Zion Tech Group"
         description="Revolutionize healthcare with AI-powered predictive analytics. Predict diseases, optimize treatments, and improve patient outcomes with 94% accuracy."
         keywords="AI healthcare analytics, predictive medicine, disease prediction, patient risk assessment, clinical analytics, healthcare AI"
       />
-      
+
       {/* Hero Section */}
       <section className="relative py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto text-center">
@@ -242,19 +242,19 @@ export default function AIHealthcarePredictiveAnalytics() {
               <Heart className="w-4 h-4 mr-2" />
               AI-Powered Healthcare Analytics
             </div>
-            
+
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
               AI Healthcare
               <span className="block text-transparent bg-clip-text bg-gradient-to-r from-red-400 to-pink-400">
                 Predictive Analytics
               </span>
             </h1>
-            
+
             <p className="text-xl text-slate-300 mb-8 max-w-3xl mx-auto">
-              Transform healthcare with AI-powered predictive analytics. Predict diseases with 94% accuracy, 
+              Transform healthcare with AI-powered predictive analytics. Predict diseases with 94% accuracy,
               optimize treatments, and improve patient outcomes through intelligent data analysis.
             </p>
-            
+
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="px-8 py-4 bg-gradient-to-r from-red-600 to-pink-600 text-white font-semibold rounded-lg hover:from-red-700 hover:to-pink-700 transition-all duration-300 transform hover:scale-105">
                 Start Free Trial
@@ -284,7 +284,7 @@ export default function AIHealthcarePredictiveAnalytics() {
               Everything you need to predict, prevent, and optimize healthcare delivery
             </p>
           </motion.div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index) => (
               <motion.div
@@ -323,7 +323,7 @@ export default function AIHealthcarePredictiveAnalytics() {
               Specialized AI solutions for every medical specialty
             </p>
           </motion.div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {clinicalApplications.map((application, index) => (
               <motion.div
@@ -362,7 +362,7 @@ export default function AIHealthcarePredictiveAnalytics() {
               Transform your healthcare delivery and unlock new levels of patient care
             </p>
           </motion.div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {benefits.map((benefit, index) => (
               <motion.div
@@ -398,7 +398,7 @@ export default function AIHealthcarePredictiveAnalytics() {
               Built with healthcare-grade security and compliance standards
             </p>
           </motion.div>
-          
+
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
             {complianceFeatures.map((feature, index) => (
               <motion.div
@@ -434,7 +434,7 @@ export default function AIHealthcarePredictiveAnalytics() {
               From small clinics to large health systems, our platform scales with your needs
             </p>
           </motion.div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {useCases.map((useCase, index) => (
               <motion.div
@@ -473,7 +473,7 @@ export default function AIHealthcarePredictiveAnalytics() {
               Choose the plan that fits your healthcare organization size and needs
             </p>
           </motion.div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {pricingPlans.map((plan, index) => (
               <motion.div
@@ -483,8 +483,8 @@ export default function AIHealthcarePredictiveAnalytics() {
                 transition={{ duration: 0.8, delay: index * 0.1 }}
                 viewport={{ once: true }}
                 className={`relative bg-slate-800/50 backdrop-blur-sm border rounded-xl p-8 ${
-                  plan.popular 
-                    ? 'border-red-500/50 bg-gradient-to-br from-red-900/20 to-pink-900/20' 
+                  plan.popular
+                    ? 'border-red-500/50 bg-gradient-to-br from-red-900/20 to-pink-900/20'
                     : 'border-slate-700/50'
                 }`}
               >
@@ -495,7 +495,7 @@ export default function AIHealthcarePredictiveAnalytics() {
                     </span>
                   </div>
                 )}
-                
+
                 <div className="text-center mb-8">
                   <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
                   <div className="flex items-baseline justify-center mb-2">
@@ -504,7 +504,7 @@ export default function AIHealthcarePredictiveAnalytics() {
                   </div>
                   <p className="text-slate-300">{plan.description}</p>
                 </div>
-                
+
                 <ul className="space-y-4 mb-8">
                   {plan.features.map((feature, featureIndex) => (
                     <li key={featureIndex} className="flex items-start space-x-3">
@@ -513,7 +513,7 @@ export default function AIHealthcarePredictiveAnalytics() {
                     </li>
                   ))}
                 </ul>
-                
+
                 <button className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
                   plan.popular
                     ? 'bg-gradient-to-r from-red-600 to-pink-600 text-white hover:from-red-700 hover:to-pink-700'
@@ -542,7 +542,7 @@ export default function AIHealthcarePredictiveAnalytics() {
             <p className="text-xl text-slate-300 mb-8">
               Join hundreds of healthcare organizations who have already improved patient care with AI
             </p>
-            
+
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="px-8 py-4 bg-gradient-to-r from-red-600 to-pink-600 text-white font-semibold rounded-lg hover:from-red-700 hover:to-pink-700 transition-all duration-300 transform hover:scale-105">
                 Start Free Trial
@@ -551,7 +551,7 @@ export default function AIHealthcarePredictiveAnalytics() {
                 Schedule Demo
               </button>
             </div>
-            
+
             <p className="text-slate-400 mt-6">
               No credit card required • 14-day free trial • Cancel anytime
             </p>
@@ -574,7 +574,7 @@ export default function AIHealthcarePredictiveAnalytics() {
             <p className="text-xl text-slate-300 mb-8">
               Our healthcare experts are here to help you get started and answer any questions
             </p>
-            
+
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
               <div className="flex flex-col items-center">
                 <Phone className="w-8 h-8 text-red-400 mb-3" />
@@ -592,7 +592,7 @@ export default function AIHealthcarePredictiveAnalytics() {
                 <p className="text-slate-300">{contactInfo.address}</p>
               </div>
             </div>
-            
+
             <a
               href={`mailto:${contactInfo.email}`}
               className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-red-600 to-pink-600 text-white font-semibold rounded-lg hover:from-red-700 hover:to-pink-700 transition-all duration-300"

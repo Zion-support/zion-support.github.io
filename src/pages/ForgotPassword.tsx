@@ -1,13 +1,13 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { 
-  Mail, 
-  ArrowLeft, 
-  CheckCircle, 
-  AlertCircle, 
-  Shield, 
-  Lock, 
+import {
+  Mail,
+  ArrowLeft,
+  CheckCircle,
+  AlertCircle,
+  Shield,
+  Lock,
   Zap,
   Brain,
   Cloud,
@@ -41,7 +41,7 @@ const ForgotPassword: React.FC = () => {
     try {
       // Simulate API call
       await new Promise(resolve => setTimeout(resolve, 2000));
-      
+
       setSuccess('Verification code sent to your email!');
       setStep('verification');
     } catch (err) {
@@ -64,7 +64,7 @@ const ForgotPassword: React.FC = () => {
     try {
       // Simulate API call
       await new Promise(resolve => setTimeout(resolve, 1500));
-      
+
       setSuccess('Code verified! Please set your new password.');
       setStep('reset');
     } catch (err) {
@@ -91,7 +91,7 @@ const ForgotPassword: React.FC = () => {
     try {
       // Simulate API call
       await new Promise(resolve => setTimeout(resolve, 2000));
-      
+
       setSuccess('Password reset successfully! Redirecting to login...');
       setTimeout(() => {
         window.location.href = '/login';
@@ -470,7 +470,7 @@ const ForgotPassword: React.FC = () => {
       {/* Right Side - Benefits */}
       <div className="hidden lg:flex flex-1 bg-gradient-to-br from-cyan-500/20 via-blue-500/20 to-purple-500/20 relative overflow-hidden">
         <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg%20width%3D%2260%22%20height%3D%2260%22%20viewBox%3D%220%200%2060%2060%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Cg%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%3E%3Cg%20fill%3D%22%23ffffff%22%20fill-opacity%3D%220.05%22%3E%3Ccircle%20cx%3D%2230%22%20cy%3D%2230%22%20r%3D%222%22/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-50"></div>
-        
+
         <div className="relative z-10 flex items-center justify-center p-12">
           <div className="text-center max-w-lg">
             <motion.div

@@ -148,7 +148,7 @@ const ServicesShowcase = () => {
       {/* Hero Section */}
       <div className="relative overflow-hidden">
         <div className="absolute inset-0 bg-[linear-gradient(rgba(34,221,210,0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(34,221,210,0.1)_1px,transparent_1px)] bg-[size:50px_50px]"/>
-        
+
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-32 pb-20">
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }} className="text-center">
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
@@ -157,7 +157,7 @@ const ServicesShowcase = () => {
               </span>
             </h1>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-              Discover our comprehensive portfolio of cutting-edge technology solutions, 
+              Discover our comprehensive portfolio of cutting-edge technology solutions,
               from AI and cloud services to emerging technologies and specialized enterprise solutions.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
@@ -183,7 +183,7 @@ const ServicesShowcase = () => {
                 <h2 className="text-3xl font-bold text-white mb-4">{category.category}</h2>
                 <div className="w-24 h-1 bg-gradient-to-r from-blue-600 to-cyan-600 mx-auto"></div>
               </div>
-              
+
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 {category.services.map((service, serviceIndex) => (<motion.div key={service.name} variants={itemVariants} className="bg-slate-800/50 backdrop-blur-sm rounded-xl border border-slate-700/50 p-6 hover:border-blue-500/50 transition-all duration-300 group">
                     <div className="mb-4">
@@ -194,7 +194,7 @@ const ServicesShowcase = () => {
                         {service.description}
                       </p>
                     </div>
-                    
+
                     <div className="mb-6">
                       <h4 className="text-sm font-medium text-gray-300 mb-3">Key Features:</h4>
                       <ul className="space-y-2">
@@ -204,7 +204,7 @@ const ServicesShowcase = () => {
                           </li>))}
                       </ul>
                     </div>
-                    
+
                     <Link to={service.href} className="inline-flex items-center text-blue-400 hover:text-blue-300 font-medium text-sm group-hover:translate-x-1 transition-all duration-300">
                       Learn More
                       <svg className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -225,7 +225,7 @@ const ServicesShowcase = () => {
               Ready to Transform Your Business?
             </h2>
             <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
-              Let our team of experts help you implement the right technology solutions 
+              Let our team of experts help you implement the right technology solutions
               to drive growth and innovation in your organization.
             </p>
             <div className="flex flex-wrap justify-center gap-4">

@@ -61,13 +61,13 @@ const ScheduleDemo: React.FC = () => {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
-    
+
     try {
       // Simulate API call
       await new Promise(resolve => setTimeout(resolve, 2000));
       setIsSubmitted(true);
     } catch (error) {
-      console.error('Error submitting form:', error);
+      // console.error('Error submitting form:', error);
     } finally {
       setIsSubmitting(false);
     }
@@ -141,7 +141,7 @@ const ScheduleDemo: React.FC = () => {
         description="Book a personalized demo of our cutting-edge AI, quantum computing, and innovative technology solutions. See how we can transform your business."
         keywords="schedule demo, AI demo, quantum computing demo, Zion Tech Group demo, technology consultation"
       />
-      
+
       {/* Hero Section */}
       <section className="pt-32 pb-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto text-center">
@@ -190,7 +190,7 @@ const ScheduleDemo: React.FC = () => {
                 className="bg-slate-800/50 backdrop-blur-xl rounded-2xl border border-slate-700/50 p-8"
               >
                 <h2 className="text-2xl font-bold text-white mb-6">Book Your Demo</h2>
-                
+
                 <form onSubmit={handleSubmit} className="space-y-6">
                   {/* Personal Information */}
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-4">

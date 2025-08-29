@@ -1,10 +1,10 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { 
-  Brain, Shield, Cloud, Server, BarChart3, Users, ShoppingCart, 
-  MessageCircle, HelpCircle, DollarSign, Target, TrendingUp, 
-  Atom, Network, Eye, PenTool, Heart, Building, Truck, 
+import {
+  Brain, Shield, Cloud, Server, BarChart3, Users, ShoppingCart,
+  MessageCircle, HelpCircle, DollarSign, Target, TrendingUp,
+  Atom, Network, Eye, PenTool, Heart, Building, Truck,
   Lock, Smartphone, Mail, Video, Satellite, Leaf, Code,
   Zap, Star, Rocket, Globe, Cpu, ArrowRight, FileText,
   Workflow, Database, AlertTriangle, Package, Route, Factory,
@@ -173,19 +173,19 @@ const NewInnovativeServices2025: React.FC = () => {
               <Rocket className="w-5 h-5 text-indigo-400 mr-2" />
               <span className="text-indigo-300 font-medium">2025 New Services</span>
             </div>
-            
+
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
               New Innovative
               <span className="block text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 via-purple-500 to-pink-400">
                 Services 2025
               </span>
             </h1>
-            
+
             <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-              Discover our latest AI-powered micro SAAS services designed to transform your business operations, 
+              Discover our latest AI-powered micro SAAS services designed to transform your business operations,
               enhance customer experiences, and drive innovation across all industries.
             </p>
-            
+
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="px-8 py-4 bg-gradient-to-r from-indigo-500 to-purple-600 text-white font-semibold rounded-lg hover:from-indigo-400 hover:to-purple-500 transition-all duration-200 hover:scale-105 shadow-lg shadow-indigo-500/20">
                 Explore Services
@@ -270,9 +270,9 @@ const NewInnovativeServices2025: React.FC = () => {
                     <h3 className="text-xl font-semibold text-white">{service.title}</h3>
                   </div>
                 </div>
-                
+
                 <p className="text-gray-300 mb-4">{service.description}</p>
-                
+
                 <div className="mb-4">
                   <span className="text-lg font-bold text-white">{service.price}</span>
                 </div>

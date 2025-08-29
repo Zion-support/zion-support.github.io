@@ -109,10 +109,10 @@ export function CategoriesSection({ showTitle = true }: CategoriesSectionProps) 
       <div className="absolute inset-0 opacity-5">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_1px_1px,rgba(255,255,255,0.15)_1px,transparent_0)] bg-[length:30px_30px]"></div>
       </div>
-      
+
       <div className="container mx-auto px-4 relative z-10">
         {showTitle && (
-          <motion.div 
+          <motion.div
             className="text-center mb-16"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
@@ -124,8 +124,8 @@ export function CategoriesSection({ showTitle = true }: CategoriesSectionProps) 
             </p>
           </motion.div>
         )}
-        
-        <motion.div 
+
+        <motion.div
           className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-16"
           variants={containerVariants}
           initial="hidden"
@@ -133,8 +133,8 @@ export function CategoriesSection({ showTitle = true }: CategoriesSectionProps) 
         >
           {categories.map((category, index) => (
             <motion.div key={category.title} variants={itemVariants}>
-              <Link 
-                to={category.link} 
+              <Link
+                to={category.link}
                 className="group block h-full"
               >
                 <div className="rounded-2xl overflow-hidden h-full border border-zion-blue-light bg-gradient-to-br from-zion-blue-dark/80 to-zion-blue-dark p-6 transition-all duration-500 hover:border-zion-purple/50 hover:translate-y-[-8px] hover:shadow-2xl hover:shadow-zion-purple/20">
@@ -143,15 +143,15 @@ export function CategoriesSection({ showTitle = true }: CategoriesSectionProps) 
                       {category.icon}
                     </div>
                   </div>
-                  
+
                   <h3 className="text-white text-xl font-bold mb-3 group-hover:text-zion-cyan transition-colors">
                     {category.title}
                   </h3>
-                  
+
                   <p className="text-zion-slate-light mb-4 text-sm leading-relaxed">
                     {category.description}
                   </p>
-                  
+
                   {/* Features */}
                   <div className="space-y-2 mb-4">
                     {category.features.map((feature, idx) => (
@@ -161,12 +161,12 @@ export function CategoriesSection({ showTitle = true }: CategoriesSectionProps) 
                       </div>
                     ))}
                   </div>
-                  
+
                   {/* Stats */}
                   <div className="text-zion-cyan text-sm font-semibold mb-4">
                     {category.stats}
                   </div>
-                  
+
                   {/* Arrow indicator */}
                   <div className="flex items-center justify-between">
                     <span className="text-zion-slate-light text-sm group-hover:text-zion-cyan transition-colors">
@@ -179,8 +179,8 @@ export function CategoriesSection({ showTitle = true }: CategoriesSectionProps) 
             </motion.div>
           ))}
         </motion.div>
-        
-        <motion.div 
+
+        <motion.div
           className="mb-12"
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
@@ -195,7 +195,7 @@ export function CategoriesSection({ showTitle = true }: CategoriesSectionProps) 
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.6, delay: 0.5 + index * 0.1 }}
               >
-                <Link 
+                <Link
                   to={service.link}
                   className="block p-4 bg-zion-blue-light/20 hover:bg-zion-blue-light/30 border border-zion-purple/20 hover:border-zion-purple/50 rounded-xl text-zion-cyan transition-all duration-300 hover:shadow-lg hover:shadow-zion-purple/20 group"
                 >
@@ -213,15 +213,15 @@ export function CategoriesSection({ showTitle = true }: CategoriesSectionProps) 
             ))}
           </div>
         </motion.div>
-        
-        <motion.div 
+
+        <motion.div
           className="text-center"
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.6 }}
         >
-          <Link 
-            to="/categories" 
+          <Link
+            to="/categories"
             className="inline-flex items-center gap-2 text-zion-cyan border-b-2 border-zion-cyan hover:border-zion-cyan-dark transition-colors text-lg font-semibold group"
           >
             Explore All Categories

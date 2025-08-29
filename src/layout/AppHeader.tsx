@@ -136,7 +136,7 @@ export function AppHeader() {
     <div className="absolute inset-0 overflow-hidden pointer-events-none">
       {/* Animated grid with neon effect */}
       <div className="absolute inset-0 bg-[linear-gradient(rgba(6,182,212,0.05)_1px,transparent_1px),linear-gradient(90deg,rgba(6,182,212,0.05)_1px,transparent_1px)] bg-[size:50px_50px] animate-pulse"></div>
-      
+
       {/* Enhanced floating particles with neon glow */}
       <div className="absolute inset-0">
         {[...Array(20)].map((_, i) => (
@@ -162,9 +162,9 @@ export function AppHeader() {
           />
         ))}
       </div>
-      
+
       {/* Enhanced gradient orbs with neon glow */}
-      <motion.div 
+      <motion.div
         className="absolute top-0 left-0 w-64 h-64 bg-gradient-to-r from-cyan-500/10 to-blue-500/10 rounded-full blur-2xl"
         animate={{
           scale: [1, 1.2, 1],
@@ -176,7 +176,7 @@ export function AppHeader() {
           ease: "easeInOut"
         }}
       />
-      <motion.div 
+      <motion.div
         className="absolute top-0 right-0 w-48 h-48 bg-gradient-to-r from-purple-500/10 to-pink-500/10 rounded-full blur-2xl"
         animate={{
           scale: [1.2, 1, 1.2],
@@ -194,17 +194,17 @@ export function AppHeader() {
 
   return (
     <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-      scrolled 
-        ? 'bg-zion-slate-dark/95 backdrop-blur-md border-b border-cyan-400/20 shadow-lg shadow-cyan-500/10' 
+      scrolled
+        ? 'bg-zion-slate-dark/95 backdrop-blur-md border-b border-cyan-400/20 shadow-lg shadow-cyan-500/10'
         : 'bg-transparent'
     }`}>
       {/* Enhanced Animated Background */}
       <FuturisticBackground />
-      
+
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16 lg:h-20">
           {/* Logo */}
-          <motion.div 
+          <motion.div
             className="flex items-center"
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
@@ -278,7 +278,7 @@ export function AppHeader() {
                         </div>
                       ))}
                     </div>
-                    
+
                     {/* Quick Links Section */}
                     <div className="mt-6 pt-6 border-t border-cyan-400/20">
                       <h3 className="text-lg font-semibold text-white mb-4">Quick Access</h3>

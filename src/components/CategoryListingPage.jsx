@@ -85,7 +85,7 @@ export function CategoryListingPage({ title, description, listings: initialListi
                 <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate"/>
                 <Input type="text" placeholder="Search listings..." value={searchQuery} onChange={(e) => setSearchQuery(e.target.value)} className="pl-10 bg-zion-blue border border-zion-blue-light text-white"/>
               </div>
-              
+
               <Select value={selectedSort} onValueChange={setSelectedSort}>
                 <SelectTrigger className="bg-zion-blue border border-zion-blue-light text-white">
                   <div className="flex items-center">

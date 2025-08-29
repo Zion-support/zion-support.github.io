@@ -13,20 +13,20 @@ export default function AIComplianceMonitoring() {
   ];
 
   const tiers = [
-    { 
-      name: 'Developer', 
-      price: '$499/mo', 
-      details: ['Up to 10 regulations', 'Basic AI features', 'Standard monitoring', 'Email support'] 
+    {
+      name: 'Developer',
+      price: '$499/mo',
+      details: ['Up to 10 regulations', 'Basic AI features', 'Standard monitoring', 'Email support']
     },
-    { 
-      name: 'Business', 
-      price: '$1,299/mo', 
-      details: ['Up to 50 regulations', 'Advanced AI features', 'Enhanced monitoring', 'Priority support'] 
+    {
+      name: 'Business',
+      price: '$1,299/mo',
+      details: ['Up to 50 regulations', 'Advanced AI features', 'Enhanced monitoring', 'Priority support']
     },
-    { 
-      name: 'Enterprise', 
-      price: '$2,999/mo', 
-      details: ['Unlimited regulations', 'Custom AI models', 'Full compliance suite', '24/7 dedicated support'] 
+    {
+      name: 'Enterprise',
+      price: '$2,999/mo',
+      details: ['Unlimited regulations', 'Custom AI models', 'Full compliance suite', '24/7 dedicated support']
     },
   ];
 

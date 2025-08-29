@@ -29,10 +29,10 @@ const ServicesMarketingPage = () => {
             </span>
           </h1>
           <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
-            Discover our cutting-edge micro SAAS services, specialized IT solutions, and innovative AI platforms 
+            Discover our cutting-edge micro SAAS services, specialized IT solutions, and innovative AI platforms
             designed to give your business a competitive edge in 2025 and beyond.
           </p>
-          
+
           {/* Key Statistics */}
           <div className="grid grid-cols-1 md:grid-cols-4 gap-6 mb-12">
             <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
@@ -73,7 +73,7 @@ const ServicesMarketingPage = () => {
               Why Choose Zion Tech Group?
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              We're not just another technology company. We're pioneers in revolutionary solutions that 
+              We're not just another technology company. We're pioneers in revolutionary solutions that
               combine cutting-edge AI, quantum computing, and autonomous systems.
             </p>
           </div>
@@ -85,7 +85,7 @@ const ServicesMarketingPage = () => {
               </div>
               <h3 className="text-2xl font-bold text-white mb-4">First-Mover Advantage</h3>
               <p className="text-gray-300 mb-6">
-                Be among the first to leverage quantum-AI hybrid solutions, autonomous systems, 
+                Be among the first to leverage quantum-AI hybrid solutions, autonomous systems,
                 and next-generation blockchain technology.
               </p>
               <ul className="text-gray-400 space-y-2">
@@ -136,7 +136,7 @@ const ServicesMarketingPage = () => {
               Comprehensive Service Portfolio
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              From micro SAAS solutions to enterprise AI platforms, we cover every aspect of 
+              From micro SAAS solutions to enterprise AI platforms, we cover every aspect of
               modern technology needs.
             </p>
           </div>
@@ -244,7 +244,7 @@ const ServicesMarketingPage = () => {
                 See how our revolutionary services can transform your business metrics
               </p>
             </div>
-            
+
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
               <div className="text-center">
                 <div className="text-4xl font-bold text-blue-400 mb-2">300-2000%</div>
@@ -279,10 +279,10 @@ const ServicesMarketingPage = () => {
             Ready to Transform Your Business?
           </h2>
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-            Join hundreds of forward-thinking companies that are already leveraging our revolutionary 
+            Join hundreds of forward-thinking companies that are already leveraging our revolutionary
             technology services to gain a competitive edge.
           </p>
-          
+
           <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 mb-8">
             <h3 className="text-2xl font-semibold text-white mb-6">Contact Zion Tech Group</h3>
             <div className="grid grid-cols-1 md:grid-cols-4 gap-6 text-gray-300 mb-8">
@@ -303,7 +303,7 @@ const ServicesMarketingPage = () => {
                 <p className="text-lg">364 E Main St STE 1008<br />Middletown DE 19709</p>
               </div>
             </div>
-            
+
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a href="tel:+13024640950" className="bg-green-600 text-white px-8 py-4 rounded-lg font-semibold text-xl hover:bg-green-700 transition-all duration-300 shadow-lg hover:shadow-xl">
                 📞 Call Now: +1 302 464 0950

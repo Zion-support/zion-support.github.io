@@ -205,7 +205,7 @@ export function GlobalPresenceSection() {
             Global <span className="bg-gradient-to-r from-zion-cyan to-zion-purple bg-clip-text text-transparent">Presence</span>
           </h2>
           <p className="text-zion-slate-light text-lg md:text-xl max-w-4xl mx-auto leading-relaxed mb-8">
-            From Silicon Valley to Singapore, Zion Tech Group operates across six continents, 
+            From Silicon Valley to Singapore, Zion Tech Group operates across six continents,
             serving clients worldwide with localized expertise and global innovation.
           </p>
 
@@ -226,7 +226,7 @@ export function GlobalPresenceSection() {
           <h3 className="text-3xl font-bold text-white text-center mb-12">
             Our <span className="bg-gradient-to-r from-zion-cyan to-zion-purple bg-clip-text text-transparent">Global Offices</span>
           </h3>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {globalOffices.map((office, index) => (<motion.div key={office.id} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.4, delay: index * 0.1 }} whileHover={{ y: -4 }} className="relative">
                 <div className="h-full p-6 rounded-2xl bg-gradient-to-br from-zion-blue-dark/80 to-zion-blue-dark/40 backdrop-blur-sm border border-zion-blue-light/30 hover:border-zion-cyan/50 transition-all duration-300 hover:shadow-lg hover:shadow-zion-cyan/20 group cursor-pointer" onClick={() => setSelectedOffice(selectedOffice === office.id ? null : office.id)}>
@@ -310,7 +310,7 @@ export function GlobalPresenceSection() {
           <h3 className="text-3xl font-bold text-white text-center mb-12">
             Strategic <span className="bg-gradient-to-r from-zion-cyan to-zion-purple bg-clip-text text-transparent">Partnerships</span>
           </h3>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {partnerships.map((partnership, index) => (<motion.div key={index} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.4, delay: index * 0.1 }} whileHover={{ y: -4 }} className="relative">
                 <div className="h-full p-6 rounded-2xl bg-gradient-to-br from-zion-blue-dark/80 to-zion-blue-dark/40 backdrop-blur-sm border border-zion-blue-light/30 hover:border-zion-cyan/50 transition-all duration-300 hover:shadow-lg hover:shadow-zion-cyan/20 group cursor-pointer" onClick={() => setSelectedPartnership(selectedPartnership === index ? null : index)}>
@@ -361,11 +361,11 @@ export function GlobalPresenceSection() {
           <h3 className="text-3xl font-bold text-white text-center mb-12">
             Industry <span className="bg-gradient-to-r from-zion-cyan to-zion-purple bg-clip-text text-transparent">Presence</span>
           </h3>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {industries.map((industry, index) => (<motion.div key={index} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.4, delay: index * 0.1 }} onHoverStart={() => setHoveredIndustry(index)} onHoverEnd={() => setHoveredIndustry(null)} whileHover={{ y: -4 }} className="p-6 rounded-2xl bg-gradient-to-br from-zion-blue-dark/80 to-zion-blue-dark/40 backdrop-blur-sm border border-zion-blue-light/30 hover:border-zion-cyan/50 transition-all duration-300 hover:shadow-lg hover:shadow-zion-cyan/20">
                 <h4 className="text-xl font-bold text-white mb-4">{industry.name}</h4>
-                
+
                 <div className="grid grid-cols-3 gap-4 text-center mb-4">
                   <div>
                     <div className="text-zion-cyan font-bold text-lg">{industry.projects}</div>
@@ -392,7 +392,7 @@ export function GlobalPresenceSection() {
                 Ready to Go Global with Zion?
               </h3>
               <p className="text-zion-slate-light mb-6 max-w-2xl mx-auto">
-                Whether you're in San Francisco or Singapore, our global team is ready to help you 
+                Whether you're in San Francisco or Singapore, our global team is ready to help you
                 scale your business worldwide with cutting-edge technology solutions.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">

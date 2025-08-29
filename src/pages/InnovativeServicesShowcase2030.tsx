@@ -1,15 +1,15 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
-import { 
-  Brain, 
-  Shield, 
-  Cloud, 
-  Zap, 
-  Star, 
-  CheckCircle, 
-  Phone, 
-  Mail, 
-  MapPin, 
+import {
+  Brain,
+  Shield,
+  Cloud,
+  Zap,
+  Star,
+  CheckCircle,
+  Phone,
+  Mail,
+  MapPin,
   ExternalLink,
   TrendingUp,
   Users,

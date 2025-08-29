@@ -1,15 +1,15 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import { 
-  CheckCircle, 
-  Star, 
-  Zap, 
-  Brain, 
-  Network, 
-  PenTool, 
-  Code, 
-  Shield, 
+import {
+  CheckCircle,
+  Star,
+  Zap,
+  Brain,
+  Network,
+  PenTool,
+  Code,
+  Shield,
   Cpu,
   TrendingUp,
   Users,
@@ -122,8 +122,8 @@ const ComprehensivePricing2028 = () => {
     }
   ];
 
-  const filteredServices = selectedCategory === 'all' 
-    ? services 
+  const filteredServices = selectedCategory === 'all'
+    ? services
     : services.filter(service => service.category === selectedCategory);
 
   const getColorClasses = (color: string) => {
@@ -172,7 +172,7 @@ const ComprehensivePricing2028 = () => {
               </span>
             </h1>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-              Choose the perfect plan for your business needs. All our AI-powered micro SAAS services come with 
+              Choose the perfect plan for your business needs. All our AI-powered micro SAAS services come with
               flexible pricing options designed to scale with your growth.
             </p>
           </motion.div>
@@ -221,10 +221,10 @@ const ComprehensivePricing2028 = () => {
                     {service.category.replace('-', ' ').replace(/\b\w/g, l => l.toUpperCase())}
                   </span>
                 </div>
-                
+
                 <h3 className="text-2xl font-bold text-white mb-4">{service.title}</h3>
                 <p className="text-gray-300 mb-6">{service.description}</p>
-                
+
                 {/* Pricing Plans */}
                 <div className="mb-6">
                   <h4 className="text-lg font-semibold text-white mb-4">Pricing Plans</h4>
@@ -255,7 +255,7 @@ const ComprehensivePricing2028 = () => {
                     ))}
                   </div>
                 </div>
-                
+
                 {/* Expandable Details */}
                 <div className="border-t border-slate-700/50 pt-6">
                   <button
@@ -269,7 +269,7 @@ const ComprehensivePricing2028 = () => {
                       <ChevronDown className="w-5 h-5 text-gray-400" />
                     )}
                   </button>
-                  
+
                   {expandedService === service.id && (
                     <motion.div
                       initial={{ opacity: 0, height: 0 }}
@@ -284,7 +284,7 @@ const ComprehensivePricing2028 = () => {
                           {/* Features will be added here based on service.features */}
                         </div>
                       </div>
-                      
+
                       <div>
                         <h5 className="text-md font-semibold text-white mb-2">Key Benefits</h5>
                         <div className="grid grid-cols-2 gap-2">
@@ -296,7 +296,7 @@ const ComprehensivePricing2028 = () => {
                           ))}
                         </div>
                       </div>
-                      
+
                       <div>
                         <h5 className="text-md font-semibold text-white mb-2">Use Cases</h5>
                         <div className="flex flex-wrap gap-2">
@@ -313,7 +313,7 @@ const ComprehensivePricing2028 = () => {
                     </motion.div>
                   )}
                 </div>
-                
+
                 <div className="mt-6">
                   <Link
                     to={`/services/${service.id}`}

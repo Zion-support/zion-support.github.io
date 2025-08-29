@@ -22,17 +22,17 @@ export default function AIBusinessIntelligence() {
                 <Brain className="w-4 h-4 mr-2" />
                 AI-Powered Business Intelligence
               </div>
-              
+
               <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
                 AI Business
                 <span className="bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent"> Intelligence</span>
               </h1>
-              
+
               <p className="text-xl text-slate-300 mb-8 max-w-3xl mx-auto">
-                Transform raw data into strategic insights with AI-powered business intelligence. 
+                Transform raw data into strategic insights with AI-powered business intelligence.
                 Make data-driven decisions with predictive analytics, intelligent reporting, and real-time dashboards.
               </p>
-              
+
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link
                   to="/contact"
@@ -58,7 +58,7 @@ export default function AIBusinessIntelligence() {
                 Intelligent Data Analytics
               </h2>
               <p className="text-xl text-slate-300 max-w-2xl mx-auto">
-                Our AI-powered BI platform delivers actionable insights that drive strategic decision-making 
+                Our AI-powered BI platform delivers actionable insights that drive strategic decision-making
                 and business growth.
               </p>
             </div>

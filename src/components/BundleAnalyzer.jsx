@@ -87,7 +87,7 @@ export const BundleAnalyzer = () => {
             setAnalysis(mockAnalysis);
         }
         catch (error) {
-            console.error('Bundle analysis failed:', error);
+            // console.error('Bundle analysis failed:', error);
         }
         finally {
             setIsAnalyzing(false);
@@ -255,7 +255,7 @@ export const BundleAnalyzer = () => {
                           </div>
                         </div>
                       </div>
-                      
+
                       {chunk.optimization !== 'good' && (<div className="flex items-center gap-2 text-xs text-gray-600 dark:text-gray-400">
                           {getOptimizationIcon(chunk.optimization)}
                           <span>
@@ -278,7 +278,7 @@ export const BundleAnalyzer = () => {
                         </p>
                       </div>
                     </div>))}
-                  
+
                   <div className="mt-4 p-3 bg-yellow-50 dark:bg-yellow-900/20 border border-yellow-200 dark:border-yellow-800 rounded-lg">
                     <div className="flex items-start gap-2">
                       <Info className="w-4 h-4 text-yellow-600 dark:text-yellow-400 mt-0.5 flex-shrink-0"/>

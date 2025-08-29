@@ -1,12 +1,12 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { SEO } from '@/components/SEO';
-import { 
-  MessageCircle, 
-  Headphones, 
-  Zap, 
-  Brain, 
-  Shield, 
+import {
+  MessageCircle,
+  Headphones,
+  Zap,
+  Brain,
+  Shield,
   Clock,
   CheckCircle,
   TrendingUp,
@@ -120,12 +120,12 @@ export default function AICustomerSupport() {
 
   return (
     <>
-      <SEO 
+      <SEO
         title="AI Customer Support - 24/7 Intelligent Support Solution"
         description="Transform your customer support with AI-powered chatbots, smart ticket routing, and multi-channel support. Reduce response time by 80% and boost satisfaction scores."
         canonical="/services/ai-customer-support"
       />
-      
+
       <div className="min-h-screen bg-futuristic">
         {/* Hero Section */}
         <section className="relative py-20 overflow-hidden">
@@ -141,7 +141,7 @@ export default function AICustomerSupport() {
                 AI Customer Support
               </h1>
               <p className="text-xl md:text-2xl text-gray-300 mb-8">
-                Provide 24/7 intelligent customer support with AI-powered chatbots, 
+                Provide 24/7 intelligent customer support with AI-powered chatbots,
                 smart ticket routing, and multi-channel assistance.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -169,7 +169,7 @@ export default function AICustomerSupport() {
                 AI-Powered Support Features
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Leverage artificial intelligence to provide exceptional customer support 
+                Leverage artificial intelligence to provide exceptional customer support
                 that's fast, accurate, and available around the clock.
               </p>
             </motion.div>
@@ -207,7 +207,7 @@ export default function AICustomerSupport() {
                 Proven Results
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Join hundreds of companies that have transformed their customer support 
+                Join hundreds of companies that have transformed their customer support
                 with AI-powered automation and intelligence.
               </p>
             </motion.div>
@@ -242,7 +242,7 @@ export default function AICustomerSupport() {
                 Simple, Transparent Pricing
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Choose the plan that fits your support volume and requirements. 
+                Choose the plan that fits your support volume and requirements.
                 All plans include a 14-day free trial.
               </p>
             </motion.div>
@@ -255,8 +255,8 @@ export default function AICustomerSupport() {
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
                   className={`relative bg-slate-800/50 backdrop-blur-sm border rounded-xl p-8 ${
-                    plan.popular 
-                      ? 'border-green-500/50 shadow-lg shadow-green-500/20' 
+                    plan.popular
+                      ? 'border-green-500/50 shadow-lg shadow-green-500/20'
                       : 'border-slate-700/50'
                   }`}
                 >
@@ -267,7 +267,7 @@ export default function AICustomerSupport() {
                       </span>
                     </div>
                   )}
-                  
+
                   <div className="text-center mb-8">
                     <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
                     <div className="flex items-baseline justify-center mb-2">
@@ -312,7 +312,7 @@ export default function AICustomerSupport() {
                 Ready to Transform Your Customer Support?
               </h2>
               <p className="text-xl text-gray-300 mb-8">
-                Join thousands of companies using AI to provide exceptional customer support 
+                Join thousands of companies using AI to provide exceptional customer support
                 that's fast, efficient, and available 24/7.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">

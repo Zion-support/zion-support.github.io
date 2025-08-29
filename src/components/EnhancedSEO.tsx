@@ -65,7 +65,7 @@ export const EnhancedSEO: React.FC<SEOProps> = ({
   const fullTitle = title.includes('Zion Tech Group') ? title : `${title} | Zion Tech Group`;
   const fullUrl = url || window.location.href;
   const fullCanonicalUrl = canonicalUrl || fullUrl;
-  
+
   // Default structured data for Zion Tech Group
   const defaultStructuredData = useMemo(() => ({
     '@context': 'https://schema.org',
@@ -137,20 +137,20 @@ export const EnhancedSEO: React.FC<SEOProps> = ({
       <meta name="description" content={description} />
       {keywords && <meta name="keywords" content={keywords} />}
       <meta name="author" content={author} />
-      
+
       {/* Canonical URL */}
       <link rel="canonical" href={fullCanonicalUrl} />
-      
+
       {/* Robots */}
       <meta name="robots" content={robots || `${noindex ? 'noindex' : 'index'},${nofollow ? 'nofollow' : 'follow'}`} />
-      
+
       {/* Viewport and Charset */}
       <meta name="viewport" content={viewport} />
       <meta charSet={charset} />
-      
+
       {/* Theme Color */}
       <meta name="theme-color" content={themeColor} />
-      
+
       {/* Open Graph */}
       <meta property="og:title" content={fullTitle} />
       <meta property="og:description" content={description} />
@@ -159,7 +159,7 @@ export const EnhancedSEO: React.FC<SEOProps> = ({
       <meta property="og:image" content={image} />
       <meta property="og:site_name" content="Zion Tech Group" />
       <meta property="og:locale" content="en_US" />
-      
+
       {/* Twitter Cards */}
       <meta name="twitter:card" content={twitterCard} />
       <meta name="twitter:site" content={twitterSite} />
@@ -167,7 +167,7 @@ export const EnhancedSEO: React.FC<SEOProps> = ({
       <meta name="twitter:title" content={fullTitle} />
       <meta name="twitter:description" content={description} />
       <meta name="twitter:image" content={image} />
-      
+
       {/* Article specific meta tags */}
       {type === 'article' && (
         <>
@@ -179,28 +179,28 @@ export const EnhancedSEO: React.FC<SEOProps> = ({
           ))}
         </>
       )}
-      
+
       {/* Icons and Manifest */}
       <link rel="icon" href={favicon} />
       <link rel="apple-touch-icon" href={appleTouchIcon} />
       <link rel="manifest" href={manifest} />
-      
+
       {/* Microsoft Tiles */}
       <meta name="msapplication-TileColor" content={msTileColor} />
       <meta name="msapplication-config" content={msConfig} />
-      
+
       {/* Structured Data */}
       <script type="application/ld+json">
         {JSON.stringify(finalStructuredData)}
       </script>
-      
+
       {/* Additional SEO optimizations */}
       <meta name="format-detection" content="telephone=no" />
       <meta name="mobile-web-app-capable" content="yes" />
       <meta name="apple-mobile-web-app-capable" content="yes" />
       <meta name="apple-mobile-web-app-status-bar-style" content="default" />
       <meta name="apple-mobile-web-app-title" content="Zion Tech Group" />
-      
+
       {/* Performance hints */}
       <link rel="dns-prefetch" href="//fonts.googleapis.com" />
       <link rel="dns-prefetch" href="//cdn.jsdelivr.net" />

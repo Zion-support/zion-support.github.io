@@ -65,7 +65,7 @@ const ComprehensiveServicesOverview2025 = () => {
             </span>
           </h1>
           <p className="text-xl text-gray-300 max-w-4xl mx-auto mb-8">
-            Explore our complete portfolio of innovative micro SAAS services, IT solutions, and AI platforms. 
+            Explore our complete portfolio of innovative micro SAAS services, IT solutions, and AI platforms.
             Each service is designed with cutting-edge technology and proven methodologies to drive business transformation.
           </p>
           {/* Navigation */}

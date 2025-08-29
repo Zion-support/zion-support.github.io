@@ -1,12 +1,12 @@
 import React, { useState, useCallback } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { 
-  Plus, 
-  MessageCircle, 
-  Phone, 
-  Mail, 
-  ArrowUp, 
-  Settings, 
+import {
+  Plus,
+  MessageCircle,
+  Phone,
+  Mail,
+  ArrowUp,
+  Settings,
   HelpCircle,
   X,
   ChevronUp,
@@ -30,13 +30,13 @@ export function FloatingActionButton({ enabled = true }: FloatingActionButtonPro
   const handleScroll = useCallback(() => {
     const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
     const isScrollingDown = scrollTop > (window as any).lastScrollTop;
-    
+
     if (isScrollingDown && scrollTop > 100) {
       setIsVisible(false);
     } else {
       setIsVisible(true);
     }
-    
+
     (window as any).lastScrollTop = scrollTop;
   }, []);
 
@@ -121,7 +121,7 @@ export function FloatingActionButton({ enabled = true }: FloatingActionButtonPro
           // Show app store links
           const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent);
           const isAndroid = /Android/.test(navigator.userAgent);
-          
+
           if (isIOS) {
             window.open('https://apps.apple.com/app/zion-tech-group/id123456789', '_blank');
           } else if (isAndroid) {
@@ -183,7 +183,7 @@ export function FloatingActionButton({ enabled = true }: FloatingActionButtonPro
                       aria-label={action.label}
                     >
                       <action.icon className="w-6 h-6 text-white" />
-                      
+
                       {/* Tooltip */}
                       <div className="absolute right-full mr-3 px-3 py-2 bg-gray-900 text-white text-sm rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-200 pointer-events-none whitespace-nowrap">
                         {action.label}

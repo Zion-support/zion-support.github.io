@@ -186,7 +186,7 @@ export default function BusinessSolutionsPage() {
             Business Solutions & Consulting
           </h1>
           <p className="text-xl text-zion-cyan-light max-w-3xl mx-auto mb-8">
-            Transform your business with strategic consulting, process optimization, and innovative solutions. 
+            Transform your business with strategic consulting, process optimization, and innovative solutions.
             We help organizations achieve sustainable growth and operational excellence.
           </p>
           <div className="flex flex-wrap justify-center gap-4">

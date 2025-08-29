@@ -121,7 +121,7 @@ export default function ComprehensiveServicesOverview() {
     };
     return (<>
       <SEOHead title="Comprehensive Technology Services - Zion Tech Group" description="Explore our comprehensive portfolio of cutting-edge technology services including AI, Quantum Computing, Cybersecurity, IT Infrastructure, and more. Transform your business with innovative solutions." keywords="technology services, AI services, quantum computing, cybersecurity, IT infrastructure, micro SaaS, autonomous systems, space technology, neurotechnology" image="/images/services-overview-og.jpg" canonical="https://ziontechgroup.com/comprehensive-services-overview"/>
-      
+
       <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-blue-dark relative overflow-hidden">
         {/* Animated Background */}
         <div className="absolute inset-0 overflow-hidden">
@@ -137,15 +137,15 @@ export default function ComprehensiveServicesOverview() {
               <Sparkles className="h-5 w-5 text-zion-cyan"/>
               <span className="text-zion-cyan font-medium">Complete Portfolio</span>
             </div>
-            
+
             <h1 className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold mb-8 bg-gradient-to-r from-white via-zion-cyan to-zion-purple bg-clip-text text-transparent leading-tight">
               Comprehensive Services Overview
             </h1>
-            
+
             <p className="text-lg md:text-xl lg:text-2xl text-zion-slate-light max-w-4xl mx-auto mb-10 leading-relaxed">
               Discover our complete portfolio of AI-powered services, IT solutions, and innovative micro SAAS platforms designed to transform your business operations and drive innovation.
             </p>
-            
+
             <div className="flex flex-wrap justify-center gap-4 mb-8">
               <div className="flex items-center gap-2 bg-zion-purple/20 border border-zion-purple/30 rounded-full px-4 py-2">
                 <CheckCircle className="h-4 w-4 text-zion-purple"/>
@@ -238,7 +238,7 @@ export default function ComprehensiveServicesOverview() {
                 {filteredServices.length} of {ALL_SERVICES.length} services
               </span>
             </div>
-            
+
             {filteredServices.length === 0 ? (<div className="text-center py-12">
                 <Search className="h-16 w-16 text-zion-slate-light mx-auto mb-4"/>
                 <h3 className="text-xl font-semibold text-white mb-2">No services found</h3>
@@ -262,7 +262,7 @@ export default function ComprehensiveServicesOverview() {
                             </div>
                           </div>
                         </div>
-                        
+
                         <CardTitle className="text-xl text-white group-hover:text-zion-cyan transition-colors">
                           {service.title}
                         </CardTitle>
@@ -270,7 +270,7 @@ export default function ComprehensiveServicesOverview() {
                           {service.description}
                         </CardDescription>
                       </CardHeader>
-                      
+
                       <CardContent className="space-y-4">
                         <div className="grid grid-cols-2 gap-4 text-sm">
                           {service.estimatedDelivery && (<div className="flex items-center gap-2 text-zion-slate-light">
@@ -282,7 +282,7 @@ export default function ComprehensiveServicesOverview() {
                               <span>{service.marketPrice}</span>
                             </div>)}
                         </div>
-                        
+
                         {service.features && service.features.length > 0 && (<div className="space-y-2">
                             <h4 className="font-semibold text-white text-sm">Key Features:</h4>
                             <div className="flex flex-wrap gap-2">
@@ -294,7 +294,7 @@ export default function ComprehensiveServicesOverview() {
                                 </Badge>)}
                             </div>
                           </div>)}
-                        
+
                         {'technologyStack' in service && service.technologyStack && service.technologyStack.length > 0 && (<div className="space-y-2">
                             <h4 className="font-semibold text-white text-sm">Technology Stack:</h4>
                             <div className="flex flex-wrap gap-2">
@@ -307,7 +307,7 @@ export default function ComprehensiveServicesOverview() {
                             </div>
                           </div>)}
                       </CardContent>
-                      
+
                       <CardFooter className="pt-0">
                         <div className="w-full space-y-3">
                           <Button className="w-full bg-gradient-to-r from-zion-purple to-zion-cyan hover:from-zion-purple/80 hover:to-zion-cyan/80 text-white" asChild>
@@ -316,7 +316,7 @@ export default function ComprehensiveServicesOverview() {
                               <ExternalLink className="ml-2 h-4 w-4"/>
                             </a>
                           </Button>
-                          
+
                           <div className="flex gap-2">
                             {'demoUrl' in service && service.demoUrl && (<Button variant="outline" size="sm" className="flex-1 bg-white/10 border-white/20 text-white hover:bg-white/20" asChild>
                                 <a href={service.demoUrl} target="_blank" rel="noopener noreferrer">
@@ -344,7 +344,7 @@ export default function ComprehensiveServicesOverview() {
             <p className="text-zion-slate-light mb-6 max-w-2xl mx-auto">
               Contact our team to learn more about these innovative services and how they can drive your business forward.
             </p>
-            
+
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
               <div className="text-center">
                 <Phone className="h-8 w-8 text-zion-cyan mx-auto mb-3"/>
@@ -362,7 +362,7 @@ export default function ComprehensiveServicesOverview() {
                 <p className="text-zion-slate-light">364 E Main St STE 1008<br />Middletown DE 19709</p>
               </div>
             </div>
-            
+
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button className="bg-gradient-to-r from-zion-purple to-zion-cyan hover:from-zion-purple/80 hover:to-zion-cyan/80 text-white" asChild>
                 <a href="mailto:kleber@ziontechgroup.com">

@@ -1,4 +1,3 @@
-import React from 'react';
 import { motion } from 'framer-motion';
 import { CheckCircleIcon, ClockIcon, UserGroupIcon, ShieldCheckIcon, RocketLaunchIcon, CogIcon } from '@heroicons/react/24/outline';
 export function FeaturesSection() {
@@ -64,7 +63,7 @@ export function FeaturesSection() {
       <div className="absolute inset-0 bg-gradient-to-br from-zion-slate-light to-white opacity-50"></div>
       <div className="absolute top-0 right-0 w-96 h-96 bg-zion-cyan/5 rounded-full blur-3xl"></div>
       <div className="absolute bottom-0 left-0 w-80 h-80 bg-zion-purple/5 rounded-full blur-3xl"></div>
-      
+
       <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.8 }} className="text-center mb-16">
@@ -72,7 +71,7 @@ export function FeaturesSection() {
             Why Choose Zion Tech Group?
           </h2>
           <p className="text-xl text-zion-slate max-w-3xl mx-auto">
-            We combine cutting-edge technology with proven methodologies to deliver 
+            We combine cutting-edge technology with proven methodologies to deliver
             exceptional results that drive your business forward.
           </p>
         </motion.div>
@@ -85,7 +84,7 @@ export function FeaturesSection() {
                 <div className={`w-16 h-16 bg-zion-slate-light/10 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-zion-cyan/10 transition-colors duration-300`}>
                   <feature.icon className={`w-8 h-8 ${feature.color}`}/>
                 </div>
-                
+
                 {/* Content */}
                 <h3 className="text-xl font-bold text-zion-blue-dark mb-4 group-hover:text-zion-cyan transition-colors duration-300">
                   {feature.title}
@@ -104,7 +103,7 @@ export function FeaturesSection() {
               Ready to Experience the Difference?
             </h3>
             <p className="text-zion-slate mb-6 max-w-2xl mx-auto">
-              Join hundreds of satisfied clients who have transformed their businesses 
+              Join hundreds of satisfied clients who have transformed their businesses
               with our innovative technology solutions.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">

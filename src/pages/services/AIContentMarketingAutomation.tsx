@@ -1,13 +1,13 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { SEO } from '@/components/SEO';
-import { 
-  Brain, 
-  PenTool, 
-  TrendingUp, 
-  Target, 
-  Users, 
-  BarChart3, 
+import {
+  Brain,
+  PenTool,
+  TrendingUp,
+  Target,
+  Users,
+  BarChart3,
   Calendar,
   Zap,
   CheckCircle,
@@ -116,11 +116,11 @@ export default function AIContentMarketingAutomation() {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      <SEO 
+      <SEO
         title="AI Content Marketing Automation Platform - Zion Tech Group"
         description="Transform your content marketing with AI-powered automation. Generate, distribute, and optimize content across all channels automatically."
       />
-      
+
       {/* Hero Section */}
       <section className="relative py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto text-center">
@@ -140,7 +140,7 @@ export default function AIContentMarketingAutomation() {
               </span>
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Revolutionize your content marketing with AI that generates, distributes, and optimizes content across all channels automatically. 
+              Revolutionize your content marketing with AI that generates, distributes, and optimizes content across all channels automatically.
               Increase engagement, reduce costs, and scale your marketing efforts effortlessly.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -260,8 +260,8 @@ export default function AIContentMarketingAutomation() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 className={`relative bg-gray-800/50 backdrop-blur-sm rounded-xl p-8 border ${
-                  plan.popular 
-                    ? 'border-purple-500 ring-2 ring-purple-500/20' 
+                  plan.popular
+                    ? 'border-purple-500 ring-2 ring-purple-500/20'
                     : 'border-gray-700'
                 }`}
               >
@@ -272,7 +272,7 @@ export default function AIContentMarketingAutomation() {
                     </span>
                   </div>
                 )}
-                
+
                 <div className="text-center mb-8">
                   <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
                   <p className="text-gray-400 mb-4">{plan.description}</p>

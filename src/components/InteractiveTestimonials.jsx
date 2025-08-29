@@ -143,14 +143,14 @@ export function InteractiveTestimonials() {
             <MessageCircle className="w-5 h-5 text-blue-400"/>
             <span className="text-blue-300 font-medium">Client Success Stories</span>
           </div>
-          
+
           <h2 className="text-4xl md:text-6xl font-bold text-white mb-6">
             What Our Clients
             <span className="block bg-gradient-to-r from-blue-400 via-purple-400 to-cyan-400 bg-clip-text text-transparent">
               Say About Us
             </span>
           </h2>
-          
+
           <p className="text-xl text-zion-slate-light max-w-4xl mx-auto leading-relaxed">
             Discover why leading companies choose Zion Tech Group for their AI and technology needs
           </p>
@@ -174,7 +174,7 @@ export function InteractiveTestimonials() {
                 <div className="absolute top-8 left-8 text-blue-400/20">
                   <Quote className="w-16 h-16"/>
                 </div>
-                
+
                 {/* Rating */}
                 <div className="flex justify-center mb-6">
                   {renderStars(filteredTestimonials[currentIndex]?.rating || 0)}
@@ -306,13 +306,13 @@ export function InteractiveTestimonials() {
             <p className="text-zion-slate-light text-lg mb-8 max-w-2xl mx-auto">
               Experience the same level of excellence and innovation that our clients rave about
             </p>
-            
+
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="inline-flex items-center gap-3 bg-gradient-to-r from-blue-500 to-purple-500 hover:from-blue-600 hover:to-purple-600 text-white px-8 py-4 rounded-xl font-semibold text-lg shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105">
                 Start Your Journey
                 <ChevronRight className="w-5 h-5"/>
               </button>
-              
+
               <button className="inline-flex items-center gap-3 border-2 border-blue-500/50 text-blue-300 hover:bg-blue-500/20 px-8 py-4 rounded-xl font-semibold text-lg transition-all duration-300 backdrop-blur-sm">
                 View All Reviews
                 <MessageCircle className="w-5 h-5"/>

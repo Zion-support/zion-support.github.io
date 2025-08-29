@@ -154,7 +154,7 @@ export function CaseStudiesSection() {
             Success <span className="bg-gradient-to-r from-zion-cyan to-zion-purple bg-clip-text text-transparent">Stories</span>
           </h2>
           <p className="text-zion-slate-light text-lg md:text-xl max-w-4xl mx-auto leading-relaxed mb-8">
-            Discover how we've helped organizations across industries achieve remarkable results. 
+            Discover how we've helped organizations across industries achieve remarkable results.
             Our proven track record speaks for itself.
           </p>
 
@@ -181,13 +181,13 @@ export function CaseStudiesSection() {
                       {caseStudy.icon}
                     </div>
                   </div>
-                  
+
                   <div className="text-right">
                     <div className="text-zion-cyan text-sm font-medium">{caseStudy.industry}</div>
                     <div className="text-zion-slate-light text-xs">{caseStudy.company}</div>
                   </div>
                 </div>
-                
+
                 <h3 className="text-2xl font-bold text-white mb-4 group-hover:text-zion-cyan transition-colors">
                   {caseStudy.title}
                 </h3>

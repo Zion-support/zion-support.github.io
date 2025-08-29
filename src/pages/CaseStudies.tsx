@@ -1,5 +1,3 @@
-import React from 'react';
-
 export default function CaseStudies() {
   return (
     <div className="min-h-screen bg-futuristic text-white">

@@ -1,11 +1,11 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { 
-  Award, 
-  Users, 
-  Globe, 
-  Target, 
-  TrendingUp, 
+import {
+  Award,
+  Users,
+  Globe,
+  Target,
+  TrendingUp,
   Shield,
   CheckCircle,
   ArrowRight
@@ -53,22 +53,22 @@ export function AboutSection() {
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 font-futuristic">
               About <span className="text-transparent bg-clip-text bg-gradient-to-r from-zion-cyan to-zion-purple">Zion Tech Group</span>
             </h2>
-            
+
             <p className="text-lg text-zion-slate-light mb-6 leading-relaxed">
-              Founded in 2015, Zion Tech Group has emerged as a leading force in the technology 
-              industry, pioneering innovative solutions that transform how businesses operate in 
+              Founded in 2015, Zion Tech Group has emerged as a leading force in the technology
+              industry, pioneering innovative solutions that transform how businesses operate in
               the digital age.
             </p>
-            
+
             <p className="text-lg text-zion-slate-light mb-6 leading-relaxed">
-              Our mission is to democratize cutting-edge technology, making advanced AI, 
-              quantum computing, and autonomous systems accessible to organizations of all sizes. 
+              Our mission is to democratize cutting-edge technology, making advanced AI,
+              quantum computing, and autonomous systems accessible to organizations of all sizes.
               We believe that innovation should drive progress, not complexity.
             </p>
 
             <p className="text-lg text-zion-slate-light mb-8 leading-relaxed">
-              Today, we serve clients across 25+ countries, from startups to Fortune 500 
-              companies, helping them navigate the complexities of digital transformation 
+              Today, we serve clients across 25+ countries, from startups to Fortune 500
+              companies, helping them navigate the complexities of digital transformation
               and emerge stronger, more efficient, and future-ready.
             </p>
 

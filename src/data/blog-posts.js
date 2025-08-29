@@ -111,7 +111,7 @@ export const getRecentBlogPosts = (limit = 3) => {
 
 export const searchBlogPosts = (query) => {
   const searchTerm = query.toLowerCase();
-  return blogPosts.filter(post => 
+  return blogPosts.filter(post =>
     post.title.toLowerCase().includes(searchTerm) ||
     post.excerpt.toLowerCase().includes(searchTerm) ||
     post.content.toLowerCase().includes(searchTerm) ||

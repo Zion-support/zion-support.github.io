@@ -233,7 +233,7 @@ const WebsiteImprovementDashboard = ({ className = '', showOnLoad = false }) => 
                   <h3 className="text-sm font-medium text-gray-900 dark:text-white">
                     Performance Metrics
                   </h3>
-                  
+
                   {/* Core Web Vitals */}
                   <div className="space-y-3">
                     {[
@@ -290,7 +290,7 @@ const WebsiteImprovementDashboard = ({ className = '', showOnLoad = false }) => 
                   <h3 className="text-sm font-medium text-gray-900 dark:text-white">
                     SEO Analysis
                   </h3>
-                  
+
                   {/* SEO Score */}
                   <div className="text-center p-4 bg-gradient-to-r from-green-50 to-blue-50 dark:from-green-900/20 dark:to-blue-900/20 rounded-lg">
                     <div className="text-3xl font-bold text-green-600">
@@ -300,7 +300,7 @@ const WebsiteImprovementDashboard = ({ className = '', showOnLoad = false }) => 
                       SEO Score
                     </div>
                   </div>
-                  
+
                   {/* Meta Tags Status */}
                   <div>
                     <h4 className="text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
@@ -315,7 +315,7 @@ const WebsiteImprovementDashboard = ({ className = '', showOnLoad = false }) => 
                         </div>))}
                     </div>
                   </div>
-                  
+
                   {/* Issues */}
                   {seoAnalysis.issues.length > 0 && (<div>
                       <h4 className="text-sm font-medium text-red-600 mb-2">
@@ -327,7 +327,7 @@ const WebsiteImprovementDashboard = ({ className = '', showOnLoad = false }) => 
                           </div>))}
                       </div>
                     </div>)}
-                  
+
                   {/* Suggestions */}
                   {seoAnalysis.suggestions.length > 0 && (<div>
                       <h4 className="text-sm font-medium text-blue-600 mb-2">
@@ -345,7 +345,7 @@ const WebsiteImprovementDashboard = ({ className = '', showOnLoad = false }) => 
                   <h3 className="text-sm font-medium text-gray-900 dark:text-white">
                     Accessibility Report
                   </h3>
-                  
+
                   {/* Accessibility Score */}
                   <div className="text-center p-4 bg-gradient-to-r from-purple-50 to-pink-50 dark:from-purple-900/20 dark:to-pink-900/20 rounded-lg">
                     <div className="text-3xl font-bold text-purple-600">
@@ -358,7 +358,7 @@ const WebsiteImprovementDashboard = ({ className = '', showOnLoad = false }) => 
                       WCAG {accessibilityReport.wcagCompliance} Compliance
                     </div>
                   </div>
-                  
+
                   {/* Issues Summary */}
                   <div className="grid grid-cols-2 gap-3">
                     <div className="bg-red-50 dark:bg-red-900/20 p-3 rounded-lg text-center">
@@ -374,7 +374,7 @@ const WebsiteImprovementDashboard = ({ className = '', showOnLoad = false }) => 
                       <div className="text-xs text-yellow-600">Warnings</div>
                     </div>
                   </div>
-                  
+
                   {/* Issues List */}
                   {accessibilityReport.issues.length > 0 && (<div>
                       <h4 className="text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
@@ -392,7 +392,7 @@ const WebsiteImprovementDashboard = ({ className = '', showOnLoad = false }) => 
                   <h3 className="text-sm font-medium text-gray-900 dark:text-white">
                     Actionable Recommendations
                   </h3>
-                  
+
                   {/* Priority Actions */}
                   <div className="space-y-3">
                     {[
@@ -444,7 +444,7 @@ const WebsiteImprovementDashboard = ({ className = '', showOnLoad = false }) => 
                         </p>
                       </div>))}
                   </div>
-                  
+
                   {/* Quick Actions */}
                   <div>
                     <h4 className="text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">

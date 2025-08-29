@@ -36,7 +36,7 @@ const ModernFooter: React.FC = () => {
       {/* Animated Background */}
       <div className="absolute inset-0 bg-gradient-to-br from-neon-blue/5 via-neon-purple/5 to-neon-pink/5" />
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(0,212,255,0.1),transparent_50%)]" />
-      
+
       <div className="relative z-10">
         <div className="container mx-auto px-4 py-16">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
@@ -54,7 +54,7 @@ const ModernFooter: React.FC = () => {
                 </div>
               </div>
               <p className="text-gray-300 mb-6 leading-relaxed">
-                Leading technology solutions provider helping businesses transform their digital presence 
+                Leading technology solutions provider helping businesses transform their digital presence
                 with cutting-edge AI, cloud architecture, and innovative development services.
               </p>
               <div className="flex space-x-4">
@@ -117,28 +117,28 @@ const ModernFooter: React.FC = () => {
                   <Phone className="w-5 h-5 text-neon-blue mt-1 flex-shrink-0" />
                   <div>
                     <p className="text-gray-300">Phone</p>
-                    <a 
-                      href="tel:+13024640950" 
+                    <a
+                      href="tel:+13024640950"
                       className="text-neon-blue hover:text-neon-purple transition-colors font-medium"
                     >
                       +1 (302) 464-0950
                     </a>
                   </div>
                 </div>
-                
+
                 <div className="flex items-start space-x-3">
                   <Mail className="w-5 h-5 text-neon-blue mt-1 flex-shrink-0" />
                   <div>
                     <p className="text-gray-300">Email</p>
-                    <a 
-                      href="mailto:kleber@ziontechgroup.com" 
+                    <a
+                      href="mailto:kleber@ziontechgroup.com"
                       className="text-neon-blue hover:text-neon-purple transition-colors font-medium"
                     >
                       kleber@ziontechgroup.com
                     </a>
                   </div>
                 </div>
-                
+
                 <div className="flex items-start space-x-3">
                   <MapPin className="w-5 h-5 text-neon-blue mt-1 flex-shrink-0" />
                   <div>

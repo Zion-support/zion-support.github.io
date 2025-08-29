@@ -1,13 +1,13 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { 
-  Brain, 
-  Cpu, 
-  Zap, 
-  Target, 
-  Users, 
-  Shield, 
-  TrendingUp, 
+import {
+  Brain,
+  Cpu,
+  Zap,
+  Target,
+  Users,
+  Shield,
+  TrendingUp,
   CheckCircle,
   ArrowRight,
   Play,
@@ -125,7 +125,7 @@ export default function AIServices() {
               </span>
             </h1>
             <p className="text-xl text-slate-300 mb-8 max-w-3xl mx-auto">
-              Transform your business with cutting-edge artificial intelligence. From strategy to implementation, 
+              Transform your business with cutting-edge artificial intelligence. From strategy to implementation,
               we deliver AI solutions that drive real results.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -143,7 +143,7 @@ export default function AIServices() {
             </div>
           </div>
         </div>
-        
+
         {/* Background Elements */}
         <div className="absolute inset-0 -z-10">
           <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/10 to-blue-500/10" />
@@ -163,7 +163,7 @@ export default function AIServices() {
               Comprehensive AI solutions designed to accelerate your digital transformation journey
             </p>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
             {aiServices.map((service, index) => (
               <div
@@ -179,7 +179,7 @@ export default function AIServices() {
                     <p className="text-slate-400">{service.description}</p>
                   </div>
                 </div>
-                
+
                 <ul className="space-y-3 mb-6">
                   {service.features.map((feature, featureIndex) => (
                     <li key={featureIndex} className="flex items-center text-slate-300">
@@ -188,7 +188,7 @@ export default function AIServices() {
                     </li>
                   ))}
                 </ul>
-                
+
                 <div className="flex items-center justify-between">
                   <div>
                     <div className="text-2xl font-bold text-cyan-400">{service.price}</div>
@@ -218,7 +218,7 @@ export default function AIServices() {
               We leverage the latest AI frameworks and tools to deliver exceptional results
             </p>
           </div>
-          
+
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8">
             {aiTechnologies.map((tech, index) => (
               <div
@@ -247,7 +247,7 @@ export default function AIServices() {
               Discover how AI is transforming various sectors and creating new opportunities
             </p>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {useCases.map((useCase, index) => (
               <div

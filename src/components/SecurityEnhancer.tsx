@@ -4,12 +4,12 @@ import { Button } from './ui/button';
 import { Badge } from './ui/badge';
 import { Alert, AlertDescription } from './ui/alert';
 import { Progress } from './ui/progress';
-import { 
-  Shield, 
-  Lock, 
-  AlertTriangle, 
-  CheckCircle, 
-  Eye, 
+import {
+  Shield,
+  Lock,
+  AlertTriangle,
+  CheckCircle,
+  Eye,
   EyeOff,
   RefreshCw,
   Zap,
@@ -147,10 +147,10 @@ const SecurityEnhancer: React.FC = () => {
 
   const runSecurityScan = useCallback(async () => {
     setIsScanning(true);
-    
+
     // Simulate security scan
     await new Promise(resolve => setTimeout(resolve, 3000));
-    
+
     // Update metrics with new scan results
     setMetrics(prev => ({
       ...prev,
@@ -164,16 +164,16 @@ const SecurityEnhancer: React.FC = () => {
   }, []);
 
   const mitigateThreat = useCallback((threatId: string) => {
-    setThreats(prev => prev.map(threat => 
-      threat.id === threatId 
+    setThreats(prev => prev.map(threat =>
+      threat.id === threatId
         ? { ...threat, status: 'mitigated' as const }
         : threat
     ));
   }, []);
 
   const resolveThreat = useCallback((threatId: string) => {
-    setThreats(prev => prev.map(threat => 
-      threat.id === threatId 
+    setThreats(prev => prev.map(threat =>
+      threat.id === threatId
         ? { ...threat, status: 'resolved' as const }
         : threat
     ));
@@ -282,8 +282,8 @@ const SecurityEnhancer: React.FC = () => {
           </div>
 
           <div className="mt-4">
-            <Button 
-              onClick={runSecurityScan} 
+            <Button
+              onClick={runSecurityScan}
               disabled={isScanning}
               className="w-full"
             >
@@ -413,7 +413,7 @@ const SecurityEnhancer: React.FC = () => {
         <Alert>
           <AlertTriangle className="h-4 w-4" />
           <AlertDescription>
-            <strong>Security Alert:</strong> {metrics.vulnerabilities} active vulnerability(ies) detected. 
+            <strong>Security Alert:</strong> {metrics.vulnerabilities} active vulnerability(ies) detected.
             Please review and address these security issues immediately.
           </AlertDescription>
         </Alert>
@@ -423,7 +423,7 @@ const SecurityEnhancer: React.FC = () => {
         <Alert>
           <AlertTriangle className="h-4 w-4" />
           <AlertDescription>
-            <strong>Security Warning:</strong> Your security score is below the recommended threshold. 
+            <strong>Security Warning:</strong> Your security score is below the recommended threshold.
             Consider running a comprehensive security audit and implementing the suggested improvements.
           </AlertDescription>
         </Alert>

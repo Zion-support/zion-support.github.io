@@ -69,7 +69,7 @@ export const EnhancedSearchInput = () => {
   const handleKeyDown = (e) => {
     if (e.key === 'ArrowDown') {
       e.preventDefault();
-      setActiveIndex(prev => 
+      setActiveIndex(prev =>
         prev < suggestions.length - 1 ? prev + 1 : prev
       );
     } else if (e.key === 'ArrowUp') {
@@ -100,13 +100,13 @@ export const EnhancedSearchInput = () => {
       // Add to recent searches
       const newRecent = [query, ...recentSearches.filter(s => s !== query)].slice(0, 5);
       setRecentSearches(newRecent);
-      
+
       // Store in localStorage
       localStorage.setItem('recentSearches', JSON.stringify(newRecent));
-      
+
       // Perform search (in a real app, this would navigate to search results)
-      console.log('Searching for:', query);
-      
+      // console.log('Searching for:', query);
+
       // Close search
       setIsOpen(false);
       setActiveIndex(-1);

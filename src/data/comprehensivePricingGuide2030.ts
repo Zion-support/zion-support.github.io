@@ -332,7 +332,7 @@ export const COMPREHENSIVE_PRICING_GUIDE_2030: ServicePricing[] = [
 // Pricing Analysis and Insights
 export const PRICING_ANALYSIS_2030 = {
   averagePrice: Math.round(
-    COMPREHENSIVE_PRICING_GUIDE_2030.reduce((sum, service) => sum + service.basePrice, 0) / 
+    COMPREHENSIVE_PRICING_GUIDE_2030.reduce((sum, service) => sum + service.basePrice, 0) /
     COMPREHENSIVE_PRICING_GUIDE_2030.length
   ),
   priceRange: {
@@ -345,7 +345,7 @@ export const PRICING_ANALYSIS_2030 = {
     }
     acc[service.category].push(service.basePrice);
     return acc;
-  }, {} as Record<string, number[]>),
+  }, { /* empty */ } as Record<string, number[]>),
   roiAnalysis: COMPREHENSIVE_PRICING_GUIDE_2030.map(service => ({
     serviceName: service.serviceName,
     roi: service.roi,

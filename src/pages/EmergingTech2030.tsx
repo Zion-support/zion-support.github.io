@@ -1,16 +1,16 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import { 
-  Brain, 
-  Rocket, 
-  Zap, 
-  Shield, 
-  Cloud, 
-  Cpu, 
-  ArrowRight, 
-  Star, 
-  TrendingUp, 
+import {
+  Brain,
+  Rocket,
+  Zap,
+  Shield,
+  Cloud,
+  Cpu,
+  ArrowRight,
+  Star,
+  TrendingUp,
   CheckCircle,
   Phone,
   Mail,
@@ -66,19 +66,19 @@ export default function EmergingTech2030() {
 
   return (
     <>
-      <SEO 
+      <SEO
         title="Emerging Technology Services 2030 - Zion Tech Group"
         description="Discover cutting-edge emerging technology services for 2030 including quantum computing, neuromorphic computing, synthetic biology, and more. Future-ready solutions for forward-thinking businesses."
         canonical="/emerging-tech-2030"
         url="https://ziontechgroup.com/emerging-tech-2030"
       />
-      
+
       <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950">
         {/* Hero Section */}
         <section className="relative py-20 px-4 overflow-hidden">
           <div className="absolute inset-0 bg-[url('/images/grid-pattern.svg')] bg-center opacity-10"></div>
-          
-          <motion.div 
+
+          <motion.div
             className="relative z-10 container mx-auto text-center max-w-6xl"
             variants={containerVariants}
             initial="hidden"
@@ -112,20 +112,20 @@ export default function EmergingTech2030() {
             </motion.div>
 
             <motion.div variants={itemVariants} className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link 
-                to="/contact" 
+              <Link
+                to="/contact"
                 className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105"
               >
                 Get Started
               </Link>
-              <Link 
-                to="/request-quote" 
+              <Link
+                to="/request-quote"
                 className="px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-600 rounded-lg font-semibold hover:from-purple-600 hover:to-pink-700 transition-all duration-300 transform hover:scale-105"
               >
                 Request Quote
               </Link>
-              <Link 
-                to="/services-catalog" 
+              <Link
+                to="/services-catalog"
                 className="px-8 py-4 border-2 border-cyan-500 text-cyan-400 rounded-lg font-semibold hover:bg-cyan-500 hover:text-white transition-all duration-300"
               >
                 View All Services
@@ -136,7 +136,7 @@ export default function EmergingTech2030() {
 
         {/* Services Overview */}
         <section className="py-20 px-4">
-          <motion.div 
+          <motion.div
             className="container mx-auto max-w-7xl"
             variants={containerVariants}
             initial="hidden"
@@ -154,7 +154,7 @@ export default function EmergingTech2030() {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {emergingTechServices2030.map((service, index) => {
                 const IconComponent = serviceIcons[service.category as keyof typeof serviceIcons] || Cpu;
-                
+
                 return (
                   <motion.div
                     key={service.id}
@@ -192,7 +192,7 @@ export default function EmergingTech2030() {
 
                     <div className="flex flex-wrap gap-2 mb-6">
                       {service.tags.slice(0, 3).map((tag, tagIndex) => (
-                        <span 
+                        <span
                           key={tagIndex}
                           className="px-3 py-1 bg-slate-700/50 text-slate-300 text-xs rounded-full"
                         >
@@ -217,7 +217,7 @@ export default function EmergingTech2030() {
 
         {/* Why Choose Zion Tech Group */}
         <section className="py-20 px-4 bg-gradient-to-r from-slate-900/50 to-slate-800/50">
-          <motion.div 
+          <motion.div
             className="container mx-auto max-w-6xl"
             variants={containerVariants}
             initial="hidden"
@@ -290,7 +290,7 @@ export default function EmergingTech2030() {
 
         {/* Contact Section */}
         <section className="py-20 px-4">
-          <motion.div 
+          <motion.div
             className="container mx-auto max-w-4xl text-center"
             variants={containerVariants}
             initial="hidden"
@@ -322,14 +322,14 @@ export default function EmergingTech2030() {
             </motion.div>
 
             <motion.div variants={itemVariants} className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link 
-                to="/contact" 
+              <Link
+                to="/contact"
                 className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105"
               >
                 Schedule a Consultation
               </Link>
-              <Link 
-                to="/request-quote" 
+              <Link
+                to="/request-quote"
                 className="px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-600 rounded-lg font-semibold hover:from-purple-600 hover:to-pink-700 transition-all duration-300 transform hover:scale-105"
               >
                 Get Custom Quote

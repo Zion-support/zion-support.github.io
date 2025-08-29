@@ -35,7 +35,7 @@ export default function Signup() {
   const [showPassword, setShowPassword] = useState(false)
   const [showConfirmPassword, setShowConfirmPassword] = useState(false)
   const [isSubmitting, setIsSubmitting] = useState(false)
-  const [errors, setErrors] = useState<Record<string, string>>({})
+  const [errors, setErrors] = useState<Record<string, string>>({ /* empty */ })
 
   const industries = [
     'Technology',
@@ -71,16 +71,16 @@ export default function Signup() {
   }
 
   const validateForm = () => {
-    const newErrors: Record<string, string> = {}
+    const newErrors: Record<string, string> = { /* empty */ }
 
     if (!formData.firstName.trim()) newErrors.firstName = 'First name is required'
     if (!formData.lastName.trim()) newErrors.lastName = 'Last name is required'
     if (!formData.email.trim()) newErrors.email = 'Email is required'
     else if (!/\S+@\S+\.\S+/.test(formData.email)) newErrors.email = 'Email is invalid'
-    
+
     if (!formData.password) newErrors.password = 'Password is required'
     else if (formData.password.length < 8) newErrors.password = 'Password must be at least 8 characters'
-    
+
     if (formData.password !== formData.confirmPassword) {
       newErrors.confirmPassword = 'Passwords do not match'
     }
@@ -91,20 +91,20 @@ export default function Signup() {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
-    
+
     if (!validateForm()) return
 
     setIsSubmitting(true)
-    
+
     try {
       // Simulate API call
       await new Promise(resolve => setTimeout(resolve, 2000))
-      
+
       // Success - redirect or show success message
-      console.log('Signup successful:', formData)
-      
+      // console.log('Signup successful:', formData)
+
     } catch (error) {
-      console.error('Signup error:', error)
+      // console.error('Signup error:', error)
     } finally {
       setIsSubmitting(false)
     }
@@ -120,13 +120,13 @@ export default function Signup() {
         <meta name="description" content={description} />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="canonical" href="https://ziontechgroup.com/signup" />
-        
+
         {/* Open Graph */}
         <meta property="og:title" content={title} />
         <meta property="og:description" content={description} />
         <meta property="og:url" content="https://ziontechgroup.com/signup" />
         <meta property="og:type" content="website" />
-        
+
         {/* Twitter */}
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content={title} />
@@ -141,7 +141,7 @@ export default function Signup() {
             <div className="absolute bottom-20 right-20 w-24 h-24 border border-zion-purple rounded-full"></div>
             <div className="absolute top-1/2 left-1/2 w-16 h-16 border border-zion-cyan-light rounded-full"></div>
           </div>
-          
+
           <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -153,10 +153,10 @@ export default function Signup() {
                 Join Zion Tech Group
               </h1>
               <p className="text-xl md:text-2xl text-zion-slate-light mb-8 max-w-3xl mx-auto">
-                Unlock access to revolutionary AI autonomous systems, quantum computing solutions, 
+                Unlock access to revolutionary AI autonomous systems, quantum computing solutions,
                 and enterprise-grade cybersecurity platforms.
               </p>
-              
+
               <div className="flex flex-wrap justify-center gap-6 mb-12">
                 <div className="flex items-center gap-3 text-zion-cyan">
                   <Shield className="w-6 h-6" />

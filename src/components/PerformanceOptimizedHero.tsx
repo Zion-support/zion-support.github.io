@@ -1,13 +1,13 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import { 
-  ArrowRight, 
-  Play, 
-  Star, 
-  Shield, 
-  Zap, 
-  Brain, 
+import {
+  ArrowRight,
+  Play,
+  Star,
+  Shield,
+  Zap,
+  Brain,
   Cloud,
   CheckCircle,
   TrendingUp,
@@ -47,7 +47,7 @@ const PerformanceOptimizedHero: React.FC<HeroProps> = ({
 
   useEffect(() => {
     setIsVisible(true);
-    
+
     const interval = setInterval(() => {
       setCurrentFeature((prev) => (prev + 1) % features.length);
     }, 3000);
@@ -57,7 +57,7 @@ const PerformanceOptimizedHero: React.FC<HeroProps> = ({
 
   const handleCTAClick = useCallback(() => {
     // Analytics tracking could be added here
-    console.log('Hero CTA clicked');
+    // console.log('Hero CTA clicked');
   }, []);
 
   const containerVariants = {
@@ -139,7 +139,7 @@ const PerformanceOptimizedHero: React.FC<HeroProps> = ({
             <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" />
             <div className="absolute inset-0 rounded-full bg-gradient-to-r from-cyan-400 to-blue-400 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
           </Link>
-          
+
           <button className="group inline-flex items-center px-8 py-4 border-2 border-cyan-500/30 text-cyan-400 font-semibold rounded-full text-lg hover:bg-cyan-500/10 transition-all duration-300">
             <Play className="mr-2 w-5 h-5" />
             Watch Demo

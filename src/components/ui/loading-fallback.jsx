@@ -16,11 +16,11 @@ export function LoadingFallback({ message = "Loading...", size = 'md', className
       <motion.div animate={{ rotate: 360 }} transition={{ duration: 1, repeat: Infinity, ease: "linear" }} className={`${sizeClasses[size]} text-zion-purple`}>
         <Loader2 className="w-full h-full"/>
       </motion.div>
-      
+
       <motion.p initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.2, duration: 0.3 }} className={`${textSizes[size]} text-zion-slate-light text-center`}>
         {message}
       </motion.p>
-      
+
       <motion.div className="flex space-x-1" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.4, duration: 0.3 }}>
         {[0, 1, 2].map((i) => (<motion.div key={i} className="w-2 h-2 bg-zion-purple rounded-full" animate={{
                 scale: [1, 1.2, 1],

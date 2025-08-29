@@ -134,7 +134,7 @@ export default function QuantumComputing() {
 
   return (
     <div className="min-h-screen bg-futuristic relative overflow-hidden">
-      <SEO 
+      <SEO
         title="Quantum Computing Services - Zion Tech Group"
         description="Harness the power of quantum computing with our advanced quantum solutions. Quantum algorithms, cryptography, and machine learning for the future."
         keywords="quantum computing, quantum algorithms, quantum cryptography, quantum machine learning, post-quantum security"
@@ -155,7 +155,7 @@ export default function QuantumComputing() {
         {/* Hero Section */}
         <section className="pt-32 pb-20">
           <div className="container-responsive">
-            <motion.div 
+            <motion.div
               className="text-center max-w-4xl mx-auto"
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
@@ -169,18 +169,18 @@ export default function QuantumComputing() {
                 <span className="bg-gradient-to-r from-indigo-400 via-purple-500 to-pink-500 bg-clip-text text-transparent">Quantum</span> Computing for Tomorrow
               </h1>
               <p className="text-xl text-zinc-300 mb-8 leading-relaxed">
-                Unlock the power of quantum computing with our advanced quantum solutions. 
+                Unlock the power of quantum computing with our advanced quantum solutions.
                 From quantum algorithms to post-quantum security, we're building the future of computation.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Link 
+                <Link
                   to="/contact"
                   className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-indigo-500 to-purple-500 text-white font-semibold rounded-lg hover:from-indigo-600 hover:to-purple-600 transition-all duration-300 transform hover:scale-105"
                 >
                   Get Started
                   <ArrowRight className="w-5 h-5 ml-2" />
                 </Link>
-                <Link 
+                <Link
                   to="/request-quote"
                   className="inline-flex items-center px-8 py-4 border border-indigo-500/30 text-indigo-400 font-semibold rounded-lg hover:bg-indigo-500/10 transition-all duration-300"
                 >
@@ -194,7 +194,7 @@ export default function QuantumComputing() {
         {/* Applications Section */}
         <section className="py-20">
           <div className="container-responsive">
-            <motion.div 
+            <motion.div
               className="text-center mb-16"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -241,7 +241,7 @@ export default function QuantumComputing() {
         {/* Features Section */}
         <section className="py-20 bg-white/5">
           <div className="container-responsive">
-            <motion.div 
+            <motion.div
               className="text-center mb-16"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -280,7 +280,7 @@ export default function QuantumComputing() {
         {/* Pricing Section */}
         <section className="py-20">
           <div className="container-responsive">
-            <motion.div 
+            <motion.div
               className="text-center mb-16"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -300,8 +300,8 @@ export default function QuantumComputing() {
                 <motion.div
                   key={index}
                   className={`relative p-8 rounded-2xl ${
-                    plan.popular 
-                      ? 'bg-gradient-to-br from-indigo-500/20 to-purple-500/20 border-2 border-indigo-500/50' 
+                    plan.popular
+                      ? 'bg-gradient-to-br from-indigo-500/20 to-purple-500/20 border-2 border-indigo-500/50'
                       : 'bg-white/5 border border-white/10'
                   } backdrop-blur-sm`}
                   initial={{ opacity: 0, y: 30 }}
@@ -316,7 +316,7 @@ export default function QuantumComputing() {
                       </span>
                     </div>
                   )}
-                  
+
                   <div className="text-center mb-6">
                     <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
                     <div className="flex items-baseline justify-center mb-2">
@@ -354,7 +354,7 @@ export default function QuantumComputing() {
         {/* Benefits Section */}
         <section className="py-20 bg-white/5">
           <div className="container-responsive">
-            <motion.div 
+            <motion.div
               className="text-center mb-16"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -408,14 +408,14 @@ export default function QuantumComputing() {
                 Join the quantum revolution with Zion Tech Group's cutting-edge quantum computing solutions
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Link 
+                <Link
                   to="/contact"
                   className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-indigo-500 to-purple-500 text-white font-semibold rounded-lg hover:from-indigo-600 hover:to-purple-600 transition-all duration-300 transform hover:scale-105"
                 >
                   Start Your Journey
                   <ArrowRight className="w-5 h-5 ml-2" />
                 </Link>
-                <Link 
+                <Link
                   to="/request-quote"
                   className="inline-flex items-center px-8 py-4 border border-indigo-500/30 text-indigo-400 font-semibold rounded-lg hover:bg-indigo-500/10 transition-all duration-300"
                 >

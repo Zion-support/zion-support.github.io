@@ -285,7 +285,7 @@ const UltimatePricing2025 = () => {
             </span>
           </h1>
           <p className="text-xl text-gray-300 mb-8 max-w-4xl mx-auto">
-            Transparent, competitive pricing for our comprehensive portfolio of innovative technology solutions. 
+            Transparent, competitive pricing for our comprehensive portfolio of innovative technology solutions.
             Get enterprise-grade services at market-competitive rates with unmatched value and support.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
@@ -314,7 +314,7 @@ const UltimatePricing2025 = () => {
                 {tier.description}
               </p>
             </div>
-            
+
             <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8">
               {tier.plans.map((plan, planIndex) => (<div key={planIndex} className="bg-white/10 backdrop-blur-lg rounded-xl p-8 border border-white/20 hover:border-white/40 transition-all duration-300 hover:transform hover:scale-105">
                   <div className="text-center mb-6">
@@ -325,7 +325,7 @@ const UltimatePricing2025 = () => {
                     </div>
                     <p className="text-gray-300">{plan.description}</p>
                   </div>
-                  
+
                   <div className="mb-6">
                     <h4 className="text-lg font-semibold text-green-400 mb-3">Features:</h4>
                     <ul className="space-y-2">
@@ -351,13 +351,13 @@ const UltimatePricing2025 = () => {
                       <h4 className="text-sm font-semibold text-blue-400 mb-2">Market Position</h4>
                       <p className="text-sm text-gray-300">{plan.marketPosition}</p>
                     </div>
-                    
+
                     <div className="bg-white/5 rounded-lg p-4">
                       <h4 className="text-sm font-semibold text-purple-400 mb-2">Competitive Advantage</h4>
                       <p className="text-sm text-gray-300">{plan.competitiveAdvantage}</p>
                     </div>
                   </div>
-                  
+
                   <div className="text-center">
                     <Link to="/contact" className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-cyan-700 transition-all duration-300 w-full justify-center">
                       Get Started
@@ -379,38 +379,38 @@ const UltimatePricing2025 = () => {
               Our competitive pricing combined with unmatched expertise and support delivers exceptional value
             </p>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 text-center">
               <div className="text-4xl mb-4">💎</div>
               <h3 className="text-xl font-semibold text-white mb-3">Premium Quality</h3>
               <p className="text-gray-300">Enterprise-grade solutions at competitive market rates with superior quality and performance</p>
             </div>
-            
+
             <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 text-center">
               <div className="text-4xl mb-4">🚀</div>
               <h3 className="text-xl font-semibold text-white mb-3">Innovation Leadership</h3>
               <p className="text-gray-300">Cutting-edge technology solutions that position your business ahead of the competition</p>
             </div>
-            
+
             <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 text-center">
               <div className="text-4xl mb-4">🎯</div>
               <h3 className="text-xl font-semibold text-white mb-3">Custom Solutions</h3>
               <p className="text-gray-300">Tailored implementations designed specifically for your business needs and objectives</p>
             </div>
-            
+
             <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 text-center">
               <div className="text-4xl mb-4">🛡️</div>
               <h3 className="text-xl font-semibold text-white mb-3">Expert Support</h3>
               <p className="text-gray-300">Dedicated support teams and ongoing optimization to ensure your success</p>
             </div>
-            
+
             <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 text-center">
               <div className="text-4xl mb-4">📈</div>
               <h3 className="text-xl font-semibold text-white mb-3">ROI Focused</h3>
               <p className="text-gray-300">Solutions designed to deliver measurable business value and rapid return on investment</p>
             </div>
-            
+
             <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 text-center">
               <div className="text-4xl mb-4">🌐</div>
               <h3 className="text-xl font-semibold text-white mb-3">Global Reach</h3>

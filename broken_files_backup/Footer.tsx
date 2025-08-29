@@ -18,15 +18,15 @@ import { Twitter, Linkedin, Facebook, Instagram, Github, Mail, Phone, MapPin, Ex
 import { Link } from "react-router-dom";
 =======
 import { Link } from 'react-router-dom';
-import { 
-  Mail, 
-  Phone, 
-  MapPin, 
-  Globe, 
-  Facebook, 
-  Twitter, 
-  Linkedin, 
-  Instagram, 
+import {
+  Mail,
+  Phone,
+  MapPin,
+  Globe,
+  Facebook,
+  Twitter,
+  Linkedin,
+  Instagram,
   Youtube,
   Zap,
   Shield,
@@ -194,14 +194,14 @@ const Footer: React.FC = () => {
     <footer className="bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-blue-light text-white relative overflow-hidden">
       {/* Background Pattern */}
       <div className="absolute inset-0 bg-[linear-gradient(rgba(34,221,210,0.05)_1px,transparent_1px),linear-gradient(90deg,rgba(34,221,210,0.05)_1px,transparent_1px)] bg-[size:50px_50px]" />
-      
+
       {/* Floating Elements */}
       <div className="absolute top-1/4 left-1/4 w-2 h-2 bg-zion-cyan/30 rounded-full animate-pulse" />
       <div className="absolute bottom-1/3 right-1/4 w-1.5 h-1.5 bg-zion-purple/20 rounded-full animate-pulse" style={{ animationDelay: '1s' }} />
       <div className="absolute top-1/2 right-1/3 w-1 h-1 bg-zion-cyan/25 rounded-full animate-pulse" style={{ animationDelay: '2s' }} />
 
       {/* Main Footer Content */}
-      <motion.div 
+      <motion.div
         className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 relative z-10"
         variants={containerVariants}
         initial="hidden"
@@ -230,7 +230,7 @@ const Footer: React.FC = () => {
               <li><Link to="/privacy" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Privacy Policy</Link></li>
             </ul>
           </div>
-          
+
           <div>
 =======
             <h3 className="text-white font-semibold mb-4 text-lg">Marketplace</h3>
@@ -252,10 +252,10 @@ const Footer: React.FC = () => {
               </span>
             </div>
             <p className="text-zion-slate-light mb-8 max-w-md leading-relaxed text-lg">
-              Leading provider of innovative technology solutions, AI-powered services, 
+              Leading provider of innovative technology solutions, AI-powered services,
               and digital transformation expertise. We help businesses navigate the future of technology.
             </p>
-            
+
             {/* Contact Info */}
             <div className="space-y-3 mb-8">
               {contactInfo.map((contact, index) => (
@@ -273,7 +273,7 @@ const Footer: React.FC = () => {
                 </motion.a>
               ))}
             </div>
-            
+
             {/* Social Links */}
             <div className="flex space-x-4">
               {socialLinks.map((social, index) => (
@@ -302,7 +302,7 @@ const Footer: React.FC = () => {
               </h3>
               <ul className="space-y-3">
                 {section.links.map((link, linkIndex) => (
-                  <motion.li 
+                  <motion.li
                     key={link.label}
                     variants={itemVariants}
                     whileHover={{ x: 5 }}
@@ -324,7 +324,7 @@ const Footer: React.FC = () => {
       </motion.div>
 
       {/* Newsletter Signup */}
-      <motion.div 
+      <motion.div
         className="border-t border-white/10 bg-white/5 backdrop-blur-md relative z-10"
         variants={itemVariants}
         initial="hidden"
@@ -449,9 +449,9 @@ const Footer: React.FC = () => {
               <Link to="/sitemap" className="text-zion-slate-light hover:text-zion-cyan text-sm transition-colors">
                 Sitemap
               </Link>
-              <a 
-                href="https://ziontechgroup.com" 
-                target="_blank" 
+              <a
+                href="https://ziontechgroup.com"
+                target="_blank"
                 rel="noopener noreferrer"
                 className="text-zion-slate-light hover:text-zion-cyan text-sm transition-colors"
               >
@@ -470,7 +470,7 @@ const Footer: React.FC = () => {
                 placeholder="Enter your email address"
                 className="flex-1 px-6 py-4 bg-white/10 backdrop-blur-md border border-white/20 rounded-xl text-white placeholder-zion-slate-light focus:outline-none focus:border-zion-cyan focus:ring-2 focus:ring-zion-cyan/20 transition-all duration-300"
               />
-              <motion.button 
+              <motion.button
                 className="px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-blue text-white font-semibold rounded-xl hover:from-zion-cyan/90 hover:to-zion-blue/90 transition-all duration-300 shadow-lg hover:shadow-zion-cyan/25 border border-zion-cyan/30 hover:border-zion-cyan/60"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
@@ -483,7 +483,7 @@ const Footer: React.FC = () => {
       </motion.div>
 
       {/* Bottom Footer */}
-      <motion.div 
+      <motion.div
         className="border-t border-white/10 bg-white/5 backdrop-blur-md relative z-10"
         variants={itemVariants}
         initial="hidden"

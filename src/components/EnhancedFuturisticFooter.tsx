@@ -1,14 +1,14 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { 
-  Phone, 
-  Mail, 
-  MapPin, 
-  Globe, 
-  Linkedin, 
-  Twitter, 
-  Facebook, 
+import {
+  Phone,
+  Mail,
+  MapPin,
+  Globe,
+  Linkedin,
+  Twitter,
+  Facebook,
   Instagram,
   Youtube,
   Github,
@@ -225,9 +225,9 @@ export const EnhancedFuturisticFooter: React.FC = () => {
                   </h3>
                 </Link>
               </div>
-              
+
               <p className="text-slate-300 mb-6 leading-relaxed">
-                Revolutionizing the future with cutting-edge AI, Quantum Computing, and Micro SaaS solutions. 
+                Revolutionizing the future with cutting-edge AI, Quantum Computing, and Micro SaaS solutions.
                 Transform your business with our innovative technology platforms.
               </p>
 

@@ -157,7 +157,7 @@ const ZeroTrustNetworkArchitecture = () => {
             Zero Trust Network Architecture
           </h1>
           <p className="text-xl text-gray-300 max-w-4xl mx-auto mb-8">
-            Comprehensive cybersecurity solution implementing zero-trust principles across your entire 
+            Comprehensive cybersecurity solution implementing zero-trust principles across your entire
             network infrastructure for maximum security and protection against modern cyber threats.
           </p>
           <div className="flex flex-wrap justify-center gap-4 mb-8">

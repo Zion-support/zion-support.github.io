@@ -33,20 +33,20 @@ export default function AIQuantumMachineLearning() {
   ];
 
   const tiers = [
-    { 
-      name: 'Quantum Starter', 
-      price: '$1,999/mo', 
-      details: ['Up to 100 quantum operations', 'Basic quantum algorithms', 'Standard support', 'Email support'] 
+    {
+      name: 'Quantum Starter',
+      price: '$1,999/mo',
+      details: ['Up to 100 quantum operations', 'Basic quantum algorithms', 'Standard support', 'Email support']
     },
-    { 
-      name: 'Quantum Professional', 
-      price: '$4,999/mo', 
-      details: ['Up to 1,000 quantum operations', 'Advanced quantum features', 'Custom algorithms', 'Priority support'] 
+    {
+      name: 'Quantum Professional',
+      price: '$4,999/mo',
+      details: ['Up to 1,000 quantum operations', 'Advanced quantum features', 'Custom algorithms', 'Priority support']
     },
-    { 
-      name: 'Enterprise Quantum', 
-      price: '$12,999/mo', 
-      details: ['Unlimited quantum operations', 'Full quantum suite', 'White-label options', '24/7 support'] 
+    {
+      name: 'Enterprise Quantum',
+      price: '$12,999/mo',
+      details: ['Unlimited quantum operations', 'Full quantum suite', 'White-label options', '24/7 support']
     },
   ];
 
@@ -74,7 +74,7 @@ export default function AIQuantumMachineLearning() {
                 </li>
               ))}
             </ul>
-            
+
             <div className="mt-8">
               <h3 className="text-xl font-semibold text-zion-slate-dark mb-3">Key Benefits</h3>
               <ul className="space-y-2">
@@ -87,7 +87,7 @@ export default function AIQuantumMachineLearning() {
               </ul>
             </div>
           </div>
-          
+
           <div className="bg-white border border-zion-slate-light/20 rounded-xl p-6 shadow-md">
             <h3 className="text-2xl font-semibold text-zion-slate-dark mb-4">Pricing Plans</h3>
             <div className="grid md:grid-cols-3 gap-4">

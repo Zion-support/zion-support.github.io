@@ -1,15 +1,15 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { 
-  Search, 
-  Filter, 
-  Star, 
-  Users, 
-  TrendingUp, 
-  Shield, 
-  Zap, 
-  Globe, 
-  Brain, 
+import {
+  Search,
+  Filter,
+  Star,
+  Users,
+  TrendingUp,
+  Shield,
+  Zap,
+  Globe,
+  Brain,
   Rocket,
   Phone,
   Mail,
@@ -30,16 +30,16 @@ export default function ZionCuttingEdgeServices2029() {
   const [priceRange, setPriceRange] = useState('all');
 
   const allServices = [...zionCuttingEdgeServices2029, ...zionEmergingTechServices2029];
-  
+
   const categories = ['all', ...new Set(allServices.map(service => service.category))];
-  
+
   const filteredServices = allServices.filter(service => {
     const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          service.tagline.toLowerCase().includes(searchTerm.toLowerCase());
-    
+
     const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory;
-    
+
     let matchesPrice = true;
     if (priceRange !== 'all') {
       const [min, max] = priceRange.split('-').map(Number);
@@ -49,7 +49,7 @@ export default function ZionCuttingEdgeServices2029() {
         matchesPrice = service.pricing.starter >= min;
       }
     }
-    
+
     return matchesSearch && matchesCategory && matchesPrice;
   });
 
@@ -65,7 +65,7 @@ export default function ZionCuttingEdgeServices2029() {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <SEO 
+      <SEO
         title="Zion Tech Group 2029 Cutting-Edge Services | Revolutionary AI, IT & Micro SAAS Solutions"
         description="Discover Zion Tech Group's revolutionary 2029 cutting-edge services including AI-powered quantum computing, autonomous systems, space technology, biotechnology, and more. Transform your business with next-generation solutions."
         keywords="AI services, quantum computing, autonomous systems, space technology, biotechnology, renewable energy, robotics, cybersecurity, Zion Tech Group, cutting-edge technology"
@@ -87,7 +87,7 @@ export default function ZionCuttingEdgeServices2029() {
               <span className="text-white">Cutting-Edge Services</span>
             </h1>
             <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
-              Revolutionary AI, IT, and Micro SAAS solutions that define the future of technology. 
+              Revolutionary AI, IT, and Micro SAAS solutions that define the future of technology.
               From quantum computing to space technology, we're building tomorrow's innovations today.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
@@ -185,7 +185,7 @@ export default function ZionCuttingEdgeServices2029() {
               Revolutionary Services Portfolio
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Discover our comprehensive suite of cutting-edge services designed to transform industries 
+              Discover our comprehensive suite of cutting-edge services designed to transform industries
               and accelerate your business growth with next-generation technology.
             </p>
           </div>
@@ -354,7 +354,7 @@ export default function ZionCuttingEdgeServices2029() {
               Why Choose Zion Tech Group?
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              We're not just another technology company. We're pioneers, innovators, and visionaries 
+              We're not just another technology company. We're pioneers, innovators, and visionaries
               who are building the future, one breakthrough at a time.
             </p>
           </div>
@@ -435,7 +435,7 @@ export default function ZionCuttingEdgeServices2029() {
               Ready to Transform Your Business?
             </h2>
             <p className="text-xl text-gray-300 mb-8">
-              Join the elite group of forward-thinking companies that are already leveraging 
+              Join the elite group of forward-thinking companies that are already leveraging
               our revolutionary services to gain competitive advantages and drive unprecedented growth.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -465,7 +465,7 @@ export default function ZionCuttingEdgeServices2029() {
             <div>
               <h3 className="text-2xl font-bold text-white mb-4">Zion Tech Group</h3>
               <p className="text-gray-300 mb-6">
-                Pioneering the future of technology with revolutionary AI, IT, and Micro SAAS solutions 
+                Pioneering the future of technology with revolutionary AI, IT, and Micro SAAS solutions
                 that transform industries and accelerate business growth.
               </p>
               <div className="space-y-2 text-gray-300">

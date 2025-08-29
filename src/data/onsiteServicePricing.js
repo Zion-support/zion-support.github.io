@@ -212,7 +212,7 @@ export const getPopularServices = () => {
 export const calculateServiceCost = (serviceId, hours) => {
   const service = getServiceById(serviceId);
   if (!service) return 0;
-  
+
   const actualHours = Math.max(hours, service.minimumHours);
   return actualHours * service.hourlyRate;
 };
@@ -220,11 +220,11 @@ export const calculateServiceCost = (serviceId, hours) => {
 export const getServiceRecommendations = (businessSize, industry) => {
   // Simple recommendation logic based on business size
   if (businessSize === 'small') {
-    return onsiteServicePricing.filter(service => 
+    return onsiteServicePricing.filter(service =>
       ['basic', 'network'].includes(service.category)
     );
   } else if (businessSize === 'medium') {
-    return onsiteServicePricing.filter(service => 
+    return onsiteServicePricing.filter(service =>
       ['basic', 'network', 'server'].includes(service.category)
     );
   } else {

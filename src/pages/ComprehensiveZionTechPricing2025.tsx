@@ -6,8 +6,8 @@ const ComprehensiveZionTechPricing2025: React.FC = () => {
   const [billingCycle, setBillingCycle] = useState<'monthly' | 'yearly'>('monthly');
 
   const categories = ['All', ...getEnhancedServiceCategories()];
-  
-  const filteredServices = ENHANCED_ZION_TECH_SERVICES_2025.filter(service => 
+
+  const filteredServices = ENHANCED_ZION_TECH_SERVICES_2025.filter(service =>
     selectedCategory === 'All' || service.category === selectedCategory
   );
 
@@ -39,10 +39,10 @@ const ComprehensiveZionTechPricing2025: React.FC = () => {
               </span>
             </h1>
             <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
-              Transparent pricing for cutting-edge micro SAAS, IT services, and AI solutions. 
+              Transparent pricing for cutting-edge micro SAAS, IT services, and AI solutions.
               Choose the plan that fits your business needs and budget.
             </p>
-            
+
             {/* Billing Toggle */}
             <div className="flex items-center justify-center gap-4 mb-8">
               <span className={`text-lg ${billingCycle === 'monthly' ? 'text-white' : 'text-gray-400'}`}>
@@ -142,7 +142,7 @@ const ComprehensiveZionTechPricing2025: React.FC = () => {
                   <span className="text-lg font-bold text-green-400">{service.aiScore}/100</span>
                 </div>
                 <div className="w-full bg-gray-700 rounded-full h-3">
-                  <div 
+                  <div
                     className="bg-gradient-to-r from-green-400 to-blue-500 h-3 rounded-full transition-all duration-300"
                     style={{ width: `${service.aiScore}%` }}
                   ></div>
@@ -271,7 +271,7 @@ const ComprehensiveZionTechPricing2025: React.FC = () => {
           <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
             Contact our sales team to discuss your needs, get a custom quote, or schedule a demo of any service.
           </p>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto mb-12">
             <div className="text-center">
               <div className="text-2xl font-bold text-blue-400 mb-2">Call Us</div>
@@ -310,23 +310,23 @@ const ComprehensiveZionTechPricing2025: React.FC = () => {
         <h2 className="text-3xl font-bold text-white text-center mb-12">
           Frequently Asked Questions
         </h2>
-        
+
         <div className="space-y-6">
           <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6">
             <h3 className="text-xl font-bold text-white mb-3">What payment methods do you accept?</h3>
             <p className="text-gray-300">We accept all major credit cards, bank transfers, and can arrange custom payment terms for enterprise clients.</p>
           </div>
-          
+
           <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6">
             <h3 className="text-xl font-bold text-white mb-3">Can I cancel my subscription at any time?</h3>
             <p className="text-gray-300">Yes, all subscriptions can be cancelled at any time with no penalties. We offer month-to-month and annual billing options.</p>
           </div>
-          
+
           <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6">
             <h3 className="text-xl font-bold text-white mb-3">Do you offer free trials?</h3>
             <p className="text-gray-300">Yes, most services offer a 14-day free trial. Contact us to arrange a trial period for any service.</p>
           </div>
-          
+
           <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6">
             <h3 className="text-xl font-bold text-white mb-3">What kind of support do you provide?</h3>
             <p className="text-gray-300">We provide 24/7 technical support, dedicated account managers for enterprise clients, and comprehensive documentation and training resources.</p>

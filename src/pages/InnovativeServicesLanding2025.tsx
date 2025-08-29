@@ -1,10 +1,10 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import { 
-  Brain, Shield, Cloud, Server, BarChart3, Users, ShoppingCart, 
-  MessageCircle, HelpCircle, DollarSign, Target, TrendingUp, 
-  Atom, Network, Eye, PenTool, Heart, Building, Truck, 
+import {
+  Brain, Shield, Cloud, Server, BarChart3, Users, ShoppingCart,
+  MessageCircle, HelpCircle, DollarSign, Target, TrendingUp,
+  Atom, Network, Eye, PenTool, Heart, Building, Truck,
   Lock, Smartphone, Mail, Video, Satellite, Leaf, Code,
   Zap, Star, Rocket, Globe, Cpu, ArrowRight, FileText,
   CheckCircle, Clock, Users as UsersIcon, Zap as ZapIcon,
@@ -91,17 +91,17 @@ export default function InnovativeServicesLanding2025() {
               <Star className="w-4 h-4 mr-2" />
               Innovation Leader 2025
             </div>
-            
+
             <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400 bg-clip-text text-transparent mb-6">
               Revolutionary Technology
               <br />
               <span className="text-white">Services</span>
             </h1>
-            
+
             <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
               Zion Tech Group delivers cutting-edge micro SAAS, IT infrastructure, and AI services that transform businesses and drive unprecedented growth
             </p>
-            
+
             <div className="flex flex-wrap justify-center gap-4 mb-12">
               <Link
                 to="/comprehensive-services-showcase-2025"
@@ -110,7 +110,7 @@ export default function InnovativeServicesLanding2025() {
                 <Rocket className="w-5 h-5 mr-2" />
                 Explore All Services
               </Link>
-              
+
               <a
                 href="mailto:kleber@ziontechgroup.com?subject=Innovation Consultation"
                 className="inline-flex items-center px-8 py-4 border-2 border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400 hover:text-white transition-all duration-300"
@@ -182,11 +182,11 @@ export default function InnovativeServicesLanding2025() {
                 <div className={`w-16 h-16 rounded-xl bg-gradient-to-r ${highlight.color} flex items-center justify-center mx-auto mb-6`}>
                   <highlight.icon className="w-8 h-8 text-white" />
                 </div>
-                
+
                 <h3 className="text-xl font-bold text-white mb-4 text-center">
                   {highlight.title}
                 </h3>
-                
+
                 <p className="text-gray-400 text-center">
                   {highlight.description}
                 </p>
@@ -227,20 +227,20 @@ export default function InnovativeServicesLanding2025() {
                 <div className={`w-16 h-16 rounded-xl bg-gradient-to-r ${service.color} flex items-center justify-center mx-auto mb-6`}>
                   <service.icon className="w-8 h-8 text-white" />
                 </div>
-                
+
                 <div className="text-center mb-6">
                   <span className="inline-block px-3 py-1 text-xs font-semibold text-cyan-400 bg-cyan-400/10 rounded-full mb-4">
                     {service.category}
                   </span>
-                  
+
                   <h3 className="text-2xl font-bold text-white mb-4">
                     {service.name}
                   </h3>
-                  
+
                   <p className="text-gray-400 mb-6">
                     {service.description}
                   </p>
-                  
+
                   <div className="text-3xl font-bold text-cyan-400 mb-6">
                     {service.price}
                   </div>
@@ -353,7 +353,7 @@ export default function InnovativeServicesLanding2025() {
             <p className="text-xl text-gray-300 mb-8">
               Join the elite group of businesses that are already transforming their operations with Zion Tech Group's revolutionary services
             </p>
-            
+
             <div className="flex flex-wrap justify-center gap-4 mb-8">
               <a
                 href="mailto:kleber@ziontechgroup.com?subject=Innovation Consultation Request"
@@ -362,7 +362,7 @@ export default function InnovativeServicesLanding2025() {
                 <Mail className="w-5 h-5 mr-2" />
                 Schedule Innovation Consultation
               </a>
-              
+
               <Link
                 to="/comprehensive-services-showcase-2025"
                 className="inline-flex items-center px-8 py-4 border-2 border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400 hover:text-white transition-all duration-300"
@@ -382,7 +382,7 @@ export default function InnovativeServicesLanding2025() {
                   <p className="text-gray-400 text-sm">Phone</p>
                   <p className="text-cyan-400 font-semibold">+1 302 464 0950</p>
                 </div>
-                
+
                 <div>
                   <div className="w-12 h-12 rounded-full bg-gradient-to-r from-green-500 to-emerald-500 flex items-center justify-center mx-auto mb-3">
                     <Mail className="w-6 h-6 text-white" />
@@ -390,7 +390,7 @@ export default function InnovativeServicesLanding2025() {
                   <p className="text-gray-400 text-sm">Email</p>
                   <p className="text-cyan-400 font-semibold">kleber@ziontechgroup.com</p>
                 </div>
-                
+
                 <div>
                   <div className="w-12 h-12 rounded-full bg-gradient-to-r from-purple-500 to-pink-500 flex items-center justify-center mx-auto mb-3">
                     <Globe className="w-6 h-6 text-white" />
@@ -399,7 +399,7 @@ export default function InnovativeServicesLanding2025() {
                   <p className="text-cyan-400 font-semibold">ziontechgroup.com</p>
                 </div>
               </div>
-              
+
               <div className="mt-6 pt-6 border-t border-gray-700">
                 <h4 className="text-lg font-semibold text-white mb-3">Address</h4>
                 <p className="text-gray-300">

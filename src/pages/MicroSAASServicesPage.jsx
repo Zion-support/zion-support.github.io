@@ -94,7 +94,7 @@ import {Badge} from '@/components/ui/badge';
 import {Tabs, TabsContent, TabsList, TabsTrigger} from '@/components/ui/tabs';
 import {MICRO_SAAS_SERVICES,
             SERVICE_CATEGORIES,
-            type} MicroSaasService 
+            type} MicroSaasService
 } from '@/data/microSaasServices';
 import {Star,
             Clock,
@@ -112,11 +112,11 @@ import {Star,
             Sparkles} from 'lucide-react';
 import {Link} from 'react-router-dom';
 
-export default function MicroSaasServicesPage() {}
+export default function MicroSaasServicesPage() { /* empty */ }
   const [selectedCategory, setSelectedCategory] = useState<string>('all');
   const [searchQuery, setSearchQuery] = useState<string>('');
 
-  const filteredServices = MICRO_SAAS_SERVICES.filter(service => {}
+  const filteredServices = MICRO_SAAS_SERVICES.filter(service => { /* empty */ }
     const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory;
     const matchesSearch = service.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
                          service.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
@@ -124,7 +124,7 @@ export default function MicroSaasServicesPage() {}
     return matchesCategory && matchesSearch;
   });
 
-  const formatPrice = (price: number, currency: string, model: string) => {}
+  const formatPrice = (price: number, currency: string, model: string) => { /* empty */ }
     if (model === 'monthly') return `${currency}${price}/month`;
     if (model === 'yearly') return `${currency}${price}/year`;
     if (model === 'one-time') return `${currency}${price}`;
@@ -134,7 +134,7 @@ export default function MicroSaasServicesPage() {}
   const ServiceCard = ({service}: {service}: MicroSaasService }) => (
     <Card className="group relative overflow-hidden border-0 bg-gradient-to-br from-zion-blue-dark/50 to-zion-slate/50 backdrop-blur-sm hover:from-zion-blue-dark/70 hover:to-zion-slate/70 transition-all duration-500 hover:scale-105 hover:shadow-2xl hover:shadow-zion-purple/20">
       <div className="absolute inset-0 bg-gradient-to-r from-zion-purple/5 to-zion-cyan/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-      
+
       <CardHeader className="relative z-10">
         <div className="flex items-start justify-between mb-4">
           <div className="flex-1">
@@ -146,7 +146,7 @@ export default function MicroSaasServicesPage() {}
             </CardDescription>
           </div>
         </div>
-        
+
         <div className="flex items-center gap-2 mb-3">
           <Badge variant="secondary" className="bg-zion-purple/20 text-zion-cyan border-zion-purple/30">
             {service.category}
@@ -284,7 +284,7 @@ export default function MicroSaasServicesPage() {}
               Micro SAAS Services
             </h1>
             <p className="text-xl text-zion-slate-light mb-8 leading-relaxed">
-              Transform your business with our innovative micro SAAS solutions. From AI-powered automation to enterprise IT services, 
+              Transform your business with our innovative micro SAAS solutions. From AI-powered automation to enterprise IT services,
               we provide cutting-edge technology that drives growth and efficiency.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
@@ -386,7 +386,7 @@ export default function MicroSaasServicesPage() {}
                 <span className="text-zion-cyan font-medium">{MICRO_SAAS_SERVICES.length}</span> services
               </p>
             </div>
-            
+
             <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8">
               {filteredServices.map((service) => (<ServiceCard key={service.id} service={service}/>))}
             </div>
@@ -400,7 +400,7 @@ export default function MicroSaasServicesPage() {}
             Ready to Transform Your Business?
           </h2>
           <p className="text-xl text-zion-slate-light mb-8 max-w-2xl mx-auto">
-            Our team of experts is ready to help you implement the perfect solution for your business needs. 
+            Our team of experts is ready to help you implement the perfect solution for your business needs.
             Get in touch today for a personalized consultation.
           </p>
           <div className="flex flex-wrap justify-center gap-4">

@@ -1,13 +1,13 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { 
-  Cpu, 
-  Zap, 
-  CheckCircle, 
-  BarChart3, 
-  Sparkles, 
-  ArrowRight, 
+import {
+  Cpu,
+  Zap,
+  CheckCircle,
+  BarChart3,
+  Sparkles,
+  ArrowRight,
   Brain,
   Wifi,
   Database,
@@ -144,16 +144,16 @@ export default function IoTEdgeComputing() {
 
   return (
     <div className="min-h-screen bg-futuristic">
-      <SEO 
+      <SEO
         title="IoT Edge Computing Platform - Zion Tech Group"
         description="Transform your IoT deployment with our edge computing platform. Reduce latency by 90%, cut bandwidth costs by 60-80%, and enable real-time AI processing."
         canonical="/services/iot-edge-computing"
       />
-      
+
       {/* Hero Section */}
       <section className="relative overflow-hidden py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
-          <motion.div 
+          <motion.div
             className="text-center"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -166,17 +166,17 @@ export default function IoTEdgeComputing() {
               Process data at the edge, reduce latency, and unlock real-time insights with our intelligent IoT platform that scales from prototype to production.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link 
-                to="/contact" 
+              <Link
+                to="/contact"
                 className="inline-flex items-center px-8 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-200 transform hover:scale-105"
               >
                 Start IoT Journey
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Link>
-              <a 
-                href="https://ziontechgroup.com" 
-                target="_blank" 
-                rel="noreferrer" 
+              <a
+                href="https://ziontechgroup.com"
+                target="_blank"
+                rel="noreferrer"
                 className="inline-flex items-center px-8 py-3 border border-cyan-500 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-500 hover:text-white transition-all duration-200"
               >
                 Visit Our Site
@@ -184,16 +184,16 @@ export default function IoTEdgeComputing() {
             </div>
           </motion.div>
         </div>
-        
+
         {/* Animated Background Elements */}
         <div className="absolute inset-0 -z-10">
           <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/10 to-blue-500/10" />
-          <motion.div 
+          <motion.div
             className="absolute top-20 left-20 w-72 h-72 bg-cyan-500/20 rounded-full blur-3xl"
             animate={{ scale: [1, 1.2, 1], opacity: [0.3, 0.6, 0.3] }}
             transition={{ duration: 4, repeat: Infinity }}
           />
-          <motion.div 
+          <motion.div
             className="absolute bottom-20 right-20 w-96 h-96 bg-blue-500/20 rounded-full blur-3xl"
             animate={{ scale: [1.2, 1, 1.2], opacity: [0.6, 0.3, 0.6] }}
             transition={{ duration: 4, repeat: Infinity, delay: 2 }}
@@ -204,7 +204,7 @@ export default function IoTEdgeComputing() {
       {/* IoT Applications Section */}
       <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
-          <motion.div 
+          <motion.div
             className="text-center mb-16"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -218,7 +218,7 @@ export default function IoTEdgeComputing() {
               Transform your industry with intelligent IoT solutions that process data at the edge
             </p>
           </motion.div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {iotApplications.map((app, index) => (
               <motion.div
@@ -256,7 +256,7 @@ export default function IoTEdgeComputing() {
       {/* Edge Capabilities Section */}
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-slate-900/30">
         <div className="max-w-7xl mx-auto">
-          <motion.div 
+          <motion.div
             className="text-center mb-16"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -270,7 +270,7 @@ export default function IoTEdgeComputing() {
               Powerful features that make edge computing intelligent and efficient
             </p>
           </motion.div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {edgeCapabilities.map((capability, index) => (
               <motion.div
@@ -308,7 +308,7 @@ export default function IoTEdgeComputing() {
       {/* Features Section */}
       <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
-          <motion.div 
+          <motion.div
             className="text-center mb-16"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -322,7 +322,7 @@ export default function IoTEdgeComputing() {
               Comprehensive IoT platform capabilities for modern edge computing
             </p>
           </motion.div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {features.map((feature, index) => (
               <motion.div
@@ -346,7 +346,7 @@ export default function IoTEdgeComputing() {
       {/* Benefits Section */}
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-slate-900/30">
         <div className="max-w-7xl mx-auto">
-          <motion.div 
+          <motion.div
             className="text-center mb-16"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -360,7 +360,7 @@ export default function IoTEdgeComputing() {
               Transform your IoT deployment with edge computing advantages
             </p>
           </motion.div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {benefits.map((benefit, index) => (
               <motion.div
@@ -387,7 +387,7 @@ export default function IoTEdgeComputing() {
       {/* Device Support Section */}
       <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
-          <motion.div 
+          <motion.div
             className="text-center mb-16"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -401,7 +401,7 @@ export default function IoTEdgeComputing() {
               Our platform works with a wide range of IoT devices and platforms
             </p>
           </motion.div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {deviceSupport.map((device, index) => (
               <motion.div
@@ -425,7 +425,7 @@ export default function IoTEdgeComputing() {
       {/* Pricing Section */}
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-slate-900/30">
         <div className="max-w-7xl mx-auto">
-          <motion.div 
+          <motion.div
             className="text-center mb-16"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -439,14 +439,14 @@ export default function IoTEdgeComputing() {
               Choose the plan that fits your IoT deployment needs
             </p>
           </motion.div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {pricing.map((plan, index) => (
               <motion.div
                 key={index}
                 className={`relative bg-slate-800/50 border rounded-xl p-8 ${
-                  plan.recommended 
-                    ? 'border-cyan-500/50 bg-slate-800/70' 
+                  plan.recommended
+                    ? 'border-cyan-500/50 bg-slate-800/70'
                     : 'border-slate-700/50'
                 }`}
                 initial={{ opacity: 0, y: 20 }}
@@ -461,7 +461,7 @@ export default function IoTEdgeComputing() {
                     </span>
                   </div>
                 )}
-                
+
                 <div className="text-center mb-6">
                   <h3 className="text-2xl font-bold text-white mb-2">{plan.plan}</h3>
                   <div className="flex items-baseline justify-center">
@@ -469,7 +469,7 @@ export default function IoTEdgeComputing() {
                     <span className="text-slate-400 ml-1">{plan.period}</span>
                   </div>
                 </div>
-                
+
                 <ul className="space-y-3 mb-8">
                   {plan.features.map((feature, idx) => (
                     <li key={idx} className="flex items-center text-slate-300">
@@ -478,8 +478,8 @@ export default function IoTEdgeComputing() {
                     </li>
                   ))}
                 </ul>
-                
-                <Link 
+
+                <Link
                   to="/contact"
                   className={`w-full py-3 px-6 rounded-lg font-semibold text-center block transition-all duration-300 ${
                     plan.recommended
@@ -498,7 +498,7 @@ export default function IoTEdgeComputing() {
       {/* Tech Stack Section */}
       <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
-          <motion.div 
+          <motion.div
             className="text-center mb-16"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -512,7 +512,7 @@ export default function IoTEdgeComputing() {
               Our IoT platform leverages industry-leading technologies for optimal performance
             </p>
           </motion.div>
-          
+
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
             {techStack.map((tech, index) => (
               <motion.a
@@ -550,14 +550,14 @@ export default function IoTEdgeComputing() {
               Join thousands of businesses that trust our IoT edge computing platform
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link 
+              <Link
                 to="/contact"
                 className="inline-flex items-center px-8 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-200 transform hover:scale-105"
               >
                 Start IoT Project
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Link>
-              <a 
+              <a
                 href="tel:+13024640950"
                 className="inline-flex items-center px-8 py-3 border border-cyan-500 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-500 hover:text-white transition-all duration-200"
               >

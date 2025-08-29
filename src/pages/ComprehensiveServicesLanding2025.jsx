@@ -39,10 +39,10 @@ const ComprehensiveServicesLanding2025 = () => {
             </span>
           </h1>
           <p className="text-xl text-gray-300 max-w-4xl mx-auto mb-8">
-            Discover our comprehensive suite of cutting-edge micro SAAS services, IT solutions, and AI platforms 
+            Discover our comprehensive suite of cutting-edge micro SAAS services, IT solutions, and AI platforms
             designed to revolutionize your operations and drive unprecedented growth.
           </p>
-          
+
           {/* Key Statistics */}
           <div className="grid grid-cols-1 md:grid-cols-4 gap-6 max-w-4xl mx-auto mb-12">
             <div className="bg-white/10 backdrop-blur-lg rounded-xl p-4 border border-white/20">
@@ -119,7 +119,7 @@ const ComprehensiveServicesLanding2025 = () => {
                 {/* Service Content */}
                 <div className="p-6">
                   <p className="text-gray-300 text-sm mb-4">{service.description}</p>
-                  
+
                   {/* Key Benefits */}
                   <div className="mb-4">
                     <h4 className="text-sm font-semibold text-blue-400 mb-2">Key Benefits</h4>
@@ -396,13 +396,13 @@ const ComprehensiveServicesLanding2025 = () => {
           <p className="text-xl text-gray-300 mb-8">
             Join thousands of businesses that have already revolutionized their operations with our AI-powered solutions.
           </p>
-          
+
           <div className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-xl p-8 border border-blue-400">
             <h3 className="text-2xl font-bold text-white mb-4">Get Started Today</h3>
             <p className="text-white/90 mb-6">
               Schedule a free consultation and discover how our solutions can drive innovation in your organization.
             </p>
-            
+
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a href="tel:+13024640950" className="bg-white text-blue-600 hover:bg-gray-100 font-semibold py-3 px-6 rounded-lg transition-colors duration-300">
                 Call Now: +1 302 464 0950
@@ -411,7 +411,7 @@ const ComprehensiveServicesLanding2025 = () => {
                 Email: kleber@ziontechgroup.com
               </a>
             </div>
-            
+
             <div className="mt-6 text-white/70 text-sm">
               <p>📍 364 E Main St STE 1008 Middletown DE 19709</p>
               <p>🌐 ziontechgroup.com</p>

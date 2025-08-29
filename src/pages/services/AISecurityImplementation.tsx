@@ -13,20 +13,20 @@ export default function AISecurityImplementation() {
   ];
 
   const tiers = [
-    { 
-      name: 'Developer', 
-      price: '$699/mo', 
-      details: ['Up to 3 projects/month', 'Basic AI features', 'Standard implementation', 'Email support'] 
+    {
+      name: 'Developer',
+      price: '$699/mo',
+      details: ['Up to 3 projects/month', 'Basic AI features', 'Standard implementation', 'Email support']
     },
-    { 
-      name: 'Business', 
-      price: '$1,799/mo', 
-      details: ['Up to 10 projects/month', 'Advanced AI features', 'Enhanced implementation', 'Priority support'] 
+    {
+      name: 'Business',
+      price: '$1,799/mo',
+      details: ['Up to 10 projects/month', 'Advanced AI features', 'Enhanced implementation', 'Priority support']
     },
-    { 
-      name: 'Enterprise', 
-      price: '$4,499/mo', 
-      details: ['Unlimited projects', 'Custom AI models', 'Full implementation suite', '24/7 dedicated support'] 
+    {
+      name: 'Enterprise',
+      price: '$4,499/mo',
+      details: ['Unlimited projects', 'Custom AI models', 'Full implementation suite', '24/7 dedicated support']
     },
   ];
 

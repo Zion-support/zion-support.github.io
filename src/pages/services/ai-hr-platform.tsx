@@ -61,11 +61,11 @@ const AIHRPlatform: React.FC = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      <SEO 
+      <SEO
         title="AI HR Platform Services - Zion Tech Group"
         description="Transform your HR operations with AI-powered recruitment, talent management, and performance analytics. Streamline HR processes and improve employee experience."
       />
-      
+
       {/* Hero Section */}
       <section className="pt-20 pb-16 px-4">
         <div className="max-w-7xl mx-auto">
@@ -79,19 +79,19 @@ const AIHRPlatform: React.FC = () => {
               <Users className="w-5 h-5 text-blue-400 mr-2" />
               <span className="text-blue-300 font-medium">AI HR Platform</span>
             </div>
-            
+
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
               AI HR
               <span className="block text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-indigo-500 to-purple-400">
                 Platform
               </span>
             </h1>
-            
+
             <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-              Revolutionize your HR operations with AI-powered recruitment, talent management, and performance analytics. 
+              Revolutionize your HR operations with AI-powered recruitment, talent management, and performance analytics.
               Streamline processes and create exceptional employee experiences.
             </p>
-            
+
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="px-8 py-4 bg-gradient-to-r from-blue-500 to-indigo-600 text-white font-semibold rounded-lg hover:from-blue-400 hover:to-indigo-500 transition-all duration-200 hover:scale-105 shadow-lg shadow-blue-500/20">
                 Get Started
@@ -223,7 +223,7 @@ const AIHRPlatform: React.FC = () => {
             >
               <h3 className="text-2xl font-semibold text-white mb-6">Get Started Today</h3>
               <p className="text-gray-300 mb-6">
-                Ready to transform your HR operations? Our AI HR experts can help you implement 
+                Ready to transform your HR operations? Our AI HR experts can help you implement
                 intelligent solutions that streamline processes and improve employee experience.
               </p>
               <button className="w-full px-6 py-3 bg-gradient-to-r from-blue-500 to-indigo-600 text-white font-semibold rounded-lg hover:from-blue-400 hover:to-indigo-500 transition-all duration-200 hover:scale-105 shadow-lg shadow-blue-500/20">

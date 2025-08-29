@@ -71,7 +71,7 @@ const CloudServices = () => {
               <span className="bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent"> Solutions</span>
             </h1>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-              Accelerate your digital transformation with modern cloud infrastructure, 
+              Accelerate your digital transformation with modern cloud infrastructure,
               DevOps practices, and scalable solutions.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -94,11 +94,11 @@ const CloudServices = () => {
               Our Cloud Services
             </h2>
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              End-to-end cloud solutions designed to modernize your infrastructure 
+              End-to-end cloud solutions designed to modernize your infrastructure
               and accelerate your business growth.
             </p>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {cloudServices.map((service, index) => (
               <div key={index} className="bg-slate-800/50 border border-white/10 rounded-xl p-6 hover:border-blue-500/50 transition-all duration-300">
@@ -130,11 +130,11 @@ const CloudServices = () => {
               Cloud Platforms We Work With
             </h2>
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              Expertise across all major cloud providers to ensure you get the best 
+              Expertise across all major cloud providers to ensure you get the best
               solutions for your specific needs.
             </p>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {cloudPlatforms.map((platform, index) => (
               <div key={index} className="bg-slate-800/50 border border-white/10 rounded-xl p-6 text-center hover:border-blue-500/50 transition-all duration-300">
@@ -165,7 +165,7 @@ const CloudServices = () => {
                 Why Choose Cloud Solutions?
               </h2>
               <p className="text-lg text-gray-300 mb-6">
-                Cloud computing provides numerous advantages that can transform 
+                Cloud computing provides numerous advantages that can transform
                 your business operations and drive innovation.
               </p>
               <ul className="space-y-3">
@@ -182,7 +182,7 @@ const CloudServices = () => {
                 <Zap className="w-24 h-24 text-blue-400 mx-auto mb-4"/>
                 <h3 className="text-2xl font-bold text-white mb-2">Cloud Expertise</h3>
                 <p className="text-gray-300 mb-6">
-                  Our team has extensive experience with cloud platforms and 
+                  Our team has extensive experience with cloud platforms and
                   can help you navigate the complex cloud landscape.
                 </p>
                 <div className="text-sm text-gray-400">

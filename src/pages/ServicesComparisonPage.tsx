@@ -10,7 +10,7 @@ export default function ServicesComparisonPage() {
         keywords="services comparison, technology services, AI services, IT services, Zion Tech Group"
         canonical="https://ziontechgroup.com/services-comparison"
       />
-      
+
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
           <div className="text-center">
@@ -21,7 +21,7 @@ export default function ServicesComparisonPage() {
               Compare our comprehensive range of technology services and find the perfect solution for your business needs.
             </p>
           </div>
-          
+
           <div className="mt-16 text-center text-white">
             <p className="text-lg">This page is under development. Please check back soon for detailed service comparisons.</p>
           </div>

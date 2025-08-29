@@ -1,21 +1,21 @@
 import React, { useState, useEffect, useCallback, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { 
-  Eye, 
-  EyeOff, 
-  Volume2, 
-  VolumeX, 
-  Keyboard, 
-  MousePointer, 
-  Sun, 
-  Moon, 
-  Contrast, 
-  Type, 
-  Move, 
-  Settings, 
-  X, 
-  CheckCircle, 
-  AlertTriangle, 
+import {
+  Eye,
+  EyeOff,
+  Volume2,
+  VolumeX,
+  Keyboard,
+  MousePointer,
+  Sun,
+  Moon,
+  Contrast,
+  Type,
+  Move,
+  Settings,
+  X,
+  CheckCircle,
+  AlertTriangle,
   Info,
   Accessibility,
   Braille,
@@ -68,12 +68,12 @@ interface AccessibilityFeature {
   impact: 'high' | 'medium' | 'low';
 }
 
-export default function EnhancedAccessibilityEnhancer({ 
-  enabled = true, 
-  showControls = true 
-}: { 
-  enabled?: boolean; 
-  showControls?: boolean; 
+export default function EnhancedAccessibilityEnhancer({
+  enabled = true,
+  showControls = true
+}: {
+  enabled?: boolean;
+  showControls?: boolean;
 }) {
   const [isOpen, setIsOpen] = useState(false);
   const [settings, setSettings] = useState<AccessibilitySettings>({
@@ -259,14 +259,14 @@ export default function EnhancedAccessibilityEnhancer({
     if ('webkitSpeechRecognition' in window || 'SpeechRecognition' in window) {
       const SpeechRecognition = (window as any).SpeechRecognition || (window as any).webkitSpeechRecognition;
       const recognition = new SpeechRecognition();
-      
+
       recognition.continuous = true;
       recognition.interimResults = true;
       recognition.lang = 'en-US';
 
       recognition.onresult = (event: any) => {
-        let finalTranscript = '';
-        for (let i = event.resultIndex; i < event.results.length; i++) {
+        const finalTranscript = '';
+        for (const i = event.resultIndex; i < event.results.length; i++) {
           if (event.results[i].isFinal) {
             finalTranscript += event.results[i][0].transcript;
           }
@@ -278,7 +278,7 @@ export default function EnhancedAccessibilityEnhancer({
       };
 
       recognition.onerror = (event: any) => {
-        console.error('Speech recognition error:', event.error);
+        // console.error('Speech recognition error:', event.error);
         setIsListening(false);
       };
 
@@ -305,7 +305,7 @@ export default function EnhancedAccessibilityEnhancer({
 
   // Toggle accessibility features
   const toggleFeature = useCallback((featureId: string) => {
-    setFeatures(prev => prev.map(f => 
+    setFeatures(prev => prev.map(f =>
       f.id === featureId ? { ...f, enabled: !f.enabled } : f
     ));
 
@@ -322,7 +322,7 @@ export default function EnhancedAccessibilityEnhancer({
     const feature = features.find(f => f.id === featureId);
     if (feature) {
       const newSettings = { ...settings };
-      
+
       switch (featureId) {
         case 'high-contrast':
           newSettings.highContrast = !newSettings.highContrast;
@@ -349,7 +349,7 @@ export default function EnhancedAccessibilityEnhancer({
           newSettings.dyslexiaFriendly = !newSettings.dyslexiaFriendly;
           break;
       }
-      
+
       applyAccessibilitySettings(newSettings);
     }
   }, [features, settings, applyAccessibilitySettings]);
@@ -358,7 +358,7 @@ export default function EnhancedAccessibilityEnhancer({
   useEffect(() => {
     const scores = { A: 0, AA: 0, AAA: 0 };
     const totalFeatures = features.length;
-    
+
     features.forEach(feature => {
       if (feature.enabled) {
         scores[feature.wcagLevel]++;
@@ -380,12 +380,12 @@ export default function EnhancedAccessibilityEnhancer({
         event.preventDefault();
         setIsOpen(true);
       }
-      
+
       // Escape to close
       if (event.key === 'Escape') {
         setIsOpen(false);
       }
-      
+
       // Tab navigation enhancement
       if (event.key === 'Tab') {
         document.body.classList.add('keyboard-navigation');
@@ -406,7 +406,7 @@ export default function EnhancedAccessibilityEnhancer({
       localStorage.setItem('zion-accessibility-settings', JSON.stringify(settings));
       await new Promise(resolve => setTimeout(resolve, 1000)); // Simulate save
     } catch (error) {
-      console.error('Failed to save settings:', error);
+      // console.error('Failed to save settings:', error);
     } finally {
       setIsLoading(false);
     }
@@ -424,7 +424,7 @@ export default function EnhancedAccessibilityEnhancer({
       }
       await new Promise(resolve => setTimeout(resolve, 500)); // Simulate load
     } catch (error) {
-      console.error('Failed to load settings:', error);
+      // console.error('Failed to load settings:', error);
     } finally {
       setIsLoading(false);
     }
@@ -455,7 +455,7 @@ export default function EnhancedAccessibilityEnhancer({
         secondary: '#64748b'
       }
     };
-    
+
     setSettings(defaultSettings);
     applyAccessibilitySettings(defaultSettings);
     setActiveFeatures([]);
@@ -464,7 +464,7 @@ export default function EnhancedAccessibilityEnhancer({
   // Toggle voice recognition
   const toggleVoiceRecognition = useCallback(() => {
     if (!voiceRecognition) return;
-    
+
     if (isListening) {
       voiceRecognition.stop();
       setIsListening(false);
@@ -601,7 +601,7 @@ export default function EnhancedAccessibilityEnhancer({
                       <div className="text-2xl font-bold text-green-500">{wcagScore.A}%</div>
                       <div className="text-sm text-gray-600 dark:text-gray-400">Basic compliance</div>
                     </div>
-                    
+
                     <div className="p-4 bg-white dark:bg-zion-slate-800 rounded-xl border border-gray-200 dark:border-zion-slate-700">
                       <div className="flex items-center justify-between mb-2">
                         <Award className="w-5 h-5 text-blue-500" />
@@ -610,7 +610,7 @@ export default function EnhancedAccessibilityEnhancer({
                       <div className="text-2xl font-bold text-blue-500">{wcagScore.AA}%</div>
                       <div className="text-sm text-gray-600 dark:text-gray-400">Standard compliance</div>
                     </div>
-                    
+
                     <div className="p-4 bg-white dark:bg-zion-slate-800 rounded-xl border border-gray-200 dark:border-zion-slate-700">
                       <div className="flex items-center justify-between mb-2">
                         <Shield className="w-5 h-5 text-purple-500" />
@@ -661,7 +661,7 @@ export default function EnhancedAccessibilityEnhancer({
                               {feature.description}
                             </p>
                           </div>
-                          
+
                           <div className={`w-5 h-5 rounded-full border-2 transition-colors ${
                             feature.enabled
                               ? 'bg-zion-cyan border-zion-cyan'
@@ -686,7 +686,7 @@ export default function EnhancedAccessibilityEnhancer({
                     <Settings className="w-4 h-4" />
                     <span>{showAdvanced ? 'Hide' : 'Show'} Advanced Settings</span>
                   </button>
-                  
+
                   {showAdvanced && (
                     <motion.div
                       initial={{ opacity: 0, height: 0 }}
@@ -712,7 +712,7 @@ export default function EnhancedAccessibilityEnhancer({
                             className="w-full"
                           />
                         </div>
-                        
+
                         <div>
                           <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
                             Line Height: {settings.lineHeight}
@@ -764,7 +764,7 @@ export default function EnhancedAccessibilityEnhancer({
                       {isLoading ? <Loader2 className="w-4 h-4 animate-spin" /> : <Save className="w-4 h-4" />}
                       <span>Save Settings</span>
                     </button>
-                    
+
                     <button
                       onClick={loadSettings}
                       disabled={isLoading}
@@ -773,7 +773,7 @@ export default function EnhancedAccessibilityEnhancer({
                       {isLoading ? <Loader2 className="w-4 h-4 animate-spin" /> : <Settings className="w-4 h-4" />}
                       <span>Load Settings</span>
                     </button>
-                    
+
                     <button
                       onClick={resetSettings}
                       className="flex items-center space-x-2 px-4 py-2 bg-red-500 text-white rounded-lg hover:bg-red-600 transition-colors"
@@ -782,7 +782,7 @@ export default function EnhancedAccessibilityEnhancer({
                       <span>Reset to Default</span>
                     </button>
                   </div>
-                  
+
                   <div className="text-sm text-gray-500 dark:text-gray-400">
                     Press <kbd className="px-2 py-1 bg-gray-100 dark:bg-zion-slate-700 rounded text-xs">Alt + A</kbd> to open
                   </div>
@@ -801,22 +801,22 @@ export default function EnhancedAccessibilityEnhancer({
           --zion-primary: #ffff00 !important;
           --zion-secondary: #00ffff !important;
         }
-        
+
         .enhanced-focus *:focus {
           outline: 3px solid #22ddd2 !important;
           outline-offset: 2px !important;
         }
-        
+
         .keyboard-navigation *:focus {
           outline: 2px solid #22ddd2 !important;
         }
-        
+
         .reduced-motion * {
           animation-duration: 0.01ms !important;
           animation-iteration-count: 1 !important;
           transition-duration: 0.01ms !important;
         }
-        
+
         [data-voice-control="true"] {
           cursor: pointer;
         }

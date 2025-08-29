@@ -1,14 +1,14 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { 
-  Shield, 
-  Cookie, 
-  Settings, 
-  Eye, 
-  EyeOff, 
-  Check, 
-  X, 
-  Info, 
+import {
+  Shield,
+  Cookie,
+  Settings,
+  Eye,
+  EyeOff,
+  Check,
+  X,
+  Info,
   AlertTriangle,
   Lock,
   Database,
@@ -180,14 +180,14 @@ const Cookies = () => {
           <div className="absolute top-20 left-20 w-64 h-64 border border-zion-cyan rounded-full animate-pulse"></div>
           <div className="absolute bottom-20 right-20 w-48 h-48 border border-zion-purple rounded-full animate-pulse delay-1000"></div>
         </div>
-        
+
         <div className="container mx-auto px-4 text-center relative z-10">
           <div className="flex justify-center mb-8">
             <div className="w-24 h-24 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-2xl flex items-center justify-center">
               <Cookie className="w-12 h-12 text-white" />
             </div>
           </div>
-          
+
           <h1 className="text-6xl md:text-7xl font-bold text-white mb-8 leading-tight">
             Cookie{' '}
             <span className="bg-gradient-to-r from-zion-cyan to-zion-purple bg-clip-text text-transparent">
@@ -195,10 +195,10 @@ const Cookies = () => {
             </span>
           </h1>
           <p className="text-xl md:text-2xl text-zion-slate-light mb-12 max-w-4xl mx-auto leading-relaxed">
-            Learn how we use cookies and similar technologies to enhance your browsing experience, 
+            Learn how we use cookies and similar technologies to enhance your browsing experience,
             improve our services, and provide personalized content.
           </p>
-          
+
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button className="px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-purple text-white rounded-xl font-semibold text-lg hover:scale-105 transition-all duration-300 shadow-2xl hover:shadow-zion-cyan/25">
               Manage Cookies
@@ -211,14 +211,14 @@ const Cookies = () => {
             Cookie Policy
           </h1>
           <p className="text-xl text-zion-slate-light max-w-3xl mx-auto leading-relaxed">
-            Learn about how Zion Tech Group uses cookies and similar technologies 
+            Learn about how Zion Tech Group uses cookies and similar technologies
             to enhance your browsing experience.
           </p>
           <p className="text-zion-slate-light mt-4">
-            Last updated: {new Date().toLocaleDateString('en-US', { 
-              year: 'numeric', 
-              month: 'long', 
-              day: 'numeric' 
+            Last updated: {new Date().toLocaleDateString('en-US', {
+              year: 'numeric',
+              month: 'long',
+              day: 'numeric'
             })}
           </p>
         </motion.div>
@@ -233,7 +233,7 @@ const Cookies = () => {
                 What Are Cookies?
               </h2>
               <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
-                Cookies are small text files that are stored on your device when you visit our website. 
+                Cookies are small text files that are stored on your device when you visit our website.
                 They help us provide you with a better experience and improve our services.
               </p>
             </div>
@@ -296,7 +296,7 @@ const Cookies = () => {
               Types of Cookies We Use
             </h2>
             <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
-              We use different types of cookies for various purposes. You can control which types 
+              We use different types of cookies for various purposes. You can control which types
               of cookies are active on your device.
             </p>
           </div>
@@ -321,7 +321,7 @@ const Cookies = () => {
                         <p className="text-zion-slate-light">{category.description}</p>
                       </div>
                     </div>
-                    
+
                     <div className="flex items-center gap-3">
                       {category.alwaysActive && (
                         <span className="bg-gradient-to-r from-zion-cyan to-zion-purple text-white px-3 py-1 rounded-full text-sm font-medium">
@@ -361,7 +361,7 @@ const Cookies = () => {
                             ))}
                           </ul>
                         </div>
-                        
+
                         <div>
                           <h4 className="text-lg font-semibold text-white mb-3">Purpose</h4>
                           <p className="text-zion-slate-light leading-relaxed">
@@ -439,7 +439,7 @@ const Cookies = () => {
               Manage Your Cookie Preferences
             </h2>
             <p className="text-xl text-zion-slate-light mb-12 max-w-3xl mx-auto">
-              You have control over which cookies are active on your device. 
+              You have control over which cookies are active on your device.
               Essential cookies cannot be disabled as they are necessary for the website to function.
             </p>
 
@@ -447,7 +447,7 @@ const Cookies = () => {
               <div className="bg-zion-slate-dark/50 backdrop-blur-sm border border-zion-cyan/20 rounded-xl p-6">
                 <h3 className="text-xl font-bold text-white mb-4">Browser Settings</h3>
                 <p className="text-zion-slate-light mb-4">
-                  Most web browsers allow you to control cookies through their settings. 
+                  Most web browsers allow you to control cookies through their settings.
                   You can delete existing cookies and choose whether to accept new ones.
                 </p>
                 <button className="bg-zion-cyan/20 text-zion-cyan border border-zion-cyan px-4 py-2 rounded-lg hover:bg-zion-cyan hover:text-white transition-all duration-300">
@@ -458,7 +458,7 @@ const Cookies = () => {
               <div className="bg-zion-slate-dark/50 backdrop-blur-sm border border-zion-cyan/20 rounded-xl p-6">
                 <h3 className="text-xl font-bold text-white mb-4">Cookie Consent</h3>
                 <p className="text-zion-slate-light mb-4">
-                  When you first visit our website, you'll see a cookie consent banner 
+                  When you first visit our website, you'll see a cookie consent banner
                   where you can choose your preferences.
                 </p>
                 <button className="bg-zion-cyan/20 text-zion-cyan border border-zion-cyan px-4 py-2 rounded-lg hover:bg-zion-cyan hover:text-white transition-all duration-300">
@@ -470,7 +470,7 @@ const Cookies = () => {
             <div className="bg-gradient-to-r from-zion-cyan/20 to-zion-purple/20 border border-zion-cyan/30 rounded-xl p-8">
               <h3 className="text-2xl font-bold text-white mb-4">Need Help?</h3>
               <p className="text-zion-slate-light mb-6">
-                If you have questions about our cookie policy or need assistance managing your preferences, 
+                If you have questions about our cookie policy or need assistance managing your preferences,
                 our support team is here to help.
               </p>
               <button className="bg-gradient-to-r from-zion-cyan to-zion-purple text-white px-8 py-3 rounded-lg font-semibold hover:scale-105 transition-all duration-300">
@@ -488,10 +488,10 @@ const Cookies = () => {
             Stay Informed
           </h2>
           <p className="text-xl text-zion-slate-light mb-8 max-w-3xl mx-auto">
-            We're committed to transparency and protecting your privacy. 
+            We're committed to transparency and protecting your privacy.
             Learn more about how we handle your data and protect your rights.
           </p>
-          
+
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button className="px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-purple text-white rounded-xl font-semibold text-lg hover:scale-105 transition-all duration-300 shadow-2xl hover:shadow-zion-cyan/25">
               Privacy Policy

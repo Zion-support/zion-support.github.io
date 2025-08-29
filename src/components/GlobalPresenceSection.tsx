@@ -1,10 +1,10 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { 
-  Globe, 
-  MapPin, 
-  Users, 
-  Clock, 
+import {
+  Globe,
+  MapPin,
+  Users,
+  Clock,
   Star,
   Award,
   CheckCircle
@@ -90,7 +90,7 @@ export const GlobalPresenceSection: React.FC = () => {
             Global Presence
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Serving clients worldwide with local expertise and global reach. 
+            Serving clients worldwide with local expertise and global reach.
             Our distributed team ensures 24/7 support and cultural understanding.
           </p>
         </motion.div>
@@ -188,7 +188,7 @@ export const GlobalPresenceSection: React.FC = () => {
               Ready to Go Global?
             </h3>
             <p className="text-blue-100 mb-6 max-w-2xl mx-auto">
-              Whether you're expanding internationally or need local expertise, 
+              Whether you're expanding internationally or need local expertise,
               our global presence ensures you get the support you need, when you need it.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">

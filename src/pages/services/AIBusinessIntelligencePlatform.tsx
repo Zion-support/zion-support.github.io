@@ -1,13 +1,13 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { 
-  Brain, 
-  TrendingUp, 
-  BarChart3, 
-  Zap, 
-  Shield, 
-  Users, 
-  Globe, 
+import {
+  Brain,
+  TrendingUp,
+  BarChart3,
+  Zap,
+  Shield,
+  Users,
+  Globe,
   CheckCircle,
   ArrowRight,
   Phone,
@@ -146,11 +146,11 @@ export default function AIBusinessIntelligencePlatform() {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      <SEO 
+      <SEO
         title="AI Business Intelligence Platform - Zion Tech Group"
         description="Advanced AI-powered business intelligence platform providing real-time insights, predictive analytics, and automated reporting for data-driven decision making."
       />
-      
+
       {/* Hero Section */}
       <section className="relative py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto text-center">
@@ -167,7 +167,7 @@ export default function AIBusinessIntelligencePlatform() {
               <span className="bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent"> Actionable Intelligence</span>
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Advanced AI-powered business intelligence platform that provides real-time insights, 
+              Advanced AI-powered business intelligence platform that provides real-time insights,
               predictive analytics, and automated reporting for data-driven decision making.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -197,7 +197,7 @@ export default function AIBusinessIntelligencePlatform() {
               Powerful Features for Modern Businesses
             </h2>
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              Our AI-powered platform combines cutting-edge technology with intuitive design 
+              Our AI-powered platform combines cutting-edge technology with intuitive design
               to deliver actionable business intelligence.
             </p>
           </motion.div>
@@ -286,8 +286,8 @@ export default function AIBusinessIntelligencePlatform() {
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
                 className={`relative bg-slate-800/50 backdrop-blur-sm rounded-xl p-8 border ${
-                  tier.popular 
-                    ? 'border-cyan-500/50 ring-2 ring-cyan-500/20' 
+                  tier.popular
+                    ? 'border-cyan-500/50 ring-2 ring-cyan-500/20'
                     : 'border-slate-700'
                 }`}
               >
@@ -317,10 +317,10 @@ export default function AIBusinessIntelligencePlatform() {
                   ))}
                 </ul>
 
-                <Button 
+                <Button
                   className={`w-full ${
-                    tier.popular 
-                      ? 'bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700' 
+                    tier.popular
+                      ? 'bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700'
                       : 'bg-slate-700 hover:bg-slate-600'
                   }`}
                 >
@@ -411,7 +411,7 @@ export default function AIBusinessIntelligencePlatform() {
             <p className="text-xl text-gray-300 mb-8">
               Have questions? Our team is here to help you get started.
             </p>
-            
+
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
               <div className="flex flex-col items-center">
                 <Phone className="h-8 w-8 text-cyan-500 mb-4" />

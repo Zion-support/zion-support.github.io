@@ -179,7 +179,7 @@ export function InteractivePortfolio() {
                 <div className="relative h-48 overflow-hidden">
                   <img src={project.image} alt={project.title} className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"/>
                   <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"/>
-                  
+
                   {/* Quick Actions */}
                   <div className="absolute inset-0 flex items-center justify-center gap-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                     <button className="p-3 bg-white/20 backdrop-blur-sm rounded-full text-white hover:bg-white/30 transition-colors">
@@ -209,7 +209,7 @@ export function InteractivePortfolio() {
                   <h3 className="text-xl font-bold text-zion-slate mb-3 group-hover:text-zion-cyan transition-colors">
                     {project.title}
                   </h3>
-                  
+
                   <p className="text-zion-slate-light text-sm leading-relaxed mb-4 line-clamp-3">
                     {project.description}
                   </p>
@@ -276,7 +276,7 @@ export function InteractivePortfolio() {
               <div className="relative mb-6">
                 <img src={selectedProject.image} alt={selectedProject.title} className="w-full h-64 object-cover rounded-lg"/>
                 <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent rounded-lg"/>
-                
+
                 {/* Navigation Arrows */}
                 <button onClick={prevImage} className="absolute left-4 top-1/2 transform -translate-y-1/2 p-2 bg-white/20 backdrop-blur-sm rounded-full text-white hover:bg-white/30 transition-colors">
                   <ChevronLeft className="w-5 h-5"/>

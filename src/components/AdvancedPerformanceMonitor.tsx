@@ -42,14 +42,14 @@ export const AdvancedPerformanceMonitor: React.FC = () => {
     const countFrames = () => {
       frameCount++;
       const currentTime = performance.now();
-      
+
       if (currentTime - lastTime >= 1000) {
         const fps = Math.round((frameCount * 1000) / (currentTime - lastTime));
         setMetrics(prev => ({ ...prev, fps, timestamp: Date.now() }));
         frameCount = 0;
         lastTime = currentTime;
       }
-      
+
       requestAnimationFrame(countFrames);
     };
 
@@ -94,21 +94,21 @@ export const AdvancedPerformanceMonitor: React.FC = () => {
   const estimateCPUUsage = useCallback(() => {
     let lastTime = performance.now();
     let frameCount = 0;
-    
+
     const measureFrame = () => {
       frameCount++;
       const currentTime = performance.now();
-      
+
       if (currentTime - lastTime >= 1000) {
         const cpuUsage = Math.min(100, (frameCount / 60) * 100);
         setMetrics(prev => ({ ...prev, cpuUsage }));
         frameCount = 0;
         lastTime = currentTime;
       }
-      
+
       requestAnimationFrame(measureFrame);
     };
-    
+
     requestAnimationFrame(measureFrame);
   }, []);
 
@@ -202,20 +202,20 @@ export const AdvancedPerformanceMonitor: React.FC = () => {
   }, [measureFPS, measureMemory, measureLoadTime, measureNetworkLatency, estimateCPUUsage, checkPerformanceAlerts, metrics]);
 
   const getPerformanceScore = useMemo(() => {
-    let score = 100;
-    
+    const score = 100;
+
     if (metrics.fps < 30) score -= 30;
     else if (metrics.fps < 50) score -= 15;
-    
+
     if (metrics.memory > 100) score -= 20;
     else if (metrics.memory > 50) score -= 10;
-    
+
     if (metrics.loadTime > 3000) score -= 20;
     else if (metrics.loadTime > 1000) score -= 10;
-    
+
     if (metrics.networkLatency > 1000) score -= 15;
     else if (metrics.networkLatency > 500) score -= 5;
-    
+
     return Math.max(0, score);
   }, [metrics]);
 

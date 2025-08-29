@@ -161,7 +161,7 @@ function NotificationItem({ notification }) {
           {notification.message && (<p className="text-zinc-300 text-sm leading-relaxed">
               {notification.message}
             </p>)}
-          
+
           {/* Action Button */}
           {notification.action && (<div className="mt-3">
               <Button size="sm" variant="ghost" onClick={notification.action.onClick} className="text-zion-cyan hover:text-zion-cyan-light hover:bg-zion-cyan/10 text-xs">

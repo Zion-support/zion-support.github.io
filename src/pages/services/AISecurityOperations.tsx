@@ -13,20 +13,20 @@ export default function AISecurityOperations() {
   ];
 
   const tiers = [
-    { 
-      name: 'Developer', 
-      price: '$699/mo', 
-      details: ['Up to 1,000 events/day', 'Basic AI features', 'Standard monitoring', 'Email support'] 
+    {
+      name: 'Developer',
+      price: '$699/mo',
+      details: ['Up to 1,000 events/day', 'Basic AI features', 'Standard monitoring', 'Email support']
     },
-    { 
-      name: 'Business', 
-      price: '$1,799/mo', 
-      details: ['Up to 10,000 events/day', 'Advanced AI features', 'Enhanced monitoring', 'Priority support'] 
+    {
+      name: 'Business',
+      price: '$1,799/mo',
+      details: ['Up to 10,000 events/day', 'Advanced AI features', 'Enhanced monitoring', 'Priority support']
     },
-    { 
-      name: 'Enterprise', 
-      price: '$4,499/mo', 
-      details: ['Unlimited events', 'Custom AI models', 'Full security suite', '24/7 dedicated support'] 
+    {
+      name: 'Enterprise',
+      price: '$4,499/mo',
+      details: ['Unlimited events', 'Custom AI models', 'Full security suite', '24/7 dedicated support']
     },
   ];
 

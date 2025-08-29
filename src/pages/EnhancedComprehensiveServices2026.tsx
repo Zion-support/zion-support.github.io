@@ -104,7 +104,7 @@ const EnhancedComprehensiveServices2026: React.FC = () => {
   // Combine services from multiple sources
   const allServices: Service[] = useMemo(() => {
     const services: Service[] = [];
-    
+
     // Add services from ultimateInnovativeServices2026
     ultimateInnovativeServices2026.forEach(service => {
       services.push({
@@ -266,7 +266,7 @@ const EnhancedComprehensiveServices2026: React.FC = () => {
               Enhanced Comprehensive Services 2026
             </h1>
             <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto mb-8">
-              Discover our revolutionary portfolio of cutting-edge micro SAAS, IT services, and AI solutions. 
+              Discover our revolutionary portfolio of cutting-edge micro SAAS, IT services, and AI solutions.
               Featuring quantum computing, edge AI, blockchain services, and up to 1000x performance improvements.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">

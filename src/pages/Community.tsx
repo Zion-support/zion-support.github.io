@@ -1,14 +1,14 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { 
-  Users, 
-  MessageCircle, 
-  Star, 
-  TrendingUp, 
-  Calendar, 
-  MapPin, 
-  Globe, 
+import {
+  Users,
+  MessageCircle,
+  Star,
+  TrendingUp,
+  Calendar,
+  MapPin,
+  Globe,
   BookOpen,
   Video,
   Download,
@@ -184,11 +184,11 @@ export default function Community() {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      <SEO 
+      <SEO
         title="Community - Zion Tech Group"
         description="Join our vibrant community of technology professionals. Connect, learn, and collaborate with experts in AI, cloud computing, cybersecurity, and digital transformation."
       />
-      
+
       {/* Header */}
       <div className="bg-slate-800/50 border-b border-slate-700">
         <div className="container mx-auto px-4 py-16">
@@ -243,7 +243,7 @@ export default function Community() {
           >
             Community Forums
           </motion.h2>
-          
+
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
             {communityForums.map((forum, index) => (
               <motion.div
@@ -268,7 +268,7 @@ export default function Community() {
                       <p className="text-slate-400 text-sm">{forum.description}</p>
                     </div>
                   </div>
-                  
+
                   <div className="grid grid-cols-3 gap-4 mb-6">
                     <div className="text-center p-3 bg-slate-700/50 rounded-lg">
                       <div className="text-lg font-bold text-white">{forum.topics.toLocaleString()}</div>
@@ -283,7 +283,7 @@ export default function Community() {
                       <div className="text-xs text-slate-400">Members</div>
                     </div>
                   </div>
-                  
+
                   <div className="flex items-center justify-between">
                     <span className="text-cyan-400 text-sm font-medium group-hover:translate-x-1 transition-transform duration-300">
                       Join Discussion
@@ -307,7 +307,7 @@ export default function Community() {
         >
           Upcoming Events
         </motion.h2>
-        
+
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-16">
           {upcomingEvents.map((event, index) => (
             <motion.div
@@ -334,12 +334,12 @@ export default function Community() {
                       <event.icon className="w-6 h-6 text-white" />
                     </div>
                   </div>
-                  
+
                   <h3 className="text-lg font-semibold text-white mb-3 group-hover:text-cyan-400 transition-colors">
                     {event.title}
                   </h3>
                   <p className="text-slate-400 text-sm mb-4">{event.description}</p>
-                  
+
                   <div className="space-y-2 mb-4">
                     <div className="flex items-center space-x-2 text-sm text-slate-300">
                       <Calendar className="w-4 h-4" />
@@ -354,7 +354,7 @@ export default function Community() {
                       <span>{event.attendees} attendees</span>
                     </div>
                   </div>
-                  
+
                   <div className="w-full py-3 bg-slate-700 text-white font-semibold rounded-lg hover:bg-slate-600 transition-colors duration-300 text-center">
                     Learn More
                   </div>
@@ -376,7 +376,7 @@ export default function Community() {
           >
             Featured Discussions
           </motion.h2>
-          
+
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
             {featuredDiscussions.map((discussion, index) => (
               <motion.div
@@ -398,21 +398,21 @@ export default function Community() {
                       <span className="text-xs text-slate-400">{discussion.category}</span>
                     </div>
                   </div>
-                  
+
                   <h3 className="text-lg font-semibold text-white mb-3 group-hover:text-cyan-400 transition-colors">
                     {discussion.title}
                   </h3>
-                  
+
                   <div className="flex items-center justify-between text-sm text-slate-400 mb-3">
                     <span>by {discussion.author}</span>
                     <span>{discussion.lastActivity}</span>
                   </div>
-                  
+
                   <div className="flex items-center justify-between text-sm text-slate-400 mb-4">
                     <span>{discussion.replies} replies</span>
                     <span>{discussion.views} views</span>
                   </div>
-                  
+
                   <div className="flex flex-wrap gap-2 mb-4">
                     {discussion.tags.map((tag) => (
                       <span
@@ -423,7 +423,7 @@ export default function Community() {
                       </span>
                     ))}
                   </div>
-                  
+
                   <div className="flex items-center justify-between">
                     <span className="text-cyan-400 text-sm font-medium group-hover:translate-x-1 transition-transform duration-300">
                       Join Discussion
@@ -447,7 +447,7 @@ export default function Community() {
         >
           Community Resources
         </motion.h2>
-        
+
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
           {communityResources.map((resource, index) => (
             <motion.div
@@ -464,7 +464,7 @@ export default function Community() {
                 <div className={`w-16 h-16 bg-gradient-to-br ${resource.color} rounded-xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300`}>
                   <resource.icon className="w-8 h-8 text-white" />
                 </div>
-                
+
                 <h3 className="text-lg font-semibold text-white mb-2 group-hover:text-cyan-400 transition-colors">
                   {resource.title}
                 </h3>

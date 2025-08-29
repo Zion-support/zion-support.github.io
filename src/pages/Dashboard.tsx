@@ -1,9 +1,9 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { 
-  BarChart3, 
-  Users, 
-  TrendingUp, 
+import {
+  BarChart3,
+  Users,
+  TrendingUp,
   DollarSign,
   Activity,
   Shield,
@@ -225,7 +225,7 @@ export default function Dashboard() {
                   View All
                 </button>
               </div>
-              
+
               <div className="space-y-4">
                 {recentProjects.map((project) => (
                   <div key={project.id} className="flex items-center justify-between p-4 bg-zion-blue-light/10 rounded-lg border border-zion-purple/20">
@@ -239,20 +239,20 @@ export default function Dashboard() {
                           {project.priority}
                         </span>
                       </div>
-                      
+
                       <div className="flex items-center gap-4 text-sm text-zion-slate-light">
                         <span>Due: {project.dueDate}</span>
                         <span>Progress: {project.progress}%</span>
                       </div>
-                      
+
                       <div className="w-full bg-zion-purple/20 rounded-full h-2 mt-2">
-                        <div 
+                        <div
                           className="bg-zion-cyan h-2 rounded-full transition-all duration-300"
                           style={{ width: `${project.progress}%` }}
                         ></div>
                       </div>
                     </div>
-                    
+
                     <button className="p-2 text-zion-slate-light hover:text-white transition-colors">
                       <ArrowRight className="h-4 w-4" />
                     </button>

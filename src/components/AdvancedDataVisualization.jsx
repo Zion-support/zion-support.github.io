@@ -66,7 +66,7 @@ export function AdvancedDataVisualization() {
     }, [autoRefresh]);
     const downloadChart = (format) => {
         // Simulate chart download
-        console.log(`Downloading chart as ${format}`);
+        // console.log(`Downloading chart as ${format}`);
     };
     const renderChart = () => {
         switch (selectedChartType) {
@@ -284,7 +284,7 @@ export function AdvancedDataVisualization() {
                     Refresh Data
                   </>)}
               </button>
-              
+
               <div className="grid grid-cols-3 gap-2">
                 <button onClick={() => downloadChart('png')} className="px-3 py-2 bg-zion-emerald text-white rounded-lg hover:bg-zion-emerald-light transition-colors text-xs">
                   PNG
@@ -310,11 +310,11 @@ export function AdvancedDataVisualization() {
               {chartTypes.find(t => t.id === selectedChartType)?.description}
             </p>
           </div>
-          
+
           <div className="bg-white dark:bg-zion-slate border border-zion-slate-light rounded-lg">
             {renderChart()}
           </div>
-          
+
           {/* Data Summary */}
           <div className="mt-6 grid grid-cols-3 gap-4">
             <div className="bg-zion-cyan/10 p-4 rounded-lg border border-zion-cyan/20">

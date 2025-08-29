@@ -6,7 +6,7 @@ const { execSync, spawn } = require('child_process');
 const cron = require('node-cron');
 const crypto = require('crypto');
 
-console.log('🔒 File Integrity Monitor Starting...\n');
+// // console.log('🔒 File Integrity Monitor Starting...\n');
 
 class FileIntegrityMonitor {
   constructor() {
@@ -17,10 +17,10 @@ class FileIntegrityMonitor {
     this.monitoring = false;
     this.logFile = path.join(this.projectRoot, 'logs', 'file-integrity.log');
     this.checksumsFile = path.join(this.projectRoot, 'logs', 'file-checksums.json');
-    
+
     // Ensure logs directory exists
     this.ensureLogsDirectory();
-    
+
     // Initialize monitoring
     this.startMonitoring();
   }
@@ -35,19 +35,19 @@ class FileIntegrityMonitor {
   log(message, level = 'INFO') {
     const timestamp = new Date().toISOString();
     const logEntry = `[${timestamp}] [${level}] ${message}\n`;
-    
-    console.log(logEntry.trim());
-    
+
+    // // console.log(logEntry.trim());
+
     try {
       fs.appendFileSync(this.logFile, logEntry);
     } catch (error) {
-      console.error('Failed to write to log file:', error.message);
+      // console.error('Failed to write to log file:', error.message);
     }
   }
 
   async startMonitoring() {
     this.log('Starting file integrity monitoring...');
-    
+
     // Schedule regular integrity checks
     cron.schedule('0 */6 * * *', () => {
       this.performIntegrityCheck();
@@ -73,13 +73,13 @@ class FileIntegrityMonitor {
 
   async performIntegrityCheck() {
     if (this.monitoring) return;
-    
+
     this.monitoring = true;
     this.log('Performing file integrity check...');
 
     try {
       const issues = await this.detectIntegrityIssues();
-      
+
       if (issues.length > 0) {
         this.log(`Found ${issues.length} integrity issues, attempting fixes...`);
         await this.autoFixIntegrityIssues(issues);
@@ -175,20 +175,20 @@ class FileIntegrityMonitor {
 
   async checkFileCorruption() {
     const corruptedFiles = [];
-    
+
     try {
       // Check if checksums file exists
       if (fs.existsSync(this.checksumsFile)) {
         const checksums = JSON.parse(fs.readFileSync(this.checksumsFile, 'utf8'));
-        
+
         for (const [filePath, expectedChecksum] of Object.entries(checksums)) {
           const fullPath = path.join(this.projectRoot, filePath);
-          
+
           if (fs.existsSync(fullPath)) {
             try {
               const content = fs.readFileSync(fullPath);
               const actualChecksum = crypto.createHash('md5').update(content).digest('hex');
-              
+
               if (actualChecksum !== expectedChecksum) {
                 corruptedFiles.push({
                   file: filePath,
@@ -218,7 +218,7 @@ class FileIntegrityMonitor {
 
   async checkFilePermissions() {
     const permissionIssues = [];
-    
+
     try {
       const criticalFiles = [
         'package.json',
@@ -232,7 +232,7 @@ class FileIntegrityMonitor {
           try {
             const stats = fs.statSync(filePath);
             const mode = stats.mode;
-            
+
             // Check if file is readable
             if (!(mode & fs.constants.R_OK)) {
               permissionIssues.push({
@@ -242,7 +242,7 @@ class FileIntegrityMonitor {
                 mode: mode.toString(8)
               });
             }
-            
+
             // Check if file is writable (for critical config files)
             if (file === 'package.json' || file === 'vite.config.ts') {
               if (!(mode & fs.constants.W_OK)) {
@@ -273,7 +273,7 @@ class FileIntegrityMonitor {
 
   async checkProjectStructure() {
     const structureIssues = [];
-    
+
     try {
       // Check for essential directories
       const essentialDirs = [
@@ -322,7 +322,7 @@ class FileIntegrityMonitor {
     for (const issue of issues) {
       try {
         this.log(`Attempting to fix: ${issue.type}`);
-        
+
         switch (issue.type) {
           case 'missing_critical_files':
             await this.fixMissingCriticalFiles(issue.details);
@@ -337,10 +337,10 @@ class FileIntegrityMonitor {
             await this.fixProjectStructure(issue.details);
             break;
         }
-        
+
         this.issuesFixed++;
         this.log(`Successfully fixed: ${issue.type}`);
-        
+
       } catch (error) {
         this.log(`Failed to fix ${issue.type}: ${error.message}`, 'ERROR');
       }
@@ -349,7 +349,7 @@ class FileIntegrityMonitor {
 
   async fixMissingCriticalFiles(missingFiles) {
     this.log('Fixing missing critical files...');
-    
+
     for (const missingFile of missingFiles) {
       try {
         switch (missingFile.file) {
@@ -375,9 +375,9 @@ class FileIntegrityMonitor {
             await this.createPostCSSConfig();
             break;
         }
-        
+
         this.log(`Created missing file: ${missingFile.file}`);
-        
+
       } catch (error) {
         this.log(`Failed to create ${missingFile.file}: ${error.message}`, 'ERROR');
       }
@@ -578,7 +578,7 @@ export default {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: { /* empty */ },
   },
   plugins: [],
 }`;
@@ -592,8 +592,8 @@ export default {
   async createPostCSSConfig() {
     const config = `export default {
   plugins: {
-    tailwindcss: {},
-    autoprefixer: {},
+    tailwindcss: { /* empty */ },
+    autoprefixer: { /* empty */ },
   },
 }`;
 
@@ -605,7 +605,7 @@ export default {
 
   async fixCorruptedFiles(corruptedFiles) {
     this.log('Fixing corrupted files...');
-    
+
     for (const corruptedFile of corruptedFiles) {
       try {
         if (corruptedFile.type === 'corrupted') {
@@ -615,9 +615,9 @@ export default {
           // Try to fix permissions or remove corrupted file
           await this.fixUnreadableFile(corruptedFile);
         }
-        
+
         this.log(`Fixed corrupted file: ${corruptedFile.file}`);
-        
+
       } catch (error) {
         this.log(`Failed to fix corrupted file ${corruptedFile.file}: ${error.message}`, 'ERROR');
       }
@@ -627,7 +627,7 @@ export default {
   async restoreCorruptedFile(corruptedFile) {
     // Try to restore from backup
     const backupPath = corruptedFile.path + '.backup';
-    
+
     if (fs.existsSync(backupPath)) {
       fs.copyFileSync(backupPath, corruptedFile.path);
       this.log(`Restored ${corruptedFile.file} from backup`);
@@ -646,7 +646,7 @@ export default {
       // If permissions can't be fixed, remove the file
       fs.unlinkSync(unreadableFile.path);
       this.log(`Removed unreadable file: ${unreadableFile.file}`);
-      
+
       // Try to regenerate
       await this.regenerateFile(unreadableFile.file);
     }
@@ -660,7 +660,7 @@ export default {
 
   async fixFilePermissions(permissionIssues) {
     this.log('Fixing file permissions...');
-    
+
     for (const permissionIssue of permissionIssues) {
       try {
         if (permissionIssue.issue === 'not_readable') {
@@ -668,9 +668,9 @@ export default {
         } else if (permissionIssue.issue === 'not_writable') {
           fs.chmodSync(permissionIssue.path, 0o666);
         }
-        
+
         this.log(`Fixed permissions for: ${permissionIssue.file}`);
-        
+
       } catch (error) {
         this.log(`Failed to fix permissions for ${permissionIssue.file}: ${error.message}`, 'ERROR');
       }
@@ -679,7 +679,7 @@ export default {
 
   async fixProjectStructure(structureIssues) {
     this.log('Fixing project structure...');
-    
+
     for (const structureIssue of structureIssues) {
       try {
         if (structureIssue.issue === 'missing_directory') {
@@ -691,7 +691,7 @@ export default {
           fs.mkdirSync(structureIssue.path, { recursive: true });
           this.log(`Fixed directory structure: ${structureIssue.directory}`);
         }
-        
+
       } catch (error) {
         this.log(`Failed to fix structure issue ${structureIssue.directory}: ${error.message}`, 'ERROR');
       }
@@ -700,20 +700,20 @@ export default {
 
   async performDeepIntegrityScan() {
     this.log('Performing deep integrity scan...');
-    
+
     try {
       // Generate new checksums for all files
       await this.generateFileChecksums();
-      
+
       // Run comprehensive integrity checks
       await this.performIntegrityCheck();
-      
+
       // Additional deep checks
       await this.checkFileDependencies();
       await this.validateFileContent();
-      
+
       this.log('Deep integrity scan completed');
-      
+
     } catch (error) {
       this.log(`Deep integrity scan failed: ${error.message}`, 'ERROR');
     }
@@ -721,19 +721,19 @@ export default {
 
   async performWeeklyMaintenance() {
     this.log('Performing weekly integrity maintenance...');
-    
+
     try {
       // Clean up old logs and reports
       await this.cleanupOldFiles();
-      
+
       // Update checksums
       await this.updateFileChecksums();
-      
+
       // Validate project integrity
       await this.validateProjectIntegrity();
-      
+
       this.log('Weekly integrity maintenance completed');
-      
+
     } catch (error) {
       this.log(`Weekly integrity maintenance failed: ${error.message}`, 'ERROR');
     }
@@ -741,11 +741,11 @@ export default {
 
   async generateFileChecksums() {
     this.log('Generating file checksums...');
-    
+
     try {
-      const checksums = {};
+      const checksums = { /* empty */ };
       const sourceFiles = this.findSourceFiles();
-      
+
       for (const file of sourceFiles) {
         try {
           const content = fs.readFileSync(file);
@@ -756,11 +756,11 @@ export default {
           this.log(`Failed to generate checksum for ${file}: ${error.message}`, 'WARN');
         }
       }
-      
+
       // Save checksums
       fs.writeFileSync(this.checksumsFile, JSON.stringify(checksums, null, 2));
       this.log(`Generated checksums for ${Object.keys(checksums).length} files`);
-      
+
     } catch (error) {
       this.log(`Failed to generate file checksums: ${error.message}`, 'ERROR');
     }
@@ -768,7 +768,7 @@ export default {
 
   async checkFileDependencies() {
     this.log('Checking file dependencies...');
-    
+
     // This would check for circular dependencies, missing imports, etc.
     // For now, just log that it's completed
     this.log('File dependency check completed');
@@ -776,7 +776,7 @@ export default {
 
   async validateFileContent() {
     this.log('Validating file content...');
-    
+
     // This would validate file content integrity, syntax, etc.
     // For now, just log that it's completed
     this.log('File content validation completed');
@@ -784,19 +784,19 @@ export default {
 
   async cleanupOldFiles() {
     this.log('Cleaning up old files...');
-    
+
     try {
       const logsDir = path.join(this.projectRoot, 'logs');
       if (fs.existsSync(logsDir)) {
         const files = fs.readdirSync(logsDir);
         const now = Date.now();
         const maxAge = 30 * 24 * 60 * 60 * 1000; // 30 days
-        
+
         for (const file of files) {
           if (file.includes('-report.txt') || file.includes('-audit-report.txt')) {
             const filePath = path.join(logsDir, file);
             const stats = fs.statSync(filePath);
-            
+
             if (now - stats.mtime.getTime() > maxAge) {
               fs.unlinkSync(filePath);
               this.log(`Removed old file: ${file}`);
@@ -811,7 +811,7 @@ export default {
 
   async updateFileChecksums() {
     this.log('Updating file checksums...');
-    
+
     try {
       await this.generateFileChecksums();
       this.log('File checksums updated');
@@ -822,17 +822,17 @@ export default {
 
   async validateProjectIntegrity() {
     this.log('Validating project integrity...');
-    
+
     try {
       // Run a comprehensive integrity check
       const issues = await this.detectIntegrityIssues();
-      
+
       if (issues.length === 0) {
         this.log('Project integrity validation passed');
       } else {
         this.log(`Project integrity validation found ${issues.length} issues`);
       }
-      
+
     } catch (error) {
       this.log(`Project integrity validation failed: ${error.message}`, 'ERROR');
     }
@@ -841,14 +841,14 @@ export default {
   findSourceFiles() {
     const extensions = ['.ts', '.tsx', '.js', '.jsx', '.json', '.html', '.css'];
     const files = [];
-    
+
     function traverse(dir) {
       const items = fs.readdirSync(dir);
-      
+
       for (const item of items) {
         const fullPath = path.join(dir, item);
         const stat = fs.statSync(fullPath);
-        
+
         if (stat.isDirectory()) {
           if (!['node_modules', '.git', 'dist', 'build', '.next', 'logs'].includes(item)) {
             traverse(fullPath);
@@ -858,7 +858,7 @@ export default {
         }
       }
     }
-    
+
     traverse(this.projectRoot);
     return files;
   }

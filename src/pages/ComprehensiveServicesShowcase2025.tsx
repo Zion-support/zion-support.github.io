@@ -1,22 +1,22 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { 
-  Search, 
-  Filter, 
-  Star, 
-  ArrowRight, 
-  ChevronDown, 
-  Globe, 
-  Zap, 
-  Shield, 
-  Brain, 
-  Cloud, 
-  Lock, 
-  Users, 
-  TrendingUp, 
-  Award, 
-  Clock, 
-  DollarSign, 
+import {
+  Search,
+  Filter,
+  Star,
+  ArrowRight,
+  ChevronDown,
+  Globe,
+  Zap,
+  Shield,
+  Brain,
+  Cloud,
+  Lock,
+  Users,
+  TrendingUp,
+  Award,
+  Clock,
+  DollarSign,
   CheckCircle,
   Rocket,
   Cpu,
@@ -113,7 +113,7 @@ const ComprehensiveServicesShowcase2025: React.FC = () => {
                          service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()));
     const matchesPrice = service.price >= priceRange[0] && service.price <= priceRange[1];
     const matchesInnovation = innovationLevel === 'all' || service.innovationLevel === innovationLevel;
-    
+
     return matchesCategory && matchesSearch && matchesPrice && matchesInnovation;
   });
 
@@ -216,7 +216,7 @@ const ComprehensiveServicesShowcase2025: React.FC = () => {
               Comprehensive AI Services Showcase 2025
             </h2>
             <p className="text-xl lg:text-2xl text-zion-slate-light max-w-4xl mx-auto mb-8">
-              Discover our complete portfolio of cutting-edge AI-powered micro SAAS services, 
+              Discover our complete portfolio of cutting-edge AI-powered micro SAAS services,
               designed to transform your business and drive innovation across all industries.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
@@ -275,8 +275,8 @@ const ComprehensiveServicesShowcase2025: React.FC = () => {
                 <button
                   onClick={() => setViewMode('grid')}
                   className={`flex-1 px-3 py-2 rounded-md text-sm font-medium transition-colors ${
-                    viewMode === 'grid' 
-                      ? 'bg-zion-cyan text-white' 
+                    viewMode === 'grid'
+                      ? 'bg-zion-cyan text-white'
                       : 'text-zion-slate-light hover:text-white'
                   }`}
                 >
@@ -285,8 +285,8 @@ const ComprehensiveServicesShowcase2025: React.FC = () => {
                 <button
                   onClick={() => setViewMode('list')}
                   className={`flex-1 px-3 py-2 rounded-md text-sm font-medium transition-colors ${
-                    viewMode === 'list' 
-                      ? 'bg-zion-cyan text-white' 
+                    viewMode === 'list'
+                      ? 'bg-zion-cyan text-white'
                       : 'text-zion-slate-light hover:text-white'
                   }`}
                 >
@@ -517,7 +517,7 @@ const ComprehensiveServicesShowcase2025: React.FC = () => {
             <p className="text-xl text-zion-slate-light mb-8">
               Let's discuss how our AI-powered solutions can drive your success.
             </p>
-            
+
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
               <div className="flex items-center justify-center space-x-3">
                 <Phone className="h-6 w-6 text-zion-cyan" />

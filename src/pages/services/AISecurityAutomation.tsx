@@ -13,20 +13,20 @@ export default function AISecurityAutomation() {
   ];
 
   const tiers = [
-    { 
-      name: 'Developer', 
-      price: '$599/mo', 
-      details: ['Up to 50 workflows', 'Basic AI features', 'Standard automation', 'Email support'] 
+    {
+      name: 'Developer',
+      price: '$599/mo',
+      details: ['Up to 50 workflows', 'Basic AI features', 'Standard automation', 'Email support']
     },
-    { 
-      name: 'Business', 
-      price: '$1,499/mo', 
-      details: ['Up to 200 workflows', 'Advanced AI features', 'Enhanced automation', 'Priority support'] 
+    {
+      name: 'Business',
+      price: '$1,499/mo',
+      details: ['Up to 200 workflows', 'Advanced AI features', 'Enhanced automation', 'Priority support']
     },
-    { 
-      name: 'Enterprise', 
-      price: '$3,999/mo', 
-      details: ['Unlimited workflows', 'Custom AI models', 'Full automation suite', '24/7 dedicated support'] 
+    {
+      name: 'Enterprise',
+      price: '$3,999/mo',
+      details: ['Unlimited workflows', 'Custom AI models', 'Full automation suite', '24/7 dedicated support']
     },
   ];
 

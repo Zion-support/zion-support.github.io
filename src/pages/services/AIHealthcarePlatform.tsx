@@ -1,16 +1,16 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import { 
-  Heart, 
-  Stethoscope, 
-  Brain, 
-  Target, 
-  CheckCircle, 
-  Star, 
-  Clock, 
-  Users, 
-  Globe, 
+import {
+  Heart,
+  Stethoscope,
+  Brain,
+  Target,
+  CheckCircle,
+  Star,
+  Clock,
+  Users,
+  Globe,
   Shield,
   BarChart3,
   Rocket,
@@ -182,8 +182,8 @@ const AIHealthcarePlatform = () => {
               transition={{ duration: 0.8, delay: 0.4 }}
               className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto"
             >
-              Revolutionize healthcare delivery with our comprehensive AI-powered platform. 
-              From diagnosis to treatment, our intelligent system enhances patient care, 
+              Revolutionize healthcare delivery with our comprehensive AI-powered platform.
+              From diagnosis to treatment, our intelligent system enhances patient care,
               improves outcomes, and accelerates medical breakthroughs.
             </motion.p>
             <motion.div
@@ -217,13 +217,13 @@ const AIHealthcarePlatform = () => {
                 What is AI Healthcare Platform?
               </h2>
               <p className="text-lg text-gray-300 mb-6">
-                Our AI Healthcare Platform represents the future of medical care, combining 
-                artificial intelligence with advanced healthcare technologies to create a 
+                Our AI Healthcare Platform represents the future of medical care, combining
+                artificial intelligence with advanced healthcare technologies to create a
                 comprehensive system that enhances every aspect of patient care.
               </p>
               <p className="text-lg text-gray-300 mb-6">
-                From initial diagnosis to ongoing treatment monitoring, our platform leverages 
-                machine learning, natural language processing, and predictive analytics to 
+                From initial diagnosis to ongoing treatment monitoring, our platform leverages
+                machine learning, natural language processing, and predictive analytics to
                 provide healthcare professionals with unprecedented insights and capabilities.
               </p>
               <div className="flex items-center space-x-4">
@@ -373,16 +373,16 @@ const AIHealthcarePlatform = () => {
                     <span className="font-semibold">{feature.name}</span>
                   </div>
                   <span className={`text-2xl font-bold ${
-                    feature.status === '100%' ? 'text-green-400' : 
+                    feature.status === '100%' ? 'text-green-400' :
                     feature.status === 'Pending' ? 'text-yellow-400' : 'text-blue-400'
                   }`}>
                     {feature.status}
                   </span>
                 </div>
                 <div className="w-full bg-gray-700 rounded-full h-2">
-                  <div 
+                  <div
                     className={`h-2 rounded-full transition-all duration-1000 ${
-                      feature.status === '100%' ? 'bg-green-400' : 
+                      feature.status === '100%' ? 'bg-green-400' :
                       feature.status === 'Pending' ? 'bg-yellow-400' : 'bg-blue-400'
                     }`}
                     style={{ width: feature.status === 'Pending' ? '75%' : '100%' }}
@@ -584,7 +584,7 @@ const AIHealthcarePlatform = () => {
             viewport={{ once: true }}
             className="text-xl text-gray-300 mb-8"
           >
-            Join the healthcare revolution with Zion Tech Group's AI Healthcare Platform. 
+            Join the healthcare revolution with Zion Tech Group's AI Healthcare Platform.
             Enhance patient care, improve outcomes, and accelerate medical breakthroughs.
           </motion.p>
           <motion.div

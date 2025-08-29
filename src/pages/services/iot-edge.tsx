@@ -22,17 +22,17 @@ export default function IoTEdge() {
                 <Cpu className="w-4 h-4 mr-2" />
                 IoT & Edge Computing
               </div>
-              
+
               <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
                 IoT & Edge
                 <span className="bg-gradient-to-r from-indigo-400 to-purple-500 bg-clip-text text-transparent"> Computing</span>
               </h1>
-              
+
               <p className="text-xl text-slate-300 mb-8 max-w-3xl mx-auto">
-                Connect and manage your IoT ecosystem with intelligent edge computing. Process data locally, 
+                Connect and manage your IoT ecosystem with intelligent edge computing. Process data locally,
                 reduce latency, and enable real-time decision-making across your connected devices.
               </p>
-              
+
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link
                   to="/contact"
@@ -58,7 +58,7 @@ export default function IoTEdge() {
                 Intelligent IoT Solutions
               </h2>
               <p className="text-xl text-slate-300 max-w-2xl mx-auto">
-                Our IoT and edge computing platform provides comprehensive device management, 
+                Our IoT and edge computing platform provides comprehensive device management,
                 real-time analytics, and intelligent automation capabilities.
               </p>
             </div>

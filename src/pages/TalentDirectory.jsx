@@ -94,7 +94,7 @@ const TalentDirectory = () => {
             </span>
           </motion.h1>
           <motion.p className="text-xl md:text-2xl text-violet-100 max-w-4xl mx-auto leading-relaxed mb-8" initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, delay: 0.2 }}>
-            Connect with world-class technology professionals and experts in AI, cloud computing, 
+            Connect with world-class technology professionals and experts in AI, cloud computing,
             cybersecurity, and more. Find the perfect talent for your next project.
           </motion.p>
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, delay: 0.4 }} className="max-w-2xl mx-auto">
@@ -187,7 +187,7 @@ const TalentDirectory = () => {
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-4xl font-bold mb-6">Looking for Top Talent?</h2>
           <p className="text-xl mb-8 max-w-3xl mx-auto">
-            Whether you need a single expert or a complete team, we can connect you with the 
+            Whether you need a single expert or a complete team, we can connect you with the
             perfect technology professionals for your project.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">

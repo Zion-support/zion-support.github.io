@@ -16,20 +16,20 @@ export const cuttingEdgeITServices2025 = [
       'Automated infrastructure management'
     ],
     pricing: {
-      starter: { 
-        price: 399, 
-        period: 'month', 
-        features: ['Basic quantum infrastructure', 'Standard security protocols', 'Email support'] 
+      starter: {
+        price: 399,
+        period: 'month',
+        features: ['Basic quantum infrastructure', 'Standard security protocols', 'Email support']
       },
-      professional: { 
-        price: 999, 
-        period: 'month', 
-        features: ['Advanced quantum features', 'Enhanced security protocols', 'Priority support', 'Performance optimization'] 
+      professional: {
+        price: 999,
+        period: 'month',
+        features: ['Advanced quantum features', 'Enhanced security protocols', 'Priority support', 'Performance optimization']
       },
-      enterprise: { 
-        price: 2499, 
-        period: 'month', 
-        features: ['Full quantum platform', 'Custom security protocols', 'Dedicated specialists', '24/7 support'] 
+      enterprise: {
+        price: 2499,
+        period: 'month',
+        features: ['Full quantum platform', 'Custom security protocols', 'Dedicated specialists', '24/7 support']
       }
     },
     category: 'Quantum IT',
@@ -69,20 +69,20 @@ export const cuttingEdgeITServices2025 = [
       'Performance optimization algorithms'
     ],
     pricing: {
-      starter: { 
-        price: 299, 
-        period: 'month', 
-        features: ['Basic edge orchestration', 'Standard monitoring', 'Email support'] 
+      starter: {
+        price: 299,
+        period: 'month',
+        features: ['Basic edge orchestration', 'Standard monitoring', 'Email support']
       },
-      professional: { 
-        price: 799, 
-        period: 'month', 
-        features: ['Advanced orchestration', 'AI model deployment', 'Priority support', 'Performance optimization'] 
+      professional: {
+        price: 799,
+        period: 'month',
+        features: ['Advanced orchestration', 'AI model deployment', 'Priority support', 'Performance optimization']
       },
-      enterprise: { 
-        price: 1999, 
-        period: 'month', 
-        features: ['Full edge platform', 'Custom AI models', 'Dedicated specialists', '24/7 support'] 
+      enterprise: {
+        price: 1999,
+        period: 'month',
+        features: ['Full edge platform', 'Custom AI models', 'Dedicated specialists', '24/7 support']
       }
     },
     category: 'Edge Computing',
@@ -122,20 +122,20 @@ export const cuttingEdgeITServices2025 = [
       'Comprehensive audit logging'
     ],
     pricing: {
-      starter: { 
-        price: 499, 
-        period: 'month', 
-        features: ['Basic zero-trust features', 'Standard authentication', 'Email support'] 
+      starter: {
+        price: 499,
+        period: 'month',
+        features: ['Basic zero-trust features', 'Standard authentication', 'Email support']
       },
-      professional: { 
-        price: 1299, 
-        period: 'month', 
-        features: ['Advanced security features', 'Behavioral analytics', 'Priority support', 'Custom policies'] 
+      professional: {
+        price: 1299,
+        period: 'month',
+        features: ['Advanced security features', 'Behavioral analytics', 'Priority support', 'Custom policies']
       },
-      enterprise: { 
-        price: 2999, 
-        period: 'month', 
-        features: ['Full security platform', 'Custom security policies', 'Dedicated specialists', '24/7 support'] 
+      enterprise: {
+        price: 2999,
+        period: 'month',
+        features: ['Full security platform', 'Custom security policies', 'Dedicated specialists', '24/7 support']
       }
     },
     category: 'Cybersecurity',
@@ -175,20 +175,20 @@ export const cuttingEdgeITServices2025 = [
       'Comprehensive reporting and analytics'
     ],
     pricing: {
-      starter: { 
-        price: 599, 
-        period: 'month', 
-        features: ['Basic blockchain features', 'Standard smart contracts', 'Email support'] 
+      starter: {
+        price: 599,
+        period: 'month',
+        features: ['Basic blockchain features', 'Standard smart contracts', 'Email support']
       },
-      professional: { 
-        price: 1499, 
-        period: 'month', 
-        features: ['Advanced blockchain features', 'Custom smart contracts', 'Priority support', 'Performance optimization'] 
+      professional: {
+        price: 1499,
+        period: 'month',
+        features: ['Advanced blockchain features', 'Custom smart contracts', 'Priority support', 'Performance optimization']
       },
-      enterprise: { 
-        price: 3499, 
-        period: 'month', 
-        features: ['Full blockchain platform', 'Custom development', 'Dedicated specialists', '24/7 support'] 
+      enterprise: {
+        price: 3499,
+        period: 'month',
+        features: ['Full blockchain platform', 'Custom development', 'Dedicated specialists', '24/7 support']
       }
     },
     category: 'Blockchain',
@@ -228,20 +228,20 @@ export const cuttingEdgeITServices2025 = [
       'Comprehensive analytics and reporting'
     ],
     pricing: {
-      starter: { 
-        price: 399, 
-        period: 'month', 
-        features: ['Basic AI DevOps features', 'Standard automation', 'Email support'] 
+      starter: {
+        price: 399,
+        period: 'month',
+        features: ['Basic AI DevOps features', 'Standard automation', 'Email support']
       },
-      professional: { 
-        price: 999, 
-        period: 'month', 
-        features: ['Advanced AI features', 'Custom automation', 'Priority support', 'Performance optimization'] 
+      professional: {
+        price: 999,
+        period: 'month',
+        features: ['Advanced AI features', 'Custom automation', 'Priority support', 'Performance optimization']
       },
-      enterprise: { 
-        price: 2499, 
-        period: 'month', 
-        features: ['Full AI DevOps platform', 'Custom development', 'Dedicated specialists', '24/7 support'] 
+      enterprise: {
+        price: 2499,
+        period: 'month',
+        features: ['Full AI DevOps platform', 'Custom development', 'Dedicated specialists', '24/7 support']
       }
     },
     category: 'DevOps',

@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { 
-  Mail, 
-  Phone, 
-  MapPin, 
-  Clock, 
-  Send, 
+import {
+  Mail,
+  Phone,
+  MapPin,
+  Clock,
+  Send,
   CheckCircle,
   MessageSquare,
   Building,
@@ -163,13 +163,13 @@ export default function Contact() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     setIsSubmitting(true);
-    
+
     // Simulate form submission
     await new Promise(resolve => setTimeout(resolve, 2000));
-    
+
     setIsSubmitting(false);
     setSubmitSuccess(true);
-    
+
     // Reset form after 3 seconds
     setTimeout(() => {
       setSubmitSuccess(false);
@@ -194,7 +194,7 @@ export default function Contact() {
           <div className="absolute top-20 left-20 w-72 h-72 bg-zion-cyan/30 rounded-full blur-3xl"></div>
           <div className="absolute bottom-20 right-20 w-96 h-96 bg-zion-purple/30 rounded-full blur-3xl"></div>
         </div>
-        
+
         <div className="container-responsive relative z-10">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -210,14 +210,14 @@ export default function Contact() {
             >
               <MessageSquare className="w-10 h-10 text-white" />
             </motion.div>
-            
+
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
               Get in
               <span className="text-gradient block">Touch</span>
             </h1>
-            
+
             <p className="text-xl text-zion-slate-light leading-relaxed mb-8">
-              Ready to transform your business with cutting-edge technology? 
+              Ready to transform your business with cutting-edge technology?
               Let's discuss your project and explore how we can help you achieve your goals.
             </p>
           </motion.div>
@@ -251,11 +251,11 @@ export default function Contact() {
                 <div className={`w-16 h-16 bg-gradient-to-br ${method.color} rounded-xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300`}>
                   <method.icon className="w-8 h-8 text-white" />
                 </div>
-                
+
                 <h3 className="text-lg font-bold text-white mb-2">{method.title}</h3>
                 <p className="text-zion-cyan font-semibold mb-1">{method.value}</p>
                 <p className="text-zion-slate-light text-sm mb-4">{method.description}</p>
-                
+
                 {method.action && (
                   <a
                     href={method.action}
@@ -285,7 +285,7 @@ export default function Contact() {
             >
               <h2 className="text-3xl font-bold text-white mb-6">Send Us a Message</h2>
               <p className="text-zion-slate-light mb-8 leading-relaxed">
-                Fill out the form below and we'll get back to you within 24 hours. 
+                Fill out the form below and we'll get back to you within 24 hours.
                 We're excited to learn about your project and discuss how we can help.
               </p>
 
@@ -416,8 +416,8 @@ export default function Contact() {
               <div>
                 <h3 className="text-2xl font-bold text-white mb-4">About Zion Tech Group</h3>
                 <p className="text-zion-slate-light leading-relaxed mb-6">
-                  We are a leading technology company specializing in AI, cybersecurity, cloud solutions, 
-                  and digital transformation. Our team of experts is dedicated to helping businesses 
+                  We are a leading technology company specializing in AI, cybersecurity, cloud solutions,
+                  and digital transformation. Our team of experts is dedicated to helping businesses
                   leverage cutting-edge technology to achieve their goals.
                 </p>
                 <div className="flex items-center gap-3 text-zion-cyan">
@@ -481,7 +481,7 @@ export default function Contact() {
           >
             <h2 className="text-4xl font-bold text-white mb-4">Visit Our Office</h2>
             <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
-              Located in the heart of Middletown, Delaware, our office is easily accessible 
+              Located in the heart of Middletown, Delaware, our office is easily accessible
               and ready to welcome you for in-person meetings and consultations.
             </p>
           </motion.div>

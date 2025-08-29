@@ -8,7 +8,7 @@ const AIAutonomousRobotics = () => {
         <meta name="keywords" content="AI robotics, autonomous robots, intelligent automation, AI automation, robotic systems, autonomous systems"/>
         <link rel="canonical" href="https://ziontechgroup.com/ai-autonomous-robotics"/>
       </Helmet>
-      
+
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-red-900 to-slate-900">
         <div className="container mx-auto px-4 py-16">
           {/* Hero Section */}
@@ -52,31 +52,31 @@ const AIAutonomousRobotics = () => {
               <h3 className="text-xl font-semibold text-white mb-3">Autonomous Navigation</h3>
               <p className="text-gray-300">Robots that navigate complex environments</p>
             </div>
-            
+
             <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20">
               <div className="text-orange-400 text-4xl mb-4">🤝</div>
               <h3 className="text-xl font-semibold text-white mb-3">Human Collaboration</h3>
               <p className="text-gray-300">Safe interaction with human workers</p>
             </div>
-            
+
             <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20">
               <div className="text-yellow-400 text-4xl mb-4">📊</div>
               <h3 className="text-xl font-semibold text-white mb-3">Performance Analytics</h3>
               <p className="text-gray-300">Real-time monitoring and optimization</p>
             </div>
-            
+
             <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20">
               <div className="text-green-400 text-4xl mb-4">🔒</div>
               <h3 className="text-xl font-semibold text-white mb-3">Safety Systems</h3>
               <p className="text-gray-300">Advanced safety protocols and monitoring</p>
             </div>
-            
+
             <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20">
               <div className="text-blue-400 text-4xl mb-4">🔄</div>
               <h3 className="text-xl font-semibold text-white mb-3">Adaptive Behavior</h3>
               <p className="text-gray-300">Robots that adapt to changing conditions</p>
             </div>
-            
+
             <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20">
               <div className="text-purple-400 text-4xl mb-4">🌐</div>
               <h3 className="text-xl font-semibold text-white mb-3">Cloud Integration</h3>
@@ -93,25 +93,25 @@ const AIAutonomousRobotics = () => {
                 <h3 className="text-lg font-semibold text-white mb-2">Perception</h3>
                 <p className="text-gray-300 text-sm">Sense environment and objects</p>
               </div>
-              
+
               <div className="text-center">
                 <div className="bg-red-600 w-16 h-16 rounded-full flex items-center justify-center text-2xl font-bold text-white mx-auto mb-4">2</div>
                 <h3 className="text-lg font-semibold text-white mb-2">Planning</h3>
                 <p className="text-gray-300 text-sm">AI decision making and path planning</p>
               </div>
-              
+
               <div className="text-center">
                 <div className="bg-red-600 w-16 h-16 rounded-full flex items-center justify-center text-2xl font-bold text-white mx-auto mb-4">3</div>
                 <h3 className="text-lg font-semibold text-white mb-2">Execution</h3>
                 <p className="text-gray-300 text-sm">Perform planned actions</p>
               </div>
-              
+
               <div className="text-center">
                 <div className="bg-red-600 w-16 h-16 rounded-full flex items-center justify-center text-2xl font-bold text-white mx-auto mb-4">4</div>
                 <h3 className="text-lg font-semibold text-white mb-2">Learning</h3>
                 <p className="text-gray-300 text-sm">Improve from experience</p>
               </div>
-              
+
               <div className="text-center">
                 <div className="bg-red-600 w-16 h-16 rounded-full flex items-center justify-center text-2xl font-bold text-white mx-auto mb-4">5</div>
                 <h3 className="text-lg font-semibold text-white mb-2">Optimization</h3>
@@ -138,12 +138,12 @@ const AIAutonomousRobotics = () => {
                 <h3 className="text-xl font-semibold text-white mb-3">Industrial Automation</h3>
                 <p className="text-gray-300">Manufacturing and assembly automation</p>
               </div>
-              
+
               <div className="bg-white/5 rounded-xl p-6 border border-white/10">
                 <h3 className="text-xl font-semibold text-white mb-3">Medical Robotics</h3>
                 <p className="text-gray-300">Surgical assistance and patient care</p>
               </div>
-              
+
               <div className="bg-white/5 rounded-xl p-6 border border-white/10">
                 <h3 className="text-xl font-semibold text-white mb-3">Autonomous Vehicles</h3>
                 <p className="text-gray-300">Self-driving cars and drones</p>

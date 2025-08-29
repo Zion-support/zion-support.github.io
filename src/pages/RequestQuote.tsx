@@ -1,24 +1,24 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { 
-  Calculator, 
-  Send, 
-  CheckCircle, 
-  AlertCircle, 
-  Clock, 
-  DollarSign, 
-  Users, 
-  Calendar, 
-  FileText, 
-  MessageCircle, 
-  Phone, 
-  Mail, 
-  Building, 
-  Globe, 
-  Target, 
-  Star, 
-  ArrowRight, 
-  ChevronDown, 
+import {
+  Calculator,
+  Send,
+  CheckCircle,
+  AlertCircle,
+  Clock,
+  DollarSign,
+  Users,
+  Calendar,
+  FileText,
+  MessageCircle,
+  Phone,
+  Mail,
+  Building,
+  Globe,
+  Target,
+  Star,
+  ArrowRight,
+  ChevronDown,
   ChevronUp,
   Shield,
   Zap,
@@ -43,14 +43,14 @@ interface QuoteForm {
   industry: string;
   companySize: string;
   website: string;
-  
+
   // Contact Information
   firstName: string;
   lastName: string;
   email: string;
   phone: string;
   jobTitle: string;
-  
+
   // Project Details
   projectTitle: string;
   projectDescription: string;
@@ -59,13 +59,13 @@ interface QuoteForm {
   budget: string;
   timeline: string;
   urgency: string;
-  
+
   // Technical Requirements
   currentTechnology: string;
   integrationRequirements: string;
   complianceNeeds: string;
   scalabilityRequirements: string;
-  
+
   // Additional Information
   teamSize: string;
   existingPartners: string;
@@ -223,12 +223,12 @@ export default function RequestQuote() {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
-    
+
     // Simulate form submission
     setTimeout(() => {
       setIsSubmitting(false);
       setSubmitStatus('success');
-      
+
       // Reset form after success
       setTimeout(() => {
         setSubmitStatus('idle');
@@ -302,7 +302,7 @@ export default function RequestQuote() {
     <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light pt-24">
       <div className="container-responsive">
         {/* Header */}
-        <motion.div 
+        <motion.div
           className="text-center mb-16"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -312,13 +312,13 @@ export default function RequestQuote() {
             Request a Quote
           </h1>
           <p className="text-zion-slate-light text-lg max-w-4xl mx-auto leading-relaxed">
-            Get a detailed quote for your technology project. Our team will analyze your requirements 
+            Get a detailed quote for your technology project. Our team will analyze your requirements
             and provide a comprehensive proposal tailored to your business needs and budget.
           </p>
         </motion.div>
 
         {/* Progress Steps */}
-        <motion.div 
+        <motion.div
           className="mb-12"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -373,7 +373,7 @@ export default function RequestQuote() {
             <div>
               <h3 className="text-green-400 font-bold text-lg">Quote Request Submitted!</h3>
               <p className="text-green-400/80">
-                Thank you for your request. Our team will review your requirements and get back to you 
+                Thank you for your request. Our team will review your requirements and get back to you
                 with a detailed quote within 24-48 hours.
               </p>
             </div>
@@ -381,7 +381,7 @@ export default function RequestQuote() {
         )}
 
         {/* Quote Form */}
-        <motion.div 
+        <motion.div
           className="max-w-4xl mx-auto"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -870,7 +870,7 @@ export default function RequestQuote() {
         </motion.div>
 
         {/* Why Choose Zion Tech Group */}
-        <motion.div 
+        <motion.div
           className="mt-20 text-center"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -911,7 +911,7 @@ export default function RequestQuote() {
         </motion.div>
 
         {/* Contact Information */}
-        <motion.div 
+        <motion.div
           className="mt-20 text-center"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}

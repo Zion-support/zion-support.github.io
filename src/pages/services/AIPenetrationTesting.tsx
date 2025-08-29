@@ -13,20 +13,20 @@ export default function AIPenetrationTesting() {
   ];
 
   const tiers = [
-    { 
-      name: 'Developer', 
-      price: '$799/mo', 
-      details: ['Up to 5 applications', 'Basic AI features', 'Standard testing', 'Email support'] 
+    {
+      name: 'Developer',
+      price: '$799/mo',
+      details: ['Up to 5 applications', 'Basic AI features', 'Standard testing', 'Email support']
     },
-    { 
-      name: 'Business', 
-      price: '$1,999/mo', 
-      details: ['Up to 20 applications', 'Advanced AI features', 'Enhanced testing', 'Priority support'] 
+    {
+      name: 'Business',
+      price: '$1,999/mo',
+      details: ['Up to 20 applications', 'Advanced AI features', 'Enhanced testing', 'Priority support']
     },
-    { 
-      name: 'Enterprise', 
-      price: '$4,999/mo', 
-      details: ['Unlimited applications', 'Custom AI models', 'Full testing suite', '24/7 dedicated support'] 
+    {
+      name: 'Enterprise',
+      price: '$4,999/mo',
+      details: ['Unlimited applications', 'Custom AI models', 'Full testing suite', '24/7 dedicated support']
     },
   ];
 

@@ -1,16 +1,16 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import { 
-  Brain, 
-  Network, 
-  PenTool, 
-  TrendingUp, 
-  Target, 
-  Users, 
-  BarChart3, 
-  Zap, 
-  Globe, 
+import {
+  Brain,
+  Network,
+  PenTool,
+  TrendingUp,
+  Target,
+  Users,
+  BarChart3,
+  Zap,
+  Globe,
   Shield,
   CheckCircle,
   ArrowRight,
@@ -291,7 +291,7 @@ const InnovativeServicesShowcase2028 = () => {
               </span>
             </h1>
             <p className="text-xl text-gray-300 max-w-4xl mx-auto mb-8">
-              Discover our comprehensive suite of cutting-edge AI services designed to transform your business operations, 
+              Discover our comprehensive suite of cutting-edge AI services designed to transform your business operations,
               enhance productivity, and drive innovation across all industries.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -331,7 +331,7 @@ const InnovativeServicesShowcase2028 = () => {
               Explore our diverse range of AI-powered solutions across multiple domains and industries.
             </p>
           </motion.div>
-          
+
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {serviceCategories.map((category, index) => (
               <motion.div
@@ -373,7 +373,7 @@ const InnovativeServicesShowcase2028 = () => {
               Discover our most innovative and powerful AI-powered micro SAAS solutions.
             </p>
           </motion.div>
-          
+
           <div className="grid lg:grid-cols-2 gap-8">
             {featuredServices.map((service, index) => (
               <motion.div
@@ -389,10 +389,10 @@ const InnovativeServicesShowcase2028 = () => {
                     {service.category}
                   </span>
                 </div>
-                
+
                 <h3 className="text-2xl font-bold text-white mb-4">{service.title}</h3>
                 <p className="text-gray-300 mb-6">{service.description}</p>
-                
+
                 <div className="grid md:grid-cols-2 gap-6 mb-6">
                   <div>
                     <h4 className="text-lg font-semibold text-white mb-3">Key Features</h4>
@@ -405,7 +405,7 @@ const InnovativeServicesShowcase2028 = () => {
                       ))}
                     </ul>
                   </div>
-                  
+
                   <div>
                     <h4 className="text-lg font-semibold text-white mb-3">Key Benefits</h4>
                     <ul className="space-y-2">
@@ -418,7 +418,7 @@ const InnovativeServicesShowcase2028 = () => {
                     </ul>
                   </div>
                 </div>
-                
+
                 <div className="mb-6">
                   <h4 className="text-lg font-semibold text-white mb-3">Use Cases</h4>
                   <div className="flex flex-wrap gap-2">
@@ -432,7 +432,7 @@ const InnovativeServicesShowcase2028 = () => {
                     ))}
                   </div>
                 </div>
-                
+
                 <div className="flex items-center justify-between">
                   <div className="text-2xl font-bold text-white">{service.pricing}</div>
                   <Link
@@ -462,7 +462,7 @@ const InnovativeServicesShowcase2028 = () => {
               Ready to Transform Your Business?
             </h2>
             <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
-              Join thousands of businesses already using our AI-powered services to drive innovation, 
+              Join thousands of businesses already using our AI-powered services to drive innovation,
               improve efficiency, and gain competitive advantages.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">

@@ -1,12 +1,12 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { SEO } from '@/components/SEO';
-import { 
-  BarChart3, 
-  TrendingUp, 
-  Brain, 
-  Zap, 
-  Shield, 
+import {
+  BarChart3,
+  TrendingUp,
+  Brain,
+  Zap,
+  Shield,
   Clock,
   CheckCircle,
   Database,
@@ -120,12 +120,12 @@ export default function AIDataAnalytics() {
 
   return (
     <>
-      <SEO 
+      <SEO
         title="AI Data Analytics - Intelligent Business Intelligence Platform"
         description="Transform your data into actionable insights with AI-powered analytics, predictive modeling, and real-time dashboards. Boost revenue by 25% with data-driven decisions."
         canonical="/services/ai-data-analytics"
       />
-      
+
       <div className="min-h-screen bg-futuristic">
         {/* Hero Section */}
         <section className="relative py-20 overflow-hidden">
@@ -141,7 +141,7 @@ export default function AIDataAnalytics() {
                 AI Data Analytics
               </h1>
               <p className="text-xl md:text-2xl text-gray-300 mb-8">
-                Transform your data into actionable insights with AI-powered analytics, 
+                Transform your data into actionable insights with AI-powered analytics,
                 predictive modeling, and intelligent business intelligence.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -169,7 +169,7 @@ export default function AIDataAnalytics() {
                 AI-Powered Analytics Features
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Leverage artificial intelligence to uncover hidden patterns, predict future trends, 
+                Leverage artificial intelligence to uncover hidden patterns, predict future trends,
                 and make data-driven decisions that drive business growth.
               </p>
             </motion.div>
@@ -207,7 +207,7 @@ export default function AIDataAnalytics() {
                 Proven Business Impact
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Join hundreds of companies that have transformed their business intelligence 
+                Join hundreds of companies that have transformed their business intelligence
                 with AI-powered analytics and predictive insights.
               </p>
             </motion.div>
@@ -242,7 +242,7 @@ export default function AIDataAnalytics() {
                 Simple, Transparent Pricing
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Choose the plan that fits your data analytics needs and team size. 
+                Choose the plan that fits your data analytics needs and team size.
                 All plans include a 14-day free trial.
               </p>
             </motion.div>
@@ -255,8 +255,8 @@ export default function AIDataAnalytics() {
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
                   className={`relative bg-slate-800/50 backdrop-blur-sm border rounded-xl p-8 ${
-                    plan.popular 
-                      ? 'border-orange-500/50 shadow-lg shadow-orange-500/20' 
+                    plan.popular
+                      ? 'border-orange-500/50 shadow-lg shadow-orange-500/20'
                       : 'border-slate-700/50'
                   }`}
                 >
@@ -267,7 +267,7 @@ export default function AIDataAnalytics() {
                       </span>
                     </div>
                   )}
-                  
+
                   <div className="text-center mb-8">
                     <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
                     <div className="flex items-baseline justify-center mb-2">
@@ -312,7 +312,7 @@ export default function AIDataAnalytics() {
                 Ready to Unlock Your Data's Potential?
               </h2>
               <p className="text-xl text-gray-300 mb-8">
-                Join thousands of businesses using AI to transform raw data into 
+                Join thousands of businesses using AI to transform raw data into
                 actionable insights that drive growth and competitive advantage.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">

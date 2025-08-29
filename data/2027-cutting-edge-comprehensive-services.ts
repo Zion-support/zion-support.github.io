@@ -686,7 +686,7 @@ export const getServicesByPriceRange = (minPrice: number, maxPrice: number) => {
 
 export const searchServices = (query: string) => {
   const lowercaseQuery = query.toLowerCase();
-  return cuttingEdgeComprehensiveServices2027.filter(service => 
+  return cuttingEdgeComprehensiveServices2027.filter(service =>
     service.name.toLowerCase().includes(lowercaseQuery) ||
     service.description.toLowerCase().includes(lowercaseQuery) ||
     service.category.toLowerCase().includes(lowercaseQuery) ||

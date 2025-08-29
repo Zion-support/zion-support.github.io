@@ -1,13 +1,13 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { 
-  Brain, 
-  Search, 
-  BookOpen, 
-  TrendingUp, 
-  Zap, 
-  Shield, 
-  Globe, 
+import {
+  Brain,
+  Search,
+  BookOpen,
+  TrendingUp,
+  Zap,
+  Shield,
+  Globe,
   Users,
   CheckCircle,
   ArrowRight,
@@ -189,7 +189,7 @@ const AIAutonomousResearchAssistant = () => {
               Our AI research assistant goes beyond simple search to provide comprehensive, intelligent research solutions.
             </p>
           </motion.div>
-          
+
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index) => (
               <motion.div
@@ -226,7 +226,7 @@ const AIAutonomousResearchAssistant = () => {
               Discover how AI-powered research can revolutionize your workflow across different domains.
             </p>
           </motion.div>
-          
+
           <div className="grid md:grid-cols-2 gap-8">
             {useCases.map((useCase, index) => (
               <motion.div
@@ -265,7 +265,7 @@ const AIAutonomousResearchAssistant = () => {
               Flexible pricing options designed to scale with your research needs and budget.
             </p>
           </motion.div>
-          
+
           <div className="grid md:grid-cols-3 gap-8">
             {pricingPlans.map((plan, index) => (
               <motion.div
@@ -274,8 +274,8 @@ const AIAutonomousResearchAssistant = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
                 className={`relative bg-slate-800/50 backdrop-blur-sm border rounded-xl p-8 ${
-                  plan.popular 
-                    ? 'border-cyan-500/50 bg-gradient-to-b from-cyan-500/10 to-transparent' 
+                  plan.popular
+                    ? 'border-cyan-500/50 bg-gradient-to-b from-cyan-500/10 to-transparent'
                     : 'border-slate-700/50'
                 }`}
               >
@@ -286,7 +286,7 @@ const AIAutonomousResearchAssistant = () => {
                     </span>
                   </div>
                 )}
-                
+
                 <div className="text-center mb-8">
                   <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
                   <div className="flex items-baseline justify-center mb-4">
@@ -295,7 +295,7 @@ const AIAutonomousResearchAssistant = () => {
                   </div>
                   <p className="text-gray-300">{plan.description}</p>
                 </div>
-                
+
                 <ul className="space-y-4 mb-8">
                   {plan.features.map((feature, featureIndex) => (
                     <li key={featureIndex} className="flex items-center">
@@ -304,7 +304,7 @@ const AIAutonomousResearchAssistant = () => {
                     </li>
                   ))}
                 </ul>
-                
+
                 <motion.button
                   whileHover={{ scale: 1.02 }}
                   whileTap={{ scale: 0.98 }}

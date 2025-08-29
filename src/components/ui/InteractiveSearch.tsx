@@ -6,10 +6,10 @@ interface InteractiveSearchProps {
   className?: string;
 }
 
-const InteractiveSearch: React.FC<InteractiveSearchProps> = ({ 
-  placeholder = "Search...", 
-  onSearch, 
-  className = "" 
+const InteractiveSearch: React.FC<InteractiveSearchProps> = ({
+  placeholder = "Search...",
+  onSearch,
+  className = ""
 }) => {
   const [query, setQuery] = useState('');
 

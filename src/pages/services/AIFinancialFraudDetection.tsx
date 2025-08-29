@@ -1,14 +1,14 @@
 import React from 'react';
 import { SEO } from '@/components/SEO';
 import { motion } from 'framer-motion';
-import { 
-  Shield, 
-  Brain, 
-  BarChart3, 
-  AlertTriangle, 
-  Zap, 
-  Lock, 
-  Target, 
+import {
+  Shield,
+  Brain,
+  BarChart3,
+  AlertTriangle,
+  Zap,
+  Lock,
+  Target,
   CheckCircle,
   ArrowRight,
   Star,
@@ -94,13 +94,13 @@ const AIFinancialFraudDetection: React.FC = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white">
-      <SEO 
+      <SEO
         title="AI Financial Fraud Detection Platform - Zion Tech Group"
         description="Protect your business with AI-powered fraud detection. Detect and prevent financial fraud with 99.2% accuracy, reduce losses by 85-95%, and ensure compliance."
         keywords="fraud detection, AI security, financial fraud prevention, machine learning security, transaction monitoring, fraud analytics"
         canonical="https://ziontechgroup.com/services/ai-financial-fraud-detection"
       />
-      
+
       {/* Hero Section */}
       <section className="relative py-20 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-red-900/20 via-slate-800 to-orange-900/20"></div>
@@ -156,7 +156,7 @@ const AIFinancialFraudDetection: React.FC = () => {
               Cutting-edge AI technology designed to protect your business from sophisticated financial fraud
             </p>
           </motion.div>
-          
+
           <div className="grid md:grid-cols-2 gap-8">
             {features.map((feature, index) => (
               <motion.div
@@ -195,7 +195,7 @@ const AIFinancialFraudDetection: React.FC = () => {
               Our AI platform delivers measurable security improvements that directly protect your bottom line
             </p>
           </motion.div>
-          
+
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {benefits.map((benefit, index) => (
               <motion.div
@@ -233,7 +233,7 @@ const AIFinancialFraudDetection: React.FC = () => {
               Comprehensive fraud protection solutions for various financial and business sectors
             </p>
           </motion.div>
-          
+
           <div className="grid grid-cols-2 md:grid-cols-3 gap-6">
             {useCases.map((useCase, index) => (
               <motion.div
@@ -271,7 +271,7 @@ const AIFinancialFraudDetection: React.FC = () => {
               Connect with your existing payment processors, banking systems, and business tools
             </p>
           </motion.div>
-          
+
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
             {integrations.map((integration, index) => (
               <motion.div
@@ -306,7 +306,7 @@ const AIFinancialFraudDetection: React.FC = () => {
               Choose the plan that fits your transaction volume and security requirements
             </p>
           </motion.div>
-          
+
           <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
             {pricing.map((plan, index) => (
               <motion.div
@@ -316,8 +316,8 @@ const AIFinancialFraudDetection: React.FC = () => {
                 viewport={{ once: true }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
                 className={`relative bg-gradient-to-br from-slate-800 to-slate-900 p-8 rounded-2xl border ${
-                  plan.popular 
-                    ? 'border-red-500 shadow-lg shadow-red-500/20' 
+                  plan.popular
+                    ? 'border-red-500 shadow-lg shadow-red-500/20'
                     : 'border-slate-700'
                 }`}
               >
@@ -328,7 +328,7 @@ const AIFinancialFraudDetection: React.FC = () => {
                     </span>
                   </div>
                 )}
-                
+
                 <div className="text-center mb-8">
                   <h3 className="text-2xl font-bold text-white mb-4">{plan.plan}</h3>
                   <div className="flex items-baseline justify-center">
@@ -336,7 +336,7 @@ const AIFinancialFraudDetection: React.FC = () => {
                     <span className="text-slate-400 ml-2">{plan.period}</span>
                   </div>
                 </div>
-                
+
                 <ul className="space-y-4 mb-8">
                   {plan.features.map((feature, idx) => (
                     <li key={idx} className="flex items-center text-slate-300">
@@ -345,7 +345,7 @@ const AIFinancialFraudDetection: React.FC = () => {
                     </li>
                   ))}
                 </ul>
-                
+
                 <button className="w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105 ${
                   plan.popular
                     ? 'bg-gradient-to-r from-red-500 to-orange-500 text-white hover:from-red-600 hover:to-orange-600'
@@ -375,15 +375,15 @@ const AIFinancialFraudDetection: React.FC = () => {
               Join 200+ companies that have protected their business with our AI-powered fraud detection platform
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a 
-                href="/contact" 
+              <a
+                href="/contact"
                 className="inline-flex items-center px-8 py-4 bg-white text-red-600 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300 transform hover:scale-105"
               >
                 Start Free Trial
                 <ArrowRight className="w-5 h-5 ml-2" />
               </a>
-              <a 
-                href="/contact" 
+              <a
+                href="/contact"
                 className="inline-flex items-center px-8 py-4 border-2 border-white text-white rounded-lg font-semibold hover:bg-white hover:text-red-600 transition-all duration-300"
               >
                 Schedule Demo

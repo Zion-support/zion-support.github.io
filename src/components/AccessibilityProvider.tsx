@@ -54,7 +54,7 @@ export const AccessibilityProvider: React.FC<AccessibilityProviderProps> = ({ ch
   // Apply accessibility settings to document
   useEffect(() => {
     const root = document.documentElement;
-    
+
     // Apply high contrast
     if (highContrast) {
       root.classList.add('high-contrast');
@@ -207,7 +207,7 @@ export const AccessibilityProvider: React.FC<AccessibilityProviderProps> = ({ ch
             >
               <Braille className="w-4 h-4" />
             </button>
-            
+
             <button
               onClick={toggleReducedMotion}
               className={`p-2 rounded-md transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-zion-cyan ${
@@ -255,9 +255,9 @@ export const AccessibilityProvider: React.FC<AccessibilityProviderProps> = ({ ch
 };
 
 // Focus trap component for modals
-export const FocusTrap: React.FC<{ children: ReactNode; isActive?: boolean }> = ({ 
-  children, 
-  isActive = true 
+export const FocusTrap: React.FC<{ children: ReactNode; isActive?: boolean }> = ({
+  children,
+  isActive = true
 }) => {
   const [focusedElement, setFocusedElement] = useState<HTMLElement | null>(null);
 

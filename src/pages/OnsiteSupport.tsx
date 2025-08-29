@@ -1,30 +1,30 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { 
-  Users, 
-  MapPin, 
-  Clock, 
-  CheckCircle, 
-  Shield, 
-  Zap, 
-  Brain, 
-  Cloud, 
-  Rocket, 
-  Phone, 
-  Mail, 
-  Calendar, 
-  Star, 
-  Award, 
-  Building, 
-  Wrench, 
-  Settings, 
-  Database, 
-  Server, 
-  Network, 
-  Lock, 
-  Eye, 
-  AlertTriangle, 
-  Info, 
+import {
+  Users,
+  MapPin,
+  Clock,
+  CheckCircle,
+  Shield,
+  Zap,
+  Brain,
+  Cloud,
+  Rocket,
+  Phone,
+  Mail,
+  Calendar,
+  Star,
+  Award,
+  Building,
+  Wrench,
+  Settings,
+  Database,
+  Server,
+  Network,
+  Lock,
+  Eye,
+  AlertTriangle,
+  Info,
   ArrowRight,
   Globe
 } from 'lucide-react';
@@ -225,11 +225,11 @@ export default function OnsiteSupport() {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      <SEO 
+      <SEO
         title="Onsite Support - Zion Tech Group"
         description="Get expert onsite technical support from Zion Tech Group. Fast response times, comprehensive coverage, and professional technicians at your location."
       />
-      
+
       {/* Header */}
       <div className="bg-slate-800/50 border-b border-slate-700">
         <div className="container mx-auto px-4 py-16">
@@ -246,7 +246,7 @@ export default function OnsiteSupport() {
               Onsite Technical Support
             </h1>
             <p className="text-xl text-slate-300 max-w-3xl mx-auto">
-              Get expert technical support right at your location. Our certified technicians 
+              Get expert technical support right at your location. Our certified technicians
               provide fast, reliable, and professional onsite assistance for all your IT needs.
             </p>
           </motion.div>
@@ -265,8 +265,8 @@ export default function OnsiteSupport() {
             Why Choose Onsite Support?
           </h2>
           <p className="text-slate-300 max-w-4xl mx-auto">
-            Sometimes remote support just isn't enough. Our onsite technicians provide hands-on 
-            assistance, faster problem resolution, and personalized service that ensures your 
+            Sometimes remote support just isn't enough. Our onsite technicians provide hands-on
+            assistance, faster problem resolution, and personalized service that ensures your
             systems are running at peak performance.
           </p>
         </motion.div>
@@ -283,7 +283,7 @@ export default function OnsiteSupport() {
           >
             Our Onsite Support Services
           </motion.h2>
-          
+
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
             {supportServices.map((service, index) => (
               <motion.div
@@ -302,7 +302,7 @@ export default function OnsiteSupport() {
                     <p className="text-slate-400 text-sm">{service.description}</p>
                   </div>
                 </div>
-                
+
                 <div className="space-y-3">
                   {service.services.map((item, idx) => (
                     <div key={idx} className="flex items-center space-x-3">
@@ -327,7 +327,7 @@ export default function OnsiteSupport() {
         >
           Service Coverage Areas
         </motion.h2>
-        
+
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
           {coverageAreas.map((area, index) => (
             <motion.div
@@ -344,7 +344,7 @@ export default function OnsiteSupport() {
                 <h3 className="text-xl font-semibold text-white mb-2">{area.title}</h3>
                 <p className="text-slate-400 text-sm">{area.description}</p>
               </div>
-              
+
               <div className="space-y-4">
                 <div className="space-y-3">
                   <h4 className="text-slate-300 font-medium">Coverage:</h4>
@@ -355,7 +355,7 @@ export default function OnsiteSupport() {
                     </div>
                   ))}
                 </div>
-                
+
                 <div className="pt-3 border-t border-slate-700">
                   <span className="text-slate-400 text-sm">Response Time:</span>
                   <div className="text-slate-300 font-medium">{area.responseTime}</div>
@@ -377,7 +377,7 @@ export default function OnsiteSupport() {
           >
             Support Tiers & Pricing
           </motion.h2>
-          
+
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
             {supportTiers.map((tier, index) => (
               <motion.div
@@ -394,7 +394,7 @@ export default function OnsiteSupport() {
                   <h3 className="text-xl font-semibold text-white mb-2">{tier.title}</h3>
                   <p className="text-slate-400 text-sm">{tier.description}</p>
                 </div>
-                
+
                 <div className="space-y-4">
                   <div className="space-y-3">
                     <h4 className="text-slate-300 font-medium">Features:</h4>
@@ -405,7 +405,7 @@ export default function OnsiteSupport() {
                       </div>
                     ))}
                   </div>
-                  
+
                   <div className="pt-4 border-t border-slate-700 text-center">
                     <div className="text-slate-400 text-sm">Starting at</div>
                     <div className="text-green-400 font-bold text-lg">{tier.pricing}</div>
@@ -427,7 +427,7 @@ export default function OnsiteSupport() {
         >
           Our Response Process
         </motion.h2>
-        
+
         <div className="grid grid-cols-1 md:grid-cols-5 gap-6">
           {responseProcess.map((step, index) => (
             <motion.div
@@ -458,7 +458,7 @@ export default function OnsiteSupport() {
           >
             Benefits of Onsite Support
           </motion.h2>
-          
+
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
             <div className="space-y-6">
               <div className="flex items-start space-x-4">
@@ -470,7 +470,7 @@ export default function OnsiteSupport() {
                   <p className="text-slate-300 text-sm">Direct access to hardware and systems means faster problem identification and resolution.</p>
                 </div>
               </div>
-              
+
               <div className="flex items-start space-x-4">
                 <div className="w-12 h-12 bg-gradient-to-br from-green-500 to-emerald-500 rounded-xl flex items-center justify-center flex-shrink-0">
                   <Shield className="w-6 h-6 text-white" />
@@ -480,7 +480,7 @@ export default function OnsiteSupport() {
                   <p className="text-slate-300 text-sm">Our technicians follow strict security protocols and maintain confidentiality of your systems.</p>
                 </div>
               </div>
-              
+
               <div className="flex items-start space-x-4">
                 <div className="w-12 h-12 bg-gradient-to-br from-purple-500 to-pink-500 rounded-xl flex items-center justify-center flex-shrink-0">
                   <Users className="w-6 h-6 text-white" />
@@ -491,7 +491,7 @@ export default function OnsiteSupport() {
                 </div>
               </div>
             </div>
-            
+
             <div className="space-y-6">
               <div className="flex items-start space-x-4">
                 <div className="w-12 h-12 bg-gradient-to-br from-orange-500 to-red-500 rounded-xl flex items-center justify-center flex-shrink-0">
@@ -502,7 +502,7 @@ export default function OnsiteSupport() {
                   <p className="text-slate-300 text-sm">Physical access to equipment enables comprehensive diagnostics and repairs.</p>
                 </div>
               </div>
-              
+
               <div className="flex items-start space-x-4">
                 <div className="w-12 h-12 bg-gradient-to-br from-yellow-500 to-orange-500 rounded-xl flex items-center justify-center flex-shrink-0">
                   <Clock className="w-6 h-6 text-white" />
@@ -512,7 +512,7 @@ export default function OnsiteSupport() {
                   <p className="text-slate-300 text-sm">Quick onsite response minimizes business disruption and productivity loss.</p>
                 </div>
               </div>
-              
+
               <div className="flex items-start space-x-4">
                 <div className="w-12 h-12 bg-gradient-to-br from-indigo-500 to-purple-500 rounded-xl flex items-center justify-center flex-shrink-0">
                   <Brain className="w-6 h-6 text-white" />
@@ -537,7 +537,7 @@ export default function OnsiteSupport() {
         >
           Get Onsite Support
         </motion.h2>
-        
+
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
           {contactInfo.map((contact, index) => (
             <motion.div
@@ -549,7 +549,7 @@ export default function OnsiteSupport() {
             >
               <h3 className="text-xl font-semibold text-white mb-4">{contact.title}</h3>
               <p className="text-slate-400 mb-6">{contact.description}</p>
-              
+
               <div className="space-y-4">
                 <div className="flex items-center space-x-3">
                   <div className="w-8 h-8 bg-slate-700 rounded-lg flex items-center justify-center">
@@ -559,7 +559,7 @@ export default function OnsiteSupport() {
                     <div className="text-white font-medium">{contact.email}</div>
                   </div>
                 </div>
-                
+
                 <div className="flex items-center space-x-3">
                   <div className="w-8 h-8 bg-slate-700 rounded-lg flex items-center justify-center">
                     <span className="text-green-400 text-sm font-medium">📞</span>
@@ -568,7 +568,7 @@ export default function OnsiteSupport() {
                     <div className="text-white font-medium">{contact.phone}</div>
                   </div>
                 </div>
-                
+
                 <div className="flex items-center space-x-3">
                   <div className="w-8 h-8 bg-slate-700 rounded-lg flex items-center justify-center">
                     <span className="text-green-400 text-sm font-medium">📍</span>
@@ -595,7 +595,7 @@ export default function OnsiteSupport() {
             Ready for Onsite Support?
           </h2>
           <p className="text-slate-300 max-w-2xl mx-auto mb-6">
-            Don't let technical issues slow down your business. Contact us today to schedule 
+            Don't let technical issues slow down your business. Contact us today to schedule
             onsite support or discuss your technical needs.
           </p>
           <button className="bg-gradient-to-r from-green-500 to-emerald-500 hover:from-green-600 hover:to-emerald-600 text-white font-medium py-3 px-8 rounded-lg transition-all duration-300 flex items-center space-x-2 mx-auto">

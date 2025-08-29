@@ -1,22 +1,22 @@
 import React, { useState, useMemo } from 'react';
 import { motion } from 'framer-motion';
-import { 
-  Search, 
-  Filter, 
-  Brain, 
-  Shield, 
-  Cloud, 
-  Rocket, 
-  Heart, 
-  Zap, 
-  Globe, 
-  Star, 
-  TrendingUp, 
-  CheckCircle, 
-  ArrowRight, 
-  Phone, 
-  Mail, 
-  MapPin, 
+import {
+  Search,
+  Filter,
+  Brain,
+  Shield,
+  Cloud,
+  Rocket,
+  Heart,
+  Zap,
+  Globe,
+  Star,
+  TrendingUp,
+  CheckCircle,
+  ArrowRight,
+  Phone,
+  Mail,
+  MapPin,
   ExternalLink,
   Award,
   Clock,
@@ -145,7 +145,7 @@ const serviceCategories = [
 // Enhanced service features display
 const ServiceCard = ({ service, viewMode }: { service: any; viewMode: 'grid' | 'list' }) => {
   const [expanded, setExpanded] = useState(false);
-  
+
   const getCategoryIcon = (category: string) => {
     const cat = serviceCategories.find(c => c.id === category);
     return cat ? cat.icon : Grid;
@@ -283,13 +283,13 @@ const ServiceCard = ({ service, viewMode }: { service: any; viewMode: 'grid' | '
 };
 
 // Sidebar component for better navigation
-const ServicesSidebar = ({ 
-  selectedCategory, 
-  onCategoryChange, 
-  categoriesWithCounts 
-}: { 
-  selectedCategory: string; 
-  onCategoryChange: (category: string) => void; 
+const ServicesSidebar = ({
+  selectedCategory,
+  onCategoryChange,
+  categoriesWithCounts
+}: {
+  selectedCategory: string;
+  onCategoryChange: (category: string) => void;
   categoriesWithCounts: any[];
 }) => {
   return (
@@ -321,7 +321,7 @@ const ServicesSidebar = ({
           </button>
         ))}
       </div>
-      
+
       {/* Quick Stats */}
       <div className="mt-6 pt-6 border-t border-gray-200">
         <h4 className="text-sm font-semibold text-gray-700 mb-3">Quick Stats</h4>
@@ -377,12 +377,12 @@ export default function ServicesOverview() {
 
   return (
     <>
-      <SEO 
+      <SEO
         title="Services Overview | Zion Tech Group"
         description="Explore our comprehensive portfolio of AI solutions, IT services, and Micro SaaS platforms. Discover innovative technology solutions for your business needs."
         keywords="AI solutions, IT services, Micro SaaS, cybersecurity, cloud services, digital transformation"
       />
-      
+
       <div className="min-h-screen bg-gradient-to-br from-gray-50 via-white to-blue-50">
         {/* Hero Section */}
         <div className="bg-gradient-to-r from-blue-900 via-purple-900 to-indigo-900 text-white">

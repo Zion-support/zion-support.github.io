@@ -109,7 +109,7 @@ const CybersecurityServices = () => {
             Cybersecurity Services
           </h1>
           <p className="text-xl md:text-2xl text-red-100 mb-8 max-w-4xl mx-auto">
-            Protect your business with enterprise-grade cybersecurity solutions. 
+            Protect your business with enterprise-grade cybersecurity solutions.
             Stay ahead of threats with our comprehensive security services.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -131,11 +131,11 @@ const CybersecurityServices = () => {
               Comprehensive Security Solutions
             </h2>
             <p className="text-xl text-slate-600 max-w-3xl mx-auto">
-              Our cybersecurity services provide end-to-end protection for your 
+              Our cybersecurity services provide end-to-end protection for your
               digital assets, infrastructure, and sensitive data.
             </p>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {securityServices.map((service, index) => (<div key={index} className="bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 p-8 border border-slate-100">
                 <div className="w-16 h-16 bg-gradient-to-r from-red-500 to-pink-500 rounded-xl flex items-center justify-center mb-6">
@@ -170,11 +170,11 @@ const CybersecurityServices = () => {
               Industry Compliance & Standards
             </h2>
             <p className="text-xl text-slate-600 max-w-3xl mx-auto">
-              We help organizations meet and maintain compliance with industry 
+              We help organizations meet and maintain compliance with industry
               standards and regulatory requirements.
             </p>
           </div>
-          
+
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
             {complianceStandards.map((standard, index) => (<div key={index} className="bg-slate-50 rounded-xl p-6 text-center shadow-md hover:shadow-lg transition-all duration-300">
                 <div className="w-12 h-12 bg-gradient-to-r from-green-500 to-emerald-500 rounded-lg flex items-center justify-center mx-auto mb-4">
@@ -194,11 +194,11 @@ const CybersecurityServices = () => {
               Why Choose Our Security Services?
             </h2>
             <p className="text-xl text-slate-600 max-w-3xl mx-auto">
-              Experience enterprise-grade security with proven expertise and 
+              Experience enterprise-grade security with proven expertise and
               cutting-edge technology.
             </p>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {benefits.map((benefit, index) => (<div key={index} className="text-center">
                 <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-emerald-500 rounded-full flex items-center justify-center mx-auto mb-4">
@@ -218,11 +218,11 @@ const CybersecurityServices = () => {
               Advanced Security Technologies
             </h2>
             <p className="text-xl text-slate-600 max-w-3xl mx-auto">
-              We leverage the latest security technologies and best practices 
+              We leverage the latest security technologies and best practices
               to protect your organization.
             </p>
           </div>
-          
+
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
             {securityTechnologies.map((tech, index) => (<div key={index} className="bg-slate-50 rounded-xl p-6 text-center shadow-md hover:shadow-lg transition-all duration-300">
                 <p className="text-slate-700 font-semibold text-sm">{tech}</p>
@@ -238,7 +238,7 @@ const CybersecurityServices = () => {
             Ready to Secure Your Business?
           </h2>
           <p className="text-xl text-red-100 mb-8 max-w-3xl mx-auto">
-            Don't wait for a security breach. Let's discuss how our cybersecurity 
+            Don't wait for a security breach. Let's discuss how our cybersecurity
             services can protect your organization.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">

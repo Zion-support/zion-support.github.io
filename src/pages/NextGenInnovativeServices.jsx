@@ -59,10 +59,10 @@ export default function NextGenInnovativeServices() {
               Next-Generation Innovative Services
             </h1>
             <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
-              Experience the future of technology with our cutting-edge AI-powered solutions across industries. 
+              Experience the future of technology with our cutting-edge AI-powered solutions across industries.
               Transform your business with services that leverage the latest advancements in artificial intelligence.
             </p>
-            
+
             {/* Service Statistics */}
             <div className="grid grid-cols-1 md:grid-cols-4 gap-6 mb-12">
               <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-blue-400/30">
@@ -375,7 +375,7 @@ export default function NextGenInnovativeServices() {
               Ready to Innovate?
             </h2>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Our team of technology experts is ready to help you implement cutting-edge AI solutions that will give you a competitive advantage. 
+              Our team of technology experts is ready to help you implement cutting-edge AI solutions that will give you a competitive advantage.
               Get in touch today to start your innovation journey.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">

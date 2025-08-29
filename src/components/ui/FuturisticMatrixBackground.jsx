@@ -16,7 +16,7 @@ export const FuturisticMatrixBackground = ({ intensity = 'medium', color = '#00f
         resizeCanvas();
         window.addEventListener('resize', resizeCanvas);
         // Matrix characters
-        const matrix = "ABCDEFGHIJKLMNOPQRSTUVWXYZ123456789@#$%^&*()_+-=[]{}|;:,.<>?";
+        const matrix = "ABCDEFGHIJKLMNOPQRSTUVWXYZ123456789@#$%^&*()_+-=[]{ /* empty */ }|;:,.<>?";
         const matrixArray = matrix.split("");
         const fontSize = intensity === 'high' ? 14 : intensity === 'medium' ? 12 : 10;
         const columns = canvas.width / fontSize;
@@ -27,7 +27,7 @@ export const FuturisticMatrixBackground = ({ intensity = 'medium', color = '#00f
         }
         // Animation variables
         let animationId;
-        let frameCount = 0;
+        const frameCount = 0;
         const draw = () => {
             // Create semi-transparent black background for fade effect
             ctx.fillStyle = 'rgba(0, 0, 0, 0.05)';

@@ -105,13 +105,13 @@ export const CommunityTrust = () => {
                     <div className="text-xs text-gray-500">{testimonial.company}</div>
                   </div>
                 </div>
-                
+
                 <div className="flex items-center mb-4">
                   {[...Array(testimonial.rating)].map((_, i) => (
                     <Star key={i} className="w-4 h-4 text-yellow-400 fill-current" />
                   ))}
                 </div>
-                
+
                 <p className="text-gray-300 text-sm leading-relaxed">
                   "{testimonial.content}"
                 </p>
@@ -164,7 +164,7 @@ export const CommunityTrust = () => {
               Experience the same level of trust and reliability that has made Zion the preferred choice for IT asset management.
             </p>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             <div className="text-center">
               <div className="text-3xl mb-2">🌍</div>

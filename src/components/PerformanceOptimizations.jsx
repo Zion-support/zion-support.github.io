@@ -71,7 +71,7 @@ export function PerformanceOptimizations() {
         { id: 5, title: 'Service 5', description: 'Description 5', value: 500 },
     ]);
     const handleItemClick = useCallback((item) => {
-        console.log('Item clicked:', item);
+        // console.log('Item clicked:', item);
     }, []);
     const addItem = useCallback(() => {
         setData(prev => [...prev, {
@@ -124,7 +124,7 @@ export function PerformanceOptimizations() {
         <button onClick={() => setShowExpensive(!showExpensive)} className="bg-zion-purple hover:bg-zion-purple-dark text-white px-4 py-2 rounded-lg transition-colors">
           {showExpensive ? 'Hide' : 'Show'} Expensive Component
         </button>
-        
+
         {showExpensive && (<Suspense fallback={<LoadingSpinner />}>
             <div className="mt-4 p-4 bg-zion-slate/10 rounded-lg">
               <LazyExpensiveComponent />

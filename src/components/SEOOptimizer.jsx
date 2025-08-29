@@ -59,7 +59,7 @@ const SEOOptimizer = () => {
             const averageScore = Math.round(pageAnalyses.reduce((sum, page) => sum + page.score, 0) / totalPages);
             const pagesWithIssues = pageAnalyses.filter(page => page.issues.length > 0).length;
             // Collect all issues and count frequency
-            const issueCounts = {};
+            const issueCounts = { /* empty */ };
             pageAnalyses.forEach(page => {
                 page.issues.forEach(issue => {
                     issueCounts[issue] = (issueCounts[issue] || 0) + 1;
@@ -80,7 +80,7 @@ const SEOOptimizer = () => {
             });
         }
         catch (error) {
-            console.error('Error analyzing SEO:', error);
+            // console.error('Error analyzing SEO:', error);
         }
         finally {
             setIsAnalyzing(false);
@@ -92,7 +92,7 @@ const SEOOptimizer = () => {
     }, [analyzeSEO]);
     const calculateSEOScore = (page) => {
         let score = 0;
-        let maxScore = 0;
+        const maxScore = 0;
         // Title optimization (0-20 points)
         maxScore += 20;
         if (page.title.length >= 30 && page.title.length <= 60) {
@@ -288,7 +288,7 @@ const SEOOptimizer = () => {
                 ×
               </button>
             </div>
-            
+
             {/* Summary Stats */}
             {report && (<div className="grid grid-cols-3 gap-4 mt-3">
                 <div className="text-center">
@@ -383,7 +383,7 @@ const SEOOptimizer = () => {
                           ×
                         </button>
                       </div>
-                      
+
                       <div className="space-y-4">
                         <div className="grid grid-cols-2 gap-4">
                           <div className="bg-gray-50 dark:bg-gray-800 p-3 rounded-lg">

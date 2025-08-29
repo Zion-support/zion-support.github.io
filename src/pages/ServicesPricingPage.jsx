@@ -14,7 +14,7 @@ export default function ServicesPricingPage() {
             acc[category] = categoryServices;
         }
         return acc;
-    }, {});
+    }, { /* empty */ });
     return (<div className="min-h-screen bg-zion-blue-dark">
       <SEO title="Services Pricing - Zion Tech Group" description="Transparent pricing for our comprehensive micro SAAS, IT, and AI services. Competitive rates with flexible tiers for businesses of all sizes." keywords="pricing, micro SAAS pricing, IT services pricing, AI services pricing, Zion Tech Group" url="https://ziontechgroup.com/services-pricing"/>
 
@@ -110,7 +110,7 @@ export default function ServicesPricingPage() {
                       <span className="text-white text-sm">Maintenance & updates</span>
                     </li>
                   </ul>
-                  
+
                   <Button className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white">
                     <Phone className="w-4 h-4 mr-2"/>
                     Get Started

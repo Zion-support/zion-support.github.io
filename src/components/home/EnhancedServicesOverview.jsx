@@ -86,8 +86,8 @@ const EnhancedServicesOverview = () => {
             </span>
           </h2>
           <p className="text-xl text-zion-slate-light max-w-3xl mx-auto mb-8">
-            Transform your business with our comprehensive suite of next-generation technology services. 
-            From AI and cybersecurity to blockchain and quantum computing, we deliver innovative solutions 
+            Transform your business with our comprehensive suite of next-generation technology services.
+            From AI and cybersecurity to blockchain and quantum computing, we deliver innovative solutions
             that drive real business results.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
@@ -116,11 +116,11 @@ const EnhancedServicesOverview = () => {
                     {service.pricingModel}
                   </Badge>
                 </div>
-                
+
                 <CardTitle className="text-lg text-white mb-2 line-clamp-2">
                   {service.title}
                 </CardTitle>
-                
+
                 <CardDescription className="text-zion-slate-light line-clamp-2">
                   {service.description}
                 </CardDescription>
@@ -188,7 +188,7 @@ const EnhancedServicesOverview = () => {
               Comprehensive coverage across all major technology domains
             </p>
           </div>
-          
+
           <div className="grid grid-cols-2 md:grid-cols-5 gap-4">
             {ENHANCED_SERVICES.reduce((acc, service) => {
             if (!acc.find(cat => cat.category === service.category)) {
@@ -216,7 +216,7 @@ const EnhancedServicesOverview = () => {
               Ready to Transform Your Business?
             </h3>
             <p className="text-zion-slate-light max-w-2xl mx-auto mb-6">
-              Our team of technology experts is ready to help you implement cutting-edge solutions 
+              Our team of technology experts is ready to help you implement cutting-edge solutions
               that drive real business results. Contact us today for a free consultation.
             </p>
             <div className="flex flex-wrap justify-center gap-4">

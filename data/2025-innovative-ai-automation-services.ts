@@ -16,20 +16,20 @@ export const innovativeAIAutomationServices2025 = [
       'Performance analytics and continuous improvement'
     ],
     pricing: {
-      starter: { 
-        price: 299, 
-        period: 'month', 
-        features: ['Basic business management', 'Process automation', 'Email support', 'Standard reporting'] 
+      starter: {
+        price: 299,
+        period: 'month',
+        features: ['Basic business management', 'Process automation', 'Email support', 'Standard reporting']
       },
-      professional: { 
-        price: 799, 
-        period: 'month', 
-        features: ['Advanced AI decision-making', 'Strategic planning', 'Priority support', 'Custom integrations'] 
+      professional: {
+        price: 799,
+        period: 'month',
+        features: ['Advanced AI decision-making', 'Strategic planning', 'Priority support', 'Custom integrations']
       },
-      enterprise: { 
-        price: 1999, 
-        period: 'month', 
-        features: ['Full autonomy', 'Custom AI training', 'Dedicated support', 'White-label solution'] 
+      enterprise: {
+        price: 1999,
+        period: 'month',
+        features: ['Full autonomy', 'Custom AI training', 'Dedicated support', 'White-label solution']
       }
     },
     category: 'AI & Automation',
@@ -69,20 +69,20 @@ export const innovativeAIAutomationServices2025 = [
       'Custom emotional intelligence models'
     ],
     pricing: {
-      starter: { 
-        price: 149, 
-        period: 'month', 
-        features: ['Basic emotion recognition', 'Text analysis', 'Email support', 'Standard API access'] 
+      starter: {
+        price: 149,
+        period: 'month',
+        features: ['Basic emotion recognition', 'Text analysis', 'Email support', 'Standard API access']
       },
-      professional: { 
-        price: 399, 
-        period: 'month', 
-        features: ['Multi-modal analysis', 'Advanced AI models', 'Priority support', 'Custom training'] 
+      professional: {
+        price: 399,
+        period: 'month',
+        features: ['Multi-modal analysis', 'Advanced AI models', 'Priority support', 'Custom training']
       },
-      enterprise: { 
-        price: 999, 
-        period: 'month', 
-        features: ['Full emotional intelligence suite', 'Custom models', 'Dedicated support', 'White-label solution'] 
+      enterprise: {
+        price: 999,
+        period: 'month',
+        features: ['Full emotional intelligence suite', 'Custom models', 'Dedicated support', 'White-label solution']
       }
     },
     category: 'AI & Consciousness',
@@ -122,20 +122,20 @@ export const innovativeAIAutomationServices2025 = [
       'API access for creative applications'
     ],
     pricing: {
-      starter: { 
-        price: 99, 
-        period: 'month', 
-        features: ['Basic content generation', 'Standard templates', 'Email support', 'Limited API calls'] 
+      starter: {
+        price: 99,
+        period: 'month',
+        features: ['Basic content generation', 'Standard templates', 'Email support', 'Limited API calls']
       },
-      professional: { 
-        price: 299, 
-        period: 'month', 
-        features: ['Advanced AI models', 'Custom styles', 'Priority support', 'Extended API access'] 
+      professional: {
+        price: 299,
+        period: 'month',
+        features: ['Advanced AI models', 'Custom styles', 'Priority support', 'Extended API access']
       },
-      enterprise: { 
-        price: 799, 
-        period: 'month', 
-        features: ['Full creative suite', 'Custom training', 'Dedicated support', 'White-label solution'] 
+      enterprise: {
+        price: 799,
+        period: 'month',
+        features: ['Full creative suite', 'Custom training', 'Dedicated support', 'White-label solution']
       }
     },
     category: 'AI & Creativity',
@@ -175,20 +175,20 @@ export const innovativeAIAutomationServices2025 = [
       'HIPAA-compliant data security'
     ],
     pricing: {
-      starter: { 
-        price: 199, 
-        period: 'month', 
-        features: ['Basic diagnostics', 'Health monitoring', 'Email support', 'Standard reports'] 
+      starter: {
+        price: 199,
+        period: 'month',
+        features: ['Basic diagnostics', 'Health monitoring', 'Email support', 'Standard reports']
       },
-      professional: { 
-        price: 599, 
-        period: 'month', 
-        features: ['Advanced AI models', 'Predictive analytics', 'Priority support', 'Custom integrations'] 
+      professional: {
+        price: 599,
+        period: 'month',
+        features: ['Advanced AI models', 'Predictive analytics', 'Priority support', 'Custom integrations']
       },
-      enterprise: { 
-        price: 1499, 
-        period: 'month', 
-        features: ['Full healthcare suite', 'Custom AI training', 'Dedicated support', 'White-label solution'] 
+      enterprise: {
+        price: 1499,
+        period: 'month',
+        features: ['Full healthcare suite', 'Custom AI training', 'Dedicated support', 'White-label solution']
       }
     },
     category: 'AI & Healthcare',
@@ -228,20 +228,20 @@ export const innovativeAIAutomationServices2025 = [
       '24/7 autonomous operation'
     ],
     pricing: {
-      starter: { 
-        price: 79, 
-        period: 'month', 
-        features: ['Basic financial planning', 'Portfolio monitoring', 'Email support', 'Standard reports'] 
+      starter: {
+        price: 79,
+        period: 'month',
+        features: ['Basic financial planning', 'Portfolio monitoring', 'Email support', 'Standard reports']
       },
-      professional: { 
-        price: 199, 
-        period: 'month', 
-        features: ['Advanced AI models', 'Portfolio optimization', 'Priority support', 'Custom strategies'] 
+      professional: {
+        price: 199,
+        period: 'month',
+        features: ['Advanced AI models', 'Portfolio optimization', 'Priority support', 'Custom strategies']
       },
-      enterprise: { 
-        price: 499, 
-        period: 'month', 
-        features: ['Full financial suite', 'Custom AI training', 'Dedicated support', 'White-label solution'] 
+      enterprise: {
+        price: 499,
+        period: 'month',
+        features: ['Full financial suite', 'Custom AI training', 'Dedicated support', 'White-label solution']
       }
     },
     category: 'AI & Finance',

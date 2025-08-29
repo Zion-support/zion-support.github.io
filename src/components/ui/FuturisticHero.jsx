@@ -27,7 +27,7 @@ export default function FuturisticHero() {
         <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-cyan-500/20 rounded-full blur-3xl animate-pulse"/>
         <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-purple-500/20 rounded-full blur-3xl animate-pulse delay-1000"/>
         <div className="absolute top-1/2 left-1/2 w-64 h-64 bg-blue-500/20 rounded-full blur-3xl animate-pulse delay-500"/>
-        
+
         {/* Grid Pattern */}
         <div className="absolute inset-0 bg-[linear-gradient(rgba(6,182,212,0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(6,182,212,0.1)_1px,transparent_1px)] bg-[size:50px_50px]"/>
       </div>
@@ -63,10 +63,10 @@ export default function FuturisticHero() {
               Solutions
             </span>
           </motion.h1>
-          
+
           <motion.p initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 1, delay: 0.3 }} className="text-xl md:text-2xl lg:text-3xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
-            Discover our comprehensive suite of cutting-edge micro SaaS services, 
-            AI solutions, and emerging technologies. From quantum computing to 
+            Discover our comprehensive suite of cutting-edge micro SaaS services,
+            AI solutions, and emerging technologies. From quantum computing to
             space technology, we're building the future today.
           </motion.p>
         </motion.div>
@@ -100,7 +100,7 @@ export default function FuturisticHero() {
             </span>
             <div className="absolute inset-0 bg-gradient-to-r from-cyan-600 to-blue-700 rounded-xl blur opacity-0 group-hover:opacity-100 transition-opacity duration-300"/>
           </button>
-          
+
           <button className="group relative border-2 border-cyan-500/50 hover:border-cyan-400 text-cyan-400 hover:text-white px-8 py-4 rounded-xl font-bold text-lg transition-all duration-300 transform hover:scale-105 hover:bg-cyan-500/10">
             <span className="relative z-10 flex items-center">
               Get Started Today

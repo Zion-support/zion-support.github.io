@@ -92,7 +92,7 @@ const FiveGEnterpriseSolutions = () => {
             </span>
           </motion.h1>
           <motion.p initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, delay: 0.2 }} className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-            Transform your enterprise with next-generation 5G connectivity. 
+            Transform your enterprise with next-generation 5G connectivity.
             Experience ultra-fast speeds, ultra-low latency, and massive IoT support.
           </motion.p>
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, delay: 0.4 }} className="flex flex-col sm:flex-row gap-4 justify-center">

@@ -1,16 +1,16 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import { 
-  HelpCircle, 
-  MessageCircle, 
-  Phone, 
-  Mail, 
-  FileText, 
-  Video, 
-  Users, 
-  Clock, 
-  CheckCircle, 
+import {
+  HelpCircle,
+  MessageCircle,
+  Phone,
+  Mail,
+  FileText,
+  Video,
+  Users,
+  Clock,
+  CheckCircle,
   Search,
   BookOpen,
   Headphones,
@@ -181,15 +181,15 @@ export default function Support() {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      <SEO 
+      <SEO
         title="Support - Zion Tech Group"
         description="Get help and support for Zion Tech Group services. Multiple support channels including live chat, phone, email, and comprehensive knowledge base."
       />
-      
+
       {/* Header */}
       <div className="relative pt-32 pb-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto text-center">
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
@@ -198,8 +198,8 @@ export default function Support() {
             <Headphones className="w-4 h-4 mr-2 text-cyan-400" />
             Support Center
           </motion.div>
-          
-          <motion.h1 
+
+          <motion.h1
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
@@ -207,19 +207,19 @@ export default function Support() {
           >
             How Can We Help?
           </motion.h1>
-          
-          <motion.p 
+
+          <motion.p
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.4 }}
             className="text-xl text-gray-300 max-w-3xl mx-auto mb-8"
           >
-            Our support team is here to help you succeed with Zion Tech Group services. 
+            Our support team is here to help you succeed with Zion Tech Group services.
             Choose the support channel that works best for you.
           </motion.p>
 
           {/* Search */}
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.6 }}
@@ -241,7 +241,7 @@ export default function Support() {
 
       {/* Support Channels */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-20">
-        <motion.div 
+        <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.8 }}
@@ -304,7 +304,7 @@ export default function Support() {
 
       {/* FAQ Section */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-20">
-        <motion.div 
+        <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 1.6 }}
@@ -358,7 +358,7 @@ export default function Support() {
         </div>
 
         {filteredFAQs.length === 0 && searchQuery && (
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 1.8 }}
@@ -381,7 +381,7 @@ export default function Support() {
 
       {/* Additional Support Options */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-20">
-        <motion.div 
+        <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 2.0 }}
@@ -437,7 +437,7 @@ export default function Support() {
 
       {/* Contact CTA */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-20">
-        <motion.div 
+        <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 2.2 }}

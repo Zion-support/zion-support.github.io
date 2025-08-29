@@ -89,7 +89,7 @@ export function AnimatedBackground({ className = '', variant = 'grid' }) {
             ctx.strokeStyle = 'rgba(34, 221, 210, 0.3)';
             ctx.lineWidth = 2;
             // Draw multiple wave layers
-            for (let layer = 0; layer < 3; layer++) {
+            for (const layer = 0; layer < 3; layer++) {
                 ctx.beginPath();
                 for (let x = 0; x < canvas.width; x++) {
                     const y = canvas.height / 2 +

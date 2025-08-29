@@ -1,14 +1,14 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import { 
-  Brain, 
-  Zap, 
-  Shield, 
-  TrendingUp, 
-  Users, 
-  Globe, 
-  Cpu, 
+import {
+  Brain,
+  Zap,
+  Shield,
+  TrendingUp,
+  Users,
+  Globe,
+  Cpu,
   Database,
   ArrowRight,
   Star,
@@ -134,7 +134,7 @@ const ComprehensiveImprovements2025: React.FC = () => {
                 {' '}Enhancements
               </h1>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-                Experience the future of digital innovation with our comprehensive suite of improvements 
+                Experience the future of digital innovation with our comprehensive suite of improvements
                 designed to transform your business operations and drive unprecedented growth.
               </p>
             </motion.div>
@@ -179,7 +179,7 @@ const ComprehensiveImprovements2025: React.FC = () => {
                 Platform Improvements Overview
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Our comprehensive improvements span across multiple domains, ensuring your platform 
+                Our comprehensive improvements span across multiple domains, ensuring your platform
                 is equipped with cutting-edge technology and features.
               </p>
             </motion.div>
@@ -207,7 +207,7 @@ const ComprehensiveImprovements2025: React.FC = () => {
                   {/* Content */}
                   <h3 className="text-xl font-semibold text-white mb-2">{improvement.title}</h3>
                   <p className="text-gray-300 text-sm mb-4">{improvement.description}</p>
-                  
+
                   {/* Features */}
                   <div className="mb-4">
                     <h4 className="text-sm font-medium text-blue-400 mb-2">Key Features:</h4>
@@ -249,7 +249,7 @@ const ComprehensiveImprovements2025: React.FC = () => {
                 Why Choose Our Improvements?
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Our comprehensive improvements deliver tangible benefits that directly impact 
+                Our comprehensive improvements deliver tangible benefits that directly impact
                 your business success and user satisfaction.
               </p>
             </motion.div>
@@ -287,7 +287,7 @@ const ComprehensiveImprovements2025: React.FC = () => {
                 Ready to Experience the Future?
               </h2>
               <p className="text-xl text-gray-300 mb-8">
-                Transform your business with our comprehensive improvements and stay ahead 
+                Transform your business with our comprehensive improvements and stay ahead
                 of the competition with cutting-edge technology.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">

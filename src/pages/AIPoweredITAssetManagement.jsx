@@ -63,16 +63,16 @@ const AIPoweredITAssetManagement = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white">
-      <SEOHead 
+      <SEOHead
         title="AI-Powered IT Asset Management | Zion Tech Group"
         description="Intelligent IT asset management powered by AI for comprehensive monitoring, security, and optimization of your infrastructure."
         keywords="AI asset management, IT infrastructure, predictive maintenance, security monitoring, asset discovery"
       />
-      
+
       {/* Hero Section */}
       <section className="pt-24 pb-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto text-center">
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
@@ -82,8 +82,8 @@ const AIPoweredITAssetManagement = () => {
               <Server className="h-12 w-12 text-blue-400"/>
             </div>
           </motion.div>
-          
-          <motion.h1 
+
+          <motion.h1
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.1 }}
@@ -91,31 +91,31 @@ const AIPoweredITAssetManagement = () => {
           >
             AI-Powered IT Asset Management
           </motion.h1>
-          
-          <motion.p 
+
+          <motion.p
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
             className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto"
           >
-            Intelligent monitoring, security, and optimization of your entire IT infrastructure 
+            Intelligent monitoring, security, and optimization of your entire IT infrastructure
             with AI-driven insights and predictive maintenance.
           </motion.p>
-          
-          <motion.div 
+
+          <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.3 }}
             className="flex flex-col sm:flex-row gap-4 justify-center"
           >
-            <Link 
-              to="/contact" 
+            <Link
+              to="/contact"
               className="bg-gradient-to-r from-blue-600 to-cyan-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-blue-700 hover:to-cyan-700 transition-all duration-300 text-lg"
             >
               Get Started
             </Link>
-            <Link 
-              to="/request-quote" 
+            <Link
+              to="/request-quote"
               className="border border-blue-400 text-blue-400 px-8 py-4 rounded-lg font-semibold hover:bg-blue-400/10 transition-all duration-300 text-lg"
             >
               Request Quote
@@ -127,7 +127,7 @@ const AIPoweredITAssetManagement = () => {
       {/* Features Section */}
       <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
-          <motion.h2 
+          <motion.h2
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
@@ -136,7 +136,7 @@ const AIPoweredITAssetManagement = () => {
           >
             Key Features
           </motion.h2>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index) => (
               <motion.div
@@ -163,7 +163,7 @@ const AIPoweredITAssetManagement = () => {
       {/* Capabilities Section */}
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white/5">
         <div className="max-w-7xl mx-auto">
-          <motion.h2 
+          <motion.h2
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
@@ -172,7 +172,7 @@ const AIPoweredITAssetManagement = () => {
           >
             Advanced Capabilities
           </motion.h2>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {capabilities.map((capability, index) => (
               <motion.div
@@ -199,7 +199,7 @@ const AIPoweredITAssetManagement = () => {
       {/* CTA Section */}
       <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
@@ -208,18 +208,18 @@ const AIPoweredITAssetManagement = () => {
           >
             <h3 className="text-2xl font-bold mb-4">Ready to Transform Your IT Asset Management?</h3>
             <p className="text-gray-300 mb-6">
-              Experience the power of AI-driven IT asset management with comprehensive monitoring, 
+              Experience the power of AI-driven IT asset management with comprehensive monitoring,
               security, and optimization capabilities.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link 
-                to="/contact" 
+              <Link
+                to="/contact"
                 className="bg-gradient-to-r from-blue-600 to-cyan-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-blue-700 hover:to-cyan-700 transition-all duration-300"
               >
                 Contact Us
               </Link>
-              <Link 
-                to="/request-quote" 
+              <Link
+                to="/request-quote"
                 className="border border-blue-400 text-blue-400 px-6 py-3 rounded-lg font-semibold hover:bg-blue-400/10 transition-all duration-300"
               >
                 Get Quote

@@ -33,20 +33,20 @@ export default function AISustainableTechnology() {
   ];
 
   const tiers = [
-    { 
-      name: 'Sustainability Starter', 
-      price: '$299/mo', 
-      details: ['Up to 5 locations', 'Basic AI monitoring', 'Standard reporting', 'Email support'] 
+    {
+      name: 'Sustainability Starter',
+      price: '$299/mo',
+      details: ['Up to 5 locations', 'Basic AI monitoring', 'Standard reporting', 'Email support']
     },
-    { 
-      name: 'Sustainability Professional', 
-      price: '$799/mo', 
-      details: ['Up to 25 locations', 'Advanced AI features', 'Custom dashboards', 'Priority support'] 
+    {
+      name: 'Sustainability Professional',
+      price: '$799/mo',
+      details: ['Up to 25 locations', 'Advanced AI features', 'Custom dashboards', 'Priority support']
     },
-    { 
-      name: 'Enterprise Sustainability', 
-      price: '$2,499/mo', 
-      details: ['Unlimited locations', 'Full AI suite', 'White-label options', '24/7 support'] 
+    {
+      name: 'Enterprise Sustainability',
+      price: '$2,499/mo',
+      details: ['Unlimited locations', 'Full AI suite', 'White-label options', '24/7 support']
     },
   ];
 
@@ -74,7 +74,7 @@ export default function AISustainableTechnology() {
                 </li>
               ))}
             </ul>
-            
+
             <div className="mt-8">
               <h3 className="text-xl font-semibold text-zion-slate-dark mb-3">Key Benefits</h3>
               <ul className="space-y-2">
@@ -87,7 +87,7 @@ export default function AISustainableTechnology() {
               </ul>
             </div>
           </div>
-          
+
           <div className="bg-white border border-zion-slate-light/20 rounded-xl p-6 shadow-md">
             <h3 className="text-2xl font-semibold text-zion-slate-dark mb-4">Pricing Plans</h3>
             <div className="grid md:grid-cols-3 gap-4">

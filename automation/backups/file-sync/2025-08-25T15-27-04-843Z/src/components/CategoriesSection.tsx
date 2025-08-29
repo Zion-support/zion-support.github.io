@@ -83,10 +83,10 @@ export function CategoriesSection({ showTitle = true }: CategoriesSectionProps) 
           backgroundSize: '50px 50px'
         }}></div>
       </div>
-      
+
       <div className="container mx-auto px-4 relative z-10">
         {showTitle && (
-          <motion.div 
+          <motion.div
             className="text-center mb-16"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -99,12 +99,12 @@ export function CategoriesSection({ showTitle = true }: CategoriesSectionProps) 
             </p>
           </motion.div>
         )}
-        
+
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {categories.map((category) => (
-            <Link 
-              key={category.title} 
-              href={category.link} 
+            <Link
+              key={category.title}
+              href={category.link}
               className="group block"
             >
               <div className="rounded-lg overflow-hidden h-full border border-zion-blue-light bg-zion-blue-dark p-6 transition-all duration-300 hover:border-zion-purple/50 hover:translate-y-[-5px]">
@@ -117,8 +117,8 @@ export function CategoriesSection({ showTitle = true }: CategoriesSectionProps) 
             </motion.div>
           ))}
         </motion.div>
-        
-        <motion.div 
+
+        <motion.div
           className="mt-12"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -133,7 +133,7 @@ export function CategoriesSection({ showTitle = true }: CategoriesSectionProps) 
                 href={service.link}
                 className="px-6 py-3 bg-zion-blue-light hover:bg-zion-blue-dark border border-zion-purple/20 hover:border-zion-purple/50 rounded-full text-zion-cyan transition-all duration-300"
               >
-                <Link 
+                <Link
                   to={service.link}
                   className="px-6 py-3 bg-zion-blue-light hover:bg-zion-blue-dark border border-zion-purple/20 hover:border-zion-purple/50 rounded-full text-zion-cyan transition-all duration-300 hover:shadow-lg hover:shadow-zion-cyan/25 flex items-center gap-2"
                 >
@@ -144,16 +144,16 @@ export function CategoriesSection({ showTitle = true }: CategoriesSectionProps) 
             ))}
           </div>
         </motion.div>
-        
-        <motion.div 
+
+        <motion.div
           className="mt-12 flex justify-center"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.6 }}
         >
-          <Link 
-            href="/categories" 
+          <Link
+            href="/categories"
             className="text-zion-cyan border-b border-zion-cyan hover:border-zion-cyan-dark transition-colors"
           >
             View All Categories

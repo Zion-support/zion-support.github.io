@@ -1,14 +1,14 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import { 
-  Brain, 
-  Cloud, 
-  Shield, 
-  Globe, 
-  Code, 
-  BarChart3, 
-  Users, 
+import {
+  Brain,
+  Cloud,
+  Shield,
+  Globe,
+  Code,
+  BarChart3,
+  Users,
   ShoppingCart,
   MessageSquare,
   FileText,
@@ -129,8 +129,8 @@ export function UltimateServicesShowcase() {
     ...innovativeMicroSaasSolutions2025
   ];
 
-  const filteredServices = selectedCategory === 'all' 
-    ? allServices 
+  const filteredServices = selectedCategory === 'all'
+    ? allServices
     : categories.find(cat => cat.id === selectedCategory)?.services || [];
 
   const containerVariants = {
@@ -160,7 +160,7 @@ export function UltimateServicesShowcase() {
     <section className="py-20 bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
-        <motion.div 
+        <motion.div
           className="text-center mb-16"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -174,10 +174,10 @@ export function UltimateServicesShowcase() {
             <span className="text-white">Services Showcase</span>
           </h1>
           <p className="text-xl text-zion-gray-light max-w-4xl mx-auto leading-relaxed">
-            Discover our revolutionary AI, IT infrastructure, and micro SAAS solutions that are transforming industries worldwide. 
+            Discover our revolutionary AI, IT infrastructure, and micro SAAS solutions that are transforming industries worldwide.
             Each service is backed by cutting-edge technology and proven results.
           </p>
-          
+
           {/* Contact Information */}
           <div className="mt-8 flex flex-wrap justify-center gap-6 text-zion-gray-light">
             <div className="flex items-center gap-2">
@@ -196,7 +196,7 @@ export function UltimateServicesShowcase() {
         </motion.div>
 
         {/* Category Navigation */}
-        <motion.div 
+        <motion.div
           className="flex flex-wrap justify-center gap-4 mb-12"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -228,7 +228,7 @@ export function UltimateServicesShowcase() {
         </motion.div>
 
         {/* Services Grid */}
-        <motion.div 
+        <motion.div
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
           variants={containerVariants}
           initial="hidden"
@@ -342,7 +342,7 @@ export function UltimateServicesShowcase() {
         </motion.div>
 
         {/* Call to Action */}
-        <motion.div 
+        <motion.div
           className="text-center mt-16"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}

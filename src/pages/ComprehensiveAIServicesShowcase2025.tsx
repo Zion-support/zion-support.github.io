@@ -1,12 +1,12 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { SEO } from '@/components/SEO';
-import { 
-  Brain, 
-  Shield, 
-  Activity, 
-  TrendingUp, 
-  Zap, 
+import {
+  Brain,
+  Shield,
+  Activity,
+  TrendingUp,
+  Zap,
   CheckCircle,
   ArrowRight,
   Phone,
@@ -127,13 +127,13 @@ export default function ComprehensiveAIServicesShowcase2025() {
 
   return (
     <>
-      <SEO 
+      <SEO
         title="Comprehensive AI Services Showcase 2025 - Zion Tech Group"
         description="Discover our comprehensive portfolio of AI-powered micro SAAS services, IT solutions, and innovative technology services. Transform your business with cutting-edge AI solutions."
         canonical="/comprehensive-ai-services-showcase-2025"
         url="https://ziontechgroup.com/comprehensive-ai-services-showcase-2025"
       />
-      
+
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900/20 to-slate-900">
         {/* Hero Section */}
         <section className="relative py-20 px-6 overflow-hidden">
@@ -148,7 +148,7 @@ export default function ComprehensiveAIServicesShowcase2025() {
                 Comprehensive AI Services Showcase 2025
               </h1>
               <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
-                Discover our comprehensive portfolio of AI-powered micro SAAS services, 
+                Discover our comprehensive portfolio of AI-powered micro SAAS services,
                 IT solutions, and innovative technology services
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -184,7 +184,7 @@ export default function ComprehensiveAIServicesShowcase2025() {
                 AI-Powered Micro SAAS Services
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Transform your business operations with our cutting-edge AI services 
+                Transform your business operations with our cutting-edge AI services
                 designed for maximum efficiency and innovation
               </p>
             </motion.div>
@@ -206,14 +206,14 @@ export default function ComprehensiveAIServicesShowcase2025() {
                       {service.category}
                     </span>
                   </div>
-                  
+
                   <h3 className="text-xl font-semibold mb-3 text-white">{service.title}</h3>
                   <p className="text-gray-300 mb-4">{service.description}</p>
-                  
+
                   <div className="mb-4">
                     <span className="text-2xl font-bold text-cyan-400">{service.price}</span>
                   </div>
-                  
+
                   <div className="mb-6">
                     <h4 className="text-sm font-semibold text-white mb-2">Key Features:</h4>
                     <div className="grid grid-cols-2 gap-2">
@@ -225,7 +225,7 @@ export default function ComprehensiveAIServicesShowcase2025() {
                       ))}
                     </div>
                   </div>
-                  
+
                   <Link
                     to={service.link}
                     className="w-full px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 text-center block"
@@ -251,7 +251,7 @@ export default function ComprehensiveAIServicesShowcase2025() {
                 Industry-Specific AI Solutions
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Tailored AI solutions designed for specific industry challenges 
+                Tailored AI solutions designed for specific industry challenges
                 and regulatory requirements
               </p>
             </motion.div>
@@ -289,7 +289,7 @@ export default function ComprehensiveAIServicesShowcase2025() {
                 Advanced AI Technologies
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Built with cutting-edge technologies and methodologies for 
+                Built with cutting-edge technologies and methodologies for
                 maximum performance and reliability
               </p>
             </motion.div>
@@ -328,7 +328,7 @@ export default function ComprehensiveAIServicesShowcase2025() {
               transition={{ duration: 0.6, delay: 0.2 }}
               className="text-xl text-cyan-100 mb-8"
             >
-              Join leading organizations that have already revolutionized 
+              Join leading organizations that have already revolutionized
               their operations with AI-powered solutions
             </motion.p>
             <motion.div
@@ -368,7 +368,7 @@ export default function ComprehensiveAIServicesShowcase2025() {
                 Get in Touch
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Ready to discuss how our AI services can transform your business? 
+                Ready to discuss how our AI services can transform your business?
                 Contact our experts today.
               </p>
             </motion.div>

@@ -22,7 +22,7 @@ const AIBusinessIntelligence = () => {
               AI Business Intelligence
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Unlock the power of artificial intelligence to transform your business data into actionable insights. 
+              Unlock the power of artificial intelligence to transform your business data into actionable insights.
               Make smarter decisions with predictive analytics, real-time monitoring, and intelligent reporting.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">

@@ -46,9 +46,9 @@ const ignoreDirs = [
 ];
 
 // Issues found
-let issues = [];
-let totalFiles = 0;
-let filesWithIssues = 0;
+const issues = [];
+const totalFiles = 0;
+const filesWithIssues = 0;
 
 function shouldIgnoreFile(filePath) {
   return ignoreDirs.some(dir => filePath.includes(dir));
@@ -59,9 +59,9 @@ function checkFile(filePath) {
     const content = fs.readFileSync(filePath, 'utf8');
     const lines = content.split('\n');
     totalFiles++;
-    
-    let fileIssues = [];
-    
+
+    const fileIssues = [];
+
     // Check each line for issues
     lines.forEach((line, lineNum) => {
       Object.entries(lintRules).forEach(([rule, pattern]) => {
@@ -75,24 +75,24 @@ function checkFile(filePath) {
         }
       });
     });
-    
+
     if (fileIssues.length > 0) {
       filesWithIssues++;
       issues.push(...fileIssues);
     }
-    
+
   } catch (error) {
-    console.warn(`Warning: Could not read file ${filePath}: ${error.message}`);
+    // console.warn(`Warning: Could not read file ${filePath}: ${error.message}`);
   }
 }
 
 function walkDir(dir) {
   const files = fs.readdirSync(dir);
-  
+
   files.forEach(file => {
     const filePath = path.join(dir, file);
     const stat = fs.statSync(filePath);
-    
+
     if (stat.isDirectory()) {
       if (!shouldIgnoreFile(filePath)) {
         walkDir(filePath);
@@ -107,57 +107,57 @@ function walkDir(dir) {
 }
 
 function generateReport() {
-  console.log('\n=== LINT CHECK REPORT ===\n');
-  console.log(`Total files checked: ${totalFiles}`);
-  console.log(`Files with issues: ${filesWithIssues}`);
-  console.log(`Total issues found: ${issues.length}\n`);
-  
+  // console.log('\n=== LINT CHECK REPORT ===\n');
+  // console.log(`Total files checked: ${totalFiles}`);
+  // console.log(`Files with issues: ${filesWithIssues}`);
+  // console.log(`Total issues found: ${issues.length}\n`);
+
   if (issues.length === 0) {
-    console.log('✅ No lint issues found!');
+    // console.log('✅ No lint issues found!');
     return;
   }
-  
+
   // Group issues by file
-  const issuesByFile = {};
+  const issuesByFile = { /* empty */ };
   issues.forEach(issue => {
     if (!issuesByFile[issue.file]) {
       issuesByFile[issue.file] = [];
     }
     issuesByFile[issue.file].push(issue);
   });
-  
+
   Object.entries(issuesByFile).forEach(([file, fileIssues]) => {
-    console.log(`\n📁 ${file} (${fileIssues.length} issues):`);
+    // console.log(`\n📁 ${file} (${fileIssues.length} issues):`);
     fileIssues.forEach(issue => {
-      console.log(`  Line ${issue.line}: [${issue.rule}] ${issue.content}`);
+      // console.log(`  Line ${issue.line}: [${issue.rule}] ${issue.content}`);
     });
   });
-  
+
   // Summary by rule
-  console.log('\n📊 Issues by rule:');
-  const ruleCounts = {};
+  // console.log('\n📊 Issues by rule:');
+  const ruleCounts = { /* empty */ };
   issues.forEach(issue => {
     ruleCounts[issue.rule] = (ruleCounts[issue.rule] || 0) + 1;
   });
-  
+
   Object.entries(ruleCounts)
     .sort(([,a], [,b]) => b - a)
     .forEach(([rule, count]) => {
-      console.log(`  ${rule}: ${count}`);
+      // console.log(`  ${rule}: ${count}`);
     });
 }
 
 function main() {
-  console.log('🔍 Starting lint check...');
-  
+  // console.log('🔍 Starting lint check...');
+
   const startTime = Date.now();
   walkDir('.');
   const endTime = Date.now();
-  
+
   generateReport();
-  
-  console.log(`\n⏱️  Check completed in ${endTime - startTime}ms`);
-  
+
+  // console.log(`\n⏱️  Check completed in ${endTime - startTime}ms`);
+
   // Exit with error code if issues found
   if (issues.length > 0) {
     process.exit(1);

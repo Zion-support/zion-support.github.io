@@ -10,7 +10,7 @@ export const Logo = () => {
           </div>
           <div className="absolute -top-1 -right-1 w-3 h-3 bg-zion-cyan rounded-full animate-pulse"></div>
         </div>
-        
+
         {/* Text */}
         <div className="flex flex-col">
           <div className="text-xl font-bold text-white leading-tight">

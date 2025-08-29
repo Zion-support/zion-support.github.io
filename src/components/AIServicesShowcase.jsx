@@ -151,14 +151,14 @@ export function AIServicesShowcase() {
             <Zap className="w-5 h-5 text-purple-400"/>
             <span className="text-purple-300 font-medium">Latest AI Services</span>
           </div>
-          
+
           <h2 className="text-4xl md:text-6xl font-bold text-white mb-6">
             Discover the Future of
             <span className="block bg-gradient-to-r from-purple-400 via-cyan-400 to-purple-400 bg-clip-text text-transparent">
               Artificial Intelligence
             </span>
           </h2>
-          
+
           <p className="text-xl text-zion-slate-light max-w-4xl mx-auto leading-relaxed">
             Experience cutting-edge AI solutions designed to transform your business operations and drive innovation
           </p>

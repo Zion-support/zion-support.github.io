@@ -1,14 +1,14 @@
 import React from 'react';
 import { SEO } from '@/components/SEO';
 import { motion } from 'framer-motion';
-import { 
-  TrendingDown, 
-  Brain, 
-  BarChart3, 
-  Shield, 
-  Zap, 
-  Users, 
-  Target, 
+import {
+  TrendingDown,
+  Brain,
+  BarChart3,
+  Shield,
+  Zap,
+  Users,
+  Target,
   CheckCircle,
   ArrowRight,
   Star,
@@ -82,13 +82,13 @@ const AICustomerChurnPrediction: React.FC = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white">
-      <SEO 
+      <SEO
         title="AI Customer Churn Prediction Platform - Zion Tech Group"
         description="Predict and prevent customer churn with AI-powered analytics. Reduce churn by 40-60% and increase customer lifetime value with our advanced machine learning platform."
         keywords="customer churn prediction, AI analytics, customer retention, machine learning, predictive analytics, customer success"
         canonical="https://ziontechgroup.com/services/ai-customer-churn-prediction"
       />
-      
+
       {/* Hero Section */}
       <section className="relative py-20 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-red-900/20 via-slate-800 to-blue-900/20"></div>
@@ -144,7 +144,7 @@ const AICustomerChurnPrediction: React.FC = () => {
               Advanced AI capabilities designed to predict, prevent, and manage customer churn effectively
             </p>
           </motion.div>
-          
+
           <div className="grid md:grid-cols-2 gap-8">
             {features.map((feature, index) => (
               <motion.div
@@ -183,7 +183,7 @@ const AICustomerChurnPrediction: React.FC = () => {
               Our platform delivers measurable business outcomes that directly impact your bottom line
             </p>
           </motion.div>
-          
+
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {benefits.map((benefit, index) => (
               <motion.div
@@ -221,7 +221,7 @@ const AICustomerChurnPrediction: React.FC = () => {
               Connect with your existing tools and workflows without disruption
             </p>
           </motion.div>
-          
+
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
             {integrations.map((integration, index) => (
               <motion.div
@@ -256,7 +256,7 @@ const AICustomerChurnPrediction: React.FC = () => {
               Choose the plan that fits your business needs with no hidden fees
             </p>
           </motion.div>
-          
+
           <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
             {pricing.map((plan, index) => (
               <motion.div
@@ -266,8 +266,8 @@ const AICustomerChurnPrediction: React.FC = () => {
                 viewport={{ once: true }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
                 className={`relative bg-gradient-to-br from-slate-800 to-slate-900 p-8 rounded-2xl border ${
-                  plan.popular 
-                    ? 'border-red-500 shadow-lg shadow-red-500/20' 
+                  plan.popular
+                    ? 'border-red-500 shadow-lg shadow-red-500/20'
                     : 'border-slate-700'
                 }`}
               >
@@ -278,7 +278,7 @@ const AICustomerChurnPrediction: React.FC = () => {
                     </span>
                   </div>
                 )}
-                
+
                 <div className="text-center mb-8">
                   <h3 className="text-2xl font-bold text-white mb-4">{plan.plan}</h3>
                   <div className="flex items-baseline justify-center">
@@ -286,7 +286,7 @@ const AICustomerChurnPrediction: React.FC = () => {
                     <span className="text-slate-400 ml-2">{plan.period}</span>
                   </div>
                 </div>
-                
+
                 <ul className="space-y-4 mb-8">
                   {plan.features.map((feature, idx) => (
                     <li key={idx} className="flex items-center text-slate-300">
@@ -295,7 +295,7 @@ const AICustomerChurnPrediction: React.FC = () => {
                     </li>
                   ))}
                 </ul>
-                
+
                 <button className="w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105 ${
                   plan.popular
                     ? 'bg-gradient-to-r from-red-500 to-orange-500 text-white hover:from-red-600 hover:to-orange-600'
@@ -325,15 +325,15 @@ const AICustomerChurnPrediction: React.FC = () => {
               Join 500+ companies that have reduced churn and increased customer lifetime value with our AI platform
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a 
-                href="/contact" 
+              <a
+                href="/contact"
                 className="inline-flex items-center px-8 py-4 bg-white text-red-600 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300 transform hover:scale-105"
               >
                 Start Free Trial
                 <ArrowRight className="w-5 h-5 ml-2" />
               </a>
-              <a 
-                href="/contact" 
+              <a
+                href="/contact"
                 className="inline-flex items-center px-8 py-4 border-2 border-white text-white rounded-lg font-semibold hover:bg-white hover:text-red-600 transition-all duration-300"
               >
                 Schedule Demo

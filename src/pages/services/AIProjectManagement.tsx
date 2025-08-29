@@ -57,7 +57,7 @@ export default function AIProjectManagement() {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white">
-      <SEO 
+      <SEO
         title="AI-Powered Project Management Platform - Zion Tech Group"
         description="Revolutionary AI-driven project management platform that predicts risks, optimizes resources, and ensures project success with intelligent automation."
       />
@@ -73,20 +73,20 @@ export default function AIProjectManagement() {
             AI Project Management
           </h1>
           <p className="text-xl md:text-2xl text-slate-300 mb-8 max-w-4xl mx-auto">
-            Transform your project delivery with AI that predicts risks, optimizes resources, and ensures success. 
+            Transform your project delivery with AI that predicts risks, optimizes resources, and ensures success.
             The future of project management is here.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a 
-              href="https://ziontechgroup.com/contact" 
-              target="_blank" 
+            <a
+              href="https://ziontechgroup.com/contact"
+              target="_blank"
               rel="noopener noreferrer"
               className="px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg font-semibold hover:from-blue-600 hover:to-purple-700 transition-all duration-300 inline-flex items-center"
             >
               Start Free Trial <ArrowRight className="ml-2 w-5 h-5" />
             </a>
-            <a 
-              href="tel:+13024640950" 
+            <a
+              href="tel:+13024640950"
               className="px-8 py-4 border border-blue-400/30 rounded-lg font-semibold hover:bg-blue-500/10 transition-all duration-300 inline-flex items-center"
             >
               <Phone className="w-5 h-5 mr-2" /> Call Now
@@ -101,7 +101,7 @@ export default function AIProjectManagement() {
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold mb-6">Why Choose AI Project Management?</h2>
             <p className="text-xl text-slate-300 max-w-3xl mx-auto">
-              Our AI platform goes beyond traditional project management tools by providing intelligent insights, 
+              Our AI platform goes beyond traditional project management tools by providing intelligent insights,
               predictive analytics, and automated optimization.
             </p>
           </div>
@@ -150,11 +150,11 @@ export default function AIProjectManagement() {
 
           <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
             {pricingTiers.map((tier, index) => (
-              <div 
-                key={index} 
+              <div
+                key={index}
                 className={`bg-slate-800/50 border rounded-xl p-8 ${
-                  tier.name === 'Professional' 
-                    ? 'border-blue-500/50 bg-blue-500/5' 
+                  tier.name === 'Professional'
+                    ? 'border-blue-500/50 bg-blue-500/5'
                     : 'border-slate-700/50'
                 }`}
               >
@@ -165,7 +165,7 @@ export default function AIProjectManagement() {
                   </div>
                   <p className="text-slate-400">{tier.users}</p>
                 </div>
-                
+
                 <ul className="space-y-3 mb-8">
                   {tier.features.map((feature, featureIndex) => (
                     <li key={featureIndex} className="flex items-center">
@@ -175,9 +175,9 @@ export default function AIProjectManagement() {
                   ))}
                 </ul>
 
-                <a 
-                  href="https://ziontechgroup.com/contact" 
-                  target="_blank" 
+                <a
+                  href="https://ziontechgroup.com/contact"
+                  target="_blank"
                   rel="noopener noreferrer"
                   className={`w-full py-3 px-6 rounded-lg font-semibold text-center block transition-all duration-300 ${
                     tier.name === 'Professional'
@@ -219,18 +219,18 @@ export default function AIProjectManagement() {
           <p className="text-xl text-slate-300 mb-8 max-w-3xl mx-auto">
             Join thousands of teams already using AI to deliver projects faster, cheaper, and more successfully.
           </p>
-          
+
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
-            <a 
-              href="https://ziontechgroup.com/contact" 
-              target="_blank" 
+            <a
+              href="https://ziontechgroup.com/contact"
+              target="_blank"
               rel="noopener noreferrer"
               className="px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg font-semibold hover:from-blue-600 hover:to-purple-700 transition-all duration-300 inline-flex items-center"
             >
               Start Free Trial <ArrowRight className="ml-2 w-5 h-5" />
             </a>
-            <a 
-              href="mailto:kleber@ziontechgroup.com" 
+            <a
+              href="mailto:kleber@ziontechgroup.com"
               className="px-8 py-4 border border-blue-400/30 rounded-lg font-semibold hover:bg-blue-500/10 transition-all duration-300 inline-flex items-center"
             >
               <Mail className="w-5 h-5 mr-2" /> Schedule Demo
@@ -261,9 +261,9 @@ export default function AIProjectManagement() {
               </div>
               <div>
                 <h4 className="font-semibold text-blue-400 mb-2">Website</h4>
-                <a 
-                  href="https://ziontechgroup.com" 
-                  target="_blank" 
+                <a
+                  href="https://ziontechgroup.com"
+                  target="_blank"
                   rel="noopener noreferrer"
                   className="text-slate-300 hover:text-blue-400 inline-flex items-center"
                 >

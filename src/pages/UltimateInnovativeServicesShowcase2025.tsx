@@ -1,14 +1,14 @@
 import React, { useState, useMemo } from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import { 
-  Brain, 
-  Cloud, 
-  Shield, 
-  Zap, 
-  Globe, 
-  Database, 
-  Smartphone, 
+import {
+  Brain,
+  Cloud,
+  Shield,
+  Zap,
+  Globe,
+  Database,
+  Smartphone,
   Rocket,
   Cpu,
   Network,
@@ -128,23 +128,23 @@ export default function UltimateInnovativeServicesShowcase2025() {
       <div className="bg-white shadow-sm border-b">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
           <div className="text-center">
-            <motion.h1 
+            <motion.h1
               initial={{ opacity: 0, y: -20 }}
               animate={{ opacity: 1, y: 0 }}
               className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-600 bg-clip-text text-transparent"
             >
               Ultimate Innovative Services 2025
             </motion.h1>
-            <motion.p 
+            <motion.p
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.2 }}
               className="mt-4 text-xl text-gray-600 max-w-3xl mx-auto"
             >
-              Discover the future of technology with our revolutionary micro SAAS services. 
+              Discover the future of technology with our revolutionary micro SAAS services.
               From AI and quantum computing to space technology and biotechnology.
             </motion.p>
-            <motion.div 
+            <motion.div
               initial={{ opacity: 0, scale: 0.8 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ delay: 0.4 }}
@@ -253,7 +253,7 @@ export default function UltimateInnovativeServicesShowcase2025() {
                   </div>
                   {getInnovationBadge(service.innovationLevel)}
                 </div>
-                
+
                 <p className="text-gray-600 text-sm line-clamp-3 mb-4">
                   {service.description}
                 </p>
@@ -380,7 +380,7 @@ export default function UltimateInnovativeServicesShowcase2025() {
               Ready to Transform Your Business?
             </h2>
             <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
-              Join the future of technology with our revolutionary services. 
+              Join the future of technology with our revolutionary services.
               Get in touch to discuss how we can help you achieve unprecedented growth and innovation.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">

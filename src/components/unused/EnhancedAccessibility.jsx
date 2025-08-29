@@ -22,7 +22,7 @@ const EnhancedAccessibility = () => {
                 applySettings({ ...settings, ...parsed });
             }
             catch (error) {
-                console.warn('Failed to load accessibility settings:', error);
+                // console.warn('Failed to load accessibility settings:', error);
             }
         }
         // Check for user preferences
@@ -235,7 +235,7 @@ const EnhancedAccessibility = () => {
                   <SpeakerWaveIcon className="w-4 h-4"/>
                   <span>Test Screen Reader</span>
                 </button>
-                
+
                 <button onClick={resetSettings} className="w-full px-4 py-2 text-sm bg-gray-600 text-white rounded-md hover:bg-gray-700 transition-colors">
                   Reset to Defaults
                 </button>

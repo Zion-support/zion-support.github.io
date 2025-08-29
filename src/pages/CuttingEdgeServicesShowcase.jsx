@@ -51,8 +51,8 @@ const CuttingEdgeServicesShowcase = () => {
             Cutting-Edge Innovation Services 2025
           </h1>
           <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed mb-8">
-            Discover our comprehensive portfolio of next-generation micro SAAS services, 
-            AI solutions, and specialized industry platforms designed to transform your business 
+            Discover our comprehensive portfolio of next-generation micro SAAS services,
+            AI solutions, and specialized industry platforms designed to transform your business
             and drive innovation across all sectors.
           </p>
           <div className="flex flex-wrap justify-center gap-4 text-sm">
@@ -232,7 +232,7 @@ const CuttingEdgeServicesShowcase = () => {
               Ready to Lead the Innovation Revolution?
             </h2>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Join hundreds of forward-thinking companies already transforming their operations 
+              Join hundreds of forward-thinking companies already transforming their operations
               with our cutting-edge AI and technology solutions.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">

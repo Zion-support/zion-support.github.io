@@ -80,7 +80,7 @@ const AISolutions = () => {
               <span className="bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent"> Future</span>
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Transform your business with cutting-edge artificial intelligence solutions. 
+              Transform your business with cutting-edge artificial intelligence solutions.
               From autonomous systems to intelligent analytics, we deliver the future of technology today.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -103,7 +103,7 @@ const AISolutions = () => {
               Comprehensive AI Services
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Our AI solutions span across all major business domains, providing intelligent automation 
+              Our AI solutions span across all major business domains, providing intelligent automation
               and insights that drive growth and innovation.
             </p>
           </div>
@@ -162,7 +162,7 @@ const AISolutions = () => {
             Ready to Transform Your Business with AI?
           </h2>
           <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">
-            Join the AI revolution and stay ahead of the competition. 
+            Join the AI revolution and stay ahead of the competition.
             Our experts are ready to help you implement cutting-edge AI solutions.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">

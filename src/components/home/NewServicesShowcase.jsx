@@ -27,8 +27,8 @@ export function NewServicesShowcase() {
             <Sparkles className="w-8 h-8 text-zion-cyan"/>
           </div>
           <p className="text-xl text-zion-slate-light max-w-3xl mx-auto leading-relaxed">
-            Transform your business with cutting-edge AI solutions, professional IT services, and affordable micro SAAS tools. 
-            <span className="text-zion-cyan font-semibold"> Save up to 55% </span> 
+            Transform your business with cutting-edge AI solutions, professional IT services, and affordable micro SAAS tools.
+            <span className="text-zion-cyan font-semibold"> Save up to 55% </span>
             on enterprise-grade technology solutions.
           </p>
         </div>
@@ -37,7 +37,7 @@ export function NewServicesShowcase() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
           {featuredServices.map((service, index) => (<Card key={service.id} className="group relative overflow-hidden border-0 bg-gradient-to-br from-zion-blue-dark/50 to-zion-slate/50 backdrop-blur-sm hover:from-zion-blue-dark/70 hover:to-zion-slate/70 transition-all duration-500 hover:scale-105 hover:shadow-2xl hover:shadow-zion-purple/20" style={{ animationDelay: `${index * 200}ms` }}>
               <div className="absolute inset-0 bg-gradient-to-r from-zion-purple/5 to-zion-cyan/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-              
+
               <CardHeader className="relative z-10">
                 <div className="flex items-center justify-between mb-4">
                   <Badge variant="secondary" className="bg-zion-purple/20 text-zion-cyan border-zion-purple/30">
@@ -48,11 +48,11 @@ export function NewServicesShowcase() {
                     <span className="text-sm font-medium">{service.rating}</span>
                   </div>
                 </div>
-                
+
                 <CardTitle className="text-xl font-bold text-white mb-3 group-hover:text-zion-cyan transition-colors">
                   {service.title}
                 </CardTitle>
-                
+
                 <CardDescription className="text-zion-slate-light text-sm leading-relaxed">
                   {service.description}
                 </CardDescription>
@@ -141,7 +141,7 @@ export function NewServicesShowcase() {
             <p className="text-zion-slate-light text-lg mb-8 max-w-2xl mx-auto">
               Join thousands of businesses that have already revolutionized their operations with our AI-powered solutions and professional IT services.
             </p>
-            
+
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button size="lg" className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white px-8 py-3" asChild>
                 <Link to="/micro-saas-services">
@@ -149,7 +149,7 @@ export function NewServicesShowcase() {
                   View All Services
                 </Link>
               </Button>
-              
+
               <Button size="lg" variant="outline" className="border-zion-cyan/30 text-zion-cyan hover:bg-zion-cyan/10 px-8 py-3" asChild>
                 <Link to="/contact">
                   <MessageCircle className="w-5 h-5 mr-2"/>
@@ -157,7 +157,7 @@ export function NewServicesShowcase() {
                 </Link>
               </Button>
             </div>
-            
+
             <div className="mt-8 flex flex-wrap justify-center gap-8 text-sm text-zion-slate-light">
               <div className="flex items-center gap-2">
                 <CheckCircle className="w-4 h-4 text-zion-cyan"/>

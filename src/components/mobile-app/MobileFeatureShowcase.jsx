@@ -1,4 +1,3 @@
-import React from 'react';
 import { Smartphone, Zap, Shield, Users, Globe, BarChart3 } from 'lucide-react';
 
 export const MobileFeatureShowcase = () => {

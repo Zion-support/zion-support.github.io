@@ -266,7 +266,7 @@ export default function NewServicesOverview() {
                       <p className="text-gray-400 mb-4 line-clamp-3">
                         {service.description}
                       </p>
-                      
+
                       <div className="mb-4">
                         <div className="text-2xl font-bold text-blue-400 mb-2">
                           {service.price}
@@ -327,7 +327,7 @@ export default function NewServicesOverview() {
               Ready to Transform Your Business?
             </h2>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Our team of experts is ready to help you implement the perfect solution for your business needs. 
+              Our team of experts is ready to help you implement the perfect solution for your business needs.
               Get in touch today to start your digital transformation journey.
             </p>
 

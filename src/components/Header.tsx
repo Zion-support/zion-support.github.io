@@ -1,15 +1,15 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
-import { 
-  Menu, 
-  X, 
-  ChevronDown, 
-  Brain, 
-  Shield, 
-  Cpu, 
-  Heart, 
-  Rocket, 
+import {
+  Menu,
+  X,
+  ChevronDown,
+  Brain,
+  Shield,
+  Cpu,
+  Heart,
+  Rocket,
   Sparkles,
   BarChart3,
   Network,
@@ -67,8 +67,8 @@ export function Header() {
 
   return (
     <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-      isScrolled 
-        ? 'bg-black/95 backdrop-blur-md border-b border-white/10 shadow-2xl' 
+      isScrolled
+        ? 'bg-black/95 backdrop-blur-md border-b border-white/10 shadow-2xl'
         : 'bg-gradient-to-r from-black/90 via-slate-900/90 to-black/90 backdrop-blur-sm'
     }`}>
       <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -95,7 +95,7 @@ export function Header() {
                 <span>Services</span>
                 <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${isServicesOpen ? 'rotate-180' : ''}`} />
               </button>
-              
+
               <AnimatePresence>
                 {isServicesOpen && (
                   <motion.div
@@ -138,35 +138,35 @@ export function Header() {
               </AnimatePresence>
             </div>
 
-            <Link 
-              to="/solutions" 
+            <Link
+              to="/solutions"
               className={`text-white hover:text-cyan-400 transition-colors duration-200 py-2 ${
                 isActive('/solutions') ? 'text-cyan-400' : ''
               }`}
             >
               Solutions
             </Link>
-            
-            <Link 
-              to="/about" 
+
+            <Link
+              to="/about"
               className={`text-white hover:text-cyan-400 transition-colors duration-200 py-2 ${
                 isActive('/about') ? 'text-cyan-400' : ''
               }`}
             >
               About
             </Link>
-            
-            <Link 
-              to="/blog" 
+
+            <Link
+              to="/blog"
               className={`text-white hover:text-cyan-400 transition-colors duration-200 py-2 ${
                 isActive('/blog') ? 'text-cyan-400' : ''
               }`}
             >
               Blog
             </Link>
-            
-            <Link 
-              to="/contact" 
+
+            <Link
+              to="/contact"
               className={`text-white hover:text-cyan-400 transition-colors duration-200 py-2 ${
                 isActive('/contact') ? 'text-cyan-400' : ''
               }`}
@@ -175,8 +175,8 @@ export function Header() {
             </Link>
 
             {/* CTA Button */}
-            <Link 
-              to="/contact" 
+            <Link
+              to="/contact"
               className="bg-gradient-to-r from-blue-600 to-cyan-600 text-white px-6 py-2 rounded-lg font-semibold hover:from-blue-700 hover:to-cyan-700 transition-all duration-300 shadow-lg hover:shadow-xl"
             >
               Get Started
@@ -212,7 +212,7 @@ export function Header() {
                     <span>Services</span>
                     <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${isServicesOpen ? 'rotate-180' : ''}`} />
                   </button>
-                  
+
                   <AnimatePresence>
                     {isServicesOpen && (
                       <motion.div
@@ -247,8 +247,8 @@ export function Header() {
                   </AnimatePresence>
                 </div>
 
-                <Link 
-                  to="/solutions" 
+                <Link
+                  to="/solutions"
                   className={`block text-white hover:text-cyan-400 transition-colors duration-200 py-2 ${
                     isActive('/solutions') ? 'text-cyan-400' : ''
                   }`}
@@ -256,9 +256,9 @@ export function Header() {
                 >
                   Solutions
                 </Link>
-                
-                <Link 
-                  to="/about" 
+
+                <Link
+                  to="/about"
                   className={`block text-white hover:text-cyan-400 transition-colors duration-200 py-2 ${
                     isActive('/about') ? 'text-cyan-400' : ''
                   }`}
@@ -266,9 +266,9 @@ export function Header() {
                 >
                   About
                 </Link>
-                
-                <Link 
-                  to="/blog" 
+
+                <Link
+                  to="/blog"
                   className={`block text-white hover:text-cyan-400 transition-colors duration-200 py-2 ${
                     isActive('/blog') ? 'text-cyan-400' : ''
                   }`}
@@ -276,9 +276,9 @@ export function Header() {
                 >
                   Blog
                 </Link>
-                
-                <Link 
-                  to="/contact" 
+
+                <Link
+                  to="/contact"
                   className={`block text-white hover:text-cyan-400 transition-colors duration-200 py-2 ${
                     isActive('/contact') ? 'text-cyan-400' : ''
                   }`}
@@ -288,8 +288,8 @@ export function Header() {
                 </Link>
 
                 {/* Mobile CTA */}
-                <Link 
-                  to="/contact" 
+                <Link
+                  to="/contact"
                   className="block bg-gradient-to-r from-blue-600 to-cyan-600 text-white px-6 py-3 rounded-lg font-semibold text-center hover:from-blue-700 hover:to-cyan-700 transition-all duration-300"
                   onClick={() => setIsOpen(false)}
                 >

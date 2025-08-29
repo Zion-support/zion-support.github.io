@@ -7,16 +7,16 @@ export const AdvancedForm = ({ fields, onSubmit, title = 'Contact Us', subtitle 
         enableTracking: enableAnalytics,
         enableUserBehaviorTracking: true
     });
-    const [formData, setFormData] = useState({});
-    const [validation, setValidation] = useState({});
+    const [formData, setFormData] = useState({ /* empty */ });
+    const [validation, setValidation] = useState({ /* empty */ });
     const [isSubmitting, setIsSubmitting] = useState(false);
     const [isSubmitted, setIsSubmitted] = useState(false);
-    const [showPassword, setShowPassword] = useState({});
+    const [showPassword, setShowPassword] = useState({ /* empty */ });
     const [progress, setProgress] = useState(0);
     // Initialize form data and validation
     useEffect(() => {
-        const initialData = {};
-        const initialValidation = {};
+        const initialData = { /* empty */ };
+        const initialValidation = { /* empty */ };
         fields.forEach(field => {
             initialData[field.name] = field.type === 'checkbox' ? false : '';
             initialValidation[field.name] = {
@@ -153,8 +153,8 @@ export const AdvancedForm = ({ fields, onSubmit, title = 'Contact Us', subtitle 
             // Reset form after successful submission
             setTimeout(() => {
                 setIsSubmitted(false);
-                setFormData({});
-                setValidation({});
+                setFormData({ /* empty */ });
+                setValidation({ /* empty */ });
                 setProgress(0);
             }, 5000);
         }
@@ -165,7 +165,7 @@ export const AdvancedForm = ({ fields, onSubmit, title = 'Contact Us', subtitle 
                     error: error instanceof Error ? error.message : 'Unknown error'
                 });
             }
-            console.error('Form submission failed:', error);
+            // console.error('Form submission failed:', error);
         }
         finally {
             setIsSubmitting(false);
@@ -282,7 +282,7 @@ export const AdvancedForm = ({ fields, onSubmit, title = 'Contact Us', subtitle 
         {/* Submit Button */}
         <motion.button type="submit" disabled={!isFormValid() || isSubmitting} className={`w-full py-3 px-6 rounded-lg font-medium text-white transition-all duration-200 flex items-center justify-center gap-2 ${!isFormValid() || isSubmitting
             ? 'bg-gray-400 cursor-not-allowed'
-            : 'bg-gradient-to-r from-blue-500 to-purple-500 hover:from-blue-600 hover:to-purple-600 transform hover:scale-105'}`} whileHover={isFormValid() && !isSubmitting ? { scale: 1.02 } : {}} whileTap={isFormValid() && !isSubmitting ? { scale: 0.98 } : {}}>
+            : 'bg-gradient-to-r from-blue-500 to-purple-500 hover:from-blue-600 hover:to-purple-600 transform hover:scale-105'}`} whileHover={isFormValid() && !isSubmitting ? { scale: 1.02 } : { /* empty */ }} whileTap={isFormValid() && !isSubmitting ? { scale: 0.98 } : { /* empty */ }}>
           {isSubmitting ? (<>
               <Loader2 className="w-5 h-5 animate-spin"/>
               Sending...

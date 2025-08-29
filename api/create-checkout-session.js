@@ -16,7 +16,7 @@ async function handler(req, res) {
     res.end('Method Not Allowed');
     return;
   }
-  const { productId, userId } = req.body || {};
+  const { productId, userId } = req.body || { /* empty */ };
   if (!productId || !userId) {
     res.statusCode = 400;
     res.json({ error: 'Missing productId or userId' });
@@ -41,7 +41,7 @@ async function handler(req, res) {
     res.statusCode = 200;
     res.json({ sessionId: session.id });
   } catch (err) {
-    console.error('Create checkout session error:', err);
+    // console.error('Create checkout session error:', err);
     res.statusCode = 500;
     res.json({ error: err.message });
   }

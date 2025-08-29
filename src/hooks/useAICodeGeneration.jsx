@@ -53,7 +53,7 @@ export const useAICodeGeneration = () => {
             });
         }
         catch (error) {
-            console.error('Failed to generate code:', error);
+            // console.error('Failed to generate code:', error);
             trackEvent('ai_code_generation', 'generation_failed', 'error', undefined, {
                 error: error instanceof Error ? error.message : 'Unknown error'
             });
@@ -88,7 +88,7 @@ export const useAICodeGeneration = () => {
             });
         }
         catch (error) {
-            console.error('Failed to analyze code:', error);
+            // console.error('Failed to analyze code:', error);
             trackEvent('ai_code_analysis', 'analysis_failed', 'error', undefined, {
                 error: error instanceof Error ? error.message : 'Unknown error'
             });
@@ -135,7 +135,7 @@ export const useAICodeGeneration = () => {
             return optimizedCode;
         }
         catch (error) {
-            console.error('Failed to optimize code:', error);
+            // console.error('Failed to optimize code:', error);
             trackEvent('ai_code_generation', 'optimization_failed', 'error', undefined, {
                 error: error instanceof Error ? error.message : 'Unknown error'
             });
@@ -161,7 +161,7 @@ export const useAICodeGeneration = () => {
             return testCode;
         }
         catch (error) {
-            console.error('Failed to generate tests:', error);
+            // console.error('Failed to generate tests:', error);
             trackEvent('ai_code_generation', 'test_generation_failed', 'error', undefined, {
                 error: error instanceof Error ? error.message : 'Unknown error'
             });
@@ -187,7 +187,7 @@ export const useAICodeGeneration = () => {
             return docs;
         }
         catch (error) {
-            console.error('Failed to generate documentation:', error);
+            // console.error('Failed to generate documentation:', error);
             trackEvent('ai_code_generation', 'doc_generation_failed', 'error', undefined, {
                 error: error instanceof Error ? error.message : 'Unknown error'
             });
@@ -300,7 +300,7 @@ app.get('/', (req, res) => {
 // TODO: Implement additional routes based on prompt
 
 app.listen(PORT, () => {
-  console.log(\`Server running on port \${PORT}\`);
+  // console.log(\`Server running on port \${PORT}\`);
 });`;
     };
     const generatePythonCode = (prompt, _options) => {
@@ -316,11 +316,11 @@ from dataclasses import dataclass
 @dataclass
 class GeneratedClass:
     """Generated class based on prompt."""
-    
+
     def __init__(self):
         # TODO: Implement initialization
         pass
-    
+
     async def process_data(self, data: Any) -> Any:
         """Process data based on prompt requirements."""
         # TODO: Implement data processing logic
@@ -330,7 +330,7 @@ async def main():
     """Main function."""
     instance = GeneratedClass()
     # TODO: Implement main logic based on prompt
-    
+
 if __name__ == "__main__":
     asyncio.run(main())`;
     };
@@ -343,9 +343,9 @@ if __name__ == "__main__":
 // TODO: Implement code based on prompt requirements
 // This is a placeholder implementation
 
-console.log("Generated code placeholder");
-console.log("Prompt:", "${prompt}");
-console.log("Language:", "${options.language}");`;
+// console.log("Generated code placeholder");
+// console.log("Prompt:", "${prompt}");
+// console.log("Language:", "${options.language}");`;
     };
     // Helper functions for code analysis
     const calculateComplexity = (code) => {
@@ -496,12 +496,12 @@ class TestGeneratedClass:
     def test_initialization(self):
         instance = GeneratedClass()
         assert instance is not None
-    
+
     def test_process_data(self):
         instance = GeneratedClass()
         result = instance.process_data("test")
         assert result == "test"
-    
+
     # TODO: Add more specific test cases based on class functionality`;
     };
     const generateGenericTests = (_code, language) => {
@@ -519,9 +519,9 @@ describe('Generated Code Tests', () => {
     const generateJSDoc = (_code) => {
         return `/**
  * Generated Component
- * 
+ *
  * This component was generated based on user requirements.
- * 
+ *
  * @component
  * @example
  * <GeneratedComponent />
@@ -540,7 +540,7 @@ This module was generated based on user requirements.
 def generated_function():
     """
     Generated function with docstring.
-    
+
     Returns:
         str: Description of return value
     """
@@ -549,9 +549,9 @@ def generated_function():
     const generateGenericDocs = (_code, language) => {
         return `/**
  * Generated ${language} Code
- * 
+ *
  * This code was generated based on user requirements.
- * 
+ *
  * TODO: Add specific documentation based on code functionality
  */`;
     };

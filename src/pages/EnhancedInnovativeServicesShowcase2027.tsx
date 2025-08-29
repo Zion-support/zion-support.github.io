@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
-import { 
-  Brain, 
-  Globe, 
-  Zap, 
-  Shield, 
+import {
+  Brain,
+  Globe,
+  Zap,
+  Shield,
   Cloud,
   ArrowRight,
   CheckCircle,
@@ -81,7 +81,7 @@ export default function EnhancedInnovativeServicesShowcase2027() {
         return parseFloat(a.price.replace(/[^0-9.]/g, '')) - parseFloat(b.price.replace(/[^0-9.]/g, ''));
       case 'innovation':
         const innovationOrder = { 'Breakthrough': 3, 'Cutting-edge': 2, 'Advanced': 1, 'Innovative': 0 };
-        return (innovationOrder[b.innovationLevel as keyof typeof innovationOrder] || 0) - 
+        return (innovationOrder[b.innovationLevel as keyof typeof innovationOrder] || 0) -
                (innovationOrder[a.innovationLevel as keyof typeof innovationOrder] || 0);
       default:
         return 0;

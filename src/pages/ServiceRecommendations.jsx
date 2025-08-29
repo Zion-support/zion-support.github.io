@@ -69,14 +69,14 @@ const ServiceRecommendations = () => {
           <div className="absolute -top-20 -right-20 w-40 h-40 bg-white/10 rounded-full blur-3xl animate-pulse"></div>
           <div className="absolute -bottom-20 -left-20 w-40 h-40 bg-white/10 rounded-full blur-3xl animate-pulse delay-1000"></div>
         </div>
-        
+
         <div className="max-w-4xl mx-auto text-center relative z-10">
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }}>
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
               AI-Powered Service Recommendations
             </h1>
             <p className="text-xl text-white/90 mb-8 max-w-3xl mx-auto leading-relaxed">
-              Discover the perfect technology solutions for your business with our intelligent 
+              Discover the perfect technology solutions for your business with our intelligent
               recommendation engine. Get personalized matches based on your industry, goals, and requirements.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -100,7 +100,7 @@ const ServiceRecommendations = () => {
               How Our AI Recommendation Engine Works
             </h2>
             <p className="text-lg text-zion-slate-light max-w-2xl mx-auto">
-              Our advanced AI analyzes your business profile to provide intelligent, 
+              Our advanced AI analyzes your business profile to provide intelligent,
               personalized service recommendations that maximize your ROI and success.
             </p>
           </motion.div>
@@ -191,7 +191,7 @@ const ServiceRecommendations = () => {
               Get Your Personalized Recommendations
             </h2>
             <p className="text-lg text-zion-slate-light max-w-2xl mx-auto">
-              Fill out our comprehensive business profile and let our AI engine 
+              Fill out our comprehensive business profile and let our AI engine
               find the perfect services for your needs.
             </p>
           </motion.div>
@@ -208,7 +208,7 @@ const ServiceRecommendations = () => {
               Ready to Transform Your Business?
             </h2>
             <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
-              Our AI-powered recommendation engine will help you find the perfect 
+              Our AI-powered recommendation engine will help you find the perfect
               technology solutions to accelerate your business growth and success.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">

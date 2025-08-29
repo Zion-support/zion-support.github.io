@@ -65,17 +65,17 @@ export default function AIBusinessIntelligence() {
               <Brain className="w-5 h-5 text-violet-400" />
               <span className="text-violet-400 font-medium">AI Business Intelligence</span>
             </div>
-            
+
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
               Intelligence at Your
               <span className="text-gradient"> Fingertips</span>
             </h1>
-            
+
             <p className="text-xl text-zion-slate-light mb-8 max-w-2xl mx-auto">
-              Transform your business data into actionable intelligence with our AI-powered 
+              Transform your business data into actionable intelligence with our AI-powered
               business intelligence platform. Make smarter decisions faster.
             </p>
-            
+
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="btn-futuristic px-8 py-4 text-lg">
                 Start Free Trial

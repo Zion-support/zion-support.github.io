@@ -1,10 +1,10 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { 
-  Star, 
-  Quote, 
-  TrendingUp, 
-  Users, 
+import {
+  Star,
+  Quote,
+  TrendingUp,
+  Users,
   Award,
   CheckCircle,
   ArrowRight,
@@ -71,7 +71,7 @@ export const ClientSuccessStoriesSection: React.FC = () => {
             Client Success Stories
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Real results from real clients. Discover how we've helped businesses 
+            Real results from real clients. Discover how we've helped businesses
             across industries achieve remarkable transformations and measurable success.
           </p>
         </motion.div>
@@ -158,7 +158,7 @@ export const ClientSuccessStoriesSection: React.FC = () => {
               Ready to Write Your Success Story?
             </h3>
             <p className="text-green-100 mb-6 max-w-2xl mx-auto">
-              Join hundreds of satisfied clients who have transformed their 
+              Join hundreds of satisfied clients who have transformed their
               businesses with our innovative technology solutions.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">

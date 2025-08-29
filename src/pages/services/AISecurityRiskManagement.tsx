@@ -13,20 +13,20 @@ export default function AISecurityRiskManagement() {
   ];
 
   const tiers = [
-    { 
-      name: 'Developer', 
-      price: '$449/mo', 
-      details: ['Up to 100 risk assessments/month', 'Basic AI features', 'Standard risk management', 'Email support'] 
+    {
+      name: 'Developer',
+      price: '$449/mo',
+      details: ['Up to 100 risk assessments/month', 'Basic AI features', 'Standard risk management', 'Email support']
     },
-    { 
-      name: 'Business', 
-      price: '$1,199/mo', 
-      details: ['Up to 500 risk assessments/month', 'Advanced AI features', 'Enhanced risk management', 'Priority support'] 
+    {
+      name: 'Business',
+      price: '$1,199/mo',
+      details: ['Up to 500 risk assessments/month', 'Advanced AI features', 'Enhanced risk management', 'Priority support']
     },
-    { 
-      name: 'Enterprise', 
-      price: '$2,999/mo', 
-      details: ['Unlimited risk assessments', 'Custom AI models', 'Full risk management suite', '24/7 dedicated support'] 
+    {
+      name: 'Enterprise',
+      price: '$2,999/mo',
+      details: ['Unlimited risk assessments', 'Custom AI models', 'Full risk management suite', '24/7 dedicated support']
     },
   ];
 

@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { 
-  Star, 
-  Quote, 
-  ChevronLeft, 
+import {
+  Star,
+  Quote,
+  ChevronLeft,
   ChevronRight,
   Globe,
   Building,
@@ -159,7 +159,7 @@ export default function EnhancedTestimonialsSection() {
               <div className="bg-white/5 backdrop-blur-lg border border-white/20 rounded-3xl p-8 lg:p-12 relative overflow-hidden">
                 {/* Background gradient overlay */}
                 <div className="absolute inset-0 bg-gradient-to-br from-zion-cyan/5 to-zion-purple/5 opacity-50"></div>
-                
+
                 {/* Quote icon */}
                 <motion.div
                   className="absolute top-8 right-8 w-16 h-16 bg-zion-cyan/20 rounded-full flex items-center justify-center"
@@ -238,22 +238,22 @@ export default function EnhancedTestimonialsSection() {
             >
               <ChevronLeft className="w-6 h-6 text-white" />
             </motion.button>
-            
+
             <div className="flex space-x-2">
               {testimonials.map((_, index) => (
                 <motion.button
                   key={index}
                   onClick={() => goToTestimonial(index)}
                   className={`w-3 h-3 rounded-full transition-all duration-300 ${
-                    index === currentTestimonial 
-                      ? 'bg-zion-cyan w-8' 
+                    index === currentTestimonial
+                      ? 'bg-zion-cyan w-8'
                       : 'bg-white/30 hover:bg-white/50'
                   }`}
                   whileHover={{ scale: 1.2 }}
                 />
               ))}
             </div>
-            
+
             <motion.button
               onClick={nextTestimonial}
               className="p-3 rounded-full bg-white/10 hover:bg-white/20 transition-colors duration-200 border border-white/20"

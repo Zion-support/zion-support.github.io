@@ -22,7 +22,7 @@ class EnhancedErrorBoundary extends Component {
     componentDidCatch(error, errorInfo) {
         this.setState({ errorInfo });
         // Log error to console
-        console.error('Error caught by boundary:', error, errorInfo);
+        // console.error('Error caught by boundary:', error, errorInfo);
         // Call custom error handler if provided
         if (this.props.onError) {
             this.props.onError(error, errorInfo);
@@ -57,8 +57,8 @@ class EnhancedErrorBoundary extends Component {
         // Log to console for development
         if (process.env.NODE_ENV === 'development') {
             console.group('Error Report');
-            console.log('Error ID:', errorReport.id);
-            console.log('Error Details:', errorReport);
+            // console.log('Error ID:', errorReport.id);
+            // console.log('Error Details:', errorReport);
             console.groupEnd();
         }
         // In production, you would send this to your error reporting service
@@ -102,15 +102,13 @@ ${errorInfo.componentStack}
 **Timestamp:** ${new Date().toISOString()}
 
 ## Steps to Reproduce
-1. 
-2. 
-3. 
+1.
+2.
+3.
 
 ## Expected Behavior
 
-
 ## Actual Behavior
-
 
 ## Additional Context
 
@@ -170,7 +168,7 @@ ${errorInfo.componentStack}
                     </span>
                     <DocumentTextIcon className={`w-5 h-5 text-slate-500 transition-transform ${this.state.showStackTrace ? 'rotate-180' : ''}`}/>
                   </button>
-                  
+
                   {this.state.showStackTrace && (<div className="p-4 bg-slate-900 text-slate-100 font-mono text-sm overflow-x-auto">
                       <pre className="whitespace-pre-wrap break-words">
                         {this.state.error.stack}
@@ -198,7 +196,7 @@ ${errorInfo.componentStack}
                   <ArrowPathIcon className="w-5 h-5"/>
                   <span>Try Again</span>
                 </button>
-                
+
                 <button onClick={this.handleGoHome} className="flex-1 flex items-center justify-center space-x-2 px-6 py-3 bg-slate-600 hover:bg-slate-700 text-white font-medium rounded-lg transition-colors">
                   <HomeIcon className="w-5 h-5"/>
                   <span>Go Home</span>

@@ -1,14 +1,14 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { 
-  Brain, 
-  Shield, 
-  Cloud, 
-  Star, 
-  CheckCircle, 
-  Phone, 
-  Mail, 
-  MapPin, 
+import {
+  Brain,
+  Shield,
+  Cloud,
+  Star,
+  CheckCircle,
+  Phone,
+  Mail,
+  MapPin,
   ExternalLink,
   TrendingUp,
   Users,
@@ -205,7 +205,7 @@ const ComprehensivePricingGuide2030: React.FC = () => {
             {filteredServices.map((service, index) => {
               const CategoryIcon = getCategoryIcon(service.category);
               const pricingTier = getPricingTier(service.pricing.monthly);
-              
+
               return (
                 <motion.div
                   key={service.id}

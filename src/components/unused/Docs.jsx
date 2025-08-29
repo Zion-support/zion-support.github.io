@@ -83,11 +83,11 @@ const Docs = () => {
               </span>
             </h1>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Comprehensive documentation, guides, and references to help you 
+              Comprehensive documentation, guides, and references to help you
               build, deploy, and manage AI solutions with Zion Tech Group
             </p>
           </div>
-          
+
           {/* Search Bar */}
           <div className="max-w-2xl mx-auto mb-16">
             <div className="relative">
@@ -97,7 +97,7 @@ const Docs = () => {
               </button>
             </div>
           </div>
-          
+
           {/* Documentation Categories */}
           <div className="mb-16">
             <h2 className="text-3xl font-bold text-center mb-12">Browse Documentation</h2>
@@ -105,7 +105,7 @@ const Docs = () => {
               {docCategories.map((category, index) => (<div key={index} className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20 hover:border-white/40 transition-all duration-300">
                   <h3 className="text-xl font-semibold text-white mb-3">{category.title}</h3>
                   <p className="text-gray-300 mb-6">{category.description}</p>
-                  
+
                   <div className="space-y-4">
                     {category.articles.map((article, idx) => (<div key={idx} className="p-4 bg-white/5 rounded-lg hover:bg-white/10 transition-all duration-300 cursor-pointer">
                         <div className="flex items-start justify-between mb-2">
@@ -125,7 +125,7 @@ const Docs = () => {
                 </div>))}
             </div>
           </div>
-          
+
           {/* Popular Documentation */}
           <div className="mb-16">
             <h2 className="text-3xl font-bold text-center mb-12">Popular Guides</h2>
@@ -137,9 +137,9 @@ const Docs = () => {
                     </span>
                     <span className="text-xs text-gray-500">{doc.lastUpdated}</span>
                   </div>
-                  
+
                   <h3 className="text-lg font-semibold text-white mb-3">{doc.title}</h3>
-                  
+
                   <div className="flex items-center justify-between">
                     <div className="flex items-center gap-4 text-sm text-gray-400">
                       <span>{doc.readTime}</span>
@@ -150,7 +150,7 @@ const Docs = () => {
                 </div>))}
             </div>
           </div>
-          
+
           {/* Quick Links */}
           <div className="mb-16">
             <h2 className="text-3xl font-bold text-center mb-12">Quick Links</h2>
@@ -162,7 +162,7 @@ const Docs = () => {
                 <h3 className="text-xl font-semibold text-white mb-2">Video Tutorials</h3>
                 <p className="text-gray-300 text-sm">Step-by-step video guides for visual learners</p>
               </Link>
-              
+
               <Link to="/help-center" className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20 hover:border-white/40 transition-all duration-300 text-center">
                 <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-xl flex items-center justify-center mx-auto mb-4">
                   <span className="text-2xl">❓</span>
@@ -170,7 +170,7 @@ const Docs = () => {
                 <h3 className="text-xl font-semibold text-white mb-2">Help Center</h3>
                 <p className="text-gray-300 text-sm">Find answers to common questions and issues</p>
               </Link>
-              
+
               <Link to="/support" className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20 hover:border-white/40 transition-all duration-300 text-center">
                 <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-pink-500 rounded-xl flex items-center justify-center mx-auto mb-4">
                   <span className="text-2xl">🆘</span>
@@ -180,13 +180,13 @@ const Docs = () => {
               </Link>
             </div>
           </div>
-          
+
           {/* CTA Section */}
           <div className="text-center">
             <div className="bg-white/10 backdrop-blur-lg rounded-xl p-8 border border-white/20 max-w-4xl mx-auto">
               <h3 className="text-2xl font-bold mb-4">Need More Help?</h3>
               <p className="text-gray-300 mb-6">
-                Can't find what you're looking for? Our documentation team is constantly 
+                Can't find what you're looking for? Our documentation team is constantly
                 updating and improving our guides. Let us know what you need!
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">

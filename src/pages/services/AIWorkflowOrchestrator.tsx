@@ -34,20 +34,20 @@ export default function AIWorkflowOrchestrator() {
   ];
 
   const tiers = [
-    { 
-      name: 'Workflow Starter', 
-      price: '$499/mo', 
-      details: ['Up to 100 workflows', 'Basic AI orchestration', 'Standard reporting', 'Email support'] 
+    {
+      name: 'Workflow Starter',
+      price: '$499/mo',
+      details: ['Up to 100 workflows', 'Basic AI orchestration', 'Standard reporting', 'Email support']
     },
-    { 
-      name: 'Workflow Professional', 
-      price: '$1,299/mo', 
-      details: ['Up to 500 workflows', 'Advanced AI features', 'Custom dashboards', 'Priority support'] 
+    {
+      name: 'Workflow Professional',
+      price: '$1,299/mo',
+      details: ['Up to 500 workflows', 'Advanced AI features', 'Custom dashboards', 'Priority support']
     },
-    { 
-      name: 'Workflow Enterprise', 
-      price: '$3,999/mo', 
-      details: ['Unlimited workflows', 'Full AI suite', 'White-label options', '24/7 support'] 
+    {
+      name: 'Workflow Enterprise',
+      price: '$3,999/mo',
+      details: ['Unlimited workflows', 'Full AI suite', 'White-label options', '24/7 support']
     },
   ];
 
@@ -75,7 +75,7 @@ export default function AIWorkflowOrchestrator() {
                 </li>
               ))}
             </ul>
-            
+
             <div className="mt-8">
               <h3 className="text-xl font-semibold text-zion-slate-dark mb-3">Key Benefits</h3>
               <ul className="space-y-2">
@@ -88,7 +88,7 @@ export default function AIWorkflowOrchestrator() {
               </ul>
             </div>
           </div>
-          
+
           <div className="bg-white border border-zion-slate-light/20 rounded-xl p-6 shadow-md">
             <h3 className="text-2xl font-semibold text-zion-slate-dark mb-4">Pricing Plans</h3>
             <div className="grid md:grid-cols-3 gap-4">
@@ -126,7 +126,7 @@ export default function AIWorkflowOrchestrator() {
           <h2 className="text-3xl font-bold text-zion-slate-dark mb-4">Ready to Orchestrate Your Workflows?</h2>
           <p className="text-zion-slate-dark/70 text-lg">Get started with AI-powered workflow orchestration today</p>
         </div>
-        
+
         <div className="grid md:grid-cols-2 gap-8">
           <div className="bg-gradient-to-br from-zion-cyan to-zion-blue rounded-xl p-8 text-white text-center">
             <h3 className="text-2xl font-bold mb-4">Start Free Trial</h3>
@@ -135,7 +135,7 @@ export default function AIWorkflowOrchestrator() {
               Start Free Trial
             </button>
           </div>
-          
+
           <div className="bg-zion-slate-dark rounded-xl p-8 text-white text-center">
             <h3 className="text-2xl font-bold mb-4">Schedule Demo</h3>
             <p className="mb-6">See our platform in action with a personalized demo from our experts</p>

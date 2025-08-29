@@ -37,18 +37,18 @@ export const SmartAppBanner = ({ appName = "Zion Marketplace", appIconSrc, appSt
         <div className="w-12 h-12 bg-zion-cyan/20 rounded-lg mr-3 flex-shrink-0 flex items-center justify-center">
           {appIconSrc ? (<img loading="lazy" src={appIconSrc} alt={appName} className="w-10 h-10 rounded-md"/>) : (<div className="text-zion-cyan font-bold text-lg">Z</div>)}
         </div>
-        
+
         <div className="flex-1">
           <h4 className="font-semibold text-white">{appName}</h4>
           <p className="text-xs text-gray-300">Get our app for the best experience</p>
         </div>
-        
+
         <div className="flex items-center gap-3">
           <Link href="/open-app" className="flex items-center px-4 py-1.5 bg-zion-cyan text-zion-blue-dark rounded text-sm font-medium">
             View
             <ArrowRight className="w-3 h-3 ml-1"/>
           </Link>
-          
+
           <button onClick={dismissBanner} className="text-gray-300" aria-label="Dismiss">
             <X className="h-5 w-5"/>
           </button>

@@ -54,7 +54,7 @@ export default function TokenManager() {
     };
     return (<ProtectedRoute adminOnly>
       <div>
-        
+
         <div className="min-h-screen bg-zion-blue px-4 py-8">
           <div className="container mx-auto">
             <h1 className="text-3xl font-bold text-white mb-6">Token Manager</h1>
@@ -87,7 +87,7 @@ export default function TokenManager() {
             </Tabs>
           </div>
         </div>
-        
+
       </div>
     </ProtectedRoute>);
 }

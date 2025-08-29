@@ -233,16 +233,16 @@ export function PerformanceMonitor({ enabled = true, showDetails: _showDetails =
               <p className="text-zinc-400 text-xs">Real-time metrics</p>
             </div>
           </div>
-          
+
           <div className="flex items-center gap-2">
             <Button size="sm" variant="ghost" onClick={() => setShowSettings(!showSettings)} className="text-zinc-400 hover:text-white p-2">
               <Settings className="w-4 h-4"/>
             </Button>
-            
+
             <Button size="sm" variant="ghost" onClick={() => setIsMinimized(true)} className="text-zinc-400 hover:text-white p-2">
               <Minimize2 className="w-4 h-4"/>
             </Button>
-            
+
             <Button size="sm" variant="ghost" onClick={() => setIsExpanded(!isExpanded)} className="text-zinc-400 hover:text-white p-2">
               {isExpanded ? <Minimize2 className="w-4 h-4"/> : <Maximize2 className="w-4 h-4"/>}
             </Button>
@@ -369,7 +369,7 @@ export function PerformanceMonitor({ enabled = true, showDetails: _showDetails =
                   <X className="w-3 h-3"/>
                 </Button>
               </div>
-              
+
               <div className="space-y-2 max-h-32 overflow-y-auto">
                 {alerts.map((alert) => {
                 const Icon = getMetricIcon(alert.metric);
@@ -399,7 +399,7 @@ export function PerformanceMonitor({ enabled = true, showDetails: _showDetails =
                 <RefreshCw className="w-3 h-3 mr-2"/>
                 Refresh
               </Button>
-              
+
               <Button size="sm" variant="outline" onClick={() => setShowSettings(!showSettings)} className="border-zion-blue-light/30 text-zinc-300 hover:text-white">
                 <Settings className="w-3 h-3"/>
               </Button>

@@ -16,20 +16,20 @@ export const cuttingEdgeEmergingTechServices2025 = [
       'Comprehensive mission analytics'
     ],
     pricing: {
-      starter: { 
-        price: 599, 
-        period: 'month', 
-        features: ['Basic space mining analysis', 'Standard planning tools', 'Email support'] 
+      starter: {
+        price: 599,
+        period: 'month',
+        features: ['Basic space mining analysis', 'Standard planning tools', 'Email support']
       },
-      professional: { 
-        price: 1499, 
-        period: 'month', 
-        features: ['Advanced mining algorithms', 'Custom mission planning', 'Priority support', 'Risk assessment'] 
+      professional: {
+        price: 1499,
+        period: 'month',
+        features: ['Advanced mining algorithms', 'Custom mission planning', 'Priority support', 'Risk assessment']
       },
-      enterprise: { 
-        price: 3499, 
-        period: 'month', 
-        features: ['Full space mining platform', 'Custom mission development', 'Dedicated specialists', '24/7 support'] 
+      enterprise: {
+        price: 3499,
+        period: 'month',
+        features: ['Full space mining platform', 'Custom mission development', 'Dedicated specialists', '24/7 support']
       }
     },
     category: 'Space Technology',
@@ -69,20 +69,20 @@ export const cuttingEdgeEmergingTechServices2025 = [
       'Integration with research tools'
     ],
     pricing: {
-      starter: { 
-        price: 499, 
-        period: 'month', 
-        features: ['Basic bio-computing features', 'Standard algorithms', 'Email support'] 
+      starter: {
+        price: 499,
+        period: 'month',
+        features: ['Basic bio-computing features', 'Standard algorithms', 'Email support']
       },
-      professional: { 
-        price: 1299, 
-        period: 'month', 
-        features: ['Advanced bio-computing', 'Quantum algorithms', 'Priority support', 'Custom modeling'] 
+      professional: {
+        price: 1299,
+        period: 'month',
+        features: ['Advanced bio-computing', 'Quantum algorithms', 'Priority support', 'Custom modeling']
       },
-      enterprise: { 
-        price: 2999, 
-        period: 'month', 
-        features: ['Full bio-computing platform', 'Custom algorithms', 'Dedicated specialists', '24/7 support'] 
+      enterprise: {
+        price: 2999,
+        period: 'month',
+        features: ['Full bio-computing platform', 'Custom algorithms', 'Dedicated specialists', '24/7 support']
       }
     },
     category: 'Quantum Biology',
@@ -122,20 +122,20 @@ export const cuttingEdgeEmergingTechServices2025 = [
       'Integration with medical devices'
     ],
     pricing: {
-      starter: { 
-        price: 399, 
-        period: 'month', 
-        features: ['Basic BCI development', 'Standard algorithms', 'Email support'] 
+      starter: {
+        price: 399,
+        period: 'month',
+        features: ['Basic BCI development', 'Standard algorithms', 'Email support']
       },
-      professional: { 
-        price: 999, 
-        period: 'month', 
-        features: ['Advanced BCI features', 'Custom development', 'Priority support', 'Medical integration'] 
+      professional: {
+        price: 999,
+        period: 'month',
+        features: ['Advanced BCI features', 'Custom development', 'Priority support', 'Medical integration']
       },
-      enterprise: { 
-        price: 2499, 
-        period: 'month', 
-        features: ['Full BCI platform', 'Custom development', 'Dedicated specialists', '24/7 support'] 
+      enterprise: {
+        price: 2499,
+        period: 'month',
+        features: ['Full BCI platform', 'Custom development', 'Dedicated specialists', '24/7 support']
       }
     },
     category: 'Neural Technology',
@@ -175,20 +175,20 @@ export const cuttingEdgeEmergingTechServices2025 = [
       'Comprehensive energy reporting'
     ],
     pricing: {
-      starter: { 
-        price: 299, 
-        period: 'month', 
-        features: ['Basic energy optimization', 'Standard modeling', 'Email support'] 
+      starter: {
+        price: 299,
+        period: 'month',
+        features: ['Basic energy optimization', 'Standard modeling', 'Email support']
       },
-      professional: { 
-        price: 799, 
-        period: 'month', 
-        features: ['Advanced energy features', 'Quantum algorithms', 'Priority support', 'Custom modeling'] 
+      professional: {
+        price: 799,
+        period: 'month',
+        features: ['Advanced energy features', 'Quantum algorithms', 'Priority support', 'Custom modeling']
       },
-      enterprise: { 
-        price: 1999, 
-        period: 'month', 
-        features: ['Full energy platform', 'Custom algorithms', 'Dedicated specialists', '24/7 support'] 
+      enterprise: {
+        price: 1999,
+        period: 'month',
+        features: ['Full energy platform', 'Custom algorithms', 'Dedicated specialists', '24/7 support']
       }
     },
     category: 'Quantum Energy',
@@ -228,20 +228,20 @@ export const cuttingEdgeEmergingTechServices2025 = [
       'Integration with vehicle systems'
     ],
     pricing: {
-      starter: { 
-        price: 499, 
-        period: 'month', 
-        features: ['Basic autonomous features', 'Standard AI models', 'Email support'] 
+      starter: {
+        price: 499,
+        period: 'month',
+        features: ['Basic autonomous features', 'Standard AI models', 'Email support']
       },
-      professional: { 
-        price: 1299, 
-        period: 'month', 
-        features: ['Advanced autonomous features', 'Custom AI models', 'Priority support', 'Performance optimization'] 
+      professional: {
+        price: 1299,
+        period: 'month',
+        features: ['Advanced autonomous features', 'Custom AI models', 'Priority support', 'Performance optimization']
       },
-      enterprise: { 
-        price: 2999, 
-        period: 'month', 
-        features: ['Full autonomous platform', 'Custom development', 'Dedicated specialists', '24/7 support'] 
+      enterprise: {
+        price: 2999,
+        period: 'month',
+        features: ['Full autonomous platform', 'Custom development', 'Dedicated specialists', '24/7 support']
       }
     },
     category: 'Autonomous Systems',

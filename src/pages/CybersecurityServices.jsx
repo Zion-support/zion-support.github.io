@@ -144,7 +144,7 @@ export default function CybersecurityServices() {
             Cybersecurity Services
           </h1>
           <p className="text-xl md:text-2xl text-zion-slate-light mb-8 max-w-4xl mx-auto">
-            Protect your business from evolving cyber threats with our comprehensive security services. 
+            Protect your business from evolving cyber threats with our comprehensive security services.
             From penetration testing to incident response, we've got you covered 24/7.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -174,7 +174,7 @@ export default function CybersecurityServices() {
               Our expert cybersecurity team provides a full range of security services to protect your business assets and data.
             </p>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {services.map((service, index) => (<Card key={index} className="bg-zion-slate-dark/50 border-zion-purple/20 hover:border-zion-purple/40 transition-all duration-300 hover:shadow-2xl hover:shadow-zion-purple/20">
                 <CardHeader className="text-center">
@@ -207,7 +207,7 @@ export default function CybersecurityServices() {
               From network security to compliance, we provide comprehensive protection across all aspects of your infrastructure.
             </p>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {securitySolutions.map((solution, index) => (<Card key={index} className="bg-zion-slate-dark/50 border-zion-purple/20 hover:border-zion-purple/40 transition-all duration-300 hover:shadow-2xl hover:shadow-zion-purple/20 text-center">
                 <CardHeader>
@@ -237,7 +237,7 @@ export default function CybersecurityServices() {
               Choose the security plan that fits your business needs. All plans include our core cybersecurity features.
             </p>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
             {pricingPlans.map((plan, index) => (<Card key={index} className={`relative ${plan.popular ? 'border-zion-purple scale-105' : 'border-zion-slate-light'} bg-zion-slate-dark/50 transition-all duration-300 hover:shadow-2xl`}>
                 {plan.popular && (<Badge className="absolute -top-3 left-1/2 transform -translate-x-1/2 bg-gradient-to-r from-zion-purple to-zion-cyan text-white border-0">
@@ -282,7 +282,7 @@ export default function CybersecurityServices() {
               See what our clients say about our cybersecurity expertise and commitment to protecting their businesses.
             </p>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
             {testimonials.map((testimonial, index) => (<Card key={index} className="bg-zion-slate-dark/50 border-zion-purple/20 hover:border-zion-purple/40 transition-all duration-300">
                 <CardContent className="pt-6">

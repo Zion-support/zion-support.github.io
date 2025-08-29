@@ -7,7 +7,7 @@ const EnhancedZionTechServices2025: React.FC = () => {
   const [sortBy, setSortBy] = useState<string>('name');
 
   const categories = ['All', ...getEnhancedServiceCategories()];
-  
+
   const filteredServices = ENHANCED_ZION_TECH_SERVICES_2025.filter(service => {
     const matchesCategory = selectedCategory === 'All' || service.category === selectedCategory;
     const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
@@ -43,7 +43,7 @@ const EnhancedZionTechServices2025: React.FC = () => {
               </span>
             </h1>
             <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
-              Cutting-edge micro SAAS, IT services, and AI solutions designed to transform your business. 
+              Cutting-edge micro SAAS, IT services, and AI solutions designed to transform your business.
               Real solutions with proven results and comprehensive support.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
@@ -71,7 +71,7 @@ const EnhancedZionTechServices2025: React.FC = () => {
             Comprehensive Service Portfolio
           </h2>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            From AI-powered business solutions to cutting-edge quantum computing, 
+            From AI-powered business solutions to cutting-edge quantum computing,
             we provide the technology foundation your business needs to thrive in 2025 and beyond.
           </p>
         </div>
@@ -156,7 +156,7 @@ const EnhancedZionTechServices2025: React.FC = () => {
                   <span className="text-lg font-bold text-green-400">{service.aiScore}/100</span>
                 </div>
                 <div className="w-full bg-gray-700 rounded-full h-2">
-                  <div 
+                  <div
                     className="bg-gradient-to-r from-green-400 to-blue-500 h-2 rounded-full transition-all duration-300"
                     style={{ width: `${service.aiScore}%` }}
                   ></div>

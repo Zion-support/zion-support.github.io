@@ -35,7 +35,7 @@ export const AppStoreBanner = () => {
             Download Zion Mobile App
           </h2>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Transform your IT asset management experience with our powerful mobile app. 
+            Transform your IT asset management experience with our powerful mobile app.
             Available on iOS and Android devices.
           </p>
         </div>
@@ -53,7 +53,7 @@ export const AppStoreBanner = () => {
                   <p className="text-blue-100 mb-6">
                     Professional IT asset management in your pocket
                   </p>
-                  
+
                   {/* Feature highlights */}
                   <div className="space-y-3 mb-8">
                     {features.map((feature, index) => (
@@ -66,7 +66,7 @@ export const AppStoreBanner = () => {
                 </div>
               </div>
             </div>
-            
+
             {/* Background decoration */}
             <div className="absolute -top-4 -left-4 w-32 h-32 bg-blue-500/20 rounded-full blur-xl"></div>
             <div className="absolute -bottom-4 -right-4 w-40 h-40 bg-purple-500/20 rounded-full blur-xl"></div>
@@ -79,7 +79,7 @@ export const AppStoreBanner = () => {
                 Get Started Today
               </h3>
               <p className="text-lg text-gray-300 mb-8">
-                Choose your platform and start managing your IT assets with ease. 
+                Choose your platform and start managing your IT assets with ease.
                 Free download with no hidden costs.
               </p>
             </div>
@@ -101,7 +101,7 @@ export const AppStoreBanner = () => {
                         </div>
                       </div>
                     </div>
-                    
+
                     <div className="text-right">
                       <span className="inline-block px-3 py-1 bg-gradient-to-r from-blue-500 to-purple-500 text-white text-xs font-semibold rounded-full mb-2">
                         {store.badge}

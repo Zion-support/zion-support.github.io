@@ -84,12 +84,12 @@ export default function AIMetaverseDevelopmentPlatform() {
 
   return (
     <>
-      <SEO 
+      <SEO
         title="AI Metaverse Development Platform | Zion Tech Group"
         description="Revolutionary AI-powered metaverse development platform for creating immersive virtual worlds. AI-driven 3D generation, avatar systems, and spatial computing."
         keywords="AI metaverse, virtual reality, 3D world generation, avatar creation, spatial computing, VR development, AR development"
       />
-      
+
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-indigo-900 to-slate-900">
         {/* Hero Section */}
         <section className="relative py-20 px-4 sm:px-6 lg:px-8">
@@ -103,18 +103,18 @@ export default function AIMetaverseDevelopmentPlatform() {
               AI-Powered Metaverse Development Platform
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Build the future of digital experiences with our cutting-edge metaverse platform. 
+              Build the future of digital experiences with our cutting-edge metaverse platform.
               AI-driven 3D generation, intelligent avatars, and immersive virtual worlds.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a 
+              <a
                 href="https://ziontechgroup.com/contact"
                 className="inline-flex items-center px-8 py-3 bg-gradient-to-r from-indigo-600 to-purple-600 text-white font-semibold rounded-lg hover:from-indigo-700 hover:to-purple-700 transition-all duration-200"
               >
                 Get Started
                 <ArrowRight className="ml-2 w-5 h-5" />
               </a>
-              <a 
+              <a
                 href="#pricing"
                 className="inline-flex items-center px-8 py-3 border border-indigo-400 text-indigo-400 font-semibold rounded-lg hover:bg-indigo-400 hover:text-white transition-all duration-200"
               >
@@ -180,7 +180,7 @@ export default function AIMetaverseDevelopmentPlatform() {
                       </li>
                     ))}
                   </ul>
-                  <a 
+                  <a
                     href="https://ziontechgroup.com/contact"
                     className="w-full inline-flex items-center justify-center px-6 py-3 bg-gradient-to-r from-indigo-600 to-purple-600 text-white font-semibold rounded-lg hover:from-indigo-700 hover:to-purple-700 transition-all duration-200"
                   >
@@ -298,7 +298,7 @@ export default function AIMetaverseDevelopmentPlatform() {
                 <p className="text-gray-300">Middletown DE 19709</p>
               </div>
             </div>
-            <a 
+            <a
               href="https://ziontechgroup.com/contact"
               className="inline-flex items-center px-8 py-3 bg-gradient-to-r from-indigo-600 to-purple-600 text-white font-semibold rounded-lg hover:from-indigo-700 hover:to-purple-700 transition-all duration-200"
             >

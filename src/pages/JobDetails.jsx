@@ -26,13 +26,13 @@ export default function JobDetails() {
     }
     if (error || !job) {
         return (<>
-        
+
         <div className="container mx-auto px-4 py-16 text-center">
           <h1 className="text-2xl font-bold mb-4">Job Not Found</h1>
           <p className="mb-8">The job you're looking for doesn't exist or has been removed.</p>
           <Button onClick={() => navigate('/jobs')}>View All Jobs</Button>
         </div>
-        
+
       </>);
     }
     const handleApply = () => {
@@ -59,14 +59,14 @@ export default function JobDetails() {
     const isOwnJob = user?.id === job.client_id;
     return (<>
       <SEO title={`${job.title} - ${isWhitelabel ? brandName : 'Zion AI Marketplace'}`} description={job.description.substring(0, 160)}/>
-      
+
       <main className="container mx-auto px-4 py-8">
         <div className="mb-6">
           <Button variant="outline" size="sm" onClick={() => navigate('/jobs')}>
             ← Back to Jobs
           </Button>
         </div>
-        
+
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
           <div className="lg:col-span-2">
             <Card>
@@ -89,7 +89,7 @@ export default function JobDetails() {
                     {job.description}
                   </div>
                 </div>
-                
+
                 <div>
                   <h3 className="font-semibold text-lg mb-3">Required Skills</h3>
                   <div className="flex flex-wrap gap-2">
@@ -101,7 +101,7 @@ export default function JobDetails() {
               </CardContent>
             </Card>
           </div>
-          
+
           <div>
             <Card>
               <CardContent className="pt-6 space-y-4">
@@ -112,7 +112,7 @@ export default function JobDetails() {
                     <p className="font-medium">{formatBudget(job.budget)}</p>
                   </div>
                 </div>
-                
+
                 <div className="flex items-start">
                   <Clock className="mt-1 h-5 w-5 text-muted-foreground"/>
                   <div className="ml-3">
@@ -122,7 +122,7 @@ export default function JobDetails() {
                     </p>
                   </div>
                 </div>
-                
+
                 <div className="flex items-start">
                   <Briefcase className="mt-1 h-5 w-5 text-muted-foreground"/>
                   <div className="ml-3">
@@ -130,11 +130,11 @@ export default function JobDetails() {
                     <p className="font-medium">Freelance / Remote</p>
                   </div>
                 </div>
-                
+
                 {!isOwnJob && (<Button className="w-full mt-4" onClick={handleApply} disabled={isOwnJob}>
                     Apply Now
                   </Button>)}
-                
+
                 {isOwnJob && (<div className="text-center p-2 bg-muted rounded-md mt-4">
                     <p className="text-sm text-muted-foreground">This is your job posting</p>
                   </div>)}
@@ -143,8 +143,7 @@ export default function JobDetails() {
           </div>
         </div>
       </main>
-      
-      
+
       {/* Job application modal */}
       {job && (<ApplyToJobModal job={{
                 id: job.id,

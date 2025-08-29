@@ -69,7 +69,7 @@ export default function FuturisticAnimatedBackground2029({ className = '' }: Fut
           ctx.beginPath();
           ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
           ctx.fill();
-          
+
           // Add glow effect
           ctx.shadowColor = this.color;
           ctx.shadowBlur = 10;
@@ -210,7 +210,7 @@ export default function FuturisticAnimatedBackground2029({ className = '' }: Fut
       ctx.lineWidth = 1;
 
       for (let i = 0; i < particles.length; i++) {
-        for (let j = i + 1; j < particles.length; j++) {
+        for (const j = i + 1; j < particles.length; j++) {
           const dx = particles[i].x - particles[j].x;
           const dy = particles[i].y - particles[j].y;
           const distance = Math.sqrt(dx * dx + dy * dy);
@@ -291,11 +291,11 @@ export default function FuturisticAnimatedBackground2029({ className = '' }: Fut
           background: 'radial-gradient(ellipse at center, rgba(20, 20, 40, 0.8) 0%, rgba(0, 0, 0, 1) 100%)'
         }}
       />
-      
+
       {/* Overlay gradients */}
       <div className="absolute inset-0 bg-gradient-to-br from-transparent via-purple-900/10 to-transparent" />
       <div className="absolute inset-0 bg-gradient-to-tl from-transparent via-blue-900/10 to-transparent" />
-      
+
       {/* Animated orbs */}
       <div className="absolute top-1/4 left-1/4 w-32 h-32 bg-gradient-to-r from-purple-500/20 to-pink-500/20 rounded-full blur-3xl animate-pulse" />
       <div className="absolute bottom-1/4 right-1/4 w-40 h-40 bg-gradient-to-r from-blue-500/20 to-cyan-500/20 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1s' }} />

@@ -73,7 +73,7 @@ export const InteractiveTestimonials: React.FC = () => {
 
   const categories = Array.from(new Set(testimonials.map(t => t.category)));
 
-  const filteredTestimonials = selectedCategory 
+  const filteredTestimonials = selectedCategory
     ? testimonials.filter(t => t.category === selectedCategory)
     : testimonials;
 
@@ -120,7 +120,7 @@ export const InteractiveTestimonials: React.FC = () => {
     <section className="py-20 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
       {/* Background decoration */}
       <div className="absolute inset-0 bg-gradient-to-br from-slate-900/50 via-slate-800/50 to-slate-900/50" />
-      
+
       <div className="max-w-7xl mx-auto relative z-10">
         {/* Header */}
         <motion.div

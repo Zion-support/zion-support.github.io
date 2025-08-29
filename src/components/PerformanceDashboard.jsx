@@ -79,7 +79,7 @@ export function PerformanceDashboard({ className, showDetails = false, onClose }
                 </Button>)}
             </div>
           </div>
-          
+
           {/* Performance Score */}
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-2">

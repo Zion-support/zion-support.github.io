@@ -78,7 +78,7 @@ export function ContactSection() {
             Get in <span className="text-transparent bg-clip-text bg-gradient-to-r from-zion-cyan to-zion-purple">Touch</span>
           </h2>
           <p className="text-xl text-zion-slate-light max-w-3xl mx-auto leading-relaxed">
-            Ready to transform your business with cutting-edge technology? 
+            Ready to transform your business with cutting-edge technology?
             Let's discuss how Zion Tech Group can help you achieve your goals.
           </p>
         </div>
@@ -172,7 +172,7 @@ export function ContactSection() {
         <div className="text-center">
           <h3 className="text-2xl font-bold text-white mb-4">Ready to Get Started?</h3>
           <p className="text-zion-slate-light mb-8 max-w-2xl mx-auto">
-            Contact us today to discuss your technology needs and discover how 
+            Contact us today to discuss your technology needs and discover how
             Zion Tech Group can help transform your business.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">

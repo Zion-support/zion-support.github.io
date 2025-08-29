@@ -1,10 +1,10 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { 
-  Code, 
-  Database, 
-  Cloud, 
-  Shield, 
+import {
+  Code,
+  Database,
+  Cloud,
+  Shield,
   Brain,
   Zap,
   Globe,
@@ -91,7 +91,7 @@ export const TechnologyStackSection: React.FC = () => {
             Technology Stack
           </h2>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Built with cutting-edge technologies and industry best practices. 
+            Built with cutting-edge technologies and industry best practices.
             Our comprehensive tech stack ensures scalability, security, and performance.
           </p>
         </motion.div>
@@ -170,7 +170,7 @@ export const TechnologyStackSection: React.FC = () => {
               Ready to Build with Modern Tech?
             </h3>
             <p className="text-blue-100 mb-6 max-w-2xl mx-auto">
-              Our expert team is ready to help you leverage the latest technologies 
+              Our expert team is ready to help you leverage the latest technologies
               to build scalable, secure, and innovative solutions.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">

@@ -31,11 +31,11 @@ const AdvancedServicesShowcase2025: React.FC = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      <SEO 
+      <SEO
         title="Advanced Services Showcase 2025 - Zion Tech Group"
         description="Explore our comprehensive portfolio of advanced micro SaaS, IT services, and AI solutions designed for the future of business technology."
       />
-      
+
       {/* Hero Section */}
       <div className="relative overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
@@ -62,7 +62,7 @@ const AdvancedServicesShowcase2025: React.FC = () => {
             </div>
           </div>
         </div>
-        
+
         {/* Animated background elements */}
         <div className="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none">
           <div className="absolute -top-40 -right-40 w-80 h-80 bg-blue-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-blob"></div>
@@ -273,7 +273,7 @@ const AdvancedServicesShowcase2025: React.FC = () => {
         <div className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl p-12 text-center text-white">
           <h2 className="text-3xl font-bold mb-6">Ready to Get Started?</h2>
           <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
-            Our team of experts is ready to help you implement the perfect solution for your business needs. 
+            Our team of experts is ready to help you implement the perfect solution for your business needs.
             Get in touch today for a personalized consultation and quote.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">

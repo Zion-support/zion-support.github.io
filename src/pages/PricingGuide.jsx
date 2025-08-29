@@ -52,7 +52,7 @@ export default function PricingGuide() {
             IT Services Pricing Guide
           </h1>
           <p className="text-xl text-zion-cyan max-w-3xl mx-auto mb-8">
-            Transparent pricing for enterprise technology solutions. Compare our competitive rates 
+            Transparent pricing for enterprise technology solutions. Compare our competitive rates
             with market averages and discover the value we deliver.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
@@ -313,7 +313,7 @@ export default function PricingGuide() {
         <div className="container mx-auto text-center">
           <h2 className="text-3xl font-bold text-white mb-6">Ready to Get Started?</h2>
           <p className="text-xl text-zion-cyan mb-8 max-w-2xl mx-auto">
-            Contact us today for a personalized quote and consultation. Our experts will help you 
+            Contact us today for a personalized quote and consultation. Our experts will help you
             choose the right services for your business needs and budget.
           </p>
           <div className="flex flex-wrap justify-center gap-4">

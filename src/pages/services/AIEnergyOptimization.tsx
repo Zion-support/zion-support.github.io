@@ -13,20 +13,20 @@ export default function AIEnergyOptimization() {
   ];
 
   const tiers = [
-    { 
-      name: 'Basic', 
-      price: '$299/mo', 
-      details: ['Up to 5 facilities', 'Basic energy monitoring', 'Standard reporting', 'Email support'] 
+    {
+      name: 'Basic',
+      price: '$299/mo',
+      details: ['Up to 5 facilities', 'Basic energy monitoring', 'Standard reporting', 'Email support']
     },
-    { 
-      name: 'Professional', 
-      price: '$799/mo', 
-      details: ['Up to 25 facilities', 'Advanced AI optimization', 'Custom analytics', 'Priority support'] 
+    {
+      name: 'Professional',
+      price: '$799/mo',
+      details: ['Up to 25 facilities', 'Advanced AI optimization', 'Custom analytics', 'Priority support']
     },
-    { 
-      name: 'Enterprise', 
-      price: '$1,999/mo', 
-      details: ['Unlimited facilities', 'Custom AI models', 'Full system integration', '24/7 dedicated support'] 
+    {
+      name: 'Enterprise',
+      price: '$1,999/mo',
+      details: ['Unlimited facilities', 'Custom AI models', 'Full system integration', '24/7 dedicated support']
     },
   ];
 

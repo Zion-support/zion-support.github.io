@@ -24,21 +24,21 @@ export default function AIDigitalTwinPlatform() {
   ];
 
   const pricing = [
-    { 
-      name: 'Starter', 
-      price: '$599/mo', 
+    {
+      name: 'Starter',
+      price: '$599/mo',
       features: ['Up to 10 digital twins', 'Basic monitoring', 'Standard dashboards', 'Email support', 'Monthly reports'],
       popular: false
     },
-    { 
-      name: 'Professional', 
-      price: '$1,299/mo', 
+    {
+      name: 'Professional',
+      price: '$1,299/mo',
       features: ['Up to 50 digital twins', 'Advanced AI analytics', 'Real-time monitoring', 'Priority support', 'Custom dashboards', 'API access'],
       popular: true
     },
-    { 
-      name: 'Enterprise', 
-      price: '$3,999/mo', 
+    {
+      name: 'Enterprise',
+      price: '$3,999/mo',
       features: ['Unlimited digital twins', 'Full AI suite', 'Custom models', 'Dedicated support', 'White-label solutions', 'Advanced integrations'],
       popular: false
     }
@@ -72,7 +72,7 @@ export default function AIDigitalTwinPlatform() {
           </div>
           <h1 className="text-4xl md:text-6xl font-bold mb-6">AI Digital Twin Platform</h1>
           <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">
-            Create intelligent digital replicas of your physical assets with AI-driven monitoring, predictive analytics, 
+            Create intelligent digital replicas of your physical assets with AI-driven monitoring, predictive analytics,
             and real-time optimization. Transform operations with the power of digital twins.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -92,7 +92,7 @@ export default function AIDigitalTwinPlatform() {
           <h2 className="text-3xl font-bold text-gray-900 mb-4">Advanced Digital Twin Intelligence</h2>
           <p className="text-xl text-gray-600">Comprehensive digital twin creation and management powered by AI</p>
         </div>
-        
+
         <div className="grid md:grid-cols-2 gap-8">
           <div>
             <h3 className="text-2xl font-semibold text-gray-900 mb-6">Core Capabilities</h3>
@@ -105,7 +105,7 @@ export default function AIDigitalTwinPlatform() {
               ))}
             </ul>
           </div>
-          
+
           <div>
             <h3 className="text-2xl font-semibold text-gray-900 mb-6">Target Industries</h3>
             <div className="grid grid-cols-1 gap-3">
@@ -127,7 +127,7 @@ export default function AIDigitalTwinPlatform() {
             <h2 className="text-3xl font-bold text-gray-900 mb-4">Why Choose AI Digital Twin Platform?</h2>
             <p className="text-xl text-gray-600">Transform your operations with intelligent digital twin technology</p>
           </div>
-          
+
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {benefits.map((benefit, index) => (
               <div key={index} className="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
@@ -147,7 +147,7 @@ export default function AIDigitalTwinPlatform() {
           <h2 className="text-3xl font-bold text-gray-900 mb-4">Industry Applications</h2>
           <p className="text-xl text-gray-600">Trusted by leading organizations across industries</p>
         </div>
-        
+
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           {useCases.map((useCase, index) => (
             <div key={index} className="bg-white border border-gray-200 rounded-lg p-6 hover:shadow-md transition-shadow">
@@ -167,7 +167,7 @@ export default function AIDigitalTwinPlatform() {
             <h2 className="text-3xl font-bold text-gray-900 mb-4">Transparent Pricing</h2>
             <p className="text-xl text-gray-600">Choose the plan that fits your digital twin needs</p>
           </div>
-          
+
           <div className="grid md:grid-cols-3 gap-8">
             {pricing.map((plan, index) => (
               <div key={index} className={`relative bg-white rounded-2xl shadow-lg border-2 ${
@@ -180,13 +180,13 @@ export default function AIDigitalTwinPlatform() {
                     </span>
                   </div>
                 )}
-                
+
                 <div className="text-center mb-8">
                   <h3 className="text-2xl font-bold text-gray-900 mb-2">{plan.name}</h3>
                   <div className="text-4xl font-bold text-blue-600 mb-2">{plan.price}</div>
                   <p className="text-gray-600">per month</p>
                 </div>
-                
+
                 <ul className="space-y-3 mb-8">
                   {plan.features.map((feature, featureIndex) => (
                     <li key={featureIndex} className="flex items-start">
@@ -195,10 +195,10 @@ export default function AIDigitalTwinPlatform() {
                     </li>
                   ))}
                 </ul>
-                
+
                 <button className={`w-full py-3 px-6 rounded-lg font-semibold transition-colors ${
-                  plan.popular 
-                    ? 'bg-blue-600 text-white hover:bg-blue-700' 
+                  plan.popular
+                    ? 'bg-blue-600 text-white hover:bg-blue-700'
                     : 'bg-gray-100 text-gray-900 hover:bg-gray-200'
                 }`}>
                   Get Started
@@ -206,7 +206,7 @@ export default function AIDigitalTwinPlatform() {
               </div>
             ))}
           </div>
-          
+
           <div className="text-center mt-12">
             <p className="text-gray-600 mb-4">Need a custom plan? Contact us for enterprise pricing</p>
             <a href="mailto:kleber@ziontechgroup.com" className="text-blue-600 hover:text-blue-700 font-semibold">
@@ -267,7 +267,7 @@ export default function AIDigitalTwinPlatform() {
               +1 302 464 0950
             </a>
           </div>
-          
+
           <div className="bg-white border border-gray-200 rounded-xl p-6 shadow-sm">
             <Mail className="w-8 h-8 text-blue-500 mx-auto mb-4" />
             <h3 className="text-xl font-semibold text-gray-900 mb-2">Email Us</h3>
@@ -277,16 +277,16 @@ export default function AIDigitalTwinPlatform() {
             </a>
           </div>
         </div>
-        
+
         <div className="mt-12 p-6 bg-gray-50 rounded-xl">
           <h3 className="text-lg font-semibold text-gray-900 mb-2">Visit Our Website</h3>
           <p className="text-gray-600 mb-4">
             Learn more about our complete suite of AI-powered business solutions
           </p>
-          <a 
-            href="https://ziontechgroup.com" 
-            target="_blank" 
-            rel="noreferrer" 
+          <a
+            href="https://ziontechgroup.com"
+            target="_blank"
+            rel="noreferrer"
             className="inline-flex items-center text-blue-600 hover:text-blue-700 font-semibold"
           >
             Visit ziontechgroup.com <ExternalLink className="w-4 h-4 ml-2" />

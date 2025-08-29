@@ -199,7 +199,7 @@ export default function ServicesOverview() {
             Our Complete Service Portfolio
           </h1>
           <p className="text-xl md:text-2xl text-blue-100 max-w-4xl mx-auto leading-relaxed">
-            Discover our comprehensive range of technology solutions designed to transform your business. 
+            Discover our comprehensive range of technology solutions designed to transform your business.
             From AI and data analytics to IoT and blockchain, we have the expertise to drive your success.
           </p>
         </div>
@@ -258,7 +258,7 @@ export default function ServicesOverview() {
                         </div>
                       </div>))}
                   </div>
-                  
+
                   <div className="mt-8 text-center">
                     <Link to={category.services[0].href} className={`inline-flex items-center px-6 py-3 rounded-lg font-semibold text-white bg-gradient-to-r ${category.color} hover:opacity-90 transition-opacity`}>
                       Explore All {category.name} Services

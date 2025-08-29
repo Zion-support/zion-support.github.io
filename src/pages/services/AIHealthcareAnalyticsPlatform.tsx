@@ -145,11 +145,11 @@ const AIHealthcareAnalyticsPlatform: React.FC = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      <SEO 
+      <SEO
         title="AI Healthcare Analytics Platform - Zion Tech Group"
         description="Transform healthcare delivery with AI-powered analytics. Reduce readmissions by 25%, improve patient outcomes by 30%, and optimize clinical decision-making with predictive insights."
       />
-      
+
       {/* Hero Section */}
       <section className="relative overflow-hidden py-20">
         <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 to-cyan-600/20"></div>
@@ -169,19 +169,19 @@ const AIHealthcareAnalyticsPlatform: React.FC = () => {
               AI Healthcare Analytics Platform
             </h1>
             <p className="text-xl text-slate-300 mb-8 max-w-3xl mx-auto">
-              Revolutionize healthcare delivery with artificial intelligence. Predict patient outcomes, 
+              Revolutionize healthcare delivery with artificial intelligence. Predict patient outcomes,
               optimize treatment plans, and improve population health with data-driven insights.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a 
-                href="/contact" 
+              <a
+                href="/contact"
                 className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-500 to-cyan-500 text-white font-semibold rounded-lg hover:from-blue-600 hover:to-cyan-600 transition-all duration-200 shadow-lg hover:shadow-xl"
               >
                 Start Free Trial
                 <ArrowRight className="ml-2 w-5 h-5" />
               </a>
-              <a 
-                href="#demo" 
+              <a
+                href="#demo"
                 className="inline-flex items-center px-8 py-4 bg-slate-800 text-white font-semibold rounded-lg hover:bg-slate-700 transition-all duration-200 border border-slate-600"
               >
                 Watch Demo
@@ -202,7 +202,7 @@ const AIHealthcareAnalyticsPlatform: React.FC = () => {
               Our AI platform delivers measurable improvements in patient care and operational efficiency
             </p>
           </div>
-          
+
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {benefits.map((benefit, index) => (
               <motion.div
@@ -234,7 +234,7 @@ const AIHealthcareAnalyticsPlatform: React.FC = () => {
               Everything you need to deliver better patient care with AI-powered intelligence
             </p>
           </div>
-          
+
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index) => (
               <motion.div
@@ -266,7 +266,7 @@ const AIHealthcareAnalyticsPlatform: React.FC = () => {
               Choose the plan that fits your healthcare organization. All plans include a 14-day free trial.
             </p>
           </div>
-          
+
           <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
             {pricingPlans.map((plan, index) => (
               <motion.div
@@ -275,8 +275,8 @@ const AIHealthcareAnalyticsPlatform: React.FC = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 className={`bg-slate-800 rounded-xl p-8 border-2 ${
-                  plan.popular 
-                    ? 'border-blue-500 relative' 
+                  plan.popular
+                    ? 'border-blue-500 relative'
                     : 'border-slate-700'
                 }`}
               >
@@ -287,7 +287,7 @@ const AIHealthcareAnalyticsPlatform: React.FC = () => {
                     </span>
                   </div>
                 )}
-                
+
                 <div className="text-center mb-6">
                   <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
                   <div className="mb-4">
@@ -296,7 +296,7 @@ const AIHealthcareAnalyticsPlatform: React.FC = () => {
                   </div>
                   <p className="text-slate-300">{plan.description}</p>
                 </div>
-                
+
                 <ul className="space-y-3 mb-8">
                   {plan.features.map((feature, featureIndex) => (
                     <li key={featureIndex} className="flex items-center text-slate-300">
@@ -305,9 +305,9 @@ const AIHealthcareAnalyticsPlatform: React.FC = () => {
                     </li>
                   ))}
                 </ul>
-                
-                <a 
-                  href="/contact" 
+
+                <a
+                  href="/contact"
                   className={`w-full block text-center py-3 px-6 rounded-lg font-semibold transition-all duration-200 ${
                     plan.popular
                       ? 'bg-gradient-to-r from-blue-500 to-cyan-500 text-white hover:from-blue-600 hover:to-cyan-600'
@@ -333,7 +333,7 @@ const AIHealthcareAnalyticsPlatform: React.FC = () => {
               See how different healthcare organizations are transforming patient care with AI
             </p>
           </div>
-          
+
           <div className="grid md:grid-cols-3 gap-8">
             {useCases.map((useCase, index) => (
               <motion.div
@@ -370,7 +370,7 @@ const AIHealthcareAnalyticsPlatform: React.FC = () => {
               Connect with your existing electronic health record systems and healthcare platforms
             </p>
           </div>
-          
+
           <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-6">
             {integrations.map((integration, index) => (
               <motion.div
@@ -398,7 +398,7 @@ const AIHealthcareAnalyticsPlatform: React.FC = () => {
               Your patient data is protected with the highest standards of security and compliance
             </p>
           </div>
-          
+
           <div className="grid md:grid-cols-3 gap-8">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -412,7 +412,7 @@ const AIHealthcareAnalyticsPlatform: React.FC = () => {
               <h3 className="text-xl font-semibold text-white mb-2">HIPAA Compliant</h3>
               <p className="text-slate-300">Full HIPAA compliance with end-to-end encryption and secure data handling</p>
             </motion.div>
-            
+
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -425,7 +425,7 @@ const AIHealthcareAnalyticsPlatform: React.FC = () => {
               <h3 className="text-xl font-semibold text-white mb-2">SOC 2 Type II</h3>
               <p className="text-slate-300">SOC 2 Type II certification for enterprise-grade security and reliability</p>
             </motion.div>
-            
+
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -457,24 +457,24 @@ const AIHealthcareAnalyticsPlatform: React.FC = () => {
             <p className="text-xl text-slate-300 mb-8">
               Join hundreds of healthcare organizations already using AI to improve patient care and outcomes
             </p>
-            
+
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
-              <a 
-                href="/contact" 
+              <a
+                href="/contact"
                 className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-500 to-cyan-500 text-white font-semibold rounded-lg hover:from-blue-600 hover:to-cyan-600 transition-all duration-200 shadow-lg hover:shadow-xl"
               >
                 Start Free Trial
                 <ArrowRight className="ml-2 w-5 h-5" />
               </a>
-              <a 
-                href="tel:+13024640950" 
+              <a
+                href="tel:+13024640950"
                 className="inline-flex items-center px-8 py-4 bg-slate-800 text-white font-semibold rounded-lg hover:bg-slate-700 transition-all duration-200 border border-slate-600"
               >
                 <Phone className="w-5 h-5 mr-2" />
                 Call Us
               </a>
             </div>
-            
+
             <div className="flex flex-col sm:flex-row items-center justify-center gap-6 text-slate-400">
               <div className="flex items-center">
                 <CheckCircle className="w-5 h-5 text-blue-500 mr-2" />

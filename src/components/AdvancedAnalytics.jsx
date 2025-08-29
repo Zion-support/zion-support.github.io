@@ -73,7 +73,7 @@ export function AdvancedAnalytics() {
         <p className="text-zion-slate-light text-lg">
           Real-time insights and performance metrics
         </p>
-        
+
         {/* Time Range Selector */}
         <div className="flex justify-center mt-4 space-x-2">
           {['1d', '7d', '30d', '90d'].map((range) => (<button key={range} onClick={() => setTimeRange(range)} className={`px-4 py-2 rounded-lg transition-colors ${timeRange === range

@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { 
-  Mail, 
-  Lock, 
-  Eye, 
-  EyeOff, 
+import {
+  Mail,
+  Lock,
+  Eye,
+  EyeOff,
   User,
   Building,
   ArrowRight,
@@ -47,7 +47,7 @@ export default function Signup() {
     // Simulate API call
     await new Promise(resolve => setTimeout(resolve, 2000));
     // Here you would typically make an API call to register
-    console.log('Signup attempt:', formData);
+    // console.log('Signup attempt:', formData);
     setIsLoading(false);
   };
   const features = [
@@ -330,7 +330,7 @@ export default function Signup() {
               Join the AI Revolution
             </h2>
             <p className="text-xl text-zion-slate-light mb-12 leading-relaxed">
-              Get access to cutting-edge AI solutions, cybersecurity services, and digital transformation expertise. 
+              Get access to cutting-edge AI solutions, cybersecurity services, and digital transformation expertise.
               Start your journey towards business innovation today.
             </p>
             {/* Features List */}

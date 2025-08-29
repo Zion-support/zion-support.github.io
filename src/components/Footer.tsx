@@ -1,15 +1,15 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { 
-  Twitter, 
-  Linkedin, 
-  Facebook, 
-  Instagram, 
-  Github, 
-  Mail, 
-  Phone, 
-  MapPin, 
+import {
+  Twitter,
+  Linkedin,
+  Facebook,
+  Instagram,
+  Github,
+  Mail,
+  Phone,
+  MapPin,
   ArrowUp,
   Globe,
   Shield,
@@ -215,16 +215,14 @@ export function Footer() {
     });
   };
 
-
-
   return (
     <footer className="bg-zion-slate-dark text-white relative overflow-hidden">
       {/* Enhanced Background */}
       <div className="absolute inset-0 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900"></div>
-      
+
       {/* Animated Grid Pattern */}
       <div className="absolute inset-0 bg-[linear-gradient(rgba(6,182,212,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(6,182,212,0.03)_1px,transparent_1px)] bg-[size:50px_50px]"></div>
-      
+
       {/* Floating Particles */}
       <div className="absolute inset-0">
         {[...Array(15)].map((_, i) => (
@@ -266,9 +264,9 @@ export function Footer() {
                 <p className="text-sm text-gray-400">Innovation Hub</p>
               </div>
             </div>
-            
+
             <p className="text-gray-300 text-sm leading-relaxed">
-              Empowering businesses with cutting-edge AI, cloud infrastructure, and emerging technologies. 
+              Empowering businesses with cutting-edge AI, cloud infrastructure, and emerging technologies.
               We transform ideas into innovative solutions that drive growth and success.
             </p>
 
@@ -296,7 +294,7 @@ export function Footer() {
                 <section.icon className="w-5 h-5 text-cyan-400" />
                 <h3 className="font-semibold text-white">{section.title}</h3>
               </div>
-              
+
               <div className="space-y-2">
                 {section.links.map((link) => (
                   <Link

@@ -1,18 +1,18 @@
 import React, { useState, useRef, useEffect, useCallback } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { 
-  MessageCircle, 
-  X, 
-  Send, 
-  Bot, 
-  User, 
-  Sparkles, 
-  Mic, 
-  MicOff, 
-  Paperclip, 
-  Image, 
-  FileText, 
-  Video, 
+import {
+  MessageCircle,
+  X,
+  Send,
+  Bot,
+  User,
+  Sparkles,
+  Mic,
+  MicOff,
+  Paperclip,
+  Image,
+  FileText,
+  Video,
   Smile,
   Settings,
   Zap,
@@ -57,8 +57,8 @@ interface ChatAssistantProps {
   language?: string;
 }
 
-export function ChatAssistant({ 
-  enabled = true, 
+export function ChatAssistant({
+  enabled = true,
   position = 'bottom-right',
   theme = 'auto',
   language = 'en'
@@ -95,7 +95,7 @@ export function ChatAssistant({
       };
 
       recognitionRef.current.onerror = (event: any) => {
-        console.error('Speech recognition error:', event.error);
+        // console.error('Speech recognition error:', event.error);
         setIsListening(false);
       };
     }
@@ -172,7 +172,7 @@ export function ChatAssistant({
   // Generate AI response
   const generateAIResponse = (userInput: string): { content: string; metadata: any } => {
     const input = userInput.toLowerCase();
-    
+
     // AI response logic based on user input
     if (input.includes('ai') || input.includes('artificial intelligence')) {
       return {
@@ -303,10 +303,10 @@ export function ChatAssistant({
 
   // Export chat
   const exportChat = () => {
-    const chatText = chatHistory.map(msg => 
+    const chatText = chatHistory.map(msg =>
       `${msg.type === 'user' ? 'You' : 'AI Assistant'}: ${msg.content}`
     ).join('\n\n');
-    
+
     const blob = new Blob([chatText], { type: 'text/plain' });
     const url = URL.createObjectURL(blob);
     const a = document.createElement('a');
@@ -365,7 +365,7 @@ export function ChatAssistant({
                 <p className="text-xs text-blue-100">Zion Tech Group</p>
               </div>
             </div>
-            
+
             <div className="flex items-center gap-2">
               <button
                 onClick={toggleMute}
@@ -374,7 +374,7 @@ export function ChatAssistant({
               >
                 {isMuted ? <VolumeX className="w-4 h-4" /> : <Volume2 className="w-4 h-4" />}
               </button>
-              
+
               <button
                 onClick={() => setShowSettings(!showSettings)}
                 className="p-1.5 text-white/80 hover:text-white transition-colors"
@@ -382,7 +382,7 @@ export function ChatAssistant({
               >
                 <Settings className="w-4 h-4" />
               </button>
-              
+
               <button
                 onClick={() => setIsMinimized(!isMinimized)}
                 className="p-1.5 text-white/80 hover:text-white transition-colors"
@@ -390,7 +390,7 @@ export function ChatAssistant({
               >
                 {isMinimized ? <Maximize2 className="w-4 h-4" /> : <Minimize2 className="w-4 h-4" />}
               </button>
-              
+
               <button
                 onClick={() => setIsOpen(false)}
                 className="p-1.5 text-white/80 hover:text-white transition-colors"
@@ -421,7 +421,7 @@ export function ChatAssistant({
                     Clear
                   </button>
                 </div>
-                
+
                 <div className="flex items-center justify-between">
                   <span className="text-sm text-gray-700">Export chat</span>
                   <button
@@ -449,8 +449,8 @@ export function ChatAssistant({
                 >
                   <div className={`max-w-[80%] ${message.type === 'user' ? 'order-2' : 'order-1'}`}>
                     <div className={`p-3 rounded-2xl ${
-                      message.type === 'user' 
-                        ? 'bg-blue-500 text-white' 
+                      message.type === 'user'
+                        ? 'bg-blue-500 text-white'
                         : 'bg-gray-100 text-gray-800'
                     }`}>
                       <div className="flex items-start gap-2">
@@ -482,7 +482,7 @@ export function ChatAssistant({
                   </div>
                 </motion.div>
               ))}
-              
+
               {isTyping && (
                 <motion.div
                   initial={{ opacity: 0, y: 10 }}
@@ -505,7 +505,7 @@ export function ChatAssistant({
                   </div>
                 </motion.div>
               )}
-              
+
               <div ref={messagesEndRef} />
             </div>
 
@@ -541,12 +541,12 @@ export function ChatAssistant({
                   className="flex-1 px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                   disabled={isProcessing}
                 />
-                
+
                 <button
                   onClick={toggleSpeechRecognition}
                   className={`p-2 rounded-lg transition-colors ${
-                    isListening 
-                      ? 'bg-red-100 text-red-600' 
+                    isListening
+                      ? 'bg-red-100 text-red-600'
                       : 'bg-gray-100 text-gray-600 hover:bg-gray-200'
                   }`}
                   title={isListening ? 'Stop listening' : 'Start voice input'}
@@ -554,7 +554,7 @@ export function ChatAssistant({
                 >
                   {isListening ? <MicOff className="w-4 h-4" /> : <Mic className="w-4 h-4" />}
                 </button>
-                
+
                 <button
                   onClick={handleSendMessage}
                   disabled={!inputValue.trim() || isProcessing}

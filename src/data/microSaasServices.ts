@@ -171,7 +171,7 @@ export const getMicroSaasServiceById = (id: string): MicroSaasService | undefine
 };
 export const MICRO_SAAS_CATEGORIES = [
   'AI Business Solutions',
-  'IT Infrastructure', 
+  'IT Infrastructure',
   'Data Analytics',
   'AI Development',
   'FinTech',
@@ -186,7 +186,7 @@ export const PRICING_TIERS = [
     features: ['Basic features', 'Email support', '1 user']
   },
   {
-    name: 'Professional', 
+    name: 'Professional',
     price: 99,
     features: ['Advanced features', 'Priority support', 'Up to 10 users']
   },

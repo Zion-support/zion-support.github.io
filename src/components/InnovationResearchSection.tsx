@@ -1,16 +1,16 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { 
-  Lightbulb, 
-  TestTube, 
-  BookOpen, 
-  Award, 
-  Users, 
-  TrendingUp, 
-  Rocket, 
-  Brain, 
-  Microscope, 
-  Target 
+import {
+  Lightbulb,
+  TestTube,
+  BookOpen,
+  Award,
+  Users,
+  TrendingUp,
+  Rocket,
+  Brain,
+  Microscope,
+  Target
 } from 'lucide-react';
 
 export const InnovationResearchSection: React.FC = () => {
@@ -85,7 +85,7 @@ export const InnovationResearchSection: React.FC = () => {
             Innovation & Research
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Pushing the boundaries of technology through cutting-edge research, 
+            Pushing the boundaries of technology through cutting-edge research,
             breakthrough innovations, and collaborative partnerships with leading institutions.
           </p>
         </motion.div>
@@ -179,7 +179,7 @@ export const InnovationResearchSection: React.FC = () => {
               Join the Innovation Revolution
             </h3>
             <p className="text-indigo-100 mb-6 max-w-2xl mx-auto">
-              Partner with us to explore the frontiers of technology and create 
+              Partner with us to explore the frontiers of technology and create
               solutions that will shape the future of humanity.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">

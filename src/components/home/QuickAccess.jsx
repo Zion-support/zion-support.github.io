@@ -64,11 +64,11 @@ export const QuickAccess = () => {
                 </div>
                 <ArrowRight className="w-5 h-5 text-gray-400 group-hover:text-white transition-colors duration-300"/>
               </div>
-              
+
               <h3 className="text-xl font-semibold text-white mb-2 group-hover:text-blue-400 transition-colors duration-300">
                 {link.title}
               </h3>
-              
+
               <p className="text-gray-400 group-hover:text-gray-300 transition-colors duration-300">
                 {link.description}
               </p>

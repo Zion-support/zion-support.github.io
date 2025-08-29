@@ -8,7 +8,7 @@ const AIAutonomousNetworkSecurity = () => {
         <meta name="keywords" content="AI network security, autonomous network security, network monitoring, threat detection, autonomous operations, AI network security platform"/>
         <link rel="canonical" href="https://ziontechgroup.com/ai-autonomous-network-security"/>
       </Helmet>
-      
+
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
         <div className="container mx-auto px-4 py-16">
           {/* Hero Section */}
@@ -52,31 +52,31 @@ const AIAutonomousNetworkSecurity = () => {
               <h3 className="text-xl font-semibold text-white mb-3">Network Security Intelligence</h3>
               <p className="text-gray-300">AI trained on network security datasets</p>
             </div>
-            
+
             <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20">
               <div className="text-cyan-400 text-4xl mb-4">🤖</div>
               <h3 className="text-xl font-semibold text-white mb-3">Autonomous Operation</h3>
               <p className="text-gray-300">AI that protects networks independently</p>
             </div>
-            
+
             <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20">
               <div className="text-teal-400 text-4xl mb-4">📈</div>
               <h3 className="text-xl font-semibold text-white mb-3">Continuous Network Security</h3>
               <p className="text-gray-300">24/7 network security operations</p>
             </div>
-            
+
             <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20">
               <div className="text-green-400 text-4xl mb-4">🔍</div>
               <h3 className="text-xl font-semibold text-white mb-3">Deep Analysis</h3>
               <p className="text-gray-300">Comprehensive network security insights</p>
             </div>
-            
+
             <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20">
               <div className="text-emerald-400 text-4xl mb-4">🛡️</div>
               <h3 className="text-xl font-semibold text-white mb-3">Proactive Network Security</h3>
               <p className="text-gray-300">Prevent network security issues</p>
             </div>
-            
+
             <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20">
               <div className="text-lime-400 text-4xl mb-4">⚡</div>
               <h3 className="text-xl font-semibold text-white mb-3">Adaptive Network Security</h3>
@@ -93,25 +93,25 @@ const AIAutonomousNetworkSecurity = () => {
                 <h3 className="text-lg font-semibold text-white mb-2">Monitor</h3>
                 <p className="text-gray-300 text-sm">Monitor networks</p>
               </div>
-              
+
               <div className="text-center">
                 <div className="bg-blue-600 w-16 h-16 rounded-full flex items-center justify-center text-2xl font-bold text-white mx-auto mb-4">2</div>
                 <h3 className="text-lg font-semibold text-white mb-2">Detect</h3>
                 <p className="text-gray-300 text-sm">Detect threats</p>
               </div>
-              
+
               <div className="text-center">
                 <div className="bg-blue-600 w-16 h-16 rounded-full flex items-center justify-center text-2xl font-bold text-white mx-auto mb-4">3</div>
                 <h3 className="text-lg font-semibold text-white mb-2">Analyze</h3>
                 <p className="text-gray-300 text-sm">Analyze threats</p>
               </div>
-              
+
               <div className="text-center">
                 <div className="bg-blue-600 w-16 h-16 rounded-full flex items-center justify-center text-2xl font-bold text-white mx-auto mb-4">4</div>
                 <h3 className="text-lg font-semibold text-white mb-2">Protect</h3>
                 <p className="text-gray-300 text-sm">Protect networks</p>
               </div>
-              
+
               <div className="text-center">
                 <div className="bg-blue-600 w-16 h-16 rounded-full flex items-center justify-center text-2xl font-bold text-white mx-auto mb-4">5</div>
                 <h3 className="text-lg font-semibold text-white mb-2">Respond</h3>
@@ -138,12 +138,12 @@ const AIAutonomousNetworkSecurity = () => {
                 <h3 className="text-xl font-semibold text-white mb-3">Enterprise Networks</h3>
                 <p className="text-gray-300">Enterprise network security</p>
               </div>
-              
+
               <div className="bg-white/5 rounded-xl p-6 border border-white/10">
                 <h3 className="text-xl font-semibold text-white mb-3">Data Centers</h3>
                 <p className="text-gray-300">Data center network security</p>
               </div>
-              
+
               <div className="bg-white/5 rounded-xl p-6 border border-white/10">
                 <h3 className="text-xl font-semibold text-white mb-3">Cloud Networks</h3>
                 <p className="text-gray-300">Cloud network security</p>

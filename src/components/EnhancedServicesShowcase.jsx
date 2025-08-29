@@ -48,10 +48,10 @@ const EnhancedServicesShowcase = () => {
             </span>
           </motion.h1>
           <motion.p className="text-xl text-gray-300 mb-8 max-w-4xl mx-auto" initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.2 }}>
-            Discover our extensive portfolio of innovative micro SAAS services, enterprise IT solutions, 
+            Discover our extensive portfolio of innovative micro SAAS services, enterprise IT solutions,
             cutting-edge AI services, and emerging technology solutions designed to transform your business.
           </motion.p>
-          
+
           {/* Contact Information */}
           <motion.div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 mb-8 max-w-2xl mx-auto" initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.4 }}>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-sm">
@@ -176,7 +176,7 @@ const EnhancedServicesShowcase = () => {
           <motion.p className="text-xl text-gray-300 mb-8" initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.2 }}>
             Let's discuss how our innovative services can help drive your success and competitive advantage
           </motion.p>
-          
+
           <motion.div className="flex flex-col sm:flex-row gap-4 justify-center mb-8" initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.4 }}>
             <Link to="/contact" className="inline-flex items-center px-8 py-3 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-cyan-700 transition-all duration-300">
               Contact Us Today

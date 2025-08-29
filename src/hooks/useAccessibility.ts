@@ -16,7 +16,7 @@ interface AccessibilityFeatures {
   isScreenReader: boolean;
 }
 
-export const useAccessibility = (options: UseAccessibilityOptions = {}) => {
+export const useAccessibility = (options: UseAccessibilityOptions = { /* empty */ }) => {
   const {
     enableKeyboardNavigation = true,
     enableFocusManagement = true,
@@ -118,7 +118,7 @@ export const useAccessibility = (options: UseAccessibilityOptions = {}) => {
 
     // Add focus indicator
     element.classList.add('focus-visible');
-    
+
     // Remove focus indicator after animation
     setTimeout(() => {
       element.classList.remove('focus-visible');
@@ -131,7 +131,7 @@ export const useAccessibility = (options: UseAccessibilityOptions = {}) => {
 
     focusTrapRef.current = container;
     const focusableElements = getFocusableElements(container);
-    
+
     if (focusableElements.length > 0) {
       focusableElements[0].focus();
     }
@@ -168,7 +168,7 @@ export const useAccessibility = (options: UseAccessibilityOptions = {}) => {
   const navigateFocus = useCallback((direction: 'forward' | 'backward', currentElement: HTMLElement) => {
     const container = focusTrapRef.current || document.body;
     const focusableElements = getFocusableElements(container);
-    
+
     if (focusableElements.length === 0) return;
 
     const currentIndex = focusableElements.indexOf(currentElement);
@@ -191,7 +191,7 @@ export const useAccessibility = (options: UseAccessibilityOptions = {}) => {
 
     const items = Array.from(container.querySelectorAll('[role="option"], [role="menuitem"], .item, li'));
     const currentIndex = items.indexOf(currentElement);
-    
+
     if (currentIndex === -1) return;
 
     let nextIndex: number;
@@ -215,7 +215,7 @@ export const useAccessibility = (options: UseAccessibilityOptions = {}) => {
 
     const items = Array.from(container.querySelectorAll('[role="tab"], .tab, .slide'));
     const currentIndex = items.indexOf(currentElement);
-    
+
     if (currentIndex === -1) return;
 
     let nextIndex: number;
@@ -267,10 +267,10 @@ export const useAccessibility = (options: UseAccessibilityOptions = {}) => {
 
     document.documentElement.classList.toggle('high-contrast');
     const isEnabled = document.documentElement.classList.contains('high-contrast');
-    
+
     // Announce change to screen reader
     announceToScreenReader(`High contrast mode ${isEnabled ? 'enabled' : 'disabled'}`);
-    
+
     // Save preference
     localStorage.setItem('highContrast', isEnabled.toString());
   }, [enableHighContrast, announceToScreenReader]);
@@ -281,10 +281,10 @@ export const useAccessibility = (options: UseAccessibilityOptions = {}) => {
 
     document.documentElement.classList.toggle('reduced-motion');
     const isEnabled = document.documentElement.classList.contains('reduced-motion');
-    
+
     // Announce change to screen reader
     announceToScreenReader(`Reduced motion mode ${isEnabled ? 'enabled' : 'disabled'}`);
-    
+
     // Save preference
     localStorage.setItem('reducedMotion', isEnabled.toString());
   }, [enableReducedMotion, announceToScreenReader]);
@@ -295,10 +295,10 @@ export const useAccessibility = (options: UseAccessibilityOptions = {}) => {
 
     document.documentElement.classList.toggle('large-text');
     const isEnabled = document.documentElement.classList.contains('large-text');
-    
+
     // Announce change to screen reader
     announceToScreenReader(`Large text mode ${isEnabled ? 'enabled' : 'disabled'}`);
-    
+
     // Save preference
     localStorage.setItem('largeText', isEnabled.toString());
   }, [enableLargeText, announceToScreenReader]);

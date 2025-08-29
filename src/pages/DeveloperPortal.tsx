@@ -87,11 +87,11 @@ const DeveloperPortal: React.FC = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      <SEO 
+      <SEO
         title="Developer Portal - Zion Tech Group"
         description="Access developer tools, documentation, SDKs, and community resources. Build amazing applications with Zion Tech Group's developer platform."
       />
-      
+
       {/* Hero Section */}
       <section className="pt-20 pb-16 px-4">
         <div className="max-w-7xl mx-auto">
@@ -105,19 +105,19 @@ const DeveloperPortal: React.FC = () => {
               <Terminal className="w-5 h-5 text-green-400 mr-2" />
               <span className="text-green-300 font-medium">Developer Portal</span>
             </div>
-            
+
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
               Developer
               <span className="block text-transparent bg-clip-text bg-gradient-to-r from-green-400 via-emerald-500 to-teal-400">
                 Portal
               </span>
             </h1>
-            
+
             <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-              Everything you need to build amazing applications with Zion Tech Group services. 
+              Everything you need to build amazing applications with Zion Tech Group services.
               Access tools, documentation, SDKs, and join our developer community.
             </p>
-            
+
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="px-8 py-4 bg-gradient-to-r from-green-500 to-emerald-600 text-white font-semibold rounded-lg hover:from-green-400 hover:to-emerald-500 transition-all duration-200 hover:scale-105 shadow-lg shadow-green-500/20">
                 Get Started
@@ -305,7 +305,7 @@ const DeveloperPortal: React.FC = () => {
                 </div>
               </div>
             </div>
-            
+
             <div className="mt-8 text-center">
               <button className="px-8 py-4 bg-gradient-to-r from-green-500 to-emerald-600 text-white font-semibold rounded-lg hover:from-green-400 hover:to-emerald-500 transition-all duration-200 hover:scale-105 shadow-lg shadow-green-500/20">
                 Start Building Now

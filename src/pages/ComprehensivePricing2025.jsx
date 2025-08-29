@@ -51,7 +51,7 @@ const ComprehensivePricing2025 = () => {
           <p className="text-xl text-gray-300 mb-8 max-w-4xl mx-auto">
             Transparent pricing for our cutting-edge micro SAAS solutions, IT services, and AI-powered innovations. Choose the plan that best fits your business needs and budget.
           </p>
-          
+
           {/* Billing Cycle Toggle */}
           <div className="flex items-center justify-center space-x-4 mb-12">
             <span className={`text-lg ${billingCycle === 'monthly' ? 'text-white' : 'text-gray-400'}`}>Monthly</span>
@@ -164,11 +164,11 @@ className = "max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12" >
                 {service.popular && (<div className="bg-gradient-to-r from-purple-600 to-pink-600 text-white text-sm font-semibold px-3 py-1 rounded-full inline-block mb-4">
                     Most Popular
                   </div>)}
-                
+
                 <div className="text-4xl mb-4">{service.icon}</div>
                 <h3 className="text-xl font-semibold text-white mb-3">{service.name}</h3>
                 <p className="text-gray-300 mb-4 line-clamp-2">{service.description}</p>
-                
+
                 <div className="mb-4">
                   <span className="inline-block px-3 py-1 bg-blue-600/20 text-blue-400 text-sm rounded-full border border-blue-600/30">
                     {service.category}
@@ -251,7 +251,7 @@ className = "max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12" >
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
             Custom enterprise deployments with dedicated support, custom integrations, and tailored solutions for large organizations
           </p>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
             <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20">
               <div className="text-4xl mb-4">🏢</div>
@@ -261,7 +261,7 @@ className = "max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12" >
               </p>
               <div className="text-green-400 font-semibold">Custom Pricing</div>
             </div>
-            
+
             <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20">
               <div className="text-4xl mb-4">🔧</div>
               <h3 className="text-xl font-semibold text-white mb-3">Integration Services</h3>
@@ -270,7 +270,7 @@ className = "max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12" >
               </p>
               <div className="text-green-400 font-semibold">From $5,000</div>
             </div>
-            
+
             <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20">
               <div className="text-4xl mb-4">👥</div>
               <h3 className="text-xl font-semibold text-white mb-3">Dedicated Support</h3>
@@ -307,7 +307,7 @@ className = "bg-gradient-to-r from-green-800 to-blue-800 py-16" >
           <p className="text-xl text-gray-300 mb-8">
             Let's discuss how our services can help transform your business and drive competitive advantage
           </p>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
             <div className="bg-white/10 backdrop-blur-lg rounded-lg p-6 border border-white/20">
               <div className="text-2xl mb-2">📧</div>
@@ -317,7 +317,7 @@ className = "bg-gradient-to-r from-green-800 to-blue-800 py-16" >
                 kleber@ziontechgroup.com
               </a>
             </div>
-            
+
             <div className="bg-white/10 backdrop-blur-lg rounded-lg p-6 border border-white/20">
               <div className="text-2xl mb-2">📞</div>
               <h3 className="text-lg font-semibold text-white mb-2">Call Us</h3>
@@ -326,7 +326,7 @@ className = "bg-gradient-to-r from-green-800 to-blue-800 py-16" >
                 +1 302 464 0950
               </a>
             </div>
-            
+
             <div className="bg-white/10 backdrop-blur-lg rounded-lg p-6 border border-white/20">
               <div className="text-2xl mb-2">📍</div>
               <h3 className="text-lg font-semibold text-white mb-2">Visit Us</h3>
@@ -334,7 +334,7 @@ className = "bg-gradient-to-r from-green-800 to-blue-800 py-16" >
               <p className="text-blue-400 text-sm">364 E Main St STE 1008<br />Middletown DE 19709</p>
             </div>
           </div>
-          
+
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a href="mailto:kleber@ziontechgroup.com?subject=Pricing Inquiry 2025" className="inline-flex items-center px-8 py-3 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-cyan-700 transition-all duration-300">
               <Phone className="w-5 h-5 inline mr-2"/>

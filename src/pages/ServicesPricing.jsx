@@ -159,7 +159,7 @@ export default function ServicesPricing() {
             Transparent Pricing
           </h1>
           <p className="text-xl text-zion-cyan max-w-3xl mx-auto mb-8">
-            Choose the perfect plan for your business. Our flexible pricing ensures you only pay for what you need, 
+            Choose the perfect plan for your business. Our flexible pricing ensures you only pay for what you need,
             with the ability to scale up as you grow.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
@@ -220,7 +220,7 @@ export default function ServicesPricing() {
                       Most Popular
                     </Badge>
                   </div>)}
-                
+
                 <CardHeader className="text-center pb-6">
                   <CardTitle className="text-2xl text-white mb-2">{tier.name}</CardTitle>
                   <CardDescription className="text-zion-slate-light mb-4">
@@ -231,7 +231,7 @@ export default function ServicesPricing() {
                     <div className="text-zion-slate-light text-sm">Range: ${tier.priceRange}</div>
                   </div>
                 </CardHeader>
-                
+
                 <CardContent className="space-y-4">
                   <div className="space-y-3">
                     <h4 className="text-white font-semibold mb-3">What's Included:</h4>
@@ -240,7 +240,7 @@ export default function ServicesPricing() {
                         <span className="text-zion-slate-light text-sm">{feature}</span>
                       </div>))}
                   </div>
-                  
+
                   {tier.notIncluded.length > 0 && (<div className="space-y-3 pt-4 border-t border-zion-blue-light">
                       <h4 className="text-white font-semibold mb-3">Not Included:</h4>
                       {tier.notIncluded.map((feature, featureIndex) => (<div key={featureIndex} className="flex items-center gap-3">
@@ -248,7 +248,7 @@ export default function ServicesPricing() {
                           <span className="text-zion-slate-light text-sm">{feature}</span>
                         </div>))}
                     </div>)}
-                  
+
                   <Button className={`w-full mt-6 bg-gradient-to-r ${tier.color} hover:opacity-90 text-white`} size="lg">
                     Get Started
                     <ArrowRight className="w-4 h-4 ml-2"/>
@@ -283,7 +283,7 @@ export default function ServicesPricing() {
                 Enterprise
               </TabsTrigger>
             </TabsList>
-            
+
             <TabsContent value={selectedTier} className="mt-8">
               <div className="space-y-8">
                 {serviceCategories.map((category, index) => (<div key={index} className="bg-zion-blue rounded-lg p-6 border border-zion-blue-light">
@@ -293,7 +293,7 @@ export default function ServicesPricing() {
                       </div>
                       <h3 className="text-xl font-bold text-white">{category.name}</h3>
                     </div>
-                    
+
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                       {category.services.map((service, serviceIndex) => (<div key={serviceIndex} className="flex items-center justify-between p-4 bg-zion-blue-dark rounded-lg border border-zion-blue-light">
                           <span className="text-zion-slate-light">{service.name}</span>

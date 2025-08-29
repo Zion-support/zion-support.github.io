@@ -299,14 +299,14 @@ export function ServicesOverview() {
                   <p className="text-zion-slate-light text-sm">{category.description}</p>
                 </div>
               </div>
-              
+
               <div className="space-y-4 mb-6">
                 {category.services.map((service, serviceIndex) => (<div key={serviceIndex} className="bg-zion-blue-dark rounded p-4">
                     <div className="flex justify-between items-start mb-3">
                       <h4 className="text-white font-semibold">{service.name}</h4>
                       <span className="text-zion-cyan font-bold">{service.price}</span>
                     </div>
-                    
+
                     <div className="mb-3">
                       <h5 className="text-zion-slate-light text-sm font-medium mb-2">Key Features:</h5>
                       <ul className="space-y-1">
@@ -316,7 +316,7 @@ export function ServicesOverview() {
                           </li>))}
                       </ul>
                     </div>
-                    
+
                     <div>
                       <h5 className="text-zion-slate-light text-sm font-medium mb-2">Benefits:</h5>
                       <ul className="space-y-1">
@@ -328,7 +328,7 @@ export function ServicesOverview() {
                     </div>
                   </div>))}
               </div>
-              
+
               <div className="flex items-center justify-between mb-4 text-sm">
                 <div className="text-zion-slate-light">
                   <span className="font-medium">Market Price:</span> {category.marketPrice}
@@ -337,7 +337,7 @@ export function ServicesOverview() {
                   <span className="font-medium">Delivery:</span> {category.deliveryTime}
                 </div>
               </div>
-              
+
               <Link to={category.link}>
                 <Button className="w-full bg-zion-cyan hover:bg-zion-cyan-dark text-white">
                   View {category.title}
@@ -356,7 +356,7 @@ export function ServicesOverview() {
               We combine technical expertise with business acumen to deliver solutions that drive real results
             </p>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {whyChooseUs.map((item, index) => (<div key={index} className="text-center">
                 <div className="flex justify-center mb-4">

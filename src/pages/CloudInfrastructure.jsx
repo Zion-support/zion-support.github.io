@@ -100,7 +100,7 @@ export default function CloudInfrastructure() {
               With Your Business
             </h1>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-              Build, deploy, and manage robust cloud infrastructure across AWS, Azure, and Google Cloud. 
+              Build, deploy, and manage robust cloud infrastructure across AWS, Azure, and Google Cloud.
               Our expertise ensures optimal performance, security, and cost efficiency.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -168,11 +168,11 @@ export default function CloudInfrastructure() {
                 {cloudProviders.find(p => p.id === selectedProvider)?.name} Solutions
               </h3>
               <p className="text-gray-300 max-w-2xl mx-auto">
-                Comprehensive cloud infrastructure solutions tailored for {cloudProviders.find(p => p.id === selectedProvider)?.name} 
+                Comprehensive cloud infrastructure solutions tailored for {cloudProviders.find(p => p.id === selectedProvider)?.name}
                 with best practices, security, and cost optimization.
               </p>
             </div>
-            
+
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               {cloudServices.map((service, index) => (<div key={service.title} className="p-6 bg-white/5 rounded-lg border border-white/10">
                   <div className="w-12 h-12 bg-gradient-to-br from-cyan-400 to-purple-600 rounded-lg flex items-center justify-center mb-4">

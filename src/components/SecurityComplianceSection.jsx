@@ -177,7 +177,7 @@ export function SecurityComplianceSection() {
             Security & <span className="bg-gradient-to-r from-zion-cyan to-zion-purple bg-clip-text text-transparent">Compliance</span>
           </h2>
           <p className="text-zion-slate-light text-lg md:text-xl max-w-4xl mx-auto leading-relaxed mb-8">
-            Enterprise-grade security standards and compliance certifications that ensure your data, 
+            Enterprise-grade security standards and compliance certifications that ensure your data,
             applications, and infrastructure are protected by industry-leading security measures.
           </p>
 
@@ -463,7 +463,7 @@ export function SecurityComplianceSection() {
                 Ready to Secure Your Business?
               </h3>
               <p className="text-zion-slate-light mb-6 max-w-2xl mx-auto">
-                Partner with Zion Tech Group for enterprise-grade security, compliance, 
+                Partner with Zion Tech Group for enterprise-grade security, compliance,
                 and data protection that meets the highest industry standards.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">

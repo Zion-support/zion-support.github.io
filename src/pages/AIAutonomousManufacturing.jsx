@@ -8,7 +8,7 @@ const AIAutonomousManufacturing = () => {
         <meta name="keywords" content="AI manufacturing, autonomous manufacturing, smart factory, Industry 4.0, AI production, manufacturing automation"/>
         <link rel="canonical" href="https://ziontechgroup.com/ai-autonomous-manufacturing"/>
       </Helmet>
-      
+
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
         <div className="container mx-auto px-4 py-16">
           {/* Hero Section */}
@@ -52,31 +52,31 @@ const AIAutonomousManufacturing = () => {
               <h3 className="text-xl font-semibold text-white mb-3">Autonomous Operations</h3>
               <p className="text-gray-300">AI that manages production independently</p>
             </div>
-            
+
             <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20">
               <div className="text-slate-400 text-4xl mb-4">🧠</div>
               <h3 className="text-xl font-semibold text-white mb-3">Intelligent Optimization</h3>
               <p className="text-gray-300">AI algorithms that maximize efficiency</p>
             </div>
-            
+
             <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20">
               <div className="text-blue-400 text-4xl mb-4">📈</div>
               <h3 className="text-xl font-semibold text-white mb-3">Real-time Analytics</h3>
               <p className="text-gray-300">Live production monitoring and insights</p>
             </div>
-            
+
             <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20">
               <div className="text-green-400 text-4xl mb-4">🔗</div>
               <h3 className="text-xl font-semibold text-white mb-3">IoT Integration</h3>
               <p className="text-gray-300">Connect all manufacturing equipment</p>
             </div>
-            
+
             <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20">
               <div className="text-purple-400 text-4xl mb-4">🛡️</div>
               <h3 className="text-xl font-semibold text-white mb-3">Safety Management</h3>
               <p className="text-gray-300">AI-powered safety monitoring</p>
             </div>
-            
+
             <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20">
               <div className="text-yellow-400 text-4xl mb-4">🔄</div>
               <h3 className="text-xl font-semibold text-white mb-3">Continuous Learning</h3>
@@ -93,25 +93,25 @@ const AIAutonomousManufacturing = () => {
                 <h3 className="text-lg font-semibold text-white mb-2">Design</h3>
                 <p className="text-gray-300 text-sm">AI-assisted product design</p>
               </div>
-              
+
               <div className="text-center">
                 <div className="bg-gray-600 w-16 h-16 rounded-full flex items-center justify-center text-2xl font-bold text-white mx-auto mb-4">2</div>
                 <h3 className="text-lg font-semibold text-white mb-2">Planning</h3>
                 <p className="text-gray-300 text-sm">Production planning and scheduling</p>
               </div>
-              
+
               <div className="text-center">
                 <div className="bg-gray-600 w-16 h-16 rounded-full flex items-center justify-center text-2xl font-bold text-white mx-auto mb-4">3</div>
                 <h3 className="text-lg font-semibold text-white mb-2">Production</h3>
                 <p className="text-gray-300 text-sm">Automated manufacturing execution</p>
               </div>
-              
+
               <div className="text-center">
                 <div className="bg-gray-600 w-16 h-16 rounded-full flex items-center justify-center text-2xl font-bold text-white mx-auto mb-4">4</div>
                 <h3 className="text-lg font-semibold text-white mb-2">Quality</h3>
                 <p className="text-gray-300 text-sm">AI-powered quality control</p>
               </div>
-              
+
               <div className="text-center">
                 <div className="bg-gray-600 w-16 h-16 rounded-full flex items-center justify-center text-2xl font-bold text-white mx-auto mb-4">5</div>
                 <h3 className="text-lg font-semibold text-white mb-2">Optimization</h3>
@@ -138,12 +138,12 @@ const AIAutonomousManufacturing = () => {
                 <h3 className="text-xl font-semibold text-white mb-3">Automotive</h3>
                 <p className="text-gray-300">Vehicle manufacturing automation</p>
               </div>
-              
+
               <div className="bg-white/5 rounded-xl p-6 border border-white/10">
                 <h3 className="text-xl font-semibold text-white mb-3">Electronics</h3>
                 <p className="text-gray-300">Circuit board and device production</p>
               </div>
-              
+
               <div className="bg-white/5 rounded-xl p-6 border border-white/10">
                 <h3 className="text-xl font-semibold text-white mb-3">Pharmaceuticals</h3>
                 <p className="text-gray-300">Drug manufacturing and quality control</p>

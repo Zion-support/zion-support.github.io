@@ -1,4 +1,4 @@
-export type ServiceVariant = 
+export type ServiceVariant =
   | 'default'
   | 'holographic'
   | 'quantum'

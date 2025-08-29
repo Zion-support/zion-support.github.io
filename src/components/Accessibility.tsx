@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { 
-  Accessibility, 
-  Type, 
-  Eye, 
-  Volume2, 
-  Keyboard, 
+import {
+  Accessibility,
+  Type,
+  Eye,
+  Volume2,
+  Keyboard,
   X,
   Plus,
   Minus,
@@ -69,24 +69,24 @@ export function Accessibility() {
 
   const applySettings = (newSettings: AccessibilitySettings) => {
     const root = document.documentElement;
-    
+
     // Apply font size
     root.style.fontSize = `${newSettings.fontSize}px`;
-    
+
     // Apply high contrast
     if (newSettings.highContrast) {
       root.classList.add('high-contrast');
     } else {
       root.classList.remove('high-contrast');
     }
-    
+
     // Apply reduced motion
     if (newSettings.reducedMotion) {
       root.classList.add('reduced-motion');
     } else {
       root.classList.remove('reduced-motion');
     }
-    
+
     // Apply theme
     if (newSettings.theme === 'light') {
       root.classList.add('light-theme');

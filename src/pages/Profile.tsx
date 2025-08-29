@@ -1,15 +1,15 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { 
-  User, 
-  Mail, 
-  Phone, 
-  Building, 
-  Globe, 
-  MapPin, 
-  Camera, 
-  Save, 
-  Edit, 
+import {
+  User,
+  Mail,
+  Phone,
+  Building,
+  Globe,
+  MapPin,
+  Camera,
+  Save,
+  Edit,
   X,
   Shield,
   Bell,
@@ -144,7 +144,7 @@ const Profile: React.FC = () => {
     try {
       // Simulate API call
       await new Promise(resolve => setTimeout(resolve, 2000));
-      
+
       setSuccess('Profile updated successfully!');
       setIsEditing(false);
     } catch (err) {
@@ -175,7 +175,7 @@ const Profile: React.FC = () => {
     try {
       // Simulate API call
       await new Promise(resolve => setTimeout(resolve, 2000));
-      
+
       setSuccess('Password changed successfully!');
       setCurrentPassword('');
       setNewPassword('');
@@ -278,7 +278,7 @@ const Profile: React.FC = () => {
       {/* Profile Form */}
       <div className="bg-white/5 border border-slate-600/30 rounded-2xl p-8 backdrop-blur-md">
         <h3 className="text-xl font-semibold text-white mb-6">Personal Information</h3>
-        
+
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
           <div>
             <label className="block text-white font-medium mb-2">First Name</label>
@@ -458,8 +458,8 @@ const Profile: React.FC = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.1 + index * 0.1 }}
               className={`p-4 rounded-xl border ${
-                achievement.earned 
-                  ? 'bg-gradient-to-br from-yellow-500/20 to-orange-500/20 border-yellow-500/30' 
+                achievement.earned
+                  ? 'bg-gradient-to-br from-yellow-500/20 to-orange-500/20 border-yellow-500/30'
                   : 'bg-white/5 border-slate-600/30'
               }`}
             >
@@ -497,7 +497,7 @@ const Profile: React.FC = () => {
       {/* Password Change */}
       <div className="bg-white/5 border border-slate-600/30 rounded-2xl p-8 backdrop-blur-md">
         <h3 className="text-xl font-semibold text-white mb-6">Change Password</h3>
-        
+
         <div className="space-y-6">
           <div>
             <label className="block text-white font-medium mb-2">Current Password</label>
@@ -604,7 +604,7 @@ const Profile: React.FC = () => {
       {/* Security Settings */}
       <div className="bg-white/5 border border-slate-600/30 rounded-2xl p-8 backdrop-blur-md">
         <h3 className="text-xl font-semibold text-white mb-6">Security Settings</h3>
-        
+
         <div className="space-y-6">
           <div className="flex items-center justify-between p-4 bg-white/5 rounded-lg border border-slate-600/30">
             <div>
@@ -644,7 +644,7 @@ const Profile: React.FC = () => {
       {/* Login History */}
       <div className="bg-white/5 border border-slate-600/30 rounded-2xl p-8 backdrop-blur-md">
         <h3 className="text-xl font-semibold text-white mb-6">Login History</h3>
-        
+
         <div className="space-y-4">
           {security.loginHistory.map((login, index) => (
             <div key={index} className="flex items-center justify-between p-4 bg-white/5 rounded-lg border border-slate-600/30">
@@ -658,8 +658,8 @@ const Profile: React.FC = () => {
                 </div>
               </div>
               <span className={`px-3 py-1 rounded-full text-xs font-medium ${
-                login.status === 'success' 
-                  ? 'bg-green-500/20 text-green-400 border border-green-500/30' 
+                login.status === 'success'
+                  ? 'bg-green-500/20 text-green-400 border border-green-500/30'
                   : 'bg-red-500/20 text-red-400 border border-red-500/30'
               }`}>
                 {login.status === 'success' ? 'Success' : 'Failed'}
@@ -680,7 +680,7 @@ const Profile: React.FC = () => {
     >
       <div className="bg-white/5 border border-slate-600/30 rounded-2xl p-8 backdrop-blur-md">
         <h3 className="text-xl font-semibold text-white mb-6">Notification Preferences</h3>
-        
+
         <div className="space-y-6">
           {Object.entries(notifications).map(([key, value]) => (
             <div key={key} className="flex items-center justify-between p-4 bg-white/5 rounded-lg border border-slate-600/30">
@@ -722,7 +722,7 @@ const Profile: React.FC = () => {
     >
       <div className="bg-white/5 border border-slate-600/30 rounded-2xl p-8 backdrop-blur-md">
         <h3 className="text-xl font-semibold text-white mb-6">Account Preferences</h3>
-        
+
         <div className="space-y-6">
           <div className="flex items-center justify-between p-4 bg-white/5 rounded-lg border border-slate-600/30">
             <div>
@@ -766,7 +766,7 @@ const Profile: React.FC = () => {
 
       <div className="bg-white/5 border border-slate-600/30 rounded-2xl p-8 backdrop-blur-md">
         <h3 className="text-xl font-semibold text-white mb-6">Data Management</h3>
-        
+
         <div className="space-y-4">
           <button className="w-full flex items-center justify-between p-4 bg-white/5 rounded-lg border border-slate-600/30 hover:bg-white/10 transition-all duration-300 text-left">
             <div>

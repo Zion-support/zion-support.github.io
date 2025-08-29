@@ -1,61 +1,61 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { useNavigate } from 'react-router-dom';
-import { 
-  Home, 
-  Briefcase, 
-  Users, 
-  Phone, 
-  Mail, 
-  MapPin, 
-  Globe, 
-  Linkedin, 
-  Twitter, 
-  Shield, 
-  Handshake, 
-  ChevronDown, 
-  ChevronRight, 
-  Brain, 
-  Cpu, 
-  Database, 
-  Network, 
-  Code, 
-  Palette, 
-  Target, 
-  Rocket, 
-  Eye, 
-  DollarSign, 
-  ShoppingCart, 
-  Clock, 
-  Cloud, 
-  Search, 
-  Building, 
-  Zap, 
-  Heart, 
-  Lightbulb, 
-  TrendingUp, 
-  BarChart3, 
-  Lock, 
-  AlertTriangle, 
-  Server, 
-  CheckCircle, 
-  Truck, 
-  Car, 
-  TestTube, 
-  PenTool, 
-  Building2, 
-  Atom, 
-  FileText, 
-  Quote, 
-  Newspaper, 
-  Calendar, 
-  Video, 
-  HelpCircle, 
-  LifeBuoy, 
-  Store, 
-  PieChart, 
-  Share2, 
-  Monitor, 
+import {
+  Home,
+  Briefcase,
+  Users,
+  Phone,
+  Mail,
+  MapPin,
+  Globe,
+  Linkedin,
+  Twitter,
+  Shield,
+  Handshake,
+  ChevronDown,
+  ChevronRight,
+  Brain,
+  Cpu,
+  Database,
+  Network,
+  Code,
+  Palette,
+  Target,
+  Rocket,
+  Eye,
+  DollarSign,
+  ShoppingCart,
+  Clock,
+  Cloud,
+  Search,
+  Building,
+  Zap,
+  Heart,
+  Lightbulb,
+  TrendingUp,
+  BarChart3,
+  Lock,
+  AlertTriangle,
+  Server,
+  CheckCircle,
+  Truck,
+  Car,
+  TestTube,
+  PenTool,
+  Building2,
+  Atom,
+  FileText,
+  Quote,
+  Newspaper,
+  Calendar,
+  Video,
+  HelpCircle,
+  LifeBuoy,
+  Store,
+  PieChart,
+  Share2,
+  Monitor,
   Smartphone,
   Settings,
   User,
@@ -77,8 +77,8 @@ const MainSidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
   const [expandedSections, setExpandedSections] = useState<string[]>([]);
 
   const toggleSection = (section: string) => {
-    setExpandedSections(prev => 
-      prev.includes(section) 
+    setExpandedSections(prev =>
+      prev.includes(section)
         ? prev.filter(s => s !== section)
         : [...prev, section]
     );
@@ -163,7 +163,7 @@ const MainSidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
           <ChevronRight className="w-4 h-4" />
         )}
       </button>
-      
+
       {expandedSections.includes(sectionKey) && (
         <div className="mt-2 space-y-1">
           {items.map((item) => (
@@ -195,7 +195,7 @@ const MainSidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
     <>
       {/* Backdrop */}
       {isOpen && (
-        <div 
+        <div
           className="fixed inset-0 bg-black/50 z-40 lg:hidden"
           onClick={onClose}
         />
@@ -205,7 +205,7 @@ const MainSidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
       <div className={`fixed top-0 left-0 h-full w-80 bg-gradient-to-b from-zion-blue-dark via-zion-blue to-zion-blue-dark border-r border-zion-blue-light z-50 transform transition-transform duration-300 ease-in-out ${
         isOpen ? 'translate-x-0' : '-translate-x-full'
       } lg:translate-x-0 lg:relative lg:z-auto`}>
-        
+
         {/* Header */}
         <div className="p-6 border-b border-zion-blue-light">
           <div className="flex items-center gap-3 mb-4">
@@ -219,7 +219,7 @@ const MainSidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
               <div className="text-xs text-zion-slate-light">Tech Group</div>
             </div>
           </div>
-          
+
           {/* Search */}
           <div className="relative">
             <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-4 h-4" />

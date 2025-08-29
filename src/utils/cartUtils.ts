@@ -12,7 +12,7 @@ export const calculateCartTotal = (items: CartItem[]): number => {
 
 export const addToCart = (cart: CartItem[], item: CartItem): CartItem[] => {
   const existingItem = cart.find(cartItem => cartItem.id === item.id);
-  
+
   if (existingItem) {
     return cart.map(cartItem =>
       cartItem.id === item.id
@@ -20,7 +20,7 @@ export const addToCart = (cart: CartItem[], item: CartItem): CartItem[] => {
         : cartItem
     );
   }
-  
+
   return [...cart, item];
 };
 
@@ -32,7 +32,7 @@ export const updateQuantity = (cart: CartItem[], itemId: string, quantity: numbe
   if (quantity <= 0) {
     return removeFromCart(cart, itemId);
   }
-  
+
   return cart.map(item =>
     item.id === itemId ? { ...item, quantity } : item
   );
@@ -48,7 +48,7 @@ export const getCartKey = (userId: string): string => {
 
 export const mergeCartItems = (existingItems: CartItem[], newItems: CartItem[]): CartItem[] => {
   const merged = [...existingItems];
-  
+
   newItems.forEach(newItem => {
     const existingIndex = merged.findIndex(item => item.id === newItem.id);
     if (existingIndex >= 0) {
@@ -57,6 +57,6 @@ export const mergeCartItems = (existingItems: CartItem[], newItems: CartItem[]):
       merged.push(newItem);
     }
   });
-  
+
   return merged;
 };

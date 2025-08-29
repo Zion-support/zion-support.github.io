@@ -115,7 +115,7 @@ const AIAutonomousBusiness = () => {
               <span className="bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent"> Autonomous</span>
             </h1>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-              Transform your business with AI-powered autonomous systems that operate 24/7, 
+              Transform your business with AI-powered autonomous systems that operate 24/7,
               make intelligent decisions, and continuously optimize performance.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -138,11 +138,11 @@ const AIAutonomousBusiness = () => {
               Autonomous Business Features
             </h2>
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              Comprehensive AI capabilities that enable truly autonomous business operations 
+              Comprehensive AI capabilities that enable truly autonomous business operations
               across all aspects of your organization.
             </p>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {autonomousFeatures.map((feature, index) => (<div key={index} className="bg-slate-800/50 border border-white/10 rounded-xl p-6 hover:border-blue-500/50 transition-all duration-300">
                 <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full flex items-center justify-center mx-auto mb-4">
@@ -169,11 +169,11 @@ const AIAutonomousBusiness = () => {
               Industry Applications
             </h2>
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              Discover how autonomous AI systems are transforming businesses 
+              Discover how autonomous AI systems are transforming businesses
               across different industries and sectors.
             </p>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {useCases.map((useCase, index) => (<div key={index} className="bg-slate-800/50 border border-white/10 rounded-xl p-6 text-center hover:border-blue-500/50 transition-all duration-300">
                 <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full flex items-center justify-center mx-auto mb-4">
@@ -195,7 +195,7 @@ const AIAutonomousBusiness = () => {
                 Why Choose Autonomous Business?
               </h2>
               <p className="text-lg text-gray-300 mb-6">
-                AI-powered autonomous systems provide unprecedented opportunities 
+                AI-powered autonomous systems provide unprecedented opportunities
                 to optimize operations, reduce costs, and gain competitive advantages.
               </p>
               <ul className="space-y-3">
@@ -210,7 +210,7 @@ const AIAutonomousBusiness = () => {
                 <Lightbulb className="w-24 h-24 text-blue-400 mx-auto mb-4"/>
                 <h3 className="text-2xl font-bold text-white mb-2">AI Innovation</h3>
                 <p className="text-gray-300 mb-6">
-                  We're at the forefront of AI autonomous business technology, 
+                  We're at the forefront of AI autonomous business technology,
                   enabling organizations to operate with unprecedented efficiency.
                 </p>
                 <div className="text-sm text-gray-400">
@@ -231,10 +231,10 @@ const AIAutonomousBusiness = () => {
             Implementation Process
           </h2>
           <p className="text-xl text-gray-300 mb-8">
-            A systematic approach to implementing AI autonomous business solutions 
+            A systematic approach to implementing AI autonomous business solutions
             that ensures success and maximizes ROI.
           </p>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {implementation.map((phase, index) => (<div key={index} className="text-center">
                 <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full flex items-center justify-center mx-auto mb-4 text-2xl font-bold text-white">
@@ -255,7 +255,7 @@ const AIAutonomousBusiness = () => {
             Ready to Go Autonomous?
           </h2>
           <p className="text-xl text-gray-300 mb-8">
-            Let's discuss how AI autonomous business solutions can transform your operations, 
+            Let's discuss how AI autonomous business solutions can transform your operations,
             reduce costs, and create competitive advantages.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">

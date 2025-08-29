@@ -19,12 +19,12 @@ self.addEventListener('install', (event) => {
   event.waitUntil(
     caches.open(STATIC_CACHE)
       .then((cache) => {
-        console.log('Caching static files');
+        // console.log('Caching static files');
         // Use addAll with individual error handling for each file
         return Promise.allSettled(
-          STATIC_FILES.map(url => 
+          STATIC_FILES.map(url =>
             cache.add(url).catch(error => {
-              console.warn(`Failed to cache ${url}:`, error);
+              // console.warn(`Failed to cache ${url}:`, error);
               // Try to fetch and cache manually if add() fails
               return fetch(url)
                 .then(response => {
@@ -34,7 +34,7 @@ self.addEventListener('install', (event) => {
                   throw new Error(`HTTP ${response.status}`);
                 })
                 .catch(fetchError => {
-                  console.warn(`Manual fetch failed for ${url}:`, fetchError);
+                  // console.warn(`Manual fetch failed for ${url}:`, fetchError);
                   return null; // Continue with other files
                 });
             })
@@ -44,11 +44,11 @@ self.addEventListener('install', (event) => {
       .then((results) => {
         const successful = results.filter(r => r.status === 'fulfilled').length;
         const failed = results.filter(r => r.status === 'rejected').length;
-        console.log(`Static files cached: ${successful} successful, ${failed} failed`);
+        // console.log(`Static files cached: ${successful} successful, ${failed} failed`);
         return self.skipWaiting();
       })
       .catch((error) => {
-        console.error('Error in service worker install:', error);
+        // console.error('Error in service worker install:', error);
       })
   );
 });
@@ -61,14 +61,14 @@ self.addEventListener('activate', (event) => {
         return Promise.all(
           cacheNames.map((cacheName) => {
             if (cacheName !== STATIC_CACHE && cacheName !== DYNAMIC_CACHE) {
-              console.log('Deleting old cache:', cacheName);
+              // console.log('Deleting old cache:', cacheName);
               return caches.delete(cacheName);
             }
           })
         );
       })
       .then(() => {
-        console.log('Service Worker activated');
+        // console.log('Service Worker activated');
         return self.clients.claim();
       })
   );
@@ -89,11 +89,11 @@ self.addEventListener('fetch', (event) => {
     // For external requests, try to fetch from network but don't cache
     event.respondWith(
       fetch(request).catch((error) => {
-        console.warn('External request failed:', url.href, error);
+        // console.warn('External request failed:', url.href, error);
         // Return a fallback response for failed external requests
         // For images, return a placeholder or skip caching
         if (request.destination === 'image') {
-          console.log('Skipping failed external image:', url.href);
+          // console.log('Skipping failed external image:', url.href);
           return new Response('', { status: 404 });
         }
         // For other external requests, return a basic error response
@@ -131,14 +131,14 @@ self.addEventListener('fetch', (event) => {
                 cache.put(request, responseToCache);
               })
               .catch((error) => {
-                console.warn('Failed to cache response:', error);
+                // console.warn('Failed to cache response:', error);
               });
 
             return response;
           })
           .catch((error) => {
-            console.warn('Fetch failed, serving offline page:', error);
-            
+            // console.warn('Fetch failed, serving offline page:', error);
+
             // For navigation requests, serve offline page
             if (request.mode === 'navigate') {
               return caches.match('/offline.html');
@@ -162,7 +162,7 @@ self.addEventListener('sync', (event) => {
   if (event.tag === 'background-sync') {
     event.waitUntil(
       // Handle background sync tasks
-      console.log('Background sync triggered:', event.tag)
+      // console.log('Background sync triggered:', event.tag)
     );
   }
 });
@@ -216,7 +216,7 @@ self.addEventListener('message', (event) => {
   if (event.data && event.data.type === 'SKIP_WAITING') {
     self.skipWaiting();
   }
-  
+
   if (event.data && event.data.type === 'GET_VERSION') {
     event.ports[0].postMessage({ version: CACHE_NAME });
   }
@@ -224,10 +224,10 @@ self.addEventListener('message', (event) => {
 
 // Error handling
 self.addEventListener('error', (event) => {
-  console.error('Service Worker error:', event.error);
+  // console.error('Service Worker error:', event.error);
 });
 
 // Unhandled rejection handling
 self.addEventListener('unhandledrejection', (event) => {
-  console.error('Service Worker unhandled rejection:', event.reason);
+  // console.error('Service Worker unhandled rejection:', event.reason);
 });

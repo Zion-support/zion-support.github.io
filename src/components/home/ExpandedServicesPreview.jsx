@@ -31,7 +31,7 @@ export function ExpandedServicesPreview() {
             Comprehensive Tech Solutions
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            From AI-powered automation to micro SAAS solutions, we offer a complete ecosystem of services 
+            From AI-powered automation to micro SAAS solutions, we offer a complete ecosystem of services
             designed to accelerate your business growth and digital transformation.
           </p>
         </div>

@@ -22,17 +22,17 @@ export default function DigitalTwin() {
                 <Cpu className="w-4 h-4 mr-2" />
                 Digital Twin Technology
               </div>
-              
+
               <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
                 Digital
                 <span className="bg-gradient-to-r from-emerald-400 to-teal-500 bg-clip-text text-transparent"> Twin</span>
               </h1>
-              
+
               <p className="text-xl text-slate-300 mb-8 max-w-3xl mx-auto">
-                Create virtual replicas of your physical systems and assets. Monitor performance, 
+                Create virtual replicas of your physical systems and assets. Monitor performance,
                 simulate scenarios, and optimize operations with real-time digital twin technology.
               </p>
-              
+
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link
                   to="/contact"
@@ -58,7 +58,7 @@ export default function DigitalTwin() {
                 Virtual Replication Technology
               </h2>
               <p className="text-xl text-slate-300 max-w-2xl mx-auto">
-                Our digital twin platform creates accurate virtual representations that enable 
+                Our digital twin platform creates accurate virtual representations that enable
                 real-time monitoring, simulation, and optimization.
               </p>
             </div>

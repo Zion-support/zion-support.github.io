@@ -135,11 +135,11 @@ export const EnhancedSearch: React.FC = () => {
         const matchesQuery = item.title.toLowerCase().includes(debouncedQuery.toLowerCase()) ||
                            item.description.toLowerCase().includes(debouncedQuery.toLowerCase()) ||
                            item.tags.some(tag => tag.toLowerCase().includes(debouncedQuery.toLowerCase()));
-        
+
         const matchesFilters = filters.type.length === 0 || filters.type.includes(item.type) &&
                               filters.category.length === 0 || filters.category.includes(item.category) &&
                               filters.tags.length === 0 || filters.tags.some(tag => item.tags.includes(tag));
-        
+
         return matchesQuery && matchesFilters;
       })
       .sort((a, b) => b.relevance - a.relevance)
@@ -182,7 +182,7 @@ export const EnhancedSearch: React.FC = () => {
       const updated = [searchQuery, ...recentSearches.filter(s => s !== searchQuery)].slice(0, 5);
       setRecentSearches(updated);
       localStorage.setItem('zion-recent-searches', JSON.stringify(updated));
-      
+
       // Navigate to search results or close search
       setIsOpen(false);
       setQuery('');

@@ -11,7 +11,7 @@ const UltimateZionServicesShowcase2025: React.FC = () => {
         keywords="micro SAAS, IT services, AI solutions, quantum computing, cybersecurity, data analytics, Zion Tech Group"
         canonical="https://ziontechgroup.com/ultimate-zion-services-2025"
       />
-      
+
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         {/* Hero Section */}
         <section className="relative py-20 px-4 sm:px-6 lg:px-8">
@@ -46,7 +46,7 @@ const UltimateZionServicesShowcase2025: React.FC = () => {
               </div>
             </div>
           </div>
-          
+
           {/* Floating Elements */}
           <div className="absolute inset-0 overflow-hidden">
             <div className="absolute -top-40 -right-40 w-80 h-80 bg-purple-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-blob"></div>
@@ -109,10 +109,10 @@ const UltimateZionServicesShowcase2025: React.FC = () => {
                       <span className="text-sm text-gray-400">/month</span>
                     </span>
                   </div>
-                  
+
                   <h3 className="text-2xl font-bold text-white mb-3">{service.name}</h3>
                   <p className="text-gray-300 mb-4">{service.description}</p>
-                  
+
                   <div className="mb-4">
                     <p className="text-sm text-gray-400 mb-2">Market Price: {service.marketPrice}</p>
                     <p className="text-sm text-gray-400 mb-2">ROI: {service.roi}</p>
@@ -178,7 +178,7 @@ const UltimateZionServicesShowcase2025: React.FC = () => {
                 <div key={service.id} className="bg-gradient-to-br from-gray-800 to-gray-900 rounded-2xl p-8 border border-gray-700 hover:border-blue-500 transition-all duration-300 transform hover:scale-105">
                   <h3 className="text-2xl font-bold text-white mb-3">{service.name}</h3>
                   <p className="text-gray-300 mb-4">{service.description}</p>
-                  
+
                   <div className="mb-4">
                     <p className="text-white font-semibold">
                       Hourly Rate: <span className="text-blue-400">${service.hourlyRate}/hour</span>
@@ -253,10 +253,10 @@ const UltimateZionServicesShowcase2025: React.FC = () => {
                       <span className="text-sm text-gray-400">/month</span>
                     </span>
                   </div>
-                  
+
                   <h3 className="text-2xl font-bold text-white mb-3">{service.name}</h3>
                   <p className="text-gray-300 mb-4">{service.description}</p>
-                  
+
                   <div className="mb-4">
                     <p className="text-sm text-gray-400 mb-2">AI Score: <span className="text-green-400">{service.aiScore}/100</span></p>
                     <p className="text-sm text-gray-400 mb-2">Accuracy: {service.accuracy}</p>
@@ -373,7 +373,7 @@ const UltimateZionServicesShowcase2025: React.FC = () => {
             <p className="text-xl text-gray-300 mb-8">
               Join hundreds of companies already leveraging Zion Tech Group's revolutionary services
             </p>
-            
+
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div className="bg-gradient-to-r from-blue-600 to-purple-600 p-8 rounded-2xl">
                 <h3 className="text-2xl font-bold text-white mb-4">Get Started Today</h3>
@@ -432,7 +432,7 @@ const UltimateZionServicesShowcase2025: React.FC = () => {
                 <p className="text-gray-300">Middletown DE 19709</p>
               </div>
             </div>
-            
+
             <div className="mt-12">
               <a
                 href="https://ziontechgroup.com"

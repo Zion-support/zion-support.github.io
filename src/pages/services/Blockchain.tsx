@@ -134,7 +134,7 @@ export default function Blockchain() {
 
   return (
     <div className="min-h-screen bg-futuristic relative overflow-hidden">
-      <SEO 
+      <SEO
         title="Blockchain Services - Zion Tech Group"
         description="Transform your business with our advanced blockchain solutions. Smart contracts, DeFi, NFTs, and supply chain tracking for the digital age."
         keywords="blockchain, smart contracts, DeFi, NFTs, supply chain, cryptocurrency, decentralized applications"
@@ -155,7 +155,7 @@ export default function Blockchain() {
         {/* Hero Section */}
         <section className="pt-32 pb-20">
           <div className="container-responsive">
-            <motion.div 
+            <motion.div
               className="text-center max-w-4xl mx-auto"
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
@@ -169,18 +169,18 @@ export default function Blockchain() {
                 <span className="bg-gradient-to-r from-orange-400 via-red-500 to-pink-500 bg-clip-text text-transparent">Blockchain</span> Solutions for the Future
               </h1>
               <p className="text-xl text-zinc-300 mb-8 leading-relaxed">
-                Leverage the power of blockchain technology to create transparent, secure, and efficient 
+                Leverage the power of blockchain technology to create transparent, secure, and efficient
                 business processes. From smart contracts to DeFi, we're building the decentralized future.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <RouterLink 
+                <RouterLink
                   to="/contact"
                   className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-orange-500 to-red-500 text-white font-semibold rounded-lg hover:from-orange-600 hover:to-red-600 transition-all duration-300 transform hover:scale-105"
                 >
                   Get Started
                   <ArrowRight className="w-5 h-5 ml-2" />
                 </RouterLink>
-                <RouterLink 
+                <RouterLink
                   to="/request-quote"
                   className="inline-flex items-center px-8 py-4 border border-orange-500/30 text-orange-400 font-semibold rounded-lg hover:bg-orange-500/10 transition-all duration-300"
                 >
@@ -194,7 +194,7 @@ export default function Blockchain() {
         {/* Use Cases Section */}
         <section className="py-20">
           <div className="container-responsive">
-            <motion.div 
+            <motion.div
               className="text-center mb-16"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -241,7 +241,7 @@ export default function Blockchain() {
         {/* Features Section */}
         <section className="py-20 bg-white/5">
           <div className="container-responsive">
-            <motion.div 
+            <motion.div
               className="text-center mb-16"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -280,7 +280,7 @@ export default function Blockchain() {
         {/* Pricing Section */}
         <section className="py-20">
           <div className="container-responsive">
-            <motion.div 
+            <motion.div
               className="text-center mb-16"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -300,8 +300,8 @@ export default function Blockchain() {
                 <motion.div
                   key={index}
                   className={`relative p-8 rounded-2xl ${
-                    plan.popular 
-                      ? 'bg-gradient-to-br from-orange-500/20 to-red-500/20 border-2 border-orange-500/50' 
+                    plan.popular
+                      ? 'bg-gradient-to-br from-orange-500/20 to-red-500/20 border-2 border-orange-500/50'
                       : 'bg-white/5 border border-white/10'
                   } backdrop-blur-sm`}
                   initial={{ opacity: 0, y: 30 }}
@@ -316,7 +316,7 @@ export default function Blockchain() {
                       </span>
                     </div>
                   )}
-                  
+
                   <div className="text-center mb-6">
                     <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
                     <div className="flex items-baseline justify-center mb-2">
@@ -354,7 +354,7 @@ export default function Blockchain() {
         {/* Benefits Section */}
         <section className="py-20 bg-white/5">
           <div className="container-responsive">
-            <motion.div 
+            <motion.div
               className="text-center mb-16"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -408,14 +408,14 @@ export default function Blockchain() {
                 Join the blockchain revolution with Zion Tech Group's cutting-edge decentralized solutions
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <RouterLink 
+                <RouterLink
                   to="/contact"
                   className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-orange-500 to-red-500 text-white font-semibold rounded-lg hover:from-orange-600 hover:to-red-600 transition-all duration-300 transform hover:scale-105"
                 >
                   Start Your Journey
                   <ArrowRight className="w-5 h-5 ml-2" />
                 </RouterLink>
-                <RouterLink 
+                <RouterLink
                   to="/request-quote"
                   className="inline-flex items-center px-8 py-4 border border-orange-500/30 text-orange-400 font-semibold rounded-lg hover:bg-orange-500/10 transition-all duration-300"
                 >

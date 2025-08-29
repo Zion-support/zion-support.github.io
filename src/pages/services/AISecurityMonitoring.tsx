@@ -13,20 +13,20 @@ export default function AISecurityMonitoring() {
   ];
 
   const tiers = [
-    { 
-      name: 'Developer', 
-      price: '$299/mo', 
-      details: ['Up to 10 systems', 'Basic AI features', 'Standard monitoring', 'Email support'] 
+    {
+      name: 'Developer',
+      price: '$299/mo',
+      details: ['Up to 10 systems', 'Basic AI features', 'Standard monitoring', 'Email support']
     },
-    { 
-      name: 'Business', 
-      price: '$799/mo', 
-      details: ['Up to 50 systems', 'Advanced AI features', 'Enhanced monitoring', 'Priority support'] 
+    {
+      name: 'Business',
+      price: '$799/mo',
+      details: ['Up to 50 systems', 'Advanced AI features', 'Enhanced monitoring', 'Priority support']
     },
-    { 
-      name: 'Enterprise', 
-      price: '$1,999/mo', 
-      details: ['Unlimited systems', 'Custom AI models', 'Full monitoring suite', '24/7 dedicated support'] 
+    {
+      name: 'Enterprise',
+      price: '$1,999/mo',
+      details: ['Unlimited systems', 'Custom AI models', 'Full monitoring suite', '24/7 dedicated support']
     },
   ];
 

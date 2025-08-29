@@ -146,12 +146,12 @@ export default function DigitalTwin() {
 
   return (
     <>
-      <SEO 
+      <SEO
         title="Digital Twin Solutions | Zion Tech Group"
         description="Transform your physical assets into intelligent digital twins with real-time monitoring, predictive analytics, and automated optimization."
         keywords="digital twin, IoT, real-time monitoring, predictive analytics, smart manufacturing, smart cities"
       />
-      
+
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
         {/* Hero Section */}
         <section className="relative py-20 overflow-hidden">
@@ -174,7 +174,7 @@ export default function DigitalTwin() {
                 </span>
               </h1>
               <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
-                Transform your physical assets into intelligent digital twins for real-time monitoring, 
+                Transform your physical assets into intelligent digital twins for real-time monitoring,
                 predictive analytics, and intelligent automation.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -210,7 +210,7 @@ export default function DigitalTwin() {
                 Why Choose Our Digital Twin Solutions?
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                We combine cutting-edge IoT technology with advanced AI algorithms to deliver 
+                We combine cutting-edge IoT technology with advanced AI algorithms to deliver
                 comprehensive digital twin solutions that transform your operations.
               </p>
             </motion.div>
@@ -250,7 +250,7 @@ export default function DigitalTwin() {
                 Industry Applications
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Digital twin technology is transforming industries across the globe, 
+                Digital twin technology is transforming industries across the globe,
                 from manufacturing to healthcare and smart cities.
               </p>
             </motion.div>
@@ -313,8 +313,8 @@ export default function DigitalTwin() {
                   transition={{ duration: 0.6, delay: index * 0.1 }}
                   viewport={{ once: true }}
                   className={`relative bg-slate-800/50 border rounded-xl p-8 ${
-                    plan.popular 
-                      ? 'border-cyan-400/50 bg-slate-800/70' 
+                    plan.popular
+                      ? 'border-cyan-400/50 bg-slate-800/70'
                       : 'border-slate-700/50'
                   }`}
                 >
@@ -325,7 +325,7 @@ export default function DigitalTwin() {
                       </span>
                     </div>
                   )}
-                  
+
                   <div className="text-center mb-8">
                     <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
                     <div className="flex items-baseline justify-center mb-2">
@@ -374,7 +374,7 @@ export default function DigitalTwin() {
                 Business Benefits
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Discover how digital twin technology can transform your business operations 
+                Discover how digital twin technology can transform your business operations
                 and drive measurable results.
               </p>
             </motion.div>
@@ -414,7 +414,7 @@ export default function DigitalTwin() {
                 Technologies We Use
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Our digital twin solutions leverage cutting-edge technologies to deliver 
+                Our digital twin solutions leverage cutting-edge technologies to deliver
                 accurate, real-time, and intelligent asset monitoring.
               </p>
             </motion.div>
@@ -454,7 +454,7 @@ export default function DigitalTwin() {
                 Ready to Create Your Digital Twin?
               </h2>
               <p className="text-xl text-gray-300 mb-8">
-                Join hundreds of companies that have already transformed their operations 
+                Join hundreds of companies that have already transformed their operations
                 with our digital twin technology solutions.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">

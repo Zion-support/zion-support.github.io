@@ -1,11 +1,11 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { SEO } from '../../components/SEO';
-import { 
-  Shield, 
-  Search, 
-  AlertTriangle, 
-  CheckCircle, 
+import {
+  Shield,
+  Search,
+  AlertTriangle,
+  CheckCircle,
   ArrowRight,
   Lock,
   Database,
@@ -172,11 +172,11 @@ export default function SmartContractRiskScanner() {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      <SEO 
+      <SEO
         title="Smart Contract Risk Scanner - Zion Tech Group"
         description="AI-powered smart contract security scanner with automated vulnerability detection, multi-chain support, and comprehensive risk assessment. Protect your DeFi projects from security threats."
       />
-      
+
       {/* Hero Section */}
       <section className="relative py-20 px-4 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-red-600/20 to-orange-600/20"></div>
@@ -191,7 +191,7 @@ export default function SmartContractRiskScanner() {
               <Shield className="w-4 h-4" />
               <span>Blockchain Security Solution</span>
             </div>
-            
+
             <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
               <span className="bg-gradient-to-r from-red-400 via-orange-400 to-yellow-400 bg-clip-text text-transparent">
                 Smart Contract
@@ -199,12 +199,12 @@ export default function SmartContractRiskScanner() {
               <br />
               <span className="text-white">Risk Scanner</span>
             </h1>
-            
+
             <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
-              Protect your DeFi projects with AI-powered smart contract security scanning. 
+              Protect your DeFi projects with AI-powered smart contract security scanning.
               Detect vulnerabilities, assess risks, and secure your blockchain applications.
             </p>
-            
+
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <motion.button
                 whileHover={{ scale: 1.05 }}
@@ -214,7 +214,7 @@ export default function SmartContractRiskScanner() {
                 <span>Start Free Trial</span>
                 <ArrowRight className="w-5 h-5" />
               </motion.button>
-              
+
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
@@ -262,7 +262,7 @@ export default function SmartContractRiskScanner() {
               Advanced Security Features
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Our smart contract risk scanner provides comprehensive security analysis 
+              Our smart contract risk scanner provides comprehensive security analysis
               with AI-powered vulnerability detection and risk assessment.
             </p>
           </motion.div>
@@ -312,7 +312,7 @@ export default function SmartContractRiskScanner() {
               Comprehensive Vulnerability Detection
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Our scanner detects a wide range of smart contract vulnerabilities 
+              Our scanner detects a wide range of smart contract vulnerabilities
               and provides detailed analysis and remediation guidance.
             </p>
           </motion.div>
@@ -362,7 +362,7 @@ export default function SmartContractRiskScanner() {
               Multi-Chain Support
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Our scanner supports major blockchain networks and provides 
+              Our scanner supports major blockchain networks and provides
               consistent security analysis across different platforms.
             </p>
           </motion.div>
@@ -399,7 +399,7 @@ export default function SmartContractRiskScanner() {
               Industry Security Standards
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Our security scanner adheres to industry best practices and 
+              Our security scanner adheres to industry best practices and
               compliance standards for comprehensive protection.
             </p>
           </motion.div>
@@ -436,7 +436,7 @@ export default function SmartContractRiskScanner() {
               Transparent Security Pricing
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Choose the security plan that best fits your project's needs. 
+              Choose the security plan that best fits your project's needs.
               All plans include comprehensive vulnerability scanning and reporting.
             </p>
           </motion.div>
@@ -449,8 +449,8 @@ export default function SmartContractRiskScanner() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 className={`relative bg-slate-800/50 backdrop-blur-sm border rounded-lg p-8 ${
-                  plan.popular 
-                    ? 'border-red-400 shadow-lg shadow-red-400/20' 
+                  plan.popular
+                    ? 'border-red-400 shadow-lg shadow-red-400/20'
                     : 'border-slate-700'
                 }`}
               >
@@ -509,10 +509,10 @@ export default function SmartContractRiskScanner() {
               Ready to Secure Your Smart Contracts?
             </h2>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Join leading DeFi projects that are already using our smart contract 
+              Join leading DeFi projects that are already using our smart contract
               risk scanner to protect their applications and users.
             </p>
-            
+
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <motion.button
                 whileHover={{ scale: 1.05 }}
@@ -521,7 +521,7 @@ export default function SmartContractRiskScanner() {
               >
                 Start Free Trial
               </motion.button>
-              
+
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}

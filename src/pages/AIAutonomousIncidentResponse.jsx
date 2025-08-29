@@ -8,7 +8,7 @@ const AIAutonomousIncidentResponse = () => {
         <meta name="keywords" content="AI incident response, autonomous incident response, incident detection, automatic response, autonomous operations, AI incident response platform"/>
         <link rel="canonical" href="https://ziontechgroup.com/ai-autonomous-incident-response"/>
       </Helmet>
-      
+
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-red-900 to-slate-900">
         <div className="container mx-auto px-4 py-16">
           {/* Hero Section */}
@@ -52,31 +52,31 @@ const AIAutonomousIncidentResponse = () => {
               <h3 className="text-xl font-semibold text-white mb-3">Incident Intelligence</h3>
               <p className="text-gray-300">AI trained on incident datasets</p>
             </div>
-            
+
             <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20">
               <div className="text-orange-400 text-4xl mb-4">🤖</div>
               <h3 className="text-xl font-semibold text-white mb-3">Autonomous Operation</h3>
               <p className="text-gray-300">AI that responds independently</p>
             </div>
-            
+
             <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20">
               <div className="text-yellow-400 text-4xl mb-4">📈</div>
               <h3 className="text-xl font-semibold text-white mb-3">Continuous Incident Response</h3>
               <p className="text-gray-300">24/7 incident response operations</p>
             </div>
-            
+
             <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20">
               <div className="text-amber-400 text-4xl mb-4">🔍</div>
               <h3 className="text-xl font-semibold text-white mb-3">Deep Analysis</h3>
               <p className="text-gray-300">Comprehensive incident insights</p>
             </div>
-            
+
             <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20">
               <div className="text-lime-400 text-4xl mb-4">🛡️</div>
               <h3 className="text-xl font-semibold text-white mb-3">Proactive Incident Response</h3>
               <p className="text-gray-300">Prevent incident issues</p>
             </div>
-            
+
             <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20">
               <div className="text-green-400 text-4xl mb-4">⚡</div>
               <h3 className="text-xl font-semibold text-white mb-3">Adaptive Incident Response</h3>
@@ -93,25 +93,25 @@ const AIAutonomousIncidentResponse = () => {
                 <h3 className="text-lg font-semibold text-white mb-2">Detect</h3>
                 <p className="text-gray-300 text-sm">Detect incident</p>
               </div>
-              
+
               <div className="text-center">
                 <div className="bg-red-600 w-16 h-16 rounded-full flex items-center justify-center text-2xl font-bold text-white mx-auto mb-4">2</div>
                 <h3 className="text-lg font-semibold text-white mb-2">Analyze</h3>
                 <p className="text-gray-300 text-sm">Analyze incident</p>
               </div>
-              
+
               <div className="text-center">
                 <div className="bg-red-600 w-16 h-16 rounded-full flex items-center justify-center text-2xl font-bold text-white mx-auto mb-4">3</div>
                 <h3 className="text-lg font-semibold text-white mb-2">Respond</h3>
                 <p className="text-gray-300 text-sm">Respond automatically</p>
               </div>
-              
+
               <div className="text-center">
                 <div className="bg-red-600 w-16 h-16 rounded-full flex items-center justify-center text-2xl font-bold text-white mx-auto mb-4">4</div>
                 <h3 className="text-lg font-semibold text-white mb-2">Resolve</h3>
                 <p className="text-gray-300 text-sm">Resolve issue</p>
               </div>
-              
+
               <div className="text-center">
                 <div className="bg-red-600 w-16 h-16 rounded-full flex items-center justify-center text-2xl font-bold text-white mx-auto mb-4">5</div>
                 <h3 className="text-lg font-semibold text-white mb-2">Learn</h3>
@@ -138,12 +138,12 @@ const AIAutonomousIncidentResponse = () => {
                 <h3 className="text-xl font-semibold text-white mb-3">Cybersecurity</h3>
                 <p className="text-gray-300">Security incident response</p>
               </div>
-              
+
               <div className="bg-white/5 rounded-xl p-6 border border-white/10">
                 <h3 className="text-xl font-semibold text-white mb-3">IT Operations</h3>
                 <p className="text-gray-300">IT incident response</p>
               </div>
-              
+
               <div className="bg-white/5 rounded-xl p-6 border border-white/10">
                 <h3 className="text-xl font-semibold text-white mb-3">Network Management</h3>
                 <p className="text-gray-300">Network incident response</p>

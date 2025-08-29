@@ -1,16 +1,16 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import { 
-  Brain, 
-  Zap, 
-  Shield, 
-  Cloud, 
-  Cpu, 
-  Database, 
-  Rocket, 
-  Target, 
-  Users, 
+import {
+  Brain,
+  Zap,
+  Shield,
+  Cloud,
+  Cpu,
+  Database,
+  Rocket,
+  Target,
+  Users,
   BarChart3,
   CheckCircle,
   ArrowRight,
@@ -106,7 +106,7 @@ const ComprehensiveServices: React.FC = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      <SEO 
+      <SEO
         title="Comprehensive Services - Zion Tech Group"
         description="Explore our complete portfolio of innovative technology solutions including AI, Quantum Computing, Cloud DevOps, IoT, and Micro SaaS services."
         keywords="technology services, AI solutions, quantum computing, cloud services, IoT solutions, Zion Tech Group"
@@ -130,10 +130,10 @@ const ComprehensiveServices: React.FC = () => {
               <span className="text-white">Technology Services</span>
             </h1>
             <p className="text-xl md:text-2xl text-slate-300 mb-8 leading-relaxed">
-              From artificial intelligence to quantum computing, discover our complete portfolio 
+              From artificial intelligence to quantum computing, discover our complete portfolio
               of innovative solutions designed to transform your business.
             </p>
-            
+
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 to="/contact"
@@ -189,7 +189,7 @@ const ComprehensiveServices: React.FC = () => {
               Our <span className="text-cyan-400">Service Categories</span>
             </h2>
             <p className="text-xl text-slate-300 max-w-3xl mx-auto">
-              Explore our comprehensive range of technology services designed to meet 
+              Explore our comprehensive range of technology services designed to meet
               every aspect of your business needs.
             </p>
           </motion.div>
@@ -211,14 +211,14 @@ const ComprehensiveServices: React.FC = () => {
                     <span className="text-yellow-400 text-sm font-semibold">Featured Category</span>
                   </div>
                 )}
-                
+
                 <div className="w-12 h-12 bg-gradient-to-br from-cyan-400/20 to-blue-500/20 rounded-lg flex items-center justify-center mb-4">
                   <category.icon className="w-6 h-6 text-cyan-400" />
                 </div>
-                
+
                 <h3 className="text-xl font-bold text-white mb-3">{category.title}</h3>
                 <p className="text-slate-300 mb-6">{category.description}</p>
-                
+
                 <ul className="space-y-2 mb-6">
                   {category.services.map((service, serviceIndex) => (
                     <li key={serviceIndex}>
@@ -232,7 +232,7 @@ const ComprehensiveServices: React.FC = () => {
                     </li>
                   ))}
                 </ul>
-                
+
                 <Link
                   to={`/services#${category.title.toLowerCase().replace(/\s+/g, '-')}`}
                   className="inline-flex items-center text-cyan-400 hover:text-cyan-300 font-medium transition-colors"
@@ -258,10 +258,10 @@ const ComprehensiveServices: React.FC = () => {
               Ready to Transform Your Business?
             </h2>
             <p className="text-xl text-slate-300 mb-8 max-w-2xl mx-auto">
-              Let's discuss how our comprehensive technology services can revolutionize 
+              Let's discuss how our comprehensive technology services can revolutionize
               your operations and drive innovation.
             </p>
-            
+
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 to="/contact"

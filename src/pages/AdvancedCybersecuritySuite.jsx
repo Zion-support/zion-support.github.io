@@ -26,7 +26,7 @@ const AdvancedCybersecuritySuite = () => {
                 </span>
               </h1>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
-                Comprehensive cybersecurity protection with AI-powered threat detection, 
+                Comprehensive cybersecurity protection with AI-powered threat detection,
                 real-time monitoring, and automated response capabilities for enterprise-grade security.
               </p>
             </div>

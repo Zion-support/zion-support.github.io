@@ -186,7 +186,7 @@ export default function ITServicesPage() {
             IT Services & Solutions
           </h1>
           <p className="text-xl text-zion-cyan-light max-w-3xl mx-auto mb-8">
-            Comprehensive IT services to modernize, secure, and optimize your technology infrastructure. 
+            Comprehensive IT services to modernize, secure, and optimize your technology infrastructure.
             From cloud migration to cybersecurity, we've got you covered.
           </p>
           <div className="flex flex-wrap justify-center gap-4">

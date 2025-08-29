@@ -1,14 +1,14 @@
 import React, { useState } from 'react';
 import { SEO } from "@/components/SEO";
 import { Link } from 'react-router-dom';
-import { 
-  Brain, 
-  Zap, 
-  Shield, 
-  Database, 
-  Users, 
-  TrendingUp, 
-  Globe, 
+import {
+  Brain,
+  Zap,
+  Shield,
+  Database,
+  Users,
+  TrendingUp,
+  Globe,
   Lock,
   Cloud,
   Briefcase,
@@ -41,21 +41,21 @@ export default function UltimateServicesShowcase2025() {
 
   const getCategoryIcon = (category: string) => {
     if (category === 'all') return <Rocket className="w-6 h-6" />;
-    return ULTIMATE_SERVICE_CATEGORIES_2025[category]?.icon ? 
-      <span className="text-2xl">{ULTIMATE_SERVICE_CATEGORIES_2025[category].icon}</span> : 
+    return ULTIMATE_SERVICE_CATEGORIES_2025[category]?.icon ?
+      <span className="text-2xl">{ULTIMATE_SERVICE_CATEGORIES_2025[category].icon}</span> :
       <Rocket className="w-6 h-6" />;
   };
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <SEO 
+      <SEO
         title="Ultimate Innovative Services 2025 | Zion Tech Group"
         description="Discover our revolutionary AI-powered, quantum-secure, and autonomous business solutions. Transform your business with cutting-edge technology."
         keywords="AI services, quantum computing, autonomous business, micro SAAS, technology solutions"
         ogImage="/og-image.jpg"
         canonicalUrl="https://ziontechgroup.com"
       />
-      
+
       {/* Header Section */}
       <section className="relative py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto text-center">
@@ -65,7 +65,7 @@ export default function UltimateServicesShowcase2025() {
           <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
             Discover our comprehensive portfolio of cutting-edge AI, quantum computing, and emerging technology solutions designed to transform your business and drive unprecedented growth
           </p>
-          
+
           <div className="flex flex-wrap justify-center gap-4 mb-12">
             <div className="bg-cyan-400/20 border border-cyan-400/30 rounded-full px-6 py-3">
               <span className="text-cyan-400 font-semibold">🚀 {filteredServices.length} Services</span>
@@ -97,7 +97,7 @@ export default function UltimateServicesShowcase2025() {
               />
               <Search className="absolute right-4 top-1/2 transform -translate-y-1/2 h-6 w-6 text-cyan-400" />
             </div>
-            
+
             {/* Category Filter */}
             <div className="flex flex-wrap gap-2 justify-center">
               {categories.map((category) => (
@@ -137,15 +137,15 @@ export default function UltimateServicesShowcase2025() {
                     <div className="text-gray-400 text-sm">{service.pricingModel}</div>
                   </div>
                 </div>
-                
+
                 <h3 className="text-xl font-bold text-white mb-3 group-hover:text-cyan-400 transition-colors">
                   {service.title}
                 </h3>
-                
+
                 <p className="text-gray-300 mb-4 line-clamp-3">
                   {service.description}
                 </p>
-                
+
                 <div className="mb-4">
                   <div className="text-sm text-gray-400 mb-2">Key Features:</div>
                   <div className="flex flex-wrap gap-2">
@@ -159,7 +159,7 @@ export default function UltimateServicesShowcase2025() {
                     ))}
                   </div>
                 </div>
-                
+
                 <div className="flex items-center justify-between">
                   <div className="text-sm text-gray-400">
                     <span className="text-cyan-400 font-semibold">ROI:</span> {service.roi}
@@ -187,7 +187,7 @@ export default function UltimateServicesShowcase2025() {
           <p className="text-xl text-gray-300 mb-8">
             Get in touch with our experts to discuss how our innovative services can drive your success
           </p>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
             <div className="flex items-center justify-center space-x-3">
               <Phone className="h-6 w-6 text-cyan-400" />
@@ -202,7 +202,7 @@ export default function UltimateServicesShowcase2025() {
               <span className="text-white">364 E Main St STE 1008 Middletown DE 19709</span>
             </div>
           </div>
-          
+
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               to="/contact"

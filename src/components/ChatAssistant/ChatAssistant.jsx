@@ -155,12 +155,12 @@ export function ChatAssistant({ isOpen, onClose, recipient, conversationId, init
             <X className="h-5 w-5"/>
           </Button>
         </div>
-        
+
         {/* Context Header (Optional) */}
         {contextHeader && (<div className="border-b border-zion-purple/20 bg-zion-blue-dark/50 p-3">
             {contextHeader}
           </div>)}
-        
+
         {/* Messages */}
         <div className="flex-1 overflow-y-auto p-4 space-y-4" aria-live="polite">
           {currentMessages.length === 0 ? (<div className="text-center text-zion-slate py-8">
@@ -168,7 +168,7 @@ export function ChatAssistant({ isOpen, onClose, recipient, conversationId, init
             </div>) : (currentMessages.map((msg) => (<ChatMessage key={msg.id} role={msg.role} message={msg.message}/>)))}
           <div ref={messagesEndRef}/>
         </div>
-        
+
         {/* Input */}
         <div className="p-3 border-t border-zion-purple/20 bg-zion-blue-dark/30">
           <ChatInput onSend={handleSendMessage}/>

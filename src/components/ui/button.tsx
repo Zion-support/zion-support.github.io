@@ -1,4 +1,3 @@
-import React from 'react';
 interface ButtonProps {
   children: React.ReactNode;
   variant?: 'default' | 'outline' | 'ghost' | 'link';
@@ -9,12 +8,12 @@ interface ButtonProps {
   type?: 'button' | 'submit' | 'reset';
   disabled?: boolean;
 }
-export function Button({ 
-  children, 
-  variant = 'default', 
+export function Button({
+  children,
+  variant = 'default',
   size = 'md',
   asChild = false,
-  className = '', 
+  className = '',
   onClick,
   type = 'button',
   disabled = false

@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { 
-  Search, 
-  BookOpen, 
-  MessageCircle, 
+import {
+  Search,
+  BookOpen,
+  MessageCircle,
   Phone,
   Mail,
   Video,
@@ -21,8 +21,8 @@ export default function Help() {
   const [searchQuery, setSearchQuery] = useState('');
   const [openCategories, setOpenCategories] = useState([]);
   const toggleCategory = (category) => {
-    setOpenCategories(prev => 
-      prev.includes(category) 
+    setOpenCategories(prev =>
+      prev.includes(category)
         ? prev.filter(c => c !== category)
         : [...prev, category]
     );
@@ -267,7 +267,7 @@ export default function Help() {
                         <div key={articleIndex} className="bg-zion-blue-dark/30 p-4 rounded-lg hover:bg-zion-cyan/10 transition-colors">
                           <h4 className="text-white font-medium mb-2">{article.title}</h4>
                           <p className="text-zion-slate-light text-sm mb-3">{article.description}</p>
-                          <Link 
+                          <Link
                             to={article.url}
                             className="inline-flex items-center space-x-2 text-zion-cyan hover:text-zion-cyan-light transition-colors text-sm font-medium"
                           >
@@ -365,7 +365,7 @@ export default function Help() {
               <p className="text-zion-slate-light text-sm mb-4">
                 Call us directly for immediate assistance
               </p>
-              <a 
+              <a
                 href="tel:+13024640950"
                 className="px-4 py-2 bg-zion-cyan text-white rounded-lg font-medium hover:bg-zion-cyan-light transition-colors inline-block"
               >
@@ -378,7 +378,7 @@ export default function Help() {
               <p className="text-zion-slate-light text-sm mb-4">
                 Send us a detailed message
               </p>
-              <a 
+              <a
                 href="mailto:kleber@ziontechgroup.com"
                 className="px-4 py-2 bg-zion-cyan text-white rounded-lg font-medium hover:bg-zion-cyan-light transition-colors inline-block"
               >

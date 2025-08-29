@@ -119,11 +119,11 @@ export function CategoriesSection({ showTitle = true }) {
         {showTitle && (<motion.div className="text-center mb-16" initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
             <GradientHeading>Explore Categories</GradientHeading>
             <p className="text-zion-slate-light text-lg mt-4 max-w-3xl mx-auto leading-relaxed">
-              Discover our comprehensive ecosystem of tech services, talent, equipment, and innovation. 
+              Discover our comprehensive ecosystem of tech services, talent, equipment, and innovation.
               Everything you need to accelerate your digital transformation in one place.
             </p>
           </motion.div>)}
-        
+
         <motion.div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8" variants={containerVariants} initial="hidden" whileInView="visible" viewport={{ once: true }}>
           {categories.map((category, index) => (<motion.div key={category.title} variants={itemVariants} whileHover={{ y: -8 }} transition={{ type: "spring", stiffness: 300 }}>
               <Link to={category.link} className="group block h-full">
@@ -167,7 +167,7 @@ export function CategoriesSection({ showTitle = true }) {
               </Link>
             </motion.div>))}
         </motion.div>
-        
+
         {/* Enhanced featured services section */}
         <motion.div className="mt-16" initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6, delay: 0.3 }}>
           <h3 className="text-center text-2xl font-bold text-white mb-8">Featured Services</h3>
@@ -188,7 +188,7 @@ export function CategoriesSection({ showTitle = true }) {
                 </Link>
               </motion.div>))}
           </div>
-          
+
           {/* View all services button */}
           <motion.div className="text-center mt-8" initial={{ opacity: 0, scale: 0.9 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }} transition={{ duration: 0.5, delay: 0.5 }}>
             <Link to="/comprehensive-services" className="inline-flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple border border-zion-purple/50 hover:border-zion-purple rounded-xl text-white transition-all duration-300 shadow-lg hover:shadow-zion-purple/25 font-semibold group">

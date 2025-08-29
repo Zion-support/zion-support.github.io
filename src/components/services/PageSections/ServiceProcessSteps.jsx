@@ -134,7 +134,7 @@ export const ServiceProcessSteps = () => {
             Our Service Delivery Process
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            We follow a proven, systematic approach to ensure successful project delivery. 
+            We follow a proven, systematic approach to ensure successful project delivery.
             Each step is carefully planned and executed to meet your business objectives.
           </p>
         </div>
@@ -143,7 +143,7 @@ export const ServiceProcessSteps = () => {
         <div className="relative">
           {/* Connection Line */}
           <div className="hidden lg:block absolute left-1/2 top-0 bottom-0 w-1 bg-gradient-to-b from-blue-200 to-purple-200 transform -translate-x-1/2"></div>
-          
+
           <div className="space-y-12">
             {processSteps.map((step, index) => (
               <div key={step.step} className="relative">
@@ -228,7 +228,7 @@ export const ServiceProcessSteps = () => {
             <h3 className="text-3xl font-bold text-gray-900 text-center mb-12">
               Why Our Process Works
             </h3>
-            
+
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               <div className="text-center">
                 <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
@@ -239,7 +239,7 @@ export const ServiceProcessSteps = () => {
                   Every step is documented and repeatable for consistent results
                 </p>
               </div>
-              
+
               <div className="text-center">
                 <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
                   <Users className="w-8 h-8 text-green-600" />
@@ -249,7 +249,7 @@ export const ServiceProcessSteps = () => {
                   Skilled professionals with years of experience in IT services
                 </p>
               </div>
-              
+
               <div className="text-center">
                 <div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
                   <CheckCircle className="w-8 h-8 text-purple-600" />
@@ -259,7 +259,7 @@ export const ServiceProcessSteps = () => {
                   Multiple testing phases ensure everything works perfectly
                 </p>
               </div>
-              
+
               <div className="text-center">
                 <div className="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-4">
                   <Star className="w-8 h-8 text-orange-600" />

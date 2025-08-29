@@ -142,11 +142,11 @@ const config: Config = {
           to: { transform: "translateX(0)" },
         },
         "glow-pulse": {
-          "0%, 100%": { 
-            boxShadow: "0 0 5px currentColor, 0 0 10px currentColor, 0 0 15px currentColor" 
+          "0%, 100%": {
+            boxShadow: "0 0 5px currentColor, 0 0 10px currentColor, 0 0 15px currentColor"
           },
-          "50%": { 
-            boxShadow: "0 0 10px currentColor, 0 0 20px currentColor, 0 0 30px currentColor" 
+          "50%": {
+            boxShadow: "0 0 10px currentColor, 0 0 20px currentColor, 0 0 30px currentColor"
           },
         },
         "float": {

@@ -1,12 +1,12 @@
 import React, { Component, ErrorInfo, ReactNode } from 'react';
 import { motion } from 'framer-motion';
-import { 
-  AlertTriangle, 
-  RefreshCw, 
-  Home, 
-  Bug, 
-  FileText, 
-  Copy, 
+import {
+  AlertTriangle,
+  RefreshCw,
+  Home,
+  Bug,
+  FileText,
+  Copy,
   X,
   AlertCircle,
   Info,
@@ -55,7 +55,7 @@ export class ErrorBoundary extends Component<Props, State> {
     });
 
     // Log error to console
-    console.error('ErrorBoundary caught an error:', error, errorInfo);
+    // console.error('ErrorBoundary caught an error:', error, errorInfo);
 
     // Call custom error handler if provided
     if (this.props.onError) {
@@ -81,8 +81,8 @@ export class ErrorBoundary extends Component<Props, State> {
       };
 
       // You can send this to your error logging service
-      console.log('Error logged:', errorData);
-      
+      // console.log('Error logged:', errorData);
+
       // Example: Send to external service
       // fetch('/api/errors', {
       //   method: 'POST',
@@ -90,7 +90,7 @@ export class ErrorBoundary extends Component<Props, State> {
       //   body: JSON.stringify(errorData)
       // });
     } catch (logError) {
-      console.error('Failed to log error:', logError);
+      // console.error('Failed to log error:', logError);
     }
   };
 
@@ -227,7 +227,7 @@ User Agent: ${navigator.userAgent}
                         <X className="w-4 h-4 text-gray-500" />
                       </motion.div>
                     </button>
-                    
+
                     {this.state.showStack && (
                       <motion.div
                         initial={{ height: 0, opacity: 0 }}
@@ -282,7 +282,7 @@ User Agent: ${navigator.userAgent}
                   <RefreshCw className="w-4 h-4" />
                   Try Again
                 </button>
-                
+
                 <button
                   onClick={this.handleGoHome}
                   className="flex-1 bg-gradient-to-r from-gray-500 to-gray-600 text-white px-6 py-3 rounded-lg font-medium hover:from-gray-600 hover:to-gray-700 transition-all duration-200 flex items-center justify-center gap-2 shadow-lg hover:shadow-xl"
@@ -302,7 +302,7 @@ User Agent: ${navigator.userAgent}
                   <Copy className="w-4 h-4" />
                   Copy Error Details
                 </button>
-                
+
                 <button
                   onClick={() => window.location.reload()}
                   className="flex items-center gap-2 text-sm text-gray-600 hover:text-gray-800 transition-colors"
@@ -345,11 +345,11 @@ export function withErrorBoundary<P extends object>(
 // Hook for functional components to catch errors
 export function useErrorHandler() {
   return React.useCallback((error: Error, errorInfo?: ErrorInfo) => {
-    console.error('Error caught by useErrorHandler:', error, errorInfo);
-    
+    // console.error('Error caught by useErrorHandler:', error, errorInfo);
+
     // You can add custom error handling logic here
     // For example, sending to an error reporting service
-    
+
     // Re-throw the error to trigger error boundaries
     throw error;
   }, []);

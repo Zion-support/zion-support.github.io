@@ -33,9 +33,9 @@ export function SEO({
   const siteUrl = 'https://ziontechgroup.com';
   const fullUrl = url ? `${siteUrl}${url}` : siteUrl;
   const fullImageUrl = image.startsWith('http') ? image : `${siteUrl}${image}`;
-  
+
   // Default meta description if none provided
-  const metaDescription = description || 
+  const metaDescription = description ||
     'Zion Tech Group - Leading provider of cutting-edge AI solutions, cloud computing, and digital transformation services. Transform your business with our innovative technology ecosystem.';
 
   // Default title if none provided
@@ -156,10 +156,10 @@ export function SEO({
       <title>{fullTitle}</title>
       <meta name="description" content={metaDescription} />
       <meta name="robots" content={robotsContent} />
-      
+
       {/* Canonical URL */}
       {canonical && <link rel="canonical" href={`${siteUrl}${canonical}`} />}
-      
+
       {/* Open Graph / Facebook */}
       <meta property="og:type" content={type} />
       <meta property="og:title" content={title} />
@@ -170,7 +170,7 @@ export function SEO({
       <meta property="og:image:height" content="630" />
       <meta property="og:site_name" content="Zion Tech Group" />
       <meta property="og:locale" content="en_US" />
-      
+
       {/* Twitter Card */}
       <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:site" content="@ziontechgroup" />
@@ -178,14 +178,14 @@ export function SEO({
       <meta name="twitter:title" content={title} />
       <meta name="twitter:description" content={metaDescription} />
       <meta name="twitter:image" content={fullImageUrl} />
-      
+
       {/* Additional Meta Tags */}
       <meta name="author" content={author} />
       <meta name="keywords" content={tags.join(', ')} />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <meta name="theme-color" content="#22ddd2" />
       <meta name="msapplication-TileColor" content="#22ddd2" />
-      
+
       {/* Favicon */}
       <link rel="icon" type="image/x-icon" href="/favicon.ico" />
       <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
@@ -196,7 +196,7 @@ export function SEO({
       <link rel="preconnect" href="https://fonts.googleapis.com" />
       <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
       <link rel="preconnect" href="https://cdn.gpteng.co" />
-      
+
       {/* Structured Data */}
       <script type="application/ld+json">
         {JSON.stringify(organizationSchema)}
@@ -209,23 +209,23 @@ export function SEO({
       <meta name="apple-mobile-web-app-title" content="Zion Tech" />
       <meta name="apple-mobile-web-app-capable" content="yes" />
       <meta name="apple-mobile-web-app-status-bar-style" content="default" />
-      
+
       {/* Security Headers */}
       <meta httpEquiv="X-Content-Type-Options" content="nosniff" />
       <meta httpEquiv="X-Frame-Options" content="DENY" />
       <meta httpEquiv="X-XSS-Protection" content="1; mode=block" />
       <meta httpEquiv="Referrer-Policy" content="strict-origin-when-cross-origin" />
-      
+
       {/* Performance and UX */}
       <meta name="format-detection" content="telephone=no" />
       <meta name="mobile-web-app-capable" content="yes" />
-      
+
       {/* Language and Region */}
       <meta httpEquiv="Content-Language" content="en" />
       <meta name="language" content="English" />
       <meta name="geo.region" content="US-DE" />
       <meta name="geo.placename" content="Middletown, Delaware" />
-      
+
       {/* Business Information */}
       <meta name="business:contact_data:street_address" content="364 E Main St STE 1008" />
       <meta name="business:contact_data:locality" content="Middletown" />

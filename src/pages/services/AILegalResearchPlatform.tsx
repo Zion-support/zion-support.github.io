@@ -1,13 +1,13 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { SEO } from '@/components/SEO';
-import { 
-  Brain, 
-  BookOpen, 
-  TrendingUp, 
-  Target, 
-  Users, 
-  BarChart3, 
+import {
+  Brain,
+  BookOpen,
+  TrendingUp,
+  Target,
+  Users,
+  BarChart3,
   Calendar,
   Zap,
   CheckCircle,
@@ -124,11 +124,11 @@ export default function AILegalResearchPlatform() {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      <SEO 
+      <SEO
         title="AI Legal Research Platform - Zion Tech Group"
         description="Revolutionize your legal research with AI-powered case analysis, document review, and legal insights. Save time and improve case outcomes."
       />
-      
+
       {/* Hero Section */}
       <section className="relative py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto text-center">
@@ -148,7 +148,7 @@ export default function AILegalResearchPlatform() {
               </span>
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Transform your legal research with AI that analyzes cases, reviews documents, and provides insights. 
+              Transform your legal research with AI that analyzes cases, reviews documents, and provides insights.
               Save time, improve accuracy, and deliver better outcomes for your clients.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -304,8 +304,8 @@ export default function AILegalResearchPlatform() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 className={`relative bg-gray-800/50 backdrop-blur-sm rounded-xl p-8 border ${
-                  plan.popular 
-                    ? 'border-amber-500 ring-2 ring-amber-500/20' 
+                  plan.popular
+                    ? 'border-amber-500 ring-2 ring-amber-500/20'
                     : 'border-gray-700'
                 }`}
               >
@@ -316,7 +316,7 @@ export default function AILegalResearchPlatform() {
                     </span>
                   </div>
                 )}
-                
+
                 <div className="text-center mb-8">
                   <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
                   <p className="text-gray-400 mb-4">{plan.description}</p>

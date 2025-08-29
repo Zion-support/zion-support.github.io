@@ -119,7 +119,7 @@ const QuantumNeuralNetwork = () => {
               <span className="bg-gradient-to-r from-indigo-400 to-purple-400 bg-clip-text text-transparent"> Neural Networks</span>
             </h1>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-              Harness the power of quantum computing to revolutionize neural network 
+              Harness the power of quantum computing to revolutionize neural network
               performance and solve previously intractable problems.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -142,11 +142,11 @@ const QuantumNeuralNetwork = () => {
               Quantum Features
             </h2>
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              Our Quantum Neural Network solution combines cutting-edge quantum 
+              Our Quantum Neural Network solution combines cutting-edge quantum
               computing with advanced neural network architectures.
             </p>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {quantumFeatures.map((feature, index) => (<div key={index} className="bg-slate-800/50 border border-white/10 rounded-xl p-6 hover:border-indigo-500/50 transition-all duration-300">
                 <div className="w-16 h-16 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-full flex items-center justify-center mx-auto mb-4">
@@ -173,11 +173,11 @@ const QuantumNeuralNetwork = () => {
               Applications
             </h2>
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              Quantum Neural Networks excel in solving complex problems across 
+              Quantum Neural Networks excel in solving complex problems across
               multiple industries and research domains.
             </p>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {applications.map((application, index) => (<div key={index} className="bg-slate-800/50 border border-white/10 rounded-xl p-6 hover:border-indigo-500/50 transition-all duration-300">
                 <div className="w-16 h-16 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-full flex items-center justify-center mx-auto mb-4">
@@ -205,7 +205,7 @@ const QuantumNeuralNetwork = () => {
                 Why Choose Quantum Neural Networks?
               </h2>
               <p className="text-lg text-gray-300 mb-6">
-                Our quantum-enhanced neural networks provide unprecedented 
+                Our quantum-enhanced neural networks provide unprecedented
                 computational power and problem-solving capabilities.
               </p>
               <ul className="space-y-3">
@@ -220,7 +220,7 @@ const QuantumNeuralNetwork = () => {
                 <Lightbulb className="w-24 h-24 text-indigo-400 mx-auto mb-4"/>
                 <h3 className="text-2xl font-bold text-white mb-2">Quantum Advantage</h3>
                 <p className="text-gray-300 mb-6">
-                  Experience exponential speedup and solve problems that are 
+                  Experience exponential speedup and solve problems that are
                   impossible with classical computing alone.
                 </p>
                 <div className="text-sm text-gray-400">
@@ -241,10 +241,10 @@ const QuantumNeuralNetwork = () => {
             Implementation Process
           </h2>
           <p className="text-xl text-gray-300 mb-8">
-            A structured approach to implementing quantum neural networks 
+            A structured approach to implementing quantum neural networks
             with expert guidance and support.
           </p>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {implementation.map((phase, index) => (<div key={index} className="text-center">
                 <div className="w-16 h-16 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-full flex items-center justify-center mx-auto mb-4 text-2xl font-bold text-white">
@@ -265,7 +265,7 @@ const QuantumNeuralNetwork = () => {
             Ready to Experience Quantum AI?
           </h2>
           <p className="text-xl text-gray-300 mb-8">
-            Transform your organization with the power of quantum computing 
+            Transform your organization with the power of quantum computing
             and advanced neural networks.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">

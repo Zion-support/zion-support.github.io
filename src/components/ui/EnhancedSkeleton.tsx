@@ -20,7 +20,7 @@ const Skeleton: React.FC<SkeletonProps> = ({
   animated = true,
 }) => {
   const baseClasses = 'bg-slate-200 dark:bg-slate-700 rounded';
-  
+
   const variants = {
     default: 'h-4 w-full',
     circular: 'rounded-full',
@@ -47,8 +47,8 @@ const Skeleton: React.FC<SkeletonProps> = ({
               'h-4',
               index === lines - 1 ? 'w-3/4' : 'w-full'
             )}
-            initial={animated ? { opacity: 0.5 } : {}}
-            animate={animated ? { opacity: [0.5, 1, 0.5] } : {}}
+            initial={animated ? { opacity: 0.5 } : { /* empty */ }}
+            animate={animated ? { opacity: [0.5, 1, 0.5] } : { /* empty */ }}
             transition={{
               duration: 1.5,
               repeat: Infinity,
@@ -61,7 +61,7 @@ const Skeleton: React.FC<SkeletonProps> = ({
     );
   }
 
-  const style: React.CSSProperties = {};
+  const style: React.CSSProperties = { /* empty */ };
   if (width) style.width = typeof width === 'number' ? `${width}px` : width;
   if (height) style.height = typeof height === 'number' ? `${height}px` : height;
 
@@ -69,8 +69,8 @@ const Skeleton: React.FC<SkeletonProps> = ({
     <motion.div
       className={skeletonClasses}
       style={style}
-      initial={animated ? { opacity: 0.5 } : {}}
-      animate={animated ? { opacity: [0.5, 1, 0.5] } : {}}
+      initial={animated ? { opacity: 0.5 } : { /* empty */ }}
+      animate={animated ? { opacity: [0.5, 1, 0.5] } : { /* empty */ }}
       transition={{
         duration: 1.5,
         repeat: Infinity,
@@ -133,9 +133,9 @@ export const ListSkeleton: React.FC<{ items?: number; className?: string }> = ({
   </div>
 );
 
-export const GridSkeleton: React.FC<{ 
-  rows?: number; 
-  columns?: number; 
+export const GridSkeleton: React.FC<{
+  rows?: number;
+  columns?: number;
   className?: string;
   itemHeight?: number;
 }> = ({

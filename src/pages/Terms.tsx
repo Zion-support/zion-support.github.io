@@ -1,10 +1,10 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { 
-  FileText, 
-  Shield, 
-  Users, 
-  Globe, 
+import {
+  FileText,
+  Shield,
+  Users,
+  Globe,
   CheckCircle,
   AlertTriangle,
   Scale,
@@ -101,11 +101,11 @@ export default function Terms() {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      <SEO 
+      <SEO
         title="Terms of Service - Zion Tech Group"
         description="Read Zion Tech Group's terms of service. Understand your rights and responsibilities when using our technology services and solutions."
       />
-      
+
       {/* Hero Section */}
       <section className="relative py-20 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-blue-500/10 to-purple-500/10"></div>
@@ -125,7 +125,7 @@ export default function Terms() {
               <span className="bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent"> Service</span>
             </h1>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-              These terms govern your use of our services. Please read them carefully 
+              These terms govern your use of our services. Please read them carefully
               before using our technology solutions.
             </p>
             <div className="text-sm text-gray-400">
@@ -148,7 +148,7 @@ export default function Terms() {
               Key Terms Overview
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Understanding these fundamental terms helps ensure a smooth 
+              Understanding these fundamental terms helps ensure a smooth
               relationship between you and Zion Tech Group.
             </p>
           </motion.div>
@@ -186,7 +186,7 @@ export default function Terms() {
               Your Obligations
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              As a user of our services, you have certain responsibilities 
+              As a user of our services, you have certain responsibilities
               that help ensure a secure and productive environment.
             </p>
           </motion.div>
@@ -221,7 +221,7 @@ export default function Terms() {
                 Prohibited Activities
               </h2>
               <p className="text-lg text-gray-300 mb-6">
-                To maintain a secure and professional environment, certain activities 
+                To maintain a secure and professional environment, certain activities
                 are strictly prohibited when using our services.
               </p>
               <div className="space-y-4">
@@ -233,7 +233,7 @@ export default function Terms() {
                 ))}
               </div>
             </motion.div>
-            
+
             <motion.div
               initial={{ opacity: 0, x: 20 }}
               whileInView={{ opacity: 1, x: 0 }}
@@ -278,7 +278,7 @@ export default function Terms() {
               Service Levels & Support
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              We provide different levels of support to meet your business needs 
+              We provide different levels of support to meet your business needs
               and ensure optimal service delivery.
             </p>
           </motion.div>
@@ -328,7 +328,7 @@ export default function Terms() {
                 Intellectual Property Rights
               </h2>
               <p className="text-lg text-gray-300 mb-6">
-                Understanding intellectual property rights is crucial for both 
+                Understanding intellectual property rights is crucial for both
                 protecting our innovations and respecting your contributions.
               </p>
               <div className="space-y-4">
@@ -355,7 +355,7 @@ export default function Terms() {
                 </div>
               </div>
             </motion.div>
-            
+
             <motion.div
               initial={{ opacity: 0, x: 20 }}
               whileInView={{ opacity: 1, x: 0 }}
@@ -404,7 +404,7 @@ export default function Terms() {
               Limitation of Liability
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              We strive to provide reliable services, but it's important to understand 
+              We strive to provide reliable services, but it's important to understand
               the scope of our liability and your responsibilities.
             </p>
           </motion.div>
@@ -465,7 +465,7 @@ export default function Terms() {
               Termination & Cancellation
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Understanding the terms for ending our service relationship 
+              Understanding the terms for ending our service relationship
               helps ensure a smooth transition for all parties.
             </p>
           </motion.div>
@@ -524,7 +524,7 @@ export default function Terms() {
               Questions About Terms?
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              If you have questions about these terms or need clarification, 
+              If you have questions about these terms or need clarification,
               please contact our legal team.
             </p>
           </motion.div>
@@ -563,7 +563,7 @@ export default function Terms() {
               Ready to Get Started?
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-              By using our services, you agree to these terms. 
+              By using our services, you agree to these terms.
               Contact us if you need any clarification or have questions.
             </p>
             <div className="flex flex-wrap justify-center gap-4">

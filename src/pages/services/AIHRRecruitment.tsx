@@ -13,20 +13,20 @@ export default function AIHRRecruitment() {
   ];
 
   const tiers = [
-    { 
-      name: 'Starter', 
-      price: '$199/mo', 
-      details: ['Up to 50 job postings', 'Basic AI matching', 'Standard integrations', 'Email support'] 
+    {
+      name: 'Starter',
+      price: '$199/mo',
+      details: ['Up to 50 job postings', 'Basic AI matching', 'Standard integrations', 'Email support']
     },
-    { 
-      name: 'Professional', 
-      price: '$499/mo', 
-      details: ['Up to 200 job postings', 'Advanced AI features', 'Custom integrations', 'Priority support'] 
+    {
+      name: 'Professional',
+      price: '$499/mo',
+      details: ['Up to 200 job postings', 'Advanced AI features', 'Custom integrations', 'Priority support']
     },
-    { 
-      name: 'Enterprise', 
-      price: '$1,299/mo', 
-      details: ['Unlimited job postings', 'Custom AI models', 'Full platform integration', '24/7 dedicated support'] 
+    {
+      name: 'Enterprise',
+      price: '$1,299/mo',
+      details: ['Unlimited job postings', 'Custom AI models', 'Full platform integration', '24/7 dedicated support']
     },
   ];
 

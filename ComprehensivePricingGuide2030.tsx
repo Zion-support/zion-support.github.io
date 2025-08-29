@@ -1,19 +1,19 @@
 import React, { useState, useMemo } from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import { 
-  CheckCircle, 
-  Star, 
-  Zap, 
-  Shield, 
-  TrendingUp, 
-  Brain, 
-  Server, 
-  Globe, 
-  ArrowRight, 
-  Mail, 
-  Phone, 
-  MapPin, 
+import {
+  CheckCircle,
+  Star,
+  Zap,
+  Shield,
+  TrendingUp,
+  Brain,
+  Server,
+  Globe,
+  ArrowRight,
+  Mail,
+  Phone,
+  MapPin,
   ExternalLink,
   DollarSign,
   CreditCard,
@@ -205,8 +205,8 @@ const ComprehensivePricingGuide2030: React.FC = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white">
-      <SEO 
-        title="Comprehensive Pricing Guide 2030 - Zion Tech Group" 
+      <SEO
+        title="Comprehensive Pricing Guide 2030 - Zion Tech Group"
         description="Explore our innovative service pricing with market analysis, ROI calculations, and flexible pricing tiers for AI, Cloud, IoT, and Quantum Computing solutions."
       />
 
@@ -215,7 +215,7 @@ const ComprehensivePricingGuide2030: React.FC = () => {
         <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/20 via-blue-500/20 to-purple-500/20"></div>
         <div className="container mx-auto px-4 relative z-10">
           <div className="text-center max-w-4xl mx-auto">
-            <motion.h1 
+            <motion.h1
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
@@ -227,30 +227,30 @@ const ComprehensivePricingGuide2030: React.FC = () => {
               <br />
               <span className="text-white">2030</span>
             </motion.h1>
-            <motion.p 
+            <motion.p
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
               className="text-xl sm:text-2xl text-slate-300 mb-8 max-w-3xl mx-auto"
             >
-              Transparent pricing for cutting-edge technology solutions. 
+              Transparent pricing for cutting-edge technology solutions.
               Compare market rates, calculate ROI, and choose the perfect plan for your business.
             </motion.p>
-            <motion.div 
+            <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.4 }}
               className="flex flex-wrap justify-center gap-4"
             >
-              <Link 
-                to="/contact" 
+              <Link
+                to="/contact"
                 className="inline-flex items-center px-8 py-4 rounded-xl bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold hover:opacity-90 transition-opacity"
               >
                 Get Custom Quote
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Link>
-              <Link 
-                to="/innovative-services-showcase-2025" 
+              <Link
+                to="/innovative-services-showcase-2025"
                 className="inline-flex items-center px-8 py-4 rounded-xl border border-cyan-400/30 text-cyan-400 font-semibold hover:bg-cyan-400/10 transition-colors"
               >
                 View All Services
@@ -263,7 +263,7 @@ const ComprehensivePricingGuide2030: React.FC = () => {
       {/* Market Insights */}
       <section className="py-16">
         <div className="container mx-auto px-4">
-          <motion.h2 
+          <motion.h2
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
@@ -296,7 +296,7 @@ const ComprehensivePricingGuide2030: React.FC = () => {
       {/* Pricing Tiers */}
       <section className="py-16 bg-slate-900/50">
         <div className="container mx-auto px-4">
-          <motion.h2 
+          <motion.h2
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
@@ -312,8 +312,8 @@ const ComprehensivePricingGuide2030: React.FC = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 className={`relative bg-slate-900/60 backdrop-blur border rounded-2xl p-8 ${
-                  tier.popular 
-                    ? 'border-cyan-400/40 shadow-2xl shadow-cyan-400/20' 
+                  tier.popular
+                    ? 'border-cyan-400/40 shadow-2xl shadow-cyan-400/20'
                     : 'border-cyan-400/15'
                 }`}
               >
@@ -324,7 +324,7 @@ const ComprehensivePricingGuide2030: React.FC = () => {
                     </span>
                   </div>
                 )}
-                
+
                 <div className="text-center mb-8">
                   <h3 className="text-2xl font-bold text-white mb-2">{tier.name}</h3>
                   <p className="text-slate-300 mb-6">{tier.description}</p>
@@ -363,7 +363,7 @@ const ComprehensivePricingGuide2030: React.FC = () => {
       {/* Service Pricing Details */}
       <section className="py-16">
         <div className="container mx-auto px-4">
-          <motion.h2 
+          <motion.h2
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
@@ -403,7 +403,7 @@ const ComprehensivePricingGuide2030: React.FC = () => {
             {filteredServices.map((service, index) => {
               const CategoryIcon = getCategoryIcon(service.category);
               const categoryColor = getCategoryColor(service.category);
-              
+
               return (
                 <motion.div
                   key={service.id}
@@ -511,7 +511,7 @@ const ComprehensivePricingGuide2030: React.FC = () => {
       <section className="py-16 bg-slate-900/50">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
-            <motion.h2 
+            <motion.h2
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
@@ -519,17 +519,17 @@ const ComprehensivePricingGuide2030: React.FC = () => {
             >
               Calculate Your ROI
             </motion.h2>
-            <motion.p 
+            <motion.p
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
               className="text-xl text-slate-300 mb-8"
             >
-              Use our ROI calculator to estimate the return on investment for our services. 
+              Use our ROI calculator to estimate the return on investment for our services.
               Most clients see returns within 3-6 months.
             </motion.p>
-            
-            <motion.div 
+
+            <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.4 }}
@@ -549,9 +549,9 @@ const ComprehensivePricingGuide2030: React.FC = () => {
                   <div className="text-slate-300">Cost Reduction</div>
                 </div>
               </div>
-              
-              <Link 
-                to="/contact" 
+
+              <Link
+                to="/contact"
                 className="inline-flex items-center px-8 py-4 rounded-xl bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold hover:opacity-90 transition-opacity"
               >
                 Get Personalized ROI Analysis
@@ -566,7 +566,7 @@ const ComprehensivePricingGuide2030: React.FC = () => {
       <section className="py-20">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
-            <motion.h2 
+            <motion.h2
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
@@ -574,17 +574,17 @@ const ComprehensivePricingGuide2030: React.FC = () => {
             >
               Ready to Get Started?
             </motion.h2>
-            <motion.p 
+            <motion.p
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
               className="text-xl text-slate-300 mb-8"
             >
-              Our team of experts is ready to help you choose the right services and pricing plan. 
+              Our team of experts is ready to help you choose the right services and pricing plan.
               Get in touch today for a personalized consultation.
             </motion.p>
-            
-            <motion.div 
+
+            <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.4 }}
@@ -593,8 +593,8 @@ const ComprehensivePricingGuide2030: React.FC = () => {
               <div className="flex flex-col items-center">
                 <Phone className="w-8 h-8 text-cyan-400 mb-4" />
                 <div className="text-white font-semibold mb-2">Call Us</div>
-                <a 
-                  href="tel:+13024640950" 
+                <a
+                  href="tel:+13024640950"
                   className="text-cyan-400 hover:text-cyan-300 transition-colors"
                 >
                   +1 302 464 0950
@@ -603,8 +603,8 @@ const ComprehensivePricingGuide2030: React.FC = () => {
               <div className="flex flex-col items-center">
                 <Mail className="w-8 h-8 text-cyan-400 mb-4" />
                 <div className="text-white font-semibold mb-2">Email Us</div>
-                <a 
-                  href="mailto:kleber@ziontechgroup.com" 
+                <a
+                  href="mailto:kleber@ziontechgroup.com"
                   className="text-cyan-400 hover:text-cyan-300 transition-colors"
                 >
                   kleber@ziontechgroup.com
@@ -620,21 +620,21 @@ const ComprehensivePricingGuide2030: React.FC = () => {
               </div>
             </motion.div>
 
-            <motion.div 
+            <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.6 }}
               className="flex flex-wrap justify-center gap-4"
             >
-              <Link 
-                to="/contact" 
+              <Link
+                to="/contact"
                 className="inline-flex items-center px-8 py-4 rounded-xl bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold hover:opacity-90 transition-opacity"
               >
                 Schedule a Consultation
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Link>
-              <Link 
-                to="/request-quote" 
+              <Link
+                to="/request-quote"
                 className="inline-flex items-center px-8 py-4 rounded-xl border border-cyan-400/30 text-cyan-400 font-semibold hover:bg-cyan-400/10 transition-colors"
               >
                 Request a Quote
@@ -651,9 +651,9 @@ const ComprehensivePricingGuide2030: React.FC = () => {
             <div className="text-slate-300 mb-6">
               <strong>Zion Tech Group</strong> - Your partner in digital transformation and innovation.
               Visit us at{' '}
-              <a 
-                href="https://ziontechgroup.com" 
-                target="_blank" 
+              <a
+                href="https://ziontechgroup.com"
+                target="_blank"
                 rel="noopener noreferrer"
                 className="text-cyan-400 hover:text-cyan-300 transition-colors"
               >
@@ -662,7 +662,7 @@ const ComprehensivePricingGuide2030: React.FC = () => {
               {' '}to explore our full range of services and solutions.
             </div>
             <div className="text-sm text-slate-400">
-              All pricing includes comprehensive support, documentation, and integration assistance. 
+              All pricing includes comprehensive support, documentation, and integration assistance.
               Custom enterprise solutions available with volume discounts and dedicated support.
             </div>
           </div>

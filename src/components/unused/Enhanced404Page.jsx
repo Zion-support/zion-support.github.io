@@ -35,7 +35,7 @@ export const Enhanced404Page = ({ requestedPath, suggestedRoutes = [] }) => {
           </motion.p>)}
 
         <motion.p initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.6 }} className="text-lg text-gray-400 mb-12 max-w-2xl mx-auto">
-          Don't worry! This might be a temporary issue or the page might have been moved. 
+          Don't worry! This might be a temporary issue or the page might have been moved.
           Let us help you find what you're looking for.
         </motion.p>
 
@@ -62,7 +62,7 @@ export const Enhanced404Page = ({ requestedPath, suggestedRoutes = [] }) => {
           <h3 className="text-xl font-semibold text-white mb-6">
             Popular Pages You Might Like
           </h3>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
             {suggestions.map((route, index) => (<motion.div key={route} initial={{ opacity: 0, x: -20 }} animate={{ opacity: 1, x: 0 }} transition={{ delay: 0.9 + index * 0.1 }}>
                 <Link to={route} className="block p-4 bg-gray-700/50 hover:bg-gray-600/50 rounded-lg text-gray-300 hover:text-white transition-all duration-300 border border-gray-600 hover:border-gray-500">

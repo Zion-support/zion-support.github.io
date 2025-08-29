@@ -1,21 +1,21 @@
 import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
-import { 
-  ChevronRight, 
-  Home, 
-  Zap, 
-  Brain, 
-  Shield, 
-  Cloud, 
-  Server, 
-  BarChart3, 
-  Users, 
-  ShoppingCart, 
-  BookOpen, 
-  MessageCircle, 
-  HelpCircle, 
-  Settings, 
+import {
+  ChevronRight,
+  Home,
+  Zap,
+  Brain,
+  Shield,
+  Cloud,
+  Server,
+  BarChart3,
+  Users,
+  ShoppingCart,
+  BookOpen,
+  MessageCircle,
+  HelpCircle,
+  Settings,
   Star,
   Atom,
   Network,
@@ -60,8 +60,8 @@ export const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
   const [expandedSections, setExpandedSections] = useState<string[]>(['Main Navigation']);
 
   const toggleSection = (section: string) => {
-    setExpandedSections(prev => 
-      prev.includes(section) 
+    setExpandedSections(prev =>
+      prev.includes(section)
         ? prev.filter(s => s !== section)
         : [...prev, section]
     );
@@ -219,10 +219,10 @@ export const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
                         {section.title}
                       </span>
                     </div>
-                    <ChevronRight 
+                    <ChevronRight
                       className={`w-4 h-4 text-gray-400 transition-transform duration-200 ${
                         expandedSections.includes(section.title) ? 'rotate-90' : ''
-                      }`} 
+                      }`}
                     />
                   </button>
 

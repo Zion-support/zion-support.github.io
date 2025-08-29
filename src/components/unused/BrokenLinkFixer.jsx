@@ -171,7 +171,7 @@ export const BrokenLinkFixer = ({ className = '', autoCheck = true, showDetails 
     // Auto-fix broken links
     const autoFixBrokenLinks = useCallback(() => {
         const brokenLinks = links.filter(link => link.status === 'broken' && link.fixable);
-        let fixedCount = 0;
+        const fixedCount = 0;
         brokenLinks.forEach(link => {
             if (link.element && link.url.startsWith('#')) {
                 // Fix broken anchor links
@@ -290,7 +290,7 @@ export const BrokenLinkFixer = ({ className = '', autoCheck = true, showDetails 
                         Total Links
                       </div>
                     </div>
-                    
+
                     <div className="p-3 bg-green-50 dark:bg-green-900/20 rounded-lg text-center">
                       <div className="text-2xl font-bold text-green-600">
                         {stats.healthy}
@@ -299,7 +299,7 @@ export const BrokenLinkFixer = ({ className = '', autoCheck = true, showDetails 
                         Healthy
                       </div>
                     </div>
-                    
+
                     <div className="p-3 bg-red-50 dark:bg-red-900/20 rounded-lg text-center">
                       <div className="text-2xl font-bold text-red-600">
                         {stats.broken}
@@ -308,7 +308,7 @@ export const BrokenLinkFixer = ({ className = '', autoCheck = true, showDetails 
                         Broken
                       </div>
                     </div>
-                    
+
                     <div className="p-3 bg-yellow-50 dark:bg-yellow-900/20 rounded-lg text-center">
                       <div className="text-2xl font-bold text-yellow-600">
                         {stats.checking + stats.unknown}
@@ -348,7 +348,7 @@ export const BrokenLinkFixer = ({ className = '', autoCheck = true, showDetails 
                         .map((link, index) => (<div key={`${link.url}-${index}`} className="p-3 rounded-lg border border-red-200 dark:border-red-700 bg-red-50 dark:bg-red-900/20 hover:border-red-300 dark:hover:border-red-600 transition-colors cursor-pointer" onClick={() => highlightBrokenLink(link)}>
                             <div className="flex items-start gap-2">
                               <ExclamationTriangleIcon className="w-4 h-4 text-red-600 mt-0.5"/>
-                              
+
                               <div className="flex-1">
                                 <h4 className="font-medium text-gray-900 dark:text-white text-sm break-all">
                                   {link.url}
@@ -384,7 +384,7 @@ export const BrokenLinkFixer = ({ className = '', autoCheck = true, showDetails 
                         .map((link, index) => (<div key={`${link.url}-${index}`} className="p-3 rounded-lg border border-green-200 dark:border-green-700 bg-green-50 dark:bg-green-900/20">
                             <div className="flex items-start gap-2">
                               <CheckCircleIcon className="w-4 h-4 text-green-600 mt-0.5"/>
-                              
+
                               <div className="flex-1">
                                 <h4 className="font-medium text-gray-900 dark:text-white text-sm break-all">
                                   {link.url}
@@ -457,11 +457,11 @@ export const BrokenLinkFixer = ({ className = '', autoCheck = true, showDetails 
           background-color: rgba(249, 115, 22, 0.1) !important;
           transition: all 0.3s ease !important;
         }
-        
+
         .link-target-placeholder {
           animation: pulse 2s infinite;
         }
-        
+
         @keyframes pulse {
           0%, 100% { opacity: 1; }
           50% { opacity: 0.7; }

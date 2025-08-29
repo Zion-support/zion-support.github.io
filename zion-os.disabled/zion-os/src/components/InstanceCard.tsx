@@ -68,7 +68,7 @@ export function InstanceCard({ instance }: InstanceCardProps) {
             {instance.domain || instance.subdomain || `${instance.slug}.zion.os`}
           </span>
         </div>
-        
+
         <div className="flex items-center justify-between text-sm">
           <span className="text-gray-400">Created:</span>
           <span>{formatDate(instance.createdAt)}</span>
@@ -98,7 +98,7 @@ export function InstanceCard({ instance }: InstanceCardProps) {
               </div>
             </div>
           </div>
-          
+
           <div className="flex gap-2 mt-4">
             <button className="btn-secondary text-sm px-4 py-2">
               View Details
@@ -112,10 +112,10 @@ export function InstanceCard({ instance }: InstanceCardProps) {
       <div className="mt-4 pt-4 border-t border-white/10">
         <div className="flex items-center justify-between text-xs text-gray-400">
           <span>Click to {isExpanded ? 'collapse' : 'expand'}</span>
-          <svg 
-            className={`w-4 h-4 transition-transform ${isExpanded ? 'rotate-180' : ''}`} 
-            fill="none" 
-            stroke="currentColor" 
+          <svg
+            className={`w-4 h-4 transition-transform ${isExpanded ? 'rotate-180' : ''}`}
+            fill="none"
+            stroke="currentColor"
             viewBox="0 0 24 24"
           >
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />

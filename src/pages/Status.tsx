@@ -1,12 +1,12 @@
 import React from 'react';
 import { SEO } from '@/components/SEO';
-import { 
-  CheckCircle, 
-  AlertTriangle, 
-  XCircle, 
-  Clock, 
-  Server, 
-  Database, 
+import {
+  CheckCircle,
+  AlertTriangle,
+  XCircle,
+  Clock,
+  Server,
+  Database,
   Globe,
   Zap,
   Shield,

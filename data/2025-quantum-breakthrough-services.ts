@@ -16,20 +16,20 @@ export const quantumBreakthroughServices2025 = [
       '24/7 quantum security operations center'
     ],
     pricing: {
-      starter: { 
-        price: 12999, 
-        period: 'month', 
-        features: ['Basic quantum security', 'Up to 1000 secure connections', 'Standard monitoring', 'Email support'] 
+      starter: {
+        price: 12999,
+        period: 'month',
+        features: ['Basic quantum security', 'Up to 1000 secure connections', 'Standard monitoring', 'Email support']
       },
-      professional: { 
-        price: 24999, 
-        period: 'month', 
-        features: ['Advanced quantum security', 'Unlimited connections', 'Custom protocols', 'Priority support', 'API access'] 
+      professional: {
+        price: 24999,
+        period: 'month',
+        features: ['Advanced quantum security', 'Unlimited connections', 'Custom protocols', 'Priority support', 'API access']
       },
-      enterprise: { 
-        price: 49999, 
-        period: 'month', 
-        features: ['Full quantum platform', 'White-label solution', 'Dedicated support', 'Custom development', '24/7 monitoring'] 
+      enterprise: {
+        price: 49999,
+        period: 'month',
+        features: ['Full quantum platform', 'White-label solution', 'Dedicated support', 'Custom development', '24/7 monitoring']
       }
     },
     category: 'Quantum Internet & Security',
@@ -69,20 +69,20 @@ export const quantumBreakthroughServices2025 = [
       'API access for research institutions'
     ],
     pricing: {
-      starter: { 
-        price: 8999, 
-        period: 'month', 
-        features: ['Basic bio-computing', 'Up to 100 simulations/month', 'Standard models', 'Email support'] 
+      starter: {
+        price: 8999,
+        period: 'month',
+        features: ['Basic bio-computing', 'Up to 100 simulations/month', 'Standard models', 'Email support']
       },
-      professional: { 
-        price: 19999, 
-        period: 'month', 
-        features: ['Advanced bio-computing', 'Unlimited simulations', 'Custom models', 'Priority support', 'API access'] 
+      professional: {
+        price: 19999,
+        period: 'month',
+        features: ['Advanced bio-computing', 'Unlimited simulations', 'Custom models', 'Priority support', 'API access']
       },
-      enterprise: { 
-        price: 39999, 
-        period: 'month', 
-        features: ['Full bio-computing platform', 'White-label solution', 'Dedicated support', 'Custom development', '24/7 monitoring'] 
+      enterprise: {
+        price: 39999,
+        period: 'month',
+        features: ['Full bio-computing platform', 'White-label solution', 'Dedicated support', 'Custom development', '24/7 monitoring']
       }
     },
     category: 'Quantum Biology',
@@ -122,20 +122,20 @@ export const quantumBreakthroughServices2025 = [
       'API for custom applications'
     ],
     pricing: {
-      starter: { 
-        price: 15999, 
-        period: 'month', 
-        features: ['Basic neural interface', 'Up to 10 users', 'Standard monitoring', 'Email support'] 
+      starter: {
+        price: 15999,
+        period: 'month',
+        features: ['Basic neural interface', 'Up to 10 users', 'Standard monitoring', 'Email support']
       },
-      professional: { 
-        price: 29999, 
-        period: 'month', 
-        features: ['Advanced neural interface', 'Up to 100 users', 'Custom development', 'Priority support', 'API access'] 
+      professional: {
+        price: 29999,
+        period: 'month',
+        features: ['Advanced neural interface', 'Up to 100 users', 'Custom development', 'Priority support', 'API access']
       },
-      enterprise: { 
-        price: 59999, 
-        period: 'month', 
-        features: ['Full neural platform', 'White-label solution', 'Dedicated support', 'Custom development', '24/7 monitoring'] 
+      enterprise: {
+        price: 59999,
+        period: 'month',
+        features: ['Full neural platform', 'White-label solution', 'Dedicated support', 'Custom development', '24/7 monitoring']
       }
     },
     category: 'Neural Interfaces',
@@ -175,20 +175,20 @@ export const quantumBreakthroughServices2025 = [
       'API for space operations'
     ],
     pricing: {
-      starter: { 
-        price: 19999, 
-        period: 'month', 
-        features: ['Basic space mining', 'Up to 5 mining missions', 'Standard monitoring', 'Email support'] 
+      starter: {
+        price: 19999,
+        period: 'month',
+        features: ['Basic space mining', 'Up to 5 mining missions', 'Standard monitoring', 'Email support']
       },
-      professional: { 
-        price: 39999, 
-        period: 'month', 
-        features: ['Advanced space mining', 'Unlimited missions', 'Custom planning', 'Priority support', 'API access'] 
+      professional: {
+        price: 39999,
+        period: 'month',
+        features: ['Advanced space mining', 'Unlimited missions', 'Custom planning', 'Priority support', 'API access']
       },
-      enterprise: { 
-        price: 79999, 
-        period: 'month', 
-        features: ['Full space mining platform', 'White-label solution', 'Dedicated support', 'Custom development', '24/7 monitoring'] 
+      enterprise: {
+        price: 79999,
+        period: 'month',
+        features: ['Full space mining platform', 'White-label solution', 'Dedicated support', 'Custom development', '24/7 monitoring']
       }
     },
     category: 'Space Technology',
@@ -228,20 +228,20 @@ export const quantumBreakthroughServices2025 = [
       'API for energy management systems'
     ],
     pricing: {
-      starter: { 
-        price: 7999, 
-        period: 'month', 
-        features: ['Basic energy optimization', 'Up to 1000 connections', 'Standard monitoring', 'Email support'] 
+      starter: {
+        price: 7999,
+        period: 'month',
+        features: ['Basic energy optimization', 'Up to 1000 connections', 'Standard monitoring', 'Email support']
       },
-      professional: { 
-        price: 15999, 
-        period: 'month', 
-        features: ['Advanced energy optimization', 'Unlimited connections', 'Custom models', 'Priority support', 'API access'] 
+      professional: {
+        price: 15999,
+        period: 'month',
+        features: ['Advanced energy optimization', 'Unlimited connections', 'Custom models', 'Priority support', 'API access']
       },
-      enterprise: { 
-        price: 29999, 
-        period: 'month', 
-        features: ['Full energy platform', 'White-label solution', 'Dedicated support', 'Custom development', '24/7 monitoring'] 
+      enterprise: {
+        price: 29999,
+        period: 'month',
+        features: ['Full energy platform', 'White-label solution', 'Dedicated support', 'Custom development', '24/7 monitoring']
       }
     },
     category: 'Quantum Energy',

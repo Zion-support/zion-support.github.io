@@ -112,25 +112,25 @@ export function BenefitsSection() {
 
       {/* Floating decorative elements */}
       <div className="absolute inset-0">
-        <motion.div 
+        <motion.div
           className="absolute top-20 left-20 w-32 h-32 border border-zion-cyan/20 rounded-full opacity-30"
           animate={{ rotate: 360 }}
           transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
         />
-        <motion.div 
+        <motion.div
           className="absolute bottom-20 right-20 w-24 h-24 border border-zion-purple/20 rounded-full opacity-30"
           animate={{ rotate: -360 }}
           transition={{ duration: 25, repeat: Infinity, ease: "linear" }}
         />
-        <motion.div 
+        <motion.div
           className="absolute top-1/2 left-1/2 w-16 h-16 border border-zion-cyan-light/20 rounded-full opacity-20"
           animate={{ scale: [1, 1.2, 1] }}
           transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
         />
       </div>
-      
+
       <div className="container mx-auto px-4 relative z-10">
-        <motion.div 
+        <motion.div
           className="text-center mb-20"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -146,7 +146,7 @@ export function BenefitsSection() {
         </motion.div>
 
         {/* Stats section */}
-        <motion.div 
+        <motion.div
           className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-16 max-w-4xl mx-auto"
           variants={containerVariants}
           initial="hidden"
@@ -154,8 +154,8 @@ export function BenefitsSection() {
           viewport={{ once: true }}
         >
           {stats.map((stat, index) => (
-            <motion.div 
-              key={index} 
+            <motion.div
+              key={index}
               variants={statsVariants}
               className="text-center p-4 rounded-xl bg-zion-blue-dark/40 backdrop-blur-sm border border-zion-blue-light/20"
             >
@@ -167,8 +167,8 @@ export function BenefitsSection() {
             </motion.div>
           ))}
         </motion.div>
-        
-        <motion.div 
+
+        <motion.div
           className="relative"
           variants={containerVariants}
           initial="hidden"
@@ -183,8 +183,8 @@ export function BenefitsSection() {
           {/* Benefits */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
             {benefits.map((benefit, index) => (
-              <motion.div 
-                key={index} 
+              <motion.div
+                key={index}
                 variants={itemVariants}
                 onHoverStart={() => setHoveredIndex(index)}
                 onHoverEnd={() => setHoveredIndex(null)}
@@ -215,7 +215,7 @@ export function BenefitsSection() {
                   {/* Features list */}
                   <AnimatePresence>
                     {hoveredIndex === index && (
-                      <motion.div 
+                      <motion.div
                         className="space-y-2"
                         initial={{ opacity: 0, height: 0 }}
                         animate={{ opacity: 1, height: "auto" }}
@@ -223,8 +223,8 @@ export function BenefitsSection() {
                         transition={{ duration: 0.3 }}
                       >
                         {benefit.features.map((feature, idx) => (
-                          <motion.div 
-                            key={idx} 
+                          <motion.div
+                            key={idx}
                             className="flex items-center gap-2 text-zion-slate-light/80 text-sm"
                             initial={{ opacity: 0, x: -10 }}
                             animate={{ opacity: 1, x: 0 }}
@@ -249,7 +249,7 @@ export function BenefitsSection() {
         </motion.div>
 
         {/* Stats Section */}
-        <motion.div 
+        <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.4 }}
@@ -259,7 +259,7 @@ export function BenefitsSection() {
             <h3 className="text-3xl font-bold text-white mb-4">Our Impact in Numbers</h3>
             <p className="text-gray-300 text-lg">Real results that speak for themselves</p>
           </div>
-          
+
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             {stats.map((stat, index) => (
               <motion.div
@@ -280,7 +280,7 @@ export function BenefitsSection() {
         </motion.div>
 
         {/* CTA Section */}
-        <motion.div 
+        <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.6 }}

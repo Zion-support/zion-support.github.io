@@ -1,15 +1,15 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { 
-  Calculator, 
-  Check, 
-  X, 
-  Star, 
-  Zap, 
-  Brain, 
-  Cloud, 
-  Shield, 
-  Cpu, 
+import {
+  Calculator,
+  Check,
+  X,
+  Star,
+  Zap,
+  Brain,
+  Cloud,
+  Shield,
+  Cpu,
   ShoppingCart,
   MessageCircle,
   Users,
@@ -159,11 +159,11 @@ export default function PricingGuide() {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      <SEO 
+      <SEO
         title="Pricing Guide - Zion Tech Group"
         description="Comprehensive pricing information for AI, cloud, cybersecurity, and emerging technology services. Transparent pricing with flexible plans for all business sizes."
       />
-      
+
       {/* Hero Section */}
       <section className="relative overflow-hidden py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -175,10 +175,10 @@ export default function PricingGuide() {
               Pricing Guide
             </h1>
             <p className="text-xl text-slate-300 mb-8 max-w-4xl mx-auto">
-              Transparent, competitive pricing for cutting-edge technology solutions. 
+              Transparent, competitive pricing for cutting-edge technology solutions.
               Choose the plan that fits your business needs and scale as you grow.
             </p>
-            
+
             {/* Currency and Billing Toggle */}
             <div className="flex flex-col sm:flex-row items-center justify-center gap-6 mb-8">
               <div className="flex items-center space-x-4">
@@ -193,7 +193,7 @@ export default function PricingGuide() {
                   <option value="GBP">GBP (£)</option>
                 </select>
               </div>
-              
+
               <div className="flex items-center space-x-4">
                 <span className="text-slate-300">Billing:</span>
                 <div className="flex bg-slate-700 rounded-lg p-1">
@@ -227,7 +227,7 @@ export default function PricingGuide() {
             </div>
           </div>
         </div>
-        
+
         {/* Background Elements */}
         <div className="absolute inset-0 -z-10">
           <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/10 to-blue-500/10" />
@@ -243,12 +243,12 @@ export default function PricingGuide() {
             <h2 className="text-3xl font-bold text-white mb-4">Choose Your Plan</h2>
             <p className="text-xl text-slate-300">Flexible pricing options designed to scale with your business</p>
           </div>
-          
+
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
             {pricingPlans.map((plan, index) => (
               <div key={index} className={`relative bg-slate-800/50 border rounded-2xl p-8 ${
-                plan.popular 
-                  ? 'border-cyan-500/50 bg-gradient-to-br from-slate-800/50 to-cyan-900/20' 
+                plan.popular
+                  ? 'border-cyan-500/50 bg-gradient-to-br from-slate-800/50 to-cyan-900/20'
                   : 'border-slate-700/50'
               }`}>
                 {plan.popular && (
@@ -258,14 +258,14 @@ export default function PricingGuide() {
                     </div>
                   </div>
                 )}
-                
+
                 <div className="text-center mb-8">
                   <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-full mb-4">
                     <plan.icon className="h-8 w-8 text-white" />
                   </div>
                   <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
                   <p className="text-slate-400 mb-6">{plan.description}</p>
-                  
+
                   <div className="mb-6">
                     <div className="text-4xl font-bold text-white">
                       {calculatePrice(plan.price[selectedPeriod as keyof typeof plan.price])}
@@ -274,7 +274,7 @@ export default function PricingGuide() {
                       </span>
                     </div>
                   </div>
-                  
+
                   <Link
                     to={plan.cta === "Contact Sales" ? "/contact" : "/request-quote"}
                     className={`w-full inline-flex items-center justify-center px-6 py-3 rounded-lg font-semibold transition-all duration-200 ${
@@ -286,7 +286,7 @@ export default function PricingGuide() {
                     {plan.cta}
                   </Link>
                 </div>
-                
+
                 <div className="space-y-4">
                   <h4 className="text-lg font-semibold text-white mb-4">What's Included:</h4>
                   {plan.features.map((feature, featureIndex) => (
@@ -295,7 +295,7 @@ export default function PricingGuide() {
                       <span className="text-sm">{feature}</span>
                     </div>
                   ))}
-                  
+
                   {plan.notIncluded.length > 0 && (
                     <>
                       <h4 className="text-lg font-semibold text-white mb-4 mt-6">Not Included:</h4>
@@ -321,7 +321,7 @@ export default function PricingGuide() {
             <h2 className="text-3xl font-bold text-white mb-4">Service-Specific Pricing</h2>
             <p className="text-xl text-slate-300">Detailed pricing for individual services and solutions</p>
           </div>
-          
+
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
             {servicePricing.map((category, index) => (
               <div key={index} className="bg-slate-800/50 border border-slate-700/50 rounded-2xl p-8">
@@ -331,7 +331,7 @@ export default function PricingGuide() {
                   </div>
                   <h3 className="text-2xl font-bold text-white ml-4">{category.category}</h3>
                 </div>
-                
+
                 <div className="space-y-4">
                   {category.services.map((service, serviceIndex) => (
                     <div key={serviceIndex} className="p-4 bg-slate-700/30 rounded-lg">

@@ -45,7 +45,7 @@ const ITSolutions = () => {
             </span>
           </motion.h1>
           <motion.p className="text-xl md:text-2xl text-teal-100 max-w-4xl mx-auto leading-relaxed mb-8" initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, delay: 0.2 }}>
-            Optimize your IT infrastructure with our comprehensive solutions designed to improve 
+            Optimize your IT infrastructure with our comprehensive solutions designed to improve
             efficiency, security, and performance across your organization.
           </motion.p>
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, delay: 0.4 }}>

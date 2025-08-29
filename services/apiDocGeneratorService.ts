@@ -166,7 +166,7 @@ export class APIDocGeneratorService {
       // Calculate coverage
       documentation.metadata.coverage = this.calculateCoverage(documentation.endpoints);
     } catch (error) {
-      console.error('Error generating documentation:', error);
+      // console.error('Error generating documentation:', error);
       // Fallback to basic documentation
       documentation.endpoints = this.generateFallbackEndpoints();
       documentation.metadata.totalEndpoints = documentation.endpoints.length;
@@ -185,10 +185,10 @@ export class APIDocGeneratorService {
     const frameworks: string[] = [];
     // Simulate code analysis based on file extensions
     const files = await this.scanDirectory(sourcePath);
-    
+
     for (const file of files) {
       const extension = file.split('.').pop()?.toLowerCase();
-      
+
       if (extension === 'js' || extension === 'ts') {
         languages.push('javascript', 'typescript');
         frameworks.push('express', 'fastify');
@@ -227,7 +227,7 @@ export class APIDocGeneratorService {
   }
   private analyzeJavaScriptFile(filePath: string): APIEndpoint[] {
     const endpoints: APIEndpoint[] = [];
-    
+
     // Simulate route analysis
     if (filePath.includes('users')) {
       endpoints.push(
@@ -328,7 +328,7 @@ export class APIDocGeneratorService {
   }
   private analyzePythonFile(filePath: string): APIEndpoint[] {
     const endpoints: APIEndpoint[] = [];
-    
+
     // Simulate FastAPI/Django route analysis
     if (filePath.includes('products')) {
       endpoints.push({
@@ -369,7 +369,7 @@ export class APIDocGeneratorService {
   }
   private analyzeJavaFile(filePath: string): APIEndpoint[] {
     const endpoints: APIEndpoint[] = [];
-    
+
     // Simulate Spring Boot endpoint analysis
     if (filePath.includes('orders')) {
       endpoints.push({
@@ -560,14 +560,14 @@ export class APIDocGeneratorService {
   private calculateCoverage(endpoints: APIEndpoint[]): number {
     // Calculate documentation coverage based on endpoints
     if (endpoints.length === 0) return 0;
-    
-    let documentedEndpoints = 0;
+
+    const documentedEndpoints = 0;
     for (const endpoint of endpoints) {
       if (endpoint.description && endpoint.description.length > 10) {
         documentedEndpoints++;
       }
     }
-    
+
     return Math.round((documentedEndpoints / endpoints.length) * 100);
   }
   async exportDocumentation(

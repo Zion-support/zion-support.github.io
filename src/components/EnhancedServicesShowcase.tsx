@@ -1,14 +1,14 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import { 
-  Brain, 
-  Workflow, 
-  Shield, 
-  Atom, 
-  Cpu, 
-  Cloud, 
-  Rocket, 
+import {
+  Brain,
+  Workflow,
+  Shield,
+  Atom,
+  Cpu,
+  Cloud,
+  Rocket,
   Zap,
   ArrowRight,
   Star,
@@ -122,7 +122,7 @@ export const EnhancedServicesShowcase: React.FC = () => {
       </div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <motion.div 
+        <motion.div
           className="text-center mb-20"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -137,7 +137,7 @@ export const EnhancedServicesShowcase: React.FC = () => {
           </p>
         </motion.div>
 
-        <motion.div 
+        <motion.div
           className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8"
           variants={containerVariants}
           initial="hidden"
@@ -207,7 +207,7 @@ export const EnhancedServicesShowcase: React.FC = () => {
                 </div>
 
                 {/* CTA Button */}
-                <Link 
+                <Link
                   to={service.path}
                   className={`w-full bg-gradient-to-r ${service.color} text-white py-3 px-6 rounded-xl font-semibold text-center block hover:shadow-lg hover:shadow-${service.glowColor}-500/25 transition-all duration-300 group-hover:scale-105`}
                 >
@@ -223,7 +223,7 @@ export const EnhancedServicesShowcase: React.FC = () => {
         </motion.div>
 
         {/* Bottom CTA */}
-        <motion.div 
+        <motion.div
           className="text-center mt-16"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -231,14 +231,14 @@ export const EnhancedServicesShowcase: React.FC = () => {
           transition={{ duration: 0.6, delay: 0.3 }}
         >
           <div className="inline-flex items-center space-x-4">
-            <Link 
+            <Link
               to="/services"
               className="px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-blue text-white font-semibold rounded-xl hover:shadow-lg hover:shadow-zion-cyan/25 transition-all duration-300 transform hover:scale-105"
             >
               View All Services
               <ArrowRight className="ml-2 w-5 h-5" />
             </Link>
-            <a 
+            <a
               href="tel:+13024640950"
               className="px-8 py-4 border border-zion-cyan text-zion-cyan font-semibold rounded-xl hover:bg-zion-cyan hover:text-white transition-all duration-300"
             >

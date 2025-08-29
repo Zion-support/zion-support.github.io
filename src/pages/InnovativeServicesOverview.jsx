@@ -63,7 +63,7 @@ const InnovativeServicesOverview = () => {
             </span>
           </h1>
           <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed mb-12">
-            Discover our comprehensive portfolio of cutting-edge micro SAAS services, AI solutions, 
+            Discover our comprehensive portfolio of cutting-edge micro SAAS services, AI solutions,
             emerging technology innovations, enterprise IT services, and quantum computing solutions.
           </p>
           <div className="flex flex-col sm:flex-row gap-6 justify-center mb-12">
@@ -122,7 +122,7 @@ const InnovativeServicesOverview = () => {
           <h2 className="text-4xl font-bold text-center mb-12">
             {selectedCategory === 'all' ? 'All Services' : categories.find(c => c.id === selectedCategory)?.name}
           </h2>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {filteredServices.map((service, index) => (<motion.div key={service.id} initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: index * 0.1 }} viewport={{ once: true }} className={`relative bg-white/10 backdrop-blur-lg rounded-2xl p-6 border transition-all duration-300 hover:scale-105 cursor-pointer ${service.popular ? 'border-cyan-400/50 shadow-cyan-400/20' : 'border-white/20'}`} onClick={() => setSelectedService(service)}>
                 {service.popular && (<div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
@@ -130,7 +130,7 @@ const InnovativeServicesOverview = () => {
                       POPULAR
                     </span>
                   </div>)}
-                
+
                 <div className="text-center mb-4">
                   <div className={`text-4xl mb-2 ${service.textColor}`}>{service.icon}</div>
                   <h3 className="text-xl font-bold mb-2">{service.name}</h3>

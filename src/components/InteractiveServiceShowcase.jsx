@@ -150,7 +150,7 @@ const InteractiveServiceShowcase = () => {
             </span>
           </h2>
           <p className="text-xl md:text-2xl text-zion-slate-light max-w-4xl mx-auto leading-relaxed">
-            Discover cutting-edge technology solutions designed to transform your business operations 
+            Discover cutting-edge technology solutions designed to transform your business operations
             and drive innovation across all industries
           </p>
         </motion.div>
@@ -196,7 +196,7 @@ const InteractiveServiceShowcase = () => {
                       <p className="text-zion-slate-light text-sm mb-4 leading-relaxed">
                         {service.description}
                       </p>
-                      
+
                       {/* Price */}
                       <div className="text-zion-cyan font-bold text-lg mb-4">
                         {service.price}
@@ -235,7 +235,7 @@ const InteractiveServiceShowcase = () => {
               Ready to Transform Your Business?
             </h3>
             <p className="text-xl text-zion-slate-light mb-8 max-w-2xl mx-auto">
-              Let's discuss how our innovative technology solutions can drive your business forward 
+              Let's discuss how our innovative technology solutions can drive your business forward
               and give you a competitive edge in the market
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">

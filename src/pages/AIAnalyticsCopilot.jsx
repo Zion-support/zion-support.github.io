@@ -26,7 +26,7 @@ const AIAnalyticsCopilot = () => {
                 </span>
               </h1>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
-                Your intelligent analytics companion that understands your data, identifies patterns, 
+                Your intelligent analytics companion that understands your data, identifies patterns,
                 and delivers insights that drive business decisions with confidence.
               </p>
             </div>

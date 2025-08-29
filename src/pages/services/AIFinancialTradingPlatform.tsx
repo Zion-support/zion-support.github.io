@@ -1,12 +1,12 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { SEO } from '@/components/SEO';
-import { 
-  Brain, 
-  TrendingUp, 
-  Target, 
-  Users, 
-  BarChart3, 
+import {
+  Brain,
+  TrendingUp,
+  Target,
+  Users,
+  BarChart3,
   Calendar,
   Zap,
   CheckCircle,
@@ -126,11 +126,11 @@ export default function AIFinancialTradingPlatform() {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      <SEO 
+      <SEO
         title="AI Financial Trading Platform - Zion Tech Group"
         description="Revolutionize your trading with AI-powered market analysis, algorithmic trading, and risk management. Increase returns and reduce risks."
       />
-      
+
       {/* Hero Section */}
       <section className="relative py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto text-center">
@@ -150,7 +150,7 @@ export default function AIFinancialTradingPlatform() {
               </span>
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Transform your trading with AI that analyzes markets, executes trades, and manages risk automatically. 
+              Transform your trading with AI that analyzes markets, executes trades, and manages risk automatically.
               Increase returns, reduce risks, and trade with institutional-grade technology.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -306,8 +306,8 @@ export default function AIFinancialTradingPlatform() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 className={`relative bg-gray-800/50 backdrop-blur-sm rounded-xl p-8 border ${
-                  plan.popular 
-                    ? 'border-green-500 ring-2 ring-green-500/20' 
+                  plan.popular
+                    ? 'border-green-500 ring-2 ring-green-500/20'
                     : 'border-gray-700'
                 }`}
               >
@@ -318,7 +318,7 @@ export default function AIFinancialTradingPlatform() {
                     </span>
                   </div>
                 )}
-                
+
                 <div className="text-center mb-8">
                   <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
                   <p className="text-gray-400 mb-4">{plan.description}</p>

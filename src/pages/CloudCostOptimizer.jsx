@@ -142,7 +142,7 @@ export default function CloudCostOptimizer() {
             Cloud Cost Optimizer
           </h1>
           <p className="text-xl md:text-2xl text-zion-slate-light mb-8 max-w-4xl mx-auto">
-            Stop overpaying for cloud services. Our AI-powered platform analyzes your cloud usage and automatically 
+            Stop overpaying for cloud services. Our AI-powered platform analyzes your cloud usage and automatically
             optimizes resources to reduce costs by up to 40% while maintaining performance.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
@@ -168,7 +168,7 @@ export default function CloudCostOptimizer() {
               Our customers consistently achieve significant cost reductions while improving cloud performance.
             </p>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {costSavings.map((saving, index) => (<Card key={index} className="bg-zion-slate/50 border-blue-500/20 hover:border-blue-500/40 transition-all duration-300 hover:shadow-lg hover:shadow-blue-500/20 text-center">
                 <CardContent className="p-6">
@@ -192,7 +192,7 @@ export default function CloudCostOptimizer() {
               Our platform provides end-to-end cloud cost optimization across all major cloud providers.
             </p>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {optimizationServices.map((service, index) => (<Card key={index} className="bg-zion-slate/50 border-blue-500/20 hover:border-blue-500/40 transition-all duration-300 hover:shadow-lg hover:shadow-blue-500/20 text-center">
                 <CardContent className="p-6">
@@ -218,7 +218,7 @@ export default function CloudCostOptimizer() {
               Optimize costs across all major cloud providers from a single platform.
             </p>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
             {supportedClouds.map((cloud, index) => (<Card key={index} className="bg-zion-slate/50 border-blue-500/20 hover:border-blue-500/40 transition-all duration-300">
                 <CardContent className="p-4 text-center">
@@ -241,7 +241,7 @@ export default function CloudCostOptimizer() {
               Our AI-powered platform continuously monitors and optimizes your cloud infrastructure for maximum efficiency.
             </p>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {features.map((feature, index) => (<Card key={index} className="bg-zion-slate/50 border-blue-500/20 hover:border-blue-500/40 transition-all duration-300 hover:shadow-lg hover:shadow-blue-500/20">
                 <CardContent className="p-6">
@@ -266,7 +266,7 @@ export default function CloudCostOptimizer() {
               Choose the plan that fits your cloud spending. All plans include our core optimization features.
             </p>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
             {pricingPlans.map((plan, index) => (<Card key={index} className={`relative ${plan.popular ? 'border-blue-500 border-2 scale-105' : 'border-blue-500/20'} bg-zion-slate/50 hover:border-blue-500/40 transition-all duration-300`}>
                 {plan.popular && (<div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
@@ -305,7 +305,7 @@ export default function CloudCostOptimizer() {
             Ready to Optimize Your Cloud Costs?
           </h2>
           <p className="text-lg text-zion-slate-light mb-8 max-w-3xl mx-auto">
-            Join thousands of businesses already saving money with our cloud cost optimization platform. 
+            Join thousands of businesses already saving money with our cloud cost optimization platform.
             Start with a free cost analysis today.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">

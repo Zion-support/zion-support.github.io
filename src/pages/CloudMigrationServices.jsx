@@ -138,7 +138,7 @@ export default function CloudMigrationServices() {
             Cloud Migration Services
           </h1>
           <p className="text-xl md:text-2xl text-zion-slate-light mb-8 max-w-4xl mx-auto">
-            Transform your business with expert cloud migration services. We specialize in seamless migrations to AWS, Azure, 
+            Transform your business with expert cloud migration services. We specialize in seamless migrations to AWS, Azure,
             and Google Cloud with zero downtime and guaranteed cost optimization.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -168,7 +168,7 @@ export default function CloudMigrationServices() {
               Our expert team handles every aspect of your cloud migration journey, from assessment to optimization.
             </p>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {services.map((service, index) => (<Card key={index} className="bg-zion-slate-dark/50 border-zion-purple/20 hover:border-zion-purple/40 transition-all duration-300 hover:shadow-2xl hover:shadow-zion-purple/20">
                 <CardHeader className="text-center">
@@ -201,7 +201,7 @@ export default function CloudMigrationServices() {
               We specialize in all major cloud platforms and can help you choose the best solution for your business needs.
             </p>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {cloudPlatforms.map((platform, index) => (<Card key={index} className="bg-zion-slate-dark/50 border-zion-purple/20 hover:border-zion-purple/40 transition-all duration-300 hover:shadow-2xl hover:shadow-zion-purple/20 text-center">
                 <CardHeader>
@@ -236,7 +236,7 @@ export default function CloudMigrationServices() {
               Cloud migration offers numerous benefits that can transform your business operations and bottom line.
             </p>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             <Card className="bg-zion-slate-dark/50 border-zion-purple/20 hover:border-zion-purple/40 transition-all duration-300">
               <CardHeader className="text-center">
@@ -294,7 +294,7 @@ export default function CloudMigrationServices() {
               Choose the migration package that fits your business needs. All packages include our comprehensive migration services.
             </p>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
             {pricingPlans.map((plan, index) => (<Card key={index} className={`relative ${plan.popular ? 'border-zion-purple scale-105' : 'border-zion-slate-light'} bg-zion-slate-dark/50 transition-all duration-300 hover:shadow-2xl`}>
                 {plan.popular && (<Badge className="absolute -top-3 left-1/2 transform -translate-x-1/2 bg-gradient-to-r from-zion-purple to-zion-cyan text-white border-0">
@@ -339,7 +339,7 @@ export default function CloudMigrationServices() {
               See what our clients say about our cloud migration expertise and commitment to successful transitions.
             </p>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
             {testimonials.map((testimonial, index) => (<Card key={index} className="bg-zion-slate-dark/50 border-zion-purple/20 hover:border-zion-purple/40 transition-all duration-300">
                 <CardContent className="pt-6">
