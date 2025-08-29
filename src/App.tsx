@@ -97,6 +97,15 @@ const AICustomerExperienceAnalytics = React.lazy(() => import('./pages/services/
 const AIDevOpsAutomationPlatform = React.lazy(() => import('./pages/services/ai-devops-automation-platform'));
 const AIIoTEdgeComputingPlatform = React.lazy(() => import('./pages/services/ai-iot-edge-computing-platform'));
 
+// AI Services Showcase
+const AIServicesShowcase = React.lazy(() => import('./pages/AIServicesShowcase'));
+
+// Comprehensive Services Landing
+const ComprehensiveServicesLanding = React.lazy(() => import('./pages/ComprehensiveServicesLanding'));
+
+// Services Sitemap
+const ServicesSitemap = React.lazy(() => import('./pages/ServicesSitemap'));
+
 // Simple placeholder pages for missing ones
 const Community = React.lazy(() => import('./pages/Community'));
 const Documentation = React.lazy(() => import('./pages/Documentation'));
@@ -230,6 +239,15 @@ function App() {
               <Route path="/services/ai-customer-experience-analytics" element={<AICustomerExperienceAnalytics />} />
               <Route path="/services/ai-devops-automation-platform" element={<AIDevOpsAutomationPlatform />} />
               <Route path="/services/ai-iot-edge-computing-platform" element={<AIIoTEdgeComputingPlatform />} />
+
+              {/* AI Services Showcase Route */}
+              <Route path="/ai-services-showcase" element={<AIServicesShowcase />} />
+              
+              {/* Comprehensive Services Landing Route */}
+              <Route path="/comprehensive-services" element={<ComprehensiveServicesLanding />} />
+              
+              {/* Services Sitemap Route */}
+              <Route path="/services-sitemap" element={<ServicesSitemap />} />
               
               {/* Catch all route */}
               <Route path="*" element={<Home />} />
