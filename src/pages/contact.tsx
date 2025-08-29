@@ -1,19 +1,7 @@
 import React, { useState } from 'react';
+import { SEO } from '../components/SEO';
 import { motion } from 'framer-motion';
-import { SEO } from '@/components/SEO';
-import { 
-  Phone, 
-  Mail, 
-  MapPin, 
-  Clock, 
-  MessageCircle, 
-  Send,
-  CheckCircle,
-  Globe,
-  Building,
-  Users,
-  Zap
-} from 'lucide-react';
+import { Mail, Phone, MapPin, Clock, Send, CheckCircle } from 'lucide-react';
 
 export default function Contact() {
   const [formData, setFormData] = useState({
@@ -27,14 +15,13 @@ export default function Contact() {
   });
 
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const [submitSuccess, setSubmitSuccess] = useState(false);
+  const [isSubmitted, setIsSubmitted] = useState(false);
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
-    const { name, value } = e.target;
-    setFormData(prev => ({
-      ...prev,
-      [name]: value
-    }));
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value
+    });
   };
 
   const handleSubmit = async (e: React.FormEvent) => {
@@ -45,11 +32,11 @@ export default function Contact() {
     await new Promise(resolve => setTimeout(resolve, 2000));
     
     setIsSubmitting(false);
-    setSubmitSuccess(true);
+    setIsSubmitted(true);
     
     // Reset form after 3 seconds
     setTimeout(() => {
-      setSubmitSuccess(false);
+      setIsSubmitted(false);
       setFormData({
         firstName: '',
         lastName: '',
@@ -62,176 +49,108 @@ export default function Contact() {
     }, 3000);
   };
 
-  const contactMethods = [
-    {
-      icon: Phone,
-      title: 'Phone',
-      value: '+1 302 464 0950',
-      description: 'Call us directly for immediate assistance',
-      action: 'tel:+13024640950',
-      color: 'from-green-500 to-emerald-500'
-    },
+  const contactInfo = [
     {
       icon: Mail,
       title: 'Email',
-      value: 'kleber@ziontechgroup.com',
-      description: 'Send us a detailed message',
-      action: 'mailto:kleber@ziontechgroup.com',
-      color: 'from-blue-500 to-cyan-500'
+      details: ['info@ziontechgroup.com', 'support@ziontechgroup.com'],
+      href: 'mailto:info@ziontechgroup.com'
+    },
+    {
+      icon: Phone,
+      title: 'Phone',
+      details: ['+1 (555) 123-4567', '+1 (555) 987-6543'],
+      href: 'tel:+15551234567'
     },
     {
       icon: MapPin,
       title: 'Office',
-      value: '364 E Main St STE 1008, Middletown DE 19709',
-      description: 'Visit our headquarters',
-      action: 'https://maps.google.com/?q=364+E+Main+St+STE+1008+Middletown+DE+19709',
-      color: 'from-purple-500 to-pink-500'
+      details: ['123 Innovation Drive', 'San Francisco, CA 94105'],
+      href: '#'
     },
     {
       icon: Clock,
       title: 'Business Hours',
-      value: 'Monday - Friday: 9:00 AM - 6:00 PM EST',
-      description: '24/7 emergency support available',
-      action: null,
-      color: 'from-orange-500 to-red-500'
+      details: ['Mon-Fri: 9:00 AM - 6:00 PM', 'Sat: 10:00 AM - 2:00 PM'],
+      href: '#'
     }
   ];
 
   const services = [
-    'AI Business Intelligence',
-    'Cloud & DevOps',
+    'AI & Machine Learning',
+    'Cloud Computing',
     'Cybersecurity',
     'Digital Transformation',
     'IT Infrastructure',
-    'Micro SaaS Solutions',
-    'AI Compliance Assistant',
+    'Software Development',
     'Data Analytics',
-    'IoT & Edge Computing',
-    'Blockchain Solutions',
+    'IoT Solutions',
+    'Quantum Computing',
     'Other'
   ];
 
   return (
-    <div className="min-h-screen bg-slate-900">
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO 
         title="Contact Us - Zion Tech Group"
-        description="Get in touch with Zion Tech Group. Contact our team for AI solutions, technology consulting, and digital transformation services. We're here to help transform your business."
-        keywords="contact Zion Tech Group, AI consulting, technology support, digital transformation contact"
-        canonical="https://ziontechgroup.com/contact"
+        description="Get in touch with Zion Tech Group. We're here to help transform your business with cutting-edge technology solutions."
       />
-
+      
       {/* Hero Section */}
-      <section className="relative py-32 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-slate-800 via-slate-900 to-slate-800"></div>
-        <div className="absolute inset-0 bg-[url('/images/grid-pattern.svg')] bg-center opacity-10"></div>
-        
-        <div className="relative z-10 container mx-auto px-4 text-center">
-          <motion.h1 
-            className="text-5xl md:text-7xl font-bold mb-8 bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent"
-            initial={{ opacity: 0, y: 30 }}
+      <section className="relative py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
-            Get in Touch
-          </motion.h1>
-          <motion.p 
-            className="text-xl md:text-2xl text-slate-300 max-w-4xl mx-auto mb-12"
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
-          >
-            Ready to transform your business with AI-powered solutions? Let's start a conversation about your technology needs.
-          </motion.p>
-        </div>
-      </section>
-
-      {/* Contact Methods */}
-      <section className="py-20 bg-slate-800/50">
-        <div className="container mx-auto px-4">
-          <motion.div 
-            className="text-center mb-16"
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8 }}
-          >
-            <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
-              Multiple Ways to Connect
-            </h2>
-            <p className="text-xl text-slate-300 max-w-3xl mx-auto">
-              Choose the method that works best for you. Our team is ready to help with your technology challenges.
+            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
+              Let's Build the
+              <span className="bg-gradient-to-r from-blue-400 to-purple-600 bg-clip-text text-transparent">
+                {' '}Future Together
+              </span>
+            </h1>
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+              Ready to transform your business with cutting-edge technology? 
+              Our team of experts is here to help you achieve your goals.
             </p>
           </motion.div>
-          
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {contactMethods.map((method, index) => (
-              <motion.div
-                key={index}
-                className="group"
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.8, delay: index * 0.1 }}
-              >
-                <div className="bg-gradient-to-br from-slate-800 to-slate-900 p-6 rounded-2xl border border-slate-700 hover:border-cyan-500 transition-all duration-300 hover:transform hover:scale-105 h-full">
-                  <div className={`w-16 h-16 bg-gradient-to-br ${method.color} rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}>
-                    <method.icon className="w-8 h-8 text-white" />
-                  </div>
-                  <h3 className="text-xl font-bold text-white mb-3">{method.title}</h3>
-                  <p className="text-slate-300 mb-4 text-sm">{method.description}</p>
-                  {method.action ? (
-                    <a 
-                      href={method.action}
-                      target={method.action.startsWith('http') ? '_blank' : undefined}
-                      rel={method.action.startsWith('http') ? 'noopener noreferrer' : undefined}
-                      className="inline-flex items-center text-cyan-400 hover:text-cyan-300 font-semibold group-hover:scale-105 transition-all duration-300"
-                    >
-                      {method.value}
-                      <Send className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
-                    </a>
-                  ) : (
-                    <p className="text-cyan-400 font-semibold">{method.value}</p>
-                  )}
-                </div>
-              </motion.div>
-            ))}
-          </div>
         </div>
       </section>
 
-      {/* Contact Form & Info */}
-      <section className="py-20 bg-slate-900">
-        <div className="container mx-auto px-4">
-          <div className="grid lg:grid-cols-2 gap-16">
+      {/* Contact Form and Info */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
             {/* Contact Form */}
             <motion.div
-              initial={{ opacity: 0, x: -30 }}
+              initial={{ opacity: 0, x: -20 }}
               whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
               transition={{ duration: 0.8 }}
             >
-              <h2 className="text-4xl font-bold mb-8 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
+              <h2 className="text-3xl font-bold text-white mb-8">
                 Send Us a Message
               </h2>
-              <p className="text-slate-300 mb-8 text-lg">
-                Tell us about your project or technology needs. We'll get back to you within 24 hours.
-              </p>
-
-              {submitSuccess ? (
+              
+              {isSubmitted ? (
                 <motion.div
                   initial={{ opacity: 0, scale: 0.9 }}
                   animate={{ opacity: 1, scale: 1 }}
-                  className="bg-gradient-to-br from-green-500/20 to-emerald-500/20 p-8 rounded-2xl border border-green-500/30 text-center"
+                  className="bg-green-600/20 border border-green-500/50 rounded-xl p-8 text-center"
                 >
                   <CheckCircle className="w-16 h-16 text-green-400 mx-auto mb-4" />
-                  <h3 className="text-2xl font-bold text-white mb-2">Message Sent Successfully!</h3>
-                  <p className="text-green-100">Thank you for reaching out. We'll get back to you soon.</p>
+                  <h3 className="text-2xl font-bold text-white mb-2">
+                    Message Sent Successfully!
+                  </h3>
+                  <p className="text-green-200">
+                    Thank you for reaching out. We'll get back to you within 24 hours.
+                  </p>
                 </motion.div>
               ) : (
                 <form onSubmit={handleSubmit} className="space-y-6">
-                  <div className="grid md:grid-cols-2 gap-6">
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div>
-                      <label htmlFor="firstName" className="block text-sm font-medium text-slate-300 mb-2">
+                      <label htmlFor="firstName" className="block text-white font-medium mb-2">
                         First Name *
                       </label>
                       <input
@@ -241,12 +160,12 @@ export default function Contact() {
                         value={formData.firstName}
                         onChange={handleInputChange}
                         required
-                        className="w-full px-4 py-3 bg-slate-800 border border-slate-600 rounded-lg focus:border-cyan-500 focus:ring-2 focus:ring-cyan-500/20 outline-none text-white placeholder-slate-400"
+                        className="w-full px-4 py-3 bg-slate-800 border border-slate-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                         placeholder="Enter your first name"
                       />
                     </div>
                     <div>
-                      <label htmlFor="lastName" className="block text-sm font-medium text-slate-300 mb-2">
+                      <label htmlFor="lastName" className="block text-white font-medium mb-2">
                         Last Name *
                       </label>
                       <input
@@ -256,15 +175,15 @@ export default function Contact() {
                         value={formData.lastName}
                         onChange={handleInputChange}
                         required
-                        className="w-full px-4 py-3 bg-slate-800 border border-slate-600 rounded-lg focus:border-cyan-500 focus:ring-2 focus:ring-cyan-500/20 outline-none text-white placeholder-slate-400"
+                        className="w-full px-4 py-3 bg-slate-800 border border-slate-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                         placeholder="Enter your last name"
                       />
                     </div>
                   </div>
 
-                  <div className="grid md:grid-cols-2 gap-6">
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div>
-                      <label htmlFor="email" className="block text-sm font-medium text-slate-300 mb-2">
+                      <label htmlFor="email" className="block text-white font-medium mb-2">
                         Email Address *
                       </label>
                       <input
@@ -274,12 +193,12 @@ export default function Contact() {
                         value={formData.email}
                         onChange={handleInputChange}
                         required
-                        className="w-full px-4 py-3 bg-slate-800 border border-slate-600 rounded-lg focus:border-cyan-500 focus:ring-2 focus:ring-cyan-500/20 outline-none text-white placeholder-slate-400"
+                        className="w-full px-4 py-3 bg-slate-800 border border-slate-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                         placeholder="Enter your email address"
                       />
                     </div>
                     <div>
-                      <label htmlFor="phone" className="block text-sm font-medium text-slate-300 mb-2">
+                      <label htmlFor="phone" className="block text-white font-medium mb-2">
                         Phone Number
                       </label>
                       <input
@@ -288,14 +207,14 @@ export default function Contact() {
                         name="phone"
                         value={formData.phone}
                         onChange={handleInputChange}
-                        className="w-full px-4 py-3 bg-slate-800 border border-slate-600 rounded-lg focus:border-cyan-500 focus:ring-2 focus:ring-cyan-500/20 outline-none text-white placeholder-slate-400"
+                        className="w-full px-4 py-3 bg-slate-800 border border-slate-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                         placeholder="Enter your phone number"
                       />
                     </div>
                   </div>
 
                   <div>
-                    <label htmlFor="company" className="block text-sm font-medium text-slate-300 mb-2">
+                    <label htmlFor="company" className="block text-white font-medium mb-2">
                       Company
                     </label>
                     <input
@@ -304,13 +223,13 @@ export default function Contact() {
                       name="company"
                       value={formData.company}
                       onChange={handleInputChange}
-                      className="w-full px-4 py-3 bg-slate-800 border border-slate-600 rounded-lg focus:border-cyan-500 focus:ring-2 focus:ring-cyan-500/20 outline-none text-white placeholder-slate-400"
+                      className="w-full px-4 py-3 bg-slate-800 border border-slate-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                       placeholder="Enter your company name"
                     />
                   </div>
 
                   <div>
-                    <label htmlFor="service" className="block text-sm font-medium text-slate-300 mb-2">
+                    <label htmlFor="service" className="block text-white font-medium mb-2">
                       Service of Interest
                     </label>
                     <select
@@ -318,17 +237,19 @@ export default function Contact() {
                       name="service"
                       value={formData.service}
                       onChange={handleInputChange}
-                      className="w-full px-4 py-3 bg-slate-800 border border-slate-600 rounded-lg focus:border-cyan-500 focus:ring-2 focus:ring-cyan-500/20 outline-none text-white"
+                      className="w-full px-4 py-3 bg-slate-800 border border-slate-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                     >
                       <option value="">Select a service</option>
-                      {services.map((service, index) => (
-                        <option key={index} value={service}>{service}</option>
+                      {services.map((service) => (
+                        <option key={service} value={service}>
+                          {service}
+                        </option>
                       ))}
                     </select>
                   </div>
 
                   <div>
-                    <label htmlFor="message" className="block text-sm font-medium text-slate-300 mb-2">
+                    <label htmlFor="message" className="block text-white font-medium mb-2">
                       Message *
                     </label>
                     <textarea
@@ -338,26 +259,26 @@ export default function Contact() {
                       onChange={handleInputChange}
                       required
                       rows={6}
-                      className="w-full px-4 py-3 bg-slate-800 border border-slate-600 rounded-lg focus:border-cyan-500 focus:ring-2 focus:ring-cyan-500/20 outline-none text-white placeholder-slate-400 resize-none"
-                      placeholder="Tell us about your project or technology needs..."
+                      className="w-full px-4 py-3 bg-slate-800 border border-slate-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent resize-none"
+                      placeholder="Tell us about your project or how we can help..."
                     />
                   </div>
 
                   <button
                     type="submit"
                     disabled={isSubmitting}
-                    className="w-full px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none"
+                    className="w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white py-4 px-8 rounded-lg font-semibold text-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2"
                   >
                     {isSubmitting ? (
-                      <div className="flex items-center justify-center">
-                        <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-white mr-2"></div>
+                      <>
+                        <div className="w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin"></div>
                         Sending Message...
-                      </div>
+                      </>
                     ) : (
-                      <div className="flex items-center justify-center">
-                        <Send className="w-5 h-5 mr-2" />
+                      <>
+                        <Send className="w-5 h-5" />
                         Send Message
-                      </div>
+                      </>
                     )}
                   </button>
                 </form>
@@ -366,132 +287,111 @@ export default function Contact() {
 
             {/* Contact Information */}
             <motion.div
-              initial={{ opacity: 0, x: 30 }}
+              initial={{ opacity: 0, x: 20 }}
               whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
               transition={{ duration: 0.8 }}
             >
-              <h2 className="text-4xl font-bold mb-8 bg-gradient-to-r from-purple-400 to-pink-500 bg-clip-text text-transparent">
-                Why Choose Zion Tech Group?
+              <h2 className="text-3xl font-bold text-white mb-8">
+                Get in Touch
               </h2>
               
               <div className="space-y-8">
-                <div className="bg-gradient-to-br from-slate-800 to-slate-900 p-6 rounded-2xl border border-slate-700">
-                  <div className="flex items-start space-x-4">
-                    <div className="w-12 h-12 bg-gradient-to-br from-cyan-500 to-blue-600 rounded-xl flex items-center justify-center flex-shrink-0">
-                      <Zap className="w-6 h-6 text-white" />
+                {contactInfo.map((info, index) => (
+                  <motion.div
+                    key={info.title}
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.5, delay: index * 0.1 }}
+                    className="flex items-start gap-4"
+                  >
+                    <div className="bg-blue-600/20 p-3 rounded-lg">
+                      <info.icon className="w-6 h-6 text-blue-400" />
                     </div>
                     <div>
-                      <h3 className="text-xl font-semibold text-white mb-2">Rapid Response</h3>
-                      <p className="text-slate-300">Get a response within 24 hours for all inquiries. Emergency support available 24/7.</p>
+                      <h3 className="text-xl font-semibold text-white mb-2">
+                        {info.title}
+                      </h3>
+                      {info.details.map((detail, idx) => (
+                        <p key={idx} className="text-gray-300 mb-1">
+                          {detail}
+                        </p>
+                      ))}
+                      {info.href !== '#' && (
+                        <a
+                          href={info.href}
+                          className="text-blue-400 hover:text-blue-300 font-medium transition-colors duration-300"
+                        >
+                          Contact us
+                        </a>
+                      )}
                     </div>
-                  </div>
-                </div>
-
-                <div className="bg-gradient-to-br from-slate-800 to-slate-900 p-6 rounded-2xl border border-slate-700">
-                  <div className="flex items-start space-x-4">
-                    <div className="w-12 h-12 bg-gradient-to-br from-purple-500 to-pink-600 rounded-xl flex items-center justify-center flex-shrink-0">
-                      <Users className="w-6 h-6 text-white" />
-                    </div>
-                    <div>
-                      <h3 className="text-xl font-semibold text-white mb-2">Expert Team</h3>
-                      <p className="text-slate-300">Work with certified professionals with 15+ years of experience in technology innovation.</p>
-                    </div>
-                  </div>
-                </div>
-
-                <div className="bg-gradient-to-br from-slate-800 to-slate-900 p-6 rounded-2xl border border-slate-700">
-                  <div className="flex items-start space-x-4">
-                    <div className="w-12 h-12 bg-gradient-to-br from-green-500 to-emerald-600 rounded-xl flex items-center justify-center flex-shrink-0">
-                      <Building className="w-6 h-6 text-white" />
-                    </div>
-                    <div>
-                      <h3 className="text-xl font-semibold text-white mb-2">Global Presence</h3>
-                      <p className="text-slate-300">Serving clients in 25+ countries with local expertise and global reach.</p>
-                    </div>
-                  </div>
-                </div>
-
-                <div className="bg-gradient-to-br from-slate-800 to-slate-900 p-6 rounded-2xl border border-slate-700">
-                  <div className="flex items-start space-x-4">
-                    <div className="w-12 h-12 bg-gradient-to-br from-orange-500 to-red-600 rounded-xl flex items-center justify-center flex-shrink-0">
-                      <Globe className="w-6 h-6 text-white" />
-                    </div>
-                    <div>
-                      <h3 className="text-xl font-semibold text-white mb-2">24/7 Support</h3>
-                      <p className="text-slate-300">Round-the-clock technical support and emergency response for critical systems.</p>
-                    </div>
-                  </div>
-                </div>
+                  </motion.div>
+                ))}
               </div>
 
-              {/* Office Location */}
-              <div className="mt-12 bg-gradient-to-br from-slate-800 to-slate-900 p-6 rounded-2xl border border-slate-700">
-                <h3 className="text-2xl font-bold text-white mb-4">Visit Our Office</h3>
-                <div className="space-y-4">
-                  <div className="flex items-start space-x-3">
-                    <MapPin className="w-5 h-5 text-cyan-400 mt-1 flex-shrink-0" />
-                    <div>
-                      <p className="text-white font-medium">Zion Tech Group</p>
-                      <p className="text-slate-300">364 E Main St STE 1008</p>
-                      <p className="text-slate-300">Middletown, DE 19709</p>
-                    </div>
-                  </div>
-                  <div className="flex items-center space-x-3">
-                    <Clock className="w-5 h-5 text-cyan-400" />
-                    <span className="text-slate-300">Monday - Friday: 9:00 AM - 6:00 PM EST</span>
-                  </div>
-                  <div className="flex items-center space-x-3">
-                    <Phone className="w-5 h-5 text-cyan-400" />
-                    <span className="text-slate-300">+1 302 464 0950</span>
-                  </div>
-                </div>
-              </div>
+              {/* Additional Info */}
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.4 }}
+                className="mt-12 p-6 bg-slate-800/50 rounded-xl border border-slate-700"
+              >
+                <h3 className="text-xl font-semibold text-white mb-4">
+                  Why Choose Zion Tech Group?
+                </h3>
+                <ul className="space-y-3 text-gray-300">
+                  <li className="flex items-start">
+                    <CheckCircle className="w-5 h-5 text-green-400 mr-3 mt-0.5 flex-shrink-0" />
+                    Expert team with 15+ years of experience
+                  </li>
+                  <li className="flex items-start">
+                    <CheckCircle className="w-5 h-5 text-green-400 mr-3 mt-0.5 flex-shrink-0" />
+                    Proven track record of successful projects
+                  </li>
+                  <li className="flex items-start">
+                    <CheckCircle className="w-5 h-5 text-green-400 mr-3 mt-0.5 flex-shrink-0" />
+                    Cutting-edge technology solutions
+                  </li>
+                  <li className="flex items-start">
+                    <CheckCircle className="w-5 h-5 text-green-400 mr-3 mt-0.5 flex-shrink-0" />
+                    Dedicated support and maintenance
+                  </li>
+                </ul>
+              </motion.div>
             </motion.div>
           </div>
         </div>
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-cyan-600 to-blue-700">
-        <div className="container mx-auto px-4 text-center">
-          <motion.h2 
-            className="text-4xl md:text-5xl font-bold mb-6 text-white"
-            initial={{ opacity: 0, y: 30 }}
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-800/30">
+        <div className="max-w-4xl mx-auto text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
             transition={{ duration: 0.8 }}
           >
-            Ready to Get Started?
-          </motion.h2>
-          <motion.p 
-            className="text-xl text-cyan-100 mb-8 max-w-3xl mx-auto"
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8, delay: 0.2 }}
-          >
-            Let's discuss how our AI-powered solutions can transform your business operations and drive innovation.
-          </motion.p>
-          <motion.div 
-            className="flex flex-col sm:flex-row gap-4 justify-center"
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8, delay: 0.4 }}
-          >
-            <a 
-              href="tel:+13024640950" 
-              className="px-8 py-4 bg-white text-cyan-600 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300 transform hover:scale-105"
-            >
-              Call Us Now
-            </a>
-            <a 
-              href="mailto:kleber@ziontechgroup.com" 
-              className="px-8 py-4 border-2 border-white text-white rounded-lg font-semibold hover:bg-white hover:text-cyan-600 transition-all duration-300"
-            >
-              Send Email
-            </a>
+            <h2 className="text-4xl font-bold text-white mb-6">
+              Ready to Start Your Project?
+            </h2>
+            <p className="text-xl text-gray-300 mb-8">
+              Let's discuss how our technology solutions can transform your business 
+              and help you achieve your goals.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <a
+                href="/services-overview"
+                className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-300"
+              >
+                Explore Our Services
+              </a>
+              <a
+                href="/case-studies"
+                className="border border-gray-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:border-gray-500 transition-all duration-300"
+              >
+                View Case Studies
+              </a>
+            </div>
           </motion.div>
         </div>
       </section>
