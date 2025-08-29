@@ -1,8 +1,7 @@
 
-import React, { Suspense } from 'react';
+import React, { Suspense, useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import React from 'react';
 import { CategoriesSection } from "@/components/CategoriesSection";
 import { BenefitsSection } from "@/components/BenefitsSection";
 import { HowItWorksSection } from "@/components/HowItWorksSection";
@@ -27,8 +26,42 @@ import { SecurityComplianceSection } from "@/components/SecurityComplianceSectio
 import { AIServicesShowcase } from "@/components/AIServicesShowcase";
 import { InteractiveTestimonials } from "@/components/InteractiveTestimonials";
 import { ServicesShowcase } from "@/components/ServicesShowcase.tsx";
+import { Users, TrendingUp, Award, Rocket } from 'lucide-react';
 
 export default function Home() {
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    setIsVisible(true);
+  }, []);
+
+  const stats = [
+    {
+      icon: Users,
+      value: "500+",
+      label: "Happy Clients",
+      description: "Serving businesses worldwide"
+    },
+    {
+      icon: TrendingUp,
+      value: "98%",
+      label: "Success Rate",
+      description: "Project completion rate"
+    },
+    {
+      icon: Award,
+      value: "50+",
+      label: "Awards Won",
+      description: "Industry recognition"
+    },
+    {
+      icon: Rocket,
+      value: "24/7",
+      label: "Support",
+      description: "Round-the-clock assistance"
+    }
+  ];
+
   return (
     <>
       <SEO 
