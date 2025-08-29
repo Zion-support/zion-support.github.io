@@ -48,6 +48,10 @@ export function AppHeader() {
     { name: 'AI Workflow Orchestrator', href: '/services/ai-workflow-orchestrator', icon: Workflow, description: 'Intelligent Process Automation' },
     { name: 'AI Data Governance', href: '/services/ai-data-governance', icon: Shield, description: 'AI-Powered Data Protection' },
     { name: 'AI Customer Success', href: '/services/ai-customer-success-platform', icon: Users, description: 'Proactive Customer Engagement' },
+    { name: 'AI Project Management', href: '/services/ai-project-management-suite', icon: Calendar, description: 'Intelligent Project Planning & Execution' },
+    { name: 'AI Financial Trading', href: '/services/ai-financial-trading-platform', icon: TrendingUp, description: 'Automated Trading & Portfolio Optimization' },
+    { name: 'AI Healthcare Analytics', href: '/services/ai-healthcare-analytics-platform', icon: Heart, description: 'Medical AI & Predictive Healthcare' },
+    { name: 'AI Supply Chain', href: '/services/ai-supply-chain-optimization-platform', icon: Truck, description: 'Smart Supply Chain Optimization' },
     { name: 'Digital Twin', href: '/services/digital-twin', icon: Rocket, description: 'Simulation & Monitoring' },
     { name: 'Cybersecurity', href: '/services/ai-compliance-copilot', icon: Shield, description: 'AI-Powered Security' },
     { name: 'Cloud & DevOps', href: '/services/cloud-devops', icon: Cloud, description: 'Infrastructure & Automation' },
@@ -89,6 +93,17 @@ export function AppHeader() {
         { name: 'AI Sales Copilot', href: '/services/ai-sales-copilot', description: 'AI-powered sales automation' },
         { name: 'AI Compliance Assistant', href: '/services/ai-compliance-assistant', description: 'Regulatory compliance automation' },
         { name: 'LLM Content Studio', href: '/services/llm-content-studio', description: 'AI content generation' }
+      ]
+    },
+    {
+      name: 'AI Business Solutions',
+      icon: Target,
+      color: 'from-indigo-600 to-purple-600',
+      services: [
+        { name: 'AI Project Management Suite', href: '/services/ai-project-management-suite', description: 'Intelligent Project Planning & Execution' },
+        { name: 'AI Financial Trading Platform', href: '/services/ai-financial-trading-platform', description: 'Automated Trading & Portfolio Optimization' },
+        { name: 'AI Healthcare Analytics Platform', href: '/services/ai-healthcare-analytics-platform', description: 'Medical AI & Predictive Healthcare' },
+        { name: 'AI Supply Chain Optimization Platform', href: '/services/ai-supply-chain-optimization-platform', description: 'Smart Supply Chain Optimization' }
       ]
     },
     {

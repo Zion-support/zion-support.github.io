@@ -82,6 +82,17 @@ export const EnhancedFuturisticFooter: React.FC = () => {
       ]
     },
     {
+      title: 'AI Business Solutions',
+      icon: Target,
+      color: 'from-indigo-600 to-purple-600',
+      links: [
+        { name: 'AI Project Management Suite', href: '/services/ai-project-management-suite' },
+        { name: 'AI Financial Trading Platform', href: '/services/ai-financial-trading-platform' },
+        { name: 'AI Healthcare Analytics Platform', href: '/services/ai-healthcare-analytics-platform' },
+        { name: 'AI Supply Chain Optimization Platform', href: '/services/ai-supply-chain-optimization-platform' }
+      ]
+    },
+    {
       title: 'Cloud & DevOps',
       icon: Zap,
       color: 'from-blue-600 to-cyan-600',
