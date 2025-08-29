@@ -82,6 +82,12 @@ const AISupplyChainOptimizationNew = lazy(() => import('./pages/services/AI-Supp
 const AICybersecurityThreatIntelligence = lazy(() => import('./pages/services/AI-Cybersecurity-Threat-Intelligence'));
 const AIHealthcareDiagnostics = lazy(() => import('./pages/services/AI-Healthcare-Diagnostics'));
 
+// New innovative services showcase 2027
+const InnovativeServicesShowcase2027 = lazy(() => import('./pages/InnovativeServicesShowcase2027'));
+
+// New comprehensive pricing 2027
+const ComprehensivePricing2027 = lazy(() => import('./pages/ComprehensivePricing2027'));
+
 function App() {
   return (
     <ErrorBoundary>
@@ -142,6 +148,12 @@ function App() {
                 <Route path="/services/ai-supply-chain-optimization" element={<AISupplyChainOptimizationNew />} />
                 <Route path="/services/ai-cybersecurity-threat-intelligence" element={<AICybersecurityThreatIntelligence />} />
                 <Route path="/services/ai-healthcare-diagnostics" element={<AIHealthcareDiagnostics />} />
+                
+                {/* New innovative services showcase 2027 */}
+                <Route path="/innovative-services-2027" element={<InnovativeServicesShowcase2027 />} />
+                
+                {/* New comprehensive pricing 2027 */}
+                <Route path="/comprehensive-pricing-2027" element={<ComprehensivePricing2027 />} />
                 
                 {/* Catch all route */}
                 <Route path="*" element={<Home />} />

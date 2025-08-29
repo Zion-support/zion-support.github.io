@@ -75,10 +75,22 @@ export const EnhancedFuturisticFooter: React.FC = () => {
 
   const footerSections = [
     {
+      title: 'Innovative Services 2027',
+      featured: true,
+      links: [
+        { name: '2027 Services Showcase', href: '/innovative-services-2027', featured: true },
+        { name: 'AI Predictive Analytics', href: '/services/ai-predictive-analytics-platform', featured: true },
+        { name: 'AI Contract Analysis', href: '/services/ai-contract-analysis', featured: true },
+        { name: 'AI Supply Chain Optimization', href: '/services/ai-supply-chain-optimization', featured: true },
+        { name: 'AI Cybersecurity Threat Intelligence', href: '/services/ai-cybersecurity-threat-intelligence', featured: true },
+        { name: 'AI Healthcare Diagnostics', href: '/services/ai-healthcare-diagnostics', featured: true },
+        { name: 'Comprehensive Pricing 2027', href: '/comprehensive-pricing-2027', featured: true }
+      ]
+    },
+    {
       title: 'AI & Business Intelligence',
       featured: true,
       links: [
-
         { name: 'AI Business Intelligence', href: '/services/ai-business-intelligence', featured: true },
         { name: 'AI Legal Document Analyzer', href: '/services/ai-legal-document-analysis', featured: true },
         { name: 'AI Healthcare Analytics', href: '/services/ai-healthcare-analytics', featured: true },

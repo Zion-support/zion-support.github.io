@@ -9,6 +9,7 @@ export function AppHeader() {
   const [servicesDropdownOpen, setServicesDropdownOpen] = useState(false);
   const [solutionsDropdownOpen, setSolutionsDropdownOpen] = useState(false);
   const [resourcesDropdownOpen, setResourcesDropdownOpen] = useState(false);
+  const [innovativeServicesOpen, setInnovativeServicesOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const [isSearching, setIsSearching] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
@@ -94,15 +95,18 @@ export function AppHeader() {
 
   const toggleDropdown = (dropdown: string) => {
     const newState = !(dropdown === 'services' ? servicesDropdownOpen : 
+                       dropdown === 'innovative services' ? innovativeServicesOpen :
                        dropdown === 'solutions' ? solutionsDropdownOpen : 
-                       resourcesDropdownOpen);
+                       dropdown === 'resources' ? resourcesDropdownOpen : false);
     
     // Close other dropdowns
     if (dropdown !== 'services') setServicesDropdownOpen(false);
+    if (dropdown !== 'innovative services') setInnovativeServicesOpen(false);
     if (dropdown !== 'solutions') setSolutionsDropdownOpen(false);
     if (dropdown !== 'resources') setResourcesDropdownOpen(false);
     
     if (dropdown === 'services') setServicesDropdownOpen(newState);
+    if (dropdown === 'innovative services') setInnovativeServicesOpen(newState);
     if (dropdown === 'solutions') setSolutionsDropdownOpen(newState);
     if (dropdown === 'resources') setResourcesDropdownOpen(newState);
     
@@ -112,6 +116,7 @@ export function AppHeader() {
   const navigation = [
     { name: 'Home', href: '/', current: location.pathname === '/' },
     { name: 'Services', href: '/services', current: location.pathname.startsWith('/services'), hasDropdown: true },
+    { name: 'Innovative Services', href: '/innovative-services-2027', current: location.pathname.startsWith('/innovative-services'), hasDropdown: true },
     { name: 'Solutions', href: '/solutions', current: location.pathname.startsWith('/solutions'), hasDropdown: true },
     { name: 'Resources', href: '/resources', current: location.pathname.startsWith('/resources'), hasDropdown: true },
     { name: 'About', href: '/about', current: location.pathname === '/about' },
@@ -283,6 +288,76 @@ export function AppHeader() {
       description: 'Complete AI & Tech Solutions',
       featured: true,
       color: 'from-cyan-500 to-purple-500'
+    }
+  ];
+
+  const innovativeServices = [
+    { 
+      name: '2027 Services Showcase', 
+      href: '/innovative-services-2027', 
+      icon: Rocket, 
+      description: 'Cutting-edge AI solutions for 2027',
+      featured: true,
+      color: 'from-purple-500 to-pink-500',
+      badge: 'New'
+    },
+    { 
+      name: 'AI Predictive Analytics', 
+      href: '/services/ai-predictive-analytics-platform', 
+      icon: Brain, 
+      description: 'Advanced ML forecasting & insights',
+      featured: true,
+      color: 'from-blue-500 to-cyan-500'
+    },
+    { 
+      name: 'AI Contract Analysis', 
+      href: '/services/ai-contract-analysis', 
+      icon: FileText, 
+      description: 'Legal document AI processing',
+      featured: true,
+      color: 'from-green-500 to-blue-500'
+    },
+    { 
+      name: 'AI Supply Chain', 
+      href: '/services/ai-supply-chain-optimization', 
+      icon: Truck, 
+      description: 'Supply chain optimization & forecasting',
+      featured: true,
+      color: 'from-orange-500 to-red-500'
+    },
+    { 
+      name: 'AI Cybersecurity', 
+      href: '/services/ai-cybersecurity-threat-intelligence', 
+      icon: Shield, 
+      description: 'Threat intelligence & response',
+      featured: true,
+      color: 'from-red-500 to-pink-500'
+    },
+    { 
+      name: 'AI Healthcare Diagnostics', 
+      href: '/services/ai-healthcare-diagnostics', 
+      icon: Heart, 
+      description: 'Medical AI diagnostics platform',
+      featured: true,
+      color: 'from-pink-500 to-purple-500'
+    },
+    { 
+      name: 'Quantum AI Hybrid', 
+      href: '/services/quantum-ai-hybrid-platform', 
+      icon: Atom, 
+      description: 'Quantum computing + AI platform',
+      featured: true,
+      color: 'from-indigo-500 to-purple-500',
+      badge: 'Cutting Edge'
+    },
+    { 
+      name: 'Comprehensive Pricing 2027', 
+      href: '/comprehensive-pricing-2027', 
+      icon: DollarSign, 
+      description: 'Complete pricing guide & ROI calculator',
+      featured: true,
+      color: 'from-green-500 to-emerald-500',
+      badge: 'New'
     }
   ];
 
@@ -552,6 +627,50 @@ export function AppHeader() {
                         className="flex items-center justify-center w-full px-4 py-2 bg-blue-600 text-white text-sm font-medium rounded-md hover:bg-blue-700 transition-colors duration-200"
                       >
                         View All Services
+                      </Link>
+                    </div>
+                  </div>
+                )}
+
+                {item.name === 'Innovative Services' && innovativeServicesOpen && (
+                  <div className="absolute top-full left-0 mt-2 w-96 bg-white rounded-lg shadow-xl border border-gray-200 py-4 z-50">
+                    <div className="px-4 pb-3 border-b border-gray-200">
+                      <h3 className="text-lg font-semibold text-gray-900">Innovative Services 2027</h3>
+                      <p className="text-sm text-gray-600 mt-1">Cutting-edge AI & emerging tech solutions</p>
+                    </div>
+                    <div className="max-h-96 overflow-y-auto">
+                      {innovativeServices.map((service) => (
+                        <Link
+                          key={service.name}
+                          to={service.href}
+                          className="flex items-start space-x-3 px-4 py-3 hover:bg-gray-50 transition-colors duration-200 group"
+                        >
+                          <div className={`w-10 h-10 rounded-lg bg-gradient-to-br ${service.color} flex items-center justify-center flex-shrink-0`}>
+                            <service.icon className="w-5 h-5 text-white" />
+                          </div>
+                          <div className="flex-1 min-w-0">
+                            <div className="flex items-center space-x-2">
+                              <p className="text-sm font-medium text-gray-900 group-hover:text-blue-600 transition-colors duration-200">
+                                {service.name}
+                              </p>
+                              {service.badge && (
+                                <span className="inline-flex items-center px-2 py-0.5 rounded-full text-xs font-medium bg-blue-100 text-blue-800">
+                                  {service.badge}
+                                </span>
+                              )}
+                            </div>
+                            <p className="text-sm text-gray-600 mt-1">{service.description}</p>
+                          </div>
+                          <ArrowRight className="w-4 h-4 text-gray-400 group-hover:text-blue-600 transition-colors duration-200" />
+                        </Link>
+                      ))}
+                    </div>
+                    <div className="px-4 pt-3 border-t border-gray-200">
+                      <Link
+                        to="/innovative-services-2027"
+                        className="flex items-center justify-center w-full px-4 py-2 bg-gradient-to-r from-purple-500 to-pink-600 text-white text-sm font-medium rounded-md hover:from-purple-600 hover:to-pink-700 transition-colors duration-200"
+                      >
+                        View All Innovative Services
                       </Link>
                     </div>
                   </div>
