@@ -35,7 +35,7 @@ const Help = React.lazy(() => import('./pages/Help'));
 const Partners = React.lazy(() => import('./pages/Partners'));
 
 // Enhanced services pages - only import existing ones
-const ComprehensivePricingGuide2027 = React.lazy(() => import('./pages/ComprehensivePricingGuide2027.tsx'));
+const ComprehensivePricingGuide2027 = React.lazy(() => import('./pages/ComprehensivePricingGuide2027'));
 const ComprehensiveServicesLanding2025 = React.lazy(() => import('./pages/ComprehensiveServicesLanding2025.jsx'));
 
 // Revolutionary services pages for 2030
@@ -70,6 +70,13 @@ const CustomerFeedbackSurveys = React.lazy(() => import('./pages/services/Custom
 const AIComplianceCopilot = React.lazy(() => import('./pages/services/AIComplianceCopilot'));
 const LLMContentStudio = React.lazy(() => import('./pages/services/LLMContentStudio'));
 const FinOpsAdvisor = React.lazy(() => import('./pages/services/FinOpsAdvisor'));
+
+// New Micro SaaS service pages
+const AffiliateMarketingTracker = React.lazy(() => import('./pages/services/AffiliateMarketingTracker'));
+const UptimeSLAMonitor = React.lazy(() => import('./pages/services/UptimeSLAMonitor'));
+const SOC2ComplianceTracker = React.lazy(() => import('./pages/services/SOC2ComplianceTracker'));
+const EmployeeSchedulingSaaS = React.lazy(() => import('./pages/services/EmployeeSchedulingSaaS'));
+const AISupportHelpdesk = React.lazy(() => import('./pages/services/AISupportHelpdesk'));
 
 // Additional service pages
 const DigitalTransformation = React.lazy(() => import('./pages/services/DigitalTransformation'));
@@ -168,6 +175,11 @@ function App() {
               <Route path="/ai-services" element={<AIServices />} />
               <Route path="/it-services" element={<ITServices />} />
               <Route path="/micro-saas" element={<MicroSaaS />} />
+              <Route path="/services/affiliate-marketing-tracker" element={<AffiliateMarketingTracker />} />
+              <Route path="/services/uptime-sla-monitor" element={<UptimeSLAMonitor />} />
+              <Route path="/services/soc2-compliance-tracker" element={<SOC2ComplianceTracker />} />
+              <Route path="/services/employee-scheduling-saas" element={<EmployeeSchedulingSaaS />} />
+              <Route path="/services/ai-support-helpdesk" element={<AISupportHelpdesk />} />
               <Route path="/services/micro-saas-solutions" element={<MicroSAASSolutions />} />
               <Route path="/request-quote" element={<RequestQuote />} />
               <Route path="/dashboard" element={<Dashboard />} />

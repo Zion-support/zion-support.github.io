@@ -1,3 +1,18 @@
+// Lightweight top summary for SEO. The richer, interactive guide continues below.
+import React from 'react';
+import { SEO } from '@/components/SEO';
+export const PricingSummaryIntro: React.FC = () => (
+  <div className="container mx-auto px-4 py-10 max-w-5xl">
+    <h1 className="text-3xl font-bold mb-4">Comprehensive Pricing Guide 2027</h1>
+    <p className="text-slate-300">Market-aligned pricing bands for AI, IT, and Micro SaaS services with credible references.</p>
+    <div className="mt-4 text-xs text-slate-400 space-x-3">
+      <a className="underline hover:text-cyan-300" href="https://www.gartner.com/en/insights/consulting" target="_blank" rel="noreferrer">Gartner Consulting Benchmarks</a>
+      <a className="underline hover:text-cyan-300" href="https://www.mckinsey.com/capabilities/quantumblack" target="_blank" rel="noreferrer">McKinsey Digital</a>
+      <a className="underline hover:text-cyan-300" href="https://www.priceintelligently.com/blog/topic/pricing" target="_blank" rel="noreferrer">Pricing Teardowns</a>
+    </div>
+  </div>
+);
+
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
