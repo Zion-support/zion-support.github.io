@@ -91,11 +91,11 @@ export function Footer() {
     {
       title: "Services",
       links: [
-        { label: "AI Solutions", path: "/services/ai" },
-        { label: "Cloud & DevOps", path: "/services/cloud" },
-        { label: "Cybersecurity", path: "/services/cybersecurity" },
-        { label: "IT Infrastructure", path: "/services/infrastructure" },
-        { label: "Digital Transformation", path: "/services/transformation" },
+        { label: "AI Solutions", path: "/services?category=ai-ml" },
+        { label: "Cloud & DevOps", path: "/services?category=cloud" },
+        { label: "Cybersecurity", path: "/services?category=cybersecurity" },
+        { label: "IT Infrastructure", path: "/services?category=infrastructure" },
+        { label: "Digital Transformation", path: "/services?category=transformation" },
         { label: "Quantum Neural Network", path: "/quantum-neural-network-platform" },
         { label: "Autonomous Operations", path: "/autonomous-business-operations-platform" },
         { label: "IT Asset Management", path: "/ai-powered-it-asset-management" }
@@ -107,7 +107,7 @@ export function Footer() {
         { label: "About Us", path: "/about" },
         { label: "Our Team", path: "/about" },
         { label: "Careers", path: "/careers" },
-        { label: "News & Updates", path: "/news" },
+        { label: "News & Updates", path: "/blog" },
         { label: "Case Studies", path: "/case-studies" },
         { label: "Partners", path: "/partners" }
       ]
@@ -120,7 +120,7 @@ export function Footer() {
         { label: "White Papers", path: "/white-papers" },
         { label: "Webinars", path: "/webinars" },
         { label: "Research", path: "/research-development" },
-        { label: "Events", path: "/events" },
+        { label: "Events", path: "/webinars" },
         { label: "Training", path: "/training" }
       ]
     },
@@ -131,7 +131,7 @@ export function Footer() {
         { label: "Help Center", path: "/help" },
         { label: "Support Portal", path: "/support" },
         { label: "FAQ", path: "/faq" },
-        { label: "Consulting", path: "/services/consulting" },
+        { label: "Consulting", path: "/services" },
         { label: "Request Quote", path: "/contact" }
       ]
     }
