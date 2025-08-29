@@ -1,0 +1,29 @@
+# PM2 Automated Tasks Crontab Configuration
+# This replaces the scheduled GitHub Actions workflows
+# 
+# To install this crontab, run:
+# crontab scripts/crontab-setup.txt
+#
+# To view current crontab:
+# crontab -l
+#
+# To edit crontab manually:
+# crontab -e
+
+# Every Monday at 2 AM - Update dependencies (replaces dependencies.yml workflow)
+0 2 * * 1 cd /workspace && /workspace/scripts/pm2-cron.sh deps >> /tmp/pm2-deps.log 2>&1
+
+# Every day at 3 AM - Run security scan (replaces security.yml workflow)
+0 3 * * * cd /workspace && /workspace/scripts/pm2-cron.sh security >> /tmp/pm2-security.log 2>&1
+
+# Every day at 4 AM - Run quality checks (replaces quality-check.yml workflow)
+0 4 * * * cd /workspace && /workspace/scripts/pm2-cron.sh quality >> /tmp/pm2-quality.log 2>&1
+
+# Every 6 hours - Check and restart services if needed
+0 */6 * * * cd /workspace && /workspace/scripts/pm2-cron.sh restart >> /tmp/pm2-restart.log 2>&1
+
+# Every Sunday at 1 AM - Run full maintenance (all tasks)
+0 1 * * 0 cd /workspace && /workspace/scripts/pm2-cron.sh all >> /tmp/pm2-maintenance.log 2>&1
+
+# Every day at 5 AM - Clean up logs and cache
+0 5 * * * cd /workspace && /workspace/scripts/pm2-cron.sh cleanup >> /tmp/pm2-cleanup.log 2>&1
