@@ -85,6 +85,38 @@ export function AppHeader() {
       color: 'from-green-500 to-blue-500'
     },
     { 
+      name: 'Developer Productivity Copilot', 
+      href: '/services/developer-productivity-copilot', 
+      icon: Code, 
+      description: 'AI-powered development tools',
+      featured: true,
+      color: 'from-cyan-500 to-blue-500'
+    },
+    { 
+      name: 'AI Sales Assistant', 
+      href: '/services/ai-sales-assistant', 
+      icon: MessageSquare, 
+      description: 'Intelligent sales automation',
+      featured: true,
+      color: 'from-purple-500 to-pink-500'
+    },
+    { 
+      name: 'Security Posture Guardian', 
+      href: '/services/security-posture-guardian', 
+      icon: Shield, 
+      description: 'AI-powered security monitoring',
+      featured: true,
+      color: 'from-red-500 to-orange-500'
+    },
+    { 
+      name: 'AI Data Pipeline Optimizer', 
+      href: '/services/ai-data-pipeline-optimizer', 
+      icon: Database, 
+      description: 'Intelligent data processing',
+      featured: true,
+      color: 'from-green-500 to-emerald-500'
+    },
+    { 
       name: 'Quantum Computing', 
       href: '/services/quantum-computing', 
       icon: Atom, 

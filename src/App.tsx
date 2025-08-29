@@ -35,6 +35,12 @@ const SearchPage = React.lazy(() => import('./pages/SearchPage'));
 const Legal = React.lazy(() => import('./pages/Legal'));
 const EnhancedContact = React.lazy(() => import('./components/EnhancedContact'));
 
+// New service pages
+const DeveloperProductivityCopilot = React.lazy(() => import('./pages/services/developer-productivity-copilot'));
+const AISalesAssistant = React.lazy(() => import('./pages/services/ai-sales-assistant'));
+const SecurityPostureGuardian = React.lazy(() => import('./pages/services/security-posture-guardian'));
+const AIDataPipelineOptimizer = React.lazy(() => import('./pages/services/ai-data-pipeline-optimizer'));
+
 // Enhanced components
 const ScheduleDemo = React.lazy(() => import('./pages/ScheduleDemo'));
 const Community = React.lazy(() => import('./pages/Community'));
@@ -137,6 +143,12 @@ function App() {
                 <Route path="/services/ai-supply-chain-optimization" element={<AISupplyChainOptimization />} />
                 <Route path="/services/ai-healthcare-analytics" element={<AIHealthcareAnalytics />} />
                 <Route path="/services/ai-financial-trading" element={<AIFinancialTrading />} />
+                
+                {/* Additional service routes */}
+                <Route path="/services/developer-productivity-copilot" element={<DeveloperProductivityCopilot />} />
+                <Route path="/services/ai-sales-assistant" element={<AISalesAssistant />} />
+                <Route path="/services/security-posture-guardian" element={<SecurityPostureGuardian />} />
+                <Route path="/services/ai-data-pipeline-optimizer" element={<AIDataPipelineOptimizer />} />
 
                 {/* Catch all route */}
                 <Route path="*" element={<Home />} />
