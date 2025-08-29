@@ -467,5 +467,3 @@ export default function InnovativeServicesShowcase2026() {
     </motion.div>
   );
 };
-
-export default InnovativeServicesShowcase2026;
