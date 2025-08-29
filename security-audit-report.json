@@ -1,5 +1,93 @@
 {
-  "timestamp": "2025-08-29T10:24:45.601Z",
-  "summary": "Security audit completed",
-  "status": "completed"
+  "timestamp": "2025-08-29T16:45:17.857Z",
+  "npmAudit": {
+    "auditReportVersion": 2,
+    "vulnerabilities": {},
+    "metadata": {
+      "vulnerabilities": {
+        "info": 0,
+        "low": 0,
+        "moderate": 0,
+        "high": 0,
+        "critical": 0,
+        "total": 0
+      },
+      "dependencies": {
+        "prod": 109,
+        "dev": 785,
+        "optional": 54,
+        "peer": 0,
+        "peerOptional": 0,
+        "total": 895
+      }
+    }
+  },
+  "yarnAudit": null,
+  "outdatedPackages": {
+    "@types/react": {
+      "current": "18.3.24",
+      "wanted": "18.3.24",
+      "latest": "19.1.12",
+      "dependent": "workspace",
+      "location": "/workspace/node_modules/@types/react"
+    },
+    "@types/react-dom": {
+      "current": "18.3.7",
+      "wanted": "18.3.7",
+      "latest": "19.1.9",
+      "dependent": "workspace",
+      "location": "/workspace/node_modules/@types/react-dom"
+    },
+    "framer-motion": {
+      "current": "10.18.0",
+      "wanted": "10.18.0",
+      "latest": "12.23.12",
+      "dependent": "workspace",
+      "location": "/workspace/node_modules/framer-motion"
+    },
+    "lucide-react": {
+      "current": "0.294.0",
+      "wanted": "0.294.0",
+      "latest": "0.542.0",
+      "dependent": "workspace",
+      "location": "/workspace/node_modules/lucide-react"
+    },
+    "react": {
+      "current": "18.3.1",
+      "wanted": "18.3.1",
+      "latest": "19.1.1",
+      "dependent": "workspace",
+      "location": "/workspace/node_modules/react"
+    },
+    "react-dom": {
+      "current": "18.3.1",
+      "wanted": "18.3.1",
+      "latest": "19.1.1",
+      "dependent": "workspace",
+      "location": "/workspace/node_modules/react-dom"
+    },
+    "react-router-dom": {
+      "current": "6.30.1",
+      "wanted": "6.30.1",
+      "latest": "7.8.2",
+      "dependent": "workspace",
+      "location": "/workspace/node_modules/react-router-dom"
+    }
+  },
+  "vulnerablePackages": [],
+  "summary": {
+    "totalVulnerabilities": {
+      "info": 0,
+      "low": 0,
+      "moderate": 0,
+      "high": 0,
+      "critical": 0,
+      "total": 0
+    },
+    "criticalVulnerabilities": 0,
+    "highVulnerabilities": 0,
+    "moderateVulnerabilities": 0,
+    "lowVulnerabilities": 0,
+    "outdatedPackagesCount": 7
+  }
 }

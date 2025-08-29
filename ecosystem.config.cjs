@@ -1,10 +1,10 @@
 module.exports = {
   apps: [
-    // Main application
+    // Main application - using preview for production
     {
       name: 'zion-app',
       script: 'npm',
-      args: 'start',
+      args: 'run preview',
       cwd: './',
       instances: 1,
       autorestart: true,
@@ -17,21 +17,6 @@ module.exports = {
       env_production: {
         NODE_ENV: 'production',
         NODE_OPTIONS: '--max-old-space-size=6144 --openssl-legacy-provider'
-      }
-    },
-    
-    // Backend server
-    {
-      name: 'zion-backend',
-      script: 'npm',
-      args: 'start',
-      cwd: './server',
-      instances: 1,
-      autorestart: true,
-      watch: false,
-      max_memory_restart: '1G',
-      env: {
-        NODE_ENV: 'production'
       }
     },
 
