@@ -1,4 +1,4 @@
-import { ArrowRight, Atom, BookOpen, Brain, Building, Building2, ChevronDown, Cloud, Code, Cpu, DollarSign, FileText, Globe, HeartHandshake, Heart, HelpCircle, Leaf, Lock, Mail, MapPin, Menu, MessageCircle, PenTool, Phone, Rocket, Scale, Search, Settings, Shield, ShoppingCart, Star, Target, TrendingUp, Users, X, Zap, Truck, Play, BarChart3, GraduationCap } from 'lucide-react';
+import { ArrowRight, Atom, BookOpen, Brain, Building, Building2, ChevronDown, Cloud, Code, Cpu, DollarSign, FileText, Globe, HeartHandshake, Heart, HelpCircle, Leaf, Lock, Mail, MapPin, Menu, MessageCircle, PenTool, Phone, Rocket, Scale, Search, Settings, Shield, ShoppingCart, Star, Target, TrendingUp, Users, X, Zap, Truck, Play, BarChart3, GraduationCap, Factory } from 'lucide-react';
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { ThemeToggle } from '../components/ThemeToggle';
@@ -140,124 +140,172 @@ export function AppHeader() {
         { name: 'Edge Computing Platform', href: '/services/edge-computing-platform', description: 'Distributed computing at the edge' }
       ]
     },
-    { 
-      name: 'Innovative Micro SAAS 2025', 
-      href: '/innovative-micro-saas-services-2025', 
-      icon: Rocket, 
+    {
+      name: 'Innovative Micro SAAS 2025',
+      href: '/innovative-micro-saas-services-2025',
+      icon: Rocket,
       description: 'Cutting-edge AI Services',
       featured: true,
       color: 'from-purple-500 to-pink-500'
     },
-    { 
-      name: 'AI Business Intelligence', 
-      href: '/services/ai-business-intelligence', 
-      icon: Brain, 
+    {
+      name: 'AI Business Intelligence',
+      href: '/services/ai-business-intelligence',
+      icon: Brain,
       description: 'Machine Learning & Data Science',
       featured: true,
       color: 'from-purple-500 to-cyan-500'
     },
-    { 
-      name: 'AI Healthcare Analytics', 
-      href: '/services/ai-healthcare-analytics', 
-      icon: Heart, 
+    {
+      name: 'AI Healthcare Analytics',
+      href: '/services/ai-healthcare-analytics',
+      icon: Heart,
       description: 'Medical AI & Diagnostics',
       featured: true,
       color: 'from-red-500 to-pink-500'
     },
-    { 
-      name: 'AI Content Creation', 
-      href: '/services/ai-content-creation', 
-      icon: PenTool, 
+    {
+      name: 'AI Content Creation',
+      href: '/services/ai-content-creation',
+      icon: PenTool,
       description: 'Content Generation & Optimization',
       featured: true,
       color: 'from-blue-500 to-indigo-500'
     },
-    { 
-      name: 'AI Cybersecurity', 
-      href: '/services/ai-cybersecurity', 
-      icon: Shield, 
+    {
+      name: 'AI Cybersecurity',
+      href: '/services/ai-cybersecurity',
+      icon: Shield,
       description: 'AI-Powered Security',
       featured: true,
       color: 'from-green-500 to-blue-500'
     },
-    { 
-      name: 'AI Financial Trading', 
-      href: '/services/ai-financial-trading', 
-      icon: TrendingUp, 
+    {
+      name: 'AI Financial Trading',
+      href: '/services/ai-financial-trading',
+      icon: TrendingUp,
       description: 'AI-Powered Trading Systems',
       featured: true,
       color: 'from-green-500 to-emerald-500'
     },
-    { 
-      name: 'AI Supply Chain Optimization', 
-      href: '/services/ai-supply-chain-optimization', 
-      icon: Truck, 
+    {
+      name: 'AI Supply Chain Optimization',
+      href: '/services/ai-supply-chain-optimization',
+      icon: Truck,
       description: 'Supply Chain AI Solutions',
       featured: true,
       color: 'from-orange-500 to-red-500'
     },
-    { 
-      name: 'AI Legal Document Analysis', 
-      href: '/services/ai-legal-document-analysis', 
-      icon: FileText, 
-      description: 'Legal AI & Document Processing',
+    {
+      name: 'AI Legal Document Analysis',
+      href: '/services/ai-legal-research-platform',
+      icon: FileText,
+      description: 'Legal Research & Automation',
       featured: true,
-      color: 'from-blue-500 to-purple-500'
+      color: 'from-purple-500 to-indigo-500'
     },
-    { 
-      name: 'Digital Twin Platform', 
-      href: '/services/digital-twin', 
-      icon: Globe, 
-      description: 'Virtual Replicas & Simulation',
+    {
+      name: 'AI Education Platform',
+      href: '/services/ai-education-platform',
+      icon: GraduationCap,
+      description: 'Personalized Learning & Analytics',
       featured: true,
-      color: 'from-green-500 to-emerald-500'
+      color: 'from-blue-500 to-green-500'
     },
-    { 
-      name: 'Cloud DevOps', 
-      href: '/services/cloud-devops', 
-      icon: Cloud, 
-      description: 'DevOps & Infrastructure',
+    {
+      name: 'AI Marketing Automation',
+      href: '/services/ai-marketing-automation',
+      icon: BarChart3,
+      description: 'Marketing Campaign Optimization',
       featured: true,
-      color: 'from-blue-500 to-cyan-500'
+      color: 'from-pink-500 to-purple-500'
     },
-    { 
-      name: 'Micro SaaS Products', 
-      href: '/services/micro-saas', 
-      icon: ShoppingCart, 
-      description: 'AI automations with transparent pricing',
+    {
+      name: 'AI Autonomous Operations',
+      href: '/services/ai-autonomous-business-operations',
+      icon: Rocket,
+      description: 'Fully Autonomous Business Operations',
       featured: true,
-      color: 'from-orange-500 to-red-500'
-    },
-    { 
-      name: 'Revolutionary Services 2030', 
-      href: '/revolutionary-services-2030', 
-      icon: Rocket, 
-      description: 'Future Technology Solutions',
-      featured: true,
-      color: 'from-indigo-500 to-purple-500'
+      color: 'from-orange-500 to-yellow-500'
     }
   ];
 
   const solutions = [
-    { name: 'Healthcare Solutions', href: '/solutions#healthcare', icon: Heart, description: 'AI-powered healthcare innovations' },
-    { name: 'Financial Services', href: '/solutions#financial', icon: DollarSign, description: 'FinTech & banking solutions' },
-    { name: 'Manufacturing', href: '/solutions#manufacturing', icon: Building, description: 'Industry 4.0 & smart manufacturing' },
-    { name: 'Retail & E-commerce', href: '/solutions#retail', icon: ShoppingCart, description: 'Digital commerce & retail tech' },
-    { name: 'Government & Public Sector', href: '/solutions#government', icon: Building2, description: 'Public sector digital transformation' },
-    { name: 'Energy & Sustainability', href: '/solutions#energy', icon: Leaf, description: 'Green energy & sustainability tech' },
-    { name: 'Space & Aerospace', href: '/space-tech', icon: Rocket, description: 'Space technology & aerospace solutions' },
-    { name: 'Education & Training', href: '/training', icon: BookOpen, description: 'EdTech & learning platforms' }
+    {
+      name: 'Enterprise Solutions',
+      icon: Building2,
+      color: 'from-blue-600 to-indigo-600',
+      solutions: [
+        { name: 'Digital Transformation', href: '/services/digital-transformation', description: 'Complete business transformation' },
+        { name: 'IT Consulting', href: '/services/it-consulting', description: 'Strategic IT guidance' },
+        { name: 'Green IT', href: '/services/green-it', description: 'Sustainable technology solutions' },
+        { name: 'Quantum Computing', href: '/services/quantum-computing', description: 'Next-gen computing power' },
+        { name: 'Space Tech', href: '/services/space-tech', description: 'Space technology solutions' }
+      ]
+    },
+    {
+      name: 'Industry Solutions',
+      icon: Factory,
+      color: 'from-green-600 to-emerald-600',
+      solutions: [
+        { name: 'Healthcare Technology', href: '/services/healthcare-tech', description: 'Medical AI & diagnostics' },
+        { name: 'Manufacturing Solutions', href: '/services/manufacturing-solutions', description: 'Smart manufacturing' },
+        { name: 'Financial Services', href: '/services/financial-services', description: 'FinTech solutions' },
+        { name: 'Retail Technology', href: '/services/retail-tech', description: 'E-commerce & retail' },
+        { name: 'Education Technology', href: '/services/education-tech', description: 'EdTech solutions' }
+      ]
+    },
+    {
+      name: 'Technology Solutions',
+      icon: Cpu,
+      color: 'from-purple-600 to-pink-600',
+      solutions: [
+        { name: 'Cloud & DevOps', href: '/services/cloud-devops', description: 'Infrastructure & automation' },
+        { name: 'IoT & Edge Computing', href: '/services/iot-edge', description: 'Smart devices & networks' },
+        { name: 'Blockchain Solutions', href: '/services/blockchain-enterprise-solutions', description: 'DeFi & smart contracts' },
+        { name: 'Data Analytics', href: '/services/data-analytics', description: 'Business intelligence' },
+        { name: 'Cybersecurity', href: '/services/cybersecurity', description: 'Security & compliance' }
+      ]
+    }
   ];
 
   const resources = [
-    { name: 'Blog & Insights', href: '/blog', icon: BookOpen, description: 'Latest tech insights & trends' },
-    { name: 'Case Studies', href: '/case-studies', icon: FileText, description: 'Success stories & implementations' },
-    { name: 'White Papers', href: '/white-papers', icon: FileText, description: 'In-depth research & analysis' },
-    { name: 'Webinars', href: '/webinars', icon: Play, description: 'Live & recorded webinars' },
-    { name: 'Documentation', href: '/docs', icon: BookOpen, description: 'Technical documentation & guides' },
-    { name: 'Training & Certification', href: '/training', icon: GraduationCap, description: 'Professional development' },
-    { name: 'Community Forum', href: '/community', icon: Users, description: 'Connect with experts' },
-    { name: 'FAQ & Help Center', href: '/faq', icon: HelpCircle, description: 'Answers to common questions' }
+    {
+      name: 'Learning & Development',
+      icon: BookOpen,
+      color: 'from-blue-600 to-cyan-600',
+      resources: [
+        { name: 'Blog & Articles', href: '/blog', description: 'Latest insights & trends' },
+        { name: 'Webinars', href: '/webinars', description: 'Expert-led sessions' },
+        { name: 'Case Studies', href: '/case-studies', description: 'Success stories' },
+        { name: 'White Papers', href: '/white-papers', description: 'In-depth research' },
+        { name: 'Documentation', href: '/docs', description: 'Technical guides' }
+      ]
+    },
+    {
+      name: 'Support & Community',
+      icon: Users,
+      color: 'from-green-600 to-emerald-600',
+      resources: [
+        { name: 'Help Center', href: '/help', description: 'Support & troubleshooting' },
+        { name: 'FAQ', href: '/faq', description: 'Common questions' },
+        { name: 'Community Forum', href: '/community', description: 'User discussions' },
+        { name: 'Training Programs', href: '/training', description: 'Skill development' },
+        { name: 'Certification', href: '/certification', description: 'Professional credentials' }
+      ]
+    },
+    {
+      name: 'Business Resources',
+      icon: Building,
+      color: 'from-purple-600 to-pink-600',
+      resources: [
+        { name: 'Pricing Guide', href: '/pricing', description: 'Service pricing & plans' },
+        { name: 'Partners', href: '/partners', description: 'Strategic partnerships' },
+        { name: 'Careers', href: '/careers', description: 'Job opportunities' },
+        { name: 'Press & Media', href: '/press', description: 'Company news' },
+        { name: 'Events', href: '/events', description: 'Industry events' }
+      ]
+    }
   ];
 
   const contactInfo = {
@@ -553,7 +601,7 @@ export function AppHeader() {
                             {service.name}
                           </Link>
                         ))}
-                        {item.name === 'Solutions' && solutions.slice(0, 4).map((solution) => (
+                        {item.name === 'Solutions' && solutions.map((solution) => (
                           <Link
                             key={solution.name}
                             to={solution.href}
@@ -563,7 +611,7 @@ export function AppHeader() {
                             {solution.name}
                           </Link>
                         ))}
-                        {item.name === 'Resources' && resources.slice(0, 4).map((resource) => (
+                        {item.name === 'Resources' && resources.map((resource) => (
                           <Link
                             key={resource.name}
                             to={resource.href}
