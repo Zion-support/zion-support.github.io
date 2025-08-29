@@ -59,6 +59,10 @@ const AILegalDocumentAnalysis = React.lazy(() => import('./pages/services/ai-leg
 const AISupplyChainOptimization = React.lazy(() => import('./pages/services/ai-supply-chain-optimization'));
 const AIHealthcareAnalytics = React.lazy(() => import('./pages/services/ai-healthcare-analytics'));
 const AIFinancialTrading = React.lazy(() => import('./pages/services/ai-financial-trading'));
+const AIAutonomousBusinessOperations = React.lazy(() => import('./pages/services/ai-autonomous-business-operations-platform'));
+const AISalesIntelligence = React.lazy(() => import('./pages/services/ai-sales-intelligence-platform'));
+const QuantumAICybersecurity = React.lazy(() => import('./pages/services/quantum-ai-cybersecurity-platform'));
+const AIContentCreationStudio = React.lazy(() => import('./pages/services/ai-content-creation-studio'));
 // Service pages - only import existing ones
 const CloudDevOps = React.lazy(() => import('./pages/services/CloudDevOps'));
 const DigitalTwin = React.lazy(() => import('./pages/services/DigitalTwin'));
@@ -108,8 +112,10 @@ function App() {
                 <Route path="/services/showcase-2030" element={<ComprehensiveServicesShowcase2030 />} />
                 <Route path="/services/overview" element={<InnovativeServicesOverview />} />
                 <Route path="/comprehensive-services-showcase-2030" element={<ComprehensiveServicesShowcase2030 />} />
+                <Route path="/comprehensive-services-landing-2027" element={<ComprehensiveServicesLanding2027 />} />
                 <Route path="/pricing-guide-2025" element={<ComprehensivePricingGuide2025 />} />
                 <Route path="/pricing-guide-2027" element={<ComprehensivePricingGuide2027 />} />
+                <Route path="/comprehensive-pricing-guide-2027" element={<ComprehensivePricingGuide2027 />} />
                 <Route path="/pricing-guide-2030" element={<ComprehensivePricingGuide2030 />} />
                 <Route path="/request-quote" element={<RequestQuote />} />
                 <Route path="/dashboard" element={<Dashboard />} />
@@ -125,6 +131,12 @@ function App() {
                 <Route path="/services/data-analytics" element={<DataAnalytics />} />
                 <Route path="/services/it-infrastructure" element={<ITInfrastructure />} />
                 <Route path="/services/ai-business-intelligence" element={<AIBusinessIntelligence />} />
+                
+                {/* New innovative service routes */}
+                <Route path="/services/ai-autonomous-business-operations-platform" element={<AIAutonomousBusinessOperations />} />
+                <Route path="/services/ai-sales-intelligence-platform" element={<AISalesIntelligence />} />
+                <Route path="/services/quantum-ai-cybersecurity-platform" element={<QuantumAICybersecurity />} />
+                <Route path="/services/ai-content-creation-studio" element={<AIContentCreationStudio />} />
 
                 {/* Zion 2026 Services */}
                 <Route path="/zion-2026-services" element={<Zion2026ServicesShowcase />} />
