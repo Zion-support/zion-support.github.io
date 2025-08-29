@@ -5,6 +5,7 @@ import CompanyWorkspace from "../pages/CompanyWorkspace";
 import EnterpriseBilling from "../pages/EnterpriseBilling";
 import EnterpriseDemo from "../pages/EnterpriseDemo";
 
+
 export default function EnterpriseRoutes() {
   return (
     <Routes>
@@ -15,6 +16,7 @@ export default function EnterpriseRoutes() {
       <Route path="/enterprise/demo" element={<EnterpriseDemo />} />
       <Route path="/company/:companySlug" element={<CompanyWorkspace />} />
       <Route path="/enterprise/billing" element={<EnterpriseBilling />} />
+      
     </Routes>
   );
 }

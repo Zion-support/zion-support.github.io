@@ -3,8 +3,7 @@ import React, { Suspense, useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 
->>>>>>> cursor/website-audit-content-update-and-deployment-c7b2
-import { SEO } from "@/components/SEO";
+import { EnhancedSEO } from "@/components/EnhancedSEO";
 import { HeroSection } from "@/components/HeroSection";
 import { LoadingSpinner } from "@/components/ui/LoadingSpinner";
 
@@ -249,11 +248,13 @@ export default function Home() {
 
   return (
     <div className="min-h-screen bg-slate-900 relative overflow-hidden">
-      <SEO 
+      <EnhancedSEO 
         title="Zion Tech Group - Leading AI & Technology Solutions" 
         description="Transform your business with Zion's cutting-edge AI solutions, cloud services, cybersecurity, and digital transformation expertise. Join the future of technology."
-        keywords="AI solutions, cloud services, cybersecurity, digital transformation, technology consulting, Zion Tech Group"
-        canonical="https://ziontechgroup.com/"
+        keywords={["AI solutions", "cloud services", "cybersecurity", "digital transformation", "technology consulting"]}
+        type="website"
+        image="/images/zion-tech-group-hero.jpg"
+        canonicalUrl="https://ziontechgroup.com/"
       />
 
       {/* Hero Section */}
