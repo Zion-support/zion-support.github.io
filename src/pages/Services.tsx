@@ -66,12 +66,12 @@ export default function Services() {
         },
         {
           name: 'AI Workflow Orchestrator',
-          description: 'Intelligent workflow automation with multi-agent coordination and real-time optimization',
+          description: 'Intelligent workflow automation with multi-agent coordination and dynamic adaptation',
           features: ['Process Orchestration', 'Multi-Agent Systems', 'Dynamic Adaptation', 'Performance Analytics'],
           href: '/services/ai-workflow-orchestrator',
-          price: 'From $2,500',
+          price: 'From $199/month',
           rating: 4.9,
-          reviewCount: 89
+          reviewCount: 156
         },
         {
           name: 'AI Data Governance',
@@ -169,6 +169,15 @@ export default function Services() {
           price: 'From $6,500',
           rating: 4.7,
           reviewCount: 189
+        },
+        {
+          name: 'AI Healthcare Analytics',
+          description: 'AI-powered healthcare analytics for patient outcomes and operational efficiency',
+          features: ['Patient Analytics', 'Clinical Decision Support', 'Population Health', 'Compliance Monitoring'],
+          href: '/services/ai-healthcare-analytics',
+          price: 'From $899/month',
+          rating: 4.9,
+          reviewCount: 145
         }
       ]
     },
@@ -186,6 +195,15 @@ export default function Services() {
           price: 'From $9,500',
           rating: 4.9,
           reviewCount: 267
+        },
+        {
+          name: 'AI Cybersecurity Suite',
+          description: 'Advanced AI-powered cybersecurity with automated threat detection and incident response',
+          features: ['AI Threat Detection', 'Incident Response', 'Access Control', 'Compliance Automation'],
+          href: '/services/ai-cybersecurity-suite',
+          price: 'From $499/month',
+          rating: 4.9,
+          reviewCount: 312
         },
         {
           name: 'Zero Trust Architecture',
@@ -239,6 +257,15 @@ export default function Services() {
           price: 'From $299',
           rating: 4.9,
           reviewCount: 234
+        },
+        {
+          name: 'AI Productivity Suite',
+          description: 'Comprehensive AI-powered productivity tools for workflow optimization and task management',
+          features: ['Task Management', 'Document Processing', 'Meeting Assistant', 'Analytics Dashboard'],
+          href: '/services/ai-productivity-suite',
+          price: 'From $29/month',
+          rating: 4.8,
+          reviewCount: 189
         }
       ]
     }
