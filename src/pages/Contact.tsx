@@ -199,11 +199,11 @@ export default function Contact() {
                           value={formData.email}
                           onChange={handleInputChange}
                           className="w-full px-4 py-3 bg-slate-700/50 border border-slate-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:border-transparent transition-all duration-300"
-                          placeholder="Enter your email"
+                          placeholder="Enter your email address"
                         />
                       </div>
                     </div>
-                    
+
                     <div className="grid sm:grid-cols-2 gap-6">
                       <div>
                         <label htmlFor="company" className="block text-sm font-medium text-gray-300 mb-2">
@@ -216,7 +216,7 @@ export default function Contact() {
                           value={formData.company}
                           onChange={handleInputChange}
                           className="w-full px-4 py-3 bg-slate-700/50 border border-slate-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:border-transparent transition-all duration-300"
-                          placeholder="Enter company name"
+                          placeholder="Enter your company name"
                         />
                       </div>
                       <div>
@@ -230,11 +230,11 @@ export default function Contact() {
                           value={formData.phone}
                           onChange={handleInputChange}
                           className="w-full px-4 py-3 bg-slate-700/50 border border-slate-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:border-transparent transition-all duration-300"
-                          placeholder="Enter phone number"
+                          placeholder="Enter your phone number"
                         />
                       </div>
                     </div>
-                    
+
                     <div>
                       <label htmlFor="subject" className="block text-sm font-medium text-gray-300 mb-2">
                         Subject *
@@ -253,7 +253,7 @@ export default function Contact() {
                         ))}
                       </select>
                     </div>
-                    
+
                     <div>
                       <label htmlFor="message" className="block text-sm font-medium text-gray-300 mb-2">
                         Message *
@@ -269,23 +269,23 @@ export default function Contact() {
                         placeholder="Tell us about your project or inquiry..."
                       />
                     </div>
-                    
+
                     <motion.button
                       type="submit"
                       disabled={isSubmitting}
                       whileHover={{ scale: 1.02 }}
                       whileTap={{ scale: 0.98 }}
-                      className="w-full py-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-600 disabled:opacity-50 disabled:cursor-not-allowed transition-all duration-300 flex items-center justify-center gap-2"
+                      className="w-full px-6 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-600 disabled:opacity-50 disabled:cursor-not-allowed transition-all duration-300 flex items-center justify-center space-x-2"
                     >
                       {isSubmitting ? (
                         <>
-                          <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-white"></div>
-                          Sending Message...
+                          <div className="w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin" />
+                          <span>Sending...</span>
                         </>
                       ) : (
                         <>
-                          <Send className="h-5 w-5" />
-                          Send Message
+                          <Send className="w-5 h-5" />
+                          <span>Send Message</span>
                         </>
                       )}
                     </motion.button>
@@ -302,27 +302,32 @@ export default function Contact() {
               >
                 <div>
                   <h2 className="text-3xl font-bold text-white mb-8">Get in Touch</h2>
-                  <div className="space-y-6">
-                    {contactInfo.map((info, index) => (
-                      <motion.div
-                        key={info.title}
-                        initial={{ opacity: 0, y: 20 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 0.6, delay: 0.6 + index * 0.1 }}
-                        className="flex items-start gap-4"
-                      >
-                        <div className={`flex h-12 w-12 items-center justify-center rounded-lg bg-gradient-to-r ${info.color}`}>
-                          <info.icon className="h-6 w-6 text-white" />
-                        </div>
-                        <div>
-                          <h3 className="text-lg font-semibold text-white mb-2">{info.title}</h3>
-                          {info.details.map((detail, detailIndex) => (
-                            <p key={detailIndex} className="text-gray-300">{detail}</p>
-                          ))}
-                        </div>
-                      </motion.div>
-                    ))}
-                  </div>
+                  <p className="text-lg text-gray-300 mb-8">
+                    We're here to help you transform your business with cutting-edge AI and technology solutions. 
+                    Let's discuss your needs and explore how we can work together.
+                  </p>
+                </div>
+
+                <div className="space-y-6">
+                  {contactInfo.map((info, index) => (
+                    <motion.div
+                      key={info.title}
+                      initial={{ opacity: 0, y: 20 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      transition={{ duration: 0.6, delay: 0.6 + index * 0.1 }}
+                      className="flex items-start space-x-4 p-6 bg-slate-800/30 rounded-xl border border-slate-700/50 hover:border-cyan-400/30 transition-all duration-300"
+                    >
+                      <div className={`w-12 h-12 rounded-lg bg-gradient-to-br ${info.color} flex items-center justify-center flex-shrink-0`}>
+                        <info.icon className="w-6 h-6 text-white" />
+                      </div>
+                      <div>
+                        <h3 className="text-lg font-semibold text-white mb-2">{info.title}</h3>
+                        {info.details.map((detail, detailIndex) => (
+                          <p key={detailIndex} className="text-gray-300">{detail}</p>
+                        ))}
+                      </div>
+                    </motion.div>
+                  ))}
                 </div>
 
                 {/* Additional Info */}
@@ -330,10 +335,10 @@ export default function Contact() {
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: 1.0 }}
-                  className="bg-slate-800/30 backdrop-blur-sm rounded-xl p-6 border border-slate-700/50"
+                  className="p-6 bg-gradient-to-br from-cyan-500/20 to-blue-500/20 rounded-xl border border-cyan-400/30"
                 >
                   <h3 className="text-xl font-semibold text-white mb-4">Ready to Get Started?</h3>
-                  <p className="text-gray-300 mb-6">
+                  <p className="text-gray-300 mb-4">
                     Schedule a consultation to discuss your technology needs and explore how our solutions can drive your business forward.
                   </p>
                   <motion.button
@@ -350,7 +355,7 @@ export default function Contact() {
         </section>
 
         {/* CTA Section */}
-        <section className="py-20 lg:py-32 bg-gradient-to-r from-cyan-600/20 to-blue-600/20">
+        <section className="py-20 lg:py-32 bg-gradient-to-r from-cyan-600 to-blue-600">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -360,7 +365,7 @@ export default function Contact() {
               <h2 className="text-4xl lg:text-5xl font-bold text-white mb-6">
                 Let's Build Something Amazing Together
               </h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-10">
+              <p className="text-xl text-cyan-100 max-w-3xl mx-auto mb-8">
                 Whether you're looking to implement AI solutions, modernize your cloud infrastructure, 
                 or strengthen your cybersecurity posture, we're here to help.
               </p>
@@ -368,14 +373,14 @@ export default function Contact() {
                 <motion.button
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
-                  className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-600 transition-all duration-300"
+                  className="px-8 py-4 bg-white text-cyan-600 font-semibold rounded-lg hover:bg-gray-100 transition-all duration-300"
                 >
                   View Our Services
                 </motion.button>
                 <motion.button
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
-                  className="px-8 py-4 border border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300"
+                  className="px-8 py-4 border-2 border-white text-white font-semibold rounded-lg hover:bg-white hover:text-cyan-600 transition-all duration-300"
                 >
                   Learn More About Us
                 </motion.button>
