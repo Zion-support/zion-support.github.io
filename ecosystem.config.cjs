@@ -179,6 +179,85 @@ module.exports = {
         NODE_ENV: 'production',
         AUTOMATION_INTERVAL: '1800000' // 30 minutes
       }
+    },
+
+    // NEW: AI-Powered Intelligent Automations
+    {
+      name: 'ai-code-quality-analyzer',
+      script: './scripts/automation/ai-code-quality-analyzer.cjs',
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      max_memory_restart: '1G',
+      env: {
+        NODE_ENV: 'production',
+        AUTOMATION_INTERVAL: '3600000' // 1 hour - Code quality analysis
+      }
+    },
+    
+    {
+      name: 'smart-performance-optimizer',
+      script: './scripts/automation/smart-performance-optimizer.cjs',
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      max_memory_restart: '1G',
+      env: {
+        NODE_ENV: 'production',
+        AUTOMATION_INTERVAL: '7200000' // 2 hours - Performance optimization
+      }
+    },
+    
+    {
+      name: 'intelligent-dependency-manager',
+      script: './scripts/automation/intelligent-dependency-manager.cjs',
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      max_memory_restart: '1G',
+      env: {
+        NODE_ENV: 'production',
+        AUTOMATION_INTERVAL: '86400000' // 24 hours - Daily dependency management
+      }
+    },
+    
+    {
+      name: 'advanced-error-prediction',
+      script: './scripts/automation/advanced-error-prediction.cjs',
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      max_memory_restart: '1G',
+      env: {
+        NODE_ENV: 'production',
+        AUTOMATION_INTERVAL: '1800000' // 30 minutes - Continuous error prediction
+      }
+    },
+    
+    {
+      name: 'smart-build-optimizer',
+      script: './scripts/automation/smart-build-optimizer.cjs',
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      max_memory_restart: '1G',
+      env: {
+        NODE_ENV: 'production',
+        AUTOMATION_INTERVAL: '7200000' // 2 hours - Build optimization
+      }
+    },
+    
+    {
+      name: 'intelligent-resource-monitor',
+      script: './scripts/automation/intelligent-resource-monitor.cjs',
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      max_memory_restart: '1G',
+      env: {
+        NODE_ENV: 'production',
+        AUTOMATION_INTERVAL: '300000' // 5 minutes - Continuous resource monitoring
+      }
     }
   ],
 
