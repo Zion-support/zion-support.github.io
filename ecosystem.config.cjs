@@ -103,6 +103,55 @@ module.exports = {
       log_file: './logs/file-integrity.log',
       error_file: './logs/file-integrity-error.log',
       out_file: './logs/file-integrity-out.log'
+    },
+
+    // NEW: Project Health Management Automations
+    {
+      name: 'project-health-monitor',
+      script: './scripts/automation/project-health-monitor.cjs',
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      max_memory_restart: '1G',
+      env: {
+        NODE_ENV: 'production'
+      },
+      cron_restart: '*/15 * * * *', // Every 15 minutes
+      log_file: './logs/project-health-monitor.log',
+      error_file: './logs/project-health-monitor-error.log',
+      out_file: './logs/project-health-monitor-out.log'
+    },
+
+    {
+      name: 'typescript-syntax-fixer',
+      script: './scripts/automation/typescript-syntax-fixer.cjs',
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      max_memory_restart: '1G',
+      env: {
+        NODE_ENV: 'production'
+      },
+      cron_restart: '*/10 * * * *', // Every 10 minutes
+      log_file: './logs/typescript-syntax-fixer.log',
+      error_file: './logs/typescript-syntax-fixer-error.log',
+      out_file: './logs/typescript-syntax-fixer-out.log'
+    },
+
+    {
+      name: 'dependency-manager',
+      script: './scripts/automation/dependency-manager.cjs',
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      max_memory_restart: '1G',
+      env: {
+        NODE_ENV: 'production'
+      },
+      cron_restart: '0 */2 * * *', // Every 2 hours
+      log_file: './logs/dependency-manager.log',
+      error_file: './logs/dependency-manager-error.log',
+      out_file: './logs/dependency-manager-out.log'
     }
   ],
 
