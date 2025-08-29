@@ -200,6 +200,160 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Cutting-Edge Technology Showcase */}
+      <section className="py-20">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
+              Cutting-Edge Technology
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Revolutionary solutions that define the future of technology and business innovation
+            </p>
+          </div>
+          
+          <div className="grid lg:grid-cols-2 gap-8">
+            <div className="bg-gradient-to-br from-gray-800 to-gray-900 p-8 rounded-2xl border border-gray-700 hover:border-cyan-500 transition-all duration-300">
+              <div className="flex items-center mb-6">
+                <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-pink-600 rounded-2xl flex items-center justify-center mr-4">
+                  <div className="text-2xl">⚛️</div>
+                </div>
+                <div>
+                  <h3 className="text-2xl font-bold text-white">Quantum Computing</h3>
+                  <p className="text-cyan-400 font-semibold">Revolutionary Technology</p>
+                </div>
+              </div>
+              <p className="text-gray-300 mb-6">
+                Access quantum computing power for cryptography, machine learning, and optimization problems that are impossible for classical computers.
+              </p>
+              <div className="grid grid-cols-2 gap-4 mb-6">
+                <div className="bg-gray-700/50 p-3 rounded-lg">
+                  <div className="text-sm text-gray-400">Starting Price</div>
+                  <div className="text-lg font-bold text-cyan-400">$2,500/month</div>
+                </div>
+                <div className="bg-gray-700/50 p-3 rounded-lg">
+                  <div className="text-sm text-gray-400">ROI</div>
+                  <div className="text-lg font-bold text-green-400">200-400%</div>
+                </div>
+              </div>
+              <Link 
+                to="/services"
+                className="inline-flex items-center text-cyan-400 hover:text-cyan-300 font-semibold group"
+              >
+                Explore Quantum Solutions
+                <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
+              </Link>
+            </div>
+
+            <div className="bg-gradient-to-br from-gray-800 to-gray-900 p-8 rounded-2xl border border-gray-700 hover:border-cyan-500 transition-all duration-300">
+              <div className="flex items-center mb-6">
+                <div className="w-16 h-16 bg-gradient-to-br from-green-500 to-teal-600 rounded-2xl flex items-center justify-center mr-4">
+                  <div className="text-2xl">🧠</div>
+                </div>
+                <div>
+                  <h3 className="text-2xl font-bold text-white">AI Healthcare Diagnostics</h3>
+                  <p className="text-cyan-400 font-semibold">Medical Innovation</p>
+                </div>
+              </div>
+              <p className="text-gray-300 mb-6">
+                Advanced medical diagnostics using AI to analyze medical images, predict diseases, and provide treatment recommendations.
+              </p>
+              <div className="grid grid-cols-2 gap-4 mb-6">
+                <div className="bg-gray-700/50 p-3 rounded-lg">
+                  <div className="text-sm text-gray-400">Starting Price</div>
+                  <div className="text-lg font-bold text-cyan-400">$4,500/month</div>
+                </div>
+                <div className="bg-gray-700/50 p-3 rounded-lg">
+                  <div className="text-sm text-gray-400">ROI</div>
+                  <div className="text-lg font-bold text-green-400">350-600%</div>
+                </div>
+              </div>
+              <Link 
+                to="/services"
+                className="inline-flex items-center text-cyan-400 hover:text-cyan-300 font-semibold group"
+              >
+                Explore Healthcare AI
+                <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
+              </Link>
+            </div>
+
+            <div className="bg-gradient-to-br from-gray-800 to-gray-900 p-8 rounded-2xl border border-gray-700 hover:border-cyan-500 transition-all duration-300">
+              <div className="flex items-center mb-6">
+                <div className="w-16 h-16 bg-gradient-to-br from-red-500 to-orange-600 rounded-2xl flex items-center justify-center mr-4">
+                  <div className="text-2xl">🛡️</div>
+                </div>
+                <div>
+                  <h3 className="text-2xl font-bold text-white">AI Threat Detection</h3>
+                  <p className="text-cyan-400 font-semibold">Cybersecurity</p>
+                </div>
+              </div>
+              <p className="text-gray-300 mb-6">
+                Real-time cybersecurity threat detection using machine learning to identify and respond to advanced persistent threats.
+              </p>
+              <div className="grid grid-cols-2 gap-4 mb-6">
+                <div className="bg-gray-700/50 p-3 rounded-lg">
+                  <div className="text-sm text-gray-400">Starting Price</div>
+                  <div className="text-lg font-bold text-cyan-400">$3,999/month</div>
+                </div>
+                <div className="bg-gray-700/50 p-3 rounded-lg">
+                  <div className="text-sm text-gray-400">ROI</div>
+                  <div className="text-lg font-bold text-green-400">300-500%</div>
+                </div>
+              </div>
+              <Link 
+                to="/services"
+                className="inline-flex items-center text-cyan-400 hover:text-cyan-300 font-semibold group"
+              >
+                Explore Security Solutions
+                <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
+              </Link>
+            </div>
+
+            <div className="bg-gradient-to-br from-gray-800 to-gray-900 p-8 rounded-2xl border border-gray-700 hover:border-cyan-500 transition-all duration-300">
+              <div className="flex items-center mb-6">
+                <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-indigo-600 rounded-2xl flex items-center justify-center mr-4">
+                  <div className="text-2xl">🏗️</div>
+                </div>
+                <div>
+                  <h3 className="text-2xl font-bold text-white">Smart City IoT</h3>
+                  <p className="text-cyan-400 font-semibold">Urban Innovation</p>
+                </div>
+              </div>
+              <p className="text-gray-300 mb-6">
+                Comprehensive IoT platform for smart cities that optimizes urban services and improves citizen quality of life.
+              </p>
+              <div className="grid grid-cols-2 gap-4 mb-6">
+                <div className="bg-gray-700/50 p-3 rounded-lg">
+                  <div className="text-sm text-gray-400">Starting Price</div>
+                  <div className="text-lg font-bold text-cyan-400">$3,800/month</div>
+                </div>
+                <div className="bg-gray-700/50 p-3 rounded-lg">
+                  <div className="text-sm text-gray-400">ROI</div>
+                  <div className="text-lg font-bold text-green-400">280-450%</div>
+                </div>
+              </div>
+              <Link 
+                to="/services"
+                className="inline-flex items-center text-cyan-400 hover:text-cyan-300 font-semibold group"
+              >
+                Explore Smart City Solutions
+                <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
+              </Link>
+            </div>
+          </div>
+
+          <div className="text-center mt-12">
+            <Link 
+              to="/services"
+              className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105"
+            >
+              View All Cutting-Edge Solutions
+              <ArrowRight className="w-5 h-5 ml-2" />
+            </Link>
+          </div>
+        </div>
+      </section>
+
       {/* Industry Solutions Section */}
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-6">
