@@ -9,6 +9,7 @@ const config: Config = {
     "./components/**/*.{ts,tsx}",
     "./app/**/*.{ts,tsx}",
     "./src/**/*.{ts,tsx}",
+    "./index.html",
   ],
   safelist: ['border-border'],
   theme: {
@@ -64,6 +65,7 @@ const config: Config = {
           DEFAULT: "#8c15e9",
           light: "#b971f2",
           dark: "#530c8b",
+          neon: "#b971f2",
         },
         "zion-cyan": {
           DEFAULT: "#22ddd2",
@@ -80,12 +82,6 @@ const config: Config = {
           light: "#7aeae4",
           dark: "#14847e",
           glow: "#22ddd2",
-        },
-        "zion-purple": {
-          DEFAULT: "#8c15e9",
-          light: "#b971f2",
-          dark: "#530c8b",
-          neon: "#b971f2",
         },
       },
       borderRadius: {
