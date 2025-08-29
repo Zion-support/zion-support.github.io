@@ -127,7 +127,11 @@ export const EnhancedFuturisticFooter: React.FC = () => {
         { name: 'AI Workflow Orchestrator', href: '/services/ai-workflow-orchestrator' },
         { name: 'AI Customer Success Platform', href: '/services/ai-customer-success-platform' },
         { name: 'AI Data Governance', href: '/services/ai-data-governance' },
-        { name: 'AI Healthcare Analytics', href: '/services/ai-healthcare-analytics' }
+        { name: 'AI Healthcare Analytics', href: '/services/ai-healthcare-analytics' },
+        { name: 'AI Project Management Platform', href: '/services/ai-project-management-platform' },
+        { name: 'AI Cybersecurity Threat Detection', href: '/services/ai-cybersecurity-threat-detection' },
+        { name: 'AI Financial Trading Platform', href: '/services/ai-financial-trading-platform' },
+        { name: 'AI Healthcare Analytics Platform', href: '/services/ai-healthcare-analytics-platform' }
       ]
     },
     {
@@ -138,6 +142,7 @@ export const EnhancedFuturisticFooter: React.FC = () => {
         { name: 'AI Compliance Copilot', href: '/services/ai-compliance-copilot' },
         { name: 'Zero Trust Architecture', href: '/services/zero-trust-network-architecture' },
         { name: 'AI Cybersecurity Suite', href: '/services/ai-cybersecurity-suite' },
+        { name: 'AI Cybersecurity Threat Detection', href: '/services/ai-cybersecurity-threat-detection' },
         { name: 'Quantum AI Platform', href: '/services/quantum-ai-platform' },
         { name: 'Security & Compliance', href: '/security' },
         { name: 'Privacy & Data Protection', href: '/privacy' }
