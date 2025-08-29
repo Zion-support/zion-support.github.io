@@ -6,11 +6,12 @@ import { ChatAssistant } from './components/ChatAssistant';
 import { LoadingSpinner } from './components/ui/LoadingSpinner';
 import { EnhancedSEO } from './components/EnhancedSEO';
 import { PerformanceOptimizer } from './components/PerformanceOptimizer';
-import { ErrorBoundary } from './components/ErrorBoundary';
+import { EnhancedErrorBoundary } from './components/EnhancedErrorBoundary';
 import { EnhancedAccessibilityPanel } from './components/EnhancedAccessibilityPanel';
-import { AdvancedPerformanceMonitor } from './components/AdvancedPerformanceMonitor';
+import { EnhancedPerformanceMonitor } from './components/EnhancedPerformanceMonitor';
 import { InteractiveUserExperience } from './components/InteractiveUserExperience';
 import { SecurityEnhancer } from './components/SecurityEnhancer';
+import { EnhancedInteractiveFeatures } from './components/EnhancedInteractiveFeatures';
 
 // Core pages - only import existing ones
 const Home = React.lazy(() => import('./pages/Home'));
@@ -62,33 +63,13 @@ const EnhancedLoadingSpinner = React.memo(() => (
 EnhancedLoadingSpinner.displayName = 'EnhancedLoadingSpinner';
 
 // Enhanced error boundary component
-const EnhancedErrorBoundary = React.memo(({ children }: { children: React.ReactNode }) => (
-  <ErrorBoundary
-    fallback={
-      <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-red-900 via-slate-900 to-red-900">
-        <div className="text-center max-w-md mx-auto p-8">
-          <div className="w-20 h-20 bg-red-500 rounded-full flex items-center justify-center mx-auto mb-6">
-            <svg className="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.964-.833-2.732 0L3.732 16.5c-.77.833.192 2.5 1.732 2.5z" />
-            </svg>
-          </div>
-          <h1 className="text-2xl font-bold text-white mb-4">Something went wrong</h1>
-          <p className="text-slate-300 mb-6">We're working to fix this issue. Please try refreshing the page.</p>
-          <button
-            onClick={() => window.location.reload()}
-            className="px-6 py-3 bg-red-500 hover:bg-red-600 text-white rounded-lg font-semibold transition-colors"
-          >
-            Refresh Page
-          </button>
-        </div>
-      </div>
-    }
-  >
+const AppErrorBoundary = React.memo(({ children }: { children: React.ReactNode }) => (
+  <EnhancedErrorBoundary>
     {children}
-  </ErrorBoundary>
+  </EnhancedErrorBoundary>
 ));
 
-EnhancedErrorBoundary.displayName = 'EnhancedErrorBoundary';
+AppErrorBoundary.displayName = 'AppErrorBoundary';
 
 // Main App component with performance optimizations
 const App = React.memo(() => {
@@ -146,15 +127,16 @@ const App = React.memo(() => {
   const performanceComponents = useMemo(() => (
     <>
       <PerformanceOptimizer />
-      <AdvancedPerformanceMonitor />
+      <EnhancedPerformanceMonitor />
       <InteractiveUserExperience />
       <SecurityEnhancer />
       <EnhancedAccessibilityPanel />
+      <EnhancedInteractiveFeatures />
     </>
   ), []);
 
   return (
-    <EnhancedErrorBoundary>
+    <AppErrorBoundary>
       <Router>
         <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
           {header}
@@ -172,7 +154,7 @@ const App = React.memo(() => {
           {performanceComponents}
         </div>
       </Router>
-    </EnhancedErrorBoundary>
+    </AppErrorBoundary>
   );
 });
 
