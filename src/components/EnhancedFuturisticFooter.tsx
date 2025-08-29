@@ -66,16 +66,16 @@ export const EnhancedFuturisticFooter: React.FC = () => {
 
   const footerSections = [
     {
-      title: 'AI & Analytics Services',
-      icon: Brain,
+      title: 'Revolutionary 2030',
+      icon: Rocket,
       color: 'from-purple-600 to-pink-600',
       links: [
-        { name: 'AI Business Intelligence', href: '/services/ai-business-intelligence' },
-        { name: 'AI Sales Copilot', href: '/services/ai-sales-copilot' },
-        { name: 'AI Compliance Assistant', href: '/services/ai-compliance-assistant' },
-        { name: 'AI Auto Email Responder', href: '/services/ai-auto-email-responder' },
-        { name: 'LLM Content Studio', href: '/services/llm-content-studio' },
-        { name: 'AI Compliance Copilot', href: '/services/ai-compliance-copilot' }
+        { name: 'Quantum AI Hybrid Platform', href: '/revolutionary-services-2030' },
+        { name: 'AI Cybersecurity Platform', href: '/revolutionary-services-2030' },
+        { name: 'Autonomous AI Operations', href: '/revolutionary-services-2030' },
+        { name: 'Quantum Financial Trading', href: '/revolutionary-services-2030' },
+        { name: 'AI Healthcare Diagnostics', href: '/revolutionary-services-2030' },
+        { name: 'Smart City Platform', href: '/revolutionary-services-2030' }
       ]
     },
     {

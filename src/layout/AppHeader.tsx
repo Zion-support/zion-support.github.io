@@ -37,11 +37,14 @@ export function AppHeader() {
   const mainNavigation = [
     { name: 'Home', href: '/', current: true },
     { name: 'Services', href: '/services', current: false },
-    { name: 'Services Catalog', href: '/comprehensive-services', current: false },
-    { name: 'Marketplace', href: '/marketplace', current: false },
-    { name: 'Company', href: '/about', current: false },
-    { name: 'Support', href: '/support', current: false },
+    { name: 'All Services', href: '/comprehensive-services', current: false },
+    { name: 'Revolutionary 2030', href: '/revolutionary-services-2030', current: false },
+    { name: 'Pricing', href: '/pricing', current: false },
+    { name: 'AI Services', href: '/ai-services', current: false },
+    { name: 'IT Services', href: '/it-services', current: false },
+    { name: 'Micro SaaS', href: '/micro-saas', current: false },
     { name: 'Blog', href: '/blog', current: false },
+    { name: 'About', href: '/about', current: false },
     { name: 'Contact', href: '/contact', current: false },
   ];
 
