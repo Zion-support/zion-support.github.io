@@ -9,6 +9,7 @@ import { PerformanceOptimizer } from './components/PerformanceOptimizer';
 import { AccessibilityEnhancer } from './components/AccessibilityEnhancer';
 import { AdvancedPerformanceMonitor } from './components/AdvancedPerformanceMonitor';
 import { AIServiceRecommendationEngine } from './components/AIServiceRecommendationEngine';
+import { EnhancedServiceShowcase } from './components/EnhancedServiceShowcase';
 
 // Core pages
 const Home = lazy(() => import('./pages/Home'));
@@ -103,6 +104,7 @@ function App() {
                 <Route path="/cookies" element={<Cookies />} />
                 <Route path="/services" element={<Services />} />
                 <Route path="/solutions" element={<Solutions />} />
+                <Route path="/enhanced-services-showcase" element={<EnhancedServiceShowcase />} />
                 <Route path="/resources" element={<Resources />} />
                 <Route path="/pricing" element={<Pricing />} />
                 <Route path="/case-studies" element={<CaseStudies />} />
