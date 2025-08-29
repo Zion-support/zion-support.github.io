@@ -1,0 +1,32 @@
+{
+  "name": "console-error-capture-automation",
+  "version": "1.0.0",
+  "description": "Automated console error capture and reporting for Cursor chat fixes",
+  "main": "console-error-capture.js",
+  "scripts": {
+    "start": "node console-error-capture.js",
+    "capture": "node console-error-capture.js",
+    "capture:headless": "node console-error-capture.js --headless",
+    "capture:custom": "node console-error-capture.js --urls",
+    "install-deps": "npm install",
+    "test": "node console-error-capture.js --urls \"https://example.com\" --headless"
+  },
+  "keywords": [
+    "automation",
+    "console",
+    "errors",
+    "puppeteer",
+    "cursor",
+    "debugging",
+    "monitoring"
+  ],
+  "author": "Zion Tech Group",
+  "license": "MIT",
+  "dependencies": {
+    "puppeteer": "^21.0.0"
+  },
+  "devDependencies": {},
+  "engines": {
+    "node": ">=16.0.0"
+  }
+}
