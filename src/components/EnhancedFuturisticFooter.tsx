@@ -125,6 +125,22 @@ export const EnhancedFuturisticFooter: React.FC = () => {
       ]
     },
     {
+      title: 'Advanced Micro SaaS 2025',
+      featured: true,
+      links: [
+        { name: 'AI FinTech Trading Platform', href: '/services/advanced-micro-saas-2025#ai-fintech-trading-platform', featured: true },
+        { name: 'AI Healthcare Analytics', href: '/services/advanced-micro-saas-2025#ai-healthcare-analytics-platform', featured: true },
+        { name: 'AI Legal Technology', href: '/services/advanced-micro-saas-2025#ai-legal-tech-platform', featured: true },
+        { name: 'AI Real Estate Platform', href: '/services/advanced-micro-saas-2025#ai-real-estate-platform', featured: true },
+        { name: 'AI Supply Chain Platform', href: '/services/advanced-micro-saas-2025#ai-supply-chain-platform', featured: true },
+        { name: 'AI Education Platform', href: '/services/advanced-micro-saas-2025#ai-education-platform', featured: true },
+        { name: 'AI Entertainment Platform', href: '/services/advanced-micro-saas-2025#ai-entertainment-platform', featured: true },
+        { name: 'AI Space Technology', href: '/services/advanced-micro-saas-2025#ai-space-technology-platform', featured: true },
+        { name: 'AI Metaverse Platform', href: '/services/advanced-micro-saas-2025#ai-metaverse-platform', featured: true },
+        { name: 'AI Autonomous Systems', href: '/services/advanced-micro-saas-2025#ai-autonomous-systems-platform', featured: true }
+      ]
+    },
+    {
       title: 'Emerging Technologies',
       featured: true,
       links: [

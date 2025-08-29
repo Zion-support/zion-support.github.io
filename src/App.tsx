@@ -39,6 +39,8 @@ const RevolutionaryServicesLanding = React.lazy(() => import('./pages/Revolution
 const RevolutionaryPricingGuide = React.lazy(() => import('./pages/RevolutionaryPricingGuide.tsx'));
 const ComprehensiveServicesShowcase2029 = React.lazy(() => import('./pages/ComprehensiveServicesShowcase2029.tsx'));
 const InnovativeMicroSaasServicesShowcase2025 = React.lazy(() => import('./pages/InnovativeMicroSaasServicesShowcase2025.tsx'));
+const AdvancedServicesShowcase2025 = React.lazy(() => import('./pages/AdvancedServicesShowcase2025.tsx'));
+const AdvancedPricingGuide2025 = React.lazy(() => import('./pages/AdvancedPricingGuide2025.tsx'));
 
 // Service pages - only import existing ones
 const CloudDevOps = lazy(() => import('./pages/services/CloudDevOps'));
@@ -75,6 +77,19 @@ const Marketplace = () => (
   </div>
 );
 
+const Partners = () => (
+  <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 flex items-center justify-center">
+    <SEO 
+      title="Partners - Zion Tech Group"
+      description="Partner with us to deliver cutting-edge technology solutions and drive innovation together."
+    />
+    <div className="text-center text-white">
+      <h1 className="text-4xl font-bold mb-4">Partners</h1>
+      <p className="text-xl text-gray-300">Partner with us</p>
+    </div>
+  </div>
+);
+
 function App() {
   return (
     <ErrorBoundary>
@@ -105,6 +120,8 @@ function App() {
                 <Route path="/services/comprehensive-2030" element={<ComprehensiveServicesLanding2030 />} />
                 <Route path="/services/micro-saas" element={<MicroSaaSProducts />} />
                 <Route path="/services/innovative-micro-saas-2025" element={<InnovativeMicroSaasServicesShowcase2025 />} />
+                <Route path="/services/advanced-micro-saas-2025" element={<AdvancedServicesShowcase2025 />} />
+                <Route path="/pricing-guide-2025" element={<AdvancedPricingGuide2025 />} />
                 <Route path="/pricing-guide-2027" element={<ComprehensivePricingGuide2027 />} />
                 <Route path="/pricing-guide-2030" element={<ComprehensivePricingGuide2030 />} />
                 <Route path="/request-quote" element={<RequestQuote />} />

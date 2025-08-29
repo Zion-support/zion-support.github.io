@@ -9,6 +9,7 @@ export function AppHeader() {
   const [servicesDropdownOpen, setServicesDropdownOpen] = useState(false);
   const [solutionsDropdownOpen, setSolutionsDropdownOpen] = useState(false);
   const [resourcesDropdownOpen, setResourcesDropdownOpen] = useState(false);
+  const [pricingDropdownOpen, setPricingDropdownOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const [isSearching, setIsSearching] = useState(false);
 
@@ -41,7 +42,7 @@ export function AppHeader() {
     { name: 'Resources', href: '/resources', current: false, hasDropdown: true },
     { name: 'About', href: '/about', current: false },
     { name: 'Contact', href: '/contact', current: false },
-    { name: 'Pricing', href: '/pricing', current: false },
+    { name: 'Pricing', href: '/pricing', current: false, hasDropdown: true },
     { name: 'Partners', href: '/partners', current: false },
   ];
 
@@ -350,6 +351,14 @@ export function AppHeader() {
       description: 'Future Technology Solutions',
       featured: true,
       color: 'from-indigo-500 to-purple-500'
+    },
+    { 
+      name: 'Advanced Micro SaaS 2025', 
+      href: '/services/advanced-micro-saas-2025', 
+      icon: Sparkles, 
+      description: 'Cutting-edge AI Services',
+      featured: true,
+      color: 'from-purple-500 to-pink-500'
     }
   ];
 
@@ -504,14 +513,22 @@ export function AppHeader() {
                             setServicesDropdownOpen(!servicesDropdownOpen);
                             setSolutionsDropdownOpen(false);
                             setResourcesDropdownOpen(false);
+                            setPricingDropdownOpen(false);
                           } else if (item.name === 'Solutions') {
                             setSolutionsDropdownOpen(!solutionsDropdownOpen);
                             setServicesDropdownOpen(false);
                             setResourcesDropdownOpen(false);
+                            setPricingDropdownOpen(false);
                           } else if (item.name === 'Resources') {
                             setResourcesDropdownOpen(!resourcesDropdownOpen);
                             setServicesDropdownOpen(false);
                             setSolutionsDropdownOpen(false);
+                            setPricingDropdownOpen(false);
+                          } else if (item.name === 'Pricing') {
+                            setPricingDropdownOpen(!pricingDropdownOpen);
+                            setServicesDropdownOpen(false);
+                            setSolutionsDropdownOpen(false);
+                            setResourcesDropdownOpen(false);
                           }
                         }}
                         className="flex items-center text-slate-300 hover:text-cyan-400 px-3 py-2 text-sm font-medium transition-all duration-200 relative group"
@@ -735,6 +752,140 @@ export function AppHeader() {
                           </div>
                         </div>
                       )}
+
+                      {/* Pricing Dropdown */}
+                      {item.name === 'Pricing' && pricingDropdownOpen && (
+                        <div className="absolute top-full left-0 mt-2 w-[600px] bg-slate-800/95 backdrop-blur-xl rounded-2xl border border-slate-700/50 shadow-2xl shadow-black/50 overflow-hidden">
+                          <div className="p-6">
+                            <div className="grid grid-cols-2 gap-4">
+                              <div className="space-y-3">
+                                <h4 className="text-sm font-semibold text-cyan-400 mb-3 border-b border-slate-700/50 pb-2">Pricing Guides</h4>
+                                <Link
+                                  to="/pricing-guide-2025"
+                                  className="group p-4 rounded-xl transition-all duration-300 hover:bg-slate-700/50 ring-2 ring-cyan-400/50"
+                                  onClick={() => setPricingDropdownOpen(false)}
+                                >
+                                  <div className="flex items-start gap-3">
+                                    <div className="p-2 rounded-lg bg-gradient-to-br from-emerald-500 to-green-500">
+                                      <DollarSign className="w-5 h-5 text-white" />
+                                    </div>
+                                    <div className="flex-1">
+                                      <h3 className="font-semibold text-white group-hover:text-cyan-400 transition-colors">
+                                        Advanced Pricing 2025
+                                      </h3>
+                                      <p className="text-sm text-gray-400 mt-1">
+                                        Complete pricing for advanced AI services
+                                      </p>
+                                      <span className="inline-flex items-center gap-1 mt-2 text-xs text-cyan-400">
+                                        <Star className="w-3 h-3" />
+                                        New
+                                      </span>
+                                    </div>
+                                  </div>
+                                </Link>
+                                <Link
+                                  to="/pricing-guide-2027"
+                                  className="group p-4 rounded-xl transition-all duration-300 hover:bg-slate-700/50"
+                                  onClick={() => setPricingDropdownOpen(false)}
+                                >
+                                  <div className="flex items-start gap-3">
+                                    <div className="p-2 rounded-lg bg-gradient-to-br from-purple-500 to-pink-500">
+                                      <TrendingUp className="w-5 h-5 text-white" />
+                                    </div>
+                                    <div className="flex-1">
+                                      <h3 className="font-semibold text-white group-hover:text-cyan-400 transition-colors">
+                                        Comprehensive Pricing 2027
+                                      </h3>
+                                      <p className="text-sm text-gray-400 mt-1">
+                                        Future-focused pricing strategies
+                                      </p>
+                                    </div>
+                                  </div>
+                                </Link>
+                                <Link
+                                  to="/pricing-guide-2030"
+                                  className="group p-4 rounded-xl transition-all duration-300 hover:bg-slate-700/50"
+                                  onClick={() => setPricingDropdownOpen(false)}
+                                >
+                                  <div className="flex items-start gap-3">
+                                    <div className="p-2 rounded-lg bg-gradient-to-br from-indigo-500 to-purple-500">
+                                      <Rocket className="w-5 h-5 text-white" />
+                                    </div>
+                                    <div className="flex-1">
+                                      <h3 className="font-semibold text-white group-hover:text-cyan-400 transition-colors">
+                                        Revolutionary Pricing 2030
+                                      </h3>
+                                      <p className="text-sm text-gray-400 mt-1">
+                                        Next-generation pricing models
+                                      </p>
+                                    </div>
+                                  </div>
+                                </Link>
+                              </div>
+                              <div className="space-y-3">
+                                <h4 className="text-sm font-semibold text-cyan-400 mb-3 border-b border-slate-700/50 pb-2">Quick Actions</h4>
+                                <Link
+                                  to="/pricing"
+                                  className="group p-4 rounded-xl transition-all duration-300 hover:bg-slate-700/50"
+                                  onClick={() => setPricingDropdownOpen(false)}
+                                >
+                                  <div className="flex items-start gap-3">
+                                    <div className="p-2 rounded-lg bg-gradient-to-br from-blue-500 to-cyan-500">
+                                      <BarChart3 className="w-5 h-5 text-white" />
+                                    </div>
+                                    <div className="flex-1">
+                                      <h3 className="font-semibold text-white group-hover:text-cyan-400 transition-colors">
+                                        Compare Plans
+                                      </h3>
+                                      <p className="text-sm text-gray-400 mt-1">
+                                        Side-by-side plan comparison
+                                      </p>
+                                    </div>
+                                  </div>
+                                </Link>
+                                <Link
+                                  to="/request-quote"
+                                  className="group p-4 rounded-xl transition-all duration-300 hover:bg-slate-700/50"
+                                  onClick={() => setPricingDropdownOpen(false)}
+                                >
+                                  <div className="flex items-start gap-3">
+                                    <div className="p-2 rounded-lg bg-gradient-to-br from-green-500 to-emerald-500">
+                                      <MessageSquare className="w-5 h-5 text-white" />
+                                    </div>
+                                    <div className="flex-1">
+                                      <h3 className="font-semibold text-white group-hover:text-cyan-400 transition-colors">
+                                        Get Custom Quote
+                                      </h3>
+                                      <p className="text-sm text-gray-400 mt-1">
+                                        Personalized pricing for your needs
+                                      </p>
+                                    </div>
+                                  </div>
+                                </Link>
+                                <Link
+                                  to="/contact"
+                                  className="group p-4 rounded-xl transition-all duration-300 hover:bg-slate-700/50"
+                                  onClick={() => setPricingDropdownOpen(false)}
+                                >
+                                  <div className="flex items-start gap-3">
+                                    <div className="p-2 rounded-lg bg-gradient-to-br from-orange-500 to-red-500">
+                                      <Phone className="w-5 h-5 text-white" />
+                                    </div>
+                                    <div className="flex-1">
+                                      <h3 className="font-semibold text-white group-hover:text-cyan-400 transition-colors">
+                                        Contact Sales
+                                      </h3>
+                                      <p className="text-sm text-gray-400 mt-1">
+                                        Talk to our pricing experts
+                                      </p>
+                                    </div>
+                                  </div>
+                                </Link>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      )}
                     </div>
                   ) : (
                     <Link
@@ -833,6 +984,7 @@ export function AppHeader() {
                             if (item.name === 'Services') setServicesDropdownOpen(!servicesDropdownOpen);
                             else if (item.name === 'Solutions') setSolutionsDropdownOpen(!solutionsDropdownOpen);
                             else if (item.name === 'Resources') setResourcesDropdownOpen(!resourcesDropdownOpen);
+                            else if (item.name === 'Pricing') setPricingDropdownOpen(!pricingDropdownOpen);
                           }}
                           className="flex items-center justify-between w-full text-left text-slate-300 hover:text-cyan-400 py-2 text-lg font-medium transition-colors"
                         >
@@ -840,7 +992,8 @@ export function AppHeader() {
                           <ChevronDown className={`w-5 h-5 transition-transform duration-200 ${
                             (item.name === 'Services' && servicesDropdownOpen) ||
                             (item.name === 'Solutions' && solutionsDropdownOpen) ||
-                            (item.name === 'Resources' && resourcesDropdownOpen)
+                            (item.name === 'Resources' && resourcesDropdownOpen) ||
+                            (item.name === 'Pricing' && pricingDropdownOpen)
                               ? 'rotate-180' : ''
                           }`} />
                         </button>
@@ -881,6 +1034,47 @@ export function AppHeader() {
                                 {solution.name}
                               </Link>
                             ))}
+                          </div>
+                        )}
+
+                        {/* Mobile Pricing Dropdown */}
+                        {item.name === 'Pricing' && pricingDropdownOpen && (
+                          <div className="ml-4 mt-2 space-y-2">
+                            <Link
+                              to="/pricing-guide-2025"
+                              className="block text-cyan-400 hover:text-cyan-300 py-1 font-medium"
+                              onClick={() => setMobileMenuOpen(false)}
+                            >
+                              Advanced Pricing 2025
+                            </Link>
+                            <Link
+                              to="/pricing-guide-2027"
+                              className="block text-slate-400 hover:text-cyan-400 py-1 transition-colors"
+                              onClick={() => setMobileMenuOpen(false)}
+                            >
+                              Comprehensive Pricing 2027
+                            </Link>
+                            <Link
+                              to="/pricing-guide-2030"
+                              className="block text-slate-400 hover:text-cyan-400 py-1 transition-colors"
+                              onClick={() => setMobileMenuOpen(false)}
+                            >
+                              Revolutionary Pricing 2030
+                            </Link>
+                            <Link
+                              to="/pricing"
+                              className="block text-slate-400 hover:text-cyan-400 py-1 transition-colors"
+                              onClick={() => setMobileMenuOpen(false)}
+                            >
+                              Compare Plans
+                            </Link>
+                            <Link
+                              to="/request-quote"
+                              className="block text-cyan-400 hover:text-cyan-300 py-1 font-medium"
+                              onClick={() => setMobileMenuOpen(false)}
+                            >
+                              Get Custom Quote
+                            </Link>
                           </div>
                         )}
 
