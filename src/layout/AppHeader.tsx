@@ -76,6 +76,12 @@ export function AppHeader() {
     { name: 'AI Project Management', href: '/services/ai-project-management', icon: Target, description: 'AI-driven project optimization', category: 'AI & ML', color: 'from-blue-500 to-indigo-500' },
     { name: 'AI Financial Analytics', href: '/services/ai-financial-analytics', icon: BarChart3, description: 'Intelligent financial insights', category: 'AI & ML', color: 'from-green-500 to-emerald-500' },
     
+    // AI Autonomous Services
+    { name: 'AI Autonomous Forensics', href: '/ai-autonomous-forensics', icon: Shield, description: 'AI-powered digital forensics', category: 'AI Autonomous', color: 'from-cyan-500 to-blue-500' },
+    { name: 'AI Threat Intelligence', href: '/ai-autonomous-threat-intelligence', icon: AlertTriangle, description: 'Intelligent threat detection', category: 'AI Autonomous', color: 'from-red-500 to-orange-500' },
+    { name: 'AI Mobile Security', href: '/ai-autonomous-mobile-security', icon: Smartphone, description: 'Mobile device protection', category: 'AI Autonomous', color: 'from-green-500 to-emerald-500' },
+    { name: 'AI Governance', href: '/ai-autonomous-governance', icon: Gavel, description: 'Automated compliance & governance', category: 'AI Autonomous', color: 'from-purple-500 to-pink-500' },
+    
     // Cloud & DevOps
     { name: 'Cloud DevOps', href: '/services/cloud-devops', icon: Cloud, description: 'Infrastructure automation & scaling', category: 'Cloud & DevOps', color: 'from-blue-500 to-cyan-500' },
     { name: 'IT Infrastructure', href: '/services/it-infrastructure', icon: Server, description: 'Enterprise infrastructure solutions', category: 'Cloud & DevOps', color: 'from-gray-500 to-slate-500' },

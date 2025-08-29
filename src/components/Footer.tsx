@@ -108,6 +108,16 @@ const footerSections = [
     ]
   },
   {
+    title: 'AI Autonomous Services',
+    icon: Shield,
+    links: [
+      { name: 'AI Autonomous Forensics', path: '/ai-autonomous-forensics', icon: Shield },
+      { name: 'AI Threat Intelligence', path: '/ai-autonomous-threat-intelligence', icon: AlertTriangle },
+      { name: 'AI Mobile Security', path: '/ai-autonomous-mobile-security', icon: Smartphone },
+      { name: 'AI Governance', path: '/ai-autonomous-governance', icon: Gavel }
+    ]
+  },
+  {
     title: 'Advanced Technology',
     icon: Cpu,
     links: [

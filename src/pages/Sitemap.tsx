@@ -105,6 +105,16 @@ const Sitemap = () => {
       ]
     },
     {
+      title: 'AI Autonomous Services',
+      icon: Shield,
+      links: [
+        { name: 'AI Autonomous Forensics', path: '/ai-autonomous-forensics', description: 'AI-powered digital forensics' },
+        { name: 'AI Threat Intelligence', path: '/ai-autonomous-threat-intelligence', description: 'Intelligent threat detection' },
+        { name: 'AI Mobile Security', path: '/ai-autonomous-mobile-security', description: 'Mobile device protection' },
+        { name: 'AI Governance', path: '/ai-autonomous-governance', description: 'Automated compliance & governance' },
+      ]
+    },
+    {
       title: 'Digital Transformation',
       icon: Zap,
       links: [

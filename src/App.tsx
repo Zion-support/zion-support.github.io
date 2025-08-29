@@ -102,6 +102,12 @@ const AIHealthcarePlatform = lazy(() => import('./pages/services/AIHealthcarePla
 const AIBusinessIntelligence = lazy(() => import('./pages/services/AIBusinessIntelligence'));
 const DigitalTransformation = lazy(() => import('./pages/services/DigitalTransformation'));
 
+// AI Autonomous Services
+const AIAutonomousForensics = lazy(() => import('./pages/ai-autonomous-forensics'));
+const AIAutonomousThreatIntelligence = lazy(() => import('./pages/ai-autonomous-threat-intelligence'));
+const AIAutonomousMobileSecurity = lazy(() => import('./pages/ai-autonomous-mobile-security'));
+const AIAutonomousGovernance = lazy(() => import('./pages/ai-autonomous-governance'));
+
 // 2025 Innovative Services
 const InnovativeServicesLanding2025 = lazy(() => import('./pages/InnovativeServicesLanding2025'));
 // const ComprehensiveServicesShowcase2025 = lazy(() => import('./pages/ComprehensiveServicesShowcase2025'));
@@ -306,6 +312,12 @@ const App = () => {
                     <Route path="/ai-solutions" element={<AiSolutions />} />
                     <Route path="/solutions/enterprise" element={<SolutionsEnterprise />} />
                     <Route path="/solutions/healthcare" element={<SolutionsHealthcare />} />
+                    
+                    {/* AI Autonomous Services Routes */}
+                    <Route path="/ai-autonomous-forensics" element={<AIAutonomousForensics />} />
+                    <Route path="/ai-autonomous-threat-intelligence" element={<AIAutonomousThreatIntelligence />} />
+                    <Route path="/ai-autonomous-mobile-security" element={<AIAutonomousMobileSecurity />} />
+                    <Route path="/ai-autonomous-governance" element={<AIAutonomousGovernance />} />
                     
                     {/* 2025 Innovative Services Routes */}
                     <Route path="/innovative-services-landing-2025" element={<InnovativeServicesLanding2025 />} />
