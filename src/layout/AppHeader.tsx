@@ -41,6 +41,8 @@ export function AppHeader() {
     { name: 'Resources', href: '/resources', current: false, hasDropdown: true },
     { name: 'About', href: '/about', current: false },
     { name: 'Contact', href: '/contact', current: false },
+    { name: 'Pricing', href: '/pricing', current: false },
+    { name: 'Blog', href: '/blog', current: false },
   ];
 
   // Organized Services Categories
@@ -284,35 +286,49 @@ export function AppHeader() {
       href: '/solutions/government',
       icon: Shield,
       description: 'Public sector innovation',
-      featured: false
+      featured: true
     },
     {
       name: 'SMB Solutions',
       href: '/solutions/smb',
       icon: Building,
       description: 'Small to medium business growth',
-      featured: false
+      featured: true
     },
     {
       name: 'Startup Solutions',
       href: '/solutions/startup',
       icon: Rocket,
       description: 'Accelerate your startup growth',
-      featured: false
+      featured: true
     },
     {
       name: 'Manufacturing Solutions',
       href: '/solutions/manufacturing',
       icon: Factory,
       description: 'Industry 4.0 & Smart Manufacturing',
-      featured: false
+      featured: true
     },
     {
       name: 'Retail Solutions',
       href: '/solutions/retail',
       icon: ShoppingCart,
       description: 'E-commerce & Retail Innovation',
-      featured: false
+      featured: true
+    },
+    {
+      name: 'Education Solutions',
+      href: '/solutions/education',
+      icon: BookOpenIcon,
+      description: 'Modern learning environments',
+      featured: true
+    },
+    {
+      name: 'Energy Solutions',
+      href: '/solutions/energy',
+      icon: Zap,
+      description: 'Smart energy management',
+      featured: true
     }
   ];
 

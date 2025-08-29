@@ -32,6 +32,7 @@ const Terms = React.lazy(() => import('./pages/Terms'));
 const Cookies = React.lazy(() => import('./pages/Cookies'));
 const Partners = React.lazy(() => import('./pages/Partners'));
 const Pricing = React.lazy(() => import('./pages/Pricing'));
+const Press = React.lazy(() => import('./pages/Press'));
 const SearchPage = React.lazy(() => import('./pages/SearchPage'));
 
 // Enhanced components
@@ -128,6 +129,14 @@ const HelpCenter = lazy(() => import('./pages/HelpCenter'));
 const AiSolutions = lazy(() => import('./pages/AiSolutions'));
 const SolutionsEnterprise = lazy(() => import('./pages/solutions/Enterprise'));
 const SolutionsHealthcare = lazy(() => import('./pages/solutions/Healthcare'));
+const FinancialSolutions = lazy(() => import('./pages/solutions/Financial'));
+const GovernmentSolutions = lazy(() => import('./pages/solutions/Government'));
+const SMBSolutions = lazy(() => import('./pages/solutions/SMB'));
+const StartupSolutions = lazy(() => import('./pages/solutions/Startup'));
+const ManufacturingSolutions = lazy(() => import('./pages/solutions/Manufacturing'));
+const RetailSolutions = lazy(() => import('./pages/solutions/Retail'));
+const EducationSolutions = lazy(() => import('./pages/solutions/Education'));
+const EnergySolutions = lazy(() => import('./pages/solutions/Energy'));
 const AISalesCopilot = lazy(() => import('./pages/services/AISalesCopilot'));
 const CloudFinOpsOptimizer = lazy(() => import('./pages/services/CloudFinOpsOptimizer'));
 const AIComplianceAssistant = lazy(() => import('./pages/services/AIComplianceAssistant'));
@@ -171,6 +180,7 @@ function App() {
                 <Route path="/cookies" element={<Cookies />} />
                 <Route path="/partners" element={<Partners />} />
                 <Route path="/pricing" element={<Pricing />} />
+                <Route path="/press" element={<Press />} />
                 <Route path="/search" element={<SearchPage />} />
                 <Route path="/services" element={<Services />} />
                 <Route path="/solutions" element={<Solutions />} />
@@ -200,6 +210,14 @@ function App() {
                 <Route path="/ai-solutions" element={<AiSolutions />} />
                 <Route path="/solutions/enterprise" element={<SolutionsEnterprise />} />
                 <Route path="/solutions/healthcare" element={<SolutionsHealthcare />} />
+                <Route path="/solutions/financial" element={<FinancialSolutions />} />
+                <Route path="/solutions/government" element={<GovernmentSolutions />} />
+                <Route path="/solutions/smb" element={<SMBSolutions />} />
+                <Route path="/solutions/startup" element={<StartupSolutions />} />
+                <Route path="/solutions/manufacturing" element={<ManufacturingSolutions />} />
+                <Route path="/solutions/retail" element={<RetailSolutions />} />
+                <Route path="/solutions/education" element={<EducationSolutions />} />
+                <Route path="/solutions/energy" element={<EnergySolutions />} />
                 
                 {/* Service routes */}
                 <Route path="/services/cloud-devops" element={<CloudDevOps />} />
