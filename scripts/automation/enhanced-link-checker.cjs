@@ -38,6 +38,7 @@ class EnhancedLinkChecker {
           cwd: process.cwd()
         });
         console.log('✅ Build completed successfully');
+        return true;
       } else if (fs.existsSync('next.config.js')) {
         console.log('⚡ Next.js project detected, running build...');
         execSync('npm run build', { 
@@ -45,11 +46,11 @@ class EnhancedLinkChecker {
           cwd: process.cwd()
         });
         console.log('✅ Build completed successfully');
+        return true;
       } else {
         console.log('⚠️ No recognized build system found, skipping build...');
         return false;
       }
-      return true;
     } catch (error) {
       console.log('❌ Build failed, but continuing with link checking...');
       console.log('💡 This is normal if the project has build issues');
@@ -472,7 +473,7 @@ ${brokenExternal.length > 0 ?
   }
 
   async runLinkCheck() {
-    console.log('🚀 Starting comprehensive link check...');
+    console.log('🔗 Starting Enhanced Link Checker Automation...');
     
     try {
       const buildSuccess = await this.buildProject();
