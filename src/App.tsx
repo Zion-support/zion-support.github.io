@@ -5,12 +5,12 @@ import { EnhancedFuturisticFooter as Footer } from './components/EnhancedFuturis
 import { ChatAssistant } from './components/ChatAssistant';
 import { LoadingSpinner } from './components/ui/LoadingSpinner';
 import { EnhancedSEO } from './components/EnhancedSEO';
-// import { PerformanceOptimizer } from './components/PerformanceOptimizer';
+import PerformanceOptimizer from './components/PerformanceOptimizer';
 import { ErrorBoundary } from './components/ErrorBoundary';
-// import { EnhancedAccessibilityPanel } from './components/EnhancedAccessibilityPanel';
-// import { AdvancedPerformanceMonitor } from './components/AdvancedPerformanceMonitor';
-// import { InteractiveUserExperience } from './components/InteractiveUserExperience';
-// import { SecurityEnhancer } from './components/SecurityEnhancer';
+import { EnhancedAccessibilityPanel } from './components/EnhancedAccessibilityPanel';
+import { AdvancedPerformanceMonitor } from './components/AdvancedPerformanceMonitor';
+import InteractiveUserExperience from './components/InteractiveUserExperience';
+import SecurityEnhancer from './components/SecurityEnhancer';
 
 // Core pages - only import existing ones
 const Home = React.lazy(() => import('./pages/Home'));
@@ -43,6 +43,7 @@ const ComprehensivePricingGuide2027 = React.lazy(() => import('./pages/Comprehen
 const InnovativeServicesShowcase2025 = React.lazy(() => import('./pages/InnovativeServicesShowcase2025'));
 const InnovativeServicesShowcase2030 = React.lazy(() => import('./pages/InnovativeServicesShowcase2030'));
 const ComprehensivePricingGuide2030 = React.lazy(() => import('./pages/ComprehensivePricingGuide2030'));
+const ComprehensiveServicesShowcase2025 = React.lazy(() => import('./pages/ComprehensiveServicesShowcase2025'));
 const ScheduleDemo = React.lazy(() => import('./pages/ScheduleDemo'));
 
 // Service pages that exist
@@ -138,6 +139,7 @@ const App = React.memo(() => {
     { path: '/innovative-services-showcase-2025', element: <InnovativeServicesShowcase2025 /> },
     { path: '/innovative-services-showcase-2030', element: <InnovativeServicesShowcase2030 /> },
     { path: '/comprehensive-pricing-guide-2030', element: <ComprehensivePricingGuide2030 /> },
+    { path: '/comprehensive-services-showcase-2025', element: <ComprehensiveServicesShowcase2025 /> },
     { path: '/schedule-demo', element: <ScheduleDemo /> },
     { path: '/services/cloud-devops', element: <CloudDevOps /> },
     { path: '/services/digital-transformation', element: <DigitalTransformation /> },
