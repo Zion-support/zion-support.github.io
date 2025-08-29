@@ -22,10 +22,12 @@ export default function ServicesAdvertisingPage() {
     'Flexible deployment: SaaS or self-hosted options'
   ];
   const newHighlights = [
-    { title: 'Privacy Request Portal (DSAR)', price: 'From $99/mo + usage', refs: ['https://transcend.io/pricing/', 'https://www.onetrust.com/pricing/'], href: '/services/gdpr-dsar-portal' },
+    { title: 'Privacy Request Portal (DSAR)', price: 'From $99/mo + usage', refs: ['https://transcend.io/pricing', 'https://www.onetrust.com/pricing/'], href: '/services/gdpr-dsar-portal' },
     { title: 'CSP & Security Headers Manager', price: 'From $49/mo per domain', refs: ['https://securityheaders.com/'], href: '/services/security-headers-csp-manager' },
     { title: 'Checkout A/B Optimizer', price: 'From $99/mo', refs: ['https://www.optimizely.com/pricing/'], href: '/services/checkout-performance-optimizer' },
-    { title: 'Status & Incident Hub', price: 'From $59/mo', refs: ['https://betterstack.com/status/pricing'], href: '/services/status-incident-hub' }
+    { title: 'Status & Incident Hub', price: 'From $59/mo', refs: ['https://betterstack.com/status/pricing'], href: '/services/status-incident-hub' },
+    { title: 'AI Talent Sourcing Copilot', price: 'From $299/mo', refs: ['https://www.linkedin.com/talent-solutions/pricing/'], href: '/services/ai-talent-sourcing-copilot' },
+    { title: 'Vendor Risk Automation', price: 'From $199/mo', refs: ['https://securityscorecard.com/pricing'], href: '/services/vendor-risk-automation' }
   ];
   const anchors = [
     { title: 'AI & ML', href: '#ai-evaluation-orchestrator' },
@@ -34,6 +36,11 @@ export default function ServicesAdvertisingPage() {
     { title: 'Compliance', href: '#k8s-soc2-control-pack' },
     { title: 'Edge & Cron', href: '#edge-cron-orchestrator' },
     { title: 'Commerce', href: '#checkout-performance-optimizer' }
+  ];
+  const siteLinks = [
+    { label: 'Website', href: 'https://ziontechgroup.com' },
+    { label: 'Services', href: 'https://ziontechgroup.com/services' },
+    { label: 'Contact', href: 'https://ziontechgroup.com/contact' }
   ];
   const pricingRefs = [
     {
