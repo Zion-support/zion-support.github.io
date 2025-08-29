@@ -168,6 +168,57 @@ module.exports = {
       log_file: './logs/project-health-dashboard.log',
       error_file: './logs/project-health-dashboard-error.log',
       out_file: './logs/project-health-dashboard-out.log'
+    },
+
+    // NEW: AI-Powered Code Quality Analyzer
+    {
+      name: 'ai-code-analyzer',
+      script: './scripts/automation/ai-code-analyzer.cjs',
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      max_memory_restart: '1G',
+      env: {
+        NODE_ENV: 'production'
+      },
+      cron_restart: '*/30 * * * *', // Every 30 minutes
+      log_file: './logs/ai-code-analyzer.log',
+      error_file: './logs/ai-code-analyzer-error.log',
+      out_file: './logs/ai-code-analyzer-out.log'
+    },
+
+    // NEW: Intelligent Build Optimizer
+    {
+      name: 'intelligent-build-optimizer',
+      script: './scripts/automation/intelligent-build-optimizer.cjs',
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      max_memory_restart: '1G',
+      env: {
+        NODE_ENV: 'production'
+      },
+      cron_restart: '0 */1 * * *', // Every hour
+      log_file: './logs/intelligent-build-optimizer.log',
+      error_file: './logs/intelligent-build-optimizer-error.log',
+      out_file: './logs/intelligent-build-optimizer-out.log'
+    },
+
+    // NEW: Smart Development Workflow Orchestrator
+    {
+      name: 'smart-workflow-orchestrator',
+      script: './scripts/automation/smart-workflow-orchestrator.cjs',
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      max_memory_restart: '1G',
+      env: {
+        NODE_ENV: 'production'
+      },
+      cron_restart: '*/10 * * * *', // Every 10 minutes
+      log_file: './logs/smart-workflow-orchestrator.log',
+      error_file: './logs/smart-workflow-orchestrator-error.log',
+      out_file: './logs/smart-workflow-orchestrator-out.log'
     }
   ],
 
