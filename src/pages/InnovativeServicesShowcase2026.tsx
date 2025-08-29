@@ -223,11 +223,8 @@ export default function InnovativeServicesShowcase2026() {
       </section>
 
       {/* Services Grid */}
-      <motion.div
+      <section
         className="relative z-10 px-4 sm:px-6 lg:px-8 pb-20"
-        variants={containerVariants}
-        initial="hidden"
-        animate="visible"
       >
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -351,13 +348,10 @@ export default function InnovativeServicesShowcase2026() {
             ))}
           </div>
         </div>
-      </motion.div>
+      </section>
       {/* Call to Action */}
-      <motion.div
+      <section
         className="relative z-10 px-4 sm:px-6 lg:px-8 pb-20"
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8, delay: 1.2 }}
       >
         <div className="max-w-4xl mx-auto text-center">
           <div className="bg-gradient-to-r from-cyan-500/10 to-blue-600/10 backdrop-blur-md border border-cyan-500/20 rounded-3xl p-12">
@@ -384,7 +378,7 @@ export default function InnovativeServicesShowcase2026() {
                 Email Us
               </a>
             </div>
-          )}
+          </div>
         </div>
       </section>
 
@@ -480,7 +474,6 @@ export default function InnovativeServicesShowcase2026() {
           </motion.div>
         </div>
       </section>
-      </motion.div>
     </div>
   );
 };

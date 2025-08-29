@@ -1,4 +1,4 @@
-import { ArrowRight, Atom, BookOpen, Brain, Building, Building2, ChevronDown, Cloud, Code, Cpu, DollarSign, Eye, FileText, Globe, Handshake, Heart, HelpCircle, Leaf, Lock, Mail, MapPin, Menu, MessageCircle, Phone, Rocket, Scale, Search, Settings, Shield, ShoppingCart, Star, Target, TrendingUp, Users, X, Zap } from 'lucide-react';
+import { ArrowRight, Atom, BookOpen, Brain, Building, Building2, ChevronDown, Cloud, Code, Cpu, DollarSign, Eye, FileText, Globe, Handshake, Heart, HelpCircle, Leaf, Lock, Mail, MapPin, Menu, MessageCircle, Phone, Rocket, Scale, Search, Settings, Shield, ShoppingCart, Star, Target, TrendingUp, Users, X, Zap, Gauge, Link, Play, Globe2 } from 'lucide-react';
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { ThemeToggle } from '../components/ThemeToggle';
@@ -38,6 +38,7 @@ export function AppHeader() {
     { name: 'Home', href: '/', current: true },
     { name: 'Services', href: '/services', current: false, hasDropdown: true },
     { name: 'Solutions', href: '/solutions', current: false, hasDropdown: true },
+    { name: 'Pricing', href: '/pricing-guide-2030', current: false },
     { name: 'Resources', href: '/resources', current: false, hasDropdown: true },
     { name: 'About', href: '/about', current: false },
     { name: 'Contact', href: '/contact', current: false },
@@ -45,100 +46,132 @@ export function AppHeader() {
 
   const services = [
     { 
-      name: 'AI & Analytics', 
-      href: '/services', 
+      name: 'Innovative Micro SAAS 2025', 
+      href: '/innovative-micro-saas-services-2025', 
+      icon: Rocket, 
+      description: 'Cutting-edge AI Services',
+      featured: true,
+      color: 'from-purple-500 to-pink-500'
+    },
+    { 
+      name: 'AI Business Intelligence', 
+      href: '/services/ai-business-intelligence', 
       icon: Brain, 
       description: 'Machine Learning & Data Science',
       featured: true,
       color: 'from-purple-500 to-cyan-500'
     },
     { 
-      name: 'AI & Legal Tech', 
-      href: '/services', 
-      icon: Scale, 
-      description: 'Document Analysis & Compliance',
-      featured: true,
-      color: 'from-blue-500 to-indigo-500'
-    },
-    { 
-      name: 'AI & Healthcare', 
-      href: '/services', 
+      name: 'AI Healthcare Platform', 
+      href: '/services/ai-healthcare-platform', 
       icon: Heart, 
       description: 'Medical AI & Diagnostics',
       featured: true,
       color: 'from-red-500 to-pink-500'
     },
     { 
-      name: 'AI & Research', 
-      href: '/services', 
-      icon: Eye, 
-      description: 'Scientific Research & Discovery',
+      name: 'AI Content Creation', 
+      href: '/services/ai-content-creation', 
+      icon: PenTool, 
+      description: 'Content Generation & Optimization',
       featured: true,
-      color: 'from-purple-500 to-violet-500'
+      color: 'from-blue-500 to-indigo-500'
     },
     { 
-      name: 'AI & Green Tech', 
-      href: '/services', 
-      icon: Leaf, 
-      description: 'Sustainability Solutions',
-      featured: true,
-      color: 'from-green-500 to-emerald-500'
-    },
-    { 
-      name: 'AI & Metaverse', 
-      href: '/services', 
-      icon: Globe, 
-      description: 'Virtual Reality & Gaming',
-      featured: true,
-      color: 'from-purple-500 to-indigo-500'
-    },
-    { 
-      name: 'AI & Blockchain', 
-      href: '/services', 
-      icon: Lock, 
-      description: 'DeFi & Smart Contracts',
-      featured: true,
-      color: 'from-green-500 to-emerald-500'
-    },
-    { 
-      name: 'AI & Edge Computing', 
-      href: '/services', 
-      icon: Cpu, 
-      description: 'IoT & Real-time Processing',
-      featured: true,
-      color: 'from-blue-500 to-cyan-500'
-    },
-    { 
-      name: 'Quantum Computing', 
-      href: '/services', 
-      icon: Atom, 
-      description: 'Quantum AI & Optimization',
-      featured: true,
-      color: 'from-purple-500 to-pink-500'
-    },
-    { 
-      name: 'AI & Space Tech', 
-      href: '/services', 
-      icon: Rocket, 
-      description: 'Satellite Operations & Missions',
-      featured: true,
-      color: 'from-indigo-500 to-purple-500'
-    },
-    { 
-      name: 'Cybersecurity', 
-      href: '/services', 
+      name: 'AI Cybersecurity', 
+      href: '/services/ai-cybersecurity', 
       icon: Shield, 
       description: 'AI-Powered Security',
       featured: true,
       color: 'from-green-500 to-blue-500'
     },
     { 
-      name: 'Cloud Services', 
-      href: '/services', 
+      name: 'Quantum Computing', 
+      href: '/services/quantum-computing', 
+      icon: Atom, 
+      description: 'Quantum AI & Optimization',
+      featured: true,
+      color: 'from-purple-500 to-pink-500'
+    },
+    { 
+      name: 'IoT Edge Computing', 
+      href: '/services/iot-edge-computing', 
+      icon: Cpu, 
+      description: 'IoT & Real-time Processing',
+      featured: true,
+      color: 'from-blue-500 to-cyan-500'
+    },
+    { 
+      name: 'Digital Twin Platform', 
+      href: '/services/digital-twin', 
+      icon: Globe, 
+      description: 'Virtual Replicas & Simulation',
+      featured: true,
+      color: 'from-green-500 to-emerald-500'
+    },
+    { 
+      name: 'Cloud DevOps', 
+      href: '/services/cloud-devops', 
       icon: Cloud, 
       description: 'DevOps & Infrastructure',
       featured: true,
       color: 'from-blue-500 to-cyan-500'
+    },
+    { 
+      name: 'FinTech Solutions', 
+      href: '/services', 
+      icon: DollarSign, 
+      description: 'AI-Powered Financial Services',
+      featured: true,
+      color: 'from-emerald-500 to-green-500'
+    },
+    { 
+      name: 'AI & Marketing', 
+      href: '/services', 
+      icon: TrendingUp, 
+      description: 'Automated Marketing & Analytics',
+      featured: true,
+      color: 'from-green-500 to-emerald-500'
+    },
+    { 
+      name: 'AI & Content', 
+      href: '/services', 
+      icon: FileText, 
+      description: 'Content Creation & Management',
+      featured: true,
+      color: 'from-orange-500 to-red-500'
+    },
+    { 
+      name: 'AI & Customer Support', 
+      href: '/services', 
+      icon: MessageSquare, 
+      description: '24/7 Support Automation',
+      featured: true,
+      color: 'from-blue-500 to-purple-500'
+    },
+    { 
+      name: 'AI & HR', 
+      href: '/services', 
+      icon: Users, 
+      description: 'HR Automation & Analytics',
+      featured: true,
+      color: 'from-indigo-500 to-blue-500'
+    },
+    { 
+      name: 'Digital Twin', 
+      href: '/services', 
+      icon: Cpu, 
+      description: 'Virtual Replication & Simulation',
+      featured: true,
+      color: 'from-blue-500 to-indigo-500'
+    },
+    { 
+      name: 'Sustainable Tech', 
+      href: '/services', 
+      icon: Leaf, 
+      description: 'Green Technology Solutions',
+      featured: true,
+      color: 'from-green-500 to-teal-500'
     },
     { 
       name: 'Micro SaaS Products', 
@@ -149,28 +182,172 @@ export function AppHeader() {
       color: 'from-orange-500 to-red-500'
     },
     { 
-      name: 'AI & FinTech', 
-      href: '/services', 
-      icon: DollarSign, 
-      description: 'Financial Technology & Risk Management',
+      name: 'AI Customer Support', 
+      href: '/services/ai-customer-support-automation', 
+      icon: MessageCircle, 
+      description: '24/7 AI-powered support',
+      featured: true,
+      color: 'from-blue-500 to-purple-500'
+    },
+    { 
+      name: 'AI HR & Recruitment', 
+      href: '/services/ai-hr-recruitment-platform', 
+      icon: Users, 
+      description: 'Smart hiring & HR automation',
+      featured: true,
+      color: 'from-indigo-500 to-blue-500'
+    },
+    { 
+      name: 'AI Project Management', 
+      href: '/services/ai-project-management-platform', 
+      icon: Target, 
+      description: 'Intelligent project optimization',
       featured: true,
       color: 'from-emerald-500 to-green-500'
     },
     { 
-      name: 'AI & Operations', 
-      href: '/services', 
+      name: 'AI Workflow Automation', 
+      href: '/services/ai-workflow-automation', 
       icon: Settings, 
-      description: 'Supply Chain & Process Optimization',
-      featured: true,
-      color: 'from-gray-500 to-slate-500'
-    },
-    { 
-      name: 'AI & Development', 
-      href: '/services', 
-      icon: Code, 
-      description: 'Quality Assurance & Testing',
+      description: 'Process optimization & automation',
       featured: true,
       color: 'from-cyan-500 to-blue-500'
+    },
+    { 
+      name: 'AI Content Studio', 
+      href: '/services/ai-content-creation-studio', 
+      icon: PenTool, 
+      description: 'AI-powered content creation',
+      featured: true,
+      color: 'from-orange-500 to-red-500'
+    },
+    { 
+      name: 'AI SEO Platform', 
+      href: '/services/ai-seo-optimization-platform', 
+      icon: TrendingUp, 
+      description: 'Search engine optimization',
+      featured: true,
+      color: 'from-green-500 to-emerald-500'
+    },
+    { 
+      name: 'AI Predictive Maintenance', 
+      href: '/services/ai-predictive-maintenance', 
+      icon: Gauge, 
+      description: 'IoT maintenance optimization',
+      featured: true,
+      color: 'from-blue-500 to-indigo-500'
+    },
+    { 
+      name: 'Quantum Hybrid Platform', 
+      href: '/services/ai-quantum-hybrid-platform', 
+      icon: Atom, 
+      description: 'Quantum-classical computing',
+      featured: true,
+      color: 'from-purple-500 to-pink-500'
+    },
+    { 
+      name: 'Blockchain Web3', 
+      href: '/services/ai-blockchain-web3-platform', 
+      icon: Link, 
+      description: 'Decentralized AI solutions',
+      featured: true,
+      color: 'from-yellow-500 to-orange-500'
+    },
+    { 
+      name: 'Space Technology', 
+      href: '/services/ai-space-technology-platform', 
+      icon: Rocket, 
+      description: 'AI-powered space solutions',
+      featured: true,
+      color: 'from-indigo-500 to-purple-500'
+    },
+    { 
+      name: 'Sustainable Technology', 
+      href: '/services/ai-sustainable-technology', 
+      icon: Leaf, 
+      description: 'Green AI & sustainability',
+      featured: true,
+      color: 'from-green-500 to-teal-500'
+    },
+    { 
+      name: 'AI FinTech Platform', 
+      href: '/services/ai-powered-financial-technology', 
+      icon: DollarSign, 
+      description: 'Financial AI & trading',
+      featured: true,
+      color: 'from-emerald-500 to-green-500'
+    },
+    { 
+      name: 'AI Legal Tech', 
+      href: '/services/ai-powered-legal-technology', 
+      icon: Scale, 
+      description: 'Legal AI & compliance',
+      featured: true,
+      color: 'from-blue-500 to-indigo-500'
+    },
+    { 
+      name: 'AI Education Platform', 
+      href: '/services/ai-powered-education-platform', 
+      icon: BookOpen, 
+      description: 'Personalized learning AI',
+      featured: true,
+      color: 'from-blue-500 to-indigo-500'
+    },
+    { 
+      name: 'AI Entertainment', 
+      href: '/services/ai-powered-entertainment-platform', 
+      icon: Play, 
+      description: 'Interactive entertainment AI',
+      featured: true,
+      color: 'from-purple-500 to-pink-500'
+    },
+    { 
+      name: 'AI Research Platform', 
+      href: '/services/ai-powered-research-development', 
+      icon: Search, 
+      description: 'Research automation AI',
+      featured: true,
+      color: 'from-purple-500 to-violet-500'
+    },
+    { 
+      name: 'AI Metaverse', 
+      href: '/services/ai-powered-metaverse-platform', 
+      icon: Globe2, 
+      description: 'Virtual world AI',
+      featured: true,
+      color: 'from-purple-500 to-indigo-500'
+    },
+    { 
+      name: 'AI Space Tech', 
+      href: '/services/ai-powered-space-technology-ai', 
+      icon: Rocket, 
+      description: 'Autonomous space AI',
+      featured: true,
+      color: 'from-indigo-500 to-purple-500'
+    },
+    { 
+      name: 'AI Green Tech', 
+      href: '/services/ai-powered-green-technology', 
+      icon: Leaf, 
+      description: 'Environmental AI',
+      featured: true,
+      color: 'from-green-500 to-emerald-500'
+    },
+    { 
+      name: 'AI Development Tools', 
+      href: '/services/ai-powered-development-tools', 
+      icon: Code, 
+      description: 'AI-powered coding',
+      featured: true,
+      color: 'from-cyan-500 to-blue-500'
+    },
+    { 
+      name: 'Revolutionary Services 2030', 
+      href: '/revolutionary-services-2030', 
+      icon: Rocket, 
+      description: 'Future Technology Solutions',
+      featured: true,
+      color: 'from-indigo-500 to-purple-500'
     }
   ];
 
@@ -239,28 +416,35 @@ export function AppHeader() {
       href: '/white-papers',
       icon: FileText,
       description: 'In-depth research and analysis',
-      featured: false
+      featured: true
     },
     {
       name: 'Webinars',
       href: '/webinars',
       icon: Users,
       description: 'Expert-led learning sessions',
-      featured: false
+      featured: true
     },
     {
       name: 'Documentation',
       href: '/docs',
       icon: Code,
       description: 'Technical guides and APIs',
-      featured: false
+      featured: true
     },
     {
       name: 'FAQ & Support',
       href: '/faq',
       icon: HelpCircle,
       description: 'Get help and answers',
-      featured: false
+      featured: true
+    },
+    {
+      name: 'Pricing Guide 2025',
+      href: '/pricing-guide-2025',
+      icon: DollarSign,
+      description: 'Complete pricing information',
+      featured: true
     }
   ];
 
@@ -269,7 +453,7 @@ export function AppHeader() {
     { name: 'Request Quote', href: '/request-quote', icon: MessageCircle },
     { name: 'Pricing', href: '/pricing', icon: DollarSign },
     { name: 'Careers', href: '/careers', icon: Users },
-    { name: 'Partners', href: '/partners', icon: Handshake },
+    { name: 'Partners', href: '/partners', icon: HeartHandshake },
     { name: 'Privacy', href: '/privacy', icon: Shield },
     { name: 'Terms', href: '/terms', icon: BookOpen },
   ];
@@ -341,40 +525,121 @@ export function AppHeader() {
 
                       {/* Services Dropdown */}
                       {item.name === 'Services' && servicesDropdownOpen && (
-                        <div className="absolute top-full left-0 mt-2 w-[800px] bg-slate-800/95 backdrop-blur-xl rounded-2xl border border-slate-700/50 shadow-2xl shadow-black/50 overflow-hidden">
+                        <div className="absolute top-full left-0 mt-2 w-[900px] bg-slate-800/95 backdrop-blur-xl rounded-2xl border border-slate-700/50 shadow-2xl shadow-black/50 overflow-hidden">
                           <div className="p-6">
-                            <div className="grid grid-cols-2 gap-6">
-                              {services.map((service) => (
-                                <Link
-                                  key={service.name}
-                                  to={service.href}
-                                  className={`group p-4 rounded-xl transition-all duration-300 hover:bg-slate-700/50 ${
-                                    service.featured ? 'ring-2 ring-cyan-400/50' : ''
-                                  }`}
-                                  onClick={() => setServicesDropdownOpen(false)}
-                                >
-                                  <div className="flex items-start gap-3">
-                                    <div className={`p-2 rounded-lg bg-gradient-to-br ${service.color}`}>
-                                      {React.createElement(service.icon, { className: "w-5 h-5 text-white" })}
+                            <div className="grid grid-cols-3 gap-4">
+                              {/* AI & Business Intelligence */}
+                              <div className="space-y-3">
+                                <h4 className="text-sm font-semibold text-cyan-400 mb-3 border-b border-slate-700/50 pb-2">AI & Business Intelligence</h4>
+                                {services.filter(s => s.name.includes('AI') && (s.name.includes('Business') || s.name.includes('Intelligence') || s.name.includes('Analytics'))).map((service) => (
+                                  <Link
+                                    key={service.name}
+                                    to={service.href}
+                                    className={`group p-3 rounded-lg transition-all duration-300 hover:bg-slate-700/50 ${
+                                      service.featured ? 'ring-1 ring-cyan-400/30' : ''
+                                    }`}
+                                    onClick={() => setServicesDropdownOpen(false)}
+                                  >
+                                    <div className="flex items-start gap-2">
+                                      <div className={`p-1.5 rounded-md bg-gradient-to-br ${service.color}`}>
+                                        {React.createElement(service.icon, { className: "w-4 h-4 text-white" })}
+                                      </div>
+                                      <div className="flex-1 min-w-0">
+                                        <h3 className="font-medium text-white group-hover:text-cyan-400 transition-colors text-sm truncate">
+                                          {service.name}
+                                        </h3>
+                                        <p className="text-xs text-gray-400 mt-1 line-clamp-2">
+                                          {service.description}
+                                        </p>
+                                      </div>
                                     </div>
-                                    <div className="flex-1">
-                                      <h3 className="font-semibold text-white group-hover:text-cyan-400 transition-colors">
-                                        {service.name}
-                                      </h3>
-                                      <p className="text-sm text-gray-400 mt-1">
-                                        {service.description}
-                                      </p>
-                                      {service.featured && (
-                                        <span className="inline-flex items-center gap-1 mt-2 text-xs text-cyan-400">
-                                          <Star className="w-3 h-3" />
-                                          Featured
-                                        </span>
-                                      )}
+                                  </Link>
+                                ))}
+                              </div>
+
+                              {/* AI & Operations */}
+                              <div className="space-y-3">
+                                <h4 className="text-sm font-semibold text-cyan-400 mb-3 border-b border-slate-700/50 pb-2">AI & Operations</h4>
+                                {services.filter(s => s.name.includes('AI') && (s.name.includes('Project') || s.name.includes('Workflow') || s.name.includes('Management') || s.name.includes('Automation'))).map((service) => (
+                                  <Link
+                                    key={service.name}
+                                    to={service.href}
+                                    className={`group p-3 rounded-lg transition-all duration-300 hover:bg-slate-700/50 ${
+                                      service.featured ? 'ring-1 ring-cyan-400/30' : ''
+                                    }`}
+                                    onClick={() => setServicesDropdownOpen(false)}
+                                  >
+                                    <div className="flex items-start gap-2">
+                                      <div className={`p-1.5 rounded-md bg-gradient-to-br ${service.color}`}>
+                                        {React.createElement(service.icon, { className: "w-4 h-4 text-white" })}
+                                      </div>
+                                      <div className="flex-1 min-w-0">
+                                        <h3 className="font-medium text-white group-hover:text-cyan-400 transition-colors text-sm truncate">
+                                          {service.name}
+                                        </h3>
+                                        <p className="text-xs text-gray-400 mt-1 line-clamp-2">
+                                          {service.description}
+                                        </p>
+                                      </div>
                                     </div>
-                                  </div>
-                                </Link>
-                              ))}
+                                  </Link>
+                                ))}
+                              </div>
+
+                              {/* Emerging Technologies */}
+                              <div className="space-y-3">
+                                <h4 className="text-sm font-semibold text-cyan-400 mb-3 border-b border-slate-700/50 pb-2">Emerging Technologies</h4>
+                                {services.filter(s => s.name.includes('Quantum') || s.name.includes('Blockchain') || s.name.includes('Space') || s.name.includes('Metaverse') || s.name.includes('IoT')).map((service) => (
+                                  <Link
+                                    key={service.name}
+                                    to={service.href}
+                                    className={`group p-3 rounded-lg transition-all duration-300 hover:bg-slate-700/50 ${
+                                      service.featured ? 'ring-1 ring-cyan-400/30' : ''
+                                    }`}
+                                    onClick={() => setServicesDropdownOpen(false)}
+                                  >
+                                    <div className="flex items-start gap-2">
+                                      <div className={`p-1.5 rounded-md bg-gradient-to-br ${service.color}`}>
+                                        {React.createElement(service.icon, { className: "w-4 h-4 text-white" })}
+                                      </div>
+                                      <div className="flex-1 min-w-0">
+                                        <h3 className="font-medium text-white group-hover:text-cyan-400 transition-colors text-sm truncate">
+                                          {service.name}
+                                        </h3>
+                                        <p className="text-xs text-gray-400 mt-1 line-clamp-2">
+                                          {service.description}
+                                        </p>
+                                      </div>
+                                    </div>
+                                  </Link>
+                                ))}
+                              </div>
                             </div>
+
+                            {/* Featured Services Row */}
+                            <div className="mt-6 pt-6 border-t border-slate-700/50">
+                              <h4 className="text-sm font-semibold text-cyan-400 mb-3">Featured Services</h4>
+                              <div className="grid grid-cols-4 gap-3">
+                                {services.filter(s => s.featured).slice(0, 8).map((service) => (
+                                  <Link
+                                    key={service.name}
+                                    to={service.href}
+                                    className="group p-3 rounded-lg transition-all duration-300 hover:bg-slate-700/50 ring-1 ring-cyan-400/30"
+                                    onClick={() => setServicesDropdownOpen(false)}
+                                  >
+                                    <div className="flex items-center gap-2">
+                                      <div className={`p-1.5 rounded-md bg-gradient-to-br ${service.color}`}>
+                                        {React.createElement(service.icon, { className: "w-4 h-4 text-white" })}
+                                      </div>
+                                      <span className="text-xs text-white group-hover:text-cyan-400 transition-colors font-medium truncate">
+                                        {service.name}
+                                      </span>
+                                    </div>
+                                  </Link>
+                                ))}
+                              </div>
+                            </div>
+
                             <div className="mt-6 pt-6 border-t border-slate-700/50">
                               <Link
                                 to="/services"

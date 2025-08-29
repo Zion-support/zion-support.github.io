@@ -166,7 +166,7 @@ export default function SystemStatus() {
   const overallUptime = services.reduce((acc, service) => acc + service.uptime, 0) / services.length;
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+    <motion.div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO 
         title="System Status - Zion Tech Group"
         description="Real-time system status and performance metrics for Zion Tech Group services. Monitor uptime, response times, and incident reports."
@@ -460,6 +460,6 @@ export default function SystemStatus() {
           </div>
         </motion.div>
       </div>
-    </div>
+    </motion.div>
   );
 }

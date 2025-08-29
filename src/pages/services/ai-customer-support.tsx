@@ -1,144 +1,533 @@
 import React from 'react';
 import { SEO } from '../../components/SEO';
+import { motion } from 'framer-motion';
 import { 
-  MessageCircle, 
-  Brain, 
-  Zap, 
-  Users, 
-  TrendingUp, 
-  Shield, 
-  Clock,
-  BarChart3,
-  Headphones,
-  Bot
+  Headphones, Brain, Zap, Target, CheckCircle, ArrowRight, TrendingUp,
+  MessageCircle, Phone, Mail, MapPin, Star, Award, Lightbulb,
+  Settings, Search, Users, Cloud, Cpu, Database, Layers, FileText,
+  UserCheck, Clock, Activity, Lock, Key, Bug, Virus, Fire
 } from 'lucide-react';
 
-export default function AICustomerSupport() {
+const AICustomerSupport: React.FC = () => {
+  const features = [
+    {
+      icon: Headphones,
+      title: '24/7 Support',
+      description: 'Round-the-clock AI customer service',
+      color: 'from-blue-500 to-cyan-500'
+    },
+    {
+      icon: Brain,
+      title: 'Intelligent Responses',
+      description: 'AI-powered smart customer interactions',
+      color: 'from-purple-500 to-pink-500'
+    },
+    {
+      icon: Zap,
+      title: 'Instant Resolution',
+      description: 'Quick problem solving and support',
+      color: 'from-yellow-500 to-orange-500'
+    },
+    {
+      icon: Target,
+      title: 'Personalized Service',
+      description: 'Tailored customer support experiences',
+      color: 'from-green-500 to-emerald-500'
+    },
+    {
+      icon: Cloud,
+      title: 'Cloud Platform',
+      description: 'Cloud-based support infrastructure',
+      color: 'from-indigo-500 to-blue-500'
+    },
+    {
+      icon: UserCheck,
+      title: 'Customer Satisfaction',
+      description: 'Enhanced customer experience and satisfaction',
+      color: 'from-red-500 to-pink-500'
+    }
+  ];
+
+  const solutions = [
+    {
+      title: 'AI Chatbots',
+      description: 'Intelligent conversational AI for customer support',
+      icon: MessageCircle,
+      benefits: ['24/7 availability', 'Instant responses', 'Multi-language support', 'Scalable operations'],
+      color: 'from-blue-500 to-cyan-500'
+    },
+    {
+      title: 'Voice Support',
+      description: 'AI-powered voice recognition and response systems',
+      icon: Headphones,
+      benefits: ['Natural conversations', 'Voice recognition', 'Emotion detection', 'Call routing'],
+      color: 'from-purple-500 to-pink-500'
+    },
+    {
+      title: 'Ticket Management',
+      description: 'Intelligent ticket routing and resolution',
+      icon: Target,
+      benefits: ['Smart routing', 'Priority management', 'Auto-resolution', 'Performance tracking'],
+      color: 'from-green-500 to-emerald-500'
+    },
+    {
+      title: 'Knowledge Base',
+      description: 'AI-powered self-service support system',
+      icon: Brain,
+      benefits: ['Self-service', 'Knowledge management', 'Search optimization', 'Content updates'],
+      color: 'from-red-500 to-orange-500'
+    }
+  ];
+
+  const industries = [
+    'E-commerce',
+    'Technology',
+    'Healthcare',
+    'Finance',
+    'Telecommunications',
+    'Retail',
+    'Travel',
+    'Education',
+    'Insurance',
+    'Real Estate'
+  ];
+
+  const benefits = [
+    '24/7 customer support',
+    'Reduce response time by 80%',
+    'Improve satisfaction by 60%',
+    'Lower support costs by 70%',
+    'Multi-language support',
+    'Scalable operations',
+    'Personalized service',
+    'Competitive advantage'
+  ];
+
+  const technologies = [
+    'AI/ML',
+    'Natural Language Processing',
+    'Voice Recognition',
+    'Machine Learning',
+    'Cloud Computing',
+    'Chatbot Technology',
+    'Sentiment Analysis',
+    'Knowledge Management'
+  ];
+
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO 
         title="AI Customer Support - Zion Tech Group"
-        description="Intelligent support automation that provides 24/7 customer assistance. Transform your customer support with AI-powered automation."
+        description="Revolutionary AI-powered customer support solutions. 24/7 intelligent support, chatbots, and personalized service for exceptional customer experiences."
+        keywords="AI customer support, customer service, AI chatbots, support automation, Zion Tech Group"
+        ogType="website"
       />
-      
+
       {/* Hero Section */}
-      <section className="relative py-20 lg:py-32 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-blue-900 via-purple-900 to-slate-900"></div>
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center">
-            <div className="max-w-4xl mx-auto mb-12">
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
-                AI Customer Support
+      <section className="relative overflow-hidden py-20 lg:py-32">
+        <div className="container-responsive">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <motion.div
+              initial={{ opacity: 0, x: -50 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8 }}
+              className="space-y-8"
+            >
+              <div className="inline-flex items-center gap-3 px-4 py-2 bg-gradient-to-r from-blue-500/20 to-cyan-500/20 border border-blue-500/30 rounded-full text-blue-400 text-sm font-medium">
+                <Headphones className="w-4 h-4" />
+                Support Innovation
+              </div>
+              
+              <h1 className="text-4xl lg:text-6xl font-bold text-white leading-tight">
+                AI Customer
+                <span className="block bg-gradient-to-r from-blue-400 via-cyan-400 to-purple-400 bg-clip-text text-transparent">
+                  Support
+                </span>
               </h1>
-              <p className="text-xl md:text-2xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
-                Intelligent support automation that provides 24/7 customer assistance. Transform your customer support with AI-powered automation.
+              
+              <p className="text-xl text-gray-300 leading-relaxed">
+                Transform your customer support with our revolutionary AI-powered platform. From chatbots to voice support, experience the future of intelligent customer service.
               </p>
-            </div>
-            <div className="mb-16">
-              <a
-                href="/contact"
-                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold text-lg rounded-xl hover:from-blue-700 hover:to-purple-700 transition-all duration-300 shadow-2xl hover:shadow-blue-500/25"
-              >
-                Get Started with AI Customer Support
-              </a>
-            </div>
+              
+              <div className="flex flex-col sm:flex-row gap-4">
+                <button className="btn-futuristic bg-gradient-to-r from-blue-500 to-cyan-600 hover:from-blue-600 hover:to-cyan-700">
+                  <Headphones className="w-5 h-5" />
+                  Support Demo
+                </button>
+                <button className="btn-futuristic-outline">
+                  <FileText className="w-5 h-5" />
+                  Download Support Guide
+                </button>
+              </div>
+            </motion.div>
+            
+            <motion.div
+              initial={{ opacity: 0, x: 50 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+              className="relative"
+            >
+              <div className="relative z-10">
+                <div className="w-full h-96 bg-gradient-to-br from-blue-500/20 via-cyan-500/20 to-purple-500/20 rounded-2xl border border-blue-500/30 flex items-center justify-center">
+                  <div className="text-center">
+                    <div className="w-24 h-24 bg-gradient-to-br from-blue-500 to-cyan-600 rounded-2xl flex items-center justify-center mx-auto mb-6">
+                      <Headphones className="w-12 h-12 text-white" />
+                    </div>
+                    <h3 className="text-2xl font-bold text-white mb-2">AI Customer Support</h3>
+                    <p className="text-gray-300">Intelligent Support Solutions</p>
+                  </div>
+                </div>
+              </div>
+              
+              <div className="absolute inset-0 bg-gradient-to-br from-blue-500/10 to-cyan-500/10 rounded-2xl blur-3xl"></div>
+            </motion.div>
           </div>
         </div>
       </section>
 
       {/* Features Section */}
-      <section className="py-20 bg-white/5">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Revolutionary AI-Powered Support
+      <section className="py-20 bg-slate-800/50">
+        <div className="container-responsive">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-3xl lg:text-5xl font-bold text-white mb-6">
+              Revolutionary Support Features
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Transform your customer support with our advanced AI automation
+              Our AI customer support platform combines cutting-edge artificial intelligence with advanced service technology to deliver unprecedented support capabilities.
             </p>
-          </div>
-          
+          </motion.div>
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20">
-              <div className="w-16 h-16 bg-blue-600/20 rounded-2xl flex items-center justify-center mb-6">
-                <Bot className="w-8 h-8 text-blue-400" />
-              </div>
-              <h3 className="text-xl font-bold text-white mb-4">Intelligent Chatbots</h3>
-              <p className="text-gray-300">
-                Advanced AI chatbots that understand natural language and provide accurate responses
-              </p>
-            </div>
-            
-            <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20">
-              <div className="w-16 h-16 bg-green-600/20 rounded-2xl flex items-center justify-center mb-6">
-                <Clock className="w-8 h-8 text-green-400" />
-              </div>
-              <h3 className="text-xl font-bold text-white mb-4">24/7 Availability</h3>
-              <p className="text-gray-300">
-                Provide instant customer support anytime, anywhere, without human limitations
-              </p>
-            </div>
-            
-            <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20">
-              <div className="w-16 h-16 bg-purple-600/20 rounded-2xl flex items-center justify-center mb-6">
-                <Brain className="w-8 h-8 text-purple-400" />
-              </div>
-              <h3 className="text-xl font-bold text-white mb-4">Smart Issue Resolution</h3>
-              <p className="text-gray-300">
-                AI that learns from customer interactions to provide better solutions over time
-              </p>
-            </div>
-            
-            <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20">
-              <div className="w-16 h-16 bg-yellow-600/20 rounded-2xl flex items-center justify-center mb-6">
-                <Users className="w-8 h-8 text-yellow-400" />
-              </div>
-              <h3 className="text-xl font-bold text-white mb-4">Personalized Support</h3>
-              <p className="text-gray-300">
-                Tailored responses based on customer history and preferences
-              </p>
-            </div>
-            
-            <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20">
-              <div className="w-16 h-16 bg-red-600/20 rounded-2xl flex items-center justify-center mb-6">
-                <TrendingUp className="w-8 h-8 text-red-400" />
-              </div>
-              <h3 className="text-xl font-bold text-white mb-4">Performance Analytics</h3>
-              <p className="text-gray-300">
-                Comprehensive insights into support performance and customer satisfaction
-              </p>
-            </div>
-            
-            <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20">
-              <div className="w-16 h-16 bg-indigo-600/20 rounded-2xl flex items-center justify-center mb-6">
-                <Shield className="w-8 h-8 text-indigo-400" />
-              </div>
-              <h3 className="text-xl font-bold text-white mb-4">Secure & Compliant</h3>
-              <p className="text-gray-300">
-                Enterprise-grade security with compliance for data protection regulations
-              </p>
-            </div>
+            {features.map((feature, index) => (
+              <motion.div
+                key={feature.title}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                viewport={{ once: true }}
+                className="group p-6 bg-slate-800/50 rounded-2xl border border-slate-700/50 hover:border-blue-500/50 transition-all duration-300 hover:bg-slate-700/50"
+              >
+                <div className={`w-16 h-16 bg-gradient-to-br ${feature.color} rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}>
+                  <feature.icon className="w-8 h-8 text-white" />
+                </div>
+                <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
+                <p className="text-gray-400 leading-relaxed">{feature.description}</p>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Solutions Section */}
+      <section className="py-20">
+        <div className="container-responsive">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-3xl lg:text-5xl font-bold text-white mb-6">
+              Customer Support Solutions
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              From AI chatbots to voice support, our platform addresses diverse customer support needs with intelligent service solutions.
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+            {solutions.map((solution, index) => (
+              <motion.div
+                key={solution.title}
+                initial={{ opacity: 0, x: index % 2 === 0 ? -30 : 30 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                viewport={{ once: true }}
+                className="p-8 bg-slate-800/50 rounded-2xl border border-slate-700/50 hover:border-blue-500/50 transition-all duration-300"
+              >
+                <div className="flex items-start gap-4 mb-6">
+                  <div className={`w-16 h-16 bg-gradient-to-br ${solution.color} rounded-xl flex items-center justify-center flex-shrink-0`}>
+                    <solution.icon className="w-8 h-8 text-white" />
+                  </div>
+                  <div>
+                    <h3 className="text-2xl font-semibold text-white mb-2">{solution.title}</h3>
+                    <p className="text-gray-400 leading-relaxed">{solution.description}</p>
+                  </div>
+                </div>
+                
+                <div className="space-y-3">
+                  <h4 className="text-lg font-semibold text-white">Key Benefits:</h4>
+                  <ul className="space-y-2">
+                    {solution.benefits.map((benefit, idx) => (
+                      <li key={idx} className="flex items-center gap-3 text-gray-300">
+                        <CheckCircle className="w-5 h-5 text-blue-400 flex-shrink-0" />
+                        {benefit}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Benefits Section */}
+      <section className="py-20 bg-slate-800/50">
+        <div className="container-responsive">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-3xl lg:text-5xl font-bold text-white mb-6">
+              Why Choose AI Customer Support?
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Experience the advantages of AI-powered customer support and intelligent service automation.
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+            {benefits.map((benefit, index) => (
+              <motion.div
+                key={benefit}
+                initial={{ opacity: 0, scale: 0.8 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                viewport={{ once: true }}
+                className="p-6 bg-slate-700/50 rounded-xl border border-slate-600/50 text-center hover:border-blue-500/50 transition-all duration-300 hover:bg-slate-600/50"
+              >
+                <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-cyan-600 rounded-lg flex items-center justify-center mx-auto mb-4">
+                  <TrendingUp className="w-6 h-6 text-white" />
+                </div>
+                <p className="text-white font-medium text-sm leading-relaxed">{benefit}</p>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Technologies Section */}
+      <section className="py-20">
+        <div className="container-responsive">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-3xl lg:text-5xl font-bold text-white mb-6">
+              Cutting-Edge Technologies
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Our platform leverages the latest advancements in AI, machine learning, and support technology to deliver superior customer service.
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+            {technologies.map((tech, index) => (
+              <motion.div
+                key={tech}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                viewport={{ once: true }}
+                className="p-6 bg-slate-800/50 rounded-xl border border-slate-700/50 text-center hover:border-blue-500/50 transition-all duration-300 hover:bg-slate-700/50 group"
+              >
+                <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-cyan-600 rounded-lg flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
+                  <Zap className="w-6 h-6 text-white" />
+                </div>
+                <p className="text-white font-medium text-sm leading-relaxed">{tech}</p>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Industries Section */}
+      <section className="py-20 bg-slate-800/50">
+        <div className="container-responsive">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-3xl lg:text-5xl font-bold text-white mb-6">
+              Industries We Serve
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Our AI customer support platform is designed to serve various industries with intelligent support solutions.
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-2 md:grid-cols-5 gap-6">
+            {industries.map((industry, index) => (
+              <motion.div
+                key={industry}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                viewport={{ once: true }}
+                className="p-6 bg-slate-700/50 rounded-xl border border-slate-600/50 text-center hover:border-blue-500/50 transition-all duration-300 hover:bg-slate-600/50 group"
+              >
+                <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-cyan-600 rounded-lg flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
+                  <Users className="w-6 h-6 text-white" />
+                </div>
+                <p className="text-white font-medium text-sm leading-relaxed">{industry}</p>
+              </motion.div>
+            ))}
           </div>
         </div>
       </section>
 
       {/* CTA Section */}
-      <section className="py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-8">
-            Ready to Transform Your Customer Support?
-          </h2>
-          <p className="text-xl text-gray-300 mb-12 max-w-3xl mx-auto">
-            Start providing intelligent, 24/7 customer assistance today
-          </p>
-          <a
-            href="/contact"
-            className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold text-lg rounded-xl hover:from-blue-700 hover:to-purple-700 transition-all duration-300 shadow-2xl hover:shadow-blue-500/25"
+      <section className="py-20 bg-gradient-to-r from-blue-500/10 via-cyan-500/10 to-purple-500/10">
+        <div className="container-responsive text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="max-w-4xl mx-auto"
           >
-            Get Started with AI Customer Support
-          </a>
+            <h2 className="text-3xl lg:text-5xl font-bold text-white mb-6">
+              Ready to Transform Your Support?
+            </h2>
+            <p className="text-xl text-gray-300 mb-8">
+              Join the customer support revolution with our AI-powered platform. Experience the future of intelligent customer service.
+            </p>
+            
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="btn-futuristic bg-gradient-to-r from-blue-500 to-cyan-600 hover:from-blue-600 hover:to-cyan-700">
+                <MessageCircle className="w-5 h-5" />
+                Schedule Support Demo
+              </button>
+              <button className="btn-futuristic-outline">
+                <Phone className="w-5 h-5" />
+                Contact Support Team
+              </button>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Contact Section */}
+      <section className="py-20">
+        <div className="container-responsive">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+            <motion.div
+              initial={{ opacity: 0, x: -30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
+            >
+              <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">
+                Get in Touch
+              </h2>
+              <p className="text-gray-300 mb-8 leading-relaxed">
+                Ready to revolutionize your customer support with AI technology? Our team of support experts is here to help you implement the future of intelligent customer service.
+              </p>
+              
+              <div className="space-y-6">
+                <div className="flex items-center gap-4">
+                  <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-cyan-600 rounded-lg flex items-center justify-center">
+                    <Phone className="w-6 h-6 text-white" />
+                  </div>
+                  <div>
+                    <p className="text-white font-semibold">Phone</p>
+                    <p className="text-gray-300">+1 302 464 0950</p>
+                  </div>
+                </div>
+                
+                <div className="flex items-center gap-4">
+                  <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-cyan-600 rounded-lg flex items-center justify-center">
+                    <Mail className="w-6 h-6 text-white" />
+                  </div>
+                  <div>
+                    <p className="text-white font-semibold">Email</p>
+                    <p className="text-gray-300">kleber@ziontechgroup.com</p>
+                  </div>
+                </div>
+                
+                <div className="flex items-center gap-4">
+                  <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-cyan-600 rounded-lg flex items-center justify-center">
+                    <MapPin className="w-6 h-6 text-white" />
+                  </div>
+                  <div>
+                    <p className="text-white font-semibold">Address</p>
+                    <p className="text-gray-300">364 E Main St STE 1008<br />Middletown DE 19709</p>
+                  </div>
+                </div>
+              </div>
+            </motion.div>
+            
+            <motion.div
+              initial={{ opacity: 0, x: 30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+              viewport={{ once: true }}
+              className="p-8 bg-slate-800/50 rounded-2xl border border-slate-700/50"
+            >
+              <h3 className="text-2xl font-semibold text-white mb-6">Request Support Consultation</h3>
+              <form className="space-y-6">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                  <input
+                    type="text"
+                    placeholder="First Name"
+                    className="w-full px-4 py-3 bg-slate-700/50 border border-slate-600/50 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                  />
+                  <input
+                    type="text"
+                    placeholder="Last Name"
+                    className="w-full px-4 py-3 bg-slate-700/50 border border-slate-600/50 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                  />
+                </div>
+                
+                <input
+                  type="email"
+                  placeholder="Email Address"
+                  className="w-full px-4 py-3 bg-slate-700/50 border border-slate-600/50 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                />
+                
+                <input
+                  type="text"
+                  placeholder="Organization"
+                  className="w-full px-4 py-3 bg-slate-700/50 border border-slate-600/50 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                />
+                
+                <textarea
+                  placeholder="Tell us about your customer support needs..."
+                  rows={4}
+                  className="w-full px-4 py-3 bg-slate-700/50 border border-slate-600/50 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent resize-none"
+                ></textarea>
+                
+                <button
+                  type="submit"
+                  className="w-full btn-futuristic bg-gradient-to-r from-blue-500 to-cyan-600 hover:from-blue-600 hover:to-cyan-700"
+                >
+                  <MessageCircle className="w-5 h-5" />
+                  Send Message
+                </button>
+              </form>
+            </motion.div>
+          </div>
         </div>
       </section>
     </div>
   );
-}
+};
+
+export default AICustomerSupport;

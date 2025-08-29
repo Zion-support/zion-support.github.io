@@ -953,6 +953,804 @@ export const COMPREHENSIVE_PRICING_GUIDE_2030: ServicePricing[] = [
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com/ai-hr"
     }
+  },
+
+  // AI & Legal Tech Services
+  {
+    id: "ai-legal-document-analyzer-pricing",
+    serviceName: "AI Legal Document Analyzer",
+    category: "AI & Legal Tech",
+    description: "Advanced AI-powered legal document analysis platform with 98% accuracy",
+    basePrice: 12999,
+    monthlyPrice: 1299,
+    annualPrice: 13999,
+    enterprisePrice: 24999,
+    features: [
+      "Contract analysis and risk assessment",
+      "Legal document review automation",
+      "Compliance monitoring and reporting",
+      "Integration with legal management systems",
+      "AI-powered legal insights and recommendations",
+      "Multi-language document support",
+      "Advanced security and encryption",
+      "24/7 customer support"
+    ],
+    benefits: [
+      "Reduces legal review time by 80%",
+      "Improves accuracy and consistency",
+      "Reduces legal costs by 60%",
+      "Enhances compliance and risk management",
+      "Increases productivity of legal teams"
+    ],
+    marketPrice: "$10,000 - $20,000",
+    competitors: ["LawGeex", "Evisort", "ContractPodAi"],
+    roi: "700% within 6 months",
+    setupTime: "6-8 weeks",
+    contactInfo: {
+      phone: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      website: "https://ziontechgroup.com/ai-legal-analyzer"
+    }
+  },
+
+  // AI & Research Services
+  {
+    id: "ai-research-assistant-pricing",
+    serviceName: "AI Research Assistant Platform",
+    category: "AI & Research",
+    description: "Comprehensive AI-powered research automation platform",
+    basePrice: 15999,
+    monthlyPrice: 1599,
+    annualPrice: 17999,
+    enterprisePrice: 29999,
+    features: [
+      "Automated literature reviews",
+      "Data analysis and hypothesis generation",
+      "Research report creation",
+      "Citation management and formatting",
+      "Multi-database search integration",
+      "AI-powered research insights",
+      "Collaborative research tools",
+      "Research workflow automation"
+    ],
+    benefits: [
+      "Accelerates research by 10x",
+      "Improves research accuracy by 95%",
+      "Reduces research time by 80%",
+      "Enhances collaboration and sharing",
+      "Streamlines research workflows"
+    ],
+    marketPrice: "$12,000 - $25,000",
+    competitors: ["Consensus", "Elicit", "Research Rabbit"],
+    roi: "800% within 8 months",
+    setupTime: "8-10 weeks",
+    contactInfo: {
+      phone: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      website: "https://ziontechgroup.com/ai-research-assistant"
+    }
+  },
+
+  // AI & Green Tech Services
+  {
+    id: "ai-carbon-footprint-optimizer-pricing",
+    serviceName: "AI Carbon Footprint Optimizer",
+    category: "AI & Green Tech",
+    description: "Intelligent sustainability optimization platform",
+    basePrice: 8999,
+    monthlyPrice: 899,
+    annualPrice: 9999,
+    enterprisePrice: 17999,
+    features: [
+      "Carbon footprint analysis and tracking",
+      "Sustainability score optimization",
+      "ESG compliance monitoring",
+      "Green operations recommendations",
+      "Environmental impact assessment",
+      "Sustainability reporting automation",
+      "Integration with business systems",
+      "Real-time sustainability metrics"
+    ],
+    benefits: [
+      "Reduces carbon emissions by 35%",
+      "Improves sustainability scores by 60%",
+      "Reduces compliance costs by 40%",
+      "Enhances brand reputation",
+      "Supports ESG goals and reporting"
+    ],
+    marketPrice: "$6,000 - $15,000",
+    competitors: ["Watershed", "Normative", "CarbonChain"],
+    roi: "500% within 6 months",
+    setupTime: "5-7 weeks",
+    contactInfo: {
+      phone: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      website: "https://ziontechgroup.com/ai-carbon-optimizer"
+    }
+  },
+
+  // AI & Metaverse Services
+  {
+    id: "ai-metaverse-development-suite-pricing",
+    serviceName: "AI Metaverse Development Suite",
+    category: "AI & Metaverse",
+    description: "Comprehensive AI-powered metaverse creation platform",
+    basePrice: 19999,
+    monthlyPrice: 1999,
+    annualPrice: 21999,
+    enterprisePrice: 39999,
+    features: [
+      "3D environment creation tools",
+      "AI-powered content generation",
+      "Virtual reality integration",
+      "Augmented reality support",
+      "Multi-user collaboration",
+      "Blockchain integration",
+      "Performance optimization",
+      "Cross-platform deployment"
+    ],
+    benefits: [
+      "Reduces development time by 70%",
+      "Improves user engagement by 200%",
+      "Enables rapid prototyping",
+      "Supports multiple platforms",
+      "Enhances user experience"
+    ],
+    marketPrice: "$15,000 - $35,000",
+    competitors: ["Unity", "Unreal Engine", "Roblox Studio"],
+    roi: "900% within 10 months",
+    setupTime: "10-12 weeks",
+    contactInfo: {
+      phone: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      website: "https://ziontechgroup.com/ai-metaverse-suite"
+    }
+  },
+
+  // AI & Space Tech Services
+  {
+    id: "ai-satellite-optimization-pricing",
+    serviceName: "AI Satellite Optimization Platform",
+    category: "AI & Space Tech",
+    description: "Advanced AI platform for satellite and space mission management",
+    basePrice: 24999,
+    monthlyPrice: 2499,
+    annualPrice: 26999,
+    enterprisePrice: 49999,
+    features: [
+      "Satellite constellation management",
+      "Orbit optimization algorithms",
+      "Mission planning and execution",
+      "Real-time monitoring and control",
+      "AI-powered decision support",
+      "Space weather integration",
+      "Ground station management",
+      "Mission analytics and reporting"
+    ],
+    benefits: [
+      "Improves satellite efficiency by 45%",
+      "Reduces mission costs by 30%",
+      "Enhances mission success rates",
+      "Optimizes resource utilization",
+      "Supports autonomous operations"
+    ],
+    marketPrice: "$20,000 - $50,000",
+    competitors: ["Maxar", "Planet Labs", "Spire Global"],
+    roi: "1000% within 12 months",
+    setupTime: "12-16 weeks",
+    contactInfo: {
+      phone: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      website: "https://ziontechgroup.com/ai-satellite-platform"
+    }
+  },
+
+  // AI & Operations Services
+  {
+    id: "ai-operations-optimizer-pricing",
+    serviceName: "AI Operations Optimizer",
+    category: "AI & Operations",
+    description: "Intelligent operations management and optimization platform",
+    basePrice: 11999,
+    monthlyPrice: 1199,
+    annualPrice: 12999,
+    enterprisePrice: 22999,
+    features: [
+      "Workflow optimization",
+      "Resource allocation management",
+      "Process efficiency analysis",
+      "Performance monitoring",
+      "Predictive analytics",
+      "Automation recommendations",
+      "Integration with business systems",
+      "Real-time dashboards"
+    ],
+    benefits: [
+      "Reduces operational costs by 40%",
+      "Improves productivity by 65%",
+      "Streamlines workflows",
+      "Enhances decision-making",
+      "Increases operational efficiency"
+    ],
+    marketPrice: "$8,000 - $18,000",
+    competitors: ["ServiceNow", "Pega", "Appian"],
+    roi: "600% within 7 months",
+    setupTime: "6-8 weeks",
+    contactInfo: {
+      phone: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      website: "https://ziontechgroup.com/ai-operations-optimizer"
+    }
+  },
+
+  // AI & Development Services
+  {
+    id: "ai-code-generation-pricing",
+    serviceName: "AI Code Generation Platform",
+    category: "AI & Development",
+    description: "Advanced AI-powered code generation and optimization platform",
+    basePrice: 7999,
+    monthlyPrice: 799,
+    annualPrice: 8999,
+    enterprisePrice: 15999,
+    features: [
+      "Multi-language code generation",
+      "Code review and optimization",
+      "Bug detection and fixing",
+      "Documentation generation",
+      "Integration with IDEs",
+      "Version control integration",
+      "Code quality analysis",
+      "Performance optimization"
+    ],
+    benefits: [
+      "Reduces development time by 60%",
+      "Improves code quality by 80%",
+      "Automates repetitive tasks",
+      "Enhances developer productivity",
+      "Reduces bugs and errors"
+    ],
+    marketPrice: "$5,000 - $12,000",
+    competitors: ["GitHub Copilot", "Tabnine", "Kite"],
+    roi: "700% within 5 months",
+    setupTime: "4-6 weeks",
+    contactInfo: {
+      phone: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      website: "https://ziontechgroup.com/ai-code-generation"
+    }
+  },
+
+  // AI & Education Services
+  {
+    id: "ai-personalized-learning-pricing",
+    serviceName: "AI Personalized Learning Platform",
+    category: "AI & Education",
+    description: "Intelligent adaptive learning platform with personalized curriculum",
+    basePrice: 9999,
+    monthlyPrice: 999,
+    annualPrice: 10999,
+    enterprisePrice: 19999,
+    features: [
+      "Personalized learning paths",
+      "Adaptive curriculum generation",
+      "Progress tracking and analytics",
+      "Student performance insights",
+      "Multi-modal content delivery",
+      "Collaborative learning tools",
+      "Assessment and evaluation",
+      "Integration with LMS systems"
+    ],
+    benefits: [
+      "Improves learning outcomes by 75%",
+      "Increases student engagement by 120%",
+      "Personalizes learning experience",
+      "Tracks progress effectively",
+      "Supports diverse learning styles"
+    ],
+    marketPrice: "$6,000 - $15,000",
+    competitors: ["Duolingo", "Khan Academy", "Coursera"],
+    roi: "500% within 6 months",
+    setupTime: "5-7 weeks",
+    contactInfo: {
+      phone: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      website: "https://ziontechgroup.com/ai-learning-platform"
+    }
+  },
+
+  // AI & Entertainment Services
+  {
+    id: "ai-content-generation-studio-pricing",
+    serviceName: "AI Content Generation Studio",
+    category: "AI & Entertainment",
+    description: "Comprehensive AI-powered content creation platform",
+    basePrice: 14999,
+    monthlyPrice: 1499,
+    annualPrice: 15999,
+    enterprisePrice: 29999,
+    features: [
+      "Video generation and editing",
+      "Music composition and production",
+      "Art and design creation",
+      "Interactive media development",
+      "Content optimization tools",
+      "Multi-platform publishing",
+      "Analytics and performance tracking",
+      "Collaboration and workflow management"
+    ],
+    benefits: [
+      "Reduces content creation time by 80%",
+      "Increases audience engagement by 150%",
+      "Enables rapid content production",
+      "Improves content quality",
+      "Supports multiple content types"
+    ],
+    marketPrice: "$10,000 - $25,000",
+    competitors: ["Runway ML", "Synthesia", "Jasper"],
+    roi: "800% within 8 months",
+    setupTime: "7-9 weeks",
+    contactInfo: {
+      phone: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      website: "https://ziontechgroup.com/ai-content-studio"
+    }
+  },
+
+  // AI & Supply Chain Services
+  {
+    id: "ai-supply-chain-optimizer-pricing",
+    serviceName: "AI Supply Chain Optimizer",
+    category: "AI & Supply Chain",
+    description: "Intelligent supply chain optimization and management platform",
+    basePrice: 18999,
+    monthlyPrice: 1899,
+    annualPrice: 19999,
+    enterprisePrice: 35999,
+    features: [
+      "Demand forecasting and planning",
+      "Inventory optimization",
+      "Logistics and route optimization",
+      "Supplier management",
+      "Risk assessment and mitigation",
+      "Real-time monitoring",
+      "Integration with ERP systems",
+      "Advanced analytics and reporting"
+    ],
+    benefits: [
+      "Reduces supply chain costs by 45%",
+      "Improves delivery times by 60%",
+      "Optimizes inventory levels",
+      "Enhances supplier relationships",
+      "Reduces supply chain risks"
+    ],
+    marketPrice: "$15,000 - $35,000",
+    competitors: ["SAP Ariba", "Oracle SCM", "JDA Software"],
+    roi: "800% within 8 months",
+    setupTime: "8-10 weeks",
+    contactInfo: {
+      phone: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      website: "https://ziontechgroup.com/ai-supply-chain-optimizer"
+    }
+  },
+
+  // AI & Logistics Services
+  {
+    id: "ai-logistics-intelligence-pricing",
+    serviceName: "AI Logistics Intelligence Platform",
+    category: "AI & Logistics",
+    description: "Advanced logistics management and optimization platform",
+    basePrice: 15999,
+    monthlyPrice: 1599,
+    annualPrice: 16999,
+    enterprisePrice: 29999,
+    features: [
+      "Route optimization algorithms",
+      "Fleet management and tracking",
+      "Real-time delivery monitoring",
+      "Load optimization",
+      "Fuel efficiency management",
+      "Driver performance analytics",
+      "Integration with TMS/WMS",
+      "Mobile app support"
+    ],
+    benefits: [
+      "Reduces logistics costs by 40%",
+      "Improves delivery efficiency by 70%",
+      "Optimizes route planning",
+      "Enhances fleet utilization",
+      "Reduces fuel consumption"
+    ],
+    marketPrice: "$12,000 - $28,000",
+    competitors: ["Trimble", "Geotab", "Verizon Connect"],
+    roi: "700% within 7 months",
+    setupTime: "7-9 weeks",
+    contactInfo: {
+      phone: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      website: "https://ziontechgroup.com/ai-logistics-platform"
+    }
+  },
+
+  // AI & Manufacturing Services
+  {
+    id: "ai-manufacturing-intelligence-pricing",
+    serviceName: "AI Manufacturing Intelligence Suite",
+    category: "AI & Manufacturing",
+    description: "Comprehensive manufacturing optimization and intelligence platform",
+    basePrice: 22999,
+    monthlyPrice: 2299,
+    annualPrice: 24999,
+    enterprisePrice: 42999,
+    features: [
+      "Production optimization",
+      "Quality control automation",
+      "Predictive maintenance",
+      "Equipment monitoring",
+      "Process analytics",
+      "Supply chain integration",
+      "Real-time dashboards",
+      "Industry 4.0 compliance"
+    ],
+    benefits: [
+      "Increases production efficiency by 55%",
+      "Reduces defects by 70%",
+      "Optimizes manufacturing processes",
+      "Improves equipment uptime",
+      "Enhances quality control"
+    ],
+    marketPrice: "$18,000 - $45,000",
+    competitors: ["Siemens", "GE Digital", "Rockwell Automation"],
+    roi: "900% within 10 months",
+    setupTime: "10-12 weeks",
+    contactInfo: {
+      phone: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      website: "https://ziontechgroup.com/ai-manufacturing-suite"
+    }
+  },
+
+  // AI & Energy Services
+  {
+    id: "ai-energy-intelligence-pricing",
+    serviceName: "AI Energy Intelligence Platform",
+    category: "AI & Energy",
+    description: "Smart energy management and optimization platform",
+    basePrice: 16999,
+    monthlyPrice: 1699,
+    annualPrice: 17999,
+    enterprisePrice: 32999,
+    features: [
+      "Energy consumption optimization",
+      "Renewable energy integration",
+      "Smart grid management",
+      "Demand response optimization",
+      "Energy cost analysis",
+      "Sustainability reporting",
+      "IoT sensor integration",
+      "Real-time monitoring"
+    ],
+    benefits: [
+      "Reduces energy costs by 50%",
+      "Improves sustainability by 70%",
+      "Optimizes energy consumption",
+      "Integrates renewable sources",
+      "Enhances energy efficiency"
+    ],
+    marketPrice: "$12,000 - $30,000",
+    competitors: ["Schneider Electric", "Siemens", "Honeywell"],
+    roi: "700% within 8 months",
+    setupTime: "8-10 weeks",
+    contactInfo: {
+      phone: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      website: "https://ziontechgroup.com/ai-energy-platform"
+    }
+  },
+
+  // AI & Real Estate Services
+  {
+    id: "ai-real-estate-intelligence-pricing",
+    serviceName: "AI Real Estate Intelligence Platform",
+    category: "AI & Real Estate",
+    description: "Intelligent real estate analytics and investment platform",
+    basePrice: 12999,
+    monthlyPrice: 1299,
+    annualPrice: 13999,
+    enterprisePrice: 24999,
+    features: [
+      "Market analysis and forecasting",
+      "Property valuation algorithms",
+      "Investment insights and recommendations",
+      "Risk assessment tools",
+      "Portfolio optimization",
+      "Market trend analysis",
+      "Integration with MLS systems",
+      "Advanced reporting and analytics"
+    ],
+    benefits: [
+      "Provides 98% accurate market predictions",
+      "Increases investment returns by 60%",
+      "Optimizes investment decisions",
+      "Reduces market research time",
+      "Enhances portfolio performance"
+    ],
+    marketPrice: "$10,000 - $25,000",
+    competitors: ["Zillow", "Redfin", "Realtor.com"],
+    roi: "700% within 6 months",
+    setupTime: "6-8 weeks",
+    contactInfo: {
+      phone: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      website: "https://ziontechgroup.com/ai-real-estate-platform"
+    }
+  },
+
+  // AI & Insurance Services
+  {
+    id: "ai-insurance-intelligence-pricing",
+    serviceName: "AI Insurance Intelligence Platform",
+    category: "AI & Insurance",
+    description: "Advanced insurance risk assessment and fraud detection platform",
+    basePrice: 19999,
+    monthlyPrice: 1999,
+    annualPrice: 21999,
+    enterprisePrice: 39999,
+    features: [
+      "AI-powered risk assessment",
+      "Claims processing automation",
+      "Fraud detection algorithms",
+      "Underwriting optimization",
+      "Customer behavior analysis",
+      "Policy management automation",
+      "Integration with core systems",
+      "Advanced analytics and reporting"
+    ],
+    benefits: [
+      "Reduces claims processing time by 80%",
+      "Detects fraud with 90% accuracy",
+      "Improves underwriting decisions",
+      "Reduces operational costs",
+      "Enhances customer experience"
+    ],
+    marketPrice: "$15,000 - $40,000",
+    competitors: ["Guidewire", "Sapiens", "Duck Creek"],
+    roi: "800% within 9 months",
+    setupTime: "9-11 weeks",
+    contactInfo: {
+      phone: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      website: "https://ziontechgroup.com/ai-insurance-platform"
+    }
+  },
+
+  // AI & Media Services
+  {
+    id: "ai-media-intelligence-pricing",
+    serviceName: "AI Media Intelligence Platform",
+    category: "AI & Media",
+    description: "Intelligent media analytics and content optimization platform",
+    basePrice: 9999,
+    monthlyPrice: 999,
+    annualPrice: 10999,
+    enterprisePrice: 19999,
+    features: [
+      "Content analysis and insights",
+      "Audience behavior analysis",
+      "Performance optimization",
+      "Content strategy recommendations",
+      "Multi-platform analytics",
+      "Real-time monitoring",
+      "Integration with media platforms",
+      "Advanced reporting tools"
+    ],
+    benefits: [
+      "Increases engagement by 70%",
+      "Improves content ROI by 60%",
+      "Optimizes content performance",
+      "Enhances audience understanding",
+      "Streamlines content strategy"
+    ],
+    marketPrice: "$7,000 - $18,000",
+    competitors: ["Google Analytics", "Adobe Analytics", "Mixpanel"],
+    roi: "600% within 6 months",
+    setupTime: "5-7 weeks",
+    contactInfo: {
+      phone: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      website: "https://ziontechgroup.com/ai-media-platform"
+    }
+  },
+
+  // AI & Gaming Services
+  {
+    id: "ai-gaming-intelligence-pricing",
+    serviceName: "AI Gaming Intelligence Platform",
+    category: "AI & Gaming",
+    description: "Advanced gaming analytics and optimization platform",
+    basePrice: 14999,
+    monthlyPrice: 1499,
+    annualPrice: 15999,
+    enterprisePrice: 29999,
+    features: [
+      "Player behavior analysis",
+      "Game optimization algorithms",
+      "Monetization strategies",
+      "Performance monitoring",
+      "A/B testing tools",
+      "Real-time analytics",
+      "Integration with game engines",
+      "Advanced reporting and insights"
+    ],
+    benefits: [
+      "Increases player retention by 60%",
+      "Improves revenue by 70%",
+      "Optimizes game performance",
+      "Enhances player experience",
+      "Maximizes monetization"
+    ],
+    marketPrice: "$10,000 - $25,000",
+    competitors: ["Unity Analytics", "GameAnalytics", "Mixpanel"],
+    roi: "800% within 8 months",
+    setupTime: "7-9 weeks",
+    contactInfo: {
+      phone: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      website: "https://ziontechgroup.com/ai-gaming-platform"
+    }
+  },
+
+  // AI & Events Services
+  {
+    id: "ai-event-intelligence-pricing",
+    serviceName: "AI Event Intelligence Platform",
+    category: "AI & Events",
+    description: "Intelligent event management and optimization platform",
+    basePrice: 8999,
+    monthlyPrice: 899,
+    annualPrice: 9999,
+    enterprisePrice: 17999,
+    features: [
+      "Attendee engagement optimization",
+      "Logistics and planning tools",
+      "ROI tracking and analytics",
+      "Event performance monitoring",
+      "Marketing automation",
+      "Integration with event platforms",
+      "Real-time dashboards",
+      "Advanced reporting tools"
+    ],
+    benefits: [
+      "Increases attendee satisfaction by 60%",
+      "Reduces event costs by 40%",
+      "Optimizes event planning",
+      "Enhances attendee experience",
+      "Improves event ROI"
+    ],
+    marketPrice: "$6,000 - $15,000",
+    competitors: ["Eventbrite", "Cvent", "Bizzabo"],
+    roi: "600% within 6 months",
+    setupTime: "5-7 weeks",
+    contactInfo: {
+      phone: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      website: "https://ziontechgroup.com/ai-event-platform"
+    }
+  },
+
+  // AI & Talent Management Services
+  {
+    id: "ai-talent-intelligence-pricing",
+    serviceName: "AI Talent Intelligence Platform",
+    category: "AI & Talent Management",
+    description: "Advanced recruitment and talent management platform",
+    basePrice: 12999,
+    monthlyPrice: 1299,
+    annualPrice: 13999,
+    enterprisePrice: 24999,
+    features: [
+      "AI-powered candidate matching",
+      "Skill assessment automation",
+      "Hiring optimization algorithms",
+      "Recruitment analytics",
+      "Integration with ATS systems",
+      "Candidate experience optimization",
+      "Performance tracking",
+      "Advanced reporting tools"
+    ],
+    benefits: [
+      "Reduces time-to-hire by 70%",
+      "Improves quality of hire by 60%",
+      "Optimizes recruitment processes",
+      "Enhances candidate experience",
+      "Reduces hiring costs"
+    ],
+    marketPrice: "$10,000 - $25,000",
+    competitors: ["Workday", "BambooHR", "Greenhouse"],
+    roi: "700% within 7 months",
+    setupTime: "6-8 weeks",
+    contactInfo: {
+      phone: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      website: "https://ziontechgroup.com/ai-talent-platform"
+    }
+  },
+
+  // AI & Compliance Services
+  {
+    id: "ai-compliance-intelligence-pricing",
+    serviceName: "AI Compliance Intelligence Platform",
+    category: "AI & Compliance",
+    description: "Intelligent compliance monitoring and risk assessment platform",
+    basePrice: 15999,
+    monthlyPrice: 1599,
+    annualPrice: 16999,
+    enterprisePrice: 29999,
+    features: [
+      "Regulatory monitoring automation",
+      "Risk assessment algorithms",
+      "Automated reporting tools",
+      "Compliance tracking",
+      "Integration with business systems",
+      "Real-time monitoring",
+      "Advanced analytics",
+      "Audit trail management"
+    ],
+    benefits: [
+      "Reduces compliance costs by 60%",
+      "Improves accuracy by 90%",
+      "Automates compliance processes",
+      "Reduces regulatory risks",
+      "Enhances audit readiness"
+    ],
+    marketPrice: "$12,000 - $30,000",
+    competitors: ["Thomson Reuters", "Wolters Kluwer", "LexisNexis"],
+    roi: "800% within 8 months",
+    setupTime: "7-9 weeks",
+    contactInfo: {
+      phone: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      website: "https://ziontechgroup.com/ai-compliance-platform"
+    }
+  },
+
+  // AI & Innovation Management Services
+  {
+    id: "ai-innovation-intelligence-pricing",
+    serviceName: "AI Innovation Intelligence Platform",
+    category: "AI & Innovation Management",
+    description: "Advanced innovation management and collaboration platform",
+    basePrice: 17999,
+    monthlyPrice: 1799,
+    annualPrice: 18999,
+    enterprisePrice: 33999,
+    features: [
+      "AI-powered idea generation",
+      "Collaboration and workflow tools",
+      "Innovation tracking and metrics",
+      "R&D management automation",
+      "Patent analysis and insights",
+      "Integration with project management",
+      "Advanced analytics and reporting",
+      "Innovation portfolio management"
+    ],
+    benefits: [
+      "Increases innovation output by 80%",
+      "Accelerates time-to-market by 60%",
+      "Enhances collaboration",
+      "Optimizes R&D processes",
+      "Improves innovation ROI"
+    ],
+    marketPrice: "$14,000 - $35,000",
+    competitors: ["IdeaScale", "Brightidea", "Spigit"],
+    roi: "900% within 8 months",
+    setupTime: "8-10 weeks",
+    contactInfo: {
+      phone: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      website: "https://ziontechgroup.com/ai-innovation-platform"
+    }
   }
 ];
 

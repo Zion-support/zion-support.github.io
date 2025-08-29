@@ -1,203 +1,346 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { FileText, Shield, Scale, Lock, Users, Eye, CheckCircle } from 'lucide-react';
 import { SEO } from '../components/SEO';
+import { 
+  FileText, 
+  Shield, 
+  Lock, 
+  Eye, 
+  Scale, 
+  CheckCircle,
+  ArrowRight,
+  BookOpen,
+  UserCheck,
+  Globe,
+  Database,
+  Server,
+  Mail,
+  Phone
+} from 'lucide-react';
 
-export default function Legal() {
+const Legal: React.FC = () => {
   const legalDocuments = [
+    {
+      title: 'Terms of Service',
+      description: 'Our terms and conditions for using Zion Tech Group services',
+      href: '/terms',
+      icon: FileText,
+      category: 'Service Terms'
+    },
     {
       title: 'Privacy Policy',
       description: 'How we collect, use, and protect your personal information',
       href: '/privacy',
-      icon: Eye
-    },
-    {
-      title: 'Terms of Service',
-      description: 'Terms and conditions for using our services',
-      href: '/terms',
-      icon: FileText
+      icon: Shield,
+      category: 'Data Protection'
     },
     {
       title: 'Cookie Policy',
-      description: 'Information about cookies and tracking technologies',
+      description: 'Information about cookies and how we use them',
       href: '/cookies',
-      icon: Lock
+      icon: Lock,
+      category: 'Data Protection'
     },
     {
       title: 'Data Processing Agreement',
-      description: 'GDPR compliance and data processing terms',
+      description: 'Terms for processing personal data on behalf of customers',
       href: '/data-processing-agreement',
-      icon: Shield
+      icon: Database,
+      category: 'Data Protection'
+    },
+    {
+      title: 'Service Level Agreement',
+      description: 'Our commitment to service quality and availability',
+      href: '/sla',
+      icon: CheckCircle,
+      category: 'Service Terms'
+    },
+    {
+      title: 'Acceptable Use Policy',
+      description: 'Guidelines for acceptable use of our services',
+      href: '/acceptable-use',
+      icon: UserCheck,
+      category: 'Service Terms'
     }
   ];
 
-  const complianceFeatures = [
+  const legalCategories = [
     {
-      title: 'GDPR Compliance',
-      description: 'Full compliance with European data protection regulations',
-      icon: CheckCircle,
-      color: 'text-green-400'
+      name: 'Service Terms',
+      description: 'Terms and conditions for using our services',
+      icon: FileText,
+      color: 'from-blue-500 to-cyan-500'
     },
     {
-      title: 'CCPA Compliance',
-      description: 'California Consumer Privacy Act compliance',
-      icon: CheckCircle,
-      color: 'text-blue-400'
+      name: 'Data Protection',
+      description: 'Privacy and data handling policies',
+      icon: Shield,
+      color: 'from-green-500 to-emerald-500'
     },
     {
-      title: 'SOC 2 Type II',
-      description: 'Security and availability controls certification',
-      icon: CheckCircle,
-      color: 'text-purple-400'
-    },
-    {
-      title: 'ISO 27001',
-      description: 'Information security management certification',
-      icon: CheckCircle,
-      color: 'text-orange-400'
+      name: 'Compliance',
+      description: 'Regulatory and industry compliance documents',
+      icon: Scale,
+      color: 'from-purple-500 to-pink-500'
     }
   ];
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO 
-        title="Legal & Compliance - Zion Tech Group"
-        description="Legal documents, compliance information, and data protection policies for Zion Tech Group services."
+        title="Legal & Privacy - Zion Tech Group"
+        description="Access all legal documents, privacy policies, and terms of service for Zion Tech Group. Stay informed about your rights and our commitments."
       />
       
       {/* Hero Section */}
-      <div className="relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 to-purple-600/20" />
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
+      <section className="relative overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/10 via-blue-500/10 to-purple-500/10"></div>
+        <div className="container-responsive py-20 relative z-10">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-            className="text-center"
+            className="text-center max-w-4xl mx-auto"
           >
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              Legal & Compliance
+            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
+              Legal & Privacy
             </h1>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Transparent legal information and compliance standards. 
-              We're committed to protecting your rights and maintaining the highest standards of data protection.
+            <p className="text-xl text-gray-300 mb-8 leading-relaxed">
+              Access all legal documents, privacy policies, and terms of service. 
+              We believe in transparency and protecting your rights.
             </p>
-          </motion.div>
-        </div>
-      </div>
-
-      {/* Main Content */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-          {/* Legal Documents */}
-          <motion.div
-            initial={{ opacity: 0, x: -20 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-          >
-            <h2 className="text-3xl font-bold text-white mb-8">Legal Documents</h2>
-            <div className="space-y-6">
-              {legalDocuments.map((document, index) => (
-                <motion.div
-                  key={index}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.3, delay: 0.1 * index }}
-                  className="bg-white/5 backdrop-blur-lg rounded-2xl p-6 border border-white/10 hover:border-white/20 transition-all duration-200"
-                >
-                  <div className="flex items-start gap-4">
-                    <div className="w-12 h-12 bg-blue-600/20 rounded-xl flex items-center justify-center flex-shrink-0">
-                      <document.icon className="w-6 h-6 text-blue-400" />
-                    </div>
-                    <div className="flex-1">
-                      <h3 className="text-xl font-semibold text-white mb-2">{document.title}</h3>
-                      <p className="text-gray-300 mb-4">{document.description}</p>
-                      <a
-                        href={document.href}
-                        className="inline-flex items-center text-blue-400 hover:text-blue-300 transition-colors font-medium"
-                      >
-                        Read Document
-                        <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                        </svg>
-                      </a>
-                    </div>
-                  </div>
-                </motion.div>
-              ))}
-            </div>
-          </motion.div>
-
-          {/* Compliance Information */}
-          <motion.div
-            initial={{ opacity: 0, x: 20 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.6, delay: 0.4 }}
-          >
-            <h2 className="text-3xl font-bold text-white mb-8">Compliance & Certifications</h2>
-            <div className="space-y-6">
-              {complianceFeatures.map((feature, index) => (
-                <motion.div
-                  key={index}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.3, delay: 0.1 * index }}
-                  className="bg-white/5 backdrop-blur-lg rounded-2xl p-6 border border-white/10"
-                >
-                  <div className="flex items-start gap-4">
-                    <div className="w-10 h-10 bg-white/10 rounded-lg flex items-center justify-center flex-shrink-0">
-                      <feature.icon className={`w-5 h-5 ${feature.color}`} />
-                    </div>
-                    <div>
-                      <h3 className="text-lg font-semibold text-white mb-2">{feature.title}</h3>
-                      <p className="text-gray-300">{feature.description}</p>
-                    </div>
-                  </div>
-                </motion.div>
-              ))}
-            </div>
-
-            <div className="mt-8 bg-gradient-to-r from-blue-600/20 to-purple-600/20 rounded-2xl p-6 border border-blue-500/30">
-              <h3 className="text-xl font-semibold text-white mb-4">Data Protection Commitment</h3>
-              <p className="text-gray-300 mb-4">
-                We prioritize the security and privacy of your data. Our comprehensive compliance 
-                framework ensures we meet or exceed industry standards for data protection.
-              </p>
-              <div className="flex items-center gap-2 text-blue-400">
+            <div className="flex flex-wrap justify-center gap-4">
+              <div className="flex items-center gap-2 text-cyan-400">
                 <Shield className="w-5 h-5" />
-                <span className="font-medium">Enterprise-grade security</span>
+                <span>GDPR Compliant</span>
+              </div>
+              <div className="flex items-center gap-2 text-cyan-400">
+                <CheckCircle className="w-5 h-5" />
+                <span>Regular Updates</span>
+              </div>
+              <div className="flex items-center gap-2 text-cyan-400">
+                <Eye className="w-5 h-5" />
+                <span>Transparent</span>
               </div>
             </div>
           </motion.div>
         </div>
-      </div>
+      </section>
 
-      {/* Contact Legal Team */}
-      <div className="bg-white/5 border-t border-white/10">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-          <div className="text-center">
-            <h2 className="text-3xl font-bold text-white mb-4">Questions About Legal Matters?</h2>
-            <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
-              Our legal team is available to answer your questions about compliance, 
-              data protection, or any legal aspects of our services.
+      {/* Legal Categories */}
+      <section className="py-16">
+        <div className="container-responsive">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+            className="text-center mb-12"
+          >
+            <h2 className="text-3xl font-bold text-white mb-4">
+              Legal Document Categories
+            </h2>
+            <p className="text-gray-300 max-w-2xl mx-auto">
+              Our legal documents are organized into clear categories to help you find what you need quickly.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a
-                href="/contact"
-                className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-semibold py-3 px-8 rounded-lg transition-all duration-200 transform hover:scale-105"
+          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+            {legalCategories.map((category, index) => (
+              <motion.div
+                key={category.name}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                viewport={{ once: true }}
+                className="bg-gradient-to-br from-slate-800 to-slate-700 rounded-2xl p-8 border border-slate-600/50 hover:border-slate-500/50 transition-all duration-300 hover:scale-105"
               >
-                Contact Legal Team
-              </a>
-              <a
-                href="mailto:legal@ziontechgroup.com"
-                className="bg-white/10 hover:bg-white/20 text-white font-semibold py-3 px-8 rounded-lg transition-all duration-200 border border-white/20"
-              >
-                legal@ziontechgroup.com
-              </a>
-            </div>
+                <div className={`w-16 h-16 bg-gradient-to-br ${category.color} rounded-2xl flex items-center justify-center mb-6 mx-auto`}>
+                  <category.icon className="w-8 h-8 text-white" />
+                </div>
+                <h3 className="text-xl font-semibold text-white mb-3">{category.name}</h3>
+                <p className="text-gray-300">{category.description}</p>
+              </motion.div>
+            ))}
           </div>
         </div>
-      </div>
+      </section>
+
+      {/* Legal Documents */}
+      <section className="py-16">
+        <div className="container-responsive">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+            className="text-center mb-12"
+          >
+            <h2 className="text-3xl font-bold text-white mb-4">
+              All Legal Documents
+            </h2>
+            <p className="text-gray-300 max-w-2xl mx-auto">
+              Browse and download all our legal documents, policies, and agreements.
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {legalDocuments.map((document, index) => (
+              <motion.div
+                key={document.title}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                viewport={{ once: true }}
+                className="bg-gradient-to-br from-slate-800 to-slate-700 rounded-xl p-6 border border-slate-600/50 hover:border-cyan-500/50 transition-all duration-300 hover:scale-105 group"
+              >
+                <div className="flex items-start justify-between mb-4">
+                  <div className="w-12 h-12 bg-gradient-to-br from-cyan-500 to-blue-500 rounded-xl flex items-center justify-center">
+                    <document.icon className="w-6 h-6 text-white" />
+                  </div>
+                  <span className="text-xs text-cyan-400 bg-cyan-400/10 px-2 py-1 rounded-full">
+                    {document.category}
+                  </span>
+                </div>
+                
+                <h3 className="text-lg font-semibold text-white mb-2 group-hover:text-cyan-400 transition-colors">
+                  {document.title}
+                </h3>
+                <p className="text-gray-300 text-sm mb-4 leading-relaxed">
+                  {document.description}
+                </p>
+                
+                <Link
+                  to={document.href}
+                  className="inline-flex items-center gap-2 text-cyan-400 hover:text-cyan-300 transition-colors group/link"
+                >
+                  <span className="text-sm font-medium">View Document</span>
+                  <ArrowRight className="w-4 h-4 group-hover/link:translate-x-1 transition-transform" />
+                </Link>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Additional Information */}
+      <section className="py-16 bg-gradient-to-r from-slate-800/50 to-slate-700/50">
+        <div className="container-responsive">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <motion.div
+              initial={{ opacity: 0, x: -20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+            >
+              <h2 className="text-3xl font-bold text-white mb-6">
+                Your Rights & Our Commitments
+              </h2>
+              <div className="space-y-4">
+                <div className="flex items-start gap-3">
+                  <CheckCircle className="w-5 h-5 text-cyan-400 mt-1 flex-shrink-0" />
+                  <div>
+                    <h4 className="text-white font-medium mb-1">Right to Access</h4>
+                    <p className="text-gray-300 text-sm">Request access to your personal data at any time</p>
+                  </div>
+                </div>
+                <div className="flex items-start gap-3">
+                  <CheckCircle className="w-5 h-5 text-cyan-400 mt-1 flex-shrink-0" />
+                  <div>
+                    <h4 className="text-white font-medium mb-1">Right to Rectification</h4>
+                    <p className="text-gray-300 text-sm">Correct inaccurate or incomplete personal data</p>
+                  </div>
+                </div>
+                <div className="flex items-start gap-3">
+                  <CheckCircle className="w-5 h-5 text-cyan-400 mt-1 flex-shrink-0" />
+                  <div>
+                    <h4 className="text-white font-medium mb-1">Right to Erasure</h4>
+                    <p className="text-gray-300 text-sm">Request deletion of your personal data</p>
+                  </div>
+                </div>
+                <div className="flex items-start gap-3">
+                  <CheckCircle className="w-5 h-5 text-cyan-400 mt-1 flex-shrink-0" />
+                  <div>
+                    <h4 className="text-white font-medium mb-1">Data Portability</h4>
+                    <p className="text-gray-300 text-sm">Receive your data in a structured format</p>
+                  </div>
+                </div>
+              </div>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, x: 20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="bg-gradient-to-br from-slate-700 to-slate-600 rounded-2xl p-8 border border-slate-500/50"
+            >
+              <h3 className="text-xl font-semibold text-white mb-4">Need Legal Assistance?</h3>
+              <p className="text-gray-300 mb-6">
+                If you have questions about our legal documents or need clarification on any terms, 
+                our legal team is here to help.
+              </p>
+              <div className="space-y-3">
+                <div className="flex items-center gap-3 text-gray-300">
+                  <Mail className="w-4 h-4 text-cyan-400" />
+                  <span>legal@ziontechgroup.com</span>
+                </div>
+                <div className="flex items-center gap-3 text-gray-300">
+                  <Phone className="w-4 h-4 text-cyan-400" />
+                  <span>+1 302 464 0950</span>
+                </div>
+              </div>
+              <Link
+                to="/contact"
+                className="inline-flex items-center gap-2 mt-6 text-cyan-400 hover:text-cyan-300 transition-colors"
+              >
+                <span>Contact Legal Team</span>
+                <ArrowRight className="w-4 h-4" />
+              </Link>
+            </motion.div>
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="py-16">
+        <div className="container-responsive text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+            className="max-w-3xl mx-auto"
+          >
+            <h2 className="text-3xl font-bold text-white mb-4">
+              Stay Informed About Legal Updates
+            </h2>
+            <p className="text-gray-300 mb-8">
+              We regularly update our legal documents to ensure compliance and transparency. 
+              Subscribe to receive notifications about important changes.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link
+                to="/contact"
+                className="inline-flex items-center gap-2 bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 text-white px-8 py-3 rounded-xl font-medium transition-all duration-300 hover:scale-105"
+              >
+                <span>Contact Legal Team</span>
+                <ArrowRight className="w-4 h-4" />
+              </Link>
+              <Link
+                to="/privacy"
+                className="inline-flex items-center gap-2 border border-cyan-500 text-cyan-400 hover:bg-cyan-500 hover:text-white px-8 py-3 rounded-xl font-medium transition-all duration-300"
+              >
+                <Shield className="w-4 h-4" />
+                <span>Privacy Policy</span>
+              </Link>
+            </div>
+          </motion.div>
+        </div>
+      </section>
     </div>
   );
-}
+};
+
+export default Legal;
