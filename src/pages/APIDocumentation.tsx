@@ -97,38 +97,18 @@ export default function APIDocumentation() {
       category: 'AI Services',
       endpoints: [
         {
-          path: '/ai/analyze',
-          method: 'POST',
-          title: 'AI Text Analysis',
-          description: 'Analyze text using AI for sentiment, entities, and key phrases',
-          parameters: [
-            { name: 'text', type: 'string', required: true, description: 'Text to analyze' },
-            { name: 'analysis_type', type: 'string', required: false, description: 'Type of analysis (sentiment, entities, keywords)', default: 'all' },
-            { name: 'language', type: 'string', required: false, description: 'Text language', default: 'en' }
-          ],
-          responses: [
-            { code: 200, description: 'Analysis completed', example: '{ "sentiment": "positive", "entities": [...], "keywords": [...] }' },
-            { code: 400, description: 'Invalid input', example: '{ "error": "Text is required" }' }
-          ],
-          examples: {
-            curl: 'curl -X POST /ai/analyze -H "Content-Type: application/json" -d \'{"text":"This is amazing!","analysis_type":"sentiment"}\'',
-            python: 'requests.post("/ai/analyze", json={"text": "This is amazing!", "analysis_type": "sentiment"})',
-            javascript: 'fetch("/ai/analyze", { method: "POST", body: JSON.stringify({text: "This is amazing!", analysis_type: "sentiment"}) })'
-          }
-        },
-        {
           path: '/ai/generate',
           method: 'POST',
           title: 'AI Content Generation',
           description: 'Generate content using AI models',
           parameters: [
-            { name: 'prompt', type: 'string', required: true, description: 'Generation prompt' },
+            { name: 'prompt', type: 'string', required: true, description: 'Input prompt for generation' },
             { name: 'model', type: 'string', required: false, description: 'AI model to use', default: 'gpt-4' },
             { name: 'max_tokens', type: 'integer', required: false, description: 'Maximum tokens to generate', default: 1000 }
           ],
           responses: [
-            { code: 200, description: 'Content generated', example: '{ "content": "Generated text...", "usage": {...} }' },
-            { code: 400, description: 'Invalid prompt', example: '{ "error": "Prompt is required" }' }
+            { code: 200, description: 'Content generated successfully', example: '{ "content": "Generated text...", "usage": {...} }' },
+            { code: 400, description: 'Invalid request', example: '{ "error": "Invalid prompt" }' }
           ],
           examples: {
             curl: 'curl -X POST /ai/generate -H "Content-Type: application/json" -d \'{"prompt":"Write a blog post about AI"}\'',
@@ -145,382 +125,388 @@ export default function APIDocumentation() {
           path: '/analytics/query',
           method: 'POST',
           title: 'Data Query',
-          description: 'Query analytics data with custom filters and aggregations',
+          description: 'Query analytics data with SQL-like syntax',
           parameters: [
-            { name: 'query', type: 'object', required: true, description: 'Query object with filters and aggregations' },
-            { name: 'time_range', type: 'string', required: false, description: 'Time range for data', default: 'last_30_days' }
+            { name: 'query', type: 'string', required: true, description: 'SQL query string' },
+            { name: 'format', type: 'string', required: false, description: 'Output format', default: 'json' }
           ],
           responses: [
-            { code: 200, description: 'Query results', example: '{ "data": [...], "metadata": {...} }' },
-            { code: 400, description: 'Invalid query', example: '{ "error": "Invalid query format" }' }
+            { code: 200, description: 'Query executed successfully', example: '{ "data": [...], "columns": [...] }' },
+            { code: 400, description: 'Invalid query', example: '{ "error": "Syntax error" }' }
           ],
           examples: {
-            curl: 'curl -X POST /analytics/query -H "Content-Type: application/json" -d \'{"query":{"filters":{"event_type":"page_view"},"aggregations":{"count":"total"}}}\'',
-            python: 'requests.post("/analytics/query", json={"query": {"filters": {"event_type": "page_view"}, "aggregations": {"count": "total"}}})',
-            javascript: 'fetch("/analytics/query", { method: "POST", body: JSON.stringify({query: {filters: {event_type: "page_view"}, aggregations: {count: "total"}}}) })'
-          }
-        }
-      ]
-    },
-    {
-      category: 'Cloud Services',
-      endpoints: [
-        {
-          path: '/cloud/deploy',
-          method: 'POST',
-          title: 'Deploy Application',
-          description: 'Deploy application to cloud infrastructure',
-          parameters: [
-            { name: 'app_name', type: 'string', required: true, description: 'Application name' },
-            { name: 'config', type: 'object', required: true, description: 'Deployment configuration' },
-            { name: 'environment', type: 'string', required: false, description: 'Deployment environment', default: 'production' }
-          ],
-          responses: [
-            { code: 200, description: 'Deployment started', example: '{ "deployment_id": "deploy_123", "status": "deploying" }' },
-            { code: 400, description: 'Invalid configuration', example: '{ "error": "Invalid app configuration" }' }
-          ],
-          examples: {
-            curl: 'curl -X POST /cloud/deploy -H "Content-Type: application/json" -d \'{"app_name":"my-app","config":{"image":"nginx:latest"}}\'',
-            python: 'requests.post("/cloud/deploy", json={"app_name": "my-app", "config": {"image": "nginx:latest"}})',
-            javascript: 'fetch("/cloud/deploy", { method: "POST", body: JSON.stringify({app_name: "my-app", config: {image: "nginx:latest"}}) })'
+            curl: 'curl -X POST /analytics/query -H "Content-Type: application/json" -d \'{"query":"SELECT * FROM users LIMIT 10"}\'',
+            python: 'requests.post("/analytics/query", json={"query": "SELECT * FROM users LIMIT 10"})',
+            javascript: 'fetch("/analytics/query", { method: "POST", body: JSON.stringify({query: "SELECT * FROM users LIMIT 10"}) })'
           }
         }
       ]
     }
   ];
 
-  const filteredEndpoints = apiEndpoints.map(category => ({
-    ...category,
-    endpoints: category.endpoints.filter(endpoint => {
-      const matchesSearch = endpoint.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
-                           endpoint.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
-                           endpoint.path.toLowerCase().includes(searchQuery.toLowerCase());
-      const matchesCategory = selectedCategory === 'All' || category.category === selectedCategory;
-      const matchesMethod = selectedMethod === 'All' || endpoint.method === selectedMethod;
-      return matchesSearch && matchesCategory && matchesMethod;
-    })
-  })).filter(category => category.endpoints.length > 0);
+  const sdks = [
+    {
+      name: 'JavaScript SDK',
+      description: 'Official JavaScript/Node.js client library',
+      version: 'v2.1.0',
+      downloads: '125K+',
+      language: 'JavaScript',
+      features: ['TypeScript support', 'Promise-based', 'Browser & Node.js']
+    },
+    {
+      name: 'Python SDK',
+      description: 'Python client library with async support',
+      version: 'v1.8.2',
+      downloads: '89K+',
+      language: 'Python',
+      features: ['Async/await', 'Type hints', 'Pandas integration']
+    },
+    {
+      name: 'Java SDK',
+      description: 'Enterprise Java client library',
+      version: 'v1.5.1',
+      downloads: '67K+',
+      language: 'Java',
+      features: ['Spring integration', 'Reactive streams', 'Enterprise features']
+    }
+  ];
 
   const toggleEndpoint = (endpointPath: string) => {
-    const newExpanded = new Set(expandedEndpoints);
-    if (newExpanded.has(endpointPath)) {
-      newExpanded.delete(endpointPath);
-    } else {
-      newExpanded.add(endpointPath);
-    }
-    setExpandedEndpoints(newExpanded);
+    setExpandedEndpoints(prev => {
+      const newSet = new Set(prev);
+      if (newSet.has(endpointPath)) {
+        newSet.delete(endpointPath);
+      } else {
+        newSet.add(endpointPath);
+      }
+      return newSet;
+    });
   };
 
-  const copyToClipboard = (text: string) => {
-    navigator.clipboard.writeText(text);
-    // Show success message
-  };
-
-  const getMethodColor = (method: string) => {
-    switch (method) {
-      case 'GET': return 'bg-green-500';
-      case 'POST': return 'bg-blue-500';
-      case 'PUT': return 'bg-yellow-500';
-      case 'DELETE': return 'bg-red-500';
-      case 'PATCH': return 'bg-purple-500';
-      default: return 'bg-gray-500';
-    }
-  };
+  const filteredEndpoints = apiEndpoints.flatMap(category => 
+    category.endpoints.filter(endpoint => {
+      const matchesSearch = searchQuery === '' || 
+        endpoint.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
+        endpoint.description.toLowerCase().includes(searchQuery.toLowerCase());
+      
+      const matchesCategory = selectedCategory === 'All' || category.category === selectedCategory;
+      const matchesMethod = selectedMethod === 'All' || endpoint.method === selectedMethod;
+      
+      return matchesSearch && matchesCategory && matchesMethod;
+    })
+  );
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO 
         title="API Documentation - Zion Tech Group"
-        description="Complete API reference, endpoints, authentication, and code examples for Zion Tech Group services. Build powerful integrations with our comprehensive API documentation."
+        description="Complete API reference, examples, and SDK documentation for Zion Tech Group services"
       />
       
       {/* Hero Section */}
       <section className="relative py-20 overflow-hidden">
         <div className="container-responsive">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
+            transition={{ duration: 0.8 }}
             className="text-center max-w-4xl mx-auto"
           >
+            <div className="inline-flex items-center gap-2 px-4 py-2 bg-cyan-500/20 border border-cyan-400/30 rounded-full text-cyan-400 text-sm font-medium mb-6">
+              <Code className="w-4 h-4" />
+              Developer APIs
+            </div>
+            
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
-              API Documentation
+              API Documentation &
+              <span className="block bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent">
+                Integration Guides
+              </span>
             </h1>
-            <p className="text-xl text-gray-300 mb-8 leading-relaxed">
-              Comprehensive API reference with endpoints, authentication, and code examples. 
-              Build powerful integrations with Zion Tech Group services.
+            
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+              Build powerful applications with our comprehensive API suite. 
+              From AI services to cloud infrastructure, everything you need to integrate Zion Tech Group solutions.
             </p>
             
-            {/* Search and Filters */}
-            <div className="flex flex-col md:flex-row gap-4 max-w-3xl mx-auto mb-8">
-              <div className="relative flex-1">
-                <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
-                <input
-                  type="text"
-                  placeholder="Search APIs, endpoints, or methods..."
-                  value={searchQuery}
-                  onChange={(e) => setSearchQuery(e.target.value)}
-                  className="w-full pl-10 pr-4 py-3 bg-slate-700/50 border border-slate-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
-                />
+            <div className="flex flex-wrap justify-center gap-4">
+              <div className="flex items-center gap-2 text-gray-400">
+                <Code className="w-5 h-5" />
+                <span>{apiEndpoints.flatMap(cat => cat.endpoints).length} API Endpoints</span>
               </div>
+              <div className="flex items-center gap-2 text-gray-400">
+                <Download className="w-5 h-5" />
+                <span>Multiple SDKs</span>
+              </div>
+              <div className="flex items-center gap-2 text-gray-400">
+                <Shield className="w-5 h-5" />
+                <span>Secure & Reliable</span>
+              </div>
+            </div>
+          </motion.div>
+        </div>
+        
+        {/* Background Elements */}
+        <div className="absolute inset-0 overflow-hidden pointer-events-none">
+          <div className="absolute top-20 left-10 w-72 h-72 bg-cyan-500/10 rounded-full blur-3xl"></div>
+          <div className="absolute bottom-20 right-10 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl"></div>
+        </div>
+      </section>
+
+      {/* Search and Filter Section */}
+      <section className="py-12 border-b border-slate-700/50">
+        <div className="container-responsive">
+          <div className="flex flex-col lg:flex-row gap-6 items-center justify-between">
+            {/* Search */}
+            <div className="relative flex-1 max-w-md">
+              <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400" />
+              <input
+                type="text"
+                placeholder="Search APIs..."
+                value={searchQuery}
+                onChange={(e) => setSearchQuery(e.target.value)}
+                className="w-full pl-10 pr-4 py-3 bg-slate-700/50 border border-slate-600/50 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20 transition-all duration-200"
+              />
+            </div>
+
+            {/* Filters */}
+            <div className="flex flex-wrap gap-3">
               <select
                 value={selectedCategory}
                 onChange={(e) => setSelectedCategory(e.target.value)}
-                className="px-4 py-3 bg-slate-700/50 border border-slate-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
+                className="px-4 py-3 bg-slate-700/50 border border-slate-600/50 rounded-lg text-white focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20 transition-all duration-200"
               >
                 {categories.map(category => (
                   <option key={category} value={category}>{category}</option>
                 ))}
               </select>
+              
               <select
                 value={selectedMethod}
                 onChange={(e) => setSelectedMethod(e.target.value)}
-                className="px-4 py-3 bg-slate-700/50 border border-slate-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
+                className="px-4 py-3 bg-slate-700/50 border border-slate-600/50 rounded-lg text-white focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20 transition-all duration-200"
               >
                 {methods.map(method => (
                   <option key={method} value={method}>{method}</option>
                 ))}
               </select>
             </div>
-
-            {/* Quick Stats */}
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-2xl mx-auto">
-              <div className="text-center">
-                <div className="text-2xl font-bold text-cyan-400">50+</div>
-                <div className="text-sm text-gray-400">Endpoints</div>
-              </div>
-              <div className="text-center">
-                <div className="text-2xl font-bold text-blue-400">10+</div>
-                <div className="text-sm text-gray-400">Categories</div>
-              </div>
-              <div className="text-center">
-                <div className="text-2xl font-bold text-purple-400">100+</div>
-                <div className="text-sm text-gray-400">Code Examples</div>
-              </div>
-              <div className="text-center">
-                <div className="text-2xl font-bold text-green-400">24/7</div>
-                <div className="text-sm text-gray-400">Support</div>
-              </div>
-            </div>
-          </motion.div>
+          </div>
         </div>
       </section>
 
       {/* API Endpoints */}
       <section className="py-16">
         <div className="container-responsive">
-          {filteredEndpoints.map((category, categoryIndex) => (
-            <motion.div
-              key={category.category}
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: categoryIndex * 0.1 }}
-              className="mb-16"
-            >
-              {/* Category Header */}
-              <div className="flex items-center gap-4 mb-8">
-                <div className="p-3 rounded-xl bg-gradient-to-br from-cyan-500 to-blue-500">
-                  <Code className="w-6 h-6 text-white" />
-                </div>
-                <div>
-                  <h2 className="text-3xl font-bold text-white">{category.category}</h2>
-                  <p className="text-gray-300 mt-2">API endpoints for {category.category.toLowerCase()} services</p>
-                </div>
-              </div>
-
-              {/* Endpoints */}
-              <div className="space-y-6">
-                {category.endpoints.map((endpoint, endpointIndex) => (
-                  <motion.div
-                    key={endpoint.path}
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.6, delay: (categoryIndex * 0.1) + (endpointIndex * 0.05) }}
-                    className="bg-slate-800/50 backdrop-blur-xl rounded-xl border border-slate-700/50 overflow-hidden"
-                  >
-                    {/* Endpoint Header */}
-                    <div className="p-6">
-                      <div className="flex items-start justify-between mb-4">
-                        <div className="flex items-center gap-4">
-                          <span className={`px-3 py-1 rounded-lg text-sm font-medium text-white ${getMethodColor(endpoint.method)}`}>
-                            {endpoint.method}
-                          </span>
-                          <code className="text-lg font-mono text-cyan-400 bg-slate-700/50 px-3 py-1 rounded">
-                            {endpoint.path}
-                          </code>
-                        </div>
-                        <button
-                          onClick={() => toggleEndpoint(endpoint.path)}
-                          className="p-2 text-gray-400 hover:text-cyan-400 transition-colors"
-                        >
-                          {expandedEndpoints.has(endpoint.path) ? (
-                            <ChevronDown className="w-5 h-5" />
-                          ) : (
-                            <ChevronRight className="w-5 h-5" />
-                          )}
-                        </button>
-                      </div>
-
-                      <h3 className="text-xl font-semibold text-white mb-2">{endpoint.title}</h3>
-                      <p className="text-gray-300">{endpoint.description}</p>
-                    </div>
-
-                    {/* Expanded Content */}
-                    {expandedEndpoints.has(endpoint.path) && (
-                      <div className="border-t border-slate-700/50">
-                        <div className="p-6 space-y-6">
-                          {/* Parameters */}
-                          <div>
-                            <h4 className="text-lg font-semibold text-white mb-3 flex items-center gap-2">
-                              <Key className="w-5 h-5 text-cyan-400" />
-                              Parameters
-                            </h4>
-                            <div className="bg-slate-700/30 rounded-lg overflow-hidden">
-                              <table className="w-full">
-                                <thead className="bg-slate-700/50">
-                                  <tr>
-                                    <th className="text-left p-3 text-sm font-medium text-gray-300">Name</th>
-                                    <th className="text-left p-3 text-sm font-medium text-gray-300">Type</th>
-                                    <th className="text-left p-3 text-sm font-medium text-gray-300">Required</th>
-                                    <th className="text-left p-3 text-sm font-medium text-gray-300">Description</th>
-                                    <th className="text-left p-3 text-sm font-medium text-gray-300">Default</th>
-                                  </tr>
-                                </thead>
-                                <tbody>
-                                  {endpoint.parameters.map((param, idx) => (
-                                    <tr key={idx} className="border-t border-slate-600/30">
-                                      <td className="p-3 text-sm text-white font-mono">{param.name}</td>
-                                      <td className="p-3 text-sm text-cyan-400">{param.type}</td>
-                                      <td className="p-3 text-sm">
-                                        {param.required ? (
-                                          <span className="text-red-400">Yes</span>
-                                        ) : (
-                                          <span className="text-green-400">No</span>
-                                        )}
-                                      </td>
-                                      <td className="p-3 text-sm text-gray-300">{param.description}</td>
-                                      <td className="p-3 text-sm text-gray-400">
-                                        {param.default || '-'}
-                                      </td>
-                                    </tr>
-                                  ))}
-                                </tbody>
-                              </table>
-                            </div>
-                          </div>
-
-                          {/* Responses */}
-                          <div>
-                            <h4 className="text-lg font-semibold text-white mb-3 flex items-center gap-2">
-                              <CheckCircle className="w-5 h-5 text-green-400" />
-                              Responses
-                            </h4>
-                            <div className="space-y-3">
-                              {endpoint.responses.map((response, idx) => (
-                                <div key={idx} className="bg-slate-700/30 rounded-lg p-4">
-                                  <div className="flex items-center gap-3 mb-2">
-                                    <span className={`px-2 py-1 rounded text-xs font-medium ${
-                                      response.code >= 200 && response.code < 300 ? 'bg-green-500/20 text-green-300' :
-                                      response.code >= 400 && response.code < 500 ? 'bg-red-500/20 text-red-300' :
-                                      'bg-yellow-500/20 text-yellow-300'
-                                    }`}>
-                                      {response.code}
-                                    </span>
-                                    <span className="text-sm text-gray-300">{response.description}</span>
-                                  </div>
-                                  <pre className="text-sm text-gray-400 bg-slate-800/50 p-3 rounded overflow-x-auto">
-                                    <code>{response.example}</code>
-                                  </pre>
-                                </div>
-                              ))}
-                            </div>
-                          </div>
-
-                          {/* Code Examples */}
-                          <div>
-                            <h4 className="text-lg font-semibold text-white mb-3 flex items-center gap-2">
-                              <Terminal className="w-5 h-5 text-purple-400" />
-                              Code Examples
-                            </h4>
-                            <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-                              {Object.entries(endpoint.examples).map(([language, code]) => (
-                                <div key={language} className="bg-slate-700/30 rounded-lg p-4">
-                                  <div className="flex items-center justify-between mb-3">
-                                    <span className="text-sm font-medium text-gray-300 capitalize">{language}</span>
-                                    <button
-                                      onClick={() => copyToClipboard(code)}
-                                      className="p-1 text-gray-400 hover:text-cyan-400 transition-colors"
-                                      title="Copy code"
-                                    >
-                                      <Copy className="w-4 h-4" />
-                                    </button>
-                                  </div>
-                                  <pre className="text-xs text-gray-400 bg-slate-800/50 p-3 rounded overflow-x-auto">
-                                    <code>{code}</code>
-                                  </pre>
-                                </div>
-                              ))}
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    )}
-                  </motion.div>
-                ))}
-              </div>
-            </motion.div>
-          ))}
-
-          {filteredEndpoints.length === 0 && (
-            <motion.div
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              className="text-center py-16"
-            >
-              <div className="text-gray-400 text-lg mb-4">
-                No API endpoints found matching your criteria.
-              </div>
-              <button
-                onClick={() => {
-                  setSearchQuery('');
-                  setSelectedCategory('All');
-                  setSelectedMethod('All');
-                }}
-                className="text-cyan-400 hover:text-cyan-300 transition-colors"
+          <div className="mb-12">
+            <h2 className="text-3xl font-bold text-white mb-4">API Endpoints</h2>
+            <p className="text-gray-400">Explore our comprehensive API reference</p>
+          </div>
+          
+          <div className="space-y-6">
+            {filteredEndpoints.map((endpoint) => (
+              <motion.div
+                key={endpoint.path}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                className="bg-slate-800/30 border border-slate-700/30 rounded-xl overflow-hidden hover:border-cyan-400/30 transition-all duration-300"
               >
-                Clear all filters
-              </button>
-            </motion.div>
-          )}
+                <button
+                  onClick={() => toggleEndpoint(endpoint.path)}
+                  className="w-full p-6 text-left hover:bg-slate-700/30 transition-all duration-200"
+                >
+                  <div className="flex items-center justify-between">
+                    <div className="flex items-center gap-4">
+                      <div className={`px-3 py-1 rounded-full text-sm font-medium ${
+                        endpoint.method === 'GET' ? 'bg-green-500/20 text-green-400' :
+                        endpoint.method === 'POST' ? 'bg-blue-500/20 text-blue-400' :
+                        endpoint.method === 'PUT' ? 'bg-yellow-500/20 text-yellow-400' :
+                        endpoint.method === 'DELETE' ? 'bg-red-500/20 text-red-400' :
+                        'bg-gray-500/20 text-gray-400'
+                      }`}>
+                        {endpoint.method}
+                      </div>
+                      <div>
+                        <h3 className="text-lg font-semibold text-white mb-1">
+                          {endpoint.title}
+                        </h3>
+                        <p className="text-gray-400 text-sm">
+                          {endpoint.path}
+                        </p>
+                      </div>
+                    </div>
+                    <ChevronRight 
+                      className={`w-5 h-5 text-gray-400 transition-transform duration-200 ${
+                        expandedEndpoints.has(endpoint.path) ? 'rotate-90' : ''
+                      }`}
+                    />
+                  </div>
+                </button>
+                
+                {expandedEndpoints.has(endpoint.path) && (
+                  <motion.div
+                    initial={{ opacity: 0, height: 0 }}
+                    animate={{ opacity: 1, height: 'auto' }}
+                    exit={{ opacity: 0, height: 0 }}
+                    transition={{ duration: 0.3 }}
+                    className="border-t border-slate-700/30"
+                  >
+                    <div className="p-6 space-y-6">
+                      {/* Description */}
+                      <div>
+                        <h4 className="text-sm font-medium text-gray-300 mb-2">Description</h4>
+                        <p className="text-gray-400">{endpoint.description}</p>
+                      </div>
+                      
+                      {/* Parameters */}
+                      <div>
+                        <h4 className="text-sm font-medium text-gray-300 mb-3">Parameters</h4>
+                        <div className="space-y-2">
+                          {endpoint.parameters.map((param, index) => (
+                            <div key={index} className="flex items-center justify-between p-3 bg-slate-700/20 rounded-lg">
+                              <div className="flex items-center gap-3">
+                                <span className="text-white font-medium">{param.name}</span>
+                                <span className="text-cyan-400 text-sm">{param.type}</span>
+                                {param.required && (
+                                  <span className="px-2 py-1 bg-red-500/20 text-red-400 text-xs rounded">Required</span>
+                                )}
+                              </div>
+                              <p className="text-gray-400 text-sm">{param.description}</p>
+                            </div>
+                          ))}
+                        </div>
+                      </div>
+                      
+                      {/* Responses */}
+                      <div>
+                        <h4 className="text-sm font-medium text-gray-300 mb-3">Responses</h4>
+                        <div className="space-y-2">
+                          {endpoint.responses.map((response, index) => (
+                            <div key={index} className="flex items-center gap-3 p-3 bg-slate-700/20 rounded-lg">
+                              <span className={`px-2 py-1 rounded text-sm font-medium ${
+                                response.code >= 200 && response.code < 300 ? 'bg-green-500/20 text-green-400' :
+                                response.code >= 400 && response.code < 500 ? 'bg-red-500/20 text-red-400' :
+                                'bg-yellow-500/20 text-yellow-400'
+                              }`}>
+                                {response.code}
+                              </span>
+                              <span className="text-white">{response.description}</span>
+                            </div>
+                          ))}
+                        </div>
+                      </div>
+                      
+                      {/* Examples */}
+                      <div>
+                        <h4 className="text-sm font-medium text-gray-300 mb-3">Examples</h4>
+                        <div className="space-y-3">
+                          {Object.entries(endpoint.examples).map(([language, code]) => (
+                            <div key={language}>
+                              <div className="flex items-center justify-between mb-2">
+                                <span className="text-sm font-medium text-gray-300 capitalize">{language}</span>
+                                <button className="flex items-center gap-2 text-cyan-400 hover:text-cyan-300 text-sm transition-colors">
+                                  <Copy className="w-4 h-4" />
+                                  Copy
+                                </button>
+                              </div>
+                              <pre className="bg-slate-900/50 border border-slate-600/50 rounded-lg p-4 text-sm text-gray-300 overflow-x-auto">
+                                <code>{code}</code>
+                              </pre>
+                            </div>
+                          ))}
+                        </div>
+                      </div>
+                    </div>
+                  </motion.div>
+                )}
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* SDKs Section */}
+      <section className="py-16">
+        <div className="container-responsive">
+          <div className="mb-12">
+            <h2 className="text-3xl font-bold text-white mb-4">SDKs & Libraries</h2>
+            <p className="text-gray-400">Official client libraries for popular programming languages</p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {sdks.map((sdk, index) => (
+              <motion.div
+                key={sdk.name}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                className="group bg-slate-800/50 border border-slate-700/50 rounded-2xl p-6 hover:border-cyan-400/50 transition-all duration-300 hover:bg-slate-800/70"
+              >
+                <div className="flex items-center justify-between mb-4">
+                  <div className="flex items-center gap-3">
+                    <div className="w-10 h-10 bg-gradient-to-br from-cyan-500 to-blue-500 rounded-lg flex items-center justify-center">
+                      <Code className="w-5 h-5 text-white" />
+                    </div>
+                    <div>
+                      <span className="text-sm text-gray-400">{sdk.language}</span>
+                      <div className="flex items-center gap-2">
+                        <span className="text-xs text-gray-500">{sdk.downloads} downloads</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                
+                <h3 className="text-xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors duration-300">
+                  {sdk.name}
+                </h3>
+                
+                <p className="text-gray-400 mb-4">
+                  {sdk.description}
+                </p>
+                
+                <div className="flex items-center justify-between mb-6">
+                  <span className="text-sm text-cyan-400 font-medium bg-cyan-400/10 px-3 py-1 rounded-full">
+                    {sdk.version}
+                  </span>
+                  <span className="text-sm text-gray-500">Latest</span>
+                </div>
+                
+                <div className="flex space-x-3">
+                  <button className="flex-1 bg-gradient-to-r from-cyan-500 to-blue-500 text-white py-3 px-4 rounded-xl font-semibold hover:from-cyan-600 hover:to-blue-600 transition-all duration-300 transform hover:scale-105 shadow-lg shadow-cyan-500/25">
+                    Install
+                  </button>
+                  <button className="bg-slate-700/50 text-white p-3 rounded-xl hover:bg-slate-600/50 transition-colors duration-200">
+                    <ExternalLink className="w-4 h-4" />
+                  </button>
+                </div>
+              </motion.div>
+            ))}
+          </div>
         </div>
       </section>
 
       {/* CTA Section */}
-      <section className="py-16">
-        <div className="container-responsive">
+      <section className="py-20">
+        <div className="container mx-auto px-4">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
-            className="bg-gradient-to-r from-cyan-500/10 to-blue-600/10 border border-cyan-400/20 rounded-2xl p-8 text-center"
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 1.2 }}
+            className="bg-gradient-to-r from-cyan-500/10 to-blue-500/10 border border-cyan-500/20 rounded-2xl p-12 text-center"
           >
-            <h2 className="text-3xl font-bold text-white mb-4">
+            <h2 className="text-3xl font-bold text-white mb-6">
               Ready to Get Started?
             </h2>
-            <p className="text-gray-300 mb-6 max-w-2xl mx-auto">
-              Get your API keys, explore our interactive API playground, and start building 
-              powerful integrations with Zion Tech Group services.
+            <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
+              Start building with our APIs today. Get your API key, explore our SDKs, 
+              and join thousands of developers building amazing applications.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-medium py-3 px-6 rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-cyan-500/25">
-                Get API Keys
+              <button className="bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-8 py-4 rounded-xl font-semibold hover:from-cyan-600 hover:to-blue-600 transition-all duration-300 transform hover:scale-105 shadow-lg shadow-cyan-500/25">
+                Get API Key
               </button>
-              <button className="border border-cyan-400/50 text-cyan-400 hover:bg-cyan-400/10 font-medium py-3 px-6 rounded-lg transition-all duration-300">
-                API Playground
-              </button>
-              <button className="border border-cyan-400/50 text-cyan-400 hover:bg-cyan-400/10 font-medium py-3 px-6 rounded-lg transition-all duration-300">
-                Contact Support
+              <button className="bg-slate-800 text-white px-8 py-4 rounded-xl font-semibold hover:bg-slate-700 transition-all duration-300 border border-slate-600">
+                View Full Docs
               </button>
             </div>
           </motion.div>
@@ -528,4 +514,4 @@ export default function APIDocumentation() {
       </section>
     </div>
   );
-}
+};

@@ -1,213 +1,262 @@
-import React, { useEffect, useRef, useState, useCallback } from 'react';
-import { motion, useInView } from 'framer-motion';
+import React, { useEffect, useRef, useCallback, useState, useMemo } from 'react';
+import { useInView } from 'react-intersection-observer';
 
-interface PerformanceOptimizerProps {
-  enableMonitoring?: boolean;
-  enableOptimizations?: boolean;
-  logMetrics?: boolean;
+interface PerformanceMetrics {
+  fps: number;
+  memoryUsage: number;
+  loadTime: number;
+  renderTime: number;
 }
 
-export const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
-  enableMonitoring = true,
-  enableOptimizations = true,
-  logMetrics = false
-}) => {
-  const metricsRef = useRef<PerformanceMetrics>({
-    fcp: 0,
-    lcp: 0,
-    fid: 0,
-    cls: 0,
-    ttfb: 0
+interface LazyLoadConfig {
+  threshold: number;
+  rootMargin: string;
+  triggerOnce: boolean;
+}
+
+export function PerformanceOptimizer() {
+  const [metrics, setMetrics] = useState<PerformanceMetrics>({
+    fps: 0,
+    memoryUsage: 0,
+    loadTime: 0,
+    renderTime: 0
   });
+  
+  const [isOptimizing, setIsOptimizing] = useState(false);
+  const frameCountRef = useRef(0);
+  const lastTimeRef = useRef(performance.now());
+  const animationFrameRef = useRef<number>();
 
-  useEffect(() => {
-    // Monitor First Contentful Paint
-    const fcpObserver = new PerformanceObserver((list) => {
-      const entries = list.getEntries();
-      const fcp = entries[0];
-      setMetrics(prev => ({ ...prev, fcp: fcp.startTime }));
-    });
-
-    // Monitor Largest Contentful Paint
-    const lcpObserver = new PerformanceObserver((list) => {
-      const entries = list.getEntries();
-      const lcp = entries[entries.length - 1];
-      setMetrics(prev => ({ ...prev, lcp: lcp.startTime }));
-    });
-
-    // Monitor First Input Delay
-    const fidObserver = new PerformanceObserver((list) => {
-      const entries = list.getEntries();
-      const fid = entries[0];
-      setMetrics(prev => ({ ...prev, fid: fid.processingStart - fid.startTime }));
-    });
-
-    // Monitor Cumulative Layout Shift
-    const clsObserver = new PerformanceObserver((list) => {
-      let cls = 0;
-      for (const entry of list.getEntries()) {
-        if (!entry.hadRecentInput) {
-          cls += entry.value;
-        }
-      }
-      setMetrics(prev => ({ ...prev, cls }));
-    });
-
-    try {
-      fcpObserver.observe({ entryTypes: ['paint'] });
-      lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] });
-      fidObserver.observe({ entryTypes: ['first-input'] });
-      clsObserver.observe({ entryTypes: ['layout-shift'] });
-    } catch (error) {
-      console.warn('Performance monitoring not supported:', error);
+  // Performance monitoring
+  const measurePerformance = useCallback(() => {
+    if ('performance' in window) {
+      const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
+      const loadTime = navigation.loadEventEnd - navigation.loadEventStart;
+      
+      setMetrics(prev => ({
+        ...prev,
+        loadTime,
+        renderTime: performance.now() - lastTimeRef.current
+      }));
     }
 
+    // Memory usage (if available)
+    if ('memory' in performance) {
+      const memory = (performance as any).memory;
+      setMetrics(prev => ({
+        ...prev,
+        memoryUsage: memory.usedJSHeapSize / 1024 / 1024 // Convert to MB
+      }));
+    }
+  }, []);
+
+  // FPS monitoring
+  const measureFPS = useCallback(() => {
+    frameCountRef.current++;
+    const currentTime = performance.now();
+    
+    if (currentTime - lastTimeRef.current >= 1000) {
+      const fps = Math.round((frameCountRef.current * 1000) / (currentTime - lastTimeRef.current));
+      setMetrics(prev => ({ ...prev, fps }));
+      frameCountRef.current = 0;
+      lastTimeRef.current = currentTime;
+    }
+    
+    animationFrameRef.current = requestAnimationFrame(measureFPS);
+  }, []);
+
+  // Auto-optimization based on performance metrics
+  const autoOptimize = useCallback(() => {
+    if (metrics.fps < 30 || metrics.memoryUsage > 100) {
+      setIsOptimizing(true);
+      
+      // Implement automatic optimizations
+      setTimeout(() => {
+        // Clear unnecessary caches
+        if ('caches' in window) {
+          caches.keys().then(names => {
+            names.forEach(name => {
+              if (name.includes('temp') || name.includes('cache')) {
+                caches.delete(name);
+              }
+            });
+          });
+        }
+        
+        // Force garbage collection if available
+        if ('gc' in window) {
+          (window as any).gc();
+        }
+        
+        setIsOptimizing(false);
+      }, 1000);
+    }
+  }, [metrics.fps, metrics.memoryUsage]);
+
+  useEffect(() => {
+    measurePerformance();
+    measureFPS();
+    
+    // Set up performance monitoring interval
+    const interval = setInterval(measurePerformance, 5000);
+    
     return () => {
-      fcpObserver.disconnect();
-      lcpObserver.disconnect();
-      fidObserver.disconnect();
-      clsObserver.disconnect();
+      clearInterval(interval);
+      if (animationFrameRef.current) {
+        cancelAnimationFrame(animationFrameRef.current);
+      }
     };
+  }, [measurePerformance, measureFPS]);
+
+  useEffect(() => {
+    autoOptimize();
+  }, [autoOptimize]);
+
+  // Intersection Observer for lazy loading
+  const { ref: lazyRef, inView } = useInView({
+    threshold: 0.1,
+    rootMargin: '50px',
+    triggerOnce: true
+  });
+
+  // Virtual scrolling optimization
+  const virtualScrollOptimizer = useCallback((items: any[], itemHeight: number, containerHeight: number) => {
+    const visibleItems = Math.ceil(containerHeight / itemHeight) + 2; // Buffer
+    return items.slice(0, visibleItems);
+  }, []);
+
+  // Image optimization
+  const optimizeImages = useCallback(() => {
+    const images = document.querySelectorAll('img');
+    images.forEach(img => {
+      if (!img.loading) {
+        img.loading = 'lazy';
+      }
+      
+      // Add intersection observer for images
+      if (!img.dataset.optimized) {
+        const observer = new IntersectionObserver((entries) => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              const img = entry.target as HTMLImageElement;
+              if (img.dataset.src) {
+                img.src = img.dataset.src;
+                img.dataset.optimized = 'true';
+                observer.unobserve(img);
+              }
+            }
+          });
+        });
+        
+        observer.observe(img);
+      }
+    });
+  }, []);
+
+  useEffect(() => {
+    optimizeImages();
+  }, [optimizeImages]);
+
+  // Service Worker optimization
+  useEffect(() => {
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.ready.then(registration => {
+        // Optimize service worker caching
+        if ('caches' in window) {
+          caches.open('performance-cache').then(cache => {
+            // Cache critical resources
+            cache.addAll([
+              '/',
+              '/static/js/main.js',
+              '/static/css/main.css'
+            ]);
+          });
+        }
+      });
+    }
   }, []);
 
   return (
-    <div className="fixed bottom-4 right-4 bg-zion-slate-dark/90 backdrop-blur-sm border border-zion-cyan/20 rounded-lg p-4 text-white text-xs font-mono z-50">
-      <div className="mb-2 font-semibold text-zion-cyan">Performance Metrics</div>
-      <div>FCP: {metrics.fcp.toFixed(0)}ms</div>
-      <div>LCP: {metrics.lcp.toFixed(0)}ms</div>
-      <div>FID: {metrics.fid.toFixed(0)}ms</div>
-      <div>CLS: {metrics.cls.toFixed(3)}</div>
-    </div>
-  );
-};
-
-    externalDomains.forEach((domain) => {
-      const link = document.createElement('link');
-      link.rel = 'dns-prefetch';
-      link.href = `//${domain}`;
-      document.head.appendChild(link);
-    });
-
-    // Preconnect to critical domains
-    const criticalDomains = [
-      'fonts.googleapis.com',
-      'fonts.gstatic.com'
-    ];
-
-    criticalDomains.forEach((domain) => {
-      const link = document.createElement('link');
-      link.rel = 'preconnect';
-      link.href = `https://${domain}`;
-      link.crossOrigin = 'anonymous';
-      document.head.appendChild(link);
-    });
-  }, [enableOptimizations]);
-
-  // Service Worker optimization
-  const optimizeServiceWorker = useCallback(() => {
-    if (!enableOptimizations) return;
-
-  return (
-    <div
-      ref={containerRef}
-      style={{ height: containerHeight, overflow: 'auto' }}
-      onScroll={handleScroll}
-    >
-      <div style={{ height: totalHeight, position: 'relative' }}>
-        <div style={{ transform: `translateY(${offsetY}px)` }}>
-          {items.slice(startIndex, endIndex).map((item, index) => (
-            <div key={startIndex + index} style={{ height: itemHeight }}>
-              {renderItem(item, startIndex + index)}
-            </div>
-          ))}
+    <div className="performance-optimizer" ref={lazyRef}>
+      {inView && (
+        <div className="fixed bottom-4 right-4 bg-black/80 text-white p-4 rounded-lg shadow-lg z-50">
+          <div className="text-sm font-mono">
+            <div>FPS: {metrics.fps}</div>
+            <div>Memory: {metrics.memoryUsage.toFixed(1)}MB</div>
+            <div>Load: {metrics.loadTime.toFixed(0)}ms</div>
+            {isOptimizing && <div className="text-yellow-400">Optimizing...</div>}
+          </div>
         </div>
-      </div>
+      )}
     </div>
   );
-};
+}
 
-// Debounced input component
-export const DebouncedInput: React.FC<{
-  value: string;
-  onChange: (value: string) => void;
-  placeholder?: string;
-  className?: string;
-  delay?: number;
-}> = ({ value, onChange, placeholder = '', className = '', delay = 300 }) => {
-  const [inputValue, setInputValue] = useState(value);
-  const timeoutRef = useRef<NodeJS.Timeout>();
+// Enhanced Lazy Loading Hook
+export function useLazyLoad<T>(config: LazyLoadConfig = { threshold: 0.1, rootMargin: '50px', triggerOnce: true }) {
+  const { ref, inView } = useInView(config);
+  
+  return {
+    ref,
+    inView,
+    shouldLoad: inView
+  };
+}
 
+// Virtual Scrolling Hook
+export function useVirtualScroll<T>(
+  items: T[],
+  itemHeight: number,
+  containerHeight: number,
+  overscan: number = 5
+) {
+  const [scrollTop, setScrollTop] = useState(0);
+  
+  const visibleItems = useMemo(() => {
+    const startIndex = Math.floor(scrollTop / itemHeight);
+    const endIndex = Math.min(
+      startIndex + Math.ceil(containerHeight / itemHeight) + overscan,
+      items.length
+    );
+    
+    return items.slice(startIndex, endIndex);
+  }, [items, itemHeight, containerHeight, overscan, scrollTop]);
+  
+  const totalHeight = items.length * itemHeight;
+  const offsetY = Math.floor(scrollTop / itemHeight) * itemHeight;
+  
+  return {
+    visibleItems,
+    totalHeight,
+    offsetY,
+    setScrollTop
+  };
+}
+
+// Performance Monitoring Hook
+export function usePerformanceMonitor() {
+  const [metrics, setMetrics] = useState<PerformanceMetrics>({
+    fps: 0,
+    memoryUsage: 0,
+    loadTime: 0,
+    renderTime: 0
+  });
+  
   useEffect(() => {
-    if (timeoutRef.current) {
-      clearTimeout(timeoutRef.current);
-    }
-
-    timeoutRef.current = setTimeout(() => {
-      onChange(inputValue);
-    }, delay);
-
-    return () => {
-      if (timeoutRef.current) {
-        clearTimeout(timeoutRef.current);
+    const measure = () => {
+      if ('performance' in window) {
+        const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
+        setMetrics(prev => ({
+          ...prev,
+          loadTime: navigation.loadEventEnd - navigation.loadEventStart,
+          renderTime: performance.now()
+        }));
       }
     };
-  }, [inputValue, onChange, delay]);
-
-  useEffect(() => {
-    setInputValue(value);
-  }, [value]);
-
-  return (
-    <input
-      type="text"
-      value={inputValue}
-      onChange={(e) => setInputValue(e.target.value)}
-      placeholder={placeholder}
-      className={`px-3 py-2 border border-zion-cyan/20 bg-zion-blue-dark/50 text-white placeholder-zion-slate-light rounded-md focus:outline-none focus:border-zion-cyan/40 transition-colors ${className}`}
-    />
-  );
-};
-
-// Memoized component wrapper
-export const MemoizedComponent: React.FC<{
-  children: React.ReactNode;
-  dependencies?: any[];
-}> = React.memo(({ children }) => <>{children}</>);
-
-// Error boundary component
-export class ErrorBoundary extends React.Component<
-  { children: React.ReactNode; fallback?: React.ReactNode },
-  { hasError: boolean; error?: Error }
-> {
-  constructor(props: { children: React.ReactNode; fallback?: React.ReactNode }) {
-    super(props);
-    this.state = { hasError: false };
-  }
-
-  static getDerivedStateFromError(error: Error) {
-    return { hasError: true, error };
-  }
-
-  componentDidCatch(error: Error, errorInfo: React.ErrorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
-
-  render() {
-    if (this.state.hasError) {
-      return this.props.fallback || (
-        <div className="p-4 bg-red-500/10 border border-red-500/20 rounded-lg text-red-400">
-          <h3 className="font-semibold mb-2">Something went wrong</h3>
-          <p className="text-sm">{this.state.error?.message}</p>
-          <button
-            onClick={() => this.setState({ hasError: false })}
-            className="mt-2 px-3 py-1 bg-red-500/20 hover:bg-red-500/30 rounded text-sm transition-colors"
-          >
-            Try again
-          </button>
-        </div>
-      );
-    }
-
-    return this.props.children;
-  }
+    
+    const interval = setInterval(measure, 1000);
+    return () => clearInterval(interval);
+  }, []);
+  
+  return metrics;
 }
