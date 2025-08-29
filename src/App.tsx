@@ -4,9 +4,13 @@ import { AppHeader } from './layout/AppHeader';
 import { EnhancedFuturisticFooter as Footer } from './components/EnhancedFuturisticFooter';
 import { ChatAssistant } from './components/ChatAssistant';
 import { LoadingSpinner } from './components/ui/LoadingSpinner';
+import { EnhancedSEO } from './components/EnhancedSEO';
 import { PerformanceOptimizer } from './components/PerformanceOptimizer';
 import { ErrorBoundary } from './components/ErrorBoundary';
-import { AccessibilityEnhancer } from './components/AccessibilityEnhancer';
+import { EnhancedAccessibilityPanel } from './components/EnhancedAccessibilityPanel';
+import { AdvancedPerformanceMonitor } from './components/AdvancedPerformanceMonitor';
+import { InteractiveUserExperience } from './components/InteractiveUserExperience';
+import { SecurityEnhancer } from './components/SecurityEnhancer';
 
 // Core pages - only import existing ones
 const Home = React.lazy(() => import('./pages/Home'));
@@ -159,10 +163,14 @@ function App() {
               </Routes>
             </Suspense>
           </main>
+          
           <Footer />
           <ChatAssistant />
           <PerformanceOptimizer showMetrics={true} />
-          <AccessibilityEnhancer />
+          <EnhancedAccessibilityPanel />
+          <AdvancedPerformanceMonitor />
+          <InteractiveUserExperience />
+          <SecurityEnhancer />
         </div>
       </Router>
     </ErrorBoundary>
