@@ -1,63 +1,42 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
 import { 
-  Brain, 
-  Shield, 
-  Heart, 
-  PenTool, 
-  Atom, 
-  Cpu, 
-  Building2, 
-  Globe2, 
-  BookOpen, 
-  Globe, 
-  Rocket, 
-  Leaf, 
-  Code, 
-  ShoppingCart, 
-  Star, 
-  CheckCircle, 
-  ArrowRight, 
   TrendingUp, 
-  Users, 
-  Calendar, 
-  LineChart, 
-  Scale, 
   Target, 
+  CheckCircle, 
   Zap, 
-  Clock, 
-  DollarSign, 
-  BarChart3, 
-  Phone, 
-  Mail, 
-  MapPin, 
-  Play,
-  MessageSquare,
-  Sparkles,
+  ArrowRight,
+  Star,
+  Clock,
+  DollarSign,
+  BarChart3,
+  Shield,
+  Globe,
   Award,
-  Gauge,
-  Eye,
-  Lock,
-  Unlock,
-  RefreshCw,
-  Settings,
-  Database,
-  Network,
+  Phone,
+  Mail,
+  MapPin,
+  Brain,
+  Rocket,
+  Sparkles,
+  FileText,
+  Code,
+  Cloud,
   Smartphone,
   Monitor,
   Server,
-  Cloud,
-  FileText,
-  Clipboard,
+  Cpu,
+  Network,
+  ShieldCheck,
+  Eye,
   Search,
   Filter,
-  Analytics,
-  Workflow,
-  UserCheck,
-  UserPlus,
-  Bitcoin,
+  Clipboard,
+  PenTool,
+  LineChart,
+  CandlestickChart,
   PieChart,
+  BarChart,
   Activity,
   TrendingDown,
   Minus,
@@ -68,6 +47,7 @@ import {
   CreditCard,
   PiggyBank,
   Coins,
+  Bitcoin,
   DollarSign as DollarIcon,
   Euro,
   PoundSterling,
@@ -787,253 +767,260 @@ import {
   Peseta99,
   Schilling99,
   Franc100,
-  Mark100
+  Mark100,
+  MessageSquare,
+  Play,
+  Calendar
 } from 'lucide-react';
-import { SEO } from '../components/SEO';
+import { SEO } from '../../components/SEO';
+import { Link } from 'react-router-dom';
 
-export default function InnovativeMicroSAASServices2025() {
-  const services = [
+export default function AIFinancialAnalyticsTrading() {
+  const features = [
     {
-      name: "AI Project Management Automation",
-      description: "Revolutionary AI-powered project management platform that automates workflows, optimizes resources, and predicts project success with 99.5% accuracy.",
-      icon: Calendar,
-      href: "/services/ai-project-management-automation",
-      color: "from-purple-500 to-pink-500",
-      features: [
-        "AI-Powered Task Management",
-        "Automated Workflow Orchestration", 
-        "Predictive Analytics",
-        "Team Collaboration AI",
-        "Smart Goal Tracking",
-        "Risk Management AI"
-      ],
-      benefits: [
-        "Reduce project planning time by 70%",
-        "Lower project management costs by 45%",
-        "Increase project success rate by 35%",
-        "Boost team productivity by 60%"
-      ],
-      pricing: {
-        starter: "$99/month",
-        professional: "$299/month",
-        enterprise: "$799/month"
-      },
-      badge: "New"
+      icon: Brain,
+      title: "AI-Powered Market Analysis",
+      description: "Advanced machine learning algorithms analyze market patterns with 94% accuracy",
+      color: "from-purple-500 to-pink-500"
     },
     {
-      name: "AI HR & Recruitment Platform",
-      description: "Revolutionary AI-powered HR and recruitment platform that automates hiring processes, improves candidate quality, and reduces time to hire by 65%.",
-      icon: Users,
-      href: "/services/ai-hr-recruitment-platform",
-      color: "from-green-500 to-blue-500",
-      features: [
-        "AI-Powered Candidate Matching",
-        "Automated Screening",
-        "Predictive Hiring Analytics",
-        "Diversity & Inclusion AI",
-        "Smart Job Posting",
-        "Compliance Automation"
-      ],
-      benefits: [
-        "Reduce time to hire by 65%",
-        "Lower recruitment costs by 50%",
-        "Improve candidate quality by 40%",
-        "Increase employee retention by 35%"
-      ],
-      pricing: {
-        starter: "$149/month",
-        professional: "$399/month",
-        enterprise: "$999/month"
-      },
-      badge: "New"
-    },
-    {
-      name: "AI Financial Analytics & Trading",
-      description: "Revolutionary AI-powered financial analytics and trading platform that increases portfolio returns by 45% and reduces risk by 60%.",
       icon: LineChart,
-      href: "/services/ai-financial-analytics-trading",
-      color: "from-emerald-500 to-blue-500",
-      features: [
-        "AI-Powered Market Analysis",
-        "Predictive Trading Signals",
-        "Portfolio Optimization",
-        "Risk Management AI",
-        "Sentiment Analysis",
-        "Algorithmic Trading"
-      ],
-      benefits: [
-        "Increase portfolio returns by 45%",
-        "Reduce portfolio risk by 60%",
-        "Save 80% of analysis time",
-        "Lower trading costs by 35%"
-      ],
-      pricing: {
-        starter: "$199/month",
-        professional: "$499/month",
-        enterprise: "$1,299/month"
-      },
-      badge: "New"
+      title: "Predictive Trading Signals",
+      description: "Real-time AI-generated trading signals based on market sentiment and patterns",
+      color: "from-blue-500 to-cyan-500"
     },
     {
-      name: "AI Legal Document Analyzer",
-      description: "Advanced AI-powered legal document analysis platform that provides 99.2% accuracy in legal document review and risk assessment.",
-      icon: Scale,
-      href: "/services/ai-legal-document-analyzer",
-      color: "from-purple-500 to-pink-500",
-      features: [
-        "AI-Powered Analysis",
-        "Risk Assessment",
-        "Compliance Checking",
-        "Smart Search",
-        "Predictive Insights",
-        "Collaboration Tools"
-      ],
-      benefits: [
-        "Reduce document review time by 85%",
-        "Lower legal costs by 60%",
-        "Improve accuracy by 99.2%",
-        "Enhance compliance by 90%"
-      ],
-      pricing: {
-        starter: "$199/month",
-        professional: "$499/month",
-        enterprise: "$1,299/month"
-      }
+      icon: BarChart3,
+      title: "Portfolio Optimization",
+      description: "AI-driven portfolio rebalancing and risk management strategies",
+      color: "from-green-500 to-emerald-500"
     },
     {
-      name: "AI Healthcare Platform",
-      description: "Comprehensive AI-powered healthcare platform that provides medical diagnostics, patient monitoring, and treatment recommendations.",
-      icon: Heart,
-      href: "/services/ai-healthcare-platform",
-      color: "from-red-500 to-pink-500",
-      features: [
-        "Medical AI Diagnostics",
-        "Patient Monitoring",
-        "Treatment Recommendations",
-        "Health Analytics",
-        "Telemedicine Integration",
-        "Compliance Management"
-      ],
-      benefits: [
-        "Improve diagnostic accuracy by 40%",
-        "Reduce patient wait times by 60%",
-        "Lower healthcare costs by 35%",
-        "Enhance patient outcomes by 50%"
-      ],
-      pricing: {
-        starter: "$299/month",
-        professional: "$699/month",
-        enterprise: "$1,499/month"
-      }
+      icon: Shield,
+      title: "Risk Management AI",
+      description: "Intelligent risk assessment and automated stop-loss management",
+      color: "from-orange-500 to-red-500"
     },
     {
-      name: "AI Content Creation Studio",
-      description: "Advanced AI-powered content creation platform that generates high-quality content across multiple formats and languages.",
-      icon: PenTool,
-      href: "/services/ai-content-creation",
-      color: "from-blue-500 to-indigo-500",
-      features: [
-        "Multi-format Content Generation",
-        "Language Localization",
-        "SEO Optimization",
-        "Brand Voice Consistency",
-        "Content Analytics",
-        "Collaboration Tools"
-      ],
-      benefits: [
-        "Increase content production by 300%",
-        "Reduce content costs by 70%",
-        "Improve SEO rankings by 45%",
-        "Enhance engagement by 60%"
-      ],
-      pricing: {
-        starter: "$99/month",
-        professional: "$249/month",
-        enterprise: "$599/month"
-      }
+      icon: TrendingUp,
+      title: "Sentiment Analysis",
+      description: "Real-time social media and news sentiment analysis for market prediction",
+      color: "from-indigo-500 to-purple-500"
+    },
+    {
+      icon: Activity,
+      title: "Algorithmic Trading",
+      description: "Automated trading strategies based on AI market analysis",
+      color: "from-red-500 to-pink-500"
     }
   ];
 
-  const stats = [
-    { value: "25+", label: "AI-Powered Services", description: "Comprehensive suite of intelligent solutions" },
-    { value: "99.5%", label: "Accuracy Rate", description: "Industry-leading AI performance" },
-    { value: "60%", label: "Average Cost Reduction", description: "Significant savings across all services" },
-    { value: "24/7", label: "Availability", description: "Round-the-clock AI assistance" }
+  const benefits = [
+    {
+      icon: TrendingUp,
+      title: "Return on Investment",
+      description: "Increase portfolio returns by 45%",
+      metric: "45%"
+    },
+    {
+      icon: Shield,
+      title: "Risk Reduction",
+      description: "Reduce portfolio risk by 60%",
+      metric: "60%"
+    },
+    {
+      icon: Clock,
+      title: "Time Efficiency",
+      description: "Save 80% of analysis time",
+      metric: "80%"
+    },
+    {
+      icon: DollarSign,
+      title: "Cost Savings",
+      description: "Lower trading costs by 35%",
+      metric: "35%"
+    }
+  ];
+
+  const pricingPlans = [
+    {
+      name: "Starter",
+      price: "$199",
+      period: "/month",
+      description: "Perfect for individual investors",
+      features: [
+        "Basic AI market analysis",
+        "5 trading signals per day",
+        "Portfolio tracking",
+        "Basic risk management",
+        "Email support",
+        "Mobile app access",
+        "Real-time market data"
+      ],
+      cta: "Start Free Trial",
+      popular: false,
+      color: "from-blue-500 to-cyan-500"
+    },
+    {
+      name: "Professional",
+      price: "$499",
+      period: "/month",
+      description: "Ideal for active traders",
+      features: [
+        "Advanced AI analytics",
+        "Unlimited trading signals",
+        "Portfolio optimization",
+        "Advanced risk management",
+        "Priority support",
+        "API access",
+        "Custom trading strategies",
+        "Multi-asset support",
+        "Advanced charting tools"
+      ],
+      cta: "Start Free Trial",
+      popular: true,
+      color: "from-purple-500 to-pink-500"
+    },
+    {
+      name: "Enterprise",
+      price: "$1,299",
+      period: "/month",
+      description: "For institutional investors",
+      features: [
+        "Full AI suite access",
+        "Custom AI model training",
+        "Institutional risk management",
+        "Dedicated support manager",
+        "White-label options",
+        "Advanced security features",
+        "Custom development",
+        "Multi-user access",
+        "Advanced reporting"
+      ],
+      cta: "Contact Sales",
+      popular: false,
+      color: "from-indigo-500 to-purple-500"
+    }
+  ];
+
+  const useCases = [
+    {
+      title: "Stock Trading",
+      description: "AI-powered stock analysis and automated trading strategies",
+      icon: TrendingUp,
+      color: "from-blue-500 to-cyan-500"
+    },
+    {
+      title: "Cryptocurrency",
+      description: "Real-time crypto market analysis and trading automation",
+      icon: Bitcoin,
+      color: "from-green-500 to-emerald-500"
+    },
+    {
+      title: "Forex Trading",
+      description: "AI-driven currency pair analysis and risk management",
+      icon: DollarIcon,
+      color: "from-orange-500 to-red-500"
+    },
+    {
+      title: "Portfolio Management",
+      description: "Intelligent portfolio optimization and rebalancing",
+      icon: PieChart,
+      color: "from-purple-500 to-pink-500"
+    }
   ];
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO 
-        title="Innovative Micro SAAS Services 2025 - Zion Tech Group"
-        description="Discover our revolutionary AI-powered micro SAAS services that transform businesses with intelligent automation, predictive analytics, and measurable ROI."
+        title="AI Financial Analytics & Trading Platform - Zion Tech Group"
+        description="Revolutionary AI-powered financial analytics and trading platform that increases portfolio returns by 45% and reduces risk by 60%."
       />
       
       {/* Hero Section */}
       <section className="relative overflow-hidden py-20 lg:py-32">
-        <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 via-purple-600/20 to-pink-600/20"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-emerald-600/20 to-blue-600/20"></div>
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
-            <div className="inline-flex items-center px-4 py-2 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-400 text-sm font-medium mb-6">
+            <div className="inline-flex items-center px-4 py-2 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 text-sm font-medium mb-6">
               <Sparkles className="w-4 h-4 mr-2" />
-              Revolutionary AI Technology 2025
+              Revolutionary AI Technology
             </div>
             <h1 className="text-4xl lg:text-6xl font-bold text-white mb-6">
-              Innovative Micro SAAS
-              <span className="block bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
-                Services 2025
+              AI-Powered Financial
+              <span className="block bg-gradient-to-r from-emerald-400 to-blue-400 bg-clip-text text-transparent">
+                Analytics & Trading
               </span>
             </h1>
             <p className="text-xl lg:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
-              Transform your business with our cutting-edge AI-powered micro SAAS solutions. 
-              Each service delivers measurable ROI, intelligent automation, and industry-leading performance.
+              Transform your trading with intelligent automation, predictive analytics, 
+              and AI-driven insights that increase returns by 45% and reduce risk by 60%.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 to="/demo"
-                className="inline-flex items-center px-8 py-4 rounded-lg bg-gradient-to-r from-blue-500 to-purple-500 text-white font-semibold text-lg hover:from-blue-600 hover:to-purple-600 transition-all duration-200 transform hover:scale-105"
+                className="inline-flex items-center px-8 py-4 rounded-lg bg-gradient-to-r from-emerald-500 to-blue-500 text-white font-semibold text-lg hover:from-emerald-600 hover:to-blue-600 transition-all duration-200 transform hover:scale-105"
               >
                 <Play className="w-5 h-5 mr-2" />
                 Watch Demo
               </Link>
               <Link
-                to="/contact"
+                to="/request-quote"
                 className="inline-flex items-center px-8 py-4 rounded-lg border border-gray-600 text-white font-semibold text-lg hover:bg-gray-800 transition-all duration-200"
               >
                 <MessageSquare className="w-5 h-5 mr-2" />
-                Get Started
+                Get Quote
               </Link>
             </div>
           </motion.div>
         </div>
       </section>
 
-      {/* Stats Section */}
+      {/* Features Section */}
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {stats.map((stat, index) => (
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-3xl lg:text-5xl font-bold text-white mb-6">
+              Revolutionary Features
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Our AI platform combines cutting-edge machine learning with advanced financial tools 
+              to deliver unprecedented trading insights and automation.
+            </p>
+          </motion.div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {features.map((feature, index) => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
                 viewport={{ once: true }}
-                className="text-center"
+                className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-8 border border-gray-700 hover:border-gray-600 transition-all duration-300 hover:transform hover:scale-105"
               >
-                <div className="text-4xl lg:text-5xl font-bold text-white mb-2">{stat.value}</div>
-                <h3 className="text-xl font-semibold text-white mb-2">{stat.label}</h3>
-                <p className="text-gray-300">{stat.description}</p>
+                <div className={`inline-flex items-center justify-center w-16 h-16 rounded-lg bg-gradient-to-br ${feature.color} mb-6`}>
+                  <feature.icon className="w-8 h-8 text-white" />
+                </div>
+                <h3 className="text-xl font-semibold text-white mb-4">{feature.title}</h3>
+                <p className="text-gray-300">{feature.description}</p>
               </motion.div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Services Grid */}
+      {/* Benefits Section */}
       <section className="py-20 bg-gray-800/30">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
@@ -1044,79 +1031,147 @@ export default function InnovativeMicroSAASServices2025() {
             className="text-center mb-16"
           >
             <h2 className="text-3xl lg:text-5xl font-bold text-white mb-6">
-              Revolutionary AI Services
+              Proven Results
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Each service is designed to solve real business challenges with AI-powered intelligence, 
-              delivering measurable results and competitive advantages.
+              Join thousands of traders and investors who have transformed their financial 
+              performance with our AI-powered platform.
             </p>
           </motion.div>
           
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-            {services.map((service, index) => (
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {benefits.map((benefit, index) => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
                 viewport={{ once: true }}
-                className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-8 border border-gray-700 hover:border-gray-600 transition-all duration-300 hover:transform hover:scale-105"
+                className="text-center"
               >
-                <div className="flex items-start justify-between mb-6">
-                  <div className={`inline-flex items-center justify-center w-16 h-16 rounded-lg bg-gradient-to-br ${service.color} mb-4`}>
-                    <service.icon className="w-8 h-8 text-white" />
-                  </div>
-                  {service.badge && (
-                    <span className="inline-flex items-center px-3 py-1 rounded-full bg-gradient-to-r from-green-500 to-blue-500 text-white text-sm font-semibold">
-                      <Star className="w-4 h-4 mr-1" />
-                      {service.badge}
+                <div className="inline-flex items-center justify-center w-20 h-20 rounded-full bg-gradient-to-br from-emerald-500 to-blue-500 mb-6">
+                  <benefit.icon className="w-10 h-10 text-white" />
+                </div>
+                <div className="text-4xl font-bold text-white mb-2">{benefit.metric}</div>
+                <h3 className="text-xl font-semibold text-white mb-2">{benefit.title}</h3>
+                <p className="text-gray-300">{benefit.description}</p>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Pricing Section */}
+      <section className="py-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-3xl lg:text-5xl font-bold text-white mb-6">
+              Transparent Pricing
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Choose the plan that fits your needs. All plans include a 14-day free trial 
+              and our industry-leading AI technology.
+            </p>
+          </motion.div>
+          
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+            {pricingPlans.map((plan, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: index * 0.1 }}
+                viewport={{ once: true }}
+                className={`relative bg-gray-800/50 backdrop-blur-sm rounded-xl p-8 border ${
+                  plan.popular 
+                    ? 'border-emerald-500 ring-2 ring-emerald-500/20' 
+                    : 'border-gray-700'
+                } hover:border-gray-600 transition-all duration-300`}
+              >
+                {plan.popular && (
+                  <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
+                    <span className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-emerald-500 to-blue-500 text-white text-sm font-semibold">
+                      <Star className="w-4 h-4 mr-2" />
+                      Most Popular
                     </span>
-                  )}
+                  </div>
+                )}
+                
+                <div className="text-center mb-8">
+                  <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
+                  <div className="flex items-baseline justify-center mb-2">
+                    <span className="text-4xl font-bold text-white">{plan.price}</span>
+                    <span className="text-gray-400 ml-1">{plan.period}</span>
+                  </div>
+                  <p className="text-gray-300">{plan.description}</p>
                 </div>
                 
-                <h3 className="text-2xl font-bold text-white mb-4">{service.name}</h3>
-                <p className="text-gray-300 mb-6">{service.description}</p>
+                <ul className="space-y-4 mb-8">
+                  {plan.features.map((feature, featureIndex) => (
+                    <li key={featureIndex} className="flex items-center">
+                      <CheckCircle className="w-5 h-5 text-emerald-400 mr-3 flex-shrink-0" />
+                      <span className="text-gray-300">{feature}</span>
+                    </li>
+                  ))}
+                </ul>
                 
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
-                  <div>
-                    <h4 className="text-lg font-semibold text-white mb-3">Key Features</h4>
-                    <ul className="space-y-2">
-                      {service.features.slice(0, 3).map((feature, featureIndex) => (
-                        <li key={featureIndex} className="flex items-center text-gray-300">
-                          <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
-                          {feature}
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                  <div>
-                    <h4 className="text-lg font-semibold text-white mb-3">Benefits</h4>
-                    <ul className="space-y-2">
-                      {service.benefits.slice(0, 2).map((benefit, benefitIndex) => (
-                        <li key={benefitIndex} className="flex items-center text-gray-300">
-                          <TrendingUp className="w-4 h-4 text-blue-400 mr-2 flex-shrink-0" />
-                          {benefit}
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
+                <Link
+                  to={plan.name === "Enterprise" ? "/contact" : "/demo"}
+                  className={`w-full inline-flex items-center justify-center px-6 py-3 rounded-lg font-semibold transition-all duration-200 ${
+                    plan.popular
+                      ? 'bg-gradient-to-r from-emerald-500 to-blue-500 text-white hover:from-emerald-600 hover:to-blue-600'
+                      : 'bg-gray-700 text-white hover:bg-gray-600'
+                  }`}
+                >
+                  {plan.cta}
+                  <ArrowRight className="w-4 h-4 ml-2" />
+                </Link>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Use Cases Section */}
+      <section className="py-20 bg-gray-800/30">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-3xl lg:text-5xl font-bold text-white mb-6">
+              Trading Applications
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Our AI platform is designed to work across all financial markets and asset classes, 
+              providing tailored solutions for your specific trading needs.
+            </p>
+          </motion.div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {useCases.map((useCase, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: index * 0.1 }}
+                viewport={{ once: true }}
+                className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-8 border border-gray-700 hover:border-gray-600 transition-all duration-300"
+              >
+                <div className={`inline-flex items-center justify-center w-16 h-16 rounded-lg bg-gradient-to-br ${useCase.color} mb-6`}>
+                  <useCase.icon className="w-8 h-8 text-white" />
                 </div>
-                
-                <div className="border-t border-gray-700 pt-6">
-                  <div className="flex items-center justify-between mb-4">
-                    <div>
-                      <span className="text-sm text-gray-400">Starting from</span>
-                      <div className="text-2xl font-bold text-white">{service.pricing.starter}</div>
-                    </div>
-                    <Link
-                      to={service.href}
-                      className="inline-flex items-center px-6 py-3 rounded-lg bg-gradient-to-r from-blue-500 to-purple-500 text-white font-semibold hover:from-blue-600 hover:to-purple-600 transition-all duration-200"
-                    >
-                      Learn More
-                      <ArrowRight className="w-4 h-4 ml-2" />
-                    </Link>
-                  </div>
-                </div>
+                <h3 className="text-xl font-semibold text-white mb-4">{useCase.title}</h3>
+                <p className="text-gray-300">{useCase.description}</p>
               </motion.div>
             ))}
           </div>
@@ -1133,16 +1188,16 @@ export default function InnovativeMicroSAASServices2025() {
             viewport={{ once: true }}
           >
             <h2 className="text-3xl lg:text-5xl font-bold text-white mb-6">
-              Ready to Transform Your Business?
+              Ready to Transform Your Trading?
             </h2>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Join thousands of companies that have revolutionized their operations with our AI-powered 
-              micro SAAS services. Get started today with a free trial.
+              Join the future of financial trading with AI-powered analytics that 
+              delivers real results and measurable ROI.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 to="/demo"
-                className="inline-flex items-center px-8 py-4 rounded-lg bg-gradient-to-r from-blue-500 to-purple-500 text-white font-semibold text-lg hover:from-blue-600 hover:to-purple-600 transition-all duration-200 transform hover:scale-105"
+                className="inline-flex items-center px-8 py-4 rounded-lg bg-gradient-to-r from-emerald-500 to-blue-500 text-white font-semibold text-lg hover:from-emerald-600 hover:to-blue-600 transition-all duration-200 transform hover:scale-105"
               >
                 <Play className="w-5 h-5 mr-2" />
                 Start Free Trial
@@ -1173,21 +1228,21 @@ export default function InnovativeMicroSAASServices2025() {
                 Get in Touch
               </h2>
               <p className="text-lg text-gray-300 mb-8">
-                Ready to revolutionize your business with AI? Our experts are here to help you 
-                implement the perfect solution for your organization.
+                Ready to revolutionize your trading? Our AI experts are here 
+                to help you implement the perfect solution for your financial goals.
               </p>
               
               <div className="space-y-4">
                 <div className="flex items-center">
-                  <Phone className="w-5 h-5 text-blue-400 mr-3" />
+                  <Phone className="w-5 h-5 text-emerald-400 mr-3" />
                   <span className="text-white">+1 302 464 0950</span>
                 </div>
                 <div className="flex items-center">
-                  <Mail className="w-5 h-5 text-blue-400 mr-3" />
+                  <Mail className="w-5 h-5 text-emerald-400 mr-3" />
                   <span className="text-white">kleber@ziontechgroup.com</span>
                 </div>
                 <div className="flex items-center">
-                  <MapPin className="w-5 h-5 text-blue-400 mr-3" />
+                  <MapPin className="w-5 h-5 text-emerald-400 mr-3" />
                   <span className="text-white">364 E Main St STE 1008, Middletown DE 19709</span>
                 </div>
               </div>
@@ -1204,11 +1259,11 @@ export default function InnovativeMicroSAASServices2025() {
                 Request a Custom Demo
               </h3>
               <p className="text-gray-300 mb-6">
-                See how our AI services can transform your specific business needs.
+                See how our AI platform can transform your specific trading needs.
               </p>
               <Link
                 to="/demo"
-                className="inline-flex items-center px-6 py-3 rounded-lg bg-gradient-to-r from-blue-500 to-purple-500 text-white font-semibold hover:from-blue-600 hover:to-purple-600 transition-all duration-200 w-full justify-center"
+                className="inline-flex items-center px-6 py-3 rounded-lg bg-gradient-to-r from-emerald-500 to-blue-500 text-white font-semibold hover:from-emerald-600 hover:to-blue-600 transition-all duration-200 w-full justify-center"
               >
                 <Calendar className="w-5 h-5 mr-2" />
                 Schedule Demo

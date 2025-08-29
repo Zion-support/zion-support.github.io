@@ -98,7 +98,11 @@ export const EnhancedFuturisticFooter: React.FC = () => {
         { name: 'AI Video Content Creation Studio', href: '/services/ai-video-content-creation-studio', featured: true },
         { name: 'AI Customer Churn Prediction', href: '/services/ai-customer-churn-prediction', featured: true },
         { name: 'AI Financial Fraud Detection', href: '/services/ai-financial-fraud-detection', featured: true },
-        { name: 'AI Energy Management System', href: '/services/ai-energy-management-system', featured: true }
+        { name: 'AI Energy Management System', href: '/services/ai-energy-management-system', featured: true },
+        { name: 'AI Project Management Automation', href: '/services/ai-project-management-automation', featured: true },
+        { name: 'AI HR & Recruitment Platform', href: '/services/ai-hr-recruitment-platform', featured: true },
+        { name: 'AI Financial Analytics & Trading', href: '/services/ai-financial-analytics-trading', featured: true },
+        { name: 'Innovative Micro SAAS 2025', href: '/innovative-micro-saas-services-2025', featured: true }
       ]
     },
     {

@@ -291,6 +291,42 @@ export function AppHeader() {
       color: 'from-purple-500 to-pink-500'
     },
     { 
+      name: 'Innovative Micro SAAS 2025', 
+      href: '/innovative-micro-saas-services-2025', 
+      icon: Rocket, 
+      description: 'Complete Micro SAAS Portfolio',
+      featured: true,
+      color: 'from-blue-500 to-purple-500',
+      badge: 'New'
+    },
+    { 
+      name: 'AI Project Management Automation', 
+      href: '/services/ai-project-management-automation', 
+      icon: Calendar, 
+      description: 'AI-Powered Project Management',
+      featured: true,
+      color: 'from-purple-500 to-pink-500',
+      badge: 'New'
+    },
+    { 
+      name: 'AI HR & Recruitment Platform', 
+      href: '/services/ai-hr-recruitment-platform', 
+      icon: Users, 
+      description: 'AI-Powered Hiring & HR',
+      featured: true,
+      color: 'from-green-500 to-blue-500',
+      badge: 'New'
+    },
+    { 
+      name: 'AI Financial Analytics & Trading', 
+      href: '/services/ai-financial-analytics-trading', 
+      icon: TrendingUp, 
+      description: 'AI-Powered Trading Platform',
+      featured: true,
+      color: 'from-emerald-500 to-blue-500',
+      badge: 'New'
+    },
+    { 
       name: 'Cloud DevOps', 
       href: '/services/cloud-devops', 
       icon: Cloud, 
