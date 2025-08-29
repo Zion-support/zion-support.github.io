@@ -66,6 +66,12 @@ const AICybersecuritySuite = React.lazy(() => import('./pages/services/AICyberse
 const QuantumAIPlatform = React.lazy(() => import('./pages/services/QuantumAIPlatform'));
 const AIHealthcareAnalytics = React.lazy(() => import('./pages/services/AIHealthcareAnalytics'));
 
+// New Innovative Services
+const AIWorkflowAutomation = React.lazy(() => import('./pages/services/AIWorkflowAutomation'));
+const AICustomerExperiencePlatform = React.lazy(() => import('./pages/services/AICustomerExperiencePlatform'));
+const QuantumComputingAsAService = React.lazy(() => import('./pages/services/QuantumComputingAsAService'));
+const BlockchainAsAService = React.lazy(() => import('./pages/services/BlockchainAsAService'));
+
 // Simple placeholder pages for missing ones
 const Careers = () => (
   <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 flex items-center justify-center">
@@ -150,6 +156,12 @@ function App() {
               <Route path="/services/ai-cybersecurity-suite" element={<AICybersecuritySuite />} />
               <Route path="/services/quantum-ai-platform" element={<QuantumAIPlatform />} />
               <Route path="/services/ai-healthcare-analytics" element={<AIHealthcareAnalytics />} />
+
+              {/* New Innovative Services Routes */}
+              <Route path="/services/ai-workflow-automation" element={<AIWorkflowAutomation />} />
+              <Route path="/services/ai-customer-experience-platform" element={<AICustomerExperiencePlatform />} />
+              <Route path="/services/quantum-computing-as-a-service" element={<QuantumComputingAsAService />} />
+              <Route path="/services/blockchain-as-a-service" element={<BlockchainAsAService />} />
               
               {/* Catch all route */}
               <Route path="*" element={<Home />} />

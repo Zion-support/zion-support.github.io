@@ -17,7 +17,12 @@ const ITServices: React.FC = () => {
     ,
     { icon: Cloud, title: 'Cloud Landing Zones', desc: 'Secure multi-account landing zones with guardrails, budgets, CI/CD and golden patterns.', price: '$8,000 - $65,000+' },
     { icon: Server, title: 'Database Reliability Engineering', desc: 'HA/DR, performance tuning, migrations and observability for Postgres, MySQL and SQL Server.', price: '$4,000 - $45,000+' },
-    { icon: Shield, title: 'Zero Trust Enablement', desc: 'Network segmentation, identity-aware proxies, device posture and continuous verification.', price: '$6,000 - $60,000+' }
+    { icon: Shield, title: 'Zero Trust Enablement', desc: 'Network segmentation, identity-aware proxies, device posture and continuous verification.', price: '$6,000 - $60,000+' },
+    { icon: Brain, title: 'AI-Ops & Intelligent Monitoring', desc: 'AI-powered operations, predictive maintenance, and intelligent incident response automation.', price: '$8,000 - $75,000+' },
+    { icon: Cloud, title: 'Multi-Cloud Management', desc: 'Unified management across AWS, Azure, GCP with cost optimization and governance.', price: '$6,000 - $65,000+' },
+    { icon: Server, title: 'Edge Computing & IoT', desc: 'Edge infrastructure, IoT device management, and real-time data processing at the edge.', price: '$5,000 - $55,000+' },
+    { icon: Database, title: 'Data Mesh & Lakehouse', desc: 'Modern data architecture with distributed data ownership and unified analytics.', price: '$10,000 - $100,000+' },
+    { icon: Lock, title: 'DevSecOps & Security Automation', desc: 'Security integration in CI/CD, automated security testing, and compliance automation.', price: '$7,000 - $70,000+' }
   ];
 
   return (

@@ -77,6 +77,36 @@ const AIServices: React.FC = () => {
       title: 'Agentic Process Automation',
       desc: 'Task-centric multi-agent systems integrating CRMs/ERPs/ticketing with guardrails and observability.',
       price: '$6,000 - $55,000+'
+    },
+    {
+      icon: Brain,
+      title: 'AI-Powered Code Generation',
+      desc: 'Automated code generation, testing, and documentation with natural language specifications.',
+      price: '$4,000 - $35,000+'
+    },
+    {
+      icon: Shield,
+      title: 'AI Security Testing & Penetration',
+      desc: 'Automated security testing, vulnerability assessment, and penetration testing using AI.',
+      price: '$5,000 - $40,000+'
+    },
+    {
+      icon: BarChart3,
+      title: 'AI Financial Modeling & Risk',
+      desc: 'Advanced financial modeling, risk assessment, and portfolio optimization with machine learning.',
+      price: '$7,000 - $60,000+'
+    },
+    {
+      icon: Users,
+      title: 'AI-Powered HR & Recruitment',
+      desc: 'Intelligent candidate screening, skill assessment, and cultural fit analysis.',
+      price: '$3,000 - $25,000+'
+    },
+    {
+      icon: Globe,
+      title: 'AI Language Translation & Localization',
+      desc: 'Real-time translation, cultural adaptation, and multilingual content generation.',
+      price: '$2,500 - $20,000+'
     }
   ];
 

@@ -55,6 +55,41 @@ const MicroSaaS: React.FC = () => {
       href: 'https://ziontechgroup.com/services'
     },
     {
+      icon: Brain,
+      name: 'AI Content Moderation',
+      desc: 'Automated content filtering, toxicity detection, and moderation workflows for user-generated content.',
+      pricing: 'From $149/mo + $0.01/content item',
+      href: 'https://ziontechgroup.com/ai-services'
+    },
+    {
+      icon: BarChart3,
+      name: 'Predictive Analytics Engine',
+      desc: 'ML-powered forecasting, trend analysis, and predictive insights for business intelligence.',
+      pricing: 'From $199/mo + usage-based pricing',
+      href: 'https://ziontechgroup.com/ai-services'
+    },
+    {
+      icon: Shield,
+      name: 'Zero-Trust Access Manager',
+      desc: 'Identity verification, device posture checking, and continuous authentication for secure access.',
+      pricing: 'From $89/mo per user',
+      href: 'https://ziontechgroup.com/it-services'
+    },
+    {
+      icon: Globe,
+      name: 'Global CDN Optimizer',
+      desc: 'Intelligent content delivery optimization with edge computing and performance analytics.',
+      pricing: 'From $79/mo + bandwidth costs',
+      href: 'https://ziontechgroup.com/it-services'
+    },
+    {
+      icon: Database,
+      name: 'Data Pipeline Orchestrator',
+      desc: 'ETL automation, data quality monitoring, and workflow orchestration for data engineering.',
+      pricing: 'From $129/mo + compute costs',
+      href: 'https://ziontechgroup.com/services'
+    },
+    {
       icon: Bug,
       name: 'Security Headers & CSP Manager',
       desc: 'Continuously audits and deploys HTTP security headers and Content Security Policy for your domains.',
