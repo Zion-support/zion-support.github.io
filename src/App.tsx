@@ -58,6 +58,13 @@ const SpaceTech = React.lazy(() => import('./pages/services/SpaceTech'));
 const Sustainability = React.lazy(() => import('./pages/services/Sustainability'));
 const ZeroTrustNetworkArchitecture = React.lazy(() => import('./pages/services/ZeroTrustNetworkArchitecture'));
 
+// New service pages
+const AIHealthcarePlatform = React.lazy(() => import('./pages/services/ai-healthcare-platform'));
+const AIContentCreation = React.lazy(() => import('./pages/services/ai-content-creation'));
+const AICybersecurity = React.lazy(() => import('./pages/services/ai-cybersecurity'));
+const IoTEdgeComputing = React.lazy(() => import('./pages/services/iot-edge-computing'));
+const CloudDevOps = React.lazy(() => import('./pages/services/cloud-devops'));
+
 // Advanced AI services that exist
 const AICybersecuritySuite = React.lazy(() => import('./pages/services/ai-cybersecurity-threat-detection'));
 const QuantumAIPlatform = React.lazy(() => import('./pages/services/QuantumAIPlatform'));
@@ -142,6 +149,13 @@ function App() {
                 <Route path="/services/space-tech" element={<SpaceTech />} />
                 <Route path="/services/sustainability" element={<Sustainability />} />
                 <Route path="/services/zero-trust-network-architecture" element={<ZeroTrustNetworkArchitecture />} />
+                
+                {/* New Service Routes */}
+                <Route path="/services/ai-healthcare-platform" element={<AIHealthcarePlatform />} />
+                <Route path="/services/ai-content-creation" element={<AIContentCreation />} />
+                <Route path="/services/ai-cybersecurity" element={<AICybersecurity />} />
+                <Route path="/services/iot-edge-computing" element={<IoTEdgeComputing />} />
+                <Route path="/services/cloud-devops" element={<CloudDevOps />} />
                 
                 {/* Advanced AI Service Routes */}
                 <Route path="/services/ai-cybersecurity-suite" element={<AICybersecuritySuite />} />

@@ -104,9 +104,8 @@ export const EnhancedFuturisticFooter: React.FC = () => {
       icon: Rocket,
       color: 'from-green-600 to-emerald-600',
       links: [
-        { name: 'IoT Edge Computing', href: '/services/iot-edge' },
+        { name: 'IoT Edge Computing', href: '/services/iot-edge-computing' },
         { name: 'Digital Twin', href: '/services/digital-twin' },
-        { name: 'Blockchain Enterprise Solutions', href: '/services/blockchain-enterprise-solutions' },
         { name: 'Data Analytics', href: '/services/data-analytics' },
         { name: 'Smart Inventory Optimizer', href: '/services/smart-inventory-optimizer' },
         { name: 'Smart Supply Chain Visibility', href: '/services/smart-supply-chain-visibility' }
