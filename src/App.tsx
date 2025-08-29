@@ -34,6 +34,12 @@ const ServicesOverview = React.lazy(() => import('./pages/ServicesOverview'));
 const PricingGuide = React.lazy(() => import('./pages/PricingGuide'));
 const Help = React.lazy(() => import('./pages/Help'));
 const Partners = React.lazy(() => import('./pages/Partners'));
+const Team = React.lazy(() => import('./pages/Team'));
+const Press = React.lazy(() => import('./pages/Press'));
+const Webinars = React.lazy(() => import('./pages/Webinars'));
+const CaseStudies = React.lazy(() => import('./pages/CaseStudies'));
+const WhitePapers = React.lazy(() => import('./pages/WhitePapers'));
+const Sitemap = React.lazy(() => import('./pages/Sitemap'));
 
 // Enhanced services pages - only import existing ones
 const ComprehensivePricingGuide2027 = React.lazy(() => import('./pages/ComprehensivePricingGuide2027.tsx'));
@@ -143,14 +149,20 @@ function App() {
               <Route path="/support" element={<Support />} />
               <Route path="/community" element={<Community />} />
               <Route path="/docs" element={<Documentation />} />
+              <Route path="/webinars" element={<Webinars />} />
+              <Route path="/white-papers" element={<WhitePapers />} />
+              <Route path="/case-studies" element={<CaseStudies />} />
               <Route path="/training" element={<Training />} />
               <Route path="/accessibility" element={<Accessibility />} />
               <Route path="/security" element={<Security />} />
               <Route path="/compliance" element={<Compliance />} />
               <Route path="/careers" element={<Careers />} />
+              <Route path="/team" element={<Team />} />
+              <Route path="/press" element={<Press />} />
               <Route path="/privacy" element={<Privacy />} />
               <Route path="/terms" element={<Terms />} />
               <Route path="/cookies" element={<Cookies />} />
+              <Route path="/sitemap" element={<Sitemap />} />
               <Route path="/accessibility" element={<Accessibility />} />
               <Route path="/compliance" element={<Compliance />} />
               <Route path="/onsite-support" element={<OnsiteSupport />} />
