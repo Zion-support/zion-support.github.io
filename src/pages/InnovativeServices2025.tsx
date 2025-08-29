@@ -1,6 +1,6 @@
 import React from 'react';
-import { SEO } from '../components/SEO';
 import { EnhancedLayout } from '../components/EnhancedLayout';
+import { SEO } from '../components/SEO';
 
 const InnovativeServices2025: React.FC = () => {
   return (
