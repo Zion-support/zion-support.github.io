@@ -42,6 +42,11 @@ const Webinars = React.lazy(() => import('./pages/Webinars'));
 const CaseStudies = React.lazy(() => import('./pages/CaseStudies'));
 const WhitePapers = React.lazy(() => import('./pages/WhitePapers'));
 const Sitemap = React.lazy(() => import('./pages/Sitemap'));
+const Signup = React.lazy(() => import('./pages/Signup'));
+const News = React.lazy(() => import('./pages/News'));
+const ResearchDevelopment = React.lazy(() => import('./pages/ResearchDevelopment'));
+const EnhancedServices = React.lazy(() => import('./pages/EnhancedServices'));
+const Events = React.lazy(() => import('./pages/Events'));
 
 // Enhanced services pages - only import existing ones
 const ComprehensivePricingGuide2027 = React.lazy(() => import('./pages/ComprehensivePricingGuide2027.tsx'));
@@ -168,15 +173,19 @@ function App() {
               <Route path="/careers" element={<Careers />} />
               <Route path="/team" element={<Team />} />
               <Route path="/press" element={<Press />} />
+              <Route path="/news" element={<News />} />
               <Route path="/privacy" element={<Privacy />} />
               <Route path="/terms" element={<Terms />} />
               <Route path="/cookies" element={<Cookies />} />
               <Route path="/sitemap" element={<Sitemap />} />
+              <Route path="/events" element={<Events />} />
+              <Route path="/research-development" element={<ResearchDevelopment />} />
               {/** duplicates removed */}
               <Route path="/onsite-support" element={<OnsiteSupport />} />
               <Route path="/pricing" element={<ComprehensivePricingGuide2027 />} />
               <Route path="/pricing-2030" element={<ComprehensivePricingGuide2030 />} />
               <Route path="/pricing-guide" element={<PricingGuide />} />
+              <Route path="/enhanced-services" element={<EnhancedServices />} />
               <Route path="/services-comparison" element={<ServicesComparisonPage />} />
               <Route path="/services" element={<Services />} />
               <Route path="/services-overview" element={<ServicesOverview />} />
@@ -204,6 +213,7 @@ function App() {
               <Route path="/request-quote" element={<RequestQuote />} />
               <Route path="/dashboard" element={<Dashboard />} />
               <Route path="/login" element={<Login />} />
+              <Route path="/signup" element={<Signup />} />
               <Route path="/marketplace" element={<Marketplace />} />
               <Route path="/partners" element={<Partners />} />
               <Route path="/team" element={<Team />} />

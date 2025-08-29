@@ -75,6 +75,7 @@ export function AppHeader() {
     { name: 'Pricing', href: '/pricing-guide', current: false, hasDropdown: false },
     { name: 'About', href: '/about', current: false, hasDropdown: false },
     { name: 'Contact', href: '/contact', current: false, hasDropdown: false },
+    { name: 'Events', href: '/events', current: false, hasDropdown: false },
   ];
 
   const servicesCategories = [
@@ -122,7 +123,7 @@ export function AppHeader() {
       services: [
         { name: 'AI Compliance Copilot', href: '/services/ai-compliance-copilot', description: 'AI-powered security' },
         { name: 'Zero Trust Architecture', href: '/services/zero-trust-network-architecture', description: 'Modern security framework' },
-        { name: 'Incident Response', href: '/services/incident-response-platform', description: 'Security incident management' }
+        { name: 'Incident Response', href: '/services/ai-cybersecurity-suite', description: 'Security incident management' }
       ]
     },
     {

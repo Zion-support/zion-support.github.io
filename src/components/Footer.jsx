@@ -94,18 +94,18 @@ export function Footer() {
         { label: "AI Solutions", path: "/services/ai" },
         { label: "Cloud & DevOps", path: "/services/cloud-devops" },
         { label: "Cybersecurity", path: "/services/ai-cybersecurity-suite" },
-        { label: "IT Infrastructure", path: "/services/infrastructure" },
-        { label: "Digital Transformation", path: "/services/transformation" },
-        { label: "Quantum Neural Network", path: "/quantum-neural-network-platform" },
-        { label: "Autonomous Operations", path: "/autonomous-business-operations-platform" },
-        { label: "IT Asset Management", path: "/ai-powered-it-asset-management" }
+        { label: "IT Infrastructure", path: "/services/it-infrastructure" },
+        { label: "Digital Transformation", path: "/services/digital-transformation" },
+        { label: "Quantum Computing", path: "/services/quantum-computing" },
+        { label: "Autonomous Operations", path: "/services/ai-workflow-orchestrator" },
+        { label: "FinOps Advisor", path: "/services/finops-advisor" }
       ]
     },
     {
       title: "Company",
       links: [
         { label: "About Us", path: "/about" },
-        { label: "Our Team", path: "/about" },
+        { label: "Our Team", path: "/team" },
         { label: "Careers", path: "/careers" },
         { label: "News & Updates", path: "/news" },
         { label: "Case Studies", path: "/case-studies" },
@@ -131,8 +131,8 @@ export function Footer() {
         { label: "Help Center", path: "/help" },
         { label: "Support Portal", path: "/support" },
         { label: "FAQ", path: "/faq" },
-        { label: "Consulting", path: "/services/consulting" },
-        { label: "Request Quote", path: "/contact" }
+        { label: "Consulting", path: "/services/it-consulting" },
+        { label: "Request Quote", path: "/request-quote" }
       ]
     }
   ];
