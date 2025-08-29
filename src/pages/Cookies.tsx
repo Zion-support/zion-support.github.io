@@ -181,7 +181,12 @@ const Cookies = () => {
           <div className="absolute bottom-20 right-20 w-48 h-48 border border-zion-purple rounded-full animate-pulse delay-1000"></div>
         </div>
         
-        <div className="container mx-auto px-4 text-center relative z-10">
+        <motion.div 
+          className="container mx-auto px-4 text-center relative z-10"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+        >
           <div className="flex justify-center mb-8">
             <div className="w-24 h-24 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-2xl flex items-center justify-center">
               <Cookie className="w-12 h-12 text-white" />
@@ -199,7 +204,7 @@ const Cookies = () => {
             improve our services, and provide personalized content.
           </p>
           
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
             <button className="px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-purple text-white rounded-xl font-semibold text-lg hover:scale-105 transition-all duration-300 shadow-2xl hover:shadow-zion-cyan/25">
               Manage Cookies
             </button>
@@ -207,14 +212,8 @@ const Cookies = () => {
               Learn More
             </button>
           </div>
-          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-            Cookie Policy
-          </h1>
-          <p className="text-xl text-zion-slate-light max-w-3xl mx-auto leading-relaxed">
-            Learn about how Zion Tech Group uses cookies and similar technologies 
-            to enhance your browsing experience.
-          </p>
-          <p className="text-zion-slate-light mt-4">
+          
+          <p className="text-zion-slate-light text-lg">
             Last updated: {new Date().toLocaleDateString('en-US', { 
               year: 'numeric', 
               month: 'long', 

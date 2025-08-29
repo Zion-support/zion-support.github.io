@@ -2,49 +2,22 @@ import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
   BarChart3, 
-  PieChart, 
   TrendingUp, 
   Download, 
   Share2, 
-  Filter, 
-  Calendar,
   Users,
   DollarSign,
-  Target,
   Activity,
   Eye,
-  Settings,
-  RefreshCw,
   FileText,
-  Image,
-  Printer,
-  Mail,
   Clock,
-  CheckCircle,
-  AlertCircle,
-  XCircle,
   Star,
-  Award,
-  TrendingDown,
-  ArrowUp,
-  ArrowDown,
-  Minus,
   Search,
   ChevronDown,
   ChevronUp,
-  Zap,
-  Brain,
-  Cloud,
   Shield,
-  Globe,
-  Database,
   Server,
-  Lock,
-  Unlock,
-  Wifi,
-  Smartphone,
-  Monitor,
-  Tablet
+  X
 } from 'lucide-react';
 
 interface ReportData {
@@ -77,7 +50,6 @@ interface ReportMetrics {
 interface AdvancedReportingDashboardProps {
   showMetrics?: boolean;
   showFilters?: boolean;
-  showCharts?: boolean;
   maxReports?: number;
 }
 
@@ -413,7 +385,7 @@ export const AdvancedReportingDashboard: React.FC<AdvancedReportingDashboardProp
 
           {/* Create Report Button */}
           <button
-            onClick={() => setShowReportForm(true)}
+            onClick={() => setShowReportDetails(true)}
             className="px-6 py-2 bg-zion-cyan text-white rounded-lg hover:bg-zion-cyan/80 transition-colors flex items-center gap-2"
           >
             <FileText className="w-4 h-4" />
@@ -705,7 +677,7 @@ export const AdvancedReportingDashboard: React.FC<AdvancedReportingDashboardProp
             <div className="mb-4">
               <h4 className="text-sm font-medium text-zinc-300 mb-3">Key Metrics</h4>
               <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
-                {report.data.keyMetrics?.slice(0, 4).map((metric, idx) => (
+                {report.data.keyMetrics?.slice(0, 4).map((metric: string, idx: number) => (
                   <div key={idx} className="p-2 bg-zinc-800/30 rounded-lg text-center">
                     <div className="text-xs text-zinc-400">{metric}</div>
                   </div>
@@ -776,7 +748,7 @@ export const AdvancedReportingDashboard: React.FC<AdvancedReportingDashboardProp
             Try adjusting your filters or create a new report to get started!
           </p>
           <button
-            onClick={() => setShowReportForm(true)}
+            onClick={() => setShowReportDetails(true)}
             className="px-6 py-2 bg-zion-cyan text-white rounded-lg hover:bg-zion-cyan/80 transition-colors"
           >
             Create Report
@@ -820,7 +792,7 @@ export const AdvancedReportingDashboard: React.FC<AdvancedReportingDashboardProp
                 <div>
                   <h3 className="text-lg font-semibold text-white mb-3">Key Metrics</h3>
                   <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-                    {selectedReport.data.keyMetrics?.map((metric, idx) => (
+                    {selectedReport.data.keyMetrics?.map((metric: string, idx: number) => (
                       <div key={idx} className="p-4 bg-zinc-800/30 rounded-lg text-center">
                         <div className="text-lg font-semibold text-white">{metric}</div>
                       </div>

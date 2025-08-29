@@ -32,25 +32,25 @@ const ModernFooter: React.FC = () => {
   ];
 
   return (
-    <footer className="bg-black text-white relative overflow-hidden">
+    <footer className="bg-gray-900 text-white relative overflow-hidden">
       {/* Animated Background */}
-      <div className="absolute inset-0 bg-gradient-to-br from-neon-blue/5 via-neon-purple/5 to-neon-pink/5" />
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(0,212,255,0.1),transparent_50%)]" />
+      <div className="absolute inset-0 bg-gradient-to-br from-blue-900/10 via-purple-900/10 to-gray-900" />
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(0,212,255,0.05),transparent_50%)]" />
       
       <div className="relative z-10">
         <div className="container mx-auto px-4 py-16">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
             {/* Company Info */}
             <div className="lg:col-span-1">
-              <div className="flex items-center space-x-2 mb-6">
-                <div className="w-10 h-10 bg-gradient-to-br from-neon-blue to-neon-purple rounded-lg flex items-center justify-center">
-                  <Zap className="w-6 h-6 text-white" />
+              <div className="flex items-center space-x-3 mb-6">
+                <div className="w-12 h-12 bg-gradient-to-br from-blue-600 to-purple-600 rounded-xl flex items-center justify-center shadow-lg">
+                  <Zap className="w-7 h-7 text-white" />
                 </div>
                 <div>
-                  <h3 className="text-xl font-bold bg-gradient-to-r from-neon-blue to-neon-purple bg-clip-text text-transparent">
+                  <h3 className="text-xl font-bold bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
                     Zion Tech Group
                   </h3>
-                  <p className="text-sm text-neon-green">Innovation Group</p>
+                  <p className="text-sm text-gray-400">Innovation Group</p>
                 </div>
               </div>
               <p className="text-gray-300 mb-6 leading-relaxed">
@@ -64,7 +64,7 @@ const ModernFooter: React.FC = () => {
                     href={social.href}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="w-10 h-10 bg-neon-blue/10 hover:bg-neon-blue/20 border border-neon-blue/20 hover:border-neon-blue/40 rounded-lg flex items-center justify-center text-neon-blue hover:text-white transition-all duration-300"
+                    className="w-10 h-10 bg-gray-800 hover:bg-blue-600 border border-gray-700 hover:border-blue-500 rounded-lg flex items-center justify-center text-gray-400 hover:text-white transition-all duration-300"
                     whileHover={{ scale: 1.1, y: -2 }}
                     whileTap={{ scale: 0.95 }}
                   >
@@ -82,9 +82,9 @@ const ModernFooter: React.FC = () => {
                   <li key={category.name}>
                     <Link
                       href={category.href}
-                      className="flex items-center space-x-2 text-gray-300 hover:text-neon-blue transition-colors group"
+                      className="flex items-center space-x-2 text-gray-300 hover:text-blue-400 transition-colors group"
                     >
-                      <category.icon className="w-4 h-4 text-neon-blue group-hover:text-neon-purple transition-colors" />
+                      <category.icon className="w-4 h-4 text-blue-500 group-hover:text-blue-400 transition-colors" />
                       <span>{category.name}</span>
                     </Link>
                   </li>
@@ -100,7 +100,7 @@ const ModernFooter: React.FC = () => {
                   <li key={link.name}>
                     <Link
                       href={link.href}
-                      className="text-gray-300 hover:text-neon-blue transition-colors"
+                      className="text-gray-300 hover:text-blue-400 transition-colors"
                     >
                       {link.name}
                     </Link>
@@ -114,12 +114,12 @@ const ModernFooter: React.FC = () => {
               <h4 className="text-lg font-semibold mb-6 text-white">Contact Us</h4>
               <div className="space-y-4">
                 <div className="flex items-start space-x-3">
-                  <Phone className="w-5 h-5 text-neon-blue mt-1 flex-shrink-0" />
+                  <Phone className="w-5 h-5 text-blue-400 mt-1 flex-shrink-0" />
                   <div>
-                    <p className="text-gray-300">Phone</p>
+                    <p className="text-gray-400">Phone</p>
                     <a 
                       href="tel:+13024640950" 
-                      className="text-neon-blue hover:text-neon-purple transition-colors font-medium"
+                      className="text-blue-400 hover:text-blue-300 transition-colors font-medium"
                     >
                       +1 (302) 464-0950
                     </a>
@@ -127,12 +127,12 @@ const ModernFooter: React.FC = () => {
                 </div>
                 
                 <div className="flex items-start space-x-3">
-                  <Mail className="w-5 h-5 text-neon-blue mt-1 flex-shrink-0" />
+                  <Mail className="w-5 h-5 text-blue-400 mt-1 flex-shrink-0" />
                   <div>
-                    <p className="text-gray-300">Email</p>
+                    <p className="text-gray-400">Email</p>
                     <a 
                       href="mailto:kleber@ziontechgroup.com" 
-                      className="text-neon-blue hover:text-neon-purple transition-colors font-medium"
+                      className="text-blue-400 hover:text-blue-300 transition-colors font-medium"
                     >
                       kleber@ziontechgroup.com
                     </a>
@@ -140,9 +140,9 @@ const ModernFooter: React.FC = () => {
                 </div>
                 
                 <div className="flex items-start space-x-3">
-                  <MapPin className="w-5 h-5 text-neon-blue mt-1 flex-shrink-0" />
+                  <MapPin className="w-5 h-5 text-blue-400 mt-1 flex-shrink-0" />
                   <div>
-                    <p className="text-gray-300">Address</p>
+                    <p className="text-gray-400">Address</p>
                     <p className="text-gray-300">
                       364 E Main St STE 1008<br />
                       Middletown, DE 19709
@@ -154,7 +154,7 @@ const ModernFooter: React.FC = () => {
           </div>
 
           {/* Newsletter Signup */}
-          <div className="border-t border-neon-blue/20 pt-8 mb-8">
+          <div className="border-t border-gray-700 pt-8 mb-8">
             <div className="max-w-2xl mx-auto text-center">
               <h4 className="text-xl font-semibold mb-4 text-white">Stay Updated</h4>
               <p className="text-gray-300 mb-6">
@@ -164,12 +164,12 @@ const ModernFooter: React.FC = () => {
                 <input
                   type="email"
                   placeholder="Enter your email"
-                  className="flex-1 px-4 py-3 bg-white/10 border border-neon-blue/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-neon-blue/40 focus:ring-2 focus:ring-neon-blue/20"
+                  className="flex-1 px-4 py-3 bg-gray-800 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20"
                 />
                 <motion.button
-                  className="px-6 py-3 bg-gradient-to-r from-neon-blue to-neon-purple text-white font-semibold rounded-lg hover:from-neon-purple hover:to-neon-blue transition-all duration-300"
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
+                  className="px-6 py-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-lg hover:from-purple-600 hover:to-blue-600 transition-all duration-300 shadow-lg"
+                  whileHover={{ scale: 1.02 }}
+                  whileTap={{ scale: 0.98 }}
                 >
                   Subscribe
                 </motion.button>
@@ -178,19 +178,19 @@ const ModernFooter: React.FC = () => {
           </div>
 
           {/* Bottom Bar */}
-          <div className="border-t border-neon-blue/20 pt-8">
+          <div className="border-t border-gray-700 pt-8">
             <div className="flex flex-col md:flex-row justify-between items-center">
               <p className="text-gray-400 text-sm mb-4 md:mb-0">
                 © {currentYear} Zion Tech Group. All rights reserved.
               </p>
               <div className="flex space-x-6 text-sm">
-                <Link href="/privacy" className="text-gray-400 hover:text-neon-blue transition-colors">
+                <Link href="/privacy" className="text-gray-400 hover:text-blue-400 transition-colors">
                   Privacy Policy
                 </Link>
-                <Link href="/terms" className="text-gray-400 hover:text-neon-blue transition-colors">
+                <Link href="/terms" className="text-gray-400 hover:text-blue-400 transition-colors">
                   Terms of Service
                 </Link>
-                <Link href="/cookies" className="text-gray-400 hover:text-neon-blue transition-colors">
+                <Link href="/cookies" className="text-gray-400 hover:text-blue-400 transition-colors">
                   Cookie Policy
                 </Link>
               </div>

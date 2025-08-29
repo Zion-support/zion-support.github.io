@@ -82,7 +82,7 @@ export function ServicesShowcase() {
                     </Button>
                   </Link>
                 </div>
-              </div>
+              </CardContent>
             </FuturisticCard>))}
         </div>
 

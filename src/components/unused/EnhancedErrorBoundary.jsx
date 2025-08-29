@@ -16,7 +16,7 @@ class EnhancedErrorBoundary extends Component {
         return {
             hasError: true,
             error,
-            errorId: this.generateErrorId()
+            errorId: `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`
         };
     }
     componentDidCatch(error, errorInfo) {

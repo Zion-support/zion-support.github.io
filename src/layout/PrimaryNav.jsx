@@ -123,19 +123,8 @@ export function PrimaryNav() {
                     {t('auth.signup')}
                   </Link>
                 </>)}
-            </Link>
-            <LanguageSelector />
-            <ModeToggle />
-            {!isLoggedIn && (<>
-                <Link href="/login" className="text-sm hover:text-primary" data-testid="login-link">
-                  {t('login', 'Login')}
-                </Link>
-                <Link href="/signup" className="ml-2 text-sm hover:text-primary">
-                  {t('signup', 'Sign up')}
-                </Link>
-              </>)}
-            {isLoggedIn && <UserMenu />}
-          </div>
+              {isLoggedIn && <UserMenu />}
+            </div>
           
           {/* Mobile menu button */}
           <button className="md:hidden p-2 rounded focus:outline-none flex-shrink-0" onClick={() => setMobileMenuOpen(!mobileMenuOpen)} aria-expanded={mobileMenuOpen} aria-label={t('general.toggle_mobile_menu')}>

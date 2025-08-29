@@ -50,19 +50,53 @@ async function apiRequest<T>(
   }
 }
 
-// API methods
-export const api = {
-  // Health check
-  health: () => apiRequest('/health'),
+interface ApiClientOptions {
+  method?: string;
+  body?: string;
+  headers?: Record<string, string>;
+}
+
+export async function apiClient(endpoint: string, options: ApiClientOptions = {}) {
+  const { method = 'GET', body, headers = {} } = options;
   
-  // Users
-  getUsers: () => apiRequest<Array<{ id: number; name: string; email: string }>>('/users'),
-  getUser: (id: number) => apiRequest<{ id: number; name: string; email: string }>(`/users/${id}`),
-  createUser: (userData: { name: string; email: string }) => 
-    apiRequest<{ id: number; name: string; email: string; createdAt: string }>('/users', {
-      method: 'POST',
-      body: JSON.stringify(userData),
-    }),
+  const config: RequestInit = {
+    method,
+    headers: {
+      'Content-Type': 'application/json',
+      ...headers,
+    },
+  };
+
+  if (body) {
+    config.body = body;
+  }
+
+  try {
+    const response = await fetch(endpoint, config);
+    
+    if (!response.ok) {
+      throw new Error(`HTTP error! status: ${response.status}`);
+    }
+    
+    return await response.json();
+  } catch (error) {
+    console.error('API request failed:', error);
+    throw error;
+  }
+}
+
+export const api = {
+  get: (endpoint: string, headers?: Record<string, string>) => 
+    apiClient(endpoint, { method: 'GET', headers }),
+  
+  post: (endpoint: string, data: any, headers?: Record<string, string>) => 
+    apiClient(endpoint, { method: 'POST', body: JSON.stringify(data), headers }),
+  
+  put: (endpoint: string, data: any, headers?: Record<string, string>) => 
+    apiClient(endpoint, { method: 'PUT', body: JSON.stringify(data), headers }),
+  
+  delete: (endpoint: string, headers?: Record<string, string>) => 
+    apiClient(endpoint, { method: 'DELETE', headers }),
 };
 
 // Export types for use in components

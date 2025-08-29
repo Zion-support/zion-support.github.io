@@ -6,7 +6,7 @@ import {
   ArrowRight, 
   DollarSign, 
   ExternalLink, 
-  Workflow, 
+  GitFork, 
   MessageSquare, 
   Globe, 
   Brain, 
@@ -40,7 +40,7 @@ const Services2026: React.FC = () => {
   const allServices = [...INNOVATIVE_MICRO_SAAS_SERVICES_2026, ...SPECIALIZED_SERVICES_2026];
   
   const categories = [
-    { id: 'all', name: 'All Services', icon: Workflow, count: allServices.length },
+    { id: 'all', name: 'All Services', icon: GitFork, count: allServices.length },
     { id: 'AI & Analytics', name: 'AI & Analytics', icon: Brain, count: allServices.filter(s => s.category === 'AI & Analytics').length },
     { id: 'Quantum Computing', name: 'Quantum Computing', icon: Zap, count: allServices.filter(s => s.category === 'Quantum Computing').length },
     { id: 'Cybersecurity', name: 'Cybersecurity', icon: Shield, count: allServices.filter(s => s.category === 'Cybersecurity').length },

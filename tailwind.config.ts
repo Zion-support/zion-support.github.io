@@ -99,6 +99,16 @@ const config: Config = {
           dark: "#00cc33",
           neon: "#00ff41",
         },
+        // Neon color palette for components
+        "neon-blue": "#00d4ff",
+        "neon-purple": "#8b5cf6",
+        "neon-pink": "#ec4899",
+        "neon-green": "#00ff88",
+        "neon-orange": "#ff8000",
+        "neon-red": "#ff0000",
+        "neon-yellow": "#ffff00",
+        "neon-cyan": "#00ffff",
+        "neon-magenta": "#ff00ff",
       },
       borderRadius: {
         lg: "var(--radius)",
