@@ -371,6 +371,7 @@ export default function InnovativeServicesShowcase2026() {
             </div>
           )}
         </div>
+      </motion.div>
       </section>
 
       {/* Contact Section */}
