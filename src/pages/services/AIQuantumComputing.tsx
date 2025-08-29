@@ -1,6 +1,4 @@
-import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, FileText, BarChart3 } from 'lucide-react';
-
-export default function AIQuantumComputing() {
+import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, FileText, BarChart3 export default function AIQuantumComputing() {
   const features = [
     'AI-powered quantum optimization',
     'Intelligent quantum algorithm management',
@@ -171,4 +169,4 @@ export default function AIQuantumComputing() {
       </section>
     </div>
   );
-}
+}}

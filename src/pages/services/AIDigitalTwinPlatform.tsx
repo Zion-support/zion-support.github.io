@@ -1,6 +1,4 @@
-import { Cpu, TrendingUp, BarChart3, CheckCircle, ArrowRight, ExternalLink, Phone, Mail, DollarSign, Target, Zap, Globe, Database, Monitor, Network, Cloud } from 'lucide-react';
-
-export default function AIDigitalTwinPlatform() {
+import { Cpu, TrendingUp, BarChart3, CheckCircle, ArrowRight, ExternalLink, Phone, Mail, DollarSign, Target, Zap, Globe, Database, Monitor, Network, Cloud export default function AIDigitalTwinPlatform() {
   const features = [
     'AI-powered digital twin creation and management',
     'Real-time IoT sensor data integration',
@@ -41,7 +39,7 @@ export default function AIDigitalTwinPlatform() {
       price: '$3,999/mo',
       features: ['Unlimited digital twins', 'Full AI suite', 'Custom models', 'Dedicated support', 'White-label solutions', 'Advanced integrations'],
       popular: false
-    }
+
   ];
 
   const useCases = [
@@ -288,11 +286,11 @@ export default function AIDigitalTwinPlatform() {
             target="_blank"
             rel="noreferrer"
             className="inline-flex items-center text-blue-600 hover:text-blue-700 font-semibold"
-          >
+
             Visit ziontechgroup.com <ExternalLink className="w-4 h-4 ml-2" />
           </a>
         </div>
       </section>
     </div>
   );
-}
+}}}

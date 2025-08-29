@@ -48,7 +48,6 @@ export interface CloudDevOpsService {
   createdAt: string;
   featured: boolean;
   trending: boolean;
-}
 
 // Zion Tech Group Contact Information
 const zionContact = {
@@ -522,7 +521,7 @@ export const innovativeCloudDevOpsServices2030: CloudDevOpsService[] = [
     createdAt: "2030-01-15T10:00:00.000Z",
     featured: true,
     trending: true
-  }
+
 ];
 
-export default innovativeCloudDevOpsServices2030;
+export default innovativeCloudDevOpsServices2030;}}

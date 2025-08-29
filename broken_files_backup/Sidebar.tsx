@@ -63,8 +63,6 @@ import {
   Info,
   ExternalLink,
   X
-} from 'lucide-react';
-
 interface SidebarItem {
   name: string;
   path: string;
@@ -72,7 +70,6 @@ interface SidebarItem {
   children?: SidebarItem[];
   badge?: string;
   external?: boolean;
-}
 
 export function Sidebar() {
   const [expandedItems, setExpandedItems] = useState<string[]>([]);
@@ -164,7 +161,7 @@ export function Sidebar() {
         { name: 'Business Intelligence', path: '/analytics/bi', icon: PieChart },
         { name: 'Reports', path: '/analytics/reports', icon: BarChart }
       ]
-    }
+
   ];
 
   const toggleItem = (itemName: string) => {
@@ -189,7 +186,7 @@ export function Sidebar() {
             onClick={onClose}
             className="p-2 rounded-md text-gray-300 hover:text-white hover:bg-white/10 transition-colors"
             aria-label="Close sidebar"
-          >
+
             <X className="h-5 w-5" />
           </button>
         </div>
@@ -208,7 +205,7 @@ export function Sidebar() {
                           ? 'bg-blue-600/20 text-white'
                           : 'text-gray-300 hover:text-white hover:bg-white/10'
                       }`}
-                    >
+
                       <div className="flex items-center space-x-3">
                         <item.icon className="h-5 w-5" />
                         <span className="font-medium">{item.name}</span>
@@ -232,7 +229,7 @@ export function Sidebar() {
                                 : 'text-gray-400 hover:text-white hover:bg-white/10'
                             }`}
                             onClick={onClose}
-                          >
+
                             <child.icon className="h-4 w-4" />
                             <span className="text-sm">{child.name}</span>
                           </Link>
@@ -249,7 +246,7 @@ export function Sidebar() {
                         : 'text-gray-300 hover:text-white hover:bg-white/10'
                     }`}
                     onClick={onClose}
-                  >
+
                     <item.icon className="h-5 w-5" />
                     <span className="font-medium">{item.name}</span>
                   </Link>
@@ -267,7 +264,7 @@ export function Sidebar() {
               to="/contact"
               className="block w-full bg-gradient-to-r from-blue-600 to-cyan-600 text-white px-4 py-2 rounded-lg font-semibold hover:from-blue-700 hover:to-cyan-700 transition-all duration-200 text-center"
               onClick={onClose}
-            >
+
               Contact Support
             </Link>
           </div>
@@ -275,13 +272,11 @@ export function Sidebar() {
       </div>
     </div>
   );
-}
 
 interface SidebarProps {
   isOpen: boolean;
   onClose: () => void;
-}
 
 export default function SidebarWrapper({ isOpen, onClose }: SidebarProps) {
   return <Sidebar isOpen={isOpen} onClose={onClose} />;
-}
+}}}}}}

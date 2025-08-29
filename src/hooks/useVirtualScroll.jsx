@@ -43,7 +43,7 @@ export const useVirtualScroll = (items, options) => {
         // Cancel previous RAF
         if (rafRef.current) {
             cancelAnimationFrame(rafRef.current);
-        }
+
         // Use RAF for smooth scrolling
         rafRef.current = requestAnimationFrame(() => {
             setState(prev => ({
@@ -54,7 +54,7 @@ export const useVirtualScroll = (items, options) => {
             // Clear scrolling state after delay
             if (scrollTimeoutRef.current) {
                 clearTimeout(scrollTimeoutRef.current);
-            }
+
             scrollTimeoutRef.current = setTimeout(() => {
                 setState(prev => ({ ...prev, isScrolling: false }));
             }, 150);
@@ -77,17 +77,17 @@ export const useVirtualScroll = (items, options) => {
                 break;
             default:
                 scrollTop = index * itemHeight;
-        }
+
         scrollTop = Math.max(0, Math.min(scrollTop, state.totalHeight - containerHeight));
         if (enableSmoothScrolling) {
             containerRef.current.scrollTo({
                 top: scrollTop,
                 behavior: 'smooth'
             });
-        }
+
         else {
             containerRef.current.scrollTop = scrollTop;
-        }
+
         setState(prev => ({ ...prev, scrollTop }));
     }, [itemHeight, containerHeight, items.length, state.totalHeight, enableSmoothScrolling]);
     // Scroll to top
@@ -125,7 +125,7 @@ export const useVirtualScroll = (items, options) => {
                     detail: { scrollTop, scrollHeight, clientHeight }
                 });
                 window.dispatchEvent(event);
-            }
+
         };
         const container = containerRef.current;
         container.addEventListener('scroll', handleScrollEnd);
@@ -138,10 +138,10 @@ export const useVirtualScroll = (items, options) => {
         return () => {
             if (rafRef.current) {
                 cancelAnimationFrame(rafRef.current);
-            }
+
             if (scrollTimeoutRef.current) {
                 clearTimeout(scrollTimeoutRef.current);
-            }
+
         };
     }, []);
     // Container props
@@ -161,7 +161,7 @@ export const useVirtualScroll = (items, options) => {
             height: state.totalHeight,
             position: 'relative',
             transform: `translateY(${virtualScrollParams.offsetY}px)`
-        }
+
     };
     return {
         virtualItems: state.visibleItems,
@@ -186,7 +186,7 @@ export const useVirtualScrollWithSearch = (items, searchQuery, searchFields, opt
             setFilteredItems(items);
             setSearchResults({ indices: [], highlights: new Map() });
             return;
-        }
+
         const query = searchQuery.toLowerCase();
         const results = [];
         const indices = [];
@@ -204,15 +204,15 @@ export const useVirtualScrollWithSearch = (items, searchQuery, searchFields, opt
                     while (pos !== -1) {
                         highlightPositions.push(pos);
                         pos = value.indexOf(query, pos + 1);
-                    }
+
                     itemHighlights.push(...highlightPositions.map(p => `${String(field)}:${p}`));
-                }
+
             });
             if (isMatch) {
                 results.push(item);
                 indices.push(index);
                 highlights.set(index, itemHighlights);
-            }
+
         });
         setFilteredItems(results);
         setSearchResults({ indices, highlights });
@@ -247,7 +247,7 @@ export const useDynamicVirtualScroll = (items, getItemHeight, options) => {
         let cumulative = 0;
         for (let i = 0; i < index; i++) {
             cumulative += itemHeights.get(i) || 0;
-        }
+
         return cumulative;
     }, [itemHeights]);
     // Find index from scroll position
@@ -257,9 +257,9 @@ export const useDynamicVirtualScroll = (items, getItemHeight, options) => {
             const height = itemHeights.get(i) || 0;
             if (cumulative + height > scrollTop) {
                 return i;
-            }
+
             cumulative += height;
-        }
+
         return items.length - 1;
     }, [items.length, itemHeights]);
     // Enhanced virtual scroll state
@@ -293,3 +293,4 @@ export const useDynamicVirtualScroll = (items, getItemHeight, options) => {
         state
     };
 };
+}}}}}}}}}}}}}}}}

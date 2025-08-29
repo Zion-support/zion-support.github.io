@@ -1,6 +1,4 @@
-import { BarChart3, Activity, Gauge, ArrowRight, Check, ExternalLink, Phone, Mail } from 'lucide-react';
-
-export default function WebsiteAnalytics() {
+import { BarChart3, Activity, Gauge, ArrowRight, Check, ExternalLink, Phone, Mail export default function WebsiteAnalytics() {
   const features = [
     'Privacy-first tracking (cookieless option)',
     'Funnels, cohorts, and retention analysis',
@@ -91,5 +89,4 @@ export default function WebsiteAnalytics() {
       </section>
     </div>
   );
-}
-
+}}

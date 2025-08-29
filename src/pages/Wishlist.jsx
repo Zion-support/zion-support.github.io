@@ -17,11 +17,11 @@ export default function WishlistPage() {
         // Redirect if not authenticated and auth loading is complete
         if (!isAuthLoading && !user) {
             router.push('/login');
-        }
+
     }, [user, isAuthLoading, router]);
     if (isAuthLoading || !user) { // Show loading or null while auth check or redirect happens
         return null; // Or a loading spinner
-    }
+
     const { items, dispatch } = useCart();
     const addToCart = (item) => {
         const stored = safeStorage.getItem(getCartKey(user?.id));
@@ -45,7 +45,7 @@ export default function WishlistPage() {
                 if (fav.item_type === 'talent') {
                     const talent = talentMap[fav.item_id];
                     return talent ? (<TalentCard key={fav.item_id} talent={talent} onMessage={() => { /* empty */ }} onBook={() => { /* empty */ }} isAuthenticated={true}/>) : null;
-                }
+
                 const item = productMap[fav.item_id];
                 return item ? (<div key={fav.item_id} className="relative">
                 <ProductListingCard listing={item}/>
@@ -56,4 +56,4 @@ export default function WishlistPage() {
             })}
         </div>)}
     </div>);
-}
+}}}}

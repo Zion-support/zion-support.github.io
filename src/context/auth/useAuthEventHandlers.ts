@@ -9,7 +9,6 @@ interface User {
   isEmailVerified?: boolean;
   createdAt?: string;
   updatedAt?: string;
-}
 
 export const useAuthEventHandlers = (
   setUser: (user: User | null) => void,
@@ -29,4 +28,4 @@ export const useAuthEventHandlers = (
     handleSignedIn,
     handleSignedOut
   };
-};
+};}

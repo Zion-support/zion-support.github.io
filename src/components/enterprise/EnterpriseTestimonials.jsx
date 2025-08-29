@@ -1,6 +1,5 @@
 import React from "react";
-import { Quote } from "lucide-react";
-import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious, } from "@/components/ui/carousel";
+import { Quote import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious, } from "@/components/ui/carousel";
 const testimonials = [
     {
         quote: "Implementing Zion's Enterprise solution has reduced our time-to-hire by 40% and significantly improved the quality of candidates we're seeing.",
@@ -65,4 +64,4 @@ export function EnterpriseTestimonials() {
         </Carousel>
       </div>
     </section>);
-}
+}}

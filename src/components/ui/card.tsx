@@ -3,7 +3,6 @@ import React from 'react';
 interface CardProps {
   children: React.ReactNode;
   className?: string;
-}
 
 const Card: React.FC<CardProps> = ({ children, className = '' }) => {
   return (
@@ -53,4 +52,5 @@ const CardFooter: React.FC<CardProps> = ({ children, className = '' }) => {
   );
 };
 
-export { Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter };
+export { Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter </Card></Card></Card></Card></Card></Card>};
+}

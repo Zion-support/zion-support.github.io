@@ -1,6 +1,5 @@
 import React from 'react';
-import { Brain, Zap, Shield, Users, Cpu, Database, Lightbulb, BarChart3, Network, Link } from 'lucide-react';
-const AIAutonomousEcosystem = () => {
+import { Brain, Zap, Shield, Users, Cpu, Database, Lightbulb, BarChart3, Network, Link const AIAutonomousEcosystem = () => {
     const ecosystemFeatures = [
         {
             icon: Network,
@@ -25,7 +24,7 @@ const AIAutonomousEcosystem = () => {
             title: "Performance Optimization",
             description: "Optimize performance across all ecosystem components",
             features: ["Load balancing", "Resource management", "Performance monitoring", "Auto-scaling"]
-        }
+
     ];
     const ecosystemComponents = [
         {
@@ -63,7 +62,7 @@ const AIAutonomousEcosystem = () => {
             description: "Centralized control and monitoring system",
             icon: Cpu,
             capabilities: ["System monitoring", "Configuration management", "User administration", "Deployment control"]
-        }
+
     ];
     const benefits = [
         "Unified AI strategy across all business units",
@@ -103,7 +102,7 @@ const AIAutonomousEcosystem = () => {
             phase: "Deployment",
             description: "Production deployment and user training",
             duration: "2-4 weeks"
-        }
+
     ];
     return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       {/* Hero Section */}
@@ -281,3 +280,4 @@ const AIAutonomousEcosystem = () => {
     </div>);
 };
 export default AIAutonomousEcosystem;
+}}}}

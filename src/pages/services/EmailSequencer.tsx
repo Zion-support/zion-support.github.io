@@ -1,6 +1,4 @@
-import { Mail, Zap, Calendar, BarChart3, Check, Link as LinkIcon } from 'lucide-react';
-
-export default function EmailSequencer() {
+import { Mail, Zap, Calendar, BarChart3, Check, Link as LinkIcon export default function EmailSequencer() {
 	const features = [
 		'Multi-step sequences with A/B testing',
 		'AI subject line and body suggestions',
@@ -82,5 +80,4 @@ export default function EmailSequencer() {
 			</section>
 		</div>
 	);
-}
-
+}}

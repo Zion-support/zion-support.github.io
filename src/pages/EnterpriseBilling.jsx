@@ -13,9 +13,9 @@ export default function EnterpriseBilling() {
     if (!hasBillingAccess) {
         if (typeof window !== 'undefined') {
             navigate('/unauthorized');
-        }
+
         return null;
-    }
+
     return (<ProtectedRoute>
       <SEO title="Enterprise Billing - Zion AI Marketplace" description="Manage your subscription, view invoice history, and download billing statements."/>
 
@@ -24,4 +24,4 @@ export default function EnterpriseBilling() {
       </main>
 
     </ProtectedRoute>);
-}
+}}}

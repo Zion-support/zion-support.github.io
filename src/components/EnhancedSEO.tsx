@@ -30,7 +30,6 @@ interface SEOProps {
   favicon?: string;
   msTileColor?: string;
   msConfig?: string;
-}
 
 export const EnhancedSEO: React.FC<SEOProps> = ({
   title,
@@ -92,7 +91,7 @@ export const EnhancedSEO: React.FC<SEOProps> = ({
       '@type': 'Offer',
       description: 'AI-Powered Business Solutions',
       category: 'Technology Services'
-    }
+
   }), []);
 
   // Merge custom structured data with defaults
@@ -102,7 +101,7 @@ export const EnhancedSEO: React.FC<SEOProps> = ({
         ...defaultStructuredData,
         ...structuredData
       };
-    }
+
     return defaultStructuredData;
   }, [structuredData, defaultStructuredData]);
 
@@ -125,7 +124,7 @@ export const EnhancedSEO: React.FC<SEOProps> = ({
         const existingLink = document.querySelector(`link[href="${link.href}"]`);
         if (existingLink) {
           existingLink.remove();
-        }
+
       });
     };
   }, [image]);
@@ -208,4 +207,4 @@ export const EnhancedSEO: React.FC<SEOProps> = ({
       <link rel="preconnect" href="https://cdn.jsdelivr.net" />
     </Helmet>
   );
-};
+};}}}}

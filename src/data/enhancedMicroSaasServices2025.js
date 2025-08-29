@@ -639,7 +639,7 @@ export const ENHANCED_MICRO_SAAS_SERVICES_2025 = [
     },
     competitors: ["Zillow", "Redfin", "Realtor.com", "CoreLogic"],
     marketSize: "$4.2 billion by 2025"
-  }
+
 ];
 // Pricing tiers for different service levels
 export const SERVICE_PRICING_TIERS = {
@@ -657,7 +657,7 @@ export const SERVICE_PRICING_TIERS = {
     name: "Enterprise",
     features: ["Full feature set", "24/7 dedicated support", "Custom development", "White-label options", "SLA guarantees", "On-premise deployment"],
     priceRange: "$399 - $1,999/month"
-  }
+
 };
 // Service categories for easy filtering
 export const SERVICE_CATEGORIES = [
@@ -679,3 +679,4 @@ export const ZION_TECH_GROUP_CONTACT = {
   website: "https://ziontechgroup.com",
   address: "364 E Main St STE 1008, Middletown DE 19709"
 };
+}}

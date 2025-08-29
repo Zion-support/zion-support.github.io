@@ -38,7 +38,7 @@ export interface Revolutionary2025SpecializedITAIService {
   customers: number;
   rating: number;
   reviews: number;
-}
+
 const contact = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
@@ -468,6 +468,6 @@ export const revolutionary2025SpecializedITAIServices: Revolutionary2025Speciali
     customers: 480,
     rating: 4.7,
     reviews: 267
-  }
+
 ];
-export default revolutionary2025SpecializedITAIServices;
+export default revolutionary2025SpecializedITAIServices;}}

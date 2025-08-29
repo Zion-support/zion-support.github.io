@@ -38,7 +38,7 @@ export interface ComprehensiveService {
   customers: number;
   rating: number;
   reviews: number;
-}
+
 const contact = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
@@ -810,5 +810,5 @@ export const comprehensiveServicesExpansion: ComprehensiveService[] = [
     customers: 234,
     rating: 4.8,
     reviews: 178
-  }
-];
+
+];}}

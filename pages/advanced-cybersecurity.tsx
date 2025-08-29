@@ -34,7 +34,7 @@ const AdvancedCybersecurityServices: NextPage = () => {
         return parseInt(b.roi.split('%')[0]) - parseInt(a.roi.split('%')[0]);
       default:
         return 0;
-    }
+
   });
 
   const getInnovationColor = (level: string) => {
@@ -43,7 +43,7 @@ const AdvancedCybersecurityServices: NextPage = () => {
       case 'Breakthrough': return 'from-purple-500 to-indigo-600';
       case 'Advanced': return 'from-blue-500 to-cyan-600';
       default: return 'from-gray-500 to-gray-600';
-    }
+
   };
 
   const getBadgeColor = (badge: string) => {
@@ -52,7 +52,7 @@ const AdvancedCybersecurityServices: NextPage = () => {
       case 'Breakthrough': return 'bg-gradient-to-r from-purple-500 to-indigo-600';
       case 'Advanced': return 'bg-gradient-to-r from-blue-500 to-cyan-600';
       default: return 'bg-gradient-to-r from-gray-500 to-gray-600';
-    }
+
   };
 
   const getSecurityIcon = (category: string) => {
@@ -63,7 +63,7 @@ const AdvancedCybersecurityServices: NextPage = () => {
       case 'Endpoint Security': return '💻';
       case 'Cloud Security': return '☁️';
       default: return '🛡️';
-    }
+
   };
 
   return (
@@ -138,7 +138,7 @@ const AdvancedCybersecurityServices: NextPage = () => {
             <div
               key={index}
               className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-blue-400/20 text-center hover:border-blue-400/50 transition-all duration-300"
-            >
+
               <div className={`w-16 h-16 bg-gradient-to-r ${stat.color} rounded-full flex items-center justify-center mx-auto mb-4`}>
                 <span className="text-3xl">{stat.icon}</span>
               </div>
@@ -171,7 +171,7 @@ const AdvancedCybersecurityServices: NextPage = () => {
                 value={selectedCategory}
                 onChange={(e) => setSelectedCategory(e.target.value)}
                 className="w-full bg-white/10 border border-blue-400/30 rounded-xl px-4 py-3 text-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-400/50 focus:border-blue-400/50 appearance-none"
-              >
+
                 {categories.map((category) => (
                   <option key={category.id} value={category.id}>
                     {category.name}
@@ -189,7 +189,7 @@ const AdvancedCybersecurityServices: NextPage = () => {
                 value={sortBy}
                 onChange={(e) => setSortBy(e.target.value)}
                 className="w-full bg-white/10 border border-blue-400/30 rounded-xl px-4 py-3 text-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-400/50 focus:border-blue-400/50 appearance-none"
-              >
+
                 <option value="innovation">Sort by Innovation Level</option>
                 <option value="price">Sort by Price</option>
                 <option value="roi">Sort by ROI</option>
@@ -212,7 +212,7 @@ const AdvancedCybersecurityServices: NextPage = () => {
                   ? `bg-gradient-to-r ${category.color} text-white shadow-lg`
                   : 'bg-white/10 text-gray-300 hover:bg-white/20 border border-white/20'
               }`}
-            >
+
               <span className="mr-2">{getSecurityIcon(category.name)}</span>
               {category.name}
             </button>
@@ -226,7 +226,7 @@ const AdvancedCybersecurityServices: NextPage = () => {
               key={service.id}
               className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-blue-400/20 hover:border-blue-400/50 transition-all duration-300 hover:transform hover:scale-105"
               style={{ animationDelay: `${index * 100}ms` }}
-            >
+
               {/* Service Header */}
               <div className="flex items-start justify-between mb-4">
                 <div className="text-4xl">{service.icon}</div>
@@ -310,7 +310,7 @@ const AdvancedCybersecurityServices: NextPage = () => {
               <a
                 href={service.link}
                 className="w-full bg-gradient-to-r from-blue-500 to-purple-600 text-white text-center py-3 rounded-xl font-semibold hover:from-blue-600 hover:to-purple-700 transition-all duration-300 block"
-              >
+
                 Learn More
               </a>
             </div>
@@ -329,13 +329,13 @@ const AdvancedCybersecurityServices: NextPage = () => {
             <a
               href="/contact"
               className="bg-gradient-to-r from-blue-500 to-purple-600 text-white px-8 py-4 rounded-xl font-semibold text-lg hover:from-blue-600 hover:to-purple-700 transition-all duration-300"
-            >
+
               Get Security Assessment
             </a>
             <a
               href="tel:+13024640950"
               className="bg-white/10 text-white px-8 py-4 rounded-xl font-semibold text-lg border border-white/20 hover:bg-white/20 transition-all duration-300"
-            >
+
               📞 Call +1 (302) 464-0950
             </a>
           </div>
@@ -345,4 +345,4 @@ const AdvancedCybersecurityServices: NextPage = () => {
   );
 };
 
-export default AdvancedCybersecurityServices;
+export default AdvancedCybersecurityServices;}}}}

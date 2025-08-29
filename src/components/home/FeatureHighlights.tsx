@@ -14,8 +14,6 @@ import {
   Award,
   Clock,
   Heart
-} from 'lucide-react';
-
 const highlights = [
   {
     icon: Brain,
@@ -43,7 +41,7 @@ const highlights = [
     color: 'from-zion-blue to-zion-blue-dark',
     bgColor: 'bg-zion-blue/10',
     borderColor: 'border-zion-blue/20'
-  }
+
 ];
 
 const features = [
@@ -94,7 +92,7 @@ const features = [
     color: 'from-zion-pink to-zion-pink-dark',
     bgColor: 'bg-zion-pink/10',
     iconColor: 'text-zion-pink'
-  }
+
 ];
 
 const achievements = [
@@ -116,8 +114,8 @@ export function FeatureHighlights() {
       transition: {
         staggerChildren: 0.15,
         delayChildren: 0.1
-      }
-    }
+
+
   };
 
   const itemVariants = {
@@ -129,8 +127,8 @@ export function FeatureHighlights() {
       transition: {
         duration: 0.6,
         ease: "easeOut"
-      }
-    }
+
+
   };
 
   const achievementVariants = {
@@ -139,7 +137,7 @@ export function FeatureHighlights() {
       opacity: 1,
       scale: 1,
       transition: { duration: 0.5 }
-    }
+
   };
 
   const techVariants = {
@@ -148,7 +146,7 @@ export function FeatureHighlights() {
       opacity: 1,
       x: 0,
       transition: { duration: 0.5 }
-    }
+
   };
 
   return (
@@ -167,7 +165,7 @@ export function FeatureHighlights() {
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
           className="text-center mb-20"
-        >
+
           <div className="inline-flex items-center gap-2 px-4 py-2 bg-zion-purple/10 border border-zion-purple/20 rounded-full text-zion-purple text-sm font-medium mb-6">
             <Award className="w-4 h-4" />
             <span>Why Choose Zion</span>
@@ -190,7 +188,7 @@ export function FeatureHighlights() {
           whileInView="visible"
           viewport={{ once: true }}
           className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-20"
-        >
+
           {highlights.map((highlight, index) => (
             <motion.div
               key={index}
@@ -201,7 +199,7 @@ export function FeatureHighlights() {
                 transition: { duration: 0.3 }
               }}
               className="group"
-            >
+
               <div className={`h-full p-8 rounded-3xl ${highlight.bgColor} ${highlight.borderColor} border-2 hover:border-opacity-40 transition-all duration-300 backdrop-blur-sm relative overflow-hidden`}>
                 {/* Background gradient overlay */}
                 <div className={`absolute inset-0 bg-gradient-to-br ${highlight.color} opacity-5 group-hover:opacity-10 transition-opacity duration-300`}></div>
@@ -243,7 +241,7 @@ export function FeatureHighlights() {
           whileInView="visible"
           viewport={{ once: true }}
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-20"
-        >
+
           {features.map((feature, index) => (
             <motion.div
               key={index}
@@ -254,7 +252,7 @@ export function FeatureHighlights() {
                 transition: { duration: 0.3 }
               }}
               className="group"
-            >
+
               <div className="bg-slate-800/50 border border-white/10 rounded-xl p-6 hover:border-white/20 transition-all duration-300">
                 <div className={`w-12 h-12 bg-gradient-to-r ${feature.color} rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300`}>
                   <feature.icon className={`w-6 h-6 ${feature.iconColor}`} />
@@ -279,7 +277,7 @@ export function FeatureHighlights() {
           whileInView="visible"
           viewport={{ once: true }}
           className="text-center mb-20"
-        >
+
           <h3 className="text-2xl font-bold text-white mb-12">
             Trusted by Industry Leaders
           </h3>
@@ -290,7 +288,7 @@ export function FeatureHighlights() {
                 key={index}
                 variants={achievementVariants}
                 className="text-center"
-              >
+
                 <div className={`inline-flex p-4 rounded-full bg-white/5 mb-4`}>
                   <achievement.icon className={`w-8 h-8 ${achievement.color}`} />
                 </div>
@@ -312,7 +310,7 @@ export function FeatureHighlights() {
           whileInView="visible"
           viewport={{ once: true }}
           className="text-center mb-20"
-        >
+
           <h3 className="text-2xl font-bold text-white mb-8">
             Cutting-Edge Technology Stack
           </h3>
@@ -320,13 +318,13 @@ export function FeatureHighlights() {
           <motion.div
             variants={techVariants}
             className="flex flex-wrap justify-center gap-4"
-          >
+
             {technologies.map((tech, index) => (
               <motion.div
                 key={index}
                 whileHover={{ scale: 1.05 }}
                 className="px-4 py-2 bg-zion-cyan/10 border border-zion-cyan/20 rounded-full text-zion-cyan text-sm font-medium hover:bg-zion-cyan/20 transition-colors duration-300"
-              >
+
                 {tech}
               </motion.div>
             ))}
@@ -340,7 +338,7 @@ export function FeatureHighlights() {
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
           className="text-center"
-        >
+
           <div className="bg-gradient-to-r from-zion-purple/10 to-zion-cyan/10 border border-white/10 rounded-3xl p-12 backdrop-blur-sm">
             <h3 className="text-3xl font-bold text-white mb-4">
               Ready to Experience the Future?
@@ -351,7 +349,7 @@ export function FeatureHighlights() {
             <a
               href="/contact"
               className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-zion-purple to-zion-cyan text-white font-semibold rounded-lg hover:from-zion-purple-dark hover:to-zion-cyan-dark transition-all duration-300 shadow-lg hover:shadow-xl"
-            >
+
               Get Started Today
               <ArrowRight className="w-5 h-5 ml-2" />
             </a>
@@ -360,4 +358,4 @@ export function FeatureHighlights() {
       </div>
     </section>
   );
-}
+}}}}}}}}}}

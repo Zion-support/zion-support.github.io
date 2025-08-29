@@ -1,6 +1,5 @@
 import React, { useState } from "react";
-import { MessageCircle } from "lucide-react";
-import { Button } from "@/components/ui/button";
+import { MessageCircle import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Avatar, AvatarFallback } from "@/components/ui/avatar";
@@ -102,4 +101,5 @@ export const CommunityDiscussion = () => {
         🚀 Stay engaged! Top contributors are regularly featured on the homepage.
       </div>
     </div>);
-};
+</Card></Card>};
+}

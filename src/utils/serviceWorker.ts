@@ -6,12 +6,12 @@ export function registerServiceWorker() {
       const isDev = import.meta.env.DEV;
       const swUrl = isDev ? '/sw-dev.js' : '/sw.js';
 
-      // console.log(`Registering service worker: ${swUrl} (${isDev ? 'dev' : 'prod'})`);
+      // // // console.log(`Registering service worker: ${swUrl} (${isDev ? 'dev' : 'prod'})`);
 
       navigator.serviceWorker
         .register(swUrl)
         .then((registration) => {
-          // console.log('SW registered: ', registration);
+          // // // console.log('SW registered: ', registration);
 
           // Handle updates
           registration.addEventListener('updatefound', () => {
@@ -20,18 +20,17 @@ export function registerServiceWorker() {
               newWorker.addEventListener('statechange', () => {
                 if (newWorker.state === 'installed' && navigator.serviceWorker.controller) {
                   // New content is available
-                  // console.log('New content is available; please refresh.');
-                }
+                  // // // console.log('New content is available; please refresh.');
+
               });
-            }
+
           });
         })
         .catch((registrationError) => {
-          // console.error('SW registration failed: ', registrationError);
+          // // // console.error('SW registration failed: ', registrationError);
         });
     });
-  }
-}
+
 
 export function unregisterServiceWorker() {
   if ('serviceWorker' in navigator) {
@@ -40,7 +39,6 @@ export function unregisterServiceWorker() {
         registration.unregister();
       })
       .catch((error) => {
-        // console.error(error.message);
+        // // // console.error(error.message);
       });
-  }
-}
+}}}}}}

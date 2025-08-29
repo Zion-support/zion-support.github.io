@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { Brain, Cpu, Cloud, Zap, Globe, CheckCircle, Star, Phone, Mail, MapPin, ExternalLink } from 'lucide-react';
-import { SEOHead } from '../components/SEOHead';
+import { Brain, Cpu, Cloud, Zap, Globe, CheckCircle, Star, Phone, Mail, MapPin, ExternalLink import { SEOHead } from '../components/SEOHead';
 import { INNOVATIVE_NEW_SERVICES_2025 } from '../data/innovativeNewServices2025';
 import { SPECIALIZED_IT_SERVICES_2025 } from '../data/specializedITServices2025';
 const InnovativeNewServices2025 = () => {
@@ -37,7 +36,7 @@ const InnovativeNewServices2025 = () => {
                 return Cloud;
             default:
                 return Zap;
-        }
+
     };
     const getCategoryColor = (category) => {
         switch (category) {
@@ -51,7 +50,7 @@ const InnovativeNewServices2025 = () => {
                 return 'from-orange-500 to-red-600';
             default:
                 return 'from-gray-500 to-gray-600';
-        }
+
     };
     return (<div className="min-h-screen bg-gradient-to-br from-gray-900 via-black to-blue-900 text-white">
       <SEOHead title="Innovative New Services 2025 - Zion Tech Group" description="Discover our cutting-edge AI solutions, 5G infrastructure, edge computing, and autonomous systems. Transform your business with next-generation technology." keywords="AI solutions 2025, 5G enterprise, edge computing, autonomous systems, quantum technology, Zion Tech Group" type="website" url="https://ziontechgroup.com/innovative-new-services-2025"/>
@@ -247,3 +246,4 @@ const InnovativeNewServices2025 = () => {
     </div>);
 };
 export default InnovativeNewServices2025;
+}}}

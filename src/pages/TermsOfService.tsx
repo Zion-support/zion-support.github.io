@@ -15,8 +15,6 @@ import {
   Lock,
   Eye,
   Database
-} from 'lucide-react';
-
 const TermsOfService: React.FC = () => {
   const lastUpdated = 'January 15, 2024';
   const companyName = 'Zion Tech Group';
@@ -34,7 +32,7 @@ const TermsOfService: React.FC = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-          >
+
             <div className="flex justify-center mb-6">
               <div className="w-20 h-20 bg-zion-cyan/20 rounded-2xl flex items-center justify-center">
                 <FileText className="w-10 h-10 text-zion-cyan" />
@@ -71,7 +69,7 @@ const TermsOfService: React.FC = () => {
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
               className="mb-12"
-            >
+
               <h2 className="text-3xl font-bold text-white mb-6 flex items-center gap-3">
                 <Info className="w-8 h-8 text-zion-cyan" />
                 Agreement to Terms
@@ -96,7 +94,7 @@ const TermsOfService: React.FC = () => {
               transition={{ duration: 0.8, delay: 0.1 }}
               viewport={{ once: true }}
               className="mb-12"
-            >
+
               <h2 className="text-3xl font-bold text-white mb-6 flex items-center gap-3">
                 <Shield className="w-8 h-8 text-zion-cyan" />
                 Description of Services
@@ -141,7 +139,7 @@ const TermsOfService: React.FC = () => {
               transition={{ duration: 0.8, delay: 0.2 }}
               viewport={{ once: true }}
               className="mb-12"
-            >
+
               <h2 className="text-3xl font-bold text-white mb-6 flex items-center gap-3">
                 <Users className="w-8 h-8 text-zion-cyan" />
                 User Accounts and Responsibilities
@@ -182,7 +180,7 @@ const TermsOfService: React.FC = () => {
               transition={{ duration: 0.8, delay: 0.3 }}
               viewport={{ once: true }}
               className="mb-12"
-            >
+
               <h2 className="text-3xl font-bold text-white mb-6 flex items-center gap-3">
                 <Shield className="w-8 h-8 text-zion-cyan" />
                 Acceptable Use Policy
@@ -231,7 +229,7 @@ const TermsOfService: React.FC = () => {
               transition={{ duration: 0.8, delay: 0.4 }}
               viewport={{ once: true }}
               className="mb-12"
-            >
+
               <h2 className="text-3xl font-bold text-white mb-6 flex items-center gap-3">
                 <Lock className="w-8 h-8 text-zion-cyan" />
                 Intellectual Property Rights
@@ -275,7 +273,7 @@ const TermsOfService: React.FC = () => {
               transition={{ duration: 0.8, delay: 0.5 }}
               viewport={{ once: true }}
               className="mb-12"
-            >
+
               <h2 className="text-3xl font-bold text-white mb-6 flex items-center gap-3">
                 <Eye className="w-8 h-8 text-zion-cyan" />
                 Privacy and Data Protection
@@ -301,7 +299,7 @@ const TermsOfService: React.FC = () => {
               transition={{ duration: 0.8, delay: 0.6 }}
               viewport={{ once: true }}
               className="mb-12"
-            >
+
               <h2 className="text-3xl font-bold text-white mb-6 flex items-center gap-3">
                 <Shield className="w-8 h-8 text-zion-cyan" />
                 Limitation of Liability
@@ -342,7 +340,7 @@ const TermsOfService: React.FC = () => {
               transition={{ duration: 0.8, delay: 0.7 }}
               viewport={{ once: true }}
               className="mb-12"
-            >
+
               <h2 className="text-3xl font-bold text-white mb-6 flex items-center gap-3">
                 <Info className="w-8 h-8 text-zion-cyan" />
                 Disclaimers
@@ -386,7 +384,7 @@ const TermsOfService: React.FC = () => {
               transition={{ duration: 0.8, delay: 0.8 }}
               viewport={{ once: true }}
               className="mb-12"
-            >
+
               <h2 className="text-3xl font-bold text-white mb-6 flex items-center gap-3">
                 <Shield className="w-8 h-8 text-zion-cyan" />
                 Indemnification
@@ -424,7 +422,7 @@ const TermsOfService: React.FC = () => {
               transition={{ duration: 0.8, delay: 0.9 }}
               viewport={{ once: true }}
               className="mb-12"
-            >
+
               <h2 className="text-3xl font-bold text-white mb-6 flex items-center gap-3">
                 <Calendar className="w-8 h-8 text-zion-cyan" />
                 Termination
@@ -450,7 +448,7 @@ const TermsOfService: React.FC = () => {
               transition={{ duration: 0.8, delay: 1.0 }}
               viewport={{ once: true }}
               className="mb-12"
-            >
+
               <h2 className="text-3xl font-bold text-white mb-6 flex items-center gap-3">
                 <Globe className="w-8 h-8 text-zion-cyan" />
                 Governing Law and Dispute Resolution
@@ -476,7 +474,7 @@ const TermsOfService: React.FC = () => {
               transition={{ duration: 0.8, delay: 1.1 }}
               viewport={{ once: true }}
               className="mb-12"
-            >
+
               <h2 className="text-3xl font-bold text-white mb-6 flex items-center gap-3">
                 <Calendar className="w-8 h-8 text-zion-cyan" />
                 Changes to These Terms
@@ -501,7 +499,7 @@ const TermsOfService: React.FC = () => {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 1.2 }}
               viewport={{ once: true }}
-            >
+
               <h2 className="text-3xl font-bold text-white mb-6 flex items-center gap-3">
                 <Mail className="w-8 h-8 text-zion-cyan" />
                 Contact Information
@@ -545,4 +543,4 @@ const TermsOfService: React.FC = () => {
   );
 };
 
-export default TermsOfService;
+export default TermsOfService;}

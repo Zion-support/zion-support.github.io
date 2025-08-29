@@ -38,7 +38,7 @@ export interface EnterpriseITService2030 {
   customers: number;
   rating: number;
   reviews: number;
-}
+
 export const enterpriseITServices2030: EnterpriseITService2030[] = [
   // Autonomous DevOps Platform 2030
   {
@@ -299,5 +299,5 @@ export const enterpriseITServices2030: EnterpriseITService2030[] = [
     customers: 12,
     rating: 5.0,
     reviews: 8
-  }
-];
+
+];}}

@@ -30,7 +30,7 @@ export const cuttingEdgeAIServices2025 = [
         price: 2499,
         period: 'month',
         features: ['Custom consciousness models', 'White-label solution', 'Dedicated support', 'On-premise deployment', '24/7 monitoring']
-      }
+
     },
     category: 'AI Consciousness',
     tags: ['AI', 'Consciousness', 'Emotional Intelligence', 'Self-Awareness', 'Human-AI Collaboration'],
@@ -83,7 +83,7 @@ export const cuttingEdgeAIServices2025 = [
         price: 4999,
         period: 'month',
         features: ['Custom quantum-AI development', 'White-label solution', 'Dedicated support', 'On-premise deployment', '24/7 monitoring']
-      }
+
     },
     category: 'Quantum AI',
     tags: ['Quantum Computing', 'AI', 'Machine Learning', 'Pattern Recognition', 'Hybrid Computing'],
@@ -136,7 +136,7 @@ export const cuttingEdgeAIServices2025 = [
         price: 3999,
         period: 'month',
         features: ['Full autonomous ecosystem', 'White-label solution', 'Dedicated support', 'Custom development', '24/7 monitoring']
-      }
+
     },
     category: 'AI Autonomy',
     tags: ['AI', 'Autonomous Systems', 'Self-Management', 'Machine Learning', 'Automation'],
@@ -189,7 +189,7 @@ export const cuttingEdgeAIServices2025 = [
         price: 1999,
         period: 'month',
         features: ['Full ethics platform', 'White-label solution', 'Dedicated support', 'Custom development', '24/7 monitoring']
-      }
+
     },
     category: 'AI Ethics',
     tags: ['AI Ethics', 'Governance', 'Bias Detection', 'Fairness', 'Compliance'],
@@ -242,7 +242,7 @@ export const cuttingEdgeAIServices2025 = [
         price: 1499,
         period: 'month',
         features: ['Full creative studio', 'White-label solution', 'Dedicated support', 'Custom development', '24/7 monitoring']
-      }
+
     },
     category: 'AI Creativity',
     tags: ['AI', 'Creativity', 'Content Generation', 'Design', 'Innovation'],
@@ -263,5 +263,5 @@ export const cuttingEdgeAIServices2025 = [
     ],
     integrations: ['Creative software', 'Design tools', 'Marketing platforms', 'Content management systems', 'Collaboration tools'],
     compliance: ['SOC2', 'ISO 27001', 'GDPR', 'CCPA', 'Intellectual property protection']
-  }
-];
+
+];}}}}}}

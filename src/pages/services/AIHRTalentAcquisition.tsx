@@ -1,7 +1,5 @@
 import React from 'react';
-import { Users, BarChart3, ArrowRight, Check, ExternalLink, Phone, Mail, Search, TrendingUp, Zap, Target, Clock, Briefcase, Globe } from 'lucide-react';
-
-export default function AIHRTalentAcquisition() {
+import { Users, BarChart3, ArrowRight, Check, ExternalLink, Phone, Mail, Search, TrendingUp, Zap, Target, Clock, Briefcase, Globe export default function AIHRTalentAcquisition() {
   const features = [
     'AI-powered candidate sourcing and matching',
     'Intelligent resume parsing and skill extraction',
@@ -170,4 +168,4 @@ export default function AIHRTalentAcquisition() {
       </section>
     </div>
   );
-}
+}}

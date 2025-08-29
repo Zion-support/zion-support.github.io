@@ -56,8 +56,6 @@ import {
   Eye as EyeIcon,
   Sparkles as SparklesIcon,
   Zap as ZapIcon
-} from 'lucide-react';
-
 const InnovativeServicesShowcase2028 = () => {
   const featuredServices = [
     {
@@ -203,7 +201,7 @@ const InnovativeServicesShowcase2028 = () => {
       ],
       useCases: ['Software Development', 'DevOps Teams', 'Code Quality Assurance', 'Security Auditing'],
       color: 'cyan'
-    }
+
   ];
 
   const serviceCategories = [
@@ -242,7 +240,7 @@ const InnovativeServicesShowcase2028 = () => {
       description: 'Next-generation technology solutions',
       icon: <Sparkles className="w-8 h-8 text-cyan-500" />,
       count: 6
-    }
+
   ];
 
   const getColorClasses = (color: string) => {
@@ -279,7 +277,7 @@ const InnovativeServicesShowcase2028 = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="mb-8"
-          >
+
             <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-blue-500/10 to-purple-500/10 border border-blue-500/20 text-blue-400 text-sm font-medium mb-6">
               <Sparkles className="w-4 h-4 mr-2" />
               Innovative Services 2028
@@ -299,7 +297,7 @@ const InnovativeServicesShowcase2028 = () => {
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 className="px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-500 text-white font-semibold rounded-lg hover:from-blue-600 hover:to-purple-600 transition-all duration-300 flex items-center justify-center"
-              >
+
                 Explore Services
                 <ArrowRight className="w-5 h-5 ml-2" />
               </motion.button>
@@ -307,7 +305,7 @@ const InnovativeServicesShowcase2028 = () => {
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 className="px-8 py-4 border border-blue-500/30 text-blue-400 font-semibold rounded-lg hover:bg-blue-500/10 transition-all duration-300"
-              >
+
                 Schedule Demo
               </motion.button>
             </div>
@@ -323,7 +321,7 @@ const InnovativeServicesShowcase2028 = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
-          >
+
             <h2 className="text-4xl font-bold text-white mb-4">
               Comprehensive Service Categories
             </h2>
@@ -340,7 +338,7 @@ const InnovativeServicesShowcase2028 = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
                 className="bg-slate-800/50 backdrop-blur-sm border border-slate-700/50 rounded-xl p-6 hover:border-blue-500/30 transition-all duration-300 cursor-pointer group"
-              >
+
                 <div className="flex items-center justify-between mb-4">
                   {category.icon}
                   <span className="text-sm text-gray-400 bg-slate-700/50 px-2 py-1 rounded-full">
@@ -365,7 +363,7 @@ const InnovativeServicesShowcase2028 = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
-          >
+
             <h2 className="text-4xl font-bold text-white mb-4">
               Featured AI Services
             </h2>
@@ -382,7 +380,7 @@ const InnovativeServicesShowcase2028 = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
                 className={`bg-slate-800/50 backdrop-blur-sm border rounded-xl p-8 ${getBorderColor(service.color)} transition-all duration-300`}
-              >
+
                 <div className="flex items-start justify-between mb-6">
                   {service.icon}
                   <span className="text-sm text-gray-400 bg-slate-700/50 px-3 py-1 rounded-full">
@@ -426,7 +424,7 @@ const InnovativeServicesShowcase2028 = () => {
                       <span
                         key={useCaseIndex}
                         className="text-xs text-gray-300 bg-slate-700/50 px-2 py-1 rounded-full"
-                      >
+
                         {useCase}
                       </span>
                     ))}
@@ -438,7 +436,7 @@ const InnovativeServicesShowcase2028 = () => {
                   <Link
                     to={`/services/${service.id}`}
                     className={`px-6 py-3 bg-gradient-to-r ${getColorClasses(service.color)} text-white font-semibold rounded-lg transition-all duration-300 flex items-center`}
-                  >
+
                     Learn More
                     <ArrowRight className="w-4 h-4 ml-2" />
                   </Link>
@@ -457,7 +455,7 @@ const InnovativeServicesShowcase2028 = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="bg-gradient-to-r from-blue-500/10 to-purple-500/10 border border-blue-500/20 rounded-2xl p-12"
-          >
+
             <h2 className="text-4xl font-bold text-white mb-6">
               Ready to Transform Your Business?
             </h2>
@@ -470,14 +468,14 @@ const InnovativeServicesShowcase2028 = () => {
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 className="px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-500 text-white font-semibold rounded-lg hover:from-blue-600 hover:to-purple-600 transition-all duration-300"
-              >
+
                 Start Free Trial
               </motion.button>
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 className="px-8 py-4 border border-blue-500/30 text-blue-400 font-semibold rounded-lg hover:bg-blue-500/10 transition-all duration-300"
-              >
+
                 Contact Sales
               </motion.button>
             </div>
@@ -488,4 +486,4 @@ const InnovativeServicesShowcase2028 = () => {
   );
 };
 
-export default InnovativeServicesShowcase2028;
+export default InnovativeServicesShowcase2028;}}}

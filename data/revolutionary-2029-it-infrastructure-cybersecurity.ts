@@ -40,7 +40,6 @@ export interface RevolutionaryITInfrastructureCybersecurityService2029 {
   customers: number;
   rating: number;
   reviews: number;
-}
 
 export const revolutionaryITInfrastructureCybersecurityServices2029: RevolutionaryITInfrastructureCybersecurityService2029[] = [
   // Zero-Trust Network Architecture Platform
@@ -527,7 +526,7 @@ export const revolutionaryITInfrastructureCybersecurityServices2029: Revolutiona
     customers: 320,
     rating: 4.7,
     reviews: 220
-  }
+
 ];
 
-export default revolutionaryITInfrastructureCybersecurityServices2029;
+export default revolutionaryITInfrastructureCybersecurityServices2029;}}

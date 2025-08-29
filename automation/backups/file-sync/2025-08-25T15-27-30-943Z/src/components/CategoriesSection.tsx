@@ -1,7 +1,6 @@
 import { GradientHeading } from "./GradientHeading";
 import { Link } from "react-router-dom";
-import { Briefcase, HardDrive, Lightbulb, Users, ArrowRight, Zap, Shield, Globe } from "lucide-react";
-import { motion } from "framer-motion";
+import { Briefcase, HardDrive, Lightbulb, Users, ArrowRight, Zap, Shield, Globe import { motion } from "framer-motion";
 const categories = [
   {
     title: "Services",
@@ -54,7 +53,7 @@ const categories = [
     link: "/zion-hire-ai",
     color: "from-zion-purple to-zion-purple-dark",
     featured: true
-  }
+
 ];
 const specialServices = [
   {
@@ -80,11 +79,11 @@ const specialServices = [
     link: "/security-services",
     icon: <Shield className="w-5 h-5" />,
     description: "Cybersecurity & compliance"
-  }
+
 ];
 interface CategoriesSectionProps {
   showTitle?: boolean;
-}
+
 export function CategoriesSection({ showTitle = true }: CategoriesSectionProps) {
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -92,8 +91,8 @@ export function CategoriesSection({ showTitle = true }: CategoriesSectionProps) 
       opacity: 1,
       transition: {
         staggerChildren: 0.1
-      }
-    }
+
+
   };
   const itemVariants = {
     hidden: { opacity: 0, y: 30 },
@@ -101,7 +100,7 @@ export function CategoriesSection({ showTitle = true }: CategoriesSectionProps) 
       opacity: 1,
       y: 0,
       transition: { duration: 0.6, ease: "easeOut" }
-    }
+
   };
   return (
     <section className="py-20 bg-gradient-to-b from-zion-blue via-zion-blue-dark to-zion-blue relative overflow-hidden">
@@ -117,7 +116,7 @@ export function CategoriesSection({ showTitle = true }: CategoriesSectionProps) 
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-          >
+
             <GradientHeading>Explore Categories</GradientHeading>
             <p className="text-zion-slate-light text-lg mt-4 max-w-3xl mx-auto leading-relaxed">
               Discover our comprehensive ecosystem of tech services, talent, equipment, and innovation
@@ -130,13 +129,13 @@ export function CategoriesSection({ showTitle = true }: CategoriesSectionProps) 
           variants={containerVariants}
           initial="hidden"
           animate="visible"
-        >
+
           {categories.map((category, index) => (
             <motion.div key={category.title} variants={itemVariants}>
               <Link
                 to={category.link}
                 className="group block h-full"
-              >
+
                 <div className="rounded-2xl overflow-hidden h-full border border-zion-blue-light bg-gradient-to-br from-zion-blue-dark/80 to-zion-blue-dark p-6 transition-all duration-500 hover:border-zion-purple/50 hover:translate-y-[-8px] hover:shadow-2xl hover:shadow-zion-purple/20">
                   <div className={`rounded-2xl w-20 h-20 bg-gradient-to-br ${category.color} flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 shadow-lg`}>
                     <div className="text-white">
@@ -185,7 +184,7 @@ export function CategoriesSection({ showTitle = true }: CategoriesSectionProps) 
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.4 }}
-        >
+
           <h3 className="text-center text-2xl font-bold text-white mb-8">Featured Services</h3>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
             {specialServices.map((service, index) => (
@@ -194,11 +193,11 @@ export function CategoriesSection({ showTitle = true }: CategoriesSectionProps) 
                 initial={{ opacity: 0, scale: 0.9 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.6, delay: 0.5 + index * 0.1 }}
-              >
+
                 <Link
                   to={service.link}
                   className="block p-4 bg-zion-blue-light/20 hover:bg-zion-blue-light/30 border border-zion-purple/20 hover:border-zion-purple/50 rounded-xl text-zion-cyan transition-all duration-300 hover:shadow-lg hover:shadow-zion-purple/20 group"
-                >
+
                   <div className="flex items-center gap-3 mb-2">
                     <div className="text-zion-purple group-hover:scale-110 transition-transform">
                       {service.icon}
@@ -219,11 +218,11 @@ export function CategoriesSection({ showTitle = true }: CategoriesSectionProps) 
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.6 }}
-        >
+
           <Link
             to="/categories"
             className="inline-flex items-center gap-2 text-zion-cyan border-b-2 border-zion-cyan hover:border-zion-cyan-dark transition-colors text-lg font-semibold group"
-          >
+
             Explore All Categories
             <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
           </Link>
@@ -231,4 +230,4 @@ export function CategoriesSection({ showTitle = true }: CategoriesSectionProps) 
       </div>
     </section>
   );
-}
+}}}}}}}}

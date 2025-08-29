@@ -39,7 +39,6 @@ import {
   LineChart,
   AreaChart,
   ScatterPlot
-} from 'lucide-react';
 import { SEO } from '../components/SEO';
 
 const Analytics: React.FC = () => {
@@ -67,7 +66,7 @@ const Analytics: React.FC = () => {
       description: "Build personalized dashboards tailored to your business needs",
       icon: Target,
       color: "from-orange-400 to-red-500"
-    }
+
   ];
 
   const analyticsTypes = [
@@ -98,7 +97,7 @@ const Analytics: React.FC = () => {
       icon: DollarSign,
       features: ["Revenue analysis", "Cost optimization", "Profit margins", "Financial forecasting"],
       path: "/services/ai-financial-analytics"
-    }
+
   ];
 
   const metrics = [
@@ -134,7 +133,7 @@ const Analytics: React.FC = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="text-center max-w-4xl mx-auto"
-          >
+
             <div className="flex items-center justify-center mb-6">
               <div className="w-16 h-16 bg-gradient-to-br from-cyan-400 to-blue-500 rounded-2xl flex items-center justify-center mr-4">
                 <BarChart3 className="w-8 h-8 text-white" />
@@ -158,14 +157,14 @@ const Analytics: React.FC = () => {
               <Link
                 to="/contact"
                 className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-400 hover:to-blue-500 transition-all duration-200 hover:scale-105 shadow-lg shadow-cyan-500/25"
-              >
+
                 Get Started
                 <ArrowRight className="ml-2 w-5 h-5" />
               </Link>
               <Link
                 to="/services"
                 className="inline-flex items-center px-8 py-4 border border-cyan-400/30 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400/10 transition-all duration-200"
-              >
+
                 Explore Services
               </Link>
             </div>
@@ -184,7 +183,7 @@ const Analytics: React.FC = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 className="text-center"
-              >
+
                 <div className="w-16 h-16 bg-gradient-to-br from-cyan-400/20 to-blue-500/20 rounded-full flex items-center justify-center mx-auto mb-4">
                   <metric.icon className="w-8 h-8 text-cyan-400" />
                 </div>
@@ -205,7 +204,7 @@ const Analytics: React.FC = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
-          >
+
             <h2 className="text-4xl font-bold text-white mb-6">
               Powerful <span className="text-cyan-400">Analytics Features</span>
             </h2>
@@ -223,7 +222,7 @@ const Analytics: React.FC = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 hover:border-cyan-400/30 transition-all duration-300 hover:scale-105"
-              >
+
                 <div className={`w-12 h-12 bg-gradient-to-br ${feature.color} rounded-lg flex items-center justify-center mb-4`}>
                   <feature.icon className="w-6 h-6 text-white" />
                 </div>
@@ -244,7 +243,7 @@ const Analytics: React.FC = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
-          >
+
             <h2 className="text-4xl font-bold text-white mb-6">
               Analytics <span className="text-cyan-400">Solutions</span>
             </h2>
@@ -262,7 +261,7 @@ const Analytics: React.FC = () => {
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 className="bg-slate-700/30 border border-slate-600/30 rounded-xl p-8 hover:border-cyan-400/30 transition-all duration-300"
-              >
+
                 <div className="w-16 h-16 bg-gradient-to-br from-cyan-400/20 to-blue-500/20 rounded-xl flex items-center justify-center mb-6">
                   <type.icon className="w-8 h-8 text-cyan-400" />
                 </div>
@@ -282,7 +281,7 @@ const Analytics: React.FC = () => {
                 <Link
                   to={type.path}
                   className="inline-flex items-center text-cyan-400 hover:text-cyan-300 font-medium transition-colors"
-                >
+
                   Learn More
                   <ArrowRight className="ml-2 w-4 h-4" />
                 </Link>
@@ -300,7 +299,7 @@ const Analytics: React.FC = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
-          >
+
             <h2 className="text-4xl font-bold text-white mb-6">
               Seamless <span className="text-cyan-400">Integrations</span>
             </h2>
@@ -318,7 +317,7 @@ const Analytics: React.FC = () => {
                 whileInView={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 text-center hover:border-cyan-400/30 transition-all duration-300 hover:scale-105"
-              >
+
                 <div className="text-4xl mb-3">{integration.icon}</div>
                 <h3 className="text-white font-medium mb-2">{integration.name}</h3>
                 <p className="text-sm text-slate-400">{integration.description}</p>
@@ -335,7 +334,7 @@ const Analytics: React.FC = () => {
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-          >
+
             <h2 className="text-4xl font-bold text-white mb-6">
               Ready to Unlock Your Data?
             </h2>
@@ -348,14 +347,14 @@ const Analytics: React.FC = () => {
               <Link
                 to="/contact"
                 className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-400 hover:to-blue-500 transition-all duration-200 hover:scale-105 shadow-lg shadow-cyan-500/25"
-              >
+
                 Start Your Analytics Journey
                 <ArrowRight className="ml-2 w-5 h-5" />
               </Link>
               <Link
                 to="/request-quote"
                 className="inline-flex items-center px-8 py-4 border border-cyan-400/30 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400/10 transition-all duration-200"
-              >
+
                 Get Custom Quote
               </Link>
             </div>
@@ -366,4 +365,4 @@ const Analytics: React.FC = () => {
   );
 };
 
-export default Analytics;
+export default Analytics;}}}

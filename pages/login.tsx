@@ -12,8 +12,6 @@ import {
   Cloud,
   Zap,
   ArrowRight
-} from 'lucide-react'
-
 export default function Login() {
   const [formData, setFormData] = useState({
     email: '',
@@ -30,8 +28,7 @@ export default function Login() {
     // Clear error when user starts typing
     if (errors[name]) {
       setErrors(prev => ({ ...prev, [name]: '' }))
-    }
-  }
+
 
   const validateForm = () => {
     const newErrors: Record<string, string> = { /* empty */ }
@@ -43,7 +40,6 @@ export default function Login() {
 
     setErrors(newErrors)
     return Object.keys(newErrors).length === 0
-  }
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
@@ -57,14 +53,13 @@ export default function Login() {
       await new Promise(resolve => setTimeout(resolve, 2000))
 
       // Success - redirect or show success message
-      // console.log('Login successful:', formData)
+      // // // console.log('Login successful:', formData)
 
     } catch (error) {
-      // console.error('Login error:', error)
+      // // // console.error('Login error:', error)
     } finally {
       setIsSubmitting(false)
-    }
-  }
+
 
   const title = 'Sign In — Zion Tech Group'
   const description = 'Access your Zion Tech Group account to manage AI, cloud, and cybersecurity solutions.'
@@ -104,7 +99,7 @@ export default function Login() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
               className="text-center max-w-4xl mx-auto"
-            >
+
               <h1 className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-zion-cyan via-zion-purple-light to-zion-purple bg-clip-text text-transparent">
                 Welcome Back
               </h1>
@@ -139,7 +134,7 @@ export default function Login() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
               className="max-w-md mx-auto"
-            >
+
               <div className="bg-zion-blue-dark/50 backdrop-blur-md border border-zion-blue-light rounded-2xl p-8 md:p-12">
                 <h2 className="text-3xl font-bold text-center mb-8 text-white">
                   Sign In
@@ -195,7 +190,7 @@ export default function Login() {
                         type="button"
                         onClick={() => setShowPassword(!showPassword)}
                         className="absolute right-3 top-1/2 transform -translate-y-1/2 text-zion-slate-light hover:text-white transition-colors"
-                      >
+
                         {showPassword ? <EyeOff className="w-5 h-5" /> : <Eye className="w-5 h-5" />}
                       </button>
                     </div>
@@ -219,7 +214,7 @@ export default function Login() {
                     <a
                       href="/forgot-password"
                       className="text-sm text-zion-cyan hover:text-zion-cyan-light transition-colors"
-                    >
+
                       Forgot password?
                     </a>
                   </div>
@@ -229,7 +224,7 @@ export default function Login() {
                     type="submit"
                     disabled={isSubmitting}
                     className="w-full bg-gradient-to-r from-zion-cyan to-zion-purple text-white py-4 px-8 rounded-lg font-semibold text-lg hover:from-zion-cyan-dark hover:to-zion-purple-dark transition-all duration-300 transform hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none"
-                  >
+
                     {isSubmitting ? (
                       <div className="flex items-center justify-center gap-3">
                         <div className="w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin"></div>
@@ -298,7 +293,7 @@ export default function Login() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.4 }}
               className="text-center mb-16"
-            >
+
               <h2 className="text-3xl md:text-4xl font-bold mb-6 text-white">
                 Access Your Technology Hub
               </h2>
@@ -313,7 +308,7 @@ export default function Login() {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.6 }}
                 className="text-center p-6"
-              >
+
                 <div className="w-16 h-16 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-full flex items-center justify-center mx-auto mb-4">
                   <Shield className="w-8 h-8 text-white" />
                 </div>
@@ -328,7 +323,7 @@ export default function Login() {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.8 }}
                 className="text-center p-6"
-              >
+
                 <div className="w-16 h-16 bg-gradient-to-r from-zion-purple to-zion-cyan rounded-full flex items-center justify-center mx-auto mb-4">
                   <Brain className="w-8 h-8 text-white" />
                 </div>
@@ -343,7 +338,7 @@ export default function Login() {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 1.0 }}
                 className="text-center p-6"
-              >
+
                 <div className="w-16 h-16 bg-gradient-to-r from-zion-cyan-light to-zion-purple-light rounded-full flex items-center justify-center mx-auto mb-4">
                   <Cloud className="w-8 h-8 text-white" />
                 </div>
@@ -358,4 +353,4 @@ export default function Login() {
       </main>
     </>
   )
-}
+}}}}}}}

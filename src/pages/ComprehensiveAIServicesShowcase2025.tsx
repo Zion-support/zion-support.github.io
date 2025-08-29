@@ -20,7 +20,6 @@ import {
   DollarSign,
   Truck,
   Target
-} from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 export default function ComprehensiveAIServicesShowcase2025() {
@@ -78,7 +77,7 @@ export default function ComprehensiveAIServicesShowcase2025() {
       features: ["Data Analytics", "Predictive Insights", "Custom Dashboards", "Real-time Reporting"],
       link: "/services/ai-business-intelligence-platform",
       category: "Analytics"
-    }
+
   ];
 
   const industrySolutions = [
@@ -111,7 +110,7 @@ export default function ComprehensiveAIServicesShowcase2025() {
       title: "Energy & Utilities",
       description: "Predictive maintenance, energy optimization, and grid management",
       icon: Zap
-    }
+
   ];
 
   const advancedTechnologies = [
@@ -143,7 +142,7 @@ export default function ComprehensiveAIServicesShowcase2025() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
-            >
+
               <h1 className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent">
                 Comprehensive AI Services Showcase 2025
               </h1>
@@ -156,14 +155,14 @@ export default function ComprehensiveAIServicesShowcase2025() {
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
                   className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-300"
-                >
+
                   Explore All Services
                 </motion.button>
                 <motion.button
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
                   className="px-8 py-4 border-2 border-cyan-500 text-cyan-400 rounded-lg font-semibold hover:bg-cyan-500 hover:text-white transition-all duration-300"
-                >
+
                   Schedule Consultation
                 </motion.button>
               </div>
@@ -179,7 +178,7 @@ export default function ComprehensiveAIServicesShowcase2025() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
               className="text-center mb-16"
-            >
+
               <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white">
                 AI-Powered Micro SAAS Services
               </h2>
@@ -197,7 +196,7 @@ export default function ComprehensiveAIServicesShowcase2025() {
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
                   className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 hover:border-cyan-500/50 transition-all duration-300"
-                >
+
                   <div className="flex items-center justify-between mb-4">
                     <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg flex items-center justify-center">
                       <service.icon className="w-6 h-6 text-white" />
@@ -229,7 +228,7 @@ export default function ComprehensiveAIServicesShowcase2025() {
                   <Link
                     to={service.link}
                     className="w-full px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 text-center block"
-                  >
+
                     Learn More
                   </Link>
                 </motion.div>
@@ -246,7 +245,7 @@ export default function ComprehensiveAIServicesShowcase2025() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
               className="text-center mb-16"
-            >
+
               <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white">
                 Industry-Specific AI Solutions
               </h2>
@@ -264,7 +263,7 @@ export default function ComprehensiveAIServicesShowcase2025() {
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
                   className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 hover:border-cyan-500/50 transition-all duration-300"
-                >
+
                   <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-600 rounded-lg flex items-center justify-center mb-4">
                     <solution.icon className="w-6 h-6 text-white" />
                   </div>
@@ -284,7 +283,7 @@ export default function ComprehensiveAIServicesShowcase2025() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
               className="text-center mb-16"
-            >
+
               <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white">
                 Advanced AI Technologies
               </h2>
@@ -302,7 +301,7 @@ export default function ComprehensiveAIServicesShowcase2025() {
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
                   className="bg-white/5 backdrop-blur-sm rounded-lg p-4 border border-white/10 text-center"
-                >
+
                   <Brain className="w-8 h-8 text-cyan-400 mx-auto mb-3" />
                   <p className="text-white font-medium text-sm">{tech}</p>
                 </motion.div>
@@ -319,7 +318,7 @@ export default function ComprehensiveAIServicesShowcase2025() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
               className="text-4xl md:text-5xl font-bold mb-6 text-white"
-            >
+
               Ready to Transform Your Business?
             </motion.h2>
             <motion.p
@@ -327,7 +326,7 @@ export default function ComprehensiveAIServicesShowcase2025() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
               className="text-xl text-cyan-100 mb-8"
-            >
+
               Join leading organizations that have already revolutionized
               their operations with AI-powered solutions
             </motion.p>
@@ -336,19 +335,19 @@ export default function ComprehensiveAIServicesShowcase2025() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.4 }}
               className="flex flex-col sm:flex-row gap-4 justify-center"
-            >
+
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 className="px-8 py-4 bg-white text-cyan-600 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300"
-              >
+
                 Start Free Trial
               </motion.button>
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 className="px-8 py-4 border-2 border-white text-white rounded-lg font-semibold hover:bg-white hover:text-cyan-600 transition-all duration-300"
-              >
+
                 Schedule Demo
               </motion.button>
             </motion.div>
@@ -363,7 +362,7 @@ export default function ComprehensiveAIServicesShowcase2025() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
               className="text-center mb-16"
-            >
+
               <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white">
                 Get in Touch
               </h2>
@@ -379,7 +378,7 @@ export default function ComprehensiveAIServicesShowcase2025() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6 }}
                 className="text-center"
-              >
+
                 <Phone className="w-12 h-12 text-cyan-400 mx-auto mb-4" />
                 <h3 className="text-xl font-semibold mb-2 text-white">Phone</h3>
                 <p className="text-gray-300">+1 302 464 0950</p>
@@ -390,7 +389,7 @@ export default function ComprehensiveAIServicesShowcase2025() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.2 }}
                 className="text-center"
-              >
+
                 <Mail className="w-12 h-12 text-cyan-400 mx-auto mb-4" />
                 <h3 className="text-xl font-semibold mb-2 text-white">Email</h3>
                 <p className="text-gray-300">kleber@ziontechgroup.com</p>
@@ -401,7 +400,7 @@ export default function ComprehensiveAIServicesShowcase2025() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.4 }}
                 className="text-center"
-              >
+
                 <Globe className="w-12 h-12 text-cyan-400 mx-auto mb-4" />
                 <h3 className="text-xl font-semibold mb-2 text-white">Website</h3>
                 <p className="text-gray-300">https://ziontechgroup.com</p>
@@ -413,7 +412,7 @@ export default function ComprehensiveAIServicesShowcase2025() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.6 }}
               className="text-center mt-12"
-            >
+
               <h3 className="text-2xl font-semibold mb-4 text-white">Address</h3>
               <p className="text-gray-300">
                 364 E Main St STE 1008<br />
@@ -425,4 +424,4 @@ export default function ComprehensiveAIServicesShowcase2025() {
       </div>
     </>
   );
-}
+}}}}

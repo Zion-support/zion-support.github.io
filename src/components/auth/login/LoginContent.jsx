@@ -1,9 +1,7 @@
 import React, { useState } from 'react';
 import { useAuth } from '@/hooks/useAuth';
 import { useNavigate } from 'react-router-dom';
-import { Eye, EyeOff, Lock, Mail, Sparkles } from 'lucide-react';
-
-export function LoginContent() {
+import { Eye, EyeOff, Lock, Mail, Sparkles export function LoginContent() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [isLoading, setIsLoading] = useState(false);
@@ -25,7 +23,7 @@ export function LoginContent() {
       setError('Login failed. Please try again.');
     } finally {
       setIsLoading(false);
-    }
+
   };
 
   return (
@@ -104,7 +102,7 @@ export function LoginContent() {
                   type="button"
                   onClick={() => setShowPassword(!showPassword)}
                   className="absolute inset-y-0 right-0 pr-3 flex items-center text-zion-slate-light hover:text-zion-cyan transition-colors duration-200"
-                >
+
                   {showPassword ? (
                     <EyeOff className="h-5 w-5" />
                   ) : (
@@ -126,7 +124,7 @@ export function LoginContent() {
               <a
                 href="/forgot-password"
                 className="text-zion-cyan hover:text-zion-cyan-light text-sm transition-colors duration-200 hover:underline"
-              >
+
                 Forgot password?
               </a>
             </div>
@@ -136,7 +134,7 @@ export function LoginContent() {
               type="submit"
               disabled={isLoading}
               className="btn-primary w-full group relative overflow-hidden"
-            >
+
               <span className="relative z-10 flex items-center justify-center">
                 {isLoading ? (
                   <>
@@ -199,7 +197,7 @@ export function LoginContent() {
           <a
             href="/register"
             className="text-zion-cyan hover:text-zion-cyan-light text-sm font-medium transition-colors duration-200 hover:underline"
-          >
+
             Sign up for free
           </a>
         </div>
@@ -216,4 +214,4 @@ export function LoginContent() {
       </div>
     </div>
   );
-}
+}}}

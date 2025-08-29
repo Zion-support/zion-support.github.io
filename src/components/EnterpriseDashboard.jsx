@@ -1,7 +1,6 @@
 import React, { useState, useEffect, useCallback, useMemo } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Activity, Server, Shield, Users, TrendingUp, BarChart3, PieChart, LineChart, TrendingDown, Clock3, RefreshCw, Loader2 } from 'lucide-react';
-import { useAnalytics } from '../hooks/useAnalytics';
+import { Activity, Server, Shield, Users, TrendingUp, BarChart3, PieChart, LineChart, TrendingDown, Clock3, RefreshCw, Loader2 import { useAnalytics } from '../hooks/useAnalytics';
 export const EnterpriseDashboard = () => {
     const { trackEvent } = useAnalytics({
         enableTracking: true,
@@ -58,7 +57,7 @@ export const EnterpriseDashboard = () => {
             change: -5,
             threshold: { warning: 100, critical: 150 },
             lastUpdated: new Date()
-        }
+
     ]);
     const [serviceStatuses] = useState([
         {
@@ -92,7 +91,7 @@ export const EnterpriseDashboard = () => {
             uptime: 99.99,
             responseTime: 2,
             errorRate: 0.001
-        }
+
     ]);
     const [securityAlerts] = useState([
         {
@@ -116,7 +115,7 @@ export const EnterpriseDashboard = () => {
             status: 'resolved',
             affected: ['user-789'],
             source: 'Access Control System'
-        }
+
     ]);
     const [userActivities] = useState([
         {
@@ -140,7 +139,7 @@ export const EnterpriseDashboard = () => {
             ipAddress: '192.168.1.101',
             userAgent: 'Firefox/89.0.2',
             status: 'success'
-        }
+
     ]);
     // Refresh data
     const refreshData = useCallback(async () => {
@@ -150,21 +149,21 @@ export const EnterpriseDashboard = () => {
             await new Promise(resolve => setTimeout(resolve, 1000));
             // Update timestamps (simplified for demo)
             const now = new Date();
-            // console.log('Data refreshed at:', now.toLocaleTimeString());
+            // // // console.log('Data refreshed at:', now.toLocaleTimeString());
             trackEvent('enterprise_dashboard', 'data_refreshed', 'manual', undefined, {
                 tab: activeTab,
                 dateRange
             });
-        }
+
         catch (error) {
-            // console.error('Failed to refresh data:', error);
+            // // // console.error('Failed to refresh data:', error);
             trackEvent('enterprise_dashboard', 'refresh_failed', 'error', undefined, {
                 error: error instanceof Error ? error.message : 'Unknown error'
             });
-        }
+
         finally {
             setIsRefreshing(false);
-        }
+
     }, [activeTab, dateRange, trackEvent]);
     // Auto-refresh effect
     useEffect(() => {
@@ -176,12 +175,12 @@ export const EnterpriseDashboard = () => {
         let filtered = securityAlerts;
         if (filterStatus !== 'all') {
             filtered = filtered.filter(alert => alert.status === filterStatus);
-        }
+
         if (searchQuery) {
             filtered = filtered.filter(alert => alert.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
                 alert.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
                 alert.type.toLowerCase().includes(searchQuery.toLowerCase()));
-        }
+
         return filtered;
     }, [securityAlerts, filterStatus, searchQuery]);
     const filteredUserActivities = useMemo(() => {
@@ -190,7 +189,7 @@ export const EnterpriseDashboard = () => {
             filtered = filtered.filter(activity => activity.userName.toLowerCase().includes(searchQuery.toLowerCase()) ||
                 activity.action.toLowerCase().includes(searchQuery.toLowerCase()) ||
                 activity.resource.toLowerCase().includes(searchQuery.toLowerCase()));
-        }
+
         return filtered;
     }, [userActivities, searchQuery]);
     // Get status color
@@ -212,7 +211,7 @@ export const EnterpriseDashboard = () => {
                 return 'text-blue-600 bg-blue-100 dark:text-blue-400 dark:bg-blue-900/30';
             default:
                 return 'text-gray-600 bg-gray-100 dark:text-gray-400 dark:bg-gray-900/30';
-        }
+
     };
     // Get severity color
     const getSeverityColor = (severity) => {
@@ -227,7 +226,7 @@ export const EnterpriseDashboard = () => {
                 return 'text-blue-600 bg-blue-100 dark:text-blue-400 dark:bg-blue-900/30';
             default:
                 return 'text-gray-600 bg-gray-100 dark:text-gray-400 dark:bg-gray-900/30';
-        }
+
     };
     return (<div className="bg-white dark:bg-gray-800 rounded-xl shadow-lg border border-gray-200 dark:border-gray-700 overflow-hidden">
       {/* Header */}
@@ -631,3 +630,4 @@ export const EnterpriseDashboard = () => {
       </div>
     </div>);
 };
+}}}}}}}}}}}}}

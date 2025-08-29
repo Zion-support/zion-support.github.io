@@ -3,8 +3,7 @@ import { useNavigate, Link } from "react-router-dom";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { ProductListing } from "@/types/listings";
-import { DollarSign } from "lucide-react";
-import { RatingStars } from "@/components/RatingStars";
+import { DollarSign import { RatingStars } from "@/components/RatingStars";
 import { FavoriteButton } from "@/components/FavoriteButton";
 import { useDispatch } from 'react-redux';
 import type { AppDispatch } from '@/store';
@@ -20,7 +19,6 @@ interface ProductListingCardProps {
    * `/marketplace/listing` to preserve existing behaviour.
    */
   detailBasePath?: string;
-}
 
 export function ProductListingCard({
   listing,
@@ -47,7 +45,7 @@ export function ProductListingCard({
     if (!imageError) { // Prevent infinite loops if placeholder also fails
       setImageSrc('/placeholder.svg');
       setImageError(true);
-    }
+
   };
 
   const handleViewListing = () => {
@@ -62,7 +60,7 @@ export function ProductListingCard({
       onRequestQuote(listing.id);
     } else {
       navigate(`/request-quote?listing=${listing.id}`);
-    }
+
   };
 
   const imageContainerClasses = isGrid ? 'h-48' : 'h-32 w-48';
@@ -78,9 +76,9 @@ export function ProductListingCard({
         if (e.key === 'Enter' || e.key === ' ') {
           e.preventDefault();
           handleViewListing();
-        }
+
       }}
-    >
+
       {/* Image */}
       <div
         className={isGrid ? 'block w-full' : 'block w-48 flex-shrink-0'}
@@ -91,9 +89,9 @@ export function ProductListingCard({
           if (e.key === 'Enter' || e.key === ' ') {
             e.preventDefault();
             handleViewListing();
-          }
+
         }}
-      >
+
         <div className={`relative ${imageContainerClasses}`}> {/* Ensure this container has dimensions */}
           <img
             src={imageSrc}
@@ -140,7 +138,7 @@ export function ProductListingCard({
                 <span
                   key={idx}
                   className="text-xs text-foreground/70 bg-background/50 px-2 py-1 rounded-full"
-                >
+
                   {tag}
                 </span>
               ))}
@@ -172,7 +170,7 @@ export function ProductListingCard({
                 navigate(`${detailBasePath}/${listing.id}`);
               }}
               disabled={loading}
-            >
+
               {loading ? (
                 <>
                   <svg className="animate-spin -ml-1 mr-3 h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
@@ -191,7 +189,7 @@ export function ProductListingCard({
                 variant="outline"
                 onClick={handleRequestQuote}
                 className="border-primary text-primary hover:bg-primary/10 hover:text-primary-foreground"
-              >
+
                 Request Quote
               </Button>
             )}
@@ -203,3 +201,4 @@ export function ProductListingCard({
 };
 
 export default React.memo(ProductListingCard);
+}}}}}}

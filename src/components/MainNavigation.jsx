@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Menu, X, ChevronDown, Search, User, Bell } from 'lucide-react';
-import ThemeToggle from './ThemeToggle';
+import { Menu, X, ChevronDown, Search, User, Bell import ThemeToggle from './ThemeToggle';
 export function MainNavigation() {
     const [isOpen, setIsOpen] = useState(false);
     const [isScrolled, setIsScrolled] = useState(false);
@@ -69,7 +68,7 @@ export function MainNavigation() {
                 { name: 'News', href: '/news' },
                 { name: 'Contact', href: '/contact' }
             ]
-        }
+
     ];
     const isActive = (path) => {
         if (path === '/')
@@ -200,4 +199,4 @@ export function MainNavigation() {
           </div>)}
       </div>
     </nav>);
-}
+}}}

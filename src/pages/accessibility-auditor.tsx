@@ -17,8 +17,6 @@ import {
   Smartphone,
   Tablet,
   Laptop
-} from 'lucide-react';
-
 const AccessibilityAuditor: React.FC = () => {
   const features = [
     {
@@ -40,7 +38,7 @@ const AccessibilityAuditor: React.FC = () => {
       title: "Compliance Reporting",
       description: "Detailed reports with actionable recommendations",
       icon: "📋"
-    }
+
   ];
 
   const complianceStandards = [
@@ -63,7 +61,7 @@ const AccessibilityAuditor: React.FC = () => {
     {
       category: "Technical Accessibility",
       items: ["Code validation", "Performance optimization", "Mobile responsiveness", "Cross-browser compatibility"]
-    }
+
   ];
 
   return (
@@ -232,13 +230,13 @@ const AccessibilityAuditor: React.FC = () => {
                 <Link
                   to="/contact"
                   className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-cyan-700 transition-all duration-300"
-                >
+
                   Get Accessibility Audit
                 </Link>
                 <Link
                   to="/services"
                   className="inline-flex items-center px-6 py-3 border border-gray-600 text-white font-semibold rounded-lg hover:bg-gray-800 transition-all duration-300"
-                >
+
                   View All Services
                 </Link>
               </div>
@@ -250,4 +248,4 @@ const AccessibilityAuditor: React.FC = () => {
   );
 };
 
-export default AccessibilityAuditor;
+export default AccessibilityAuditor;}}}

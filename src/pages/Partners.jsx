@@ -1,7 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Users, Globe, Building2, Award, Star, ArrowRight, CheckCircle, Zap, Shield, Rocket, Target, TrendingUp, Heart, Crown, Sparkles, Flame, Sun, Moon, Infinity } from 'lucide-react';
-export default function Partners() {
+import { Users, Globe, Building2, Award, Star, ArrowRight, CheckCircle, Zap, Shield, Rocket, Target, TrendingUp, Heart, Crown, Sparkles, Flame, Sun, Moon, Infinity export default function Partners() {
   const partnershipTypes = [
     {
       title: 'Technology Partners',
@@ -26,7 +25,7 @@ export default function Partners() {
       description: 'Partner with universities and research institutions for innovation',
       icon: '🎓',
       benefits: ['Research collaboration', 'Talent pipeline', 'Innovation programs']
-    }
+
   ];
   const existingPartners = [
     {
@@ -70,7 +69,7 @@ export default function Partners() {
       category: 'Research Partner',
       description: 'Innovation in emerging technologies',
       year: '2022'
-    }
+
   ];
   const benefits = [
     {
@@ -92,7 +91,7 @@ export default function Partners() {
       icon: Globe,
       title: 'Global Reach',
       description: 'Expand your business presence across multiple countries and regions'
-    }
+
   ];
   return (
     <div className="min-h-screen bg-gradient-to-br from-zinc-900 via-zinc-800 to-zinc-700 pt-20">
@@ -261,4 +260,4 @@ export default function Partners() {
       </section>
     </div>
   );
-}
+}}}}}

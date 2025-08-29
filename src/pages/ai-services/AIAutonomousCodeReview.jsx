@@ -1,8 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import { Code, Shield, Zap, Brain, Users, CheckCircle, ArrowRight, Play, Star, Cpu, GitBranch } from 'lucide-react';
-import { SEO } from '@/components/SEO';
+import { Code, Shield, Zap, Brain, Users, CheckCircle, ArrowRight, Play, Star, Cpu, GitBranch import { SEO } from '@/components/SEO';
 const features = [
     {
         title: "Automated Code Analysis",
@@ -27,7 +26,7 @@ const features = [
         description: "Machine learning algorithms that continuously improve based on your team's coding patterns and preferences.",
         icon: Brain,
         color: "from-purple-500 to-indigo-500"
-    }
+
 ];
 const benefits = [
     "Reduce code review time by up to 80%",
@@ -57,7 +56,7 @@ const useCases = [
         title: "CI/CD Pipelines",
         description: "Integrate automated code review into your continuous integration workflows.",
         icon: Cpu
-    }
+
 ];
 const testimonials = [
     {
@@ -71,7 +70,7 @@ const testimonials = [
         name: "Maria Santos",
         role: "Security Engineer, SecureTech",
         rating: 5
-    }
+
 ];
 export default function AIAutonomousCodeReview() {
     return (<div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900 relative overflow-hidden">
@@ -240,4 +239,4 @@ export default function AIAutonomousCodeReview() {
         </div>
       </section>
     </div>);
-}
+}}}}}

@@ -1,7 +1,6 @@
 import React, { useState, useRef, useEffect, useCallback } from 'react';
 import { motion, AnimatePresence, useScroll } from 'framer-motion';
-import { Calendar, Clock, CheckCircle, Circle, ArrowRight, Play, Pause, RotateCcw, ZoomIn, ZoomOut, Share2, Download, Star, Award, Users, TrendingUp, Zap, Shield, Globe, Rocket, Filter, X } from 'lucide-react';
-import { Button } from './button';
+import { Calendar, Clock, CheckCircle, Circle, ArrowRight, Play, Pause, RotateCcw, ZoomIn, ZoomOut, Share2, Download, Star, Award, Users, TrendingUp, Zap, Shield, Globe, Rocket, Filter, X import { Button } from './button';
 import { Badge } from './badge';
 export function InteractiveTimeline({ enabled = true, events, autoPlay = false, showProgress = true, onEventClick, onStatusChange, className = "" }) {
     const [currentEventIndex, setCurrentEventIndex] = useState(0);
@@ -38,7 +37,7 @@ export function InteractiveTimeline({ enabled = true, events, autoPlay = false, 
                 const next = (prev + 1) % filteredEvents.length;
                 if (next === 0) {
                     setIsPlaying(false); // Stop when reaching the end
-                }
+
                 return next;
             });
         }, 3000 / playbackSpeed);
@@ -66,7 +65,7 @@ export function InteractiveTimeline({ enabled = true, events, autoPlay = false, 
                 return { icon: Star, color: 'text-purple-400', bgColor: 'bg-purple-400/20' };
             default:
                 return { icon: Circle, color: 'text-zinc-400', bgColor: 'bg-zinc-400/20' };
-        }
+
     };
     // Get priority color
     const getPriorityColor = (priority) => {
@@ -81,7 +80,7 @@ export function InteractiveTimeline({ enabled = true, events, autoPlay = false, 
                 return 'border-green-500/50 bg-green-500/10';
             default:
                 return 'border-zinc-500/50 bg-zinc-500/10';
-        }
+
     };
     // Get category icon
     const getCategoryIcon = (category) => {
@@ -124,10 +123,10 @@ export function InteractiveTimeline({ enabled = true, events, autoPlay = false, 
                 text: 'Check out our project timeline',
                 url: window.location.href
             });
-        }
+
         else {
             navigator.clipboard.writeText(window.location.href);
-        }
+
     }, []);
     if (!enabled || filteredEvents.length === 0)
         return null;
@@ -474,4 +473,4 @@ export function InteractiveTimeline({ enabled = true, events, autoPlay = false, 
           </motion.div>)}
       </AnimatePresence>
     </div>);
-}
+</div></div></div>}}}}}}</motion.div>}

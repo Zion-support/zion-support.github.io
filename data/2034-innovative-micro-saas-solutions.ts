@@ -73,5 +73,5 @@ export const innovativeMicroSaasSolutions: InnovativeMicroSaas[] = [
 		useCases: ['Faster hiring', 'Bias reduction'],
 		link: 'https://ziontechgroup.com/services/candidate-screening-copilot',
 		realService: true
-	}
-];
+
+];}

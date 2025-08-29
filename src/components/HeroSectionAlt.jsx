@@ -1,6 +1,5 @@
 import React from 'react';
-import { Search, Rocket, Users, TrendingUp, Shield, Zap, Star, Sparkles } from "lucide-react";
-import { motion } from "framer-motion";
+import { Search, Rocket, Users, TrendingUp, Shield, Zap, Star, Sparkles import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 
@@ -12,8 +11,8 @@ export const HeroSectionAlt = () => {
       transition: {
         staggerChildren: 0.2,
         delayChildren: 0.1
-      }
-    }
+
+
   };
 
   const itemVariants = {
@@ -24,8 +23,8 @@ export const HeroSectionAlt = () => {
       transition: {
         duration: 0.8,
         ease: "easeOut"
-      }
-    }
+
+
   };
 
   const floatingVariants = {
@@ -36,8 +35,8 @@ export const HeroSectionAlt = () => {
         duration: 8,
         repeat: Infinity,
         ease: "easeInOut"
-      }
-    }
+
+
   };
 
   const trustMetrics = [
@@ -144,4 +143,4 @@ export const HeroSectionAlt = () => {
       </div>
     </section>
   );
-};
+</div></div>};}}}}}}</motion.div></motion.div></motion.div></motion.div>}

@@ -14,14 +14,14 @@ const ComprehensiveZionTechPricing2025: React.FC = () => {
   const getPrice = (service: any) => {
     if (billingCycle === 'yearly' && service.pricing?.yearly) {
       return service.pricing.yearly;
-    }
+
     return service.price;
   };
 
   const getSavings = (service: any) => {
     if (billingCycle === 'yearly' && service.pricing?.yearly) {
       return (service.price * 12 - service.pricing.yearly).toLocaleString();
-    }
+
     return 0;
   };
 
@@ -53,7 +53,7 @@ const ComprehensiveZionTechPricing2025: React.FC = () => {
                 className={`relative inline-flex h-8 w-16 items-center rounded-full transition-colors ${
                   billingCycle === 'yearly' ? 'bg-blue-600' : 'bg-gray-600'
                 }`}
-              >
+
                 <span
                   className={`inline-block h-6 w-6 transform rounded-full bg-white transition-transform ${
                     billingCycle === 'yearly' ? 'translate-x-9' : 'translate-x-1'
@@ -99,7 +99,7 @@ const ComprehensiveZionTechPricing2025: React.FC = () => {
                   ? 'bg-blue-600 text-white shadow-lg'
                   : 'bg-white/10 text-gray-300 hover:bg-white/20'
               }`}
-            >
+
               {category}
             </button>
           ))}
@@ -217,13 +217,13 @@ const ComprehensiveZionTechPricing2025: React.FC = () => {
                   target="_blank"
                   rel="noopener noreferrer"
                   className="block w-full text-center px-4 py-3 bg-gradient-to-r from-blue-500 to-purple-600 text-white rounded-lg hover:from-blue-600 hover:to-purple-700 transition-all duration-300 font-semibold"
-                >
+
                   Get Started
                 </a>
                 <a
                   href={`mailto:${service.contactInfo.email}?subject=Inquiry about ${service.title}`}
                   className="block w-full text-center px-4 py-3 bg-white/10 text-white rounded-lg hover:bg-white/20 transition-all duration-300"
-                >
+
                   Contact Sales
                 </a>
               </div>
@@ -298,7 +298,7 @@ const ComprehensiveZionTechPricing2025: React.FC = () => {
             <a
               href="mailto:kleber@ziontechgroup.com?subject=Custom Quote Request"
               className="inline-block px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-600 text-white rounded-lg hover:from-blue-600 hover:to-purple-700 transition-all duration-300 font-semibold text-lg"
-            >
+
               Request Quote
             </a>
           </div>
@@ -337,4 +337,4 @@ const ComprehensiveZionTechPricing2025: React.FC = () => {
   );
 };
 
-export default ComprehensiveZionTechPricing2025;
+export default ComprehensiveZionTechPricing2025;}}

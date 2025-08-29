@@ -14,11 +14,12 @@ export const Grid = {
     render: () => {
         localStorage.setItem('marketplaceView', 'grid');
         return <Marketplace />;
-    }
+
 };
 export const List = {
     render: () => {
         localStorage.setItem('marketplaceView', 'list');
         return <Marketplace />;
-    }
+
 };
+}}

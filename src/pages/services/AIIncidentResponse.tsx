@@ -1,6 +1,4 @@
-import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, FileText, BarChart3 } from 'lucide-react';
-
-export default function AIIncidentResponse() {
+import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, FileText, BarChart3 export default function AIIncidentResponse() {
   const features = [
     'AI-powered incident response optimization',
     'Intelligent threat detection and analysis',
@@ -171,4 +169,4 @@ export default function AIIncidentResponse() {
       </section>
     </div>
   );
-}
+}}

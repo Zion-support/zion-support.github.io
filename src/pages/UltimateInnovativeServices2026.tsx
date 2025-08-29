@@ -55,7 +55,6 @@ import {
   Smartphone,
   Globe2,
   Leaf
-} from 'lucide-react';
 import { SEO } from "@/components/SEO";
 import { ULTIMATE_INNOVATIVE_SERVICES_2026 } from "@/data/ultimateInnovativeServices2026";
 
@@ -137,7 +136,7 @@ export default function UltimateInnovativeServices2026() {
         return bROI - aROI;
       default:
         return 0;
-    }
+
   });
 
   const toggleServiceExpansion = (serviceId: string) => {
@@ -160,7 +159,7 @@ export default function UltimateInnovativeServices2026() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-          >
+
             <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
               Ultimate Innovative Services
               <span className="block text-6xl md:text-8xl bg-gradient-to-r from-yellow-400 to-orange-500 bg-clip-text text-transparent">
@@ -176,7 +175,7 @@ export default function UltimateInnovativeServices2026() {
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 className="flex items-center gap-2 bg-white/20 backdrop-blur-sm rounded-full px-6 py-3 text-white"
-              >
+
                 <Sparkles className="w-5 h-5" />
                 <span>12 Revolutionary Services</span>
               </motion.div>
@@ -184,7 +183,7 @@ export default function UltimateInnovativeServices2026() {
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 className="flex items-center gap-2 bg-white/20 backdrop-blur-sm rounded-full px-6 py-3 text-white"
-              >
+
                 <Award className="w-5 h-5" />
                 <span>Industry-Leading Innovation</span>
               </motion.div>
@@ -192,7 +191,7 @@ export default function UltimateInnovativeServices2026() {
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 className="flex items-center gap-2 bg-white/20 backdrop-blur-sm rounded-full px-6 py-3 text-white"
-              >
+
                 <Target className="w-5 h-5" />
                 <span>Proven ROI</span>
               </motion.div>
@@ -225,7 +224,7 @@ export default function UltimateInnovativeServices2026() {
                 value={selectedCategory}
                 onChange={(e) => setSelectedCategory(e.target.value)}
                 className="w-full px-4 py-3 bg-white/10 backdrop-blur-sm border border-zion-slate-300 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent"
-              >
+
                 {categories.map(category => (
                   <option key={category.id} value={category.id} className="bg-zion-slate-800 text-white">
                     {category.name}
@@ -240,7 +239,7 @@ export default function UltimateInnovativeServices2026() {
                 value={selectedPriceRange}
                 onChange={(e) => setSelectedPriceRange(e.target.value)}
                 className="w-full px-4 py-3 bg-white/10 backdrop-blur-sm border border-zion-slate-300 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent"
-              >
+
                 {priceRanges.map(range => (
                   <option key={range.id} value={range.id} className="bg-zion-slate-800 text-white">
                     {range.name}
@@ -262,7 +261,7 @@ export default function UltimateInnovativeServices2026() {
                     ? 'bg-zion-cyan text-white'
                     : 'bg-white/10 text-zion-slate-300 hover:bg-white/20'
                 }`}
-              >
+
                 {option.name}
               </button>
             ))}
@@ -292,7 +291,7 @@ export default function UltimateInnovativeServices2026() {
                   exit={{ opacity: 0, y: -20 }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
                   className="group relative"
-                >
+
                   <div className="relative bg-white/5 backdrop-blur-sm border border-zion-slate-300/20 rounded-2xl p-6 h-full transition-all duration-300 hover:bg-white/10 hover:border-zion-cyan/50 hover:shadow-2xl hover:shadow-zion-cyan/20">
                     {/* Service Header */}
                     <div className="flex items-start justify-between mb-4">
@@ -341,7 +340,7 @@ export default function UltimateInnovativeServices2026() {
                         <span
                           key={tagIndex}
                           className="px-2 py-1 bg-zion-slate-700/50 text-zion-slate-300 text-xs rounded-md"
-                        >
+
                           {tag}
                         </span>
                       ))}
@@ -356,7 +355,7 @@ export default function UltimateInnovativeServices2026() {
                     <button
                       onClick={() => toggleServiceExpansion(service.id)}
                       className="w-full flex items-center justify-center gap-2 py-2 text-zion-cyan hover:text-white transition-colors"
-                    >
+
                       {expandedService === service.id ? (
                         <>
                           <EyeOff className="w-4 h-4" />
@@ -379,7 +378,7 @@ export default function UltimateInnovativeServices2026() {
                           exit={{ opacity: 0, height: 0 }}
                           transition={{ duration: 0.3 }}
                           className="mt-4 pt-4 border-t border-zion-slate-600/30"
-                        >
+
                           {/* Features */}
                           <div className="mb-4">
                             <h4 className="text-sm font-semibold text-white mb-2">Key Features:</h4>
@@ -423,7 +422,7 @@ export default function UltimateInnovativeServices2026() {
                             <Link
                               to="/contact"
                               className="w-full flex items-center justify-center gap-2 py-2 px-4 bg-gradient-to-r from-zion-cyan to-zion-blue text-white rounded-lg hover:from-zion-blue hover:to-zion-cyan transition-all duration-200 font-semibold"
-                            >
+
                               <MessageCircle className="w-4 h-4" />
                               Get Started
                             </Link>
@@ -452,7 +451,7 @@ export default function UltimateInnovativeServices2026() {
                   setSelectedPriceRange('all');
                 }}
                 className="px-6 py-3 bg-zion-cyan text-white rounded-lg hover:bg-zion-blue transition-colors"
-              >
+
                 Clear Filters
               </button>
             </div>
@@ -468,7 +467,7 @@ export default function UltimateInnovativeServices2026() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
-          >
+
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               Ready to Transform Your Business?
             </h2>
@@ -480,14 +479,14 @@ export default function UltimateInnovativeServices2026() {
               <Link
                 to="/contact"
                 className="flex items-center justify-center gap-2 px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-blue text-white rounded-lg hover:from-zion-blue hover:to-zion-cyan transition-all duration-200 font-semibold text-lg"
-              >
+
                 <MessageCircle className="w-5 h-5" />
                 Start Your Journey
               </Link>
               <a
                 href="tel:+13024640950"
                 className="flex items-center justify-center gap-2 px-8 py-4 bg-white/10 backdrop-blur-sm border border-zion-slate-300 text-white rounded-lg hover:bg-white/20 transition-all duration-200 font-semibold text-lg"
-              >
+
                 <Phone className="w-5 h-5" />
                 Call Now
               </a>
@@ -501,4 +500,4 @@ export default function UltimateInnovativeServices2026() {
       </section>
     </div>
   );
-}
+}}}

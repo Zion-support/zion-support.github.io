@@ -1,15 +1,12 @@
 import React, { useEffect, useState, useCallback, useMemo } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Activity, TrendingUp, AlertTriangle, CheckCircle, XCircle, Info } from 'lucide-react';
-
-interface PerformanceMetrics {
+import { Activity, TrendingUp, AlertTriangle, CheckCircle, XCircle, Info interface PerformanceMetrics {
   fps: number;
   memory: number;
   loadTime: number;
   networkLatency: number;
   cpuUsage: number;
   timestamp: number;
-}
 
 interface PerformanceAlert {
   id: string;
@@ -18,7 +15,6 @@ interface PerformanceAlert {
   metric: string;
   value: number;
   timestamp: number;
-}
 
 export const AdvancedPerformanceMonitor: React.FC = () => {
   const [metrics, setMetrics] = useState<PerformanceMetrics>({
@@ -48,7 +44,6 @@ export const AdvancedPerformanceMonitor: React.FC = () => {
         setMetrics(prev => ({ ...prev, fps, timestamp: Date.now() }));
         frameCount = 0;
         lastTime = currentTime;
-      }
 
       requestAnimationFrame(countFrames);
     };
@@ -62,7 +57,7 @@ export const AdvancedPerformanceMonitor: React.FC = () => {
       const memory = (performance as any).memory;
       const memoryUsage = memory.usedJSHeapSize / 1024 / 1024;
       setMetrics(prev => ({ ...prev, memory: memoryUsage }));
-    }
+
   }, []);
 
   // Load time monitoring
@@ -72,8 +67,8 @@ export const AdvancedPerformanceMonitor: React.FC = () => {
       if (navigation) {
         const loadTime = navigation.loadEventEnd - navigation.loadEventStart;
         setMetrics(prev => ({ ...prev, loadTime }));
-      }
-    }
+
+
   }, []);
 
   // Network latency monitoring
@@ -87,7 +82,7 @@ export const AdvancedPerformanceMonitor: React.FC = () => {
     } catch (error) {
       // If health check fails, use a default value
       setMetrics(prev => ({ ...prev, networkLatency: 0 }));
-    }
+
   }, []);
 
   // CPU usage estimation
@@ -104,7 +99,6 @@ export const AdvancedPerformanceMonitor: React.FC = () => {
         setMetrics(prev => ({ ...prev, cpuUsage }));
         frameCount = 0;
         lastTime = currentTime;
-      }
 
       requestAnimationFrame(measureFrame);
     };
@@ -134,7 +128,6 @@ export const AdvancedPerformanceMonitor: React.FC = () => {
         value: metrics.fps,
         timestamp: Date.now()
       });
-    }
 
     if (metrics.memory > 100) {
       newAlerts.push({
@@ -145,7 +138,6 @@ export const AdvancedPerformanceMonitor: React.FC = () => {
         value: metrics.memory,
         timestamp: Date.now()
       });
-    }
 
     if (metrics.loadTime > 3000) {
       newAlerts.push({
@@ -156,7 +148,6 @@ export const AdvancedPerformanceMonitor: React.FC = () => {
         value: metrics.loadTime,
         timestamp: Date.now()
       });
-    }
 
     if (metrics.networkLatency > 1000) {
       newAlerts.push({
@@ -167,11 +158,10 @@ export const AdvancedPerformanceMonitor: React.FC = () => {
         value: metrics.networkLatency,
         timestamp: Date.now()
       });
-    }
 
     if (newAlerts.length > 0) {
       setAlerts(prev => [...prev, ...newAlerts]);
-    }
+
   }, []);
 
   // Auto-hide alerts after 5 seconds
@@ -238,11 +228,10 @@ export const AdvancedPerformanceMonitor: React.FC = () => {
         className="fixed bottom-4 right-4 z-50 p-3 bg-slate-800 hover:bg-slate-700 rounded-full shadow-lg transition-all duration-300"
         whileHover={{ scale: 1.1 }}
         whileTap={{ scale: 0.9 }}
-      >
+
         <Activity className="w-5 h-5 text-cyan-400" />
       </motion.button>
     );
-  }
 
   return (
     <AnimatePresence>
@@ -251,7 +240,7 @@ export const AdvancedPerformanceMonitor: React.FC = () => {
         animate={{ opacity: 1, y: 0 }}
         exit={{ opacity: 0, y: 20 }}
         className="fixed bottom-4 right-4 z-50 bg-slate-900 border border-slate-700 rounded-lg shadow-2xl"
-      >
+
         {/* Header */}
         <div className="flex items-center justify-between p-3 border-b border-slate-700">
           <div className="flex items-center space-x-2">
@@ -262,13 +251,13 @@ export const AdvancedPerformanceMonitor: React.FC = () => {
             <button
               onClick={() => setIsExpanded(!isExpanded)}
               className="p-1 hover:bg-slate-700 rounded transition-colors"
-            >
+
               <TrendingUp className="w-4 h-4 text-slate-400" />
             </button>
             <button
               onClick={() => setIsVisible(false)}
               className="p-1 hover:bg-slate-700 rounded transition-colors"
-            >
+
               <XCircle className="w-4 h-4 text-slate-400" />
             </button>
           </div>
@@ -323,7 +312,7 @@ export const AdvancedPerformanceMonitor: React.FC = () => {
                     alert.type === 'info' ? 'bg-blue-900/20 text-blue-400' :
                     'bg-green-900/20 text-green-400'
                   }`}
-                >
+
                   {alert.type === 'error' ? <XCircle className="w-3 h-3" /> :
                    alert.type === 'warning' ? <AlertTriangle className="w-3 h-3" /> :
                    alert.type === 'info' ? <Info className="w-3 h-3" /> :
@@ -337,4 +326,4 @@ export const AdvancedPerformanceMonitor: React.FC = () => {
       </motion.div>
     </AnimatePresence>
   );
-};
+};}}}}}}}}}}}}}}}

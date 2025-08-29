@@ -30,7 +30,7 @@ export const innovativeAIAutomationServices2025 = [
         price: 1999,
         period: 'month',
         features: ['Full autonomy', 'Custom AI training', 'Dedicated support', 'White-label solution']
-      }
+
     },
     category: 'AI & Automation',
     tags: ['AI', 'Autonomous Systems', 'Business Intelligence', 'Process Automation', 'Strategic Planning'],
@@ -83,7 +83,7 @@ export const innovativeAIAutomationServices2025 = [
         price: 999,
         period: 'month',
         features: ['Full emotional intelligence suite', 'Custom models', 'Dedicated support', 'White-label solution']
-      }
+
     },
     category: 'AI & Consciousness',
     tags: ['AI', 'Emotional Intelligence', 'Human-AI Collaboration', 'Customer Experience', 'Mental Health'],
@@ -136,7 +136,7 @@ export const innovativeAIAutomationServices2025 = [
         price: 799,
         period: 'month',
         features: ['Full creative suite', 'Custom training', 'Dedicated support', 'White-label solution']
-      }
+
     },
     category: 'AI & Creativity',
     tags: ['AI', 'Quantum Computing', 'Creative Content', 'Artistic Intelligence', 'Design Automation'],
@@ -189,7 +189,7 @@ export const innovativeAIAutomationServices2025 = [
         price: 1499,
         period: 'month',
         features: ['Full healthcare suite', 'Custom AI training', 'Dedicated support', 'White-label solution']
-      }
+
     },
     category: 'AI & Healthcare',
     tags: ['AI', 'Healthcare', 'Predictive Analytics', 'Medical Diagnostics', 'Preventive Medicine'],
@@ -242,7 +242,7 @@ export const innovativeAIAutomationServices2025 = [
         price: 499,
         period: 'month',
         features: ['Full financial suite', 'Custom AI training', 'Dedicated support', 'White-label solution']
-      }
+
     },
     category: 'AI & Finance',
     tags: ['AI', 'Financial Planning', 'Investment Management', 'Wealth Management', 'Portfolio Optimization'],
@@ -263,5 +263,5 @@ export const innovativeAIAutomationServices2025 = [
     ],
     integrations: ['Brokerage platforms', 'Banking systems', 'Tax software', 'Insurance platforms', 'Real estate platforms'],
     compliance: ['SEC', 'FINRA', 'SOC2', 'ISO 27001', 'Financial regulations']
-  }
-];
+
+];}}}}}}

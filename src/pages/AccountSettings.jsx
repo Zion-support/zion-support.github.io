@@ -3,8 +3,7 @@ import { SEO } from '@/components/SEO';
 import { useAuth } from '@/hooks/useAuth';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
-import { Wallet, Database, Save } from "lucide-react";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
+import { Wallet, Database, Save import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Separator } from '@/components/ui/separator';
 import { Switch } from '@/components/ui/switch';
 import { Label } from '@/components/ui/label';
@@ -23,11 +22,11 @@ export default function AccountSettings() {
                 setDisplayWeb3(!!parsed.displayWeb3);
                 setDidHandle(parsed.didHandle || '');
                 setEnableBackup(!!parsed.enableBackup);
-            }
-        }
+
+
         catch (e) {
-            // console.error('Error loading account settings', e);
-        }
+            // // // console.error('Error loading account settings', e);
+
     }, []);
     const handleSave = () => {
         setIsSubmitting(true);
@@ -35,16 +34,16 @@ export default function AccountSettings() {
         setTimeout(() => {
             try {
                 localStorage.setItem('account_settings', JSON.stringify({ displayWeb3, didHandle, enableBackup }));
-                // console.log('Saved settings', { displayWeb3, didHandle, enableBackup });
+                // // // console.log('Saved settings', { displayWeb3, didHandle, enableBackup });
                 toast.success('Account settings updated successfully');
-            }
+
             catch (e) {
-                // console.error('Failed to save settings', e);
+                // // // console.error('Failed to save settings', e);
                 toast.error('Failed to save settings');
-            }
+
             finally {
                 setIsSubmitting(false);
-            }
+
         }, 1000);
     };
     const handleConnectWallet = async () => {
@@ -54,7 +53,7 @@ export default function AccountSettings() {
             if (!ethereum) {
                 toast.error('No wallet detected. Please install MetaMask or another compatible wallet.');
                 return;
-            }
+
             // Request accounts
             const accounts = await ethereum.request({ method: 'eth_requestAccounts' });
             const address = accounts[0];
@@ -70,16 +69,16 @@ export default function AccountSettings() {
                 const ensName = await provider.lookupAddress(address);
                 if (ensName) {
                     setDidHandle(ensName);
-                }
-            }
+
+
             catch (error) {
-                // console.error('ENS lookup error:', error);
-            }
+                // // // console.error('ENS lookup error:', error);
+
             toast.success(`Wallet connected: ${address.slice(0, 6)}...${address.slice(-4)}`);
-        }
+
         catch (error) {
             toast.error(error.message || 'Failed to connect wallet');
-        }
+
     };
     return (<>
       <SEO title="Account Settings" description="Manage your account"/>
@@ -217,4 +216,4 @@ export default function AccountSettings() {
       </main>
 
     </>);
-}
+</Card></Card></Card></Card></Card></Card></Card></Card>}}}}}}}}}}}}}}

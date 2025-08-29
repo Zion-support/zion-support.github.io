@@ -1,8 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom';
-import { Calendar, User, ArrowRight, Tag, Clock, TrendingUp } from 'lucide-react'
-
-export default function Blog() {
+import { Calendar, User, ArrowRight, Tag, Clock, TrendingUp export default function Blog() {
   const blogPosts = [
     {
       id: 'ai-automation-trends-2025',
@@ -75,7 +73,7 @@ export default function Blog() {
       tags: ['Cybersecurity', 'Threats', 'Analysis', '2025'],
       featured: false,
       image: '/blog/cyber-threats.jpg'
-    }
+
   ]
 
   const categories = [
@@ -155,7 +153,7 @@ export default function Blog() {
                   <Link
                     href={`/blog/${post.id}`}
                     className="inline-flex items-center px-6 py-3 rounded-lg bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold hover:shadow-lg transition-all duration-200"
-                  >
+
                     Read Full Article
                     <ArrowRight className="ml-2 h-4 w-4" />
                   </Link>
@@ -218,7 +216,7 @@ export default function Blog() {
                   <Link
                     href={`/blog/${post.id}`}
                     className="inline-flex items-center text-blue-600 hover:text-blue-700 font-medium text-sm transition-colors"
-                  >
+
                     Read More
                     <ArrowRight className="ml-1 h-3 w-3" />
                   </Link>
@@ -254,4 +252,4 @@ export default function Blog() {
       </section>
     </div>
   )
-}
+}}}

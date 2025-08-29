@@ -28,7 +28,6 @@ import {
   Link,
   Users,
   CheckCircle
-} from 'lucide-react';
 import { SEO } from '@/components/SEO';
 
 export default function EnhancedServicesPage() {
@@ -84,7 +83,7 @@ export default function EnhancedServicesPage() {
         return <Zap className="w-5 h-5" />;
       default:
         return <Code className="w-5 h-5" />;
-    }
+
   };
 
   const getPriceRange = (price: number) => {
@@ -117,7 +116,7 @@ export default function EnhancedServicesPage() {
               size="lg"
               className="bg-zion-cyan text-zion-blue-dark hover:bg-zion-cyan-light"
               onClick={() => document.getElementById('services-grid')?.scrollIntoView({ behavior: 'smooth' })}
-            >
+
               Explore Services
             </Button>
             <Button
@@ -125,7 +124,7 @@ export default function EnhancedServicesPage() {
               variant="outline"
               className="border-zion-cyan text-zion-cyan hover:bg-zion-cyan/10"
               onClick={() => document.getElementById('contact-section')?.scrollIntoView({ behavior: 'smooth' })}
-            >
+
               Get in Touch
             </Button>
           </div>
@@ -357,7 +356,7 @@ export default function EnhancedServicesPage() {
                         size="sm"
                         className="bg-zion-purple hover:bg-zion-purple-dark text-white"
                         onClick={() => document.getElementById('contact-section')?.scrollIntoView({ behavior: 'smooth' })}
-                      >
+
                         Get Quote
                       </Button>
                     </div>
@@ -382,7 +381,7 @@ export default function EnhancedServicesPage() {
                   key={category.value}
                   value={category.value}
                   className="text-zion-slate-light data-[state=active]:text-zion-cyan"
-                >
+
                   {category.label}
                 </TabsTrigger>
               ))}
@@ -411,7 +410,7 @@ export default function EnhancedServicesPage() {
                               size="sm"
                               variant="outline"
                               className="border-zion-cyan text-zion-cyan hover:bg-zion-cyan/10"
-                            >
+
                               Learn More
                             </Button>
                           </div>
@@ -512,7 +511,7 @@ export default function EnhancedServicesPage() {
                 size="lg"
                 className="bg-zion-cyan text-zion-blue-dark hover:bg-zion-cyan-light"
                 onClick={() => window.open(`tel:${CONTACT_INFO.mobile}`, '_self')}
-              >
+
                 <Phone className="w-5 h-5 mr-2" />
                 Call Now
               </Button>
@@ -521,7 +520,7 @@ export default function EnhancedServicesPage() {
                 variant="outline"
                 className="border-zion-cyan text-zion-cyan hover:bg-zion-cyan/10"
                 onClick={() => window.open(`mailto:${CONTACT_INFO.email}`, '_self')}
-              >
+
                 <Mail className="w-5 h-5 mr-2" />
                 Send Email
               </Button>
@@ -530,7 +529,7 @@ export default function EnhancedServicesPage() {
                 variant="outline"
                 className="border-zion-cyan text-zion-cyan hover:bg-zion-cyan/10"
                 onClick={() => window.open(CONTACT_INFO.website, '_blank')}
-              >
+
                 <ExternalLink className="w-5 h-5 mr-2" />
                 Visit Website
               </Button>
@@ -544,7 +543,7 @@ export default function EnhancedServicesPage() {
               <Button
                 className="bg-zion-purple hover:bg-zion-purple-dark text-white"
                 onClick={() => window.open(`mailto:${CONTACT_INFO.email}?subject=Enterprise%20Inquiry`, '_self')}
-              >
+
                 Request Enterprise Consultation
               </Button>
             </div>
@@ -553,4 +552,4 @@ export default function EnhancedServicesPage() {
       </section>
     </div>
   );
-}
+</Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card>}}}

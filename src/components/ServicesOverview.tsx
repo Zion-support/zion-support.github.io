@@ -27,7 +27,6 @@ import {
   Star,
   CheckCircle,
   Clock
-} from 'lucide-react';
 import { INNOVATIVE_MICRO_SAAS_SERVICES_2025, SPECIALIZED_SERVICES } from '@/data/innovativeMicroSaasServices2025';
 
 export function ServicesOverview() {
@@ -127,7 +126,7 @@ export function ServicesOverview() {
       color: 'from-zion-pink to-zion-purple',
       description: 'Healthcare artificial intelligence solutions',
       services: INNOVATIVE_MICRO_SAAS_SERVICES_2025.filter(s => s.category.includes('Healthcare'))
-    }
+
   ];
 
   return (
@@ -144,7 +143,7 @@ export function ServicesOverview() {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
-        >
+
           <h1 className="heading-responsive font-bold mb-6">
             <span className="text-gradient neon-text-cyan">Comprehensive Technology</span>
             <br />
@@ -167,7 +166,7 @@ export function ServicesOverview() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: index * 0.1 }}
               whileHover={{ y: -10 }}
-            >
+
               <Link to={`/services/${category.id}`} className="block">
                 <div className="card-futuristic h-full hover:border-zion-cyan/50 transition-all duration-300">
                   {/* Category Icon */}
@@ -210,7 +209,7 @@ export function ServicesOverview() {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
-        >
+
           <h2 className="heading-responsive font-bold mb-8 text-center">
             <span className="text-gradient neon-text-purple">Featured Services</span>
           </h2>
@@ -224,7 +223,7 @@ export function ServicesOverview() {
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 whileHover={{ y: -5 }}
-              >
+
                 <div className="flex items-start justify-between mb-4">
                   <div className="flex-1">
                     <h3 className="text-xl font-bold text-white mb-2 group-hover:text-zion-cyan transition-colors duration-300">
@@ -278,7 +277,7 @@ export function ServicesOverview() {
                   <Link
                     to={`/services/${service.id}`}
                     className="btn-futuristic px-4 py-2 text-sm"
-                  >
+
                     Learn More
                     <ArrowRight className="w-4 h-4 ml-2" />
                   </Link>
@@ -294,7 +293,7 @@ export function ServicesOverview() {
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
-        >
+
           <div className="bg-gradient-to-r from-zion-cyan/10 via-zion-purple/10 to-zion-blue/10 rounded-2xl p-12 border border-zion-cyan/20">
             <h2 className="heading-responsive font-bold mb-6">
               Ready to Transform Your Business?
@@ -308,7 +307,7 @@ export function ServicesOverview() {
               <Link
                 to="/contact"
                 className="btn-futuristic px-8 py-4 text-lg"
-              >
+
                 <MessageCircle className="w-5 h-5 mr-2" />
                 Get Free Consultation
               </Link>
@@ -316,7 +315,7 @@ export function ServicesOverview() {
               <a
                 href="tel:+13024640950"
                 className="btn-neon px-8 py-4 text-lg"
-              >
+
                 <Phone className="w-5 h-5 mr-2" />
                 Call Now: +1 302 464 0950
               </a>
@@ -352,4 +351,4 @@ export function ServicesOverview() {
       </div>
     </div>
   );
-}
+}}}

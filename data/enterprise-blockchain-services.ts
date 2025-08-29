@@ -38,7 +38,7 @@ export interface EnterpriseBlockchainService {
   customers: number;
   rating: number;
   reviews: number;
-}
+
 export const enterpriseBlockchainServices: EnterpriseBlockchainService[] = [
   // Enterprise Blockchain Platform
   {
@@ -299,5 +299,5 @@ export const enterpriseBlockchainServices: EnterpriseBlockchainService[] = [
     customers: 112,
     rating: 4.8,
     reviews: 89
-  }
-];
+
+];}}

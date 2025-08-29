@@ -1,6 +1,5 @@
 import React, { useState, useEffect, useCallback } from 'react';
-import { Search, TrendingUp, Zap, AlertTriangle, RefreshCw, Download } from 'lucide-react';
-const SEOOptimizer = () => {
+import { Search, TrendingUp, Zap, AlertTriangle, RefreshCw, Download const SEOOptimizer = () => {
     const [isOpen, setIsOpen] = useState(false);
     const [isAnalyzing, setIsAnalyzing] = useState(false);
     const [report, setReport] = useState(null);
@@ -36,7 +35,7 @@ const SEOOptimizer = () => {
                     images: ['/images/ai-solutions.jpg'],
                     links: ['/services', '/about', '/contact'],
                     keywords: ['artificial intelligence', 'machine learning', 'predictive analytics', 'AI automation']
-                }
+
             ];
             const pageAnalyses = samplePages.map(page => {
                 const score = calculateSEOScore(page);
@@ -78,13 +77,13 @@ const SEOOptimizer = () => {
                 pageAnalyses,
                 summary
             });
-        }
+
         catch (error) {
-            // console.error('Error analyzing SEO:', error);
-        }
+            // // // console.error('Error analyzing SEO:', error);
+
         finally {
             setIsAnalyzing(false);
-        }
+
     }, []);
     useEffect(() => {
         // Auto-analyze SEO when component mounts
@@ -97,114 +96,114 @@ const SEOOptimizer = () => {
         maxScore += 20;
         if (page.title.length >= 30 && page.title.length <= 60) {
             score += 20;
-        }
+
         else if (page.title.length > 0) {
             score += 10;
-        }
+
         // Meta description (0-15 points)
         maxScore += 15;
         if (page.metaDescription.length >= 120 && page.metaDescription.length <= 160) {
             score += 15;
-        }
+
         else if (page.metaDescription.length > 0) {
             score += 8;
-        }
+
         // Headings (0-15 points)
         maxScore += 15;
         if (page.headings.length >= 3) {
             score += 15;
-        }
+
         else if (page.headings.length >= 1) {
             score += 10;
-        }
+
         // Images (0-10 points)
         maxScore += 10;
         if (page.images.length >= 2) {
             score += 10;
-        }
+
         else if (page.images.length >= 1) {
             score += 5;
-        }
+
         // Internal links (0-15 points)
         maxScore += 15;
         if (page.links.length >= 3) {
             score += 15;
-        }
+
         else if (page.links.length >= 1) {
             score += 10;
-        }
+
         // Keywords (0-10 points)
         maxScore += 10;
         if (page.keywords.length >= 3) {
             score += 10;
-        }
+
         else if (page.keywords.length >= 1) {
             score += 5;
-        }
+
         // URL structure (0-15 points)
         maxScore += 15;
         if (page.url === '/' || page.url.includes('-')) {
             score += 15;
-        }
+
         else if (page.url.length > 0) {
             score += 8;
-        }
+
         return Math.round((score / maxScore) * 100);
     };
     const identifySEOIssues = (page) => {
         const issues = [];
         if (!page.title || page.title.length < 30) {
             issues.push('Title is too short (should be 30-60 characters)');
-        }
+
         else if (page.title.length > 60) {
             issues.push('Title is too long (should be 30-60 characters)');
-        }
+
         if (!page.metaDescription || page.metaDescription.length < 120) {
             issues.push('Meta description is too short (should be 120-160 characters)');
-        }
+
         else if (page.metaDescription.length > 160) {
             issues.push('Meta description is too long (should be 120-160 characters)');
-        }
+
         if (page.headings.length < 2) {
             issues.push('Insufficient heading structure (should have at least 2 headings)');
-        }
+
         if (page.images.length === 0) {
             issues.push('No images found (consider adding relevant images with alt text)');
-        }
+
         if (page.links.length < 2) {
             issues.push('Insufficient internal linking (should have at least 2 internal links)');
-        }
+
         if (page.keywords.length < 2) {
             issues.push('Insufficient keyword targeting (should have at least 2 relevant keywords)');
-        }
+
         if (page.url !== '/' && !page.url.includes('-')) {
             issues.push('URL could be more SEO-friendly (consider using hyphens)');
-        }
+
         return issues;
     };
     const generateSEORecommendations = (issues) => {
         const recommendations = [];
         if (issues.some(issue => issue.includes('Title'))) {
             recommendations.push('Optimize page titles with relevant keywords and compelling copy');
-        }
+
         if (issues.some(issue => issue.includes('Meta description'))) {
             recommendations.push('Write compelling meta descriptions that accurately describe the page content');
-        }
+
         if (issues.some(issue => issue.includes('heading structure'))) {
             recommendations.push('Add H1, H2, and H3 headings to improve content structure and SEO');
-        }
+
         if (issues.some(issue => issue.includes('No images'))) {
             recommendations.push('Add relevant images with descriptive alt text for better accessibility and SEO');
-        }
+
         if (issues.some(issue => issue.includes('internal linking'))) {
             recommendations.push('Add internal links to related pages to improve navigation and SEO');
-        }
+
         if (issues.some(issue => issue.includes('keyword targeting'))) {
             recommendations.push('Research and include relevant keywords naturally throughout the content');
-        }
+
         if (issues.some(issue => issue.includes('URL'))) {
             recommendations.push('Use SEO-friendly URLs with hyphens and descriptive terms');
-        }
+
         recommendations.push('Ensure content is unique, valuable, and addresses user intent');
         recommendations.push('Implement structured data markup for better search engine understanding');
         recommendations.push('Optimize page loading speed for better user experience and SEO');
@@ -218,16 +217,16 @@ const SEOOptimizer = () => {
         let summary = `Analyzed ${totalPages} pages for SEO. `;
         if (excellentPages > 0) {
             summary += `${excellentPages} pages have excellent SEO. `;
-        }
+
         if (goodPages > 0) {
             summary += `${goodPages} pages have good SEO. `;
-        }
+
         if (poorPages > 0) {
             summary += `${poorPages} pages need significant SEO improvement. `;
-        }
+
         if (topIssues.length > 0) {
             summary += `Top SEO issues to address: ${topIssues.slice(0, 3).join(', ')}.`;
-        }
+
         return summary;
     };
     const exportSEOReport = () => {
@@ -446,3 +445,4 @@ const SEOOptimizer = () => {
     </div>);
 };
 export default SEOOptimizer;
+}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}

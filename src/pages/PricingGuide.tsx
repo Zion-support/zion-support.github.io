@@ -26,7 +26,6 @@ import {
   Globe,
   Atom,
   Satellite
-} from 'lucide-react';
 import { SEO } from '../components/SEO';
 
 export default function PricingGuide() {
@@ -104,7 +103,7 @@ export default function PricingGuide() {
       notIncluded: [],
       cta: "Contact Sales",
       popular: false
-    }
+
   ];
 
   const servicePricing = [
@@ -145,7 +144,7 @@ export default function PricingGuide() {
         { name: "IT Consulting", price: "From $299/hour", description: "Strategic IT guidance" },
         { name: "Onsite Support", price: "From $199/hour", description: "Local technical assistance" }
       ]
-    }
+
   ];
 
   const calculatePrice = (price: number) => {
@@ -187,7 +186,7 @@ export default function PricingGuide() {
                   value={selectedCurrency}
                   onChange={(e) => setSelectedCurrency(e.target.value)}
                   className="bg-slate-700 border border-slate-600 text-white rounded-lg px-3 py-2 focus:outline-none focus:border-cyan-400"
-                >
+
                   <option value="USD">USD ($)</option>
                   <option value="EUR">EUR (€)</option>
                   <option value="GBP">GBP (£)</option>
@@ -204,7 +203,7 @@ export default function PricingGuide() {
                         ? 'bg-cyan-500 text-white'
                         : 'text-slate-300 hover:text-white'
                     }`}
-                  >
+
                     Monthly
                   </button>
                   <button
@@ -214,7 +213,7 @@ export default function PricingGuide() {
                         ? 'bg-cyan-500 text-white'
                         : 'text-slate-300 hover:text-white'
                     }`}
-                  >
+
                     Yearly
                     {savings > 0 && (
                       <span className="ml-1 text-xs bg-green-500 text-white px-2 py-1 rounded-full">
@@ -282,7 +281,7 @@ export default function PricingGuide() {
                         ? 'bg-gradient-to-r from-cyan-500 to-blue-600 text-white hover:from-cyan-600 hover:to-blue-700'
                         : 'bg-slate-700 text-white hover:bg-slate-600 border border-slate-600'
                     }`}
-                  >
+
                     {plan.cta}
                   </Link>
                 </div>
@@ -363,14 +362,14 @@ export default function PricingGuide() {
               <Link
                 to="/contact"
                 className="inline-flex items-center px-8 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-200"
-              >
+
                 <MessageCircle className="w-5 h-5 mr-2" />
                 Get Custom Quote
               </Link>
               <Link
                 to="/services-overview"
                 className="inline-flex items-center px-8 py-3 border border-cyan-500 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-500 hover:text-white transition-all duration-200"
-              >
+
                 <BarChart3 className="w-5 h-5 mr-2" />
                 View All Services
               </Link>
@@ -380,4 +379,4 @@ export default function PricingGuide() {
       </section>
     </div>
   );
-}
+</div></div></div>}}}}

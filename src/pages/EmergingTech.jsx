@@ -1,8 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { Atom, Satellite, Brain, Cpu, Network, CircuitBoard } from 'lucide-react';
-const EmergingTech = () => {
+import { Atom, Satellite, Brain, Cpu, Network, CircuitBoard const EmergingTech = () => {
     const technologies = [
         {
             category: "Quantum Computing",
@@ -22,7 +21,7 @@ const EmergingTech = () => {
                     href: "/quantum-edge-computing-platform",
                     features: ["Low Latency", "High Security", "Scalable Infrastructure"],
                     status: "Emerging Technology"
-                }
+
             ]
         },
         {
@@ -43,7 +42,7 @@ const EmergingTech = () => {
                     href: "/space-tech",
                     features: ["Earth Observation", "Climate Monitoring", "Resource Management"],
                     status: "Production Ready"
-                }
+
             ]
         },
         {
@@ -64,7 +63,7 @@ const EmergingTech = () => {
                     href: "/services/edge-computing",
                     features: ["Low Latency", "High Bandwidth", "Distributed Processing"],
                     status: "Production Ready"
-                }
+
             ]
         },
         {
@@ -85,7 +84,7 @@ const EmergingTech = () => {
                     href: "/ai-autonomous-research-assistant",
                     features: ["Research Automation", "Data Analysis", "Insight Generation"],
                     status: "Research & Development"
-                }
+
             ]
         },
         {
@@ -106,7 +105,7 @@ const EmergingTech = () => {
                     href: "/services/ai-workflow-automation",
                     features: ["Process Optimization", "Error Reduction", "Efficiency Gains"],
                     status: "Production Ready"
-                }
+
             ]
         },
         {
@@ -127,9 +126,9 @@ const EmergingTech = () => {
                     href: "/services/blockchain-defi-solutions",
                     features: ["DeFi Protocols", "Liquidity Management", "Risk Assessment"],
                     status: "Active Development"
-                }
+
             ]
-        }
+
     ];
     const researchAreas = [
         {
@@ -155,7 +154,7 @@ const EmergingTech = () => {
             description: "Creating truly autonomous AI systems with minimal human intervention",
             progress: 80,
             timeline: "2025-2026"
-        }
+
     ];
     const containerVariants = {
         hidden: { opacity: 0 },
@@ -163,8 +162,8 @@ const EmergingTech = () => {
             opacity: 1,
             transition: {
                 staggerChildren: 0.1
-            }
-        }
+
+
     };
     const itemVariants = {
         hidden: { y: 20, opacity: 0 },
@@ -173,8 +172,8 @@ const EmergingTech = () => {
             opacity: 1,
             transition: {
                 duration: 0.5
-            }
-        }
+
+
     };
     const getStatusColor = (status) => {
         switch (status) {
@@ -188,7 +187,7 @@ const EmergingTech = () => {
                 return "text-purple-400 bg-purple-400/20";
             default:
                 return "text-gray-400 bg-gray-400/20";
-        }
+
     };
     return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       {/* Hero Section */}
@@ -325,5 +324,6 @@ const EmergingTech = () => {
         </motion.div>
       </div>
     </div>);
-};
+</div>};
 export default EmergingTech;
+}}}}}}}}}}}}}}

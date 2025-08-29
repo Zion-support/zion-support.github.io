@@ -1,7 +1,5 @@
 import React, { useState } from 'react';
-import { FlaskConical, BookOpen, Users, Clock, Star, Search, Filter, Download, ExternalLink, ArrowRight, Brain, Cloud, Shield, Database, Zap, Globe, Target, TrendingUp, Award, CheckCircle, Calendar, MapPin, DollarSign, FileText, Lightbulb, Microscope, Rocket, Code, Network, Cpu, Lock, BarChart3, Palette, Smartphone, Eye, Star as StarIcon } from 'lucide-react';
-
-export default function Research() {
+import { FlaskConical, BookOpen, Users, Clock, Star, Search, Filter, Download, ExternalLink, ArrowRight, Brain, Cloud, Shield, Database, Zap, Globe, Target, TrendingUp, Award, CheckCircle, Calendar, MapPin, DollarSign, FileText, Lightbulb, Microscope, Rocket, Code, Network, Cpu, Lock, BarChart3, Palette, Smartphone, Eye, Star as StarIcon export default function Research() {
   const [searchQuery, setSearchQuery] = useState('');
   const [activeCategory, setActiveCategory] = useState('all');
   const [activeStatus, setActiveStatus] = useState('all');
@@ -58,7 +56,7 @@ export default function Research() {
           year: 2024,
           doi: '10.1038/s41534-024-00800-5',
           citations: 23
-        }
+
       ],
       tags: ['Quantum Computing', 'Machine Learning', 'Finance', 'Optimization', 'Risk Assessment'],
       featured: true,
@@ -95,7 +93,7 @@ export default function Research() {
           year: 2024,
           doi: '10.1109/TMI.2024.001234',
           citations: 18
-        }
+
       ],
       tags: ['Federated Learning', 'Healthcare', 'Privacy', 'AI Ethics', 'Medical Imaging'],
       featured: true,
@@ -125,7 +123,7 @@ export default function Research() {
           year: 2024,
           doi: '10.1109/MSEC.2024.001234',
           citations: 12
-        }
+
       ],
       tags: ['Zero-Trust', 'Industrial IoT', 'Cybersecurity', 'Critical Infrastructure', 'Security Architecture'],
       featured: false,
@@ -177,7 +175,7 @@ export default function Research() {
           year: 2024,
           doi: '10.1111/jscm.12345',
           citations: 28
-        }
+
       ],
       tags: ['Blockchain', 'Supply Chain', 'Transparency', 'Smart Contracts', 'Traceability'],
       featured: false,
@@ -207,13 +205,13 @@ export default function Research() {
           year: 2024,
           doi: '10.1038/s41928-024-01123-4',
           citations: 19
-        }
+
       ],
       tags: ['Neuromorphic Computing', 'Edge AI', 'Energy Efficiency', 'Spiking Neural Networks', 'Hardware Design'],
       featured: true,
       progress: 55,
       impact: 'high'
-    }
+
   ];
 
   // Update counts
@@ -252,7 +250,7 @@ export default function Research() {
       case 'planning': return 'text-yellow-400';
       case 'published': return 'text-purple-400';
       default: return 'text-zion-slate-light';
-    }
+
   };
 
   const getImpactColor = (impact: string) => {
@@ -262,7 +260,7 @@ export default function Research() {
       case 'medium': return 'text-yellow-400';
       case 'low': return 'text-green-400';
       default: return 'text-zion-slate-light';
-    }
+
   };
 
   const formatDate = (dateString: string) => {
@@ -277,7 +275,7 @@ export default function Research() {
       return `$${(amount / 1000000).toFixed(1)}M`;
     } else if (amount >= 1000) {
       return `$${(amount / 1000).toFixed(0)}K`;
-    }
+
     return `$${amount.toLocaleString()}`;
   };
 
@@ -331,7 +329,7 @@ export default function Research() {
                           ? 'bg-zion-cyan text-zion-slate-dark'
                           : 'bg-zion-slate text-zion-slate-light hover:bg-zion-slate-light hover:text-white'
                       }`}
-                    >
+
                       {category.icon}
                       {category.name}
                     </button>
@@ -352,7 +350,7 @@ export default function Research() {
                           ? 'bg-zion-purple text-white'
                           : 'bg-zion-slate text-zion-slate-light hover:bg-zion-slate-light hover:text-white'
                       }`}
-                    >
+
                       {status.name} ({status.count})
                     </button>
                   ))}
@@ -372,7 +370,7 @@ export default function Research() {
                           ? 'bg-zion-cyan text-zion-slate-dark'
                           : 'bg-zion-slate text-zion-slate-light hover:bg-zion-slate-light hover:text-white'
                       }`}
-                    >
+
                       {type.name} ({type.count})
                     </button>
                   ))}
@@ -395,7 +393,7 @@ export default function Research() {
                 <div
                   key={project.id}
                   className="bg-zion-slate border border-zion-slate-light rounded-lg overflow-hidden hover:shadow-lg transition-shadow"
-                >
+
                   <div className="relative h-48 bg-gradient-to-br from-zion-blue to-zion-purple">
                     <div className="absolute inset-0 bg-black/20"></div>
                     <div className="absolute top-4 left-4">
@@ -473,7 +471,7 @@ export default function Research() {
                 <div
                   key={project.id}
                   className="bg-zion-slate border border-zion-slate-light rounded-lg p-6 hover:shadow-lg transition-shadow"
-                >
+
                   <div className="flex items-start justify-between mb-4">
                     <div className="flex items-center gap-2">
                       {getCategoryIcon(project.category)}
@@ -504,7 +502,7 @@ export default function Research() {
                       <span
                         key={index}
                         className="px-2 py-1 bg-zion-slate-light/20 text-zion-slate-light text-xs rounded-full"
-                      >
+
                         {tag}
                       </span>
                     ))}
@@ -602,4 +600,4 @@ export default function Research() {
       </div>
     </div>
   );
-}
+}}}}}}}}}}}

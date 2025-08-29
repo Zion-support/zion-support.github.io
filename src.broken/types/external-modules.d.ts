@@ -12,20 +12,20 @@ declare module "@radix-ui/react-toggle";
 declare module '*.module.css' {
   const classes: { [key: string]: string };
   export default classes;
-}
+
 declare module '@tanstack/react-query';
 declare module 'react-day-picker' {
   export interface DateRange {
     from?: Date;
     to?: Date;
-  }
+
   // Minimal placeholder for the DayPicker component used in the app
   // The actual library provides full typings but we stub them here so the
   // TypeScript compiler can understand the imports without requiring the real
   // type definitions.
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   export const DayPicker: any;
-}
+
 declare module 'sonner';
 declare module 'lucide-react' {
   import { FC, SVGProps } from 'react';
@@ -33,7 +33,7 @@ declare module 'lucide-react' {
     color?: string;
     size?: number | string;
     strokeWidth?: number | string;
-  }
+
   export type LucideIcon = FC<LucideProps>;
   export const AlertCircle: LucideIcon;
   export const AlertTriangle: LucideIcon;
@@ -228,13 +228,13 @@ declare module 'lucide-react' {
   export const Zap: LucideIcon;
   const icons: { [key: string]: LucideIcon };
   export default icons;
-}
+
 declare module 'child_process';
 declare module 'date-fns';
 declare module 'jspdf' {
   export const jsPDF: any;
   export default jsPDF;
-}
+
 declare module '@hookform/resolvers/zod';
 declare module '@radix-ui/react-accordion';
 declare module '@radix-ui/react-alert-dialog';
@@ -261,11 +261,11 @@ declare module '@supabase/supabase-js';
 declare module 'class-variance-authority' {
   export function cva(...inputs: any[]): any
   export type VariantProps<T extends (...args: any) => any> = any
-}
+
 declare module 'clsx' {
   export type ClassValue = any;
   export default function clsx(...classes: ClassValue[]): string;
-}
+
 declare module 'embla-carousel-react';
 declare module 'framer-motion';
 declare module 'i18next';
@@ -286,7 +286,7 @@ declare module 'react-hook-form' {
     register: any
     formState: any
     [key: string]: any
-  }
+
   export function useForm<
     TFieldValues extends FieldValues = FieldValues,
   >(options?: any): UseFormReturn<TFieldValues>
@@ -302,19 +302,19 @@ declare module 'react-hook-form' {
     rules?: any
     defaultValue?: any
     render: (props: any) => ReactElement
-  }
+
   export const Controller: ComponentType<ControllerProps<any, any>>
   export interface FormProviderProps<
     TFieldValues extends FieldValues = FieldValues,
   > {
     children?: ReactNode
     [key: string]: any
-  }
+
   export const FormProvider: ComponentType<FormProviderProps<any>>
   export function useFormContext<
     TFieldValues extends FieldValues = FieldValues,
   >(): UseFormReturn<TFieldValues>
-}
+
 declare module 'react-i18next';
 declare module 'react-dom/client';
 declare module 'react-dom';
@@ -328,6 +328,7 @@ declare module 'recharts';
 declare module 'next' {
   export type GetStaticPaths = any;
   export type GetStaticProps<P = any, Q = any> = any;
-}
+
 declare module 'next-themes';
 declare module 'tailwind-merge';
+}}}}}}}}}}}}}

@@ -12,6 +12,6 @@ const BlogPost: React.FC = () => {
 			</div>
 		</div>
 	)
-}
 
 export default BlogPost
+}

@@ -1,8 +1,6 @@
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
-import { Mail, Phone, MapPin, Send, CheckCircle } from 'lucide-react'
-
-export default function Contact() {
+import { Mail, Phone, MapPin, Send, CheckCircle export default function Contact() {
 	const [formData, setFormData] = useState({
 		name: '',
 		email: '',
@@ -14,21 +12,19 @@ export default function Contact() {
 	const handleSubmit = (e: React.FormEvent) => {
 		e.preventDefault()
 		// Here you would typically send the form data to your backend
-		// console.log('Form submitted:', formData)
+		// // // console.log('Form submitted:', formData)
 		setIsSubmitted(true)
 		// Reset form after submission
 		setTimeout(() => {
 			setIsSubmitted(false)
 			setFormData({ name: '', email: '', company: '', message: '' })
 		}, 3000)
-	}
 
 	const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
 		setFormData({
 			...formData,
 			[e.target.name]: e.target.value
 		})
-	}
 
 	return (
 		<>
@@ -119,7 +115,7 @@ export default function Contact() {
 									<button
 										type="submit"
 										className="w-full bg-blue-600 text-white py-3 px-4 rounded-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 transition-colors flex items-center justify-center gap-2"
-									>
+
 										<Send className="h-4 w-4" />
 										Send Message
 									</button>
@@ -172,7 +168,7 @@ export default function Contact() {
 								<Link
 									to="/services"
 									className="inline-flex items-center text-blue-600 hover:text-blue-500 font-medium"
-								>
+
 									Explore Our Services →
 								</Link>
 							</div>
@@ -193,13 +189,13 @@ export default function Contact() {
 							<Link
 								to="/services"
 								className="rounded-md bg-white px-3.5 py-2.5 text-sm font-semibold text-blue-600 shadow-sm hover:bg-gray-100 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
-							>
+
 								View Our Services
 							</Link>
 							<Link
 								to="/about"
 								className="text-sm font-semibold leading-6 text-white hover:text-blue-100"
-							>
+
 								Learn More About Us →
 							</Link>
 						</div>
@@ -208,4 +204,4 @@ export default function Contact() {
 			</section>
 		</>
 	)
-}
+}}}}

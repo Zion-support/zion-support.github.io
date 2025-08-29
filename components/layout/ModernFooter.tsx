@@ -1,9 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { Mail, Phone, MapPin, Linkedin, Twitter, Github, Zap, Shield, Cpu, Database, Globe, Lock } from 'lucide-react';
-
-const ModernFooter: React.FC = () => {
+import { Mail, Phone, MapPin, Linkedin, Twitter, Github, Zap, Shield, Cpu, Database, Globe, Lock const ModernFooter: React.FC = () => {
   const currentYear = new Date().getFullYear();
 
   const serviceCategories = [
@@ -67,7 +65,7 @@ const ModernFooter: React.FC = () => {
                     className="w-10 h-10 bg-neon-blue/10 hover:bg-neon-blue/20 border border-neon-blue/20 hover:border-neon-blue/40 rounded-lg flex items-center justify-center text-neon-blue hover:text-white transition-all duration-300"
                     whileHover={{ scale: 1.1, y: -2 }}
                     whileTap={{ scale: 0.95 }}
-                  >
+
                     <social.icon className="w-5 h-5" />
                   </motion.a>
                 ))}
@@ -83,7 +81,7 @@ const ModernFooter: React.FC = () => {
                     <Link
                       href={category.href}
                       className="flex items-center space-x-2 text-gray-300 hover:text-neon-blue transition-colors group"
-                    >
+
                       <category.icon className="w-4 h-4 text-neon-blue group-hover:text-neon-purple transition-colors" />
                       <span>{category.name}</span>
                     </Link>
@@ -101,7 +99,7 @@ const ModernFooter: React.FC = () => {
                     <Link
                       href={link.href}
                       className="text-gray-300 hover:text-neon-blue transition-colors"
-                    >
+
                       {link.name}
                     </Link>
                   </li>
@@ -120,7 +118,7 @@ const ModernFooter: React.FC = () => {
                     <a
                       href="tel:+13024640950"
                       className="text-neon-blue hover:text-neon-purple transition-colors font-medium"
-                    >
+
                       +1 (302) 464-0950
                     </a>
                   </div>
@@ -133,7 +131,7 @@ const ModernFooter: React.FC = () => {
                     <a
                       href="mailto:kleber@ziontechgroup.com"
                       className="text-neon-blue hover:text-neon-purple transition-colors font-medium"
-                    >
+
                       kleber@ziontechgroup.com
                     </a>
                   </div>
@@ -170,7 +168,7 @@ const ModernFooter: React.FC = () => {
                   className="px-6 py-3 bg-gradient-to-r from-neon-blue to-neon-purple text-white font-semibold rounded-lg hover:from-neon-purple hover:to-neon-blue transition-all duration-300"
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
-                >
+
                   Subscribe
                 </motion.button>
               </div>
@@ -200,6 +198,6 @@ const ModernFooter: React.FC = () => {
       </div>
     </footer>
   );
-};
+</div></div>};
 
-export default ModernFooter;
+export default ModernFooter;}

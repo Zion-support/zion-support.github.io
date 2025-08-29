@@ -27,7 +27,7 @@ export interface ComprehensiveService {
   customers: number;
   rating: number;
   reviews: number;
-}
+
 export const comprehensiveRealServices: ComprehensiveService[] = [
   // AI & Machine Learning Services
   {
@@ -508,5 +508,5 @@ export const comprehensiveRealServices: ComprehensiveService[] = [
     customers: 950,
     rating: 4.9,
     reviews: 520
-  }
-];
+
+];}}

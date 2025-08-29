@@ -38,7 +38,7 @@ export interface CuttingEdge2029Service {
   customers: number;
   rating: number;
   reviews: number;
-}
+
 export const cuttingEdge2029Services: CuttingEdge2029Service[] = [
   // AI Consciousness & Emotional Intelligence
   {
@@ -506,7 +506,7 @@ export const cuttingEdge2029Services: CuttingEdge2029Service[] = [
     customers: 78,
     rating: 4.8,
     reviews: 134
-  }
+
 ];
 export const getPopularCuttingEdge2029Services = () => {
   return cuttingEdge2029Services.filter(service => service.popular);
@@ -520,3 +520,4 @@ export const getCuttingEdge2029ServicesByPriceRange = (minPrice: number, maxPric
     return price >= minPrice && price <= maxPrice;
   });
 };
+}}

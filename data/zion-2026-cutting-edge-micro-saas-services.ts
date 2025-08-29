@@ -39,7 +39,6 @@ export interface Zion2026CuttingEdgeMicroSaasService {
   customers: number;
   rating: number;
   reviews: number;
-}
 
 const contact = {
   mobile: '+1 302 464 0950',
@@ -527,7 +526,7 @@ export const zion2026CuttingEdgeMicroSaasServices: Zion2026CuttingEdgeMicroSaasS
     customers: 3200,
     rating: 4.8,
     reviews: 1450
-  }
+
 ];
 
-export default zion2026CuttingEdgeMicroSaasServices;
+export default zion2026CuttingEdgeMicroSaasServices;}}

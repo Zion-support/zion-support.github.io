@@ -1,7 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Heart, Shield, Users, Activity, Microscope, Pill } from 'lucide-react';
-const HealthcareSolutions = () => {
+import { Heart, Shield, Users, Activity, Microscope, Pill const HealthcareSolutions = () => {
     const solutions = [
         {
             title: 'AI-Powered Patient Care',
@@ -54,7 +53,7 @@ const HealthcareSolutions = () => {
             ],
             icon: Shield,
             href: '/services/cybersecurity'
-        }
+
     ];
     const benefits = [
         {
@@ -71,7 +70,7 @@ const HealthcareSolutions = () => {
             title: 'Enhanced Security',
             description: 'HIPAA-compliant solutions protect patient data.',
             icon: Shield
-        }
+
     ];
     return (<div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900 text-white">
       {/* Header Section */}
@@ -180,3 +179,4 @@ const HealthcareSolutions = () => {
     </div>);
 };
 export default HealthcareSolutions;
+}}}

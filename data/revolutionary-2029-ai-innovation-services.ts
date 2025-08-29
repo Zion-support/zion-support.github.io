@@ -40,7 +40,6 @@ export interface RevolutionaryAIInnovationService2029 {
   customers: number;
   rating: number;
   reviews: number;
-}
 
 export const revolutionaryAIInnovationServices2029: RevolutionaryAIInnovationService2029[] = [
   // Generative AI Content Creation Suite
@@ -527,7 +526,7 @@ export const revolutionaryAIInnovationServices2029: RevolutionaryAIInnovationSer
     customers: 520,
     rating: 4.8,
     reviews: 380
-  }
+
 ];
 
-export default revolutionaryAIInnovationServices2029;
+export default revolutionaryAIInnovationServices2029;}}

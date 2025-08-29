@@ -22,8 +22,6 @@ import {
   PenTool,
   Eye,
   Share2
-} from 'lucide-react';
-
 const AIContentOptimizerPro: React.FC = () => {
   const contactInfo = {
     phone: '+1 302 464 0950',
@@ -68,7 +66,7 @@ const AIContentOptimizerPro: React.FC = () => {
       title: 'Content Plagiarism Detection',
       description: 'Advanced plagiarism detection with originality scoring and content uniqueness analysis.',
       benefits: ['Ensure content originality', 'Protect brand reputation', 'Avoid legal issues']
-    }
+
   ];
 
   const pricingPlans = [
@@ -123,7 +121,7 @@ const AIContentOptimizerPro: React.FC = () => {
       ],
       popular: false,
       cta: 'Contact Sales'
-    }
+
   ];
 
   const useCases = [
@@ -146,7 +144,7 @@ const AIContentOptimizerPro: React.FC = () => {
       title: 'Technical Content',
       description: 'Optimize technical documentation, whitepapers, and educational content for better comprehension.',
       metrics: ['45% improvement in readability scores', '40% increase in engagement']
-    }
+
   ];
 
   const testimonials = [
@@ -170,7 +168,7 @@ const AIContentOptimizerPro: React.FC = () => {
       company: 'Creative Content Studio',
       content: 'This tool saves me hours of work and significantly improves my content quality. Highly recommended!',
       rating: 5
-    }
+
   ];
 
   return (
@@ -190,7 +188,7 @@ const AIContentOptimizerPro: React.FC = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-            >
+
               <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
                 AI Content Optimizer Pro
               </h1>
@@ -239,7 +237,7 @@ const AIContentOptimizerPro: React.FC = () => {
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
               className="text-center mb-16"
-            >
+
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
                 AI-Powered Features That Transform Content
               </h2>
@@ -257,7 +255,7 @@ const AIContentOptimizerPro: React.FC = () => {
                   transition={{ duration: 0.6, delay: index * 0.1 }}
                   viewport={{ once: true }}
                   className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:border-white/40 transition-all duration-300"
-                >
+
                   <div className="flex items-center mb-4">
                     <feature.icon className="text-blue-400 w-8 h-8 mr-3" />
                     <h3 className="text-xl font-bold text-white">{feature.title}</h3>
@@ -286,7 +284,7 @@ const AIContentOptimizerPro: React.FC = () => {
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
               className="text-center mb-16"
-            >
+
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
                 Proven Results Across Industries
               </h2>
@@ -304,7 +302,7 @@ const AIContentOptimizerPro: React.FC = () => {
                   transition={{ duration: 0.6, delay: index * 0.1 }}
                   viewport={{ once: true }}
                   className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20"
-                >
+
                   <h3 className="text-xl font-bold text-white mb-3">{useCase.title}</h3>
                   <p className="text-gray-300 mb-4">{useCase.description}</p>
                   <div className="space-y-2">
@@ -330,7 +328,7 @@ const AIContentOptimizerPro: React.FC = () => {
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
               className="text-center mb-16"
-            >
+
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
                 Transparent Pricing Plans
               </h2>
@@ -352,7 +350,7 @@ const AIContentOptimizerPro: React.FC = () => {
                       ? 'bg-gradient-to-br from-blue-600 to-purple-600 border-2 border-blue-400'
                       : 'bg-white/10 backdrop-blur-sm border border-white/20'
                   }`}
-                >
+
                   {plan.popular && (
                     <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                       <span className="bg-yellow-400 text-black px-4 py-2 rounded-full text-sm font-semibold">
@@ -396,7 +394,7 @@ const AIContentOptimizerPro: React.FC = () => {
               transition={{ duration: 0.8, delay: 0.4 }}
               viewport={{ once: true }}
               className="text-center mt-12"
-            >
+
               <p className="text-gray-300 mb-4">
                 Annual plans save 20%. Enterprise customers get custom pricing and dedicated support.
               </p>
@@ -416,7 +414,7 @@ const AIContentOptimizerPro: React.FC = () => {
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
               className="text-center mb-16"
-            >
+
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
                 What Our Customers Say
               </h2>
@@ -434,7 +432,7 @@ const AIContentOptimizerPro: React.FC = () => {
                   transition={{ duration: 0.6, delay: index * 0.1 }}
                   viewport={{ once: true }}
                   className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20"
-                >
+
                   <div className="flex items-center mb-4">
                     {[...Array(testimonial.rating)].map((_, i) => (
                       <Star key={i} className="text-yellow-400 w-4 h-4 fill-current" />
@@ -460,7 +458,7 @@ const AIContentOptimizerPro: React.FC = () => {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
-            >
+
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
                 Ready to Transform Your Content?
               </h2>
@@ -490,14 +488,14 @@ const AIContentOptimizerPro: React.FC = () => {
                 <a
                   href={`tel:${contactInfo.phone}`}
                   className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-semibold py-3 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 flex items-center justify-center space-x-2"
-                >
+
                   <Phone className="w-4 h-4" />
                   <span>Call Now</span>
                 </a>
                 <a
                   href={`mailto:${contactInfo.email}`}
                   className="border-2 border-white text-white font-semibold py-3 px-8 rounded-lg hover:bg-white hover:text-gray-900 transition-all duration-300 flex items-center justify-center space-x-2"
-                >
+
                   <Mail className="w-4 h-4" />
                   <span>Send Email</span>
                 </a>
@@ -506,7 +504,7 @@ const AIContentOptimizerPro: React.FC = () => {
                   target="_blank"
                   rel="noopener noreferrer"
                   className="border-2 border-green-400 text-green-400 font-semibold py-3 px-8 rounded-lg hover:bg-green-400 hover:text-gray-900 transition-all duration-300 flex items-center justify-center space-x-2"
-                >
+
                   <ExternalLink className="w-4 h-4" />
                   <span>Visit Website</span>
                 </a>
@@ -519,4 +517,4 @@ const AIContentOptimizerPro: React.FC = () => {
   );
 };
 
-export default AIContentOptimizerPro;
+export default AIContentOptimizerPro;}}}}}

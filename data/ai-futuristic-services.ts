@@ -37,7 +37,7 @@ export interface AIFuturisticService {
   customers: number;
   rating: number;
   reviews: number;
-}
+
 export const aiFuturisticServices: AIFuturisticService[] = [
   // AI-Powered Quantum Blockchain Analytics
   {
@@ -558,5 +558,5 @@ export const aiFuturisticServices: AIFuturisticService[] = [
     customers: 195,
     rating: 4.8,
     reviews: 102
-  }
-];
+
+];}}

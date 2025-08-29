@@ -26,7 +26,6 @@ import {
   Search,
   ChevronDown,
   ChevronUp
-} from 'lucide-react';
 import { innovativeServices2028, serviceCategories, pricingTiers, contactInfo } from '../data/innovativeServices2028';
 
 export default function InnovativeServices2028() {
@@ -54,7 +53,7 @@ export default function InnovativeServices2028() {
         return a.name.localeCompare(b.name);
       default:
         return 0;
-    }
+
   });
 
   const getCategoryIcon = (categoryName: string) => {
@@ -105,7 +104,7 @@ export default function InnovativeServices2028() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="max-w-6xl mx-auto"
-          >
+
             <h1 className="text-5xl md:text-7xl font-bold mb-8 bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent">
               Innovative Services 2028
             </h1>
@@ -156,7 +155,7 @@ export default function InnovativeServices2028() {
                   value={selectedCategory}
                   onChange={(e) => setSelectedCategory(e.target.value)}
                   className="w-full px-4 py-3 bg-slate-700/50 border border-slate-600/50 rounded-xl text-white focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent appearance-none"
-                >
+
                   <option value="all">All Categories</option>
                   {serviceCategories.map((category) => (
                     <option key={category.id} value={category.id}>
@@ -173,7 +172,7 @@ export default function InnovativeServices2028() {
                   value={sortBy}
                   onChange={(e) => setSortBy(e.target.value)}
                   className="w-full px-4 py-3 bg-slate-700/50 border border-slate-600/50 rounded-xl text-white focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent appearance-none"
-                >
+
                   <option value="name">Sort by Name</option>
                   <option value="price">Sort by Price</option>
                   <option value="roi">Sort by ROI</option>
@@ -196,7 +195,7 @@ export default function InnovativeServices2028() {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 className="group relative"
-              >
+
                 {/* Background glow */}
                 <div className={`absolute inset-0 bg-gradient-to-r ${getCategoryColor(service.category)} rounded-2xl blur-xl opacity-20 group-hover:opacity-30 transition-opacity duration-300`}></div>
 
@@ -256,7 +255,7 @@ export default function InnovativeServices2028() {
                         exit={{ opacity: 0, height: 0 }}
                         transition={{ duration: 0.3 }}
                         className="mb-6 overflow-hidden"
-                      >
+
                         <div className="space-y-2">
                           {service.features.slice(3).map((feature, idx) => (
                             <div key={idx} className="flex items-center text-gray-400 text-sm">
@@ -299,13 +298,13 @@ export default function InnovativeServices2028() {
                     <button
                       onClick={() => window.open(`mailto:${contactInfo.email}?subject=Inquiry about ${service.name}`, '_blank')}
                       className="flex-1 bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-4 py-3 rounded-xl font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105"
-                    >
+
                       Get Started
                     </button>
                     <button
                       onClick={() => setExpandedService(expandedService === service.id ? null : service.id)}
                       className="px-4 py-3 border border-cyan-500 text-cyan-400 rounded-xl font-semibold hover:bg-cyan-500 hover:text-white transition-all duration-300"
-                    >
+
                       {expandedService === service.id ? <ChevronUp className="w-5 h-5" /> : <ChevronDown className="w-5 h-5" />}
                     </button>
                   </div>
@@ -339,7 +338,7 @@ export default function InnovativeServices2028() {
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
             className="text-center mb-16"
-          >
+
             <h2 className="text-4xl md:text-6xl font-bold text-white mb-6">
               Flexible Pricing Plans
             </h2>
@@ -361,7 +360,7 @@ export default function InnovativeServices2028() {
                     ? 'bg-gradient-to-br from-cyan-500/10 to-blue-500/10 border-cyan-500/50 scale-105'
                     : 'bg-slate-800/50 border-slate-700/50 hover:border-cyan-500/30'
                 }`}
-              >
+
                 {tier.recommended && (
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                     <span className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-4 py-2 rounded-full text-sm font-semibold">
@@ -394,7 +393,7 @@ export default function InnovativeServices2028() {
                         ? 'bg-gradient-to-r from-cyan-500 to-blue-600 text-white hover:from-cyan-600 hover:to-blue-700'
                         : 'bg-slate-700 text-white hover:bg-slate-600'
                     }`}
-                  >
+
                     Get Started
                   </button>
                 </div>
@@ -413,7 +412,7 @@ export default function InnovativeServices2028() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
-            >
+
               <h2 className="text-4xl md:text-6xl font-bold text-white mb-8">
                 Ready to Transform Your Business?
               </h2>
@@ -443,13 +442,13 @@ export default function InnovativeServices2028() {
                 <button
                   onClick={() => window.open(`mailto:${contactInfo.email}?subject=Business Inquiry`, '_blank')}
                   className="px-10 py-5 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-xl font-semibold text-white hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-cyan-500/25"
-                >
+
                   Start Your Journey
                 </button>
                 <button
                   onClick={() => window.open(`tel:${contactInfo.phone}`, '_blank')}
                   className="px-10 py-5 border-2 border-cyan-500 text-cyan-400 rounded-xl font-semibold hover:bg-cyan-500 hover:text-white transition-all duration-300 transform hover:scale-105"
-                >
+
                   Schedule a Call
                 </button>
               </div>
@@ -459,4 +458,4 @@ export default function InnovativeServices2028() {
       </section>
     </div>
   );
-}
+}}}

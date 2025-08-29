@@ -1,6 +1,4 @@
-import { Smartphone, Zap, Shield, Users, Globe, BarChart3 } from 'lucide-react';
-
-export const MobileFeatureShowcase = () => {
+import { Smartphone, Zap, Shield, Users, Globe, BarChart3 export const MobileFeatureShowcase = () => {
   const features = [
     {
       icon: Smartphone,
@@ -37,7 +35,7 @@ export const MobileFeatureShowcase = () => {
       title: "Advanced Analytics",
       description: "Comprehensive insights and reporting for data-driven decisions",
       color: "from-pink-500 to-pink-600"
-    }
+
   ];
 
   return (
@@ -57,7 +55,7 @@ export const MobileFeatureShowcase = () => {
             <div
               key={index}
               className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20 hover:border-white/40 transition-all duration-300 group"
-            >
+
               <div className={`w-16 h-16 bg-gradient-to-r ${feature.color} rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}>
                 <feature.icon className="h-8 w-8 text-white" />
               </div>
@@ -88,4 +86,4 @@ export const MobileFeatureShowcase = () => {
       </div>
     </section>
   );
-};
+};}}

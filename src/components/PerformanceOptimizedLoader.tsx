@@ -7,7 +7,6 @@ interface LoaderProps {
   text?: string;
   fullScreen?: boolean;
   showLogo?: boolean;
-}
 
 export const PerformanceOptimizedLoader = memo<LoaderProps>(({
   size = 'md',
@@ -56,7 +55,7 @@ export const PerformanceOptimizedLoader = memo<LoaderProps>(({
             className={`text-zion-cyan ${textSizes[size]} animate-pulse`}
             animate={{ opacity: [0.5, 1, 0.5] }}
             transition={{ duration: 2, repeat: Infinity }}
-          >
+
             {text}
           </motion.div>
         </div>
@@ -92,7 +91,7 @@ export function SkeletonLoader({
       ))}
     </div>
   );
-}
+
 // Card skeleton loader
 export function CardSkeleton({ className = "" }: { className?: string }) {
   return (
@@ -114,7 +113,7 @@ export function CardSkeleton({ className = "" }: { className?: string }) {
       </div>
     </div>
   );
-}
+
 // Grid skeleton loader
 export function GridSkeleton({
   columns = 3,
@@ -132,7 +131,7 @@ export function GridSkeleton({
       ))}
     </div>
   );
-}
+
 // Page skeleton loader
 export function PageSkeleton({ className = "" }: { className?: string }) {
   return (
@@ -151,4 +150,4 @@ export function PageSkeleton({ className = "" }: { className?: string }) {
       </div>
     </div>
   );
-}
+</div></div></div></div></div></div></div></div></div></div></Card>}}}}</motion.div></motion.div>}

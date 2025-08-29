@@ -33,8 +33,6 @@ import {
   PenTool,
   Shield,
   Cloud
-} from "lucide-react";
-
 export function FeatureCTAs() {
   const features = [
     {
@@ -155,7 +153,7 @@ export function FeatureCTAs() {
       link: "/micro-saas",
       badge: "New",
       details: "Discover powerful, affordable software solutions designed to help your business scale without breaking the bank."
-    }
+
   ];
 
   return (
@@ -232,4 +230,4 @@ export function FeatureCTAs() {
       </div>
     </section>
   );
-}
+</Card></Card></Card></Card></Card>}}}

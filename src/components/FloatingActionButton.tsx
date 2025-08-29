@@ -16,11 +16,8 @@ import {
   Bookmark,
   Download,
   Search
-} from 'lucide-react';
-
 interface FloatingActionButtonProps {
   enabled?: boolean;
-}
 
 export function FloatingActionButton({ enabled = true }: FloatingActionButtonProps) {
   const [isExpanded, setIsExpanded] = useState(false);
@@ -35,7 +32,6 @@ export function FloatingActionButton({ enabled = true }: FloatingActionButtonPro
       setIsVisible(false);
     } else {
       setIsVisible(true);
-    }
 
     (window as any).lastScrollTop = scrollTop;
   }, []);
@@ -84,7 +80,7 @@ export function FloatingActionButton({ enabled = true }: FloatingActionButtonPro
         if (searchInput) {
           searchInput.focus();
           searchInput.click();
-        }
+
       },
       color: 'from-orange-500 to-orange-600',
       delay: 0.4
@@ -104,7 +100,7 @@ export function FloatingActionButton({ enabled = true }: FloatingActionButtonPro
           const title = document.title;
           const bookmarkUrl = `https://del.icio.us/post?url=${encodeURIComponent(url)}&title=${encodeURIComponent(title)}`;
           window.open(bookmarkUrl, '_blank');
-        }
+
       },
       color: 'from-red-500 to-red-600',
       delay: 0.5
@@ -131,13 +127,13 @@ export function FloatingActionButton({ enabled = true }: FloatingActionButtonPro
             const deferredPrompt = (window as any).deferredPrompt;
             if (deferredPrompt) {
               deferredPrompt.prompt();
-            }
-          }
-        }
+
+
+
       },
       color: 'from-indigo-500 to-indigo-600',
       delay: 0.6
-    }
+
   ];
 
   // Scroll to top
@@ -165,7 +161,7 @@ export function FloatingActionButton({ enabled = true }: FloatingActionButtonPro
             animate={{ opacity: 1, scale: 1 }}
             exit={{ opacity: 0, scale: 0 }}
             className="fixed bottom-6 right-6 z-50"
-          >
+
             {/* Quick Actions */}
             <AnimatePresence>
               {isExpanded && (
@@ -181,7 +177,7 @@ export function FloatingActionButton({ enabled = true }: FloatingActionButtonPro
                       className={`group relative flex items-center justify-center w-14 h-14 bg-gradient-to-r ${action.color} rounded-full shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-110`}
                       title={action.label}
                       aria-label={action.label}
-                    >
+
                       <action.icon className="w-6 h-6 text-white" />
 
                       {/* Tooltip */}
@@ -203,7 +199,7 @@ export function FloatingActionButton({ enabled = true }: FloatingActionButtonPro
               whileTap={{ scale: 0.9 }}
               title={isExpanded ? 'Close Menu' : 'Quick Actions'}
               aria-label={isExpanded ? 'Close quick actions menu' : 'Open quick actions menu'}
-            >
+
               <AnimatePresence mode="wait">
                 {isExpanded ? (
                   <motion.div
@@ -212,7 +208,7 @@ export function FloatingActionButton({ enabled = true }: FloatingActionButtonPro
                     animate={{ rotate: 0, opacity: 1 }}
                     exit={{ rotate: 90, opacity: 0 }}
                     transition={{ duration: 0.2 }}
-                  >
+
                     <X className="w-8 h-8 text-white" />
                   </motion.div>
                 ) : (
@@ -222,7 +218,7 @@ export function FloatingActionButton({ enabled = true }: FloatingActionButtonPro
                     animate={{ rotate: 0, opacity: 1 }}
                     exit={{ rotate: -90, opacity: 0 }}
                     transition={{ duration: 0.2 }}
-                  >
+
                     <Plus className="w-8 h-8 text-white" />
                   </motion.div>
                 )}
@@ -245,7 +241,7 @@ export function FloatingActionButton({ enabled = true }: FloatingActionButtonPro
             whileTap={{ scale: 0.9 }}
             title="Scroll to top"
             aria-label="Scroll to top of page"
-          >
+
             <ArrowUp className="w-6 h-6 text-white" />
           </motion.button>
         )}
@@ -266,7 +262,7 @@ export function FloatingActionButton({ enabled = true }: FloatingActionButtonPro
         whileTap={{ scale: 0.9 }}
         title="Get Help"
         aria-label="Open help center"
-      >
+
         <HelpCircle className="w-6 h-6 text-white" />
       </motion.button>
 
@@ -285,7 +281,7 @@ export function FloatingActionButton({ enabled = true }: FloatingActionButtonPro
         whileTap={{ scale: 0.9 }}
         title="Settings"
         aria-label="Open settings"
-      >
+
         <Settings className="w-6 h-6 text-white" />
       </motion.button>
 
@@ -304,9 +300,9 @@ export function FloatingActionButton({ enabled = true }: FloatingActionButtonPro
         whileTap={{ scale: 0.9 }}
         title="Send Feedback"
         aria-label="Open feedback form"
-      >
+
         <Star className="w-6 h-6 text-white" />
       </motion.button>
     </>
   );
-}
+}}}}}}}}}}

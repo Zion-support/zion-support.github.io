@@ -16,8 +16,6 @@ import {
   DollarSign,
   Gauge,
   HelpCircle
-} from 'lucide-react';
-
 export function ServicesShowcase() {
   const services = [
     {
@@ -179,7 +177,7 @@ export function ServicesShowcase() {
       href: "/services/affiliate-tracking",
       category: "Marketing",
       color: "from-green-500 to-emerald-600"
-    }
+
   ];
 
   const containerVariants = {
@@ -188,8 +186,8 @@ export function ServicesShowcase() {
       opacity: 1,
       transition: {
         staggerChildren: 0.1
-      }
-    }
+
+
   };
 
   const itemVariants = {
@@ -199,8 +197,8 @@ export function ServicesShowcase() {
       y: 0,
       transition: {
         duration: 0.5
-      }
-    }
+
+
   };
 
   return (
@@ -213,7 +211,7 @@ export function ServicesShowcase() {
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
           className="text-center mb-16"
-        >
+
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
             Our Comprehensive
             <span className="bg-gradient-to-r from-cyan-400 to-blue-600 bg-clip-text text-transparent"> Services</span>
@@ -230,14 +228,14 @@ export function ServicesShowcase() {
           whileInView="visible"
           viewport={{ once: true, margin: "-50px" }}
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6"
-        >
+
           {services.map((service, index) => (
             <motion.div
               key={index}
               variants={itemVariants}
               whileHover={{ y: -8, scale: 1.02 }}
               className="group relative"
-            >
+
               <Link to={service.href}>
                 <div className="relative overflow-hidden bg-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/10 hover:border-white/20 transition-all duration-300 hover:shadow-2xl hover:shadow-cyan-500/10">
                   {/* Background Gradient */}
@@ -278,7 +276,7 @@ export function ServicesShowcase() {
           viewport={{ once: true }}
           transition={{ duration: 0.8, delay: 0.2 }}
           className="text-center mt-16"
-        >
+
           <div className="bg-gradient-to-r from-cyan-500/10 to-blue-500/10 backdrop-blur-md rounded-2xl p-8 border border-cyan-500/20">
             <h3 className="text-2xl font-bold text-white mb-4">
               Ready to Transform Your Business?
@@ -290,13 +288,13 @@ export function ServicesShowcase() {
               <Link
                 to="/contact"
                 className="px-8 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-xl hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105"
-              >
+
                 Get Started Today
               </Link>
               <Link
                 to="/services"
                 className="px-8 py-3 border-2 border-cyan-500 text-cyan-400 font-semibold rounded-xl hover:bg-cyan-500 hover:text-white transition-all duration-300"
-              >
+
                 View All Services
               </Link>
             </div>
@@ -305,4 +303,4 @@ export function ServicesShowcase() {
       </div>
     </section>
   );
-}
+</div></div>}}}}}}}

@@ -6,7 +6,7 @@ function kebabToPascal(str) {
     .split('-')
     .map(word => word.charAt(0).toUpperCase() + word.slice(1))
     .join('');
-}
+
 // Function to create a proper Next.js page template
 function createPageTemplate(pageName, filePath) {
   const componentName = kebabToPascal(pageName);
@@ -17,7 +17,6 @@ function createPageTemplate(pageName, filePath) {
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.status(200).json({ message: 'API endpoint working' });
 }`;
-  }
 
   return `import type { NextPage } from 'next';
 import { Helmet } from 'react-helmet-async';
@@ -37,7 +36,7 @@ const ${componentName}: NextPage = () => {
   );
 };
 export default ${componentName};`;
-}
+
 // Function to fix empty files
 function fixEmptyFiles(dir) {
   const files = fs.readdirSync(dir);
@@ -52,20 +51,20 @@ function fixEmptyFiles(dir) {
       const content = fs.readFileSync(filePath, 'utf8').trim();
 
       if (!content) {
-        // console.log(`Fixing empty file: ${filePath}`);
+        // // // console.log(`Fixing empty file: ${filePath}`);
         const fileName = path.basename(file, path.extname(file));
         const pageTemplate = createPageTemplate(fileName, filePath);
         fs.writeFileSync(filePath, pageTemplate);
-      }
-    }
+
+
   });
-}
+
 // Start fixing from the pages directory
 const pagesDir = './pages';
 if (fs.existsSync(pagesDir)) {
-  // console.log('Fixing empty pages...');
+  // // // console.log('Fixing empty pages...');
   fixEmptyFiles(pagesDir);
-  // console.log('Empty pages fixed successfully!');
+  // // // console.log('Empty pages fixed successfully!');
 } else {
-  // console.error('Pages directory not found');
-}
+  // // // console.error('Pages directory not found');
+}}}}}}}

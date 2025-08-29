@@ -1,7 +1,6 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { DollarSign, TrendingUp, BarChart3, Settings, Users, Shield, ArrowRight, CheckCircle, Play, Download, Mail, Target, Activity, Database, Calculator, PieChart } from 'lucide-react';
-import { Link } from 'react-router-dom';
+import { DollarSign, TrendingUp, BarChart3, Settings, Users, Shield, ArrowRight, CheckCircle, Play, Download, Mail, Target, Activity, Database, Calculator, PieChart import { Link } from 'react-router-dom';
 
 export default function FinOpsAdvisor() {
   return (
@@ -37,7 +36,7 @@ export default function FinOpsAdvisor() {
                 <Link
                   to="/contact"
                   className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-emerald-500 to-teal-600 text-white font-semibold rounded-lg hover:from-emerald-600 hover:to-teal-700 transition-all duration-200 shadow-lg hover:shadow-xl"
-                >
+
                   Get Started
                   <ArrowRight className="ml-2 w-5 h-5" />
                 </Link>
@@ -94,7 +93,7 @@ export default function FinOpsAdvisor() {
                   icon: Database,
                   title: "Multi-cloud Support",
                   description: "Manage costs across AWS, Azure, Google Cloud, and other providers."
-                }
+
               ].map((feature, index) => (
                 <div key={index} className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-6 hover:bg-slate-800/70 transition-all duration-300">
                   <div className="w-12 h-12 bg-gradient-to-r from-emerald-500 to-teal-600 rounded-lg flex items-center justify-center mb-4">
@@ -157,7 +156,7 @@ export default function FinOpsAdvisor() {
                   description: "Optimize support plans, licensing, and service agreements.",
                   icon: Shield,
                   benefits: ["Support plans", "Licensing", "Service agreements"]
-                }
+
               ].map((area, index) => (
                 <div key={index} className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-6 hover:bg-slate-800/70 transition-all duration-300">
                   <div className="w-12 h-12 bg-gradient-to-r from-emerald-500 to-teal-600 rounded-lg flex items-center justify-center mb-4">
@@ -207,7 +206,7 @@ export default function FinOpsAdvisor() {
                   step: "03",
                   title: "Operate",
                   description: "Establish ongoing cost management processes and governance."
-                }
+
               ].map((step, index) => (
                 <div key={index} className="text-center">
                   <div className="w-16 h-16 bg-gradient-to-r from-emerald-500 to-teal-600 rounded-full flex items-center justify-center mx-auto mb-4">
@@ -322,7 +321,7 @@ export default function FinOpsAdvisor() {
                   description: "REST APIs for custom integrations and automated workflows.",
                   icon: Settings,
                   features: ["REST APIs", "Custom integrations", "Automated workflows"]
-                }
+
               ].map((tool, index) => (
                 <div key={index} className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-6 hover:bg-slate-800/70 transition-all duration-300">
                   <div className="w-12 h-12 bg-gradient-to-r from-emerald-500 to-teal-600 rounded-lg flex items-center justify-center mb-4">
@@ -377,7 +376,7 @@ export default function FinOpsAdvisor() {
                   step: "04",
                   title: "Optimization",
                   description: "Continuously monitor, optimize, and improve cost management."
-                }
+
               ].map((step, index) => (
                 <div key={index} className="text-center">
                   <div className="w-16 h-16 bg-gradient-to-r from-emerald-500 to-teal-600 rounded-full flex items-center justify-center mx-auto mb-4">
@@ -404,14 +403,14 @@ export default function FinOpsAdvisor() {
               <Link
                 to="/contact"
                 className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-emerald-500 to-teal-600 text-white font-semibold rounded-lg hover:from-emerald-600 hover:to-teal-700 transition-all duration-200"
-              >
+
                 Schedule a Consultation
                 <ArrowRight className="ml-2 w-5 h-5" />
               </Link>
               <Link
                 to="/services"
                 className="inline-flex items-center px-8 py-4 border border-emerald-500/30 text-emerald-400 font-semibold rounded-lg hover:bg-emerald-500/10 transition-all duration-200"
-              >
+
                 Explore All Services
               </Link>
             </div>
@@ -420,4 +419,4 @@ export default function FinOpsAdvisor() {
       </div>
     </>
   );
-}
+}}}}}}}

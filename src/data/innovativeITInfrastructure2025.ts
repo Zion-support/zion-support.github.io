@@ -31,7 +31,6 @@ export interface InnovativeITInfrastructureService {
   };
   competitors?: string[];
   marketSize?: string;
-}
 
 export const INNOVATIVE_IT_INFRASTRUCTURE_2025: InnovativeITInfrastructureService[] = [
   // Next-Generation Cloud Infrastructure
@@ -357,5 +356,5 @@ export const INNOVATIVE_IT_INFRASTRUCTURE_2025: InnovativeITInfrastructureServic
     },
     competitors: ["Ericsson", "Nokia", "Huawei", "Samsung", "Qualcomm"],
     marketSize: "$667.9 billion by 2025"
-  }
-];
+
+];}}

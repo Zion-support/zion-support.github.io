@@ -36,7 +36,6 @@ export interface SpecializedInnovativeService2027 {
   customers: number;
   rating: number;
   reviews: number;
-}
 
 export const specializedInnovativeServices2027: SpecializedInnovativeService2027[] = [
   // SPACE TECHNOLOGY SERVICES
@@ -557,7 +556,7 @@ export const specializedInnovativeServices2027: SpecializedInnovativeService2027
     customers: 89,
     rating: 4.8,
     reviews: 167
-  }
+
 ];
 
 // Helper functions for service management
@@ -589,4 +588,4 @@ export const searchSpecializedServices = (query: string) => {
   );
 };
 
-export default specializedInnovativeServices2027;
+export default specializedInnovativeServices2027;}}

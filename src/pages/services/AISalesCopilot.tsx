@@ -1,8 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Brain, MessageCircle, Zap, CheckCircle, BarChart3, Sparkles, ArrowRight } from 'lucide-react';
-
-export default function AISalesCopilot() {
+import { Brain, MessageCircle, Zap, CheckCircle, BarChart3, Sparkles, ArrowRight export default function AISalesCopilot() {
   const features = [
     'Email, call, and meeting summarization with action items',
     'CRM auto-updates (Salesforce, HubSpot) with entity extraction',
@@ -122,5 +120,4 @@ export default function AISalesCopilot() {
       </section>
     </div>
   );
-}
-
+</div></div></div>}}

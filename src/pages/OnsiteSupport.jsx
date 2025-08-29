@@ -576,8 +576,6 @@ import {
   Shield,
   Zap,
   Wrench
-} from 'lucide-react';
-
 const onsiteSupportSolutions = [
   {
     id: 1,
@@ -674,7 +672,7 @@ const onsiteSupportSolutions = [
     timeline: "2-8 hours",
     category: "Emergency",
     technologies: ["Emergency Tools", "Spare Parts", "Mobile Support", "Remote Access"]
-  }
+
 ];
 
 const supportTechnologies = [
@@ -705,7 +703,7 @@ const supportTechnologies = [
     icon: Shield,
     useCase: "Security Issues",
     reliability: "Critical"
-  }
+
 ];
 
 const successStories = [
@@ -735,7 +733,7 @@ const successStories = [
     solution: "Emergency hardware support with immediate replacement and data recovery",
     results: "Zero trading downtime, data integrity maintained, improved disaster recovery",
     logo: "FSF"
-  }
+
 ];
 
 const processSteps = [
@@ -766,7 +764,7 @@ const processSteps = [
     description: "Document resolution and schedule follow-up maintenance",
     icon: FileText,
     duration: "1-2 hours"
-  }
+
 ];
 
 const supportBenefits = [
@@ -793,7 +791,7 @@ const supportBenefits = [
     description: "Proactive maintenance prevents future issues and improves reliability",
     icon: Shield,
     examples: ["Regular maintenance", "System monitoring", "Preventive measures", "Performance optimization"]
-  }
+
 ];
 
 export default function OnsiteSupport() {
@@ -822,13 +820,13 @@ export default function OnsiteSupport() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="text-center max-w-4xl mx-auto"
-          >
+
             <motion.div
               initial={{ opacity: 0, scale: 0.8 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.8, delay: 0.2 }}
               className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-2xl mb-8"
-            >
+
               <Wrench className="w-10 h-10 text-white" />
             </motion.div>
 
@@ -868,7 +866,7 @@ export default function OnsiteSupport() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
-          >
+
             <h2 className="text-4xl font-bold text-white mb-4">Onsite Support Benefits</h2>
             <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
               Understanding the fundamental advantages that make onsite support essential
@@ -883,7 +881,7 @@ export default function OnsiteSupport() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 className="bg-zion-blue-dark/30 border border-zion-cyan/20 rounded-2xl p-8 hover:border-zion-cyan/40 transition-all duration-300"
-              >
+
                 <div className="w-16 h-16 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-2xl flex items-center justify-center mx-auto mb-6">
                   <benefit.icon className="w-8 h-8 text-white" />
                 </div>
@@ -914,7 +912,7 @@ export default function OnsiteSupport() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
-          >
+
             <h2 className="text-4xl font-bold text-white mb-4">Support Technologies We Support</h2>
             <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
               Comprehensive support for leading IT platforms and technologies
@@ -929,7 +927,7 @@ export default function OnsiteSupport() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 className="bg-zion-blue-dark/30 border border-zion-cyan/20 rounded-2xl p-6 text-center hover:border-zion-cyan/40 transition-all duration-300"
-              >
+
                 <div className="w-16 h-16 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-2xl flex items-center justify-center mx-auto mb-6">
                   <technology.icon className="w-8 h-8 text-white" />
                 </div>
@@ -961,7 +959,7 @@ export default function OnsiteSupport() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
-          >
+
             <h2 className="text-4xl font-bold text-white mb-4">Our Onsite Support Process</h2>
             <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
               A proven methodology that ensures successful onsite support delivery
@@ -976,7 +974,7 @@ export default function OnsiteSupport() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 className="text-center"
-              >
+
                 <div className="relative mb-6">
                   <div className="w-16 h-16 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-2xl flex items-center justify-center mx-auto">
                     <step.icon className="w-8 h-8 text-white" />
@@ -1005,7 +1003,7 @@ export default function OnsiteSupport() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
-          >
+
             <h2 className="text-4xl font-bold text-white mb-4">Onsite Support Solutions</h2>
             <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
               Comprehensive solutions designed for onsite IT support and maintenance
@@ -1023,7 +1021,7 @@ export default function OnsiteSupport() {
                     ? 'bg-gradient-to-r from-zion-cyan to-zion-purple text-white shadow-lg shadow-zion-cyan/25'
                     : 'bg-zion-blue-dark/30 text-zion-slate-light border border-zion-cyan/20 hover:border-zion-cyan/40'
                 }`}
-              >
+
                 {category}
               </button>
             ))}
@@ -1038,7 +1036,7 @@ export default function OnsiteSupport() {
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 className="bg-zion-blue-dark/30 border border-zion-cyan/20 rounded-2xl p-6 hover:border-zion-cyan/40 transition-all duration-300 cursor-pointer"
                 onClick={() => setSelectedSolution(solution)}
-              >
+
                 <div className="w-16 h-16 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-2xl flex items-center justify-center mb-6">
                   <solution.icon className="w-8 h-8 text-white" />
                 </div>
@@ -1060,7 +1058,7 @@ export default function OnsiteSupport() {
                     <span
                       key={techIndex}
                       className="px-2 py-1 bg-zion-purple/20 text-zion-purple text-xs rounded border border-zion-purple/30"
-                    >
+
                       {tech}
                     </span>
                   ))}
@@ -1094,7 +1092,7 @@ export default function OnsiteSupport() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
-          >
+
             <h2 className="text-4xl font-bold text-white mb-4">Onsite Support Success Stories</h2>
             <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
               Organizations that have benefited from our onsite support services
@@ -1109,7 +1107,7 @@ export default function OnsiteSupport() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 className="bg-zion-blue-dark/30 border border-zion-cyan/20 rounded-2xl p-6 hover:border-zion-cyan/40 transition-all duration-300"
-              >
+
                 <div className="flex items-center gap-4 mb-6">
                   <div className="w-12 h-12 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-xl flex items-center justify-center text-white font-bold text-lg">
                     {story.logo}
@@ -1155,7 +1153,7 @@ export default function OnsiteSupport() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="text-center max-w-4xl mx-auto"
-          >
+
             <h2 className="text-4xl font-bold text-white mb-6">Need Onsite IT Support?</h2>
             <p className="text-xl text-zion-slate-light mb-8 leading-relaxed">
               Let's discuss how our onsite support services can keep your systems running smoothly,
@@ -1166,13 +1164,13 @@ export default function OnsiteSupport() {
               <a
                 href="/contact"
                 className="px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-purple text-white font-semibold rounded-xl hover:shadow-lg hover:shadow-zion-cyan/25 transition-all duration-300 transform hover:scale-105"
-              >
+
                 Schedule Onsite Support
               </a>
               <a
                 href="/contact"
                 className="px-8 py-4 border border-zion-cyan text-zion-cyan font-semibold rounded-xl hover:bg-zion-cyan hover:text-white transition-all duration-300"
-              >
+
                 Emergency Support
               </a>
             </div>
@@ -1181,4 +1179,4 @@ export default function OnsiteSupport() {
       </section>
     </div>
   );
-}
+}}}}}}}

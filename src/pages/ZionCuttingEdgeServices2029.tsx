@@ -19,7 +19,6 @@ import {
   CheckCircle,
   Clock,
   DollarSign
-} from 'lucide-react';
 import { SEO } from '@/components/SEO';
 import { zionCuttingEdgeServices2029 } from '../../data/zion-2029-cutting-edge-services';
 import { zionEmergingTechServices2029 } from '../../data/zion-2029-emerging-tech-services';
@@ -47,8 +46,7 @@ export default function ZionCuttingEdgeServices2029() {
         matchesPrice = service.pricing.starter >= min && service.pricing.starter <= max;
       } else {
         matchesPrice = service.pricing.starter >= min;
-      }
-    }
+
 
     return matchesSearch && matchesCategory && matchesPrice;
   });
@@ -60,7 +58,7 @@ export default function ZionCuttingEdgeServices2029() {
       case '3000-5000': return '$3,000 - $5,000/month';
       case '5000+': return '$5,000+/month';
       default: return 'All Prices';
-    }
+
   };
 
   return (
@@ -78,7 +76,7 @@ export default function ZionCuttingEdgeServices2029() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-          >
+
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
               <span className="bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
                 Zion Tech Group 2029
@@ -94,14 +92,14 @@ export default function ZionCuttingEdgeServices2029() {
               <a
                 href="#services"
                 className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-300 flex items-center gap-2"
-              >
+
                 Explore Services
                 <ArrowRight className="w-5 h-5" />
               </a>
               <a
                 href="#contact"
                 className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white hover:text-slate-900 transition-all duration-300 flex items-center gap-2"
-              >
+
                 Contact Us
                 <Phone className="w-5 h-5" />
               </a>
@@ -152,7 +150,7 @@ export default function ZionCuttingEdgeServices2029() {
                 value={selectedCategory}
                 onChange={(e) => setSelectedCategory(e.target.value)}
                 className="px-4 py-3 bg-white/20 border border-white/30 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-              >
+
                 {categories.map(category => (
                   <option key={category} value={category} className="bg-slate-800 text-white">
                     {category === 'all' ? 'All Categories' : category}
@@ -165,7 +163,7 @@ export default function ZionCuttingEdgeServices2029() {
                 value={priceRange}
                 onChange={(e) => setPriceRange(e.target.value)}
                 className="px-4 py-3 bg-white/20 border border-white/30 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-              >
+
                 <option value="all">All Prices</option>
                 <option value="0-1000">$0 - $1,000/month</option>
                 <option value="1000-3000">$1,000 - $3,000/month</option>
@@ -198,7 +196,7 @@ export default function ZionCuttingEdgeServices2029() {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 className="bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-white/20 hover:border-white/40 transition-all duration-300 hover:transform hover:scale-105"
-              >
+
                 {/* Service Header */}
                 <div className="text-center mb-6">
                   <div className="text-4xl mb-4">{service.icon}</div>
@@ -303,14 +301,14 @@ export default function ZionCuttingEdgeServices2029() {
                     target="_blank"
                     rel="noopener noreferrer"
                     className="w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white py-3 px-4 rounded-lg font-semibold text-center hover:from-blue-700 hover:to-purple-700 transition-all duration-300 flex items-center justify-center gap-2"
-                  >
+
                     Learn More
                     <ExternalLink className="w-4 h-4" />
                   </a>
                   <a
                     href={`mailto:kleber@ziontechgroup.com?subject=Inquiry about ${service.name}`}
                     className="w-full border-2 border-white/30 text-white py-3 px-4 rounded-lg font-semibold text-center hover:bg-white hover:text-slate-900 transition-all duration-300 flex items-center justify-center gap-2"
-                  >
+
                     Get Quote
                     <Mail className="w-4 h-4" />
                   </a>
@@ -338,7 +336,7 @@ export default function ZionCuttingEdgeServices2029() {
                   setPriceRange('all');
                 }}
                 className="mt-4 text-blue-400 hover:text-blue-300 underline"
-              >
+
                 Clear filters
               </button>
             </div>
@@ -365,7 +363,7 @@ export default function ZionCuttingEdgeServices2029() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5 }}
               className="text-center"
-            >
+
               <div className="bg-gradient-to-br from-blue-600 to-purple-600 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
                 <Rocket className="w-8 h-8 text-white" />
               </div>
@@ -380,7 +378,7 @@ export default function ZionCuttingEdgeServices2029() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.1 }}
               className="text-center"
-            >
+
               <div className="bg-gradient-to-br from-green-600 to-teal-600 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
                 <Shield className="w-8 h-8 text-white" />
               </div>
@@ -395,7 +393,7 @@ export default function ZionCuttingEdgeServices2029() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.2 }}
               className="text-center"
-            >
+
               <div className="bg-gradient-to-br from-purple-600 to-pink-600 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
                 <Brain className="w-8 h-8 text-white" />
               </div>
@@ -410,7 +408,7 @@ export default function ZionCuttingEdgeServices2029() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.3 }}
               className="text-center"
-            >
+
               <div className="bg-gradient-to-br from-yellow-500 to-orange-600 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
                 <Zap className="w-8 h-8 text-white" />
               </div>
@@ -430,7 +428,7 @@ export default function ZionCuttingEdgeServices2029() {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-          >
+
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
               Ready to Transform Your Business?
             </h2>
@@ -442,14 +440,14 @@ export default function ZionCuttingEdgeServices2029() {
               <a
                 href="mailto:kleber@ziontechgroup.com?subject=Business Transformation Consultation"
                 className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-300 flex items-center justify-center gap-2"
-              >
+
                 Schedule Consultation
                 <ArrowRight className="w-5 h-5" />
               </a>
               <a
                 href="tel:+13024640950"
                 className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white hover:text-slate-900 transition-all duration-300 flex items-center justify-center gap-2"
-              >
+
                 Call Now
                 <Phone className="w-5 h-5" />
               </a>
@@ -492,4 +490,4 @@ export default function ZionCuttingEdgeServices2029() {
       </footer>
     </div>
   );
-}
+}}}}}

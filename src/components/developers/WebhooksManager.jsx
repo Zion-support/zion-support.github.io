@@ -1,7 +1,6 @@
 import { useState, useEffect } from "react";
 import { format } from "date-fns";
-import { Globe, MoreVertical, PlayCircle, Plus, RefreshCw, Webhook, X } from "lucide-react";
-import { useWebhooks } from "@/hooks/useWebhooks";
+import { Globe, MoreVertical, PlayCircle, Plus, RefreshCw, Webhook, X import { useWebhooks } from "@/hooks/useWebhooks";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog";
@@ -223,8 +222,8 @@ export function WebhooksManager() {
                 if (showTestResult) {
                     setShowTestResult(false);
                     clearTestResult();
-                }
-            }
+
+
         }}>
         <DialogContent className="bg-zinc-900 border-zinc-800 text-white">
           <DialogHeader>
@@ -325,4 +324,4 @@ export function WebhooksManager() {
         </AlertDialogContent>
       </AlertDialog>
     </Card>);
-}
+</Card></Card></Card></Card></Card>}}}}

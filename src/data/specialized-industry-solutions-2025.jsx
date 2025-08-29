@@ -518,6 +518,7 @@ export const SPECIALIZED_INDUSTRY_SOLUTIONS_2025 = [
         industryChallenges: ["Market volatility", "Investment decisions", "Market research", "Portfolio optimization"],
         marketOpportunity: "$24.3 billion by 2026",
         competitiveAdvantage: "AI-powered market intelligence with predictive analytics"
-    }
+
 ];
 export default SPECIALIZED_INDUSTRY_SOLUTIONS_2025;
+}

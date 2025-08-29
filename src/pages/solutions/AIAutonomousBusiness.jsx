@@ -1,6 +1,5 @@
 import React from 'react';
-import { Brain, Zap, Target, Shield, Users, Globe, Cpu, Lightbulb, BarChart3 } from 'lucide-react';
-const AIAutonomousBusiness = () => {
+import { Brain, Zap, Target, Shield, Users, Globe, Cpu, Lightbulb, BarChart3 const AIAutonomousBusiness = () => {
     const autonomousFeatures = [
         {
             icon: Brain,
@@ -37,7 +36,7 @@ const AIAutonomousBusiness = () => {
             title: "Global Operations",
             description: "AI systems that manage and optimize global business operations",
             benefits: ["Multi-region management", "Cultural adaptation", "Regulatory compliance", "Efficiency gains"]
-        }
+
     ];
     const useCases = [
         {
@@ -69,7 +68,7 @@ const AIAutonomousBusiness = () => {
             title: "Marketing",
             description: "Campaign optimization and audience targeting automation",
             icon: Target
-        }
+
     ];
     const benefits = [
         "Increased operational efficiency and productivity",
@@ -99,7 +98,7 @@ const AIAutonomousBusiness = () => {
             phase: "Scale",
             description: "Full deployment and continuous optimization",
             duration: "12-24 weeks"
-        }
+
     ];
     return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       {/* Hero Section */}
@@ -271,3 +270,4 @@ const AIAutonomousBusiness = () => {
     </div>);
 };
 export default AIAutonomousBusiness;
+}}}}

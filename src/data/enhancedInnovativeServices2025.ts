@@ -3,7 +3,7 @@ export interface ServiceContact {
   email: string;
   website: string;
   address: string;
-}
+
 export interface MicroSaasService {
   id: number;
   name: string;
@@ -25,7 +25,7 @@ export interface MicroSaasService {
   integrations: string[];
   freeTier: boolean;
   trialPeriod: string;
-}
+
 export interface ITService {
   id: number;
   name: string;
@@ -44,7 +44,7 @@ export interface ITService {
   certifications: string[];
   deliveryTime: string;
   support: string;
-}
+
 export interface AIService {
   id: number;
   name: string;
@@ -65,7 +65,7 @@ export interface AIService {
   compliance: string[];
   aiScore: number;
   useCases: string[];
-}
+
 export const ENHANCED_INNOVATIVE_SERVICES_2025: EnhancedInnovativeService[] = [
   // Advanced AI & Machine Learning Services
   {
@@ -914,6 +914,7 @@ export const ENHANCED_INNOVATIVE_SERVICES_2025: EnhancedInnovativeService[] = [
     integrations: ["PKI systems", "VPN solutions", "Cloud platforms", "Security tools", "Compliance systems"],
     freeTier: false,
     trialPeriod: "7 days"
-  }
+
 ];
 export default ENHANCED_INNOVATIVE_SERVICES_2025;
+}}}}}

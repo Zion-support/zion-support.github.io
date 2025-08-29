@@ -1,7 +1,6 @@
 import React from 'react';
 import { SEO } from "@/components/SEO";
-import { Shield, Lock, Eye, Users, Database, Network, Zap, Target, CheckCircle, BarChart3 } from 'lucide-react';
-const Cybersecurity = () => {
+import { Shield, Lock, Eye, Users, Database, Network, Zap, Target, CheckCircle, BarChart3 const Cybersecurity = () => {
     const securityServices = [
         {
             icon: Shield,
@@ -44,7 +43,7 @@ const Cybersecurity = () => {
             description: "Secure identity management and access control",
             features: ["Multi-Factor Authentication", "Single Sign-On", "Role-Based Access", "Identity Governance"],
             path: "/identity-access-management"
-        }
+
     ];
     const securityFeatures = [
         {
@@ -66,7 +65,7 @@ const Cybersecurity = () => {
             icon: BarChart3,
             title: "Comprehensive Reporting",
             description: "Detailed security analytics and compliance reporting"
-        }
+
     ];
     return (<div className="min-h-screen bg-background pt-20">
       <SEO title="Cybersecurity Solutions - Zion Tech Group" description="Comprehensive cybersecurity solutions including threat detection, compliance automation, zero trust architecture, and advanced security services from Zion Tech Group." keywords="cybersecurity, threat detection, SOC2 compliance, zero trust, network security, data protection" canonical="https://ziontechgroup.com/cybersecurity"/>
@@ -263,3 +262,4 @@ const Cybersecurity = () => {
     </div>);
 };
 export default Cybersecurity;
+}}}

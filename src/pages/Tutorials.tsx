@@ -1,8 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { Search, Play, Clock, Star, Users, BookOpen, Video, Code, Brain, Shield, Database, Globe, Zap, ArrowRight, Filter, TrendingUp, Lightbulb, Target, Award, Eye, MessageCircle, Type, BarChart3, Settings, Rocket, Heart, Download, Share2 } from 'lucide-react';
-
-const Tutorials = () => {
+import { Search, Play, Clock, Star, Users, BookOpen, Video, Code, Brain, Shield, Database, Globe, Zap, ArrowRight, Filter, TrendingUp, Lightbulb, Target, Award, Eye, MessageCircle, Type, BarChart3, Settings, Rocket, Heart, Download, Share2 const Tutorials = () => {
   const tutorialCategories = [
     {
       title: "Beginner",
@@ -27,7 +25,7 @@ const Tutorials = () => {
       description: "Cutting-edge research and techniques",
       color: "from-purple-500 to-indigo-500",
       count: "5"
-    }
+
   ];
 
   const featuredTutorials = [
@@ -70,7 +68,7 @@ const Tutorials = () => {
       rating: 4.6,
       students: "623",
       thumbnail: "/images/tutorials/model-optimization.jpg"
-    }
+
   ];
 
   const recentTutorials = [
@@ -105,7 +103,7 @@ const Tutorials = () => {
       instructor: "Michael Rodriguez",
       rating: 4.7,
       students: "345"
-    }
+
   ];
 
   const learningPaths = [
@@ -129,7 +127,7 @@ const Tutorials = () => {
       courses: 5,
       duration: "10 weeks",
       level: "Advanced to Expert"
-    }
+
   ];
 
   return (
@@ -188,7 +186,7 @@ const Tutorials = () => {
               <div
                 key={index}
                 className="bg-zion-blue-dark/50 backdrop-blur-sm border border-zion-cyan/20 rounded-xl overflow-hidden hover:border-zion-cyan/40 transition-all duration-300 group"
-              >
+
                 {/* Tutorial Image Placeholder */}
                 <div className="h-48 bg-gradient-to-br from-zion-cyan/20 to-zion-purple/20 flex items-center justify-center">
                   <BookOpen className="w-16 h-16 text-zion-cyan" />
@@ -263,7 +261,7 @@ const Tutorials = () => {
               <div
                 key={index}
                 className="bg-zion-slate-dark/50 backdrop-blur-sm border border-zion-cyan/20 rounded-xl p-8 text-center hover:border-zion-cyan/40 transition-all duration-300"
-              >
+
                 <div className="w-16 h-16 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-2xl flex items-center justify-center mx-auto mb-6">
                   <BookOpen className="w-8 h-8 text-white" />
                 </div>
@@ -318,6 +316,6 @@ const Tutorials = () => {
       </section>
     </div>
   );
-}
 
 export default Tutorials;
+}}}}}}

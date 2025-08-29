@@ -58,7 +58,7 @@ export default function PricingPage() {
       cta: 'Contact Sales',
       ctaLink: '/contact',
       popular: false
-    }
+
   ];
   const addOnServices = [
     {
@@ -84,7 +84,7 @@ export default function PricingPage() {
       description: 'Complete cloud infrastructure migration',
       price: 'From $10,000',
       features: ['Architecture Design', 'Data Migration', 'Performance Optimization']
-    }
+
   ];
   const faqs = [
     {
@@ -110,7 +110,7 @@ export default function PricingPage() {
     {
       question: 'Can I cancel my subscription?',
       answer: 'Yes, you can cancel at any time with no penalties. Your access will continue until the end of your current billing period.'
-    }
+
   ];
   return (
     <>
@@ -153,7 +153,7 @@ export default function PricingPage() {
                       ? 'border-blue-400 border-2 scale-105'
                       : 'border-white border-opacity-10'
                   }`}
-                >
+
                   {tier.popular && (
                     <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                       <span className="bg-blue-600 text-white px-4 py-2 rounded-full text-sm font-semibold">
@@ -187,7 +187,7 @@ export default function PricingPage() {
                         ? 'bg-blue-600 hover:bg-blue-700 text-white'
                         : 'border border-blue-400 text-blue-400 hover:bg-blue-400 hover:text-white'
                     }`}
-                  >
+
                     {tier.cta}
                   </Link>
                 </div>
@@ -224,7 +224,7 @@ export default function PricingPage() {
                   <Link
                     href="/contact"
                     className="text-blue-400 hover:text-blue-300 font-medium text-sm"
-                  >
+
                     Learn More →
                   </Link>
                 </div>
@@ -265,13 +265,13 @@ export default function PricingPage() {
               <Link
                 href="/contact"
                 className="bg-white text-blue-600 hover:bg-gray-100 px-8 py-3 rounded-lg font-semibold transition-colors"
-              >
+
                 Contact Sales
               </Link>
               <Link
                 href="/services"
                 className="border border-white text-white hover:bg-white hover:text-blue-600 px-8 py-3 rounded-lg font-semibold transition-colors"
-              >
+
                 View Services
               </Link>
             </div>
@@ -280,4 +280,4 @@ export default function PricingPage() {
       </main>
     </>
   );
-}
+}}}}

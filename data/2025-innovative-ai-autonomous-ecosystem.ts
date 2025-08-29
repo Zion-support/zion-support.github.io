@@ -313,5 +313,5 @@ export const innovative2025AIAutonomousEcosystem = [
     slug: '/ai-autonomous-healthcare-diagnostics-2025',
     demoUrl: 'https://ziontechgroup.com/demo/ai-healthcare-diagnostics',
     documentation: 'https://ziontechgroup.com/docs/ai-healthcare-diagnostics'
-  }
-];
+
+];}

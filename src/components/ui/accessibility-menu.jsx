@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Settings, FileText, Eye, Zap, Volume2, VolumeX } from 'lucide-react';
-import { Button } from './button';
+import { Settings, FileText, Eye, Zap, Volume2, VolumeX import { Button } from './button';
 export function AccessibilityMenu() {
     const [isOpen, setIsOpen] = useState(false);
     const [settings, setSettings] = useState({
@@ -15,7 +14,7 @@ export function AccessibilityMenu() {
         const savedSettings = localStorage.getItem('accessibility-settings');
         if (savedSettings) {
             setSettings(JSON.parse(savedSettings));
-        }
+
     }, []);
     useEffect(() => {
         // Apply settings to document
@@ -31,17 +30,17 @@ export function AccessibilityMenu() {
         // High contrast
         if (newSettings.highContrast) {
             root.classList.add('high-contrast');
-        }
+
         else {
             root.classList.remove('high-contrast');
-        }
+
         // Reduced motion
         if (newSettings.reducedMotion) {
             root.classList.add('reduced-motion');
-        }
+
         else {
             root.classList.remove('reduced-motion');
-        }
+
     };
     const toggleSetting = (key) => {
         setSettings(prev => ({
@@ -145,4 +144,4 @@ export function AccessibilityMenu() {
         {isOpen && (<motion.div className="fixed inset-0 z-40 bg-black/20" initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} onClick={() => setIsOpen(false)}/>)}
       </AnimatePresence>
     </>);
-}
+}}}}}}</motion.div>}

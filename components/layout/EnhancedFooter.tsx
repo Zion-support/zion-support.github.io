@@ -22,8 +22,6 @@ import {
   HelpCircle,
   Lock,
   Award
-} from 'lucide-react';
-
 const footerNavigation = {
 	services: {
 		title: 'Services',
@@ -150,7 +148,7 @@ const EnhancedFooter: React.FC = () => {
 									className="text-zion-slate-light hover:text-zion-cyan transition-colors p-2 hover:bg-zion-cyan/10 rounded-full"
 									aria-label={name}
 									title={name}
-								>
+
 									<Icon className="h-5 w-5" aria-label={name} />
 								</a>
 							))}
@@ -167,7 +165,7 @@ const EnhancedFooter: React.FC = () => {
 										<Link
 											href={item.href}
 											className="text-zion-slate-light hover:text-zion-cyan transition-colors text-sm hover:translate-x-1 inline-block"
-										>
+
 											{item.name}
 										</Link>
 									</li>
@@ -185,7 +183,7 @@ const EnhancedFooter: React.FC = () => {
 								key={link.name}
 								href={link.href}
 								className="flex items-center gap-3 p-4 bg-white/5 rounded-lg hover:bg-white/10 transition-all duration-300 group"
-							>
+
 								<div className="w-10 h-10 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-lg flex items-center justify-center">
 									<link.icon className="w-5 h-5 text-white" />
 								</div>
@@ -244,7 +242,7 @@ const EnhancedFooter: React.FC = () => {
 							target="_blank"
 							rel="noopener noreferrer"
 							className="hover:text-zion-cyan transition-colors duration-200 flex items-center space-x-1"
-						>
+
 							<Globe className="w-4 h-4" />
 							<span>Main Website</span>
 						</a>
@@ -263,7 +261,7 @@ const EnhancedFooter: React.FC = () => {
 				onClick={scrollToTop}
 				className="fixed bottom-6 right-6 bg-gradient-to-r from-zion-cyan to-zion-purple text-white p-3 rounded-full shadow-lg hover:shadow-zion-cyan/25 transition-all duration-300 z-40 hover:scale-110"
 				aria-label="Scroll to top"
-			>
+
 				<ArrowUp className="w-5 h-5" />
 			</button>
 		</footer>
@@ -271,3 +269,4 @@ const EnhancedFooter: React.FC = () => {
 };
 
 export default EnhancedFooter;
+}

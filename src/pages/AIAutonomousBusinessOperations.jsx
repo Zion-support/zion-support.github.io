@@ -21,7 +21,7 @@ const AIAutonomousBusinessOperations = () => {
             title: "Predictive Analytics",
             description: "Forecast trends and optimize business performance",
             icon: "🔮"
-        }
+
     ];
     const businessAreas = [
         {
@@ -39,7 +39,7 @@ const AIAutonomousBusinessOperations = () => {
         {
             category: "Customer Operations",
             capabilities: ["Customer service automation", "Support ticket routing", "Feedback analysis", "Customer journey optimization"]
-        }
+
     ];
     const useCases = [
         {
@@ -61,7 +61,7 @@ const AIAutonomousBusinessOperations = () => {
             title: "Finance",
             description: "Risk assessment and portfolio optimization",
             icon: "💼"
-        }
+
     ];
     const benefits = [
         {
@@ -83,7 +83,7 @@ const AIAutonomousBusinessOperations = () => {
             title: "Scalability",
             description: "Easily scale operations as business grows",
             metric: "Unlimited"
-        }
+
     ];
     return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white">
       <section className="py-20 px-4 sm:px-6 lg:px-8">
@@ -247,3 +247,4 @@ const AIAutonomousBusinessOperations = () => {
     </div>);
 };
 export default AIAutonomousBusinessOperations;
+}}}}

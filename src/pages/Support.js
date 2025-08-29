@@ -14,7 +14,7 @@ export default function Support() {
             {
                 question: 'Do you offer remote support?',
                 answer: 'Yes, we provide comprehensive remote support for all our services. Our team can assist you from anywhere in the world, ensuring you get the help you need regardless of your location.'
-            }
+
         ],
         technical: [
             {
@@ -28,7 +28,7 @@ export default function Support() {
             {
                 question: 'Can you integrate with existing systems?',
                 answer: 'Absolutely! We specialize in seamless integration with existing systems. Our team will assess your current infrastructure and ensure our solutions work perfectly with your existing technology stack.'
-            }
+
         ],
         billing: [
             {
@@ -42,7 +42,7 @@ export default function Support() {
             {
                 question: 'Can I change my plan mid-contract?',
                 answer: 'Yes, you can upgrade or downgrade your plan at any time. We\'ll prorate any billing adjustments and ensure a smooth transition between plans.'
-            }
+
         ],
         compliance: [
             {
@@ -56,7 +56,7 @@ export default function Support() {
             {
                 question: 'How do you handle data privacy?',
                 answer: 'We follow strict data privacy protocols and are fully GDPR compliant. All data is encrypted, access is strictly controlled, and we never share your data with third parties without explicit consent.'
-            }
+
         ]
     };
     const supportChannels = [
@@ -123,6 +123,6 @@ export default function Support() {
             description: 'Connect with other users and experts',
             icon: '👥',
             link: '/community'
-        }
+
     ];
-}
+}}}}}}

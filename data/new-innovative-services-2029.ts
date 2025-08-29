@@ -170,5 +170,5 @@ export const newInnovativeServices2029: EnhancedRealMicroSaasService[] = [
     customers: 35,
     rating: 4.6,
     reviews: 28
-  }
-];
+
+];}

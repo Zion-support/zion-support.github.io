@@ -14,8 +14,6 @@ import {
   Rocket,
   Crown,
   Sparkles
-} from 'lucide-react';
-
 export default function Pricing() {
   const services = [
     {
@@ -72,7 +70,7 @@ export default function Pricing() {
       ],
       icon: '🎯',
       color: 'from-indigo-500 to-purple-600'
-    }
+
   ];
 
   const enterpriseFeatures = [
@@ -106,7 +104,7 @@ export default function Pricing() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               className="text-center max-w-4xl mx-auto"
-            >
+
               <h1 className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent">
                 Transparent Pricing
               </h1>
@@ -134,7 +132,7 @@ export default function Pricing() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               className="text-center mb-16"
-            >
+
               <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white">
                 AI Services Pricing
               </h2>
@@ -152,7 +150,7 @@ export default function Pricing() {
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8, delay: serviceIndex * 0.1 }}
                   className="bg-glass-dark rounded-2xl p-8 border border-slate-700/50"
-                >
+
                   <div className="text-center mb-8">
                     <div className="text-5xl mb-4">{service.icon}</div>
                     <h3 className="text-3xl font-bold text-white mb-3">{service.name}</h3>
@@ -168,7 +166,7 @@ export default function Pricing() {
                             ? 'border-cyan-500/50 shadow-lg shadow-cyan-500/20'
                             : 'border-slate-700/50'
                         }`}
-                      >
+
                         {plan.name === 'Professional' && (
                           <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
                             <span className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-3 py-1 rounded-full text-sm font-semibold">
@@ -214,7 +212,7 @@ export default function Pricing() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               className="text-center mb-16"
-            >
+
               <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white">
                 Enterprise Features
               </h2>
@@ -231,7 +229,7 @@ export default function Pricing() {
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
                   className="bg-slate-800/50 backdrop-blur-sm border border-slate-700/50 rounded-xl p-6 text-center"
-                >
+
                   <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
                     <Check className="w-6 h-6 text-white" />
                   </div>
@@ -249,7 +247,7 @@ export default function Pricing() {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-            >
+
               <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white">
                 Ready to Get Started?
               </h2>
@@ -270,4 +268,4 @@ export default function Pricing() {
       </div>
     </>
   );
-}
+}}}

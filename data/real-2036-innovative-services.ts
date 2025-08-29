@@ -318,5 +318,5 @@ export const real2036InnovativeServices = [
       'Portfolio management',
       'Risk assessment'
     ]
-  }
-];
+
+];}

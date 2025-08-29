@@ -23,14 +23,14 @@ export default function CreatePostPage() {
             });
             // Redirect to the forum category
             navigate(`/community/category/${values.categoryId}`);
-        }
+
         catch (error) {
             toast({
                 title: "Error",
                 description: "There was a problem creating your post",
                 variant: "destructive"
             });
-        }
+
     };
     return (<SEO title="Create New Post | Community Forum | Zion AI Marketplace" description="Create a new discussion post in the Zion AI Marketplace community forum." keywords="community, forum, discussion, create post, new thread"/>
         ,
@@ -47,4 +47,4 @@ export default function CreatePostPage() {
 
         <PostForm initialValues={initialValues} onSubmit={handleSubmit}/>
       </div>);
-}
+}}}

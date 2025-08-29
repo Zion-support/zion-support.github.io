@@ -14,7 +14,7 @@ export interface APIDocumentation {
     languages: string[];
     frameworks: string[];
   };
-}
+
 export interface APIEndpoint {
   id: string;
   path: string;
@@ -28,7 +28,7 @@ export interface APIEndpoint {
   deprecated: boolean;
   rateLimit?: RateLimit;
   authentication?: AuthenticationRequirement;
-}
+
 export interface APIParameter {
   name: string;
   in: 'path' | 'query' | 'header' | 'cookie';
@@ -37,28 +37,28 @@ export interface APIParameter {
   description: string;
   example?: any;
   deprecated?: boolean;
-}
+
 export interface APIRequestBody {
   required: boolean;
   content: Record<string, APIContent>;
   description?: string;
-}
+
 export interface APIContent {
   schema: APISchema;
   example?: any;
   examples?: Record<string, APIExample>;
-}
+
 export interface APIResponse {
   code: string;
   description: string;
   content?: Record<string, APIContent>;
   headers?: Record<string, APIHeader>;
-}
+
 export interface APIHeader {
   description: string;
   schema: APISchema;
   required: boolean;
-}
+
 export interface APISchema {
   type?: string;
   format?: string;
@@ -79,7 +79,7 @@ export interface APISchema {
   default?: any;
   nullable?: boolean;
   $ref?: string;
-}
+
 export interface APIExample {
   id: string;
   name: string;
@@ -88,28 +88,28 @@ export interface APIExample {
   request: ExampleRequest;
   response: ExampleResponse;
   tags: string[];
-}
+
 export interface ExampleRequest {
   method: string;
   url: string;
   headers: Record<string, string>;
   body?: any;
-}
+
 export interface ExampleResponse {
   status: number;
   headers: Record<string, string>;
   body: any;
-}
+
 export interface RateLimit {
   requests: number;
   window: string;
   description?: string;
-}
+
 export interface AuthenticationRequirement {
   type: 'bearer' | 'apiKey' | 'oauth2' | 'basic';
   description: string;
   required: boolean;
-}
+
 export interface DocumentationConfig {
   outputFormat: 'html' | 'markdown' | 'pdf' | 'json' | 'openapi';
   includeExamples: boolean;
@@ -122,7 +122,7 @@ export interface DocumentationConfig {
     primaryColor?: string;
     companyName?: string;
   };
-}
+
 export class APIDocGeneratorService {
   private supportedFrameworks = [
     'express', 'fastify', 'koa', 'hapi', 'django', 'flask', 'fastapi', 'spring', 'aspnet', 'laravel'
@@ -149,7 +149,7 @@ export class APIDocGeneratorService {
         coverage: 0,
         languages: [],
         frameworks: []
-      }
+
     };
     try {
       // Analyze source code
@@ -162,17 +162,17 @@ export class APIDocGeneratorService {
       // Generate examples if requested
       if (config.includeExamples) {
         documentation.examples = await this.generateExamples(documentation.endpoints);
-      }
+
       // Calculate coverage
       documentation.metadata.coverage = this.calculateCoverage(documentation.endpoints);
     } catch (error) {
-      // console.error('Error generating documentation:', error);
+      // // // console.error('Error generating documentation:', error);
       // Fallback to basic documentation
       documentation.endpoints = this.generateFallbackEndpoints();
       documentation.metadata.totalEndpoints = documentation.endpoints.length;
-    }
+
     return documentation;
-  }
+
   private async analyzeSourceCode(sourcePath: string): Promise<{
     endpoints: APIEndpoint[];
     schemas: APISchema[];
@@ -201,8 +201,8 @@ export class APIDocGeneratorService {
         languages.push('java');
         frameworks.push('spring');
         endpoints.push(...this.analyzeJavaFile(file));
-      }
-    }
+
+
     // Remove duplicates
     const uniqueLanguages = [...new Set(languages)];
     const uniqueFrameworks = [...new Set(frameworks)];
@@ -212,7 +212,7 @@ export class APIDocGeneratorService {
       languages: uniqueLanguages,
       frameworks: uniqueFrameworks
     };
-  }
+
   private async scanDirectory(path: string): Promise<string[]> {
     // Simulate directory scanning
     return [
@@ -224,7 +224,7 @@ export class APIDocGeneratorService {
       'src/middleware/auth.js',
       'src/config/database.js'
     ];
-  }
+
   private analyzeJavaScriptFile(filePath: string): APIEndpoint[] {
     const endpoints: APIEndpoint[] = [];
 
@@ -251,7 +251,7 @@ export class APIDocGeneratorService {
               required: false,
               schema: { type: 'integer', minimum: 1, maximum: 100, default: 20 },
               description: 'Number of users per page'
-            }
+
           ],
           requestBody: undefined,
           responses: [
@@ -269,12 +269,12 @@ export class APIDocGeneratorService {
                       },
                       pagination: {
                         $ref: '#/components/schemas/Pagination'
-                      }
-                    }
-                  }
-                }
-              }
-            }
+
+
+
+
+
+
           ],
           tags: ['Users'],
           deprecated: false,
@@ -286,7 +286,7 @@ export class APIDocGeneratorService {
             type: 'bearer',
             description: 'JWT token required',
             required: true
-          }
+
         },
         {
           id: `endpoint_${Date.now()}_2`,
@@ -301,7 +301,7 @@ export class APIDocGeneratorService {
               required: true,
               schema: { type: 'string', format: 'uuid' },
               description: 'User unique identifier'
-            }
+
           ],
           requestBody: undefined,
           responses: [
@@ -311,21 +311,21 @@ export class APIDocGeneratorService {
               content: {
                 'application/json': {
                   schema: { $ref: '#/components/schemas/User' }
-                }
-              }
+
+
             },
             {
               code: '404',
               description: 'User not found'
-            }
+
           ],
           tags: ['Users'],
           deprecated: false
-        }
+
       );
-    }
+
     return endpoints;
-  }
+
   private analyzePythonFile(filePath: string): APIEndpoint[] {
     const endpoints: APIEndpoint[] = [];
 
@@ -343,8 +343,8 @@ export class APIDocGeneratorService {
           content: {
             'application/json': {
               schema: { $ref: '#/components/schemas/Product' }
-            }
-          }
+
+
         },
         responses: [
           {
@@ -353,20 +353,20 @@ export class APIDocGeneratorService {
             content: {
               'application/json': {
                 schema: { $ref: '#/components/schemas/Product' }
-              }
-            }
+
+
           },
           {
             code: '400',
             description: 'Invalid input data'
-          }
+
         ],
         tags: ['Products'],
         deprecated: false
       });
-    }
+
     return endpoints;
-  }
+
   private analyzeJavaFile(filePath: string): APIEndpoint[] {
     const endpoints: APIEndpoint[] = [];
 
@@ -385,7 +385,7 @@ export class APIDocGeneratorService {
             required: false,
             schema: { type: 'string', enum: ['pending', 'processing', 'completed', 'cancelled'] },
             description: 'Filter orders by status'
-          }
+
         ],
         requestBody: undefined,
         responses: [
@@ -397,17 +397,17 @@ export class APIDocGeneratorService {
                 schema: {
                   type: 'array',
                   items: { $ref: '#/components/schemas/Order' }
-                }
-              }
-            }
-          }
+
+
+
+
         ],
         tags: ['Orders'],
         deprecated: false
       });
-    }
+
     return endpoints;
-  }
+
   private generateSchemas(endpoints: APIEndpoint[]): APISchema[] {
     const schemas: APISchema[] = [
       {
@@ -448,8 +448,8 @@ export class APIDocGeneratorService {
                 productId: { type: 'string', format: 'uuid' },
                 quantity: { type: 'integer', minimum: 1 },
                 price: { type: 'number', minimum: 0 }
-              }
-            }
+
+
           },
           total: { type: 'number', minimum: 0 },
           status: { type: 'string', enum: ['pending', 'processing', 'completed', 'cancelled'] }
@@ -467,10 +467,10 @@ export class APIDocGeneratorService {
         },
         required: ['page', 'limit', 'total', 'pages'],
         description: 'Pagination metadata schema'
-      }
+
     ];
     return schemas;
-  }
+
   private async generateExamples(endpoints: APIEndpoint[]): Promise<APIExample[]> {
     const examples: APIExample[] = [];
     for (const endpoint of endpoints.slice(0, 3)) { // Limit to first 3 endpoints
@@ -497,9 +497,9 @@ export class APIDocGeneratorService {
         },
         tags: endpoint.tags
       });
-    }
+
     return examples;
-  }
+
   private generateExampleBody(requestBody: APIRequestBody): any {
     // Generate example request body based on schema
     return {
@@ -507,7 +507,7 @@ export class APIDocGeneratorService {
       email: "user@example.com",
       description: "This is an example description"
     };
-  }
+
   private generateExampleResponse(response: APIResponse): any {
     // Generate example response based on schema
     if (response.content?.['application/json']?.schema) {
@@ -516,9 +516,9 @@ export class APIDocGeneratorService {
         name: "Example Item",
         createdAt: new Date().toISOString()
       };
-    }
+
     return null;
-  }
+
   private generateFallbackEndpoints(): APIEndpoint[] {
     return [
       {
@@ -533,30 +533,30 @@ export class APIDocGeneratorService {
           {
             code: '200',
             description: 'API is healthy'
-          }
+
         ],
         tags: ['System'],
         deprecated: false
-      }
+
     ];
-  }
+
   private extractProjectName(sourcePath: string): string {
     // Extract project name from path
     const parts = sourcePath.split('/');
     return parts[parts.length - 1] || 'API Documentation';
-  }
+
   private async extractVersion(sourcePath: string): Promise<string> {
     // Simulate version extraction from package.json, requirements.txt, etc.
     return '1.0.0';
-  }
+
   private async extractDescription(sourcePath: string): Promise<string> {
     // Simulate description extraction from README, package.json, etc.
     return 'Comprehensive API documentation automatically generated from source code';
-  }
+
   private async extractBaseUrl(sourcePath: string): Promise<string> {
     // Simulate base URL extraction from configuration files
     return 'https://api.example.com';
-  }
+
   private calculateCoverage(endpoints: APIEndpoint[]): number {
     // Calculate documentation coverage based on endpoints
     if (endpoints.length === 0) return 0;
@@ -565,11 +565,10 @@ export class APIDocGeneratorService {
     for (const endpoint of endpoints) {
       if (endpoint.description && endpoint.description.length > 10) {
         documentedEndpoints++;
-      }
-    }
+
 
     return Math.round((documentedEndpoints / endpoints.length) * 100);
-  }
+
   async exportDocumentation(
     documentation: APIDocumentation,
     format: 'html' | 'markdown' | 'pdf' | 'json' | 'openapi'
@@ -577,7 +576,7 @@ export class APIDocGeneratorService {
     // Simulate export functionality
     const timestamp = new Date().toISOString();
     return `Documentation exported in ${format.toUpperCase()} format at ${timestamp}`;
-  }
+
   async updateDocumentation(
     documentationId: string,
     changes: Partial<APIDocumentation>
@@ -589,8 +588,8 @@ export class APIDocGeneratorService {
       metadata: {
         ...changes.metadata,
         lastGenerated: new Date()
-      }
+
     } as APIDocumentation;
-  }
-}
-export const apiDocGeneratorService = new APIDocGeneratorService();
+
+
+export const apiDocGeneratorService = new APIDocGeneratorService();}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}

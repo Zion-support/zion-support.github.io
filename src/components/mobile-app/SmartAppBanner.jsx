@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { safeStorage } from "@/utils/safeStorage";
-import { X, ArrowRight } from "lucide-react";
-import { Link } from 'react-router-dom';
+import { X, ArrowRight import { Link } from 'react-router-dom';
 import { useIsMobile } from "@/hooks/use-mobile";
 export const SmartAppBanner = ({ appName = "Zion Marketplace", appIconSrc, appStoreUrl = "/download", googlePlayUrl = "/download", delay = 1500 }) => {
     const [isVisible, setIsVisible] = useState(false);
@@ -13,7 +12,7 @@ export const SmartAppBanner = ({ appName = "Zion Marketplace", appIconSrc, appSt
                 setIsVisible(true);
             }, delay);
             return () => clearTimeout(timer);
-        }
+
     }, [isMobile, delay]);
     const dismissBanner = () => {
         setIsVisible(false);
@@ -28,7 +27,7 @@ export const SmartAppBanner = ({ appName = "Zion Marketplace", appIconSrc, appSt
         return process.env.NODE_ENV === 'development' ? (<div className="bg-zion-blue-dark p-2 text-xs text-center text-gray-300">
         Smart banner hidden. <button onClick={resetBanner} className="text-zion-cyan underline">Show banner</button> (development only)
       </div>) : null;
-    }
+
     // Detect iOS or Android
     const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent);
     const bannerLink = isIOS ? appStoreUrl : googlePlayUrl;
@@ -56,3 +55,4 @@ export const SmartAppBanner = ({ appName = "Zion Marketplace", appIconSrc, appSt
       </div>
     </div>);
 };
+}}}

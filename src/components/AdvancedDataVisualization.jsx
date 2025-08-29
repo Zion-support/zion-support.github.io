@@ -1,6 +1,5 @@
 import React, { useState, useRef, useEffect } from 'react';
-import { BarChart3, RefreshCw, X, Maximize2, Minimize2 } from 'lucide-react';
-const mockChartData = [
+import { BarChart3, RefreshCw, X, Maximize2, Minimize2 const mockChartData = [
     { id: '1', name: 'Q1 Revenue', value: 1250000, category: 'Revenue', timestamp: new Date('2024-01-01') },
     { id: '2', name: 'Q2 Revenue', value: 1580000, category: 'Revenue', timestamp: new Date('2024-04-01') },
     { id: '3', name: 'Q3 Revenue', value: 1420000, category: 'Revenue', timestamp: new Date('2024-07-01') },
@@ -62,11 +61,11 @@ export function AdvancedDataVisualization() {
         if (autoRefresh) {
             const interval = setInterval(refreshData, 30000); // Refresh every 30 seconds
             return () => clearInterval(interval);
-        }
+
     }, [autoRefresh]);
     const downloadChart = (format) => {
         // Simulate chart download
-        // console.log(`Downloading chart as ${format}`);
+        // // // console.log(`Downloading chart as ${format}`);
     };
     const renderChart = () => {
         switch (selectedChartType) {
@@ -82,7 +81,7 @@ export function AdvancedDataVisualization() {
                 return renderScatterChart();
             default:
                 return renderBarChart();
-        }
+
     };
     const renderBarChart = () => {
         const maxValue = Math.max(...filteredData.map(item => item.value));
@@ -167,7 +166,7 @@ export function AdvancedDataVisualization() {
         return (<button onClick={() => setIsOpen(true)} className="fixed bottom-4 right-68 p-3 bg-zion-cyan hover:bg-zion-cyan-light text-white rounded-full shadow-lg hover:shadow-xl transition-all duration-300 z-50" title="Advanced Data Visualization">
         <BarChart3 className="w-5 h-5"/>
       </button>);
-    }
+
     if (isMinimized) {
         return (<div className="fixed bottom-4 right-68 z-50">
         <div className="bg-white dark:bg-zion-slate border border-zion-slate-light rounded-lg shadow-lg p-3">
@@ -180,7 +179,7 @@ export function AdvancedDataVisualization() {
           </div>
         </div>
       </div>);
-    }
+
     return (<div className={`fixed bg-white dark:bg-zion-slate border border-zion-slate-light rounded-lg shadow-2xl z-50 overflow-hidden transition-all duration-300 ${isFullscreen ? 'inset-4' : 'bottom-4 right-4 w-[1000px] h-[700px]'}`} ref={containerRef}>
       {/* Header */}
       <div className="flex items-center justify-between p-4 border-b border-zion-slate-light bg-gradient-to-r from-zion-cyan/10 to-zion-purple/10">
@@ -339,4 +338,4 @@ export function AdvancedDataVisualization() {
         </div>
       </div>
     </div>);
-}
+</div></div></div>}}}}}}

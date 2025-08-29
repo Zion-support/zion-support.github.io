@@ -1,8 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import { Shield, Eye, Lock, Database, Users, ArrowRight } from 'lucide-react'
-
-export default function Privacy() {
+import { Shield, Eye, Lock, Database, Users, ArrowRight export default function Privacy() {
 	return (
 		<>
 			{/* Hero Section */}
@@ -227,7 +225,7 @@ export default function Privacy() {
 					<Link
 						to="/contact"
 						className="inline-flex items-center rounded-md bg-blue-600 px-6 py-3 text-sm font-semibold text-white shadow-sm hover:bg-blue-700 transition-colors"
-					>
+
 						Contact Us
 						<ArrowRight className="ml-2 h-4 w-4" />
 					</Link>
@@ -235,4 +233,4 @@ export default function Privacy() {
 			</section>
 		</>
 	)
-}
+}}

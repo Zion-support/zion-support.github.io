@@ -16,7 +16,7 @@ export function BlogSection() {
       excerpt: 'Best practices and architectural patterns for creating scalable web apps...',
       date: '2024-01-10',
       readTime: '12 min read'
-    }
+
   ];
 
   return (
@@ -47,4 +47,4 @@ export function BlogSection() {
       </div>
     </section>
   );
-}
+}}

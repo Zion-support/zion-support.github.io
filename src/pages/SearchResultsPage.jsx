@@ -26,7 +26,7 @@ export default function SearchResultsPage() {
         if (initialQuery !== query) {
             setQuery(initialQuery);
             refetch();
-        }
+
     }, [initialQuery]);
     const allResults = data?.pages.flat() ?? [];
     const loader = useRef(null);
@@ -37,7 +37,7 @@ export default function SearchResultsPage() {
         const observer = new IntersectionObserver((entries) => {
             if (entries[0].isIntersecting && hasNextPage && !isFetchingNextPage) {
                 fetchNextPage();
-            }
+
         });
         observer.observe(el);
         return () => observer.disconnect();
@@ -63,4 +63,4 @@ export default function SearchResultsPage() {
       <div ref={loader} className="h-1"/>
       {isFetchingNextPage && <p className="text-center mt-4">Loading more...</p>}
     </main>);
-}
+</div>}}}

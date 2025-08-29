@@ -1,6 +1,5 @@
 import React from 'react';
-import { Shield, Lock, CheckCircle, AlertTriangle } from 'lucide-react';
-export function SecurityHeaders({ className }) {
+import { Shield, Lock, CheckCircle, AlertTriangle export function SecurityHeaders({ className }) {
     const securityFeatures = [
         {
             icon: Shield,
@@ -29,7 +28,7 @@ export function SecurityHeaders({ className }) {
             description: "We cannot access your encrypted data",
             status: "verified",
             color: "text-zion-purple"
-        }
+
     ];
     const complianceBadges = [
         { name: "SOC 2", status: "Certified", year: "2024", icon: CheckCircle },
@@ -125,7 +124,7 @@ export function SecurityHeaders({ className }) {
         </div>
       </div>
     </section>);
-}
+
 // Compact version for smaller spaces
 export function SecurityHeadersCompact({ className }) {
     return (<div className={`flex flex-wrap justify-center gap-6 ${className || ''}`}>
@@ -146,4 +145,4 @@ export function SecurityHeadersCompact({ className }) {
         <span>Zero-Knowledge</span>
       </div>
     </div>);
-}
+}}}}

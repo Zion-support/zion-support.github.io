@@ -1,10 +1,9 @@
 import { useState, useEffect } from 'react';
-import { Settings, Eye, Zap, X, Volume2, Keyboard, Monitor } from 'lucide-react';
-import { useAccessibility } from '../hooks/useAccessibility';
+import { Settings, Eye, Zap, X, Volume2, Keyboard, Monitor import { useAccessibility } from '../hooks/useAccessibility';
 interface AccessibilityControlsProps {
   className?: string;
   position?: 'top-right' | 'bottom-right' | 'floating';
-}
+
 export const AccessibilityControls: React.FC<AccessibilityControlsProps> = ({
   className = '',
   position = 'floating'
@@ -19,18 +18,18 @@ export const AccessibilityControls: React.FC<AccessibilityControlsProps> = ({
       if (!target.closest('.accessibility-controls')) {
         setIsOpen(false);
         setIsExpanded(false);
-      }
+
     };
     if (isOpen) {
       document.addEventListener('mousedown', handleClickOutside);
       return () => document.removeEventListener('mousedown', handleClickOutside);
-    }
+
   }, [isOpen]);
   const togglePanel = () => {
     setIsOpen(!isOpen);
     if (!isOpen) {
       announceToScreenReader('Accessibility controls opened');
-    }
+
   };
   const toggleExpanded = () => {
     setIsExpanded(!isExpanded);
@@ -48,7 +47,7 @@ export const AccessibilityControls: React.FC<AccessibilityControlsProps> = ({
       case 'floating':
       default:
         return 'bottom-4 right-4';
-    }
+
   };
   return (
     <div className={`accessibility-controls fixed ${getPositionClasses()} z-50 ${className}`}>
@@ -58,7 +57,7 @@ export const AccessibilityControls: React.FC<AccessibilityControlsProps> = ({
         className="group relative p-3 bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-400 hover:to-blue-400 text-white rounded-full shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-110 focus:outline-none focus:ring-4 focus:ring-cyan-300"
         aria-label="Open accessibility controls"
         aria-expanded={isOpen}
-      >
+
         <Settings className="w-6 h-6" />
         <div className="absolute -top-1 -right-1 w-3 h-3 bg-red-500 rounded-full animate-pulse"></div>
       </button>
@@ -77,14 +76,14 @@ export const AccessibilityControls: React.FC<AccessibilityControlsProps> = ({
                   onClick={toggleExpanded}
                   className="p-1 hover:bg-white/20 rounded transition-colors"
                   aria-label={isExpanded ? 'Collapse panel' : 'Expand panel'}
-                >
+
                   {isExpanded ? <X className="w-4 h-4" /> : <Monitor className="w-4 h-4" />}
                 </button>
                 <button
                   onClick={() => setIsOpen(false)}
                   className="p-1 hover:bg-white/20 rounded transition-colors"
                   aria-label="Close accessibility panel"
-                >
+
                   <X className="w-4 h-4" />
                 </button>
               </div>
@@ -202,4 +201,4 @@ export const AccessibilityControls: React.FC<AccessibilityControlsProps> = ({
       )}
     </div>
   );
-};
+};}}}}}}

@@ -11,8 +11,6 @@ import {
   Brain,
   Microscope,
   Target
-} from 'lucide-react';
-
 export const InnovationResearchSection: React.FC = () => {
   const researchAreas = [
     {
@@ -62,7 +60,7 @@ export const InnovationResearchSection: React.FC = () => {
       focus: ['Solar Technology', 'Energy Storage', 'Smart Grids', 'Carbon Capture'],
       publications: '22+',
       patents: '11'
-    }
+
   ];
 
   const stats = [
@@ -80,7 +78,7 @@ export const InnovationResearchSection: React.FC = () => {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
-        >
+
           <h2 className="text-4xl font-bold text-gray-900 mb-4">
             Innovation & Research
           </h2>
@@ -96,7 +94,7 @@ export const InnovationResearchSection: React.FC = () => {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.1 }}
           className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-16"
-        >
+
           {stats.map((stat, index) => {
             const IconComponent = stat.icon;
             return (
@@ -126,7 +124,7 @@ export const InnovationResearchSection: React.FC = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 className="bg-white rounded-2xl shadow-lg p-8 hover:shadow-xl transition-all duration-300 border border-gray-100"
-              >
+
                 <div className="flex items-center mb-6">
                   <div className="p-3 bg-indigo-100 rounded-xl mr-4">
                     <IconComponent className="h-8 w-8 text-indigo-600" />
@@ -173,7 +171,7 @@ export const InnovationResearchSection: React.FC = () => {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.3 }}
           className="text-center"
-        >
+
           <div className="bg-gradient-to-r from-indigo-600 to-purple-600 rounded-2xl p-8 text-white">
             <h3 className="text-2xl font-bold mb-4">
               Join the Innovation Revolution
@@ -200,3 +198,4 @@ export const InnovationResearchSection: React.FC = () => {
 };
 
 export default InnovationResearchSection;
+}}

@@ -31,7 +31,6 @@ export interface AdvancedInnovativeService2026 {
   };
   competitors?: string[];
   caseStudies?: string[];
-}
 
 export const ADVANCED_INNOVATIVE_SERVICES_2026: AdvancedInnovativeService2026[] = [
   {
@@ -623,5 +622,5 @@ export const ADVANCED_INNOVATIVE_SERVICES_2026: AdvancedInnovativeService2026[] 
     },
     competitors: ['CERN', 'Fermilab', 'Theoretical Physics Institutions'],
     caseStudies: ['Advanced theoretical research', 'International collaboration', 'Educational innovation']
-  }
-];
+
+];}}

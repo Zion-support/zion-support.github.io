@@ -24,8 +24,6 @@ import {
   Database,
   Cpu,
   Fingerprint
-} from 'lucide-react';
-
 export default function AICybersecurityThreatIntelligence() {
   const features = [
     {
@@ -63,7 +61,7 @@ export default function AICybersecurityThreatIntelligence() {
       title: 'Data Protection',
       description: 'Comprehensive data loss prevention and encryption with AI-driven security policy enforcement.',
       benefits: ['Data encryption', 'DLP policies', 'Access controls', 'Compliance monitoring']
-    }
+
   ];
 
   const useCases = [
@@ -90,7 +88,7 @@ export default function AICybersecurityThreatIntelligence() {
       title: 'Customer Data Protection',
       description: 'Secure online transactions and customer information with advanced fraud detection and threat prevention.',
       metrics: ['95% reduction in fraud losses', '100% secure transactions', 'Real-time threat blocking']
-    }
+
   ];
 
   const benefits = [
@@ -117,7 +115,7 @@ export default function AICybersecurityThreatIntelligence() {
       title: 'Accuracy',
       description: 'High-precision threat detection with minimal false positives.',
       value: '99.9%'
-    }
+
   ];
 
   const technologies = [
@@ -187,7 +185,7 @@ export default function AICybersecurityThreatIntelligence() {
       ],
       cta: 'Contact Sales',
       popular: false
-    }
+
   ];
 
   return (
@@ -205,7 +203,7 @@ export default function AICybersecurityThreatIntelligence() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
-          >
+
             <div className="w-20 h-20 bg-gradient-to-br from-red-400 to-orange-500 rounded-2xl flex items-center justify-center mx-auto mb-8">
               <Shield className="w-10 h-10 text-white" />
             </div>
@@ -223,14 +221,14 @@ export default function AICybersecurityThreatIntelligence() {
               <a
                 href="/contact"
                 className="inline-flex items-center space-x-2 bg-gradient-to-r from-red-400 to-orange-500 text-white px-8 py-4 rounded-lg font-semibold hover:from-red-500 hover:to-orange-600 transition-all duration-300 transform hover:scale-105"
-              >
+
                 <span>Get Protected</span>
                 <ArrowRight className="w-5 h-5" />
               </a>
               <a
                 href="#pricing"
                 className="inline-flex items-center space-x-2 border border-red-400 text-red-400 px-8 py-4 rounded-lg font-semibold hover:bg-red-400 hover:text-white transition-all duration-300"
-              >
+
                 <span>View Pricing</span>
                 <ArrowRight className="w-5 h-5" />
               </a>
@@ -243,7 +241,7 @@ export default function AICybersecurityThreatIntelligence() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
             className="grid grid-cols-2 md:grid-cols-4 gap-8"
-          >
+
             <div className="text-center">
               <div className="text-3xl font-bold text-white mb-2">99.9%</div>
               <div className="text-slate-400">Threat Detection</div>
@@ -272,7 +270,7 @@ export default function AICybersecurityThreatIntelligence() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
-          >
+
             <h2 className="text-4xl font-bold text-white mb-6">
               Advanced Security
               <span className="bg-gradient-to-r from-red-400 to-orange-500 bg-clip-text text-transparent">
@@ -293,7 +291,7 @@ export default function AICybersecurityThreatIntelligence() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
                 className="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-8 border border-slate-700/50 hover:border-red-400/50 transition-all duration-300"
-              >
+
                 <div className="w-16 h-16 bg-gradient-to-br from-red-400 to-orange-500 rounded-xl flex items-center justify-center mb-6">
                   <feature.icon className="w-8 h-8 text-white" />
                 </div>
@@ -321,7 +319,7 @@ export default function AICybersecurityThreatIntelligence() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
-          >
+
             <h2 className="text-4xl font-bold text-white mb-6">
               Industry-Specific
               <span className="bg-gradient-to-r from-red-400 to-orange-500 bg-clip-text text-transparent">
@@ -341,7 +339,7 @@ export default function AICybersecurityThreatIntelligence() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
                 className="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-8 border border-slate-700/50 hover:border-red-400/50 transition-all duration-300"
-              >
+
                 <div className="flex items-center space-x-3 mb-4">
                   <span className="px-3 py-1 bg-red-400/20 text-red-400 text-sm rounded-full">
                     {useCase.industry}
@@ -372,7 +370,7 @@ export default function AICybersecurityThreatIntelligence() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
-          >
+
             <h2 className="text-4xl font-bold text-white mb-6">
               Measurable
               <span className="bg-gradient-to-r from-red-400 to-orange-500 bg-clip-text text-transparent">
@@ -392,7 +390,7 @@ export default function AICybersecurityThreatIntelligence() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
                 className="text-center"
-              >
+
                 <div className="w-20 h-20 bg-gradient-to-br from-red-400 to-orange-500 rounded-2xl flex items-center justify-center mx-auto mb-6">
                   <benefit.icon className="w-10 h-10 text-white" />
                 </div>
@@ -413,7 +411,7 @@ export default function AICybersecurityThreatIntelligence() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
-          >
+
             <h2 className="text-4xl font-bold text-white mb-6">
               Cutting-Edge
               <span className="bg-gradient-to-r from-red-400 to-orange-500 bg-clip-text text-transparent">
@@ -433,7 +431,7 @@ export default function AICybersecurityThreatIntelligence() {
                 whileInView={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.6, delay: index * 0.05 }}
                 className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700/50 hover:border-red-400/50 transition-all duration-300 text-center"
-              >
+
                 <div className="text-white font-semibold">{tech}</div>
               </motion.div>
             ))}
@@ -449,7 +447,7 @@ export default function AICybersecurityThreatIntelligence() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
-          >
+
             <h2 className="text-4xl font-bold text-white mb-6">
               Transparent
               <span className="bg-gradient-to-r from-red-400 to-orange-500 bg-clip-text text-transparent">
@@ -473,7 +471,7 @@ export default function AICybersecurityThreatIntelligence() {
                     ? 'border-red-400/50 scale-105'
                     : 'border-slate-700/50 hover:border-red-400/50'
                 }`}
-              >
+
                 {plan.popular && (
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                     <span className="bg-gradient-to-r from-red-400 to-orange-500 text-white px-4 py-2 rounded-full text-sm font-semibold">
@@ -507,7 +505,7 @@ export default function AICybersecurityThreatIntelligence() {
                       ? 'bg-gradient-to-r from-red-400 to-orange-500 text-white hover:from-red-500 hover:to-orange-600'
                       : 'border border-red-400 text-red-400 hover:bg-red-400 hover:text-white'
                   }`}
-                >
+
                   {plan.cta}
                 </a>
               </motion.div>
@@ -523,7 +521,7 @@ export default function AICybersecurityThreatIntelligence() {
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-          >
+
             <h2 className="text-4xl font-bold text-white mb-6">
               Ready to Secure Your
               <span className="bg-gradient-to-r from-red-400 to-orange-500 bg-clip-text text-transparent">
@@ -538,14 +536,14 @@ export default function AICybersecurityThreatIntelligence() {
               <a
                 href="/contact"
                 className="inline-flex items-center space-x-2 bg-gradient-to-r from-red-400 to-orange-500 text-white px-8 py-4 rounded-lg font-semibold hover:from-red-500 hover:to-orange-600 transition-all duration-300 transform hover:scale-105"
-              >
+
                 <span>Get Protected</span>
                 <ArrowRight className="w-5 h-5" />
               </a>
               <a
                 href="tel:+13024640950"
                 className="inline-flex items-center space-x-2 border border-red-400 text-red-400 px-8 py-4 rounded-lg font-semibold hover:bg-red-400 hover:text-white transition-all duration-300"
-              >
+
                 <span>Call +1 302 464 0950</span>
                 <ArrowRight className="w-5 h-5" />
               </a>
@@ -559,4 +557,4 @@ export default function AICybersecurityThreatIntelligence() {
       </section>
     </div>
   );
-}
+}}}}}}

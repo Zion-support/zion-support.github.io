@@ -870,7 +870,7 @@ export const EXPANDED_INNOVATIVE_SERVICES = [
         compliance: ["COPPA", "SOC 2", "GDPR"],
         roi: "300% within 12 months",
         competitors: ["Unity", "Epic Games", "Steam", "Twitch", "Discord"]
-    }
+
 ];
 export const EXPANDED_SERVICE_CATEGORIES = [
     "AI & Content Marketing",
@@ -906,3 +906,4 @@ export const EXPANDED_SERVICE_SUBCATEGORIES = [
     "Risk Assessment",
     "Entertainment"
 ];
+}

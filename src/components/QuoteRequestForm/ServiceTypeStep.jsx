@@ -1,8 +1,7 @@
 import { useEffect, useState } from "react";
 import { Input } from "@/components/ui/input";
 import { Card } from "@/components/ui/card";
-import { Search } from "lucide-react";
-import { ListingScoreCard } from "@/components/ListingScoreCard";
+import { Search import { ListingScoreCard } from "@/components/ListingScoreCard";
 import { captureException } from "@/utils/sentry";
 import { Skeleton } from "@/components/ui/skeleton";
 import { useDebounce } from "@/hooks/useDebounce";
@@ -25,7 +24,7 @@ export function ServiceTypeStep({ formData, updateFormData }) {
         if (!formData.serviceType) {
             setListings([]);
             return;
-        }
+
         const fetchServices = async () => {
             setLoading(true);
             setError(null);
@@ -44,24 +43,24 @@ export function ServiceTypeStep({ formData, updateFormData }) {
                     setError(null);
                     setLoading(false);
                     return;
-                }
+
                 catch (err) {
                     if (attempt === maxRetries - 1) {
                         if (process.env.NODE_ENV === 'development') {
-                            // console.error('Failed to load services:', err);
-                        }
+                            // // // console.error('Failed to load services:', err);
+
                         else {
                             captureException(err);
-                        }
+
                         setListings([]);
                         setError('Failed to load services');
                         setLoading(false);
-                    }
+
                     else {
                         await new Promise((res) => setTimeout(res, Math.pow(2, attempt) * 500));
-                    }
-                }
-            }
+
+
+
         };
         fetchServices();
     }, [formData.serviceType, debouncedQuery]);
@@ -82,7 +81,7 @@ export function ServiceTypeStep({ formData, updateFormData }) {
             const categoryMatch = item.category.toLowerCase() === formData.serviceType.toLowerCase();
             if (!categoryMatch)
                 return false;
-        }
+
         if (searchQuery.trim() === "")
             return true;
         return item.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
@@ -138,4 +137,4 @@ export function ServiceTypeStep({ formData, updateFormData }) {
           </div>
         </div>)}
     </div>);
-}
+}}}}}}}}}}}

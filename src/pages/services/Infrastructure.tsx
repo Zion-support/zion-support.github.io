@@ -1,7 +1,5 @@
 import React from 'react';
-import { Server, Network, Database, Shield, Cpu, HardDrive, Zap, BarChart3 } from 'lucide-react';
-
-const InfrastructureServices = () => {
+import { Server, Network, Database, Shield, Cpu, HardDrive, Zap, BarChart3 const InfrastructureServices = () => {
   const infrastructureServices = [
     {
       title: "Network Design & Management",
@@ -23,7 +21,7 @@ const InfrastructureServices = () => {
       price: "From $8,000/month",
       features: ["Colocation services", "Managed hosting", "Disaster recovery", "Compliance support"],
       icon: Database
-    }
+
   ];
 
   const technologies = [
@@ -44,7 +42,7 @@ const InfrastructureServices = () => {
       description: "Advanced network protection and monitoring",
       icon: Shield,
       features: ["Firewall management", "Intrusion detection", "VPN solutions", "Security monitoring"]
-    }
+
   ];
 
   const benefits = [
@@ -220,4 +218,4 @@ const InfrastructureServices = () => {
   );
 };
 
-export default InfrastructureServices;
+export default InfrastructureServices;}}}

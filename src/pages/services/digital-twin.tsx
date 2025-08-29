@@ -1,7 +1,6 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { Cpu, Eye, Zap, Settings, Users, Globe, ArrowRight, CheckCircle, Play, Download, Mail, Target, Activity, BarChart3, Database } from 'lucide-react';
-import { Link } from 'react-router-dom';
+import { Cpu, Eye, Zap, Settings, Users, Globe, ArrowRight, CheckCircle, Play, Download, Mail, Target, Activity, BarChart3, Database import { Link } from 'react-router-dom';
 
 export default function DigitalTwin() {
   return (
@@ -37,7 +36,7 @@ export default function DigitalTwin() {
                 <Link
                   to="/contact"
                   className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-emerald-500 to-teal-600 text-white font-semibold rounded-lg hover:from-emerald-600 hover:to-teal-700 transition-all duration-200 shadow-lg hover:shadow-xl"
-                >
+
                   Get Started
                   <ArrowRight className="ml-2 w-5 h-5" />
                 </Link>
@@ -94,7 +93,7 @@ export default function DigitalTwin() {
                   icon: Globe,
                   title: "IoT Integration",
                   description: "Seamlessly connect with IoT sensors and devices for real-time data."
-                }
+
               ].map((feature, index) => (
                 <div key={index} className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-6 hover:bg-slate-800/70 transition-all duration-300">
                   <div className="w-12 h-12 bg-gradient-to-r from-emerald-500 to-teal-600 rounded-lg flex items-center justify-center mb-4">
@@ -157,7 +156,7 @@ export default function DigitalTwin() {
                   description: "Building management, energy efficiency, and maintenance optimization.",
                   icon: Activity,
                   benefits: ["Building management", "Energy efficiency", "Maintenance optimization"]
-                }
+
               ].map((application, index) => (
                 <div key={index} className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-6 hover:bg-slate-800/70 transition-all duration-300">
                   <div className="w-12 h-12 bg-gradient-to-r from-emerald-500 to-teal-600 rounded-lg flex items-center justify-center mb-4">
@@ -299,14 +298,14 @@ export default function DigitalTwin() {
               <Link
                 to="/contact"
                 className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-emerald-500 to-teal-600 text-white font-semibold rounded-lg hover:from-emerald-600 hover:to-teal-700 transition-all duration-200"
-              >
+
                 Schedule a Consultation
                 <ArrowRight className="ml-2 w-5 h-5" />
               </Link>
               <Link
                 to="/services"
                 className="inline-flex items-center px-8 py-4 border border-emerald-500/30 text-emerald-400 font-semibold rounded-lg hover:bg-emerald-500/10 transition-all duration-200"
-              >
+
                 Explore All Services
               </Link>
             </div>
@@ -315,4 +314,4 @@ export default function DigitalTwin() {
       </div>
     </>
   );
-}
+}}}}

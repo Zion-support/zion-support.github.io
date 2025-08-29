@@ -33,8 +33,6 @@ import {
   DollarSign,
   Search,
   Filter
-} from 'lucide-react';
-
 const solutionCategories = [
   {
     id: 'ai-ml',
@@ -125,7 +123,7 @@ const solutionCategories = [
       'Change Management',
       'Technology Consulting'
     ]
-  }
+
 ];
 
 const industrySolutions = [
@@ -206,7 +204,7 @@ const industrySolutions = [
       'Infrastructure Management'
     ],
     color: 'from-gray-500 to-slate-600'
-  }
+
 ];
 
 const featuredSolutions = [
@@ -281,7 +279,7 @@ const featuredSolutions = [
     implementation: '8-16 weeks',
     icon: Cloud,
     color: 'from-blue-500 to-cyan-600'
-  }
+
 ];
 
 export default function Solutions() {
@@ -310,7 +308,7 @@ export default function Solutions() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             className="text-center"
-          >
+
             <div className="inline-flex items-center gap-2 bg-zion-cyan/20 text-zion-cyan px-6 py-3 rounded-full border border-zion-cyan/30 mb-6">
               <Rocket className="w-5 h-5" />
               <span className="font-medium">Technology Solutions</span>
@@ -351,7 +349,7 @@ export default function Solutions() {
                   value={selectedCategory}
                   onChange={(e) => setSelectedCategory(e.target.value)}
                   className="w-full px-4 py-3 bg-white/10 border border-white/20 text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-zion-cyan"
-                >
+
                   {categories.map(category => (
                     <option key={category} value={category}>{category}</option>
                   ))}
@@ -364,7 +362,7 @@ export default function Solutions() {
                   value={selectedIndustry}
                   onChange={(e) => setSelectedIndustry(e.target.value)}
                   className="w-full px-4 py-3 bg-white/10 border border-white/20 text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-zion-cyan"
-                >
+
                   {industries.map(industry => (
                     <option key={industry} value={industry}>{industry}</option>
                   ))}
@@ -384,7 +382,7 @@ export default function Solutions() {
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
             className="mb-12 text-center"
-          >
+
             <h2 className="text-3xl font-bold text-white mb-4">Solution Categories</h2>
             <p className="text-zion-slate-light text-lg">Explore our comprehensive range of technology solutions</p>
           </motion.div>
@@ -400,7 +398,7 @@ export default function Solutions() {
                   transition={{ duration: 0.6, delay: index * 0.1 }}
                   viewport={{ once: true }}
                   className="group cursor-pointer"
-                >
+
                   <Link href={`/solutions#${category.id}`}>
                     <div className="bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl p-6 hover:bg-white/10 hover:border-zion-cyan/30 transition-all duration-300 h-full">
                       <div className={`w-16 h-16 bg-gradient-to-br ${category.color} rounded-2xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300`}>
@@ -438,7 +436,7 @@ export default function Solutions() {
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
             className="mb-12 text-center"
-          >
+
             <h2 className="text-3xl font-bold text-white mb-4">Industry-Specific Solutions</h2>
             <p className="text-zion-slate-light text-lg">Tailored solutions designed for your industry's unique challenges</p>
           </motion.div>
@@ -454,7 +452,7 @@ export default function Solutions() {
                   transition={{ duration: 0.6, delay: index * 0.1 }}
                   viewport={{ once: true }}
                   className="bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl p-6 hover:bg-white/10 hover:border-zion-cyan/30 transition-all duration-300"
-                >
+
                   <div className={`w-16 h-16 bg-gradient-to-br ${industry.color} rounded-2xl flex items-center justify-center mb-4`}>
                     <IconComponent className="w-8 h-8 text-white" />
                   </div>
@@ -471,7 +469,7 @@ export default function Solutions() {
                     <Link
                       href={`/solutions/${industry.industry.toLowerCase()}`}
                       className="inline-flex items-center text-zion-cyan hover:text-zion-cyan-light transition-colors duration-300"
-                    >
+
                       View {industry.industry} Solutions
                       <ArrowRight className="ml-2 h-4 w-4" />
                     </Link>
@@ -492,7 +490,7 @@ export default function Solutions() {
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
             className="mb-12 text-center"
-          >
+
             <h2 className="text-3xl font-bold text-white mb-4">Featured Solutions</h2>
             <p className="text-zion-slate-light text-lg">Our most popular and impactful technology solutions</p>
           </motion.div>
@@ -508,7 +506,7 @@ export default function Solutions() {
                   transition={{ duration: 0.6, delay: index * 0.1 }}
                   viewport={{ once: true }}
                   className="bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl p-6 hover:bg-white/10 hover:border-zion-cyan/30 transition-all duration-300"
-                >
+
                   {/* Header */}
                   <div className="flex items-start justify-between mb-4">
                     <div className="flex items-center gap-3">
@@ -566,7 +564,7 @@ export default function Solutions() {
                     <Link
                       href={`/solutions/${solution.id}`}
                       className="inline-flex items-center text-zion-cyan hover:text-zion-cyan-light transition-colors duration-300"
-                    >
+
                       Learn More
                       <ArrowRight className="ml-2 h-4 w-4" />
                     </Link>
@@ -587,7 +585,7 @@ export default function Solutions() {
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
             className="bg-gradient-to-r from-zion-cyan to-zion-purple rounded-3xl p-8"
-          >
+
             <h2 className="text-3xl font-bold text-white mb-4">
               Ready to Transform Your Business?
             </h2>
@@ -599,14 +597,14 @@ export default function Solutions() {
               <Link
                 href="/contact"
                 className="inline-flex items-center bg-white text-zion-cyan px-8 py-4 rounded-xl hover:bg-zion-slate-light transition-all duration-300 font-medium text-lg"
-              >
+
                 Get Started Today
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Link>
               <Link
                 href="/case-studies"
                 className="inline-flex items-center border-2 border-white text-white px-8 py-4 rounded-xl hover:bg-white hover:text-zion-cyan transition-all duration-300 font-medium text-lg"
-              >
+
                 View Case Studies
               </Link>
             </div>
@@ -615,4 +613,4 @@ export default function Solutions() {
       </section>
     </div>
   );
-}
+}}}}}

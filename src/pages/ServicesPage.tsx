@@ -30,7 +30,6 @@ import {
   Mail,
   MapPin,
   Globe as GlobeIcon
-} from 'lucide-react';
 import { SEO } from "@/components/SEO";
 import { INNOVATIVE_MICRO_SAAS_SERVICES_2025, SPECIALIZED_SERVICES } from "@/data/innovativeMicroSaasServices2025";
 import { ADDITIONAL_MICRO_SAAS_SERVICES_2025, ADDITIONAL_SPECIALIZED_SERVICES } from "@/data/additionalServices2025";
@@ -104,7 +103,7 @@ export default function ServicesPage() {
         return new Date(b.createdAt || '2025-01-01').getTime() - new Date(a.createdAt || '2025-01-01').getTime();
       default:
         return 0;
-    }
+
   });
 
   const getCategoryIcon = (category: string) => {
@@ -141,7 +140,7 @@ export default function ServicesPage() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-          >
+
             <h1 className="heading-responsive font-bold mb-6">
               <span className="text-gradient">Innovative Micro SAAS</span>
               <br />
@@ -173,7 +172,7 @@ export default function ServicesPage() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.2 }}
-              >
+
                 <div className="text-3xl font-bold text-zion-cyan mb-2">{INNOVATIVE_MICRO_SAAS_SERVICES_2025.length + SPECIALIZED_SERVICES.length}+</div>
                 <div className="text-zion-slate-light">Innovative Services</div>
               </motion.div>
@@ -182,7 +181,7 @@ export default function ServicesPage() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.3 }}
-              >
+
                 <div className="text-3xl font-bold text-zion-purple mb-2">{categories.length}+</div>
                 <div className="text-zion-slate-light">Technology Categories</div>
               </motion.div>
@@ -191,7 +190,7 @@ export default function ServicesPage() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.4 }}
-              >
+
                 <div className="text-3xl font-bold text-zion-blue mb-2">99.9%</div>
                 <div className="text-zion-slate-light">Uptime Guarantee</div>
               </motion.div>
@@ -209,7 +208,7 @@ export default function ServicesPage() {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-          >
+
             {categories.map((category) => (
               <button
                 key={category.id}
@@ -219,7 +218,7 @@ export default function ServicesPage() {
                     ? `bg-gradient-to-r ${category.color} text-white shadow-lg`
                     : 'bg-zion-slate-light/10 text-zion-slate-light hover:bg-zion-slate-light/20 hover:text-white'
                 }`}
-              >
+
                 <category.icon className="w-4 h-4" />
                 {category.name}
               </button>
@@ -232,7 +231,7 @@ export default function ServicesPage() {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.1 }}
-          >
+
             <div className="flex flex-wrap gap-4">
               {/* Price Range Filter */}
               <div className="flex items-center gap-2">
@@ -241,7 +240,7 @@ export default function ServicesPage() {
                   value={selectedPriceRange}
                   onChange={(e) => setSelectedPriceRange(e.target.value)}
                   className="bg-zion-slate-light/10 border border-zion-cyan/20 rounded-lg px-3 py-2 text-white focus:outline-none focus:ring-2 focus:ring-zion-cyan"
-                >
+
                   {priceRanges.map((range) => (
                     <option key={range.id} value={range.id}>{range.name}</option>
                   ))}
@@ -255,7 +254,7 @@ export default function ServicesPage() {
                   value={sortBy}
                   onChange={(e) => setSortBy(e.target.value)}
                   className="bg-zion-slate-light/10 border border-zion-cyan/20 rounded-lg px-3 py-2 text-white focus:outline-none focus:ring-2 focus:ring-zion-cyan"
-                >
+
                   {sortOptions.map((option) => (
                     <option key={option.id} value={option.id}>{option.name}</option>
                   ))}
@@ -281,7 +280,7 @@ export default function ServicesPage() {
                 animate={{ opacity: 1 }}
                 exit={{ opacity: 0 }}
                 transition={{ duration: 0.5 }}
-              >
+
                 {sortedServices.map((service, index) => (
                   <motion.div
                     key={service.id}
@@ -290,7 +289,7 @@ export default function ServicesPage() {
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.6, delay: index * 0.1 }}
                     whileHover={{ y: -10 }}
-                  >
+
                     {/* Service Header */}
                     <div className="mb-6">
                       <div className="flex items-center justify-between mb-4">
@@ -367,7 +366,7 @@ export default function ServicesPage() {
                       <Link
                         to={`/services/${service.id}`}
                         className="btn-futuristic px-4 py-2 text-sm"
-                      >
+
                         Learn More
                         <ArrowRight className="w-4 h-4 ml-2" />
                       </Link>
@@ -381,7 +380,7 @@ export default function ServicesPage() {
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 exit={{ opacity: 0 }}
-              >
+
                 <div className="text-6xl mb-4">🔍</div>
                 <h3 className="text-2xl font-bold text-white mb-2">No services found</h3>
                 <p className="text-zion-slate-light mb-6">
@@ -394,7 +393,7 @@ export default function ServicesPage() {
                     setSelectedPriceRange('all');
                   }}
                   className="btn-futuristic px-6 py-3"
-                >
+
                   View All Services
                 </button>
               </motion.div>
@@ -411,7 +410,7 @@ export default function ServicesPage() {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-          >
+
             <h2 className="heading-responsive font-bold mb-4">
               <span className="text-gradient">Specialized Solutions</span>
             </h2>
@@ -429,7 +428,7 @@ export default function ServicesPage() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 whileHover={{ y: -5 }}
-              >
+
                 <div className="w-16 h-16 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-xl flex items-center justify-center mx-auto mb-4">
                   <Rocket className="w-8 h-8 text-white" />
                 </div>
@@ -449,7 +448,7 @@ export default function ServicesPage() {
                 <Link
                   to={`/services/${service.id}`}
                   className="btn-neon w-full"
-                >
+
                   Explore Solution
                 </Link>
               </motion.div>
@@ -465,7 +464,7 @@ export default function ServicesPage() {
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-          >
+
             <h2 className="heading-responsive font-bold mb-6">
               Ready to Transform Your Business?
             </h2>
@@ -478,7 +477,7 @@ export default function ServicesPage() {
               <Link
                 to="/contact"
                 className="btn-futuristic px-8 py-4 text-lg"
-              >
+
                 <MessageCircle className="w-5 h-5 mr-2" />
                 Get Free Consultation
               </Link>
@@ -486,7 +485,7 @@ export default function ServicesPage() {
               <a
                 href="tel:+13024640950"
                 className="btn-neon px-8 py-4 text-lg"
-              >
+
                 <Phone className="w-5 h-5 mr-2" />
                 Call Now: +1 302 464 0950
               </a>
@@ -502,4 +501,4 @@ export default function ServicesPage() {
       </section>
     </>
   );
-}
+}}}

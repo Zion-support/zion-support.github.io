@@ -32,5 +32,4 @@ export default function M365SecurityCopilot() {
       </main>
     </div>
   );
-}
-
+</div></div></div></div>}

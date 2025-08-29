@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Search as SearchIcon, Filter, MapPin, Briefcase, Server, Users, Building, Star, Clock, ArrowRight } from 'lucide-react';
-import { useSearchParams } from 'react-router-dom';
+import { Search as SearchIcon, Filter, MapPin, Briefcase, Server, Users, Building, Star, Clock, ArrowRight import { useSearchParams } from 'react-router-dom';
 
 export default function Search() {
   const [searchParams, setSearchParams] = useSearchParams();
@@ -83,13 +82,13 @@ export default function Search() {
       company: 'Zion Tech Group',
       tags: ['Cloud', 'Migration', 'Consulting', 'Infrastructure'],
       featured: false
-    }
+
   ];
 
   useEffect(() => {
     if (searchQuery) {
       performSearch();
-    }
+
   }, [searchQuery, activeCategory, sortBy]);
 
   const performSearch = async () => {
@@ -121,7 +120,7 @@ export default function Search() {
           return parseFloat(b.price.replace(/[^0-9.]/g, '')) - parseFloat(a.price.replace(/[^0-9.]/g, ''));
         default:
           return 0;
-      }
+
     });
 
     setResults(filteredResults);
@@ -132,7 +131,7 @@ export default function Search() {
     e.preventDefault();
     if (searchQuery.trim()) {
       setSearchParams({ q: searchQuery.trim() });
-    }
+
   };
 
   const getTypeIcon = (type: string) => {
@@ -145,7 +144,7 @@ export default function Search() {
         return <Building className="w-5 h-5 text-zion-orange" />;
       default:
         return <SearchIcon className="w-5 h-5 text-zion-slate-light" />;
-    }
+
   };
 
   const getTypeLabel = (type: string) => {
@@ -158,7 +157,7 @@ export default function Search() {
         return 'Equipment';
       default:
         return 'Unknown';
-    }
+
   };
 
   return (
@@ -184,7 +183,7 @@ export default function Search() {
               <button
                 type="submit"
                 className="absolute right-2 top-1/2 transform -translate-y-1/2 bg-zion-cyan text-zion-slate-dark px-6 py-2 rounded-md font-semibold hover:bg-zion-cyan-light transition-colors"
-              >
+
                 Search
               </button>
             </div>
@@ -208,7 +207,7 @@ export default function Search() {
                       ? 'bg-zion-cyan text-zion-slate-dark'
                       : 'bg-zion-slate text-zion-slate-light hover:bg-zion-slate-light hover:text-white'
                   }`}
-                >
+
                   {category.icon}
                   {category.name}
                   <span className="text-xs bg-white/20 px-2 py-1 rounded-full">
@@ -225,7 +224,7 @@ export default function Search() {
                 value={sortBy}
                 onChange={(e) => setSortBy(e.target.value)}
                 className="bg-zion-slate border border-zion-slate-light rounded-lg px-3 py-2 text-white focus:outline-none focus:ring-2 focus:ring-zion-cyan"
-              >
+
                 {sortOptions.map((option) => (
                   <option key={option.value} value={option.value}>
                     {option.label}
@@ -249,7 +248,7 @@ export default function Search() {
                   className={`bg-zion-slate border border-zion-slate-light rounded-lg p-6 hover:shadow-lg transition-shadow ${
                     result.featured ? 'ring-2 ring-zion-cyan' : ''
                   }`}
-                >
+
                   <div className="flex items-start justify-between mb-4">
                     <div className="flex items-center gap-3">
                       {getTypeIcon(result.type)}
@@ -277,7 +276,7 @@ export default function Search() {
                       <span
                         key={index}
                         className="px-2 py-1 bg-zion-slate-light/20 text-zion-slate-light text-xs rounded-full"
-                      >
+
                         {tag}
                       </span>
                     ))}
@@ -317,7 +316,7 @@ export default function Search() {
                     key={category.id}
                     onClick={() => setActiveCategory(category.id)}
                     className="px-4 py-2 bg-zion-slate border border-zion-slate-light rounded-lg text-zion-slate-light hover:bg-zion-slate-light hover:text-white transition-colors"
-                  >
+
                     Browse {category.name}
                   </button>
                 ))}
@@ -336,4 +335,4 @@ export default function Search() {
       </div>
     </div>
   );
-}
+}}}}}}}}

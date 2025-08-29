@@ -1,21 +1,12 @@
-import { Twitter, Linkedin, Facebook, Instagram, Github } from "lucide-react";
-=======
-import { Twitter, Linkedin, Facebook, Instagram, Github } from "lucide-react";
-=======
-import { Twitter, Linkedin, Facebook, Instagram, Github, Mail, Phone, MapPin, ArrowRight, Sparkles, Shield, Zap, Users } from "lucide-react";
-=======
-import { Twitter, Linkedin, Facebook, Instagram, Github, Phone, Mail, MapPin } from "lucide-react";
-=======
-import { Twitter, Linkedin, Facebook, Instagram, Github, Mail, Phone, MapPin, ArrowRight, Zap, Brain, Cloud, Shield, Users, Code, Building, Globe } from "lucide-react";
-=======
-import { Twitter, Linkedin, Facebook, Instagram, Github, Mail, Phone, MapPin, ExternalLink } from "lucide-react";
-=======
-import { Twitter, Linkedin, Facebook, Instagram, Github, Mail, Phone, MapPin, ArrowRight, Sparkles, Zap, Brain, Shield, Globe, Code, TrendingUp, Users, Building } from "lucide-react";
-=======
-import { Twitter, Linkedin, Facebook, Instagram, Github, Mail, Phone, MapPin } from "lucide-react";
-=======
-import { Twitter, Linkedin, Facebook, Instagram, Github, Mail, Phone, MapPin, ExternalLink } from "lucide-react";
-import { Link } from "react-router-dom";
+import { Twitter, Linkedin, Facebook, Instagram, Github =======
+import { Twitter, Linkedin, Facebook, Instagram, Github =======
+import { Twitter, Linkedin, Facebook, Instagram, Github, Mail, Phone, MapPin, ArrowRight, Sparkles, Shield, Zap, Users =======
+import { Twitter, Linkedin, Facebook, Instagram, Github, Phone, Mail, MapPin =======
+import { Twitter, Linkedin, Facebook, Instagram, Github, Mail, Phone, MapPin, ArrowRight, Zap, Brain, Cloud, Shield, Users, Code, Building, Globe =======
+import { Twitter, Linkedin, Facebook, Instagram, Github, Mail, Phone, MapPin, ExternalLink =======
+import { Twitter, Linkedin, Facebook, Instagram, Github, Mail, Phone, MapPin, ArrowRight, Sparkles, Zap, Brain, Shield, Globe, Code, TrendingUp, Users, Building =======
+import { Twitter, Linkedin, Facebook, Instagram, Github, Mail, Phone, MapPin =======
+import { Twitter, Linkedin, Facebook, Instagram, Github, Mail, Phone, MapPin, ExternalLink import { Link } from "react-router-dom";
 =======
 import { Link } from 'react-router-dom';
 import {
@@ -62,8 +53,6 @@ import {
   AlertCircle,
   Info,
   ExternalLink
-} from 'lucide-react';
-
 export function Footer() {
   return (
     <footer className="bg-slate-900 text-white">
@@ -100,8 +89,7 @@ export function Footer() {
 =======
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Heart, Mail, Phone, MapPin, Globe } from 'lucide-react';
-import { motion, Variants } from 'framer-motion';
+import { Heart, Mail, Phone, MapPin, Globe import { motion, Variants } from 'framer-motion';
 
 const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear();
@@ -158,7 +146,7 @@ const Footer: React.FC = () => {
         { label: "Support", path: "/support" },
         { label: "Request Quote", path: "/request-quote" }
       ]
-    }
+
   ];
 
   const contactInfo = [
@@ -174,8 +162,8 @@ const Footer: React.FC = () => {
       opacity: 1,
       transition: {
         staggerChildren: 0.1
-      }
-    }
+
+
   };
 
   const itemVariants: Variants = {
@@ -186,8 +174,8 @@ const Footer: React.FC = () => {
       transition: {
         duration: 0.5,
         ease: "easeOut"
-      }
-    }
+
+
   };
 
   return (
@@ -207,7 +195,7 @@ const Footer: React.FC = () => {
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true }}
-      >
+
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-12">
           {/* Company Info */}
           <motion.div className="lg:col-span-2" variants={itemVariants}>
@@ -265,7 +253,7 @@ const Footer: React.FC = () => {
                   className="flex items-center gap-3 text-zion-slate-light hover:text-zion-cyan transition-colors duration-300 group"
                   variants={itemVariants}
                   whileHover={{ x: 5 }}
-                >
+
                   <contact.icon className="w-4 h-4 text-zion-cyan group-hover:scale-110 transition-transform duration-300" />
                   <span className="text-sm">
                     <span className="font-medium text-white">{contact.label}:</span> {contact.value}
@@ -286,7 +274,7 @@ const Footer: React.FC = () => {
                   aria-label={`Follow us on ${social.name}`}
                   variants={itemVariants}
                   whileHover={{ y: -5 }}
-                >
+
                   {social.icon}
                 </motion.a>
               ))}
@@ -307,11 +295,11 @@ const Footer: React.FC = () => {
                     variants={itemVariants}
                     whileHover={{ x: 5 }}
                     transition={{ type: "spring", stiffness: 300 }}
-                  >
+
                     <Link
                       to={link.path}
                       className="text-zion-slate-light hover:text-zion-cyan transition-colors duration-300 text-sm flex items-center gap-2 group"
-                    >
+
                       <span className="w-1 h-1 bg-zion-cyan/50 rounded-full group-hover:bg-zion-cyan transition-colors duration-300" />
                       {link.label}
                     </Link>
@@ -330,7 +318,7 @@ const Footer: React.FC = () => {
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true }}
-      >
+
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
           <div className="text-center">
           <div className="space-y-4 sm:col-span-2 lg:col-span-1">
@@ -454,7 +442,7 @@ const Footer: React.FC = () => {
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-zion-slate-light hover:text-zion-cyan text-sm transition-colors"
-              >
+
                 {t('footer.bottom.api_status')}
               </Link>
 =======
@@ -474,7 +462,7 @@ const Footer: React.FC = () => {
                 className="px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-blue text-white font-semibold rounded-xl hover:from-zion-cyan/90 hover:to-zion-blue/90 transition-all duration-300 shadow-lg hover:shadow-zion-cyan/25 border border-zion-cyan/30 hover:border-zion-cyan/60"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-              >
+
                 Subscribe
               </motion.button>
             </div>
@@ -489,7 +477,7 @@ const Footer: React.FC = () => {
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true }}
-      >
+
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <div className="flex items-center space-x-4 text-zion-slate-light text-sm mb-4 md:mb-0">
@@ -506,6 +494,6 @@ const Footer: React.FC = () => {
       </div>
     </footer>
   );
-}
+</div></div></div></div></div></div></div></div></div>}
 
-export default Footer;
+export default Footer;}}}}}}}}}}}}}}}}</motion.div>})

@@ -1,6 +1,4 @@
-import { TrendingUp, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, DollarSign, BarChart3 } from 'lucide-react';
-
-export default function AIFinancialTrading() {
+import { TrendingUp, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, DollarSign, BarChart3 export default function AIFinancialTrading() {
   const features = [
     'AI-powered market analysis and trend prediction',
     'Intelligent portfolio optimization and risk management',
@@ -171,4 +169,4 @@ export default function AIFinancialTrading() {
       </section>
     </div>
   );
-}
+}}

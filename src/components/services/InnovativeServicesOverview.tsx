@@ -5,7 +5,6 @@ interface InnovativeServicesOverviewProps {
   maxServices?: number;
   category?: string;
   showViewAllButton?: boolean;
-}
 
 const InnovativeServicesOverview: React.FC<InnovativeServicesOverviewProps> = ({
   maxServices = 6,
@@ -50,8 +49,7 @@ const InnovativeServicesOverview: React.FC<InnovativeServicesOverviewProps> = ({
           break;
         default:
           services = INNOVATIVE_SERVICES_2025;
-      }
-    }
+
 
     return services.slice(0, maxServices);
   }, [activeTab, category, maxServices]);
@@ -173,7 +171,7 @@ const InnovativeServicesOverview: React.FC<InnovativeServicesOverviewProps> = ({
                       ? 'bg-blue-600 text-white'
                       : 'bg-white text-gray-700 hover:bg-gray-100'
                   }`}
-                >
+
                   {tab.label}
                   <span className="ml-2 text-xs opacity-75">({tab.count})</span>
                 </button>
@@ -212,7 +210,7 @@ const InnovativeServicesOverview: React.FC<InnovativeServicesOverviewProps> = ({
             <a
               href="/innovative-services-2025"
               className="inline-flex items-center text-blue-600 hover:text-blue-700 font-medium"
-            >
+
               View All {totalServices} Services
               <svg className="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
@@ -225,4 +223,4 @@ const InnovativeServicesOverview: React.FC<InnovativeServicesOverviewProps> = ({
   );
 };
 
-export default InnovativeServicesOverview;
+export default InnovativeServicesOverview;}}}

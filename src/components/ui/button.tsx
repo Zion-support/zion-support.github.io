@@ -7,7 +7,7 @@ interface ButtonProps {
   onClick?: () => void;
   type?: 'button' | 'submit' | 'reset';
   disabled?: boolean;
-}
+
 export function Button({
   children,
   variant = 'default',
@@ -34,18 +34,18 @@ export function Button({
   const classes = `${baseClasses} ${variantClasses[variant]} ${sizeClasses[size]} ${className}`;
   if (asChild) {
     return <span className={classes}>{children}</span>;
-  }
+
   return (
     <button
       type={type}
       className={classes}
       onClick={onClick}
       disabled={disabled}
-    >
+
       {children}
     </button>
   );
-}
+
 // Export button variants for use in other components
 export const buttonVariants = {
   default: 'bg-zion-cyan text-zion-slate-dark hover:bg-zion-cyan-light focus:ring-zion-cyan',
@@ -54,3 +54,4 @@ export const buttonVariants = {
   link: 'text-zion-cyan hover:underline focus:ring-zion-cyan'
 };
 export type { ButtonProps };
+}}}

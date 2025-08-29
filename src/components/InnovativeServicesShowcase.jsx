@@ -20,7 +20,7 @@ const InnovativeServicesShowcase = () => {
                 return innovativeAIServices2025;
             default:
                 return [];
-        }
+
     };
     const handleServiceClick = (service) => {
         setSelectedService(service);
@@ -282,3 +282,4 @@ const InnovativeServicesShowcase = () => {
     </div>);
 };
 export default InnovativeServicesShowcase;
+}

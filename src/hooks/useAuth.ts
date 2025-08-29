@@ -8,13 +8,11 @@ interface User {
   userType?: string;
   displayName?: string;
   avatarUrl?: string;
-}
 
 interface AuthState {
   user: User | null;
   isAuthenticated: boolean;
   isLoading: boolean;
-}
 
 export function useAuth() {
   const [authState, setAuthState] = useState<AuthState>({
@@ -38,20 +36,20 @@ export function useAuth() {
             isLoading: false,
           });
         } catch (error) {
-          // console.error('Error parsing stored user:', error);
+          // // // console.error('Error parsing stored user:', error);
           setAuthState({
             user: null,
             isAuthenticated: false,
             isLoading: false,
           });
-        }
+
       } else {
         setAuthState({
           user: null,
           isAuthenticated: false,
           isLoading: false,
         });
-      }
+
     };
 
     checkAuth();
@@ -120,4 +118,4 @@ export function useAuth() {
     isLoading: authState.isLoading,
     isAdmin: authState.user?.role === 'admin'
   };
-}
+}}}}}

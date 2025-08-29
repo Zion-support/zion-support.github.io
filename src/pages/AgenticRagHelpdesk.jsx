@@ -1,7 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Brain, MessageCircle, Zap, Users, Shield, BarChart3, Globe, ArrowRight, CheckCircle } from 'lucide-react';
-export default function AgenticRagHelpdesk() {
+import { Brain, MessageCircle, Zap, Users, Shield, BarChart3, Globe, ArrowRight, CheckCircle export default function AgenticRagHelpdesk() {
     const features = [
         {
             icon: Brain,
@@ -26,7 +25,7 @@ export default function AgenticRagHelpdesk() {
             title: 'Secure & Compliant',
             description: 'Enterprise-grade security with compliance features',
             benefits: ['Data encryption', 'Access controls', 'Audit trails']
-        }
+
     ];
     const useCases = [
         {
@@ -52,7 +51,7 @@ export default function AgenticRagHelpdesk() {
             description: 'Provide technical support and documentation assistance',
             icon: Globe,
             benefits: ['Reduced support tickets', 'Faster issue resolution', 'Improved user experience']
-        }
+
     ];
     return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-green-900 to-slate-900">
       {/* Hero Section */}
@@ -264,4 +263,4 @@ export default function AgenticRagHelpdesk() {
         </div>
       </section>
     </div>);
-}
+}}}}

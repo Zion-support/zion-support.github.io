@@ -31,7 +31,6 @@ export interface InnovativeService2025 {
   };
   competitors?: string[];
   marketSize?: string;
-}
 
 export const INNOVATIVE_SERVICES_2025: InnovativeService2025[] = [
   // AI-Powered Autonomous Business Operations
@@ -682,7 +681,7 @@ export const INNOVATIVE_SERVICES_2025: InnovativeService2025[] = [
     },
     competitors: ["Watershed", "Normative", "Persefoni", "Sweep"],
     marketSize: "$8.5 billion by 2025"
-  }
+
 ];
 
 // Helper functions
@@ -702,4 +701,4 @@ export const getTopRatedServices = (limit: number = 5): InnovativeService2025[] 
 
 export const getServicesByAIScore = (minScore: number): InnovativeService2025[] => {
   return INNOVATIVE_SERVICES_2025.filter(service => service.aiScore >= minScore);
-};
+};}}

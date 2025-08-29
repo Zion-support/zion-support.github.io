@@ -14,8 +14,6 @@ import {
   Users,
   Globe,
   Rocket
-} from 'lucide-react';
-
 interface HeroProps {
   title?: string;
   subtitle?: string;
@@ -27,7 +25,6 @@ interface HeroProps {
     text: string;
     color: string;
   }>;
-}
 
 const PerformanceOptimizedHero: React.FC<HeroProps> = ({
   title = "Revolutionary AI & Technology Solutions",
@@ -57,7 +54,7 @@ const PerformanceOptimizedHero: React.FC<HeroProps> = ({
 
   const handleCTAClick = useCallback(() => {
     // Analytics tracking could be added here
-    // console.log('Hero CTA clicked');
+    // // // console.log('Hero CTA clicked');
   }, []);
 
   const containerVariants = {
@@ -68,8 +65,8 @@ const PerformanceOptimizedHero: React.FC<HeroProps> = ({
       transition: {
         duration: 0.8,
         staggerChildren: 0.2
-      }
-    }
+
+
   };
 
   const itemVariants = {
@@ -97,12 +94,12 @@ const PerformanceOptimizedHero: React.FC<HeroProps> = ({
         variants={containerVariants}
         initial="hidden"
         animate={isVisible ? "visible" : "hidden"}
-      >
+
         {/* Badge */}
         <motion.div
           className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-cyan-500/20 to-blue-500/20 border border-cyan-500/30 text-cyan-400 text-sm font-medium mb-8"
           variants={itemVariants}
-        >
+
           <Star className="w-4 h-4 mr-2" />
           {subtitle}
         </motion.div>
@@ -111,7 +108,7 @@ const PerformanceOptimizedHero: React.FC<HeroProps> = ({
         <motion.h1
           className="text-4xl sm:text-5xl lg:text-7xl font-bold text-white mb-6 leading-tight"
           variants={itemVariants}
-        >
+
           <span className="bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400 bg-clip-text text-transparent">
             {title}
           </span>
@@ -121,7 +118,7 @@ const PerformanceOptimizedHero: React.FC<HeroProps> = ({
         <motion.p
           className="text-xl sm:text-2xl text-gray-300 mb-12 max-w-4xl mx-auto leading-relaxed"
           variants={itemVariants}
-        >
+
           {description}
         </motion.p>
 
@@ -129,12 +126,12 @@ const PerformanceOptimizedHero: React.FC<HeroProps> = ({
         <motion.div
           className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-16"
           variants={itemVariants}
-        >
+
           <Link
             to={ctaLink}
             onClick={handleCTAClick}
             className="group relative inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-semibold rounded-full text-lg shadow-lg hover:shadow-cyan-500/25 transition-all duration-300 hover:scale-105"
-          >
+
             {ctaText}
             <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" />
             <div className="absolute inset-0 rounded-full bg-gradient-to-r from-cyan-400 to-blue-400 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
@@ -150,14 +147,14 @@ const PerformanceOptimizedHero: React.FC<HeroProps> = ({
         <motion.div
           className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto"
           variants={itemVariants}
-        >
+
           {features.map((feature, index) => (
             <motion.div
               key={index}
               className={`relative p-6 rounded-2xl bg-gradient-to-br ${feature.color} bg-opacity-10 border border-white/10 backdrop-blur-sm hover:scale-105 transition-transform duration-300`}
               variants={featureVariants}
               whileHover={{ y: -5 }}
-            >
+
               <div className={`inline-flex items-center justify-center w-12 h-12 rounded-xl bg-gradient-to-r ${feature.color} mb-4`}>
                 <feature.icon className="w-6 h-6 text-white" />
               </div>
@@ -173,7 +170,7 @@ const PerformanceOptimizedHero: React.FC<HeroProps> = ({
         <motion.div
           className="mt-16 grid grid-cols-1 sm:grid-cols-3 gap-8 max-w-4xl mx-auto"
           variants={itemVariants}
-        >
+
           <div className="text-center">
             <div className="text-4xl font-bold text-cyan-400 mb-2">500+</div>
             <div className="text-gray-400">Happy Clients</div>
@@ -219,6 +216,6 @@ const PerformanceOptimizedHero: React.FC<HeroProps> = ({
       </AnimatePresence>
     </section>
   );
-};
+</div></div></div></div>};
 
-export default React.memo(PerformanceOptimizedHero);
+export default React.memo(PerformanceOptimizedHero);}}}</motion.div>}

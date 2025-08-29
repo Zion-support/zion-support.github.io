@@ -1,8 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom';
-import { Brain, Cloud, Shield, Zap, Users, TrendingUp, CheckCircle, Globe, Lock, Database } from 'lucide-react'
-
-export default function Solutions() {
+import { Brain, Cloud, Shield, Zap, Users, TrendingUp, CheckCircle, Globe, Lock, Database export default function Solutions() {
   const solutions = [
     {
       icon: Brain,
@@ -51,7 +49,7 @@ export default function Solutions() {
       features: ['Performance monitoring', 'Load testing', 'Optimization strategies', 'Capacity planning'],
       href: '/services#performance',
       color: 'from-yellow-500 to-orange-600'
-    }
+
   ]
 
   return (
@@ -107,7 +105,7 @@ export default function Solutions() {
                 <Link
                   href={solution.href}
                   className={`inline-flex items-center justify-center w-full px-6 py-3 rounded-lg bg-gradient-to-r ${solution.color} text-white font-semibold hover:shadow-lg transition-all duration-200`}
-                >
+
                   Learn More
                   <Zap className="ml-2 h-4 w-4" />
                 </Link>
@@ -131,14 +129,14 @@ export default function Solutions() {
               <Link
                 href="/contact"
                 className="inline-flex items-center justify-center px-8 py-4 rounded-lg bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold hover:shadow-lg transition-all duration-200"
-              >
+
                 Get Started
                 <TrendingUp className="ml-2 h-5 w-5" />
               </Link>
               <Link
                 href="/services"
                 className="inline-flex items-center justify-center px-8 py-4 rounded-lg border-2 border-gray-300 text-gray-700 font-semibold hover:border-gray-400 transition-all duration-200"
-              >
+
                 View All Services
               </Link>
             </div>
@@ -147,4 +145,4 @@ export default function Solutions() {
       </section>
     </div>
   )
-}
+}}}

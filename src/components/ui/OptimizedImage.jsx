@@ -15,7 +15,7 @@ export function OptimizedImage({ src, alt, width, height, className, placeholder
             if (entry.isIntersecting) {
                 setIsInView(true);
                 observerRef.current?.disconnect();
-            }
+
         }, {
             rootMargin: '50px',
             threshold: 0.1
@@ -24,7 +24,7 @@ export function OptimizedImage({ src, alt, width, height, className, placeholder
         return () => {
             if (observerRef.current) {
                 observerRef.current.disconnect();
-            }
+
         };
     }, [priority]);
     const handleLoad = () => {
@@ -38,7 +38,7 @@ export function OptimizedImage({ src, alt, width, height, className, placeholder
     const getAspectRatioClass = () => {
         if (typeof aspectRatio === 'number') {
             return `aspect-[${aspectRatio}]`;
-        }
+
         switch (aspectRatio) {
             case 'square':
                 return 'aspect-square';
@@ -46,7 +46,7 @@ export function OptimizedImage({ src, alt, width, height, className, placeholder
                 return 'aspect-video';
             default:
                 return '';
-        }
+
     };
     const getObjectFitClass = () => {
         switch (objectFit) {
@@ -62,7 +62,7 @@ export function OptimizedImage({ src, alt, width, height, className, placeholder
                 return 'object-scale-down';
             default:
                 return 'object-cover';
-        }
+
     };
     // Generate responsive image sources
     const generateSrcSet = (imageSrc) => {
@@ -110,7 +110,7 @@ export function OptimizedImage({ src, alt, width, height, className, placeholder
           </div>
         </div>)}
     </div>);
-}
+
 // Avatar image component
 export function AvatarImage({ src, alt, size = 'md', className, ...props }) {
     const sizeClasses = {
@@ -120,8 +120,8 @@ export function AvatarImage({ src, alt, size = 'md', className, ...props }) {
         xl: 'w-16 h-16'
     };
     return (<OptimizedImage src={src} alt={alt} aspectRatio="square" objectFit="cover" className={cn(sizeClasses[size], 'rounded-full', className)} {...props}/>);
-}
+
 // Hero image component
 export function HeroImage({ src, alt, className, ...props }) {
     return (<OptimizedImage src={src} alt={alt} aspectRatio="video" objectFit="cover" className={cn('w-full', className)} priority {...props}/>);
-}
+</div>}}}}}}}</motion.div>}

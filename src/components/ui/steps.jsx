@@ -7,7 +7,7 @@ export const Steps = ({ children, className, currentStep = 0 }) => {
                     isActive: index === currentStep,
                     isCompleted: index < currentStep,
                 });
-            }
+
             return child;
         })}
     </div>);
@@ -19,3 +19,4 @@ export const Step = ({ children, className, isActive, isCompleted }) => {
       </div>
     </div>);
 };
+}

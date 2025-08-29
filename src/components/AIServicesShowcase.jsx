@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Brain, Cpu, Database, Globe, Zap, ArrowRight, Code, Bot, Scan } from 'lucide-react';
-import { Link } from 'react-router-dom';
+import { Brain, Cpu, Database, Globe, Zap, ArrowRight, Code, Bot, Scan import { Link } from 'react-router-dom';
 const aiServices = [
     {
         id: 'ai-chat',
@@ -93,7 +92,7 @@ const aiServices = [
         icon: Scan,
         color: 'from-emerald-500 to-teal-600',
         status: 'beta'
-    }
+
 ];
 const categories = ['All', 'Conversational AI', 'Computer Vision', 'Data Analytics', 'Infrastructure', 'Developer AI'];
 export function AIServicesShowcase() {
@@ -121,8 +120,8 @@ export function AIServicesShowcase() {
             transition: {
                 staggerChildren: 0.1,
                 delayChildren: 0.2
-            }
-        }
+
+
     };
     const itemVariants = {
         hidden: { opacity: 0, y: 20, scale: 0.95 },
@@ -133,8 +132,8 @@ export function AIServicesShowcase() {
             transition: {
                 duration: 0.5,
                 ease: "easeOut"
-            }
-        }
+
+
     };
     return (<section className="py-20 bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-blue-dark relative overflow-hidden">
       {/* Enhanced background with animated gradients */}
@@ -227,4 +226,4 @@ export function AIServicesShowcase() {
         </div>
       </div>
     </section>);
-}
+</div>}}}}}}}

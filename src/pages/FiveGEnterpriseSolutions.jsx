@@ -576,8 +576,6 @@ import {
   Shield,
   Zap,
   Brain
-} from 'lucide-react';
-
 const fiveGSolutions = [
   {
     id: 1,
@@ -674,7 +672,7 @@ const fiveGSolutions = [
     timeline: "20-32 weeks",
     category: "Analytics",
     technologies: ["5G Analytics", "Performance Insights", "Predictive", "Reporting"]
-  }
+
 ];
 
 const fiveGTechnologies = [
@@ -705,7 +703,7 @@ const fiveGTechnologies = [
     icon: Server,
     useCase: "Edge Processing",
     reliability: "High"
-  }
+
 ];
 
 const successStories = [
@@ -735,7 +733,7 @@ const successStories = [
     solution: "Built 5G network with IoT and analytics platform",
     results: "40% operational improvement, 50% cost savings, better citizen services, enhanced monitoring",
     logo: "SCS"
-  }
+
 ];
 
 const processSteps = [
@@ -766,7 +764,7 @@ const processSteps = [
     description: "Test 5G systems and optimize performance",
     icon: Gauge,
     duration: "4-8 weeks"
-  }
+
 ];
 
 const fiveGBenefits = [
@@ -793,7 +791,7 @@ const fiveGBenefits = [
     description: "Seamless integration of IoT devices and applications",
     icon: Wifi,
     examples: ["Device connectivity", "Data collection", "Real-time monitoring", "Automation"]
-  }
+
 ];
 
 export default function FiveGEnterpriseSolutions() {
@@ -822,13 +820,13 @@ export default function FiveGEnterpriseSolutions() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="text-center max-w-4xl mx-auto"
-          >
+
             <motion.div
               initial={{ opacity: 0, scale: 0.8 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.8, delay: 0.2 }}
               className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-2xl mb-8"
-            >
+
               <Network className="w-10 h-10 text-white" />
             </motion.div>
 
@@ -868,7 +866,7 @@ export default function FiveGEnterpriseSolutions() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
-          >
+
             <h2 className="text-4xl font-bold text-white mb-4">5G Enterprise Benefits</h2>
             <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
               Understanding the fundamental advantages that make 5G essential for enterprises
@@ -883,7 +881,7 @@ export default function FiveGEnterpriseSolutions() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 className="bg-zion-blue-dark/30 border border-zion-cyan/20 rounded-2xl p-8 hover:border-zion-cyan/40 transition-all duration-300"
-              >
+
                 <div className="w-16 h-16 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-2xl flex items-center justify-center mx-auto mb-6">
                   <benefit.icon className="w-8 h-8 text-white" />
                 </div>
@@ -914,7 +912,7 @@ export default function FiveGEnterpriseSolutions() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
-          >
+
             <h2 className="text-4xl font-bold text-white mb-4">5G Technologies We Support</h2>
             <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
               Comprehensive support for leading 5G enterprise technologies
@@ -929,7 +927,7 @@ export default function FiveGEnterpriseSolutions() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 className="bg-zion-blue-dark/30 border border-zion-cyan/20 rounded-2xl p-6 text-center hover:border-zion-cyan/40 transition-all duration-300"
-              >
+
                 <div className="w-16 h-16 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-2xl flex items-center justify-center mx-auto mb-6">
                   <technology.icon className="w-8 h-8 text-white" />
                 </div>
@@ -961,7 +959,7 @@ export default function FiveGEnterpriseSolutions() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
-          >
+
             <h2 className="text-4xl font-bold text-white mb-4">Our 5G Enterprise Implementation Process</h2>
             <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
               A proven methodology that ensures successful 5G enterprise implementation
@@ -976,7 +974,7 @@ export default function FiveGEnterpriseSolutions() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 className="text-center"
-              >
+
                 <div className="relative mb-6">
                   <div className="w-16 h-16 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-2xl flex items-center justify-center mx-auto">
                     <step.icon className="w-8 h-8 text-white" />
@@ -1005,7 +1003,7 @@ export default function FiveGEnterpriseSolutions() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
-          >
+
             <h2 className="text-4xl font-bold text-white mb-4">5G Enterprise Solutions</h2>
             <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
               Comprehensive solutions designed for 5G enterprise transformation
@@ -1023,7 +1021,7 @@ export default function FiveGEnterpriseSolutions() {
                     ? 'bg-gradient-to-r from-zion-cyan to-zion-purple text-white shadow-lg shadow-zion-cyan/25'
                     : 'bg-zion-blue-dark/30 text-zion-slate-light border border-zion-cyan/20 hover:border-zion-cyan/40'
                 }`}
-              >
+
                 {category}
               </button>
             ))}
@@ -1038,7 +1036,7 @@ export default function FiveGEnterpriseSolutions() {
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 className="bg-zion-blue-dark/30 border border-zion-cyan/20 rounded-2xl p-6 hover:border-zion-cyan/40 transition-all duration-300 cursor-pointer"
                 onClick={() => setSelectedSolution(solution)}
-              >
+
                 <div className="w-16 h-16 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-2xl flex items-center justify-center mb-6">
                   <solution.icon className="w-8 h-8 text-white" />
                 </div>
@@ -1060,7 +1058,7 @@ export default function FiveGEnterpriseSolutions() {
                     <span
                       key={techIndex}
                       className="px-2 py-1 bg-zion-purple/20 text-zion-purple text-xs rounded border border-zion-purple/30"
-                    >
+
                       {tech}
                     </span>
                   ))}
@@ -1094,7 +1092,7 @@ export default function FiveGEnterpriseSolutions() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
-          >
+
             <h2 className="text-4xl font-bold text-white mb-4">5G Enterprise Success Stories</h2>
             <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
               Organizations that have transformed their operations with 5G enterprise solutions
@@ -1109,7 +1107,7 @@ export default function FiveGEnterpriseSolutions() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 className="bg-zion-blue-dark/30 border border-zion-cyan/20 rounded-2xl p-6 hover:border-zion-cyan/40 transition-all duration-300"
-              >
+
                 <div className="flex items-center gap-4 mb-6">
                   <div className="w-12 h-12 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-xl flex items-center justify-center text-white font-bold text-lg">
                     {story.logo}
@@ -1155,7 +1153,7 @@ export default function FiveGEnterpriseSolutions() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="text-center max-w-4xl mx-auto"
-          >
+
             <h2 className="text-4xl font-bold text-white mb-6">Ready to Transform with 5G?</h2>
             <p className="text-xl text-zion-slate-light mb-8 leading-relaxed">
               Let's discuss how 5G enterprise solutions can revolutionize your operations,
@@ -1166,13 +1164,13 @@ export default function FiveGEnterpriseSolutions() {
               <a
                 href="/contact"
                 className="px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-purple text-white font-semibold rounded-xl hover:shadow-lg hover:shadow-zion-cyan/25 transition-all duration-300 transform hover:scale-105"
-              >
+
                 Start 5G Project
               </a>
               <a
                 href="/contact"
                 className="px-8 py-4 border border-zion-cyan text-zion-cyan font-semibold rounded-xl hover:bg-zion-cyan hover:text-white transition-all duration-300"
-              >
+
                 5G Consultation
               </a>
             </div>
@@ -1181,4 +1179,4 @@ export default function FiveGEnterpriseSolutions() {
       </section>
     </div>
   );
-}
+}}}}}}}

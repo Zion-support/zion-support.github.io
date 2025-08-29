@@ -1,7 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { RefreshCw, X, CheckCircle } from 'lucide-react';
-
-export function PWAUpdater() {
+import { RefreshCw, X, CheckCircle export function PWAUpdater() {
   const [updateAvailable, setUpdateAvailable] = useState(false);
   const [isUpdating, setIsUpdating] = useState(false);
 
@@ -15,7 +13,7 @@ export function PWAUpdater() {
 
       // Check for updates
       checkForUpdates();
-    }
+
   }, []);
 
   const checkForUpdates = async () => {
@@ -25,10 +23,10 @@ export function PWAUpdater() {
         registration.addEventListener('updatefound', () => {
           setUpdateAvailable(true);
         });
-      }
+
     } catch (error) {
-      // console.log('Service worker not available');
-    }
+      // // // console.log('Service worker not available');
+
   };
 
   const handleUpdate = async () => {
@@ -37,9 +35,9 @@ export function PWAUpdater() {
       // Reload the page to apply updates
       window.location.reload();
     } catch (error) {
-      // console.error('Update failed:', error);
+      // // // console.error('Update failed:', error);
       setIsUpdating(false);
-    }
+
   };
 
   const dismissUpdate = () => {
@@ -67,7 +65,7 @@ export function PWAUpdater() {
                 onClick={handleUpdate}
                 disabled={isUpdating}
                 className="flex items-center gap-2 px-3 py-2 bg-gradient-to-r from-cyan-400 to-blue-500 text-white text-xs font-medium rounded-md hover:from-cyan-500 hover:to-blue-600 transition-all duration-200 disabled:opacity-50"
-              >
+
                 {isUpdating ? (
                   <>
                     <RefreshCw className="w-3 h-3 animate-spin" />
@@ -83,7 +81,7 @@ export function PWAUpdater() {
               <button
                 onClick={dismissUpdate}
                 className="px-3 py-2 text-gray-400 text-xs font-medium hover:text-white transition-colors duration-200"
-              >
+
                 Later
               </button>
             </div>
@@ -91,11 +89,11 @@ export function PWAUpdater() {
           <button
             onClick={dismissUpdate}
             className="flex-shrink-0 text-gray-400 hover:text-white transition-colors duration-200"
-          >
+
             <X className="w-4 h-4" />
           </button>
         </div>
       </div>
     </div>
   );
-}
+}}}}}}

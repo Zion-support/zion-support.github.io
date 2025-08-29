@@ -33,7 +33,7 @@ const Mobile = () => {
                 "Push notifications",
                 "App-like experience"
             ]
-        }
+
     ];
     const mobileServices = [
         {
@@ -59,7 +59,7 @@ const Mobile = () => {
             description: "Responsive web applications optimized for mobile devices",
             icon: "🌐",
             features: ["Mobile-first design", "Progressive Web Apps", "Responsive layouts", "Touch optimization"]
-        }
+
     ];
     const mobileBenefits = [
         {
@@ -81,7 +81,7 @@ const Mobile = () => {
             title: "Competitive Advantage",
             description: "Stay ahead with modern mobile solutions and user expectations",
             icon: "🏆"
-        }
+
     ];
     const mobileStats = [
         {
@@ -103,7 +103,7 @@ const Mobile = () => {
             stat: "40%",
             label: "Mobile Conversion",
             description: "Higher conversion rates on mobile-optimized sites"
-        }
+
     ];
     return (<>
       <SEO title="Mobile-First Solutions - Zion Tech Group" description="Experience mobile-first design and development with Zion Tech Group. From responsive websites to native mobile apps, we ensure optimal mobile experiences." canonical="/mobile"/>
@@ -258,3 +258,4 @@ const Mobile = () => {
     </>);
 };
 export default Mobile;
+}}}}

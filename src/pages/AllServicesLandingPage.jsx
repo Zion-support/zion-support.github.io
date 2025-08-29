@@ -3,8 +3,7 @@ import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
-import { Star, Zap, TrendingUp, CheckCircle, Phone, Mail, Globe, Shield, Users, ArrowUpRight, Brain, Cloud, Database, Lock, Code, BarChart3, MessageSquare, FileText, ShoppingCart, Settings } from 'lucide-react';
-import { EXPANDED_SERVICES, SERVICE_CATEGORIES } from '@/data/expandedServices';
+import { Star, Zap, TrendingUp, CheckCircle, Phone, Mail, Globe, Shield, Users, ArrowUpRight, Brain, Cloud, Database, Lock, Code, BarChart3, MessageSquare, FileText, ShoppingCart, Settings import { EXPANDED_SERVICES, SERVICE_CATEGORIES } from '@/data/expandedServices';
 import { TrustedBySection } from '@/components/TrustedBySection';
 import { SEO } from '@/components/SEO';
 export default function AllServicesLandingPage() {
@@ -15,7 +14,7 @@ export default function AllServicesLandingPage() {
             case 'IT Services': return '💻';
             case 'Digital Services': return '🚀';
             default: return '⚡';
-        }
+
     };
     const getCategoryIconComponent = (category) => {
         switch (category) {
@@ -24,7 +23,7 @@ export default function AllServicesLandingPage() {
             case 'IT Services': return <Code className="h-6 w-6"/>;
             case 'Digital Services': return <ArrowUpRight className="h-6 w-6"/>;
             default: return <Settings className="h-6 w-6"/>;
-        }
+
     };
     const getPricingModelColor = (model) => {
         switch (model) {
@@ -33,7 +32,7 @@ export default function AllServicesLandingPage() {
             case 'one-time': return 'bg-green-100 text-green-800';
             case 'usage-based': return 'bg-orange-100 text-orange-800';
             default: return 'bg-gray-100 text-gray-800';
-        }
+
     };
     const getServiceIcon = (subcategory) => {
         switch (subcategory) {
@@ -49,7 +48,7 @@ export default function AllServicesLandingPage() {
             case 'Transformation': return <ArrowUpRight className="h-5 w-5"/>;
             case 'E-commerce': return <ShoppingCart className="h-5 w-5"/>;
             default: return <Settings className="h-5 w-5"/>;
-        }
+
     };
     return (<div className="min-h-screen bg-background">
       <SEO title="Complete Tech Solutions - AI, Micro SAAS, IT & Digital Services | Zion Tech Group" description="Discover our comprehensive ecosystem of AI services, micro SAAS solutions, IT infrastructure, and digital transformation services. Expert solutions for modern businesses." keywords="AI services, micro SAAS, IT services, digital transformation, cloud migration, cybersecurity, DevOps, business automation, Zion Tech Group" canonical="https://ziontechgroup.com/services"/>
@@ -320,4 +319,4 @@ export default function AllServicesLandingPage() {
 
       <TrustedBySection />
     </div>);
-}
+</Card></Card></Card></Card>}}}}}}

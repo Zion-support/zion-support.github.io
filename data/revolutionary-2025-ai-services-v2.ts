@@ -38,7 +38,7 @@ export interface RevolutionaryAI2025ServiceV2 {
   customers: number;
   rating: number;
   reviews: number;
-}
+
 export const revolutionaryAI2025ServicesV2: RevolutionaryAI2025ServiceV2[] = [
   // AI Consciousness & Advanced Intelligence
   {
@@ -348,5 +348,5 @@ export const revolutionaryAI2025ServicesV2: RevolutionaryAI2025ServiceV2[] = [
     customers: 65,
     rating: 4.6,
     reviews: 38
-  }
-];
+
+];}}

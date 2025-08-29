@@ -1,6 +1,4 @@
-import { Activity, Heart, Shield, Users, Check, ArrowRight, ExternalLink, Phone, Mail, Zap, Brain, Clock, Database } from 'lucide-react';
-
-export default function AIHealthcareAnalytics() {
+import { Activity, Heart, Shield, Users, Check, ArrowRight, ExternalLink, Phone, Mail, Zap, Brain, Clock, Database export default function AIHealthcareAnalytics() {
   const features = [
     'AI-powered patient outcome prediction',
     'Real-time health monitoring and alerts',
@@ -67,7 +65,7 @@ export default function AIHealthcareAnalytics() {
         'White-label solutions',
         'Multi-facility support'
       ]
-    }
+
   ];
 
   const technicalSpecs = {
@@ -90,7 +88,7 @@ export default function AIHealthcareAnalytics() {
     {
       specialty: 'Neurology',
       solutions: ['Brain imaging analysis', 'Cognitive assessment', 'Disease progression tracking', 'Treatment response monitoring']
-    }
+
   ];
 
   return (
@@ -256,4 +254,4 @@ export default function AIHealthcareAnalytics() {
       </section>
     </div>
   );
-}
+}}}}

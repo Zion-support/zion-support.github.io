@@ -475,7 +475,7 @@ export const emergingTechServices2025: MicroSaasService[] = [
     customers: 9,
     rating: 4.9,
     reviews: 7
-  }
+
 ];
 export const getPopularEmergingTechServices = () => {
   return emergingTechServices2025.filter(service => service.popular);
@@ -488,4 +488,4 @@ export const getEmergingTechServicesByPriceRange = (minPrice: number, maxPrice: 
     const price = parseInt(service.price.replace(/[^0-9]/g, '')) || 0;
     return price >= minPrice && price <= maxPrice;
   });
-};
+};}

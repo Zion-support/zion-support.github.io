@@ -39,7 +39,6 @@ export interface Zion2026AdvancedAIAutomationService {
   customers: number;
   rating: number;
   reviews: number;
-}
 
 const contact = {
   mobile: '+1 302 464 0950',
@@ -431,7 +430,7 @@ export const zion2026AdvancedAIAutomationServices: Zion2026AdvancedAIAutomationS
     customers: 1400,
     rating: 4.9,
     reviews: 720
-  }
+
 ];
 
-export default zion2026AdvancedAIAutomationServices;
+export default zion2026AdvancedAIAutomationServices;}}

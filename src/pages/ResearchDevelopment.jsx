@@ -21,7 +21,7 @@ const ResearchDevelopment = () => {
             title: "Cloud & Edge Computing",
             description: "Innovating distributed computing architectures and edge intelligence solutions.",
             focus: ["Edge AI", "Distributed Systems", "5G Networks", "IoT Integration"]
-        }
+
     ];
     return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white">
       <section className="py-20 px-4 sm:px-6 lg:px-8">
@@ -72,3 +72,4 @@ const ResearchDevelopment = () => {
     </div>);
 };
 export default ResearchDevelopment;
+}

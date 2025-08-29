@@ -31,8 +31,8 @@ export const InteractiveHero = ({ title, subtitle, description, primaryAction, s
             transition: {
                 duration: 0.8,
                 staggerChildren: 0.2
-            }
-        }
+
+
     };
     const itemVariants = {
         hidden: { opacity: 0, y: 30 },
@@ -42,8 +42,8 @@ export const InteractiveHero = ({ title, subtitle, description, primaryAction, s
             transition: {
                 duration: 0.6,
                 ease: "easeOut"
-            }
-        }
+
+
     };
     const floatingVariants = {
         animate: {
@@ -52,8 +52,8 @@ export const InteractiveHero = ({ title, subtitle, description, primaryAction, s
                 duration: 3,
                 repeat: Infinity,
                 ease: "easeInOut"
-            }
-        }
+
+
     };
     return (<section className="relative min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 overflow-hidden">
       {/* Animated Background */}
@@ -188,5 +188,6 @@ export const InteractiveHero = ({ title, subtitle, description, primaryAction, s
             damping: 30
         }}/>
     </section>);
-};
+</div>};
 export default InteractiveHero;
+}}}}}</motion.div></motion.div></motion.div></motion.div></motion.div></motion.div></motion.div></motion.div>}

@@ -41,7 +41,7 @@ export interface InnovativeMicroSaasSolution {
   patentStatus: 'Patented' | 'Patent Pending' | 'Trade Secret' | 'Open Source';
   aiCapabilities: string[];
   marketDisruption: string;
-}
+
 const contact = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
@@ -506,7 +506,7 @@ export const innovativeMicroSaasSolutions2025: InnovativeMicroSaasSolution[] = [
     patentStatus: 'Trade Secret',
     aiCapabilities: ['AI Personalization', 'Ad Optimization', 'Journey Automation', 'Conversion Optimization'],
     marketDisruption: 'Revolutionizes marketing with AI automation'
-  }
+
 ];
 
-export default innovativeMicroSaasSolutions2025;
+export default innovativeMicroSaasSolutions2025;}}

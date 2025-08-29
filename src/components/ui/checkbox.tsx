@@ -4,7 +4,6 @@ interface CheckboxProps {
   label?: string;
   disabled?: boolean;
   className?: string;
-}
 
 export function Checkbox({ checked, onChange, label, disabled = false, className = '' }: CheckboxProps) {
   return (
@@ -19,4 +18,4 @@ export function Checkbox({ checked, onChange, label, disabled = false, className
       {label && <span className="text-sm text-gray-700">{label}</span>}
     </label>
   );
-}
+}}

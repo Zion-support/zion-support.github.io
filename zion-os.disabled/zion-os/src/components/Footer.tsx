@@ -77,7 +77,7 @@ export default function Footer() {
                   rel="noopener noreferrer"
                   className="text-gray-400 hover:text-white transition-colors duration-200"
                   aria-label={social.name}
-                >
+
                   {social.icon}
                 </a>
               ))}
@@ -93,7 +93,7 @@ export default function Footer() {
                     <Link
                       href={link.href}
                       className="text-gray-400 hover:text-white transition-colors duration-200 text-sm"
-                    >
+
                       {link.name}
                     </Link>
                   </li>

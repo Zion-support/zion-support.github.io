@@ -1,7 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { BarChart3, PieChart, TrendingUp, Globe, ArrowRight, CheckCircle, Rocket, Shield, Target, DollarSign, Brain } from 'lucide-react';
-import AdvancedServicePortfolioDashboard from '../components/AdvancedServicePortfolioDashboard';
+import { BarChart3, PieChart, TrendingUp, Globe, ArrowRight, CheckCircle, Rocket, Shield, Target, DollarSign, Brain import AdvancedServicePortfolioDashboard from '../components/AdvancedServicePortfolioDashboard';
 import { Button } from '../components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '../components/ui/card';
 const ServicePortfolioDashboard = () => {
@@ -25,7 +24,7 @@ const ServicePortfolioDashboard = () => {
             icon: <Target className="w-6 h-6 text-zion-orange"/>,
             title: 'Strategic Insights',
             description: 'Data-driven recommendations for portfolio optimization and growth'
-        }
+
     ];
     const benefits = [
         'Comprehensive view of all service offerings and their performance',
@@ -59,7 +58,7 @@ const ServicePortfolioDashboard = () => {
             value: '95%+',
             description: 'Technology market segments',
             icon: <Globe className="w-8 h-8 text-zion-orange"/>
-        }
+
     ];
     return (<div className="min-h-screen bg-zion-blue-dark">
       {/* Hero Section */}
@@ -229,5 +228,6 @@ const ServicePortfolioDashboard = () => {
         </div>
       </section>
     </div>);
-};
+</Card></Card></Card></Card></Card></Card>};
 export default ServicePortfolioDashboard;
+}}}

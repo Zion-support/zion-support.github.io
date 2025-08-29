@@ -1,6 +1,4 @@
-import { ShoppingCart, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, Store, BarChart3 } from 'lucide-react';
-
-export default function AIRetail() {
+import { ShoppingCart, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, Store, BarChart3 export default function AIRetail() {
   const features = [
     'AI-powered customer behavior analysis and personalization',
     'Intelligent inventory management and demand forecasting',
@@ -171,4 +169,4 @@ export default function AIRetail() {
       </section>
     </div>
   );
-}
+}}

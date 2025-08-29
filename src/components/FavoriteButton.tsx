@@ -1,11 +1,8 @@
 import React, { useState } from 'react';
-import { Heart } from 'lucide-react';
-
-interface FavoriteButtonProps {
+import { Heart interface FavoriteButtonProps {
   itemId: string;
   itemType: 'product' | 'talent' | 'equipment' | 'service';
   className?: string;
-}
 
 export function FavoriteButton({ itemId, itemType, className = '' }: FavoriteButtonProps) {
   const [isFavorited, setIsFavorited] = useState(false);
@@ -17,11 +14,11 @@ export function FavoriteButton({ itemId, itemType, className = '' }: FavoriteBut
     // Here you would typically make an API call to save/remove from favorites
     if (isFavorited) {
       // Remove from favorites
-      // console.log(`Removed ${itemType} ${itemId} from favorites`);
+      // // // console.log(`Removed ${itemType} ${itemId} from favorites`);
     } else {
       // Add to favorites
-      // console.log(`Added ${itemType} ${itemId} to favorites`);
-    }
+      // // // console.log(`Added ${itemType} ${itemId} to favorites`);
+
   };
 
   return (
@@ -33,7 +30,7 @@ export function FavoriteButton({ itemId, itemType, className = '' }: FavoriteBut
           : 'bg-zion-blue-dark/80 hover:bg-zion-cyan text-white'
       } ${className}`}
       aria-label={isFavorited ? 'Remove from favorites' : 'Add to favorites'}
-    >
+
       <Heart
         className={`w-4 h-4 transition-all duration-300 ${
           isFavorited ? 'fill-current' : ''
@@ -41,4 +38,4 @@ export function FavoriteButton({ itemId, itemType, className = '' }: FavoriteBut
       />
     </button>
   );
-}
+}}}}

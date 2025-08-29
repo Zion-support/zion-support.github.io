@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { Calendar, Clock, Users, Video, MessageCircle, Phone, Mail, MapPin, CheckCircle, ArrowRight, Star, Zap, Brain, Cloud, Shield, Rocket } from 'lucide-react';
-import { SEO } from '../components/SEO';
+import { Calendar, Clock, Users, Video, MessageCircle, Phone, Mail, MapPin, CheckCircle, ArrowRight, Star, Zap, Brain, Cloud, Shield, Rocket import { SEO } from '../components/SEO';
 
 interface DemoFormData {
   firstName: string;
@@ -14,7 +13,6 @@ interface DemoFormData {
   attendees: string;
   services: string[];
   message: string;
-}
 
 const ScheduleDemo: React.FC = () => {
   const [formData, setFormData] = useState<DemoFormData>({
@@ -67,10 +65,10 @@ const ScheduleDemo: React.FC = () => {
       await new Promise(resolve => setTimeout(resolve, 2000));
       setIsSubmitted(true);
     } catch (error) {
-      // console.error('Error submitting form:', error);
+      // // // console.error('Error submitting form:', error);
     } finally {
       setIsSubmitting(false);
-    }
+
   };
 
   if (isSubmitted) {
@@ -84,7 +82,7 @@ const ScheduleDemo: React.FC = () => {
           initial={{ opacity: 0, scale: 0.9 }}
           animate={{ opacity: 1, scale: 1 }}
           className="max-w-2xl mx-auto text-center p-8"
-        >
+
           <div className="w-20 h-20 bg-gradient-to-br from-green-500 to-emerald-500 rounded-full flex items-center justify-center mx-auto mb-6">
             <CheckCircle className="w-10 h-10 text-white" />
           </div>
@@ -119,20 +117,19 @@ const ScheduleDemo: React.FC = () => {
             <a
               href="/"
               className="px-6 py-3 bg-slate-700 hover:bg-slate-600 text-white rounded-lg transition-colors"
-            >
+
               Return to Home
             </a>
             <a
               href="/contact"
               className="px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white rounded-lg transition-colors"
-            >
+
               Contact Us
             </a>
           </div>
         </motion.div>
       </div>
     );
-  }
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
@@ -149,7 +146,7 @@ const ScheduleDemo: React.FC = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-          >
+
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
               Schedule Your
               <span className="bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent">
@@ -188,7 +185,7 @@ const ScheduleDemo: React.FC = () => {
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.6, delay: 0.2 }}
                 className="bg-slate-800/50 backdrop-blur-xl rounded-2xl border border-slate-700/50 p-8"
-              >
+
                 <h2 className="text-2xl font-bold text-white mb-6">Book Your Demo</h2>
 
                 <form onSubmit={handleSubmit} className="space-y-6">
@@ -288,7 +285,7 @@ const ScheduleDemo: React.FC = () => {
                         value={formData.preferredTime}
                         onChange={(e) => setFormData(prev => ({ ...prev, preferredTime: e.target.value }))}
                         className="w-full px-4 py-3 bg-slate-700/50 border border-slate-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
-                      >
+
                         <option value="">Select time</option>
                         {timeSlots.map(time => (
                           <option key={time} value={time}>{time}</option>
@@ -305,7 +302,7 @@ const ScheduleDemo: React.FC = () => {
                       value={formData.attendees}
                       onChange={(e) => setFormData(prev => ({ ...prev, attendees: e.target.value }))}
                       className="w-full px-4 py-3 bg-slate-700/50 border border-slate-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
-                    >
+
                       <option value="1-5">1-5 people</option>
                       <option value="6-10">6-10 people</option>
                       <option value="11-20">11-20 people</option>
@@ -353,7 +350,7 @@ const ScheduleDemo: React.FC = () => {
                     type="submit"
                     disabled={isSubmitting}
                     className="w-full px-6 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-semibold rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-cyan-500/25 disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none"
-                  >
+
                     {isSubmitting ? (
                       <div className="flex items-center justify-center gap-2">
                         <div className="w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin"></div>
@@ -378,7 +375,7 @@ const ScheduleDemo: React.FC = () => {
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.6, delay: 0.4 }}
                 className="space-y-6"
-              >
+
                 {/* What to Expect */}
                 <div className="bg-slate-800/50 backdrop-blur-xl rounded-2xl border border-slate-700/50 p-6">
                   <h3 className="text-lg font-semibold text-white mb-4 flex items-center gap-2">
@@ -415,14 +412,14 @@ const ScheduleDemo: React.FC = () => {
                     <a
                       href="tel:+13024640950"
                       className="flex items-center gap-2 text-gray-300 hover:text-cyan-400 transition-colors"
-                    >
+
                       <Phone className="w-4 h-4" />
                       +1 302 464 0950
                     </a>
                     <a
                       href="mailto:kleber@ziontechgroup.com"
                       className="flex items-center gap-2 text-gray-300 hover:text-cyan-400 transition-colors"
-                    >
+
                       <Mail className="w-4 h-4" />
                       kleber@ziontechgroup.com
                     </a>
@@ -456,4 +453,4 @@ const ScheduleDemo: React.FC = () => {
   );
 };
 
-export default ScheduleDemo;
+export default ScheduleDemo;}}}}

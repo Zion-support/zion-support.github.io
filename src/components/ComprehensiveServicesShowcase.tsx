@@ -26,7 +26,6 @@ import {
   Mail,
   ExternalLink,
   Search
-} from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { EXPANDED_INNOVATIVE_SERVICES_2025 } from '../data/expandedInnovativeServices2025';
 import { EMERGING_TECH_SERVICES_2025 } from '../data/emergingTechServices2025';
@@ -61,7 +60,7 @@ interface Service {
     uptime: string;
     security: string[];
   };
-}
+
 const ComprehensiveServicesShowcase: React.FC = () => {
   const [selectedCategory, setSelectedCategory] = useState<string>('all');
   const [selectedInnovationLevel, setSelectedInnovationLevel] = useState<string>('all');
@@ -131,7 +130,7 @@ const ComprehensiveServicesShowcase: React.FC = () => {
         return <Rocket className="h-6 w-6" />;
       default:
         return <Star className="h-6 w-6" />;
-    }
+
   };
   const getInnovationLevelColor = (level: string) => {
     switch (level) {
@@ -143,7 +142,7 @@ const ComprehensiveServicesShowcase: React.FC = () => {
         return 'bg-gradient-to-r from-green-600 to-emerald-600';
       default:
         return 'bg-gradient-to-r from-gray-600 to-slate-600';
-    }
+
   };
   return (
     <div className="min-h-screen bg-gradient-to-br from-zinc-50 to-zinc-100">
@@ -162,14 +161,14 @@ const ComprehensiveServicesShowcase: React.FC = () => {
               <Link
                 to="/contact"
                 className="inline-flex items-center px-8 py-3 bg-zion-cyan text-white font-semibold rounded-lg hover:bg-zion-cyan-light transition-colors"
-              >
+
                 Get Started
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Link>
               <Link
                 to="/request-quote"
                 className="inline-flex items-center px-8 py-3 border-2 border-white text-white font-semibold rounded-lg hover:bg-white hover:text-zion-blue-dark transition-colors"
-              >
+
                 Request Quote
               </Link>
             </div>
@@ -195,7 +194,7 @@ const ComprehensiveServicesShowcase: React.FC = () => {
                 target="_blank"
                 rel="noopener noreferrer"
                 className="font-medium text-zion-blue hover:text-zion-cyan transition-colors"
-              >
+
                 ziontechgroup.com
               </a>
             </div>
@@ -230,7 +229,7 @@ const ComprehensiveServicesShowcase: React.FC = () => {
                 value={selectedCategory}
                 onChange={(e) => setSelectedCategory(e.target.value)}
                 className="px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-zion-cyan focus:border-transparent"
-              >
+
                 {categories.map(category => (
                   <option key={category} value={category}>
                     {category === 'all' ? 'All Categories' : category}
@@ -245,7 +244,7 @@ const ComprehensiveServicesShowcase: React.FC = () => {
                 value={selectedInnovationLevel}
                 onChange={(e) => setSelectedInnovationLevel(e.target.value)}
                 className="px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-zion-cyan focus:border-transparent"
-              >
+
                 {innovationLevels.map(level => (
                   <option key={level} value={level}>
                     {level === 'all' ? 'All Levels' : level}
@@ -267,7 +266,7 @@ const ComprehensiveServicesShowcase: React.FC = () => {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden border border-gray-100"
-              >
+
                 {/* Service Header */}
                 <div className="p-6 border-b border-gray-100">
                   <div className="flex items-start justify-between mb-4">
@@ -355,7 +354,7 @@ const ComprehensiveServicesShowcase: React.FC = () => {
                         <span
                           key={idx}
                           className="px-2 py-1 bg-zion-cyan/10 text-zion-cyan text-xs rounded-full"
-                        >
+
                           {tag}
                         </span>
                       ))}
@@ -366,13 +365,13 @@ const ComprehensiveServicesShowcase: React.FC = () => {
                     <Link
                       to={`/contact?service=${service.id}`}
                       className="flex-1 bg-zion-cyan text-white text-center py-2 px-4 rounded-lg hover:bg-zion-cyan-light transition-colors font-medium"
-                    >
+
                       Get Started
                     </Link>
                     <Link
                       to={`/services/${service.id}`}
                       className="flex-1 border border-zion-cyan text-zion-cyan text-center py-2 px-4 rounded-lg hover:bg-zion-cyan hover:text-white transition-colors font-medium"
-                    >
+
                       Learn More
                     </Link>
                   </div>
@@ -390,7 +389,7 @@ const ComprehensiveServicesShowcase: React.FC = () => {
                   setSearchTerm('');
                 }}
                 className="text-zion-cyan hover:text-zion-cyan-light font-medium"
-              >
+
                 Clear all filters
               </button>
             </div>
@@ -411,14 +410,14 @@ const ComprehensiveServicesShowcase: React.FC = () => {
             <Link
               to="/contact"
               className="inline-flex items-center px-8 py-3 bg-white text-zion-blue font-semibold rounded-lg hover:bg-gray-100 transition-colors"
-            >
+
               Contact Us
               <ArrowRight className="ml-2 h-5 w-5" />
             </Link>
             <a
               href="tel:+13024640950"
               className="inline-flex items-center px-8 py-3 border-2 border-white text-white font-semibold rounded-lg hover:bg-white hover:text-zion-blue transition-colors"
-            >
+
               <Phone className="mr-2 h-5 w-5" />
               Call Now
             </a>
@@ -429,3 +428,4 @@ const ComprehensiveServicesShowcase: React.FC = () => {
   );
 };
 export default ComprehensiveServicesShowcase;
+}}}}

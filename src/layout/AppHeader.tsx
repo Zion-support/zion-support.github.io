@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { Menu, X, Search, User, Bell, ChevronDown, Zap, Brain, Shield, Cloud, Rocket, Globe, Cpu, Lock, Heart, Users, ShoppingCart, BookOpen, MessageCircle, HelpCircle, DollarSign, Gauge, Workflow, Atom, Star, Target, TrendingUp, Award, Code, Truck, Building, BarChart3, PenTool, Eye, Server, Smartphone, Database, Network, Clock, ArrowRight, PanelLeft, Sparkles, Phone, Mail, MapPin, Satellite, FileText } from 'lucide-react';
-import { motion, AnimatePresence } from 'framer-motion';
+import { Menu, X, Search, User, Bell, ChevronDown, Zap, Brain, Shield, Cloud, Rocket, Globe, Cpu, Lock, Heart, Users, ShoppingCart, BookOpen, MessageCircle, HelpCircle, DollarSign, Gauge, Workflow, Atom, Star, Target, TrendingUp, Award, Code, Truck, Building, BarChart3, PenTool, Eye, Server, Smartphone, Database, Network, Clock, ArrowRight, PanelLeft, Sparkles, Phone, Mail, MapPin, Satellite, FileText import { motion, AnimatePresence } from 'framer-motion';
 import { ThemeToggle } from '../components/ThemeToggle';
 import { ZionLoadingSpinner } from '../components/ui/EnhancedLoadingSpinner';
 import { Sidebar } from '../components/Sidebar';
@@ -32,8 +31,8 @@ export function AppHeader() {
         window.location.href = `/search?q=${encodeURIComponent(searchQuery.trim())}`;
       } finally {
         setIsSearching(false);
-      }
-    }
+
+
   };
 
   // Main navigation items
@@ -118,7 +117,7 @@ export function AppHeader() {
         { name: 'Affiliate Tracking', href: '/services/affiliate-tracking', description: 'Marketing performance tracking' },
         { name: 'Mobile Survey', href: '/services/mobile-survey', description: 'Mobile-first survey platform' },
       ]
-    }
+
   ];
 
   // Quick links for easy access
@@ -209,7 +208,7 @@ export function AppHeader() {
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.5 }}
-          >
+
             <Link to="/" className="flex items-center space-x-2">
               <div className="w-8 h-8 lg:w-10 lg:h-10 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-lg flex items-center justify-center">
                 <Zap className="w-5 h-5 lg:w-6 lg:h-6 text-white" />
@@ -228,7 +227,7 @@ export function AppHeader() {
                 key={item.name}
                 to={item.href}
                 className="text-gray-300 hover:text-cyan-400 transition-colors duration-200 font-medium"
-              >
+
                 {item.name}
               </Link>
             ))}
@@ -238,7 +237,7 @@ export function AppHeader() {
               <button
                 onClick={() => setServicesDropdownOpen(!servicesDropdownOpen)}
                 className="flex items-center space-x-1 text-gray-300 hover:text-cyan-400 transition-colors duration-200 font-medium"
-              >
+
                 <span>Services</span>
                 <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${servicesDropdownOpen ? 'rotate-180' : ''}`} />
               </button>
@@ -251,7 +250,7 @@ export function AppHeader() {
                     exit={{ opacity: 0, y: -10 }}
                     transition={{ duration: 0.2 }}
                     className="absolute top-full left-0 mt-2 w-screen max-w-6xl bg-zion-slate-dark/95 backdrop-blur-md border border-cyan-400/20 rounded-xl shadow-2xl shadow-cyan-500/20 p-6"
-                  >
+
                     <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-6">
                       {servicesCategories.map((category) => (
                         <div key={category.title} className="space-y-3">
@@ -265,7 +264,7 @@ export function AppHeader() {
                                 key={service.name}
                                 to={service.href}
                                 className="block p-3 rounded-lg hover:bg-cyan-400/10 transition-colors duration-200 group"
-                              >
+
                                 <div className="font-medium text-gray-200 group-hover:text-cyan-400 transition-colors duration-200">
                                   {service.name}
                                 </div>
@@ -288,7 +287,7 @@ export function AppHeader() {
                             key={link.name}
                             to={link.href}
                             className="flex items-center space-x-2 p-3 rounded-lg hover:bg-cyan-400/10 transition-colors duration-200 group"
-                          >
+
                             <link.icon className="w-4 h-4 text-cyan-400" />
                             <span className="text-gray-300 group-hover:text-cyan-400 transition-colors duration-200">
                               {link.name}
@@ -331,7 +330,7 @@ export function AppHeader() {
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
               className="lg:hidden p-2 rounded-lg text-gray-300 hover:text-cyan-400 hover:bg-cyan-400/10 transition-colors duration-200"
-            >
+
               {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
             </button>
           </div>
@@ -346,7 +345,7 @@ export function AppHeader() {
               exit={{ opacity: 0, height: 0 }}
               transition={{ duration: 0.3 }}
               className="lg:hidden border-t border-cyan-400/20"
-            >
+
               <div className="py-4 space-y-4">
                 {/* Mobile Search */}
                 <form onSubmit={handleSearch} className="px-4">
@@ -370,7 +369,7 @@ export function AppHeader() {
                       to={item.href}
                       onClick={() => setMobileMenuOpen(false)}
                       className="block py-2 text-gray-300 hover:text-cyan-400 transition-colors duration-200"
-                    >
+
                       {item.name}
                     </Link>
                   ))}
@@ -389,7 +388,7 @@ export function AppHeader() {
                             to={service.href}
                             onClick={() => setMobileMenuOpen(false)}
                             className="block py-1 pl-4 text-sm text-gray-300 hover:text-cyan-400 transition-colors duration-200"
-                          >
+
                             {service.name}
                           </Link>
                         ))}
@@ -408,7 +407,7 @@ export function AppHeader() {
                         to={link.href}
                         onClick={() => setMobileMenuOpen(false)}
                         className="flex items-center space-x-2 py-2 px-3 rounded-lg hover:bg-cyan-400/10 transition-colors duration-200"
-                      >
+
                         <link.icon className="w-4 h-4 text-cyan-400" />
                         <span className="text-sm text-gray-300">{link.name}</span>
                       </Link>
@@ -425,4 +424,4 @@ export function AppHeader() {
       <Sidebar isOpen={sidebarOpen} onClose={() => setSidebarOpen(false)} />
     </header>
   );
-}
+}}}}</motion.div></motion.div></motion.div>}

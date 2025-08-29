@@ -21,14 +21,14 @@ export const LinkMonitor = ({ onLinkIssue, autoFix = false, showStatus = true })
                     results.push(result);
                     if (autoFix) {
                         await fixBrokenLink(href, result);
-                    }
-                }
+
+
                 // Update progress
                 setScanProgress(((i + 1) / links.length) * 100);
                 // Small delay to prevent overwhelming the browser
                 await new Promise(resolve => setTimeout(resolve, 10));
-            }
-        }
+
+
         setBrokenLinks(results);
         setLastScanTime(new Date());
         setIsScanning(false);
@@ -36,7 +36,7 @@ export const LinkMonitor = ({ onLinkIssue, autoFix = false, showStatus = true })
         results.forEach(result => {
             if (onLinkIssue) {
                 onLinkIssue(result);
-            }
+
         });
     };
     // Fix a broken link
@@ -58,13 +58,13 @@ export const LinkMonitor = ({ onLinkIssue, autoFix = false, showStatus = true })
                 reason: 'Automatically fixed broken internal link'
             };
             setFixedLinks(prev => [...prev, fix]);
-        }
+
     };
     // Fix all broken links
     const fixAllBrokenLinks = async () => {
         for (const brokenLink of brokenLinks) {
             await fixBrokenLink(brokenLink.url, brokenLink);
-        }
+
         setBrokenLinks([]);
     };
     // Generate redirect rules for server configuration
@@ -98,7 +98,7 @@ export const LinkMonitor = ({ onLinkIssue, autoFix = false, showStatus = true })
     useEffect(() => {
         if (autoFix) {
             scanPageLinks();
-        }
+
     }, [autoFix]);
     return (<div className="link-monitor bg-white dark:bg-gray-800 rounded-lg shadow-lg p-6 max-w-4xl mx-auto">
       <div className="flex items-center justify-between mb-6">
@@ -219,3 +219,4 @@ export const LinkMonitor = ({ onLinkIssue, autoFix = false, showStatus = true })
     </div>);
 };
 export default LinkMonitor;
+}}}}}}}}

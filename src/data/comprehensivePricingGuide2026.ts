@@ -12,7 +12,6 @@ export interface PricingTier {
   roi: string;
   setupCost: number;
   contractLength: string;
-}
 
 export interface ServicePricing {
   serviceId: string;
@@ -37,7 +36,6 @@ export interface ServicePricing {
     support: string[];
     training: string[];
   };
-}
 
 export const COMPREHENSIVE_PRICING_GUIDE_2026: ServicePricing[] = [
   {
@@ -113,7 +111,7 @@ export const COMPREHENSIVE_PRICING_GUIDE_2026: ServicePricing[] = [
         roi: "400-800%",
         setupCost: 25000,
         contractLength: "24 months"
-      }
+
     ],
     marketComparison: {
       competitors: ["UiPath", "Automation Anywhere", "Blue Prism"],
@@ -151,7 +149,7 @@ export const COMPREHENSIVE_PRICING_GUIDE_2026: ServicePricing[] = [
         "Advanced feature workshops",
         "Ongoing best practices"
       ]
-    }
+
   },
 
   {
@@ -224,7 +222,7 @@ export const COMPREHENSIVE_PRICING_GUIDE_2026: ServicePricing[] = [
         roi: "600-1000%",
         setupCost: 50000,
         contractLength: "36 months"
-      }
+
     ],
     marketComparison: {
       competitors: ["IBM Quantum", "Google Quantum AI", "D-Wave Systems"],
@@ -262,7 +260,7 @@ export const COMPREHENSIVE_PRICING_GUIDE_2026: ServicePricing[] = [
         "Best practices",
         "Advanced applications"
       ]
-    }
+
   },
 
   {
@@ -335,7 +333,7 @@ export const COMPREHENSIVE_PRICING_GUIDE_2026: ServicePricing[] = [
         roi: "400-600%",
         setupCost: 15000,
         contractLength: "24 months"
-      }
+
     ],
     marketComparison: {
       competitors: ["IBM Food Trust", "VeChain", "OriginTrail"],
@@ -373,7 +371,7 @@ export const COMPREHENSIVE_PRICING_GUIDE_2026: ServicePricing[] = [
         "IoT device management",
         "Compliance reporting"
       ]
-    }
+
   },
 
   {
@@ -446,7 +444,7 @@ export const COMPREHENSIVE_PRICING_GUIDE_2026: ServicePricing[] = [
         roi: "400-800%",
         setupCost: 20000,
         contractLength: "24 months"
-      }
+
     ],
     marketComparison: {
       competitors: ["CrowdStrike", "SentinelOne", "Darktrace"],
@@ -484,7 +482,7 @@ export const COMPREHENSIVE_PRICING_GUIDE_2026: ServicePricing[] = [
         "Incident response",
         "Compliance reporting"
       ]
-    }
+
   },
 
   {
@@ -557,7 +555,7 @@ export const COMPREHENSIVE_PRICING_GUIDE_2026: ServicePricing[] = [
         roi: "400-600%",
         setupCost: 15000,
         contractLength: "24 months"
-      }
+
     ],
     marketComparison: {
       competitors: ["AWS Greengrass", "Azure IoT Edge", "Google Cloud IoT Edge"],
@@ -595,8 +593,8 @@ export const COMPREHENSIVE_PRICING_GUIDE_2026: ServicePricing[] = [
         "Analytics interpretation",
         "Performance monitoring"
       ]
-    }
-  }
+
+
 ];
 
 export const PRICING_SUMMARY_2026 = {
@@ -619,5 +617,5 @@ export const PRICING_SUMMARY_2026 = {
     email: "kleber@ziontechgroup.com",
     website: "https://ziontechgroup.com",
     address: "364 E Main St STE 1008 Middletown DE 19709"
-  }
-};
+
+};}}}}}}}}}}}}}}

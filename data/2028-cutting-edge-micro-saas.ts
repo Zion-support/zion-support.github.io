@@ -13,7 +13,7 @@ export interface CuttingEdgeMicroSaas2028 {
     email: string;
     address: string;
   };
-}
+
 export const cuttingEdge2028MicroSaas: CuttingEdgeMicroSaas2028[] = [
   {
     id: "2028-cutting-edge-micro-saas",
@@ -35,6 +35,6 @@ export const cuttingEdge2028MicroSaas: CuttingEdgeMicroSaas2028[] = [
       mobile: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       address: "364 E Main St STE 1008 Middletown DE 19709"
-    }
-  }
-];
+
+
+];}}}

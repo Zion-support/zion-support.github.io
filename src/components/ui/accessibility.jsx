@@ -1,7 +1,6 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Eye, Volume2, VolumeX, Type, Contrast, ZoomIn, ZoomOut, Settings, Accessibility, X } from 'lucide-react';
-import { Button } from './button';
+import { Eye, Volume2, VolumeX, Type, Contrast, ZoomIn, ZoomOut, Settings, Accessibility, X import { Button } from './button';
 export function AccessibilityPanel({ enabled = true, className = "", onSettingsChange }) {
     const [isOpen, setIsOpen] = useState(false);
     const [settings, setSettings] = useState({
@@ -20,24 +19,24 @@ export function AccessibilityPanel({ enabled = true, className = "", onSettingsC
         // High contrast
         if (settings.highContrast) {
             root.classList.add('high-contrast');
-        }
+
         else {
             root.classList.remove('high-contrast');
-        }
+
         // Large text
         if (settings.largeText) {
             root.style.fontSize = '18px';
-        }
+
         else {
             root.style.fontSize = '16px';
-        }
+
         // Reduced motion
         if (settings.reducedMotion) {
             root.style.setProperty('--reduced-motion', 'reduce');
-        }
+
         else {
             root.style.setProperty('--reduced-motion', 'no-preference');
-        }
+
         // Font size
         root.style.setProperty('--font-size', `${settings.fontSize}px`);
         // Color blind mode
@@ -52,11 +51,11 @@ export function AccessibilityPanel({ enabled = true, className = "", onSettingsC
             try {
                 const parsed = JSON.parse(saved);
                 setSettings(prev => ({ ...prev, ...parsed }));
-            }
+
             catch {
                 // Silently handle parsing errors
-            }
-        }
+
+
     }, []);
     // Save settings to localStorage
     const saveSettings = useCallback((newSettings) => {
@@ -102,7 +101,7 @@ export function AccessibilityPanel({ enabled = true, className = "", onSettingsC
             setTimeout(() => {
                 document.body.removeChild(announcement);
             }, 1000);
-        }
+
     }, [settings.screenReader]);
     if (!enabled)
         return null;
@@ -252,7 +251,6 @@ export function AccessibilityPanel({ enabled = true, className = "", onSettingsC
             clip: rect(0, 0, 0, 0);
             white-space: nowrap;
             border: 0;
-          }
 
           .high-contrast {
             --zion-cyan: #00ffff;
@@ -263,42 +261,35 @@ export function AccessibilityPanel({ enabled = true, className = "", onSettingsC
             --zion-cyan-light: #33ffff;
             --zion-purple-dark: #6600cc;
             --zion-purple-light: #cc33ff;
-          }
 
           [data-color-blind="protanopia"] {
             filter: url('#protanopia-filter');
-          }
 
           [data-color-blind="deuteranopia"] {
             filter: url('#deuteranopia-filter');
-          }
 
           [data-color-blind="tritanopia"] {
             filter: url('#tritanopia-filter');
-          }
 
           :root {
             --font-size: 16px;
             --reduced-motion: no-preference;
-          }
 
           * {
             font-size: var(--font-size);
-          }
 
           @media (prefers-reduced-motion: reduce) {
             * {
               animation-duration: 0.01ms !important;
               animation-iteration-count: 1 !important;
               transition-duration: 0.01ms !important;
-            }
-          }
+
 
           [style*="--reduced-motion: reduce"] * {
             animation-duration: 0.01ms !important;
             animation-iteration-count: 1 !important;
             transition-duration: 0.01ms !important;
-          }
+
         `
         }}/>
 
@@ -317,4 +308,4 @@ export function AccessibilityPanel({ enabled = true, className = "", onSettingsC
         </defs>
       </svg>
     </>);
-}
+</div>}}}}}}}}}}}}}}}}}}}}}}

@@ -32,8 +32,6 @@ import {
   BarChart3,
   Globe2,
   ShieldCheck
-} from 'lucide-react';
-
 const InnovativeServicesHub: React.FC = () => {
   const serviceCategories = [
     {
@@ -75,7 +73,7 @@ const InnovativeServicesHub: React.FC = () => {
       route: '/green-it',
       features: ['Renewable Energy', 'Carbon Reduction', 'Sustainable Computing', 'Green AI'],
       stats: { services: 8, avgROI: '400%', innovation: 'Sustainable' }
-    }
+
   ];
 
   const featuredServices = [
@@ -102,7 +100,7 @@ const InnovativeServicesHub: React.FC = () => {
       price: '$500,000',
       roi: '2000%',
       delivery: '18 months'
-    }
+
   ];
 
   const containerVariants = {
@@ -111,8 +109,8 @@ const InnovativeServicesHub: React.FC = () => {
       opacity: 1,
       transition: {
         staggerChildren: 0.1
-      }
-    }
+
+
   };
 
   const itemVariants = {
@@ -122,8 +120,8 @@ const InnovativeServicesHub: React.FC = () => {
       opacity: 1,
       transition: {
         duration: 0.5
-      }
-    }
+
+
   };
 
   return (
@@ -134,7 +132,7 @@ const InnovativeServicesHub: React.FC = () => {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 0.8 }}
-      >
+
         <div className="absolute inset-0 bg-black/20"></div>
         <div className="relative z-10 container mx-auto px-4 text-center">
           <motion.h1
@@ -142,7 +140,7 @@ const InnovativeServicesHub: React.FC = () => {
             initial={{ y: -50, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ duration: 0.8, delay: 0.2 }}
-          >
+
             Innovative Services Hub
           </motion.h1>
           <motion.p
@@ -150,7 +148,7 @@ const InnovativeServicesHub: React.FC = () => {
             initial={{ y: 50, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ duration: 0.8, delay: 0.4 }}
-          >
+
             Discover the future of technology with our comprehensive portfolio of innovative services
           </motion.p>
           <motion.div
@@ -158,7 +156,7 @@ const InnovativeServicesHub: React.FC = () => {
             initial={{ scale: 0.8, opacity: 0 }}
             animate={{ scale: 1, opacity: 1 }}
             transition={{ duration: 0.8, delay: 0.6 }}
-          >
+
             <span className="px-4 py-2 bg-indigo-500/20 border border-indigo-400/30 rounded-full text-indigo-200">
               🚀 40+ Services
             </span>
@@ -181,7 +179,7 @@ const InnovativeServicesHub: React.FC = () => {
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6, delay: 0.8 }}
-      >
+
         <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
           <div className="text-center p-6 bg-slate-800/50 backdrop-blur-sm rounded-2xl border border-slate-700/50">
             <div className="text-4xl font-bold text-blue-400 mb-2">40+</div>
@@ -208,7 +206,7 @@ const InnovativeServicesHub: React.FC = () => {
         variants={containerVariants}
         initial="hidden"
         animate="visible"
-      >
+
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold text-white mb-4">
             Explore Our Service Categories
@@ -227,7 +225,7 @@ const InnovativeServicesHub: React.FC = () => {
                 className="group bg-slate-800/50 backdrop-blur-sm rounded-2xl p-8 border border-slate-700/50 hover:border-blue-500/50 transition-all duration-300 hover:shadow-2xl hover:shadow-blue-500/20"
                 variants={itemVariants}
                 whileHover={{ y: -5, scale: 1.02 }}
-              >
+
                 <div className="flex items-start gap-4 mb-6">
                   <div className={`p-4 rounded-xl bg-gradient-to-r ${category.color}`}>
                     <IconComponent className="w-8 h-8 text-white" />
@@ -274,7 +272,7 @@ const InnovativeServicesHub: React.FC = () => {
                 <a
                   href={category.route}
                   className="inline-flex items-center gap-2 w-full justify-center px-6 py-3 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-bold rounded-xl transition-all duration-300 hover:scale-105 group-hover:gap-3"
-                >
+
                   Explore {category.title}
                   <ArrowRight className="w-5 h-5" />
                 </a>
@@ -290,7 +288,7 @@ const InnovativeServicesHub: React.FC = () => {
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6, delay: 1.2 }}
-      >
+
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold text-white mb-4">
             Featured Revolutionary Services
@@ -309,7 +307,7 @@ const InnovativeServicesHub: React.FC = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 1.4 + index * 0.1 }}
               whileHover={{ y: -5, scale: 1.02 }}
-            >
+
               <div className="flex items-center gap-2 mb-3">
                 <Star className="w-5 h-5 text-yellow-400 fill-current" />
                 <span className="text-sm text-yellow-400 font-medium">Featured</span>
@@ -351,7 +349,7 @@ const InnovativeServicesHub: React.FC = () => {
         initial={{ opacity: 0, y: 50 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, delay: 1.6 }}
-      >
+
         <div className="container mx-auto px-4 py-20">
           <div className="text-center mb-12">
             <h2 className="text-4xl font-bold text-white mb-4">
@@ -399,7 +397,7 @@ const InnovativeServicesHub: React.FC = () => {
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-700 hover:to-purple-700 text-white font-bold rounded-xl transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-indigo-500/25"
-            >
+
               Visit Our Website
               <ExternalLink className="w-5 h-5" />
             </a>
@@ -410,4 +408,4 @@ const InnovativeServicesHub: React.FC = () => {
   );
 };
 
-export default InnovativeServicesHub;
+export default InnovativeServicesHub;}}}}}}}

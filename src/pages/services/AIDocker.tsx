@@ -1,6 +1,4 @@
-import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, FileText, BarChart3 } from 'lucide-react';
-
-export default function AIDocker() {
+import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, FileText, BarChart3 export default function AIDocker() {
   const features = [
     'AI-powered Docker optimization',
     'Intelligent Docker management',
@@ -171,4 +169,4 @@ export default function AIDocker() {
       </section>
     </div>
   );
-}
+}}

@@ -24,8 +24,6 @@ import {
   Target,
   Rocket,
   Sparkles
-} from 'lucide-react';
-
 export default function AIEnterpriseOrchestrator() {
   const features = [
     {
@@ -71,7 +69,7 @@ export default function AIEnterpriseOrchestrator() {
         "Automated incident response",
         "Compliance automation"
       ]
-    }
+
   ];
 
   const pricingPlans = [
@@ -124,7 +122,7 @@ export default function AIEnterpriseOrchestrator() {
       ],
       cta: "Contact Sales",
       popular: false
-    }
+
   ];
 
   const useCases = [
@@ -163,7 +161,7 @@ export default function AIEnterpriseOrchestrator() {
         "Personalized marketing",
         "Demand forecasting"
       ]
-    }
+
   ];
 
   return (
@@ -181,7 +179,7 @@ export default function AIEnterpriseOrchestrator() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="text-center"
-          >
+
             <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-purple-600 to-pink-600 text-white text-sm font-medium mb-6">
               <Sparkles className="w-4 h-4 mr-2" />
               Revolutionary AI Technology
@@ -201,14 +199,14 @@ export default function AIEnterpriseOrchestrator() {
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 className="px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-semibold rounded-lg hover:from-purple-700 hover:to-pink-700 transition-all duration-300"
-              >
+
                 Start Free Trial
               </motion.button>
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 className="px-8 py-4 border-2 border-purple-600 text-purple-400 font-semibold rounded-lg hover:bg-purple-600 hover:text-white transition-all duration-300"
-              >
+
                 Schedule Demo
               </motion.button>
             </div>
@@ -228,7 +226,7 @@ export default function AIEnterpriseOrchestrator() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
-          >
+
             <h2 className="text-4xl font-bold text-white mb-4">
               Revolutionary AI Capabilities
             </h2>
@@ -246,7 +244,7 @@ export default function AIEnterpriseOrchestrator() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
                 className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-8 border border-slate-700 hover:border-purple-500 transition-all duration-300"
-              >
+
                 <div className="flex items-center mb-4">
                   <div className="p-3 bg-gradient-to-r from-purple-600 to-pink-600 rounded-lg mr-4">
                     <feature.icon className="w-6 h-6 text-white" />
@@ -278,7 +276,7 @@ export default function AIEnterpriseOrchestrator() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
-          >
+
             <h2 className="text-4xl font-bold text-white mb-4">
               Transparent Pricing
             </h2>
@@ -300,7 +298,7 @@ export default function AIEnterpriseOrchestrator() {
                     ? 'border-purple-500 ring-2 ring-purple-500/20'
                     : 'border-slate-700'
                 }`}
-              >
+
                 {plan.popular && (
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                     <span className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-4 py-2 rounded-full text-sm font-semibold">
@@ -335,7 +333,7 @@ export default function AIEnterpriseOrchestrator() {
                       ? 'bg-gradient-to-r from-purple-600 to-pink-600 text-white hover:from-purple-700 hover:to-pink-700'
                       : 'bg-slate-700 text-white hover:bg-slate-600'
                   }`}
-                >
+
                   {plan.cta}
                 </motion.button>
               </motion.div>
@@ -352,7 +350,7 @@ export default function AIEnterpriseOrchestrator() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
-          >
+
             <h2 className="text-4xl font-bold text-white mb-4">
               Industry Applications
             </h2>
@@ -370,7 +368,7 @@ export default function AIEnterpriseOrchestrator() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
                 className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700 hover:border-purple-500 transition-all duration-300"
-              >
+
                 <h3 className="text-xl font-semibold text-white mb-4">{useCase.industry}</h3>
                 <ul className="space-y-2">
                   {useCase.applications.map((application, appIndex) => (
@@ -393,7 +391,7 @@ export default function AIEnterpriseOrchestrator() {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-          >
+
             <h2 className="text-4xl font-bold text-white mb-6">
               Ready to Transform Your Enterprise?
             </h2>
@@ -407,14 +405,14 @@ export default function AIEnterpriseOrchestrator() {
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 className="px-8 py-4 bg-white text-purple-600 font-semibold rounded-lg hover:bg-gray-100 transition-all duration-300"
-              >
+
                 Start Free Trial
               </motion.button>
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 className="px-8 py-4 border-2 border-white text-white font-semibold rounded-lg hover:bg-white hover:text-purple-600 transition-all duration-300"
-              >
+
                 Contact Sales Team
               </motion.button>
             </div>
@@ -423,4 +421,4 @@ export default function AIEnterpriseOrchestrator() {
       </section>
     </div>
   );
-}
+}}}}}

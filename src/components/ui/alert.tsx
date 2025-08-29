@@ -1,7 +1,6 @@
 interface AlertProps {
   children: React.ReactNode;
   className?: string;
-}
 
 export function Alert({ children, className = '' }: AlertProps) {
   return (
@@ -9,12 +8,10 @@ export function Alert({ children, className = '' }: AlertProps) {
       {children}
     </div>
   );
-}
 
 interface AlertDescriptionProps {
   children: React.ReactNode;
   className?: string;
-}
 
 export function AlertDescription({ children, className = '' }: AlertDescriptionProps) {
   return (
@@ -22,4 +19,4 @@ export function AlertDescription({ children, className = '' }: AlertDescriptionP
       {children}
     </div>
   );
-}
+}}}}

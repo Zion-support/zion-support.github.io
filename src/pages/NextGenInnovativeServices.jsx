@@ -1,7 +1,6 @@
 import React, { useState, useMemo } from 'react';
 import { motion } from 'framer-motion';
-import { Search, Filter, Grid, List, ExternalLink, Phone, Mail, Globe, Clock, Users, CheckCircle, TrendingUp, Award } from 'lucide-react';
-import { NEXT_GEN_INNOVATIVE_SERVICES } from '../data/nextGenInnovativeServices';
+import { Search, Filter, Grid, List, ExternalLink, Phone, Mail, Globe, Clock, Users, CheckCircle, TrendingUp, Award import { NEXT_GEN_INNOVATIVE_SERVICES } from '../data/nextGenInnovativeServices';
 export default function NextGenInnovativeServices() {
     const [searchTerm, setSearchTerm] = useState('');
     const [selectedCategory, setSelectedCategory] = useState('all');
@@ -28,7 +27,7 @@ export default function NextGenInnovativeServices() {
             case 'premium': return 'bg-blue-600';
             case 'standard': return 'bg-green-600';
             default: return 'bg-gray-600';
-        }
+
     };
     const containerVariants = {
         hidden: { opacity: 0 },
@@ -36,8 +35,8 @@ export default function NextGenInnovativeServices() {
             opacity: 1,
             transition: {
                 staggerChildren: 0.1
-            }
-        }
+
+
     };
     const itemVariants = {
         hidden: { y: 20, opacity: 0 },
@@ -46,8 +45,8 @@ export default function NextGenInnovativeServices() {
             opacity: 1,
             transition: {
                 duration: 0.5
-            }
-        }
+
+
     };
     return (<div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900 text-white">
       {/* Header Section */}
@@ -400,4 +399,4 @@ export default function NextGenInnovativeServices() {
         </motion.div>
       </div>
     </div>);
-}
+}}}}}}}

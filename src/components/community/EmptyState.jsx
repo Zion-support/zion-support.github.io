@@ -1,7 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { MessageSquare } from 'lucide-react';
-import { Button } from '@/components/ui/button';
+import { MessageSquare import { Button } from '@/components/ui/button';
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components/ui/tooltip';
 const EmptyState = ({ title, subtitle, cta, href, hasSession }) => {
     return (<div className="text-center py-16">
@@ -23,3 +22,4 @@ const EmptyState = ({ title, subtitle, cta, href, hasSession }) => {
     </div>);
 };
 export default EmptyState;
+}

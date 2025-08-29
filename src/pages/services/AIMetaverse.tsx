@@ -1,6 +1,4 @@
-import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, FileText, BarChart3 } from 'lucide-react';
-
-export default function AIMetaverse() {
+import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, FileText, BarChart3 export default function AIMetaverse() {
   const features = [
     'AI-powered metaverse optimization',
     'Intelligent metaverse content management',
@@ -171,4 +169,4 @@ export default function AIMetaverse() {
       </section>
     </div>
   );
-}
+}}

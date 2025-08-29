@@ -3,8 +3,7 @@ import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
-import { Brain, Cloud, Shield, Database, TrendingUp, Code, Zap, Heart, DollarSign, Link as LinkIcon, ArrowRight, Star, CheckCircle } from 'lucide-react';
-import { ENHANCED_SERVICES } from '@/data/enhancedServices';
+import { Brain, Cloud, Shield, Database, TrendingUp, Code, Zap, Heart, DollarSign, Link as LinkIcon, ArrowRight, Star, CheckCircle import { ENHANCED_SERVICES } from '@/data/enhancedServices';
 const featuredServices = ENHANCED_SERVICES.filter(service => service.featured).slice(0, 6);
 const serviceIcons = {
     'AI Automation': Brain,
@@ -194,4 +193,4 @@ export function EnhancedServicesShowcase() {
         </div>
       </div>
     </section>);
-}
+</Card></Card></Card></Card>}}

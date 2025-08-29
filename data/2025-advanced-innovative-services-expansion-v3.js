@@ -518,7 +518,7 @@ export const advancedInnovativeServices2025V3 = [
         customers: 156,
         rating: 4.8,
         reviews: 203
-    }
+
 ];
 export const advancedITServices2025 = [
     // Quantum Computing Infrastructure Setup
@@ -661,7 +661,7 @@ export const advancedITServices2025 = [
         competitors: ['Accenture', 'Deloitte', 'PwC', 'KPMG'],
         marketSize: '$3.5B cybersecurity consulting market',
         growthRate: '35% annual growth'
-    }
+
 ];
 export const advancedAIServices2025 = [
     // AI-Powered Business Intelligence
@@ -765,10 +765,11 @@ export const advancedAIServices2025 = [
         competitors: ['Intercom', 'Zendesk', 'Freshdesk', 'Help Scout'],
         marketSize: '$2.8B customer service automation market',
         growthRate: '40% annual growth'
-    }
+
 ];
 export default {
     advancedInnovativeServices2025V3,
     advancedITServices2025,
     advancedAIServices2025
 };
+}}}

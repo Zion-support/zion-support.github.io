@@ -1,6 +1,4 @@
-import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, FileText, BarChart3 } from 'lucide-react';
-
-export default function AIEdgeComputing() {
+import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, FileText, BarChart3 export default function AIEdgeComputing() {
   const features = [
     'AI-powered edge optimization',
     'Intelligent edge device management',
@@ -171,4 +169,4 @@ export default function AIEdgeComputing() {
       </section>
     </div>
   );
-}
+}}

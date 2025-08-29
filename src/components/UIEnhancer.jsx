@@ -11,13 +11,13 @@ export const UIEnhancer = ({ showFloatingActions = true, enableParticles = true,
             const width = window.innerWidth;
             if (width < 768) {
                 setDeviceType('mobile');
-            }
+
             else if (width < 1024) {
                 setDeviceType('tablet');
-            }
+
             else {
                 setDeviceType('desktop');
-            }
+
         };
         detectDevice();
         window.addEventListener('resize', detectDevice);
@@ -25,7 +25,7 @@ export const UIEnhancer = ({ showFloatingActions = true, enableParticles = true,
         const savedTheme = localStorage.getItem('ui-theme');
         if (savedTheme) {
             setTheme(savedTheme);
-        }
+
         // Apply theme
         applyTheme(savedTheme || 'dark');
         // Scroll to top visibility
@@ -34,12 +34,12 @@ export const UIEnhancer = ({ showFloatingActions = true, enableParticles = true,
         };
         if (enableScrollEffects) {
             window.addEventListener('scroll', handleScroll);
-        }
+
         return () => {
             window.removeEventListener('resize', detectDevice);
             if (enableScrollEffects) {
                 window.removeEventListener('scroll', handleScroll);
-            }
+
         };
     }, [enableScrollEffects]);
     const applyTheme = (newTheme) => {
@@ -48,11 +48,11 @@ export const UIEnhancer = ({ showFloatingActions = true, enableParticles = true,
             const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
             root.classList.toggle('dark', prefersDark);
             root.classList.toggle('light', !prefersDark);
-        }
+
         else {
             root.classList.remove('light', 'dark');
             root.classList.add(newTheme);
-        }
+
         localStorage.setItem('ui-theme', newTheme);
     };
     const handleThemeChange = (newTheme) => {
@@ -150,3 +150,4 @@ export const UIEnhancer = ({ showFloatingActions = true, enableParticles = true,
     </>);
 };
 export default UIEnhancer;
+}}}}}}}</motion.div>}

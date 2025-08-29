@@ -50,7 +50,7 @@ const categoriesInfo = {
         postCount: 12,
         adminOnly: true,
         icon: "Megaphone"
-    }
+
 };
 const iconMap = {
     "Briefcase": Briefcase,
@@ -108,13 +108,13 @@ function CategoryContent({ categoryId, category, IconComponent, user, }) {
           {canCreatePost && <CreatePostButton categoryId={categoryId}/>}
         </div>)}
     </div>);
-}
+
 export default function ForumCategoryPage() {
     const { categoryId } = useParams();
     const { user } = useAuth();
     if (!categoryId || !categoriesInfo[categoryId]) {
         return <NotFound />;
-    }
+
     const category = categoriesInfo[categoryId];
     const IconComponent = iconMap[category.icon] || MessageSquare;
     return (<>
@@ -124,4 +124,4 @@ export default function ForumCategoryPage() {
         <CategoryContent categoryId={categoryId} category={category} IconComponent={IconComponent} user={user}/>
       </Suspense>
     </>);
-}
+}}}}

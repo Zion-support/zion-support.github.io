@@ -1,7 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Brain, Globe, Shield, Users, TrendingUp, CheckCircle, ArrowRight, Star, Award } from 'lucide-react';
-const highlights = [
+import { Brain, Globe, Shield, Users, TrendingUp, CheckCircle, ArrowRight, Star, Award const highlights = [
     {
         icon: Brain,
         title: 'AI-Powered Intelligence',
@@ -28,7 +27,7 @@ const highlights = [
         color: 'from-zion-blue to-zion-blue-dark',
         bgColor: 'bg-zion-blue/10',
         borderColor: 'border-zion-blue/20'
-    }
+
 ];
 const achievements = [
     { icon: Award, number: '50+', label: 'Industry Awards', color: 'text-yellow-400' },
@@ -47,8 +46,8 @@ export function FeatureHighlights() {
             transition: {
                 staggerChildren: 0.2,
                 delayChildren: 0.1
-            }
-        }
+
+
     };
     const itemVariants = {
         hidden: { opacity: 0, y: 30, scale: 0.95 },
@@ -59,8 +58,8 @@ export function FeatureHighlights() {
             transition: {
                 duration: 0.6,
                 ease: "easeOut"
-            }
-        }
+
+
     };
     const achievementVariants = {
         hidden: { opacity: 0, scale: 0.8 },
@@ -68,7 +67,7 @@ export function FeatureHighlights() {
             opacity: 1,
             scale: 1,
             transition: { duration: 0.5 }
-        }
+
     };
     const techVariants = {
         hidden: { opacity: 0, x: -20 },
@@ -76,7 +75,7 @@ export function FeatureHighlights() {
             opacity: 1,
             x: 0,
             transition: { duration: 0.5 }
-        }
+
     };
     return (<section className="py-20 bg-gradient-to-b from-zion-slate-dark to-zion-slate relative overflow-hidden">
       {/* Background decorative elements */}
@@ -181,4 +180,4 @@ export function FeatureHighlights() {
         </motion.div>
       </div>
     </section>);
-}
+}}}}}}}}}

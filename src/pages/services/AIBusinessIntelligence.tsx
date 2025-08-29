@@ -24,7 +24,6 @@ import {
   Filter,
   Download,
   Share2
-} from 'lucide-react';
 import { SEO } from '../../components/SEO';
 
 export default function AIBusinessIntelligence() {
@@ -48,7 +47,7 @@ export default function AIBusinessIntelligence() {
       icon: Zap,
       title: 'Automated Reporting',
       description: 'Generate comprehensive reports automatically, saving time and ensuring consistency across your organization.'
-    }
+
   ];
 
   const capabilities = [
@@ -75,7 +74,7 @@ export default function AIBusinessIntelligence() {
       description: 'Ask questions in plain English and get instant answers',
       icon: Search,
       benefits: ['Easy to use', 'Fast results', 'No technical knowledge required']
-    }
+
   ];
 
   const useCases = [
@@ -102,7 +101,7 @@ export default function AIBusinessIntelligence() {
       description: 'Predictive maintenance, quality control, and production optimization',
       icon: Target,
       metrics: ['Equipment Uptime', 'Quality Score', 'Production Efficiency']
-    }
+
   ];
 
   const benefits = [
@@ -125,7 +124,7 @@ export default function AIBusinessIntelligence() {
       icon: Shield,
       title: 'Risk Mitigation',
       description: 'Identify and address potential issues before they impact your business'
-    }
+
   ];
 
   return (
@@ -144,7 +143,7 @@ export default function AIBusinessIntelligence() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             className="text-center"
-          >
+
             <div className="inline-flex items-center px-4 py-2 bg-cyan-400/20 text-cyan-400 rounded-full text-sm font-medium mb-6">
               <Brain className="w-4 h-4 mr-2" />
               AI-Powered Intelligence
@@ -177,7 +176,7 @@ export default function AIBusinessIntelligence() {
               initial={{ opacity: 0, x: -20 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.6 }}
-            >
+
               <h2 className="text-4xl font-bold text-white mb-6">
                 What is AI Business Intelligence?
               </h2>
@@ -216,7 +215,7 @@ export default function AIBusinessIntelligence() {
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.6 }}
               className="relative"
-            >
+
               <div className="bg-slate-800/50 p-8 rounded-2xl border border-slate-700/50">
                 <div className="flex items-center justify-between mb-6">
                   <h3 className="text-xl font-semibold text-white">AI BI Dashboard</h3>
@@ -260,7 +259,7 @@ export default function AIBusinessIntelligence() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
-          >
+
             <h2 className="text-4xl font-bold text-white mb-6">
               Key Features
             </h2>
@@ -278,7 +277,7 @@ export default function AIBusinessIntelligence() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 className="bg-slate-800/50 p-6 rounded-xl border border-slate-700/50 hover:border-cyan-400/50 transition-all duration-300 hover:scale-105"
-              >
+
                 <div className="w-16 h-16 bg-gradient-to-br from-cyan-400/20 to-blue-500/20 rounded-xl flex items-center justify-center mb-6">
                   <feature.icon className="w-8 h-8 text-cyan-400" />
                 </div>
@@ -298,7 +297,7 @@ export default function AIBusinessIntelligence() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
-          >
+
             <h2 className="text-4xl font-bold text-white mb-6">
               Core Capabilities
             </h2>
@@ -315,7 +314,7 @@ export default function AIBusinessIntelligence() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 className="bg-slate-800/50 p-8 rounded-xl border border-slate-700/50 hover:border-cyan-400/50 transition-all duration-300 hover:scale-105"
-              >
+
                 <div className="flex items-center space-x-4 mb-6">
                   <div className="w-16 h-16 bg-gradient-to-br from-cyan-400/20 to-blue-500/20 rounded-xl flex items-center justify-center">
                     <capability.icon className="w-8 h-8 text-cyan-400" />
@@ -345,7 +344,7 @@ export default function AIBusinessIntelligence() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
-          >
+
             <h2 className="text-4xl font-bold text-white mb-6">
               Industry Use Cases
             </h2>
@@ -363,7 +362,7 @@ export default function AIBusinessIntelligence() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 className="bg-slate-800/50 p-8 rounded-xl border border-slate-700/50 hover:border-cyan-400/50 transition-all duration-300 hover:scale-105"
-              >
+
                 <div className="flex items-center space-x-4 mb-6">
                   <div className="w-16 h-16 bg-gradient-to-br from-cyan-400/20 to-blue-500/20 rounded-xl flex items-center justify-center">
                     <useCase.icon className="w-8 h-8 text-cyan-400" />
@@ -393,7 +392,7 @@ export default function AIBusinessIntelligence() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
-          >
+
             <h2 className="text-4xl font-bold text-white mb-6">
               Business Benefits
             </h2>
@@ -411,7 +410,7 @@ export default function AIBusinessIntelligence() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 className="bg-slate-800/50 p-6 rounded-xl border border-slate-700/50 hover:border-cyan-400/50 transition-all duration-300 hover:scale-105 text-center"
-              >
+
                 <div className="w-16 h-16 bg-gradient-to-br from-cyan-400/20 to-blue-500/20 rounded-xl flex items-center justify-center mx-auto mb-6">
                   <benefit.icon className="w-8 h-8 text-cyan-400" />
                 </div>
@@ -431,7 +430,7 @@ export default function AIBusinessIntelligence() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
-          >
+
             <h2 className="text-4xl font-bold text-white mb-6">
               Implementation Process
             </h2>
@@ -461,7 +460,7 @@ export default function AIBusinessIntelligence() {
                 step: '04',
                 title: 'Deployment',
                 description: 'Launch your solution and provide training and ongoing support'
-              }
+
             ].map((phase, index) => (
               <motion.div
                 key={index}
@@ -469,7 +468,7 @@ export default function AIBusinessIntelligence() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 className="text-center"
-              >
+
                 <div className="w-20 h-20 bg-gradient-to-br from-cyan-400 to-blue-500 rounded-full flex items-center justify-center mx-auto mb-6 text-2xl font-bold text-white">
                   {phase.step}
                 </div>
@@ -488,7 +487,7 @@ export default function AIBusinessIntelligence() {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-          >
+
             <h2 className="text-4xl font-bold text-white mb-6">
               Ready to Transform Your Business Intelligence?
             </h2>
@@ -509,4 +508,4 @@ export default function AIBusinessIntelligence() {
       </section>
     </div>
   );
-}
+}}}}}}}

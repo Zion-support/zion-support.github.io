@@ -1,8 +1,7 @@
 import React, { useState } from "react";
 import { useTranslation } from "react-i18next";
 import { Card, CardContent } from "@/components/ui/card";
-import { Briefcase, Users, Check } from "lucide-react";
-export function RolePicker({ onSelect }) {
+import { Briefcase, Users, Check export function RolePicker({ onSelect }) {
     const [selectedRole, setSelectedRole] = useState(null);
     const { t } = useTranslation();
     const handleSelect = (role) => {
@@ -49,4 +48,4 @@ export function RolePicker({ onSelect }) {
         </Card>
       </div>
     </div>);
-}
+</Card></Card>}}

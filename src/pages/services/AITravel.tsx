@@ -1,6 +1,4 @@
-import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, FileText, BarChart3 } from 'lucide-react';
-
-export default function AITravel() {
+import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, FileText, BarChart3 export default function AITravel() {
   const features = [
     'AI-powered travel optimization',
     'Intelligent travel planning and management',
@@ -171,4 +169,4 @@ export default function AITravel() {
       </section>
     </div>
   );
-}
+}}

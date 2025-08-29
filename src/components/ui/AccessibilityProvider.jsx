@@ -4,7 +4,7 @@ export const useAccessibility = () => {
     const context = useContext(AccessibilityContext);
     if (!context) {
         throw new Error('useAccessibility must be used within an AccessibilityProvider');
-    }
+
     return context;
 };
 export const AccessibilityProvider = ({ children }) => {
@@ -39,22 +39,22 @@ export const AccessibilityProvider = ({ children }) => {
         const body = document.body;
         if (isHighContrast) {
             body.classList.add('high-contrast');
-        }
+
         else {
             body.classList.remove('high-contrast');
-        }
+
         if (isReducedMotion) {
             body.classList.add('reduced-motion');
-        }
+
         else {
             body.classList.remove('reduced-motion');
-        }
+
         if (isLargeText) {
             body.classList.add('large-text');
-        }
+
         else {
             body.classList.remove('large-text');
-        }
+
     }, [isHighContrast, isReducedMotion, isLargeText]);
     // Focus trap functionality
     const focusTrap = (element) => {
@@ -71,15 +71,15 @@ export const AccessibilityProvider = ({ children }) => {
                     if (document.activeElement === firstElement) {
                         e.preventDefault();
                         lastElement.focus();
-                    }
-                }
+
+
                 else {
                     if (document.activeElement === lastElement) {
                         e.preventDefault();
                         firstElement.focus();
-                    }
-                }
-            }
+
+
+
         };
         element.addEventListener('keydown', handleKeyDown);
         firstElement.focus();
@@ -108,19 +108,19 @@ export const AccessibilityProvider = ({ children }) => {
                 e.preventDefault();
                 toggleHighContrast();
                 announceToScreenReader(`High contrast ${isHighContrast ? 'disabled' : 'enabled'}`);
-            }
+
             // Ctrl/Cmd + M for reduced motion toggle
             if ((e.ctrlKey || e.metaKey) && e.key === 'm') {
                 e.preventDefault();
                 toggleReducedMotion();
                 announceToScreenReader(`Reduced motion ${isReducedMotion ? 'disabled' : 'enabled'}`);
-            }
+
             // Ctrl/Cmd + L for large text toggle
             if ((e.ctrlKey || e.metaKey) && e.key === 'l') {
                 e.preventDefault();
                 toggleLargeText();
                 announceToScreenReader(`Large text ${isLargeText ? 'disabled' : 'enabled'}`);
-            }
+
         };
         document.addEventListener('keydown', handleKeyDown);
         return () => document.removeEventListener('keydown', handleKeyDown);
@@ -182,3 +182,4 @@ export const SkipToMainContent = () => {
       Skip to main content
     </a>);
 };
+}}}}}}}}}}}}}}}

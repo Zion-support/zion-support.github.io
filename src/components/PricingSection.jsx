@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { Check, X, Star, Zap, Shield, Users, ArrowRight, Crown, Rocket, Building } from 'lucide-react';
-const plans = [
+import { Check, X, Star, Zap, Shield, Users, ArrowRight, Crown, Rocket, Building const plans = [
     {
         name: "Starter",
         price: 99,
@@ -72,7 +71,7 @@ const plans = [
         notIncluded: [],
         popular: false,
         cta: "Contact Sales"
-    }
+
 ];
 const addons = [
     {
@@ -98,7 +97,7 @@ const addons = [
         description: "Comprehensive analytics and reporting suite",
         icon: <Users className="w-6 h-6"/>,
         features: ["Custom dashboards", "Advanced reporting", "Data export options"]
-    }
+
 ];
 export function PricingSection() {
     const [billingPeriod, setBillingPeriod] = useState('month');
@@ -113,8 +112,8 @@ export function PricingSection() {
             transition: {
                 staggerChildren: 0.2,
                 delayChildren: 0.1
-            }
-        }
+
+
     };
     const itemVariants = {
         hidden: { y: 30, opacity: 0 },
@@ -124,8 +123,8 @@ export function PricingSection() {
             transition: {
                 duration: 0.6,
                 ease: "easeOut"
-            }
-        }
+
+
     };
     return (<section className="py-20 bg-gradient-to-br from-zion-slate-dark via-zion-blue-dark to-zion-blue relative overflow-hidden">
       {/* Background decorative elements */}
@@ -280,4 +279,4 @@ export function PricingSection() {
         </motion.div>
       </div>
     </section>);
-}
+}}}}}}}}

@@ -13,8 +13,6 @@ import {
   Cpu,
   HardDrive,
   Wifi
-} from 'lucide-react';
-
 interface PerformanceMetrics {
   loadTime: number;
   firstContentfulPaint: number;
@@ -24,13 +22,11 @@ interface PerformanceMetrics {
   timeToInteractive: number;
   memoryUsage?: number;
   cpuUsage?: number;
-}
 
 interface PerformanceMonitorProps {
   enabled?: boolean;
   showMetrics?: boolean;
   onPerformanceIssue?: (issue: string) => void;
-}
 
 export const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
   enabled = true,
@@ -99,13 +95,11 @@ export const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
         const fcpEntry = perf.getEntriesByName('first-contentful-paint')[0];
         if (fcpEntry) {
           newMetrics.firstContentfulPaint = fcpEntry.startTime;
-        }
 
         // Get LCP
         const lcpEntries = perf.getEntriesByType('largest-contentful-paint');
         if (lcpEntries.length > 0) {
           newMetrics.largestContentfulPaint = lcpEntries[lcpEntries.length - 1].startTime;
-        }
 
         // Get CLS
         if ('PerformanceObserver' in window) {
@@ -115,12 +109,11 @@ export const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
             entries.forEach((entry: any) => {
               if (entry.value) {
                 clsValue += entry.value;
-              }
+
             });
             newMetrics.cumulativeLayoutShift = clsValue;
           });
           clsObserver.observe({ entryTypes: ['layout-shift'] });
-        }
 
         // Get FID
         if ('PerformanceObserver' in window) {
@@ -129,10 +122,9 @@ export const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
             if (entries.length > 0) {
               const lastEntry = entries[entries.length - 1] as any;
               newMetrics.firstInputDelay = lastEntry.processingStart - lastEntry.startTime;
-            }
+
           });
           fidObserver.observe({ entryTypes: ['first-input'] });
-        }
 
         setMetrics(newMetrics);
         const score = calculateScore(newMetrics);
@@ -142,23 +134,22 @@ export const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
         const newIssues: string[] = [];
         if (newMetrics.firstContentfulPaint > 3000) {
           newIssues.push('First Contentful Paint is slow');
-        }
+
         if (newMetrics.largestContentfulPaint > 4000) {
           newIssues.push('Largest Contentful Paint is slow');
-        }
+
         if (newMetrics.cumulativeLayoutShift > 0.25) {
           newIssues.push('Cumulative Layout Shift is high');
-        }
+
         if (newMetrics.firstInputDelay > 300) {
           newIssues.push('First Input Delay is high');
-        }
 
         setIssues(newIssues);
         if (onPerformanceIssue && newIssues.length > 0) {
           newIssues.forEach(issue => onPerformanceIssue(issue));
-        }
-      }
-    }
+
+
+
   }, [calculateScore, onPerformanceIssue]);
 
   // Start monitoring
@@ -177,13 +168,12 @@ export const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
     setIsMonitoring(false);
     if (intervalRef.current) {
       clearInterval(intervalRef.current);
-    }
+
   }, []);
 
   useEffect(() => {
     if (enabled) {
       startMonitoring();
-    }
 
     return () => {
       stopMonitoring();
@@ -215,7 +205,7 @@ export const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: 20 }}
             className="bg-white dark:bg-gray-800 rounded-lg shadow-lg border border-gray-200 dark:border-gray-700 p-4 max-w-sm"
-          >
+
             <div className="flex items-center justify-between mb-3">
               <h3 className="text-sm font-semibold text-gray-900 dark:text-white">
                 Performance Monitor
@@ -224,13 +214,13 @@ export const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
                 <button
                   onClick={() => setIsExpanded(!isExpanded)}
                   className="p-1 hover:bg-gray-100 dark:hover:bg-gray-700 rounded"
-                >
+
                   <Settings className="w-4 h-4 text-gray-500" />
                 </button>
                 <button
                   onClick={() => setIsVisible(false)}
                   className="p-1 hover:bg-gray-100 dark:hover:bg-gray-700 rounded"
-                >
+
                   <X className="w-4 h-4 text-gray-500" />
                 </button>
               </div>
@@ -294,13 +284,13 @@ export const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
                     ? 'bg-red-100 text-red-700 hover:bg-red-200'
                     : 'bg-green-100 text-green-700 hover:bg-green-200'
                 }`}
-              >
+
                 {isMonitoring ? 'Stop' : 'Start'} Monitoring
               </button>
               <button
                 onClick={collectMetrics}
                 className="px-3 py-1 text-xs bg-blue-100 text-blue-700 rounded hover:bg-blue-200"
-              >
+
                 Refresh
               </button>
             </div>
@@ -314,7 +304,7 @@ export const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
         whileTap={{ scale: 0.95 }}
         onClick={() => setIsVisible(!isVisible)}
         className="bg-blue-600 hover:bg-blue-700 text-white p-3 rounded-full shadow-lg"
-      >
+
         <BarChart3 className="w-5 h-5" />
       </motion.button>
     </div>
@@ -322,3 +312,4 @@ export const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
 };
 
 export default PerformanceMonitor;
+}}}}}}}}}}}}}}}}}}

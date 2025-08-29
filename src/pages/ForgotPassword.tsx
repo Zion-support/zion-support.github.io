@@ -14,8 +14,6 @@ import {
   Rocket,
   ArrowRight,
   RefreshCw
-} from 'lucide-react';
-
 const ForgotPassword: React.FC = () => {
   const [email, setEmail] = useState('');
   const [isLoading, setIsLoading] = useState(false);
@@ -33,7 +31,6 @@ const ForgotPassword: React.FC = () => {
     if (!email || !/\S+@\S+\.\S+/.test(email)) {
       setError('Please enter a valid email address');
       return;
-    }
 
     setIsLoading(true);
     setError('');
@@ -48,7 +45,7 @@ const ForgotPassword: React.FC = () => {
       setError('Failed to send verification code. Please try again.');
     } finally {
       setIsLoading(false);
-    }
+
   };
 
   const handleVerificationSubmit = async (e: React.FormEvent) => {
@@ -56,7 +53,6 @@ const ForgotPassword: React.FC = () => {
     if (!verificationCode || verificationCode.length !== 6) {
       setError('Please enter the 6-digit verification code');
       return;
-    }
 
     setIsLoading(true);
     setError('');
@@ -71,7 +67,7 @@ const ForgotPassword: React.FC = () => {
       setError('Invalid verification code. Please try again.');
     } finally {
       setIsLoading(false);
-    }
+
   };
 
   const handlePasswordReset = async (e: React.FormEvent) => {
@@ -79,11 +75,10 @@ const ForgotPassword: React.FC = () => {
     if (!newPassword || newPassword.length < 8) {
       setError('Password must be at least 8 characters long');
       return;
-    }
+
     if (newPassword !== confirmPassword) {
       setError('Passwords do not match');
       return;
-    }
 
     setIsLoading(true);
     setError('');
@@ -100,7 +95,7 @@ const ForgotPassword: React.FC = () => {
       setError('Failed to reset password. Please try again.');
     } finally {
       setIsLoading(false);
-    }
+
   };
 
   const getPasswordStrength = (password: string) => {
@@ -128,7 +123,7 @@ const ForgotPassword: React.FC = () => {
       icon: <RefreshCw className="w-6 h-6" />,
       title: 'Secure Reset Process',
       description: 'Time-limited verification codes for safety'
-    }
+
   ];
 
   const benefits = [
@@ -146,7 +141,7 @@ const ForgotPassword: React.FC = () => {
       icon: <Rocket className="w-6 h-6" />,
       title: 'Digital Transformation',
       description: 'Transform your business with modern technology'
-    }
+
   ];
 
   const renderEmailStep = () => (
@@ -154,7 +149,7 @@ const ForgotPassword: React.FC = () => {
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.6 }}
-    >
+
       <div className="text-center mb-8">
         <div className="w-20 h-20 bg-gradient-to-br from-red-500 to-pink-600 rounded-full flex items-center justify-center mx-auto mb-6">
           <Lock className="w-10 h-10 text-white" />
@@ -189,7 +184,7 @@ const ForgotPassword: React.FC = () => {
           type="submit"
           disabled={isLoading}
           className="w-full py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-medium rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 shadow-lg shadow-cyan-500/25 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-3"
-        >
+
           {isLoading ? (
             <>
               <div className="animate-spin rounded-full h-4 w-4 border-b-2 border-white"></div>
@@ -211,7 +206,7 @@ const ForgotPassword: React.FC = () => {
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.6 }}
-    >
+
       <div className="text-center mb-8">
         <div className="w-20 h-20 bg-gradient-to-br from-yellow-500 to-orange-600 rounded-full flex items-center justify-center mx-auto mb-6">
           <Mail className="w-10 h-10 text-white" />
@@ -248,7 +243,7 @@ const ForgotPassword: React.FC = () => {
             type="button"
             onClick={() => setStep('email')}
             className="flex-1 py-3 bg-slate-700 text-white font-medium rounded-lg hover:bg-slate-600 transition-all duration-300 flex items-center justify-center gap-3"
-          >
+
             <ArrowLeft className="w-5 h-5" />
             Back
           </button>
@@ -256,7 +251,7 @@ const ForgotPassword: React.FC = () => {
             type="submit"
             disabled={isLoading}
             className="flex-1 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-medium rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 shadow-lg shadow-cyan-500/25 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-3"
-          >
+
             {isLoading ? (
               <>
                 <div className="animate-spin rounded-full h-4 w-4 border-b-2 border-white"></div>
@@ -276,7 +271,7 @@ const ForgotPassword: React.FC = () => {
             type="button"
             onClick={handleEmailSubmit}
             className="text-cyan-400 hover:text-cyan-300 text-sm transition-colors duration-200"
-          >
+
             Didn't receive the code? Resend
           </button>
         </div>
@@ -289,7 +284,7 @@ const ForgotPassword: React.FC = () => {
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.6 }}
-    >
+
       <div className="text-center mb-8">
         <div className="w-20 h-20 bg-gradient-to-br from-green-500 to-emerald-600 rounded-full flex items-center justify-center mx-auto mb-6">
           <CheckCircle className="w-10 h-10 text-white" />
@@ -321,7 +316,7 @@ const ForgotPassword: React.FC = () => {
               type="button"
               onClick={() => setShowPassword(!showPassword)}
               className="absolute right-3 top-1/2 transform -translate-y-1/2 text-slate-400 hover:text-white transition-colors duration-200"
-            >
+
               {showPassword ? 'Hide' : 'Show'}
             </button>
           </div>
@@ -364,7 +359,7 @@ const ForgotPassword: React.FC = () => {
               type="button"
               onClick={() => setShowConfirmPassword(!showConfirmPassword)}
               className="absolute right-3 top-1/2 transform -translate-y-1/2 text-slate-400 hover:text-white transition-colors duration-200"
-            >
+
               {showConfirmPassword ? 'Hide' : 'Show'}
             </button>
           </div>
@@ -374,7 +369,7 @@ const ForgotPassword: React.FC = () => {
           type="submit"
           disabled={isLoading}
           className="w-full py-3 bg-gradient-to-r from-green-500 to-emerald-600 text-white font-medium rounded-lg hover:from-green-600 hover:to-emerald-700 transition-all duration-300 shadow-lg shadow-green-500/25 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-3"
-        >
+
           {isLoading ? (
             <>
               <div className="animate-spin rounded-full h-4 w-4 border-b-2 border-white"></div>
@@ -402,7 +397,7 @@ const ForgotPassword: React.FC = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             className="mb-8"
-          >
+
             <Link to="/login" className="inline-flex items-center gap-2 text-cyan-400 hover:text-cyan-300 transition-colors duration-200">
               <ArrowLeft className="w-5 h-5" />
               Back to Login
@@ -415,7 +410,7 @@ const ForgotPassword: React.FC = () => {
               initial={{ opacity: 0, y: 10 }}
               animate={{ opacity: 1, y: 0 }}
               className="mb-6 p-4 bg-red-500/20 border border-red-500/30 rounded-lg flex items-center gap-3 text-red-400"
-            >
+
               <AlertCircle className="w-5 h-5" />
               {error}
             </motion.div>
@@ -426,7 +421,7 @@ const ForgotPassword: React.FC = () => {
               initial={{ opacity: 0, y: 10 }}
               animate={{ opacity: 1, y: 0 }}
               className="mb-6 p-4 bg-green-500/20 border border-green-500/30 rounded-lg flex items-center gap-3 text-green-400"
-            >
+
               <CheckCircle className="w-5 h-5" />
               {success}
             </motion.div>
@@ -445,7 +440,7 @@ const ForgotPassword: React.FC = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.4 }}
             className="mt-8 space-y-4"
-          >
+
             {securityFeatures.map((feature, index) => (
               <motion.div
                 key={feature.title}
@@ -453,7 +448,7 @@ const ForgotPassword: React.FC = () => {
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.6, delay: 0.6 + index * 0.1 }}
                 className="flex items-center gap-3 text-slate-300"
-              >
+
                 <div className="w-8 h-8 bg-gradient-to-br from-cyan-500 to-blue-600 rounded-lg flex items-center justify-center flex-shrink-0">
                   {feature.icon}
                 </div>
@@ -478,7 +473,7 @@ const ForgotPassword: React.FC = () => {
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.8, delay: 0.4 }}
               className="mb-8"
-            >
+
               <div className="flex justify-center gap-4 mb-6">
                 <div className="w-16 h-16 bg-gradient-to-br from-cyan-500 to-blue-600 rounded-2xl flex items-center justify-center">
                   <Brain className="w-8 h-8 text-white" />
@@ -497,7 +492,7 @@ const ForgotPassword: React.FC = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.6 }}
               className="text-4xl font-bold text-white mb-6"
-            >
+
               Secure & Reliable
             </motion.h2>
 
@@ -506,7 +501,7 @@ const ForgotPassword: React.FC = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.8 }}
               className="space-y-6 mb-8"
-            >
+
               {benefits.map((benefit, index) => (
                 <motion.div
                   key={benefit.title}
@@ -514,7 +509,7 @@ const ForgotPassword: React.FC = () => {
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ duration: 0.6, delay: 1.0 + index * 0.1 }}
                   className="flex items-center gap-4 text-left"
-                >
+
                   <div className="w-12 h-12 bg-gradient-to-br from-cyan-500 to-blue-600 rounded-xl flex items-center justify-center flex-shrink-0">
                     {benefit.icon}
                   </div>
@@ -535,7 +530,7 @@ const ForgotPassword: React.FC = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 1.2 }}
               className="p-6 bg-white/10 border border-slate-600/30 rounded-xl backdrop-blur-md"
-            >
+
               <div className="flex items-center gap-3 mb-3">
                 <Shield className="w-6 h-6 text-cyan-400" />
                 <h3 className="text-lg font-semibold text-white">
@@ -551,6 +546,6 @@ const ForgotPassword: React.FC = () => {
       </div>
     </div>
   );
-};
+</div>};
 
-export default ForgotPassword;
+export default ForgotPassword;}}}}}}}}}}

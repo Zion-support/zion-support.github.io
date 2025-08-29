@@ -13,7 +13,7 @@ export interface QuantumAiService2025 {
     email: string;
     address: string;
   };
-}
+
 export const quantumAIServices2025: QuantumAiService2025[] = [
   {
     id: "quantum-ai-hybrid",
@@ -35,6 +35,6 @@ export const quantumAIServices2025: QuantumAiService2025[] = [
       mobile: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       address: "364 E Main St STE 1008 Middletown DE 19709"
-    }
-  }
-];
+
+
+];}}}

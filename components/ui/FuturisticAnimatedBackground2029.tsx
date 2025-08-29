@@ -2,7 +2,6 @@ import React, { useEffect, useRef } from 'react';
 
 interface FuturisticAnimatedBackground2029Props {
   className?: string;
-}
 
 export default function FuturisticAnimatedBackground2029({ className = '' }: FuturisticAnimatedBackground2029Props) {
   const canvasRef = useRef<HTMLCanvasElement>(null);
@@ -43,7 +42,6 @@ export default function FuturisticAnimatedBackground2029({ className = '' }: Fut
         this.maxLife = Math.random() * 100 + 50;
         this.life = this.maxLife;
         this.color = `hsl(${Math.random() * 60 + 200}, 70%, 60%)`;
-      }
 
       update() {
         this.x += this.vx;
@@ -58,7 +56,6 @@ export default function FuturisticAnimatedBackground2029({ className = '' }: Fut
 
         // Add some gravity effect
         this.vy += 0.01;
-      }
 
       draw() {
         if (ctx) {
@@ -75,13 +72,11 @@ export default function FuturisticAnimatedBackground2029({ className = '' }: Fut
           ctx.shadowBlur = 10;
           ctx.fill();
           ctx.restore();
-        }
-      }
+
 
       isDead() {
         return this.life <= 0;
-      }
-    }
+
 
     // Grid system
     class Grid {
@@ -91,11 +86,9 @@ export default function FuturisticAnimatedBackground2029({ className = '' }: Fut
       constructor() {
         this.spacing = 60;
         this.offset = 0;
-      }
 
       update() {
         this.offset += 0.5;
-      }
 
       draw() {
         if (ctx) {
@@ -108,7 +101,6 @@ export default function FuturisticAnimatedBackground2029({ className = '' }: Fut
             ctx.moveTo(x, 0);
             ctx.lineTo(x, canvas.height);
             ctx.stroke();
-          }
 
           // Horizontal lines
           for (let y = this.offset % this.spacing; y < canvas.height; y += this.spacing) {
@@ -116,10 +108,9 @@ export default function FuturisticAnimatedBackground2029({ className = '' }: Fut
             ctx.moveTo(0, y);
             ctx.lineTo(canvas.width, y);
             ctx.stroke();
-          }
-        }
-      }
-    }
+
+
+
 
     // Wave system
     class Wave {
@@ -133,11 +124,9 @@ export default function FuturisticAnimatedBackground2029({ className = '' }: Fut
         this.frequency = 0.02;
         this.speed = 0.02;
         this.offset = 0;
-      }
 
       update() {
         this.offset += this.speed;
-      }
 
       draw() {
         if (ctx) {
@@ -151,13 +140,11 @@ export default function FuturisticAnimatedBackground2029({ className = '' }: Fut
               ctx.moveTo(x, y);
             } else {
               ctx.lineTo(x, y);
-            }
-          }
+
 
           ctx.stroke();
-        }
-      }
-    }
+
+
 
     // Create instances
     const particles: Particle[] = [];
@@ -167,7 +154,6 @@ export default function FuturisticAnimatedBackground2029({ className = '' }: Fut
     // Initialize particles
     for (let i = 0; i < 100; i++) {
       particles.push(new Particle());
-    }
 
     // Initialize waves
     for (let i = 0; i < 3; i++) {
@@ -176,7 +162,6 @@ export default function FuturisticAnimatedBackground2029({ className = '' }: Fut
       wave.frequency = 0.01 + i * 0.005;
       wave.speed = 0.01 + i * 0.005;
       waves.push(wave);
-    }
 
     // Animation loop
     let animationId: number;
@@ -202,7 +187,7 @@ export default function FuturisticAnimatedBackground2029({ className = '' }: Fut
 
         if (particle.isDead()) {
           particles[index] = new Particle();
-        }
+
       });
 
       // Draw connections between nearby particles
@@ -222,9 +207,8 @@ export default function FuturisticAnimatedBackground2029({ className = '' }: Fut
             ctx.moveTo(particles[i].x, particles[i].y);
             ctx.lineTo(particles[j].x, particles[j].y);
             ctx.stroke();
-          }
-        }
-      }
+
+
 
       // Add floating geometric shapes
       const time = Date.now() * 0.001;
@@ -244,8 +228,8 @@ export default function FuturisticAnimatedBackground2029({ className = '' }: Fut
           ctx.moveTo(x, y);
         } else {
           ctx.lineTo(x, y);
-        }
-      }
+
+
       ctx.closePath();
       ctx.stroke();
 
@@ -261,8 +245,8 @@ export default function FuturisticAnimatedBackground2029({ className = '' }: Fut
           ctx.moveTo(x, y);
         } else {
           ctx.lineTo(x, y);
-        }
-      }
+
+
       ctx.closePath();
       ctx.stroke();
 
@@ -278,7 +262,7 @@ export default function FuturisticAnimatedBackground2029({ className = '' }: Fut
       window.removeEventListener('resize', resizeCanvas);
       if (animationId) {
         cancelAnimationFrame(animationId);
-      }
+
     };
   }, []);
 
@@ -302,4 +286,4 @@ export default function FuturisticAnimatedBackground2029({ className = '' }: Fut
       <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-24 h-24 bg-gradient-to-r from-green-500/20 to-emerald-500/20 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '2s' }} />
     </div>
   );
-}
+</div></div></div></div></div>}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}

@@ -283,5 +283,6 @@ export const SPECIALIZED_IT_INFRASTRUCTURE_SERVICES_2025 = [
         uniqueValueProposition: "First AI-powered network performance platform achieving 50% performance improvement and 80% downtime reduction",
         marketSize: "$15.7 billion (network management market)",
         growthPotential: "500% annual growth expected"
-    }
+
 ];
+}

@@ -11,13 +11,10 @@ import {
   Database,
   Network,
   Shield
-} from 'lucide-react';
-
 interface LoadingSpinnerProps {
   size?: 'sm' | 'md' | 'lg';
   text?: string;
   fullScreen?: boolean;
-}
 
 export function LoadingSpinner({
   size = 'md',
@@ -48,7 +45,7 @@ export function LoadingSpinner({
             rotate: { duration: 2, repeat: Infinity, ease: "linear" },
             scale: { duration: 2, repeat: Infinity, ease: "easeInOut" }
           }}
-        >
+
           <div className={`${sizeClasses[size]} bg-gradient-to-br from-zion-cyan via-zion-purple to-zion-blue rounded-xl flex items-center justify-center relative overflow-hidden`}>
             <motion.div
               className="absolute inset-0 bg-gradient-to-br from-zion-cyan via-zion-purple to-zion-blue"
@@ -77,7 +74,7 @@ export function LoadingSpinner({
           className="text-zion-cyan font-medium"
           animate={{ opacity: [0.5, 1, 0.5] }}
           transition={{ duration: 1.5, repeat: Infinity }}
-        >
+
           {text}
         </motion.div>
 
@@ -102,11 +99,9 @@ export function LoadingSpinner({
       </div>
     </div>
   );
-}
 
 interface PageLoaderProps {
   pageName?: string;
-}
 
 export function PageLoader({ pageName = 'Page' }: PageLoaderProps) {
   return (
@@ -138,7 +133,7 @@ export function PageLoader({ pageName = 'Page' }: PageLoaderProps) {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
           className="relative z-10"
-        >
+
           <div className="relative">
             <div className="w-32 h-32 border-4 border-zion-cyan/20 rounded-full mx-auto mb-6"></div>
             <motion.div
@@ -155,7 +150,7 @@ export function PageLoader({ pageName = 'Page' }: PageLoaderProps) {
             className="text-2xl font-bold text-white mb-2"
             animate={{ opacity: [0.7, 1, 0.7] }}
             transition={{ duration: 2, repeat: Infinity }}
-          >
+
             Loading {pageName}
           </motion.h2>
 
@@ -163,7 +158,7 @@ export function PageLoader({ pageName = 'Page' }: PageLoaderProps) {
             className="text-zion-slate-light"
             animate={{ opacity: [0.5, 1, 0.5] }}
             transition={{ duration: 2, repeat: Infinity, delay: 0.5 }}
-          >
+
             Please wait while we prepare everything for you...
           </motion.p>
 
@@ -182,12 +177,10 @@ export function PageLoader({ pageName = 'Page' }: PageLoaderProps) {
       </div>
     </div>
   );
-}
 
 interface SkeletonLoaderProps {
   lines?: number;
   className?: string;
-}
 
 export function SkeletonLoader({ lines = 3, className = '' }: SkeletonLoaderProps) {
   return (
@@ -213,4 +206,4 @@ export function SkeletonLoader({ lines = 3, className = '' }: SkeletonLoaderProp
       ))}
     </div>
   );
-}
+}}}}}}</motion.div></motion.div></motion.div></motion.div></motion.div></motion.div></motion.div></motion.div>}

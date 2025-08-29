@@ -1,7 +1,6 @@
 import React, { useState, useCallback } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Code, Sparkles, Download, TestTube, FileText, Settings, Zap, Shield, Gauge, Wrench, Eye, Trash2, Copy, CheckCircle, AlertCircle, Info, Loader2 } from 'lucide-react';
-import { useAICodeGeneration } from '../hooks/useAICodeGeneration';
+import { Code, Sparkles, Download, TestTube, FileText, Settings, Zap, Shield, Gauge, Wrench, Eye, Trash2, Copy, CheckCircle, AlertCircle, Info, Loader2 import { useAICodeGeneration } from '../hooks/useAICodeGeneration';
 import { useAnalytics } from '../hooks/useAnalytics';
 export const AICodeGenerator = () => {
     const { trackEvent } = useAnalytics({
@@ -55,7 +54,7 @@ export const AICodeGenerator = () => {
         if (generatedCode) {
             // Update generated code
             // Note: In a real implementation, you'd want to update the state properly
-        }
+
         trackEvent('ai_code_generator', 'code_optimized', focus, optimizedCode.length);
     }, [generatedCode, customCode, optimizeCode, trackEvent]);
     // Handle test generation
@@ -65,7 +64,7 @@ export const AICodeGenerator = () => {
         const codeToTest = generatedCode || customCode;
         const testCode = await generateTests(codeToTest, form.language);
         // In a real implementation, you'd want to display the test code
-        // console.log('Generated tests:', testCode);
+        // // // console.log('Generated tests:', testCode);
         trackEvent('ai_code_generator', 'tests_generated', form.language, testCode.length);
     }, [generatedCode, customCode, generateTests, form.language, trackEvent]);
     // Handle documentation generation
@@ -75,7 +74,7 @@ export const AICodeGenerator = () => {
         const codeToDoc = generatedCode || customCode;
         const docs = await generateDocs(codeToDoc, form.language);
         // In a real implementation, you'd want to display the documentation
-        // console.log('Generated docs:', docs);
+        // // // console.log('Generated docs:', docs);
         trackEvent('ai_code_generator', 'docs_generated', form.language, docs.length);
     }, [generatedCode, customCode, generateDocs, form.language, trackEvent]);
     // Copy code to clipboard
@@ -85,10 +84,10 @@ export const AICodeGenerator = () => {
             setCopied(true);
             setTimeout(() => setCopied(false), 2000);
             trackEvent('ai_code_generator', 'code_copied', 'clipboard', code.length);
-        }
+
         catch (error) {
-            // console.error('Failed to copy code:', error);
-        }
+            // // // console.error('Failed to copy code:', error);
+
     }, [trackEvent]);
     // Apply suggestion
     const handleApplySuggestion = useCallback((suggestion) => {
@@ -311,7 +310,7 @@ export const AICodeGenerator = () => {
                             </div>
                             <div className="text-sm text-gray-600 dark:text-gray-400">{label}</div>
                           </div>);
-                    }
+
                     return null;
                 })}
                   </div>
@@ -505,3 +504,4 @@ export const AICodeGenerator = () => {
       </div>
     </div>);
 };
+}}}}}

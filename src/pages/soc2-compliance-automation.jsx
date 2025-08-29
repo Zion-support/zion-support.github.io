@@ -20,7 +20,7 @@ const Soc2ComplianceAutomation = () => {
             title: "Audit Preparation",
             description: "Automated report generation and audit preparation",
             icon: "📊"
-        }
+
     ];
     const soc2Criteria = [
         {
@@ -47,7 +47,7 @@ const Soc2ComplianceAutomation = () => {
             principle: "Privacy",
             description: "Personal information protection and privacy controls",
             controls: ["Data minimization", "Consent management", "Data retention", "Privacy by design"]
-        }
+
     ];
     const automationBenefits = [
         {
@@ -69,7 +69,7 @@ const Soc2ComplianceAutomation = () => {
             title: "Continuous Compliance",
             description: "24/7 monitoring and real-time compliance status",
             metric: "24/7"
-        }
+
     ];
     const complianceTools = [
         {
@@ -87,7 +87,7 @@ const Soc2ComplianceAutomation = () => {
         {
             category: "Reporting & Analytics",
             tools: ["Compliance reports", "Trend analysis", "Gap analysis", "Executive dashboards"]
-        }
+
     ];
     return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white">
       <section className="py-20 px-4 sm:px-6 lg:px-8">
@@ -288,3 +288,4 @@ const Soc2ComplianceAutomation = () => {
     </div>);
 };
 export default Soc2ComplianceAutomation;
+}}}}

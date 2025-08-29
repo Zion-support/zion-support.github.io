@@ -37,7 +37,7 @@ export interface InnovativeITService {
   customers: number;
   rating: number;
   reviews: number;
-}
+
 export const innovativeITServices: InnovativeITService[] = [
   {
     id: 'quantum-cloud-orchestrator',
@@ -344,5 +344,5 @@ export const innovativeITServices: InnovativeITService[] = [
     customers: 180,
     rating: 4.8,
     reviews: 234
-  }
-];
+
+];}}

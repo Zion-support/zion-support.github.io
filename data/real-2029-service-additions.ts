@@ -274,5 +274,5 @@ export const real2029ServiceAdditions = [
     customers: 27,
     rating: 4.5,
     reviews: 21
-  }
-];
+
+];}

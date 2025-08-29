@@ -1,7 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { MessageCircle, Brain, Shield, Users, BarChart3, Clock, DollarSign, Smartphone, Globe, Zap, CheckCircle, TrendingUp, Phone, Mail, MessageSquare, Bot } from 'lucide-react';
-export default function AICustomerServiceAutomation() {
+import { MessageCircle, Brain, Shield, Users, BarChart3, Clock, DollarSign, Smartphone, Globe, Zap, CheckCircle, TrendingUp, Phone, Mail, MessageSquare, Bot export default function AICustomerServiceAutomation() {
     const features = [
         {
             icon: Brain,
@@ -32,7 +31,7 @@ export default function AICustomerServiceAutomation() {
             icon: Shield,
             title: "Data Security",
             description: "Enterprise-grade security with GDPR and SOC2 compliance for customer data protection"
-        }
+
     ];
     const pricingPlans = [
         {
@@ -86,7 +85,7 @@ export default function AICustomerServiceAutomation() {
             ],
             cta: "Contact Sales",
             popular: false
-        }
+
     ];
     const benefits = [
         {
@@ -118,7 +117,7 @@ export default function AICustomerServiceAutomation() {
             icon: BarChart3,
             title: "Data Insights",
             description: "Gain valuable insights into customer behavior and service optimization opportunities"
-        }
+
     ];
     const channels = [
         {
@@ -150,7 +149,7 @@ export default function AICustomerServiceAutomation() {
             icon: Bot,
             title: "Messaging Apps",
             description: "Support for WhatsApp, Facebook Messenger, Slack, and other messaging platforms"
-        }
+
     ];
     return (<div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-indigo-900 pt-20">
       {/* Hero Section */}
@@ -314,4 +313,4 @@ export default function AICustomerServiceAutomation() {
         </div>
       </div>
     </div>);
-}
+}}}}}}

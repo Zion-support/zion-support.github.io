@@ -9,12 +9,10 @@ interface User {
   isEmailVerified?: boolean;
   createdAt?: string;
   updatedAt?: string;
-}
 
 interface AuthTokens {
   accessToken: string | null;
   refreshToken: string | null;
-}
 
 export const useAuthState = () => {
   const [user, setUser] = useState<User | null>(null);
@@ -39,14 +37,14 @@ export const useAuthState = () => {
                 accessToken: parsed.token,
                 refreshToken: parsed.refreshToken || null
               });
-            }
-          }
-        }
+
+
+
       } catch (error) {
-        // console.error('Error checking auth state:', error);
+        // // // console.error('Error checking auth state:', error);
       } finally {
         setIsLoading(false);
-      }
+
     };
 
     checkAuthState();
@@ -62,4 +60,4 @@ export const useAuthState = () => {
     tokens,
     setTokens
   };
-};
+};}}}}}}

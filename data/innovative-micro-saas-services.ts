@@ -13,7 +13,7 @@ export interface InnovativeMicroSaasService {
     email: string;
     address: string;
   };
-}
+
 export const innovativeMicroSaasServices: InnovativeMicroSaasService[] = [
   {
     id: "smart-project-manager",
@@ -35,6 +35,6 @@ export const innovativeMicroSaasServices: InnovativeMicroSaasService[] = [
       mobile: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       address: "364 E Main St STE 1008 Middletown DE 19709"
-    }
-  }
-];
+
+
+];}}}

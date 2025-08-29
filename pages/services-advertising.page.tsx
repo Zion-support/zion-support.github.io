@@ -1,8 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
-import { ArrowRight, CheckCircle, ExternalLink, Phone, Mail, MapPin } from 'lucide-react';
-import { Link } from 'react-router-dom';
+import { ArrowRight, CheckCircle, ExternalLink, Phone, Mail, MapPin import { Link } from 'react-router-dom';
 export default function ServicesAdvertisingPage() {
   const contact = {
     mobile: '+1 302 464 0950',
@@ -121,7 +120,7 @@ export default function ServicesAdvertisingPage() {
         { name: 'Grafana Cloud', href: 'https://grafana.com/pricing/' }
       ],
       note: 'SMB budgets: $50–$2,000/mo.'
-    }
+
   ];
   const external = {
     privacy: [
@@ -144,7 +143,7 @@ export default function ServicesAdvertisingPage() {
     return (
       <a className="text-cyan-400 underline" href={url} target="_blank" rel="noopener noreferrer">{new URL(url).host}/pricing</a>
     );
-  }
+
   return (
     <div className="min-h-screen bg-black">
       <Helmet>
@@ -541,4 +540,4 @@ export default function ServicesAdvertisingPage() {
       </div>
     </div>
   );
-}
+}}}}

@@ -221,4 +221,4 @@ export const FuturisticServicesShowcase = () => {
         </motion.div>
       </div>
     </div>);
-};
+</div></motion.div></motion.div>};

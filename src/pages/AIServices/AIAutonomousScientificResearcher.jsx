@@ -1,8 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import { Brain, TrendingUp, Zap, BarChart3, CheckCircle, ArrowRight, Play } from 'lucide-react';
-import SEO from '../SEO';
+import { Brain, TrendingUp, Zap, BarChart3, CheckCircle, ArrowRight, Play import SEO from '../SEO';
 const features = [
     {
         title: "AI-Powered Autonomous Scientific Researcher",
@@ -27,7 +26,7 @@ const features = [
         description: "Built to grow with your business needs, from startup to enterprise scale.",
         icon: TrendingUp,
         color: "from-orange-500 to-red-500"
-    }
+
 ];
 const benefits = [
     "Increase efficiency and productivity",
@@ -148,4 +147,4 @@ export default function AIAutonomousScientificResearcher() {
         </div>
       </section>
     </div>);
-}
+}}}

@@ -1,6 +1,5 @@
 import { useState } from "react";
-import { MessageSquare } from "lucide-react";
-import { Button } from "@/components/ui/button";
+import { MessageSquare import { Button } from "@/components/ui/button";
 import { ChatAssistant } from "@/components/ChatAssistant";
 import { apiClient } from "@/utils/apiClient";
 export function ChatAssistantTrigger() {
@@ -19,13 +18,13 @@ export function ChatAssistantTrigger() {
             });
             if (!response.ok) {
                 throw new Error("Failed to get response from AI assistant");
-            }
+
             return Promise.resolve();
-        }
+
         catch (error) {
-            // console.error("Error in AI chat:", error);
+            // // // console.error("Error in AI chat:", error);
             return Promise.resolve();
-        }
+
     };
     return (<>
       <Button onClick={() => setIsOpen(true)} size="icon" variant="outline" className="fixed bottom-4 right-4 h-12 w-12 rounded-full shadow-lg bg-zion-purple text-white hover:bg-zion-purple-light z-50" aria-label="Open chat assistant">
@@ -39,4 +38,4 @@ export function ChatAssistantTrigger() {
                 role: 'Virtual Assistant'
             }} onSendMessage={handleSendMessage}/>)}
     </>);
-}
+}}}}}

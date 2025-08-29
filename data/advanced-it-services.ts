@@ -37,7 +37,7 @@ export interface AdvancedITService {
   customers: number;
   rating: number;
   reviews: number;
-}
+
 export const advancedITServices: AdvancedITService[] = [
   {
     id: 'quantum-cloud-platform',
@@ -497,5 +497,5 @@ export const advancedITServices: AdvancedITService[] = [
     customers: 89,
     rating: 4.8,
     reviews: 45
-  }
-];
+
+];}}

@@ -1,6 +1,5 @@
 import React from 'react';
-import { Link as LinkIcon, Shield, Users, Globe, Database, Network, TrendingUp, Lock, Eye, Target } from 'lucide-react';
-const BlockchainWeb3 = () => {
+import { Link as LinkIcon, Shield, Users, Globe, Database, Network, TrendingUp, Lock, Eye, Target const BlockchainWeb3 = () => {
     const blockchainServices = [
         {
             icon: LinkIcon,
@@ -37,7 +36,7 @@ const BlockchainWeb3 = () => {
             title: "Enterprise Blockchain",
             description: "Private and consortium blockchain solutions for enterprise applications",
             features: ["Hyperledger Fabric", "Permissioned networks", "Identity management", "Supply chain tracking"]
-        }
+
     ];
     const web3Technologies = [
         {
@@ -69,7 +68,7 @@ const BlockchainWeb3 = () => {
             name: "Avalanche",
             description: "Fast consensus protocol",
             icon: "AVAX"
-        }
+
     ];
     const useCases = [
         {
@@ -101,7 +100,7 @@ const BlockchainWeb3 = () => {
             title: "Real Estate",
             description: "Property tokenization and fractional ownership",
             icon: Target
-        }
+
     ];
     const benefits = [
         "Transparent and immutable record-keeping",
@@ -326,3 +325,4 @@ const BlockchainWeb3 = () => {
     </div>);
 };
 export default BlockchainWeb3;
+}}}}

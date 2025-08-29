@@ -226,5 +226,5 @@ export const SPECIALIZED_FINANCIAL_AI_SERVICES_2028: ProductListing[] = [
     roi: "750% within 15 months",
     setupTime: "8-10 weeks",
     integrations: ["Insurance Systems", "Risk Models", "Customer Data", "Policy Management", "Claims Systems"]
-  }
-];
+
+];}

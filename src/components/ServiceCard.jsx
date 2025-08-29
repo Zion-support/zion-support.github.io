@@ -11,7 +11,7 @@ const ServiceCard = ({ title, description, icon, price, category, features, isPo
             transition: {
                 duration: 0.5,
                 ease: "easeOut"
-            }
+
         },
         hover: {
             y: -12,
@@ -19,8 +19,8 @@ const ServiceCard = ({ title, description, icon, price, category, features, isPo
             transition: {
                 duration: 0.3,
                 ease: "easeOut"
-            }
-        }
+
+
     };
     const iconVariants = {
         hidden: { scale: 0.8, opacity: 0 },
@@ -30,7 +30,7 @@ const ServiceCard = ({ title, description, icon, price, category, features, isPo
             transition: {
                 duration: 0.5,
                 ease: "easeOut"
-            }
+
         },
         hover: {
             scale: 1.2,
@@ -38,8 +38,8 @@ const ServiceCard = ({ title, description, icon, price, category, features, isPo
             transition: {
                 duration: 0.6,
                 ease: "easeInOut"
-            }
-        }
+
+
     };
     const featureVariants = {
         hover: {
@@ -47,8 +47,8 @@ const ServiceCard = ({ title, description, icon, price, category, features, isPo
             transition: {
                 duration: 0.3,
                 ease: "easeOut"
-            }
-        }
+
+
     };
     const badgeVariants = {
         hidden: { scale: 0, opacity: 0 },
@@ -58,8 +58,8 @@ const ServiceCard = ({ title, description, icon, price, category, features, isPo
             transition: {
                 duration: 0.3,
                 ease: "backOut"
-            }
-        }
+
+
     };
     return (<motion.div variants={cardVariants} initial="hidden" whileInView="visible" whileHover="hover" viewport={{ once: true }} className="group relative h-full">
       {/* Enhanced Popular Badge */}
@@ -150,5 +150,6 @@ const ServiceCard = ({ title, description, icon, price, category, features, isPo
         <div className="absolute top-1/2 left-2 w-1 h-1 bg-zion-blue/50 rounded-full opacity-0 group-hover:opacity-100 group-hover:animate-float transition-all duration-500 delay-400"/>
       </div>
     </motion.div>);
-};
+</div></div></div></div></div></div></div>};
 export default ServiceCard;
+}}}}}}}}}}

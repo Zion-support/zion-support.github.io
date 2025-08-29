@@ -12,27 +12,27 @@ function cartReducer(state, action) {
                 items = state.items.map(i => i.id === action.payload.id
                     ? { ...i, quantity: i.quantity + action.payload.quantity }
                     : i);
-            }
+
             else {
                 items = [...state.items, action.payload];
-            }
+
             return { items };
-        }
+
         case 'REMOVE_ITEM':
             return { items: state.items.filter(i => i.id !== action.payload) };
         case 'CLEAR_CART':
             return { items: [] };
         default:
             return state;
-    }
-}
+
+
 const CartContext = createContext(undefined);
 export function useCart() {
     const ctx = useContext(CartContext);
     if (!ctx)
         throw new Error('useCart must be used within a CartProvider');
     return ctx;
-}
+
 export function CartProvider({ children }) {
     const { user } = useAuth();
     const [state, dispatch] = useReducer(cartReducer, initialState);
@@ -43,11 +43,11 @@ export function CartProvider({ children }) {
         if (stored) {
             try {
                 items = JSON.parse(stored);
-            }
+
             catch {
                 items = [];
-            }
-        }
+
+
         // Merge guest cart when user logs in
         if (user?.id) {
             const guestStored = safeStorage.getItem(getCartKey());
@@ -55,13 +55,13 @@ export function CartProvider({ children }) {
                 try {
                     const guestItems = JSON.parse(guestStored);
                     items = mergeCartItems(items, guestItems);
-                }
+
                 catch {
                     /* ignore */
-                }
+
                 safeStorage.removeItem(getCartKey());
-            }
-        }
+
+
         dispatch({ type: 'SET_ITEMS', payload: items });
     }, [cartKey]);
     useEffect(() => {
@@ -72,4 +72,4 @@ export function CartProvider({ children }) {
         dispatch,
     };
     return <CartContext.Provider value={value}>{children}</CartContext.Provider>;
-}
+}}}}}}}}}}}}}}

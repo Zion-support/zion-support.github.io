@@ -215,5 +215,5 @@ export const realServicesQ42025: EnhancedRealMicroSaasService[] = [
 		customers: 9,
 		rating: 4.5,
 		reviews: 6
-	}
-];
+
+];}

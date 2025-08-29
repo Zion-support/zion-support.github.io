@@ -1,9 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Menu, X, ChevronDown, Zap, Shield, Cpu, Database, Globe, Smartphone, Lock } from 'lucide-react';
-
-const ModernHeader: React.FC = () => {
+import { Menu, X, ChevronDown, Zap, Shield, Cpu, Database, Globe, Smartphone, Lock const ModernHeader: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
@@ -35,7 +33,7 @@ const ModernHeader: React.FC = () => {
       initial={{ y: -100 }}
       animate={{ y: 0 }}
       transition={{ duration: 0.6, ease: "easeOut" }}
-    >
+
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
@@ -44,7 +42,7 @@ const ModernHeader: React.FC = () => {
               className="relative"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-            >
+
               <div className="w-10 h-10 bg-gradient-to-br from-neon-blue to-neon-purple rounded-lg flex items-center justify-center">
                 <Zap className="w-6 h-6 text-white" />
               </div>
@@ -70,7 +68,7 @@ const ModernHeader: React.FC = () => {
                 className="nav-link flex items-center space-x-1"
                 onMouseEnter={() => setActiveDropdown('services')}
                 onMouseLeave={() => setActiveDropdown(null)}
-              >
+
                 <span>Services</span>
                 <ChevronDown className="w-4 h-4 transition-transform group-hover:rotate-180" />
               </button>
@@ -85,14 +83,14 @@ const ModernHeader: React.FC = () => {
                     transition={{ duration: 0.2 }}
                     onMouseEnter={() => setActiveDropdown('services')}
                     onMouseLeave={() => setActiveDropdown(null)}
-                  >
+
                     <div className="grid grid-cols-2 gap-3">
                       {serviceCategories.map((category) => (
                         <Link
                           key={category.name}
                           href={category.href}
                           className="flex items-center space-x-3 p-3 rounded-lg hover:bg-neon-blue/10 transition-colors group"
-                        >
+
                           <category.icon className="w-5 h-5 text-neon-blue group-hover:text-neon-purple transition-colors" />
                           <span className="text-white group-hover:text-neon-blue transition-colors">
                             {category.name}
@@ -104,7 +102,7 @@ const ModernHeader: React.FC = () => {
                       <Link
                         href="/services"
                         className="block text-center text-neon-blue hover:text-neon-purple transition-colors font-medium"
-                      >
+
                         View All Services →
                       </Link>
                     </div>
@@ -133,7 +131,7 @@ const ModernHeader: React.FC = () => {
                 className="px-6 py-3 bg-gradient-to-r from-neon-blue to-neon-purple text-white font-semibold rounded-lg hover:from-neon-purple hover:to-neon-blue transition-all duration-300 shadow-lg hover:shadow-neon-blue/25"
                 whileHover={{ scale: 1.05, y: -2 }}
                 whileTap={{ scale: 0.95 }}
-              >
+
                 Get Started
               </motion.button>
             </Link>
@@ -143,7 +141,7 @@ const ModernHeader: React.FC = () => {
           <button
             className="lg:hidden p-2 text-white hover:text-neon-blue transition-colors"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
-          >
+
             {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
           </button>
         </div>
@@ -158,7 +156,7 @@ const ModernHeader: React.FC = () => {
             animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}
             transition={{ duration: 0.3 }}
-          >
+
             <div className="container mx-auto px-4 py-6 space-y-4">
               <Link href="/" className="mobile-nav-link">
                 Home
@@ -188,6 +186,6 @@ const ModernHeader: React.FC = () => {
       </AnimatePresence>
     </motion.header>
   );
-};
+</div>};
 
-export default ModernHeader;
+export default ModernHeader;}

@@ -8,15 +8,13 @@ interface ApiResponse<T = any> {
   error?: string;
   message?: string;
   count?: number;
-}
 
 // Generic API error
 class ApiError extends Error {
   constructor(public status: number, message: string) {
     super(message);
     this.name = 'ApiError';
-  }
-}
+
 
 // Generic fetch wrapper with error handling
 async function apiRequest<T>(
@@ -38,17 +36,15 @@ async function apiRequest<T>(
 
     if (!response.ok) {
       throw new ApiError(response.status, `HTTP error! status: ${response.status}`);
-    }
 
     const data = await response.json();
     return data;
   } catch (error) {
     if (error instanceof ApiError) {
       throw error;
-    }
+
     throw new ApiError(500, `Network error: ${error instanceof Error ? error.message : 'Unknown error'}`);
-  }
-}
+
 
 // API methods
 export const api = {
@@ -67,4 +63,4 @@ export const api = {
 
 // Export types for use in components
 export type { ApiResponse };
-export { ApiError };
+export { ApiError };}}}}}}}

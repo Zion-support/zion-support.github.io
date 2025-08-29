@@ -3,8 +3,7 @@ import { SEO } from "@/components/SEO";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { Check, Shield, AlertTriangle, Eye } from "lucide-react";
-import { Link } from "react-router-dom";
+import { Check, Shield, AlertTriangle, Eye import { Link } from "react-router-dom";
 export default function CybersecuritySuite() {
     const features = [
         "24/7 threat monitoring and detection",
@@ -71,7 +70,7 @@ export default function CybersecuritySuite() {
                 "API access & integrations"
             ],
             popular: false
-        }
+
     ];
     const securityServices = [
         {
@@ -93,7 +92,7 @@ export default function CybersecuritySuite() {
             title: "Incident Response",
             description: "Rapid incident response with automated playbooks and expert security team support.",
             icon: <Shield className="h-8 w-8 text-zion-purple"/>
-        }
+
     ];
     const complianceFrameworks = [
         "GDPR (General Data Protection Regulation)",
@@ -279,4 +278,4 @@ export default function CybersecuritySuite() {
         </div>
       </section>
     </div>);
-}
+</Card></Card></Card></Card></Card></Card></Card>}}}}

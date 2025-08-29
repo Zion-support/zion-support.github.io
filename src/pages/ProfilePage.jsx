@@ -6,8 +6,7 @@ import { SEO } from "@/components/SEO";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Badge } from "@/components/ui/badge";
 import { HireNowCTA } from "@/components/profile/HireNowCTA";
-import { MapPin, Clock, Link as LinkIcon, Github, Twitter, Linkedin, CheckCircle2 } from "lucide-react";
-export default function ProfilePage() {
+import { MapPin, Clock, Link as LinkIcon, Github, Twitter, Linkedin, CheckCircle2 export default function ProfilePage() {
     // useParams may be untyped in this environment, so avoid passing a
     // type argument and cast the result instead to prevent TS2347 errors.
     const { profileId } = useParams();
@@ -26,36 +25,36 @@ export default function ProfilePage() {
                     .single();
                 if (error) {
                     throw error;
-                }
+
                 setProfileData(data);
-            }
+
             catch (error) {
-                // console.error("Error fetching profile:", error);
+                // // // console.error("Error fetching profile:", error);
                 setIsError(true);
                 toast({
                     title: "Error",
                     description: "Failed to load profile. Please try again later.",
                     variant: "destructive",
                 });
-            }
+
             finally {
                 setIsLoading(false);
-            }
+
         };
         if (profileId) {
             fetchProfile();
-        }
+
     }, [profileId]);
     if (isLoading) {
         return (<div className="min-h-screen flex items-center justify-center">
         <span className="loading loading-ring loading-lg"></span>
       </div>);
-    }
+
     if (isError || !profileData) {
         return (<div className="min-h-screen flex items-center justify-center">
         <p className="text-red-500">Failed to load profile.</p>
       </div>);
-    }
+
     return (<>
       <SEO title={`${profileData.full_name} | Talent Profile`} description={profileData.bio || "View the profile of this talented individual."}/>
 
@@ -163,4 +162,4 @@ export default function ProfilePage() {
       </div>
 
     </>);
-}
+}}}}}}}}}

@@ -37,7 +37,7 @@ export interface AdvancedCybersecurityService {
   customers: number;
   rating: number;
   reviews: number;
-}
+
 const contact = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
@@ -314,5 +314,5 @@ export const advancedCybersecurityServices2025: AdvancedCybersecurityService[] =
     customers: 52,
     rating: 4.5,
     reviews: 96
-  }
-];
+
+];}}

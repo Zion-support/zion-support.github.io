@@ -38,7 +38,7 @@ export interface AdvancedITInfrastructureService {
   customers: number;
   rating: number;
   reviews: number;
-}
+
 export const advancedITInfrastructure2025: AdvancedITInfrastructureService[] = [
   // Multi-Cloud Orchestration Platform
   {
@@ -1027,6 +1027,6 @@ export const advancedITInfrastructure2025: AdvancedITInfrastructureService[] = [
     customers: 32,
     rating: 4.7,
     reviews: 24
-  }
+
 ];
-export default advancedITInfrastructure2025;
+export default advancedITInfrastructure2025;}}

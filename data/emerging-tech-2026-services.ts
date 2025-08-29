@@ -38,7 +38,7 @@ export interface EmergingTech2026Service {
   customers: number;
   rating: number;
   reviews: number;
-}
+
 export const emergingTech2026Services: EmergingTech2026Service[] = [
   // Neural Interface Development Platform
   {
@@ -507,5 +507,5 @@ export const emergingTech2026Services: EmergingTech2026Service[] = [
     customers: 320,
     rating: 4.8,
     reviews: 198
-  }
-];
+
+];}}

@@ -194,7 +194,7 @@ const ErrorFallback = ({ error, resetErrorBoundary }: { error: Error; resetError
       <button
         onClick={resetErrorBoundary}
         className="px-6 py-3 bg-red-500 text-white rounded-lg hover:bg-red-600 transition-colors"
-      >
+
         Try again
       </button>
     </div>
@@ -245,10 +245,10 @@ function App() {
                           animate={{ opacity: 1 }}
                           exit={{ opacity: 0 }}
                           transition={{ duration: 0.3 }}
-                        >
+
                           <Home />
                         </motion.div>
-                      }
+
                     />
                     <Route path="/home2026" element={<Home2026 />} />
                     <Route path="/about" element={<About />} />
@@ -416,7 +416,7 @@ function App() {
                           exit={{ opacity: 0 }}
                           transition={{ duration: 0.3 }}
                           className="min-h-screen flex items-center justify-center bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900"
-                        >
+
                           <div className="text-center text-white">
                             <h1 className="text-6xl font-bold mb-4">404</h1>
                             <h2 className="text-2xl font-semibold mb-4">Page Not Found</h2>
@@ -426,18 +426,18 @@ function App() {
                             <button
                               onClick={() => window.history.back()}
                               className="px-6 py-3 bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition-colors mr-4"
-                            >
+
                               Go Back
                             </button>
                             <button
                               onClick={() => window.location.href = '/'}
                               className="px-6 py-3 bg-gray-500 text-white rounded-lg hover:bg-gray-600 transition-colors"
-                            >
+
                               Go Home
                             </button>
                           </div>
                         </motion.div>
-                      }
+
                     />
                   </Routes>
                 </AnimatePresence>
@@ -465,6 +465,5 @@ function App() {
       </ErrorBoundary>
     </HelmetProvider>
   );
-}
 
-export default App;
+export default App;}}}

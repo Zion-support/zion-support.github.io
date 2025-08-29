@@ -13,7 +13,6 @@ import {
   Star,
   CheckCircle,
   Rocket
-} from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 interface AIService {
@@ -30,7 +29,6 @@ interface AIService {
   icon: React.ComponentType<any>;
   route: string;
   status: 'active' | 'beta' | 'coming-soon';
-}
 
 const AdvancedAIServicesHub: React.FC = () => {
   const [selectedCategory, setSelectedCategory] = useState<string>('all');
@@ -103,7 +101,7 @@ const AdvancedAIServicesHub: React.FC = () => {
       icon: Cpu,
       route: '/services/ai-healthcare',
       status: 'coming-soon'
-    }
+
   ];
 
   const categories = ['all', ...Array.from(new Set(aiServices.map(service => service.category)))];
@@ -125,7 +123,7 @@ const AdvancedAIServicesHub: React.FC = () => {
         return a.status.localeCompare(b.status);
       default:
         return 0;
-    }
+
   });
 
   const getStatusColor = (status: string) => {
@@ -134,7 +132,7 @@ const AdvancedAIServicesHub: React.FC = () => {
       case 'beta': return 'bg-yellow-500';
       case 'coming-soon': return 'bg-blue-500';
       default: return 'bg-gray-500';
-    }
+
   };
 
   const getStatusText = (status: string) => {
@@ -143,7 +141,7 @@ const AdvancedAIServicesHub: React.FC = () => {
       case 'beta': return 'Beta';
       case 'coming-soon': return 'Coming Soon';
       default: return 'Unknown';
-    }
+
   };
 
   return (
@@ -156,7 +154,7 @@ const AdvancedAIServicesHub: React.FC = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="mb-8"
-          >
+
             <div className="inline-flex items-center px-4 py-2 bg-blue-600/20 text-blue-400 rounded-full text-sm font-medium mb-6">
               <Brain className="w-4 h-4 mr-2" />
               AI-Powered Solutions Hub
@@ -179,7 +177,7 @@ const AdvancedAIServicesHub: React.FC = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
             className="flex flex-col lg:flex-row gap-4 justify-center items-center mb-12"
-          >
+
             <div className="relative w-full max-w-md">
               <input
                 type="text"
@@ -195,7 +193,7 @@ const AdvancedAIServicesHub: React.FC = () => {
               value={selectedCategory}
               onChange={(e) => setSelectedCategory(e.target.value)}
               className="px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-blue-500"
-            >
+
               {categories.map(category => (
                 <option key={category} value={category} className="bg-slate-800 text-white">
                   {category === 'all' ? 'All Categories' : category}
@@ -207,7 +205,7 @@ const AdvancedAIServicesHub: React.FC = () => {
               value={sortBy}
               onChange={(e) => setSortBy(e.target.value as 'name' | 'category' | 'status')}
               className="px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-blue-500"
-            >
+
               <option value="name" className="bg-slate-800 text-white">Sort by Name</option>
               <option value="category" className="bg-slate-800 text-white">Sort by Category</option>
               <option value="status" className="bg-slate-800 text-white">Sort by Status</option>
@@ -227,7 +225,7 @@ const AdvancedAIServicesHub: React.FC = () => {
               exit={{ opacity: 0 }}
               transition={{ duration: 0.3 }}
               className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
-            >
+
               {sortedServices.map((service, index) => (
                 <motion.div
                   key={service.id}
@@ -235,7 +233,7 @@ const AdvancedAIServicesHub: React.FC = () => {
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
                   className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 hover:border-blue-500/50 transition-all duration-300 hover:transform hover:scale-105"
-                >
+
                   {/* Service Header */}
                   <div className="flex items-start justify-between mb-4">
                     <div className="w-12 h-12 bg-blue-500/20 rounded-lg flex items-center justify-center">
@@ -276,7 +274,7 @@ const AdvancedAIServicesHub: React.FC = () => {
                   <Link
                     to={service.route}
                     className="w-full bg-gradient-to-r from-blue-600 to-cyan-600 text-white py-3 px-4 rounded-lg font-semibold hover:from-blue-700 hover:to-cyan-700 transition-all duration-300 flex items-center justify-center group"
-                  >
+
                     Explore Service
                     <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform duration-300" />
                   </Link>
@@ -291,7 +289,7 @@ const AdvancedAIServicesHub: React.FC = () => {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               className="text-center py-20"
-            >
+
               <Brain className="w-16 h-16 text-gray-500 mx-auto mb-4" />
               <h3 className="text-xl font-semibold text-gray-400 mb-2">No services found</h3>
               <p className="text-gray-500">Try adjusting your search criteria or category filter.</p>
@@ -308,7 +306,7 @@ const AdvancedAIServicesHub: React.FC = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
-          >
+
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
               Ready to Transform Your Business with AI?
             </h2>
@@ -320,14 +318,14 @@ const AdvancedAIServicesHub: React.FC = () => {
               <Link
                 to="/contact"
                 className="bg-gradient-to-r from-blue-600 to-cyan-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-blue-700 hover:to-cyan-700 transition-all duration-300 text-lg flex items-center justify-center"
-              >
+
                 <Rocket className="w-5 h-5 mr-2" />
                 Get Started Today
               </Link>
               <Link
                 to="/new-services-showcase-2025"
                 className="border border-blue-500 text-blue-400 px-8 py-4 rounded-lg font-semibold hover:bg-blue-500 hover:text-white transition-all duration-300 text-lg"
-              >
+
                 View All Services
               </Link>
             </div>
@@ -338,4 +336,4 @@ const AdvancedAIServicesHub: React.FC = () => {
   );
 };
 
-export default AdvancedAIServicesHub;
+export default AdvancedAIServicesHub;}}}}}}

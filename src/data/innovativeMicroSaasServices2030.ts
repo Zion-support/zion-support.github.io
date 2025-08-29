@@ -6,7 +6,6 @@ export interface ServiceContact {
   email: string;
   website: string;
   address: string;
-}
 
 export interface MicroSaasService {
   id: number;
@@ -35,7 +34,6 @@ export interface MicroSaasService {
   useCases: string[];
   technologies: string[];
   compliance: string[];
-}
 
 // Zion Tech Group Contact Information
 const zionContact: ServiceContact = {
@@ -606,7 +604,7 @@ export const innovativeMicroSaasServices2030: MicroSaasService[] = [
       "Cloud integration"
     ],
     compliance: ["ISO 27001", "SOC 2", "Industry 4.0", "Cybersecurity standards"]
-  }
+
 ];
 
-export default innovativeMicroSaasServices2030;
+export default innovativeMicroSaasServices2030;}}}

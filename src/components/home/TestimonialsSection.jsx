@@ -23,7 +23,7 @@ export function TestimonialsSection() {
             content: 'Their cloud migration expertise saved us months of planning and implementation time. The results exceeded our expectations.',
             rating: 5,
             avatar: '👩‍🔬'
-        }
+
     ];
     const renderStars = (rating) => {
         return Array.from({ length: 5 }, (_, i) => (<span key={i} className={i < rating ? 'text-yellow-400' : 'text-gray-300'}>
@@ -64,4 +64,4 @@ export function TestimonialsSection() {
         </div>
       </div>
     </section>);
-}
+}}

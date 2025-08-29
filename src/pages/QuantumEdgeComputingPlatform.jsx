@@ -1,7 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Zap, Server, ArrowRight, Star, Users } from 'lucide-react';
-const QuantumEdgeComputingPlatform = () => {
+import { Zap, Server, ArrowRight, Star, Users const QuantumEdgeComputingPlatform = () => {
     const features = [
         "Quantum-accelerated edge processing",
         "Real-time data analysis and insights",
@@ -32,7 +31,7 @@ const QuantumEdgeComputingPlatform = () => {
             icon: Users,
             title: "Scalable Architecture",
             description: "Flexible scaling from small deployments to enterprise-wide quantum networks"
-        }
+
     ];
     const pricingPlans = [
         {
@@ -77,7 +76,7 @@ const QuantumEdgeComputingPlatform = () => {
                 "On-site implementation support",
                 "SLA guarantees"
             ]
-        }
+
     ];
     const useCases = [
         {
@@ -99,7 +98,7 @@ const QuantumEdgeComputingPlatform = () => {
             title: "Research & Development",
             description: "Complex simulations and data analysis at quantum speeds",
             icon: Server
-        }
+
     ];
     return (<div className="min-h-screen bg-gradient-to-br from-gray-900 via-black to-gray-900 text-white">
       {/* Hero Section */}
@@ -281,3 +280,4 @@ const QuantumEdgeComputingPlatform = () => {
     </div>);
 };
 export default QuantumEdgeComputingPlatform;
+}}}}

@@ -466,5 +466,6 @@ export const innovativeITAIServices2025 = [
         customers: 89,
         rating: 4.8,
         reviews: 67
-    }
+
 ];
+}

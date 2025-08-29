@@ -1,6 +1,4 @@
-import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, FileText, BarChart3 } from 'lucide-react';
-
-export default function AIInternetOfThings() {
+import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, FileText, BarChart3 export default function AIInternetOfThings() {
   const features = [
     'AI-powered IoT optimization',
     'Intelligent IoT device management',
@@ -171,4 +169,4 @@ export default function AIInternetOfThings() {
       </section>
     </div>
   );
-}
+}}

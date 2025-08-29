@@ -26,7 +26,6 @@ export interface EnhancedService {
   popular?: boolean;
   new?: boolean;
   featured?: boolean;
-}
 
 export const enhancedServicesCatalog2025: EnhancedService[] = [
   // AI & Machine Learning Services
@@ -459,7 +458,7 @@ export const enhancedServicesCatalog2025: EnhancedService[] = [
     color: 'from-emerald-600 to-green-700',
     new: true,
     featured: true
-  }
+
 ];
 
-export default enhancedServicesCatalog2025;
+export default enhancedServicesCatalog2025;}}

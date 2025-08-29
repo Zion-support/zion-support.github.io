@@ -16,7 +16,7 @@ export default function AIBusinessSolutions() {
                     description: 'Enhance sales performance with AI-powered insights and automation',
                     features: ['Lead scoring', 'Sales forecasting', 'Pipeline optimization', 'Customer insights'],
                     icon: '💼'
-                }
+
             ]
         },
         {
@@ -33,7 +33,7 @@ export default function AIBusinessSolutions() {
                     description: 'Streamline business processes with intelligent automation',
                     features: ['Workflow automation', 'Document processing', 'Quality control', 'Performance monitoring'],
                     icon: '⚙️'
-                }
+
             ]
         },
         {
@@ -50,7 +50,7 @@ export default function AIBusinessSolutions() {
                     description: 'Intelligent credit assessment and lending decisions',
                     features: ['Credit risk analysis', 'Alternative data', 'Real-time scoring', 'Portfolio management'],
                     icon: '🏦'
-                }
+
             ]
         },
         {
@@ -67,9 +67,9 @@ export default function AIBusinessSolutions() {
                     description: 'Deliver personalized experiences across all touchpoints',
                     features: ['Recommendation engines', 'Dynamic pricing', 'Content personalization', 'Behavioral analysis'],
                     icon: '🎯'
-                }
+
             ]
-        }
+
     ];
     const benefits = [
         {
@@ -95,7 +95,7 @@ export default function AIBusinessSolutions() {
             description: 'Personalized and responsive customer interactions',
             metric: '50%',
             detail: 'Customer satisfaction improvement'
-        }
+
     ];
     const industries = [
         {
@@ -121,7 +121,7 @@ export default function AIBusinessSolutions() {
         {
             name: 'Energy',
             applications: ['Grid optimization', 'Predictive maintenance', 'Energy trading', 'Sustainability analysis']
-        }
+
     ];
     return (<div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900 text-white">
       <div className="max-w-7xl mx-auto px-4 py-16">
@@ -253,4 +253,4 @@ export default function AIBusinessSolutions() {
         </div>
       </div>
     </div>);
-}
+}}}}}}}}

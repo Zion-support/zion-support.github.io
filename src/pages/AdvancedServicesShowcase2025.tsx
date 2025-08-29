@@ -50,13 +50,13 @@ const AdvancedServicesShowcase2025: React.FC = () => {
               <a
                 href="https://ziontechgroup.com/contact"
                 className="inline-flex items-center px-8 py-4 border border-transparent text-lg font-medium rounded-lg text-white bg-blue-600 hover:bg-blue-700 transition-colors duration-200"
-              >
+
                 Get Started Today
               </a>
               <a
                 href="tel:+13024640950"
                 className="inline-flex items-center px-8 py-4 border border-gray-300 text-lg font-medium rounded-lg text-gray-300 hover:text-white hover:border-white transition-colors duration-200"
-              >
+
                 Call +1 302 464 0950
               </a>
             </div>
@@ -157,7 +157,7 @@ const AdvancedServicesShowcase2025: React.FC = () => {
                       ? 'bg-blue-600 text-white'
                       : 'bg-slate-700 text-gray-300 hover:bg-slate-600'
                   }`}
-                >
+
                   {category.name} ({category.count})
                 </button>
               ))}
@@ -238,13 +238,13 @@ const AdvancedServicesShowcase2025: React.FC = () => {
                 <a
                   href="https://ziontechgroup.com/contact"
                   className="w-full bg-blue-600 hover:bg-blue-700 text-white font-medium py-3 px-4 rounded-lg transition-colors duration-200 text-center block"
-                >
+
                   Get Quote
                 </a>
                 <a
                   href={`tel:+13024640950`}
                   className="w-full bg-slate-700 hover:bg-slate-600 text-white font-medium py-3 px-4 rounded-lg transition-colors duration-200 text-center block"
-                >
+
                   Call Now
                 </a>
               </div>
@@ -261,7 +261,7 @@ const AdvancedServicesShowcase2025: React.FC = () => {
                 setSelectedCategory('all');
               }}
               className="text-blue-400 hover:text-blue-300 underline"
-            >
+
               Clear filters
             </button>
           </div>
@@ -280,13 +280,13 @@ const AdvancedServicesShowcase2025: React.FC = () => {
             <a
               href="https://ziontechgroup.com/contact"
               className="inline-flex items-center px-8 py-4 bg-white text-blue-600 font-bold rounded-lg hover:bg-gray-100 transition-colors duration-200"
-            >
+
               Request Free Consultation
             </a>
             <a
               href="tel:+13024640950"
               className="inline-flex items-center px-8 py-4 border-2 border-white text-white font-bold rounded-lg hover:bg-white hover:text-blue-600 transition-colors duration-200"
-            >
+
               Call +1 302 464 0950
             </a>
           </div>

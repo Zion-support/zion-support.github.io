@@ -43,7 +43,7 @@ const SEOMeta = ({ title, description, keywords = 'AI, Machine Learning, Quantum
                         "@type": "Service",
                         "name": "AI Strategy Consulting",
                         "description": "Comprehensive AI strategy development and implementation consulting for enterprises"
-                    }
+
                 },
                 {
                     "@type": "Offer",
@@ -51,10 +51,10 @@ const SEOMeta = ({ title, description, keywords = 'AI, Machine Learning, Quantum
                         "@type": "Service",
                         "name": "Quantum AI Fusion Platform",
                         "description": "Revolutionary platform combining quantum computing with artificial intelligence"
-                    }
-                }
+
+
             ]
-        }
+
     };
     const finalStructuredData = structuredData || defaultStructuredData;
     return (<Helmet>
@@ -129,3 +129,4 @@ const SEOMeta = ({ title, description, keywords = 'AI, Machine Learning, Quantum
     </Helmet>);
 };
 export default SEOMeta;
+}}}}

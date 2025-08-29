@@ -7,14 +7,12 @@ interface UseAccessibilityOptions {
   enableHighContrast?: boolean;
   enableReducedMotion?: boolean;
   enableLargeText?: boolean;
-}
 
 interface AccessibilityFeatures {
   isHighContrast: boolean;
   isReducedMotion: boolean;
   isLargeText: boolean;
   isScreenReader: boolean;
-}
 
 export const useAccessibility = (options: UseAccessibilityOptions = { /* empty */ }) => {
   const {
@@ -39,7 +37,6 @@ export const useAccessibility = (options: UseAccessibilityOptions = { /* empty *
         isLargeText: false,
         isScreenReader: false
       };
-    }
 
     const mediaQueries = {
       highContrast: window.matchMedia('(prefers-contrast: high)'),
@@ -73,7 +70,7 @@ export const useAccessibility = (options: UseAccessibilityOptions = { /* empty *
           // Tab: navigate forwards
           event.preventDefault();
           navigateFocus('forward', currentElement);
-        }
+
         break;
 
       case 'Escape':
@@ -87,7 +84,7 @@ export const useAccessibility = (options: UseAccessibilityOptions = { /* empty *
         if (currentElement.tagName === 'BUTTON' || currentElement.tagName === 'A') {
           event.preventDefault();
           currentElement.click();
-        }
+
         break;
 
       case 'ArrowUp':
@@ -101,7 +98,7 @@ export const useAccessibility = (options: UseAccessibilityOptions = { /* empty *
         // Navigate through horizontal lists, tabs, etc.
         navigateHorizontal(key === 'ArrowLeft' ? 'left' : 'right', currentElement);
         break;
-    }
+
   }, [enableKeyboardNavigation]);
 
   // Focus management
@@ -111,7 +108,6 @@ export const useAccessibility = (options: UseAccessibilityOptions = { /* empty *
     // Store last focused element
     if (document.activeElement instanceof HTMLElement) {
       lastFocusedElementRef.current = document.activeElement;
-    }
 
     // Focus the new element
     element.focus();
@@ -134,7 +130,6 @@ export const useAccessibility = (options: UseAccessibilityOptions = { /* empty *
 
     if (focusableElements.length > 0) {
       focusableElements[0].focus();
-    }
 
     // Store focusable elements
     focusableElementsRef.current = focusableElements;
@@ -146,7 +141,7 @@ export const useAccessibility = (options: UseAccessibilityOptions = { /* empty *
       lastFocusedElementRef.current.focus();
       focusTrapRef.current = null;
       focusableElementsRef.current = [];
-    }
+
   }, []);
 
   // Get all focusable elements
@@ -178,7 +173,6 @@ export const useAccessibility = (options: UseAccessibilityOptions = { /* empty *
       nextIndex = currentIndex < focusableElements.length - 1 ? currentIndex + 1 : 0;
     } else {
       nextIndex = currentIndex > 0 ? currentIndex - 1 : focusableElements.length - 1;
-    }
 
     manageFocus(focusableElements[nextIndex]);
   }, [getFocusableElements, manageFocus]);
@@ -199,12 +193,11 @@ export const useAccessibility = (options: UseAccessibilityOptions = { /* empty *
       nextIndex = currentIndex > 0 ? currentIndex - 1 : items.length - 1;
     } else {
       nextIndex = currentIndex < items.length - 1 ? currentIndex + 1 : 0;
-    }
 
     const nextElement = items[nextIndex] as HTMLElement;
     if (nextElement) {
       manageFocus(nextElement);
-    }
+
   }, [manageFocus]);
 
   // Horizontal navigation
@@ -223,12 +216,11 @@ export const useAccessibility = (options: UseAccessibilityOptions = { /* empty *
       nextIndex = currentIndex > 0 ? currentIndex - 1 : items.length - 1;
     } else {
       nextIndex = currentIndex < items.length - 1 ? currentIndex + 1 : 0;
-    }
 
     const nextElement = items[nextIndex] as HTMLElement;
     if (nextElement) {
       manageFocus(nextElement);
-    }
+
   }, [manageFocus]);
 
   // Close active elements
@@ -317,7 +309,6 @@ export const useAccessibility = (options: UseAccessibilityOptions = { /* empty *
     // Add keyboard event listener
     if (enableKeyboardNavigation) {
       document.addEventListener('keydown', handleKeyboardNavigation);
-    }
 
     // Cleanup
     return () => {
@@ -339,4 +330,4 @@ export const useAccessibility = (options: UseAccessibilityOptions = { /* empty *
     navigateVertical,
     navigateHorizontal
   };
-};
+};}}}}}}}}}}}}}}}

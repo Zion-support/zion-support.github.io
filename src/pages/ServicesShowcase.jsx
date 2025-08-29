@@ -1,8 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { Brain, Cloud, Shield, Rocket, Target } from 'lucide-react';
-const ServicesShowcase = () => {
+import { Brain, Cloud, Shield, Rocket, Target const ServicesShowcase = () => {
     const services = [
         {
             category: "AI & Machine Learning",
@@ -25,7 +24,7 @@ const ServicesShowcase = () => {
                     description: "Streamline business processes with intelligent automation",
                     href: "/services/ai-workflow-automation",
                     features: ["Process Optimization", "Error Reduction", "Efficiency Gains"]
-                }
+
             ]
         },
         {
@@ -49,7 +48,7 @@ const ServicesShowcase = () => {
                     description: "End-to-end digital transformation consulting and implementation",
                     href: "/services/transformation",
                     features: ["Strategy Development", "Technology Selection", "Change Management"]
-                }
+
             ]
         },
         {
@@ -73,7 +72,7 @@ const ServicesShowcase = () => {
                     description: "Modern zero trust security implementation",
                     href: "/zero-trust-network-architecture",
                     features: ["Identity Verification", "Access Control", "Continuous Monitoring"]
-                }
+
             ]
         },
         {
@@ -97,7 +96,7 @@ const ServicesShowcase = () => {
                     description: "Enterprise-grade 5G network optimization",
                     href: "/5g-enterprise-solutions",
                     features: ["Network Optimization", "Edge Computing", "IoT Integration"]
-                }
+
             ]
         },
         {
@@ -121,9 +120,9 @@ const ServicesShowcase = () => {
                     description: "Specialized software-as-a-service solutions",
                     href: "/micro-saas-services",
                     features: ["Custom Development", "Scalable Architecture", "API Integration"]
-                }
+
             ]
-        }
+
     ];
     const containerVariants = {
         hidden: { opacity: 0 },
@@ -131,8 +130,8 @@ const ServicesShowcase = () => {
             opacity: 1,
             transition: {
                 staggerChildren: 0.1
-            }
-        }
+
+
     };
     const itemVariants = {
         hidden: { y: 20, opacity: 0 },
@@ -141,8 +140,8 @@ const ServicesShowcase = () => {
             opacity: 1,
             transition: {
                 duration: 0.5
-            }
-        }
+
+
     };
     return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       {/* Hero Section */}
@@ -240,5 +239,6 @@ const ServicesShowcase = () => {
         </div>
       </div>
     </div>);
-};
+</div>};
 export default ServicesShowcase;
+}}}}}}}}}}}

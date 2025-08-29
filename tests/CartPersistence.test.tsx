@@ -23,7 +23,7 @@ function renderCart(user: any) {
       </CartProvider>
     </AuthContext.Provider>
   );
-}
+
 describe('cart persistence', () => {
   it('shows item added before login after logging in', () => {
     safeStorage.setItem(getCartKey(), JSON.stringify([item]));
@@ -46,3 +46,4 @@ describe('cart persistence', () => {
     expect(screen.getByText('Checkout')).toBeInTheDocument();
   });
 });
+}

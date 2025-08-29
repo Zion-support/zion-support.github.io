@@ -3,8 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Link } from 'react-router-dom';
 import { SEO } from "@/components/SEO";
-import { BriefcaseIcon, UserIcon, MessageSquare, Star, Inbox } from "lucide-react";
-import { ProtectedRoute } from "@/components/ProtectedRoute";
+import { BriefcaseIcon, UserIcon, MessageSquare, Star, Inbox import { ProtectedRoute } from "@/components/ProtectedRoute";
 import { SuggestedJobs } from "@/components/jobs/SuggestedJobs";
 import { useAuth } from "@/hooks/useAuth";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
@@ -178,9 +177,9 @@ function TalentDashboardContent() {
       </main>
 
     </>);
-}
+
 export default function TalentDashboard() {
     return (<ProtectedRoute>
       <TalentDashboardContent />
     </ProtectedRoute>);
-}
+</Card></Card></Card></Card></Card></Card></Card></Card>}}}

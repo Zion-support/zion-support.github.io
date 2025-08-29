@@ -1,8 +1,7 @@
 'use client';
 import React, { useState, useCallback, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Eye, Type, Volume2, Settings, X, Check, AlertTriangle, Info } from 'lucide-react';
-const AccessibilityPanel = ({ enabled = true, defaultSettings = { /* empty */ }, onSettingsChange, className = '' }) => {
+import { Eye, Type, Volume2, Settings, X, Check, AlertTriangle, Info const AccessibilityPanel = ({ enabled = true, defaultSettings = { /* empty */ }, onSettingsChange, className = '' }) => {
     const [isOpen, setIsOpen] = useState(false);
     const [settings, setSettings] = useState({
         highContrast: false,
@@ -25,20 +24,20 @@ const AccessibilityPanel = ({ enabled = true, defaultSettings = { /* empty */ },
         if (settings.highContrast) {
             root.style.setProperty('--high-contrast', 'true');
             root.classList.add('high-contrast');
-        }
+
         else {
             root.style.removeProperty('--high-contrast');
             root.classList.remove('high-contrast');
-        }
+
         // Large text mode
         if (settings.largeText) {
             root.style.setProperty('--large-text', 'true');
             root.classList.add('large-text');
-        }
+
         else {
             root.style.removeProperty('--large-text');
             root.classList.remove('large-text');
-        }
+
         // Font size
         root.style.setProperty('--font-size', `${settings.fontSize}px`);
         // Color blind modes
@@ -47,29 +46,29 @@ const AccessibilityPanel = ({ enabled = true, defaultSettings = { /* empty */ },
         if (settings.reducedMotion) {
             root.style.setProperty('--reduced-motion', 'true');
             root.classList.add('reduced-motion');
-        }
+
         else {
             root.style.removeProperty('--reduced-motion');
             root.classList.remove('reduced-motion');
-        }
+
         // Focus indicator
         if (settings.focusIndicator) {
             root.style.setProperty('--focus-indicator', 'true');
             root.classList.add('focus-indicator');
-        }
+
         else {
             root.style.removeProperty('--focus-indicator');
             root.classList.remove('focus-indicator');
-        }
+
         // Keyboard navigation
         if (settings.keyboardNavigation) {
             root.style.setProperty('--keyboard-navigation', 'true');
             root.classList.add('keyboard-navigation');
-        }
+
         else {
             root.style.removeProperty('--keyboard-navigation');
             root.classList.remove('keyboard-navigation');
-        }
+
         // Notify parent component
         onSettingsChange?.(settings);
     }, [settings, enabled, onSettingsChange]);
@@ -91,13 +90,13 @@ const AccessibilityPanel = ({ enabled = true, defaultSettings = { /* empty */ },
         // Announce important changes
         if (settings.highContrast) {
             announce('High contrast mode enabled');
-        }
+
         if (settings.largeText) {
             announce('Large text mode enabled');
-        }
+
         if (settings.reducedMotion) {
             announce('Reduced motion enabled');
-        }
+
     }, [settings.highContrast, settings.largeText, settings.reducedMotion, enabled, settings.screenReader]);
     const updateSetting = useCallback((key, value) => {
         setSettings(prev => {
@@ -162,8 +161,8 @@ const AccessibilityPanel = ({ enabled = true, defaultSettings = { /* empty */ },
                         e.preventDefault();
                         setIsOpen(!isOpen);
                         break;
-                }
-            }
+
+
         };
         document.addEventListener('keydown', handleKeyDown);
         return () => document.removeEventListener('keydown', handleKeyDown);
@@ -331,7 +330,6 @@ const AccessibilityPanel = ({ enabled = true, defaultSettings = { /* empty */ },
           :root {
             --font-size: ${settings.fontSize}px;
             --color-blind-mode: ${settings.colorBlindMode};
-          }
 
           .high-contrast {
             --bg-primary: #000000;
@@ -339,30 +337,25 @@ const AccessibilityPanel = ({ enabled = true, defaultSettings = { /* empty */ },
             --text-primary: #ffffff;
             --text-secondary: #e0e0e0;
             --border-color: #ffffff;
-          }
 
           .large-text {
             --font-size-base: 18px;
             --font-size-lg: 22px;
             --font-size-xl: 26px;
             --font-size-2xl: 32px;
-          }
 
           .reduced-motion * {
             animation-duration: 0.01ms !important;
             animation-iteration-count: 1 !important;
             transition-duration: 0.01ms !important;
-          }
 
           .focus-indicator *:focus {
             outline: 3px solid #00d4ff !important;
             outline-offset: 2px !important;
-          }
 
           .keyboard-navigation *:focus-visible {
             outline: 3px solid #00d4ff !important;
             outline-offset: 2px !important;
-          }
 
           .sr-only {
             position: absolute;
@@ -374,22 +367,20 @@ const AccessibilityPanel = ({ enabled = true, defaultSettings = { /* empty */ },
             clip: rect(0, 0, 0, 0);
             white-space: nowrap;
             border: 0;
-          }
 
           /* Color blind mode filters */
           [style*="--color-blind-mode: protanopia"] {
             filter: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg"><filter id="protanopia"><feColorMatrix type="matrix" values="0.567,0.433,0,0,0 0.558,0.442,0,0,0 0,0.242,0.758,0,0 0,0,0,1,0"/></filter></svg>#protanopia');
-          }
 
           [style*="--color-blind-mode: deuteranopia"] {
             filter: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg"><filter id="deuteranopia"><feColorMatrix type="matrix" values="0.625,0.375,0,0,0 0.7,0.3,0,0,0 0,0.3,0.7,0,0 0,0,0,1,0"/></filter></svg>#deuteranopia');
-          }
 
           [style*="--color-blind-mode: tritanopia"] {
             filter: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg"><filter id="tritanopia"><feColorMatrix type="matrix" values="0.95,0.05,0,0,0 0,0.433,0.567,0,0 0,0.475,0.525,0,0 0,0,0,1,0"/></filter></svg>#tritanopia');
-          }
+
         `
         }}/>
     </>);
-};
+</div>};
 export default AccessibilityPanel;
+}}}}}}}}}}}}}}}}}}}}}}}}}}

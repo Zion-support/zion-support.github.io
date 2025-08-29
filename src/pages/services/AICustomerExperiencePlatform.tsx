@@ -1,6 +1,4 @@
-import { Heart, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, MessageCircle, Users, Zap, Star, Shield } from 'lucide-react';
-
-export default function AICustomerExperiencePlatform() {
+import { Heart, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, MessageCircle, Users, Zap, Star, Shield export default function AICustomerExperiencePlatform() {
   const features = [
     'AI-powered sentiment analysis and emotion detection',
     'Real-time customer journey mapping and optimization',
@@ -171,4 +169,4 @@ export default function AICustomerExperiencePlatform() {
       </section>
     </div>
   );
-}
+}}

@@ -1,7 +1,6 @@
 import React from 'react';
 import { SEO } from "@/components/SEO";
-import { Brain, Shield, Database, TrendingUp } from 'lucide-react';
-const AIServices = () => {
+import { Brain, Shield, Database, TrendingUp const AIServices = () => {
     const features = [
         {
             icon: Brain,
@@ -22,7 +21,7 @@ const AIServices = () => {
             icon: Shield,
             title: "AI Ethics",
             description: "Responsible AI development and governance"
-        }
+
     ];
     const benefits = [
         "Increased operational efficiency by 60%",
@@ -116,3 +115,4 @@ const AIServices = () => {
     </div>);
 };
 export default AIServices;
+}}

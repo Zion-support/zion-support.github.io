@@ -1,9 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Menu, X, ChevronDown } from 'lucide-react';
-
-const Header: React.FC = () => {
+import { Menu, X, ChevronDown const Header: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
   const location = useLocation();
@@ -35,7 +33,7 @@ const Header: React.FC = () => {
       if (window.innerWidth > 768) {
         setIsMenuOpen(false);
         setActiveDropdown(null);
-      }
+
     };
 
     window.addEventListener('resize', handleResize);
@@ -62,7 +60,7 @@ const Header: React.FC = () => {
             ? 'bg-white/10 text-white'
             : 'text-gray-300 hover:text-white hover:bg-white/10'
         }`}
-      >
+
         <span>Services</span>
         <ChevronDown className={`h-4 w-4 transition-transform ${isOpen ? 'rotate-180' : ''}`} />
       </button>
@@ -81,7 +79,7 @@ const Header: React.FC = () => {
                     setIsCompanyDropdownOpen(false);
                     setIsResourcesDropdownOpen(false);
                   }}
-                >
+
                   {item.icon && <item.icon className="h-5 w-5" />}
                   <div>
                     <div className="font-medium">{item.name}</div>
@@ -118,7 +116,7 @@ const Header: React.FC = () => {
                 className={`text-gray-300 hover:text-white transition-colors duration-200 ${
                   isActive(item.path) ? 'text-blue-400 font-semibold' : ''
                 }`}
-              >
+
                 {item.name}
               </Link>
             ))}
@@ -129,13 +127,13 @@ const Header: React.FC = () => {
             <Link
               to="/pricing"
               className="text-gray-300 hover:text-white transition-colors duration-200"
-            >
+
               Pricing
             </Link>
             <Link
               to="/contact"
               className="bg-gradient-to-r from-blue-600 to-cyan-600 text-white px-6 py-2 rounded-lg font-semibold hover:from-blue-700 hover:to-cyan-700 transition-all duration-300"
-            >
+
               Get Started
             </Link>
           </div>
@@ -146,7 +144,7 @@ const Header: React.FC = () => {
               onClick={() => setIsMenuOpen(!isMenuOpen)}
               className="text-gray-300 hover:text-white transition-colors duration-200"
               aria-label="Toggle menu"
-            >
+
               {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
             </button>
           </div>
@@ -161,7 +159,7 @@ const Header: React.FC = () => {
             animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}
             className="md:hidden bg-gray-900 border-t border-gray-800"
-          >
+
             <nav className="px-4 py-6 space-y-4">
               {navigation.map((item) => (
                 <Link
@@ -173,7 +171,7 @@ const Header: React.FC = () => {
                       : 'text-gray-300 hover:text-white hover:bg-gray-700'
                   }`}
                   onClick={closeMenu}
-                >
+
                   {item.name}
                 </Link>
               ))}
@@ -184,14 +182,14 @@ const Header: React.FC = () => {
                   to="/pricing"
                   className="block w-full text-center px-6 py-2 text-gray-300 hover:text-white transition-colors duration-300"
                   onClick={closeMenu}
-                >
+
                   Pricing
                 </Link>
                 <Link
                   to="/contact"
                   className="block w-full text-center bg-gradient-to-r from-blue-600 to-cyan-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-blue-700 hover:to-cyan-700 transition-all duration-300"
                   onClick={closeMenu}
-                >
+
                   Get Started
                 </Link>
               </div>
@@ -204,3 +202,4 @@ const Header: React.FC = () => {
 };
 
 export default Header;
+}}

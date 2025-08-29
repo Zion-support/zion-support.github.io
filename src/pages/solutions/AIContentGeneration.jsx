@@ -1,6 +1,5 @@
 import React from 'react';
-import { Target, TrendingUp, Users, Globe, Cpu, Lightbulb, FileText, PenTool, Image, Video, Music } from 'lucide-react';
-const AIContentGeneration = () => {
+import { Target, TrendingUp, Users, Globe, Cpu, Lightbulb, FileText, PenTool, Image, Video, Music const AIContentGeneration = () => {
     const contentFeatures = [
         {
             icon: FileText,
@@ -25,7 +24,7 @@ const AIContentGeneration = () => {
             title: "Audio Content",
             description: "Generate audio content and music compositions",
             features: ["Music generation", "Voice synthesis", "Sound effects", "Audio editing"]
-        }
+
     ];
     const contentTypes = [
         {
@@ -63,7 +62,7 @@ const AIContentGeneration = () => {
             description: "Combined text, image, and video content",
             icon: Globe,
             capabilities: ["Interactive content", "Rich media", "Cross-platform content", "Engagement materials"]
-        }
+
     ];
     const benefits = [
         "Significantly faster content creation",
@@ -103,7 +102,7 @@ const AIContentGeneration = () => {
             phase: "Deployment",
             description: "Full deployment and team training",
             duration: "1-2 weeks"
-        }
+
     ];
     return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       {/* Hero Section */}
@@ -281,3 +280,4 @@ const AIContentGeneration = () => {
     </div>);
 };
 export default AIContentGeneration;
+}}}}

@@ -17,10 +17,10 @@ export default function CompanyWorkspace() {
         return (<div className="flex items-center justify-center min-h-screen">
         <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-zion-cyan"></div>
       </div>);
-    }
+
     if (error || !company) {
         return <Navigate to="/"/>;
-    }
+
     // In white-label mode, use the tenant's theme instead of the company's theme
     const effectiveTheme = isWhitelabel ? {
         primaryColor: tenant?.primary_color || company.theme?.primaryColor,
@@ -31,7 +31,7 @@ export default function CompanyWorkspace() {
     const hasAccess = true; // For demo purposes, always grant access
     if (!hasAccess) {
         return <Navigate to="/unauthorized"/>;
-    }
+
     return (<ProtectedRoute>
       <SEO title={`${company.name} Workspace - ${isWhitelabel ? brandName : 'Zion AI Marketplace'}`} description={`${company.name}'s dedicated workspace ${isWhitelabel ? `on ${brandName}` : 'on Zion AI Marketplace'}. Collaborate with your team to find top talent.`}/>
       <Header customLogo={isWhitelabel ? tenant?.logo_url : company.logoUrl} customTheme={effectiveTheme}/>
@@ -40,4 +40,4 @@ export default function CompanyWorkspace() {
       </main>
       <Footer />
     </ProtectedRoute>);
-}
+}}}}

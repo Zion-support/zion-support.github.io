@@ -4,8 +4,7 @@ import { ProtectedRoute } from "@/components/ProtectedRoute";
 import { useState, useEffect } from "react";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Star, AlertTriangle } from "lucide-react";
-import { toast } from "@/components/ui/use-toast";
+import { Star, AlertTriangle import { toast } from "@/components/ui/use-toast";
 function ReviewsModerationContent() {
     const [activeTab, setActiveTab] = useState("pending");
     const [reviews, setReviews] = useState([]);
@@ -18,16 +17,16 @@ function ReviewsModerationContent() {
             await new Promise(resolve => setTimeout(resolve, 1000));
             setReviews([]);
             setIsLoading(false);
-        }
+
         catch (error) {
-            // console.error("Error fetching reviews:", error);
+            // // // console.error("Error fetching reviews:", error);
             toast({
                 title: "Error",
                 description: "Failed to load reviews. Please try again later.",
                 variant: "destructive",
             });
             setIsLoading(false);
-        }
+
     };
     useEffect(() => {
         fetchReviews();
@@ -82,9 +81,9 @@ function ReviewsModerationContent() {
       </main>
 
     </>);
-}
+
 export default function ReviewsModeration() {
     return (<ProtectedRoute>
       <ReviewsModerationContent />
     </ProtectedRoute>);
-}
+</Card></Card></Card></Card>}}}}}

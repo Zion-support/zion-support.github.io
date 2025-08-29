@@ -1,6 +1,4 @@
-import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, FileText, BarChart3 } from 'lucide-react';
-
-export default function AIBlockchain() {
+import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, FileText, BarChart3 export default function AIBlockchain() {
   const features = [
     'AI-powered blockchain optimization',
     'Intelligent smart contract management',
@@ -171,4 +169,4 @@ export default function AIBlockchain() {
       </section>
     </div>
   );
-}
+}}

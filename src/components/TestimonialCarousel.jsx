@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { ChevronLeft, ChevronRight, Star, Quote, ArrowRight } from 'lucide-react';
-const testimonials = [
+import { ChevronLeft, ChevronRight, Star, Quote, ArrowRight const testimonials = [
     {
         id: 1,
         name: 'Sarah Johnson',
@@ -67,7 +66,7 @@ const testimonials = [
         rating: 5,
         category: 'Infrastructure',
         project: 'Cloud Infrastructure'
-    }
+
 ];
 export function TestimonialCarousel() {
     const [currentIndex, setCurrentIndex] = useState(0);
@@ -136,10 +135,10 @@ export function TestimonialCarousel() {
             const swipe = swipePower(offset.x, velocity.x);
             if (swipe < -swipeConfidenceThreshold) {
                 paginate(1);
-            }
+
             else if (swipe > swipeConfidenceThreshold) {
                 paginate(-1);
-            }
+
         }} className="absolute w-full">
               <div className="bg-gradient-to-br from-zion-blue-dark/80 to-zion-blue-dark/40 backdrop-blur-sm rounded-2xl p-8 md:p-12 border border-zion-blue-light/30 shadow-2xl">
                 <div className="text-center">
@@ -228,4 +227,4 @@ export function TestimonialCarousel() {
         </motion.div>
       </div>
     </section>);
-}
+}}}}}

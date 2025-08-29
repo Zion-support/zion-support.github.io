@@ -1,8 +1,7 @@
 import React from 'react';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from './ui/card';
 import { Button } from './ui/button';
-import { Brain, Cloud, Zap, Shield, TrendingUp, Users, Globe, CheckCircle, Star, ArrowRight, Phone, Mail, ExternalLink } from 'lucide-react';
-import { CONTACT_INFO } from '@/data/comprehensiveServices';
+import { Brain, Cloud, Zap, Shield, TrendingUp, Users, Globe, CheckCircle, Star, ArrowRight, Phone, Mail, ExternalLink import { CONTACT_INFO } from '@/data/comprehensiveServices';
 export function ServicesBenefitsShowcase() {
     const serviceBenefits = [
         {
@@ -94,7 +93,7 @@ export function ServicesBenefitsShowcase() {
             startingPrice: "$199",
             implementationTime: "Immediate - 3 weeks",
             support: "Business hours support with priority options"
-        }
+
     ];
     const industryStats = [
         { metric: "95%", label: "Client Satisfaction Rate" },
@@ -280,4 +279,4 @@ export function ServicesBenefitsShowcase() {
         </div>
       </div>
     </div>);
-}
+</div></div></Card></Card></Card></Card>}}}

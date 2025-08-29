@@ -29,7 +29,6 @@ import {
   Key,
   Monitor,
   Activity
-} from 'lucide-react';
 import { SEO } from '@/components/SEO';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
@@ -79,7 +78,7 @@ export default function AICybersecuritySuite() {
         "HIPAA compliance",
         "Real-time audit trails"
       ]
-    }
+
   ];
 
   const pricingPlans = [
@@ -134,7 +133,7 @@ export default function AICybersecuritySuite() {
       ],
       cta: "Contact Sales",
       popular: false
-    }
+
   ];
 
   const useCases = [
@@ -173,7 +172,7 @@ export default function AICybersecuritySuite() {
         "Compliance automation",
         "Threat intelligence"
       ]
-    }
+
   ];
 
   const securityMetrics = [
@@ -200,7 +199,7 @@ export default function AICybersecuritySuite() {
       description: "Automated compliance for all major frameworks",
       icon: CheckCircle,
       metric: "100%"
-    }
+
   ];
 
   return (
@@ -218,7 +217,7 @@ export default function AICybersecuritySuite() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="text-center"
-          >
+
             <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-red-600 to-orange-600 text-white text-sm font-medium mb-6">
               <Shield className="w-4 h-4 mr-2" />
               Enterprise-Grade Security
@@ -239,14 +238,14 @@ export default function AICybersecuritySuite() {
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 className="px-8 py-4 bg-gradient-to-r from-red-600 to-orange-600 text-white font-semibold rounded-lg hover:from-red-700 hover:to-orange-700 transition-all duration-300"
-              >
+
                 Start Free Trial
               </motion.button>
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 className="px-8 py-4 border-2 border-red-600 text-red-400 font-semibold rounded-lg hover:bg-red-600 hover:text-white transition-all duration-300"
-              >
+
                 Schedule Demo
               </motion.button>
             </div>
@@ -266,7 +265,7 @@ export default function AICybersecuritySuite() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
-          >
+
             <h2 className="text-4xl font-bold text-white mb-4">
               Unmatched Security Performance
             </h2>
@@ -284,7 +283,7 @@ export default function AICybersecuritySuite() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
                 className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700 hover:border-red-500 transition-all duration-300 text-center"
-              >
+
                 <div className="p-3 bg-gradient-to-r from-red-600 to-orange-600 rounded-lg mx-auto mb-4 w-fit">
                   <metric.icon className="w-8 h-8 text-white" />
                 </div>
@@ -306,7 +305,7 @@ export default function AICybersecuritySuite() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
-          >
+
             <h2 className="text-4xl font-bold text-white mb-4">
               Revolutionary Security Features
             </h2>
@@ -324,7 +323,7 @@ export default function AICybersecuritySuite() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
                 className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-8 border border-slate-700 hover:border-red-500 transition-all duration-300"
-              >
+
                 <div className="flex items-center mb-4">
                   <div className="p-3 bg-gradient-to-r from-red-600 to-orange-600 rounded-lg mr-4">
                     <feature.icon className="w-6 h-6 text-white" />
@@ -356,7 +355,7 @@ export default function AICybersecuritySuite() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
-          >
+
             <h2 className="text-4xl font-bold text-white mb-4">
               Transparent Security Pricing
             </h2>
@@ -378,7 +377,7 @@ export default function AICybersecuritySuite() {
                     ? 'border-red-500 ring-2 ring-red-500/20'
                     : 'border-slate-700'
                 }`}
-              >
+
                 {plan.popular && (
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                     <span className="bg-gradient-to-r from-red-600 to-orange-600 text-white px-4 py-2 rounded-full text-sm font-semibold">
@@ -413,7 +412,7 @@ export default function AICybersecuritySuite() {
                       ? 'bg-gradient-to-r from-red-600 to-orange-600 text-white hover:from-red-700 hover:to-orange-700'
                       : 'bg-slate-700 text-white hover:bg-slate-600'
                   }`}
-                >
+
                   {plan.cta}
                 </motion.button>
               </motion.div>
@@ -430,7 +429,7 @@ export default function AICybersecuritySuite() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
-          >
+
             <h2 className="text-4xl font-bold text-white mb-4">
               Industry Applications
             </h2>
@@ -448,7 +447,7 @@ export default function AICybersecuritySuite() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
                 className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700 hover:border-red-500 transition-all duration-300"
-              >
+
                 <h3 className="text-xl font-semibold text-white mb-4">{useCase.industry}</h3>
                 <ul className="space-y-2">
                   {useCase.applications.map((application, appIndex) => (
@@ -471,7 +470,7 @@ export default function AICybersecuritySuite() {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-          >
+
             <h2 className="text-4xl font-bold text-white mb-6">
               Ready to Secure Your Business?
             </h2>
@@ -485,14 +484,14 @@ export default function AICybersecuritySuite() {
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 className="px-8 py-4 bg-white text-red-600 font-semibold rounded-lg hover:bg-gray-100 transition-all duration-300"
-              >
+
                 Start Free Trial
               </motion.button>
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 className="px-8 py-4 border-2 border-white text-white font-semibold rounded-lg hover:bg-white hover:text-red-600 transition-all duration-300"
-              >
+
                 Contact Security Experts
               </motion.button>
             </div>
@@ -501,4 +500,4 @@ export default function AICybersecuritySuite() {
       </section>
     </div>
   );
-}
+}}}}}}

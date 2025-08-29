@@ -1,9 +1,8 @@
 import React from 'react';
-import { AlertTriangle, RefreshCw } from 'lucide-react';
-interface LoginErrorFallbackProps {
+import { AlertTriangle, RefreshCw interface LoginErrorFallbackProps {
   error: Error;
   resetErrorBoundary: () => void;
-}
+
 export default function LoginErrorFallback({ error, resetErrorBoundary }: LoginErrorFallbackProps) {
   return (
     <div className="min-h-screen flex items-center justify-center bg-futuristic p-4">
@@ -30,11 +29,11 @@ export default function LoginErrorFallback({ error, resetErrorBoundary }: LoginE
         <button
           onClick={resetErrorBoundary}
           className="inline-flex items-center gap-2 bg-gradient-to-r from-zion-cyan to-zion-purple hover:from-zion-cyan-dark hover:to-zion-purple-dark text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105"
-        >
+
           <RefreshCw className="w-4 h-4" />
           Try Again
         </button>
       </div>
     </div>
   );
-}
+}}}

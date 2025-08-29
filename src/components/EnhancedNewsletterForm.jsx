@@ -1,8 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { useState, useRef } from "react";
-import { Mail } from "lucide-react";
-import { useToast } from "@/hooks/use-toast";
+import { Mail import { useToast } from "@/hooks/use-toast";
 export function EnhancedNewsletterForm() {
     const [email, setEmail] = useState("");
     const [isSubmitting, setIsSubmitting] = useState(false);
@@ -20,7 +19,7 @@ export function EnhancedNewsletterForm() {
         if (!EMAIL_REGEX.test(trimmed)) {
             toast.error("Invalid email");
             return;
-        }
+
         setIsSubmitting(true);
         try {
             const res = await fetch("/api/newsletter", {
@@ -33,26 +32,26 @@ export function EnhancedNewsletterForm() {
                 // Handle different success statuses
                 if (data.status === 'already_subscribed') {
                     toast.success(data.message || "You're already subscribed!");
-                }
+
                 else {
                     toast.success(data.message || "Thanks for subscribing!");
-                }
+
                 setIsSubmitted(true);
                 setEmail("");
-            }
+
             else {
                 // Handle error responses
-                // console.error('Newsletter subscription failed:', data);
+                // // // console.error('Newsletter subscription failed:', data);
                 toast.error(data.error || "Subscription failed. Please try again.");
-            }
-        }
+
+
         catch (err) {
-            // console.error('Newsletter subscription error:', err);
+            // // // console.error('Newsletter subscription error:', err);
             toast.error("Unable to subscribe right now. Please try again later.");
-        }
+
         finally {
             setIsSubmitting(false);
-        }
+
     };
     return (<div className="w-full max-w-lg mx-auto bg-zion-blue-light border border-zion-purple/20 rounded-lg p-6">
       <div className="flex items-center mb-4">
@@ -84,4 +83,4 @@ export function EnhancedNewsletterForm() {
         <span>Join 10,000+ tech professionals who already subscribe</span>
       </div>
     </div>);
-}
+}}}}}}}}}}

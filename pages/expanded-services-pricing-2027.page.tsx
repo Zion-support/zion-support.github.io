@@ -18,7 +18,7 @@ const ExpandedServicesPricingGuide2027: NextPage = () => {
     if (selectedCategory === 'all') {
       const subcats = ['all', ...Array.from(new Set(ALL_EXPANDED_SERVICES_PRICING.map(s => s.subcategory)))];
       return subcats;
-    }
+
     const subcats = ['all', ...Array.from(new Set(ALL_EXPANDED_SERVICES_PRICING.filter(s => s.category === selectedCategory).map(s => s.subcategory)))];
     return subcats;
   }, [selectedCategory]);
@@ -50,7 +50,7 @@ const ExpandedServicesPricingGuide2027: NextPage = () => {
       case 'niche': return 'bg-purple-600';
       case 'emerging': return 'bg-yellow-600';
       default: return 'bg-gray-600';
-    }
+
   };
 
   return (
@@ -114,7 +114,7 @@ const ExpandedServicesPricingGuide2027: NextPage = () => {
                 setSelectedSubcategory('all');
               }}
               className="px-4 py-2 rounded-lg bg-white/20 text-white border border-white/30 focus:outline-none focus:ring-2 focus:ring-blue-400"
-            >
+
               {categories.map(cat => (
                 <option key={cat} value={cat} className="bg-gray-800 text-white">
                   {cat === 'all' ? 'All Categories' : cat}
@@ -126,7 +126,7 @@ const ExpandedServicesPricingGuide2027: NextPage = () => {
               value={selectedSubcategory}
               onChange={(e) => setSelectedSubcategory(e.target.value)}
               className="px-4 py-2 rounded-lg bg-white/20 text-white border border-white/30 focus:outline-none focus:ring-2 focus:ring-blue-400"
-            >
+
               {subcategories.map(subcat => (
                 <option key={subcat} value={subcat} className="bg-gray-800 text-white">
                   {subcat === 'all' ? 'All Subcategories' : subcat}
@@ -137,7 +137,7 @@ const ExpandedServicesPricingGuide2027: NextPage = () => {
             <button
               onClick={resetFilters}
               className="px-4 py-2 rounded-lg bg-red-600 hover:bg-red-700 text-white transition-colors"
-            >
+
               Reset Filters
             </button>
           </div>
@@ -153,7 +153,7 @@ const ExpandedServicesPricingGuide2027: NextPage = () => {
             <div
               key={service.serviceId}
               className="bg-white/10 backdrop-blur-sm rounded-lg p-8 border border-white/20"
-            >
+
               {/* Service Header */}
               <div className="mb-6">
                 <div className="flex items-start justify-between mb-4">
@@ -335,13 +335,13 @@ const ExpandedServicesPricingGuide2027: NextPage = () => {
               <a
                 href="/contact"
                 className="px-8 py-3 bg-blue-600 hover:bg-blue-700 text-white rounded-lg font-semibold transition-colors"
-              >
+
                 Get Custom Quote
               </a>
               <a
                 href="/expanded-services-2027"
                 className="px-8 py-3 bg-white/20 hover:bg-white/30 text-white rounded-lg font-semibold transition-colors"
-              >
+
                 View All Services
               </a>
             </div>
@@ -352,4 +352,4 @@ const ExpandedServicesPricingGuide2027: NextPage = () => {
   );
 };
 
-export default ExpandedServicesPricingGuide2027;
+export default ExpandedServicesPricingGuide2027;}}

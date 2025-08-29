@@ -22,8 +22,6 @@ import {
   Lock,
   Eye,
   PieChart
-} from 'lucide-react';
-
 export default function AIFinancialTradingPlatform() {
   const features = [
     {
@@ -55,7 +53,7 @@ export default function AIFinancialTradingPlatform() {
       icon: Eye,
       title: 'Market Sentiment Analysis',
       description: 'AI analyzes news, social media, and market data to gauge investor sentiment'
-    }
+
   ];
 
   const pricingPlans = [
@@ -108,7 +106,7 @@ export default function AIFinancialTradingPlatform() {
         'SLA guarantees'
       ],
       popular: false
-    }
+
   ];
 
   const benefits = [
@@ -131,7 +129,7 @@ export default function AIFinancialTradingPlatform() {
       icon: BarChart3,
       title: 'Emotion-Free Trading',
       description: 'Eliminate human bias and emotional decision-making from your trades'
-    }
+
   ];
 
   const tradingMarkets = [
@@ -154,7 +152,7 @@ export default function AIFinancialTradingPlatform() {
       title: 'Commodities',
       description: 'AI-driven insights for gold, oil, and other commodity markets',
       icon: BarChart3
-    }
+
   ];
 
   const performanceMetrics = [
@@ -178,7 +176,7 @@ export default function AIFinancialTradingPlatform() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-          >
+
             <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-green-600 to-blue-600 text-white text-sm font-medium mb-6">
               <TrendingUp className="w-4 h-4 mr-2" />
               AI-Powered Trading
@@ -218,7 +216,7 @@ export default function AIFinancialTradingPlatform() {
                 transition={{ duration: 0.8, delay: index * 0.1 }}
                 viewport={{ once: true }}
                 className="text-center"
-              >
+
                 <div className="text-4xl md:text-5xl font-bold text-white mb-2">{item.metric}</div>
                 <div className="text-gray-300 text-lg">{item.label}</div>
               </motion.div>
@@ -236,7 +234,7 @@ export default function AIFinancialTradingPlatform() {
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
             className="text-center mb-16"
-          >
+
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Powered by Advanced AI
             </h2>
@@ -254,7 +252,7 @@ export default function AIFinancialTradingPlatform() {
                 transition={{ duration: 0.8, delay: index * 0.1 }}
                 viewport={{ once: true }}
                 className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700 hover:border-green-500 transition-all duration-300"
-              >
+
                 <div className="w-12 h-12 bg-gradient-to-r from-green-600 to-blue-600 rounded-lg flex items-center justify-center mb-4">
                   <feature.icon className="w-6 h-6 text-white" />
                 </div>
@@ -275,7 +273,7 @@ export default function AIFinancialTradingPlatform() {
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
             className="text-center mb-16"
-          >
+
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Why Choose AI Trading?
             </h2>
@@ -293,7 +291,7 @@ export default function AIFinancialTradingPlatform() {
                 transition={{ duration: 0.8, delay: index * 0.1 }}
                 viewport={{ once: true }}
                 className="text-center"
-              >
+
                 <div className="w-16 h-16 bg-gradient-to-r from-green-600 to-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
                   <benefit.icon className="w-8 h-8 text-white" />
                 </div>
@@ -314,7 +312,7 @@ export default function AIFinancialTradingPlatform() {
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
             className="text-center mb-16"
-          >
+
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Trade Across All Markets
             </h2>
@@ -332,7 +330,7 @@ export default function AIFinancialTradingPlatform() {
                 transition={{ duration: 0.8, delay: index * 0.1 }}
                 viewport={{ once: true }}
                 className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-8 border border-gray-700"
-              >
+
                 <div className="w-16 h-16 bg-gradient-to-r from-green-600 to-blue-600 rounded-lg flex items-center justify-center mb-6">
                   <market.icon className="w-8 h-8 text-white" />
                 </div>
@@ -353,7 +351,7 @@ export default function AIFinancialTradingPlatform() {
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
             className="text-center mb-16"
-          >
+
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Choose Your Trading Plan
             </h2>
@@ -375,7 +373,7 @@ export default function AIFinancialTradingPlatform() {
                     ? 'border-green-500 ring-2 ring-green-500/20'
                     : 'border-gray-700'
                 }`}
-              >
+
                 {plan.popular && (
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                     <span className="bg-gradient-to-r from-green-600 to-blue-600 text-white px-4 py-2 rounded-full text-sm font-semibold">
@@ -423,7 +421,7 @@ export default function AIFinancialTradingPlatform() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
-          >
+
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
               Ready to Start AI Trading?
             </h2>
@@ -448,4 +446,4 @@ export default function AIFinancialTradingPlatform() {
       </section>
     </div>
   );
-}
+}}}}}}

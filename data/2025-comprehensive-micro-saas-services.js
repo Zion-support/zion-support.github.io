@@ -518,5 +518,6 @@ export const comprehensiveMicroSaasServices2025 = [
         customers: 234,
         rating: 4.5,
         reviews: 167
-    }
+
 ];
+}

@@ -6,8 +6,7 @@ import { SEO } from "@/components/SEO";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { MapPin, Clock, Link as LinkIcon, Github, Twitter, Linkedin, CheckCircle2, Mail, Phone, Globe } from "lucide-react";
-import { HireNowCTA } from "@/components/profile/HireNowCTA";
+import { MapPin, Clock, Link as LinkIcon, Github, Twitter, Linkedin, CheckCircle2, Mail, Phone, Globe import { HireNowCTA } from "@/components/profile/HireNowCTA";
 export default function ProfileDetail() {
     // useParams is typed as `any` in this environment due to missing type
     // definitions, so avoid passing a type argument to prevent TS2347.
@@ -23,7 +22,7 @@ export default function ProfileDetail() {
                 if (!profileId) {
                     setError("Profile ID is missing.");
                     return;
-                }
+
                 const { data, error } = await supabase
                     .from("talent_profiles")
                     .select("*")
@@ -31,13 +30,13 @@ export default function ProfileDetail() {
                     .single();
                 if (error) {
                     throw new Error(error.message);
-                }
+
                 if (!data) {
                     setError("Profile not found.");
                     return;
-                }
+
                 setProfileData(data);
-            }
+
             catch (err) {
                 setError(err.message || "Failed to fetch profile.");
                 toast({
@@ -45,10 +44,10 @@ export default function ProfileDetail() {
                     description: err.message || "Failed to fetch profile.",
                     variant: "destructive",
                 });
-            }
+
             finally {
                 setIsLoading(false);
-            }
+
         };
         fetchProfile();
     }, [profileId]);
@@ -56,17 +55,17 @@ export default function ProfileDetail() {
         return (<div className="min-h-screen flex items-center justify-center">
         <p>Loading profile...</p>
       </div>);
-    }
+
     if (error) {
         return (<div className="min-h-screen flex items-center justify-center">
         <p>Error: {error}</p>
       </div>);
-    }
+
     if (!profileData) {
         return (<div className="min-h-screen flex items-center justify-center">
         <p>Profile not found.</p>
       </div>);
-    }
+
     return (<>
       <SEO title={`${profileData.full_name} | Zion AI Marketplace`} description={profileData.bio || "Check out this talent's profile on Zion!"}/>
 
@@ -213,4 +212,4 @@ export default function ProfileDetail() {
       </div>
 
     </>);
-}
+</Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card>}}}}}}}}}}}

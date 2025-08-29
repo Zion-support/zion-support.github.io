@@ -1,6 +1,4 @@
-import { Workflow, Zap, Check, ExternalLink, Phone, Mail, ArrowRight, Brain, Clock, BarChart3 } from 'lucide-react';
-
-export default function AIWorkflowAutomation() {
+import { Workflow, Zap, Check, ExternalLink, Phone, Mail, ArrowRight, Brain, Clock, BarChart3 export default function AIWorkflowAutomation() {
   const features = [
     'Intelligent process mapping and optimization',
     'AI-powered decision trees and conditional logic',
@@ -129,4 +127,4 @@ export default function AIWorkflowAutomation() {
       </section>
     </div>
   );
-}
+}}

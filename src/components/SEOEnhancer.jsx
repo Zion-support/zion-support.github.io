@@ -42,7 +42,7 @@ export const SEOEnhancer = ({ title = 'Zion Tech Group - Leading AI & Technology
                     logo: {
                         '@type': 'ImageObject',
                         url: 'https://ziontechgroup.com/images/zion-tech-group-logo.png'
-                    }
+
                 },
                 datePublished: publishedTime,
                 dateModified: modifiedTime,
@@ -62,7 +62,7 @@ export const SEOEnhancer = ({ title = 'Zion Tech Group - Leading AI & Technology
                                 '@type': 'Service',
                                 name: 'AI Solutions',
                                 description: 'Machine learning, natural language processing, and computer vision solutions'
-                            }
+
                         },
                         {
                             '@type': 'Offer',
@@ -70,7 +70,7 @@ export const SEOEnhancer = ({ title = 'Zion Tech Group - Leading AI & Technology
                                 '@type': 'Service',
                                 name: 'Cloud & DevOps',
                                 description: 'Cloud migration, infrastructure automation, and DevOps practices'
-                            }
+
                         },
                         {
                             '@type': 'Offer',
@@ -78,17 +78,17 @@ export const SEOEnhancer = ({ title = 'Zion Tech Group - Leading AI & Technology
                                 '@type': 'Service',
                                 name: 'Cybersecurity',
                                 description: 'Comprehensive security solutions including threat detection and compliance'
-                            }
-                        }
+
+
                     ]
-                }
+
             })
         };
         // Remove existing structured data
         const existingScript = document.querySelector('script[type="application/ld+json"]');
         if (existingScript) {
             existingScript.remove();
-        }
+
         // Add new structured data
         const script = document.createElement('script');
         script.type = 'application/ld+json';
@@ -216,3 +216,4 @@ export const SEOEnhancer = ({ title = 'Zion Tech Group - Leading AI & Technology
     </Helmet>);
 };
 export default SEOEnhancer;
+}}}}}}}

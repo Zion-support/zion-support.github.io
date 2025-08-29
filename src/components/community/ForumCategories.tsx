@@ -10,7 +10,6 @@ interface ForumCategoryInfo {
     author: string;
     date: string;
   };
-}
 
 export default function ForumCategories() {
   const categories: ForumCategoryInfo[] = [
@@ -25,7 +24,7 @@ export default function ForumCategories() {
         title: 'Welcome to the Zion Tech Group community!',
         author: 'Admin',
         date: '2024-01-15'
-      }
+
     },
     {
       id: '2',
@@ -38,7 +37,7 @@ export default function ForumCategories() {
         title: 'API integration question',
         author: 'Developer123',
         date: '2024-01-14'
-      }
+
     },
     {
       id: '3',
@@ -51,7 +50,7 @@ export default function ForumCategories() {
         title: 'New AI model deployment strategies',
         author: 'DataScientist',
         date: '2024-01-13'
-      }
+
     },
     {
       id: '4',
@@ -64,7 +63,7 @@ export default function ForumCategories() {
         title: 'Kubernetes best practices',
         author: 'DevOpsEngineer',
         date: '2024-01-12'
-      }
+
     },
     {
       id: '5',
@@ -77,7 +76,7 @@ export default function ForumCategories() {
         title: 'Zero-day vulnerability response',
         author: 'SecurityExpert',
         date: '2024-01-11'
-      }
+
     },
     {
       id: '6',
@@ -90,8 +89,8 @@ export default function ForumCategories() {
         title: 'Digital transformation case studies',
         author: 'BusinessAnalyst',
         date: '2024-01-10'
-      }
-    }
+
+
   ];
 
   return (
@@ -119,7 +118,7 @@ export default function ForumCategories() {
             <div
               key={category.id}
               className="bg-white/10 backdrop-blur-md rounded-2xl p-6 border border-white/20 hover:border-white/40 transition-all duration-300 hover:scale-105 group cursor-pointer"
-            >
+
               <div className="flex items-start justify-between mb-4">
                 <div className="w-12 h-12 bg-zion-cyan/20 rounded-xl flex items-center justify-center">
                   <span className="text-2xl">💬</span>
@@ -178,4 +177,4 @@ export default function ForumCategories() {
       </div>
     </section>
   );
-}
+}}}}}}}}}

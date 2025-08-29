@@ -40,7 +40,6 @@ export interface RevolutionarySpecializedIndustrySolution2029 {
   customers: number;
   rating: number;
   reviews: number;
-}
 
 export const revolutionarySpecializedIndustrySolutions2029: RevolutionarySpecializedIndustrySolution2029[] = [
   // AI-Powered Manufacturing Quality Control
@@ -527,7 +526,7 @@ export const revolutionarySpecializedIndustrySolutions2029: RevolutionarySpecial
     customers: 450,
     rating: 4.8,
     reviews: 320
-  }
+
 ];
 
-export default revolutionarySpecializedIndustrySolutions2029;
+export default revolutionarySpecializedIndustrySolutions2029;}}

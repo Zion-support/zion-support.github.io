@@ -21,8 +21,6 @@ import {
   Clock,
   Eye,
   AlertTriangle
-} from 'lucide-react';
-
 const healthcareSolutions = [
   {
     id: 1,
@@ -119,7 +117,7 @@ const healthcareSolutions = [
     timeline: "8-16 weeks",
     category: "Security",
     compliance: ["NIST", "ISO 27001", "HITRUST"]
-  }
+
 ];
 
 const complianceStandards = [
@@ -146,7 +144,7 @@ const complianceStandards = [
     description: "System and Organization Controls",
     icon: CheckCircle,
     requirements: ["Security", "Availability", "Processing Integrity", "Confidentiality"]
-  }
+
 ];
 
 const successStories = [
@@ -176,7 +174,7 @@ const successStories = [
     solution: "Developed FDA-approved AI diagnostic platform",
     results: "95% accuracy rate, 30% faster diagnosis, FDA clearance",
     logo: "DD"
-  }
+
 ];
 
 const processSteps = [
@@ -207,7 +205,7 @@ const processSteps = [
     description: "Validate compliance and obtain necessary certifications",
     icon: CheckCircle,
     duration: "2-4 weeks"
-  }
+
 ];
 
 export default function HealthcareSolutions() {
@@ -236,13 +234,13 @@ export default function HealthcareSolutions() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="text-center max-w-4xl mx-auto"
-          >
+
             <motion.div
               initial={{ opacity: 0, scale: 0.8 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.8, delay: 0.2 }}
               className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-2xl mb-8"
-            >
+
               <Heart className="w-10 h-10 text-white" />
             </motion.div>
 
@@ -283,7 +281,7 @@ export default function HealthcareSolutions() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
-          >
+
             <h2 className="text-4xl font-bold text-white mb-4">Compliance & Standards</h2>
             <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
               Our solutions meet the highest healthcare compliance standards and regulatory requirements
@@ -298,7 +296,7 @@ export default function HealthcareSolutions() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 className="bg-zion-blue-dark/30 border border-zion-cyan/20 rounded-2xl p-6 text-center hover:border-zion-cyan/40 transition-all duration-300"
-              >
+
                 <div className="w-16 h-16 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-2xl flex items-center justify-center mx-auto mb-6">
                   <standard.icon className="w-8 h-8 text-white" />
                 </div>
@@ -328,7 +326,7 @@ export default function HealthcareSolutions() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
-          >
+
             <h2 className="text-4xl font-bold text-white mb-4">Our Development Process</h2>
             <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
               A comprehensive approach that ensures security, compliance, and quality at every step
@@ -343,7 +341,7 @@ export default function HealthcareSolutions() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 className="text-center"
-              >
+
                 <div className="relative mb-6">
                   <div className="w-16 h-16 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-2xl flex items-center justify-center mx-auto">
                     <step.icon className="w-8 h-8 text-white" />
@@ -372,7 +370,7 @@ export default function HealthcareSolutions() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
-          >
+
             <h2 className="text-4xl font-bold text-white mb-4">Healthcare Solutions</h2>
             <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
               Comprehensive technology solutions designed specifically for healthcare organizations
@@ -390,7 +388,7 @@ export default function HealthcareSolutions() {
                     ? 'bg-gradient-to-r from-zion-cyan to-zion-purple text-white shadow-lg shadow-zion-cyan/25'
                     : 'bg-zion-blue-dark/30 text-zion-slate-light border border-zion-cyan/20 hover:border-zion-cyan/40'
                 }`}
-              >
+
                 {category}
               </button>
             ))}
@@ -405,7 +403,7 @@ export default function HealthcareSolutions() {
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 className="bg-zion-blue-dark/30 border border-zion-cyan/20 rounded-2xl p-6 hover:border-zion-cyan/40 transition-all duration-300 cursor-pointer"
                 onClick={() => setSelectedSolution(solution)}
-              >
+
                 <div className="w-16 h-16 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-2xl flex items-center justify-center mb-6">
                   <solution.icon className="w-8 h-8 text-white" />
                 </div>
@@ -427,7 +425,7 @@ export default function HealthcareSolutions() {
                     <span
                       key={compIndex}
                       className="px-2 py-1 bg-zion-purple/20 text-zion-purple text-xs rounded border border-zion-purple/30"
-                    >
+
                       {comp}
                     </span>
                   ))}
@@ -461,7 +459,7 @@ export default function HealthcareSolutions() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
-          >
+
             <h2 className="text-4xl font-bold text-white mb-4">Success Stories</h2>
             <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
               Healthcare organizations that have transformed patient care with our technology solutions
@@ -476,7 +474,7 @@ export default function HealthcareSolutions() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 className="bg-zion-blue-dark/30 border border-zion-cyan/20 rounded-2xl p-6 hover:border-zion-cyan/40 transition-all duration-300"
-              >
+
                 <div className="flex items-center gap-4 mb-6">
                   <div className="w-12 h-12 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-xl flex items-center justify-center text-white font-bold text-lg">
                     {story.logo}
@@ -522,7 +520,7 @@ export default function HealthcareSolutions() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="text-center max-w-4xl mx-auto"
-          >
+
             <h2 className="text-4xl font-bold text-white mb-6">Ready to Transform Healthcare?</h2>
             <p className="text-xl text-zion-slate-light mb-8 leading-relaxed">
               Let's discuss how our healthcare technology solutions can improve patient care,
@@ -533,13 +531,13 @@ export default function HealthcareSolutions() {
               <a
                 href="/contact"
                 className="px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-purple text-white font-semibold rounded-xl hover:shadow-lg hover:shadow-zion-cyan/25 transition-all duration-300 transform hover:scale-105"
-              >
+
                 Start Your Project
               </a>
               <a
                 href="/contact"
                 className="px-8 py-4 border border-zion-cyan text-zion-cyan font-semibold rounded-xl hover:bg-zion-cyan hover:text-white transition-all duration-300"
-              >
+
                 Schedule Consultation
               </a>
             </div>
@@ -548,4 +546,4 @@ export default function HealthcareSolutions() {
       </section>
     </div>
   );
-}
+}}}}}}

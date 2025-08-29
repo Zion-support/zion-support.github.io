@@ -30,7 +30,7 @@ export const cuttingEdgeEmergingTechServices2025 = [
         price: 3499,
         period: 'month',
         features: ['Full space mining platform', 'Custom mission development', 'Dedicated specialists', '24/7 support']
-      }
+
     },
     category: 'Space Technology',
     tags: ['Space Mining', 'Asteroid Mining', 'Space Resources', 'Mining Technology', 'Space Logistics'],
@@ -83,7 +83,7 @@ export const cuttingEdgeEmergingTechServices2025 = [
         price: 2999,
         period: 'month',
         features: ['Full bio-computing platform', 'Custom algorithms', 'Dedicated specialists', '24/7 support']
-      }
+
     },
     category: 'Quantum Biology',
     tags: ['Quantum Computing', 'Biology', 'Drug Discovery', 'Protein Folding', 'Bioinformatics'],
@@ -136,7 +136,7 @@ export const cuttingEdgeEmergingTechServices2025 = [
         price: 2499,
         period: 'month',
         features: ['Full BCI platform', 'Custom development', 'Dedicated specialists', '24/7 support']
-      }
+
     },
     category: 'Neural Technology',
     tags: ['Brain-Computer Interface', 'Neural Technology', 'Medical Devices', 'Research', 'Neuroscience'],
@@ -189,7 +189,7 @@ export const cuttingEdgeEmergingTechServices2025 = [
         price: 1999,
         period: 'month',
         features: ['Full energy platform', 'Custom algorithms', 'Dedicated specialists', '24/7 support']
-      }
+
     },
     category: 'Quantum Energy',
     tags: ['Quantum Computing', 'Energy', 'Fusion Power', 'Renewable Energy', 'Grid Optimization'],
@@ -242,7 +242,7 @@ export const cuttingEdgeEmergingTechServices2025 = [
         price: 2999,
         period: 'month',
         features: ['Full autonomous platform', 'Custom development', 'Dedicated specialists', '24/7 support']
-      }
+
     },
     category: 'Autonomous Systems',
     tags: ['Autonomous Vehicles', 'AI', 'Computer Vision', 'Robotics', 'Self-Driving'],
@@ -263,5 +263,5 @@ export const cuttingEdgeEmergingTechServices2025 = [
     ],
     integrations: ['Vehicle Control Systems', 'Sensor Platforms', 'Robotics Frameworks', 'Simulation Tools', 'Analytics Platforms'],
     compliance: ['Autonomous Vehicle Regulations', 'Safety Standards', 'Transportation Laws', 'AI Safety Guidelines']
-  }
-];
+
+];}}}}}}

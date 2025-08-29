@@ -1,6 +1,5 @@
 import React, { useState, useRef, useEffect } from 'react';
-import { BarChart3, TrendingUp, Brain, Zap, Target, AlertTriangle, Download, RefreshCw, X, Maximize2, Minimize2, Calendar, Activity } from 'lucide-react';
-const mockMetrics = [
+import { BarChart3, TrendingUp, Brain, Zap, Target, AlertTriangle, Download, RefreshCw, X, Maximize2, Minimize2, Calendar, Activity const mockMetrics = [
     {
         id: 'revenue',
         name: 'Monthly Revenue',
@@ -60,7 +59,7 @@ const mockMetrics = [
         category: 'Financial',
         priority: 'high',
         lastUpdated: '2024-01-15T10:00:00.000Z'
-    }
+
 ];
 const mockInsights = [
     {
@@ -98,7 +97,7 @@ const mockInsights = [
         timestamp: '2024-01-15T08:45:00.000Z',
         actionable: true,
         actions: ['Conduct market research', 'Develop localization strategy', 'Establish partnerships']
-    }
+
 ];
 const mockModels = [
     {
@@ -127,7 +126,7 @@ const mockModels = [
         status: 'training',
         predictions: 15420,
         category: 'Customer Analytics'
-    }
+
 ];
 export function AdvancedBusinessIntelligence() {
     const [isOpen, setIsOpen] = useState(false);
@@ -163,7 +162,7 @@ export function AdvancedBusinessIntelligence() {
         if (autoRefresh) {
             const interval = setInterval(refreshData, 30000); // Refresh every 30 seconds
             return () => clearInterval(interval);
-        }
+
     }, [autoRefresh]);
     const getTrendIcon = (trend) => {
         switch (trend) {
@@ -173,7 +172,7 @@ export function AdvancedBusinessIntelligence() {
                 return <TrendingUp className="w-4 h-4 text-red-500 rotate-180"/>;
             default:
                 return <Activity className="w-4 h-4 text-gray-500"/>;
-        }
+
     };
     const getPriorityColor = (priority) => {
         switch (priority) {
@@ -183,7 +182,7 @@ export function AdvancedBusinessIntelligence() {
                 return 'border-yellow-500 bg-yellow-50 dark:bg-yellow-900/20';
             default:
                 return 'border-green-500 bg-green-50 dark:bg-green-900/20';
-        }
+
     };
     const getInsightIcon = (type) => {
         switch (type) {
@@ -197,7 +196,7 @@ export function AdvancedBusinessIntelligence() {
                 return <AlertTriangle className="w-5 h-5 text-orange-500"/>;
             default:
                 return <Zap className="w-5 h-5 text-purple-500"/>;
-        }
+
     };
     const formatValue = (value, unit) => {
         if (unit === 'USD') {
@@ -207,17 +206,17 @@ export function AdvancedBusinessIntelligence() {
                 minimumFractionDigits: 0,
                 maximumFractionDigits: 0
             }).format(value);
-        }
+
         if (unit === '%') {
             return `${value.toFixed(1)}%`;
-        }
+
         return new Intl.NumberFormat('en-US').format(value);
     };
     if (!isOpen) {
         return (<button onClick={() => setIsOpen(true)} className="fixed bottom-4 right-4 bg-gradient-to-r from-zion-purple to-zion-cyan text-white p-4 rounded-full shadow-2xl hover:shadow-3xl transition-all duration-300 hover:scale-110 z-40" title="Open Business Intelligence Dashboard">
         <Brain className="w-6 h-6"/>
       </button>);
-    }
+
     if (isMinimized) {
         return (<div className="fixed bottom-4 right-4 bg-white dark:bg-zion-slate border border-zion-slate-light rounded-lg shadow-xl z-50">
         <div className="flex items-center gap-2 p-3">
@@ -228,7 +227,7 @@ export function AdvancedBusinessIntelligence() {
           </button>
         </div>
       </div>);
-    }
+
     return (<div className={`fixed bg-white dark:bg-zion-slate border border-zion-slate-light rounded-lg shadow-2xl z-50 overflow-hidden transition-all duration-300 ${isFullscreen ? 'inset-4' : 'bottom-4 right-4 w-[1200px] h-[800px]'}`} ref={containerRef}>
       {/* Header */}
       <div className="bg-gradient-to-r from-zion-purple to-zion-cyan text-white p-4 flex items-center justify-between">
@@ -432,4 +431,4 @@ export function AdvancedBusinessIntelligence() {
           </div>)}
       </div>
     </div>);
-}
+}}}}}}}}}}}}}

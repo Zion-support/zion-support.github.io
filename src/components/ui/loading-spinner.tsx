@@ -7,7 +7,6 @@ interface LoadingSpinnerProps {
   text?: string;
   showText?: boolean;
   className?: string;
-}
 
 const sizeClasses = {
   sm: 'w-8 h-8',
@@ -62,7 +61,7 @@ export const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
           animate={{ opacity: 1 }}
           transition={{ delay: 0.5 }}
           className="mt-4 text-center"
-        >
+
           <div className={`text-${color === 'white' ? 'white' : 'cyan'}-400 text-sm animate-pulse`}>
             {text}
           </div>
@@ -137,8 +136,8 @@ export const SkeletonLoader: React.FC<{
           index === lines - 1 ? 'w-3/4' : 'w-full'
         }`}
       />
-    ))}
+    ))</div>}
   </div>
 );
 
-export default LoadingSpinner;
+export default LoadingSpinner;</motion.div></motion.div>}

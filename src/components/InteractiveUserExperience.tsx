@@ -19,8 +19,6 @@ import {
   TrendingUp,
   Accessibility,
   Languages
-} from 'lucide-react';
-
 interface UserPreference {
   id: string;
   name: string;
@@ -29,7 +27,6 @@ interface UserPreference {
   options?: string[];
   category: 'appearance' | 'accessibility' | 'performance' | 'language';
   description: string;
-}
 
 interface UserActivity {
   id: string;
@@ -38,7 +35,6 @@ interface UserActivity {
   duration?: number;
   success: boolean;
   category: 'navigation' | 'interaction' | 'search' | 'purchase';
-}
 
 interface AccessibilityFeature {
   id: string;
@@ -46,7 +42,6 @@ interface AccessibilityFeature {
   enabled: boolean;
   description: string;
   impact: 'high' | 'medium' | 'low';
-}
 
 const InteractiveUserExperience: React.FC = () => {
   const [preferences, setPreferences] = useState<UserPreference[]>([]);
@@ -109,7 +104,7 @@ const InteractiveUserExperience: React.FC = () => {
         type: 'boolean',
         category: 'performance',
         description: 'Automatically save your work'
-      }
+
     ];
 
     setPreferences(initialPreferences);
@@ -152,7 +147,7 @@ const InteractiveUserExperience: React.FC = () => {
         enabled: false,
         description: 'Voice-activated navigation and controls',
         impact: 'low'
-      }
+
     ];
 
     setAccessibilityFeatures(features);
@@ -192,7 +187,7 @@ const InteractiveUserExperience: React.FC = () => {
         duration: 8,
         success: true,
         category: 'interaction'
-      }
+
     ];
 
     setUserActivities(activities);
@@ -223,8 +218,8 @@ const InteractiveUserExperience: React.FC = () => {
           setLanguage(value as string);
           // Here you would typically change the app language
           break;
-      }
-    }
+
+
   }, [preferences]);
 
   const toggleAccessibilityFeature = useCallback((id: string) => {
@@ -240,7 +235,7 @@ const InteractiveUserExperience: React.FC = () => {
       case 'search': return <Eye className="h-4 w-4" />;
       case 'purchase': return <Heart className="h-4 w-4" />;
       default: return <User className="h-4 w-4" />;
-    }
+
   };
 
   const getImpactColor = (impact: AccessibilityFeature['impact']) => {
@@ -249,7 +244,7 @@ const InteractiveUserExperience: React.FC = () => {
       case 'medium': return 'bg-yellow-500';
       case 'low': return 'bg-blue-500';
       default: return 'bg-gray-500';
-    }
+
   };
 
   const getSuccessRate = () => {
@@ -317,7 +312,7 @@ const InteractiveUserExperience: React.FC = () => {
                             variant={preference.value ? 'default' : 'outline'}
                             onClick={() => updatePreference(preference.id, !preference.value)}
                             size="sm"
-                          >
+
                             {preference.value ? 'Enabled' : 'Disabled'}
                           </Button>
                         )}
@@ -326,7 +321,7 @@ const InteractiveUserExperience: React.FC = () => {
                             value={preference.value as string}
                             onChange={(e) => updatePreference(preference.id, e.target.value)}
                             className="border rounded px-3 py-2 text-sm"
-                          >
+
                             {preference.options.map((option) => (
                               <option key={option} value={option}>
                                 {option.charAt(0).toUpperCase() + option.slice(1)}
@@ -383,7 +378,7 @@ const InteractiveUserExperience: React.FC = () => {
                         onClick={() => toggleAccessibilityFeature(feature.id)}
                         size="sm"
                         className="ml-4"
-                      >
+
                         {feature.enabled ? 'Enabled' : 'Disabled'}
                       </Button>
                     </div>
@@ -555,8 +550,8 @@ const InteractiveUserExperience: React.FC = () => {
 // Add missing Tablet icon component
 const Tablet: React.FC<{ className?: string }> = ({ className }) => (
   <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24">
-    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z" />
+    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2</Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card>} d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z" />
   </svg>
 );
 
-export default InteractiveUserExperience;
+export default InteractiveUserExperience;}}}}}}}}}}}

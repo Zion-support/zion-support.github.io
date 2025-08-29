@@ -1,15 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Loader2, Zap, Brain, Rocket, Globe } from 'lucide-react';
-
-interface EnhancedLoadingSpinnerProps {
+import { Loader2, Zap, Brain, Rocket, Globe interface EnhancedLoadingSpinnerProps {
   message?: string;
   showProgress?: boolean;
   progress?: number;
   variant?: 'default' | 'ai' | 'tech' | 'global';
   size?: 'sm' | 'md' | 'lg' | 'xl';
   className?: string;
-}
 
 export const EnhancedLoadingSpinner: React.FC<EnhancedLoadingSpinnerProps> = ({
   message = 'Loading amazing experiences...',
@@ -41,7 +38,7 @@ export const EnhancedLoadingSpinner: React.FC<EnhancedLoadingSpinnerProps> = ({
         setMessageIndex((prevIndex) => (prevIndex + 1) % loadingMessages.length);
       }, 3000); // Change message every 3 seconds
       return () => clearInterval(interval);
-    }
+
   }, [variant, loadingMessages.length]);
 
   useEffect(() => {
@@ -78,14 +75,14 @@ export const EnhancedLoadingSpinner: React.FC<EnhancedLoadingSpinnerProps> = ({
         initial={{ rotate: 0 }}
         animate={{ rotate: 360 }}
         transition={{ duration: 1, repeat: Infinity, ease: 'linear' }}
-      >
+
         {variant !== 'default' && (
           <motion.div
             className="absolute inset-0 flex items-center justify-center text-white"
             initial={{ opacity: 0, scale: 0.5 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.5, repeat: Infinity, repeatType: 'reverse' }}
-          >
+
             <IconComponent className={`h-3 w-3 ${size === 'xl' ? 'h-6 w-6' : ''}`} />
           </motion.div>
         )}
@@ -99,7 +96,7 @@ export const EnhancedLoadingSpinner: React.FC<EnhancedLoadingSpinnerProps> = ({
             exit={{ opacity: 0, y: -10 }}
             transition={{ duration: 0.5 }}
             className="mt-3 text-sm text-gray-400 text-center max-w-xs"
-          >
+
             {loadingMessages[messageIndex]}
           </motion.p>
         </AnimatePresence>
@@ -131,7 +128,6 @@ interface LoadingOverlayProps {
   message?: string;
   progress?: number;
   variant?: 'default' | 'ai' | 'tech' | 'global';
-}
 
 export const LoadingOverlay: React.FC<LoadingOverlayProps> = ({
   isOpen,
@@ -147,10 +143,10 @@ export const LoadingOverlay: React.FC<LoadingOverlayProps> = ({
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
           className="fixed inset-0 bg-black bg-opacity-70 flex items-center justify-center z-[9999]"
-        >
+
           <EnhancedLoadingSpinner message={message} showProgress={progress !== undefined} progress={progress} variant={variant} size="xl" />
         </motion.div>
       )}
     </AnimatePresence>
   );
-};
+};}}}}

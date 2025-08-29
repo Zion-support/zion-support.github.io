@@ -28,7 +28,6 @@ import {
   Eye,
   Heart,
   Zap as Lightning
-} from 'lucide-react';
 import { SEO } from '../components/SEO';
 import { emergingTechServices2030 } from '../data/emergingTechServices2030';
 
@@ -39,8 +38,8 @@ export default function EmergingTech2030() {
       opacity: 1,
       transition: {
         staggerChildren: 0.1
-      }
-    }
+
+
   };
 
   const itemVariants = {
@@ -50,8 +49,8 @@ export default function EmergingTech2030() {
       opacity: 1,
       transition: {
         duration: 0.5
-      }
-    }
+
+
   };
 
   const serviceIcons = {
@@ -83,7 +82,7 @@ export default function EmergingTech2030() {
             variants={containerVariants}
             initial="hidden"
             animate="visible"
-          >
+
             <motion.div variants={itemVariants}>
               <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent">
                 Emerging Tech 2030
@@ -115,19 +114,19 @@ export default function EmergingTech2030() {
               <Link
                 to="/contact"
                 className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105"
-              >
+
                 Get Started
               </Link>
               <Link
                 to="/request-quote"
                 className="px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-600 rounded-lg font-semibold hover:from-purple-600 hover:to-pink-700 transition-all duration-300 transform hover:scale-105"
-              >
+
                 Request Quote
               </Link>
               <Link
                 to="/services-catalog"
                 className="px-8 py-4 border-2 border-cyan-500 text-cyan-400 rounded-lg font-semibold hover:bg-cyan-500 hover:text-white transition-all duration-300"
-              >
+
                 View All Services
               </Link>
             </motion.div>
@@ -141,7 +140,7 @@ export default function EmergingTech2030() {
             variants={containerVariants}
             initial="hidden"
             animate="visible"
-          >
+
             <motion.div variants={itemVariants} className="text-center mb-16">
               <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent">
                 Revolutionary Technologies
@@ -160,7 +159,7 @@ export default function EmergingTech2030() {
                     key={service.id}
                     variants={itemVariants}
                     className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 rounded-2xl p-8 border border-slate-700/50 hover:border-cyan-500/50 transition-all duration-300 hover:transform hover:scale-105 group"
-                  >
+
                     <div className="flex items-center gap-4 mb-6">
                       <div className={`p-3 rounded-xl bg-gradient-to-br from-cyan-500 to-blue-600 group-hover:from-cyan-400 group-hover:to-blue-500 transition-all duration-300`}>
                         <IconComponent className="w-6 h-6 text-white" />
@@ -195,7 +194,7 @@ export default function EmergingTech2030() {
                         <span
                           key={tagIndex}
                           className="px-3 py-1 bg-slate-700/50 text-slate-300 text-xs rounded-full"
-                        >
+
                           {tag}
                         </span>
                       ))}
@@ -204,7 +203,7 @@ export default function EmergingTech2030() {
                     <Link
                       to={`/services/${service.id.replace(/-/g, '-')}`}
                       className="inline-flex items-center gap-2 text-cyan-400 hover:text-cyan-300 transition-colors group"
-                    >
+
                       Learn More
                       <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                     </Link>
@@ -223,7 +222,7 @@ export default function EmergingTech2030() {
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
-          >
+
             <motion.div variants={itemVariants} className="text-center mb-16">
               <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent">
                 Why Choose Zion Tech Group?
@@ -270,13 +269,13 @@ export default function EmergingTech2030() {
                   title: 'Enterprise Security',
                   description: 'Bank-grade security with SOC 2 compliance and enterprise-level data protection.',
                   color: 'from-red-500 to-pink-600'
-                }
+
               ].map((feature, index) => (
                 <motion.div
                   key={index}
                   variants={itemVariants}
                   className="text-center p-6"
-                >
+
                   <div className={`inline-flex p-4 rounded-2xl bg-gradient-to-br ${feature.color} mb-4`}>
                     <feature.icon className="w-8 h-8 text-white" />
                   </div>
@@ -296,7 +295,7 @@ export default function EmergingTech2030() {
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
-          >
+
             <motion.div variants={itemVariants}>
               <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent">
                 Ready to Transform Your Business?
@@ -325,13 +324,13 @@ export default function EmergingTech2030() {
               <Link
                 to="/contact"
                 className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105"
-              >
+
                 Schedule a Consultation
               </Link>
               <Link
                 to="/request-quote"
                 className="px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-600 rounded-lg font-semibold hover:from-purple-600 hover:to-pink-700 transition-all duration-300 transform hover:scale-105"
-              >
+
                 Get Custom Quote
               </Link>
             </motion.div>
@@ -340,4 +339,4 @@ export default function EmergingTech2030() {
       </div>
     </>
   );
-}
+}}}}}}}

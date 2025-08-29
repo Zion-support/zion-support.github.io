@@ -56,7 +56,6 @@ import {
   Atom,
   Heart,
   Leaf
-} from 'lucide-react';
 import { INNOVATIVE_MICRO_SAAS_SERVICES_2025 } from '../data/innovativeMicroSaasServices2025';
 
 interface ServiceContact {
@@ -64,7 +63,6 @@ interface ServiceContact {
   email: string;
   address: string;
   website: string;
-}
 
 const ComprehensiveServicesShowcase2025: React.FC = () => {
   const [activeCategory, setActiveCategory] = useState('all');
@@ -130,7 +128,7 @@ const ComprehensiveServicesShowcase2025: React.FC = () => {
         return (innovationOrder[b.innovationLevel as keyof typeof innovationOrder] || 0) - (innovationOrder[a.innovationLevel as keyof typeof innovationOrder] || 0);
       default:
         return 0;
-    }
+
   });
 
   const handleServiceClick = (service: any) => {
@@ -147,8 +145,8 @@ const ComprehensiveServicesShowcase2025: React.FC = () => {
       opacity: 1,
       transition: {
         staggerChildren: 0.1
-      }
-    }
+
+
   };
 
   const itemVariants = {
@@ -159,8 +157,8 @@ const ComprehensiveServicesShowcase2025: React.FC = () => {
       transition: {
         duration: 0.5,
         ease: "easeOut"
-      }
-    }
+
+
   };
 
   const getCategoryIcon = (category: string) => {
@@ -204,7 +202,7 @@ const ComprehensiveServicesShowcase2025: React.FC = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="mb-8"
-          >
+
             <div className="inline-flex items-center px-4 py-2 bg-zion-cyan/20 border border-zion-cyan/30 rounded-full text-zion-cyan text-sm font-medium mb-6">
               <Rocket className="w-4 h-4 mr-2" />
               Comprehensive AI Services Showcase 2025
@@ -261,7 +259,7 @@ const ComprehensiveServicesShowcase2025: React.FC = () => {
                 value={sortBy}
                 onChange={(e) => setSortBy(e.target.value)}
                 className="w-full px-4 py-3 bg-zion-slate-dark border border-zion-slate-light/20 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent"
-              >
+
                 <option value="name">Sort by Name</option>
                 <option value="price-low">Price: Low to High</option>
                 <option value="price-high">Price: High to Low</option>
@@ -279,7 +277,7 @@ const ComprehensiveServicesShowcase2025: React.FC = () => {
                       ? 'bg-zion-cyan text-white'
                       : 'text-zion-slate-light hover:text-white'
                   }`}
-                >
+
                   Grid
                 </button>
                 <button
@@ -289,7 +287,7 @@ const ComprehensiveServicesShowcase2025: React.FC = () => {
                       ? 'bg-zion-cyan text-white'
                       : 'text-zion-slate-light hover:text-white'
                   }`}
-                >
+
                   List
                 </button>
               </div>
@@ -332,7 +330,7 @@ const ComprehensiveServicesShowcase2025: React.FC = () => {
                 value={innovationLevel}
                 onChange={(e) => setInnovationLevel(e.target.value)}
                 className="w-full px-3 py-2 bg-zion-slate-dark border border-zion-slate-light/20 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent"
-              >
+
                 <option value="all">All Levels</option>
                 <option value="Breakthrough">Breakthrough</option>
                 <option value="Revolutionary">Revolutionary</option>
@@ -363,7 +361,7 @@ const ComprehensiveServicesShowcase2025: React.FC = () => {
                     ? 'bg-zion-cyan text-white shadow-lg shadow-zion-cyan/25'
                     : 'bg-zion-slate-dark text-zion-slate-light hover:bg-zion-slate hover:text-white border border-zion-slate-light/20'
                 }`}
-              >
+
                 <span className="mr-2">{category.icon}</span>
                 {category.name} ({category.count})
               </button>
@@ -380,7 +378,7 @@ const ComprehensiveServicesShowcase2025: React.FC = () => {
             initial="hidden"
             animate="visible"
             className={viewMode === 'grid' ? 'grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8' : 'space-y-6'}
-          >
+
             {sortedServices.map((service, index) => (
               <motion.div
                 key={service.id}
@@ -389,7 +387,7 @@ const ComprehensiveServicesShowcase2025: React.FC = () => {
                   viewMode === 'list' ? 'p-6' : 'p-6'
                 }`}
                 onClick={() => handleServiceClick(service)}
-              >
+
                 <div className="flex items-start justify-between mb-4">
                   <div className="w-12 h-12 bg-gradient-to-br from-zion-cyan to-zion-blue rounded-xl flex items-center justify-center">
                     {React.createElement(getCategoryIcon(service.category), { className: "w-6 h-6 text-white" })}
@@ -456,7 +454,7 @@ const ComprehensiveServicesShowcase2025: React.FC = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
-          >
+
             <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">
               Why Choose Zion Tech Group?
             </h2>
@@ -481,7 +479,7 @@ const ComprehensiveServicesShowcase2025: React.FC = () => {
                 icon: Zap,
                 title: "Rapid Implementation",
                 description: "Get up and running in weeks, not months, with our proven implementation methodology."
-              }
+
             ].map((feature, index) => (
               <motion.div
                 key={index}
@@ -490,7 +488,7 @@ const ComprehensiveServicesShowcase2025: React.FC = () => {
                 transition={{ duration: 0.8, delay: index * 0.1 }}
                 viewport={{ once: true }}
                 className="text-center"
-              >
+
                 <div className="w-16 h-16 bg-gradient-to-br from-zion-cyan to-zion-blue rounded-2xl flex items-center justify-center mx-auto mb-6">
                   <feature.icon className="w-8 h-8 text-white" />
                 </div>
@@ -510,7 +508,7 @@ const ComprehensiveServicesShowcase2025: React.FC = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
-          >
+
             <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">
               Ready to Transform Your Business?
             </h2>
@@ -554,14 +552,14 @@ const ComprehensiveServicesShowcase2025: React.FC = () => {
             exit={{ opacity: 0 }}
             className="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-4"
             onClick={closeModal}
-          >
+
             <motion.div
               initial={{ scale: 0.9, opacity: 0 }}
               animate={{ scale: 1, opacity: 1 }}
               exit={{ scale: 0.9, opacity: 0 }}
               className="bg-zion-slate-dark rounded-2xl max-w-4xl w-full max-h-[90vh] overflow-y-auto"
               onClick={(e) => e.stopPropagation()}
-            >
+
               <div className="p-8">
                 <div className="flex items-start justify-between mb-6">
                   <div>
@@ -571,7 +569,7 @@ const ComprehensiveServicesShowcase2025: React.FC = () => {
                   <button
                     onClick={closeModal}
                     className="text-zion-slate-light hover:text-white transition-colors"
-                  >
+
                     <X className="w-6 h-6" />
                   </button>
                 </div>
@@ -641,3 +639,4 @@ const ComprehensiveServicesShowcase2025: React.FC = () => {
 };
 
 export default ComprehensiveServicesShowcase2025;
+}}}}}}}}

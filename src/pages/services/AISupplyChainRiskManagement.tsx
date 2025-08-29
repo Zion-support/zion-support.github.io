@@ -1,6 +1,4 @@
-import { Shield, AlertTriangle, TrendingUp, BarChart3, CheckCircle, ArrowRight, ExternalLink, Phone, Mail, DollarSign, Target, Zap, Globe, Database, Cpu } from 'lucide-react';
-
-export default function AISupplyChainRiskManagement() {
+import { Shield, AlertTriangle, TrendingUp, BarChart3, CheckCircle, ArrowRight, ExternalLink, Phone, Mail, DollarSign, Target, Zap, Globe, Database, Cpu export default function AISupplyChainRiskManagement() {
   const features = [
     'AI-powered supply chain risk assessment and monitoring',
     'Real-time global supply chain disruption alerts',
@@ -41,7 +39,7 @@ export default function AISupplyChainRiskManagement() {
       price: '$2,499/mo',
       features: ['Unlimited suppliers', 'Full AI suite', 'Custom risk models', 'Dedicated support', 'White-label solutions', 'Advanced integrations'],
       popular: false
-    }
+
   ];
 
   const useCases = [
@@ -290,11 +288,11 @@ export default function AISupplyChainRiskManagement() {
             target="_blank"
             rel="noreferrer"
             className="inline-flex items-center text-red-600 hover:text-red-700 font-semibold"
-          >
+
             Visit ziontechgroup.com <ExternalLink className="w-4 h-4 ml-2" />
           </a>
         </div>
       </section>
     </div>
   );
-}
+}}}

@@ -1,8 +1,6 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { ChevronLeft, ChevronRight, Star, Quote } from 'lucide-react';
-
-interface Testimonial {
+import { ChevronLeft, ChevronRight, Star, Quote interface Testimonial {
   id: number;
   name: string;
   role: string;
@@ -11,7 +9,6 @@ interface Testimonial {
   rating: number;
   avatar: string;
   industry: string;
-}
 
 const Testimonials: React.FC = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -56,7 +53,7 @@ const Testimonials: React.FC = () => {
       rating: 5,
       avatar: "/images/testimonials/david-kim.jpg",
       industry: "Financial Services"
-    }
+
   ];
 
   const nextTestimonial = () => {
@@ -80,7 +77,7 @@ const Testimonials: React.FC = () => {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
-        >
+
           <div className="inline-flex items-center mb-4 px-4 py-2 bg-zion-cyan/10 border border-zion-cyan/20 rounded-full">
             <Quote className="w-4 h-4 text-zion-cyan mr-2" />
             <span className="text-zion-cyan text-sm font-medium">Client Success Stories</span>
@@ -105,7 +102,7 @@ const Testimonials: React.FC = () => {
               exit={{ opacity: 0, x: -100 }}
               transition={{ duration: 0.5 }}
               className="bg-zion-slate-dark/50 backdrop-blur-xl border border-zion-cyan/20 rounded-2xl p-8 md:p-12 text-center relative overflow-hidden"
-            >
+
               {/* Background decoration */}
               <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-zion-cyan/10 to-zion-blue/10 rounded-full blur-3xl" />
               <div className="absolute bottom-0 left-0 w-24 h-24 bg-gradient-to-br from-zion-purple/10 to-zion-cyan/10 rounded-full blur-3xl" />
@@ -148,7 +145,7 @@ const Testimonials: React.FC = () => {
             onClick={prevTestimonial}
             className="absolute left-4 top-1/2 transform -translate-y-1/2 w-12 h-12 bg-zion-slate-dark/80 backdrop-blur-xl border border-zion-cyan/20 rounded-full flex items-center justify-center text-zion-cyan hover:bg-zion-cyan hover:text-white transition-all duration-300 hover:scale-110 focus:outline-none focus:ring-2 focus:ring-zion-cyan/50"
             aria-label="Previous testimonial"
-          >
+
             <ChevronLeft className="w-6 h-6" />
           </button>
 
@@ -156,7 +153,7 @@ const Testimonials: React.FC = () => {
             onClick={nextTestimonial}
             className="absolute right-4 top-1/2 transform -translate-y-1/2 w-12 h-12 bg-zion-slate-dark/80 backdrop-blur-xl border border-zion-cyan/20 rounded-full flex items-center justify-center text-zion-cyan hover:bg-zion-cyan hover:text-white transition-all duration-300 hover:scale-110 focus:outline-none focus:ring-2 focus:ring-zion-cyan/50"
             aria-label="Next testimonial"
-          >
+
             <ChevronRight className="w-6 h-6" />
           </button>
         </div>
@@ -184,7 +181,7 @@ const Testimonials: React.FC = () => {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.4 }}
           viewport={{ once: true }}
-        >
+
           <p className="text-zion-slate-light text-sm mb-6">Join our growing list of satisfied clients</p>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-2xl mx-auto">
             <div className="text-center">
@@ -208,6 +205,6 @@ const Testimonials: React.FC = () => {
       </div>
     </section>
   );
-};
+</div></div>};
 
-export default Testimonials;
+export default Testimonials;}}}

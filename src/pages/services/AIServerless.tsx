@@ -1,6 +1,4 @@
-import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, FileText, BarChart3 } from 'lucide-react';
-
-export default function AIServerless() {
+import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, FileText, BarChart3 export default function AIServerless() {
   const features = [
     'AI-powered serverless optimization',
     'Intelligent serverless management',
@@ -171,4 +169,4 @@ export default function AIServerless() {
       </section>
     </div>
   );
-}
+}}

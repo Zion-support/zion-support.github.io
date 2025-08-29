@@ -6,7 +6,6 @@ export interface ServiceContact {
   email: string;
   website: string;
   address: string;
-}
 
 export interface AIService {
   id: number;
@@ -37,7 +36,6 @@ export interface AIService {
   integrations: string[];
   freeTier: boolean;
   trialPeriod: string;
-}
 
 // Zion Tech Group Contact Information
 const zionContact: ServiceContact = {
@@ -635,7 +633,7 @@ export const comprehensiveAIServices2030: AIService[] = [
     integrations: ["ERP systems", "CRM platforms", "Document management", "Workflow tools"],
     freeTier: true,
     trialPeriod: "30 days"
-  }
+
 ];
 
-export default comprehensiveAIServices2030;
+export default comprehensiveAIServices2030;}}}

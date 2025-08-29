@@ -14,21 +14,21 @@ export default function CartPage() {
         if (reduxItems.length > 0) {
             setItems(reduxItems);
             setCartLoading(false);
-        }
+
         else {
             const stored = safeStorage.getItem('zion_cart');
             if (stored) {
                 try {
                     dispatch(setItemsAction(JSON.parse(stored)));
-                }
+
                 catch {
                     dispatch(setItemsAction([]));
-                }
-            }
+
+
             else {
                 dispatch(setItemsAction([]));
-            }
-        }
+
+
         ;
         load();
     }, [user, dispatch]);
@@ -41,17 +41,17 @@ export default function CartPage() {
                     headers: { 'Content-Type': 'application/json' },
                     body: JSON.stringify({ id, quantity: qty }),
                 });
-            }
+
             catch (err) {
-                // console.error('Failed to update cart', err);
-            }
-        }
+                // // // console.error('Failed to update cart', err);
+
+
         setCartLoading(false);
     }, [reduxItems];
     useEffect(() => {
         if (!cartLoading && items.length === 0) {
             setShowEmpty(true);
-        }
+
     }, [cartLoading, items]);
     const updateQuantity = (id, qty) => {
         dispatch(updateQuantityAction({ id, quantity: qty }));
@@ -69,10 +69,10 @@ export default function CartPage() {
                 amount: subtotal,
             });
             setDiscount(res.data.discount || 0);
-        }
+
         catch (e) {
             setDiscount(0);
-        }
+
     };
     const subtotal = items.reduce((sum, i) => sum + i.price * i.quantity, 0);
     const total = subtotal - discount;
@@ -81,7 +81,7 @@ export default function CartPage() {
         <Skeleton className="h-8 w-1/3"/>
         <Skeleton className="h-32 w-full"/>
       </div>);
-    }
+
     if (showEmpty) {
         return (<div className="container py-10 text-center">
         <img loading="lazy" src="/images/empty-cart.svg" alt="Empty cart" className="mx-auto mb-4 w-48 h-36"/>
@@ -90,7 +90,7 @@ export default function CartPage() {
           <Link href="/marketplace">Browse Marketplace</Link>
         </Button>
       </div>);
-    }
+
     const tax = subtotal * 0.1;
     const total = subtotal + tax;
     return (<div className="container max-w-2xl py-10">
@@ -123,4 +123,4 @@ export default function CartPage() {
         {user ? 'Checkout' : 'Login to Checkout'}
       </Button>
     </div>);
-}
+}}}}}}}}}}}}}}}

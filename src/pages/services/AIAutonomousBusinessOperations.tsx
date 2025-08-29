@@ -170,9 +170,7 @@ import {
   Expressionless,
   Husk,
   RollingEyes,
-          } from 'lucide-react';
-
-const AIAutonomousBusinessOperations = () => {
+          const AIAutonomousBusinessOperations = () => {
   const features = [
     {
       icon: Brain,
@@ -209,7 +207,7 @@ const AIAutonomousBusinessOperations = () => {
       title: "Advanced Analytics",
       description: "Comprehensive business intelligence and reporting",
       benefits: ["Custom dashboards", "Predictive modeling", "Data visualization", "Actionable insights"]
-    }
+
   ];
 
   const useCases = [
@@ -242,7 +240,7 @@ const AIAutonomousBusinessOperations = () => {
       industry: "Consulting",
       applications: ["Client management", "Project optimization", "Knowledge management", "Resource allocation"],
       icon: Briefcase
-    }
+
   ];
 
   const pricingTiers = [
@@ -292,7 +290,7 @@ const AIAutonomousBusinessOperations = () => {
         "On-premise deployment"
       ],
       popular: false
-    }
+
   ];
 
   const contactInfo = {
@@ -318,7 +316,7 @@ const AIAutonomousBusinessOperations = () => {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-          >
+
             <span className="inline-flex items-center px-4 py-2 bg-purple-600/20 text-purple-400 text-sm font-semibold rounded-full border border-purple-500/30">
               <Bot className="w-4 h-4 mr-2" />
               AI-Powered Platform
@@ -330,7 +328,7 @@ const AIAutonomousBusinessOperations = () => {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
-          >
+
             AI Autonomous
             <span className="block bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
               Business Operations
@@ -342,7 +340,7 @@ const AIAutonomousBusinessOperations = () => {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
-          >
+
             Transform your business with intelligent automation. Our AI platform makes decisions,
             optimizes processes, and operates autonomously 24/7 to maximize efficiency and profitability.
           </motion.p>
@@ -352,18 +350,18 @@ const AIAutonomousBusinessOperations = () => {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.6 }}
-          >
+
             <Link
               to="/request-quote"
               className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-600 to-blue-600 text-white font-semibold rounded-lg hover:from-purple-700 hover:to-blue-700 transition-all duration-300 transform hover:scale-105"
-            >
+
               <Rocket className="w-5 h-5 mr-2" />
               Get Started
             </Link>
             <Link
               to="#demo"
               className="inline-flex items-center px-8 py-4 border-2 border-purple-400 text-purple-400 font-semibold rounded-lg hover:bg-purple-400 hover:text-white transition-all duration-300"
-            >
+
               <Play className="w-5 h-5 mr-2" />
               Watch Demo
             </Link>
@@ -380,7 +378,7 @@ const AIAutonomousBusinessOperations = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
-          >
+
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               Why Choose AI Autonomous Operations?
             </h2>
@@ -420,7 +418,7 @@ const AIAutonomousBusinessOperations = () => {
                 icon: Target,
                 title: "Data-Driven Decisions",
                 description: "Make informed decisions based on real-time data and AI insights"
-              }
+
             ].map((benefit, index) => (
               <motion.div
                 key={benefit.title}
@@ -429,7 +427,7 @@ const AIAutonomousBusinessOperations = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
-              >
+
                 <div className="p-3 bg-gradient-to-r from-purple-600/20 to-blue-600/20 rounded-lg w-12 h-12 flex items-center justify-center mb-4">
                   <benefit.icon className="w-6 h-6 text-purple-400" />
                 </div>
@@ -450,7 +448,7 @@ const AIAutonomousBusinessOperations = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
-          >
+
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               Platform Features
             </h2>
@@ -470,7 +468,7 @@ const AIAutonomousBusinessOperations = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
-              >
+
                 <div className="flex-1">
                   <div className="flex items-center mb-4">
                     <div className="p-3 bg-gradient-to-r from-purple-600/20 to-blue-600/20 rounded-lg mr-4">
@@ -510,7 +508,7 @@ const AIAutonomousBusinessOperations = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
-          >
+
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               Industry Applications
             </h2>
@@ -528,7 +526,7 @@ const AIAutonomousBusinessOperations = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
-              >
+
                 <div className="flex items-center mb-4">
                   <div className="p-3 bg-gradient-to-r from-purple-600/20 to-blue-600/20 rounded-lg mr-4">
                     <useCase.icon className="w-6 h-6 text-purple-400" />
@@ -558,7 +556,7 @@ const AIAutonomousBusinessOperations = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
-          >
+
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               Pricing Plans
             </h2>
@@ -580,7 +578,7 @@ const AIAutonomousBusinessOperations = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
-              >
+
                 {tier.popular && (
                   <div className="flex items-center justify-center mb-4">
                     <span className="px-3 py-1 bg-purple-600 text-white text-sm font-semibold rounded-full">
@@ -614,7 +612,7 @@ const AIAutonomousBusinessOperations = () => {
                       ? 'bg-gradient-to-r from-purple-600 to-blue-600 text-white hover:from-purple-700 hover:to-blue-700'
                       : 'bg-slate-700 text-white hover:bg-slate-600'
                   }`}
-                >
+
                   Get Started
                   <ArrowRight className="w-4 h-4 ml-2" />
                 </Link>
@@ -633,7 +631,7 @@ const AIAutonomousBusinessOperations = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
-          >
+
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               Ready to Transform Your Business?
             </h2>
@@ -649,7 +647,7 @@ const AIAutonomousBusinessOperations = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8, delay: 0.1 }}
-            >
+
               <div className="p-4 bg-purple-600/20 rounded-full w-16 h-16 mx-auto mb-4 flex items-center justify-center">
                 <Phone className="w-8 h-8 text-purple-400" />
               </div>
@@ -663,7 +661,7 @@ const AIAutonomousBusinessOperations = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8, delay: 0.2 }}
-            >
+
               <div className="p-4 bg-blue-600/20 rounded-full w-16 h-16 mx-auto mb-4 flex items-center justify-center">
                 <Mail className="w-8 h-8 text-blue-400" />
               </div>
@@ -677,7 +675,7 @@ const AIAutonomousBusinessOperations = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8, delay: 0.3 }}
-            >
+
               <div className="p-4 bg-green-600/20 rounded-full w-16 h-16 mx-auto mb-4 flex items-center justify-center">
                 <MapPin className="w-8 h-8 text-green-400" />
               </div>
@@ -692,11 +690,11 @@ const AIAutonomousBusinessOperations = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8, delay: 0.4 }}
-          >
+
             <Link
               to="/request-quote"
               className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-600 to-blue-600 text-white font-semibold rounded-lg hover:from-purple-700 hover:to-blue-700 transition-all duration-300 transform hover:scale-105"
-            >
+
               <Rocket className="w-5 h-5 mr-2" />
               Request Custom Demo
             </Link>
@@ -707,4 +705,4 @@ const AIAutonomousBusinessOperations = () => {
   );
 };
 
-export default AIAutonomousBusinessOperations;
+export default AIAutonomousBusinessOperations;}}}}}

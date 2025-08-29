@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Quote, Star, ChevronLeft, ChevronRight, User, Building, Globe } from 'lucide-react';
-const testimonials = [
+import { Quote, Star, ChevronLeft, ChevronRight, User, Building, Globe const testimonials = [
   {
     id: 1,
     name: "Sarah Chen",
@@ -51,7 +50,7 @@ const testimonials = [
     rating: 5,
     industry: "Healthcare",
     project: "Cloud Migration & Optimization"
-  }
+
 ];
 export function TestimonialsSection() {
   return (
@@ -70,7 +69,7 @@ export function TestimonialsSection() {
             <div
               key={index}
               className="bg-zion-blue border border-zion-blue-light rounded-xl p-6 hover:border-zion-purple/50 transition-all duration-300 hover:transform hover:scale-105 group"
-            >
+
               {/* Quote icon */}
               <div className="mb-4">
                 <Quote className="w-8 h-8 text-zion-cyan opacity-60" />
@@ -125,7 +124,7 @@ export function TestimonialsSection() {
           transition={{ duration: 0.8, delay: 0.2 }}
           viewport={{ once: true }}
           className="mt-20 grid grid-cols-2 md:grid-cols-4 gap-8"
-        >
+
           <div className="text-center">
             <div className="text-3xl md:text-4xl font-bold text-zion-cyan mb-2">98%</div>
             <div className="text-zion-slate-light">Client Satisfaction</div>
@@ -146,4 +145,4 @@ export function TestimonialsSection() {
       </div>
     </section>
   );
-}
+}}}

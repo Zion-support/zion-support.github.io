@@ -1,7 +1,5 @@
 import React from 'react';
-import { Download, Star, Users, Award } from 'lucide-react';
-
-export const AppStoreBanner = () => {
+import { Download, Star, Users, Award export const AppStoreBanner = () => {
   const appStores = [
     {
       name: 'App Store',
@@ -18,7 +16,7 @@ export const AppStoreBanner = () => {
       reviews: '1.9k',
       downloadUrl: '#',
       badge: 'Top Rated'
-    }
+
   ];
 
   const features = [
@@ -109,7 +107,7 @@ export const AppStoreBanner = () => {
                       <a
                         href={store.downloadUrl}
                         className="inline-flex items-center px-6 py-3 bg-white text-gray-900 font-semibold rounded-lg hover:bg-gray-100 transition-all duration-300"
-                      >
+
                         <Download className="w-4 h-4 mr-2" />
                         Download
                       </a>
@@ -157,13 +155,13 @@ export const AppStoreBanner = () => {
               <a
                 href="#support"
                 className="px-8 py-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-300"
-              >
+
                 Get Support
               </a>
               <a
                 href="#demo"
                 className="px-8 py-3 border border-white/30 text-white font-semibold rounded-lg hover:bg-white/10 transition-all duration-300"
-              >
+
                 Watch Demo
               </a>
             </div>
@@ -172,4 +170,4 @@ export const AppStoreBanner = () => {
       </div>
     </section>
   );
-};
+};}}

@@ -3,8 +3,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
-import { Search, Star, Clock, Users, ArrowRight, CheckCircle, Phone, Mail, Globe, Zap, Shield, Brain, Cpu, TrendingUp, Rocket, Leaf, Eye, Network, Cube } from 'lucide-react';
-import SEOHead from '../components/SEOHead';
+import { Search, Star, Clock, Users, ArrowRight, CheckCircle, Phone, Mail, Globe, Zap, Shield, Brain, Cpu, TrendingUp, Rocket, Leaf, Eye, Network, Cube import SEOHead from '../components/SEOHead';
 // Import all service data
 import { ADVANCED_AI_SERVICES } from '../data/advancedAIServices';
 import { INNOVATIVE_IT_INFRASTRUCTURE_SERVICES } from '../data/innovativeITInfrastructure';
@@ -60,7 +59,7 @@ const InnovativeServicesShowcase = () => {
             case 'professional': return 'bg-blue-100 text-blue-800 border-blue-200';
             case 'enterprise': return 'bg-purple-100 text-purple-800 border-purple-200';
             default: return 'bg-gray-100 text-gray-800 border-gray-200';
-        }
+
     };
     return (<div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-100">
       <SEOHead config={seoConfig}/>
@@ -450,4 +449,5 @@ const InnovativeServicesShowcase = () => {
         </div>
       </section>
     </div>);
-};
+</div></div></Card></Card></Card></Card>};
+}}

@@ -18,7 +18,6 @@ import {
   Clock,
   CheckCircle,
   ArrowRight
-} from 'lucide-react';
 import { SEO } from '../components/SEO';
 import {
   revolutionaryMicroSaasServices2026,
@@ -41,13 +40,13 @@ const ComprehensiveServicesShowcase2026: React.FC = () => {
         service.description.toLowerCase().includes(lowerQuery) ||
         service.tags.some(tag => tag.toLowerCase().includes(lowerQuery))
       );
-    }
+
     if (selectedCategory !== 'all') {
       filtered = filtered.filter(service => service.category === selectedCategory);
-    }
+
     if (selectedInnovationLevel !== 'all') {
       filtered = filtered.filter(service => service.innovationLevel === selectedInnovationLevel);
-    }
+
     return filtered;
   }, [searchTerm, selectedCategory, selectedInnovationLevel]);
   const getCategoryIcon = (category: string) => {
@@ -60,7 +59,7 @@ const ComprehensiveServicesShowcase2026: React.FC = () => {
       case 'Autonomous Systems': return <Brain className="w-5 h-5" />;
       case 'Quantum AI': return <Zap className="w-5 h-5" />;
       default: return <Zap className="w-5 h-5" />;
-    }
+
   };
   const getInnovationLevelColor = (level: string) => {
     switch (level) {
@@ -68,7 +67,7 @@ const ComprehensiveServicesShowcase2026: React.FC = () => {
       case 'Breakthrough': return 'bg-gradient-to-r from-blue-600 to-cyan-600';
       case 'Advanced': return 'bg-gradient-to-r from-green-600 to-emerald-600';
       default: return 'bg-gray-600';
-    }
+
   };
   return (
     <>
@@ -87,7 +86,7 @@ const ComprehensiveServicesShowcase2026: React.FC = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               className="text-5xl md:text-7xl font-bold text-white mb-6"
-            >
+
               Revolutionary Services
               <span className="block text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-purple-400 to-cyan-400">
                 2026
@@ -98,7 +97,7 @@ const ComprehensiveServicesShowcase2026: React.FC = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
               className="text-xl md:text-2xl text-zinc-300 mb-8 max-w-4xl mx-auto"
-            >
+
               Experience the future with Zion Tech Group's cutting-edge micro SAAS, IT infrastructure, and AI services.
               Quantum computing, edge AI, autonomous agents, and blockchain solutions that redefine what's possible.
             </motion.p>
@@ -107,7 +106,7 @@ const ComprehensiveServicesShowcase2026: React.FC = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.4 }}
               className="flex flex-wrap justify-center gap-4 text-sm text-zinc-400"
-            >
+
               <span className="flex items-center gap-2">
                 <CheckCircle className="w-4 h-4 text-green-400" />
                 {ALL_REVOLUTIONARY_SERVICES_2026.length} Revolutionary Services
@@ -144,7 +143,7 @@ const ComprehensiveServicesShowcase2026: React.FC = () => {
                   value={selectedCategory}
                   onChange={(e) => setSelectedCategory(e.target.value)}
                   className="px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-blue-500"
-                >
+
                   {categories.map(category => (
                     <option key={category} value={category} className="bg-zinc-800 text-white">
                       {category === 'all' ? 'All Categories' : category}
@@ -156,7 +155,7 @@ const ComprehensiveServicesShowcase2026: React.FC = () => {
                   value={selectedInnovationLevel}
                   onChange={(e) => setSelectedInnovationLevel(e.target.value)}
                   className="px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-blue-500"
-                >
+
                   {innovationLevels.map(level => (
                     <option key={level} value={level} className="bg-zinc-800 text-white">
                       {level === 'all' ? 'All Innovation Levels' : level}
@@ -178,7 +177,7 @@ const ComprehensiveServicesShowcase2026: React.FC = () => {
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
                   className="bg-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/10 hover:border-blue-500/50 transition-all duration-300 hover:transform hover:scale-105"
-                >
+
                   {/* Service Header */}
                   <div className="flex items-start justify-between mb-4">
                     <div className="flex items-center gap-3">
@@ -278,7 +277,7 @@ const ComprehensiveServicesShowcase2026: React.FC = () => {
                       target="_blank"
                       rel="noopener noreferrer"
                       className="mt-4 w-full flex items-center justify-center gap-2 px-4 py-3 bg-gradient-to-r from-blue-500 to-purple-500 text-white font-medium rounded-lg hover:from-blue-600 hover:to-purple-600 transition-all duration-300"
-                    >
+
                       Learn More
                       <ExternalLink className="w-4 h-4" />
                     </a>
@@ -296,7 +295,7 @@ const ComprehensiveServicesShowcase2026: React.FC = () => {
                     setSelectedInnovationLevel('all');
                   }}
                   className="mt-4 px-6 py-3 bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition-colors"
-                >
+
                   Clear Filters
                 </button>
               </div>
@@ -311,7 +310,7 @@ const ComprehensiveServicesShowcase2026: React.FC = () => {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               className="bg-gradient-to-r from-blue-600/20 via-purple-600/20 to-cyan-600/20 rounded-3xl p-12 border border-white/10"
-            >
+
               <h2 className="text-4xl font-bold text-white mb-6">
                 Ready to Transform Your Business?
               </h2>
@@ -323,14 +322,14 @@ const ComprehensiveServicesShowcase2026: React.FC = () => {
                 <a
                   href="tel:+13024640950"
                   className="flex items-center justify-center gap-2 px-8 py-4 bg-green-500 text-white font-medium rounded-lg hover:bg-green-600 transition-colors"
-                >
+
                   <Phone className="w-5 h-5" />
                   Call +1 302 464 0950
                 </a>
                 <a
                   href="mailto:kleber@ziontechgroup.com"
                   className="flex items-center justify-center gap-2 px-8 py-4 bg-blue-500 text-white font-medium rounded-lg hover:bg-blue-600 transition-colors"
-                >
+
                   <Mail className="w-5 h-5" />
                   Email kleber@ziontechgroup.com
                 </a>
@@ -346,4 +345,4 @@ const ComprehensiveServicesShowcase2026: React.FC = () => {
     </>
   );
 };
-export default ComprehensiveServicesShowcase2026;
+export default ComprehensiveServicesShowcase2026;}}}}}}

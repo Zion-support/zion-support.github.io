@@ -1,7 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { DollarSign, Shield, BarChart3, ArrowRight, CheckCircle, Brain, Database, Zap, Lock } from 'lucide-react';
-export default function FinancialSolutions() {
+import { DollarSign, Shield, BarChart3, ArrowRight, CheckCircle, Brain, Database, Zap, Lock export default function FinancialSolutions() {
     const solutions = [
         {
             icon: Brain,
@@ -38,7 +37,7 @@ export default function FinancialSolutions() {
             title: "Process Automation",
             description: "Streamlined financial operations and workflow automation",
             features: ["Workflow automation", "Document processing", "Approval systems"]
-        }
+
     ];
     const useCases = [
         {
@@ -70,7 +69,7 @@ export default function FinancialSolutions() {
             title: "Treasury Operations",
             description: "Automated treasury management and cash flow optimization",
             icon: "💰"
-        }
+
     ];
     const benefits = [
         "Reduce operational costs by 25-40%",
@@ -210,4 +209,4 @@ export default function FinancialSolutions() {
         </div>
       </section>
     </div>);
-}
+}}}}

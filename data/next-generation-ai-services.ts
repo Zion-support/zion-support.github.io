@@ -37,7 +37,7 @@ export interface NextGenerationAIService {
   customers: number;
   rating: number;
   reviews: number;
-}
+
 export const nextGenerationAIServices: NextGenerationAIService[] = [
   {
     id: 'quantum-ai-brain-computer-interface',
@@ -344,5 +344,5 @@ export const nextGenerationAIServices: NextGenerationAIService[] = [
     customers: 180,
     rating: 4.8,
     reviews: 298
-  }
-];
+
+];}}

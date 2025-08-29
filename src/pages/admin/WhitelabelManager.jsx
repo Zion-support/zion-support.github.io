@@ -12,7 +12,7 @@ export default function WhitelabelManager() {
     const isAdmin = user?.role === "admin";
     if (!isAdmin) {
         return <Navigate to="/unauthorized"/>;
-    }
+
     return (<>
       <SEO title="White-Label Management - Zion AI Marketplace" description="Create and manage white-label instances of the Zion AI Marketplace platform."/>
 
@@ -92,4 +92,4 @@ export default function WhitelabelManager() {
       </main>
 
     </>);
-}
+}}

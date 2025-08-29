@@ -3,8 +3,7 @@ import { useNavigate, useLocation } from "react-router-dom";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
 import { z } from "zod";
-import { LockKeyhole } from "lucide-react";
-import { supabase } from "@/integrations/supabase/client";
+import { LockKeyhole import { supabase } from "@/integrations/supabase/client";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage, } from "@/components/ui/form";
@@ -44,10 +43,10 @@ export default function UpdatePassword() {
         const token = hashParams.get("access_token");
         if (token) {
             setAccessToken(token);
-        }
+
         else {
             setError("No access token found. Please request a new password reset link.");
-        }
+
         // Clean up auth state to prevent issues
         cleanupAuthState();
     }, [location]);
@@ -56,7 +55,7 @@ export default function UpdatePassword() {
         if (!accessToken) {
             setError("No access token found. Please request a new password reset link.");
             return;
-        }
+
         setIsLoading(true);
         try {
             // Set the session with the access token
@@ -76,7 +75,7 @@ export default function UpdatePassword() {
                 });
                 setError(error.message);
                 return;
-            }
+
             // Show success message and clean up auth state
             setSuccess(true);
             toast({
@@ -88,25 +87,25 @@ export default function UpdatePassword() {
             setTimeout(() => {
                 navigate("/login");
             }, 3000);
-        }
+
         catch (error) {
-            // console.error("Password update error:", error);
+            // // // console.error("Password update error:", error);
             toast({
                 title: "Password update failed",
                 description: error.message || "An unexpected error occurred",
                 variant: "destructive",
             });
             setError(error.message || "An unexpected error occurred");
-        }
+
         finally {
             setIsLoading(false);
-        }
+
     };
     const onInvalid = (errors) => {
         const firstError = Object.keys(errors)[0];
         if (firstError) {
             form.setFocus(firstError);
-        }
+
     };
     return (<>
 
@@ -188,4 +187,4 @@ export default function UpdatePassword() {
       </div>
 
     </>);
-}
+}}}}}}}}}}

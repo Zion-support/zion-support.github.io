@@ -4,7 +4,6 @@ interface AuthState {
   isLoggedIn: boolean;
   user: any | null;
   token: string | null;
-}
 
 const initialState: AuthState = {
   isLoggedIn: false,
@@ -34,4 +33,4 @@ const authSlice = createSlice({
 });
 
 export const { setLoggedIn, setUser, setToken, logout } = authSlice.actions;
-export default authSlice.reducer;
+export default authSlice.reducer;}

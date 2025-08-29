@@ -16,7 +16,7 @@ export function NeonGlow({ children, color = 'zion-cyan', intensity = 'medium', 
             high: {
                 textShadow: `0 0 15px ${baseColor}, 0 0 30px ${baseColor}, 0 0 45px ${baseColor}, 0 0 60px ${baseColor}`,
                 filter: `drop-shadow(0 0 8px ${baseColor}) drop-shadow(0 0 15px ${baseColor}) drop-shadow(0 0 25px ${baseColor})`
-            }
+
         };
         return intensityMap[intensity];
     };
@@ -24,4 +24,4 @@ export function NeonGlow({ children, color = 'zion-cyan', intensity = 'medium', 
     return (<span className={cn('transition-all duration-300', className)} style={glowStyles}>
       {children}
     </span>);
-}
+}}

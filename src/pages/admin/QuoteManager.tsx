@@ -65,7 +65,6 @@ export default function QuoteManager() {
 
   if (!isAdmin) {
     return <Navigate to="/unauthorized" replace />;
-  }
 
   return (
     <ProtectedRoute adminOnly>
@@ -148,4 +147,4 @@ export default function QuoteManager() {
       </div>
     </ProtectedRoute>
   );
-}
+}}

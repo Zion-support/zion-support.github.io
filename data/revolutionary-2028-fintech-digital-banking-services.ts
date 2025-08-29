@@ -38,7 +38,7 @@ export interface Revolutionary2028FintechDigitalBankingService {
   customers: number;
   rating: number;
   reviews: number;
-}
+
 export const revolutionary2028FintechDigitalBankingServices: Revolutionary2028FintechDigitalBankingService[] = [
   // AI-Powered Digital Banking Platform
   {
@@ -299,5 +299,5 @@ export const revolutionary2028FintechDigitalBankingServices: Revolutionary2028Fi
     customers: 850,
     rating: 4.8,
     reviews: 620
-  }
-];
+
+];}}

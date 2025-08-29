@@ -1,8 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { Menu, X, Phone, Mail, Sparkles, Zap, ChevronDown, ChevronRight } from 'lucide-react';
-
-export default function EnhancedNavigation2025() {
+import { Menu, X, Phone, Mail, Sparkles, Zap, ChevronDown, ChevronRight export default function EnhancedNavigation2025() {
 	const [isOpen, setIsOpen] = useState(false);
 	const [isScrolled, setIsScrolled] = useState(false);
 	const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
@@ -111,7 +109,7 @@ export default function EnhancedNavigation2025() {
 										className="flex items-center space-x-1 px-4 py-2 text-gray-300 hover:text-white transition-colors duration-200 font-medium"
 										aria-expanded={activeDropdown === item.name}
 										aria-haspopup="true"
-									>
+
 										<span>{item.name}</span>
 										<ChevronDown
 											className={`w-4 h-4 transition-transform duration-200 ${
@@ -123,7 +121,7 @@ export default function EnhancedNavigation2025() {
 									<Link
 										href={item.href}
 										className="px-4 py-2 text-gray-300 hover:text-white transition-colors duration-200 font-medium"
-									>
+
 										{item.name}
 									</Link>
 								)}
@@ -140,7 +138,7 @@ export default function EnhancedNavigation2025() {
 													href={child.href}
 													className="flex items-start space-x-3 p-3 rounded-xl hover:bg-white/10 transition-colors duration-200 group"
 													onClick={() => setActiveDropdown(null)}
-												>
+
 													<div className="w-8 h-8 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 rounded-lg flex items-center justify-center flex-shrink-0">
 														<span className="text-cyan-400 text-sm">→</span>
 													</div>
@@ -187,7 +185,7 @@ export default function EnhancedNavigation2025() {
 											onClick={() => toggleDropdown(item.name)}
 											className="flex items-center justify-between w-full px-4 py-3 text-left text-gray-300 hover:text-cyan-300 transition-colors duration-200 font-medium"
 											aria-expanded={activeDropdown === item.name}
-										>
+
 											<span>{item.name}</span>
 											<ChevronRight
 												className={`w-4 h-4 transition-transform duration-200 ${
@@ -203,7 +201,7 @@ export default function EnhancedNavigation2025() {
 														href={child.href}
 														className="block px-4 py-2 text-gray-400 hover:text-cyan-300 transition-colors duration-200"
 														onClick={closeMobileMenu}
-													>
+
 														{child.name}
 													</Link>
 												))}
@@ -215,7 +213,7 @@ export default function EnhancedNavigation2025() {
 										href={item.href}
 										className="block px-4 py-3 text-gray-300 hover:text-cyan-300 transition-colors duration-200 font-medium"
 										onClick={closeMobileMenu}
-									>
+
 										{item.name}
 									</Link>
 								)}
@@ -235,4 +233,4 @@ export default function EnhancedNavigation2025() {
 			)}
 		</nav>
 	);
-}
+}}

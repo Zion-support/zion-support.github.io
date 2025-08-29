@@ -49,7 +49,6 @@ import {
   Play,
   ChevronRight,
   ChevronLeft
-} from 'lucide-react';
 import {
   revolutionaryMicroSaasServices2028,
   revolutionaryITInfrastructureServices2028,
@@ -93,7 +92,7 @@ export default function ComprehensiveServicesLanding2028() {
       content: "Their quantum AI drug discovery platform has accelerated our research by 10x. We're now able to analyze molecular interactions that were previously impossible to model.",
       rating: 5,
       avatar: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=150&h=150&fit=crop&crop=face"
-    }
+
   ];
 
   const stats = [
@@ -117,7 +116,7 @@ export default function ComprehensiveServicesLanding2028() {
       case 'Content Creation': return FileText;
       case 'Healthcare AI': return Heart;
       default: return Rocket;
-    }
+
   };
 
   const getCategoryColor = (category: string) => {
@@ -160,7 +159,7 @@ export default function ComprehensiveServicesLanding2028() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="text-5xl md:text-6xl font-bold text-white mb-6"
-          >
+
             Comprehensive Services Landing 2028
             <span className="block text-3xl md:text-4xl text-zion-cyan mt-2">
               Revolutionary Technology Solutions for Business Transformation
@@ -171,7 +170,7 @@ export default function ComprehensiveServicesLanding2028() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
             className="text-xl text-zion-slate-light max-w-4xl mx-auto mb-8"
-          >
+
             Experience the future of technology with our comprehensive suite of micro SAAS, IT infrastructure,
             and AI services. Each solution is designed for maximum impact with proven ROI and real market pricing.
           </motion.p>
@@ -180,12 +179,12 @@ export default function ComprehensiveServicesLanding2028() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
             className="flex flex-wrap justify-center gap-4"
-          >
+
             <Button
               size="lg"
               className="bg-zion-cyan hover:bg-zion-cyan-light text-white px-8 py-3 rounded-lg font-semibold transition-colors"
               onClick={() => document.getElementById('services-section')?.scrollIntoView({ behavior: 'smooth' })}
-            >
+
               Explore Services
             </Button>
             <Button
@@ -193,7 +192,7 @@ export default function ComprehensiveServicesLanding2028() {
               variant="outline"
               className="border-zion-cyan text-zion-cyan hover:bg-zion-cyan hover:text-white px-8 py-3 rounded-lg font-semibold transition-colors"
               onClick={() => document.getElementById('contact-section')?.scrollIntoView({ behavior: 'smooth' })}
-            >
+
               Get Started
             </Button>
           </motion.div>
@@ -211,7 +210,7 @@ export default function ComprehensiveServicesLanding2028() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 className="text-center"
-              >
+
                 <div className="bg-zion-cyan/20 p-4 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
                   <stat.icon className="w-8 h-8 text-zion-cyan" />
                 </div>
@@ -231,7 +230,7 @@ export default function ComprehensiveServicesLanding2028() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
-          >
+
             <h2 className="text-4xl font-bold text-white mb-4">Our Comprehensive Service Portfolio</h2>
             <p className="text-zion-slate-light max-w-3xl mx-auto">
               Discover our revolutionary solutions designed to transform your business operations and drive growth
@@ -246,7 +245,7 @@ export default function ComprehensiveServicesLanding2028() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:border-zion-cyan/50 transition-all duration-300 hover:scale-105 group"
-              >
+
                 <div className="flex items-start justify-between mb-4">
                   <div className={`p-3 rounded-lg bg-gradient-to-r ${getCategoryColor(service.category)}`}>
                     {React.createElement(getCategoryIcon(service.category), { className: "w-6 h-6 text-white" })}
@@ -301,7 +300,7 @@ export default function ComprehensiveServicesLanding2028() {
                 <Button
                   className="w-full bg-gradient-to-r from-zion-cyan to-zion-blue hover:from-zion-cyan-light hover:to-zion-blue-light text-white"
                   onClick={() => setSelectedService(service)}
-                >
+
                   View Details
                 </Button>
               </motion.div>
@@ -313,13 +312,13 @@ export default function ComprehensiveServicesLanding2028() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.6 }}
             className="text-center mt-12"
-          >
+
             <Button
               size="lg"
               variant="outline"
               className="border-zion-cyan text-zion-cyan hover:bg-zion-cyan hover:text-white px-8 py-3 rounded-lg font-semibold transition-colors"
               onClick={() => window.location.href = '/innovative-services-showcase-2028'}
-            >
+
               View All Services
             </Button>
           </motion.div>
@@ -334,7 +333,7 @@ export default function ComprehensiveServicesLanding2028() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
-          >
+
             <h2 className="text-4xl font-bold text-white mb-4">What Our Clients Say</h2>
             <p className="text-zion-slate-light max-w-3xl mx-auto">
               Real feedback from businesses that have transformed their operations with our innovative solutions
@@ -348,7 +347,7 @@ export default function ComprehensiveServicesLanding2028() {
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.5 }}
               className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20 text-center"
-            >
+
               <div className="flex justify-center mb-6">
                 {[...Array(testimonials[currentTestimonial].rating)].map((_, i) => (
                   <Star key={i} className="w-6 h-6 text-yellow-400 fill-current" />
@@ -379,7 +378,7 @@ export default function ComprehensiveServicesLanding2028() {
                 size="sm"
                 onClick={prevTestimonial}
                 className="text-zion-slate-light hover:text-white"
-              >
+
                 <ChevronLeft className="w-5 h-5" />
               </Button>
 
@@ -400,7 +399,7 @@ export default function ComprehensiveServicesLanding2028() {
                 size="sm"
                 onClick={nextTestimonial}
                 className="text-zion-slate-light hover:text-white"
-              >
+
                 <ChevronRight className="w-5 h-5" />
               </Button>
             </div>
@@ -416,7 +415,7 @@ export default function ComprehensiveServicesLanding2028() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
-          >
+
             <h2 className="text-4xl font-bold text-white mb-4">Why Choose Zion Tech Group?</h2>
             <p className="text-zion-slate-light max-w-3xl mx-auto">
               We combine cutting-edge technology with proven business expertise to deliver exceptional results
@@ -429,7 +428,7 @@ export default function ComprehensiveServicesLanding2028() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.1 }}
               className="text-center"
-            >
+
               <div className="bg-zion-cyan/20 p-6 rounded-xl border border-zion-cyan/30 mb-6">
                 <Award className="w-12 h-12 text-zion-cyan mx-auto" />
               </div>
@@ -444,7 +443,7 @@ export default function ComprehensiveServicesLanding2028() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
               className="text-center"
-            >
+
               <div className="bg-zion-cyan/20 p-6 rounded-xl border border-zion-cyan/30 mb-6">
                 <Lightbulb className="w-12 h-12 text-zion-cyan mx-auto" />
               </div>
@@ -459,7 +458,7 @@ export default function ComprehensiveServicesLanding2028() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.3 }}
               className="text-center"
-            >
+
               <div className="bg-zion-cyan/20 p-6 rounded-xl border border-zion-cyan/30 mb-6">
                 <TrendingUp className="w-12 h-12 text-zion-cyan mx-auto" />
               </div>
@@ -474,7 +473,7 @@ export default function ComprehensiveServicesLanding2028() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.4 }}
               className="text-center"
-            >
+
               <div className="bg-zion-cyan/20 p-6 rounded-xl border border-zion-cyan/30 mb-6">
                 <Users className="w-12 h-12 text-zion-cyan mx-auto" />
               </div>
@@ -489,7 +488,7 @@ export default function ComprehensiveServicesLanding2028() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.5 }}
               className="text-center"
-            >
+
               <div className="bg-zion-cyan/20 p-6 rounded-xl border border-zion-cyan/30 mb-6">
                 <Shield className="w-12 h-12 text-zion-cyan mx-auto" />
               </div>
@@ -504,7 +503,7 @@ export default function ComprehensiveServicesLanding2028() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.6 }}
               className="text-center"
-            >
+
               <div className="bg-zion-cyan/20 p-6 rounded-xl border border-zion-cyan/30 mb-6">
                 <Clock className="w-12 h-12 text-zion-cyan mx-auto" />
               </div>
@@ -525,7 +524,7 @@ export default function ComprehensiveServicesLanding2028() {
             animate={{ opacity: 1, scale: 1 }}
             exit={{ opacity: 0, scale: 0.9 }}
             className="bg-zion-blue-dark border border-zion-cyan/30 rounded-xl max-w-4xl w-full max-h-[90vh] overflow-y-auto"
-          >
+
             <div className="p-6">
               <div className="flex items-start justify-between mb-6">
                 <div className="flex items-center gap-3">
@@ -542,7 +541,7 @@ export default function ComprehensiveServicesLanding2028() {
                   size="sm"
                   className="text-zion-slate-light hover:text-white"
                   onClick={() => setSelectedService(null)}
-                >
+
                   <X className="w-5 h-5" />
                 </Button>
               </div>
@@ -657,7 +656,7 @@ export default function ComprehensiveServicesLanding2028() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
-          >
+
             <h2 className="text-4xl font-bold text-white mb-4">Ready to Transform Your Business?</h2>
             <p className="text-zion-slate-light max-w-3xl mx-auto">
               Contact our team of technology experts to discuss how our innovative solutions can drive your business forward
@@ -670,7 +669,7 @@ export default function ComprehensiveServicesLanding2028() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.1 }}
               className="text-center"
-            >
+
               <div className="bg-zion-cyan/20 p-6 rounded-xl border border-zion-cyan/30">
                 <Phone className="w-12 h-12 text-zion-cyan mx-auto mb-4" />
                 <h3 className="text-xl font-semibold text-white mb-2">Call Us</h3>
@@ -678,7 +677,7 @@ export default function ComprehensiveServicesLanding2028() {
                 <a
                   href="tel:+13024640950"
                   className="text-zion-cyan hover:text-zion-cyan-light font-semibold text-lg"
-                >
+
                   +1 302 464 0950
                 </a>
               </div>
@@ -689,7 +688,7 @@ export default function ComprehensiveServicesLanding2028() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
               className="text-center"
-            >
+
               <div className="bg-zion-cyan/20 p-6 rounded-xl border border-zion-cyan/30">
                 <Mail className="w-12 h-12 text-zion-cyan mx-auto mb-4" />
                 <h3 className="text-xl font-semibold text-white mb-2">Email Us</h3>
@@ -697,7 +696,7 @@ export default function ComprehensiveServicesLanding2028() {
                 <a
                   href="mailto:kleber@ziontechgroup.com"
                   className="text-zion-cyan hover:text-zion-cyan-light font-semibold text-lg"
-                >
+
                   kleber@ziontechgroup.com
                 </a>
               </div>
@@ -708,7 +707,7 @@ export default function ComprehensiveServicesLanding2028() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.3 }}
               className="text-center"
-            >
+
               <div className="bg-zion-cyan/20 p-6 rounded-xl border border-zion-cyan/30">
                 <MapPin className="w-12 h-12 text-zion-cyan mx-auto mb-4" />
                 <h3 className="text-xl font-semibold text-white mb-2">Visit Us</h3>
@@ -726,12 +725,12 @@ export default function ComprehensiveServicesLanding2028() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.4 }}
             className="text-center mt-12"
-          >
+
             <Button
               size="lg"
               className="bg-gradient-to-r from-zion-cyan to-zion-blue hover:from-zion-cyan-light hover:to-zion-blue-light text-white px-8 py-3 rounded-lg font-semibold transition-colors"
               onClick={() => window.location.href = '/contact'}
-            >
+
               Schedule a Consultation
             </Button>
           </motion.div>
@@ -739,4 +738,4 @@ export default function ComprehensiveServicesLanding2028() {
       </section>
     </div>
   );
-}
+}}}}

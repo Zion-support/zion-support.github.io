@@ -1,8 +1,6 @@
 import React from 'react';
 import { SEO } from '@/components/SEO';
-import { MessageCircle, Bot, Zap, Check, ExternalLink, Phone, Mail, ArrowRight, Clock, Users, TrendingUp, Headphones, Shield } from 'lucide-react';
-
-export default function AICustomerSupportAutomation() {
+import { MessageCircle, Bot, Zap, Check, ExternalLink, Phone, Mail, ArrowRight, Clock, Users, TrendingUp, Headphones, Shield export default function AICustomerSupportAutomation() {
   const features = [
     '24/7 AI chatbot with human-like conversations',
     'Multi-language support (50+ languages)',
@@ -43,7 +41,7 @@ export default function AICustomerSupportAutomation() {
       period: '/mo',
       conversations: 'Unlimited conversations',
       features: ['Full AI suite', 'White-label options', 'Dedicated support', 'SAML/SSO', 'Custom AI training', 'API access']
-    }
+
   ];
 
   const useCases = [
@@ -88,13 +86,13 @@ export default function AICustomerSupportAutomation() {
               target="_blank"
               rel="noopener noreferrer"
               className="px-8 py-4 bg-gradient-to-r from-green-500 to-blue-600 rounded-lg font-semibold hover:from-green-600 hover:to-blue-700 transition-all duration-300 inline-flex items-center"
-            >
+
               Start Free Trial <ArrowRight className="ml-2 w-5 h-5" />
             </a>
             <a
               href="tel:+13024640950"
               className="px-8 py-4 border border-green-400/30 rounded-lg font-semibold hover:bg-green-500/10 transition-all duration-300 inline-flex items-center"
-            >
+
               <Phone className="w-5 h-5 mr-2" /> Call Now
             </a>
           </div>
@@ -199,7 +197,7 @@ export default function AICustomerSupportAutomation() {
                     ? 'border-green-500/50 bg-green-500/5'
                     : 'border-slate-700/50'
                 }`}
-              >
+
                 <div className="text-center mb-6">
                   <h3 className="text-2xl font-bold mb-2">{tier.name}</h3>
                   <div className="text-4xl font-bold text-green-400 mb-2">
@@ -226,7 +224,7 @@ export default function AICustomerSupportAutomation() {
                       ? 'bg-gradient-to-r from-green-500 to-blue-600 hover:from-green-600 hover:to-blue-700'
                       : 'bg-slate-700 hover:bg-slate-600 border border-slate-600'
                   }`}
-                >
+
                   Get Started
                 </a>
               </div>
@@ -286,13 +284,13 @@ export default function AICustomerSupportAutomation() {
               target="_blank"
               rel="noopener noreferrer"
               className="px-8 py-4 bg-gradient-to-r from-green-500 to-blue-600 rounded-lg font-semibold hover:from-green-600 hover:to-blue-700 transition-all duration-300 inline-flex items-center"
-            >
+
               Start Free Trial <ArrowRight className="ml-2 w-5 h-5" />
             </a>
             <a
               href="mailto:kleber@ziontechgroup.com"
               className="px-8 py-4 border border-green-400/30 rounded-lg font-semibold hover:bg-green-500/10 transition-all duration-300 inline-flex items-center"
-            >
+
               <Mail className="w-5 h-5 mr-2" /> Schedule Demo
             </a>
           </div>
@@ -326,7 +324,7 @@ export default function AICustomerSupportAutomation() {
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-slate-300 hover:text-green-400 inline-flex items-center"
-                >
+
                   ziontechgroup.com <ExternalLink className="w-4 h-4 ml-1" />
                 </a>
               </div>
@@ -336,4 +334,4 @@ export default function AICustomerSupportAutomation() {
       </section>
     </div>
   );
-}
+}}}

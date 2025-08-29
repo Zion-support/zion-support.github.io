@@ -13,7 +13,7 @@ export interface RealMarketService {
     email: string;
     address: string;
   };
-}
+
 export const realMarketServices: RealMarketService[] = [
   {
     id: "market-analysis-platform",
@@ -35,8 +35,8 @@ export const realMarketServices: RealMarketService[] = [
       mobile: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       address: "364 E Main St STE 1008 Middletown DE 19709"
-    }
-  }
+
+
   ,
   {
     id: 'ecommerce-returns-manager',
@@ -501,5 +501,5 @@ export const realMarketServices: RealMarketService[] = [
     customers: 14,
     rating: 4.5,
     reviews: 7
-  }
-];
+
+];}}}}

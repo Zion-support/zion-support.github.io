@@ -18,8 +18,6 @@ import {
   Target,
   Award,
   CheckCircle
-} from 'lucide-react';
-
 interface Service {
   id: string;
   title: string;
@@ -33,7 +31,6 @@ interface Service {
   color: string;
   popular?: boolean;
   link: string;
-}
 
 const services: Service[] = [
   {
@@ -141,7 +138,7 @@ const services: Service[] = [
     reviews: 78,
     color: 'from-emerald-500 to-teal-500',
     link: '/ai-services/healthcare'
-  }
+
 ];
 
 const categories = [
@@ -166,7 +163,7 @@ export const EnhancedServiceShowcase: React.FC = () => {
       ([entry]) => {
         if (entry.isIntersecting) {
           setIsVisible(true);
-        }
+
       },
       { threshold: 0.1 }
     );
@@ -174,7 +171,6 @@ export const EnhancedServiceShowcase: React.FC = () => {
     const element = document.getElementById('service-showcase');
     if (element) {
       observer.observe(element);
-    }
 
     return () => observer.disconnect();
   }, []);
@@ -205,7 +201,7 @@ export const EnhancedServiceShowcase: React.FC = () => {
           animate={isVisible ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
-        >
+
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
             Our <span className="bg-gradient-to-r from-zion-cyan to-zion-blue bg-clip-text text-transparent">
               Services
@@ -223,7 +219,7 @@ export const EnhancedServiceShowcase: React.FC = () => {
           animate={isVisible ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
           transition={{ duration: 0.6, delay: 0.2 }}
           className="flex flex-wrap justify-center gap-3 mb-12"
-        >
+
           {categories.map((category, index) => (
             <button
               key={category}
@@ -233,7 +229,7 @@ export const EnhancedServiceShowcase: React.FC = () => {
                   ? 'bg-gradient-to-r from-zion-cyan to-zion-blue text-white shadow-lg shadow-zion-cyan/25'
                   : 'bg-zion-slate-light text-gray-300 hover:bg-zion-cyan/10 hover:text-zion-cyan border border-zion-slate'
               }`}
-            >
+
               {category}
             </button>
           ))}
@@ -245,7 +241,7 @@ export const EnhancedServiceShowcase: React.FC = () => {
           animate={isVisible ? { opacity: 1 } : { opacity: 0 }}
           transition={{ duration: 0.6, delay: 0.4 }}
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
-        >
+
           <AnimatePresence mode="wait">
             {filteredServices.map((service, index) => (
               <motion.div
@@ -263,7 +259,7 @@ export const EnhancedServiceShowcase: React.FC = () => {
                 onHoverStart={() => setHoveredService(service.id)}
                 onHoverEnd={() => setHoveredService(null)}
                 className="relative group"
-              >
+
                 <Link to={service.link}>
                   <div className="bg-gradient-to-br from-zion-slate to-zion-slate-light p-8 rounded-2xl border border-zion-cyan/20 hover:border-zion-cyan/40 transition-all duration-300 hover:shadow-2xl hover:shadow-zion-cyan/10 h-full">
                     {/* Popular Badge */}
@@ -337,7 +333,7 @@ export const EnhancedServiceShowcase: React.FC = () => {
           animate={isVisible ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
           transition={{ duration: 0.6, delay: 0.6 }}
           className="text-center mt-16"
-        >
+
           <div className="bg-gradient-to-r from-zion-slate to-zion-slate-light border border-zion-cyan/20 rounded-2xl p-8">
             <h3 className="text-2xl font-bold text-white mb-4">
               Ready to Transform Your Business?
@@ -350,14 +346,14 @@ export const EnhancedServiceShowcase: React.FC = () => {
               <Link
                 to="/contact"
                 className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-blue text-white rounded-lg font-semibold hover:from-zion-cyan-dark hover:to-zion-blue-dark transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-zion-cyan/25"
-              >
+
                 <Play className="w-5 h-5 mr-2" />
                 Get Started Today
               </Link>
               <Link
                 to="/enhanced-services"
                 className="inline-flex items-center px-8 py-4 border-2 border-zion-cyan text-zion-cyan rounded-lg font-semibold hover:bg-zion-cyan hover:text-white transition-all duration-300"
-              >
+
                 View All Services
                 <ArrowRight className="w-5 h-5 ml-2" />
               </Link>
@@ -367,4 +363,4 @@ export const EnhancedServiceShowcase: React.FC = () => {
       </div>
     </section>
   );
-};
+};}}}}}

@@ -5,7 +5,7 @@ const path = require('path');
 const { execSync, spawn } = require('child_process');
 const cron = require('node-cron');
 
-// // console.log('🔍 Code Quality Monitor Starting...\n');
+// // // // console.log('🔍 Code Quality Monitor Starting...\n');
 
 class CodeQualityMonitor {
   constructor() {
@@ -20,27 +20,24 @@ class CodeQualityMonitor {
 
     // Initialize monitoring
     this.startMonitoring();
-  }
 
   ensureLogsDirectory() {
     const logsDir = path.dirname(this.logFile);
     if (!fs.existsSync(logsDir)) {
       fs.mkdirSync(logsDir, { recursive: true });
-    }
-  }
+
 
   log(message, level = 'INFO') {
     const timestamp = new Date().toISOString();
     const logEntry = `[${timestamp}] [${level}] ${message}\n`;
 
-    // // console.log(logEntry.trim());
+    // // // // console.log(logEntry.trim());
 
     try {
       fs.appendFileSync(this.logFile, logEntry);
     } catch (error) {
-      // console.error('Failed to write to log file:', error.message);
-    }
-  }
+      // // // console.error('Failed to write to log file:', error.message);
+
 
   async startMonitoring() {
     this.log('Starting code quality monitoring...');
@@ -66,7 +63,6 @@ class CodeQualityMonitor {
     }, 10000);
 
     this.log('Code quality monitoring started successfully');
-  }
 
   async performQualityCheck() {
     if (this.monitoring) return;
@@ -82,14 +78,12 @@ class CodeQualityMonitor {
         await this.autoFixQualityIssues(issues);
       } else {
         this.log('No quality issues detected, code is clean');
-      }
 
     } catch (error) {
       this.log(`Quality check failed: ${error.message}`, 'ERROR');
     } finally {
       this.monitoring = false;
-    }
-  }
+
 
   async detectQualityIssues() {
     const issues = [];
@@ -103,7 +97,6 @@ class CodeQualityMonitor {
         description: `${syntaxErrors.length} syntax errors found`,
         details: syntaxErrors
       });
-    }
 
     // Check for unused imports
     const unusedImports = await this.checkUnusedImports();
@@ -114,7 +107,6 @@ class CodeQualityMonitor {
         description: `${unusedImports.length} unused imports found`,
         details: unusedImports
       });
-    }
 
     // Check for formatting issues
     const formattingIssues = await this.checkFormatting();
@@ -125,7 +117,6 @@ class CodeQualityMonitor {
         description: `${formattingIssues.length} formatting issues found`,
         details: formattingIssues
       });
-    }
 
     // Check for potential bugs
     const potentialBugs = await this.checkPotentialBugs();
@@ -136,10 +127,8 @@ class CodeQualityMonitor {
         description: `${potentialBugs.length} potential bugs detected`,
         details: potentialBugs
       });
-    }
 
     return issues;
-  }
 
   async checkSyntaxErrors() {
     try {
@@ -158,8 +147,7 @@ class CodeQualityMonitor {
         .filter(line => line.length > 0);
 
       return errors.slice(0, 20); // Limit to first 20 errors
-    }
-  }
+
 
   async checkUnusedImports() {
     try {
@@ -178,8 +166,7 @@ class CodeQualityMonitor {
         .filter(line => line.length > 0);
 
       return unusedImportErrors.slice(0, 10);
-    }
-  }
+
 
   async checkFormatting() {
     try {
@@ -198,8 +185,7 @@ class CodeQualityMonitor {
         .filter(line => line.length > 0);
 
       return formattingErrors;
-    }
-  }
+
 
   async checkPotentialBugs() {
     const bugs = [];
@@ -213,13 +199,12 @@ class CodeQualityMonitor {
           const content = fs.readFileSync(file, 'utf8');
 
           // Check for potential issues
-          if (content.includes('// // console.log(') && !file.includes('.test.')) {
+          if (content.includes('// // // // console.log(') && !file.includes('.test.')) {
             bugs.push({
               file: path.relative(this.projectRoot, file),
               issue: 'console.log in production code',
-              line: this.findLineNumber(content, '// // console.log(')
+              line: this.findLineNumber(content, '// // // // console.log(')
             });
-          }
 
           if (content.includes('// debugger; // TODO: Remove in production')) {
             bugs.push({
@@ -227,7 +212,6 @@ class CodeQualityMonitor {
               issue: 'debugger statement found',
               line: this.findLineNumber(content, '// debugger; // TODO: Remove in production')
             });
-          }
 
           if (content.includes('TODO:') || content.includes('FIXME:')) {
             bugs.push({
@@ -235,28 +219,24 @@ class CodeQualityMonitor {
               issue: 'TODO/FIXME comment found',
               line: this.findLineNumber(content, 'TODO:') || this.findLineNumber(content, 'FIXME:')
             });
-          }
 
         } catch (error) {
           // Skip files that can't be read
-        }
-      }
+
+
     } catch (error) {
       this.log(`Error checking for potential bugs: ${error.message}`, 'WARN');
-    }
 
     return bugs;
-  }
 
   findLineNumber(content, searchTerm) {
     const lines = content.split('\n');
     for (const i = 0; i < lines.length; i++) {
       if (lines[i].includes(searchTerm)) {
         return i + 1;
-      }
-    }
+
+
     return null;
-  }
 
   async autoFixQualityIssues(issues) {
     for (const issue of issues) {
@@ -276,16 +256,14 @@ class CodeQualityMonitor {
           case 'potential_bugs':
             await this.fixPotentialBugs(issue.details);
             break;
-        }
 
         this.issuesFixed++;
         this.log(`Successfully fixed: ${issue.type}`);
 
       } catch (error) {
         this.log(`Failed to fix ${issue.type}: ${error.message}`, 'ERROR');
-      }
-    }
-  }
+
+
 
   async fixSyntaxErrors(errors) {
     this.log('Attempting to fix syntax errors...');
@@ -299,11 +277,9 @@ class CodeQualityMonitor {
       this.log(`Syntax errors report saved to: ${reportPath}`);
     } catch (error) {
       this.log(`Failed to save syntax errors report: ${error.message}`, 'WARN');
-    }
 
     // Try to auto-fix some common syntax issues
     await this.autoFixCommonSyntaxIssues();
-  }
 
   async autoFixCommonSyntaxIssues() {
     this.log('Attempting to auto-fix common syntax issues...');
@@ -319,26 +295,22 @@ class CodeQualityMonitor {
 
         // Fix common issues
         if (newContent.includes('// debugger; // TODO: Remove in production')) {
-          newContent = newContent.replace(/// debugger; // TODO: Remove in production/g, '// // debugger; // TODO: Remove in production // TODO: Remove in production');
+          newContent = newContent.replace(/\/\/ debugger; \/\/ TODO: Remove in production/g, '// // debugger; // TODO: Remove in production');
           modified = true;
-        }
 
-        if (newContent.includes('// // console.log(') && !file.includes('.test.')) {
-          newContent = newContent.replace(/console\.log\(/g, '// // // console.log(');
+        if (newContent.includes('// // // // console.log(') && !file.includes('.test.')) {
+          newContent = newContent.replace(/console\.log\(/g, '// // // // // console.log(');
           modified = true;
-        }
 
         if (modified) {
           fs.writeFileSync(file, newContent, 'utf8');
           fixedCount++;
-        }
+
       } catch (error) {
         // Skip files that can't be processed
-      }
-    }
+
 
     this.log(`Auto-fixed common syntax issues in ${fixedCount} files`);
-  }
 
   async fixUnusedImports(errors) {
     this.log('Attempting to fix unused imports...');
@@ -355,8 +327,7 @@ class CodeQualityMonitor {
 
       // Fallback: manual cleanup
       await this.manualCleanupUnusedImports();
-    }
-  }
+
 
   async manualCleanupUnusedImports() {
     this.log('Performing manual unused import cleanup...');
@@ -376,19 +347,16 @@ class CodeQualityMonitor {
         // Remove unused React imports if no JSX
         if (!newContent.includes('<') && newContent.includes('import React')) {
           newContent = newContent.replace(/import\s+React\s+from\s+['"]react['"];?\n?/g, '');
-        }
 
         if (modified) {
           fs.writeFileSync(file, newContent, 'utf8');
           cleanedCount++;
-        }
+
       } catch (error) {
         // Skip files that can't be processed
-      }
-    }
+
 
     this.log(`Manually cleaned up unused imports in ${cleanedCount} files`);
-  }
 
   async fixFormattingIssues() {
     this.log('Fixing formatting issues...');
@@ -402,8 +370,7 @@ class CodeQualityMonitor {
       this.log('Prettier formatting completed');
     } catch (error) {
       this.log(`Prettier formatting failed: ${error.message}`, 'ERROR');
-    }
-  }
+
 
   async fixPotentialBugs(bugs) {
     this.log('Fixing potential bugs...');
@@ -420,28 +387,24 @@ class CodeQualityMonitor {
 
           // Fix console.log statements
           if (bug.issue === 'console.log in production code') {
-            newContent = newContent.replace(/console\.log\(/g, '// // // console.log(');
+            newContent = newContent.replace(/console\.log\(/g, '// // // // // console.log(');
             modified = true;
-          }
 
           // Fix debugger statements
           if (bug.issue === 'debugger statement found') {
-            newContent = newContent.replace(/// debugger; // TODO: Remove in production/g, '// // debugger; // TODO: Remove in production // TODO: Remove in production');
+            newContent = newContent.replace(/\/\/ debugger; \/\/ TODO: Remove in production/g, '// // debugger; // TODO: Remove in production');
             modified = true;
-          }
 
           if (modified) {
             fs.writeFileSync(filePath, newContent, 'utf8');
             fixedCount++;
-          }
-        }
+
+
       } catch (error) {
         this.log(`Failed to fix bug in ${bug.file}: ${error.message}`, 'WARN');
-      }
-    }
+
 
     this.log(`Fixed ${fixedCount} potential bugs`);
-  }
 
   async performDeepAnalysis() {
     this.log('Performing deep code analysis...');
@@ -458,8 +421,7 @@ class CodeQualityMonitor {
       this.log('Deep analysis completed');
     } catch (error) {
       this.log(`Deep analysis failed: ${error.message}`, 'ERROR');
-    }
-  }
+
 
   async performWeeklyCleanup() {
     this.log('Performing weekly code cleanup...');
@@ -477,8 +439,7 @@ class CodeQualityMonitor {
       this.log('Weekly cleanup completed');
     } catch (error) {
       this.log(`Weekly cleanup failed: ${error.message}`, 'ERROR');
-    }
-  }
+
 
   async checkCodeComplexity() {
     this.log('Checking code complexity...');
@@ -486,7 +447,6 @@ class CodeQualityMonitor {
     // This would use tools like cyclomatic complexity analysis
     // For now, just log that it's completed
     this.log('Code complexity check completed');
-  }
 
   async checkCodeDuplication() {
     this.log('Checking for code duplication...');
@@ -494,7 +454,6 @@ class CodeQualityMonitor {
     // This would use tools like jscpd or similar
     // For now, just log that it's completed
     this.log('Code duplication check completed');
-  }
 
   async checkSecurityIssues() {
     this.log('Checking for security issues...');
@@ -508,8 +467,7 @@ class CodeQualityMonitor {
       this.log('No security vulnerabilities found');
     } catch (error) {
       this.log('Security vulnerabilities detected, consider running npm audit fix', 'WARN');
-    }
-  }
+
 
   async cleanupOldReports() {
     this.log('Cleaning up old reports...');
@@ -529,14 +487,13 @@ class CodeQualityMonitor {
             if (now - stats.mtime.getTime() > maxAge) {
               fs.unlinkSync(filePath);
               this.log(`Removed old report: ${file}`);
-            }
-          }
-        }
-      }
+
+
+
+
     } catch (error) {
       this.log(`Report cleanup failed: ${error.message}`, 'WARN');
-    }
-  }
+
 
   async optimizeCodeStructure() {
     this.log('Optimizing code structure...');
@@ -544,7 +501,6 @@ class CodeQualityMonitor {
     // This could include various optimizations
     // For now, just log that it's completed
     this.log('Code structure optimization completed');
-  }
 
   async updateQualityRules() {
     this.log('Updating quality rules...');
@@ -552,7 +508,6 @@ class CodeQualityMonitor {
     // This could update ESLint rules, Prettier config, etc.
     // For now, just log that it's completed
     this.log('Quality rules update completed');
-  }
 
   findSourceFiles() {
     const extensions = ['.ts', '.tsx', '.js', '.jsx'];
@@ -568,16 +523,14 @@ class CodeQualityMonitor {
         if (stat.isDirectory()) {
           if (!['node_modules', '.git', 'dist', 'build', '.next'].includes(item)) {
             traverse(fullPath);
-          }
+
         } else if (extensions.some(ext => item.endsWith(ext))) {
           files.push(fullPath);
-        }
-      }
-    }
+
+
 
     traverse(this.projectRoot);
     return files;
-  }
 
   getStats() {
     return {
@@ -586,26 +539,24 @@ class CodeQualityMonitor {
       monitoring: this.monitoring,
       uptime: process.uptime()
     };
-  }
 
   async stop() {
     this.log('Stopping code quality monitor...');
     this.monitoring = false;
     process.exit(0);
-  }
-}
+
 
 // Handle graceful shutdown
 process.on('SIGINT', async () => {
   if (monitor) {
     await monitor.stop();
-  }
+
 });
 
 process.on('SIGTERM', async () => {
   if (monitor) {
     await monitor.stop();
-  }
+
 });
 
 // Start the monitor
@@ -617,3 +568,4 @@ setInterval(() => {
   const stats = monitor.getStats();
   monitor.log(`Monitor heartbeat - Issues Found: ${stats.issuesFound}, Issues Fixed: ${stats.issuesFixed}, Uptime: ${Math.round(stats.uptime)}s`);
 }, 600000); // Every 10 minutes
+}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}})))))))

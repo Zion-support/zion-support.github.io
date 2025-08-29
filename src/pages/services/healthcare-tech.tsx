@@ -1,7 +1,6 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { Heart, Users, Shield, Zap, Settings, Globe, ArrowRight, CheckCircle, Play, Download, Mail, Target, Activity, BarChart3, Database, Stethoscope } from 'lucide-react';
-import { Link } from 'react-router-dom';
+import { Heart, Users, Shield, Zap, Settings, Globe, ArrowRight, CheckCircle, Play, Download, Mail, Target, Activity, BarChart3, Database, Stethoscope import { Link } from 'react-router-dom';
 
 export default function HealthcareTech() {
   return (
@@ -37,7 +36,7 @@ export default function HealthcareTech() {
                 <Link
                   to="/contact"
                   className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-pink-500 to-red-600 text-white font-semibold rounded-lg hover:from-pink-600 hover:to-red-700 transition-all duration-200 shadow-lg hover:shadow-xl"
-                >
+
                   Get Started
                   <ArrowRight className="ml-2 w-5 h-5" />
                 </Link>
@@ -94,7 +93,7 @@ export default function HealthcareTech() {
                   icon: Globe,
                   title: "Interoperability",
                   description: "Seamless integration with existing healthcare systems and EHR platforms."
-                }
+
               ].map((feature, index) => (
                 <div key={index} className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-6 hover:bg-slate-800/70 transition-all duration-300">
                   <div className="w-12 h-12 bg-gradient-to-r from-pink-500 to-red-600 rounded-lg flex items-center justify-center mb-4">
@@ -157,7 +156,7 @@ export default function HealthcareTech() {
                   description: "Data-driven insights for improved healthcare outcomes and operational efficiency.",
                   icon: Database,
                   benefits: ["Performance metrics", "Outcome analysis", "Operational insights"]
-                }
+
               ].map((application, index) => (
                 <div key={index} className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-6 hover:bg-slate-800/70 transition-all duration-300">
                   <div className="w-12 h-12 bg-gradient-to-r from-pink-500 to-red-600 rounded-lg flex items-center justify-center mb-4">
@@ -281,7 +280,7 @@ export default function HealthcareTech() {
                   description: "Information security management system certification.",
                   icon: Settings,
                   features: ["Security framework", "Risk management", "Continuous improvement"]
-                }
+
               ].map((compliance, index) => (
                 <div key={index} className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-6 hover:bg-slate-800/70 transition-all duration-300">
                   <div className="w-12 h-12 bg-gradient-to-r from-pink-500 to-red-600 rounded-lg flex items-center justify-center mb-4">
@@ -336,7 +335,7 @@ export default function HealthcareTech() {
                   step: "04",
                   title: "Optimization",
                   description: "Monitor performance and continuously optimize healthcare delivery."
-                }
+
               ].map((step, index) => (
                 <div key={index} className="text-center">
                   <div className="w-16 h-16 bg-gradient-to-r from-pink-500 to-red-600 rounded-full flex items-center justify-center mx-auto mb-4">
@@ -363,14 +362,14 @@ export default function HealthcareTech() {
               <Link
                 to="/contact"
                 className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-pink-500 to-red-600 text-white font-semibold rounded-lg hover:from-pink-600 hover:to-red-700 transition-all duration-200"
-              >
+
                 Schedule a Consultation
                 <ArrowRight className="ml-2 w-5 h-5" />
               </Link>
               <Link
                 to="/services"
                 className="inline-flex items-center px-8 py-4 border border-pink-500/30 text-pink-400 font-semibold rounded-lg hover:bg-pink-500/10 transition-all duration-200"
-              >
+
                 Explore All Services
               </Link>
             </div>
@@ -379,4 +378,4 @@ export default function HealthcareTech() {
       </div>
     </>
   );
-}
+}}}}}}

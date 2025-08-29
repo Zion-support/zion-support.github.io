@@ -22,7 +22,6 @@ import {
   Shield,
   Brain,
   Rocket
-} from 'lucide-react';
 import { servicesCatalog } from '../data/servicesCatalog';
 import { innovativeServices2027 } from '../data/innovativeServices2027';
 
@@ -38,7 +37,7 @@ export const ComprehensivePricingGuide2027: React.FC = () => {
       ([entry]) => {
         if (entry.isIntersecting) {
           setIsVisible(true);
-        }
+
       },
       { threshold: 0.1 }
     );
@@ -46,7 +45,6 @@ export const ComprehensivePricingGuide2027: React.FC = () => {
     const element = document.getElementById('comprehensive-pricing-guide');
     if (element) {
       observer.observe(element);
-    }
 
     return () => observer.disconnect();
   }, []);
@@ -97,7 +95,7 @@ export const ComprehensivePricingGuide2027: React.FC = () => {
         return a.category.localeCompare(b.category);
       default:
         return 0;
-    }
+
   });
 
   const categories = ['All', ...Array.from(new Set(allServices.map(s => s.category)))];
@@ -123,7 +121,7 @@ export const ComprehensivePricingGuide2027: React.FC = () => {
       case 'Medium': return 'text-yellow-400';
       case 'High': return 'text-red-400';
       default: return 'text-white';
-    }
+
   };
 
   const getCategoryIcon = (category: string) => {
@@ -167,7 +165,7 @@ export const ComprehensivePricingGuide2027: React.FC = () => {
           animate={isVisible ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
           transition={{ duration: 0.8 }}
           className="text-center mb-16"
-        >
+
           <div className="inline-flex items-center justify-center px-6 py-3 bg-gradient-to-r from-zion-cyan/20 to-zion-purple/20 rounded-full border border-zion-cyan/30 mb-6">
             <Calculator className="w-5 h-5 text-zion-cyan mr-2" />
             <span className="text-zion-cyan font-semibold">2027 Pricing Guide</span>
@@ -193,7 +191,7 @@ export const ComprehensivePricingGuide2027: React.FC = () => {
           animate={isVisible ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
           transition={{ duration: 0.8, delay: 0.2 }}
           className="mb-12"
-        >
+
           <div className="bg-gradient-to-r from-zion-slate-light/50 to-zion-slate-dark/50 backdrop-blur-xl border border-zion-cyan/20 rounded-2xl p-6">
             <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
               {/* Search */}
@@ -213,7 +211,7 @@ export const ComprehensivePricingGuide2027: React.FC = () => {
                 value={selectedCategory}
                 onChange={(e) => setSelectedCategory(e.target.value)}
                 className="px-4 py-3 bg-zion-slate-light/30 border border-zion-cyan/20 rounded-lg text-white focus:outline-none focus:border-zion-cyan/40 focus:ring-2 focus:ring-zion-cyan/20"
-              >
+
                 {categories.map(category => (
                   <option key={category} value={category} className="bg-zion-slate-dark text-white">
                     {category}
@@ -226,7 +224,7 @@ export const ComprehensivePricingGuide2027: React.FC = () => {
                 value={priceRange}
                 onChange={(e) => setPriceRange(e.target.value)}
                 className="px-4 py-3 bg-zion-slate-light/30 border border-zion-cyan/20 rounded-lg text-white focus:outline-none focus:border-zion-cyan/40 focus:ring-2 focus:ring-zion-cyan/20"
-              >
+
                 {priceRanges.map(range => (
                   <option key={range} value={range} className="bg-zion-slate-dark text-white">
                     {range}
@@ -239,7 +237,7 @@ export const ComprehensivePricingGuide2027: React.FC = () => {
                 value={sortBy}
                 onChange={(e) => setSortBy(e.target.value)}
                 className="px-4 py-3 bg-zion-slate-light/30 border border-zion-cyan/20 rounded-lg text-white focus:outline-none focus:border-zion-cyan/40 focus:ring-2 focus:ring-zion-cyan/20"
-              >
+
                 <option value="name" className="bg-zion-slate-dark text-white">Sort by Name</option>
                 <option value="price" className="bg-zion-slate-dark text-white">Sort by Price</option>
                 <option value="category" className="bg-zion-slate-dark text-white">Sort by Category</option>
@@ -266,7 +264,7 @@ export const ComprehensivePricingGuide2027: React.FC = () => {
           animate={isVisible ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
           transition={{ duration: 0.8, delay: 0.4 }}
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16"
-        >
+
           {sortedServices.map((service, index) => (
             <motion.div
               key={`${service.source}-${service.id}`}
@@ -274,7 +272,7 @@ export const ComprehensivePricingGuide2027: React.FC = () => {
               animate={isVisible ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
               transition={{ duration: 0.6, delay: index * 0.05 }}
               className="group relative"
-            >
+
               <div className="bg-gradient-to-br from-zion-slate-light/50 to-zion-slate-dark/50 backdrop-blur-xl border border-zion-cyan/20 rounded-2xl p-6 h-full transition-all duration-500 hover:scale-105 hover:border-zion-cyan/40 hover:shadow-2xl hover:shadow-zion-cyan/25">
                 {/* Service Header */}
                 <div className="flex items-start justify-between mb-4">
@@ -300,7 +298,7 @@ export const ComprehensivePricingGuide2027: React.FC = () => {
                         <span
                           key={featureIndex}
                           className="px-2 py-1 bg-zion-cyan/20 text-zion-cyan text-xs rounded-full border border-zion-cyan/30"
-                        >
+
                           {feature}
                         </span>
                       ))}
@@ -348,7 +346,7 @@ export const ComprehensivePricingGuide2027: React.FC = () => {
                   target={service.external ? "_blank" : "_self"}
                   rel={service.external ? "noopener noreferrer" : ""}
                   className="w-full px-6 py-3 bg-gradient-to-r from-zion-cyan to-zion-purple text-white rounded-lg font-semibold hover:shadow-lg hover:shadow-zion-cyan/25 transition-all duration-300 flex items-center justify-center gap-2 group"
-                >
+
                   {service.ctaLabel}
                   <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" />
                   {service.external && <ExternalLink className="w-4 h-4" />}
@@ -364,7 +362,7 @@ export const ComprehensivePricingGuide2027: React.FC = () => {
           animate={isVisible ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
           transition={{ duration: 0.8, delay: 0.6 }}
           className="text-center"
-        >
+
           <div className="bg-gradient-to-r from-zion-cyan/10 to-zion-purple/10 backdrop-blur-xl border border-zion-cyan/20 rounded-2xl p-8">
             <h3 className="text-3xl font-bold text-white mb-6">
               Need Custom Pricing or Have Questions?
@@ -393,7 +391,7 @@ export const ComprehensivePricingGuide2027: React.FC = () => {
               <a
                 href="/contact"
                 className="px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-purple text-white rounded-lg font-semibold hover:shadow-lg hover:shadow-zion-cyan/25 transition-all duration-300 flex items-center justify-center gap-2"
-              >
+
                 Get Custom Quote
                 <ArrowRight className="w-4 h-4" />
               </a>
@@ -402,7 +400,7 @@ export const ComprehensivePricingGuide2027: React.FC = () => {
                 target="_blank"
                 rel="noopener noreferrer"
                 className="px-8 py-4 border border-zion-cyan/30 text-zion-cyan rounded-lg font-semibold hover:bg-zion-cyan/10 transition-all duration-300 flex items-center justify-center gap-2"
-              >
+
                 Visit Website
                 <ExternalLink className="w-4 h-4" />
               </a>
@@ -412,4 +410,4 @@ export const ComprehensivePricingGuide2027: React.FC = () => {
       </div>
     </section>
   );
-};
+};}}}}}

@@ -1,7 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { ArrowRight, Zap, Brain, Shield, Cloud } from 'lucide-react';
-import { GradientHeading } from '../ui/GradientHeading';
+import { ArrowRight, Zap, Brain, Shield, Cloud import { GradientHeading } from '../ui/GradientHeading';
 import { NeonGlow } from '../ui/NeonGlow';
 export function ITServiceRequestHero() {
     const features = [
@@ -19,7 +18,7 @@ export function ITServiceRequestHero() {
             icon: <Cloud className="w-6 h-6"/>,
             title: "Cloud Computing",
             description: "Scalable cloud solutions that optimize performance and reduce costs."
-        }
+
     ];
     return (<section className="relative py-20 overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-r from-zion-blue-dark/80 to-zion-purple-dark/80"></div>
@@ -64,4 +63,4 @@ export function ITServiceRequestHero() {
         </div>
       </div>
     </section>);
-}
+}}}

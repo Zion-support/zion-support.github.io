@@ -462,5 +462,6 @@ export const ADVANCED_AI_SERVICES = [
         competitors: ["Schneider Electric", "Siemens", "Honeywell", "Johnson Controls"],
         marketSize: "$11.2 billion",
         growthRate: "24.6% annually"
-    }
+
 ];
+}

@@ -23,7 +23,7 @@ function suggestChain(region, stake) {
     if (region === 'europe')
         return 'polygon';
     return 'optimism';
-}
+
 export default function TokenIntegrations() {
     const { address, isConnected } = useWallet();
     const [fromChain, setFromChain] = useState('ethereum');
@@ -120,4 +120,4 @@ export default function TokenIntegrations() {
       </div>
       <Footer />
     </div>);
-}
+</Card></Card></Card></Card></Card></Card></Card></Card></Card>}}

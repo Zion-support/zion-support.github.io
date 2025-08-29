@@ -1,6 +1,4 @@
-import { Atom, BarChart3, ArrowRight, Check, ExternalLink, Phone, Mail, Zap, TrendingUp, Brain, Target, Clock, Shield, Globe } from 'lucide-react';
-
-export default function AIQuantumMachineLearning() {
+import { Atom, BarChart3, ArrowRight, Check, ExternalLink, Phone, Mail, Zap, TrendingUp, Brain, Target, Clock, Shield, Globe export default function AIQuantumMachineLearning() {
   const features = [
     'Quantum-enhanced machine learning algorithms',
     'Hybrid quantum-classical computing solutions',
@@ -155,4 +153,4 @@ export default function AIQuantumMachineLearning() {
       </section>
     </div>
   );
-}
+}}

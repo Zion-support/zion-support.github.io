@@ -44,7 +44,7 @@ export default function Header() {
                 key={item.name}
                 href={item.href}
                 className="text-gray-300 hover:text-white transition-colors duration-200 font-medium"
-              >
+
                 {item.name}
               </Link>
             ))}
@@ -64,7 +64,7 @@ export default function Header() {
                       key={service.name}
                       href={service.href}
                       className="text-gray-300 hover:text-white p-2 rounded hover:bg-white/5 transition-colors duration-200"
-                    >
+
                       {service.name}
                     </Link>
                   ))}
@@ -77,7 +77,7 @@ export default function Header() {
             <Link
               href="/contact"
               className="bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white px-6 py-2 rounded-lg font-medium transition-all duration-200 transform hover:scale-105"
-            >
+
               Get Started
             </Link>
           </div>
@@ -85,7 +85,7 @@ export default function Header() {
           <button
             onClick={() => setIsMenuOpen(!isMenuOpen)}
             className="lg:hidden p-2 rounded-md text-gray-400 hover:text-white hover:bg-white/10"
-          >
+
             <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               {isMenuOpen ? (
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
@@ -105,7 +105,7 @@ export default function Header() {
                   href={item.href}
                   className="block px-3 py-2 text-gray-300 hover:text-white hover:bg-white/5 rounded-md transition-colors duration-200"
                   onClick={() => setIsMenuOpen(false)}
-                >
+
                   {item.name}
                 </Link>
               ))}
@@ -117,7 +117,7 @@ export default function Header() {
                     href={service.href}
                     className="block px-3 py-2 text-gray-300 hover:text-white hover:bg-white/5 rounded-md transition-colors duration-200"
                     onClick={() => setIsMenuOpen(false)}
-                  >
+
                     {service.name}
                   </Link>
                 ))}
@@ -127,7 +127,7 @@ export default function Header() {
                   href="/contact"
                   className="block w-full text-center bg-gradient-to-r from-purple-600 to-blue-600 text-white px-6 py-3 rounded-lg font-medium"
                   onClick={() => setIsMenuOpen(false)}
-                >
+
                   Get Started
                 </Link>
               </div>

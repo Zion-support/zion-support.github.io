@@ -1,7 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Settings, Brain, Target, BarChart3, Zap, Shield, ArrowRight, CheckCircle, Factory, Cog } from 'lucide-react';
-export default function ManufacturingSolutions() {
+import { Settings, Brain, Target, BarChart3, Zap, Shield, ArrowRight, CheckCircle, Factory, Cog export default function ManufacturingSolutions() {
     const features = [
         {
             icon: Brain,
@@ -32,7 +31,7 @@ export default function ManufacturingSolutions() {
             icon: Settings,
             title: "Process Optimization",
             description: "AI-powered process improvement and efficiency optimization"
-        }
+
     ];
     const benefits = [
         "Reduce downtime by 40-60%",
@@ -58,7 +57,7 @@ export default function ManufacturingSolutions() {
         {
             title: "Supply Chain Optimization",
             description: "Intelligent inventory and supply chain management"
-        }
+
     ];
     const industries = [
         "Automotive",
@@ -205,4 +204,4 @@ export default function ManufacturingSolutions() {
         </div>
       </section>
     </div>);
-}
+}}}}

@@ -214,7 +214,7 @@ export const comprehensiveServices = [
     icon: '🎧',
     responseTime: '2 hours',
     sla: '95% first-call resolution'
-  }
+
 ];
 
 export const serviceCategories = [
@@ -253,7 +253,7 @@ export const serviceCategories = [
     description: 'Help desk and user support services',
     icon: '🎧',
     services: comprehensiveServices.filter(s => s.category === 'Support')
-  }
+
 ];
 
 export const pricingTiers = [
@@ -309,7 +309,7 @@ export const pricingTiers = [
       'Custom SLAs',
       '1-hour response time'
     ]
-  }
+
 ];
 
 export const getServiceById = (id) => {
@@ -336,7 +336,7 @@ export const calculateServiceCost = (serviceId, months = 1, customizations = [])
       baseCost += customization.price * months;
     } else if (customization.type === 'oneTime') {
       baseCost += customization.price;
-    }
+
   });
 
   return baseCost;
@@ -354,14 +354,12 @@ export const getServiceRecommendations = (businessSize, industry, budget) => {
     recommendations = recommendations.filter(service =>
       ['Support', 'Data', 'Networking', 'Security'].includes(service.category)
     );
-  }
 
   // Filter by budget
   if (budget === 'low') {
     recommendations = recommendations.filter(service => service.basePrice <= 1500);
   } else if (budget === 'medium') {
     recommendations = recommendations.filter(service => service.basePrice <= 3000);
-  }
 
   return recommendations;
 };
@@ -380,4 +378,4 @@ export const SERVICE_CATEGORIES = [
 
 // Alias exports for backward compatibility
 export const COMPREHENSIVE_SERVICES = comprehensiveServices;
-export const PRICING_TIERS = pricingTiers;
+export const PRICING_TIERS = pricingTiers;}}}}}}

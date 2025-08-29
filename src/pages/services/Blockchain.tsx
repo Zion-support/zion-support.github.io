@@ -1,7 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Link, Shield, Zap, BarChart3, Target, CheckCircle, ArrowRight, Globe, Users, Clock, Eye, Cpu, Network, Database, Lock, Smartphone } from 'lucide-react';
-import { SEO } from '@/components/SEO';
+import { Link, Shield, Zap, BarChart3, Target, CheckCircle, ArrowRight, Globe, Users, Clock, Eye, Cpu, Network, Database, Lock, Smartphone import { SEO } from '@/components/SEO';
 import { Link as RouterLink } from 'react-router-dom';
 
 export default function Blockchain() {
@@ -35,7 +34,7 @@ export default function Blockchain() {
       icon: Network,
       title: "Cross-Chain Interoperability",
       description: "Seamless communication between different blockchain networks"
-    }
+
   ];
 
   const pricing = [
@@ -85,7 +84,7 @@ export default function Blockchain() {
       ],
       cta: "Contact Sales",
       popular: false
-    }
+
   ];
 
   const benefits = [
@@ -108,7 +107,7 @@ export default function Blockchain() {
       icon: Users,
       title: "Trust & Compliance",
       description: "Build trust through verifiable and auditable processes"
-    }
+
   ];
 
   const useCases = [
@@ -129,7 +128,7 @@ export default function Blockchain() {
       title: "Healthcare",
       description: "Secure patient records and pharmaceutical supply chain management",
       examples: ["Patient data", "Drug tracking", "Clinical trials"]
-    }
+
   ];
 
   return (
@@ -160,7 +159,7 @@ export default function Blockchain() {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-            >
+
               <div className="inline-flex items-center px-4 py-2 rounded-full bg-orange-500/10 border border-orange-500/20 text-orange-400 text-sm font-medium mb-6">
                 <Link className="w-4 h-4 mr-2" />
                 Blockchain Innovation
@@ -176,14 +175,14 @@ export default function Blockchain() {
                 <RouterLink
                   to="/contact"
                   className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-orange-500 to-red-500 text-white font-semibold rounded-lg hover:from-orange-600 hover:to-red-600 transition-all duration-300 transform hover:scale-105"
-                >
+
                   Get Started
                   <ArrowRight className="w-5 h-5 ml-2" />
                 </RouterLink>
                 <RouterLink
                   to="/request-quote"
                   className="inline-flex items-center px-8 py-4 border border-orange-500/30 text-orange-400 font-semibold rounded-lg hover:bg-orange-500/10 transition-all duration-300"
-                >
+
                   Request Quote
                 </RouterLink>
               </div>
@@ -200,7 +199,7 @@ export default function Blockchain() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
-            >
+
               <h2 className="text-4xl font-bold text-white mb-4">
                 Blockchain Applications
               </h2>
@@ -218,7 +217,7 @@ export default function Blockchain() {
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
                   viewport={{ once: true }}
-                >
+
                   <div className="w-12 h-12 bg-gradient-to-r from-orange-500 to-red-500 rounded-lg flex items-center justify-center mb-4">
                     <useCase.icon className="w-6 h-6 text-white" />
                   </div>
@@ -247,7 +246,7 @@ export default function Blockchain() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
-            >
+
               <h2 className="text-4xl font-bold text-white mb-4">
                 Why Choose Our Blockchain?
               </h2>
@@ -265,7 +264,7 @@ export default function Blockchain() {
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
                   viewport={{ once: true }}
-                >
+
                   <div className="w-12 h-12 bg-gradient-to-r from-orange-500 to-red-500 rounded-lg flex items-center justify-center mb-4">
                     <feature.icon className="w-6 h-6 text-white" />
                   </div>
@@ -286,7 +285,7 @@ export default function Blockchain() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
-            >
+
               <h2 className="text-4xl font-bold text-white mb-4">
                 Transparent Pricing
               </h2>
@@ -308,7 +307,7 @@ export default function Blockchain() {
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
                   viewport={{ once: true }}
-                >
+
                   {plan.popular && (
                     <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                       <span className="px-4 py-2 bg-gradient-to-r from-orange-500 to-red-500 text-white text-sm font-semibold rounded-full">
@@ -342,7 +341,7 @@ export default function Blockchain() {
                         ? 'bg-gradient-to-r from-orange-500 to-red-500 text-white hover:from-orange-600 hover:to-red-600'
                         : 'bg-white/10 text-white hover:bg-white/20 border border-white/20'
                     }`}
-                  >
+
                     {plan.cta}
                   </RouterLink>
                 </motion.div>
@@ -360,7 +359,7 @@ export default function Blockchain() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
-            >
+
               <h2 className="text-4xl font-bold text-white mb-4">
                 Business Benefits
               </h2>
@@ -378,7 +377,7 @@ export default function Blockchain() {
                   whileInView={{ opacity: 1, x: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
                   viewport={{ once: true }}
-                >
+
                   <div className="w-12 h-12 bg-gradient-to-r from-orange-500 to-red-500 rounded-lg flex items-center justify-center flex-shrink-0">
                     <benefit.icon className="w-6 h-6 text-white" />
                   </div>
@@ -400,7 +399,7 @@ export default function Blockchain() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
-            >
+
               <h2 className="text-4xl font-bold text-white mb-6">
                 Ready to Go Blockchain?
               </h2>
@@ -411,14 +410,14 @@ export default function Blockchain() {
                 <RouterLink
                   to="/contact"
                   className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-orange-500 to-red-500 text-white font-semibold rounded-lg hover:from-orange-600 hover:to-red-600 transition-all duration-300 transform hover:scale-105"
-                >
+
                   Start Your Journey
                   <ArrowRight className="w-5 h-5 ml-2" />
                 </RouterLink>
                 <RouterLink
                   to="/request-quote"
                   className="inline-flex items-center px-8 py-4 border border-orange-500/30 text-orange-400 font-semibold rounded-lg hover:bg-orange-500/10 transition-all duration-300"
-                >
+
                   Get Custom Quote
                 </RouterLink>
               </div>
@@ -428,4 +427,4 @@ export default function Blockchain() {
       </div>
     </div>
   );
-}
+</div></div></div>}}}}}}

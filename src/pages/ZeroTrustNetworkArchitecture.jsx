@@ -1,7 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Shield, Lock, Eye, Users, Network, ArrowRight, CheckCircle, Star, Clock, TrendingUp, Zap, Globe } from 'lucide-react';
-const ZeroTrustNetworkArchitecture = () => {
+import { Shield, Lock, Eye, Users, Network, ArrowRight, CheckCircle, Star, Clock, TrendingUp, Zap, Globe const ZeroTrustNetworkArchitecture = () => {
     const features = [
         "Identity verification & authentication",
         "Continuous monitoring & validation",
@@ -32,7 +31,7 @@ const ZeroTrustNetworkArchitecture = () => {
             icon: Zap,
             title: "Compliance Ready",
             description: "Meet regulatory requirements with comprehensive security controls"
-        }
+
     ];
     const pricingPlans = [
         {
@@ -82,7 +81,7 @@ const ZeroTrustNetworkArchitecture = () => {
                 "SLA guarantees",
                 "Custom training programs"
             ]
-        }
+
     ];
     const useCases = [
         {
@@ -104,7 +103,7 @@ const ZeroTrustNetworkArchitecture = () => {
             title: "Data Protection",
             description: "Safeguard sensitive data with granular access controls",
             icon: Lock
-        }
+
     ];
     const industries = [
         "Healthcare",
@@ -140,7 +139,7 @@ const ZeroTrustNetworkArchitecture = () => {
             description: "Application-level security and access controls",
             icon: Lock,
             color: "from-orange-500 to-red-500"
-        }
+
     ];
     return (<div className="min-h-screen bg-gradient-to-br from-gray-900 via-black to-gray-900 text-white">
       {/* Hero Section */}
@@ -369,3 +368,4 @@ const ZeroTrustNetworkArchitecture = () => {
     </div>);
 };
 export default ZeroTrustNetworkArchitecture;
+}}}}}

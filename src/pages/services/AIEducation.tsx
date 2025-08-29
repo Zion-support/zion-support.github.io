@@ -1,6 +1,4 @@
-import { GraduationCap, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, BookOpen, BarChart3 } from 'lucide-react';
-
-export default function AIEducation() {
+import { GraduationCap, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, BookOpen, BarChart3 export default function AIEducation() {
   const features = [
     'AI-powered personalized learning paths and recommendations',
     'Intelligent assessment and adaptive testing',
@@ -171,4 +169,4 @@ export default function AIEducation() {
       </section>
     </div>
   );
-}
+}}

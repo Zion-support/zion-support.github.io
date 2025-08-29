@@ -1,8 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { Zap, Workflow, Brain, Clock, TrendingUp, Users, Database, Globe, Target, CheckCircle, BarChart3 } from 'lucide-react';
-const AIWorkflowAutomation = () => {
+import { Zap, Workflow, Brain, Clock, TrendingUp, Users, Database, Globe, Target, CheckCircle, BarChart3 const AIWorkflowAutomation = () => {
     const features = [
         {
             icon: Brain,
@@ -27,7 +26,7 @@ const AIWorkflowAutomation = () => {
             title: "Real-time Monitoring",
             description: "Continuous monitoring of workflow performance with instant alerts and proactive optimization",
             benefits: ["Performance tracking", "Real-time alerts", "Predictive maintenance", "KPI monitoring"]
-        }
+
     ];
     const solutions = [
         {
@@ -73,7 +72,7 @@ const AIWorkflowAutomation = () => {
                 "Performance review automation",
                 "Employee self-service"
             ]
-        }
+
     ];
     const technologies = [
         {
@@ -105,7 +104,7 @@ const AIWorkflowAutomation = () => {
             name: "API Integration",
             description: "Seamless integration with existing systems",
             icon: Globe
-        }
+
     ];
     const benefits = [
         {
@@ -127,7 +126,7 @@ const AIWorkflowAutomation = () => {
             title: "Scalability",
             description: "Scale operations without proportional increase in resources",
             icon: Users
-        }
+
     ];
     const containerVariants = {
         hidden: { opacity: 0 },
@@ -135,8 +134,8 @@ const AIWorkflowAutomation = () => {
             opacity: 1,
             transition: {
                 staggerChildren: 0.1
-            }
-        }
+
+
     };
     const itemVariants = {
         hidden: { y: 20, opacity: 0 },
@@ -145,8 +144,8 @@ const AIWorkflowAutomation = () => {
             opacity: 1,
             transition: {
                 duration: 0.5
-            }
-        }
+
+
     };
     return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       {/* Hero Section */}
@@ -310,5 +309,6 @@ const AIWorkflowAutomation = () => {
         </motion.div>
       </div>
     </div>);
-};
+</div>};
 export default AIWorkflowAutomation;
+}}}}}}}}}

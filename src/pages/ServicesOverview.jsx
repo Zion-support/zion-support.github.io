@@ -2,8 +2,7 @@ import React from 'react';
 import { SEO } from "@/components/SEO";
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { Brain, Cloud, Shield, Database, Wifi, Link as LinkIcon, Zap, Server, Users, Target, Check, ArrowRight } from 'lucide-react';
-export default function ServicesOverview() {
+import { Brain, Cloud, Shield, Database, Wifi, Link as LinkIcon, Zap, Server, Users, Target, Check, ArrowRight export default function ServicesOverview() {
     const serviceCategories = [
         {
             name: "AI & Machine Learning",
@@ -28,7 +27,7 @@ export default function ServicesOverview() {
                     description: "Intelligent automation and insights",
                     price: "From $8,500",
                     href: "/services/ai"
-                }
+
             ]
         },
         {
@@ -54,7 +53,7 @@ export default function ServicesOverview() {
                     description: "Robust data pipelines and warehouses",
                     price: "From $4,500/month",
                     href: "/services/data-analytics"
-                }
+
             ]
         },
         {
@@ -80,7 +79,7 @@ export default function ServicesOverview() {
                     description: "IoT solutions for smart cities and manufacturing",
                     price: "From $6,500/month",
                     href: "/services/iot-edge-computing"
-                }
+
             ]
         },
         {
@@ -106,7 +105,7 @@ export default function ServicesOverview() {
                     description: "Custom NFT platforms and generative art",
                     price: "From $12,000/project",
                     href: "/services/blockchain-web3"
-                }
+
             ]
         },
         {
@@ -132,7 +131,7 @@ export default function ServicesOverview() {
                     description: "Enterprise-grade container management",
                     price: "From $7,500/project",
                     href: "/services/devops-cloud"
-                }
+
             ]
         },
         {
@@ -158,9 +157,9 @@ export default function ServicesOverview() {
                     description: "Regulatory compliance and security frameworks",
                     price: "From $6,000/month",
                     href: "/services/cybersecurity"
-                }
+
             ]
-        }
+
     ];
     const stats = [
         { label: "Services Offered", value: "50+", icon: Target },
@@ -174,8 +173,8 @@ export default function ServicesOverview() {
             opacity: 1,
             transition: {
                 staggerChildren: 0.1
-            }
-        }
+
+
     };
     const itemVariants = {
         hidden: { y: 20, opacity: 0 },
@@ -185,8 +184,8 @@ export default function ServicesOverview() {
             transition: {
                 duration: 0.5,
                 ease: "easeOut"
-            }
-        }
+
+
     };
     return (<div className="min-h-screen bg-background">
       <SEO title="All Services - Zion Tech Group Comprehensive Technology Solutions" description="Explore our complete range of technology services including AI, data analytics, IoT, blockchain, DevOps, and cybersecurity solutions." keywords="technology services, AI services, data analytics, IoT solutions, blockchain development, DevOps consulting, cybersecurity services" canonical="https://ziontechgroup.com/services"/>
@@ -335,4 +334,4 @@ export default function ServicesOverview() {
         </div>
       </section>
     </div>);
-}
+}}}}}}}}}}}}}

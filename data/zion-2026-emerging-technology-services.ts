@@ -39,7 +39,6 @@ export interface Zion2026EmergingTechnologyService {
   customers: number;
   rating: number;
   reviews: number;
-}
 
 const contact = {
   mobile: '+1 302 464 0950',
@@ -431,7 +430,7 @@ export const zion2026EmergingTechnologyServices: Zion2026EmergingTechnologyServi
     customers: 1350,
     rating: 4.8,
     reviews: 680
-  }
+
 ];
 
-export default zion2026EmergingTechnologyServices;
+export default zion2026EmergingTechnologyServices;}}

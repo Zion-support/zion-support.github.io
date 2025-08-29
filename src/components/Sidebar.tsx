@@ -48,12 +48,9 @@ import {
   TestTube,
   Code,
   Target
-} from 'lucide-react';
-
 interface SidebarProps {
   isOpen: boolean;
   onClose: () => void;
-}
 
 export const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
   const location = useLocation();
@@ -153,13 +150,13 @@ export const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
         { name: 'News', href: '/news', icon: Newspaper },
         { name: 'Sitemap', href: '/sitemap', icon: FileText }
       ]
-    }
+
   ];
 
   const isActive = (href: string) => {
     if (href === '/') {
       return location.pathname === '/';
-    }
+
     return location.pathname.startsWith(href);
   };
 
@@ -183,7 +180,7 @@ export const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
             exit={{ x: '-100%' }}
             transition={{ type: 'spring', damping: 25, stiffness: 200 }}
             className="fixed left-0 top-0 h-full w-80 bg-zion-slate-dark border-r border-cyan-400/20 shadow-2xl z-50 overflow-y-auto"
-          >
+
             {/* Header */}
             <div className="p-6 border-b border-cyan-400/20">
               <div className="flex items-center justify-between">
@@ -198,7 +195,7 @@ export const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
                 <button
                   onClick={onClose}
                   className="p-2 rounded-lg text-gray-400 hover:text-cyan-400 hover:bg-cyan-400/10 transition-colors duration-200"
-                >
+
                   <ChevronRight className="w-5 h-5" />
                 </button>
               </div>
@@ -212,7 +209,7 @@ export const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
                   <button
                     onClick={() => toggleSection(section.title)}
                     className="flex items-center justify-between w-full text-left group"
-                  >
+
                     <div className="flex items-center space-x-2">
                       <section.icon className="w-5 h-5 text-cyan-400" />
                       <span className="font-semibold text-white group-hover:text-cyan-400 transition-colors duration-200">
@@ -235,7 +232,7 @@ export const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
                         exit={{ opacity: 0, height: 0 }}
                         transition={{ duration: 0.2 }}
                         className="ml-6 space-y-1"
-                      >
+
                         {section.items.map((item) => (
                           <Link
                             key={item.name}
@@ -246,7 +243,7 @@ export const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
                                 ? 'bg-cyan-400/20 text-cyan-400 border border-cyan-400/30'
                                 : 'text-gray-300 hover:text-cyan-400 hover:bg-cyan-400/10'
                             }`}
-                          >
+
                             <item.icon className={`w-4 h-4 ${
                               isActive(item.href) ? 'text-cyan-400' : 'text-gray-500 group-hover:text-cyan-400'
                             }`} />
@@ -276,3 +273,4 @@ export const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
     </AnimatePresence>
   );
 };
+}}}</section></motion.div>}

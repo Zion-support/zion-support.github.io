@@ -1,7 +1,5 @@
 import React, { useState } from 'react';
-import { Check, Clock, Users, Shield, Star, ArrowRight, ChevronDown, ChevronUp } from 'lucide-react';
-
-export const ServiceDetailsSection = ({ services = [] }) => {
+import { Check, Clock, Users, Shield, Star, ArrowRight, ChevronDown, ChevronUp export const ServiceDetailsSection = ({ services = [] }) => {
   const [expandedService, setExpandedService] = useState(null);
 
   const defaultServices = [
@@ -103,7 +101,7 @@ export const ServiceDetailsSection = ({ services = [] }) => {
       category: 'Cloud',
       complexity: 'High',
       estimatedCost: '$20,000 - $75,000'
-    }
+
   ];
 
   const displayServices = services.length > 0 ? services : defaultServices;
@@ -122,7 +120,7 @@ export const ServiceDetailsSection = ({ services = [] }) => {
         return 'text-red-600 bg-red-100';
       default:
         return 'text-gray-600 bg-gray-100';
-    }
+
   };
 
   return (
@@ -145,7 +143,7 @@ export const ServiceDetailsSection = ({ services = [] }) => {
             <div
               key={service.id}
               className="bg-white border border-gray-200 rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300"
-            >
+
               {/* Service Header */}
               <div className="p-6 border-b border-gray-100">
                 <div className="flex items-start justify-between">
@@ -181,7 +179,7 @@ export const ServiceDetailsSection = ({ services = [] }) => {
                   <button
                     onClick={() => toggleService(service.id)}
                     className="ml-4 p-2 text-gray-400 hover:text-gray-600 transition-colors"
-                  >
+
                     {expandedService === service.id ? (
                       <ChevronUp className="w-6 h-6" />
                     ) : (
@@ -283,13 +281,13 @@ export const ServiceDetailsSection = ({ services = [] }) => {
               <a
                 href="#contact"
                 className="px-8 py-3 bg-white text-blue-600 font-semibold rounded-lg hover:bg-gray-100 transition-all duration-300"
-              >
+
                 Discuss Requirements
               </a>
               <a
                 href="#consultation"
                 className="px-8 py-3 border border-white/30 text-white font-semibold rounded-lg hover:bg-white/10 transition-all duration-300"
-              >
+
                 Schedule Consultation
               </a>
             </div>
@@ -298,4 +296,4 @@ export const ServiceDetailsSection = ({ services = [] }) => {
       </div>
     </section>
   );
-};
+};}}}

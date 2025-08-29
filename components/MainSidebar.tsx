@@ -65,12 +65,9 @@ import {
   Leaf,
   Sun,
   Wind
-} from 'lucide-react';
-
 interface SidebarProps {
   isOpen: boolean;
   onClose: () => void;
-}
 
 const MainSidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
   const router = useNavigate();
@@ -155,7 +152,7 @@ const MainSidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
       <button
         onClick={() => toggleSection(sectionKey)}
         className="flex items-center justify-between w-full px-3 py-2 text-left text-gray-300 hover:text-white transition-colors duration-200 font-medium"
-      >
+
         <span className="text-sm font-semibold uppercase tracking-wide">{title}</span>
         {expandedSections.includes(sectionKey) ? (
           <ChevronDown className="w-4 h-4" />
@@ -176,7 +173,7 @@ const MainSidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
                   ? 'bg-zion-cyan/20 text-zion-cyan border-l-2 border-zion-cyan'
                   : 'text-gray-400 hover:text-white hover:bg-white/5'
               }`}
-            >
+
               <item.icon className="w-4 h-4 flex-shrink-0" />
               <div className="flex-1 min-w-0">
                 <div className="font-medium">{item.name}</div>
@@ -243,7 +240,7 @@ const MainSidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
                   href={action.href}
                   onClick={onClose}
                   className="flex flex-col items-center gap-2 p-3 bg-white/5 rounded-lg hover:bg-white/10 transition-all duration-200 group"
-                >
+
                   <div className={`w-8 h-8 bg-gradient-to-r ${action.color} rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-200`}>
                     <action.icon className="w-4 h-4 text-white" />
                   </div>
@@ -265,7 +262,7 @@ const MainSidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
                     ? 'bg-zion-cyan/20 text-zion-cyan border-l-2 border-zion-cyan'
                     : 'text-gray-300 hover:text-white hover:bg-white/5'
                 }`}
-              >
+
                 <item.icon className="w-4 h-4 flex-shrink-0" />
                 <span className="font-medium">{item.name}</span>
               </Link>
@@ -296,7 +293,7 @@ const MainSidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
                 target={contact.href.startsWith('http') ? '_blank' : '_self'}
                 rel={contact.href.startsWith('http') ? 'noopener noreferrer' : ''}
                 className="flex items-center gap-2 text-xs text-zion-slate-light hover:text-zion-cyan transition-colors duration-200"
-              >
+
                 <contact.icon className="w-3 h-3" />
                 <span className="truncate">{contact.text}</span>
               </a>
@@ -313,7 +310,7 @@ const MainSidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
                 rel="noopener noreferrer"
                 className={`p-2 hover:bg-white/10 rounded-lg transition-all duration-200 ${social.color}`}
                 aria-label={social.name}
-              >
+
                 <social.icon className="w-4 h-4" />
               </a>
             ))}
@@ -327,6 +324,6 @@ const MainSidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
       </div>
     </>
   );
-};
+</div>};
 
-export default MainSidebar;
+export default MainSidebar;}}

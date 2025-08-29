@@ -1,8 +1,7 @@
 import React, { useState } from "react";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { Wallet, Info, Check, ArrowUpRight } from "lucide-react";
-import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger, } from "@/components/ui/tooltip";
+import { Wallet, Info, Check, ArrowUpRight import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger, } from "@/components/ui/tooltip";
 import { useToast } from "@/hooks/use-toast";
 import { useAuth } from "@/hooks/useAuth";
 export function OnChainExport() {
@@ -22,7 +21,7 @@ export function OnChainExport() {
                     variant: "destructive"
                 });
                 return;
-            }
+
             // Request accounts
             const accounts = await ethereum.request({ method: 'eth_requestAccounts' });
             const address = accounts[0];
@@ -37,14 +36,14 @@ export function OnChainExport() {
                 title: "Wallet connected",
                 description: `Wallet ${address.slice(0, 6)}...${address.slice(-4)} connected successfully`,
             });
-        }
+
         catch (error) {
             toast({
                 title: "Connection failed",
                 description: error.message || "Could not connect to wallet",
                 variant: "destructive"
             });
-        }
+
     };
     const handleExportTokens = async () => {
         setIsExporting(true);
@@ -57,7 +56,7 @@ export function OnChainExport() {
                 title: "Tokens exported",
                 description: "Your ZION$ tokens have been exported to your wallet",
             });
-        }
+
         catch (error) {
             setExportStatus('error');
             toast({
@@ -65,10 +64,10 @@ export function OnChainExport() {
                 description: error.message || "Could not export tokens",
                 variant: "destructive"
             });
-        }
+
         finally {
             setIsExporting(false);
-        }
+
     };
     return (<Card>
       <CardHeader>
@@ -111,4 +110,4 @@ export function OnChainExport() {
           </div>)}
       </CardContent>
     </Card>);
-}
+</Card></Card></Card></Card>}}}}}}}}

@@ -63,7 +63,7 @@ export const expandedServices2025: ServiceCategory[] = [
           phone: '+1 302 464 0950',
           email: 'kleber@ziontechgroup.com',
           address: '364 E Main St STE 1008 Middletown DE 19709'
-        }
+
       },
       {
         id: 'ai-sales-intelligence-platform',
@@ -96,7 +96,7 @@ export const expandedServices2025: ServiceCategory[] = [
           phone: '+1 302 464 0950',
           email: 'kleber@ziontechgroup.com',
           address: '364 E Main St STE 1008 Middletown DE 19709'
-        }
+
       },
       {
         id: 'ai-customer-success-automation',
@@ -129,7 +129,7 @@ export const expandedServices2025: ServiceCategory[] = [
           phone: '+1 302 464 0950',
           email: 'kleber@ziontechgroup.com',
           address: '364 E Main St STE 1008 Middletown DE 19709'
-        }
+
       },
       {
         id: 'ai-workflow-automation-suite',
@@ -162,8 +162,8 @@ export const expandedServices2025: ServiceCategory[] = [
           phone: '+1 302 464 0950',
           email: 'kleber@ziontechgroup.com',
           address: '364 E Main St STE 1008 Middletown DE 19709'
-        }
-      }
+
+
     ]
   },
   {
@@ -202,7 +202,7 @@ export const expandedServices2025: ServiceCategory[] = [
           phone: '+1 302 464 0950',
           email: 'kleber@ziontechgroup.com',
           address: '364 E Main St STE 1008 Middletown DE 19709'
-        }
+
       },
       {
         id: 'hybrid-cloud-migration',
@@ -235,7 +235,7 @@ export const expandedServices2025: ServiceCategory[] = [
           phone: '+1 302 464 0950',
           email: 'kleber@ziontechgroup.com',
           address: '364 E Main St STE 1008 Middletown DE 19709'
-        }
+
       },
       {
         id: 'devops-automation-platform',
@@ -268,8 +268,8 @@ export const expandedServices2025: ServiceCategory[] = [
           phone: '+1 302 464 0950',
           email: 'kleber@ziontechgroup.com',
           address: '364 E Main St STE 1008 Middletown DE 19709'
-        }
-      }
+
+
     ]
   },
   {
@@ -308,7 +308,7 @@ export const expandedServices2025: ServiceCategory[] = [
           phone: '+1 302 464 0950',
           email: 'kleber@ziontechgroup.com',
           address: '364 E Main St STE 1008 Middletown DE 19709'
-        }
+
       },
       {
         id: 'ai-supply-chain-optimization',
@@ -341,7 +341,7 @@ export const expandedServices2025: ServiceCategory[] = [
           phone: '+1 302 464 0950',
           email: 'kleber@ziontechgroup.com',
           address: '364 E Main St STE 1008 Middletown DE 19709'
-        }
+
       },
       {
         id: 'ai-customer-experience-platform',
@@ -374,8 +374,8 @@ export const expandedServices2025: ServiceCategory[] = [
           phone: '+1 302 464 0950',
           email: 'kleber@ziontechgroup.com',
           address: '364 E Main St STE 1008 Middletown DE 19709'
-        }
-      }
+
+
     ]
   },
   {
@@ -414,7 +414,7 @@ export const expandedServices2025: ServiceCategory[] = [
           phone: '+1 302 464 0950',
           email: 'kleber@ziontechgroup.com',
           address: '364 E Main St STE 1008 Middletown DE 19709'
-        }
+
       },
       {
         id: 'blockchain-enterprise-solutions',
@@ -447,7 +447,7 @@ export const expandedServices2025: ServiceCategory[] = [
           phone: '+1 302 464 0950',
           email: 'kleber@ziontechgroup.com',
           address: '364 E Main St STE 1008 Middletown DE 19709'
-        }
+
       },
       {
         id: 'iot-edge-computing-platform',
@@ -480,8 +480,8 @@ export const expandedServices2025: ServiceCategory[] = [
           phone: '+1 302 464 0950',
           email: 'kleber@ziontechgroup.com',
           address: '364 E Main St STE 1008 Middletown DE 19709'
-        }
-      }
+
+
     ]
   },
   {
@@ -520,7 +520,7 @@ export const expandedServices2025: ServiceCategory[] = [
           phone: '+1 302 464 0950',
           email: 'kleber@ziontechgroup.com',
           address: '364 E Main St STE 1008 Middletown DE 19709'
-        }
+
       },
       {
         id: 'fintech-innovation-suite',
@@ -553,7 +553,7 @@ export const expandedServices2025: ServiceCategory[] = [
           phone: '+1 302 464 0950',
           email: 'kleber@ziontechgroup.com',
           address: '364 E Main St STE 1008 Middletown DE 19709'
-        }
+
       },
       {
         id: 'education-technology-platform',
@@ -586,10 +586,10 @@ export const expandedServices2025: ServiceCategory[] = [
           phone: '+1 302 464 0950',
           email: 'kleber@ziontechgroup.com',
           address: '364 E Main St STE 1008 Middletown DE 19709'
-        }
-      }
+
+
     ]
-  }
+
 ];
 
-export default expandedServices2025;
+export default expandedServices2025;}}}}}}}}}}}}}}}}}}}}}}

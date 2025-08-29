@@ -30,7 +30,7 @@ export const cuttingEdgeITServices2025 = [
         price: 2499,
         period: 'month',
         features: ['Full quantum platform', 'Custom security protocols', 'Dedicated specialists', '24/7 support']
-      }
+
     },
     category: 'Quantum IT',
     tags: ['Quantum Computing', 'Cloud Infrastructure', 'Security', 'Performance', 'Scalability'],
@@ -83,7 +83,7 @@ export const cuttingEdgeITServices2025 = [
         price: 1999,
         period: 'month',
         features: ['Full edge platform', 'Custom AI models', 'Dedicated specialists', '24/7 support']
-      }
+
     },
     category: 'Edge Computing',
     tags: ['Edge Computing', 'Orchestration', 'Real-time Processing', 'AI Deployment', 'Low Latency'],
@@ -136,7 +136,7 @@ export const cuttingEdgeITServices2025 = [
         price: 2999,
         period: 'month',
         features: ['Full security platform', 'Custom security policies', 'Dedicated specialists', '24/7 support']
-      }
+
     },
     category: 'Cybersecurity',
     tags: ['Zero Trust', 'Security', 'Authentication', 'IAM', 'Threat Detection'],
@@ -189,7 +189,7 @@ export const cuttingEdgeITServices2025 = [
         price: 3499,
         period: 'month',
         features: ['Full blockchain platform', 'Custom development', 'Dedicated specialists', '24/7 support']
-      }
+
     },
     category: 'Blockchain',
     tags: ['Blockchain', 'Smart Contracts', 'Distributed Ledger', 'Enterprise', 'Automation'],
@@ -242,7 +242,7 @@ export const cuttingEdgeITServices2025 = [
         price: 2499,
         period: 'month',
         features: ['Full AI DevOps platform', 'Custom development', 'Dedicated specialists', '24/7 support']
-      }
+
     },
     category: 'DevOps',
     tags: ['AI DevOps', 'Automation', 'CI/CD', 'Monitoring', 'Performance'],
@@ -263,5 +263,5 @@ export const cuttingEdgeITServices2025 = [
     ],
     integrations: ['GitHub', 'GitLab', 'Jenkins', 'Docker', 'Kubernetes', 'AWS', 'Azure', 'Google Cloud'],
     compliance: ['DevOps Best Practices', 'Security Standards', 'Quality Assurance Protocols']
-  }
-];
+
+];}}}}}}

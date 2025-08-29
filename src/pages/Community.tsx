@@ -22,7 +22,6 @@ import {
   Award,
   CheckCircle,
   ArrowRight
-} from 'lucide-react';
 import { SEO } from '../components/SEO';
 
 export default function Community() {
@@ -73,7 +72,7 @@ export default function Community() {
       posts: 4100,
       members: 1800,
       href: '/community/digital-transformation'
-    }
+
   ];
 
   const upcomingEvents = [
@@ -109,7 +108,7 @@ export default function Community() {
       icon: Cloud,
       color: 'from-blue-500 to-cyan-500',
       href: '/events/devops-meetup-nyc'
-    }
+
   ];
 
   const featuredDiscussions = [
@@ -148,7 +147,7 @@ export default function Community() {
       icon: Cloud,
       color: 'from-blue-500 to-cyan-500',
       href: '/community/discussions/multi-cloud-cost-optimization'
-    }
+
   ];
 
   const communityResources = [
@@ -179,7 +178,7 @@ export default function Community() {
       icon: Download,
       href: '/community/resources',
       color: 'from-orange-500 to-red-500'
-    }
+
   ];
 
   return (
@@ -197,7 +196,7 @@ export default function Community() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             className="text-center"
-          >
+
             <div className="w-20 h-20 bg-gradient-to-br from-cyan-400 to-blue-500 rounded-full flex items-center justify-center mx-auto mb-6">
               <Users className="w-10 h-10 text-white" />
             </div>
@@ -221,7 +220,7 @@ export default function Community() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.2 + index * 0.1 }}
               className="text-center"
-            >
+
               <div className={`w-16 h-16 bg-gradient-to-br ${stat.color} rounded-xl flex items-center justify-center mx-auto mb-4`}>
                 <stat.icon className="w-8 h-8 text-white" />
               </div>
@@ -240,7 +239,7 @@ export default function Community() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.3 }}
             className="text-3xl font-bold text-white text-center mb-12"
-          >
+
             Community Forums
           </motion.h2>
 
@@ -252,11 +251,11 @@ export default function Community() {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.4 + index * 0.1 }}
                 className="group"
-              >
+
                 <Link
                   to={forum.href}
                   className="block bg-slate-800/30 border border-slate-700 rounded-xl p-6 hover:border-cyan-400/50 transition-all duration-300 h-full"
-                >
+
                   <div className="flex items-center space-x-4 mb-6">
                     <div className={`w-16 h-16 bg-gradient-to-br ${forum.color} rounded-xl flex items-center justify-center`}>
                       <forum.icon className="w-8 h-8 text-white" />
@@ -304,7 +303,7 @@ export default function Community() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.5 }}
           className="text-3xl font-bold text-white text-center mb-12"
-        >
+
           Upcoming Events
         </motion.h2>
 
@@ -316,11 +315,11 @@ export default function Community() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.6 + index * 0.1 }}
               className="group"
-            >
+
               <Link
                 to={event.href}
                 className="block bg-slate-800/30 border border-slate-700 rounded-xl overflow-hidden hover:border-cyan-400/50 transition-all duration-300 h-full"
-              >
+
                 <div className="p-6">
                   <div className="flex items-center justify-between mb-4">
                     <span className={`px-3 py-1 rounded-full text-xs font-medium ${
@@ -373,7 +372,7 @@ export default function Community() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.7 }}
             className="text-3xl font-bold text-white text-center mb-12"
-          >
+
             Featured Discussions
           </motion.h2>
 
@@ -385,11 +384,11 @@ export default function Community() {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.8 + index * 0.1 }}
                 className="group"
-              >
+
                 <Link
                   to={discussion.href}
                   className="block bg-slate-800/30 border border-slate-700 rounded-xl p-6 hover:border-cyan-400/50 transition-all duration-300 h-full"
-                >
+
                   <div className="flex items-center space-x-3 mb-4">
                     <div className={`w-10 h-10 bg-gradient-to-br ${discussion.color} rounded-lg flex items-center justify-center`}>
                       <discussion.icon className="w-5 h-5 text-white" />
@@ -418,7 +417,7 @@ export default function Community() {
                       <span
                         key={tag}
                         className="px-2 py-1 bg-slate-700 text-slate-300 text-xs rounded-full"
-                      >
+
                         {tag}
                       </span>
                     ))}
@@ -444,7 +443,7 @@ export default function Community() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.9 }}
           className="text-3xl font-bold text-white text-center mb-12"
-        >
+
           Community Resources
         </motion.h2>
 
@@ -456,11 +455,11 @@ export default function Community() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 1.0 + index * 0.1 }}
               className="group"
-            >
+
               <Link
                 to={resource.href}
                 className="block bg-slate-800/30 border border-slate-700 rounded-xl p-6 hover:border-cyan-400/50 transition-all duration-300 h-full text-center"
-              >
+
                 <div className={`w-16 h-16 bg-gradient-to-br ${resource.color} rounded-xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300`}>
                   <resource.icon className="w-8 h-8 text-white" />
                 </div>
@@ -482,7 +481,7 @@ export default function Community() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 1.1 }}
           className="bg-gradient-to-r from-cyan-600 to-blue-700 rounded-2xl p-12 text-center"
-        >
+
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
             Ready to Join Our Community?
           </h2>
@@ -493,13 +492,13 @@ export default function Community() {
             <Link
               to="/contact"
               className="px-8 py-4 bg-white text-cyan-600 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300 transform hover:scale-105"
-            >
+
               Get Started
             </Link>
             <Link
               to="/help"
               className="px-8 py-4 border-2 border-white text-white rounded-lg font-semibold hover:bg-white hover:text-cyan-600 transition-all duration-300"
-            >
+
               Learn More
             </Link>
           </div>
@@ -507,4 +506,4 @@ export default function Community() {
       </div>
     </div>
   );
-}
+}}}}}}

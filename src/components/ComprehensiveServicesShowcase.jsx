@@ -159,9 +159,7 @@ import {Brain,
             ArrowRight,
             CheckCircle,
             Star,
-            Award} from 'lucide-react';
-
-export const ComprehensiveServicesShowcase: React.FC = () => { /* empty */ }
+            Awardexport const ComprehensiveServicesShowcase: React.FC = () => { /* empty */ }
   const [activeCategory, setActiveCategory] = useState('all');
 
   const serviceCategories = [
@@ -267,7 +265,7 @@ export const ComprehensiveServicesShowcase: React.FC = () => { /* empty */ }
       benefits: ['Custom solutions', 'Scalable business model', 'Recurring revenue'],
       color: 'from-orange-500 to-red-500',
       href: '/services/microsaas'
-    }
+
   ];
 
   const solutions = [
@@ -326,7 +324,7 @@ export const ComprehensiveServicesShowcase: React.FC = () => { /* empty */ }
       icon: Brain,
       category: 'ai',
       href: '/solutions/ai-business-intelligence'
-    }
+
   ];
 
   const filteredServices = activeCategory === 'all'
@@ -583,11 +581,9 @@ export const ComprehensiveServicesShowcase: React.FC = () => { /* empty */ }
         </div>
       </></div>
     </div>))};
-}
 
 interface ServiceCardProps {service}: any;
   getCategoryIcon: (category: string) => React.ReactNode;
-}
 
 function ServiceCard({service, getCategoryIcon}: ServiceCardProps) { /* empty */ }
   return (
@@ -668,7 +664,7 @@ function ServiceCard({service, getCategoryIcon}: ServiceCardProps) { /* empty */
       </CardContent>
     </Card>
   );
-}
+
                 </div>
 
                 <div className="mb-4">
@@ -718,14 +714,12 @@ import {Search,
             Network,
             Smartphone,
             Monitor,
-            Server} from 'lucide-react';
-import {INNOVATIVE_MICRO_SAAS_SERVICES, INNOVATIVE_SERVICE_CATEGORIES, InnovativeMicroSaasService} from '../data/innovativeMicroSaasServices';
+            Serverimport {INNOVATIVE_MICRO_SAAS_SERVICES, INNOVATIVE_SERVICE_CATEGORIES, InnovativeMicroSaasService} from '../data/innovativeMicroSaasServices';
 
 interface ServiceCardProps {service}: InnovativeMicroSaasService;
   index: number;
   viewMode: 'grid' | 'list';
   onServiceClick: (service: InnovativeMicroSaasService) => void;
-}
 
 const ServiceCard: React.FC<ServiceCardProps> = ({service, index, viewMode, onServiceClick}) => { /* empty */ }
   const [isHovered, setIsHovered] = useState(false);
@@ -776,7 +770,7 @@ const ServiceCard: React.FC<ServiceCardProps> = ({service, index, viewMode, onSe
             url: service.websiteUrl
         })};
     } else {navigator.clipboard.writeText(service.websiteUrl)};
-    }
+
   }, [service]);
 
   if (viewMode === 'grid') { /* empty */ }
@@ -863,7 +857,6 @@ const ServiceCard: React.FC<ServiceCardProps> = ({service, index, viewMode, onSe
         </AnimatePresence>
       </motion.div>
     );
-  }
 
   // List View
   return (
@@ -978,11 +971,9 @@ const ComprehensiveServicesShowcase: React.FC = () => { /* empty */ }
         service.tags.some(tag => tag.toLowerCase().includes(searchLower)) ||
         service.category.toLowerCase().includes(searchLower)
       );
-    }
 
     // Filter by category
     if (selectedCategory !== 'all') {filtered = filtered.filter(service => service.category === selectedCategory)};
-    }
 
     // Sort services
     filtered.sort((a, b) => { /* empty */ }
@@ -997,7 +988,7 @@ const ComprehensiveServicesShowcase: React.FC = () => { /* empty */ }
           return a.title.localeCompare(b.title);
         default:
           return 0;
-      }
+
     });
 
     return filtered;
@@ -1005,7 +996,7 @@ const ComprehensiveServicesShowcase: React.FC = () => { /* empty */ }
 
   const handleServiceClick = useCallback((service: InnovativeMicroSaasService) => {setSelectedService(service)};
     // You can add navigation logic here
-    // console.log('Service clicked:', service);
+    // // // console.log('Service clicked:', service);
   }, []);
 
   const clearFilters = useCallback(() => {setSearchTerm('')};
@@ -1017,7 +1008,7 @@ const ComprehensiveServicesShowcase: React.FC = () => { /* empty */ }
   useEffect(() => { /* empty */ }
     const handleKeyDown = (e: KeyboardEvent) => { /* empty */ }
       if (e.key === 'Escape') {setSelectedService(null)};
-      }
+
     };
 
     document.addEventListener('keydown', handleKeyDown);
@@ -1084,41 +1075,41 @@ const ComprehensiveServicesShowcase: React.FC = () => { /* empty */ }
               </button>
               <button onClick={() => setViewMode('list')} className={`px-4 py-3 rounded-lg transition-all duration-300 ${viewMode === 'list'
             ? 'bg-blue-600 text-white'
-            : 'bg-gray-800/50 text-gray-400 hover:bg-gray-700/50'}`} aria-label="List view" aria-pressed={viewMode === 'list'}>
+            : 'bg-gray-800/50 text-gray-400 hover:bg-gray-700/50'}`} aria-label="List view" aria-pressed={viewMode === 'list'>
                 List
               </button>
             </div>
           </div>
 
-          {/* Clear Filters */}
+          {/* Clear Filters */
           {(searchTerm || selectedCategory !== 'all') && (<div className="mt-4 flex items-center justify-between">
               <div className="text-sm text-gray-400">
-                {filteredServices.length} of {INNOVATIVE_MICRO_SAAS_SERVICES.length} services
+                {filteredServices.length of {INNOVATIVE_MICRO_SAAS_SERVICES.length services
               </div>
-              <button onClick={clearFilters} className="text-sm text-blue-400 hover:text-blue-300 transition-colors">
+              <button onClick={clearFilters className="text-sm text-blue-400 hover:text-blue-300 transition-colors">
                 Clear all filters
               </button>
-            </div>)}
+            </div>)
         </motion.div>
 
-        {/* Services Grid/List */}
-        <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, delay: 0.4 }}>
+        {/* Services Grid/List */
+        <motion.div initial={{ opacity: 0, y: 20  animate={{ opacity: 1, y: 0  transition={{ duration: 0.8, delay: 0.4 >
           {filteredServices.length > 0 ? (viewMode === 'grid' ? (<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                {filteredServices.map((service, index) => (<ServiceCard key={service.id} service={service} index={index} viewMode={viewMode} onServiceClick={handleServiceClick}/>))}
+                {filteredServices.map((service, index) => (<ServiceCard key={service.id service={service index={index viewMode={viewMode onServiceClick={handleServiceClick/>))
               </div>) : (<div className="space-y-6">
-                {filteredServices.map((service, index) => (<ServiceCard key={service.id} service={service} index={index} viewMode={viewMode} onServiceClick={handleServiceClick}/>))}
-              </div>)) : (<motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="text-center py-20">
+                {filteredServices.map((service, index) => (<ServiceCard key={service.id service={service index={index viewMode={viewMode onServiceClick={handleServiceClick/>))
+              </div>)) : (<motion.div initial={{ opacity: 0  animate={{ opacity: 1  className="text-center py-20">
               <div className="text-6xl mb-4">🔍</div>
               <h3 className="text-2xl font-bold text-white mb-2">No services found</h3>
               <p className="text-gray-400 mb-4">Try adjusting your search criteria or filters.</p>
-              <button onClick={clearFilters} className="px-6 py-3 bg-blue-600 hover:bg-blue-700 rounded-lg font-medium transition-colors">
+              <button onClick={clearFilters className="px-6 py-3 bg-blue-600 hover:bg-blue-700 rounded-lg font-medium transition-colors">
                 Clear Filters
               </button>
-            </motion.div>)}
+            </motion.div>)
         </motion.div>
 
-        {/* CTA Section */}
-        <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, delay: 0.8 }} className="text-center mt-20">
+        {/* CTA Section */
+        <motion.div initial={{ opacity: 0, y: 20  animate={{ opacity: 1, y: 0  transition={{ duration: 0.8, delay: 0.8  className="text-center mt-20">
           <div className="bg-gradient-to-r from-blue-600/20 to-purple-600/20 rounded-3xl p-12 border border-blue-500/30">
             <h2 className="text-4xl font-bold mb-6 bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent">
               Ready to Transform Your Business?
@@ -1140,8 +1131,9 @@ const ComprehensiveServicesShowcase: React.FC = () => { /* empty */ }
       </div>
     </div>
   );
-};
+;
 
 export default ComprehensiveServicesShowcase;
     </></></></></></></></>);
-};
+</div></div></div></div></div></Card></Card></Card></Card></section></section></section></motion.div>;
+)

@@ -42,7 +42,6 @@ import {
   UserCheck,
   Clipboard,
   TestTube
-} from 'lucide-react';
 import { SEO } from '../../components/SEO';
 
 export default function AIHealthcarePredictiveAnalytics() {
@@ -83,7 +82,7 @@ export default function AIHealthcarePredictiveAnalytics() {
       icon: BarChart3,
       title: 'Advanced Clinical Insights',
       description: 'Generate actionable insights from complex medical data and research'
-    }
+
   ];
 
   const benefits = [
@@ -154,7 +153,7 @@ export default function AIHealthcarePredictiveAnalytics() {
       ],
       cta: 'Contact Sales',
       popular: false
-    }
+
   ];
 
   const clinicalApplications = [
@@ -187,7 +186,7 @@ export default function AIHealthcarePredictiveAnalytics() {
       title: 'Geriatrics',
       description: 'Aging-related health decline prediction and prevention',
       icon: UserCheck
-    }
+
   ];
 
   const useCases = [
@@ -210,7 +209,7 @@ export default function AIHealthcarePredictiveAnalytics() {
       title: 'Insurance Companies',
       description: 'Risk assessment and claims prediction for health insurers',
       icon: Shield
-    }
+
   ];
 
   const complianceFeatures = [
@@ -237,7 +236,7 @@ export default function AIHealthcarePredictiveAnalytics() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-          >
+
             <div className="inline-flex items-center px-4 py-2 rounded-full bg-red-100/10 border border-red-200/20 text-red-200 text-sm font-medium mb-6">
               <Heart className="w-4 h-4 mr-2" />
               AI-Powered Healthcare Analytics
@@ -276,7 +275,7 @@ export default function AIHealthcarePredictiveAnalytics() {
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
             className="text-center mb-16"
-          >
+
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Advanced Healthcare Intelligence
             </h2>
@@ -294,7 +293,7 @@ export default function AIHealthcarePredictiveAnalytics() {
                 transition={{ duration: 0.8, delay: index * 0.1 }}
                 viewport={{ once: true }}
                 className="bg-slate-800/50 backdrop-blur-sm border border-slate-700/50 rounded-xl p-6 hover:border-red-500/50 transition-all duration-300"
-              >
+
                 <div className="w-12 h-12 bg-gradient-to-r from-red-500 to-pink-500 rounded-lg flex items-center justify-center mb-4">
                   <feature.icon className="w-6 h-6 text-white" />
                 </div>
@@ -315,7 +314,7 @@ export default function AIHealthcarePredictiveAnalytics() {
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
             className="text-center mb-16"
-          >
+
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Clinical Applications
             </h2>
@@ -333,7 +332,7 @@ export default function AIHealthcarePredictiveAnalytics() {
                 transition={{ duration: 0.8, delay: index * 0.1 }}
                 viewport={{ once: true }}
                 className="bg-slate-800/50 backdrop-blur-sm border border-slate-700/50 rounded-xl p-6 hover:border-red-500/50 transition-all duration-300"
-              >
+
                 <div className="w-12 h-12 bg-gradient-to-r from-red-500 to-pink-500 rounded-lg flex items-center justify-center mb-4">
                   <application.icon className="w-6 h-6 text-white" />
                 </div>
@@ -354,7 +353,7 @@ export default function AIHealthcarePredictiveAnalytics() {
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
             className="text-center mb-16"
-          >
+
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Why Choose AI Healthcare Analytics?
             </h2>
@@ -372,7 +371,7 @@ export default function AIHealthcarePredictiveAnalytics() {
                 transition={{ duration: 0.8, delay: index * 0.1 }}
                 viewport={{ once: true }}
                 className="flex items-start space-x-3"
-              >
+
                 <CheckCircle className="w-6 h-6 text-green-400 mt-1 flex-shrink-0" />
                 <span className="text-slate-300 text-lg">{benefit}</span>
               </motion.div>
@@ -390,7 +389,7 @@ export default function AIHealthcarePredictiveAnalytics() {
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
             className="text-center mb-16"
-          >
+
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Healthcare Compliance & Security
             </h2>
@@ -408,7 +407,7 @@ export default function AIHealthcarePredictiveAnalytics() {
                 transition={{ duration: 0.8, delay: index * 0.1 }}
                 viewport={{ once: true }}
                 className="text-center p-4 bg-slate-800/30 rounded-lg border border-slate-700/50 hover:border-red-500/50 transition-all duration-300"
-              >
+
                 <Shield className="w-8 h-8 text-red-400 mx-auto mb-2" />
                 <span className="text-slate-300 font-medium text-sm">{feature}</span>
               </motion.div>
@@ -426,7 +425,7 @@ export default function AIHealthcarePredictiveAnalytics() {
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
             className="text-center mb-16"
-          >
+
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Perfect for Every Healthcare Organization
             </h2>
@@ -444,7 +443,7 @@ export default function AIHealthcarePredictiveAnalytics() {
                 transition={{ duration: 0.8, delay: index * 0.1 }}
                 viewport={{ once: true }}
                 className="text-center"
-              >
+
                 <div className="w-16 h-16 bg-gradient-to-r from-red-500 to-pink-500 rounded-xl flex items-center justify-center mx-auto mb-4">
                   <useCase.icon className="w-8 h-8 text-white" />
                 </div>
@@ -465,7 +464,7 @@ export default function AIHealthcarePredictiveAnalytics() {
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
             className="text-center mb-16"
-          >
+
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Simple, Transparent Pricing
             </h2>
@@ -487,7 +486,7 @@ export default function AIHealthcarePredictiveAnalytics() {
                     ? 'border-red-500/50 bg-gradient-to-br from-red-900/20 to-pink-900/20'
                     : 'border-slate-700/50'
                 }`}
-              >
+
                 {plan.popular && (
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                     <span className="bg-gradient-to-r from-red-500 to-pink-500 text-white px-4 py-2 rounded-full text-sm font-semibold">
@@ -535,7 +534,7 @@ export default function AIHealthcarePredictiveAnalytics() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
-          >
+
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
               Ready to Transform Healthcare?
             </h2>
@@ -567,7 +566,7 @@ export default function AIHealthcarePredictiveAnalytics() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
-          >
+
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
               Have Questions?
             </h2>
@@ -596,7 +595,7 @@ export default function AIHealthcarePredictiveAnalytics() {
             <a
               href={`mailto:${contactInfo.email}`}
               className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-red-600 to-pink-600 text-white font-semibold rounded-lg hover:from-red-700 hover:to-pink-700 transition-all duration-300"
-            >
+
               Get in Touch
               <ArrowRight className="w-5 h-5 ml-2" />
             </a>
@@ -605,4 +604,4 @@ export default function AIHealthcarePredictiveAnalytics() {
       </section>
     </div>
   );
-}
+}}}}}}

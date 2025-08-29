@@ -641,7 +641,7 @@ export const REVOLUTIONARY_2025_ADVANCED_SERVICES = [
         setupTime: '1 week',
         complianceStandards: ['GDPR', 'CCPA', 'SOC2', 'Legal Ethics'],
         supportLevel: 'premium'
-    }
+
 ];
 // Additional specialized service categories
 export const SERVICE_CATEGORIES = {
@@ -703,3 +703,4 @@ export const MARKET_ANALYSIS = {
         '24/7 autonomous operations'
     ]
 };
+}

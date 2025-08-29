@@ -1,7 +1,6 @@
 import React, { useState, useEffect, useRef, useCallback } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Search, X, Filter, TrendingUp, Clock, Globe, Building, Code, Shield } from 'lucide-react';
-import { useNavigate } from 'react-router-dom';
+import { Search, X, Filter, TrendingUp, Clock, Globe, Building, Code, Shield import { useNavigate } from 'react-router-dom';
 import { useDebounce } from '@/hooks/useDebounce';
 
 interface SearchResult {
@@ -13,13 +12,11 @@ interface SearchResult {
   category: string;
   tags: string[];
   relevance: number;
-}
 
 interface SearchFilter {
   type: string[];
   category: string[];
   tags: string[];
-}
 
 const searchData: SearchResult[] = [
   // Services
@@ -84,7 +81,7 @@ const searchData: SearchResult[] = [
     category: 'AI Insights',
     tags: ['AI', 'Trends', '2025', 'Business'],
     relevance: 75
-  }
+
 ];
 
 const categories = [
@@ -120,7 +117,7 @@ export const EnhancedSearch: React.FC = () => {
     const saved = localStorage.getItem('zion-recent-searches');
     if (saved) {
       setRecentSearches(JSON.parse(saved));
-    }
+
   }, []);
 
   // Search functionality
@@ -128,7 +125,6 @@ export const EnhancedSearch: React.FC = () => {
     if (debouncedQuery.trim().length < 2) {
       setResults([]);
       return;
-    }
 
     const searchResults = searchData
       .filter(item => {
@@ -153,7 +149,7 @@ export const EnhancedSearch: React.FC = () => {
     const handleClickOutside = (event: MouseEvent) => {
       if (searchRef.current && !searchRef.current.contains(event.target as Node)) {
         setIsOpen(false);
-      }
+
     };
 
     document.addEventListener('mousedown', handleClickOutside);
@@ -169,7 +165,7 @@ export const EnhancedSearch: React.FC = () => {
         event.preventDefault();
         setIsOpen(true);
         inputRef.current?.focus();
-      }
+
     };
 
     document.addEventListener('keydown', handleKeyDown);
@@ -186,7 +182,7 @@ export const EnhancedSearch: React.FC = () => {
       // Navigate to search results or close search
       setIsOpen(false);
       setQuery('');
-    }
+
   }, [recentSearches]);
 
   const handleResultClick = (result: SearchResult) => {
@@ -216,7 +212,7 @@ export const EnhancedSearch: React.FC = () => {
       case 'blog': return <TrendingUp className="h-4 w-4" />;
       case 'case-study': return <Building className="h-4 w-4" />;
       default: return <Search className="h-4 w-4" />;
-    }
+
   };
 
   return (
@@ -225,7 +221,7 @@ export const EnhancedSearch: React.FC = () => {
       <button
         onClick={() => setIsOpen(true)}
         className="flex items-center gap-2 px-4 py-2 text-sm text-slate-600 dark:text-slate-400 bg-slate-100 dark:bg-slate-800 rounded-lg hover:bg-slate-200 dark:hover:bg-slate-700 transition-colors duration-200"
-      >
+
         <Search className="h-4 w-4" />
         <span className="hidden sm:inline">Search...</span>
         <kbd className="hidden sm:inline-flex items-center gap-1 px-2 py-0.5 text-xs font-medium text-slate-500 dark:text-slate-400 bg-slate-200 dark:bg-slate-700 rounded">
@@ -241,14 +237,14 @@ export const EnhancedSearch: React.FC = () => {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             className="fixed inset-0 z-50 bg-black/50 backdrop-blur-sm"
-          >
+
             <motion.div
               initial={{ scale: 0.95, opacity: 0 }}
               animate={{ scale: 1, opacity: 1 }}
               exit={{ scale: 0.95, opacity: 0 }}
               transition={{ type: "spring", bounce: 0.2, duration: 0.3 }}
               className="absolute top-20 left-1/2 transform -translate-x-1/2 w-full max-w-2xl mx-4"
-            >
+
               <div className="bg-white dark:bg-slate-900 rounded-2xl shadow-2xl border border-slate-200 dark:border-slate-700">
                 {/* Search Input */}
                 <div className="relative p-4 border-b border-slate-200 dark:border-slate-700">
@@ -264,7 +260,7 @@ export const EnhancedSearch: React.FC = () => {
                   <button
                     onClick={() => setIsOpen(false)}
                     className="absolute right-6 top-1/2 transform -translate-y-1/2 p-1 text-slate-400 hover:text-slate-600 dark:hover:text-slate-200 transition-colors"
-                  >
+
                     <X className="h-5 w-5" />
                   </button>
                 </div>
@@ -274,7 +270,7 @@ export const EnhancedSearch: React.FC = () => {
                   <button
                     onClick={() => setShowFilters(!showFilters)}
                     className="flex items-center gap-2 text-sm text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-slate-100 transition-colors"
-                  >
+
                     <Filter className="h-4 w-4" />
                     Filters
                   </button>
@@ -282,7 +278,7 @@ export const EnhancedSearch: React.FC = () => {
                     <button
                       onClick={clearFilters}
                       className="text-sm text-red-500 hover:text-red-600 transition-colors"
-                    >
+
                       Clear all
                     </button>
                   )}
@@ -296,7 +292,7 @@ export const EnhancedSearch: React.FC = () => {
                       animate={{ height: 'auto', opacity: 1 }}
                       exit={{ height: 0, opacity: 0 }}
                       className="border-b border-slate-200 dark:border-slate-700 overflow-hidden"
-                    >
+
                       <div className="p-4 space-y-4">
                         {/* Type Filters */}
                         <div>
@@ -311,7 +307,7 @@ export const EnhancedSearch: React.FC = () => {
                                     ? 'bg-blue-500 text-white'
                                     : 'bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-400 hover:bg-slate-200 dark:hover:bg-slate-700'
                                 }`}
-                              >
+
                                 {type.charAt(0).toUpperCase() + type.slice(1)}
                               </button>
                             ))}
@@ -331,7 +327,7 @@ export const EnhancedSearch: React.FC = () => {
                                     ? 'bg-blue-500 text-white'
                                     : 'bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-400 hover:bg-slate-200 dark:hover:bg-slate-700'
                                 }`}
-                              >
+
                                 {category.name}
                               </button>
                             ))}
@@ -359,7 +355,7 @@ export const EnhancedSearch: React.FC = () => {
                                 key={index}
                                 onClick={() => handleSearch(search)}
                                 className="w-full text-left p-2 text-sm text-slate-600 dark:text-slate-400 hover:bg-slate-50 dark:hover:bg-slate-800 rounded-lg transition-colors"
-                              >
+
                                 {search}
                               </button>
                             ))}
@@ -379,7 +375,7 @@ export const EnhancedSearch: React.FC = () => {
                               key={index}
                               onClick={() => handleSearch(search)}
                               className="px-3 py-1 text-sm bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-400 rounded-full hover:bg-slate-200 dark:hover:bg-slate-700 transition-colors"
-                            >
+
                               {search}
                             </button>
                           ))}
@@ -393,7 +389,7 @@ export const EnhancedSearch: React.FC = () => {
                           key={result.id}
                           onClick={() => handleResultClick(result)}
                           className="w-full text-left p-3 hover:bg-slate-50 dark:hover:bg-slate-800 rounded-lg transition-colors group"
-                        >
+
                           <div className="flex items-start gap-3">
                             <div className="flex-shrink-0 mt-1">
                               {getTypeIcon(result.type)}
@@ -437,4 +433,4 @@ export const EnhancedSearch: React.FC = () => {
       </AnimatePresence>
     </div>
   );
-};
+};}}}}}}}}}}

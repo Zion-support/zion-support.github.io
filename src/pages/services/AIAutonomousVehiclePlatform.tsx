@@ -1,6 +1,5 @@
 import React from 'react';
-import { Car, Brain, Zap, Shield, TrendingUp, Users, Globe, ArrowRight, CheckCircle, Star, Navigation } from 'lucide-react';
-import { SEO } from '../../components/SEO';
+import { Car, Brain, Zap, Shield, TrendingUp, Users, Globe, ArrowRight, CheckCircle, Star, Navigation import { SEO } from '../../components/SEO';
 
 export default function AIAutonomousVehiclePlatform() {
   const features = [
@@ -53,7 +52,7 @@ export default function AIAutonomousVehiclePlatform() {
         'White-label solutions available',
         'Regulatory compliance tools'
       ]
-    }
+
   ];
 
   const useCases = [
@@ -110,14 +109,14 @@ export default function AIAutonomousVehiclePlatform() {
               <a
                 href="https://ziontechgroup.com/contact"
                 className="inline-flex items-center px-8 py-3 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-cyan-700 transition-all duration-200"
-              >
+
                 Get Started
                 <ArrowRight className="ml-2 w-5 h-5" />
               </a>
               <a
                 href="#pricing"
                 className="inline-flex items-center px-8 py-3 border border-blue-400 text-blue-400 font-semibold rounded-lg hover:bg-blue-400 hover:text-white transition-all duration-200"
-              >
+
                 View Pricing
               </a>
             </div>
@@ -183,7 +182,7 @@ export default function AIAutonomousVehiclePlatform() {
                   <a
                     href="https://ziontechgroup.com/contact"
                     className="w-full inline-flex items-center justify-center px-6 py-3 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-cyan-700 transition-all duration-200"
-                  >
+
                     Get Started
                   </a>
                 </div>
@@ -301,7 +300,7 @@ export default function AIAutonomousVehiclePlatform() {
             <a
               href="https://ziontechgroup.com/contact"
               className="inline-flex items-center px-8 py-3 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-cyan-700 transition-all duration-200"
-            >
+
               Get Started Today
               <ArrowRight className="ml-2 w-5 h-5" />
             </a>
@@ -310,4 +309,4 @@ export default function AIAutonomousVehiclePlatform() {
       </div>
     </>
   );
-}
+}}}

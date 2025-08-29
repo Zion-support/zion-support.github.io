@@ -37,7 +37,7 @@ export interface AdvancedCybersecurityService {
   customers: number;
   rating: number;
   reviews: number;
-}
+
 export const advancedCybersecurityServices: AdvancedCybersecurityService[] = [
   // Advanced Threat Intelligence Platform
   {
@@ -506,5 +506,5 @@ export const advancedCybersecurityServices: AdvancedCybersecurityService[] = [
     customers: 130,
     rating: 4.6,
     reviews: 78
-  }
-];
+
+];}}

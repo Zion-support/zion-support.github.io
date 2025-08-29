@@ -36,7 +36,7 @@ export interface EmergingTechnologyService {
   customers: number;
   rating: number;
   reviews: number;
-}
+
 const contact = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
@@ -403,5 +403,5 @@ export const emergingTechnologyServices2026: EmergingTechnologyService[] = [
     customers: 56,
     rating: 4.7,
     reviews: 123
-  }
-];
+
+];}}

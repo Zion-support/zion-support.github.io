@@ -37,7 +37,7 @@ export interface EnterpriseAIService {
   customers: number;
   rating: number;
   reviews: number;
-}
+
 export const enterpriseAIServices: EnterpriseAIService[] = [
   // Enterprise AI Solutions
   {
@@ -506,5 +506,5 @@ export const enterpriseAIServices: EnterpriseAIService[] = [
     customers: 45,
     rating: 4.6,
     reviews: 52
-  }
-];
+
+];}}

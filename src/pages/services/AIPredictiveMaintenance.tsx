@@ -1,6 +1,4 @@
-import { Wrench, BarChart3, ArrowRight, Check, ExternalLink, Phone, Mail, AlertTriangle, TrendingUp, Zap, Target, Clock, Shield, Settings } from 'lucide-react';
-
-export default function AIPredictiveMaintenance() {
+import { Wrench, BarChart3, ArrowRight, Check, ExternalLink, Phone, Mail, AlertTriangle, TrendingUp, Zap, Target, Clock, Shield, Settings export default function AIPredictiveMaintenance() {
   const features = [
     'AI-powered equipment health monitoring and analysis',
     'Real-time predictive maintenance scheduling',
@@ -155,4 +153,4 @@ export default function AIPredictiveMaintenance() {
       </section>
     </div>
   );
-}
+}}

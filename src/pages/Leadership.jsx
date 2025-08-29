@@ -1,7 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Users, Award, Target, Zap, Linkedin, Mail } from 'lucide-react';
-const Leadership = () => {
+import { Users, Award, Target, Zap, Linkedin, Mail const Leadership = () => {
     const leadershipTeam = [
         {
             name: "Dr. Sarah Chen",
@@ -110,7 +109,7 @@ const Leadership = () => {
             linkedin: "https://linkedin.com/in/james-wilson",
             email: "james.wilson@ziontechgroup.com",
             location: "New York, NY"
-        }
+
     ];
     const companyValues = [
         {
@@ -132,7 +131,7 @@ const Leadership = () => {
             title: "Client Success",
             description: "Our success is measured by the success of our clients and the impact we create together.",
             icon: Target
-        }
+
     ];
     const vision = {
         title: "Our Vision",
@@ -314,3 +313,4 @@ const Leadership = () => {
     </div>);
 };
 export default Leadership;
+}}}

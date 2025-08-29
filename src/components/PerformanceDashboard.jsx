@@ -143,7 +143,7 @@ export function PerformanceDashboard({ className, showDetails = false, onClose }
         </AnimatePresence>
       </Card>
     </motion.div>);
-}
+
 // Compact performance indicator
 export function PerformanceIndicator({ className }) {
     const { performanceScore } = usePerformance();
@@ -154,4 +154,4 @@ export function PerformanceIndicator({ className }) {
         {performanceScore}/100
       </span>
     </div>);
-}
+</div></Card></Card></Card>}}

@@ -1,8 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Shield, FileSearch, ClipboardCheck, Lock, DollarSign, ExternalLink } from 'lucide-react';
-
-const DSRPortal: React.FC = () => {
+import { Shield, FileSearch, ClipboardCheck, Lock, DollarSign, ExternalLink const DSRPortal: React.FC = () => {
 	const features = [
 		{ icon: FileSearch, title: 'Intake + Verification', desc: 'Hosted forms with ID verification and secure attachments.' },
 		{ icon: ClipboardCheck, title: 'Workflow Automation', desc: 'Route to owners, track SLAs, export/delete across systems.' },
@@ -51,4 +49,4 @@ const DSRPortal: React.FC = () => {
 	);
 };
 
-export default DSRPortal;
+export default DSRPortal;}

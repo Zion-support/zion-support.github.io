@@ -3,8 +3,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { SEO } from "@/components/SEO";
-import { PenTool, FileText, Brain, Zap, Target, Users, ArrowRight, CheckCircle, Star, Globe, Shield, Type, Video, ShoppingBag, Mail } from "lucide-react";
-import { Link } from "react-router-dom";
+import { PenTool, FileText, Brain, Zap, Target, Users, ArrowRight, CheckCircle, Star, Globe, Shield, Type, Video, ShoppingBag, Mail import { Link } from "react-router-dom";
 
 export default function AIContentGenerator() {
     const features = [
@@ -27,7 +26,7 @@ export default function AIContentGenerator() {
             title: "SEO Optimization",
             description: "AI-powered SEO suggestions to improve content visibility and ranking",
             icon: <Target className="h-6 w-6 text-zion-cyan"/>
-        }
+
     ];
 
     const contentTypes = [
@@ -60,7 +59,7 @@ export default function AIContentGenerator() {
             title: "Video Scripts",
             description: "Scripts for video content and presentations",
             icon: <Video className="h-8 w-8 text-zion-blue"/>
-        }
+
     ];
 
     const pricingPlans = [
@@ -111,7 +110,7 @@ export default function AIContentGenerator() {
                 "API access"
             ],
             popular: false
-        }
+
     ];
 
     const benefits = [
@@ -318,4 +317,4 @@ export default function AIContentGenerator() {
             </section>
         </div>
     );
-}
+</Card></Card></Card></Card></Card>}}}}}

@@ -1,7 +1,6 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { Brain, Zap, Settings, Users, TrendingUp, Shield, Globe, ArrowRight, CheckCircle, Play, Download, Mail } from 'lucide-react';
-import { Link } from 'react-router-dom';
+import { Brain, Zap, Settings, Users, TrendingUp, Shield, Globe, ArrowRight, CheckCircle, Play, Download, Mail import { Link } from 'react-router-dom';
 
 export default function AIEnterpriseOrchestrator() {
   return (
@@ -37,7 +36,7 @@ export default function AIEnterpriseOrchestrator() {
                 <Link
                   to="/contact"
                   className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-200 shadow-lg hover:shadow-xl"
-                >
+
                   Get Started
                   <ArrowRight className="ml-2 w-5 h-5" />
                 </Link>
@@ -94,7 +93,7 @@ export default function AIEnterpriseOrchestrator() {
                   icon: Shield,
                   title: "Security & Compliance",
                   description: "Enterprise-grade security with built-in compliance monitoring and audit trails."
-                }
+
               ].map((feature, index) => (
                 <div key={index} className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-6 hover:bg-slate-800/70 transition-all duration-300">
                   <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg flex items-center justify-center mb-4">
@@ -142,7 +141,7 @@ export default function AIEnterpriseOrchestrator() {
                   step: "04",
                   title: "Continuous Learning",
                   description: "The system continuously learns and improves based on performance data and outcomes."
-                }
+
               ].map((step, index) => (
                 <div key={index} className="text-center">
                   <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
@@ -220,14 +219,14 @@ export default function AIEnterpriseOrchestrator() {
               <Link
                 to="/contact"
                 className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-200"
-              >
+
                 Schedule a Consultation
                 <ArrowRight className="ml-2 w-5 h-5" />
               </Link>
               <Link
                 to="/services"
                 className="inline-flex items-center px-8 py-4 border border-cyan-500/30 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-500/10 transition-all duration-200"
-              >
+
                 Explore All Services
               </Link>
             </div>
@@ -236,4 +235,4 @@ export default function AIEnterpriseOrchestrator() {
       </div>
     </>
   );
-}
+}}}}

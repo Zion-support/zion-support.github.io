@@ -1,6 +1,4 @@
-import { Leaf, TrendingUp, BarChart3, CheckCircle, ArrowRight, ExternalLink, Phone, Mail, DollarSign, Target, Zap, Globe, Database, Cpu, Shield, Award } from 'lucide-react';
-
-export default function AIESGCompliancePlatform() {
+import { Leaf, TrendingUp, BarChart3, CheckCircle, ArrowRight, ExternalLink, Phone, Mail, DollarSign, Target, Zap, Globe, Database, Cpu, Shield, Award export default function AIESGCompliancePlatform() {
   const features = [
     'AI-powered ESG data collection and analysis',
     'Automated compliance reporting and monitoring',
@@ -41,7 +39,7 @@ export default function AIESGCompliancePlatform() {
       price: '$2,999/mo',
       features: ['Unlimited ESG metrics', 'Full AI suite', 'Custom compliance models', 'Dedicated support', 'White-label solutions', 'Advanced integrations'],
       popular: false
-    }
+
   ];
 
   const useCases = [
@@ -290,11 +288,11 @@ export default function AIESGCompliancePlatform() {
             target="_blank"
             rel="noreferrer"
             className="inline-flex items-center text-green-600 hover:text-green-700 font-semibold"
-          >
+
             Visit ziontechgroup.com <ExternalLink className="w-4 h-4 ml-2" />
           </a>
         </div>
       </section>
     </div>
   );
-}
+}}}

@@ -2,8 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { SEO } from '@/components/SEO';
 import { motion } from 'framer-motion';
-import { ArrowRight } from 'lucide-react';
-const DigitalTransformation = () => {
+import { ArrowRight const DigitalTransformation = () => {
     const transformationServices = [
         {
             title: "Process Automation",
@@ -46,7 +45,7 @@ const DigitalTransformation = () => {
             description: "Modernize your technology stack for scalability and performance",
             features: ["Cloud Migration", "API Integration", "Microservices", "DevOps Practices"],
             icon: "🏗️"
-        }
+
     ];
     const benefits = [
         "Increased operational efficiency by 50%",
@@ -206,3 +205,4 @@ const DigitalTransformation = () => {
     </div>);
 };
 export default DigitalTransformation;
+}}

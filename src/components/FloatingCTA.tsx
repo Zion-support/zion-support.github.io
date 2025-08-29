@@ -96,8 +96,6 @@ import {
   MicOff,
   Volume2,
   VolumeX
-} from 'lucide-react';
-
 const FloatingCTA: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isVisible, setIsVisible] = useState(false);
@@ -132,7 +130,7 @@ const FloatingCTA: React.FC = () => {
       description: "Book a consultation",
       action: "Book Now",
       color: "from-purple-500 to-pink-500"
-    }
+
   ];
 
   const quickServices = [
@@ -153,7 +151,7 @@ const FloatingCTA: React.FC = () => {
         transition={{ duration: 0.5, type: "spring" }}
         onClick={() => setIsOpen(true)}
         className="fixed bottom-6 right-6 z-50 w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-full shadow-2xl hover:shadow-cyan-500/25 transition-all duration-300 transform hover:scale-110 flex items-center justify-center text-white"
-      >
+
         <MessageCircle className="w-8 h-8" />
       </motion.button>
 
@@ -167,7 +165,7 @@ const FloatingCTA: React.FC = () => {
             transition={{ duration: 0.3 }}
             className="fixed inset-0 bg-black/50 backdrop-blur-sm z-50 flex items-center justify-center p-4"
             onClick={() => setIsOpen(false)}
-          >
+
             <motion.div
               initial={{ scale: 0.8, opacity: 0, y: 50 }}
               animate={{ scale: 1, opacity: 1, y: 0 }}
@@ -175,7 +173,7 @@ const FloatingCTA: React.FC = () => {
               transition={{ duration: 0.3, type: "spring" }}
               className="bg-gradient-to-br from-slate-800 to-slate-700 rounded-3xl p-8 max-w-2xl w-full border border-slate-600 shadow-2xl"
               onClick={(e) => e.stopPropagation()}
-            >
+
               {/* Header */}
               <div className="flex items-center justify-between mb-8">
                 <div>
@@ -185,7 +183,7 @@ const FloatingCTA: React.FC = () => {
                 <button
                   onClick={() => setIsOpen(false)}
                   className="w-10 h-10 bg-slate-700 rounded-full flex items-center justify-center text-gray-400 hover:text-white hover:bg-slate-600 transition-all duration-300"
-                >
+
                   <X className="w-5 h-5" />
                 </button>
               </div>
@@ -199,7 +197,7 @@ const FloatingCTA: React.FC = () => {
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.4, delay: index * 0.1 }}
                     className="bg-gradient-to-br from-slate-700 to-slate-600 rounded-2xl p-6 border border-slate-500 hover:border-cyan-400 transition-all duration-300 group cursor-pointer"
-                  >
+
                     <div className={`inline-flex items-center justify-center w-12 h-12 bg-gradient-to-br ${method.color} rounded-xl mb-4 group-hover:scale-110 transition-transform duration-300`}>
                       <method.icon className="w-6 h-6 text-white" />
                     </div>
@@ -224,7 +222,7 @@ const FloatingCTA: React.FC = () => {
                       animate={{ opacity: 1, x: 0 }}
                       transition={{ duration: 0.4, delay: 0.4 + index * 0.1 }}
                       className="flex items-center p-4 bg-slate-700 rounded-xl border border-slate-500 hover:border-cyan-400 transition-all duration-300 group"
-                    >
+
                       <service.icon className="w-5 h-5 text-cyan-400 mr-3 group-hover:scale-110 transition-transform duration-300" />
                       <span className="text-white group-hover:text-cyan-400 transition-colors duration-300">
                         {service.name}
@@ -241,7 +239,7 @@ const FloatingCTA: React.FC = () => {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.4, delay: 0.6 }}
                 className="w-full px-6 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-xl hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-cyan-500/25 flex items-center justify-center"
-              >
+
                 Start Your Project Today
                 <ArrowRight className="ml-2 w-5 h-5" />
               </motion.button>
@@ -272,3 +270,4 @@ const FloatingCTA: React.FC = () => {
 };
 
 export default FloatingCTA;
+}}

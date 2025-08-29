@@ -4,8 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Link } from "react-router-dom";
 import { SEO } from "@/components/SEO";
-import { BriefcaseIcon, PlusCircle, Kanban } from "lucide-react";
-import { ProtectedRoute } from "@/components/ProtectedRoute";
+import { BriefcaseIcon, PlusCircle, Kanban import { ProtectedRoute } from "@/components/ProtectedRoute";
 import { SuggestedTalents } from "@/components/jobs/SuggestedTalents";
 import { useJobs } from "@/hooks/useJobs";
 import { ClientOnboardingSteps } from "@/components/onboarding/ClientOnboardingSteps";
@@ -23,7 +22,7 @@ function ClientDashboardContent() {
         if (jobs.length > 0 && !selectedJobId) {
             setSelectedJobId(jobs[0].id);
             setSelectedJobTitle(jobs[0].title);
-        }
+
     }, [jobs, selectedJobId]);
     const handleJobSelect = (jobId, jobTitle) => {
         setSelectedJobId(jobId);
@@ -113,9 +112,9 @@ function ClientDashboardContent() {
       </main>
 
     </>);
-}
+
 export default function ClientDashboard() {
     return (<ProtectedRoute>
       <ClientDashboardContent />
     </ProtectedRoute>);
-}
+}}}}

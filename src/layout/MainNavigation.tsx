@@ -17,15 +17,12 @@ import {
   Cloud,
   Code,
   BarChart3
-} from 'lucide-react';
-
 interface NavigationLink {
   key: string;
   href: string;
   name: string;
   matches: (path: string) => boolean;
   children?: NavigationLink[];
-}
 
 export function MainNavigation({ isAdmin = false, unreadCount = 0, className = '' }: {
   isAdmin?: boolean;
@@ -46,7 +43,7 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className = '
         setIsServicesOpen(false);
         setIsCompanyOpen(false);
         setActiveDropdown(null);
-      }
+
     };
 
     document.addEventListener('mousedown', handleClickOutside);
@@ -124,7 +121,7 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className = '
       href: '/contact',
       name: 'Contact',
       matches: (path: string) => path.startsWith('/contact')
-    }
+
   ];
 
   const isActive = (link: NavigationLink) => link.matches(location.pathname);
@@ -141,7 +138,7 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className = '
               ? 'bg-zion-cyan text-white'
               : 'text-zion-slate-light hover:text-white hover:bg-white/10'
           }`}
-        >
+
           {link.name}
           <ChevronDown className={`w-4 h-4 transition-transform ${isOpen ? 'rotate-180' : ''}`} />
         </button>
@@ -154,7 +151,7 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className = '
               exit={{ opacity: 0, y: -10 }}
               transition={{ duration: 0.2 }}
               className="absolute top-full left-0 mt-1 w-64 bg-zion-slate-dark border border-white/10 rounded-lg shadow-xl z-50"
-            >
+
               <div className="py-2">
                 {link.children.map((child) => (
                   <Link
@@ -164,7 +161,7 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className = '
                       isActive(child) ? 'text-zion-cyan bg-zion-cyan/10' : ''
                     }`}
                     onClick={() => setIsOpen(false)}
-                  >
+
                     {child.name}
                   </Link>
                 ))}
@@ -196,7 +193,7 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className = '
                     ? 'bg-zion-cyan text-white'
                     : 'text-zion-slate-light hover:text-white hover:bg-white/10'
                 }`}
-              >
+
                 {link.name}
               </Link>
             )}
@@ -208,7 +205,7 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className = '
       <button
         onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
         className="lg:hidden p-2 text-zion-slate-light hover:text-white hover:bg-white/10 rounded-md transition-colors"
-      >
+
         {isMobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
       </button>
 
@@ -221,14 +218,14 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className = '
             exit={{ opacity: 0, x: '100%' }}
             transition={{ duration: 0.3 }}
             className="lg:hidden fixed inset-y-0 right-0 w-80 bg-zion-slate-dark border-l border-white/10 shadow-xl z-50"
-          >
+
             <div className="p-6">
               <div className="flex justify-between items-center mb-8">
                 <h2 className="text-xl font-bold text-white">Menu</h2>
                 <button
                   onClick={() => setIsMobileMenuOpen(false)}
                   className="p-2 text-zion-slate-light hover:text-white hover:bg-white/10 rounded-md transition-colors"
-                >
+
                   <X className="w-6 h-6" />
                 </button>
               </div>
@@ -245,7 +242,7 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className = '
                               ? 'bg-zion-cyan text-white'
                               : 'text-zion-slate-light hover:text-white hover:bg-white/10'
                           }`}
-                        >
+
                           {link.name}
                           <ChevronDown className={`w-4 h-4 transition-transform ${activeDropdown === link.key ? 'rotate-180' : ''}`} />
                         </button>
@@ -260,7 +257,7 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className = '
                                   isActive(child) ? 'text-zion-cyan bg-zion-cyan/10' : ''
                                 }`}
                                 onClick={() => setIsMobileMenuOpen(false)}
-                              >
+
                                 {child.name}
                               </Link>
                             ))}
@@ -276,7 +273,7 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className = '
                             : 'text-zion-slate-light hover:text-white hover:bg-white/10'
                         }`}
                         onClick={() => setIsMobileMenuOpen(false)}
-                      >
+
                         {link.name}
                       </Link>
                     )}
@@ -289,4 +286,4 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className = '
       </AnimatePresence>
     </nav>
   );
-}
+}}}}}

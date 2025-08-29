@@ -16,8 +16,8 @@ export function ContactPublisherModal({ isOpen, onClose, productId, sellerId }) 
             if (e.key === 'Escape') {
                 e.preventDefault();
                 onClose();
-            }
-        }
+
+
         const removeTrap = modalRef.current ? focusManagement.trapFocus(modalRef.current) : undefined;
         firstInputRef.current?.focus();
         document.addEventListener('keydown', handleKeyDown);
@@ -28,13 +28,13 @@ export function ContactPublisherModal({ isOpen, onClose, productId, sellerId }) 
     }, [isOpen, onClose]);
     if (!isOpen) {
         return null;
-    }
+
     const handleSubmit = async (e) => {
         e.preventDefault();
         if (!subject.trim() || !message.trim()) {
             setError('Subject and message are required.');
             return;
-        }
+
         setError('');
         setIsLoading(true); // Set loading true
         try {
@@ -43,16 +43,16 @@ export function ContactPublisherModal({ isOpen, onClose, productId, sellerId }) 
             onClose(); // Close modal
             setSubject(''); // Clear subject
             setMessage(''); // Clear message
-        }
+
         catch (err) {
-            // console.error('Failed to send message:', err);
+            // // // console.error('Failed to send message:', err);
             toast.error('Failed to send message. Please try again.');
             // Optionally, set a specific error message state if needed
             // setError('Failed to send message. Please try again.');
-        }
+
         finally {
             setIsLoading(false); // Set loading false
-        }
+
     };
     return (<div ref={modalRef} className="fixed inset-0 bg-black/50 flex items-center justify-center z-50" role="dialog" aria-modal="true" aria-labelledby="contact-publisher-title" onClick={onClose}>
       <div className="bg-white dark:bg-zion-blue-dark p-6 rounded-lg shadow-lg min-w-[300px]" onClick={(e) => e.stopPropagation()}>
@@ -80,4 +80,4 @@ export function ContactPublisherModal({ isOpen, onClose, productId, sellerId }) 
         </form>
       </div>
     </div>);
-}
+}}}}}}}}

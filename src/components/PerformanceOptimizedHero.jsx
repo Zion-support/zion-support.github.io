@@ -38,7 +38,7 @@ const PerformanceOptimizedHero = memo(() => {
           <p className="text-cyan-400 text-lg font-medium">Loading Zion Tech Group...</p>
         </div>
       </section>);
-    }
+
     return (<section className="relative py-20 px-4 overflow-hidden" role="banner" aria-label="Zion Tech Group Hero Section">
       {/* Optimized Background Elements */}
       <div className="absolute inset-0 futuristic-bg">
@@ -101,3 +101,4 @@ const PerformanceOptimizedHero = memo(() => {
 });
 PerformanceOptimizedHero.displayName = 'PerformanceOptimizedHero';
 export default PerformanceOptimizedHero;
+}

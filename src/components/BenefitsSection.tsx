@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Bot, Clock, Globe, TrendingDown, CheckCircle } from 'lucide-react';
-import { GradientHeading } from './GradientHeading';
+import { Bot, Clock, Globe, TrendingDown, CheckCircle import { GradientHeading } from './GradientHeading';
 
 interface Benefit {
   title: string;
@@ -11,7 +10,6 @@ interface Benefit {
   bgColor: string;
   stats: string;
   features: string[];
-}
 
 const benefits: Benefit[] = [
   {
@@ -69,7 +67,7 @@ const benefits: Benefit[] = [
       "Bulk discount options",
       "Transparent cost structure"
     ]
-  }
+
 ];
 
 const stats = [
@@ -89,8 +87,8 @@ export function BenefitsSection() {
       transition: {
         staggerChildren: 0.2,
         delayChildren: 0.1
-      }
-    }
+
+
   };
 
   const stats = [
@@ -136,7 +134,7 @@ export function BenefitsSection() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-        >
+
           <GradientHeading className="mb-4">
             Why Choose Zion?
           </GradientHeading>
@@ -152,13 +150,13 @@ export function BenefitsSection() {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
-        >
+
           {stats.map((stat, index) => (
             <motion.div
               key={index}
               variants={statsVariants}
               className="text-center p-4 rounded-xl bg-zion-blue-dark/40 backdrop-blur-sm border border-zion-blue-light/20"
-            >
+
               <div className="text-zion-cyan mb-2 flex justify-center">
                 {stat.icon}
               </div>
@@ -174,7 +172,7 @@ export function BenefitsSection() {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
-        >
+
           {/* Enhanced connection line */}
           <div className="absolute top-1/2 left-0 right-0 h-1 bg-gradient-to-r from-zion-cyan via-zion-purple to-zion-blue transform -translate-y-1/2 hidden lg:block">
             <div className="absolute inset-0 bg-gradient-to-r from-zion-cyan via-zion-purple to-zion-blue opacity-20 blur-sm"></div>
@@ -190,7 +188,7 @@ export function BenefitsSection() {
                 onHoverEnd={() => setHoveredIndex(null)}
                 whileHover={{ y: -8 }}
                 transition={{ type: "spring", stiffness: 300 }}
-              >
+
                 <div className="text-center p-8 rounded-2xl bg-gradient-to-br from-zion-blue-dark/80 to-zion-blue-dark/40 backdrop-blur-sm border border-zion-blue-light/30 hover:border-zion-cyan/50 transition-all duration-300 hover:shadow-2xl hover:shadow-zion-cyan/20 group h-full">
                   {/* Icon with enhanced background */}
                   <div className={`inline-flex items-center justify-center w-20 h-20 rounded-2xl bg-gradient-to-br ${benefit.color} mb-6 shadow-lg group-hover:shadow-xl transition-all duration-300 group-hover:scale-110`}>
@@ -221,7 +219,7 @@ export function BenefitsSection() {
                         animate={{ opacity: 1, height: "auto" }}
                         exit={{ opacity: 0, height: 0 }}
                         transition={{ duration: 0.3 }}
-                      >
+
                         {benefit.features.map((feature, idx) => (
                           <motion.div
                             key={idx}
@@ -229,7 +227,7 @@ export function BenefitsSection() {
                             initial={{ opacity: 0, x: -10 }}
                             animate={{ opacity: 1, x: 0 }}
                             transition={{ delay: idx * 0.1 }}
-                          >
+
                             <div className="w-2 h-2 bg-zion-cyan rounded-full"></div>
                             <span>{feature}</span>
                           </motion.div>
@@ -254,7 +252,7 @@ export function BenefitsSection() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.4 }}
           className="bg-gradient-to-r from-slate-700 to-slate-600 rounded-3xl p-12 border border-slate-500"
-        >
+
           <div className="text-center mb-12">
             <h3 className="text-3xl font-bold text-white mb-4">Our Impact in Numbers</h3>
             <p className="text-gray-300 text-lg">Real results that speak for themselves</p>
@@ -268,7 +266,7 @@ export function BenefitsSection() {
                 whileInView={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 className="text-center group"
-              >
+
                 <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-br from-cyan-500 to-blue-600 rounded-full mb-4 group-hover:scale-110 transition-transform duration-300">
                   <stat.icon className="w-10 h-10 text-white" />
                 </div>
@@ -285,7 +283,7 @@ export function BenefitsSection() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.6 }}
           className="text-center mt-16"
-        >
+
           <div className="bg-gradient-to-r from-cyan-500/10 to-blue-600/10 rounded-2xl p-8 border border-cyan-500/20">
             <h3 className="text-2xl font-bold text-white mb-4">Ready to Transform Your Business?</h3>
             <p className="text-gray-300 mb-6 max-w-2xl mx-auto">
@@ -304,6 +302,6 @@ export function BenefitsSection() {
       </div>
     </section>
   );
-};
+</div>};
 
-export default BenefitsSection;
+export default BenefitsSection;}}}}</motion.div></motion.div></motion.div>}

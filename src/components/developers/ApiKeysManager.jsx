@@ -8,8 +8,7 @@ import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigge
 import { Popover, PopoverContent, PopoverTrigger } from '../ui/popover';
 import { AlertDialog, AlertDialogAction, AlertDialogCancel, AlertDialogContent, AlertDialogDescription, AlertDialogHeader, AlertDialogTitle } from '../ui/alert-dialog';
 import CodeBlock from './CodeBlock';
-import { Copy, MoreHorizontal, Eye, EyeOff, RotateCcw, Trash2, Settings } from 'lucide-react';
-export default function ApiKeysManager() {
+import { Copy, MoreHorizontal, Eye, EyeOff, RotateCcw, Trash2, Settings export default function ApiKeysManager() {
     const { apiKeys, loading, newApiKey, fetchApiKeys, createApiKey, deleteApiKey, toggleApiKey, updateApiKeyScopes, regenerateApiKey, revokeApiKey, clearNewApiKey } = useApiKeys();
     const [showCreateDialog, setShowCreateDialog] = useState(false);
     const [newKeyName, setNewKeyName] = useState('');
@@ -45,7 +44,7 @@ export default function ApiKeysManager() {
         return (<div className="flex items-center justify-center p-8">
         <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-zion-cyan"></div>
       </div>);
-    }
+
     return (<div className="space-y-6">
       <div className="flex items-center justify-between">
         <div>
@@ -204,7 +203,7 @@ export default function ApiKeysManager() {
             if (showRegenerateConfirm) {
                 regenerateApiKey(showRegenerateConfirm);
                 setShowRegenerateConfirm(null);
-            }
+
         }} className="bg-blue-600 hover:bg-blue-700">
               Regenerate Key
             </AlertDialogAction>
@@ -229,7 +228,7 @@ export default function ApiKeysManager() {
             if (showDeleteConfirm) {
                 deleteApiKey(showDeleteConfirm);
                 setShowDeleteConfirm(null);
-            }
+
         }} className="bg-red-600 hover:bg-red-700">
               Delete Key
             </AlertDialogAction>
@@ -237,4 +236,4 @@ export default function ApiKeysManager() {
         </AlertDialogContent>
       </AlertDialog>
     </div>);
-}
+}}}}}

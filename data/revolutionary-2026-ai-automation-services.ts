@@ -38,7 +38,7 @@ export interface Revolutionary2026AIAutomationService {
   customers: number;
   rating: number;
   reviews: number;
-}
+
 export const revolutionary2026AIAutomationServices: Revolutionary2026AIAutomationService[] = [
   // AI Consciousness Orchestration Platform
   {
@@ -299,5 +299,5 @@ export const revolutionary2026AIAutomationServices: Revolutionary2026AIAutomatio
     customers: 234,
     rating: 4.7,
     reviews: 123
-  }
-];
+
+];}}

@@ -1,7 +1,5 @@
 import React, { useState } from 'react';
-import { MapPin, Phone, Mail, Clock, Globe } from 'lucide-react';
-
-export const CountryTabs = () => {
+import { MapPin, Phone, Mail, Clock, Globe export const CountryTabs = () => {
   const [activeCountry, setActiveCountry] = useState('us');
 
   const countries = [
@@ -17,7 +15,7 @@ export const CountryTabs = () => {
             phone: '+1 (555) 123-4567',
             email: 'northeast@zion.com',
             hours: 'Mon-Fri 8AM-6PM EST'
-          }
+
         },
         {
           name: 'Southeast',
@@ -26,7 +24,7 @@ export const CountryTabs = () => {
             phone: '+1 (555) 234-5678',
             email: 'southeast@zion.com',
             hours: 'Mon-Fri 8AM-6PM EST'
-          }
+
         },
         {
           name: 'Midwest',
@@ -35,7 +33,7 @@ export const CountryTabs = () => {
             phone: '+1 (555) 345-6789',
             email: 'midwest@zion.com',
             hours: 'Mon-Fri 8AM-6PM CST'
-          }
+
         },
         {
           name: 'West Coast',
@@ -44,8 +42,8 @@ export const CountryTabs = () => {
             phone: '+1 (555) 456-7890',
             email: 'westcoast@zion.com',
             hours: 'Mon-Fri 8AM-6PM PST'
-          }
-        }
+
+
       ]
     },
     {
@@ -60,7 +58,7 @@ export const CountryTabs = () => {
             phone: '+1 (555) 567-8901',
             email: 'eastern@zion.ca',
             hours: 'Mon-Fri 8AM-6PM EST'
-          }
+
         },
         {
           name: 'Western Canada',
@@ -69,8 +67,8 @@ export const CountryTabs = () => {
             phone: '+1 (555) 678-9012',
             email: 'western@zion.ca',
             hours: 'Mon-Fri 8AM-6PM PST/MST'
-          }
-        }
+
+
       ]
     },
     {
@@ -85,7 +83,7 @@ export const CountryTabs = () => {
             phone: '+44 20 1234 5678',
             email: 'england@zion.co.uk',
             hours: 'Mon-Fri 9AM-6PM GMT'
-          }
+
         },
         {
           name: 'Scotland',
@@ -94,8 +92,8 @@ export const CountryTabs = () => {
             phone: '+44 131 234 5678',
             email: 'scotland@zion.co.uk',
             hours: 'Mon-Fri 9AM-6PM GMT'
-          }
-        }
+
+
       ]
     },
     {
@@ -110,7 +108,7 @@ export const CountryTabs = () => {
             phone: '+61 2 1234 5678',
             email: 'eastern@zion.com.au',
             hours: 'Mon-Fri 9AM-6PM AEST'
-          }
+
         },
         {
           name: 'Western Australia',
@@ -119,10 +117,10 @@ export const CountryTabs = () => {
             phone: '+61 8 1234 5678',
             email: 'western@zion.com.au',
             hours: 'Mon-Fri 9AM-6PM AWST'
-          }
-        }
+
+
       ]
-    }
+
   ];
 
   const currentCountry = countries.find(c => c.id === activeCountry);
@@ -152,7 +150,7 @@ export const CountryTabs = () => {
                   ? 'bg-blue-600 text-white shadow-lg'
                   : 'bg-white text-gray-700 hover:bg-gray-100 border border-gray-200'
               }`}
-            >
+
               <span className="text-2xl">{country.flag}</span>
               <span>{country.name}</span>
             </button>
@@ -200,7 +198,7 @@ export const CountryTabs = () => {
                           <span
                             key={cityIndex}
                             className="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm font-medium"
-                          >
+
                             {city}
                           </span>
                         ))}
@@ -302,13 +300,13 @@ export const CountryTabs = () => {
               <a
                 href="#contact"
                 className="px-8 py-3 bg-white text-blue-600 font-semibold rounded-lg hover:bg-gray-100 transition-all duration-300"
-              >
+
                 Contact Global Team
               </a>
               <a
                 href="#locations"
                 className="px-8 py-3 border border-white/30 text-white font-semibold rounded-lg hover:bg-white/10 transition-all duration-300"
-              >
+
                 View All Locations
               </a>
             </div>
@@ -317,4 +315,4 @@ export const CountryTabs = () => {
       </div>
     </section>
   );
-};
+};}}}}}}}}}}}}}}}}

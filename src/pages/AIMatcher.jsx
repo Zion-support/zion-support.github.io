@@ -1,8 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { Brain, Target, Zap, TrendingUp, Users, Cloud, CheckCircle, ArrowRight } from 'lucide-react';
-const AIMatcher = () => {
+import { Brain, Target, Zap, TrendingUp, Users, Cloud, CheckCircle, ArrowRight const AIMatcher = () => {
     const [currentStep, setCurrentStep] = useState(1);
     const [answers, setAnswers] = useState({ /* empty */ });
     const [recommendations, setRecommendations] = useState([]);
@@ -64,7 +63,7 @@ const AIMatcher = () => {
                 'Medium-term (6-12 months)',
                 'Long-term (1+ years)'
             ]
-        }
+
     ];
     const aiSolutions = [
         {
@@ -120,7 +119,7 @@ const AIMatcher = () => {
             features: ['Chatbot Integration', 'Ticket Routing', 'Knowledge Management'],
             href: '/services/ai-customer-service-automation',
             icon: Users
-        }
+
     ];
     const handleAnswer = (questionId, answer) => {
         setAnswers(prev => ({ ...prev, [questionId]: answer }));
@@ -128,15 +127,15 @@ const AIMatcher = () => {
     const handleNext = () => {
         if (currentStep < questions.length) {
             setCurrentStep(currentStep + 1);
-        }
+
         else {
             generateRecommendations();
-        }
+
     };
     const handlePrevious = () => {
         if (currentStep > 1) {
             setCurrentStep(currentStep - 1);
-        }
+
     };
     const generateRecommendations = () => {
         // Simple recommendation logic based on answers
@@ -147,21 +146,21 @@ const AIMatcher = () => {
         // Filter based on industry
         if (industry === 'Healthcare & Life Sciences') {
             filteredSolutions = filteredSolutions.filter(s => s.name.includes('Healthcare') || s.category === 'Analytics & Insights');
-        }
+
         else if (industry === 'Financial Services') {
             filteredSolutions = filteredSolutions.filter(s => s.name.includes('Financial') || s.category === 'Analytics & Insights');
-        }
+
         // Filter based on company size
         if (companySize === 'Startup (1-50 employees)') {
             filteredSolutions = filteredSolutions.filter(s => s.name.includes('Micro') || s.name.includes('Workflow'));
-        }
+
         // Filter based on goals
         if (goals === 'Automate repetitive tasks') {
             filteredSolutions = filteredSolutions.filter(s => s.category === 'Process Automation');
-        }
+
         else if (goals === 'Improve customer experience') {
             filteredSolutions = filteredSolutions.filter(s => s.category === 'Customer Experience');
-        }
+
         setRecommendations(filteredSolutions.slice(0, 3));
         setCurrentStep(questions.length + 1);
     };
@@ -315,5 +314,6 @@ const AIMatcher = () => {
         </div>
       </div>
     </div>);
-};
+</div>};
 export default AIMatcher;
+}}}}}}}}}}}

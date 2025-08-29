@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { Star, CheckCircle, Clock, Users, TrendingUp, Phone, Mail, MapPin, ExternalLink } from 'lucide-react';
-import { advancedRealServices2025 } from '../data/2025-advanced-real-services-expansion';
+import { Star, CheckCircle, Clock, Users, TrendingUp, Phone, Mail, MapPin, ExternalLink import { advancedRealServices2025 } from '../data/2025-advanced-real-services-expansion';
 import { specializedITServices2025 } from '../data/2025-specialized-it-ai-services';
 import SEOHead from '../components/SEOHead';
 const AdvancedServicesShowcase2025 = () => {
@@ -47,7 +46,7 @@ const AdvancedServicesShowcase2025 = () => {
             case 'name':
             default:
                 return a.name.localeCompare(b.name);
-        }
+
     });
     const getCategoryIcon = (category) => {
         const icons = {
@@ -78,8 +77,8 @@ const AdvancedServicesShowcase2025 = () => {
             opacity: 1,
             transition: {
                 staggerChildren: 0.1
-            }
-        }
+
+
     };
     const itemVariants = {
         hidden: { y: 20, opacity: 0 },
@@ -88,8 +87,8 @@ const AdvancedServicesShowcase2025 = () => {
             opacity: 1,
             transition: {
                 duration: 0.5
-            }
-        }
+
+
     };
     return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white">
       <SEOHead config={{
@@ -309,3 +308,4 @@ const AdvancedServicesShowcase2025 = () => {
     </div>);
 };
 export default AdvancedServicesShowcase2025;
+}}}}}}

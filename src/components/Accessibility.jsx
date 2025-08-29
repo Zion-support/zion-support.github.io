@@ -1,13 +1,12 @@
 import React, { useState, useEffect, createContext, useContext } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Eye, EyeOff, Volume2, VolumeX, Keyboard, Accessibility, X } from 'lucide-react';
-import { Button } from '../ui/button';
+import { Eye, EyeOff, Volume2, VolumeX, Keyboard, Accessibility, X import { Button } from '../ui/button';
 const AccessibilityContext = createContext(undefined);
 export const useAccessibility = () => {
     const context = useContext(AccessibilityContext);
     if (!context) {
         throw new Error('useAccessibility must be used within an AccessibilityProvider');
-    }
+
     return context;
 };
 // Accessibility Provider Component
@@ -25,7 +24,7 @@ export const AccessibilityProvider = ({ children }) => {
             setReducedMotion(settings.reducedMotion || false);
             setFontSize(settings.fontSize || 'medium');
             setColorBlindMode(settings.colorBlindMode || 'none');
-        }
+
     }, []);
     // Save settings to localStorage
     useEffect(() => {
@@ -43,17 +42,17 @@ export const AccessibilityProvider = ({ children }) => {
         // High contrast mode
         if (highContrast) {
             root.classList.add('high-contrast');
-        }
+
         else {
             root.classList.remove('high-contrast');
-        }
+
         // Reduced motion
         if (reducedMotion) {
             root.classList.add('reduced-motion');
-        }
+
         else {
             root.classList.remove('reduced-motion');
-        }
+
         // Font size
         root.style.fontSize = fontSize === 'small' ? '14px' : fontSize === 'large' ? '18px' : '16px';
         // Color blind mode
@@ -89,17 +88,17 @@ export const AccessibilityPanel = () => {
             if ((event.ctrlKey || event.metaKey) && event.shiftKey && event.key === 'A') {
                 event.preventDefault();
                 setIsOpen(!isOpen);
-            }
+
             // Ctrl/Cmd + Shift + H to toggle high contrast
             if ((event.ctrlKey || event.metaKey) && event.shiftKey && event.key === 'H') {
                 event.preventDefault();
                 toggleHighContrast();
-            }
+
             // Ctrl/Cmd + Shift + M to toggle reduced motion
             if ((event.ctrlKey || event.metaKey) && event.shiftKey && event.key === 'M') {
                 event.preventDefault();
                 toggleReducedMotion();
-            }
+
         };
         window.addEventListener('keydown', handleKeyDown);
         return () => window.removeEventListener('keydown', handleKeyDown);
@@ -225,15 +224,15 @@ export const useFocusTrap = (isActive) => {
                     if (document.activeElement === firstFocusableElement) {
                         e.preventDefault();
                         lastFocusableElement.focus();
-                    }
-                }
+
+
                 else {
                     if (document.activeElement === lastFocusableElement) {
                         e.preventDefault();
                         firstFocusableElement.focus();
-                    }
-                }
-            }
+
+
+
         };
         document.addEventListener('keydown', handleTabKey);
         return () => document.removeEventListener('keydown', handleTabKey);
@@ -242,3 +241,4 @@ export const useFocusTrap = (isActive) => {
 // Screen Reader Only Text
 export const SrOnly = ({ children }) => (<span className="sr-only">{children}</span>);
 export default AccessibilityPanel;
+}}}}}}}}}}}}}}}

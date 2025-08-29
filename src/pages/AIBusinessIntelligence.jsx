@@ -1,7 +1,6 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { BarChart3, TrendingUp, Target, Users, Zap, Shield, ArrowRight, CheckCircle, Brain } from 'lucide-react';
-const AIBusinessIntelligence = () => {
+import { BarChart3, TrendingUp, Target, Users, Zap, Shield, ArrowRight, CheckCircle, Brain const AIBusinessIntelligence = () => {
     return (<>
       <Helmet>
         <title>AI Business Intelligence | Zion Tech Group</title>
@@ -248,3 +247,4 @@ const AIBusinessIntelligence = () => {
     </>);
 };
 export default AIBusinessIntelligence;
+}

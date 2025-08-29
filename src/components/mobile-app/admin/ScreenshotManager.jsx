@@ -1,8 +1,7 @@
 import React, { useState, useRef } from "react";
 import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { Upload, Trash2, Plus } from "lucide-react";
-import { toast } from "sonner";
+import { Upload, Trash2, Plus import { toast } from "sonner";
 export const ScreenshotManager = ({ platform }) => {
     const [screenshots, setScreenshots] = useState([]);
     const [isDragging, setIsDragging] = useState(false);
@@ -10,7 +9,7 @@ export const ScreenshotManager = ({ platform }) => {
     const handleFileSelect = (e) => {
         if (e.target.files) {
             addScreenshots(Array.from(e.target.files));
-        }
+
     };
     const addScreenshots = (files) => {
         // Filter for image files only
@@ -18,14 +17,14 @@ export const ScreenshotManager = ({ platform }) => {
         if (imageFiles.length === 0) {
             toast.error("Please select valid image files");
             return;
-        }
+
         // Limit the number of screenshots
         const maxScreenshots = platform === "ios" ? 10 : 8;
         const availableSlots = maxScreenshots - screenshots.length;
         if (availableSlots <= 0) {
             toast.error(`Maximum ${maxScreenshots} screenshots allowed for ${platform === "ios" ? "iOS" : "Android"}`);
             return;
-        }
+
         const filesToAdd = imageFiles.slice(0, availableSlots);
         const newScreenshots = filesToAdd.map(file => ({
             id: Math.random().toString(36).substring(2, 9),
@@ -35,7 +34,7 @@ export const ScreenshotManager = ({ platform }) => {
         setScreenshots(prev => [...prev, ...newScreenshots]);
         if (filesToAdd.length < imageFiles.length) {
             toast.warning(`Only added ${filesToAdd.length} screenshots. Maximum is ${maxScreenshots}.`);
-        }
+
     };
     const removeScreenshot = (id) => {
         setScreenshots(prev => {
@@ -44,7 +43,7 @@ export const ScreenshotManager = ({ platform }) => {
             const removed = prev.find(screenshot => screenshot.id === id);
             if (removed) {
                 URL.revokeObjectURL(removed.url);
-            }
+
             return filtered;
         });
     };
@@ -60,7 +59,7 @@ export const ScreenshotManager = ({ platform }) => {
         setIsDragging(false);
         if (e.dataTransfer.files) {
             addScreenshots(Array.from(e.dataTransfer.files));
-        }
+
     };
     return (<Card className="bg-zion-blue border-zion-purple/30">
       <CardHeader>
@@ -95,4 +94,5 @@ export const ScreenshotManager = ({ platform }) => {
         </div>
       </CardContent>
     </Card>);
-};
+</Card></Card></Card>};
+}}}}}}}

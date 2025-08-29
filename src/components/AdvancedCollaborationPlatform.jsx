@@ -1,6 +1,5 @@
 import React, { useState, useRef } from 'react';
-import { Users, Video, Mic, MicOff, VideoOff, MessageSquare, FileText, Monitor, X, Maximize2, Minimize2, Plus, MoreVertical, PhoneOff, ScreenShare, Square, Hand, Clock, CheckCircle, UserPlus } from 'lucide-react';
-const mockParticipants = [
+import { Users, Video, Mic, MicOff, VideoOff, MessageSquare, FileText, Monitor, X, Maximize2, Minimize2, Plus, MoreVertical, PhoneOff, ScreenShare, Square, Hand, Clock, CheckCircle, UserPlus const mockParticipants = [
     {
         id: '1',
         name: 'Sarah Johnson',
@@ -36,7 +35,7 @@ const mockParticipants = [
         hasRaisedHand: false,
         status: 'away',
         joinTime: '2024-01-15T10:05:00.000Z'
-    }
+
 ];
 const mockChatMessages = [
     {
@@ -65,7 +64,7 @@ const mockChatMessages = [
         timestamp: '2024-01-15T10:02:00.000Z',
         type: 'text',
         reactions: []
-    }
+
 ];
 const mockDocuments = [
     {
@@ -85,7 +84,7 @@ const mockDocuments = [
         lastModified: '2024-01-15T08:45:00.000Z',
         sharedBy: 'Michael Chen',
         permissions: 'view'
-    }
+
 ];
 const mockMeetings = [
     {
@@ -97,7 +96,7 @@ const mockMeetings = [
         status: 'active',
         recording: true,
         password: 'Q4Review2024'
-    }
+
 ];
 export function AdvancedCollaborationPlatform() {
     const [isOpen, setIsOpen] = useState(false);
@@ -145,7 +144,7 @@ export function AdvancedCollaborationPlatform() {
             };
             setChatMessages(prev => [...prev, newMessage]);
             setChatMessage('');
-        }
+
     };
     const raiseHand = () => {
         setParticipants(prev => prev.map(p => p.id === '1' ? { ...p, hasRaisedHand: !p.hasRaisedHand } : p));
@@ -156,7 +155,7 @@ export function AdvancedCollaborationPlatform() {
         return (<button onClick={() => setIsOpen(true)} className="fixed bottom-4 right-4 bg-gradient-to-r from-zion-emerald to-zion-blue text-white p-4 rounded-full shadow-2xl hover:shadow-3xl transition-all duration-300 hover:scale-110 z-40" title="Open Collaboration Platform">
         <Users className="w-6 h-6"/>
       </button>);
-    }
+
     if (isMinimized) {
         return (<div className="fixed bottom-4 right-4 bg-white dark:bg-zion-slate border border-zion-slate-light rounded-lg shadow-xl z-50">
         <div className="flex items-center gap-2 p-3">
@@ -167,7 +166,7 @@ export function AdvancedCollaborationPlatform() {
           </button>
         </div>
       </div>);
-    }
+
     return (<div className={`fixed bg-white dark:bg-zion-slate border border-zion-slate-light rounded-lg shadow-2xl z-50 overflow-hidden transition-all duration-300 ${isFullscreen ? 'inset-4' : 'bottom-4 right-4 w-[1400px] h-[900px]'}`} ref={containerRef}>
       {/* Header */}
       <div className="bg-gradient-to-r from-zion-emerald to-zion-blue text-white p-4 flex items-center justify-between">
@@ -410,4 +409,4 @@ export function AdvancedCollaborationPlatform() {
         </div>
       </div>
     </div>);
-}
+</div>}}}}}}}}}

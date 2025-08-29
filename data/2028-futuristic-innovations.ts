@@ -38,7 +38,7 @@ export interface Futuristic2028Service {
   customers: number;
   rating: number;
   reviews: number;
-}
+
 export const futuristic2028Services: Futuristic2028Service[] = [
   // AI-Powered Climate Prediction Platform
   {
@@ -507,5 +507,5 @@ export const futuristic2028Services: Futuristic2028Service[] = [
     customers: 110,
     rating: 4.9,
     reviews: 89
-  }
-];
+
+];}}

@@ -1,7 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Sparkles, Zap, Shield, Rocket } from 'lucide-react';
-const sizeClasses = {
+import { Sparkles, Zap, Shield, Rocket const sizeClasses = {
     sm: 'w-8 h-8',
     md: 'w-12 h-12',
     lg: 'w-16 h-16',
@@ -21,8 +20,8 @@ export function EnhancedLoading({ size = 'md', variant = 'default', text = 'Load
             transition: {
                 staggerChildren: 0.1,
                 delayChildren: 0.2
-            }
-        }
+
+
     };
     const iconVariants = {
         hidden: { scale: 0, opacity: 0 },
@@ -32,7 +31,7 @@ export function EnhancedLoading({ size = 'md', variant = 'default', text = 'Load
             transition: {
                 duration: 0.5,
                 ease: "easeOut"
-            }
+
         },
         hover: {
             scale: 1.1,
@@ -40,8 +39,8 @@ export function EnhancedLoading({ size = 'md', variant = 'default', text = 'Load
             transition: {
                 duration: 0.3,
                 ease: "easeInOut"
-            }
-        }
+
+
     };
     const pulseVariants = {
         pulse: {
@@ -51,8 +50,8 @@ export function EnhancedLoading({ size = 'md', variant = 'default', text = 'Load
                 duration: 2,
                 repeat: Infinity,
                 ease: "easeInOut"
-            }
-        }
+
+
     };
     const bounceVariants = {
         bounce: {
@@ -61,8 +60,8 @@ export function EnhancedLoading({ size = 'md', variant = 'default', text = 'Load
                 duration: 1.5,
                 repeat: Infinity,
                 ease: "easeInOut"
-            }
-        }
+
+
     };
     const waveVariants = {
         wave: {
@@ -71,8 +70,8 @@ export function EnhancedLoading({ size = 'md', variant = 'default', text = 'Load
                 duration: 1,
                 repeat: Infinity,
                 ease: "easeInOut"
-            }
-        }
+
+
     };
     const icons = [Sparkles, Zap, Shield, Rocket];
     if (variant === 'pulse') {
@@ -84,7 +83,7 @@ export function EnhancedLoading({ size = 'md', variant = 'default', text = 'Load
             {text}
           </motion.p>)}
       </motion.div>);
-    }
+
     if (variant === 'bounce') {
         return (<motion.div className={`flex flex-col items-center justify-center ${className}`} variants={containerVariants} initial="hidden" animate="visible">
         <motion.div className={`${sizeClasses[size]} bg-gradient-to-br from-zion-purple to-zion-cyan rounded-full flex items-center justify-center shadow-lg`} variants={bounceVariants} animate="bounce">
@@ -94,7 +93,7 @@ export function EnhancedLoading({ size = 'md', variant = 'default', text = 'Load
             {text}
           </motion.p>)}
       </motion.div>);
-    }
+
     if (variant === 'wave') {
         return (<motion.div className={`flex flex-col items-center justify-center ${className}`} variants={containerVariants} initial="hidden" animate="visible">
         <div className="flex space-x-2">
@@ -104,7 +103,7 @@ export function EnhancedLoading({ size = 'md', variant = 'default', text = 'Load
             {text}
           </motion.p>)}
       </motion.div>);
-    }
+
     // Default variant with rotating icons
     return (<motion.div className={`flex flex-col items-center justify-center ${className}`} variants={containerVariants} initial="hidden" animate="visible">
       <div className="relative">
@@ -149,4 +148,4 @@ export function EnhancedLoading({ size = 'md', variant = 'default', text = 'Load
           </motion.div>
         </motion.div>)}
     </motion.div>);
-}
+}}}}}}}}}}}}}}}</motion.div></motion.div>}

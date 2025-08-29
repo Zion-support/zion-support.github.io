@@ -13,7 +13,7 @@ export interface EmergingTechnologyService {
     email: string;
     address: string;
   };
-}
+
 export const emergingTechnologyServices: EmergingTechnologyService[] = [
   {
     id: "blockchain-platform",
@@ -35,6 +35,6 @@ export const emergingTechnologyServices: EmergingTechnologyService[] = [
       mobile: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       address: "364 E Main St STE 1008 Middletown DE 19709"
-    }
-  }
-];
+
+
+];}}}

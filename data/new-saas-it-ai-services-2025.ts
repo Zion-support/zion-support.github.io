@@ -425,5 +425,5 @@ export const newSaasItAiServices2025: EnhancedRealMicroSaasService[] = [
 		customers: 39,
 		rating: 4.5,
 		reviews: 17
-	}
-];
+
+];}

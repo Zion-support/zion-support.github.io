@@ -3,8 +3,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { SEO } from "@/components/SEO";
-import { Shield, Eye, Target, Users, ArrowRight, CheckCircle, Star, AlertTriangle, Network, Database, Cloud, Smartphone, Server } from "lucide-react";
-import { Link } from "react-router-dom";
+import { Shield, Eye, Target, Users, ArrowRight, CheckCircle, Star, AlertTriangle, Network, Database, Cloud, Smartphone, Server import { Link } from "react-router-dom";
 export default function CybersecurityServices() {
     const services = [
         {
@@ -30,7 +29,7 @@ export default function CybersecurityServices() {
             description: "Employee cybersecurity awareness and best practices training",
             icon: <Users className="h-6 w-6 text-zion-cyan"/>,
             price: "From $500"
-        }
+
     ];
     const securitySolutions = [
         {
@@ -62,7 +61,7 @@ export default function CybersecurityServices() {
             title: "Compliance",
             description: "GDPR, HIPAA, SOC 2, and industry-specific compliance",
             icon: <Shield className="h-8 w-8 text-zion-blue"/>
-        }
+
     ];
     const pricingPlans = [
         {
@@ -108,7 +107,7 @@ export default function CybersecurityServices() {
                 "Executive reporting"
             ],
             popular: false
-        }
+
     ];
     const testimonials = [
         {
@@ -128,7 +127,7 @@ export default function CybersecurityServices() {
             role: "CEO, E-commerce Pro",
             content: "24/7 incident response gives us peace of mind. Zion's team responds faster than any other provider we've used.",
             rating: 5
-        }
+
     ];
     return (<div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-blue-dark to-zion-slate-dark">
       <SEO title="Cybersecurity Services - Zion Tech Group" description="Protect your business with comprehensive cybersecurity services including penetration testing, security audits, and incident response." keywords="cybersecurity, penetration testing, security audit, incident response, Zion Tech Group" canonical="https://ziontechgroup.com/cybersecurity-services"/>
@@ -325,4 +324,4 @@ export default function CybersecurityServices() {
         </div>
       </section>
     </div>);
-}
+</Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card>}}}}}}

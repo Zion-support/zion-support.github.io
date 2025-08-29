@@ -544,6 +544,7 @@ export const ultimateInnovativeServices2025 = [
         specialFeatures: ['Autonomous legal analysis', 'AI contract drafting', 'Multi-jurisdiction support'],
         industryFocus: ['Legal Services', 'Corporate', 'Government', 'Technology', 'Finance'],
         compliance: ['SOC 2 Type II', 'ISO 27001', 'GDPR']
-    }
+
 ];
 export default ultimateInnovativeServices2025;
+}

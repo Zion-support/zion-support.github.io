@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
-import { FileText, AlertTriangle, CheckCircle, Info, Search, Edit3, Eye, BarChart3, TrendingUp, Zap } from 'lucide-react';
-const ContentQualityAnalyzer = () => {
+import { FileText, AlertTriangle, CheckCircle, Info, Search, Edit3, Eye, BarChart3, TrendingUp, Zap const ContentQualityAnalyzer = () => {
     const [isOpen, setIsOpen] = useState(false);
     const [isAnalyzing, setIsAnalyzing] = useState(false);
     const [contentIssues, setContentIssues] = useState([]);
@@ -49,7 +48,7 @@ const ContentQualityAnalyzer = () => {
             description: 'No headings found',
             recommendation: 'Add proper heading structure (H1, H2, H3) for better content organization and SEO',
             status: 'open'
-        }
+
     ];
     useEffect(() => {
         setContentIssues(sampleIssues);
@@ -89,7 +88,7 @@ const ContentQualityAnalyzer = () => {
                 return <Info className="w-4 h-4 text-blue-400"/>;
             default:
                 return <Info className="w-4 h-4 text-gray-400"/>;
-        }
+
     };
     const getSeverityColor = (severity) => {
         switch (severity) {
@@ -101,7 +100,7 @@ const ContentQualityAnalyzer = () => {
                 return 'text-blue-400';
             default:
                 return 'text-gray-400';
-        }
+
     };
     const getStatusColor = (status) => {
         switch (status) {
@@ -113,7 +112,7 @@ const ContentQualityAnalyzer = () => {
                 return 'text-red-400';
             default:
                 return 'text-gray-400';
-        }
+
     };
     const filteredIssues = contentIssues.filter(issue => {
         const matchesFilter = selectedFilter === 'all' || issue.severity === selectedFilter;
@@ -135,7 +134,7 @@ const ContentQualityAnalyzer = () => {
                 return 'No Images';
             default:
                 return type;
-        }
+
     };
     return (<>
       {/* Floating Action Button */}
@@ -350,3 +349,4 @@ const ContentQualityAnalyzer = () => {
     </>);
 };
 export default ContentQualityAnalyzer;
+}}}}}}

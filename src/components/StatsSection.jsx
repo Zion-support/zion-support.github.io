@@ -41,7 +41,7 @@ export function StatsSection() {
             description: 'Industry expertise and knowledge',
             icon: '🏆',
             color: 'from-red-500 to-pink-500'
-        }
+
     ];
     return (<section className="py-16 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -96,4 +96,4 @@ export function StatsSection() {
         </div>
       </div>
     </section>);
-}
+}}

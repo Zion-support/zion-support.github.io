@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { TrendingUp, TrendingDown, Users, DollarSign, Target, BarChart3, PieChart, Activity, Star, ArrowUpRight, ArrowDownRight, Shield, Brain, Rocket } from 'lucide-react';
-import { Card, CardContent, CardHeader, CardTitle } from './ui/card';
+import { TrendingUp, TrendingDown, Users, DollarSign, Target, BarChart3, PieChart, Activity, Star, ArrowUpRight, ArrowDownRight, Shield, Brain, Rocket import { Card, CardContent, CardHeader, CardTitle } from './ui/card';
 import { Button } from './ui/button';
 import { Badge } from './ui/badge';
 const AdvancedAnalyticsDashboard = () => {
@@ -40,7 +39,7 @@ const AdvancedAnalyticsDashboard = () => {
             changeType: 'increase',
             icon: <Star className="w-6 h-6"/>,
             color: 'from-yellow-500 to-orange-600'
-        }
+
     ];
     const servicePerformance = [
         {
@@ -82,7 +81,7 @@ const AdvancedAnalyticsDashboard = () => {
             clients: 67,
             revenue: 340000,
             status: 'stable'
-        }
+
     ];
     const categoryDistribution = [
         { label: 'AI & ML', value: 35, color: 'from-purple-500 to-pink-600' },
@@ -101,7 +100,7 @@ const AdvancedAnalyticsDashboard = () => {
                 return <TrendingDown className="w-4 h-4 text-red-500"/>;
             default:
                 return <Activity className="w-4 h-4 text-gray-500"/>;
-        }
+
     };
     const getStatusColor = (status) => {
         switch (status) {
@@ -113,7 +112,7 @@ const AdvancedAnalyticsDashboard = () => {
                 return 'bg-red-100 text-red-800';
             default:
                 return 'bg-gray-100 text-gray-800';
-        }
+
     };
     return (<div className="max-w-7xl mx-auto p-6">
       {/* Header */}
@@ -321,5 +320,6 @@ const AdvancedAnalyticsDashboard = () => {
         </div>
       </motion.div>
     </div>);
-};
+</Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card>};
 export default AdvancedAnalyticsDashboard;
+}}}}}

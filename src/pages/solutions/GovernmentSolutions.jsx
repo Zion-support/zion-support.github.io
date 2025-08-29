@@ -1,7 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Building2, Shield, Users, BarChart3, Lock, Zap, ArrowRight, CheckCircle, Star, TrendingUp } from 'lucide-react';
-export default function GovernmentSolutions() {
+import { Building2, Shield, Users, BarChart3, Lock, Zap, ArrowRight, CheckCircle, Star, TrendingUp export default function GovernmentSolutions() {
     const solutions = [
         {
             icon: Building2,
@@ -38,7 +37,7 @@ export default function GovernmentSolutions() {
             title: "Process Automation",
             description: "Intelligent automation for government operations and workflows",
             features: ["Workflow Automation", "Document Processing", "Approval Systems", "Resource Management"]
-        }
+
     ];
     const benefits = [
         "Improved citizen satisfaction and engagement",
@@ -62,7 +61,7 @@ export default function GovernmentSolutions() {
             challenge: "Cybersecurity vulnerabilities and compliance gaps",
             solution: "Comprehensive security framework with FedRAMP compliance",
             results: "100% compliance achievement, 90% reduction in security incidents"
-        }
+
     ];
     return (<div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900 text-white">
       {/* Hero Section */}
@@ -212,4 +211,4 @@ export default function GovernmentSolutions() {
         </div>
       </section>
     </div>);
-}
+}}}}

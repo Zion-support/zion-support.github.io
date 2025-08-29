@@ -7,7 +7,6 @@ class AuthService {
   constructor() {
     this.token = localStorage.getItem('token');
     this.user = JSON.parse(localStorage.getItem('user') || 'null');
-  }
 
   // Login user
   async login(credentials) {
@@ -18,7 +17,6 @@ class AuthService {
       // Mock validation
       if (!credentials.email || !credentials.password) {
         throw new Error('Email and password are required');
-      }
 
       // Mock successful login
       const mockUser = {
@@ -44,8 +42,7 @@ class AuthService {
       };
     } catch (error) {
       throw new Error(error.message || 'Login failed');
-    }
-  }
+
 
   // Register user
   async register(userData) {
@@ -56,7 +53,6 @@ class AuthService {
       // Mock validation
       if (!userData.email || !userData.password || !userData.name) {
         throw new Error('Name, email, and password are required');
-      }
 
       // Mock successful registration
       const mockUser = {
@@ -82,8 +78,7 @@ class AuthService {
       };
     } catch (error) {
       throw new Error(error.message || 'Registration failed');
-    }
-  }
+
 
   // Logout user
   async logout() {
@@ -100,28 +95,23 @@ class AuthService {
       return true;
     } catch (error) {
       throw new Error('Logout failed');
-    }
-  }
+
 
   // Get current user
   getCurrentUser() {
     return this.user;
-  }
 
   // Get current token
   getCurrentToken() {
     return this.token;
-  }
 
   // Check if user is authenticated
   isAuthenticated() {
     return !!this.token && !!this.user;
-  }
 
   // Check if user has specific role
   hasRole(role) {
     return this.user && this.user.role === role;
-  }
 
   // Refresh token
   async refreshToken() {
@@ -131,7 +121,6 @@ class AuthService {
 
       if (!this.token) {
         throw new Error('No token to refresh');
-      }
 
       // Mock token refresh
       const newToken = 'mock-jwt-token-refreshed-' + Date.now();
@@ -141,8 +130,7 @@ class AuthService {
       return newToken;
     } catch (error) {
       throw new Error('Token refresh failed');
-    }
-  }
+
 
   // Forgot password
   async forgotPassword(email) {
@@ -152,7 +140,6 @@ class AuthService {
 
       if (!email) {
         throw new Error('Email is required');
-      }
 
       // Mock successful password reset request
       return {
@@ -161,8 +148,7 @@ class AuthService {
       };
     } catch (error) {
       throw new Error(error.message || 'Password reset request failed');
-    }
-  }
+
 
   // Reset password
   async resetPassword(token, newPassword) {
@@ -172,7 +158,6 @@ class AuthService {
 
       if (!token || !newPassword) {
         throw new Error('Token and new password are required');
-      }
 
       // Mock successful password reset
       return {
@@ -180,8 +165,7 @@ class AuthService {
       };
     } catch (error) {
       throw new Error(error.message || 'Password reset failed');
-    }
-  }
+
 
   // Update user profile
   async updateProfile(profileData) {
@@ -191,7 +175,6 @@ class AuthService {
 
       if (!this.isAuthenticated()) {
         throw new Error('User not authenticated');
-      }
 
       // Mock profile update
       const updatedUser = {
@@ -206,8 +189,7 @@ class AuthService {
       return updatedUser;
     } catch (error) {
       throw new Error(error.message || 'Profile update failed');
-    }
-  }
+
 
   // Change password
   async changePassword(currentPassword, newPassword) {
@@ -217,11 +199,9 @@ class AuthService {
 
       if (!this.isAuthenticated()) {
         throw new Error('User not authenticated');
-      }
 
       if (!currentPassword || !newPassword) {
         throw new Error('Current and new passwords are required');
-      }
 
       // Mock password change
       return {
@@ -229,8 +209,7 @@ class AuthService {
       };
     } catch (error) {
       throw new Error(error.message || 'Password change failed');
-    }
-  }
+
 
   // Verify email
   async verifyEmail(token) {
@@ -240,22 +219,19 @@ class AuthService {
 
       if (!token) {
         throw new Error('Verification token is required');
-      }
 
       // Mock email verification
       if (this.user) {
         this.user.emailVerified = true;
         this.user.verifiedAt = new Date().toISOString();
         localStorage.setItem('user', JSON.stringify(this.user));
-      }
 
       return {
         message: 'Email verified successfully'
       };
     } catch (error) {
       throw new Error(error.message || 'Email verification failed');
-    }
-  }
+
 
   // Get user permissions
   getUserPermissions() {
@@ -269,14 +245,12 @@ class AuthService {
     };
 
     return permissions[this.user.role] || [];
-  }
 
   // Check if user has specific permission
   hasPermission(permission) {
     const permissions = this.getUserPermissions();
     return permissions.includes(permission);
-  }
-}
+
 
 // Create singleton instance
 const authService = new AuthService();
@@ -288,4 +262,4 @@ export const logout = () => authService.logout();
 export const getCurrentUser = () => authService.getCurrentUser();
 export const isAuthenticated = () => authService.isAuthenticated();
 
-export default authService;
+export default authService;}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}

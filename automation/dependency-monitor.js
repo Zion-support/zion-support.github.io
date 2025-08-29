@@ -5,7 +5,7 @@ const path = require('path');
 const { execSync, spawn } = require('child_process');
 const cron = require('node-cron');
 
-// // console.log('📦 Dependency Monitor Starting...\n');
+// // // // console.log('📦 Dependency Monitor Starting...\n');
 
 class DependencyMonitor {
   constructor() {
@@ -20,27 +20,24 @@ class DependencyMonitor {
 
     // Initialize monitoring
     this.startMonitoring();
-  }
 
   ensureLogsDirectory() {
     const logsDir = path.dirname(this.logFile);
     if (!fs.existsSync(logsDir)) {
       fs.mkdirSync(logsDir, { recursive: true });
-    }
-  }
+
 
   log(message, level = 'INFO') {
     const timestamp = new Date().toISOString();
     const logEntry = `[${timestamp}] [${level}] ${message}\n`;
 
-    // // console.log(logEntry.trim());
+    // // // // console.log(logEntry.trim());
 
     try {
       fs.appendFileSync(this.logFile, logEntry);
     } catch (error) {
-      // console.error('Failed to write to log file:', error.message);
-    }
-  }
+      // // // console.error('Failed to write to log file:', error.message);
+
 
   async startMonitoring() {
     this.log('Starting dependency monitoring...');
@@ -66,7 +63,6 @@ class DependencyMonitor {
     }, 15000);
 
     this.log('Dependency monitoring started successfully');
-  }
 
   async performDependencyCheck() {
     if (this.monitoring) return;
@@ -82,14 +78,12 @@ class DependencyMonitor {
         await this.autoFixDependencyIssues(issues);
       } else {
         this.log('No dependency issues detected, all packages are up to date');
-      }
 
     } catch (error) {
       this.log(`Dependency check failed: ${error.message}`, 'ERROR');
     } finally {
       this.monitoring = false;
-    }
-  }
+
 
   async detectDependencyIssues() {
     const issues = [];
@@ -103,7 +97,6 @@ class DependencyMonitor {
         description: `${outdatedPackages.length} outdated packages found`,
         details: outdatedPackages
       });
-    }
 
     // Check for missing dependencies
     if (await this.hasMissingDependencies()) {
@@ -112,7 +105,6 @@ class DependencyMonitor {
         severity: 'high',
         description: 'Missing critical dependencies detected'
       });
-    }
 
     // Check for peer dependency issues
     const peerDependencyIssues = await this.checkPeerDependencies();
@@ -123,7 +115,6 @@ class DependencyMonitor {
         description: `${peerDependencyIssues.length} peer dependency issues found`,
         details: peerDependencyIssues
       });
-    }
 
     // Check for dependency conflicts
     const dependencyConflicts = await this.checkDependencyConflicts();
@@ -134,10 +125,8 @@ class DependencyMonitor {
         description: `${dependencyConflicts.length} dependency conflicts detected`,
         details: dependencyConflicts
       });
-    }
 
     return issues;
-  }
 
   async checkOutdatedPackages() {
     try {
@@ -155,7 +144,6 @@ class DependencyMonitor {
           wanted: outdated[pkg].wanted,
           latest: outdated[pkg].latest
         }));
-      }
 
       return [];
     } catch (error) {
@@ -171,11 +159,10 @@ class DependencyMonitor {
           }));
         } catch (parseError) {
           return [];
-        }
-      }
+
+
       return [];
-    }
-  }
+
 
   async hasMissingDependencies() {
     try {
@@ -183,13 +170,11 @@ class DependencyMonitor {
       const packageJsonPath = path.join(this.projectRoot, 'package.json');
       if (!fs.existsSync(packageJsonPath)) {
         return true;
-      }
 
       // Check if node_modules exists
       const nodeModulesPath = path.join(this.projectRoot, 'node_modules');
       if (!fs.existsSync(nodeModulesPath)) {
         return true;
-      }
 
       // Check if key dependencies exist
       const packageJson = JSON.parse(fs.readFileSync(packageJsonPath, 'utf8'));
@@ -201,15 +186,13 @@ class DependencyMonitor {
             require.resolve(dep);
           } catch (e) {
             return true; // Missing dependency
-          }
-        }
-      }
+
+
 
       return false;
     } catch (error) {
       return true;
-    }
-  }
+
 
   async checkPeerDependencies() {
     try {
@@ -227,9 +210,8 @@ class DependencyMonitor {
         dependencies.problems.forEach(problem => {
           if (problem.includes('peer dep missing') || problem.includes('peer dependency')) {
             issues.push(problem);
-          }
+
         });
-      }
 
       return issues;
     } catch (error) {
@@ -243,18 +225,16 @@ class DependencyMonitor {
             dependencies.problems.forEach(problem => {
               if (problem.includes('peer dep missing') || problem.includes('peer dependency')) {
                 issues.push(problem);
-              }
+
             });
-          }
 
           return issues;
         } catch (parseError) {
           return [];
-        }
-      }
+
+
       return [];
-    }
-  }
+
 
   async checkDependencyConflicts() {
     try {
@@ -272,9 +252,8 @@ class DependencyMonitor {
         dependencies.problems.forEach(problem => {
           if (problem.includes('conflict') || problem.includes('incompatible')) {
             issues.push(problem);
-          }
+
         });
-      }
 
       return issues;
     } catch (error) {
@@ -288,18 +267,16 @@ class DependencyMonitor {
             dependencies.problems.forEach(problem => {
               if (problem.includes('conflict') || problem.includes('incompatible')) {
                 issues.push(problem);
-              }
+
             });
-          }
 
           return issues;
         } catch (parseError) {
           return [];
-        }
-      }
+
+
       return [];
-    }
-  }
+
 
   async autoFixDependencyIssues(issues) {
     for (const issue of issues) {
@@ -319,16 +296,14 @@ class DependencyMonitor {
           case 'dependency_conflicts':
             await this.fixDependencyConflicts(issue.details);
             break;
-        }
 
         this.dependenciesUpdated++;
         this.log(`Successfully fixed: ${issue.type}`);
 
       } catch (error) {
         this.log(`Failed to fix ${issue.type}: ${error.message}`, 'ERROR');
-      }
-    }
-  }
+
+
 
   async fixOutdatedPackages(outdatedPackages) {
     this.log('Fixing outdated packages...');
@@ -356,8 +331,7 @@ class DependencyMonitor {
 
     } catch (error) {
       throw new Error(`Failed to update packages: ${error.message}`);
-    }
-  }
+
 
   async fixMissingDependencies() {
     this.log('Installing missing dependencies...');
@@ -370,8 +344,7 @@ class DependencyMonitor {
       this.log('Dependencies installed successfully');
     } catch (error) {
       throw new Error(`Failed to install dependencies: ${error.message}`);
-    }
-  }
+
 
   async fixPeerDependencies(issues) {
     this.log('Fixing peer dependency issues...');
@@ -392,8 +365,7 @@ class DependencyMonitor {
 
       fs.writeFileSync(reportPath, reportContent);
       this.log(`Peer dependency report saved to: ${reportPath}`);
-    }
-  }
+
 
   async fixDependencyConflicts(conflicts) {
     this.log('Fixing dependency conflicts...');
@@ -414,8 +386,7 @@ class DependencyMonitor {
 
       fs.writeFileSync(reportPath, reportContent);
       this.log(`Dependency conflict report saved to: ${reportPath}`);
-    }
-  }
+
 
   async performSecurityAudit() {
     this.log('Performing security audit...');
@@ -437,12 +408,10 @@ class DependencyMonitor {
         await this.autoFixSecurityVulnerabilities(audit);
       } else {
         this.log('No security vulnerabilities found');
-      }
 
     } catch (error) {
       this.log(`Security audit failed: ${error.message}`, 'ERROR');
-    }
-  }
+
 
   async autoFixSecurityVulnerabilities(audit) {
     this.log('Attempting to auto-fix security vulnerabilities...');
@@ -470,8 +439,7 @@ class DependencyMonitor {
 
       fs.writeFileSync(reportPath, reportContent);
       this.log(`Security audit report saved to: ${reportPath}`);
-    }
-  }
+
 
   async performWeeklyUpdates() {
     this.log('Performing weekly dependency updates...');
@@ -491,7 +459,6 @@ class DependencyMonitor {
 
         fs.writeFileSync(reportPath, reportContent);
         this.log(`Major updates report saved to: ${reportPath}`);
-      }
 
       // Perform minor and patch updates
       await this.performSafeUpdates();
@@ -500,8 +467,7 @@ class DependencyMonitor {
 
     } catch (error) {
       this.log(`Weekly dependency updates failed: ${error.message}`, 'ERROR');
-    }
-  }
+
 
   async checkMajorUpdates() {
     try {
@@ -525,13 +491,11 @@ class DependencyMonitor {
             current: outdated[pkg].current,
             latest: outdated[pkg].latest
           }));
-      }
 
       return [];
     } catch (error) {
       return [];
-    }
-  }
+
 
   async performSafeUpdates() {
     try {
@@ -543,8 +507,7 @@ class DependencyMonitor {
       this.log('Safe updates completed');
     } catch (error) {
       this.log(`Safe updates failed: ${error.message}`, 'WARN');
-    }
-  }
+
 
   async cleanupOldReports() {
     this.log('Cleaning up old dependency reports...');
@@ -564,14 +527,13 @@ class DependencyMonitor {
             if (now - stats.mtime.getTime() > maxAge) {
               fs.unlinkSync(filePath);
               this.log(`Removed old report: ${file}`);
-            }
-          }
-        }
-      }
+
+
+
+
     } catch (error) {
       this.log(`Report cleanup failed: ${error.message}`, 'WARN');
-    }
-  }
+
 
   getStats() {
     return {
@@ -580,26 +542,24 @@ class DependencyMonitor {
       monitoring: this.monitoring,
       uptime: process.uptime()
     };
-  }
 
   async stop() {
     this.log('Stopping dependency monitor...');
     this.monitoring = false;
     process.exit(0);
-  }
-}
+
 
 // Handle graceful shutdown
 process.on('SIGINT', async () => {
   if (monitor) {
     await monitor.stop();
-  }
+
 });
 
 process.on('SIGTERM', async () => {
   if (monitor) {
     await monitor.stop();
-  }
+
 });
 
 // Start the monitor
@@ -611,3 +571,4 @@ setInterval(() => {
   const stats = monitor.getStats();
   monitor.log(`Monitor heartbeat - Vulnerabilities: ${stats.vulnerabilitiesFound}, Dependencies Updated: ${stats.dependenciesUpdated}, Uptime: ${Math.round(stats.uptime)}s`);
 }, 900000); // Every 15 minutes
+}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}

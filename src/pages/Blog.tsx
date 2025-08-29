@@ -3,8 +3,6 @@ import { motion } from 'framer-motion';
 import {
   Calendar, Clock, User, Tag, Search, Filter,
   ArrowRight, BookOpen, TrendingUp, Star, Eye
-} from 'lucide-react';
-
 function Blog() {
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [searchQuery, setSearchQuery] = useState('');
@@ -95,7 +93,7 @@ function Blog() {
       featured: false,
       tags: ['Edge Computing', 'IoT', 'Performance'],
       image: '/images/blog/edge-computing-iot.jpg'
-    }
+
   ];
 
   const filteredPosts = blogPosts.filter(post => {
@@ -124,7 +122,7 @@ function Blog() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-          >
+
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
               Zion Tech Blog
             </h1>
@@ -163,7 +161,7 @@ function Blog() {
                       ? 'bg-blue-600 text-white'
                       : 'bg-slate-700/50 text-slate-300 hover:bg-slate-700 hover:text-white'
                   }`}
-                >
+
                   {category.name} ({category.count})
                 </button>
               ))}
@@ -182,7 +180,7 @@ function Blog() {
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
               className="text-3xl font-bold text-white mb-12 text-center"
-            >
+
               Featured Articles
             </motion.h2>
 
@@ -197,7 +195,7 @@ function Blog() {
                     viewport={{ once: true }}
                     transition={{ duration: 0.6, delay: index * 0.1 }}
                     className="bg-slate-800/50 backdrop-blur-sm rounded-xl overflow-hidden border border-slate-700/50 hover:border-slate-600/50 transition-all duration-300 group"
-                  >
+
                     <div className="aspect-video bg-gradient-to-br from-blue-500/20 to-purple-500/20 flex items-center justify-center">
                       <BookOpen className="w-16 h-16 text-blue-400 opacity-60" />
                     </div>
@@ -241,7 +239,7 @@ function Blog() {
                           <span
                             key={tag}
                             className="px-2 py-1 bg-slate-700/50 text-slate-300 text-xs rounded"
-                          >
+
                             {tag}
                           </span>
                         ))}
@@ -263,7 +261,7 @@ function Blog() {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
             className="text-3xl font-bold text-white mb-12 text-center"
-          >
+
             Latest Articles
           </motion.h2>
 
@@ -278,7 +276,7 @@ function Blog() {
                   viewport={{ once: true }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
                   className="bg-slate-800/50 backdrop-blur-sm rounded-xl overflow-hidden border border-slate-700/50 hover:border-slate-600/50 transition-all duration-300 group hover:transform hover:-translate-y-2"
-                >
+
                   <div className="aspect-video bg-gradient-to-br from-slate-600/20 to-slate-700/20 flex items-center justify-center">
                     <BookOpen className="w-12 h-12 text-slate-400 opacity-60" />
                   </div>
@@ -322,7 +320,7 @@ function Blog() {
                         <span
                           key={tag}
                           className="px-2 py-1 bg-slate-700/50 text-slate-300 text-xs rounded"
-                        >
+
                           {tag}
                         </span>
                       ))}
@@ -348,7 +346,7 @@ function Blog() {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
             className="bg-gradient-to-r from-blue-600/20 to-purple-600/20 backdrop-blur-sm rounded-2xl p-8 border border-blue-500/30"
-          >
+
             <h2 className="text-3xl font-bold text-white mb-4">
               Stay Updated with Our Latest Insights
             </h2>
@@ -375,4 +373,4 @@ function Blog() {
       </section>
     </div>
   );
-}
+}}}

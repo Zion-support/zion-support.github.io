@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { Star, CheckCircle, ArrowRight, Users, Phone, Mail, Brain, Shield, Zap, Clock } from 'lucide-react';
-const GetStarted = () => {
+import { Star, CheckCircle, ArrowRight, Users, Phone, Mail, Brain, Shield, Zap, Clock const GetStarted = () => {
     const [currentStep, setCurrentStep] = useState(1);
     const steps = [
         {
@@ -31,7 +30,7 @@ const GetStarted = () => {
             description: "Go live with ongoing support and optimization",
             icon: CheckCircle,
             color: "from-orange-500 to-red-500"
-        }
+
     ];
     const services = [
         {
@@ -61,7 +60,7 @@ const GetStarted = () => {
             icon: Zap,
             color: "from-green-500 to-teal-600",
             features: ["Cloud Migration", "DevOps Automation", "Edge Computing", "Data Center Optimization"]
-        }
+
     ];
     const benefits = [
         "Free initial consultation",
@@ -266,3 +265,4 @@ const GetStarted = () => {
     </div>);
 };
 export default GetStarted;
+}}}

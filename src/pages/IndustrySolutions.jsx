@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
-import { Search, Zap, CreditCard, Truck, Phone, Mail, MapPin, Building, Factory, Store, Home, GraduationCap, Stethoscope } from 'lucide-react';
-const IndustrySolutions = () => {
+import { Search, Zap, CreditCard, Truck, Phone, Mail, MapPin, Building, Factory, Store, Home, GraduationCap, Stethoscope const IndustrySolutions = () => {
     const [searchTerm, setSearchTerm] = useState('');
     const [selectedIndustry, setSelectedIndustry] = useState('all');
     const [selectedSolutionType, setSelectedSolutionType] = useState('all');
@@ -24,7 +23,7 @@ const IndustrySolutions = () => {
                 phone: "+1 302 464 0950",
                 email: "kleber@ziontechgroup.com",
                 website: "https://ziontechgroup.com"
-            }
+
         },
         {
             id: 2,
@@ -44,7 +43,7 @@ const IndustrySolutions = () => {
                 phone: "+1 302 464 0950",
                 email: "kleber@ziontechgroup.com",
                 website: "https://ziontechgroup.com"
-            }
+
         },
         {
             id: 3,
@@ -64,7 +63,7 @@ const IndustrySolutions = () => {
                 phone: "+1 302 464 0950",
                 email: "kleber@ziontechgroup.com",
                 website: "https://ziontechgroup.com"
-            }
+
         },
         {
             id: 4,
@@ -84,7 +83,7 @@ const IndustrySolutions = () => {
                 phone: "+1 302 464 0950",
                 email: "kleber@ziontechgroup.com",
                 website: "https://ziontechgroup.com"
-            }
+
         },
         {
             id: 5,
@@ -104,7 +103,7 @@ const IndustrySolutions = () => {
                 phone: "+1 302 464 0950",
                 email: "kleber@ziontechgroup.com",
                 website: "https://ziontechgroup.com"
-            }
+
         },
         {
             id: 6,
@@ -124,7 +123,7 @@ const IndustrySolutions = () => {
                 phone: "+1 302 464 0950",
                 email: "kleber@ziontechgroup.com",
                 website: "https://ziontechgroup.com"
-            }
+
         },
         {
             id: 7,
@@ -144,7 +143,7 @@ const IndustrySolutions = () => {
                 phone: "+1 302 464 0950",
                 email: "kleber@ziontechgroup.com",
                 website: "https://ziontechgroup.com"
-            }
+
         },
         {
             id: 8,
@@ -164,7 +163,7 @@ const IndustrySolutions = () => {
                 phone: "+1 302 464 0950",
                 email: "kleber@ziontechgroup.com",
                 website: "https://ziontechgroup.com"
-            }
+
         },
         {
             id: 9,
@@ -184,7 +183,7 @@ const IndustrySolutions = () => {
                 phone: "+1 302 464 0950",
                 email: "kleber@ziontechgroup.com",
                 website: "https://ziontechgroup.com"
-            }
+
         },
         {
             id: 10,
@@ -204,7 +203,7 @@ const IndustrySolutions = () => {
                 phone: "+1 302 464 0950",
                 email: "kleber@ziontechgroup.com",
                 website: "https://ziontechgroup.com"
-            }
+
         },
         {
             id: 11,
@@ -224,7 +223,7 @@ const IndustrySolutions = () => {
                 phone: "+1 302 464 0950",
                 email: "kleber@ziontechgroup.com",
                 website: "https://ziontechgroup.com"
-            }
+
         },
         {
             id: 12,
@@ -244,8 +243,8 @@ const IndustrySolutions = () => {
                 phone: "+1 302 464 0950",
                 email: "kleber@ziontechgroup.com",
                 website: "https://ziontechgroup.com"
-            }
-        }
+
+
     ];
     const industries = ['all', 'Healthcare', 'Finance', 'Manufacturing', 'Retail', 'Education', 'Logistics', 'Real Estate', 'Energy', 'Cybersecurity', 'Legal', 'Media', 'Transportation'];
     const solutionTypes = ['all', 'Digital Health', 'FinTech', 'Industry 4.0', 'Digital Commerce', 'EdTech', 'Supply Chain', 'PropTech', 'Energy Tech', 'Security', 'LegalTech', 'MediaTech', 'Mobility'];
@@ -267,7 +266,7 @@ const IndustrySolutions = () => {
                 return `$${price.toLocaleString()}`;
             default:
                 return `$${price.toLocaleString()}`;
-        }
+
     };
     const getIndustryColor = (score) => {
         if (score >= 95)
@@ -289,7 +288,7 @@ const IndustrySolutions = () => {
             case 'Real Estate': return <Home className="w-6 h-6"/>;
             case 'Energy': return <Zap className="w-6 h-6"/>;
             default: return <Building className="w-6 h-6"/>;
-        }
+
     };
     return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
       <div className="container mx-auto px-4 py-8">
@@ -415,3 +414,4 @@ const IndustrySolutions = () => {
     </div>);
 };
 export default IndustrySolutions;
+}}}}}}}}}}}}}}}}

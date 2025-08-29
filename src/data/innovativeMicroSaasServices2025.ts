@@ -31,7 +31,6 @@ export interface InnovativeMicroSaasService {
   };
   competitors?: string[];
   marketSize?: string;
-}
 
 export const INNOVATIVE_MICRO_SAAS_SERVICES_2025: InnovativeMicroSaasService[] = [
   // AI Workflow Orchestrator
@@ -4147,7 +4146,7 @@ export const INNOVATIVE_MICRO_SAAS_SERVICES_2025: InnovativeMicroSaasService[] =
     },
     competitors: ["SonarQube", "CodeClimate", "DeepCode", "Snyk", "Veracode"],
     marketSize: "$2.5 billion by 2026"
-  }
+
 ];
 
-export default INNOVATIVE_MICRO_SAAS_SERVICES_2025;
+export default INNOVATIVE_MICRO_SAAS_SERVICES_2025;}}

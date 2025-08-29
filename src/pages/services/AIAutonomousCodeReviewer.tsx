@@ -21,8 +21,6 @@ import {
   Globe,
   Smartphone,
   Database
-} from 'lucide-react';
-
 const AIAutonomousCodeReviewer: React.FC = () => {
   const features = [
     {
@@ -48,7 +46,7 @@ const AIAutonomousCodeReviewer: React.FC = () => {
       title: "Quality Metrics",
       description: "Comprehensive code quality metrics, technical debt analysis, and improvement recommendations.",
       benefits: ["Quality scoring", "Technical debt tracking", "Improvement roadmaps"]
-    }
+
   ];
 
   const supportedLanguages = [
@@ -110,7 +108,7 @@ const AIAutonomousCodeReviewer: React.FC = () => {
       ],
       cta: "Contact Sales",
       popular: false
-    }
+
   ];
 
   const useCases = [
@@ -133,7 +131,7 @@ const AIAutonomousCodeReviewer: React.FC = () => {
       title: "Performance Optimization",
       description: "Identify and fix performance bottlenecks through intelligent code analysis.",
       icon: Zap
-    }
+
   ];
 
   return (
@@ -342,7 +340,7 @@ const AIAutonomousCodeReviewer: React.FC = () => {
                         ? 'bg-gradient-to-r from-blue-600 to-cyan-600 text-white hover:from-blue-700 hover:to-cyan-700'
                         : 'bg-white/10 text-white border border-white/20 hover:bg-white/20'
                     }`}
-                  >
+
                     {plan.cta}
                   </Link>
                 </div>
@@ -379,4 +377,4 @@ const AIAutonomousCodeReviewer: React.FC = () => {
   );
 };
 
-export default AIAutonomousCodeReviewer;
+export default AIAutonomousCodeReviewer;}}}}

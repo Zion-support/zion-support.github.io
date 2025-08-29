@@ -1,8 +1,6 @@
 import React from 'react';
 import { SEO } from '@/components/SEO';
-import { Package, Truck, CheckCircle, DollarSign, Link as LinkIcon } from 'lucide-react';
-
-const ReturnsManagementSaaS: React.FC = () => {
+import { Package, Truck, CheckCircle, DollarSign, Link as LinkIcon const ReturnsManagementSaaS: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white">
       <SEO
@@ -86,3 +84,4 @@ const ReturnsManagementSaaS: React.FC = () => {
 
 export default ReturnsManagementSaaS;
 
+}

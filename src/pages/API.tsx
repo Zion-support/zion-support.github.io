@@ -1,9 +1,7 @@
 import React from 'react';
 import { SEO } from '../components/SEO';
 import { motion } from 'framer-motion';
-import { Code, Database, Shield, Zap, Globe, Users, BookOpen, Download, Play, Terminal, Cpu, Network, BarChart3, Activity, Rocket, ExternalLink } from 'lucide-react';
-
-const API: React.FC = () => {
+import { Code, Database, Shield, Zap, Globe, Users, BookOpen, Download, Play, Terminal, Cpu, Network, BarChart3, Activity, Rocket, ExternalLink const API: React.FC = () => {
   const endpoints = [
     {
       method: 'GET',
@@ -28,7 +26,7 @@ const API: React.FC = () => {
       path: '/api/v1/user/profile',
       description: 'Update user profile',
       auth: 'Required'
-    }
+
   ];
 
   const features = [
@@ -51,7 +49,7 @@ const API: React.FC = () => {
       icon: Database,
       title: 'Real-time Data',
       description: 'Live data synchronization across all endpoints'
-    }
+
   ];
 
   const sdks = [
@@ -78,7 +76,7 @@ const API: React.FC = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             className="text-center"
-          >
+
             <div className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-blue-500/20 to-cyan-500/20 rounded-full border border-blue-400/30 mb-6">
               <Code className="w-5 h-5 text-blue-400 mr-2" />
               <span className="text-blue-300 font-medium">API Reference</span>
@@ -116,7 +114,7 @@ const API: React.FC = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
-          >
+
             <h2 className="text-4xl font-bold text-white mb-4">
               API Features
             </h2>
@@ -133,7 +131,7 @@ const API: React.FC = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 hover:border-blue-400/30 transition-all duration-200 hover:scale-105"
-              >
+
                 <div className="w-12 h-12 bg-gradient-to-br from-blue-500/20 to-cyan-500/20 rounded-lg flex items-center justify-center mb-4">
                   <feature.icon className="w-6 h-6 text-blue-400" />
                 </div>
@@ -153,7 +151,7 @@ const API: React.FC = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
-          >
+
             <h2 className="text-4xl font-bold text-white mb-4">
               API Endpoints
             </h2>
@@ -170,7 +168,7 @@ const API: React.FC = () => {
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 hover:border-blue-400/30 transition-all duration-200"
-              >
+
                 <div className="flex items-center justify-between">
                   <div className="flex items-center space-x-4">
                     <span className={`px-3 py-1 rounded-full text-sm font-semibold ${
@@ -204,7 +202,7 @@ const API: React.FC = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
-          >
+
             <h2 className="text-4xl font-bold text-white mb-4">
               SDKs & Libraries
             </h2>
@@ -221,7 +219,7 @@ const API: React.FC = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 hover:border-blue-400/30 transition-all duration-200 hover:scale-105"
-              >
+
                 <div className="text-4xl mb-4">{sdk.icon}</div>
                 <h3 className="text-xl font-semibold text-white mb-2">{sdk.name}</h3>
                 <div className="flex space-x-2">
@@ -247,7 +245,7 @@ const API: React.FC = () => {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-          >
+
             <h2 className="text-4xl font-bold text-white mb-4">
               Ready to Get Started?
             </h2>
@@ -270,3 +268,4 @@ const API: React.FC = () => {
 };
 
 export default API;
+}}}

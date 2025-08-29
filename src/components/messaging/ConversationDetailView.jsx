@@ -1,7 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { format } from 'date-fns';
-import { MessageSquare } from 'lucide-react';
-import { useMessaging } from '@/context/MessagingContext';
+import { MessageSquare import { useMessaging } from '@/context/MessagingContext';
 import { Button } from '@/components/ui/button';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 import { AspectRatio } from '@/components/ui/aspect-ratio';
@@ -16,7 +15,7 @@ export function ConversationDetailView() {
     useEffect(() => {
         if (activeConversation) {
             loadMessages(activeConversation.id);
-        }
+
     }, [activeConversation?.id, loadMessages]);
     useEffect(() => {
         scrollToBottom();
@@ -39,7 +38,7 @@ export function ConversationDetailView() {
           Select a conversation from the list to view and send messages.
         </p>
       </div>);
-    }
+
     // Group messages by date
     const groupedMessages = [];
     activeMessages.forEach(message => {
@@ -47,13 +46,13 @@ export function ConversationDetailView() {
         const existingGroup = groupedMessages.find(group => group.date === messageDate);
         if (existingGroup) {
             existingGroup.messages.push(message);
-        }
+
         else {
             groupedMessages.push({
                 date: messageDate,
                 messages: [message]
             });
-        }
+
     });
     const hasContextData = activeConversation.context_data &&
         (activeConversation.context_data.title || activeConversation.context_data.description);
@@ -127,4 +126,4 @@ export function ConversationDetailView() {
         </form>
       </div>
     </div>);
-}
+</div>}}}}}}

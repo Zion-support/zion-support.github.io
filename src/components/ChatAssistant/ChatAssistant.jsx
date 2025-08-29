@@ -6,8 +6,7 @@ import { ChatMessage } from './ChatMessage';
 import { ChatInput } from './ChatInput';
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Button } from "@/components/ui/button";
-import { X } from "lucide-react";
-import { focusManagement } from '@/utils/accessibility';
+import { X import { focusManagement } from '@/utils/accessibility';
 export function ChatAssistant({ isOpen, onClose, recipient, conversationId, initialMessages = [], onSendMessage, contextHeader }) {
     const auth = useContext(AuthContext);
     const isGuest = !auth?.isAuthenticated;
@@ -29,18 +28,18 @@ export function ChatAssistant({ isOpen, onClose, recipient, conversationId, init
             if (initialMessages && initialMessages.length > 0) {
                 setDisplayGuestMessages(initialMessages);
                 setStoredGuestMessages(initialMessages); // Persist if initialMessages are provided
-            }
+
             else {
                 setDisplayGuestMessages(storedGuestMessages);
-            }
-        }
+
+
     }, [isGuest, initialMessages, storedGuestMessages, setStoredGuestMessages, recipient.id]);
     // Effect for logged-in user messages
     useEffect(() => {
         if (!isGuest) {
             // Update state if initialMessages prop changes (e.g. new conversation loaded)
             setLoggedInMessages(initialMessages);
-        }
+
     }, [isGuest, initialMessages, recipient.id]);
     // Determine currentMessages and setCurrentMessages based on isGuest
     const currentMessages = isGuest ? displayGuestMessages : loggedInMessages;
@@ -49,17 +48,17 @@ export function ChatAssistant({ isOpen, onClose, recipient, conversationId, init
             const newMessages = valueOrFn instanceof Function ? valueOrFn(displayGuestMessages) : valueOrFn;
             setDisplayGuestMessages(newMessages);
             setStoredGuestMessages(newMessages); // Always update localStorage for guests
-        }
+
         else {
             const newMessages = valueOrFn instanceof Function ? valueOrFn(loggedInMessages) : valueOrFn;
             setLoggedInMessages(newMessages);
-        }
+
     };
     const debouncedApiCallParams = useDebounce(pendingApiCallParams, 3000);
     useEffect(() => {
         if (debouncedApiCallParams) {
             onSendMessage(debouncedApiCallParams.message, debouncedApiCallParams.conversationId);
-        }
+
     }, [debouncedApiCallParams, onSendMessage]);
     useEffect(() => {
         scrollToBottom();
@@ -79,11 +78,11 @@ export function ChatAssistant({ isOpen, onClose, recipient, conversationId, init
             };
             setCurrentMessages((prev) => [...prev, newMessage]);
             setPendingApiCallParams({ message: messageContent, conversationId });
-        }
+
         else { // Guest user
             setGuestMessage(messageContent);
             setShowGuestModal(true);
-        }
+
     };
     const handleModalSendConfirm = () => {
         if (!guestMessage)
@@ -110,7 +109,7 @@ export function ChatAssistant({ isOpen, onClose, recipient, conversationId, init
             if (e.key === 'Escape') {
                 e.preventDefault();
                 handleModalCancel();
-            }
+
         };
         const removeTrap = guestModalRef.current ? focusManagement.trapFocus(guestModalRef.current) : undefined;
         document.addEventListener('keydown', handleKey);
@@ -126,7 +125,7 @@ export function ChatAssistant({ isOpen, onClose, recipient, conversationId, init
             if (e.key === 'Escape') {
                 e.preventDefault();
                 onClose();
-            }
+
         };
         document.addEventListener('keydown', handleKeyDown);
         return () => document.removeEventListener('keydown', handleKeyDown);
@@ -192,4 +191,4 @@ export function ChatAssistant({ isOpen, onClose, recipient, conversationId, init
           </div>
         </div>)}
     </div>);
-}
+</div>}}}}}}}}}}}}}

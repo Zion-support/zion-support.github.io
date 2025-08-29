@@ -148,8 +148,6 @@ import {
   Space,
   Handshake,
   Calendar
-} from 'lucide-react';
-
 const microSAASServices2028 = [
   // AI-Powered Content Creation
   {
@@ -493,7 +491,7 @@ const microSAASServices2028 = [
     rating: 4.6,
     reviews: 234,
     customers: 123
-  }
+
 ];
 
 const MicroSAASServices2028: React.FC = () => {
@@ -531,7 +529,7 @@ const MicroSAASServices2028: React.FC = () => {
         case 'popularity':
         default:
           return b.popular ? 1 : -1;
-      }
+
     });
 
   return (
@@ -545,7 +543,7 @@ const MicroSAASServices2028: React.FC = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="text-5xl md:text-7xl font-bold mb-6 text-gradient"
-          >
+
             Micro SAAS Services 2028
           </motion.h1>
           <motion.p
@@ -553,7 +551,7 @@ const MicroSAASServices2028: React.FC = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
             className="text-xl md:text-2xl text-zion-slate-light mb-8 max-w-4xl mx-auto"
-          >
+
             Powerful, affordable, and intelligent micro SAAS solutions designed to transform your business operations
           </motion.p>
           <motion.div
@@ -561,7 +559,7 @@ const MicroSAASServices2028: React.FC = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
             className="flex flex-wrap justify-center gap-4"
-          >
+
             <div className="bg-zion-cyan/20 backdrop-blur-sm border border-zion-cyan/30 rounded-full px-6 py-3 text-zion-cyan font-semibold">
               🚀 AI-Powered Solutions
             </div>
@@ -592,7 +590,7 @@ const MicroSAASServices2028: React.FC = () => {
                       ? 'bg-gradient-to-r ' + category.color + ' text-white shadow-lg'
                       : 'bg-zion-slate/50 text-zion-slate-light hover:bg-zion-slate/70'
                   }`}
-                >
+
                   <category.icon className="w-4 h-4" />
                   {category.name}
                 </motion.button>
@@ -615,7 +613,7 @@ const MicroSAASServices2028: React.FC = () => {
                 value={sortBy}
                 onChange={(e) => setSortBy(e.target.value)}
                 className="px-4 py-2 bg-zion-slate/50 border border-zion-slate/30 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-zion-cyan/50"
-              >
+
                 <option value="popularity">Most Popular</option>
                 <option value="rating">Highest Rated</option>
                 <option value="price-low">Price: Low to High</option>
@@ -637,7 +635,7 @@ const MicroSAASServices2028: React.FC = () => {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 className="group relative bg-zion-slate/30 backdrop-blur-sm border border-zion-slate/40 rounded-2xl p-6 hover:border-zion-cyan/50 transition-all duration-300 hover:shadow-2xl hover:shadow-zion-cyan/20"
-              >
+
                 {/* Popular Badge */}
                 {service.popular && (
                   <div className="absolute -top-3 -right-3 bg-gradient-to-r from-zion-cyan to-zion-purple text-white px-3 py-1 rounded-full text-sm font-semibold shadow-lg">
@@ -695,7 +693,7 @@ const MicroSAASServices2028: React.FC = () => {
                 <Link
                   to={service.link}
                   className="w-full bg-gradient-to-r from-zion-cyan to-zion-purple text-white py-3 px-6 rounded-lg font-semibold text-center group-hover:shadow-lg group-hover:shadow-zion-cyan/25 transition-all duration-300 flex items-center justify-center gap-2"
-                >
+
                   Learn More
                   <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" />
                 </Link>
@@ -727,7 +725,7 @@ const MicroSAASServices2028: React.FC = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="text-4xl md:text-5xl font-bold mb-6 text-gradient"
-          >
+
             Ready to Get Started?
           </motion.h2>
           <motion.p
@@ -735,7 +733,7 @@ const MicroSAASServices2028: React.FC = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
             className="text-xl text-zion-slate-light mb-8 max-w-3xl mx-auto"
-          >
+
             Contact our team to discuss how our micro SAAS services can transform your business operations
           </motion.p>
           <motion.div
@@ -743,18 +741,18 @@ const MicroSAASServices2028: React.FC = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
             className="flex flex-col sm:flex-row gap-4 justify-center"
-          >
+
             <a
               href="tel:+13024640950"
               className="bg-gradient-to-r from-zion-cyan to-zion-blue text-white px-8 py-4 rounded-lg font-semibold text-lg hover:shadow-lg hover:shadow-zion-cyan/25 transition-all duration-300 flex items-center justify-center gap-2"
-            >
+
               <Phone className="w-5 h-5" />
               +1 302 464 0950
             </a>
             <a
               href="mailto:kleber@ziontechgroup.com"
               className="bg-gradient-to-r from-zion-purple to-zion-cyan text-white px-8 py-4 rounded-lg font-semibold text-lg hover:shadow-lg hover:shadow-zion-cyan/25 transition-all duration-300 flex items-center justify-center gap-2"
-            >
+
               <Mail className="w-5 h-5" />
               kleber@ziontechgroup.com
             </a>
@@ -765,4 +763,4 @@ const MicroSAASServices2028: React.FC = () => {
   );
 };
 
-export default MicroSAASServices2028;
+export default MicroSAASServices2028;}}}

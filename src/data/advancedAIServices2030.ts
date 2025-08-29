@@ -226,5 +226,5 @@ export const ADVANCED_AI_SERVICES_2030: ProductListing[] = [
     roi: "500% within 12 months",
     setupTime: "4-6 weeks",
     integrations: ["LMS Systems", "Student Information Systems", "Content Libraries", "Assessment Tools", "Analytics Platforms"]
-  }
-];
+
+];}

@@ -1,4 +1,4 @@
-// console.log("main.tsx: Start");
+// // // console.log("main.tsx: Start");
 import React from 'react';
 import { createRoot, hydrateRoot } from 'react-dom/client';
 import App from './App.tsx';
@@ -58,11 +58,10 @@ function renderApp() {
     </React.StrictMode>);
     if (rootElement?.hasChildNodes()) {
         hydrateRoot(rootElement, app);
-    }
+
     else if (rootElement) {
         createRoot(rootElement).render(app);
-    }
-}
+
 
 function displayFatalError(message) {
     if (rootElement) {
@@ -71,17 +70,17 @@ function displayFatalError(message) {
         <h1>Application Error</h1>
         <p>${message}</p>
       </div>`;
-    }
-}
+
+
 try {
     renderApp();
-}
+
 catch (error) {
-    // console.error('Global error caught in main.tsx:', error);
+    // // // console.error('Global error caught in main.tsx:', error);
     displayFatalError(error.message);
-}
+
 window.addEventListener('error', (e) => {
-    // console.error('Unhandled error:', e.error || e.message);
+    // // // console.error('Unhandled error:', e.error || e.message);
     displayFatalError(e.message);
 });
 // Render the app with proper provider structure
@@ -107,3 +106,4 @@ ReactDOM.createRoot(document.getElementById('root')).render(<React.StrictMode>
       </QueryClientProvider>
     </HelmetProvider>
   </React.StrictMode>);
+}}}}}}}

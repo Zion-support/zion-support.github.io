@@ -1,8 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import { MessageCircle, Brain, Zap, Shield, BarChart3, Smartphone, Globe, TrendingUp, Target, Bell, Settings, FileText, Database, Cloud, Server, Award, BookOpen, Users, Clock, CheckCircle, Mail, Phone } from 'lucide-react';
-import { SEO } from '@/components/SEO';
+import { MessageCircle, Brain, Zap, Shield, BarChart3, Smartphone, Globe, TrendingUp, Target, Bell, Settings, FileText, Database, Cloud, Server, Award, BookOpen, Users, Clock, CheckCircle, Mail, Phone import { SEO } from '@/components/SEO';
 
 export default function AISupportHelpdesk() {
   const features = [
@@ -35,7 +34,7 @@ export default function AISupportHelpdesk() {
       icon: Globe,
       title: "Global Support",
       description: "Multi-language support with localization and timezone-aware routing for global teams."
-    }
+
   ];
 
   const aiCapabilities = [
@@ -68,7 +67,7 @@ export default function AISupportHelpdesk() {
       icon: Users,
       title: "Learning & Improvement",
       description: "Continuous learning from interactions to improve responses"
-    }
+
   ];
 
   const pricingPlans = [
@@ -118,7 +117,7 @@ export default function AISupportHelpdesk() {
         "On-premise options"
       ],
       popular: false
-    }
+
   ];
 
   const benefits = [
@@ -141,7 +140,7 @@ export default function AISupportHelpdesk() {
       title: "Gain Actionable Insights",
       description: "Understand customer needs and improve products with comprehensive support analytics.",
       icon: BarChart3
-    }
+
   ];
 
   const supportChannels = [
@@ -174,7 +173,7 @@ export default function AISupportHelpdesk() {
       icon: Users,
       title: "Social Media",
       description: "Monitor and respond to support requests across social platforms"
-    }
+
   ];
 
   return (
@@ -195,7 +194,7 @@ export default function AISupportHelpdesk() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6 }}
-              >
+
                 <h1 className="text-5xl md:text-6xl font-bold mb-6">
                   <span className="bg-gradient-to-r from-teal-400 via-cyan-500 to-blue-400 bg-clip-text text-transparent">
                     AI Support Helpdesk
@@ -209,13 +208,13 @@ export default function AISupportHelpdesk() {
                   <Link
                     to="/request-quote"
                     className="px-8 py-4 bg-gradient-to-r from-teal-500 to-cyan-600 rounded-lg font-semibold hover:from-teal-600 hover:to-cyan-700 transition-all duration-300 transform hover:scale-105"
-                  >
+
                     Start Free Trial
                   </Link>
                   <Link
                     to="/contact"
                     className="px-8 py-4 border-2 border-teal-500 text-teal-400 rounded-lg font-semibold hover:bg-teal-500 hover:text-white transition-all duration-300"
-                  >
+
                     Schedule Demo
                   </Link>
                 </div>
@@ -244,7 +243,7 @@ export default function AISupportHelpdesk() {
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
                   className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700 hover:border-teal-500 transition-all duration-300"
-                >
+
                   <div className="w-12 h-12 bg-gradient-to-r from-teal-500 to-cyan-600 rounded-lg flex items-center justify-center mb-4">
                     <feature.icon className="w-6 h-6 text-white" />
                   </div>
@@ -276,7 +275,7 @@ export default function AISupportHelpdesk() {
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
                   className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700 hover:border-cyan-500 transition-all duration-300"
-                >
+
                   <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg flex items-center justify-center mb-4">
                     <capability.icon className="w-6 h-6 text-white" />
                   </div>
@@ -308,7 +307,7 @@ export default function AISupportHelpdesk() {
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
                   className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700 hover:border-teal-500 transition-all duration-300"
-                >
+
                   <div className="w-12 h-12 bg-gradient-to-r from-teal-500 to-cyan-600 rounded-lg flex items-center justify-center mb-4">
                     <channel.icon className="w-6 h-6 text-white" />
                   </div>
@@ -340,7 +339,7 @@ export default function AISupportHelpdesk() {
                   whileInView={{ opacity: 1, x: 0 }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
                   className="flex items-start space-x-4"
-                >
+
                   <div className="w-12 h-12 bg-gradient-to-r from-teal-500 to-cyan-600 rounded-lg flex items-center justify-center flex-shrink-0">
                     <benefit.icon className="w-6 h-6 text-white" />
                   </div>
@@ -378,7 +377,7 @@ export default function AISupportHelpdesk() {
                       ? 'border-teal-500 ring-2 ring-teal-500/20'
                       : 'border-slate-700'
                   }`}
-                >
+
                   {plan.popular && (
                     <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                       <span className="bg-gradient-to-r from-teal-500 to-cyan-600 text-white px-4 py-2 rounded-full text-sm font-semibold">
@@ -412,7 +411,7 @@ export default function AISupportHelpdesk() {
                         ? 'bg-gradient-to-r from-teal-500 to-cyan-600 text-white hover:from-teal-600 hover:to-cyan-700'
                         : 'bg-slate-700 text-white hover:bg-slate-600'
                     }`}
-                  >
+
                     Get Started
                   </Link>
                 </motion.div>
@@ -428,7 +427,7 @@ export default function AISupportHelpdesk() {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
-            >
+
               <h2 className="text-4xl font-bold mb-6 text-white">
                 Ready to Transform Your Support?
               </h2>
@@ -439,13 +438,13 @@ export default function AISupportHelpdesk() {
                 <Link
                   to="/request-quote"
                   className="px-8 py-4 bg-gradient-to-r from-teal-500 to-cyan-600 rounded-lg font-semibold hover:from-teal-600 hover:to-cyan-700 transition-all duration-300 transform hover:scale-105"
-                >
+
                   Start Free Trial
                 </Link>
                 <Link
                   to="/contact"
                   className="px-8 py-4 border-2 border-teal-500 text-teal-400 rounded-lg font-semibold hover:bg-teal-500 hover:text-white transition-all duration-300"
-                >
+
                   Contact Sales
                 </Link>
               </div>
@@ -455,5 +454,4 @@ export default function AISupportHelpdesk() {
       </div>
     </>
   );
-}
-
+}}}}}}}

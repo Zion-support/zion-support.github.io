@@ -40,7 +40,6 @@ export interface EnterpriseITInfrastructureService {
   patentStatus: 'Patented' | 'Patent Pending' | 'Trade Secret' | 'Open Source';
   aiCapabilities: string[];
   marketDisruption: string;
-}
 
 const contact = {
   mobile: '+1 302 464 0950',
@@ -507,7 +506,7 @@ export const enterpriseITInfrastructureServices2025: EnterpriseITInfrastructureS
     patentStatus: 'Trade Secret',
     aiCapabilities: ['Autonomous Optimization', 'Performance Prediction', 'Automatic Routing', 'Traffic Optimization'],
     marketDisruption: 'Revolutionizes network management with autonomous AI'
-  }
+
 ];
 
-export default enterpriseITInfrastructureServices2025;
+export default enterpriseITInfrastructureServices2025;}}

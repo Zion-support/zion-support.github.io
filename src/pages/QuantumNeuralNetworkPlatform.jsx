@@ -1,6 +1,5 @@
 import React from 'react';
-import { Brain, Zap, Shield, TrendingUp, ArrowRight } from 'lucide-react';
-const QuantumNeuralNetworkPlatform = () => {
+import { Brain, Zap, Shield, TrendingUp, ArrowRight const QuantumNeuralNetworkPlatform = () => {
     const features = [
         {
             icon: Brain,
@@ -21,7 +20,7 @@ const QuantumNeuralNetworkPlatform = () => {
             icon: Shield,
             title: 'Quantum Security',
             description: 'Next-generation encryption and security protocols based on quantum mechanics principles.'
-        }
+
     ];
     const useCases = [
         {
@@ -43,7 +42,7 @@ const QuantumNeuralNetworkPlatform = () => {
             title: 'AI Training',
             description: 'Faster and more efficient training of large language models and neural networks.',
             icon: Brain
-        }
+
     ];
     const benefits = [
         'Exponential speedup in complex computations',
@@ -271,3 +270,4 @@ const QuantumNeuralNetworkPlatform = () => {
     </div>);
 };
 export default QuantumNeuralNetworkPlatform;
+}}}

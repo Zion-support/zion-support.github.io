@@ -1,8 +1,6 @@
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
-import { ArrowRight, Brain, Cloud, Shield, Zap, Database, Server, Lock, BarChart3, Users, Globe, Code, Search, Filter, Star, TrendingUp, Clock, Users2, Target, Rocket, Cpu, Database2, ShieldCheck, Globe2, Zap2, Brain2, Cloud2, Lock2 } from 'lucide-react'
-
-import { additionalEnhancedServices } from '../data/additional-real-services'
+import { ArrowRight, Brain, Cloud, Shield, Zap, Database, Server, Lock, BarChart3, Users, Globe, Code, Search, Filter, Star, TrendingUp, Clock, Users2, Target, Rocket, Cpu, Database2, ShieldCheck, Globe2, Zap2, Brain2, Cloud2, Lock2 import { additionalEnhancedServices } from '../data/additional-real-services'
 
 export default function Services() {
 	const [searchTerm, setSearchTerm] = useState('')
@@ -35,7 +33,7 @@ export default function Services() {
 					return new Date(b.launchDate || '2024-01-01').getTime() - new Date(a.launchDate || '2024-01-01').getTime()
 				default:
 					return 0
-			}
+
 		})
 
 	return (
@@ -91,7 +89,7 @@ export default function Services() {
 								value={selectedCategory}
 								onChange={(e) => setSelectedCategory(e.target.value)}
 								className="px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-							>
+
 								{categories.map(category => (
 									<option key={category} value={category}>
 										{category === 'all' ? 'All Categories' : category}
@@ -107,7 +105,7 @@ export default function Services() {
 								value={sortBy}
 								onChange={(e) => setSortBy(e.target.value)}
 								className="px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-							>
+
 								<option value="popularity">Most Popular</option>
 								<option value="price">Price: Low to High</option>
 								<option value="rating">Highest Rated</option>
@@ -266,14 +264,14 @@ export default function Services() {
 									<Link
 										to={service.link}
 										className="flex-1 inline-flex items-center justify-center px-4 py-2 text-sm font-semibold text-white bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-200"
-									>
+
 										Learn More
 										<ArrowRight className="ml-2 h-4 w-4" />
 									</Link>
 									<Link
 										to="/contact"
 										className="inline-flex items-center justify-center px-4 py-2 text-sm font-semibold text-blue-600 border border-blue-600 rounded-lg hover:bg-blue-50 transition-colors"
-									>
+
 										Contact
 									</Link>
 								</div>
@@ -343,14 +341,14 @@ export default function Services() {
 							<Link
 								to="/contact"
 								className="rounded-md bg-white px-6 py-3 text-sm font-semibold text-blue-600 shadow-sm hover:bg-gray-50 transition-colors"
-							>
+
 								Get in touch
 								<ArrowRight className="ml-2 h-4 w-4 inline" />
 							</Link>
 							<a
 								href="tel:+13024640950"
 								className="rounded-md border border-white px-6 py-3 text-sm font-semibold text-white hover:bg-white hover:text-blue-600 transition-colors"
-							>
+
 								Call Now
 							</a>
 						</div>
@@ -359,4 +357,4 @@ export default function Services() {
 			</section>
 		</>
 	)
-}
+}}}

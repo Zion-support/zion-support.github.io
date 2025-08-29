@@ -1,6 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { Bell, X, CheckCircle, AlertTriangle, Info, XCircle, Search, Trash2, Eye, EyeOff } from 'lucide-react';
-const mockNotifications = [
+import { Bell, X, CheckCircle, AlertTriangle, Info, XCircle, Search, Trash2, Eye, EyeOff const mockNotifications = [
     {
         id: '1',
         title: 'Project Milestone Achieved',
@@ -12,8 +11,8 @@ const mockNotifications = [
         isRead: false,
         isArchived: false,
         actions: [
-            { label: 'View Details', action: () => // console.log('View project'), variant: 'primary' },
-            { label: 'Archive', action: () => // console.log('Archive'), variant: 'secondary' }
+            { label: 'View Details', action: () => // // console.log('View project'), variant: 'primary' },
+            { label: 'Archive', action: () => // // console.log('Archive'), variant: 'secondary' }
         ]
     },
     {
@@ -27,8 +26,8 @@ const mockNotifications = [
         isRead: false,
         isArchived: false,
         actions: [
-            { label: 'Review Activity', action: () => // console.log('Review security'), variant: 'primary' },
-            { label: 'Dismiss', action: () => // console.log('Dismiss'), variant: 'secondary' }
+            { label: 'Review Activity', action: () => // // console.log('Review security'), variant: 'primary' },
+            { label: 'Dismiss', action: () => // // console.log('Dismiss'), variant: 'secondary' }
         ]
     },
     {
@@ -42,8 +41,8 @@ const mockNotifications = [
         isRead: false,
         isArchived: false,
         actions: [
-            { label: 'Investigate', action: () => // console.log('Investigate'), variant: 'primary' },
-            { label: 'Acknowledge', action: () => // console.log('Acknowledge'), variant: 'secondary' }
+            { label: 'Investigate', action: () => // // console.log('Investigate'), variant: 'primary' },
+            { label: 'Acknowledge', action: () => // // console.log('Acknowledge'), variant: 'secondary' }
         ]
     },
     {
@@ -57,10 +56,10 @@ const mockNotifications = [
         isRead: true,
         isArchived: false,
         actions: [
-            { label: 'Deploy Now', action: () => // console.log('Deploy'), variant: 'primary' },
-            { label: 'Schedule', action: () => // console.log('Schedule'), variant: 'secondary' }
+            { label: 'Deploy Now', action: () => // // console.log('Deploy'), variant: 'primary' },
+            { label: 'Schedule', action: () => // // console.log('Schedule'), variant: 'secondary' }
         ]
-    }
+
 ];
 export function AdvancedNotificationSystem() {
     const [notifications, setNotifications] = useState(mockNotifications);
@@ -105,7 +104,7 @@ export function AdvancedNotificationSystem() {
             case 'error': return <XCircle className="w-5 h-5 text-red-500"/>;
             case 'info': return <Info className="w-5 h-5 text-zion-cyan"/>;
             default: return <Info className="w-5 h-5 text-zion-slate"/>;
-        }
+
     };
     const getPriorityColor = (priority) => {
         switch (priority) {
@@ -114,7 +113,7 @@ export function AdvancedNotificationSystem() {
             case 'high': return 'border-l-zion-gold';
             case 'critical': return 'border-l-red-500';
             default: return 'border-l-zion-slate';
-        }
+
     };
     const getTimeAgo = (timestamp) => {
         const now = new Date();
@@ -146,7 +145,7 @@ export function AdvancedNotificationSystem() {
             {unreadCount > 9 ? '9+' : unreadCount}
           </span>)}
       </button>);
-    }
+
     if (isMinimized) {
         return (<div className="fixed bottom-4 right-36 z-50">
         <div className="bg-white dark:bg-zion-slate border border-zion-slate-light rounded-lg shadow-lg p-3">
@@ -161,7 +160,7 @@ export function AdvancedNotificationSystem() {
           </div>
         </div>
       </div>);
-    }
+
     return (<div className="fixed bottom-4 right-4 w-96 h-[600px] bg-white dark:bg-zion-slate border border-zion-slate-light rounded-lg shadow-2xl z-50 flex flex-col" ref={containerRef}>
       {/* Header */}
       <div className="flex items-center justify-between p-4 border-b border-zion-slate-light bg-gradient-to-r from-zion-emerald/10 to-zion-cyan/10">
@@ -295,4 +294,4 @@ export function AdvancedNotificationSystem() {
           </div>)}
       </div>
     </div>);
-}
+}}}}}}}

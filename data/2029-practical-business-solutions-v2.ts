@@ -38,7 +38,7 @@ export interface PracticalBusinessSolution2029 {
   customers: number;
   rating: number;
   reviews: number;
-}
+
 export const practicalBusinessSolutions2029: PracticalBusinessSolution2029[] = [
   // AI-Powered Business Intelligence
   {
@@ -455,7 +455,7 @@ export const practicalBusinessSolutions2029: PracticalBusinessSolution2029[] = [
     customers: 134,
     rating: 4.9,
     reviews: 198
-  }
+
 ];
 export const getPopularPracticalBusinessSolutions2029 = () => {
   return practicalBusinessSolutions2029.filter(service => service.popular);
@@ -468,4 +468,4 @@ export const getPracticalBusinessSolutions2029ByPriceRange = (minPrice: number, 
     const price = parseInt(service.price.replace(/[^0-9]/g, ''));
     return price >= minPrice && price <= maxPrice;
   });
-};
+};}}

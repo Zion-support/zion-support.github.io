@@ -1,6 +1,4 @@
-import { Database, Shield, BarChart3, ArrowRight, Check, ExternalLink, Phone, Mail, Lock, Eye, Users, FileText, Zap, Globe } from 'lucide-react';
-
-export default function AIDataGovernancePlatform() {
+import { Database, Shield, BarChart3, ArrowRight, Check, ExternalLink, Phone, Mail, Lock, Eye, Users, FileText, Zap, Globe export default function AIDataGovernancePlatform() {
   const features = [
     'AI-powered data discovery and classification',
     'Automated data quality assessment and monitoring',
@@ -155,4 +153,4 @@ export default function AIDataGovernancePlatform() {
       </section>
     </div>
   );
-}
+}}

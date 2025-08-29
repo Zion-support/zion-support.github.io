@@ -1,7 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Shield, Lock, Eye, Users, Network, ArrowRight, CheckCircle, Cloud } from 'lucide-react';
-const CybersecurityServices = () => {
+import { Shield, Lock, Eye, Users, Network, ArrowRight, CheckCircle, Cloud const CybersecurityServices = () => {
     const securityServices = [
         {
             title: "Threat Detection & Response",
@@ -74,7 +73,7 @@ const CybersecurityServices = () => {
                 "Cloud Access Security",
                 "Data Sovereignty"
             ]
-        }
+
     ];
     const benefits = [
         "Protect against evolving cyber threats",
@@ -254,3 +253,4 @@ const CybersecurityServices = () => {
     </div>);
 };
 export default CybersecurityServices;
+}}

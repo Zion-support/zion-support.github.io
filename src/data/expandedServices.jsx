@@ -477,7 +477,7 @@ export const EXPANDED_SERVICES = [
         location: "Global",
         availability: "12-16 Weeks",
         aiScore: 94
-    }
+
 ];
 // Service categories for filtering
 export const EXPANDED_SERVICE_CATEGORIES = [
@@ -512,3 +512,4 @@ export const EXPANDED_SERVICE_SUBCATEGORIES = {
 
 // Alias exports for backward compatibility
 export const SERVICE_CATEGORIES = EXPANDED_SERVICE_CATEGORIES;
+}

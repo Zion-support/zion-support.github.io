@@ -6,7 +6,6 @@ export interface ServiceContact {
   email: string;
   website: string;
   address: string;
-}
 
 export interface ITService {
   id: number;
@@ -33,7 +32,6 @@ export interface ITService {
   useCases: string[];
   roi: string;
   setupTime: string;
-}
 
 // Zion Tech Group Contact Information
 const zionContact: ServiceContact = {
@@ -614,7 +612,7 @@ export const comprehensiveITServices2030: ITService[] = [
     ],
     roi: "500% within 24 months",
     setupTime: "4-16 weeks"
-  }
+
 ];
 
-export default comprehensiveITServices2030;
+export default comprehensiveITServices2030;}}}

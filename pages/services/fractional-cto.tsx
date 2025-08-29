@@ -32,5 +32,4 @@ export default function FractionalCTO() {
       </main>
     </div>
   );
-}
-
+</div></div></div></div>}

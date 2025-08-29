@@ -1,7 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Cpu, Zap, Brain, Target, Shield, Users, Globe, Atom, CircuitBoard } from 'lucide-react';
-const QuantumComputing = () => {
+import { Cpu, Zap, Brain, Target, Shield, Users, Globe, Atom, CircuitBoard const QuantumComputing = () => {
     const quantumServices = [
         {
             icon: Brain,
@@ -30,7 +29,7 @@ const QuantumComputing = () => {
             description: "Simulate complex quantum systems for research, drug discovery, materials science, and financial modeling.",
             features: ["Molecular Modeling", "Financial Simulation", "Material Science", "Research Applications"],
             path: "/solutions/quantum-simulation"
-        }
+
     ];
     const applications = [
         {
@@ -52,7 +51,7 @@ const QuantumComputing = () => {
             icon: Globe,
             title: "Logistics",
             description: "Solve complex optimization problems in supply chain management and route planning"
-        }
+
     ];
     return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       {/* Hero Section */}
@@ -212,3 +211,4 @@ const QuantumComputing = () => {
     </div>);
 };
 export default QuantumComputing;
+}}}

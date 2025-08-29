@@ -23,7 +23,7 @@ export function LoadingSpinner({ size = 'md', variant = 'default', className = '
           {text}
         </motion.p>)}
     </div>);
-}
+
 // Page loading component
 export function PageLoader() {
     return (<div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-900 via-blue-800 to-slate-900">
@@ -33,11 +33,11 @@ export function PageLoader() {
         <p className="mt-2 text-blue-200">Please wait while we prepare your experience.</p>
       </div>
     </div>);
-}
+
 // Inline loading component
 export function InlineLoader({ size = 'sm', variant = 'default' }) {
     return (<div className="inline-flex items-center">
       <LoadingSpinner size={size} variant={variant} className="mr-2"/>
       <span className="text-sm text-gray-600">Loading...</span>
     </div>);
-}
+}}}

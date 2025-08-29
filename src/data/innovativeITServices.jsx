@@ -470,5 +470,6 @@ export const INNOVATIVE_IT_SERVICES = [
         competitors: ["Schneider Electric", "Siemens", "Honeywell", "Johnson Controls", "Sustainability platforms"],
         marketSize: "$7.6 billion",
         growthRate: "19.2% annually"
-    }
+
 ];
+}

@@ -584,6 +584,7 @@ export const COMPREHENSIVE_IT_SERVICES_2025 = [
         scalability: "Project management services for projects of all sizes",
         customizationLevel: "Custom project management methodologies and tools",
         serviceLevel: "Comprehensive project management and support"
-    }
+
 ];
 export default COMPREHENSIVE_IT_SERVICES_2025;
+}

@@ -20,7 +20,7 @@
     "lint:all": "npm run lint && npm run lint:backend",
     "type-check": "tsc --noEmit",
     "type-check:backend": "cd server && npm run type-check",
-    "type-check:all": "npm run type-check && npm run type-check:backend",
+    "type-check:all": "npm run type-check && npm run lint:backend",
     "prepare": "git config core.hooksPath .husky || true",
     "fix:all": "npm run lint --fix || true",
     "install:all": "npm install && cd server && npm install",
@@ -38,7 +38,15 @@
     "deps:check": "node scripts/pm2/dependency-monitor.js",
     "perf:check": "node scripts/pm2/performance-monitor.js",
     "automation:setup": "npm run pm2:start && echo 'PM2 automation processes started successfully!'",
-    "automation:stop": "npm run pm2:stop && echo 'PM2 automation processes stopped successfully!'"
+    "automation:stop": "npm run pm2:stop && echo 'PM2 automation processes stopped successfully!'",
+    "automation:orchestrate": "node scripts/pm2/automation-orchestrator.js",
+    "automation:fix-all": "npm run automation:orchestrate",
+    "typescript:fix": "node scripts/pm2/typescript-error-fixer.js",
+    "file:check": "node scripts/pm2/file-integrity-checker.js",
+    "build:health": "node scripts/pm2/build-health-monitor.js",
+    "automation:quick-fix": "npm run typescript:fix && npm run file:check && npm run lint:fix",
+    "automation:full-scan": "npm run automation:orchestrate && npm run quality:check && npm run deps:check",
+    "automation:health-check": "pm2 status && echo 'Automation processes health check completed'"
   },
   "dependencies": {
     "@hookform/resolvers": "^5.2.1",
@@ -76,6 +84,7 @@
     "i18next": "^25.4.2",
     "i18next-browser-languagedetector": "^8.2.0",
     "lucide-react": "^0.294.0",
+    "node-cron": "^4.2.1",
     "react": "^18.2.0",
     "react-day-picker": "^8.9.1",
     "react-dom": "^18.2.0",

@@ -1,8 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { TrendingUp, BarChart3, Activity, Target, Users, Database, Zap, Brain, Globe, Shield, Clock } from 'lucide-react';
-const AIBusinessIntelligence = () => {
+import { TrendingUp, BarChart3, Activity, Target, Users, Database, Zap, Brain, Globe, Shield, Clock const AIBusinessIntelligence = () => {
     const features = [
         {
             icon: Brain,
@@ -27,7 +26,7 @@ const AIBusinessIntelligence = () => {
             title: "Performance Tracking",
             description: "Monitor and measure business performance against goals and benchmarks in real-time",
             benefits: ["KPI monitoring", "Goal tracking", "Benchmarking", "Performance alerts"]
-        }
+
     ];
     const solutions = [
         {
@@ -73,7 +72,7 @@ const AIBusinessIntelligence = () => {
                 "Employee retention prediction",
                 "Training effectiveness analysis"
             ]
-        }
+
     ];
     const technologies = [
         {
@@ -105,7 +104,7 @@ const AIBusinessIntelligence = () => {
             name: "24/7 Monitoring",
             description: "Continuous monitoring and alerting",
             icon: Clock
-        }
+
     ];
     const containerVariants = {
         hidden: { opacity: 0 },
@@ -113,8 +112,8 @@ const AIBusinessIntelligence = () => {
             opacity: 1,
             transition: {
                 staggerChildren: 0.1
-            }
-        }
+
+
     };
     const itemVariants = {
         hidden: { y: 20, opacity: 0 },
@@ -123,8 +122,8 @@ const AIBusinessIntelligence = () => {
             opacity: 1,
             transition: {
                 duration: 0.5
-            }
-        }
+
+
     };
     return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       {/* Hero Section */}
@@ -267,5 +266,6 @@ const AIBusinessIntelligence = () => {
         </div>
       </div>
     </div>);
-};
+</div>};
 export default AIBusinessIntelligence;
+}}}}}}}}

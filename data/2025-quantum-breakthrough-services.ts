@@ -30,7 +30,7 @@ export const quantumBreakthroughServices2025 = [
         price: 49999,
         period: 'month',
         features: ['Full quantum platform', 'White-label solution', 'Dedicated support', 'Custom development', '24/7 monitoring']
-      }
+
     },
     category: 'Quantum Internet & Security',
     tags: ['Quantum Computing', 'Internet Security', 'Cryptography', 'Network Security', 'Government Compliance'],
@@ -83,7 +83,7 @@ export const quantumBreakthroughServices2025 = [
         price: 39999,
         period: 'month',
         features: ['Full bio-computing platform', 'White-label solution', 'Dedicated support', 'Custom development', '24/7 monitoring']
-      }
+
     },
     category: 'Quantum Biology',
     tags: ['Quantum Computing', 'Biology', 'Drug Discovery', 'Medical Research', 'Protein Folding'],
@@ -136,7 +136,7 @@ export const quantumBreakthroughServices2025 = [
         price: 59999,
         period: 'month',
         features: ['Full neural platform', 'White-label solution', 'Dedicated support', 'Custom development', '24/7 monitoring']
-      }
+
     },
     category: 'Neural Interfaces',
     tags: ['Brain-Computer Interface', 'Neural Networks', 'AI', 'Medical Technology', 'Human-AI Collaboration'],
@@ -189,7 +189,7 @@ export const quantumBreakthroughServices2025 = [
         price: 79999,
         period: 'month',
         features: ['Full space mining platform', 'White-label solution', 'Dedicated support', 'Custom development', '24/7 monitoring']
-      }
+
     },
     category: 'Space Technology',
     tags: ['Space Mining', 'Autonomous Systems', 'AI', 'Robotics', 'Resource Extraction'],
@@ -242,7 +242,7 @@ export const quantumBreakthroughServices2025 = [
         price: 29999,
         period: 'month',
         features: ['Full energy platform', 'White-label solution', 'Dedicated support', 'Custom development', '24/7 monitoring']
-      }
+
     },
     category: 'Quantum Energy',
     tags: ['Quantum Computing', 'Energy Management', 'Smart Grid', 'Renewable Energy', 'Optimization'],
@@ -263,5 +263,5 @@ export const quantumBreakthroughServices2025 = [
     ],
     integrations: ['Energy management systems', 'Smart grid infrastructure', 'Renewable energy systems', 'Utility platforms', 'Monitoring systems'],
     compliance: ['Energy regulations', 'Grid standards', 'SOC2', 'ISO 27001', 'Energy safety standards']
-  }
-];
+
+];}}}}}}

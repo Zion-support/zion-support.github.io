@@ -17,7 +17,7 @@ export default function ProductsAdminPage() {
             ? {
                 ...p,
                 status: p.status === 'approved' ? 'rejected' : 'approved',
-            }
+
             : p));
     };
     return (<AdminLayout>
@@ -52,4 +52,4 @@ export default function ProductsAdminPage() {
         </div>
       </div>
     </AdminLayout>);
-}
+}}

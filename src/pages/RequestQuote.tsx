@@ -35,8 +35,6 @@ import {
   Square,
   Info,
   HelpCircle
-} from 'lucide-react';
-
 interface QuoteForm {
   // Company Information
   companyName: string;
@@ -71,7 +69,6 @@ interface QuoteForm {
   existingPartners: string;
   successMetrics: string;
   additionalNotes: string;
-}
 
 const industries = [
   'Technology',
@@ -211,13 +208,13 @@ export default function RequestQuote() {
   const nextStep = () => {
     if (currentStep < totalSteps) {
       setCurrentStep(currentStep + 1);
-    }
+
   };
 
   const prevStep = () => {
     if (currentStep > 1) {
       setCurrentStep(currentStep - 1);
-    }
+
   };
 
   const handleSubmit = async (e: React.FormEvent) => {
@@ -275,7 +272,7 @@ export default function RequestQuote() {
         return true; // Additional info is optional
       default:
         return false;
-    }
+
   };
 
   const getStepIcon = (step: number) => {
@@ -285,7 +282,7 @@ export default function RequestQuote() {
       case 3: return <Calculator className="h-5 w-5" />;
       case 4: return <FileText className="h-5 w-5" />;
       default: return <CheckCircle className="h-5 w-5" />;
-    }
+
   };
 
   const getStepTitle = (step: number) => {
@@ -295,7 +292,7 @@ export default function RequestQuote() {
       case 3: return 'Budget & Timeline';
       case 4: return 'Additional Info';
       default: return 'Complete';
-    }
+
   };
 
   return (
@@ -307,7 +304,7 @@ export default function RequestQuote() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
-        >
+
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
             Request a Quote
           </h1>
@@ -323,7 +320,7 @@ export default function RequestQuote() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.1 }}
-        >
+
           <div className="flex items-center justify-between max-w-4xl mx-auto">
             {Array.from({ length: totalSteps }, (_, index) => (
               <div key={index + 1} className="flex items-center">
@@ -368,7 +365,7 @@ export default function RequestQuote() {
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
             className="mb-8 p-6 bg-green-500/20 border border-green-500/30 rounded-2xl flex items-center gap-4 max-w-2xl mx-auto"
-          >
+
             <CheckCircle className="h-8 w-8 text-green-500" />
             <div>
               <h3 className="text-green-400 font-bold text-lg">Quote Request Submitted!</h3>
@@ -386,7 +383,7 @@ export default function RequestQuote() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.2 }}
-        >
+
           <form onSubmit={handleSubmit} className="bg-white/5 backdrop-blur-xl border border-zion-cyan/20 rounded-3xl p-8">
             {/* Step 1: Company & Contact Information */}
             {currentStep === 1 && (
@@ -395,7 +392,7 @@ export default function RequestQuote() {
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.4 }}
                 className="space-y-6"
-              >
+
                 <div className="text-center mb-8">
                   <h2 className="text-2xl font-bold text-white mb-2">Company & Contact Information</h2>
                   <p className="text-zion-slate-light">Tell us about your company and how to reach you</p>
@@ -429,7 +426,7 @@ export default function RequestQuote() {
                       onChange={handleInputChange}
                       required
                       className="w-full bg-white/10 backdrop-blur-xl border border-zion-cyan/30 rounded-xl px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent transition-all duration-300"
-                    >
+
                       <option value="">Select industry</option>
                       {industries.map(industry => (
                         <option key={industry} value={industry} className="bg-zion-slate-dark text-white">
@@ -449,7 +446,7 @@ export default function RequestQuote() {
                       value={formData.companySize}
                       onChange={handleInputChange}
                       className="w-full bg-white/10 backdrop-blur-xl border border-zion-cyan/30 rounded-xl px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent transition-all duration-300"
-                    >
+
                       <option value="">Select company size</option>
                       {companySizes.map(size => (
                         <option key={size} value={size} className="bg-zion-slate-dark text-white">
@@ -562,7 +559,7 @@ export default function RequestQuote() {
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.4 }}
                 className="space-y-6"
-              >
+
                 <div className="text-center mb-8">
                   <h2 className="text-2xl font-bold text-white mb-2">Project Details</h2>
                   <p className="text-zion-slate-light">Describe your project and what you need</p>
@@ -612,7 +609,7 @@ export default function RequestQuote() {
                       onChange={handleInputChange}
                       required
                       className="w-full bg-white/10 backdrop-blur-xl border border-zion-cyan/30 rounded-xl px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent transition-all duration-300"
-                    >
+
                       <option value="">Select project type</option>
                       {projectTypes.map(type => (
                         <option key={type} value={type} className="bg-zion-slate-dark text-white">
@@ -651,7 +648,7 @@ export default function RequestQuote() {
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.4 }}
                 className="space-y-6"
-              >
+
                 <div className="text-center mb-8">
                   <h2 className="text-2xl font-bold text-white mb-2">Budget & Timeline</h2>
                   <p className="text-zion-slate-light">Help us understand your constraints and priorities</p>
@@ -669,7 +666,7 @@ export default function RequestQuote() {
                       onChange={handleInputChange}
                       required
                       className="w-full bg-white/10 backdrop-blur-xl border border-zion-cyan/30 rounded-xl px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent transition-all duration-300"
-                    >
+
                       <option value="">Select budget range</option>
                       {budgets.map(budget => (
                         <option key={budget} value={budget} className="bg-zion-slate-dark text-white">
@@ -690,7 +687,7 @@ export default function RequestQuote() {
                       onChange={handleInputChange}
                       required
                       className="w-full bg-white/10 backdrop-blur-xl border border-zion-cyan/30 rounded-xl px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent transition-all duration-300"
-                    >
+
                       <option value="">Select timeline</option>
                       {timelines.map(timeline => (
                         <option key={timeline} value={timeline} className="bg-zion-slate-dark text-white">
@@ -711,7 +708,7 @@ export default function RequestQuote() {
                       onChange={handleInputChange}
                       required
                       className="w-full bg-white/10 backdrop-blur-xl border border-zion-cyan/30 rounded-xl px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent transition-all duration-300"
-                    >
+
                       <option value="">Select urgency level</option>
                       {urgencyLevels.map(level => (
                         <option key={level} value={level} className="bg-zion-slate-dark text-white">
@@ -731,7 +728,7 @@ export default function RequestQuote() {
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.4 }}
                 className="space-y-6"
-              >
+
                 <div className="text-center mb-8">
                   <h2 className="text-2xl font-bold text-white mb-2">Additional Information</h2>
                   <p className="text-zion-slate-light">Help us provide a more accurate quote</p>
@@ -763,7 +760,7 @@ export default function RequestQuote() {
                       value={formData.teamSize}
                       onChange={handleInputChange}
                       className="w-full bg-white/10 backdrop-blur-xl border border-zion-cyan/30 rounded-xl px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent transition-all duration-300"
-                    >
+
                       <option value="">Select team size</option>
                       {teamSizes.map(size => (
                         <option key={size} value={size} className="bg-zion-slate-dark text-white">
@@ -828,7 +825,7 @@ export default function RequestQuote() {
                 onClick={prevStep}
                 disabled={currentStep === 1}
                 className="px-6 py-3 border border-zion-cyan text-zion-cyan rounded-xl hover:bg-zion-cyan hover:text-white transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
-              >
+
                 Previous
               </button>
 
@@ -842,7 +839,7 @@ export default function RequestQuote() {
                   onClick={nextStep}
                   disabled={!isStepValid(currentStep)}
                   className="px-6 py-3 bg-gradient-to-r from-zion-cyan to-zion-purple text-white rounded-xl hover:from-zion-cyan-dark hover:to-zion-purple-dark transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed flex items-center gap-2"
-                >
+
                   Next Step
                   <ArrowRight className="h-4 w-4" />
                 </button>
@@ -851,7 +848,7 @@ export default function RequestQuote() {
                   type="submit"
                   disabled={isSubmitting}
                   className="px-8 py-3 bg-gradient-to-r from-zion-cyan to-zion-purple text-white rounded-xl hover:from-zion-cyan-dark hover:to-zion-purple-dark transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed flex items-center gap-2"
-                >
+
                   {isSubmitting ? (
                     <>
                       <div className="w-4 h-4 border-2 border-white/30 border-t-white rounded-full animate-spin"></div>
@@ -875,7 +872,7 @@ export default function RequestQuote() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.4 }}
-        >
+
           <h2 className="text-3xl font-bold text-white mb-12">Why Choose Zion Tech Group?</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
             <div className="bg-white/5 backdrop-blur-xl border border-zion-cyan/20 rounded-2xl p-6">
@@ -916,7 +913,7 @@ export default function RequestQuote() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.6 }}
-        >
+
           <div className="bg-white/5 backdrop-blur-xl border border-zion-cyan/20 rounded-3xl p-8 max-w-4xl mx-auto">
             <h2 className="text-2xl font-bold text-white mb-6">Need Immediate Assistance?</h2>
             <p className="text-zion-slate-light mb-8">
@@ -926,14 +923,14 @@ export default function RequestQuote() {
               <a
                 href="tel:+13024640950"
                 className="inline-flex items-center bg-gradient-to-r from-zion-cyan to-zion-purple text-white px-6 py-3 rounded-xl hover:from-zion-cyan-dark hover:to-zion-purple-dark transition-all duration-300"
-              >
+
                 <Phone className="mr-2 h-4 w-4" />
                 Call Now: +1 (302) 464-0950
               </a>
               <a
                 href="/contact"
                 className="inline-flex items-center border border-zion-cyan text-zion-cyan px-6 py-3 rounded-xl hover:bg-zion-cyan hover:text-white transition-all duration-300"
-              >
+
                 <MessageCircle className="mr-2 h-4 w-4" />
                 Live Chat
               </a>
@@ -943,4 +940,4 @@ export default function RequestQuote() {
       </div>
     </div>
   );
-}
+</div>}}}}}}}}

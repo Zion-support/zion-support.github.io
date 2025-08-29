@@ -1,7 +1,6 @@
 import React from 'react';
 import { SEO } from "@/components/SEO";
-import { Shield, Database, Monitor } from 'lucide-react';
-const ITSolutions = () => {
+import { Shield, Database, Monitor const ITSolutions = () => {
     const features = [
         {
             icon: Settings,
@@ -22,7 +21,7 @@ const ITSolutions = () => {
             icon: Shield,
             title: "IT Security",
             description: "Multi-layered security for your IT infrastructure"
-        }
+
     ];
     const benefits = [
         "Improved system reliability and performance",
@@ -116,3 +115,4 @@ const ITSolutions = () => {
     </div>);
 };
 export default ITSolutions;
+}}

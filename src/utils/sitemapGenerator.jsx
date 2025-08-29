@@ -5,7 +5,7 @@ export class SitemapGenerator {
             outputPath: './public/sitemap.xml',
             ...config
         };
-    }
+
     /**
      * Generate XML sitemap content
      */
@@ -24,7 +24,7 @@ export class SitemapGenerator {
             return urlElement.replace(/\s+/g, ' ').trim();
         }).join('');
         return `${xmlHeader}\n${urlsetOpen}\n${urlElements}\n${urlsetClose}`;
-    }
+
     /**
      * Generate sitemap index for large sites
      */
@@ -39,7 +39,7 @@ export class SitemapGenerator {
       </sitemap>`;
         }).join('');
         return `${xmlHeader}\n${sitemapindexOpen}\n${sitemapElements}\n${sitemapindexClose}`;
-    }
+
     /**
      * Generate robots.txt content
      */
@@ -68,7 +68,7 @@ Allow: /careers/
 
 # Crawl delay (optional)
 Crawl-delay: 1`;
-    }
+
     /**
      * Generate JSON sitemap for JavaScript applications
      */
@@ -83,7 +83,7 @@ Crawl-delay: 1`;
             }))
         };
         return JSON.stringify(jsonSitemap, null, 2);
-    }
+
     /**
      * Generate HTML sitemap for users
      */
@@ -175,8 +175,8 @@ Crawl-delay: 1`;
 </body>
 </html>`;
         return html;
-    }
-}
+
+
 // Default sitemap configuration for Zion Tech Group
 export const defaultSitemapConfig = {
     baseUrl: 'https://ziontechgroup.com',
@@ -238,10 +238,11 @@ export const generateAllSitemaps = async (config = defaultSitemapConfig) => {
             html: htmlSitemap,
             json: jsonSitemap
         };
-    }
+
     catch (error) {
-        // console.error('Error generating sitemaps:', error);
+        // // // console.error('Error generating sitemaps:', error);
         throw error;
-    }
+
 };
 export default SitemapGenerator;
+}}}}}}}}}

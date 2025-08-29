@@ -13,7 +13,6 @@ import {
   Mail,
   Phone,
   MapPin
-} from 'lucide-react';
 import { SEO } from '../components/SEO';
 
 export default function Privacy() {
@@ -37,7 +36,7 @@ export default function Privacy() {
       icon: Users,
       title: 'User Control',
       description: 'You have full control over your personal data and can manage it at any time.'
-    }
+
   ];
 
   const dataCategories = [
@@ -60,7 +59,7 @@ export default function Privacy() {
       title: 'Communication Data',
       description: 'Records of our interactions and communications',
       examples: ['Support tickets', 'Email correspondence', 'Chat logs']
-    }
+
   ];
 
   const dataUses = [
@@ -79,7 +78,7 @@ export default function Privacy() {
     {
       purpose: 'Security',
       description: 'To protect against fraud, abuse, and ensure the security of our services.'
-    }
+
   ];
 
   const userRights = [
@@ -106,7 +105,7 @@ export default function Privacy() {
     {
       right: 'Restriction',
       description: 'Request limitation of processing your personal data.'
-    }
+
   ];
 
   return (
@@ -125,7 +124,7 @@ export default function Privacy() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             className="text-center"
-          >
+
             <div className="inline-flex items-center px-4 py-2 bg-blue-400/20 text-blue-400 rounded-full text-sm font-medium mb-6">
               <Shield className="w-4 h-4 mr-2" />
               Privacy & Data Protection
@@ -153,7 +152,7 @@ export default function Privacy() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
-          >
+
             <h2 className="text-4xl font-bold text-white mb-6">
               Our Privacy Principles
             </h2>
@@ -171,7 +170,7 @@ export default function Privacy() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 className="bg-slate-800/50 p-6 rounded-xl border border-slate-700/50 hover:border-blue-400/50 transition-all duration-300 hover:scale-105"
-              >
+
                 <div className="w-16 h-16 bg-gradient-to-br from-blue-400/20 to-purple-500/20 rounded-xl flex items-center justify-center mb-6">
                   <principle.icon className="w-8 h-8 text-blue-400" />
                 </div>
@@ -191,7 +190,7 @@ export default function Privacy() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
-          >
+
             <h2 className="text-4xl font-bold text-white mb-6">
               Information We Collect
             </h2>
@@ -209,7 +208,7 @@ export default function Privacy() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 className="bg-slate-800/50 p-8 rounded-xl border border-slate-700/50 hover:border-blue-400/50 transition-all duration-300 hover:scale-105"
-              >
+
                 <h3 className="text-2xl font-semibold text-white mb-4">{category.title}</h3>
                 <p className="text-gray-300 mb-6">{category.description}</p>
                 <div className="space-y-2">
@@ -234,7 +233,7 @@ export default function Privacy() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
-          >
+
             <h2 className="text-4xl font-bold text-white mb-6">
               How We Use Your Information
             </h2>
@@ -252,7 +251,7 @@ export default function Privacy() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 className="bg-slate-800/50 p-6 rounded-xl border border-slate-700/50 hover:border-blue-400/50 transition-all duration-300 hover:scale-105"
-              >
+
                 <h3 className="text-xl font-semibold text-white mb-4">{use.purpose}</h3>
                 <p className="text-gray-300">{use.description}</p>
               </motion.div>
@@ -269,7 +268,7 @@ export default function Privacy() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
-          >
+
             <h2 className="text-4xl font-bold text-white mb-6">
               Your Privacy Rights
             </h2>
@@ -287,7 +286,7 @@ export default function Privacy() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 className="bg-slate-800/50 p-6 rounded-xl border border-slate-700/50 hover:border-blue-400/50 transition-all duration-300 hover:scale-105"
-              >
+
                 <h3 className="text-xl font-semibold text-white mb-4">{right.right}</h3>
                 <p className="text-gray-300">{right.description}</p>
               </motion.div>
@@ -304,7 +303,7 @@ export default function Privacy() {
               initial={{ opacity: 0, x: -20 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.6 }}
-            >
+
               <h2 className="text-4xl font-bold text-white mb-6">
                 Data Security
               </h2>
@@ -342,7 +341,7 @@ export default function Privacy() {
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.6 }}
               className="relative"
-            >
+
               <div className="bg-slate-800/50 p-8 rounded-2xl border border-slate-700/50">
                 <div className="text-center mb-6">
                   <Shield className="w-16 h-16 text-blue-400 mx-auto mb-4" />
@@ -376,7 +375,7 @@ export default function Privacy() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
-          >
+
             <h2 className="text-4xl font-bold text-white mb-6">
               Contact Us
             </h2>
@@ -415,7 +414,7 @@ export default function Privacy() {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-          >
+
             <h2 className="text-4xl font-bold text-white mb-6">
               Questions About Privacy?
             </h2>
@@ -427,13 +426,13 @@ export default function Privacy() {
               <a
                 href="mailto:privacy@ziontechgroup.com"
                 className="px-8 py-4 bg-gradient-to-r from-blue-400 to-purple-500 text-white rounded-lg font-semibold hover:from-blue-500 hover:to-purple-600 transition-all duration-300 hover:scale-105"
-              >
+
                 Contact Privacy Team
               </a>
               <a
                 href="/contact"
                 className="px-8 py-4 border border-blue-400 text-blue-400 rounded-lg font-semibold hover:bg-blue-400 hover:text-white transition-all duration-300"
-              >
+
                 General Contact
               </a>
             </div>
@@ -442,4 +441,4 @@ export default function Privacy() {
       </section>
     </div>
   );
-}
+}}}}}}

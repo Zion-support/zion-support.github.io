@@ -1,6 +1,4 @@
-import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, FileText, BarChart3 } from 'lucide-react';
-
-export default function AIPenetrationTesting() {
+import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, FileText, BarChart3 export default function AIPenetrationTesting() {
   const features = [
     'AI-powered penetration testing optimization',
     'Intelligent vulnerability discovery and exploitation',
@@ -171,4 +169,4 @@ export default function AIPenetrationTesting() {
       </section>
     </div>
   );
-}
+}}

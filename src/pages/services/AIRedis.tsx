@@ -1,6 +1,4 @@
-import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, FileText, BarChart3 } from 'lucide-react';
-
-export default function AIRedis() {
+import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, FileText, BarChart3 export default function AIRedis() {
   const features = [
     'AI-powered Redis optimization',
     'Intelligent Redis management',
@@ -171,4 +169,4 @@ export default function AIRedis() {
       </section>
     </div>
   );
-}
+}}

@@ -5,7 +5,6 @@ function runNode(relPath, args = []) {
   const abs = path.resolve(__dirname, '..', '..', relPath);
   const res = spawnSync('node', [abs, ...args], { stdio: 'pipe', encoding: 'utf8' });
   return { status: res.status || 0, stdout: res.stdout || '', stderr: res.stderr || '' };
-}
 
 exports.config = {
   schedule: '*/20 * * * *', // every 20 minutes
@@ -20,7 +19,6 @@ exports.handler = async () => {
     if (stderr) logs.push(stderr);
     logs.push(`exit=${status}`);
     return status;
-  }
 
   process.env.CANONICAL_URL = process.env.CANONICAL_URL || 'https://ziontechgroup.com';
 
@@ -32,4 +30,4 @@ exports.handler = async () => {
   logStep('homepage:advertise', () => runNode('automation/homepage-auto-advertiser.cjs'));
 
   return { statusCode: 200, body: logs.join('\n') };
-};
+};}}

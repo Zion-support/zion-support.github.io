@@ -8,7 +8,7 @@ const validate = (req: any, res: any, next: any) => {
   const errors = validationResult(req);
   if (!errors.isEmpty()) {
     return res.status(400).json({ errors: errors.array() });
-  }
+
   next();
 };
 
@@ -31,7 +31,7 @@ router.get('/users', async (_req, res) => {
       success: false,
       error: 'Failed to fetch users'
     });
-  }
+
 });
 
 // POST /api/users
@@ -61,7 +61,7 @@ router.post('/users', [
       success: false,
       error: 'Failed to create user'
     });
-  }
+
 });
 
 // GET /api/users/:id
@@ -82,7 +82,6 @@ router.get('/users/:id', async (req, res) => {
         success: false,
         error: 'User not found'
       });
-    }
 
     return res.json({
       success: true,
@@ -93,7 +92,7 @@ router.get('/users/:id', async (req, res) => {
       success: false,
       error: 'Failed to fetch user'
     });
-  }
+
 });
 
-export default router;
+export default router;}}}}}

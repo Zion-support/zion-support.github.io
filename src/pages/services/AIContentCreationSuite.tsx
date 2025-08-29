@@ -1,6 +1,4 @@
-import { PenTool, Image, Video, FileText, Check, ArrowRight, ExternalLink, Phone, Mail, Zap, Brain, Clock, Database, Globe, Shield } from 'lucide-react';
-
-export default function AIContentCreationSuite() {
+import { PenTool, Image, Video, FileText, Check, ArrowRight, ExternalLink, Phone, Mail, Zap, Brain, Clock, Database, Globe, Shield export default function AIContentCreationSuite() {
   const features = [
     'AI-powered text generation and editing',
     'Automated image creation and editing',
@@ -67,7 +65,7 @@ export default function AIContentCreationSuite() {
         'API access',
         'White-label solutions'
       ]
-    }
+
   ];
 
   const technicalSpecs = {
@@ -90,7 +88,7 @@ export default function AIContentCreationSuite() {
     {
       type: 'Video Content',
       solutions: ['Product videos', 'Social media clips', 'Educational content', 'Marketing videos', 'Live streams']
-    }
+
   ];
 
   return (
@@ -256,4 +254,4 @@ export default function AIContentCreationSuite() {
       </section>
     </div>
   );
-}
+}}}}

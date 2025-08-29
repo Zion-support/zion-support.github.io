@@ -37,7 +37,7 @@ export interface BiotechAIService {
   customers: number;
   rating: number;
   reviews: number;
-}
+
 export const biotechAIServices: BiotechAIService[] = [
   {
     id: 'ai-drug-discovery-platform',
@@ -497,5 +497,5 @@ export const biotechAIServices: BiotechAIService[] = [
     customers: 90,
     rating: 4.9,
     reviews: 45
-  }
-];
+
+];}}

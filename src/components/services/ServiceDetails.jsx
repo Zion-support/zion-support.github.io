@@ -1,6 +1,5 @@
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
-import { Server, Clock, MapPin } from "lucide-react";
-// Component to show service details for the selected country
+import { Server, Clock, MapPin // Component to show service details for the selected country
 export function ServiceDetails({ country }) {
     // Get datacenters for regions (simplified - in production this would come from a real database)
     const getDatacenters = (country) => {
@@ -107,4 +106,4 @@ export function ServiceDetails({ country }) {
         </p>
       </CardFooter>
     </Card>);
-}
+</Card></Card></Card></Card></Card>}}

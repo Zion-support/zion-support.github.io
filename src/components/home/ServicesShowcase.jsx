@@ -4,9 +4,53 @@ import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { COMPREHENSIVE_SERVICES } from '@/data/comprehensiveServices';
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, Star // Temporary placeholder components until the real ones are available
+const NeonText = ({ children, color, glowIntensity }) => (
+  <span style={{ color, textShadow: `0 0 10px ${color}` }}>{children}</span>
+);
+
+const FuturisticCard = ({ children, glowColor, intensity, className }) => (
+  <Card className={className}>{children}</Card>
+);
+
 export function ServicesShowcase() {
     const featuredServices = COMPREHENSIVE_SERVICES.slice(0, 6);
+
+    // Temporary emerging services data
+    const emergingServices = [
+        {
+            title: "AI & Machine Learning",
+            description: "Cutting-edge AI solutions for business automation",
+            category: "AI/ML",
+            price: "$2,500/month",
+            icon: "🤖",
+            link: "/services/ai-ml"
+        },
+        {
+            title: "Quantum Computing",
+            description: "Next-generation quantum solutions",
+            category: "Quantum",
+            price: "$5,000/month",
+            icon: "⚛️",
+            link: "/services/quantum"
+        },
+        {
+            title: "Edge Computing",
+            description: "Distributed computing at the edge",
+            category: "Edge",
+            price: "$1,800/month",
+            icon: "🌐",
+            link: "/services/edge"
+        },
+        {
+            title: "Blockchain Solutions",
+            description: "Secure decentralized applications",
+            category: "Blockchain",
+            price: "$3,200/month",
+            icon: "🔗",
+            link: "/services/blockchain"
+
+    ];
     return (<section className="py-20 relative">
       {/* Background accent */}
       <div className="absolute inset-0 bg-gradient-to-b from-transparent via-zion-purple/5 to-transparent"/>
@@ -82,7 +126,7 @@ export function ServicesShowcase() {
                     </Button>
                   </Link>
                 </div>
-              </div>
+              </CardContent>
             </FuturisticCard>))}
         </div>
 
@@ -158,4 +202,4 @@ export function ServicesShowcase() {
         </div>
       </div>
     </section>);
-}
+</div></Card></Card></Card></Card></Card></Card></Card></Card>}}}

@@ -1,7 +1,5 @@
 import React, { useState } from 'react';
-import { Mail, CheckCircle, AlertCircle } from 'lucide-react';
-
-export const MobileEmailCapture = () => {
+import { Mail, CheckCircle, AlertCircle export const MobileEmailCapture = () => {
   const [email, setEmail] = useState('');
   const [status, setStatus] = useState('idle'); // idle, loading, success, error
 
@@ -20,7 +18,7 @@ export const MobileEmailCapture = () => {
       } else {
         setStatus('error');
         setTimeout(() => setStatus('idle'), 3000);
-      }
+
     }, 1000);
   };
 
@@ -32,7 +30,7 @@ export const MobileEmailCapture = () => {
         return <AlertCircle className="h-5 w-5 text-red-400" />;
       default:
         return <Mail className="h-5 w-5 text-blue-400" />;
-    }
+
   };
 
   const getStatusText = () => {
@@ -43,7 +41,7 @@ export const MobileEmailCapture = () => {
         return 'Please enter a valid email address.';
       default:
         return 'Get early access and exclusive updates';
-    }
+
   };
 
   return (
@@ -83,7 +81,7 @@ export const MobileEmailCapture = () => {
                 <button
                   type="submit"
                   className="px-8 py-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-300 whitespace-nowrap"
-                >
+
                   Notify Me
                 </button>
               </div>
@@ -106,7 +104,7 @@ export const MobileEmailCapture = () => {
               <button
                 onClick={() => setStatus('idle')}
                 className="px-6 py-2 border border-white/30 text-white rounded-lg hover:bg-white/10 transition-all duration-300"
-              >
+
                 Subscribe Another Email
               </button>
             </div>
@@ -118,7 +116,7 @@ export const MobileEmailCapture = () => {
               <button
                 onClick={() => setStatus('idle')}
                 className="px-6 py-2 border border-white/30 text-white rounded-lg hover:bg-white/10 transition-all duration-300"
-              >
+
                 Try Again
               </button>
             </div>
@@ -152,3 +150,4 @@ export const MobileEmailCapture = () => {
     </section>
   );
 };
+}}}}

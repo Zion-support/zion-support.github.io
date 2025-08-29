@@ -33,15 +33,12 @@ import {
   Mail,
   MapPin,
   Clock
-} from 'lucide-react';
-
 interface NavigationItem {
   label: string;
   path: string;
   icon: React.ComponentType<{ size?: number; className?: string }>;
   children?: NavigationItem[];
   description?: string;
-}
 
 const navigationItems: NavigationItem[] = [
   {
@@ -96,7 +93,7 @@ const navigationItems: NavigationItem[] = [
         path: '/services/consulting',
         icon: Users,
         description: 'Strategic IT consulting'
-      }
+
     ]
   },
   {
@@ -110,7 +107,7 @@ const navigationItems: NavigationItem[] = [
     path: '/contact',
     icon: Phone,
     description: 'Get in touch with us'
-  }
+
 ];
 
 const quickActions = [
@@ -131,7 +128,7 @@ const quickActions = [
     path: '/docs',
     icon: FileText,
     color: 'bg-zion-blue'
-  }
+
 ];
 
 export const EnhancedMobileNavigation: React.FC = () => {
@@ -149,13 +146,12 @@ export const EnhancedMobileNavigation: React.FC = () => {
     const handleClickOutside = (event: MouseEvent) => {
       if (menuRef.current && !menuRef.current.contains(event.target as Node)) {
         setIsOpen(false);
-      }
+
     };
 
     if (isOpen) {
       document.addEventListener('mousedown', handleClickOutside);
       document.body.style.overflow = 'hidden';
-    }
 
     return () => {
       document.removeEventListener('mousedown', handleClickOutside);
@@ -170,7 +166,7 @@ export const EnhancedMobileNavigation: React.FC = () => {
         newSet.delete(label);
       } else {
         newSet.add(label);
-      }
+
       return newSet;
     });
   };
@@ -183,7 +179,7 @@ export const EnhancedMobileNavigation: React.FC = () => {
   const isActive = (path: string) => {
     if (path === '/') {
       return activePath === '/';
-    }
+
     return activePath.startsWith(path);
   };
 
@@ -198,7 +194,7 @@ export const EnhancedMobileNavigation: React.FC = () => {
           initial={false}
           animate={{ backgroundColor: isItemActive ? 'rgba(34, 221, 210, 0.1)' : 'transparent' }}
           className={`relative ${depth > 0 ? 'ml-4' : ''}`}
-        >
+
           <Link
             to={item.path}
             onClick={() => handleNavigation(item.path)}
@@ -207,7 +203,7 @@ export const EnhancedMobileNavigation: React.FC = () => {
                 ? 'text-zion-cyan border-l-2 border-zion-cyan'
                 : 'text-white hover:text-zion-cyan'
             }`}
-          >
+
             <div className="flex items-center gap-3">
               <item.icon
                 size={20}
@@ -235,7 +231,7 @@ export const EnhancedMobileNavigation: React.FC = () => {
               onClick={() => toggleExpanded(item.label)}
               className="absolute right-4 top-1/2 transform -translate-y-1/2 p-2 text-zion-slate-light hover:text-white transition-colors"
               aria-label={`${isExpanded ? 'Collapse' : 'Expand'} ${item.label} submenu`}
-            >
+
               <ChevronDown
                 size={16}
                 className={`transition-transform duration-200 ${
@@ -255,7 +251,7 @@ export const EnhancedMobileNavigation: React.FC = () => {
                 exit={{ height: 0, opacity: 0 }}
                 transition={{ duration: 0.3, ease: 'easeInOut' }}
                 className="overflow-hidden"
-              >
+
                 <div className="border-l border-zion-slate-light/20 ml-4">
                   {item.children!.map(child => renderNavigationItem(child, depth + 1))}
                 </div>
@@ -274,7 +270,7 @@ export const EnhancedMobileNavigation: React.FC = () => {
         onClick={() => setIsOpen(true)}
         className="lg:hidden p-2 text-white hover:text-zion-cyan transition-colors focus:outline-none focus:ring-2 focus:ring-zion-cyan/50 rounded-lg"
         aria-label="Open mobile navigation menu"
-      >
+
         <Menu size={24} />
       </button>
 
@@ -287,7 +283,7 @@ export const EnhancedMobileNavigation: React.FC = () => {
             exit={{ opacity: 0 }}
             transition={{ duration: 0.2 }}
             className="fixed inset-0 bg-black/50 backdrop-blur-sm z-50 lg:hidden"
-          >
+
             <motion.div
               ref={menuRef}
               initial={{ x: '100%' }}
@@ -295,7 +291,7 @@ export const EnhancedMobileNavigation: React.FC = () => {
               exit={{ x: '100%' }}
               transition={{ duration: 0.3, ease: 'easeOut' }}
               className="absolute right-0 top-0 h-full w-full max-w-sm bg-zion-slate-dark border-l border-zion-cyan/30 shadow-2xl"
-            >
+
               {/* Header */}
               <div className="flex items-center justify-between p-6 border-b border-zion-slate-light/20">
                 <div className="flex items-center gap-3">
@@ -311,7 +307,7 @@ export const EnhancedMobileNavigation: React.FC = () => {
                   onClick={() => setIsOpen(false)}
                   className="p-2 text-zion-slate-light hover:text-white transition-colors rounded-lg hover:bg-zion-slate-light/10"
                   aria-label="Close mobile navigation menu"
-                >
+
                   <X size={24} />
                 </button>
               </div>
@@ -330,7 +326,7 @@ export const EnhancedMobileNavigation: React.FC = () => {
                         to={action.path}
                         onClick={() => handleNavigation(action.path)}
                         className={`${action.color} p-4 rounded-lg text-white text-center hover:scale-105 transition-transform duration-200`}
-                      >
+
                         <action.icon size={20} className="mx-auto mb-2" />
                         <span className="text-xs font-medium">{action.label}</span>
                       </Link>
@@ -394,4 +390,4 @@ export const EnhancedMobileNavigation: React.FC = () => {
       </AnimatePresence>
     </>
   );
-};
+};}}}}}}}}}

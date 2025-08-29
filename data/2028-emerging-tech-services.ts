@@ -38,7 +38,7 @@ export interface EmergingTech2028Service {
   customers: number;
   rating: number;
   reviews: number;
-}
+
 export const emergingTech2028Services: EmergingTech2028Service[] = [
   // Biometric Authentication Platform
   {
@@ -455,5 +455,5 @@ export const emergingTech2028Services: EmergingTech2028Service[] = [
     customers: 110,
     rating: 4.8,
     reviews: 89
-  }
-];
+
+];}}

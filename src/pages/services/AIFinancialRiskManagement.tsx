@@ -1,6 +1,4 @@
-import { Shield, BarChart3, ArrowRight, Check, ExternalLink, Phone, Mail, TrendingUp, AlertTriangle, Zap, Target, Clock, DollarSign, Globe } from 'lucide-react';
-
-export default function AIFinancialRiskManagement() {
+import { Shield, BarChart3, ArrowRight, Check, ExternalLink, Phone, Mail, TrendingUp, AlertTriangle, Zap, Target, Clock, DollarSign, Globe export default function AIFinancialRiskManagement() {
   const features = [
     'AI-powered credit risk assessment and scoring',
     'Real-time market risk monitoring and alerts',
@@ -155,4 +153,4 @@ export default function AIFinancialRiskManagement() {
       </section>
     </div>
   );
-}
+}}

@@ -74,7 +74,7 @@ const InnovativeServices2025 = () => {
                     useCases: ["Law firms", "Corporate legal", "Compliance teams", "Contract management"],
                     competitors: ["Kira Systems", "Luminance", "eBrevia"],
                     competitiveAdvantage: "Advanced NLP, comprehensive risk assessment, and seamless legal workflow integration"
-                }
+
             ]
         },
         {
@@ -149,7 +149,7 @@ const InnovativeServices2025 = () => {
                     useCases: ["Hospitals", "Medical clinics", "Research institutions", "Pharmaceutical companies"],
                     competitors: ["IBM Watson Health", "Google Health", "Microsoft Healthcare"],
                     competitiveAdvantage: "Advanced medical AI, comprehensive healthcare integration, and regulatory compliance"
-                }
+
             ]
         },
         {
@@ -224,7 +224,7 @@ const InnovativeServices2025 = () => {
                     useCases: ["Financial services", "Gaming", "Art and collectibles", "Supply chain"],
                     competitors: ["Consensys", "Chainlink Labs", "Alchemy"],
                     competitiveAdvantage: "Full-stack Web3 development, rapid deployment, and comprehensive blockchain expertise"
-                }
+
             ]
         },
         {
@@ -276,9 +276,9 @@ const InnovativeServices2025 = () => {
                     useCases: ["Critical infrastructure", "Financial institutions", "Healthcare", "Government"],
                     competitors: ["Darktrace", "CrowdStrike", "SentinelOne"],
                     competitiveAdvantage: "Advanced AI algorithms, real-time protection, and comprehensive threat intelligence"
-                }
+
             ]
-        }
+
     ];
     return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white">
       {/* Hero Section */}
@@ -416,3 +416,4 @@ const InnovativeServices2025 = () => {
     </div>);
 };
 export default InnovativeServices2025;
+}}}}}

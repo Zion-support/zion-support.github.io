@@ -1,6 +1,4 @@
-import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, FileText, BarChart3 } from 'lucide-react';
-
-export default function AISecurityForensics() {
+import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, FileText, BarChart3 export default function AISecurityForensics() {
   const features = [
     'AI-powered security forensics optimization',
     'Intelligent digital evidence analysis and processing',
@@ -171,4 +169,4 @@ export default function AISecurityForensics() {
       </section>
     </div>
   );
-}
+}}

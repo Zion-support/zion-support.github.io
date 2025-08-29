@@ -13,7 +13,7 @@ export interface EnterpriseIt2026ServiceV2 {
     email: string;
     address: string;
   };
-}
+
 export const enterpriseIT2026ServicesV2: EnterpriseIt2026ServiceV2[] = [
   {
     id: "2026-enterprise-it-v2",
@@ -35,6 +35,6 @@ export const enterpriseIT2026ServicesV2: EnterpriseIt2026ServiceV2[] = [
       mobile: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       address: "364 E Main St STE 1008 Middletown DE 19709"
-    }
-  }
-];
+
+
+];}}}

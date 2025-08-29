@@ -9,6 +9,5 @@ const ErrorRoutes = () => {
       <Route path="*" element={<NotFound />} />
     </Routes>
   );
-}
 
-export default ErrorRoutes;
+export default ErrorRoutes;}

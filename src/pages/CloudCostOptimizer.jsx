@@ -3,8 +3,7 @@ import { SEO } from "@/components/SEO";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { Check, Cloud, BarChart3, Globe, Settings } from "lucide-react";
-import { Link } from "react-router-dom";
+import { Check, Cloud, BarChart3, Globe, Settings import { Link } from "react-router-dom";
 export default function CloudCostOptimizer() {
     const features = [
         "AI-driven cost optimization algorithms",
@@ -71,7 +70,7 @@ export default function CloudCostOptimizer() {
                 "Custom reporting"
             ],
             popular: false
-        }
+
     ];
     const optimizationServices = [
         {
@@ -93,7 +92,7 @@ export default function CloudCostOptimizer() {
             title: "Automated Actions",
             description: "Automatically implement cost-saving measures with your approval and oversight.",
             icon: <Settings className="h-8 w-8 text-zion-purple"/>
-        }
+
     ];
     const supportedClouds = [
         "Amazon Web Services (AWS)",
@@ -125,7 +124,7 @@ export default function CloudCostOptimizer() {
             metric: "Cost Visibility",
             value: "100%",
             description: "Complete transparency into cloud spending"
-        }
+
     ];
     return (<div className="min-h-screen bg-gradient-to-b from-zion-blue-dark via-zion-slate to-background">
       <SEO title="Cloud Cost Optimizer - Zion Tech Group" description="AI-driven cloud cost optimization and resource management across AWS, Azure, and Google Cloud. Reduce costs by up to 40%." keywords="cloud cost optimization, AWS cost management, Azure cost reduction, GCP optimization, cloud savings" canonical="https://ziontechgroup.com/cloud-optimizer"/>
@@ -325,4 +324,4 @@ export default function CloudCostOptimizer() {
         </div>
       </section>
     </div>);
-}
+</Card></Card></Card></Card></Card></Card></Card></Card>}}}}}

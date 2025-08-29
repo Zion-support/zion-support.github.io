@@ -1,7 +1,6 @@
 import React, { useState, useMemo } from 'react';
 import { motion } from 'framer-motion';
-import { Check, X, Star, TrendingUp, Zap, Shield, Clock, DollarSign, BarChart3, Target, Users, Globe, Mail, Phone } from 'lucide-react';
-import { Card, CardContent, CardHeader, CardTitle } from './ui/card';
+import { Check, X, Star, TrendingUp, Zap, Shield, Clock, DollarSign, BarChart3, Target, Users, Globe, Mail, Phone import { Card, CardContent, CardHeader, CardTitle } from './ui/card';
 import { Button } from './ui/button';
 import { Badge } from './ui/badge';
 import { Input } from './ui/input';
@@ -87,7 +86,7 @@ export const AdvancedServiceComparison = () => {
             contactInfo: '+1 302 464 0950',
             email: 'kleber@ziontechgroup.com',
             link: 'https://ziontechgroup.com/services/quantum-enterprise'
-        }
+
     ];
     const filteredServices = useMemo(() => {
         return mockServices.filter(service => {
@@ -110,7 +109,7 @@ export const AdvancedServiceComparison = () => {
             case 'Advanced': return 'bg-orange-100 text-orange-800';
             case 'Enterprise': return 'bg-purple-100 text-purple-800';
             default: return 'bg-gray-100 text-gray-800';
-        }
+
     };
     const getPopularityIcon = (popularity) => {
         switch (popularity) {
@@ -119,7 +118,7 @@ export const AdvancedServiceComparison = () => {
             case 'Medium': return <Zap className="w-4 h-4 text-blue-500"/>;
             case 'Low': return <Target className="w-4 h-4 text-gray-500"/>;
             default: return <Users className="w-4 h-4 text-gray-500"/>;
-        }
+
     };
     return (<div className="max-w-7xl mx-auto p-6">
       {/* Header */}
@@ -327,5 +326,6 @@ export const AdvancedServiceComparison = () => {
         </div>
       </motion.div>
     </div>);
-};
+</Card></Card></Card>};
 export default AdvancedServiceComparison;
+}}}}

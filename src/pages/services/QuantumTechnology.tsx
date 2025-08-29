@@ -1,7 +1,5 @@
 import React from 'react';
-import { Box, Cpu, Zap, Globe, Rocket, Shield, BarChart3, Activity } from 'lucide-react';
-
-const QuantumTechnology = () => {
+import { Box, Cpu, Zap, Globe, Rocket, Shield, BarChart3, Activity const QuantumTechnology = () => {
   const quantumServices = [
     {
       title: "Quantum Neural Networks",
@@ -23,7 +21,7 @@ const QuantumTechnology = () => {
       price: "From $42,000/month",
       features: ["Quantum key distribution", "Post-quantum cryptography", "Secure communications", "Threat protection"],
       icon: Shield
-    }
+
   ];
 
   const quantumTechnologies = [
@@ -44,7 +42,7 @@ const QuantumTechnology = () => {
       description: "Secure communication using quantum principles",
       icon: Globe,
       features: ["Quantum key distribution", "Entanglement", "Secure channels", "Quantum networks"]
-    }
+
   ];
 
   const benefits = [
@@ -261,4 +259,4 @@ const QuantumTechnology = () => {
   );
 };
 
-export default QuantumTechnology;
+export default QuantumTechnology;}}}

@@ -15,8 +15,6 @@ import {
   Clock,
   Users,
   BarChart3
-} from 'lucide-react';
-
 const valueMetrics = [
   {
     icon: <TrendingUp className="w-8 h-8" />,
@@ -45,7 +43,7 @@ const valueMetrics = [
     value: "99.9%",
     description: "Enterprise-grade security with zero compromise",
     color: "from-red-500 to-pink-600"
-  }
+
 ];
 
 const competitiveAdvantages = [
@@ -72,7 +70,7 @@ const competitiveAdvantages = [
     description: "Round-the-clock technical support from certified professionals and AI assistants",
     icon: <Users className="w-6 h-6" />,
     color: "from-orange-500 to-red-600"
-  }
+
 ];
 
 const marketComparison = [
@@ -99,7 +97,7 @@ const marketComparison = [
     ourPricing: "$599/month",
     savings: "Up to 85%",
     advantage: "AI-powered detection, comprehensive zero-trust implementation"
-  }
+
 ];
 
 const successStories = [
@@ -126,7 +124,7 @@ const successStories = [
     solution: "AI Financial Analyst Pro",
     results: "Automated 90% of reporting, improved accuracy by 99.5%",
     roi: "400% in 6 months"
-  }
+
 ];
 
 export function ValuePropositionShowcase() {
@@ -137,8 +135,8 @@ export function ValuePropositionShowcase() {
       transition: {
         staggerChildren: 0.2,
         delayChildren: 0.1
-      }
-    }
+
+
   };
 
   const itemVariants = {
@@ -149,8 +147,8 @@ export function ValuePropositionShowcase() {
       transition: {
         duration: 0.6,
         ease: "easeOut"
-      }
-    }
+
+
   };
 
   const cardVariants = {
@@ -161,8 +159,8 @@ export function ValuePropositionShowcase() {
       transition: {
         duration: 0.4,
         ease: "easeOut"
-      }
-    }
+
+
   };
 
   return (
@@ -174,7 +172,7 @@ export function ValuePropositionShowcase() {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
-        >
+
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
             Unmatched Value & ROI
           </h2>
@@ -190,18 +188,18 @@ export function ValuePropositionShowcase() {
           variants={containerVariants}
           initial="hidden"
           animate="visible"
-        >
+
           {valueMetrics.map((metric, index) => (
             <motion.div
               key={index}
               className="text-center"
               variants={itemVariants}
-            >
+
               <motion.div
                 className={`w-20 h-20 bg-gradient-to-r ${metric.color} rounded-2xl flex items-center justify-center mx-auto mb-4 text-white`}
                 variants={cardVariants}
                 whileHover={{ scale: 1.1 }}
-              >
+
                 {metric.icon}
               </motion.div>
               <h3 className="text-2xl font-bold text-white mb-2">{metric.value}</h3>
@@ -217,7 +215,7 @@ export function ValuePropositionShowcase() {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.3 }}
-        >
+
           <h3 className="text-3xl font-bold text-white text-center mb-12">
             Why Choose Zion Tech Group?
           </h3>
@@ -228,7 +226,7 @@ export function ValuePropositionShowcase() {
                 className="bg-zion-slate-dark/80 backdrop-blur-sm rounded-2xl p-6 border border-zion-cyan/20"
                 variants={cardVariants}
                 whileHover={{ y: -5, boxShadow: "0 20px 40px rgba(0, 0, 0, 0.3)" }}
-              >
+
                 <div className={`w-16 h-16 bg-gradient-to-r ${advantage.color} rounded-xl flex items-center justify-center mb-4 text-white`}>
                   {advantage.icon}
                 </div>
@@ -245,7 +243,7 @@ export function ValuePropositionShowcase() {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.5 }}
-        >
+
           <h3 className="text-3xl font-bold text-white text-center mb-12">
             Competitive Pricing Analysis
           </h3>
@@ -256,7 +254,7 @@ export function ValuePropositionShowcase() {
                 className="bg-zion-slate-dark/80 backdrop-blur-sm rounded-2xl p-6 border border-zion-cyan/20"
                 variants={cardVariants}
                 whileHover={{ y: -3 }}
-              >
+
                 <div className="grid grid-cols-1 lg:grid-cols-5 gap-6 items-center">
                   <div className="lg:col-span-1">
                     <h4 className="text-lg font-bold text-white mb-2">{comparison.category}</h4>
@@ -302,7 +300,7 @@ export function ValuePropositionShowcase() {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.7 }}
-        >
+
           <h3 className="text-3xl font-bold text-white text-center mb-12">
             Real Success Stories
           </h3>
@@ -313,7 +311,7 @@ export function ValuePropositionShowcase() {
                 className="bg-zion-slate-dark/80 backdrop-blur-sm rounded-2xl p-6 border border-zion-cyan/20"
                 variants={cardVariants}
                 whileHover={{ y: -5 }}
-              >
+
                 <div className="mb-4">
                   <h4 className="text-lg font-bold text-white mb-1">{story.company}</h4>
                   <span className="text-zion-cyan text-sm">{story.industry}</span>
@@ -347,7 +345,7 @@ export function ValuePropositionShowcase() {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.9 }}
-        >
+
           <div className="bg-gradient-to-r from-zion-cyan/20 to-zion-blue/20 p-8 rounded-2xl border border-zion-cyan/30">
             <h3 className="text-2xl font-bold text-white mb-4">
               Ready to Experience Unmatched Value?
@@ -360,13 +358,13 @@ export function ValuePropositionShowcase() {
               <a
                 href="mailto:kleber@ziontechgroup.com"
                 className="bg-gradient-to-r from-zion-cyan to-zion-blue text-white px-8 py-3 rounded-lg font-medium hover:shadow-lg transition-all duration-300 hover:scale-105"
-              >
+
                 Start Your Transformation
               </a>
               <a
                 href="tel:+13024640950"
                 className="bg-zion-slate-dark text-zion-cyan px-8 py-3 rounded-lg font-medium border border-zion-cyan/30 hover:bg-zion-slate hover:border-zion-cyan/50 transition-all duration-300"
-              >
+
                 Call: +1 302 464 0950
               </a>
             </div>
@@ -379,4 +377,4 @@ export function ValuePropositionShowcase() {
       </div>
     </section>
   );
-}
+}}}}}}}}}}}}

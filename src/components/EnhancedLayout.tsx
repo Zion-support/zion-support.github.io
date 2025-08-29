@@ -8,7 +8,6 @@ import { FuturisticAnimatedBackground } from './FuturisticAnimatedBackground';
 interface EnhancedLayoutProps {
   children: ReactNode;
   showSidebar?: boolean;
-}
 
 export const EnhancedLayout: React.FC<EnhancedLayoutProps> = ({
   children,
@@ -37,4 +36,4 @@ export const EnhancedLayout: React.FC<EnhancedLayoutProps> = ({
       <FuturisticFooter />
     </div>
   );
-};
+};}

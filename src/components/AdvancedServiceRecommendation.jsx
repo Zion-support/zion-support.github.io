@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { Brain, CheckCircle, ArrowRight, Zap, Users, Lightbulb, BarChart3 } from 'lucide-react';
-import { Card, CardContent, CardHeader, CardTitle } from './ui/card';
+import { Brain, CheckCircle, ArrowRight, Zap, Users, Lightbulb, BarChart3 import { Card, CardContent, CardHeader, CardTitle } from './ui/card';
 import { Button } from './ui/button';
 import { Badge } from './ui/badge';
 const AdvancedServiceRecommendation = () => {
@@ -96,14 +95,14 @@ const AdvancedServiceRecommendation = () => {
             link: 'https://ziontechgroup.com/services/blockchain-supply-chain',
             contactInfo: '+1 302 464 0950',
             email: 'kleber@ziontechgroup.com'
-        }
+
     ];
     const calculateMatchScore = (service, profile) => {
         const score = 0;
         // Industry match
         if (service.targetAudience?.some((audience) => audience.toLowerCase().includes(profile.industry.toLowerCase()))) {
             score += 25;
-        }
+
         // Budget compatibility
         const servicePrice = parseInt(service.price.replace(/[^0-9]/g, ''));
         if (profile.budget === 'Under $50K' && servicePrice < 50)
@@ -193,7 +192,7 @@ const AdvancedServiceRecommendation = () => {
             case 'Medium': return 'bg-yellow-100 text-yellow-800';
             case 'Low': return 'bg-green-100 text-green-800';
             default: return 'bg-gray-100 text-gray-800';
-        }
+
     };
     const getComplexityColor = (complexity) => {
         switch (complexity) {
@@ -201,7 +200,7 @@ const AdvancedServiceRecommendation = () => {
             case 'Moderate': return 'bg-yellow-100 text-yellow-800';
             case 'Simple': return 'bg-green-100 text-green-800';
             default: return 'bg-gray-100 text-gray-800';
-        }
+
     };
     const isFormComplete = () => {
         return clientProfile.industry && clientProfile.companySize && clientProfile.budget &&
@@ -276,10 +275,10 @@ const AdvancedServiceRecommendation = () => {
                 <input type="checkbox" checked={clientProfile.primaryGoals.includes(goal)} onChange={(e) => {
                 if (e.target.checked) {
                     setClientProfile(prev => ({ ...prev, primaryGoals: [...prev.primaryGoals, goal] }));
-                }
+
                 else {
                     setClientProfile(prev => ({ ...prev, primaryGoals: prev.primaryGoals.filter(g => g !== goal) }));
-                }
+
             }} className="rounded text-zion-cyan"/>
                 <span className="text-sm text-zion-slate-light">{goal}</span>
               </label>))}
@@ -293,10 +292,10 @@ const AdvancedServiceRecommendation = () => {
                 <input type="checkbox" checked={clientProfile.challenges.includes(challenge)} onChange={(e) => {
                 if (e.target.checked) {
                     setClientProfile(prev => ({ ...prev, challenges: [...prev.challenges, challenge] }));
-                }
+
                 else {
                     setClientProfile(prev => ({ ...prev, challenges: prev.challenges.filter(c => c !== challenge) }));
-                }
+
             }} className="rounded text-zion-cyan"/>
                 <span className="text-sm text-zion-slate-light">{challenge}</span>
               </label>))}
@@ -431,5 +430,6 @@ const AdvancedServiceRecommendation = () => {
           </motion.div>
         </motion.div>)}
     </div>);
-};
+</Card></Card></Card>};
 export default AdvancedServiceRecommendation;
+}}}}}}}}}

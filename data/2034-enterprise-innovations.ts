@@ -24,7 +24,7 @@ export interface EnterpriseService2034 {
   uptime: string;
   contact: string;
   website: string;
-}
+
 export const enterprise2034Services: EnterpriseService2034[] = [
   {
     id: 'quantum-zero-trust-architecture',
@@ -367,5 +367,5 @@ export const enterprise2034Services: EnterpriseService2034[] = [
     uptime: '99.999% data center platform availability',
     contact: '+1 302 464 0950',
     website: 'https://ziontechgroup.com/ai-autonomous-data-center'
-  }
-];
+
+];}}

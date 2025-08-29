@@ -1,8 +1,6 @@
 import React from 'react';
 import { SEO } from '@/components/SEO';
-import { Calendar, Users, BarChart3, Zap, Check, ExternalLink, Phone, Mail, ArrowRight, Clock, Target, TrendingUp } from 'lucide-react';
-
-export default function AIProjectManagement() {
+import { Calendar, Users, BarChart3, Zap, Check, ExternalLink, Phone, Mail, ArrowRight, Clock, Target, TrendingUp export default function AIProjectManagement() {
   const features = [
     'AI-powered task prioritization and scheduling',
     'Predictive resource allocation and capacity planning',
@@ -43,7 +41,7 @@ export default function AIProjectManagement() {
       period: '/mo',
       users: 'Unlimited users',
       features: ['Full AI suite', 'White-label options', 'Dedicated support', 'SAML/SSO', 'Custom integrations', 'API access']
-    }
+
   ];
 
   const useCases = [
@@ -82,13 +80,13 @@ export default function AIProjectManagement() {
               target="_blank"
               rel="noopener noreferrer"
               className="px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg font-semibold hover:from-blue-600 hover:to-purple-700 transition-all duration-300 inline-flex items-center"
-            >
+
               Start Free Trial <ArrowRight className="ml-2 w-5 h-5" />
             </a>
             <a
               href="tel:+13024640950"
               className="px-8 py-4 border border-blue-400/30 rounded-lg font-semibold hover:bg-blue-500/10 transition-all duration-300 inline-flex items-center"
-            >
+
               <Phone className="w-5 h-5 mr-2" /> Call Now
             </a>
           </div>
@@ -157,7 +155,7 @@ export default function AIProjectManagement() {
                     ? 'border-blue-500/50 bg-blue-500/5'
                     : 'border-slate-700/50'
                 }`}
-              >
+
                 <div className="text-center mb-6">
                   <h3 className="text-2xl font-bold mb-2">{tier.name}</h3>
                   <div className="text-4xl font-bold text-blue-400 mb-2">
@@ -184,7 +182,7 @@ export default function AIProjectManagement() {
                       ? 'bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700'
                       : 'bg-slate-700 hover:bg-slate-600 border border-slate-600'
                   }`}
-                >
+
                   Get Started
                 </a>
               </div>
@@ -226,13 +224,13 @@ export default function AIProjectManagement() {
               target="_blank"
               rel="noopener noreferrer"
               className="px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg font-semibold hover:from-blue-600 hover:to-purple-700 transition-all duration-300 inline-flex items-center"
-            >
+
               Start Free Trial <ArrowRight className="ml-2 w-5 h-5" />
             </a>
             <a
               href="mailto:kleber@ziontechgroup.com"
               className="px-8 py-4 border border-blue-400/30 rounded-lg font-semibold hover:bg-blue-500/10 transition-all duration-300 inline-flex items-center"
-            >
+
               <Mail className="w-5 h-5 mr-2" /> Schedule Demo
             </a>
           </div>
@@ -266,7 +264,7 @@ export default function AIProjectManagement() {
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-slate-300 hover:text-blue-400 inline-flex items-center"
-                >
+
                   ziontechgroup.com <ExternalLink className="w-4 h-4 ml-1" />
                 </a>
               </div>
@@ -276,4 +274,4 @@ export default function AIProjectManagement() {
       </section>
     </div>
   );
-}
+}}}

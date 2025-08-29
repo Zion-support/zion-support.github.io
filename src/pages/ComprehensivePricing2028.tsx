@@ -33,8 +33,6 @@ import {
   X,
   ChevronDown,
   ChevronUp
-} from 'lucide-react';
-
 const ComprehensivePricing2028 = () => {
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [expandedService, setExpandedService] = useState<string | null>(null);
@@ -119,7 +117,7 @@ const ComprehensivePricing2028 = () => {
       benefits: ['99.99% threat detection', '24/7 protection', '<1s response time', 'Global threat coverage'],
       useCases: ['Enterprise Security', 'Remote Work Security', 'Cloud Security', 'Compliance Requirements'],
       color: 'red'
-    }
+
   ];
 
   const filteredServices = selectedCategory === 'all'
@@ -160,7 +158,7 @@ const ComprehensivePricing2028 = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="mb-8"
-          >
+
             <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-blue-500/10 to-purple-500/10 border border-blue-500/20 text-blue-400 text-sm font-medium mb-6">
               <Star className="w-4 h-4 mr-2" />
               Comprehensive Pricing 2028
@@ -194,7 +192,7 @@ const ComprehensivePricing2028 = () => {
                     ? 'bg-gradient-to-r from-blue-500 to-purple-500 text-white'
                     : 'bg-slate-800/50 text-gray-300 hover:bg-slate-700/50 border border-slate-700/50'
                 }`}
-              >
+
                 {category.icon}
                 <span className="ml-2">{category.name}</span>
               </motion.button>
@@ -214,7 +212,7 @@ const ComprehensivePricing2028 = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
                 className={`bg-slate-800/50 backdrop-blur-sm border rounded-xl p-8 ${getBorderColor(service.color)} transition-all duration-300`}
-              >
+
                 <div className="flex items-start justify-between mb-6">
                   {/* Icon will be added here based on service.icon */}
                   <span className="text-sm text-gray-400 bg-slate-700/50 px-3 py-1 rounded-full">
@@ -261,7 +259,7 @@ const ComprehensivePricing2028 = () => {
                   <button
                     onClick={() => setExpandedService(expandedService === service.id ? null : service.id)}
                     className="flex items-center justify-between w-full text-left"
-                  >
+
                     <span className="text-lg font-semibold text-white">View Details</span>
                     {expandedService === service.id ? (
                       <ChevronUp className="w-5 h-5 text-gray-400" />
@@ -277,7 +275,7 @@ const ComprehensivePricing2028 = () => {
                       exit={{ opacity: 0, height: 0 }}
                       transition={{ duration: 0.3 }}
                       className="mt-4 space-y-4"
-                    >
+
                       <div>
                         <h5 className="text-md font-semibold text-white mb-2">Key Features</h5>
                         <div className="grid grid-cols-2 gap-2">
@@ -304,7 +302,7 @@ const ComprehensivePricing2028 = () => {
                             <span
                               key={useCaseIndex}
                               className="text-xs text-gray-300 bg-slate-700/50 px-2 py-1 rounded-full"
-                            >
+
                               {useCase}
                             </span>
                           ))}
@@ -318,7 +316,7 @@ const ComprehensivePricing2028 = () => {
                   <Link
                     to={`/services/${service.id}`}
                     className={`w-full px-6 py-3 bg-gradient-to-r ${getColorClasses(service.color)} text-white font-semibold rounded-lg transition-all duration-300 flex items-center justify-center hover:scale-105`}
-                  >
+
                     Get Started
                     <ArrowRight className="w-4 h-4 ml-2" />
                   </Link>
@@ -337,7 +335,7 @@ const ComprehensivePricing2028 = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="bg-gradient-to-r from-blue-500/10 to-purple-500/10 border border-blue-500/20 rounded-2xl p-12"
-          >
+
             <h2 className="text-4xl font-bold text-white mb-6">
               Need a Custom Solution?
             </h2>
@@ -349,14 +347,14 @@ const ComprehensivePricing2028 = () => {
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 className="px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-500 text-white font-semibold rounded-lg hover:from-blue-600 hover:to-purple-600 transition-all duration-300"
-              >
+
                 Contact Sales
               </motion.button>
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 className="px-8 py-4 border border-blue-500/30 text-blue-400 font-semibold rounded-lg hover:bg-blue-500/10 transition-all duration-300"
-              >
+
                 Schedule Demo
               </motion.button>
             </div>
@@ -367,4 +365,4 @@ const ComprehensivePricing2028 = () => {
   );
 };
 
-export default ComprehensivePricing2028;
+export default ComprehensivePricing2028;}}

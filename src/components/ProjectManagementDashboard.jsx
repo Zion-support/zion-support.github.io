@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
-import { Calendar, Users, CheckCircle, Clock, AlertTriangle, TrendingUp, BarChart3, Search, Edit, Trash2, Eye, X } from 'lucide-react';
-const mockProjects = [
+import { Calendar, Users, CheckCircle, Clock, AlertTriangle, TrendingUp, BarChart3, Search, Edit, Trash2, Eye, X const mockProjects = [
     {
         id: '1',
         name: 'AI-Powered E-commerce Platform',
@@ -52,7 +51,7 @@ const mockProjects = [
             { id: '6', name: 'Core Banking Features', status: 'completed', assignee: 'Lisa Wang', dueDate: '2024-03-30', priority: 'high', estimatedHours: 200, actualHours: 190 },
             { id: '7', name: 'Security Testing', status: 'review', assignee: 'David Kim', dueDate: '2024-04-15', priority: 'critical', estimatedHours: 40, actualHours: 35 }
         ]
-    }
+
 ];
 const statusColors = {
     'planning': 'bg-zion-blue text-white',
@@ -89,7 +88,7 @@ export function ProjectManagementDashboard() {
             case 'completed': return <CheckCircle className="w-4 h-4"/>;
             case 'on-hold': return <AlertTriangle className="w-4 h-4"/>;
             default: return <Clock className="w-4 h-4"/>;
-        }
+
     };
     const getProgressColor = (progress) => {
         if (progress >= 80)
@@ -116,7 +115,7 @@ export function ProjectManagementDashboard() {
         return (<button onClick={() => setIsVisible(true)} className="fixed bottom-4 left-36 p-3 bg-zion-gold hover:bg-zion-orange text-white rounded-full shadow-lg hover:shadow-xl transition-all duration-300 z-50" title="Show Project Management Dashboard">
         <BarChart3 className="w-5 h-5"/>
       </button>);
-    }
+
     return (<div className="fixed inset-4 bg-white dark:bg-zion-slate border border-zion-slate-light rounded-lg shadow-2xl z-50 overflow-hidden">
       {/* Header */}
       <div className="flex items-center justify-between p-6 border-b border-zion-slate-light bg-gradient-to-r from-zion-gold/10 to-zion-orange/10">
@@ -398,4 +397,4 @@ export function ProjectManagementDashboard() {
           </div>
         </div>)}
     </div>);
-}
+}}}}}

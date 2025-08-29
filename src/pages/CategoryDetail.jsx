@@ -2,8 +2,7 @@ import { useParams, Link } from "react-router-dom";
 import { GradientHeading } from "@/components/GradientHeading";
 import { ProductListingCard } from "@/components/ProductListingCard";
 import { useState, useEffect, useRef } from "react";
-import { Brain, PenLine, BarChart, Eye, Bot, Mic, Code, Briefcase } from "lucide-react";
-import { MARKETPLACE_LISTINGS } from "@/data/listingData";
+import { Brain, PenLine, BarChart, Eye, Bot, Mic, Code, Briefcase import { MARKETPLACE_LISTINGS } from "@/data/listingData";
 import { useNavigate } from "react-router-dom";
 import { toast } from "@/hooks/use-toast";
 const AUTO_SERVICE_TITLES = [
@@ -41,7 +40,7 @@ function generateInnovationListing(index) {
         availability: "Immediate",
         aiScore: Math.floor(Math.random() * 20) + 80
     };
-}
+
 export default function CategoryDetail() {
     // Cast to specify the expected route param type since useParams may be untyped
     const { slug } = useParams();
@@ -115,7 +114,7 @@ export default function CategoryDetail() {
             title: "Business Solutions",
             description: "Enterprise AI integrations and services",
             icon: <Briefcase className="w-6 h-6"/>
-        }
+
     };
     useEffect(() => {
         setIsLoading(true);
@@ -182,10 +181,10 @@ export default function CategoryDetail() {
                         title: listing.title,
                         category: listing.category,
                         image: listing.images?.[0]
-                    }
-                }
+
+
             });
-        }
+
     };
     return (<>
 
@@ -220,4 +219,4 @@ export default function CategoryDetail() {
       </div>
 
     </>);
-}
+}}}}}}}

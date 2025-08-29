@@ -32,5 +32,4 @@ export default function DataGovernanceObservability() {
       </main>
     </div>
   );
-}
-
+</div></div></div></div>}

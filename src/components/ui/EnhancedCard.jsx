@@ -15,26 +15,26 @@ export function EnhancedCard({ children, className, variant = 'default', hover =
         return (<a href={href} className={classes} onClick={onClick}>
         {children}
       </a>);
-    }
+
     return (<Component className={classes} onClick={onClick}>
       {children}
     </Component>);
-}
+
 // Enhanced Card Header component
 export function EnhancedCardHeader({ children, className }) {
     return (<div className={cn('p-6 pb-0', className)}>
       {children}
     </div>);
-}
+
 // Enhanced Card Content component
 export function EnhancedCardContent({ children, className }) {
     return (<div className={cn('p-6', className)}>
       {children}
     </div>);
-}
+
 // Enhanced Card Footer component
 export function EnhancedCardFooter({ children, className }) {
     return (<div className={cn('p-6 pt-0', className)}>
       {children}
     </div>);
-}
+}}}}}

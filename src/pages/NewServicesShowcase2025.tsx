@@ -6,7 +6,6 @@ import {
   DollarSign, Users, Check, ArrowRight, ExternalLink, Phone, Mail,
   Calendar, Shield, Filter, Headphones, Calculator, PieChart,
   ArrowRight, ExternalLink, Phone, Mail, Globe, TrendingUp, Shield, Leaf, Cpu, Atom, Wifi, CheckCircle, Star
-} from 'lucide-react';
 import { SEO } from '@/components/SEO';
 
 export default function NewServicesShowcase2025() {
@@ -60,7 +59,7 @@ export default function NewServicesShowcase2025() {
       color: 'from-teal-600 via-cyan-600 to-blue-800',
       icon: Wifi,
       path: '/services/ai-edge-computing-platform'
-    }
+
   ];
 
   const industries = [
@@ -159,7 +158,7 @@ export default function NewServicesShowcase2025() {
                     <a
                       href={service.path}
                       className="inline-flex items-center px-4 py-2 bg-purple-600 text-white rounded-lg hover:bg-purple-700 transition-colors"
-                    >
+
                       Learn More <ArrowRight className="w-4 h-4 ml-2" />
                     </a>
                   </div>
@@ -277,7 +276,7 @@ export default function NewServicesShowcase2025() {
               target="_blank"
               rel="noreferrer"
               className="inline-flex items-center text-purple-600 hover:text-purple-700 font-semibold"
-            >
+
               Visit ziontechgroup.com <ExternalLink className="w-4 h-4 ml-2" />
             </a>
             <span className="text-gray-400">|</span>
@@ -287,4 +286,4 @@ export default function NewServicesShowcase2025() {
       </section>
     </div>
   );
-}
+}}}

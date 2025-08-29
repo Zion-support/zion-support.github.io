@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Brain, Zap, Shield, Globe, Rocket, Star, ArrowRight, CheckCircle } from 'lucide-react';
-const services = [
+import { Brain, Zap, Shield, Globe, Rocket, Star, ArrowRight, CheckCircle const services = [
     {
         id: 'ai-automation',
         name: 'AI & Automation',
@@ -56,7 +55,7 @@ const services = [
         color: 'from-yellow-500 to-orange-500',
         price: '$249/month',
         features: ['Smart Contracts', 'DeFi Platforms', 'NFT Marketplaces', 'DAO Governance']
-    }
+
 ];
 export default function FuturisticServicesShowcase() {
     const [hoveredService, setHoveredService] = useState(null);
@@ -192,4 +191,4 @@ export default function FuturisticServicesShowcase() {
         </motion.div>
       </div>
     </section>);
-}
+</div></div></div></div>}}</motion.div></motion.div>}

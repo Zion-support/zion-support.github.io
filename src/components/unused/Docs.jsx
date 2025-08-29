@@ -40,7 +40,7 @@ const Docs = () => {
                 { title: "SOC2 Compliance", description: "Meet compliance requirements", readTime: "20 min", difficulty: "Advanced" },
                 { title: "Audit Logging", description: "Track and monitor system access", readTime: "10 min", difficulty: "Intermediate" }
             ]
-        }
+
     ];
     const popularDocs = [
         {
@@ -70,7 +70,7 @@ const Docs = () => {
             readTime: "22 min",
             views: "1.3k",
             lastUpdated: "5 days ago"
-        }
+
     ];
     return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white">
       <section className="py-20 px-4 sm:px-6 lg:px-8">
@@ -204,3 +204,4 @@ const Docs = () => {
     </div>);
 };
 export default Docs;
+}}

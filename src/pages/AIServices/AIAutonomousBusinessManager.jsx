@@ -1,8 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import { Brain, TrendingUp, Zap, Users, BarChart3, Target, CheckCircle, ArrowRight, Play, Star } from 'lucide-react';
-import SEO from '../SEO';
+import { Brain, TrendingUp, Zap, Users, BarChart3, Target, CheckCircle, ArrowRight, Play, Star import SEO from '../SEO';
 const features = [
     {
         title: "Intelligent Decision Making",
@@ -27,7 +26,7 @@ const features = [
         description: "Forecast market trends, customer needs, and business opportunities with advanced predictive analytics.",
         icon: TrendingUp,
         color: "from-orange-500 to-red-500"
-    }
+
 ];
 const benefits = [
     "Increase operational efficiency by up to 60%",
@@ -57,7 +56,7 @@ const useCases = [
         title: "Financial Services",
         description: "Enhance financial decision-making with real-time market analysis and risk assessment.",
         icon: BarChart3
-    }
+
 ];
 const testimonials = [
     {
@@ -71,7 +70,7 @@ const testimonials = [
         name: "Michael Rodriguez",
         role: "COO, InnovateCorp",
         rating: 5
-    }
+
 ];
 export default function AIAutonomousBusinessManager() {
     return (<div className="min-h-screen bg-background relative overflow-hidden">
@@ -240,4 +239,4 @@ export default function AIAutonomousBusinessManager() {
         </div>
       </section>
     </div>);
-}
+}}}}}

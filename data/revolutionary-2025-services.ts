@@ -38,7 +38,7 @@ export interface Revolutionary2025Service {
   customers: number;
   rating: number;
   reviews: number;
-}
+
 export const revolutionary2025Services: Revolutionary2025Service[] = [
   // Revolutionary AI Services 2025
   {
@@ -502,5 +502,5 @@ export const revolutionary2025Services: Revolutionary2025Service[] = [
     customers: 95,
     rating: 4.9,
     reviews: 67
-  }
-];
+
+];}}

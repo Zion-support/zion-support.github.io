@@ -38,7 +38,7 @@ export interface RealMarketService {
   customers: number;
   rating: number;
   reviews: number;
-}
+
 export const realMarketServices: RealMarketService[] = [
   // AI-Powered Business Intelligence
   {
@@ -507,5 +507,5 @@ export const realMarketServices: RealMarketService[] = [
     customers: 850,
     rating: 4.8,
     reviews: 480
-  }
-];
+
+];}}

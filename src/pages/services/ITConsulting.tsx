@@ -24,8 +24,6 @@ import {
   BarChart3,
   Rocket,
   Building2
-} from 'lucide-react';
-
 export default function ITConsulting() {
   const services = [
     {
@@ -51,7 +49,7 @@ export default function ITConsulting() {
       description: 'Optimize your technology infrastructure for maximum performance and efficiency.',
       icon: Zap,
       features: ['Performance Analysis', 'Bottleneck Identification', 'Optimization Strategies', 'Monitoring Setup']
-    }
+
   ];
 
   const expertise = [
@@ -84,7 +82,7 @@ export default function ITConsulting() {
       title: 'IT Operations',
       description: 'Optimize IT operations and service delivery.',
       icon: Settings
-    }
+
   ];
 
   const benefits = [
@@ -107,7 +105,7 @@ export default function ITConsulting() {
       title: 'Competitive Advantage',
       description: 'Leverage technology to gain competitive advantages in your market.',
       icon: Target
-    }
+
   ];
 
   const industries = [
@@ -125,7 +123,7 @@ export default function ITConsulting() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-          >
+
             <h1 className="text-5xl lg:text-7xl font-bold bg-gradient-to-r from-zion-cyan via-zion-purple to-zion-blue bg-clip-text text-transparent mb-6">
               IT Consulting
             </h1>
@@ -137,13 +135,13 @@ export default function ITConsulting() {
               <Link
                 to="/contact"
                 className="px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-blue text-white rounded-lg hover:shadow-lg hover:shadow-zion-cyan/25 transition-all duration-300 transform hover:scale-105 font-semibold"
-              >
+
                 Get Expert Advice
               </Link>
               <Link
                 to="/services"
                 className="px-8 py-4 border-2 border-zion-cyan text-zion-cyan rounded-lg hover:bg-zion-cyan hover:text-white transition-all duration-300 font-semibold"
-              >
+
                 View All Services
               </Link>
             </div>
@@ -159,7 +157,7 @@ export default function ITConsulting() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-          >
+
             <h2 className="text-4xl lg:text-5xl font-bold text-white mb-6">
               Our IT Consulting Services
             </h2>
@@ -177,7 +175,7 @@ export default function ITConsulting() {
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-              >
+
                 <div className="flex items-start gap-4 mb-6">
                   <div className="w-16 h-16 bg-gradient-to-r from-zion-cyan to-zion-blue rounded-lg flex items-center justify-center flex-shrink-0">
                     <service.icon className="w-8 h-8 text-white" />
@@ -213,7 +211,7 @@ export default function ITConsulting() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-          >
+
             <h2 className="text-4xl lg:text-5xl font-bold text-white mb-6">
               Areas of Expertise
             </h2>
@@ -230,7 +228,7 @@ export default function ITConsulting() {
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-              >
+
                 <div className="w-16 h-16 bg-gradient-to-r from-zion-cyan to-zion-blue rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
                   <area.icon className="w-8 h-8 text-white" />
                 </div>
@@ -251,7 +249,7 @@ export default function ITConsulting() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-          >
+
             <h2 className="text-4xl lg:text-5xl font-bold text-white mb-6">
               Why Choose Our IT Consulting?
             </h2>
@@ -268,7 +266,7 @@ export default function ITConsulting() {
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-              >
+
                 <div className="w-16 h-16 bg-gradient-to-r from-zion-cyan to-zion-blue rounded-lg flex items-center justify-center mb-6">
                   <benefit.icon className="w-8 h-8 text-white" />
                 </div>
@@ -288,7 +286,7 @@ export default function ITConsulting() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-          >
+
             <h2 className="text-4xl lg:text-5xl font-bold text-white mb-6">
               Industries We Serve
             </h2>
@@ -306,7 +304,7 @@ export default function ITConsulting() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-              >
+
                 <div className="text-zion-cyan font-semibold">{industry}</div>
               </motion.div>
             ))}
@@ -322,7 +320,7 @@ export default function ITConsulting() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-          >
+
             <h2 className="text-4xl lg:text-5xl font-bold text-white mb-6">
               Our Consulting Process
             </h2>
@@ -344,7 +342,7 @@ export default function ITConsulting() {
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-              >
+
                 <div className="w-20 h-20 bg-gradient-to-r from-zion-cyan to-zion-blue rounded-full flex items-center justify-center mx-auto mb-6 text-2xl font-bold text-white">
                   {phase.step}
                 </div>
@@ -364,7 +362,7 @@ export default function ITConsulting() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-          >
+
             <h2 className="text-4xl lg:text-5xl font-bold text-white mb-6">
               Ready for Expert IT Guidance?
             </h2>
@@ -376,13 +374,13 @@ export default function ITConsulting() {
               <Link
                 to="/contact"
                 className="px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-blue text-white rounded-lg hover:shadow-lg hover:shadow-zion-cyan/25 transition-all duration-300 transform hover:scale-105 font-semibold"
-              >
+
                 Schedule Consultation
               </Link>
               <Link
                 to="/services"
                 className="px-8 py-4 border-2 border-zion-cyan text-zion-cyan rounded-lg hover:bg-zion-cyan hover:text-white transition-all duration-300 font-semibold"
-              >
+
                 Explore Services
               </Link>
             </div>
@@ -391,4 +389,4 @@ export default function ITConsulting() {
       </section>
     </div>
   );
-}
+}}}}}

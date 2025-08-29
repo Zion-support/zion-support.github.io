@@ -3,8 +3,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { SEO } from "@/components/SEO";
-import { Cloud, Server, Database, Zap, Target, DollarSign, ArrowRight, CheckCircle, Star, Shield, Network, BarChart3 } from "lucide-react";
-import { Link } from "react-router-dom";
+import { Cloud, Server, Database, Zap, Target, DollarSign, ArrowRight, CheckCircle, Star, Shield, Network, BarChart3 import { Link } from "react-router-dom";
 export default function CloudMigrationServices() {
     const services = [
         {
@@ -30,7 +29,7 @@ export default function CloudMigrationServices() {
             description: "Lift-and-shift or refactor applications for cloud deployment",
             icon: <Server className="h-6 w-6 text-zion-cyan"/>,
             price: "From $8,000"
-        }
+
     ];
     const cloudPlatforms = [
         {
@@ -56,7 +55,7 @@ export default function CloudMigrationServices() {
             description: "Hybrid and multi-cloud migration strategies",
             icon: <Network className="h-8 w-8 text-zion-cyan"/>,
             features: ["Hybrid Cloud", "Multi-Cloud", "Cloud Bursting", "Disaster Recovery"]
-        }
+
     ];
     const pricingPlans = [
         {
@@ -102,7 +101,7 @@ export default function CloudMigrationServices() {
                 "Custom integrations"
             ],
             popular: false
-        }
+
     ];
     const testimonials = [
         {
@@ -122,7 +121,7 @@ export default function CloudMigrationServices() {
             role: "VP Engineering, FinTech Startup",
             content: "From on-premise to AWS in 6 weeks. Zion's team delivered beyond our expectations with excellent documentation.",
             rating: 5
-        }
+
     ];
     return (<div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-blue-dark to-zion-slate-dark">
       <SEO title="Cloud Migration Services - Zion Tech Group" description="Expert cloud migration services for AWS, Azure, and Google Cloud. Seamless migration with zero downtime and cost optimization." keywords="cloud migration, AWS migration, Azure migration, Google Cloud, cloud optimization, Zion Tech Group" canonical="https://ziontechgroup.com/cloud-migration-services"/>
@@ -382,4 +381,4 @@ export default function CloudMigrationServices() {
         </div>
       </section>
     </div>);
-}
+</Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card>}}}}}}

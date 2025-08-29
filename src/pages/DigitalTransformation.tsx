@@ -25,8 +25,6 @@ import {
   Lock,
   Eye,
   Heart
-} from 'lucide-react';
-
 const DigitalTransformation = () => {
   const [selectedPhase, setSelectedPhase] = useState(0);
 
@@ -72,7 +70,7 @@ const DigitalTransformation = () => {
       icon: Shield,
       features: ["Security Architecture", "Compliance Frameworks", "Risk Management", "Security Audits"],
       color: "from-yellow-500 to-orange-500"
-    }
+
   ];
 
   const transformationPhases = [
@@ -127,7 +125,7 @@ const DigitalTransformation = () => {
         "Continuous optimization",
         "Training and support"
       ]
-    }
+
   ];
 
   const testimonials = [
@@ -148,7 +146,7 @@ const DigitalTransformation = () => {
       name: "Marcus Johnson",
       role: "CTO, DigitalFirst Inc",
       rating: 5
-    }
+
   ];
 
   const stats = [
@@ -207,7 +205,7 @@ const DigitalTransformation = () => {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 className="text-center"
-              >
+
                 <div className="text-4xl md:text-5xl font-bold text-zion-cyan mb-2">{stat.number}</div>
                 <div className="text-zion-slate-light text-sm md:text-base">{stat.label}</div>
               </motion.div>
@@ -237,7 +235,7 @@ const DigitalTransformation = () => {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 className="bg-zion-slate-dark/50 backdrop-blur-sm border border-zion-cyan/20 rounded-xl p-6 hover:border-zion-cyan/40 transition-all duration-300"
-              >
+
                 <div className={`w-16 h-16 bg-gradient-to-r ${service.color} rounded-2xl flex items-center justify-center mx-auto mb-6`}>
                   <service.icon className="w-8 h-8 text-white" />
                 </div>
@@ -284,7 +282,7 @@ const DigitalTransformation = () => {
                     selectedPhase === index ? 'border-zion-cyan' : 'border-zion-cyan/20'
                   }`}
                   onClick={() => setSelectedPhase(index)}
-                >
+
                   {/* Phase Number */}
                   <div className="absolute -top-4 left-6">
                     <div className="w-8 h-8 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-full flex items-center justify-center text-white font-bold text-sm">
@@ -308,7 +306,7 @@ const DigitalTransformation = () => {
                         animate={{ opacity: 1, height: 'auto' }}
                         transition={{ duration: 0.3 }}
                         className="space-y-2"
-                      >
+
                         <div className="text-sm font-medium text-zion-slate-light mb-2">Key Activities:</div>
                         {phase.activities.map((activity, activityIndex) => (
                           <div key={activityIndex} className="flex items-center gap-2 text-zion-slate-light text-xs">
@@ -346,7 +344,7 @@ const DigitalTransformation = () => {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 className="bg-zion-slate-dark/50 backdrop-blur-sm border border-zion-cyan/20 rounded-xl p-6 hover:border-zion-cyan/40 transition-all duration-300"
-              >
+
                 <div className="flex items-center gap-1 mb-4">
                   {[...Array(testimonial.rating)].map((_, i) => (
                     <Star key={i} className="w-5 h-5 text-zion-cyan fill-current" />
@@ -390,4 +388,4 @@ const DigitalTransformation = () => {
   );
 };
 
-export default DigitalTransformation;
+export default DigitalTransformation;}}}}

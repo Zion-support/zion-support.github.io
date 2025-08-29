@@ -32,5 +32,4 @@ export default function AIKnowledgebaseAgent() {
       </main>
     </div>
   );
-}
-
+</div></div></div></div>}

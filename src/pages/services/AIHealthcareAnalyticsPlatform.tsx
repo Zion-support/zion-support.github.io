@@ -1,9 +1,7 @@
 import React from 'react';
 import { SEO } from '@/components/SEO';
 import { motion } from 'framer-motion';
-import { Heart, Brain, Shield, Zap, Target, CheckCircle, Star, ArrowRight, Phone, Mail, ExternalLink, Activity, Users, Clock, DollarSign, Database, Lock, BarChart3, TrendingUp } from 'lucide-react';
-
-const AIHealthcareAnalyticsPlatform: React.FC = () => {
+import { Heart, Brain, Shield, Zap, Target, CheckCircle, Star, ArrowRight, Phone, Mail, ExternalLink, Activity, Users, Clock, DollarSign, Database, Lock, BarChart3, TrendingUp const AIHealthcareAnalyticsPlatform: React.FC = () => {
   const features = [
     {
       icon: Brain,
@@ -40,7 +38,7 @@ const AIHealthcareAnalyticsPlatform: React.FC = () => {
       title: 'Treatment Optimization',
       description: 'AI-driven treatment recommendations based on patient history and outcomes',
       color: 'from-indigo-500 to-purple-500'
-    }
+
   ];
 
   const pricingPlans = [
@@ -93,7 +91,7 @@ const AIHealthcareAnalyticsPlatform: React.FC = () => {
       ],
       cta: 'Contact Sales',
       popular: false
-    }
+
   ];
 
   const useCases = [
@@ -111,7 +109,7 @@ const AIHealthcareAnalyticsPlatform: React.FC = () => {
       title: 'Specialty Clinics',
       description: 'Disease-specific analytics, treatment optimization, and patient outcome tracking',
       metrics: ['Optimize treatment plans by 50%', 'Reduce complications by 30%', 'Improve recovery times by 25%']
-    }
+
   ];
 
   const integrations = [
@@ -140,7 +138,7 @@ const AIHealthcareAnalyticsPlatform: React.FC = () => {
       icon: Clock,
       title: '50% Faster Diagnosis',
       description: 'Accelerate diagnosis and treatment planning with AI insights'
-    }
+
   ];
 
   return (
@@ -159,7 +157,7 @@ const AIHealthcareAnalyticsPlatform: React.FC = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             className="text-center max-w-4xl mx-auto"
-          >
+
             <div className="flex justify-center mb-6">
               <div className="w-20 h-20 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-2xl flex items-center justify-center">
                 <Heart className="w-10 h-10 text-white" />
@@ -176,14 +174,14 @@ const AIHealthcareAnalyticsPlatform: React.FC = () => {
               <a
                 href="/contact"
                 className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-500 to-cyan-500 text-white font-semibold rounded-lg hover:from-blue-600 hover:to-cyan-600 transition-all duration-200 shadow-lg hover:shadow-xl"
-              >
+
                 Start Free Trial
                 <ArrowRight className="ml-2 w-5 h-5" />
               </a>
               <a
                 href="#demo"
                 className="inline-flex items-center px-8 py-4 bg-slate-800 text-white font-semibold rounded-lg hover:bg-slate-700 transition-all duration-200 border border-slate-600"
-              >
+
                 Watch Demo
               </a>
             </div>
@@ -211,7 +209,7 @@ const AIHealthcareAnalyticsPlatform: React.FC = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 className="text-center p-6"
-              >
+
                 <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-full flex items-center justify-center mx-auto mb-4">
                   <benefit.icon className="w-8 h-8 text-white" />
                 </div>
@@ -243,7 +241,7 @@ const AIHealthcareAnalyticsPlatform: React.FC = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 className="bg-slate-800 rounded-xl p-6 border border-slate-700 hover:border-slate-600 transition-all duration-200"
-              >
+
                 <div className={`w-12 h-12 bg-gradient-to-br ${feature.color} rounded-lg flex items-center justify-center mb-4`}>
                   <feature.icon className="w-6 h-6 text-white" />
                 </div>
@@ -279,7 +277,7 @@ const AIHealthcareAnalyticsPlatform: React.FC = () => {
                     ? 'border-blue-500 relative'
                     : 'border-slate-700'
                 }`}
-              >
+
                 {plan.popular && (
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                     <span className="bg-blue-500 text-white px-4 py-2 rounded-full text-sm font-semibold">
@@ -313,7 +311,7 @@ const AIHealthcareAnalyticsPlatform: React.FC = () => {
                       ? 'bg-gradient-to-r from-blue-500 to-cyan-500 text-white hover:from-blue-600 hover:to-cyan-600'
                       : 'bg-slate-700 text-white hover:bg-slate-600'
                   }`}
-                >
+
                   {plan.cta}
                 </a>
               </motion.div>
@@ -342,7 +340,7 @@ const AIHealthcareAnalyticsPlatform: React.FC = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 className="bg-slate-800 rounded-xl p-6 border border-slate-700"
-              >
+
                 <h3 className="text-xl font-semibold text-white mb-3">{useCase.title}</h3>
                 <p className="text-slate-300 mb-4">{useCase.description}</p>
                 <ul className="space-y-2">
@@ -379,7 +377,7 @@ const AIHealthcareAnalyticsPlatform: React.FC = () => {
                 whileInView={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.6, delay: index * 0.05 }}
                 className="bg-slate-800 rounded-lg p-4 border border-slate-700 text-center hover:border-slate-600 transition-all duration-200"
-              >
+
                 <span className="text-slate-300 font-medium">{integration}</span>
               </motion.div>
             ))}
@@ -405,7 +403,7 @@ const AIHealthcareAnalyticsPlatform: React.FC = () => {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
               className="bg-slate-800 rounded-xl p-6 border border-slate-700 text-center"
-            >
+
               <div className="w-16 h-16 bg-gradient-to-br from-red-500 to-orange-500 rounded-full flex items-center justify-center mx-auto mb-4">
                 <Lock className="w-8 h-8 text-white" />
               </div>
@@ -418,7 +416,7 @@ const AIHealthcareAnalyticsPlatform: React.FC = () => {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
               className="bg-slate-800 rounded-xl p-6 border border-slate-700 text-center"
-            >
+
               <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-full flex items-center justify-center mx-auto mb-4">
                 <Shield className="w-8 h-8 text-white" />
               </div>
@@ -431,7 +429,7 @@ const AIHealthcareAnalyticsPlatform: React.FC = () => {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.4 }}
               className="bg-slate-800 rounded-xl p-6 border border-slate-700 text-center"
-            >
+
               <div className="w-16 h-16 bg-gradient-to-br from-green-500 to-emerald-500 rounded-full flex items-center justify-center mx-auto mb-4">
                 <Activity className="w-8 h-8 text-white" />
               </div>
@@ -450,7 +448,7 @@ const AIHealthcareAnalyticsPlatform: React.FC = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             className="max-w-4xl mx-auto"
-          >
+
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
               Ready to Transform Healthcare Delivery?
             </h2>
@@ -462,14 +460,14 @@ const AIHealthcareAnalyticsPlatform: React.FC = () => {
               <a
                 href="/contact"
                 className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-500 to-cyan-500 text-white font-semibold rounded-lg hover:from-blue-600 hover:to-cyan-600 transition-all duration-200 shadow-lg hover:shadow-xl"
-              >
+
                 Start Free Trial
                 <ArrowRight className="ml-2 w-5 h-5" />
               </a>
               <a
                 href="tel:+13024640950"
                 className="inline-flex items-center px-8 py-4 bg-slate-800 text-white font-semibold rounded-lg hover:bg-slate-700 transition-all duration-200 border border-slate-600"
-              >
+
                 <Phone className="w-5 h-5 mr-2" />
                 Call Us
               </a>
@@ -528,4 +526,4 @@ const AIHealthcareAnalyticsPlatform: React.FC = () => {
   );
 };
 
-export default AIHealthcareAnalyticsPlatform;
+export default AIHealthcareAnalyticsPlatform;}}}}}

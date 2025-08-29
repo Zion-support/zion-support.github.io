@@ -166,9 +166,9 @@ export const enhancedServices2025 = [
       enterprise: "Custom"
     },
     technologies: ["IoT Sensors", "Machine Learning", "Cloud Computing", "Data Analytics"]
-  }
+
 ];
 
 export const ENHANCED_SERVICES_2025 = enhancedServices2025;
 
-export const EnhancedService2025 = enhancedServices2025[0]; // Default export for compatibility
+export const EnhancedService2025 = enhancedServices2025[0]; // Default export for compatibility}

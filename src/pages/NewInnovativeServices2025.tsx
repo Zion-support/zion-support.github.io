@@ -9,8 +9,6 @@ import {
   Zap, Star, Rocket, Globe, Cpu, ArrowRight, FileText,
   Workflow, Database, AlertTriangle, Package, Route, Factory,
   Calculator, Graph
-} from 'lucide-react';
-
 const NewInnovativeServices2025: React.FC = () => {
   const newServices = [
     {
@@ -122,7 +120,7 @@ const NewInnovativeServices2025: React.FC = () => {
       ],
       href: '/services/ai-financial-risk-management',
       color: 'from-emerald-500 to-teal-500'
-    }
+
   ];
 
   const categories = [
@@ -155,7 +153,7 @@ const NewInnovativeServices2025: React.FC = () => {
       icon: DollarSign,
       color: 'from-emerald-500 to-teal-500',
       count: 1
-    }
+
   ];
 
   return (
@@ -168,7 +166,7 @@ const NewInnovativeServices2025: React.FC = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             className="text-center"
-          >
+
             <div className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-indigo-500/20 to-purple-500/20 rounded-full border border-indigo-400/30 mb-6">
               <Rocket className="w-5 h-5 text-indigo-400 mr-2" />
               <span className="text-indigo-300 font-medium">2025 New Services</span>
@@ -206,7 +204,7 @@ const NewInnovativeServices2025: React.FC = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
-          >
+
             <h2 className="text-4xl font-bold text-white mb-4">
               Service Categories
             </h2>
@@ -223,7 +221,7 @@ const NewInnovativeServices2025: React.FC = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 hover:border-indigo-400/30 transition-all duration-200 text-center"
-              >
+
                 <div className={`w-16 h-16 bg-gradient-to-r ${category.color} rounded-xl flex items-center justify-center mx-auto mb-4`}>
                   <category.icon className="w-8 h-8 text-white" />
                 </div>
@@ -243,7 +241,7 @@ const NewInnovativeServices2025: React.FC = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
-          >
+
             <h2 className="text-4xl font-bold text-white mb-4">
               Latest Innovative Services
             </h2>
@@ -260,7 +258,7 @@ const NewInnovativeServices2025: React.FC = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 hover:border-indigo-400/30 transition-all duration-200"
-              >
+
                 <div className="flex items-center mb-4">
                   <div className={`w-12 h-12 bg-gradient-to-r ${service.color} rounded-lg flex items-center justify-center mr-4`}>
                     <service.icon className="w-6 h-6 text-white" />
@@ -304,7 +302,7 @@ const NewInnovativeServices2025: React.FC = () => {
                 <Link
                   to={service.href}
                   className={`w-full px-4 py-3 bg-gradient-to-r ${service.color} text-white font-semibold rounded-lg hover:scale-105 transition-all duration-200 text-center block`}
-                >
+
                   Learn More
                 </Link>
               </motion.div>
@@ -320,7 +318,7 @@ const NewInnovativeServices2025: React.FC = () => {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-          >
+
             <h2 className="text-4xl font-bold text-white mb-4">
               Ready to Transform Your Business?
             </h2>
@@ -346,7 +344,7 @@ const NewInnovativeServices2025: React.FC = () => {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-          >
+
             <h2 className="text-3xl font-bold text-white mb-6">
               Get in Touch
             </h2>
@@ -373,4 +371,4 @@ const NewInnovativeServices2025: React.FC = () => {
   );
 };
 
-export default NewInnovativeServices2025;
+export default NewInnovativeServices2025;}}}

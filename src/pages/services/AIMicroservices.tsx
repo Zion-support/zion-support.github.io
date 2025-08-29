@@ -1,6 +1,4 @@
-import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, FileText, BarChart3 } from 'lucide-react';
-
-export default function AIMicroservices() {
+import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, FileText, BarChart3 export default function AIMicroservices() {
   const features = [
     'AI-powered microservices optimization',
     'Intelligent microservices management',
@@ -171,4 +169,4 @@ export default function AIMicroservices() {
       </section>
     </div>
   );
-}
+}}

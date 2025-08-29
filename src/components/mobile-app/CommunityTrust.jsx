@@ -1,7 +1,5 @@
 import React from 'react';
-import { Shield, Users, Award, Star, TrendingUp, Globe } from 'lucide-react';
-
-export const CommunityTrust = () => {
+import { Shield, Users, Award, Star, TrendingUp, Globe export const CommunityTrust = () => {
   const stats = [
     { icon: Users, value: '50K+', label: 'Active Users', color: 'text-blue-400' },
     { icon: Star, value: '4.8/5', label: 'User Rating', color: 'text-yellow-400' },
@@ -33,7 +31,7 @@ export const CommunityTrust = () => {
       content: 'The real-time synchronization and mobile-first approach make Zion the perfect solution for our distributed team.',
       rating: 5,
       avatar: '👩‍🔧'
-    }
+
   ];
 
   const certifications = [
@@ -58,7 +56,7 @@ export const CommunityTrust = () => {
       icon: Award,
       title: 'Industry Recognition',
       description: 'Award-winning solution trusted by Fortune 500 companies'
-    }
+
   ];
 
   return (
@@ -202,13 +200,13 @@ export const CommunityTrust = () => {
               <a
                 href="#download"
                 className="px-8 py-3 bg-white text-blue-600 font-semibold rounded-lg hover:bg-gray-100 transition-all duration-300"
-              >
+
                 Download Now
               </a>
               <a
                 href="#demo"
                 className="px-8 py-3 border border-white/30 text-white font-semibold rounded-lg hover:bg-white/10 transition-all duration-300"
-              >
+
                 Request Demo
               </a>
             </div>
@@ -217,4 +215,4 @@ export const CommunityTrust = () => {
       </div>
     </section>
   );
-};
+};}}}

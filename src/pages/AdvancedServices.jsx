@@ -44,7 +44,7 @@ const AdvancedServices = () => {
                 icon: "🔒",
                 title: "Enterprise Security",
                 description: "SOC 2, ISO 27001, and GDPR compliant with advanced threat protection"
-            }
+
         ].map((benefit, index) => (<motion.div key={index} initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: index * 0.2 }} className="bg-gradient-to-br from-cyan-500/10 via-blue-500/10 to-purple-500/10 rounded-xl p-6 border border-cyan-500/30 backdrop-blur-sm">
                   <div className="text-4xl mb-4">{benefit.icon}</div>
                   <h3 className="text-lg font-semibold text-white mb-2">{benefit.title}</h3>
@@ -149,7 +149,7 @@ const AdvancedServices = () => {
                 title: "Partnership Approach",
                 description: "We work as an extension of your team, not just a vendor",
                 stats: "Long-term strategic partnerships"
-            }
+
         ].map((feature, index) => (<motion.div key={index} initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: index * 0.1 }} viewport={{ once: true }} className="bg-gradient-to-br from-cyan-500/10 via-blue-500/10 to-purple-500/10 rounded-xl p-6 border border-cyan-500/30 backdrop-blur-sm hover:border-cyan-400/50 transition-all duration-300">
                 <div className="text-4xl mb-4">{feature.icon}</div>
                 <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
@@ -198,5 +198,6 @@ const AdvancedServices = () => {
         </div>
       </section>
     </div>);
-};
+</div>};
 export default AdvancedServices;
+}}

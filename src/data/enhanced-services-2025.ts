@@ -30,7 +30,6 @@ export interface EnhancedService {
         address: string;
         website: string;
     };
-}
 
 const CONTACT = {
     mobile: '+1 302 464 0950',
@@ -391,7 +390,7 @@ export const enhancedServices2025: EnhancedService[] = [
         color: 'from-lime-600 to-green-700',
         link: '/services/edge-iot-observability',
         contactInfo: CONTACT
-    }
+
 ];
 
-export default enhancedServices2025;
+export default enhancedServices2025;}}

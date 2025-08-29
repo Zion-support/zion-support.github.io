@@ -21,7 +21,7 @@ const SpaceTech = () => {
             title: "Space Analytics",
             description: "AI-powered analysis of space data for scientific research and commercial applications.",
             applications: ["Space Weather Prediction", "Orbital Mechanics", "Resource Mapping", "Scientific Discovery"]
-        }
+
     ];
     return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white">
       <section className="py-20 px-4 sm:px-6 lg:px-8">
@@ -73,3 +73,4 @@ const SpaceTech = () => {
     </div>);
 };
 export default SpaceTech;
+}

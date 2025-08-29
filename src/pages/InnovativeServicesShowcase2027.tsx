@@ -5,7 +5,6 @@ import {
   Brain, Cpu, Database, Network, Shield, Zap, Rocket, Atom,
   Globe, Cloud, Lock, Eye, Target, TrendingUp, Star, CheckCircle,
   ArrowRight, Search, Filter, Grid, List, ChevronDown
-} from 'lucide-react';
 import { INNOVATIVE_MICRO_SAAS_SERVICES_2027 } from '@/data/innovativeMicroSaasServices2027';
 import { EMERGING_TECH_SERVICES_2027 } from '@/data/emergingTechServices2027';
 export default function InnovativeServicesShowcase2027() {
@@ -30,8 +29,8 @@ export default function InnovativeServicesShowcase2027() {
       opacity: 1,
       transition: {
         staggerChildren: 0.1
-      }
-    }
+
+
   };
   const itemVariants = {
     hidden: { y: 20, opacity: 0 },
@@ -41,8 +40,8 @@ export default function InnovativeServicesShowcase2027() {
       transition: {
         duration: 0.5,
         ease: "easeOut"
-      }
-    }
+
+
   };
   const cardVariants = {
     hidden: { scale: 0.8, opacity: 0 },
@@ -52,7 +51,7 @@ export default function InnovativeServicesShowcase2027() {
       transition: {
         duration: 0.3,
         ease: "easeOut"
-      }
+
     },
     hover: {
       scale: 1.05,
@@ -60,8 +59,8 @@ export default function InnovativeServicesShowcase2027() {
       transition: {
         duration: 0.2,
         ease: "easeOut"
-      }
-    }
+
+
   };
   return (
     <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
@@ -89,14 +88,14 @@ export default function InnovativeServicesShowcase2027() {
         initial={{ opacity: 0, y: -50 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
-      >
+
         <div className="max-w-7xl mx-auto text-center">
           <motion.h1
             className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent"
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.8, delay: 0.2 }}
-          >
+
             Innovative Services 2027
           </motion.h1>
           <motion.p
@@ -104,7 +103,7 @@ export default function InnovativeServicesShowcase2027() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
-          >
+
             Discover the future of technology with our cutting-edge micro SAAS services,
             featuring quantum computing, AI, blockchain, and emerging technologies
           </motion.p>
@@ -114,7 +113,7 @@ export default function InnovativeServicesShowcase2027() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.6 }}
-          >
+
             {[
               { label: 'Total Services', value: allServices.length, icon: Rocket, color: 'from-cyan-500 to-blue-600' },
               { label: 'AI Score Avg', value: `${Math.round(allServices.reduce((acc, s) => acc + s.aiScore, 0) / allServices.length)}%`, icon: Brain, color: 'from-purple-500 to-pink-600' },
@@ -138,7 +137,7 @@ export default function InnovativeServicesShowcase2027() {
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, delay: 0.8 }}
-      >
+
         <div className="max-w-7xl mx-auto">
           <div className="bg-zion-blue-dark/30 backdrop-blur-md rounded-2xl p-6 border border-zion-purple/20">
             <div className="flex flex-col lg:flex-row gap-6 items-center">
@@ -161,7 +160,7 @@ export default function InnovativeServicesShowcase2027() {
                   value={selectedCategory}
                   onChange={(e) => setSelectedCategory(e.target.value)}
                   className="appearance-none bg-zion-blue-light/20 border border-zion-purple/20 rounded-lg px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent pr-10"
-                >
+
                   {categories.map(category => (
                     <option key={category} value={category}>{category}</option>
                   ))}
@@ -174,7 +173,7 @@ export default function InnovativeServicesShowcase2027() {
                   value={sortBy}
                   onChange={(e) => setSortBy(e.target.value as 'aiScore' | 'rating' | 'price')}
                   className="appearance-none bg-zion-blue-light/20 border border-zion-purple/20 rounded-lg px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent pr-10"
-                >
+
                   <option value="aiScore">Sort by AI Score</option>
                   <option value="rating">Sort by Rating</option>
                   <option value="price">Sort by Price</option>
@@ -186,13 +185,13 @@ export default function InnovativeServicesShowcase2027() {
                 <button
                   onClick={() => setViewMode('grid')}
                   className={`p-2 rounded-md transition-colors ${viewMode === 'grid' ? 'bg-zion-cyan text-white' : 'text-zion-slate-light hover:text-white'}`}
-                >
+
                   <Grid className="w-5 h-5" />
                 </button>
                 <button
                   onClick={() => setViewMode('list')}
                   className={`p-2 rounded-md transition-colors ${viewMode === 'list' ? 'bg-zion-cyan text-white' : 'text-zion-slate-light hover:text-white'}`}
-                >
+
                   <List className="w-5 h-5" />
                 </button>
               </div>
@@ -206,7 +205,7 @@ export default function InnovativeServicesShowcase2027() {
         variants={containerVariants}
         initial="hidden"
         animate="visible"
-      >
+
         <div className="max-w-7xl mx-auto">
           <AnimatePresence mode="wait">
             {filteredServices.length > 0 ? (
@@ -217,20 +216,20 @@ export default function InnovativeServicesShowcase2027() {
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, y: -20 }}
                 transition={{ duration: 0.3 }}
-              >
+
                 {filteredServices.map((service, index) => (
                   <motion.div
                     key={service.id}
                     variants={viewMode === 'grid' ? itemVariants : { /* empty */ }}
                     className={viewMode === 'grid' ? '' : 'bg-zion-blue-dark/30 backdrop-blur-md rounded-2xl p-6 border border-zion-purple/20'}
-                  >
+
                     {viewMode === 'grid' ? (
                       <motion.div
                         className="bg-zion-blue-dark/30 backdrop-blur-md rounded-2xl p-6 border border-zion-purple/20 h-full group cursor-pointer"
                         variants={cardVariants}
                         whileHover="hover"
                         onClick={() => window.open(service.website, '_blank')}
-                      >
+
                         {/* Service Image */}
                         <div className="relative mb-6 overflow-hidden rounded-lg">
                           <img
@@ -262,7 +261,7 @@ export default function InnovativeServicesShowcase2027() {
                               <span
                                 key={tagIndex}
                                 className="px-2 py-1 bg-zion-purple/20 text-zion-cyan text-xs rounded-full border border-zion-purple/30"
-                              >
+
                                 {tag}
                               </span>
                             ))}
@@ -334,7 +333,7 @@ export default function InnovativeServicesShowcase2027() {
                                 <span
                                   key={tagIndex}
                                   className="px-2 py-1 bg-zion-purple/20 text-zion-cyan text-xs rounded-full border border-zion-purple/30"
-                                >
+
                                   {tag}
                                 </span>
                               ))}
@@ -342,7 +341,7 @@ export default function InnovativeServicesShowcase2027() {
                             <button
                               onClick={() => window.open(service.website, '_blank')}
                               className="bg-gradient-to-r from-zion-cyan to-zion-blue text-black font-semibold py-2 px-4 rounded-lg hover:from-zion-blue hover:to-zion-cyan transition-all duration-300 flex items-center gap-2"
-                            >
+
                               View Details
                               <ArrowRight className="w-4 h-4" />
                             </button>
@@ -359,7 +358,7 @@ export default function InnovativeServicesShowcase2027() {
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ duration: 0.5 }}
-              >
+
                 <div className="text-6xl mb-4">🔍</div>
                 <h3 className="text-2xl font-bold text-white mb-2">No services found</h3>
                 <p className="text-gray-400">Try adjusting your search criteria or filters</p>
@@ -374,7 +373,7 @@ export default function InnovativeServicesShowcase2027() {
         initial={{ opacity: 0, y: 30 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, delay: 1.2 }}
-      >
+
         <div className="max-w-4xl mx-auto text-center">
           <div className="bg-gradient-to-r from-zion-cyan/20 to-zion-blue/20 backdrop-blur-md rounded-2xl p-12 border border-zion-cyan/30">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
@@ -387,13 +386,13 @@ export default function InnovativeServicesShowcase2027() {
               <Link
                 to="/contact"
                 className="px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-blue text-black font-semibold rounded-lg hover:from-zion-blue hover:to-zion-cyan transition-all duration-300 transform hover:scale-105"
-              >
+
                 Contact Our Team
               </Link>
               <a
                 href="tel:+13024640950"
                 className="px-8 py-4 border-2 border-zion-cyan text-zion-cyan font-semibold rounded-lg hover:bg-zion-cyan hover:text-black transition-all duration-300"
-              >
+
                 Call +1 302 464 0950
               </a>
             </div>
@@ -402,4 +401,4 @@ export default function InnovativeServicesShowcase2027() {
       </motion.section>
     </div>
   );
-}
+</div>}}}}}}}}}

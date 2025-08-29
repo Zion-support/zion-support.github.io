@@ -1,7 +1,6 @@
 import { GradientHeading } from "./GradientHeading";
 import { Link } from "react-router-dom";
-import { Briefcase, HardDrive, Lightbulb, Users, ArrowRight, Sparkles, Zap, Shield, Rocket } from "lucide-react";
-import { motion } from "framer-motion";
+import { Briefcase, HardDrive, Lightbulb, Users, ArrowRight, Sparkles, Zap, Shield, Rocket import { motion } from "framer-motion";
 const categories = [
     {
         title: "Comprehensive Services",
@@ -72,7 +71,7 @@ const specialServices = [
         link: "/cloud-solutions",
         icon: <Zap className="w-5 h-5"/>,
         description: "Scalable cloud infrastructure"
-    }
+
 ];
 export function CategoriesSection({ showTitle = true }) {
     const containerVariants = {
@@ -82,8 +81,8 @@ export function CategoriesSection({ showTitle = true }) {
             transition: {
                 staggerChildren: 0.2,
                 delayChildren: 0.1
-            }
-        }
+
+
     };
     const itemVariants = {
         hidden: { y: 30, opacity: 0 },
@@ -93,8 +92,8 @@ export function CategoriesSection({ showTitle = true }) {
             transition: {
                 duration: 0.6,
                 ease: "easeOut"
-            }
-        }
+
+
     };
     const cardVariants = {
         hidden: { scale: 0.95, opacity: 0 },
@@ -104,8 +103,8 @@ export function CategoriesSection({ showTitle = true }) {
             transition: {
                 duration: 0.4,
                 ease: "easeOut"
-            }
-        }
+
+
     };
     return (<section className="py-20 bg-gradient-to-br from-zion-blue via-zion-blue-dark to-zion-blue relative overflow-hidden">
       {/* Background decorative elements */}
@@ -199,4 +198,4 @@ export function CategoriesSection({ showTitle = true }) {
         </motion.div>
       </div>
     </section>);
-}
+}}}}}}}}}

@@ -1,7 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { TrendingUp, Brain, Shield, Users, BarChart3, Clock, Zap, LineChart, PieChart, Target, CheckCircle, Activity, Network, Monitor } from 'lucide-react';
-export default function AIFinancialTrading() {
+import { TrendingUp, Brain, Shield, Users, BarChart3, Clock, Zap, LineChart, PieChart, Target, CheckCircle, Activity, Network, Monitor export default function AIFinancialTrading() {
     const features = [
         {
             icon: Brain,
@@ -32,7 +31,7 @@ export default function AIFinancialTrading() {
             icon: Users,
             title: "Social Trading",
             description: "Copy successful traders and share strategies with the community"
-        }
+
     ];
     const pricingPlans = [
         {
@@ -86,7 +85,7 @@ export default function AIFinancialTrading() {
             ],
             cta: "Contact Sales",
             popular: false
-        }
+
     ];
     const benefits = [
         {
@@ -118,7 +117,7 @@ export default function AIFinancialTrading() {
             icon: BarChart3,
             title: "Data-Driven Insights",
             description: "Comprehensive analytics and reporting for informed decision making"
-        }
+
     ];
     const tradingInstruments = [
         {
@@ -150,7 +149,7 @@ export default function AIFinancialTrading() {
             icon: Monitor,
             title: "Bonds & Fixed Income",
             description: "Fixed income securities with yield optimization and risk management"
-        }
+
     ];
     return (<div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-purple-900 pt-20">
       {/* Hero Section */}
@@ -314,4 +313,4 @@ export default function AIFinancialTrading() {
         </div>
       </div>
     </div>);
-}
+}}}}}}

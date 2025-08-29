@@ -20,7 +20,6 @@ import {
   Cloud,
   Server,
   Smartphone
-} from 'lucide-react';
 import { SEO } from '@/components/SEO';
 
 export default function IoTEdgeComputing() {
@@ -68,7 +67,7 @@ export default function IoTEdgeComputing() {
       description: 'Inventory management and supply chain optimization',
       icon: TrendingUp,
       useCases: ['Inventory tracking', 'Supply chain monitoring', 'Customer analytics', 'Asset management']
-    }
+
   ];
 
   const pricing = [
@@ -92,7 +91,7 @@ export default function IoTEdgeComputing() {
       period: '/month',
       features: ['Unlimited devices', 'Custom AI models', '24/7 support', 'Dedicated engineers', 'White-label solutions'],
       recommended: false
-    }
+
   ];
 
   const edgeCapabilities = [
@@ -119,7 +118,7 @@ export default function IoTEdgeComputing() {
       description: 'Enterprise-grade security for IoT deployments',
       icon: Shield,
       features: ['Device authentication', 'Data encryption', 'Secure communication', 'Privacy controls']
-    }
+
   ];
 
   const techStack = [
@@ -158,7 +157,7 @@ export default function IoTEdgeComputing() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-          >
+
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
               IoT <span className="bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent">Edge Computing</span> Platform
             </h1>
@@ -169,7 +168,7 @@ export default function IoTEdgeComputing() {
               <Link
                 to="/contact"
                 className="inline-flex items-center px-8 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-200 transform hover:scale-105"
-              >
+
                 Start IoT Journey
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Link>
@@ -178,7 +177,7 @@ export default function IoTEdgeComputing() {
                 target="_blank"
                 rel="noreferrer"
                 className="inline-flex items-center px-8 py-3 border border-cyan-500 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-500 hover:text-white transition-all duration-200"
-              >
+
                 Visit Our Site
               </a>
             </div>
@@ -210,7 +209,7 @@ export default function IoTEdgeComputing() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-          >
+
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Industry <span className="text-cyan-400">IoT Applications</span>
             </h2>
@@ -228,7 +227,7 @@ export default function IoTEdgeComputing() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-              >
+
                 <div className="flex items-center mb-6">
                   <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-2xl flex items-center justify-center mr-4">
                     <app.icon className="h-8 w-8 text-white" />
@@ -262,7 +261,7 @@ export default function IoTEdgeComputing() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-          >
+
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Advanced <span className="text-cyan-400">Edge Capabilities</span>
             </h2>
@@ -280,7 +279,7 @@ export default function IoTEdgeComputing() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-              >
+
                 <div className="flex items-center mb-6">
                   <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-2xl flex items-center justify-center mr-4">
                     <capability.icon className="h-8 w-8 text-white" />
@@ -314,7 +313,7 @@ export default function IoTEdgeComputing() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-          >
+
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Platform <span className="text-cyan-400">Features</span>
             </h2>
@@ -332,7 +331,7 @@ export default function IoTEdgeComputing() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-              >
+
                 <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg flex items-center justify-center mb-4">
                   <Cpu className="h-6 w-6 text-white" />
                 </div>
@@ -352,7 +351,7 @@ export default function IoTEdgeComputing() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-          >
+
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Edge Computing <span className="text-cyan-400">Benefits</span>
             </h2>
@@ -370,7 +369,7 @@ export default function IoTEdgeComputing() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-              >
+
                 <div className="flex items-center mb-4">
                   <div className="p-3 bg-gradient-to-r from-purple-500 to-indigo-600 rounded-lg">
                     <Zap className="h-6 w-6 text-white" />
@@ -393,7 +392,7 @@ export default function IoTEdgeComputing() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-          >
+
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Supported <span className="text-cyan-400">Devices</span>
             </h2>
@@ -411,7 +410,7 @@ export default function IoTEdgeComputing() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-              >
+
                 <div className="flex items-center mb-4">
                   <CheckCircle className="h-5 w-5 text-cyan-400 mr-3" />
                   <h3 className="text-lg font-semibold text-white">{device}</h3>
@@ -431,7 +430,7 @@ export default function IoTEdgeComputing() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-          >
+
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               IoT Platform <span className="text-cyan-400">Pricing</span>
             </h2>
@@ -453,7 +452,7 @@ export default function IoTEdgeComputing() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-              >
+
                 {plan.recommended && (
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                     <span className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-4 py-2 rounded-full text-sm font-semibold">
@@ -486,7 +485,7 @@ export default function IoTEdgeComputing() {
                       ? 'bg-gradient-to-r from-cyan-500 to-blue-600 text-white hover:from-cyan-600 hover:to-blue-700'
                       : 'bg-slate-700 text-white hover:bg-slate-600'
                   }`}
-                >
+
                   Get Started
                 </Link>
               </motion.div>
@@ -504,7 +503,7 @@ export default function IoTEdgeComputing() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-          >
+
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Built with <span className="text-cyan-400">Modern Technology</span>
             </h2>
@@ -525,7 +524,7 @@ export default function IoTEdgeComputing() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-              >
+
                 <div className="text-sm text-cyan-400 mb-1">{tech.category}</div>
                 <div className="text-white font-semibold">{tech.name}</div>
               </motion.a>
@@ -542,7 +541,7 @@ export default function IoTEdgeComputing() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-          >
+
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
               Ready to <span className="text-cyan-400">Connect</span> Your World?
             </h2>
@@ -553,14 +552,14 @@ export default function IoTEdgeComputing() {
               <Link
                 to="/contact"
                 className="inline-flex items-center px-8 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-200 transform hover:scale-105"
-              >
+
                 Start IoT Project
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Link>
               <a
                 href="tel:+13024640950"
                 className="inline-flex items-center px-8 py-3 border border-cyan-500 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-500 hover:text-white transition-all duration-200"
-              >
+
                 Call +1 302 464 0950
               </a>
             </div>
@@ -572,4 +571,4 @@ export default function IoTEdgeComputing() {
       </section>
     </div>
   );
-}
+</div>}}}}</motion.div></motion.div>}

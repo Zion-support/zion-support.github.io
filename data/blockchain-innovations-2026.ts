@@ -38,7 +38,7 @@ export interface BlockchainInnovation2026 {
   customers: number;
   rating: number;
   reviews: number;
-}
+
 export const blockchainInnovations2026: BlockchainInnovation2026[] = [
   // Blockchain Infrastructure Platform 2026
   {
@@ -299,5 +299,5 @@ export const blockchainInnovations2026: BlockchainInnovation2026[] = [
     customers: 420,
     rating: 4.8,
     reviews: 210
-  }
-];
+
+];}}

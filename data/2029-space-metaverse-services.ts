@@ -38,7 +38,7 @@ export interface SpaceMetaverseService2029 {
     website: string;
     address: string;
   };
-}
+
 export const spaceMetaverseServices2029: SpaceMetaverseService2029[] = [
   {
     id: 'space-mining-automation-platform',
@@ -102,7 +102,7 @@ export const spaceMetaverseServices2029: SpaceMetaverseService2029[] = [
       email: 'kleber@ziontechgroup.com',
       website: 'https://ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709'
-    }
+
   },
   {
     id: 'metaverse-digital-reality-platform',
@@ -166,7 +166,7 @@ export const spaceMetaverseServices2029: SpaceMetaverseService2029[] = [
       email: 'kleber@ziontechgroup.com',
       website: 'https://ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709'
-    }
+
   },
   {
     id: 'ai-predictive-health-analytics',
@@ -230,7 +230,7 @@ export const spaceMetaverseServices2029: SpaceMetaverseService2029[] = [
       email: 'kleber@ziontechgroup.com',
       website: 'https://ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709'
-    }
+
   },
   {
     id: 'ai-autonomous-business-manager',
@@ -294,6 +294,6 @@ export const spaceMetaverseServices2029: SpaceMetaverseService2029[] = [
       email: 'kleber@ziontechgroup.com',
       website: 'https://ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709'
-    }
-  }
-];
+
+
+];}}}}}}

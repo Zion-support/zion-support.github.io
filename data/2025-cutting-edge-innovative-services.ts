@@ -36,7 +36,7 @@ export interface CuttingEdgeInnovativeService {
   customers: number;
   rating: number;
   reviews: number;
-}
+
 export const cuttingEdgeInnovativeServices2025: CuttingEdgeInnovativeService[] = [
   // AI-POWERED INNOVATIVE SERVICES
   {
@@ -496,7 +496,7 @@ export const cuttingEdgeInnovativeServices2025: CuttingEdgeInnovativeService[] =
     customers: 18,
     rating: 4.7,
     reviews: 42
-  }
+
 ];
 export const serviceCategories2025: string[] = Array.from(
   new Set(
@@ -517,4 +517,4 @@ export const getServicesByTechnology = (technology: string) => {
   return cuttingEdgeInnovativeServices2025.filter((s) =>
     s.technology.some(t => t.toLowerCase().includes(technology.toLowerCase()))
   );
-};
+};}}

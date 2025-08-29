@@ -21,8 +21,6 @@ import {
   Server,
   Palette,
   Cpu
-} from 'lucide-react';
-
 const startupSolutions = [
   {
     id: 1,
@@ -113,7 +111,7 @@ const startupSolutions = [
     price: "From $10,000",
     timeline: "3-5 weeks",
     category: "Marketing"
-  }
+
 ];
 
 const successStories = [
@@ -143,7 +141,7 @@ const successStories = [
     solution: "Built secure mobile app with compliance framework",
     results: "Launched in 8 weeks, 10,000+ downloads first quarter",
     logo: "HP"
-  }
+
 ];
 
 const processSteps = [
@@ -174,7 +172,7 @@ const processSteps = [
     description: "Deploy your solution and optimize based on real user data",
     icon: Rocket,
     duration: "1-2 weeks"
-  }
+
 ];
 
 export default function StartupSolutions() {
@@ -203,13 +201,13 @@ export default function StartupSolutions() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="text-center max-w-4xl mx-auto"
-          >
+
             <motion.div
               initial={{ opacity: 0, scale: 0.8 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.8, delay: 0.2 }}
               className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-2xl mb-8"
-            >
+
               <Rocket className="w-10 h-10 text-white" />
             </motion.div>
 
@@ -249,7 +247,7 @@ export default function StartupSolutions() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
-          >
+
             <h2 className="text-4xl font-bold text-white mb-4">Our Process</h2>
             <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
               A proven methodology that transforms startup ideas into market-ready solutions
@@ -264,7 +262,7 @@ export default function StartupSolutions() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 className="text-center"
-              >
+
                 <div className="relative mb-6">
                   <div className="w-16 h-16 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-2xl flex items-center justify-center mx-auto">
                     <step.icon className="w-8 h-8 text-white" />
@@ -293,7 +291,7 @@ export default function StartupSolutions() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
-          >
+
             <h2 className="text-4xl font-bold text-white mb-4">Startup Solutions</h2>
             <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
               Comprehensive technology solutions designed specifically for startup needs and budgets
@@ -311,7 +309,7 @@ export default function StartupSolutions() {
                     ? 'bg-gradient-to-r from-zion-cyan to-zion-purple text-white shadow-lg shadow-zion-cyan/25'
                     : 'bg-zion-blue-dark/30 text-zion-slate-light border border-zion-cyan/20 hover:border-zion-cyan/40'
                 }`}
-              >
+
                 {category}
               </button>
             ))}
@@ -326,7 +324,7 @@ export default function StartupSolutions() {
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 className="bg-zion-blue-dark/30 border border-zion-cyan/20 rounded-2xl p-6 hover:border-zion-cyan/40 transition-all duration-300 cursor-pointer"
                 onClick={() => setSelectedSolution(solution)}
-              >
+
                 <div className="w-16 h-16 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-2xl flex items-center justify-center mb-6">
                   <solution.icon className="w-8 h-8 text-white" />
                 </div>
@@ -371,7 +369,7 @@ export default function StartupSolutions() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
-          >
+
             <h2 className="text-4xl font-bold text-white mb-4">Success Stories</h2>
             <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
               Real startups that transformed their vision into successful businesses with our solutions
@@ -386,7 +384,7 @@ export default function StartupSolutions() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 className="bg-zion-blue-dark/30 border border-zion-cyan/20 rounded-2xl p-6 hover:border-zion-cyan/40 transition-all duration-300"
-              >
+
                 <div className="flex items-center gap-4 mb-6">
                   <div className="w-12 h-12 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-xl flex items-center justify-center text-white font-bold text-lg">
                     {story.logo}
@@ -432,7 +430,7 @@ export default function StartupSolutions() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="text-center max-w-4xl mx-auto"
-          >
+
             <h2 className="text-4xl font-bold text-white mb-6">Ready to Launch Your Startup?</h2>
             <p className="text-xl text-zion-slate-light mb-8 leading-relaxed">
               Let's discuss your startup vision and create a customized technology solution
@@ -443,13 +441,13 @@ export default function StartupSolutions() {
               <a
                 href="/contact"
                 className="px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-purple text-white font-semibold rounded-xl hover:shadow-lg hover:shadow-zion-cyan/25 transition-all duration-300 transform hover:scale-105"
-              >
+
                 Start Your Project
               </a>
               <a
                 href="/contact"
                 className="px-8 py-4 border border-zion-cyan text-zion-cyan font-semibold rounded-xl hover:bg-zion-cyan hover:text-white transition-all duration-300"
-              >
+
                 Schedule Consultation
               </a>
             </div>
@@ -458,4 +456,4 @@ export default function StartupSolutions() {
       </section>
     </div>
   );
-}
+}}}}}

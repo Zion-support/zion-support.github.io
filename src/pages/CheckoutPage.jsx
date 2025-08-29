@@ -25,28 +25,28 @@ export default function CheckoutPage() {
                     throw new Error('Failed to fetch product');
                 const data = await res.json();
                 setProduct(data);
-            }
+
             catch (err) {
-                // console.error('Failed to load product', err);
+                // // // console.error('Failed to load product', err);
                 setError(err.message);
                 const fallback = NEW_PRODUCTS.find(p => p.id === id) || null;
                 setProduct(fallback);
-            }
+
             finally {
                 setIsLoading(false);
-            }
+
         };
         fetchProduct();
     }, [id]);
     if (isLoading) {
         return <div className="p-6 text-white">Loading...</div>;
-    }
+
     if (error && !product) {
         return <div className="p-6 text-white">Failed to load product.</div>;
-    }
+
     if (!product) {
         return <div className="p-6 text-white">Loading...</div>;
-    }
+
     return (<div className="container max-w-2xl py-10 space-y-6">
       <h1 className="text-3xl font-bold">Checkout</h1>
       <CheckoutProgress currentStep={1} className="mb-6"/>
@@ -65,4 +65,4 @@ export default function CheckoutPage() {
           Use test card 4242-4242-4242-4242 with any future date and CVC.
         </p>)}
     </div>);
-}
+</Card>}}}}}}}

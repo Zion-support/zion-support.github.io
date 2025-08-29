@@ -37,7 +37,7 @@ export interface SpecializedIndustrySolution {
   customers: number;
   rating: number;
   reviews: number;
-}
+
 export const specializedIndustrySolutions2025: SpecializedIndustrySolution[] = [
   // MANUFACTURING & INDUSTRIAL SOLUTIONS
   {
@@ -402,7 +402,7 @@ export const specializedIndustrySolutions2025: SpecializedIndustrySolution[] = [
     customers: 18,
     rating: 4.6,
     reviews: 42
-  }
+
 ];
 export const industryCategories2025: string[] = Array.from(
   new Set(
@@ -422,4 +422,4 @@ export const getSolutionsByCategory = (category: string) => {
 export const getPopularIndustrySolutions = () =>
   specializedIndustrySolutions2025
     .filter((s) => !!s.popular)
-    .sort((a, b) => (b.rating || 0) - (a.rating || 0));
+    .sort((a, b) => (b.rating || 0) - (a.rating || 0));}}

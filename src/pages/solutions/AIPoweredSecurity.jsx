@@ -1,6 +1,5 @@
 import React from 'react';
-import { Brain, Shield, Users, Cpu, Database, Lightbulb, Lock, Eye, AlertTriangle, Cloud } from 'lucide-react';
-const AIPoweredSecurity = () => {
+import { Brain, Shield, Users, Cpu, Database, Lightbulb, Lock, Eye, AlertTriangle, Cloud const AIPoweredSecurity = () => {
     const securityFeatures = [
         {
             icon: Brain,
@@ -25,7 +24,7 @@ const AIPoweredSecurity = () => {
             title: "Access Control",
             description: "Intelligent authentication and authorization systems",
             features: ["Biometric verification", "Behavioral analysis", "Risk-based access", "Multi-factor auth"]
-        }
+
     ];
     const securitySolutions = [
         {
@@ -63,7 +62,7 @@ const AIPoweredSecurity = () => {
             description: "Automated incident detection and response",
             icon: AlertTriangle,
             capabilities: ["Threat hunting", "Automated response", "Forensic analysis", "Recovery planning"]
-        }
+
     ];
     const benefits = [
         "Proactive threat detection and prevention",
@@ -103,7 +102,7 @@ const AIPoweredSecurity = () => {
             phase: "Monitoring & Optimization",
             description: "Continuous monitoring and system optimization",
             duration: "Ongoing"
-        }
+
     ];
     return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       {/* Hero Section */}
@@ -281,3 +280,4 @@ const AIPoweredSecurity = () => {
     </div>);
 };
 export default AIPoweredSecurity;
+}}}}

@@ -1,8 +1,7 @@
 import React from 'react';
 import { useNotifications } from "@/context/notifications/NotificationContext";
 import { formatDistanceToNow } from "date-fns";
-import { Bell, Check, Trash2, ChevronRight, CheckCircle, AlertCircle, MessageCircle, Briefcase, UserCheck, Settings } from "lucide-react";
-import { Button } from "@/components/ui/button";
+import { Bell, Check, Trash2, ChevronRight, CheckCircle, AlertCircle, MessageCircle, Briefcase, UserCheck, Settings import { Button } from "@/components/ui/button";
 import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
 import { Badge } from "@/components/ui/badge";
 import { Skeleton } from "@/components/ui/skeleton";
@@ -25,7 +24,7 @@ const getNotificationIcon = (type, className = "h-5 w-5") => {
             return <AlertCircle className={cn(className, "text-yellow-500")}/>;
         default:
             return <Bell className={cn(className, "text-gray-500")}/>;
-    }
+
 };
 const getNotificationTypeBadge = (type) => {
     switch (type) {
@@ -43,17 +42,17 @@ const getNotificationTypeBadge = (type) => {
             return <Badge className="bg-yellow-500">System</Badge>;
         default:
             return <Badge variant="outline">Notification</Badge>;
-    }
+
 };
 const NotificationCard = ({ notification, onMarkAsRead, onDismiss }) => {
     const navigate = useNavigate();
     const handleAction = () => {
         if (!notification.read) {
             onMarkAsRead(notification.id);
-        }
+
         if (notification.action_url) {
             navigate(notification.action_url);
-        }
+
     };
     return (<div className={cn("border rounded-lg shadow-sm p-4 mb-3 group transition-colors", notification.read ? "border-zion-blue-light bg-zion-blue-dark/10" : "border-zion-cyan bg-zion-blue-dark/30")}>
       <div className="flex items-start gap-4">
@@ -145,4 +144,4 @@ export default function NotificationsPage() {
       </main>
 
     </>);
-}
+}}}}}}

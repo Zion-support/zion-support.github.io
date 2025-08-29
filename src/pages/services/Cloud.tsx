@@ -1,7 +1,5 @@
 import React from 'react';
-import { Cloud, Server, Shield, Zap, Database, Globe, Cpu, BarChart3 } from 'lucide-react';
-
-const CloudServices = () => {
+import { Cloud, Server, Shield, Zap, Database, Globe, Cpu, BarChart3 const CloudServices = () => {
   const cloudServices = [
     {
       title: "Cloud Migration & Strategy",
@@ -23,7 +21,7 @@ const CloudServices = () => {
       price: "From $6,500/month",
       features: ["Identity and access management", "Data encryption", "Compliance monitoring", "Security auditing"],
       icon: Shield
-    }
+
   ];
 
   const cloudPlatforms = [
@@ -44,7 +42,7 @@ const CloudServices = () => {
       description: "AI-first cloud platform with advanced analytics",
       icon: Globe,
       features: ["Compute Engine", "Cloud Storage", "Cloud Functions", "BigQuery"]
-    }
+
   ];
 
   const benefits = [
@@ -219,4 +217,4 @@ const CloudServices = () => {
   );
 };
 
-export default CloudServices;
+export default CloudServices;}}}

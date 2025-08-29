@@ -21,7 +21,7 @@ const MicroSAAS = () => {
             title: "SOC2 Compliance Automation",
             description: "Streamlined SOC2 compliance process with automated documentation and monitoring.",
             features: ["Automated Audits", "Documentation Management", "Risk Assessment", "Compliance Reporting"]
-        }
+
     ];
     return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white">
       <section className="py-20 px-4 sm:px-6 lg:px-8">
@@ -82,3 +82,4 @@ const MicroSAAS = () => {
     </div>);
 };
 export default MicroSAAS;
+}

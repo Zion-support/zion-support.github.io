@@ -23,7 +23,6 @@ import {
   Users,
   Globe,
   Rocket
-} from 'lucide-react';
 import { SEO } from '../components/SEO';
 
 export default function Help() {
@@ -54,7 +53,7 @@ export default function Help() {
           description: 'How to create and configure your first project',
           url: '/help/getting-started/first-project',
           type: 'tutorial'
-        }
+
       ]
     },
     {
@@ -86,7 +85,7 @@ export default function Help() {
           description: 'How to implement and use our Micro SaaS products',
           url: '/help/services/micro-saas-guide',
           type: 'guide'
-        }
+
       ]
     },
     {
@@ -118,7 +117,7 @@ export default function Help() {
           description: 'Security settings and configuration options',
           url: '/help/technical/security-config',
           type: 'guide'
-        }
+
       ]
     },
     {
@@ -150,9 +149,9 @@ export default function Help() {
           description: 'Managing your account preferences and settings',
           url: '/help/billing/account-settings',
           type: 'guide'
-        }
+
       ]
-    }
+
   ];
 
   const quickLinks = [
@@ -183,7 +182,7 @@ export default function Help() {
       icon: Mail,
       url: 'mailto:support@ziontechgroup.com',
       color: 'from-orange-500 to-orange-600'
-    }
+
   ];
 
   const supportHours = [
@@ -217,7 +216,7 @@ export default function Help() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             className="text-center"
-          >
+
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
               How Can We
               <span className="bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent"> Help You?</span>
@@ -252,7 +251,7 @@ export default function Help() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             className="text-center mb-12"
-          >
+
             <h2 className="text-3xl font-bold text-white mb-4">Quick Support</h2>
             <p className="text-gray-300">Get immediate assistance through our support channels</p>
           </motion.div>
@@ -266,7 +265,7 @@ export default function Help() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 className="bg-slate-800/50 p-6 rounded-xl border border-slate-700/50 hover:border-cyan-400/50 transition-all duration-300 hover:scale-105 group"
-              >
+
                 <div className={`w-16 h-16 bg-gradient-to-r ${link.color} rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300`}>
                   <link.icon className="w-8 h-8 text-white" />
                 </div>
@@ -286,7 +285,7 @@ export default function Help() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             className="text-center mb-12"
-          >
+
             <h2 className="text-3xl font-bold text-white mb-4">Support Hours</h2>
             <p className="text-gray-300">We're here to help when you need us</p>
           </motion.div>
@@ -299,7 +298,7 @@ export default function Help() {
                   className={`flex items-center justify-between p-4 ${
                     index !== supportHours.length - 1 ? 'border-b border-slate-700/50' : ''
                   }`}
-                >
+
                   <div className="flex items-center space-x-3">
                     <Clock className={`w-5 h-5 ${schedule.available ? 'text-green-400' : 'text-orange-400'}`} />
                     <span className="text-white font-medium">{schedule.day}</span>
@@ -327,7 +326,7 @@ export default function Help() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             className="text-center mb-12"
-          >
+
             <h2 className="text-3xl font-bold text-white mb-4">Help Categories</h2>
             <p className="text-gray-300">Browse our organized help content by category</p>
           </motion.div>
@@ -340,11 +339,11 @@ export default function Help() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 className="bg-slate-800/50 rounded-xl border border-slate-700/50 overflow-hidden"
-              >
+
                 <button
                   onClick={() => setExpandedCategory(expandedCategory === category.id ? null : category.id)}
                   className="w-full p-6 text-left hover:bg-slate-700/50 transition-colors duration-200"
-                >
+
                   <div className="flex items-center justify-between">
                     <div className="flex items-center space-x-4">
                       <div className="w-12 h-12 bg-gradient-to-br from-cyan-400/20 to-blue-500/20 rounded-xl flex items-center justify-center">
@@ -370,7 +369,7 @@ export default function Help() {
                     exit={{ opacity: 0, height: 0 }}
                     transition={{ duration: 0.3 }}
                     className="border-t border-slate-700/50"
-                  >
+
                     <div className="p-6">
                       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                         {category.articles.map((article, articleIndex) => (
@@ -378,7 +377,7 @@ export default function Help() {
                             key={articleIndex}
                             href={article.url}
                             className="block p-4 bg-slate-700/30 rounded-lg hover:bg-slate-700/50 transition-colors duration-200 border border-slate-600/30 hover:border-cyan-400/50"
-                          >
+
                             <div className="flex items-start justify-between mb-2">
                               <h4 className="text-white font-medium">{article.title}</h4>
                               <span className={`inline-block px-2 py-1 text-xs rounded-full ${
@@ -410,7 +409,7 @@ export default function Help() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             className="text-center mb-12"
-          >
+
             <h2 className="text-3xl font-bold text-white mb-4">Additional Resources</h2>
             <p className="text-gray-300">Explore more helpful resources and materials</p>
           </motion.div>
@@ -437,7 +436,7 @@ export default function Help() {
                 description: 'Software, tools, and resources for your projects',
                 url: '/help/downloads',
                 color: 'from-purple-500 to-purple-600'
-              }
+
             ].map((resource, index) => (
               <motion.a
                 key={index}
@@ -446,7 +445,7 @@ export default function Help() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 className="bg-slate-800/50 p-6 rounded-xl border border-slate-700/50 hover:border-cyan-400/50 transition-all duration-300 hover:scale-105 group"
-              >
+
                 <div className={`w-16 h-16 bg-gradient-to-r ${resource.color} rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300`}>
                   <resource.icon className="w-8 h-8 text-white" />
                 </div>
@@ -465,7 +464,7 @@ export default function Help() {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-          >
+
             <h2 className="text-4xl font-bold text-white mb-6">
               Still Need Help?
             </h2>
@@ -476,13 +475,13 @@ export default function Help() {
               <a
                 href="/contact"
                 className="px-8 py-4 bg-gradient-to-r from-cyan-400 to-blue-500 text-white rounded-lg font-semibold hover:from-cyan-500 hover:to-blue-600 transition-all duration-300 hover:scale-105"
-              >
+
                 Contact Support
               </a>
               <a
                 href="mailto:support@ziontechgroup.com"
                 className="px-8 py-4 border border-cyan-400 text-cyan-400 rounded-lg font-semibold hover:bg-cyan-400 hover:text-white transition-all duration-300"
-              >
+
                 Send Email
               </a>
             </div>
@@ -491,4 +490,4 @@ export default function Help() {
       </section>
     </div>
   );
-}
+}}}}}}}}}

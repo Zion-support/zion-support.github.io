@@ -16,8 +16,6 @@ import {
   Download,
   Share2,
   RefreshCw
-} from 'lucide-react';
-
 interface ChartData {
   labels: string[];
   datasets: {
@@ -27,7 +25,6 @@ interface ChartData {
     borderColor: string[];
     borderWidth: number;
   }[];
-}
 
 interface MetricCard {
   title: string;
@@ -36,14 +33,12 @@ interface MetricCard {
   changeType: 'increase' | 'decrease' | 'neutral';
   icon: React.ReactNode;
   color: string;
-}
 
 interface DataVisualizationProps {
   title?: string;
   showMetrics?: boolean;
   showCharts?: boolean;
   showActions?: boolean;
-}
 
 export const DataVisualization: React.FC<DataVisualizationProps> = ({
   title = "Data Analytics Dashboard",
@@ -99,7 +94,7 @@ export const DataVisualization: React.FC<DataVisualizationProps> = ({
       changeType: 'neutral',
       icon: <Activity className="w-5 h-5" />,
       color: 'text-purple-400'
-    }
+
   ]);
 
   // Simulate data refresh
@@ -196,7 +191,7 @@ export const DataVisualization: React.FC<DataVisualizationProps> = ({
               value={selectedTimeRange}
               onChange={(e) => setSelectedTimeRange(e.target.value)}
               className="px-3 py-2 bg-zinc-900/50 border border-zinc-700/50 rounded-lg text-white text-sm focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent"
-            >
+
               <option value="1d">Last 24 Hours</option>
               <option value="7d">Last 7 Days</option>
               <option value="30d">Last 30 Days</option>
@@ -209,7 +204,7 @@ export const DataVisualization: React.FC<DataVisualizationProps> = ({
               onClick={refreshData}
               disabled={isLoading}
               className="px-4 py-2 bg-zion-cyan text-white rounded-lg hover:bg-zion-cyan/80 transition-colors disabled:opacity-50 disabled:cursor-not-allowed flex items-center gap-2"
-            >
+
               <RefreshCw className={`w-4 h-4 ${isLoading ? 'animate-spin' : ''}`} />
               Refresh
             </button>
@@ -241,7 +236,7 @@ export const DataVisualization: React.FC<DataVisualizationProps> = ({
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: index * 0.1 }}
                 className="p-6 bg-zinc-900/30 border border-zinc-700/50 rounded-xl hover:bg-zinc-900/50 transition-all duration-300"
-              >
+
                 <div className="flex items-center justify-between mb-4">
                   <div className={`p-3 rounded-lg bg-zinc-800/50 ${metric.color}`}>
                     {metric.icon}
@@ -278,7 +273,7 @@ export const DataVisualization: React.FC<DataVisualizationProps> = ({
                     ? 'bg-zion-cyan text-white'
                     : 'text-zinc-400 hover:text-white hover:bg-zinc-800/50'
                 }`}
-              >
+
                 {chartType.icon}
                 {chartType.label}
               </button>
@@ -310,7 +305,7 @@ export const DataVisualization: React.FC<DataVisualizationProps> = ({
                   exit={{ opacity: 0, scale: 0.9 }}
                   transition={{ duration: 0.3 }}
                   className="w-full h-full flex items-center justify-center"
-                >
+
                   {activeChart === 'bar' && (
                     <div className="w-full h-full flex items-end justify-center gap-4">
                       {chartData.labels.map((label, index) => (
@@ -437,7 +432,7 @@ export const DataVisualization: React.FC<DataVisualizationProps> = ({
                             textAnchor="middle"
                             fill="rgba(255,255,255,0.6)"
                             fontSize="12"
-                          >
+
                             {label}
                           </text>
                         ))}
@@ -483,4 +478,4 @@ export const DataVisualization: React.FC<DataVisualizationProps> = ({
       </div>
     </div>
   );
-};
+</div>};}}}}</motion.div>}

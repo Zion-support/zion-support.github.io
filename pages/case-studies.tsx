@@ -1,8 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import { TrendingUp, Users, Clock, ArrowRight, Star, Award, Building, Zap } from 'lucide-react'
-
-export default function CaseStudies() {
+import { TrendingUp, Users, Clock, ArrowRight, Star, Award, Building, Zap export default function CaseStudies() {
 	const caseStudies = [
 		{
 			id: 1,
@@ -71,7 +69,7 @@ export default function CaseStudies() {
 			duration: '4 months',
 			team: 6,
 			rating: 5
-		}
+
 	]
 
 	const industries = ['All', 'Technology', 'Healthcare', 'Manufacturing', 'Financial Services', 'Retail', 'Education']
@@ -100,7 +98,7 @@ export default function CaseStudies() {
 							<button
 								key={industry}
 								className="px-4 py-2 rounded-full border border-gray-300 text-gray-700 hover:bg-blue-50 hover:border-blue-300 transition-colors"
-							>
+
 								{industry}
 							</button>
 						))}
@@ -139,7 +137,7 @@ export default function CaseStudies() {
 								<Link
 									to="/contact"
 									className="inline-flex items-center text-blue-600 hover:text-blue-500 font-medium"
-								>
+
 									Learn More <ArrowRight className="ml-2 h-4 w-4" />
 								</Link>
 							</div>
@@ -197,7 +195,7 @@ export default function CaseStudies() {
 								<Link
 									to="/contact"
 									className="inline-flex items-center text-blue-600 hover:text-blue-500 font-medium"
-								>
+
 									View Details <ArrowRight className="ml-2 h-4 w-4" />
 								</Link>
 							</div>
@@ -298,13 +296,13 @@ export default function CaseStudies() {
 							<Link
 								to="/contact"
 								className="rounded-md bg-white px-3.5 py-2.5 text-sm font-semibold text-blue-600 shadow-sm hover:bg-gray-100 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
-							>
+
 								Get Started Today
 							</Link>
 							<Link
 								to="/services"
 								className="text-sm font-semibold leading-6 text-white hover:text-blue-100"
-							>
+
 								Explore Our Services →
 							</Link>
 						</div>
@@ -313,4 +311,4 @@ export default function CaseStudies() {
 			</section>
 		</>
 	)
-}
+}}}

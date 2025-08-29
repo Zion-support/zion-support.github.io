@@ -758,7 +758,7 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     customers: 45,
     rating: 4.7,
     reviews: 19
-  }
+
   ,
   {
     id: 'finops-cost-anomaly-guard',
@@ -1883,5 +1883,6 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     customers: 10,
     rating: 4.6,
     reviews: 5
-  }
+
 ];
+}}

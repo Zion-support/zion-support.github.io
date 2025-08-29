@@ -1,7 +1,5 @@
 import React, { useState } from 'react';
-import { Mail, Phone, MapPin, Send, CheckCircle } from 'lucide-react';
-
-export const QuoteFormSection = () => {
+import { Mail, Phone, MapPin, Send, CheckCircle export const QuoteFormSection = () => {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -81,7 +79,6 @@ export const QuoteFormSection = () => {
         </div>
       </section>
     );
-  }
 
   return (
     <section className="py-20 bg-gradient-to-br from-gray-50 to-blue-50">
@@ -228,7 +225,7 @@ export const QuoteFormSection = () => {
                   onChange={handleChange}
                   required
                   className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                >
+
                   <option value="">Select a service</option>
                   {services.map((service, index) => (
                     <option key={index} value={service}>{service}</option>
@@ -255,7 +252,7 @@ export const QuoteFormSection = () => {
                 type="submit"
                 disabled={isSubmitting}
                 className="w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white py-4 px-6 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center space-x-2"
-              >
+
                 {isSubmitting ? (
                   <>
                     <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-white"></div>
@@ -279,4 +276,4 @@ export const QuoteFormSection = () => {
       </div>
     </section>
   );
-};
+};}}

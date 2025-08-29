@@ -40,7 +40,7 @@ export interface EnterpriseITSolution2031 {
   patentStatus: 'Patented' | 'Patent Pending' | 'Trade Secret' | 'Open Source';
   aiCapabilities: string[];
   marketDisruption: string;
-}
+
 export const enterpriseITSolutions2031: EnterpriseITSolution2031[] = [
   // ZERO TRUST NETWORK ARCHITECTURE
   {
@@ -306,5 +306,5 @@ export const enterpriseITSolutions2031: EnterpriseITSolution2031[] = [
     patentStatus: 'Patent Pending',
     aiCapabilities: ['Autonomous Systems', 'Self-Healing', 'Intelligent Optimization', 'Predictive Maintenance', 'Resource Management'],
     marketDisruption: 'Revolutionizes infrastructure management by enabling truly autonomous systems, eliminating manual operations and optimizing performance automatically.'
-  }
-];
+
+];}}

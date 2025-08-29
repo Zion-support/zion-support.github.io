@@ -30,21 +30,21 @@ export const AuthProvider = ({ children }) => {
                 variant: "destructive",
             });
             return { error: data.error || "Email not confirmed. Please check your inbox to verify your email." };
-        }
+
         // Handle other errors from the API call
         if (res.status === 400) { // Bad request (e.g. missing fields)
             toast({ title: "Login Failed", description: data?.error || 'Missing email or password', variant: "destructive" });
             return { error: data?.error || 'Missing email or password' };
-        }
+
         if (res.status === 401) { // Unauthorized (invalid credentials)
             toast({ title: "Login Failed", description: 'Incorrect email or password', variant: "destructive" });
             return { error: 'Incorrect email or password' };
-        }
+
         // Catch-all for other non-200 statuses from loginUser
         if (res.status !== 200) {
             toast({ title: "Login Failed", description: data?.error || 'An unexpected error occurred during login.', variant: "destructive" });
             return { error: data?.error || 'Login failed' };
-        }
+
         // At this point, loginUser call was successful (200 OK)
         setTokens({ accessToken: data.accessToken, refreshToken: data.refreshToken });
         // Now, attempt client-side Supabase sign-in to synchronize auth state
@@ -53,12 +53,12 @@ export const AuthProvider = ({ children }) => {
         if (clientLoginResult?.error) {
             // useEmailAuth.login already shows a toast on error.
             // We just need to return the error to the caller of AuthProvider.login
-            // console.error("Client-side login after server confirmation failed:", clientLoginResult.error);
+            // // // console.error("Client-side login after server confirmation failed:", clientLoginResult.error);
             // It's possible the server token is valid but client Supabase has an issue.
             // For now, treat as a login failure and let user retry.
             // Potentially clear tokens if this state is problematic: await logout();
             return { error: clientLoginResult.error?.message || "Client-side login failed." };
-        }
+
         const params = new URLSearchParams(location.search);
         const next = params.get('redirectTo') || params.get('next') || '/equipment/recommendations';
         navigate(next, { replace: true });
@@ -70,15 +70,15 @@ export const AuthProvider = ({ children }) => {
             const { res, data } = await registerUser(name, email, password);
             if (!res.ok || !data?.token || !data?.user) {
                 return { error: data?.message || 'Registration failed' };
-            }
+
             safeStorage.setItem('auth', JSON.stringify({ token: data.token, user: data.user }));
             setTokens({ accessToken: data.token, refreshToken: data.refreshToken || null });
             setUser(data.user);
             return { error: null };
-        }
+
         catch (err) {
             return { error: err?.message || 'Registration failed' };
-        }
+
     };
     // Wrapper for signup to match the AuthContextType interface
     const signup = async (email, password, userData) => {
@@ -91,8 +91,8 @@ export const AuthProvider = ({ children }) => {
                 const params = new URLSearchParams(location.search);
                 const next = params.get('redirectTo') || params.get('next') || '/dashboard';
                 navigate(next, { replace: true });
-            }
-        }
+
+
         return result;
     };
     useEffect(() => {
@@ -121,30 +121,30 @@ export const AuthProvider = ({ children }) => {
                                 navigate(location.pathname, { state: { /* empty */ }, replace: true });
                                 // Navigate to checkout
                                 navigate('/checkout', { replace: true });
-                            }
+
                             else if (next) {
                                 navigate(decodeURIComponent(next), { replace: true });
-                            }
+
                             // --- END MODIFICATION ---
-                        }
-                    }
+
+
                     else if (error) {
-                        // console.error("Error fetching user profile:", error);
+                        // // // console.error("Error fetching user profile:", error);
                         setUser(null);
-                    }
-                }
+
+
                 catch (error) {
-                    // console.error("Error fetching user profile:", error);
+                    // // // console.error("Error fetching user profile:", error);
                     setUser(null);
-                }
-            }
+
+
             else {
                 setUser(false);
                 // Show logout toast when user logs out
                 if (event === 'SIGNED_OUT') {
                     handleSignedOut();
-                }
-            }
+
+
             setIsLoading(false);
         });
         return () => {
@@ -173,3 +173,4 @@ export const AuthProvider = ({ children }) => {
       {children}
     </AuthContext.Provider>);
 };
+}}}}}}}}}}}}}}}}}}}}

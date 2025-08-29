@@ -31,7 +31,6 @@ export interface SpecializedITService {
   };
   competitors?: string[];
   marketSize?: string;
-}
 
 export const SPECIALIZED_IT_SERVICES_2025: SpecializedITService[] = [
   // Zero Trust Network Architecture
@@ -357,5 +356,5 @@ export const SPECIALIZED_IT_SERVICES_2025: SpecializedITService[] = [
     },
     competitors: ["AWS IoT Greengrass", "Azure IoT Edge", "Google Cloud IoT Edge", "IBM Edge Application Manager"],
     marketSize: "$15.7 billion by 2025"
-  }
-];
+
+];}}

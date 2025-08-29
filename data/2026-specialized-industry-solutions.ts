@@ -36,7 +36,7 @@ export interface SpecializedIndustrySolution {
   customers: number;
   rating: number;
   reviews: number;
-}
+
 const contact = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
@@ -243,7 +243,7 @@ export const specializedIndustrySolutions2026: SpecializedIndustrySolution[] = [
       'Multi-carrier integration',
       'Mobile app for drivers'
     ],
-  }
+
 ];
 export const INDUSTRY_SOLUTION_CATEGORIES = [
   'Healthcare Technology',
@@ -251,4 +251,4 @@ export const INDUSTRY_SOLUTION_CATEGORIES = [
   'Manufacturing Technology',
   'Retail Technology',
   'Logistics Technology'
-];
+];}}

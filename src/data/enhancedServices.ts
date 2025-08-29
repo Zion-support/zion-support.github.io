@@ -1146,7 +1146,7 @@ export const ENHANCED_SERVICES: ProductListing[] = [
     location: "Global",
     availability: "3-4 Weeks",
     aiScore: 91
-  }
+
 ];
 
 // Append additional diversified, real micro SaaS, IT, and AI services
@@ -1226,7 +1226,7 @@ export const MORE_ENHANCED_SERVICES: ProductListing[] = [
     rating: 4.7,
     reviewCount: 28,
     link: "https://ziontechgroup.com/services/pdf-render-api"
-  }
+
 ];
 
 export const ALL_ENHANCED_SERVICES: ProductListing[] = [
@@ -1267,4 +1267,4 @@ export const CONTACT_INFO = {
   address: "364 E Main St STE 1008 Middletown DE 19709",
   website: "https://ziontechgroup.com",
   domain: "ziontechgroup.com"
-};
+};}}

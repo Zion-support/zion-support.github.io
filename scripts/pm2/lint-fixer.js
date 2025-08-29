@@ -11,22 +11,20 @@ class LintFixer {
     this.issuesFixed = 0;
     this.filesProcessed = 0;
     this.startTime = Date.now();
-  }
 
   log(message) {
     const timestamp = new Date().toISOString();
     const logMessage = `[${timestamp}] ${message}\n`;
 
     // Console output
-    // console.log(message);
+    // // // console.log(message);
 
     // File output
     try {
       fs.appendFileSync(this.logFile, logMessage);
     } catch (error) {
-      // console.error('Failed to write to log file:', error.message);
-    }
-  }
+      // // // console.error('Failed to write to log file:', error.message);
+
 
   async fixTrailingSpaces(filePath) {
     try {
@@ -44,13 +42,12 @@ class LintFixer {
         this.issuesFixed++;
         this.log(`Fixed trailing spaces in: ${filePath}`);
         return true;
-      }
+
       return false;
     } catch (error) {
       this.log(`Error fixing trailing spaces in ${filePath}: ${error.message}`);
       return false;
-    }
-  }
+
 
   async fixUnusedImports(filePath) {
     try {
@@ -67,16 +64,14 @@ class LintFixer {
             this.issuesFixed++;
             this.log(`Removed unused React import in: ${filePath}`);
             return true;
-          }
-        }
-      }
+
+
 
       return false;
     } catch (error) {
       this.log(`Error fixing unused imports in ${filePath}: ${error.message}`);
       return false;
-    }
-  }
+
 
   async fixConsoleStatements(filePath) {
     try {
@@ -85,24 +80,23 @@ class LintFixer {
 
       // Replace console statements with proper logging or remove them
       let fixedContent = content
-        .replace(/console\.log\(/g, '// // console.log(')
-        .replace(/console\.warn\(/g, '// // console.warn(')
-        .replace(/console\.error\(/g, '// // console.error(')
-        .replace(/console\.info\(/g, '// // console.info(')
-        .replace(/console\.debug\(/g, '// // console.debug(');
+        .replace(/console\.log\(/g, '// // // // console.log(')
+        .replace(/console\.warn\(/g, '// // // // console.warn(')
+        .replace(/console\.error\(/g, '// // // // console.error(')
+        .replace(/console\.info\(/g, '// // // // console.info(')
+        .replace(/console\.debug\(/g, '// // // // console.debug(');
 
       if (originalContent !== fixedContent) {
         fs.writeFileSync(filePath, fixedContent, 'utf8');
         this.issuesFixed++;
         this.log(`Commented console statements in: ${filePath}`);
         return true;
-      }
+
       return false;
     } catch (error) {
       this.log(`Error fixing console statements in ${filePath}: ${error.message}`);
       return false;
-    }
-  }
+
 
   async fixPreferConst(filePath) {
     try {
@@ -116,7 +110,7 @@ class LintFixer {
         const reassignments = content.match(reassignmentRegex);
         if (!reassignments || reassignments.length <= 1) {
           return `const ${varName} = ${value}`;
-        }
+
         return match;
       });
 
@@ -125,13 +119,12 @@ class LintFixer {
         this.issuesFixed++;
         this.log(`Fixed prefer-const in: ${filePath}`);
         return true;
-      }
+
       return false;
     } catch (error) {
       this.log(`Error fixing prefer-const in ${filePath}: ${error.message}`);
       return false;
-    }
-  }
+
 
   async fixEmptyBlocks(filePath) {
     try {
@@ -146,13 +139,12 @@ class LintFixer {
         this.issuesFixed++;
         this.log(`Fixed empty blocks in: ${filePath}`);
         return true;
-      }
+
       return false;
     } catch (error) {
       this.log(`Error fixing empty blocks in ${filePath}: ${error.message}`);
       return false;
-    }
-  }
+
 
   async processFile(filePath) {
     try {
@@ -166,12 +158,10 @@ class LintFixer {
           filePath.includes('.next') ||
           filePath.includes('coverage')) {
         return;
-      }
 
       const ext = path.extname(filePath);
       if (!['.js', '.jsx', '.ts', '.tsx'].includes(ext)) {
         return;
-      }
 
       let fileFixed = false;
 
@@ -184,12 +174,10 @@ class LintFixer {
 
       if (fileFixed) {
         this.log(`File processed and fixed: ${filePath}`);
-      }
 
     } catch (error) {
       this.log(`Error processing file ${filePath}: ${error.message}`);
-    }
-  }
+
 
   async walkDirectory(dir) {
     try {
@@ -203,12 +191,11 @@ class LintFixer {
           await this.walkDirectory(fullPath);
         } else if (stat.isFile()) {
           await this.processFile(fullPath);
-        }
-      }
+
+
     } catch (error) {
       this.log(`Error walking directory ${dir}: ${error.message}`);
-    }
-  }
+
 
   async run() {
     this.log('🚀 Starting Lint Fixer...');
@@ -219,7 +206,6 @@ class LintFixer {
       const logsDir = path.dirname(this.logFile);
       if (!fs.existsSync(logsDir)) {
         fs.mkdirSync(logsDir, { recursive: true });
-      }
 
       // Process all files
       await this.walkDirectory(this.projectRoot);
@@ -241,21 +227,20 @@ class LintFixer {
           this.log('✅ Changes committed to git');
         } catch (error) {
           this.log(`⚠️  Could not commit changes: ${error.message}`);
-        }
+
       } else {
         this.log('✨ No lint issues found to fix!');
-      }
 
     } catch (error) {
       this.log(`❌ Error running lint fixer: ${error.message}`);
       process.exit(1);
-    }
-  }
-}
+
+
 
 // Run the lint fixer
 const fixer = new LintFixer();
 fixer.run().catch(error => {
-  // console.error('Fatal error:', error);
+  // // // console.error('Fatal error:', error);
   process.exit(1);
 });
+}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}))))))))))

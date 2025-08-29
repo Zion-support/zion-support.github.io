@@ -650,7 +650,7 @@ export const EMERGING_TECH_2025_SPECIALIZED_SERVICES = [
         setupTime: '4-6 weeks',
         complianceStandards: ['FDA', 'EPA', 'USDA', 'Biosafety Guidelines', 'GMO Regulations'],
         supportLevel: 'enterprise'
-    }
+
 ];
 // Market analysis for emerging technology services
 export const EMERGING_TECH_MARKET_ANALYSIS = {
@@ -673,3 +673,4 @@ export const EMERGING_TECH_MARKET_ANALYSIS = {
         'Sustainable technology focus'
     ]
 };
+}

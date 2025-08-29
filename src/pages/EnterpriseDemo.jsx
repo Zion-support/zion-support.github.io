@@ -1,10 +1,8 @@
-import React from 'react';
-import { SEO } from "@/components/SEO";
 import { GradientHeading } from "@/components/GradientHeading";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { SEO } from "@/components/SEO";
 import { Button } from "@/components/ui/button";
-import { Calendar, Clock, Users, CheckCircle, Star, ArrowRight } from "lucide-react";
-import { Link } from "react-router-dom";
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { ArrowRight, Calendar, CheckCircle, Clock, Star, Users import { Link } from "react-router-dom";
 export default function EnterpriseDemo() {
     return (<>
       <SEO title="Enterprise Demo - Zion Tech Group" description="Schedule a personalized demo of Zion's enterprise solutions for AI hiring, talent management, and marketplace services." keywords="enterprise demo, AI hiring demo, talent management demo, Zion enterprise" canonical="https://ziontechgroup.com/enterprise/demo"/>
@@ -39,7 +37,8 @@ export default function EnterpriseDemo() {
               <CardHeader className="text-center">
                 <div className="bg-zion-purple/20 w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-4">
                   <CheckCircle className="w-6 h-6 text-zion-cyan"/>
-                </CardTitle>
+                </div>
+                <CardTitle className="text-white text-2xl">Interactive Features</CardTitle>
               </CardHeader>
               <CardContent>
                 <CardDescription className="text-zion-slate-light">
@@ -52,7 +51,8 @@ export default function EnterpriseDemo() {
               <CardHeader className="text-center">
                 <div className="bg-zion-purple/20 w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-4">
                   <Star className="w-6 h-6 text-zion-cyan"/>
-                </CardTitle>
+                </div>
+                <CardTitle className="text-white text-2xl">Expert Guidance</CardTitle>
               </CardHeader>
               <CardContent>
                 <CardDescription className="text-zion-slate-light">
@@ -182,4 +182,4 @@ export default function EnterpriseDemo() {
         </div>
       </main>
     </>);
-}
+</Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card>}}

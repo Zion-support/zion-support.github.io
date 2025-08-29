@@ -38,7 +38,7 @@ export interface Revolutionary2025AdvancedMicroSaasService {
   customers: number;
   rating: number;
   reviews: number;
-}
+
 const contact = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
@@ -515,6 +515,6 @@ export const revolutionary2025AdvancedMicroSaasServices: Revolutionary2025Advanc
     customers: 180,
     rating: 4.9,
     reviews: 98
-  }
+
 ];
-export default revolutionary2025AdvancedMicroSaasServices;
+export default revolutionary2025AdvancedMicroSaasServices;}}

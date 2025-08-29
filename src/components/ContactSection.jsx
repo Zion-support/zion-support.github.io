@@ -1,7 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Mail, Phone, MapPin, Clock, MessageSquare, ArrowRight, Globe, Shield, Users } from 'lucide-react';
-export function ContactSection() {
+import { Mail, Phone, MapPin, Clock, MessageSquare, ArrowRight, Globe, Shield, Users export function ContactSection() {
     const contactMethods = [
         {
             icon: <Mail className="w-6 h-6"/>,
@@ -26,7 +25,7 @@ export function ContactSection() {
             contact: "Available 24/7",
             link: "/chat",
             color: "from-zion-blue to-zion-purple"
-        }
+
     ];
     const officeLocations = [
         {
@@ -46,7 +45,7 @@ export function ContactSection() {
             country: "United Kingdom",
             address: "1 Canary Wharf, London E14 5AB",
             icon: <MapPin className="w-5 h-5"/>
-        }
+
     ];
     const supportFeatures = [
         {
@@ -68,7 +67,7 @@ export function ContactSection() {
             icon: <Globe className="w-6 h-6"/>,
             title: "Global Reach",
             description: "Support available in multiple time zones"
-        }
+
     ];
     return (<section className="py-20 bg-gradient-to-br from-slate-900 via-zion-blue-dark to-slate-900">
       <div className="container mx-auto px-4">
@@ -187,4 +186,4 @@ export function ContactSection() {
         </div>
       </div>
     </section>);
-}
+}}}}}

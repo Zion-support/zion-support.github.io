@@ -1,7 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
-import { Globe } from "lucide-react";
-import { useEffect, useState } from "react";
+import { Globe import { useEffect, useState } from "react";
 import { SEO } from "@/components/SEO";
 // Enhanced service listings with new micro SAAS services
 const SERVICE_LISTINGS = [
@@ -487,7 +486,7 @@ const SERVICE_LISTINGS = [
 ];
 function getRandomItem(arr) {
     return arr[Math.floor(Math.random() * arr.length)];
-}
+
 function generateRandomService(idNum) {
     const templates = [
         {
@@ -565,7 +564,7 @@ function generateRandomService(idNum) {
         rating: parseFloat((4 + Math.random()).toFixed(1)),
         reviewCount: Math.floor(50 + Math.random() * 150),
     };
-}
+
 // Enhanced filter options for all service categories
 const SERVICE_FILTERS = [
     { label: 'AI & ML', value: 'ai-ml' },
@@ -646,4 +645,4 @@ export default function ServicesPage() {
         </div>
       </div>
     </div>);
-}
+}}}}

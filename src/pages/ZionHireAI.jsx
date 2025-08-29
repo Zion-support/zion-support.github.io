@@ -1,6 +1,5 @@
 import React from 'react';
-import { Phone, Mail, MapPin, ArrowRight } from 'lucide-react';
-import { Footer } from '@/components/Footer';
+import { Phone, Mail, MapPin, ArrowRight import { Footer } from '@/components/Footer';
 
 const ZionHireAI = () => {
   const successMetrics = [
@@ -28,13 +27,13 @@ const ZionHireAI = () => {
                 className="px-8 py-4 bg-zion-cyan hover:bg-zion-cyan-light text-white font-semibold rounded-lg transition-colors"
                 target="_blank"
                 rel="noopener noreferrer"
-              >
+
                 Start Free Trial
               </a>
               <a
                 href="#demo"
                 className="px-8 py-4 border border-zion-cyan text-zion-cyan hover:bg-zion-cyan hover:text-white font-semibold rounded-lg transition-colors"
-              >
+
                 Watch Demo
               </a>
             </div>
@@ -98,7 +97,7 @@ const ZionHireAI = () => {
                 className="inline-flex items-center px-8 py-4 bg-zion-cyan hover:bg-zion-cyan-light text-white font-semibold rounded-lg transition-colors"
                 target="_blank"
                 rel="noopener noreferrer"
-              >
+
                 Start Your Free Trial Today
                 <ArrowRight className="w-5 h-5 ml-2"/>
               </a>
@@ -112,3 +111,4 @@ const ZionHireAI = () => {
 };
 
 export default ZionHireAI;
+}

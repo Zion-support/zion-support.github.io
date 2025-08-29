@@ -1,13 +1,10 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { Mail, CheckCircle, AlertCircle, Send, Zap, Shield, Gift } from 'lucide-react';
-
-interface NewsletterFormData {
+import { Mail, CheckCircle, AlertCircle, Send, Zap, Shield, Gift interface NewsletterFormData {
   email: string;
   firstName: string;
   interests: string[];
   frequency: 'weekly' | 'monthly' | 'quarterly';
-}
 
 const interests = [
   { id: 'ai-solutions', label: 'AI Solutions', icon: Zap },
@@ -42,15 +39,12 @@ export const EnhancedNewsletter: React.FC = () => {
       newErrors.email = 'Email is required';
     } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email)) {
       newErrors.email = 'Please enter a valid email address';
-    }
 
     if (!formData.firstName) {
       newErrors.firstName = 'First name is required';
-    }
 
     if (formData.interests.length === 0) {
       newErrors.interests = 'Please select at least one interest';
-    }
 
     setErrors(newErrors);
     return Object.keys(newErrors).length === 0;
@@ -61,7 +55,6 @@ export const EnhancedNewsletter: React.FC = () => {
 
     if (!validateForm()) {
       return;
-    }
 
     setStatus('loading');
 
@@ -70,7 +63,7 @@ export const EnhancedNewsletter: React.FC = () => {
       await new Promise(resolve => setTimeout(resolve, 2000));
 
       // Here you would typically send the data to your newsletter service
-      // console.log('Newsletter subscription:', formData);
+      // // // console.log('Newsletter subscription:', formData);
 
       setStatus('success');
 
@@ -87,8 +80,8 @@ export const EnhancedNewsletter: React.FC = () => {
 
     } catch (error) {
       setStatus('error');
-      // console.error('Newsletter subscription error:', error);
-    }
+      // // // console.error('Newsletter subscription error:', error);
+
   };
 
   const handleInterestToggle = (interestId: string) => {
@@ -102,7 +95,7 @@ export const EnhancedNewsletter: React.FC = () => {
     // Clear error when user selects an interest
     if (errors.interests) {
       setErrors(prev => ({ ...prev, interests: undefined }));
-    }
+
   };
 
   const handleInputChange = (field: keyof NewsletterFormData, value: string | string[]) => {
@@ -111,7 +104,7 @@ export const EnhancedNewsletter: React.FC = () => {
     // Clear error when user starts typing
     if (errors[field]) {
       setErrors(prev => ({ ...prev, [field]: undefined }));
-    }
+
   };
 
   if (status === 'success') {
@@ -120,7 +113,7 @@ export const EnhancedNewsletter: React.FC = () => {
         initial={{ opacity: 0, scale: 0.95 }}
         animate={{ opacity: 1, scale: 1 }}
         className="bg-gradient-to-r from-green-50 to-emerald-50 dark:from-green-900/20 dark:to-emerald-900/20 rounded-2xl p-8 text-center border border-green-200 dark:border-green-800"
-      >
+
         <CheckCircle className="h-16 w-16 text-green-500 mx-auto mb-4" />
         <h3 className="text-2xl font-bold text-green-900 dark:text-green-100 mb-2">
           Welcome to the Zion Tech Group Community!
@@ -134,7 +127,6 @@ export const EnhancedNewsletter: React.FC = () => {
         </div>
       </motion.div>
     );
-  }
 
   return (
     <div className="bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50 dark:from-slate-900 dark:via-slate-800 dark:to-slate-900 rounded-2xl p-8 border border-slate-200 dark:border-slate-700">
@@ -144,7 +136,7 @@ export const EnhancedNewsletter: React.FC = () => {
           animate={{ scale: 1 }}
           transition={{ delay: 0.1, type: "spring", bounce: 0.4 }}
           className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full mb-4"
-        >
+
           <Mail className="h-8 w-8 text-white" />
         </motion.div>
 
@@ -153,7 +145,7 @@ export const EnhancedNewsletter: React.FC = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.2 }}
           className="text-3xl font-bold text-slate-900 dark:text-white mb-4"
-        >
+
           Stay Ahead with Zion Tech Insights
         </motion.h2>
 
@@ -162,7 +154,7 @@ export const EnhancedNewsletter: React.FC = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.3 }}
           className="text-lg text-slate-600 dark:text-slate-400 max-w-2xl mx-auto"
-        >
+
           Get exclusive access to the latest AI trends, technology insights, and industry updates delivered directly to your inbox.
         </motion.p>
       </div>
@@ -173,7 +165,7 @@ export const EnhancedNewsletter: React.FC = () => {
         transition={{ delay: 0.4 }}
         onSubmit={handleSubmit}
         className="max-w-2xl mx-auto space-y-6"
-      >
+
         {/* Email and Name Fields */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           <div>
@@ -247,7 +239,7 @@ export const EnhancedNewsletter: React.FC = () => {
                   }`}
                   whileHover={{ scale: 1.02 }}
                   whileTap={{ scale: 0.98 }}
-                >
+
                   <Icon className={`h-4 w-4 ${isSelected ? 'text-blue-600' : 'text-slate-500'}`} />
                   <span className="text-sm font-medium">{interest.label}</span>
                 </motion.button>
@@ -276,7 +268,7 @@ export const EnhancedNewsletter: React.FC = () => {
                     ? 'border-blue-500 bg-blue-50 dark:bg-blue-900/20'
                     : 'border-slate-300 dark:border-slate-600 hover:border-blue-300 dark:hover:border-blue-600'
                 }`}
-              >
+
                 <input
                   type="radio"
                   name="frequency"
@@ -315,7 +307,7 @@ export const EnhancedNewsletter: React.FC = () => {
           }`}
           whileHover={status !== 'loading' ? { scale: 1.02 } : { /* empty */ }}
           whileTap={status !== 'loading' ? { scale: 0.98 } : { /* empty */ }}
-        >
+
           {status === 'loading' ? (
             <>
               <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-white"></div>
@@ -335,7 +327,7 @@ export const EnhancedNewsletter: React.FC = () => {
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
             className="p-4 bg-red-50 dark:bg-red-900/20 border border-red-200 dark:border-red-800 rounded-lg"
-          >
+
             <p className="text-red-700 dark:text-red-300 text-sm flex items-center gap-2">
               <AlertCircle className="h-4 w-4" />
               Something went wrong. Please try again later.
@@ -351,4 +343,4 @@ export const EnhancedNewsletter: React.FC = () => {
       </motion.form>
     </div>
   );
-};
+};}}}}}}}}}}

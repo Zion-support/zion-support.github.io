@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
-import { Link, ExternalLink, AlertTriangle, CheckCircle, RefreshCw, Zap } from 'lucide-react';
-const LinkHealthMonitor = () => {
+import { Link, ExternalLink, AlertTriangle, CheckCircle, RefreshCw, Zap const LinkHealthMonitor = () => {
     const [isOpen, setIsOpen] = useState(false);
     const [isMonitoring, setIsMonitoring] = useState(false);
     const [linkStatuses, setLinkStatuses] = useState([]);
@@ -44,7 +43,7 @@ const LinkHealthMonitor = () => {
             lastChecked: new Date(),
             parentPage: 'Contact',
             linkText: 'Email'
-        }
+
     ];
     useEffect(() => {
         setLinkStatuses(sampleLinks);
@@ -81,7 +80,7 @@ const LinkHealthMonitor = () => {
                 return <ExternalLink className="w-4 h-4 text-blue-400"/>;
             default:
                 return <RefreshCw className="w-4 h-4 text-yellow-400"/>;
-        }
+
     };
     const getStatusColor = (status) => {
         switch (status) {
@@ -93,7 +92,7 @@ const LinkHealthMonitor = () => {
                 return 'text-blue-400';
             default:
                 return 'text-yellow-400';
-        }
+
     };
     const filteredLinks = linkStatuses.filter(link => {
         if (selectedFilter === 'all')
@@ -256,3 +255,4 @@ const LinkHealthMonitor = () => {
     </>);
 };
 export default LinkHealthMonitor;
+}}}}

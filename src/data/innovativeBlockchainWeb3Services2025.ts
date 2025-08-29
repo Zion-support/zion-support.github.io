@@ -31,7 +31,6 @@ export interface InnovativeBlockchainWeb3Service {
   };
   competitors?: string[];
   marketSize?: string;
-}
 
 export const INNOVATIVE_BLOCKCHAIN_WEB3_SERVICES_2025: InnovativeBlockchainWeb3Service[] = [
   // DeFi Platform & Yield Farming
@@ -357,5 +356,5 @@ export const INNOVATIVE_BLOCKCHAIN_WEB3_SERVICES_2025: InnovativeBlockchainWeb3S
     },
     competitors: ["Multichain", "Stargate", "Hop Protocol", "Synapse", "Celer Network"],
     marketSize: "$15.6 billion by 2025"
-  }
-];
+
+];}}

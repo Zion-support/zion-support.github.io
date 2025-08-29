@@ -3,8 +3,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '../co
 import { Badge } from '../components/ui/badge';
 import { Button } from '../components/ui/button';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '../components/ui/tabs';
-import { Check, Star, Zap, Shield, TrendingUp, Users, Cloud, Brain, Code, Database, Globe, Smartphone, Server, Lock, BarChart3, Settings, Phone, Mail, MapPin, ExternalLink, DollarSign, Target, Award } from 'lucide-react';
-import enhancedMicroSaasServices2025 from '../data/enhancedMicroSaasServices2025';
+import { Check, Star, Zap, Shield, TrendingUp, Users, Cloud, Brain, Code, Database, Globe, Smartphone, Server, Lock, BarChart3, Settings, Phone, Mail, MapPin, ExternalLink, DollarSign, Target, Award import enhancedMicroSaasServices2025 from '../data/enhancedMicroSaasServices2025';
 import enhancedAIServices2025 from '../data/enhancedAIServices2025';
 import enhancedITServices2025 from '../data/enhancedITServices2025';
 const ComprehensivePricing = () => {
@@ -40,7 +39,7 @@ const ComprehensivePricing = () => {
             case 'managed services': return <Settings className="h-5 w-5"/>;
             case 'web development': return <Globe className="h-5 w-5"/>;
             default: return <Star className="h-5 w-5"/>;
-        }
+
     };
     const getCategoryColor = (category) => {
         switch (category.toLowerCase()) {
@@ -72,36 +71,36 @@ const ComprehensivePricing = () => {
             case 'managed services': return 'from-teal-500 to-cyan-500';
             case 'web development': return 'from-blue-500 to-green-500';
             default: return 'from-gray-500 to-slate-500';
-        }
+
     };
     const formatPrice = (price, pricingModel) => {
         if (pricingModel === 'per API call') {
             return `$${price.toFixed(3)} per call`;
-        }
+
         else if (pricingModel === 'per word') {
             return `$${price.toFixed(2)} per word`;
-        }
+
         else if (pricingModel === 'per recommendation') {
             return `$${price.toFixed(3)} per recommendation`;
-        }
+
         else if (pricingModel === 'per employee/month') {
             return `$${price}/employee/month`;
-        }
+
         else if (pricingModel === 'monthly') {
             return `$${price}/month`;
-        }
+
         else if (pricingModel === 'usage-based') {
             return `$${price} per unit`;
-        }
+
         else if (pricingModel === 'tiered') {
             return `$${price}/month starting`;
-        }
+
         else if (pricingModel === 'enterprise') {
             return `$${price}/month`;
-        }
+
         else {
             return `$${price}`;
-        }
+
     };
     const renderMicroSaasPricing = () => (<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
       {enhancedMicroSaasServices2025.map((service) => (<Card key={service.id} className="group relative overflow-hidden bg-gradient-to-br from-slate-800/50 to-slate-700/50 border-slate-600/30 hover:border-blue-500/50 transition-all duration-500 hover:scale-105 backdrop-blur-sm">
@@ -432,5 +431,6 @@ const ComprehensivePricing = () => {
         </div>
       </section>
     </div>);
-};
+</Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card>};
 export default ComprehensivePricing;
+}}}}}}}}}}}}

@@ -1,7 +1,6 @@
 import React from 'react';
 import { SEO } from "@/components/SEO";
-import { Search, MapPin, Briefcase, Star } from 'lucide-react';
-const TalentDirectory = () => {
+import { Search, MapPin, Briefcase, Star const TalentDirectory = () => {
     const talents = [
         {
             id: 1,
@@ -68,7 +67,7 @@ const TalentDirectory = () => {
             rating: 4.9,
             projects: 28,
             avatar: "👨‍💻"
-        }
+
     ];
     const categories = [
         "All",
@@ -203,3 +202,4 @@ const TalentDirectory = () => {
     </div>);
 };
 export default TalentDirectory;
+}}

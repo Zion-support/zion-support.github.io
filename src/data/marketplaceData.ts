@@ -20,7 +20,6 @@ export interface MarketplaceItem {
   availability: 'available' | 'limited' | 'out-of-stock';
   deliveryTime: string;
   warranty: string;
-}
 
 export const marketplaceItems: MarketplaceItem[] = [
   {
@@ -160,7 +159,7 @@ export const marketplaceItems: MarketplaceItem[] = [
     availability: 'available',
     deliveryTime: 'Immediate',
     warranty: 'N/A'
-  }
+
 ];
 
 export const marketplaceCategories = [
@@ -187,7 +186,7 @@ export const marketplaceCategories = [
     name: 'Services',
     description: 'Professional services and consulting',
     count: marketplaceItems.filter(item => item.category === 'services').length
-  }
+
 ];
 
 export const marketplaceFilters = [
@@ -231,5 +230,5 @@ export const marketplaceFilters = [
       { value: 'limited', label: 'Limited' },
       { value: 'out-of-stock', label: 'Out of Stock' }
     ]
-  }
-];
+
+];}}}}

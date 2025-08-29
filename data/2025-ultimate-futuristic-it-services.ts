@@ -38,7 +38,7 @@ export interface UltimateFuturisticITService {
   customers: number;
   rating: number;
   reviews: number;
-}
+
 export const ultimateFuturisticITServices2025: UltimateFuturisticITService[] = [
   // Zero-Trust Quantum Security Platform
   {
@@ -507,5 +507,5 @@ export const ultimateFuturisticITServices2025: UltimateFuturisticITService[] = [
     customers: 19,
     rating: 4.7,
     reviews: 10
-  }
-];
+
+];}}

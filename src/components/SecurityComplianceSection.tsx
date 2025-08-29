@@ -11,8 +11,6 @@ import {
   Globe,
   Server,
   Eye
-} from 'lucide-react';
-
 export const SecurityComplianceSection: React.FC = () => {
   const securityFeatures = [
     {
@@ -38,7 +36,7 @@ export const SecurityComplianceSection: React.FC = () => {
       title: 'Network Security',
       description: 'Advanced network protection with intrusion detection and prevention.',
       benefits: ['Firewall protection', 'IDS/IPS systems', 'DDoS mitigation', 'VPN solutions']
-    }
+
   ];
 
   const complianceFrameworks = [
@@ -65,7 +63,7 @@ export const SecurityComplianceSection: React.FC = () => {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
-        >
+
           <h2 className="text-4xl font-bold mb-4">
             Security & Compliance
           </h2>
@@ -81,7 +79,7 @@ export const SecurityComplianceSection: React.FC = () => {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.1 }}
           className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-16"
-        >
+
           {securityMetrics.map((metric, index) => {
             const IconComponent = metric.icon;
             return (
@@ -111,7 +109,7 @@ export const SecurityComplianceSection: React.FC = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 className="bg-gray-800 rounded-2xl p-8 hover:bg-gray-700 transition-all duration-300"
-              >
+
                 <div className="flex items-center mb-6">
                   <div className="p-3 bg-blue-600 rounded-xl mr-4">
                     <IconComponent className="h-8 w-8 text-white" />
@@ -144,7 +142,7 @@ export const SecurityComplianceSection: React.FC = () => {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.3 }}
           className="mb-16"
-        >
+
           <h3 className="text-2xl font-bold text-center mb-8">
             Compliance & Certifications
           </h3>
@@ -170,7 +168,7 @@ export const SecurityComplianceSection: React.FC = () => {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.4 }}
           className="text-center"
-        >
+
           <div className="bg-gradient-to-r from-blue-600 to-indigo-600 rounded-2xl p-8">
             <h3 className="text-2xl font-bold mb-4">
               Secure Your Business Today
@@ -197,3 +195,4 @@ export const SecurityComplianceSection: React.FC = () => {
 };
 
 export default SecurityComplianceSection;
+}}

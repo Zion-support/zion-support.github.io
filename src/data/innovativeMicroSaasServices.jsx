@@ -178,5 +178,6 @@ export const INNOVATIVE_MICRO_SAAS_SERVICES = [
         launchDate: "2023-02-10",
         status: "Active",
         marketPrice: "$149-899/month"
-    }
+
 ];
+}

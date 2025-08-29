@@ -29,4 +29,4 @@ export default function LandingPageGenerator() {
       </main>
     </div>
   );
-}
+</div></div></div></div>}

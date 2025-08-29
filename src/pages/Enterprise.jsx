@@ -2,8 +2,7 @@ import React from 'react';
 import { SEO } from '@/components/SEO';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
-import { Check, Users, Shield, BarChart3, Zap, Globe, Phone } from 'lucide-react';
-export default function Enterprise() {
+import { Check, Users, Shield, BarChart3, Zap, Globe, Phone export default function Enterprise() {
     const features = [
         {
             icon: <Users className="h-8 w-8 text-zion-cyan"/>,
@@ -34,7 +33,7 @@ export default function Enterprise() {
             icon: <Phone className="h-8 w-8 text-zion-cyan"/>,
             title: "Dedicated Support",
             description: "Priority support with dedicated account managers and 24/7 technical assistance."
-        }
+
     ];
     const plans = [
         {
@@ -75,7 +74,7 @@ export default function Enterprise() {
                 "Custom security",
                 "On-premise options"
             ]
-        }
+
     ];
     return (<div className="min-h-screen bg-background">
       <SEO title="Enterprise Solutions - Zion Tech Group" description="Enterprise-grade AI and tech solutions for large organizations. Scale your tech operations with Zion Tech Group's comprehensive enterprise platform." keywords="enterprise solutions, enterprise AI, tech consulting, team management, Zion Tech Group" canonical="https://ziontechgroup.com/enterprise"/>
@@ -194,4 +193,4 @@ export default function Enterprise() {
         </div>
       </section>
     </div>);
-}
+</Card></Card></Card></Card></Card></Card></Card></Card>}}}}

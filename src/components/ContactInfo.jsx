@@ -3,8 +3,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "../ui
 import { Button } from "../ui/button";
 import { Badge } from "../ui/badge";
 import { Link } from "react-router-dom";
-import { Mail, Phone, MapPin, Globe, Clock, MessageSquare, ExternalLink, Star } from "lucide-react";
-export function ContactInfo() {
+import { Mail, Phone, MapPin, Globe, Clock, MessageSquare, ExternalLink, Star export function ContactInfo() {
     return (<section className="py-20 bg-zion-blue-dark">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
@@ -216,4 +215,4 @@ export function ContactInfo() {
         </div>
       </div>
     </section>);
-}
+</Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card>}}

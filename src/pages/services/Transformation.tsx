@@ -1,7 +1,5 @@
 import React from 'react';
-import { RefreshCw, Zap, Users, TrendingUp, Target, BarChart3, Lightbulb, ArrowRight } from 'lucide-react';
-
-const DigitalTransformation = () => {
+import { RefreshCw, Zap, Users, TrendingUp, Target, BarChart3, Lightbulb, ArrowRight const DigitalTransformation = () => {
   const transformationServices = [
     {
       title: "Process Automation",
@@ -23,7 +21,7 @@ const DigitalTransformation = () => {
       price: "From $8,000/month",
       features: ["Change strategy", "Training programs", "Communication plans", "Success measurement"],
       icon: Users
-    }
+
   ];
 
   const transformationAreas = [
@@ -44,7 +42,7 @@ const DigitalTransformation = () => {
       description: "Modernize your technology stack and infrastructure",
       icon: BarChart3,
       features: ["Cloud migration", "API integration", "Data modernization", "Security enhancement"]
-    }
+
   ];
 
   const benefits = [
@@ -220,4 +218,4 @@ const DigitalTransformation = () => {
   );
 };
 
-export default DigitalTransformation;
+export default DigitalTransformation;}}}

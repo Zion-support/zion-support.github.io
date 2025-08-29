@@ -14,7 +14,7 @@ export interface QuantumSpaceTechService2026 {
     email: string;
     address: string;
   };
-}
+
 export const quantumSpaceTechServices2026: QuantumSpaceTechService2026[] = [
   {
     id: "2026-quantum-space-tech",
@@ -36,6 +36,7 @@ export const quantumSpaceTechServices2026: QuantumSpaceTechService2026[] = [
       mobile: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       address: "364 E Main St STE 1008 Middletown DE 19709"
-    }
-  }
+
+
 ];
+}}}

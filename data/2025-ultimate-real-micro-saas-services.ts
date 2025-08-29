@@ -38,7 +38,7 @@ export interface UltimateRealMicroSaasService {
   customers: number;
   rating: number;
   reviews: number;
-}
+
 export const ultimateRealMicroSaasServices2025: UltimateRealMicroSaasService[] = [
   // AI-Powered Customer Success Platform
   {
@@ -975,5 +975,5 @@ export const ultimateRealMicroSaasServices2025: UltimateRealMicroSaasService[] =
     customers: 170,
     rating: 4.6,
     reviews: 66
-  }
-];
+
+];}}

@@ -11,13 +11,10 @@ export default function Webinars() {
 			</div>
 		</div>
 	);
-}
 
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { Video, Calendar, Clock, Users, Play, Download, Search, Filter, Star, ExternalLink, ArrowRight, BookOpen, Brain, Cloud, Shield, Database, Zap, Globe, Target, TrendingUp, Award, CheckCircle } from 'lucide-react';
-
-export default function Webinars() {
+import { Video, Calendar, Clock, Users, Play, Download, Search, Filter, Star, ExternalLink, ArrowRight, BookOpen, Brain, Cloud, Shield, Database, Zap, Globe, Target, TrendingUp, Award, CheckCircle export default function Webinars() {
   const [searchQuery, setSearchQuery] = useState('');
   const [activeCategory, setActiveCategory] = useState('all');
   const [filterType, setFilterType] = useState('all');
@@ -73,7 +70,7 @@ export default function Webinars() {
       thumbnail: '/images/webinars/zero-trust-security-2025.jpg',
       registrationRequired: true,
       recordingAvailable: false
-    }
+
   ];
 
   // Update counts
@@ -87,7 +84,7 @@ export default function Webinars() {
         type.count = webinars.length;
       } else {
         type.count = webinars.filter(w => w.type === type.id).length;
-      }
+
     });
   }, []);
 
@@ -138,7 +135,7 @@ export default function Webinars() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
-          >
+
             <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">
               Stay Informed and Inspired
             </h1>
@@ -153,7 +150,7 @@ export default function Webinars() {
                 className="px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-purple text-white rounded-xl font-semibold text-lg hover:scale-105 transition-all duration-300 shadow-2xl hover:shadow-zion-cyan/25"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-              >
+
                 Subscribe to Webinars
               </motion.button>
               <button className="px-8 py-4 border border-zion-cyan text-zion-cyan rounded-xl font-semibold text-lg hover:bg-zion-cyan hover:text-white transition-all duration-300">
@@ -191,7 +188,7 @@ export default function Webinars() {
                       ? 'bg-zion-cyan border-zion-cyan text-white'
                       : 'bg-zion-slate-dark border-zion-slate-light/20 text-zion-slate-light hover:border-zion-cyan/50'
                   }`}
-                >
+
                   {category.icon}
                   <span>{category.name}</span>
                   <span className="text-sm opacity-75">({category.count})</span>
@@ -210,7 +207,7 @@ export default function Webinars() {
                       ? 'bg-zion-purple border-zion-purple text-white'
                       : 'bg-zion-slate-dark border-zion-slate-light/20 text-zion-slate-light hover:border-zion-purple/50'
                   }`}
-                >
+
                   {type.name} ({type.count})
                 </button>
               ))}
@@ -235,7 +232,7 @@ export default function Webinars() {
                     setFilterType('all');
                   }}
                   className="px-6 py-3 bg-zion-cyan text-white rounded-lg hover:bg-zion-cyan/90 transition-colors"
-                >
+
                   Clear Filters
                 </button>
               </div>
@@ -249,7 +246,7 @@ export default function Webinars() {
                     transition={{ duration: 0.6 }}
                     viewport={{ once: true }}
                     className="bg-zion-slate-dark rounded-2xl overflow-hidden border border-zion-slate-light/20 hover:border-zion-cyan/50 transition-all duration-300 hover:shadow-2xl hover:shadow-zion-cyan/25"
-                  >
+
                     {/* Thumbnail */}
                     <div className="relative h-48 bg-gradient-to-br from-zion-slate to-zion-slate-light">
                       <div className="absolute inset-0 flex items-center justify-center">
@@ -301,7 +298,7 @@ export default function Webinars() {
                           <span
                             key={index}
                             className="px-2 py-1 bg-zion-slate text-zion-slate-light text-xs rounded"
-                          >
+
                             {tag}
                           </span>
                         ))}
@@ -332,4 +329,4 @@ export default function Webinars() {
       </section>
     </div>
   );
-}
+}}}}}

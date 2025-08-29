@@ -7,7 +7,7 @@ export function Popover({ children }) {
         {children}
       </div>
     </PopoverContext.Provider>);
-}
+
 export function PopoverTrigger({ children, className = '' }) {
     const context = useContext(PopoverContext);
     if (!context)
@@ -15,7 +15,7 @@ export function PopoverTrigger({ children, className = '' }) {
     return (<div className={className} onClick={() => context.setIsOpen(!context.isOpen)}>
       {children}
     </div>);
-}
+
 export function PopoverContent({ children, className = '' }) {
     const context = useContext(PopoverContext);
     if (!context)
@@ -25,4 +25,4 @@ export function PopoverContent({ children, className = '' }) {
     return (<div className={`absolute z-50 mt-2 w-64 bg-white rounded-md shadow-lg border border-gray-200 p-4 ${className}`}>
       {children}
     </div>);
-}
+}}}

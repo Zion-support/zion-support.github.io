@@ -3,8 +3,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { Link } from 'react-router-dom';
-import { Brain, Database, Zap, Shield, BarChart3, MessageSquare, Code, Globe, Server, Eye, FileText, CheckCircle, Users, Lock, Search } from 'lucide-react';
-const AIServices = [
+import { Brain, Database, Zap, Shield, BarChart3, MessageSquare, Code, Globe, Server, Eye, FileText, CheckCircle, Users, Lock, Search const AIServices = [
     {
         title: "AI Strategy Consulting",
         description: "Strategic guidance for implementing AI solutions in your business",
@@ -115,7 +114,7 @@ const AIServices = [
         icon: <FileText className="h-8 w-8 text-zion-blue"/>,
         category: "Content",
         link: "/request-quote?service=ai-content"
-    }
+
 ];
 const categories = [
     { name: "All", value: "all", icon: <Globe className="h-4 w-4"/> },
@@ -235,4 +234,4 @@ export default function AIServicesPage() {
         </div>
       </div>
     </div>);
-}
+</Card></Card></Card></Card>}}}

@@ -24,7 +24,7 @@ export interface IoTEdgeService {
   status: 'active' | 'beta' | 'coming-soon';
   scalability: string;
   deployment: string;
-}
+
 export const IOT_EDGE_COMPUTING_SERVICES_2025: IoTEdgeService[] = [
   {
     id: 'smart-city-platform',
@@ -369,14 +369,15 @@ export const IOT_EDGE_COMPUTING_SERVICES_2025: IoTEdgeService[] = [
     status: 'active',
     scalability: 'Unlimited data processing',
     deployment: 'Cloud-based analytics platform'
-  }
+
 ];
 export const getIoTEdgeServicesByCategory = (category: string): IoTEdgeService[] => {
   if (category === 'All') {
     return IOT_EDGE_COMPUTING_SERVICES_2025;
-  }
+
   return IOT_EDGE_COMPUTING_SERVICES_2025.filter(service => service.category === category);
 };
 export const getAllIoTEdgeServices = (): IoTEdgeService[] => {
   return IOT_EDGE_COMPUTING_SERVICES_2025;
 };
+}}}

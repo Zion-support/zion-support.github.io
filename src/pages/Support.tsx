@@ -18,7 +18,6 @@ import {
   Shield,
   Globe,
   ArrowRight
-} from 'lucide-react';
 import { SEO } from '../components/SEO';
 
 interface SupportChannel {
@@ -31,7 +30,6 @@ interface SupportChannel {
   priority: 'high' | 'medium' | 'low';
   action: string;
   actionLink: string;
-}
 
 interface FAQCategory {
   title: string;
@@ -40,7 +38,6 @@ interface FAQCategory {
     question: string;
     answer: string;
   }[];
-}
 
 const supportChannels: SupportChannel[] = [
   {
@@ -108,7 +105,7 @@ const supportChannels: SupportChannel[] = [
     priority: 'low',
     action: 'Join Forum',
     actionLink: '/community'
-  }
+
 ];
 
 const faqCategories: FAQCategory[] = [
@@ -127,7 +124,7 @@ const faqCategories: FAQCategory[] = [
       {
         question: 'How do I access my dashboard?',
         answer: 'Log in to your account and click on "Dashboard" in the top navigation. All your tools and services will be available there.'
-      }
+
     ]
   },
   {
@@ -145,7 +142,7 @@ const faqCategories: FAQCategory[] = [
       {
         question: 'I\'m experiencing slow performance',
         answer: 'Check your internet connection and try refreshing the page. If the issue continues, our support team can help diagnose the problem.'
-      }
+
     ]
   },
   {
@@ -163,9 +160,9 @@ const faqCategories: FAQCategory[] = [
       {
         question: 'How do I get an invoice?',
         answer: 'All invoices are available in your billing section. You can download them as PDF or have them emailed to you automatically.'
-      }
+
     ]
-  }
+
 ];
 
 export default function Support() {
@@ -194,7 +191,7 @@ export default function Support() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             className="inline-flex items-center px-4 py-2 bg-slate-800/50 rounded-full text-sm font-medium mb-6 border border-slate-700/50"
-          >
+
             <Headphones className="w-4 h-4 mr-2 text-cyan-400" />
             Support Center
           </motion.div>
@@ -204,7 +201,7 @@ export default function Support() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
             className="text-4xl md:text-6xl font-bold text-white mb-6"
-          >
+
             How Can We Help?
           </motion.h1>
 
@@ -213,7 +210,7 @@ export default function Support() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.4 }}
             className="text-xl text-gray-300 max-w-3xl mx-auto mb-8"
-          >
+
             Our support team is here to help you succeed with Zion Tech Group services.
             Choose the support channel that works best for you.
           </motion.p>
@@ -224,7 +221,7 @@ export default function Support() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.6 }}
             className="max-w-2xl mx-auto"
-          >
+
             <div className="relative">
               <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400" />
               <input
@@ -246,7 +243,7 @@ export default function Support() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.8 }}
           className="text-center mb-12"
-        >
+
           <h2 className="text-3xl font-bold text-white mb-4">Support Channels</h2>
           <p className="text-gray-400">Choose the best way to get help</p>
         </motion.div>
@@ -259,7 +256,7 @@ export default function Support() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 1.0 + index * 0.1 }}
               className="bg-slate-800/50 rounded-xl p-6 backdrop-blur-sm border border-slate-700/50 hover:border-cyan-400/30 transition-all duration-200"
-            >
+
               <div className="flex items-center space-x-3 mb-4">
                 <div className="w-12 h-12 bg-gradient-to-br from-cyan-400/20 to-blue-500/20 rounded-xl flex items-center justify-center">
                   <channel.icon className="w-6 h-6 text-cyan-400" />
@@ -293,7 +290,7 @@ export default function Support() {
               <a
                 href={channel.actionLink}
                 className="inline-flex items-center justify-center w-full px-4 py-3 bg-gradient-to-r from-cyan-400 to-blue-500 text-white font-medium rounded-lg hover:from-cyan-500 hover:to-blue-600 transition-all duration-200 hover:scale-105 shadow-lg hover:shadow-cyan-400/25"
-              >
+
                 {channel.action}
                 <ArrowRight className="w-4 h-4 ml-2" />
               </a>
@@ -309,7 +306,7 @@ export default function Support() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 1.6 }}
           className="text-center mb-12"
-        >
+
           <h2 className="text-3xl font-bold text-white mb-4">Frequently Asked Questions</h2>
           <p className="text-gray-400">Quick answers to common questions</p>
         </motion.div>
@@ -323,7 +320,7 @@ export default function Support() {
                 ? 'bg-cyan-400 text-slate-900 shadow-lg shadow-cyan-400/25'
                 : 'bg-slate-700/50 text-gray-300 hover:bg-slate-600/50 hover:text-white'
             }`}
-          >
+
             All Categories
           </button>
           {faqCategories.map((category) => (
@@ -335,7 +332,7 @@ export default function Support() {
                   ? 'bg-cyan-400 text-slate-900 shadow-lg shadow-cyan-400/25'
                   : 'bg-slate-700/50 text-gray-300 hover:bg-slate-600/50 hover:text-white'
               }`}
-            >
+
               {category.title}
             </button>
           ))}
@@ -350,7 +347,7 @@ export default function Support() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 1.8 + index * 0.1 }}
               className="bg-slate-800/50 rounded-xl p-6 backdrop-blur-sm border border-slate-700/50"
-            >
+
               <h3 className="text-lg font-semibold text-white mb-3">{faq.question}</h3>
               <p className="text-gray-300 leading-relaxed">{faq.answer}</p>
             </motion.div>
@@ -363,7 +360,7 @@ export default function Support() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 1.8 }}
             className="text-center py-12"
-          >
+
             <HelpCircle className="w-16 h-16 text-gray-500 mx-auto mb-4" />
             <h3 className="text-xl font-semibold text-white mb-2">No results found</h3>
             <p className="text-gray-400 mb-6">
@@ -372,7 +369,7 @@ export default function Support() {
             <Link
               to="/contact"
               className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-cyan-400 to-blue-500 text-white font-medium rounded-lg hover:from-cyan-500 hover:to-blue-600 transition-all duration-200"
-            >
+
               Contact Support
             </Link>
           </motion.div>
@@ -386,7 +383,7 @@ export default function Support() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 2.0 }}
           className="grid grid-cols-1 md:grid-cols-2 gap-8"
-        >
+
           {/* Knowledge Base */}
           <div className="bg-slate-800/50 rounded-2xl p-8 backdrop-blur-sm border border-slate-700/50">
             <div className="flex items-center space-x-3 mb-6">
@@ -404,7 +401,7 @@ export default function Support() {
             <Link
               to="/help"
               className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-green-400 to-emerald-500 text-white font-medium rounded-lg hover:from-green-500 hover:to-emerald-600 transition-all duration-200"
-            >
+
               Browse Articles
               <ArrowRight className="w-4 h-4 ml-2" />
             </Link>
@@ -427,7 +424,7 @@ export default function Support() {
             <Link
               to="/status"
               className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-blue-400 to-cyan-500 text-white font-medium rounded-lg hover:from-blue-500 hover:to-cyan-600 transition-all duration-200"
-            >
+
               Check Status
               <ArrowRight className="w-4 h-4 ml-2" />
             </Link>
@@ -442,7 +439,7 @@ export default function Support() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 2.2 }}
           className="text-center"
-        >
+
           <div className="bg-gradient-to-r from-cyan-400/10 to-blue-500/10 rounded-2xl p-8 border border-cyan-400/20">
             <h3 className="text-2xl font-bold text-white mb-4">
               Still Need Help?
@@ -454,14 +451,14 @@ export default function Support() {
               <Link
                 to="/contact"
                 className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-cyan-400 to-blue-500 text-white font-medium rounded-lg hover:from-cyan-500 hover:to-blue-600 transition-all duration-200 hover:scale-105 shadow-lg hover:shadow-cyan-400/25"
-              >
+
                 <Mail className="w-4 h-4 mr-2" />
                 Contact Us
               </Link>
               <a
                 href="tel:+1-800-ZION-TECH"
                 className="inline-flex items-center px-6 py-3 border border-cyan-400 text-cyan-400 font-medium rounded-lg hover:bg-cyan-400 hover:text-slate-900 transition-all duration-200"
-              >
+
                 <Phone className="w-4 h-4 mr-2" />
                 Call Support
               </a>
@@ -471,4 +468,4 @@ export default function Support() {
       </div>
     </div>
   );
-}
+}}}}}}}}}

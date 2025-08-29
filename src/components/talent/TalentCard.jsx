@@ -1,8 +1,7 @@
 import React from 'react';
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
-import { MapPin, Clock, CheckCircle2 } from "lucide-react";
-import { FavoriteButton } from "@/components/FavoriteButton";
+import { MapPin, Clock, CheckCircle2 import { FavoriteButton } from "@/components/FavoriteButton";
 import { useNavigate } from "react-router-dom";
 const TalentCardComponent = ({ talent, onBook, onMessage, isAuthenticated }) => {
     const navigate = useNavigate();
@@ -11,17 +10,17 @@ const TalentCardComponent = ({ talent, onBook, onMessage, isAuthenticated }) => 
         e.stopPropagation();
         if (onMessage) {
             onMessage(talent);
-        }
+
         else {
             navigate(`/messages?talentId=${talent.id}`);
-        }
+
     };
     const handleBook = (e) => {
         e.preventDefault();
         e.stopPropagation();
         if (onBook) {
             onBook(talent);
-        }
+
     };
     // Extract skills - limit to 5 for display
     const skills = talent.skills?.slice(0, 5) || [];
@@ -97,3 +96,4 @@ const TalentCardComponent = ({ talent, onBook, onMessage, isAuthenticated }) => 
 };
 export const TalentCard = React.memo(TalentCardComponent);
 TalentCard.displayName = 'TalentCard';
+}}}}

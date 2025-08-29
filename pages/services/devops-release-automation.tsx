@@ -32,5 +32,4 @@ export default function DevOpsReleaseAutomation() {
       </main>
     </div>
   );
-}
-
+</div></div></div></div>}

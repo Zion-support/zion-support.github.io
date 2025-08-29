@@ -1,7 +1,6 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { Mail, MessageCircle, Zap, Settings, Users, Shield, ArrowRight, CheckCircle, Play, Download, Clock, Target, Activity, BarChart3, Database, Bot } from 'lucide-react';
-import { Link } from 'react-router-dom';
+import { Mail, MessageCircle, Zap, Settings, Users, Shield, ArrowRight, CheckCircle, Play, Download, Clock, Target, Activity, BarChart3, Database, Bot import { Link } from 'react-router-dom';
 
 export default function AIAutoEmailResponder() {
   return (
@@ -37,7 +36,7 @@ export default function AIAutoEmailResponder() {
                 <Link
                   to="/contact"
                   className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-500 to-indigo-600 text-white font-semibold rounded-lg hover:from-blue-600 hover:to-indigo-700 transition-all duration-200 shadow-lg hover:shadow-xl"
-                >
+
                   Get Started
                   <ArrowRight className="ml-2 w-5 h-5" />
                 </Link>
@@ -94,7 +93,7 @@ export default function AIAutoEmailResponder() {
                   icon: Shield,
                   title: "Security & Privacy",
                   description: "Enterprise-grade security with data encryption and privacy protection."
-                }
+
               ].map((feature, index) => (
                 <div key={index} className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-6 hover:bg-slate-800/70 transition-all duration-300">
                   <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-indigo-600 rounded-lg flex items-center justify-center mb-4">
@@ -157,7 +156,7 @@ export default function AIAutoEmailResponder() {
                   description: "Automated surveys, review requests, and customer feedback gathering.",
                   icon: BarChart3,
                   benefits: ["Surveys", "Review requests", "Feedback collection"]
-                }
+
               ].map((useCase, index) => (
                 <div key={index} className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-6 hover:bg-slate-800/70 transition-all duration-300">
                   <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-indigo-600 rounded-lg flex items-center justify-center mb-4">
@@ -212,7 +211,7 @@ export default function AIAutoEmailResponder() {
                   step: "04",
                   title: "Delivery & Logging",
                   description: "Automated responses are sent and logged in CRM systems."
-                }
+
               ].map((step, index) => (
                 <div key={index} className="text-center">
                   <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-indigo-600 rounded-full flex items-center justify-center mx-auto mb-4">
@@ -326,7 +325,7 @@ export default function AIAutoEmailResponder() {
                   description: "Zendesk, Freshdesk, and customer support platforms.",
                   icon: Users,
                   features: ["Zendesk", "Freshdesk", "Support Systems"]
-                }
+
               ].map((integration, index) => (
                 <div key={index} className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-6 hover:bg-slate-800/70 transition-all duration-300">
                   <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-indigo-600 rounded-lg flex items-center justify-center mb-4">
@@ -361,14 +360,14 @@ export default function AIAutoEmailResponder() {
               <Link
                 to="/contact"
                 className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-500 to-indigo-600 text-white font-semibold rounded-lg hover:from-blue-600 hover:to-indigo-700 transition-all duration-200"
-              >
+
                 Schedule a Demo
                 <ArrowRight className="ml-2 w-5 h-5" />
               </Link>
               <Link
                 to="/services"
                 className="inline-flex items-center px-8 py-4 border border-blue-500/30 text-blue-400 font-semibold rounded-lg hover:bg-blue-500/10 transition-all duration-200"
-              >
+
                 Explore All Services
               </Link>
             </div>
@@ -377,4 +376,4 @@ export default function AIAutoEmailResponder() {
       </div>
     </>
   );
-}
+}}}}}}

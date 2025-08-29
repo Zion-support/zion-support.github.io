@@ -258,6 +258,7 @@ export const emergingTechInnovations2025 = [
         innovationLevel: 'Advanced robotics with continuous AI and safety improvements',
         futureProofing: 'Next-generation robotics hardware and AI algorithms',
         researchPartnerships: ['MIT Robotics Lab', 'Stanford Robotics', 'Carnegie Mellon Robotics']
-    }
+
 ];
 export default emergingTechInnovations2025;
+}

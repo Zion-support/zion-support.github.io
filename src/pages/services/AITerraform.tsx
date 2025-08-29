@@ -1,6 +1,4 @@
-import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, FileText, BarChart3 } from 'lucide-react';
-
-export default function AITerraform() {
+import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, FileText, BarChart3 export default function AITerraform() {
   const features = [
     'AI-powered Terraform optimization',
     'Intelligent Terraform management',
@@ -171,4 +169,4 @@ export default function AITerraform() {
       </section>
     </div>
   );
-}
+}}

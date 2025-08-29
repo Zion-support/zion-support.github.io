@@ -1,6 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { Search, Sparkles, Filter, TrendingUp, Clock, Star } from 'lucide-react';
-const mockSuggestions = [
+import { Search, Sparkles, Filter, TrendingUp, Clock, Star const mockSuggestions = [
     { id: '1', text: 'AI Development Services', type: 'service', relevance: 95, category: 'AI & ML' },
     { id: '2', text: 'Cloud Infrastructure', type: 'service', relevance: 88, category: 'DevOps' },
     { id: '3', text: 'React Native Apps', type: 'technology', relevance: 82, category: 'Mobile' },
@@ -22,7 +21,7 @@ export function AdvancedSearch() {
         const handleClickOutside = (event) => {
             if (searchRef.current && !searchRef.current.contains(event.target)) {
                 setShowSuggestions(false);
-            }
+
         };
         document.addEventListener('mousedown', handleClickOutside);
         return () => document.removeEventListener('mousedown', handleClickOutside);
@@ -36,11 +35,11 @@ export function AdvancedSearch() {
                 .slice(0, 8);
             setSuggestions(filtered);
             setShowSuggestions(true);
-        }
+
         else {
             setSuggestions([]);
             setShowSuggestions(false);
-        }
+
     }, [query]);
     const handleSuggestionClick = (suggestion) => {
         setQuery(suggestion.text);
@@ -62,7 +61,7 @@ export function AdvancedSearch() {
             case 'trending': return <TrendingUp className="w-4 h-4 text-zion-emerald"/>;
             case 'recent': return <Clock className="w-4 h-4 text-zion-gold"/>;
             default: return <Search className="w-4 h-4 text-zion-slate"/>;
-        }
+
     };
     const getSuggestionColor = (type) => {
         switch (type) {
@@ -71,7 +70,7 @@ export function AdvancedSearch() {
             case 'trending': return 'bg-zion-emerald/10 border-zion-emerald/20';
             case 'recent': return 'bg-zion-gold/10 border-zion-gold/20';
             default: return 'bg-zion-slate/10 border-zion-slate/20';
-        }
+
     };
     return (<div className="relative w-full max-w-2xl mx-auto" ref={searchRef}>
       {/* Search Input */}
@@ -149,4 +148,4 @@ export function AdvancedSearch() {
           </div>
         </div>)}
     </div>);
-}
+}}}}}}}

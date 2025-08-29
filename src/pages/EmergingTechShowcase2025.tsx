@@ -27,7 +27,6 @@ import {
   Play,
   Pause,
   RotateCcw
-} from 'lucide-react';
 import { EMERGING_TECH_SERVICES_2025 } from '../data/emergingTechServices2025';
 
 const EmergingTechShowcase2025: React.FC = () => {
@@ -62,7 +61,7 @@ const EmergingTechShowcase2025: React.FC = () => {
         setCurrentSlide((prev) => (prev + 1) % filteredServices.length);
       }, 5000);
       return () => clearInterval(interval);
-    }
+
   }, [autoPlay, filteredServices.length]);
 
   const getCategoryIcon = (category: string) => {
@@ -85,7 +84,7 @@ const EmergingTechShowcase2025: React.FC = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-          >
+
             <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
               Emerging Tech
               <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
@@ -102,7 +101,7 @@ const EmergingTechShowcase2025: React.FC = () => {
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 className="flex items-center gap-2 bg-white/10 backdrop-blur-sm rounded-full px-6 py-3 text-white hover:bg-white/20 transition-all"
-              >
+
                 <Phone className="w-5 h-5" />
                 <span>+1 302 464 0950</span>
               </motion.div>
@@ -110,7 +109,7 @@ const EmergingTechShowcase2025: React.FC = () => {
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 className="flex items-center gap-2 bg-white/10 backdrop-blur-sm rounded-full px-6 py-3 text-white hover:bg-white/20 transition-all"
-              >
+
                 <Mail className="w-5 h-5" />
                 <span>kleber@ziontechgroup.com</span>
               </motion.div>
@@ -134,7 +133,7 @@ const EmergingTechShowcase2025: React.FC = () => {
                     ? `bg-gradient-to-r ${category.color} text-white shadow-lg`
                     : 'bg-white/10 text-gray-300 hover:bg-white/20'
                 }`}
-              >
+
                 <category.icon className="w-5 h-5" />
                 <span>{category.name}</span>
               </motion.button>
@@ -157,13 +156,13 @@ const EmergingTechShowcase2025: React.FC = () => {
                 <button
                   onClick={() => setAutoPlay(!autoPlay)}
                   className="p-3 bg-white/10 rounded-full hover:bg-white/20 transition-all"
-                >
+
                   {autoPlay ? <Pause className="w-6 h-6 text-white" /> : <Play className="w-6 h-6 text-white" />}
                 </button>
                 <button
                   onClick={() => setCurrentSlide(0)}
                   className="p-3 bg-white/10 rounded-full hover:bg-white/20 transition-all"
-                >
+
                   <RotateCcw className="w-6 h-6 text-white" />
                 </button>
               </div>
@@ -177,7 +176,7 @@ const EmergingTechShowcase2025: React.FC = () => {
                 exit={{ opacity: 0, x: -100 }}
                 transition={{ duration: 0.5 }}
                 className="bg-gradient-to-r from-white/10 to-white/5 backdrop-blur-sm rounded-3xl p-8 md:p-12"
-              >
+
                 <div className="grid md:grid-cols-2 gap-8 items-center">
                   <div>
                     <div className="flex items-center gap-2 mb-4">
@@ -206,7 +205,7 @@ const EmergingTechShowcase2025: React.FC = () => {
                       whileHover={{ scale: 1.05 }}
                       whileTap={{ scale: 0.95 }}
                       className="bg-gradient-to-r from-blue-500 to-purple-600 text-white px-8 py-3 rounded-full font-semibold hover:shadow-lg transition-all"
-                    >
+
                       {filteredServices[currentSlide]?.ctaLabel}
                     </motion.button>
                   </div>
@@ -268,7 +267,7 @@ const EmergingTechShowcase2025: React.FC = () => {
                 whileHover={{ y: -10 }}
                 className="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-sm rounded-2xl p-6 hover:shadow-2xl transition-all cursor-pointer"
                 onClick={() => setSelectedService(service.id)}
-              >
+
                 <div className="flex items-center gap-3 mb-4">
                   <div className={`p-3 rounded-xl bg-gradient-to-r ${getCategoryColor(service.category)}`}>
                     {React.createElement(getCategoryIcon(service.category), { className: "w-6 h-6 text-white" })}
@@ -303,7 +302,7 @@ const EmergingTechShowcase2025: React.FC = () => {
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
                   className="w-full bg-gradient-to-r from-blue-500 to-purple-600 text-white py-3 rounded-xl font-semibold hover:shadow-lg transition-all"
-                >
+
                   {service.ctaLabel}
                 </motion.button>
               </motion.div>
@@ -356,7 +355,7 @@ const EmergingTechShowcase2025: React.FC = () => {
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
             className="bg-gradient-to-r from-blue-500 to-purple-600 text-white px-8 py-4 rounded-full font-semibold text-lg hover:shadow-lg transition-all"
-          >
+
             Get Started Today
           </motion.button>
         </div>
@@ -371,14 +370,14 @@ const EmergingTechShowcase2025: React.FC = () => {
             exit={{ opacity: 0 }}
             className="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-4"
             onClick={() => setSelectedService(null)}
-          >
+
             <motion.div
               initial={{ scale: 0.9, opacity: 0 }}
               animate={{ scale: 1, opacity: 1 }}
               exit={{ scale: 0.9, opacity: 0 }}
               className="bg-gradient-to-br from-slate-800 to-slate-900 rounded-3xl p-8 max-w-4xl w-full max-h-[90vh] overflow-y-auto"
               onClick={(e) => e.stopPropagation()}
-            >
+
               {(() => {
                 const service = EMERGING_TECH_SERVICES_2025.find(s => s.id === selectedService);
                 if (!service) return null;
@@ -399,7 +398,7 @@ const EmergingTechShowcase2025: React.FC = () => {
                       <button
                         onClick={() => setSelectedService(null)}
                         className="p-2 bg-white/10 rounded-full hover:bg-white/20 transition-all"
-                      >
+
                         <ChevronLeft className="w-6 h-6 text-white" />
                       </button>
                     </div>
@@ -456,7 +455,7 @@ const EmergingTechShowcase2025: React.FC = () => {
                         whileHover={{ scale: 1.05 }}
                         whileTap={{ scale: 0.95 }}
                         className="flex-1 bg-gradient-to-r from-blue-500 to-purple-600 text-white py-3 rounded-xl font-semibold hover:shadow-lg transition-all"
-                      >
+
                         {service.ctaLabel}
                       </motion.button>
                       <motion.button
@@ -464,7 +463,7 @@ const EmergingTechShowcase2025: React.FC = () => {
                         whileTap={{ scale: 0.95 }}
                         onClick={() => setSelectedService(null)}
                         className="px-8 py-3 border border-white/20 text-white rounded-xl hover:bg-white/10 transition-all"
-                      >
+
                         Close
                       </motion.button>
                     </div>
@@ -479,4 +478,4 @@ const EmergingTechShowcase2025: React.FC = () => {
   );
 };
 
-export default EmergingTechShowcase2025;
+export default EmergingTechShowcase2025;}}

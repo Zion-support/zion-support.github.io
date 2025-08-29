@@ -584,5 +584,6 @@ export const SPECIALIZED_INDUSTRY_SOLUTIONS_2025 = [
         },
         competitors: ["Thomson Reuters", "LexisNexis", "Westlaw", "Bloomberg Law"],
         demoUrl: "https://ziontechgroup.com/demo/ai-legal-compliance"
-    }
+
 ];
+}

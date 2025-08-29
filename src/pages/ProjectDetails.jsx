@@ -16,8 +16,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { toast } from "@/hooks/use-toast";
 import { supabase } from "@/integrations/supabase/client";
 import { ProjectReviewSection } from "@/components/projects/reviews/ProjectReviewSection";
-import { AlertCircle, Calendar, CheckCircle2, Clock, FileText, Layers, MessageSquare, Video, User, XCircle, } from "lucide-react";
-function ProjectDetailsContent() {
+import { AlertCircle, Calendar, CheckCircle2, Clock, FileText, Layers, MessageSquare, Video, User, XCircle, function ProjectDetailsContent() {
     const router = useNavigate();
     // Get projectId from Next.js router query params
     const { projectId } = router.query;
@@ -40,7 +39,7 @@ function ProjectDetailsContent() {
                 setProject(projectData);
                 // Now fetch notes
                 fetchProjectNotes(projectId);
-            }
+
             else {
                 toast({
                     title: "Project not found",
@@ -48,9 +47,9 @@ function ProjectDetailsContent() {
                     variant: "destructive",
                 });
                 navigate("/dashboard");
-            }
+
             setIsLoading(false);
-        }
+
         loadProject();
     }, [projectId]);
     const fetchProjectNotes = async (projectId) => {
@@ -66,10 +65,10 @@ function ProjectDetailsContent() {
             if (error)
                 throw error;
             setNotes(data || []);
-        }
+
         catch (err) {
-            // console.error("Error fetching project notes:", err);
-        }
+            // // // console.error("Error fetching project notes:", err);
+
     };
     const handleSubmitNote = async () => {
         if (!newNote.trim() || !project || !user)
@@ -93,18 +92,18 @@ function ProjectDetailsContent() {
                 title: "Note added",
                 description: "Your note has been added to the project.",
             });
-        }
+
         catch (err) {
-            // console.error("Error adding note:", err);
+            // // // console.error("Error adding note:", err);
             toast({
                 title: "Failed to add note",
                 description: err.message || "An error occurred while adding your note.",
                 variant: "destructive",
             });
-        }
+
         finally {
             setIsSubmittingNote(false);
-        }
+
     };
     const handleStatusChange = async (newStatus) => {
         if (!project)
@@ -121,8 +120,8 @@ function ProjectDetailsContent() {
                     title: "Offer Accepted! 🎉",
                     description: "The project is now in progress. Congratulations!",
                 });
-            }
-        }
+
+
     };
     const getStatusBadge = (status) => {
         switch (status) {
@@ -140,7 +139,7 @@ function ProjectDetailsContent() {
                 return <Badge variant="destructive">Canceled</Badge>;
             default:
                 return <Badge variant="outline">{status}</Badge>;
-        }
+
     };
     if (isLoading) {
         return (<div className="container mx-auto py-8">
@@ -151,7 +150,7 @@ function ProjectDetailsContent() {
           </div>
         </div>
       </div>);
-    }
+
     if (!project) {
         return (<div className="container mx-auto py-8">
         <Card>
@@ -167,14 +166,14 @@ function ProjectDetailsContent() {
           </CardContent>
         </Card>
       </div>);
-    }
+
     // Check if user is either the client or the talent
     const isClient = user?.id === project.client_id;
     const isTalent = user?.id === project.talent_id;
     if (!isClient && !isTalent) {
         navigate("/unauthorized");
         return null;
-    }
+
     const isOfferPending = project.status === "offer_sent";
     const isOfferAccepted = ["offer_accepted", "in_progress", "completed"].includes(project.status);
     const isActiveProject = ["offer_accepted", "in_progress"].includes(project.status);
@@ -532,9 +531,9 @@ function ProjectDetailsContent() {
       </main>
 
     </>);
-}
+
 export default function ProjectDetails() {
     return (<ProtectedRoute>
       <ProjectDetailsContent />
     </ProtectedRoute>);
-}
+</Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card>}}}}}}}}}}}}}}}}}

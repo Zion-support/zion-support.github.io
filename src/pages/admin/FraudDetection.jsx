@@ -45,18 +45,18 @@ export default function FraudDetection() {
                 actioned_count: data?.filter(flag => flag.action_taken && flag.action_taken !== 'none').length || 0,
             };
             setStats(newStats);
-        }
+
         catch (error) {
-            // console.error("Error fetching fraud flags:", error);
+            // // // console.error("Error fetching fraud flags:", error);
             toast({
                 title: "Error",
                 description: "Failed to load fraud detection data",
                 variant: "destructive",
             });
-        }
+
         finally {
             setIsLoading(false);
-        }
+
     };
     useEffect(() => {
         fetchFraudFlags();
@@ -70,19 +70,19 @@ export default function FraudDetection() {
             result = result.filter((flag) => flag.user_email?.toLowerCase().includes(query) ||
                 flag.content_excerpt.toLowerCase().includes(query) ||
                 flag.reason.toLowerCase().includes(query));
-        }
+
         // Apply status filter
         if (statusFilter) {
             result = result.filter((flag) => flag.status === statusFilter);
-        }
+
         // Apply severity filter
         if (severityFilter) {
             result = result.filter((flag) => flag.severity === severityFilter);
-        }
+
         // Apply content type filter
         if (contentTypeFilter) {
             result = result.filter((flag) => flag.content_type === contentTypeFilter);
-        }
+
         setFilteredFlags(result);
     }, [flags, searchQuery, statusFilter, severityFilter, contentTypeFilter]);
     const handleAction = async (flagId, action) => {
@@ -107,15 +107,15 @@ export default function FraudDetection() {
             });
             // Refresh the data
             fetchFraudFlags();
-        }
+
         catch (error) {
-            // console.error("Error updating fraud flag:", error);
+            // // // console.error("Error updating fraud flag:", error);
             toast({
                 title: "Error",
                 description: "Failed to update flag",
                 variant: "destructive",
             });
-        }
+
     };
     const resetFilters = () => {
         setSearchQuery("");
@@ -180,4 +180,4 @@ export default function FraudDetection() {
           </TabsContent>
         </Tabs>
       </div>);
-}
+</Card>}}}}}}}}}}

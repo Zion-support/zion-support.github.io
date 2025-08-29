@@ -6,7 +6,6 @@ export interface ServiceContact {
   email: string;
   website: string;
   address: string;
-}
 
 export interface MicroSaasService {
   id: number;
@@ -32,7 +31,6 @@ export interface MicroSaasService {
   innovationLevel: string;
   marketSize: string;
   growthRate: string;
-}
 
 export interface ITService {
   id: number;
@@ -55,7 +53,6 @@ export interface ITService {
   innovationLevel: string;
   marketSize: string;
   compliance: string[];
-}
 
 export interface AIService {
   id: number;
@@ -79,7 +76,6 @@ export interface AIService {
   innovationLevel: string;
   marketSize: string;
   ethicalAI: string[];
-}
 
 // Zion Tech Group Contact Information
 const zionContact: ServiceContact = {
@@ -320,7 +316,7 @@ export const innovativeMicroSaasServices2031: MicroSaasService[] = [
     innovationLevel: "Advanced",
     marketSize: "$12.5B by 2025",
     growthRate: "23% annually"
-  }
+
 ];
 
 // Innovative IT Infrastructure Services 2031
@@ -539,7 +535,7 @@ export const innovativeITInfrastructureServices2031: ITService[] = [
     innovationLevel: "Advanced",
     marketSize: "$128.9B by 2028",
     compliance: ["GDPR", "HIPAA", "SOX", "Industry-specific standards"]
-  }
+
 ];
 
 // Innovative AI Services 2031
@@ -793,7 +789,7 @@ export const innovativeAIServices2031: AIService[] = [
     innovationLevel: "Advanced",
     marketSize: "$15.8B by 2026",
     ethicalAI: ["Transparency", "Fairness", "Sustainability", "Data privacy", "Ethical sourcing"]
-  }
+
 ];
 
 // Export all services
@@ -801,4 +797,4 @@ export const allInnovativeServices2031 = {
   microSaas: innovativeMicroSaasServices2031,
   itInfrastructure: innovativeITInfrastructureServices2031,
   ai: innovativeAIServices2031
-};
+};}}}}}}}

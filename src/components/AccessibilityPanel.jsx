@@ -20,11 +20,11 @@ export const AccessibilityPanel = ({ isOpen, onToggle }) => {
             try {
                 const parsed = JSON.parse(savedSettings);
                 setSettings(prev => ({ ...prev, ...parsed }));
-            }
+
             catch (error) {
-                // console.error('Failed to parse accessibility settings:', error);
-            }
-        }
+                // // // console.error('Failed to parse accessibility settings:', error);
+
+
     }, []);
     useEffect(() => {
         // Apply settings to document
@@ -38,39 +38,39 @@ export const AccessibilityPanel = ({ isOpen, onToggle }) => {
         if (newSettings.highContrast) {
             root.style.setProperty('--high-contrast', '1');
             root.classList.add('high-contrast');
-        }
+
         else {
             root.style.setProperty('--high-contrast', '0');
             root.classList.remove('high-contrast');
-        }
+
         // Font size
         root.style.setProperty('--font-size', `${newSettings.fontSize}%`);
         // Reduced motion
         if (newSettings.reducedMotion) {
             root.classList.add('reduced-motion');
-        }
+
         else {
             root.style.setProperty('--reduced-motion', 'no-preference');
-        }
+
         // Apply focus indicator
         if (settings.focusIndicator) {
             root.style.setProperty('--focus-visible', 'auto');
-        }
+
         else {
             root.style.setProperty('--focus-visible', 'none');
-        }
+
         // Color blindness
         root.classList.remove('protanopia', 'deuteranopia', 'tritanopia');
         if (newSettings.colorBlindness !== 'none') {
             root.classList.add(newSettings.colorBlindness);
-        }
+
         // Focus indicator
         if (newSettings.focusIndicator) {
             root.classList.add('focus-visible');
-        }
+
         else {
             root.classList.remove('focus-visible');
-        }
+
     };
     const updateSetting = (key, value) => {
         setSettings(prev => ({ ...prev, [key]: value }));
@@ -276,3 +276,4 @@ export const AccessibilityPanel = ({ isOpen, onToggle }) => {
     </>);
 };
 export default AccessibilityPanel;
+}}}}}}}}}}}}

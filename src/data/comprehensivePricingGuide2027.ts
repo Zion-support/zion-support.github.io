@@ -60,7 +60,7 @@ export interface ComprehensivePricingItem2027 {
     website: string;
     address: string;
   };
-}
+
 export const comprehensivePricingGuide2027: ComprehensivePricingItem2027[] = [
   // Web3 & Metaverse Solutions
   {
@@ -138,7 +138,7 @@ export const comprehensivePricingGuide2027: ComprehensivePricingItem2027[] = [
           'Training and onboarding'
         ],
         contact: 'Contact sales for custom pricing'
-      }
+
     },
     marketInfo: {
       marketSize: '$800B by 2028',
@@ -221,7 +221,7 @@ export const comprehensivePricingGuide2027: ComprehensivePricingItem2027[] = [
       email: 'kleber@ziontechgroup.com',
       website: 'https://ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709'
-    }
+
   },
   // DeFi Yield Optimizer
   {
@@ -298,7 +298,7 @@ export const comprehensivePricingGuide2027: ComprehensivePricingItem2027[] = [
           'Custom integrations'
         ],
         contact: 'Contact sales for institutional pricing'
-      }
+
     },
     marketInfo: {
       marketSize: '$50B+ DeFi market',
@@ -381,7 +381,7 @@ export const comprehensivePricingGuide2027: ComprehensivePricingItem2027[] = [
       email: 'kleber@ziontechgroup.com',
       website: 'https://ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709'
-    }
+
   },
   // Carbon-Neutral Cloud Platform
   {
@@ -458,7 +458,7 @@ export const comprehensivePricingGuide2027: ComprehensivePricingItem2027[] = [
           'Custom integrations'
         ],
         contact: 'Contact sales for enterprise pricing'
-      }
+
     },
     marketInfo: {
       marketSize: '$500B+ cloud market',
@@ -541,7 +541,7 @@ export const comprehensivePricingGuide2027: ComprehensivePricingItem2027[] = [
       email: 'kleber@ziontechgroup.com',
       website: 'https://ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709'
-    }
+
   },
   // Brain-Computer Interface Platform
   {
@@ -618,7 +618,7 @@ export const comprehensivePricingGuide2027: ComprehensivePricingItem2027[] = [
           'Custom integrations'
         ],
         contact: 'Contact sales for research pricing'
-      }
+
     },
     marketInfo: {
       marketSize: '$2B+ BCI market',
@@ -701,7 +701,7 @@ export const comprehensivePricingGuide2027: ComprehensivePricingItem2027[] = [
       email: 'kleber@ziontechgroup.com',
       website: 'https://ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709'
-    }
+
   },
   // Fusion Energy Simulation Platform
   {
@@ -778,7 +778,7 @@ export const comprehensivePricingGuide2027: ComprehensivePricingItem2027[] = [
           'Custom integrations'
         ],
         contact: 'Contact sales for research pricing'
-      }
+
     },
     marketInfo: {
       marketSize: '$50B+ fusion energy market',
@@ -861,8 +861,8 @@ export const comprehensivePricingGuide2027: ComprehensivePricingItem2027[] = [
       email: 'kleber@ziontechgroup.com',
       website: 'https://ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709'
-    }
-  }
+
+
 ];
 export const getComprehensivePricingGuide2027 = () => comprehensivePricingGuide2027;
 export const getComprehensivePricingGuide2027ByCategory = (category: string) =>
@@ -883,3 +883,4 @@ export const pricingSubcategories2027 = {
   'NeuroTech Solutions': ['Medical Technology', 'Research', 'Accessibility', 'Gaming'],
   'Fusion Energy Solutions': ['Energy Research', 'Plasma Physics', 'Reactor Design', 'Simulation']
 };
+}}}}}}}}}}}}

@@ -9,12 +9,10 @@ interface User {
   isEmailVerified?: boolean;
   createdAt?: string;
   updatedAt?: string;
-}
 
 interface AuthTokens {
   accessToken: string | null;
   refreshToken: string | null;
-}
 
 interface AuthContextType {
   user: User | null;
@@ -31,7 +29,6 @@ interface AuthContextType {
   loginWithFacebook: () => Promise<void>;
   loginWithTwitter: () => Promise<void>;
   loginWithWeb3: () => Promise<void>;
-}
 
 const AuthContext = createContext<AuthContextType | undefined>(undefined);
 
@@ -39,9 +36,9 @@ export const useAuth = () => {
   const context = useContext(AuthContext);
   if (context === undefined) {
     throw new Error('useAuth must be used within an AuthProvider');
-  }
+
   return context;
 };
 
 export { AuthContext };
-export type { User, AuthTokens, AuthContextType };
+export type { User, AuthTokens, AuthContextType };}}}}

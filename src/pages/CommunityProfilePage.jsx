@@ -40,7 +40,7 @@ const mockUser = {
             description: "Created your first forum post",
             icon: "Star",
             color: "#6366F1"
-        }
+
     ],
     isVerified: true,
     isModerator: false
@@ -96,7 +96,7 @@ const userPosts = [
         upvotes: 24,
         downvotes: 0,
         replyCount: 6
-    }
+
 ];
 export default function CommunityProfilePage() {
     const { userId } = useParams();
@@ -116,7 +116,7 @@ export default function CommunityProfilePage() {
             <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-zion-purple"></div>
           </div>
         </div>);
-    }
+
     if (!user) {
         return (<div className="container py-8">
           <h1>User not found</h1>
@@ -124,7 +124,7 @@ export default function CommunityProfilePage() {
             <Link to="/community">Back to Community</Link>
           </Button>
         </div>);
-    }
+
     return (<SEO title={`${user.name}'s Profile | Community Forum | Zion AI Marketplace`} description={`View ${user.name}'s profile, posts, and contributions in the Zion AI Marketplace community.`} keywords={`community, forum, profile, user profile, ${user.name}`}/>
         ,
             <div className="container py-8">
@@ -268,4 +268,4 @@ export default function CommunityProfilePage() {
           </div>
         </div>
       </div>);
-}
+</Card></Card></Card></Card></Card></Card></Card>}}}}}

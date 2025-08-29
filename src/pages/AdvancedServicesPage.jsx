@@ -4,8 +4,7 @@ import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Badge } from '@/components/ui/badge';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
-import { Search, Star, Clock, Globe, TrendingUp, Shield, Brain, Users, CheckCircle, Phone, Mail, MapPin, ExternalLink } from 'lucide-react';
-import { SEO } from '@/components/SEO';
+import { Search, Star, Clock, Globe, TrendingUp, Shield, Brain, Users, CheckCircle, Phone, Mail, MapPin, ExternalLink import { SEO } from '@/components/SEO';
 export default function AdvancedServicesPage() {
     const [searchQuery, setSearchQuery] = useState('');
     const [selectedCategory, setSelectedCategory] = useState('all');
@@ -31,7 +30,7 @@ export default function AdvancedServicesPage() {
                 return (b.aiScore || 0) - (a.aiScore || 0);
             default:
                 return (b.featured ? 1 : 0) - (a.featured ? 1 : 0);
-        }
+
     });
     const uniqueCategories = Array.from(new Set(ADVANCED_SERVICES.map(service => service.category)));
     return (<div className="min-h-screen bg-background">
@@ -260,7 +259,7 @@ export default function AdvancedServicesPage() {
         </div>
       </section>
     </div>);
-}
+
 // Service Card Component
 function ServiceCard({ service }) {
     return (<Card className="h-full hover:shadow-lg transition-all duration-300 border-zion-blue-light hover:border-zion-cyan">
@@ -332,4 +331,4 @@ function ServiceCard({ service }) {
         </div>
       </CardContent>
     </Card>);
-}
+</Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card>}}}}

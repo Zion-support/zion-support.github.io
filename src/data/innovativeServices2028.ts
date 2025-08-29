@@ -448,7 +448,7 @@ export const innovativeServices2028 = [
     integrations: ["Network equipment", "Monitoring systems", "Analytics platforms", "Management systems"],
     freeTier: false,
     trialPeriod: "90 days"
-  }
+
 ];
 
 // Service Categories for Navigation
@@ -524,7 +524,7 @@ export const serviceCategories = [
     icon: "Network",
     color: "from-blue-600 to-indigo-600",
     services: [10]
-  }
+
 ];
 
 // Pricing Tiers
@@ -570,7 +570,7 @@ export const pricingTiers = [
       "White-label options"
     ],
     recommended: false
-  }
+
 ];
 
 // Contact Information
@@ -584,5 +584,5 @@ export const contactInfo = {
     linkedin: "https://www.linkedin.com/company/zion-tech-group",
     facebook: "https://www.facebook.com/ziontechgroup",
     instagram: "https://www.instagram.com/ziontechgroup"
-  }
-};
+
+};}}}}

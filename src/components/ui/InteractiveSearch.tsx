@@ -4,7 +4,6 @@ interface InteractiveSearchProps {
   placeholder?: string;
   onSearch: (query: string) => void;
   className?: string;
-}
 
 const InteractiveSearch: React.FC<InteractiveSearchProps> = ({
   placeholder = "Search...",
@@ -17,7 +16,7 @@ const InteractiveSearch: React.FC<InteractiveSearchProps> = ({
     e.preventDefault();
     if (query.trim()) {
       onSearch(query.trim());
-    }
+
   };
 
   return (
@@ -38,7 +37,7 @@ const InteractiveSearch: React.FC<InteractiveSearchProps> = ({
         <button
           type="submit"
           className="absolute inset-y-0 right-0 px-4 bg-blue-600 text-white rounded-r-lg hover:bg-blue-700 transition-colors"
-        >
+
           Search
         </button>
       </div>
@@ -46,4 +45,4 @@ const InteractiveSearch: React.FC<InteractiveSearchProps> = ({
   );
 };
 
-export default InteractiveSearch;
+export default InteractiveSearch;}}

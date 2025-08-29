@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { BarChart3, TrendingUp, Activity, Eye, Clock, Target, RefreshCw } from 'lucide-react';
-import { useAnalytics } from '../hooks/useAnalytics';
+import { BarChart3, TrendingUp, Activity, Eye, Clock, Target, RefreshCw import { useAnalytics } from '../hooks/useAnalytics';
 export const AnalyticsDashboard = ({ className = '', showRealTime = true, refreshInterval = 5000 }) => {
     const { isTracking, currentSession, performanceMetrics, events, getAnalyticsSummary, trackEvent, trackConversion } = useAnalytics({
         enableTracking: true,
@@ -25,7 +24,7 @@ export const AnalyticsDashboard = ({ className = '', showRealTime = true, refres
         const summary = getAnalyticsSummary();
         if (summary) {
             setAnalyticsSummary(summary);
-        }
+
     };
     // Update summary when events change
     useEffect(() => {
@@ -290,3 +289,4 @@ export const AnalyticsDashboard = ({ className = '', showRealTime = true, refres
       </div>
     </div>);
 };
+}}

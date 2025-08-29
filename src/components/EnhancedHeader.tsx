@@ -1,56 +1,55 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
-import { 
-  Menu, 
-  X, 
-  Search, 
-  User, 
-  Bell, 
-  ChevronDown, 
-  Zap, 
-  Brain, 
-  Shield, 
-  Cloud, 
-  Rocket, 
-  Globe, 
-  Cpu, 
-  Lock, 
-  Heart, 
-  Users, 
-  ShoppingCart, 
-  BookOpen, 
-  MessageCircle, 
-  HelpCircle, 
-  DollarSign, 
-  Gauge, 
-  Workflow, 
-  Atom, 
-  Star, 
-  Target, 
-  TrendingUp, 
-  Award, 
-  Code, 
-  Truck, 
-  Building, 
-  BarChart3, 
-  PenTool, 
-  Eye, 
-  Server, 
-  Smartphone, 
-  Database, 
-  Network, 
-  Clock, 
-  ArrowRight, 
-  PanelLeft, 
-  Sparkles, 
-  Phone, 
-  Mail, 
-  MapPin, 
-  Satellite, 
+import {
+  Menu,
+  X,
+  Search,
+  User,
+  Bell,
+  ChevronDown,
+  Zap,
+  Brain,
+  Shield,
+  Cloud,
+  Rocket,
+  Globe,
+  Cpu,
+  Lock,
+  Heart,
+  Users,
+  ShoppingCart,
+  BookOpen,
+  MessageCircle,
+  HelpCircle,
+  DollarSign,
+  Gauge,
+  Workflow,
+  Atom,
+  Star,
+  Target,
+  TrendingUp,
+  Award,
+  Code,
+  Truck,
+  Building,
+  BarChart3,
+  PenTool,
+  Eye,
+  Server,
+  Smartphone,
+  Database,
+  Network,
+  Clock,
+  ArrowRight,
+  PanelLeft,
+  Sparkles,
+  Phone,
+  Mail,
+  MapPin,
+  Satellite,
   FileText,
   Sparkles as SparklesIcon
-} from 'lucide-react';
 import { enhancedServicesCatalog2025 } from '../data/enhancedServicesCatalog2025';
 
 export function EnhancedHeader() {
@@ -79,8 +78,8 @@ export function EnhancedHeader() {
         window.location.href = `/search?q=${encodeURIComponent(searchQuery.trim())}`;
       } finally {
         setIsSearching(false);
-      }
-    }
+
+
   };
 
   // Enhanced navigation with better organization
@@ -108,233 +107,233 @@ export function EnhancedHeader() {
   // Enhanced services by category with better organization
   const services = [
     // Featured & New Services
-    { 
-      name: '2025 Services Overview', 
-      href: '/ultimate-services-showcase-2025', 
-      icon: Star, 
-      description: 'Revolutionary AI & Quantum Solutions', 
-      category: 'Featured', 
-      featured: true, 
+    {
+      name: '2025 Services Overview',
+      href: '/ultimate-services-showcase-2025',
+      icon: Star,
+      description: 'Revolutionary AI & Quantum Solutions',
+      category: 'Featured',
+      featured: true,
       color: 'from-yellow-500 to-orange-500',
       badge: 'New'
     },
-    { 
-      name: '2026 Services Overview', 
-      href: '/ultimate-services-showcase-2026', 
-      icon: Star, 
-      description: 'Cutting-edge Innovation & Emerging Tech', 
-      category: 'Featured', 
-      featured: true, 
+    {
+      name: '2026 Services Overview',
+      href: '/ultimate-services-showcase-2026',
+      icon: Star,
+      description: 'Cutting-edge Innovation & Emerging Tech',
+      category: 'Featured',
+      featured: true,
       color: 'from-purple-500 to-pink-500',
       badge: 'Featured'
     },
-    { 
-      name: '2029 Cutting-Edge Services', 
-      href: '/zion-cutting-edge-services-2029', 
-      icon: Star, 
-      description: 'Future-ready Technology Solutions', 
-      category: 'Featured', 
-      featured: true, 
+    {
+      name: '2029 Cutting-Edge Services',
+      href: '/zion-cutting-edge-services-2029',
+      icon: Star,
+      description: 'Future-ready Technology Solutions',
+      category: 'Featured',
+      featured: true,
       color: 'from-indigo-500 to-purple-500',
       badge: 'Future'
     },
-    
+
     // AI & Machine Learning
-    { 
-      name: 'AI Business Intelligence', 
-      href: '/services/ai-business-intelligence', 
-      icon: Brain, 
-      description: 'AI-powered business insights', 
-      category: 'AI & ML', 
+    {
+      name: 'AI Business Intelligence',
+      href: '/services/ai-business-intelligence',
+      icon: Brain,
+      description: 'AI-powered business insights',
+      category: 'AI & ML',
       color: 'from-purple-600 to-indigo-700',
       badge: 'Popular'
     },
-    { 
-      name: 'AI Compliance Assistant', 
-      href: '/services/ai-compliance-assistant', 
-      icon: Shield, 
-      description: 'Automated compliance management', 
-      category: 'AI & ML', 
+    {
+      name: 'AI Compliance Assistant',
+      href: '/services/ai-compliance-assistant',
+      icon: Shield,
+      description: 'Automated compliance management',
+      category: 'AI & ML',
       color: 'from-green-600 to-emerald-700',
       badge: 'New'
     },
-    { 
-      name: 'AI Sales Copilot', 
-      href: '/services/ai-sales-copilot', 
-      icon: TrendingUp, 
-      description: 'AI sales automation', 
-      category: 'AI & ML', 
+    {
+      name: 'AI Sales Copilot',
+      href: '/services/ai-sales-copilot',
+      icon: TrendingUp,
+      description: 'AI sales automation',
+      category: 'AI & ML',
       color: 'from-blue-600 to-cyan-700',
       badge: 'Popular'
     },
-    { 
-      name: 'AI-Powered SEO', 
-      href: '/services/ai-seo', 
-      icon: Eye, 
-      description: 'AI-driven SEO optimization', 
-      category: 'AI & ML', 
+    {
+      name: 'AI-Powered SEO',
+      href: '/services/ai-seo',
+      icon: Eye,
+      description: 'AI-driven SEO optimization',
+      category: 'AI & ML',
       color: 'from-indigo-600 to-purple-700',
       badge: 'Popular'
     },
-    { 
-      name: 'AI Content Marketing Suite', 
-      href: '/services/ai-content-marketing-suite', 
-      icon: PenTool, 
-      description: 'Content creation automation', 
-      category: 'AI & ML', 
+    {
+      name: 'AI Content Marketing Suite',
+      href: '/services/ai-content-marketing-suite',
+      icon: PenTool,
+      description: 'Content creation automation',
+      category: 'AI & ML',
       color: 'from-pink-600 to-rose-700',
       badge: 'New'
     },
-    { 
-      name: 'AI Customer Support Automation', 
-      href: '/services/ai-customer-support-automation', 
-      icon: MessageCircle, 
-      description: 'Automated customer service', 
-      category: 'AI & ML', 
+    {
+      name: 'AI Customer Support Automation',
+      href: '/services/ai-customer-support-automation',
+      icon: MessageCircle,
+      description: 'Automated customer service',
+      category: 'AI & ML',
       color: 'from-cyan-600 to-blue-700',
       badge: 'Popular'
     },
-    { 
-      name: 'AI Project Management', 
-      href: '/services/ai-project-management', 
-      icon: Workflow, 
-      description: 'AI project coordination', 
-      category: 'AI & ML', 
+    {
+      name: 'AI Project Management',
+      href: '/services/ai-project-management',
+      icon: Workflow,
+      description: 'AI project coordination',
+      category: 'AI & ML',
       color: 'from-orange-600 to-red-700',
       badge: 'New'
     },
-    { 
-      name: 'AI Financial Analytics', 
-      href: '/services/ai-financial-analytics', 
-      icon: DollarSign, 
-      description: 'Financial data analysis', 
-      category: 'AI & ML', 
+    {
+      name: 'AI Financial Analytics',
+      href: '/services/ai-financial-analytics',
+      icon: DollarSign,
+      description: 'Financial data analysis',
+      category: 'AI & ML',
       color: 'from-emerald-600 to-green-700',
       badge: 'Popular'
     },
-    
+
     // IT & Infrastructure
-    { 
-      name: 'Cloud DevOps', 
-      href: '/services/cloud-devops', 
-      icon: Cloud, 
-      description: 'DevOps automation', 
-      category: 'IT & Infrastructure', 
+    {
+      name: 'Cloud DevOps',
+      href: '/services/cloud-devops',
+      icon: Cloud,
+      description: 'DevOps automation',
+      category: 'IT & Infrastructure',
       color: 'from-blue-600 to-indigo-700',
       badge: 'Popular'
     },
-    { 
-      name: 'IT Infrastructure', 
-      href: '/services/it-infrastructure', 
-      icon: Server, 
-      description: 'Infrastructure management', 
-      category: 'IT & Infrastructure', 
+    {
+      name: 'IT Infrastructure',
+      href: '/services/it-infrastructure',
+      icon: Server,
+      description: 'Infrastructure management',
+      category: 'IT & Infrastructure',
       color: 'from-gray-600 to-slate-700',
       badge: 'Popular'
     },
-    { 
-      name: 'Zero Trust Network Access', 
-      href: '/services/zero-trust-network-access', 
-      icon: Lock, 
-      description: 'Next-generation security architecture', 
-      category: 'IT & Infrastructure', 
+    {
+      name: 'Zero Trust Network Access',
+      href: '/services/zero-trust-network-access',
+      icon: Lock,
+      description: 'Next-generation security architecture',
+      category: 'IT & Infrastructure',
       color: 'from-red-600 to-orange-700',
       badge: 'Popular'
     },
-    { 
-      name: 'AI Cybersecurity Platform', 
-      href: '/services/ai-cybersecurity-platform', 
-      icon: Shield, 
-      description: 'AI-powered security', 
-      category: 'IT & Infrastructure', 
+    {
+      name: 'AI Cybersecurity Platform',
+      href: '/services/ai-cybersecurity-platform',
+      icon: Shield,
+      description: 'AI-powered security',
+      category: 'IT & Infrastructure',
       color: 'from-red-600 to-pink-700',
       badge: 'New'
     },
-    
+
     // Emerging Technologies
-    { 
-      name: 'Quantum Computing', 
-      href: '/services/quantum-computing', 
-      icon: Atom, 
-      description: 'Quantum solutions', 
-      category: 'Emerging Tech', 
+    {
+      name: 'Quantum Computing',
+      href: '/services/quantum-computing',
+      icon: Atom,
+      description: 'Quantum solutions',
+      category: 'Emerging Tech',
       color: 'from-violet-600 to-purple-700',
       badge: 'Featured'
     },
-    { 
-      name: 'AI Quantum Hybrid Platform', 
-      href: '/services/ai-quantum-hybrid-platform', 
-      icon: Atom, 
-      description: 'Quantum-AI integration platform', 
-      category: 'Emerging Tech', 
+    {
+      name: 'AI Quantum Hybrid Platform',
+      href: '/services/ai-quantum-hybrid-platform',
+      icon: Atom,
+      description: 'Quantum-AI integration platform',
+      category: 'Emerging Tech',
       color: 'from-indigo-600 to-purple-700',
       badge: 'New'
     },
-    { 
-      name: 'Space Technology Solutions', 
-      href: '/services/space-technology-solutions', 
-      icon: Satellite, 
-      description: 'Space tech for terrestrial use', 
-      category: 'Emerging Tech', 
+    {
+      name: 'Space Technology Solutions',
+      href: '/services/space-technology-solutions',
+      icon: Satellite,
+      description: 'Space tech for terrestrial use',
+      category: 'Emerging Tech',
       color: 'from-slate-600 to-gray-700',
       badge: 'Featured'
     },
-    { 
-      name: 'Digital Twin', 
-      href: '/services/digital-twin', 
-      icon: Eye, 
-      description: 'Digital twin technology', 
-      category: 'Emerging Tech', 
+    {
+      name: 'Digital Twin',
+      href: '/services/digital-twin',
+      icon: Eye,
+      description: 'Digital twin technology',
+      category: 'Emerging Tech',
       color: 'from-cyan-600 to-blue-700',
       badge: 'New'
     },
-    
+
     // Micro SaaS
-    { 
-      name: 'Micro CRM', 
-      href: '/services/micro-crm', 
-      icon: Users, 
-      description: 'Customer relationship management', 
-      category: 'Micro SaaS', 
+    {
+      name: 'Micro CRM',
+      href: '/services/micro-crm',
+      icon: Users,
+      description: 'Customer relationship management',
+      category: 'Micro SaaS',
       color: 'from-blue-600 to-cyan-700',
       badge: 'Popular'
     },
-    { 
-      name: 'Helpdesk Platform', 
-      href: '/services/helpdesk', 
-      icon: HelpCircle, 
-      description: 'Support ticketing system', 
-      category: 'Micro SaaS', 
+    {
+      name: 'Helpdesk Platform',
+      href: '/services/helpdesk',
+      icon: HelpCircle,
+      description: 'Support ticketing system',
+      category: 'Micro SaaS',
       color: 'from-green-600 to-emerald-700',
       badge: 'Popular'
     },
-    { 
-      name: 'Website Analytics', 
-      href: '/services/website-analytics', 
-      icon: BarChart3, 
-      description: 'Web analytics platform', 
-      category: 'Micro SaaS', 
+    {
+      name: 'Website Analytics',
+      href: '/services/website-analytics',
+      icon: BarChart3,
+      description: 'Web analytics platform',
+      category: 'Micro SaaS',
       color: 'from-purple-600 to-pink-700',
       badge: 'Popular'
-    }
+
   ];
 
   return (
     <>
       {/* Matrix Rain Background */}
       <div className="matrix-rain"></div>
-      
+
       {/* Enhanced Header */}
       <motion.header
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
-          scrolled 
-            ? 'bg-black/95 backdrop-blur-xl border-b border-cyan-500/30 shadow-2xl' 
+          scrolled
+            ? 'bg-black/95 backdrop-blur-xl border-b border-cyan-500/30 shadow-2xl'
             : 'bg-transparent'
         }`}
         initial={{ y: -100 }}
         animate={{ y: 0 }}
         transition={{ duration: 0.8, ease: "easeOut" }}
-      >
+
         <div className="container mx-auto px-4">
           <div className="flex items-center justify-between h-20">
             {/* Enhanced Logo */}
@@ -343,7 +342,7 @@ export function EnhancedHeader() {
                 className="relative"
                 whileHover={{ scale: 1.05, rotate: 5 }}
                 whileTap={{ scale: 0.95 }}
-              >
+
                 <div className="w-12 h-12 bg-gradient-to-br from-cyan-500 to-blue-600 rounded-xl flex items-center justify-center shadow-lg shadow-cyan-500/50">
                   <Zap className="w-7 h-7 text-white" />
                 </div>
@@ -366,26 +365,26 @@ export function EnhancedHeader() {
                   key={item.name}
                   to={item.href}
                   className={`nav-link font-medium transition-all duration-300 ${
-                    item.current 
-                      ? 'text-cyan-400 border-b-2 border-cyan-400' 
+                    item.current
+                      ? 'text-cyan-400 border-b-2 border-cyan-400'
                       : 'text-gray-300 hover:text-cyan-400'
                   }`}
-                >
+
                   {item.name}
                 </Link>
               ))}
-              
+
               {/* Enhanced Services Dropdown */}
               <div className="relative group">
                 <button
                   className="nav-link flex items-center space-x-2 font-medium text-gray-300 hover:text-cyan-400 transition-all duration-300"
                   onMouseEnter={() => setServicesDropdownOpen(true)}
                   onMouseLeave={() => setServicesDropdownOpen(false)}
-                >
+
                   <span>Services</span>
                   <ChevronDown className="w-4 h-4 transition-transform group-hover:rotate-180 duration-300" />
                 </button>
-                
+
                 <AnimatePresence>
                   {servicesDropdownOpen && (
                     <motion.div
@@ -396,7 +395,7 @@ export function EnhancedHeader() {
                       transition={{ duration: 0.3 }}
                       onMouseEnter={() => setServicesDropdownOpen(true)}
                       onMouseLeave={() => setServicesDropdownOpen(false)}
-                    >
+
                       {/* Featured Services */}
                       <div className="mb-6">
                         <h3 className="text-lg font-semibold text-cyan-400 mb-4 font-orbitron">Featured Services</h3>
@@ -406,7 +405,7 @@ export function EnhancedHeader() {
                               key={service.name}
                               to={service.href}
                               className="group p-4 rounded-xl bg-gradient-to-br from-gray-900/50 to-gray-800/50 border border-gray-700 hover:border-cyan-500/50 transition-all duration-300 hover:bg-gray-800/70"
-                            >
+
                               <div className="flex items-center space-x-3 mb-2">
                                 <service.icon className="w-5 h-5 text-cyan-400" />
                                 <span className="text-sm font-medium text-white group-hover:text-cyan-400 transition-colors">
@@ -447,7 +446,7 @@ export function EnhancedHeader() {
                                     key={service.name}
                                     to={service.href}
                                     className="flex items-center space-x-3 p-2 rounded-lg hover:bg-gray-800/50 transition-colors group"
-                                  >
+
                                     <service.icon className="w-4 h-4 text-cyan-400 group-hover:text-cyan-300 transition-colors" />
                                     <span className="text-sm text-gray-300 group-hover:text-white transition-colors">
                                       {service.name}
@@ -464,7 +463,7 @@ export function EnhancedHeader() {
                         <Link
                           to="/services"
                           className="inline-flex items-center text-cyan-400 hover:text-cyan-300 transition-colors font-medium group"
-                        >
+
                           View All Services
                           <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
                         </Link>
@@ -480,11 +479,11 @@ export function EnhancedHeader() {
                   key={item.name}
                   to={item.href}
                   className={`nav-link font-medium transition-all duration-300 ${
-                    item.current 
-                      ? 'text-cyan-400 border-b-2 border-cyan-400' 
+                    item.current
+                      ? 'text-cyan-400 border-b-2 border-cyan-400'
                       : 'text-gray-300 hover:text-cyan-400'
                   }`}
-                >
+
                   {item.name}
                 </Link>
               ))}
@@ -516,13 +515,13 @@ export function EnhancedHeader() {
                 <Link
                   to="/contact"
                   className="btn-neon-cyan text-sm"
-                >
+
                   Get Started
                 </Link>
                 <Link
                   to="/login"
                   className="text-gray-300 hover:text-cyan-400 transition-colors"
-                >
+
                   <User className="w-5 h-5" />
                 </Link>
               </div>
@@ -532,7 +531,7 @@ export function EnhancedHeader() {
             <button
               className="xl:hidden p-2 text-gray-300 hover:text-cyan-400 transition-colors"
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            >
+
               {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
             </button>
           </div>
@@ -547,7 +546,7 @@ export function EnhancedHeader() {
               animate={{ opacity: 1, height: 'auto' }}
               exit={{ opacity: 0, height: 0 }}
               transition={{ duration: 0.3 }}
-            >
+
               <div className="container mx-auto px-4 py-6">
                 <div className="grid grid-cols-1 gap-6">
                   {/* Mobile Search */}
@@ -569,12 +568,12 @@ export function EnhancedHeader() {
                         key={item.name}
                         to={item.href}
                         className={`block py-2 text-lg font-medium transition-colors ${
-                          item.current 
-                            ? 'text-cyan-400 border-l-4 border-cyan-400 pl-4' 
+                          item.current
+                            ? 'text-cyan-400 border-l-4 border-cyan-400 pl-4'
                             : 'text-gray-300 hover:text-cyan-400 pl-4'
                         }`}
                         onClick={() => setMobileMenuOpen(false)}
-                      >
+
                         {item.name}
                       </Link>
                     ))}
@@ -590,7 +589,7 @@ export function EnhancedHeader() {
                           to={service.href}
                           className="flex items-center space-x-3 p-3 rounded-lg bg-gray-900/50 border border-gray-700 hover:border-cyan-500/50 transition-all duration-300"
                           onClick={() => setMobileMenuOpen(false)}
-                        >
+
                           <service.icon className="w-5 h-5 text-cyan-400" />
                           <div>
                             <span className="text-white font-medium">{service.name}</span>
@@ -607,7 +606,7 @@ export function EnhancedHeader() {
                       to="/contact"
                       className="btn-neon-cyan w-full text-center"
                       onClick={() => setMobileMenuOpen(false)}
-                    >
+
                       Get Started Today
                     </Link>
                   </div>
@@ -619,6 +618,6 @@ export function EnhancedHeader() {
       </motion.header>
     </>
   );
-}
+</div>}
 
-export default EnhancedHeader;
+export default EnhancedHeader;}}}}

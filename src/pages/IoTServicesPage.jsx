@@ -3,8 +3,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "../co
 import { Button } from "../components/ui/button";
 import { Badge } from "../components/ui/badge";
 import { Link } from "react-router-dom";
-import { Settings, BarChart3, Shield, Zap, Globe, TrendingUp, CheckCircle, ArrowRight, Zap as Cpu, Cloud, Smartphone, TrendingUp as Activity } from "lucide-react";
-import { TrustedBySection } from "../components/TrustedBySection.js.jsx";
+import { Settings, BarChart3, Shield, Zap, Globe, TrendingUp, CheckCircle, ArrowRight, Zap as Cpu, Cloud, Smartphone, TrendingUp as Activity import { TrustedBySection } from "../components/TrustedBySection.js.jsx";
 const iotServices = [
     {
         id: "iot-platform",
@@ -131,7 +130,7 @@ const iotServices = [
         badge: "Featured",
         link: "/services",
         image: "https://images.unsplash.com/photo-1518709268805-4e9042af2176?auto=format&fit=crop&w=800&h=500"
-    }
+
 ];
 const iotBenefits = [
     {
@@ -153,7 +152,7 @@ const iotBenefits = [
         title: "Predictive Maintenance",
         description: "Prevent equipment failures with predictive analytics and proactive maintenance scheduling",
         icon: <TrendingUp className="h-6 w-6"/>
-    }
+
 ];
 const iotUseCases = [
     {
@@ -175,7 +174,7 @@ const iotUseCases = [
         title: "Smart Agriculture",
         description: "Precision farming, environmental monitoring, and automated irrigation systems",
         icon: <Settings className="h-6 w-6"/>
-    }
+
 ];
 export default function IoTServicesPage() {
     return (<div className="min-h-screen bg-background">
@@ -348,4 +347,4 @@ export default function IoTServicesPage() {
 
       <TrustedBySection />
     </div>);
-}
+</Card></Card></Card></Card></Card>}}}}}

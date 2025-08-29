@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { Search, Star, ShoppingCart, Heart, Eye, Users, Brain, Shield, Globe, Network, Cloud, Smartphone, CheckCircle } from 'lucide-react';
-export default function Marketplace() {
+import { Search, Star, ShoppingCart, Heart, Eye, Users, Brain, Shield, Globe, Network, Cloud, Smartphone, CheckCircle export default function Marketplace() {
     const [searchTerm, setSearchTerm] = useState('');
     const [selectedCategory, setSelectedCategory] = useState('all');
     const [selectedPriceRange, setSelectedPriceRange] = useState('all');
@@ -222,7 +221,7 @@ export default function Marketplace() {
             new: false,
             discount: 33,
             type: 'service'
-        }
+
     ];
     const filteredProducts = marketplaceProducts.filter(product => {
         const matchesSearch = product.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
@@ -232,19 +231,19 @@ export default function Marketplace() {
         let matchesPrice = true;
         if (selectedPriceRange === 'free') {
             matchesPrice = product.price === 0;
-        }
+
         else if (selectedPriceRange === 'under-100') {
             matchesPrice = product.price < 100;
-        }
+
         else if (selectedPriceRange === '100-500') {
             matchesPrice = product.price >= 100 && product.price <= 500;
-        }
+
         else if (selectedPriceRange === '500-1000') {
             matchesPrice = product.price >= 500 && product.price <= 1000;
-        }
+
         else if (selectedPriceRange === 'over-1000') {
             matchesPrice = product.price > 1000;
-        }
+
         return matchesSearch && matchesCategory && matchesPrice;
     });
     const sortedProducts = [...filteredProducts].sort((a, b) => {
@@ -261,7 +260,7 @@ export default function Marketplace() {
                 return b.rating - a.rating;
             default:
                 return b.featured ? 1 : -1;
-        }
+
     });
     const formatPrice = (price, currency) => {
         if (price === 0)
@@ -513,4 +512,4 @@ export default function Marketplace() {
         </div>
       </div>
     </div>);
-}
+}}}}}}}}}

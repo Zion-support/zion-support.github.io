@@ -88,7 +88,7 @@ export const blogPosts = [
     featured: false,
     imageUrl: "/images/blog/integration-strategies.jpg",
     slug: "integration-strategies-it-asset-management-systems"
-  }
+
 ];
 
 export const getBlogPostBySlug = (slug) => {
@@ -136,4 +136,4 @@ export const getBlogTags = () => {
   }));
 };
 
-export const BLOG_POSTS = blogPosts;
+export const BLOG_POSTS = blogPosts;}

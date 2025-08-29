@@ -42,7 +42,7 @@ export function HomepagePromotion() {
             features: ["Identity verification", "Device trust scoring", "Network segmentation", "Continuous monitoring"],
             benefits: ["90% fewer security breaches", "Enhanced compliance", "Simplified security management"],
             link: "/comprehensive-services-showcase"
-        }
+
     ];
     const containerVariants = {
         hidden: { opacity: 0 },
@@ -50,8 +50,8 @@ export function HomepagePromotion() {
             opacity: 1,
             transition: {
                 staggerChildren: 0.2
-            }
-        }
+
+
     };
     const itemVariants = {
         hidden: { y: 30, opacity: 0 },
@@ -60,8 +60,8 @@ export function HomepagePromotion() {
             opacity: 1,
             transition: {
                 duration: 0.6
-            }
-        }
+
+
     };
     return (<section className="py-20 bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple relative overflow-hidden">
       {/* Background Elements */}
@@ -179,4 +179,4 @@ export function HomepagePromotion() {
         </motion.div>
       </div>
     </section>);
-}
+}}}}}}

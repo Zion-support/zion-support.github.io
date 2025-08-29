@@ -4,8 +4,7 @@ import { SEO } from '@/components/SEO';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
-import { MessageSquare, FileText, Video, Calendar, Users, Settings, X } from 'lucide-react';
-import { VideoCallRoom } from '@/components/video/VideoCallRoom';
+import { MessageSquare, FileText, Video, Calendar, Users, Settings, X import { VideoCallRoom } from '@/components/video/VideoCallRoom';
 import { toast } from 'sonner';
 export default function ProjectRoom() {
     const { projectId } = useParams();
@@ -18,7 +17,7 @@ export default function ProjectRoom() {
             isHost: true,
             isVideoEnabled: true,
             isMuted: false
-        }
+
     ]);
     const startVideoCall = () => {
         setIsInCall(true);
@@ -28,7 +27,7 @@ export default function ProjectRoom() {
         // Switch to video tab if not already there
         if (activeTab !== 'video') {
             setActiveTab('video');
-        }
+
     };
     const endVideoCall = () => {
         setIsInCall(false);
@@ -47,7 +46,7 @@ export default function ProjectRoom() {
         if (!callParticipants.find(p => p.id === randomUser.id)) {
             setCallParticipants(prev => [...prev, randomUser]);
             toast(`${randomUser.name} joined the call`);
-        }
+
     };
     return (<>
       <SEO title={`Project Room - ${projectId}`} description="Collaborate on your project"/>
@@ -202,4 +201,4 @@ export default function ProjectRoom() {
       </main>
 
     </>);
-}
+</Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card>}}}}}

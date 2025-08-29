@@ -27,7 +27,6 @@ import {
   Globe,
   Award,
   TrendingUp
-} from 'lucide-react';
 import { SEO } from '../components/SEO';
 
 const ComprehensiveServices: React.FC = () => {
@@ -94,7 +93,7 @@ const ComprehensiveServices: React.FC = () => {
         { name: "AI Data Analytics", path: "/services/ai-data-analytics" },
         { name: "Business Intelligence", path: "/services/ai-business-intelligence" }
       ]
-    }
+
   ];
 
   const stats = [
@@ -121,7 +120,7 @@ const ComprehensiveServices: React.FC = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="text-center max-w-4xl mx-auto"
-          >
+
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
               <span className="bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent">
                 Comprehensive
@@ -138,14 +137,14 @@ const ComprehensiveServices: React.FC = () => {
               <Link
                 to="/contact"
                 className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-400 hover:to-blue-500 transition-all duration-200 hover:scale-105 shadow-lg shadow-cyan-500/25"
-              >
+
                 Get Started
                 <ArrowRight className="ml-2 w-5 h-5" />
               </Link>
               <Link
                 to="/request-quote"
                 className="inline-flex items-center px-8 py-4 border border-cyan-400/30 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400/10 transition-all duration-200"
-              >
+
                 Request Quote
               </Link>
             </div>
@@ -164,7 +163,7 @@ const ComprehensiveServices: React.FC = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 className="text-center"
-              >
+
                 <div className="w-16 h-16 bg-gradient-to-br from-cyan-400/20 to-blue-500/20 rounded-full flex items-center justify-center mx-auto mb-4">
                   <stat.icon className="w-8 h-8 text-cyan-400" />
                 </div>
@@ -184,7 +183,7 @@ const ComprehensiveServices: React.FC = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
-          >
+
             <h2 className="text-4xl font-bold text-white mb-6">
               Our <span className="text-cyan-400">Service Categories</span>
             </h2>
@@ -204,7 +203,7 @@ const ComprehensiveServices: React.FC = () => {
                 className={`bg-slate-800/50 border rounded-xl p-6 hover:border-cyan-400/50 transition-all duration-300 hover:scale-105 ${
                   category.featured ? 'border-cyan-400/30 bg-gradient-to-br from-cyan-400/5 to-blue-500/5' : 'border-slate-700/50'
                 }`}
-              >
+
                 {category.featured && (
                   <div className="flex items-center mb-4">
                     <Star className="w-5 h-5 text-yellow-400 mr-2" />
@@ -225,7 +224,7 @@ const ComprehensiveServices: React.FC = () => {
                       <Link
                         to={service.path}
                         className="flex items-center text-sm text-slate-400 hover:text-cyan-400 transition-colors"
-                      >
+
                         <CheckCircle className="w-4 h-4 text-cyan-400 mr-2 flex-shrink-0" />
                         {service.name}
                       </Link>
@@ -236,7 +235,7 @@ const ComprehensiveServices: React.FC = () => {
                 <Link
                   to={`/services#${category.title.toLowerCase().replace(/\s+/g, '-')}`}
                   className="inline-flex items-center text-cyan-400 hover:text-cyan-300 font-medium transition-colors"
-                >
+
                   View All {category.title}
                   <ArrowRight className="ml-2 w-4 h-4" />
                 </Link>
@@ -253,7 +252,7 @@ const ComprehensiveServices: React.FC = () => {
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-          >
+
             <h2 className="text-4xl font-bold text-white mb-6">
               Ready to Transform Your Business?
             </h2>
@@ -266,14 +265,14 @@ const ComprehensiveServices: React.FC = () => {
               <Link
                 to="/contact"
                 className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-400 hover:to-blue-500 transition-all duration-200 hover:scale-105 shadow-lg shadow-cyan-500/25"
-              >
+
                 Start Your Journey
                 <ArrowRight className="ml-2 w-5 h-5" />
               </Link>
               <Link
                 to="/request-quote"
                 className="inline-flex items-center px-8 py-4 border border-cyan-400/30 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400/10 transition-all duration-200"
-              >
+
                 Get Custom Quote
               </Link>
             </div>
@@ -284,4 +283,4 @@ const ComprehensiveServices: React.FC = () => {
   );
 };
 
-export default ComprehensiveServices;
+export default ComprehensiveServices;}}

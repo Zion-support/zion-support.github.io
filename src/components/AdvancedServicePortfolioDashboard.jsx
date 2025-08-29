@@ -1,7 +1,6 @@
 import React, { useState, useMemo } from 'react';
 import { motion } from 'framer-motion';
-import { BarChart3, PieChart, TrendingUp, DollarSign, Users, Target, Rocket, Brain, Zap, Star, Filter, Download, Eye, Award, ArrowUpRight, ArrowDownRight } from 'lucide-react';
-import { Card, CardContent, CardHeader, CardTitle } from './ui/card';
+import { BarChart3, PieChart, TrendingUp, DollarSign, Users, Target, Rocket, Brain, Zap, Star, Filter, Download, Eye, Award, ArrowUpRight, ArrowDownRight import { Card, CardContent, CardHeader, CardTitle } from './ui/card';
 import { Button } from './ui/button';
 import { Badge } from './ui/badge';
 import { Input } from './ui/input';
@@ -102,7 +101,7 @@ const AdvancedServicePortfolioDashboard = () => {
             complexity: 'Enterprise',
             marketDemand: 'Exploding',
             technologyMaturity: 'Leading'
-        }
+
     ];
     const filteredPortfolio = useMemo(() => {
         return portfolioData.filter(service => {
@@ -139,7 +138,7 @@ const AdvancedServicePortfolioDashboard = () => {
             case 'Planning': return 'bg-yellow-100 text-yellow-800';
             case 'Discontinued': return 'bg-red-100 text-red-800';
             default: return 'bg-gray-100 text-gray-800';
-        }
+
     };
     const getComplexityColor = (complexity) => {
         switch (complexity) {
@@ -148,7 +147,7 @@ const AdvancedServicePortfolioDashboard = () => {
             case 'Advanced': return 'bg-orange-100 text-orange-800';
             case 'Enterprise': return 'bg-purple-100 text-purple-800';
             default: return 'bg-gray-100 text-gray-800';
-        }
+
     };
     const getMarketDemandColor = (demand) => {
         switch (demand) {
@@ -157,7 +156,7 @@ const AdvancedServicePortfolioDashboard = () => {
             case 'High': return 'bg-orange-100 text-orange-800';
             case 'Exploding': return 'bg-red-100 text-red-800';
             default: return 'bg-gray-100 text-gray-800';
-        }
+
     };
     const getTechnologyMaturityColor = (maturity) => {
         switch (maturity) {
@@ -166,7 +165,7 @@ const AdvancedServicePortfolioDashboard = () => {
             case 'Mature': return 'bg-orange-100 text-orange-800';
             case 'Leading': return 'bg-purple-100 text-purple-800';
             default: return 'bg-gray-100 text-gray-800';
-        }
+
     };
     const categories = [
         { id: 'all', name: 'All Categories', count: portfolioData.length },
@@ -534,5 +533,6 @@ const AdvancedServicePortfolioDashboard = () => {
         </div>
       </motion.div>
     </div>);
-};
+</Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card>};
 export default AdvancedServicePortfolioDashboard;
+}}}}}}

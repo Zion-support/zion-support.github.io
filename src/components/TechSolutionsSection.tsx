@@ -14,8 +14,6 @@ import {
   Network,
   Code,
   Server
-} from 'lucide-react';
-
 export const TechSolutionsSection: React.FC = () => {
   const solutions = [
     {
@@ -59,7 +57,7 @@ export const TechSolutionsSection: React.FC = () => {
       description: 'Research and development of next-generation technologies and solutions.',
       features: ['Emerging Tech', 'Prototype Development', 'Technology Consulting', 'Innovation Strategy'],
       color: 'from-indigo-500 to-purple-500'
-    }
+
   ];
 
   return (
@@ -70,7 +68,7 @@ export const TechSolutionsSection: React.FC = () => {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
-        >
+
           <h2 className="text-4xl font-bold text-gray-900 mb-4">
             Technology Solutions
           </h2>
@@ -90,7 +88,7 @@ export const TechSolutionsSection: React.FC = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 className="group relative bg-white rounded-2xl shadow-lg p-8 hover:shadow-xl transition-all duration-300 border border-gray-100 hover:border-gray-200"
-              >
+
                 <div className="flex items-center mb-6">
                   <div className={`p-3 rounded-xl bg-gradient-to-r ${solution.color} mr-4`}>
                     <IconComponent className="h-8 w-8 text-white" />
@@ -116,7 +114,7 @@ export const TechSolutionsSection: React.FC = () => {
                 <Link
                   to="/services"
                   className="inline-flex items-center text-blue-600 hover:text-blue-700 font-medium transition-colors duration-200 group-hover:translate-x-1"
-                >
+
                   Learn More
                   <Rocket className="ml-2 h-4 w-4 transition-transform duration-200 group-hover:translate-x-1" />
                 </Link>
@@ -130,7 +128,7 @@ export const TechSolutionsSection: React.FC = () => {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.3 }}
           className="text-center"
-        >
+
           <div className="bg-gradient-to-r from-blue-50 to-indigo-50 rounded-2xl p-8">
             <h3 className="text-2xl font-bold text-gray-900 mb-4">
               Ready to Transform Your Business?
@@ -143,14 +141,14 @@ export const TechSolutionsSection: React.FC = () => {
               <Link
                 to="/contact"
                 className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-lg text-white bg-blue-600 hover:bg-blue-700 transition-colors duration-200"
-              >
+
                 Get Started
                 <Rocket className="ml-2 h-5 w-5" />
               </Link>
               <Link
                 to="/services"
                 className="inline-flex items-center px-6 py-3 border border-gray-300 text-base font-medium rounded-lg text-gray-700 bg-white hover:bg-gray-50 transition-colors duration-200"
-              >
+
                 View All Services
                 <Code className="ml-2 h-5 w-5" />
               </Link>
@@ -163,3 +161,4 @@ export const TechSolutionsSection: React.FC = () => {
 };
 
 export default TechSolutionsSection;
+}}

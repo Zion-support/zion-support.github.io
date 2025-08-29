@@ -1,8 +1,6 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Search, Users, FileText, Rocket, CheckCircle, ArrowRight, Clock, Target, TrendingUp, Award, Zap, Shield } from 'lucide-react';
-
-const steps = [
+import { Search, Users, FileText, Rocket, CheckCircle, ArrowRight, Clock, Target, TrendingUp, Award, Zap, Shield const steps = [
   {
     icon: <Search className="w-8 h-8" />,
     title: "Discover",
@@ -77,7 +75,7 @@ const steps = [
     ],
     duration: "Ongoing",
     success: "100% client retention"
-  }
+
 ];
 
 const stats = [
@@ -98,8 +96,8 @@ export function HowItWorksSection() {
       transition: {
         staggerChildren: 0.2,
         delayChildren: 0.1
-      }
-    }
+
+
   };
 
   const statsVariants = {
@@ -110,8 +108,8 @@ export function HowItWorksSection() {
       transition: {
         duration: 0.5,
         ease: "easeOut"
-      }
-    }
+
+
   };
 
   return (
@@ -150,7 +148,7 @@ export function HowItWorksSection() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-        >
+
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">
             How It <span className="bg-gradient-to-r from-zion-cyan to-zion-purple bg-clip-text text-transparent">Works</span>
           </h2>
@@ -167,13 +165,13 @@ export function HowItWorksSection() {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
-        >
+
           {stats.map((stat, index) => (
             <motion.div
               key={index}
               variants={statsVariants}
               className="text-center p-4 rounded-xl bg-zion-blue-dark/40 backdrop-blur-sm border border-zion-blue-light/20"
-            >
+
               <div className="text-zion-cyan mb-2 flex justify-center">
                 {stat.icon}
               </div>
@@ -189,7 +187,7 @@ export function HowItWorksSection() {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
-        >
+
           {/* Enhanced connection line */}
           <div className="absolute top-1/2 left-0 right-0 h-1 bg-gradient-to-r from-zion-cyan via-zion-purple to-zion-blue transform -translate-y-1/2 hidden lg:block">
             <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent animate-pulse"></div>
@@ -206,7 +204,7 @@ export function HowItWorksSection() {
                 onHoverEnd={() => setHoveredStep(null)}
                 whileHover={{ y: -8 }}
                 transition={{ type: "spring", stiffness: 300 }}
-              >
+
                 {/* Step card */}
                 <div className="text-center p-6 rounded-2xl bg-gradient-to-br from-zion-blue-dark/80 to-zion-blue-dark/40 backdrop-blur-sm border border-zion-blue-light/30 hover:border-zion-cyan/50 transition-all duration-300 hover:shadow-2xl hover:shadow-zion-cyan/20 group-hover:bg-zion-blue-dark h-full">
                   {/* Icon with enhanced background */}
@@ -249,7 +247,7 @@ export function HowItWorksSection() {
                       animate={{ opacity: 1, y: 0, scale: 1 }}
                       exit={{ opacity: 0, y: 10, scale: 0.95 }}
                       transition={{ duration: 0.2 }}
-                    >
+
                       <h4 className="text-white font-semibold mb-3">Key Features:</h4>
                       <ul className="space-y-2">
                         {step.details.map((detail, idx) => (
@@ -277,7 +275,7 @@ export function HowItWorksSection() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.5 }}
-        >
+
           <div className="inline-block p-1 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-2xl">
             <div className="px-8 py-4 bg-zion-blue-dark rounded-xl">
               <p className="text-white text-lg mb-4">
@@ -292,4 +290,4 @@ export function HowItWorksSection() {
       </div>
     </section>
   );
-}
+</div>}}}}}}</motion.div></motion.div></motion.div>}

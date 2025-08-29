@@ -1,8 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { motion } from 'framer-motion';
-import { Wifi, Zap, Shield, BarChart3, Network, Users, Globe, Workflow, Target, Rocket, Lock, Cpu, Settings } from 'lucide-react';
-const FiveGEnterpriseSolutions = () => {
+import { Wifi, Zap, Shield, BarChart3, Network, Users, Globe, Workflow, Target, Rocket, Lock, Cpu, Settings const FiveGEnterpriseSolutions = () => {
     const features = [
         {
             icon: Wifi,
@@ -33,7 +32,7 @@ const FiveGEnterpriseSolutions = () => {
             icon: Users,
             title: "Massive IoT Support",
             description: "Support for thousands of connected devices simultaneously"
-        }
+
     ];
     const solutions = [
         {
@@ -55,7 +54,7 @@ const FiveGEnterpriseSolutions = () => {
             title: "Smart Cities",
             description: "Build intelligent urban infrastructure and services",
             applications: ["Traffic Management", "Energy Grids", "Public Safety"]
-        }
+
     ];
     const benefits = [
         {
@@ -72,7 +71,7 @@ const FiveGEnterpriseSolutions = () => {
             icon: Globe,
             title: "Global Reach",
             description: "Connect your enterprise worldwide"
-        }
+
     ];
     return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-teal-900 to-slate-900">
       <Helmet>
@@ -263,3 +262,4 @@ const FiveGEnterpriseSolutions = () => {
     </div>);
 };
 export default FiveGEnterpriseSolutions;
+}}}}

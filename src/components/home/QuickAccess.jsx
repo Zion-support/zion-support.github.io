@@ -1,6 +1,5 @@
 import React from 'react';
-import { Zap, Brain, Shield, Cloud, Database, Users, ArrowRight } from 'lucide-react';
-export const QuickAccess = () => {
+import { Zap, Brain, Shield, Cloud, Database, Users, ArrowRight export const QuickAccess = () => {
     const quickLinks = [
         {
             title: "AI Solutions",
@@ -43,7 +42,7 @@ export const QuickAccess = () => {
             icon: Zap,
             href: "/contact",
             color: "from-yellow-500 to-orange-500"
-        }
+
     ];
     return (<section className="py-16 bg-slate-800/30">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -84,3 +83,4 @@ export const QuickAccess = () => {
       </div>
     </section>);
 };
+}}

@@ -1,6 +1,5 @@
 import React, { useState, useRef, useEffect } from 'react';
-import { ExternalLink, Github, Eye, X, ChevronLeft, ChevronRight, Star, Users, Calendar } from 'lucide-react';
-const portfolioProjects = [
+import { ExternalLink, Github, Eye, X, ChevronLeft, ChevronRight, Star, Users, Calendar const portfolioProjects = [
     {
         id: '1',
         title: 'AI-Powered E-commerce Platform',
@@ -90,7 +89,7 @@ const portfolioProjects = [
         completionDate: '2024-06',
         featured: true,
         tags: ['Cybersecurity', 'Threat Detection', 'Machine Learning', 'Real-time']
-    }
+
 ];
 const categories = ['All', 'AI & ML', 'Web3', 'Data Science', 'Mobile', 'IoT', 'Security'];
 export function InteractivePortfolio() {
@@ -113,25 +112,25 @@ export function InteractivePortfolio() {
     const nextImage = () => {
         if (selectedProject) {
             setCurrentImageIndex((prev) => (prev + 1) % 1); // Only one image per project for now
-        }
+
     };
     const prevImage = () => {
         if (selectedProject) {
             setCurrentImageIndex((prev) => (prev - 1 + 1) % 1);
-        }
+
     };
     const handleKeyPress = (e) => {
         if (e.key === 'Escape') {
             closeModal();
-        }
+
     };
     useEffect(() => {
         if (isModalOpen) {
             document.body.style.overflow = 'hidden';
-        }
+
         else {
             document.body.style.overflow = 'unset';
-        }
+
         return () => {
             document.body.style.overflow = 'unset';
         };
@@ -351,4 +350,4 @@ export function InteractivePortfolio() {
           </div>
         </div>)}
     </section>);
-}
+</div></div></div>}}}}}}}}

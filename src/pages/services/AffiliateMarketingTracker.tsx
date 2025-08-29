@@ -1,8 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import { TrendingUp, Users, BarChart3, Target, Zap, Shield, Globe, DollarSign, CheckCircle, Star, ArrowRight, BarChart, PieChart, Activity, Mail, Smartphone, Monitor } from 'lucide-react';
-import { SEO } from '@/components/SEO';
+import { TrendingUp, Users, BarChart3, Target, Zap, Shield, Globe, DollarSign, CheckCircle, Star, ArrowRight, BarChart, PieChart, Activity, Mail, Smartphone, Monitor import { SEO } from '@/components/SEO';
 
 export default function AffiliateMarketingTracker() {
   const features = [
@@ -35,7 +34,7 @@ export default function AffiliateMarketingTracker() {
       icon: Globe,
       title: "Multi-channel Support",
       description: "Track performance across social media, email, influencer partnerships, and more."
-    }
+
   ];
 
   const pricingPlans = [
@@ -82,7 +81,7 @@ export default function AffiliateMarketingTracker() {
         "Custom commission structures"
       ],
       popular: false
-    }
+
   ];
 
   const benefits = [
@@ -105,7 +104,7 @@ export default function AffiliateMarketingTracker() {
       title: "Scale Efficiently",
       description: "Manage thousands of affiliates with automated systems and smart workflows.",
       icon: Users
-    }
+
   ];
 
   return (
@@ -126,7 +125,7 @@ export default function AffiliateMarketingTracker() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6 }}
-              >
+
                 <h1 className="text-5xl md:text-6xl font-bold mb-6">
                   <span className="bg-gradient-to-r from-blue-400 via-purple-500 to-cyan-400 bg-clip-text text-transparent">
                     Affiliate Marketing Tracker
@@ -140,13 +139,13 @@ export default function AffiliateMarketingTracker() {
                   <Link
                     to="/request-quote"
                     className="px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg font-semibold hover:from-blue-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105"
-                  >
+
                     Get Started
                   </Link>
                   <Link
                     to="/contact"
                     className="px-8 py-4 border-2 border-blue-500 text-blue-400 rounded-lg font-semibold hover:bg-blue-500 hover:text-white transition-all duration-300"
-                  >
+
                     Schedule Demo
                   </Link>
                 </div>
@@ -175,7 +174,7 @@ export default function AffiliateMarketingTracker() {
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
                   className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700 hover:border-blue-500 transition-all duration-300"
-                >
+
                   <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg flex items-center justify-center mb-4">
                     <feature.icon className="w-6 h-6 text-white" />
                   </div>
@@ -207,7 +206,7 @@ export default function AffiliateMarketingTracker() {
                   whileInView={{ opacity: 1, x: 0 }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
                   className="flex items-start space-x-4"
-                >
+
                   <div className="w-12 h-12 bg-gradient-to-r from-green-500 to-emerald-600 rounded-lg flex items-center justify-center flex-shrink-0">
                     <benefit.icon className="w-6 h-6 text-white" />
                   </div>
@@ -245,7 +244,7 @@ export default function AffiliateMarketingTracker() {
                       ? 'border-blue-500 ring-2 ring-blue-500/20'
                       : 'border-slate-700'
                   }`}
-                >
+
                   {plan.popular && (
                     <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                       <span className="bg-gradient-to-r from-blue-500 to-purple-600 text-white px-4 py-2 rounded-full text-sm font-semibold">
@@ -279,7 +278,7 @@ export default function AffiliateMarketingTracker() {
                         ? 'bg-gradient-to-r from-blue-500 to-purple-600 text-white hover:from-blue-600 hover:to-purple-700'
                         : 'bg-slate-700 text-white hover:bg-slate-600'
                     }`}
-                  >
+
                     Get Started
                   </Link>
                 </motion.div>
@@ -295,7 +294,7 @@ export default function AffiliateMarketingTracker() {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
-            >
+
               <h2 className="text-4xl font-bold mb-6 text-white">
                 Ready to Transform Your Affiliate Marketing?
               </h2>
@@ -306,13 +305,13 @@ export default function AffiliateMarketingTracker() {
                 <Link
                   to="/request-quote"
                   className="px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg font-semibold hover:from-blue-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105"
-                >
+
                   Start Free Trial
                 </Link>
                 <Link
                   to="/contact"
                   className="px-8 py-4 border-2 border-blue-500 text-blue-400 rounded-lg font-semibold hover:bg-blue-500 hover:text-white transition-all duration-300"
-                >
+
                   Contact Sales
                 </Link>
               </div>
@@ -322,5 +321,4 @@ export default function AffiliateMarketingTracker() {
       </div>
     </>
   );
-}
-
+}}}}}

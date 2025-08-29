@@ -24,8 +24,6 @@ import {
   Users,
   Clock,
   Check
-} from 'lucide-react';
-
 const BlockchainServicesPage = () => {
   const [selectedCategory, setSelectedCategory] = useState('all');
 
@@ -149,7 +147,7 @@ const BlockchainServicesPage = () => {
       category: "Interoperability",
       badge: "Advanced",
       image: "https://images.unsplash.com/photo-1639762681485-074b7f938ba0?auto=format&fit=crop&w=800&h=500"
-    }
+
   ];
 
   const categories = [
@@ -228,7 +226,7 @@ const BlockchainServicesPage = () => {
                       ? 'bg-gradient-to-r from-zion-cyan to-zion-purple text-white shadow-lg'
                       : 'bg-zion-blue-dark/50 text-zion-slate-light hover:bg-zion-cyan/20 hover:text-white border border-zion-cyan/20'
                   }`}
-                >
+
                   {category.name}
                   <span className="bg-white/20 px-2 py-1 rounded-full text-xs">
                     {category.count}
@@ -251,7 +249,7 @@ const BlockchainServicesPage = () => {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 className="bg-zion-slate-dark/50 backdrop-blur-sm border border-zion-cyan/20 rounded-xl overflow-hidden hover:border-zion-cyan/40 transition-all duration-300 group"
-              >
+
                 {/* Service Image */}
                 <div className="h-48 bg-gradient-to-br from-zion-cyan/20 to-zion-purple/20 flex items-center justify-center relative overflow-hidden">
                   <service.icon className="w-16 h-16 text-zion-cyan z-10" />
@@ -366,7 +364,7 @@ const BlockchainServicesPage = () => {
                 icon: Globe,
                 title: "Multi-Chain Support",
                 description: "Experience with Ethereum, Polygon, Solana, and other leading blockchain networks."
-              }
+
             ].map((feature, index) => (
               <motion.div
                 key={index}
@@ -374,7 +372,7 @@ const BlockchainServicesPage = () => {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 className="bg-zion-blue-dark/50 backdrop-blur-sm border border-zion-cyan/20 rounded-xl p-6 text-center hover:border-zion-cyan/40 transition-all duration-300"
-              >
+
                 <div className="w-16 h-16 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-2xl flex items-center justify-center mx-auto mb-6">
                   <feature.icon className="w-8 h-8 text-white" />
                 </div>
@@ -413,3 +411,4 @@ const BlockchainServicesPage = () => {
 };
 
 export default BlockchainServicesPage;
+}}}

@@ -1,7 +1,5 @@
 import React from 'react';
-import { ArrowRight, Star, Users, Clock, Shield } from 'lucide-react';
-
-export const PageHero = ({
+import { ArrowRight, Star, Users, Clock, Shield export const PageHero = ({
   title,
   subtitle,
   description,
@@ -31,7 +29,7 @@ export const PageHero = ({
       icon: Shield,
       text: 'Secure & Reliable',
       color: 'text-purple-500'
-    }
+
   ];
 
   const displayFeatures = features.length > 0 ? features : defaultFeatures;
@@ -49,7 +47,7 @@ export const PageHero = ({
         <div
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
           style={{ backgroundImage: `url(${backgroundImage})` }}
-        >
+
           <div className="absolute inset-0 bg-black/50"></div>
         </div>
       ) : (
@@ -99,7 +97,7 @@ export const PageHero = ({
             <a
               href={ctaLink}
               className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold text-lg rounded-xl hover:from-blue-700 hover:to-purple-700 transition-all duration-300 shadow-2xl hover:shadow-blue-500/25"
-            >
+
               {ctaText}
               <ArrowRight className="w-5 h-5 ml-2" />
             </a>
@@ -127,7 +125,7 @@ export const PageHero = ({
           className="w-full h-16 text-white"
           viewBox="0 0 1200 120"
           preserveAspectRatio="none"
-        >
+
           <path
             d="M0,0V46.29c47.79,22.2,103.59,8.77,158.84,3.79c62.64-5.35,111.72-16.85,189.56-5.4c43.7,6.76,87.2,25.69,113.42,54.49c28.53,31.84,47.02,79.55,69.18,127.13C470.34,300.37,518,340,580,360s89.6,12.47,132.1,10.69c56.12-2.46,118.07-31.46,172.41-90.69c32.84-35.7,50.42-85.32,50.42-149.6V0Z"
             fill="currentColor"
@@ -146,4 +144,4 @@ export const PageHero = ({
       </div>
     </section>
   );
-};
+};}}

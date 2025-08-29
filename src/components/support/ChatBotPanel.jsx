@@ -1,14 +1,13 @@
-import React, { useState, useRef, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { ScrollArea } from "@/components/ui/scroll-area";
 import { toast } from "@/components/ui/use-toast";
-import { apiClient } from "@/utils/apiClient";
+import { useTheme } from "@/hooks/useTheme";
 import { cn } from "@/lib/utils";
+import { apiClient } from "@/utils/apiClient";
+import { Loader2, Send import { useEffect, useRef, useState } from "react";
 import { ChatMessage } from "./ChatMessage";
 import { QuickReplyButton } from "./QuickReplyButton";
-import { Send, Loader2 } from "lucide-react";
-import { useTheme } from "@/hooks/useTheme";
 // Define suggested quick replies
 const QUICK_REPLIES = [
     { id: "hire", text: "How do I hire?" },
@@ -34,13 +33,13 @@ export function ChatBotPanel() {
     useEffect(() => {
         if (scrollAreaRef.current) {
             scrollAreaRef.current.scrollTop = scrollAreaRef.current.scrollHeight;
-        }
+
     }, [messages]);
     // Focus input when component mounts
     useEffect(() => {
         if (inputRef.current) {
             inputRef.current.focus();
-        }
+
     }, []);
     const handleSendMessage = async (text = inputValue) => {
         if (!text.trim())
@@ -70,15 +69,15 @@ export function ChatBotPanel() {
                 // After 3 failed attempts, suggest escalation
                 if (failedAttempts >= 2) {
                     suggestEscalation();
-                }
-            }
+
+
             else {
                 // Reset failed attempts if successful
                 setFailedAttempts(0);
-            }
-        }
+
+
         catch (error) {
-            // console.error("Error in AI chat:", error);
+            // // // console.error("Error in AI chat:", error);
             toast({
                 variant: "destructive",
                 title: "Communication Error",
@@ -87,11 +86,11 @@ export function ChatBotPanel() {
             setFailedAttempts((prev) => prev + 1);
             if (failedAttempts >= 2) {
                 suggestEscalation();
-            }
-        }
+
+
         finally {
             setIsLoading(false);
-        }
+
     };
     const sendToAIAssistant = async (message) => {
         try {
@@ -109,20 +108,20 @@ export function ChatBotPanel() {
                     success: false,
                     message: "I'm having trouble connecting to my knowledge base right now."
                 };
-            }
+
             const data = await response.json();
             return {
                 success: true,
                 message: data.message
             };
-        }
+
         catch (error) {
-            // console.error("Error in AI chat:", error);
+            // // // console.error("Error in AI chat:", error);
             return {
                 success: false,
                 message: "I'm experiencing technical difficulties. Please try again later."
             };
-        }
+
     };
     const suggestEscalation = () => {
         const escalationMessage = {
@@ -139,17 +138,17 @@ export function ChatBotPanel() {
         try {
             // Send the conversation to the backend for logging
             // This would be implemented in a real system
-            // console.log("Support escalation triggered", {
+            // // console.log("Support escalation triggered", {
                 conversationHistory: messages.map(m => ({
                     content: m.content,
                     sender: m.sender,
                     timestamp: m.timestamp
                 }))
             });
-        }
+
         catch (error) {
-            // console.error("Failed to log support escalation:", error);
-        }
+            // // console.error("Failed to log support escalation:", error);
+
     };
     const handleQuickReply = (text) => {
         handleSendMessage(text);
@@ -168,7 +167,7 @@ export function ChatBotPanel() {
                 content: "I'm connecting you with a support agent. Please note that our support hours are Monday to Friday, 9AM to 6PM EST. If you're messaging outside these hours, a team member will follow up with you as soon as possible.",
                 sender: "bot",
                 timestamp: new Date()
-            }
+
         ]);
         // In a real implementation, this would trigger a live chat request
         toast({
@@ -190,7 +189,7 @@ export function ChatBotPanel() {
                 content: "Please send your question to support@ziontechgroup.com. Our team will get back to you within 24 hours.",
                 sender: "bot",
                 timestamp: new Date()
-            }
+
         ]);
     };
     return (<div className="flex flex-col h-full">
@@ -241,4 +240,4 @@ export function ChatBotPanel() {
         </form>
       </div>
     </div>);
-}
+}}}}}}}}}}}}}}}}}}

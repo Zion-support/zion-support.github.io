@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { MessageCircle, X, ArrowUp, Star, Zap, Users } from 'lucide-react';
-import { Link } from 'react-router-dom';
+import { MessageCircle, X, ArrowUp, Star, Zap, Users import { Link } from 'react-router-dom';
 export function FloatingCTA({ variant = 'default', position = 'bottom-right' }) {
     const [isExpanded, setIsExpanded] = useState(false);
     const [showScrollTop, setShowScrollTop] = useState(false);
@@ -25,7 +24,7 @@ export function FloatingCTA({ variant = 'default', position = 'bottom-right' }) 
                 return 'top-6 left-6';
             default:
                 return 'bottom-6 right-6';
-        }
+
     };
     const getExpandedPositionClasses = () => {
         switch (position) {
@@ -37,7 +36,7 @@ export function FloatingCTA({ variant = 'default', position = 'bottom-right' }) 
                 return 'top-6 left-6';
             default:
                 return 'bottom-6 right-6';
-        }
+
     };
     if (variant === 'minimal') {
         return (<AnimatePresence>
@@ -45,7 +44,7 @@ export function FloatingCTA({ variant = 'default', position = 'bottom-right' }) 
             <ArrowUp className="w-5 h-5"/>
           </motion.button>)}
       </AnimatePresence>);
-    }
+
     if (variant === 'featured') {
         return (<div className={`fixed ${getPositionClasses()} z-40`}>
         <AnimatePresence>
@@ -102,7 +101,7 @@ export function FloatingCTA({ variant = 'default', position = 'bottom-right' }) 
             </motion.div>)}
         </AnimatePresence>
       </div>);
-    }
+
     // Default variant
     return (<div className={`fixed ${getPositionClasses()} z-40`}>
       <AnimatePresence>
@@ -149,4 +148,4 @@ export function FloatingCTA({ variant = 'default', position = 'bottom-right' }) 
           </motion.div>)}
       </AnimatePresence>
     </div>);
-}
+}}}}}}

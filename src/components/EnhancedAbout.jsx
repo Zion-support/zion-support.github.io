@@ -1,8 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import { Brain, Shield, Rocket, Users, ArrowRight, CheckCircle, Globe, Target } from 'lucide-react';
-export const EnhancedAbout = () => {
+import { Brain, Shield, Rocket, Users, ArrowRight, CheckCircle, Globe, Target export const EnhancedAbout = () => {
     const companyValues = [
         {
             icon: Brain,
@@ -27,7 +26,7 @@ export const EnhancedAbout = () => {
             title: 'Excellence',
             description: 'Delivering exceptional quality in every project we undertake',
             color: 'zion-purple'
-        }
+
     ];
     const teamMembers = [
         {
@@ -53,7 +52,7 @@ export const EnhancedAbout = () => {
             role: 'Cybersecurity Experts',
             expertise: ['Threat Detection', 'Compliance', 'Penetration Testing'],
             avatar: '🔒'
-        }
+
     ];
     const milestones = [
         {
@@ -85,7 +84,7 @@ export const EnhancedAbout = () => {
             title: 'Industry Leader',
             description: 'Recognized as a top technology solutions provider',
             achievement: '95% client satisfaction rate'
-        }
+
     ];
     const containerVariants = {
         hidden: { opacity: 0 },
@@ -93,8 +92,8 @@ export const EnhancedAbout = () => {
             opacity: 1,
             transition: {
                 staggerChildren: 0.1
-            }
-        }
+
+
     };
     const itemVariants = {
         hidden: { y: 20, opacity: 0 },
@@ -104,8 +103,8 @@ export const EnhancedAbout = () => {
             transition: {
                 duration: 0.6,
                 ease: "easeOut"
-            }
-        }
+
+
     };
     const cardVariants = {
         hidden: { scale: 0.9, opacity: 0 },
@@ -115,7 +114,7 @@ export const EnhancedAbout = () => {
             transition: {
                 duration: 0.5,
                 ease: "easeOut"
-            }
+
         },
         hover: {
             scale: 1.02,
@@ -123,8 +122,8 @@ export const EnhancedAbout = () => {
             transition: {
                 duration: 0.3,
                 ease: "easeOut"
-            }
-        }
+
+
     };
     const timelineVariants = {
         hidden: { opacity: 0, x: -50 },
@@ -134,8 +133,8 @@ export const EnhancedAbout = () => {
             transition: {
                 duration: 0.8,
                 ease: "easeOut"
-            }
-        }
+
+
     };
     return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white">
       {/* Hero Section */}
@@ -333,3 +332,4 @@ export const EnhancedAbout = () => {
       </section>
     </div>);
 };
+}}}}}}}}}}}}}

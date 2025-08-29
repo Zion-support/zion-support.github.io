@@ -1,7 +1,5 @@
 import React from 'react';
-import { Rocket, Satellite, Globe, Zap, BarChart3, Activity, Shield, Database } from 'lucide-react';
-
-const SpaceTech = () => {
+import { Rocket, Satellite, Globe, Zap, BarChart3, Activity, Shield, Database const SpaceTech = () => {
   const spaceServices = [
     {
       title: "Satellite Technology",
@@ -23,7 +21,7 @@ const SpaceTech = () => {
       price: "From $35,000/month",
       features: ["Ground stations", "Mission control", "Data processing", "Communication systems"],
       icon: Database
-    }
+
   ];
 
   const spaceTechnologies = [
@@ -44,7 +42,7 @@ const SpaceTech = () => {
       description: "Cybersecurity and protection for space systems",
       icon: Shield,
       features: ["Threat detection", "Secure communications", "System protection", "Compliance"]
-    }
+
   ];
 
   const benefits = [
@@ -221,3 +219,4 @@ const SpaceTech = () => {
 };
 
 export default SpaceTech;
+}}}

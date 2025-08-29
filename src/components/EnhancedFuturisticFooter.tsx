@@ -68,8 +68,6 @@ import {
   Sun,
   Moon,
   Infinity
-} from 'lucide-react';
-
 export const EnhancedFuturisticFooter: React.FC = () => {
   const currentYear = new Date().getFullYear();
 
@@ -178,7 +176,7 @@ export const EnhancedFuturisticFooter: React.FC = () => {
         { name: 'FAQ', href: '/faq' },
         { name: 'Support', href: '/support' }
       ]
-    }
+
   ];
 
   const socialLinks = [
@@ -260,7 +258,7 @@ export const EnhancedFuturisticFooter: React.FC = () => {
                       key={action.name}
                       to={action.href}
                       className="flex items-center text-sm text-slate-300 hover:text-cyan-300 transition-colors group"
-                    >
+
                       <action.icon className="w-4 h-4 mr-2 text-cyan-400 group-hover:text-cyan-300 transition-colors" />
                       {action.name}
                     </Link>
@@ -280,7 +278,7 @@ export const EnhancedFuturisticFooter: React.FC = () => {
                       rel="noopener noreferrer"
                       className={`w-10 h-10 bg-slate-800/50 rounded-lg flex items-center justify-center text-slate-400 ${social.color} transition-all duration-200 hover:bg-slate-700/50 hover:scale-110`}
                       aria-label={social.name}
-                    >
+
                       <social.icon className="w-5 h-5" />
                     </a>
                   ))}
@@ -303,7 +301,7 @@ export const EnhancedFuturisticFooter: React.FC = () => {
                       className={`text-sm text-slate-300 hover:text-cyan-300 transition-colors flex items-center gap-2 group ${
                         link.featured ? 'font-medium text-cyan-200' : ''
                       }`}
-                    >
+
                       {link.featured && <Sparkles className="w-3 h-3 text-yellow-400" />}
                       {link.name}
                       <ArrowRight className="w-3 h-3 opacity-0 group-hover:opacity-100 transition-opacity duration-200" />
@@ -352,4 +350,4 @@ export const EnhancedFuturisticFooter: React.FC = () => {
       </div>
     </footer>
   );
-}
+}}}

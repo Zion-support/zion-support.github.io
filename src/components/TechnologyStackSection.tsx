@@ -11,8 +11,6 @@ import {
   Server,
   Cpu,
   Network
-} from 'lucide-react';
-
 export const TechnologyStackSection: React.FC = () => {
   const techCategories = [
     {
@@ -68,7 +66,7 @@ export const TechnologyStackSection: React.FC = () => {
         'SIEM', 'EDR', 'Firewall', 'VPN', 'Encryption'
       ],
       color: 'from-red-500 to-pink-500'
-    }
+
   ];
 
   const emergingTech = [
@@ -86,7 +84,7 @@ export const TechnologyStackSection: React.FC = () => {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
-        >
+
           <h2 className="text-4xl font-bold mb-4">
             Technology Stack
           </h2>
@@ -107,7 +105,7 @@ export const TechnologyStackSection: React.FC = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 className="bg-gray-800 rounded-2xl p-6 hover:bg-gray-700 transition-all duration-300"
-              >
+
                 <div className="flex items-center mb-6">
                   <div className={`p-3 rounded-xl bg-gradient-to-r ${category.color} mr-4`}>
                     <IconComponent className="h-8 w-8 text-white" />
@@ -136,7 +134,7 @@ export const TechnologyStackSection: React.FC = () => {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.3 }}
           className="mb-16"
-        >
+
           <h3 className="text-2xl font-bold text-center mb-8">
             Emerging Technologies
           </h3>
@@ -164,7 +162,7 @@ export const TechnologyStackSection: React.FC = () => {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.4 }}
           className="text-center"
-        >
+
           <div className="bg-gradient-to-r from-blue-600 to-indigo-600 rounded-2xl p-8">
             <h3 className="text-2xl font-bold mb-4">
               Ready to Build with Modern Tech?
@@ -191,3 +189,4 @@ export const TechnologyStackSection: React.FC = () => {
 };
 
 export default TechnologyStackSection;
+}}

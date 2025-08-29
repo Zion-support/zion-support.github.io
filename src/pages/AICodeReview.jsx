@@ -1,7 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Code, Shield, Zap, Users, BarChart3, Target, CheckCircle } from 'lucide-react';
-export default function AICodeReview() {
+import { Code, Shield, Zap, Users, BarChart3, Target, CheckCircle export default function AICodeReview() {
     const features = [
         {
             icon: Code,
@@ -32,7 +31,7 @@ export default function AICodeReview() {
             icon: Target,
             title: "Best Practices",
             description: "Ensure code follows industry best practices and coding standards"
-        }
+
     ];
     const benefits = [
         "Reduce code review time by 80%",
@@ -176,4 +175,4 @@ export default function AICodeReview() {
         </div>
       </section>
     </div>);
-}
+}}}

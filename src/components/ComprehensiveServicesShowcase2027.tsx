@@ -4,8 +4,7 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { cuttingEdgeComprehensiveServices2027 } from '../../data/2027-cutting-edge-comprehensive-services';
 import { specializedInnovativeServices2027 } from '../../data/2027-specialized-innovative-services';
-import { Brain, Cloud, Shield, BarChart3, Code, DollarSign, Heart, ShoppingCart, GraduationCap, Star, TrendingUp, Zap, CheckCircle, ArrowRight, Phone, Mail, MapPin, Globe, Rocket, Cpu, Database, Lock, Users, Building, Car, Leaf, Factory, Truck, BookOpen, Gavel, Home, Trophy, Film } from "lucide-react";
-import { Link } from "react-router-dom";
+import { Brain, Cloud, Shield, BarChart3, Code, DollarSign, Heart, ShoppingCart, GraduationCap, Star, TrendingUp, Zap, CheckCircle, ArrowRight, Phone, Mail, MapPin, Globe, Rocket, Cpu, Database, Lock, Users, Building, Car, Leaf, Factory, Truck, BookOpen, Gavel, Home, Trophy, Film import { Link } from "react-router-dom";
 
 const categoryIcons: { [key: string]: React.ComponentType<any> } = {
   'AI & Autonomous Systems': Brain,
@@ -92,7 +91,7 @@ const benefits = [
     icon: <CheckCircle className="h-6 w-6"/>,
     title: "Quality Guaranteed",
     description: "30-day money-back guarantee with free migration support"
-  }
+
 ];
 
 const contactInfo = {
@@ -187,7 +186,7 @@ export function ComprehensiveServicesShowcase2027() {
               className="px-4 py-3 rounded-lg border border-white/20 bg-white/10 text-white focus:outline-none focus:ring-2 focus:ring-zion-cyan"
               value={selectedCategory}
               onChange={(e) => setSelectedCategory(e.target.value)}
-            >
+
               <option value="all">All Categories</option>
               {categories.map(category => (
                 <option key={category} value={category}>{category}</option>
@@ -396,6 +395,6 @@ export function ComprehensiveServicesShowcase2027() {
       </div>
     </div>
   );
-}
+</Card></Card></Card></Card></Card></Card></Card></Card>}
 
-export default ComprehensiveServicesShowcase2027;
+export default ComprehensiveServicesShowcase2027;}}

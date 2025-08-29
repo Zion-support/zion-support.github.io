@@ -42,7 +42,7 @@ export default function TokenManager() {
                 description: 'Transaction processed'
             });
             fetchTransactions();
-        }
+
         else {
             const err = await res.json();
             toast({
@@ -50,7 +50,7 @@ export default function TokenManager() {
                 description: err.error || 'Failed',
                 variant: 'destructive'
             });
-        }
+
     };
     return (<ProtectedRoute adminOnly>
       <div>
@@ -90,4 +90,4 @@ export default function TokenManager() {
 
       </div>
     </ProtectedRoute>);
-}
+</Card></Card></Card>}}}

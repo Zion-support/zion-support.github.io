@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { motion, useScroll, useTransform } from 'framer-motion';
-import { ArrowRight, Rocket, Star, Zap, Brain, Shield, Globe } from 'lucide-react';
-export default function FuturisticHero() {
+import { ArrowRight, Rocket, Star, Zap, Brain, Shield, Globe export default function FuturisticHero() {
     const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
     const { scrollY } = useScroll();
     const y = useTransform(scrollY, [0, 300], [0, 100]);
@@ -133,4 +132,4 @@ export default function FuturisticHero() {
             }}/>))}
       </div>
     </section>);
-}
+</div></div></div></div></div></div>}</motion.div></motion.div>}

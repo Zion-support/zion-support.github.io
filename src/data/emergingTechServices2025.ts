@@ -29,7 +29,6 @@ export interface EmergingTechService {
     uptime: string;
     security: string[];
   };
-}
 
 export const EMERGING_TECH_SERVICES_2025: EmergingTechService[] = [
   // Quantum Computing as a Service
@@ -85,7 +84,7 @@ export const EMERGING_TECH_SERVICES_2025: EmergingTechService[] = [
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
-    }
+
   },
 
   // RAG Search for Enterprise Knowledge
@@ -172,7 +171,7 @@ export const EMERGING_TECH_SERVICES_2025: EmergingTechService[] = [
       apiEndpoints: 27,
       uptime: "99.95%",
       security: ["Network isolation", "Offline mode"]
-    }
+
   },
 
   // LLM Content Compliance for Regulated Industries
@@ -268,7 +267,7 @@ export const EMERGING_TECH_SERVICES_2025: EmergingTechService[] = [
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
-    }
+
   },
 
   // 5G Network Optimization Platform
@@ -324,7 +323,7 @@ export const EMERGING_TECH_SERVICES_2025: EmergingTechService[] = [
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
-    }
+
   },
 
   // Space Technology Solutions
@@ -380,7 +379,7 @@ export const EMERGING_TECH_SERVICES_2025: EmergingTechService[] = [
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
-    }
+
   },
 
   // Neuromorphic Computing Platform
@@ -436,7 +435,7 @@ export const EMERGING_TECH_SERVICES_2025: EmergingTechService[] = [
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
-    }
+
   },
 
   // Digital Twin Platform
@@ -492,7 +491,7 @@ export const EMERGING_TECH_SERVICES_2025: EmergingTechService[] = [
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
-    }
+
   },
 
   // Synthetic Biology Platform
@@ -548,7 +547,7 @@ export const EMERGING_TECH_SERVICES_2025: EmergingTechService[] = [
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
-    }
+
   },
 
   // Brain-Computer Interface Platform
@@ -604,8 +603,8 @@ export const EMERGING_TECH_SERVICES_2025: EmergingTechService[] = [
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
-    }
-  }
+
+
 ];
 
-export default EMERGING_TECH_SERVICES_2025;
+export default EMERGING_TECH_SERVICES_2025;}}}}}}}}}}}

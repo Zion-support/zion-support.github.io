@@ -22,8 +22,6 @@ import {
   DollarSign,
   Target,
   Award
-} from 'lucide-react';
-
 export default function AIContentGenerationPlatform() {
   const features = [
     {
@@ -61,7 +59,7 @@ export default function AIContentGenerationPlatform() {
       title: 'Team Collaboration',
       description: 'Collaborative workspace for teams to create, edit, and manage content with version control and approval workflows.',
       benefits: ['Real-time editing', 'Approval workflows', 'Version history', 'Team analytics']
-    }
+
   ];
 
   const useCases = [
@@ -88,7 +86,7 @@ export default function AIContentGenerationPlatform() {
       title: 'Business Content',
       description: 'Create professional reports, presentations, and corporate communications with consistent branding.',
       metrics: ['55% faster report creation', '50% improvement in brand consistency', '35% reduction in review cycles']
-    }
+
   ];
 
   const benefits = [
@@ -115,7 +113,7 @@ export default function AIContentGenerationPlatform() {
       title: 'Scalability',
       description: 'Scale content production without proportional increases in resources.',
       value: '10x'
-    }
+
   ];
 
   const technologies = [
@@ -186,7 +184,7 @@ export default function AIContentGenerationPlatform() {
       ],
       cta: 'Contact Sales',
       popular: false
-    }
+
   ];
 
   return (
@@ -204,7 +202,7 @@ export default function AIContentGenerationPlatform() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
-          >
+
             <div className="w-20 h-20 bg-gradient-to-br from-purple-400 to-pink-500 rounded-2xl flex items-center justify-center mx-auto mb-8">
               <PenTool className="w-10 h-10 text-white" />
             </div>
@@ -223,14 +221,14 @@ export default function AIContentGenerationPlatform() {
               <a
                 href="/contact"
                 className="inline-flex items-center space-x-2 bg-gradient-to-r from-purple-400 to-pink-500 text-white px-8 py-4 rounded-lg font-semibold hover:from-purple-500 hover:to-pink-600 transition-all duration-300 transform hover:scale-105"
-              >
+
                 <span>Start Free Trial</span>
                 <ArrowRight className="w-5 h-5" />
               </a>
               <a
                 href="#pricing"
                 className="inline-flex items-center space-x-2 border border-purple-400 text-purple-400 px-8 py-4 rounded-lg font-semibold hover:bg-purple-400 hover:text-white transition-all duration-300"
-              >
+
                 <span>View Pricing</span>
                 <ArrowRight className="w-5 h-5" />
               </a>
@@ -243,7 +241,7 @@ export default function AIContentGenerationPlatform() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
             className="grid grid-cols-2 md:grid-cols-4 gap-8"
-          >
+
             <div className="text-center">
               <div className="text-3xl font-bold text-white mb-2">80-90%</div>
               <div className="text-slate-400">Time Savings</div>
@@ -272,7 +270,7 @@ export default function AIContentGenerationPlatform() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
-          >
+
             <h2 className="text-4xl font-bold text-white mb-6">
               Powerful Features for
               <span className="bg-gradient-to-r from-purple-400 to-pink-500 bg-clip-text text-transparent">
@@ -293,7 +291,7 @@ export default function AIContentGenerationPlatform() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
                 className="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-8 border border-slate-700/50 hover:border-purple-400/50 transition-all duration-300"
-              >
+
                 <div className="w-16 h-16 bg-gradient-to-br from-purple-400 to-pink-500 rounded-xl flex items-center justify-center mb-6">
                   <feature.icon className="w-8 h-8 text-white" />
                 </div>
@@ -321,7 +319,7 @@ export default function AIContentGenerationPlatform() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
-          >
+
             <h2 className="text-4xl font-bold text-white mb-6">
               Real-World
               <span className="bg-gradient-to-r from-purple-400 to-pink-500 bg-clip-text text-transparent">
@@ -341,7 +339,7 @@ export default function AIContentGenerationPlatform() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
                 className="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-8 border border-slate-700/50 hover:border-purple-400/50 transition-all duration-300"
-              >
+
                 <div className="flex items-center space-x-3 mb-4">
                   <span className="px-3 py-1 bg-purple-400/20 text-purple-400 text-sm rounded-full">
                     {useCase.industry}
@@ -372,7 +370,7 @@ export default function AIContentGenerationPlatform() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
-          >
+
             <h2 className="text-4xl font-bold text-white mb-6">
               Measurable
               <span className="bg-gradient-to-r from-purple-400 to-pink-500 bg-clip-text text-transparent">
@@ -392,7 +390,7 @@ export default function AIContentGenerationPlatform() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
                 className="text-center"
-              >
+
                 <div className="w-20 h-20 bg-gradient-to-br from-purple-400 to-pink-500 rounded-2xl flex items-center justify-center mx-auto mb-6">
                   <benefit.icon className="w-10 h-10 text-white" />
                 </div>
@@ -413,7 +411,7 @@ export default function AIContentGenerationPlatform() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
-          >
+
             <h2 className="text-4xl font-bold text-white mb-6">
               Cutting-Edge
               <span className="bg-gradient-to-r from-purple-400 to-pink-500 bg-clip-text text-transparent">
@@ -433,7 +431,7 @@ export default function AIContentGenerationPlatform() {
                 whileInView={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.6, delay: index * 0.05 }}
                 className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700/50 hover:border-purple-400/50 transition-all duration-300 text-center"
-              >
+
                 <div className="text-white font-semibold">{tech}</div>
               </motion.div>
             ))}
@@ -449,7 +447,7 @@ export default function AIContentGenerationPlatform() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
-          >
+
             <h2 className="text-4xl font-bold text-white mb-6">
               Transparent
               <span className="bg-gradient-to-r from-purple-400 to-pink-500 bg-clip-text text-transparent">
@@ -473,7 +471,7 @@ export default function AIContentGenerationPlatform() {
                     ? 'border-purple-400/50 scale-105'
                     : 'border-slate-700/50 hover:border-purple-400/50'
                 }`}
-              >
+
                 {plan.popular && (
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                     <span className="bg-gradient-to-r from-purple-400 to-pink-500 text-white px-4 py-2 rounded-full text-sm font-semibold">
@@ -507,7 +505,7 @@ export default function AIContentGenerationPlatform() {
                       ? 'bg-gradient-to-r from-purple-400 to-pink-500 text-white hover:from-purple-500 hover:to-pink-600'
                       : 'border border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-white'
                   }`}
-                >
+
                   {plan.cta}
                 </a>
               </motion.div>
@@ -523,7 +521,7 @@ export default function AIContentGenerationPlatform() {
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-          >
+
             <h2 className="text-4xl font-bold text-white mb-6">
               Ready to Transform Your
               <span className="bg-gradient-to-r from-purple-400 to-pink-500 bg-clip-text text-transparent">
@@ -538,14 +536,14 @@ export default function AIContentGenerationPlatform() {
               <a
                 href="/contact"
                 className="inline-flex items-center space-x-2 bg-gradient-to-r from-purple-400 to-pink-500 text-white px-8 py-4 rounded-lg font-semibold hover:from-purple-500 hover:to-pink-600 transition-all duration-300 transform hover:scale-105"
-              >
+
                 <span>Start Free Trial</span>
                 <ArrowRight className="w-5 h-5" />
               </a>
               <a
                 href="tel:+13024640950"
                 className="inline-flex items-center space-x-2 border border-purple-400 text-purple-400 px-8 py-4 rounded-lg font-semibold hover:bg-purple-400 hover:text-white transition-all duration-300"
-              >
+
                 <span>Call +1 302 464 0950</span>
                 <ArrowRight className="w-5 h-5" />
               </a>
@@ -559,4 +557,4 @@ export default function AIContentGenerationPlatform() {
       </section>
     </div>
   );
-}
+}}}}}}

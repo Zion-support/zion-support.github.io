@@ -3,8 +3,7 @@ import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
-import { Check, Phone, Mail, MapPin, Globe, DollarSign, Star, Users, Shield, Zap, Building } from 'lucide-react';
-import { COMPREHENSIVE_SERVICES, PRICING_TIERS, SERVICE_CATEGORIES } from '@/data/comprehensiveServices';
+import { Check, Phone, Mail, MapPin, Globe, DollarSign, Star, Users, Shield, Zap, Building import { COMPREHENSIVE_SERVICES, PRICING_TIERS, SERVICE_CATEGORIES } from '@/data/comprehensiveServices';
 import { SEO } from '@/components/SEO';
 export default function ServicesPricingPage() {
     // Group services by category for pricing table
@@ -12,7 +11,7 @@ export default function ServicesPricingPage() {
         const categoryServices = COMPREHENSIVE_SERVICES.filter(service => service.category === category);
         if (categoryServices.length > 0) {
             acc[category] = categoryServices;
-        }
+
         return acc;
     }, { /* empty */ });
     return (<div className="min-h-screen bg-zion-blue-dark">
@@ -199,7 +198,7 @@ export default function ServicesPricingPage() {
                 icon: <Building className="w-8 h-8"/>,
                 title: "Proven ROI",
                 description: "Measurable business outcomes and return on investment"
-            }
+
         ].map((feature, index) => (<div key={index} className="text-center p-6 rounded-lg border border-zion-blue-light">
                 <div className="w-16 h-16 bg-gradient-to-br from-zion-purple to-zion-purple-dark rounded-full flex items-center justify-center mx-auto mb-4 text-zion-cyan">
                   {feature.icon}
@@ -233,4 +232,4 @@ export default function ServicesPricingPage() {
         </div>
       </div>
     </div>);
-}
+</Card></Card></Card></Card>}}}}

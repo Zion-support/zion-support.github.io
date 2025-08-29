@@ -283,5 +283,6 @@ export const EMERGING_TECH_INNOVATIVE_SERVICES_2025 = [
         uniqueValueProposition: "First AI-powered climate adaptation platform reducing climate risks by 70%",
         marketSize: "$3.2 billion (climate technology market)",
         growthPotential: "800% annual growth expected"
-    }
+
 ];
+}

@@ -14,11 +14,10 @@ declare module 'jspdf' {
     setLineWidth(...args: any[]): void;
     splitTextToSize(text: string, size: number): string[];
     output(type?: string): any;
-  }
+
   export function autoTable(...args: any[]): void;
-}
 
 declare module 'jspdf-autotable' {
   const autoTable: any;
   export default autoTable;
-}
+}}}

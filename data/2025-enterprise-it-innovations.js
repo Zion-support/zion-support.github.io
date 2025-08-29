@@ -466,5 +466,6 @@ export const enterpriseITInnovationServices2025 = [
         customers: 89,
         rating: 4.6,
         reviews: 67
-    }
+
 ];
+}

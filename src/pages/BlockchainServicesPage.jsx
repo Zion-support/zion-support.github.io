@@ -3,8 +3,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "../ui
 import { Button } from "../ui/button";
 import { Badge } from "../ui/badge";
 import { Link } from "react-router-dom";
-import { Link as LinkIcon, DollarSign as Coins, Shield, Zap, Database, Globe, TrendingUp, CheckCircle, ArrowRight, Lock, Network, Wallet, BarChart3 } from "lucide-react";
-import { TrustedBySection } from "../TrustedBySection";
+import { Link as LinkIcon, DollarSign as Coins, Shield, Zap, Database, Globe, TrendingUp, CheckCircle, ArrowRight, Lock, Network, Wallet, BarChart3 import { TrustedBySection } from "../TrustedBySection";
 const blockchainServices = [
     {
         id: "smart-contracts",
@@ -131,7 +130,7 @@ const blockchainServices = [
         badge: "Expert",
         link: "/services",
         image: "https://images.unsplash.com/photo-1639762681485-074b7f938ba0?auto=format&fit=crop&w=800&h=500"
-    }
+
 ];
 const blockchainBenefits = [
     {
@@ -153,7 +152,7 @@ const blockchainBenefits = [
         title: "Innovation",
         description: "Enable new business models and revenue streams through tokenization and DeFi",
         icon: <TrendingUp className="h-6 w-6"/>
-    }
+
 ];
 const useCases = [
     {
@@ -175,7 +174,7 @@ const useCases = [
         title: "Decentralized Finance",
         description: "Build financial services without intermediaries using smart contracts and DeFi protocols",
         icon: <Wallet className="h-6 w-6"/>
-    }
+
 ];
 export default function BlockchainServicesPage() {
     return (<div className="min-h-screen bg-background">
@@ -348,4 +347,4 @@ export default function BlockchainServicesPage() {
 
       <TrustedBySection />
     </div>);
-}
+</Card></Card></Card></Card></Card>}}}}}

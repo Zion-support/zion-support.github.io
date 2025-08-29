@@ -58,7 +58,6 @@ import {
   ExternalLink,
   ChevronDown,
   Copyright
-} from 'lucide-react';
 import { AnimatePresence } from 'framer-motion';
 
 interface FooterLink {
@@ -66,13 +65,11 @@ interface FooterLink {
   path: string;
   icon: any;
   external?: boolean;
-}
 
 interface FooterSection {
   title: string;
   icon: any;
   links: FooterLink[];
-}
 
 const footerSections = [
   {
@@ -168,7 +165,7 @@ const footerSections = [
       { name: 'Marketplace', path: '/marketplace', icon: ShoppingCart },
       { name: 'Sitemap', path: '/sitemap', icon: FileText }
     ]
-  }
+
 ];
 
 const socialLinks = [
@@ -202,7 +199,7 @@ export function Footer() {
         newSet.delete(title);
       } else {
         newSet.add(title);
-      }
+
       return newSet;
     });
   };
@@ -301,7 +298,7 @@ export function Footer() {
                     key={link.name}
                     to={link.path}
                     className="block text-sm text-gray-300 hover:text-cyan-400 transition-colors duration-200 group"
-                  >
+
                     <div className="flex items-center space-x-2">
                       <link.icon className="w-3 h-3 text-gray-500 group-hover:text-cyan-400 transition-colors duration-200" />
                       <span>{link.name}</span>
@@ -332,7 +329,7 @@ export function Footer() {
                   rel="noopener noreferrer"
                   className={`p-2 rounded-lg bg-white/5 hover:bg-white/10 transition-all duration-200 ${social.color}`}
                   aria-label={social.name}
-                >
+
                   <social.icon className="w-5 h-5" />
                 </a>
               ))}
@@ -364,11 +361,11 @@ export function Footer() {
             onClick={scrollToTop}
             className="fixed bottom-8 right-8 z-50 p-3 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-full shadow-lg hover:shadow-xl transition-all duration-200 hover:scale-110"
             aria-label="Scroll to top"
-          >
+
             <ArrowUp className="w-6 h-6" />
           </motion.button>
         )}
       </AnimatePresence>
     </footer>
   );
-}
+}}}}}</section></motion.div>}

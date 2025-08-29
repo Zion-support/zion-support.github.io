@@ -20,7 +20,7 @@ self.addEventListener('activate', event => {
         keyList.map(key => {
           if (key !== CACHE_NAME && key !== DATA_CACHE_NAME) {
             return caches.delete(key);
-          }
+
         })
       )
     )
@@ -36,14 +36,14 @@ self.addEventListener('fetch', event => {
           .then(response => {
             if (response.status === 200) {
               cache.put(event.request, response.clone());
-            }
+
             return response;
           })
           .catch(() => cache.match(event.request))
       )
     );
     return;
-  }
+
   event.respondWith(
     caches.match(event.request).then(response => {
       return (
@@ -53,3 +53,4 @@ self.addEventListener('fetch', event => {
     })
   );
 });
+}}}

@@ -32,7 +32,7 @@ export function FloatingOrbs({ count = 6, className = '' }) {
                 this.vy = (Math.random() - 0.5) * 0.5;
                 this.opacity = Math.random() * 0.5 + 0.2;
                 this.color = `hsl(${Math.random() * 60 + 180}, 70%, 60%)`;
-            }
+
             update() {
                 this.x += this.vx;
                 this.y += this.vy;
@@ -44,7 +44,7 @@ export function FloatingOrbs({ count = 6, className = '' }) {
                 // Keep within bounds
                 this.x = Math.max(0, Math.min(canvas.width, this.x));
                 this.y = Math.max(0, Math.min(canvas.height, this.y));
-            }
+
             draw() {
                 ctx.save();
                 ctx.globalAlpha = this.opacity;
@@ -57,13 +57,13 @@ export function FloatingOrbs({ count = 6, className = '' }) {
                 ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
                 ctx.fill();
                 ctx.restore();
-            }
-        }
+
+
         // Create orbs
         const orbs = [];
         for (const i = 0; i < count; i++) {
             orbs.push(new Orb());
-        }
+
         // Animation loop
         let animationId;
         const animate = () => {
@@ -82,4 +82,4 @@ export function FloatingOrbs({ count = 6, className = '' }) {
         };
     }, [count]);
     return (<canvas ref={canvasRef} className={`fixed inset-0 pointer-events-none z-0 ${className}`} style={{ background: 'transparent' }}/>);
-}
+}}}}}}

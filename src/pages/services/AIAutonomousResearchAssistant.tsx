@@ -21,8 +21,6 @@ import {
   Award,
   Rocket,
   Sparkles
-} from 'lucide-react';
-
 const AIAutonomousResearchAssistant = () => {
   const features = [
     {
@@ -54,7 +52,7 @@ const AIAutonomousResearchAssistant = () => {
       icon: <Shield className="w-6 h-6" />,
       title: "Data Security",
       description: "Enterprise-grade security with encryption, access controls, and compliance with research ethics standards."
-    }
+
   ];
 
   const pricingPlans = [
@@ -102,7 +100,7 @@ const AIAutonomousResearchAssistant = () => {
         "Custom integrations"
       ],
       popular: false
-    }
+
   ];
 
   const useCases = [
@@ -125,7 +123,7 @@ const AIAutonomousResearchAssistant = () => {
       title: "Policy Research",
       description: "Analyze policy implications, stakeholder perspectives, and implementation strategies.",
       icon: <Target className="w-8 h-8 text-purple-500" />
-    }
+
   ];
 
   return (
@@ -138,7 +136,7 @@ const AIAutonomousResearchAssistant = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="mb-8"
-          >
+
             <div className="inline-flex items-center px-4 py-2 rounded-full bg-cyan-500/10 border border-cyan-500/20 text-cyan-400 text-sm font-medium mb-6">
               <Brain className="w-4 h-4 mr-2" />
               AI-Powered Research
@@ -157,7 +155,7 @@ const AIAutonomousResearchAssistant = () => {
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-600 transition-all duration-300 flex items-center justify-center"
-              >
+
                 Start Free Trial
                 <ArrowRight className="w-5 h-5 ml-2" />
               </motion.button>
@@ -165,7 +163,7 @@ const AIAutonomousResearchAssistant = () => {
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 className="px-8 py-4 border border-cyan-500/30 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-500/10 transition-all duration-300"
-              >
+
                 Watch Demo
               </motion.button>
             </div>
@@ -181,7 +179,7 @@ const AIAutonomousResearchAssistant = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
-          >
+
             <h2 className="text-4xl font-bold text-white mb-4">
               Revolutionary Research Capabilities
             </h2>
@@ -198,7 +196,7 @@ const AIAutonomousResearchAssistant = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
                 className="bg-slate-800/50 backdrop-blur-sm border border-slate-700/50 rounded-xl p-6 hover:border-cyan-500/30 transition-all duration-300"
-              >
+
                 <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-lg flex items-center justify-center text-white mb-4">
                   {feature.icon}
                 </div>
@@ -218,7 +216,7 @@ const AIAutonomousResearchAssistant = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
-          >
+
             <h2 className="text-4xl font-bold text-white mb-4">
               Transform Your Research Process
             </h2>
@@ -235,7 +233,7 @@ const AIAutonomousResearchAssistant = () => {
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
                 className="bg-slate-800/50 backdrop-blur-sm border border-slate-700/50 rounded-xl p-8 hover:border-cyan-500/30 transition-all duration-300"
-              >
+
                 <div className="flex items-start space-x-4">
                   {useCase.icon}
                   <div>
@@ -257,7 +255,7 @@ const AIAutonomousResearchAssistant = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
-          >
+
             <h2 className="text-4xl font-bold text-white mb-4">
               Choose Your Research Plan
             </h2>
@@ -278,7 +276,7 @@ const AIAutonomousResearchAssistant = () => {
                     ? 'border-cyan-500/50 bg-gradient-to-b from-cyan-500/10 to-transparent'
                     : 'border-slate-700/50'
                 }`}
-              >
+
                 {plan.popular && (
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                     <span className="bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-4 py-2 rounded-full text-sm font-semibold">
@@ -313,7 +311,7 @@ const AIAutonomousResearchAssistant = () => {
                       ? 'bg-gradient-to-r from-cyan-500 to-blue-500 text-white hover:from-cyan-600 hover:to-blue-600'
                       : 'bg-slate-700 text-white hover:bg-slate-600'
                   }`}
-                >
+
                   Get Started
                 </motion.button>
               </motion.div>
@@ -330,7 +328,7 @@ const AIAutonomousResearchAssistant = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="bg-gradient-to-r from-cyan-500/10 to-blue-500/10 border border-cyan-500/20 rounded-2xl p-12"
-          >
+
             <h2 className="text-4xl font-bold text-white mb-6">
               Ready to Revolutionize Your Research?
             </h2>
@@ -342,14 +340,14 @@ const AIAutonomousResearchAssistant = () => {
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-600 transition-all duration-300"
-              >
+
                 Start Free Trial
               </motion.button>
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 className="px-8 py-4 border border-cyan-500/30 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-500/10 transition-all duration-300"
-              >
+
                 Contact Sales
               </motion.button>
             </div>
@@ -360,4 +358,4 @@ const AIAutonomousResearchAssistant = () => {
   );
 };
 
-export default AIAutonomousResearchAssistant;
+export default AIAutonomousResearchAssistant;}}}}

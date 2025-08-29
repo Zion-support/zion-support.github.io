@@ -1,7 +1,6 @@
 import React, { useState, useMemo } from 'react';
 import { motion } from 'framer-motion';
-import { Lightbulb, Rocket, Brain, Zap, TrendingUp, Star, Users, Globe, CheckCircle, Cpu, Atom, Satellite, Dna, Shield, Leaf } from 'lucide-react';
-import { Card, CardContent, CardHeader, CardTitle } from './ui/card';
+import { Lightbulb, Rocket, Brain, Zap, TrendingUp, Star, Users, Globe, CheckCircle, Cpu, Atom, Satellite, Dna, Shield, Leaf import { Card, CardContent, CardHeader, CardTitle } from './ui/card';
 import { Button } from './ui/button';
 import { Badge } from './ui/badge';
 import { Input } from './ui/input';
@@ -90,7 +89,7 @@ const AdvancedServiceInnovationHub = () => {
             keyPlayers: ['Neuralink', 'Kernel', 'Medical Device Companies'],
             technologies: ['Neural Interfaces', 'Signal Processing', 'AI/ML'],
             status: 'Emerging'
-        }
+
     ];
     const futureRoadmap = [
         {
@@ -170,7 +169,7 @@ const AdvancedServiceInnovationHub = () => {
             ],
             investment: '$50B+',
             category: 'ai'
-        }
+
     ];
     const filteredTrends = useMemo(() => {
         return innovationTrends.filter(trend => {
@@ -188,7 +187,7 @@ const AdvancedServiceInnovationHub = () => {
             case 'Medium': return 'bg-yellow-100 text-yellow-800';
             case 'Low': return 'bg-green-100 text-green-800';
             default: return 'bg-gray-100 text-gray-800';
-        }
+
     };
     const getStatusColor = (status) => {
         switch (status) {
@@ -197,7 +196,7 @@ const AdvancedServiceInnovationHub = () => {
             case 'Mature': return 'bg-orange-100 text-orange-800';
             case 'Disruptive': return 'bg-purple-100 text-purple-800';
             default: return 'bg-gray-100 text-gray-800';
-        }
+
     };
     const getCategoryIcon = (category) => {
         switch (category) {
@@ -207,7 +206,7 @@ const AdvancedServiceInnovationHub = () => {
             case 'green-tech': return <Leaf className="w-5 h-5"/>;
             case 'biotech-ai': return <Dna className="w-5 h-5"/>;
             default: return <Cpu className="w-5 h-5"/>;
-        }
+
     };
     const categories = [
         { id: 'all', name: 'All Categories', icon: <Globe className="w-4 h-4"/> },
@@ -602,5 +601,6 @@ const AdvancedServiceInnovationHub = () => {
         </div>
       </motion.div>
     </div>);
-};
+</Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card>};
 export default AdvancedServiceInnovationHub;
+}}}}}}

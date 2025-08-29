@@ -1,7 +1,5 @@
 import React from 'react';
-import { Star, Quote } from 'lucide-react';
-
-export const AppTestimonials = () => {
+import { Star, Quote export const AppTestimonials = () => {
   const testimonials = [
     {
       name: "Sarah Chen",
@@ -34,7 +32,7 @@ export const AppTestimonials = () => {
       rating: 5,
       content: "Managing multiple AI projects used to be a nightmare. With Zion's mobile app, I can track progress, assign tasks, and communicate with teams effortlessly.",
       avatar: "/images/testimonials/david-kim.jpg"
-    }
+
   ];
 
   const renderStars = (rating) => {
@@ -65,7 +63,7 @@ export const AppTestimonials = () => {
             <div
               key={index}
               className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20 hover:border-white/40 transition-all duration-300"
-            >
+
               <div className="flex items-center mb-4">
                 <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full flex items-center justify-center mr-4">
                   <span className="text-white font-semibold text-lg">
@@ -108,3 +106,4 @@ export const AppTestimonials = () => {
     </section>
   );
 };
+}}

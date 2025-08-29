@@ -12,7 +12,7 @@ export function Skeleton({ className, width, height, rounded = 'md', animated = 
             width: width,
             height: height,
         }}/>);
-}
+
 export function CardSkeleton({ className, showImage = true, showTitle = true, showDescription = true, showActions = true, lines = 2 }) {
     return (<div className={cn('space-y-4', className)}>
       {showImage && (<Skeleton className="w-full h-48 rounded-lg"/>)}
@@ -30,7 +30,7 @@ export function CardSkeleton({ className, showImage = true, showTitle = true, sh
           </div>)}
       </div>
     </div>);
-}
+
 export function ListSkeleton({ className, items = 3, showAvatar = true, showTitle = true, showSubtitle = true, showDescription = true }) {
     return (<div className={cn('space-y-4', className)}>
       {Array.from({ length: items }).map((_, i) => (<div key={i} className="flex gap-4 items-start">
@@ -48,7 +48,7 @@ export function ListSkeleton({ className, items = 3, showAvatar = true, showTitl
           </div>
         </div>))}
     </div>);
-}
+
 export function TableSkeleton({ className, rows = 5, columns = 4, showHeader = true }) {
     return (<div className={cn('space-y-3', className)}>
       {showHeader && (<div className="flex gap-4 pb-2 border-b border-border">
@@ -61,7 +61,7 @@ export function TableSkeleton({ className, rows = 5, columns = 4, showHeader = t
           </div>))}
       </div>
     </div>);
-}
+
 export function GridSkeleton({ className, items = 6, columns = 3, gap = 4, showImage = true, showTitle = true, showDescription = true }) {
     return (<div className={cn('grid gap-4', className)} style={{
             gridTemplateColumns: `repeat(${columns}, minmax(0, 1fr))`,
@@ -69,7 +69,7 @@ export function GridSkeleton({ className, items = 6, columns = 3, gap = 4, showI
         }}>
       {Array.from({ length: items }).map((_, i) => (<CardSkeleton key={i} showImage={showImage} showTitle={showTitle} showDescription={showDescription} showActions={false} lines={2}/>))}
     </div>);
-}
+
 export function HeroSkeleton({ className, showImage = true, showTitle = true, showDescription = true, showActions = true }) {
     return (<div className={cn('flex flex-col lg:flex-row gap-8 items-center', className)}>
       {showImage && (<div className="lg:w-1/2">
@@ -94,21 +94,22 @@ export function HeroSkeleton({ className, showImage = true, showTitle = true, sh
           </div>)}
       </div>
     </div>);
-}
+
 // Shimmer effect component
 export function Shimmer({ className }) {
     return (<div className={cn('relative overflow-hidden', className)}>
       <div className="absolute inset-0 -translate-x-full animate-[shimmer_2s_infinite] bg-gradient-to-r from-transparent via-white/20 to-transparent"/>
     </div>);
-}
+
 // Custom shimmer animation
 export const shimmerAnimation = `
   @keyframes shimmer {
     0% {
       transform: translateX(-100%);
-    }
+
     100% {
       transform: translateX(100%);
-    }
-  }
+
+  </div></div></Card>}
 `;
+}}}}}}}}}

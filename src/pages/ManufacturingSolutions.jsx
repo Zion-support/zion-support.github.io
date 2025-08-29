@@ -1,7 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Factory, Cpu, Zap, Shield, BarChart3, ArrowRight, CheckCircle, Brain, Network } from 'lucide-react';
-export default function ManufacturingSolutions() {
+import { Factory, Cpu, Zap, Shield, BarChart3, ArrowRight, CheckCircle, Brain, Network export default function ManufacturingSolutions() {
     const solutions = [
         {
             icon: Brain,
@@ -38,7 +37,7 @@ export default function ManufacturingSolutions() {
             title: "Process Automation",
             description: "Streamlined workflows and automated decision-making processes",
             features: ["Workflow automation", "Decision support", "Process optimization"]
-        }
+
     ];
     const useCases = [
         {
@@ -70,7 +69,7 @@ export default function ManufacturingSolutions() {
             title: "Production Planning",
             description: "Intelligent production scheduling and resource allocation",
             icon: "📅"
-        }
+
     ];
     const benefits = [
         "Reduce downtime by 30-50%",
@@ -210,4 +209,4 @@ export default function ManufacturingSolutions() {
         </div>
       </section>
     </div>);
-}
+}}}}

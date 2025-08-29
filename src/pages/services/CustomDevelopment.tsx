@@ -25,8 +25,6 @@ import {
   Building2,
   Cpu,
   Network
-} from 'lucide-react';
-
 export default function CustomDevelopment() {
   const services = [
     {
@@ -52,7 +50,7 @@ export default function CustomDevelopment() {
       description: 'Seamlessly connect your existing systems and third-party services for improved efficiency.',
       icon: Workflow,
       features: ['Legacy System Integration', 'Third-party APIs', 'Data Synchronization', 'Workflow Automation']
-    }
+
   ];
 
   const technologies = [
@@ -79,7 +77,7 @@ export default function CustomDevelopment() {
       description: 'Modern database solutions for data storage and management.',
       icon: Database,
       stack: ['PostgreSQL', 'MongoDB', 'MySQL', 'Redis', 'Elasticsearch']
-    }
+
   ];
 
   const benefits = [
@@ -102,7 +100,7 @@ export default function CustomDevelopment() {
       title: 'Support & Maintenance',
       description: 'Ongoing support and maintenance to ensure your applications run smoothly.',
       icon: Settings
-    }
+
   ];
 
   const industries = [
@@ -120,7 +118,7 @@ export default function CustomDevelopment() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-          >
+
             <h1 className="text-5xl lg:text-7xl font-bold bg-gradient-to-r from-zion-cyan via-zion-purple to-zion-blue bg-clip-text text-transparent mb-6">
               Custom Development
             </h1>
@@ -132,13 +130,13 @@ export default function CustomDevelopment() {
               <Link
                 to="/contact"
                 className="px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-blue text-white rounded-lg hover:shadow-lg hover:shadow-zion-cyan/25 transition-all duration-300 transform hover:scale-105 font-semibold"
-              >
+
                 Start Your Project
               </Link>
               <Link
                 to="/services"
                 className="px-8 py-4 border-2 border-zion-cyan text-zion-cyan rounded-lg hover:bg-zion-cyan hover:text-white transition-all duration-300 font-semibold"
-              >
+
                 View All Services
               </Link>
             </div>
@@ -154,7 +152,7 @@ export default function CustomDevelopment() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-          >
+
             <h2 className="text-4xl lg:text-5xl font-bold text-white mb-6">
               Our Custom Development Services
             </h2>
@@ -172,7 +170,7 @@ export default function CustomDevelopment() {
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-              >
+
                 <div className="flex items-start gap-4 mb-6">
                   <div className="w-16 h-16 bg-gradient-to-r from-zion-cyan to-zion-blue rounded-lg flex items-center justify-center flex-shrink-0">
                     <service.icon className="w-8 h-8 text-white" />
@@ -208,7 +206,7 @@ export default function CustomDevelopment() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-          >
+
             <h2 className="text-4xl lg:text-5xl font-bold text-white mb-6">
               Our Technology Stack
             </h2>
@@ -226,7 +224,7 @@ export default function CustomDevelopment() {
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-              >
+
                 <div className="w-16 h-16 bg-gradient-to-r from-zion-cyan to-zion-blue rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
                   <tech.icon className="w-8 h-8 text-white" />
                 </div>
@@ -253,7 +251,7 @@ export default function CustomDevelopment() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-          >
+
             <h2 className="text-4xl lg:text-5xl font-bold text-white mb-6">
               Why Choose Custom Development?
             </h2>
@@ -270,7 +268,7 @@ export default function CustomDevelopment() {
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-              >
+
                 <div className="w-16 h-16 bg-gradient-to-r from-zion-cyan to-zion-blue rounded-lg flex items-center justify-center mb-6">
                   <benefit.icon className="w-8 h-8 text-white" />
                 </div>
@@ -290,7 +288,7 @@ export default function CustomDevelopment() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-          >
+
             <h2 className="text-4xl lg:text-5xl font-bold text-white mb-6">
               Industries We Serve
             </h2>
@@ -308,7 +306,7 @@ export default function CustomDevelopment() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-              >
+
                 <div className="text-zion-cyan font-semibold">{industry}</div>
               </motion.div>
             ))}
@@ -324,7 +322,7 @@ export default function CustomDevelopment() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-          >
+
             <h2 className="text-4xl lg:text-5xl font-bold text-white mb-6">
               Our Development Process
             </h2>
@@ -346,7 +344,7 @@ export default function CustomDevelopment() {
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-              >
+
                 <div className="w-20 h-20 bg-gradient-to-r from-zion-cyan to-zion-blue rounded-full flex items-center justify-center mx-auto mb-6 text-2xl font-bold text-white">
                   {phase.step}
                 </div>
@@ -366,7 +364,7 @@ export default function CustomDevelopment() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-          >
+
             <h2 className="text-4xl lg:text-5xl font-bold text-white mb-6">
               Ready to Build Your Custom Solution?
             </h2>
@@ -378,13 +376,13 @@ export default function CustomDevelopment() {
               <Link
                 to="/contact"
                 className="px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-blue text-white rounded-lg hover:shadow-lg hover:shadow-zion-cyan/25 transition-all duration-300 transform hover:scale-105 font-semibold"
-              >
+
                 Start Your Project
               </Link>
               <Link
                 to="/services"
                 className="px-8 py-4 border-2 border-zion-cyan text-zion-cyan rounded-lg hover:bg-zion-cyan hover:text-white transition-all duration-300 font-semibold"
-              >
+
                 Explore Services
               </Link>
             </div>
@@ -393,4 +391,4 @@ export default function CustomDevelopment() {
       </section>
     </div>
   );
-}
+}}}}}

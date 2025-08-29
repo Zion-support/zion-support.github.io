@@ -37,7 +37,6 @@ export interface ComprehensiveService2025 {
   marketSize?: string;
   launchDate?: string;
   betaAccess?: boolean;
-}
 
 // Combine all services into one comprehensive catalog
 export const COMPREHENSIVE_SERVICES_CATALOG_2025: ComprehensiveService2025[] = [
@@ -237,23 +236,19 @@ export const getServiceRecommendations = (preferences: {
 
   if (preferences.industry) {
     recommendations = getServicesByIndustry(preferences.industry);
-  }
 
   if (preferences.budget) {
     recommendations = recommendations.filter(service => service.price <= preferences.budget!);
-  }
 
   if (preferences.innovationLevel) {
     recommendations = recommendations.filter(service =>
       service.innovationLevel.toLowerCase() === preferences.innovationLevel!.toLowerCase()
     );
-  }
 
   if (preferences.supportLevel) {
     recommendations = recommendations.filter(service =>
       service.supportLevel.toLowerCase() === preferences.supportLevel!.toLowerCase()
     );
-  }
 
   return recommendations.sort((a, b) => {
     const aScore = parseInt(a.roi.replace(/\D/g, ''));
@@ -262,4 +257,4 @@ export const getServiceRecommendations = (preferences: {
   });
 };
 
-export default COMPREHENSIVE_SERVICES_CATALOG_2025;
+export default COMPREHENSIVE_SERVICES_CATALOG_2025;}}}}}

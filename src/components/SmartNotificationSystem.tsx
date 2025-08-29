@@ -16,8 +16,6 @@ import {
   Zap,
   TrendingUp,
   Award
-} from 'lucide-react';
-
 interface Notification {
   id: string;
   type: 'success' | 'error' | 'warning' | 'info' | 'achievement';
@@ -32,11 +30,9 @@ interface Notification {
   priority: 'low' | 'medium' | 'high';
   category: string;
   expiresAt?: Date;
-}
 
 interface Props {
   enabled?: boolean;
-}
 
 export function SmartNotificationSystem({ enabled = true }: Props) {
   const [notifications, setNotifications] = useState<Notification[]>([]);
@@ -59,8 +55,8 @@ export function SmartNotificationSystem({ enabled = true }: Props) {
         category: 'onboarding',
         action: {
           label: 'Get Started',
-          onClick: () => console.log('Get Started clicked')
-        }
+          onClick: () => // // console.log('Get Started clicked')
+
       },
       {
         id: '2',
@@ -73,8 +69,8 @@ export function SmartNotificationSystem({ enabled = true }: Props) {
         category: 'performance',
         action: {
           label: 'View Details',
-          onClick: () => console.log('View Details clicked')
-        }
+          onClick: () => // // console.log('View Details clicked')
+
       },
       {
         id: '3',
@@ -97,9 +93,9 @@ export function SmartNotificationSystem({ enabled = true }: Props) {
         category: 'security',
         action: {
           label: 'Update Now',
-          onClick: () => console.log('Update Now clicked')
-        }
-      }
+          onClick: () => // // console.log('Update Now clicked')
+
+
     ];
 
     setNotifications(sampleNotifications);
@@ -110,7 +106,7 @@ export function SmartNotificationSystem({ enabled = true }: Props) {
   useEffect(() => {
     if (enabled) {
       generateSampleNotifications();
-    }
+
   }, [enabled, generateSampleNotifications]);
 
   // Auto-expire notifications
@@ -121,13 +117,12 @@ export function SmartNotificationSystem({ enabled = true }: Props) {
         const filtered = prev.filter(notification => {
           if (notification.expiresAt && notification.expiresAt < now) {
             return false;
-          }
+
           return true;
         });
 
         if (filtered.length !== prev.length) {
           setUnreadCount(filtered.filter(n => !n.read).length);
-        }
 
         return filtered;
       });
@@ -191,7 +186,7 @@ export function SmartNotificationSystem({ enabled = true }: Props) {
         return <Award className="w-5 h-5 text-purple-500" />;
       default:
         return <Info className="w-5 h-5 text-gray-500" />;
-    }
+
   };
 
   // Get priority color
@@ -205,7 +200,7 @@ export function SmartNotificationSystem({ enabled = true }: Props) {
         return 'border-l-blue-500';
       default:
         return 'border-l-gray-500';
-    }
+
   };
 
   // Format timestamp
@@ -233,20 +228,19 @@ export function SmartNotificationSystem({ enabled = true }: Props) {
         whileTap={{ scale: 0.9 }}
         title="Notifications"
         aria-label="Open notifications"
-      >
+
         <Bell className="w-6 h-6 text-white" />
         {unreadCount > 0 && (
           <motion.div
             initial={{ scale: 0 }}
             animate={{ scale: 1 }}
             className="absolute -top-1 -right-1 w-5 h-5 bg-red-500 text-white text-xs rounded-full flex items-center justify-center font-bold"
-          >
+
             {unreadCount > 9 ? '9+' : unreadCount}
           </motion.div>
         )}
       </motion.button>
     );
-  }
 
   return (
     <AnimatePresence>
@@ -255,7 +249,7 @@ export function SmartNotificationSystem({ enabled = true }: Props) {
         animate={{ opacity: 1, x: 0 }}
         exit={{ opacity: 0, x: 300 }}
         className="fixed top-4 right-4 z-50 w-96 bg-white/95 backdrop-blur-md rounded-2xl shadow-2xl border border-gray-200/50 max-h-[90vh] overflow-hidden"
-      >
+
         {/* Header */}
         <div className="flex items-center justify-between p-4 border-b border-gray-200">
           <div className="flex items-center gap-2">
@@ -273,7 +267,7 @@ export function SmartNotificationSystem({ enabled = true }: Props) {
               onClick={toggleMute}
               className="p-2 text-gray-400 hover:text-gray-600 transition-colors"
               title={isMuted ? 'Unmute notifications' : 'Mute notifications'}
-            >
+
               {isMuted ? <VolumeX className="w-4 h-4" /> : <Volume2 className="w-4 h-4" />}
             </button>
 
@@ -281,7 +275,7 @@ export function SmartNotificationSystem({ enabled = true }: Props) {
               onClick={() => setShowSettings(!showSettings)}
               className="p-2 text-gray-400 hover:text-gray-600 transition-colors"
               title="Notification settings"
-            >
+
               <Settings className="w-4 h-4" />
             </button>
 
@@ -289,7 +283,7 @@ export function SmartNotificationSystem({ enabled = true }: Props) {
               onClick={() => setIsVisible(false)}
               className="p-2 text-gray-400 hover:text-gray-600 transition-colors"
               aria-label="Close notifications"
-            >
+
               <X className="w-4 h-4" />
             </button>
           </div>
@@ -303,14 +297,14 @@ export function SmartNotificationSystem({ enabled = true }: Props) {
               animate={{ height: 'auto', opacity: 1 }}
               exit={{ height: 0, opacity: 0 }}
               className="border-b border-gray-200 p-4 bg-gray-50"
-            >
+
               <div className="space-y-3">
                 <div className="flex items-center justify-between">
                   <span className="text-sm text-gray-700">Mark all as read</span>
                   <button
                     onClick={markAllAsRead}
                     className="px-3 py-1 bg-blue-100 text-blue-700 text-xs rounded-lg hover:bg-blue-200 transition-colors"
-                  >
+
                     Mark All
                   </button>
                 </div>
@@ -320,7 +314,7 @@ export function SmartNotificationSystem({ enabled = true }: Props) {
                   <button
                     onClick={clearAllNotifications}
                     className="px-3 py-1 bg-red-100 text-red-700 text-xs rounded-lg hover:bg-red-200 transition-colors"
-                  >
+
                     Clear All
                   </button>
                 </div>
@@ -349,7 +343,7 @@ export function SmartNotificationSystem({ enabled = true }: Props) {
                     !notification.read ? 'bg-blue-50/50' : ''
                   }`}
                   onClick={() => markAsRead(notification.id)}
-                >
+
                   <div className="flex items-start gap-3">
                     <div className="flex-shrink-0 mt-0.5">
                       {getNotificationIcon(notification.type)}
@@ -372,7 +366,7 @@ export function SmartNotificationSystem({ enabled = true }: Props) {
                                 notification.action!.onClick();
                               }}
                               className="mt-2 text-xs text-blue-600 hover:text-blue-800 font-medium transition-colors"
-                            >
+
                               {notification.action.label} →
                             </button>
                           )}
@@ -390,7 +384,7 @@ export function SmartNotificationSystem({ enabled = true }: Props) {
                             }}
                             className="p-1 text-gray-400 hover:text-red-500 transition-colors"
                             title="Remove notification"
-                          >
+
                             <X className="w-3 h-3" />
                           </button>
                         </div>
@@ -422,4 +416,4 @@ export function SmartNotificationSystem({ enabled = true }: Props) {
       </motion.div>
     </AnimatePresence>
   );
-}
+}}}}}}}}}}}}}}

@@ -45,7 +45,7 @@ const EnhancedLoading = ({ variant = 'spinner', size = 'md', text, className = '
                 return renderBars();
             default:
                 return renderSpinner();
-        }
+
     };
     return (<div className={`flex flex-col items-center justify-center space-y-3 ${className}`}>
       {renderVariant()}
@@ -55,3 +55,4 @@ const EnhancedLoading = ({ variant = 'spinner', size = 'md', text, className = '
     </div>);
 };
 export default EnhancedLoading;
+</motion.div></motion.div></motion.div></motion.div>}

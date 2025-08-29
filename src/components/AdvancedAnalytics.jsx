@@ -64,7 +64,7 @@ export function AdvancedAnalytics() {
         return (<div className="flex items-center justify-center h-64">
         <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-zion-cyan"></div>
       </div>);
-    }
+
     return (<div className="space-y-6 p-6">
       <div className="text-center">
         <h2 className="text-3xl font-bold text-zion-blue mb-4">
@@ -207,4 +207,4 @@ export function AdvancedAnalytics() {
         </div>
       </motion.div>
     </div>);
-}
+}}

@@ -51,7 +51,6 @@ export interface ExpandedService2027 {
   reviews: number;
   launchDate: string;
   status: 'active' | 'beta' | 'coming-soon';
-}
 
 // 1. ADVANCED CYBERSECURITY & THREAT INTELLIGENCE
 export const advancedCybersecurityServices: ExpandedService2027[] = [
@@ -216,7 +215,7 @@ export const advancedCybersecurityServices: ExpandedService2027[] = [
     reviews: 189,
     launchDate: '2027-02-01',
     status: 'active'
-  }
+
 ];
 
 // 2. ADVANCED DATA ANALYTICS & BUSINESS INTELLIGENCE
@@ -382,7 +381,7 @@ export const advancedDataAnalyticsServices: ExpandedService2027[] = [
     reviews: 198,
     launchDate: '2027-02-15',
     status: 'active'
-  }
+
 ];
 
 // 3. ADVANCED CLOUD & DEVOPS SOLUTIONS
@@ -548,7 +547,7 @@ export const advancedCloudDevOpsServices: ExpandedService2027[] = [
     reviews: 245,
     launchDate: '2027-02-05',
     status: 'active'
-  }
+
 ];
 
 // 4. ADVANCED IOT & EDGE COMPUTING
@@ -714,7 +713,7 @@ export const advancedIoTServices: ExpandedService2027[] = [
     reviews: 156,
     launchDate: '2027-02-10',
     status: 'active'
-  }
+
 ];
 
 // 5. ADVANCED FINANCIAL TECHNOLOGY
@@ -880,7 +879,7 @@ export const advancedFinTechServices: ExpandedService2027[] = [
     reviews: 423,
     launchDate: '2027-01-01',
     status: 'active'
-  }
+
 ];
 
 // 6. ADVANCED HEALTHCARE TECHNOLOGY
@@ -1046,7 +1045,7 @@ export const advancedHealthcareServices: ExpandedService2027[] = [
     reviews: 289,
     launchDate: '2027-01-15',
     status: 'active'
-  }
+
 ];
 
 // Export all expanded services
@@ -1074,7 +1073,7 @@ export const EXPANDED_SERVICE_CATEGORIES = [
 export const getExpandedServicesByCategory = (category: string): ExpandedService2027[] => {
   if (category === 'All') {
     return ALL_EXPANDED_SERVICES_2027;
-  }
+
   return ALL_EXPANDED_SERVICES_2027.filter(service => service.category === category);
 };
 
@@ -1094,4 +1093,4 @@ export const searchExpandedServices = (query: string): ExpandedService2027[] => 
     service.category.toLowerCase().includes(lowercaseQuery) ||
     service.subcategory.toLowerCase().includes(lowercaseQuery)
   );
-};
+};}}}}}}}}

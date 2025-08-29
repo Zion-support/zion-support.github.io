@@ -40,7 +40,6 @@ export interface UltimateInnovativeService {
   patentStatus: 'Patented' | 'Patent Pending' | 'Trade Secret' | 'Open Source';
   aiCapabilities: string[];
   marketDisruption: string;
-}
 
 const contact = {
   mobile: '+1 302 464 0950',
@@ -558,7 +557,7 @@ export const ultimateInnovativeServices2025: UltimateInnovativeService[] = [
     patentStatus: 'Trade Secret',
     aiCapabilities: ['Personalized Recommendations', 'Dynamic Pricing', 'Customer Behavior Analysis', 'Sales Forecasting'],
     marketDisruption: 'Revolutionizes retail with AI personalization'
-  }
+
 ];
 
-export default ultimateInnovativeServices2025;
+export default ultimateInnovativeServices2025;}}

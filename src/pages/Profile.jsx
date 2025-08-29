@@ -11,7 +11,7 @@ export default function Profile() {
         if (!isLoading && !user) {
             toast.error("Please log in to view your profile");
             navigate("/login?redirect=/profile");
-        }
+
     }, [user, isLoading, navigate]);
     if (isLoading) {
         return (<>
@@ -21,7 +21,7 @@ export default function Profile() {
         </div>
 
       </>);
-    }
+
     if (!user) {
         return (<>
 
@@ -36,7 +36,7 @@ export default function Profile() {
         </div>
 
       </>);
-    }
+
     return (<>
 
       <div className="min-h-screen bg-zion-blue">
@@ -65,6 +65,7 @@ export default function Profile() {
       </div>
 
     </>);
-}
+
 ;
 export default Profile;
+}}}}

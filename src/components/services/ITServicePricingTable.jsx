@@ -1,7 +1,5 @@
 import React, { useState } from 'react';
-import { Check, X, Star, Clock, Users, Shield } from 'lucide-react';
-
-export const ITServicePricingTable = () => {
+import { Check, X, Star, Clock, Users, Shield export const ITServicePricingTable = () => {
   const [billingCycle, setBillingCycle] = useState('monthly');
 
   const plans = [
@@ -70,7 +68,7 @@ export const ITServicePricingTable = () => {
       ],
       popular: false,
       icon: Star
-    }
+
   ];
 
   const additionalServices = [
@@ -93,7 +91,7 @@ export const ITServicePricingTable = () => {
       name: 'Training Sessions',
       price: 200,
       description: 'Staff IT training (per session)'
-    }
+
   ];
 
   return (
@@ -116,7 +114,7 @@ export const ITServicePricingTable = () => {
             <button
               onClick={() => setBillingCycle(billingCycle === 'monthly' ? 'yearly' : 'monthly')}
               className="mx-4 relative inline-flex h-6 w-11 items-center rounded-full bg-blue-600 transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
-            >
+
               <span
                 className={`inline-block h-4 w-4 transform rounded-full bg-white transition-transform ${
                   billingCycle === 'yearly' ? 'translate-x-6' : 'translate-x-1'
@@ -140,7 +138,7 @@ export const ITServicePricingTable = () => {
                   ? 'border-blue-500 scale-105'
                   : 'border-gray-200 hover:border-gray-300'
               }`}
-            >
+
               {plan.popular && (
                 <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                   <span className="bg-blue-600 text-white px-4 py-2 rounded-full text-sm font-semibold">
@@ -195,7 +193,7 @@ export const ITServicePricingTable = () => {
                       ? 'bg-blue-600 text-white hover:bg-blue-700'
                       : 'bg-gray-100 text-gray-900 hover:bg-gray-200'
                   }`}
-                >
+
                   Get Started
                 </button>
               </div>
@@ -268,13 +266,13 @@ export const ITServicePricingTable = () => {
               <a
                 href="#contact"
                 className="px-8 py-3 bg-white text-blue-600 font-semibold rounded-lg hover:bg-gray-100 transition-all duration-300"
-              >
+
                 Get Custom Quote
               </a>
               <a
                 href="#demo"
                 className="px-8 py-3 border border-white/30 text-white font-semibold rounded-lg hover:bg-white/10 transition-all duration-300"
-              >
+
                 Schedule Demo
               </a>
             </div>
@@ -283,4 +281,4 @@ export const ITServicePricingTable = () => {
       </div>
     </section>
   );
-};
+};}}}

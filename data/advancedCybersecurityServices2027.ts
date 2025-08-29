@@ -40,7 +40,6 @@ export interface AdvancedCybersecurityService2027 {
     website: string;
     address: string;
   };
-}
 
 export const ADVANCED_CYBERSECURITY_SERVICES_2027: AdvancedCybersecurityService2027[] = [
   // AI-Powered Threat Intelligence Platform
@@ -126,7 +125,7 @@ export const ADVANCED_CYBERSECURITY_SERVICES_2027: AdvancedCybersecurityService2
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com",
       address: "364 E Main St STE 1008 Middletown DE 19709"
-    }
+
   },
 
   // Quantum Cryptography Platform
@@ -212,7 +211,7 @@ export const ADVANCED_CYBERSECURITY_SERVICES_2027: AdvancedCybersecurityService2
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com",
       address: "364 E Main St STE 1008 Middletown DE 19709"
-    }
+
   },
 
   // Zero Trust Security Architecture
@@ -298,7 +297,7 @@ export const ADVANCED_CYBERSECURITY_SERVICES_2027: AdvancedCybersecurityService2
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com",
       address: "364 E Main St STE 1008 Middletown DE 19709"
-    }
+
   },
 
   // Autonomous Security Operations Center
@@ -384,7 +383,7 @@ export const ADVANCED_CYBERSECURITY_SERVICES_2027: AdvancedCybersecurityService2
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com",
       address: "364 E Main St STE 1008 Middletown DE 19709"
-    }
+
   },
 
   // Quantum-Resistant Cryptography Platform
@@ -470,6 +469,6 @@ export const ADVANCED_CYBERSECURITY_SERVICES_2027: AdvancedCybersecurityService2
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com",
       address: "364 E Main St STE 1008 Middletown DE 19709"
-    }
-  }
-];
+
+
+];}}}}}}}

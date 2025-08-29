@@ -13,7 +13,6 @@ interface PostCardProps {
       avatar: string;
     };
   };
-}
 
 export default function PostCard({ post }: PostCardProps) {
   return (
@@ -58,4 +57,4 @@ export default function PostCard({ post }: PostCardProps) {
       </div>
     </div>
   );
-}
+}}

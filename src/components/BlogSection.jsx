@@ -15,7 +15,7 @@ export function BlogSection() {
             excerpt: 'Best practices and architectural patterns for creating scalable web apps...',
             date: '2024-01-10',
             readTime: '12 min read'
-        }
+
     ];
     return (<section className="py-16">
       <div className="container mx-auto px-4">
@@ -41,4 +41,4 @@ export function BlogSection() {
         </div>
       </div>
     </section>);
-}
+}}

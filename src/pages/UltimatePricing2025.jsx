@@ -81,7 +81,7 @@ const UltimatePricing2025 = () => {
                     marketPosition: "AI financial planning platform",
                     competitors: ["Personal Capital", "Betterment", "Wealthfront"],
                     competitiveAdvantage: "AI optimization, comprehensive planning, expert support"
-                }
+
             ]
         },
         {
@@ -144,7 +144,7 @@ const UltimatePricing2025 = () => {
                     marketPosition: "Leading healthcare AI",
                     competitors: ["IBM Watson Health", "Google Health", "Microsoft Healthcare"],
                     competitiveAdvantage: "Advanced medical AI, healthcare integration, regulatory compliance"
-                }
+
             ]
         },
         {
@@ -207,7 +207,7 @@ const UltimatePricing2025 = () => {
                     marketPosition: "Expert Web3 development",
                     competitors: ["Consensys", "Chainlink Labs", "Alchemy"],
                     competitiveAdvantage: "Full-stack development, rapid deployment, blockchain expertise"
-                }
+
             ]
         },
         {
@@ -270,9 +270,9 @@ const UltimatePricing2025 = () => {
                     marketPosition: "Quantum-safe cryptography leader",
                     competitors: ["Post-Quantum", "ISARA", "Cryptosense"],
                     competitiveAdvantage: "Quantum expertise, practical implementation, strategic planning"
-                }
+
             ]
-        }
+
     ];
     return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white">
       {/* Hero Section */}
@@ -447,3 +447,4 @@ const UltimatePricing2025 = () => {
     </div>);
 };
 export default UltimatePricing2025;
+}}}}}

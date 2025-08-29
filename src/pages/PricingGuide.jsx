@@ -3,8 +3,7 @@ import { EXPANDED_SERVICES, EXPANDED_SERVICE_CATEGORIES } from '@/data/expandedS
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
-import { Check, Star, TrendingUp, Shield, Zap, Database, Cloud, Brain, Lock, Globe, Phone, Mail, MapPin, Clock } from 'lucide-react';
-import { SEO } from '@/components/SEO';
+import { Check, Star, TrendingUp, Shield, Zap, Database, Cloud, Brain, Lock, Globe, Phone, Mail, MapPin, Clock import { SEO } from '@/components/SEO';
 export default function PricingGuide() {
     const [selectedCategory, setSelectedCategory] = useState('all');
     const filteredServices = selectedCategory === 'all'
@@ -26,7 +25,7 @@ export default function PricingGuide() {
     const formatPrice = (price) => {
         if (price >= 1000) {
             return `$${(price / 1000).toFixed(0)}K`;
-        }
+
         return `$${price}`;
     };
     const getMarketComparison = (price, category) => {
@@ -333,4 +332,4 @@ export default function PricingGuide() {
         </div>
       </div>
     </div>);
-}
+</Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card>}}}

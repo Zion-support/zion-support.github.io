@@ -1,8 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import { Shield, CheckCircle, FileText, Users, BarChart3, Zap, Lock, Target, AlertTriangle, Clock, Database, Cloud, Server, Globe, TrendingUp, Award, BookOpen, Settings, Bell } from 'lucide-react';
-import { SEO } from '@/components/SEO';
+import { Shield, CheckCircle, FileText, Users, BarChart3, Zap, Lock, Target, AlertTriangle, Clock, Database, Cloud, Server, Globe, TrendingUp, Award, BookOpen, Settings, Bell import { SEO } from '@/components/SEO';
 
 export default function SOC2ComplianceTracker() {
   const features = [
@@ -35,7 +34,7 @@ export default function SOC2ComplianceTracker() {
       icon: Clock,
       title: "Audit Trail",
       description: "Complete audit logging of all system activities, changes, and access attempts for compliance reporting."
-    }
+
   ];
 
   const complianceAreas = [
@@ -68,7 +67,7 @@ export default function SOC2ComplianceTracker() {
       icon: FileText,
       title: "Documentation",
       description: "Policies, procedures, and compliance documentation management"
-    }
+
   ];
 
   const pricingPlans = [
@@ -118,7 +117,7 @@ export default function SOC2ComplianceTracker() {
         "Custom training"
       ],
       popular: false
-    }
+
   ];
 
   const benefits = [
@@ -141,7 +140,7 @@ export default function SOC2ComplianceTracker() {
       title: "Build Customer Trust",
       description: "Demonstrate your commitment to security and compliance to build customer confidence.",
       icon: Users
-    }
+
   ];
 
   const complianceSteps = [
@@ -174,7 +173,7 @@ export default function SOC2ComplianceTracker() {
       step: "06",
       title: "Ongoing Compliance",
       description: "Maintain compliance with continuous monitoring and improvement"
-    }
+
   ];
 
   return (
@@ -195,7 +194,7 @@ export default function SOC2ComplianceTracker() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6 }}
-              >
+
                 <h1 className="text-5xl md:text-6xl font-bold mb-6">
                   <span className="bg-gradient-to-r from-indigo-400 via-purple-500 to-pink-400 bg-clip-text text-transparent">
                     SOC2 Compliance Tracker
@@ -209,13 +208,13 @@ export default function SOC2ComplianceTracker() {
                   <Link
                     to="/request-quote"
                     className="px-8 py-4 bg-gradient-to-r from-indigo-500 to-purple-600 rounded-lg font-semibold hover:from-indigo-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105"
-                  >
+
                     Start Compliance Journey
                   </Link>
                   <Link
                     to="/contact"
                     className="px-8 py-4 border-2 border-indigo-500 text-indigo-400 rounded-lg font-semibold hover:bg-indigo-500 hover:text-white transition-all duration-300"
-                  >
+
                     Schedule Demo
                   </Link>
                 </div>
@@ -244,7 +243,7 @@ export default function SOC2ComplianceTracker() {
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
                   className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700 hover:border-indigo-500 transition-all duration-300"
-                >
+
                   <div className="w-12 h-12 bg-gradient-to-r from-indigo-500 to-purple-600 rounded-lg flex items-center justify-center mb-4">
                     <feature.icon className="w-6 h-6 text-white" />
                   </div>
@@ -276,7 +275,7 @@ export default function SOC2ComplianceTracker() {
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
                   className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700 hover:border-purple-500 transition-all duration-300"
-                >
+
                   <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-600 rounded-lg flex items-center justify-center mb-4">
                     <area.icon className="w-6 h-6 text-white" />
                   </div>
@@ -308,7 +307,7 @@ export default function SOC2ComplianceTracker() {
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
                   className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700 hover:border-indigo-500 transition-all duration-300"
-                >
+
                   <div className="w-16 h-16 bg-gradient-to-r from-indigo-500 to-purple-600 rounded-full flex items-center justify-center mb-4 mx-auto">
                     <span className="text-white font-bold text-lg">{step.step}</span>
                   </div>
@@ -340,7 +339,7 @@ export default function SOC2ComplianceTracker() {
                   whileInView={{ opacity: 1, x: 0 }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
                   className="flex items-start space-x-4"
-                >
+
                   <div className="w-12 h-12 bg-gradient-to-r from-indigo-500 to-purple-600 rounded-lg flex items-center justify-center flex-shrink-0">
                     <benefit.icon className="w-6 h-6 text-white" />
                   </div>
@@ -378,7 +377,7 @@ export default function SOC2ComplianceTracker() {
                       ? 'border-indigo-500 ring-2 ring-indigo-500/20'
                       : 'border-slate-700'
                   }`}
-                >
+
                   {plan.popular && (
                     <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                       <span className="bg-gradient-to-r from-indigo-500 to-purple-600 text-white px-4 py-2 rounded-full text-sm font-semibold">
@@ -412,7 +411,7 @@ export default function SOC2ComplianceTracker() {
                         ? 'bg-gradient-to-r from-indigo-500 to-purple-600 text-white hover:from-indigo-600 hover:to-purple-700'
                         : 'bg-slate-700 text-white hover:bg-slate-600'
                     }`}
-                  >
+
                     Get Started
                   </Link>
                 </motion.div>
@@ -428,7 +427,7 @@ export default function SOC2ComplianceTracker() {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
-            >
+
               <h2 className="text-4xl font-bold mb-6 text-white">
                 Ready to Achieve SOC2 Compliance?
               </h2>
@@ -439,13 +438,13 @@ export default function SOC2ComplianceTracker() {
                 <Link
                   to="/request-quote"
                   className="px-8 py-4 bg-gradient-to-r from-indigo-500 to-purple-600 rounded-lg font-semibold hover:from-indigo-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105"
-                >
+
                   Start Free Trial
                 </Link>
                 <Link
                   to="/contact"
                   className="px-8 py-4 border-2 border-indigo-500 text-indigo-400 rounded-lg font-semibold hover:bg-indigo-500 hover:text-white transition-all duration-300"
-                >
+
                   Contact Sales
                 </Link>
               </div>
@@ -455,5 +454,4 @@ export default function SOC2ComplianceTracker() {
       </div>
     </>
   );
-}
-
+}}}}}}}

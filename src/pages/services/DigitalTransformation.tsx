@@ -13,7 +13,6 @@ export default function DigitalTransformation() {
       </section>
     </div>
   );
-}
 
 import React from 'react';
 import { motion } from 'framer-motion';
@@ -38,7 +37,6 @@ import {
   FileText,
   Monitor,
   Smartphone
-} from 'lucide-react';
 export default function DigitalTransformation() {
   const services = [
     {
@@ -76,7 +74,7 @@ export default function DigitalTransformation() {
       description: "Leverage data insights to drive informed business decisions",
       features: ["Data Collection", "Analytics Platforms", "Business Intelligence", "Predictive Modeling"],
       icon: "📊"
-    }
+
   ];
   const benefits = [
     {
@@ -98,7 +96,7 @@ export default function DigitalTransformation() {
       title: 'Competitive Advantage',
       description: 'Stay ahead of the competition with cutting-edge digital capabilities.',
       icon: Target
-    }
+
   ];
   const contactInfo = {
     phone: "+1 302 464 0950",
@@ -116,7 +114,7 @@ export default function DigitalTransformation() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-          >
+
             <h1 className="text-5xl lg:text-7xl font-bold bg-gradient-to-r from-zion-cyan via-zion-purple to-zion-blue bg-clip-text text-transparent mb-6">
               Digital Transformation
             </h1>
@@ -128,13 +126,13 @@ export default function DigitalTransformation() {
               <Link
                 to="/contact"
                 className="px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-blue text-white rounded-lg hover:shadow-lg hover:shadow-zion-cyan/25 transition-all duration-300 transform hover:scale-105 font-semibold"
-              >
+
                 Start Your Transformation
               </Link>
               <Link
                 to="/solutions"
                 className="px-8 py-4 border-2 border-zion-cyan text-zion-cyan rounded-lg hover:bg-zion-cyan hover:text-white transition-all duration-300 font-semibold"
-              >
+
                 View Solutions
               </Link>
             </div>
@@ -149,7 +147,7 @@ export default function DigitalTransformation() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-          >
+
             <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
               Our Transformation Services
             </h2>
@@ -166,7 +164,7 @@ export default function DigitalTransformation() {
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-              >
+
                 <div className="flex items-start gap-4 mb-6">
                   <div className="w-16 h-16 bg-gradient-to-r from-zion-cyan to-zion-blue rounded-lg flex items-center justify-center flex-shrink-0">
                     <service.icon className="w-8 h-8 text-white" />
@@ -200,7 +198,7 @@ export default function DigitalTransformation() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-          >
+
             <h2 className="text-4xl lg:text-5xl font-bold text-white mb-6">
               Why Choose Digital Transformation?
             </h2>
@@ -216,7 +214,7 @@ export default function DigitalTransformation() {
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-              >
+
                 <div className="w-16 h-16 bg-gradient-to-r from-zion-cyan to-zion-blue rounded-lg flex items-center justify-center mb-6">
                   <benefit.icon className="w-8 h-8 text-white" />
                 </div>
@@ -235,7 +233,7 @@ export default function DigitalTransformation() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-          >
+
             <h2 className="text-4xl lg:text-5xl font-bold text-white mb-6">
               Industries We Serve
             </h2>
@@ -252,7 +250,7 @@ export default function DigitalTransformation() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-              >
+
                 <div className="text-zion-cyan font-semibold">{industry}</div>
               </motion.div>
             ))}
@@ -267,7 +265,7 @@ export default function DigitalTransformation() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-          >
+
             <h2 className="text-4xl lg:text-5xl font-bold text-white mb-6">
               Our Transformation Process
             </h2>
@@ -288,7 +286,7 @@ export default function DigitalTransformation() {
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-              >
+
                 <div className="w-20 h-20 bg-gradient-to-r from-zion-cyan to-zion-blue rounded-full flex items-center justify-center mx-auto mb-6 text-2xl font-bold text-white">
                   {phase.step}
                 </div>
@@ -307,7 +305,7 @@ export default function DigitalTransformation() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-          >
+
             <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
               Ready to Transform Your Business?
             </h2>
@@ -319,13 +317,13 @@ export default function DigitalTransformation() {
               <Link
                 to="/contact"
                 className="px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-blue text-white rounded-lg hover:shadow-lg hover:shadow-zion-cyan/25 transition-all duration-300 transform hover:scale-105 font-semibold"
-              >
+
                 Schedule Consultation
               </Link>
               <Link
                 to="/solutions"
                 className="px-8 py-4 border-2 border-zion-cyan text-zion-cyan rounded-lg hover:bg-zion-cyan hover:text-white transition-all duration-300 font-semibold"
-              >
+
                 Explore Solutions
               </Link>
             </div>
@@ -336,3 +334,4 @@ export default function DigitalTransformation() {
   );
 };
 export default DigitalTransformation;
+}}}</motion.h1>}

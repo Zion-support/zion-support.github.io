@@ -1,7 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Sun, Moon, Monitor } from 'lucide-react';
-
-type Theme = 'dark' | 'light' | 'system';
+import { Sun, Moon, Monitor type Theme = 'dark' | 'light' | 'system';
 
 export function ThemeToggle() {
   const [theme, setTheme] = useState<Theme>('system');
@@ -12,7 +10,7 @@ export function ThemeToggle() {
     const savedTheme = localStorage.getItem('zion-theme') as Theme;
     if (savedTheme) {
       setTheme(savedTheme);
-    }
+
   }, []);
 
   useEffect(() => {
@@ -26,7 +24,7 @@ export function ThemeToggle() {
       root.classList.add(systemTheme);
     } else {
       root.classList.add(theme);
-    }
+
     localStorage.setItem('zion-theme', theme);
   }, [theme, mounted]);
 
@@ -42,23 +40,23 @@ export function ThemeToggle() {
         onClick={() => toggleTheme('light')}
         className={`p-2 rounded-full transition-colors duration-200 ${theme === 'light' ? 'bg-zion-cyan text-white' : 'text-zion-slate-light hover:bg-zion-slate-light/10'}`}
         aria-label="Switch to light theme"
-      >
+
         <Sun className="h-5 w-5" />
       </button>
       <button
         onClick={() => toggleTheme('dark')}
         className={`p-2 rounded-full transition-colors duration-200 ${theme === 'dark' ? 'bg-zion-purple text-white' : 'text-zion-slate-light hover:bg-zion-slate-light/10'}`}
         aria-label="Switch to dark theme"
-      >
+
         <Moon className="h-5 w-5" />
       </button>
       <button
         onClick={() => toggleTheme('system')}
         className={`p-2 rounded-full transition-colors duration-200 ${theme === 'system' ? 'bg-zion-green text-white' : 'text-zion-slate-light hover:bg-zion-slate-light/10'}`}
         aria-label="Switch to system theme"
-      >
+
         <Monitor className="h-5 w-5" />
       </button>
     </div>
   );
-}
+}}}}

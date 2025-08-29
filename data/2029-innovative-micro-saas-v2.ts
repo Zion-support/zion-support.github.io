@@ -38,7 +38,7 @@ export interface InnovativeMicroSaasService2029V2 {
     website: string;
     address: string;
   };
-}
+
 export const innovativeMicroSaasServices2029V2: InnovativeMicroSaasService2029V2[] = [
   {
     id: 'ai-emotion-based-marketing-platform',
@@ -102,7 +102,7 @@ export const innovativeMicroSaasServices2029V2: InnovativeMicroSaasService2029V2
       email: 'kleber@ziontechgroup.com',
       website: 'https://ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709'
-    }
+
   },
   {
     id: 'biotech-personalized-nutrition-platform',
@@ -166,7 +166,7 @@ export const innovativeMicroSaasServices2029V2: InnovativeMicroSaasService2029V2
       email: 'kleber@ziontechgroup.com',
       website: 'https://ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709'
-    }
+
   },
   {
     id: 'quantum-learning-accelerator',
@@ -230,7 +230,7 @@ export const innovativeMicroSaasServices2029V2: InnovativeMicroSaasService2029V2
       email: 'kleber@ziontechgroup.com',
       website: 'https://ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709'
-    }
+
   },
   {
     id: 'intelligent-data-governance-platform',
@@ -294,7 +294,7 @@ export const innovativeMicroSaasServices2029V2: InnovativeMicroSaasService2029V2
       email: 'kleber@ziontechgroup.com',
       website: 'https://ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709'
-    }
+
   },
   {
     id: 'ai-autonomous-business-manager',
@@ -358,6 +358,6 @@ export const innovativeMicroSaasServices2029V2: InnovativeMicroSaasService2029V2
       email: 'kleber@ziontechgroup.com',
       website: 'https://ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709'
-    }
-  }
-];
+
+
+];}}}}}}}

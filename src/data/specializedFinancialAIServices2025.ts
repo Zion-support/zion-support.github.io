@@ -28,7 +28,6 @@ export interface FinancialAIService {
     website: string;
     address: string;
   };
-}
 
 // Zion Tech Group Contact Information
 const zionContact = {
@@ -296,7 +295,7 @@ export const specializedFinancialAIServices2025: FinancialAIService[] = [
       "Wealth management"
     ],
     technologies: ["AI/ML", "Robo-advisory", "Portfolio Optimization", "Financial Planning"]
-  }
+
 ];
 
-export default specializedFinancialAIServices2025;
+export default specializedFinancialAIServices2025;}}

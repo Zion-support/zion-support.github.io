@@ -3,8 +3,7 @@ import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
-import { Brain, Shield, Users, TrendingUp, ArrowRight, Star } from 'lucide-react';
-import { ADVANCED_SERVICES } from '@/data/advancedServices';
+import { Brain, Shield, Users, TrendingUp, ArrowRight, Star import { ADVANCED_SERVICES } from '@/data/advancedServices';
 // Featured services for the showcase
 const FEATURED_SERVICES = ADVANCED_SERVICES.filter(service => service.featured).slice(0, 6);
 export function AdvancedServicesShowcase() {
@@ -173,4 +172,4 @@ export function AdvancedServicesShowcase() {
         </div>
       </div>
     </section>);
-}
+</Card></Card></Card></Card>}}

@@ -8,7 +8,7 @@ export const Sidebar = React.forwardRef((props, ref) => {
         return (<div className={cn("flex h-full w-[--sidebar-width] flex-col bg-sidebar text-sidebar-foreground", props.className)} ref={ref} {...props}>
         {props.children}
       </div>);
-    }
+
     if (isMobile) {
         return (<Sheet open={openMobile} onOpenChange={setOpenMobile} {...props}>
         <SheetContent data-sidebar="sidebar" data-mobile="true" className="w-[--sidebar-width] bg-sidebar p-0 text-sidebar-foreground [&>button]:hidden" style={{
@@ -17,7 +17,7 @@ export const Sidebar = React.forwardRef((props, ref) => {
           <div className="flex h-full w-full flex-col">{props.children}</div>
         </SheetContent>
       </Sheet>);
-    }
+
     return (<div ref={ref} className="group peer hidden md:block text-sidebar-foreground" data-state={state} data-collapsible={state === "collapsed" ? props.collapsible : ""} data-variant={props.variant} data-side={props.side}>
       {/* This is what handles the sidebar gap on desktop */}
       <div className={cn("duration-200 relative h-svh w-[--sidebar-width] bg-transparent transition-[width] ease-linear", "group-data-[collapsible=offcanvas]:w-0", "group-data-[side=right]:rotate-180", props.variant === "floating" || props.variant === "inset"
@@ -44,5 +44,6 @@ export const SidebarRail = React.forwardRef((props, ref) => {
 SidebarRail.displayName = "SidebarRail";
 export const SidebarInset = React.forwardRef((props, ref) => {
     return (<main ref={ref} className={cn("relative flex min-h-svh flex-1 flex-col bg-background", "peer-data-[variant=inset]:min-h-[calc(100svh-theme(spacing.4))] md:peer-data-[variant=inset]:m-2 md:peer-data-[state=collapsed]:peer-data-[variant=inset]:ml-2 md:peer-data-[variant=inset]:ml-0 md:peer-data-[variant=inset]:rounded-xl md:peer-data-[variant=inset]:shadow", props.className)} {...props}/>);
-});
+</div></main>});
 SidebarInset.displayName = "SidebarInset";
+}}

@@ -34,7 +34,6 @@ export interface InnovativeMicroSaasService2027 {
   aiCapabilities?: string[];
   complianceFeatures?: string[];
   scalabilityFeatures?: string[];
-}
 
 export const INNOVATIVE_MICRO_SAAS_SERVICES_2027: InnovativeMicroSaasService2027[] = [
   // AI-Powered Business Solutions
@@ -605,5 +604,6 @@ export const INNOVATIVE_MICRO_SAAS_SERVICES_2027: InnovativeMicroSaasService2027
       website: "https://ziontechgroup.com"
     },
     marketSize: "$67.2 billion by 2027"
-  }
+
 ];
+}}

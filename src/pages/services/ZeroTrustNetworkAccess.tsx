@@ -23,8 +23,6 @@ import {
   Building,
   Cloud,
   Wifi
-} from 'lucide-react';
-
 const ZeroTrustNetworkAccess: React.FC = () => {
   const features = [
     {
@@ -50,7 +48,7 @@ const ZeroTrustNetworkAccess: React.FC = () => {
       title: "Performance Optimization",
       description: "Direct-to-application routing that eliminates network hops and improves user experience significantly.",
       benefits: ["Faster access speeds", "Reduced latency", "Better user experience"]
-    }
+
   ];
 
   const securityBenefits = [
@@ -77,7 +75,7 @@ const ZeroTrustNetworkAccess: React.FC = () => {
       description: "Faster, more reliable access without VPN complexity and performance issues",
       icon: Zap,
       metric: "3x"
-    }
+
   ];
 
   const useCases = [
@@ -104,7 +102,7 @@ const ZeroTrustNetworkAccess: React.FC = () => {
       description: "Protect sensitive data centers with granular access controls and micro-segmentation.",
       icon: Server,
       industries: ["Banking", "Government", "Defense", "Research"]
-    }
+
   ];
 
   const pricingPlans = [
@@ -157,7 +155,7 @@ const ZeroTrustNetworkAccess: React.FC = () => {
       ],
       cta: "Contact Sales",
       popular: false
-    }
+
   ];
 
   const complianceFeatures = [
@@ -387,7 +385,7 @@ const ZeroTrustNetworkAccess: React.FC = () => {
                         ? 'bg-gradient-to-r from-purple-600 to-blue-600 text-white hover:from-purple-700 hover:to-blue-700'
                         : 'bg-white/10 text-white border border-white/20 hover:bg-white/20'
                     }`}
-                  >
+
                     {plan.cta}
                   </Link>
                 </div>
@@ -424,4 +422,4 @@ const ZeroTrustNetworkAccess: React.FC = () => {
   );
 };
 
-export default ZeroTrustNetworkAccess;
+export default ZeroTrustNetworkAccess;}}}}}

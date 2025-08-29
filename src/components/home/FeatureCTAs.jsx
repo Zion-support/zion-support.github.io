@@ -13,8 +13,6 @@ import {
   TrendingUp,
   Award,
   Globe
-} from 'lucide-react';
-
 export function FeatureCTAs() {
   const features = [
     {
@@ -64,7 +62,7 @@ export function FeatureCTAs() {
       link: "/zion-hire-ai",
       badge: "Premium",
       details: "Automate screening, improve candidate matching, and enhance the hiring experience with our AI recruiting solution."
-    }
+
   ];
 
   const ctaItems = [
@@ -99,7 +97,7 @@ export function FeatureCTAs() {
       icon: Globe,
       color: "from-orange-500 to-orange-600",
       hoverColor: "from-orange-600 to-orange-700"
-    }
+
   ];
 
   return (
@@ -130,7 +128,7 @@ export function FeatureCTAs() {
                 <Link
                   to={feature.link}
                   className="inline-flex items-center text-blue-600 hover:text-blue-800 font-medium transition-colors"
-                >
+
                   Explore {feature.title}
                   <ArrowRight className="w-4 h-4 ml-2"/>
                 </Link>
@@ -158,7 +156,7 @@ export function FeatureCTAs() {
                 key={index}
                 href={item.href}
                 className="group bg-slate-800/50 border border-white/10 rounded-xl p-6 text-center hover:border-white/20 transition-all duration-300 hover:transform hover:scale-105"
-              >
+
                 <div className={`w-16 h-16 bg-gradient-to-r ${item.color} rounded-full flex items-center justify-center mx-auto mb-4 group-hover:shadow-lg transition-all duration-300`}>
                   <item.icon className="w-8 h-8 text-white"/>
                 </div>
@@ -186,7 +184,7 @@ export function FeatureCTAs() {
             <a
               href="/contact"
               className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-orange-600 to-red-600 text-white font-semibold rounded-lg hover:from-orange-700 hover:to-red-700 transition-all duration-300 shadow-lg hover:shadow-xl"
-            >
+
               Talk to an Expert
               <ArrowRight className="w-5 h-5 ml-2"/>
             </a>
@@ -195,4 +193,4 @@ export function FeatureCTAs() {
       </div>
     </section>
   );
-}
+}}}}

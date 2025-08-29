@@ -1,7 +1,5 @@
 import React from 'react';
-import { Cog, Wifi, Database, Shield, Zap, BarChart3, Activity, Globe } from 'lucide-react';
-
-const IoTServices = () => {
+import { Cog, Wifi, Database, Shield, Zap, BarChart3, Activity, Globe const IoTServices = () => {
   const iotServices = [
     {
       title: "IoT Device Development",
@@ -23,7 +21,7 @@ const IoTServices = () => {
       price: "From $6,500/month",
       features: ["Data collection", "Real-time processing", "Cloud storage", "Data analytics"],
       icon: Database
-    }
+
   ];
 
   const iotTechnologies = [
@@ -44,7 +42,7 @@ const IoTServices = () => {
       description: "Enterprise-grade IoT security solutions",
       icon: Shield,
       features: ["Device authentication", "Data encryption", "Secure updates", "Privacy compliance"]
-    }
+
   ];
 
   const benefits = [
@@ -221,3 +219,4 @@ const IoTServices = () => {
 };
 
 export default IoTServices;
+}}}

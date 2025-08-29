@@ -38,7 +38,7 @@ export interface InnovativeNewService2025 {
   customers: number;
   rating: number;
   reviews: number;
-}
+
 export const innovativeNewServices2025: InnovativeNewService2025[] = [
   // AI-Powered Content Intelligence Platform
   {
@@ -455,5 +455,5 @@ export const innovativeNewServices2025: InnovativeNewService2025[] = [
     customers: 38,
     rating: 4.8,
     reviews: 20
-  }
-];
+
+];}}

@@ -7,8 +7,7 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
 import { Badge } from "@/components/ui/badge";
-import { Search, Filter } from "lucide-react";
-import { SEO } from "@/components/SEO";
+import { Search, Filter import { SEO } from "@/components/SEO";
 
 // Mock data for support requests
 const MOCK_SUPPORT_REQUESTS = [
@@ -88,7 +87,7 @@ const MOCK_SUPPORT_REQUESTS = [
     createdAt: "2023-12-10T15:10:00Z",
     lastUpdated: "2023-12-13T11:25:00Z",
     category: "profile"
-  }
+
 ];
 
 export default function SupportRequests() {
@@ -105,22 +104,18 @@ export default function SupportRequests() {
         !request.user.toLowerCase().includes(searchQuery.toLowerCase()) &&
         !request.id.toLowerCase().includes(searchQuery.toLowerCase())) {
       return false;
-    }
 
     // Apply status filter
     if (statusFilter && request.status !== statusFilter) {
       return false;
-    }
 
     // Apply priority filter
     if (priorityFilter && request.priority !== priorityFilter) {
       return false;
-    }
 
     // Apply category filter
     if (categoryFilter && request.category !== categoryFilter) {
       return false;
-    }
 
     return true;
   });
@@ -139,7 +134,7 @@ export default function SupportRequests() {
   };
 
   return (
-
+    <>
       <SEO
         title="Support Requests | Admin Dashboard"
         description="Manage and track user support requests and issues"
@@ -346,6 +341,6 @@ export default function SupportRequests() {
           </TabsContent>
         </Tabs>
       </div>
-
+    </>
   );
-}
+</Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card>}}}}}}}

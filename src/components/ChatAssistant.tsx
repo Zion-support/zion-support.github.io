@@ -29,8 +29,6 @@ import {
   Maximize2,
   Volume2,
   VolumeX
-} from 'lucide-react';
-
 interface Message {
   id: string;
   type: 'user' | 'assistant' | 'system';
@@ -48,14 +46,12 @@ interface Message {
     sources?: string[];
     suggestions?: string[];
   };
-}
 
 interface ChatAssistantProps {
   enabled?: boolean;
   position?: 'bottom-right' | 'bottom-left' | 'top-right' | 'top-left';
   theme?: 'light' | 'dark' | 'auto';
   language?: string;
-}
 
 export function ChatAssistant({
   enabled = true,
@@ -95,10 +91,10 @@ export function ChatAssistant({
       };
 
       recognitionRef.current.onerror = (event: any) => {
-        // console.error('Speech recognition error:', event.error);
+        // // // console.error('Speech recognition error:', event.error);
         setIsListening(false);
       };
-    }
+
   }, [language]);
 
   // Initialize with welcome message
@@ -116,11 +112,11 @@ export function ChatAssistant({
             'How can I get started with your platform?',
             'What are your pricing plans?'
           ]
-        }
+
       };
       setMessages([welcomeMessage]);
       setSuggestions(welcomeMessage.metadata?.suggestions || []);
-    }
+
   }, [enabled, messages.length]);
 
   // Auto-scroll to bottom
@@ -186,7 +182,7 @@ export function ChatAssistant({
             'How do I implement AI in my business?',
             'What industries do you serve?'
           ]
-        }
+
       };
     } else if (input.includes('quantum') || input.includes('computing')) {
       return {
@@ -200,7 +196,7 @@ export function ChatAssistant({
             'When will quantum be commercially available?',
             'Show me quantum use cases'
           ]
-        }
+
       };
     } else if (input.includes('saas') || input.includes('software')) {
       return {
@@ -214,7 +210,7 @@ export function ChatAssistant({
             'How do integrations work?',
             'Can I customize the solutions?'
           ]
-        }
+
       };
     } else if (input.includes('pricing') || input.includes('cost') || input.includes('price')) {
       return {
@@ -228,7 +224,7 @@ export function ChatAssistant({
             'Compare plans in detail',
             'Talk to sales team'
           ]
-        }
+
       };
     } else if (input.includes('demo') || input.includes('trial')) {
       return {
@@ -241,7 +237,7 @@ export function ChatAssistant({
             'Book consultation',
             'Download demo guide'
           ]
-        }
+
       };
     } else {
       return {
@@ -254,9 +250,9 @@ export function ChatAssistant({
             'How can AI help my business?',
             'Show me your solutions'
           ]
-        }
+
       };
-    }
+
   };
 
   // Handle suggestion click
@@ -270,7 +266,6 @@ export function ChatAssistant({
     if (!recognitionRef.current) {
       alert('Speech recognition is not supported in your browser');
       return;
-    }
 
     if (isListening) {
       recognitionRef.current.stop();
@@ -278,7 +273,7 @@ export function ChatAssistant({
     } else {
       recognitionRef.current.start();
       setIsListening(true);
-    }
+
   };
 
   // Toggle mute
@@ -291,7 +286,7 @@ export function ChatAssistant({
     if (e.key === 'Enter' && !e.shiftKey) {
       e.preventDefault();
       handleSendMessage();
-    }
+
   };
 
   // Clear chat
@@ -334,7 +329,7 @@ export function ChatAssistant({
         whileTap={{ scale: 0.9 }}
         title="Chat with AI Assistant"
         aria-label="Open AI chat assistant"
-      >
+
         <MessageCircle className="w-6 h-6" />
         <motion.div
           className="absolute -top-1 -right-1 w-3 h-3 bg-green-400 rounded-full"
@@ -343,7 +338,6 @@ export function ChatAssistant({
         />
       </motion.button>
     );
-  }
 
   return (
     <AnimatePresence>
@@ -352,7 +346,7 @@ export function ChatAssistant({
         animate={{ opacity: 1, scale: 1, y: 0 }}
         exit={{ opacity: 0, scale: 0.8, y: 20 }}
         className={`fixed ${positionClasses[position]} z-50 w-96 h-[500px] bg-white rounded-2xl shadow-2xl border border-gray-200 overflow-hidden flex flex-col`}
-      >
+
         {/* Header */}
         <div className="bg-gradient-to-r from-blue-500 to-purple-600 p-4 text-white">
           <div className="flex items-center justify-between">
@@ -371,7 +365,7 @@ export function ChatAssistant({
                 onClick={toggleMute}
                 className="p-1.5 text-white/80 hover:text-white transition-colors"
                 title={isMuted ? 'Unmute' : 'Mute'}
-              >
+
                 {isMuted ? <VolumeX className="w-4 h-4" /> : <Volume2 className="w-4 h-4" />}
               </button>
 
@@ -379,7 +373,7 @@ export function ChatAssistant({
                 onClick={() => setShowSettings(!showSettings)}
                 className="p-1.5 text-white/80 hover:text-white transition-colors"
                 title="Settings"
-              >
+
                 <Settings className="w-4 h-4" />
               </button>
 
@@ -387,7 +381,7 @@ export function ChatAssistant({
                 onClick={() => setIsMinimized(!isMinimized)}
                 className="p-1.5 text-white/80 hover:text-white transition-colors"
                 title={isMinimized ? 'Maximize' : 'Minimize'}
-              >
+
                 {isMinimized ? <Maximize2 className="w-4 h-4" /> : <Minimize2 className="w-4 h-4" />}
               </button>
 
@@ -395,7 +389,7 @@ export function ChatAssistant({
                 onClick={() => setIsOpen(false)}
                 className="p-1.5 text-white/80 hover:text-white transition-colors"
                 title="Close"
-              >
+
                 <X className="w-4 h-4" />
               </button>
             </div>
@@ -410,14 +404,14 @@ export function ChatAssistant({
               animate={{ height: 'auto', opacity: 1 }}
               exit={{ height: 0, opacity: 0 }}
               className="border-b border-gray-200 p-4 bg-gray-50"
-            >
+
               <div className="space-y-3">
                 <div className="flex items-center justify-between">
                   <span className="text-sm text-gray-700">Clear chat history</span>
                   <button
                     onClick={clearChat}
                     className="px-3 py-1 bg-red-100 text-red-700 text-xs rounded-lg hover:bg-red-200 transition-colors"
-                  >
+
                     Clear
                   </button>
                 </div>
@@ -427,7 +421,7 @@ export function ChatAssistant({
                   <button
                     onClick={exportChat}
                     className="px-3 py-1 bg-blue-100 text-blue-700 text-xs rounded-lg hover:bg-blue-200 transition-colors"
-                  >
+
                     Export
                   </button>
                 </div>
@@ -446,7 +440,7 @@ export function ChatAssistant({
                   initial={{ opacity: 0, y: 10 }}
                   animate={{ opacity: 1, y: 0 }}
                   className={`flex ${message.type === 'user' ? 'justify-end' : 'justify-start'}`}
-                >
+
                   <div className={`max-w-[80%] ${message.type === 'user' ? 'order-2' : 'order-1'}`}>
                     <div className={`p-3 rounded-2xl ${
                       message.type === 'user'
@@ -488,7 +482,7 @@ export function ChatAssistant({
                   initial={{ opacity: 0, y: 10 }}
                   animate={{ opacity: 1, y: 0 }}
                   className="flex justify-start"
-                >
+
                   <div className="max-w-[80%]">
                     <div className="p-3 rounded-2xl bg-gray-100 text-gray-800">
                       <div className="flex items-center gap-2">
@@ -520,7 +514,7 @@ export function ChatAssistant({
                       className="px-3 py-1.5 bg-blue-50 text-blue-700 text-xs rounded-full hover:bg-blue-100 transition-colors border border-blue-200"
                       whileHover={{ scale: 1.05 }}
                       whileTap={{ scale: 0.95 }}
-                    >
+
                       {suggestion}
                     </motion.button>
                   ))}
@@ -551,7 +545,7 @@ export function ChatAssistant({
                   }`}
                   title={isListening ? 'Stop listening' : 'Start voice input'}
                   disabled={isProcessing}
-                >
+
                   {isListening ? <MicOff className="w-4 h-4" /> : <Mic className="w-4 h-4" />}
                 </button>
 
@@ -560,7 +554,7 @@ export function ChatAssistant({
                   disabled={!inputValue.trim() || isProcessing}
                   className="p-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600 disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
                   title="Send message"
-                >
+
                   {isProcessing ? (
                     <Loader2 className="w-4 h-4 animate-spin" />
                   ) : (
@@ -574,4 +568,4 @@ export function ChatAssistant({
       </motion.div>
     </AnimatePresence>
   );
-}
+</div></div></div></div>}}}}}}}}}}}}}}}}}</motion.div>}

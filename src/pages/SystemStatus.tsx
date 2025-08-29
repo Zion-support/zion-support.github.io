@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
-import { CheckCircle, AlertCircle, XCircle, Clock, Activity, Server, Database, Globe, Shield, Zap, BarChart3, TrendingUp } from 'lucide-react';
-import { SEO } from '../components/SEO';
+import { CheckCircle, AlertCircle, XCircle, Clock, Activity, Server, Database, Globe, Shield, Zap, BarChart3, TrendingUp import { SEO } from '../components/SEO';
 
 interface ServiceStatus {
   id: string;
@@ -12,7 +11,6 @@ interface ServiceStatus {
   lastUpdated: string;
   description: string;
   icon: React.ComponentType<any>;
-}
 
 interface Incident {
   id: string;
@@ -23,7 +21,6 @@ interface Incident {
   startTime: string;
   endTime?: string;
   affectedServices: string[];
-}
 
 const services: ServiceStatus[] = [
   {
@@ -85,7 +82,7 @@ const services: ServiceStatus[] = [
     lastUpdated: '2025-08-27T16:48:00Z',
     description: 'Data analytics and reporting systems',
     icon: BarChart3
-  }
+
 ];
 
 const incidents: Incident[] = [
@@ -98,7 +95,7 @@ const incidents: Incident[] = [
     startTime: '2025-08-27T14:00:00Z',
     affectedServices: ['database', 'analytics'],
     endTime: '2025-08-27T16:00:00Z'
-  }
+
 ];
 
 const getStatusColor = (status: ServiceStatus['status']) => {
@@ -113,7 +110,7 @@ const getStatusColor = (status: ServiceStatus['status']) => {
       return 'text-blue-400 bg-blue-400/10 border-blue-400/20';
     default:
       return 'text-gray-400 bg-gray-400/10 border-gray-400/20';
-  }
+
 };
 
 const getStatusIcon = (status: ServiceStatus['status']) => {
@@ -128,7 +125,7 @@ const getStatusIcon = (status: ServiceStatus['status']) => {
       return Clock;
     default:
       return Clock;
-  }
+
 };
 
 const getSeverityColor = (severity: Incident['severity']) => {
@@ -143,7 +140,7 @@ const getSeverityColor = (severity: Incident['severity']) => {
       return 'text-red-400 bg-red-400/10 border-red-400/20';
     default:
       return 'text-gray-400 bg-gray-400/10 border-gray-400/20';
-  }
+
 };
 
 export default function SystemStatus() {
@@ -180,7 +177,7 @@ export default function SystemStatus() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             className="inline-flex items-center px-4 py-2 bg-slate-800/50 rounded-full text-sm font-medium mb-6 border border-slate-700/50"
-          >
+
             <Activity className="w-4 h-4 mr-2 text-cyan-400" />
             System Status
           </motion.div>
@@ -190,7 +187,7 @@ export default function SystemStatus() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
             className="text-4xl md:text-6xl font-bold text-white mb-6"
-          >
+
             System Status
           </motion.h1>
 
@@ -199,7 +196,7 @@ export default function SystemStatus() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.4 }}
             className="text-xl text-gray-300 max-w-3xl mx-auto"
-          >
+
             Real-time monitoring of our services, infrastructure, and performance metrics.
           </motion.p>
         </div>
@@ -212,7 +209,7 @@ export default function SystemStatus() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.6 }}
           className="bg-slate-800/50 rounded-2xl p-8 backdrop-blur-sm border border-slate-700/50"
-        >
+
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {/* Overall Status */}
             <div className="text-center">
@@ -250,7 +247,7 @@ export default function SystemStatus() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.8 }}
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
-        >
+
           {services.map((service, index) => (
             <motion.div
               key={service.id}
@@ -258,7 +255,7 @@ export default function SystemStatus() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 1.0 + index * 0.1 }}
               className="bg-slate-800/50 rounded-xl p-6 backdrop-blur-sm border border-slate-700/50 hover:border-slate-600/50 transition-all duration-200"
-            >
+
               <div className="flex items-start justify-between mb-4">
                 <div className="flex items-center space-x-3">
                   <div className="w-10 h-10 bg-gradient-to-br from-cyan-400/20 to-blue-500/20 rounded-lg flex items-center justify-center">
@@ -303,7 +300,7 @@ export default function SystemStatus() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 1.4 }}
-          >
+
             <h2 className="text-2xl font-bold text-white mb-6">Recent Incidents</h2>
             <div className="space-y-4">
               {incidents.map((incident, index) => (
@@ -313,7 +310,7 @@ export default function SystemStatus() {
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: 1.6 + index * 0.1 }}
                   className="bg-slate-800/50 rounded-xl p-6 backdrop-blur-sm border border-slate-700/50"
-                >
+
                   <div className="flex items-start justify-between mb-4">
                     <div>
                       <div className="flex items-center space-x-3 mb-2">
@@ -375,7 +372,7 @@ export default function SystemStatus() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 1.8 }}
           className="bg-slate-800/50 rounded-2xl p-8 backdrop-blur-sm border border-slate-700/50"
-        >
+
           <h2 className="text-2xl font-bold text-white mb-6">Performance Metrics</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             <div className="text-center">
@@ -417,7 +414,7 @@ export default function SystemStatus() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 2.0 }}
           className="text-center"
-        >
+
           <div className="bg-gradient-to-r from-cyan-400/10 to-blue-500/10 rounded-2xl p-8 border border-cyan-400/20">
             <h3 className="text-2xl font-bold text-white mb-4">
               Need Help?
@@ -429,13 +426,13 @@ export default function SystemStatus() {
               <a
                 href="/support"
                 className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-cyan-400 to-blue-500 text-white font-medium rounded-lg hover:from-cyan-500 hover:to-blue-600 transition-all duration-200 hover:scale-105 shadow-lg hover:shadow-cyan-400/25"
-              >
+
                 Get Support
               </a>
               <a
                 href="/contact"
                 className="inline-flex items-center px-6 py-3 border border-cyan-400 text-cyan-400 font-medium rounded-lg hover:bg-cyan-400 hover:text-slate-900 transition-all duration-200"
-              >
+
                 Contact Us
               </a>
             </div>
@@ -444,4 +441,4 @@ export default function SystemStatus() {
       </div>
     </div>
   );
-}
+}}}}}}}}}

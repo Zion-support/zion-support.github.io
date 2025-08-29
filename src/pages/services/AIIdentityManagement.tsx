@@ -1,6 +1,4 @@
-import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, FileText, BarChart3 } from 'lucide-react';
-
-export default function AIIdentityManagement() {
+import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, FileText, BarChart3 export default function AIIdentityManagement() {
   const features = [
     'AI-powered identity management optimization',
     'Intelligent authentication and authorization',
@@ -171,4 +169,4 @@ export default function AIIdentityManagement() {
       </section>
     </div>
   );
-}
+}}

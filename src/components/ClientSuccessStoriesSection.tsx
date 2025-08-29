@@ -9,8 +9,6 @@ import {
   CheckCircle,
   ArrowRight,
   Heart
-} from 'lucide-react';
-
 export const ClientSuccessStoriesSection: React.FC = () => {
   const testimonials = [
     {
@@ -48,7 +46,7 @@ export const ClientSuccessStoriesSection: React.FC = () => {
       rating: 5,
       quote: 'From concept to launch in just 8 weeks! Zion Tech Group\'s rapid development approach and technical expertise are unmatched.',
       metrics: ['8 Week Launch', 'MVP Ready', 'Scalable Architecture']
-    }
+
   ];
 
   const successMetrics = [
@@ -66,7 +64,7 @@ export const ClientSuccessStoriesSection: React.FC = () => {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
-        >
+
           <h2 className="text-4xl font-bold text-gray-900 mb-4">
             Client Success Stories
           </h2>
@@ -82,7 +80,7 @@ export const ClientSuccessStoriesSection: React.FC = () => {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.1 }}
           className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-16"
-        >
+
           {successMetrics.map((metric, index) => {
             const IconComponent = metric.icon;
             return (
@@ -110,7 +108,7 @@ export const ClientSuccessStoriesSection: React.FC = () => {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: index * 0.1 }}
               className="bg-gray-50 rounded-2xl p-8 hover:shadow-lg transition-all duration-300"
-            >
+
               <div className="flex items-center mb-6">
                 <div className="text-4xl mr-4">{testimonial.avatar}</div>
                 <div>
@@ -152,7 +150,7 @@ export const ClientSuccessStoriesSection: React.FC = () => {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.3 }}
           className="text-center"
-        >
+
           <div className="bg-gradient-to-r from-green-600 to-emerald-600 rounded-2xl p-8 text-white">
             <h3 className="text-2xl font-bold mb-4">
               Ready to Write Your Success Story?
@@ -179,3 +177,4 @@ export const ClientSuccessStoriesSection: React.FC = () => {
 };
 
 export default ClientSuccessStoriesSection;
+}}

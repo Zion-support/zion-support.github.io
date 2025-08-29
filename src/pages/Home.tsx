@@ -56,8 +56,6 @@ import {
   Settings,
   Palette,
   Zap as ZapIcon2
-} from 'lucide-react';
-
 // Optimized futuristic animated background component
 const FuturisticBackground = React.memo(() => {
   const particles = useMemo(() =>
@@ -132,7 +130,7 @@ const HeroSection = React.memo(({ onGetStarted }: { onGetStarted: () => void }) 
       description: "Modernize your infrastructure for the future",
       icon: Rocket,
       features: ["Cloud Migration", "DevOps", "Security", "Compliance"]
-    }
+
   ], []);
 
   const nextSlide = useCallback(() => {
@@ -157,7 +155,7 @@ const HeroSection = React.memo(({ onGetStarted }: { onGetStarted: () => void }) 
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
           className="mb-12"
-        >
+
           <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-cyan-500/20 to-blue-500/20 border border-cyan-400/30 mb-6">
             <Sparkles className="w-5 h-5 text-cyan-400 mr-2" />
             <span className="text-cyan-400 font-medium">2025 Innovation Hub</span>
@@ -177,7 +175,7 @@ const HeroSection = React.memo(({ onGetStarted }: { onGetStarted: () => void }) 
               to="/services"
               className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 text-white font-bold rounded-xl transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-cyan-500/25 flex items-center space-x-2 focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:ring-offset-2 focus:ring-offset-zion-slate-dark"
               aria-label="Explore our services"
-            >
+
               <span>Explore Services</span>
               <ArrowRight className="w-5 h-5" />
             </Link>
@@ -185,7 +183,7 @@ const HeroSection = React.memo(({ onGetStarted }: { onGetStarted: () => void }) 
               onClick={onGetStarted}
               className="px-8 py-4 bg-white/10 backdrop-blur-sm border border-cyan-400/30 hover:bg-white/20 text-white font-bold rounded-xl transition-all duration-300 hover:border-cyan-400/50 flex items-center space-x-2 focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:ring-offset-2 focus:ring-offset-zion-slate-dark"
               aria-label="Get started with Zion Tech"
-            >
+
               <span>Get Started</span>
               <ArrowRight className="w-5 h-5" />
             </button>
@@ -198,7 +196,7 @@ const HeroSection = React.memo(({ onGetStarted }: { onGetStarted: () => void }) 
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
           className="max-w-6xl mx-auto"
-        >
+
           <div className="relative">
             <AnimatePresence mode="wait">
               <motion.div
@@ -208,7 +206,7 @@ const HeroSection = React.memo(({ onGetStarted }: { onGetStarted: () => void }) 
                 exit={{ opacity: 0, x: -50 }}
                 transition={{ duration: 0.5 }}
                 className="bg-white/5 backdrop-blur-sm border border-cyan-400/20 rounded-2xl p-8 md:p-12"
-              >
+
                 <div className="flex flex-col md:flex-row items-center gap-8">
                   <div className="flex-1 text-center md:text-left">
                     <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 rounded-2xl mb-6">
@@ -238,14 +236,14 @@ const HeroSection = React.memo(({ onGetStarted }: { onGetStarted: () => void }) 
               onClick={prevSlide}
               className="absolute left-4 top-1/2 transform -translate-y-1/2 p-2 bg-white/10 backdrop-blur-sm border border-cyan-400/30 rounded-full hover:bg-white/20 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-cyan-400"
               aria-label="Previous slide"
-            >
+
               <ChevronLeft className="w-6 h-6 text-cyan-400" />
             </button>
             <button
               onClick={nextSlide}
               className="absolute right-4 top-1/2 transform -translate-y-1/2 p-2 bg-white/10 backdrop-blur-sm border border-cyan-400/30 rounded-full hover:bg-white/20 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-cyan-400"
               aria-label="Next slide"
-            >
+
               <ChevronRight className="w-6 h-6 text-cyan-400" />
             </button>
 
@@ -294,7 +292,7 @@ const StatsSection = React.memo(() => {
               transition={{ duration: 0.6, delay: index * 0.1 }}
               viewport={{ once: true }}
               className="text-center"
-            >
+
               <div className={`w-16 h-16 bg-gradient-to-r ${stat.color} rounded-2xl flex items-center justify-center mx-auto mb-4`}>
                 <stat.icon className="w-8 h-8 text-white" />
               </div>
@@ -333,7 +331,7 @@ const FeaturedServices = React.memo(() => {
       icon: Zap,
       path: "/micro-saas",
       features: ["Custom Development", "Scalable Architecture", "API-First Design", "Cloud Deployment"]
-    }
+
   ], []);
 
   return (
@@ -345,7 +343,7 @@ const FeaturedServices = React.memo(() => {
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
           className="text-center mb-16"
-        >
+
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
             Our Featured Services
           </h2>
@@ -363,7 +361,7 @@ const FeaturedServices = React.memo(() => {
               transition={{ duration: 0.8, delay: index * 0.1 }}
               viewport={{ once: true }}
               className="bg-slate-800/50 rounded-xl p-6 border border-slate-600/30 hover:border-cyan-400/50 transition-all duration-300 hover:shadow-xl hover:shadow-cyan-400/10 group"
-            >
+
               <div className="w-16 h-16 bg-gradient-to-br from-cyan-500 to-purple-500 rounded-lg flex items-center justify-center mb-6">
                 <service.icon className="w-8 h-8 text-white" />
               </div>
@@ -391,7 +389,7 @@ const FeaturedServices = React.memo(() => {
               <Link
                 to={service.path}
                 className="inline-flex items-center w-full justify-center px-4 py-3 bg-gradient-to-r from-cyan-500 to-purple-500 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-purple-600 transition-all duration-200"
-              >
+
                 Learn More
                 <ArrowRight className="ml-2 h-4 w-4" />
               </Link>
@@ -415,7 +413,7 @@ const Home = () => {
 
   const handleGetStarted = () => {
     // Handle get started action
-    // console.log('Get Started clicked');
+    // // // console.log('Get Started clicked');
   };
 
   return (
@@ -433,7 +431,7 @@ const Home = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 20 }}
             transition={{ duration: 0.8 }}
-          >
+
             <h2 className="text-4xl font-bold text-white mb-6">
               Ready to Transform Your Business?
             </h2>
@@ -460,14 +458,14 @@ const Home = () => {
               <Link
                 to="/contact"
                 className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-500 text-white font-bold rounded-lg hover:from-cyan-600 hover:to-purple-600 transition-all duration-200 text-lg"
-              >
+
                 Get Started Today
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Link>
               <Link
                 to="/pricing"
                 className="inline-flex items-center px-8 py-4 border-2 border-cyan-400 text-cyan-400 font-bold rounded-lg hover:bg-cyan-400 hover:text-slate-900 transition-all duration-200 text-lg"
-              >
+
                 View Pricing
               </Link>
             </div>
@@ -476,6 +474,6 @@ const Home = () => {
       </section>
     </div>
   );
-}
 
 export default Home;
+}}}</motion.div>}

@@ -30,7 +30,7 @@ export const enterpriseITBreakthroughServices2025 = [
         price: 19999,
         period: 'month',
         features: ['Full quantum suite', 'Custom development', 'Dedicated support']
-      }
+
     },
     category: 'Cloud Infrastructure',
     tags: ['Quantum Computing', 'Cloud Infrastructure', 'Security', 'Scalability', 'Enterprise'],
@@ -83,7 +83,7 @@ export const enterpriseITBreakthroughServices2025 = [
         price: 14999,
         period: 'month',
         features: ['Full edge suite', 'Custom development', 'Dedicated support']
-      }
+
     },
     category: 'Edge Computing',
     tags: ['Edge Computing', 'IoT', 'Real-time Processing', 'Performance Optimization', 'Enterprise'],
@@ -136,7 +136,7 @@ export const enterpriseITBreakthroughServices2025 = [
         price: 9999,
         period: 'month',
         features: ['Full zero trust platform', 'White-label solution', 'Dedicated support', 'Custom development', '24/7 monitoring']
-      }
+
     },
     category: 'Cybersecurity',
     tags: ['Zero Trust', 'Cybersecurity', 'Identity Management', 'Access Control', 'Enterprise Security'],
@@ -189,7 +189,7 @@ export const enterpriseITBreakthroughServices2025 = [
         price: 7999,
         period: 'month',
         features: ['Full AI DevOps platform', 'White-label solution', 'Dedicated support', 'Custom development', '24/7 monitoring']
-      }
+
     },
     category: 'DevOps & Automation',
     tags: ['AI', 'DevOps', 'Automation', 'CI/CD', 'Enterprise'],
@@ -242,7 +242,7 @@ export const enterpriseITBreakthroughServices2025 = [
         price: 24999,
         period: 'month',
         features: ['Full quantum data center platform', 'White-label solution', 'Dedicated support', 'Custom development', '24/7 monitoring']
-      }
+
     },
     category: 'Data Center',
     tags: ['Quantum Computing', 'Data Center', 'Data Management', 'Enterprise', 'Performance'],
@@ -263,5 +263,5 @@ export const enterpriseITBreakthroughServices2025 = [
     ],
     integrations: ['Data center infrastructure', 'Cloud platforms', 'Monitoring systems', 'Security tools', 'Enterprise systems'],
     compliance: ['SOC2', 'ISO 27001', 'Data center standards', 'Security standards', 'Enterprise requirements']
-  }
-];
+
+];}}}}}}

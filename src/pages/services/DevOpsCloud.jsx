@@ -1,8 +1,7 @@
 import React from 'react';
 import { SEO } from "@/components/SEO";
 import { Link } from 'react-router-dom';
-import { Check, Cloud, Zap, Shield, Database, Users, Target, Server } from 'lucide-react';
-export default function DevOpsCloudServices() {
+import { Check, Cloud, Zap, Shield, Database, Users, Target, Server export default function DevOpsCloudServices() {
     const devopsServices = [
         {
             icon: Cloud,
@@ -129,7 +128,7 @@ export default function DevOpsCloudServices() {
                 'Better user experience',
                 'Data-driven optimization'
             ]
-        }
+
     ];
     const cloudProviders = [
         {
@@ -155,7 +154,7 @@ export default function DevOpsCloudServices() {
             services: 'Cross-platform orchestration, hybrid solutions',
             strengths: 'Vendor independence, best-of-breed',
             pricing: 'Optimized for each workload'
-        }
+
     ];
     const industries = [
         'Financial Services & Banking',
@@ -209,7 +208,7 @@ export default function DevOpsCloudServices() {
             description: 'Modern cloud-native application development with CI/CD and infrastructure automation.',
             roi: '35-55% faster delivery',
             implementation: '12-20 weeks'
-        }
+
     ];
     return (<div className="min-h-screen bg-background">
       <SEO title="DevOps & Cloud Services - Zion Tech Group" description="Comprehensive DevOps consulting, cloud migration, CI/CD pipelines, and infrastructure automation services for modern software delivery." keywords="DevOps services, cloud migration, CI/CD, Kubernetes, infrastructure as code, cloud consulting, automation" canonical="https://ziontechgroup.com/services/devops-cloud"/>
@@ -508,4 +507,4 @@ export default function DevOpsCloudServices() {
         </div>
       </section>
     </div>);
-}
+}}}}}

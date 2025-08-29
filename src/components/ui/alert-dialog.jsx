@@ -7,17 +7,17 @@ export function AlertDialog({ children, open, onOpenChange }) {
     const setIsOpen = (newOpen) => {
         if (!isControlled) {
             setInternalOpen(newOpen);
-        }
+
         if (onOpenChange) {
             onOpenChange(newOpen);
-        }
+
     };
     return (<AlertDialogContext.Provider value={{ isOpen, setIsOpen }}>
       <div className="relative">
         {children}
       </div>
     </AlertDialogContext.Provider>);
-}
+
 export function AlertDialogTrigger({ children }) {
     const context = useContext(AlertDialogContext);
     if (!context)
@@ -25,7 +25,7 @@ export function AlertDialogTrigger({ children }) {
     return (<div onClick={() => context.setIsOpen(true)}>
       {children}
     </div>);
-}
+
 export function AlertDialogContent({ children, className = '' }) {
     const context = useContext(AlertDialogContext);
     if (!context)
@@ -38,19 +38,19 @@ export function AlertDialogContent({ children, className = '' }) {
         {children}
       </div>
     </div>);
-}
+
 export function AlertDialogHeader({ children, className = '' }) {
     return <div className={`mb-4 ${className}`}>{children}</div>;
-}
+
 export function AlertDialogTitle({ children, className = '' }) {
     return <h2 className={`text-lg font-semibold ${className}`}>{children}</h2>;
-}
+
 export function AlertDialogDescription({ children, className = '' }) {
     return <p className={`text-gray-600 mt-2 ${className}`}>{children}</p>;
-}
+
 export function AlertDialogFooter({ children, className = '' }) {
     return <div className={`flex justify-end gap-2 mt-6 ${className}`}>{children}</div>;
-}
+
 export function AlertDialogAction({ children, onClick, className = '' }) {
     const context = useContext(AlertDialogContext);
     if (!context)
@@ -63,7 +63,7 @@ export function AlertDialogAction({ children, onClick, className = '' }) {
     return (<button className={`px-4 py-2 bg-red-600 text-white rounded-md hover:bg-red-700 transition-colors ${className}`} onClick={handleClick}>
       {children}
     </button>);
-}
+
 export function AlertDialogCancel({ children, className = '' }) {
     const context = useContext(AlertDialogContext);
     if (!context)
@@ -71,4 +71,4 @@ export function AlertDialogCancel({ children, className = '' }) {
     return (<button className={`px-4 py-2 bg-gray-300 text-gray-700 rounded-md hover:bg-gray-400 transition-colors ${className}`} onClick={() => context.setIsOpen(false)}>
       {children}
     </button>);
-}
+</div>}}}}}}}}}}}

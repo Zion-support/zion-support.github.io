@@ -9,7 +9,6 @@ interface SkeletonProps {
   height?: string | number;
   lines?: number;
   animated?: boolean;
-}
 
 const Skeleton: React.FC<SkeletonProps> = ({
   className,
@@ -59,7 +58,6 @@ const Skeleton: React.FC<SkeletonProps> = ({
         ))}
       </div>
     );
-  }
 
   const style: React.CSSProperties = { /* empty */ };
   if (width) style.width = typeof width === 'number' ? `${width}px` : width;
@@ -153,4 +151,4 @@ export const GridSkeleton: React.FC<{
   </div>
 );
 
-export default Skeleton;
+export default Skeleton;}</motion.div></motion.div>}

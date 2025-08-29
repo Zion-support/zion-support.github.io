@@ -22,8 +22,6 @@ import {
   TrendingUp,
   Award,
   ArrowRight
-} from 'lucide-react';
-
 const AIQuantumHybridPlatform = () => {
   const features = [
     {
@@ -55,7 +53,7 @@ const AIQuantumHybridPlatform = () => {
       icon: <Network className="w-8 h-8 text-pink-400" />,
       title: "Quantum Networking",
       description: "Secure quantum communication protocols for ultra-secure data transmission"
-    }
+
   ];
 
   const benefits = [
@@ -74,7 +72,7 @@ const AIQuantumHybridPlatform = () => {
     {
       metric: "Global",
       description: "Access to quantum resources worldwide"
-    }
+
   ];
 
   const useCases = [
@@ -97,7 +95,7 @@ const AIQuantumHybridPlatform = () => {
       title: "Logistics Optimization",
       description: "Route optimization, supply chain management, and resource allocation",
       icon: <Network className="w-6 h-6 text-purple-400" />
-    }
+
   ];
 
   return (
@@ -111,7 +109,7 @@ const AIQuantumHybridPlatform = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               className="flex justify-center mb-6"
-            >
+
               <div className="p-3 bg-gradient-to-r from-blue-600/20 to-purple-600/20 rounded-full border border-blue-500/30">
                 <Brain className="h-12 w-12 text-blue-400" />
               </div>
@@ -121,7 +119,7 @@ const AIQuantumHybridPlatform = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
               className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-blue-400 via-purple-400 to-pink-500 bg-clip-text text-transparent"
-            >
+
               AI Quantum Hybrid Platform
             </motion.h1>
             <motion.p
@@ -129,7 +127,7 @@ const AIQuantumHybridPlatform = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.4 }}
               className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto"
-            >
+
               Experience the future of computing with our revolutionary AI Quantum Hybrid Platform.
               Combining the power of quantum computing with advanced artificial intelligence for
               unprecedented computational capabilities.
@@ -139,7 +137,7 @@ const AIQuantumHybridPlatform = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.6 }}
               className="flex flex-col sm:flex-row gap-4 justify-center"
-            >
+
               <Link to="/contact" className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300 text-lg">
                 Get Started Today
               </Link>
@@ -160,7 +158,7 @@ const AIQuantumHybridPlatform = () => {
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
-            >
+
               <h2 className="text-3xl md:text-4xl font-bold mb-6">
                 What is AI Quantum Hybrid Platform?
               </h2>
@@ -192,7 +190,7 @@ const AIQuantumHybridPlatform = () => {
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
               className="relative"
-            >
+
               <div className="bg-gradient-to-br from-blue-600/20 to-purple-600/20 p-8 rounded-2xl border border-blue-500/30">
                 <div className="space-y-4">
                   <div className="flex items-center space-x-3">
@@ -235,7 +233,7 @@ const AIQuantumHybridPlatform = () => {
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
             className="text-3xl md:text-4xl font-bold text-center mb-16"
-          >
+
             Key Features
           </motion.h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -247,7 +245,7 @@ const AIQuantumHybridPlatform = () => {
                 transition={{ duration: 0.8, delay: index * 0.1 }}
                 viewport={{ once: true }}
                 className="bg-slate-800/50 p-6 rounded-xl border border-slate-700 hover:border-blue-500/50 transition-all duration-300"
-              >
+
                 <div className="w-12 h-12 bg-gradient-to-br from-blue-600/20 to-purple-600/20 rounded-lg flex items-center justify-center mb-4">
                   {feature.icon}
                 </div>
@@ -270,7 +268,7 @@ const AIQuantumHybridPlatform = () => {
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
             className="text-3xl md:text-4xl font-bold text-center mb-16"
-          >
+
             Why Choose AI Quantum Hybrid Platform?
           </motion.h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -282,7 +280,7 @@ const AIQuantumHybridPlatform = () => {
                 transition={{ duration: 0.8, delay: index * 0.1 }}
                 viewport={{ once: true }}
                 className="text-center"
-              >
+
                 <div className="w-16 h-16 bg-gradient-to-br from-blue-600/20 to-purple-600/20 rounded-full flex items-center justify-center mx-auto mb-4">
                   <span className="text-2xl font-bold bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
                     {benefit.metric}
@@ -304,7 +302,7 @@ const AIQuantumHybridPlatform = () => {
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
             className="text-3xl md:text-4xl font-bold text-center mb-16"
-          >
+
             Applications & Use Cases
           </motion.h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -316,7 +314,7 @@ const AIQuantumHybridPlatform = () => {
                 transition={{ duration: 0.8, delay: index * 0.1 }}
                 viewport={{ once: true }}
                 className="bg-slate-800/50 p-6 rounded-xl border border-slate-700"
-              >
+
                 <div className="flex items-center space-x-3 mb-4">
                   {useCase.icon}
                   <h3 className="text-xl font-semibold text-blue-400">{useCase.title}</h3>
@@ -337,7 +335,7 @@ const AIQuantumHybridPlatform = () => {
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
             className="text-3xl md:text-4xl font-bold text-center mb-16"
-          >
+
             Pricing Plans
           </motion.h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -348,7 +346,7 @@ const AIQuantumHybridPlatform = () => {
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
               className="bg-slate-800/50 p-8 rounded-xl border border-slate-700 hover:border-blue-500/50 transition-all duration-300"
-            >
+
               <div className="text-center mb-8">
                 <h3 className="text-2xl font-bold mb-4">Starter</h3>
                 <div className="text-4xl font-bold text-blue-400 mb-2">$1,999</div>
@@ -384,7 +382,7 @@ const AIQuantumHybridPlatform = () => {
               transition={{ duration: 0.8, delay: 0.1 }}
               viewport={{ once: true }}
               className="bg-gradient-to-br from-blue-600/20 to-purple-600/20 p-8 rounded-xl border border-blue-500/50 relative"
-            >
+
               <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                 <div className="bg-gradient-to-r from-blue-500 to-purple-500 text-white px-4 py-2 rounded-full text-sm font-semibold">
                   Most Popular
@@ -429,7 +427,7 @@ const AIQuantumHybridPlatform = () => {
               transition={{ duration: 0.8, delay: 0.2 }}
               viewport={{ once: true }}
               className="bg-slate-800/50 p-8 rounded-xl border border-slate-700 hover:border-blue-500/50 transition-all duration-300"
-            >
+
               <div className="text-center mb-8">
                 <h3 className="text-2xl font-bold mb-4">Enterprise</h3>
                 <div className="text-4xl font-bold text-blue-400 mb-2">$12,999</div>
@@ -474,7 +472,7 @@ const AIQuantumHybridPlatform = () => {
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
             className="text-3xl md:text-4xl font-bold mb-6"
-          >
+
             Ready to Experience Quantum Computing?
           </motion.h2>
           <motion.p
@@ -483,7 +481,7 @@ const AIQuantumHybridPlatform = () => {
             transition={{ duration: 0.8, delay: 0.2 }}
             viewport={{ once: true }}
             className="text-xl text-gray-300 mb-8"
-          >
+
             Join the quantum revolution with Zion Tech Group's AI Quantum Hybrid Platform.
             Unlock unprecedented computational power and accelerate your innovation timeline.
           </motion.p>
@@ -493,7 +491,7 @@ const AIQuantumHybridPlatform = () => {
             transition={{ duration: 0.8, delay: 0.4 }}
             viewport={{ once: true }}
             className="flex flex-col sm:flex-row gap-4 justify-center"
-          >
+
             <Link to="/contact" className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300 text-lg">
               Start Your Quantum Journey
             </Link>
@@ -507,4 +505,4 @@ const AIQuantumHybridPlatform = () => {
   );
 };
 
-export default AIQuantumHybridPlatform;
+export default AIQuantumHybridPlatform;}}}}

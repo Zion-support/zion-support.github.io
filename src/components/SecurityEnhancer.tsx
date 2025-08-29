@@ -17,8 +17,6 @@ import {
   Bug,
   Network,
   Database
-} from 'lucide-react';
-
 interface SecurityThreat {
   id: string;
   type: 'xss' | 'csrf' | 'injection' | 'authentication' | 'authorization' | 'data-leak';
@@ -27,7 +25,6 @@ interface SecurityThreat {
   location: string;
   timestamp: Date;
   status: 'active' | 'mitigated' | 'resolved';
-}
 
 interface SecurityMetrics {
   overallScore: number;
@@ -36,7 +33,6 @@ interface SecurityMetrics {
   lastScan: Date;
   complianceScore: number;
   encryptionStrength: number;
-}
 
 interface SecurityCheck {
   id: string;
@@ -45,7 +41,6 @@ interface SecurityCheck {
   description: string;
   recommendation: string;
   category: 'authentication' | 'data-protection' | 'network-security' | 'compliance';
-}
 
 const SecurityEnhancer: React.FC = () => {
   const [metrics, setMetrics] = useState<SecurityMetrics>({
@@ -91,7 +86,7 @@ const SecurityEnhancer: React.FC = () => {
         location: '/src/components/Dashboard.tsx:67',
         timestamp: new Date(Date.now() - 10800000),
         status: 'resolved'
-      }
+
     ];
 
     setThreats(sampleThreats);
@@ -139,7 +134,7 @@ const SecurityEnhancer: React.FC = () => {
         description: 'Database queries are properly parameterized',
         recommendation: 'Continue using prepared statements',
         category: 'data-protection'
-      }
+
     ];
 
     setSecurityChecks(checks);
@@ -188,7 +183,7 @@ const SecurityEnhancer: React.FC = () => {
       case 'authorization': return <Shield className="h-4 w-4" />;
       case 'data-leak': return <Eye className="h-4 w-4" />;
       default: return <AlertTriangle className="h-4 w-4" />;
-    }
+
   };
 
   const getSeverityColor = (severity: SecurityThreat['severity']) => {
@@ -198,7 +193,7 @@ const SecurityEnhancer: React.FC = () => {
       case 'medium': return 'bg-yellow-500';
       case 'low': return 'bg-blue-500';
       default: return 'bg-gray-500';
-    }
+
   };
 
   const getStatusColor = (status: SecurityThreat['status']) => {
@@ -207,7 +202,7 @@ const SecurityEnhancer: React.FC = () => {
       case 'mitigated': return 'bg-yellow-100 text-yellow-800';
       case 'resolved': return 'bg-green-100 text-green-800';
       default: return 'bg-gray-100 text-gray-800';
-    }
+
   };
 
   const getCheckStatusIcon = (status: SecurityCheck['status']) => {
@@ -216,7 +211,7 @@ const SecurityEnhancer: React.FC = () => {
       case 'fail': return <AlertTriangle className="h-4 w-4 text-red-600" />;
       case 'warning': return <AlertTriangle className="h-4 w-4 text-yellow-600" />;
       default: return <AlertTriangle className="h-4 w-4 text-gray-600" />;
-    }
+
   };
 
   const getSecurityScoreColor = (score: number) => {
@@ -286,7 +281,7 @@ const SecurityEnhancer: React.FC = () => {
               onClick={runSecurityScan}
               disabled={isScanning}
               className="w-full"
-            >
+
               {isScanning ? (
                 <>
                   <RefreshCw className="h-4 w-4 mr-2 animate-spin" />
@@ -349,7 +344,7 @@ const SecurityEnhancer: React.FC = () => {
               variant="ghost"
               size="sm"
               onClick={() => setShowThreats(!showThreats)}
-            >
+
               {showThreats ? <EyeOff className="h-4 w-4" /> : <Eye className="h-4 w-4" />}
             </Button>
           </CardTitle>
@@ -387,7 +382,7 @@ const SecurityEnhancer: React.FC = () => {
                           size="sm"
                           variant="outline"
                           onClick={() => mitigateThreat(threat.id)}
-                        >
+
                           Mitigate
                         </Button>
                       )}
@@ -395,7 +390,7 @@ const SecurityEnhancer: React.FC = () => {
                         <Button
                           size="sm"
                           onClick={() => resolveThreat(threat.id)}
-                        >
+
                           Resolve
                         </Button>
                       )}
@@ -430,6 +425,6 @@ const SecurityEnhancer: React.FC = () => {
       )}
     </div>
   );
-};
+</Card></Card></Card></Card></Card></Card></Card></Card></Card>};
 
-export default SecurityEnhancer;
+export default SecurityEnhancer;}}}}}}}}}}

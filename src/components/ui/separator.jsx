@@ -9,4 +9,4 @@ export function Separator({ className = '', orientation = 'horizontal', decorati
       {...props}
     />
   );
-}
+</div>}

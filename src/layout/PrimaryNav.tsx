@@ -14,8 +14,7 @@ import { slugify } from '@/lib/slugify';
 import { ResponsiveNavigation } from '@/components/navigation/ResponsiveNavigation';
 import { MobileMenu } from '@/components/header/MobileMenu';
 import { MobileBottomNav } from '@/components/header/MobileBottomNav';
-import { Menu, X, ShoppingCart } from 'lucide-react';
-import { useTranslation } from 'react-i18next';
+import { Menu, X, ShoppingCart import { useTranslation } from 'react-i18next';
 import { useSelector } from 'react-redux';
 import type { RootState } from '@/store';
 import { ModeToggle } from '@/components/ModeToggle';
@@ -36,7 +35,6 @@ export function PrimaryNav() {
     unreadCount = messaging.unreadCount;
   } catch {
     // context not available
-  }
 
   const cartCount = useSelector((s: RootState) =>
     s.cart.items.reduce((sum, i) => sum + i.quantity, 0),
@@ -45,10 +43,10 @@ export function PrimaryNav() {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     if (query.trim()) {
-      // console.log('PrimaryNav search submit:', query);
+      // // // console.log('PrimaryNav search submit:', query);
       router.push(`/search/${slugify(query)}`);
       setQuery('');
-    }
+
   };
 
   return (
@@ -58,7 +56,7 @@ export function PrimaryNav() {
         role="navigation"
         aria-label="Primary"
         data-testid="header"
-      >
+
         <div className="container flex flex-wrap items-center justify-between gap-2 min-h-16 px-4 sm:px-6">
           <Logo />
 
@@ -75,7 +73,7 @@ export function PrimaryNav() {
                 value={query}
                 onChange={setQuery}
                 onSelectSuggestion={(sugg) => {
-                  // console.log('PrimaryNav search suggestion selected:', sugg);
+                  // // // console.log('PrimaryNav search suggestion selected:', sugg);
                   // Handle different suggestion types with proper navigation
                   if (sugg.id) {
                     // Product listings with IDs go to product detail page
@@ -89,7 +87,7 @@ export function PrimaryNav() {
                   } else {
                     // Default: search results page with slug
                     router.push(`/search/${sugg.slug || slugify(sugg.text)}`);
-                  }
+
                   setQuery('');
 
                   // Track analytics event
@@ -99,7 +97,7 @@ export function PrimaryNav() {
                       suggestion_type: sugg.type,
                       suggestion_id: sugg.id || sugg.slug
                     });
-                  }
+
                 }}
                 searchSuggestions={suggestions}
               />
@@ -114,7 +112,7 @@ export function PrimaryNav() {
                     href="/cart"
                     className="relative p-1"
                     aria-label={t('nav.cart', 'Cart')}
-                  >
+
                     <ShoppingCart aria-hidden="true" className="h-5 w-5 text-foreground hover:text-primary" />
                     {cartCount > 0 && (
                       <span className="absolute -top-1 -right-1 bg-primary text-primary-foreground text-[10px] rounded-full h-4 w-4 flex items-center justify-center">
@@ -143,13 +141,13 @@ export function PrimaryNav() {
                     href="/auth/login"
                     className="text-sm hover:text-primary whitespace-nowrap"
                     data-testid="login-link"
-                  >
+
                     {t('auth.login')}
                   </Link>
                   <Link
                     href="/signup"
                     className="text-sm hover:text-primary whitespace-nowrap"
-                  >
+
                     {t('auth.signup')}
                   </Link>
                 </>
@@ -164,7 +162,7 @@ export function PrimaryNav() {
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
             aria-expanded={mobileMenuOpen}
             aria-label={t('general.toggle_mobile_menu')}
-          >
+
             {mobileMenuOpen ? (
               <X className="h-6 w-6" />
             ) : (
@@ -191,4 +189,4 @@ export function PrimaryNav() {
       {isMobile && <MobileBottomNav unreadCount={unreadCount} />}
     </>
   );
-}
+</div>}}}}}}

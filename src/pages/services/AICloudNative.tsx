@@ -1,6 +1,4 @@
-import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, FileText, BarChart3 } from 'lucide-react';
-
-export default function AICloudNative() {
+import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, FileText, BarChart3 export default function AICloudNative() {
   const features = [
     'AI-powered cloud native optimization',
     'Intelligent cloud native management',
@@ -171,4 +169,4 @@ export default function AICloudNative() {
       </section>
     </div>
   );
-}
+}}

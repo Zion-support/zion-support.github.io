@@ -3,7 +3,6 @@ import { motion } from 'framer-motion';
 import {
   Brain, Database, Users, Truck, Shield, Briefcase, Cpu, Wrench, Leaf, Atom,
   ArrowRight, ExternalLink, Phone, Mail, Zap, Target, Clock, Globe, Check
-} from 'lucide-react';
 import { SEO } from '@/components/SEO';
 
 export default function InnovativeServicesShowcase2025() {
@@ -207,7 +206,7 @@ export default function InnovativeServicesShowcase2025() {
       ],
       path: '/services/ai-quantum-machine-learning',
       category: 'AI & Quantum Computing'
-    }
+
   ];
 
   const categories = [...new Set(services.map(service => service.category))];
@@ -226,7 +225,7 @@ export default function InnovativeServicesShowcase2025() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             className="inline-flex items-center px-4 py-2 rounded-full bg-white/10 text-white mb-6"
-          >
+
             <Brain className="w-4 h-4 mr-2" /> Innovative AI Services 2025
           </motion.div>
           <motion.h1
@@ -234,7 +233,7 @@ export default function InnovativeServicesShowcase2025() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.1 }}
             className="text-4xl md:text-6xl font-bold text-white mb-4"
-          >
+
             Innovative AI Services Showcase 2025
           </motion.h1>
           <motion.p
@@ -242,7 +241,7 @@ export default function InnovativeServicesShowcase2025() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
             className="text-zion-slate-light text-xl"
-          >
+
             Discover our cutting-edge AI-powered micro SAAS services that are revolutionizing industries and transforming businesses worldwide.
           </motion.p>
         </div>
@@ -268,7 +267,7 @@ export default function InnovativeServicesShowcase2025() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: index * 0.1 }}
               className="bg-white border border-zion-slate-light/20 rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
-            >
+
               <div className="flex items-center mb-4">
                 <div className="p-3 bg-zion-cyan/10 rounded-lg">
                   <service.icon className="w-6 h-6 text-zion-cyan" />
@@ -316,7 +315,7 @@ export default function InnovativeServicesShowcase2025() {
                 <a
                   href={service.path}
                   className="w-full px-4 py-3 bg-zion-cyan text-white rounded-lg hover:bg-zion-cyan-dark transition-colors text-center font-medium inline-flex items-center justify-center"
-                >
+
                   Learn More <ArrowRight className="w-4 h-4 ml-2" />
                 </a>
               </div>
@@ -344,7 +343,7 @@ export default function InnovativeServicesShowcase2025() {
                 icon: Clock,
                 title: 'Rapid Implementation',
                 description: 'Quick deployment and onboarding with minimal disruption to your operations.'
-              }
+
             ].map((item, index) => (
               <motion.div
                 key={item.title}
@@ -352,7 +351,7 @@ export default function InnovativeServicesShowcase2025() {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 className="text-center"
-              >
+
                 <div className="p-4 bg-white rounded-full w-16 h-16 mx-auto mb-4 flex items-center justify-center">
                   <item.icon className="w-8 h-8 text-zion-cyan" />
                 </div>
@@ -385,4 +384,4 @@ export default function InnovativeServicesShowcase2025() {
       </section>
     </div>
   );
-}
+}}}}

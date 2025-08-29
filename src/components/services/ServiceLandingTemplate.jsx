@@ -71,4 +71,4 @@ export const ServiceLandingTemplate = ({ title, subtitle, heroImage, description
         </Button>
       </section>
     </div>);
-};
+</Card></Card>};

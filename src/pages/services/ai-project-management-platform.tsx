@@ -22,8 +22,6 @@ import {
   Globe,
   Smartphone,
   Cloud
-} from 'lucide-react';
-
 export default function AIProjectManagementPlatform() {
   const features = [
     {
@@ -55,7 +53,7 @@ export default function AIProjectManagementPlatform() {
       icon: Zap,
       title: 'Automated Reporting',
       description: 'Intelligent report generation with customizable dashboards and stakeholder updates'
-    }
+
   ];
 
   const pricingPlans = [
@@ -107,7 +105,7 @@ export default function AIProjectManagementPlatform() {
         'SLA guarantees'
       ],
       popular: false
-    }
+
   ];
 
   const benefits = [
@@ -130,7 +128,7 @@ export default function AIProjectManagementPlatform() {
       icon: Users,
       title: 'Enhanced Team Productivity',
       description: 'Automated workflows free up time for strategic work'
-    }
+
   ];
 
   const useCases = [
@@ -153,7 +151,7 @@ export default function AIProjectManagementPlatform() {
       title: 'Event Planning',
       description: 'Streamline event coordination with AI-driven task management and vendor coordination',
       icon: Calendar
-    }
+
   ];
 
   return (
@@ -170,7 +168,7 @@ export default function AIProjectManagementPlatform() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-          >
+
             <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-purple-600 to-pink-600 text-white text-sm font-medium mb-6">
               <Brain className="w-4 h-4 mr-2" />
               AI-Powered Project Management
@@ -207,7 +205,7 @@ export default function AIProjectManagementPlatform() {
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
             className="text-center mb-16"
-          >
+
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Powered by Advanced AI
             </h2>
@@ -225,7 +223,7 @@ export default function AIProjectManagementPlatform() {
                 transition={{ duration: 0.8, delay: index * 0.1 }}
                 viewport={{ once: true }}
                 className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700 hover:border-purple-500 transition-all duration-300"
-              >
+
                 <div className="w-12 h-12 bg-gradient-to-r from-purple-600 to-pink-600 rounded-lg flex items-center justify-center mb-4">
                   <feature.icon className="w-6 h-6 text-white" />
                 </div>
@@ -246,7 +244,7 @@ export default function AIProjectManagementPlatform() {
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
             className="text-center mb-16"
-          >
+
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Proven Results
             </h2>
@@ -264,7 +262,7 @@ export default function AIProjectManagementPlatform() {
                 transition={{ duration: 0.8, delay: index * 0.1 }}
                 viewport={{ once: true }}
                 className="text-center"
-              >
+
                 <div className="w-16 h-16 bg-gradient-to-r from-purple-600 to-pink-600 rounded-full flex items-center justify-center mx-auto mb-4">
                   <benefit.icon className="w-8 h-8 text-white" />
                 </div>
@@ -285,7 +283,7 @@ export default function AIProjectManagementPlatform() {
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
             className="text-center mb-16"
-          >
+
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Perfect for Every Industry
             </h2>
@@ -303,7 +301,7 @@ export default function AIProjectManagementPlatform() {
                 transition={{ duration: 0.8, delay: index * 0.1 }}
                 viewport={{ once: true }}
                 className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-8 border border-gray-700"
-              >
+
                 <div className="w-16 h-16 bg-gradient-to-r from-purple-600 to-pink-600 rounded-lg flex items-center justify-center mb-6">
                   <useCase.icon className="w-8 h-8 text-white" />
                 </div>
@@ -324,7 +322,7 @@ export default function AIProjectManagementPlatform() {
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
             className="text-center mb-16"
-          >
+
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Choose Your Plan
             </h2>
@@ -346,7 +344,7 @@ export default function AIProjectManagementPlatform() {
                     ? 'border-purple-500 ring-2 ring-purple-500/20'
                     : 'border-gray-700'
                 }`}
-              >
+
                 {plan.popular && (
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                     <span className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-4 py-2 rounded-full text-sm font-semibold">
@@ -394,7 +392,7 @@ export default function AIProjectManagementPlatform() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
-          >
+
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
               Ready to Transform Your Project Management?
             </h2>
@@ -419,4 +417,4 @@ export default function AIProjectManagementPlatform() {
       </section>
     </div>
   );
-}
+}}}}}}

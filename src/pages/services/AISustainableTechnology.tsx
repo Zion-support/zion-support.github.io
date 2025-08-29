@@ -1,6 +1,4 @@
-import { Leaf, BarChart3, ArrowRight, Check, ExternalLink, Phone, Mail, Globe, TrendingUp, Zap, Target, Clock, Shield, Sun } from 'lucide-react';
-
-export default function AISustainableTechnology() {
+import { Leaf, BarChart3, ArrowRight, Check, ExternalLink, Phone, Mail, Globe, TrendingUp, Zap, Target, Clock, Shield, Sun export default function AISustainableTechnology() {
   const features = [
     'AI-powered energy consumption optimization',
     'Real-time sustainability monitoring and reporting',
@@ -155,4 +153,4 @@ export default function AISustainableTechnology() {
       </section>
     </div>
   );
-}
+}}

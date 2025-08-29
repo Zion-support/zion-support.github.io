@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Globe, MapPin, Users, Award, Star, TrendingUp, Building, ArrowRight, CheckCircle, Clock } from 'lucide-react';
-const globalOffices = [
+import { Globe, MapPin, Users, Award, Star, TrendingUp, Building, ArrowRight, CheckCircle, Clock const globalOffices = [
     {
         id: 1,
         city: "San Francisco",
@@ -91,7 +90,7 @@ const globalOffices = [
         rating: 4.8,
         timezone: "AEST (UTC+10)",
         address: "987 Innovation Bay, Sydney, NSW 2000"
-    }
+
 ];
 const globalStats = [
     { icon: <Globe className="w-6 h-6"/>, value: "25+", label: "Countries Served" },
@@ -155,7 +154,7 @@ const partnerships = [
         established: "2022",
         projects: 12,
         status: "Active"
-    }
+
 ];
 const industries = [
     { name: "Financial Services", projects: 120, countries: 18, satisfaction: "99%" },
@@ -176,8 +175,8 @@ export function GlobalPresenceSection() {
             transition: {
                 staggerChildren: 0.15,
                 delayChildren: 0.1
-            }
-        }
+
+
     };
     const itemVariants = {
         hidden: { y: 30, opacity: 0 },
@@ -187,8 +186,8 @@ export function GlobalPresenceSection() {
             transition: {
                 duration: 0.6,
                 ease: "easeOut"
-            }
-        }
+
+
     };
     return (<section className="py-20 bg-gradient-to-br from-zion-purple via-zion-slate-dark to-zion-blue relative overflow-hidden">
       {/* Background decorative elements */}
@@ -408,4 +407,4 @@ export function GlobalPresenceSection() {
         </motion.div>
       </div>
     </section>);
-}
+}}}}}}}}

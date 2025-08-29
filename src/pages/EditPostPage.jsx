@@ -42,7 +42,7 @@ export default function EditPostPage() {
             <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-zion-purple"></div>
           </div>
         </div>);
-    }
+
     if (!post) {
         return (<div className="container py-8">
           <h1>Post not found</h1>
@@ -50,7 +50,7 @@ export default function EditPostPage() {
             <Link to="/community">Back to Community</Link>
           </Button>
         </div>);
-    }
+
     // Check if the user is the author or an admin
     const isAuthor = user?.id === post.authorId;
     const isAdmin = user?.userType === 'admin' || user?.role === 'admin';
@@ -62,7 +62,7 @@ export default function EditPostPage() {
             <Link to={`/community/post/${postId}`}>Back to Post</Link>
           </Button>
         </div>);
-    }
+
     const initialValues = {
         title: post.title,
         content: post.content,
@@ -79,14 +79,14 @@ export default function EditPostPage() {
             });
             // Redirect back to the post
             navigate(`/community/post/${postId}`);
-        }
+
         catch (error) {
             toast({
                 title: "Error",
                 description: "There was a problem updating your post",
                 variant: "destructive"
             });
-        }
+
     };
     return (<SEO title="Edit Post | Community Forum | Zion AI Marketplace" description="Edit your discussion post in the Zion AI Marketplace community forum." keywords="community, forum, discussion, edit post"/>
         ,
@@ -107,4 +107,4 @@ export default function EditPostPage() {
 
         <PostForm initialValues={initialValues} onSubmit={handleSubmit} isEditing={true}/>
       </div>);
-}
+}}}}}}

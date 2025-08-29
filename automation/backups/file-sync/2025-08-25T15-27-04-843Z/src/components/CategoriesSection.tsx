@@ -1,7 +1,6 @@
 import { GradientHeading } from "./GradientHeading";
 import { Link } from 'react-router-dom';
-import { Briefcase, HardDrive, Lightbulb, Users } from "lucide-react";
-const categories = [
+import { Briefcase, HardDrive, Lightbulb, Users const categories = [
   {
     title: "AI Services",
     description: "Cutting-edge AI solutions, chatbots, and machine learning",
@@ -47,11 +46,11 @@ const specialServices = [
   {
     title: "Services Comparison",
     link: "/services-comparison"
-  }
+
 ];
 interface CategoriesSectionProps {
   showTitle?: boolean;
-}
+
 const containerVariants = {
   hidden: { opacity: 0 },
   visible: {
@@ -59,8 +58,8 @@ const containerVariants = {
     transition: {
       staggerChildren: 0.1,
       delayChildren: 0.2
-    }
-  }
+
+
 };
 const itemVariants = {
   hidden: { y: 20, opacity: 0 },
@@ -70,8 +69,8 @@ const itemVariants = {
     transition: {
       duration: 0.5,
       ease: "easeOut"
-    }
-  }
+
+
 };
 export function CategoriesSection({ showTitle = true }: CategoriesSectionProps) {
   return (
@@ -92,7 +91,7 @@ export function CategoriesSection({ showTitle = true }: CategoriesSectionProps) 
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-          >
+
             <GradientHeading>Explore Categories</GradientHeading>
             <p className="text-zion-slate-light text-lg mt-4 max-w-2xl mx-auto">
               Discover our comprehensive ecosystem of tech services, talent, equipment, and innovation
@@ -106,7 +105,7 @@ export function CategoriesSection({ showTitle = true }: CategoriesSectionProps) 
               key={category.title}
               href={category.link}
               className="group block"
-            >
+
               <div className="rounded-lg overflow-hidden h-full border border-zion-blue-light bg-zion-blue-dark p-6 transition-all duration-300 hover:border-zion-purple/50 hover:translate-y-[-5px]">
                 <div className={`rounded-full w-16 h-16 bg-gradient-to-br ${category.color} flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}>
                   <div className="text-white">
@@ -124,7 +123,7 @@ export function CategoriesSection({ showTitle = true }: CategoriesSectionProps) 
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.4 }}
-        >
+
           <h3 className="text-center text-xl font-bold text-white mb-6">Featured Services</h3>
           <div className="flex flex-wrap justify-center gap-4">
             {specialServices.map((service) => (
@@ -132,11 +131,11 @@ export function CategoriesSection({ showTitle = true }: CategoriesSectionProps) 
                 key={service.title}
                 href={service.link}
                 className="px-6 py-3 bg-zion-blue-light hover:bg-zion-blue-dark border border-zion-purple/20 hover:border-zion-purple/50 rounded-full text-zion-cyan transition-all duration-300"
-              >
+
                 <Link
                   to={service.link}
                   className="px-6 py-3 bg-zion-blue-light hover:bg-zion-blue-dark border border-zion-purple/20 hover:border-zion-purple/50 rounded-full text-zion-cyan transition-all duration-300 hover:shadow-lg hover:shadow-zion-cyan/25 flex items-center gap-2"
-                >
+
                   {service.title}
                   <ArrowRight className="w-4 h-4" />
                 </Link>
@@ -151,11 +150,11 @@ export function CategoriesSection({ showTitle = true }: CategoriesSectionProps) 
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.6 }}
-        >
+
           <Link
             href="/categories"
             className="text-zion-cyan border-b border-zion-cyan hover:border-zion-cyan-dark transition-colors"
-          >
+
             View All Categories
             <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" />
           </Link>
@@ -163,4 +162,4 @@ export function CategoriesSection({ showTitle = true }: CategoriesSectionProps) 
       </div>
     </section>
   );
-}
+</div></div></div>}}}}}}}}

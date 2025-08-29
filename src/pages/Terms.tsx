@@ -13,7 +13,6 @@ import {
   Phone,
   MapPin,
   Calendar
-} from 'lucide-react';
 import { SEO } from '../components/SEO';
 
 export default function Terms() {
@@ -37,7 +36,7 @@ export default function Terms() {
       icon: Globe,
       title: 'Intellectual Property',
       description: 'All content and technology remain the property of Zion Tech Group.'
-    }
+
   ];
 
   const userObligations = [
@@ -64,7 +63,7 @@ export default function Terms() {
     {
       obligation: 'Confidentiality',
       description: 'Maintain the confidentiality of any proprietary information shared with you.'
-    }
+
   ];
 
   const prohibitedActivities = [
@@ -96,7 +95,7 @@ export default function Terms() {
       description: 'Dedicated support team and 24/7 emergency response',
       response: '1-2 hours',
       included: false
-    }
+
   ];
 
   return (
@@ -115,7 +114,7 @@ export default function Terms() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             className="text-center"
-          >
+
             <div className="inline-flex items-center px-4 py-2 bg-blue-400/20 text-blue-400 rounded-full text-sm font-medium mb-6">
               <FileText className="w-4 h-4 mr-2" />
               Legal Terms & Conditions
@@ -143,7 +142,7 @@ export default function Terms() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
-          >
+
             <h2 className="text-4xl font-bold text-white mb-6">
               Key Terms Overview
             </h2>
@@ -161,7 +160,7 @@ export default function Terms() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 className="bg-slate-800/50 p-6 rounded-xl border border-slate-700/50 hover:border-blue-400/50 transition-all duration-300 hover:scale-105"
-              >
+
                 <div className="w-16 h-16 bg-gradient-to-br from-blue-400/20 to-purple-500/20 rounded-xl flex items-center justify-center mb-6">
                   <section.icon className="w-8 h-8 text-blue-400" />
                 </div>
@@ -181,7 +180,7 @@ export default function Terms() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
-          >
+
             <h2 className="text-4xl font-bold text-white mb-6">
               Your Obligations
             </h2>
@@ -199,7 +198,7 @@ export default function Terms() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 className="bg-slate-800/50 p-6 rounded-xl border border-slate-700/50 hover:border-blue-400/50 transition-all duration-300 hover:scale-105"
-              >
+
                 <h3 className="text-xl font-semibold text-white mb-4">{obligation.obligation}</h3>
                 <p className="text-gray-300">{obligation.description}</p>
               </motion.div>
@@ -216,7 +215,7 @@ export default function Terms() {
               initial={{ opacity: 0, x: -20 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.6 }}
-            >
+
               <h2 className="text-4xl font-bold text-white mb-6">
                 Prohibited Activities
               </h2>
@@ -239,7 +238,7 @@ export default function Terms() {
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.6 }}
               className="relative"
-            >
+
               <div className="bg-slate-800/50 p-8 rounded-2xl border border-slate-700/50">
                 <div className="text-center mb-6">
                   <AlertTriangle className="w-16 h-16 text-red-400 mx-auto mb-4" />
@@ -273,7 +272,7 @@ export default function Terms() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
-          >
+
             <h2 className="text-4xl font-bold text-white mb-6">
               Service Levels & Support
             </h2>
@@ -294,7 +293,7 @@ export default function Terms() {
                   className={`bg-slate-800/50 p-6 rounded-xl border ${
                     level.included ? 'border-blue-400/50' : 'border-slate-700/50'
                   } hover:border-blue-400/50 transition-all duration-300 hover:scale-105`}
-                >
+
                   <div className="text-center mb-4">
                     <h3 className="text-xl font-semibold text-white mb-2">{level.level}</h3>
                     {level.included && (
@@ -323,7 +322,7 @@ export default function Terms() {
               initial={{ opacity: 0, x: -20 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.6 }}
-            >
+
               <h2 className="text-4xl font-bold text-white mb-6">
                 Intellectual Property Rights
               </h2>
@@ -361,7 +360,7 @@ export default function Terms() {
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.6 }}
               className="relative"
-            >
+
               <div className="bg-slate-800/50 p-8 rounded-2xl border border-slate-700/50">
                 <div className="text-center mb-6">
                   <Scale className="w-16 h-16 text-blue-400 mx-auto mb-4" />
@@ -399,7 +398,7 @@ export default function Terms() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
-          >
+
             <h2 className="text-4xl font-bold text-white mb-6">
               Limitation of Liability
             </h2>
@@ -460,7 +459,7 @@ export default function Terms() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
-          >
+
             <h2 className="text-4xl font-bold text-white mb-6">
               Termination & Cancellation
             </h2>
@@ -519,7 +518,7 @@ export default function Terms() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
-          >
+
             <h2 className="text-4xl font-bold text-white mb-6">
               Questions About Terms?
             </h2>
@@ -558,7 +557,7 @@ export default function Terms() {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-          >
+
             <h2 className="text-4xl font-bold text-white mb-6">
               Ready to Get Started?
             </h2>
@@ -570,13 +569,13 @@ export default function Terms() {
               <a
                 href="/contact"
                 className="px-8 py-4 bg-gradient-to-r from-blue-400 to-purple-500 text-white rounded-lg font-semibold hover:from-blue-500 hover:to-purple-600 transition-all duration-300 hover:scale-105"
-              >
+
                 Contact Us
               </a>
               <a
                 href="/privacy"
                 className="px-8 py-4 border border-blue-400 text-blue-400 rounded-lg font-semibold hover:bg-blue-400 hover:text-white transition-all duration-300"
-              >
+
                 Privacy Policy
               </a>
             </div>
@@ -585,4 +584,4 @@ export default function Terms() {
       </section>
     </div>
   );
-}
+}}}}</section>}

@@ -16,7 +16,6 @@ export interface Service {
   icon: string;
   isPopular?: boolean;
   isNew?: boolean;
-}
 
 export const services: Service[] = [
   // AI Services
@@ -408,7 +407,7 @@ export const services: Service[] = [
     },
     link: '/services/business-intelligence',
     icon: '📈'
-  }
+
 ];
 
 export const getServicesByCategory = (category: Service['category']) => {
@@ -421,4 +420,4 @@ export const getPopularServices = () => {
 
 export const getNewServices = () => {
   return services.filter(service => service.isNew);
-};
+};}}

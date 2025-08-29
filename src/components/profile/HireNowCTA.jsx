@@ -3,8 +3,7 @@ import { Button } from '../ui/Button';
 import { Card, CardContent, CardHeader, CardTitle } from '../ui/Card';
 import { Input } from '../ui/Input';
 import { Textarea } from '../ui/Textarea';
-import { DollarSign, MessageSquare } from 'lucide-react';
-export function HireNowCTA({ talentName, hourlyRate, onHire }) {
+import { DollarSign, MessageSquare export function HireNowCTA({ talentName, hourlyRate, onHire }) {
     const [isFormOpen, setIsFormOpen] = useState(false);
     const [formData, setFormData] = useState({
         projectDescription: '',
@@ -16,7 +15,7 @@ export function HireNowCTA({ talentName, hourlyRate, onHire }) {
         e.preventDefault();
         if (onHire) {
             onHire(formData);
-        }
+
         // Reset form and close
         setFormData({
             projectDescription: '',
@@ -93,4 +92,4 @@ export function HireNowCTA({ talentName, hourlyRate, onHire }) {
           </form>)}
       </CardContent>
     </Card>);
-}
+</Card></Card></Card>}}}

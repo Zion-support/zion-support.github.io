@@ -21,7 +21,7 @@ const AccessibilityAuditor = () => {
             title: "Compliance Reporting",
             description: "Detailed reports with actionable recommendations",
             icon: "📋"
-        }
+
     ];
     const complianceStandards = [
         "WCAG 2.1 AA",
@@ -42,7 +42,7 @@ const AccessibilityAuditor = () => {
         {
             category: "Technical Accessibility",
             items: ["Code validation", "Performance optimization", "Mobile responsiveness", "Cross-browser compatibility"]
-        }
+
     ];
     return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white">
       <section className="py-20 px-4 sm:px-6 lg:px-8">
@@ -212,3 +212,4 @@ const AccessibilityAuditor = () => {
     </div>);
 };
 export default AccessibilityAuditor;
+}}

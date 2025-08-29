@@ -1,7 +1,6 @@
 import React, { useState, useMemo } from 'react';
 import { motion } from 'framer-motion';
-import { Search, Filter, ArrowRight, Star, TrendingUp, Zap, Shield, Globe, Cpu, Database, Lock, Leaf, Phone, Mail, MapPin } from 'lucide-react';
-import { SEO } from '@/components/SEO';
+import { Search, Filter, ArrowRight, Star, TrendingUp, Zap, Shield, Globe, Cpu, Database, Lock, Leaf, Phone, Mail, MapPin import { SEO } from '@/components/SEO';
 import { INNOVATIVE_MICRO_SAAS_SERVICES_2026 } from '../data/innovativeMicroSaasServices2026';
 
 const InnovativeServicesShowcase2026: React.FC = () => {
@@ -21,12 +20,10 @@ const InnovativeServicesShowcase2026: React.FC = () => {
         service.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
         service.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()))
       );
-    }
 
     // Filter by category
     if (selectedCategory !== 'All') {
       filtered = filtered.filter(service => service.category === selectedCategory);
-    }
 
     // Sort services
     filtered.sort((a, b) => {
@@ -39,7 +36,7 @@ const InnovativeServicesShowcase2026: React.FC = () => {
           return parseInt(b.roi.split('-')[0]) - parseInt(a.roi.split('-')[0]);
         default:
           return 0;
-      }
+
     });
 
     return filtered;
@@ -67,7 +64,7 @@ const InnovativeServicesShowcase2026: React.FC = () => {
         return <Leaf className="w-5 h-5" />;
       default:
         return <Star className="w-5 h-5" />;
-    }
+
   };
 
   const getInnovationBadge = (level: string) => {
@@ -98,7 +95,7 @@ const InnovativeServicesShowcase2026: React.FC = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-          >
+
             <h1 className="text-5xl sm:text-7xl font-extrabold tracking-tight mb-6">
               <span className="bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent">
                 Innovative Services
@@ -152,7 +149,7 @@ const InnovativeServicesShowcase2026: React.FC = () => {
                   value={selectedCategory}
                   onChange={(e) => setSelectedCategory(e.target.value)}
                   className="bg-slate-800 border border-slate-600 rounded-lg px-3 py-2 text-white focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20 outline-none"
-                >
+
                   {categories.map(category => (
                     <option key={category} value={category}>{category}</option>
                   ))}
@@ -166,7 +163,7 @@ const InnovativeServicesShowcase2026: React.FC = () => {
                   value={sortBy}
                   onChange={(e) => setSortBy(e.target.value)}
                   className="bg-slate-800 border border-slate-600 rounded-lg px-3 py-2 text-white focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20 outline-none"
-                >
+
                   <option value="innovation">Innovation Level</option>
                   <option value="price">Price</option>
                   <option value="roi">ROI</option>
@@ -188,7 +185,7 @@ const InnovativeServicesShowcase2026: React.FC = () => {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 className="group bg-slate-900/60 backdrop-blur border border-cyan-400/15 hover:border-cyan-400/40 transition-all duration-300 rounded-2xl p-6 hover:shadow-2xl hover:shadow-cyan-400/10"
-              >
+
                 {/* Header */}
                 <div className="flex items-start justify-between mb-4">
                   <div className="flex items-center gap-3">
@@ -223,7 +220,7 @@ const InnovativeServicesShowcase2026: React.FC = () => {
                       <span
                         key={idx}
                         className="text-xs bg-slate-800/50 text-slate-300 px-2 py-1 rounded"
-                      >
+
                         {feature}
                       </span>
                     ))}
@@ -270,7 +267,7 @@ const InnovativeServicesShowcase2026: React.FC = () => {
                     <span
                       key={idx}
                       className="text-xs bg-cyan-400/10 text-cyan-300 px-2 py-1 rounded-full"
-                    >
+
                       {tag}
                     </span>
                   ))}
@@ -292,7 +289,7 @@ const InnovativeServicesShowcase2026: React.FC = () => {
                       <a
                         href={`tel:${service.contactInfo.phone}`}
                         className="text-cyan-300 hover:text-cyan-200 transition-colors"
-                      >
+
                         {service.contactInfo.phone}
                       </a>
                     </div>
@@ -325,7 +322,7 @@ const InnovativeServicesShowcase2026: React.FC = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
-          >
+
             <h2 className="text-4xl font-bold mb-6">Ready to Transform Your Business?</h2>
             <p className="text-xl text-slate-300 mb-8 max-w-3xl mx-auto">
               Our innovative services are designed to give you a competitive edge in the rapidly evolving technology landscape.
@@ -414,3 +411,4 @@ const InnovativeServicesShowcase2026: React.FC = () => {
 };
 
 export default InnovativeServicesShowcase2026;
+}}}}}

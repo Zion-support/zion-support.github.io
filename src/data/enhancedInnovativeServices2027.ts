@@ -28,7 +28,6 @@ export interface EnhancedService2027 {
   trialPeriod: string;
   compliance: string[];
   useCases: string[];
-}
 
 export const enhancedInnovativeServices2027: EnhancedService2027[] = [
   // Web3 & Metaverse Solutions
@@ -679,7 +678,7 @@ export const enhancedInnovativeServices2027: EnhancedService2027[] = [
     trialPeriod: '60 days',
     compliance: ['GDPR', 'HIPAA', 'SOC2', 'Data privacy regulations'],
     useCases: ['Healthcare AI', 'Financial modeling', 'Research collaboration', 'Privacy-preserving analytics']
-  }
+
 ];
 
 export const enhancedInnovativeServices2027Categories = [
@@ -700,4 +699,4 @@ export const getEnhancedInnovativeServices2027 = () => enhancedInnovativeService
 export const getEnhancedInnovativeServices2027ByCategory = (category: string) =>
   enhancedInnovativeServices2027.filter(service => service.category === category);
 export const getEnhancedInnovativeServices2027ById = (id: string) =>
-  enhancedInnovativeServices2027.find(service => service.id === id);
+  enhancedInnovativeServices2027.find(service => service.id === id);}}

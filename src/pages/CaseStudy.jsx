@@ -3,8 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import { CASE_STUDIES } from "@/data/case-studies";
 import { SEO } from "@/components/SEO";
 import { Button } from "@/components/ui/button";
-import { ArrowLeft } from "lucide-react";
-export default function CaseStudy() {
+import { ArrowLeft export default function CaseStudy() {
     const router = useNavigate();
     const { slug } = router.query;
     const study = CASE_STUDIES.find((s) => s.slug === slug);
@@ -12,7 +11,7 @@ export default function CaseStudy() {
         return (<div className="min-h-screen bg-zion-blue flex items-center justify-center text-white">
         Case study not found.
       </div>);
-    }
+
     return (<>
       <SEO title={study.title} description={study.excerpt}/>
       <div className="min-h-screen bg-zion-blue pt-12 pb-20 px-4">
@@ -30,4 +29,4 @@ export default function CaseStudy() {
         </div>
       </div>
     </>);
-}
+</div>}}}

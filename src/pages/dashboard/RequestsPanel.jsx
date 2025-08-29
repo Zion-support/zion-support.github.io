@@ -17,7 +17,7 @@ export default function RequestsPanel() {
         // If status is new, mark as viewed
         if (quote.status === 'new') {
             markAsViewed(quote.id);
-        }
+
     };
     // Filter quotes by archive status
     const activeQuotes = quotes.filter(q => !q.is_archived);
@@ -55,4 +55,4 @@ export default function RequestsPanel() {
 
       </div>
     </ProtectedRoute>);
-}
+}}

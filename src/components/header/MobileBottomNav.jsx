@@ -1,7 +1,6 @@
 import React from "react";
 import { Link, useLocation } from "react-router-dom";
-import { Home, Search, MessageSquare, User, MessageCircle, ShoppingCart } from "lucide-react";
-import { useCart } from "@/context/CartContext";
+import { Home, Search, MessageSquare, User, MessageCircle, ShoppingCart import { useCart } from "@/context/CartContext";
 import { cn } from "@/lib/utils";
 import { useAuth } from "@/hooks/useAuth";
 import { useFavorites } from "@/hooks/useFavorites";
@@ -52,7 +51,7 @@ export function MobileBottomNav({ unreadCount = 0 }) {
             icon: User,
             matches: (path) => path.startsWith("/dashboard"),
             authRequired: true
-        }
+
     ];
     // Filter items based on auth status
     const visibleItems = navItems.filter(item => !item.authRequired || (item.authRequired && isAuthenticated));
@@ -71,4 +70,4 @@ export function MobileBottomNav({ unreadCount = 0 }) {
           </Link>))}
       </div>
     </nav>);
-}
+}}}

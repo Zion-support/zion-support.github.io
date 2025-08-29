@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Quote, Star, ChevronLeft, ChevronRight, Play, Pause, MessageCircle, ThumbsUp, Share2 } from 'lucide-react';
-const testimonials = [
+import { Quote, Star, ChevronLeft, ChevronRight, Play, Pause, MessageCircle, ThumbsUp, Share2 const testimonials = [
     {
         id: '1',
         name: 'Sarah Chen',
@@ -66,7 +65,7 @@ const testimonials = [
         date: '2 months ago',
         likes: 94,
         verified: true
-    }
+
 ];
 const categories = ['All', 'AI Infrastructure', 'Talent Matching', 'Research & Development', 'Startup Solutions', 'Global Operations'];
 export function InteractiveTestimonials() {
@@ -96,10 +95,10 @@ export function InteractiveTestimonials() {
             const newSet = new Set(prev);
             if (newSet.has(testimonialId)) {
                 newSet.delete(testimonialId);
-            }
+
             else {
                 newSet.add(testimonialId);
-            }
+
             return newSet;
         });
     };
@@ -113,8 +112,8 @@ export function InteractiveTestimonials() {
             transition: {
                 staggerChildren: 0.1,
                 delayChildren: 0.2
-            }
-        }
+
+
     };
     const itemVariants = {
         hidden: { opacity: 0, y: 20, scale: 0.95 },
@@ -125,8 +124,8 @@ export function InteractiveTestimonials() {
             transition: {
                 duration: 0.5,
                 ease: "easeOut"
-            }
-        }
+
+
     };
     return (<section className="py-20 bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-blue-dark relative overflow-hidden">
       {/* Enhanced background with animated elements */}
@@ -322,4 +321,4 @@ export function InteractiveTestimonials() {
         </motion.div>
       </div>
     </section>);
-}
+}}}}}}}}}

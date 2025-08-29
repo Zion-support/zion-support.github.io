@@ -12,14 +12,11 @@ import {
   Info,
   Zap,
   CheckCircle
-} from 'lucide-react';
-
 interface Props {
   children: ReactNode;
   fallback?: ReactNode;
   onError?: (error: Error, errorInfo: ErrorInfo) => void;
   showDetails?: boolean;
-}
 
 interface State {
   hasError: boolean;
@@ -27,7 +24,6 @@ interface State {
   errorInfo: ErrorInfo | null;
   showStack: boolean;
   errorId: string;
-}
 
 export class ErrorBoundary extends Component<Props, State> {
   constructor(props: Props) {
@@ -39,7 +35,6 @@ export class ErrorBoundary extends Component<Props, State> {
       showStack: false,
       errorId: ''
     };
-  }
 
   static getDerivedStateFromError(error: Error): Partial<State> {
     return {
@@ -47,7 +42,6 @@ export class ErrorBoundary extends Component<Props, State> {
       error,
       errorId: `error-${Date.now()}-${Math.random().toString(36).substr(2, 9)}`
     };
-  }
 
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {
     this.setState({
@@ -55,16 +49,14 @@ export class ErrorBoundary extends Component<Props, State> {
     });
 
     // Log error to console
-    // console.error('ErrorBoundary caught an error:', error, errorInfo);
+    // // // console.error('ErrorBoundary caught an error:', error, errorInfo);
 
     // Call custom error handler if provided
     if (this.props.onError) {
       this.props.onError(error, errorInfo);
-    }
 
     // Log to external service (you can replace this with your error logging service)
     this.logErrorToService(error, errorInfo);
-  }
 
   private logErrorToService = (error: Error, errorInfo: ErrorInfo) => {
     try {
@@ -81,7 +73,7 @@ export class ErrorBoundary extends Component<Props, State> {
       };
 
       // You can send this to your error logging service
-      // console.log('Error logged:', errorData);
+      // // // console.log('Error logged:', errorData);
 
       // Example: Send to external service
       // fetch('/api/errors', {
@@ -90,8 +82,8 @@ export class ErrorBoundary extends Component<Props, State> {
       //   body: JSON.stringify(errorData)
       // });
     } catch (logError) {
-      // console.error('Failed to log error:', logError);
-    }
+      // // // console.error('Failed to log error:', logError);
+
   };
 
   private handleRetry = () => {
@@ -131,7 +123,7 @@ User Agent: ${navigator.userAgent}
             button.innerHTML = originalText;
             button.classList.remove('text-green-600');
           }, 2000);
-        }
+
       }).catch(() => {
         // Fallback for older browsers
         const textArea = document.createElement('textarea');
@@ -141,7 +133,7 @@ User Agent: ${navigator.userAgent}
         document.execCommand('copy');
         document.body.removeChild(textArea);
       });
-    }
+
   };
 
   private toggleStack = () => {
@@ -153,7 +145,6 @@ User Agent: ${navigator.userAgent}
       // Custom fallback UI
       if (this.props.fallback) {
         return this.props.fallback;
-      }
 
       // Default error UI
       return (
@@ -161,7 +152,7 @@ User Agent: ${navigator.userAgent}
           initial={{ opacity: 0, scale: 0.9 }}
           animate={{ opacity: 1, scale: 1 }}
           className="min-h-screen bg-gradient-to-br from-red-50 to-orange-50 flex items-center justify-center p-4"
-        >
+
           <div className="max-w-2xl w-full bg-white rounded-2xl shadow-2xl border border-red-200 overflow-hidden">
             {/* Header */}
             <div className="bg-gradient-to-r from-red-500 to-orange-500 p-6 text-white">
@@ -213,7 +204,7 @@ User Agent: ${navigator.userAgent}
                     <button
                       onClick={this.toggleStack}
                       className="w-full p-4 bg-gray-50 hover:bg-gray-100 transition-colors flex items-center justify-between text-left"
-                    >
+
                       <div className="flex items-center gap-2">
                         <FileText className="w-4 h-4 text-gray-500" />
                         <span className="font-medium text-gray-700">
@@ -223,7 +214,7 @@ User Agent: ${navigator.userAgent}
                       <motion.div
                         animate={{ rotate: this.state.showStack ? 180 : 0 }}
                         transition={{ duration: 0.2 }}
-                      >
+
                         <X className="w-4 h-4 text-gray-500" />
                       </motion.div>
                     </button>
@@ -234,7 +225,7 @@ User Agent: ${navigator.userAgent}
                         animate={{ height: 'auto', opacity: 1 }}
                         exit={{ height: 0, opacity: 0 }}
                         className="border-t border-gray-200 p-4 bg-gray-900 text-green-400 font-mono text-xs overflow-x-auto"
-                      >
+
                         <div className="space-y-2">
                           <div>
                             <span className="text-yellow-400">Component Stack:</span>
@@ -278,7 +269,7 @@ User Agent: ${navigator.userAgent}
                 <button
                   onClick={this.handleRetry}
                   className="flex-1 bg-gradient-to-r from-blue-500 to-blue-600 text-white px-6 py-3 rounded-lg font-medium hover:from-blue-600 hover:to-blue-700 transition-all duration-200 flex items-center justify-center gap-2 shadow-lg hover:shadow-xl"
-                >
+
                   <RefreshCw className="w-4 h-4" />
                   Try Again
                 </button>
@@ -286,7 +277,7 @@ User Agent: ${navigator.userAgent}
                 <button
                   onClick={this.handleGoHome}
                   className="flex-1 bg-gradient-to-r from-gray-500 to-gray-600 text-white px-6 py-3 rounded-lg font-medium hover:from-gray-600 hover:to-gray-700 transition-all duration-200 flex items-center justify-center gap-2 shadow-lg hover:shadow-xl"
-                >
+
                   <Home className="w-4 h-4" />
                   Go Home
                 </button>
@@ -298,7 +289,7 @@ User Agent: ${navigator.userAgent}
                   onClick={this.handleCopyError}
                   data-copy-button
                   className="flex items-center gap-2 text-sm text-gray-600 hover:text-gray-800 transition-colors"
-                >
+
                   <Copy className="w-4 h-4" />
                   Copy Error Details
                 </button>
@@ -306,7 +297,7 @@ User Agent: ${navigator.userAgent}
                 <button
                   onClick={() => window.location.reload()}
                   className="flex items-center gap-2 text-sm text-gray-600 hover:text-gray-800 transition-colors"
-                >
+
                   <Zap className="w-4 h-4" />
                   Hard Refresh
                 </button>
@@ -322,11 +313,9 @@ User Agent: ${navigator.userAgent}
           </div>
         </motion.div>
       );
-    }
 
     return this.props.children;
-  }
-}
+
 
 // Higher-order component for functional components
 export function withErrorBoundary<P extends object>(
@@ -340,12 +329,11 @@ export function withErrorBoundary<P extends object>(
       </ErrorBoundary>
     );
   };
-}
 
 // Hook for functional components to catch errors
 export function useErrorHandler() {
   return React.useCallback((error: Error, errorInfo?: ErrorInfo) => {
-    // console.error('Error caught by useErrorHandler:', error, errorInfo);
+    // // // console.error('Error caught by useErrorHandler:', error, errorInfo);
 
     // You can add custom error handling logic here
     // For example, sending to an error reporting service
@@ -353,4 +341,4 @@ export function useErrorHandler() {
     // Re-throw the error to trigger error boundaries
     throw error;
   }, []);
-}
+}}}}}}}}}}}}}}}}

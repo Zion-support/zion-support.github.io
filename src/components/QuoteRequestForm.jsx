@@ -5,9 +5,7 @@ import { Input } from './ui/input';
 import { Textarea } from './ui/textarea';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from './ui/select';
 import { Checkbox } from './ui/checkbox';
-import { Mail, Phone, Building, Send, CheckCircle, AlertCircle } from 'lucide-react';
-
-export const QuoteRequestForm = () => {
+import { Mail, Phone, Building, Send, CheckCircle, AlertCircle export const QuoteRequestForm = () => {
   const [formData, setFormData] = useState({
     firstName: '',
     lastName: '',
@@ -76,7 +74,7 @@ export const QuoteRequestForm = () => {
         ...prev,
         [field]: ''
       }));
-    }
+
   };
 
   const validateForm = () => {
@@ -88,7 +86,7 @@ export const QuoteRequestForm = () => {
       newErrors.email = 'Email is required';
     } else if (!/\S+@\S+\.\S+/.test(formData.email)) {
       newErrors.email = 'Please enter a valid email address';
-    }
+
     if (!formData.company.trim()) newErrors.company = 'Company name is required';
     if (!formData.serviceType) newErrors.serviceType = 'Please select a service type';
     if (!formData.projectDescription.trim()) newErrors.projectDescription = 'Project description is required';
@@ -103,7 +101,6 @@ export const QuoteRequestForm = () => {
 
     if (!validateForm()) {
       return;
-    }
 
     setIsSubmitting(true);
 
@@ -112,7 +109,7 @@ export const QuoteRequestForm = () => {
       await new Promise(resolve => setTimeout(resolve, 2000));
 
       // In a real app, you would send the data to your backend
-      // console.log('Quote request submitted:', formData);
+      // // // console.log('Quote request submitted:', formData);
 
       setIsSubmitted(true);
       setFormData({
@@ -131,11 +128,11 @@ export const QuoteRequestForm = () => {
         agreeToMarketing: false
       });
     } catch (error) {
-      // console.error('Error submitting quote request:', error);
+      // // // console.error('Error submitting quote request:', error);
       setErrors({ submit: 'Failed to submit request. Please try again.' });
     } finally {
       setIsSubmitting(false);
-    }
+
   };
 
   if (isSubmitted) {
@@ -153,14 +150,13 @@ export const QuoteRequestForm = () => {
             <Button
               onClick={() => setIsSubmitted(false)}
               className="bg-green-600 hover:bg-green-700"
-            >
+
               Submit Another Request
             </Button>
           </div>
         </CardContent>
       </Card>
     );
-  }
 
   return (
     <Card className="max-w-4xl mx-auto">
@@ -266,7 +262,7 @@ export const QuoteRequestForm = () => {
             <Select
               value={formData.serviceType}
               onValueChange={(value) => handleChange('serviceType', value)}
-            >
+
               <SelectTrigger className={errors.serviceType ? 'border-red-500' : ''}>
                 <SelectValue placeholder="Select a service type" />
               </SelectTrigger>
@@ -309,7 +305,7 @@ export const QuoteRequestForm = () => {
               <Select
                 value={formData.timeline}
                 onValueChange={(value) => handleChange('timeline', value)}
-              >
+
                 <SelectTrigger>
                   <SelectValue placeholder="Select timeline" />
                 </SelectTrigger>
@@ -330,7 +326,7 @@ export const QuoteRequestForm = () => {
               <Select
                 value={formData.budget}
                 onValueChange={(value) => handleChange('budget', value)}
-              >
+
                 <SelectTrigger>
                   <SelectValue placeholder="Select budget range" />
                 </SelectTrigger>
@@ -354,7 +350,7 @@ export const QuoteRequestForm = () => {
               <Select
                 value={formData.urgency}
                 onValueChange={(value) => handleChange('urgency', value)}
-              >
+
                 <SelectTrigger>
                   <SelectValue />
                 </SelectTrigger>
@@ -375,7 +371,7 @@ export const QuoteRequestForm = () => {
               <Select
                 value={formData.contactMethod}
                 onValueChange={(value) => handleChange('contactMethod', value)}
-              >
+
                 <SelectTrigger>
                   <SelectValue />
                 </SelectTrigger>
@@ -440,7 +436,7 @@ export const QuoteRequestForm = () => {
             type="submit"
             disabled={isSubmitting}
             className="w-full bg-zion-blue hover:bg-zion-blue-dark text-white py-3 text-lg font-semibold"
-          >
+
             {isSubmitting ? (
               <>
                 <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-white mr-2"></div>
@@ -461,4 +457,4 @@ export const QuoteRequestForm = () => {
       </CardContent>
     </Card>
   );
-};
+</Card></Card></Card></Card></Card>};}}}}}}

@@ -29,5 +29,4 @@ export default function AISalesAssistant() {
       </main>
     </div>
   );
-}
-
+</div></div></div></div>}

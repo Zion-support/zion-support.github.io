@@ -28,8 +28,8 @@ export function NewServices() {
             opacity: 1,
             transition: {
                 staggerChildren: 0.1
-            }
-        }
+
+
     };
     const itemVariants = {
         hidden: { y: 20, opacity: 0 },
@@ -38,8 +38,8 @@ export function NewServices() {
             opacity: 1,
             transition: {
                 duration: 0.5
-            }
-        }
+
+
     };
     return (<div className="min-h-screen bg-zion-blue-dark text-white relative overflow-hidden">
       {/* Animated Background */}
@@ -448,5 +448,6 @@ export function NewServices() {
           </motion.div>
         </div>)}
     </div>);
-}
+
 export default NewServices;
+}}}}}

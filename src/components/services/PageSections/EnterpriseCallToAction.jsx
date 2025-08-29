@@ -1,7 +1,5 @@
 import React from 'react';
-import { Building2, Users, Globe, Shield, Award, ArrowRight, Phone, Mail, Calendar, CheckCircle } from 'lucide-react';
-
-export const EnterpriseCallToAction = () => {
+import { Building2, Users, Globe, Shield, Award, ArrowRight, Phone, Mail, Calendar, CheckCircle export const EnterpriseCallToAction = () => {
   const enterpriseFeatures = [
     {
       icon: Building2,
@@ -27,7 +25,7 @@ export const EnterpriseCallToAction = () => {
       icon: Award,
       title: 'Proven Track Record',
       description: 'Successfully serving Fortune 500 companies and government agencies'
-    }
+
   ];
 
   const enterpriseBenefits = [
@@ -65,7 +63,7 @@ export const EnterpriseCallToAction = () => {
       action: 'Book Consultation',
       link: '#consultation',
       color: 'purple'
-    }
+
   ];
 
   return (
@@ -122,7 +120,7 @@ export const EnterpriseCallToAction = () => {
               <a
                 href={method.link}
                 className={`inline-flex items-center space-x-2 px-6 py-3 bg-gradient-to-r from-${method.color}-500 to-${method.color}-600 text-white font-semibold rounded-lg hover:from-${method.color}-600 hover:to-${method.color}-700 transition-all duration-300`}
-              >
+
                 <span>{method.action}</span>
                 <ArrowRight className="w-4 h-4" />
               </a>
@@ -144,13 +142,13 @@ export const EnterpriseCallToAction = () => {
             <a
               href="#enterprise-demo"
               className="px-8 py-4 bg-white text-blue-600 font-semibold rounded-lg hover:bg-gray-100 transition-all duration-300 text-lg"
-            >
+
               Request Enterprise Demo
             </a>
             <a
               href="#enterprise-quote"
               className="px-8 py-4 border-2 border-white text-white font-semibold rounded-lg hover:bg-white hover:text-blue-600 transition-all duration-300 text-lg"
-            >
+
               Get Enterprise Quote
             </a>
           </div>
@@ -230,13 +228,13 @@ export const EnterpriseCallToAction = () => {
               <a
                 href="#enterprise-contact"
                 className="px-8 py-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-300"
-              >
+
                 Contact Enterprise Team
               </a>
               <a
                 href="#enterprise-case-studies"
                 className="px-8 py-3 border border-white/30 text-white font-semibold rounded-lg hover:bg-white/10 transition-all duration-300"
-              >
+
                 View Case Studies
               </a>
             </div>
@@ -245,4 +243,4 @@ export const EnterpriseCallToAction = () => {
       </div>
     </section>
   );
-};
+};}}}

@@ -14,7 +14,7 @@ interface SEOProps {
   tags?: string[];
   noindex?: boolean;
   nofollow?: boolean;
-}
+
 export function SEO({
   title,
   description,
@@ -96,7 +96,7 @@ export function SEO({
             "@type": "Service",
             "name": "AI & Analytics Solutions",
             "description": "Cutting-edge artificial intelligence and data analytics services"
-          }
+
         },
         {
           "@type": "Offer",
@@ -104,7 +104,7 @@ export function SEO({
             "@type": "Service",
             "name": "Cybersecurity Services",
             "description": "Advanced security protocols and threat protection"
-          }
+
         },
         {
           "@type": "Offer",
@@ -112,10 +112,10 @@ export function SEO({
             "@type": "Service",
             "name": "Cloud & DevOps",
             "description": "Scalable cloud infrastructure and development operations"
-          }
-        }
+
+
       ]
-    }
+
   };
 
   // Structured data for the current page
@@ -135,7 +135,7 @@ export function SEO({
       "logo": {
         "@type": "ImageObject",
         "url": `${siteUrl}/images/zion-tech-group-logo.png`
-      }
+
     },
     "image": fullImageUrl,
     "datePublished": publishedTime || new Date().toISOString(),
@@ -236,4 +236,4 @@ export function SEO({
       <meta name="business:contact_data:email" content="info@ziontechgroup.com" />
     </Helmet>
   );
-}
+}}}}}}}}

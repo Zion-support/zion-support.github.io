@@ -1,8 +1,7 @@
 import React from 'react';
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
-import { Zap, Shield, Cloud, Database, Code, ShoppingCart, BarChart3, Link as LinkIcon, Network, Monitor, Smartphone, CheckCircle, Star, Clock, Users, Globe } from "lucide-react";
-// Service categories with detailed information
+import { Zap, Shield, Cloud, Database, Code, ShoppingCart, BarChart3, Link as LinkIcon, Network, Monitor, Smartphone, CheckCircle, Star, Clock, Users, Globe // Service categories with detailed information
 const serviceCategories = [
     {
         title: "AI Services",
@@ -26,7 +25,7 @@ const serviceCategories = [
                 price: "$399",
                 features: ["Custom style training", "4K resolution", "Commercial licensing", "Design tool integration"],
                 benefits: ["Unique visual content", "Brand consistency", "Cost-effective design", "Rapid prototyping"]
-            }
+
         ],
         marketPrice: "$150-500",
         deliveryTime: "Immediate",
@@ -48,7 +47,7 @@ const serviceCategories = [
                 price: "$799",
                 features: ["Sales forecasting", "Customer behavior analysis", "Risk assessment", "ML models"],
                 benefits: ["Future planning", "Customer insights", "Risk mitigation", "Revenue optimization"]
-            }
+
         ],
         marketPrice: "$500-1500",
         deliveryTime: "1-3 weeks",
@@ -70,7 +69,7 @@ const serviceCategories = [
                 price: "$2,499",
                 features: ["Web app testing", "Network security", "Mobile app testing", "Compliance documentation"],
                 benefits: ["Vulnerability identification", "Security validation", "Compliance readiness", "Risk assessment"]
-            }
+
         ],
         marketPrice: "$800-3000",
         deliveryTime: "Immediate - 2 weeks",
@@ -92,7 +91,7 @@ const serviceCategories = [
                 price: "$699",
                 features: ["CI/CD pipelines", "Kubernetes support", "Infrastructure as code", "Monitoring & alerting"],
                 benefits: ["Faster deployments", "Reduced errors", "Team productivity", "Cost optimization"]
-            }
+
         ],
         marketPrice: "$700-5000",
         deliveryTime: "1-4 weeks",
@@ -114,7 +113,7 @@ const serviceCategories = [
                 price: "$899",
                 features: ["Query optimization", "Indexing strategies", "Performance monitoring", "Capacity planning"],
                 benefits: ["Faster queries", "Better performance", "Reduced costs", "Improved user experience"]
-            }
+
         ],
         marketPrice: "$900-2000",
         deliveryTime: "1-3 weeks",
@@ -142,7 +141,7 @@ const serviceCategories = [
                 price: "$1,999",
                 features: ["REST/GraphQL APIs", "Documentation", "Testing", "Developer portal"],
                 benefits: ["System integration", "Scalable architecture", "Developer experience", "API monetization"]
-            }
+
         ],
         marketPrice: "$2000-8000",
         deliveryTime: "3-8 weeks",
@@ -158,7 +157,7 @@ const serviceCategories = [
                 price: "$5,999",
                 features: ["Payment processing", "Inventory management", "Order fulfillment", "CRM integration"],
                 benefits: ["Increased sales", "Better customer experience", "Operational efficiency", "Scalable growth"]
-            }
+
         ],
         marketPrice: "$5000-15000",
         deliveryTime: "8-10 weeks",
@@ -174,7 +173,7 @@ const serviceCategories = [
                 price: "$799",
                 features: ["Email marketing", "Lead scoring", "Campaign management", "AI personalization"],
                 benefits: ["Increased conversions", "Better lead quality", "Time savings", "ROI improvement"]
-            }
+
         ],
         marketPrice: "$500-1500",
         deliveryTime: "2-3 weeks",
@@ -190,7 +189,7 @@ const serviceCategories = [
                 price: "$1,499",
                 features: ["Payment gateways", "CRM systems", "Marketing tools", "Custom webhooks"],
                 benefits: ["System connectivity", "Data consistency", "Workflow automation", "Reduced manual work"]
-            }
+
         ],
         marketPrice: "$1000-3000",
         deliveryTime: "2-3 weeks",
@@ -212,7 +211,7 @@ const serviceCategories = [
                 price: "$5,999",
                 features: ["Wallet integration", "Blockchain interaction", "Cross-chain compatibility", "User-friendly interfaces"],
                 benefits: ["Future-proof technology", "User ownership", "Global accessibility", "Reduced intermediaries"]
-            }
+
         ],
         marketPrice: "$4000-10000",
         deliveryTime: "4-8 weeks",
@@ -228,7 +227,7 @@ const serviceCategories = [
                 price: "$4,999",
                 features: ["Device management", "Real-time monitoring", "Edge computing", "Cloud integration"],
                 benefits: ["Connected devices", "Data insights", "Operational efficiency", "Innovation opportunities"]
-            }
+
         ],
         marketPrice: "$4000-12000",
         deliveryTime: "8-10 weeks",
@@ -244,12 +243,12 @@ const serviceCategories = [
                 price: "$2,999",
                 features: ["3D printing", "PCB design", "Component sourcing", "Design validation"],
                 benefits: ["Faster development", "Cost reduction", "Design validation", "Market testing"]
-            }
+
         ],
         marketPrice: "$2000-8000",
         deliveryTime: "4-6 weeks",
         link: "/micro-saas-services"
-    }
+
 ];
 // Why choose Zion Tech Group
 const whyChooseUs = [
@@ -272,7 +271,7 @@ const whyChooseUs = [
         title: "Proven Results",
         description: "Track record of successful project deliveries",
         icon: <Star className="w-6 h-6 text-zion-yellow"/>
-    }
+
 ];
 export function ServicesOverview() {
     return (<div className="py-20 bg-zion-blue-dark">
@@ -392,4 +391,4 @@ export function ServicesOverview() {
         </div>
       </div>
     </div>);
-}
+}}}}}}}}}}}}}}}}

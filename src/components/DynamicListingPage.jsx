@@ -7,8 +7,7 @@ import { Input } from "@/components/ui/input";
 import { Select, SelectValue, SelectTrigger, SelectContent, SelectItem } from "@/components/ui/select";
 import { Skeleton } from "@/components/ui/skeleton";
 import { Slider } from "@/components/ui/slider";
-import { Search, Filter, LayoutGrid, List, Star } from "lucide-react";
-import { toast } from "@/hooks/use-toast";
+import { Search, Filter, LayoutGrid, List, Star import { toast } from "@/hooks/use-toast";
 import { Pagination, PaginationContent, PaginationItem, PaginationLink, PaginationNext, PaginationPrevious, } from "@/components/ui/pagination";
 export function DynamicListingPage({ title, description, categorySlug, listings: allListings, categoryFilters, initialPrice = { min: 0, max: 10000 }, detailBasePath = '/marketplace/listing' }) {
     const navigate = useNavigate();
@@ -25,7 +24,7 @@ export function DynamicListingPage({ title, description, categorySlug, listings:
             const max = Math.max(...listingsWithPrice.map(l => l.price || 0));
             setPriceRange({ min: 0, max });
             setCurrentPriceFilter([0, max]);
-        }
+
     }, [allListings]);
     const [currentPriceFilter, setCurrentPriceFilter] = useState([
         0,
@@ -73,10 +72,10 @@ export function DynamicListingPage({ title, description, categorySlug, listings:
                             title: listing.title,
                             category: listing.category,
                             image: listing.images?.[0]
-                        }
-                    }
+
+
                 });
-            }
+
         }, 500);
     };
     return (<div className="min-h-screen bg-zion-blue py-12 px-4">
@@ -100,7 +99,7 @@ export function DynamicListingPage({ title, description, categorySlug, listings:
                   Category
                 </label>
                 <Select value={selectedCategory} onValueChange={(value) => {
-            // console.log("Category selected:", value);
+            // // // console.log("Category selected:", value);
             setSelectedCategory(value);
         }}>
                   <SelectTrigger className="bg-zion-blue border border-zion-blue-light text-white">
@@ -134,7 +133,7 @@ export function DynamicListingPage({ title, description, categorySlug, listings:
                 </label>
                 <div className="flex flex-wrap gap-2">
                   {[null, 3, 4, 5].map((rating) => (<Button key={rating === null ? 'any' : rating} variant="outline" size="sm" onClick={() => {
-                // console.log("Rating selected:", rating);
+                // // // console.log("Rating selected:", rating);
                 setSelectedRating(rating);
             }} aria-pressed={selectedRating === rating} className={`${selectedRating === rating
                 ? "bg-zion-purple/30 border-zion-purple text-zion-purple"
@@ -148,7 +147,7 @@ export function DynamicListingPage({ title, description, categorySlug, listings:
               </div>
 
               <Button variant="outline" className="w-full border-zion-purple text-zion-purple hover:bg-zion-purple/10" onClick={() => {
-            // console.log("Resetting filters");
+            // // // console.log("Resetting filters");
             setSearchQuery("");
             setSelectedCategory("all");
             setCurrentPriceFilter([0, priceRange.max]);
@@ -165,7 +164,7 @@ export function DynamicListingPage({ title, description, categorySlug, listings:
                 <div className="relative flex-grow">
                   <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate h-4 w-4"/>
                   <Input type="text" placeholder="Search listings..." value={searchQuery} onChange={(e) => {
-            // console.log("Search query:", e.target.value);
+            // // // console.log("Search query:", e.target.value);
             setSearchQuery(e.target.value);
         }} className="pl-10 bg-zion-blue border border-zion-blue-light text-white"/>
                 </div>
@@ -278,4 +277,4 @@ export function DynamicListingPage({ title, description, categorySlug, listings:
         </div>
       </div>
     </div>);
-}
+}}}}}}

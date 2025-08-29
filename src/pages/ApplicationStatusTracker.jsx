@@ -1,8 +1,7 @@
 import { SEO } from "@/components/SEO";
 import { ApplicationsTracker } from "@/components/jobs/applications";
 import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
-import { Inbox } from "lucide-react";
-import { ProtectedRoute } from "@/components/ProtectedRoute";
+import { Inbox import { ProtectedRoute } from "@/components/ProtectedRoute";
 import { useIsMobile } from "@/hooks/use-mobile";
 function ApplicationStatusTrackerContent() {
     const isMobile = useIsMobile();
@@ -31,11 +30,11 @@ function ApplicationStatusTrackerContent() {
         </div>
       </div>
     </>);
-}
+
 export default function ApplicationStatusTracker() {
     return (<ProtectedRoute>
 
         <ApplicationStatusTrackerContent />
 
     </ProtectedRoute>);
-}
+</Card></Card></Card>}}}

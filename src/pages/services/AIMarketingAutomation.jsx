@@ -1,8 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { Target, Users, Mail, MessageSquare, TrendingUp, Zap, Brain, Globe, Clock, BarChart3 } from 'lucide-react';
-const AIMarketingAutomation = () => {
+import { Target, Users, Mail, MessageSquare, TrendingUp, Zap, Brain, Globe, Clock, BarChart3 const AIMarketingAutomation = () => {
     const features = [
         {
             icon: Brain,
@@ -27,7 +26,7 @@ const AIMarketingAutomation = () => {
             title: "Automated Workflows",
             description: "Intelligent automation of marketing processes, from lead generation to customer retention",
             benefits: ["Lead nurturing", "Email automation", "Social media management", "Content scheduling"]
-        }
+
     ];
     const solutions = [
         {
@@ -73,7 +72,7 @@ const AIMarketingAutomation = () => {
                 "Content scheduling",
                 "ROI measurement"
             ]
-        }
+
     ];
     const technologies = [
         {
@@ -105,7 +104,7 @@ const AIMarketingAutomation = () => {
             name: "Multi-channel Integration",
             description: "Seamless integration across all marketing channels",
             icon: Globe
-        }
+
     ];
     const benefits = [
         {
@@ -127,7 +126,7 @@ const AIMarketingAutomation = () => {
             title: "Scalable Growth",
             description: "Scale marketing efforts without proportional increase in resources",
             icon: Users
-        }
+
     ];
     const containerVariants = {
         hidden: { opacity: 0 },
@@ -135,8 +134,8 @@ const AIMarketingAutomation = () => {
             opacity: 1,
             transition: {
                 staggerChildren: 0.1
-            }
-        }
+
+
     };
     const itemVariants = {
         hidden: { y: 20, opacity: 0 },
@@ -145,8 +144,8 @@ const AIMarketingAutomation = () => {
             opacity: 1,
             transition: {
                 duration: 0.5
-            }
-        }
+
+
     };
     return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       {/* Hero Section */}
@@ -310,5 +309,6 @@ const AIMarketingAutomation = () => {
         </motion.div>
       </div>
     </div>);
-};
+</div>};
 export default AIMarketingAutomation;
+}}}}}}}}}

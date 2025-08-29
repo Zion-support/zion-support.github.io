@@ -10,8 +10,7 @@ import { Badge } from "@/components/ui/badge";
 import { Separator } from "@/components/ui/separator";
 import { Form, FormControl, FormDescription, FormField, FormItem, FormLabel, FormMessage, } from "@/components/ui/form";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
-import { X, Sparkles, Upload, Check, Briefcase, MapPin, UserRound, Globe } from "lucide-react";
-import { toast } from "@/components/ui/use-toast";
+import { X, Sparkles, Upload, Check, Briefcase, MapPin, UserRound, Globe import { toast } from "@/components/ui/use-toast";
 import { useAuth } from "@/hooks/useAuth";
 import { supabase } from "@/integrations/supabase/client";
 import { AspectRatio } from "@/components/ui/aspect-ratio";
@@ -57,7 +56,7 @@ export function ServiceProviderRegistrationForm() {
         if (serviceInput && !serviceTags.includes(serviceInput)) {
             setServiceTags([...serviceTags, serviceInput]);
             form.setValue("services", "");
-        }
+
     };
     // Handle removing service tags
     const handleRemoveService = (service) => {
@@ -68,7 +67,7 @@ export function ServiceProviderRegistrationForm() {
         if (e.key === "Enter") {
             e.preventDefault();
             handleAddService();
-        }
+
     };
     // Handle avatar upload
     const handleAvatarUpload = (e) => {
@@ -79,7 +78,7 @@ export function ServiceProviderRegistrationForm() {
                 setUploadedAvatar(reader.result);
             };
             reader.readAsDataURL(file);
-        }
+
     };
     // Generate enhanced profile with AI
     const generateEnhancedProfile = async () => {
@@ -90,7 +89,7 @@ export function ServiceProviderRegistrationForm() {
                 description: "Please provide at least a detailed bio before generating enhanced content.",
             });
             return;
-        }
+
         try {
             setIsGenerating(true);
             // Call the Supabase Edge Function
@@ -102,29 +101,29 @@ export function ServiceProviderRegistrationForm() {
                         bio: formData.bio,
                         services: serviceTags,
                         location: formData.location
-                    }
-                }
+
+
             });
             if (error) {
                 throw new Error(error.message);
-            }
+
             setGeneratedContent(data);
             toast({
                 title: "Enhanced Profile Generated",
                 description: "AI has created a professional bio and suggested additional services for your profile.",
             });
-        }
+
         catch (error) {
-            // console.error("Error generating enhanced profile:", error);
+            // // // console.error("Error generating enhanced profile:", error);
             toast({
                 title: "Generation failed",
                 description: error.message || "There was an error generating your enhanced profile. Please try again.",
                 variant: "destructive",
             });
-        }
+
         finally {
             setIsGenerating(false);
-        }
+
     };
     // Apply generated content to form
     const applyGeneratedContent = () => {
@@ -134,9 +133,9 @@ export function ServiceProviderRegistrationForm() {
                 const newServices = generatedContent.services.filter(service => typeof service === 'string' && service && !serviceTags.includes(service));
                 if (newServices.length > 0) {
                     setServiceTags([...serviceTags, ...newServices]);
-                }
-            }
-        }
+
+
+
     };
     // Handle form submission
     const onSubmit = async (values) => {
@@ -147,13 +146,13 @@ export function ServiceProviderRegistrationForm() {
                 variant: "destructive",
             });
             return;
-        }
+
         setIsSubmitting(true);
         try {
             // For actual implementation with Supabase
             if (!user?.id) {
                 throw new Error("User not authenticated");
-            }
+
             // Enhance profile if not already done
             let finalSummary = values.bio;
             let finalServices = serviceTags;
@@ -167,25 +166,25 @@ export function ServiceProviderRegistrationForm() {
                                 bio: values.bio,
                                 services: serviceTags,
                                 location: values.location
-                            }
-                        }
+
+
                     });
                     if (aiData) {
                         finalSummary = aiData.summary || values.bio;
                         // Merge AI suggested services with user-provided services
                         const aiServices = aiData.services || [];
                         finalServices = [...new Set([...serviceTags, ...aiServices])];
-                    }
-                }
+
+
                 catch (error) {
-                    // console.error("Error enhancing profile:", error);
+                    // // // console.error("Error enhancing profile:", error);
                     // Continue with submission even if enhancement fails
-                }
-            }
+
+
             else if (generatedContent) {
                 finalSummary = generatedContent.summary;
                 finalServices = [...new Set([...serviceTags, ...generatedContent.services])];
-            }
+
             // Get user email for notification
             const { data: userData } = await supabase.auth.getUser();
             const userEmail = userData.user?.email;
@@ -239,14 +238,14 @@ export function ServiceProviderRegistrationForm() {
                 </div>
               </div>
               `
-                        }
+
                     });
-                }
+
                 catch (emailError) {
-                    // console.error("Failed to send notification email:", emailError);
+                    // // // console.error("Failed to send notification email:", emailError);
                     // Continue with submission even if email fails
-                }
-            }
+
+
             toast({
                 title: "Profile Created Successfully",
                 description: "Your service provider profile has been published and is now visible in the directory.",
@@ -255,18 +254,18 @@ export function ServiceProviderRegistrationForm() {
             setTimeout(() => {
                 window.location.href = "/service-dashboard";
             }, 1500);
-        }
+
         catch (error) {
-            // console.error("Error creating profile:", error);
+            // // // console.error("Error creating profile:", error);
             toast({
                 title: "Error Creating Profile",
                 description: error.message || "There was an error creating your profile. Please try again.",
                 variant: "destructive",
             });
-        }
+
         finally {
             setIsSubmitting(false);
-        }
+
     };
     return (<div className="max-w-4xl mx-auto p-4 md:p-6">
       <Card className="bg-zion-blue-dark border-zion-blue-light">
@@ -530,4 +529,4 @@ export function ServiceProviderRegistrationForm() {
         </Form>
       </Card>
     </div>);
-}
+</Card></Card></Card></Card></Card>}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}

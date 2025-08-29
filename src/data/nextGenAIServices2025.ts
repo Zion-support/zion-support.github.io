@@ -24,7 +24,7 @@ export interface NextGenAIService {
   status: 'active' | 'beta' | 'coming-soon';
   researchLevel: 'production' | 'research' | 'experimental';
   ethicalCompliance: string[];
-}
+
 export const NEXT_GEN_AI_SERVICES_2025: NextGenAIService[] = [
   {
     id: 'autonomous-ai-systems',
@@ -369,14 +369,14 @@ export const NEXT_GEN_AI_SERVICES_2025: NextGenAIService[] = [
     status: 'active',
     researchLevel: 'production',
     ethicalCompliance: ['Fairness', 'Transparency', 'Bias Prevention', 'Accountability']
-  }
+
 ];
 export const getNextGenAIServicesByCategory = (category: string): NextGenAIService[] => {
   if (category === 'All') {
     return NEXT_GEN_AI_SERVICES_2025;
-  }
+
   return NEXT_GEN_AI_SERVICES_2025.filter(service => service.category === category);
 };
 export const getAllNextGenAIServices = (): NextGenAIService[] => {
   return NEXT_GEN_AI_SERVICES_2025;
-};
+};}}}

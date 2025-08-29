@@ -20,25 +20,25 @@ export function Navigation() {
             <a
               href="/multiverse/launch"
               className="text-gray-300 hover:text-white transition-colors duration-200 font-medium"
-            >
+
               Launch
             </a>
             <a
               href="/admin/os-deploy"
               className="text-gray-300 hover:text-white transition-colors duration-200 font-medium"
-            >
+
               Deploy
             </a>
             <a
               href="/admin/instances"
               className="text-gray-300 hover:text-white transition-colors duration-200 font-medium"
-            >
+
               Instances
             </a>
             <a
               href="/docs"
               className="text-gray-300 hover:text-white transition-colors duration-200 font-medium"
-            >
+
               Docs
             </a>
             <button className="btn-primary text-sm">
@@ -50,7 +50,7 @@ export function Navigation() {
             <button
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
               className="text-gray-300 hover:text-white p-2 rounded-md"
-            >
+
               <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 {isMobileMenuOpen ? (
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
@@ -69,28 +69,28 @@ export function Navigation() {
                 href="/multiverse/launch"
                 className="block px-3 py-2 text-gray-300 hover:text-white hover:bg-white/10 rounded-md transition-colors"
                 onClick={() => setIsMobileMenuOpen(false)}
-              >
+
                 Launch
               </a>
               <a
                 href="/admin/os-deploy"
                 className="block px-3 py-2 text-gray-300 hover:text-white hover:bg-white/10 rounded-md transition-colors"
                 onClick={() => setIsMobileMenuOpen(false)}
-              >
+
                 Deploy
               </a>
               <a
                 href="/admin/instances"
                 className="block px-3 py-2 text-gray-300 hover:text-white hover:bg-white/10 rounded-md transition-colors"
                 onClick={() => setIsMobileMenuOpen(false)}
-              >
+
                 Instances
               </a>
               <a
                 href="/docs"
                 className="block px-3 py-2 text-gray-300 hover:text-white hover:bg-white/10 rounded-md transition-colors"
                 onClick={() => setIsMobileMenuOpen(false)}
-              >
+
                 Docs
               </a>
               <button className="w-full mt-4 btn-primary text-sm">

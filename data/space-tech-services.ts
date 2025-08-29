@@ -37,7 +37,7 @@ export interface SpaceTechService {
   customers: number;
   rating: number;
   reviews: number;
-}
+
 export const spaceTechServices: SpaceTechService[] = [
   {
     id: 'space-mission-management-platform',
@@ -497,5 +497,5 @@ export const spaceTechServices: SpaceTechService[] = [
     customers: 500,
     rating: 4.9,
     reviews: 250
-  }
-];
+
+];}}

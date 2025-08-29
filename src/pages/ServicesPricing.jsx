@@ -3,8 +3,7 @@ import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
-import { Check, X, Zap, Shield, TrendingUp, Globe, BarChart3, Users, Phone, Mail, MapPin, ExternalLink, DollarSign, Clock, CheckCircle, ArrowRight } from 'lucide-react';
-import { SEO } from '@/components/SEO';
+import { Check, X, Zap, Shield, TrendingUp, Globe, BarChart3, Users, Phone, Mail, MapPin, ExternalLink, DollarSign, Clock, CheckCircle, ArrowRight import { SEO } from '@/components/SEO';
 const pricingTiers = [
     {
         name: "Starter",
@@ -71,7 +70,7 @@ const pricingTiers = [
         notIncluded: [],
         color: "from-purple-500 to-indigo-600",
         popular: false
-    }
+
 ];
 const serviceCategories = [
     {
@@ -113,7 +112,7 @@ const serviceCategories = [
             { name: "Web Development", starter: 1999, professional: 4999, enterprise: 9999 },
             { name: "Mobile App Development", starter: 2999, professional: 6999, enterprise: 14999 }
         ]
-    }
+
 ];
 const benefits = [
     {
@@ -145,7 +144,7 @@ const benefits = [
         icon: <BarChart3 className="w-8 h-8"/>,
         title: "Continuous Innovation",
         description: "Regular updates and new features to keep you ahead"
-    }
+
 ];
 export default function ServicesPricing() {
     const [selectedTier, setSelectedTier] = useState('professional');
@@ -358,4 +357,4 @@ export default function ServicesPricing() {
         </div>
       </div>
     </div>);
-}
+</Card></Card></Card></Card>}}}}}

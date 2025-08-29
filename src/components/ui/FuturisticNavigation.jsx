@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Menu, X, Home, Briefcase, Users, Phone, Globe, Zap, Brain, Shield, Rocket, ChevronDown } from 'lucide-react';
-const navigationItems = [
+import { Menu, X, Home, Briefcase, Users, Phone, Globe, Zap, Brain, Shield, Rocket, ChevronDown const navigationItems = [
     {
         name: 'Home',
         href: '/',
@@ -32,7 +31,7 @@ const navigationItems = [
         href: '/contact',
         icon: <Phone className="w-5 h-5"/>,
         description: 'Get in touch with us'
-    }
+
 ];
 export default function FuturisticNavigation() {
     const [isOpen, setIsOpen] = useState(false);
@@ -133,4 +132,4 @@ export default function FuturisticNavigation() {
           </motion.div>)}
       </AnimatePresence>
     </nav>);
-}
+</div></div>}}}

@@ -1,7 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Server, Network, Shield, Database, Cloud, Zap, CheckCircle, ArrowRight, Cpu, HardDrive, Monitor, Users, Globe, Lock, BarChart3, Clock } from 'lucide-react';
-import { SEO } from '@/components/SEO';
+import { Server, Network, Shield, Database, Cloud, Zap, CheckCircle, ArrowRight, Cpu, HardDrive, Monitor, Users, Globe, Lock, BarChart3, Clock import { SEO } from '@/components/SEO';
 import { Link } from 'react-router-dom';
 
 export default function ITInfrastructure() {
@@ -35,7 +34,7 @@ export default function ITInfrastructure() {
       icon: Monitor,
       title: "Proactive Monitoring",
       description: "Real-time monitoring with predictive analytics and alerting"
-    }
+
   ];
 
   const pricing = [
@@ -85,7 +84,7 @@ export default function ITInfrastructure() {
       ],
       cta: "Contact Sales",
       popular: false
-    }
+
   ];
 
   const benefits = [
@@ -108,7 +107,7 @@ export default function ITInfrastructure() {
       icon: Users,
       title: "Expert Support",
       description: "Access to certified IT professionals 24/7"
-    }
+
   ];
 
   const infrastructureTypes = [
@@ -129,7 +128,7 @@ export default function ITInfrastructure() {
       title: "Hybrid",
       description: "Best of both worlds approach",
       features: ["Flexibility", "Cost optimization", "Risk mitigation", "Performance balance"]
-    }
+
   ];
 
   return (
@@ -160,7 +159,7 @@ export default function ITInfrastructure() {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-            >
+
               <div className="inline-flex items-center px-4 py-2 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-400 text-sm font-medium mb-6">
                 <Server className="w-4 h-4 mr-2" />
                 Enterprise IT Infrastructure
@@ -176,14 +175,14 @@ export default function ITInfrastructure() {
                 <Link
                   to="/contact"
                   className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-500 text-white font-semibold rounded-lg hover:from-blue-600 hover:to-purple-600 transition-all duration-300 transform hover:scale-105"
-                >
+
                   Get Started
                   <ArrowRight className="w-5 h-5 ml-2" />
                 </Link>
                 <Link
                   to="/request-quote"
                   className="inline-flex items-center px-8 py-4 border border-blue-500/30 text-blue-400 font-semibold rounded-lg hover:bg-blue-500/10 transition-all duration-300"
-                >
+
                   Request Quote
                 </Link>
               </div>
@@ -200,7 +199,7 @@ export default function ITInfrastructure() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
-            >
+
               <h2 className="text-4xl font-bold text-white mb-4">
                 Infrastructure Solutions
               </h2>
@@ -218,7 +217,7 @@ export default function ITInfrastructure() {
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
                   viewport={{ once: true }}
-                >
+
                   <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-purple-500 rounded-lg flex items-center justify-center mb-4">
                     <type.icon className="w-6 h-6 text-white" />
                   </div>
@@ -247,7 +246,7 @@ export default function ITInfrastructure() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
-            >
+
               <h2 className="text-4xl font-bold text-white mb-4">
                 Why Choose Our IT Infrastructure?
               </h2>
@@ -265,7 +264,7 @@ export default function ITInfrastructure() {
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
                   viewport={{ once: true }}
-                >
+
                   <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-purple-500 rounded-lg flex items-center justify-center mb-4">
                     <feature.icon className="w-6 h-6 text-white" />
                   </div>
@@ -286,7 +285,7 @@ export default function ITInfrastructure() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
-            >
+
               <h2 className="text-4xl font-bold text-white mb-4">
                 Transparent Pricing
               </h2>
@@ -308,7 +307,7 @@ export default function ITInfrastructure() {
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
                   viewport={{ once: true }}
-                >
+
                   {plan.popular && (
                     <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                       <span className="px-4 py-2 bg-gradient-to-r from-blue-500 to-purple-500 text-white text-sm font-semibold rounded-full">
@@ -342,7 +341,7 @@ export default function ITInfrastructure() {
                         ? 'bg-gradient-to-r from-blue-500 to-purple-500 text-white hover:from-blue-600 hover:to-purple-600'
                         : 'bg-white/10 text-white hover:bg-white/20 border border-white/20'
                     }`}
-                  >
+
                     {plan.cta}
                   </Link>
                 </motion.div>
@@ -360,7 +359,7 @@ export default function ITInfrastructure() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
-            >
+
               <h2 className="text-4xl font-bold text-white mb-4">
                 Business Benefits
               </h2>
@@ -378,7 +377,7 @@ export default function ITInfrastructure() {
                   whileInView={{ opacity: 1, x: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
                   viewport={{ once: true }}
-                >
+
                   <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-purple-500 rounded-lg flex items-center justify-center flex-shrink-0">
                     <benefit.icon className="w-6 h-6 text-white" />
                   </div>
@@ -400,7 +399,7 @@ export default function ITInfrastructure() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
-            >
+
               <h2 className="text-4xl font-bold text-white mb-6">
                 Ready to Build Your Infrastructure?
               </h2>
@@ -411,14 +410,14 @@ export default function ITInfrastructure() {
                 <Link
                   to="/contact"
                   className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-500 text-white font-semibold rounded-lg hover:from-blue-600 hover:to-purple-600 transition-all duration-300 transform hover:scale-105"
-                >
+
                   Start Your Journey
                   <ArrowRight className="w-5 h-5 ml-2" />
                 </Link>
                 <Link
                   to="/request-quote"
                   className="inline-flex items-center px-8 py-4 border border-blue-500/30 text-blue-400 font-semibold rounded-lg hover:bg-blue-500/10 transition-all duration-300"
-                >
+
                   Get Custom Quote
                 </Link>
               </div>
@@ -428,4 +427,4 @@ export default function ITInfrastructure() {
       </div>
     </div>
   );
-}
+</div></div></div>}}}}}}

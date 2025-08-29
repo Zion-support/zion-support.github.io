@@ -5,7 +5,6 @@ interface PerformanceMetrics {
   renderTime: number;
   memoryUsage: number;
   fps: number;
-}
 
 interface UsePerformanceOptimizationOptions {
   enableLazyLoading?: boolean;
@@ -13,7 +12,6 @@ interface UsePerformanceOptimizationOptions {
   enableMemoryManagement?: boolean;
   enableFPSMonitoring?: boolean;
   threshold?: number;
-}
 
 export const usePerformanceOptimization = (options: UsePerformanceOptimizationOptions = { /* empty */ }) => {
   const {
@@ -48,8 +46,8 @@ export const usePerformanceOptimization = (options: UsePerformanceOptimizationOp
           event_label: 'load_time',
           value: Math.round(loadTime)
         });
-      }
-    }
+
+
   }, []);
 
   // FPS monitoring
@@ -71,9 +69,8 @@ export const usePerformanceOptimization = (options: UsePerformanceOptimizationOp
 
         // Log low FPS for debugging
         if (fps < 30) {
-          // console.warn(`Low FPS detected: ${fps}`);
-        }
-      }
+          // // // console.warn(`Low FPS detected: ${fps}`);
+
 
       animationFrameId = requestAnimationFrame(measureFPS);
     };
@@ -83,7 +80,7 @@ export const usePerformanceOptimization = (options: UsePerformanceOptimizationOp
     return () => {
       if (animationFrameId) {
         cancelAnimationFrame(animationFrameId);
-      }
+
     };
   }, [enableFPSMonitoring]);
 
@@ -98,9 +95,9 @@ export const usePerformanceOptimization = (options: UsePerformanceOptimizationOp
 
         // Warn if memory usage is high
         if (memory.usedJSHeapSize > 100 * 1024 * 1024) { // 100MB
-          // console.warn('High memory usage detected:', metricsRef.current.memoryUsage.toFixed(2), 'MB');
-        }
-      }
+          // // // console.warn('High memory usage detected:', metricsRef.current.memoryUsage.toFixed(2), 'MB');
+
+
     };
 
     const intervalId = setInterval(checkMemoryUsage, 5000);
@@ -122,11 +119,9 @@ export const usePerformanceOptimization = (options: UsePerformanceOptimizationOp
     if (!enableLazyLoading) {
       callback();
       return;
-    }
 
     if (observerRef.current) {
       observerRef.current.disconnect();
-    }
 
     observerRef.current = createIntersectionObserver((entries) => {
       entries.forEach((entry) => {
@@ -134,14 +129,14 @@ export const usePerformanceOptimization = (options: UsePerformanceOptimizationOp
           callback();
           if (observerRef.current) {
             observerRef.current.unobserve(entry.target);
-          }
-        }
+
+
       });
     });
 
     if (observerRef.current) {
       observerRef.current.observe(element);
-    }
+
   }, [enableLazyLoading, createIntersectionObserver]);
 
   // Performance monitoring
@@ -155,8 +150,7 @@ export const usePerformanceOptimization = (options: UsePerformanceOptimizationOp
 
       // Log slow renders
       if (renderTime > 16) { // 60fps threshold
-        // console.warn(`Slow render detected in ${componentName}:`, renderTime.toFixed(2), 'ms');
-      }
+        // // // console.warn(`Slow render detected in ${componentName}:`, renderTime.toFixed(2), 'ms');
 
       // Report to analytics if available
       if (window.gtag) {
@@ -165,7 +159,7 @@ export const usePerformanceOptimization = (options: UsePerformanceOptimizationOp
           event_label: 'render_time',
           value: Math.round(renderTime)
         });
-      }
+
     };
   }, []);
 
@@ -194,7 +188,7 @@ export const usePerformanceOptimization = (options: UsePerformanceOptimizationOp
       if (now - lastCall >= delay) {
         lastCall = now;
         func(...args);
-      }
+
     };
   }, []);
 
@@ -202,7 +196,7 @@ export const usePerformanceOptimization = (options: UsePerformanceOptimizationOp
   const cleanup = useCallback(() => {
     if (observerRef.current) {
       observerRef.current.disconnect();
-    }
+
   }, []);
 
   // Get current metrics
@@ -237,5 +231,4 @@ export const usePerformanceOptimization = (options: UsePerformanceOptimizationOp
 declare global {
   interface Window {
     gtag?: (...args: any[]) => void;
-  }
-}
+}}}}}}}}}}}}}}}}}}}}

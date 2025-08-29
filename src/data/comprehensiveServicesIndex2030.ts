@@ -87,7 +87,7 @@ export const HIGH_ROI_SERVICES_2030 = COMPREHENSIVE_SERVICES_INDEX_2030.filter(s
   if (typeof roi === 'string') {
     const roiNumber = parseInt(roi.match(/\d+/)?.[0] || '0');
     return roiNumber > 500;
-  }
+
   return false;
 });
 
@@ -97,7 +97,7 @@ export const QUICK_SETUP_SERVICES_2030 = COMPREHENSIVE_SERVICES_INDEX_2030.filte
   if (typeof setupTime === 'string') {
     const weeks = parseInt(setupTime.match(/\d+/)?.[0] || '0');
     return weeks < 8;
-  }
+
   return false;
 });
 
@@ -112,4 +112,4 @@ export {
   innovativeMicroSaasServices2030,
   comprehensiveITServices2030,
   comprehensiveAIServices2030
-};
+};}}

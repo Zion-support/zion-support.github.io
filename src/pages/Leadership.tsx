@@ -20,7 +20,6 @@ import {
   Mail,
   Phone,
   MapPin
-} from 'lucide-react';
 import { SEO } from '../components/SEO';
 
 export default function Leadership() {
@@ -64,7 +63,7 @@ export default function Leadership() {
       linkedin: 'https://linkedin.com/in/emilywatson',
       email: 'emily@ziontechgroup.com',
       phone: '+1 302 464 0953'
-    }
+
   ];
 
   const values = [
@@ -87,7 +86,7 @@ export default function Leadership() {
       icon: Globe,
       title: 'Global Impact',
       description: 'We believe technology should make the world better for everyone, everywhere.'
-    }
+
   ];
 
   const achievements = [
@@ -110,7 +109,7 @@ export default function Leadership() {
       metric: '25+',
       label: 'Industry Awards',
       description: 'Recognition for innovation and excellence in technology'
-    }
+
   ];
 
   return (
@@ -172,7 +171,7 @@ export default function Leadership() {
                           <span
                             key={skillIndex}
                             className="px-3 py-1 bg-cyan-400/10 text-cyan-400 text-sm rounded-full border border-cyan-400/20"
-                          >
+
                             {skill}
                           </span>
                         ))}
@@ -185,21 +184,21 @@ export default function Leadership() {
                         target="_blank"
                         rel="noopener noreferrer"
                         className="flex items-center space-x-2 text-slate-300 hover:text-cyan-400 transition-colors"
-                      >
+
                         <Linkedin className="w-5 h-5" />
                         <span>LinkedIn</span>
                       </a>
                       <a
                         href={`mailto:${leader.email}`}
                         className="flex items-center space-x-2 text-slate-300 hover:text-cyan-400 transition-colors"
-                      >
+
                         <Mail className="w-5 h-5" />
                         <span>Email</span>
                       </a>
                       <a
                         href={`tel:${leader.phone}`}
                         className="flex items-center space-x-2 text-slate-300 hover:text-cyan-400 transition-colors"
-                      >
+
                         <Phone className="w-5 h-5" />
                         <span>Call</span>
                       </a>
@@ -277,14 +276,14 @@ export default function Leadership() {
               <Link
                 to="/careers"
                 className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-400 hover:to-blue-500 transition-all duration-200 hover:scale-105 shadow-lg shadow-cyan-500/20"
-              >
+
                 View Open Positions
                 <ArrowRight className="ml-2 w-5 h-5" />
               </Link>
               <Link
                 to="/contact"
                 className="inline-flex items-center px-8 py-4 border border-cyan-400/30 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400/10 transition-all duration-200"
-              >
+
                 Get in Touch
               </Link>
             </div>
@@ -342,4 +341,4 @@ export default function Leadership() {
       </section>
     </div>
   );
-}
+}}}}}

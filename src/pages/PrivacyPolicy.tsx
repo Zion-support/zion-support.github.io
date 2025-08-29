@@ -15,8 +15,6 @@ import {
   AlertTriangle,
   Info,
   Share
-} from 'lucide-react';
-
 const PrivacyPolicy: React.FC = () => {
   const lastUpdated = 'January 15, 2024';
   const companyName = 'Zion Tech Group';
@@ -34,7 +32,7 @@ const PrivacyPolicy: React.FC = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-          >
+
             <div className="flex justify-center mb-6">
               <div className="w-20 h-20 bg-zion-cyan/20 rounded-2xl flex items-center justify-center">
                 <Shield className="w-10 h-10 text-zion-cyan" />
@@ -71,7 +69,7 @@ const PrivacyPolicy: React.FC = () => {
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
               className="mb-12"
-            >
+
               <h2 className="text-3xl font-bold text-white mb-6 flex items-center gap-3">
                 <Info className="w-8 h-8 text-zion-cyan" />
                 Introduction
@@ -96,7 +94,7 @@ const PrivacyPolicy: React.FC = () => {
               transition={{ duration: 0.8, delay: 0.1 }}
               viewport={{ once: true }}
               className="mb-12"
-            >
+
               <h2 className="text-3xl font-bold text-white mb-6 flex items-center gap-3">
                 <Database className="w-8 h-8 text-zion-cyan" />
                 Information We Collect
@@ -183,7 +181,7 @@ const PrivacyPolicy: React.FC = () => {
               transition={{ duration: 0.8, delay: 0.2 }}
               viewport={{ once: true }}
               className="mb-12"
-            >
+
               <h2 className="text-3xl font-bold text-white mb-6 flex items-center gap-3">
                 <Eye className="w-8 h-8 text-zion-cyan" />
                 How We Use Your Information
@@ -232,7 +230,7 @@ const PrivacyPolicy: React.FC = () => {
               transition={{ duration: 0.8, delay: 0.3 }}
               viewport={{ once: true }}
               className="mb-12"
-            >
+
               <h2 className="text-3xl font-bold text-white mb-6 flex items-center gap-3">
                 <Share className="w-8 h-8 text-zion-cyan" />
                 Information Sharing and Disclosure
@@ -269,7 +267,7 @@ const PrivacyPolicy: React.FC = () => {
               transition={{ duration: 0.8, delay: 0.4 }}
               viewport={{ once: true }}
               className="mb-12"
-            >
+
               <h2 className="text-3xl font-bold text-white mb-6 flex items-center gap-3">
                 <Lock className="w-8 h-8 text-zion-cyan" />
                 Data Security
@@ -313,7 +311,7 @@ const PrivacyPolicy: React.FC = () => {
               transition={{ duration: 0.8, delay: 0.5 }}
               viewport={{ once: true }}
               className="mb-12"
-            >
+
               <h2 className="text-3xl font-bold text-white mb-6 flex items-center gap-3">
                 <Users className="w-8 h-8 text-zion-cyan" />
                 Your Rights and Choices
@@ -362,7 +360,7 @@ const PrivacyPolicy: React.FC = () => {
               transition={{ duration: 0.8, delay: 0.6 }}
               viewport={{ once: true }}
               className="mb-12"
-            >
+
               <h2 className="text-3xl font-bold text-white mb-6 flex items-center gap-3">
                 <Globe className="w-8 h-8 text-zion-cyan" />
                 International Data Transfers
@@ -385,7 +383,7 @@ const PrivacyPolicy: React.FC = () => {
               transition={{ duration: 0.8, delay: 0.7 }}
               viewport={{ once: true }}
               className="mb-12"
-            >
+
               <h2 className="text-3xl font-bold text-white mb-6 flex items-center gap-3">
                 <AlertTriangle className="w-8 h-8 text-zion-cyan" />
                 Children's Privacy
@@ -408,7 +406,7 @@ const PrivacyPolicy: React.FC = () => {
               transition={{ duration: 0.8, delay: 0.8 }}
               viewport={{ once: true }}
               className="mb-12"
-            >
+
               <h2 className="text-3xl font-bold text-white mb-6 flex items-center gap-3">
                 <Calendar className="w-8 h-8 text-zion-cyan" />
                 Changes to This Policy
@@ -447,7 +445,7 @@ const PrivacyPolicy: React.FC = () => {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.9 }}
               viewport={{ once: true }}
-            >
+
               <h2 className="text-3xl font-bold text-white mb-6 flex items-center gap-3">
                 <Mail className="w-8 h-8 text-zion-cyan" />
                 Contact Us
@@ -491,4 +489,4 @@ const PrivacyPolicy: React.FC = () => {
   );
 };
 
-export default PrivacyPolicy;
+export default PrivacyPolicy;}

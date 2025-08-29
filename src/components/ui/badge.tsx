@@ -34,7 +34,7 @@ const badgeVariants = cva(
       variant: "default",
       size: "default",
     },
-  }
+
 )
 
 export interface BadgeProps
@@ -45,6 +45,5 @@ function Badge({ className, variant, size, ...props }: BadgeProps) {
   return (
     <div className={cn(badgeVariants({ variant, size }), className)} {...props} />
   )
-}
 
-export { Badge, badgeVariants }
+export { Badge, badgeVariants </div>}}}

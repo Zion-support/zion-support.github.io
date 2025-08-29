@@ -1,6 +1,4 @@
-import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, FileText, BarChart3 } from 'lucide-react';
-
-export default function AIMongoDB() {
+import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, FileText, BarChart3 export default function AIMongoDB() {
   const features = [
     'AI-powered MongoDB optimization',
     'Intelligent MongoDB management',
@@ -171,4 +169,4 @@ export default function AIMongoDB() {
       </section>
     </div>
   );
-}
+}}

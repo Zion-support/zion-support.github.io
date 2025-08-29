@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Star, Eye, Heart, ArrowRight, Clock, Users, TrendingUp, Award, Filter, Search, MapPin, Calendar } from 'lucide-react';
-import { Link } from 'react-router-dom';
+import { Star, Eye, Heart, ArrowRight, Clock, Users, TrendingUp, Award, Filter, Search, MapPin, Calendar import { Link } from 'react-router-dom';
 
 const featuredListings = [
   {
@@ -60,7 +59,7 @@ const featuredListings = [
     featured: true,
     technologies: ["AWS", "Docker", "Kubernetes", "Jenkins", "Prometheus"],
     highlights: ["Zero Downtime", "Auto-scaling", "Monitoring", "Security"]
-  }
+
 ];
 
 const featuredServices = [
@@ -96,7 +95,7 @@ const featuredServices = [
     image: '🔒',
     link: '/services/cybersecurity',
     features: ['Security Audits', 'Threat Detection', 'Incident Response']
-  }
+
 ];
 
 export function FeaturedListingsSection() {
@@ -115,8 +114,8 @@ export function FeaturedListingsSection() {
       transition: {
         staggerChildren: 0.15,
         delayChildren: 0.1
-      }
-    }
+
+
   };
 
   const renderStars = (rating: number) => {
@@ -182,7 +181,7 @@ export function FeaturedListingsSection() {
                   <Link
                     to={service.link}
                     className="text-blue-600 hover:text-blue-700 font-medium text-sm group-hover:underline"
-                  >
+
                     Learn More →
                   </Link>
                 </div>
@@ -192,7 +191,7 @@ export function FeaturedListingsSection() {
                 <Link
                   to={service.link}
                   className="w-full bg-blue-600 text-white font-semibold py-3 px-6 rounded-lg hover:bg-blue-700 transition-colors duration-300 text-center block group-hover:shadow-lg"
-                >
+
                   Get Started
                 </Link>
               </div>
@@ -202,4 +201,4 @@ export function FeaturedListingsSection() {
       </div>
     </section>
   );
-}
+}}}}}}

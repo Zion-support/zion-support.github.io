@@ -1,32 +1,54 @@
 {
-  "name": "zion-app-automation",
+  "name": "zion-automation",
   "version": "1.0.0",
-  "description": "PM2 automation scripts for Zion App build health and maintenance",
-  "main": "index.js",
+  "description": "Zion.app automation tools for browser error monitoring and health checks",
+  "main": "browser-error-monitor.js",
   "scripts": {
-    "start": "node build-health-monitor.js",
-    "start:all": "pm2 start ecosystem.config.cjs",
-    "stop:all": "pm2 stop ecosystem.config.cjs",
-    "restart:all": "pm2 restart ecosystem.config.cjs",
+    "start": "pm2 start ecosystem.config.js",
+    "stop": "pm2 stop ecosystem.config.js",
+    "restart": "pm2 restart ecosystem.config.js",
+    "reload": "pm2 reload ecosystem.config.js",
+    "delete": "pm2 delete ecosystem.config.js",
     "logs": "pm2 logs",
+    "monitor": "pm2 monit",
     "status": "pm2 status",
-    "monitor": "pm2 monit"
-  },
-  "dependencies": {
-    "node-cron": "^3.0.3"
-  },
-  "devDependencies": {
-    "pm2": "^5.3.0"
+    "health": "bash health-check.sh",
+    "browser-monitor": "node browser-error-monitor.js",
+    "install-deps": "npm install",
+    "setup": "npm run install-deps && npm run start",
+    "cleanup": "pm2 delete all && rm -rf .pm2 reports/*.log reports/*.json"
   },
   "keywords": [
-    "pm2",
+    "zion",
     "automation",
-    "monitoring",
-    "build-health",
-    "code-quality",
-    "dependencies",
-    "file-integrity"
+    "pm2",
+    "puppeteer",
+    "browser-monitoring",
+    "error-fixing",
+    "health-checks"
   ],
   "author": "Zion Tech Group",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "pm2": "^5.3.0",
+    "puppeteer": "^21.0.0",
+    "fs-extra": "^11.1.1",
+    "chalk": "^4.1.2",
+    "moment": "^2.29.4"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.1"
+  },
+  "engines": {
+    "node": ">=16.0.0",
+    "npm": ">=8.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Zion-Holdings/zion.app.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Zion-Holdings/zion.app/issues"
+  },
+  "homepage": "https://ziontechgroup.com"
 }

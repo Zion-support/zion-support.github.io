@@ -7,8 +7,7 @@ import { Button } from "@/components/ui/button";
 import { Textarea } from "@/components/ui/textarea";
 import { toast } from "@/components/ui/use-toast";
 import { useTranslation } from "react-i18next";
-import { AlertTriangle, Check, Globe, Search, Loader2 } from "lucide-react";
-import { useIsMobile } from "@/hooks/use-mobile";
+import { AlertTriangle, Check, Globe, Search, Loader2 import { useIsMobile } from "@/hooks/use-mobile";
 import { useLanguage } from "@/context/LanguageContext";
 import { useTranslationService } from "@/hooks/useTranslationService";
 export default function TranslationManager() {
@@ -36,15 +35,15 @@ export default function TranslationManager() {
                         const pre = prefix.length ? `${prefix}.` : '';
                         if (typeof obj[key] === 'object' && obj[key] !== null) {
                             Object.assign(acc, flattenObject(obj[key], `${pre}${key}`));
-                        }
+
                         else {
                             acc[`${pre}${key}`] = obj[key];
-                        }
+
                         return acc;
                     }, { /* empty */ });
                 };
                 currentTranslations[lang.code] = flattenObject(res);
-            }
+
         });
         setTranslations(currentTranslations);
         // Get all unique keys across all languages
@@ -64,7 +63,7 @@ export default function TranslationManager() {
             });
             setFilteredKeys(Array.from(allKeys));
             return;
-        }
+
         const query = searchQuery.toLowerCase().trim();
         const filtered = [];
         // Search in keys and values
@@ -73,7 +72,7 @@ export default function TranslationManager() {
                 if (key.toLowerCase().includes(query) ||
                     (typeof value === 'string' && value.toLowerCase().includes(query))) {
                     filtered.push(key);
-                }
+
             });
         });
         setFilteredKeys([...new Set(filtered)]);
@@ -99,7 +98,7 @@ export default function TranslationManager() {
             supportedLanguages.forEach(lang => {
                 if (!updatedTranslations[lang.code]) {
                     updatedTranslations[lang.code] = { /* empty */ };
-                }
+
                 updatedTranslations[lang.code][key] = editedTranslations[key][lang.code];
             });
             setTranslations(updatedTranslations);
@@ -120,8 +119,8 @@ export default function TranslationManager() {
                 sourceLanguage = lang;
                 sourceText = translations[lang][key];
                 break;
-            }
-        }
+
+
         if (!sourceText) {
             toast({
                 title: t('translation.no_content'),
@@ -129,7 +128,7 @@ export default function TranslationManager() {
                 variant: "destructive",
             });
             return;
-        }
+
         try {
             const { translations: translatedText, error } = await translateContent(sourceText, 'general', sourceLanguage);
             if (error) {
@@ -139,7 +138,7 @@ export default function TranslationManager() {
                     variant: "destructive",
                 });
                 return;
-            }
+
             // Update edited translations with auto-translated content
             setEditedTranslations({
                 ...editedTranslations,
@@ -149,15 +148,15 @@ export default function TranslationManager() {
                 title: t('translation.translation_success'),
                 description: t('translation.content_translated'),
             });
-        }
+
         catch (error) {
-            // console.error(`Error translating key ${key}:`, error);
+            // // // console.error(`Error translating key ${key}:`, error);
             toast({
                 title: t('translation.translation_failed'),
                 description: error instanceof Error ? error.message : t('translation.unknown_error'),
                 variant: "destructive",
             });
-        }
+
     };
     const handleCancel = () => {
         setEditingKey(null);
@@ -168,7 +167,7 @@ export default function TranslationManager() {
             [key]: {
                 ...editedTranslations[key],
                 [lang]: value
-            }
+
         });
     };
     const getMissingLanguages = (key) => {
@@ -270,4 +269,4 @@ export default function TranslationManager() {
       </main>
 
     </>);
-}
+</Card></Card></Card>}}}}}}}}}}}}}}}

@@ -29,8 +29,6 @@ import {
   ArrowRight,
   ChevronDown,
   ChevronUp
-} from 'lucide-react';
-
 const Cookies = () => {
   const [expandedSections, setExpandedSections] = useState({
     essential: true,
@@ -117,7 +115,7 @@ const Cookies = () => {
         'Theme selection'
       ],
       alwaysActive: false
-    }
+
   ];
 
   const cookieTable = [
@@ -169,7 +167,7 @@ const Cookies = () => {
       duration: '1 year',
       category: 'Preferences',
       provider: 'Zion Tech Group'
-    }
+
   ];
 
   return (
@@ -244,7 +242,7 @@ const Cookies = () => {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: 0.1 }}
                 className="bg-zion-blue-dark/50 backdrop-blur-sm border border-zion-cyan/20 rounded-xl p-6 text-center hover:border-zion-cyan/40 transition-all duration-300"
-              >
+
                 <div className="w-16 h-16 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-2xl flex items-center justify-center mx-auto mb-6">
                   <Database className="w-8 h-8 text-white" />
                 </div>
@@ -259,7 +257,7 @@ const Cookies = () => {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: 0.2 }}
                 className="bg-zion-blue-dark/50 backdrop-blur-sm border border-zion-cyan/20 rounded-xl p-6 text-center hover:border-zion-cyan/40 transition-all duration-300"
-              >
+
                 <div className="w-16 h-16 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-2xl flex items-center justify-center mx-auto mb-6">
                   <User className="w-8 h-8 text-white" />
                 </div>
@@ -274,7 +272,7 @@ const Cookies = () => {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: 0.3 }}
                 className="bg-zion-blue-dark/50 backdrop-blur-sm border border-zion-cyan/20 rounded-xl p-6 text-center hover:border-zion-cyan/40 transition-all duration-300"
-              >
+
                 <div className="w-16 h-16 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-2xl flex items-center justify-center mx-auto mb-6">
                   <BarChart3 className="w-8 h-8 text-white" />
                 </div>
@@ -309,7 +307,7 @@ const Cookies = () => {
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 className="bg-zion-slate-dark/50 backdrop-blur-sm border border-zion-cyan/20 rounded-xl overflow-hidden hover:border-zion-cyan/40 transition-all duration-300"
-              >
+
                 <div className="p-6">
                   <div className="flex items-center justify-between mb-4">
                     <div className="flex items-center gap-4">
@@ -331,7 +329,7 @@ const Cookies = () => {
                       <button
                         onClick={() => toggleSection(category.id)}
                         className="text-zion-cyan hover:text-white transition-colors duration-300"
-                      >
+
                         {expandedSections[category.id] ? (
                           <ChevronUp className="w-5 h-5" />
                         ) : (
@@ -348,7 +346,7 @@ const Cookies = () => {
                       exit={{ opacity: 0, height: 0 }}
                       transition={{ duration: 0.3 }}
                       className="border-t border-zion-cyan/20 pt-4"
-                    >
+
                       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                         <div>
                           <h4 className="text-lg font-semibold text-white mb-3">Examples</h4>
@@ -504,6 +502,7 @@ const Cookies = () => {
       </section>
     </div>
   );
-};
+</div>};
 
 export default Cookies;
+}}}

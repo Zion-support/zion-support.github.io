@@ -1,6 +1,4 @@
-import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, FileText, BarChart3 } from 'lucide-react';
-
-export default function AIDevOps() {
+import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, FileText, BarChart3 export default function AIDevOps() {
   const features = [
     'AI-powered DevOps optimization',
     'Intelligent DevOps pipeline management',
@@ -171,4 +169,4 @@ export default function AIDevOps() {
       </section>
     </div>
   );
-}
+}}

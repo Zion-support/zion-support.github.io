@@ -4,8 +4,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { Label } from '@/components/ui/label';
-import { Phone, Mail, MapPin, Globe, Users, Shield, CheckCircle, ExternalLink, Send, Building, Award, TrendingUp, Star, MessageSquare, Calendar, FileText } from 'lucide-react';
-import { SERVICE_CATEGORIES } from '@/data/enhancedServices';
+import { Phone, Mail, MapPin, Globe, Users, Shield, CheckCircle, ExternalLink, Send, Building, Award, TrendingUp, Star, MessageSquare, Calendar, FileText import { SERVICE_CATEGORIES } from '@/data/enhancedServices';
 export default function ComprehensiveContact() {
     const [formData, setFormData] = useState({
         name: '',
@@ -18,7 +17,7 @@ export default function ComprehensiveContact() {
     const handleSubmit = (e) => {
         e.preventDefault();
         // Handle form submission
-        // console.log('Form submitted:', formData);
+        // // // console.log('Form submitted:', formData);
     };
     const handleChange = (e) => {
         setFormData({
@@ -352,4 +351,4 @@ export default function ComprehensiveContact() {
         </div>
       </footer>
     </div>);
-}
+</Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card>}}

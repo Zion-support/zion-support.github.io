@@ -28,7 +28,7 @@ export function MobileMenu({ className }) {
     ];
     if (isAuthenticated) {
         navigationItems.push({ href: '/dashboard', label: t('nav.dashboard'), icon: Settings, matches: (path) => path.startsWith('/dashboard') });
-    }
+
     return (<div className={cn("md:hidden", className)}>
       {/* Mobile menu button */}
       <Button variant="ghost" size="sm" onClick={toggleMenu} className="p-2 text-white hover:bg-zion-purple/20" aria-label={isOpen ? 'Close menu' : 'Open menu'}>
@@ -88,4 +88,4 @@ export function MobileMenu({ className }) {
           </div>
         </div>)}
     </div>);
-}
+}}

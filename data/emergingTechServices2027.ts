@@ -39,7 +39,6 @@ export interface EmergingTechService2027 {
     website: string;
     address: string;
   };
-}
 
 export const EMERGING_TECH_SERVICES_2027: EmergingTechService2027[] = [
   // Quantum Internet Infrastructure
@@ -124,7 +123,7 @@ export const EMERGING_TECH_SERVICES_2027: EmergingTechService2027[] = [
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com",
       address: "364 E Main St STE 1008 Middletown DE 19709"
-    }
+
   },
 
   // Space-Based Quantum Computing
@@ -209,7 +208,7 @@ export const EMERGING_TECH_SERVICES_2027: EmergingTechService2027[] = [
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com",
       address: "364 E Main St STE 1008 Middletown DE 19709"
-    }
+
   },
 
   // Biocomputing Platform
@@ -294,7 +293,7 @@ export const EMERGING_TECH_SERVICES_2027: EmergingTechService2027[] = [
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com",
       address: "364 E Main St STE 1008 Middletown DE 19709"
-    }
+
   },
 
   // Neuromorphic Computing Platform
@@ -379,7 +378,7 @@ export const EMERGING_TECH_SERVICES_2027: EmergingTechService2027[] = [
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com",
       address: "364 E Main St STE 1008 Middletown DE 19709"
-    }
+
   },
 
   // Fusion Energy Computing Platform
@@ -464,6 +463,6 @@ export const EMERGING_TECH_SERVICES_2027: EmergingTechService2027[] = [
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com",
       address: "364 E Main St STE 1008 Middletown DE 19709"
-    }
-  }
-];
+
+
+];}}}}}}}

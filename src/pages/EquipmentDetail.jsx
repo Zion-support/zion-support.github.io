@@ -5,8 +5,7 @@ import { Footer } from "@/components/Footer";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { ShoppingCart, Star, Truck, Shield, RotateCcw } from "lucide-react";
-import { toast } from "@/hooks/use-toast";
+import { ShoppingCart, Star, Truck, Shield, RotateCcw import { toast } from "@/hooks/use-toast";
 import { useAuth } from "@/hooks/useAuth";
 import { EQUIPMENT_DETAILS } from "@/data/equipmentDetails";
 export default function EquipmentDetail() {
@@ -31,7 +30,7 @@ export default function EquipmentDetail() {
         </div>
         <Footer />
       </>);
-    }
+
     const handleAddToCart = () => {
         setIsAdding(true);
         // Simulate API call
@@ -47,7 +46,7 @@ export default function EquipmentDetail() {
         if (!isAuthenticated) {
             navigate(`/login?next=/equipment/${equipmentId}`);
             return;
-        }
+
         setIsAdding(true);
         try {
             const response = await fetch('/checkout/create-session', {
@@ -58,14 +57,14 @@ export default function EquipmentDetail() {
             const { url } = await response.json();
             if (url) {
                 window.location.href = url;
-            }
-        }
+
+
         catch (err) {
             toast({ title: 'Payment error', description: 'Could not start checkout.' });
-        }
+
         finally {
             setIsAdding(false);
-        }
+
     };
     return (<>
       <Header />
@@ -232,4 +231,4 @@ export default function EquipmentDetail() {
       </div>
       <Footer />
     </>);
-}
+}}}}}}}}

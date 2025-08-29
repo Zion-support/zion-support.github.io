@@ -15,7 +15,7 @@ export interface AdditionalQ42025Service {
 	integrations?: string[];
 	trialDays?: number;
 	setupTime?: string;
-}
+
 export const real2025Q4AdditionsBatch2: AdditionalQ42025Service[] = [
 	{
 		id: 'devsecops-copilot',
@@ -180,5 +180,5 @@ export const real2025Q4AdditionsBatch2: AdditionalQ42025Service[] = [
 		integrations: ['GitHub', 'Jira', 'Linear'],
 		trialDays: 7,
 		setupTime: 'Same day'
-	}
-];
+
+];}}

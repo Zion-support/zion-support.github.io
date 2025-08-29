@@ -1,7 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { DollarSign, TrendingUp, Shield, Brain, BarChart3, Zap, Lock, ArrowRight, CheckCircle, CreditCard } from 'lucide-react';
-export default function FinancialSolutions() {
+import { DollarSign, TrendingUp, Shield, Brain, BarChart3, Zap, Lock, ArrowRight, CheckCircle, CreditCard export default function FinancialSolutions() {
     const features = [
         {
             icon: Brain,
@@ -32,7 +31,7 @@ export default function FinancialSolutions() {
             icon: TrendingUp,
             title: "Portfolio Optimization",
             description: "AI-driven investment strategies and portfolio management"
-        }
+
     ];
     const benefits = [
         "Reduce fraud losses by 60-80%",
@@ -58,7 +57,7 @@ export default function FinancialSolutions() {
         {
             title: "Compliance Automation",
             description: "Automated regulatory compliance and reporting"
-        }
+
     ];
     const industries = [
         "Retail Banking",
@@ -205,4 +204,4 @@ export default function FinancialSolutions() {
         </div>
       </section>
     </div>);
-}
+}}}}

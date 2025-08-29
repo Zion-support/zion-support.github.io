@@ -38,7 +38,7 @@ export interface Revolutionary2028IoTEdgeComputingService {
   customers: number;
   rating: number;
   reviews: number;
-}
+
 export const revolutionary2028IoTEdgeComputingServices: Revolutionary2028IoTEdgeComputingService[] = [
   // AI-Powered Smart City Platform
   {
@@ -299,5 +299,5 @@ export const revolutionary2028IoTEdgeComputingServices: Revolutionary2028IoTEdge
     customers: 380,
     rating: 4.8,
     reviews: 280
-  }
-];
+
+];}}

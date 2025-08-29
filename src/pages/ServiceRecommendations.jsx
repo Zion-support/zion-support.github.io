@@ -1,7 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Brain, Target, TrendingUp, Award, Users, ArrowRight, CheckCircle, Rocket, Shield } from 'lucide-react';
-import AdvancedServiceRecommendation from '../components/AdvancedServiceRecommendation';
+import { Brain, Target, TrendingUp, Award, Users, ArrowRight, CheckCircle, Rocket, Shield import AdvancedServiceRecommendation from '../components/AdvancedServiceRecommendation';
 import { Button } from '../components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '../components/ui/card';
 const ServiceRecommendations = () => {
@@ -25,7 +24,7 @@ const ServiceRecommendations = () => {
             icon: <Award className="w-6 h-6 text-zion-orange"/>,
             title: 'Expert Validation',
             description: 'All recommendations are validated by our technology experts and industry specialists'
-        }
+
     ];
     const benefits = [
         'Save time researching and comparing different service options',
@@ -59,7 +58,7 @@ const ServiceRecommendations = () => {
             title: 'Expert Consultation',
             description: 'Connect with our experts to discuss implementation and get started with your chosen solution',
             icon: <Award className="w-8 h-8 text-zion-orange"/>
-        }
+
     ];
     return (<div className="min-h-screen bg-zion-blue-dark">
       {/* Hero Section */}
@@ -225,5 +224,6 @@ const ServiceRecommendations = () => {
         </div>
       </section>
     </div>);
-};
+</Card></Card></Card>};
 export default ServiceRecommendations;
+}}}

@@ -11,12 +11,9 @@ export default function Training() {
 			</div>
 		</div>
 	);
-}
 
 import React, { useState } from 'react';
-import { GraduationCap, BookOpen, Users, Clock, Star, Search, Filter, Play, Download, ExternalLink, ArrowRight, Brain, Cloud, Shield, Database, Zap, Globe, Target, TrendingUp, Award, CheckCircle, Calendar, MapPin, DollarSign, FileText, Lightbulb, Microscope, Rocket, Code, Network, Cpu, Lock, BarChart3, Palette, Smartphone, Eye, Star as StarIcon } from 'lucide-react';
-
-export default function Training() {
+import { GraduationCap, BookOpen, Users, Clock, Star, Search, Filter, Play, Download, ExternalLink, ArrowRight, Brain, Cloud, Shield, Database, Zap, Globe, Target, TrendingUp, Award, CheckCircle, Calendar, MapPin, DollarSign, FileText, Lightbulb, Microscope, Rocket, Code, Network, Cpu, Lock, BarChart3, Palette, Smartphone, Eye, Star as StarIcon export default function Training() {
   const [searchQuery, setSearchQuery] = useState('');
   const [activeCategory, setActiveCategory] = useState('all');
   const [activeLevel, setActiveLevel] = useState('all');
@@ -211,7 +208,7 @@ export default function Training() {
         'Success Measurement'
       ],
       skills: ['Strategic Planning', 'Change Management', 'Stakeholder Management', 'Technology Strategy']
-    }
+
   ];
 
   // Update counts
@@ -250,7 +247,7 @@ export default function Training() {
       case 'advanced': return 'text-orange-400';
       case 'expert': return 'text-red-400';
       default: return 'text-zion-slate-light';
-    }
+
   };
 
   const getFormatIcon = (format: string) => {
@@ -260,7 +257,7 @@ export default function Training() {
       case 'hybrid': return <Users className="w-4 h-4" />;
       case 'self-paced': return <Clock className="w-4 h-5" />;
       default: return <BookOpen className="w-4 h-4" />;
-    }
+
   };
 
   const formatDate = (dateString: string) => {
@@ -321,7 +318,7 @@ export default function Training() {
                           ? 'bg-zion-cyan text-zion-slate-dark'
                           : 'bg-zion-slate text-zion-slate-light hover:bg-zion-slate-light hover:text-white'
                       }`}
-                    >
+
                       {category.icon}
                       {category.name}
                     </button>
@@ -342,7 +339,7 @@ export default function Training() {
                           ? 'bg-zion-purple text-white'
                           : 'bg-zion-slate text-zion-slate-light hover:bg-zion-slate-light hover:text-white'
                       }`}
-                    >
+
                       {level.name} ({level.count})
                     </button>
                   ))}
@@ -362,7 +359,7 @@ export default function Training() {
                           ? 'bg-zion-cyan text-zion-slate-dark'
                           : 'bg-zion-slate text-zion-slate-light hover:bg-zion-slate-light hover:text-white'
                       }`}
-                    >
+
                       {format.name} ({format.count})
                     </button>
                   ))}
@@ -385,7 +382,7 @@ export default function Training() {
                 <div
                   key={program.id}
                   className="bg-zion-slate border border-zion-slate-light rounded-lg overflow-hidden hover:shadow-lg transition-shadow"
-                >
+
                   <div className="relative h-48 bg-gradient-to-br from-zion-blue to-zion-purple">
                     <div className="absolute inset-0 bg-black/20"></div>
                     <div className="absolute top-4 left-4">
@@ -462,7 +459,7 @@ export default function Training() {
                 <div
                   key={program.id}
                   className="bg-zion-slate border border-zion-slate-light rounded-lg p-6 hover:shadow-lg transition-shadow"
-                >
+
                   <div className="flex items-start justify-between mb-4">
                     <div className="flex items-center gap-2">
                       {getCategoryIcon(program.category)}
@@ -494,7 +491,7 @@ export default function Training() {
                       <span
                         key={index}
                         className="px-2 py-1 bg-zion-slate-light/20 text-zion-slate-light text-xs rounded-full"
-                      >
+
                         {tag}
                       </span>
                     ))}
@@ -581,4 +578,4 @@ export default function Training() {
       </div>
     </div>
   );
-}
+}}}}}}

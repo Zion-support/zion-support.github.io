@@ -13,8 +13,6 @@ import {
   ArrowRight,
   Star,
   CheckCircle
-} from 'lucide-react';
-
 export const EnhancedServicesShowcase: React.FC = () => {
   const services = [
     {
@@ -88,7 +86,7 @@ export const EnhancedServicesShowcase: React.FC = () => {
       benefits: ['Reduce admin time by 40-60%', 'Improve conversion rates', 'Shorten sales cycles'],
       color: 'from-pink-500 to-rose-600',
       glowColor: 'pink'
-    }
+
   ];
 
   const containerVariants = {
@@ -97,8 +95,8 @@ export const EnhancedServicesShowcase: React.FC = () => {
       opacity: 1,
       transition: {
         staggerChildren: 0.1
-      }
-    }
+
+
   };
 
   const itemVariants = {
@@ -108,8 +106,8 @@ export const EnhancedServicesShowcase: React.FC = () => {
       y: 0,
       transition: {
         duration: 0.6
-      }
-    }
+
+
   };
 
   return (
@@ -128,7 +126,7 @@ export const EnhancedServicesShowcase: React.FC = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
-        >
+
           <h2 className="text-5xl md:text-6xl font-bold text-white mb-8">
             Innovative <span className="bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent">Technology Solutions</span>
           </h2>
@@ -143,13 +141,13 @@ export const EnhancedServicesShowcase: React.FC = () => {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, margin: "-100px" }}
-        >
+
           {services.map((service, index) => (
             <motion.div
               key={index}
               variants={itemVariants}
               className="group relative"
-            >
+
               <div className="relative bg-gradient-to-br from-zion-slate-dark/80 to-zion-slate/80 backdrop-blur-xl p-8 rounded-3xl border border-zion-cyan/20 hover:border-zion-cyan/60 transition-all duration-500 hover:shadow-2xl hover:shadow-zion-cyan/25 hover:transform hover:scale-105">
                 {/* Service Header */}
                 <div className="flex items-start justify-between mb-6">
@@ -210,7 +208,7 @@ export const EnhancedServicesShowcase: React.FC = () => {
                 <Link
                   to={service.path}
                   className={`w-full bg-gradient-to-r ${service.color} text-white py-3 px-6 rounded-xl font-semibold text-center block hover:shadow-lg hover:shadow-${service.glowColor}-500/25 transition-all duration-300 group-hover:scale-105`}
-                >
+
                   Explore Service
                   <ArrowRight className="inline-block ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" />
                 </Link>
@@ -229,19 +227,19 @@ export const EnhancedServicesShowcase: React.FC = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.3 }}
-        >
+
           <div className="inline-flex items-center space-x-4">
             <Link
               to="/services"
               className="px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-blue text-white font-semibold rounded-xl hover:shadow-lg hover:shadow-zion-cyan/25 transition-all duration-300 transform hover:scale-105"
-            >
+
               View All Services
               <ArrowRight className="ml-2 w-5 h-5" />
             </Link>
             <a
               href="tel:+13024640950"
               className="px-8 py-4 border border-zion-cyan text-zion-cyan font-semibold rounded-xl hover:bg-zion-cyan hover:text-white transition-all duration-300"
-            >
+
               Call +1 302 464 0950
             </a>
           </div>
@@ -252,4 +250,4 @@ export const EnhancedServicesShowcase: React.FC = () => {
       </div>
     </section>
   );
-};
+};}}}}}}

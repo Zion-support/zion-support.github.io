@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Shield, Lock, Eye, CheckCircle, Users, Database, Network, ArrowRight, Award } from 'lucide-react';
-const securityStandards = [
+import { Shield, Lock, Eye, CheckCircle, Users, Database, Network, ArrowRight, Award const securityStandards = [
     {
         name: "ISO 27001",
         category: "Information Security Management",
@@ -45,7 +44,7 @@ const securityStandards = [
         scope: "Healthcare Solutions",
         features: ["PHI Protection", "Access Controls", "Audit Logging", "Encryption Standards"],
         benefits: ["Healthcare Market Access", "Patient Privacy", "Regulatory Compliance", "Trust Building"]
-    }
+
 ];
 const complianceFrameworks = [
     {
@@ -83,7 +82,7 @@ const complianceFrameworks = [
         maturity: "Authorization Phase",
         controls: ["Access Control", "Audit & Accountability", "Configuration Management", "Incident Response"],
         benefits: ["Federal Contracts", "Cloud Security", "Government Trust", "Market Expansion"]
-    }
+
 ];
 const securityFeatures = [
     {
@@ -127,7 +126,7 @@ const securityFeatures = [
         description: "Comprehensive network protection with firewalls and intrusion detection",
         features: ["Next-gen Firewalls", "IDS/IPS", "VPN Access", "DDoS Protection"],
         benefits: ["Network Protection", "Unauthorized Access Prevention", "Business Continuity", "Compliance"]
-    }
+
 ];
 const securityStats = [
     { icon: <Shield className="w-6 h-6"/>, value: "99.99%", label: "Uptime" },
@@ -148,8 +147,8 @@ export function SecurityComplianceSection() {
             transition: {
                 staggerChildren: 0.15,
                 delayChildren: 0.1
-            }
-        }
+
+
     };
     const itemVariants = {
         hidden: { y: 30, opacity: 0 },
@@ -159,8 +158,8 @@ export function SecurityComplianceSection() {
             transition: {
                 duration: 0.6,
                 ease: "easeOut"
-            }
-        }
+
+
     };
     return (<section className="py-20 bg-gradient-to-br from-zion-slate-dark via-zion-blue to-zion-purple relative overflow-hidden">
       {/* Background decorative elements */}
@@ -479,4 +478,4 @@ export function SecurityComplianceSection() {
         </motion.div>
       </div>
     </section>);
-}
+}}}}}}}}}

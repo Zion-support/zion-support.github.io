@@ -115,8 +115,7 @@ export const getPatternPenalty = (password) => {
   for (let i = 0; i < password.length - 2; i++) {
     if (password[i] === password[i + 1] && password[i] === password[i + 2]) {
       penalty += 2;
-    }
-  }
+
 
   // Check for sequential characters
   for (let i = 0; i < password.length - 2; i++) {
@@ -126,15 +125,14 @@ export const getPatternPenalty = (password) => {
 
     if (char2 === char1 + 1 && char3 === char2 + 1) {
       penalty += 1;
-    }
-  }
+
 
   // Check for common keyboard patterns
   const keyboardPatterns = ['qwerty', 'asdfgh', 'zxcvbn', '123456', 'abcdef'];
   keyboardPatterns.forEach(pattern => {
     if (password.toLowerCase().includes(pattern)) {
       penalty += 3;
-    }
+
   });
 
   return penalty;
@@ -159,7 +157,6 @@ export const calculatePasswordScore = (password) => {
   // Bonus for longer passwords
   if (password.length > 12) {
     score += 10;
-  }
 
   // Penalty for patterns
   score -= getPatternPenalty(password);
@@ -219,27 +216,21 @@ export const getPasswordFeedback = (password, strength) => {
 
   if (password.length < 8) {
     feedback.push('Use at least 8 characters');
-  }
 
   if (!hasLowercase(password)) {
     feedback.push('Add lowercase letters');
-  }
 
   if (!hasUppercase(password)) {
     feedback.push('Add uppercase letters');
-  }
 
   if (!hasNumbers(password)) {
     feedback.push('Add numbers');
-  }
 
   if (!hasSpecialChars(password)) {
     feedback.push('Add special characters');
-  }
 
   if (password.length < 12 && strength === PASSWORD_STRENGTH.MEDIUM) {
     feedback.push('Consider using 12+ characters for better security');
-  }
 
   // Remove duplicate feedback
   return [...new Set(feedback)];
@@ -266,33 +257,26 @@ export const validatePassword = (password, requirements = { /* empty */ }) => {
   if (!password) {
     errors.push('Password is required');
     return { isValid: false, errors, warnings };
-  }
 
   if (password.length < minLength) {
     errors.push(`Password must be at least ${minLength} characters long`);
-  }
 
   if (requireLowercase && !hasLowercase(password)) {
     errors.push('Password must contain at least one lowercase letter');
-  }
 
   if (requireUppercase && !hasUppercase(password)) {
     errors.push('Password must contain at least one uppercase letter');
-  }
 
   if (requireNumbers && !hasNumbers(password)) {
     errors.push('Password must contain at least one number');
-  }
 
   if (requireSpecial && !hasSpecialChars(password)) {
     errors.push('Password must contain at least one special character');
-  }
 
   // Warnings for weak passwords
   const strength = getPasswordStrength(password);
   if (strength === PASSWORD_STRENGTH.VERY_WEAK || strength === PASSWORD_STRENGTH.WEAK) {
     warnings.push('Consider using a stronger password for better security');
-  }
 
   return {
     isValid: errors.length === 0,
@@ -352,4 +336,4 @@ export const getStrengthLabel = (score) => {
   if (score >= 2) return 'Medium';
   if (score >= 1) return 'Weak';
   return 'Very Weak';
-};
+};}}}}}}}}}}}}}}}}}}}

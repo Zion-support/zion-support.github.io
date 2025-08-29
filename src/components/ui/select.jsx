@@ -4,22 +4,19 @@ export function Select({ children, className = '', value, onValueChange }) {
       {children}
     </div>
   );
-}
 
 export function SelectTrigger({ children, className = '', ...props }) {
   return (
     <button
       className={`flex h-10 w-full items-center justify-between rounded-md border border-white/20 bg-slate-800/50 px-3 py-2 text-sm text-white placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors cursor-pointer ${className}`}
       {...props}
-    >
+
       {children}
     </button>
   );
-}
 
 export function SelectValue({ placeholder }) {
   return <span className="text-sm">{placeholder || 'Select an option'}</span>;
-}
 
 export function SelectContent({ children, className = '' }) {
   return (
@@ -31,7 +28,6 @@ export function SelectContent({ children, className = '' }) {
       {children}
     </div>
   );
-}
 
 export function SelectItem({ children, className = '', value, ...props }) {
   return (
@@ -45,4 +41,4 @@ export function SelectItem({ children, className = '', value, ...props }) {
       {children}
     </div>
   );
-}
+}}}}}

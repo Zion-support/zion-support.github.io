@@ -1,6 +1,5 @@
 import React, { useRef } from "react";
-import { ChevronLeft, ChevronRight } from "lucide-react";
-import { Button } from "@/components/ui/button";
+import { ChevronLeft, ChevronRight import { Button } from "@/components/ui/button";
 // These would be replaced with actual screenshots
 const mockScreenshots = [
     { id: 1, alt: "Dashboard screen", src: "/placeholder.svg" },
@@ -18,7 +17,7 @@ export const AppScreenshots = () => {
                 left: direction === "left" ? -scrollAmount : scrollAmount,
                 behavior: "smooth",
             });
-        }
+
     };
     return (<section className="py-16 bg-zion-blue-dark">
       <div className="container mx-auto px-4">
@@ -47,3 +46,4 @@ export const AppScreenshots = () => {
       </div>
     </section>);
 };
+}}

@@ -14,8 +14,6 @@ import {
   X,
   Check,
   AlertTriangle
-} from 'lucide-react';
-
 interface AccessibilitySettings {
   highContrast: boolean;
   largeText: boolean;
@@ -25,7 +23,6 @@ interface AccessibilitySettings {
   focusIndicator: boolean;
   colorBlindness: 'none' | 'protanopia' | 'deuteranopia' | 'tritanopia';
   fontSize: 'small' | 'medium' | 'large' | 'extra-large';
-}
 
 export const EnhancedAccessibilityPanel: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -52,9 +49,9 @@ export const EnhancedAccessibilityPanel: React.FC = () => {
         setSettings(prev => ({ ...prev, ...parsed }));
         applySettings({ ...prev, ...parsed });
       } catch (error) {
-        // console.error('Failed to parse accessibility settings:', error);
-      }
-    }
+        // // // console.error('Failed to parse accessibility settings:', error);
+
+
   }, []);
 
   // Apply accessibility settings to the document
@@ -72,14 +69,12 @@ export const EnhancedAccessibilityPanel: React.FC = () => {
       root.style.removeProperty('--bg-primary');
       root.style.removeProperty('--text-primary');
       root.style.removeProperty('--accent-color');
-    }
 
     // Large text
     if (newSettings.largeText) {
       root.style.fontSize = '120%';
     } else {
       root.style.fontSize = '100%';
-    }
 
     // Reduced motion
     if (newSettings.reducedMotion) {
@@ -88,7 +83,6 @@ export const EnhancedAccessibilityPanel: React.FC = () => {
     } else {
       root.style.removeProperty('--animation-duration');
       root.style.removeProperty('--transition-duration');
-    }
 
     // Color blindness simulation
     if (newSettings.colorBlindness !== 'none') {
@@ -100,7 +94,6 @@ export const EnhancedAccessibilityPanel: React.FC = () => {
       root.style.filter = filters[newSettings.colorBlindness];
     } else {
       root.style.filter = 'none';
-    }
 
     // Font size
     const fontSizes = {
@@ -116,14 +109,12 @@ export const EnhancedAccessibilityPanel: React.FC = () => {
       root.style.setProperty('--focus-outline', '2px solid #06b6d4');
     } else {
       root.style.setProperty('--focus-outline', 'none');
-    }
 
     // Keyboard navigation
     if (newSettings.keyboardNavigation) {
       document.addEventListener('keydown', handleKeyboardNavigation);
     } else {
       document.removeEventListener('keydown', handleKeyboardNavigation);
-    }
 
     // Save settings
     localStorage.setItem('accessibility-settings', JSON.stringify(newSettings));
@@ -159,9 +150,9 @@ export const EnhancedAccessibilityPanel: React.FC = () => {
       case ' ':
         if (document.activeElement instanceof HTMLElement) {
           document.activeElement.click();
-        }
+
         break;
-    }
+
   }, []);
 
   // Screen reader announcements
@@ -180,7 +171,7 @@ export const EnhancedAccessibilityPanel: React.FC = () => {
     setTimeout(() => {
       if (announcement.parentNode) {
         announcement.parentNode.removeChild(announcement);
-      }
+
     }, 1000);
 
     setAnnouncements(prev => [...prev, message]);
@@ -239,7 +230,7 @@ export const EnhancedAccessibilityPanel: React.FC = () => {
       if (event.key === 'Escape' && isOpen) {
         setIsOpen(false);
         announceToScreenReader('Accessibility panel closed');
-      }
+
     };
 
     document.addEventListener('keydown', handleEscape);
@@ -258,7 +249,7 @@ export const EnhancedAccessibilityPanel: React.FC = () => {
         aria-label="Open accessibility settings panel"
         aria-expanded={isOpen}
         aria-controls="accessibility-panel"
-      >
+
         <Settings className="w-5 h-5" />
       </motion.button>
 
@@ -274,7 +265,7 @@ export const EnhancedAccessibilityPanel: React.FC = () => {
             role="dialog"
             aria-label="Accessibility Settings"
             aria-modal="true"
-          >
+
             {/* Header */}
             <div className="sticky top-0 bg-slate-50 dark:bg-slate-800 border-b border-slate-200 dark:border-slate-700 p-4">
               <div className="flex items-center justify-between">
@@ -285,7 +276,7 @@ export const EnhancedAccessibilityPanel: React.FC = () => {
                   onClick={togglePanel}
                   className="text-slate-500 hover:text-slate-700 dark:text-slate-400 dark:hover:text-slate-200 transition-colors"
                   aria-label="Close accessibility panel"
-                >
+
                   <X className="w-5 h-5" />
                 </button>
               </div>
@@ -310,7 +301,7 @@ export const EnhancedAccessibilityPanel: React.FC = () => {
                       }`}
                       role="switch"
                       aria-checked={settings.highContrast}
-                    >
+
                       <span
                         className={`inline-block h-4 w-4 transform rounded-full bg-white transition-transform ${
                           settings.highContrast ? 'translate-x-6' : 'translate-x-1'
@@ -328,7 +319,7 @@ export const EnhancedAccessibilityPanel: React.FC = () => {
                       }`}
                       role="switch"
                       aria-checked={settings.largeText}
-                    >
+
                       <span
                         className={`inline-block h-4 w-4 transform rounded-full bg-white transition-transform ${
                           settings.largeText ? 'translate-x-6' : 'translate-x-1'
@@ -346,7 +337,7 @@ export const EnhancedAccessibilityPanel: React.FC = () => {
                       }`}
                       role="switch"
                       aria-checked={settings.reducedMotion}
-                    >
+
                       <span
                         className={`inline-block h-4 w-4 transform rounded-full bg-white transition-transform ${
                           settings.reducedMotion ? 'translate-x-6' : 'translate-x-1'
@@ -363,7 +354,7 @@ export const EnhancedAccessibilityPanel: React.FC = () => {
                       value={settings.fontSize}
                       onChange={(e) => updateSetting('fontSize', e.target.value)}
                       className="w-full px-3 py-2 border border-slate-300 dark:border-slate-600 rounded-md bg-white dark:bg-slate-800 text-slate-900 dark:text-white text-sm focus:outline-none focus:ring-2 focus:ring-cyan-500"
-                    >
+
                       <option value="small">Small</option>
                       <option value="medium">Medium</option>
                       <option value="large">Large</option>
@@ -379,7 +370,7 @@ export const EnhancedAccessibilityPanel: React.FC = () => {
                       value={settings.colorBlindness}
                       onChange={(e) => updateSetting('colorBlindness', e.target.value)}
                       className="w-full px-3 py-2 border border-slate-300 dark:border-slate-600 rounded-md bg-white dark:bg-slate-800 text-slate-900 dark:text-white text-sm focus:outline-none focus:ring-2 focus:ring-cyan-500"
-                    >
+
                       <option value="none">None</option>
                       <option value="protanopia">Protanopia (Red-Blind)</option>
                       <option value="deuteranopia">Deuteranopia (Green-Blind)</option>
@@ -406,7 +397,7 @@ export const EnhancedAccessibilityPanel: React.FC = () => {
                       }`}
                       role="switch"
                       aria-checked={settings.keyboardNavigation}
-                    >
+
                       <span
                         className={`inline-block h-4 w-4 transform rounded-full bg-white transition-transform ${
                           settings.keyboardNavigation ? 'translate-x-6' : 'translate-x-1'
@@ -424,7 +415,7 @@ export const EnhancedAccessibilityPanel: React.FC = () => {
                       }`}
                       role="switch"
                       aria-checked={settings.focusIndicator}
-                    >
+
                       <span
                         className={`inline-block h-4 w-4 transform rounded-full bg-white transition-transform ${
                           settings.focusIndicator ? 'translate-x-6' : 'translate-x-1'
@@ -452,7 +443,7 @@ export const EnhancedAccessibilityPanel: React.FC = () => {
                       }`}
                       role="switch"
                       aria-checked={settings.screenReader}
-                    >
+
                       <span
                         className={`inline-block h-4 w-4 transform rounded-full bg-white transition-transform ${
                           settings.screenReader ? 'translate-x-6' : 'translate-x-1'
@@ -468,7 +459,7 @@ export const EnhancedAccessibilityPanel: React.FC = () => {
                 <button
                   onClick={resetToDefaults}
                   className="w-full px-4 py-2 bg-slate-100 hover:bg-slate-200 dark:bg-slate-800 dark:hover:bg-slate-700 text-slate-700 dark:text-slate-300 rounded-md transition-colors focus:outline-none focus:ring-2 focus:ring-cyan-500"
-                >
+
                   Reset to Defaults
                 </button>
               </div>
@@ -493,7 +484,7 @@ export const EnhancedAccessibilityPanel: React.FC = () => {
         aria-live="polite"
         aria-atomic="true"
         className="sr-only"
-      >
+
         {announcements[announcements.length - 1]}
       </div>
 
@@ -505,7 +496,7 @@ export const EnhancedAccessibilityPanel: React.FC = () => {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: 20 }}
             className="fixed bottom-20 right-4 bg-green-600 text-white px-4 py-2 rounded-lg shadow-lg z-50 flex items-center gap-2"
-          >
+
             <Check className="w-4 h-4" />
             <span className="text-sm">Setting updated</span>
           </motion.div>
@@ -524,4 +515,4 @@ export const EnhancedAccessibilityPanel: React.FC = () => {
       )}
     </>
   );
-};
+};}}}}}}}}}}}}}</motion.div>}

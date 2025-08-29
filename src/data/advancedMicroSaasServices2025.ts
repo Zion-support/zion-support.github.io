@@ -36,7 +36,6 @@ export interface AdvancedMicroSaasService {
   rating: number;
   reviews: number;
   customers: number;
-}
 
 export const ADVANCED_MICRO_SAAS_SERVICES_2025: AdvancedMicroSaasService[] = [
   // AI-Powered Content Creation & Management
@@ -527,7 +526,7 @@ export const ADVANCED_MICRO_SAAS_SERVICES_2025: AdvancedMicroSaasService[] = [
     rating: 4.7,
     reviews: 189,
     customers: 345
-  }
+
 ];
 
-export default ADVANCED_MICRO_SAAS_SERVICES_2025;
+export default ADVANCED_MICRO_SAAS_SERVICES_2025;}}

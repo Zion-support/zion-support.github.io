@@ -8,13 +8,14 @@ function withAuth(Component) {
         useEffect(() => {
             if (!isLoggedIn) {
                 navigate('/login?next=/community/new');
-            }
+
         }, [isLoggedIn, router]);
         if (!isLoggedIn) {
             return null;
-        }
+
         return <Component {...props}/>;
     };
     return Wrapped;
-}
+
 export default withAuth;
+}}}

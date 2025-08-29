@@ -4,8 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Link } from "react-router-dom";
 import { FuturisticCard, NeonText } from "@/components/ui/FuturisticBackground";
-import { Phone, Mail, MapPin, Globe, Clock, Users, Shield, Zap, ExternalLink } from "lucide-react";
-export function ContactInfo() {
+import { Phone, Mail, MapPin, Globe, Clock, Users, Shield, Zap, ExternalLink export function ContactInfo() {
     const contactMethods = [
         {
             title: "Phone Support",
@@ -42,7 +41,7 @@ export function ContactInfo() {
             action: "https://ziontechgroup.com",
             badge: "Official Site",
             color: "#8c15e9"
-        }
+
     ];
     const companyStats = [
         {
@@ -64,7 +63,7 @@ export function ContactInfo() {
             label: "Client Satisfaction",
             value: "98%",
             icon: <Zap className="h-6 w-6 text-zion-purple"/>
-        }
+
     ];
     return (<section className="py-20 relative">
       {/* Background accent */}
@@ -193,4 +192,4 @@ export function ContactInfo() {
         </div>
       </div>
     </section>);
-}
+</div></Card></Card></Card></Card></Card>}}}}

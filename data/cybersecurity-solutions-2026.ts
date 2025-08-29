@@ -38,7 +38,7 @@ export interface CybersecuritySolutions2026 {
   customers: number;
   rating: number;
   reviews: number;
-}
+
 export const cybersecuritySolutions2026: CybersecuritySolutions2026[] = [
   // Advanced Threat Intelligence Platform
   {
@@ -299,5 +299,5 @@ export const cybersecuritySolutions2026: CybersecuritySolutions2026[] = [
     customers: 280,
     rating: 4.8,
     reviews: 167
-  }
-];
+
+];}}

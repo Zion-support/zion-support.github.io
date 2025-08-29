@@ -49,7 +49,6 @@ export interface EmergingTechService2030 {
   createdAt: string;
   featured: boolean;
   trending: boolean;
-}
 
 export const EMERGING_TECH_SERVICES_2030: EmergingTechService2030[] = [
   // 1. Neuromorphic Computing AI Platform
@@ -1029,7 +1028,7 @@ export const EMERGING_TECH_SERVICES_2030: EmergingTechService2030[] = [
     createdAt: "2030-01-15T10:00:00.000Z",
     featured: true,
     trending: true
-  }
+
 ];
 
 // Utility functions for service management
@@ -1093,4 +1092,4 @@ export const getEmergingTechServicesStats = () => {
   };
 };
 
-export const ALL_EMERGING_TECH_SERVICES_2030 = EMERGING_TECH_SERVICES_2030;
+export const ALL_EMERGING_TECH_SERVICES_2030 = EMERGING_TECH_SERVICES_2030;}}

@@ -51,7 +51,7 @@ export const ENHANCED_ZION_TECH_SERVICES_2025: ProductListing[] = [
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       address: "364 E Main St STE 1008 Middletown DE 19709"
-    }
+
   },
 
   // AI-Powered Cybersecurity Platform
@@ -103,7 +103,7 @@ export const ENHANCED_ZION_TECH_SERVICES_2025: ProductListing[] = [
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       address: "364 E Main St STE 1008 Middletown DE 19709"
-    }
+
   },
 
   // Quantum Computing Solutions
@@ -155,7 +155,7 @@ export const ENHANCED_ZION_TECH_SERVICES_2025: ProductListing[] = [
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       address: "364 E Main St STE 1008 Middletown DE 19709"
-    }
+
   },
 
   // Blockchain & DeFi Solutions
@@ -207,7 +207,7 @@ export const ENHANCED_ZION_TECH_SERVICES_2025: ProductListing[] = [
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       address: "364 E Main St STE 1008 Middletown DE 19709"
-    }
+
   },
 
   // IoT Management Platform
@@ -259,7 +259,7 @@ export const ENHANCED_ZION_TECH_SERVICES_2025: ProductListing[] = [
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       address: "364 E Main St STE 1008 Middletown DE 19709"
-    }
+
   },
 
   // AI-Powered Legal Document Automation
@@ -311,7 +311,7 @@ export const ENHANCED_ZION_TECH_SERVICES_2025: ProductListing[] = [
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       address: "364 E Main St STE 1008 Middletown DE 19709"
-    }
+
   },
 
   // AI Healthcare Analytics Platform
@@ -363,7 +363,7 @@ export const ENHANCED_ZION_TECH_SERVICES_2025: ProductListing[] = [
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       address: "364 E Main St STE 1008 Middletown DE 19709"
-    }
+
   },
 
   // AI Financial Trading Platform
@@ -415,7 +415,7 @@ export const ENHANCED_ZION_TECH_SERVICES_2025: ProductListing[] = [
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       address: "364 E Main St STE 1008 Middletown DE 19709"
-    }
+
   },
 
   // AI Supply Chain Optimization
@@ -467,7 +467,7 @@ export const ENHANCED_ZION_TECH_SERVICES_2025: ProductListing[] = [
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       address: "364 E Main St STE 1008 Middletown DE 19709"
-    }
+
   },
 
   // AI Customer Service Automation
@@ -519,7 +519,7 @@ export const ENHANCED_ZION_TECH_SERVICES_2025: ProductListing[] = [
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       address: "364 E Main St STE 1008 Middletown DE 19709"
-    }
+
   },
 
   // 5G Enterprise Solutions
@@ -571,7 +571,7 @@ export const ENHANCED_ZION_TECH_SERVICES_2025: ProductListing[] = [
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       address: "364 E Main St STE 1008 Middletown DE 19709"
-    }
+
   },
 
   // Autonomous Business Operations Platform
@@ -623,7 +623,7 @@ export const ENHANCED_ZION_TECH_SERVICES_2025: ProductListing[] = [
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       address: "364 E Main St STE 1008 Middletown DE 19709"
-    }
+
   },
 
   // AI-Powered IT Asset Management
@@ -675,7 +675,7 @@ export const ENHANCED_ZION_TECH_SERVICES_2025: ProductListing[] = [
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       address: "364 E Main St STE 1008 Middletown DE 19709"
-    }
+
   },
 
   // SOC2 Compliance Automation
@@ -727,7 +727,7 @@ export const ENHANCED_ZION_TECH_SERVICES_2025: ProductListing[] = [
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       address: "364 E Main St STE 1008 Middletown DE 19709"
-    }
+
   },
 
   // AI Autonomous Research Assistant
@@ -779,8 +779,8 @@ export const ENHANCED_ZION_TECH_SERVICES_2025: ProductListing[] = [
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       address: "364 E Main St STE 1008 Middletown DE 19709"
-    }
-  }
+
+
 ];
 
 // Helper functions
@@ -808,4 +808,4 @@ export const getEnhancedServicesByPriceRange = (minPrice: number, maxPrice: numb
 
 export const getEnhancedServicesByAIScore = (minScore: number) => {
   return ENHANCED_ZION_TECH_SERVICES_2025.filter(service => service.aiScore >= minScore);
-};
+};}}}}}}}}}}}}}}}}

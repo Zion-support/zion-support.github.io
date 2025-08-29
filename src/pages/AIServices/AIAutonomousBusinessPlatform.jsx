@@ -1,8 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import { Brain, TrendingUp, Users, BarChart3, Target, CheckCircle, ArrowRight, Play, Cpu, Database } from 'lucide-react';
-import SEO from '../SEO';
+import { Brain, TrendingUp, Users, BarChart3, Target, CheckCircle, ArrowRight, Play, Cpu, Database import SEO from '../SEO';
 const features = [
     {
         title: "Unified Business Platform",
@@ -27,7 +26,7 @@ const features = [
         description: "Built to grow with your business, from startup to enterprise, with flexible deployment options.",
         icon: TrendingUp,
         color: "from-orange-500 to-red-500"
-    }
+
 ];
 const benefits = [
     "Centralize all business operations in one platform",
@@ -57,7 +56,7 @@ const modules = [
         title: "Project Management",
         description: "AI-driven project planning and resource allocation.",
         icon: TrendingUp
-    }
+
 ];
 export default function AIAutonomousBusinessPlatform() {
     return (<div className="min-h-screen bg-background relative overflow-hidden">
@@ -197,4 +196,4 @@ export default function AIAutonomousBusinessPlatform() {
         </div>
       </section>
     </div>);
-}
+}}}}

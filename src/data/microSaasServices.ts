@@ -28,7 +28,7 @@ export interface MicroSaasService {
   };
   images: string[];
   createdAt: string;
-}
+
 export const MICRO_SAAS_SERVICES: MicroSaasService[] = [
   {
     id: "ai-chatbot-builder",
@@ -164,7 +164,7 @@ export const MICRO_SAAS_SERVICES: MicroSaasService[] = [
     },
     images: ["https://images.unsplash.com/photo-1633412802994-5c058f151b66?auto=format&fit=crop&w=800&h=500"],
     createdAt: "2024-01-15T10:00:00.000Z"
-  }
+
 ];
 export const getMicroSaasServiceById = (id: string): MicroSaasService | undefined => {
   return MICRO_SAAS_SERVICES.find(service => service.id === id);
@@ -194,7 +194,7 @@ export const PRICING_TIERS = [
     name: 'Enterprise',
     price: 299,
     features: ['Custom features', '24/7 support', 'Unlimited users']
-  }
+
 ];
 export const CONTACT_INFO = {
   email: 'kleber@ziontechgroup.com',
@@ -206,4 +206,4 @@ export const getMicroSaasServicesByCategory = (category: string): MicroSaasServi
 };
 export const getMicroSaasCategories = (): string[] => {
   return [...new Set(MICRO_SAAS_SERVICES.map(service => service.category))];
-};
+};}}}

@@ -2,8 +2,7 @@ import React from 'react';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
-import { Zap, Shield, Users, BarChart3, Mail, Calendar, CreditCard, MessageSquare, FileText, Database, Search, Phone, Star, CheckCircle, Clock } from 'lucide-react';
-export default function MicroSAASPage() {
+import { Zap, Shield, Users, BarChart3, Mail, Calendar, CreditCard, MessageSquare, FileText, Database, Search, Phone, Star, CheckCircle, Clock export default function MicroSAASPage() {
     const microSAASServices = [
         {
             id: "email-automation",
@@ -280,7 +279,7 @@ export default function MicroSAASPage() {
             users: "Unlimited",
             rating: 4.7,
             reviews: 112
-        }
+
     ];
     const categories = [
         "All Services",
@@ -547,4 +546,4 @@ export default function MicroSAASPage() {
         </div>
       </div>
     </div>);
-}
+</Card></Card></Card></Card>}}}

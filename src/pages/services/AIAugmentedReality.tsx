@@ -1,6 +1,4 @@
-import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, FileText, BarChart3 } from 'lucide-react';
-
-export default function AIAugmentedReality() {
+import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, FileText, BarChart3 export default function AIAugmentedReality() {
   const features = [
     'AI-powered AR optimization',
     'Intelligent AR content management',
@@ -171,4 +169,4 @@ export default function AIAugmentedReality() {
       </section>
     </div>
   );
-}
+}}

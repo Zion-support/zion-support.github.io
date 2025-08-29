@@ -35,15 +35,12 @@ import {
   Info,
   Clock,
   MapPin
-} from 'lucide-react';
-
 interface FAQItem {
   id: string;
   question: string;
   answer: string;
   category: string;
   tags: string[];
-}
 
 interface HelpCategory {
   id: string;
@@ -53,7 +50,6 @@ interface HelpCategory {
   color: string;
   articleCount: number;
   path: string;
-}
 
 interface SupportOption {
   title: string;
@@ -62,7 +58,6 @@ interface SupportOption {
   color: string;
   action: string;
   path: string;
-}
 
 const helpCategories: HelpCategory[] = [
   {
@@ -118,7 +113,7 @@ const helpCategories: HelpCategory[] = [
     color: 'from-red-500 to-pink-500',
     articleCount: 22,
     path: '/help/troubleshooting'
-  }
+
 ];
 
 const supportOptions: SupportOption[] = [
@@ -153,7 +148,7 @@ const supportOptions: SupportOption[] = [
     color: 'from-orange-500 to-red-500',
     action: 'Watch Videos',
     path: '/help/videos'
-  }
+
 ];
 
 const faqData: FAQItem[] = [
@@ -212,7 +207,7 @@ const faqData: FAQItem[] = [
     answer: 'We stand behind our work with a 100% satisfaction guarantee. If you\'re not completely satisfied, we\'ll work to fix the issue or provide a full refund. Your success is our success.',
     category: 'billing',
     tags: ['guarantee', 'refund', 'satisfaction']
-  }
+
 ];
 
 export default function HelpCenter() {
@@ -226,7 +221,6 @@ export default function HelpCenter() {
     if (query.trim() === '') {
       setFilteredFAQs(faqData);
       return;
-    }
 
     const filtered = faqData.filter(faq =>
       faq.question.toLowerCase().includes(query.toLowerCase()) ||
@@ -249,7 +243,7 @@ export default function HelpCenter() {
       case 'account': return Users;
       case 'troubleshooting': return AlertCircle;
       default: return HelpCircle;
-    }
+
   };
 
   const getCategoryColor = (category: string) => {
@@ -261,7 +255,7 @@ export default function HelpCenter() {
       case 'account': return 'text-indigo-500';
       case 'troubleshooting': return 'text-red-500';
       default: return 'text-zion-cyan';
-    }
+
   };
 
   return (
@@ -273,7 +267,7 @@ export default function HelpCenter() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
-        >
+
           <h1 className="text-4xl font-bold text-white mb-4">Help Center</h1>
           <p className="text-zion-slate-light text-lg max-w-3xl mx-auto">
             Find answers to your questions, learn how to use our services, and get the support you need to succeed with Zion Tech Group.
@@ -286,7 +280,7 @@ export default function HelpCenter() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.1 }}
-        >
+
           <div className="relative">
             <input
               type="text"
@@ -305,7 +299,7 @@ export default function HelpCenter() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.2 }}
-        >
+
           <h2 className="text-2xl font-bold text-white mb-8 text-center">Browse Help Topics</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {helpCategories.map((category, index) => (
@@ -314,11 +308,11 @@ export default function HelpCenter() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.4, delay: 0.3 + index * 0.1 }}
-              >
+
                 <Link
                   to={category.path}
                   className="block bg-white/5 backdrop-blur-xl border border-zion-cyan/20 rounded-2xl p-6 hover:bg-white/10 hover:border-zion-cyan/40 transition-all duration-300 group"
-                >
+
                   <div className={`w-16 h-16 bg-gradient-to-br ${category.color} rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300`}>
                     <category.icon className="h-8 w-8 text-white" />
                   </div>
@@ -340,7 +334,7 @@ export default function HelpCenter() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.4 }}
-        >
+
           <h2 className="text-2xl font-bold text-white mb-8 text-center">Get Support</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {supportOptions.map((option, index) => (
@@ -349,11 +343,11 @@ export default function HelpCenter() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.4, delay: 0.5 + index * 0.1 }}
-              >
+
                 <Link
                   to={option.path}
                   className="block bg-white/5 backdrop-blur-xl border border-zion-cyan/20 rounded-2xl p-6 hover:bg-white/10 hover:border-zion-cyan/40 transition-all duration-300 text-center group"
-                >
+
                   <div className={`w-16 h-16 bg-gradient-to-br ${option.color} rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300`}>
                     <option.icon className="h-8 w-8 text-white" />
                   </div>
@@ -374,7 +368,7 @@ export default function HelpCenter() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.6 }}
-        >
+
           <div className="max-w-4xl mx-auto">
             <h2 className="text-2xl font-bold text-white mb-8 text-center">Frequently Asked Questions</h2>
 
@@ -387,7 +381,7 @@ export default function HelpCenter() {
                     ? 'bg-zion-cyan text-white'
                     : 'bg-white/10 text-zion-slate-light hover:bg-white/20'
                 }`}
-              >
+
                 All Categories
               </button>
               {helpCategories.map(category => (
@@ -399,7 +393,7 @@ export default function HelpCenter() {
                       ? 'bg-zion-cyan text-white'
                       : 'bg-white/10 text-zion-slate-light hover:bg-white/20'
                   }`}
-                >
+
                   {category.title}
                 </button>
               ))}
@@ -416,11 +410,11 @@ export default function HelpCenter() {
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.4, delay: 0.7 + index * 0.1 }}
                     className="bg-white/5 backdrop-blur-xl border border-zion-cyan/20 rounded-2xl overflow-hidden"
-                  >
+
                     <button
                       onClick={() => toggleFAQ(faq.id)}
                       className="w-full p-6 text-left flex items-center justify-between hover:bg-white/10 transition-colors duration-200"
-                    >
+
                       <div className="flex items-start gap-4">
                         <div className={`w-8 h-8 rounded-lg bg-gradient-to-br from-zion-cyan to-zion-purple flex items-center justify-center flex-shrink-0 mt-1`}>
                           {getCategoryIcon(faq.category)({ className: "h-4 w-4 text-white" })}
@@ -432,7 +426,7 @@ export default function HelpCenter() {
                               <span
                                 key={tag}
                                 className={`px-2 py-1 rounded-full text-xs font-medium ${getCategoryColor(faq.category)} bg-white/10`}
-                              >
+
                                 {tag}
                               </span>
                             ))}
@@ -456,7 +450,7 @@ export default function HelpCenter() {
                           exit={{ height: 0, opacity: 0 }}
                           transition={{ duration: 0.3 }}
                           className="overflow-hidden"
-                        >
+
                           <div className="px-6 pb-6">
                             <div className="border-t border-zion-cyan/20 pt-4">
                               <p className="text-zion-slate-light leading-relaxed">{faq.answer}</p>
@@ -484,7 +478,7 @@ export default function HelpCenter() {
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 className="text-center py-12"
-              >
+
                 <div className="w-24 h-24 bg-zion-cyan/20 rounded-full flex items-center justify-center mx-auto mb-4">
                   <Search className="w-12 h-12 text-zion-cyan" />
                 </div>
@@ -499,7 +493,7 @@ export default function HelpCenter() {
                     setFilteredFAQs(faqData);
                   }}
                   className="px-6 py-3 bg-gradient-to-r from-zion-cyan to-zion-purple text-white rounded-xl hover:from-zion-cyan-dark hover:to-zion-purple-dark transition-all duration-300"
-                >
+
                   Clear Search
                 </button>
               </motion.div>
@@ -513,7 +507,7 @@ export default function HelpCenter() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.8 }}
-        >
+
           <div className="bg-white/5 backdrop-blur-xl border border-zion-cyan/20 rounded-3xl p-8 max-w-2xl mx-auto">
             <h3 className="text-2xl font-bold text-white mb-4">Still Need Help?</h3>
             <p className="text-zion-slate-light mb-6">
@@ -523,14 +517,14 @@ export default function HelpCenter() {
               <Link
                 to="/contact"
                 className="inline-flex items-center bg-gradient-to-r from-zion-cyan to-zion-purple text-white px-6 py-3 rounded-xl hover:from-zion-cyan-dark hover:to-zion-purple-dark transition-all duration-300 font-medium"
-              >
+
                 Contact Support
                 <ArrowRight className="ml-2 h-4 w-4" />
               </Link>
               <Link
                 to="/chat"
                 className="inline-flex items-center border border-zion-cyan text-zion-cyan px-6 py-3 rounded-xl hover:bg-zion-cyan hover:text-white transition-all duration-300 font-medium"
-              >
+
                 Start Live Chat
               </Link>
             </div>
@@ -539,4 +533,4 @@ export default function HelpCenter() {
       </div>
     </div>
   );
-}
+}}}}}}}}}}}

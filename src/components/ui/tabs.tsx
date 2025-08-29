@@ -3,7 +3,6 @@ import React, { createContext, useContext, useState, ReactNode } from 'react';
 interface TabsContextType {
   activeTab: string;
   setActiveTab: (tab: string) => void;
-}
 
 const TabsContext = createContext<TabsContextType | undefined>(undefined);
 
@@ -13,7 +12,6 @@ interface TabsProps {
   value?: string;
   onValueChange?: (value: string) => void;
   className?: string;
-}
 
 export function Tabs({ children, defaultValue, value, onValueChange, className = '' }: TabsProps) {
   const [activeTab, setActiveTab] = useState(value || defaultValue || '');
@@ -22,7 +20,7 @@ export function Tabs({ children, defaultValue, value, onValueChange, className =
     setActiveTab(tab);
     if (onValueChange) {
       onValueChange(tab);
-    }
+
   };
 
   return (
@@ -32,12 +30,10 @@ export function Tabs({ children, defaultValue, value, onValueChange, className =
       </div>
     </TabsContext.Provider>
   );
-}
 
 interface TabsListProps {
   children: ReactNode;
   className?: string;
-}
 
 export function TabsList({ children, className = '' }: TabsListProps) {
   return (
@@ -45,13 +41,11 @@ export function TabsList({ children, className = '' }: TabsListProps) {
       {children}
     </div>
   );
-}
 
 interface TabsTriggerProps {
   children: ReactNode;
   value: string;
   className?: string;
-}
 
 export function TabsTrigger({ children, value, className = '' }: TabsTriggerProps) {
   const context = useContext(TabsContext);
@@ -67,17 +61,15 @@ export function TabsTrigger({ children, value, className = '' }: TabsTriggerProp
           : 'text-gray-500 hover:text-gray-700 hover:border-b-2 hover:border-gray-300'
       } ${className}`}
       onClick={() => context.setActiveTab(value)}
-    >
+
       {children}
     </button>
   );
-}
 
 interface TabsContentProps {
   children: ReactNode;
   value: string;
   className?: string;
-}
 
 export function TabsContent({ children, value, className = '' }: TabsContentProps) {
   const context = useContext(TabsContext);
@@ -85,11 +77,10 @@ export function TabsContent({ children, value, className = '' }: TabsContentProp
 
   if (context.activeTab !== value) {
     return null;
-  }
 
   return (
     <div className={`mt-4 ${className}`}>
       {children}
     </div>
   );
-}
+}}}}}}}}}}}

@@ -38,7 +38,7 @@ export interface SpaceColonization2029Service {
   customers: number;
   rating: number;
   reviews: number;
-}
+
 export const spaceColonization2029Services: SpaceColonization2029Service[] = [
   // Space Colonization & Mining Services
   {
@@ -296,5 +296,5 @@ export const spaceColonization2029Services: SpaceColonization2029Service[] = [
     customers: 18,
     rating: 4.8,
     reviews: 52
-  }
-];
+
+];}}

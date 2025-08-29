@@ -44,14 +44,14 @@ const ComprehensivePricingShowcase2025 = () => {
             const price = parseFloat(service.price.replace(/[^0-9.]/g, ''));
             if (range.min && range.max) {
                 return price >= range.min && price <= range.max;
-            }
+
             else if (range.max) {
                 return price <= range.max;
-            }
+
             else if (range.min) {
                 return price >= range.min;
-            }
-        }
+
+
         return true;
     });
     const getServiceTypeColor = (type) => {
@@ -64,7 +64,7 @@ const ComprehensivePricingShowcase2025 = () => {
                 return 'bg-purple-100 text-purple-800 border-purple-200';
             default:
                 return 'bg-gray-100 text-gray-800 border-gray-200';
-        }
+
     };
     const getCategoryIcon = (category) => {
         const icons = {
@@ -91,18 +91,18 @@ const ComprehensivePricingShowcase2025 = () => {
           {service.price}
           {service.period && (<span className="text-sm text-gray-400 font-normal"> {service.period}</span>)}
         </div>);
-        }
+
         else if (service.hourlyRate) {
             return (<div className="text-3xl font-bold text-green-400">
           ${service.hourlyRate}
           <span className="text-sm text-gray-400 font-normal">/hour</span>
         </div>);
-        }
+
         else if (service.pricing) {
             return (<div className="text-3xl font-bold text-purple-400">
           {service.pricing}
         </div>);
-        }
+
         return null;
     };
     return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white">
@@ -355,3 +355,4 @@ const ComprehensivePricingShowcase2025 = () => {
     </div>);
 };
 export default ComprehensivePricingShowcase2025;
+}}}}}}}}

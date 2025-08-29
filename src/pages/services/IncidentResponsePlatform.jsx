@@ -2,8 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
 import { motion } from 'framer-motion';
-import { CheckCircle, Shield, Zap, TrendingUp, AlertTriangle, Clock, Eye, Target, ArrowRight, Activity } from 'lucide-react';
-const IncidentResponsePlatform = () => {
+import { CheckCircle, Shield, Zap, TrendingUp, AlertTriangle, Clock, Eye, Target, ArrowRight, Activity const IncidentResponsePlatform = () => {
     const features = [
         {
             title: "AI-Powered Threat Detection",
@@ -24,7 +23,7 @@ const IncidentResponsePlatform = () => {
             title: "Incident Timeline Tracking",
             description: "Comprehensive tracking of all incident activities, communications, and resolution steps for audit compliance",
             icon: <Clock className="w-6 h-6"/>
-        }
+
     ];
     const benefits = [
         {
@@ -46,7 +45,7 @@ const IncidentResponsePlatform = () => {
             metric: "90%",
             description: "Compliance assurance",
             icon: <Shield className="w-5 h-5"/>
-        }
+
     ];
     const pricingPlans = [
         {
@@ -94,7 +93,7 @@ const IncidentResponsePlatform = () => {
                 "Custom development"
             ],
             popular: false
-        }
+
     ];
     const integrations = [
         "SIEM Systems", "EDR Solutions", "Firewall", "IDS/IPS", "Slack", "Teams", "Jira", "ServiceNow"
@@ -306,3 +305,4 @@ const IncidentResponsePlatform = () => {
     </>);
 };
 export default IncidentResponsePlatform;
+}}}}

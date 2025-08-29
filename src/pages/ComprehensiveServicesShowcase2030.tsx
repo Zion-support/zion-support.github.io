@@ -22,7 +22,6 @@ const ComprehensiveServicesShowcase2030: React.FC = () => {
       case 'ai':
         services = comprehensiveAIServices2030;
         break;
-    }
 
     if (searchTerm) {
       services = services.filter(service =>
@@ -30,11 +29,9 @@ const ComprehensiveServicesShowcase2030: React.FC = () => {
         service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
         service.tags.some((tag: string) => tag.toLowerCase().includes(searchTerm.toLowerCase()))
       );
-    }
 
     if (selectedCategory !== 'all') {
       services = services.filter(service => service.category === selectedCategory);
-    }
 
     return services;
   };
@@ -52,7 +49,6 @@ const ComprehensiveServicesShowcase2030: React.FC = () => {
       case 'ai':
         services = comprehensiveAIServices2030;
         break;
-    }
 
     const categories = [...new Set(services.map(service => service.category))];
     return categories;
@@ -156,7 +152,7 @@ const ComprehensiveServicesShowcase2030: React.FC = () => {
                   target="_blank"
                   rel="noopener noreferrer"
                   className="px-4 py-2 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-300"
-                >
+
                   Learn More
                 </a>
               </div>
@@ -258,7 +254,7 @@ const ComprehensiveServicesShowcase2030: React.FC = () => {
                   target="_blank"
                   rel="noopener noreferrer"
                   className="px-4 py-2 bg-gradient-to-r from-green-600 to-blue-600 text-white rounded-lg hover:from-green-700 hover:to-blue-700 transition-all duration-300"
-                >
+
                   Learn More
                 </a>
               </div>
@@ -372,7 +368,7 @@ const ComprehensiveServicesShowcase2030: React.FC = () => {
                   target="_blank"
                   rel="noopener noreferrer"
                   className="px-4 py-2 bg-gradient-to-r from-purple-600 to-pink-600 text-white rounded-lg hover:from-purple-700 hover:to-pink-700 transition-all duration-300"
-                >
+
                   Learn More
                 </a>
               </div>
@@ -380,7 +376,7 @@ const ComprehensiveServicesShowcase2030: React.FC = () => {
           </div>
         </div>
       );
-    }
+
   };
 
   return (
@@ -468,7 +464,7 @@ const ComprehensiveServicesShowcase2030: React.FC = () => {
                 value={selectedCategory}
                 onChange={(e) => setSelectedCategory(e.target.value)}
                 className="px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-              >
+
                 <option value="all">All Categories</option>
                 {getCategories().map((category) => (
                   <option key={category} value={category}>{category}</option>
@@ -487,7 +483,7 @@ const ComprehensiveServicesShowcase2030: React.FC = () => {
                     ? 'bg-gradient-to-r from-blue-600 to-purple-600 text-white shadow-lg'
                     : 'bg-white text-gray-700 hover:bg-gray-50 border border-gray-200'
                 }`}
-              >
+
                 Micro SAAS Services ({innovativeMicroSaasServices2030.length})
               </button>
               <button
@@ -497,7 +493,7 @@ const ComprehensiveServicesShowcase2030: React.FC = () => {
                     ? 'bg-gradient-to-r from-green-600 to-blue-600 text-white shadow-lg'
                     : 'bg-white text-gray-700 hover:bg-gray-50 border border-gray-200'
                 }`}
-              >
+
                 IT Services ({comprehensiveITServices2030.length})
               </button>
               <button
@@ -507,7 +503,7 @@ const ComprehensiveServicesShowcase2030: React.FC = () => {
                     ? 'bg-gradient-to-r from-purple-600 to-pink-600 text-white shadow-lg'
                     : 'bg-white text-gray-700 hover:bg-gray-50 border border-gray-200'
                 }`}
-              >
+
                 AI Services ({comprehensiveAIServices2030.length})
               </button>
             </div>
@@ -528,7 +524,7 @@ const ComprehensiveServicesShowcase2030: React.FC = () => {
                   setSelectedCategory('all');
                 }}
                 className="px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
-              >
+
                 Clear Filters
               </button>
             </div>
@@ -544,13 +540,13 @@ const ComprehensiveServicesShowcase2030: React.FC = () => {
               <a
                 href="tel:+13024640950"
                 className="px-8 py-3 bg-white text-blue-600 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
-              >
+
                 Call Now: +1 302 464 0950
               </a>
               <a
                 href="mailto:kleber@ziontechgroup.com"
                 className="px-8 py-3 border-2 border-white text-white rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors"
-              >
+
                 Email Us
               </a>
             </div>
@@ -561,4 +557,4 @@ const ComprehensiveServicesShowcase2030: React.FC = () => {
   );
 };
 
-export default ComprehensiveServicesShowcase2030;
+export default ComprehensiveServicesShowcase2030;}}}}}

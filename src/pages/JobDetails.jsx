@@ -23,7 +23,7 @@ export default function JobDetails() {
         return (<div className="flex items-center justify-center min-h-screen">
         <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-primary"></div>
       </div>);
-    }
+
     if (error || !job) {
         return (<>
 
@@ -34,17 +34,17 @@ export default function JobDetails() {
         </div>
 
       </>);
-    }
+
     const handleApply = () => {
         if (!isAuthenticated) {
             toast.error("Please log in to apply for this job");
             navigate('/login?redirect=' + encodeURIComponent(`/jobs/${jobId}`));
             return;
-        }
+
         if (user?.userType !== "jobSeeker" && user?.userType !== "talent") {
             toast.error("Only job seekers can apply for jobs");
             return;
-        }
+
         setIsApplyModalOpen(true);
     };
     const handleApplySuccess = async (appliedJobId) => {
@@ -154,4 +154,4 @@ export default function JobDetails() {
                 client_id: job.client_id
             }} isOpen={isApplyModalOpen} onClose={() => setIsApplyModalOpen(false)}/>)}
     </>);
-}
+</Card></Card></Card></Card>}}}}}

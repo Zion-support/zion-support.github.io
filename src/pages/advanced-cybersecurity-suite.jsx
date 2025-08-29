@@ -21,7 +21,7 @@ const AdvancedCybersecuritySuite = () => {
             title: "Incident Response",
             description: "24/7 security monitoring and rapid response",
             icon: "🚨"
-        }
+
     ];
     const securityModules = [
         {
@@ -43,7 +43,7 @@ const AdvancedCybersecuritySuite = () => {
             title: "Data Protection",
             description: "Data encryption, backup, and recovery solutions",
             features: ["Encryption at rest", "Backup automation", "DR planning", "Data classification"]
-        }
+
     ];
     const complianceFrameworks = [
         "SOC 2 Type II",
@@ -69,7 +69,7 @@ const AdvancedCybersecuritySuite = () => {
         {
             category: "Forensic Analysis",
             description: "Advanced digital forensics and evidence collection"
-        }
+
     ];
     return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white">
       <section className="py-20 px-4 sm:px-6 lg:px-8">
@@ -250,3 +250,4 @@ const AdvancedCybersecuritySuite = () => {
     </div>);
 };
 export default AdvancedCybersecuritySuite;
+}}}

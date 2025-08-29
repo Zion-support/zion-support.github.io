@@ -4,7 +4,6 @@ interface EnhancedMarketplaceCardProps {
   title: string;
   description: string;
   className?: string;
-}
 
 const EnhancedMarketplaceCard: React.FC<EnhancedMarketplaceCardProps> = ({
   title,
@@ -19,4 +18,4 @@ const EnhancedMarketplaceCard: React.FC<EnhancedMarketplaceCardProps> = ({
   );
 };
 
-export default EnhancedMarketplaceCard;
+export default EnhancedMarketplaceCard;}

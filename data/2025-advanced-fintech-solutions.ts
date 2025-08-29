@@ -38,7 +38,7 @@ export interface AdvancedFintechSolution2025 {
   customers: number;
   rating: number;
   reviews: number;
-}
+
 export const advancedFintechSolutions2025: AdvancedFintechSolution2025[] = [
   {
     id: 'ai-powered-credit-risk-assessment',
@@ -294,5 +294,5 @@ export const advancedFintechSolutions2025: AdvancedFintechSolution2025[] = [
     customers: 89,
     rating: 4.5,
     reviews: 52
-  }
-];
+
+];}}

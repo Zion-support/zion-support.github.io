@@ -38,7 +38,7 @@ export interface EnterpriseITSolutions2026 {
   customers: number;
   rating: number;
   reviews: number;
-}
+
 export const enterpriseITSolutions2026: EnterpriseITSolutions2026[] = [
   // Zero Trust Network Architecture
   {
@@ -299,5 +299,5 @@ export const enterpriseITSolutions2026: EnterpriseITSolutions2026[] = [
     customers: 180,
     rating: 4.9,
     reviews: 112
-  }
-];
+
+];}}

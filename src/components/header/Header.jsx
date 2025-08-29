@@ -7,9 +7,7 @@ import { MobileMenu } from './MobileMenu';
 import { UserMenu } from './UserMenu';
 import { LanguageSelector } from './LanguageSelector';
 import { EnhancedSearchInput } from './EnhancedSearchInput';
-import { SearchIcon, Sparkles, Menu, X } from 'lucide-react';
-
-export function Header({
+import { SearchIcon, Sparkles, Menu, X export function Header({
   customLogo,
   customTheme,
   hideLogin = false,
@@ -41,7 +39,7 @@ export function Header({
     if (query.trim()) {
       navigate(`/search?q=${encodeURIComponent(query.trim())}`);
       setQuery('');
-    }
+
   };
 
   const effectiveTheme = customTheme || {
@@ -62,7 +60,7 @@ export function Header({
             : 'bg-zion-blue-dark/90 backdrop-blur-md border-b border-zion-purple/20'
         }`}
         style={headerStyle}
-      >
+
         <div className="container flex h-16 items-center px-4 sm:px-6">
           <Logo customLogo={customLogo} customColor={customColor} />
 
@@ -105,7 +103,7 @@ export function Header({
             <button
               onClick={toggleMobileMenu}
               className="lg:hidden p-2 rounded-lg border border-zion-purple/30 text-zion-cyan hover:bg-zion-purple/10 transition-colors"
-            >
+
               {isMobileMenuOpen ? <X className="h-5 w-5"/> : <Menu className="h-5 w-5"/>}
             </button>
           </div>
@@ -142,7 +140,7 @@ export function Header({
               <button
                 onClick={toggleMobileMenu}
                 className="p-2 rounded-lg border border-zion-purple/30 text-zion-cyan hover:bg-zion-purple/10"
-              >
+
                 <X className="h-5 w-5"/>
               </button>
             </div>
@@ -154,7 +152,7 @@ export function Header({
                     to="/"
                     onClick={toggleMobileMenu}
                     className="block px-4 py-3 rounded-lg text-white hover:bg-zion-purple/10 hover:text-zion-cyan transition-colors"
-                  >
+
                     Home
                   </Link>
                 </li>
@@ -163,7 +161,7 @@ export function Header({
                     to="/services"
                     onClick={toggleMobileMenu}
                     className="block px-4 py-3 rounded-lg text-white hover:bg-zion-purple/10 hover:text-zion-cyan transition-colors"
-                  >
+
                     Services
                   </Link>
                 </li>
@@ -172,7 +170,7 @@ export function Header({
                     to="/talent"
                     onClick={toggleMobileMenu}
                     className="block px-4 py-3 rounded-lg text-white hover:bg-zion-purple/10 hover:text-zion-cyan transition-colors"
-                  >
+
                     Talent
                   </Link>
                 </li>
@@ -181,7 +179,7 @@ export function Header({
                     to="/equipment"
                     onClick={toggleMobileMenu}
                     className="block px-4 py-3 rounded-lg text-white hover:bg-zion-purple/10 hover:text-zion-cyan transition-colors"
-                  >
+
                     Equipment
                   </Link>
                 </li>
@@ -190,7 +188,7 @@ export function Header({
                     to="/community"
                     onClick={toggleMobileMenu}
                     className="block px-4 py-3 rounded-lg text-white hover:bg-zion-purple/10 hover:text-zion-cyan transition-colors"
-                  >
+
                     Community
                   </Link>
                 </li>
@@ -199,7 +197,7 @@ export function Header({
                     to="/ai-content-generator"
                     onClick={toggleMobileMenu}
                     className="block px-4 py-3 rounded-lg text-white hover:bg-zion-purple/10 hover:text-zion-cyan transition-colors"
-                  >
+
                     AI Content Generator
                   </Link>
                 </li>
@@ -208,7 +206,7 @@ export function Header({
                     to="/cybersecurity-suite"
                     onClick={toggleMobileMenu}
                     className="block px-4 py-3 rounded-lg text-white hover:bg-zion-purple/10 hover:text-zion-cyan transition-colors"
-                  >
+
                     Cybersecurity Suite
                   </Link>
                 </li>
@@ -217,7 +215,7 @@ export function Header({
                     to="/cloud-optimizer"
                     onClick={toggleMobileMenu}
                     className="block px-4 py-3 rounded-lg text-white hover:bg-zion-purple/10 hover:text-zion-cyan transition-colors"
-                  >
+
                     Cloud Cost Optimizer
                   </Link>
                 </li>
@@ -227,7 +225,7 @@ export function Header({
                       to="/dashboard"
                       onClick={toggleMobileMenu}
                       className="block px-4 py-3 rounded-lg text-white hover:bg-zion-purple/10 hover:text-zion-cyan transition-colors"
-                    >
+
                       Dashboard
                     </Link>
                   </li>
@@ -247,14 +245,14 @@ export function Header({
                       to="/login"
                       onClick={toggleMobileMenu}
                       className="flex-1 px-4 py-2 text-center rounded-lg border border-zion-purple/30 text-zion-cyan hover:bg-zion-purple/10 transition-colors"
-                    >
+
                       Login
                     </Link>
                     <Link
                       to="/signup"
                       onClick={toggleMobileMenu}
                       className="flex-1 px-4 py-2 text-center rounded-lg bg-zion-purple text-white hover:bg-zion-purple-dark transition-colors"
-                    >
+
                       Sign Up
                     </Link>
                   </div>
@@ -269,6 +267,7 @@ export function Header({
       <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-zion-cyan to-transparent opacity-60"/>
     </>
   );
-  };
+  </div>};
 
 export default Header;
+}}

@@ -40,7 +40,7 @@ export const FuturisticAnimatedBackground = ({ className = '', intensity = 'medi
                 life: Math.random() * 100,
                 maxLife: 100
             });
-        }
+
         // Grid lines
         const gridSize = 50;
         const gridOpacity = intensity === 'low' ? 0.1 : intensity === 'medium' ? 0.2 : 0.3;
@@ -58,14 +58,14 @@ export const FuturisticAnimatedBackground = ({ className = '', intensity = 'medi
                 ctx.moveTo(x, 0);
                 ctx.lineTo(x, canvas.height);
                 ctx.stroke();
-            }
+
             // Horizontal lines
             for (let y = 0; y < canvas.height; y += gridSize) {
                 ctx.beginPath();
                 ctx.moveTo(0, y);
                 ctx.lineTo(canvas.width, y);
                 ctx.stroke();
-            }
+
             // Update and draw particles
             particles.forEach((particle, index) => {
                 // Update position
@@ -74,17 +74,17 @@ export const FuturisticAnimatedBackground = ({ className = '', intensity = 'medi
                 // Bounce off edges
                 if (particle.x <= 0 || particle.x >= canvas.width) {
                     particle.vx *= -1;
-                }
+
                 if (particle.y <= 0 || particle.y >= canvas.height) {
                     particle.vy *= -1;
-                }
+
                 // Update life
                 particle.life--;
                 if (particle.life <= 0) {
                     particle.life = particle.maxLife;
                     particle.x = Math.random() * canvas.width;
                     particle.y = Math.random() * canvas.height;
-                }
+
                 // Draw particle
                 const alpha = (particle.life / particle.maxLife) * particle.opacity;
                 ctx.fillStyle = `${particle.color}${Math.floor(alpha * 255).toString(16).padStart(2, '0')}`;
@@ -115,9 +115,9 @@ export const FuturisticAnimatedBackground = ({ className = '', intensity = 'medi
                         ctx.moveTo(particles[i].x, particles[i].y);
                         ctx.lineTo(particles[j].x, particles[j].y);
                         ctx.stroke();
-                    }
-                }
-            }
+
+
+
             // Draw floating orbs
             const time = Date.now() * 0.001;
             for (let i = 0; i < 3; i++) {
@@ -139,7 +139,7 @@ export const FuturisticAnimatedBackground = ({ className = '', intensity = 'medi
                 ctx.beginPath();
                 ctx.arc(x, y, size * 0.3, 0, Math.PI * 2);
                 ctx.fill();
-            }
+
             // Draw scanning line effect
             const scanY = (time * 50) % (canvas.height + 100) - 50;
             const scanGradient = ctx.createLinearGradient(0, scanY - 2, 0, scanY + 2);
@@ -154,10 +154,11 @@ export const FuturisticAnimatedBackground = ({ className = '', intensity = 'medi
         return () => {
             if (animationRef.current) {
                 cancelAnimationFrame(animationRef.current);
-            }
+
             window.removeEventListener('resize', resizeCanvas);
         };
     }, [intensity, colorScheme]);
     return (<canvas ref={canvasRef} className={`fixed inset-0 pointer-events-none ${className}`} style={{ zIndex: -1 }}/>);
 };
 export default FuturisticAnimatedBackground;
+}}}}}}}}}}}

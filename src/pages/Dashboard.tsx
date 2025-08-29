@@ -16,8 +16,6 @@ import {
   MessageSquare,
   Star,
   ArrowRight
-} from "lucide-react";
-
 export default function Dashboard() {
   const stats = [
     {
@@ -47,7 +45,7 @@ export default function Dashboard() {
       change: "-1.2%",
       changeType: "negative",
       icon: <TrendingUp className="h-6 w-6 text-orange-500" />
-    }
+
   ];
 
   const recentProjects = [
@@ -82,7 +80,7 @@ export default function Dashboard() {
       progress: 60,
       dueDate: "2024-02-28",
       priority: "Medium"
-    }
+
   ];
 
   const notifications = [
@@ -106,7 +104,7 @@ export default function Dashboard() {
       message: "Scheduled maintenance completed successfully",
       time: "1 day ago",
       read: true
-    }
+
   ];
 
   const quickActions = [
@@ -133,7 +131,7 @@ export default function Dashboard() {
       description: "Submit support request",
       icon: <MessageSquare className="h-8 w-8 text-zion-purple" />,
       color: "bg-zion-purple/10 border-zion-purple/20"
-    }
+
   ];
 
   const getStatusColor = (status: string) => {
@@ -146,7 +144,7 @@ export default function Dashboard() {
         return "bg-yellow-100 text-yellow-800";
       default:
         return "bg-gray-100 text-gray-800";
-    }
+
   };
 
   const getPriorityColor = (priority: string) => {
@@ -159,7 +157,7 @@ export default function Dashboard() {
         return "bg-green-100 text-green-800";
       default:
         return "bg-gray-100 text-gray-800";
-    }
+
   };
 
   return (
@@ -193,7 +191,7 @@ export default function Dashboard() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
-            >
+
               <div className="flex items-center justify-between mb-4">
                 <div className="p-2 bg-zion-purple/20 rounded-lg">
                   {stat.icon}
@@ -218,7 +216,7 @@ export default function Dashboard() {
               initial={{ opacity: 0, x: -20 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.5, delay: 0.4 }}
-            >
+
               <div className="flex items-center justify-between mb-6">
                 <h2 className="text-xl font-semibold text-white">Recent Projects</h2>
                 <button className="text-zion-cyan hover:text-zion-cyan-light text-sm font-medium">
@@ -270,14 +268,14 @@ export default function Dashboard() {
               initial={{ opacity: 0, x: 20 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.5, delay: 0.6 }}
-            >
+
               <h2 className="text-xl font-semibold text-white mb-4">Quick Actions</h2>
               <div className="grid grid-cols-2 gap-3">
                 {quickActions.map((action, index) => (
                   <button
                     key={action.title}
                     className={`p-4 rounded-lg border ${action.color} hover:scale-105 transition-all duration-300 text-left`}
-                  >
+
                     <div className="mb-2">{action.icon}</div>
                     <h3 className="font-medium text-white text-sm mb-1">{action.title}</h3>
                     <p className="text-zion-slate-light text-xs">{action.description}</p>
@@ -292,7 +290,7 @@ export default function Dashboard() {
               initial={{ opacity: 0, x: 20 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.5, delay: 0.8 }}
-            >
+
               <h2 className="text-xl font-semibold text-white mb-4">Notifications</h2>
               <div className="space-y-3">
                 {notifications.map((notification) => (
@@ -323,7 +321,7 @@ export default function Dashboard() {
               initial={{ opacity: 0, x: 20 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.5, delay: 1 }}
-            >
+
               <h2 className="text-xl font-semibold text-white mb-4">System Status</h2>
               <div className="space-y-3">
                 <div className="flex items-center justify-between">
@@ -351,4 +349,4 @@ export default function Dashboard() {
       </div>
     </div>
   );
-}
+}}}}}}}}

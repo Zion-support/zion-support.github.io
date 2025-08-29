@@ -1,7 +1,5 @@
 import React, { useState } from 'react';
-import { BookOpen, Code, FileText, Video, Download, Search, ChevronRight, ExternalLink, Star, Clock, Users, Bookmark, Filter } from 'lucide-react';
-
-export default function Documentation() {
+import { BookOpen, Code, FileText, Video, Download, Search, ChevronRight, ExternalLink, Star, Clock, Users, Bookmark, Filter export default function Documentation() {
   const [searchQuery, setSearchQuery] = useState('');
   const [activeCategory, setActiveCategory] = useState('all');
   const [sortBy, setSortBy] = useState('popular');
@@ -107,7 +105,7 @@ export default function Documentation() {
       rating: 4.5,
       featured: false,
       tags: ['python', 'sdk', 'examples']
-    }
+
   ];
 
   const featuredResources = [
@@ -131,7 +129,7 @@ export default function Documentation() {
       type: 'community',
       link: '/community',
       featured: false
-    }
+
   ];
 
   const getDifficultyColor = (difficulty: string) => {
@@ -140,7 +138,7 @@ export default function Documentation() {
       case 'intermediate': return 'bg-yellow-500';
       case 'advanced': return 'bg-red-500';
       default: return 'bg-gray-500';
-    }
+
   };
 
   const getDifficultyText = (difficulty: string) => {
@@ -149,7 +147,7 @@ export default function Documentation() {
       case 'intermediate': return 'Intermediate';
       case 'advanced': return 'Advanced';
       default: return 'Unknown';
-    }
+
   };
 
   const filteredItems = documentationItems.filter(item => {
@@ -168,7 +166,7 @@ export default function Documentation() {
       cat.count = documentationItems.length;
     } else {
       cat.count = documentationItems.filter(item => item.category === cat.id).length;
-    }
+
   });
 
   return (
@@ -219,7 +217,7 @@ export default function Documentation() {
                         ? 'bg-zion-cyan text-zion-slate-dark'
                         : 'bg-zion-slate text-zion-slate-light hover:bg-zion-slate-light hover:text-white'
                     }`}
-                  >
+
                     {category.icon}
                     {category.name}
                     <span className="text-xs bg-white/20 px-2 py-1 rounded-full">
@@ -236,7 +234,7 @@ export default function Documentation() {
                   value={sortBy}
                   onChange={(e) => setSortBy(e.target.value)}
                   className="bg-zion-slate border border-zion-slate-light rounded-lg px-3 py-2 text-white focus:outline-none focus:ring-2 focus:ring-zion-cyan"
-                >
+
                   {sortOptions.map((option) => (
                     <option key={option.value} value={option.value}>
                       {option.label}
@@ -260,7 +258,7 @@ export default function Documentation() {
               <div
                 key={index}
                 className="bg-zion-slate border border-zion-slate-light rounded-lg p-6 hover:shadow-lg transition-shadow"
-              >
+
                 {resource.featured && (
                   <div className="inline-block bg-zion-cyan text-zion-slate-dark px-3 py-1 rounded-full text-xs font-medium mb-4">
                     Featured
@@ -271,7 +269,7 @@ export default function Documentation() {
                 <a
                   href={resource.link}
                   className="inline-flex items-center gap-2 text-zion-cyan hover:text-zion-cyan-light transition-colors font-medium"
-                >
+
                   {resource.type === 'portal' ? 'Visit Portal' : 'Learn More'}
                   <ExternalLink className="w-4 h-4" />
                 </a>
@@ -296,7 +294,7 @@ export default function Documentation() {
                   className={`bg-zion-slate border border-zion-slate-light rounded-lg p-6 hover:shadow-lg transition-shadow ${
                     item.featured ? 'ring-2 ring-zion-cyan' : ''
                   }`}
-                >
+
                   <div className="flex items-start justify-between mb-4">
                     <div className="flex items-center gap-2">
                       <span className={`px-2 py-1 rounded-full text-xs font-medium ${getDifficultyColor(item.difficulty)}`}>
@@ -322,7 +320,7 @@ export default function Documentation() {
                       <span
                         key={index}
                         className="px-2 py-1 bg-zion-slate-light/20 text-zion-slate-light text-xs rounded-full"
-                      >
+
                         {tag}
                       </span>
                     ))}
@@ -373,13 +371,13 @@ export default function Documentation() {
             <a
               href="/support"
               className="bg-zion-cyan text-zion-slate-dark px-8 py-3 rounded-lg font-semibold hover:bg-zion-cyan-light transition-colors"
-            >
+
               Contact Support
             </a>
             <a
               href="/help"
               className="border border-zion-cyan text-zion-cyan px-8 py-3 rounded-lg font-semibold hover:bg-zion-cyan hover:text-zion-slate-dark transition-colors"
-            >
+
               Help Center
             </a>
           </div>
@@ -387,4 +385,4 @@ export default function Documentation() {
       </div>
     </div>
   );
-}
+}}}}}}}

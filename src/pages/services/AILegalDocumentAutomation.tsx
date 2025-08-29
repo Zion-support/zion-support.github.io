@@ -1,6 +1,4 @@
-import { FileText, Shield, Clock, Users, Check, ArrowRight, ExternalLink, Phone, Mail, Zap, Scale, Lock } from 'lucide-react';
-
-export default function AILegalDocumentAutomation() {
+import { FileText, Shield, Clock, Users, Check, ArrowRight, ExternalLink, Phone, Mail, Zap, Scale, Lock export default function AILegalDocumentAutomation() {
   const features = [
     'AI-powered contract generation and review',
     'Legal compliance checking and validation',
@@ -67,7 +65,7 @@ export default function AILegalDocumentAutomation() {
         'API integrations',
         'Advanced analytics & reporting'
       ]
-    }
+
   ];
 
   const technicalSpecs = {
@@ -222,4 +220,4 @@ export default function AILegalDocumentAutomation() {
       </section>
     </div>
   );
-}
+}}}

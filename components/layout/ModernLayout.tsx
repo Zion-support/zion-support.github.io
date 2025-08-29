@@ -9,7 +9,6 @@ interface ModernLayoutProps {
   description?: string;
   keywords?: string;
   canonical?: string;
-}
 
 const ModernLayout: React.FC<ModernLayoutProps> = ({
   children,
@@ -100,4 +99,4 @@ const ModernLayout: React.FC<ModernLayoutProps> = ({
   );
 };
 
-export default ModernLayout;
+export default ModernLayout;}

@@ -42,7 +42,7 @@ export const FuturisticNeonButton = ({ children, onClick, type = 'button', varia
                 text: 'text-red-500',
                 glow: `shadow-[0_0_20px_rgba(239,68,68,${multiplier})]`,
                 hoverGlow: `hover:shadow-[0_0_30px_rgba(239,68,68,${Math.min(multiplier + 0.3, 1)})]`
-            }
+
         };
         return baseStyles[variant];
     };
@@ -83,5 +83,6 @@ export const FuturisticNeonButton = ({ children, onClick, type = 'button', varia
         <div className={`absolute inset-0 rounded-lg ${styles.glow}`}/>
       </div>
     </motion.button>);
-};
+</div>};
 export default FuturisticNeonButton;
+</motion.div></motion.div>}

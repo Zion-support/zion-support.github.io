@@ -32,19 +32,19 @@ export default function OrderDetailPage() {
                     to: user.email,
                     subject: `Receipt for order ${order.orderId}`,
                     html: `<p>Thank you for your purchase. Total ${order.total}.</p>`
-                }
+
             });
             toast({ title: 'Receipt sent!' });
-        }
+
         catch (err) {
             toast({ title: 'Failed to send receipt', variant: 'destructive' });
-        }
+
     };
     if (isLoading || !order) {
         return (<div className="container max-w-3xl py-10">
         <Skeleton className="h-6 w-full"/>
       </div>);
-    }
+
     return (<div className="container max-w-3xl py-10 space-y-6">
       <h1 className="text-3xl font-bold">Order #{order.orderId}</h1>
 
@@ -74,4 +74,4 @@ export default function OrderDetailPage() {
         Back to orders
       </Link>
     </div>);
-}
+}}}}}

@@ -298,5 +298,5 @@ export const advancedEmergingTechServices2025 = [
     marketSize: '$6.8B',
     targetAudience: 'Gaming companies, virtual reality firms, entertainment companies, technology startups',
     competitiveAdvantage: 'Industry-first quantum-enhanced metaverse, advanced AI world generation, and comprehensive VR/AR system integration'
-  }
-];
+
+];}

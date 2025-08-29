@@ -1,8 +1,7 @@
 import React from 'react';
 import { Card, CardContent, CardHeader } from '../ui/card';
 import { Button } from '../ui/button';
-import { AlertCircle, RefreshCw } from 'lucide-react';
-export const ProfileErrorState = ({ error = 'Failed to load profile', onRetry }) => {
+import { AlertCircle, RefreshCw export const ProfileErrorState = ({ error = 'Failed to load profile', onRetry }) => {
     return (<div className="max-w-4xl mx-auto px-4 py-8">
       <Card>
         <CardHeader className="text-center">
@@ -36,4 +35,5 @@ export const ProfileErrorState = ({ error = 'Failed to load profile', onRetry })
         </CardContent>
       </Card>
     </div>);
-};
+</Card></Card>};
+}

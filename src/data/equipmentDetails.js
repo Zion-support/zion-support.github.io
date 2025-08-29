@@ -164,7 +164,7 @@ export const equipmentDetails = [
     delivery: "1-2 business days",
     rating: 4.5,
     reviews: 78
-  }
+
 ];
 
 export const getEquipmentById = (id) => {
@@ -184,4 +184,4 @@ export const searchEquipment = (query) => {
   );
 };
 
-export const EQUIPMENT_DETAILS = equipmentDetails;
+export const EQUIPMENT_DETAILS = equipmentDetails;}

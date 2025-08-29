@@ -1,7 +1,6 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Activity, Cpu, HardDrive, Wifi, Settings, RefreshCw, Maximize2, Minimize2, X } from 'lucide-react';
-import { Button } from './button';
+import { Activity, Cpu, HardDrive, Wifi, Settings, RefreshCw, Maximize2, Minimize2, X import { Button } from './button';
 import { Badge } from './badge';
 export function PerformanceMonitor({ enabled = true, showDetails: _showDetails = false, autoRefresh = true, refreshInterval = 1000, onAlert, className = "" }) {
     const [isExpanded, setIsExpanded] = useState(false);
@@ -46,10 +45,10 @@ export function PerformanceMonitor({ enabled = true, showDetails: _showDetails =
                     };
                     setAlerts(prev => [alert, ...prev.slice(0, 9)]);
                     onAlert?.('fps', fps, thresholds.fps);
-                }
+
                 frameCount = 0;
                 lastTime = currentTime;
-            }
+
             requestAnimationFrame(countFrame);
         };
         requestAnimationFrame(countFrame);
@@ -74,8 +73,8 @@ export function PerformanceMonitor({ enabled = true, showDetails: _showDetails =
                 };
                 setAlerts(prev => [alert, ...prev.slice(0, 9)]);
                 onAlert?.('memory', percentage, thresholds.memory);
-            }
-        }
+
+
     }, [thresholds.memory, onAlert]);
     const measureRenderTime = useCallback(() => {
         const start = performance.now();
@@ -94,7 +93,7 @@ export function PerformanceMonitor({ enabled = true, showDetails: _showDetails =
                 };
                 setAlerts(prev => [alert, ...prev.slice(0, 9)]);
                 onAlert?.('renderTime', renderTime, thresholds.renderTime);
-            }
+
         });
     }, [thresholds.renderTime, onAlert]);
     const measureNetworkLatency = useCallback(async () => {
@@ -117,12 +116,12 @@ export function PerformanceMonitor({ enabled = true, showDetails: _showDetails =
                 };
                 setAlerts(prev => [alert, ...prev.slice(0, 9)]);
                 onAlert?.('networkLatency', latency, thresholds.networkLatency);
-            }
-        }
+
+
         catch {
             // Network error, set high latency
             setMetrics(prev => ({ ...prev, networkLatency: 999 }));
-        }
+
     }, [thresholds.networkLatency, onAlert]);
     const simulateMetrics = useCallback(() => {
         // Simulate CPU and disk usage for demo purposes
@@ -144,7 +143,7 @@ export function PerformanceMonitor({ enabled = true, showDetails: _showDetails =
             };
             setAlerts(prev => [alert, ...prev.slice(0, 9)]);
             onAlert?.('cpuUsage', cpuUsage, thresholds.cpuUsage);
-        }
+
         if (diskUsage > thresholds.diskUsage) {
             const alert = {
                 id: `disk-${Date.now()}`,
@@ -155,7 +154,7 @@ export function PerformanceMonitor({ enabled = true, showDetails: _showDetails =
             };
             setAlerts(prev => [alert, ...prev.slice(0, 9)]);
             onAlert?.('diskUsage', diskUsage, thresholds.diskUsage);
-        }
+
     }, [thresholds.cpuUsage, thresholds.diskUsage, onAlert]);
     // Auto-refresh metrics
     useEffect(() => {
@@ -186,7 +185,7 @@ export function PerformanceMonitor({ enabled = true, showDetails: _showDetails =
     const getMetricColor = (metric, value, threshold) => {
         if (metric === 'FPS') {
             return value >= threshold ? 'text-green-400' : 'text-red-400';
-        }
+
         return value <= threshold ? 'text-green-400' : 'text-red-400';
     };
     const getMetricIcon = (metric) => {
@@ -198,7 +197,7 @@ export function PerformanceMonitor({ enabled = true, showDetails: _showDetails =
             case 'CPU': return Cpu;
             case 'Disk': return HardDrive;
             default: return Activity;
-        }
+
     };
     const getSeverityColor = (severity) => {
         switch (severity) {
@@ -206,7 +205,7 @@ export function PerformanceMonitor({ enabled = true, showDetails: _showDetails =
             case 'warning': return 'border-yellow-500/50 bg-yellow-500/10 text-yellow-400';
             case 'info': return 'border-blue-500/50 bg-blue-500/10 text-blue-400';
             default: return 'border-zinc-500/50 bg-zinc-500/10 text-zinc-400';
-        }
+
     };
     if (!enabled)
         return null;
@@ -219,7 +218,7 @@ export function PerformanceMonitor({ enabled = true, showDetails: _showDetails =
             </Badge>)}
         </Button>
       </motion.div>);
-    }
+
     return (<motion.div className={`fixed bottom-4 right-4 z-50 ${className}`} initial={{ scale: 0.8, opacity: 0 }} animate={{ scale: 1, opacity: 1 }}>
       <div className="bg-zion-blue-dark/95 backdrop-blur-md border border-zion-blue-light/30 rounded-xl shadow-2xl overflow-hidden">
         {/* Header */}
@@ -408,4 +407,4 @@ export function PerformanceMonitor({ enabled = true, showDetails: _showDetails =
         </div>
       </div>
     </motion.div>);
-}
+</div></div>}}}}}}}}}}}}}}}}

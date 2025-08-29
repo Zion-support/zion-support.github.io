@@ -8,8 +8,6 @@ import {
   Sparkles, Cpu, Lock, Cloud, BarChart3, Settings, Eye,
   Award, Clock, Heart, Lightbulb, Users, FileText,
   HelpCircle, BookOpen, Target, TrendingUp, Star
-} from 'lucide-react';
-
 interface SidebarItem {
   name: string;
   href: string;
@@ -22,7 +20,6 @@ interface SidebarItem {
   isHot?: boolean;
   isPremium?: boolean;
   category?: string;
-}
 
 const sidebarSections = [
   {
@@ -120,7 +117,7 @@ const sidebarSections = [
           { name: 'Advanced Robotics', href: '/advanced-robotics' },
           { name: 'Biotechnology Platform', href: '/biotechnology-platform' }
         ]
-      }
+
     ]
   },
   {
@@ -193,7 +190,7 @@ const sidebarSections = [
           { name: 'Personalized Learning AI', href: '/personalized-learning-ai' },
           { name: 'Student Performance AI', href: '/student-performance-ai' }
         ]
-      }
+
     ]
   },
   {
@@ -238,15 +235,14 @@ const sidebarSections = [
           { name: 'Community Forum', href: '/community' },
           { name: 'Knowledge Base', href: '/knowledge-base' }
         ]
-      }
+
     ]
-  }
+
 ];
 
 interface EnhancedSidebar2025Props {
   isOpen: boolean;
   onClose: () => void;
-}
 
 export default function EnhancedSidebar2025({ isOpen, onClose }: EnhancedSidebar2025Props) {
   const [expandedSections, setExpandedSections] = useState<Set<string>>(new Set());
@@ -258,7 +254,7 @@ export default function EnhancedSidebar2025({ isOpen, onClose }: EnhancedSidebar
       newExpanded.delete(sectionTitle);
     } else {
       newExpanded.add(sectionTitle);
-    }
+
     setExpandedSections(newExpanded);
   };
 
@@ -277,7 +273,7 @@ export default function EnhancedSidebar2025({ isOpen, onClose }: EnhancedSidebar
       newExpanded.delete(itemName);
     } else {
       newExpanded.add(itemName);
-    }
+
     setExpandedItems(newExpanded);
   };
 
@@ -286,7 +282,6 @@ export default function EnhancedSidebar2025({ isOpen, onClose }: EnhancedSidebar
       document.body.style.overflow = 'hidden';
     } else {
       document.body.style.overflow = 'unset';
-    }
 
     return () => {
       document.body.style.overflow = 'unset';
@@ -317,7 +312,7 @@ export default function EnhancedSidebar2025({ isOpen, onClose }: EnhancedSidebar
         animate={{ x: isOpen ? 0 : '-100%' }}
         transition={{ type: 'spring', damping: 25, stiffness: 200 }}
         className={`fixed left-0 top-0 h-full w-80 bg-black/95 backdrop-blur-xl border-r border-gray-800/50 z-50 overflow-y-auto`}
-      >
+
         {/* Header */}
         <div className="sticky top-0 bg-black/80 backdrop-blur-xl border-b border-gray-800/50 p-6">
           <div className="flex items-center justify-between mb-6">
@@ -338,7 +333,7 @@ export default function EnhancedSidebar2025({ isOpen, onClose }: EnhancedSidebar
             <button
               onClick={onClose}
               className="lg:hidden p-2 hover:bg-gray-800/50 rounded-lg transition-colors duration-200"
-            >
+
               <X className="w-5 h-5 text-gray-400" />
             </button>
           </div>
@@ -363,7 +358,7 @@ export default function EnhancedSidebar2025({ isOpen, onClose }: EnhancedSidebar
             href="/"
             onClick={onClose}
             className="flex items-center gap-3 p-3 bg-gradient-to-r from-cyan-500/20 to-purple-600/20 hover:from-cyan-500/30 hover:to-purple-600/30 rounded-lg border border-cyan-500/30 transition-all duration-300 group"
-          >
+
             <Home className="w-5 h-5 text-cyan-400" />
             <span className="text-white font-semibold">Home</span>
           </Link>
@@ -374,7 +369,7 @@ export default function EnhancedSidebar2025({ isOpen, onClose }: EnhancedSidebar
               <button
                 onClick={() => toggleSection(section.title)}
                 className="w-full flex items-center justify-between p-3 bg-gray-800/30 hover:bg-gray-800/50 rounded-lg border border-gray-700/30 transition-all duration-300 group"
-              >
+
                 <div className="flex items-center gap-3">
                   <div className={`w-8 h-8 bg-gradient-to-r ${section.color} rounded-lg flex items-center justify-center`}>
                     <section.icon className="w-4 h-4 text-white" />
@@ -396,13 +391,13 @@ export default function EnhancedSidebar2025({ isOpen, onClose }: EnhancedSidebar
                     exit={{ opacity: 0, height: 0 }}
                     transition={{ duration: 0.3 }}
                     className="space-y-2 ml-6"
-                  >
+
                     {section.items.map((item, itemIndex) => (
                       <div key={itemIndex} className="space-y-2">
                         <button
                           onClick={() => toggleItem(item.name)}
                           className="w-full flex items-center justify-between p-2 hover:bg-gray-800/30 rounded-lg transition-all duration-300 group text-left"
-                        >
+
                           <div className="flex items-center gap-3">
                             <item.icon className="w-4 h-4 text-gray-400 group-hover:text-cyan-400 transition-colors duration-200" />
                             <div>
@@ -431,14 +426,14 @@ export default function EnhancedSidebar2025({ isOpen, onClose }: EnhancedSidebar
                                 exit={{ opacity: 0, height: 0 }}
                                 transition={{ duration: 0.3 }}
                                 className="space-y-1 ml-6"
-                              >
+
                                 {item.subItems.map((subItem, subIndex) => (
                                   <Link
                                     key={subIndex}
                                     href={subItem.href}
                                     onClick={onClose}
                                     className="flex items-center gap-2 p-2 hover:bg-gray-800/20 rounded-lg transition-all duration-300 group"
-                                  >
+
                                     <div className="w-1.5 h-1.5 bg-cyan-400 rounded-full group-hover:scale-150 transition-transform duration-200"></div>
                                     <span className="text-gray-400 group-hover:text-cyan-300 transition-colors duration-200 text-xs">
                                       {subItem.name}
@@ -483,7 +478,7 @@ export default function EnhancedSidebar2025({ isOpen, onClose }: EnhancedSidebar
                 href="/contact"
                 onClick={onClose}
                 className="inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-cyan-500 to-purple-600 hover:from-cyan-600 hover:to-purple-700 text-white text-sm font-semibold rounded-lg transition-all duration-300 transform hover:scale-105"
-              >
+
                 Contact Us
                 <ChevronRight className="w-4 h-4" />
               </Link>
@@ -493,4 +488,4 @@ export default function EnhancedSidebar2025({ isOpen, onClose }: EnhancedSidebar
       </motion.div>
     </>
   );
-}
+}}}}}}}}}}</section></motion.div>}

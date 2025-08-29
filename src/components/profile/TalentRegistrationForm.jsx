@@ -10,8 +10,7 @@ import { Badge } from "@/components/ui/badge";
 import { Separator } from "@/components/ui/separator";
 import { Form, FormControl, FormDescription, FormField, FormItem, FormLabel, FormMessage, } from "@/components/ui/form";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
-import { X, Sparkles, Upload, Check, Briefcase, MapPin, UserRound } from "lucide-react";
-import { toast } from "@/components/ui/use-toast";
+import { X, Sparkles, Upload, Check, Briefcase, MapPin, UserRound import { toast } from "@/components/ui/use-toast";
 import { supabase } from "@/integrations/supabase/client";
 import { AspectRatio } from "@/components/ui/aspect-ratio";
 import { useAuth } from "@/hooks/useAuth";
@@ -56,7 +55,7 @@ export function TalentRegistrationForm() {
         if (skillInput && !skillTags.includes(skillInput)) {
             setSkillTags([...skillTags, skillInput]);
             form.setValue("skills", "");
-        }
+
     };
     // Handle removing skill tags
     const handleRemoveSkill = (skill) => {
@@ -67,7 +66,7 @@ export function TalentRegistrationForm() {
         if (e.key === "Enter") {
             e.preventDefault();
             handleAddSkill();
-        }
+
     };
     // Handle avatar upload
     const handleAvatarUpload = (e) => {
@@ -78,7 +77,7 @@ export function TalentRegistrationForm() {
                 setUploadedAvatar(reader.result);
             };
             reader.readAsDataURL(file);
-        }
+
     };
     // Generate enhanced profile with AI
     const generateEnhancedProfile = async () => {
@@ -89,7 +88,7 @@ export function TalentRegistrationForm() {
                 description: "Please provide at least a detailed bio before generating enhanced content.",
             });
             return;
-        }
+
         try {
             setIsGenerating(true);
             // Call the Supabase Edge Function
@@ -101,29 +100,29 @@ export function TalentRegistrationForm() {
                         bio: formData.bio,
                         skills: skillTags,
                         location: formData.location
-                    }
-                }
+
+
             });
             if (error) {
                 throw new Error(error.message);
-            }
+
             setGeneratedContent(data);
             toast({
                 title: "Enhanced Profile Generated",
                 description: "AI has created a professional bio and suggested additional skills for your profile.",
             });
-        }
+
         catch (error) {
-            // console.error("Error generating enhanced profile:", error);
+            // // // console.error("Error generating enhanced profile:", error);
             toast({
                 title: "Generation failed",
                 description: error.message || "There was an error generating your enhanced profile. Please try again.",
                 variant: "destructive",
             });
-        }
+
         finally {
             setIsGenerating(false);
-        }
+
     };
     // Apply generated content to form
     const applyGeneratedContent = () => {
@@ -138,14 +137,14 @@ export function TalentRegistrationForm() {
                     categorySkills.forEach(skill => {
                         if (typeof skill === 'string' && skill && !skillTags.includes(skill)) {
                             newSkills.push(skill);
-                        }
+
                     });
-                }
+
             });
             if (newSkills.length > 0) {
                 setSkillTags([...skillTags, ...newSkills]);
-            }
-        }
+
+
     };
     // Get category color
     const getCategoryColor = (category) => {
@@ -156,7 +155,7 @@ export function TalentRegistrationForm() {
             case 'softSkills': return 'bg-purple-500/20 hover:bg-purple-500/30 text-purple-500';
             case 'other': return 'bg-gray-500/20 hover:bg-gray-500/30 text-gray-500';
             default: return 'bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple';
-        }
+
     };
     // Send notification email
     const sendEnhancementNotification = async (userId, email) => {
@@ -176,12 +175,12 @@ export function TalentRegistrationForm() {
             </div>
           </div>
           `
-                }
+
             });
-        }
+
         catch (error) {
-            // console.error("Failed to send notification email:", error);
-        }
+            // // // console.error("Failed to send notification email:", error);
+
     };
     // Handle form submission
     const onSubmit = async (values) => {
@@ -192,13 +191,13 @@ export function TalentRegistrationForm() {
                 variant: "destructive",
             });
             return;
-        }
+
         setIsSubmitting(true);
         try {
             // For actual implementation with Supabase
             if (!user?.id) {
                 throw new Error("User not authenticated");
-            }
+
             // Enhance profile if not already done
             let finalSummary = "";
             let finalSkills = skillTags;
@@ -212,8 +211,8 @@ export function TalentRegistrationForm() {
                                 bio: values.bio,
                                 skills: skillTags,
                                 location: values.location
-                            }
-                        }
+
+
                     });
                     if (aiData) {
                         finalSummary = aiData.summary;
@@ -226,23 +225,23 @@ export function TalentRegistrationForm() {
                                 categorySkills.forEach(skill => {
                                     if (typeof skill === 'string' && skill) {
                                         aiSkills.push(skill);
-                                    }
+
                                 });
-                            }
+
                         });
                         // Create a unique set of skills
                         finalSkills = [...new Set([...skillTags, ...aiSkills])];
-                    }
-                }
+
+
                 catch (error) {
-                    // console.error("Error enhancing profile:", error);
+                    // // // console.error("Error enhancing profile:", error);
                     // Continue with submission even if enhancement fails
                     finalSummary = "";
-                }
-            }
+
+
             else if (generatedContent) {
                 finalSummary = generatedContent.summary;
-            }
+
             // Get user email for notification
             const { data: userData } = await supabase.auth.getUser();
             const userEmail = userData.user?.email;
@@ -256,7 +255,7 @@ export function TalentRegistrationForm() {
                 // Send notification email if we have user email
                 if (userEmail && values.enhancedProfile && user?.id) {
                     sendEnhancementNotification(user.id, userEmail);
-                }
+
                 setIsSubmitting(false);
             }, 1500);
             // Here would be the actual code to save the profile to Supabase
@@ -278,16 +277,16 @@ export function TalentRegistrationForm() {
 
             if (error) throw error;
             */
-        }
+
         catch (error) {
-            // console.error("Error creating profile:", error);
+            // // // console.error("Error creating profile:", error);
             toast({
                 title: "Error Creating Profile",
                 description: error.message || "There was an error creating your profile. Please try again.",
                 variant: "destructive",
             });
             setIsSubmitting(false);
-        }
+
     };
     return (<div className="max-w-4xl mx-auto p-4 md:p-6">
       <Card className="bg-zion-blue-dark border-zion-blue-light">
@@ -544,4 +543,4 @@ export function TalentRegistrationForm() {
         </Form>
       </Card>
     </div>);
-}
+</Card></Card></Card></Card></Card>}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}

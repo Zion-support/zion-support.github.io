@@ -1,6 +1,5 @@
 import React, { useState, useRef, useEffect } from 'react';
-import { Shield, AlertTriangle, CheckCircle, Download, RefreshCw, X, Maximize2, Minimize2, Activity, BarChart3, TrendingUp, Users, Server, FileText, Bug } from 'lucide-react';
-const mockSecurityEvents = [
+import { Shield, AlertTriangle, CheckCircle, Download, RefreshCw, X, Maximize2, Minimize2, Activity, BarChart3, TrendingUp, Users, Server, FileText, Bug const mockSecurityEvents = [
     {
         id: '1',
         type: 'threat',
@@ -36,7 +35,7 @@ const mockSecurityEvents = [
         status: 'open',
         assignedTo: 'Compliance Officer',
         priority: 'high'
-    }
+
 ];
 const mockComplianceRequirements = [
     {
@@ -71,7 +70,7 @@ const mockComplianceRequirements = [
         riskLevel: 'high',
         description: 'Conduct DPIA for all new data processing activities.',
         controls: ['Risk assessment', 'Mitigation planning', 'Documentation']
-    }
+
 ];
 const mockSecurityMetrics = [
     {
@@ -113,7 +112,7 @@ const mockSecurityMetrics = [
         trend: 'up',
         change: 3.2,
         category: 'Remediation'
-    }
+
 ];
 const mockThreatIntelligence = [
     {
@@ -135,7 +134,7 @@ const mockThreatIntelligence = [
         mitigationSteps: ['Enhanced email filtering', 'User awareness training', 'Multi-factor authentication'],
         lastSeen: '2024-01-15T08:30:00.000Z',
         frequency: 8
-    }
+
 ];
 export function AdvancedSecurityDashboard() {
     const [isOpen, setIsOpen] = useState(false);
@@ -170,7 +169,7 @@ export function AdvancedSecurityDashboard() {
         if (autoRefresh) {
             const interval = setInterval(refreshData, 30000); // Refresh every 30 seconds
             return () => clearInterval(interval);
-        }
+
     }, [autoRefresh]);
     const getSeverityColor = (severity) => {
         switch (severity) {
@@ -184,7 +183,7 @@ export function AdvancedSecurityDashboard() {
                 return 'bg-blue-500 text-white';
             default:
                 return 'bg-gray-500 text-white';
-        }
+
     };
     const getStatusColor = (status) => {
         switch (status) {
@@ -196,7 +195,7 @@ export function AdvancedSecurityDashboard() {
                 return 'bg-yellow-100 text-yellow-700 dark:bg-yellow-900/30 dark:text-yellow-300';
             default:
                 return 'bg-gray-100 text-gray-700 dark:bg-gray-900/30 dark:text-gray-300';
-        }
+
     };
     const getRiskLevelColor = (riskLevel) => {
         switch (riskLevel) {
@@ -206,7 +205,7 @@ export function AdvancedSecurityDashboard() {
                 return 'bg-yellow-100 text-yellow-700 dark:bg-yellow-900/30 dark:text-yellow-300';
             default:
                 return 'bg-green-100 text-green-700 dark:bg-green-900/30 dark:text-green-300';
-        }
+
     };
     const getTrendIcon = (trend) => {
         switch (trend) {
@@ -216,7 +215,7 @@ export function AdvancedSecurityDashboard() {
                 return <TrendingUp className="w-4 h-4 text-red-500 rotate-180"/>;
             default:
                 return <Activity className="w-4 h-4 text-gray-500"/>;
-        }
+
     };
     const getEventIcon = (type) => {
         switch (type) {
@@ -230,13 +229,13 @@ export function AdvancedSecurityDashboard() {
                 return <Users className="w-5 h-5 text-purple-500"/>;
             default:
                 return <Server className="w-5 h-5 text-gray-500"/>;
-        }
+
     };
     if (!isOpen) {
         return (<button onClick={() => setIsOpen(true)} className="fixed bottom-4 right-4 bg-gradient-to-r from-zion-red to-zion-orange text-white p-4 rounded-full shadow-2xl hover:shadow-3xl transition-all duration-300 hover:scale-110 z-40" title="Open Security Dashboard">
         <Shield className="w-6 h-6"/>
       </button>);
-    }
+
     if (isMinimized) {
         return (<div className="fixed bottom-4 right-4 bg-white dark:bg-zion-slate border border-zion-slate-light rounded-lg shadow-xl z-50">
         <div className="flex items-center gap-2 p-3">
@@ -247,7 +246,7 @@ export function AdvancedSecurityDashboard() {
           </button>
         </div>
       </div>);
-    }
+
     return (<div className={`fixed bg-white dark:bg-zion-slate border border-zion-slate-light rounded-lg shadow-2xl z-50 overflow-hidden transition-all duration-300 ${isFullscreen ? 'inset-4' : 'bottom-4 right-4 w-[1400px] h-[900px]'}`} ref={containerRef}>
       {/* Header */}
       <div className="bg-gradient-to-r from-zion-red to-zion-orange text-white p-4 flex items-center justify-between">
@@ -508,4 +507,4 @@ export function AdvancedSecurityDashboard() {
           </div>)}
       </div>
     </div>);
-}
+}}}}}}}}}}}}}}

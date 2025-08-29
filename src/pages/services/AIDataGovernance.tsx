@@ -42,8 +42,6 @@ import {
   EyeOn,
   LockOpen,
   LockClosed
-} from 'lucide-react';
-
 const AIDataGovernance: React.FC = () => {
   const features = [
     {
@@ -81,7 +79,7 @@ const AIDataGovernance: React.FC = () => {
       title: "Data Lineage Tracking",
       description: "Complete audit trail showing data origins, transformations, and usage patterns",
       color: "from-yellow-500 to-orange-500"
-    }
+
   ];
 
   const pricingPlans = [
@@ -138,7 +136,7 @@ const AIDataGovernance: React.FC = () => {
       ],
       cta: "Contact Sales",
       popular: false
-    }
+
   ];
 
   const benefits = [
@@ -165,7 +163,7 @@ const AIDataGovernance: React.FC = () => {
       title: "Real-time Monitoring",
       description: "Instant alerts and proactive threat prevention",
       metric: "24/7"
-    }
+
   ];
 
   const complianceFrameworks = [
@@ -204,7 +202,7 @@ const AIDataGovernance: React.FC = () => {
       description: "Service Organization Control 2 compliance",
       icon: CheckCircle,
       color: "from-yellow-500 to-orange-500"
-    }
+
   ];
 
   const useCases = [
@@ -235,7 +233,7 @@ const AIDataGovernance: React.FC = () => {
       description: "Protect trade secrets and proprietary data with advanced classification",
       icon: Cpu,
       color: "from-orange-500 to-red-500"
-    }
+
   ];
 
   return (
@@ -254,7 +252,7 @@ const AIDataGovernance: React.FC = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-            >
+
               <div className="inline-flex items-center px-4 py-2 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-300 text-sm font-medium mb-8">
                 <Shield className="w-4 h-4 mr-2" />
                 AI-Powered Data Protection
@@ -303,7 +301,7 @@ const AIDataGovernance: React.FC = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 className="group"
-              >
+
                 <div className={`p-6 rounded-xl bg-gradient-to-br ${feature.color} bg-opacity-10 border border-opacity-20 hover:bg-opacity-20 transition-all duration-300 h-full`}>
                   <div className={`inline-flex items-center justify-center w-12 h-12 rounded-lg bg-gradient-to-r ${feature.color} mb-4`}>
                     <feature.icon className="w-6 h-6 text-white" />
@@ -337,7 +335,7 @@ const AIDataGovernance: React.FC = () => {
                 whileInView={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 className="text-center"
-              >
+
                 <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-r from-blue-500 to-green-500 mb-4">
                   <benefit.icon className="w-8 h-8 text-white" />
                 </div>
@@ -370,7 +368,7 @@ const AIDataGovernance: React.FC = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 className="group"
-              >
+
                 <div className={`p-6 rounded-xl bg-gradient-to-br ${framework.color} bg-opacity-10 border border-opacity-20 hover:bg-opacity-20 transition-all duration-300 h-full`}>
                   <div className={`inline-flex items-center justify-center w-12 h-12 rounded-lg bg-gradient-to-r ${framework.color} mb-4`}>
                     <framework.icon className="w-6 h-6 text-white" />
@@ -404,7 +402,7 @@ const AIDataGovernance: React.FC = () => {
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 className="group"
-              >
+
                 <div className={`p-6 rounded-xl bg-gradient-to-br ${useCase.color} bg-opacity-10 border border-opacity-20 hover:bg-opacity-20 transition-all duration-300 h-full`}>
                   <div className="flex items-start space-x-4">
                     <div className={`inline-flex items-center justify-center w-12 h-12 rounded-lg bg-gradient-to-r ${useCase.color}`}>
@@ -447,7 +445,7 @@ const AIDataGovernance: React.FC = () => {
                     ? 'bg-gradient-to-br from-blue-500/20 to-green-500/20 border-2 border-blue-500/50'
                     : 'bg-slate-800/50 border border-slate-700/50'
                 }`}
-              >
+
                 {plan.popular && (
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                     <span className="bg-gradient-to-r from-blue-500 to-green-500 text-white px-4 py-2 rounded-full text-sm font-medium">
@@ -494,7 +492,7 @@ const AIDataGovernance: React.FC = () => {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-          >
+
             <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">
               Ready to Secure Your Data?
             </h2>
@@ -516,4 +514,4 @@ const AIDataGovernance: React.FC = () => {
   );
 };
 
-export default AIDataGovernance;
+export default AIDataGovernance;}}}}}}

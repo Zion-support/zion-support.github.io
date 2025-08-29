@@ -3,8 +3,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { Link } from 'react-router-dom';
-import { Building, CheckCircle, Users, BarChart3, Zap, Globe, Eye, MessageSquare, Shield, DollarSign, Search, Lightbulb, Star, Leaf } from 'lucide-react';
-const BusinessSolutions = [
+import { Building, CheckCircle, Users, BarChart3, Zap, Globe, Eye, MessageSquare, Shield, DollarSign, Search, Lightbulb, Star, Leaf const BusinessSolutions = [
     {
         title: "Business Strategy Consulting",
         description: "Strategic planning and business model optimization for growth",
@@ -151,7 +150,7 @@ const BusinessSolutions = [
         category: "Sustainability",
         badge: "New",
         link: "/request-quote?service=sustainability-consulting"
-    }
+
 ];
 const categories = [
     { name: "All", value: "all", icon: <Building className="h-4 w-4"/> },
@@ -275,4 +274,4 @@ export default function BusinessSolutionsPage() {
         </div>
       </div>
     </div>);
-}
+</Card></Card></Card></Card>}}}

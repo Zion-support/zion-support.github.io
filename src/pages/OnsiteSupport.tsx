@@ -27,7 +27,6 @@ import {
   Info,
   ArrowRight,
   Globe
-} from 'lucide-react';
 import { SEO } from '../components/SEO';
 
 export default function OnsiteSupport() {
@@ -79,7 +78,7 @@ export default function OnsiteSupport() {
         'Technology consulting',
         'Process optimization'
       ]
-    }
+
   ];
 
   const coverageAreas = [
@@ -121,7 +120,7 @@ export default function OnsiteSupport() {
         'Emergency response'
       ],
       responseTime: '8-24 hours'
-    }
+
   ];
 
   const supportTiers = [
@@ -165,7 +164,7 @@ export default function OnsiteSupport() {
         'Strategic consultation'
       ],
       pricing: 'Custom pricing'
-    }
+
   ];
 
   const responseProcess = [
@@ -203,7 +202,7 @@ export default function OnsiteSupport() {
       description: 'Post-resolution support and documentation',
       icon: Mail,
       color: 'from-yellow-500 to-orange-500'
-    }
+
   ];
 
   const contactInfo = [
@@ -220,7 +219,7 @@ export default function OnsiteSupport() {
       email: 'emergency@ziontechgroup.com',
       phone: '+1 302 464 0950',
       address: 'Available 24/7 for critical issues'
-    }
+
   ];
 
   return (
@@ -238,7 +237,7 @@ export default function OnsiteSupport() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             className="text-center"
-          >
+
             <div className="w-20 h-20 bg-gradient-to-br from-green-400 to-emerald-500 rounded-full flex items-center justify-center mx-auto mb-6">
               <Users className="w-10 h-10 text-white" />
             </div>
@@ -260,7 +259,7 @@ export default function OnsiteSupport() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.2 }}
           className="bg-gradient-to-r from-green-600/20 to-emerald-600/20 border border-green-500/30 rounded-2xl p-8 text-center"
-        >
+
           <h2 className="text-2xl font-bold text-white mb-4">
             Why Choose Onsite Support?
           </h2>
@@ -280,7 +279,7 @@ export default function OnsiteSupport() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.3 }}
             className="text-3xl font-bold text-white text-center mb-12"
-          >
+
             Our Onsite Support Services
           </motion.h2>
 
@@ -292,7 +291,7 @@ export default function OnsiteSupport() {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.4 + index * 0.1 }}
                 className="bg-slate-800/30 border border-slate-700 rounded-xl p-6"
-              >
+
                 <div className="flex items-center space-x-4 mb-6">
                   <div className={`w-16 h-16 bg-gradient-to-br ${service.color} rounded-xl flex items-center justify-center`}>
                     <service.icon className="w-8 h-8 text-white" />
@@ -324,7 +323,7 @@ export default function OnsiteSupport() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.5 }}
           className="text-3xl font-bold text-white text-center mb-12"
-        >
+
           Service Coverage Areas
         </motion.h2>
 
@@ -336,7 +335,7 @@ export default function OnsiteSupport() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.6 + index * 0.1 }}
               className="bg-slate-800/30 border border-slate-700 rounded-xl p-6"
-            >
+
               <div className="text-center mb-6">
                 <div className={`w-16 h-16 bg-gradient-to-br ${area.color} rounded-xl flex items-center justify-center mx-auto mb-4`}>
                   <area.icon className="w-8 h-8 text-white" />
@@ -374,7 +373,7 @@ export default function OnsiteSupport() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.7 }}
             className="text-3xl font-bold text-white text-center mb-12"
-          >
+
             Support Tiers & Pricing
           </motion.h2>
 
@@ -386,7 +385,7 @@ export default function OnsiteSupport() {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.8 + index * 0.1 }}
                 className="bg-slate-800/30 border border-slate-700 rounded-xl p-6 hover:border-green-400/50 transition-all duration-300"
-              >
+
                 <div className="text-center mb-6">
                   <div className={`w-16 h-16 bg-gradient-to-br ${tier.color} rounded-xl flex items-center justify-center mx-auto mb-4`}>
                     <tier.icon className="w-8 h-8 text-white" />
@@ -424,7 +423,7 @@ export default function OnsiteSupport() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.9 }}
           className="text-3xl font-bold text-white text-center mb-12"
-        >
+
           Our Response Process
         </motion.h2>
 
@@ -436,7 +435,7 @@ export default function OnsiteSupport() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 1.0 + index * 0.1 }}
               className="text-center"
-            >
+
               <div className={`w-16 h-16 bg-gradient-to-br ${step.color} rounded-full flex items-center justify-center mx-auto mb-4 text-white font-bold text-xl`}>
                 {step.step}
               </div>
@@ -455,7 +454,7 @@ export default function OnsiteSupport() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 1.1 }}
             className="text-3xl font-bold text-white text-center mb-12"
-          >
+
             Benefits of Onsite Support
           </motion.h2>
 
@@ -534,7 +533,7 @@ export default function OnsiteSupport() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 1.2 }}
           className="text-3xl font-bold text-white text-center mb-12"
-        >
+
           Get Onsite Support
         </motion.h2>
 
@@ -546,7 +545,7 @@ export default function OnsiteSupport() {
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.6, delay: 1.3 + index * 0.1 }}
               className="bg-slate-800/30 border border-slate-700 rounded-xl p-6"
-            >
+
               <h3 className="text-xl font-semibold text-white mb-4">{contact.title}</h3>
               <p className="text-slate-400 mb-6">{contact.description}</p>
 
@@ -590,7 +589,7 @@ export default function OnsiteSupport() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 1.4 }}
           className="bg-gradient-to-r from-green-600/20 to-emerald-600/20 border border-green-500/30 rounded-2xl p-8 text-center"
-        >
+
           <h2 className="text-2xl font-bold text-white mb-4">
             Ready for Onsite Support?
           </h2>
@@ -606,4 +605,4 @@ export default function OnsiteSupport() {
       </div>
     </div>
   );
-}
+}}}}}}}

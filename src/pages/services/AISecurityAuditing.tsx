@@ -1,6 +1,4 @@
-import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, FileText, BarChart3 } from 'lucide-react';
-
-export default function AISecurityAuditing() {
+import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, FileText, BarChart3 export default function AISecurityAuditing() {
   const features = [
     'AI-powered security auditing optimization',
     'Intelligent auditing strategy management and execution',
@@ -171,4 +169,4 @@ export default function AISecurityAuditing() {
       </section>
     </div>
   );
-}
+}}

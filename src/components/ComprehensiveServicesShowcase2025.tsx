@@ -402,7 +402,6 @@ import {
   Psi,
   Omega,
   Crown
-} from 'lucide-react';
 import { INNOVATIVE_MICRO_SAAS_SERVICES_2025 } from '../data/innovativeMicroSaasServices2025';
 
 interface ServiceContact {
@@ -410,7 +409,6 @@ interface ServiceContact {
   email: string;
   address: string;
   website: string;
-}
 
 const ComprehensiveServicesShowcase2025: React.FC = () => {
   const [activeCategory, setActiveCategory] = useState('all');
@@ -471,7 +469,7 @@ const ComprehensiveServicesShowcase2025: React.FC = () => {
         return a.category.localeCompare(b.category);
       default:
         return 0;
-    }
+
   });
 
   const handleServiceClick = (service: any) => {
@@ -488,8 +486,8 @@ const ComprehensiveServicesShowcase2025: React.FC = () => {
       opacity: 1,
       transition: {
         staggerChildren: 0.1
-      }
-    }
+
+
   };
 
   const itemVariants = {
@@ -500,8 +498,8 @@ const ComprehensiveServicesShowcase2025: React.FC = () => {
       transition: {
         duration: 0.5,
         ease: "easeOut"
-      }
-    }
+
+
   };
 
   const getCategoryIcon = (category: string) => {
@@ -518,7 +516,7 @@ const ComprehensiveServicesShowcase2025: React.FC = () => {
       case 'Edge Computing': return <Network className="w-5 h-5" />;
       case 'Cybersecurity': return <Shield className="w-5 h-5" />;
       default: return <Zap className="w-5 h-5" />;
-    }
+
   };
 
   const getInnovationIcon = (level: string) => {
@@ -527,7 +525,7 @@ const ComprehensiveServicesShowcase2025: React.FC = () => {
       case 'Cutting-edge': return <Zap className="w-4 h-4 text-blue-500" />;
       case 'Revolutionary': return <Crown className="w-4 h-4 text-purple-500" />;
       default: return <Star className="w-4 h-4 text-gray-400" />;
-    }
+
   };
 
   return (
@@ -546,7 +544,7 @@ const ComprehensiveServicesShowcase2025: React.FC = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-          >
+
             <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-zion-cyan via-zion-purple to-zion-pink bg-clip-text text-transparent mb-6">
               Comprehensive Services 2025
             </h1>
@@ -576,7 +574,7 @@ const ComprehensiveServicesShowcase2025: React.FC = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
             className="bg-zion-slate-800/50 backdrop-blur-sm border border-zion-slate-700 rounded-2xl p-6"
-          >
+
             {/* Search Bar */}
             <div className="relative mb-6">
               <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-zion-slate-400 w-5 h-5" />
@@ -597,7 +595,7 @@ const ComprehensiveServicesShowcase2025: React.FC = () => {
                   value={activeCategory}
                   onChange={(e) => setActiveCategory(e.target.value)}
                   className="w-full bg-zion-slate-900/50 border border-zion-slate-600 rounded-xl px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-zion-cyan/50 focus:border-zion-cyan appearance-none"
-                >
+
                   {categories.map((category) => (
                     <option key={category.id} value={category.id}>
                       {category.icon} {category.name} ({category.count})
@@ -613,7 +611,7 @@ const ComprehensiveServicesShowcase2025: React.FC = () => {
                   value={innovationLevel}
                   onChange={(e) => setInnovationLevel(e.target.value)}
                   className="w-full bg-zion-slate-900/50 border border-zion-slate-600 rounded-xl px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-zion-cyan/50 focus:border-zion-cyan appearance-none"
-                >
+
                   {innovationLevels.map((level) => (
                     <option key={level.id} value={level.id}>
                       {level.icon} {level.name}
@@ -629,7 +627,7 @@ const ComprehensiveServicesShowcase2025: React.FC = () => {
                   value={sortBy}
                   onChange={(e) => setSortBy(e.target.value)}
                   className="w-full bg-zion-slate-900/50 border border-zion-slate-600 rounded-xl px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-zion-cyan/50 focus:border-zion-cyan appearance-none"
-                >
+
                   <option value="name">Sort by Name</option>
                   <option value="price">Sort by Price</option>
                   <option value="innovation">Sort by Innovation</option>
@@ -647,7 +645,7 @@ const ComprehensiveServicesShowcase2025: React.FC = () => {
                       ? 'bg-zion-cyan text-white'
                       : 'text-zion-slate-400 hover:text-white'
                   }`}
-                >
+
                   <Grid className="w-4 h-4 mx-auto" />
                 </button>
                 <button
@@ -657,7 +655,7 @@ const ComprehensiveServicesShowcase2025: React.FC = () => {
                       ? 'bg-zion-cyan text-white'
                       : 'text-zion-slate-400 hover:text-white'
                   }`}
-                >
+
                   <List className="w-4 h-4 mx-auto" />
                 </button>
               </div>
@@ -709,8 +707,7 @@ const ComprehensiveServicesShowcase2025: React.FC = () => {
             className={viewMode === 'grid'
               ? 'grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'
               : 'space-y-4'
-            }
-          >
+
             {sortedServices.map((service) => (
               <motion.div
                 key={service.id}
@@ -719,7 +716,7 @@ const ComprehensiveServicesShowcase2025: React.FC = () => {
                   viewMode === 'list' ? 'flex items-center gap-6' : ''
                 }`}
                 onClick={() => handleServiceClick(service)}
-              >
+
                 {viewMode === 'grid' ? (
                   // Grid View
                   <>
@@ -748,7 +745,7 @@ const ComprehensiveServicesShowcase2025: React.FC = () => {
                         <span
                           key={index}
                           className="px-2 py-1 bg-zion-slate-700/50 text-zion-slate-300 text-xs rounded-lg"
-                        >
+
                           {tag}
                         </span>
                       ))}
@@ -806,7 +803,7 @@ const ComprehensiveServicesShowcase2025: React.FC = () => {
                           <span
                             key={index}
                             className="px-2 py-1 bg-zion-slate-700/50 text-zion-slate-300 text-xs rounded-lg"
-                          >
+
                             {tag}
                           </span>
                         ))}
@@ -835,7 +832,7 @@ const ComprehensiveServicesShowcase2025: React.FC = () => {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               className="text-center py-20"
-            >
+
               <div className="text-6xl mb-4">🔍</div>
               <h3 className="text-2xl font-semibold text-white mb-2">No services found</h3>
               <p className="text-zion-slate-400 mb-6">
@@ -849,7 +846,7 @@ const ComprehensiveServicesShowcase2025: React.FC = () => {
                   setInnovationLevel('all');
                 }}
                 className="bg-zion-cyan text-white px-6 py-3 rounded-xl font-medium hover:bg-zion-cyan/90 transition-colors"
-              >
+
                 Clear All Filters
               </button>
             </motion.div>
@@ -866,14 +863,14 @@ const ComprehensiveServicesShowcase2025: React.FC = () => {
             exit={{ opacity: 0 }}
             className="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-4"
             onClick={closeModal}
-          >
+
             <motion.div
               initial={{ scale: 0.9, opacity: 0 }}
               animate={{ scale: 1, opacity: 1 }}
               exit={{ scale: 0.9, opacity: 0 }}
               className="bg-zion-slate-900 border border-zion-slate-700 rounded-2xl max-w-4xl w-full max-h-[90vh] overflow-y-auto"
               onClick={(e) => e.stopPropagation()}
-            >
+
               <div className="p-8">
                 {/* Header */}
                 <div className="flex items-start justify-between mb-6">
@@ -892,7 +889,7 @@ const ComprehensiveServicesShowcase2025: React.FC = () => {
                   <button
                     onClick={closeModal}
                     className="text-zion-slate-400 hover:text-white transition-colors"
-                  >
+
                     <X className="w-6 h-6" />
                   </button>
                 </div>
@@ -1042,6 +1039,6 @@ const ComprehensiveServicesShowcase2025: React.FC = () => {
       </AnimatePresence>
     </div>
   );
-};
+</div></div></div></div></div></div></div>};
 
-export default ComprehensiveServicesShowcase2025;
+export default ComprehensiveServicesShowcase2025;}}}}}}}}}}

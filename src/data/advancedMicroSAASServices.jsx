@@ -745,5 +745,6 @@ export const ADVANCED_MICRO_SAAS_SERVICES = [
         dataRetention: "Research data retention with quantum security",
         sla: "99.9% quantum system uptime",
         uptime: "99.95%"
-    }
+
 ];
+}

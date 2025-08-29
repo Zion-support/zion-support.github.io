@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
-import { Search, Zap, Cloud, Shield, Server, Code, GitBranch, Phone, Mail, MapPin } from 'lucide-react';
-const CloudDevOpsServices = () => {
+import { Search, Zap, Cloud, Shield, Server, Code, GitBranch, Phone, Mail, MapPin const CloudDevOpsServices = () => {
     const [searchTerm, setSearchTerm] = useState('');
     const [selectedCategory, setSelectedCategory] = useState('all');
     const [selectedPricing, setSelectedPricing] = useState('all');
@@ -131,7 +130,7 @@ const CloudDevOpsServices = () => {
             },
             deliveryTime: "8-12 weeks",
             support: "24/7 security support"
-        }
+
     ];
     const categories = ['all', 'Cloud Management', 'Container Orchestration', 'DevOps Automation', 'Serverless', 'Infrastructure', 'Security'];
     const pricingOptions = ['all', 'Enterprise', 'Professional', 'Standard'];
@@ -152,7 +151,7 @@ const CloudDevOpsServices = () => {
             case 'Infrastructure': return <Server className="w-6 h-6"/>;
             case 'Security': return <Shield className="w-6 h-6"/>;
             default: return <Code className="w-6 h-6"/>;
-        }
+
     };
     const getPricingColor = (pricing) => {
         switch (pricing) {
@@ -160,7 +159,7 @@ const CloudDevOpsServices = () => {
             case 'Professional': return 'text-blue-400';
             case 'Standard': return 'text-green-400';
             default: return 'text-gray-400';
-        }
+
     };
     return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
       <div className="container mx-auto px-4 py-8">
@@ -286,3 +285,4 @@ const CloudDevOpsServices = () => {
     </div>);
 };
 export default CloudDevOpsServices;
+}}}}

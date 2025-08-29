@@ -38,7 +38,7 @@ export interface Revolutionary2026EmergingTechService {
   customers: number;
   rating: number;
   reviews: number;
-}
+
 export const revolutionary2026EmergingTechServices: Revolutionary2026EmergingTechService[] = [
   // Holographic Metaverse Development Platform
   {
@@ -299,5 +299,5 @@ export const revolutionary2026EmergingTechServices: Revolutionary2026EmergingTec
     customers: 45,
     rating: 4.9,
     reviews: 34
-  }
-];
+
+];}}

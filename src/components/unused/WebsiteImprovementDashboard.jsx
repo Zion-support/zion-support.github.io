@@ -23,7 +23,7 @@ const WebsiteImprovementDashboard = ({ className = '', showOnLoad = false }) => 
             canonical: false,
             ogTags: false,
             twitterTags: false
-        }
+
     });
     const [accessibilityReport, setAccessibilityReport] = useState({
         score: 0,
@@ -74,7 +74,7 @@ const WebsiteImprovementDashboard = ({ className = '', showOnLoad = false }) => 
                 canonical: true,
                 ogTags: Math.random() > 0.2,
                 twitterTags: Math.random() > 0.4
-            }
+
         };
         setSeoAnalysis(mockSEO);
         setIsAnalyzing(false);
@@ -125,7 +125,7 @@ const WebsiteImprovementDashboard = ({ className = '', showOnLoad = false }) => 
     useEffect(() => {
         if (showOnLoad) {
             runFullAnalysis();
-        }
+
     }, [showOnLoad, runFullAnalysis]);
     return (<>
       {/* Dashboard Toggle Button */}
@@ -266,7 +266,7 @@ const WebsiteImprovementDashboard = ({ className = '', showOnLoad = false }) => 
                         value: metrics.firstInputDelay,
                         unit: 'ms',
                         thresholds: { good: 100, needsImprovement: 300 }
-                    }
+
                 ].map((metric, index) => {
                     const grade = getPerformanceGrade(metric.value, metric.thresholds);
                     return (<div key={index} className="flex items-center justify-between p-3 bg-gray-50 dark:bg-gray-800 rounded-lg">
@@ -423,7 +423,7 @@ const WebsiteImprovementDashboard = ({ className = '', showOnLoad = false }) => 
                         description: 'Add alt text and compress images',
                         impact: 'Medium',
                         effort: 'Low'
-                    }
+
                 ].map((action, index) => (<div key={index} className="p-3 border border-gray-200 dark:border-gray-700 rounded-lg">
                         <div className="flex items-start justify-between mb-2">
                           <span className={`text-xs px-2 py-1 rounded font-medium ${action.priority === 'High'
@@ -467,5 +467,6 @@ const WebsiteImprovementDashboard = ({ className = '', showOnLoad = false }) => 
           </motion.div>)}
       </AnimatePresence>
     </>);
-};
+</div>};
 export default WebsiteImprovementDashboard;
+}}}}}

@@ -6,7 +6,7 @@ interface ResponsiveState {
   isMobile: boolean;
   isTablet: boolean;
   isDesktop: boolean;
-}
+
 const useResponsive = (): ResponsiveState => {
   const [state, setState] = useState<ResponsiveState>({
     screenWidth: 1920,
@@ -35,3 +35,4 @@ const useResponsive = (): ResponsiveState => {
   return state;
 };
 export default useResponsive;
+}

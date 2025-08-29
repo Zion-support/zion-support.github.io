@@ -28,8 +28,6 @@ import {
   Infinity,
   CpuIcon,
   CircuitBoard
-} from 'lucide-react';
-
 export default function QuantumAIPlatform() {
   const features = [
     {
@@ -75,7 +73,7 @@ export default function QuantumAIPlatform() {
         "Material property prediction",
         "Drug discovery acceleration"
       ]
-    }
+
   ];
 
   const pricingPlans = [
@@ -130,7 +128,7 @@ export default function QuantumAIPlatform() {
       ],
       cta: "Contact Sales",
       popular: false
-    }
+
   ];
 
   const useCases = [
@@ -169,7 +167,7 @@ export default function QuantumAIPlatform() {
         "Resource allocation",
         "Climate modeling"
       ]
-    }
+
   ];
 
   const quantumAdvantages = [
@@ -196,7 +194,7 @@ export default function QuantumAIPlatform() {
       description: "Leverage quantum correlations for secure communication",
       icon: Network,
       metric: "100%"
-    }
+
   ];
 
   return (
@@ -214,7 +212,7 @@ export default function QuantumAIPlatform() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="text-center"
-          >
+
             <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-blue-600 to-cyan-600 text-white text-sm font-medium mb-6">
               <Atom className="w-4 h-4 mr-2" />
               Next-Generation Quantum Technology
@@ -234,14 +232,14 @@ export default function QuantumAIPlatform() {
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 className="px-8 py-4 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-cyan-700 transition-all duration-300"
-              >
+
                 Start Free Trial
               </motion.button>
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 className="px-8 py-4 border-2 border-blue-600 text-blue-400 font-semibold rounded-lg hover:bg-blue-600 hover:text-white transition-all duration-300"
-              >
+
                 Schedule Demo
               </motion.button>
             </div>
@@ -261,7 +259,7 @@ export default function QuantumAIPlatform() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
-          >
+
             <h2 className="text-4xl font-bold text-white mb-4">
               Quantum Computing Advantages
             </h2>
@@ -279,7 +277,7 @@ export default function QuantumAIPlatform() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
                 className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700 hover:border-blue-500 transition-all duration-300 text-center"
-              >
+
                 <div className="p-3 bg-gradient-to-r from-blue-600 to-cyan-600 rounded-lg mx-auto mb-4 w-fit">
                   <advantage.icon className="w-8 h-8 text-white" />
                 </div>
@@ -301,7 +299,7 @@ export default function QuantumAIPlatform() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
-          >
+
             <h2 className="text-4xl font-bold text-white mb-4">
               Revolutionary Quantum Capabilities
             </h2>
@@ -319,7 +317,7 @@ export default function QuantumAIPlatform() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
                 className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-8 border border-slate-700 hover:border-blue-500 transition-all duration-300"
-              >
+
                 <div className="flex items-center mb-4">
                   <div className="p-3 bg-gradient-to-r from-blue-600 to-cyan-600 rounded-lg mr-4">
                     <feature.icon className="w-6 h-6 text-white" />
@@ -351,7 +349,7 @@ export default function QuantumAIPlatform() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
-          >
+
             <h2 className="text-4xl font-bold text-white mb-4">
               Quantum Computing Pricing
             </h2>
@@ -373,7 +371,7 @@ export default function QuantumAIPlatform() {
                     ? 'border-blue-500 ring-2 ring-blue-500/20'
                     : 'border-slate-700'
                 }`}
-              >
+
                 {plan.popular && (
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                     <span className="bg-gradient-to-r from-blue-600 to-cyan-600 text-white px-4 py-2 rounded-full text-sm font-semibold">
@@ -408,7 +406,7 @@ export default function QuantumAIPlatform() {
                       ? 'bg-gradient-to-r from-blue-600 to-cyan-600 text-white hover:from-blue-700 hover:to-cyan-700'
                       : 'bg-slate-700 text-white hover:bg-slate-600'
                   }`}
-                >
+
                   {plan.cta}
                 </motion.button>
               </motion.div>
@@ -425,7 +423,7 @@ export default function QuantumAIPlatform() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
-          >
+
             <h2 className="text-4xl font-bold text-white mb-4">
               Industry Applications
             </h2>
@@ -443,7 +441,7 @@ export default function QuantumAIPlatform() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
                 className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700 hover:border-blue-500 transition-all duration-300"
-              >
+
                 <h3 className="text-xl font-semibold text-white mb-4">{useCase.industry}</h3>
                 <ul className="space-y-2">
                   {useCase.applications.map((application, appIndex) => (
@@ -466,7 +464,7 @@ export default function QuantumAIPlatform() {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-          >
+
             <h2 className="text-4xl font-bold text-white mb-6">
               Ready for the Quantum Revolution?
             </h2>
@@ -480,14 +478,14 @@ export default function QuantumAIPlatform() {
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 className="px-8 py-4 bg-white text-blue-600 font-semibold rounded-lg hover:bg-gray-100 transition-all duration-300"
-              >
+
                 Start Free Trial
               </motion.button>
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 className="px-8 py-4 border-2 border-white text-white font-semibold rounded-lg hover:bg-white hover:text-blue-600 transition-all duration-300"
-              >
+
                 Contact Quantum Experts
               </motion.button>
             </div>
@@ -496,4 +494,4 @@ export default function QuantumAIPlatform() {
       </section>
     </div>
   );
-}
+}}}}}}

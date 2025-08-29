@@ -1,8 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import { FlaskConical, Lightbulb, Users, Award, ArrowRight, BookOpen, Microscope, Rocket } from 'lucide-react'
-
-export default function ResearchDevelopment() {
+import { FlaskConical, Lightbulb, Users, Award, ArrowRight, BookOpen, Microscope, Rocket export default function ResearchDevelopment() {
 	const researchAreas = [
 		{
 			title: 'AI & Machine Learning',
@@ -24,7 +22,7 @@ export default function ResearchDevelopment() {
 			projects: ['Edge AI deployment', '5G integration', 'Autonomous edge systems'],
 			icon: Rocket,
 			color: 'green'
-		}
+
 	]
 
 	const currentProjects = [
@@ -51,7 +49,7 @@ export default function ResearchDevelopment() {
 			progress: 90,
 			team: 6,
 			timeline: 'Q1 2025'
-		}
+
 	]
 
 	const publications = [
@@ -75,7 +73,7 @@ export default function ResearchDevelopment() {
 			journal: 'Computer Networks',
 			year: '2024',
 			doi: '10.1016/j.comnet.2024.109876'
-		}
+
 	]
 
 	return (
@@ -127,7 +125,7 @@ export default function ResearchDevelopment() {
 								blue: 'bg-blue-100 text-blue-600',
 								green: 'bg-green-100 text-green-600',
 								purple: 'bg-purple-100 text-purple-600'
-							}
+
 							return (
 								<div key={index} className="bg-white rounded-2xl p-8 shadow-sm hover:shadow-lg transition-shadow">
 									<div className={`mx-auto flex h-16 w-16 items-center justify-center rounded-full ${colorClasses[area.color]} mb-6`}>
@@ -235,7 +233,7 @@ export default function ResearchDevelopment() {
 									<Link
 										to={`/research/${pub.doi}`}
 										className="inline-flex items-center text-blue-600 hover:text-blue-700 font-medium"
-									>
+
 										Read Paper
 										<ArrowRight className="ml-2 h-4 w-4" />
 									</Link>
@@ -264,7 +262,7 @@ export default function ResearchDevelopment() {
 							<Link
 								to="/contact"
 								className="inline-flex items-center text-blue-600 hover:text-blue-700 font-medium"
-							>
+
 								Learn More
 								<ArrowRight className="ml-2 h-4 w-4" />
 							</Link>
@@ -277,7 +275,7 @@ export default function ResearchDevelopment() {
 							<Link
 								to="/contact"
 								className="inline-flex items-center text-blue-600 hover:text-blue-700 font-medium"
-							>
+
 								Get Started
 								<ArrowRight className="ml-2 h-4 w-4" />
 							</Link>
@@ -299,13 +297,13 @@ export default function ResearchDevelopment() {
 						<Link
 							to="/contact"
 							className="rounded-md bg-white px-6 py-3 text-sm font-semibold text-blue-600 shadow-sm hover:bg-gray-50 transition-colors"
-						>
+
 							Contact Us
 						</Link>
 						<Link
 							to="/careers"
 							className="text-sm font-semibold leading-6 text-white hover:text-blue-100 transition-colors"
-						>
+
 							Join Our Team <span aria-hidden="true">→</span>
 						</Link>
 					</div>
@@ -313,4 +311,4 @@ export default function ResearchDevelopment() {
 			</section>
 		</>
 	)
-}
+}}}}}}

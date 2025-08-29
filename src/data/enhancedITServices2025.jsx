@@ -549,6 +549,7 @@ export const enhancedITServices2025 = [
         backupSolutions: true,
         monitoringTools: true,
         reportingCapabilities: true
-    }
+
 ];
 export default enhancedITServices2025;
+}

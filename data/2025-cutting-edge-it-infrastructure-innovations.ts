@@ -38,7 +38,7 @@ export interface CuttingEdgeITInfrastructureInnovation2025 {
   customers: number;
   rating: number;
   reviews: number;
-}
+
 export const cuttingEdgeITInfrastructureInnovations2025 = [
   // Quantum-Safe Cloud Infrastructure Platform
   {
@@ -259,5 +259,5 @@ export const cuttingEdgeITInfrastructureInnovations2025 = [
     address: '364 E Main St STE 1008 Middletown DE 19709',
     website: 'https://ziontechgroup.com',
     slug: '/autonomous-data-center-management-platform'
-  }
-];
+
+];}}

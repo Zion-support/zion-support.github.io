@@ -22,7 +22,6 @@ const ComprehensivePricingGuide2030: React.FC = () => {
       case 'ai':
         services = comprehensiveAIServices2030;
         break;
-    }
 
     // Filter by price range
     services = services.filter(service => {
@@ -30,13 +29,12 @@ const ComprehensivePricingGuide2030: React.FC = () => {
         return service.hourlyRate >= priceRange[0] && service.hourlyRate <= priceRange[1];
       } else {
         return service.price >= priceRange[0] && service.price <= priceRange[1];
-      }
+
     });
 
     // Filter by category
     if (selectedCategory !== 'all') {
       services = services.filter(service => service.category === selectedCategory);
-    }
 
     return services;
   };
@@ -54,7 +52,6 @@ const ComprehensivePricingGuide2030: React.FC = () => {
       case 'ai':
         services = comprehensiveAIServices2030;
         break;
-    }
 
     const categories = [...new Set(services.map(service => service.category))];
     return categories;
@@ -73,7 +70,6 @@ const ComprehensivePricingGuide2030: React.FC = () => {
       case 'ai':
         services = comprehensiveAIServices2030;
         break;
-    }
 
     if (activeTab === 'it') {
       const min = Math.min(...services.map(s => s.hourlyRate));
@@ -83,7 +79,7 @@ const ComprehensivePricingGuide2030: React.FC = () => {
       const min = Math.min(...services.map(s => s.price));
       const max = Math.max(...services.map(s => s.price));
       return [min, max];
-    }
+
   };
 
   const renderPricingCard = (service: any) => {
@@ -149,13 +145,13 @@ const ComprehensivePricingGuide2030: React.FC = () => {
                 <a
                   href={`tel:${service.contactInfo.phone}`}
                   className="w-full px-4 py-2 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-300 text-center"
-                >
+
                   Call: {service.contactInfo.phone}
                 </a>
                 <a
                   href={`mailto:${service.contactInfo.email}`}
                   className="w-full px-4 py-2 border border-blue-600 text-blue-600 rounded-lg hover:bg-blue-50 transition-colors text-center"
-                >
+
                   Email: {service.contactInfo.email}
                 </a>
               </div>
@@ -233,13 +229,13 @@ const ComprehensivePricingGuide2030: React.FC = () => {
                 <a
                   href={`tel:${service.contactInfo.phone}`}
                   className="w-full px-4 py-2 bg-gradient-to-r from-green-600 to-blue-600 text-white rounded-lg hover:from-green-700 hover:to-blue-700 transition-all duration-300 text-center"
-                >
+
                   Call: {service.contactInfo.phone}
                 </a>
                 <a
                   href={`mailto:${service.contactInfo.email}`}
                   className="w-full px-4 py-2 border border-green-600 text-green-600 rounded-lg hover:bg-green-50 transition-colors text-center"
-                >
+
                   Email: {service.contactInfo.email}
                 </a>
               </div>
@@ -317,13 +313,13 @@ const ComprehensivePricingGuide2030: React.FC = () => {
                 <a
                   href={`tel:${service.contactInfo.phone}`}
                   className="w-full px-4 py-2 bg-gradient-to-r from-purple-600 to-pink-600 text-white rounded-lg hover:from-purple-700 hover:to-pink-700 transition-all duration-300 text-center"
-                >
+
                   Call: {service.contactInfo.phone}
                 </a>
                 <a
                   href={`mailto:${service.contactInfo.email}`}
                   className="w-full px-4 py-2 border border-purple-600 text-purple-600 rounded-lg hover:bg-purple-50 transition-colors text-center"
-                >
+
                   Email: {service.contactInfo.email}
                 </a>
               </div>
@@ -331,7 +327,7 @@ const ComprehensivePricingGuide2030: React.FC = () => {
           </div>
         </div>
       );
-    }
+
   };
 
   const priceRangeData = getPriceRange();
@@ -415,7 +411,7 @@ const ComprehensivePricingGuide2030: React.FC = () => {
                     ? 'bg-gradient-to-r from-blue-600 to-purple-600 text-white shadow-lg'
                     : 'bg-white text-gray-700 hover:bg-gray-50 border border-gray-200'
                 }`}
-              >
+
                 Micro SAAS Services ({innovativeMicroSaasServices2030.length})
               </button>
               <button
@@ -425,7 +421,7 @@ const ComprehensivePricingGuide2030: React.FC = () => {
                     ? 'bg-gradient-to-r from-green-600 to-blue-600 text-white shadow-lg'
                     : 'bg-white text-gray-700 hover:bg-gray-50 border border-gray-200'
                 }`}
-              >
+
                 IT Services ({comprehensiveITServices2030.length})
               </button>
               <button
@@ -435,7 +431,7 @@ const ComprehensivePricingGuide2030: React.FC = () => {
                     ? 'bg-gradient-to-r from-purple-600 to-pink-600 text-white shadow-lg'
                     : 'bg-white text-gray-700 hover:bg-gray-50 border border-gray-200'
                 }`}
-              >
+
                 AI Services ({comprehensiveAIServices2030.length})
               </button>
             </div>
@@ -483,7 +479,7 @@ const ComprehensivePricingGuide2030: React.FC = () => {
                     value={selectedCategory}
                     onChange={(e) => setSelectedCategory(e.target.value)}
                     className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                  >
+
                     <option value="all">All Categories</option>
                     {getCategories().map((category) => (
                       <option key={category} value={category}>{category}</option>
@@ -499,7 +495,7 @@ const ComprehensivePricingGuide2030: React.FC = () => {
                     setSelectedCategory('all');
                   }}
                   className="px-4 py-2 bg-gray-600 text-white rounded-lg hover:bg-gray-700 transition-colors"
-                >
+
                   Reset Filters
                 </button>
               </div>
@@ -548,7 +544,7 @@ const ComprehensivePricingGuide2030: React.FC = () => {
                   setSelectedCategory('all');
                 }}
                 className="px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
-              >
+
                 Clear Filters
               </button>
             </div>
@@ -607,13 +603,13 @@ const ComprehensivePricingGuide2030: React.FC = () => {
               <a
                 href="tel:+13024640950"
                 className="px-8 py-3 bg-white text-blue-600 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
-              >
+
                 Call Now: +1 302 464 0950
               </a>
               <a
                 href="mailto:kleber@ziontechgroup.com"
                 className="px-8 py-3 border-2 border-white text-white rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors"
-              >
+
                 Email Us
               </a>
             </div>
@@ -624,4 +620,4 @@ const ComprehensivePricingGuide2030: React.FC = () => {
   );
 };
 
-export default ComprehensivePricingGuide2030;
+export default ComprehensivePricingGuide2030;}}}}}}}

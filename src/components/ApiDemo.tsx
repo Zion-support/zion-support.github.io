@@ -6,7 +6,6 @@ interface User {
   name: string;
   email: string;
   createdAt?: string;
-}
 
 const ApiDemo: React.FC = () => {
   const [users, setUsers] = useState<User[]>([]);
@@ -27,7 +26,7 @@ const ApiDemo: React.FC = () => {
       setHealthStatus(`✅ API Healthy - ${response.data?.environment} mode`);
     } catch (err) {
       setHealthStatus('❌ API Unhealthy');
-    }
+
   };
 
   const fetchUsers = async () => {
@@ -38,12 +37,12 @@ const ApiDemo: React.FC = () => {
       const response = await api.getUsers();
       if (response.success && response.data) {
         setUsers(response.data);
-      }
+
     } catch (err) {
       setError(err instanceof Error ? err.message : 'Failed to fetch users');
     } finally {
       setLoading(false);
-    }
+
   };
 
   const handleCreateUser = async (e: React.FormEvent) => {
@@ -52,7 +51,6 @@ const ApiDemo: React.FC = () => {
     if (!newUser.name.trim() || !newUser.email.trim()) {
       setError('Name and email are required');
       return;
-    }
 
     setLoading(true);
     setError(null);
@@ -62,12 +60,12 @@ const ApiDemo: React.FC = () => {
       if (response.success && response.data) {
         setUsers(prev => [...prev, response.data!]);
         setNewUser({ name: '', email: '' });
-      }
+
     } catch (err) {
       setError(err instanceof Error ? err.message : 'Failed to create user');
     } finally {
       setLoading(false);
-    }
+
   };
 
   return (
@@ -109,7 +107,7 @@ const ApiDemo: React.FC = () => {
               type="submit"
               disabled={loading}
               className="px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 disabled:opacity-50 disabled:cursor-not-allowed"
-            >
+
               {loading ? 'Creating...' : 'Create User'}
             </button>
           </form>
@@ -130,7 +128,7 @@ const ApiDemo: React.FC = () => {
               onClick={fetchUsers}
               disabled={loading}
               className="px-3 py-1 text-sm bg-gray-600 text-white rounded-md hover:bg-gray-700 disabled:opacity-50"
-            >
+
               {loading ? 'Loading...' : 'Refresh'}
             </button>
           </div>
@@ -179,4 +177,4 @@ const ApiDemo: React.FC = () => {
   );
 };
 
-export default ApiDemo;
+export default ApiDemo;}}}}}}}

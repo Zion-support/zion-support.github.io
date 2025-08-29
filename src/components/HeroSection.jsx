@@ -3,8 +3,7 @@ import { GradientHeading } from "@/components/GradientHeading";
 import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { motion, useScroll, useTransform } from "framer-motion";
-import { ArrowRight, Sparkles, Zap, Users, Star, TrendingUp, Shield } from "lucide-react";
-import { useRef } from "react";
+import { ArrowRight, Sparkles, Zap, Users, Star, TrendingUp, Shield import { useRef } from "react";
 export function HeroSection() {
     const { t } = useTranslation();
     const containerRef = useRef(null);
@@ -21,8 +20,8 @@ export function HeroSection() {
             transition: {
                 staggerChildren: 0.2,
                 delayChildren: 0.1
-            }
-        }
+
+
     };
     const itemVariants = {
         hidden: { y: 30, opacity: 0 },
@@ -32,8 +31,8 @@ export function HeroSection() {
             transition: {
                 duration: 0.8,
                 ease: "easeOut"
-            }
-        }
+
+
     };
     const floatingVariants = {
         animate: {
@@ -43,8 +42,8 @@ export function HeroSection() {
                 duration: 4,
                 repeat: Infinity,
                 ease: "easeInOut"
-            }
-        }
+
+
     };
     const pulseVariants = {
         animate: {
@@ -54,8 +53,8 @@ export function HeroSection() {
                 duration: 2,
                 repeat: Infinity,
                 ease: "easeInOut"
-            }
-        }
+
+
     };
     return (<section ref={containerRef} className="relative overflow-hidden py-20 md:py-32 min-h-screen flex items-center">
       {/* Enhanced background with parallax effect */}
@@ -170,4 +169,4 @@ export function HeroSection() {
       </motion.div>
     </section>
   );
-}
+}}}}}}}}}</motion.div></motion.div></motion.div></motion.div></motion.div></motion.div></motion.div></motion.div></motion.div></motion.div></motion.div></motion.div></motion.div></motion.div></motion.div>}

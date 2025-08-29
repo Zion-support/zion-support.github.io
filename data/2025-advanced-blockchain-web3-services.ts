@@ -37,7 +37,7 @@ export interface AdvancedBlockchainWeb3Service {
   customers: number;
   rating: number;
   reviews: number;
-}
+
 const contact = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
@@ -314,5 +314,5 @@ export const advancedBlockchainWeb3Services2025: AdvancedBlockchainWeb3Service[]
     customers: 18,
     rating: 4.7,
     reviews: 35
-  }
-];
+
+];}}

@@ -1,8 +1,6 @@
 import React, { useState, useEffect, createContext, useContext } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { X, CheckCircle, AlertCircle, Info, AlertTriangle, Bell } from 'lucide-react';
-
-export type NotificationType = 'success' | 'error' | 'warning' | 'info';
+import { X, CheckCircle, AlertCircle, Info, AlertTriangle, Bell export type NotificationType = 'success' | 'error' | 'warning' | 'info';
 
 export interface Notification {
   id: string;
@@ -14,14 +12,12 @@ export interface Notification {
     label: string;
     onClick: () => void;
   };
-}
 
 interface NotificationContextType {
   notifications: Notification[];
   addNotification: (notification: Omit<Notification, 'id'>) => void;
   removeNotification: (id: string) => void;
   clearAll: () => void;
-}
 
 const NotificationContext = createContext<NotificationContextType | undefined>(undefined);
 
@@ -29,13 +25,12 @@ export const useNotifications = () => {
   const context = useContext(NotificationContext);
   if (!context) {
     throw new Error('useNotifications must be used within a NotificationProvider');
-  }
+
   return context;
 };
 
 interface NotificationProviderProps {
   children: React.ReactNode;
-}
 
 export const NotificationProvider: React.FC<NotificationProviderProps> = ({ children }) => {
   const [notifications, setNotifications] = useState<Notification[]>([]);
@@ -50,7 +45,7 @@ export const NotificationProvider: React.FC<NotificationProviderProps> = ({ chil
       setTimeout(() => {
         removeNotification(id);
       }, notification.duration || 5000);
-    }
+
   };
 
   const removeNotification = (id: string) => {
@@ -90,7 +85,7 @@ const NotificationContainer: React.FC = () => {
               stiffness: 200
             }}
             className="relative"
-          >
+
             <NotificationItem notification={notification} onRemove={removeNotification} />
           </motion.div>
         ))}
@@ -102,7 +97,7 @@ const NotificationContainer: React.FC = () => {
           animate={{ opacity: 1, y: 0 }}
           onClick={clearAll}
           className="w-full px-4 py-2 bg-zion-slate-dark/80 backdrop-blur-sm border border-white/20 rounded-lg text-white text-sm hover:bg-zion-slate-dark transition-colors duration-200 flex items-center justify-center space-x-2"
-        >
+
           <Bell className="w-4 h-4" />
           <span>Clear All</span>
         </motion.button>
@@ -114,7 +109,6 @@ const NotificationContainer: React.FC = () => {
 interface NotificationItemProps {
   notification: Notification;
   onRemove: (id: string) => void;
-}
 
 const NotificationItem: React.FC<NotificationItemProps> = ({ notification, onRemove }) => {
   const getIcon = (type: NotificationType) => {
@@ -127,7 +121,7 @@ const NotificationItem: React.FC<NotificationItemProps> = ({ notification, onRem
         return <AlertTriangle className="w-5 h-5 text-yellow-400" />;
       case 'info':
         return <Info className="w-5 h-5 text-blue-400" />;
-    }
+
   };
 
   const getBorderColor = (type: NotificationType) => {
@@ -140,7 +134,7 @@ const NotificationItem: React.FC<NotificationItemProps> = ({ notification, onRem
         return 'border-yellow-500/30';
       case 'info':
         return 'border-blue-500/30';
-    }
+
   };
 
   const getBackgroundColor = (type: NotificationType) => {
@@ -153,14 +147,14 @@ const NotificationItem: React.FC<NotificationItemProps> = ({ notification, onRem
         return 'bg-yellow-500/10';
       case 'info':
         return 'bg-blue-500/10';
-    }
+
   };
 
   return (
     <motion.div
       layout
       className={`p-4 rounded-lg border backdrop-blur-sm ${getBorderColor(notification.type)} ${getBackgroundColor(notification.type)} bg-white/5`}
-    >
+
       <div className="flex items-start space-x-3">
         <div className="flex-shrink-0 mt-0.5">
           {getIcon(notification.type)}
@@ -178,7 +172,7 @@ const NotificationItem: React.FC<NotificationItemProps> = ({ notification, onRem
             <button
               onClick={notification.action.onClick}
               className="mt-2 text-xs font-medium text-zion-cyan hover:text-zion-cyan/80 transition-colors duration-200"
-            >
+
               {notification.action.label}
             </button>
           )}
@@ -187,7 +181,7 @@ const NotificationItem: React.FC<NotificationItemProps> = ({ notification, onRem
         <button
           onClick={() => onRemove(notification.id)}
           className="flex-shrink-0 text-gray-400 hover:text-white transition-colors duration-200"
-        >
+
           <X className="w-4 h-4" />
         </button>
       </div>
@@ -199,15 +193,15 @@ const NotificationItem: React.FC<NotificationItemProps> = ({ notification, onRem
 export const notify = {
   success: (title: string, message: string, options?: Partial<Notification>) => {
     // This would be used with the context
-    // console.log('Success notification:', { title, message, ...options });
+    // // // console.log('Success notification:', { title, message, ...options });
   },
   error: (title: string, message: string, options?: Partial<Notification>) => {
-    // console.log('Error notification:', { title, message, ...options });
+    // // // console.log('Error notification:', { title, message, ...options });
   },
   warning: (title: string, message: string, options?: Partial<Notification>) => {
-    // console.log('Warning notification:', { title, message, ...options });
+    // // // console.log('Warning notification:', { title, message, ...options });
   },
   info: (title: string, message: string, options?: Partial<Notification>) => {
-    // console.log('Info notification:', { title, message, ...options });
-  }
-};
+    // // // console.log('Info notification:', { title, message, ...options });
+
+};}}}}}}}}}}}

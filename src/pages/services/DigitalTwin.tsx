@@ -1,8 +1,7 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Eye, ArrowRight, CheckCircle, Cloud, Server, Database, Lock, Globe, Cpu, HardDrive, Network, Monitor } from 'lucide-react';
-import { SEO } from '@/components/SEO';
+import { Eye, ArrowRight, CheckCircle, Cloud, Server, Database, Lock, Globe, Cpu, HardDrive, Network, Monitor import { SEO } from '@/components/SEO';
 import { Link } from 'react-router-dom';
 
 export default function DigitalTwin() {
@@ -36,7 +35,7 @@ export default function DigitalTwin() {
       icon: Cpu,
       title: "Security & Compliance",
       description: "Enterprise-grade security with industry compliance standards"
-    }
+
   ];
 
   const useCases = [
@@ -57,7 +56,7 @@ export default function DigitalTwin() {
       title: "Healthcare",
       description: "Patient monitoring, medical device management, and facility optimization",
       benefits: ["Patient care", "Equipment tracking", "Resource optimization"]
-    }
+
   ];
 
   const technologies = [
@@ -118,7 +117,7 @@ export default function DigitalTwin() {
       ],
       cta: "Contact Sales",
       popular: false
-    }
+
   ];
 
   const benefits = [
@@ -141,7 +140,7 @@ export default function DigitalTwin() {
       icon: Globe,
       title: "Better Decision Making",
       description: "Make data-driven decisions with real-time insights and analytics"
-    }
+
   ];
 
   return (
@@ -162,7 +161,7 @@ export default function DigitalTwin() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               className="text-center max-w-4xl mx-auto"
-            >
+
               <div className="inline-flex items-center px-4 py-2 bg-cyan-500/20 border border-cyan-400/30 rounded-full text-cyan-300 text-sm font-medium mb-6">
                 <Eye className="w-4 h-4 mr-2" />
                 Digital Twin Technology
@@ -181,14 +180,14 @@ export default function DigitalTwin() {
                 <Link
                   to="/contact"
                   className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-600 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-cyan-500/25"
-                >
+
                   Get Started
                   <ArrowRight className="w-5 h-5 ml-2" />
                 </Link>
                 <Link
                   to="/services"
                   className="inline-flex items-center px-8 py-4 border border-cyan-400/30 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400/10 transition-all duration-300"
-                >
+
                   View All Services
                 </Link>
               </div>
@@ -205,7 +204,7 @@ export default function DigitalTwin() {
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
               className="text-center mb-16"
-            >
+
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
                 Why Choose Our Digital Twin Solutions?
               </h2>
@@ -224,7 +223,7 @@ export default function DigitalTwin() {
                   transition={{ duration: 0.6, delay: index * 0.1 }}
                   viewport={{ once: true }}
                   className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 hover:border-cyan-400/30 transition-all duration-300 group hover:scale-105"
-                >
+
                   <div className="w-12 h-12 bg-gradient-to-br from-cyan-500/20 to-blue-500/20 rounded-lg flex items-center justify-center mb-4 group-hover:from-cyan-500/40 group-hover:to-blue-500/40 transition-all duration-300">
                     <feature.icon className="w-6 h-6 text-cyan-400" />
                   </div>
@@ -245,7 +244,7 @@ export default function DigitalTwin() {
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
               className="text-center mb-16"
-            >
+
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
                 Industry Applications
               </h2>
@@ -264,7 +263,7 @@ export default function DigitalTwin() {
                   transition={{ duration: 0.6, delay: index * 0.1 }}
                   viewport={{ once: true }}
                   className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-8 hover:border-cyan-400/30 transition-all duration-300"
-                >
+
                   <div className="flex items-center mb-4">
                     <div className="w-12 h-12 bg-gradient-to-br from-cyan-500/20 to-blue-500/20 rounded-lg flex items-center justify-center mr-4">
                       <useCase.icon className="w-6 h-6 text-cyan-400" />
@@ -295,7 +294,7 @@ export default function DigitalTwin() {
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
               className="text-center mb-16"
-            >
+
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
                 Transparent Pricing
               </h2>
@@ -317,7 +316,7 @@ export default function DigitalTwin() {
                       ? 'border-cyan-400/50 bg-slate-800/70'
                       : 'border-slate-700/50'
                   }`}
-                >
+
                   {plan.popular && (
                     <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                       <span className="bg-gradient-to-r from-cyan-400 to-blue-500 text-white px-4 py-2 rounded-full text-sm font-medium">
@@ -351,7 +350,7 @@ export default function DigitalTwin() {
                         ? 'bg-gradient-to-r from-cyan-500 to-blue-500 text-white hover:from-cyan-600 hover:to-blue-600 transform hover:scale-105'
                         : 'border border-cyan-400/30 text-cyan-400 hover:bg-cyan-400/10'
                     }`}
-                  >
+
                     {plan.cta}
                   </Link>
                 </motion.div>
@@ -369,7 +368,7 @@ export default function DigitalTwin() {
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
               className="text-center mb-16"
-            >
+
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
                 Business Benefits
               </h2>
@@ -388,7 +387,7 @@ export default function DigitalTwin() {
                   transition={{ duration: 0.6, delay: index * 0.1 }}
                   viewport={{ once: true }}
                   className="text-center"
-                >
+
                   <div className="w-16 h-16 bg-gradient-to-br from-cyan-500/20 to-blue-500/20 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:from-cyan-500/40 group-hover:to-blue-500/40 transition-all duration-300">
                     <benefit.icon className="w-8 h-8 text-cyan-400" />
                   </div>
@@ -409,7 +408,7 @@ export default function DigitalTwin() {
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
               className="text-center mb-16"
-            >
+
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
                 Technologies We Use
               </h2>
@@ -428,7 +427,7 @@ export default function DigitalTwin() {
                   transition={{ duration: 0.6, delay: index * 0.1 }}
                   viewport={{ once: true }}
                   className="text-center group"
-                >
+
                   <div className="w-20 h-20 bg-slate-800/50 border border-slate-700/50 rounded-xl flex items-center justify-center mx-auto mb-4 group-hover:border-cyan-400/30 transition-all duration-300">
                     <span className="text-3xl">{tech.icon}</span>
                   </div>
@@ -449,7 +448,7 @@ export default function DigitalTwin() {
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
               className="text-center max-w-4xl mx-auto"
-            >
+
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
                 Ready to Create Your Digital Twin?
               </h2>
@@ -461,14 +460,14 @@ export default function DigitalTwin() {
                 <Link
                   to="/contact"
                   className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-600 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-cyan-500/25"
-                >
+
                   Start Your Journey
                   <ArrowRight className="w-5 h-5 ml-2" />
                 </Link>
                 <Link
                   to="/services"
                   className="inline-flex items-center px-8 py-4 border border-cyan-400/30 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400/10 transition-all duration-300"
-                >
+
                   Explore Services
                 </Link>
               </div>
@@ -478,4 +477,4 @@ export default function DigitalTwin() {
       </div>
     </>
   );
-}
+}}}}}}

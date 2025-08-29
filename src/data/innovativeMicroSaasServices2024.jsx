@@ -477,5 +477,6 @@ export const INNOVATIVE_MICRO_SAAS_SERVICES_2024 = [
         marketSize: "$4.2 billion",
         growthRate: "18.9% annually",
         fundingTrends: "Fintech AI tools receiving significant funding"
-    }
+
 ];
+}

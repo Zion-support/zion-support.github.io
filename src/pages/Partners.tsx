@@ -13,7 +13,6 @@ import {
   Lock,
   Rocket,
   Star
-} from 'lucide-react';
 import { SEO } from '../components/SEO';
 
 export default function Partners() {
@@ -59,7 +58,7 @@ export default function Partners() {
       category: 'Processor Technology',
       description: 'Leading processor technology for AI and high-performance computing.',
       benefits: ['Early access programs', 'Technical resources', 'Innovation support']
-    }
+
   ];
 
   const partnershipTiers = [
@@ -98,7 +97,7 @@ export default function Partners() {
         'Marketing materials',
         'Lead generation support'
       ]
-    }
+
   ];
 
   return (
@@ -117,7 +116,7 @@ export default function Partners() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             className="text-center"
-          >
+
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
               Strategic
               <span className="bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent"> Partnerships</span>
@@ -146,7 +145,7 @@ export default function Partners() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
-          >
+
             <h2 className="text-4xl font-bold text-white mb-6">
               Why Partner With Zion Tech Group?
             </h2>
@@ -187,7 +186,7 @@ export default function Partners() {
                 icon: Shield,
                 title: 'Technical Support',
                 description: 'Access our technical expertise and resources to enhance your solutions.'
-              }
+
             ].map((benefit, index) => (
               <motion.div
                 key={index}
@@ -195,7 +194,7 @@ export default function Partners() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 className="bg-slate-800/50 p-8 rounded-xl border border-slate-700/50 hover:border-cyan-400/50 transition-all duration-300 hover:scale-105"
-              >
+
                 <div className="w-16 h-16 bg-gradient-to-br from-cyan-400/20 to-blue-500/20 rounded-xl flex items-center justify-center mb-6">
                   <benefit.icon className="w-8 h-8 text-cyan-400" />
                 </div>
@@ -215,7 +214,7 @@ export default function Partners() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
-          >
+
             <h2 className="text-4xl font-bold text-white mb-6">
               Partnership Tiers
             </h2>
@@ -236,7 +235,7 @@ export default function Partners() {
                     ? 'border-cyan-400/50 bg-gradient-to-br from-slate-800/50 to-cyan-900/20'
                     : 'border-slate-700/50 hover:border-cyan-400/50'
                 }`}
-              >
+
                 <div className="text-center mb-6">
                   <div className={`w-20 h-20 mx-auto mb-4 rounded-full flex items-center justify-center ${
                     index === 0
@@ -277,7 +276,7 @@ export default function Partners() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
-          >
+
             <h2 className="text-4xl font-bold text-white mb-6">
               Our Trusted Partners
             </h2>
@@ -295,7 +294,7 @@ export default function Partners() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 className="bg-slate-800/50 p-6 rounded-xl border border-slate-700/50 hover:border-cyan-400/50 transition-all duration-300 hover:scale-105"
-              >
+
                 <div className="text-center mb-4">
                   <div className="text-4xl mb-3">{partner.logo}</div>
                   <h3 className="text-xl font-semibold text-white mb-2">{partner.name}</h3>
@@ -325,7 +324,7 @@ export default function Partners() {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-          >
+
             <h2 className="text-4xl font-bold text-white mb-6">
               Ready to Join Our Partner Network?
             </h2>
@@ -346,4 +345,4 @@ export default function Partners() {
       </section>
     </div>
   );
-}
+}}}}}

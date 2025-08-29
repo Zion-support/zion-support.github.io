@@ -7,5 +7,5 @@ exports.handler = async function() {
     return { statusCode: 200, body: JSON.stringify({ ok: true, task: 'edge-cache-warmer' }) };
   } catch (e) {
     return { statusCode: 200, body: JSON.stringify({ ok: false, error: String(e) }) };
-  }
-};
+
+};}

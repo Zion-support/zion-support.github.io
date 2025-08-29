@@ -38,7 +38,7 @@ export interface Innovative2026AIService {
   customers: number;
   rating: number;
   reviews: number;
-}
+
 export const innovative2026AIServices: Innovative2026AIService[] = [
   // AI-Powered Business Intelligence
   {
@@ -299,7 +299,7 @@ export const innovative2026AIServices: Innovative2026AIService[] = [
     customers: 1900,
     rating: 4.8,
     reviews: 950
-  }
+
 ];
 export const getPopularAIServices = () => {
   return innovative2026AIServices.filter(service => service.popular);
@@ -314,4 +314,4 @@ export const getAIServicesByPriceRange = (minPrice: number, maxPrice: number) =>
     const price = parseInt(service.price.replace('$', '').replace(',', ''));
     return price >= minPrice && price <= maxPrice;
   });
-};
+};}}

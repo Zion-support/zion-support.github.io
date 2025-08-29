@@ -1,8 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import { Rocket, Zap, Shield, Users, TrendingUp, CheckCircle, Star, ArrowRight, Cpu, Database } from 'lucide-react';
-import { SEO } from '../components/SEO';
+import { Rocket, Zap, Shield, Users, TrendingUp, CheckCircle, Star, ArrowRight, Cpu, Database import { SEO } from '../components/SEO';
 const transformationServices = [
     {
         title: "Strategy & Planning",
@@ -45,7 +44,7 @@ const transformationServices = [
         icon: Shield,
         features: ["Security Architecture", "Compliance Frameworks", "Risk Management", "Security Audits"],
         color: "from-yellow-500 to-orange-500"
-    }
+
 ];
 const transformationPhases = [
     {
@@ -71,7 +70,7 @@ const transformationPhases = [
         title: "Full Implementation",
         description: "Execute transformation plan with phased rollout and continuous optimization",
         duration: "6-18 months"
-    }
+
 ];
 const testimonials = [
     {
@@ -91,7 +90,7 @@ const testimonials = [
         name: "Marcus Johnson",
         role: "CTO, DigitalFirst Inc",
         rating: 5
-    }
+
 ];
 const stats = [
     { label: "Transformations Completed", value: "75+", icon: Rocket },
@@ -242,7 +241,7 @@ export default function DigitalTransformation() {
                 title: "Competitive Advantage",
                 description: "Innovation and agility position your business ahead of competitors in the digital marketplace.",
                 icon: Rocket
-            }
+
         ].map((benefit, index) => {
             const IconComponent = benefit.icon;
             return (<motion.div key={benefit.title} initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }} whileInView={{ opacity: 1, x: 0 }} transition={{ duration: 0.6, delay: index * 0.1 }} className="bg-zion-blue-light/10 backdrop-blur-md border border-zion-purple/20 rounded-2xl p-8 hover:border-zion-cyan/50 hover:bg-zion-blue-light/20 transition-all duration-300">
@@ -311,4 +310,4 @@ export default function DigitalTransformation() {
         </div>
       </section>
     </div>);
-}
+}}}}}}

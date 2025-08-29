@@ -3,8 +3,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { SEO } from "@/components/SEO";
-import { BarChart3, TrendingUp, Brain, Zap, ArrowRight, CheckCircle, Star } from "lucide-react";
-import { Link } from "react-router-dom";
+import { BarChart3, TrendingUp, Brain, Zap, ArrowRight, CheckCircle, Star import { Link } from "react-router-dom";
 export default function AIAnalyticsDashboard() {
     const features = [
         {
@@ -26,7 +25,7 @@ export default function AIAnalyticsDashboard() {
             title: "Custom Dashboards",
             description: "Build personalized dashboards tailored to your specific business needs",
             icon: <BarChart3 className="h-6 w-6 text-zion-cyan"/>
-        }
+
     ];
     const pricingPlans = [
         {
@@ -72,7 +71,7 @@ export default function AIAnalyticsDashboard() {
                 "Custom integrations"
             ],
             popular: false
-        }
+
     ];
     const testimonials = [
         {
@@ -92,7 +91,7 @@ export default function AIAnalyticsDashboard() {
             role: "VP Operations, GrowthTech",
             content: "Real-time dashboards help us make faster, better decisions. ROI was immediate.",
             rating: 5
-        }
+
     ];
     return (<div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-blue-dark to-zion-slate-dark">
       <SEO title="AI Analytics Dashboard - Zion Tech Group" description="Transform your business with AI-powered analytics, real-time insights, and predictive intelligence. Get started today!" keywords="AI analytics, business intelligence, predictive analytics, data insights, Zion Tech Group" canonical="https://ziontechgroup.com/ai-analytics-dashboard"/>
@@ -256,4 +255,4 @@ export default function AIAnalyticsDashboard() {
         </div>
       </section>
     </div>);
-}
+</Card></Card></Card></Card></Card></Card></Card></Card></Card>}}}}}

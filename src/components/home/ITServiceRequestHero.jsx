@@ -4,8 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
-import { Clock, Globe, Shield, Zap, MapPin } from "lucide-react";
-export function ITServiceRequestHero() {
+import { Clock, Globe, Shield, Zap, MapPin export function ITServiceRequestHero() {
     const [location, setLocation] = useState("");
     const [isSubmitting, setIsSubmitting] = useState(false);
     const navigate = useNavigate();
@@ -18,7 +17,7 @@ export function ITServiceRequestHero() {
                 setIsSubmitting(false);
                 navigate(`/it-onsite-services?location=${encodeURIComponent(location)}`);
             }, 1000);
-        }
+
     };
     const containerVariants = {
         hidden: { opacity: 0, y: 20 },
@@ -28,8 +27,8 @@ export function ITServiceRequestHero() {
             transition: {
                 duration: 0.6,
                 staggerChildren: 0.2
-            }
-        }
+
+
     };
     const itemVariants = {
         hidden: { opacity: 0, y: 20 },
@@ -37,7 +36,7 @@ export function ITServiceRequestHero() {
             opacity: 1,
             y: 0,
             transition: { duration: 0.5 }
-        }
+
     };
     const features = [
         { icon: Clock, text: "24/7 Availability", color: "text-zion-cyan" },
@@ -161,4 +160,4 @@ export function ITServiceRequestHero() {
         </div>
       </motion.div>
     </section>);
-}
+}}}}}}

@@ -103,7 +103,7 @@ const InteractiveServiceShowcase = () => {
             features: ['Infrastructure as Code', 'Auto-scaling', 'Cost Optimization', 'Monitoring'],
             color: 'from-zion-orange to-zion-yellow',
             href: '/services/automation'
-        }
+
     ];
     const filteredServices = activeCategory === 'all'
         ? services
@@ -114,8 +114,8 @@ const InteractiveServiceShowcase = () => {
             opacity: 1,
             transition: {
                 staggerChildren: 0.1
-            }
-        }
+
+
     };
     const itemVariants = {
         hidden: { y: 20, opacity: 0 },
@@ -125,8 +125,8 @@ const InteractiveServiceShowcase = () => {
             transition: {
                 duration: 0.5,
                 ease: "easeOut"
-            }
-        }
+
+
     };
     const categoryVariants = {
         hidden: { scale: 0.8, opacity: 0 },
@@ -136,8 +136,8 @@ const InteractiveServiceShowcase = () => {
             transition: {
                 duration: 0.3,
                 ease: "easeOut"
-            }
-        }
+
+
     };
     return (<section className="py-24 bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-blue-light">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -252,5 +252,6 @@ const InteractiveServiceShowcase = () => {
         </motion.div>
       </div>
     </section>);
-};
+</div></div>};
 export default InteractiveServiceShowcase;
+}}}}}}}

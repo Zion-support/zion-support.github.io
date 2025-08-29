@@ -1,7 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Search, Brain, TrendingUp, BarChart3, Target, Zap, CheckCircle, ArrowRight, Globe, Users, Clock, Shield, Eye, MousePointer, Smartphone } from 'lucide-react';
-import { SEO } from '@/components/SEO';
+import { Search, Brain, TrendingUp, BarChart3, Target, Zap, CheckCircle, ArrowRight, Globe, Users, Clock, Shield, Eye, MousePointer, Smartphone import { SEO } from '@/components/SEO';
 import { Link } from 'react-router-dom';
 
 export default function AIPoweredSEO() {
@@ -35,7 +34,7 @@ export default function AIPoweredSEO() {
       icon: Shield,
       title: "Technical SEO Audit",
       description: "Comprehensive technical analysis with AI-powered recommendations"
-    }
+
   ];
 
   const pricing = [
@@ -85,7 +84,7 @@ export default function AIPoweredSEO() {
       ],
       cta: "Contact Sales",
       popular: false
-    }
+
   ];
 
   const benefits = [
@@ -108,7 +107,7 @@ export default function AIPoweredSEO() {
       icon: BarChart3,
       title: "Better ROI",
       description: "Maximize your SEO investment with data-driven optimization"
-    }
+
   ];
 
   const aiCapabilities = [
@@ -131,7 +130,7 @@ export default function AIPoweredSEO() {
       icon: MousePointer,
       title: "User Experience Analysis",
       description: "Optimize for Core Web Vitals and user engagement metrics"
-    }
+
   ];
 
   return (
@@ -162,7 +161,7 @@ export default function AIPoweredSEO() {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-            >
+
               <div className="inline-flex items-center px-4 py-2 rounded-full bg-purple-500/10 border border-purple-500/20 text-purple-400 text-sm font-medium mb-6">
                 <Search className="w-4 h-4 mr-2" />
                 AI-Powered SEO Excellence
@@ -178,14 +177,14 @@ export default function AIPoweredSEO() {
                 <Link
                   to="/contact"
                   className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-500 to-cyan-500 text-white font-semibold rounded-lg hover:from-purple-600 hover:to-cyan-600 transition-all duration-300 transform hover:scale-105"
-                >
+
                   Get Started
                   <ArrowRight className="w-5 h-5 ml-2" />
                 </Link>
                 <Link
                   to="/request-quote"
                   className="inline-flex items-center px-8 py-4 border border-purple-500/30 text-purple-400 font-semibold rounded-lg hover:bg-purple-500/10 transition-all duration-300"
-                >
+
                   Request Quote
                 </Link>
               </div>
@@ -202,7 +201,7 @@ export default function AIPoweredSEO() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
-            >
+
               <h2 className="text-4xl font-bold text-white mb-4">
                 AI-Powered Capabilities
               </h2>
@@ -220,7 +219,7 @@ export default function AIPoweredSEO() {
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
                   viewport={{ once: true }}
-                >
+
                   <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-cyan-500 rounded-lg flex items-center justify-center mb-4">
                     <capability.icon className="w-6 h-6 text-white" />
                   </div>
@@ -241,7 +240,7 @@ export default function AIPoweredSEO() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
-            >
+
               <h2 className="text-4xl font-bold text-white mb-4">
                 Why Choose Our AI SEO?
               </h2>
@@ -259,7 +258,7 @@ export default function AIPoweredSEO() {
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
                   viewport={{ once: true }}
-                >
+
                   <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-cyan-500 rounded-lg flex items-center justify-center mb-4">
                     <feature.icon className="w-6 h-6 text-white" />
                   </div>
@@ -280,7 +279,7 @@ export default function AIPoweredSEO() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
-            >
+
               <h2 className="text-4xl font-bold text-white mb-4">
                 Transparent Pricing
               </h2>
@@ -302,7 +301,7 @@ export default function AIPoweredSEO() {
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
                   viewport={{ once: true }}
-                >
+
                   {plan.popular && (
                     <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                       <span className="px-4 py-2 bg-gradient-to-r from-purple-500 to-cyan-500 text-white text-sm font-semibold rounded-full">
@@ -336,7 +335,7 @@ export default function AIPoweredSEO() {
                         ? 'bg-gradient-to-r from-purple-500 to-cyan-500 text-white hover:from-purple-600 hover:to-cyan-600'
                         : 'bg-white/10 text-white hover:bg-white/20 border border-white/20'
                     }`}
-                  >
+
                     {plan.cta}
                   </Link>
                 </motion.div>
@@ -354,7 +353,7 @@ export default function AIPoweredSEO() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
-            >
+
               <h2 className="text-4xl font-bold text-white mb-4">
                 Business Benefits
               </h2>
@@ -372,7 +371,7 @@ export default function AIPoweredSEO() {
                   whileInView={{ opacity: 1, x: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
                   viewport={{ once: true }}
-                >
+
                   <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-cyan-500 rounded-lg flex items-center justify-center flex-shrink-0">
                     <benefit.icon className="w-6 h-6 text-white" />
                   </div>
@@ -394,7 +393,7 @@ export default function AIPoweredSEO() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
-            >
+
               <h2 className="text-4xl font-bold text-white mb-6">
                 Ready to Dominate Search Rankings?
               </h2>
@@ -405,14 +404,14 @@ export default function AIPoweredSEO() {
                 <Link
                   to="/contact"
                   className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-500 to-cyan-500 text-white font-semibold rounded-lg hover:from-purple-600 hover:to-cyan-600 transition-all duration-300 transform hover:scale-105"
-                >
+
                   Start Your Journey
                   <ArrowRight className="w-5 h-5 ml-2" />
                 </Link>
                 <Link
                   to="/request-quote"
                   className="inline-flex items-center px-8 py-4 border border-purple-500/30 text-purple-400 font-semibold rounded-lg hover:bg-purple-500/10 transition-all duration-300"
-                >
+
                   Get Custom Quote
                 </Link>
               </div>
@@ -422,4 +421,4 @@ export default function AIPoweredSEO() {
       </div>
     </div>
   );
-}
+</div></div></div>}}}}}}

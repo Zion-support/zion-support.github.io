@@ -4,8 +4,7 @@ import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { SERVICE_CATEGORIES } from '@/data/microSaasServices';
-import { Sparkles, Zap, TrendingUp, ArrowRight, Star, CheckCircle, Globe, MessageCircle } from 'lucide-react';
-export function NewServicesShowcase() {
+import { Sparkles, Zap, TrendingUp, ArrowRight, Star, CheckCircle, Globe, MessageCircle export function NewServicesShowcase() {
     // Get featured services from each category
     const featuredServices = SERVICE_CATEGORIES.map(category => category.services[0]).filter(Boolean);
     return (<section className="py-20 bg-gradient-to-br from-zion-slate via-zion-blue-dark to-zion-slate relative overflow-hidden">
@@ -176,4 +175,4 @@ export function NewServicesShowcase() {
         </div>
       </div>
     </section>);
-}
+</Card></Card></Card></Card>}}

@@ -1,9 +1,7 @@
 import React from 'react';
 import { SEO } from '../../components/SEO';
 import { motion } from 'framer-motion';
-import { Zap, Brain, Shield, Cpu, Rocket, Globe, Users, Award, Star, ArrowRight, CheckCircle, Clock, TrendingUp, Target, Lightbulb, Code, Database, Network, Lock, Cloud } from 'lucide-react';
-
-const QuantumComputing: React.FC = () => {
+import { Zap, Brain, Shield, Cpu, Rocket, Globe, Users, Award, Star, ArrowRight, CheckCircle, Clock, TrendingUp, Target, Lightbulb, Code, Database, Network, Lock, Cloud const QuantumComputing: React.FC = () => {
   const features = [
     {
       icon: Zap,
@@ -24,7 +22,7 @@ const QuantumComputing: React.FC = () => {
       icon: Cpu,
       title: 'Quantum Simulation',
       description: 'Model complex molecular and physical systems'
-    }
+
   ];
 
   const useCases = [
@@ -47,7 +45,7 @@ const QuantumComputing: React.FC = () => {
       title: 'Logistics Optimization',
       description: 'Solve complex routing and supply chain problems',
       icon: '🚚'
-    }
+
   ];
 
   const benefits = [
@@ -74,7 +72,7 @@ const QuantumComputing: React.FC = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             className="text-center"
-          >
+
             <div className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-purple-500/20 to-blue-500/20 rounded-full border border-purple-400/30 mb-6">
               <Zap className="w-5 h-5 text-purple-400 mr-2" />
               <span className="text-purple-300 font-medium">Quantum Computing</span>
@@ -112,7 +110,7 @@ const QuantumComputing: React.FC = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
-          >
+
             <h2 className="text-4xl font-bold text-white mb-4">
               Quantum Computing Features
             </h2>
@@ -129,7 +127,7 @@ const QuantumComputing: React.FC = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 hover:border-purple-400/30 transition-all duration-200 hover:scale-105"
-              >
+
                 <div className="w-12 h-12 bg-gradient-to-br from-purple-500/20 to-blue-500/20 rounded-lg flex items-center justify-center mb-4">
                   <feature.icon className="w-6 h-6 text-purple-400" />
                 </div>
@@ -149,7 +147,7 @@ const QuantumComputing: React.FC = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
-          >
+
             <h2 className="text-4xl font-bold text-white mb-4">
               Quantum Computing Use Cases
             </h2>
@@ -166,7 +164,7 @@ const QuantumComputing: React.FC = () => {
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 hover:border-purple-400/30 transition-all duration-200"
-              >
+
                 <div className="flex items-start space-x-4">
                   <div className="text-4xl">{useCase.icon}</div>
                   <div>
@@ -188,7 +186,7 @@ const QuantumComputing: React.FC = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
-          >
+
             <h2 className="text-4xl font-bold text-white mb-4">
               Why Choose Quantum Computing?
             </h2>
@@ -203,7 +201,7 @@ const QuantumComputing: React.FC = () => {
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.6 }}
               className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-8"
-            >
+
               <h3 className="text-2xl font-semibold text-white mb-6">Key Benefits</h3>
               <ul className="space-y-4">
                 {benefits.map((benefit, index) => (
@@ -220,7 +218,7 @@ const QuantumComputing: React.FC = () => {
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.6 }}
               className="bg-gradient-to-br from-purple-500/20 to-blue-500/20 border border-purple-400/30 rounded-xl p-8"
-            >
+
               <h3 className="text-2xl font-semibold text-white mb-6">Get Started Today</h3>
               <p className="text-gray-300 mb-6">
                 Ready to experience the future of computing? Our quantum computing experts are here to help you
@@ -241,7 +239,7 @@ const QuantumComputing: React.FC = () => {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-          >
+
             <h2 className="text-4xl font-bold text-white mb-4">
               Ready for the Quantum Future?
             </h2>
@@ -263,4 +261,4 @@ const QuantumComputing: React.FC = () => {
   );
 };
 
-export default QuantumComputing;
+export default QuantumComputing;}}}

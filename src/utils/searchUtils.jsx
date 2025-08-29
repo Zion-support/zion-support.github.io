@@ -39,20 +39,20 @@ export const calculateRelevanceScore = (result, searchTerm) => {
     // Tag matches
     if (result.tags?.some(tag => tag.toLowerCase().includes(term))) {
         score += 20;
-    }
+
     // Category match
     if (result.category?.toLowerCase().includes(term)) {
         score += 15;
-    }
+
     // Boost score based on rating
     if (result.rating) {
         score += result.rating * 2;
-    }
+
     // Recent content gets slight boost
     if (result.date) {
         const dateScore = Math.max(0, 10 - (Date.now() - new Date(result.date).getTime()) / (1000 * 60 * 60 * 24 * 30));
         score += dateScore;
-    }
+
     return score;
 };
 /**
@@ -82,7 +82,7 @@ export const sortSearchResults = (results, sortBy, searchTerm) => {
                 const scoreB = calculateRelevanceScore(b, searchTerm);
                 return scoreB - scoreA;
             });
-    }
+
 };
 /**
  * Filter search results based on active filters
@@ -92,22 +92,22 @@ export const filterSearchResults = (results, filters) => {
     // Filter by type
     if (filters.types.length > 0) {
         filteredResults = filteredResults.filter(result => filters.types.includes(result.type));
-    }
+
     // Filter by category
     if (filters.category) {
         filteredResults = filteredResults.filter(result => result.category?.toLowerCase() === filters.category.toLowerCase());
-    }
+
     // Filter by price range
     if (filters.minPrice > 0 || filters.maxPrice < 10000) {
         filteredResults = filteredResults.filter(result => {
             const price = result.price ?? 0;
             return price >= filters.minPrice && price <= filters.maxPrice;
         });
-    }
+
     // Filter by minimum rating
     if (filters.minRating > 0) {
         filteredResults = filteredResults.filter(result => (result.rating ?? 0) >= filters.minRating);
-    }
+
     return filteredResults;
 };
 /**
@@ -123,7 +123,7 @@ export const generateDynamicSuggestions = (query, recentSearches = [], available
             type: 'recent',
             id: `query-${query}`
         });
-    }
+
     // Add matching categories
     availableCategories
         .filter(category => category.toLowerCase().includes(lowerQuery))
@@ -169,7 +169,7 @@ export const calculateSearchMetrics = (results, searchTime) => {
     results.forEach(result => {
         if (result.category) {
             categoryCount.set(result.category, (categoryCount.get(result.category) || 0) + 1);
-        }
+
     });
     const topCategories = Array.from(categoryCount.entries())
         .map(([category, count]) => ({ category, count }))
@@ -273,3 +273,4 @@ export default {
     getActiveFilterCount,
     getDefaultFilters
 };
+}}}}}}}}}}}

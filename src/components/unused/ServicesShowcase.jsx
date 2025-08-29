@@ -45,7 +45,7 @@ export function ServicesShowcase() {
             description: "Data analytics and insights for informed decision-making",
             color: "from-zion-purple to-zion-blue",
             href: "/business-intelligence"
-        }
+
     ];
     const containerVariants = {
         hidden: { opacity: 0 },
@@ -53,8 +53,8 @@ export function ServicesShowcase() {
             opacity: 1,
             transition: {
                 staggerChildren: 0.1
-            }
-        }
+
+
     };
     const itemVariants = {
         hidden: { y: 20, opacity: 0 },
@@ -63,8 +63,8 @@ export function ServicesShowcase() {
             opacity: 1,
             transition: {
                 duration: 0.5
-            }
-        }
+
+
     };
     return (<section className="py-20 bg-zion-slate-dark relative overflow-hidden">
       {/* Background Elements */}
@@ -125,4 +125,4 @@ export function ServicesShowcase() {
         </motion.div>
       </div>
     </section>);
-}
+}}}}}}

@@ -38,14 +38,14 @@ const ContactForm = () => {
             });
             setSubmitStatus('success');
             setTimeout(() => setSubmitStatus('idle'), 5000);
-        }
+
         catch (error) {
             setSubmitStatus('error');
             setTimeout(() => setSubmitStatus('idle'), 5000);
-        }
+
         finally {
             setIsSubmitting(false);
-        }
+
     };
     const isFormValid = formData.firstName && formData.lastName && formData.email && formData.message;
     return (<div className="max-w-2xl mx-auto">
@@ -152,3 +152,4 @@ const ContactForm = () => {
     </div>);
 };
 export default ContactForm;
+}}}

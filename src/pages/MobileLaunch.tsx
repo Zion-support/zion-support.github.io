@@ -38,7 +38,6 @@ import {
   Wifi as WifiIcon,
   Battery as BatteryIcon,
   Signal
-} from 'lucide-react';
 import { SEO } from '../components/SEO';
 
 const MobileLaunch: React.FC = () => {
@@ -66,7 +65,7 @@ const MobileLaunch: React.FC = () => {
       description: "Intelligent alerts that adapt to your preferences and schedule",
       icon: Bell,
       color: "from-orange-400 to-red-500"
-    }
+
   ];
 
   const appScreens = [
@@ -93,7 +92,7 @@ const MobileLaunch: React.FC = () => {
       description: "Access to all Zion Tech Group services and solutions",
       icon: Settings,
       features: ["Service catalog", "Quick setup", "Support access"]
-    }
+
   ];
 
   const downloadOptions = [
@@ -117,7 +116,7 @@ const MobileLaunch: React.FC = () => {
       description: "Access via browser",
       link: "/",
       featured: false
-    }
+
   ];
 
   const systemRequirements = [
@@ -145,7 +144,7 @@ const MobileLaunch: React.FC = () => {
               initial={{ opacity: 0, x: -30 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8 }}
-            >
+
               <div className="flex items-center mb-6">
                 <div className="w-16 h-16 bg-gradient-to-br from-cyan-400 to-blue-500 rounded-2xl flex items-center justify-center mr-4">
                   <Smartphone className="w-8 h-8 text-white" />
@@ -169,14 +168,14 @@ const MobileLaunch: React.FC = () => {
                 <Link
                   to="#download"
                   className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-400 hover:to-blue-500 transition-all duration-200 hover:scale-105 shadow-lg shadow-cyan-500/25"
-                >
+
                   <Download className="mr-2 w-5 h-5" />
                   Download Now
                 </Link>
                 <Link
                   to="/contact"
                   className="inline-flex items-center px-8 py-4 border border-cyan-400/30 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400/10 transition-all duration-200"
-                >
+
                   Learn More
                   <ArrowRight className="ml-2 w-5 h-5" />
                 </Link>
@@ -188,7 +187,7 @@ const MobileLaunch: React.FC = () => {
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
               className="relative"
-            >
+
               {/* Mock Phone */}
               <div className="relative mx-auto w-80 h-96 bg-slate-800 rounded-[3rem] border-8 border-slate-700 shadow-2xl">
                 {/* Phone Screen */}
@@ -254,7 +253,7 @@ const MobileLaunch: React.FC = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
-          >
+
             <h2 className="text-4xl font-bold text-white mb-6">
               Powerful <span className="text-cyan-400">Mobile Features</span>
             </h2>
@@ -272,7 +271,7 @@ const MobileLaunch: React.FC = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 hover:border-cyan-400/30 transition-all duration-300 hover:scale-105"
-              >
+
                 <div className={`w-12 h-12 bg-gradient-to-br ${feature.color} rounded-lg flex items-center justify-center mb-4`}>
                   <feature.icon className="w-6 h-6 text-white" />
                 </div>
@@ -293,7 +292,7 @@ const MobileLaunch: React.FC = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
-          >
+
             <h2 className="text-4xl font-bold text-white mb-6">
               App <span className="text-cyan-400">Screens</span>
             </h2>
@@ -310,7 +309,7 @@ const MobileLaunch: React.FC = () => {
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 className="bg-slate-700/30 border border-slate-600/30 rounded-xl p-8 hover:border-cyan-400/30 transition-all duration-300"
-              >
+
                 <div className="w-16 h-16 bg-gradient-to-br from-cyan-400/20 to-blue-500/20 rounded-xl flex items-center justify-center mb-6">
                   <screen.icon className="w-8 h-8 text-cyan-400" />
                 </div>
@@ -340,7 +339,7 @@ const MobileLaunch: React.FC = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
-          >
+
             <h2 className="text-4xl font-bold text-white mb-6">
               Download <span className="text-cyan-400">Now</span>
             </h2>
@@ -359,7 +358,7 @@ const MobileLaunch: React.FC = () => {
                 className={`bg-slate-800/50 border rounded-xl p-8 text-center hover:border-cyan-400/50 transition-all duration-300 hover:scale-105 ${
                   option.featured ? 'border-cyan-400/30 bg-gradient-to-br from-cyan-400/5 to-blue-500/5' : 'border-slate-700/50'
                 }`}
-              >
+
                 {option.featured && (
                   <div className="flex items-center justify-center mb-4">
                     <Star className="w-5 h-5 text-yellow-400 mr-2" />
@@ -374,7 +373,7 @@ const MobileLaunch: React.FC = () => {
                 <Link
                   to={option.link}
                   className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-400 hover:to-blue-500 transition-all duration-200 hover:scale-105"
-                >
+
                   Download
                   <Download className="ml-2 w-4 h-4" />
                 </Link>
@@ -392,7 +391,7 @@ const MobileLaunch: React.FC = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
-          >
+
             <h2 className="text-4xl font-bold text-white mb-6">
               System <span className="text-cyan-400">Requirements</span>
             </h2>
@@ -409,7 +408,7 @@ const MobileLaunch: React.FC = () => {
                 whileInView={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 className="bg-slate-700/30 border border-slate-600/30 rounded-xl p-6 text-center hover:border-cyan-400/30 transition-all duration-300"
-              >
+
                 <div className="text-4xl mb-3">{req.icon}</div>
                 <p className="text-white font-medium">{req.requirement}</p>
               </motion.div>
@@ -425,7 +424,7 @@ const MobileLaunch: React.FC = () => {
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-          >
+
             <h2 className="text-4xl font-bold text-white mb-6">
               Ready to Go Mobile?
             </h2>
@@ -438,14 +437,14 @@ const MobileLaunch: React.FC = () => {
               <Link
                 to="#download"
                 className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-400 hover:to-blue-500 transition-all duration-200 hover:scale-105 shadow-lg shadow-cyan-500/25"
-              >
+
                 <Download className="mr-2 w-5 h-5" />
                 Download App
               </Link>
               <Link
                 to="/contact"
                 className="inline-flex items-center px-8 py-4 border border-cyan-400/30 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400/10 transition-all duration-200"
-              >
+
                 Get Support
                 <ArrowRight className="ml-2 w-5 h-5" />
               </Link>
@@ -457,4 +456,4 @@ const MobileLaunch: React.FC = () => {
   );
 };
 
-export default MobileLaunch;
+export default MobileLaunch;}}}}

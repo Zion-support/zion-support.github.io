@@ -1,7 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Lightbulb, Rocket, Brain, ArrowRight, Atom, Satellite, Dna, Leaf, Cpu, Shield } from 'lucide-react';
-import AdvancedServiceInnovationHub from '../components/AdvancedServiceInnovationHub';
+import { Lightbulb, Rocket, Brain, ArrowRight, Atom, Satellite, Dna, Leaf, Cpu, Shield import AdvancedServiceInnovationHub from '../components/AdvancedServiceInnovationHub';
 import { Button } from '../components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '../components/ui/card';
 import { Badge } from '../components/ui/badge';
@@ -48,7 +47,7 @@ const ServiceInnovationHub = () => {
             description: 'Neuromorphic computing, edge AI, and model compression technologies',
             trends: ['Neuromorphic Computing', 'Edge AI', 'Model Compression'],
             investment: '$80B+'
-        }
+
     ];
     const keyInsights = [
         {
@@ -74,7 +73,7 @@ const ServiceInnovationHub = () => {
             description: 'Custom organisms and bio-manufacturing will revolutionize industrial processes',
             impact: 'High',
             timeline: '2025-2035'
-        }
+
     ];
     return (<div className="min-h-screen bg-zion-blue-dark">
       {/* Hero Section */}
@@ -244,5 +243,6 @@ const ServiceInnovationHub = () => {
         </div>
       </section>
     </div>);
-};
+</Card></Card></Card></Card>};
 export default ServiceInnovationHub;
+}}}

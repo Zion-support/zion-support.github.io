@@ -1,6 +1,5 @@
 import React, { useState, useRef } from 'react';
-import { Code, Brain, Zap, Download, RefreshCw, X, Maximize2, Minimize2, Eye, EyeOff, Search, FileText, CheckCircle, AlertCircle, Copy, Shield, Activity, BarChart3, Gauge } from 'lucide-react';
-const mockCodeSnippets = [
+import { Code, Brain, Zap, Download, RefreshCw, X, Maximize2, Minimize2, Eye, EyeOff, Search, FileText, CheckCircle, AlertCircle, Copy, Shield, Activity, BarChart3, Gauge const mockCodeSnippets = [
     {
         id: '1',
         title: 'React Hook for API Calls',
@@ -13,7 +12,6 @@ interface UseApiOptions<T> {
   method?: 'GET' | 'POST' | 'PUT' | 'DELETE';
   body?: any;
   headers?: Record<string, string>;
-}
 
 export function useApi<T>({ url, method = 'GET', body, headers }: UseApiOptions<T>) {
   const [data, setData] = useState<T | null>(null);
@@ -36,7 +34,6 @@ export function useApi<T>({ url, method = 'GET', body, headers }: UseApiOptions<
 
       if (!response.ok) {
         throw new Error(\`HTTP error! status: \${response.status}\`);
-      }
 
       const result = await response.json();
       setData(result);
@@ -44,13 +41,13 @@ export function useApi<T>({ url, method = 'GET', body, headers }: UseApiOptions<
       setError(err instanceof Error ? err.message : 'An error occurred');
     } finally {
       setLoading(false);
-    }
+
   };
 
   useEffect(() => {
     if (method === 'GET') {
       execute();
-    }
+
   }, [url]);
 
   return { data, loading, error, execute };
@@ -69,11 +66,9 @@ export function useApi<T>({ url, method = 'GET', body, headers }: UseApiOptions<
         code: `@layer utilities {
   .animate-float {
     animation: float 3s ease-in-out infinite;
-  }
 
   .animate-glow {
     animation: glow 2s ease-in-out infinite alternate;
-  }
 
   .animate-shimmer {
     background: linear-gradient(
@@ -84,18 +79,15 @@ export function useApi<T>({ url, method = 'GET', body, headers }: UseApiOptions<
     );
     background-size: 200% 100%;
     animation: shimmer 1.5s infinite;
-  }
-}
+
 
 @keyframes float {
   0%, 100% { transform: translateY(0px); }
   50% { transform: translateY(-10px); }
-}
 
 @keyframes glow {
   from { box-shadow: 0 0 20px rgba(59, 130, 246, 0.5); }
   to { box-shadow: 0 0 30px rgba(59, 130, 246, 0.8); }
-}
 
 @keyframes shimmer {
   0% { background-position: -200% 0; }
@@ -125,14 +117,12 @@ export function useApi<T>({ url, method = 'GET', body, headers }: UseApiOptions<
     this.rules = new Map();
     this.errors = new Map();
     this.init();
-  }
 
   addRule(field, rule) {
     if (!this.rules.has(field)) {
       this.rules.set(field, []);
-    }
+
     this.rules.get(field).push(rule);
-  }
 
   validateField(field) {
     const value = this.form[field]?.value;
@@ -143,23 +133,20 @@ export function useApi<T>({ url, method = 'GET', body, headers }: UseApiOptions<
       const result = rule(value, this.form);
       if (result !== true) {
         fieldErrors.push(result);
-      }
-    }
+
 
     this.errors.set(field, fieldErrors);
     this.updateFieldUI(field);
     return fieldErrors.length === 0;
-  }
 
   validateForm() {
     let isValid = true;
     for (const field of this.rules.keys()) {
       if (!this.validateField(field)) {
         isValid = false;
-      }
-    }
+
+
     return isValid;
-  }
 
   updateFieldUI(field) {
     const fieldElement = this.form[field];
@@ -171,41 +158,37 @@ export function useApi<T>({ url, method = 'GET', body, headers }: UseApiOptions<
     } else {
       fieldElement.classList.remove('error');
       this.hideFieldErrors(field);
-    }
-  }
+
 
   showFieldErrors(field, errors) {
     // Implementation for showing field-specific errors
-  }
 
   hideFieldErrors(field) {
     // Implementation for hiding field-specific errors
-  }
 
   init() {
     if (this.options.validateOnBlur) {
       this.form.addEventListener('blur', (e) => {
         if (e.target.name) {
           this.validateField(e.target.name);
-        }
+
       }, true);
-    }
 
     if (this.options.validateOnSubmit) {
       this.form.addEventListener('submit', (e) => {
         if (!this.validateForm()) {
           e.preventDefault();
-        }
+
       });
-    }
-  }
+
+
 }`,
         tags: ['javascript', 'forms', 'validation', 'class'],
         complexity: 'high',
         rating: 4.9,
         usageCount: 2100,
         createdAt: '2024-01-08'
-    }
+
 ];
 const mockCodeAnalysis = [
     {
@@ -240,7 +223,7 @@ const mockCodeAnalysis = [
         ],
         warnings: [],
         timestamp: '2024-01-10T14:20:00Z'
-    }
+
 ];
 const mockAIGenerations = [
     {
@@ -254,9 +237,9 @@ export function useLocalStorage<T>(key: string, initialValue: T) {
       const item = window.localStorage.getItem(key);
       return item ? JSON.parse(item) : initialValue;
     } catch (error) {
-      // console.error(\`Error reading localStorage key "\${key}":\`, error);
+      // // // console.error(\`Error reading localStorage key "\${key}":\`, error);
       return initialValue;
-    }
+
   });
 
   const setValue = (value: T | ((val: T) => T)) => {
@@ -265,8 +248,8 @@ export function useLocalStorage<T>(key: string, initialValue: T) {
       setStoredValue(valueToStore);
       window.localStorage.setItem(key, JSON.stringify(valueToStore));
     } catch (error) {
-      // console.error(\`Error setting localStorage key "\${key}":\`, error);
-    }
+      // // // console.error(\`Error setting localStorage key "\${key}":\`, error);
+
   };
 
   return [storedValue, setValue] as const;
@@ -279,7 +262,7 @@ export function useLocalStorage<T>(key: string, initialValue: T) {
             'Alternative 3: With custom serializer'
         ],
         timestamp: '2024-01-15T11:45:00Z'
-    }
+
 ];
 export function AdvancedAICodeGenerator() {
     const [isOpen, setIsOpen] = useState(false);
@@ -303,7 +286,7 @@ export function AdvancedAICodeGenerator() {
             case 'medium': return 'text-yellow-500';
             case 'high': return 'text-red-500';
             default: return 'text-gray-500';
-        }
+
     };
     const getQualityColor = (score) => {
         if (score >= 90)
@@ -321,7 +304,7 @@ export function AdvancedAICodeGenerator() {
             const newGeneration = {
                 id: Date.now().toString(),
                 prompt: aiPrompt,
-                generatedCode: `// Generated code for: ${aiPrompt}\n\nfunction example() {\n  // console.log("Hello from AI!");\n  return "Generated code";\n}`,
+                generatedCode: `// Generated code for: ${aiPrompt}\n\nfunction example() {\n  // // // console.log("Hello from AI!");\n  return "Generated code";\n}`,
                 language: 'javascript',
                 confidence: 0.87,
                 alternatives: [
@@ -343,7 +326,7 @@ export function AdvancedAICodeGenerator() {
         return (<button onClick={() => setIsOpen(true)} className="fixed bottom-4 right-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white p-4 rounded-full shadow-2xl hover:shadow-blue-500/50 transition-all duration-300 hover:scale-110 z-50">
         <Code className="w-6 h-6"/>
       </button>);
-    }
+
     if (isMinimized) {
         return (<div className="fixed bottom-4 right-4 bg-white dark:bg-zion-slate border border-zion-slate-light rounded-lg shadow-2xl z-50">
         <div className="flex items-center justify-between p-3 border-b border-zion-slate-light">
@@ -361,7 +344,7 @@ export function AdvancedAICodeGenerator() {
           </div>
         </div>
       </div>);
-    }
+
     return (<div className={`fixed bg-white dark:bg-zion-slate border border-zion-slate-light rounded-lg shadow-2xl z-50 overflow-hidden transition-all duration-300 ${isFullscreen ? 'inset-4' : 'bottom-4 right-4 w-[1400px] h-[900px]'}`} ref={containerRef}>
       {/* Header */}
       <div className="flex items-center justify-between p-4 border-b border-zion-slate-light bg-gradient-to-r from-blue-600 to-purple-600 text-white">
@@ -715,4 +698,4 @@ export function AdvancedAICodeGenerator() {
           </div>)}
       </div>
     </div>);
-}
+}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}

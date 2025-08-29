@@ -64,7 +64,7 @@ const featuredPosts = [
         authorName: "Sarah Chen",
         authorAvatar: "https://i.pravatar.cc/150?img=5",
         authorRole: "Verified Talent"
-    }
+
 ];
 // Mock data for recent posts
 const recentPosts = [
@@ -154,7 +154,7 @@ const recentPosts = [
         authorName: "David Lin",
         authorAvatar: "https://i.pravatar.cc/150?img=11",
         authorRole: "Freelancer"
-    }
+
 ];
 export default function CommunityPage() {
     const { user } = useAuth();
@@ -199,4 +199,4 @@ export default function CommunityPage() {
         </Tabs>
       </div>
     </>);
-}
+}}}

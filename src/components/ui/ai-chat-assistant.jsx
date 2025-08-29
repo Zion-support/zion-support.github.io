@@ -1,7 +1,6 @@
 import React, { useState, useRef, useEffect, useCallback } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { MessageSquare, Send, Bot, User, X, Minimize2, Maximize2, Mic, MicOff, Settings, Brain, Paperclip, Smile } from 'lucide-react';
-import { Button } from './button';
+import { MessageSquare, Send, Bot, User, X, Minimize2, Maximize2, Mic, MicOff, Settings, Brain, Paperclip, Smile import { Button } from './button';
 export function AIChatAssistant({ enabled = true, className = "", onMessageSend, onAssistantResponse }) {
     const [isOpen, setIsOpen] = useState(false);
     const [isMinimized, setIsMinimized] = useState(false);
@@ -17,8 +16,8 @@ export function AIChatAssistant({ enabled = true, className = "", onMessageSend,
             metadata: {
                 confidence: 0.95,
                 suggestions: ['Tell me about your AI services', 'What cloud solutions do you offer?', 'How can I get started?']
-            }
-        }
+
+
     ]);
     const [inputValue, setInputValue] = useState('');
     const [isTyping, setIsTyping] = useState(false);
@@ -35,7 +34,7 @@ export function AIChatAssistant({ enabled = true, className = "", onMessageSend,
     useEffect(() => {
         if (isOpen && !isMinimized) {
             inputRef.current?.focus();
-        }
+
     }, [isOpen, isMinimized]);
     // Simulate AI typing
     useEffect(() => {
@@ -44,7 +43,7 @@ export function AIChatAssistant({ enabled = true, className = "", onMessageSend,
                 setIsTyping(false);
             }, 2000);
             return () => clearTimeout(timer);
-        }
+
     }, [isTyping]);
     // Generate AI response
     const generateAIResponse = (_userMessage) => {
@@ -68,7 +67,7 @@ export function AIChatAssistant({ enabled = true, className = "", onMessageSend,
                 {
                     content: "Getting started is easy! We begin with a free consultation to understand your needs, then create a customized roadmap for your digital transformation journey.",
                     suggestions: ['Schedule consultation', 'View case studies', 'Meet the team']
-                }
+
             ];
             const randomResponse = responses[Math.floor(Math.random() * responses.length)];
             const aiMessage = {
@@ -80,7 +79,7 @@ export function AIChatAssistant({ enabled = true, className = "", onMessageSend,
                 metadata: {
                     confidence: 0.85 + Math.random() * 0.1,
                     suggestions: randomResponse.suggestions
-                }
+
             };
             setMessages(prev => [...prev, aiMessage]);
             setIsTyping(false);
@@ -109,7 +108,7 @@ export function AIChatAssistant({ enabled = true, className = "", onMessageSend,
         if (e.key === 'Enter' && !e.shiftKey) {
             e.preventDefault();
             sendMessage();
-        }
+
     };
     // Toggle voice input
     const toggleVoiceInput = () => {
@@ -288,4 +287,4 @@ export function AIChatAssistant({ enabled = true, className = "", onMessageSend,
           </motion.div>)}
       </AnimatePresence>
     </div>);
-}
+</div></div></div></div></div></div></div>}}}}}}}}}

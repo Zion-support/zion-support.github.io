@@ -37,7 +37,7 @@ export function FeaturesSection() {
             title: "24/7 Support",
             description: "Round-the-clock technical support and maintenance services",
             color: "text-zion-purple"
-        }
+
     ];
     const containerVariants = {
         hidden: { opacity: 0 },
@@ -45,8 +45,8 @@ export function FeaturesSection() {
             opacity: 1,
             transition: {
                 staggerChildren: 0.1
-            }
-        }
+
+
     };
     const itemVariants = {
         hidden: { y: 20, opacity: 0 },
@@ -55,8 +55,8 @@ export function FeaturesSection() {
             opacity: 1,
             transition: {
                 duration: 0.5
-            }
-        }
+
+
     };
     return (<section className="py-20 bg-white relative overflow-hidden">
       {/* Background Elements */}
@@ -118,4 +118,4 @@ export function FeaturesSection() {
         </motion.div>
       </div>
     </section>);
-}
+}}}}}}

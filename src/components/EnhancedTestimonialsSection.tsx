@@ -9,8 +9,6 @@ import {
   Building,
   Users,
   Award
-} from 'lucide-react';
-
 interface Testimonial {
   id: string;
   name: string;
@@ -22,7 +20,6 @@ interface Testimonial {
   industry: string;
   results: string[];
   avatar: string;
-}
 
 const testimonials: Testimonial[] = [
   {
@@ -84,7 +81,7 @@ const testimonials: Testimonial[] = [
     industry: 'Cloud Services',
     results: ['40% cost reduction', '60% performance boost', 'Unified management'],
     avatar: '/images/avatars/lisa-park.jpg'
-  }
+
 ];
 
 export default function EnhancedTestimonialsSection() {
@@ -135,7 +132,7 @@ export default function EnhancedTestimonialsSection() {
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
-        >
+
           <h2 className="text-4xl sm:text-5xl font-bold text-white mb-6">
             What Our Clients Say
           </h2>
@@ -154,7 +151,7 @@ export default function EnhancedTestimonialsSection() {
               exit={{ opacity: 0, x: -100 }}
               transition={{ duration: 0.5 }}
               className="relative"
-            >
+
               {/* Main Testimonial Card */}
               <div className="bg-white/5 backdrop-blur-lg border border-white/20 rounded-3xl p-8 lg:p-12 relative overflow-hidden">
                 {/* Background gradient overlay */}
@@ -165,7 +162,7 @@ export default function EnhancedTestimonialsSection() {
                   className="absolute top-8 right-8 w-16 h-16 bg-zion-cyan/20 rounded-full flex items-center justify-center"
                   animate={{ rotate: [0, 360] }}
                   transition={{ duration: 20, repeat: Infinity }}
-                >
+
                   <Quote className="w-8 h-8 text-zion-cyan" />
                 </motion.div>
 
@@ -178,7 +175,7 @@ export default function EnhancedTestimonialsSection() {
                         initial={{ scale: 0 }}
                         animate={{ scale: 1 }}
                         transition={{ delay: index * 0.1 }}
-                      >
+
                         <Star className="w-6 h-6 text-yellow-400 fill-current" />
                       </motion.div>
                     ))}
@@ -198,7 +195,7 @@ export default function EnhancedTestimonialsSection() {
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ delay: 0.3 + index * 0.1 }}
                         className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-xl p-4 text-center"
-                      >
+
                         <p className="text-zion-cyan font-semibold">{result}</p>
                       </motion.div>
                     ))}
@@ -235,7 +232,7 @@ export default function EnhancedTestimonialsSection() {
               className="p-3 rounded-full bg-white/10 hover:bg-white/20 transition-colors duration-200 border border-white/20"
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.9 }}
-            >
+
               <ChevronLeft className="w-6 h-6 text-white" />
             </motion.button>
 
@@ -259,7 +256,7 @@ export default function EnhancedTestimonialsSection() {
               className="p-3 rounded-full bg-white/10 hover:bg-white/20 transition-colors duration-200 border border-white/20"
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.9 }}
-            >
+
               <ChevronRight className="w-6 h-6 text-white" />
             </motion.button>
           </div>
@@ -272,7 +269,7 @@ export default function EnhancedTestimonialsSection() {
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.3 }}
           className="mt-20"
-        >
+
           <div className="text-center">
             <h3 className="text-2xl font-bold text-white mb-8">
               Trusted by Industry Leaders
@@ -291,7 +288,7 @@ export default function EnhancedTestimonialsSection() {
                   viewport={{ once: true }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
                   className="text-center"
-                >
+
                   <div className="w-16 h-16 bg-zion-cyan/20 rounded-2xl flex items-center justify-center mx-auto mb-4 border border-zion-cyan/30">
                     <indicator.icon className="w-8 h-8 text-zion-cyan" />
                   </div>
@@ -310,7 +307,7 @@ export default function EnhancedTestimonialsSection() {
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.5 }}
           className="text-center mt-16"
-        >
+
           <div className="bg-gradient-to-r from-zion-cyan/20 to-zion-purple/20 border border-zion-cyan/30 rounded-3xl p-8 max-w-4xl mx-auto">
             <h3 className="text-3xl font-bold text-white mb-4">
               Ready to Join Our Success Stories?
@@ -322,13 +319,13 @@ export default function EnhancedTestimonialsSection() {
               <a
                 href="/contact"
                 className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-purple text-white font-semibold rounded-2xl hover:shadow-2xl hover:shadow-zion-cyan/25 transition-all duration-300 transform hover:-translate-y-1"
-              >
+
                 Start Your Transformation
               </a>
               <a
                 href="/case-studies"
                 className="inline-flex items-center px-8 py-4 border-2 border-zion-cyan/30 text-zion-cyan font-semibold rounded-2xl hover:bg-zion-cyan/10 transition-all duration-300"
-              >
+
                 View Case Studies
               </a>
             </div>
@@ -337,4 +334,4 @@ export default function EnhancedTestimonialsSection() {
       </div>
     </section>
   );
-}
+}}}}

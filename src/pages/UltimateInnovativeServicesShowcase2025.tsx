@@ -30,7 +30,6 @@ import {
   DollarSign,
   Clock,
   Shield as ShieldIcon
-} from 'lucide-react';
 import { ULTIMATE_INNOVATIVE_SERVICES_2025, SERVICE_CATEGORIES, SERVICE_SUBCATEGORIES } from '../data/ultimateInnovativeServices2025';
 
 export default function UltimateInnovativeServicesShowcase2025() {
@@ -44,11 +43,9 @@ export default function UltimateInnovativeServicesShowcase2025() {
 
     if (selectedCategory !== 'all') {
       filtered = filtered.filter(service => service.category === selectedCategory);
-    }
 
     if (selectedSubcategory !== 'all') {
       filtered = filtered.filter(service => service.subcategory === selectedSubcategory);
-    }
 
     if (searchTerm) {
       filtered = filtered.filter(service =>
@@ -56,7 +53,6 @@ export default function UltimateInnovativeServicesShowcase2025() {
         service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
         service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()))
       );
-    }
 
     // Sort services
     switch (sortBy) {
@@ -87,7 +83,6 @@ export default function UltimateInnovativeServicesShowcase2025() {
           const bIndex = innovationOrder.indexOf(b.innovationLevel.split(' - ')[0]);
           return aIndex - bIndex;
         });
-    }
 
     return filtered;
   }, [selectedCategory, selectedSubcategory, searchTerm, sortBy]);
@@ -105,7 +100,7 @@ export default function UltimateInnovativeServicesShowcase2025() {
       case 'Space Technology': return <Zap className="w-6 h-6" />;
       case 'Green Technology': return <BarChart3 className="w-6 h-6" />;
       default: return <Star className="w-6 h-6" />;
-    }
+
   };
 
   const getInnovationBadge = (level: string) => {
@@ -119,7 +114,7 @@ export default function UltimateInnovativeServicesShowcase2025() {
         return <span className="px-3 py-1 bg-blue-100 text-blue-800 text-xs font-semibold rounded-full">⚡ Advanced</span>;
       default:
         return <span className="px-3 py-1 bg-gray-100 text-gray-800 text-xs font-semibold rounded-full">🔬 Innovative</span>;
-    }
+
   };
 
   return (
@@ -132,7 +127,7 @@ export default function UltimateInnovativeServicesShowcase2025() {
               initial={{ opacity: 0, y: -20 }}
               animate={{ opacity: 1, y: 0 }}
               className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-600 bg-clip-text text-transparent"
-            >
+
               Ultimate Innovative Services 2025
             </motion.h1>
             <motion.p
@@ -140,7 +135,7 @@ export default function UltimateInnovativeServicesShowcase2025() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.2 }}
               className="mt-4 text-xl text-gray-600 max-w-3xl mx-auto"
-            >
+
               Discover the future of technology with our revolutionary micro SAAS services.
               From AI and quantum computing to space technology and biotechnology.
             </motion.p>
@@ -149,7 +144,7 @@ export default function UltimateInnovativeServicesShowcase2025() {
               animate={{ opacity: 1, scale: 1 }}
               transition={{ delay: 0.4 }}
               className="mt-6 flex flex-wrap justify-center gap-4"
-            >
+
               <div className="flex items-center gap-2 text-sm text-gray-600">
                 <CheckCircle className="w-5 h-5 text-green-500" />
                 <span>10 Revolutionary Services</span>
@@ -192,7 +187,7 @@ export default function UltimateInnovativeServicesShowcase2025() {
                   setSelectedSubcategory('all');
                 }}
                 className="px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-              >
+
                 <option value="all">All Categories</option>
                 {SERVICE_CATEGORIES.map(category => (
                   <option key={category} value={category}>{category}</option>
@@ -203,7 +198,7 @@ export default function UltimateInnovativeServicesShowcase2025() {
                 value={selectedSubcategory}
                 onChange={(e) => setSelectedSubcategory(e.target.value)}
                 className="px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-              >
+
                 <option value="all">All Subcategories</option>
                 {selectedCategory !== 'all' && SERVICE_SUBCATEGORIES[selectedCategory as keyof typeof SERVICE_SUBCATEGORIES]?.map(subcategory => (
                   <option key={subcategory} value={subcategory}>{subcategory}</option>
@@ -214,7 +209,7 @@ export default function UltimateInnovativeServicesShowcase2025() {
                 value={sortBy}
                 onChange={(e) => setSortBy(e.target.value)}
                 className="px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-              >
+
                 <option value="innovation">Sort by Innovation</option>
                 <option value="roi">Sort by ROI</option>
                 <option value="price-low">Price: Low to High</option>
@@ -236,7 +231,7 @@ export default function UltimateInnovativeServicesShowcase2025() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: index * 0.1 }}
               className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden border border-gray-100"
-            >
+
               {/* Service Header */}
               <div className="p-6 border-b border-gray-100">
                 <div className="flex items-start justify-between mb-4">
@@ -387,14 +382,14 @@ export default function UltimateInnovativeServicesShowcase2025() {
               <a
                 href={`tel:${ULTIMATE_INNOVATIVE_SERVICES_2025[0].contactInfo.phone}`}
                 className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors flex items-center justify-center gap-2"
-              >
+
                 <Phone className="w-5 h-5" />
                 Call Now
               </a>
               <a
                 href={`mailto:${ULTIMATE_INNOVATIVE_SERVICES_2025[0].contactInfo.email}`}
                 className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors flex items-center justify-center gap-2"
-              >
+
                 <Mail className="w-5 h-5" />
                 Email Us
               </a>
@@ -409,4 +404,4 @@ export default function UltimateInnovativeServicesShowcase2025() {
       </div>
     </div>
   );
-}
+}}}}}}}}

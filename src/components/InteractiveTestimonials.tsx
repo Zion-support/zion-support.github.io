@@ -1,8 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Star, Quote, ChevronLeft, ChevronRight, Play, Pause } from 'lucide-react';
-
-interface Testimonial {
+import { Star, Quote, ChevronLeft, ChevronRight, Play, Pause interface Testimonial {
   id: number;
   name: string;
   role: string;
@@ -11,7 +9,6 @@ interface Testimonial {
   rating: number;
   avatar: string;
   category: string;
-}
 
 const testimonials: Testimonial[] = [
   {
@@ -63,7 +60,7 @@ const testimonials: Testimonial[] = [
     rating: 5,
     avatar: "/images/avatars/lisa-park.jpg",
     category: "Supply Chain"
-  }
+
 ];
 
 export const InteractiveTestimonials: React.FC = () => {
@@ -129,7 +126,7 @@ export const InteractiveTestimonials: React.FC = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-        >
+
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
             What Our Clients Say
           </h2>
@@ -145,7 +142,7 @@ export const InteractiveTestimonials: React.FC = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.2 }}
-        >
+
           <button
             onClick={() => setSelectedCategory(null)}
             className={`px-6 py-3 rounded-full font-medium transition-all duration-300 ${
@@ -153,7 +150,7 @@ export const InteractiveTestimonials: React.FC = () => {
                 ? 'bg-gradient-to-r from-cyan-500 to-blue-500 text-white shadow-lg shadow-cyan-500/25'
                 : 'bg-white/10 text-gray-300 hover:bg-white/20 border border-white/20'
             }`}
-          >
+
             All Categories
           </button>
           {categories.map((category) => (
@@ -165,7 +162,7 @@ export const InteractiveTestimonials: React.FC = () => {
                   ? 'bg-gradient-to-r from-cyan-500 to-blue-500 text-white shadow-lg shadow-cyan-500/25'
                   : 'bg-white/10 text-gray-300 hover:bg-white/20 border border-white/20'
               }`}
-            >
+
               {category}
             </button>
           ))}
@@ -181,7 +178,7 @@ export const InteractiveTestimonials: React.FC = () => {
               animate={{ opacity: 1, x: 0 }}
               exit={{ opacity: 0, x: -100 }}
               transition={{ duration: 0.5 }}
-            >
+
               <div className="glass rounded-3xl p-8 md:p-12 border border-white/20 backdrop-blur-sm">
                 {/* Quote Icon */}
                 <div className="flex justify-center mb-8">
@@ -235,7 +232,7 @@ export const InteractiveTestimonials: React.FC = () => {
               onClick={prevTestimonial}
               className="w-12 h-12 rounded-full bg-white/10 border border-white/20 text-white hover:bg-white/20 transition-all duration-300 flex items-center justify-center group"
               aria-label="Previous testimonial"
-            >
+
               <ChevronLeft className="w-6 h-6 group-hover:scale-110 transition-transform duration-300" />
             </button>
 
@@ -243,7 +240,7 @@ export const InteractiveTestimonials: React.FC = () => {
               onClick={toggleAutoPlay}
               className="w-12 h-12 rounded-full bg-white/10 border border-white/20 text-white hover:bg-white/20 transition-all duration-300 flex items-center justify-center group"
               aria-label={isAutoPlaying ? "Pause auto-play" : "Start auto-play"}
-            >
+
               {isAutoPlaying ? (
                 <Pause className="w-6 h-6 group-hover:scale-110 transition-transform duration-300" />
               ) : (
@@ -255,7 +252,7 @@ export const InteractiveTestimonials: React.FC = () => {
               onClick={nextTestimonial}
               className="w-12 h-12 rounded-full bg-white/10 border border-white/20 text-white hover:bg-white/20 transition-all duration-300 flex items-center justify-center group"
               aria-label="Next testimonial"
-            >
+
               <ChevronRight className="w-6 h-6 group-hover:scale-110 transition-transform duration-300" />
             </button>
           </div>
@@ -284,7 +281,7 @@ export const InteractiveTestimonials: React.FC = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.4 }}
-        >
+
           <div className="text-center">
             <div className="text-3xl font-bold text-cyan-400 mb-2">98%</div>
             <div className="text-gray-300">Client Satisfaction</div>
@@ -305,6 +302,7 @@ export const InteractiveTestimonials: React.FC = () => {
       </div>
     </section>
   );
-};
+</div>};
 
 export default InteractiveTestimonials;
+}}}

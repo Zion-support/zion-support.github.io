@@ -31,7 +31,6 @@ import {
   Calendar,
   AlertTriangle,
   Star
-} from 'lucide-react';
 import { SEO } from '../../components/SEO';
 
 export default function AICustomerSuccessPrediction() {
@@ -55,7 +54,7 @@ export default function AICustomerSuccessPrediction() {
       icon: Zap,
       title: 'Automated Alerts',
       description: 'Intelligent notification system that alerts your team to at-risk customers and opportunities before they become critical.'
-    }
+
   ];
 
   const capabilities = [
@@ -82,7 +81,7 @@ export default function AICustomerSuccessPrediction() {
       description: 'Seamless integration with your existing CRM, support, and analytics tools',
       icon: Database,
       benefits: ['API-first design', 'Real-time sync', 'Custom connectors', 'Data validation']
-    }
+
   ];
 
   const useCases = [
@@ -109,7 +108,7 @@ export default function AICustomerSuccessPrediction() {
       description: 'Predict patient outcomes, optimize care plans, and improve treatment adherence',
       icon: Heart,
       metrics: ['Patient Outcomes', 'Treatment Adherence', 'Care Plan Success', 'Resource Optimization']
-    }
+
   ];
 
   const benefits = [
@@ -132,7 +131,7 @@ export default function AICustomerSuccessPrediction() {
       icon: Zap,
       title: 'Optimize Resource Allocation',
       description: 'Focus your team\'s efforts on high-impact activities and customers who need attention most.'
-    }
+
   ];
 
   const pricing = [
@@ -182,7 +181,7 @@ export default function AICustomerSuccessPrediction() {
       ],
       cta: 'Contact Sales',
       popular: false
-    }
+
   ];
 
   return (
@@ -201,7 +200,7 @@ export default function AICustomerSuccessPrediction() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-          >
+
             <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-purple-400 via-pink-400 to-red-400 bg-clip-text text-transparent mb-6">
               AI Customer Success Prediction
             </h1>
@@ -228,7 +227,7 @@ export default function AICustomerSuccessPrediction() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
-          >
+
             <h2 className="text-4xl font-bold text-white mb-6">
               Powerful AI-Powered Features
             </h2>
@@ -246,7 +245,7 @@ export default function AICustomerSuccessPrediction() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 className="bg-slate-800/50 p-8 rounded-xl border border-slate-700/50 hover:border-purple-400/50 transition-all duration-300 hover:scale-105"
-              >
+
                 <div className="w-16 h-16 bg-gradient-to-br from-purple-400/20 to-pink-500/20 rounded-xl flex items-center justify-center mb-6">
                   <feature.icon className="w-8 h-8 text-purple-400" />
                 </div>
@@ -266,7 +265,7 @@ export default function AICustomerSuccessPrediction() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
-          >
+
             <h2 className="text-4xl font-bold text-white mb-6">
               Platform Capabilities
             </h2>
@@ -284,7 +283,7 @@ export default function AICustomerSuccessPrediction() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 className="bg-slate-800/50 p-8 rounded-xl border border-slate-700/50 hover:border-purple-400/50 transition-all duration-300 hover:scale-105"
-              >
+
                 <div className="flex items-center space-x-4 mb-6">
                   <div className="w-16 h-16 bg-gradient-to-br from-purple-400/20 to-pink-500/20 rounded-xl flex items-center justify-center">
                     <capability.icon className="w-8 h-8 text-purple-400" />
@@ -314,7 +313,7 @@ export default function AICustomerSuccessPrediction() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
-          >
+
             <h2 className="text-4xl font-bold text-white mb-6">
               Industry Use Cases
             </h2>
@@ -332,7 +331,7 @@ export default function AICustomerSuccessPrediction() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 className="bg-slate-800/50 p-8 rounded-xl border border-slate-700/50 hover:border-purple-400/50 transition-all duration-300 hover:scale-105"
-              >
+
                 <div className="flex items-center space-x-4 mb-6">
                   <div className="w-16 h-16 bg-gradient-to-br from-purple-400/20 to-pink-500/20 rounded-xl flex items-center justify-center">
                     <useCase.icon className="w-8 h-8 text-purple-400" />
@@ -362,7 +361,7 @@ export default function AICustomerSuccessPrediction() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
-          >
+
             <h2 className="text-4xl font-bold text-white mb-6">
               Business Benefits
             </h2>
@@ -380,7 +379,7 @@ export default function AICustomerSuccessPrediction() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 className="bg-slate-800/50 p-6 rounded-xl border border-slate-700/50 hover:border-purple-400/50 transition-all duration-300 hover:scale-105 text-center"
-              >
+
                 <div className="w-16 h-16 bg-gradient-to-br from-purple-400/20 to-pink-500/20 rounded-xl flex items-center justify-center mx-auto mb-6">
                   <benefit.icon className="w-8 h-8 text-purple-400" />
                 </div>
@@ -400,7 +399,7 @@ export default function AICustomerSuccessPrediction() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
-          >
+
             <h2 className="text-4xl font-bold text-white mb-6">
               Transparent Pricing
             </h2>
@@ -422,7 +421,7 @@ export default function AICustomerSuccessPrediction() {
                     ? 'border-purple-400/50 bg-gradient-to-br from-purple-500/10 to-pink-500/10'
                     : 'border-slate-700/50 hover:border-purple-400/50'
                 }`}
-              >
+
                 {plan.popular && (
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                     <span className="bg-gradient-to-r from-purple-500 to-pink-500 text-white px-4 py-2 rounded-full text-sm font-semibold">
@@ -470,7 +469,7 @@ export default function AICustomerSuccessPrediction() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
-          >
+
             <h2 className="text-4xl font-bold text-white mb-6">
               Implementation Process
             </h2>
@@ -501,7 +500,7 @@ export default function AICustomerSuccessPrediction() {
                 step: '04',
                 title: 'Launch',
                 description: 'Go live with monitoring and ongoing optimization support'
-              }
+
             ].map((phase, index) => (
               <motion.div
                 key={index}
@@ -509,7 +508,7 @@ export default function AICustomerSuccessPrediction() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 className="text-center"
-              >
+
                 <div className="w-20 h-20 bg-gradient-to-br from-purple-400 to-pink-500 rounded-full flex items-center justify-center mx-auto mb-6 text-2xl font-bold text-white">
                   {phase.step}
                 </div>
@@ -528,7 +527,7 @@ export default function AICustomerSuccessPrediction() {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-          >
+
             <h2 className="text-4xl font-bold text-white mb-6">
               Ready to Transform Your Customer Success?
             </h2>
@@ -588,4 +587,4 @@ export default function AICustomerSuccessPrediction() {
       </section>
     </div>
   );
-}
+}}}}}}}}

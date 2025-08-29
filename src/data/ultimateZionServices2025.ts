@@ -6,7 +6,6 @@ export interface ServiceContact {
   email: string;
   website: string;
   address: string;
-}
 
 export interface MicroSaasService {
   id: number;
@@ -34,7 +33,6 @@ export interface MicroSaasService {
   growthRate: string;
   useCases: string[];
   technologies: string[];
-}
 
 export interface ITService {
   id: number;
@@ -59,7 +57,6 @@ export interface ITService {
   compliance: string[];
   useCases: string[];
   technologies: string[];
-}
 
 export interface AIService {
   id: number;
@@ -85,7 +82,6 @@ export interface AIService {
   marketSize: string;
   ethicalAI: string[];
   technologies: string[];
-}
 
 // Zion Tech Group Contact Information
 const zionContact: ServiceContact = {
@@ -480,7 +476,7 @@ export const ultimateMicroSaasServices2025: MicroSaasService[] = [
       "Performance monitoring"
     ],
     technologies: ["Multi-cloud", "Kubernetes", "Terraform", "Monitoring Tools"]
-  }
+
 ];
 
 // Ultimate IT Infrastructure Services 2025
@@ -619,7 +615,7 @@ export const ultimateITInfrastructureServices2025: ITService[] = [
       "Incident response setup"
     ],
     technologies: ["AI/ML", "Zero Trust", "Threat Intelligence", "Security Orchestration"]
-  }
+
 ];
 
 // Ultimate AI Services 2025
@@ -762,11 +758,11 @@ export const ultimateAIServices2025: AIService[] = [
     marketSize: "$15.3 billion",
     ethicalAI: ["Content safety", "Bias prevention", "Quality standards"],
     technologies: ["Natural Language Generation", "Multimodal AI", "Content Optimization", "Brand Voice AI"]
-  }
+
 ];
 
 export default {
   ultimateMicroSaasServices2025,
   ultimateITInfrastructureServices2025,
   ultimateAIServices2025
-};
+};}}}}}}}

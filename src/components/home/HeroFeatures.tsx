@@ -6,11 +6,9 @@ interface HeroFeature {
   title: string;
   description: string;
   gradient: string;
-}
 
 interface HeroFeaturesProps {
   features: HeroFeature[];
-}
 
 const HeroFeatures: React.FC<HeroFeaturesProps> = ({ features }) => {
   return (
@@ -19,7 +17,7 @@ const HeroFeatures: React.FC<HeroFeaturesProps> = ({ features }) => {
       initial={{ opacity: 0, y: 30 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.8, delay: 0.6 }}
-    >
+
       {features.map((feature, index) => (
         <motion.div
           key={feature.title}
@@ -33,7 +31,7 @@ const HeroFeatures: React.FC<HeroFeaturesProps> = ({ features }) => {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.6 + index * 0.1 }}
-        >
+
           {/* Animated background gradient */}
           <div className="absolute inset-0 bg-gradient-to-br from-zion-cyan/5 to-zion-blue/5 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
 
@@ -58,6 +56,6 @@ const HeroFeatures: React.FC<HeroFeaturesProps> = ({ features }) => {
       ))}
     </motion.div>
   );
-};
+</div></div></div>};
 
-export default HeroFeatures;
+export default HeroFeatures;}}

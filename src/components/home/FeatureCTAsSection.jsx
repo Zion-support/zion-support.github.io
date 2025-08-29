@@ -1,7 +1,5 @@
 import React from "react";
-import { ArrowRight, Users, Zap, Play, Download } from "lucide-react";
-
-export const FeatureCTAsSection = () => {
+import { ArrowRight, Users, Zap, Play, Download export const FeatureCTAsSection = () => {
   const ctaItems = [
     {
       title: "Watch Demo",
@@ -34,7 +32,7 @@ export const FeatureCTAsSection = () => {
       href: "/contact",
       color: "from-orange-600 to-red-600",
       hoverColor: "from-orange-700 to-red-700"
-    }
+
   ];
 
   return (
@@ -55,7 +53,7 @@ export const FeatureCTAsSection = () => {
               key={index}
               href={item.href}
               className="group bg-slate-800/50 border border-white/10 rounded-xl p-6 text-center hover:border-white/20 transition-all duration-300 hover:transform hover:scale-105"
-            >
+
               <div className={`w-16 h-16 bg-gradient-to-r ${item.color} rounded-full flex items-center justify-center mx-auto mb-4 group-hover:shadow-lg transition-all duration-300`}>
                 <item.icon className="w-8 h-8 text-white"/>
               </div>
@@ -83,7 +81,7 @@ export const FeatureCTAsSection = () => {
           <a
             href="/contact"
             className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-orange-600 to-red-600 text-white font-semibold rounded-lg hover:from-orange-700 hover:to-red-700 transition-all duration-300 shadow-lg hover:shadow-xl"
-          >
+
             Talk to an Expert
             <ArrowRight className="w-5 h-5 ml-2"/>
           </a>
@@ -91,4 +89,4 @@ export const FeatureCTAsSection = () => {
       </div>
     </section>
   );
-};
+};}}

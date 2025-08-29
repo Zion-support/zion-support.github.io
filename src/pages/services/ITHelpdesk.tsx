@@ -1,6 +1,4 @@
-import { LifeBuoy, Ticket, Cpu, Shield, Clock, ArrowRight, Check, Phone, Mail } from 'lucide-react';
-
-export default function ITHelpdesk() {
+import { LifeBuoy, Ticket, Cpu, Shield, Clock, ArrowRight, Check, Phone, Mail export default function ITHelpdesk() {
   const features = [
     'Ticketing with SLA and automation rules',
     'Self-service knowledge base and chat widget',
@@ -77,5 +75,4 @@ export default function ITHelpdesk() {
       </section>
     </div>
   );
-}
-
+}}

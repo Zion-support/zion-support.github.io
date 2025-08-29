@@ -31,7 +31,6 @@ import {
   Smartphone,
   Settings,
   BarChart
-} from "lucide-react";
 export default function MicroSAASServicesPage() {
   const microSAASServices = [
     {
@@ -369,7 +368,7 @@ export default function MicroSAASServicesPage() {
       freeTrial: "21 days",
       rating: 4.9,
       reviewCount: 167
-    }
+
   ];
   const categories = [
     "All Services",
@@ -393,7 +392,7 @@ export default function MicroSAASServicesPage() {
       setFilteredServices(microSAASServices);
     } else {
       setFilteredServices(microSAASServices.filter(service => service.category === selectedCategory));
-    }
+
   }, [selectedCategory]);
   return (
     <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-slate to-zion-blue-dark">
@@ -452,7 +451,7 @@ export default function MicroSAASServicesPage() {
                     ? "bg-zion-purple text-white"
                     : "border-zion-cyan text-zion-cyan hover:bg-zion-cyan/10"
                 }`}
-              >
+
                 {category}
               </Button>
             ))}
@@ -562,4 +561,4 @@ export default function MicroSAASServicesPage() {
       </div>
     </div>
   );
-}
+</Card></Card></Card></Card></Card>}}}}

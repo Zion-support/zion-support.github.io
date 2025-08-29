@@ -18,7 +18,6 @@ export const getCartFromStorage = () => {
 
     if (!cartData || !expiryData) {
       return [];
-    }
 
     const expiry = parseInt(expiryData);
     const now = Date.now();
@@ -27,13 +26,12 @@ export const getCartFromStorage = () => {
     if (now > expiry) {
       clearCartFromStorage();
       return [];
-    }
 
     return JSON.parse(cartData);
   } catch (error) {
-    // console.error('Error reading cart from storage:', error);
+    // // // console.error('Error reading cart from storage:', error);
     return [];
-  }
+
 };
 
 /**
@@ -46,8 +44,8 @@ export const saveCartToStorage = (cart) => {
     localStorage.setItem(CART_STORAGE_KEY, JSON.stringify(cart));
     localStorage.setItem(CART_EXPIRY_KEY, expiry.toString());
   } catch (error) {
-    // console.error('Error saving cart to storage:', error);
-  }
+    // // // console.error('Error saving cart to storage:', error);
+
 };
 
 /**
@@ -58,8 +56,8 @@ export const clearCartFromStorage = () => {
     localStorage.removeItem(CART_STORAGE_KEY);
     localStorage.removeItem(CART_EXPIRY_KEY);
   } catch (error) {
-    // console.error('Error clearing cart from storage:', error);
-  }
+    // // // console.error('Error clearing cart from storage:', error);
+
 };
 
 /**
@@ -70,9 +68,8 @@ export const clearCartFromStorage = () => {
  */
 export const addToCart = (currentCart, item) => {
   if (!item || !item.id) {
-    // console.error('Invalid item provided to addToCart');
+    // // // console.error('Invalid item provided to addToCart');
     return currentCart;
-  }
 
   const existingItemIndex = currentCart.findIndex(cartItem => cartItem.id === item.id);
 
@@ -91,7 +88,7 @@ export const addToCart = (currentCart, item) => {
       quantity: item.quantity || 1,
       addedAt: new Date().toISOString()
     }];
-  }
+
 };
 
 /**
@@ -114,7 +111,6 @@ export const removeFromCart = (currentCart, itemId) => {
 export const updateCartItemQuantity = (currentCart, itemId, quantity) => {
   if (quantity <= 0) {
     return removeFromCart(currentCart, itemId);
-  }
 
   return currentCart.map(item =>
     item.id === itemId
@@ -136,7 +132,6 @@ export const calculateCartTotal = (cart) => {
       total: 0,
       itemCount: 0
     };
-  }
 
   const subtotal = cart.reduce((sum, item) => {
     const price = parseFloat(item.price) || 0;
@@ -206,7 +201,6 @@ export const validateCartItem = (item) => {
 export const mergeCarts = (cart1, cart2) => {
   if (!Array.isArray(cart1) || !Array.isArray(cart2)) {
     return Array.isArray(cart1) ? cart1 : (Array.isArray(cart2) ? cart2 : []);
-  }
 
   const mergedCart = [...cart1];
 
@@ -223,7 +217,7 @@ export const mergeCarts = (cart1, cart2) => {
         ...item2,
         addedAt: new Date().toISOString()
       });
-    }
+
   });
 
   return mergedCart;
@@ -238,7 +232,6 @@ export const mergeCarts = (cart1, cart2) => {
 export const formatPrice = (price, currency = 'USD') => {
   if (typeof price !== 'number' || isNaN(price)) {
     return '$0.00';
-  }
 
   return new Intl.NumberFormat('en-US', {
     style: 'currency',
@@ -273,9 +266,9 @@ export const exportCartData = (cart) => {
   try {
     return JSON.stringify(cart, null, 2);
   } catch (error) {
-    // console.error('Error exporting cart data:', error);
+    // // // console.error('Error exporting cart data:', error);
     return '[]';
-  }
+
 };
 
 /**
@@ -288,12 +281,12 @@ export const importCartData = (cartData) => {
     const parsed = JSON.parse(cartData);
     if (Array.isArray(parsed)) {
       return parsed.filter(item => validateCartItem(item));
-    }
+
     return [];
   } catch (error) {
-    // console.error('Error importing cart data:', error);
+    // // // console.error('Error importing cart data:', error);
     return [];
-  }
+
 };
 
 /**
@@ -304,7 +297,7 @@ export const importCartData = (cartData) => {
 export const getCartKey = (userId = null) => {
   if (userId) {
     return `zion_cart_${userId}`;
-  }
+
   return CART_STORAGE_KEY;
 };
 
@@ -316,4 +309,4 @@ export const getCartKey = (userId = null) => {
  */
 export const mergeCartItems = (cart1, cart2) => {
   return mergeCarts(cart1, cart2);
-};
+};}}}}}}}}}}}}}}}}

@@ -1,7 +1,5 @@
 import React, { useState } from 'react';
-import { Code, Play, Copy, Download, BookOpen, Search, Filter, ExternalLink, ArrowRight, Brain, Cloud, Shield, Database, Zap, Globe, Target, TrendingUp, Award, CheckCircle, Calendar, MapPin, DollarSign, FileText, Lightbulb, Microscope, Rocket, Network, Cpu, Lock, BarChart3, Palette, Smartphone, Eye, Star, Terminal, Settings, Zap as ZapIcon, RefreshCw, CheckCircle2, AlertCircle, Info } from 'lucide-react';
-
-export default function ApiPlayground() {
+import { Code, Play, Copy, Download, BookOpen, Search, Filter, ExternalLink, ArrowRight, Brain, Cloud, Shield, Database, Zap, Globe, Target, TrendingUp, Award, CheckCircle, Calendar, MapPin, DollarSign, FileText, Lightbulb, Microscope, Rocket, Network, Cpu, Lock, BarChart3, Palette, Smartphone, Eye, Star, Terminal, Settings, Zap as ZapIcon, RefreshCw, CheckCircle2, AlertCircle, Info export default function ApiPlayground() {
   const [searchQuery, setSearchQuery] = useState('');
   const [activeCategory, setActiveCategory] = useState('all');
   const [activeMethod, setActiveMethod] = useState('all');
@@ -93,7 +91,7 @@ export default function ApiPlayground() {
             type: "compute",
             status: "running",
             region: "us-east-1"
-          }
+
         ],
         total: 1
       },
@@ -202,14 +200,14 @@ export default function ApiPlayground() {
             location: "building-a",
             status: "active",
             last_reading: 22.5
-          }
+
         ],
         total: 1
       },
       documentation: 'https://docs.ziontechgroup.com/api/iot-devices',
       sdk: 'https://github.com/ziontechgroup/iot-sdk',
       featured: false
-    }
+
   ];
 
   // Update counts
@@ -245,7 +243,7 @@ export default function ApiPlayground() {
       case 'beta': return 'text-yellow-400';
       case 'alpha': return 'text-red-400';
       default: return 'text-zion-slate-light';
-    }
+
   };
 
   const handleApiSelect = (api: any) => {
@@ -332,7 +330,7 @@ export default function ApiPlayground() {
                           ? 'bg-zion-cyan text-zion-slate-dark'
                           : 'bg-zion-slate text-zion-slate-light hover:bg-zion-slate-light hover:text-white'
                       }`}
-                    >
+
                       {category.icon}
                       {category.name} ({category.count})
                     </button>
@@ -350,7 +348,7 @@ export default function ApiPlayground() {
                           ? 'bg-zion-purple text-white'
                           : 'bg-zion-slate text-zion-slate-light hover:bg-zion-slate-light hover:text-white'
                       }`}
-                    >
+
                       {method.name} ({method.count})
                     </button>
                   ))}
@@ -370,7 +368,7 @@ export default function ApiPlayground() {
                       className={`bg-zion-slate border border-zion-slate-light rounded-lg p-4 cursor-pointer hover:border-zion-cyan transition-colors ${
                         selectedApi?.id === api.id ? 'border-zion-cyan ring-2 ring-zion-cyan/20' : ''
                       }`}
-                    >
+
                       <div className="flex items-start justify-between mb-3">
                         <div className="flex items-center gap-2">
                           {getCategoryIcon(api.category)}
@@ -444,7 +442,7 @@ export default function ApiPlayground() {
                             ? 'text-zion-cyan border-b-2 border-zion-cyan'
                             : 'text-zion-slate-light hover:text-white'
                         }`}
-                      >
+
                         Playground
                       </button>
                       <button
@@ -454,7 +452,7 @@ export default function ApiPlayground() {
                             ? 'text-zion-cyan border-b-2 border-zion-cyan'
                             : 'text-zion-slate-light hover:text-white'
                         }`}
-                      >
+
                         Documentation
                       </button>
                       <button
@@ -464,7 +462,7 @@ export default function ApiPlayground() {
                             ? 'text-zion-cyan border-b-2 border-zion-cyan'
                             : 'text-zion-slate-light hover:text-white'
                           }`}
-                      >
+
                         SDK
                       </button>
                     </div>
@@ -482,7 +480,7 @@ export default function ApiPlayground() {
                                 <button
                                   onClick={() => copyToClipboard(requestBody)}
                                   className="text-zion-cyan hover:text-zion-cyan-light transition-colors"
-                                >
+
                                   <Copy className="w-4 h-4" />
                                 </button>
                               </div>
@@ -501,7 +499,7 @@ export default function ApiPlayground() {
                               onClick={handleTestApi}
                               disabled={isLoading}
                               className="bg-zion-cyan text-zion-slate-dark px-8 py-3 rounded-lg font-semibold hover:bg-zion-cyan-light transition-colors disabled:opacity-50 disabled:cursor-not-allowed inline-flex items-center gap-2"
-                            >
+
                               {isLoading ? (
                                 <>
                                   <RefreshCw className="w-5 h-5 animate-spin" />
@@ -527,13 +525,13 @@ export default function ApiPlayground() {
                                     <button
                                       onClick={() => copyToClipboard(responseData)}
                                       className="text-zion-cyan hover:text-zion-cyan-light transition-colors"
-                                    >
+
                                       <Copy className="w-4 h-4" />
                                     </button>
                                     <button
                                       onClick={downloadResponse}
                                       className="text-zion-cyan hover:text-zion-cyan-light transition-colors"
-                                    >
+
                                       <Download className="w-4 h-4" />
                                     </button>
                                   </div>
@@ -577,7 +575,7 @@ export default function ApiPlayground() {
                               target="_blank"
                               rel="noopener noreferrer"
                               className="bg-zion-purple text-white px-6 py-3 rounded-lg font-semibold hover:bg-zion-purple-light transition-colors inline-flex items-center gap-2"
-                            >
+
                               <BookOpen className="w-5 h-5" />
                               View Full Documentation
                             </a>
@@ -601,7 +599,7 @@ export default function ApiPlayground() {
                                   target="_blank"
                                   rel="noopener noreferrer"
                                   className="bg-zion-cyan text-zion-slate-dark px-6 py-3 rounded-lg font-semibold hover:bg-zion-cyan-light transition-colors inline-flex items-center gap-2"
-                                >
+
                                   <ExternalLink className="w-5 h-5" />
                                   View SDK
                                 </a>
@@ -648,4 +646,4 @@ export default function ApiPlayground() {
       </div>
     </div>
   );
-}
+}}}}}}

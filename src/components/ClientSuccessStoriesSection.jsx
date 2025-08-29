@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Trophy, TrendingUp, Users, DollarSign, Clock, Star, ArrowRight, Building } from 'lucide-react';
-const successStories = [
+import { Trophy, TrendingUp, Users, DollarSign, Clock, Star, ArrowRight, Building const successStories = [
     {
         id: 1,
         client: "TechFlow Solutions",
@@ -175,7 +174,7 @@ const successStories = [
         role: "Chief Technology Officer",
         rating: 5,
         featured: false
-    }
+
 ];
 const industryStats = [
     { industry: "FinTech", projects: 45, successRate: "98%", avgROI: "340%" },
@@ -203,8 +202,8 @@ export function ClientSuccessStoriesSection() {
             transition: {
                 staggerChildren: 0.15,
                 delayChildren: 0.1
-            }
-        }
+
+
     };
     const itemVariants = {
         hidden: { y: 30, opacity: 0 },
@@ -214,8 +213,8 @@ export function ClientSuccessStoriesSection() {
             transition: {
                 duration: 0.6,
                 ease: "easeOut"
-            }
-        }
+
+
     };
     return (<section className="py-20 bg-gradient-to-br from-zion-slate-dark via-zion-blue-dark to-zion-purple relative overflow-hidden">
       {/* Background decorative elements */}
@@ -415,4 +414,4 @@ export function ClientSuccessStoriesSection() {
         </motion.div>
       </div>
     </section>);
-}
+}}}}}}}

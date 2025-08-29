@@ -38,7 +38,7 @@ export interface InnovativeAgricultureService {
   customers: number;
   rating: number;
   reviews: number;
-}
+
 const contact = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
@@ -270,5 +270,5 @@ export const innovativeAgricultureServices: InnovativeAgricultureService[] = [
     customers: 123,
     rating: 4.6,
     reviews: 89
-  }
-];
+
+];}}

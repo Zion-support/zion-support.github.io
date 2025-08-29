@@ -23,7 +23,7 @@ export interface EnterpriseITBreakthroughService2029 {
   benefits: string[];
   useCases: string[];
   enterpriseCapabilities: string[];
-}
+
 export const enterpriseITBreakthroughServices2029: EnterpriseITBreakthroughService2029[] = [
   {
     id: "ai-business-intelligence-suite",
@@ -274,5 +274,5 @@ export const enterpriseITBreakthroughServices2029: EnterpriseITBreakthroughServi
       "Incident response",
       "Compliance management"
     ]
-  }
-];
+
+];}}

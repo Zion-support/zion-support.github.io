@@ -608,5 +608,6 @@ export const ADDITIONAL_INNOVATIVE_SERVICES_2025 = [
         dataRetention: "10 years",
         uptime: "99.99%",
         securityFeatures: ["End-to-end encryption", "Multi-factor authentication", "Role-based access control", "Audit logging"]
-    }
+
 ];
+}

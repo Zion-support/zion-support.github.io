@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Search, Star, Phone, Mail, Globe, CheckCircle, TrendingUp, Users, Shield, Zap } from 'lucide-react';
-import { Button } from '@/components/ui/button';
+import { Search, Star, Phone, Mail, Globe, CheckCircle, TrendingUp, Users, Shield, Zap import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Badge } from '@/components/ui/badge';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
@@ -18,11 +17,11 @@ export default function ExpandedServicesPage() {
             filtered = filtered.filter(service => service.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
                 service.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
                 service.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase())));
-        }
+
         // Filter by category
         if (selectedCategory !== 'all') {
             filtered = filtered.filter(service => service.category === selectedCategory);
-        }
+
         // Sort services
         filtered.sort((a, b) => {
             if (sortBy === 'rating')
@@ -42,7 +41,7 @@ export default function ExpandedServicesPage() {
             case 'IT Services': return '💻';
             case 'Digital Services': return '🚀';
             default: return '⚡';
-        }
+
     };
     const getPricingModelColor = (model) => {
         switch (model) {
@@ -51,7 +50,7 @@ export default function ExpandedServicesPage() {
             case 'one-time': return 'bg-green-100 text-green-800';
             case 'usage-based': return 'bg-orange-100 text-orange-800';
             default: return 'bg-gray-100 text-gray-800';
-        }
+
     };
     return (<div className="min-h-screen bg-background">
       {/* Hero Section */}
@@ -313,4 +312,4 @@ export default function ExpandedServicesPage() {
 
       <TrustedBySection />
     </div>);
-}
+</Card></Card></Card></Card></Card></Card></Card></Card>}}}}}}

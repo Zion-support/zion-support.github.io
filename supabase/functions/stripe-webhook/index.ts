@@ -19,15 +19,16 @@ serve(async (req) => {
       event = stripe.webhooks.constructEvent(body, signature, webhookSecret);
     } catch (err) {
       return new Response(`Webhook Error: ${err.message}`, { status: 400 });
-    }
+
     if (event.type === "checkout.session.completed") {
       const session = event.data.object as Stripe.Checkout.Session;
       const orderId = session.metadata?.orderId;
       if (orderId) {
         await supabase.from("orders").update({ status: "paid" }).eq("id", orderId);
-      }
-    }
+
+
     return new Response(JSON.stringify({ received: true }), { status: 200 });
-  }
+
   return new Response("Not found", { status: 404 });
 });
+}}}}

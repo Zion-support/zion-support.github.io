@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Activity, AlertCircle, CheckCircle, Clock, Globe, Search, Shield, Zap, Eye, Users, TrendingUp, AlertTriangle } from 'lucide-react';
-export function SiteHealthDashboard() {
+import { Activity, AlertCircle, CheckCircle, Clock, Globe, Search, Shield, Zap, Eye, Users, TrendingUp, AlertTriangle export function SiteHealthDashboard() {
     const [healthData, setHealthData] = useState([]);
     const [overallScore, setOverallScore] = useState(0);
     const [isLoading, setIsLoading] = useState(true);
@@ -40,7 +39,7 @@ export function SiteHealthDashboard() {
                             value: 85,
                             status: 'good',
                             description: 'Overall Google Core Web Vitals performance',
-                        }
+
                     ]
                 },
                 {
@@ -79,7 +78,7 @@ export function SiteHealthDashboard() {
                             value: 85,
                             status: 'good',
                             description: 'Structured data implementation',
-                        }
+
                     ]
                 },
                 {
@@ -111,7 +110,7 @@ export function SiteHealthDashboard() {
                             value: 89,
                             status: 'good',
                             description: 'Screen reader compatibility',
-                        }
+
                     ]
                 },
                 {
@@ -143,7 +142,7 @@ export function SiteHealthDashboard() {
                             value: 95,
                             status: 'excellent',
                             description: 'CSP header implementation',
-                        }
+
                     ]
                 },
                 {
@@ -176,7 +175,7 @@ export function SiteHealthDashboard() {
                             value: 89,
                             status: 'good',
                             description: 'Recently updated content percentage',
-                        }
+
                     ]
                 },
                 {
@@ -207,9 +206,9 @@ export function SiteHealthDashboard() {
                             value: 77,
                             status: 'good',
                             description: '404 pages and error handling',
-                        }
+
                     ]
-                }
+
             ];
             setHealthData(healthCategories);
             // Calculate overall score
@@ -226,7 +225,7 @@ export function SiteHealthDashboard() {
             case 'warning': return 'text-yellow-500 bg-yellow-50 border-yellow-200';
             case 'critical': return 'text-red-500 bg-red-50 border-red-200';
             default: return 'text-gray-500 bg-gray-50 border-gray-200';
-        }
+
     };
     const getStatusIcon = (status) => {
         switch (status) {
@@ -235,7 +234,7 @@ export function SiteHealthDashboard() {
             case 'warning': return <AlertTriangle className="w-4 h-4"/>;
             case 'critical': return <AlertCircle className="w-4 h-4"/>;
             default: return <Clock className="w-4 h-4"/>;
-        }
+
     };
     const getScoreColor = (score) => {
         if (score >= 90)
@@ -254,7 +253,7 @@ export function SiteHealthDashboard() {
           <p className="text-gray-600">Performing comprehensive health check...</p>
         </div>
       </div>);
-    }
+
     return (<div className="max-w-7xl mx-auto p-6 space-y-8">
       {/* Header */}
       <div className="text-center">
@@ -391,4 +390,4 @@ export function SiteHealthDashboard() {
         </div>
       </div>
     </div>);
-}
+}}}}}}}}}}}}

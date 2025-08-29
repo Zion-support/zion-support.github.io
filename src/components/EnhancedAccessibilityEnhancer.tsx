@@ -1,15 +1,15 @@
 import React, { useState, useEffect, useCallback, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { 
-  Eye, 
-  EyeOff, 
-  Volume2, 
-  VolumeX, 
-  Keyboard, 
-  MousePointer, 
-  Accessibility, 
-  CheckCircle, 
-  AlertTriangle, 
+import {
+  Eye,
+  EyeOff,
+  Volume2,
+  VolumeX,
+  Keyboard,
+  MousePointer,
+  Accessibility,
+  CheckCircle,
+  AlertTriangle,
   X,
   Settings,
   Contrast,
@@ -22,8 +22,6 @@ import {
   Users,
   Smartphone,
   Monitor
-} from 'lucide-react';
-
 interface AccessibilityFeature {
   id: string;
   name: string;
@@ -31,7 +29,6 @@ interface AccessibilityFeature {
   enabled: boolean;
   category: 'visual' | 'motor' | 'cognitive' | 'auditory';
   wcagLevel: 'A' | 'AA' | 'AAA';
-}
 
 interface AccessibilityAudit {
   id: string;
@@ -40,7 +37,6 @@ interface AccessibilityAudit {
   element: string;
   recommendation: string;
   wcagCriteria: string;
-}
 
 export default function EnhancedAccessibilityEnhancer() {
   const [isOpen, setIsOpen] = useState(false);
@@ -54,7 +50,7 @@ export default function EnhancedAccessibilityEnhancer() {
   const [screenReaderMode, setScreenReaderMode] = useState(false);
   const [keyboardNavigation, setKeyboardNavigation] = useState(true);
   const [colorBlindMode, setColorBlindMode] = useState(false);
-  
+
   const accessibilityFeatures: AccessibilityFeature[] = [
     {
       id: 'high-contrast',
@@ -111,7 +107,7 @@ export default function EnhancedAccessibilityEnhancer() {
       enabled: false,
       category: 'visual',
       wcagLevel: 'AA'
-    }
+
   ];
 
   // Apply accessibility features
@@ -125,7 +121,7 @@ export default function EnhancedAccessibilityEnhancer() {
         newSet.add(featureId);
       } else {
         newSet.delete(featureId);
-      }
+
       return newSet;
     });
 
@@ -138,17 +134,17 @@ export default function EnhancedAccessibilityEnhancer() {
         } else {
           document.documentElement.classList.remove('high-contrast');
           setContrastMode('normal');
-        }
+
         break;
-      
+
       case 'large-text':
         if (enabled) {
           setFontSize(20);
         } else {
           setFontSize(16);
-        }
+
         break;
-      
+
       case 'reduced-motion':
         if (enabled) {
           document.documentElement.classList.add('reduced-motion');
@@ -156,25 +152,25 @@ export default function EnhancedAccessibilityEnhancer() {
         } else {
           document.documentElement.classList.remove('reduced-motion');
           setReducedMotion(false);
-        }
+
         break;
-      
+
       case 'focus-indicator':
         setFocusIndicator(enabled);
         break;
-      
+
       case 'keyboard-navigation':
         setKeyboardNavigation(enabled);
         break;
-      
+
       case 'screen-reader':
         setScreenReaderMode(enabled);
         break;
-      
+
       case 'color-blind-friendly':
         setColorBlindMode(enabled);
         break;
-    }
+
   }, [accessibilityFeatures]);
 
   // Accessibility audit
@@ -194,7 +190,7 @@ export default function EnhancedAccessibilityEnhancer() {
           recommendation: 'Add descriptive alt text or aria-label',
           wcagCriteria: '1.1.1 Non-text Content (A)'
         });
-      }
+
     });
 
     // Check for proper heading structure
@@ -211,7 +207,7 @@ export default function EnhancedAccessibilityEnhancer() {
           recommendation: 'Maintain proper heading hierarchy (h1 → h2 → h3)',
           wcagCriteria: '1.3.1 Info and Relationships (A)'
         });
-      }
+
       previousLevel = level;
     });
 
@@ -221,7 +217,7 @@ export default function EnhancedAccessibilityEnhancer() {
       const id = control.getAttribute('id');
       const label = document.querySelector(`label[for="${id}"]`);
       const ariaLabel = control.getAttribute('aria-label');
-      
+
       if (!label && !ariaLabel && !control.getAttribute('aria-labelledby')) {
         results.push({
           id: `label-${index}`,
@@ -231,7 +227,7 @@ export default function EnhancedAccessibilityEnhancer() {
           recommendation: 'Add label, aria-label, or aria-labelledby',
           wcagCriteria: '3.3.2 Labels or Instructions (A)'
         });
-      }
+
     });
 
     // Check for color contrast (simplified)
@@ -240,7 +236,7 @@ export default function EnhancedAccessibilityEnhancer() {
       const style = window.getComputedStyle(element);
       const color = style.color;
       const backgroundColor = style.backgroundColor;
-      
+
       // Simple contrast check (this is a simplified version)
       if (color === backgroundColor) {
         results.push({
@@ -251,7 +247,7 @@ export default function EnhancedAccessibilityEnhancer() {
           recommendation: 'Ensure sufficient color contrast (4.5:1 for normal text)',
           wcagCriteria: '1.4.3 Contrast (Minimum) (AA)'
         });
-      }
+
     });
 
     // Check for keyboard navigation
@@ -267,12 +263,12 @@ export default function EnhancedAccessibilityEnhancer() {
           recommendation: 'Ensure element is keyboard accessible or hide with aria-hidden',
           wcagCriteria: '2.1.1 Keyboard (A)'
         });
-      }
+
     });
 
     // Simulate audit time
     await new Promise(resolve => setTimeout(resolve, 2000));
-    
+
     setAuditResults(results);
     setIsAuditing(false);
   }, []);
@@ -288,7 +284,7 @@ export default function EnhancedAccessibilityEnhancer() {
       document.documentElement.classList.add('focus-visible');
     } else {
       document.documentElement.classList.remove('focus-visible');
-    }
+
   }, [focusIndicator]);
 
   // Apply keyboard navigation
@@ -297,7 +293,7 @@ export default function EnhancedAccessibilityEnhancer() {
       document.documentElement.classList.add('keyboard-navigation');
     } else {
       document.documentElement.classList.remove('keyboard-navigation');
-    }
+
   }, [keyboardNavigation]);
 
   // Apply color blind mode
@@ -306,7 +302,7 @@ export default function EnhancedAccessibilityEnhancer() {
       document.documentElement.classList.add('color-blind-friendly');
     } else {
       document.documentElement.classList.remove('color-blind-friendly');
-    }
+
   }, [colorBlindMode]);
 
   // Apply screen reader mode
@@ -318,7 +314,7 @@ export default function EnhancedAccessibilityEnhancer() {
     } else {
       document.documentElement.classList.remove('screen-reader-mode');
       document.documentElement.removeAttribute('aria-live');
-    }
+
   }, [screenReaderMode]);
 
   return (
@@ -330,7 +326,7 @@ export default function EnhancedAccessibilityEnhancer() {
         whileHover={{ scale: 1.1 }}
         whileTap={{ scale: 0.95 }}
         aria-label="Open Accessibility Settings"
-      >
+
         <Accessibility className="w-6 h-6 text-white" />
         <div className="absolute -top-2 -right-2 w-3 h-3 bg-green-500 rounded-full animate-pulse" />
       </motion.button>
@@ -343,13 +339,13 @@ export default function EnhancedAccessibilityEnhancer() {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/50 backdrop-blur-sm"
-          >
+
             <motion.div
               initial={{ scale: 0.9, opacity: 0 }}
               animate={{ scale: 1, opacity: 1 }}
               exit={{ scale: 0.9, opacity: 0 }}
               className="bg-white dark:bg-zion-slate-900 rounded-2xl shadow-2xl w-full max-w-6xl max-h-[90vh] overflow-hidden"
-            >
+
               {/* Header */}
               <div className="flex items-center justify-between p-6 border-b border-gray-200 dark:border-zion-slate-700">
                 <div className="flex items-center space-x-3">
@@ -368,7 +364,7 @@ export default function EnhancedAccessibilityEnhancer() {
                 <button
                   onClick={() => setIsOpen(false)}
                   className="p-2 hover:bg-gray-100 dark:hover:bg-zion-slate-800 rounded-lg transition-colors"
-                >
+
                   <X className="w-6 h-6" />
                 </button>
               </div>
@@ -380,31 +376,31 @@ export default function EnhancedAccessibilityEnhancer() {
                   <button
                     onClick={() => setFontSize(prev => Math.min(prev + 2, 24))}
                     className="p-4 bg-gradient-to-r from-blue-500 to-blue-600 text-white rounded-xl hover:from-blue-600 hover:to-blue-700 transition-all"
-                  >
+
                     <ZoomIn className="w-6 h-6 mx-auto mb-2" />
                     <span className="text-sm font-medium">Increase Text</span>
                   </button>
-                  
+
                   <button
                     onClick={() => setFontSize(prev => Math.max(prev - 2, 12))}
                     className="p-4 bg-gradient-to-r from-green-500 to-green-600 text-white rounded-xl hover:from-green-600 hover:to-green-700 transition-all"
-                  >
+
                     <ZoomOut className="w-6 h-6 mx-auto mb-2" />
                     <span className="text-sm font-medium">Decrease Text</span>
                   </button>
-                  
+
                   <button
                     onClick={() => setContrastMode(prev => prev === 'normal' ? 'high' : 'normal')}
                     className="p-4 bg-gradient-to-r from-purple-500 to-purple-600 text-white rounded-xl hover:from-purple-600 hover:to-purple-700 transition-all"
-                  >
+
                     <Contrast className="w-6 h-6 mx-auto mb-2" />
                     <span className="text-sm font-medium">Toggle Contrast</span>
                   </button>
-                  
+
                   <button
                     onClick={() => setReducedMotion(!reducedMotion)}
                     className="p-4 bg-gradient-to-r from-orange-500 to-orange-600 text-white rounded-xl hover:from-orange-600 hover:to-orange-700 transition-all"
-                  >
+
                     {reducedMotion ? (
                       <Eye className="w-6 h-6 mx-auto mb-2" />
                     ) : (
@@ -430,7 +426,7 @@ export default function EnhancedAccessibilityEnhancer() {
                             ? 'bg-green-50 dark:bg-green-900/20 border-green-200 dark:border-green-800'
                             : 'bg-white dark:bg-zion-slate-800 border-gray-200 dark:border-zion-slate-700'
                         }`}
-                      >
+
                         <div className="flex items-start justify-between">
                           <div className="flex-1">
                             <div className="flex items-center space-x-2 mb-2">
@@ -453,7 +449,7 @@ export default function EnhancedAccessibilityEnhancer() {
                               {feature.description}
                             </p>
                           </div>
-                          
+
                           <label className="flex items-center">
                             <input
                               type="checkbox"
@@ -478,11 +474,11 @@ export default function EnhancedAccessibilityEnhancer() {
                       onClick={runAccessibilityAudit}
                       disabled={isAuditing}
                       className="px-4 py-2 bg-zion-purple text-white rounded-lg hover:bg-zion-purple-dark disabled:opacity-50 transition-colors"
-                    >
+
                       {isAuditing ? 'Auditing...' : 'Run Audit'}
                     </button>
                   </div>
-                  
+
                   {auditResults.length > 0 && (
                     <div className="space-y-3">
                       {auditResults.map((result) => (
@@ -494,7 +490,7 @@ export default function EnhancedAccessibilityEnhancer() {
                             result.severity === 'medium' ? 'bg-yellow-50 dark:bg-yellow-900/20 border-yellow-200 dark:border-yellow-800' :
                             'bg-blue-50 dark:bg-blue-900/20 border-blue-200 dark:border-blue-800'
                           }`}
-                        >
+
                           <div className="flex items-start space-x-3">
                             {result.severity === 'critical' || result.severity === 'high' ? (
                               <AlertTriangle className="w-5 h-5 text-red-500 mt-0.5" />
@@ -535,7 +531,7 @@ export default function EnhancedAccessibilityEnhancer() {
                       ))}
                     </div>
                   )}
-                  
+
                   {auditResults.length === 0 && !isAuditing && (
                     <div className="text-center py-8 text-gray-500 dark:text-gray-400">
                       <CheckCircle className="w-12 h-12 mx-auto mb-3 text-green-500" />
@@ -574,4 +570,4 @@ export default function EnhancedAccessibilityEnhancer() {
       </AnimatePresence>
     </>
   );
-}
+</div>}}}}}}}}}}}}}}}}}}}

@@ -16,8 +16,6 @@ import {
   Zap,
   Brain,
   Cloud
-} from 'lucide-react'
-
 export default function Signup() {
   const [formData, setFormData] = useState({
     firstName: '',
@@ -67,8 +65,7 @@ export default function Signup() {
     // Clear error when user starts typing
     if (errors[name]) {
       setErrors(prev => ({ ...prev, [name]: '' }))
-    }
-  }
+
 
   const validateForm = () => {
     const newErrors: Record<string, string> = { /* empty */ }
@@ -83,11 +80,9 @@ export default function Signup() {
 
     if (formData.password !== formData.confirmPassword) {
       newErrors.confirmPassword = 'Passwords do not match'
-    }
 
     setErrors(newErrors)
     return Object.keys(newErrors).length === 0
-  }
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
@@ -101,14 +96,13 @@ export default function Signup() {
       await new Promise(resolve => setTimeout(resolve, 2000))
 
       // Success - redirect or show success message
-      // console.log('Signup successful:', formData)
+      // // // console.log('Signup successful:', formData)
 
     } catch (error) {
-      // console.error('Signup error:', error)
+      // // // console.error('Signup error:', error)
     } finally {
       setIsSubmitting(false)
-    }
-  }
+
 
   const title = 'Sign Up — Zion Tech Group'
   const description = 'Join Zion Tech Group and unlock access to cutting-edge AI, cloud, and cybersecurity solutions.'
@@ -148,7 +142,7 @@ export default function Signup() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
               className="text-center max-w-4xl mx-auto"
-            >
+
               <h1 className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-zion-cyan via-zion-purple-light to-zion-purple bg-clip-text text-transparent">
                 Join Zion Tech Group
               </h1>
@@ -183,7 +177,7 @@ export default function Signup() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
               className="max-w-2xl mx-auto"
-            >
+
               <div className="bg-zion-blue-dark/50 backdrop-blur-md border border-zion-blue-light rounded-2xl p-8 md:p-12">
                 <h2 className="text-3xl font-bold text-center mb-8 text-white">
                   Create Your Account
@@ -294,7 +288,7 @@ export default function Signup() {
                         type="button"
                         onClick={() => setShowPassword(!showPassword)}
                         className="absolute right-3 top-1/2 transform -translate-y-1/2 text-zion-slate-light hover:text-white transition-colors"
-                      >
+
                         {showPassword ? <EyeOff className="w-5 h-5" /> : <Eye className="w-5 h-5" />}
                       </button>
                     </div>
@@ -328,7 +322,7 @@ export default function Signup() {
                         type="button"
                         onClick={() => setShowConfirmPassword(!showConfirmPassword)}
                         className="absolute right-3 top-1/2 transform -translate-y-1/2 text-zion-slate-light hover:text-white transition-colors"
-                      >
+
                         {showConfirmPassword ? <EyeOff className="w-5 h-5" /> : <Eye className="w-5 h-5" />}
                       </button>
                     </div>
@@ -409,7 +403,7 @@ export default function Signup() {
                         value={formData.industry}
                         onChange={handleInputChange}
                         className="w-full px-4 py-3 bg-zion-blue-light/20 border border-zion-blue-light rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-zion-cyan transition-all"
-                      >
+
                         <option value="">Select industry</option>
                         {industries.map(industry => (
                           <option key={industry} value={industry} className="bg-zion-blue-dark text-white">
@@ -431,7 +425,7 @@ export default function Signup() {
                       value={formData.useCase}
                       onChange={handleInputChange}
                       className="w-full px-4 py-3 bg-zion-blue-light/20 border border-zion-blue-light rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-zion-cyan transition-all"
-                    >
+
                       <option value="">Select primary use case</option>
                       {useCases.map(useCase => (
                         <option key={useCase} value={useCase} className="bg-zion-blue-dark text-white">
@@ -446,7 +440,7 @@ export default function Signup() {
                     type="submit"
                     disabled={isSubmitting}
                     className="w-full bg-gradient-to-r from-zion-cyan to-zion-purple text-white py-4 px-8 rounded-lg font-semibold text-lg hover:from-zion-cyan-dark hover:to-zion-purple-dark transition-all duration-300 transform hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none"
-                  >
+
                     {isSubmitting ? (
                       <div className="flex items-center justify-center gap-3">
                         <div className="w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin"></div>
@@ -493,7 +487,7 @@ export default function Signup() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.4 }}
               className="text-center mb-16"
-            >
+
               <h2 className="text-3xl md:text-4xl font-bold mb-6 text-white">
                 Why Join Zion Tech Group?
               </h2>
@@ -508,7 +502,7 @@ export default function Signup() {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.6 }}
                 className="text-center p-6"
-              >
+
                 <div className="w-16 h-16 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-full flex items-center justify-center mx-auto mb-4">
                   <Shield className="w-8 h-8 text-white" />
                 </div>
@@ -523,7 +517,7 @@ export default function Signup() {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.8 }}
                 className="text-center p-6"
-              >
+
                 <div className="w-16 h-16 bg-gradient-to-r from-zion-purple to-zion-cyan rounded-full flex items-center justify-center mx-auto mb-4">
                   <Brain className="w-8 h-8 text-white" />
                 </div>
@@ -538,7 +532,7 @@ export default function Signup() {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 1.0 }}
                 className="text-center p-6"
-              >
+
                 <div className="w-16 h-16 bg-gradient-to-r from-zion-cyan-light to-zion-purple-light rounded-full flex items-center justify-center mx-auto mb-4">
                   <Cloud className="w-8 h-8 text-white" />
                 </div>
@@ -553,4 +547,4 @@ export default function Signup() {
       </main>
     </>
   )
-}
+}}}}}}}}

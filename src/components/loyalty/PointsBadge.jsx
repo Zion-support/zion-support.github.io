@@ -1,5 +1,4 @@
-import { Gift } from 'lucide-react';
-import { useAuth } from '@/hooks/useAuth';
+import { Gift import { useAuth } from '@/hooks/useAuth';
 import { useEffect, useState } from 'react';
 import { usePoints } from '@/hooks/usePoints';
 import { Link } from 'react-router-dom';
@@ -26,10 +25,10 @@ export function PointsBadge() {
     const handleLogout = async () => {
         if (signOut) {
             await signOut();
-        }
+
         else if (logout) {
             await logout();
-        }
+
     };
     return (<DropdownMenu>
       <TooltipProvider>
@@ -62,4 +61,4 @@ export function PointsBadge() {
         <DropdownMenuItem onSelect={handleLogout}>Logout</DropdownMenuItem>
       </DropdownMenuContent>
     </DropdownMenu>);
-}
+}}}}

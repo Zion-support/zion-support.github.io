@@ -38,7 +38,7 @@ export interface InnovativeMicroSaas2030 {
   customers: number;
   rating: number;
   reviews: number;
-}
+
 export const innovativeMicroSaas2030: InnovativeMicroSaas2030[] = [
   // AI Business Intelligence 2030
   {
@@ -299,5 +299,5 @@ export const innovativeMicroSaas2030: InnovativeMicroSaas2030[] = [
     customers: 89,
     rating: 4.7,
     reviews: 52
-  }
-];
+
+];}}

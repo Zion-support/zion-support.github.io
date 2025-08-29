@@ -78,7 +78,6 @@ import {
   CheckCircle2,
   XCircle,
   Info as InfoIcon
-} from 'lucide-react';
 import { SEO } from '../components/SEO';
 import { servicesCatalog } from '../data/servicesCatalog';
 
@@ -139,7 +138,7 @@ const serviceCategories = [
     color: 'from-yellow-600 to-orange-600',
     description: 'Cutting-edge technologies and innovations',
     count: 0
-  }
+
 ];
 
 // Enhanced service features display
@@ -163,7 +162,7 @@ const ServiceCard = ({ service, viewMode }: { service: any; viewMode: 'grid' | '
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}
         className="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden group border border-gray-100"
-      >
+
         {/* Service Header */}
         <div className={`bg-gradient-to-r ${getCategoryColor(service.category)} p-6 text-white`}>
           <div className="flex items-center justify-between mb-4">
@@ -203,7 +202,7 @@ const ServiceCard = ({ service, viewMode }: { service: any; viewMode: 'grid' | '
                 <button
                   onClick={() => setExpanded(!expanded)}
                   className="text-sm text-blue-600 hover:text-blue-800 font-medium flex items-center"
-                >
+
                   {expanded ? 'Show less' : `+${service.features.length - 3} more features`}
                   {expanded ? <ChevronDown className="w-4 h-4 ml-1" /> : <ChevronRight className="w-4 h-4 ml-1" />}
                 </button>
@@ -221,14 +220,13 @@ const ServiceCard = ({ service, viewMode }: { service: any; viewMode: 'grid' | '
           <a
             href={service.href}
             className="w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white py-3 px-6 rounded-xl font-semibold text-center block hover:from-blue-700 hover:to-purple-700 transition-all duration-300 group-hover:shadow-lg flex items-center justify-center"
-          >
+
             {service.ctaLabel}
             <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
           </a>
         </div>
       </motion.div>
     );
-  }
 
   // List view
   return (
@@ -237,7 +235,7 @@ const ServiceCard = ({ service, viewMode }: { service: any; viewMode: 'grid' | '
       animate={{ opacity: 1, x: 0 }}
       transition={{ duration: 0.5 }}
       className="bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 p-6 border border-gray-100"
-    >
+
       <div className="flex flex-col lg:flex-row lg:items-center gap-6">
         {/* Service Info */}
         <div className="flex-1">
@@ -272,7 +270,7 @@ const ServiceCard = ({ service, viewMode }: { service: any; viewMode: 'grid' | '
           <a
             href={service.href}
             className="inline-flex items-center bg-gradient-to-r from-blue-600 to-purple-600 text-white py-3 px-6 rounded-xl font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300"
-          >
+
             {service.ctaLabel}
             <ArrowRight className="w-4 h-4 ml-2" />
           </a>
@@ -308,7 +306,7 @@ const ServicesSidebar = ({
                 ? 'bg-blue-50 text-blue-700 border border-blue-200'
                 : 'text-gray-700 hover:bg-gray-50 hover:text-gray-900'
             }`}
-          >
+
             <div className="flex items-center space-x-3">
               <div className={`w-8 h-8 bg-gradient-to-r ${category.color} rounded-lg flex items-center justify-center`}>
                 {React.createElement(category.icon, { className: 'w-4 h-4 text-white' })}
@@ -392,7 +390,7 @@ export default function ServicesOverview() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               className="text-center"
-            >
+
               <h1 className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-blue-400 via-cyan-400 to-purple-400 bg-clip-text text-transparent">
                 Comprehensive Service Portfolio
               </h1>
@@ -452,14 +450,14 @@ export default function ServicesOverview() {
                       onClick={() => setViewMode('grid')}
                       className={`p-2 rounded-lg transition-colors ${viewMode === 'grid' ? 'bg-white shadow-sm' : 'text-gray-500'}`}
                       title="Grid View"
-                    >
+
                       <Grid className="w-5 h-5" />
                     </button>
                     <button
                       onClick={() => setViewMode('list')}
                       className={`p-2 rounded-lg transition-colors ${viewMode === 'list' ? 'bg-white shadow-sm' : 'text-gray-500'}`}
                       title="List View"
-                    >
+
                       <List className="w-5 h-5" />
                     </button>
                   </div>
@@ -468,7 +466,7 @@ export default function ServicesOverview() {
                   <button
                     onClick={() => setShowAdvancedFilters(!showAdvancedFilters)}
                     className="flex items-center space-x-2 px-4 py-3 border border-gray-200 rounded-xl hover:bg-gray-50 transition-colors"
-                  >
+
                     <Filter className="w-5 h-5 text-gray-500" />
                     <span className="text-gray-700">Filters</span>
                     {showAdvancedFilters ? <ChevronDown className="w-4 h-4" /> : <ChevronRight className="w-4 h-4" />}
@@ -483,7 +481,7 @@ export default function ServicesOverview() {
                     exit={{ opacity: 0, height: 0 }}
                     transition={{ duration: 0.3 }}
                     className="mt-4 pt-4 border-t border-gray-200"
-                  >
+
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
                       <div>
                         <label className="block text-sm font-medium text-gray-700 mb-2">Price Range</label>
@@ -570,14 +568,14 @@ export default function ServicesOverview() {
               <a
                 href="/contact"
                 className="bg-white text-blue-900 px-8 py-4 rounded-xl font-semibold hover:bg-gray-100 transition-colors flex items-center justify-center"
-              >
+
                 <Phone className="w-5 h-5 mr-2" />
                 Get Started Today
               </a>
               <a
                 href="/request-quote"
                 className="border-2 border-white text-white px-8 py-4 rounded-xl font-semibold hover:bg-white hover:text-blue-900 transition-colors flex items-center justify-center"
-              >
+
                 <DollarSign className="w-5 h-5 mr-2" />
                 Request Custom Quote
               </a>
@@ -587,4 +585,4 @@ export default function ServicesOverview() {
       </div>
     </>
   );
-}
+}}}}

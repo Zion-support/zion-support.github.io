@@ -1,7 +1,5 @@
 import React from 'react';
-import { Users, Lightbulb, Target, TrendingUp, Shield, Globe, Zap, Cpu, Database, Award, Briefcase } from 'lucide-react';
-
-const Consulting = () => {
+import { Users, Lightbulb, Target, TrendingUp, Shield, Globe, Zap, Cpu, Database, Award, Briefcase const Consulting = () => {
   const consultingServices = [
     {
       icon: Lightbulb,
@@ -38,7 +36,7 @@ const Consulting = () => {
       title: "Digital Innovation",
       description: "Emerging technology consulting and innovation acceleration",
       features: ["Technology scouting", "Innovation labs", "Proof of concepts", "Technology adoption"]
-    }
+
   ];
 
   const industries = [
@@ -71,7 +69,7 @@ const Consulting = () => {
       title: "Government",
       description: "Public sector digital transformation consulting",
       icon: Briefcase
-    }
+
   ];
 
   const benefits = [
@@ -103,7 +101,7 @@ const Consulting = () => {
       phase: "Implementation",
       description: "Executing the strategy with ongoing support and guidance",
       duration: "Ongoing"
-    }
+
   ];
 
   return (
@@ -288,4 +286,4 @@ const Consulting = () => {
   );
 };
 
-export default Consulting;
+export default Consulting;}}}}

@@ -27,7 +27,6 @@ import {
   Cpu,
   Network,
   FileText
-} from 'lucide-react';
 import { SEO } from '../../components/SEO';
 
 export default function DataAnalytics() {
@@ -51,7 +50,7 @@ export default function DataAnalytics() {
       icon: Zap,
       title: 'Automated Reporting',
       description: 'Generate comprehensive reports automatically, saving time and ensuring consistency.'
-    }
+
   ];
 
   const solutions = [
@@ -78,7 +77,7 @@ export default function DataAnalytics() {
       description: 'Monitor and optimize business performance across all key metrics',
       icon: Activity,
       benefits: ['KPI tracking', 'Performance optimization', 'Benchmarking', 'Goal alignment']
-    }
+
   ];
 
   const useCases = [
@@ -105,7 +104,7 @@ export default function DataAnalytics() {
       description: 'Predictive maintenance, quality control, and production optimization',
       icon: Cpu,
       metrics: ['Equipment Uptime', 'Quality Score', 'Production Efficiency', 'Cost Reduction']
-    }
+
   ];
 
   const benefits = [
@@ -128,7 +127,7 @@ export default function DataAnalytics() {
       icon: Target,
       title: 'Strategic Planning',
       description: 'Develop informed strategies and plans based on predictive analytics and trends'
-    }
+
   ];
 
   return (
@@ -147,7 +146,7 @@ export default function DataAnalytics() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             className="text-center"
-          >
+
             <div className="inline-flex items-center px-4 py-2 bg-blue-400/20 text-blue-400 rounded-full text-sm font-medium mb-6">
               <BarChart3 className="w-4 h-4 mr-2" />
               Data-Driven Insights
@@ -180,7 +179,7 @@ export default function DataAnalytics() {
               initial={{ opacity: 0, x: -20 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.6 }}
-            >
+
               <h2 className="text-4xl font-bold text-white mb-6">
                 What is Data Analytics?
               </h2>
@@ -219,7 +218,7 @@ export default function DataAnalytics() {
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.6 }}
               className="relative"
-            >
+
               <div className="bg-slate-800/50 p-8 rounded-2xl border border-slate-700/50">
                 <div className="flex items-center justify-between mb-6">
                   <h3 className="text-xl font-semibold text-white">Analytics Dashboard</h3>
@@ -263,7 +262,7 @@ export default function DataAnalytics() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
-          >
+
             <h2 className="text-4xl font-bold text-white mb-6">
               Key Features
             </h2>
@@ -281,7 +280,7 @@ export default function DataAnalytics() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 className="bg-slate-800/50 p-6 rounded-xl border border-slate-700/50 hover:border-blue-400/50 transition-all duration-300 hover:scale-105"
-              >
+
                 <div className="w-16 h-16 bg-gradient-to-br from-blue-400/20 to-purple-500/20 rounded-xl flex items-center justify-center mb-6">
                   <feature.icon className="w-8 h-8 text-blue-400" />
                 </div>
@@ -301,7 +300,7 @@ export default function DataAnalytics() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
-          >
+
             <h2 className="text-4xl font-bold text-white mb-6">
               Core Solutions
             </h2>
@@ -319,7 +318,7 @@ export default function DataAnalytics() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 className="bg-slate-800/50 p-8 rounded-xl border border-slate-700/50 hover:border-blue-400/50 transition-all duration-300 hover:scale-105"
-              >
+
                 <div className="flex items-center space-x-4 mb-6">
                   <div className="w-16 h-16 bg-gradient-to-br from-blue-400/20 to-purple-500/20 rounded-xl flex items-center justify-center">
                     <solution.icon className="w-8 h-8 text-blue-400" />
@@ -349,7 +348,7 @@ export default function DataAnalytics() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
-          >
+
             <h2 className="text-4xl font-bold text-white mb-6">
               Industry Use Cases
             </h2>
@@ -367,7 +366,7 @@ export default function DataAnalytics() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 className="bg-slate-800/50 p-8 rounded-xl border border-slate-700/50 hover:border-blue-400/50 transition-all duration-300 hover:scale-105"
-              >
+
                 <div className="flex items-center space-x-4 mb-6">
                   <div className="w-16 h-16 bg-gradient-to-br from-blue-400/20 to-purple-500/20 rounded-xl flex items-center justify-center">
                     <useCase.icon className="w-8 h-8 text-blue-400" />
@@ -397,7 +396,7 @@ export default function DataAnalytics() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
-          >
+
             <h2 className="text-4xl font-bold text-white mb-6">
               Business Benefits
             </h2>
@@ -415,7 +414,7 @@ export default function DataAnalytics() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 className="bg-slate-800/50 p-6 rounded-xl border border-slate-700/50 hover:border-blue-400/50 transition-all duration-300 hover:scale-105 text-center"
-              >
+
                 <div className="w-16 h-16 bg-gradient-to-br from-blue-400/20 to-purple-500/20 rounded-xl flex items-center justify-center mx-auto mb-6">
                   <benefit.icon className="w-8 h-8 text-blue-400" />
                 </div>
@@ -435,7 +434,7 @@ export default function DataAnalytics() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
-          >
+
             <h2 className="text-4xl font-bold text-white mb-6">
               Implementation Process
             </h2>
@@ -465,7 +464,7 @@ export default function DataAnalytics() {
                 step: '04',
                 title: 'Optimization',
                 description: 'Monitor performance and continuously improve analytics capabilities'
-              }
+
             ].map((phase, index) => (
               <motion.div
                 key={index}
@@ -473,7 +472,7 @@ export default function DataAnalytics() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 className="text-center"
-              >
+
                 <div className="w-20 h-20 bg-gradient-to-br from-blue-400 to-purple-500 rounded-full flex items-center justify-center mx-auto mb-6 text-2xl font-bold text-white">
                   {phase.step}
                 </div>
@@ -492,7 +491,7 @@ export default function DataAnalytics() {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-          >
+
             <h2 className="text-4xl font-bold text-white mb-6">
               Ready to Transform Your Data?
             </h2>
@@ -513,4 +512,4 @@ export default function DataAnalytics() {
       </section>
     </div>
   );
-}
+}}}}}}}

@@ -8,8 +8,6 @@ import {
   Star,
   Award,
   CheckCircle
-} from 'lucide-react';
-
 export const GlobalPresenceSection: React.FC = () => {
   const locations = [
     {
@@ -65,7 +63,7 @@ export const GlobalPresenceSection: React.FC = () => {
       services: ['EdTech Solutions', 'Renewable Energy', 'Digital Health'],
       teamSize: '10+',
       established: '2022'
-    }
+
   ];
 
   const globalStats = [
@@ -85,7 +83,7 @@ export const GlobalPresenceSection: React.FC = () => {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
-        >
+
           <h2 className="text-4xl font-bold text-gray-900 mb-4">
             Global Presence
           </h2>
@@ -101,7 +99,7 @@ export const GlobalPresenceSection: React.FC = () => {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.1 }}
           className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6 mb-16"
-        >
+
           {globalStats.map((stat, index) => {
             const IconComponent = stat.icon;
             return (
@@ -129,7 +127,7 @@ export const GlobalPresenceSection: React.FC = () => {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: index * 0.1 }}
               className="bg-white rounded-2xl shadow-lg p-6 hover:shadow-xl transition-all duration-300"
-            >
+
               <div className="flex items-center mb-4">
                 <span className="text-3xl mr-3">{location.flag}</span>
                 <div>
@@ -162,7 +160,7 @@ export const GlobalPresenceSection: React.FC = () => {
                     <span
                       key={serviceIndex}
                       className="px-2 py-1 bg-blue-50 text-blue-700 text-xs rounded-full"
-                    >
+
                       {service}
                     </span>
                   ))}
@@ -182,7 +180,7 @@ export const GlobalPresenceSection: React.FC = () => {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.3 }}
           className="text-center"
-        >
+
           <div className="bg-gradient-to-r from-blue-600 to-indigo-600 rounded-2xl p-8 text-white">
             <h3 className="text-2xl font-bold mb-4">
               Ready to Go Global?
@@ -209,3 +207,4 @@ export const GlobalPresenceSection: React.FC = () => {
 };
 
 export default GlobalPresenceSection;
+}}

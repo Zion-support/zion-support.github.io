@@ -46,7 +46,6 @@ export interface ZionEmergingTechService2029 {
     currency: string;
     period: string;
   };
-}
 
 export const zionEmergingTechServices2029: ZionEmergingTechService2029[] = [
   // 1. Space Technology & Satellite Management Platform
@@ -113,7 +112,7 @@ export const zionEmergingTechServices2029: ZionEmergingTechService2029[] = [
       enterprise: 39999,
       currency: 'USD',
       period: 'month'
-    }
+
   },
 
   // 2. Biotechnology & Synthetic Biology Platform
@@ -180,7 +179,7 @@ export const zionEmergingTechServices2029: ZionEmergingTechService2029[] = [
       enterprise: 24999,
       currency: 'USD',
       period: 'month'
-    }
+
   },
 
   // 3. Renewable Energy & Smart Grid Optimization
@@ -247,7 +246,7 @@ export const zionEmergingTechServices2029: ZionEmergingTechService2029[] = [
       enterprise: 18999,
       currency: 'USD',
       period: 'month'
-    }
+
   },
 
   // 4. Advanced Robotics & Automation Platform
@@ -314,7 +313,7 @@ export const zionEmergingTechServices2029: ZionEmergingTechService2029[] = [
       enterprise: 29999,
       currency: 'USD',
       period: 'month'
-    }
+
   },
 
   // 5. Quantum Internet & Secure Communications
@@ -381,7 +380,7 @@ export const zionEmergingTechServices2029: ZionEmergingTechService2029[] = [
       enterprise: 44999,
       currency: 'USD',
       period: 'month'
-    }
+
   },
 
   // 6. Advanced Materials & Nanotechnology Platform
@@ -448,7 +447,7 @@ export const zionEmergingTechServices2029: ZionEmergingTechService2029[] = [
       enterprise: 21999,
       currency: 'USD',
       period: 'month'
-    }
+
   },
 
   // 7. Autonomous Transportation & Mobility Platform
@@ -515,7 +514,7 @@ export const zionEmergingTechServices2029: ZionEmergingTechService2029[] = [
       enterprise: 28999,
       currency: 'USD',
       period: 'month'
-    }
+
   },
 
   // 8. Digital Twin & Simulation Platform
@@ -582,7 +581,7 @@ export const zionEmergingTechServices2029: ZionEmergingTechService2029[] = [
       enterprise: 17999,
       currency: 'USD',
       period: 'month'
-    }
+
   },
 
   // 9. Edge Computing & IoT Platform
@@ -649,7 +648,7 @@ export const zionEmergingTechServices2029: ZionEmergingTechService2029[] = [
       enterprise: 12999,
       currency: 'USD',
       period: 'month'
-    }
+
   },
 
   // 10. Metaverse & Virtual Reality Platform
@@ -716,8 +715,8 @@ export const zionEmergingTechServices2029: ZionEmergingTechService2029[] = [
       enterprise: 20999,
       currency: 'USD',
       period: 'month'
-    }
-  }
+
+
 ];
 
 export const getServicesByCategory = (category: string) => {
@@ -739,4 +738,4 @@ export const getServicesByTechnology = (technology: string) => {
   return zionEmergingTechServices2029.filter(service =>
     service.technology.some(tech => tech.toLowerCase().includes(technology.toLowerCase()))
   );
-};
+};}}}}}}}}}}}}

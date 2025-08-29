@@ -1,6 +1,5 @@
 import { Link } from 'react-router-dom';
-import { Heart } from 'lucide-react';
-import { useWishlist } from '@/hooks/useWishlist';
+import { Heart import { useWishlist } from '@/hooks/useWishlist';
 import { Button } from '@/components/ui/button';
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger, } from '@/components/ui/tooltip';
 import { useDispatch } from 'react-redux';
@@ -27,7 +26,7 @@ export default function ProductCard({ product, onBuy, buyDisabled = false }) {
         {/* Optionally, provide more details if product ID is known */}
         {/* {product && product.id && <p className="text-xs text-muted-foreground">ID: {product.id}</p>} */}
       </div>);
-    }
+
     const active = isWishlisted(product.id);
     const dispatch = useDispatch();
     // Title is now guaranteed to be a non-empty string by the check above.
@@ -49,7 +48,7 @@ export default function ProductCard({ product, onBuy, buyDisabled = false }) {
                 product: product.id,
                 imageUrl,
             });
-        }
+
     };
     const isMobile = useMediaQuery('(max-width: 768px)');
     const isTablet = useMediaQuery('(max-width: 1200px)');
@@ -93,4 +92,4 @@ export default function ProductCard({ product, onBuy, buyDisabled = false }) {
           </TooltipProvider>)}
       </div>
     </div>);
-}
+}}}}

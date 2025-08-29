@@ -5,8 +5,7 @@ import { Badge } from "@/components/ui/badge";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { MICRO_SAAS_SERVICES, getMicroSaasCategories } from "@/data/microSaasServices";
-import { Brain, Cloud, Shield, BarChart3, Code, DollarSign, Heart, ShoppingCart, GraduationCap, Phone, Mail, MapPin, Globe, CheckCircle, Star, TrendingUp, Zap, Users } from "lucide-react";
-import { Link } from "react-router-dom";
+import { Brain, Cloud, Shield, BarChart3, Code, DollarSign, Heart, ShoppingCart, GraduationCap, Phone, Mail, MapPin, Globe, CheckCircle, Star, TrendingUp, Zap, Users import { Link } from "react-router-dom";
 const categoryIcons = {
     'AI Business Solutions': Brain,
     'IT Infrastructure': Cloud,
@@ -37,7 +36,7 @@ const benefits = [
         icon: <TrendingUp className="h-6 w-6"/>,
         title: "Proven ROI",
         description: "Average 300% ROI within 6 months of implementation"
-    }
+
 ];
 const features = [
     "AI-Powered Automation",
@@ -160,7 +159,7 @@ export default function MicroSaasServices() {
     name: 'Enterprise',
     price: '$299',
     features: ['Custom features', '24/7 support', 'Unlimited users']
-  }
+
 ].map((tier) => (<Card key={tier.key} className={`relative ${tier.key === 'professional' ? 'border-zion-purple border-2 scale-105' : ''}`}>
                 {tier.key === 'professional' && (<div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                     <Badge className="bg-zion-purple text-white px-4 py-2">Most Popular</Badge>
@@ -347,4 +346,4 @@ export default function MicroSaasServices() {
       {/* Trusted By Section */}
       <TrustedBySection />
     </div>);
-}
+</Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card>}}}}

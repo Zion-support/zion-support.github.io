@@ -38,12 +38,12 @@ const UltimateServicesShowcase2025 = () => {
                 return a.category.localeCompare(b.category);
             default:
                 return 0;
-        }
+
     });
     const formatPrice = (price) => {
         if (price >= 1000) {
             return `$${(price / 1000).toFixed(1)}K`;
-        }
+
         return `$${price}`;
     };
     const getSupportLevelColor = (level) => {
@@ -54,7 +54,7 @@ const UltimateServicesShowcase2025 = () => {
                 return 'bg-blue-600';
             default:
                 return 'bg-green-600';
-        }
+
     };
     return (<div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900 text-white">
       {/* Header */}
@@ -271,3 +271,4 @@ const UltimateServicesShowcase2025 = () => {
     </div>);
 };
 export default UltimateServicesShowcase2025;
+}}}

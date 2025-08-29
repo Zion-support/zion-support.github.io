@@ -1,6 +1,4 @@
-import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, FileText, BarChart3 } from 'lucide-react';
-
-export default function AIPostgreSQL() {
+import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, FileText, BarChart3 export default function AIPostgreSQL() {
   const features = [
     'AI-powered PostgreSQL query optimization',
     'Intelligent database indexing and partitioning',
@@ -171,4 +169,4 @@ export default function AIPostgreSQL() {
       </section>
     </div>
   );
-}
+}}

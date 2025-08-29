@@ -38,7 +38,7 @@ export interface CuttingEdge2029Service {
   customers: number;
   rating: number;
   reviews: number;
-}
+
 export const cuttingEdge2029Services: CuttingEdge2029Service[] = [
   // AI Consciousness & Neural Interface Services
   {
@@ -296,5 +296,5 @@ export const cuttingEdge2029Services: CuttingEdge2029Service[] = [
     customers: 8,
     rating: 4.8,
     reviews: 23
-  }
-];
+
+];}}

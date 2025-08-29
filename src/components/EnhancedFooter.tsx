@@ -1,47 +1,47 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { 
-  Zap, 
-  Brain, 
-  Shield, 
-  Cloud, 
-  Rocket, 
-  Globe, 
-  Cpu, 
-  Lock, 
-  Heart, 
-  Users, 
-  ShoppingCart, 
-  BookOpen, 
-  MessageCircle, 
-  HelpCircle, 
-  DollarSign, 
-  Gauge, 
-  Workflow, 
-  Atom, 
-  Star, 
-  Target, 
-  TrendingUp, 
-  Award, 
-  Code, 
-  Truck, 
-  Building, 
-  BarChart3, 
-  PenTool, 
-  Eye, 
-  Server, 
-  Smartphone, 
-  Database, 
-  Network, 
-  Clock, 
-  ArrowRight, 
-  PanelLeft, 
-  Sparkles, 
-  Phone, 
-  Mail, 
-  MapPin, 
-  Satellite, 
+import {
+  Zap,
+  Brain,
+  Shield,
+  Cloud,
+  Rocket,
+  Globe,
+  Cpu,
+  Lock,
+  Heart,
+  Users,
+  ShoppingCart,
+  BookOpen,
+  MessageCircle,
+  HelpCircle,
+  DollarSign,
+  Gauge,
+  Workflow,
+  Atom,
+  Star,
+  Target,
+  TrendingUp,
+  Award,
+  Code,
+  Truck,
+  Building,
+  BarChart3,
+  PenTool,
+  Eye,
+  Server,
+  Smartphone,
+  Database,
+  Network,
+  Clock,
+  ArrowRight,
+  PanelLeft,
+  Sparkles,
+  Phone,
+  Mail,
+  MapPin,
+  Satellite,
   FileText,
   Linkedin,
   Twitter,
@@ -49,8 +49,6 @@ import {
   Facebook,
   Instagram,
   Youtube
-} from 'lucide-react';
-
 export function EnhancedFooter() {
   const currentYear = new Date().getFullYear();
 
@@ -112,7 +110,7 @@ export function EnhancedFooter() {
         { name: 'White Papers', href: '/white-papers', icon: FileText },
         { name: 'Blog', href: '/blog', icon: PenTool }
       ]
-    }
+
   ];
 
   const socialLinks = [
@@ -136,7 +134,7 @@ export function EnhancedFooter() {
       {/* Background Effects */}
       <div className="absolute inset-0 bg-gradient-to-br from-gray-900 via-black to-gray-900 opacity-50"></div>
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(0,212,255,0.1)_0%,transparent_50%)]"></div>
-      
+
       <div className="relative z-10">
         {/* Main Footer Content */}
         <div className="container mx-auto px-4 py-16">
@@ -156,11 +154,11 @@ export function EnhancedFooter() {
                   </p>
                 </div>
               </div>
-              
+
               <p className="text-gray-300 mb-6 leading-relaxed">
                 Leading the future of technology with cutting-edge AI, quantum computing, and innovative solutions that transform businesses and drive digital transformation.
               </p>
-              
+
               {/* Contact Information */}
               <div className="space-y-3">
                 <div className="flex items-center space-x-3 text-gray-300 hover:text-cyan-400 transition-colors">
@@ -197,7 +195,7 @@ export function EnhancedFooter() {
                       <Link
                         to={link.href}
                         className="flex items-center space-x-2 text-gray-300 hover:text-cyan-400 transition-colors group"
-                      >
+
                         <link.icon className="w-3 h-3 text-cyan-400 group-hover:scale-110 transition-transform" />
                         <span className="text-sm">{link.name}</span>
                       </Link>
@@ -250,7 +248,7 @@ export function EnhancedFooter() {
                     rel="noopener noreferrer"
                     className={`text-gray-400 ${social.color} transition-colors duration-300`}
                     aria-label={social.name}
-                  >
+
                     <social.icon className="w-5 h-5" />
                   </a>
                 ))}
@@ -278,17 +276,16 @@ export function EnhancedFooter() {
           initial={{ scale: 0, opacity: 0 }}
           animate={{ scale: 1, opacity: 1 }}
           transition={{ delay: 1, duration: 0.5 }}
-        >
+
           <Link
             to="/contact"
             className="w-16 h-16 bg-gradient-to-br from-cyan-500 to-blue-600 rounded-full flex items-center justify-center shadow-2xl shadow-cyan-500/50 hover:shadow-cyan-500/70 transition-all duration-300 hover:scale-110 group"
-          >
+
             <MessageCircle className="w-8 h-8 text-white group-hover:rotate-12 transition-transform duration-300" />
           </Link>
         </motion.div>
       </div>
     </footer>
   );
-}
 
-export default EnhancedFooter;
+export default EnhancedFooter;}}}

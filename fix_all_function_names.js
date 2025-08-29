@@ -56,17 +56,17 @@ function fixFunctionName(filePath) {
     );
     if (fixedContent !== content) {
       fs.writeFileSync(filePath, fixedContent, "utf8");
-      // console.log(
+      // // // console.log(
         `Fixed function name in: ${filePath} (${currentFunctionName} -> ${functionName})`,
       );
       return true;
-    }
+
     return false;
   } catch (error) {
-    // console.error(`Error processing ${filePath}:`, error.message);
+    // // // console.error(`Error processing ${filePath}:`, error.message);
     return false;
-  }
-}
+
+
 async function fixAllFiles() {
   const files = await glob("pages/**/*.{ts,tsx}", {
     ignore: ["node_modules/**", ".next/**"],
@@ -75,8 +75,9 @@ async function fixAllFiles() {
   for (const file of files) {
     if (fixFunctionName(file)) {
       fixedCount++;
-    }
-  }
-  // console.log(`Fixed ${fixedCount} files.`);
-}
+
+
+  // // // console.log(`Fixed ${fixedCount} files.`);
+
 fixAllFiles();
+}}}}}}}}}

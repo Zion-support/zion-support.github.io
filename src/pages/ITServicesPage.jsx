@@ -3,8 +3,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { Link } from 'react-router-dom';
-import { Cloud, Shield, Server, Zap, Database, Globe, Code, Monitor, Smartphone, Settings, Users, BarChart3, MessageSquare, FileText, CheckCircle, Search, HardDrive } from 'lucide-react';
-const ITServices = [
+import { Cloud, Shield, Server, Zap, Database, Globe, Code, Monitor, Smartphone, Settings, Users, BarChart3, MessageSquare, FileText, CheckCircle, Search, HardDrive const ITServices = [
     {
         title: "Cloud Infrastructure Management",
         description: "Comprehensive cloud services including AWS, Azure, and Google Cloud",
@@ -152,7 +151,7 @@ const ITServices = [
         category: "Support",
         badge: "Featured",
         link: "/request-quote?service=24-7-support"
-    }
+
 ];
 const categories = [
     { name: "All", value: "all", icon: <Globe className="h-4 w-4"/> },
@@ -275,4 +274,4 @@ export default function ITServicesPage() {
         </div>
       </div>
     </div>);
-}
+</Card></Card></Card></Card>}}}

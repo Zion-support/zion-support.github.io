@@ -41,7 +41,7 @@ const AdvancedInnovativeServicesShowcase2025 = () => {
             case 'name':
             default:
                 return a.name.localeCompare(b.name);
-        }
+
     });
     const getCategoryIcon = (category) => {
         const icons = {
@@ -72,7 +72,7 @@ const AdvancedInnovativeServicesShowcase2025 = () => {
                 return 'bg-purple-100 text-purple-800 border-purple-200';
             default:
                 return 'bg-gray-100 text-gray-800 border-gray-200';
-        }
+
     };
     return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white">
       {/* Hero Section */}
@@ -295,3 +295,4 @@ const AdvancedInnovativeServicesShowcase2025 = () => {
     </div>);
 };
 export default AdvancedInnovativeServicesShowcase2025;
+}}

@@ -1,6 +1,4 @@
-import { Atom, TrendingUp, BarChart3, CheckCircle, ArrowRight, ExternalLink, Phone, Mail, DollarSign, Target, Zap, Globe, Database, Cpu, Network, Cloud, Zap as Lightning } from 'lucide-react';
-
-export default function AIQuantumComputingPlatform() {
+import { Atom, TrendingUp, BarChart3, CheckCircle, ArrowRight, ExternalLink, Phone, Mail, DollarSign, Target, Zap, Globe, Database, Cpu, Network, Cloud, Zap as Lightning export default function AIQuantumComputingPlatform() {
   const features = [
     'AI-powered quantum algorithm optimization',
     'Hybrid quantum-classical computing solutions',
@@ -41,7 +39,7 @@ export default function AIQuantumComputingPlatform() {
       price: '$7,999/mo',
       features: ['Unlimited qubits', 'Full quantum suite', 'Custom quantum models', 'Dedicated support', 'White-label solutions', 'Hardware access'],
       popular: false
-    }
+
   ];
 
   const useCases = [
@@ -288,11 +286,11 @@ export default function AIQuantumComputingPlatform() {
             target="_blank"
             rel="noreferrer"
             className="inline-flex items-center text-purple-600 hover:text-purple-700 font-semibold"
-          >
+
             Visit ziontechgroup.com <ExternalLink className="w-4 h-4 ml-2" />
           </a>
         </div>
       </section>
     </div>
   );
-}
+}}}

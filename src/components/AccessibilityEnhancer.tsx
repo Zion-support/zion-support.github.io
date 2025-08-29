@@ -10,8 +10,6 @@ import {
   Keyboard,
   Accessibility,
   X
-} from 'lucide-react';
-
 interface AccessibilitySettings {
   highContrast: boolean;
   largeText: boolean;
@@ -19,12 +17,10 @@ interface AccessibilitySettings {
   screenReader: boolean;
   keyboardNavigation: boolean;
   focusIndicator: boolean;
-}
 
 interface AccessibilityEnhancerProps {
   enabled?: boolean;
   showControls?: boolean;
-}
 
 export const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
   enabled = true,
@@ -59,7 +55,6 @@ export const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
       root.style.removeProperty('--text-secondary');
       root.style.removeProperty('--bg-primary');
       root.style.removeProperty('--bg-secondary');
-    }
 
     // Large text mode
     if (settings.largeText) {
@@ -68,7 +63,6 @@ export const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
     } else {
       root.style.fontSize = '';
       root.style.lineHeight = '';
-    }
 
     // Reduced motion
     if (settings.reducedMotion) {
@@ -77,14 +71,12 @@ export const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
     } else {
       root.style.removeProperty('--animation-duration');
       root.style.removeProperty('--transition-duration');
-    }
 
     // Focus indicator
     if (settings.focusIndicator) {
       root.classList.add('enhanced-focus');
     } else {
       root.classList.remove('enhanced-focus');
-    }
 
     // Screen reader announcements
     if (settings.screenReader) {
@@ -103,7 +95,6 @@ export const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
 
       // Announce page changes
       announce('Accessibility settings updated');
-    }
 
   }, [settings, enabled]);
 
@@ -115,7 +106,6 @@ export const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
       // Skip if user is typing in an input
       if (e.target instanceof HTMLInputElement || e.target instanceof HTMLTextAreaElement) {
         return;
-      }
 
       switch (e.key) {
         case 'Tab':
@@ -132,7 +122,7 @@ export const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
           } else if (!e.shiftKey && document.activeElement === lastElement) {
             e.preventDefault();
             firstElement.focus();
-          }
+
           break;
 
         case 'Escape':
@@ -141,7 +131,7 @@ export const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
           if (modals.length > 0) {
             const lastModal = modals[modals.length - 1] as HTMLElement;
             lastModal.focus();
-          }
+
           break;
 
         case 'h':
@@ -151,7 +141,7 @@ export const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
             e.preventDefault();
             const homeLink = document.querySelector('a[href="/"]') as HTMLAnchorElement;
             if (homeLink) homeLink.click();
-          }
+
           break;
 
         case 's':
@@ -161,7 +151,7 @@ export const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
             e.preventDefault();
             const servicesLink = document.querySelector('a[href="/services"]') as HTMLAnchorElement;
             if (servicesLink) servicesLink.click();
-          }
+
           break;
 
         case 'c':
@@ -171,9 +161,9 @@ export const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
             e.preventDefault();
             const contactLink = document.querySelector('a[href="/contact"]') as HTMLAnchorElement;
             if (contactLink) contactLink.click();
-          }
+
           break;
-      }
+
     };
 
     document.addEventListener('keydown', handleKeyDown);
@@ -194,7 +184,7 @@ export const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
     return () => {
       if (document.body.contains(skipLink)) {
         document.body.removeChild(skipLink);
-      }
+
     };
   }, [enabled]);
 
@@ -211,7 +201,7 @@ export const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
           whileTap={{ scale: 0.95 }}
           aria-label="Accessibility Settings"
           aria-expanded={isOpen}
-        >
+
           <Accessibility size={20} />
         </motion.button>
       )}
@@ -225,7 +215,7 @@ export const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
             animate={{ opacity: 1, x: 0, scale: 1 }}
             exit={{ opacity: 0, x: 100, scale: 0.9 }}
             transition={{ duration: 0.3, ease: "easeOut" }}
-          >
+
             {/* Header */}
             <div className="flex items-center justify-between mb-4">
               <h2 className="text-lg font-bold text-gray-900 dark:text-white">
@@ -235,7 +225,7 @@ export const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
                 onClick={() => setIsOpen(false)}
                 className="text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-200"
                 aria-label="Close accessibility settings"
-              >
+
                 <X size={20} />
               </button>
             </div>
@@ -254,7 +244,7 @@ export const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
                     settings.highContrast ? 'bg-cyan-500' : 'bg-gray-300'
                   }`}
                   aria-label={`${settings.highContrast ? 'Disable' : 'Enable'} high contrast mode`}
-                >
+
                   <span
                     className={`inline-block h-4 w-4 transform rounded-full bg-white transition-transform ${
                       settings.highContrast ? 'translate-x-6' : 'translate-x-1'
@@ -275,7 +265,7 @@ export const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
                     settings.largeText ? 'bg-cyan-500' : 'bg-gray-300'
                   }`}
                   aria-label={`${settings.largeText ? 'Disable' : 'Enable'} large text mode`}
-                >
+
                   <span
                     className={`inline-block h-4 w-4 transform rounded-full bg-white transition-transform ${
                       settings.largeText ? 'translate-x-6' : 'translate-x-1'
@@ -296,7 +286,7 @@ export const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
                     settings.reducedMotion ? 'bg-cyan-500' : 'bg-gray-300'
                   }`}
                   aria-label={`${settings.reducedMotion ? 'Disable' : 'Enable'} reduced motion`}
-                >
+
                   <span
                     className={`inline-block h-4 w-4 transform rounded-full bg-white transition-transform ${
                       settings.reducedMotion ? 'translate-x-6' : 'translate-x-1'
@@ -317,7 +307,7 @@ export const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
                     settings.focusIndicator ? 'bg-cyan-500' : 'bg-gray-300'
                   }`}
                   aria-label={`${settings.focusIndicator ? 'Disable' : 'Enable'} enhanced focus indicators`}
-                >
+
                   <span
                     className={`inline-block h-4 w-4 transform rounded-full bg-white transition-transform ${
                       settings.focusIndicator ? 'translate-x-6' : 'translate-x-1'
@@ -338,7 +328,7 @@ export const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
                     settings.keyboardNavigation ? 'bg-cyan-500' : 'bg-gray-300'
                   }`}
                   aria-label={`${settings.keyboardNavigation ? 'Disable' : 'Enable'} enhanced keyboard navigation`}
-                >
+
                   <span
                     className={`inline-block h-4 w-4 transform rounded-full bg-white transition-transform ${
                       settings.keyboardNavigation ? 'translate-x-6' : 'translate-x-1'
@@ -375,7 +365,7 @@ export const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
                 focusIndicator: false
               })}
               className="mt-4 w-full bg-gray-200 hover:bg-gray-300 dark:bg-gray-700 dark:hover:bg-gray-600 text-gray-700 dark:text-gray-300 py-2 px-4 rounded-lg transition-colors duration-200"
-            >
+
               Reset to Default
             </button>
           </motion.div>
@@ -394,16 +384,13 @@ export const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
           clip: rect(0, 0, 0, 0);
           white-space: nowrap;
           border: 0;
-        }
 
         .high-contrast {
           color-scheme: dark;
-        }
 
         .enhanced-focus *:focus {
           outline: 3px solid #06b6d4 !important;
           outline-offset: 2px !important;
-        }
 
         .skip-link:focus {
           position: absolute !important;
@@ -414,8 +401,8 @@ export const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
           overflow: visible !important;
           clip: auto !important;
           white-space: normal !important;
-        }
+
       `}</style>
     </>
   );
-};
+};}}}}}}}}}}}}}}}}}}}}

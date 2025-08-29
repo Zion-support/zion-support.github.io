@@ -13,8 +13,6 @@ import {
   HardDrive,
   Network,
   Monitor
-} from 'lucide-react';
-
 interface PerformanceMetric {
   name: string;
   value: number;
@@ -22,14 +20,12 @@ interface PerformanceMetric {
   trend: 'up' | 'down' | 'stable';
   status: 'good' | 'warning' | 'critical';
   icon: React.ComponentType<any>;
-}
 
 interface PerformanceData {
   timestamp: number;
   metrics: PerformanceMetric[];
   alerts: string[];
   recommendations: string[];
-}
 
 const PerformanceAnalytics: React.FC = () => {
   const [performanceData, setPerformanceData] = useState<PerformanceData | null>(null);
@@ -87,7 +83,7 @@ const PerformanceAnalytics: React.FC = () => {
         trend: Math.random() > 0.5 ? 'up' : 'down',
         status: Math.random() > 0.7 ? 'good' : Math.random() > 0.4 ? 'warning' : 'critical',
         icon: Zap
-      }
+
     ];
 
     const alerts = [
@@ -118,7 +114,7 @@ const PerformanceAnalytics: React.FC = () => {
       }, 5000);
 
       return () => clearInterval(interval);
-    }
+
   }, [isMonitoring, generatePerformanceData]);
 
   const getStatusColor = (status: string) => {
@@ -127,7 +123,7 @@ const PerformanceAnalytics: React.FC = () => {
       case 'warning': return 'text-yellow-400';
       case 'critical': return 'text-red-400';
       default: return 'text-gray-400';
-    }
+
   };
 
   const getStatusBgColor = (status: string) => {
@@ -136,7 +132,7 @@ const PerformanceAnalytics: React.FC = () => {
       case 'warning': return 'bg-yellow-500/20';
       case 'critical': return 'bg-red-500/20';
       default: return 'bg-gray-500/20';
-    }
+
   };
 
   const getTrendIcon = (trend: string) => {
@@ -144,7 +140,7 @@ const PerformanceAnalytics: React.FC = () => {
       case 'up': return <TrendingUp className="w-4 h-4 text-green-400" />;
       case 'down': return <TrendingDown className="w-4 h-4 text-red-400" />;
       default: return <Activity className="w-4 h-4 text-blue-400" />;
-    }
+
   };
 
   const formatValue = (value: number, unit: string) => {
@@ -162,7 +158,7 @@ const PerformanceAnalytics: React.FC = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-          >
+
             <div className="inline-flex items-center px-4 py-2 bg-purple-600/20 text-purple-400 rounded-full text-sm font-medium mb-6">
               <Monitor className="w-4 h-4 mr-2" />
               Performance Analytics
@@ -186,7 +182,7 @@ const PerformanceAnalytics: React.FC = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
             className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12"
-          >
+
             <button
               onClick={() => setIsMonitoring(!isMonitoring)}
               className={`px-6 py-3 rounded-lg font-semibold transition-all duration-300 flex items-center ${
@@ -194,7 +190,7 @@ const PerformanceAnalytics: React.FC = () => {
                   ? 'bg-red-600 hover:bg-red-700 text-white'
                   : 'bg-green-600 hover:bg-green-700 text-white'
               }`}
-            >
+
               {isMonitoring ? (
                 <>
                   <AlertTriangle className="w-4 h-4 mr-2" />
@@ -212,7 +208,7 @@ const PerformanceAnalytics: React.FC = () => {
               value={selectedTimeframe}
               onChange={(e) => setSelectedTimeframe(e.target.value as '1h' | '24h' | '7d' | '30d')}
               className="px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-purple-500"
-            >
+
               <option value="1h" className="bg-slate-800 text-white">Last Hour</option>
               <option value="24h" className="bg-slate-800 text-white">Last 24 Hours</option>
               <option value="7d" className="bg-slate-800 text-white">Last 7 Days</option>
@@ -231,7 +227,7 @@ const PerformanceAnalytics: React.FC = () => {
               animate={{ opacity: 1 }}
               transition={{ duration: 0.5 }}
               className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12"
-            >
+
               {performanceData.metrics.map((metric, index) => (
                 <motion.div
                   key={metric.name}
@@ -239,7 +235,7 @@ const PerformanceAnalytics: React.FC = () => {
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
                   className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 hover:border-purple-500/50 transition-all duration-300"
-                >
+
                   <div className="flex items-start justify-between mb-4">
                     <div className={`w-12 h-12 rounded-lg flex items-center justify-center ${getStatusBgColor(metric.status)}`}>
                       <metric.icon className="w-6 h-6 text-purple-400" />
@@ -283,7 +279,7 @@ const PerformanceAnalytics: React.FC = () => {
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.5, delay: 0.3 }}
                 className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6"
-              >
+
                 <h3 className="text-xl font-semibold text-white mb-4 flex items-center">
                   <AlertTriangle className="w-5 h-5 text-yellow-400 mr-2" />
                   Active Alerts
@@ -311,7 +307,7 @@ const PerformanceAnalytics: React.FC = () => {
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.5, delay: 0.4 }}
                 className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6"
-              >
+
                 <h3 className="text-xl font-semibold text-white mb-4 flex items-center">
                   <BarChart3 className="w-5 h-5 text-blue-400 mr-2" />
                   Recommendations
@@ -345,7 +341,7 @@ const PerformanceAnalytics: React.FC = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
-          >
+
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
               Optimize Your Application Performance
             </h2>
@@ -364,6 +360,6 @@ const PerformanceAnalytics: React.FC = () => {
       </section>
     </div>
   );
-};
+</div>};
 
-export default PerformanceAnalytics;
+export default PerformanceAnalytics;}}}}}}}}

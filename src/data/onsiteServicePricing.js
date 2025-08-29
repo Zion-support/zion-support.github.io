@@ -116,7 +116,7 @@ export const onsiteServicePricing = [
     responseTime: '72 hours',
     category: 'consulting',
     popular: false
-  }
+
 ];
 
 export const serviceCategories = [
@@ -155,7 +155,7 @@ export const serviceCategories = [
     description: 'IT strategy and planning services',
     icon: '📊',
     averageRate: 225
-  }
+
 ];
 
 export const additionalServices = [
@@ -194,7 +194,7 @@ export const additionalServices = [
     price: 'Monthly',
     description: 'Ongoing maintenance agreements',
     category: 'maintenance'
-  }
+
 ];
 
 export const getServiceById = (id) => {
@@ -229,5 +229,5 @@ export const getServiceRecommendations = (businessSize, industry) => {
     );
   } else {
     return onsiteServicePricing; // All services for large businesses
-  }
-};
+
+};}}}}

@@ -7,7 +7,6 @@ interface SwitchProps {
   className?: string;
   id?: string;
   'aria-label'?: string;
-}
 
 export function Switch({
   checked = false,
@@ -21,7 +20,7 @@ export function Switch({
   const handleToggle = () => {
     if (!disabled && onCheckedChange) {
       onCheckedChange(!checked);
-    }
+
   };
 
   return (
@@ -40,7 +39,7 @@ export function Switch({
       )}
       id={id}
       {...props}
-    >
+
       <span
         className={cn(
           'pointer-events-none block h-5 w-5 rounded-full bg-background shadow-lg ring-0 transition-transform',
@@ -49,4 +48,4 @@ export function Switch({
       />
     </button>
   );
-}
+}}}

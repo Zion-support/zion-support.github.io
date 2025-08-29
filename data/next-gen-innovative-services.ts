@@ -37,7 +37,7 @@ export interface NextGenInnovativeService {
   customers: number;
   rating: number;
   reviews: number;
-}
+
 export const nextGenInnovativeServices: NextGenInnovativeService[] = [
   // Quantum AI & Advanced Computing
   {
@@ -558,5 +558,5 @@ export const nextGenInnovativeServices: NextGenInnovativeService[] = [
     customers: 38,
     rating: 4.7,
     reviews: 26
-  }
-];
+
+];}}

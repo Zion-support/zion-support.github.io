@@ -1,7 +1,6 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { ShoppingCart, Zap, Settings, Users, Shield, Globe, ArrowRight, CheckCircle, Play, Download, Mail, Target, Activity, BarChart3, Database, Rocket } from 'lucide-react';
-import { Link } from 'react-router-dom';
+import { ShoppingCart, Zap, Settings, Users, Shield, Globe, ArrowRight, CheckCircle, Play, Download, Mail, Target, Activity, BarChart3, Database, Rocket import { Link } from 'react-router-dom';
 
 export default function MicroSAASSolutions() {
   return (
@@ -37,7 +36,7 @@ export default function MicroSAASSolutions() {
                 <Link
                   to="/contact"
                   className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-violet-500 to-purple-600 text-white font-semibold rounded-lg hover:from-violet-600 hover:to-purple-700 transition-all duration-200 shadow-lg hover:shadow-xl"
-                >
+
                   Get Started
                   <ArrowRight className="ml-2 w-5 h-5" />
                 </Link>
@@ -94,7 +93,7 @@ export default function MicroSAASSolutions() {
                   icon: Globe,
                   title: "Multi-tenant Architecture",
                   description: "Scalable multi-tenant architecture for growing SaaS businesses."
-                }
+
               ].map((feature, index) => (
                 <div key={index} className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-6 hover:bg-slate-800/70 transition-all duration-300">
                   <div className="w-12 h-12 bg-gradient-to-r from-violet-500 to-purple-600 rounded-lg flex items-center justify-center mb-4">
@@ -157,7 +156,7 @@ export default function MicroSAASSolutions() {
                   description: "Content management, SEO tools, and digital marketing platforms.",
                   icon: Database,
                   benefits: ["Content management", "SEO tools", "Digital marketing"]
-                }
+
               ].map((category, index) => (
                 <div key={index} className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-6 hover:bg-slate-800/70 transition-all duration-300">
                   <div className="w-12 h-12 bg-gradient-to-r from-violet-500 to-purple-600 rounded-lg flex items-center justify-center mb-4">
@@ -212,7 +211,7 @@ export default function MicroSAASSolutions() {
                   step: "04",
                   title: "Launch & Growth",
                   description: "Product launch, marketing, and continuous improvement."
-                }
+
               ].map((step, index) => (
                 <div key={index} className="text-center">
                   <div className="w-16 h-16 bg-gradient-to-r from-violet-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
@@ -366,7 +365,7 @@ export default function MicroSAASSolutions() {
                   metric: "CAC",
                   title: "Customer Acquisition Cost",
                   description: "Optimize marketing and sales efficiency"
-                }
+
               ].map((metric, index) => (
                 <div key={index} className="text-center">
                   <div className="w-16 h-16 bg-gradient-to-r from-violet-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
@@ -393,14 +392,14 @@ export default function MicroSAASSolutions() {
               <Link
                 to="/contact"
                 className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-violet-500 to-purple-600 text-white font-semibold rounded-lg hover:from-violet-600 hover:to-purple-700 transition-all duration-200"
-              >
+
                 Start Your Project
                 <ArrowRight className="ml-2 w-5 h-5" />
               </Link>
               <Link
                 to="/services"
                 className="inline-flex items-center px-8 py-4 border border-violet-500/30 text-violet-400 font-semibold rounded-lg hover:bg-violet-500/10 transition-all duration-200"
-              >
+
                 Explore All Services
               </Link>
             </div>
@@ -409,4 +408,4 @@ export default function MicroSAASSolutions() {
       </div>
     </>
   );
-}
+}}}}}}

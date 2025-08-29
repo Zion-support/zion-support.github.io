@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { CheckCircle, XCircle, AlertTriangle, ExternalLink } from 'lucide-react';
-const LinkHealthChecker = ({ links, className = '' }) => {
+import { CheckCircle, XCircle, AlertTriangle, ExternalLink const LinkHealthChecker = ({ links, className = '' }) => {
     const [linkStatuses, setLinkStatuses] = useState([]);
     const [isChecking, setIsChecking] = useState(false);
     const checkLinkHealth = async (url) => {
@@ -13,7 +12,7 @@ const LinkHealthChecker = ({ links, className = '' }) => {
                     status: 'external',
                     responseTime: Date.now() - startTime
                 };
-            }
+
             // Check if it's a mailto or tel link
             if (url.startsWith('mailto:') || url.startsWith('tel:')) {
                 return {
@@ -21,7 +20,7 @@ const LinkHealthChecker = ({ links, className = '' }) => {
                     status: 'healthy',
                     responseTime: Date.now() - startTime
                 };
-            }
+
             // For internal links, we'll assume they're healthy since they're part of our app
             if (url.startsWith('/') || url.includes('ziontechgroup.com')) {
                 return {
@@ -29,7 +28,7 @@ const LinkHealthChecker = ({ links, className = '' }) => {
                     status: 'healthy',
                     responseTime: Date.now() - startTime
                 };
-            }
+
             // For external links, we could implement actual health checking
             // For now, we'll mark them as external
             return {
@@ -37,7 +36,7 @@ const LinkHealthChecker = ({ links, className = '' }) => {
                 status: 'external',
                 responseTime: Date.now() - startTime
             };
-        }
+
         catch (error) {
             return {
                 url,
@@ -45,7 +44,7 @@ const LinkHealthChecker = ({ links, className = '' }) => {
                 responseTime: Date.now() - startTime,
                 error: error instanceof Error ? error.message : 'Unknown error'
             };
-        }
+
     };
     const checkAllLinks = async () => {
         setIsChecking(true);
@@ -70,7 +69,7 @@ const LinkHealthChecker = ({ links, className = '' }) => {
                 return <AlertTriangle className="w-5 h-5 text-yellow-500 animate-pulse"/>;
             default:
                 return <AlertTriangle className="w-5 h-5 text-gray-500"/>;
-        }
+
     };
     const getStatusText = (status) => {
         switch (status) {
@@ -84,7 +83,7 @@ const LinkHealthChecker = ({ links, className = '' }) => {
                 return 'Checking...';
             default:
                 return 'Unknown';
-        }
+
     };
     const getStatusColor = (status) => {
         switch (status) {
@@ -98,7 +97,7 @@ const LinkHealthChecker = ({ links, className = '' }) => {
                 return 'text-yellow-500';
             default:
                 return 'text-gray-500';
-        }
+
     };
     const healthyCount = linkStatuses.filter(s => s.status === 'healthy').length;
     const brokenCount = linkStatuses.filter(s => s.status === 'broken').length;
@@ -180,5 +179,6 @@ const LinkHealthChecker = ({ links, className = '' }) => {
           </p>
         </div>)}
     </div>);
-};
+</div>};
 export default LinkHealthChecker;
+}}}}}}}}}

@@ -20,8 +20,6 @@ import {
   Phone,
   Mail,
   MapPin
-} from 'lucide-react';
-
 // Import the new services
 import { ultimateInnovativeServices2025 } from '../../data/2025-ultimate-innovative-services-expansion';
 import { enterpriseITInfrastructureServices2025 } from '../../data/2025-enterprise-it-infrastructure-services';
@@ -69,7 +67,6 @@ interface Service {
   patentStatus: 'Patented' | 'Patent Pending' | 'Trade Secret' | 'Open Source';
   aiCapabilities: string[];
   marketDisruption: string;
-}
 
 const contact = {
   mobile: '+1 302 464 0950',
@@ -102,7 +99,7 @@ const categories = [
     icon: <Code className="w-8 h-8" />,
     color: 'from-green-600 to-emerald-700',
     services: innovativeMicroSaasSolutions2025
-  }
+
 ];
 
 const innovationLevelColors = {
@@ -140,8 +137,8 @@ export function UltimateServicesShowcase() {
       transition: {
         staggerChildren: 0.1,
         delayChildren: 0.2
-      }
-    }
+
+
   };
 
   const itemVariants = {
@@ -152,8 +149,8 @@ export function UltimateServicesShowcase() {
       transition: {
         duration: 0.6,
         ease: "easeOut"
-      }
-    }
+
+
   };
 
   return (
@@ -165,7 +162,7 @@ export function UltimateServicesShowcase() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
-        >
+
           <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
             <span className="bg-gradient-to-r from-zion-cyan via-zion-blue to-zion-purple bg-clip-text text-transparent">
               Ultimate Innovation
@@ -201,7 +198,7 @@ export function UltimateServicesShowcase() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
-        >
+
           <button
             onClick={() => setSelectedCategory('all')}
             className={`px-6 py-3 rounded-full font-semibold transition-all duration-300 ${
@@ -209,7 +206,7 @@ export function UltimateServicesShowcase() {
                 ? 'bg-gradient-to-r from-zion-cyan to-zion-blue text-white shadow-lg shadow-zion-cyan/25'
                 : 'bg-zion-slate-light text-zion-gray-light hover:bg-zion-slate hover:text-white'
             }`}
-          >
+
             All Services ({allServices.length})
           </button>
           {categories.map((category) => (
@@ -221,7 +218,7 @@ export function UltimateServicesShowcase() {
                   ? 'bg-gradient-to-r from-zion-cyan to-zion-blue text-white shadow-lg shadow-zion-cyan/25'
                   : 'bg-zion-slate-light text-zion-gray-light hover:bg-zion-slate hover:text-white'
               }`}
-            >
+
               {category.name} ({category.services.length})
             </button>
           ))}
@@ -233,13 +230,13 @@ export function UltimateServicesShowcase() {
           variants={containerVariants}
           initial="hidden"
           animate="visible"
-        >
+
           {filteredServices.map((service) => (
             <motion.div
               key={service.id}
               variants={itemVariants}
               className="group relative"
-            >
+
               <div className="bg-zion-slate-light rounded-2xl p-6 h-full border border-zion-slate hover:border-zion-cyan transition-all duration-300 hover:shadow-2xl hover:shadow-zion-cyan/20">
                 {/* Service Header */}
                 <div className="mb-4">
@@ -325,14 +322,14 @@ export function UltimateServicesShowcase() {
                   <button
                     onClick={() => setSelectedService(service)}
                     className="flex-1 bg-gradient-to-r from-zion-cyan to-zion-blue text-white px-4 py-2 rounded-lg font-semibold hover:from-zion-blue hover:to-zion-cyan transition-all duration-300 flex items-center justify-center gap-2"
-                  >
+
                     Learn More
                     <ArrowRight className="w-4 h-4" />
                   </button>
                   <Link
                     to={service.link}
                     className="bg-zion-slate-light border border-zion-cyan text-zion-cyan px-4 py-2 rounded-lg font-semibold hover:bg-zion-cyan hover:text-white transition-all duration-300 flex items-center justify-center"
-                  >
+
                     <Zap className="w-4 h-4" />
                   </Link>
                 </div>
@@ -347,7 +344,7 @@ export function UltimateServicesShowcase() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.4 }}
-        >
+
           <div className="bg-gradient-to-r from-zion-slate to-zion-slate-light rounded-2xl p-8 border border-zion-cyan">
             <h2 className="text-3xl font-bold text-white mb-4">
               Ready to Transform Your Business?
@@ -359,7 +356,7 @@ export function UltimateServicesShowcase() {
               <Link
                 to="/contact"
                 className="bg-gradient-to-r from-zion-cyan to-zion-blue text-white px-8 py-3 rounded-lg font-semibold hover:from-zion-blue hover:to-zion-cyan transition-all duration-300 flex items-center gap-2"
-              >
+
                 Get Started Today
                 <ArrowRight className="w-5 h-5" />
               </Link>
@@ -368,7 +365,7 @@ export function UltimateServicesShowcase() {
                   .replace(/\s/g, '')
                   .replace(/[^\d+]/g, '')}
                 className="bg-zion-slate-light border border-zion-cyan text-zion-cyan px-8 py-3 rounded-lg font-semibold hover:bg-zion-cyan hover:text-white transition-all duration-300 flex items-center gap-2"
-              >
+
                 <Phone className="w-5 h-5" />
                 Call Now
               </a>
@@ -395,7 +392,7 @@ export function UltimateServicesShowcase() {
                 <button
                   onClick={() => setSelectedService(null)}
                   className="text-zion-gray-light hover:text-white text-2xl"
-                >
+
                   ×
                 </button>
               </div>
@@ -476,7 +473,7 @@ export function UltimateServicesShowcase() {
                     <Link
                       to={selectedService.link}
                       className="flex-1 bg-gradient-to-r from-zion-cyan to-zion-blue text-white px-6 py-3 rounded-lg font-semibold hover:from-zion-blue hover:to-zion-cyan transition-all duration-300 text-center"
-                    >
+
                       Get Started
                     </Link>
                     <a
@@ -484,7 +481,7 @@ export function UltimateServicesShowcase() {
                         .replace(/\s/g, '')
                         .replace(/[^\d+]/g, '')}
                       className="bg-zion-slate border border-zion-cyan text-zion-cyan px-6 py-3 rounded-lg font-semibold hover:bg-zion-cyan hover:text-white transition-all duration-300 flex items-center justify-center"
-                    >
+
                       <Phone className="w-5 h-5" />
                     </a>
                   </div>
@@ -496,6 +493,5 @@ export function UltimateServicesShowcase() {
       )}
     </section>
   );
-}
 
-export default UltimateServicesShowcase;
+export default UltimateServicesShowcase;}}}}}}}}

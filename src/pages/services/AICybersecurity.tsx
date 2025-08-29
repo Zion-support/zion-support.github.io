@@ -1,6 +1,4 @@
-import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, FileText, BarChart3 } from 'lucide-react';
-
-export default function AICybersecurity() {
+import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, FileText, BarChart3 export default function AICybersecurity() {
   const features = [
     'AI-powered cybersecurity optimization',
     'Intelligent threat detection and response',
@@ -171,4 +169,4 @@ export default function AICybersecurity() {
       </section>
     </div>
   );
-}
+}}

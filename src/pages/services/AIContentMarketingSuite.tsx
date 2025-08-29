@@ -49,7 +49,6 @@ import {
   ShoppingCart,
   Building,
   DollarSign
-} from 'lucide-react';
 import { SEO } from '../../components/SEO';
 
 export default function AIContentMarketingSuite() {
@@ -73,7 +72,7 @@ export default function AIContentMarketingSuite() {
       icon: Eye,
       title: 'Performance Analytics',
       description: 'Real-time content performance tracking with AI insights that help you optimize your content strategy and ROI.'
-    }
+
   ];
 
   const capabilities = [
@@ -100,7 +99,7 @@ export default function AIContentMarketingSuite() {
       description: 'Comprehensive performance tracking and AI-powered recommendations',
       icon: BarChart3,
       benefits: ['Performance metrics', 'Audience insights', 'ROI tracking', 'Optimization tips']
-    }
+
   ];
 
   const useCases = [
@@ -127,7 +126,7 @@ export default function AIContentMarketingSuite() {
       description: 'Generate articles, optimize headlines, and create engaging content that drives reader engagement and retention',
       icon: BookOpen,
       metrics: ['Reader Engagement', 'Content Quality', 'Publishing Speed', 'Audience Growth']
-    }
+
   ];
 
   const benefits = [
@@ -150,7 +149,7 @@ export default function AIContentMarketingSuite() {
       icon: DollarSign,
       title: 'Improved ROI',
       description: 'Boost marketing ROI by 25-40% through better content performance and conversion optimization.'
-    }
+
   ];
 
   const pricing = [
@@ -200,7 +199,7 @@ export default function AIContentMarketingSuite() {
       ],
       cta: 'Contact Sales',
       popular: false
-    }
+
   ];
 
   return (
@@ -219,7 +218,7 @@ export default function AIContentMarketingSuite() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-          >
+
             <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-green-400 via-emerald-400 to-teal-400 bg-clip-text text-transparent mb-6">
               AI Content Marketing Suite
             </h1>
@@ -247,7 +246,7 @@ export default function AIContentMarketingSuite() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
-          >
+
             <h2 className="text-4xl font-bold text-white mb-6">
               Powerful AI-Powered Features
             </h2>
@@ -265,7 +264,7 @@ export default function AIContentMarketingSuite() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 className="bg-slate-800/50 p-8 rounded-xl border border-slate-700/50 hover:border-green-400/50 transition-all duration-300 hover:scale-105"
-              >
+
                 <div className="w-16 h-16 bg-gradient-to-br from-green-400/20 to-emerald-500/20 rounded-xl flex items-center justify-center mb-6">
                   <feature.icon className="w-8 h-8 text-green-400" />
                 </div>
@@ -285,7 +284,7 @@ export default function AIContentMarketingSuite() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
-          >
+
             <h2 className="text-4xl font-bold text-white mb-6">
               Comprehensive Content Capabilities
             </h2>
@@ -303,7 +302,7 @@ export default function AIContentMarketingSuite() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 className="bg-slate-800/50 p-8 rounded-xl border border-slate-700/50 hover:border-green-400/50 transition-all duration-300 hover:scale-105"
-              >
+
                 <div className="flex items-center space-x-4 mb-6">
                   <div className="w-16 h-16 bg-gradient-to-br from-green-400/20 to-emerald-500/20 rounded-xl flex items-center justify-center">
                     <capability.icon className="w-8 h-8 text-green-400" />
@@ -333,7 +332,7 @@ export default function AIContentMarketingSuite() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
-          >
+
             <h2 className="text-4xl font-bold text-white mb-6">
               Industry Use Cases
             </h2>
@@ -351,7 +350,7 @@ export default function AIContentMarketingSuite() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 className="bg-slate-800/50 p-8 rounded-xl border border-slate-700/50 hover:border-green-400/50 transition-all duration-300 hover:scale-105"
-              >
+
                 <div className="flex items-center space-x-4 mb-6">
                   <div className="w-16 h-16 bg-gradient-to-br from-green-400/20 to-emerald-500/20 rounded-xl flex items-center justify-center">
                     <useCase.icon className="w-8 h-8 text-green-400" />
@@ -381,7 +380,7 @@ export default function AIContentMarketingSuite() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
-          >
+
             <h2 className="text-4xl font-bold text-white mb-6">
               Business Benefits
             </h2>
@@ -399,7 +398,7 @@ export default function AIContentMarketingSuite() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 className="bg-slate-800/50 p-6 rounded-xl border border-slate-700/50 hover:border-green-400/50 transition-all duration-300 hover:scale-105 text-center"
-              >
+
                 <div className="w-16 h-16 bg-gradient-to-br from-green-400/20 to-emerald-500/20 rounded-xl flex items-center justify-center mx-auto mb-6">
                   <benefit.icon className="w-8 h-8 text-green-400" />
                 </div>
@@ -419,7 +418,7 @@ export default function AIContentMarketingSuite() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
-          >
+
             <h2 className="text-4xl font-bold text-white mb-6">
               Transparent Pricing
             </h2>
@@ -441,7 +440,7 @@ export default function AIContentMarketingSuite() {
                     ? 'border-green-400/50 bg-gradient-to-br from-green-500/10 to-emerald-500/10'
                     : 'border-slate-700/50 hover:border-green-400/50'
                 }`}
-              >
+
                 {plan.popular && (
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                     <span className="bg-gradient-to-r from-green-500 to-emerald-500 text-white px-4 py-2 rounded-full text-sm font-semibold">
@@ -489,7 +488,7 @@ export default function AIContentMarketingSuite() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
-          >
+
             <h2 className="text-4xl font-bold text-white mb-6">
               Implementation Process
             </h2>
@@ -520,7 +519,7 @@ export default function AIContentMarketingSuite() {
                 step: '04',
                 title: 'Launch & Optimize',
                 description: 'Go live with continuous monitoring and ongoing optimization support'
-              }
+
             ].map((phase, index) => (
               <motion.div
                 key={index}
@@ -528,7 +527,7 @@ export default function AIContentMarketingSuite() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 className="text-center"
-              >
+
                 <div className="w-20 h-20 bg-gradient-to-br from-green-400 to-emerald-500 rounded-full flex items-center justify-center mx-auto mb-6 text-2xl font-bold text-white">
                   {phase.step}
                 </div>
@@ -547,7 +546,7 @@ export default function AIContentMarketingSuite() {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-          >
+
             <h2 className="text-4xl font-bold text-white mb-6">
               Ready to Transform Your Content Marketing?
             </h2>
@@ -607,4 +606,4 @@ export default function AIContentMarketingSuite() {
       </section>
     </div>
   );
-}
+}}}}}}}}

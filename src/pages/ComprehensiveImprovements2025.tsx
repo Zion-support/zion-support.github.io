@@ -25,7 +25,6 @@ import {
   Lock,
   Target,
   Award
-} from 'lucide-react';
 import EnhancedSEOManager from '../components/EnhancedSEOManager';
 
 const ComprehensiveImprovements2025: React.FC = () => {
@@ -83,7 +82,7 @@ const ComprehensiveImprovements2025: React.FC = () => {
       icon: Code,
       route: '/integrations',
       color: 'from-indigo-500 to-purple-500'
-    }
+
   ];
 
   const stats = [
@@ -111,7 +110,7 @@ const ComprehensiveImprovements2025: React.FC = () => {
         ogType: 'website',
         canonicalUrl: 'https://ziontechgroup.com/comprehensive-improvements-2025'
       }}
-    >
+
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
         {/* Hero Section */}
         <section className="relative pt-32 pb-20 px-4 sm:px-6 lg:px-8">
@@ -121,7 +120,7 @@ const ComprehensiveImprovements2025: React.FC = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               className="mb-8"
-            >
+
               <div className="inline-flex items-center px-4 py-2 bg-blue-600/20 text-blue-400 rounded-full text-sm font-medium mb-6">
                 <Rocket className="w-4 h-4 mr-2" />
                 Comprehensive Improvements 2025
@@ -145,7 +144,7 @@ const ComprehensiveImprovements2025: React.FC = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
               className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto"
-            >
+
               {stats.map((stat, index) => (
                 <motion.div
                   key={stat.label}
@@ -153,7 +152,7 @@ const ComprehensiveImprovements2025: React.FC = () => {
                   animate={{ opacity: 1, scale: 1 }}
                   transition={{ duration: 0.5, delay: 0.3 + index * 0.1 }}
                   className="text-center"
-                >
+
                   <div className="w-16 h-16 bg-blue-500/20 rounded-lg flex items-center justify-center mx-auto mb-3">
                     <stat.icon className="w-8 h-8 text-blue-400" />
                   </div>
@@ -174,7 +173,7 @@ const ComprehensiveImprovements2025: React.FC = () => {
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
               className="text-center mb-16"
-            >
+
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
                 Platform Improvements Overview
               </h2>
@@ -193,7 +192,7 @@ const ComprehensiveImprovements2025: React.FC = () => {
                   transition={{ duration: 0.5, delay: index * 0.1 }}
                   viewport={{ once: true }}
                   className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 hover:border-blue-500/50 transition-all duration-300 hover:transform hover:scale-105"
-                >
+
                   {/* Header */}
                   <div className="flex items-start justify-between mb-4">
                     <div className={`w-12 h-12 bg-gradient-to-r ${improvement.color} rounded-lg flex items-center justify-center`}>
@@ -225,7 +224,7 @@ const ComprehensiveImprovements2025: React.FC = () => {
                   <Link
                     to={improvement.route}
                     className={`w-full bg-gradient-to-r ${improvement.color} text-white py-3 px-4 rounded-lg font-semibold hover:opacity-90 transition-all duration-300 flex items-center justify-center group`}
-                  >
+
                     Explore Feature
                     <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform duration-300" />
                   </Link>
@@ -244,7 +243,7 @@ const ComprehensiveImprovements2025: React.FC = () => {
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
               className="text-center mb-16"
-            >
+
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
                 Why Choose Our Improvements?
               </h2>
@@ -263,7 +262,7 @@ const ComprehensiveImprovements2025: React.FC = () => {
                   transition={{ duration: 0.5, delay: index * 0.1 }}
                   viewport={{ once: true }}
                   className="flex items-start gap-4"
-                >
+
                   <div className="w-8 h-8 bg-green-500/20 rounded-lg flex items-center justify-center flex-shrink-0 mt-1">
                     <CheckCircle className="w-4 h-4 text-green-400" />
                   </div>
@@ -282,7 +281,7 @@ const ComprehensiveImprovements2025: React.FC = () => {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
-            >
+
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
                 Ready to Experience the Future?
               </h2>
@@ -294,14 +293,14 @@ const ComprehensiveImprovements2025: React.FC = () => {
                 <Link
                   to="/contact"
                   className="bg-gradient-to-r from-blue-600 to-cyan-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-blue-700 hover:to-cyan-700 transition-all duration-300 text-lg flex items-center justify-center"
-                >
+
                   <Rocket className="w-5 h-5 mr-2" />
                   Get Started Today
                 </Link>
                 <Link
                   to="/ai-services-hub"
                   className="border border-blue-500 text-blue-400 px-8 py-4 rounded-lg font-semibold hover:bg-blue-500 hover:text-white transition-all duration-300 text-lg"
-                >
+
                   Explore AI Services
                 </Link>
               </div>
@@ -331,4 +330,4 @@ const ComprehensiveImprovements2025: React.FC = () => {
   );
 };
 
-export default ComprehensiveImprovements2025;
+export default ComprehensiveImprovements2025;}}

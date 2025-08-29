@@ -121,7 +121,7 @@ export const comprehensivePricingGuide2025: ServicePricing[] = [
           'Multi-national operations',
           'Custom AI requirements'
         ]
-      }
+
     ],
     marketComparison: {
       averageMarketPrice: '$5,000 - $15,000',
@@ -158,7 +158,7 @@ export const comprehensivePricingGuide2025: ServicePricing[] = [
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    }
+
   },
   {
     id: 'ai-content-optimization-suite',
@@ -251,7 +251,7 @@ export const comprehensivePricingGuide2025: ServicePricing[] = [
           'Agency teams',
           'Custom AI requirements'
         ]
-      }
+
     ],
     marketComparison: {
       averageMarketPrice: '$200 - $800',
@@ -288,7 +288,7 @@ export const comprehensivePricingGuide2025: ServicePricing[] = [
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    }
+
   },
   {
     id: 'zero-trust-network-architecture',
@@ -375,7 +375,7 @@ export const comprehensivePricingGuide2025: ServicePricing[] = [
           'Custom security requirements',
           'Extended support needs'
         ]
-      }
+
     ],
     marketComparison: {
       averageMarketPrice: '$20,000 - $50,000',
@@ -412,7 +412,7 @@ export const comprehensivePricingGuide2025: ServicePricing[] = [
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    }
+
   },
   {
     id: 'cloud-finops-optimizer',
@@ -498,7 +498,7 @@ export const comprehensivePricingGuide2025: ServicePricing[] = [
           'Custom optimization requirements',
           'Enterprise-grade support needs'
         ]
-      }
+
     ],
     marketComparison: {
       averageMarketPrice: '$500 - $2,500',
@@ -535,8 +535,8 @@ export const comprehensivePricingGuide2025: ServicePricing[] = [
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    }
-  }
+
+
 ];
 
-export default comprehensivePricingGuide2025;
+export default comprehensivePricingGuide2025;}}}}}}}}}

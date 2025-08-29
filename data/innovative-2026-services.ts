@@ -38,7 +38,7 @@ export interface Innovative2026Service {
   customers: number;
   rating: number;
   reviews: number;
-}
+
 export const innovative2026Services: Innovative2026Service[] = [
   // AI-Powered Business Intelligence
   {
@@ -559,5 +559,5 @@ export const innovative2026Services: Innovative2026Service[] = [
     customers: 180,
     rating: 4.9,
     reviews: 112
-  }
-];
+
+];}}

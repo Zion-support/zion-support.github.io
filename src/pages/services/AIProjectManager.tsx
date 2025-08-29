@@ -1,9 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { SEO } from '@/components/SEO';
-import { Calendar, Users, BarChart3, CheckCircle, ArrowRight, ExternalLink, Phone, Mail, Zap, Target, TrendingUp } from 'lucide-react';
-
-export default function AIProjectManager() {
+import { Calendar, Users, BarChart3, CheckCircle, ArrowRight, ExternalLink, Phone, Mail, Zap, Target, TrendingUp export default function AIProjectManager() {
   const features = [
     'AI-powered project planning and scheduling',
     'Automated resource allocation and team management',
@@ -42,7 +40,7 @@ export default function AIProjectManager() {
       price: '$799/mo',
       features: ['Unlimited projects', 'Unlimited team members', 'Full AI suite', 'Dedicated support', 'Custom AI training', 'SAML/SSO'],
       popular: false
-    }
+
   ];
 
   return (
@@ -63,7 +61,7 @@ export default function AIProjectManager() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               className="text-center max-w-4xl mx-auto"
-            >
+
               <h1 className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent">
                 AI Project Manager
               </h1>
@@ -91,7 +89,7 @@ export default function AIProjectManager() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               className="text-center mb-16"
-            >
+
               <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white">
                 Powerful Features
               </h2>
@@ -108,7 +106,7 @@ export default function AIProjectManager() {
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
                   className="bg-glass-dark rounded-xl p-6 border border-slate-700/50 text-center"
-                >
+
                   <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
                     <CheckCircle className="w-6 h-6 text-white" />
                   </div>
@@ -127,7 +125,7 @@ export default function AIProjectManager() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               className="text-center mb-16"
-            >
+
               <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white">
                 Why Choose AI Project Manager?
               </h2>
@@ -144,7 +142,7 @@ export default function AIProjectManager() {
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
                   className="bg-glass-dark rounded-xl p-6 border border-slate-700/50"
-                >
+
                   <div className="w-12 h-12 bg-gradient-to-r from-green-500 to-emerald-600 rounded-full flex items-center justify-center mb-4">
                     <TrendingUp className="w-6 h-6 text-white" />
                   </div>
@@ -163,7 +161,7 @@ export default function AIProjectManager() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               className="text-center mb-16"
-            >
+
               <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white">
                 Simple, Transparent Pricing
               </h2>
@@ -184,7 +182,7 @@ export default function AIProjectManager() {
                       ? 'border-cyan-500/50 shadow-lg shadow-cyan-500/20'
                       : 'border-slate-700/50'
                   }`}
-                >
+
                   {plan.popular && (
                     <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
                       <span className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-3 py-1 rounded-full text-sm font-semibold">
@@ -227,7 +225,7 @@ export default function AIProjectManager() {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-            >
+
               <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white">
                 Ready to Transform Your Project Management?
               </h2>
@@ -248,4 +246,4 @@ export default function AIProjectManager() {
       </div>
     </>
   );
-}
+}}}

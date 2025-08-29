@@ -15,8 +15,7 @@ import { slugify } from '@/lib/slugify';
 import { ResponsiveNavigation } from '@/components/navigation/ResponsiveNavigation';
 import { MobileMenu } from '@/components/header/MobileMenu';
 import { MobileBottomNav } from '@/components/header/MobileBottomNav';
-import { Menu, X, ShoppingCart } from 'lucide-react';
-import { useTranslation } from 'react-i18next';
+import { Menu, X, ShoppingCart import { useTranslation } from 'react-i18next';
 import { useSelector } from 'react-redux';
 export function PrimaryNav() {
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -31,18 +30,18 @@ export function PrimaryNav() {
     try {
         const messaging = useMessaging();
         unreadCount = messaging.unreadCount;
-    }
+
     catch {
         // context not available
-    }
+
     const cartCount = useSelector((s) => s.cart.items.reduce((sum, i) => sum + i.quantity, 0));
     const handleSubmit = (e) => {
         e.preventDefault();
         if (query.trim()) {
-            // console.log('PrimaryNav search submit:', query);
+            // // // console.log('PrimaryNav search submit:', query);
             navigate(`/search/${slugify(query)}`);
             setQuery('');
-        }
+
     };
     return (<>
       <header className="sticky top-0 z-50 w-full border-b border-primary/20 bg-card/90 backdrop-blur-md" role="navigation" aria-label="Primary" data-testid="header">
@@ -59,24 +58,24 @@ export function PrimaryNav() {
             {/* Search form with clamped width */}
             <form onSubmit={handleSubmit} className="flex-shrink-0" style={{ width: 'clamp(12rem, 20vw, 16rem)' }}>
               <EnhancedSearchInput value={query} onChange={setQuery} onSelectSuggestion={(sugg) => {
-            // console.log('PrimaryNav search suggestion selected:', sugg);
+            // // // console.log('PrimaryNav search suggestion selected:', sugg);
             // Handle different suggestion types with proper navigation
             if (sugg.id) {
                 // Product listings with IDs go to product detail page
                 navigate(`/marketplace/listing/${sugg.id}`);
-            }
+
             else if (sugg.type === 'doc' && sugg.slug && sugg.slug.startsWith('/')) {
                 // Documentation suggestions navigate directly to their path
                 navigate(sugg.slug);
-            }
+
             else if (sugg.type === 'blog' && sugg.slug) {
                 // Blog posts navigate to blog detail page
                 navigate(`/blog/${sugg.slug}`);
-            }
+
             else {
                 // Default: search results page with slug
                 navigate(`/search/${sugg.slug || slugify(sugg.text)}`);
-            }
+
             setQuery('');
             // Track analytics event
             if (typeof window !== 'undefined' && window.gtag) {
@@ -85,7 +84,7 @@ export function PrimaryNav() {
                     suggestion_type: sugg.type,
                     suggestion_id: sugg.id || sugg.slug
                 });
-            }
+
         }} searchSuggestions={suggestions}/>
             </form>
 
@@ -151,4 +150,4 @@ export function PrimaryNav() {
         </div>)}
       {isMobile && <MobileBottomNav unreadCount={unreadCount}/>}
     </>);
-}
+</div></div>}}}}}}}}}}

@@ -1,7 +1,6 @@
 import React, { useState, useCallback } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Shield, AlertTriangle, CheckCircle, XCircle, Download, Settings, RefreshCw, Loader2, FileText, BarChart3, Clock, Play, Square } from 'lucide-react';
-import { useSecurityCompliance } from '../hooks/useSecurityCompliance';
+import { Shield, AlertTriangle, CheckCircle, XCircle, Download, Settings, RefreshCw, Loader2, FileText, BarChart3, Clock, Play, Square import { useSecurityCompliance } from '../hooks/useSecurityCompliance';
 import { useAnalytics } from '../hooks/useAnalytics';
 export const SecurityComplianceDashboard = ({ className = '' }) => {
     const { trackEvent } = useAnalytics({
@@ -61,7 +60,7 @@ export const SecurityComplianceDashboard = ({ className = '' }) => {
             case 'medium': return 'text-yellow-600 bg-yellow-100';
             case 'low': return 'text-green-600 bg-green-100';
             default: return 'text-gray-600 bg-gray-100';
-        }
+
     };
     const getStatusColor = (status) => {
         switch (status) {
@@ -69,7 +68,7 @@ export const SecurityComplianceDashboard = ({ className = '' }) => {
             case 'non_compliant': return 'text-red-600 bg-red-100';
             case 'pending_review': return 'text-yellow-600 bg-yellow-100';
             default: return 'text-gray-600 bg-gray-100';
-        }
+
     };
     const getThreatLevelColor = (level) => {
         switch (level) {
@@ -78,7 +77,7 @@ export const SecurityComplianceDashboard = ({ className = '' }) => {
             case 'medium': return 'text-yellow-600 bg-yellow-100 border-yellow-200';
             case 'low': return 'text-green-600 bg-green-100 border-green-200';
             default: return 'text-gray-600 bg-gray-100 border-gray-200';
-        }
+
     };
     return (<div className={`bg-white dark:bg-gray-900 rounded-lg shadow-lg border border-gray-200 dark:border-gray-700 ${className}`}>
       {/* Header */}
@@ -435,4 +434,5 @@ export const SecurityComplianceDashboard = ({ className = '' }) => {
           </motion.div>)}
       </AnimatePresence>
     </div>);
-};
+</div>};
+}}}}

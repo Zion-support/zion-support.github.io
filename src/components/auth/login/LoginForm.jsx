@@ -3,8 +3,7 @@ import { useForm } from "react-hook-form";
 import { useNavigate } from "react-router-dom";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
-import { LogIn, User, Eye, EyeOff } from "lucide-react";
-import { useAuth } from "@/hooks/useAuth";
+import { LogIn, User, Eye, EyeOff import { useAuth } from "@/hooks/useAuth";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage, } from "@/components/ui/form";
@@ -35,18 +34,18 @@ function LoginForm() {
             const { error } = await login(data.email, data.password);
             if (error) {
                 form.setError("root", { message: error });
-            }
+
             else {
                 navigate("/");
-            }
-        }
+
+
         finally {
             setIsSubmitting(false);
-        }
+
     };
     return (<Form {...form}>
       <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6" autoComplete="off" // Disable browser autofill
-    >
+
         {form.formState.errors.root && (<p className="text-red-400 text-sm" role="alert">
             {form.formState.errors.root.message}
           </p>)}
@@ -94,6 +93,6 @@ function LoginForm() {
       </form>
       <LoadingOverlay visible={isLoading || isSubmitting}/>
     </Form>);
-}
 
 export default LoginForm;
+}}}}}}

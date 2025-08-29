@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { ChevronDown, ChevronUp, HelpCircle, Search, Zap, Shield, Cloud, Brain } from 'lucide-react';
-import { SEO } from '../components/SEO';
+import { ChevronDown, ChevronUp, HelpCircle, Search, Zap, Shield, Cloud, Brain import { SEO } from '../components/SEO';
 
 interface FAQItem {
   id: string;
@@ -9,7 +8,6 @@ interface FAQItem {
   answer: string;
   category: string;
   icon: React.ComponentType<any>;
-}
 
 const faqData: FAQItem[] = [
   {
@@ -67,7 +65,7 @@ const faqData: FAQItem[] = [
     answer: 'Yes, we offer comprehensive maintenance packages including regular updates, security patches, performance monitoring, and continuous improvement of your solutions.',
     category: 'Support',
     icon: HelpCircle
-  }
+
 ];
 
 const categories = ['All', 'AI Services', 'Security', 'Cloud', 'Support', 'General'];
@@ -103,7 +101,7 @@ export default function FAQ() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             className="text-4xl md:text-6xl font-bold text-white mb-6"
-          >
+
             Frequently Asked Questions
           </motion.h1>
           <motion.p
@@ -111,7 +109,7 @@ export default function FAQ() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
             className="text-xl text-gray-300 max-w-3xl mx-auto"
-          >
+
             Find answers to common questions about our AI-powered solutions, cybersecurity services, and cloud infrastructure.
           </motion.p>
         </div>
@@ -124,7 +122,7 @@ export default function FAQ() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.4 }}
           className="bg-slate-800/50 rounded-2xl p-6 backdrop-blur-sm border border-slate-700/50"
-        >
+
           {/* Search */}
           <div className="relative mb-6">
             <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400" />
@@ -148,7 +146,7 @@ export default function FAQ() {
                     ? 'bg-cyan-400 text-slate-900 shadow-lg shadow-cyan-400/25'
                     : 'bg-slate-700/50 text-gray-300 hover:bg-slate-600/50 hover:text-white'
                 }`}
-              >
+
                 {category}
               </button>
             ))}
@@ -163,7 +161,7 @@ export default function FAQ() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.6 }}
           className="space-y-4"
-        >
+
           {filteredFAQs.map((faq, index) => (
             <motion.div
               key={faq.id}
@@ -171,11 +169,11 @@ export default function FAQ() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.8 + index * 0.1 }}
               className="bg-slate-800/50 rounded-xl border border-slate-700/50 overflow-hidden backdrop-blur-sm"
-            >
+
               <button
                 onClick={() => toggleItem(faq.id)}
                 className="w-full px-6 py-4 text-left flex items-center justify-between hover:bg-slate-700/50 transition-all duration-200"
-              >
+
                 <div className="flex items-center space-x-3">
                   <div className="w-8 h-8 bg-gradient-to-br from-cyan-400/20 to-blue-500/20 rounded-lg flex items-center justify-center">
                     <faq.icon className="w-4 h-4 text-cyan-400" />
@@ -196,7 +194,7 @@ export default function FAQ() {
                   exit={{ opacity: 0, height: 0 }}
                   transition={{ duration: 0.3 }}
                   className="px-6 pb-4"
-                >
+
                   <div className="text-gray-300 leading-relaxed">
                     {faq.answer}
                   </div>
@@ -212,7 +210,7 @@ export default function FAQ() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 1.2 }}
           className="mt-12 text-center"
-        >
+
           <div className="bg-gradient-to-r from-cyan-400/10 to-blue-500/10 rounded-2xl p-8 border border-cyan-400/20">
             <h3 className="text-2xl font-bold text-white mb-4">
               Still have questions?
@@ -224,13 +222,13 @@ export default function FAQ() {
               <a
                 href="/contact"
                 className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-cyan-400 to-blue-500 text-white font-medium rounded-lg hover:from-cyan-500 hover:to-blue-600 transition-all duration-200 hover:scale-105 shadow-lg hover:shadow-cyan-400/25"
-              >
+
                 Contact Us
               </a>
               <a
                 href="/support"
                 className="inline-flex items-center px-6 py-3 border border-cyan-400 text-cyan-400 font-medium rounded-lg hover:bg-cyan-400 hover:text-slate-900 transition-all duration-200"
-              >
+
                 Get Support
               </a>
             </div>
@@ -239,4 +237,4 @@ export default function FAQ() {
       </div>
     </div>
   );
-}
+}}}}

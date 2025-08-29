@@ -6,7 +6,7 @@ function convertToValidVariableName(filename) {
     .split('-')
     .map(word => word.charAt(0).toUpperCase() + word.slice(1))
     .join('');
-}
+
 function fixFile(filePath) {
   try {
     const content = fs.readFileSync(filePath, 'utf8');
@@ -23,11 +23,11 @@ function fixFile(filePath) {
     );
 
     fs.writeFileSync(filePath, fixedContent);
-    // console.log(`Fixed: ${filePath}`);
+    // // // console.log(`Fixed: ${filePath}`);
   } catch (error) {
-    // console.error(`Error fixing ${filePath}:`, error.message);
-  }
-}
+    // // // console.error(`Error fixing ${filePath}:`, error.message);
+
+
 // Fix blog pages
 const blogDir = 'pages/blog';
 if (fs.existsSync(blogDir)) {
@@ -35,7 +35,7 @@ if (fs.existsSync(blogDir)) {
   blogFiles.forEach(file => {
     fixFile(path.join(blogDir, file));
   });
-}
+
 // Fix category pages
 const categoryDir = 'pages/category';
 if (fs.existsSync(categoryDir)) {
@@ -43,7 +43,7 @@ if (fs.existsSync(categoryDir)) {
   categoryFiles.forEach(file => {
     fixFile(path.join(categoryDir, file));
   });
-}
+
 // Fix service pages
 const servicesDir = 'pages/services';
 if (fs.existsSync(servicesDir)) {
@@ -51,5 +51,6 @@ if (fs.existsSync(servicesDir)) {
   serviceFiles.forEach(file => {
     fixFile(path.join(servicesDir, file));
   });
-}
-// console.log('Variable name fixing completed!');
+
+// // // console.log('Variable name fixing completed!');
+}}}}}}

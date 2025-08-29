@@ -1,6 +1,5 @@
 import React, { useState, useRef, useEffect } from 'react';
-import { Activity, BarChart3, TrendingUp, Zap, Database, Network, Cpu, HardDrive, X, Maximize2, Minimize2, RefreshCw, AlertTriangle, CheckCircle, Download } from 'lucide-react';
-const mockSystemMetrics = [
+import { Activity, BarChart3, TrendingUp, Zap, Database, Network, Cpu, HardDrive, X, Maximize2, Minimize2, RefreshCw, AlertTriangle, CheckCircle, Download const mockSystemMetrics = [
     {
         id: '1',
         name: 'CPU Usage',
@@ -72,7 +71,7 @@ const mockSystemMetrics = [
         change: -3.2,
         category: 'Performance',
         lastUpdated: '2024-01-15T10:00:00.000Z'
-    }
+
 ];
 const mockPerformanceAlerts = [
     {
@@ -96,7 +95,7 @@ const mockPerformanceAlerts = [
         affected: ['Database Cluster', 'Application Servers'],
         recommendations: ['Increase connection pool size', 'Implement connection pooling', 'Review connection lifecycle'],
         status: 'acknowledged'
-    }
+
 ];
 const mockScalabilityMetrics = [
     {
@@ -131,7 +130,7 @@ const mockScalabilityMetrics = [
         prediction: 4.2,
         category: 'Storage',
         unit: 'TB'
-    }
+
 ];
 export function AdvancedPerformanceMonitor() {
     const [isOpen, setIsOpen] = useState(false);
@@ -167,7 +166,7 @@ export function AdvancedPerformanceMonitor() {
         if (autoRefresh) {
             const interval = setInterval(refreshData, 30000); // Refresh every 30 seconds
             return () => clearInterval(interval);
-        }
+
     }, [autoRefresh]);
     const getStatusColor = (status) => {
         switch (status) {
@@ -177,7 +176,7 @@ export function AdvancedPerformanceMonitor() {
                 return 'bg-yellow-500 text-white';
             default:
                 return 'bg-green-500 text-white';
-        }
+
     };
     const getSeverityColor = (severity) => {
         switch (severity) {
@@ -189,7 +188,7 @@ export function AdvancedPerformanceMonitor() {
                 return 'bg-yellow-100 text-yellow-700 dark:bg-yellow-900/30 dark:text-yellow-300';
             default:
                 return 'bg-blue-100 text-blue-700 dark:bg-blue-900/30 dark:text-blue-300';
-        }
+
     };
     const getTrendIcon = (trend) => {
         switch (trend) {
@@ -199,7 +198,7 @@ export function AdvancedPerformanceMonitor() {
                 return <TrendingUp className="w-4 h-4 text-green-500 rotate-180"/>;
             default:
                 return <Activity className="w-4 h-4 text-gray-500"/>;
-        }
+
     };
     const getCategoryIcon = (category) => {
         switch (category) {
@@ -215,7 +214,7 @@ export function AdvancedPerformanceMonitor() {
                 return <Database className="w-5 h-5 text-cyan-500"/>;
             default:
                 return <Activity className="w-5 h-5 text-gray-500"/>;
-        }
+
     };
     const getUtilizationColor = (utilization) => {
         if (utilization >= 80)
@@ -228,7 +227,7 @@ export function AdvancedPerformanceMonitor() {
         return (<button onClick={() => setIsOpen(true)} className="fixed bottom-4 right-4 bg-gradient-to-r from-zion-blue to-zion-cyan text-white p-4 rounded-full shadow-2xl hover:shadow-3xl transition-all duration-300 hover:scale-110 z-40" title="Open Performance Monitor">
         <Activity className="w-6 h-6"/>
       </button>);
-    }
+
     if (isMinimized) {
         return (<div className="fixed bottom-4 right-4 bg-white dark:bg-zion-slate border border-zion-slate-light rounded-lg shadow-xl z-50">
         <div className="flex items-center gap-2 p-3">
@@ -239,7 +238,7 @@ export function AdvancedPerformanceMonitor() {
           </button>
         </div>
       </div>);
-    }
+
     return (<div className={`fixed bg-white dark:bg-zion-slate border border-zion-slate-light rounded-lg shadow-2xl z-50 overflow-hidden transition-all duration-300 ${isFullscreen ? 'inset-4' : 'bottom-4 right-4 w-[1400px] h-[900px]'}`} ref={containerRef}>
       {/* Header */}
       <div className="bg-gradient-to-r from-zion-blue to-zion-cyan text-white p-4 flex items-center justify-between">
@@ -532,4 +531,4 @@ export function AdvancedPerformanceMonitor() {
           </div>)}
       </div>
     </div>);
-}
+}}}}}}}}}}}}

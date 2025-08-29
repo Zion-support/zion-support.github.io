@@ -38,7 +38,7 @@ export interface InnovativeITInfrastructureService {
   customers: number;
   rating: number;
   reviews: number;
-}
+
 export const innovativeITInfrastructureServices2025: InnovativeITInfrastructureService[] = [
   // Quantum-Secure Cloud Infrastructure
   {
@@ -299,6 +299,6 @@ export const innovativeITInfrastructureServices2025: InnovativeITInfrastructureS
     customers: 28,
     rating: 4.9,
     reviews: 18
-  }
+
 ];
-export default innovativeITInfrastructureServices2025;
+export default innovativeITInfrastructureServices2025;}}

@@ -19,8 +19,6 @@ import {
   Monitor,
   Smartphone,
   Tablet
-} from 'lucide-react';
-
 interface AnalyticsData {
   pageViews: number;
   uniqueVisitors: number;
@@ -34,12 +32,10 @@ interface AnalyticsData {
   scrollDepth: number;
   clickEvents: number;
   formSubmissions: number;
-}
 
 interface Props {
   enabled?: boolean;
   showMetrics?: boolean;
-}
 
 export function AdvancedAnalytics({ enabled = true, showMetrics = true }: Props) {
   const [isVisible, setIsVisible] = useState(false);
@@ -111,7 +107,7 @@ export function AdvancedAnalytics({ enabled = true, showMetrics = true }: Props)
           ...prev,
           formSubmissions: prev.formSubmissions + 1
         }));
-      }
+
     };
 
     // Track user agent
@@ -121,7 +117,6 @@ export function AdvancedAnalytics({ enabled = true, showMetrics = true }: Props)
 
       if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(userAgent)) {
         device = /iPad/i.test(userAgent) ? 'Tablet' : 'Mobile';
-      }
 
       setAnalyticsData(prev => {
         const existingDevice = prev.userAgents.find(d => d.device === device);
@@ -129,7 +124,7 @@ export function AdvancedAnalytics({ enabled = true, showMetrics = true }: Props)
           existingDevice.count++;
         } else {
           prev.userAgents.push({ device, count: 1 });
-        }
+
         return { ...prev };
       });
     };
@@ -146,10 +141,10 @@ export function AdvancedAnalytics({ enabled = true, showMetrics = true }: Props)
             existingSource.count++;
           } else {
             prev.referrers.push({ source, count: 1 });
-          }
+
           return { ...prev };
         });
-      }
+
     };
 
     // Initialize tracking
@@ -173,7 +168,7 @@ export function AdvancedAnalytics({ enabled = true, showMetrics = true }: Props)
       } else {
         // Page is visible, resume tracking
         setIsTracking(true);
-      }
+
     };
 
     document.addEventListener('visibilitychange', handleVisibilityChange);
@@ -206,7 +201,7 @@ export function AdvancedAnalytics({ enabled = true, showMetrics = true }: Props)
       }, 1000);
 
       return () => clearInterval(interval);
-    }
+
   }, [isTracking, sessionStart]);
 
   // Simulate some analytics data for demonstration
@@ -225,7 +220,7 @@ export function AdvancedAnalytics({ enabled = true, showMetrics = true }: Props)
         bounceRate: 35.2,
         conversionRate: 8.7
       }));
-    }
+
   }, [enabled]);
 
   if (!enabled) return null;
@@ -239,11 +234,10 @@ export function AdvancedAnalytics({ enabled = true, showMetrics = true }: Props)
         whileTap={{ scale: 0.9 }}
         title="Analytics Dashboard"
         aria-label="Open analytics dashboard"
-      >
+
         <BarChart3 className="w-6 h-6 text-white" />
       </motion.button>
     );
-  }
 
   return (
     <AnimatePresence>
@@ -252,7 +246,7 @@ export function AdvancedAnalytics({ enabled = true, showMetrics = true }: Props)
         animate={{ opacity: 1, x: 0 }}
         exit={{ opacity: 0, x: 300 }}
         className="fixed top-4 right-4 z-50 w-96 bg-white/95 backdrop-blur-md rounded-2xl shadow-2xl border border-gray-200/50 p-6 max-h-[90vh] overflow-y-auto"
-      >
+
         <div className="flex items-center justify-between mb-6">
           <h3 className="text-xl font-semibold text-gray-800 flex items-center gap-2">
             <BarChart3 className="w-6 h-6 text-indigo-500" />
@@ -262,7 +256,7 @@ export function AdvancedAnalytics({ enabled = true, showMetrics = true }: Props)
             onClick={() => setIsVisible(false)}
             className="text-gray-400 hover:text-gray-600 transition-colors p-1"
             aria-label="Close analytics dashboard"
-          >
+
             <X className="w-5 h-5" />
           </button>
         </div>
@@ -415,4 +409,4 @@ export function AdvancedAnalytics({ enabled = true, showMetrics = true }: Props)
       </motion.div>
     </AnimatePresence>
   );
-}
+}}}}}}}}}}}}}

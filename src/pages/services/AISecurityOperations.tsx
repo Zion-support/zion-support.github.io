@@ -1,6 +1,4 @@
-import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, FileText, BarChart3 } from 'lucide-react';
-
-export default function AISecurityOperations() {
+import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, FileText, BarChart3 export default function AISecurityOperations() {
   const features = [
     'AI-powered security operations optimization',
     'Intelligent security monitoring and alerting',
@@ -171,4 +169,4 @@ export default function AISecurityOperations() {
       </section>
     </div>
   );
-}
+}}

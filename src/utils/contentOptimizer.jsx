@@ -28,24 +28,24 @@ export class ContentOptimizer {
             issues,
             suggestions
         };
-    }
+
     static countWords(content) {
         // Remove HTML tags and count words
         const textContent = content.replace(/<[^>]*>/g, ' ').trim();
         return textContent.split(/\s+/).filter(word => word.length > 0).length;
-    }
+
     static countHeadings(content) {
         const headingMatches = content.match(/<h[1-6][^>]*>/gi);
         return headingMatches ? headingMatches.length : 0;
-    }
+
     static countImages(content) {
         const imageMatches = content.match(/<img[^>]*>/gi);
         return imageMatches ? imageMatches.length : 0;
-    }
+
     static countLinks(content) {
         const linkMatches = content.match(/<a[^>]*>/gi);
         return linkMatches ? linkMatches.length : 0;
-    }
+
     static calculateReadabilityScore(content) {
         const textContent = content.replace(/<[^>]*>/g, ' ').trim();
         const sentences = textContent.split(/[.!?]+/).filter(s => s.trim().length > 0);
@@ -56,7 +56,7 @@ export class ContentOptimizer {
         // Flesch Reading Ease formula
         const score = 206.835 - (1.015 * (words.length / sentences.length)) - (84.6 * (syllables / words.length));
         return Math.max(0, Math.min(100, score));
-    }
+
     static countSyllables(text) {
         // Simplified syllable counting
         const words = text.toLowerCase().split(/\s+/);
@@ -64,15 +64,15 @@ export class ContentOptimizer {
         words.forEach(word => {
             if (word.length <= 3) {
                 syllableCount += 1;
-            }
+
             else {
                 // Count vowel groups
                 const vowelGroups = word.match(/[aeiouy]+/g);
                 syllableCount += vowelGroups ? vowelGroups.length : 1;
-            }
+
         });
         return syllableCount;
-    }
+
     static calculateSEOScore(content, page) {
         let score = 100;
         // Check for title
@@ -96,7 +96,7 @@ export class ContentOptimizer {
         if (internalLinks.length < 2)
             score -= 10;
         return Math.max(0, score);
-    }
+
     static identifyIssues(content, page, metrics) {
         const issues = [];
         // Check for missing headings
@@ -107,7 +107,7 @@ export class ContentOptimizer {
                 description: `Only ${metrics.headingCount} headings found. Minimum recommended: ${this.MIN_HEADING_COUNT}`,
                 location: 'Page structure'
             });
-        }
+
         // Check for minimal content
         if (metrics.wordCount < this.MIN_WORD_COUNT) {
             issues.push({
@@ -116,7 +116,7 @@ export class ContentOptimizer {
                 description: `Only ${metrics.wordCount} words found. Minimum recommended: ${this.MIN_WORD_COUNT}`,
                 location: 'Content body'
             });
-        }
+
         // Check for no images
         if (metrics.imageCount === 0) {
             issues.push({
@@ -125,7 +125,7 @@ export class ContentOptimizer {
                 description: 'No images found. Images improve user engagement and SEO',
                 location: 'Content body'
             });
-        }
+
         // Check for poor structure
         if (metrics.headingCount === 0 && metrics.wordCount > 100) {
             issues.push({
@@ -134,7 +134,7 @@ export class ContentOptimizer {
                 description: 'Content lacks proper heading structure for organization',
                 location: 'Page structure'
             });
-        }
+
         // Check for missing keywords
         const pageKeywords = this.extractPageKeywords(page);
         const contentKeywords = this.extractContentKeywords(content);
@@ -146,9 +146,9 @@ export class ContentOptimizer {
                 description: `Missing important keywords: ${missingKeywords.join(', ')}`,
                 location: 'Content optimization'
             });
-        }
+
         return issues;
-    }
+
     static generateSuggestions(issues, page) {
         const suggestions = [];
         issues.forEach(issue => {
@@ -193,10 +193,10 @@ export class ContentOptimizer {
                         example: 'Use keywords in headings, subheadings, and naturally throughout the text'
                     });
                     break;
-            }
+
         });
         return suggestions;
-    }
+
     static extractPageKeywords(page) {
         // Extract keywords from page path
         const segments = page.split('/').filter(Boolean);
@@ -206,7 +206,7 @@ export class ContentOptimizer {
             keywords.push(...words);
         });
         return keywords;
-    }
+
     static extractContentKeywords(content) {
         // Extract potential keywords from content (simplified)
         const textContent = content.replace(/<[^>]*>/g, ' ').toLowerCase();
@@ -220,7 +220,7 @@ export class ContentOptimizer {
             .sort(([, a], [, b]) => b - a)
             .slice(0, 10)
             .map(([word]) => word);
-    }
+
     static generateContentTemplate(page, contentType) {
         const templates = {
             service: `
@@ -316,7 +316,7 @@ export class ContentOptimizer {
       `
         };
         return templates[contentType] || templates.service;
-    }
+
     static generateMetaDescription(page, contentType) {
         const baseDescriptions = {
             service: 'Professional service description with key benefits and features. Expert solutions for your business needs.',
@@ -327,6 +327,7 @@ export class ContentOptimizer {
         const baseDescription = baseDescriptions[contentType];
         const pageKeywords = this.extractPageKeywords(page).join(' ');
         return `${baseDescription} ${pageKeywords}. Transform your business with Zion Tech Group.`;
-    }
-}
+
+
 export const contentOptimizer = new ContentOptimizer();
+}}}}}}}}}}}}}}}}}}}}}}}

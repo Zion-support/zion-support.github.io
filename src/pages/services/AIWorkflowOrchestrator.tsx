@@ -1,7 +1,5 @@
 import React from 'react';
-import { Workflow, BarChart3, ArrowRight, Check, ExternalLink, Phone, Mail, Zap, Target, Clock, Cpu, Globe } from 'lucide-react';
-
-export default function AIWorkflowOrchestrator() {
+import { Workflow, BarChart3, ArrowRight, Check, ExternalLink, Phone, Mail, Zap, Target, Clock, Cpu, Globe export default function AIWorkflowOrchestrator() {
   const features = [
     'AI-powered workflow automation and orchestration',
     'Intelligent process optimization and decision making',
@@ -170,4 +168,4 @@ export default function AIWorkflowOrchestrator() {
       </section>
     </div>
   );
-}
+}}

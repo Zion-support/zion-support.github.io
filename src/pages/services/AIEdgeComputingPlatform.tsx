@@ -1,6 +1,4 @@
-import { Cpu, TrendingUp, BarChart3, CheckCircle, ArrowRight, ExternalLink, Phone, Mail, DollarSign, Target, Zap, Globe, Database, Monitor, Network, Cloud, Wifi } from 'lucide-react';
-
-export default function AIEdgeComputingPlatform() {
+import { Cpu, TrendingUp, BarChart3, CheckCircle, ArrowRight, ExternalLink, Phone, Mail, DollarSign, Target, Zap, Globe, Database, Monitor, Network, Cloud, Wifi export default function AIEdgeComputingPlatform() {
   const features = [
     'AI-powered edge device management and optimization',
     'Real-time data processing at the edge',
@@ -41,7 +39,7 @@ export default function AIEdgeComputingPlatform() {
       price: '$3,499/mo',
       features: ['Unlimited edge devices', 'Full AI suite', 'Custom edge models', 'Dedicated support', 'White-label solutions', 'Advanced integrations'],
       popular: false
-    }
+
   ];
 
   const useCases = [
@@ -288,11 +286,11 @@ export default function AIEdgeComputingPlatform() {
             target="_blank"
             rel="noreferrer"
             className="inline-flex items-center text-teal-600 hover:text-teal-700 font-semibold"
-          >
+
             Visit ziontechgroup.com <ExternalLink className="w-4 h-4 ml-2" />
           </a>
         </div>
       </section>
     </div>
   );
-}
+}}}

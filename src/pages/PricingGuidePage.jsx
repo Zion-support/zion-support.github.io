@@ -3,8 +3,7 @@ import { EXPANDED_SERVICES, SERVICE_CATEGORIES } from '@/data/expandedServices';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
-import { Star, Mail, Phone, MapPin, TrendingUp, Shield, Zap, Globe, Clock, DollarSign, Users, Award } from 'lucide-react';
-import { SEO } from '@/components/SEO';
+import { Star, Mail, Phone, MapPin, TrendingUp, Shield, Zap, Globe, Clock, DollarSign, Users, Award import { SEO } from '@/components/SEO';
 export default function PricingGuidePage() {
     const [selectedCategory, setSelectedCategory] = useState('all');
     const filteredServices = selectedCategory === 'all'
@@ -19,7 +18,7 @@ export default function PricingGuidePage() {
     const formatPrice = (price) => {
         if (price >= 1000) {
             return `$${(price / 1000).toFixed(1)}K`;
-        }
+
         return `$${price}`;
     };
     const getServiceTier = (price) => {
@@ -324,4 +323,4 @@ export default function PricingGuidePage() {
         </div>
       </div>
     </div>);
-}
+</Card></Card></Card></Card>}}}

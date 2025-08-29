@@ -49,7 +49,6 @@ export interface RevolutionaryService2030 {
   createdAt: string;
   featured: boolean;
   trending: boolean;
-}
 
 export const REVOLUTIONARY_SERVICES_2030: RevolutionaryService2030[] = [
   // 1. Quantum AI-Powered Drug Discovery Platform
@@ -1044,7 +1043,7 @@ export const REVOLUTIONARY_SERVICES_2030: RevolutionaryService2030[] = [
     createdAt: "2030-01-15T10:00:00.000Z",
     featured: true,
     trending: true
-  }
+
 ];
 
 // Utility functions for service management
@@ -1108,4 +1107,4 @@ export const getRevolutionaryServicesStats = () => {
   };
 };
 
-export const ALL_REVOLUTIONARY_SERVICES_2030 = REVOLUTIONARY_SERVICES_2030;
+export const ALL_REVOLUTIONARY_SERVICES_2030 = REVOLUTIONARY_SERVICES_2030;}}

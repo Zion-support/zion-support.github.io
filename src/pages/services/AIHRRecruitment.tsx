@@ -1,6 +1,4 @@
-import { Users, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, Briefcase, BarChart3 } from 'lucide-react';
-
-export default function AIHRRecruitment() {
+import { Users, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, Briefcase, BarChart3 export default function AIHRRecruitment() {
   const features = [
     'AI-powered candidate sourcing and matching',
     'Intelligent resume parsing and skill extraction',
@@ -171,4 +169,4 @@ export default function AIHRRecruitment() {
       </section>
     </div>
   );
-}
+}}

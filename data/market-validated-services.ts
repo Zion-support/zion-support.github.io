@@ -20,7 +20,7 @@ export interface MarketValidatedService {
 		address: string;
 		website?: string;
 	};
-}
+
 const contactInfo = {
 	mobile: '+1 302 464 0950',
 	email: 'kleber@ziontechgroup.com',
@@ -410,3 +410,4 @@ export const marketValidatedServices: MarketValidatedService[] = [
 		contactInfo
 	},
 ];
+}

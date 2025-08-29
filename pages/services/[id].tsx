@@ -19,7 +19,7 @@ interface ServiceItem {
 	icon?: string
 	color?: string
 	textColor?: string
-}
+
 function collectAllServices(): ServiceItem[] {
 	const arrays: any[] = [
 		innovativeRealMicroSaasServices2025,
@@ -45,25 +45,25 @@ function collectAllServices(): ServiceItem[] {
 					color: item.color,
 					textColor: item.textColor,
 				})
-			}
-		}
-	}
+
+
+
 	return Array.from(map.values())
-}
+
 export const getStaticPaths: GetStaticPaths = async () => {
 	const services = collectAllServices()
 	const paths = services.map((s) => ({ params: { id: s.id } }))
 	return { paths, fallback: false }
-}
+
 export const getStaticProps: GetStaticProps = async (context) => {
 	const id = context.params?.id as string
 	const services = collectAllServices()
 	const service = services.find((s) => s.id === id) || null
 	if (!service) {
 		return { notFound: true }
-	}
+
 	return { props: { service } }
-}
+
 export default function ServiceDetail({ service }: { service: ServiceItem }) {
 	const title = `${service.name} — Zion Tech Group`
 	const description = service.tagline || 'Zion Tech Group Service'
@@ -94,4 +94,4 @@ export default function ServiceDetail({ service }: { service: ServiceItem }) {
 			</main>
 		</>
 	)
-}
+}}}}}}}}}

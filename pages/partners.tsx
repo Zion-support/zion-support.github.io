@@ -13,8 +13,6 @@ import {
   Database,
   Lock,
   Rocket
-} from 'lucide-react'
-
 export default function Partners() {
   const title = 'Partners — Zion Tech Group'
   const description = 'Strategic partnerships with leading technology providers, cloud platforms, and cybersecurity experts to deliver comprehensive solutions.'
@@ -63,7 +61,7 @@ export default function Partners() {
         { name: 'MongoDB', description: 'Database platform', logo: '🍃', tier: 'Silver' },
         { name: 'Elastic', description: 'Search and analytics', logo: '🔍', tier: 'Silver' }
       ]
-    }
+
   ]
 
   const benefits = [
@@ -86,7 +84,7 @@ export default function Partners() {
       icon: Award,
       title: 'Quality Assurance',
       description: 'Solutions validated by our trusted partner ecosystem.'
-    }
+
   ]
 
   const partnershipLevels = [
@@ -107,7 +105,7 @@ export default function Partners() {
       description: 'Standard partnerships with basic collaboration and referral programs.',
       benefits: ['Standard support', 'Referral programs', 'Documentation access', 'Community access'],
       color: 'from-gray-400 to-gray-600'
-    }
+
   ]
 
   return (
@@ -135,7 +133,7 @@ export default function Partners() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
               className="mb-6"
-            >
+
               <Handshake className="w-20 h-20 mx-auto text-zion-cyan mb-4" />
             </motion.div>
             <motion.h1
@@ -143,7 +141,7 @@ export default function Partners() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
               className="text-4xl md:text-6xl font-bold mb-6"
-            >
+
               Strategic
               <span className="block bg-gradient-to-r from-zion-cyan to-zion-purple bg-clip-text text-transparent">
                 Partnerships
@@ -154,7 +152,7 @@ export default function Partners() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.4 }}
               className="text-xl md:text-2xl text-zion-slate-light max-w-4xl mx-auto mb-8"
-            >
+
               We collaborate with industry leaders to deliver comprehensive, cutting-edge
               technology solutions that drive business transformation.
             </motion.p>
@@ -169,7 +167,7 @@ export default function Partners() {
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
               className="text-center mb-16"
-            >
+
               <h2 className="text-3xl md:text-4xl font-bold mb-6">Why Partner with Zion Tech Group?</h2>
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">
                 Our strategic partnerships enable us to deliver comprehensive solutions
@@ -186,7 +184,7 @@ export default function Partners() {
                   transition={{ duration: 0.6, delay: index * 0.1 }}
                   viewport={{ once: true }}
                   className="text-center p-6 rounded-xl hover:shadow-lg transition-all duration-300"
-                >
+
                   <div className="w-16 h-16 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-full flex items-center justify-center mx-auto mb-4">
                     <benefit.icon className="w-8 h-8 text-white" />
                   </div>
@@ -206,7 +204,7 @@ export default function Partners() {
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
               className="text-center mb-16"
-            >
+
               <h2 className="text-3xl md:text-4xl font-bold mb-6">Our Partner Ecosystem</h2>
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">
                 We've built strategic relationships across the technology landscape
@@ -223,7 +221,7 @@ export default function Partners() {
                   transition={{ duration: 0.6, delay: categoryIndex * 0.2 }}
                   viewport={{ once: true }}
                   className="bg-white rounded-2xl p-8 shadow-sm"
-                >
+
                   <div className="flex items-center gap-4 mb-8">
                     <div className="w-16 h-16 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-xl flex items-center justify-center">
                       <category.icon className="w-8 h-8 text-white" />
@@ -243,7 +241,7 @@ export default function Partners() {
                         transition={{ duration: 0.4, delay: partnerIndex * 0.1 }}
                         viewport={{ once: true }}
                         className="text-center p-4 rounded-lg border hover:shadow-md transition-all duration-300"
-                      >
+
                         <div className="text-4xl mb-3">{partner.logo}</div>
                         <h4 className="font-semibold mb-1">{partner.name}</h4>
                         <p className="text-sm text-gray-600 mb-2">{partner.description}</p>
@@ -272,7 +270,7 @@ export default function Partners() {
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
               className="text-center mb-16"
-            >
+
               <h2 className="text-3xl md:text-4xl font-bold mb-6">Partnership Tiers</h2>
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">
                 We offer different levels of partnership to accommodate various
@@ -289,7 +287,7 @@ export default function Partners() {
                   transition={{ duration: 0.6, delay: index * 0.1 }}
                   viewport={{ once: true }}
                   className="relative"
-                >
+
                   <div className={`bg-gradient-to-br ${level.color} text-white p-8 rounded-2xl h-full`}>
                     <div className="text-center mb-6">
                       <h3 className="text-2xl font-bold mb-2">{level.name}</h3>
@@ -321,7 +319,7 @@ export default function Partners() {
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
               className="text-3xl md:text-4xl font-bold mb-6"
-            >
+
               Become a Partner
             </motion.h2>
             <motion.p
@@ -330,7 +328,7 @@ export default function Partners() {
               transition={{ duration: 0.6, delay: 0.2 }}
               viewport={{ once: true }}
               className="text-xl text-zion-slate-light mb-8"
-            >
+
               Join our ecosystem of technology leaders and help us deliver
               innovative solutions to businesses worldwide.
             </motion.p>
@@ -340,17 +338,17 @@ export default function Partners() {
               transition={{ duration: 0.6, delay: 0.4 }}
               viewport={{ once: true }}
               className="flex flex-col sm:flex-row gap-4 justify-center"
-            >
+
               <a
                 href="/contact"
                 className="px-8 py-3 bg-white text-zion-blue-dark rounded-lg hover:bg-gray-100 transition-all duration-300 font-semibold"
-              >
+
                 Contact Us
               </a>
               <a
                 href="mailto:partnerships@ziontechgroup.com"
                 className="px-8 py-3 border-2 border-white/30 text-white rounded-lg hover:bg-white/10 transition-all duration-300 font-semibold"
-              >
+
                 partnerships@ziontechgroup.com
               </a>
             </motion.div>
@@ -359,4 +357,4 @@ export default function Partners() {
       </main>
     </>
   )
-}
+}}}}}

@@ -1,7 +1,5 @@
 import React from 'react';
-import { ClipboardList, Search, Settings, CheckCircle, Users, Headphones, FileText, Star, Clock } from 'lucide-react';
-
-export const ServiceProcessSteps = () => {
+import { ClipboardList, Search, Settings, CheckCircle, Users, Headphones, FileText, Star, Clock export const ServiceProcessSteps = () => {
   const processSteps = [
     {
       step: 1,
@@ -98,7 +96,7 @@ export const ServiceProcessSteps = () => {
       ],
       duration: 'Ongoing',
       team: 'Support Team + Maintenance Engineers'
-    }
+
   ];
 
   const getColorClasses = (color) => {
@@ -286,13 +284,13 @@ export const ServiceProcessSteps = () => {
               <a
                 href="#consultation"
                 className="px-8 py-3 bg-white text-blue-600 font-semibold rounded-lg hover:bg-gray-100 transition-all duration-300"
-              >
+
                 Schedule Consultation
               </a>
               <a
                 href="#process"
                 className="px-8 py-3 border border-white/30 text-white font-semibold rounded-lg hover:bg-white/10 transition-all duration-300"
-              >
+
                 Learn More
               </a>
             </div>
@@ -301,4 +299,4 @@ export const ServiceProcessSteps = () => {
       </div>
     </section>
   );
-};
+};}}

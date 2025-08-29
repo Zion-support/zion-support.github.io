@@ -6,20 +6,20 @@ export function Tabs({ children, defaultValue, value, onValueChange, className =
         setActiveTab(tab);
         if (onValueChange) {
             onValueChange(tab);
-        }
+
     };
     return (<TabsContext.Provider value={{ activeTab, setActiveTab: handleTabChange }}>
       <div className={className}>
         {children}
       </div>
     </TabsContext.Provider>);
-}
+
 ;
 export function TabsList({ children, className = '' }) {
     return (<div className={`flex border-b border-gray-200 ${className}`}>
       {children}
     </div>);
-}
+
 ;
 export function TabsTrigger({ children, value, className = '' }) {
     const context = useContext(TabsContext);
@@ -31,7 +31,7 @@ export function TabsTrigger({ children, value, className = '' }) {
             : 'border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300'} ${className}`} onClick={() => context.setActiveTab(value)}>
       {children}
     </button>);
-}
+
 export function TabsContent({ children, value, className = '' }) {
     const context = useContext(TabsContext);
     if (!context)
@@ -39,4 +39,4 @@ export function TabsContent({ children, value, className = '' }) {
     if (context.activeTab !== value)
         return null;
     return <div className={className}>{children}</div>;
-}
+}}}}}

@@ -8,21 +8,21 @@ interface PerformanceMetrics {
   domLoad: number | null; // DOM Content Loaded
   windowLoad: number | null; // Window Load
   navigationStart: number | null;
-}
+
 interface PerformanceObserverEntry {
   name: string;
   value: number;
   rating: 'good' | 'needs-improvement' | 'poor';
-}
+
 // Extended interfaces for specific performance entry types
 interface FirstInputEntry extends PerformanceEntry {
   processingStart: number;
   startTime: number;
-}
+
 interface LayoutShiftEntry extends PerformanceEntry {
   hadRecentInput: boolean;
   value: number;
-}
+
 export function usePerformance() {
   const [metrics, setMetrics] = useState<PerformanceMetrics>({
     fcp: null,
@@ -40,16 +40,16 @@ export function usePerformance() {
   useEffect(() => {
     // Check if PerformanceObserver is supported
     if (!('PerformanceObserver' in window)) {
-      // console.warn('PerformanceObserver not supported');
+      // // // console.warn('PerformanceObserver not supported');
       return;
-    }
+
     // First Contentful Paint (FCP)
     const fcpObserver = new PerformanceObserver((list) => {
       const entries = list.getEntries();
       const fcpEntry = entries.find(entry => entry.name === 'first-contentful-paint');
       if (fcpEntry) {
         setMetrics(prev => ({ ...prev, fcp: fcpEntry.startTime }));
-      }
+
     });
     // Largest Contentful Paint (LCP)
     const lcpObserver = new PerformanceObserver((list) => {
@@ -57,7 +57,7 @@ export function usePerformance() {
       const lcpEntry = entries[entries.length - 1];
       if (lcpEntry) {
         setMetrics(prev => ({ ...prev, lcp: lcpEntry.startTime }));
-      }
+
     });
     // First Input Delay (FID)
     const fidObserver = new PerformanceObserver((list) => {
@@ -65,7 +65,7 @@ export function usePerformance() {
       const fidEntry = entries[entries.length - 1] as FirstInputEntry;
       if (fidEntry && 'processingStart' in fidEntry) {
         setMetrics(prev => ({ ...prev, fid: fidEntry.processingStart - fidEntry.startTime }));
-      }
+
     });
     // Cumulative Layout Shift (CLS)
     const clsObserver = new PerformanceObserver((list) => {
@@ -74,8 +74,8 @@ export function usePerformance() {
         const layoutShiftEntry = entry as LayoutShiftEntry;
         if (!layoutShiftEntry.hadRecentInput) {
           clsValue += layoutShiftEntry.value;
-        }
-      }
+
+
       setMetrics(prev => ({ ...prev, cls: clsValue }));
     });
     // Start observing
@@ -85,8 +85,8 @@ export function usePerformance() {
       fidObserver.observe({ entryTypes: ['first-input'] });
       clsObserver.observe({ entryTypes: ['layout-shift'] });
     } catch (error) {
-      // console.warn('Error setting up performance observers:', error);
-    }
+      // // // console.warn('Error setting up performance observers:', error);
+
     // Navigation timing metrics
     const navigationEntry = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
     if (navigationEntry) {
@@ -96,7 +96,7 @@ export function usePerformance() {
         domLoad: navigationEntry.domContentLoadedEventEnd - navigationEntry.domContentLoadedEventStart,
         windowLoad: navigationEntry.loadEventEnd - navigationEntry.loadEventStart
       }));
-    }
+
     // Cleanup
     return () => {
       fcpObserver.disconnect();
@@ -125,12 +125,12 @@ export function usePerformance() {
     const result: PerformanceObserverEntry[] = [];
     Object.entries(metrics).forEach(([key, value]) => {
       if (value !== null) {
-        result({
+        result.push({
           name: key.toUpperCase(),
           value,
           rating: getRating(key as keyof PerformanceMetrics, value)
         });
-      }
+
     });
     return result;
   };
@@ -152,7 +152,7 @@ export function usePerformance() {
         case 'needs-improvement': return 50;
         case 'poor': return 0;
         default: return 100;
-      }
+
     });
     return Math.round(scores.reduce((sum, score) => sum + score, 0) / scores.length);
   };
@@ -163,19 +163,19 @@ export function usePerformance() {
       const entries = list.getEntries();
       entries.forEach((entry) => {
         if (entry.duration > 50) {
-          // console.warn('Long task detected:', {
+          // // console.warn('Long task detected:', {
             duration: entry.duration,
             startTime: entry.startTime,
             name: entry.name
           });
-        }
+
       });
     });
     try {
       longTaskObserver.observe({ entryTypes: ['longtask'] });
     } catch (error) {
-      // console.warn('Error setting up long task observer:', error);
-    }
+      // // console.warn('Error setting up long task observer:', error);
+
     return () => longTaskObserver.disconnect();
   }, []);
   return {
@@ -188,7 +188,7 @@ export function usePerformance() {
     stopMonitoring,
     resetMetrics,
   };
-}
+
 // Hook for monitoring specific performance events
 export function usePerformanceEvent(eventName: string, callback: (entry: PerformanceEntry) => void) {
   useEffect(() => {
@@ -199,11 +199,11 @@ export function usePerformanceEvent(eventName: string, callback: (entry: Perform
     try {
       observer.observe({ entryTypes: [eventName] });
     } catch (error) {
-      // console.warn(`Error observing ${eventName}:`, error);
-    }
+      // // // console.warn(`Error observing ${eventName}:`, error);
+
     return () => observer.disconnect();
   }, [eventName, callback]);
-}
+
 // Hook for measuring time between renders
 export function useRenderTime() {
   const renderStart = useRef(performance.now());
@@ -215,4 +215,4 @@ export function useRenderTime() {
     renderStart.current = renderEnd;
   });
   return renderTime;
-}
+}}}}}}}}}}}}}}}}}}}}

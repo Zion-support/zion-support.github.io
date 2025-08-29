@@ -1,8 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { FileText, Users, BarChart3, Mic, Video, Shield, DollarSign, ExternalLink } from 'lucide-react';
-
-const InterviewAssessmentAI: React.FC = () => {
+import { FileText, Users, BarChart3, Mic, Video, Shield, DollarSign, ExternalLink const InterviewAssessmentAI: React.FC = () => {
 	const modules = [
 		{ icon: Mic, title: 'Speech + Transcription', desc: 'Real-time or recorded interviews with diarization and sentiment.' },
 		{ icon: Video, title: 'Video Signals', desc: 'Optional webcam signals with consent and privacy controls.' },
@@ -54,4 +52,4 @@ const InterviewAssessmentAI: React.FC = () => {
 	);
 };
 
-export default InterviewAssessmentAI;
+export default InterviewAssessmentAI;}

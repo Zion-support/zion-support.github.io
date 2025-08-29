@@ -1,8 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import { Code, Shield, Zap, CheckCircle, ArrowRight, Play } from 'lucide-react';
-import SEO from '../SEO';
+import { Code, Shield, Zap, CheckCircle, ArrowRight, Play import SEO from '../SEO';
 const features = [
     {
         title: "Automated Code Analysis",
@@ -27,7 +26,7 @@ const features = [
         description: "Comprehensive code quality analysis with detailed metrics and improvement recommendations.",
         icon: CheckCircle,
         color: "from-orange-500 to-red-500"
-    }
+
 ];
 const benefits = [
     "Reduce code review time by up to 80%",
@@ -181,4 +180,4 @@ export default function AIAutonomousCodeReview() {
         </div>
       </section>
     </div>);
-}
+}}}

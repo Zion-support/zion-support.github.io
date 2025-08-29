@@ -1,6 +1,4 @@
-import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, FileText, BarChart3 } from 'lucide-react';
-
-export default function AIVirtualReality() {
+import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, FileText, BarChart3 export default function AIVirtualReality() {
   const features = [
     'AI-powered VR optimization',
     'Intelligent VR content management',
@@ -171,4 +169,4 @@ export default function AIVirtualReality() {
       </section>
     </div>
   );
-}
+}}

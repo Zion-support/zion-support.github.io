@@ -1,4 +1,5 @@
-import { Users, MapPin, Clock, Briefcase, GraduationCap, Heart, Zap, Globe } from 'lucide-react';
+import { Briefcase, Clock, Globe, GraduationCap, Heart, Mail, MapPin, MapPinIcon, Phone, Users, Zap import { useState } from 'react';
+
 export default function Careers() {
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedDepartment, setSelectedDepartment] = useState('all');
@@ -79,7 +80,7 @@ export default function Careers() {
         'Strong analytical and communication skills',
         'Background in technology or consulting preferred'
       ]
-    }
+
   ];
   const benefits = [
     {
@@ -111,7 +112,7 @@ export default function Careers() {
       icon: <Users className="w-6 h-6" />,
       title: 'Team Events',
       description: 'Regular team building, hackathons, and social events'
-    }
+
   ];
   const values = [
     {
@@ -129,8 +130,8 @@ export default function Careers() {
     {
       title: 'Impact',
       description: 'We focus on creating meaningful solutions that make a real difference.'
-    }
-  };
+
+  ];
   const contactInfo = [
     { icon: Mail, label: "Email", value: "careers@ziontechgroup.com", href: "mailto:careers@ziontechgroup.com" },
     { icon: Phone, label: "Phone", value: "+1 302 464 0950", href: "tel:+13024640950" },
@@ -151,13 +152,13 @@ export default function Careers() {
             <a
               href="#open-positions"
               className="bg-zion-cyan text-white px-8 py-3 rounded-lg font-semibold hover:bg-zion-cyan/90 transition-colors"
-            >
+
               View Open Positions
             </a>
             <a
               href="mailto:careers@ziontechgroup.com"
               className="border-2 border-white/30 text-white px-8 py-3 rounded-lg font-semibold hover:bg-white/10 transition-colors"
-            >
+
               Contact Recruiting
             </a>
           </div>
@@ -230,7 +231,7 @@ export default function Careers() {
             </p>
           </div>
           <div className="space-y-6">
-            {openPositions.map((position) => (
+            {jobOpenings.map((position) => (
               <div key={position.id} className="bg-white border border-gray-200 rounded-lg p-6 hover:shadow-md transition-shadow">
                 <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between mb-4">
                   <div>
@@ -260,7 +261,7 @@ export default function Careers() {
                     <a
                       href={`mailto:careers@ziontechgroup.com?subject=Application for ${position.title}`}
                       className="inline-flex items-center px-6 py-2 bg-zion-cyan text-white rounded-lg font-medium hover:bg-zion-cyan/90 transition-colors"
-                    >
+
                       Apply Now
                     </a>
                   </div>
@@ -286,7 +287,7 @@ export default function Careers() {
             <a
               href="mailto:careers@ziontechgroup.com?subject=General Application"
               className="inline-flex items-center px-8 py-3 border-2 border-zion-cyan text-zion-cyan rounded-lg font-semibold hover:bg-zion-cyan hover:text-white transition-colors"
-            >
+
               Send General Application
             </a>
           </div>
@@ -364,14 +365,14 @@ export default function Careers() {
             <a
               href="#open-positions"
               className="inline-flex items-center px-8 py-4 bg-white text-zion-purple rounded-lg font-semibold hover:bg-gray-100 transition-colors duration-300"
-            >
+
               <Briefcase className="w-5 h-5 mr-2" />
               View Positions
             </a>
             <a
               href="mailto:careers@ziontechgroup.com"
               className="inline-flex items-center px-8 py-4 border-2 border-white/30 text-white rounded-lg font-semibold hover:bg-white/10 transition-colors duration-300"
-            >
+
               <Users className="w-5 h-5 mr-2" />
               Contact Recruiting
             </a>
@@ -380,4 +381,4 @@ export default function Careers() {
       </section>
     </div>
   );
-}
+}}}}}

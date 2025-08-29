@@ -46,7 +46,6 @@ export interface ZionCuttingEdgeService2029 {
     currency: string;
     period: string;
   };
-}
 
 export const zionCuttingEdgeServices2029: ZionCuttingEdgeService2029[] = [
   // 1. AI-Powered Quantum Computing Optimization Platform
@@ -113,7 +112,7 @@ export const zionCuttingEdgeServices2029: ZionCuttingEdgeService2029[] = [
       enterprise: 19999,
       currency: 'USD',
       period: 'month'
-    }
+
   },
 
   // 2. Autonomous Drone Fleet Management System
@@ -180,7 +179,7 @@ export const zionCuttingEdgeServices2029: ZionCuttingEdgeService2029[] = [
       enterprise: 9999,
       currency: 'USD',
       period: 'month'
-    }
+
   },
 
   // 3. Blockchain-Based Decentralized Identity Management
@@ -247,7 +246,7 @@ export const zionCuttingEdgeServices2029: ZionCuttingEdgeService2029[] = [
       enterprise: 1999,
       currency: 'USD',
       period: 'month'
-    }
+
   },
 
   // 4. AI-Powered Climate Change Prediction & Mitigation Platform
@@ -314,7 +313,7 @@ export const zionCuttingEdgeServices2029: ZionCuttingEdgeService2029[] = [
       enterprise: 12999,
       currency: 'USD',
       period: 'month'
-    }
+
   },
 
   // 5. Neuromorphic Computing AI Platform
@@ -381,7 +380,7 @@ export const zionCuttingEdgeServices2029: ZionCuttingEdgeService2029[] = [
       enterprise: 24999,
       currency: 'USD',
       period: 'month'
-    }
+
   },
 
   // 6. Autonomous Supply Chain Optimization Platform
@@ -448,7 +447,7 @@ export const zionCuttingEdgeServices2029: ZionCuttingEdgeService2029[] = [
       enterprise: 14999,
       currency: 'USD',
       period: 'month'
-    }
+
   },
 
   // 7. AI-Powered Healthcare Diagnostics & Treatment Platform
@@ -515,7 +514,7 @@ export const zionCuttingEdgeServices2029: ZionCuttingEdgeService2029[] = [
       enterprise: 11999,
       currency: 'USD',
       period: 'month'
-    }
+
   },
 
   // 8. Autonomous Financial Trading & Portfolio Management
@@ -582,7 +581,7 @@ export const zionCuttingEdgeServices2029: ZionCuttingEdgeService2029[] = [
       enterprise: 24999,
       currency: 'USD',
       period: 'month'
-    }
+
   },
 
   // 9. AI-Powered Cybersecurity Threat Intelligence Platform
@@ -649,7 +648,7 @@ export const zionCuttingEdgeServices2029: ZionCuttingEdgeService2029[] = [
       enterprise: 13999,
       currency: 'USD',
       period: 'month'
-    }
+
   },
 
   // 10. Autonomous Smart City Infrastructure Management
@@ -716,8 +715,8 @@ export const zionCuttingEdgeServices2029: ZionCuttingEdgeService2029[] = [
       enterprise: 29999,
       currency: 'USD',
       period: 'month'
-    }
-  }
+
+
 ];
 
 export const getServicesByCategory = (category: string) => {
@@ -739,4 +738,4 @@ export const getServicesByTechnology = (technology: string) => {
   return zionCuttingEdgeServices2029.filter(service =>
     service.technology.some(tech => tech.toLowerCase().includes(technology.toLowerCase()))
   );
-};
+};}}}}}}}}}}}}

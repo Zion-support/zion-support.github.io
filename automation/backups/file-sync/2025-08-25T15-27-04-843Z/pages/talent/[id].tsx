@@ -4,10 +4,10 @@ interface TalentProfile {
   full_name: string;
   skills?: string[];
   availability_type?: string;
-}
+
 interface TalentProfileWithSocial extends TalentProfile {
   social?: Record<string, string>;
-}
+
 // Simple error component to replace Next.js ErrorPage
 const ErrorPage: React.FC<{ statusCode: number }> = ({ statusCode }) => (
   <div className="min-h-screen bg-zion-blue py-8 text-white flex items-center justify-center">
@@ -49,7 +49,7 @@ const TalentProfilePage: React.FC = () => {
             social: {
               linkedin: 'https://linkedin.com/in/talent',
               github: 'https://github.com/talent'
-            }
+
           };
           setProfile(mockProfile);
           setLoading(false);
@@ -57,11 +57,11 @@ const TalentProfilePage: React.FC = () => {
       } catch (err) {
         setError('Talent not found');
         setLoading(false);
-      }
+
     };
     if (id) {
       fetchProfile();
-    }
+
   }, [id]);
   if (loading) return <ProfileLoadingState />;
   if (error || !profile) return <Navigate to="/404" replace />;
@@ -95,7 +95,7 @@ const TalentProfilePage: React.FC = () => {
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-blue-300 hover:text-blue-100 underline"
-                >
+
                   {platform}
                 </a>
               ))}
@@ -107,3 +107,4 @@ const TalentProfilePage: React.FC = () => {
   );
 };
 export default TalentProfilePage;
+}}}}}

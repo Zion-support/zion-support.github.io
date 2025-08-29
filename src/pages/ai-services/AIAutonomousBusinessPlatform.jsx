@@ -1,8 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import { Brain, Cloud, Zap, Shield, Users, BarChart3, CheckCircle, ArrowRight, Play, Star, Globe, Cpu } from 'lucide-react';
-import { SEO } from '@/components/SEO';
+import { Brain, Cloud, Zap, Shield, Users, BarChart3, CheckCircle, ArrowRight, Play, Star, Globe, Cpu import { SEO } from '@/components/SEO';
 const features = [
     {
         title: "Cloud-Native Architecture",
@@ -27,7 +26,7 @@ const features = [
         description: "Bank-level security with encryption, compliance, and advanced threat protection.",
         icon: Shield,
         color: "from-orange-500 to-red-500"
-    }
+
 ];
 const benefits = [
     "Scale from startup to enterprise seamlessly",
@@ -57,7 +56,7 @@ const useCases = [
         title: "Process Automation",
         description: "Automate complex business processes with intelligent workflow management.",
         icon: Cpu
-    }
+
 ];
 const testimonials = [
     {
@@ -71,7 +70,7 @@ const testimonials = [
         name: "David Kim",
         role: "VP Engineering, ScaleUp Inc",
         rating: 5
-    }
+
 ];
 export default function AIAutonomousBusinessPlatform() {
     return (<div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900 relative overflow-hidden">
@@ -240,4 +239,4 @@ export default function AIAutonomousBusinessPlatform() {
         </div>
       </section>
     </div>);
-}
+}}}}}

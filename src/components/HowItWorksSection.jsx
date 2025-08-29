@@ -1,8 +1,6 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { Search, Users, FileText, Rocket, CheckCircle, Clock, Target, TrendingUp, Award, Zap, Shield } from 'lucide-react';
-
-const steps = [
+import { Search, Users, FileText, Rocket, CheckCircle, Clock, Target, TrendingUp, Award, Zap, Shield const steps = [
   {
     icon: <Search className="w-8 h-8"/>,
     title: "Discover",
@@ -77,7 +75,7 @@ const steps = [
     ],
     duration: "Ongoing",
     success: "100% client retention"
-  }
+
 ];
 
 const stats = [
@@ -98,8 +96,8 @@ export function HowItWorksSection() {
       transition: {
         staggerChildren: 0.2,
         delayChildren: 0.1
-      }
-    }
+
+
   };
 
   const itemVariants = {
@@ -110,8 +108,8 @@ export function HowItWorksSection() {
       transition: {
         duration: 0.6,
         ease: "easeOut"
-      }
-    }
+
+
   };
 
   const cardVariants = {
@@ -122,8 +120,8 @@ export function HowItWorksSection() {
       transition: {
         duration: 0.4,
         ease: "easeOut"
-      }
-    }
+
+
   };
 
   return (
@@ -147,7 +145,7 @@ export function HowItWorksSection() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
-        >
+
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
             How It Works
           </h2>
@@ -163,7 +161,7 @@ export function HowItWorksSection() {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
-        >
+
           {steps.map((step, index) => (
             <motion.div
               key={step.title}
@@ -172,7 +170,7 @@ export function HowItWorksSection() {
               onHoverStart={() => setHoveredStep(index)}
               onHoverEnd={() => setHoveredStep(null)}
               onClick={() => setActiveStep(index)}
-            >
+
               {/* Step Card */}
               <motion.div
                 className={`relative p-6 rounded-2xl border-2 cursor-pointer transition-all duration-300 ${
@@ -187,7 +185,7 @@ export function HowItWorksSection() {
                     ? `linear-gradient(135deg, ${step.bgColor})`
                     : undefined
                 }}
-              >
+
                 {/* Step Number */}
                 <div className="absolute -top-3 -left-3 w-8 h-8 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-full flex items-center justify-center text-white font-bold text-sm">
                   {index + 1}
@@ -215,7 +213,7 @@ export function HowItWorksSection() {
                     initial={{ opacity: 0, y: 10 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.2 }}
-                  >
+
                     <h4 className="text-white font-semibold mb-3">Key Features:</h4>
                     <ul className="space-y-2">
                       {step.details.map((detail, idx) => (
@@ -239,7 +237,7 @@ export function HowItWorksSection() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.4 }}
           viewport={{ once: true }}
-        >
+
           {stats.map((stat, index) => (
             <motion.div
               key={stat.label}
@@ -248,7 +246,7 @@ export function HowItWorksSection() {
               whileInView={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
               viewport={{ once: true }}
-            >
+
               <div className="w-12 h-12 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-xl flex items-center justify-center text-white mx-auto mb-4">
                 {stat.icon}
               </div>
@@ -265,7 +263,7 @@ export function HowItWorksSection() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.6 }}
           viewport={{ once: true }}
-        >
+
           <h3 className="text-3xl font-bold text-white mb-6">
             Ready to Get Started?
           </h3>
@@ -284,4 +282,4 @@ export function HowItWorksSection() {
       </div>
     </section>
   );
-}
+</div>}}}}}}}}}

@@ -38,7 +38,7 @@ export interface NextGenAIService {
   customers: number;
   rating: number;
   reviews: number;
-}
+
 export const nextGenAIServices: NextGenAIService[] = [
   // Advanced AI & Neural Network Services
   {
@@ -919,5 +919,5 @@ export const nextGenAIServices: NextGenAIService[] = [
     customers: 45,
     rating: 4.9,
     reviews: 34
-  }
-];
+
+];}}

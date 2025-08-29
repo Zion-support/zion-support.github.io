@@ -1,8 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import { Brain, Cpu, Shield, Zap, Rocket, Star, ChevronRight, CheckCircle, TrendingUp, Globe, Settings, Users, Play } from 'lucide-react';
-export default function NextGenServicesShowcase2025() {
+import { Brain, Cpu, Shield, Zap, Rocket, Star, ChevronRight, CheckCircle, TrendingUp, Globe, Settings, Users, Play export default function NextGenServicesShowcase2025() {
     const featuredServices = [
         {
             id: 'ai-consciousness-simulator',
@@ -63,7 +62,7 @@ export default function NextGenServicesShowcase2025() {
             demoUrl: 'https://ziontechgroup.com/demo/multimodal-ai',
             ctaText: 'Unite Your AI',
             path: '/multimodal-ai-platform'
-        }
+
     ];
     const microSaasServices = [
         {
@@ -89,7 +88,7 @@ export default function NextGenServicesShowcase2025() {
             features: ['Churn prediction modeling', 'Customer lifetime value', 'Behavioral pattern analysis'],
             category: 'Customer Analytics',
             trial: '21 days free'
-        }
+
     ];
     const infrastructureServices = [
         {
@@ -112,7 +111,7 @@ export default function NextGenServicesShowcase2025() {
             price: '$20,000/month',
             features: ['Multi-protocol blockchain support', 'Smart contract deployment', 'DeFi integration platform'],
             category: 'Blockchain Infrastructure'
-        }
+
     ];
     return (<div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900">
       {/* Hero Section */}
@@ -369,4 +368,4 @@ export default function NextGenServicesShowcase2025() {
         </div>
       </section>
     </div>);
-}
+}}}}}

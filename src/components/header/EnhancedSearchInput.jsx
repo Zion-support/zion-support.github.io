@@ -1,7 +1,5 @@
 import React, { useState, useRef, useEffect } from 'react';
-import { Search, X, ArrowDown, Clock, TrendingUp, Building, Users, Globe } from 'lucide-react';
-
-export const EnhancedSearchInput = () => {
+import { Search, X, ArrowDown, Clock, TrendingUp, Building, Users, Globe export const EnhancedSearchInput = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [searchQuery, setSearchQuery] = useState('');
   const [activeIndex, setActiveIndex] = useState(-1);
@@ -38,7 +36,7 @@ export const EnhancedSearchInput = () => {
       if (searchRef.current && !searchRef.current.contains(event.target)) {
         setIsOpen(false);
         setActiveIndex(-1);
-      }
+
     };
 
     document.addEventListener('mousedown', handleClickOutside);
@@ -53,7 +51,7 @@ export const EnhancedSearchInput = () => {
       setSuggestions(filtered);
     } else {
       setSuggestions([]);
-    }
+
     setActiveIndex(-1);
   }, [searchQuery]);
 
@@ -81,11 +79,11 @@ export const EnhancedSearchInput = () => {
         handleSuggestionClick(suggestions[activeIndex]);
       } else if (searchQuery.trim()) {
         handleSearch(searchQuery);
-      }
+
     } else if (e.key === 'Escape') {
       setIsOpen(false);
       setActiveIndex(-1);
-    }
+
   };
 
   const handleSuggestionClick = (suggestion) => {
@@ -105,12 +103,12 @@ export const EnhancedSearchInput = () => {
       localStorage.setItem('recentSearches', JSON.stringify(newRecent));
 
       // Perform search (in a real app, this would navigate to search results)
-      // console.log('Searching for:', query);
+      // // // console.log('Searching for:', query);
 
       // Close search
       setIsOpen(false);
       setActiveIndex(-1);
-    }
+
   };
 
   const handleRecentSearchClick = (search) => {
@@ -156,7 +154,7 @@ export const EnhancedSearchInput = () => {
           <button
             onClick={clearSearch}
             className="absolute inset-y-0 right-0 pr-3 flex items-center"
-          >
+
             <X className="h-5 w-5 text-gray-400 hover:text-gray-600" />
           </button>
         )}
@@ -177,7 +175,7 @@ export const EnhancedSearchInput = () => {
                     className={`w-full flex items-center space-x-3 px-3 py-2 rounded-md text-left hover:bg-gray-50 ${
                       index === activeIndex ? 'bg-blue-50 border border-blue-200' : ''
                     }`}
-                  >
+
                     <suggestion.icon className="w-4 h-4 text-gray-400" />
                     <div className="flex-1">
                       <div className="text-sm font-medium text-gray-900">{suggestion.text}</div>
@@ -202,12 +200,12 @@ export const EnhancedSearchInput = () => {
                     key={index}
                     onClick={() => handleRecentSearchClick(search)}
                     className="w-full flex items-center justify-between px-3 py-2 rounded-md text-left hover:bg-gray-50 group"
-                  >
+
                     <span className="text-sm text-gray-700">{search}</span>
                     <button
                       onClick={(e) => removeRecentSearch(search, e)}
                       className="opacity-0 group-hover:opacity-100 p-1 hover:bg-gray-200 rounded"
-                    >
+
                       <X className="w-3 h-3 text-gray-400" />
                     </button>
                   </button>
@@ -228,7 +226,7 @@ export const EnhancedSearchInput = () => {
                   key={index}
                   onClick={() => handleTrendingSearchClick(search)}
                   className="px-3 py-1 text-sm bg-gray-100 text-gray-700 rounded-full hover:bg-gray-200 transition-colors"
-                >
+
                   {search}
                 </button>
               ))}
@@ -241,7 +239,7 @@ export const EnhancedSearchInput = () => {
               onClick={() => handleSearch(searchQuery)}
               disabled={!searchQuery.trim()}
               className="w-full bg-blue-600 text-white py-2 px-4 rounded-md font-medium hover:bg-blue-700 disabled:bg-gray-300 disabled:cursor-not-allowed transition-colors"
-            >
+
               Search
             </button>
           </div>
@@ -249,4 +247,4 @@ export const EnhancedSearchInput = () => {
       )}
     </div>
   );
-};
+};}}}}}}

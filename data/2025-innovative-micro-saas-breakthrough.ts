@@ -30,7 +30,7 @@ export const innovativeMicroSaasBreakthrough2025 = [
         price: 899,
         period: 'month',
         features: ['Unlimited content', 'Custom AI training', 'Full API access', 'Dedicated account manager', '24/7 support']
-      }
+
     },
     category: 'Content & Marketing',
     tags: ['AI', 'Content Generation', 'SEO', 'Marketing Automation', 'NLP', 'Enterprise'],
@@ -83,7 +83,7 @@ export const innovativeMicroSaasBreakthrough2025 = [
         price: 999,
         period: 'month',
         features: ['Unlimited contacts', 'Quantum analytics', 'White-label solution', 'Dedicated support', 'Custom integrations']
-      }
+
     },
     category: 'Sales & CRM',
     tags: ['CRM', 'Quantum Computing', 'AI', 'Sales Automation', 'Predictive Analytics', 'Enterprise'],
@@ -136,7 +136,7 @@ export const innovativeMicroSaasBreakthrough2025 = [
         price: 4999,
         period: 'month',
         features: ['Full autonomous platform', 'White-label solution', 'Dedicated support', 'Custom development', '24/7 monitoring']
-      }
+
     },
     category: 'AI & Automation',
     tags: ['AI', 'Autonomous Systems', 'Decision Making', 'Machine Learning', 'Automation', 'Enterprise'],
@@ -189,7 +189,7 @@ export const innovativeMicroSaasBreakthrough2025 = [
         price: 1999,
         period: 'month',
         features: ['Full legal platform', 'White-label solution', 'Dedicated support', 'Custom development', '24/7 monitoring']
-      }
+
     },
     category: 'Legal Technology',
     tags: ['AI', 'Legal Tech', 'Contract Management', 'Legal Analysis', 'Compliance', 'Enterprise'],
@@ -242,7 +242,7 @@ export const innovativeMicroSaasBreakthrough2025 = [
         price: 3999,
         period: 'month',
         features: ['Full healthcare platform', 'White-label solution', 'Dedicated support', 'Custom development', '24/7 monitoring']
-      }
+
     },
     category: 'Healthcare Technology',
     tags: ['AI', 'Healthcare', 'Medical Diagnostics', 'Patient Care', 'Medical Technology', 'Enterprise'],
@@ -263,5 +263,5 @@ export const innovativeMicroSaasBreakthrough2025 = [
     ],
     integrations: ['Electronic health records', 'Medical imaging systems', 'Laboratory systems', 'Patient monitoring devices', 'Healthcare platforms'],
     compliance: ['HIPAA', 'FDA regulations', 'Medical device standards', 'SOC2', 'ISO 27001', 'Healthcare compliance standards']
-  }
-];
+
+];}}}}}}

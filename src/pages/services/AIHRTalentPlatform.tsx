@@ -1,6 +1,4 @@
-import { Users, Search, CheckCircle, ArrowRight, ExternalLink, Phone, Mail, Sparkles, Target, TrendingUp, Shield, Briefcase, Award } from 'lucide-react';
-
-export default function AIHRTalentPlatform() {
+import { Users, Search, CheckCircle, ArrowRight, ExternalLink, Phone, Mail, Sparkles, Target, TrendingUp, Shield, Briefcase, Award export default function AIHRTalentPlatform() {
   const features = [
     'AI-powered candidate screening and matching',
     'Automated resume parsing and skill assessment',
@@ -39,7 +37,7 @@ export default function AIHRTalentPlatform() {
       price: '$999/mo',
       features: ['Unlimited employees', 'Full AI suite', 'Custom AI training', 'Dedicated support', 'White-label solutions', 'Advanced compliance'],
       popular: false
-    }
+
   ];
 
   const useCases = [
@@ -312,11 +310,11 @@ export default function AIHRTalentPlatform() {
             target="_blank"
             rel="noreferrer"
             className="inline-flex items-center text-orange-600 hover:text-orange-700 font-semibold"
-          >
+
             Visit ziontechgroup.com <ExternalLink className="w-4 h-4 ml-2" />
           </a>
         </div>
       </section>
     </div>
   );
-}
+}}}

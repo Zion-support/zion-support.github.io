@@ -4,8 +4,7 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { SEO } from "@/components/SEO";
 import { ProtectedRoute } from "@/components/ProtectedRoute";
 import { InterviewCard } from "@/components/interviews/InterviewCard";
-import { Calendar, Clock, Video } from "lucide-react";
-import { format, isAfter, parseISO, startOfDay } from "date-fns";
+import { Calendar, Clock, Video import { format, isAfter, parseISO, startOfDay } from "date-fns";
 function InterviewsContent() {
     const { interviews, isLoading, fetchInterviews } = useInterviews();
     const [activeTab, setActiveTab] = useState("upcoming");
@@ -39,7 +38,7 @@ function InterviewsContent() {
             const dateKey = format(parseISO(interview.scheduled_date), 'yyyy-MM-dd');
             if (!grouped[dateKey]) {
                 grouped[dateKey] = [];
-            }
+
             grouped[dateKey].push(interview);
         });
         return grouped;
@@ -124,9 +123,9 @@ function InterviewsContent() {
       </main>
 
     </>);
-}
+
 export default function Interviews() {
     return (<ProtectedRoute>
       <InterviewsContent />
     </ProtectedRoute>);
-}
+}}}}

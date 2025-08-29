@@ -4,9 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
-import { Clock, Globe, Shield, Zap, MapPin, CheckCircle } from "lucide-react";
-
-export function ITServiceRequestHero() {
+import { Clock, Globe, Shield, Zap, MapPin, CheckCircle export function ITServiceRequestHero() {
   const [location, setLocation] = useState("");
   const [isSubmitting, setIsSubmitting] = useState(false);
   const navigate = useNavigate();
@@ -20,7 +18,7 @@ export function ITServiceRequestHero() {
         setIsSubmitting(false);
         navigate(`/it-onsite-services?location=${encodeURIComponent(location)}`);
       }, 1000);
-    }
+
   };
 
   const containerVariants = {
@@ -31,8 +29,8 @@ export function ITServiceRequestHero() {
       transition: {
         duration: 0.6,
         staggerChildren: 0.2
-      }
-    }
+
+
   };
 
   const itemVariants = {
@@ -41,7 +39,7 @@ export function ITServiceRequestHero() {
       opacity: 1,
       y: 0,
       transition: { duration: 0.5 }
-    }
+
   };
 
   const features = [
@@ -65,7 +63,7 @@ export function ITServiceRequestHero() {
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true }}
-      >
+
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           {/* Left content */}
           <motion.div variants={itemVariants} className="text-white">
@@ -94,7 +92,7 @@ export function ITServiceRequestHero() {
                   key={index}
                   variants={itemVariants}
                   className="flex items-center gap-3"
-                >
+
                   <div className={`p-2 bg-white/10 rounded-lg`}>
                     <feature.icon className={`w-5 h-5 ${feature.color}`} />
                   </div>
@@ -110,14 +108,14 @@ export function ITServiceRequestHero() {
               <Button
                 onClick={() => document.getElementById('service-form')?.scrollIntoView({ behavior: 'smooth' })}
                 className="bg-gradient-to-r from-zion-cyan to-zion-blue hover:from-zion-cyan-dark hover:to-zion-blue-dark text-white px-8 py-4 text-lg font-semibold rounded-lg shadow-lg hover:shadow-xl transition-all duration-300"
-              >
+
                 Request Service Now
                 <MapPin className="w-5 h-5 ml-2" />
               </Button>
               <Button
                 variant="outline"
                 className="border-zion-cyan/30 text-zion-cyan hover:bg-zion-cyan/10 px-8 py-4 text-lg font-semibold rounded-lg transition-all duration-300"
-              >
+
                 Learn More
               </Button>
             </div>
@@ -161,7 +159,7 @@ export function ITServiceRequestHero() {
                   <select
                     id="service-type"
                     className="w-full px-4 py-3 bg-white/5 border border-white/20 rounded-lg text-white focus:border-zion-cyan focus:ring-zion-cyan"
-                  >
+
                     <option value="">Select service type</option>
                     <option value="emergency">Emergency Repair</option>
                     <option value="maintenance">Scheduled Maintenance</option>
@@ -187,7 +185,7 @@ export function ITServiceRequestHero() {
                   type="submit"
                   disabled={isSubmitting}
                   className="w-full bg-gradient-to-r from-zion-cyan to-zion-blue hover:from-zion-cyan-dark hover:to-zion-blue-dark text-white py-4 text-lg font-semibold rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 disabled:opacity-50"
-                >
+
                   {isSubmitting ? (
                     <>
                       <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-white mr-2"></div>
@@ -213,4 +211,4 @@ export function ITServiceRequestHero() {
       </motion.div>
     </section>
   );
-}
+}}}}}}

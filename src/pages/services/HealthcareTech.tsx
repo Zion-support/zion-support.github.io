@@ -1,9 +1,7 @@
 import React from 'react';
 import { SEO } from '../../components/SEO';
 import { motion } from 'framer-motion';
-import { Heart, Shield, Database, Zap, Globe, Server, BarChart3, Settings, Users, Network, Smartphone, Tablet, Laptop, Cloud, RefreshCw, TrendingUp, AlertTriangle, Activity, FileText, CheckCircle, Stethoscope, Microscope, Pill, Brain } from 'lucide-react';
-
-export default function HealthcareTech() {
+import { Heart, Shield, Database, Zap, Globe, Server, BarChart3, Settings, Users, Network, Smartphone, Tablet, Laptop, Cloud, RefreshCw, TrendingUp, AlertTriangle, Activity, FileText, CheckCircle, Stethoscope, Microscope, Pill, Brain export default function HealthcareTech() {
   const features = [
     {
       icon: Heart,
@@ -40,7 +38,7 @@ export default function HealthcareTech() {
       title: 'Predictive Analytics',
       description: 'Early warning systems and preventive care insights',
       color: 'from-indigo-500 to-purple-500'
-    }
+
   ];
 
   const services = [
@@ -67,7 +65,7 @@ export default function HealthcareTech() {
       description: 'IoT integration for medical devices and wearables',
       price: 'From $18,000',
       features: ['Device connectivity', 'Data collection', 'Real-time monitoring', 'Alert systems']
-    }
+
   ];
 
   const applications = [
@@ -95,7 +93,7 @@ export default function HealthcareTech() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             className="text-center max-w-4xl mx-auto"
-          >
+
             <div className="flex justify-center mb-6">
               <div className="w-20 h-20 bg-gradient-to-br from-red-500 to-pink-500 rounded-2xl flex items-center justify-center">
                 <Heart className="w-10 h-10 text-white" />
@@ -116,14 +114,14 @@ export default function HealthcareTech() {
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 className="px-8 py-4 bg-gradient-to-r from-red-500 to-pink-500 text-white font-semibold rounded-lg hover:from-red-600 hover:to-pink-600 transition-all duration-300"
-              >
+
                 Get Started
               </motion.button>
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 className="px-8 py-4 border border-slate-600 text-white font-semibold rounded-lg hover:border-slate-500 hover:bg-slate-800/50 transition-all duration-300"
-              >
+
                 Learn More
               </motion.button>
             </div>
@@ -139,7 +137,7 @@ export default function HealthcareTech() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
-          >
+
             <h2 className="text-4xl font-bold text-white mb-4">
               Why Choose Healthcare Technology?
             </h2>
@@ -157,7 +155,7 @@ export default function HealthcareTech() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700 hover:border-slate-600 transition-all duration-300"
-              >
+
                 <div className={`w-12 h-12 bg-gradient-to-br ${feature.color} rounded-lg flex items-center justify-center mb-4`}>
                   <feature.icon className="w-6 h-6 text-white" />
                 </div>
@@ -177,7 +175,7 @@ export default function HealthcareTech() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
-          >
+
             <h2 className="text-4xl font-bold text-white mb-4">
               Our Healthcare Technology Services
             </h2>
@@ -195,7 +193,7 @@ export default function HealthcareTech() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700 hover:border-slate-600 transition-all duration-300"
-              >
+
                 <h3 className="text-xl font-semibold text-white mb-3">{service.title}</h3>
                 <p className="text-slate-300 mb-4">{service.description}</p>
                 <div className="text-2xl font-bold text-pink-400 mb-4">{service.price}</div>
@@ -211,7 +209,7 @@ export default function HealthcareTech() {
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
                   className="w-full mt-6 px-4 py-2 bg-gradient-to-r from-red-500 to-pink-500 text-white font-semibold rounded-lg hover:from-red-600 hover:to-pink-600 transition-all duration-300"
-                >
+
                   Get Quote
                 </motion.button>
               </motion.div>
@@ -228,7 +226,7 @@ export default function HealthcareTech() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
-          >
+
             <h2 className="text-4xl font-bold text-white mb-4">
               Healthcare Technology Applications
             </h2>
@@ -246,7 +244,7 @@ export default function HealthcareTech() {
                 whileInView={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 className="text-center group"
-              >
+
                 <div className="w-16 h-16 bg-slate-800 rounded-xl flex items-center justify-center mx-auto mb-4 group-hover:bg-slate-700 transition-all duration-300">
                   <app.icon className="w-8 h-8 text-pink-400" />
                 </div>
@@ -265,7 +263,7 @@ export default function HealthcareTech() {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-          >
+
             <h2 className="text-4xl font-bold text-white mb-6">
               Ready to Transform Healthcare?
             </h2>
@@ -278,14 +276,14 @@ export default function HealthcareTech() {
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 className="px-8 py-4 bg-gradient-to-r from-red-500 to-pink-500 text-white font-semibold rounded-lg hover:from-red-600 hover:to-pink-600 transition-all duration-300"
-              >
+
                 Schedule Consultation
               </motion.button>
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 className="px-8 py-4 border border-slate-600 text-white font-semibold rounded-lg hover:border-slate-500 hover:bg-slate-800/50 transition-all duration-300"
-              >
+
                 View Case Studies
               </motion.button>
             </div>
@@ -294,4 +292,4 @@ export default function HealthcareTech() {
       </section>
     </div>
   );
-}
+}}}}

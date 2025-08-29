@@ -30,7 +30,7 @@ const ComprehensivePricing2026 = () => {
                 return allServices.filter(service => ['Supply Chain Management', 'Financial Technology', 'Healthcare Technology', 'Legal Technology', 'Blockchain Technology', 'Internet of Things', 'Quantum Computing'].includes(service.category));
             default:
                 return allServices;
-        }
+
     };
     const filteredServices = getCategoryServices(selectedCategory);
     const getAnnualPrice = (monthlyPrice) => {
@@ -44,8 +44,8 @@ const ComprehensivePricing2026 = () => {
             opacity: 1,
             transition: {
                 staggerChildren: 0.1
-            }
-        }
+
+
     };
     const itemVariants = {
         hidden: { y: 20, opacity: 0 },
@@ -55,8 +55,8 @@ const ComprehensivePricing2026 = () => {
             transition: {
                 duration: 0.5,
                 ease: "easeOut"
-            }
-        }
+
+
     };
     return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white">
       {/* Hero Section */}
@@ -312,5 +312,6 @@ const ComprehensivePricing2026 = () => {
         </div>
       </section>
     </div>);
-};
+</div>};
 export default ComprehensivePricing2026;
+}}}}}

@@ -1,9 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { Briefcase, HardDrive, Lightbulb, Users, Brain, ArrowRight } from "lucide-react";
-
-const categories = [
+import { Briefcase, HardDrive, Lightbulb, Users, Brain, ArrowRight const categories = [
   {
     title: "Comprehensive Services",
     description: "Micro SAAS, IT services, and AI solutions",
@@ -54,12 +52,11 @@ const specialServices = [
   {
     title: "Cybersecurity",
     link: "/cybersecurity"
-  }
+
 ];
 
 interface CategoriesSectionProps {
   showTitle?: boolean;
-}
 
 export function CategoriesSection({ showTitle = true }: CategoriesSectionProps) {
   const containerVariants = {
@@ -69,8 +66,8 @@ export function CategoriesSection({ showTitle = true }: CategoriesSectionProps) 
       transition: {
         staggerChildren: 0.2,
         delayChildren: 0.1
-      }
-    }
+
+
   };
 
   const itemVariants = {
@@ -81,8 +78,8 @@ export function CategoriesSection({ showTitle = true }: CategoriesSectionProps) 
       transition: {
         duration: 0.6,
         ease: "easeOut"
-      }
-    }
+
+
   };
 
   const cardVariants = {
@@ -93,8 +90,8 @@ export function CategoriesSection({ showTitle = true }: CategoriesSectionProps) 
       transition: {
         duration: 0.4,
         ease: "easeOut"
-      }
-    }
+
+
   };
 
   return (
@@ -114,7 +111,7 @@ export function CategoriesSection({ showTitle = true }: CategoriesSectionProps) 
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-          >
+
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
               Explore Categories
             </h2>
@@ -131,21 +128,21 @@ export function CategoriesSection({ showTitle = true }: CategoriesSectionProps) 
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
-        >
+
           {categories.map((category, index) => (
             <motion.div
               key={category.title}
               variants={itemVariants}
               whileHover={{ y: -8 }}
               transition={{ type: "spring", stiffness: 300 }}
-            >
+
               <Link to={category.link} className="group block h-full">
                 <motion.div
                   className="rounded-2xl overflow-hidden h-full border border-zion-blue-light/30 bg-zion-blue-dark/80 backdrop-blur-sm p-8 transition-all duration-300 hover:border-zion-purple/50 hover:shadow-2xl hover:shadow-zion-purple/20 group-hover:bg-zion-blue-dark"
                   variants={cardVariants}
                   whileHover={{ scale: 1.02 }}
                   transition={{ type: "spring", stiffness: 400, damping: 10 }}
-                >
+
                   {/* Icon with enhanced background */}
                   <div className={`rounded-2xl w-20 h-20 bg-gradient-to-br ${category.color} flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 shadow-lg group-hover:shadow-xl`}>
                     <div className="text-white">
@@ -179,7 +176,7 @@ export function CategoriesSection({ showTitle = true }: CategoriesSectionProps) 
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.3 }}
-        >
+
           <h3 className="text-center text-2xl font-bold text-white mb-8">Premium Services</h3>
           <div className="flex flex-wrap justify-center gap-6">
             {specialServices.map((service) => (
@@ -187,7 +184,7 @@ export function CategoriesSection({ showTitle = true }: CategoriesSectionProps) 
                 key={service.title}
                 to={service.link}
                 className="group flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-blue-600/20 to-cyan-600/20 hover:from-blue-600/30 hover:to-cyan-600/30 border border-blue-400/30 hover:border-blue-400/50 rounded-2xl text-blue-400 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-blue-400/20 backdrop-blur-sm"
-              >
+
                 {service.title}
               </Link>
             ))}
@@ -201,11 +198,11 @@ export function CategoriesSection({ showTitle = true }: CategoriesSectionProps) 
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.5 }}
-        >
+
           <Link
             to="/services"
             className="group inline-flex items-center gap-3 text-zion-cyan border-b-2 border-zion-cyan hover:border-zion-cyan-light transition-colors text-lg font-medium py-2"
-          >
+
             View All Services
             <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
           </Link>
@@ -213,4 +210,4 @@ export function CategoriesSection({ showTitle = true }: CategoriesSectionProps) 
       </div>
     </section>
   );
-}
+}}}}}}}}}}

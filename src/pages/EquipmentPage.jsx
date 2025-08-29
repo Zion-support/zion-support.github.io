@@ -2,8 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Card, CardContent, CardHeader } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
-import { Filter, SortAsc, Star, ShoppingCart } from 'lucide-react';
-import { Footer } from '@/components/Footer';
+import { Filter, SortAsc, Star, ShoppingCart import { Footer } from '@/components/Footer';
 
 const EquipmentPage = () => {
   const [equipment, setEquipment] = useState([]);
@@ -35,7 +34,7 @@ const EquipmentPage = () => {
           value={filterCategory}
           onChange={(e) => setFilterCategory(e.target.value)}
           className="bg-background border border-border px-3 py-2 rounded"
-        >
+
           <option value="">All Categories</option>
           {categories.map((cat) => (
             <option key={cat} value={cat}>{cat}</option>
@@ -49,7 +48,7 @@ const EquipmentPage = () => {
           value={sortBy}
           onChange={(e) => setSortBy(e.target.value)}
           className="bg-background border border-border px-3 py-2 rounded"
-        >
+
           <option value="newest">Newest First</option>
           <option value="price-low">Price: Low to High</option>
           <option value="price-high">Price: High to Low</option>
@@ -78,7 +77,7 @@ const EquipmentPage = () => {
         variant={showRecommended ? "default" : "outline"}
         size="sm"
         onClick={() => setShowRecommended(!showRecommended)}
-      >
+
         <Star className="h-4 w-4 mr-1"/>
         {showRecommended ? "All Equipment" : "Recommended"}
       </Button>
@@ -185,7 +184,7 @@ const EquipmentPage = () => {
                 rating: 4.7,
                 reviewCount: 156,
                 description: "Reliable 2U server with excellent performance and enterprise support."
-              }
+
             ].map((equipment, index) => (
               <EquipmentCard key={index} equipment={equipment} />
             ))
@@ -195,6 +194,7 @@ const EquipmentPage = () => {
       <Footer />
     </div>
   );
-};
+</Card></Card></Card></Card>};
 
 export default EquipmentPage;
+}}

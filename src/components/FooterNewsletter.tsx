@@ -1,7 +1,5 @@
 import React, { useState } from 'react';
-import { Mail, Send, CheckCircle } from 'lucide-react';
-
-export const FooterNewsletter: React.FC = () => {
+import { Mail, Send, CheckCircle export const FooterNewsletter: React.FC = () => {
   const [email, setEmail] = useState('');
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
@@ -22,10 +20,10 @@ export const FooterNewsletter: React.FC = () => {
       // Reset after 3 seconds
       setTimeout(() => setIsSubmitted(false), 3000);
     } catch (error) {
-      // console.error('Newsletter subscription failed:', error);
+      // // // console.error('Newsletter subscription failed:', error);
     } finally {
       setIsSubmitting(false);
-    }
+
   };
 
   return (
@@ -63,7 +61,7 @@ export const FooterNewsletter: React.FC = () => {
               type="submit"
               disabled={isSubmitting || !email.trim()}
               className="px-6 py-3 bg-gradient-to-r from-zion-cyan to-blue-500 text-white font-medium rounded-lg hover:from-zion-cyan/90 hover:to-blue-500/90 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2"
-            >
+
               {isSubmitting ? (
                 <>
                   <div className="w-4 h-4 border-2 border-white/30 border-t-white rounded-full animate-spin" />
@@ -85,4 +83,5 @@ export const FooterNewsletter: React.FC = () => {
       </div>
     </div>
   );
-};
+</div>};
+}}

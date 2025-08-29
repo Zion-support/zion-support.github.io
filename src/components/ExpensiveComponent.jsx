@@ -16,7 +16,7 @@ export default function ExpensiveComponent() {
         <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-zion-cyan mx-auto mb-4"></div>
         <p className="text-zion-slate-light">Computing expensive data...</p>
       </div>);
-    }
+
     return (<div className="space-y-4">
       <h3 className="text-xl font-semibold text-zion-slate-light">
         Expensive Component Loaded
@@ -35,4 +35,4 @@ export default function ExpensiveComponent() {
           </p>)}
       </div>
     </div>);
-}
+}}

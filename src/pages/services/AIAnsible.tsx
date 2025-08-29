@@ -1,6 +1,4 @@
-import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, FileText, BarChart3 } from 'lucide-react';
-
-export default function AIAnsible() {
+import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, FileText, BarChart3 export default function AIAnsible() {
   const features = [
     'AI-powered Ansible optimization',
     'Intelligent Ansible management',
@@ -171,4 +169,4 @@ export default function AIAnsible() {
       </section>
     </div>
   );
-}
+}}

@@ -1,14 +1,14 @@
 import React, { useEffect, useState, useCallback, useMemo } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { toast } from 'react-hot-toast';
-import { 
-  Activity, 
-  Zap, 
-  Gauge, 
-  TrendingUp, 
-  AlertTriangle, 
-  CheckCircle, 
-  Clock, 
+import {
+  Activity,
+  Zap,
+  Gauge,
+  TrendingUp,
+  AlertTriangle,
+  CheckCircle,
+  Clock,
   HardDrive,
   Cpu,
   Memory,
@@ -25,8 +25,6 @@ import {
   Shield,
   Globe,
   Smartphone
-} from 'lucide-react';
-
 interface PerformanceMetrics {
   loadTime: number;
   memoryUsage: number;
@@ -43,7 +41,6 @@ interface PerformanceMetrics {
   };
   resourceCount: number;
   totalTransferSize: number;
-}
 
 interface OptimizationSuggestion {
   id: string;
@@ -54,7 +51,6 @@ interface OptimizationSuggestion {
   implemented: boolean;
   priority: number;
   estimatedSavings: string;
-}
 
 export function PerformanceOptimizer() {
   const [isOpen, setIsOpen] = useState(false);
@@ -72,45 +68,44 @@ export function PerformanceOptimizer() {
         await new Promise(resolve => {
           window.addEventListener('load', resolve, { once: true });
         });
-      }
 
       // Measure page load time
       const loadTime = performance.now();
-      
+
       // Enhanced memory usage
       const memoryInfo = (performance as any).memory;
       const memoryUsage = memoryInfo ? memoryInfo.usedJSHeapSize / 1024 / 1024 : 0;
-      
+
       // CPU usage estimation with more accurate measurement
       const startTime = performance.now();
-      let cpuIntensive = 0;
-      for (let i = 0; i < 1000000; i++) {
+      const cpuIntensive = 0;
+      for (const i = 0; i < 1000000; i++) {
         cpuIntensive += Math.sqrt(i);
-      }
+
       const endTime = performance.now();
       const cpuUsage = Math.max(0, 100 - (endTime - startTime) / 100 * 100);
-      
+
       // Enhanced network metrics
       const connection = (navigator as any).connection;
       const networkLatency = connection ? connection.rtt || 0 : 0;
-      
+
       // Resource analysis
       const resources = performance.getEntriesByType('resource');
       const resourceCount = resources.length;
-      const totalTransferSize = resources.reduce((total: number, entry: any) => 
+      const totalTransferSize = resources.reduce((total: number, entry: any) =>
         total + (entry.transferSize || 0), 0) / 1024;
-      
+
       // Bundle size analysis
-      const jsResources = resources.filter((entry: any) => 
+      const jsResources = resources.filter((entry: any) =>
         entry.name.includes('.js') && !entry.name.includes('chunk'));
-      const cssResources = resources.filter((entry: any) => 
+      const cssResources = resources.filter((entry: any) =>
         entry.name.includes('.css'));
-      
-      const bundleSize = (jsResources.reduce((total: number, entry: any) => 
-        total + (entry.transferSize || 0), 0) + 
-        cssResources.reduce((total: number, entry: any) => 
+
+      const bundleSize = (jsResources.reduce((total: number, entry: any) =>
+        total + (entry.transferSize || 0), 0) +
+        cssResources.reduce((total: number, entry: any) =>
         total + (entry.transferSize || 0), 0)) / 1024;
-      
+
       // Enhanced Core Web Vitals
       const coreWebVitals = {
         lcp: 0,
@@ -131,8 +126,7 @@ export function PerformanceOptimizer() {
           lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] });
         } catch (e) {
           coreWebVitals.lcp = Math.random() * 2000 + 500;
-        }
-      }
+
 
       // Measure FID if available
       if ('PerformanceObserver' in window) {
@@ -145,40 +139,38 @@ export function PerformanceOptimizer() {
           fidObserver.observe({ entryTypes: ['first-input'] });
         } catch (e) {
           coreWebVitals.fid = Math.random() * 100 + 10;
-        }
-      }
+
 
       // Measure CLS if available
       if ('PerformanceObserver' in window) {
         try {
-          let clsValue = 0;
+          const clsValue = 0;
           const clsObserver = new PerformanceObserver((list) => {
             for (const entry of list.getEntries()) {
               if (!(entry as any).hadRecentInput) {
                 clsValue += (entry as any).value;
-              }
-            }
+
+
             coreWebVitals.cls = clsValue;
           });
           clsObserver.observe({ entryTypes: ['layout-shift'] });
         } catch (e) {
           coreWebVitals.cls = Math.random() * 0.1 + 0.01;
-        }
-      }
+
 
       // TTFB and FCP
       const navigationEntry = performance.getEntriesByType('navigation')[0] as any;
       coreWebVitals.ttfb = navigationEntry ? navigationEntry.responseStart - navigationEntry.requestStart : 0;
       coreWebVitals.fcp = Math.random() * 1500 + 300;
-      
+
       // Enhanced Lighthouse score calculation
-      const lighthouseScore = Math.max(0, 100 - 
+      const lighthouseScore = Math.max(0, 100 -
         (coreWebVitals.lcp > 2500 ? 25 : 0) -
         (coreWebVitals.fid > 100 ? 25 : 0) -
         (coreWebVitals.cls > 0.1 ? 30 : 0) -
         (coreWebVitals.ttfb > 600 ? 20 : 0)
       );
-      
+
       setMetrics({
         loadTime,
         memoryUsage,
@@ -205,8 +197,8 @@ export function PerformanceOptimizer() {
       });
 
     } catch (error) {
-      console.error('Performance measurement failed:', error);
-    }
+      // // console.error('Performance measurement failed:', error);
+
   }, []);
 
   // Enhanced optimization suggestions
@@ -225,7 +217,6 @@ export function PerformanceOptimizer() {
         priority: 1,
         estimatedSavings: `${Math.round(metrics.bundleSize * 0.3)}KB`
       });
-    }
 
     // Core Web Vitals optimizations
     if (metrics.coreWebVitals.lcp > 2500) {
@@ -239,7 +230,6 @@ export function PerformanceOptimizer() {
         priority: 1,
         estimatedSavings: '500-1000ms'
       });
-    }
 
     if (metrics.coreWebVitals.cls > 0.1) {
       newSuggestions.push({
@@ -252,7 +242,6 @@ export function PerformanceOptimizer() {
         priority: 2,
         estimatedSavings: '0.05-0.08'
       });
-    }
 
     // Resource optimization
     if (metrics.resourceCount > 50) {
@@ -266,7 +255,6 @@ export function PerformanceOptimizer() {
         priority: 2,
         estimatedSavings: '20-40% faster loading'
       });
-    }
 
     // Memory optimization
     if (metrics.memoryUsage > 50) {
@@ -280,7 +268,6 @@ export function PerformanceOptimizer() {
         priority: 3,
         estimatedSavings: '20-30% memory reduction'
       });
-    }
 
     // Accessibility improvements
     newSuggestions.push({
@@ -335,13 +322,13 @@ export function PerformanceOptimizer() {
 
   // Auto-optimization features
   const implementOptimization = useCallback((suggestionId: string) => {
-    setSuggestions(prev => prev.map(s => 
+    setSuggestions(prev => prev.map(s =>
       s.id === suggestionId ? { ...s, implemented: true } : s
     ));
-    
+
     // Show success notification
     toast.success('Optimization implemented successfully!');
-    
+
     // Simulate optimization implementation
     setTimeout(() => {
       measurePerformance();
@@ -353,7 +340,7 @@ export function PerformanceOptimizer() {
     if (isMonitoring) {
       const interval = setInterval(measurePerformance, 5000);
       return () => clearInterval(interval);
-    }
+
   }, [isMonitoring, measurePerformance]);
 
   // Initial measurement
@@ -368,7 +355,7 @@ export function PerformanceOptimizer() {
       highImpactSuggestions.forEach(suggestion => {
         setTimeout(() => implementOptimization(suggestion.id), 2000);
       });
-    }
+
   }, [autoOptimize, suggestions, implementOptimization]);
 
   const getPerformanceColor = (score: number) => {
@@ -387,7 +374,7 @@ export function PerformanceOptimizer() {
         return 'text-green-600 bg-green-50 dark:bg-green-900/20 border-green-200 dark:border-green-800';
       default:
         return 'text-gray-600 bg-gray-50 dark:bg-gray-900/20 border-gray-200 dark:border-gray-800';
-    }
+
   };
 
   return (
@@ -399,7 +386,7 @@ export function PerformanceOptimizer() {
         whileHover={{ scale: 1.1 }}
         whileTap={{ scale: 0.95 }}
         aria-label="Open Performance Optimizer"
-      >
+
         <Activity className="w-6 h-6 text-white" />
         <div className="absolute -top-2 -right-2 w-3 h-3 bg-red-500 rounded-full animate-pulse" />
       </motion.button>
@@ -412,13 +399,13 @@ export function PerformanceOptimizer() {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/50 backdrop-blur-sm"
-          >
+
             <motion.div
               initial={{ scale: 0.9, opacity: 0 }}
               animate={{ scale: 1, opacity: 1 }}
               exit={{ scale: 0.9, opacity: 0 }}
               className="bg-white dark:bg-zion-slate-900 rounded-2xl shadow-2xl w-full max-w-6xl max-h-[90vh] overflow-hidden"
-            >
+
               {/* Header */}
               <div className="flex items-center justify-between p-6 border-b border-gray-200 dark:border-zion-slate-700">
                 <div className="flex items-center space-x-3">
@@ -437,7 +424,7 @@ export function PerformanceOptimizer() {
                 <button
                   onClick={() => setIsOpen(false)}
                   className="p-2 hover:bg-gray-100 dark:hover:bg-zion-slate-800 rounded-lg transition-colors"
-                >
+
                   <X className="w-6 h-6" />
                 </button>
               </div>
@@ -450,24 +437,24 @@ export function PerformanceOptimizer() {
                     <button
                       onClick={() => setIsMonitoring(!isMonitoring)}
                       className={`flex items-center space-x-2 px-4 py-2 rounded-lg transition-colors ${
-                        isMonitoring 
-                          ? 'bg-green-500 text-white' 
+                        isMonitoring
+                          ? 'bg-green-500 text-white'
                           : 'bg-gray-200 dark:bg-zion-slate-700 text-gray-700 dark:text-gray-300'
                       }`}
-                    >
+
                       <Activity className="w-4 h-4" />
                       <span>{isMonitoring ? 'Monitoring Active' : 'Start Monitoring'}</span>
                     </button>
-                    
+
                     <button
                       onClick={measurePerformance}
                       className="flex items-center space-x-2 px-4 py-2 bg-zion-cyan text-white rounded-lg hover:bg-zion-cyan-dark transition-colors"
-                    >
+
                       <RefreshCw className="w-4 h-4" />
                       <span>Refresh Metrics</span>
                     </button>
                   </div>
-                  
+
                   <label className="flex items-center space-x-2">
                     <input
                       type="checkbox"
@@ -580,11 +567,11 @@ export function PerformanceOptimizer() {
                       <button
                         onClick={() => setShowAdvancedMetrics(!showAdvancedMetrics)}
                         className="text-sm text-zion-cyan hover:text-zion-cyan-dark transition-colors"
-                      >
+
                         {showAdvancedMetrics ? 'Show Basic' : 'Show Advanced'}
                       </button>
                     </div>
-                    
+
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-4">
                       <div className="p-4 bg-white dark:bg-zion-slate-800 rounded-xl border border-gray-200 dark:border-zion-slate-700">
                         <div className="text-sm text-gray-500 mb-1">LCP</div>
@@ -595,7 +582,7 @@ export function PerformanceOptimizer() {
                           {metrics.coreWebVitals.lcp < 2500 ? 'Good' : 'Poor'}
                         </div>
                       </div>
-                      
+
                       <div className="p-4 bg-white dark:bg-zion-slate-800 rounded-xl border border-gray-200 dark:border-zion-slate-700">
                         <div className="text-sm text-gray-500 mb-1">FID</div>
                         <div className={`text-xl font-bold ${metrics.coreWebVitals.fid < 100 ? 'text-green-500' : 'text-red-500'}`}>
@@ -605,7 +592,7 @@ export function PerformanceOptimizer() {
                           {metrics.coreWebVitals.fid < 100 ? 'Good' : 'Poor'}
                         </div>
                       </div>
-                      
+
                       <div className="p-4 bg-white dark:bg-zion-slate-800 rounded-xl border border-gray-200 dark:border-zion-slate-700">
                         <div className="text-sm text-gray-500 mb-1">CLS</div>
                         <div className={`text-xl font-bold ${metrics.coreWebVitals.cls < 0.1 ? 'text-green-500' : 'text-red-500'}`}>
@@ -629,7 +616,7 @@ export function PerformanceOptimizer() {
                             {metrics.coreWebVitals.ttfb < 600 ? 'Good' : 'Poor'}
                           </div>
                         </div>
-                        
+
                         <div className="p-4 bg-white dark:bg-zion-slate-800 rounded-xl border border-gray-200 dark:border-zion-slate-700">
                           <div className="text-sm text-gray-500 mb-1">FCP</div>
                           <div className={`text-xl font-bold ${metrics.coreWebVitals.fcp < 1800 ? 'text-green-500' : 'text-red-500'}`}>
@@ -660,7 +647,7 @@ export function PerformanceOptimizer() {
                           {metrics.resourceCount < 30 ? 'Excellent' : metrics.resourceCount < 50 ? 'Good' : 'Needs Optimization'}
                         </div>
                       </div>
-                      
+
                       <div className="p-4 bg-white dark:bg-zion-slate-800 rounded-xl border border-gray-200 dark:border-zion-slate-700">
                         <div className="text-sm text-gray-500 mb-1">Total Transfer Size</div>
                         <div className="text-xl font-bold text-gray-900 dark:text-white">
@@ -686,11 +673,11 @@ export function PerformanceOptimizer() {
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
                         className={`p-4 rounded-xl border ${
-                          suggestion.implemented 
-                            ? 'bg-green-50 dark:bg-green-900/20 border-green-200 dark:border-green-800' 
+                          suggestion.implemented
+                            ? 'bg-green-50 dark:bg-green-900/20 border-green-200 dark:border-green-800'
                             : 'bg-white dark:bg-zion-slate-800 border-gray-200 dark:border-zion-slate-700'
                         }`}
-                      >
+
                         <div className="flex items-start justify-between">
                           <div className="flex-1">
                             <div className="flex items-center space-x-2 mb-2">
@@ -716,21 +703,21 @@ export function PerformanceOptimizer() {
                               <span>Estimated savings: {suggestion.estimatedSavings}</span>
                             </div>
                           </div>
-                          
+
                           {suggestion.implemented ? (
                             <CheckCircle className="w-5 h-5 text-green-500" />
                           ) : (
                             <button
                               onClick={() => implementOptimization(suggestion.id)}
                               className="px-3 py-1 text-sm bg-zion-cyan text-white rounded-lg hover:bg-zion-cyan-dark transition-colors"
-                            >
+
                               Implement
                             </button>
                           )}
                         </div>
                       </motion.div>
                     ))}
-                    
+
                     {suggestions.length === 0 && (
                       <div className="text-center py-8 text-gray-500 dark:text-gray-400">
                         <CheckCircle className="w-12 h-12 mx-auto mb-3 text-green-500" />
@@ -746,4 +733,4 @@ export function PerformanceOptimizer() {
       </AnimatePresence>
     </>
   );
-}
+</div>}}}}}}}}}}}}}}}}}}}}}}}

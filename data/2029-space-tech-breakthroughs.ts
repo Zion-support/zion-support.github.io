@@ -23,7 +23,7 @@ export interface SpaceTechBreakthroughService2029 {
   benefits: string[];
   useCases: string[];
   spaceCapabilities: string[];
-}
+
 export const spaceTechBreakthroughServices2029: SpaceTechBreakthroughService2029[] = [
   {
     id: "space-mining-automation-platform",
@@ -274,5 +274,5 @@ export const spaceTechBreakthroughServices2029: SpaceTechBreakthroughService2029
       "Unbreakable security",
       "Space-time messaging"
     ]
-  }
-];
+
+];}}

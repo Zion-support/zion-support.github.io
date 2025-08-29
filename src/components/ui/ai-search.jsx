@@ -1,7 +1,6 @@
 import React, { useState, useEffect, useRef, useCallback } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Search, X, Filter, Sparkles, TrendingUp, Star, Zap, ArrowRight, Mic, MicOff, Settings, History, Bookmark, Share2 } from 'lucide-react';
-import { Button } from './button';
+import { Search, X, Filter, Sparkles, TrendingUp, Star, Zap, ArrowRight, Mic, MicOff, Settings, History, Bookmark, Share2 import { Button } from './button';
 import { Badge } from './badge';
 export function AISearch({ enabled = true, placeholder = "Search for AI services, talent, or companies...", onSearch, onResultClick, className = "" }) {
     const [isOpen, setIsOpen] = useState(false);
@@ -50,11 +49,11 @@ export function AISearch({ enabled = true, placeholder = "Search for AI services
             const newSuggestions = generateSuggestions(value);
             setSuggestions(newSuggestions);
             setIsOpen(true);
-        }
+
         else {
             setSuggestions([]);
             setIsOpen(false);
-        }
+
     }, [generateSuggestions]);
     // Perform search
     const performSearch = useCallback(async (searchQuery, searchFilters) => {
@@ -76,7 +75,7 @@ export function AISearch({ enabled = true, placeholder = "Search for AI services
                     lastUpdated: '2024-01-15',
                     verified: true,
                     featured: true
-                }
+
             },
             {
                 id: '2',
@@ -93,7 +92,7 @@ export function AISearch({ enabled = true, placeholder = "Search for AI services
                     lastUpdated: '2024-01-20',
                     verified: true,
                     featured: false
-                }
+
             },
             {
                 id: '3',
@@ -110,8 +109,8 @@ export function AISearch({ enabled = true, placeholder = "Search for AI services
                     lastUpdated: '2024-01-18',
                     verified: true,
                     featured: true
-                }
-            }
+
+
         ];
         // Simulate API call
         await new Promise(resolve => setTimeout(resolve, 800));
@@ -133,14 +132,14 @@ export function AISearch({ enabled = true, placeholder = "Search for AI services
         // Add to search history
         if (searchQuery.trim() && !searchHistory.includes(searchQuery.trim())) {
             setSearchHistory(prev => [searchQuery.trim(), ...prev.slice(0, 9)]);
-        }
+
         onSearch?.(searchQuery, searchFilters);
     }, [searchHistory, onSearch]);
     // Handle search submission
     const handleSearch = useCallback(() => {
         if (query.trim()) {
             performSearch(query, filters);
-        }
+
     }, [query, filters, performSearch]);
     // Handle voice input
     const toggleVoiceInput = useCallback(() => {
@@ -154,13 +153,13 @@ export function AISearch({ enabled = true, placeholder = "Search for AI services
                 handleSearchInput(voiceQuery);
                 setIsVoiceActive(false);
             }, 2000);
-        }
+
     }, [isVoiceActive, handleSearchInput]);
     // Save search
     const saveSearch = useCallback((searchQuery) => {
         if (!savedSearches.includes(searchQuery)) {
             setSavedSearches(prev => [...prev, searchQuery]);
-        }
+
     }, [savedSearches]);
     // Share search results
     const shareResults = useCallback(() => {
@@ -170,21 +169,21 @@ export function AISearch({ enabled = true, placeholder = "Search for AI services
                 text: `Check out these results for "${query}"`,
                 url: window.location.href
             });
-        }
+
         else {
             // Fallback to copying to clipboard
             navigator.clipboard.writeText(`Search Results for "${query}": ${window.location.href}`);
-        }
+
     }, [query]);
     // Handle keyboard navigation
     const handleKeyDown = useCallback((e) => {
         if (e.key === 'Enter') {
             handleSearch();
-        }
+
         else if (e.key === 'Escape') {
             setIsOpen(false);
             setQuery('');
-        }
+
     }, [handleSearch]);
     // Handle result selection
     const handleResultClick = useCallback((result) => {
@@ -197,7 +196,7 @@ export function AISearch({ enabled = true, placeholder = "Search for AI services
         const handleClickOutside = (event) => {
             if (searchRef.current && !searchRef.current.contains(event.target)) {
                 setIsOpen(false);
-            }
+
         };
         document.addEventListener('mousedown', handleClickOutside);
         return () => document.removeEventListener('mousedown', handleClickOutside);
@@ -206,7 +205,7 @@ export function AISearch({ enabled = true, placeholder = "Search for AI services
     useEffect(() => {
         if (isOpen && inputRef.current) {
             inputRef.current.focus();
-        }
+
     }, [isOpen]);
     if (!enabled)
         return null;
@@ -417,4 +416,4 @@ export function AISearch({ enabled = true, placeholder = "Search for AI services
           </motion.div>)}
       </AnimatePresence>
     </div>);
-}
+</div>}}}}}}}}}}}}}}}}}}

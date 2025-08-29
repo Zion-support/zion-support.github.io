@@ -1,6 +1,4 @@
-import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, FileText, BarChart3 } from 'lucide-react';
-
-export default function AICassandra() {
+import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, FileText, BarChart3 export default function AICassandra() {
   const features = [
     'AI-powered Cassandra performance optimization',
     'Intelligent data distribution and partitioning',
@@ -171,4 +169,4 @@ export default function AICassandra() {
       </section>
     </div>
   );
-}
+}}

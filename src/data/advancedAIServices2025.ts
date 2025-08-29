@@ -36,7 +36,6 @@ export interface AdvancedAIService {
   rating: number;
   reviews: number;
   customers: number;
-}
 
 export const ADVANCED_AI_SERVICES_2025: AdvancedAIService[] = [
   // AI-Powered Autonomous Business Operations
@@ -527,7 +526,7 @@ export const ADVANCED_AI_SERVICES_2025: AdvancedAIService[] = [
     rating: 4.9,
     reviews: 345,
     customers: 567
-  }
+
 ];
 
-export default ADVANCED_AI_SERVICES_2025;
+export default ADVANCED_AI_SERVICES_2025;}}

@@ -1,7 +1,5 @@
 import React from 'react';
-import { Package, Zap, Users, Globe, Cpu, Database, Shield, Target, TrendingUp, Rocket, Settings } from 'lucide-react';
-
-const MicroSAAS = () => {
+import { Package, Zap, Users, Globe, Cpu, Database, Shield, Target, TrendingUp, Rocket, Settings const MicroSAAS = () => {
   const microsaasServices = [
     {
       icon: Package,
@@ -44,7 +42,7 @@ const MicroSAAS = () => {
       description: "Scalable cloud infrastructure and deployment solutions",
       price: "From $15,000/month",
       features: ["AWS/Azure deployment", "Container orchestration", "Auto-scaling", "Monitoring"]
-    }
+
   ];
 
   const benefits = [
@@ -74,7 +72,7 @@ const MicroSAAS = () => {
       description: "AWS, Azure, GCP with containerization and orchestration",
       icon: Globe,
       features: ["Cloud platforms", "Containerization", "Auto-scaling", "Load balancing"]
-    }
+
   ];
 
   const industries = [
@@ -97,7 +95,7 @@ const MicroSAAS = () => {
       title: "E-commerce",
       description: "Online marketplace and retail management solutions",
       icon: Package
-    }
+
   ];
 
   return (
@@ -291,4 +289,4 @@ const MicroSAAS = () => {
   );
 };
 
-export default MicroSAAS;
+export default MicroSAAS;}}}}

@@ -8,8 +8,7 @@ import { Label } from "@/components/ui/label";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { toast } from "sonner";
-import { Loader2 } from "lucide-react";
-import { supabase } from "@/integrations/supabase/client";
+import { Loader2 import { supabase } from "@/integrations/supabase/client";
 import { useAuth } from "@/hooks/useAuth";
 import { ScrollArea } from "@/components/ui/scroll-area";
 import { useNavigate } from 'react-router-dom';
@@ -29,7 +28,7 @@ export default function ContentGenerator() {
         if (!isLoading && !user) {
             toast.error("You must be logged in to access this page");
             navigate("/login?redirect=/content-generator");
-        }
+
     }, [user, isLoading, router]);
     const generateContent = async () => {
         setIsGenerating(true);
@@ -42,30 +41,30 @@ export default function ContentGenerator() {
                     topic: topic || undefined,
                     autoPublish,
                     includeImage: contentType === 'blog' ? includeImage : false
-                }
+
             });
             if (error)
                 throw error;
             setPreviewContent(data);
             toast.success(`${contentType === 'blog' ? 'Blog post' : 'Newsletter'} generated successfully!`);
-        }
+
         catch (error) {
-            // console.error("Error generating content:", error);
+            // // // console.error("Error generating content:", error);
             toast.error("Failed to generate content. Please try again.");
-        }
+
         finally {
             setIsGenerating(false);
-        }
+
     };
     const sendTestNewsletter = async () => {
         if (!testEmail) {
             toast.error("Please enter a test email address");
             return;
-        }
+
         if (!previewContent) {
             toast.error("Generate newsletter content first");
             return;
-        }
+
         try {
             const { data, error } = await supabase.functions.invoke('send-newsletter', {
                 body: {
@@ -74,16 +73,16 @@ export default function ContentGenerator() {
                     body: previewContent.body,
                     testMode: true,
                     testEmail
-                }
+
             });
             if (error)
                 throw error;
             toast.success(`Test newsletter sent to ${testEmail}!`);
-        }
+
         catch (error) {
-            // console.error("Error sending test newsletter:", error);
+            // // // console.error("Error sending test newsletter:", error);
             toast.error("Failed to send test newsletter. Please try again.");
-        }
+
     };
     // Check if user is still loading
     if (isLoading) {
@@ -94,7 +93,7 @@ export default function ContentGenerator() {
         </div>
 
       </>);
-    }
+
     return (<>
 
       <div className="min-h-screen bg-zion-blue py-12">
@@ -297,4 +296,4 @@ export default function ContentGenerator() {
       </div>
 
     </>);
-}
+</div></div></Card></Card></Card></Card></Card></Card></Card></Card></Card>}}}}}}}}}}}}}

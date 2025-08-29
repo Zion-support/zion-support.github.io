@@ -1,8 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { Home, Search, ArrowRight, AlertTriangle } from 'lucide-react';
-const NotFound = () => {
+import { Home, Search, ArrowRight, AlertTriangle const NotFound = () => {
     const popularPages = [
         { path: '/', label: 'Home', description: 'Main landing page' },
         { path: '/services', label: 'Services', description: 'All our services' },
@@ -113,3 +112,4 @@ const NotFound = () => {
     </div>);
 };
 export default NotFound;
+}

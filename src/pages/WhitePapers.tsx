@@ -1,7 +1,6 @@
 
 import React, { useState } from 'react';
-import { FileText, Download, Search, Filter, Calendar, Clock, Users, Star, Eye, ArrowRight, BookOpen, Brain, Cloud, Shield, Database, Zap, Globe, Target, TrendingUp, Award } from 'lucide-react';
-import { SEO } from '@/components/SEO';
+import { FileText, Download, Search, Filter, Calendar, Clock, Users, Star, Eye, ArrowRight, BookOpen, Brain, Cloud, Shield, Database, Zap, Globe, Target, TrendingUp, Award import { SEO } from '@/components/SEO';
 
 export default function WhitePapers() {
   const [searchQuery, setSearchQuery] = useState('');
@@ -121,7 +120,7 @@ export default function WhitePapers() {
       coverImage: '/images/whitepapers/digital-transformation-roi.jpg',
       fileSize: '2.2 MB',
       language: 'English'
-    }
+
   ];
 
   const featuredInsights = [
@@ -142,13 +141,13 @@ export default function WhitePapers() {
       description: 'Real-world examples of successful cloud transformations',
       icon: <Cloud className="w-6 h-6" />,
       link: '/insights/cloud-success-stories'
-    }
+
   ];
 
   const getCategoryCount = (categoryId: string) => {
     if (categoryId === 'all') {
       return whitePapers.length;
-    }
+
     return whitePapers.filter(paper => paper.category === categoryId).length;
   };
 
@@ -180,7 +179,7 @@ export default function WhitePapers() {
       return (downloads / 1000000).toFixed(1) + 'M';
     } else if (downloads >= 1000) {
       return (downloads / 1000).toFixed(1) + 'K';
-    }
+
     return downloads.toString();
   };
 
@@ -232,7 +231,7 @@ export default function WhitePapers() {
                         ? 'bg-zion-cyan text-zion-slate-dark'
                         : 'bg-zion-slate text-zion-slate-light hover:bg-zion-slate-light hover:text-white'
                     }`}
-                  >
+
                     {category.icon}
                     {category.name}
                     <span className="text-xs bg-white/20 px-2 py-1 rounded-full">
@@ -249,7 +248,7 @@ export default function WhitePapers() {
                   value={sortBy}
                   onChange={(e) => setSortBy(e.target.value)}
                   className="bg-zion-slate border border-zion-slate-light rounded-lg px-3 py-2 text-white focus:outline-none focus:ring-2 focus:ring-zion-cyan"
-                >
+
                   {sortOptions.map((option) => (
                     <option key={option.value} value={option.value}>
                       {option.label}
@@ -273,14 +272,14 @@ export default function WhitePapers() {
               <div
                 key={index}
                 className="bg-zion-slate border border-zion-slate-light rounded-lg p-6 hover:shadow-lg transition-shadow"
-              >
+
                 <div className="text-zion-cyan mb-4">{insight.icon}</div>
                 <h3 className="text-lg font-semibold text-white mb-2">{insight.title}</h3>
                 <p className="text-zion-slate-light text-sm mb-4">{insight.description}</p>
                 <a
                   href={insight.link}
                   className="inline-flex items-center gap-2 text-zion-cyan hover:text-zion-cyan-light transition-colors font-medium text-sm"
-                >
+
                   Read More
                   <ArrowRight className="w-4 h-4" />
                 </a>
@@ -305,7 +304,7 @@ export default function WhitePapers() {
                   className={`bg-zion-slate border border-zion-slate-light rounded-lg p-6 hover:shadow-lg transition-shadow ${
                     paper.featured ? 'ring-2 ring-zion-cyan' : ''
                   }`}
-                >
+
                   <div className="flex items-start justify-between mb-4">
                     <div className="flex items-center gap-2">
                       <span className="text-sm text-zion-slate-light bg-zion-slate-light/20 px-2 py-1 rounded-full">
@@ -331,7 +330,7 @@ export default function WhitePapers() {
                       <span
                         key={index}
                         className="px-2 py-1 bg-zion-slate-light/20 text-zion-slate-light text-xs rounded-full"
-                      >
+
                         {tag}
                       </span>
                     ))}
@@ -409,4 +408,4 @@ export default function WhitePapers() {
       </div>
     </div>
   );
-}
+}}}}}}

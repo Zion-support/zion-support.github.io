@@ -4,8 +4,7 @@ import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { Input } from '@/components/ui/input';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
-import { Search, Users, Zap, Shield, Code, BarChart3, Bot, Building, CheckCircle, Sparkles, Brain, Database, Cloud, Smartphone, FileText, Settings, DollarSign, Clock, Target, Cpu, Heart, Eye, ExternalLink, Play, BookOpen, Mail, Phone, MapPin } from 'lucide-react';
-import { ENHANCED_INNOVATIVE_SERVICES } from '@/data/enhancedInnovativeServices';
+import { Search, Users, Zap, Shield, Code, BarChart3, Bot, Building, CheckCircle, Sparkles, Brain, Database, Cloud, Smartphone, FileText, Settings, DollarSign, Clock, Target, Cpu, Heart, Eye, ExternalLink, Play, BookOpen, Mail, Phone, MapPin import { ENHANCED_INNOVATIVE_SERVICES } from '@/data/enhancedInnovativeServices';
 import { COMPREHENSIVE_SERVICES } from '@/data/comprehensiveServices';
 import { INNOVATIVE_MICRO_SAAS_SERVICES } from '@/data/innovativeMicroSaasServices';
 import { motion } from 'framer-motion';
@@ -85,11 +84,11 @@ export default function ComprehensiveServicesOverview() {
             filtered = filtered.filter(service => service.title.toLowerCase().includes(lowerQuery) ||
                 service.description.toLowerCase().includes(lowerQuery) ||
                 (service.tags && service.tags.some(tag => tag.toLowerCase().includes(lowerQuery))));
-        }
+
         // Category filter
         if (selectedCategory !== 'all') {
             filtered = filtered.filter(service => service.category === selectedCategory);
-        }
+
         // Price range filter
         if (priceRange !== 'all') {
             switch (priceRange) {
@@ -111,13 +110,13 @@ export default function ComprehensiveServicesOverview() {
                         return price > 3000;
                     });
                     break;
-            }
-        }
+
+
     });
     const getServicePrice = (service) => {
         if (typeof service.price === 'number') {
             return service.price;
-        }
+
     };
     return (<>
       <SEOHead title="Comprehensive Technology Services - Zion Tech Group" description="Explore our comprehensive portfolio of cutting-edge technology services including AI, Quantum Computing, Cybersecurity, IT Infrastructure, and more. Transform your business with innovative solutions." keywords="technology services, AI services, quantum computing, cybersecurity, IT infrastructure, micro SaaS, autonomous systems, space technology, neurotechnology" image="/images/services-overview-og.jpg" canonical="https://ziontechgroup.com/comprehensive-services-overview"/>
@@ -381,4 +380,4 @@ export default function ComprehensiveServicesOverview() {
         </div>
       </div>
     </>);
-}
+</Card></Card></Card></Card></Card>}}}}}}}

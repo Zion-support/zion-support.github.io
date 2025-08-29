@@ -4,8 +4,7 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { MICRO_SAAS_SERVICES, MICRO_SAAS_CATEGORIES, PRICING_TIERS, CONTACT_INFO } from "@/data/microSaasServices";
-import { Brain, Cloud, Shield, BarChart3, Code, DollarSign, Heart, ShoppingCart, GraduationCap, Star, CheckCircle, X, Phone, Mail, MapPin, Globe, ArrowRight, Zap, Users, TrendingUp } from "lucide-react";
-import { Link } from "react-router-dom";
+import { Brain, Cloud, Shield, BarChart3, Code, DollarSign, Heart, ShoppingCart, GraduationCap, Star, CheckCircle, X, Phone, Mail, MapPin, Globe, ArrowRight, Zap, Users, TrendingUp import { Link } from "react-router-dom";
 const categoryIcons = {
     'AI Business Solutions': Brain,
     'IT Infrastructure': Cloud,
@@ -287,7 +286,7 @@ export default function PricingPage() {
                 icon: <TrendingUp className="h-8 w-8"/>,
                 title: "Proven ROI",
                 description: "Average 300% ROI within 6 months"
-            }
+
         ].map((benefit, index) => (<Card key={index} className="bg-zion-blue-dark border-zion-blue-light text-white">
                 <CardHeader className="text-center">
                   <div className="mx-auto w-16 h-16 bg-zion-purple rounded-full flex items-center justify-center mb-4">
@@ -397,4 +396,4 @@ export default function PricingPage() {
         </div>
       </section>
     </div>);
-}
+</Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card>}}}

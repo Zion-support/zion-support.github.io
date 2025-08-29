@@ -38,7 +38,7 @@ export interface EmergingTechBreakthrough2025 {
   customers: number;
   rating: number;
   reviews: number;
-}
+
 export const emergingTechBreakthroughs2025: EmergingTechBreakthrough2025[] = [
   // Brain-Computer Interface Platform
   {
@@ -403,5 +403,5 @@ export const emergingTechBreakthroughs2025: EmergingTechBreakthrough2025[] = [
     customers: 32,
     rating: 4.7,
     reviews: 18
-  }
-];
+
+];}}

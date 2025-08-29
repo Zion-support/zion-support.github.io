@@ -17,8 +17,8 @@ export function PerformanceOptimizedLoader({ size = 'md', color = 'primary', tex
                 duration: 1,
                 repeat: Infinity,
                 ease: "linear"
-            }
-        }
+
+
     };
     const pulseVariants = {
         animate: {
@@ -28,8 +28,8 @@ export function PerformanceOptimizedLoader({ size = 'md', color = 'primary', tex
                 duration: 2,
                 repeat: Infinity,
                 ease: "easeInOut"
-            }
-        }
+
+
     };
     const LoaderContent = () => (<div className="flex flex-col items-center justify-center space-y-4">
       <motion.div variants={spinnerVariants} animate="animate" className={`${sizeClasses[size]} ${colorClasses[color]}`}>
@@ -46,9 +46,9 @@ export function PerformanceOptimizedLoader({ size = 'md', color = 'primary', tex
         return (<motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} className="fixed inset-0 bg-zion-blue-dark/95 backdrop-blur-sm flex items-center justify-center z-50">
         <LoaderContent />
       </motion.div>);
-    }
+
     return <LoaderContent />;
-}
+
 // Skeleton loader for content
 export function SkeletonLoader({ className = "", lines = 3, height = "h-4" }) {
     return (<div className={`space-y-3 ${className}`}>
@@ -56,7 +56,7 @@ export function SkeletonLoader({ className = "", lines = 3, height = "h-4" }) {
                 width: `${Math.random() * 40 + 60}%`
             }}/>))}
     </div>);
-}
+
 // Card skeleton loader
 export function CardSkeleton({ className = "" }) {
     return (<div className={`bg-zion-blue-dark/50 border border-zion-purple/20 rounded-2xl p-6 ${className}`}>
@@ -78,13 +78,13 @@ export function CardSkeleton({ className = "" }) {
         </div>
       </div>
     </div>);
-}
+
 // Grid skeleton loader
 export function GridSkeleton({ columns = 3, rows = 2, className = "" }) {
     return (<div className={`grid grid-cols-1 md:grid-cols-2 lg:grid-cols-${columns} gap-6 ${className}`}>
       {Array.from({ length: columns * rows }).map((_, index) => (<CardSkeleton key={index}/>))}
     </div>);
-}
+
 // Page skeleton loader
 export function PageSkeleton({ className = "" }) {
     return (<div className={`space-y-8 ${className}`}>
@@ -103,4 +103,4 @@ export function PageSkeleton({ className = "" }) {
         <div className="h-4 bg-zion-blue-light/20 rounded-lg animate-pulse w-1/3"/>
       </div>
     </div>);
-}
+</div></div></div></div></div></div></div></div></div></div></Card>}}}}}}}}}</motion.div>}

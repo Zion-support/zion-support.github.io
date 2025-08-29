@@ -22,7 +22,6 @@ import {
   MapPin,
   ExternalLink,
   Search
-} from 'lucide-react';
 import { ULTIMATE_REAL_SERVICES_2025, ULTIMATE_SERVICE_CATEGORIES_2025, ULTIMATE_SERVICE_SUBCATEGORIES_2025, ULTIMATE_PRICING_TIERS_2025, ULTIMATE_CONTACT_INFO_2025, ULTIMATE_SERVICE_GUARANTEES_2025 } from '@/data/ultimateRealServices2025';
 
 export default function UltimateServicesShowcase2025() {
@@ -109,7 +108,7 @@ export default function UltimateServicesShowcase2025() {
                       ? 'bg-cyan-400 text-slate-900 shadow-lg'
                       : 'bg-slate-800/50 text-gray-300 hover:bg-slate-700/50 border border-slate-600/50'
                   }`}
-                >
+
                   {getCategoryIcon(category)}
                   <span className="ml-2 capitalize">{category === 'all' ? 'All Services' : category}</span>
                 </button>
@@ -127,7 +126,7 @@ export default function UltimateServicesShowcase2025() {
               <div
                 key={service.id}
                 className="bg-slate-800/50 rounded-xl p-6 border border-slate-600/30 hover:border-cyan-400/50 transition-all duration-300 hover:shadow-xl hover:shadow-cyan-400/10 group"
-              >
+
                 <div className="flex items-center justify-between mb-4">
                   <div className="w-12 h-12 bg-gradient-to-br from-cyan-400 to-purple-400 rounded-lg flex items-center justify-center">
                     {getCategoryIcon(service.category)}
@@ -153,7 +152,7 @@ export default function UltimateServicesShowcase2025() {
                       <span
                         key={index}
                         className="px-2 py-1 bg-slate-700/50 text-cyan-400 text-xs rounded-full"
-                      >
+
                         {feature}
                       </span>
                     ))}
@@ -167,7 +166,7 @@ export default function UltimateServicesShowcase2025() {
                   <Link
                     to={`/services/${service.id}`}
                     className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-cyan-400 to-purple-400 text-slate-900 font-semibold rounded-lg hover:from-cyan-300 hover:to-purple-300 transition-all duration-200"
-                  >
+
                     Learn More
                     <ArrowRight className="ml-2 h-4 w-4" />
                   </Link>
@@ -207,14 +206,14 @@ export default function UltimateServicesShowcase2025() {
             <Link
               to="/contact"
               className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-400 to-purple-400 text-slate-900 font-bold rounded-lg hover:from-cyan-300 hover:to-purple-300 transition-all duration-200 text-lg"
-            >
+
               Get Started Today
               <ArrowRight className="ml-2 h-5 w-5" />
             </Link>
             <Link
               to="/pricing"
               className="inline-flex items-center px-8 py-4 border-2 border-cyan-400 text-cyan-400 font-bold rounded-lg hover:bg-cyan-400 hover:text-slate-900 transition-all duration-200 text-lg"
-            >
+
               View Pricing
             </Link>
           </div>
@@ -222,4 +221,4 @@ export default function UltimateServicesShowcase2025() {
       </section>
     </div>
   );
-}
+}}

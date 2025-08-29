@@ -558,6 +558,7 @@ export const advancedRealServices2025 = [
         certifications: ['ISO 50001', 'LEED Certification', 'SOC 2 Type II', 'Energy Star Partner'],
         sla: '99.9% uptime guarantee',
         support: 'Business hours support with dedicated energy specialists'
-    }
+
 ];
 export default advancedRealServices2025;
+}

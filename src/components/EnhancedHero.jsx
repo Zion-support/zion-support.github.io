@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { ChevronLeft, ChevronRight, Play, Pause, Volume2, VolumeX } from 'lucide-react';
-const EnhancedHero = () => {
+import { ChevronLeft, ChevronRight, Play, Pause, Volume2, VolumeX const EnhancedHero = () => {
     const [currentSlide, setCurrentSlide] = useState(0);
     const [isPlaying, setIsPlaying] = useState(true);
     const [isMuted, setIsMuted] = useState(false);
@@ -36,7 +35,7 @@ const EnhancedHero = () => {
             ctaLink: "/cloud-solutions",
             background: "linear-gradient(135deg, #4facfe 0%, #00f2fe 100%)",
             icon: "☁️"
-        }
+
     ];
     useEffect(() => {
         if (!isAutoPlaying)
@@ -44,7 +43,7 @@ const EnhancedHero = () => {
         const interval = setInterval(() => {
             if (isPlaying) {
                 setCurrentSlide((prev) => (prev + 1) % heroSlides.length);
-            }
+
         }, 5000);
         return () => clearInterval(interval);
     }, [isPlaying, isAutoPlaying, heroSlides.length]);
@@ -67,7 +66,7 @@ const EnhancedHero = () => {
         setIsAutoPlaying(!isAutoPlaying);
         if (!isAutoPlaying) {
             setIsPlaying(true);
-        }
+
     };
     return (<div className="relative w-full h-screen overflow-hidden">
       {/* Background Video/Image Placeholder */}
@@ -161,5 +160,6 @@ const EnhancedHero = () => {
         </div>
       </div>
     </div>);
-};
+</div>};
 export default EnhancedHero;
+}}}}

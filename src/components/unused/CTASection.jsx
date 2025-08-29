@@ -27,7 +27,7 @@ export function CTASection() {
             action: "Book Now",
             href: "/contact",
             color: "from-zion-blue to-zion-purple"
-        }
+
     ];
     const containerVariants = {
         hidden: { opacity: 0 },
@@ -35,8 +35,8 @@ export function CTASection() {
             opacity: 1,
             transition: {
                 staggerChildren: 0.1
-            }
-        }
+
+
     };
     const itemVariants = {
         hidden: { y: 20, opacity: 0 },
@@ -45,8 +45,8 @@ export function CTASection() {
             opacity: 1,
             transition: {
                 duration: 0.5
-            }
-        }
+
+
     };
     return (<section className="py-20 bg-gradient-to-br from-zion-blue-dark via-zion-purple-dark to-zion-blue-dark relative overflow-hidden">
       {/* Background Elements */}
@@ -124,4 +124,4 @@ export function CTASection() {
         </motion.div>
       </div>
     </section>);
-}
+}}}}}}

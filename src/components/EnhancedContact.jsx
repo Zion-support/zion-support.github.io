@@ -3,8 +3,7 @@ import { motion } from 'framer-motion';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/Textarea';
-import { Mail, Phone, MapPin, Clock, Send, CheckCircle, Building, Users, Globe } from 'lucide-react';
-export const EnhancedContact = () => {
+import { Mail, Phone, MapPin, Clock, Send, CheckCircle, Building, Users, Globe export const EnhancedContact = () => {
     const [formData, setFormData] = useState({
         name: '',
         email: '',
@@ -43,7 +42,7 @@ export const EnhancedContact = () => {
             description: 'When we\'re available',
             action: 'Mon-Fri: 9AM-6PM EST',
             href: '#'
-        }
+
     ];
     const services = [
         'AI Solutions',
@@ -60,8 +59,8 @@ export const EnhancedContact = () => {
             opacity: 1,
             transition: {
                 staggerChildren: 0.1
-            }
-        }
+
+
     };
     const itemVariants = {
         hidden: { y: 20, opacity: 0 },
@@ -71,8 +70,8 @@ export const EnhancedContact = () => {
             transition: {
                 duration: 0.6,
                 ease: "easeOut"
-            }
-        }
+
+
     };
     const cardVariants = {
         hidden: { scale: 0.9, opacity: 0 },
@@ -82,7 +81,7 @@ export const EnhancedContact = () => {
             transition: {
                 duration: 0.5,
                 ease: "easeOut"
-            }
+
         },
         hover: {
             scale: 1.02,
@@ -90,8 +89,8 @@ export const EnhancedContact = () => {
             transition: {
                 duration: 0.3,
                 ease: "easeOut"
-            }
-        }
+
+
     };
     const handleInputChange = (e) => {
         const { name, value } = e.target;
@@ -133,7 +132,7 @@ export const EnhancedContact = () => {
           </Button>
         </div>
       </motion.div>);
-    }
+
     return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white">
       {/* Hero Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
@@ -289,3 +288,4 @@ export const EnhancedContact = () => {
       </section>
     </div>);
 };
+}}}}}}}}}}

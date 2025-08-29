@@ -21,7 +21,6 @@ import {
   Clock,
   AlertTriangle,
   Info
-} from 'lucide-react';
 import { SEO } from '../components/SEO';
 
 export default function Compliance() {
@@ -85,7 +84,7 @@ export default function Compliance() {
         'Regulatory compliance',
         'Trust in healthcare sector'
       ]
-    }
+
   ];
 
   const industryStandards = [
@@ -136,7 +135,7 @@ export default function Compliance() {
         'Code Review Standards',
         'Vulnerability Management'
       ]
-    }
+
   ];
 
   const complianceProcesses = [
@@ -191,7 +190,7 @@ export default function Compliance() {
         'Regulatory notification procedures',
         'Post-incident compliance review'
       ]
-    }
+
   ];
 
   const complianceTools = [
@@ -222,7 +221,7 @@ export default function Compliance() {
       icon: Users,
       href: '/compliance/training',
       color: 'from-orange-500 to-red-500'
-    }
+
   ];
 
   const contactInfo = [
@@ -239,7 +238,7 @@ export default function Compliance() {
       email: 'audit@ziontechgroup.com',
       phone: '+1 302 464 0950',
       responseTime: '1-2 business days'
-    }
+
   ];
 
   return (
@@ -257,7 +256,7 @@ export default function Compliance() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             className="text-center"
-          >
+
             <div className="w-20 h-20 bg-gradient-to-br from-green-400 to-emerald-500 rounded-full flex items-center justify-center mx-auto mb-6">
               <Award className="w-10 h-10 text-white" />
             </div>
@@ -279,7 +278,7 @@ export default function Compliance() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.2 }}
           className="bg-gradient-to-r from-green-600/20 to-emerald-600/20 border border-green-500/30 rounded-2xl p-8 text-center"
-        >
+
           <h2 className="text-2xl font-bold text-white mb-4">
             Our Compliance Commitment
           </h2>
@@ -299,7 +298,7 @@ export default function Compliance() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.3 }}
             className="text-3xl font-bold text-white text-center mb-12"
-          >
+
             Compliance Frameworks & Certifications
           </motion.h2>
 
@@ -311,7 +310,7 @@ export default function Compliance() {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.4 + index * 0.1 }}
                 className="bg-slate-800/30 border border-slate-700 rounded-xl p-6"
-              >
+
                 <div className="flex items-center space-x-4 mb-6">
                   <div className={`w-16 h-16 bg-gradient-to-br ${framework.color} rounded-xl flex items-center justify-center`}>
                     <framework.icon className="w-8 h-8 text-white" />
@@ -368,7 +367,7 @@ export default function Compliance() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.5 }}
           className="text-3xl font-bold text-white text-center mb-12"
-        >
+
           Industry Standards & Best Practices
         </motion.h2>
 
@@ -380,7 +379,7 @@ export default function Compliance() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.6 + index * 0.1 }}
               className="bg-slate-800/30 border border-slate-700 rounded-xl p-6"
-            >
+
               <div className="text-center mb-6">
                 <div className={`w-16 h-16 bg-gradient-to-br ${standard.color} rounded-xl flex items-center justify-center mx-auto mb-4`}>
                   <standard.icon className="w-8 h-8 text-white" />
@@ -410,7 +409,7 @@ export default function Compliance() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.7 }}
             className="text-3xl font-bold text-white text-center mb-12"
-          >
+
             Compliance Processes & Procedures
           </motion.h2>
 
@@ -422,7 +421,7 @@ export default function Compliance() {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.8 + index * 0.1 }}
                 className="bg-slate-800/30 border border-slate-700 rounded-xl p-6"
-              >
+
                 <div className="text-center mb-6">
                   <div className={`w-16 h-16 bg-gradient-to-br ${process.color} rounded-xl flex items-center justify-center mx-auto mb-4`}>
                     <process.icon className="w-8 h-8 text-white" />
@@ -455,7 +454,7 @@ export default function Compliance() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.9 }}
           className="text-3xl font-bold text-white text-center mb-12"
-        >
+
           Compliance Tools & Resources
         </motion.h2>
 
@@ -467,7 +466,7 @@ export default function Compliance() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 1.0 + index * 0.1 }}
               className="group"
-            >
+
               <div className="bg-slate-800/30 border border-slate-700 rounded-xl p-6 hover:border-green-400/50 transition-all duration-300 h-full text-center">
                 <div className={`w-16 h-16 bg-gradient-to-br ${tool.color} rounded-xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300`}>
                   <tool.icon className="w-8 h-8 text-white" />
@@ -489,7 +488,7 @@ export default function Compliance() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 1.1 }}
             className="text-3xl font-bold text-white text-center mb-12"
-          >
+
             Compliance Support & Inquiries
           </motion.h2>
 
@@ -501,7 +500,7 @@ export default function Compliance() {
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.6, delay: 1.2 + index * 0.1 }}
                 className="bg-slate-800/30 border border-slate-700 rounded-xl p-6"
-              >
+
                 <h3 className="text-xl font-semibold text-white mb-4">{contact.title}</h3>
                 <p className="text-slate-400 mb-6">{contact.description}</p>
 
@@ -539,7 +538,7 @@ export default function Compliance() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 1.3 }}
           className="bg-gradient-to-r from-blue-600/20 to-cyan-600/20 border border-blue-500/30 rounded-2xl p-8 text-center"
-        >
+
           <h2 className="text-2xl font-bold text-white mb-4">
             Continuous Compliance Excellence
           </h2>
@@ -552,4 +551,4 @@ export default function Compliance() {
       </div>
     </div>
   );
-}
+}}}}}}}

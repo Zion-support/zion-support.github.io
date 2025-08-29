@@ -11,20 +11,18 @@ class CodeQualityMonitor {
     this.reportFile = path.join(this.projectRoot, 'logs/pm2/code-quality-report.json');
     this.lastReport = null;
     this.startTime = Date.now();
-  }
 
   log(message) {
     const timestamp = new Date().toISOString();
     const logMessage = `[${timestamp}] ${message}\n`;
 
-    // console.log(message);
+    // // // console.log(message);
 
     try {
       fs.appendFileSync(this.logFile, logMessage);
     } catch (error) {
-      // console.error('Failed to write to log file:', error.message);
-    }
-  }
+      // // // console.error('Failed to write to log file:', error.message);
+
 
   async analyzeFile(filePath) {
     try {
@@ -52,7 +50,6 @@ class CodeQualityMonitor {
             message: 'Trailing spaces found',
             severity: 'low'
           });
-        }
 
         // Long lines (over 120 characters)
         if (line.length > 120) {
@@ -62,7 +59,6 @@ class CodeQualityMonitor {
             message: `Line is ${line.length} characters long (max: 120)`,
             severity: 'medium'
           });
-        }
 
         // Console statements
         if (line.match(/console\.(log|warn|error|info|debug)/)) {
@@ -72,7 +68,6 @@ class CodeQualityMonitor {
             message: 'Console statement found - should be removed in production',
             severity: 'medium'
           });
-        }
 
         // TODO/FIXME comments
         if (line.match(/TODO|FIXME|HACK|XXX/)) {
@@ -82,7 +77,6 @@ class CodeQualityMonitor {
             message: 'TODO/FIXME comment found',
             severity: 'low'
           });
-        }
 
         // Unused imports (basic check)
         if (line.match(/^import.*from/) && !line.includes('//')) {
@@ -96,9 +90,9 @@ class CodeQualityMonitor {
                 message: `Potentially unused import: ${importName}`,
                 severity: 'medium'
               });
-            }
-          }
-        }
+
+
+
       });
 
       return analysis;
@@ -106,8 +100,7 @@ class CodeQualityMonitor {
     } catch (error) {
       this.log(`Error analyzing file ${filePath}: ${error.message}`);
       return null;
-    }
-  }
+
 
   async walkDirectory(dir) {
     const analyses = [];
@@ -129,23 +122,21 @@ class CodeQualityMonitor {
               !fullPath.includes('logs')) {
             const subAnalyses = await this.walkDirectory(fullPath);
             analyses.push(...subAnalyses);
-          }
+
         } else if (stat.isFile()) {
           const ext = path.extname(fullPath);
           if (['.js', '.jsx', '.ts', '.tsx'].includes(ext)) {
             const analysis = await this.analyzeFile(fullPath);
             if (analysis) {
               analyses.push(analysis);
-            }
-          }
-        }
-      }
+
+
+
+
     } catch (error) {
       this.log(`Error walking directory ${dir}: ${error.message}`);
-    }
 
     return analyses;
-  }
 
   generateReport(analyses) {
     const totalFiles = analyses.length;
@@ -177,7 +168,6 @@ class CodeQualityMonitor {
     };
 
     return report;
-  }
 
   generateRecommendations(issuesByType, totalIssues) {
     const recommendations = [];
@@ -189,7 +179,6 @@ class CodeQualityMonitor {
         message: 'Remove trailing spaces from files',
         action: 'Run the lint-fixer to automatically remove trailing spaces'
       });
-    }
 
     if (issuesByType['console-statement'] > 0) {
       recommendations.push({
@@ -198,7 +187,6 @@ class CodeQualityMonitor {
         message: 'Remove console statements from production code',
         action: 'Replace console statements with proper logging or remove them'
       });
-    }
 
     if (issuesByType['unused-import'] > 0) {
       recommendations.push({
@@ -207,7 +195,6 @@ class CodeQualityMonitor {
         message: 'Remove unused imports',
         action: 'Clean up unused imports to reduce bundle size'
       });
-    }
 
     if (totalIssues > 100) {
       recommendations.push({
@@ -216,24 +203,20 @@ class CodeQualityMonitor {
         message: 'High number of code quality issues detected',
         action: 'Run comprehensive code cleanup and establish coding standards'
       });
-    }
 
     return recommendations;
-  }
 
   async saveReport(report) {
     try {
       const reportDir = path.dirname(this.reportFile);
       if (!fs.existsSync(reportDir)) {
         fs.mkdirSync(reportDir, { recursive: true });
-      }
 
       fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2));
       this.log(`Report saved to: ${this.reportFile}`);
     } catch (error) {
       this.log(`Error saving report: ${error.message}`);
-    }
-  }
+
 
   async checkGitStatus() {
     try {
@@ -245,14 +228,12 @@ class CodeQualityMonitor {
       if (status.trim()) {
         this.log('⚠️  Uncommitted changes detected');
         return false;
-      }
 
       return true;
     } catch (error) {
       this.log(`Error checking git status: ${error.message}`);
       return false;
-    }
-  }
+
 
   async run() {
     this.log('🔍 Starting Code Quality Monitor...');
@@ -263,7 +244,6 @@ class CodeQualityMonitor {
       const logsDir = path.dirname(this.logFile);
       if (!fs.existsSync(logsDir)) {
         fs.mkdirSync(logsDir, { recursive: true });
-      }
 
       // Check git status
       const isClean = await this.checkGitStatus();
@@ -302,21 +282,20 @@ class CodeQualityMonitor {
         // If there are many issues and git is clean, suggest running the lint fixer
         if (report.summary.totalIssues > 50 && isClean) {
           this.log('\n🔧 Suggesting to run lint-fixer to auto-fix issues');
-        }
+
       } else {
         this.log('✨ Excellent! No code quality issues found!');
-      }
 
     } catch (error) {
       this.log(`❌ Error running code quality monitor: ${error.message}`);
       process.exit(1);
-    }
-  }
-}
+
+
 
 // Run the code quality monitor
 const monitor = new CodeQualityMonitor();
 monitor.run().catch(error => {
-  // console.error('Fatal error:', error);
+  // // // console.error('Fatal error:', error);
   process.exit(1);
 });
+}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}

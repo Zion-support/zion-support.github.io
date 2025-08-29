@@ -17,8 +17,6 @@ import {
   Users,
   Award,
   ArrowRight
-} from 'lucide-react';
-
 const ResearchDevelopment: React.FC = () => {
   const [selectedArea, setSelectedArea] = useState('all');
 
@@ -121,7 +119,7 @@ const ResearchDevelopment: React.FC = () => {
         'Green computing standards',
         'Sustainable technology practices'
       ]
-    }
+
   ];
 
   const filteredProjects = researchProjects.filter(project =>
@@ -152,7 +150,7 @@ const ResearchDevelopment: React.FC = () => {
       year: 2023,
       citations: 78,
       doi: '10.1126/science.abc1234'
-    }
+
   ];
 
   const partnerships = [
@@ -179,7 +177,7 @@ const ResearchDevelopment: React.FC = () => {
       type: 'Industry',
       focus: 'Large language models',
       duration: '2023-2025'
-    }
+
   ];
 
   return (
@@ -191,7 +189,7 @@ const ResearchDevelopment: React.FC = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-          >
+
             <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
               Research & <span className="text-zion-cyan">Development</span>
             </h1>
@@ -215,7 +213,7 @@ const ResearchDevelopment: React.FC = () => {
                     ? 'bg-zion-cyan text-zion-slate-dark'
                     : 'bg-zion-slate/30 text-zion-slate-light hover:bg-zion-slate/50 border border-zion-cyan/20'
                 }`}
-              >
+
                 <area.icon className="w-5 h-5" />
                 {area.name}
               </button>
@@ -233,7 +231,7 @@ const ResearchDevelopment: React.FC = () => {
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
             className="text-center mb-16"
-          >
+
             <h2 className="text-4xl font-bold text-white mb-4">Active Research Projects</h2>
             <p className="text-lg text-zion-slate-light">Exploring the frontiers of technology and innovation</p>
           </motion.div>
@@ -247,7 +245,7 @@ const ResearchDevelopment: React.FC = () => {
                 transition={{ duration: 0.8, delay: index * 0.1 }}
                 viewport={{ once: true }}
                 className="bg-zion-slate/30 rounded-lg p-8 border border-zion-cyan/20 hover:border-zion-cyan/40 transition-all duration-300"
-              >
+
                 <div className="mb-6">
                   <h3 className="text-2xl font-bold text-white mb-3">{project.title}</h3>
                   <p className="text-zion-slate-light leading-relaxed mb-4">{project.description}</p>
@@ -301,7 +299,7 @@ const ResearchDevelopment: React.FC = () => {
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
             className="text-center mb-16"
-          >
+
             <h2 className="text-4xl font-bold text-white mb-4">Recent Publications</h2>
             <p className="text-lg text-zion-slate-light">Contributing to the global body of scientific knowledge</p>
           </motion.div>
@@ -315,7 +313,7 @@ const ResearchDevelopment: React.FC = () => {
                 transition={{ duration: 0.8, delay: index * 0.1 }}
                 viewport={{ once: true }}
                 className="bg-zion-slate/30 rounded-lg p-6 border border-zion-cyan/20"
-              >
+
                 <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-4">
                   <div className="flex-1">
                     <h3 className="text-xl font-bold text-white mb-2">{pub.title}</h3>
@@ -336,7 +334,7 @@ const ResearchDevelopment: React.FC = () => {
                       target="_blank"
                       rel="noopener noreferrer"
                       className="inline-flex items-center gap-2 text-zion-cyan hover:text-zion-cyan/80 transition-colors"
-                    >
+
                       View Paper
                       <ArrowRight className="w-4 h-4" />
                     </a>
@@ -357,7 +355,7 @@ const ResearchDevelopment: React.FC = () => {
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
             className="text-center mb-16"
-          >
+
             <h2 className="text-4xl font-bold text-white mb-4">Research Partnerships</h2>
             <p className="text-lg text-zion-slate-light">Collaborating with leading institutions worldwide</p>
           </motion.div>
@@ -371,7 +369,7 @@ const ResearchDevelopment: React.FC = () => {
                 transition={{ duration: 0.8, delay: index * 0.1 }}
                 viewport={{ once: true }}
                 className="bg-zion-slate/30 rounded-lg p-8 border border-zion-cyan/20 hover:border-zion-cyan/40 transition-all duration-300"
-              >
+
                 <div className="flex items-start gap-4">
                   <div className="w-16 h-16 bg-zion-cyan/20 rounded-lg flex items-center justify-center flex-shrink-0">
                     <Users className="w-8 h-8 text-zion-cyan" />
@@ -400,7 +398,7 @@ const ResearchDevelopment: React.FC = () => {
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
             className="text-center mb-16"
-          >
+
             <h2 className="text-4xl font-bold text-white mb-4">Innovation Lab</h2>
             <p className="text-lg text-zion-slate-light">Where ideas become reality</p>
           </motion.div>
@@ -421,7 +419,7 @@ const ResearchDevelopment: React.FC = () => {
                 icon: Database,
                 title: 'Data Analytics',
                 description: 'High-performance computing for big data research'
-              }
+
             ].map((lab, index) => (
               <motion.div
                 key={lab.title}
@@ -430,7 +428,7 @@ const ResearchDevelopment: React.FC = () => {
                 transition={{ duration: 0.8, delay: index * 0.1 }}
                 viewport={{ once: true }}
                 className="text-center"
-              >
+
                 <div className="w-20 h-20 bg-zion-cyan/20 rounded-full flex items-center justify-center mx-auto mb-4">
                   <lab.icon className="w-10 h-10 text-zion-cyan" />
                 </div>
@@ -450,7 +448,7 @@ const ResearchDevelopment: React.FC = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
-          >
+
             <h2 className="text-4xl font-bold text-white mb-6">
               Join Our Research Team
             </h2>
@@ -473,3 +471,4 @@ const ResearchDevelopment: React.FC = () => {
 };
 
 export default ResearchDevelopment;
+}}}}}

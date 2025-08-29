@@ -1,7 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Brain, Shield, Cloud, Rocket, Users, BarChart3, Building, ArrowRight, CheckCircle, Phone, Mail, MapPin, Award, Users as UsersIcon, Globe as GlobeIcon, TrendingUp as TrendingUpIcon, Sparkles } from 'lucide-react';
-export default function NewServicesOverview() {
+import { Brain, Shield, Cloud, Rocket, Users, BarChart3, Building, ArrowRight, CheckCircle, Phone, Mail, MapPin, Award, Users as UsersIcon, Globe as GlobeIcon, TrendingUp as TrendingUpIcon, Sparkles export default function NewServicesOverview() {
     const serviceCategories = [
         {
             id: 'ai-services',
@@ -30,7 +29,7 @@ export default function NewServicesOverview() {
                     price: '$3,500/month',
                     features: ['Disease detection', 'Diagnostic support', 'Patient monitoring'],
                     path: '/comprehensive-services-showcase'
-                }
+
             ]
         },
         {
@@ -60,7 +59,7 @@ export default function NewServicesOverview() {
                     price: '$2,400/month',
                     features: ['Multi-cloud monitoring', 'Configuration management', 'Compliance'],
                     path: '/comprehensive-services-showcase'
-                }
+
             ]
         },
         {
@@ -90,7 +89,7 @@ export default function NewServicesOverview() {
                     price: '$2,500/month',
                     features: ['Multi-cluster management', 'Security policies', 'Monitoring'],
                     path: '/comprehensive-services-showcase'
-                }
+
             ]
         },
         {
@@ -120,7 +119,7 @@ export default function NewServicesOverview() {
                     price: '$2,100/month',
                     features: ['Customer segmentation', 'Behavioral analysis', 'Personalization'],
                     path: '/comprehensive-services-showcase'
-                }
+
             ]
         },
         {
@@ -150,9 +149,9 @@ export default function NewServicesOverview() {
                     price: '$3,200/month',
                     features: ['Predictive maintenance', 'Quality control', 'Production monitoring'],
                     path: '/comprehensive-services-showcase'
-                }
+
             ]
-        }
+
     ];
     const benefits = [
         {
@@ -178,7 +177,7 @@ export default function NewServicesOverview() {
             title: 'Expert Support',
             description: '24/7 technical support and dedicated success managers',
             color: 'text-yellow-400'
-        }
+
     ];
     const stats = [
         { icon: UsersIcon, value: '500+', label: 'Happy Clients', description: 'Trusted by businesses worldwide' },
@@ -371,4 +370,4 @@ export default function NewServicesOverview() {
         </div>
       </div>
     </div>);
-}
+}}}}}}}}}

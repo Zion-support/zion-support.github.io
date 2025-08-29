@@ -10,14 +10,12 @@ interface SEOData {
   twitterCard?: string;
   noindex?: boolean;
   structuredData?: object;
-}
 
 interface UseSEOOptions {
   enableAutoTitle?: boolean;
   enableStructuredData?: boolean;
   enablePerformanceTracking?: boolean;
   enableAnalytics?: boolean;
-}
 
 export const useSEO = (seoData: SEOData, options: UseSEOOptions = { /* empty */ }) => {
   const {
@@ -37,7 +35,7 @@ export const useSEO = (seoData: SEOData, options: UseSEOOptions = { /* empty */ 
   const canonicalUrl = useMemo(() => {
     if (seoData.canonical) {
       return seoData.canonical.startsWith('http') ? seoData.canonical : `https://ziontechgroup.com${seoData.canonical}`;
-    }
+
     return typeof window !== 'undefined' ? window.location.href : 'https://ziontechgroup.com';
   }, [seoData.canonical]);
 
@@ -45,7 +43,7 @@ export const useSEO = (seoData: SEOData, options: UseSEOOptions = { /* empty */ 
   const updateTitle = useCallback((title: string) => {
     if (typeof document !== 'undefined') {
       document.title = title;
-    }
+
   }, []);
 
   // Update meta tags
@@ -58,7 +56,7 @@ export const useSEO = (seoData: SEOData, options: UseSEOOptions = { /* empty */ 
       metaDesc = document.createElement('meta');
       metaDesc.setAttribute('name', 'description');
       document.head.appendChild(metaDesc);
-    }
+
     metaDesc.setAttribute('content', data.description);
 
     // Update or create meta keywords
@@ -68,9 +66,8 @@ export const useSEO = (seoData: SEOData, options: UseSEOOptions = { /* empty */ 
         metaKeywords = document.createElement('meta');
         metaKeywords.setAttribute('name', 'keywords');
         document.head.appendChild(metaKeywords);
-      }
+
       metaKeywords.setAttribute('content', data.keywords);
-    }
 
     // Update or create canonical link
     let canonicalLink = document.querySelector('link[rel="canonical"]');
@@ -78,7 +75,7 @@ export const useSEO = (seoData: SEOData, options: UseSEOOptions = { /* empty */ 
       canonicalLink = document.createElement('link');
       canonicalLink.setAttribute('rel', 'canonical');
       document.head.appendChild(canonicalLink);
-    }
+
     canonicalLink.setAttribute('href', canonicalUrl);
 
     // Update robots meta tag
@@ -88,9 +85,9 @@ export const useSEO = (seoData: SEOData, options: UseSEOOptions = { /* empty */ 
         robotsMeta = document.createElement('meta');
         robotsMeta.setAttribute('name', 'robots');
         document.head.appendChild(robotsMeta);
-      }
+
       robotsMeta.setAttribute('content', 'noindex, nofollow');
-    }
+
   }, [canonicalUrl]);
 
   // Update Open Graph tags
@@ -113,7 +110,7 @@ export const useSEO = (seoData: SEOData, options: UseSEOOptions = { /* empty */ 
         ogTag = document.createElement('meta');
         ogTag.setAttribute('property', property);
         document.head.appendChild(ogTag);
-      }
+
       ogTag.setAttribute('content', content);
     });
   }, [fullTitle, canonicalUrl]);
@@ -136,7 +133,7 @@ export const useSEO = (seoData: SEOData, options: UseSEOOptions = { /* empty */ 
         twitterTag = document.createElement('meta');
         twitterTag.setAttribute('name', name);
         document.head.appendChild(twitterTag);
-      }
+
       twitterTag.setAttribute('content', content);
     });
   }, [fullTitle]);
@@ -150,7 +147,7 @@ export const useSEO = (seoData: SEOData, options: UseSEOOptions = { /* empty */ 
     existingScripts.forEach(script => {
       if (script.textContent && script.textContent.includes('"@type":"Organization"')) {
         script.remove();
-      }
+
     });
 
     // Add new structured data
@@ -200,7 +197,6 @@ export const useSEO = (seoData: SEOData, options: UseSEOOptions = { /* empty */ 
         page_location: canonicalUrl,
         page_path: window.location.pathname
       });
-    }
 
     // Custom analytics
     if (window.dataLayer) {
@@ -210,7 +206,7 @@ export const useSEO = (seoData: SEOData, options: UseSEOOptions = { /* empty */ 
         page_url: canonicalUrl,
         page_type: pageData.ogType || 'website'
       });
-    }
+
   }, [canonicalUrl, enableAnalytics]);
 
   // Track performance metrics
@@ -222,7 +218,7 @@ export const useSEO = (seoData: SEOData, options: UseSEOOptions = { /* empty */ 
       measureAndTrackPerformance();
     } else {
       window.addEventListener('load', measureAndTrackPerformance);
-    }
+
   }, [enablePerformanceTracking]);
 
   // Measure and track performance
@@ -232,8 +228,7 @@ export const useSEO = (seoData: SEOData, options: UseSEOOptions = { /* empty */ 
     // Core Web Vitals
     if ('web-vital' in window) {
       // This would require the web-vitals library
-      // console.log('Web Vitals available');
-    }
+      // // // console.log('Web Vitals available');
 
     // Navigation Timing API
     if ('performance' in window) {
@@ -256,9 +251,9 @@ export const useSEO = (seoData: SEOData, options: UseSEOOptions = { /* empty */ 
               value: Math.round(value)
             });
           });
-        }
-      }
-    }
+
+
+
   }, []);
 
   // Initialize SEO
@@ -266,7 +261,6 @@ export const useSEO = (seoData: SEOData, options: UseSEOOptions = { /* empty */ 
     // Update document title
     if (enableAutoTitle) {
       updateTitle(fullTitle);
-    }
 
     // Update meta tags
     updateMetaTags(seoData);
@@ -282,18 +276,16 @@ export const useSEO = (seoData: SEOData, options: UseSEOOptions = { /* empty */ 
       addStructuredData(defaultStructuredData);
       if (seoData.structuredData) {
         addStructuredData(seoData.structuredData);
-      }
-    }
+
 
     // Track page view
     if (enableAnalytics) {
       trackPageView(seoData);
-    }
 
     // Track performance
     if (enablePerformanceTracking) {
       trackPerformance();
-    }
+
   }, [
     seoData,
     fullTitle,
@@ -330,5 +322,4 @@ declare global {
   interface Window {
     gtag?: (...args: any[]) => void;
     dataLayer?: any[];
-  }
-}
+}}}}}}}}}}}}}}}}}}}}}}}}}}}

@@ -1,6 +1,5 @@
 import React from 'react';
-import { Brain, TrendingUp, Users, Globe, Cpu, Lightbulb, BarChart3, PieChart, Activity, Search } from 'lucide-react';
-const AIBusinessIntelligence = () => {
+import { Brain, TrendingUp, Users, Globe, Cpu, Lightbulb, BarChart3, PieChart, Activity, Search const AIBusinessIntelligence = () => {
     const biFeatures = [
         {
             icon: Brain,
@@ -25,7 +24,7 @@ const AIBusinessIntelligence = () => {
             title: "Real-time Monitoring",
             description: "Live monitoring and alerting for business metrics",
             features: ["Live data feeds", "Instant alerts", "Performance tracking", "KPI monitoring"]
-        }
+
     ];
     const biSolutions = [
         {
@@ -63,7 +62,7 @@ const AIBusinessIntelligence = () => {
             description: "Future-focused insights and forecasting",
             icon: Lightbulb,
             capabilities: ["Trend prediction", "Risk forecasting", "Opportunity identification", "Scenario planning"]
-        }
+
     ];
     const benefits = [
         "Data-driven decision making across all business areas",
@@ -103,7 +102,7 @@ const AIBusinessIntelligence = () => {
             phase: "Deployment & Training",
             description: "Deploy system and train users",
             duration: "2-4 weeks"
-        }
+
     ];
     return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       {/* Hero Section */}
@@ -281,3 +280,4 @@ const AIBusinessIntelligence = () => {
     </div>);
 };
 export default AIBusinessIntelligence;
+}}}}

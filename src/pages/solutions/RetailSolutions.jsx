@@ -1,7 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { ShoppingCart, Smartphone, Brain, Target, BarChart3, Zap, Shield, ArrowRight, CheckCircle, Store } from 'lucide-react';
-export default function RetailSolutions() {
+import { ShoppingCart, Smartphone, Brain, Target, BarChart3, Zap, Shield, ArrowRight, CheckCircle, Store export default function RetailSolutions() {
     const features = [
         {
             icon: Brain,
@@ -32,7 +31,7 @@ export default function RetailSolutions() {
             icon: Smartphone,
             title: "Omnichannel Experience",
             description: "Seamless integration across online and offline retail channels"
-        }
+
     ];
     const benefits = [
         "Increase sales by 25-40%",
@@ -58,7 +57,7 @@ export default function RetailSolutions() {
         {
             title: "Marketing Automation",
             description: "AI-driven marketing campaigns and personalization"
-        }
+
     ];
     const retailTypes = [
         "Fashion & Apparel",
@@ -205,4 +204,4 @@ export default function RetailSolutions() {
         </div>
       </section>
     </div>);
-}
+}}}}

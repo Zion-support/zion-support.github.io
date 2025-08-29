@@ -13,7 +13,7 @@ export interface ServiceExpansion2025 {
     email: string;
     address: string;
   };
-}
+
 export const serviceExpansions2025: ServiceExpansion2025[] = [
   {
     id: "ai-workflow-automation",
@@ -35,6 +35,6 @@ export const serviceExpansions2025: ServiceExpansion2025[] = [
       mobile: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       address: "364 E Main St STE 1008 Middletown DE 19709"
-    }
-  }
-];
+
+
+];}}}

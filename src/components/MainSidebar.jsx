@@ -1,8 +1,7 @@
 import React from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { cn } from '@/lib/utils';
-import { Home, ShoppingCart, Users, Settings, FileText, HelpCircle, Code, BarChart3, Briefcase, Leaf, Building, Mail, Calendar, Globe, Zap } from 'lucide-react';
-export function MainSidebar() {
+import { Home, ShoppingCart, Users, Settings, FileText, HelpCircle, Code, BarChart3, Briefcase, Leaf, Building, Mail, Calendar, Globe, Zap export function MainSidebar() {
     const location = useLocation();
     const sidebarSections = [
         {
@@ -41,12 +40,12 @@ export function MainSidebar() {
                 { key: 'api-docs', href: '/api-docs', icon: <Code className="w-4 h-4"/>, label: 'API Docs' },
                 { key: 'sitemap', href: '/sitemap', icon: <Calendar className="w-4 h-4"/>, label: 'Sitemap' },
             ]
-        }
+
     ];
     const isActive = (href) => {
         if (href === '/') {
             return location.pathname === '/';
-        }
+
         return location.pathname.startsWith(href);
     };
     return (<aside className="w-64 bg-zion-blue-dark border-r border-zion-blue-light min-h-screen p-4">
@@ -88,4 +87,4 @@ export function MainSidebar() {
         </div>
       </div>
     </aside>);
-}
+}}}}

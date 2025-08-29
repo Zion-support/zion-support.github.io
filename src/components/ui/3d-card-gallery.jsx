@@ -1,7 +1,6 @@
 import React, { useState, useRef, useEffect, useCallback } from 'react';
 import { motion, AnimatePresence, useMotionValue, useSpring, useTransform } from 'framer-motion';
-import { Eye, Heart, Share2, Play, Pause, RotateCcw, Grid, List, Search, Star, Zap, Shield, Globe, Rocket, Brain, Settings, TrendingUp, X } from 'lucide-react';
-import { Button } from './button';
+import { Eye, Heart, Share2, Play, Pause, RotateCcw, Grid, List, Search, Star, Zap, Shield, Globe, Rocket, Brain, Settings, TrendingUp, X import { Button } from './button';
 import { Badge } from './badge';
 export function Card3DGallery({ enabled = true, items, columns = 3, autoPlay = false, showFilters = true, onCardClick, onAction, className = "" }) {
     const [selectedItem, setSelectedItem] = useState(null);
@@ -53,13 +52,13 @@ export function Card3DGallery({ enabled = true, items, columns = 3, autoPlay = f
                 break;
             default:
                 return 0;
-        }
+
         if (sortOrder === 'asc') {
             return aValue > bValue ? 1 : -1;
-        }
+
         else {
             return aValue < bValue ? 1 : -1;
-        }
+
     });
     // Auto-play carousel
     useEffect(() => {
@@ -92,7 +91,7 @@ export function Card3DGallery({ enabled = true, items, columns = 3, autoPlay = f
                 return 'border-red-500/50 bg-red-500/10 text-red-400';
             default:
                 return 'border-zinc-500/50 bg-zinc-500/10 text-zinc-400';
-        }
+
     };
     // Get complexity color
     const getComplexityColor = (complexity) => {
@@ -107,7 +106,7 @@ export function Card3DGallery({ enabled = true, items, columns = 3, autoPlay = f
                 return 'border-red-500/50 bg-red-500/10 text-red-400';
             default:
                 return 'border-zinc-500/50 bg-zinc-500/10 text-zinc-400';
-        }
+
     };
     // Get category icon
     const getCategoryIcon = (category) => {
@@ -357,7 +356,7 @@ export function Card3DGallery({ enabled = true, items, columns = 3, autoPlay = f
           </motion.div>)}
       </AnimatePresence>
     </div>);
-}
+
 function Card3D({ item, index, onClick, onAction: _onAction, getStatusColor, getComplexityColor, getCategoryIcon, isCarousel = false }) {
     const [isHovered, setIsHovered] = useState(false);
     const [isLiked, setIsLiked] = useState(false);
@@ -461,4 +460,4 @@ function Card3D({ item, index, onClick, onAction: _onAction, getStatusColor, get
         <motion.div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" initial={{ opacity: 0 }} whileHover={{ opacity: 1 }}/>
       </motion.div>
     </motion.div>);
-}
+</div></div></div></Card></Card>}}}}}}}</motion.div>}

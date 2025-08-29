@@ -11,8 +11,6 @@ import {
   ArrowRight,
   Filter,
   Search
-} from 'lucide-react';
-
 const testimonials = [
   {
     id: 1,
@@ -117,7 +115,7 @@ const testimonials = [
     results: ['Improved grid efficiency', 'Better renewable energy integration', 'Cost optimization'],
     image: '/api/placeholder/100/100',
     featured: false
-  }
+
 ];
 
 const industries = [
@@ -175,13 +173,13 @@ export default function Testimonials() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="text-center max-w-4xl mx-auto"
-          >
+
             <motion.div
               initial={{ opacity: 0, scale: 0.8 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.8, delay: 0.2 }}
               className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-2xl mb-8"
-            >
+
               <Quote className="w-10 h-10 text-white" />
             </motion.div>
 
@@ -233,7 +231,7 @@ export default function Testimonials() {
                 value={selectedIndustry}
                 onChange={(e) => setSelectedIndustry(e.target.value)}
                 className="px-4 py-2 bg-zion-blue-dark/50 border border-zion-cyan/20 rounded-lg text-white focus:border-zion-cyan focus:outline-none transition-colors duration-300"
-              >
+
                 {industries.map(industry => (
                   <option key={industry} value={industry}>{industry}</option>
                 ))}
@@ -243,7 +241,7 @@ export default function Testimonials() {
                 value={selectedRating}
                 onChange={(e) => setSelectedRating(e.target.value)}
                 className="px-4 py-2 bg-zion-blue-dark/50 border border-zion-cyan/20 rounded-lg text-white focus:border-zion-cyan focus:outline-none transition-colors duration-300"
-              >
+
                 {ratings.map(rating => (
                   <option key={rating} value={rating}>{rating}</option>
                 ))}
@@ -266,7 +264,7 @@ export default function Testimonials() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               className="text-center mb-16"
-            >
+
               <h2 className="text-4xl font-bold text-white mb-4">Featured Success Stories</h2>
               <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
                 Highlighted testimonials showcasing exceptional results and transformative
@@ -282,7 +280,7 @@ export default function Testimonials() {
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
                   className="bg-zion-blue-dark/30 border border-zion-cyan/20 rounded-2xl p-8 hover:border-zion-cyan/40 transition-all duration-300"
-                >
+
                   <div className="flex items-start gap-4 mb-6">
                     <div className="w-16 h-16 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-full flex items-center justify-center text-2xl font-bold text-white flex-shrink-0">
                       {testimonial.name.split(' ').map(n => n[0]).join('')}
@@ -339,7 +337,7 @@ export default function Testimonials() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
-          >
+
             <h2 className="text-4xl font-bold text-white mb-4">All Client Testimonials</h2>
             <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
               Browse through all our client success stories and discover how we can
@@ -355,7 +353,7 @@ export default function Testimonials() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 className="bg-zion-blue-dark/30 border border-zion-cyan/20 rounded-2xl p-6 hover:border-zion-cyan/40 transition-all duration-300"
-              >
+
                 <div className="flex items-center gap-3 mb-4">
                   <div className="w-12 h-12 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-full flex items-center justify-center text-lg font-bold text-white">
                     {testimonial.name.split(' ').map(n => n[0]).join('')}
@@ -400,7 +398,7 @@ export default function Testimonials() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="text-center max-w-4xl mx-auto"
-          >
+
             <h2 className="text-4xl font-bold text-white mb-6">Ready to Join Our Success Stories?</h2>
             <p className="text-xl text-zion-slate-light mb-8 leading-relaxed">
               Let's discuss how our technology solutions can transform your business
@@ -411,13 +409,13 @@ export default function Testimonials() {
               <a
                 href="/contact"
                 className="px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-purple text-white font-semibold rounded-xl hover:shadow-lg hover:shadow-zion-cyan/25 transition-all duration-300 transform hover:scale-105"
-              >
+
                 Start Your Project
               </a>
               <a
                 href="/services"
                 className="px-8 py-4 border border-zion-cyan text-zion-cyan font-semibold rounded-xl hover:bg-zion-cyan hover:text-white transition-all duration-300"
-              >
+
                 Explore Our Services
               </a>
             </div>
@@ -426,4 +424,4 @@ export default function Testimonials() {
       </section>
     </div>
   );
-}
+}}}

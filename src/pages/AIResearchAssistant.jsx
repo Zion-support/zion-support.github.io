@@ -25,7 +25,7 @@ export default function AIResearchAssistant() {
             description: 'Real-time collaboration tools for research teams',
             icon: '👥',
             benefits: ['Shared workspaces', 'Version control', 'Communication tools']
-        }
+
     ];
     const useCases = [
         {
@@ -43,7 +43,7 @@ export default function AIResearchAssistant() {
         {
             industry: 'Business Intelligence',
             applications: ['Market analysis', 'Risk assessment', 'Strategic planning', 'Performance metrics']
-        }
+
     ];
     const tools = [
         { name: 'Semantic Scholar', url: 'https://www.semanticscholar.org/', description: 'AI-powered academic search engine' },
@@ -139,4 +139,4 @@ export default function AIResearchAssistant() {
         </div>
       </div>
     </div>);
-}
+}}}

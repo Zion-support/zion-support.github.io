@@ -10,20 +10,18 @@ class PerformanceMonitor {
     this.logFile = path.join(this.projectRoot, 'logs/pm2/performance-monitor.log');
     this.reportFile = path.join(this.projectRoot, 'logs/pm2/performance-report.json');
     this.startTime = Date.now();
-  }
 
   log(message) {
     const timestamp = new Date().toISOString();
     const logMessage = `[${timestamp}] ${message}\n`;
 
-    // console.log(message);
+    // // // console.log(message);
 
     try {
       fs.appendFileSync(this.logFile, logMessage);
     } catch (error) {
-      // console.error('Failed to write to log file:', error.message);
-    }
-  }
+      // // // console.error('Failed to write to log file:', error.message);
+
 
   async checkBuildPerformance() {
     try {
@@ -34,7 +32,6 @@ class PerformanceMonitor {
       // Clean previous build
       if (fs.existsSync('dist')) {
         execSync('rm -rf dist', { cwd: this.projectRoot, stdio: 'pipe' });
-      }
 
       // Run build
       execSync('npm run build', {
@@ -60,12 +57,11 @@ class PerformanceMonitor {
             } else {
               buildSize += stat.size;
               fileCount++;
-            }
+
           });
         };
 
         calculateSize('dist');
-      }
 
       return {
         buildTime,
@@ -82,8 +78,7 @@ class PerformanceMonitor {
         buildSize: 0,
         fileCount: 0
       };
-    }
-  }
+
 
   async checkBundleAnalysis() {
     try {
@@ -91,7 +86,6 @@ class PerformanceMonitor {
 
       if (!fs.existsSync('dist')) {
         return { error: 'No build output found' };
-      }
 
       const bundleStats = {
         totalSize: 0,
@@ -125,8 +119,8 @@ class PerformanceMonitor {
               bundleStats.cssFiles.push(fileInfo);
             } else {
               bundleStats.assetFiles.push(fileInfo);
-            }
-          }
+
+
         });
       };
 
@@ -144,8 +138,7 @@ class PerformanceMonitor {
 
     } catch (error) {
       return { error: error.message };
-    }
-  }
+
 
   async checkDependencies() {
     try {
@@ -173,14 +166,13 @@ class PerformanceMonitor {
                     size: size,
                     sizeMB: Math.round(size / (1024 * 1024) * 100) / 100
                   });
-                }
-              }
+
+
             } catch (error) {
               // Skip if can't access
-            }
-          }
+
+
         });
-      }
 
       return {
         dependencies: dependencies.length,
@@ -190,8 +182,7 @@ class PerformanceMonitor {
 
     } catch (error) {
       return { error: error.message };
-    }
-  }
+
 
   calculateDirectorySize(dir) {
     let size = 0;
@@ -204,13 +195,12 @@ class PerformanceMonitor {
           size += this.calculateDirectorySize(fullPath);
         } else {
           size += stat.size;
-        }
+
       });
     } catch (error) {
       // Skip if can't access
-    }
+
     return size;
-  }
 
   async checkLighthouseScore() {
     try {
@@ -221,15 +211,13 @@ class PerformanceMonitor {
         execSync('lighthouse --version', { stdio: 'pipe' });
       } catch (error) {
         return { error: 'Lighthouse not installed. Install with: npm install -g lighthouse' };
-      }
 
       // For now, just check if we can run it
       return { available: true, message: 'Lighthouse available for performance testing' };
 
     } catch (error) {
       return { error: error.message };
-    }
-  }
+
 
   async checkWebpackBundleAnalyzer() {
     try {
@@ -249,8 +237,7 @@ class PerformanceMonitor {
 
     } catch (error) {
       return { error: error.message };
-    }
-  }
+
 
   async generateReport(buildStats, bundleStats, dependencyStats, lighthouseStats, analyzerStats) {
     const report = {
@@ -280,7 +267,6 @@ class PerformanceMonitor {
         message: 'Build time is slow',
         action: 'Consider optimizing build configuration and reducing bundle size'
       });
-    }
 
     if (bundleStats.totalSizeMB > 5) { // > 5MB
       report.recommendations.push({
@@ -288,7 +274,6 @@ class PerformanceMonitor {
         message: 'Bundle size is large',
         action: 'Analyze bundle and implement code splitting and tree shaking'
       });
-    }
 
     if (dependencyStats.largePackages?.length > 5) {
       report.recommendations.push({
@@ -296,7 +281,6 @@ class PerformanceMonitor {
         message: 'Many large dependencies detected',
         action: 'Review and consider alternatives for large packages'
       });
-    }
 
     if (!analyzerStats.available) {
       report.recommendations.push({
@@ -304,24 +288,20 @@ class PerformanceMonitor {
         message: 'Bundle analyzer not available',
         action: 'Install webpack-bundle-analyzer for detailed bundle analysis'
       });
-    }
 
     return report;
-  }
 
   async saveReport(report) {
     try {
       const reportDir = path.dirname(this.reportFile);
       if (!fs.existsSync(reportDir)) {
         fs.mkdirSync(reportDir, { recursive: true });
-      }
 
       fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2));
       this.log(`Report saved to: ${this.reportFile}`);
     } catch (error) {
       this.log(`Error saving report: ${error.message}`);
-    }
-  }
+
 
   async run() {
     this.log('🚀 Starting Performance Monitor...');
@@ -332,7 +312,6 @@ class PerformanceMonitor {
       const logsDir = path.dirname(this.logFile);
       if (!fs.existsSync(logsDir)) {
         fs.mkdirSync(logsDir, { recursive: true });
-      }
 
       // Run all performance checks
       this.log('🏗️  Checking build performance...');
@@ -383,24 +362,22 @@ class PerformanceMonitor {
         });
       } else {
         this.log('\n✨ Performance looks good!');
-      }
 
       // Clean up build artifacts if they exist
       if (fs.existsSync('dist')) {
         this.log('🧹 Cleaning up build artifacts...');
         execSync('rm -rf dist', { cwd: this.projectRoot, stdio: 'pipe' });
-      }
 
     } catch (error) {
       this.log(`❌ Error running performance monitor: ${error.message}`);
       process.exit(1);
-    }
-  }
-}
+
+
 
 // Run the performance monitor
 const monitor = new PerformanceMonitor();
 monitor.run().catch(error => {
-  // console.error('Fatal error:', error);
+  // // // console.error('Fatal error:', error);
   process.exit(1);
 });
+}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}

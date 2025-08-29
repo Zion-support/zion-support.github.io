@@ -1,8 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { MessageSquare, BookOpen, Bot, Workflow, Bell, DollarSign, ExternalLink } from 'lucide-react';
-
-const HelpdeskPlatform: React.FC = () => {
+import { MessageSquare, BookOpen, Bot, Workflow, Bell, DollarSign, ExternalLink const HelpdeskPlatform: React.FC = () => {
 	const capabilities = [
 		{ icon: MessageSquare, title: 'Omnichannel Tickets', desc: 'Email, chat, and social inbox with SLAs and macros.' },
 		{ icon: BookOpen, title: 'Knowledge Base', desc: 'SEO-friendly docs with feedback, search, and versioning.' },
@@ -54,4 +52,4 @@ const HelpdeskPlatform: React.FC = () => {
 	);
 };
 
-export default HelpdeskPlatform;
+export default HelpdeskPlatform;}

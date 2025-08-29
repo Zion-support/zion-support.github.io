@@ -2,8 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
 import { motion } from 'framer-motion';
-import { CheckCircle, Shield, Zap, TrendingUp, GitBranch, BarChart3, Clock, Star, ArrowRight } from 'lucide-react';
-const AICodeReviewAssistant = () => {
+import { CheckCircle, Shield, Zap, TrendingUp, GitBranch, BarChart3, Clock, Star, ArrowRight const AICodeReviewAssistant = () => {
     const features = [
         {
             title: "Automated Security Vulnerability Detection",
@@ -24,7 +23,7 @@ const AICodeReviewAssistant = () => {
             title: "Git Integration & Automation",
             description: "Seamless integration with GitHub, GitLab, and Bitbucket with automated PR comments and reviews",
             icon: <GitBranch className="w-6 h-6"/>
-        }
+
     ];
     const benefits = [
         {
@@ -46,7 +45,7 @@ const AICodeReviewAssistant = () => {
             metric: "24/7",
             description: "Automated review coverage",
             icon: <Zap className="w-5 h-5"/>
-        }
+
     ];
     const pricingPlans = [
         {
@@ -92,7 +91,7 @@ const AICodeReviewAssistant = () => {
                 "SLA guarantees"
             ],
             popular: false
-        }
+
     ];
     const integrations = [
         "GitHub", "GitLab", "Bitbucket", "Jira", "Slack", "Microsoft Teams", "Discord", "Email"
@@ -304,3 +303,4 @@ const AICodeReviewAssistant = () => {
     </>);
 };
 export default AICodeReviewAssistant;
+}}}}

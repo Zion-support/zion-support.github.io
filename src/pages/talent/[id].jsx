@@ -14,20 +14,20 @@ export default function TalentProfilePage() {
                 setError('Profile not found');
                 setLoading(false);
                 return;
-            }
+
             try {
                 const res = await fetch(`/api/talent/${id}`);
                 if (!res.ok)
                     throw new Error('Failed to load profile');
                 const data = await res.json();
                 setProfile(data.profile);
-            }
+
             catch (err) {
                 setError('Profile not found');
-            }
+
             finally {
                 setLoading(false);
-            }
+
         };
         fetchProfile();
     }, [id]);
@@ -63,4 +63,4 @@ export default function TalentProfilePage() {
         </div>
       </main>
     </>);
-}
+}}}}}

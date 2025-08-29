@@ -62,8 +62,6 @@ import {
   Droplets,
   Umbrella,
   MapPin
-} from 'lucide-react';
-
 const EdgeComputingPlatform: React.FC = () => {
   const features = [
     {
@@ -101,7 +99,7 @@ const EdgeComputingPlatform: React.FC = () => {
       title: "Edge Security",
       description: "Advanced security protocols and encryption for edge computing environments",
       color: "from-yellow-500 to-orange-500"
-    }
+
   ];
 
   const pricingPlans = [
@@ -157,7 +155,7 @@ const EdgeComputingPlatform: React.FC = () => {
       ],
       cta: "Contact Sales",
       popular: false
-    }
+
   ];
 
   const benefits = [
@@ -184,7 +182,7 @@ const EdgeComputingPlatform: React.FC = () => {
       title: "Global Scale",
       description: "Deploy edge nodes worldwide for optimal user experience",
       metric: "200+"
-    }
+
   ];
 
   const useCases = [
@@ -215,7 +213,7 @@ const EdgeComputingPlatform: React.FC = () => {
       description: "Real-time patient monitoring and emergency response systems",
       icon: Heart,
       color: "from-orange-500 to-red-500"
-    }
+
   ];
 
   const edgeLocations = [
@@ -242,7 +240,7 @@ const EdgeComputingPlatform: React.FC = () => {
       cities: ["São Paulo", "Mexico City", "Buenos Aires", "Lima", "Bogotá"],
       icon: MapPin,
       color: "from-orange-500 to-red-500"
-    }
+
   ];
 
   return (
@@ -261,7 +259,7 @@ const EdgeComputingPlatform: React.FC = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-            >
+
               <div className="inline-flex items-center px-4 py-2 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-300 text-sm font-medium mb-8">
                 <Cpu className="w-4 h-4 mr-2" />
                 Next-Generation Edge Computing
@@ -310,7 +308,7 @@ const EdgeComputingPlatform: React.FC = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 className="group"
-              >
+
                 <div className={`p-6 rounded-xl bg-gradient-to-br ${feature.color} bg-opacity-10 border border-opacity-20 hover:bg-opacity-20 transition-all duration-300 h-full`}>
                   <div className={`inline-flex items-center justify-center w-12 h-12 rounded-lg bg-gradient-to-r ${feature.color} mb-4`}>
                     <feature.icon className="w-6 h-6 text-white" />
@@ -344,7 +342,7 @@ const EdgeComputingPlatform: React.FC = () => {
                 whileInView={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 className="text-center"
-              >
+
                 <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-r from-blue-500 to-green-500 mb-4">
                   <benefit.icon className="w-8 h-8 text-white" />
                 </div>
@@ -377,7 +375,7 @@ const EdgeComputingPlatform: React.FC = () => {
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 className="group"
-              >
+
                 <div className={`p-6 rounded-xl bg-gradient-to-br ${useCase.color} bg-opacity-10 border border-opacity-20 hover:bg-opacity-20 transition-all duration-300 h-full`}>
                   <div className="flex items-start space-x-4">
                     <div className={`inline-flex items-center justify-center w-12 h-12 rounded-lg bg-gradient-to-r ${useCase.color}`}>
@@ -416,7 +414,7 @@ const EdgeComputingPlatform: React.FC = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 className="group"
-              >
+
                 <div className={`p-6 rounded-xl bg-gradient-to-br ${location.color} bg-opacity-10 border border-opacity-20 hover:bg-opacity-20 transition-all duration-300 h-full`}>
                   <div className={`inline-flex items-center justify-center w-12 h-12 rounded-lg bg-gradient-to-r ${location.color} mb-4`}>
                     <location.icon className="w-6 h-6 text-white" />
@@ -460,7 +458,7 @@ const EdgeComputingPlatform: React.FC = () => {
                     ? 'bg-gradient-to-br from-blue-500/20 to-green-500/20 border-2 border-blue-500/50'
                     : 'bg-slate-800/50 border border-slate-700/50'
                 }`}
-              >
+
                 {plan.popular && (
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                     <span className="bg-gradient-to-r from-blue-500 to-green-500 text-white px-4 py-2 rounded-full text-sm font-medium">
@@ -507,7 +505,7 @@ const EdgeComputingPlatform: React.FC = () => {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-          >
+
             <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">
               Ready to Deploy to the Edge?
             </h2>
@@ -529,4 +527,4 @@ const EdgeComputingPlatform: React.FC = () => {
   );
 };
 
-export default EdgeComputingPlatform;
+export default EdgeComputingPlatform;}}}}}}

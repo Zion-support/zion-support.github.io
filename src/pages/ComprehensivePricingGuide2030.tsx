@@ -19,7 +19,6 @@ import {
   Target,
   ArrowRight,
   Search
-} from 'lucide-react';
 import { innovativeAIServices2030 } from '../data/innovativeAIServices2030';
 import { innovativeCybersecurityServices2030 } from '../data/innovativeCybersecurityServices2030';
 import { innovativeCloudDevOpsServices2030 } from '../data/innovativeCloudDevOpsServices2030';
@@ -72,7 +71,7 @@ const ComprehensivePricingGuide2030: React.FC = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-          >
+
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
               Comprehensive Pricing Guide 2030
             </h1>
@@ -143,7 +142,7 @@ const ComprehensivePricingGuide2030: React.FC = () => {
                       ? 'bg-purple-600 border-purple-500 text-white'
                       : 'bg-white/10 border-white/20 text-white hover:bg-white/20'
                   }`}
-                >
+
                   <category.icon className="w-4 h-4" />
                   <span>{category.name}</span>
                   <span className="bg-white/20 px-2 py-1 rounded-full text-xs">
@@ -165,7 +164,7 @@ const ComprehensivePricingGuide2030: React.FC = () => {
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
             className="text-center mb-12"
-          >
+
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Pricing Tiers & Plans
             </h2>
@@ -188,7 +187,7 @@ const ComprehensivePricingGuide2030: React.FC = () => {
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 viewport={{ once: true }}
                 className={`${plan.color} border rounded-xl p-6 text-center`}
-              >
+
                 <h3 className="text-xl font-bold text-white mb-2">{plan.tier}</h3>
                 <div className="text-2xl font-bold text-white mb-2">{plan.range}</div>
                 <p className="text-white/80 text-sm">{plan.description}</p>
@@ -213,7 +212,7 @@ const ComprehensivePricingGuide2030: React.FC = () => {
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
                   className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 hover:bg-white/10 transition-all group"
-                >
+
                   {/* Service Header */}
                   <div className="flex items-start justify-between mb-4">
                     <div className="flex items-center gap-3">
@@ -326,7 +325,7 @@ const ComprehensivePricingGuide2030: React.FC = () => {
                         <span
                           key={idx}
                           className="px-2 py-1 bg-white/10 text-white text-xs rounded-full border border-white/20"
-                        >
+
                           {tag}
                         </span>
                       ))}
@@ -340,14 +339,14 @@ const ComprehensivePricingGuide2030: React.FC = () => {
                       target="_blank"
                       rel="noopener noreferrer"
                       className="flex-1 bg-purple-600 hover:bg-purple-700 text-white text-center py-3 px-4 rounded-lg transition-colors flex items-center justify-center gap-2"
-                    >
+
                       <ExternalLink className="w-4 h-4" />
                       Learn More
                     </a>
                     <a
                       href={`mailto:${service.contactEmail}?subject=Pricing Inquiry for ${service.title}`}
                       className="flex-1 bg-white/10 hover:bg-white/20 text-white text-center py-3 px-4 rounded-lg transition-colors border border-white/20 flex items-center justify-center gap-2"
-                    >
+
                       <Mail className="w-4 h-4" />
                       Get Quote
                     </a>
@@ -366,7 +365,7 @@ const ComprehensivePricingGuide2030: React.FC = () => {
                   setActiveCategory('all');
                 }}
                 className="bg-purple-600 hover:bg-purple-700 text-white px-6 py-2 rounded-lg transition-colors"
-              >
+
                 Clear Filters
               </button>
             </div>
@@ -383,7 +382,7 @@ const ComprehensivePricingGuide2030: React.FC = () => {
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
             className="text-center mb-16"
-          >
+
             <h2 className="text-3xl md:text-5xl font-bold text-white mb-6">
               Why Our Pricing is Competitive
             </h2>
@@ -423,7 +422,7 @@ const ComprehensivePricingGuide2030: React.FC = () => {
                 icon: Clock,
                 title: "24/7 Support",
                 description: "Round-the-clock support included in all plans. No additional support fees."
-              }
+
             ].map((benefit, index) => (
               <motion.div
                 key={index}
@@ -432,7 +431,7 @@ const ComprehensivePricingGuide2030: React.FC = () => {
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 viewport={{ once: true }}
                 className="text-center"
-              >
+
                 <div className="w-16 h-16 bg-purple-600/20 border border-purple-500/30 rounded-full flex items-center justify-center mx-auto mb-4">
                   <benefit.icon className="w-8 h-8 text-purple-400" />
                 </div>
@@ -452,7 +451,7 @@ const ComprehensivePricingGuide2030: React.FC = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
-          >
+
             <h2 className="text-3xl md:text-5xl font-bold text-white mb-6">
               Ready to Get Started?
             </h2>
@@ -463,14 +462,14 @@ const ComprehensivePricingGuide2030: React.FC = () => {
               <a
                 href="mailto:kleber@ziontechgroup.com?subject=Pricing Inquiry"
                 className="bg-purple-600 hover:bg-purple-700 text-white px-8 py-4 rounded-lg text-lg font-semibold transition-colors flex items-center justify-center gap-2"
-              >
+
                 <Mail className="w-5 h-5" />
                 Request Custom Quote
               </a>
               <a
                 href="tel:+13024640950"
                 className="bg-white/10 hover:bg-white/20 text-white px-8 py-4 rounded-lg text-lg font-semibold transition-colors border border-white/20 flex items-center justify-center gap-2"
-              >
+
                 <Phone className="w-5 h-5" />
                 Call for Pricing
               </a>
@@ -530,4 +529,4 @@ const ComprehensivePricingGuide2030: React.FC = () => {
   );
 };
 
-export default ComprehensivePricingGuide2030;
+export default ComprehensivePricingGuide2030;}}

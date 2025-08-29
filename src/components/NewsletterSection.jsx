@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Mail, Send, CheckCircle, Bell, Zap, Shield, Users, X, Gift, Star, Award } from 'lucide-react';
-const benefits = [
+import { Mail, Send, CheckCircle, Bell, Zap, Shield, Users, X, Gift, Star, Award const benefits = [
     {
         icon: <Bell className="w-6 h-6"/>,
         title: "Early Access",
@@ -21,7 +20,7 @@ const benefits = [
         icon: <Users className="w-6 h-6"/>,
         title: "Community",
         description: "Join our network of tech professionals and innovators"
-    }
+
 ];
 const stats = [
     { value: "50K+", label: "Subscribers" },
@@ -37,7 +36,7 @@ export function NewsletterSection() {
     const handleSubmit = (e) => {
         e.preventDefault();
         // Here you would typically send the email to your newsletter service
-        // console.log('Newsletter subscription:', email);
+        // // // console.log('Newsletter subscription:', email);
         setIsSubscribed(true);
         setEmail('');
     };
@@ -167,4 +166,4 @@ export function NewsletterSection() {
         </motion.div>
       </div>
     </section>);
-}
+</div></div>}}</motion.div></motion.div></motion.div>}

@@ -30,7 +30,7 @@ export default function TenantOnboarding() {
     const isAdmin = user?.role === "admin";
     if (!isAdmin) {
         return <Navigate to="/unauthorized"/>;
-    }
+
     const handleInputChange = (e) => {
         const { name, value } = e.target;
         setFormData(prev => ({ ...prev, [name]: value }));
@@ -88,16 +88,16 @@ export default function TenantOnboarding() {
                 custom_domain: "",
                 is_co_branded: true
             });
-        }
+
         catch (error) {
-            // console.error("Error creating tenant:", error);
+            // // // console.error("Error creating tenant:", error);
             toast.error("Failed to create tenant", {
                 description: error.message
             });
-        }
+
         finally {
             setIsSubmitting(false);
-        }
+
     };
     return (<>
       <SEO title="Tenant Onboarding - Zion AI Marketplace" description="Onboard a new white-label tenant to the Zion AI Marketplace platform."/>
@@ -253,4 +253,4 @@ export default function TenantOnboarding() {
       </main>
 
     </>);
-}
+</Card></Card></Card></Card>}}}}}

@@ -8,7 +8,6 @@ interface LoadingSpinnerProps {
   className?: string;
   showText?: boolean;
   text?: string;
-}
 
 export default function LoadingSpinner({
   size = 'md',
@@ -43,13 +42,12 @@ export default function LoadingSpinner({
           animate={{ opacity: 1 }}
           transition={{ delay: 0.3 }}
           className="mt-2 text-sm text-gray-500"
-        >
+
           {text}
         </motion.p>
       )}
     </div>
   );
-}
 
 // Optimized skeleton loader
 export function SkeletonLoader({
@@ -74,7 +72,6 @@ export function SkeletonLoader({
       ))}
     </div>
   );
-}
 
 // Button loading state
 export function ButtonLoader({
@@ -90,7 +87,6 @@ export function ButtonLoader({
       <span className="ml-2">Loading...</span>
     </div>
   );
-}
 
 // Page loading overlay
 export function PageLoaderOverlay({
@@ -106,7 +102,7 @@ export function PageLoaderOverlay({
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
       className="fixed inset-0 bg-background/95 backdrop-blur-sm z-50 flex items-center justify-center"
-    >
+
       <div className="text-center">
         {showSpinner && <LoadingSpinner size="xl" color="primary" />}
         <motion.p
@@ -114,13 +110,12 @@ export function PageLoaderOverlay({
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.3, duration: 0.3 }}
           className="mt-4 text-lg text-gray-300 font-medium"
-        >
+
           {text}
         </motion.p>
       </div>
     </motion.div>
   );
-}
 
 // Content loading placeholder
 export function ContentPlaceholder({
@@ -148,7 +143,7 @@ export function ContentPlaceholder({
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: index * 0.1 }}
             className="bg-white/5 rounded-lg p-6 border border-white/10"
-          >
+
             <div className="h-4 bg-white/10 rounded mb-3 animate-pulse" />
             <div className="h-3 bg-white/10 rounded mb-2 animate-pulse" />
             <div className="h-3 bg-white/10 rounded w-2/3 animate-pulse" />
@@ -163,7 +158,7 @@ export function ContentPlaceholder({
             animate={{ opacity: 1, x: 0 }}
             transition={{ delay: index * 0.1 }}
             className="flex items-center space-x-3"
-          >
+
             <div className="w-4 h-4 bg-white/10 rounded-full animate-pulse" />
             <div className="h-3 bg-white/10 rounded flex-1 animate-pulse" />
           </motion.div>
@@ -177,7 +172,7 @@ export function ContentPlaceholder({
             animate={{ opacity: 1, scale: 1 }}
             transition={{ delay: index * 0.1 }}
             className="bg-white/5 rounded-lg p-4 border border-white/10"
-          >
+
             <div className="h-3 bg-white/10 rounded mb-2 animate-pulse" />
             <div className="h-2 bg-white/10 rounded w-3/4 animate-pulse" />
           </motion.div>
@@ -195,7 +190,6 @@ export function ContentPlaceholder({
       )}
     </div>
   );
-}
 
 // Enhanced app loading spinner for main app loading
 export function AppLoadingSpinner() {
@@ -231,14 +225,14 @@ export function AppLoadingSpinner() {
               delay: index * 0.5,
               ease: "easeInOut"
             }}
-          >
+
             <span
               style={{
                 position: 'absolute',
                 top: `${Math.cos(index * Math.PI / 2) * 60}px`,
                 left: `${Math.sin(index * Math.PI / 2) * 60}px`,
               }}
-            >
+
               {icon}
             </span>
           </motion.div>
@@ -251,7 +245,7 @@ export function AppLoadingSpinner() {
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.5 }}
-      >
+
         <h2 className="text-2xl font-bold text-white mb-2">Loading Zion Tech Group</h2>
         <p className="text-gray-400">Preparing your futuristic experience...</p>
       </motion.div>
@@ -276,4 +270,4 @@ export function AppLoadingSpinner() {
       </div>
     </div>
   );
-}
+</div></div></div></div></div></div></div></div>}}}}}}</motion.div></motion.div></motion.div>}

@@ -38,7 +38,7 @@ export interface AutonomousSystemsRobotics2025 {
   customers: number;
   rating: number;
   reviews: number;
-}
+
 export const autonomousSystemsRobotics2025: AutonomousSystemsRobotics2025[] = [
   // Autonomous Manufacturing
   {
@@ -299,5 +299,5 @@ export const autonomousSystemsRobotics2025: AutonomousSystemsRobotics2025[] = [
     customers: 95,
     rating: 4.7,
     reviews: 62
-  }
-];
+
+];}}

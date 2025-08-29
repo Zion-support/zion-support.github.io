@@ -5,8 +5,7 @@ import { ListingScoreCard } from "@/components/ListingScoreCard";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Select, SelectTrigger, SelectContent, SelectItem } from "@/components/ui/select";
-import { Search, Filter, ArrowDownAZ, ArrowUpZA, Loader2 } from "lucide-react";
-export function CategoryListingPage({ title, description, listings: initialListings, sortOptions = [
+import { Search, Filter, ArrowDownAZ, ArrowUpZA, Loader2 export function CategoryListingPage({ title, description, listings: initialListings, sortOptions = [
     { label: 'Newest First', value: 'newest' },
     { label: 'Oldest First', value: 'oldest' },
     { label: 'Highest Rating', value: 'rating-high' },
@@ -66,7 +65,7 @@ export function CategoryListingPage({ title, description, listings: initialListi
                 return b.title.localeCompare(a.title);
             default:
                 return 0;
-        }
+
     });
     return (<>
       <div className="min-h-screen bg-zion-blue py-12 px-4">
@@ -147,4 +146,4 @@ export function CategoryListingPage({ title, description, listings: initialListi
       </div>
       <Footer />
     </>);
-}
+}}}

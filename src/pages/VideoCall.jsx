@@ -17,7 +17,7 @@ export default function VideoCall() {
             name: 'You',
             isVideoEnabled: true,
             isMuted: false
-        }
+
     ]);
     const handleJoinCall = () => {
         setIsJoining(true);
@@ -51,7 +51,7 @@ export default function VideoCall() {
         if (!participants.find(p => p.id === randomUser.id)) {
             setParticipants(prev => [...prev, randomUser]);
             toast(`${randomUser.name} joined the call`);
-        }
+
     };
     return (<>
       <SEO title={`Video Call - Room ${roomId}`} description="Zion video call"/>
@@ -76,4 +76,4 @@ export default function VideoCall() {
       </main>
 
     </>);
-}
+}}}

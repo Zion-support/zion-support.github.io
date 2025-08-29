@@ -24,7 +24,6 @@ import {
   HelpCircle,
   MessageCircle,
   Zap as ZapIcon
-} from 'lucide-react';
 export const FuturisticFooter: React.FC = () => {
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -82,7 +81,7 @@ export const FuturisticFooter: React.FC = () => {
         { name: "Case Studies", href: "/case-studies" },
         { name: "Marketplace", href: "/marketplace" }
       ]
-    }
+
   ];
   const socialLinks = [
     { name: "LinkedIn", href: "https://linkedin.com/company/ziontechgroup", icon: Linkedin },
@@ -105,7 +104,7 @@ export const FuturisticFooter: React.FC = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6 }}
-              >
+
                 <div className="flex items-center space-x-3 mb-6">
                   <div className="w-10 h-10 bg-gradient-to-br from-zion-cyan to-zion-blue rounded-lg flex items-center justify-center">
                     <ZapIcon className="w-6 h-6 text-white" />
@@ -148,7 +147,7 @@ export const FuturisticFooter: React.FC = () => {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
-                >
+
                   <h3 className="text-lg font-semibold text-white mb-4 flex items-center">
                     {section.title === "Services" && <Brain className="w-5 h-5 mr-2 text-zion-cyan" />}
                     {section.title === "Solutions" && <Rocket className="w-5 h-5 mr-2 text-zion-purple" />}
@@ -162,7 +161,7 @@ export const FuturisticFooter: React.FC = () => {
                         <Link
                           to={link.href}
                           className="text-zion-slate-light hover:text-zion-cyan transition-colors duration-300 text-sm hover:translate-x-1 inline-block"
-                        >
+
                           {link.name}
                         </Link>
                       </li>
@@ -179,7 +178,7 @@ export const FuturisticFooter: React.FC = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.4 }}
             className="border-t border-zion-slate/30 mt-12 pt-8"
-          >
+
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
               <div>
                 <h3 className="text-lg font-semibold text-white mb-4 flex items-center">
@@ -191,7 +190,7 @@ export const FuturisticFooter: React.FC = () => {
                     <Link
                       to="/request-quote"
                       className="text-zion-slate-light hover:text-zion-cyan transition-colors duration-300 text-sm hover:translate-x-1 inline-block"
-                    >
+
                       Request Quote
                     </Link>
                   </li>
@@ -199,7 +198,7 @@ export const FuturisticFooter: React.FC = () => {
                     <Link
                       to="/demo"
                       className="text-zion-slate-light hover:text-zion-cyan transition-colors duration-300 text-sm hover:translate-x-1 inline-block"
-                    >
+
                       Book Demo
                     </Link>
                   </li>
@@ -207,7 +206,7 @@ export const FuturisticFooter: React.FC = () => {
                     <Link
                       to="/support"
                       className="text-zion-slate-light hover:text-zion-cyan transition-colors duration-300 text-sm hover:translate-x-1 inline-block"
-                    >
+
                       Get Support
                     </Link>
                   </li>
@@ -215,7 +214,7 @@ export const FuturisticFooter: React.FC = () => {
                     <Link
                       to="/status"
                       className="text-zion-slate-light hover:text-zion-cyan transition-colors duration-300 text-sm hover:translate-x-1 inline-block"
-                    >
+
                       System Status
                     </Link>
                   </li>
@@ -230,7 +229,7 @@ export const FuturisticFooter: React.FC = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.5 }}
             className="border-t border-zion-slate/30 mt-12 pt-8"
-          >
+
             <div className="flex flex-col lg:flex-row items-center justify-between space-y-4 lg:space-y-0">
               {/* Copyright */}
               <div className="text-zion-slate-light text-sm">
@@ -248,7 +247,7 @@ export const FuturisticFooter: React.FC = () => {
                     target="_blank"
                     rel="noopener noreferrer"
                     className="w-10 h-10 bg-zion-slate-dark/50 border border-zion-slate/30 rounded-lg flex items-center justify-center text-zion-slate-light hover:text-zion-cyan hover:border-zion-cyan/50 hover:bg-zion-cyan/10 transition-all duration-300"
-                  >
+
                     <social.icon className="w-5 h-5" />
                   </a>
                 ))}
@@ -274,7 +273,7 @@ export const FuturisticFooter: React.FC = () => {
           className="fixed bottom-8 right-8 w-12 h-12 bg-gradient-to-r from-zion-cyan to-zion-blue text-white rounded-full shadow-lg shadow-zion-cyan/25 hover:shadow-xl hover:shadow-zion-cyan/40 transition-all duration-300 z-50 flex items-center justify-center group"
           whileHover={{ scale: 1.1 }}
           whileTap={{ scale: 0.9 }}
-        >
+
           <ArrowUp className="w-6 h-6 group-hover:-translate-y-0.5 transition-transform duration-300" />
         </motion.button>
       </div>
@@ -282,4 +281,4 @@ export const FuturisticFooter: React.FC = () => {
       <div className="h-px bg-gradient-to-r from-transparent via-zion-cyan to-transparent opacity-50" />
     </footer>
   );
-};
+</div></div>};}}

@@ -6,8 +6,7 @@ import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent } from "@/components/ui/card";
 import { Alert, AlertDescription } from "@/components/ui/alert";
-import { ThumbsUp, ThumbsDown, Calendar, Flag, Edit, Pin, Lock, CheckCircle } from "lucide-react";
-import { formatDistanceToNow, format } from "date-fns";
+import { ThumbsUp, ThumbsDown, Calendar, Flag, Edit, Pin, Lock, CheckCircle import { formatDistanceToNow, format } from "date-fns";
 import { useAuth } from "@/hooks/useAuth";
 import ReplyCard from "@/components/community/ReplyCard";
 import ReplyForm from "@/components/community/ReplyForm";
@@ -107,7 +106,7 @@ const mockReplies = [
         likes: 4,
         isSolution: false,
         isAnswer: false
-    }
+
 ];
 export default function ForumPostPage() {
     // Using `useParams` without type arguments avoids issues when TypeScript
@@ -130,7 +129,7 @@ export default function ForumPostPage() {
           <Link to="/community">Back to Community</Link>
         </Button>
       </div>);
-    }
+
     const handleUpvote = () => {
         if (!user) {
             toast({
@@ -138,7 +137,7 @@ export default function ForumPostPage() {
                 description: "Please sign in to vote on posts",
             });
             return;
-        }
+
         setPost({ ...post, upvotes: post.upvotes + 1 });
         toast({
             title: "Vote recorded",
@@ -152,7 +151,7 @@ export default function ForumPostPage() {
                 description: "Please sign in to vote on posts",
             });
             return;
-        }
+
         setPost({ ...post, downvotes: post.downvotes + 1 });
         toast({
             title: "Vote recorded",
@@ -166,7 +165,7 @@ export default function ForumPostPage() {
                 description: "Please sign in to reply",
             });
             return;
-        }
+
         // Create a new reply
         const newReply = {
             id: `reply${Date.now()}`,
@@ -200,7 +199,7 @@ export default function ForumPostPage() {
                 variant: "destructive"
             });
             return;
-        }
+
         // Update the replies
         const updatedReplies = replies.map(reply => ({
             ...reply,
@@ -220,7 +219,7 @@ export default function ForumPostPage() {
                 description: "Please sign in to report content",
             });
             return;
-        }
+
         toast({
             title: "Report submitted",
             description: "A moderator will review this content",
@@ -373,4 +372,4 @@ export default function ForumPostPage() {
         </div>
       </div>
     </>);
-}
+</Card>}}}}}}}}}

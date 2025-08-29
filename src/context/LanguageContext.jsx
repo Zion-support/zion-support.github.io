@@ -14,7 +14,7 @@ export function LanguageProvider({ children }) {
             'get_started': 'Comenzar',
             'learn_more': 'Saber Más',
             'contact_us': 'Contáctanos'
-        }
+
     };
     const t = (key) => {
         return translations[language]?.[key] || key;
@@ -23,11 +23,11 @@ export function LanguageProvider({ children }) {
     return (<LanguageContext.Provider value={{ language, setLanguage, t, isRTL }}>
       {children}
     </LanguageContext.Provider>);
-}
+
 export function useLanguage() {
     const context = useContext(LanguageContext);
     if (!context) {
         throw new Error('useLanguage must be used within a LanguageProvider');
-    }
+
     return context;
-}
+}}}}

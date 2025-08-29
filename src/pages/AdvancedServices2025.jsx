@@ -38,7 +38,7 @@ const AdvancedServices2025 = () => {
                     marketPosition: "Next-generation CX platform for customer-centric businesses",
                     competitors: ["Adobe Experience Cloud", "Salesforce Service Cloud", "Oracle CX"],
                     competitiveAdvantage: "AI-driven personalization, real-time optimization, and comprehensive analytics"
-                }
+
             ]
         },
         {
@@ -77,7 +77,7 @@ const AdvancedServices2025 = () => {
                     marketPosition: "Enterprise blockchain solutions for innovative organizations",
                     competitors: ["Ethereum Enterprise", "Hyperledger", "Corda"],
                     competitiveAdvantage: "Custom development, enterprise integration, and regulatory compliance"
-                }
+
             ]
         },
         {
@@ -149,7 +149,7 @@ const AdvancedServices2025 = () => {
                     marketPosition: "Intelligent event management for modern organizations",
                     competitors: ["Eventbrite", "Cvent", "Hopin"],
                     competitiveAdvantage: "AI-powered automation, intelligent optimization, and comprehensive analytics"
-                }
+
             ]
         },
         {
@@ -221,7 +221,7 @@ const AdvancedServices2025 = () => {
                     marketPosition: "Intelligent data center management for large-scale operations",
                     competitors: ["Nutanix", "VMware", "OpenStack"],
                     competitiveAdvantage: "AI-driven optimization, predictive maintenance, and comprehensive management"
-                }
+
             ]
         },
         {
@@ -293,9 +293,9 @@ const AdvancedServices2025 = () => {
                     marketPosition: "Energy AI for utility and energy companies",
                     competitors: ["Schneider Electric", "Siemens", "GE"],
                     competitiveAdvantage: "Specialized energy AI, predictive analytics, and sustainability focus"
-                }
+
             ]
-        }
+
     ];
     return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white">
       <section className="py-20 px-4 sm:px-6 lg:px-8">
@@ -407,3 +407,4 @@ const AdvancedServices2025 = () => {
     </div>);
 };
 export default AdvancedServices2025;
+}}}}}}

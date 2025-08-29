@@ -27,7 +27,7 @@ const ITInfrastructure = () => {
       description: "System and network performance analysis and improvement",
       features: ["Performance Monitoring", "Bottleneck Analysis", "Optimization Strategies", "Capacity Planning"],
       icon: "⚡"
-    }
+
   ];
 
   const infrastructureFeatures = [
@@ -208,3 +208,4 @@ const ITInfrastructure = () => {
 };
 
 export default ITInfrastructure;
+}

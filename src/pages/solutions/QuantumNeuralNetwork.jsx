@@ -1,6 +1,5 @@
 import React from 'react';
-import { Brain, Zap, Target, TrendingUp, Shield, Globe, Lightbulb, Atom, CircuitBoard } from 'lucide-react';
-const QuantumNeuralNetwork = () => {
+import { Brain, Zap, Target, TrendingUp, Shield, Globe, Lightbulb, Atom, CircuitBoard const QuantumNeuralNetwork = () => {
     const quantumFeatures = [
         {
             icon: Atom,
@@ -25,7 +24,7 @@ const QuantumNeuralNetwork = () => {
             title: "Performance Enhancement",
             description: "Exponential speedup for complex neural network operations",
             features: ["Faster training", "Improved accuracy", "Better convergence", "Enhanced scalability"]
-        }
+
     ];
     const applications = [
         {
@@ -63,7 +62,7 @@ const QuantumNeuralNetwork = () => {
             description: "Complex routing and supply chain optimization problems",
             icon: Target,
             benefits: ["Route optimization", "Supply chain efficiency", "Cost reduction", "Resource allocation"]
-        }
+
     ];
     const benefits = [
         "Exponential speedup for complex computations",
@@ -103,7 +102,7 @@ const QuantumNeuralNetwork = () => {
             phase: "Deployment",
             description: "Production deployment and user training",
             duration: "2-4 weeks"
-        }
+
     ];
     return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       {/* Hero Section */}
@@ -281,3 +280,4 @@ const QuantumNeuralNetwork = () => {
     </div>);
 };
 export default QuantumNeuralNetwork;
+}}}}

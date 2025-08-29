@@ -1,20 +1,20 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { 
-  Brain, 
-  Server, 
-  Rocket, 
-  Shield, 
-  Cloud, 
-  Atom, 
-  Sparkles, 
-  TrendingUp, 
-  Building, 
-  Heart, 
-  DollarSign, 
-  Truck, 
-  BookOpen, 
+import {
+  Brain,
+  Server,
+  Rocket,
+  Shield,
+  Cloud,
+  Atom,
+  Sparkles,
+  TrendingUp,
+  Building,
+  Heart,
+  DollarSign,
+  Truck,
+  BookOpen,
   Satellite,
   Users,
   FileText,
@@ -24,8 +24,6 @@ import {
   Cpu,
   Globe,
   Zap
-} from 'lucide-react';
-
 export default function Sitemap() {
   const sitemapSections = [
     {
@@ -201,7 +199,7 @@ export default function Sitemap() {
         { name: 'Case Studies', href: '/case-studies', description: 'Success stories' },
         { name: 'Research & Development', href: '/research-development', description: 'R&D initiatives' }
       ]
-    }
+
   ];
 
   return (
@@ -214,7 +212,7 @@ export default function Sitemap() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             className="text-center"
-          >
+
             <div className="flex items-center justify-center space-x-3 mb-6">
               <div className="w-16 h-16 bg-gradient-to-br from-cyan-500 to-blue-600 rounded-2xl flex items-center justify-center shadow-lg shadow-cyan-500/50">
                 <Globe className="w-8 h-8 text-white" />
@@ -228,9 +226,9 @@ export default function Sitemap() {
                 </p>
               </div>
             </div>
-            
+
             <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
-              Explore our comprehensive range of services, solutions, and resources. 
+              Explore our comprehensive range of services, solutions, and resources.
               Find exactly what you need to transform your business with cutting-edge technology.
             </p>
           </motion.div>
@@ -247,7 +245,7 @@ export default function Sitemap() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: sectionIndex * 0.1 }}
               className="bg-black/50 backdrop-blur-xl border border-cyan-500/30 rounded-2xl p-6 hover:border-cyan-400/50 transition-all duration-300"
-            >
+
               <div className="flex items-center space-x-3 mb-6">
                 <div className="w-12 h-12 bg-gradient-to-br from-cyan-500 to-blue-600 rounded-xl flex items-center justify-center">
                   <section.icon className="w-6 h-6 text-white" />
@@ -256,7 +254,7 @@ export default function Sitemap() {
                   {section.title}
                 </h2>
               </div>
-              
+
               <div className="space-y-3">
                 {section.links.map((link, linkIndex) => (
                   <motion.div
@@ -264,11 +262,11 @@ export default function Sitemap() {
                     initial={{ opacity: 0, x: -20 }}
                     animate={{ opacity: 1, x: 0 }}
                     transition={{ duration: 0.4, delay: sectionIndex * 0.1 + linkIndex * 0.05 }}
-                  >
+
                     <Link
                       to={link.href}
                       className="block p-3 rounded-lg bg-gray-900/50 hover:bg-gray-800/70 border border-gray-700 hover:border-cyan-500/50 transition-all duration-300 group"
-                    >
+
                       <div className="flex items-start justify-between">
                         <div className="flex-1">
                           <h3 className="text-cyan-400 font-semibold group-hover:text-cyan-300 transition-colors">
@@ -296,7 +294,7 @@ export default function Sitemap() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.8 }}
           className="mt-16 text-center"
-        >
+
           <div className="bg-black/50 backdrop-blur-xl border border-cyan-500/30 rounded-2xl p-8">
             <h3 className="text-2xl font-bold font-rajdhani text-cyan-400 mb-4">
               Need Help Finding Something?
@@ -308,19 +306,19 @@ export default function Sitemap() {
               <Link
                 to="/contact"
                 className="px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 font-semibold"
-              >
+
                 Contact Us
               </Link>
               <Link
                 to="/help"
                 className="px-6 py-3 bg-gray-700 text-white rounded-lg hover:bg-gray-600 transition-all duration-300 font-semibold"
-              >
+
                 Get Help
               </Link>
               <Link
                 to="/search"
                 className="px-6 py-3 bg-gray-700 text-white rounded-lg hover:bg-gray-600 transition-all duration-300 font-semibold"
-              >
+
                 Search Site
               </Link>
             </div>
@@ -329,4 +327,4 @@ export default function Sitemap() {
       </div>
     </div>
   );
-}
+}}</section>}

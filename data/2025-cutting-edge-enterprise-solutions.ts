@@ -131,5 +131,6 @@ export const cuttingEdgeEnterpriseSolutions: UnifiedService[] = [
     rating: 4.6,
     reviews: 41,
     contactInfo: contact
-  }
+
 ];
+}

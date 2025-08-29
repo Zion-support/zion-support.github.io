@@ -116,15 +116,15 @@ function fixUtilsFile(filePath) {
     content = content.replace(/au,\s*t,\s*h/g, "auth");
     if (content !== originalContent) {
       fs.writeFileSync(filePath, content, "utf8");
-      // console.log(`Fixed: ${filePath}`);
+      // // // console.log(`Fixed: ${filePath}`);
       return true;
-    }
+
     return false;
   } catch (error) {
-    // console.error(`Error processing ${filePath}:`, error.message);
+    // // // console.error(`Error processing ${filePath}:`, error.message);
     return false;
-  }
-}
+
+
 async function fixAllUtilsFiles() {
   const files = await glob("utils/**/*.{ts,tsx}", {
     ignore: ["node_modules/**", ".next/**"],
@@ -133,8 +133,9 @@ async function fixAllUtilsFiles() {
   for (const file of files) {
     if (fixUtilsFile(file)) {
       fixedCount++;
-    }
-  }
-  // console.log(`Fixed ${fixedCount} utils files.`);
-}
+
+
+  // // // console.log(`Fixed ${fixedCount} utils files.`);
+
 fixAllUtilsFiles();
+}}}}}}}}}

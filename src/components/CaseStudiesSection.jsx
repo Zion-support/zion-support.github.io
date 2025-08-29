@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { TrendingUp, Users, ArrowRight, Star, Building, Globe, Zap, Shield } from 'lucide-react';
-const caseStudies = [
+import { TrendingUp, Users, ArrowRight, Star, Building, Globe, Zap, Shield const caseStudies = [
     {
         id: 'healthcare-ai',
         title: 'Healthcare AI Revolution',
@@ -105,7 +104,7 @@ const caseStudies = [
         rating: 5,
         videoUrl: '/videos/manufacturing-case-study.mp4',
         imageUrl: '/images/manufacturing-iot.jpg'
-    }
+
 ];
 const industries = [
     { name: 'Healthcare', count: 25, icon: <Shield className="w-5 h-5"/> },
@@ -125,8 +124,8 @@ export function CaseStudiesSection() {
             transition: {
                 staggerChildren: 0.15,
                 delayChildren: 0.1
-            }
-        }
+
+
     };
     const itemVariants = {
         hidden: { y: 30, opacity: 0 },
@@ -136,8 +135,8 @@ export function CaseStudiesSection() {
             transition: {
                 duration: 0.6,
                 ease: "easeOut"
-            }
-        }
+
+
     };
     return (<section className="py-20 bg-gradient-to-br from-zion-slate-dark via-zion-blue-dark to-zion-blue relative overflow-hidden">
       {/* Background decorative elements */}
@@ -293,4 +292,4 @@ export function CaseStudiesSection() {
         </motion.div>
       </div>
     </section>);
-}
+}}}}}}}

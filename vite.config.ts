@@ -1,8 +1,7 @@
-import { defineConfig } from 'vite'
-import react from '@vitejs/plugin-react'
-import { resolve } from 'path'
+import react from '@vitejs/plugin-react';
+import { resolve } from 'path';
+import { defineConfig } from 'vite';
 
-// https://vite.dev/config/
 export default defineConfig({
   plugins: [react()],
   resolve: {
@@ -10,17 +9,13 @@ export default defineConfig({
       '@': resolve(__dirname, 'src'),
       '@components': resolve(__dirname, 'src/components'),
       '@pages': resolve(__dirname, 'src/pages'),
-      '@layout': resolve(__dirname, 'src/layout'),
       '@utils': resolve(__dirname, 'src/utils'),
-      '@hooks': resolve(__dirname, 'src/hooks'),
-      '@types': resolve(__dirname, 'src/types'),
-      '@assets': resolve(__dirname, 'src/assets'),
-      '@styles': resolve(__dirname, 'src/styles'),
       '@data': resolve(__dirname, 'src/data'),
-      '@services': resolve(__dirname, 'src/services'),
-      '@context': resolve(__dirname, 'src/context'),
-      '@constants': resolve(__dirname, 'src/constants')
-    }
+      '@styles': resolve(__dirname, 'src/styles'),
+      '@types': resolve(__dirname, 'src/types'),
+      '@hooks': resolve(__dirname, 'src/hooks'),
+      '@services': resolve(__dirname, 'src/services')
+
   },
   build: {
     target: 'esnext',
@@ -42,20 +37,20 @@ export default defineConfig({
           const ext = info[info.length - 1];
           if (/png|jpe?g|svg|gif|tiff|bmp|ico/i.test(ext)) {
             return `images/[name]-[hash][extname]`;
-          }
+
           if (/css/i.test(ext)) {
             return `css/[name]-[hash][extname]`;
-          }
+
           return `assets/[name]-[hash][extname]`;
-        }
-      }
+
+
     },
     terserOptions: {
       compress: {
         drop_console: true,
         drop_debugger: true,
         pure_funcs: ['console.log', 'console.info', 'console.debug', 'console.warn']
-      }
+
     },
     chunkSizeWarningLimit: 1000
   },
@@ -68,26 +63,16 @@ export default defineConfig({
       'lucide-react',
       'date-fns',
       'clsx',
-      'tailwind-merge'
-    ],
-    exclude: ['@vite/client', '@vite/env']
+      'tailwind-merge',
+      'react-hook-form',
+      '@hookform/resolvers',
+      'zod'
+    ]
   },
   server: {
     port: 3000,
     host: true,
-    open: true,
-    cors: true,
-    hmr: {
-      overlay: false
-    },
-    proxy: {
-      '/api': {
-        target: 'http://localhost:5000',
-        changeOrigin: true,
-        secure: false,
-        rewrite: (path) => path.replace(/^\/api/, '/api')
-      }
-    }
+    open: true
   },
   preview: {
     port: 4173,
@@ -98,10 +83,10 @@ export default defineConfig({
     devSourcemap: true,
     postcss: {
       plugins: []
-    }
+
   },
   define: {
     __APP_VERSION__: JSON.stringify(process.env.npm_package_version),
     __BUILD_TIME__: JSON.stringify(new Date().toISOString())
-  }
-})
+
+});}}}}}}}}

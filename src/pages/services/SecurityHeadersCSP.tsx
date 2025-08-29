@@ -1,8 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Shield, Lock, Code, Globe, DollarSign, ExternalLink } from 'lucide-react';
-
-const SecurityHeadersCSP: React.FC = () => {
+import { Shield, Lock, Code, Globe, DollarSign, ExternalLink const SecurityHeadersCSP: React.FC = () => {
 	const items = [
 		{ icon: Shield, title: 'Best-Practice Headers', desc: 'HSTS, X-Frame-Options, X-Content-Type-Options, Referrer-Policy, and more.' },
 		{ icon: Code, title: 'CSP Builder', desc: 'Generate strict Content Security Policy with nonces/hashes and report-only rollout.' },
@@ -53,4 +51,4 @@ const SecurityHeadersCSP: React.FC = () => {
 	);
 };
 
-export default SecurityHeadersCSP;
+export default SecurityHeadersCSP;}

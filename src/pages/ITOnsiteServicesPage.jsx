@@ -25,7 +25,7 @@ export default function ITOnsiteServicesPage() {
                 title: "Payment Successful",
                 description: "Your IT onsite service request has been received. Our team will contact you shortly.",
             });
-        }
+
     }, [success]);
     // Popular countries for the featured cards
     const popularCountries = ["United States", "United Kingdom", "Canada", "Germany", "Japan", "Singapore"];
@@ -91,4 +91,4 @@ export default function ITOnsiteServicesPage() {
                     <TrustedBySection />
                         ,
                             <QuoteFormSection />);
-}
+}}

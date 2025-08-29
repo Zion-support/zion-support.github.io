@@ -6,8 +6,7 @@ import { Badge } from '@/components/ui/badge';
 import { Input } from '@/components/ui/input';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
-import { Search, Star, Globe, Phone, Mail, MapPin, ExternalLink, TrendingUp, Shield, Cloud, Brain, Database, Code, Zap, Heart, DollarSign, Link, Users, CheckCircle } from 'lucide-react';
-import { SEO } from '@/components/SEO';
+import { Search, Star, Globe, Phone, Mail, MapPin, ExternalLink, TrendingUp, Shield, Cloud, Brain, Database, Code, Zap, Heart, DollarSign, Link, Users, CheckCircle import { SEO } from '@/components/SEO';
 export default function EnhancedServicesPage() {
     const [searchTerm, setSearchTerm] = useState('');
     const [selectedCategory, setSelectedCategory] = useState('all');
@@ -55,7 +54,7 @@ export default function EnhancedServicesPage() {
                 return <Zap className="w-5 h-5"/>;
             default:
                 return <Code className="w-5 h-5"/>;
-        }
+
     };
     const getPriceRange = (price) => {
         if (price <= 2000)
@@ -374,4 +373,4 @@ export default function EnhancedServicesPage() {
         </div>
       </section>
     </div>);
-}
+</Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card>}}}

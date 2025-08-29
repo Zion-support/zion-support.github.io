@@ -38,7 +38,7 @@ export interface InnovativeMicroSaas2026 {
   customers: number;
   rating: number;
   reviews: number;
-}
+
 const contact = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
@@ -275,5 +275,5 @@ export const innovativeMicroSaas2026: InnovativeMicroSaas2026[] = [
     customers: 156,
     rating: 4.8,
     reviews: 445
-  }
-];
+
+];}}

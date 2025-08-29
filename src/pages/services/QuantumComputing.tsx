@@ -1,7 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Atom, Zap, Brain, BarChart3, Target, CheckCircle, ArrowRight, Globe, Users, Clock, Shield, Eye, Cpu, Network, Database, Lock } from 'lucide-react';
-import { SEO } from '@/components/SEO';
+import { Atom, Zap, Brain, BarChart3, Target, CheckCircle, ArrowRight, Globe, Users, Clock, Shield, Eye, Cpu, Network, Database, Lock import { SEO } from '@/components/SEO';
 import { Link } from 'react-router-dom';
 
 export default function QuantumComputing() {
@@ -35,7 +34,7 @@ export default function QuantumComputing() {
       icon: Shield,
       title: "Post-Quantum Security",
       description: "Prepare for quantum threats with quantum-resistant cryptographic solutions"
-    }
+
   ];
 
   const pricing = [
@@ -85,7 +84,7 @@ export default function QuantumComputing() {
       ],
       cta: "Contact Sales",
       popular: false
-    }
+
   ];
 
   const benefits = [
@@ -108,7 +107,7 @@ export default function QuantumComputing() {
       icon: Users,
       title: "Future-Proof Solutions",
       description: "Build quantum-ready applications for the post-quantum era"
-    }
+
   ];
 
   const applications = [
@@ -129,7 +128,7 @@ export default function QuantumComputing() {
       title: "Logistics",
       description: "Route optimization, supply chain management, and scheduling",
       examples: ["Route planning", "Inventory optimization", "Resource allocation"]
-    }
+
   ];
 
   return (
@@ -160,7 +159,7 @@ export default function QuantumComputing() {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-            >
+
               <div className="inline-flex items-center px-4 py-2 rounded-full bg-indigo-500/10 border border-indigo-500/20 text-indigo-400 text-sm font-medium mb-6">
                 <Atom className="w-4 h-4 mr-2" />
                 Quantum Computing Excellence
@@ -176,14 +175,14 @@ export default function QuantumComputing() {
                 <Link
                   to="/contact"
                   className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-indigo-500 to-purple-500 text-white font-semibold rounded-lg hover:from-indigo-600 hover:to-purple-600 transition-all duration-300 transform hover:scale-105"
-                >
+
                   Get Started
                   <ArrowRight className="w-5 h-5 ml-2" />
                 </Link>
                 <Link
                   to="/request-quote"
                   className="inline-flex items-center px-8 py-4 border border-indigo-500/30 text-indigo-400 font-semibold rounded-lg hover:bg-indigo-500/10 transition-all duration-300"
-                >
+
                   Request Quote
                 </Link>
               </div>
@@ -200,7 +199,7 @@ export default function QuantumComputing() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
-            >
+
               <h2 className="text-4xl font-bold text-white mb-4">
                 Quantum Computing Applications
               </h2>
@@ -218,7 +217,7 @@ export default function QuantumComputing() {
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
                   viewport={{ once: true }}
-                >
+
                   <div className="w-12 h-12 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-lg flex items-center justify-center mb-4">
                     <application.icon className="w-6 h-6 text-white" />
                   </div>
@@ -247,7 +246,7 @@ export default function QuantumComputing() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
-            >
+
               <h2 className="text-4xl font-bold text-white mb-4">
                 Why Choose Our Quantum Computing?
               </h2>
@@ -265,7 +264,7 @@ export default function QuantumComputing() {
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
                   viewport={{ once: true }}
-                >
+
                   <div className="w-12 h-12 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-lg flex items-center justify-center mb-4">
                     <feature.icon className="w-6 h-6 text-white" />
                   </div>
@@ -286,7 +285,7 @@ export default function QuantumComputing() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
-            >
+
               <h2 className="text-4xl font-bold text-white mb-4">
                 Transparent Pricing
               </h2>
@@ -308,7 +307,7 @@ export default function QuantumComputing() {
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
                   viewport={{ once: true }}
-                >
+
                   {plan.popular && (
                     <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                       <span className="px-4 py-2 bg-gradient-to-r from-indigo-500 to-purple-500 text-white text-sm font-semibold rounded-full">
@@ -342,7 +341,7 @@ export default function QuantumComputing() {
                         ? 'bg-gradient-to-r from-indigo-500 to-purple-500 text-white hover:from-indigo-600 hover:to-purple-600'
                         : 'bg-white/10 text-white hover:bg-white/20 border border-white/20'
                     }`}
-                  >
+
                     {plan.cta}
                   </Link>
                 </motion.div>
@@ -360,7 +359,7 @@ export default function QuantumComputing() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
-            >
+
               <h2 className="text-4xl font-bold text-white mb-4">
                 Business Benefits
               </h2>
@@ -378,7 +377,7 @@ export default function QuantumComputing() {
                   whileInView={{ opacity: 1, x: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
                   viewport={{ once: true }}
-                >
+
                   <div className="w-12 h-12 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-lg flex items-center justify-center flex-shrink-0">
                     <benefit.icon className="w-6 h-6 text-white" />
                   </div>
@@ -400,7 +399,7 @@ export default function QuantumComputing() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
-            >
+
               <h2 className="text-4xl font-bold text-white mb-6">
                 Ready to Go Quantum?
               </h2>
@@ -411,14 +410,14 @@ export default function QuantumComputing() {
                 <Link
                   to="/contact"
                   className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-indigo-500 to-purple-500 text-white font-semibold rounded-lg hover:from-indigo-600 hover:to-purple-600 transition-all duration-300 transform hover:scale-105"
-                >
+
                   Start Your Journey
                   <ArrowRight className="w-5 h-5 ml-2" />
                 </Link>
                 <Link
                   to="/request-quote"
                   className="inline-flex items-center px-8 py-4 border border-indigo-500/30 text-indigo-400 font-semibold rounded-lg hover:bg-indigo-500/10 transition-all duration-300"
-                >
+
                   Get Custom Quote
                 </Link>
               </div>
@@ -428,4 +427,4 @@ export default function QuantumComputing() {
       </div>
     </div>
   );
-}
+</div></div></div>}}}}}}

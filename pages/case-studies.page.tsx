@@ -16,8 +16,6 @@ import {
   Cloud,
   Brain,
   Globe
-} from 'lucide-react';
-
 const caseStudies = [
   {
     id: 1,
@@ -162,7 +160,7 @@ const caseStudies = [
     duration: "15 months",
     roi: "500%",
     image: "/images/case-study-6.jpg"
-  }
+
 ];
 
 const industries = ['All', 'Technology', 'Healthcare', 'Finance', 'Banking', 'Manufacturing', 'Retail'];
@@ -194,7 +192,7 @@ export default function CaseStudies() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             className="text-center"
-          >
+
             <div className="inline-flex items-center gap-2 bg-zion-cyan/20 text-zion-cyan px-6 py-3 rounded-full border border-zion-cyan/30 mb-6">
               <Award className="w-5 h-5" />
               <span className="font-medium">Success Stories</span>
@@ -235,7 +233,7 @@ export default function CaseStudies() {
                   value={selectedIndustry}
                   onChange={(e) => setSelectedIndustry(e.target.value)}
                   className="w-full px-4 py-3 bg-white/10 border border-white/20 text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-zion-cyan"
-                >
+
                   {industries.map(industry => (
                     <option key={industry} value={industry}>{industry}</option>
                   ))}
@@ -248,7 +246,7 @@ export default function CaseStudies() {
                   value={selectedTechnology}
                   onChange={(e) => setSelectedTechnology(e.target.value)}
                   className="w-full px-4 py-3 bg-white/10 border border-white/20 text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-zion-cyan"
-                >
+
                   {technologies.map(tech => (
                     <option key={tech} value={tech}>{tech}</option>
                   ))}
@@ -270,7 +268,7 @@ export default function CaseStudies() {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 className="bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl p-6 hover:bg-white/10 hover:border-zion-cyan/30 transition-all duration-300"
-              >
+
                 {/* Header */}
                 <div className="flex items-start justify-between mb-4">
                   <div>
@@ -352,7 +350,7 @@ export default function CaseStudies() {
                   <Link
                     href={`/case-studies/${study.id}`}
                     className="inline-flex items-center text-zion-cyan hover:text-zion-cyan-light transition-colors duration-300"
-                  >
+
                     Read Full Case Study
                     <ArrowRight className="ml-2 h-4 w-4" />
                   </Link>
@@ -376,7 +374,7 @@ export default function CaseStudies() {
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
             className="bg-gradient-to-r from-zion-cyan to-zion-purple rounded-3xl p-8"
-          >
+
             <h2 className="text-3xl font-bold text-white mb-4">
               Ready to Create Your Success Story?
             </h2>
@@ -388,14 +386,14 @@ export default function CaseStudies() {
               <Link
                 href="/contact"
                 className="inline-flex items-center bg-white text-zion-cyan px-8 py-4 rounded-xl hover:bg-zion-slate-light transition-all duration-300 font-medium text-lg"
-              >
+
                 Get Started Today
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Link>
               <Link
                 href="/services"
                 className="inline-flex items-center border-2 border-white text-white px-8 py-4 rounded-xl hover:bg-white hover:text-zion-cyan transition-all duration-300 font-medium text-lg"
-              >
+
                 View Our Services
               </Link>
             </div>
@@ -404,4 +402,4 @@ export default function CaseStudies() {
       </section>
     </div>
   );
-}
+}}}

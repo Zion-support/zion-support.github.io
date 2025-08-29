@@ -30,7 +30,7 @@ export const cuttingEdgeMicroSaasServices2025 = [
         price: 1299,
         period: 'month',
         features: ['Unlimited customers', 'Full AI platform', 'Dedicated specialists', '24/7 support']
-      }
+
     },
     category: 'Customer Success',
     tags: ['Customer Success', 'AI', 'Churn Prediction', 'Engagement', 'Analytics'],
@@ -83,7 +83,7 @@ export const cuttingEdgeMicroSaasServices2025 = [
         price: 1999,
         period: 'month',
         features: ['Full quantum platform', 'Custom algorithms', 'Dedicated specialists', '24/7 support']
-      }
+
     },
     category: 'Supply Chain',
     tags: ['Supply Chain', 'Quantum Computing', 'Logistics', 'Optimization', 'Analytics'],
@@ -136,7 +136,7 @@ export const cuttingEdgeMicroSaasServices2025 = [
         price: 999,
         period: 'month',
         features: ['Unlimited verifications', 'Full verification platform', 'Dedicated specialists', '24/7 support']
-      }
+
     },
     category: 'Identity Verification',
     tags: ['Identity Verification', 'Blockchain', 'Biometrics', 'Security', 'Compliance'],
@@ -189,7 +189,7 @@ export const cuttingEdgeMicroSaasServices2025 = [
         price: 1699,
         period: 'month',
         features: ['Unlimited employees', 'Full analytics platform', 'Dedicated specialists', '24/7 support']
-      }
+
     },
     category: 'HR Analytics',
     tags: ['HR Analytics', 'AI', 'Performance Management', 'Employee Engagement', 'Predictive Analytics'],
@@ -242,7 +242,7 @@ export const cuttingEdgeMicroSaasServices2025 = [
         price: 2499,
         period: 'month',
         features: ['Full risk management platform', 'Custom algorithms', 'Dedicated specialists', '24/7 support']
-      }
+
     },
     category: 'Financial Risk Management',
     tags: ['Risk Management', 'Quantum Computing', 'Financial Analytics', 'Portfolio Optimization', 'Compliance'],
@@ -263,5 +263,5 @@ export const cuttingEdgeMicroSaasServices2025 = [
     ],
     integrations: ['Bloomberg Terminal', 'Reuters Eikon', 'Trading Platforms', 'Risk Management Systems', 'Financial Data Providers'],
     compliance: ['Basel III', 'Solvency II', 'Dodd-Frank', 'Financial Regulations', 'Risk Management Standards']
-  }
-];
+
+];}}}}}}

@@ -38,7 +38,7 @@ export interface NextGenInnovation2025 {
   customers: number;
   rating: number;
   reviews: number;
-}
+
 export const nextGenInnovations2025: NextGenInnovation2025[] = [
   // Next-Gen AI & Robotics
   {
@@ -402,5 +402,5 @@ export const nextGenInnovations2025: NextGenInnovation2025[] = [
     customers: 320,
     rating: 4.8,
     reviews: 267
-  }
-];
+
+];}}

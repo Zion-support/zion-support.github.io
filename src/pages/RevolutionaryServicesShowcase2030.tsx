@@ -44,7 +44,6 @@ import {
   SortAsc,
   SortDesc,
   X
-} from 'lucide-react';
 import { SEO } from '../components/SEO';
 import { REVOLUTIONARY_SERVICES_2030 } from '../data/revolutionaryServices2030';
 
@@ -98,7 +97,7 @@ export default function RevolutionaryServicesShowcase2030() {
         break;
       default:
         comparison = 0;
-    }
+
     return sortOrder === 'asc' ? comparison : -comparison;
   });
 
@@ -212,7 +211,7 @@ export default function RevolutionaryServicesShowcase2030() {
     if (typeof roi === 'string') {
       const roiNumber = parseInt(roi.match(/\d+/)?.[0] || '0');
       return sum + roiNumber;
-    }
+
     return sum;
   }, 0) / REVOLUTIONARY_SERVICES_2030.length;
 
@@ -236,7 +235,7 @@ export default function RevolutionaryServicesShowcase2030() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               className="text-center"
-            >
+
               <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
                 Revolutionary Services
                 <span className="block bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
@@ -308,7 +307,7 @@ export default function RevolutionaryServicesShowcase2030() {
                     value={sortBy}
                     onChange={(e) => setSortBy(e.target.value)}
                     className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg text-white px-4 py-3 focus:outline-none focus:ring-2 focus:ring-purple-500"
-                  >
+
                     <option value="aiScore">Sort by AI Score</option>
                     <option value="price">Sort by Price</option>
                     <option value="rating">Sort by Rating</option>
@@ -319,7 +318,7 @@ export default function RevolutionaryServicesShowcase2030() {
                   <button
                     onClick={() => setSortOrder(sortOrder === 'asc' ? 'desc' : 'asc')}
                     className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg text-white px-4 py-3 hover:bg-white/20 transition-colors"
-                  >
+
                     {sortOrder === 'asc' ? <SortAsc className="w-5 h-5" /> : <SortDesc className="w-5 h-5" />}
                   </button>
                 </div>
@@ -331,7 +330,7 @@ export default function RevolutionaryServicesShowcase2030() {
                         ? 'bg-gradient-to-r from-purple-600 to-pink-600 text-white'
                         : 'bg-white/10 backdrop-blur-sm border border-white/20 text-white hover:bg-white/20'
                     }`}
-                  >
+
                     Grid
                   </button>
                   <button
@@ -341,7 +340,7 @@ export default function RevolutionaryServicesShowcase2030() {
                         ? 'bg-gradient-to-r from-purple-600 to-pink-600 text-white'
                         : 'bg-white/10 backdrop-blur-sm border border-white/20 text-white hover:bg-white/20'
                     }`}
-                  >
+
                     List
                   </button>
                 </div>
@@ -358,7 +357,7 @@ export default function RevolutionaryServicesShowcase2030() {
                         ? 'bg-gradient-to-r from-purple-600 to-pink-600 text-white shadow-lg'
                         : 'bg-white/10 backdrop-blur-sm border border-white/20 text-white hover:bg-white/20'
                     }`}
-                  >
+
                     {category === 'all' ? 'All Categories' : category}
                   </button>
                 ))}
@@ -393,7 +392,7 @@ export default function RevolutionaryServicesShowcase2030() {
                   transition={{ duration: 0.5, delay: index * 0.05 }}
                   className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl overflow-hidden hover:bg-white/10 transition-all duration-300 cursor-pointer group"
                   onClick={() => handleServiceSelect(service)}
-                >
+
                   <div className={`p-6 bg-gradient-to-r ${getCategoryColor(service.category)}`}>
                     <div className="flex items-center justify-between">
                       {getCategoryIcon(service.category)}
@@ -444,7 +443,7 @@ export default function RevolutionaryServicesShowcase2030() {
                         <span
                           key={tagIndex}
                           className="px-3 py-1 bg-white/10 rounded-full text-xs text-white"
-                        >
+
                           {tag}
                         </span>
                       ))}
@@ -469,7 +468,7 @@ export default function RevolutionaryServicesShowcase2030() {
                     onClick={() => handlePageChange(currentPage - 1)}
                     disabled={currentPage === 1}
                     className="px-4 py-2 bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg text-white disabled:opacity-50 disabled:cursor-not-allowed hover:bg-white/20 transition-colors"
-                  >
+
                     <ChevronLeft className="w-5 h-5" />
                   </button>
 
@@ -482,7 +481,7 @@ export default function RevolutionaryServicesShowcase2030() {
                           ? 'bg-gradient-to-r from-purple-600 to-pink-600 text-white'
                           : 'bg-white/10 backdrop-blur-sm border border-white/20 text-white hover:bg-white/20'
                       }`}
-                    >
+
                       {page}
                     </button>
                   ))}
@@ -491,7 +490,7 @@ export default function RevolutionaryServicesShowcase2030() {
                     onClick={() => handlePageChange(currentPage + 1)}
                     disabled={currentPage === totalPages}
                     className="px-4 py-2 bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg text-white disabled:opacity-50 disabled:cursor-not-allowed hover:bg-white/20 transition-colors"
-                  >
+
                     <ChevronRight className="w-5 h-5" />
                   </button>
                 </div>
@@ -508,7 +507,7 @@ export default function RevolutionaryServicesShowcase2030() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               className="text-center mb-16"
-            >
+
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
                 Ready to Revolutionize Your Business?
               </h2>
@@ -525,7 +524,7 @@ export default function RevolutionaryServicesShowcase2030() {
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.8 }}
                 className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8"
-              >
+
                 <h3 className="text-2xl font-bold text-white mb-6">Request Revolutionary Service Demo</h3>
                 <form className="space-y-6">
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -564,7 +563,7 @@ export default function RevolutionaryServicesShowcase2030() {
                   <button
                     type="submit"
                     className="w-full bg-gradient-to-r from-purple-600 to-pink-600 text-white py-4 rounded-lg font-semibold hover:from-purple-700 hover:to-pink-700 transition-all duration-300 transform hover:scale-105"
-                  >
+
                     Get Revolutionary Demo
                   </button>
                 </form>
@@ -576,7 +575,7 @@ export default function RevolutionaryServicesShowcase2030() {
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.8 }}
                 className="space-y-8"
-              >
+
                 <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8">
                   <h3 className="text-2xl font-bold text-white mb-6">Contact Information</h3>
                   <div className="space-y-4">
@@ -643,7 +642,7 @@ export default function RevolutionaryServicesShowcase2030() {
             animate={{ opacity: 1, scale: 1 }}
             exit={{ opacity: 0, scale: 0.9 }}
             className="bg-slate-900 border border-white/20 rounded-2xl max-w-4xl w-full max-h-[90vh] overflow-y-auto"
-          >
+
             <div className="p-8">
               <div className="flex items-center justify-between mb-6">
                 <div className={`p-4 rounded-xl bg-gradient-to-r ${getCategoryColor(selectedService.category)}`}>
@@ -652,7 +651,7 @@ export default function RevolutionaryServicesShowcase2030() {
                 <button
                   onClick={closeModal}
                   className="text-white/60 hover:text-white transition-colors"
-                >
+
                   <X className="w-6 h-6" />
                 </button>
               </div>
@@ -720,7 +719,7 @@ export default function RevolutionaryServicesShowcase2030() {
                     <span
                       key={index}
                       className="px-3 py-1 bg-white/10 rounded-full text-sm text-white"
-                    >
+
                       {integration}
                     </span>
                   ))}
@@ -734,7 +733,7 @@ export default function RevolutionaryServicesShowcase2030() {
                     <span
                       key={index}
                       className="px-3 py-1 bg-red-500/20 border border-red-500/30 rounded-full text-sm text-red-300"
-                    >
+
                       {competitor}
                   </span>
                   ))}
@@ -745,13 +744,13 @@ export default function RevolutionaryServicesShowcase2030() {
                 <a
                   href={`mailto:${selectedService.contactInfo.email}?subject=Inquiry about ${selectedService.title}`}
                   className="flex-1 bg-gradient-to-r from-purple-600 to-pink-600 text-white py-4 px-6 rounded-lg font-semibold text-center hover:from-purple-700 hover:to-pink-700 transition-all duration-300"
-                >
+
                   Get Revolutionary Demo
                 </a>
                 <a
                   href={`tel:${selectedService.contactInfo.phone}`}
                   className="flex-1 border-2 border-white/30 text-white py-4 px-6 rounded-lg font-semibold text-center hover:bg-white/10 transition-all duration-300"
-                >
+
                   Call Now
                 </a>
               </div>
@@ -761,4 +760,4 @@ export default function RevolutionaryServicesShowcase2030() {
       )}
     </>
   );
-}
+</div>}}}}

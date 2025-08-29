@@ -2,7 +2,7 @@ import React from 'react';
 import { ReactNode } from 'react';
 interface LayoutProps {
   children: ReactNode;
-}
+
 const navigation: NavItem[] = [
   { label: 'Home', href: '/' },
   {
@@ -66,7 +66,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
               <a
                 href="tel:+13024640950"
                 className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg font-medium transition-colors"
-              >
+
                 📞 Call Us
               </a>
             </div>
@@ -88,7 +88,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
                       <button
                         onClick={() => toggleSidebarDropdown(item.label)}
                         className="flex items-center justify-between w-full px-3 py-2 text-sm font-medium rounded-md hover:bg-accent transition-colors"
-                      >
+
                         <span className="flex items-center space-x-2">
                           {item.icon && <item.icon className="w-4 h-4" />}
                           <span>{item.label}</span>
@@ -104,7 +104,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
                               key={child.label}
                               href={child.href}
                               className="block px-3 py-2 text-sm text-muted-foreground hover:text-foreground hover:bg-accent rounded-md transition-colors"
-                            >
+
                               {child.label}
                             </a>
                           ))}
@@ -115,7 +115,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
                     <a
                       href={item.href}
                       className="flex items-center space-x-2 px-3 py-2 text-sm font-medium rounded-md hover:bg-accent transition-colors"
-                    >
+
                       {item.icon && <item.icon className="w-4 h-4" />}
                       <span>{item.label}</span>
                     </a>
@@ -132,4 +132,4 @@ export default function Layout({ children }: { children: React.ReactNode }) {
       </div>
     </div>
   );
-}
+}}

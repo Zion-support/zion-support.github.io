@@ -32,7 +32,6 @@ import {
   Palette,
   Gamepad2,
   Music
-} from 'lucide-react';
 import { SEO } from "@/components/SEO";
 import { REVOLUTIONARY_SERVICES_2030 } from "@/data/revolutionaryServices2030";
 import { EMERGING_TECH_SERVICES_2030 } from "@/data/emergingTechServices2030";
@@ -95,7 +94,7 @@ export default function RevolutionaryServices2030() {
         return parseFloat(b.marketSize.replace(/[^0-9.]/g, '')) - parseFloat(a.marketSize.replace(/[^0-9.]/g, ''));
       default:
         return b.featured ? 1 : -1;
-    }
+
   });
 
   const getServiceIcon = (category: string) => {
@@ -108,7 +107,7 @@ export default function RevolutionaryServices2030() {
         return Shield;
       default:
         return Rocket;
-    }
+
   };
 
   const getServiceColor = (category: string) => {
@@ -121,7 +120,7 @@ export default function RevolutionaryServices2030() {
         return 'from-zion-purple to-zion-red';
       default:
         return 'from-zion-orange to-zion-green';
-    }
+
   };
 
   return (
@@ -138,7 +137,7 @@ export default function RevolutionaryServices2030() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-          >
+
             <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
               Revolutionary Services
               <span className="block bg-gradient-to-r from-zion-cyan via-zion-purple to-zion-orange bg-clip-text text-transparent">
@@ -153,14 +152,14 @@ export default function RevolutionaryServices2030() {
               <Link
                 to="/contact"
                 className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-blue text-white font-semibold rounded-lg hover:from-zion-blue hover:to-zion-cyan transition-all duration-300 transform hover:scale-105"
-              >
+
                 <Rocket className="mr-2 h-5 w-5" />
                 Get Started Today
               </Link>
               <Link
                 to="#services"
                 className="inline-flex items-center px-8 py-4 border-2 border-zion-cyan text-zion-cyan font-semibold rounded-lg hover:bg-zion-cyan hover:text-white transition-all duration-300"
-              >
+
                 <Target className="mr-2 h-5 w-5" />
                 Explore Services
               </Link>
@@ -178,7 +177,7 @@ export default function RevolutionaryServices2030() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
               className="text-center"
-            >
+
               <div className="text-4xl font-bold text-zion-cyan mb-2">{allServices.length}</div>
               <div className="text-gray-400">Revolutionary Services</div>
             </motion.div>
@@ -187,7 +186,7 @@ export default function RevolutionaryServices2030() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.1 }}
               className="text-center"
-            >
+
               <div className="text-4xl font-bold text-zion-purple mb-2">$2.1T+</div>
               <div className="text-gray-400">Combined Market Size</div>
             </motion.div>
@@ -196,7 +195,7 @@ export default function RevolutionaryServices2030() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
               className="text-center"
-            >
+
               <div className="text-4xl font-bold text-zion-orange mb-2">99.9%</div>
               <div className="text-gray-400">Uptime Guarantee</div>
             </motion.div>
@@ -205,7 +204,7 @@ export default function RevolutionaryServices2030() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.3 }}
               className="text-center"
-            >
+
               <div className="text-4xl font-bold text-zion-green mb-2">24/7</div>
               <div className="text-gray-400">Global Support</div>
             </motion.div>
@@ -230,7 +229,7 @@ export default function RevolutionaryServices2030() {
                         ? 'bg-gradient-to-r ' + category.color + ' text-white'
                         : 'bg-gray-800 text-gray-300 hover:bg-gray-700'
                     }`}
-                  >
+
                     <category.icon className="mr-2 h-4 w-4" />
                     {category.name}
                   </button>
@@ -248,7 +247,7 @@ export default function RevolutionaryServices2030() {
                         ? 'bg-zion-cyan text-white'
                         : 'bg-gray-800 text-gray-300 hover:bg-gray-700'
                     }`}
-                  >
+
                     {range.name}
                   </button>
                 ))}
@@ -259,7 +258,7 @@ export default function RevolutionaryServices2030() {
                 value={sortBy}
                 onChange={(e) => setSortBy(e.target.value)}
                 className="px-4 py-2 bg-gray-800 text-gray-300 rounded-lg border border-gray-700 focus:border-zion-cyan focus:outline-none"
-              >
+
                 {sortOptions.map((option) => (
                   <option key={option.id} value={option.id}>
                     {option.name}
@@ -284,7 +283,7 @@ export default function RevolutionaryServices2030() {
                     exit={{ opacity: 0, y: -20 }}
                     transition={{ duration: 0.5, delay: index * 0.1 }}
                     className="bg-gray-800 rounded-xl p-6 hover:bg-gray-700 transition-all duration-300 transform hover:scale-105 border border-gray-700 hover:border-zion-cyan"
-                  >
+
                     {/* Service Header */}
                     <div className="flex items-start justify-between mb-4">
                       <div className={`p-3 rounded-lg bg-gradient-to-r ${colorClass}`}>
@@ -353,7 +352,7 @@ export default function RevolutionaryServices2030() {
                       <Link
                         to={`/services/${service.id}`}
                         className="w-full bg-gradient-to-r from-zion-cyan to-zion-blue text-white text-center py-3 px-4 rounded-lg font-medium hover:from-zion-blue hover:to-zion-cyan transition-all duration-300 transform hover:scale-105"
-                      >
+
                         Learn More
                       </Link>
 
@@ -361,14 +360,14 @@ export default function RevolutionaryServices2030() {
                         <Link
                           to="/contact"
                           className="flex-1 bg-gray-700 text-white text-center py-2 px-3 rounded-lg text-sm font-medium hover:bg-gray-600 transition-all duration-300"
-                        >
+
                           <Phone className="inline mr-1 h-3 w-3" />
                           Contact
                         </Link>
                         <Link
                           to={service.website}
                           className="flex-1 bg-gray-700 text-white text-center py-2 px-3 rounded-lg text-sm font-medium hover:bg-gray-600 transition-all duration-300"
-                        >
+
                           <Globe className="inline mr-1 h-3 w-3" />
                           Website
                         </Link>
@@ -391,7 +390,7 @@ export default function RevolutionaryServices2030() {
                   setSortBy('featured');
                 }}
                 className="text-zion-cyan hover:text-zion-blue transition-colors duration-300"
-              >
+
                 Clear all filters
               </button>
             </div>
@@ -406,7 +405,7 @@ export default function RevolutionaryServices2030() {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-          >
+
             <h2 className="text-4xl font-bold text-white mb-6">
               Ready to Transform Your Business?
             </h2>
@@ -436,14 +435,14 @@ export default function RevolutionaryServices2030() {
               <Link
                 to="/contact"
                 className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-blue text-white font-semibold rounded-lg hover:from-zion-blue hover:to-zion-cyan transition-all duration-300 transform hover:scale-105"
-              >
+
                 <Mail className="mr-2 h-5 w-5" />
                 Get Started Today
               </Link>
               <Link
                 to="/pricing"
                 className="inline-flex items-center px-8 py-4 border-2 border-zion-cyan text-zion-cyan font-semibold rounded-lg hover:bg-zion-cyan hover:text-white transition-all duration-300"
-              >
+
                 <DollarSign className="mr-2 h-5 w-5" />
                 View Pricing
               </Link>
@@ -453,4 +452,4 @@ export default function RevolutionaryServices2030() {
       </section>
     </div>
   );
-}
+}}}}}

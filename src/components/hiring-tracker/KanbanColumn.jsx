@@ -18,7 +18,7 @@ export function KanbanColumn({ id, title, description, applications, count }) {
                 return "destructive";
             default:
                 return "outline";
-        }
+
     };
     const getColumnBgColor = (columnId) => {
         switch (columnId) {
@@ -28,7 +28,7 @@ export function KanbanColumn({ id, title, description, applications, count }) {
                 return "bg-red-50";
             default:
                 return "bg-muted/30";
-        }
+
     };
     return (<Card className={`${getColumnBgColor(id)} flex flex-col h-[calc(100vh-300px)] min-h-[500px]`}>
       <CardHeader className="pb-2">
@@ -53,4 +53,4 @@ export function KanbanColumn({ id, title, description, applications, count }) {
         </Droppable>
       </CardContent>
     </Card>);
-}
+</Card></Card></Card>}}}

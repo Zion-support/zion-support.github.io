@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Lightbulb, TestTube, Brain, Atom, Target, Award, ArrowRight, TrendingUp, Users, Star, Globe, Shield, Cpu, Network } from 'lucide-react';
-const researchAreas = [
+import { Lightbulb, TestTube, Brain, Atom, Target, Award, ArrowRight, TrendingUp, Users, Star, Globe, Shield, Cpu, Network const researchAreas = [
     {
         id: 1,
         title: "Artificial Intelligence & Machine Learning",
@@ -127,7 +126,7 @@ const researchAreas = [
         ],
         technologies: ["Energy Monitoring", "Green Computing", "Renewable Systems", "Sustainability Tools"],
         partners: ["DOE", "EPA", "Academic Institutions", "Green Tech Companies"]
-    }
+
 ];
 const innovationStats = [
     { icon: <Lightbulb className="w-6 h-6"/>, value: "120+", label: "Research Projects" },
@@ -169,7 +168,7 @@ const researchLabs = [
         equipment: "Security Testing Environment, Privacy Tools",
         projects: 9,
         researchers: 5
-    }
+
 ];
 export function InnovationResearchSection() {
     const [selectedResearch, setSelectedResearch] = useState(null);
@@ -181,8 +180,8 @@ export function InnovationResearchSection() {
             transition: {
                 staggerChildren: 0.15,
                 delayChildren: 0.1
-            }
-        }
+
+
     };
     const itemVariants = {
         hidden: { y: 30, opacity: 0 },
@@ -192,8 +191,8 @@ export function InnovationResearchSection() {
             transition: {
                 duration: 0.6,
                 ease: "easeOut"
-            }
-        }
+
+
     };
     return (<section className="py-20 bg-gradient-to-br from-zion-blue-dark via-zion-slate-dark to-zion-purple relative overflow-hidden">
       {/* Background decorative elements */}
@@ -384,4 +383,4 @@ export function InnovationResearchSection() {
         </motion.div>
       </div>
     </section>);
-}
+}}}}}}}}

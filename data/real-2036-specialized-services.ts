@@ -307,5 +307,5 @@ export const real2036SpecializedServices: Real2036SpecializedService[] = [
     integration: ['Spacecraft systems', 'Training facilities', 'Booking systems', 'Safety systems'],
     useCases: ['Space tourism', 'Training programs', 'Safety management', 'Customer experience'],
     technology: ['Space systems', 'Safety protocols', 'Training technology', 'Customer management']
-  }
-];
+
+];}

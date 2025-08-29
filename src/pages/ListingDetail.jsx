@@ -5,8 +5,7 @@ import { useNavigate } from 'react-router-dom';
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import ImageWithRetry from '@/components/ui/ImageWithRetry';
-import { Star, MessageSquare, Brain, Shield } from "lucide-react";
-import { cn } from "@/lib/utils";
+import { Star, MessageSquare, Brain, Shield import { cn } from "@/lib/utils";
 import { Link } from 'react-router-dom';
 import { MARKETPLACE_LISTINGS } from "@/data/marketplaceData";
 import { toast } from "@/hooks/use-toast";
@@ -37,14 +36,14 @@ export default function ListingDetail() {
             </div>
           </div>
         </div>);
-    }
+
     const handleContact = () => {
         if (user) {
             setIsChatOpen(true);
-        }
+
         else {
             setIsContactDialogOpen(true);
-        }
+
     };
     return (<div className="min-h-screen bg-zion-blue py-12 px-4">
         <div className="container mx-auto">
@@ -202,4 +201,4 @@ export default function ListingDetail() {
         </DialogContent>
       </Dialog>;
     ;
-}
+}}}}}

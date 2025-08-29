@@ -518,5 +518,6 @@ export const expandedInnovativeServices2025 = [
         customers: 34,
         rating: 4.8,
         reviews: 28
-    }
+
 ];
+}

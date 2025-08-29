@@ -23,7 +23,8 @@ const nextConfig = {
 			{ source: '/smart-crm-intelligence-suite', destination: '/services/smart-crm-intelligence-suite', permanent: true },
 			{ source: '/affiliate-attribution-suite', destination: '/services/affiliate-attribution-suite', permanent: true }
 		];
-	}
+
 };
 
 export default nextConfig;
+}

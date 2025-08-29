@@ -1,7 +1,5 @@
 import React, { useState } from 'react';
-import { Server, Users, Building, Database, Cloud, Shield, Brain, Zap, Globe, Cpu, Lock, BarChart3, Palette, Smartphone, Rocket, Target, Lightbulb, Code, Network, Eye, Star, ArrowRight } from 'lucide-react';
-
-export default function Categories() {
+import { Server, Users, Building, Database, Cloud, Shield, Brain, Zap, Globe, Cpu, Lock, BarChart3, Palette, Smartphone, Rocket, Target, Lightbulb, Code, Network, Eye, Star, ArrowRight export default function Categories() {
   const [activeCategory, setActiveCategory] = useState('all');
 
   const mainCategories = [
@@ -46,7 +44,7 @@ export default function Categories() {
       icon: <Code className="w-8 h-8" />,
       color: 'from-zion-indigo to-zion-purple',
       count: 41
-    }
+
   ];
 
   const subCategories = {
@@ -82,7 +80,7 @@ export default function Categories() {
         services: 8,
         talent: 5,
         equipment: 1
-      }
+
     ],
     'cloud': [
       {
@@ -108,7 +106,7 @@ export default function Categories() {
         services: 7,
         talent: 4,
         equipment: 1
-      }
+
     ],
     'cybersecurity': [
       {
@@ -134,7 +132,7 @@ export default function Categories() {
         services: 6,
         talent: 4,
         equipment: 3
-      }
+
     ],
     'data': [
       {
@@ -160,7 +158,7 @@ export default function Categories() {
         services: 6,
         talent: 5,
         equipment: 2
-      }
+
     ],
     'development': [
       {
@@ -186,7 +184,7 @@ export default function Categories() {
         services: 13,
         talent: 8,
         equipment: 1
-      }
+
     ]
   };
 
@@ -214,7 +212,7 @@ export default function Categories() {
       rating: 4.7,
       price: '$15,000/month',
       featured: true
-    }
+
   ];
 
   const getCategoryCount = (categoryId: string) => {
@@ -222,7 +220,7 @@ export default function Categories() {
       return Object.values(subCategories).flat().reduce((total, sub) =>
         total + sub.services + sub.talent + sub.equipment, 0
       );
-    }
+
     return subCategories[categoryId]?.reduce((total, sub) =>
       total + sub.services + sub.talent + sub.equipment, 0
     ) || 0;
@@ -263,7 +261,7 @@ export default function Categories() {
                     ? 'border-zion-cyan bg-zion-cyan/10'
                     : 'border-zion-slate-light bg-zion-slate hover:border-zion-cyan/50'
                 }`}
-              >
+
                 <div className={`w-16 h-16 rounded-lg bg-gradient-to-r ${category.color} flex items-center justify-center text-white mb-4`}>
                   {category.icon}
                 </div>
@@ -293,7 +291,7 @@ export default function Categories() {
                 <div
                   key={index}
                   className="bg-zion-slate border border-zion-slate-light rounded-lg p-6 hover:shadow-lg transition-shadow"
-                >
+
                   <div className="text-zion-cyan mb-4">{subCategory.icon}</div>
                   <h3 className="text-lg font-semibold text-white mb-2">{subCategory.name}</h3>
                   <p className="text-zion-slate-light text-sm mb-4">{subCategory.description}</p>
@@ -330,7 +328,7 @@ export default function Categories() {
               <div
                 key={index}
                 className="bg-zion-slate border border-zion-slate-light rounded-lg p-6 hover:shadow-lg transition-shadow"
-              >
+
                 {item.featured && (
                   <div className="inline-block bg-zion-cyan text-zion-slate-dark px-3 py-1 rounded-full text-xs font-medium mb-4">
                     Featured
@@ -369,13 +367,13 @@ export default function Categories() {
             <a
               href="/search"
               className="bg-zion-cyan text-zion-slate-dark px-8 py-3 rounded-lg font-semibold hover:bg-zion-cyan-light transition-colors"
-            >
+
               Advanced Search
             </a>
             <a
               href="/contact"
               className="border border-zion-cyan text-zion-cyan px-8 py-3 rounded-lg font-semibold hover:bg-zion-cyan hover:text-zion-slate-dark transition-colors"
-            >
+
               Contact Us
             </a>
           </div>
@@ -383,4 +381,4 @@ export default function Categories() {
       </div>
     </div>
   );
-}
+}}}}}}}}}}

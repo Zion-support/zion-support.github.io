@@ -18,8 +18,6 @@ import {
   Mail,
   Phone,
   Bot
-} from 'lucide-react';
-
 export default function AICustomerSupport() {
   const features = [
     {
@@ -51,7 +49,7 @@ export default function AICustomerSupport() {
       icon: Zap,
       title: 'Automated Workflows',
       description: 'Streamline support processes with intelligent automation and self-service options'
-    }
+
   ];
 
   const benefits = [
@@ -115,7 +113,7 @@ export default function AICustomerSupport() {
       ],
       cta: 'Contact Sales',
       popular: false
-    }
+
   ];
 
   return (
@@ -136,7 +134,7 @@ export default function AICustomerSupport() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               className="text-center max-w-4xl mx-auto"
-            >
+
               <h1 className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-green-400 via-emerald-500 to-teal-600 bg-clip-text text-transparent">
                 AI Customer Support
               </h1>
@@ -164,7 +162,7 @@ export default function AICustomerSupport() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               className="text-center mb-16"
-            >
+
               <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white">
                 AI-Powered Support Features
               </h2>
@@ -182,7 +180,7 @@ export default function AICustomerSupport() {
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
                   className="bg-slate-800/50 backdrop-blur-sm border border-slate-700/50 rounded-xl p-6 hover:border-green-500/50 transition-all duration-300 group"
-                >
+
                   <div className="inline-flex items-center justify-center w-12 h-12 bg-gradient-to-br from-green-500 to-emerald-600 rounded-lg mb-4 group-hover:scale-110 transition-transform duration-300">
                     <feature.icon className="w-6 h-6 text-white" />
                   </div>
@@ -202,7 +200,7 @@ export default function AICustomerSupport() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               className="text-center mb-16"
-            >
+
               <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white">
                 Proven Results
               </h2>
@@ -220,7 +218,7 @@ export default function AICustomerSupport() {
                   whileInView={{ opacity: 1, x: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
                   className="flex items-start space-x-3"
-                >
+
                   <CheckCircle className="w-6 h-6 text-green-400 mt-1 flex-shrink-0" />
                   <span className="text-gray-300">{benefit}</span>
                 </motion.div>
@@ -237,7 +235,7 @@ export default function AICustomerSupport() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               className="text-center mb-16"
-            >
+
               <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white">
                 Simple, Transparent Pricing
               </h2>
@@ -259,7 +257,7 @@ export default function AICustomerSupport() {
                       ? 'border-green-500/50 shadow-lg shadow-green-500/20'
                       : 'border-slate-700/50'
                   }`}
-                >
+
                   {plan.popular && (
                     <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                       <span className="bg-gradient-to-r from-green-500 to-emerald-600 text-white px-4 py-2 rounded-full text-sm font-semibold">
@@ -307,7 +305,7 @@ export default function AICustomerSupport() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               className="text-center max-w-4xl mx-auto"
-            >
+
               <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white">
                 Ready to Transform Your Customer Support?
               </h2>
@@ -329,4 +327,4 @@ export default function AICustomerSupport() {
       </div>
     </>
   );
-}
+}}}}

@@ -11,15 +11,12 @@ import {
   ExternalLink,
   Shield,
   Zap
-} from 'lucide-react';
-
 interface Props {
   children: ReactNode;
   fallback?: ReactNode;
   onError?: (error: Error, errorInfo: ErrorInfo) => void;
   showDetails?: boolean;
   className?: string;
-}
 
 interface State {
   hasError: boolean;
@@ -28,7 +25,6 @@ interface State {
   errorId: string | null;
   showDetails: boolean;
   isRecovering: boolean;
-}
 
 export class EnhancedErrorBoundary extends Component<Props, State> {
   constructor(props: Props) {
@@ -41,7 +37,6 @@ export class EnhancedErrorBoundary extends Component<Props, State> {
       showDetails: false,
       isRecovering: false
     };
-  }
 
   static getDerivedStateFromError(error: Error): Partial<State> {
     return {
@@ -49,7 +44,6 @@ export class EnhancedErrorBoundary extends Component<Props, State> {
       error,
       errorId: this.generateErrorId()
     };
-  }
 
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {
     this.setState({
@@ -57,22 +51,19 @@ export class EnhancedErrorBoundary extends Component<Props, State> {
     });
 
     // Log error to console
-    // console.error('Error caught by boundary:', error, errorInfo);
+    // // // console.error('Error caught by boundary:', error, errorInfo);
 
     // Call custom error handler if provided
     if (this.props.onError) {
       this.props.onError(error, errorInfo);
-    }
 
     // Log to external service (in production)
     if (process.env.NODE_ENV === 'production') {
       this.logErrorToService(error, errorInfo);
-    }
-  }
+
 
   private static generateErrorId(): string {
     return `err_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
-  }
 
   private logErrorToService(error: Error, errorInfo: ErrorInfo) {
     // This would typically send to a service like Sentry, LogRocket, etc.
@@ -88,7 +79,7 @@ export class EnhancedErrorBoundary extends Component<Props, State> {
         viewport: {
           width: window.innerWidth,
           height: window.innerHeight
-        }
+
       };
 
       // Example: Send to analytics service
@@ -97,16 +88,14 @@ export class EnhancedErrorBoundary extends Component<Props, State> {
           description: error.message,
           fatal: true
         });
-      }
 
       // Store in localStorage for debugging
       const errors = JSON.parse(localStorage.getItem('error-log') || '[]');
       errors.push(errorData);
       localStorage.setItem('error-log', JSON.stringify(errors.slice(-10))); // Keep last 10 errors
     } catch (logError) {
-      // console.error('Failed to log error:', logError);
-    }
-  }
+      // // // console.error('Failed to log error:', logError);
+
 
   private handleRetry = () => {
     this.setState({ isRecovering: true });
@@ -149,7 +138,7 @@ Timestamp: ${new Date().toISOString()}
             button.textContent = originalText;
             button.disabled = false;
           }, 2000);
-        }
+
       }).catch(() => {
         // Fallback for older browsers
         const textArea = document.createElement('textarea');
@@ -159,7 +148,7 @@ Timestamp: ${new Date().toISOString()}
         document.execCommand('copy');
         document.body.removeChild(textArea);
       });
-    }
+
   };
 
   private handleReportIssue = () => {
@@ -183,14 +172,13 @@ Timestamp: ${new Date().toISOString()}
       // Custom fallback UI
       if (this.props.fallback) {
         return this.props.fallback;
-      }
 
       return (
         <motion.div
           initial={{ opacity: 0, scale: 0.9 }}
           animate={{ opacity: 1, scale: 1 }}
           className={`min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 flex items-center justify-center p-4 ${this.props.className || ''}`}
-        >
+
           <div className="max-w-2xl w-full">
             {/* Error Header */}
             <motion.div
@@ -198,7 +186,7 @@ Timestamp: ${new Date().toISOString()}
               animate={{ y: 0, opacity: 1 }}
               transition={{ delay: 0.1 }}
               className="text-center mb-8"
-            >
+
               <div className="inline-flex items-center justify-center w-20 h-20 bg-red-500/20 rounded-full mb-4">
                 <AlertTriangle className="w-10 h-10 text-red-400" />
               </div>
@@ -214,7 +202,7 @@ Timestamp: ${new Date().toISOString()}
               animate={{ y: 0, opacity: 1 }}
               transition={{ delay: 0.2 }}
               className="bg-slate-800/50 backdrop-blur-sm border border-red-500/30 rounded-xl p-6 mb-6"
-            >
+
               <div className="flex items-center justify-between mb-4">
                 <h2 className="text-lg font-semibold text-white flex items-center space-x-2">
                   <Bug className="w-5 h-5 text-red-400" />
@@ -223,7 +211,7 @@ Timestamp: ${new Date().toISOString()}
                 <button
                   onClick={this.toggleDetails}
                   className="text-sm text-gray-400 hover:text-white transition-colors"
-                >
+
                   {this.state.showDetails ? 'Hide' : 'Show'} Details
                 </button>
               </div>
@@ -234,7 +222,7 @@ Timestamp: ${new Date().toISOString()}
                   animate={{ opacity: 1, height: 'auto' }}
                   exit={{ opacity: 0, height: 0 }}
                   className="space-y-4"
-                >
+
                   <div className="bg-slate-900/50 rounded-lg p-4">
                     <div className="text-sm text-gray-400 mb-2">Error ID</div>
                     <div className="font-mono text-white text-sm">{this.state.errorId}</div>
@@ -272,12 +260,12 @@ Timestamp: ${new Date().toISOString()}
               animate={{ y: 0, opacity: 1 }}
               transition={{ delay: 0.3 }}
               className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6"
-            >
+
               <button
                 onClick={this.handleRetry}
                 disabled={this.state.isRecovering}
                 className="flex items-center justify-center space-x-2 w-full px-6 py-3 bg-cyan-600 text-white rounded-lg hover:bg-cyan-700 disabled:opacity-50 disabled:cursor-not-allowed transition-colors duration-200"
-              >
+
                 <RefreshCw className={`w-5 h-5 ${this.state.isRecovering ? 'animate-spin' : ''}`} />
                 <span>{this.state.isRecovering ? 'Recovering...' : 'Try Again'}</span>
               </button>
@@ -285,7 +273,7 @@ Timestamp: ${new Date().toISOString()}
               <button
                 onClick={this.handleGoHome}
                 className="flex items-center justify-center space-x-2 w-full px-6 py-3 bg-slate-700 text-white rounded-lg hover:bg-slate-600 transition-colors duration-200"
-              >
+
                 <Home className="w-5 h-5" />
                 <span>Go Home</span>
               </button>
@@ -297,12 +285,12 @@ Timestamp: ${new Date().toISOString()}
               animate={{ y: 0, opacity: 1 }}
               transition={{ delay: 0.4 }}
               className="flex flex-wrap gap-3 justify-center"
-            >
+
               <button
                 onClick={this.handleCopyError}
                 data-copy-button
                 className="flex items-center space-x-2 px-4 py-2 bg-slate-700 text-gray-300 rounded-lg hover:bg-slate-600 hover:text-white transition-colors duration-200"
-              >
+
                 <Copy className="w-4 h-4" />
                 <span>Copy Error</span>
               </button>
@@ -310,7 +298,7 @@ Timestamp: ${new Date().toISOString()}
               <button
                 onClick={this.handleReportIssue}
                 className="flex items-center space-x-2 px-4 py-2 bg-slate-700 text-gray-300 rounded-lg hover:bg-slate-600 hover:text-white transition-colors duration-200"
-              >
+
                 <ExternalLink className="w-4 h-4" />
                 <span>Report Issue</span>
               </button>
@@ -322,7 +310,7 @@ Timestamp: ${new Date().toISOString()}
               animate={{ y: 0, opacity: 1 }}
               transition={{ delay: 0.5 }}
               className="mt-8 text-center"
-            >
+
               <div className="inline-flex items-center space-x-2 text-sm text-gray-500">
                 <Shield className="w-4 h-4" />
                 <span>Need help? Contact our support team</span>
@@ -334,11 +322,9 @@ Timestamp: ${new Date().toISOString()}
           </div>
         </motion.div>
       );
-    }
 
     return this.props.children;
-  }
-}
+
 
 // HOC for functional components
 export const withErrorBoundary = <P extends object>(
@@ -378,4 +364,4 @@ export const useErrorBoundary = () => {
   }, []);
 
   return error;
-};
+};}}}}}}}}}}}}}}}}}}}

@@ -42,7 +42,6 @@ import {
   Smartphone,
   Tablet,
   Laptop
-} from 'lucide-react';
 import { SEO } from '../../components/SEO';
 
 export default function AICybersecurityPlatform() {
@@ -66,7 +65,7 @@ export default function AICybersecurityPlatform() {
       icon: Eye,
       title: '360° Security Visibility',
       description: 'Comprehensive monitoring across all endpoints, networks, and cloud environments with unified threat intelligence and real-time dashboards.'
-    }
+
   ];
 
   const capabilities = [
@@ -93,7 +92,7 @@ export default function AICybersecurityPlatform() {
       description: 'Comprehensive cloud infrastructure protection and compliance monitoring',
       icon: Cloud,
       benefits: ['Multi-cloud support', 'Compliance monitoring', 'Access control', 'Data protection']
-    }
+
   ];
 
   const useCases = [
@@ -120,7 +119,7 @@ export default function AICybersecurityPlatform() {
       description: 'Secure critical infrastructure, protect classified information, and ensure national security with advanced AI cybersecurity',
       icon: Globe,
       metrics: ['Infrastructure Security', 'Data Classification', 'Threat Intelligence', 'National Security']
-    }
+
   ];
 
   const benefits = [
@@ -143,7 +142,7 @@ export default function AICybersecurityPlatform() {
       icon: Users,
       title: 'Improved Compliance',
       description: 'Maintain 100% compliance with industry regulations and standards through automated monitoring and reporting.'
-    }
+
   ];
 
   const pricing = [
@@ -193,7 +192,7 @@ export default function AICybersecurityPlatform() {
       ],
       cta: 'Contact Sales',
       popular: false
-    }
+
   ];
 
   return (
@@ -212,7 +211,7 @@ export default function AICybersecurityPlatform() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-          >
+
             <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-red-400 via-orange-400 to-yellow-400 bg-clip-text text-transparent mb-6">
               AI Cybersecurity Platform
             </h1>
@@ -240,7 +239,7 @@ export default function AICybersecurityPlatform() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
-          >
+
             <h2 className="text-4xl font-bold text-white mb-6">
               Advanced AI-Powered Security Features
             </h2>
@@ -258,7 +257,7 @@ export default function AICybersecurityPlatform() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 className="bg-slate-800/50 p-8 rounded-xl border border-slate-700/50 hover:border-red-400/50 transition-all duration-300 hover:scale-105"
-              >
+
                 <div className="w-16 h-16 bg-gradient-to-br from-red-400/20 to-orange-500/20 rounded-xl flex items-center justify-center mb-6">
                   <feature.icon className="w-8 h-8 text-red-400" />
                 </div>
@@ -278,7 +277,7 @@ export default function AICybersecurityPlatform() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
-          >
+
             <h2 className="text-4xl font-bold text-white mb-6">
               Comprehensive Security Capabilities
             </h2>
@@ -296,7 +295,7 @@ export default function AICybersecurityPlatform() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 className="bg-slate-800/50 p-8 rounded-xl border border-slate-700/50 hover:border-red-400/50 transition-all duration-300 hover:scale-105"
-              >
+
                 <div className="flex items-center space-x-4 mb-6">
                   <div className="w-16 h-16 bg-gradient-to-br from-red-400/20 to-orange-500/20 rounded-xl flex items-center justify-center">
                     <capability.icon className="w-8 h-8 text-red-400" />
@@ -326,7 +325,7 @@ export default function AICybersecurityPlatform() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
-          >
+
             <h2 className="text-4xl font-bold text-white mb-6">
               Industry Use Cases
             </h2>
@@ -344,7 +343,7 @@ export default function AICybersecurityPlatform() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 className="bg-slate-800/50 p-8 rounded-xl border border-slate-700/50 hover:border-red-400/50 transition-all duration-300 hover:scale-105"
-              >
+
                 <div className="flex items-center space-x-4 mb-6">
                   <div className="w-16 h-16 bg-gradient-to-br from-red-400/20 to-orange-500/20 rounded-xl flex items-center justify-center">
                     <useCase.icon className="w-8 h-8 text-red-400" />
@@ -374,7 +373,7 @@ export default function AICybersecurityPlatform() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
-          >
+
             <h2 className="text-4xl font-bold text-white mb-6">
               Business Benefits
             </h2>
@@ -392,7 +391,7 @@ export default function AICybersecurityPlatform() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 className="bg-slate-800/50 p-6 rounded-xl border border-slate-700/50 hover:border-red-400/50 transition-all duration-300 hover:scale-105 text-center"
-              >
+
                 <div className="w-16 h-16 bg-gradient-to-br from-red-400/20 to-orange-500/20 rounded-xl flex items-center justify-center mx-auto mb-6">
                   <benefit.icon className="w-8 h-8 text-red-400" />
                 </div>
@@ -412,7 +411,7 @@ export default function AICybersecurityPlatform() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
-          >
+
             <h2 className="text-4xl font-bold text-white mb-6">
               Transparent Pricing
             </h2>
@@ -434,7 +433,7 @@ export default function AICybersecurityPlatform() {
                     ? 'border-red-400/50 bg-gradient-to-br from-red-500/10 to-orange-500/10'
                     : 'border-slate-700/50 hover:border-red-400/50'
                 }`}
-              >
+
                 {plan.popular && (
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                     <span className="bg-gradient-to-r from-red-500 to-orange-500 text-white px-4 py-2 rounded-full text-sm font-semibold">
@@ -482,7 +481,7 @@ export default function AICybersecurityPlatform() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
-          >
+
             <h2 className="text-4xl font-bold text-white mb-6">
               Implementation Process
             </h2>
@@ -513,7 +512,7 @@ export default function AICybersecurityPlatform() {
                 step: '04',
                 title: 'Go Live',
                 description: 'Activate full protection with continuous monitoring and ongoing support'
-              }
+
             ].map((phase, index) => (
               <motion.div
                 key={index}
@@ -521,7 +520,7 @@ export default function AICybersecurityPlatform() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 className="text-center"
-              >
+
                 <div className="w-20 h-20 bg-gradient-to-br from-red-400 to-orange-500 rounded-full flex items-center justify-center mx-auto mb-6 text-2xl font-bold text-white">
                   {phase.step}
                 </div>
@@ -540,7 +539,7 @@ export default function AICybersecurityPlatform() {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-          >
+
             <h2 className="text-4xl font-bold text-white mb-6">
               Ready to Secure Your Organization?
             </h2>
@@ -600,4 +599,4 @@ export default function AICybersecurityPlatform() {
       </section>
     </div>
   );
-}
+}}}}}}}}

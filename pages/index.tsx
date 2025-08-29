@@ -1,8 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import { ArrowRight, Zap, Shield, Cloud, Brain, Users, Target, Award, Globe, Rocket, Cpu, Database, Lock } from 'lucide-react'
-
-export default function Index() {
+import { ArrowRight, Zap, Shield, Cloud, Brain, Users, Target, Award, Globe, Rocket, Cpu, Database, Lock export default function Index() {
 	const features = [
 		{
 			icon: Brain,
@@ -21,7 +19,7 @@ export default function Index() {
 			title: 'Cybersecurity',
 			description: 'Zero-trust architecture, compliance frameworks, and threat intelligence.',
 			href: '/services#cybersecurity'
-		}
+
 	]
 
 	return (
@@ -40,13 +38,13 @@ export default function Index() {
 							<Link
 								to="/services"
 								className="rounded-md bg-blue-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-blue-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600"
-							>
+
 								Explore Our Services
 							</Link>
 							<Link
 								to="/contact"
 								className="text-sm font-semibold leading-6 text-gray-900"
-							>
+
 								Get in Touch <span aria-hidden="true">→</span>
 							</Link>
 						</div>
@@ -74,7 +72,7 @@ export default function Index() {
 								<Link
 									to={feature.href}
 									className="inline-flex items-center text-blue-600 hover:text-blue-500 font-medium"
-								>
+
 									Learn More <ArrowRight className="ml-2 h-4 w-4" />
 								</Link>
 							</div>
@@ -95,13 +93,13 @@ export default function Index() {
 							<Link
 								to="/contact"
 								className="rounded-md bg-blue-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-blue-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600"
-							>
+
 								Get Started Today
 							</Link>
 							<Link
 								to="/about"
 								className="text-sm font-semibold leading-6 text-gray-900"
-							>
+
 								Learn More <span aria-hidden="true">→</span>
 							</Link>
 						</div>
@@ -110,4 +108,4 @@ export default function Index() {
 			</section>
 		</>
 	)
-}
+}}}

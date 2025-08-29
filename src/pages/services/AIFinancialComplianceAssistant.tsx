@@ -32,7 +32,6 @@ import {
   Award,
   Gauge,
   PieChart
-} from 'lucide-react';
 import { SEO } from '../../components/SEO';
 
 export default function AIFinancialComplianceAssistant() {
@@ -73,7 +72,7 @@ export default function AIFinancialComplianceAssistant() {
       icon: BarChart3,
       title: 'Advanced Analytics & Reporting',
       description: 'Comprehensive dashboards and automated reporting for regulatory submissions'
-    }
+
   ];
 
   const benefits = [
@@ -144,7 +143,7 @@ export default function AIFinancialComplianceAssistant() {
       ],
       cta: 'Contact Sales',
       popular: false
-    }
+
   ];
 
   const complianceFrameworks = [
@@ -177,7 +176,7 @@ export default function AIFinancialComplianceAssistant() {
       title: 'IFRS/GAAP',
       description: 'Accounting standards compliance with automated financial reporting',
       icon: BookOpen
-    }
+
   ];
 
   const useCases = [
@@ -200,7 +199,7 @@ export default function AIFinancialComplianceAssistant() {
       title: 'Fintech Startups',
       description: 'Rapid compliance scaling for growing financial technology companies',
       icon: Zap
-    }
+
   ];
 
   return (
@@ -218,7 +217,7 @@ export default function AIFinancialComplianceAssistant() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-          >
+
             <div className="inline-flex items-center px-4 py-2 rounded-full bg-blue-100/10 border border-blue-200/20 text-blue-200 text-sm font-medium mb-6">
               <Shield className="w-4 h-4 mr-2" />
               AI-Powered Financial Compliance
@@ -257,7 +256,7 @@ export default function AIFinancialComplianceAssistant() {
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
             className="text-center mb-16"
-          >
+
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Comprehensive Compliance Automation
             </h2>
@@ -275,7 +274,7 @@ export default function AIFinancialComplianceAssistant() {
                 transition={{ duration: 0.8, delay: index * 0.1 }}
                 viewport={{ once: true }}
                 className="bg-slate-800/50 backdrop-blur-sm border border-slate-700/50 rounded-xl p-6 hover:border-blue-500/50 transition-all duration-300"
-              >
+
                 <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-lg flex items-center justify-center mb-4">
                   <feature.icon className="w-6 h-6 text-white" />
                 </div>
@@ -296,7 +295,7 @@ export default function AIFinancialComplianceAssistant() {
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
             className="text-center mb-16"
-          >
+
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Supported Compliance Frameworks
             </h2>
@@ -314,7 +313,7 @@ export default function AIFinancialComplianceAssistant() {
                 transition={{ duration: 0.8, delay: index * 0.1 }}
                 viewport={{ once: true }}
                 className="bg-slate-800/50 backdrop-blur-sm border border-slate-700/50 rounded-xl p-6 hover:border-blue-500/50 transition-all duration-300"
-              >
+
                 <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-lg flex items-center justify-center mb-4">
                   <framework.icon className="w-6 h-6 text-white" />
                 </div>
@@ -335,7 +334,7 @@ export default function AIFinancialComplianceAssistant() {
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
             className="text-center mb-16"
-          >
+
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Why Choose AI Financial Compliance?
             </h2>
@@ -353,7 +352,7 @@ export default function AIFinancialComplianceAssistant() {
                 transition={{ duration: 0.8, delay: index * 0.1 }}
                 viewport={{ once: true }}
                 className="flex items-start space-x-3"
-              >
+
                 <CheckCircle className="w-6 h-6 text-green-400 mt-1 flex-shrink-0" />
                 <span className="text-slate-300 text-lg">{benefit}</span>
               </motion.div>
@@ -371,7 +370,7 @@ export default function AIFinancialComplianceAssistant() {
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
             className="text-center mb-16"
-          >
+
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Perfect for Every Financial Organization
             </h2>
@@ -389,7 +388,7 @@ export default function AIFinancialComplianceAssistant() {
                 transition={{ duration: 0.8, delay: index * 0.1 }}
                 viewport={{ once: true }}
                 className="text-center"
-              >
+
                 <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-xl flex items-center justify-center mx-auto mb-4">
                   <useCase.icon className="w-8 h-8 text-white" />
                 </div>
@@ -410,7 +409,7 @@ export default function AIFinancialComplianceAssistant() {
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
             className="text-center mb-16"
-          >
+
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Simple, Transparent Pricing
             </h2>
@@ -432,7 +431,7 @@ export default function AIFinancialComplianceAssistant() {
                     ? 'border-blue-500/50 bg-gradient-to-br from-blue-900/20 to-cyan-900/20'
                     : 'border-slate-700/50'
                 }`}
-              >
+
                 {plan.popular && (
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                     <span className="bg-gradient-to-r from-blue-500 to-cyan-500 text-white px-4 py-2 rounded-full text-sm font-semibold">
@@ -480,7 +479,7 @@ export default function AIFinancialComplianceAssistant() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
-          >
+
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
               Ready to Transform Your Compliance?
             </h2>
@@ -512,7 +511,7 @@ export default function AIFinancialComplianceAssistant() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
-          >
+
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
               Have Questions?
             </h2>
@@ -541,7 +540,7 @@ export default function AIFinancialComplianceAssistant() {
             <a
               href={`mailto:${contactInfo.email}`}
               className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-cyan-700 transition-all duration-300"
-            >
+
               Get in Touch
               <ArrowRight className="w-5 h-5 ml-2" />
             </a>
@@ -550,4 +549,4 @@ export default function AIFinancialComplianceAssistant() {
       </section>
     </div>
   );
-}
+}}}}}}

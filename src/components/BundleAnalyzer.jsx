@@ -1,7 +1,6 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { BarChart3, AlertTriangle, CheckCircle, Info, HardDrive, Zap, Target, X, RefreshCw } from 'lucide-react';
-export const BundleAnalyzer = () => {
+import { BarChart3, AlertTriangle, CheckCircle, Info, HardDrive, Zap, Target, X, RefreshCw export const BundleAnalyzer = () => {
     const [isOpen, setIsOpen] = useState(false);
     const [analysis, setAnalysis] = useState(null);
     const [isAnalyzing, setIsAnalyzing] = useState(false);
@@ -72,7 +71,7 @@ export const BundleAnalyzer = () => {
                         gzipSize: 0,
                         type: 'vendor',
                         optimization: 'critical'
-                    }
+
                 ],
                 recommendations: [
                     'Consolidate empty vendor chunks (stripe-vendor, pdf-vendor)',
@@ -85,13 +84,13 @@ export const BundleAnalyzer = () => {
                 lastUpdated: new Date()
             };
             setAnalysis(mockAnalysis);
-        }
+
         catch (error) {
-            // console.error('Bundle analysis failed:', error);
-        }
+            // // // console.error('Bundle analysis failed:', error);
+
         finally {
             setIsAnalyzing(false);
-        }
+
     }, []);
     useEffect(() => {
         analyzeBundle();
@@ -124,7 +123,7 @@ export const BundleAnalyzer = () => {
             case 'warning': return 'text-yellow-500 bg-yellow-100 dark:bg-yellow-900/20';
             case 'critical': return 'text-red-500 bg-red-100 dark:bg-red-900/20';
             default: return 'text-gray-500 bg-gray-100 dark:bg-gray-900/20';
-        }
+
     };
     const getOptimizationIcon = (optimization) => {
         switch (optimization) {
@@ -132,7 +131,7 @@ export const BundleAnalyzer = () => {
             case 'warning': return <AlertTriangle className="w-4 h-4"/>;
             case 'critical': return <AlertTriangle className="w-4 h-4"/>;
             default: return <Info className="w-4 h-4"/>;
-        }
+
     };
     if (!analysis)
         return null;
@@ -301,3 +300,4 @@ export const BundleAnalyzer = () => {
       </AnimatePresence>
     </>);
 };
+}}}}}}}

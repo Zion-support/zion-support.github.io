@@ -1,6 +1,5 @@
 import React from 'react';
-import { Zap, Target, TrendingUp, Shield, Globe, Cpu, Lightbulb, Atom, Wifi } from 'lucide-react';
-const QuantumEdgeComputing = () => {
+import { Zap, Target, TrendingUp, Shield, Globe, Cpu, Lightbulb, Atom, Wifi const QuantumEdgeComputing = () => {
     const edgeFeatures = [
         {
             icon: Wifi,
@@ -25,7 +24,7 @@ const QuantumEdgeComputing = () => {
             title: "Edge Security",
             description: "Advanced security protocols for edge devices",
             features: ["Local encryption", "Secure communication", "Access control", "Threat detection"]
-        }
+
     ];
     const useCases = [
         {
@@ -63,7 +62,7 @@ const QuantumEdgeComputing = () => {
             description: "High-frequency trading and risk assessment",
             icon: TrendingUp,
             benefits: ["Ultra-low latency", "Real-time risk", "Market analysis", "Fraud detection"]
-        }
+
     ];
     const benefits = [
         "Ultra-low latency for real-time applications",
@@ -103,7 +102,7 @@ const QuantumEdgeComputing = () => {
             phase: "Testing & Optimization",
             description: "Validate performance and optimize systems",
             duration: "3-6 weeks"
-        }
+
     ];
     return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       {/* Hero Section */}
@@ -281,3 +280,4 @@ const QuantumEdgeComputing = () => {
     </div>);
 };
 export default QuantumEdgeComputing;
+}}}}

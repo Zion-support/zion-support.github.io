@@ -64,7 +64,6 @@ export const FuturisticAnimatedBackground: React.FC = () => {
       // Create new particles
       if (particles.length < 100) {
         createParticle();
-      }
 
       // Update and draw particles
       for (let i = particles.length - 1; i >= 0; i--) {
@@ -79,7 +78,6 @@ export const FuturisticAnimatedBackground: React.FC = () => {
         if (particle.life > particle.maxLife) {
           particles.splice(i, 1);
           continue;
-        }
 
         // Draw particle with glow effect
         const alpha = 1 - (particle.life / particle.maxLife);
@@ -100,7 +98,6 @@ export const FuturisticAnimatedBackground: React.FC = () => {
         ctx.beginPath();
         ctx.arc(particle.x, particle.y, size, 0, Math.PI * 2);
         ctx.fill();
-      }
 
       // Draw grid pattern
       ctx.strokeStyle = 'rgba(56, 189, 248, 0.1)';
@@ -117,7 +114,6 @@ export const FuturisticAnimatedBackground: React.FC = () => {
         ctx.moveTo(x, 0);
         ctx.lineTo(x, canvas.height);
         ctx.stroke();
-      }
 
       // Horizontal lines
       for (let y = offsetY; y < canvas.height; y += gridSize) {
@@ -125,7 +121,6 @@ export const FuturisticAnimatedBackground: React.FC = () => {
         ctx.moveTo(0, y);
         ctx.lineTo(canvas.width, y);
         ctx.stroke();
-      }
 
       // Draw floating geometric shapes
       ctx.globalAlpha = 0.1;
@@ -175,7 +170,6 @@ export const FuturisticAnimatedBackground: React.FC = () => {
         ctx.lineTo(waveOffset, waveY + 20);
         ctx.lineTo(waveOffset + 100, waveY);
         ctx.stroke();
-      }
 
       animationId = requestAnimationFrame(animate);
     };
@@ -198,3 +192,4 @@ export const FuturisticAnimatedBackground: React.FC = () => {
 };
 
 export default FuturisticAnimatedBackground;
+}}}}}}

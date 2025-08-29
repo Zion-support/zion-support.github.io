@@ -33,7 +33,6 @@ import {
   Search,
   Grid3X3,
   List
-} from 'lucide-react';
 import { enhancedInnovativeServices2027, enhancedInnovativeServices2027Categories } from '../data/enhancedInnovativeServices2027';
 const categoryIcons: { [key: string]: React.ComponentType<any> } = {
   'Web3 Solutions': Globe,
@@ -85,7 +84,7 @@ export default function EnhancedInnovativeServicesShowcase2027() {
                (innovationOrder[a.innovationLevel as keyof typeof innovationOrder] || 0);
       default:
         return 0;
-    }
+
   });
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -93,8 +92,8 @@ export default function EnhancedInnovativeServicesShowcase2027() {
       opacity: 1,
       transition: {
         staggerChildren: 0.1
-      }
-    }
+
+
   };
   const itemVariants = {
     hidden: { y: 20, opacity: 0 },
@@ -103,8 +102,8 @@ export default function EnhancedInnovativeServicesShowcase2027() {
       opacity: 1,
       transition: {
         duration: 0.5
-      }
-    }
+
+
   };
   return (
     <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
@@ -117,7 +116,7 @@ export default function EnhancedInnovativeServicesShowcase2027() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="text-center"
-          >
+
             <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
               <span className="bg-gradient-to-r from-zion-cyan to-zion-blue bg-clip-text text-transparent">
                 Innovative Services 2027
@@ -130,14 +129,14 @@ export default function EnhancedInnovativeServicesShowcase2027() {
               <motion.div
                 whileHover={{ scale: 1.05 }}
                 className="bg-zion-cyan text-white px-8 py-4 rounded-full font-semibold text-lg flex items-center gap-2"
-              >
+
                 <Rocket className="w-5 h-5" />
                 Explore Services
               </motion.div>
               <motion.div
                 whileHover={{ scale: 1.05 }}
                 className="border-2 border-zion-cyan text-zion-cyan px-8 py-4 rounded-full font-semibold text-lg flex items-center gap-2"
-              >
+
                 <Phone className="w-5 h-5" />
                 Contact Us
               </motion.div>
@@ -194,7 +193,7 @@ export default function EnhancedInnovativeServicesShowcase2027() {
                     ? 'bg-zion-cyan text-white'
                     : 'bg-zion-slate-dark/50 text-zion-slate-light hover:bg-zion-slate-dark/70'
                 }`}
-              >
+
                 All Categories
               </button>
               {enhancedInnovativeServices2027Categories.map((category) => (
@@ -206,7 +205,7 @@ export default function EnhancedInnovativeServicesShowcase2027() {
                       ? 'bg-zion-cyan text-white'
                       : 'bg-zion-slate-dark/50 text-zion-slate-light hover:bg-zion-slate-dark/70'
                   }`}
-                >
+
                   {category}
                 </button>
               ))}
@@ -219,7 +218,7 @@ export default function EnhancedInnovativeServicesShowcase2027() {
                   className={`p-2 rounded-md transition-all ${
                     viewMode === 'grid' ? 'bg-zion-cyan text-white' : 'text-zion-slate-light hover:text-white'
                   }`}
-                >
+
                   <Grid3X3 className="w-5 h-5" />
                 </button>
                 <button
@@ -227,7 +226,7 @@ export default function EnhancedInnovativeServicesShowcase2027() {
                   className={`p-2 rounded-md transition-all ${
                     viewMode === 'list' ? 'bg-zion-cyan text-white' : 'text-zion-slate-light hover:text-white'
                   }`}
-                >
+
                   <List className="w-5 h-5" />
                 </button>
               </div>
@@ -235,7 +234,7 @@ export default function EnhancedInnovativeServicesShowcase2027() {
                 value={sortBy}
                 onChange={(e) => setSortBy(e.target.value as any)}
                 className="bg-zion-slate-dark/50 border border-zion-cyan/20 rounded-lg px-3 py-2 text-white focus:outline-none focus:ring-2 focus:ring-zion-cyan"
-              >
+
                 <option value="name">Sort by Name</option>
                 <option value="price">Sort by Price</option>
                 <option value="innovation">Sort by Innovation</option>
@@ -252,13 +251,13 @@ export default function EnhancedInnovativeServicesShowcase2027() {
             initial="hidden"
             animate="visible"
             className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
-          >
+
             {sortedServices.map((service) => (
               <motion.div
                 key={service.id}
                 variants={itemVariants}
                 className="group relative"
-              >
+
                 <div className="bg-zion-slate-dark/30 backdrop-blur-sm rounded-2xl p-6 border border-zion-cyan/20 hover:border-zion-cyan/40 transition-all duration-300 hover:shadow-2xl hover:shadow-zion-cyan/20 h-full">
                   {/* Category Badge */}
                   <div className="flex items-center gap-2 mb-4">
@@ -321,7 +320,7 @@ export default function EnhancedInnovativeServicesShowcase2027() {
                       target={service.external ? "_blank" : "_self"}
                       rel={service.external ? "noopener noreferrer" : ""}
                       className="w-full bg-gradient-to-r from-zion-cyan to-zion-blue text-white py-3 px-6 rounded-xl font-semibold text-center block hover:from-zion-blue hover:to-zion-cyan transition-all duration-300 transform hover:scale-105 flex items-center justify-center gap-2"
-                    >
+
                       {service.ctaLabel}
                       {service.external && <ExternalLink className="w-4 h-4" />}
                     </a>
@@ -336,13 +335,13 @@ export default function EnhancedInnovativeServicesShowcase2027() {
             initial="hidden"
             animate="visible"
             className="space-y-6"
-          >
+
             {sortedServices.map((service) => (
               <motion.div
                 key={service.id}
                 variants={itemVariants}
                 className="bg-zion-slate-dark/30 backdrop-blur-sm rounded-2xl p-6 border border-zion-cyan/20 hover:border-zion-cyan/40 transition-all duration-300"
-              >
+
                 <div className="flex flex-col lg:flex-row gap-6">
                   {/* Left Column - Basic Info */}
                   <div className="flex-1">
@@ -405,7 +404,7 @@ export default function EnhancedInnovativeServicesShowcase2027() {
                       target={service.external ? "_blank" : "_self"}
                       rel={service.external ? "noopener noreferrer" : ""}
                       className="w-full bg-gradient-to-r from-zion-cyan to-zion-blue text-white py-3 px-6 rounded-xl font-semibold text-center block hover:from-zion-blue hover:to-zion-cyan transition-all duration-300 transform hover:scale-105 flex items-center justify-center gap-2"
-                    >
+
                       {service.ctaLabel}
                       {service.external && <ExternalLink className="w-4 h-4" />}
                     </a>
@@ -441,7 +440,7 @@ export default function EnhancedInnovativeServicesShowcase2027() {
                 href="https://ziontechgroup.com"
                 whileHover={{ scale: 1.05 }}
                 className="bg-zion-cyan text-white px-8 py-4 rounded-full font-semibold text-lg flex items-center gap-2"
-              >
+
                 <Globe className="w-5 h-5" />
                 Visit Website
               </motion.a>
@@ -449,7 +448,7 @@ export default function EnhancedInnovativeServicesShowcase2027() {
                 href="tel:+13024640950"
                 whileHover={{ scale: 1.05 }}
                 className="border-2 border-zion-cyan text-zion-cyan px-8 py-4 rounded-full font-semibold text-lg flex items-center gap-2"
-              >
+
                 <Phone className="w-5 h-5" />
                 Call Now
               </motion.a>
@@ -457,7 +456,7 @@ export default function EnhancedInnovativeServicesShowcase2027() {
                 href="mailto:kleber@ziontechgroup.com"
                 whileHover={{ scale: 1.05 }}
                 className="border-2 border-zion-cyan text-zion-cyan px-8 py-4 rounded-full font-semibold text-lg flex items-center gap-2"
-              >
+
                 <Mail className="w-5 h-5" />
                 Email Us
               </motion.a>
@@ -467,4 +466,4 @@ export default function EnhancedInnovativeServicesShowcase2027() {
       </div>
     </div>
   );
-}
+}}}}}}}

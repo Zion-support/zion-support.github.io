@@ -1,18 +1,14 @@
 import React from 'react';
-import { Filter, X } from 'lucide-react';
-
-interface FilterOption {
+import { Filter, X interface FilterOption {
   value: string;
   label: string;
   count?: number;
-}
 
 interface FilterGroup {
   title: string;
   key: string;
   options: FilterOption[];
   type: 'checkbox' | 'radio' | 'range';
-}
 
 interface FilterSidebarProps {
   filters: FilterGroup[];
@@ -21,7 +17,6 @@ interface FilterSidebarProps {
   onClearFilters: () => void;
   isOpen: boolean;
   onClose: () => void;
-}
 
 export function FilterSidebar({
   filters,
@@ -54,7 +49,7 @@ export function FilterSidebar({
           <button
             onClick={onClose}
             className="lg:hidden p-2 hover:bg-zion-blue-light/20 rounded-lg transition-colors"
-          >
+
             <X className="w-5 h-5 text-zion-slate-light" />
           </button>
         </div>
@@ -66,7 +61,7 @@ export function FilterSidebar({
             <button
               onClick={onClearFilters}
               className="text-sm text-zion-cyan hover:text-zion-cyan-light transition-colors underline"
-            >
+
               Clear all
             </button>
           </div>
@@ -108,4 +103,4 @@ export function FilterSidebar({
       </div>
     </>
   );
-}
+</div>}}}}}

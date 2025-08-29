@@ -33,12 +33,10 @@ const InnovativeServicesShowcase: React.FC = () => {
         service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
         service.category.toLowerCase().includes(searchTerm.toLowerCase())
       );
-    }
 
     // Filter by category
     if (selectedCategory !== 'all') {
       filtered = filtered.filter(service => service.category === selectedCategory);
-    }
 
     // Filter by price range
     if (priceRange !== 'all') {
@@ -47,8 +45,7 @@ const InnovativeServicesShowcase: React.FC = () => {
         filtered = filtered.filter(service => service.price >= 3000);
       } else {
         filtered = filtered.filter(service => service.price >= min && service.price <= max);
-      }
-    }
+
 
     // Sort services
     switch (sortBy) {
@@ -64,7 +61,6 @@ const InnovativeServicesShowcase: React.FC = () => {
       case 'launchDate':
         filtered.sort((a, b) => new Date(b.launchDate).getTime() - new Date(a.launchDate).getTime());
         break;
-    }
 
     return filtered;
   }, [searchTerm, selectedCategory, priceRange, sortBy]);
@@ -209,7 +205,7 @@ const InnovativeServicesShowcase: React.FC = () => {
                 value={selectedCategory}
                 onChange={(e) => setSelectedCategory(e.target.value)}
                 className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
-              >
+
                 {categories.map(category => (
                   <option key={category} value={category}>
                     {category === 'all' ? 'All Categories' : category}
@@ -224,7 +220,7 @@ const InnovativeServicesShowcase: React.FC = () => {
                 value={priceRange}
                 onChange={(e) => setPriceRange(e.target.value)}
                 className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
-              >
+
                 {priceRanges.map(range => (
                   <option key={range.value} value={range.value}>{range.label}</option>
                 ))}
@@ -237,7 +233,7 @@ const InnovativeServicesShowcase: React.FC = () => {
                 value={sortBy}
                 onChange={(e) => setSortBy(e.target.value)}
                 className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
-              >
+
                 {sortOptions.map(option => (
                   <option key={option.value} value={option.value}>{option.label}</option>
                 ))}
@@ -290,4 +286,4 @@ const InnovativeServicesShowcase: React.FC = () => {
   );
 };
 
-export default InnovativeServicesShowcase;
+export default InnovativeServicesShowcase;}}}}}

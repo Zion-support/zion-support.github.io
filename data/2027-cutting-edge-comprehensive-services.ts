@@ -36,7 +36,6 @@ export interface CuttingEdgeComprehensiveService2027 {
   customers: number;
   rating: number;
   reviews: number;
-}
 
 export const cuttingEdgeComprehensiveServices2027: CuttingEdgeComprehensiveService2027[] = [
   // AI-POWERED INNOVATIVE SERVICES
@@ -661,7 +660,7 @@ export const cuttingEdgeComprehensiveServices2027: CuttingEdgeComprehensiveServi
     customers: 89,
     rating: 4.8,
     reviews: 167
-  }
+
 ];
 
 // Helper functions for service management
@@ -694,4 +693,4 @@ export const searchServices = (query: string) => {
   );
 };
 
-export default cuttingEdgeComprehensiveServices2027;
+export default cuttingEdgeComprehensiveServices2027;}}

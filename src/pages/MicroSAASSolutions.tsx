@@ -22,8 +22,6 @@ import {
   Star,
   ArrowRight,
   Brain
-} from 'lucide-react';
-
 export default function MicroSAASSolutions() {
   const services = [
     {
@@ -55,7 +53,7 @@ export default function MicroSAASSolutions() {
       description: "Advanced analytics dashboards providing insights into user behavior, system performance, and business metrics.",
       icon: TrendingUp,
       features: ["Real-time metrics", "Custom reports", "Data visualization", "Export capabilities"]
-    }
+
   ];
 
   const benefits = [
@@ -78,7 +76,7 @@ export default function MicroSAASSolutions() {
       title: "Security",
       description: "Enterprise-grade security and compliance standards",
       icon: Shield
-    }
+
   ];
 
   const industries = [
@@ -111,7 +109,7 @@ export default function MicroSAASSolutions() {
       name: "Real Estate",
       description: "Property management and client portals",
       icon: Building
-    }
+
   ];
 
   const processSteps = [
@@ -142,7 +140,7 @@ export default function MicroSAASSolutions() {
       description: "Comprehensive testing and production deployment",
       icon: Rocket,
       duration: "2-4 weeks"
-    }
+
   ];
 
   return (
@@ -211,7 +209,7 @@ export default function MicroSAASSolutions() {
                 <div
                   key={service.title}
                   className="bg-zion-blue-dark/30 border border-zion-cyan/20 rounded-2xl p-6 hover:border-zion-cyan/40 transition-all duration-300"
-                >
+
                   <div className="w-16 h-16 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-2xl flex items-center justify-center mb-6">
                     <service.icon className="w-8 h-8 text-white" />
                   </div>
@@ -248,7 +246,7 @@ export default function MicroSAASSolutions() {
                 <div
                   key={benefit.title}
                   className="bg-zion-blue-dark/30 border border-zion-cyan/20 rounded-2xl p-8 hover:border-zion-cyan/40 transition-all duration-300"
-                >
+
                   <div className="w-16 h-16 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-2xl flex items-center justify-center mx-auto mb-6">
                     <benefit.icon className="w-8 h-8 text-white" />
                   </div>
@@ -276,7 +274,7 @@ export default function MicroSAASSolutions() {
                 <div
                   key={industry.name}
                   className="bg-zion-blue-dark/30 border border-zion-cyan/20 rounded-2xl p-6 hover:border-zion-cyan/40 transition-all duration-300"
-                >
+
                   <div className="w-16 h-16 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-2xl flex items-center justify-center mb-6">
                     <industry.icon className="w-8 h-8 text-white" />
                   </div>
@@ -336,13 +334,13 @@ export default function MicroSAASSolutions() {
                 <a
                   href="/contact"
                   className="px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-purple text-white font-semibold rounded-xl hover:shadow-lg hover:shadow-zion-cyan/25 transition-all duration-300 transform hover:scale-105"
-                >
+
                   Start Your Project
                 </a>
                 <a
                   href="/contact"
                   className="px-8 py-4 border border-zion-cyan text-zion-cyan font-semibold rounded-xl hover:bg-zion-cyan hover:text-white transition-all duration-300"
-                >
+
                   Get Consultation
                 </a>
               </div>
@@ -352,4 +350,4 @@ export default function MicroSAASSolutions() {
       </div>
     </>
   );
-}
+}}}}}}

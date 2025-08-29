@@ -38,7 +38,7 @@ export interface EmergingTechService2029V2 {
     website: string;
     address: string;
   };
-}
+
 export const emergingTechServices2029V2: EmergingTechService2029V2[] = [
   {
     id: 'quantum-internet-security-gateway',
@@ -102,7 +102,7 @@ export const emergingTechServices2029V2: EmergingTechService2029V2[] = [
       email: 'kleber@ziontechgroup.com',
       website: 'https://ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709'
-    }
+
   },
   {
     id: 'biotech-dna-computing-platform',
@@ -166,7 +166,7 @@ export const emergingTechServices2029V2: EmergingTechService2029V2[] = [
       email: 'kleber@ziontechgroup.com',
       website: 'https://ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709'
-    }
+
   },
   {
     id: 'quantum-financial-trading-platform',
@@ -230,7 +230,7 @@ export const emergingTechServices2029V2: EmergingTechService2029V2[] = [
       email: 'kleber@ziontechgroup.com',
       website: 'https://ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709'
-    }
+
   },
   {
     id: 'quantum-creativity-studio',
@@ -294,6 +294,6 @@ export const emergingTechServices2029V2: EmergingTechService2029V2[] = [
       email: 'kleber@ziontechgroup.com',
       website: 'https://ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709'
-    }
-  }
-];
+
+
+];}}}}}}

@@ -35,7 +35,6 @@ import {
   Lock,
   Heart,
   Sparkles
-} from 'lucide-react';
 import { INNOVATIVE_SERVICES_2025 } from '@/data/innovativeServices2025';
 import { SEO } from '@/components/SEO';
 
@@ -49,7 +48,7 @@ const ComprehensivePricingGuide2030: React.FC = () => {
     const cats = services.reduce((acc, service) => {
       if (!acc.includes(service.category)) {
         acc.push(service.category);
-      }
+
       return acc;
     }, [] as string[]);
     return ['all', ...cats];
@@ -62,11 +61,9 @@ const ComprehensivePricingGuide2030: React.FC = () => {
 
     if (selectedCategory !== 'all') {
       filtered = filtered.filter(service => service.category === selectedCategory);
-    }
 
     if (selectedPricingModel !== 'all') {
       filtered = filtered.filter(service => service.pricingModel === selectedPricingModel);
-    }
 
     return filtered;
   }, [services, selectedCategory, selectedPricingModel]);
@@ -89,7 +86,7 @@ const ComprehensivePricingGuide2030: React.FC = () => {
         return Rocket;
       default:
         return Zap;
-    }
+
   };
 
   const getCategoryColor = (category: string) => {
@@ -110,7 +107,7 @@ const ComprehensivePricingGuide2030: React.FC = () => {
         return 'from-indigo-600 to-purple-600';
       default:
         return 'from-gray-600 to-slate-600';
-    }
+
   };
 
   const pricingTiers = [
@@ -169,7 +166,7 @@ const ComprehensivePricingGuide2030: React.FC = () => {
       color: 'from-indigo-500 to-purple-600',
       popular: false,
       bestFor: 'Large enterprises, government agencies, Fortune 500 companies'
-    }
+
   ];
 
   const marketInsights = [
@@ -200,7 +197,7 @@ const ComprehensivePricingGuide2030: React.FC = () => {
       growth: '+48.2%',
       description: 'Quantum market by 2030',
       color: 'from-indigo-500 to-purple-600'
-    }
+
   ];
 
   return (
@@ -220,7 +217,7 @@ const ComprehensivePricingGuide2030: React.FC = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               className="text-5xl sm:text-7xl font-extrabold tracking-tight mb-6"
-            >
+
               <span className="bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent">
                 Pricing Guide
               </span>
@@ -232,7 +229,7 @@ const ComprehensivePricingGuide2030: React.FC = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
               className="text-xl sm:text-2xl text-slate-300 mb-8 max-w-3xl mx-auto"
-            >
+
               Transparent pricing for cutting-edge technology solutions.
               Compare market rates, calculate ROI, and choose the perfect plan for your business.
             </motion.p>
@@ -241,18 +238,18 @@ const ComprehensivePricingGuide2030: React.FC = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.4 }}
               className="flex flex-wrap justify-center gap-4"
-            >
+
               <Link
                 to="/contact"
                 className="inline-flex items-center px-8 py-4 rounded-xl bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold hover:opacity-90 transition-opacity"
-              >
+
                 Get Custom Quote
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Link>
               <Link
                 to="/innovative-services-showcase-2025"
                 className="inline-flex items-center px-8 py-4 rounded-xl border border-cyan-400/30 text-cyan-400 font-semibold hover:bg-cyan-400/10 transition-colors"
-              >
+
                 View All Services
               </Link>
             </motion.div>
@@ -268,7 +265,7 @@ const ComprehensivePricingGuide2030: React.FC = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="text-3xl font-bold text-center mb-12"
-          >
+
             Market Insights & Trends
           </motion.h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -279,7 +276,7 @@ const ComprehensivePricingGuide2030: React.FC = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 className="bg-slate-900/60 backdrop-blur border border-cyan-400/15 rounded-2xl p-6 text-center"
-              >
+
                 <div className={`w-16 h-16 rounded-xl bg-gradient-to-br ${insight.color} flex items-center justify-center mx-auto mb-4`}>
                   <TrendingUp className="w-8 h-8 text-white" />
                 </div>
@@ -301,7 +298,7 @@ const ComprehensivePricingGuide2030: React.FC = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="text-3xl font-bold text-center mb-12"
-          >
+
             Flexible Pricing Tiers
           </motion.h2>
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
@@ -316,7 +313,7 @@ const ComprehensivePricingGuide2030: React.FC = () => {
                     ? 'border-cyan-400/40 shadow-2xl shadow-cyan-400/20'
                     : 'border-cyan-400/15'
                 }`}
-              >
+
                 {tier.popular && (
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                     <span className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-4 py-2 rounded-full text-sm font-semibold">
@@ -351,7 +348,7 @@ const ComprehensivePricingGuide2030: React.FC = () => {
                       ? 'bg-gradient-to-r from-cyan-500 to-blue-600 text-white hover:opacity-90'
                       : 'border border-cyan-400/30 text-cyan-400 hover:bg-cyan-400/10'
                   }`}
-                >
+
                   Get Started
                 </Link>
               </motion.div>
@@ -368,7 +365,7 @@ const ComprehensivePricingGuide2030: React.FC = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="text-3xl font-bold text-center mb-12"
-          >
+
             Service Pricing Details
           </motion.h2>
 
@@ -378,7 +375,7 @@ const ComprehensivePricingGuide2030: React.FC = () => {
               value={selectedCategory}
               onChange={(e) => setSelectedCategory(e.target.value)}
               className="px-4 py-2 rounded-lg bg-slate-800 border border-cyan-400/20 focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20 outline-none text-white"
-            >
+
               {categories.map(category => (
                 <option key={category} value={category} className="bg-slate-800 text-white">
                   {category === 'all' ? 'All Categories' : category}
@@ -389,7 +386,7 @@ const ComprehensivePricingGuide2030: React.FC = () => {
               value={selectedPricingModel}
               onChange={(e) => setSelectedPricingModel(e.target.value)}
               className="px-4 py-2 rounded-lg bg-slate-800 border border-cyan-400/20 focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20 outline-none text-white"
-            >
+
               {pricingModels.map(model => (
                 <option key={model} value={model} className="bg-slate-800 text-white">
                   {model === 'all' ? 'All Pricing Models' : model.charAt(0).toUpperCase() + model.slice(1)}
@@ -411,7 +408,7 @@ const ComprehensivePricingGuide2030: React.FC = () => {
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
                   className="group bg-slate-900/60 backdrop-blur border border-cyan-400/15 hover:border-cyan-400/40 transition-all duration-300 rounded-2xl p-6 hover:shadow-2xl hover:shadow-cyan-400/10"
-                >
+
                   {/* Header */}
                   <div className="flex items-start justify-between mb-4">
                     <div className={`w-12 h-12 rounded-xl bg-gradient-to-br ${categoryColor} flex items-center justify-center`}>
@@ -474,14 +471,14 @@ const ComprehensivePricingGuide2030: React.FC = () => {
                     <Link
                       to={`/services/${service.id}`}
                       className="inline-flex items-center text-sm text-cyan-400 hover:text-cyan-300 transition-colors"
-                    >
+
                       Learn More
                       <ArrowRight className="ml-1 h-4 w-4" />
                     </Link>
                     <Link
                       to="/contact"
                       className="inline-flex items-center px-4 py-2 rounded-lg bg-gradient-to-r from-cyan-500 to-blue-600 text-white text-sm font-medium hover:opacity-90 transition-opacity"
-                    >
+
                       Get Quote
                     </Link>
                   </div>
@@ -499,7 +496,7 @@ const ComprehensivePricingGuide2030: React.FC = () => {
                   setSelectedPricingModel('all');
                 }}
                 className="text-cyan-400 hover:text-cyan-300 transition-colors"
-              >
+
                 Clear all filters
               </button>
             </div>
@@ -516,7 +513,7 @@ const ComprehensivePricingGuide2030: React.FC = () => {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               className="text-3xl font-bold mb-6"
-            >
+
               Calculate Your ROI
             </motion.h2>
             <motion.p
@@ -524,7 +521,7 @@ const ComprehensivePricingGuide2030: React.FC = () => {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
               className="text-xl text-slate-300 mb-8"
-            >
+
               Use our ROI calculator to estimate the return on investment for our services.
               Most clients see returns within 3-6 months.
             </motion.p>
@@ -534,7 +531,7 @@ const ComprehensivePricingGuide2030: React.FC = () => {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.4 }}
               className="bg-slate-900/60 backdrop-blur border border-cyan-400/20 rounded-2xl p-8"
-            >
+
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
                 <div className="text-center">
                   <div className="text-3xl font-bold text-cyan-400 mb-2">3-6</div>
@@ -553,7 +550,7 @@ const ComprehensivePricingGuide2030: React.FC = () => {
               <Link
                 to="/contact"
                 className="inline-flex items-center px-8 py-4 rounded-xl bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold hover:opacity-90 transition-opacity"
-              >
+
                 Get Personalized ROI Analysis
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Link>
@@ -571,7 +568,7 @@ const ComprehensivePricingGuide2030: React.FC = () => {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               className="text-4xl font-bold text-white mb-6"
-            >
+
               Ready to Get Started?
             </motion.h2>
             <motion.p
@@ -579,7 +576,7 @@ const ComprehensivePricingGuide2030: React.FC = () => {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
               className="text-xl text-slate-300 mb-8"
-            >
+
               Our team of experts is ready to help you choose the right services and pricing plan.
               Get in touch today for a personalized consultation.
             </motion.p>
@@ -589,14 +586,14 @@ const ComprehensivePricingGuide2030: React.FC = () => {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.4 }}
               className="grid md:grid-cols-3 gap-8 mb-12"
-            >
+
               <div className="flex flex-col items-center">
                 <Phone className="w-8 h-8 text-cyan-400 mb-4" />
                 <div className="text-white font-semibold mb-2">Call Us</div>
                 <a
                   href="tel:+13024640950"
                   className="text-cyan-400 hover:text-cyan-300 transition-colors"
-                >
+
                   +1 302 464 0950
                 </a>
               </div>
@@ -606,7 +603,7 @@ const ComprehensivePricingGuide2030: React.FC = () => {
                 <a
                   href="mailto:kleber@ziontechgroup.com"
                   className="text-cyan-400 hover:text-cyan-300 transition-colors"
-                >
+
                   kleber@ziontechgroup.com
                 </a>
               </div>
@@ -625,18 +622,18 @@ const ComprehensivePricingGuide2030: React.FC = () => {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.6 }}
               className="flex flex-wrap justify-center gap-4"
-            >
+
               <Link
                 to="/contact"
                 className="inline-flex items-center px-8 py-4 rounded-xl bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold hover:opacity-90 transition-opacity"
-              >
+
                 Schedule a Consultation
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Link>
               <Link
                 to="/request-quote"
                 className="inline-flex items-center px-8 py-4 rounded-xl border border-cyan-400/30 text-cyan-400 font-semibold hover:bg-cyan-400/10 transition-colors"
-              >
+
                 Request a Quote
               </Link>
             </motion.div>
@@ -656,7 +653,7 @@ const ComprehensivePricingGuide2030: React.FC = () => {
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-cyan-400 hover:text-cyan-300 transition-colors"
-              >
+
                 ziontechgroup.com
               </a>
               {' '}to explore our full range of services and solutions.
@@ -672,4 +669,4 @@ const ComprehensivePricingGuide2030: React.FC = () => {
   );
 };
 
-export default ComprehensivePricingGuide2030;
+export default ComprehensivePricingGuide2030;}}}}}}}}

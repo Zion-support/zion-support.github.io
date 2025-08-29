@@ -11,7 +11,7 @@ export default function ForumCategories() {
                 title: 'Welcome to the community!',
                 author: 'Admin',
                 date: '2024-01-15'
-            }
+
         },
         {
             id: '2',
@@ -24,8 +24,8 @@ export default function ForumCategories() {
                 title: 'API integration question',
                 author: 'Developer123',
                 date: '2024-01-14'
-            }
-        }
+
+
     ];
     return (<div className="space-y-4">
       {categories.map((category) => (<div key={category.id} className="bg-white/10 backdrop-blur-sm rounded-lg p-4">
@@ -37,4 +37,4 @@ export default function ForumCategories() {
           </div>
         </div>))}
     </div>);
-}
+}}}}

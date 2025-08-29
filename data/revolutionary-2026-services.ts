@@ -38,7 +38,7 @@ export interface Revolutionary2026Service {
   customers: number;
   rating: number;
   reviews: number;
-}
+
 export const revolutionary2026Services: Revolutionary2026Service[] = [
   // AI-Powered Business Intelligence & Analytics
   {
@@ -767,5 +767,5 @@ export const revolutionary2026Services: Revolutionary2026Service[] = [
     customers: 45,
     rating: 4.8,
     reviews: 25
-  }
-];
+
+];}}

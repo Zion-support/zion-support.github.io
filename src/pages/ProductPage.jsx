@@ -11,7 +11,7 @@ export default function ProductPage() {
     const [adding, setAdding] = useState(false);
     if (!product) {
         return <div className="p-6 text-white">Product not found</div>;
-    }
+
     const handleAdd = () => {
         setAdding(true);
         dispatch({
@@ -28,4 +28,4 @@ export default function ProductPage() {
         {adding ? 'Adding...' : 'Add to Cart'}
       </Button>
     </div>);
-}
+}}

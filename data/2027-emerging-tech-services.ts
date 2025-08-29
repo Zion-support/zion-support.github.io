@@ -14,7 +14,7 @@ export interface Service {
   roi: string;
   link: string;
   tags: string[];
-}
+
 export const emergingTech2027Services: Service[] = [
   {
     id: 'quantum-machine-learning',
@@ -435,5 +435,5 @@ export const emergingTech2027Services: Service[] = [
     roi: '800% within 18 months',
     link: 'https://ziontechgroup.com/services/quantum-climate-modeling',
     tags: ['Climate Modeling', 'Quantum Computing', 'Environmental', 'Weather', 'Research']
-  }
-];
+
+];}}

@@ -3,8 +3,7 @@ import { COMPREHENSIVE_SERVICES } from '@/data/comprehensiveServices';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
-import { Cloud, Users, TrendingUp, Phone, Mail, Globe, ArrowRight, Zap, Clock, Star, Shield, Smartphone, Settings, PieChart, FileText } from 'lucide-react';
-import Target from 'lucide-react/dist/esm/icons/target';
+import { Cloud, Users, TrendingUp, Phone, Mail, Globe, ArrowRight, Zap, Clock, Star, Shield, Smartphone, Settings, PieChart, FileText import Target from 'lucide-react/dist/esm/icons/target';
 import { Link } from 'react-router-dom';
 const microSAASServices = COMPREHENSIVE_SERVICES.filter(service => service.category === 'Micro SAAS');
 export default function MicroSAASShowcase() {
@@ -372,4 +371,4 @@ export default function MicroSAASShowcase() {
         </div>
       </section>
     </div>);
-}
+</Card></Card></Card></Card>}}

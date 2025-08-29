@@ -38,7 +38,7 @@ export interface AIEmergingTechService {
   customers: number;
   rating: number;
   reviews: number;
-}
+
 export const aiEmergingTechServices: AIEmergingTechService[] = [
   // AI-Powered Video Generation Platform
   {
@@ -455,5 +455,5 @@ export const aiEmergingTechServices: AIEmergingTechService[] = [
     customers: 420,
     rating: 4.8,
     reviews: 280
-  }
-];
+
+];}}

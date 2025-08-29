@@ -29,5 +29,4 @@ export default function DeveloperProductivityCopilot() {
       </main>
     </div>
   );
-}
-
+</div></div></div></div>}

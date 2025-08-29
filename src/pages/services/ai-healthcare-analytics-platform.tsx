@@ -22,8 +22,6 @@ import {
   PieChart,
   TrendingUp,
   AlertTriangle
-} from 'lucide-react';
-
 export default function AIHealthcareAnalyticsPlatform() {
   const features = [
     {
@@ -55,7 +53,7 @@ export default function AIHealthcareAnalyticsPlatform() {
       icon: Eye,
       title: 'Medical Image Analysis',
       description: 'AI-powered analysis of X-rays, MRIs, and CT scans for faster, more accurate diagnosis'
-    }
+
   ];
 
   const pricingPlans = [
@@ -108,7 +106,7 @@ export default function AIHealthcareAnalyticsPlatform() {
         'Custom integrations'
       ],
       popular: false
-    }
+
   ];
 
   const benefits = [
@@ -131,7 +129,7 @@ export default function AIHealthcareAnalyticsPlatform() {
       icon: BarChart3,
       title: '40% Cost Reduction',
       description: 'AI optimization reduces healthcare costs and improves efficiency'
-    }
+
   ];
 
   const useCases = [
@@ -154,7 +152,7 @@ export default function AIHealthcareAnalyticsPlatform() {
       title: 'Drug Safety Monitoring',
       description: 'Real-time monitoring of drug interactions and adverse effects',
       icon: Shield
-    }
+
   ];
 
   const complianceStandards = [
@@ -180,7 +178,7 @@ export default function AIHealthcareAnalyticsPlatform() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-          >
+
             <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-blue-600 to-cyan-600 text-white text-sm font-medium mb-6">
               <Heart className="w-4 h-4 mr-2" />
               AI-Powered Healthcare
@@ -217,7 +215,7 @@ export default function AIHealthcareAnalyticsPlatform() {
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
             className="text-center mb-16"
-          >
+
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Powered by Advanced AI
             </h2>
@@ -235,7 +233,7 @@ export default function AIHealthcareAnalyticsPlatform() {
                 transition={{ duration: 0.8, delay: index * 0.1 }}
                 viewport={{ once: true }}
                 className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700 hover:border-blue-500 transition-all duration-300"
-              >
+
                 <div className="w-12 h-12 bg-gradient-to-r from-blue-600 to-cyan-600 rounded-lg flex items-center justify-center mb-4">
                   <feature.icon className="w-6 h-6 text-white" />
                 </div>
@@ -256,7 +254,7 @@ export default function AIHealthcareAnalyticsPlatform() {
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
             className="text-center mb-16"
-          >
+
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Proven Results
             </h2>
@@ -274,7 +272,7 @@ export default function AIHealthcareAnalyticsPlatform() {
                 transition={{ duration: 0.8, delay: index * 0.1 }}
                 viewport={{ once: true }}
                 className="text-center"
-              >
+
                 <div className="w-16 h-16 bg-gradient-to-r from-blue-600 to-cyan-600 rounded-full flex items-center justify-center mx-auto mb-4">
                   <benefit.icon className="w-8 h-8 text-white" />
                 </div>
@@ -295,7 +293,7 @@ export default function AIHealthcareAnalyticsPlatform() {
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
             className="text-center mb-16"
-          >
+
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Comprehensive Healthcare Solutions
             </h2>
@@ -313,7 +311,7 @@ export default function AIHealthcareAnalyticsPlatform() {
                 transition={{ duration: 0.8, delay: index * 0.1 }}
                 viewport={{ once: true }}
                 className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-8 border border-gray-700"
-              >
+
                 <div className="w-16 h-16 bg-gradient-to-r from-blue-600 to-cyan-600 rounded-lg flex items-center justify-center mb-6">
                   <useCase.icon className="w-8 h-8 text-white" />
                 </div>
@@ -334,7 +332,7 @@ export default function AIHealthcareAnalyticsPlatform() {
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
             className="text-center mb-16"
-          >
+
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Compliance & Certifications
             </h2>
@@ -352,7 +350,7 @@ export default function AIHealthcareAnalyticsPlatform() {
                 transition={{ duration: 0.8, delay: index * 0.1 }}
                 viewport={{ once: true }}
                 className="bg-gray-800/50 backdrop-blur-sm rounded-lg p-6 border border-gray-700 text-center hover:border-blue-500 transition-all duration-300"
-              >
+
                 <CheckCircle className="w-8 h-8 text-green-400 mx-auto mb-3" />
                 <p className="text-white font-medium text-sm">{standard}</p>
               </motion.div>
@@ -370,7 +368,7 @@ export default function AIHealthcareAnalyticsPlatform() {
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
             className="text-center mb-16"
-          >
+
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Choose Your Healthcare Plan
             </h2>
@@ -392,7 +390,7 @@ export default function AIHealthcareAnalyticsPlatform() {
                     ? 'border-blue-500 ring-2 ring-blue-500/20'
                     : 'border-gray-700'
                 }`}
-              >
+
                 {plan.popular && (
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                     <span className="bg-gradient-to-r from-blue-600 to-cyan-600 text-white px-4 py-2 rounded-full text-sm font-semibold">
@@ -440,7 +438,7 @@ export default function AIHealthcareAnalyticsPlatform() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
-          >
+
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
               Ready to Transform Healthcare?
             </h2>
@@ -465,4 +463,4 @@ export default function AIHealthcareAnalyticsPlatform() {
       </section>
     </div>
   );
-}
+}}}}}}

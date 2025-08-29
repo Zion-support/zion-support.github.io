@@ -1,6 +1,4 @@
-import { TrendingUp, BarChart3, Shield, CheckCircle, ArrowRight, ExternalLink, Phone, Mail, DollarSign, Target, Zap, Calculator, PieChart } from 'lucide-react';
-
-export default function AIFinancialAnalytics() {
+import { TrendingUp, BarChart3, Shield, CheckCircle, ArrowRight, ExternalLink, Phone, Mail, DollarSign, Target, Zap, Calculator, PieChart export default function AIFinancialAnalytics() {
   const features = [
     'AI-powered financial forecasting and trend analysis',
     'Real-time market data integration and analysis',
@@ -39,7 +37,7 @@ export default function AIFinancialAnalytics() {
       price: '$1,299/mo',
       features: ['Unlimited portfolios', 'Full AI suite', 'Custom AI training', 'Dedicated support', 'API access', 'White-label solutions'],
       popular: false
-    }
+
   ];
 
   const useCases = [
@@ -312,11 +310,11 @@ export default function AIFinancialAnalytics() {
             target="_blank"
             rel="noreferrer"
             className="inline-flex items-center text-green-600 hover:text-green-700 font-semibold"
-          >
+
             Visit ziontechgroup.com <ExternalLink className="w-4 h-4 ml-2" />
           </a>
         </div>
       </section>
     </div>
   );
-}
+}}}

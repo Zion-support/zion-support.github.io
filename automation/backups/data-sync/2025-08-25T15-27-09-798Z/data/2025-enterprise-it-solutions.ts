@@ -225,5 +225,5 @@ export const enterpriseITSolutions: MicroSaasService[] = [
 		customers: 56,
 		rating: 4.8,
 		reviews: 38
-	}
-];
+
+];}

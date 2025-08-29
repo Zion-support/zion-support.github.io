@@ -7,7 +7,7 @@ export default function ServiceOnboarding() {
     // If not authenticated, redirect to login
     if (!isLoading && !user) {
         return <Navigate to="/login" replace/>;
-    }
+
     return (<>
 
       <div className="bg-zion-blue min-h-screen py-8 md:py-12">
@@ -25,4 +25,4 @@ export default function ServiceOnboarding() {
       </div>
 
     </>);
-}
+}}

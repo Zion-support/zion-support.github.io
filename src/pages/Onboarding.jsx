@@ -23,7 +23,7 @@ export default function Onboarding() {
                 return "employer";
             default:
                 return "buyer";
-        }
+
     };
     const handleUserTypeSelect = (type) => {
         setUserType(type);
@@ -31,11 +31,11 @@ export default function Onboarding() {
         if (type === "serviceProvider") {
             navigate('/service-onboarding');
             return;
-        }
+
         else if (type === "talent") {
             navigate('/talent-onboarding');
             return;
-        }
+
         // Continue with the onboarding flow for clients
         setCurrentStep(1);
     };
@@ -48,7 +48,7 @@ export default function Onboarding() {
             });
             navigate('/login');
             return;
-        }
+
         const dbUserType = mapUserTypeToDatabase(userType);
         try {
             await updateProfile({
@@ -75,15 +75,15 @@ export default function Onboarding() {
                 : "/talent-dashboard";
             // Redirect to dashboard
             navigate(dashboardRoute);
-        }
+
         catch (error) {
-            // console.error('Error updating profile:', error);
+            // // // console.error('Error updating profile:', error);
             toast({
                 title: 'Error',
                 description: 'There was a problem updating your profile. Please try again.',
                 variant: 'destructive',
             });
-        }
+
     };
     const steps = [
         { label: "Select Role", description: "Choose how you'll use the platform" },
@@ -92,7 +92,7 @@ export default function Onboarding() {
     if (!user) {
         navigate('/login');
         return null;
-    }
+
     return (<>
 
       <div className="min-h-screen bg-zion-blue py-12 px-4">
@@ -129,4 +129,4 @@ export default function Onboarding() {
       </div>
 
     </>);
-}
+}}}}}}}}

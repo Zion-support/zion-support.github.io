@@ -28,7 +28,6 @@ export interface HealthcareAIService {
     website: string;
     address: string;
   };
-}
 
 // Zion Tech Group Contact Information
 const zionContact = {
@@ -296,7 +295,7 @@ export const specializedHealthcareAIServices2025: HealthcareAIService[] = [
       "Crisis intervention"
     ],
     technologies: ["Natural Language Processing", "Sentiment Analysis", "Machine Learning", "Mobile Health"]
-  }
+
 ];
 
-export default specializedHealthcareAIServices2025;
+export default specializedHealthcareAIServices2025;}}

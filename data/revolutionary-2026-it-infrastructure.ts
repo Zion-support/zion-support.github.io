@@ -38,7 +38,7 @@ export interface Revolutionary2026ITInfrastructureService {
   customers: number;
   rating: number;
   reviews: number;
-}
+
 export const revolutionary2026ITInfrastructureServices: Revolutionary2026ITInfrastructureService[] = [
   {
     id: 'quantum-cloud-infrastructure',
@@ -447,5 +447,5 @@ export const revolutionary2026ITInfrastructureServices: Revolutionary2026ITInfra
     customers: 180,
     rating: 4.8,
     reviews: 90
-  }
-];
+
+];}}

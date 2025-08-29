@@ -23,7 +23,6 @@ import {
   Clock,
   Star,
   Heart
-} from 'lucide-react';
 import { SEO } from '../components/SEO';
 
 const AIServicesPage = () => {
@@ -109,7 +108,7 @@ const AIServicesPage = () => {
       rating: 4.8,
       reviews: 32,
       customers: 67
-    }
+
   ];
 
   const aiSolutions = [
@@ -132,7 +131,7 @@ const AIServicesPage = () => {
       title: 'AI-Driven Marketing',
       description: 'Personalized campaigns and customer insights',
       benefits: ['Higher Conversion', 'Better Targeting', 'ROI Optimization']
-    }
+
   ];
 
   const caseStudies = [
@@ -156,7 +155,7 @@ const AIServicesPage = () => {
       challenge: 'Patient data analysis',
       solution: 'NLP for medical records',
       results: ['80% faster diagnosis', 'Improved accuracy', 'Better patient outcomes']
-    }
+
   ];
 
   return (
@@ -209,7 +208,7 @@ const AIServicesPage = () => {
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
                   className="bg-white/5 backdrop-blur-lg rounded-xl p-6 border border-purple-400/20 hover:border-purple-400/40 transition-all duration-300"
-                >
+
                   <h3 className="text-lg font-semibold text-white mb-3">{solution.title}</h3>
                   <p className="text-gray-300 mb-4 text-sm">{solution.description}</p>
                   <ul className="space-y-2">
@@ -236,7 +235,7 @@ const AIServicesPage = () => {
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
                   className="bg-white/5 backdrop-blur-lg rounded-xl p-6 border border-purple-400/20"
-                >
+
                   <h3 className="text-xl font-semibold text-white mb-2">{study.company}</h3>
                   <p className="text-purple-400 text-sm mb-4">{study.industry}</p>
                   <div className="space-y-3">
@@ -275,13 +274,13 @@ const AIServicesPage = () => {
               <Link
                 to="/contact"
                 className="px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white rounded-lg font-semibold hover:from-purple-700 hover:to-pink-700 transition-all duration-300 transform hover:scale-105"
-              >
+
                 Get Started Today
               </Link>
               <Link
                 to="/services"
                 className="px-8 py-4 border-2 border-purple-400 text-purple-400 rounded-lg font-semibold hover:bg-purple-400 hover:text-white transition-all duration-300"
-              >
+
                 View All Services
               </Link>
             </div>
@@ -292,4 +291,4 @@ const AIServicesPage = () => {
   );
 };
 
-export default AIServicesPage;
+export default AIServicesPage;}}}}

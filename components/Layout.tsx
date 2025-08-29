@@ -4,7 +4,6 @@ import EnhancedFooter from './layout/EnhancedFooter';
 
 interface LayoutProps {
   children: React.ReactNode;
-}
 
 export default function Layout({ children }: LayoutProps) {
   return (
@@ -16,4 +15,4 @@ export default function Layout({ children }: LayoutProps) {
       <EnhancedFooter />
     </div>
   );
-}
+}}

@@ -1,8 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { Cloud, Server, Shield, Zap, Database, Globe, ArrowRight, Play, Code, BarChart3, MessageSquare, Phone, Mail, Lock, Cpu, HardDrive, Wifi, TrendingUp, DollarSign } from 'lucide-react';
-export default function CloudInfrastructure() {
+import { Cloud, Server, Shield, Zap, Database, Globe, ArrowRight, Play, Code, BarChart3, MessageSquare, Phone, Mail, Lock, Cpu, HardDrive, Wifi, TrendingUp, DollarSign export default function CloudInfrastructure() {
     const [selectedProvider, setSelectedProvider] = useState('aws');
     const cloudProviders = [
         {
@@ -28,7 +27,7 @@ export default function CloudInfrastructure() {
             description: 'Innovative cloud technologies',
             features: ['Compute Engine', 'Cloud Storage', 'BigQuery, AI Platform'],
             icon: Globe
-        }
+
     ];
     const cloudServices = [
         {
@@ -66,7 +65,7 @@ export default function CloudInfrastructure() {
             description: 'Comprehensive monitoring and observability',
             icon: BarChart3,
             features: ['CloudWatch', 'Azure Monitor', 'Stackdriver', 'Log Management']
-        }
+
     ];
     const benefits = [
         { title: 'Scalability', description: 'Scale resources up or down based on demand', icon: TrendingUp },
@@ -264,4 +263,4 @@ export default function CloudInfrastructure() {
         </div>
       </section>
     </div>);
-}
+}}}}

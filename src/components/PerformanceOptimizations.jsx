@@ -43,7 +43,7 @@ const VirtualList = ({ items, itemHeight = 60, containerHeight = 400 }) => {
                 top: (startIndex + index) * itemHeight,
                 height: itemHeight,
                 width: '100%'
-            }
+
         }));
     }, [items, scrollTop, itemHeight, containerHeight]);
     const handleScroll = useCallback((e) => {
@@ -71,7 +71,7 @@ export function PerformanceOptimizations() {
         { id: 5, title: 'Service 5', description: 'Description 5', value: 500 },
     ]);
     const handleItemClick = useCallback((item) => {
-        // console.log('Item clicked:', item);
+        // // // console.log('Item clicked:', item);
     }, []);
     const addItem = useCallback(() => {
         setData(prev => [...prev, {
@@ -153,4 +153,4 @@ export function PerformanceOptimizations() {
         </div>
       </div>
     </div>);
-}
+}}

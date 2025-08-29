@@ -49,7 +49,6 @@ export interface AIService {
   createdAt: string;
   featured: boolean;
   trending: boolean;
-}
 
 // Zion Tech Group Contact Information
 const zionContact = {
@@ -528,7 +527,7 @@ export const innovativeAIServices2030: AIService[] = [
     createdAt: "2030-01-15T10:00:00.000Z",
     featured: true,
     trending: true
-  }
+
 ];
 
-export default innovativeAIServices2030;
+export default innovativeAIServices2030;}}

@@ -20,8 +20,6 @@ import {
   Target,
   Award,
   Clock
-} from 'lucide-react';
-
 const InnovativeServicesShowcase2031: React.FC = () => {
   const scrollToContact = () => {
     document.getElementById('contact-section')?.scrollIntoView({ behavior: 'smooth' });
@@ -62,14 +60,14 @@ const InnovativeServicesShowcase2031: React.FC = () => {
               <button
                 onClick={scrollToContact}
                 className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-semibold rounded-lg hover:from-purple-700 hover:to-pink-700 transition-all duration-300 transform hover:scale-105"
-              >
+
                 Get Started Today
                 <ArrowRight className="ml-2 w-5 h-5" />
               </button>
               <button
                 onClick={() => document.getElementById('services-overview')?.scrollIntoView({ behavior: 'smooth' })}
                 className="inline-flex items-center px-8 py-4 border-2 border-purple-400 text-purple-400 font-semibold rounded-lg hover:bg-purple-400 hover:text-white transition-all duration-300"
-              >
+
                 Explore Services
               </button>
             </div>
@@ -267,7 +265,7 @@ const InnovativeServicesShowcase2031: React.FC = () => {
                       <button
                         onClick={scrollToContact}
                         className="w-full bg-gradient-to-r from-purple-600 to-pink-600 text-white font-semibold py-3 px-6 rounded-lg hover:from-purple-700 hover:to-pink-700 transition-all duration-300"
-                      >
+
                         Get Started
                       </button>
                     </div>
@@ -411,7 +409,7 @@ const InnovativeServicesShowcase2031: React.FC = () => {
                   <button
                     type="submit"
                     className="w-full bg-gradient-to-r from-purple-600 to-pink-600 text-white font-semibold py-3 px-6 rounded-lg hover:from-purple-700 hover:to-pink-700 transition-all duration-300"
-                  >
+
                     Send Message
                   </button>
                 </form>
@@ -433,14 +431,14 @@ const InnovativeServicesShowcase2031: React.FC = () => {
               <button
                 onClick={scrollToContact}
                 className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-semibold rounded-lg hover:from-purple-700 hover:to-pink-700 transition-all duration-300 transform hover:scale-105"
-              >
+
                 Start Your Transformation
                 <ArrowRight className="ml-2 w-5 h-5" />
               </button>
               <a
                 href="https://ziontechgroup.com"
                 className="inline-flex items-center px-8 py-4 border-2 border-purple-400 text-purple-400 font-semibold rounded-lg hover:bg-purple-400 hover:text-white transition-all duration-300"
-              >
+
                 Visit Our Website
               </a>
             </div>
@@ -451,4 +449,4 @@ const InnovativeServicesShowcase2031: React.FC = () => {
   );
 };
 
-export default InnovativeServicesShowcase2031;
+export default InnovativeServicesShowcase2031;}

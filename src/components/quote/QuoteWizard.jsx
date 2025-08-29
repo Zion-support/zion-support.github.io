@@ -18,7 +18,7 @@ function StepIndicator({ step }) {
         <div className="h-1 bg-zion-purple rounded" style={{ width: `${progress}%` }}/>
       </div>
     </div>);
-}
+
 export function QuoteWizard({ category }) {
     const [step, setStep] = useState(1);
     const [selectedItemId, setSelectedItemId] = useState(null);
@@ -33,7 +33,7 @@ export function QuoteWizard({ category }) {
                 title: 'Unable to load services',
                 variant: 'destructive'
             });
-        }
+
     }, [delayedError, toast]);
     // Use isLoading from SWR for a more direct loading state
     const loading = isLoading;
@@ -54,7 +54,7 @@ export function QuoteWizard({ category }) {
                     ? 'talent'
                     : 'item'} to continue.`);
             return;
-        }
+
         setSelectionError('');
         setStep(2);
     };
@@ -79,7 +79,7 @@ export function QuoteWizard({ category }) {
             default:
                 payload.item_id = selectedItemId;
                 payload.category = category;
-        }
+
         await fetch(endpoint, {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
@@ -115,7 +115,7 @@ export function QuoteWizard({ category }) {
                         if (e.key === 'Enter' || e.key === ' ') {
                             e.preventDefault();
                             setSelectedItemId(item.id);
-                        }
+
                     }}>
                 <div className="font-semibold text-lg">{item.name}</div>
                 {/* Display other relevant info like price if available */}
@@ -136,7 +136,7 @@ export function QuoteWizard({ category }) {
           Continue
         </Button>
       </div>);
-    }
+
     if (step === 2) {
         return (<div data-testid="details-step" className="space-y-4">
         <StepIndicator step={step}/>
@@ -152,7 +152,7 @@ export function QuoteWizard({ category }) {
           <Button onClick={handleSubmit} disabled={!selectedItemId}>Submit Quote</Button>
         </div>
       </div>);
-    }
+
     if (step === 3) {
         return (<div data-testid="success-step" className="space-y-4 text-center py-12">
         <StepIndicator step={step}/>
@@ -168,6 +168,6 @@ export function QuoteWizard({ category }) {
           Request Another Quote
         </Button>
       </div>);
-    }
+
     return null;
-}
+</div>}}}}}}}}}

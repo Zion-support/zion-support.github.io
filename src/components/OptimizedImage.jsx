@@ -11,26 +11,26 @@ export const OptimizedImage = ({ src, alt, className = '', placeholder = 'data:i
         if (priority) {
             setIsInView(true);
             return;
-        }
+
         const observer = new IntersectionObserver(([entry]) => {
             if (entry.isIntersecting) {
                 setIsInView(true);
                 observer.disconnect();
-            }
+
         }, {
             rootMargin: '50px',
             threshold: 0.1
         });
         if (imageRef.current) {
             observer.observe(imageRef.current);
-        }
+
         return () => observer.disconnect();
     }, [priority]);
     // Load image when in view
     useEffect(() => {
         if (isInView && !priority) {
             setCurrentSrc(src);
-        }
+
     }, [isInView, src, priority]);
     const handleLoad = () => {
         setIsLoaded(true);
@@ -68,3 +68,4 @@ export const OptimizedImage = ({ src, alt, className = '', placeholder = 'data:i
       {isLoaded && !hasError && (<motion.div initial={{ opacity: 0, scale: 1.1 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: 0.3 }} className="absolute inset-0 bg-gradient-to-t from-black/10 to-transparent pointer-events-none"/>)}
     </div>);
 };
+}}}</motion.div>}

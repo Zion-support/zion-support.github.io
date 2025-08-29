@@ -29,7 +29,7 @@ export const PerformanceOptimizer = ({ children }) => {
                 // Add loading="lazy" to images below the fold
                 if (img.getBoundingClientRect().top > window.innerHeight) {
                     img.loading = 'lazy';
-                }
+
                 // Add decoding="async" for better performance
                 img.decoding = 'async';
                 // Add error handling
@@ -41,10 +41,10 @@ export const PerformanceOptimizer = ({ children }) => {
         // Use requestIdleCallback for non-critical optimization
         if ('requestIdleCallback' in window) {
             requestIdleCallback(optimizeImages);
-        }
+
         else {
             setTimeout(optimizeImages, 100);
-        }
+
     }, [location.pathname]);
     // Memoize expensive computations
     const optimizedChildren = useMemo(() => children, [children]);
@@ -56,7 +56,7 @@ export const PerformanceOptimizer = ({ children }) => {
                 // Handle scroll-based optimizations here
                 window.scrollTimeout = null;
             }, 16); // ~60fps
-        }
+
     }, []);
     useEffect(() => {
         window.addEventListener('scroll', handleScroll, { passive: true });
@@ -71,7 +71,7 @@ export const PerformanceOptimizer = ({ children }) => {
                     updateViaCache: 'none'
                 })
                 .then((registration) => {
-                    // console.log('SW registered: ', registration);
+                    // // // console.log('SW registered: ', registration);
 
                     // Check for updates
                     registration.addEventListener('updatefound', () => {
@@ -80,16 +80,16 @@ export const PerformanceOptimizer = ({ children }) => {
                             newWorker.addEventListener('statechange', () => {
                                 if (newWorker.state === 'installed' && navigator.serviceWorker.controller) {
                                     // New service worker available
-                                    // console.log('New service worker available');
-                                }
+                                    // // // console.log('New service worker available');
+
                             });
-                        }
+
                     });
                 })
                 .catch((registrationError) => {
-                    // console.warn('SW registration failed: ', registrationError);
+                    // // // console.warn('SW registration failed: ', registrationError);
                 });
-        }
+
     }, []);
     // Intersection Observer for lazy loading
     useEffect(() => {
@@ -102,8 +102,8 @@ export const PerformanceOptimizer = ({ children }) => {
                             target.src = target.dataset.src;
                             target.removeAttribute('data-src');
                             observer.unobserve(target);
-                        }
-                    }
+
+
                 });
             }, {
                 rootMargin: '50px',
@@ -113,7 +113,7 @@ export const PerformanceOptimizer = ({ children }) => {
             const lazyImages = document.querySelectorAll('img[data-src]');
             lazyImages.forEach((img) => observer.observe(img));
             return () => observer.disconnect();
-        }
+
     }, [location.pathname]);
     return <>{optimizedChildren}</>;
 };
@@ -124,7 +124,7 @@ if (typeof window !== 'undefined') {
         window.scheduler.postTask(() => {
             // Run non-critical tasks during idle time
         }, { priority: 'background' });
-    }
+
     // Optimize memory usage
     if ('memory' in performance) {
         const memoryThreshold = 50 * 1024 * 1024; // 50MB
@@ -132,8 +132,9 @@ if (typeof window !== 'undefined') {
             // Trigger garbage collection if available
             if ('gc' in window) {
                 window.gc();
-            }
-        }
-    }
-}
+
+
+
+
 export default PerformanceOptimizer;
+}}}}}}}}}}}}}}}

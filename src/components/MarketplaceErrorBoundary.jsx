@@ -4,18 +4,17 @@ import * as Sentry from '@sentry/nextjs';
 import { mutate } from 'swr';
 import { Button } from '@/components/ui/button';
 import { Alert, AlertDescription, AlertTitle } from '@/components/ui/alert';
-import { RefreshCcw, AlertCircle } from 'lucide-react';
-function MarketplaceErrorFallback({ error, resetErrorBoundary }) {
+import { RefreshCcw, AlertCircle function MarketplaceErrorFallback({ error, resetErrorBoundary }) {
     const handleRetry = async () => {
         try {
             // Re-call SWR mutate('*') to refresh all cached data
             await mutate(() => true, undefined, { revalidate: true });
             resetErrorBoundary();
-        }
+
         catch (retryError) {
-            // console.error('Error during retry:', retryError);
+            // // // console.error('Error during retry:', retryError);
             Sentry.captureException(retryError);
-        }
+
     };
     return (<div className="flex items-center justify-center min-h-[400px] p-6">
       <div className="max-w-md w-full space-y-4">
@@ -46,11 +45,11 @@ function MarketplaceErrorFallback({ error, resetErrorBoundary }) {
         </div>
       </div>
     </div>);
-}
+
 export function MarketplaceErrorBoundary({ children }) {
     const handleError = (error, errorInfo) => {
         // Log boundary errors to Sentry
-        // console.error('MarketplaceErrorBoundary caught an error:', error, errorInfo);
+        // // // console.error('MarketplaceErrorBoundary caught an error:', error, errorInfo);
         Sentry.withScope((scope) => {
             scope.setTag('errorBoundary', 'marketplace');
             scope.setContext('errorInfo', {
@@ -63,4 +62,4 @@ export function MarketplaceErrorBoundary({ children }) {
     return (<ErrorBoundary FallbackComponent={MarketplaceErrorFallback} onError={handleError}>
       {children}
     </ErrorBoundary>);
-}
+}}}}}

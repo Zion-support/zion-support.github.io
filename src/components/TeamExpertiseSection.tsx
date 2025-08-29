@@ -11,8 +11,6 @@ import {
   CheckCircle,
   Globe,
   Rocket
-} from 'lucide-react';
-
 export const TeamExpertiseSection: React.FC = () => {
   const expertise = [
     {
@@ -62,7 +60,7 @@ export const TeamExpertiseSection: React.FC = () => {
       certifications: ['PhD Computer Science', 'Patent Holders', 'Research Publications'],
       experience: '20+ years',
       projects: '50+'
-    }
+
   ];
 
   const stats = [
@@ -80,7 +78,7 @@ export const TeamExpertiseSection: React.FC = () => {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
-        >
+
           <h2 className="text-4xl font-bold text-gray-900 mb-4">
             Meet Our Expert Team
           </h2>
@@ -96,7 +94,7 @@ export const TeamExpertiseSection: React.FC = () => {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.1 }}
           className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-16"
-        >
+
           {stats.map((stat, index) => {
             const IconComponent = stat.icon;
             return (
@@ -126,7 +124,7 @@ export const TeamExpertiseSection: React.FC = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 className="bg-gray-50 rounded-2xl p-8 hover:shadow-lg transition-all duration-300"
-              >
+
                 <div className="flex items-center mb-6">
                   <div className="p-3 bg-blue-100 rounded-xl mr-4">
                     <IconComponent className="h-8 w-8 text-blue-600" />
@@ -158,7 +156,7 @@ export const TeamExpertiseSection: React.FC = () => {
                       <span
                         key={certIndex}
                         className="px-3 py-1 bg-blue-100 text-blue-800 text-xs rounded-full font-medium"
-                      >
+
                         {cert}
                       </span>
                     ))}
@@ -175,7 +173,7 @@ export const TeamExpertiseSection: React.FC = () => {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.3 }}
           className="text-center"
-        >
+
           <div className="bg-gradient-to-r from-blue-600 to-indigo-600 rounded-2xl p-8 text-white">
             <h3 className="text-2xl font-bold mb-4">
               Ready to Work with Experts?
@@ -202,3 +200,4 @@ export const TeamExpertiseSection: React.FC = () => {
 };
 
 export default TeamExpertiseSection;
+}}

@@ -1,7 +1,6 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { Button } from "../ui/Button";
-import { Send } from "lucide-react";
-export function ChatInput({ onSend, disabled = false }) {
+import { Send export function ChatInput({ onSend, disabled = false }) {
     const [message, setMessage] = useState('');
     const inputRef = useRef(null);
     useEffect(() => {
@@ -13,13 +12,13 @@ export function ChatInput({ onSend, disabled = false }) {
         if (message.trim() && !disabled) {
             onSend(message);
             setMessage('');
-        }
+
     };
     const handleKeyPress = (e) => {
         if (e.key === 'Enter' && !e.shiftKey) {
             e.preventDefault();
             handleSubmit(e);
-        }
+
     };
     return (<form onSubmit={handleSubmit} className="flex items-end gap-2">
       <textarea ref={inputRef} className="flex-1 min-h-[40px] max-h-[120px] px-3 py-2 bg-zion-blue-dark border border-zion-blue-light rounded-md focus:outline-none focus:ring-2 focus:ring-zion-purple focus:border-transparent resize-none text-white placeholder:text-zion-slate-light" placeholder="Type your message..." value={message} onChange={(e) => setMessage(e.target.value)} onKeyDown={handleKeyPress} rows={1} disabled={disabled}/>
@@ -27,4 +26,4 @@ export function ChatInput({ onSend, disabled = false }) {
         <Send className="h-5 w-5"/>
       </Button>
     </form>);
-}
+}}}}

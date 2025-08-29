@@ -21,7 +21,7 @@ const AffiliateAttributionHub = () => {
             title: "Commission Management",
             description: "Automated commission calculation and payment processing",
             icon: "💰"
-        }
+
     ];
     const attributionModels = [
         {
@@ -43,7 +43,7 @@ const AffiliateAttributionHub = () => {
             name: "Time-Decay Attribution",
             description: "More recent touchpoints receive higher credit",
             useCase: "Long sales cycles"
-        }
+
     ];
     const platformFeatures = [
         {
@@ -61,7 +61,7 @@ const AffiliateAttributionHub = () => {
         {
             category: "Integration & APIs",
             features: ["CRM integration", "E-commerce platforms", "Marketing tools", "Custom webhooks"]
-        }
+
     ];
     const benefits = [
         {
@@ -79,7 +79,7 @@ const AffiliateAttributionHub = () => {
         {
             title: "Data Insights",
             description: "Deep understanding of customer journey and attribution patterns"
-        }
+
     ];
     return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white">
       <section className="py-20 px-4 sm:px-6 lg:px-8">
@@ -237,3 +237,4 @@ const AffiliateAttributionHub = () => {
     </div>);
 };
 export default AffiliateAttributionHub;
+}}}}

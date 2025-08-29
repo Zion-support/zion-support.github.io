@@ -1,6 +1,5 @@
 import React, { useState, useRef } from 'react';
-import { Workflow, Brain, Settings, X, Maximize2, Minimize2, Search, CheckCircle, BarChart3, TrendingUp, Target, Activity, Users, FileText, AlertTriangle, Lightbulb, DollarSign, PieChart, MoreVertical, Edit3, Server, Play, Loader } from 'lucide-react';
-const mockBusinessProcesses = [
+import { Workflow, Brain, Settings, X, Maximize2, Minimize2, Search, CheckCircle, BarChart3, TrendingUp, Target, Activity, Users, FileText, AlertTriangle, Lightbulb, DollarSign, PieChart, MoreVertical, Edit3, Server, Play, Loader const mockBusinessProcesses = [
     {
         id: 'bp-001',
         name: 'Invoice Processing & Approval',
@@ -30,7 +29,7 @@ const mockBusinessProcesses = [
                 manualInterventions: 2,
                 cost: 150,
                 efficiency: 94
-            }
+
         ],
         rules: [
             {
@@ -43,7 +42,7 @@ const mockBusinessProcesses = [
                 aiOptimized: true,
                 lastTriggered: new Date('2024-01-15T10:30:00Z'),
                 triggerCount: 156
-            }
+
         ],
         dependencies: ['vendor_verification', 'budget_approval']
     },
@@ -76,7 +75,7 @@ const mockBusinessProcesses = [
                 manualInterventions: 1,
                 cost: 200,
                 efficiency: 89
-            }
+
         ],
         rules: [
             {
@@ -89,7 +88,7 @@ const mockBusinessProcesses = [
                 aiOptimized: true,
                 lastTriggered: new Date('2024-01-14T14:15:00Z'),
                 triggerCount: 23
-            }
+
         ],
         dependencies: ['background_check', 'document_verification']
     },
@@ -122,7 +121,7 @@ const mockBusinessProcesses = [
                 manualInterventions: 0,
                 cost: 50,
                 efficiency: 98
-            }
+
         ],
         rules: [
             {
@@ -135,10 +134,10 @@ const mockBusinessProcesses = [
                 aiOptimized: true,
                 lastTriggered: new Date('2024-01-15T16:45:00Z'),
                 triggerCount: 8
-            }
+
         ],
         dependencies: ['ticket_classification', 'agent_availability']
-    }
+
 ];
 export function AdvancedAIBusinessProcessAutomation() {
     const [isOpen, setIsOpen] = useState(false);
@@ -162,7 +161,7 @@ export function AdvancedAIBusinessProcessAutomation() {
             case 'failed': return 'text-red-500 bg-red-100 dark:bg-red-900/20';
             case 'draft': return 'text-gray-500 bg-gray-100 dark:bg-gray-900/20';
             default: return 'text-gray-500 bg-gray-100 dark:bg-gray-900/20';
-        }
+
     };
     const getPriorityColor = (priority) => {
         switch (priority) {
@@ -171,7 +170,7 @@ export function AdvancedAIBusinessProcessAutomation() {
             case 'medium': return 'text-yellow-600 bg-yellow-100 dark:bg-yellow-900/20';
             case 'low': return 'text-green-600 bg-green-100 dark:bg-green-900/20';
             default: return 'text-gray-600 bg-gray-100 dark:bg-gray-900/20';
-        }
+
     };
     const getAutomationLevelColor = (level) => {
         switch (level) {
@@ -179,7 +178,7 @@ export function AdvancedAIBusinessProcessAutomation() {
             case 'semi-automated': return 'text-yellow-600 bg-yellow-100 dark:bg-yellow-900/20';
             case 'manual': return 'text-red-600 bg-red-100 dark:bg-red-900/20';
             default: return 'text-gray-600 bg-gray-100 dark:bg-gray-900/20';
-        }
+
     };
     const getCategoryIcon = (category) => {
         switch (category) {
@@ -190,7 +189,7 @@ export function AdvancedAIBusinessProcessAutomation() {
             case 'marketing': return <Target className="w-4 h-4"/>;
             case 'it': return <Server className="w-4 h-4"/>;
             default: return <FileText className="w-4 h-4"/>;
-        }
+
     };
     const formatCurrency = (amount) => {
         return new Intl.NumberFormat('en-US', {
@@ -230,7 +229,7 @@ export function AdvancedAIBusinessProcessAutomation() {
           NEW
         </div>
       </button>);
-    }
+
     if (isMinimized) {
         return (<div className="fixed bottom-4 right-4 bg-white dark:bg-zion-slate border border-zion-slate-light rounded-lg shadow-2xl z-50">
         <div className="flex items-center gap-3 p-3">
@@ -241,7 +240,7 @@ export function AdvancedAIBusinessProcessAutomation() {
           </button>
         </div>
       </div>);
-    }
+
     return (<div className={`fixed bg-white dark:bg-zion-slate border border-zion-slate-light rounded-lg shadow-2xl z-50 overflow-hidden transition-all duration-300 ${isFullscreen ? 'inset-4' : 'bottom-4 right-4 w-[1400px] h-[900px]'}`} ref={containerRef}>
       {/* Header */}
       <div className="bg-gradient-to-r from-zion-blue to-zion-purple text-white p-4 flex items-center justify-between">
@@ -709,4 +708,4 @@ export function AdvancedAIBusinessProcessAutomation() {
           </div>)}
       </div>
     </div>);
-}
+}}}}}}}}}}}}}}}

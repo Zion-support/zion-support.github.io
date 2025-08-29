@@ -209,5 +209,5 @@ export const real2027Q3Additions: EnhancedRealMicroSaasService[] = [
 		customers: 900,
 		rating: 4.9,
 		reviews: 2100
-	}
-];
+
+];}
