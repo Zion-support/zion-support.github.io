@@ -2,59 +2,65 @@ import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { 
-  CheckCircle, 
-  Star, 
-  Zap, 
-  Shield, 
-  TrendingUp, 
   Brain, 
-  Server, 
-  Globe, 
-  ArrowRight, 
-  Mail, 
-  Phone, 
-  MapPin, 
-  ExternalLink,
-  DollarSign,
-  CreditCard,
-  Wallet,
-  Coins,
-  PiggyBank,
-  Calculator,
-  BarChart3,
-  Target,
-  Award,
+  Cloud, 
+  Shield, 
+  Rocket, 
+  Cpu, 
+  Lock, 
+  Heart, 
+  Globe,
+  Zap,
   Users,
-  Clock,
-  Calendar,
-  Check,
-  X,
+  ShoppingCart,
+  MessageCircle,
+  BookOpen,
+  DollarSign,
+  CheckCircle,
+  ArrowRight,
+  Star,
+  TrendingUp,
+  Award,
+  Lightbulb,
+  Database,
+  Network,
+  Smartphone,
+  Server,
   Scale,
   Truck,
-  Target as TargetIcon,
+  Target,
   Building,
   Home,
   Lock,
   Wrench,
   FileText,
-  Heart,
-  Cloud,
-  Cpu,
-  Rocket
+  Video,
+  Mic,
+  Camera,
+  Phone,
+  Mail,
+  MapPin,
+  ExternalLink,
+  Calendar,
+  Clock,
+  BarChart3,
+  Target,
+  Users,
+  Check,
+  X
 } from 'lucide-react';
+import { SEO } from '@/components/SEO';
+import { Button } from '@/components/ui/button';
+import { Badge } from '@/components/ui/badge';
 import { 
   revolutionaryMicroSaasServices2028, 
   revolutionaryITInfrastructureServices2028, 
   revolutionaryAIServices2028 
 } from '@/data/innovativeMicroSaasServices2028';
-import { SEO } from '@/components/SEO';
-import { Button } from '@/components/ui/button';
-import { Badge } from '@/components/ui/badge';
 
-export default function ComprehensivePricingGuide2028() {
+export default function InnovativeServicesShowcase2028() {
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [selectedService, setSelectedService] = useState(null);
-  const [showComparison, setShowComparison] = useState(false);
 
   const allServices = [
     ...revolutionaryMicroSaasServices2028.map(s => ({ ...s, type: 'Micro SaaS' })),
@@ -77,7 +83,7 @@ export default function ComprehensivePricingGuide2028() {
     switch (category) {
       case 'Legal Tech': return Scale;
       case 'Supply Chain': return Truck;
-      case 'Marketing Tech': return TargetIcon;
+      case 'Marketing Tech': return Target;
       case 'HR Tech': return Users;
       case 'Sustainability': return Globe;
       case 'Real Estate Tech': return Home;
@@ -104,67 +110,13 @@ export default function ComprehensivePricingGuide2028() {
     return colors[Math.abs(category.length) % colors.length];
   };
 
-  const pricingTiers = [
-    {
-      name: 'Starter',
-      description: 'Perfect for small businesses and startups',
-      price: 49,
-      features: [
-        'Basic features',
-        'Email support',
-        '1-5 users',
-        'Standard integrations',
-        'Community forum access',
-        'Basic analytics'
-      ],
-      color: 'from-zion-cyan to-zion-blue',
-      popular: false
-    },
-    {
-      name: 'Professional',
-      description: 'Ideal for growing businesses and teams',
-      price: 199,
-      features: [
-        'Advanced features',
-        'Priority support',
-        'Up to 25 users',
-        'Advanced integrations',
-        'API access',
-        'Custom branding',
-        'Analytics dashboard',
-        'White-label options'
-      ],
-      color: 'from-zion-purple to-zion-cyan',
-      popular: true
-    },
-    {
-      name: 'Enterprise',
-      description: 'For large organizations with complex needs',
-      price: 599,
-      features: [
-        'Custom features',
-        '24/7 dedicated support',
-        'Unlimited users',
-        'Custom integrations',
-        'White-label options',
-        'Advanced security',
-        'SLA guarantees',
-        'Dedicated account manager',
-        'Custom development',
-        'On-premise options'
-      ],
-      color: 'from-zion-blue to-zion-purple',
-      popular: false
-    }
-  ];
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple">
       <SEO 
-        title="Comprehensive Pricing Guide 2028 - Zion Tech Group"
-        description="Explore our comprehensive pricing guide for 2028 featuring revolutionary micro SAAS, IT infrastructure, and AI services with proven ROI and competitive market pricing."
-        keywords="pricing guide 2028, micro SAAS pricing, IT services pricing, AI services pricing, ROI calculator"
-        canonical="https://ziontechgroup.com/pricing-guide-2028"
+        title="Innovative Services Showcase 2028 - Zion Tech Group"
+        description="Discover our revolutionary micro SAAS, IT infrastructure, and AI services for 2028. Cutting-edge solutions with real market prices and proven ROI."
+        keywords="micro SAAS 2028, IT services, AI services, quantum computing, cybersecurity, legal tech, supply chain optimization"
+        canonical="https://ziontechgroup.com/innovative-services-showcase-2028"
       />
 
       {/* Hero Section */}
@@ -177,7 +129,7 @@ export default function ComprehensivePricingGuide2028() {
             transition={{ duration: 0.8 }}
             className="text-5xl md:text-6xl font-bold text-white mb-6"
           >
-            Comprehensive Pricing Guide 2028
+            Innovative Services Showcase 2028
             <span className="block text-3xl md:text-4xl text-zion-cyan mt-2">
               Revolutionary Technology Solutions
             </span>
@@ -188,8 +140,8 @@ export default function ComprehensivePricingGuide2028() {
             transition={{ duration: 0.8, delay: 0.2 }}
             className="text-xl text-zion-slate-light max-w-4xl mx-auto mb-8"
           >
-            Discover transparent pricing for our cutting-edge micro SAAS, IT infrastructure, and AI services. 
-            Each solution includes detailed ROI analysis, market comparisons, and flexible pricing options.
+            Experience the future of technology with our cutting-edge micro SAAS, IT infrastructure, 
+            and AI services. Each solution is designed for maximum impact with proven ROI and real market pricing.
           </motion.p>
           <motion.div 
             initial={{ opacity: 0, y: 20 }}
@@ -200,92 +152,23 @@ export default function ComprehensivePricingGuide2028() {
             <Button 
               size="lg"
               className="bg-zion-cyan hover:bg-zion-cyan-light text-white px-8 py-3 rounded-lg font-semibold transition-colors"
-              onClick={() => document.getElementById('pricing-section')?.scrollIntoView({ behavior: 'smooth' })}
+              onClick={() => document.getElementById('services-section')?.scrollIntoView({ behavior: 'smooth' })}
             >
-              View Pricing
+              Explore Services
             </Button>
             <Button 
               size="lg"
               variant="outline"
               className="border-zion-cyan text-zion-cyan hover:bg-zion-cyan hover:text-white px-8 py-3 rounded-lg font-semibold transition-colors"
-              onClick={() => setShowComparison(true)}
+              onClick={() => document.getElementById('contact-section')?.scrollIntoView({ behavior: 'smooth' })}
             >
-              Compare Services
+              Get Started
             </Button>
           </motion.div>
         </div>
       </section>
 
-      {/* Pricing Tiers */}
-      <section id="pricing-section" className="py-20">
-        <div className="container mx-auto px-4">
-          <motion.div 
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-4xl font-bold text-white mb-4">Flexible Pricing Tiers</h2>
-            <p className="text-zion-slate-light max-w-3xl mx-auto">
-              Choose the perfect plan for your business needs with our scalable pricing structure
-            </p>
-          </motion.div>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-            {pricingTiers.map((tier, index) => (
-              <motion.div
-                key={tier.name}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                className={`relative bg-white/10 backdrop-blur-sm rounded-xl p-8 border-2 transition-all duration-300 hover:scale-105 ${
-                  tier.popular 
-                    ? 'border-zion-cyan shadow-2xl shadow-zion-cyan/20' 
-                    : 'border-white/20 hover:border-zion-cyan/50'
-                }`}
-              >
-                {tier.popular && (
-                  <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                    <Badge className="bg-zion-cyan text-white px-4 py-2 rounded-full">
-                      Most Popular
-                    </Badge>
-                  </div>
-                )}
-
-                <div className="text-center mb-8">
-                  <h3 className="text-2xl font-bold text-white mb-2">{tier.name}</h3>
-                  <p className="text-zion-slate-light mb-6">{tier.description}</p>
-                  <div className="mb-4">
-                    <span className="text-4xl font-bold text-zion-cyan">${tier.price}</span>
-                    <span className="text-zion-slate-light">/month</span>
-                  </div>
-                </div>
-
-                <ul className="space-y-4 mb-8">
-                  {tier.features.map((feature, featureIndex) => (
-                    <li key={featureIndex} className="flex items-center gap-3 text-zion-slate-light">
-                      <CheckCircle className="w-5 h-5 text-zion-cyan flex-shrink-0" />
-                      {feature}
-                    </li>
-                  ))}
-                </ul>
-
-                <Button 
-                  className={`w-full ${
-                    tier.popular 
-                      ? 'bg-gradient-to-r from-zion-cyan to-zion-blue hover:from-zion-cyan-light hover:to-zion-blue-light' 
-                      : 'bg-white/20 hover:bg-white/30 text-white'
-                  }`}
-                >
-                  Get Started
-                </Button>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Service Categories */}
+      {/* Category Filter */}
       <section className="py-16 bg-white/5 backdrop-blur-sm">
         <div className="container mx-auto px-4">
           <motion.div 
@@ -322,8 +205,8 @@ export default function ComprehensivePricingGuide2028() {
         </div>
       </section>
 
-      {/* Services Pricing Grid */}
-      <section className="py-20">
+      {/* Services Grid */}
+      <section id="services-section" className="py-20">
         <div className="container mx-auto px-4">
           <motion.div 
             initial={{ opacity: 0, y: 20 }}
@@ -332,14 +215,14 @@ export default function ComprehensivePricingGuide2028() {
             className="text-center mb-16"
           >
             <h2 className="text-4xl font-bold text-white mb-4">
-              {selectedCategory === 'all' ? 'All Services Pricing' : selectedCategory + ' Pricing'}
+              {selectedCategory === 'all' ? 'All Services' : selectedCategory}
             </h2>
             <p className="text-zion-slate-light max-w-3xl mx-auto">
-              Detailed pricing information for each service including ROI analysis and market comparisons
+              Discover our revolutionary solutions designed to transform your business operations and drive growth
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {filteredServices.map((service, index) => (
               <motion.div
                 key={service.id}
@@ -361,44 +244,45 @@ export default function ComprehensivePricingGuide2028() {
                   {service.name}
                 </h3>
                 
-                <p className="text-zion-slate-light text-sm mb-4 line-clamp-2">
+                <p className="text-zion-slate-light text-sm mb-4 line-clamp-3">
                   {service.description}
                 </p>
 
-                <div className="grid grid-cols-2 gap-4 mb-6">
-                  <div className="bg-white/5 rounded-lg p-3">
-                    <div className="text-zion-slate-light text-xs mb-1">Our Price</div>
-                    {service.price && (
-                      <div className="text-zion-cyan font-bold text-lg">${service.price.toLocaleString()}</div>
-                    )}
-                    {service.hourlyRate && (
-                      <div className="text-zion-cyan font-bold text-lg">${service.hourlyRate}/hr</div>
-                    )}
-                    {service.projectRate && (
-                      <div className="text-zion-cyan font-bold text-lg">${service.projectRate.toLocaleString()}</div>
-                    )}
+                <div className="space-y-3 mb-6">
+                  <div className="flex items-center justify-between">
+                    <span className="text-zion-slate-light text-sm">Category:</span>
+                    <span className="text-white font-medium">{service.category}</span>
                   </div>
                   
-                  <div className="bg-white/5 rounded-lg p-3">
-                    <div className="text-zion-slate-light text-xs mb-1">Market Price</div>
-                    <div className="text-white font-medium text-lg">{service.marketPrice}</div>
-                  </div>
-                </div>
+                  {service.pricing && (
+                    <div className="flex items-center justify-between">
+                      <span className="text-zion-slate-light text-sm">Pricing:</span>
+                      <span className="text-white font-medium">{service.pricing}</span>
+                    </div>
+                  )}
 
-                <div className="space-y-3 mb-6">
+                  {service.price && (
+                    <div className="flex items-center justify-between">
+                      <span className="text-zion-slate-light text-sm">Price:</span>
+                      <span className="text-zion-cyan font-bold">${service.price.toLocaleString()}</span>
+                    </div>
+                  )}
+
+                  {service.hourlyRate && (
+                    <div className="flex items-center justify-between">
+                      <span className="text-zion-slate-light text-sm">Hourly Rate:</span>
+                      <span className="text-zion-cyan font-bold">${service.hourlyRate}/hr</span>
+                    </div>
+                  )}
+
+                  <div className="flex items-center justify-between">
+                    <span className="text-zion-slate-light text-sm">Market Price:</span>
+                    <span className="text-white font-medium">{service.marketPrice}</span>
+                  </div>
+
                   <div className="flex items-center justify-between">
                     <span className="text-zion-slate-light text-sm">ROI:</span>
                     <span className="text-green-400 font-medium">{service.roi}</span>
-                  </div>
-                  
-                  <div className="flex items-center justify-between">
-                    <span className="text-zion-slate-light text-sm">Setup Time:</span>
-                    <span className="text-white font-medium">{service.setupTime}</span>
-                  </div>
-
-                  <div className="flex items-center justify-between">
-                    <span className="text-zion-slate-light text-sm">Innovation Level:</span>
-                    <span className="text-zion-cyan font-medium">{service.innovationLevel}</span>
                   </div>
                 </div>
 
@@ -414,7 +298,7 @@ export default function ComprehensivePricingGuide2028() {
                   className="w-full bg-gradient-to-r from-zion-cyan to-zion-blue hover:from-zion-cyan-light hover:to-zion-blue-light text-white"
                   onClick={() => setSelectedService(service)}
                 >
-                  View Full Details
+                  View Details
                 </Button>
               </motion.div>
             ))}
@@ -480,11 +364,11 @@ export default function ComprehensivePricingGuide2028() {
 
                 <div>
                   <div className="bg-white/5 rounded-lg p-4 mb-6">
-                    <h3 className="text-lg font-semibold text-white mb-3">Pricing & ROI</h3>
+                    <h3 className="text-lg font-semibold text-white mb-3">Pricing & Details</h3>
                     <div className="space-y-3">
                       {selectedService.price && (
                         <div className="flex justify-between">
-                          <span className="text-zion-slate-light">Monthly Price:</span>
+                          <span className="text-zion-slate-light">Price:</span>
                           <span className="text-zion-cyan font-bold">${selectedService.price.toLocaleString()}</span>
                         </div>
                       )}
@@ -516,6 +400,30 @@ export default function ComprehensivePricingGuide2028() {
                   </div>
 
                   <div className="bg-white/5 rounded-lg p-4 mb-6">
+                    <h3 className="text-lg font-semibold text-white mb-3">Target Audience</h3>
+                    <div className="flex flex-wrap gap-2">
+                      {selectedService.targetAudience.map((audience, index) => (
+                        <Badge key={index} variant="secondary" className="bg-zion-cyan/20 text-zion-cyan">
+                          {audience}
+                        </Badge>
+                      ))}
+                    </div>
+                  </div>
+
+                  {selectedService.integrations && (
+                    <div className="bg-white/5 rounded-lg p-4 mb-6">
+                      <h3 className="text-lg font-semibold text-white mb-3">Integrations</h3>
+                      <div className="flex flex-wrap gap-2">
+                        {selectedService.integrations.map((integration, index) => (
+                          <Badge key={index} variant="outline" className="border-zion-cyan/30 text-zion-cyan">
+                            {integration}
+                          </Badge>
+                        ))}
+                      </div>
+                    </div>
+                  )}
+
+                  <div className="bg-white/5 rounded-lg p-4">
                     <h3 className="text-lg font-semibold text-white mb-3">Market Information</h3>
                     <div className="space-y-2 text-sm">
                       <div className="flex justify-between">
@@ -532,19 +440,6 @@ export default function ComprehensivePricingGuide2028() {
                       </div>
                     </div>
                   </div>
-
-                  {selectedService.competitors && (
-                    <div className="bg-white/5 rounded-lg p-4">
-                      <h3 className="text-lg font-semibold text-white mb-3">Competitors</h3>
-                      <div className="flex flex-wrap gap-2">
-                        {selectedService.competitors.map((competitor, index) => (
-                          <Badge key={index} variant="outline" className="border-zion-slate-light/30 text-zion-slate-light">
-                            {competitor}
-                          </Badge>
-                        ))}
-                      </div>
-                    </div>
-                  )}
                 </div>
               </div>
 
@@ -561,83 +456,8 @@ export default function ComprehensivePricingGuide2028() {
         </div>
       )}
 
-      {/* ROI Calculator Section */}
-      <section className="py-20 bg-white/5 backdrop-blur-sm">
-        <div className="container mx-auto px-4">
-          <motion.div 
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-4xl font-bold text-white mb-4">ROI Calculator</h2>
-            <p className="text-zion-slate-light max-w-3xl mx-auto">
-              Calculate the potential return on investment for our services and see how they can transform your business
-            </p>
-          </motion.div>
-
-          <div className="max-w-4xl mx-auto bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              <div>
-                <h3 className="text-2xl font-bold text-white mb-6">Input Your Business Metrics</h3>
-                <div className="space-y-4">
-                  <div>
-                    <label className="block text-zion-slate-light mb-2">Current Annual Revenue</label>
-                    <input 
-                      type="number" 
-                      placeholder="$100,000"
-                      className="w-full px-4 py-2 bg-white/10 border border-white/20 rounded-lg text-white placeholder-zion-slate-light focus:border-zion-cyan focus:outline-none"
-                    />
-                  </div>
-                  <div>
-                    <label className="block text-zion-slate-light mb-2">Current Operational Costs</label>
-                    <input 
-                      type="number" 
-                      placeholder="$80,000"
-                      className="w-full px-4 py-2 bg-white/10 border border-white/20 rounded-lg text-white placeholder-zion-slate-light focus:border-zion-cyan focus:outline-none"
-                    />
-                  </div>
-                  <div>
-                    <label className="block text-zion-slate-light mb-2">Service Investment</label>
-                    <input 
-                      type="number" 
-                      placeholder="$5,000"
-                      className="w-full px-4 py-2 bg-white/10 border border-white/20 rounded-lg text-white placeholder-zion-slate-light focus:border-zion-cyan focus:outline-none"
-                    />
-                  </div>
-                </div>
-              </div>
-
-              <div>
-                <h3 className="text-2xl font-bold text-white mb-6">Projected ROI Results</h3>
-                <div className="space-y-4">
-                  <div className="bg-zion-cyan/20 p-4 rounded-lg border border-zion-cyan/30">
-                    <div className="text-zion-slate-light text-sm">Projected Revenue Increase</div>
-                    <div className="text-2xl font-bold text-zion-cyan">25-40%</div>
-                  </div>
-                  <div className="bg-green-500/20 p-4 rounded-lg border border-green-500/30">
-                    <div className="text-zion-slate-light text-sm">Cost Reduction</div>
-                    <div className="text-2xl font-bold text-green-400">20-35%</div>
-                  </div>
-                  <div className="bg-purple-500/20 p-4 rounded-lg border border-purple-500/30">
-                    <div className="text-zion-slate-light text-sm">ROI Timeline</div>
-                    <div className="text-2xl font-bold text-purple-400">6-12 months</div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div className="text-center mt-8">
-              <Button className="bg-gradient-to-r from-zion-cyan to-zion-blue hover:from-zion-cyan-light hover:to-zion-blue-light text-white px-8 py-3 rounded-lg font-semibold transition-colors">
-                Calculate Detailed ROI
-              </Button>
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* Contact Section */}
-      <section className="py-20">
+      <section id="contact-section" className="py-20 bg-white/5 backdrop-blur-sm">
         <div className="container mx-auto px-4">
           <motion.div 
             initial={{ opacity: 0, y: 20 }}
@@ -645,13 +465,13 @@ export default function ComprehensivePricingGuide2028() {
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
           >
-            <h2 className="text-4xl font-bold text-white mb-4">Ready to Get Started?</h2>
+            <h2 className="text-4xl font-bold text-white mb-4">Ready to Transform Your Business?</h2>
             <p className="text-zion-slate-light max-w-3xl mx-auto">
-              Contact our team to discuss pricing, get a custom quote, or schedule a consultation
+              Contact our team of technology experts to discuss how our innovative solutions can drive your business forward
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             <motion.div 
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -722,6 +542,53 @@ export default function ComprehensivePricingGuide2028() {
               Schedule a Consultation
             </Button>
           </motion.div>
+        </div>
+      </section>
+
+      {/* Stats Section */}
+      <section className="py-20">
+        <div className="container mx-auto px-4">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <motion.div 
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.1 }}
+              className="text-center"
+            >
+              <div className="text-4xl font-bold text-zion-cyan mb-2">15+</div>
+              <div className="text-zion-slate-light">Years of Innovation</div>
+            </motion.div>
+
+            <motion.div 
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+              className="text-center"
+            >
+              <div className="text-4xl font-bold text-zion-cyan mb-2">500+</div>
+              <div className="text-zion-slate-light">Successful Projects</div>
+            </motion.div>
+
+            <motion.div 
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.3 }}
+              className="text-center"
+            >
+              <div className="text-4xl font-bold text-zion-cyan mb-2">99.9%</div>
+              <div className="text-zion-slate-light">Client Satisfaction</div>
+            </motion.div>
+
+            <motion.div 
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.4 }}
+              className="text-center"
+            >
+              <div className="text-4xl font-bold text-zion-cyan mb-2">24/7</div>
+              <div className="text-zion-slate-light">Support Available</div>
+            </motion.div>
+          </div>
         </div>
       </section>
     </div>

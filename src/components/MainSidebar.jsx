@@ -11,8 +11,7 @@ export function MainSidebar() {
                 { key: 'home', href: '/', icon: <Home className="w-4 h-4"/>, label: 'Home' },
                 { key: 'marketplace', href: '/marketplace', icon: <ShoppingCart className="w-4 h-4"/>, label: 'Marketplace' },
                 { key: 'services', href: '/services', icon: <Settings className="w-4 h-4"/>, label: 'Services' },
-                { key: 'talent', href: '/talent', icon: <Users className="w-4 h-4"/>, label: 'Talent' },
-                { key: 'equipment', href: '/equipment', icon: <BarChart3 className="w-4 h-4"/>, label: 'Equipment' },
+                { key: 'partners', href: '/partners', icon: <Users className="w-4 h-4"/>, label: 'Partners' },
             ]
         },
         {
@@ -28,9 +27,7 @@ export function MainSidebar() {
             title: 'Resources',
             items: [
                 { key: 'blog', href: '/blog', icon: <FileText className="w-4 h-4"/>, label: 'Blog' },
-                { key: 'community', href: '/community', icon: <Globe className="w-4 h-4"/>, label: 'Community' },
-                { key: 'green-it', href: '/green-it', icon: <Leaf className="w-4 h-4"/>, label: 'Green IT' },
-                { key: 'zion-hire-ai', href: '/zion-hire-ai', icon: <Zap className="w-4 h-4"/>, label: 'AI Hiring' },
+                { key: 'sitemap', href: '/sitemap', icon: <Globe className="w-4 h-4"/>, label: 'Sitemap' },
             ]
         },
         {
