@@ -100,6 +100,13 @@ const AIHealthcarePredictiveAnalytics = React.lazy(() => import('./pages/service
 const AIFinancialTradingRiskManagement = React.lazy(() => import('./pages/services/AIFinancialTradingRiskManagement'));
 const ComprehensiveAIServicesShowcase2025 = React.lazy(() => import('./pages/ComprehensiveAIServicesShowcase2025'));
 
+// New innovative services we added
+const AILegalComplianceAutomation = React.lazy(() => import('./pages/services/AILegalComplianceAutomation'));
+const AIRealEstateAnalyticsPlatform = React.lazy(() => import('./pages/services/AIRealEstateAnalyticsPlatform'));
+
+// Innovative Services Showcase 2026
+const InnovativeServicesShowcase2026 = React.lazy(() => import('./pages/InnovativeServicesShowcase2026'));
+
 function App() {
   return (
     <ErrorBoundary>
@@ -170,11 +177,18 @@ function App() {
                 <Route path="/services/ai-financial-trading-risk-management" element={<AIFinancialTradingRiskManagement />} />
                 <Route path="/comprehensive-ai-services-showcase-2025" element={<ComprehensiveAIServicesShowcase2025 />} />
                 
+                {/* New innovative services we added */}
+                <Route path="/services/ai-legal-compliance-automation" element={<AILegalComplianceAutomation />} />
+                <Route path="/services/ai-real-estate-analytics-platform" element={<AIRealEstateAnalyticsPlatform />} />
+                
                 {/* Emerging Tech 2030 */}
                 <Route path="/emerging-tech-2030" element={<EmergingTech2030 />} />
                 
                 {/* New comprehensive pricing guide 2026 */}
                 <Route path="/comprehensive-pricing-guide-2026" element={<ComprehensivePricingGuide2026 />} />
+                
+                {/* Innovative Services Showcase 2026 */}
+                <Route path="/innovative-services-showcase-2026" element={<InnovativeServicesShowcase2026 />} />
                 
                 {/* Revolutionary Services 2030 */}
                 <Route path="/revolutionary-services-2030" element={<RevolutionaryServices2030 />} />
