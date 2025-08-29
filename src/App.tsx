@@ -180,6 +180,9 @@ function App() {
                 {/* New comprehensive pricing guide 2027 */}
                 <Route path="/comprehensive-pricing-guide-2027" element={<ComprehensivePricingGuide2027 />} />
                 
+                {/* New comprehensive services showcase 2026 */}
+                <Route path="/comprehensive-services-showcase-2026" element={<ComprehensiveServicesShowcase2026 />} />
+                
                 {/* Revolutionary Services 2030 */}
                 <Route path="/revolutionary-services-2030" element={<RevolutionaryServices2030 />} />
                 
