@@ -239,6 +239,42 @@ export default function Services() {
           price: 'From $299',
           rating: 4.9,
           reviewCount: 234
+        },
+        {
+          name: 'AI Project Manager',
+          description: 'AI-powered project management with intelligent planning and resource optimization',
+          features: ['AI Planning', 'Team Collaboration', 'Goal Tracking', 'Performance Analytics'],
+          href: '/services/ai-project-manager',
+          price: 'From $299',
+          rating: 4.9,
+          reviewCount: 156
+        },
+        {
+          name: 'AI Financial Advisor',
+          description: 'Intelligent financial planning and investment management with AI insights',
+          features: ['Investment Analysis', 'Financial Planning', 'Risk Management', 'Performance Tracking'],
+          href: '/services/ai-financial-advisor',
+          price: 'From $99',
+          rating: 4.9,
+          reviewCount: 189
+        },
+        {
+          name: 'AI Marketing Automation',
+          description: 'End-to-end marketing automation with AI-powered personalization and optimization',
+          features: ['Audience Targeting', 'Campaign Management', 'Content Delivery', 'Advanced Analytics'],
+          href: '/services/ai-marketing-automation',
+          price: 'From $199',
+          rating: 4.8,
+          reviewCount: 267
+        },
+        {
+          name: 'AI Supply Chain Optimizer',
+          description: 'Intelligent supply chain optimization with demand forecasting and route optimization',
+          features: ['Demand Forecasting', 'Route Optimization', 'Inventory Management', 'Real-time Analytics'],
+          href: '/services/ai-supply-chain-optimizer',
+          price: 'From $399',
+          rating: 4.9,
+          reviewCount: 134
         }
       ]
     }
