@@ -32,15 +32,15 @@ const ToastItem: React.FC<ToastProps> = ({ toast, onRemove }) => {
   const getIcon = () => {
     switch (toast.type) {
       case 'success':
-        return <CheckCircle className="w-5 h-5 text-green-500" />;
+        return <CheckCircle className="w-5 h-5 text-green-500" aria-hidden="true" />;
       case 'error':
-        return <XCircle className="w-5 h-5 text-red-500" />;
+        return <XCircle className="w-5 h-5 text-red-500" aria-hidden="true" />;
       case 'warning':
-        return <AlertCircle className="w-5 h-5 text-yellow-500" />;
+        return <AlertCircle className="w-5 h-5 text-yellow-500" aria-hidden="true" />;
       case 'info':
-        return <Info className="w-5 h-5 text-blue-500" />;
+        return <Info className="w-5 h-5 text-blue-500" aria-hidden="true" />;
       default:
-        return <Info className="w-5 h-5 text-blue-500" />;
+        return <Info className="w-5 h-5 text-blue-500" aria-hidden="true" />;
     }
   };
 
@@ -59,6 +59,26 @@ const ToastItem: React.FC<ToastProps> = ({ toast, onRemove }) => {
     }
   };
 
+  const getToastRole = () => {
+    switch (toast.type) {
+      case 'success':
+        return 'status';
+      case 'error':
+        return 'alert';
+      case 'warning':
+        return 'alert';
+      case 'info':
+        return 'status';
+      default:
+        return 'status';
+    }
+  };
+
+  const getToastAriaLabel = () => {
+    const typeLabel = toast.type.charAt(0).toUpperCase() + toast.type.slice(1);
+    return `${typeLabel} notification: ${toast.title}${toast.message ? ` - ${toast.message}` : ''}`;
+  };
+
   return (
     <motion.div
       initial={{ opacity: 0, y: -50, scale: 0.9 }}
@@ -66,6 +86,10 @@ const ToastItem: React.FC<ToastProps> = ({ toast, onRemove }) => {
       exit={{ opacity: 0, y: -50, scale: 0.9 }}
       transition={{ duration: 0.3, ease: 'easeOut' }}
       className={`relative p-4 rounded-lg border shadow-lg ${getBgColor()} max-w-sm w-full`}
+      role={getToastRole()}
+      aria-label={getToastAriaLabel()}
+      aria-live="polite"
+      aria-atomic="true"
     >
       <div className="flex items-start space-x-3">
         <div className="flex-shrink-0 mt-0.5">
@@ -86,9 +110,10 @@ const ToastItem: React.FC<ToastProps> = ({ toast, onRemove }) => {
             setIsVisible(false);
             setTimeout(() => onRemove(toast.id), 300);
           }}
-          className="flex-shrink-0 ml-2 p-1 rounded-md text-gray-400 hover:text-gray-600 dark:hover:text-gray-200 transition-colors"
+          aria-label={`Dismiss ${toast.type} notification`}
+          className="flex-shrink-0 ml-2 p-1 rounded-md text-gray-400 hover:text-gray-600 dark:hover:text-gray-200 transition-colors focus:outline-none focus:ring-2 focus:ring-gray-500/50 focus:ring-offset-2"
         >
-          <X className="w-4 h-4" />
+          <X className="w-4 h-4" aria-hidden="true" />
         </button>
       </div>
     </motion.div>
@@ -100,8 +125,7 @@ export const ToastContainer: React.FC = () => {
 
   const addToast = (toast: Omit<Toast, 'id'>) => {
     const id = Math.random().toString(36).substr(2, 9);
-    const newToast = { ...toast, id };
-    setToasts(prev => [...prev, newToast]);
+    setToasts(prev => [...prev, { ...toast, id }]);
   };
 
   const removeToast = (id: string) => {
@@ -117,7 +141,13 @@ export const ToastContainer: React.FC = () => {
   }, []);
 
   return (
-    <div className="fixed top-4 right-4 z-50 space-y-2">
+    <div
+      className="fixed top-4 right-4 z-50 space-y-2"
+      role="region"
+      aria-label="Notifications"
+      aria-live="polite"
+      aria-atomic="false"
+    >
       <AnimatePresence>
         {toasts.map(toast => (
           <ToastItem
