@@ -35,7 +35,7 @@ const ServicesOverview = React.lazy(() => import('./pages/ServicesOverview'));
 const PricingGuide = React.lazy(() => import('./pages/PricingGuide'));
 const Help = React.lazy(() => import('./pages/Help'));
 const Partners = React.lazy(() => import('./pages/Partners'));
-// const ServicesComparisonPage duplicate removed
+const ServicesComparisonPage = React.lazy(() => import('./pages/ServicesComparisonPage'));
 const Team = React.lazy(() => import('./pages/Team'));
 const Press = React.lazy(() => import('./pages/Press'));
 const Webinars = React.lazy(() => import('./pages/Webinars'));
@@ -60,7 +60,6 @@ const InnovativeServicesShowcase2025 = React.lazy(() => import('./pages/Innovati
 const InnovativeServicesShowcase2028 = React.lazy(() => import('./pages/InnovativeServicesShowcase2028'));
 const ComprehensivePricingGuide2028 = React.lazy(() => import('./pages/ComprehensivePricingGuide2028'));
 const ComprehensiveServicesLanding2028 = React.lazy(() => import('./pages/ComprehensiveServicesLanding2028'));
-// ServicesComparisonPage already declared earlier in some branches; keeping single declaration only
 
 // Service pages - only import existing ones
 const CloudDevOps = React.lazy(() => import('./pages/services/CloudDevOps'));
@@ -193,13 +192,10 @@ function App() {
               <Route path="/pricing" element={<ComprehensivePricingGuide2027 />} />
               <Route path="/pricing-2030" element={<ComprehensivePricingGuide2030 />} />
               <Route path="/pricing-guide" element={<PricingGuide />} />
-              <Route path="/services-comparison" element={<ServicesComparisonPage />} />
               <Route path="/services" element={<Services />} />
-<<<<<<< HEAD
-=======
               <Route path="/services-catalog" element={<ServicesCatalog />} />
               <Route path="/services-overview" element={<ServicesOverview />} />
->>>>>>> cursor/add-new-services-and-advertise-them-fb31
+              <Route path="/services-comparison" element={<ServicesComparisonPage />} />
               <Route path="/revolutionary-services-2030" element={<RevolutionaryServices2030 />} />
               <Route path="/comprehensive-services" element={<ComprehensiveServicesLanding2025 />} />
               {/** duplicate comprehensive-services route removed */}
