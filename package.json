@@ -23,7 +23,46 @@
     "type-check:all": "npm run type-check && npm run type-check:backend",
     "prepare": "git config core.hooksPath .husky || true",
     "fix:all": "npm run lint --fix || true",
-    "install:all": "npm install && cd server && npm install"
+    "install:all": "npm install && cd server && npm install",
+    
+    "pm2:start": "pm2 start ecosystem.config.cjs",
+    "pm2:stop": "pm2 stop ecosystem.config.cjs",
+    "pm2:restart": "pm2 restart ecosystem.config.cjs",
+    "pm2:reload": "pm2 reload ecosystem.config.cjs",
+    "pm2:delete": "pm2 delete ecosystem.config.cjs",
+    "pm2:status": "pm2 status",
+    "pm2:logs": "pm2 logs",
+    "pm2:monit": "pm2 monit",
+    
+    "automation:start": "pm2 start ecosystem.config.cjs --only automation",
+    "automation:stop": "pm2 stop ecosystem.config.cjs --only automation",
+    "automation:restart": "pm2 restart ecosystem.config.cjs --only automation",
+    "automation:status": "pm2 status --only automation",
+    "automation:logs": "pm2 logs --only automation",
+    
+    "intelligent:start": "pm2 start ai-code-quality intelligent-dev-workflow advanced-performance-monitor",
+    "intelligent:stop": "pm2 stop ai-code-quality intelligent-dev-workflow advanced-performance-monitor",
+    "intelligent:restart": "pm2 restart ai-code-quality intelligent-dev-workflow advanced-performance-monitor",
+    "intelligent:status": "pm2 status ai-code-quality intelligent-dev-workflow advanced-performance-monitor",
+    "intelligent:logs": "pm2 logs ai-code-quality intelligent-dev-workflow advanced-performance-monitor",
+    
+    "quality:analyze": "node scripts/automation/ai-code-quality-automation.cjs",
+    "quality:report": "cat ai-quality-reports/quality-summary.json",
+    "quality:full-report": "cat ai-quality-reports/quality-report.txt",
+    
+    "workflow:analyze": "node scripts/automation/intelligent-dev-workflow.cjs",
+    "workflow:report": "cat dev-workflow-reports/workflow-summary.json",
+    "workflow:full-report": "cat dev-workflow-reports/workflow-report.txt",
+    
+    "performance:monitor": "node scripts/automation/advanced-performance-monitor.cjs",
+    "performance:report": "cat performance-reports/performance-summary.json",
+    "performance:full-report": "cat performance-reports/performance-report.txt",
+    
+    "reports:all": "npm run quality:report && echo '---' && npm run workflow:report && echo '---' && npm run performance:report",
+    "reports:full": "npm run quality:full-report && echo '---' && npm run workflow:full-report && echo '---' && npm run performance:full-report",
+    
+    "health:check": "pm2 status && echo '---' && npm run reports:all",
+    "health:full": "pm2 status && echo '---' && npm run reports:full"
   },
   "dependencies": {
     "@hookform/resolvers": "^5.2.1",

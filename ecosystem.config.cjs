@@ -67,6 +67,64 @@ module.exports = {
       out_file: 'logs/pm2-sync-monitor-out.log',
       log_file: 'logs/pm2-sync-monitor-combined.log',
       time: true
+    },
+
+    // NEW: AI-Powered Code Quality Automation
+    {
+      name: 'ai-code-quality',
+      script: './scripts/automation/ai-code-quality-automation.cjs',
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      max_memory_restart: '512M',
+      env: {
+        NODE_ENV: 'production',
+        ANALYSIS_INTERVAL: '1800000' // 30 minutes
+      },
+      error_file: 'logs/ai-code-quality-error.log',
+      out_file: 'logs/ai-code-quality-out.log',
+      log_file: 'logs/ai-code-quality-combined.log',
+      time: true
+    },
+
+    // NEW: Intelligent Development Workflow Automation
+    {
+      name: 'intelligent-dev-workflow',
+      script: './scripts/automation/intelligent-dev-workflow.cjs',
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      max_memory_restart: '512M',
+      env: {
+        NODE_ENV: 'production',
+        ANALYSIS_INTERVAL: '300000', // 5 minutes
+        WORKFLOW_INTERVAL: '900000', // 15 minutes
+        METRICS_INTERVAL: '3600000' // 1 hour
+      },
+      error_file: 'logs/intelligent-dev-workflow-error.log',
+      out_file: 'logs/intelligent-dev-workflow-out.log',
+      log_file: 'logs/intelligent-dev-workflow-combined.log',
+      time: true
+    },
+
+    // NEW: Advanced Performance Monitor
+    {
+      name: 'advanced-performance-monitor',
+      script: './scripts/automation/advanced-performance-monitor.cjs',
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      max_memory_restart: '512M',
+      env: {
+        NODE_ENV: 'production',
+        MONITORING_INTERVAL: '30000', // 30 seconds
+        ANALYSIS_INTERVAL: '300000', // 5 minutes
+        REPORT_INTERVAL: '1800000' // 30 minutes
+      },
+      error_file: 'logs/advanced-performance-monitor-error.log',
+      out_file: 'logs/advanced-performance-monitor-out.log',
+      log_file: 'logs/advanced-performance-monitor-combined.log',
+      time: true
     }
   ],
 
