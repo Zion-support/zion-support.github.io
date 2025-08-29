@@ -26,6 +26,11 @@ const Dashboard = React.lazy(() => import('./pages/Dashboard'));
 const Login = React.lazy(() => import('./pages/Login'));
 const FAQ = React.lazy(() => import('./pages/FAQ'));
 const Documentation = React.lazy(() => import('./pages/Documentation'));
+const Support = React.lazy(() => import('./pages/Support'));
+const Training = React.lazy(() => import('./pages/Training'));
+const KnowledgeBase = React.lazy(() => import('./pages/KnowledgeBase'));
+const Events = React.lazy(() => import('./pages/Events'));
+const VideoTutorials = React.lazy(() => import('./pages/VideoTutorials'));
 const Privacy = React.lazy(() => import('./pages/Privacy'));
 const Terms = React.lazy(() => import('./pages/Terms'));
 const Cookies = React.lazy(() => import('./pages/Cookies'));
@@ -70,11 +75,17 @@ const DigitalTwin = React.lazy(() => import('./pages/services/DigitalTwin'));
 const DataAnalytics = React.lazy(() => import('./pages/services/DataAnalytics'));
 const ITInfrastructure = React.lazy(() => import('./pages/services/ITInfrastructure'));
 const AIBusinessIntelligence = React.lazy(() => import('./pages/services/AIBusinessIntelligence'));
+const AIHealthcarePlatform = React.lazy(() => import('./pages/services/ai-healthcare-platform'));
+const AIContentCreation = React.lazy(() => import('./pages/services/ai-content-creation'));
+const AICybersecurity = React.lazy(() => import('./pages/services/ai-cybersecurity'));
+const QuantumComputing = React.lazy(() => import('./pages/services/quantum-computing'));
+const IoTEdgeComputing = React.lazy(() => import('./pages/services/iot-edge-computing'));
 const MicroSaaSProducts = React.lazy(() => import('./pages/services/MicroSaaSProducts'));
 // Import real pages
 const Careers = React.lazy(() => import('./pages/Careers'));
 const Marketplace = React.lazy(() => import('./pages/Marketplace'));
 const InnovativeMicroSAASServices2025 = React.lazy(() => import('./pages/InnovativeMicroSAASServices2025'));
+const Sitemap = React.lazy(() => import('./pages/Sitemap'));
 
 function App() {
   return (
@@ -93,6 +104,11 @@ function App() {
                 <Route path="/blog/:slug" element={<BlogPost />} />
                 <Route path="/faq" element={<FAQ />} />
                 <Route path="/docs" element={<Documentation />} />
+                <Route path="/support" element={<Support />} />
+                <Route path="/training" element={<Training />} />
+                <Route path="/knowledge-base" element={<KnowledgeBase />} />
+                <Route path="/events" element={<Events />} />
+                <Route path="/video-tutorials" element={<VideoTutorials />} />
                 <Route path="/careers" element={<Careers />} />
                 <Route path="/privacy" element={<Privacy />} />
                 <Route path="/terms" element={<Terms />} />
@@ -134,6 +150,11 @@ function App() {
                 <Route path="/services/data-analytics" element={<DataAnalytics />} />
                 <Route path="/services/it-infrastructure" element={<ITInfrastructure />} />
                 <Route path="/services/ai-business-intelligence" element={<AIBusinessIntelligence />} />
+                <Route path="/services/ai-healthcare-platform" element={<AIHealthcarePlatform />} />
+                <Route path="/services/ai-content-creation" element={<AIContentCreation />} />
+                <Route path="/services/ai-cybersecurity" element={<AICybersecurity />} />
+                <Route path="/services/quantum-computing" element={<QuantumComputing />} />
+                <Route path="/services/iot-edge-computing" element={<IoTEdgeComputing />} />
                 
                 {/* New innovative service routes */}
                 <Route path="/services/ai-legal-document-analysis" element={<AILegalDocumentAnalysis />} />
@@ -143,6 +164,9 @@ function App() {
                 <Route path="/services/ai-fraud-detection-platform" element={<AIFraudDetectionPlatform />} />
                 <Route path="/services/ai-healthcare-diagnosis" element={<AIHealthcareDiagnosis />} />
                 <Route path="/services/ai-marketing-automation" element={<AIMarketingAutomation />} />
+
+                {/* Site Map */}
+                <Route path="/sitemap" element={<Sitemap />} />
 
                 {/* Catch all route */}
                 <Route path="*" element={<Home />} />

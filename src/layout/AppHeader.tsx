@@ -181,53 +181,81 @@ export function AppHeader() {
 
   const resources = [
     {
-      name: 'Blog & Insights',
-      href: '/blog',
+      name: 'Support Center',
+      href: '/support',
+      icon: HelpCircle,
+      description: 'Get help and technical support',
+      featured: true
+    },
+    {
+      name: 'Knowledge Base',
+      href: '/knowledge-base',
       icon: BookOpen,
-      description: 'Latest industry trends and insights',
+      description: 'Documentation and guides',
       featured: true
     },
     {
-      name: 'Case Studies',
-      href: '/case-studies',
-      icon: Target,
-      description: 'Real-world success stories',
-      featured: true
-    },
-    {
-      name: 'White Papers',
-      href: '/white-papers',
-      icon: FileText,
-      description: 'In-depth research and analysis',
-      featured: true
-    },
-    {
-      name: 'Webinars',
-      href: '/webinars',
+      name: 'Training & Certification',
+      href: '/training',
       icon: Users,
-      description: 'Expert-led learning sessions',
+      description: 'Professional development programs',
       featured: true
     },
     {
-      name: 'Documentation',
-      href: '/docs',
+      name: 'Video Tutorials',
+      href: '/video-tutorials',
       icon: Code,
-      description: 'Technical guides and APIs',
+      description: 'Learn through video content',
+      featured: true
+    },
+    {
+      name: 'Community',
+      href: '/community',
+      icon: Users,
+      description: 'Connect with our community',
+      featured: true
+    },
+    {
+      name: 'Events & Conferences',
+      href: '/events',
+      icon: Target,
+      description: 'Upcoming events and webinars',
       featured: true
     },
     {
       name: 'FAQ & Support',
       href: '/faq',
       icon: HelpCircle,
-      description: 'Get help and answers',
+      description: 'Frequently asked questions',
       featured: true
     },
     {
-      name: 'Pricing Guide 2025',
-      href: '/pricing-guide-2025',
-      icon: DollarSign,
-      description: 'Complete pricing information',
-      featured: true
+      name: 'Blog & Insights',
+      href: '/blog',
+      icon: BookOpen,
+      description: 'Latest industry trends and insights',
+      featured: false
+    },
+    {
+      name: 'Case Studies',
+      href: '/case-studies',
+      icon: Target,
+      description: 'Real-world success stories',
+      featured: false
+    },
+    {
+      name: 'White Papers',
+      href: '/white-papers',
+      icon: FileText,
+      description: 'In-depth research and analysis',
+      featured: false
+    },
+    {
+      name: 'Documentation',
+      href: '/docs',
+      icon: Code,
+      description: 'Technical guides and APIs',
+      featured: false
     }
   ];
 
