@@ -13,11 +13,24 @@ Disallow: /static/
 
 # Allow important pages
 Allow: /services/
-Allow: /ai-services/
+Allow: /solutions/
 Allow: /about/
 Allow: /contact/
 Allow: /blog/
-Allow: /pricing/
+Allow: /case-studies/
 
-# Crawl delay (optional)
+# Crawl delay for better server performance
+Crawl-delay: 1
+
+# Specific rules for major search engines
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 0.5
+
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 1
+
+User-agent: Slurp
+Allow: /
 Crawl-delay: 1

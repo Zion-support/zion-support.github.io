@@ -11,6 +11,8 @@ import { EnhancedAccessibilityPanel } from './components/EnhancedAccessibilityPa
 import { AdvancedPerformanceMonitor } from './components/AdvancedPerformanceMonitor';
 import { InteractiveUserExperience } from './components/InteractiveUserExperience';
 import { SecurityEnhancer } from './components/SecurityEnhancer';
+import { PerformanceMonitor } from './components/PerformanceMonitor';
+import { EnhancedAnalytics } from './components/EnhancedAnalytics';
 // Core pages - only import existing ones
 const Home = React.lazy(() => import('./pages/Home'));
 const About = React.lazy(() => import('./pages/About'));
@@ -178,6 +180,8 @@ function App() {
           <AdvancedPerformanceMonitor />
           <InteractiveUserExperience />
           <SecurityEnhancer />
+          <PerformanceMonitor />
+          <EnhancedAnalytics />
         </div>
       </Router>
     </ErrorBoundary>

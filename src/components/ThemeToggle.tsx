@@ -1,69 +1,85 @@
-import React from 'react';
-import { motion } from 'framer-motion';
+import React, { useState, useEffect } from 'react';
 import { Sun, Moon, Monitor } from 'lucide-react';
-import { useTheme } from './ThemeProvider';
 
-export const ThemeToggle: React.FC = () => {
-  const { theme, setTheme, isDark } = useTheme();
+type Theme = 'light' | 'dark' | 'system';
 
-  const themes = [
-    { value: 'light', icon: Sun, label: 'Light' },
-    { value: 'dark', icon: Moon, label: 'Dark' },
-    { value: 'system', icon: Monitor, label: 'System' },
-  ] as const;
+export function ThemeToggle() {
+  const [theme, setTheme] = useState<Theme>('system');
+  const [mounted, setMounted] = useState(false);
 
-  return (
-    <div className="relative inline-flex items-center rounded-lg bg-slate-100 dark:bg-slate-800 p-1 shadow-sm">
-      {themes.map(({ value, icon: Icon, label }) => {
-        const isActive = theme === value;
-        return (
-          <motion.button
-            key={value}
-            onClick={() => setTheme(value)}
-            className={`relative flex items-center gap-2 px-3 py-2 text-sm font-medium rounded-md transition-all duration-200 ${
-              isActive
-                ? 'text-white shadow-sm'
-                : 'text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-slate-100'
-            }`}
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-          >
-            {isActive && (
-              <motion.div
-                className="absolute inset-0 bg-gradient-to-r from-blue-500 to-purple-600 rounded-md"
-                layoutId="activeTheme"
-                transition={{ type: "spring", bounce: 0.2, duration: 0.6 }}
-              />
-            )}
-            <Icon className="relative z-10 h-4 w-4" />
-            <span className="relative z-10 hidden sm:inline">{label}</span>
-          </motion.button>
-        );
-      })}
-    </div>
-  );
-};
+  useEffect(() => {
+    setMounted(true);
+    const savedTheme = localStorage.getItem('theme') as Theme;
+    if (savedTheme) {
+      setTheme(savedTheme);
+    }
+  }, []);
 
-export const SimpleThemeToggle: React.FC = () => {
-  const { theme, setTheme } = useTheme();
+  useEffect(() => {
+    if (!mounted) return;
 
-  const toggleTheme = () => {
-    setTheme(theme === 'light' ? 'dark' : 'light');
+    const root = window.document.documentElement;
+    root.classList.remove('light', 'dark');
+
+    if (theme === 'system') {
+      const systemTheme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+      root.classList.add(systemTheme);
+    } else {
+      root.classList.add(theme);
+    }
+
+    localStorage.setItem('theme', theme);
+  }, [theme, mounted]);
+
+  const handleThemeChange = (newTheme: Theme) => {
+    setTheme(newTheme);
   };
 
+  if (!mounted) {
+    return (
+      <div className="w-10 h-10 bg-gray-200 dark:bg-gray-700 rounded-lg animate-pulse" />
+    );
+  }
+
   return (
-    <motion.button
-      onClick={toggleTheme}
-      className="p-2 rounded-lg bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-slate-100 transition-colors duration-200"
-      whileHover={{ scale: 1.1 }}
-      whileTap={{ scale: 0.9 }}
-      title={`Switch to ${theme === 'light' ? 'dark' : 'light'} mode`}
-    >
-      {theme === 'light' ? (
-        <Moon className="h-5 w-5" />
-      ) : (
-        <Sun className="h-5 w-5" />
-      )}
-    </motion.button>
+    <div className="relative inline-block">
+      <div className="flex items-center space-x-1 bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg p-1">
+        <button
+          onClick={() => handleThemeChange('light')}
+          className={`p-2 rounded-md transition-all duration-200 ${
+            theme === 'light'
+              ? 'bg-white/20 text-yellow-500 shadow-lg'
+              : 'text-gray-400 hover:text-gray-200 hover:bg-white/10'
+          }`}
+          title="Light theme"
+        >
+          <Sun className="w-4 h-4" />
+        </button>
+        
+        <button
+          onClick={() => handleThemeChange('system')}
+          className={`p-2 rounded-md transition-all duration-200 ${
+            theme === 'system'
+              ? 'bg-white/20 text-blue-500 shadow-lg'
+              : 'text-gray-400 hover:text-gray-200 hover:bg-white/10'
+          }`}
+          title="System theme"
+        >
+          <Monitor className="w-4 h-4" />
+        </button>
+        
+        <button
+          onClick={() => handleThemeChange('dark')}
+          className={`p-2 rounded-md transition-all duration-200 ${
+            theme === 'dark'
+              ? 'bg-white/20 text-purple-500 shadow-lg'
+              : 'text-gray-400 hover:text-gray-200 hover:bg-white/10'
+          }`}
+          title="Dark theme"
+        >
+          <Moon className="w-4 h-4" />
+        </button>
+      </div>
+    </div>
   );
-};
+}
