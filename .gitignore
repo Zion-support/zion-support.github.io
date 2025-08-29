@@ -84,3 +84,4 @@ core
 # ignore build artifacts and crash dumps
 tsconfig.tsbuildinfo
 core
+tsconfig.tsbuildinfo
