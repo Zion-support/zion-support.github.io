@@ -1,17 +1,14 @@
-import React, { useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import { AnimatePresence, motion } from 'framer-motion';
 import {
-  Mail,
-  Phone,
-  MapPin,
-  Send,
-  CheckCircle,
   AlertCircle,
+  CheckCircle,
   Clock,
-  MessageSquare,
-  Building,
-  Globe
+  Mail,
+  MapPin,
+  Phone,
+  Send
 } from 'lucide-react';
+import React, { useState } from 'react';
 
 interface ContactFormData {
   name: string;
@@ -56,17 +53,17 @@ export function EnhancedContact() {
 
     if (!formData.name.trim()) {
       newErrors.name = 'Name is required';
-
+    }
     if (!formData.email.trim()) {
       newErrors.email = 'Email is required';
     } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email)) {
       newErrors.email = 'Please enter a valid email address';
-
+    }
     if (!formData.message.trim()) {
       newErrors.message = 'Message is required';
     } else if (formData.message.length < 10) {
       newErrors.message = 'Message must be at least 10 characters long';
-
+    }
     setErrors(newErrors);
     return Object.keys(newErrors).length === 0;
   };
@@ -77,7 +74,7 @@ export function EnhancedContact() {
     // Clear error when user starts typing
     if (errors[field]) {
       setErrors(prev => ({ ...prev, [field]: '' }));
-
+    }
   };
 
   const handleSubmit = async (e: React.FormEvent) => {
@@ -85,6 +82,7 @@ export function EnhancedContact() {
 
     if (!validateForm()) {
       return;
+    }
 
     setIsSubmitting(true);
 
@@ -105,7 +103,7 @@ export function EnhancedContact() {
       // // // console.error('Error submitting form:', error);
     } finally {
       setIsSubmitting(false);
-
+    }
   };
 
   const contactInfo = [
@@ -132,7 +130,7 @@ export function EnhancedContact() {
       title: 'Business Hours',
       value: 'Mon-Fri: 9AM-6PM EST',
       description: 'Available during these hours'
-
+    }
   ];
 
   if (isSubmitted) {
@@ -141,14 +139,14 @@ export function EnhancedContact() {
         initial={{ opacity: 0, scale: 0.8 }}
         animate={{ opacity: 1, scale: 1 }}
         className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light flex items-center justify-center py-20"
-
+      >
         <div className="max-w-md mx-auto text-center">
           <motion.div
             initial={{ scale: 0 }}
             animate={{ scale: 1 }}
             transition={{ delay: 0.2, type: "spring" }}
             className="w-20 h-20 bg-green-500 rounded-full flex items-center justify-center mx-auto mb-6"
-
+          >
             <CheckCircle className="w-10 h-10 text-white" />
           </motion.div>
 
@@ -157,7 +155,7 @@ export function EnhancedContact() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.3 }}
             className="text-3xl font-bold text-white mb-4"
-
+          >
             Message Sent Successfully!
           </motion.h2>
 
@@ -166,7 +164,7 @@ export function EnhancedContact() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.4 }}
             className="text-zion-slate-light mb-8"
-
+          >
             Thank you for reaching out to us. We'll get back to you within 24 hours.
           </motion.p>
 
@@ -176,12 +174,13 @@ export function EnhancedContact() {
             transition={{ delay: 0.5 }}
             onClick={() => setIsSubmitted(false)}
             className="bg-gradient-to-r from-zion-cyan to-zion-purple text-white px-8 py-3 rounded-lg hover:from-zion-cyan-dark hover:to-zion-purple-dark transition-all duration-300 font-medium"
-
+          >
             Send Another Message
           </motion.button>
         </div>
       </motion.div>
     );
+  }
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light py-20">
@@ -191,7 +190,7 @@ export function EnhancedContact() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           className="text-center mb-16"
-
+        >
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
             Get in Touch
           </h1>
@@ -207,7 +206,7 @@ export function EnhancedContact() {
             initial={{ opacity: 0, x: -50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ delay: 0.2 }}
-
+          >
             <h2 className="text-2xl font-bold text-white mb-8">Contact Information</h2>
 
             <div className="space-y-6">
@@ -218,7 +217,7 @@ export function EnhancedContact() {
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ delay: 0.3 + index * 0.1 }}
                   className="flex items-start space-x-4"
-
+                >
                   <div className="w-12 h-12 bg-zion-cyan/20 rounded-lg flex items-center justify-center flex-shrink-0">
                     <info.icon className="w-6 h-6 text-zion-cyan" />
                   </div>
@@ -230,34 +229,6 @@ export function EnhancedContact() {
                 </motion.div>
               ))}
             </div>
-
-            {/* Company Stats */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.6 }}
-              className="mt-12 p-6 bg-zion-blue-light/10 rounded-xl border border-zion-blue-light/20"
-
-              <h3 className="text-xl font-bold text-white mb-4">Why Choose Zion Tech Group?</h3>
-              <div className="grid grid-cols-2 gap-4">
-                <div className="text-center">
-                  <div className="text-2xl font-bold text-zion-cyan mb-1">500+</div>
-                  <div className="text-sm text-zion-slate-light">Happy Clients</div>
-                </div>
-                <div className="text-center">
-                  <div className="text-2xl font-bold text-zion-cyan mb-1">95%</div>
-                  <div className="text-sm text-zion-slate-light">Success Rate</div>
-                </div>
-                <div className="text-center">
-                  <div className="text-2xl font-bold text-zion-cyan mb-1">10+</div>
-                  <div className="text-sm text-zion-slate-light">Years Experience</div>
-                </div>
-                <div className="text-center">
-                  <div className="text-2xl font-bold text-zion-cyan mb-1">24/7</div>
-                  <div className="text-sm text-zion-slate-light">Support</div>
-                </div>
-              </div>
-            </motion.div>
           </motion.div>
 
           {/* Contact Form */}
@@ -266,7 +237,7 @@ export function EnhancedContact() {
             animate={{ opacity: 1, x: 0 }}
             transition={{ delay: 0.3 }}
             className="bg-zion-blue-light/10 rounded-xl p-8 border border-zion-blue-light/20"
-
+          >
             <h2 className="text-2xl font-bold text-white mb-6">Send us a Message</h2>
 
             <form onSubmit={handleSubmit} className="space-y-6">
@@ -294,7 +265,7 @@ export function EnhancedContact() {
                       animate={{ opacity: 1, y: 0 }}
                       exit={{ opacity: 0, y: -10 }}
                       className="text-red-400 text-sm mt-1 flex items-center"
-
+                    >
                       <AlertCircle className="w-4 h-4 mr-1" />
                       {errors.name}
                     </motion.p>
@@ -326,7 +297,7 @@ export function EnhancedContact() {
                       animate={{ opacity: 1, y: 0 }}
                       exit={{ opacity: 0, y: -10 }}
                       className="text-red-400 text-sm mt-1 flex items-center"
-
+                    >
                       <AlertCircle className="w-4 h-4 mr-1" />
                       {errors.email}
                     </motion.p>
@@ -374,7 +345,7 @@ export function EnhancedContact() {
                   value={formData.service}
                   onChange={(e) => handleInputChange('service', e.target.value)}
                   className="w-full px-4 py-3 rounded-lg bg-zion-slate-dark border border-zion-slate-light transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-zion-cyan text-white"
-
+                >
                   {services.map(service => (
                     <option key={service.value} value={service.value}>
                       {service.label}
@@ -407,7 +378,7 @@ export function EnhancedContact() {
                       animate={{ opacity: 1, y: 0 }}
                       exit={{ opacity: 0, y: -10 }}
                       className="text-red-400 text-sm mt-1 flex items-center"
-
+                    >
                       <AlertCircle className="w-4 h-4 mr-1" />
                       {errors.message}
                     </motion.p>
@@ -422,7 +393,7 @@ export function EnhancedContact() {
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
                 className="w-full bg-gradient-to-r from-zion-cyan to-zion-purple text-white py-4 rounded-lg font-medium transition-all duration-300 hover:from-zion-cyan-dark hover:to-zion-purple-dark disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center space-x-2"
-
+              >
                 {isSubmitting ? (
                   <>
                     <div className="w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin" />
