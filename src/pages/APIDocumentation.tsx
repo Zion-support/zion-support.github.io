@@ -1,529 +1,646 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { motion } from 'framer-motion';
-import { SEO } from '../components/SEO';
 import { 
   Code, 
-  Search, 
-  Filter,
-  ArrowRight,
+  Key, 
+  Shield, 
+  Zap, 
+  Brain, 
+  Database, 
+  Cloud, 
+  Lock, 
+  Play, 
   Download,
-  ExternalLink,
-  Github,
-  Globe,
-  Database,
-  Server,
-  Shield,
-  Brain,
-  Cloud,
-  Cpu,
-  Zap,
-  Users,
-  Calendar,
-  Star,
-  Bookmark,
-  Share2,
   Copy,
   CheckCircle,
-  Clock,
-  Tag,
-  Play,
-  Terminal,
-  FileText,
-  Key,
-  Lock,
-  Eye,
-  EyeOff,
-  ChevronDown,
-  ChevronRight,
   AlertCircle,
-  Info
+  Terminal,
+  BookOpen,
+  FileText,
+  Cpu,
+  Globe,
+  Server,
+  Network,
+  BarChart3,
+  Users,
+  Settings,
+  GitBranch,
+  Package,
+  Activity,
+  Clock,
+  Star,
+  TrendingUp,
+  Rocket,
+  Atom,
+  Heart,
+  Eye,
+  PenTool,
+  Target,
+  MessageSquare,
+  Mail,
+  Phone,
+  MapPin,
+  ArrowRight
 } from 'lucide-react';
 
 export default function APIDocumentation() {
-  const [searchQuery, setSearchQuery] = useState('');
-  const [selectedCategory, setSelectedCategory] = useState('All');
-  const [selectedMethod, setSelectedMethod] = useState('All');
-  const [expandedEndpoints, setExpandedEndpoints] = useState<Set<string>>(new Set());
-
-  const categories = ['All', 'Authentication', 'AI Services', 'Data Analytics', 'Cloud Services', 'IoT & Edge', 'Blockchain', 'Quantum Computing'];
-  const methods = ['All', 'GET', 'POST', 'PUT', 'DELETE', 'PATCH'];
-
-  const apiEndpoints = [
+  const apiServices = [
     {
-      category: 'Authentication',
+      name: 'AI Business Intelligence API',
+      description: 'Advanced analytics and business intelligence powered by AI',
       endpoints: [
-        {
-          path: '/auth/login',
-          method: 'POST',
-          title: 'User Login',
-          description: 'Authenticate user with email and password',
-          parameters: [
-            { name: 'email', type: 'string', required: true, description: 'User email address' },
-            { name: 'password', type: 'string', required: true, description: 'User password' }
-          ],
-          responses: [
-            { code: 200, description: 'Login successful', example: '{ "token": "jwt_token", "user": {...} }' },
-            { code: 401, description: 'Invalid credentials', example: '{ "error": "Invalid credentials" }' }
-          ],
-          examples: {
-            curl: 'curl -X POST /auth/login -H "Content-Type: application/json" -d \'{"email":"user@example.com","password":"password"}\'',
-            python: 'requests.post("/auth/login", json={"email": "user@example.com", "password": "password"})',
-            javascript: 'fetch("/auth/login", { method: "POST", body: JSON.stringify({email: "user@example.com", password: "password"}) })'
-          }
-        },
-        {
-          path: '/auth/register',
-          method: 'POST',
-          title: 'User Registration',
-          description: 'Create a new user account',
-          parameters: [
-            { name: 'email', type: 'string', required: true, description: 'User email address' },
-            { name: 'password', type: 'string', required: true, description: 'Minimum 8 characters' },
-            { name: 'name', type: 'string', required: true, description: 'Full name' }
-          ],
-          responses: [
-            { code: 201, description: 'User created successfully', example: '{ "user": {...}, "message": "User created" }' },
-            { code: 400, description: 'Validation error', example: '{ "error": "Email already exists" }' }
-          ],
-          examples: {
-            curl: 'curl -X POST /auth/register -H "Content-Type: application/json" -d \'{"email":"new@example.com","password":"password123","name":"John Doe"}\'',
-            python: 'requests.post("/auth/register", json={"email": "new@example.com", "password": "password123", "name": "John Doe"})',
-            javascript: 'fetch("/auth/register", { method: "POST", body: JSON.stringify({email: "new@example.com", password: "password123", name: "John Doe"}) })'
-          }
-        }
-      ]
+        { method: 'POST', path: '/api/v1/ai-bi/analyze', description: 'Analyze business data with AI' },
+        { method: 'GET', path: '/api/v1/ai-bi/insights', description: 'Get AI-generated business insights' },
+        { method: 'POST', path: '/api/v1/ai-bi/predict', description: 'Predict business trends and outcomes' }
+      ],
+      features: ['Real-time analytics', 'Predictive modeling', 'Custom dashboards', 'Data visualization'],
+      color: 'from-purple-500 to-pink-500'
     },
     {
-      category: 'AI Services',
+      name: 'AI Healthcare Analytics API',
+      description: 'Medical AI diagnostics and healthcare analytics platform',
       endpoints: [
-        {
-          path: '/ai/analyze',
-          method: 'POST',
-          title: 'AI Text Analysis',
-          description: 'Analyze text using AI for sentiment, entities, and key phrases',
-          parameters: [
-            { name: 'text', type: 'string', required: true, description: 'Text to analyze' },
-            { name: 'analysis_type', type: 'string', required: false, description: 'Type of analysis (sentiment, entities, keywords)', default: 'all' },
-            { name: 'language', type: 'string', required: false, description: 'Text language', default: 'en' }
-          ],
-          responses: [
-            { code: 200, description: 'Analysis completed', example: '{ "sentiment": "positive", "entities": [...], "keywords": [...] }' },
-            { code: 400, description: 'Invalid input', example: '{ "error": "Text is required" }' }
-          ],
-          examples: {
-            curl: 'curl -X POST /ai/analyze -H "Content-Type: application/json" -d \'{"text":"This is amazing!","analysis_type":"sentiment"}\'',
-            python: 'requests.post("/ai/analyze", json={"text": "This is amazing!", "analysis_type": "sentiment"})',
-            javascript: 'fetch("/ai/analyze", { method: "POST", body: JSON.stringify({text: "This is amazing!", analysis_type: "sentiment"}) })'
-          }
-        },
-        {
-          path: '/ai/generate',
-          method: 'POST',
-          title: 'AI Content Generation',
-          description: 'Generate content using AI models',
-          parameters: [
-            { name: 'prompt', type: 'string', required: true, description: 'Generation prompt' },
-            { name: 'model', type: 'string', required: false, description: 'AI model to use', default: 'gpt-4' },
-            { name: 'max_tokens', type: 'integer', required: false, description: 'Maximum tokens to generate', default: 1000 }
-          ],
-          responses: [
-            { code: 200, description: 'Content generated', example: '{ "content": "Generated text...", "usage": {...} }' },
-            { code: 400, description: 'Invalid prompt', example: '{ "error": "Prompt is required" }' }
-          ],
-          examples: {
-            curl: 'curl -X POST /ai/generate -H "Content-Type: application/json" -d \'{"prompt":"Write a blog post about AI"}\'',
-            python: 'requests.post("/ai/generate", json={"prompt": "Write a blog post about AI"})',
-            javascript: 'fetch("/ai/generate", { method: "POST", body: JSON.stringify({prompt: "Write a blog post about AI"}) })'
-          }
-        }
-      ]
+        { method: 'POST', path: '/api/v1/healthcare/diagnose', description: 'AI-powered medical diagnosis' },
+        { method: 'GET', path: '/api/v1/healthcare/analytics', description: 'Healthcare data analytics' },
+        { method: 'POST', path: '/api/v1/healthcare/predict', description: 'Predict health outcomes' }
+      ],
+      features: ['Medical diagnostics', 'Health analytics', 'Patient monitoring', 'Clinical insights'],
+      color: 'from-red-500 to-pink-500'
     },
     {
-      category: 'Data Analytics',
+      name: 'AI Legal Document Analysis API',
+      description: 'Legal document processing and analysis with AI',
       endpoints: [
-        {
-          path: '/analytics/query',
-          method: 'POST',
-          title: 'Data Query',
-          description: 'Query analytics data with custom filters and aggregations',
-          parameters: [
-            { name: 'query', type: 'object', required: true, description: 'Query object with filters and aggregations' },
-            { name: 'time_range', type: 'string', required: false, description: 'Time range for data', default: 'last_30_days' }
-          ],
-          responses: [
-            { code: 200, description: 'Query results', example: '{ "data": [...], "metadata": {...} }' },
-            { code: 400, description: 'Invalid query', example: '{ "error": "Invalid query format" }' }
-          ],
-          examples: {
-            curl: 'curl -X POST /analytics/query -H "Content-Type: application/json" -d \'{"query":{"filters":{"event_type":"page_view"},"aggregations":{"count":"total"}}}\'',
-            python: 'requests.post("/analytics/query", json={"query": {"filters": {"event_type": "page_view"}, "aggregations": {"count": "total"}}})',
-            javascript: 'fetch("/analytics/query", { method: "POST", body: JSON.stringify({query: {filters: {event_type: "page_view"}, aggregations: {count: "total"}}}) })'
-          }
-        }
-      ]
+        { method: 'POST', path: '/api/v1/legal/analyze', description: 'Analyze legal documents' },
+        { method: 'POST', path: '/api/v1/legal/extract', description: 'Extract key information from documents' },
+        { method: 'POST', path: '/api/v1/legal/summarize', description: 'Generate legal document summaries' }
+      ],
+      features: ['Document analysis', 'Legal insights', 'Contract review', 'Compliance checking'],
+      color: 'from-blue-500 to-indigo-500'
     },
     {
-      category: 'Cloud Services',
+      name: 'AI Supply Chain Optimization API',
+      description: 'Supply chain optimization and logistics with AI',
       endpoints: [
-        {
-          path: '/cloud/deploy',
-          method: 'POST',
-          title: 'Deploy Application',
-          description: 'Deploy application to cloud infrastructure',
-          parameters: [
-            { name: 'app_name', type: 'string', required: true, description: 'Application name' },
-            { name: 'config', type: 'object', required: true, description: 'Deployment configuration' },
-            { name: 'environment', type: 'string', required: false, description: 'Deployment environment', default: 'production' }
-          ],
-          responses: [
-            { code: 200, description: 'Deployment started', example: '{ "deployment_id": "deploy_123", "status": "deploying" }' },
-            { code: 400, description: 'Invalid configuration', example: '{ "error": "Invalid app configuration" }' }
-          ],
-          examples: {
-            curl: 'curl -X POST /cloud/deploy -H "Content-Type: application/json" -d \'{"app_name":"my-app","config":{"image":"nginx:latest"}}\'',
-            python: 'requests.post("/cloud/deploy", json={"app_name": "my-app", "config": {"image": "nginx:latest"}})',
-            javascript: 'fetch("/cloud/deploy", { method: "POST", body: JSON.stringify({app_name: "my-app", config: {image: "nginx:latest"}}) })'
-          }
-        }
-      ]
+        { method: 'POST', path: '/api/v1/supply-chain/optimize', description: 'Optimize supply chain routes' },
+        { method: 'GET', path: '/api/v1/supply-chain/analytics', description: 'Supply chain analytics' },
+        { method: 'POST', path: '/api/v1/supply-chain/predict', description: 'Predict supply chain disruptions' }
+      ],
+      features: ['Route optimization', 'Inventory management', 'Demand forecasting', 'Risk assessment'],
+      color: 'from-green-500 to-blue-500'
+    },
+    {
+      name: 'AI Financial Trading API',
+      description: 'AI-powered financial trading and market analysis',
+      endpoints: [
+        { method: 'POST', path: '/api/v1/trading/analyze', description: 'Analyze market data' },
+        { method: 'POST', path: '/api/v1/trading/signals', description: 'Get trading signals' },
+        { method: 'POST', path: '/api/v1/trading/portfolio', description: 'Portfolio optimization' }
+      ],
+      features: ['Market analysis', 'Trading signals', 'Portfolio management', 'Risk assessment'],
+      color: 'from-yellow-500 to-orange-500'
+    },
+    {
+      name: 'Digital Twin Platform API',
+      description: 'Digital twin creation and simulation platform',
+      endpoints: [
+        { method: 'POST', path: '/api/v1/digital-twin/create', description: 'Create digital twin' },
+        { method: 'GET', path: '/api/v1/digital-twin/simulate', description: 'Run simulations' },
+        { method: 'PUT', path: '/api/v1/digital-twin/update', description: 'Update digital twin' }
+      ],
+      features: ['3D modeling', 'Real-time simulation', 'IoT integration', 'Predictive maintenance'],
+      color: 'from-cyan-500 to-blue-500'
     }
   ];
 
-  const filteredEndpoints = apiEndpoints.map(category => ({
-    ...category,
-    endpoints: category.endpoints.filter(endpoint => {
-      const matchesSearch = endpoint.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
-                           endpoint.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
-                           endpoint.path.toLowerCase().includes(searchQuery.toLowerCase());
-      const matchesCategory = selectedCategory === 'All' || category.category === selectedCategory;
-      const matchesMethod = selectedMethod === 'All' || endpoint.method === selectedMethod;
-      return matchesSearch && matchesCategory && matchesMethod;
+  const authenticationMethods = [
+    {
+      name: 'API Key Authentication',
+      description: 'Simple API key-based authentication for basic access',
+      code: `Authorization: Bearer YOUR_API_KEY`,
+      security: 'Medium',
+      useCase: 'Basic integrations and testing'
+    },
+    {
+      name: 'OAuth 2.0',
+      description: 'Secure OAuth 2.0 authentication with refresh tokens',
+      code: `Authorization: Bearer ACCESS_TOKEN`,
+      security: 'High',
+      useCase: 'Production applications and user-specific data'
+    },
+    {
+      name: 'JWT Tokens',
+      description: 'JSON Web Token authentication for stateless applications',
+      code: `Authorization: Bearer JWT_TOKEN`,
+      security: 'High',
+      useCase: 'Microservices and distributed systems'
+    }
+  ];
+
+  const codeExamples = [
+    {
+      language: 'JavaScript',
+      title: 'AI Business Intelligence Analysis',
+      code: `const analyzeBusinessData = async (data) => {
+  const response = await fetch('/api/v1/ai-bi/analyze', {
+    method: 'POST',
+    headers: {
+      'Authorization': 'Bearer YOUR_API_KEY',
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify({
+      data: data,
+      analysis_type: 'business_intelligence',
+      timeframe: '30d'
     })
-  })).filter(category => category.endpoints.length > 0);
+  });
+  
+  return await response.json();
+};`
+    },
+    {
+      language: 'Python',
+      title: 'Healthcare Analytics Request',
+      code: `import requests
 
-  const toggleEndpoint = (endpointPath: string) => {
-    const newExpanded = new Set(expandedEndpoints);
-    if (newExpanded.has(endpointPath)) {
-      newExpanded.delete(endpointPath);
-    } else {
-      newExpanded.add(endpointPath);
+def get_healthcare_analytics(patient_data):
+    url = "https://api.ziontechgroup.com/api/v1/healthcare/analytics"
+    headers = {
+        "Authorization": "Bearer YOUR_API_KEY",
+        "Content-Type": "application/json"
     }
-    setExpandedEndpoints(newExpanded);
-  };
-
-  const copyToClipboard = (text: string) => {
-    navigator.clipboard.writeText(text);
-    // Show success message
-  };
-
-  const getMethodColor = (method: string) => {
-    switch (method) {
-      case 'GET': return 'bg-green-500';
-      case 'POST': return 'bg-blue-500';
-      case 'PUT': return 'bg-yellow-500';
-      case 'DELETE': return 'bg-red-500';
-      case 'PATCH': return 'bg-purple-500';
-      default: return 'bg-gray-500';
+    
+    response = requests.post(url, json=patient_data, headers=headers)
+    return response.json()`
+    },
+    {
+      language: 'cURL',
+      title: 'Legal Document Analysis',
+      code: `curl -X POST https://api.ziontechgroup.com/api/v1/legal/analyze \\
+  -H "Authorization: Bearer YOUR_API_KEY" \\
+  -H "Content-Type: application/json" \\
+  -d '{
+    "document": "base64_encoded_document",
+    "analysis_type": "contract_review",
+    "jurisdiction": "US"
+  }'`
     }
+  ];
+
+  const rateLimits = [
+    { plan: 'Free', requests: '1,000/month', burst: '100/hour', features: 'Basic API access' },
+    { plan: 'Starter', requests: '10,000/month', burst: '1,000/hour', features: 'Standard support' },
+    { plan: 'Professional', requests: '100,000/month', burst: '10,000/hour', features: 'Priority support' },
+    { plan: 'Enterprise', requests: 'Unlimited', burst: 'Custom', features: 'Dedicated support' }
+  ];
+
+  const contactInfo = {
+    email: 'api@ziontechgroup.com',
+    phone: '+1 302 464 0950',
+    address: '364 E Main St STE 1008 Middletown DE 19709',
+    website: 'https://ziontechgroup.com'
   };
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      <SEO 
-        title="API Documentation - Zion Tech Group"
-        description="Complete API reference, endpoints, authentication, and code examples for Zion Tech Group services. Build powerful integrations with our comprehensive API documentation."
-      />
-      
       {/* Hero Section */}
       <section className="relative py-20 overflow-hidden">
-        <div className="container-responsive">
+        <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/10 to-purple-500/10"></div>
+        <div className="container-responsive relative z-10">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             className="text-center max-w-4xl mx-auto"
           >
+            <div className="inline-flex items-center gap-2 px-4 py-2 bg-cyan-500/20 border border-cyan-400/30 rounded-full text-cyan-400 text-sm font-medium mb-6">
+              <Code className="w-4 h-4" />
+              Developer Resources
+            </div>
+            
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
               API Documentation
             </h1>
+            
             <p className="text-xl text-gray-300 mb-8 leading-relaxed">
-              Comprehensive API reference with endpoints, authentication, and code examples. 
-              Build powerful integrations with Zion Tech Group services.
+              Comprehensive API documentation for Zion Tech Group's cutting-edge AI services. 
+              Build powerful applications with our intelligent APIs.
             </p>
             
-            {/* Search and Filters */}
-            <div className="flex flex-col md:flex-row gap-4 max-w-3xl mx-auto mb-8">
-              <div className="relative flex-1">
-                <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
-                <input
-                  type="text"
-                  placeholder="Search APIs, endpoints, or methods..."
-                  value={searchQuery}
-                  onChange={(e) => setSearchQuery(e.target.value)}
-                  className="w-full pl-10 pr-4 py-3 bg-slate-700/50 border border-slate-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
-                />
-              </div>
-              <select
-                value={selectedCategory}
-                onChange={(e) => setSelectedCategory(e.target.value)}
-                className="px-4 py-3 bg-slate-700/50 border border-slate-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
-              >
-                {categories.map(category => (
-                  <option key={category} value={category}>{category}</option>
-                ))}
-              </select>
-              <select
-                value={selectedMethod}
-                onChange={(e) => setSelectedMethod(e.target.value)}
-                className="px-4 py-3 bg-slate-700/50 border border-slate-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
-              >
-                {methods.map(method => (
-                  <option key={method} value={method}>{method}</option>
-                ))}
-              </select>
-            </div>
-
-            {/* Quick Stats */}
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-2xl mx-auto">
-              <div className="text-center">
-                <div className="text-2xl font-bold text-cyan-400">50+</div>
-                <div className="text-sm text-gray-400">Endpoints</div>
-              </div>
-              <div className="text-center">
-                <div className="text-2xl font-bold text-blue-400">10+</div>
-                <div className="text-sm text-gray-400">Categories</div>
-              </div>
-              <div className="text-center">
-                <div className="text-2xl font-bold text-purple-400">100+</div>
-                <div className="text-sm text-gray-400">Code Examples</div>
-              </div>
-              <div className="text-center">
-                <div className="text-2xl font-bold text-green-400">24/7</div>
-                <div className="text-sm text-gray-400">Support</div>
-              </div>
+            <div className="flex flex-wrap justify-center gap-4">
+              <button className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-medium rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-cyan-500/25">
+                <Play className="w-5 h-5" />
+                Quick Start Guide
+              </button>
+              <button className="inline-flex items-center gap-2 px-6 py-3 bg-slate-700/50 hover:bg-slate-600/50 text-white font-medium rounded-lg transition-all duration-300 border border-slate-600/50">
+                <Download className="w-5 h-5" />
+                Download SDKs
+              </button>
             </div>
           </motion.div>
         </div>
       </section>
 
-      {/* API Endpoints */}
-      <section className="py-16">
-        <div className="container-responsive">
-          {filteredEndpoints.map((category, categoryIndex) => (
-            <motion.div
-              key={category.category}
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: categoryIndex * 0.1 }}
-              className="mb-16"
-            >
-              {/* Category Header */}
-              <div className="flex items-center gap-4 mb-8">
-                <div className="p-3 rounded-xl bg-gradient-to-br from-cyan-500 to-blue-500">
-                  <Code className="w-6 h-6 text-white" />
-                </div>
-                <div>
-                  <h2 className="text-3xl font-bold text-white">{category.category}</h2>
-                  <p className="text-gray-300 mt-2">API endpoints for {category.category.toLowerCase()} services</p>
-                </div>
-              </div>
-
-              {/* Endpoints */}
-              <div className="space-y-6">
-                {category.endpoints.map((endpoint, endpointIndex) => (
-                  <motion.div
-                    key={endpoint.path}
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.6, delay: (categoryIndex * 0.1) + (endpointIndex * 0.05) }}
-                    className="bg-slate-800/50 backdrop-blur-xl rounded-xl border border-slate-700/50 overflow-hidden"
-                  >
-                    {/* Endpoint Header */}
-                    <div className="p-6">
-                      <div className="flex items-start justify-between mb-4">
-                        <div className="flex items-center gap-4">
-                          <span className={`px-3 py-1 rounded-lg text-sm font-medium text-white ${getMethodColor(endpoint.method)}`}>
-                            {endpoint.method}
-                          </span>
-                          <code className="text-lg font-mono text-cyan-400 bg-slate-700/50 px-3 py-1 rounded">
-                            {endpoint.path}
-                          </code>
-                        </div>
-                        <button
-                          onClick={() => toggleEndpoint(endpoint.path)}
-                          className="p-2 text-gray-400 hover:text-cyan-400 transition-colors"
-                        >
-                          {expandedEndpoints.has(endpoint.path) ? (
-                            <ChevronDown className="w-5 h-5" />
-                          ) : (
-                            <ChevronRight className="w-5 h-5" />
-                          )}
-                        </button>
-                      </div>
-
-                      <h3 className="text-xl font-semibold text-white mb-2">{endpoint.title}</h3>
-                      <p className="text-gray-300">{endpoint.description}</p>
-                    </div>
-
-                    {/* Expanded Content */}
-                    {expandedEndpoints.has(endpoint.path) && (
-                      <div className="border-t border-slate-700/50">
-                        <div className="p-6 space-y-6">
-                          {/* Parameters */}
-                          <div>
-                            <h4 className="text-lg font-semibold text-white mb-3 flex items-center gap-2">
-                              <Key className="w-5 h-5 text-cyan-400" />
-                              Parameters
-                            </h4>
-                            <div className="bg-slate-700/30 rounded-lg overflow-hidden">
-                              <table className="w-full">
-                                <thead className="bg-slate-700/50">
-                                  <tr>
-                                    <th className="text-left p-3 text-sm font-medium text-gray-300">Name</th>
-                                    <th className="text-left p-3 text-sm font-medium text-gray-300">Type</th>
-                                    <th className="text-left p-3 text-sm font-medium text-gray-300">Required</th>
-                                    <th className="text-left p-3 text-sm font-medium text-gray-300">Description</th>
-                                    <th className="text-left p-3 text-sm font-medium text-gray-300">Default</th>
-                                  </tr>
-                                </thead>
-                                <tbody>
-                                  {endpoint.parameters.map((param, idx) => (
-                                    <tr key={idx} className="border-t border-slate-600/30">
-                                      <td className="p-3 text-sm text-white font-mono">{param.name}</td>
-                                      <td className="p-3 text-sm text-cyan-400">{param.type}</td>
-                                      <td className="p-3 text-sm">
-                                        {param.required ? (
-                                          <span className="text-red-400">Yes</span>
-                                        ) : (
-                                          <span className="text-green-400">No</span>
-                                        )}
-                                      </td>
-                                      <td className="p-3 text-sm text-gray-300">{param.description}</td>
-                                      <td className="p-3 text-sm text-gray-400">
-                                        {param.default || '-'}
-                                      </td>
-                                    </tr>
-                                  ))}
-                                </tbody>
-                              </table>
-                            </div>
-                          </div>
-
-                          {/* Responses */}
-                          <div>
-                            <h4 className="text-lg font-semibold text-white mb-3 flex items-center gap-2">
-                              <CheckCircle className="w-5 h-5 text-green-400" />
-                              Responses
-                            </h4>
-                            <div className="space-y-3">
-                              {endpoint.responses.map((response, idx) => (
-                                <div key={idx} className="bg-slate-700/30 rounded-lg p-4">
-                                  <div className="flex items-center gap-3 mb-2">
-                                    <span className={`px-2 py-1 rounded text-xs font-medium ${
-                                      response.code >= 200 && response.code < 300 ? 'bg-green-500/20 text-green-300' :
-                                      response.code >= 400 && response.code < 500 ? 'bg-red-500/20 text-red-300' :
-                                      'bg-yellow-500/20 text-yellow-300'
-                                    }`}>
-                                      {response.code}
-                                    </span>
-                                    <span className="text-sm text-gray-300">{response.description}</span>
-                                  </div>
-                                  <pre className="text-sm text-gray-400 bg-slate-800/50 p-3 rounded overflow-x-auto">
-                                    <code>{response.example}</code>
-                                  </pre>
-                                </div>
-                              ))}
-                            </div>
-                          </div>
-
-                          {/* Code Examples */}
-                          <div>
-                            <h4 className="text-lg font-semibold text-white mb-3 flex items-center gap-2">
-                              <Terminal className="w-5 h-5 text-purple-400" />
-                              Code Examples
-                            </h4>
-                            <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-                              {Object.entries(endpoint.examples).map(([language, code]) => (
-                                <div key={language} className="bg-slate-700/30 rounded-lg p-4">
-                                  <div className="flex items-center justify-between mb-3">
-                                    <span className="text-sm font-medium text-gray-300 capitalize">{language}</span>
-                                    <button
-                                      onClick={() => copyToClipboard(code)}
-                                      className="p-1 text-gray-400 hover:text-cyan-400 transition-colors"
-                                      title="Copy code"
-                                    >
-                                      <Copy className="w-4 h-4" />
-                                    </button>
-                                  </div>
-                                  <pre className="text-xs text-gray-400 bg-slate-800/50 p-3 rounded overflow-x-auto">
-                                    <code>{code}</code>
-                                  </pre>
-                                </div>
-                              ))}
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    )}
-                  </motion.div>
-                ))}
-              </div>
-            </motion.div>
-          ))}
-
-          {filteredEndpoints.length === 0 && (
-            <motion.div
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              className="text-center py-16"
-            >
-              <div className="text-gray-400 text-lg mb-4">
-                No API endpoints found matching your criteria.
-              </div>
-              <button
-                onClick={() => {
-                  setSearchQuery('');
-                  setSelectedCategory('All');
-                  setSelectedMethod('All');
-                }}
-                className="text-cyan-400 hover:text-cyan-300 transition-colors"
-              >
-                Clear all filters
-              </button>
-            </motion.div>
-          )}
-        </div>
-      </section>
-
-      {/* CTA Section */}
-      <section className="py-16">
+      {/* API Services Overview */}
+      <section className="py-20">
         <div className="container-responsive">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
-            className="bg-gradient-to-r from-cyan-500/10 to-blue-600/10 border border-cyan-400/20 rounded-2xl p-8 text-center"
+            className="text-center mb-16"
           >
-            <h2 className="text-3xl font-bold text-white mb-4">
-              Ready to Get Started?
+            <h2 className="text-4xl font-bold text-white mb-6">
+              Available AI Services APIs
             </h2>
-            <p className="text-gray-300 mb-6 max-w-2xl mx-auto">
-              Get your API keys, explore our interactive API playground, and start building 
-              powerful integrations with Zion Tech Group services.
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Explore our comprehensive suite of AI-powered APIs designed to transform your business operations
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-medium py-3 px-6 rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-cyan-500/25">
-                Get API Keys
-              </button>
-              <button className="border border-cyan-400/50 text-cyan-400 hover:bg-cyan-400/10 font-medium py-3 px-6 rounded-lg transition-all duration-300">
-                API Playground
-              </button>
-              <button className="border border-cyan-400/50 text-cyan-400 hover:bg-cyan-400/10 font-medium py-3 px-6 rounded-lg transition-all duration-300">
-                Contact Support
-              </button>
-            </div>
           </motion.div>
+
+          <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8">
+            {apiServices.map((service, index) => (
+              <motion.div
+                key={service.name}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                className="bg-slate-800/50 backdrop-blur-xl rounded-2xl border border-slate-700/50 p-6 hover:border-cyan-400/30 transition-all duration-300 group"
+              >
+                <div className={`w-12 h-12 bg-gradient-to-br ${service.color} rounded-xl flex items-center justify-center mb-4`}>
+                  <Brain className="w-6 h-6 text-white" />
+                </div>
+                
+                <h3 className="text-xl font-semibold text-white mb-3 group-hover:text-cyan-400 transition-colors">
+                  {service.name}
+                </h3>
+                
+                <p className="text-gray-400 mb-4 leading-relaxed">
+                  {service.description}
+                </p>
+                
+                <div className="space-y-2 mb-4">
+                  {service.endpoints.map((endpoint, idx) => (
+                    <div key={idx} className="flex items-center gap-2 text-sm">
+                      <span className={`px-2 py-1 rounded text-xs font-mono ${
+                        endpoint.method === 'GET' ? 'bg-green-500/20 text-green-400' :
+                        endpoint.method === 'POST' ? 'bg-blue-500/20 text-blue-400' :
+                        endpoint.method === 'PUT' ? 'bg-yellow-500/20 text-yellow-400' :
+                        'bg-red-500/20 text-red-400'
+                      }`}>
+                        {endpoint.method}
+                      </span>
+                      <code className="text-cyan-400 font-mono">{endpoint.path}</code>
+                    </div>
+                  ))}
+                </div>
+                
+                <div className="flex flex-wrap gap-2">
+                  {service.features.map((feature, idx) => (
+                    <span key={idx} className="px-2 py-1 bg-slate-700/50 rounded text-xs text-gray-300">
+                      {feature}
+                    </span>
+                  ))}
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Authentication Section */}
+      <section className="py-20 bg-slate-800/30">
+        <div className="container-responsive">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-4xl font-bold text-white mb-6">
+              Authentication & Security
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Secure your API calls with our multiple authentication methods and enterprise-grade security
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+            {authenticationMethods.map((method, index) => (
+              <motion.div
+                key={method.name}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                className="bg-slate-800/50 backdrop-blur-xl rounded-2xl border border-slate-700/50 p-6"
+              >
+                <div className="flex items-center gap-3 mb-4">
+                  <div className={`p-2 rounded-lg ${
+                    method.security === 'High' ? 'bg-green-500/20 text-green-400' :
+                    method.security === 'Medium' ? 'bg-yellow-500/20 text-yellow-400' :
+                    'bg-red-500/20 text-red-400'
+                  }`}>
+                    <Shield className="w-5 h-5" />
+                  </div>
+                  <div>
+                    <h3 className="text-lg font-semibold text-white">{method.name}</h3>
+                    <span className={`text-xs px-2 py-1 rounded ${
+                      method.security === 'High' ? 'bg-green-500/20 text-green-400' :
+                      method.security === 'Medium' ? 'bg-yellow-500/20 text-yellow-400' :
+                      'bg-red-500/20 text-red-400'
+                    }`}>
+                      {method.security} Security
+                    </span>
+                  </div>
+                </div>
+                
+                <p className="text-gray-400 mb-4 leading-relaxed">
+                  {method.description}
+                </p>
+                
+                <div className="bg-slate-900/50 rounded-lg p-3 mb-4">
+                  <code className="text-cyan-400 font-mono text-sm">{method.code}</code>
+                </div>
+                
+                <p className="text-sm text-gray-500">
+                  <strong>Use Case:</strong> {method.useCase}
+                </p>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Code Examples Section */}
+      <section className="py-20">
+        <div className="container-responsive">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-4xl font-bold text-white mb-6">
+              Code Examples
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Get started quickly with our comprehensive code examples in multiple programming languages
+            </p>
+          </motion.div>
+
+          <div className="space-y-8">
+            {codeExamples.map((example, index) => (
+              <motion.div
+                key={example.language}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                className="bg-slate-800/50 backdrop-blur-xl rounded-2xl border border-slate-700/50 overflow-hidden"
+              >
+                <div className="bg-slate-700/50 px-6 py-4 border-b border-slate-700/50">
+                  <div className="flex items-center justify-between">
+                    <div className="flex items-center gap-3">
+                      <div className="w-3 h-3 bg-red-500 rounded-full"></div>
+                      <div className="w-3 h-3 bg-yellow-500 rounded-full"></div>
+                      <div className="w-3 h-3 bg-green-500 rounded-full"></div>
+                    </div>
+                    <div className="flex items-center gap-2">
+                      <span className="text-sm text-gray-400">{example.language}</span>
+                      <button className="p-1 hover:bg-slate-600/50 rounded transition-colors">
+                        <Copy className="w-4 h-4 text-gray-400" />
+                      </button>
+                    </div>
+                  </div>
+                </div>
+                
+                <div className="p-6">
+                  <h3 className="text-lg font-semibold text-white mb-4">{example.title}</h3>
+                  <pre className="bg-slate-900/50 rounded-lg p-4 overflow-x-auto">
+                    <code className="text-gray-300 text-sm">{example.code}</code>
+                  </pre>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Rate Limits & Pricing */}
+      <section className="py-20 bg-slate-800/30">
+        <div className="container-responsive">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-4xl font-bold text-white mb-6">
+              Rate Limits & Plans
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Choose the plan that fits your needs with transparent pricing and generous rate limits
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {rateLimits.map((plan, index) => (
+              <motion.div
+                key={plan.plan}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                className={`bg-slate-800/50 backdrop-blur-xl rounded-2xl border p-6 ${
+                  plan.plan === 'Professional' ? 'border-cyan-400/50 ring-2 ring-cyan-400/20' : 'border-slate-700/50'
+                }`}
+              >
+                {plan.plan === 'Professional' && (
+                  <div className="inline-flex items-center gap-1 px-3 py-1 bg-cyan-500/20 text-cyan-400 text-xs font-medium rounded-full mb-4">
+                    <Star className="w-3 h-3" />
+                    Recommended
+                  </div>
+                )}
+                
+                <h3 className="text-xl font-semibold text-white mb-2">{plan.plan}</h3>
+                
+                <div className="space-y-3 mb-6">
+                  <div className="flex items-center justify-between">
+                    <span className="text-gray-400">Requests:</span>
+                    <span className="text-white font-medium">{plan.requests}</span>
+                  </div>
+                  <div className="flex items-center justify-between">
+                    <span className="text-gray-400">Burst:</span>
+                    <span className="text-white font-medium">{plan.burst}</span>
+                  </div>
+                </div>
+                
+                <p className="text-sm text-gray-400 mb-4">{plan.features}</p>
+                
+                <button className={`w-full py-2 px-4 rounded-lg font-medium transition-all duration-300 ${
+                  plan.plan === 'Professional' 
+                    ? 'bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white' 
+                    : 'bg-slate-700/50 hover:bg-slate-600/50 text-gray-300 hover:text-white'
+                }`}>
+                  Get Started
+                </button>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* SDKs & Tools */}
+      <section className="py-20">
+        <div className="container-responsive">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-4xl font-bold text-white mb-6">
+              SDKs & Development Tools
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Accelerate your development with our official SDKs, testing tools, and comprehensive documentation
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {[
+              { name: 'JavaScript SDK', icon: Code, description: 'Official Node.js and browser SDK', downloads: '50K+' },
+              { name: 'Python SDK', icon: Package, description: 'Python client library with async support', downloads: '25K+' },
+              { name: 'Postman Collection', icon: FileText, description: 'Ready-to-use API testing collection', downloads: '10K+' },
+              { name: 'API Explorer', icon: Globe, description: 'Interactive API testing interface', downloads: '15K+' },
+              { name: 'CLI Tool', icon: Terminal, description: 'Command-line interface for API management', downloads: '5K+' },
+              { name: 'Webhooks', icon: Network, description: 'Real-time event notifications', downloads: '8K+' }
+            ].map((tool, index) => (
+              <motion.div
+                key={tool.name}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                className="bg-slate-800/50 backdrop-blur-xl rounded-2xl border border-slate-700/50 p-6 hover:border-cyan-400/30 transition-all duration-300 group"
+              >
+                <div className="w-12 h-12 bg-gradient-to-br from-cyan-500 to-blue-500 rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
+                  <tool.icon className="w-6 h-6 text-white" />
+                </div>
+                
+                <h3 className="text-lg font-semibold text-white mb-2 group-hover:text-cyan-400 transition-colors">
+                  {tool.name}
+                </h3>
+                
+                <p className="text-gray-400 mb-4 leading-relaxed">
+                  {tool.description}
+                </p>
+                
+                <div className="flex items-center justify-between">
+                  <span className="text-sm text-gray-500">{tool.downloads} downloads</span>
+                  <button className="text-cyan-400 hover:text-cyan-300 text-sm font-medium transition-colors">
+                    Download →
+                  </button>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Support & Contact */}
+      <section className="py-20 bg-slate-800/30">
+        <div className="container-responsive">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-4xl font-bold text-white mb-6">
+              Need Help? Get Support
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Our developer support team is here to help you succeed with our APIs
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+            {/* Contact Information */}
+            <motion.div
+              initial={{ opacity: 0, x: -20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.6 }}
+              className="space-y-6"
+            >
+              <h3 className="text-2xl font-semibold text-white mb-6">Contact Our Team</h3>
+              
+              <div className="space-y-4">
+                <div className="flex items-center gap-4">
+                  <div className="w-10 h-10 bg-cyan-500/20 rounded-lg flex items-center justify-center">
+                    <Mail className="w-5 h-5 text-cyan-400" />
+                  </div>
+                  <div>
+                    <p className="text-white font-medium">Email</p>
+                    <a href={`mailto:${contactInfo.email}`} className="text-cyan-400 hover:text-cyan-300 transition-colors">
+                      {contactInfo.email}
+                    </a>
+                  </div>
+                </div>
+                
+                <div className="flex items-center gap-4">
+                  <div className="w-10 h-10 bg-cyan-500/20 rounded-lg flex items-center justify-center">
+                    <Phone className="w-5 h-5 text-cyan-400" />
+                  </div>
+                  <div>
+                    <p className="text-white font-medium">Phone</p>
+                    <a href={`tel:${contactInfo.phone}`} className="text-cyan-400 hover:text-cyan-300 transition-colors">
+                      {contactInfo.phone}
+                    </a>
+                  </div>
+                </div>
+                
+                <div className="flex items-center gap-4">
+                  <div className="w-10 h-10 bg-cyan-500/20 rounded-lg flex items-center justify-center">
+                    <MapPin className="w-5 h-5 text-cyan-400" />
+                  </div>
+                  <div>
+                    <p className="text-white font-medium">Address</p>
+                    <p className="text-gray-300">{contactInfo.address}</p>
+                  </div>
+                </div>
+              </div>
+            </motion.div>
+
+            {/* Support Resources */}
+            <motion.div
+              initial={{ opacity: 0, x: 20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.6 }}
+              className="space-y-6"
+            >
+              <h3 className="text-2xl font-semibold text-white mb-6">Support Resources</h3>
+              
+              <div className="space-y-4">
+                {[
+                  { name: 'API Status Page', description: 'Check real-time API status and uptime', icon: Activity },
+                  { name: 'Developer Forum', description: 'Connect with other developers', icon: Users },
+                  { name: 'Video Tutorials', description: 'Step-by-step implementation guides', icon: Play },
+                  { name: 'Knowledge Base', description: 'Comprehensive documentation and FAQs', icon: BookOpen }
+                ].map((resource, index) => (
+                  <div key={resource.name} className="flex items-center gap-4 p-4 bg-slate-700/30 rounded-lg hover:bg-slate-700/50 transition-colors">
+                    <div className="w-10 h-10 bg-slate-600/50 rounded-lg flex items-center justify-center">
+                      <resource.icon className="w-5 h-5 text-cyan-400" />
+                    </div>
+                    <div className="flex-1">
+                      <h4 className="text-white font-medium">{resource.name}</h4>
+                      <p className="text-gray-400 text-sm">{resource.description}</p>
+                    </div>
+                    <button className="text-cyan-400 hover:text-cyan-300 transition-colors">
+                      <ArrowRight className="w-4 h-4" />
+                    </button>
+                  </div>
+                ))}
+              </div>
+            </motion.div>
+          </div>
         </div>
       </section>
     </div>
