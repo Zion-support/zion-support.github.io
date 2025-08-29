@@ -2,7 +2,7 @@ import React from 'react';
 import { SEO } from '../../components/SEO';
 import { motion } from 'framer-motion';
 import { 
-  Robot, 
+  Bot, 
   Zap, 
   CheckCircle,
   Star,
@@ -300,7 +300,7 @@ import {
 export default function RoboticsAutomation() {
   const features = [
     {
-      icon: Robot,
+      icon: Bot,
       title: 'Industrial Robotics',
       description: 'Advanced robotic systems for manufacturing and production',
       color: 'from-blue-500 to-cyan-500'
@@ -444,7 +444,7 @@ export default function RoboticsAutomation() {
               className="text-center max-w-4xl mx-auto"
             >
               <div className="inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-orange-500/20 to-red-500/20 border border-orange-500/30 rounded-full text-orange-400 text-sm font-medium mb-6">
-                <Robot className="w-4 h-4" />
+                <Bot className="w-4 h-4" />
                 Automation Innovation
               </div>
               

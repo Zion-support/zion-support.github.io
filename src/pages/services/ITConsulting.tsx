@@ -36,7 +36,7 @@ import {
   BarChart4,
   TrendingUp2,
   Lightbulb,
-  Strategy,
+  Target,
   Brain,
   Compass,
   RefreshCw,
@@ -157,7 +157,7 @@ import {
   Zap,
   Cpu,
   Server,
-  Network2
+  Network
 } from 'lucide-react';
 
 const ITConsulting = () => {
@@ -178,7 +178,7 @@ const ITConsulting = () => {
       description: 'Design scalable and secure IT infrastructure solutions'
     },
     {
-      icon: Network2,
+      icon: Network,
       title: 'Network Design',
       description: 'Plan and implement robust network architectures'
     },
@@ -205,7 +205,7 @@ const ITConsulting = () => {
 
   const services = [
     {
-      icon: Strategy,
+      icon: Target,
       title: 'IT Strategy',
       description: 'Develop comprehensive IT strategies aligned with business goals'
     },
@@ -256,7 +256,6 @@ const ITConsulting = () => {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            className="text-center"
           >
             <div className="inline-flex items-center px-4 py-2 bg-blue-500/10 border border-blue-500/20 rounded-full text-blue-400 text-sm font-medium mb-6">
               <Briefcase className="w-4 h-4 mr-2" />
@@ -298,7 +297,6 @@ const ITConsulting = () => {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            className="text-center mb-16"
           >
             <h2 className="text-4xl font-bold text-white mb-4">
               Comprehensive IT Consulting Features
@@ -339,8 +337,6 @@ const ITConsulting = () => {
                     ))}
                   </ul>
                 </div>
-                <h3 className="text-xl font-semibold text-white mb-2">{feature.title}</h3>
-                <p className="text-gray-300">{feature.description}</p>
               </motion.div>
             ))}
           </div>
@@ -355,7 +351,6 @@ const ITConsulting = () => {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            className="text-center mb-16"
           >
             <h2 className="text-4xl font-bold text-white mb-4">
               Core IT Consulting Services
@@ -375,17 +370,12 @@ const ITConsulting = () => {
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 hover:border-blue-500/30 transition-all duration-200"
               >
-                <div className="flex items-start space-x-4">
-                  <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-indigo-500 rounded-lg flex items-center justify-center flex-shrink-0">
-                    <service.icon className="w-6 h-6 text-white" />
+                <div className="flex items-center mb-4">
+                  <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-indigo-500 rounded-lg flex items-center justify-center flex-shrink-0 mr-4">
+                    <area.icon className="w-6 h-6 text-white" />
                   </div>
-                  <div>
-                    <h3 className="text-xl font-semibold text-white mb-2">{service.title}</h3>
-                    <p className="text-gray-300">{service.description}</p>
-                  </div>
+                  <h3 className="text-xl font-bold text-white">{area.title}</h3>
                 </div>
-
-                <h3 className="text-xl font-bold text-white mb-3">{area.title}</h3>
                 <p className="text-zion-slate-light leading-relaxed">{area.description}</p>
               </motion.div>
             ))}
@@ -401,7 +391,6 @@ const ITConsulting = () => {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            className="text-center mb-16"
           >
             <h2 className="text-4xl font-bold text-white mb-4">
               IT Consulting Benefits
@@ -439,7 +428,6 @@ const ITConsulting = () => {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            className="text-center mb-16"
           >
             <h2 className="text-4xl font-bold text-white mb-4">
               Industry Applications
