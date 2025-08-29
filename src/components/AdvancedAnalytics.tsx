@@ -1,16 +1,21 @@
-import { useState, useEffect, useCallback } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
   BarChart3, 
+  TrendingUp, 
   Users, 
   Eye, 
   MousePointer, 
   Clock, 
+  Globe,
   X,
   Activity,
   Zap,
   Target,
   Award,
+  Calendar,
+  MapPin,
+  Laptop,
   Monitor,
   Smartphone,
   Tablet
@@ -33,9 +38,10 @@ interface AnalyticsData {
 
 interface Props {
   enabled?: boolean;
+  showMetrics?: boolean;
 }
 
-export function AdvancedAnalytics({ enabled = true }: Props): JSX.Element | null {
+export function AdvancedAnalytics({ enabled = true, showMetrics = true }: Props) {
   const [isVisible, setIsVisible] = useState(false);
   const [analyticsData, setAnalyticsData] = useState<AnalyticsData>({
     pageViews: 0,
@@ -56,7 +62,7 @@ export function AdvancedAnalytics({ enabled = true }: Props): JSX.Element | null
 
   // Initialize analytics tracking
   const initializeTracking = useCallback(() => {
-    if (!enabled) return () => {};
+    if (!enabled) return;
 
     setIsTracking(true);
     setSessionStart(Date.now());
@@ -376,7 +382,7 @@ export function AdvancedAnalytics({ enabled = true }: Props): JSX.Element | null
           {/* Device Distribution */}
           <div>
             <h4 className="text-lg font-medium text-gray-700 mb-3 flex items-center gap-2">
-              <Monitor className="w-4 h-4 text-purple-500" />
+              <Device className="w-4 h-4 text-purple-500" />
               Device Distribution
             </h4>
             

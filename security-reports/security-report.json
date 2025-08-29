@@ -1,0 +1,98 @@
+{
+  "timestamp": "2025-08-29T17:56:45.918Z",
+  "summary": {
+    "totalVulnerabilities": 0,
+    "criticalVulnerabilities": 0,
+    "highVulnerabilities": 0,
+    "outdatedPackages": 0,
+    "securityIssues": 0,
+    "potentialSecrets": 5
+  },
+  "results": {
+    "audit": {
+      "status": "failure",
+      "vulnerabilities": [],
+      "summary": {
+        "total": 0,
+        "low": 0,
+        "moderate": 0,
+        "high": 0,
+        "critical": 0
+      }
+    },
+    "dependencies": {
+      "status": "failure",
+      "outdated": [],
+      "licenses": []
+    },
+    "codeAnalysis": {
+      "status": "success",
+      "issues": [],
+      "summary": {
+        "total": 0,
+        "high": 0,
+        "medium": 0,
+        "low": 0
+      }
+    },
+    "secrets": {
+      "status": "success",
+      "findings": [
+        {
+          "type": "API Key",
+          "file": "/workspace/src/pages/Documentation.tsx",
+          "line": 122,
+          "match": "apiKey: 'your-api-key'..."
+        },
+        {
+          "type": "Password",
+          "file": "/workspace/src/routes.js",
+          "line": 6,
+          "match": "Password: '/forgot-password'..."
+        },
+        {
+          "type": "Token",
+          "file": "/workspace/src/services/auth.js",
+          "line": 33,
+          "match": "Token = 'mock-jwt-token-'..."
+        },
+        {
+          "type": "Token",
+          "file": "/workspace/src/store/authSlice.js",
+          "line": 19,
+          "match": "token: 'mock-jwt-token'..."
+        },
+        {
+          "type": "Token",
+          "file": "/workspace/src/utils/authUtils.ts",
+          "line": 38,
+          "match": "token:', error);\n    return null;\n  }\n};\n\nexport c..."
+        }
+      ]
+    },
+    "compliance": {
+      "status": "success",
+      "checks": [
+        {
+          "file": "index.html",
+          "csp": false,
+          "xFrame": false,
+          "xContent": false
+        },
+        {
+          "file": "offline.html",
+          "csp": false,
+          "xFrame": false,
+          "xContent": false
+        },
+        {
+          "type": "package-scripts",
+          "hasSecurityScript": false,
+          "hasAuditScript": false,
+          "hasLintScript": true
+        }
+      ]
+    }
+  },
+  "riskLevel": "HIGH"
+}

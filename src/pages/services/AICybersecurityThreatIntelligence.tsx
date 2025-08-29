@@ -1,232 +1,287 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import { SEO } from '../../components/SEO';
 import { 
   Shield, 
-  Brain, 
   AlertTriangle, 
+  Brain, 
   Zap, 
   Eye, 
-  Lock, 
-  CheckCircle, 
-  Star,
-  ArrowRight,
-  Cpu,
+  Users, 
   Globe,
-  Users,
+  Star,
+  CheckCircle,
+  ArrowRight,
+  Lock,
+  Search,
+  Activity,
+  BarChart3,
   Clock,
-  Phone,
-  Mail,
-  MapPin,
+  DollarSign,
+  Target,
+  Award,
   Network,
   Database,
-  Server,
-  Code,
-  Target,
-  TrendingUp,
-  BarChart3,
-  Activity,
-  Fingerprint,
-  Search,
-  Monitor,
-  Cloud
+  Cpu,
+  Fingerprint
 } from 'lucide-react';
 
-const AICybersecurityThreatIntelligence = () => {
+export default function AICybersecurityThreatIntelligence() {
   const features = [
     {
-      title: "AI Threat Detection",
-      description: "Advanced machine learning algorithms detect and analyze threats in real-time with 99.9% accuracy",
       icon: Brain,
-      color: "from-purple-500 to-pink-500"
+      title: 'AI-Powered Threat Detection',
+      description: 'Advanced machine learning algorithms that identify and analyze cyber threats in real-time with 99.9% accuracy.',
+      benefits: ['Real-time threat detection', 'Behavioral analysis', 'Anomaly identification', 'Predictive threat modeling']
     },
     {
-      title: "Real-time Monitoring",
-      description: "24/7 network monitoring with instant threat alerts and automated response capabilities",
-      icon: Monitor,
-      color: "from-blue-500 to-indigo-500"
+      icon: Eye,
+      title: 'Continuous Monitoring',
+      description: '24/7 surveillance of your digital infrastructure with automated threat hunting and response capabilities.',
+      benefits: ['Round-the-clock monitoring', 'Automated response', 'Threat hunting', 'Incident tracking']
     },
     {
-      title: "Behavioral Analysis",
-      description: "AI-powered user behavior analytics to identify insider threats and anomalous activities",
-      icon: Activity,
-      color: "from-green-500 to-emerald-500"
-    },
-    {
-      title: "Threat Intelligence",
-      description: "Global threat feed integration with real-time updates on emerging cyber threats",
-      icon: Globe,
-      color: "from-cyan-500 to-blue-500"
-    },
-    {
-      title: "Automated Response",
-      description: "Intelligent incident response automation that mitigates threats within seconds",
-      icon: Zap,
-      color: "from-yellow-500 to-orange-500"
-    },
-    {
-      title: "Vulnerability Assessment",
-      description: "Continuous vulnerability scanning and risk assessment across your entire infrastructure",
       icon: Search,
-      color: "from-red-500 to-pink-500"
+      title: 'Threat Intelligence',
+      description: 'Comprehensive threat intelligence feeds and analysis from global security sources and dark web monitoring.',
+      benefits: ['Global threat feeds', 'Dark web monitoring', 'IOC sharing', 'Threat attribution']
+    },
+    {
+      icon: Activity,
+      title: 'Behavioral Analytics',
+      description: 'User and entity behavior analytics (UEBA) to detect insider threats and compromised accounts.',
+      benefits: ['User behavior analysis', 'Insider threat detection', 'Account compromise detection', 'Risk scoring']
+    },
+    {
+      icon: Network,
+      title: 'Network Security',
+      description: 'Advanced network traffic analysis and intrusion detection with AI-powered pattern recognition.',
+      benefits: ['Traffic analysis', 'Intrusion detection', 'DDoS protection', 'Network segmentation']
+    },
+    {
+      icon: Database,
+      title: 'Data Protection',
+      description: 'Comprehensive data loss prevention and encryption with AI-driven security policy enforcement.',
+      benefits: ['Data encryption', 'DLP policies', 'Access controls', 'Compliance monitoring']
     }
   ];
 
-  const pricingPlans = [
+  const useCases = [
     {
-      name: "Starter",
-      price: "$2,499",
-      period: "/month",
-      description: "Perfect for small businesses and startups",
-      features: [
-        "AI threat detection",
-        "Basic monitoring",
-        "Email alerts",
-        "Up to 100 endpoints",
-        "Email support",
-        "Mobile app access"
-      ],
-      popular: false
+      industry: 'Financial Services',
+      title: 'Fraud Detection & Prevention',
+      description: 'Protect financial transactions and customer data with AI-powered fraud detection and real-time threat response.',
+      metrics: ['99.9% fraud detection accuracy', '60% reduction in false positives', 'Real-time response in <100ms']
     },
     {
-      name: "Professional",
-      price: "$5,999",
-      period: "/month",
-      description: "Ideal for growing enterprises",
-      features: [
-        "Advanced AI algorithms",
-        "Real-time monitoring",
-        "Behavioral analysis",
-        "Threat intelligence feeds",
-        "Priority support",
-        "API access",
-        "Custom integrations"
-      ],
-      popular: true
+      industry: 'Healthcare',
+      title: 'Patient Data Security',
+      description: 'Secure patient records and medical systems with HIPAA-compliant cybersecurity and threat intelligence.',
+      metrics: ['100% HIPAA compliance', 'Zero data breaches', '24/7 threat monitoring']
     },
     {
-      name: "Enterprise",
-      price: "$14,999",
-      period: "/month",
-      description: "For large corporations and government agencies",
-      features: [
-        "Custom AI model development",
-        "Advanced threat hunting",
-        "Dedicated security team",
-        "SLA guarantees",
-        "On-premise deployment",
-        "White-label solutions",
-        "Compliance reporting"
-      ],
-      popular: false
+      industry: 'Manufacturing',
+      title: 'Industrial Control Security',
+      description: 'Protect critical infrastructure and industrial control systems from cyber attacks and espionage.',
+      metrics: ['99.99% uptime protection', 'Zero successful attacks', 'Real-time threat response']
+    },
+    {
+      industry: 'E-commerce',
+      title: 'Customer Data Protection',
+      description: 'Secure online transactions and customer information with advanced fraud detection and threat prevention.',
+      metrics: ['95% reduction in fraud losses', '100% secure transactions', 'Real-time threat blocking']
     }
   ];
 
   const benefits = [
     {
-      title: "Threat Prevention",
-      description: "Proactively identify and prevent cyber attacks before they occur",
-      metric: "99.9% prevention"
+      icon: Shield,
+      title: 'Threat Prevention',
+      description: 'Proactively prevent cyber attacks before they can cause damage to your systems.',
+      value: '99.9%'
     },
     {
-      title: "Response Time",
-      description: "Automated threat response reduces incident resolution time significantly",
-      metric: "90% faster"
+      icon: Clock,
+      title: 'Response Time',
+      description: 'Detect and respond to threats in real-time, minimizing potential damage.',
+      value: '<100ms'
     },
     {
-      title: "Cost Savings",
-      description: "Prevent costly data breaches and reduce security incident costs",
-      metric: "60% cost reduction"
+      icon: DollarSign,
+      title: 'Cost Savings',
+      description: 'Reduce cybersecurity costs while improving protection and compliance.',
+      value: '40-60%'
     },
     {
-      title: "Compliance",
-      description: "Meet industry standards and regulatory requirements automatically",
-      metric: "100% compliance"
+      icon: Target,
+      title: 'Accuracy',
+      description: 'High-precision threat detection with minimal false positives.',
+      value: '99.9%'
     }
   ];
 
-  const securityFeatures = [
+  const technologies = [
+    'Machine Learning AI',
+    'Deep Learning Neural Networks',
+    'Natural Language Processing',
+    'Behavioral Analytics',
+    'Threat Intelligence Feeds',
+    'Dark Web Monitoring',
+    'Real-time Processing',
+    'Cloud Security',
+    'Zero Trust Architecture',
+    'Blockchain Security',
+    'Quantum-resistant Encryption',
+    'IoT Security Protocols'
+  ];
+
+  const pricing = [
     {
-      title: "Network Security",
-      description: "Advanced firewall protection, intrusion detection, and network segmentation",
-      icon: Network,
-      color: "from-blue-500 to-cyan-500"
+      plan: 'Essential',
+      price: '$199',
+      period: '/month',
+      description: 'Perfect for small businesses and startups',
+      features: [
+        'Basic threat detection',
+        'Email security',
+        'Firewall protection',
+        '24/7 monitoring',
+        'Email support',
+        'Basic reporting'
+      ],
+      cta: 'Start Free Trial',
+      popular: false
     },
     {
-      title: "Endpoint Protection",
-      description: "Comprehensive endpoint security with AI-powered malware detection",
-      icon: Server,
-      color: "from-green-500 to-emerald-500"
+      plan: 'Professional',
+      price: '$499',
+      period: '/month',
+      description: 'Ideal for growing businesses and enterprises',
+      features: [
+        'Advanced AI threat detection',
+        'Real-time monitoring',
+        'Threat intelligence feeds',
+        'Incident response',
+        'Priority support',
+        'Advanced analytics',
+        'Compliance reporting',
+        'Custom integrations'
+      ],
+      cta: 'Start Free Trial',
+      popular: true
     },
     {
-      title: "Cloud Security",
-      description: "Multi-cloud security with automated compliance and threat detection",
-      icon: Cloud,
-      color: "from-purple-500 to-pink-500"
-    },
-    {
-      title: "Data Protection",
-      description: "Encryption, access control, and data loss prevention across all systems",
-      icon: Lock,
-      color: "from-red-500 to-orange-500"
+      plan: 'Enterprise',
+      price: '$1,299',
+      period: '/month',
+      description: 'For large organizations with complex security needs',
+      features: [
+        'Full AI cybersecurity suite',
+        'Custom threat models',
+        'Dedicated security team',
+        'SLA guarantees',
+        'On-site support',
+        'Custom development',
+        'Advanced compliance',
+        'White-label options'
+      ],
+      cta: 'Contact Sales',
+      popular: false
     }
   ];
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+      <SEO 
+        title="AI Cybersecurity Threat Intelligence - Zion Tech Group"
+        description="Protect your business with AI-powered cybersecurity threat intelligence. Real-time threat detection, behavioral analytics, and automated response capabilities."
+      />
+      
       {/* Hero Section */}
-      <section className="relative pt-32 pb-20 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-red-900/20 to-purple-900/20"></div>
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <section className="relative overflow-hidden py-20">
+        <div className="container mx-auto px-4">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
+            className="text-center mb-16"
           >
-            <div className="flex items-center justify-center mb-6">
-              <Shield className="w-12 h-12 text-red-400 mr-3" />
-              <h1 className="text-5xl lg:text-7xl font-bold bg-gradient-to-r from-red-400 via-purple-400 to-red-400 bg-clip-text text-transparent">
-                AI Cybersecurity Threat Intelligence
-              </h1>
+            <div className="w-20 h-20 bg-gradient-to-br from-red-400 to-orange-500 rounded-2xl flex items-center justify-center mx-auto mb-8">
+              <Shield className="w-10 h-10 text-white" />
             </div>
-            <p className="text-xl lg:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
-              Protect your organization with the most advanced AI-powered cybersecurity platform. 
-              Detect, analyze, and respond to threats in real-time with unprecedented accuracy.
+            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
+              AI-Powered
+              <span className="bg-gradient-to-r from-red-400 via-orange-500 to-yellow-600 bg-clip-text text-transparent">
+                {' '}Cybersecurity Intelligence
+              </span>
+            </h1>
+            <p className="text-xl text-slate-300 max-w-3xl mx-auto mb-8">
+              Stay ahead of cyber threats with our advanced AI-powered cybersecurity platform. Real-time threat detection, 
+              behavioral analytics, and automated response capabilities that protect your business 24/7.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
                 href="/contact"
-                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-red-500 to-purple-500 text-white font-semibold rounded-lg hover:from-red-600 hover:to-purple-600 transition-all duration-300 transform hover:scale-105"
+                className="inline-flex items-center space-x-2 bg-gradient-to-r from-red-400 to-orange-500 text-white px-8 py-4 rounded-lg font-semibold hover:from-red-500 hover:to-orange-600 transition-all duration-300 transform hover:scale-105"
               >
-                Secure Your Organization
-                <ArrowRight className="ml-2 w-5 h-5" />
+                <span>Get Protected</span>
+                <ArrowRight className="w-5 h-5" />
               </a>
               <a
-                href="#demo"
-                className="inline-flex items-center px-8 py-4 border border-red-400 text-red-400 font-semibold rounded-lg hover:bg-red-400 hover:text-white transition-all duration-300"
+                href="#pricing"
+                className="inline-flex items-center space-x-2 border border-red-400 text-red-400 px-8 py-4 rounded-lg font-semibold hover:bg-red-400 hover:text-white transition-all duration-300"
               >
-                Watch Demo
+                <span>View Pricing</span>
+                <ArrowRight className="w-5 h-5" />
               </a>
+            </div>
+          </motion.div>
+
+          {/* Stats */}
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+            className="grid grid-cols-2 md:grid-cols-4 gap-8"
+          >
+            <div className="text-center">
+              <div className="text-3xl font-bold text-white mb-2">99.9%</div>
+              <div className="text-slate-400">Threat Detection</div>
+            </div>
+            <div className="text-center">
+              <div className="text-3xl font-bold text-white mb-2">&lt;100ms</div>
+              <div className="text-slate-400">Response Time</div>
+            </div>
+            <div className="text-center">
+              <div className="text-3xl font-bold text-white mb-2">40-60%</div>
+              <div className="text-slate-400">Cost Reduction</div>
+            </div>
+            <div className="text-center">
+              <div className="text-3xl font-bold text-white mb-2">24/7</div>
+              <div className="text-slate-400">Protection</div>
             </div>
           </motion.div>
         </div>
       </section>
 
       {/* Features Section */}
-      <section className="py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="py-20 bg-slate-800/30">
+        <div className="container mx-auto px-4">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
             className="text-center mb-16"
           >
-            <h2 className="text-4xl lg:text-5xl font-bold text-white mb-6">
-              Advanced Security Intelligence
+            <h2 className="text-4xl font-bold text-white mb-6">
+              Advanced Security
+              <span className="bg-gradient-to-r from-red-400 to-orange-500 bg-clip-text text-transparent">
+                {' '}Features
+              </span>
             </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Our AI platform provides comprehensive cybersecurity protection with real-time threat detection, 
-              behavioral analysis, and automated response capabilities.
+            <p className="text-xl text-slate-300 max-w-2xl mx-auto">
+              Our AI cybersecurity platform combines cutting-edge technology with comprehensive security 
+              features to protect your business from all types of cyber threats.
             </p>
           </motion.div>
 
@@ -234,56 +289,75 @@ const AICybersecurityThreatIntelligence = () => {
             {features.map((feature, index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="bg-gradient-to-br from-slate-800 to-slate-700 p-8 rounded-2xl border border-slate-600 hover:border-red-400 transition-all duration-300 hover:transform hover:scale-105"
+                transition={{ duration: 0.8, delay: index * 0.1 }}
+                className="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-8 border border-slate-700/50 hover:border-red-400/50 transition-all duration-300"
               >
-                <div className={`w-16 h-16 bg-gradient-to-r ${feature.color} rounded-2xl flex items-center justify-center mb-6`}>
+                <div className="w-16 h-16 bg-gradient-to-br from-red-400 to-orange-500 rounded-xl flex items-center justify-center mb-6">
                   <feature.icon className="w-8 h-8 text-white" />
                 </div>
                 <h3 className="text-2xl font-bold text-white mb-4">{feature.title}</h3>
-                <p className="text-gray-300">{feature.description}</p>
+                <p className="text-slate-300 mb-6 leading-relaxed">{feature.description}</p>
+                <ul className="space-y-2">
+                  {feature.benefits.map((benefit, idx) => (
+                    <li key={idx} className="flex items-center space-x-2 text-sm">
+                      <CheckCircle className="w-4 h-4 text-red-400 flex-shrink-0" />
+                      <span className="text-slate-300">{benefit}</span>
+                    </li>
+                  ))}
+                </ul>
               </motion.div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Security Features Section */}
-      <section className="py-20 bg-gradient-to-r from-slate-800/50 to-slate-700/50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      {/* Use Cases Section */}
+      <section className="py-20">
+        <div className="container mx-auto px-4">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
             className="text-center mb-16"
           >
-            <h2 className="text-4xl lg:text-5xl font-bold text-white mb-6">
-              Comprehensive Security Coverage
+            <h2 className="text-4xl font-bold text-white mb-6">
+              Industry-Specific
+              <span className="bg-gradient-to-r from-red-400 to-orange-500 bg-clip-text text-transparent">
+                {' '}Solutions
+              </span>
             </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Protect every aspect of your digital infrastructure with our multi-layered security approach.
+            <p className="text-xl text-slate-300 max-w-2xl mx-auto">
+              Our AI cybersecurity platform is tailored to meet the unique security challenges of different industries.
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {securityFeatures.map((feature, index) => (
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+            {useCases.map((useCase, index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="text-center"
+                transition={{ duration: 0.8, delay: index * 0.1 }}
+                className="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-8 border border-slate-700/50 hover:border-red-400/50 transition-all duration-300"
               >
-                <div className={`w-20 h-20 bg-gradient-to-r ${feature.color} rounded-2xl flex items-center justify-center mx-auto mb-6`}>
-                  <feature.icon className="w-10 h-10 text-white" />
+                <div className="flex items-center space-x-3 mb-4">
+                  <span className="px-3 py-1 bg-red-400/20 text-red-400 text-sm rounded-full">
+                    {useCase.industry}
+                  </span>
                 </div>
-                <h3 className="text-xl font-semibold text-white mb-2">{feature.title}</h3>
-                <p className="text-gray-300">{feature.description}</p>
+                <h3 className="text-2xl font-bold text-white mb-4">{useCase.title}</h3>
+                <p className="text-slate-300 mb-6 leading-relaxed">{useCase.description}</p>
+                <div className="space-y-3">
+                  <h4 className="text-white font-semibold">Key Results:</h4>
+                  {useCase.metrics.map((metric, idx) => (
+                    <div key={idx} className="flex items-center space-x-2 text-sm">
+                      <Star className="w-4 h-4 text-yellow-400 flex-shrink-0" />
+                      <span className="text-slate-300">{metric}</span>
+                    </div>
+                  ))}
+                </div>
               </motion.div>
             ))}
           </div>
@@ -291,20 +365,22 @@ const AICybersecurityThreatIntelligence = () => {
       </section>
 
       {/* Benefits Section */}
-      <section className="py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="py-20 bg-slate-800/30">
+        <div className="container mx-auto px-4">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
             className="text-center mb-16"
           >
-            <h2 className="text-4xl lg:text-5xl font-bold text-white mb-6">
-              Proven Results & Benefits
+            <h2 className="text-4xl font-bold text-white mb-6">
+              Measurable
+              <span className="bg-gradient-to-r from-red-400 to-orange-500 bg-clip-text text-transparent">
+                {' '}Security Impact
+              </span>
             </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Our platform has protected thousands of organizations from cyber threats worldwide.
+            <p className="text-xl text-slate-300 max-w-2xl mx-auto">
+              Our AI cybersecurity platform delivers quantifiable results that directly improve your security posture.
             </p>
           </motion.div>
 
@@ -312,15 +388,53 @@ const AICybersecurityThreatIntelligence = () => {
             {benefits.map((benefit, index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true }}
+                transition={{ duration: 0.8, delay: index * 0.1 }}
                 className="text-center"
               >
-                <div className="text-4xl font-bold text-red-400 mb-4">{benefit.metric}</div>
-                <h3 className="text-xl font-semibold text-white mb-2">{benefit.title}</h3>
-                <p className="text-gray-300">{benefit.description}</p>
+                <div className="w-20 h-20 bg-gradient-to-br from-red-400 to-orange-500 rounded-2xl flex items-center justify-center mx-auto mb-6">
+                  <benefit.icon className="w-10 h-10 text-white" />
+                </div>
+                <div className="text-4xl font-bold text-white mb-4">{benefit.value}</div>
+                <h3 className="text-xl font-bold text-white mb-3">{benefit.title}</h3>
+                <p className="text-slate-300 leading-relaxed">{benefit.description}</p>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Technologies Section */}
+      <section className="py-20">
+        <div className="container mx-auto px-4">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-4xl font-bold text-white mb-6">
+              Cutting-Edge
+              <span className="bg-gradient-to-r from-red-400 to-orange-500 bg-clip-text text-transparent">
+                {' '}Security Technologies
+              </span>
+            </h2>
+            <p className="text-xl text-slate-300 max-w-2xl mx-auto">
+              Built on the latest AI and cybersecurity technologies to deliver superior protection and threat intelligence.
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+            {technologies.map((tech, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, scale: 0.9 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.6, delay: index * 0.05 }}
+                className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700/50 hover:border-red-400/50 transition-all duration-300 text-center"
+              >
+                <div className="text-white font-semibold">{tech}</div>
               </motion.div>
             ))}
           </div>
@@ -328,72 +442,73 @@ const AICybersecurityThreatIntelligence = () => {
       </section>
 
       {/* Pricing Section */}
-      <section className="py-20 bg-gradient-to-r from-slate-800/50 to-slate-700/50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section id="pricing" className="py-20 bg-slate-800/30">
+        <div className="container mx-auto px-4">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
             className="text-center mb-16"
           >
-            <h2 className="text-4xl lg:text-5xl font-bold text-white mb-6">
-              Competitive Pricing Plans
+            <h2 className="text-4xl font-bold text-white mb-6">
+              Transparent
+              <span className="bg-gradient-to-r from-red-400 to-orange-500 bg-clip-text text-transparent">
+                {' '}Security Pricing
+              </span>
             </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Choose the security plan that best fits your organization's needs and budget.
+            <p className="text-xl text-slate-300 max-w-2xl mx-auto">
+              Choose the perfect cybersecurity plan for your business. All plans include a 30-day free trial.
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-            {pricingPlans.map((plan, index) => (
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+            {pricing.map((plan, index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className={`relative bg-gradient-to-br from-slate-800 to-slate-700 p-8 rounded-2xl border-2 ${
+                transition={{ duration: 0.8, delay: index * 0.1 }}
+                className={`relative bg-slate-800/50 backdrop-blur-sm rounded-2xl p-8 border transition-all duration-300 ${
                   plan.popular 
-                    ? 'border-red-400 shadow-2xl shadow-red-500/20' 
-                    : 'border-slate-600'
+                    ? 'border-red-400/50 scale-105' 
+                    : 'border-slate-700/50 hover:border-red-400/50'
                 }`}
               >
                 {plan.popular && (
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                    <span className="bg-gradient-to-r from-red-500 to-purple-500 text-white px-6 py-2 rounded-full text-sm font-semibold">
+                    <span className="bg-gradient-to-r from-red-400 to-orange-500 text-white px-4 py-2 rounded-full text-sm font-semibold">
                       Most Popular
                     </span>
                   </div>
                 )}
                 
                 <div className="text-center mb-8">
-                  <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
-                  <div className="flex items-baseline justify-center">
-                    <span className="text-5xl font-bold text-red-400">{plan.price}</span>
-                    <span className="text-gray-400 ml-1">{plan.period}</span>
+                  <h3 className="text-2xl font-bold text-white mb-4">{plan.plan}</h3>
+                  <div className="flex items-baseline justify-center mb-2">
+                    <span className="text-4xl font-bold text-white">{plan.price}</span>
+                    <span className="text-slate-400 ml-2">{plan.period}</span>
                   </div>
-                  <p className="text-gray-300 mt-2">{plan.description}</p>
+                  <p className="text-slate-300">{plan.description}</p>
                 </div>
 
                 <ul className="space-y-4 mb-8">
-                  {plan.features.map((feature, featureIndex) => (
-                    <li key={featureIndex} className="flex items-center">
-                      <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
-                      <span className="text-gray-300">{feature}</span>
+                  {plan.features.map((feature, idx) => (
+                    <li key={idx} className="flex items-center space-x-3">
+                      <CheckCircle className="w-5 h-5 text-red-400 flex-shrink-0" />
+                      <span className="text-slate-300">{feature}</span>
                     </li>
                   ))}
                 </ul>
 
                 <a
-                  href="/contact"
-                  className={`w-full block text-center py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
+                  href={plan.plan === 'Enterprise' ? '/contact' : '/signup'}
+                  className={`w-full text-center py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
                     plan.popular
-                      ? 'bg-gradient-to-r from-red-500 to-purple-500 text-white hover:from-red-600 hover:to-purple-600'
-                      : 'bg-slate-600 text-white hover:bg-slate-500'
+                      ? 'bg-gradient-to-r from-red-400 to-orange-500 text-white hover:from-red-500 hover:to-orange-600'
+                      : 'border border-red-400 text-red-400 hover:bg-red-400 hover:text-white'
                   }`}
                 >
-                  Get Started
+                  {plan.cta}
                 </a>
               </motion.div>
             ))}
@@ -402,69 +517,46 @@ const AICybersecurityThreatIntelligence = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-red-900/20 to-purple-900/20">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <section className="py-20">
+        <div className="container mx-auto px-4 text-center">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
           >
-            <h2 className="text-4xl lg:text-5xl font-bold text-white mb-6">
-              Ready to Secure Your Organization?
+            <h2 className="text-4xl font-bold text-white mb-6">
+              Ready to Secure Your
+              <span className="bg-gradient-to-r from-red-400 to-orange-500 bg-clip-text text-transparent">
+                {' '}Digital Assets?
+              </span>
             </h2>
-            <p className="text-xl text-gray-300 mb-8">
-              Join thousands of organizations that trust our AI-powered cybersecurity platform.
+            <p className="text-xl text-slate-300 mb-8 max-w-2xl mx-auto">
+              Join thousands of businesses that trust our AI-powered cybersecurity platform 
+              to protect their digital infrastructure and data.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
                 href="/contact"
-                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-red-500 to-purple-500 text-white font-semibold rounded-lg hover:from-red-600 hover:to-purple-600 transition-all duration-300 transform hover:scale-105"
+                className="inline-flex items-center space-x-2 bg-gradient-to-r from-red-400 to-orange-500 text-white px-8 py-4 rounded-lg font-semibold hover:from-red-500 hover:to-orange-600 transition-all duration-300 transform hover:scale-105"
               >
-                Start Free Trial
-                <ArrowRight className="ml-2 w-5 h-5" />
+                <span>Get Protected</span>
+                <ArrowRight className="w-5 h-5" />
               </a>
               <a
                 href="tel:+13024640950"
-                className="inline-flex items-center px-8 py-4 border border-red-400 text-red-400 font-semibold rounded-lg hover:bg-red-400 hover:text-white transition-all duration-300"
+                className="inline-flex items-center space-x-2 border border-red-400 text-red-400 px-8 py-4 rounded-lg font-semibold hover:bg-red-400 hover:text-white transition-all duration-300"
               >
-                <Phone className="mr-2 w-5 h-5" />
-                Call Now
+                <span>Call +1 302 464 0950</span>
+                <ArrowRight className="w-5 h-5" />
               </a>
+            </div>
+            <div className="mt-6 text-slate-400">
+              <p>Questions? Email us at <a href="mailto:kleber@ziontechgroup.com" className="text-red-400 hover:text-red-300">kleber@ziontechgroup.com</a></p>
+              <p>Visit us at <a href="https://ziontechgroup.com" target="_blank" rel="noopener noreferrer" className="text-red-400 hover:text-red-300">ziontechgroup.com</a></p>
             </div>
           </motion.div>
         </div>
       </section>
-
-      {/* Contact Information */}
-      <section className="py-16 bg-slate-800">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h3 className="text-2xl font-bold text-white mb-8">Contact Zion Tech Group</h3>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="flex flex-col items-center">
-              <Phone className="w-8 h-8 text-red-400 mb-4" />
-              <p className="text-gray-300">Phone</p>
-              <a href="tel:+13024640950" className="text-white hover:text-red-400 transition-colors">
-                +1 302 464 0950
-              </a>
-            </div>
-            <div className="flex flex-col items-center">
-              <Mail className="w-8 h-8 text-red-400 mb-4" />
-              <p className="text-gray-300">Email</p>
-              <a href="mailto:kleber@ziontechgroup.com" className="text-white hover:text-red-400 transition-colors">
-                kleber@ziontechgroup.com
-              </a>
-            </div>
-            <div className="flex flex-col items-center">
-              <MapPin className="w-8 h-8 text-red-400 mb-4" />
-              <p className="text-gray-300">Address</p>
-              <p className="text-white">364 E Main St STE 1008<br />Middletown DE 19709</p>
-            </div>
-          </div>
-        </div>
-      </section>
     </div>
   );
-};
-
-export default AICybersecurityThreatIntelligence;
+}
