@@ -1,4 +1,4 @@
-import { ArrowRight, Atom, BookOpen, Brain, Building, Building2, ChevronDown, Cloud, Code, Cpu, DollarSign, FileText, Globe, HeartHandshake, Heart, HelpCircle, Leaf, Lock, Mail, MapPin, Menu, MessageCircle, PenTool, Phone, Rocket, Scale, Search, Settings, Shield, ShoppingCart, Star, Target, TrendingUp, Users, X, Zap } from 'lucide-react';
+import { ArrowRight, Atom, BookOpen, Brain, Building, Building2, ChevronDown, Cloud, Code, Cpu, DollarSign, FileText, Globe, HeartHandshake, Heart, HelpCircle, Leaf, Lock, Mail, MapPin, Menu, MessageCircle, PenTool, Phone, Rocket, Scale, Search, Settings, Shield, ShoppingCart, Star, Target, TrendingUp, Users, X, Zap, Truck, Key, BarChart3, Server } from 'lucide-react';
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { ThemeToggle } from '../components/ThemeToggle';
@@ -131,6 +131,166 @@ export function AppHeader() {
       description: 'Future Technology Solutions',
       featured: true,
       color: 'from-indigo-500 to-purple-500'
+    },
+    { 
+      name: 'AI Legal Document Analysis', 
+      href: '/services/ai-legal-document-analysis', 
+      icon: Scale, 
+      description: 'Legal Tech & Document Review',
+      featured: true,
+      color: 'from-blue-500 to-indigo-500'
+    },
+    { 
+      name: 'AI Supply Chain Optimization', 
+      href: '/services/ai-supply-chain-optimization', 
+      icon: Truck, 
+      description: 'Supply Chain & Operations',
+      featured: true,
+      color: 'from-green-500 to-emerald-500'
+    },
+    { 
+      name: 'AI Healthcare Analytics', 
+      href: '/services/ai-healthcare-analytics', 
+      icon: Heart, 
+      description: 'Healthcare Analytics & Insights',
+      featured: true,
+      color: 'from-pink-500 to-red-500'
+    },
+    { 
+      name: 'AI Financial Trading', 
+      href: '/services/ai-financial-trading', 
+      icon: TrendingUp, 
+      description: 'Financial AI & Trading',
+      featured: true,
+      color: 'from-emerald-500 to-green-500'
+    },
+    { 
+      name: 'AI Energy Management', 
+      href: '/services/ai-energy-management', 
+      icon: Zap, 
+      description: 'Energy Optimization & Sustainability',
+      featured: true,
+      color: 'from-yellow-500 to-orange-500'
+    },
+    { 
+      name: 'AI Customer Support', 
+      href: '/services/ai-customer-support-automation', 
+      icon: Users, 
+      description: 'Customer Support Automation',
+      featured: true,
+      color: 'from-blue-500 to-purple-500'
+    },
+    { 
+      name: 'AI HR Recruitment', 
+      href: '/services/ai-hr-recruitment-platform', 
+      icon: Users, 
+      description: 'HR & Recruitment AI',
+      featured: true,
+      color: 'from-indigo-500 to-blue-500'
+    },
+    { 
+      name: 'AI Marketing Automation', 
+      href: '/services/ai-marketing-automation-platform', 
+      icon: Target, 
+      description: 'Marketing AI & Automation',
+      featured: true,
+      color: 'from-green-500 to-emerald-500'
+    },
+    { 
+      name: 'AI Project Management', 
+      href: '/services/ai-project-management-platform', 
+      icon: Settings, 
+      description: 'Project Management AI',
+      featured: true,
+      color: 'from-gray-500 to-slate-500'
+    },
+    { 
+      name: 'AI Workflow Orchestrator', 
+      href: '/services/ai-workflow-orchestrator', 
+      icon: Settings, 
+      description: 'Workflow Automation',
+      featured: true,
+      color: 'from-cyan-500 to-blue-500'
+    },
+    { 
+      name: 'AI Interview Assessment', 
+      href: '/services/ai-interview-assessment-platform', 
+      icon: Users, 
+      description: 'Interview & Assessment AI',
+      featured: true,
+      color: 'from-indigo-500 to-blue-500'
+    },
+    { 
+      name: 'AI IoT Edge Computing', 
+      href: '/services/ai-iot-edge-computing-platform', 
+      icon: Cpu, 
+      description: 'IoT & Edge AI',
+      featured: true,
+      color: 'from-teal-500 to-cyan-500'
+    },
+    { 
+      name: 'AI Quantum Computing', 
+      href: '/services/ai-quantum-computing-platform', 
+      icon: Atom, 
+      description: 'Quantum AI & Computing',
+      featured: true,
+      color: 'from-indigo-500 to-purple-500'
+    },
+    { 
+      name: 'AI Space Technology', 
+      href: '/services/ai-space-technology-platform', 
+      icon: Rocket, 
+      description: 'Space Tech & AI',
+      featured: true,
+      color: 'from-indigo-500 to-purple-500'
+    },
+    { 
+      name: 'AI Sustainable Technology', 
+      href: '/services/ai-sustainable-technology-platform', 
+      icon: Leaf, 
+      description: 'Sustainability & Green Tech',
+      featured: true,
+      color: 'from-green-500 to-teal-500'
+    },
+    { 
+      name: 'AI Digital Twin', 
+      href: '/services/ai-digital-twin-platform', 
+      icon: Globe, 
+      description: 'Digital Twin & Simulation',
+      featured: true,
+      color: 'from-blue-500 to-indigo-500'
+    },
+    { 
+      name: 'AI Blockchain Web3', 
+      href: '/services/ai-blockchain-web3-platform', 
+      icon: Key, 
+      description: 'Blockchain & Web3 AI',
+      featured: true,
+      color: 'from-yellow-500 to-orange-500'
+    },
+    { 
+      name: 'AI Cloud DevOps', 
+      href: '/services/ai-cloud-devops-platform', 
+      icon: Cloud, 
+      description: 'Cloud DevOps AI',
+      featured: true,
+      color: 'from-blue-500 to-cyan-500'
+    },
+    { 
+      name: 'AI Data Analytics', 
+      href: '/services/ai-data-analytics-platform', 
+      icon: BarChart3, 
+      description: 'Data Analytics & AI',
+      featured: true,
+      color: 'from-cyan-500 to-blue-500'
+    },
+    { 
+      name: 'AI IT Infrastructure', 
+      href: '/services/ai-it-infrastructure-platform', 
+      icon: Server, 
+      description: 'IT Infrastructure AI',
+      featured: true,
+      color: 'from-slate-500 to-gray-500'
     }
   ];
 

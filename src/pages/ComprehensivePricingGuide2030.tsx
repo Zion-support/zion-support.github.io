@@ -1,152 +1,330 @@
-import React, { useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import React, { useState, useEffect } from 'react';
+import { motion } from 'framer-motion';
 import { 
-  Brain, 
-  Cloud, 
-  Shield, 
-  Rocket, 
+  Search, 
+  Filter, 
+  Star, 
+  Clock, 
+  TrendingUp, 
   Zap, 
-  Users, 
+  Brain, 
+  Shield, 
+  Cloud, 
+  Cpu, 
   Globe, 
-  Cpu,
-  Lock,
+  Rocket,
   Heart,
-  Star,
-  ArrowRight,
-  CheckCircle,
-  TrendingUp,
-  Code,
-  Database,
-  Network,
-  Smartphone,
-  BarChart3,
-  MessageSquare,
-  FileText,
-  ShoppingCart,
-  Headphones,
-  Mail,
-  Search,
-  HelpCircle,
-  ShieldCheck,
-  Globe2,
   Leaf,
-  Sparkles,
+  Atom,
+  Building,
+  Users,
   Target,
   DollarSign,
-  Clock,
-  Award,
   Phone,
-  Mail as MailIcon,
+  Mail,
   MapPin,
-  Infinity,
-  Bot,
-  CircuitBoard,
-  Satellite,
-  Atom,
-  Blockchain,
-  Crown,
-  Gem,
-  Star as StarIcon
+  ArrowRight,
+  CheckCircle,
+  Award,
+  BarChart3,
+  PenTool,
+  Eye,
+  Server,
+  Smartphone,
+  Database,
+  Network,
+  ShoppingCart,
+  Lock,
+  FileText,
+  Settings,
+  Key,
+  Globe2,
+  ShieldCheck,
+  Scale,
+  Building2,
+  Car,
+  Home,
+  Factory,
+  City,
+  CheckCircle2,
+  ArrowUpRight,
+  Play,
+  MailIcon,
+  ChevronDown,
+  ChevronUp,
+  FilterX,
+  Calculator,
+  PieChart,
+  TrendingDown,
+  Calendar,
+  Timer,
+  Gauge,
+  Target as TargetIcon,
+  Users as UsersIcon,
+  Zap as ZapIcon,
+  Brain as BrainIcon,
+  Shield as ShieldIcon,
+  Cloud as CloudIcon,
+  Cpu as CpuIcon,
+  Globe as GlobeIcon,
+  Rocket as RocketIcon,
+  Heart as HeartIcon,
+  Leaf as LeafIcon,
+  Atom as AtomIcon,
+  Building as BuildingIcon,
+  Users as UsersIcon2,
+  Target as TargetIcon2,
+  DollarSign as DollarSignIcon,
+  Phone as PhoneIcon,
+  Mail as MailIcon2,
+  MapPin as MapPinIcon,
+  ArrowRight as ArrowRightIcon,
+  CheckCircle as CheckCircleIcon,
+  Award as AwardIcon,
+  BarChart3 as BarChart3Icon,
+  PenTool as PenToolIcon,
+  Eye as EyeIcon,
+  Server as ServerIcon,
+  Smartphone as SmartphoneIcon,
+  Database as DatabaseIcon,
+  Network as NetworkIcon,
+  ShoppingCart as ShoppingCartIcon,
+  Lock as LockIcon,
+  FileText as FileTextIcon,
+  Settings as SettingsIcon,
+  Key as KeyIcon,
+  Globe2 as Globe2Icon,
+  ShieldCheck as ShieldCheckIcon,
+  Scale as ScaleIcon,
+  Building2 as Building2Icon,
+  Car as CarIcon,
+  Home as HomeIcon,
+  Factory as FactoryIcon,
+  City as CityIcon,
+  CheckCircle2 as CheckCircle2Icon,
+  ArrowUpRight as ArrowUpRightIcon,
+  Play as PlayIcon,
+  MailIcon as MailIcon3,
+  ChevronDown as ChevronDownIcon,
+  ChevronUp as ChevronUpIcon,
+  FilterX as FilterXIcon,
+  Calculator as CalculatorIcon,
+  PieChart as PieChartIcon,
+  TrendingDown as TrendingDownIcon,
+  Calendar as CalendarIcon,
+  Timer as TimerIcon,
+  Gauge as GaugeIcon
 } from 'lucide-react';
 import { SEO } from '../components/SEO';
-import { COMPREHENSIVE_INNOVATIVE_SERVICES_2030 } from '../data/comprehensiveInnovativeServices2030';
+import { COMPREHENSIVE_SERVICES_INDEX_2030, SERVICE_CATEGORIES_2030 } from '../data/comprehensiveServicesIndex2030';
 
 export default function ComprehensivePricingGuide2030() {
-  const [activeCategory, setActiveCategory] = useState('all');
-  const [priceRange, setPriceRange] = useState('all');
+  const [searchTerm, setSearchTerm] = useState('');
+  const [selectedCategory, setSelectedCategory] = useState('all');
+  const [priceRange, setPriceRange] = useState([0, 50000]);
+  const [roiRange, setRoiRange] = useState([0, 1000]);
+  const [setupTimeRange, setSetupTimeRange] = useState([0, 20]);
+  const [showFilters, setShowFilters] = useState(false);
+  const [sortBy, setSortBy] = useState('price-low');
+  const [currentPage, setCurrentPage] = useState(1);
+  const [itemsPerPage] = useState(12);
 
-  // Get unique categories from services
-  const categories = [
-    { id: 'all', name: 'All Services', count: COMPREHENSIVE_INNOVATIVE_SERVICES_2030.length, icon: '🚀', color: 'from-cyan-500 to-blue-500' },
-    { id: 'AI & Business Intelligence', name: 'AI & Business Intelligence', count: COMPREHENSIVE_INNOVATIVE_SERVICES_2030.filter(s => s.category === 'AI & Business Intelligence').length, icon: '🤖', color: 'from-purple-500 to-pink-500' },
-    { id: 'Cybersecurity', name: 'Cybersecurity', count: COMPREHENSIVE_INNOVATIVE_SERVICES_2030.filter(s => s.category === 'Cybersecurity').length, icon: '🛡️', color: 'from-red-500 to-orange-500' },
-    { id: 'Cloud & DevOps', name: 'Cloud & DevOps', count: COMPREHENSIVE_INNOVATIVE_SERVICES_2030.filter(s => s.category === 'Cloud & DevOps').length, icon: '☁️', color: 'from-blue-500 to-cyan-500' },
-    { id: 'AI & Marketing', name: 'AI & Marketing', count: COMPREHENSIVE_INNOVATIVE_SERVICES_2030.filter(s => s.category === 'AI & Marketing').length, icon: '📈', color: 'from-green-500 to-emerald-500' },
-    { id: 'Quantum Computing', name: 'Quantum Computing', count: COMPREHENSIVE_INNOVATIVE_SERVICES_2030.filter(s => s.category === 'Quantum Computing').length, icon: '⚛️', color: 'from-indigo-500 to-purple-500' },
-    { id: 'IoT & Edge Computing', name: 'IoT & Edge Computing', count: COMPREHENSIVE_INNOVATIVE_SERVICES_2030.filter(s => s.category === 'IoT & Edge Computing').length, icon: '🌐', color: 'from-teal-500 to-cyan-500' },
-    { id: 'Blockchain & Web3', name: 'Blockchain & Web3', count: COMPREHENSIVE_INNOVATIVE_SERVICES_2030.filter(s => s.category === 'Blockchain & Web3').length, icon: '🔗', color: 'from-yellow-500 to-orange-500' },
-    { id: 'AI & Healthcare', name: 'AI & Healthcare', count: COMPREHENSIVE_INNOVATIVE_SERVICES_2030.filter(s => s.category === 'AI & Healthcare').length, icon: '🏥', color: 'from-pink-500 to-red-500' },
-    { id: 'FinTech', name: 'FinTech', count: COMPREHENSIVE_INNOVATIVE_SERVICES_2030.filter(s => s.category === 'FinTech').length, icon: '💰', color: 'from-emerald-500 to-green-500' },
-    { id: 'Digital Twin', name: 'Digital Twin', count: COMPREHENSIVE_INNOVATIVE_SERVICES_2030.filter(s => s.category === 'Digital Twin').length, icon: '🔄', color: 'from-blue-500 to-indigo-500' },
-    { id: 'Space Technology', name: 'Space Technology', count: COMPREHENSIVE_INNOVATIVE_SERVICES_2030.filter(s => s.category === 'Space Technology').length, icon: '🚀', color: 'from-purple-500 to-pink-500' },
-    { id: 'Sustainable Technology', name: 'Sustainable Technology', count: COMPREHENSIVE_INNOVATIVE_SERVICES_2030.filter(s => s.category === 'Sustainable Technology').length, icon: '🌱', color: 'from-green-500 to-teal-500' },
-    { id: 'AI & Content', name: 'AI & Content', count: COMPREHENSIVE_INNOVATIVE_SERVICES_2030.filter(s => s.category === 'AI & Content').length, icon: '✍️', color: 'from-orange-500 to-red-500' },
-    { id: 'AI & Customer Support', name: 'AI & Customer Support', count: COMPREHENSIVE_INNOVATIVE_SERVICES_2030.filter(s => s.category === 'AI & Customer Support').length, icon: '💬', color: 'from-blue-500 to-purple-500' },
-    { id: 'AI & HR', name: 'AI & HR', count: COMPREHENSIVE_INNOVATIVE_SERVICES_2030.filter(s => s.category === 'AI & HR').length, icon: '👥', color: 'from-indigo-500 to-blue-500' },
-    { id: 'AI & Legal Tech', name: 'AI & Legal Tech', count: COMPREHENSIVE_INNOVATIVE_SERVICES_2030.filter(s => s.category === 'AI & Legal Tech').length, icon: '⚖️', color: 'from-blue-500 to-indigo-500' },
-    { id: 'AI & Research', name: 'AI & Research', count: COMPREHENSIVE_INNOVATIVE_SERVICES_2030.filter(s => s.category === 'AI & Research').length, icon: '🔬', color: 'from-purple-500 to-violet-500' },
-    { id: 'AI & Green Tech', name: 'AI & Green Tech', count: COMPREHENSIVE_INNOVATIVE_SERVICES_2030.filter(s => s.category === 'AI & Green Tech').length, icon: '🌿', color: 'from-green-500 to-emerald-500' },
-    { id: 'AI & Metaverse', name: 'AI & Metaverse', count: COMPREHENSIVE_INNOVATIVE_SERVICES_2030.filter(s => s.category === 'AI & Metaverse').length, icon: '🌍', color: 'from-purple-500 to-indigo-500' },
-    { id: 'AI & Space Tech', name: 'AI & Space Tech', count: COMPREHENSIVE_INNOVATIVE_SERVICES_2030.filter(s => s.category === 'AI & Space Tech').length, icon: '🛸', color: 'from-indigo-500 to-purple-500' },
-    { id: 'AI & Operations', name: 'AI & Operations', count: COMPREHENSIVE_INNOVATIVE_SERVICES_2030.filter(s => s.category === 'AI & Operations').length, icon: '⚙️', color: 'from-gray-500 to-slate-500' },
-    { id: 'AI & Development', name: 'AI & Development', count: COMPREHENSIVE_INNOVATIVE_SERVICES_2030.filter(s => s.category === 'AI & Development').length, icon: '💻', color: 'from-cyan-500 to-blue-500' },
-    { id: 'AI & Education', name: 'AI & Education', count: COMPREHENSIVE_INNOVATIVE_SERVICES_2030.filter(s => s.category === 'AI & Education').length, icon: '🎓', color: 'from-blue-500 to-indigo-500' },
-    { id: 'AI & Entertainment', name: 'AI & Entertainment', count: COMPREHENSIVE_INNOVATIVE_SERVICES_2030.filter(s => s.category === 'AI & Entertainment').length, icon: '🎮', color: 'from-purple-500 to-pink-500' }
-  ];
-
-  const priceRanges = [
-    { id: 'all', name: 'All Prices', range: 'All' },
-    { id: 'budget', name: 'Budget ($1K - $10K)', range: '1K-10K' },
-    { id: 'mid-range', name: 'Mid-Range ($10K - $50K)', range: '10K-50K' },
-    { id: 'enterprise', name: 'Enterprise ($50K+)', range: '50K+' }
-  ];
-
-  const filteredServices = COMPREHENSIVE_INNOVATIVE_SERVICES_2030.filter(service => {
-    const matchesCategory = activeCategory === 'all' || service.category === activeCategory;
-    
-    let matchesPrice = true;
-    if (priceRange === 'budget') {
-      matchesPrice = service.price >= 1000 && service.price < 10000;
-    } else if (priceRange === 'mid-range') {
-      matchesPrice = service.price >= 10000 && service.price < 50000;
-    } else if (priceRange === 'enterprise') {
-      matchesPrice = service.price >= 50000;
-    }
-    
-    return matchesCategory && matchesPrice;
-  });
-
-  const getCategoryIcon = (category: string) => {
-    switch (category) {
-      case 'AI & Business Intelligence': return <Brain className="w-6 h-6" />;
-      case 'Cybersecurity': return <Shield className="w-6 h-6" />;
-      case 'Cloud & DevOps': return <Cloud className="w-6 h-6" />;
-      case 'AI & Marketing': return <TrendingUp className="w-6 h-6" />;
-      case 'Quantum Computing': return <Atom className="w-6 h-6" />;
-      case 'IoT & Edge Computing': return <Network className="w-6 h-6" />;
-      case 'Blockchain & Web3': return <CircuitBoard className="w-6 h-6" />;
-      case 'AI & Healthcare': return <Heart className="w-6 h-6" />;
-      case 'FinTech': return <DollarSign className="w-6 h-6" />;
-      case 'Digital Twin': return <Globe className="w-6 h-6" />;
-      case 'Space Technology': return <Satellite className="w-6 h-6" />;
-      case 'Sustainable Technology': return <Leaf className="w-6 h-6" />;
-      case 'AI & Content': return <FileText className="w-6 h-6" />;
-      case 'AI & Customer Support': return <MessageSquare className="w-6 h-6" />;
-      case 'AI & HR': return <Users className="w-6 h-6" />;
-      case 'AI & Legal Tech': return <ShieldCheck className="w-6 h-6" />;
-      case 'AI & Research': return <Search className="w-6 h-6" />;
-      case 'AI & Green Tech': return <Leaf className="w-6 h-6" />;
-      case 'AI & Metaverse': return <Globe2 className="w-6 h-6" />;
-      case 'AI & Space Tech': return <Rocket className="w-6 h-6" />;
-      case 'AI & Operations': return <Cpu className="w-6 h-6" />;
-      case 'AI & Development': return <Code className="w-6 h-6" />;
-      case 'AI & Education': return <Award className="w-6 h-6" />;
-      case 'AI & Entertainment': return <Sparkles className="w-6 h-6" />;
-      default: return <Star className="w-6 h-6" />;
-    }
+  const contactInfo = {
+    phone: '+1 302 464 0950',
+    email: 'kleber@ziontechgroup.com',
+    address: '364 E Main St STE 1008 Middletown DE 19709',
+    website: 'https://ziontechgroup.com'
   };
 
-  const getPriceTier = (price: number) => {
-    if (price < 10000) return { tier: 'Budget', icon: <StarIcon className="w-4 h-4" />, color: 'text-green-400' };
-    if (price < 50000) return { tier: 'Mid-Range', icon: <Gem className="w-4 h-4" />, color: 'text-blue-400' };
-    return { tier: 'Enterprise', icon: <Crown className="w-4 h-4" />, color: 'text-purple-400' };
+  // Filter and search services
+  const filteredServices = COMPREHENSIVE_SERVICES_INDEX_2030.filter(service => {
+    const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
+                         service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
+                         service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()));
+    
+    const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory;
+    const matchesPrice = service.price >= priceRange[0] && service.price <= priceRange[1];
+    
+    // Parse ROI for filtering
+    const roi = service.roi;
+    let roiNumber = 0;
+    if (typeof roi === 'string') {
+      const roiMatch = roi.match(/(\d+)%/);
+      roiNumber = roiMatch ? parseInt(roiMatch[1]) : 0;
+    }
+    const matchesROI = roiNumber >= roiRange[0] && roiNumber <= roiRange[1];
+    
+    // Parse setup time for filtering
+    const setupTime = service.setupTime;
+    let setupWeeks = 0;
+    if (typeof setupTime === 'string') {
+      const weeksMatch = setupTime.match(/(\d+)/);
+      setupWeeks = weeksMatch ? parseInt(weeksMatch[1]) : 0;
+    }
+    const matchesSetupTime = setupWeeks >= setupTimeRange[0] && setupWeeks <= setupTimeRange[1];
+    
+    return matchesSearch && matchesCategory && matchesPrice && matchesROI && matchesSetupTime;
+  });
+
+  // Sort services
+  const sortedServices = [...filteredServices].sort((a, b) => {
+    switch (sortBy) {
+      case 'price-low':
+        return a.price - b.price;
+      case 'price-high':
+        return b.price - a.price;
+      case 'roi-high':
+        const roiA = typeof a.roi === 'string' ? parseInt(a.roi.match(/(\d+)%/)?.[1] || '0') : 0;
+        const roiB = typeof b.roi === 'string' ? parseInt(b.roi.match(/(\d+)%/)?.[1] || '0') : 0;
+        return roiB - roiA;
+      case 'setup-fast':
+        const setupA = typeof a.setupTime === 'string' ? parseInt(a.setupTime.match(/(\d+)/)?.[1] || '0') : 0;
+        const setupB = typeof b.setupTime === 'string' ? parseInt(b.setupTime.match(/(\d+)/)?.[1] || '0') : 0;
+        return setupA - setupB;
+      case 'rating':
+        return b.rating - a.rating;
+      case 'ai-score':
+        return b.aiScore - a.aiScore;
+      default:
+        return 0;
+    }
+  });
+
+  // Pagination
+  const totalPages = Math.ceil(sortedServices.length / itemsPerPage);
+  const currentServices = sortedServices.slice(
+    (currentPage - 1) * itemsPerPage,
+    currentPage * itemsPerPage
+  );
+
+  // Calculate pricing statistics
+  const pricingStats = {
+    totalServices: COMPREHENSIVE_SERVICES_INDEX_2030.length,
+    averagePrice: Math.round(
+      COMPREHENSIVE_SERVICES_INDEX_2030.reduce((sum, service) => sum + service.price, 0) / 
+      COMPREHENSIVE_SERVICES_INDEX_2030.length
+    ),
+    minPrice: Math.min(...COMPREHENSIVE_SERVICES_INDEX_2030.map(s => s.price)),
+    maxPrice: Math.max(...COMPREHENSIVE_SERVICES_INDEX_2030.map(s => s.price)),
+    averageROI: Math.round(
+      COMPREHENSIVE_SERVICES_INDEX_2030.reduce((sum, service) => {
+        const roi = service.roi;
+        if (typeof roi === 'string') {
+          const roiNumber = parseInt(roi.match(/\d+/)?.[0] || '0');
+          return sum + roiNumber;
+        }
+        return sum;
+      }, 0) / COMPREHENSIVE_SERVICES_INDEX_2030.length
+    ),
+    averageSetupTime: Math.round(
+      COMPREHENSIVE_SERVICES_INDEX_2030.reduce((sum, service) => {
+        const setupTime = service.setupTime;
+        if (typeof setupTime === 'string') {
+          const weeks = parseInt(setupTime.match(/\d+/)?.[0] || '0');
+          return sum + weeks;
+        }
+        return sum;
+      }, 0) / COMPREHENSIVE_SERVICES_INDEX_2030.length
+    )
+  };
+
+  const categoryIcons: { [key: string]: any } = {
+    'AI & Business Intelligence': Brain,
+    'AI & Marketing': Target,
+    'AI & Healthcare': Heart,
+    'AI & Legal Tech': Scale,
+    'AI & Real Estate': Building,
+    'AI & Operations': Settings,
+    'AI & Green Tech': Leaf,
+    'AI & Autonomous Systems': Car,
+    'AI & FinTech': DollarSign,
+    'AI & Environmental Tech': Globe,
+    'AI & Content': PenTool,
+    'AI & Customer Support': Users,
+    'AI & HR': Users,
+    'AI & Research': Eye,
+    'AI & Metaverse': Globe2,
+    'AI & Space Tech': Rocket,
+    'AI & Development': Code,
+    'AI & Education': BookOpen,
+    'AI & Entertainment': Play,
+    'Cybersecurity': Shield,
+    'Cloud & DevOps': Cloud,
+    'Quantum Computing': Atom,
+    'IoT & Edge Computing': Cpu,
+    'Blockchain & Web3': Key,
+    'Digital Twin': Globe,
+    'Space Technology': Rocket,
+    'Sustainable Technology': Leaf,
+    'IT Infrastructure': Server,
+    'Emerging Technology': Zap
+  };
+
+  const categoryColors: { [key: string]: string } = {
+    'AI & Business Intelligence': 'from-purple-500 to-pink-500',
+    'AI & Marketing': 'from-green-500 to-emerald-500',
+    'AI & Healthcare': 'from-pink-500 to-red-500',
+    'AI & Legal Tech': 'from-blue-500 to-indigo-500',
+    'AI & Real Estate': 'from-yellow-500 to-orange-500',
+    'AI & Operations': 'from-gray-500 to-slate-500',
+    'AI & Green Tech': 'from-green-500 to-emerald-500',
+    'AI & Autonomous Systems': 'from-cyan-500 to-blue-500',
+    'AI & FinTech': 'from-emerald-500 to-green-500',
+    'AI & Environmental Tech': 'from-teal-500 to-green-500',
+    'AI & Content': 'from-orange-500 to-red-500',
+    'AI & Customer Support': 'from-blue-500 to-purple-500',
+    'AI & HR': 'from-indigo-500 to-blue-500',
+    'AI & Research': 'from-purple-500 to-violet-500',
+    'AI & Metaverse': 'from-purple-500 to-indigo-500',
+    'AI & Space Tech': 'from-indigo-500 to-purple-500',
+    'AI & Development': 'from-cyan-500 to-blue-500',
+    'AI & Education': 'from-blue-500 to-indigo-500',
+    'AI & Entertainment': 'from-purple-500 to-pink-500',
+    'Cybersecurity': 'from-red-500 to-orange-500',
+    'Cloud & DevOps': 'from-blue-500 to-cyan-500',
+    'Quantum Computing': 'from-indigo-500 to-purple-500',
+    'IoT & Edge Computing': 'from-teal-500 to-cyan-500',
+    'Blockchain & Web3': 'from-yellow-500 to-orange-500',
+    'Digital Twin': 'from-blue-500 to-indigo-500',
+    'Space Technology': 'from-purple-500 to-pink-500',
+    'Sustainable Technology': 'from-green-500 to-teal-500',
+    'IT Infrastructure': 'from-slate-500 to-gray-500',
+    'Emerging Technology': 'from-violet-500 to-purple-500'
+  };
+
+  const resetFilters = () => {
+    setSearchTerm('');
+    setSelectedCategory('all');
+    setPriceRange([0, 50000]);
+    setRoiRange([0, 1000]);
+    setSetupTimeRange([0, 20]);
+    setSortBy('price-low');
+    setCurrentPage(1);
+  };
+
+  const parseROI = (roi: string | number) => {
+    if (typeof roi === 'string') {
+      const match = roi.match(/(\d+)%/);
+      return match ? parseInt(match[1]) : 0;
+    }
+    return 0;
+  };
+
+  const parseSetupTime = (setupTime: string | number) => {
+    if (typeof setupTime === 'string') {
+      const match = setupTime.match(/(\d+)/);
+      return match ? parseInt(match[1]) : 0;
+    }
+    return 0;
   };
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO 
         title="Comprehensive Pricing Guide 2030 - Zion Tech Group"
-        description="Complete pricing guide for all our AI, blockchain, quantum computing, and emerging technology services. Transparent pricing with guaranteed ROI."
+        description="Complete pricing information for all our innovative AI-powered micro SAAS services, IT solutions, and technology services. Compare prices, ROI, and setup times."
+        keywords="pricing, AI services pricing, micro SAAS pricing, IT solutions pricing, ROI, setup time, Zion Tech Group"
+        url="https://ziontechgroup.com/pricing-guide-2030"
       />
       
       {/* Hero Section */}
@@ -188,11 +366,11 @@ export default function ComprehensivePricingGuide2030() {
             className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto"
           >
             <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-white/20">
-              <div className="text-3xl font-bold text-green-400 mb-2">${Math.min(...COMPREHENSIVE_INNOVATIVE_SERVICES_2030.map(s => s.price)).toLocaleString()}</div>
+              <div className="text-3xl font-bold text-green-400 mb-2">${Math.min(...COMPREHENSIVE_SERVICES_INDEX_2030.map(s => s.price)).toLocaleString()}</div>
               <div className="text-gray-300">Starting Price</div>
             </div>
             <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-white/20">
-              <div className="text-3xl font-bold text-blue-400 mb-2">${Math.max(...COMPREHENSIVE_INNOVATIVE_SERVICES_2030.map(s => s.price)).toLocaleString()}</div>
+              <div className="text-3xl font-bold text-blue-400 mb-2">${Math.max(...COMPREHENSIVE_SERVICES_INDEX_2030.map(s => s.price)).toLocaleString()}</div>
               <div className="text-gray-300">Enterprise Solutions</div>
             </div>
             <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-white/20">
@@ -235,7 +413,7 @@ export default function ComprehensivePricingGuide2030() {
             <div className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-green-500/30 hover:border-green-500/50 transition-all duration-300">
               <div className="text-center mb-6">
                 <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-emerald-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <StarIcon className="w-8 h-8 text-white" />
+                  <Star className="w-8 h-8 text-white" />
                 </div>
                 <h3 className="text-2xl font-bold text-white mb-2">Budget Solutions</h3>
                 <p className="text-gray-400">Perfect for startups and small businesses</p>
@@ -366,36 +544,85 @@ export default function ComprehensivePricingGuide2030() {
             className="mb-12"
           >
             <div className="flex flex-wrap justify-center gap-4 mb-8">
-              {categories.map((category) => (
+              {SERVICE_CATEGORIES_2030.map((category) => (
                 <button
-                  key={category.id}
-                  onClick={() => setActiveCategory(category.id)}
+                  key={category}
+                  onClick={() => setSelectedCategory(category)}
                   className={`px-6 py-3 rounded-full font-semibold transition-all duration-300 transform hover:scale-105 ${
-                    activeCategory === category.id
+                    selectedCategory === category
                       ? 'bg-gradient-to-r from-emerald-500 to-blue-600 text-white shadow-lg'
                       : 'bg-white/10 text-gray-300 hover:bg-white/20 border border-white/20'
                   }`}
                 >
-                  <span className="mr-2">{category.icon}</span>
-                  {category.name} ({category.count})
+                  <span className="mr-2">{categoryIcons[category] && React.cloneElement(categoryIcons[category], { className: "w-6 h-6" })}</span>
+                  {category} ({COMPREHENSIVE_SERVICES_INDEX_2030.filter(s => s.category === category).length})
                 </button>
               ))}
             </div>
 
             <div className="flex flex-wrap justify-center gap-4">
-              {priceRanges.map((range) => (
-                <button
-                  key={range.id}
-                  onClick={() => setPriceRange(range.id)}
-                  className={`px-6 py-3 rounded-full font-semibold transition-all duration-300 transform hover:scale-105 ${
-                    priceRange === range.id
-                      ? 'bg-gradient-to-r from-blue-500 to-purple-600 text-white shadow-lg'
-                      : 'bg-white/10 text-gray-300 hover:bg-white/20 border border-white/20'
-                  }`}
-                >
-                  {range.name}
-                </button>
-              ))}
+              {/* Price Range */}
+              <div className="flex items-center space-x-2 bg-white/10 text-gray-300 border border-white/20 rounded-lg px-4 py-2">
+                <span>Price: ${priceRange[0].toLocaleString()} - ${priceRange[1].toLocaleString()}</span>
+                <input
+                  type="range"
+                  min="0"
+                  max="50000"
+                  value={priceRange[0]}
+                  onChange={(e) => setPriceRange([parseInt(e.target.value), priceRange[1]])}
+                  className="flex-1"
+                />
+                <input
+                  type="range"
+                  min="0"
+                  max="50000"
+                  value={priceRange[1]}
+                  onChange={(e) => setPriceRange([priceRange[0], parseInt(e.target.value)])}
+                  className="flex-1"
+                />
+              </div>
+
+              {/* ROI Range */}
+              <div className="flex items-center space-x-2 bg-white/10 text-gray-300 border border-white/20 rounded-lg px-4 py-2">
+                <span>ROI: {roiRange[0]}% - {roiRange[1]}%</span>
+                <input
+                  type="range"
+                  min="0"
+                  max="1000"
+                  value={roiRange[0]}
+                  onChange={(e) => setRoiRange([parseInt(e.target.value), roiRange[1]])}
+                  className="flex-1"
+                />
+                <input
+                  type="range"
+                  min="0"
+                  max="1000"
+                  value={roiRange[1]}
+                  onChange={(e) => setRoiRange([roiRange[0], parseInt(e.target.value)])}
+                  className="flex-1"
+                />
+              </div>
+
+              {/* Setup Time Range */}
+              <div className="flex items-center space-x-2 bg-white/10 text-gray-300 border border-white/20 rounded-lg px-4 py-2">
+                <span>Setup: {setupTimeRange[0]}w - {setupTimeRange[1]}w</span>
+                <input
+                  type="range"
+                  min="0"
+                  max="20"
+                  value={setupTimeRange[0]}
+                  onChange={(e) => setSetupTimeRange([parseInt(e.target.value), setupTimeRange[1]])}
+                  className="flex-1"
+                />
+                <input
+                  type="range"
+                  min="0"
+                  max="20"
+                  value={setupTimeRange[1]}
+                  onChange={(e) => setSetupTimeRange([setupTimeRange[0], parseInt(e.target.value)])}
+                  className="flex-1"
+                />
+              </div>
             </div>
           </motion.div>
 
@@ -406,8 +633,12 @@ export default function ComprehensivePricingGuide2030() {
             transition={{ duration: 0.8, delay: 0.6 }}
             className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
           >
-            {filteredServices.map((service, index) => {
-              const priceTier = getPriceTier(service.price);
+            {currentServices.map((service, index) => {
+              const IconComponent = categoryIcons[service.category] || Zap;
+              const categoryColor = categoryColors[service.category] || 'from-gray-500 to-slate-500';
+              const roiNumber = parseROI(service.roi);
+              const setupWeeks = parseSetupTime(service.setupTime);
+              
               return (
                 <motion.div
                   key={service.id}
@@ -420,7 +651,7 @@ export default function ComprehensivePricingGuide2030() {
                   <div className="flex items-start justify-between mb-4">
                     <div className="flex items-center gap-3">
                       <div className="p-2 bg-gradient-to-r from-emerald-500 to-blue-600 rounded-lg">
-                        {getCategoryIcon(service.category)}
+                        <IconComponent className="w-6 h-6 text-white" />
                       </div>
                       <div>
                         <h3 className="text-lg font-semibold text-white group-hover:text-emerald-400 transition-colors duration-300">
@@ -437,9 +668,9 @@ export default function ComprehensivePricingGuide2030() {
 
                   {/* Price Tier Badge */}
                   <div className="flex items-center gap-2 mb-4">
-                    {priceTier.icon}
-                    <span className={`text-sm font-semibold ${priceTier.color}`}>
-                      {priceTier.tier}
+                    {getPriceTier(service.price).icon}
+                    <span className={`text-sm font-semibold ${getPriceTier(service.price).color}`}>
+                      {getPriceTier(service.price).tier}
                     </span>
                   </div>
 
@@ -514,6 +745,41 @@ export default function ComprehensivePricingGuide2030() {
               );
             })}
           </motion.div>
+
+          {/* Pagination */}
+          {totalPages > 1 && (
+            <div className="flex justify-center items-center space-x-2 mt-12">
+              <button
+                onClick={() => setCurrentPage(Math.max(1, currentPage - 1))}
+                disabled={currentPage === 1}
+                className="px-4 py-2 bg-slate-700 text-slate-300 rounded-lg disabled:opacity-50 disabled:cursor-not-allowed hover:bg-slate-600 transition-colors"
+              >
+                Previous
+              </button>
+              
+              {Array.from({ length: totalPages }, (_, i) => i + 1).map((page) => (
+                <button
+                  key={page}
+                  onClick={() => setCurrentPage(page)}
+                  className={`px-4 py-2 rounded-lg transition-colors ${
+                    currentPage === page
+                      ? 'bg-cyan-500 text-white'
+                      : 'bg-slate-700 text-slate-300 hover:bg-slate-600'
+                  }`}
+                >
+                  {page}
+                </button>
+              ))}
+              
+              <button
+                onClick={() => setCurrentPage(Math.min(totalPages, currentPage + 1))}
+                disabled={currentPage === totalPages}
+                className="px-4 py-2 bg-slate-700 text-slate-300 rounded-lg disabled:opacity-50 disabled:cursor-not-allowed hover:bg-slate-600 transition-colors"
+              >
+                Next
+              </button>
+            </div>
+          )}
         </div>
       </section>
 
