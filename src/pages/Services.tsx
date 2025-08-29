@@ -63,10 +63,24 @@ const Services: React.FC = () => {
         </div>
 
         <div className="container mx-auto px-4 text-center mt-12">
-          <Link to="/services/micro-saas-solutions" className="inline-flex items-center px-5 py-3 rounded-lg bg-gradient-to-r from-cyan-400 to-blue-500 text-white hover:opacity-90">
-            Explore Micro SaaS Solutions
-            <ArrowRight className="ml-2 h-4 w-4" />
-          </Link>
+          <div className="flex flex-wrap justify-center gap-4 mb-8">
+            <Link to="/services/micro-saas-solutions" className="inline-flex items-center px-5 py-3 rounded-lg bg-gradient-to-r from-cyan-400 to-blue-500 text-white hover:opacity-90">
+              Explore Micro SaaS Solutions
+              <ArrowRight className="ml-2 h-4 w-4" />
+            </Link>
+            <Link to="/revolutionary-services-2030" className="inline-flex items-center px-5 py-3 rounded-lg bg-gradient-to-r from-purple-500 to-pink-500 text-white hover:opacity-90">
+              Revolutionary Services 2030
+              <ArrowRight className="ml-2 h-4 w-4" />
+            </Link>
+            <Link to="/revolutionary-services-showcase-2030" className="inline-flex items-center px-5 py-3 rounded-lg bg-gradient-to-r from-green-500 to-emerald-500 text-white hover:opacity-90">
+              Services Showcase 2030
+              <ArrowRight className="ml-2 h-4 w-4" />
+            </Link>
+            <Link to="/pricing-2030" className="inline-flex items-center px-5 py-3 rounded-lg bg-gradient-to-r from-orange-500 to-red-500 text-white hover:opacity-90">
+              Pricing Guide 2030
+              <ArrowRight className="ml-2 h-4 w-4" />
+            </Link>
+          </div>
           <div className="mt-6 text-sm text-slate-300">
             Questions? Call <a className="text-cyan-300 hover:text-cyan-200" href="tel:+13024640950">+1 302 464 0950</a> or email <a className="text-cyan-300 hover:text-cyan-200" href="mailto:kleber@ziontechgroup.com">kleber@ziontechgroup.com</a>.
             Our office: 364 E Main St STE 1008 Middletown DE 19709.

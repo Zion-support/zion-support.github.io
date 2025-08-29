@@ -42,41 +42,133 @@ import {
   Leaf,
   Building,
   FlaskConical,
+  Filter,
+  SortAsc,
+  SortDesc,
+  PieChart,
+  BarChart,
+  LineChart,
+  Calculator,
+  TrendingDown,
+  Percent,
+  Timer,
+  Calendar,
+  CheckSquare,
+  XCircle,
+  AlertTriangle,
+  Info,
   X
 } from 'lucide-react';
 import { SEO } from '../components/SEO';
-import { REVOLUTIONARY_SERVICES_2030, REVOLUTIONARY_SERVICE_CATEGORIES, REVOLUTIONARY_SERVICE_STATISTICS } from '../data/revolutionaryServices2030';
+import { COMPREHENSIVE_SERVICES_INDEX_2030, SERVICE_CATEGORIES_2030, SERVICE_STATISTICS_2030 } from '../data/comprehensiveServicesIndex2030';
 
-export default function RevolutionaryServices2030() {
+export default function ComprehensivePricingGuide2030() {
   const [activeCategory, setActiveCategory] = useState('all');
   const [searchTerm, setSearchTerm] = useState('');
-  const [sortBy, setSortBy] = useState('rating');
+  const [sortBy, setSortBy] = useState('price');
+  const [sortOrder, setSortOrder] = useState('asc');
   const [currentPage, setCurrentPage] = useState(1);
-  const [itemsPerPage] = useState(12);
+  const [itemsPerPage] = useState(15);
+  const [priceRange, setPriceRange] = useState('all');
+  const [roiRange, setRoiRange] = useState('all');
+  const [setupTimeRange, setSetupTimeRange] = useState('all');
   const [selectedService, setSelectedService] = useState(null);
 
   // Filter and sort services
-  const filteredServices = REVOLUTIONARY_SERVICES_2030.filter(service => {
+  const filteredServices = COMPREHENSIVE_SERVICES_INDEX_2030.filter(service => {
     const matchesCategory = activeCategory === 'all' || service.category === activeCategory;
     const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()));
-    return matchesCategory && matchesSearch;
+    
+    // Price range filter
+    let matchesPrice = true;
+    if (priceRange !== 'all') {
+      const price = service.price;
+      switch (priceRange) {
+        case 'budget':
+          matchesPrice = price <= 10000;
+          break;
+        case 'mid-range':
+          matchesPrice = price > 10000 && price <= 50000;
+          break;
+        case 'enterprise':
+          matchesPrice = price > 50000;
+          break;
+      }
+    }
+
+    // ROI range filter
+    let matchesROI = true;
+    if (roiRange !== 'all') {
+      const roi = service.roi;
+      if (typeof roi === 'string') {
+        const roiNumber = parseInt(roi.match(/\d+/)?.[0] || '0');
+        switch (roiRange) {
+          case 'low':
+            matchesROI = roiNumber <= 300;
+            break;
+          case 'medium':
+            matchesROI = roiNumber > 300 && roiNumber <= 700;
+            break;
+          case 'high':
+            matchesROI = roiNumber > 700;
+            break;
+        }
+      }
+    }
+
+    // Setup time filter
+    let matchesSetupTime = true;
+    if (setupTimeRange !== 'all') {
+      const setupTime = service.setupTime;
+      if (typeof setupTime === 'string') {
+        const weeks = parseInt(setupTime.match(/\d+/)?.[0] || '0');
+        switch (setupTimeRange) {
+          case 'quick':
+            matchesSetupTime = weeks <= 8;
+            break;
+          case 'standard':
+            matchesSetupTime = weeks > 8 && weeks <= 16;
+            break;
+          case 'extended':
+            matchesSetupTime = weeks > 16;
+            break;
+        }
+      }
+    }
+
+    return matchesCategory && matchesSearch && matchesPrice && matchesROI && matchesSetupTime;
   });
 
   const sortedServices = [...filteredServices].sort((a, b) => {
+    let comparison = 0;
     switch (sortBy) {
-      case 'rating':
-        return b.rating - a.rating;
       case 'price':
-        return a.price - b.price;
+        comparison = a.price - b.price;
+        break;
+      case 'rating':
+        comparison = b.rating - a.rating;
       case 'reviews':
-        return b.reviewCount - a.reviewCount;
+        comparison = b.reviewCount - a.reviewCount;
+        break;
       case 'aiScore':
-        return b.aiScore - a.aiScore;
+        comparison = b.aiScore - a.aiScore;
+        break;
+      case 'roi':
+        const roiA = typeof a.roi === 'string' ? parseInt(a.roi.match(/\d+/)?.[0] || '0') : 0;
+        const roiB = typeof b.roi === 'string' ? parseInt(b.roi.match(/\d+/)?.[0] || '0') : 0;
+        comparison = roiB - roiA;
+        break;
+      case 'setupTime':
+        const timeA = typeof a.setupTime === 'string' ? parseInt(a.setupTime.match(/\d+/)?.[0] || '0') : 0;
+        const timeB = typeof b.setupTime === 'string' ? parseInt(b.setupTime.match(/\d+/)?.[0] || '0') : 0;
+        comparison = timeA - timeB;
+        break;
       default:
-        return 0;
+        comparison = 0;
     }
+    return sortOrder === 'asc' ? comparison : -comparison;
   });
 
   const totalPages = Math.ceil(sortedServices.length / itemsPerPage);
@@ -99,20 +191,32 @@ export default function RevolutionaryServices2030() {
 
   const getCategoryIcon = (category: string) => {
     const iconMap: { [key: string]: React.ReactNode } = {
-      'AI & Autonomous Systems': <Brain className="w-6 h-6" />,
-      'Quantum Computing': <Zap className="w-6 h-6" />,
+      'AI & Business Intelligence': <Brain className="w-6 h-6" />,
+      'AI & Marketing': <TrendingUp className="w-6 h-6" />,
+      'AI & Healthcare': <Monitor className="w-6 h-6" />,
+      'AI & Legal Tech': <BookOpen className="w-6 h-6" />,
+      'AI & Real Estate': <Building className="w-6 h-6" />,
+      'AI & Operations': <Cpu className="w-6 h-6" />,
+      'AI & Green Tech': <Leaf className="w-6 h-6" />,
+      'AI & Autonomous Systems': <Rocket className="w-6 h-6" />,
+      'AI & FinTech': <DollarSign className="w-6 h-6" />,
+      'AI & Environmental Tech': <Leaf className="w-6 h-6" />,
+      'AI & Content': <Code className="w-6 h-6" />,
+      'AI & Customer Support': <Users className="w-6 h-6" />,
+      'AI & HR': <Users className="w-6 h-6" />,
+      'AI & Research': <FlaskConical className="w-6 h-6" />,
       'AI & Metaverse': <Globe className="w-6 h-6" />,
       'AI & Space Tech': <Satellite className="w-6 h-6" />,
-      'AI & Environmental Tech': <Leaf className="w-6 h-6" />,
+      'AI & Development': <Code className="w-6 h-6" />,
       'AI & Education': <BookOpen className="w-6 h-6" />,
       'AI & Entertainment': <Palette className="w-6 h-6" />,
-      'AI & Research': <FlaskConical className="w-6 h-6" />,
-      'AI & Development': <Code className="w-6 h-6" />,
-      'Blockchain & Web3': <Network className="w-6 h-6" />,
       'Cybersecurity': <Shield className="w-6 h-6" />,
       'Cloud & DevOps': <Cloud className="w-6 h-6" />,
+      'Quantum Computing': <Zap className="w-6 h-6" />,
       'IoT & Edge Computing': <Wifi className="w-6 h-6" />,
+      'Blockchain & Web3': <Network className="w-6 h-6" />,
       'Digital Twin': <Eye className="w-6 h-6" />,
+      'Space Technology': <Satellite className="w-6 h-6" />,
       'Sustainable Technology': <Leaf className="w-6 h-6" />,
       'IT Infrastructure': <Server className="w-6 h-6" />,
       'Emerging Technology': <Lightbulb className="w-6 h-6" />
@@ -122,20 +226,32 @@ export default function RevolutionaryServices2030() {
 
   const getCategoryColor = (category: string) => {
     const colorMap: { [key: string]: string } = {
-      'AI & Autonomous Systems': 'from-purple-500 to-pink-500',
-      'Quantum Computing': 'from-indigo-500 to-purple-500',
-      'AI & Metaverse': 'from-blue-500 to-cyan-500',
-      'AI & Space Tech': 'from-purple-500 to-indigo-500',
-      'AI & Environmental Tech': 'from-green-500 to-emerald-500',
-      'AI & Education': 'from-blue-500 to-indigo-500',
-      'AI & Entertainment': 'from-pink-500 to-red-500',
+      'AI & Business Intelligence': 'from-purple-500 to-pink-500',
+      'AI & Marketing': 'from-green-500 to-emerald-500',
+      'AI & Healthcare': 'from-pink-500 to-red-500',
+      'AI & Legal Tech': 'from-blue-500 to-indigo-500',
+      'AI & Real Estate': 'from-yellow-500 to-orange-500',
+      'AI & Operations': 'from-gray-500 to-slate-500',
+      'AI & Green Tech': 'from-green-500 to-emerald-500',
+      'AI & Autonomous Systems': 'from-cyan-500 to-blue-500',
+      'AI & FinTech': 'from-emerald-500 to-green-500',
+      'AI & Environmental Tech': 'from-teal-500 to-green-500',
+      'AI & Content': 'from-orange-500 to-red-500',
+      'AI & Customer Support': 'from-blue-500 to-purple-500',
+      'AI & HR': 'from-indigo-500 to-blue-500',
       'AI & Research': 'from-purple-500 to-violet-500',
+      'AI & Metaverse': 'from-purple-500 to-indigo-500',
+      'AI & Space Tech': 'from-indigo-500 to-purple-500',
       'AI & Development': 'from-cyan-500 to-blue-500',
-      'Blockchain & Web3': 'from-yellow-500 to-orange-500',
+      'AI & Education': 'from-blue-500 to-indigo-500',
+      'AI & Entertainment': 'from-purple-500 to-pink-500',
       'Cybersecurity': 'from-red-500 to-orange-500',
       'Cloud & DevOps': 'from-blue-500 to-cyan-500',
+      'Quantum Computing': 'from-indigo-500 to-purple-500',
       'IoT & Edge Computing': 'from-teal-500 to-cyan-500',
+      'Blockchain & Web3': 'from-yellow-500 to-orange-500',
       'Digital Twin': 'from-blue-500 to-indigo-500',
+      'Space Technology': 'from-purple-500 to-pink-500',
       'Sustainable Technology': 'from-green-500 to-teal-500',
       'IT Infrastructure': 'from-slate-500 to-gray-500',
       'Emerging Technology': 'from-violet-500 to-purple-500'
@@ -143,14 +259,46 @@ export default function RevolutionaryServices2030() {
     return colorMap[category] || 'from-gray-500 to-slate-500';
   };
 
+  const getROIColor = (roi: string) => {
+    const roiNumber = parseInt(roi.match(/\d+/)?.[0] || '0');
+    if (roiNumber >= 800) return 'text-green-400';
+    if (roiNumber >= 500) return 'text-blue-400';
+    if (roiNumber >= 300) return 'text-yellow-400';
+    return 'text-red-400';
+  };
+
+  const getSetupTimeColor = (setupTime: string) => {
+    const weeks = parseInt(setupTime.match(/\d+/)?.[0] || '0');
+    if (weeks <= 8) return 'text-green-400';
+    if (weeks <= 16) return 'text-yellow-400';
+    return 'text-red-400';
+  };
+
+  const getPriceRangeColor = (price: number) => {
+    if (price <= 10000) return 'text-green-400';
+    if (price <= 50000) return 'text-yellow-400';
+    return 'text-red-400';
+  };
+
+  // Calculate statistics
+  const totalValue = COMPREHENSIVE_SERVICES_INDEX_2030.reduce((sum, service) => sum + service.price, 0);
+  const averageROI = COMPREHENSIVE_SERVICES_INDEX_2030.reduce((sum, service) => {
+    const roi = service.roi;
+    if (typeof roi === 'string') {
+      const roiNumber = parseInt(roi.match(/\d+/)?.[0] || '0');
+      return sum + roiNumber;
+    }
+    return sum;
+  }, 0) / COMPREHENSIVE_SERVICES_INDEX_2030.length;
+
   return (
     <>
       <SEO
-        title="Revolutionary Services 2030 - Zion Tech Group"
-        description="Discover the future of technology with Zion Tech Group's revolutionary micro SAAS, IT, and AI services for 2030. Cutting-edge solutions with proven ROI and rapid deployment."
-        keywords="revolutionary services 2030, micro SAAS, AI services, IT solutions, quantum computing, blockchain, cybersecurity, Zion Tech Group"
-        image="https://ziontechgroup.com/images/revolutionary-services-2030.jpg"
-        url="https://ziontechgroup.com/revolutionary-services-2030"
+        title="Comprehensive Pricing Guide 2030 - Zion Tech Group"
+        description="Complete pricing guide for Zion Tech Group's revolutionary micro SAAS, IT, and AI services for 2030. Compare prices, ROI, and setup times across all service categories."
+        keywords="pricing guide 2030, service pricing, ROI analysis, setup times, micro SAAS pricing, AI services pricing, Zion Tech Group"
+        image="https://ziontechgroup.com/images/comprehensive-pricing-guide-2030.jpg"
+        url="https://ziontechgroup.com/comprehensive-pricing-guide-2030"
       />
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -165,43 +313,28 @@ export default function RevolutionaryServices2030() {
               className="text-center"
             >
               <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
-                Revolutionary Services
+                Comprehensive Pricing Guide
                 <span className="block bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
                   2030
                 </span>
               </h1>
               <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
-                Experience the future of technology with Zion Tech Group's cutting-edge micro SAAS, 
-                IT infrastructure, and AI-powered solutions. Transform your business with proven ROI 
-                and rapid deployment capabilities.
+                Complete pricing transparency for all our revolutionary services. Compare prices, 
+                ROI potential, setup times, and make informed decisions for your business transformation.
               </p>
               <div className="flex flex-wrap justify-center gap-4 mb-12">
                 <div className="bg-white/10 backdrop-blur-sm rounded-full px-6 py-3 text-white">
-                  <span className="font-semibold">{REVOLUTIONARY_SERVICE_STATISTICS.totalServices}+</span> Services
+                  <span className="font-semibold">{SERVICE_STATISTICS_2030.totalServices}+</span> Services
                 </div>
                 <div className="bg-white/10 backdrop-blur-sm rounded-full px-6 py-3 text-white">
-                  <span className="font-semibold">{REVOLUTIONARY_SERVICE_STATISTICS.totalCategories}</span> Categories
+                  <span className="font-semibold">${totalValue.toLocaleString()}+</span> Total Value
                 </div>
                 <div className="bg-white/10 backdrop-blur-sm rounded-full px-6 py-3 text-white">
-                  <span className="font-semibold">{REVOLUTIONARY_SERVICE_STATISTICS.averageRating}/5</span> Rating
+                  <span className="font-semibold">{Math.round(averageROI)}%</span> Avg ROI
                 </div>
                 <div className="bg-white/10 backdrop-blur-sm rounded-full px-6 py-3 text-white">
-                  <span className="font-semibold">${REVOLUTIONARY_SERVICE_STATISTICS.averagePrice.toLocaleString()}</span> Avg Price
+                  <span className="font-semibold">${SERVICE_STATISTICS_2030.averagePrice.toLocaleString()}</span> Avg Price
                 </div>
-              </div>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <a
-                  href="#services"
-                  className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-8 py-4 rounded-full font-semibold hover:from-purple-700 hover:to-pink-700 transition-all duration-300 transform hover:scale-105"
-                >
-                  Explore Services
-                </a>
-                <a
-                  href="#contact"
-                  className="border-2 border-white/30 text-white px-8 py-4 rounded-full font-semibold hover:bg-white/10 transition-all duration-300"
-                >
-                  Get Started
-                </a>
               </div>
             </motion.div>
           </div>
@@ -227,18 +360,18 @@ export default function RevolutionaryServices2030() {
           </div>
         </section>
 
-        {/* Services Section */}
-        <section id="services" className="py-20">
+        {/* Pricing Table Section */}
+        <section className="py-20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             {/* Filters and Search */}
             <div className="mb-12">
-              <div className="flex flex-col lg:flex-row gap-6 items-center justify-between">
-                <div className="flex-1 max-w-md">
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-8">
+                <div className="flex-1">
                   <div className="relative">
                     <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
                     <input
                       type="text"
-                      placeholder="Search revolutionary services..."
+                      placeholder="Search services..."
                       value={searchTerm}
                       onChange={(e) => setSearchTerm(e.target.value)}
                       className="w-full pl-10 pr-4 py-3 bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg text-white placeholder-gray-300 focus:outline-none focus:ring-2 focus:ring-purple-500"
@@ -251,112 +384,167 @@ export default function RevolutionaryServices2030() {
                     onChange={(e) => setSortBy(e.target.value)}
                     className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg text-white px-4 py-3 focus:outline-none focus:ring-2 focus:ring-purple-500"
                   >
-                    <option value="rating">Sort by Rating</option>
                     <option value="price">Sort by Price</option>
+                    <option value="rating">Sort by Rating</option>
                     <option value="reviews">Sort by Reviews</option>
                     <option value="aiScore">Sort by AI Score</option>
+                    <option value="roi">Sort by ROI</option>
+                    <option value="setupTime">Sort by Setup Time</option>
                   </select>
+                  <button
+                    onClick={() => setSortOrder(sortOrder === 'asc' ? 'desc' : 'asc')}
+                    className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg text-white px-4 py-3 hover:bg-white/20 transition-colors"
+                  >
+                    {sortOrder === 'asc' ? <SortAsc className="w-5 h-5" /> : <SortDesc className="w-5 h-5" />}
+                  </button>
                 </div>
               </div>
 
-              {/* Category Filters */}
-              <div className="mt-8">
-                <div className="flex flex-wrap gap-3">
-                  <button
-                    onClick={() => setActiveCategory('all')}
-                    className={`px-6 py-3 rounded-full font-semibold transition-all duration-300 ${
-                      activeCategory === 'all'
-                        ? 'bg-gradient-to-r from-purple-600 to-pink-600 text-white'
-                        : 'bg-white/10 backdrop-blur-sm text-white hover:bg-white/20'
-                    }`}
-                  >
-                    All Services ({REVOLUTIONARY_SERVICES_2030.length})
-                  </button>
-                  {REVOLUTIONARY_SERVICE_CATEGORIES.map((category) => (
-                    <button
-                      key={category}
-                      onClick={() => setActiveCategory(category)}
-                      className={`px-6 py-3 rounded-full font-semibold transition-all duration-300 ${
-                        activeCategory === category
-                          ? 'bg-gradient-to-r from-purple-600 to-pink-600 text-white'
-                          : 'bg-white/10 backdrop-blur-sm text-white hover:bg-white/20'
-                      }`}
-                    >
-                      {category} ({REVOLUTIONARY_SERVICES_2030.filter(s => s.category === category).length})
-                    </button>
+              {/* Advanced Filters */}
+              <div className="grid grid-cols-1 md:grid-cols-4 gap-4 mb-8">
+                <select
+                  value={activeCategory}
+                  onChange={(e) => setActiveCategory(e.target.value)}
+                  className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg text-white px-4 py-3 focus:outline-none focus:ring-2 focus:ring-purple-500"
+                >
+                  <option value="all">All Categories</option>
+                  {SERVICE_CATEGORIES_2030.map((category) => (
+                    <option key={category} value={category}>{category}</option>
                   ))}
+                </select>
+
+                <select
+                  value={priceRange}
+                  onChange={(e) => setPriceRange(e.target.value)}
+                  className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg text-white px-4 py-3 focus:outline-none focus:ring-2 focus:ring-purple-500"
+                >
+                  <option value="all">All Prices</option>
+                  <option value="budget">Budget ($0 - $10K)</option>
+                  <option value="mid-range">Mid-Range ($10K - $50K)</option>
+                  <option value="enterprise">Enterprise ($50K+)</option>
+                </select>
+
+                <select
+                  value={roiRange}
+                  onChange={(e) => setRoiRange(e.target.value)}
+                  className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg text-white px-4 py-3 focus:outline-none focus:ring-2 focus:ring-purple-500"
+                >
+                  <option value="all">All ROI</option>
+                  <option value="low">Low (≤300%)</option>
+                  <option value="medium">Medium (300-700%)</option>
+                  <option value="high">High (700%+)</option>
+                </select>
+
+                <select
+                  value={setupTimeRange}
+                  onChange={(e) => setSetupTimeRange(e.target.value)}
+                  className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg text-white px-4 py-3 focus:outline-none focus:ring-2 focus:ring-purple-500"
+                >
+                  <option value="all">All Setup Times</option>
+                  <option value="quick">Quick (≤8 weeks)</option>
+                  <option value="standard">Standard (8-16 weeks)</option>
+                  <option value="extended">Extended (16+ weeks)</option>
+                </select>
+              </div>
+
+              {/* Results Summary */}
+              <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-lg p-4">
+                <div className="flex flex-wrap items-center justify-between gap-4 text-white">
+                  <div className="flex items-center space-x-4">
+                    <span className="text-sm text-gray-300">Showing {filteredServices.length} of {COMPREHENSIVE_SERVICES_INDEX_2030.length} services</span>
+                    {activeCategory !== 'all' && (
+                      <span className="px-3 py-1 bg-purple-600/20 border border-purple-500/30 rounded-full text-sm text-purple-300">
+                        {activeCategory}
+                      </span>
+                    )}
+                  </div>
+                  <div className="flex items-center space-x-4 text-sm">
+                    <span className="text-gray-300">Total Value:</span>
+                    <span className="text-green-400 font-semibold">${filteredServices.reduce((sum, service) => sum + service.price, 0).toLocaleString()}</span>
+                  </div>
                 </div>
               </div>
             </div>
 
-            {/* Services Grid */}
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {currentServices.map((service) => (
-                <motion.div
-                  key={service.id}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.5 }}
-                  className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-all duration-300 cursor-pointer group"
-                  onClick={() => handleServiceSelect(service)}
-                >
-                  <div className="flex items-center justify-between mb-4">
-                    <div className={`p-3 rounded-xl bg-gradient-to-r ${getCategoryColor(service.category)}`}>
-                      {getCategoryIcon(service.category)}
-                    </div>
-                    <div className="flex items-center space-x-1">
-                      <Star className="w-4 h-4 text-yellow-400 fill-current" />
-                      <span className="text-white text-sm">{service.rating}</span>
-                    </div>
-                  </div>
-
-                  <h3 className="text-xl font-bold text-white mb-3 group-hover:text-purple-300 transition-colors">
-                    {service.title}
-                  </h3>
-                  
-                  <p className="text-gray-300 text-sm mb-4 line-clamp-3">
-                    {service.description}
-                  </p>
-
-                  <div className="space-y-3 mb-6">
-                    <div className="flex items-center justify-between">
-                      <span className="text-gray-400 text-sm">Price:</span>
-                      <span className="text-white font-semibold">${service.price.toLocaleString()}</span>
-                    </div>
-                    <div className="flex items-center justify-between">
-                      <span className="text-gray-400 text-sm">Market Price:</span>
-                      <span className="text-green-400 text-sm">{service.marketPrice}</span>
-                    </div>
-                    <div className="flex items-center justify-between">
-                      <span className="text-gray-400 text-sm">Setup Time:</span>
-                      <span className="text-blue-400 text-sm">{service.setupTime}</span>
-                    </div>
-                    <div className="flex items-center justify-between">
-                      <span className="text-gray-400 text-sm">AI Score:</span>
-                      <span className="text-purple-400 font-semibold">{service.aiScore}/100</span>
-                    </div>
-                  </div>
-
-                  <div className="flex flex-wrap gap-2 mb-4">
-                    {service.tags.slice(0, 3).map((tag, index) => (
-                      <span
-                        key={index}
-                        className="px-3 py-1 bg-white/10 rounded-full text-xs text-white"
+            {/* Pricing Table */}
+            <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl overflow-hidden">
+              <div className="overflow-x-auto">
+                <table className="w-full">
+                  <thead>
+                    <tr className="bg-white/10 border-b border-white/20">
+                      <th className="text-left p-6 text-white font-semibold">Service</th>
+                      <th className="text-left p-6 text-white font-semibold">Category</th>
+                      <th className="text-left p-6 text-white font-semibold">Price</th>
+                      <th className="text-left p-6 text-white font-semibold">Market Price</th>
+                      <th className="text-left p-6 text-white font-semibold">ROI</th>
+                      <th className="text-left p-6 text-white font-semibold">Setup Time</th>
+                      <th className="text-left p-6 text-white font-semibold">Rating</th>
+                      <th className="text-left p-6 text-white font-semibold">Actions</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {currentServices.map((service, index) => (
+                      <motion.tr
+                        key={service.id}
+                        initial={{ opacity: 0, y: 20 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.5, delay: index * 0.05 }}
+                        className="border-b border-white/10 hover:bg-white/5 transition-colors cursor-pointer"
+                        onClick={() => handleServiceSelect(service)}
                       >
-                        {tag}
-                      </span>
+                        <td className="p-6">
+                          <div className="flex items-center space-x-4">
+                            <div className={`p-3 rounded-xl bg-gradient-to-r ${getCategoryColor(service.category)}`}>
+                              {getCategoryIcon(service.category)}
+                            </div>
+                            <div>
+                              <h3 className="text-white font-semibold mb-1">{service.title}</h3>
+                              <p className="text-gray-400 text-sm line-clamp-2 max-w-xs">
+                                {service.description}
+                              </p>
+                            </div>
+                          </div>
+                        </td>
+                        <td className="p-6">
+                          <span className="px-3 py-1 bg-white/10 rounded-full text-sm text-white">
+                            {service.category}
+                          </span>
+                        </td>
+                        <td className="p-6">
+                          <span className={`font-semibold ${getPriceRangeColor(service.price)}`}>
+                            ${service.price.toLocaleString()}
+                          </span>
+                        </td>
+                        <td className="p-6">
+                          <span className="text-green-400 text-sm">{service.marketPrice}</span>
+                        </td>
+                        <td className="p-6">
+                          <span className={`font-semibold ${getROIColor(service.roi)}`}>
+                            {service.roi}
+                          </span>
+                        </td>
+                        <td className="p-6">
+                          <span className={`font-semibold ${getSetupTimeColor(service.setupTime)}`}>
+                            {service.setupTime}
+                          </span>
+                        </td>
+                        <td className="p-6">
+                          <div className="flex items-center space-x-2">
+                            <Star className="w-4 h-4 text-yellow-400 fill-current" />
+                            <span className="text-white">{service.rating}</span>
+                            <span className="text-gray-400 text-sm">({service.reviewCount})</span>
+                          </div>
+                        </td>
+                        <td className="p-6">
+                          <button className="text-purple-400 hover:text-purple-300 transition-colors">
+                            <ArrowUpRight className="w-5 h-5" />
+                          </button>
+                        </td>
+                      </motion.tr>
                     ))}
-                  </div>
-
-                  <div className="flex items-center justify-between">
-                    <div className="flex items-center space-x-2 text-sm text-gray-400">
-                      <Users className="w-4 h-4" />
-                      <span>{service.reviewCount} reviews</span>
-                    </div>
-                    <ArrowUpRight className="w-5 h-5 text-purple-400 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
-                  </div>
-                </motion.div>
-              ))}
+                  </tbody>
+                </table>
+              </div>
             </div>
 
             {/* Pagination */}
@@ -398,7 +586,7 @@ export default function RevolutionaryServices2030() {
           </div>
         </section>
 
-        {/* Why Choose Zion Tech Group */}
+        {/* Contact Section */}
         <section className="py-20 bg-gradient-to-r from-purple-900/50 to-blue-900/50">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <motion.div
@@ -408,70 +596,11 @@ export default function RevolutionaryServices2030() {
               className="text-center mb-16"
             >
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-                Why Choose Zion Tech Group?
+                Ready to Get Started?
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                We're not just another technology company. We're your strategic partner in digital transformation, 
-                offering cutting-edge solutions with proven results and exceptional support.
-              </p>
-            </motion.div>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {[
-                {
-                  icon: <Award className="w-12 h-12" />,
-                  title: "Proven Excellence",
-                  description: "Industry-leading solutions with documented success stories and measurable ROI"
-                },
-                {
-                  icon: <Zap className="w-12 h-12" />,
-                  title: "Rapid Deployment",
-                  description: "Quick setup times ranging from 4-24 weeks depending on complexity"
-                },
-                {
-                  icon: <Shield className="w-12 h-12" />,
-                  title: "Enterprise Security",
-                  description: "Bank-grade security with compliance certifications and 24/7 monitoring"
-                },
-                {
-                  icon: <Users className="w-12 h-12" />,
-                  title: "Expert Support",
-                  description: "Dedicated support team with deep technical expertise and rapid response times"
-                }
-              ].map((feature, index) => (
-                <motion.div
-                  key={index}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
-                  className="text-center"
-                >
-                  <div className="inline-flex p-4 bg-gradient-to-r from-purple-600 to-pink-600 rounded-2xl text-white mb-4">
-                    {feature.icon}
-                  </div>
-                  <h3 className="text-xl font-bold text-white mb-3">{feature.title}</h3>
-                  <p className="text-gray-300">{feature.description}</p>
-                </motion.div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* Contact Section */}
-        <section id="contact" className="py-20">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              className="text-center mb-16"
-            >
-              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-                Ready to Transform Your Business?
-              </h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Let's discuss how our revolutionary services can accelerate your digital transformation 
-                and drive unprecedented growth. Contact us today for a personalized consultation.
+                Contact our team for personalized pricing, custom quotes, and expert consultation 
+                on which services are right for your business transformation.
               </p>
             </motion.div>
 
@@ -483,7 +612,7 @@ export default function RevolutionaryServices2030() {
                 transition={{ duration: 0.8 }}
                 className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8"
               >
-                <h3 className="text-2xl font-bold text-white mb-6">Get Started Today</h3>
+                <h3 className="text-2xl font-bold text-white mb-6">Request Custom Quote</h3>
                 <form className="space-y-6">
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <input
@@ -509,12 +638,12 @@ export default function RevolutionaryServices2030() {
                   />
                   <select className="w-full px-4 py-3 bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-purple-500">
                     <option value="">Select Service Category</option>
-                    {REVOLUTIONARY_SERVICE_CATEGORIES.map((category) => (
+                    {SERVICE_CATEGORIES_2030.map((category) => (
                       <option key={category} value={category}>{category}</option>
                     ))}
                   </select>
                   <textarea
-                    placeholder="Tell us about your project requirements..."
+                    placeholder="Tell us about your project requirements and budget..."
                     rows={4}
                     className="w-full px-4 py-3 bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg text-white placeholder-gray-300 focus:outline-none focus:ring-2 focus:ring-purple-500"
                   />
@@ -522,7 +651,7 @@ export default function RevolutionaryServices2030() {
                     type="submit"
                     className="w-full bg-gradient-to-r from-purple-600 to-pink-600 text-white py-4 rounded-lg font-semibold hover:from-purple-700 hover:to-pink-700 transition-all duration-300 transform hover:scale-105"
                   >
-                    Request Consultation
+                    Get Custom Quote
                   </button>
                 </form>
               </motion.div>
@@ -562,27 +691,27 @@ export default function RevolutionaryServices2030() {
                 </div>
 
                 <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8">
-                  <h3 className="text-2xl font-bold text-white mb-6">Why Choose Us?</h3>
+                  <h3 className="text-2xl font-bold text-white mb-6">Why Choose Zion Tech Group?</h3>
                   <div className="space-y-4">
+                    <div className="flex items-center space-x-3">
+                      <CheckCircle className="w-5 h-5 text-green-400" />
+                      <span className="text-gray-300">Transparent pricing with no hidden fees</span>
+                    </div>
                     <div className="flex items-center space-x-3">
                       <CheckCircle className="w-5 h-5 text-green-400" />
                       <span className="text-gray-300">Proven ROI with documented results</span>
                     </div>
                     <div className="flex items-center space-x-3">
                       <CheckCircle className="w-5 h-5 text-green-400" />
-                      <span className="text-gray-300">Rapid deployment and setup</span>
+                      <span className="text-gray-300">Flexible payment options available</span>
                     </div>
                     <div className="flex items-center space-x-3">
                       <CheckCircle className="w-5 h-5 text-green-400" />
-                      <span className="text-gray-300">24/7 expert support</span>
+                      <span className="text-gray-300">Custom solutions tailored to your needs</span>
                     </div>
                     <div className="flex items-center space-x-3">
                       <CheckCircle className="w-5 h-5 text-green-400" />
-                      <span className="text-gray-300">Enterprise-grade security</span>
-                    </div>
-                    <div className="flex items-center space-x-3">
-                      <CheckCircle className="w-5 h-5 text-green-400" />
-                      <span className="text-gray-300">Custom solutions and integration</span>
+                      <span className="text-gray-300">24/7 support and maintenance</span>
                     </div>
                   </div>
                 </div>
@@ -655,7 +784,7 @@ export default function RevolutionaryServices2030() {
                 <div>
                   <h3 className="text-xl font-semibold text-white mb-4">Key Features</h3>
                   <div className="space-y-3">
-                    {selectedService.tags.map((tag, index) => (
+                    {selectedService.tags.slice(0, 5).map((tag, index) => (
                       <div key={index} className="flex items-center space-x-2">
                         <CheckCircle className="w-4 h-4 text-green-400" />
                         <span className="text-gray-300">{tag}</span>
