@@ -62,6 +62,8 @@ const AISupplyChainOptimization = React.lazy(() => import('./pages/services/ai-s
 const AIHealthcareAnalytics = React.lazy(() => import('./pages/services/ai-healthcare-analytics'));
 const AIFinancialTrading = React.lazy(() => import('./pages/services/ai-financial-trading'));
 const AIFraudDetectionPlatform = React.lazy(() => import('./pages/services/ai-fraud-detection-platform'));
+const AIHealthcareDiagnosis = React.lazy(() => import('./pages/services/ai-healthcare-diagnosis'));
+const AIMarketingAutomation = React.lazy(() => import('./pages/services/ai-marketing-automation'));
 // Service pages - only import existing ones
 const CloudDevOps = React.lazy(() => import('./pages/services/CloudDevOps'));
 const DigitalTwin = React.lazy(() => import('./pages/services/DigitalTwin'));
@@ -139,6 +141,8 @@ function App() {
                 <Route path="/services/ai-healthcare-analytics" element={<AIHealthcareAnalytics />} />
                 <Route path="/services/ai-financial-trading" element={<AIFinancialTrading />} />
                 <Route path="/services/ai-fraud-detection-platform" element={<AIFraudDetectionPlatform />} />
+                <Route path="/services/ai-healthcare-diagnosis" element={<AIHealthcareDiagnosis />} />
+                <Route path="/services/ai-marketing-automation" element={<AIMarketingAutomation />} />
 
                 {/* Catch all route */}
                 <Route path="*" element={<Home />} />

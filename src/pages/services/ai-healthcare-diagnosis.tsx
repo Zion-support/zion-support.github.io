@@ -2,153 +2,149 @@ import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { 
   Brain, 
-  Target, 
-  TrendingUp, 
-  Users, 
-  Mail, 
-  MessageSquare, 
-  BarChart3, 
+  Stethoscope, 
+  Activity, 
+  Shield, 
   Zap, 
+  TrendingUp, 
   Check, 
   X, 
   Star,
-  Calendar,
-  DollarSign,
+  Heart,
+  Eye,
+  Microscope,
+  FileText,
+  Users,
   Clock,
-  PieChart,
-  Filter,
-  Send,
-  Analytics,
-  Smartphone,
-  Globe
+  DollarSign
 } from 'lucide-react';
 
-const AIMarketingAutomation: React.FC = () => {
+const AIHealthcareDiagnosis: React.FC = () => {
   const [activeTab, setActiveTab] = useState('overview');
 
   const benefits = [
     {
-      icon: <Target className="w-8 h-8 text-blue-500" />,
-      title: "10x ROI Increase",
-      description: "AI-driven campaigns that deliver measurable results and higher conversion rates"
+      icon: <Brain className="w-8 h-8 text-blue-500" />,
+      title: "95% Accuracy Rate",
+      description: "AI-powered diagnosis with proven accuracy comparable to expert radiologists"
     },
     {
       icon: <Clock className="w-8 h-8 text-green-500" />,
-      title: "24/7 Automation",
-      description: "Run marketing campaigns around the clock without manual intervention"
+      title: "Instant Results",
+      description: "Get diagnostic results in seconds, not days or weeks"
     },
     {
       icon: <DollarSign className="w-8 h-8 text-purple-500" />,
-      title: "Cost Reduction",
-      description: "Reduce marketing costs by up to 40% through intelligent automation"
+      title: "Cost Effective",
+      description: "Reduce diagnostic costs by up to 60% compared to traditional methods"
     },
     {
       icon: <TrendingUp className="w-8 h-8 text-orange-500" />,
-      title: "Scalable Growth",
-      description: "Scale your marketing efforts without proportional increase in resources"
+      title: "Continuous Learning",
+      description: "AI models improve accuracy with every diagnosis performed"
     }
   ];
 
   const features = [
     {
-      icon: <Brain className="w-6 h-6 text-blue-500" />,
-      title: "AI-Powered Segmentation",
-      description: "Automatically segment audiences based on behavior, demographics, and engagement patterns"
+      icon: <Eye className="w-6 h-6 text-blue-500" />,
+      title: "Multi-Modal Imaging",
+      description: "Analyze X-rays, CT scans, MRIs, and ultrasound images with single AI platform"
     },
     {
-      icon: <Mail className="w-6 h-6 text-green-500" />,
-      title: "Smart Email Automation",
-      description: "Send personalized emails at optimal times with AI-driven content recommendations"
+      icon: <Brain className="w-6 h-6 text-green-500" />,
+      title: "Deep Learning Models",
+      description: "State-of-the-art neural networks trained on millions of medical images"
     },
     {
-      icon: <MessageSquare className="w-6 h-6 text-purple-500" />,
-      title: "Multi-Channel Campaigns",
-      description: "Coordinate campaigns across email, SMS, social media, and web push notifications"
+      icon: <Activity className="w-6 h-6 text-purple-500" />,
+      title: "Real-time Analysis",
+      description: "Instant processing and analysis of medical imaging data"
     },
     {
-      icon: <BarChart3 className="w-6 h-6 text-red-500" />,
-      title: "Predictive Analytics",
-      description: "Forecast campaign performance and customer lifetime value using ML algorithms"
+      icon: <Shield className="w-6 h-6 text-red-500" />,
+      title: "HIPAA Compliant",
+      description: "Enterprise-grade security and privacy protection for patient data"
     },
     {
-      icon: <Zap className="w-6 h-6 text-indigo-500" />,
-      title: "Real-time Optimization",
-      description: "Automatically adjust campaigns based on real-time performance data"
+      icon: <FileText className="w-6 h-6 text-indigo-500" />,
+      title: "Automated Reporting",
+      description: "Generate comprehensive diagnostic reports automatically"
     },
     {
       icon: <Users className="w-6 h-6 text-teal-500" />,
-      title: "Behavioral Triggers",
-      description: "Trigger personalized campaigns based on user actions and engagement levels"
+      title: "Collaborative Platform",
+      description: "Enable radiologists and physicians to collaborate seamlessly"
     }
   ];
 
   const useCases = [
     {
-      icon: <Mail className="w-8 h-8 text-blue-500" />,
-      title: "E-commerce",
-      description: "Abandoned cart recovery, product recommendations, and loyalty programs"
+      icon: <Heart className="w-8 h-8 text-red-500" />,
+      title: "Cardiology",
+      description: "Heart disease detection, ECG analysis, and cardiovascular imaging"
     },
     {
-      icon: <Users className="w-8 h-8 text-green-500" />,
-      title: "B2B Marketing",
-      description: "Lead nurturing, account-based marketing, and sales enablement"
+      icon: <Brain className="w-8 h-8 text-blue-500" />,
+      title: "Neurology",
+      description: "Brain tumor detection, stroke diagnosis, and neurological disorders"
     },
     {
-      icon: <Smartphone className="w-8 h-8 text-purple-500" />,
-      title: "Mobile Apps",
-      description: "User onboarding, retention campaigns, and in-app messaging"
+      icon: <Eye className="w-8 h-8 text-green-500" />,
+      title: "Radiology",
+      description: "Chest X-ray analysis, bone fracture detection, and organ imaging"
     },
     {
-      icon: <Globe className="w-8 h-8 text-orange-500" />,
-      title: "SaaS Companies",
-      description: "Trial conversion, feature adoption, and customer expansion"
+      icon: <Microscope className="w-8 h-8 text-purple-500" />,
+      title: "Pathology",
+      description: "Tissue analysis, cancer detection, and cellular pathology"
     }
   ];
 
   const pricingPlans = [
     {
       name: "Starter",
-      price: "$199",
+      price: "$299",
       period: "/month",
-      description: "Perfect for small businesses and startups",
+      description: "Perfect for small clinics and individual practitioners",
       features: [
-        "Up to 10,000 contacts",
-        "Basic email automation",
-        "3 campaign templates",
+        "Up to 100 scans/month",
+        "Basic AI diagnosis",
+        "Standard reporting",
         "Email support",
-        "Basic analytics"
+        "HIPAA compliance"
       ],
       cta: "Start Free Trial",
       popular: false
     },
     {
       name: "Professional",
-      price: "$499",
+      price: "$799",
       period: "/month",
-      description: "Ideal for growing businesses and marketing teams",
+      description: "Ideal for medium-sized hospitals and medical centers",
       features: [
-        "Up to 100,000 contacts",
-        "Advanced automation workflows",
-        "Unlimited templates",
+        "Up to 1,000 scans/month",
+        "Advanced AI diagnosis",
+        "Custom reporting",
         "Priority support",
-        "Advanced analytics",
-        "Multi-channel campaigns"
+        "API access",
+        "Multi-user accounts"
       ],
       cta: "Start Free Trial",
       popular: true
     },
     {
       name: "Enterprise",
-      price: "$1,299",
+      price: "$1,999",
       period: "/month",
-      description: "For large organizations with complex marketing needs",
+      description: "For large healthcare networks and research institutions",
       features: [
-        "Unlimited contacts",
+        "Unlimited scans",
         "Custom AI models",
         "White-label solution",
         "24/7 dedicated support",
         "Custom integrations",
-        "Advanced reporting"
+        "On-premise deployment"
       ],
       cta: "Contact Sales",
       popular: false
@@ -158,35 +154,35 @@ const AIMarketingAutomation: React.FC = () => {
   const competitors = [
     {
       name: "Zion Tech Group AI",
-      features: "AI-powered, Multi-channel, Predictive analytics",
-      automation: "Advanced",
-      pricing: "$199-1,299/month",
-      support: "24/7",
+      accuracy: "95%",
+      speed: "< 30 seconds",
+      cost: "$299-1,999/month",
+      features: "Multi-modal, HIPAA compliant, API access",
       rating: "5.0"
     },
     {
       name: "Competitor A",
-      features: "Basic automation, Limited channels, Standard analytics",
-      automation: "Basic",
-      pricing: "$300-2,000/month",
-      support: "Business hours",
-      rating: "4.1"
+      accuracy: "88%",
+      speed: "2-5 minutes",
+      cost: "$500-2,500/month",
+      features: "Limited modalities, basic compliance",
+      rating: "4.2"
     },
     {
       name: "Competitor B",
-      features: "Good automation, Multi-channel, Advanced analytics",
-      automation: "Good",
-      pricing: "$250-3,500/month",
-      support: "Limited",
-      rating: "4.3"
+      accuracy: "92%",
+      speed: "1-3 minutes",
+      cost: "$400-3,000/month",
+      features: "Good accuracy, expensive, limited support",
+      rating: "4.5"
     }
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
       {/* Hero Section */}
       <section className="relative overflow-hidden py-20 px-4 sm:px-6 lg:px-8">
-        <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 to-blue-600/20"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 to-purple-600/20"></div>
         <div className="relative max-w-7xl mx-auto text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -194,29 +190,30 @@ const AIMarketingAutomation: React.FC = () => {
             transition={{ duration: 0.8 }}
           >
             <div className="flex justify-center mb-6">
-              <div className="p-3 bg-purple-500/20 rounded-full">
-                <Brain className="w-12 h-12 text-purple-400" />
+              <div className="p-3 bg-blue-500/20 rounded-full">
+                <Brain className="w-12 h-12 text-blue-400" />
               </div>
             </div>
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              AI-Powered Marketing Automation
+              AI-Powered Healthcare Diagnosis
             </h1>
-            <p className="text-xl text-purple-100 mb-8 max-w-3xl mx-auto">
-              Transform your marketing with AI that learns, adapts, and delivers personalized 
-              campaigns at scale. Increase ROI by 10x while reducing costs by 40%.
+            <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">
+              Revolutionize medical diagnosis with AI that achieves 95% accuracy. 
+              Detect diseases faster, reduce costs, and save lives with our advanced 
+              medical imaging analysis platform.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="px-8 py-4 bg-purple-600 hover:bg-purple-700 text-white font-semibold rounded-lg transition-colors"
+                className="px-8 py-4 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-lg transition-colors"
               >
                 Start Free Trial
               </motion.button>
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="px-8 py-4 bg-transparent border-2 border-purple-400 text-purple-400 hover:bg-purple-400/10 font-semibold rounded-lg transition-colors"
+                className="px-8 py-4 bg-transparent border-2 border-blue-400 text-blue-400 hover:bg-blue-400/10 font-semibold rounded-lg transition-colors"
               >
                 View Demo
               </motion.button>
@@ -235,7 +232,7 @@ const AIMarketingAutomation: React.FC = () => {
                 onClick={() => setActiveTab(tab)}
                 className={`px-6 py-3 rounded-lg font-medium transition-colors ${
                   activeTab === tab
-                    ? 'bg-purple-600 text-white'
+                    ? 'bg-blue-600 text-white'
                     : 'bg-slate-800 text-slate-300 hover:bg-slate-700'
                 }`}
               >
@@ -257,11 +254,11 @@ const AIMarketingAutomation: React.FC = () => {
               className="text-center mb-16"
             >
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-                Revolutionize Your Marketing
+                Transform Healthcare with AI
               </h2>
-              <p className="text-xl text-purple-100 max-w-3xl mx-auto">
-                Our AI-powered marketing automation platform combines machine learning with 
-                marketing expertise to deliver personalized campaigns that convert and scale.
+              <p className="text-xl text-blue-100 max-w-3xl mx-auto">
+                Our AI-powered healthcare diagnosis platform combines cutting-edge machine learning 
+                with medical expertise to provide accurate, fast, and cost-effective diagnostic solutions.
               </p>
             </motion.div>
 
@@ -284,7 +281,7 @@ const AIMarketingAutomation: React.FC = () => {
 
             {/* Use Cases */}
             <div className="text-center mb-16">
-              <h3 className="text-2xl font-bold text-white mb-8">Perfect For</h3>
+              <h3 className="text-2xl font-bold text-white mb-8">Medical Specialties</h3>
               <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
                 {useCases.map((useCase, index) => (
                   <motion.div
@@ -318,9 +315,9 @@ const AIMarketingAutomation: React.FC = () => {
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
                 Powerful AI Features
               </h2>
-              <p className="text-xl text-purple-100 max-w-3xl mx-auto">
-                Our platform combines advanced AI algorithms with marketing expertise to deliver 
-                unprecedented automation and personalization capabilities.
+              <p className="text-xl text-blue-100 max-w-3xl mx-auto">
+                Our platform combines advanced AI algorithms with medical expertise to deliver 
+                unprecedented diagnostic accuracy and efficiency.
               </p>
             </motion.div>
 
@@ -358,9 +355,9 @@ const AIMarketingAutomation: React.FC = () => {
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
                 Transparent Pricing Plans
               </h2>
-              <p className="text-xl text-purple-100 max-w-3xl mx-auto">
-                Choose the plan that fits your business needs. All plans include our core 
-                AI marketing automation capabilities.
+              <p className="text-xl text-blue-100 max-w-3xl mx-auto">
+                Choose the plan that fits your healthcare facility's needs. 
+                All plans include our core AI diagnosis capabilities.
               </p>
             </motion.div>
 
@@ -372,12 +369,12 @@ const AIMarketingAutomation: React.FC = () => {
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8, delay: index * 0.1 }}
                   className={`relative bg-slate-800/50 p-8 rounded-xl border ${
-                    plan.popular ? 'border-purple-500' : 'border-slate-700'
+                    plan.popular ? 'border-blue-500' : 'border-slate-700'
                   }`}
                 >
                   {plan.popular && (
                     <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                      <span className="bg-purple-500 text-white px-4 py-2 rounded-full text-sm font-semibold">
+                      <span className="bg-blue-500 text-white px-4 py-2 rounded-full text-sm font-semibold">
                         Most Popular
                       </span>
                     </div>
@@ -406,7 +403,7 @@ const AIMarketingAutomation: React.FC = () => {
                     whileTap={{ scale: 0.95 }}
                     className={`w-full py-3 px-6 rounded-lg font-semibold transition-colors ${
                       plan.popular
-                        ? 'bg-purple-600 hover:bg-purple-700 text-white'
+                        ? 'bg-blue-600 hover:bg-blue-700 text-white'
                         : 'bg-slate-700 hover:bg-slate-600 text-white'
                     }`}
                   >
@@ -432,9 +429,9 @@ const AIMarketingAutomation: React.FC = () => {
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
                 Market Comparison
               </h2>
-              <p className="text-xl text-purple-100 max-w-3xl mx-auto">
-                See how our AI marketing automation platform compares to leading competitors 
-                in features, automation capabilities, and value.
+              <p className="text-xl text-blue-100 max-w-3xl mx-auto">
+                See how our AI healthcare diagnosis platform compares to leading competitors 
+                in accuracy, speed, and value.
               </p>
             </motion.div>
 
@@ -443,10 +440,10 @@ const AIMarketingAutomation: React.FC = () => {
                 <thead>
                   <tr className="border-b border-slate-700">
                     <th className="text-left p-6 text-white font-semibold">Platform</th>
+                    <th className="text-left p-6 text-white font-semibold">Accuracy</th>
+                    <th className="text-left p-6 text-white font-semibold">Speed</th>
+                    <th className="text-left p-6 text-white font-semibold">Cost</th>
                     <th className="text-left p-6 text-white font-semibold">Features</th>
-                    <th className="text-left p-6 text-white font-semibold">Automation</th>
-                    <th className="text-left p-6 text-white font-semibold">Pricing</th>
-                    <th className="text-left p-6 text-white font-semibold">Support</th>
                     <th className="text-left p-6 text-white font-semibold">Rating</th>
                   </tr>
                 </thead>
@@ -459,10 +456,10 @@ const AIMarketingAutomation: React.FC = () => {
                           <span className="text-white font-medium">{competitor.name}</span>
                         </div>
                       </td>
+                      <td className="p-6 text-green-400 font-medium">{competitor.accuracy}</td>
+                      <td className="p-6 text-blue-400">{competitor.speed}</td>
+                      <td className="p-6 text-purple-400">{competitor.cost}</td>
                       <td className="p-6 text-slate-300">{competitor.features}</td>
-                      <td className="p-6 text-blue-400">{competitor.automation}</td>
-                      <td className="p-6 text-purple-400">{competitor.pricing}</td>
-                      <td className="p-6 text-green-400">{competitor.support}</td>
                       <td className="p-6">
                         <div className="flex items-center">
                           <span className="text-yellow-400 font-medium">{competitor.rating}</span>
@@ -491,9 +488,9 @@ const AIMarketingAutomation: React.FC = () => {
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
                 Get Started Today
               </h2>
-              <p className="text-xl text-purple-100 max-w-3xl mx-auto">
-                Ready to transform your marketing with AI? Contact our team to learn more 
-                about our automation platform and start your free trial.
+              <p className="text-xl text-blue-100 max-w-3xl mx-auto">
+                Ready to revolutionize your healthcare diagnosis? Contact our team to learn more 
+                about our AI-powered platform and start your free trial.
               </p>
             </motion.div>
 
@@ -502,7 +499,7 @@ const AIMarketingAutomation: React.FC = () => {
                 <h3 className="text-2xl font-bold text-white mb-6">Contact Information</h3>
                 <div className="space-y-4">
                   <div className="flex items-center">
-                    <Target className="w-5 h-5 text-purple-400 mr-3" />
+                    <Stethoscope className="w-5 h-5 text-blue-400 mr-3" />
                     <span className="text-slate-300">Mobile: +1 302 464 0950</span>
                   </div>
                   <div className="flex items-center">
@@ -510,7 +507,7 @@ const AIMarketingAutomation: React.FC = () => {
                     <span className="text-slate-300">Email: kleber@ziontechgroup.com</span>
                   </div>
                   <div className="flex items-center">
-                    <Globe className="w-5 h-5 text-blue-400 mr-3" />
+                    <Shield className="w-5 h-5 text-purple-400 mr-3" />
                     <span className="text-slate-300">Address: 364 E Main St STE 1008 Middletown DE 19709</span>
                   </div>
                 </div>
@@ -543,7 +540,7 @@ const AIMarketingAutomation: React.FC = () => {
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="px-8 py-4 bg-purple-600 hover:bg-purple-700 text-white font-semibold rounded-lg transition-colors text-lg"
+                className="px-8 py-4 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-lg transition-colors text-lg"
               >
                 Start Your Free Trial
               </motion.button>
@@ -555,4 +552,4 @@ const AIMarketingAutomation: React.FC = () => {
   );
 };
 
-export default AIMarketingAutomation;
+export default AIHealthcareDiagnosis;
