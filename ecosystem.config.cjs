@@ -28,11 +28,8 @@ module.exports = {
         NODE_ENV: 'development',
         PORT: 5000
       }
-    }
-  ],
+    },
 
-  // Enhanced Automation Processes (GitHub Actions Replacements)
-  automation: [
     // Core CI/CD automation (replaces GitHub Actions CI)
     {
       name: 'ci-automation',
@@ -139,6 +136,34 @@ module.exports = {
       env: {
         NODE_ENV: 'production',
         AUTOMATION_INTERVAL: '1800000' // 30 minutes
+      }
+    },
+
+    // Continuous improvement automation (replaces GitHub Actions Continuous Improvement)
+    {
+      name: 'continuous-improvement',
+      script: './scripts/automation/continuous-improvement.cjs',
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      max_memory_restart: '1G',
+      env: {
+        NODE_ENV: 'production',
+        AUTOMATION_INTERVAL: '604800000' // 7 days (weekly)
+      }
+    },
+
+    // Daily build test automation (replaces GitHub Actions Test)
+    {
+      name: 'daily-build-test',
+      script: './scripts/automation/daily-build-test.cjs',
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      max_memory_restart: '1G',
+      env: {
+        NODE_ENV: 'production',
+        AUTOMATION_INTERVAL: '86400000' // 24 hours (daily)
       }
     }
   ],
