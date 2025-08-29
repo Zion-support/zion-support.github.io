@@ -79,6 +79,7 @@
     "d3-path": "^3.1.0",
     "d3-time-format": "^4.1.0",
     "date-fns": "^2.30.0",
+    "esbuild": "^0.25.9",
     "framer-motion": "^10.16.4",
     "i18next": "^25.4.2",
     "i18next-browser-languagedetector": "^8.2.0",
@@ -129,6 +130,7 @@
     }
   },
   "resolutions": {
-    "@rollup/rollup-darwin-x64": "@rollup/rollup-linux-x64-gnu"
+    "@rollup/rollup-darwin-x64": "@rollup/rollup-linux-x64-gnu",
+    "esbuild": "^0.25.9"
   }
 }

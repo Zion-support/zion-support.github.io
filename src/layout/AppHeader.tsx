@@ -188,6 +188,14 @@ export function AppHeader() {
       description: 'Future Technology Solutions',
       featured: true,
       color: 'from-indigo-500 to-purple-500'
+    },
+    { 
+      name: 'Comprehensive Services 2030', 
+      href: '/comprehensive-services-2030', 
+      icon: Brain, 
+      description: 'Complete AI & Tech Solutions',
+      featured: true,
+      color: 'from-cyan-500 to-purple-500'
     }
   ];
 

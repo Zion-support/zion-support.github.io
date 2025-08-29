@@ -92,6 +92,23 @@ export const EnhancedFuturisticFooter: React.FC = () => {
       ]
     },
     {
+      title: 'Comprehensive Services 2030',
+      featured: true,
+      links: [
+        { name: 'Comprehensive Services 2030', href: '/comprehensive-services-2030', featured: true },
+        { name: 'AI Autonomous Business Operations', href: '/comprehensive-services-2030#ai-autonomous-business-2030' },
+        { name: 'Quantum AI Cybersecurity', href: '/comprehensive-services-2030#quantum-ai-cybersecurity-2030' },
+        { name: 'AI Content Creation Studio', href: '/comprehensive-services-2030#ai-content-creation-studio-2030' },
+        { name: 'AI Sales Intelligence', href: '/comprehensive-services-2030#ai-sales-intelligence-2030' },
+        { name: 'AI Customer Support Automation', href: '/comprehensive-services-2030#ai-customer-support-automation-2030' },
+        { name: 'AI Data Analytics & BI', href: '/comprehensive-services-2030#ai-data-analytics-bi-2030' },
+        { name: 'Cloud Infrastructure & DevOps', href: '/comprehensive-services-2030#cloud-infrastructure-devops-2030' },
+        { name: 'IoT Edge Computing', href: '/comprehensive-services-2030#iot-edge-computing-2030' },
+        { name: 'Digital Twin Platform', href: '/comprehensive-services-2030#digital-twin-platform-2030' },
+        { name: 'Blockchain Web3 Platform', href: '/comprehensive-services-2030#blockchain-web3-platform-2030' }
+      ]
+    },
+    {
       title: 'Micro SaaS Solutions',
       featured: true,
       links: [
