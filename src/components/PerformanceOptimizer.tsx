@@ -1,12 +1,12 @@
 import React, { useEffect, useState, useRef, useCallback } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { 
-  Activity, 
-  Zap, 
-  Clock, 
-  TrendingUp, 
-  AlertTriangle, 
-  CheckCircle, 
+import {
+  Activity,
+  Zap,
+  Clock,
+  TrendingUp,
+  AlertTriangle,
+  CheckCircle,
   X,
   Info,
   BarChart3,
@@ -33,476 +33,395 @@ interface PerformanceMetrics {
   si: number;
   tti: number;
   tbt: number;
+  memory: number;
+  cpu: number;
+  network: number;
 }
 
-interface ResourceMetrics {
-  name: string;
-  size: number;
-  type: 'script' | 'stylesheet' | 'image' | 'font' | 'other';
-  loadTime: number;
-  status: 'success' | 'warning' | 'error';
+interface OptimizationHistory {
+  id: string;
+  timestamp: Date;
+  action: string;
+  impact: string;
+  details: string;
 }
 
-interface PerformanceOptimizerProps {
-  showMetrics?: boolean;
-  autoOptimize?: boolean;
-  alertThreshold?: number;
-}
-
-export default function PerformanceOptimizer({ 
-  showMetrics = false, 
-  autoOptimize = true,
-  alertThreshold = 3000 
-}: PerformanceOptimizerProps) {
-  const [isVisible, setIsVisible] = useState(showMetrics);
-  const [metrics, setMetrics] = useState<PerformanceMetrics | null>(null);
-  const [resourceMetrics, setResourceMetrics] = useState<ResourceMetrics[]>([]);
+export default function PerformanceOptimizer() {
+  const [isVisible, setIsVisible] = useState(false);
+  const [isExpanded, setIsExpanded] = useState(false);
+  const [metrics, setMetrics] = useState<PerformanceMetrics>({
+    fcp: 0,
+    lcp: 0,
+    fid: 0,
+    cls: 0,
+    ttfb: 0,
+    fmp: 0,
+          si: 0,
+    tti: 0,
+    tbt: 0,
+    memory: 0,
+    cpu: 0,
+    network: 0
+  });
   const [isOptimizing, setIsOptimizing] = useState(false);
-  const [optimizationHistory, setOptimizationHistory] = useState<string[]>([]);
-  const [showDetails, setShowDetails] = useState(false);
-  const [autoRefresh, setAutoRefresh] = useState(true);
-  const [refreshInterval, setRefreshInterval] = useState(5000);
-  
-  const observerRef = useRef<PerformanceObserver | null>(null);
+  const [optimizationHistory, setOptimizationHistory] = useState<OptimizationHistory[]>([]);
+  const [showHistory, setShowHistory] = useState(false);
+  const [autoOptimize, setAutoOptimize] = useState(false);
+  const [showAdvanced, setShowAdvanced] = useState(false);
+  const [lastUpdate, setLastUpdate] = useState<Date>(new Date());
   const intervalRef = useRef<NodeJS.Timeout | null>(null);
-  const metricsRef = useRef<HTMLDivElement>(null);
 
-  // Helper functions
-  const getMetricStatus = (value: number, threshold: number) => {
-    if (value <= threshold * 0.7) return 'excellent';
-    if (value <= threshold) return 'good';
-    if (value <= threshold * 1.5) return 'warning';
-    return 'poor';
+  // Simulate performance metrics
+  const simulateMetrics = useCallback(() => {
+    const newMetrics: PerformanceMetrics = {
+      fcp: Math.random() * 2000 + 500, // 500-2500ms
+      lcp: Math.random() * 4000 + 1000, // 1000-5000ms
+      fid: Math.random() * 100 + 10, // 10-110ms
+      cls: Math.random() * 0.3 + 0.01, // 0.01-0.31
+      ttfb: Math.random() * 800 + 200, // 200-1000ms
+      fmp: Math.random() * 3000 + 1000, // 1000-4000ms
+      si: Math.random() * 5000 + 2000, // 2000-7000ms
+      tti: Math.random() * 4000 + 1500, // 1500-5500ms
+      tbt: Math.random() * 300 + 50, // 50-350ms
+      memory: Math.random() * 100 + 20, // 20-120MB
+      cpu: Math.random() * 80 + 10, // 10-90%
+      network: Math.random() * 50 + 10 // 10-60KB/s
+    };
+    setMetrics(newMetrics);
+    setLastUpdate(new Date());
+  }, []);
+
+  // Auto-optimization logic
+  useEffect(() => {
+    if (autoOptimize) {
+      intervalRef.current = setInterval(() => {
+        simulateMetrics();
+        // Auto-optimize if metrics are poor
+        if (metrics.fcp > 2000 || metrics.lcp > 4000 || metrics.cls > 0.25) {
+          performOptimization('Auto-optimization triggered', 'High');
+        }
+      }, 30000); // Check every 30 seconds
+    } else {
+      if (intervalRef.current) {
+        clearInterval(intervalRef.current);
+      }
+    }
+
+    return () => {
+      if (intervalRef.current) {
+        clearInterval(intervalRef.current);
+      }
+    };
+  }, [autoOptimize, metrics]);
+
+  const performOptimization = (action: string, impact: string) => {
+    setIsOptimizing(true);
+    
+    setTimeout(() => {
+      const optimization: OptimizationHistory = {
+        id: Date.now().toString(),
+        timestamp: new Date(),
+        action,
+        impact,
+        details: `Optimized performance metrics at ${new Date().toLocaleTimeString()}`
+      };
+      
+      setOptimizationHistory(prev => [optimization, ...prev.slice(0, 9)]);
+      setIsOptimizing(false);
+      
+      // Simulate improved metrics
+      setTimeout(simulateMetrics, 1000);
+    }, 2000);
+  };
+
+  const getMetricStatus = (metric: keyof PerformanceMetrics, value: number) => {
+    const thresholds: Record<string, { good: number; needsImprovement: number }> = {
+      fcp: { good: 1800, needsImprovement: 3000 },
+      lcp: { good: 2500, needsImprovement: 4000 },
+      fid: { good: 100, needsImprovement: 300 },
+      cls: { good: 0.1, needsImprovement: 0.25 },
+      ttfb: { good: 600, needsImprovement: 1800 },
+      fmp: { good: 2000, needsImprovement: 4000 },
+      si: { good: 3400, needsImprovement: 5800 },
+      tti: { good: 3800, needsImprovement: 7300 },
+      tbt: { good: 200, needsImprovement: 600 }
+    };
+
+    const threshold = thresholds[metric];
+    if (!threshold) return 'neutral';
+
+    if (value <= threshold.good) return 'good';
+    if (value <= threshold.needsImprovement) return 'warning';
+    return 'critical';
   };
 
   const getMetricColor = (status: string) => {
     switch (status) {
-      case 'excellent': return 'text-green-400';
-      case 'good': return 'text-blue-400';
+      case 'good': return 'text-green-400';
       case 'warning': return 'text-yellow-400';
-      case 'poor': return 'text-red-400';
+      case 'critical': return 'text-red-400';
       default: return 'text-gray-400';
     }
   };
 
   const getMetricIcon = (status: string) => {
     switch (status) {
-      case 'excellent': return CheckCircle;
-      case 'good': return TrendingUp;
-      case 'warning': return AlertTriangle;
-      case 'poor': return X;
-      default: return Info;
+      case 'good': return <CheckCircle className="w-4 h-4 text-green-400" />;
+      case 'warning': return <AlertTriangle className="w-4 h-4 text-yellow-400" />;
+      case 'critical': return <AlertTriangle className="w-4 h-4 text-red-400" />;
+      default: return <Info className="w-4 h-4 text-gray-400" />;
     }
   };
 
-  const formatMetric = (value: number, unit: string = 'ms') => {
-    if (value === 0) return 'N/A';
-    return `${Math.round(value)}${unit}`;
+  const formatMetric = (metric: keyof PerformanceMetrics, value: number) => {
+    if (metric === 'cls') return value.toFixed(3);
+    if (metric === 'memory') return `${value.toFixed(1)} MB`;
+    if (metric === 'cpu') return `${value.toFixed(1)}%`;
+    if (metric === 'network') return `${value.toFixed(1)} KB/s`;
+    return `${value.toFixed(0)}ms`;
   };
 
-  const formatFileSize = (bytes: number) => {
-    if (bytes === 0) return '0 B';
-    const k = 1024;
-    const sizes = ['B', 'KB', 'MB', 'GB'];
-    const i = Math.floor(Math.log(bytes) / Math.log(k));
-    return parseFloat((bytes / Math.pow(k, i)).toFixed(2)) + ' ' + sizes[i];
-  };
-
-  // Update metrics callback
-  const updateMetric = useCallback((key: keyof PerformanceMetrics, value: number) => {
-    setMetrics(prev => prev ? { ...prev, [key]: value } : null);
-  }, []);
-
-  // Refresh metrics
-  const refreshMetrics = useCallback(() => {
-    if ('performance' in window) {
-      const perf = window.performance;
-      const navigation = perf.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
-      
-      if (navigation) {
-        const newMetrics: PerformanceMetrics = {
-          fcp: 0,
-          lcp: 0,
-          fid: 0,
-          cls: 0,
-          ttfb: navigation.responseStart - navigation.requestStart,
-          fmp: 0,
-          si: 0,
-          tti: 0,
-          tbt: 0
-        };
-
-        // Get FCP
-        const fcpEntry = perf.getEntriesByName('first-contentful-paint')[0];
-        if (fcpEntry) {
-          newMetrics.fcp = fcpEntry.startTime;
-        }
-
-        // Get LCP
-        const lcpEntries = perf.getEntriesByType('largest-contentful-paint');
-        if (lcpEntries.length > 0) {
-          newMetrics.lcp = lcpEntries[lcpEntries.length - 1].startTime;
-        }
-
-        setMetrics(newMetrics);
-      }
-    }
-
-    // Simulate resource metrics
-    const mockResources: ResourceMetrics[] = [
-      { name: 'main.js', size: 245760, type: 'script', loadTime: 120, status: 'success' },
-      { name: 'styles.css', size: 81920, type: 'stylesheet', loadTime: 85, status: 'success' },
-      { name: 'hero-image.jpg', size: 153600, type: 'image', loadTime: 200, status: 'warning' },
-      { name: 'font-awesome.woff2', size: 40960, type: 'font', loadTime: 95, status: 'success' }
-    ];
-    setResourceMetrics(mockResources);
-  }, []);
-
-  // Optimize performance
-  const optimizePerformance = useCallback(async () => {
-    setIsOptimizing(true);
-    
-    // Simulate optimization process
-    const optimizations = [
-      'Preloading critical fonts...',
-      'Optimizing image loading...',
-      'Deferring non-critical scripts...',
-      'Adding resource hints...',
-      'Compressing assets...'
-    ];
-
-    for (let i = 0; i < optimizations.length; i++) {
-      await new Promise(resolve => setTimeout(resolve, 800));
-      setOptimizationHistory(prev => [...prev, optimizations[i]]);
-    }
-
-    // Simulate improved metrics
-    setTimeout(() => {
-      if (metrics) {
-        setMetrics(prev => prev ? {
-          ...prev,
-          fcp: Math.max(prev.fcp * 0.8, 100),
-          lcp: Math.max(prev.lcp * 0.8, 200),
-          ttfb: Math.max(prev.ttfb * 0.7, 50)
-        } : null);
-      }
-      setIsOptimizing(false);
-    }, 1000);
-  }, [metrics]);
-
-  // Setup performance observer
-  useEffect(() => {
-    if ('PerformanceObserver' in window) {
-      const observer = new PerformanceObserver((list) => {
-        const entries = list.getEntries();
-        entries.forEach((entry) => {
-          if (entry.entryType === 'largest-contentful-paint') {
-            updateMetric('lcp', entry.startTime);
-          } else if (entry.entryType === 'first-input') {
-            updateMetric('fid', (entry as any).processingStart - entry.startTime);
-          }
-        });
-      });
-      
-      observer.observe({ entryTypes: ['largest-contentful-paint', 'first-input'] });
-      observerRef.current = observer;
-      
-      return () => observer.disconnect();
-    }
-  }, [updateMetric]);
-
-  // Auto-refresh setup
-  useEffect(() => {
-    if (autoRefresh && refreshInterval > 0) {
-      intervalRef.current = setInterval(refreshMetrics, refreshInterval);
-      return () => {
-        if (intervalRef.current) {
-          clearInterval(intervalRef.current);
-        }
-      };
-    }
-  }, [autoRefresh, refreshInterval, refreshMetrics]);
-
-  // Initial metrics load
-  useEffect(() => {
-    refreshMetrics();
-  }, [refreshMetrics]);
-
-  // Cleanup
-  useEffect(() => {
-    return () => {
-      if (observerRef.current) {
-        observerRef.current.disconnect();
-      }
-      if (intervalRef.current) {
-        clearInterval(intervalRef.current);
-      }
+  const getMetricLabel = (metric: keyof PerformanceMetrics) => {
+    const labels: Record<string, string> = {
+      fcp: 'First Contentful Paint',
+      lcp: 'Largest Contentful Paint',
+      fid: 'First Input Delay',
+      cls: 'Cumulative Layout Shift',
+      ttfb: 'Time to First Byte',
+      fmp: 'First Meaningful Paint',
+      si: 'Speed Index',
+      tti: 'Time to Interactive',
+      tbt: 'Total Blocking Time'
     };
-  }, []);
+    return labels[metric] || metric;
+  };
 
-  if (!isVisible) {
-    return (
-      <motion.button
-        initial={{ opacity: 0, scale: 0.8 }}
-        animate={{ opacity: 1, scale: 1 }}
-        onClick={() => setIsVisible(true)}
-        className="fixed bottom-4 right-4 z-50 p-3 bg-zion-cyan text-white rounded-full shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-110"
-        title="Show Performance Monitor"
-      >
-        <Activity className="w-5 h-5" />
-      </motion.button>
-    );
-  }
+  const getMetricDescription = (metric: keyof PerformanceMetrics) => {
+    const descriptions: Record<string, string> = {
+      fcp: 'Time until first content is painted on screen',
+      lcp: 'Time until largest content element is visible',
+      fid: 'Time from first interaction to response',
+      cls: 'Measure of visual stability',
+      ttfb: 'Time to receive first byte from server',
+      fmp: 'Time until primary content is visible',
+      si: 'How quickly content is visually displayed',
+      tti: 'Time until page becomes interactive',
+      tbt: 'Total time page is blocked from responding'
+    };
+    return descriptions[metric] || '';
+  };
 
   return (
     <motion.div
       initial={{ opacity: 0, y: 20 }}
-      animate={{ opacity: 1, y: 0 }}
-      className="fixed bottom-4 right-4 z-50 w-80 bg-zion-slate-dark border border-zion-cyan/20 rounded-lg shadow-2xl backdrop-blur-sm"
+      animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 20 }}
+      transition={{ duration: 0.5 }}
+      className="fixed bottom-4 right-4 z-50"
+      onAnimationComplete={() => setIsVisible(true)}
     >
-      {/* Header */}
-      <div className="flex items-center justify-between p-4 border-b border-zion-cyan/20">
-        <div className="flex items-center gap-2">
-          <div className="p-2 bg-zion-cyan/20 rounded-lg">
-            <Gauge className="w-5 h-5 text-zion-cyan" />
-          </div>
-          <div>
-            <h3 className="font-semibold text-white">Performance Monitor</h3>
-            <p className="text-xs text-gray-400">Real-time metrics</p>
-          </div>
-        </div>
-        <button
-          onClick={() => setIsVisible(false)}
-          className="p-1 hover:bg-zion-slate/50 rounded transition-colors"
-        >
-          <X className="w-4 h-4 text-gray-400" />
-        </button>
-      </div>
-
-      {/* Content */}
-      <div className="p-4 space-y-4">
-        {/* Core Web Vitals */}
-        <div>
-          <h4 className="text-sm font-medium text-white mb-3 flex items-center gap-2">
-            <BarChart3 className="w-4 h-4 text-zion-cyan" />
-            Core Web Vitals
-          </h4>
-          <div className="grid grid-cols-2 gap-3">
-            {metrics && (
-              <>
-                <div className="bg-zion-slate/50 rounded-lg p-3">
-                  <div className="flex items-center justify-between mb-2">
-                    <span className="text-xs text-gray-400">FCP</span>
-                    <span className={`text-xs ${getMetricColor(getMetricStatus(metrics.fcp, 1800))}`}>
-                      {formatMetric(metrics.fcp)}
-                    </span>
-                  </div>
-                  <div className="w-full bg-zion-slate rounded-full h-2">
-                    <div 
-                      className={`h-2 rounded-full ${getMetricStatus(metrics.fcp, 1800) === 'excellent' ? 'bg-green-500' : getMetricStatus(metrics.fcp, 1800) === 'good' ? 'bg-blue-500' : getMetricStatus(metrics.fcp, 1800) === 'warning' ? 'bg-yellow-500' : 'bg-red-500'}`}
-                      style={{ width: `${Math.min((metrics.fcp / 3000) * 100, 100)}%` }}
-                    />
-                  </div>
-                </div>
-
-                <div className="bg-zion-slate/50 rounded-lg p-3">
-                  <div className="flex items-center justify-between mb-2">
-                    <span className="text-xs text-gray-400">LCP</span>
-                    <span className={`text-xs ${getMetricColor(getMetricStatus(metrics.lcp, 2500))}`}>
-                      {formatMetric(metrics.lcp)}
-                    </span>
-                  </div>
-                  <div className="w-full bg-zion-slate rounded-full h-2">
-                    <div 
-                      className={`h-2 rounded-full ${getMetricStatus(metrics.lcp, 2500) === 'excellent' ? 'bg-green-500' : getMetricStatus(metrics.lcp, 2500) === 'good' ? 'bg-blue-500' : getMetricStatus(metrics.lcp, 2500) === 'warning' ? 'bg-yellow-500' : 'bg-red-500'}`}
-                      style={{ width: `${Math.min((metrics.lcp / 4000) * 100, 100)}%` }}
-                    />
-                  </div>
-                </div>
-
-                <div className="bg-zion-slate/50 rounded-lg p-3">
-                  <div className="flex items-center justify-between mb-2">
-                    <span className="text-xs text-gray-400">FID</span>
-                    <span className={`text-xs ${getMetricColor(getMetricStatus(metrics.fid, 100))}`}>
-                      {formatMetric(metrics.fid)}
-                    </span>
-                  </div>
-                  <div className="w-full bg-zion-slate rounded-full h-2">
-                    <div 
-                      className={`h-2 rounded-full ${getMetricStatus(metrics.fid, 100) === 'excellent' ? 'bg-green-500' : getMetricStatus(metrics.fid, 100) === 'good' ? 'bg-blue-500' : getMetricStatus(metrics.fid, 100) === 'warning' ? 'bg-yellow-500' : 'bg-red-500'}`}
-                      style={{ width: `${Math.min((metrics.fid / 300) * 100, 100)}%` }}
-                    />
-                  </div>
-                </div>
-
-                <div className="bg-zion-slate/50 rounded-lg p-3">
-                  <div className="flex items-center justify-between mb-2">
-                    <span className="text-xs text-gray-400">CLS</span>
-                    <span className={`text-xs ${getMetricColor(getMetricStatus(metrics.cls * 1000, 100))}`}>
-                      {(metrics.cls * 1000).toFixed(3)}
-                    </span>
-                  </div>
-                  <div className="w-full bg-zion-slate rounded-full h-2">
-                    <div 
-                      className={`h-2 rounded-full ${getMetricStatus(metrics.cls * 1000, 100) === 'excellent' ? 'bg-green-500' : getMetricStatus(metrics.cls * 1000, 100) === 'good' ? 'bg-blue-500' : getMetricStatus(metrics.cls * 1000, 100) === 'warning' ? 'bg-yellow-500' : 'bg-red-500'}`}
-                      style={{ width: `${Math.min((metrics.cls * 1000 / 250) * 100, 100)}%` }}
-                    />
-                  </div>
-                </div>
-              </>
-            )}
-          </div>
-        </div>
-
-        {/* Additional Metrics */}
-        <div>
-          <h4 className="text-sm font-medium text-white mb-3 flex items-center gap-2">
-            <Clock className="w-4 h-4 text-zion-cyan" />
-            Additional Metrics
-          </h4>
-          <div className="grid grid-cols-2 gap-3">
-            {metrics && (
-              <>
-                <div className="bg-zion-slate/50 rounded-lg p-3">
-                  <div className="flex items-center justify-between mb-2">
-                    <span className="text-xs text-gray-400">TTFB</span>
-                    <span className={`text-xs ${getMetricColor(getMetricStatus(metrics.ttfb, 800))}`}>
-                      {formatMetric(metrics.ttfb)}
-                    </span>
-                  </div>
-                  <div className="w-full bg-zion-slate rounded-full h-2">
-                    <div 
-                      className={`h-2 rounded-full ${getMetricStatus(metrics.ttfb, 800) === 'excellent' ? 'bg-green-500' : getMetricStatus(metrics.ttfb, 800) === 'good' ? 'bg-blue-500' : getMetricStatus(metrics.ttfb, 800) === 'warning' ? 'bg-yellow-500' : 'bg-red-500'}`}
-                      style={{ width: `${Math.min((metrics.ttfb / 1200) * 100, 100)}%` }}
-                    />
-                  </div>
-                </div>
-
-                <div className="bg-zion-slate/50 rounded-lg p-3">
-                  <div className="flex items-center justify-between mb-2">
-                    <span className="text-xs text-gray-400">FMP</span>
-                    <span className={`text-xs ${getMetricColor(getMetricStatus(metrics.fmp, 2000))}`}>
-                      {formatMetric(metrics.fmp)}
-                    </span>
-                  </div>
-                  <div className="w-full bg-zion-slate rounded-full h-2">
-                    <div 
-                      className={`h-2 rounded-full ${getMetricStatus(metrics.fmp, 2000) === 'excellent' ? 'bg-green-500' : getMetricStatus(metrics.fmp, 2000) === 'good' ? 'bg-blue-500' : getMetricStatus(metrics.fmp, 2000) === 'warning' ? 'bg-yellow-500' : 'bg-red-500'}`}
-                      style={{ width: `${Math.min((metrics.fmp / 3000) * 100, 100)}%` }}
-                    />
-                  </div>
-                </div>
-              </>
-            )}
-          </div>
-        </div>
-
-        {/* Action Buttons */}
-        <div className="flex gap-2">
-          <button
-            onClick={refreshMetrics}
-            className="flex-1 flex items-center justify-center gap-2 px-3 py-2 bg-zion-cyan/20 border border-zion-cyan/30 text-zion-cyan rounded-lg hover:bg-zion-cyan/30 transition-colors text-sm"
-          >
-            <RefreshCw className="w-4 h-4" />
-            Refresh
-          </button>
-          <button
-            onClick={optimizePerformance}
-            disabled={isOptimizing}
-            className="flex-1 flex items-center justify-center gap-2 px-3 py-2 bg-zion-cyan text-white rounded-lg hover:bg-zion-cyan/90 transition-colors text-sm disabled:opacity-50"
-          >
-            <Zap className="w-4 h-4" />
-            {isOptimizing ? 'Optimizing...' : 'Optimize'}
-          </button>
-        </div>
-
-        {/* Settings */}
-        <div className="flex items-center justify-between">
-          <div className="flex items-center gap-2">
-            <Settings className="w-4 h-4 text-gray-400" />
-            <span className="text-xs text-gray-400">Auto-refresh</span>
-          </div>
-          <label className="relative inline-flex items-center cursor-pointer">
-            <input
-              type="checkbox"
-              checked={autoRefresh}
-              onChange={(e) => setAutoRefresh(e.target.checked)}
-              className="sr-only peer"
-            />
-            <div className="w-9 h-5 bg-zion-slate peer-focus:outline-none peer-focus:ring-2 peer-focus:ring-zion-cyan/30 rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-4 after:w-4 after:transition-all peer-checked:bg-zion-cyan"></div>
-          </label>
-        </div>
-
-        {/* Details Toggle */}
-        <button
-          onClick={() => setShowDetails(!showDetails)}
-          className="w-full flex items-center justify-center gap-2 px-3 py-2 bg-zion-slate/30 border border-zion-slate/50 text-gray-300 rounded-lg hover:bg-zion-slate/50 transition-colors text-sm"
-        >
-          {showDetails ? <EyeOff className="w-4 h-4" /> : <Eye className="w-4 h-4" />}
-          {showDetails ? 'Hide Details' : 'Show Details'}
-        </button>
-
-        {/* Detailed View */}
-        <AnimatePresence>
-          {showDetails && (
-            <motion.div
-              initial={{ opacity: 0, height: 0 }}
-              animate={{ opacity: 1, height: 'auto' }}
-              exit={{ opacity: 0, height: 0 }}
-              className="space-y-4"
-            >
-              {/* Resource Performance */}
+      <motion.div
+        className="bg-zion-slate/95 backdrop-blur-md border border-zion-cyan/20 rounded-2xl shadow-2xl shadow-zion-cyan/20 overflow-hidden"
+        animate={{ width: isExpanded ? 400 : 60, height: isExpanded ? 500 : 60 }}
+        transition={{ duration: 0.3, ease: "easeInOut" }}
+      >
+        {/* Header */}
+        <div className="flex items-center justify-between p-4 border-b border-zion-cyan/20">
+          <div className="flex items-center gap-3">
+            <div className="w-8 h-8 bg-gradient-to-r from-zion-cyan to-zion-blue rounded-lg flex items-center justify-center">
+              <Zap className="w-5 h-5 text-white" />
+            </div>
+            {isExpanded && (
               <div>
-                <h4 className="text-sm font-medium text-white mb-3 flex items-center gap-2">
-                  <HardDrive className="w-4 h-4 text-zion-cyan" />
-                  Resource Performance
+                <h3 className="text-white font-semibold">Performance Optimizer</h3>
+                <p className="text-xs text-zion-cyan/70">Real-time monitoring</p>
+              </div>
+            )}
+          </div>
+          
+          <div className="flex items-center gap-2">
+            {isExpanded && (
+              <>
+                <button
+                  onClick={() => setShowAdvanced(!showAdvanced)}
+                  className="p-2 hover:bg-zion-cyan/10 rounded-lg transition-colors"
+                  title="Advanced Options"
+                >
+                  <Settings className="w-4 h-4 text-zion-cyan" />
+                </button>
+                <button
+                  onClick={() => setShowHistory(!showHistory)}
+                  className="p-2 hover:bg-zion-cyan/10 rounded-lg transition-colors"
+                  title="Optimization History"
+                >
+                  <BarChart3 className="w-4 h-4 text-zion-cyan" />
+                </button>
+              </>
+            )}
+            <button
+              onClick={() => setIsExpanded(!isExpanded)}
+              className="p-2 hover:bg-zion-cyan/10 rounded-lg transition-colors"
+            >
+              {isExpanded ? <X className="w-4 h-4 text-zion-cyan" /> : <Eye className="w-4 h-4 text-zion-cyan" />}
+            </button>
+          </div>
+        </div>
+
+        {isExpanded && (
+          <div className="p-4 space-y-4 max-h-96 overflow-y-auto">
+            {/* Quick Actions */}
+            <div className="flex gap-2">
+              <button
+                onClick={() => performOptimization('Manual optimization', 'Medium')}
+                disabled={isOptimizing}
+                className="flex-1 bg-gradient-to-r from-zion-cyan to-zion-blue text-white px-3 py-2 rounded-lg text-sm font-medium hover:from-zion-cyan/90 hover:to-zion-blue/90 transition-all disabled:opacity-50"
+              >
+                {isOptimizing ? (
+                  <RefreshCw className="w-4 h-4 animate-spin mx-auto" />
+                ) : (
+                  'Optimize Now'
+                )}
+              </button>
+              <button
+                onClick={simulateMetrics}
+                className="px-3 py-2 border border-zion-cyan/30 text-zion-cyan rounded-lg text-sm hover:bg-zion-cyan/10 transition-colors"
+              >
+                <RefreshCw className="w-4 h-4" />
+              </button>
+            </div>
+
+            {/* Auto-optimization Toggle */}
+            <div className="flex items-center justify-between p-3 bg-zion-slate-dark/50 rounded-lg">
+              <div className="flex items-center gap-2">
+                <Zap className="w-4 h-4 text-zion-cyan" />
+                <span className="text-sm text-white">Auto-optimize</span>
+              </div>
+              <button
+                onClick={() => setAutoOptimize(!autoOptimize)}
+                className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors ${
+                  autoOptimize ? 'bg-zion-cyan' : 'bg-zion-slate-light/30'
+                }`}
+              >
+                <span
+                  className={`inline-block h-4 w-4 transform rounded-full bg-white transition-transform ${
+                    autoOptimize ? 'translate-x-6' : 'translate-x-1'
+                  }`}
+                />
+              </button>
+            </div>
+
+            {/* Core Web Vitals */}
+            <div className="space-y-3">
+              <h4 className="text-sm font-semibold text-white flex items-center gap-2">
+                <Gauge className="w-4 h-4 text-zion-cyan" />
+                Core Web Vitals
+              </h4>
+              
+              {(['fcp', 'lcp', 'fid', 'cls'] as const).map((metric) => {
+                const status = getMetricStatus(metric, metrics[metric]);
+                return (
+                  <div key={metric} className="flex items-center justify-between p-2 bg-zion-slate-dark/30 rounded-lg">
+                    <div className="flex items-center gap-2">
+                      {getMetricIcon(status)}
+                      <div>
+                        <div className="text-xs text-gray-300">{getMetricLabel(metric)}</div>
+                        <div className="text-xs text-zion-cyan/70">{getMetricDescription(metric)}</div>
+                      </div>
+                    </div>
+                    <div className={`text-sm font-mono ${getMetricColor(status)}`}>
+                      {formatMetric(metric, metrics[metric])}
+                    </div>
+                  </div>
+                );
+              })}
+            </div>
+
+            {/* Additional Metrics */}
+            {showAdvanced && (
+              <div className="space-y-3">
+                <h4 className="text-sm font-semibold text-white flex items-center gap-2">
+                  <BarChart3 className="w-4 h-4 text-zion-cyan" />
+                  Advanced Metrics
                 </h4>
-                <div className="space-y-2">
-                  {resourceMetrics.map((resource, index) => (
-                    <div key={index} className="bg-zion-slate/30 rounded-lg p-3">
-                      <div className="flex items-center justify-between mb-2">
-                        <span className="text-xs text-white font-medium">{resource.name}</span>
-                        <span className={`text-xs px-2 py-1 rounded-full ${
-                          resource.status === 'success' ? 'bg-green-500/20 text-green-400' :
-                          resource.status === 'warning' ? 'bg-yellow-500/20 text-yellow-400' :
-                          'bg-red-500/20 text-red-400'
+                
+                {(['ttfb', 'fmp', 'si', 'tti', 'tbt'] as const).map((metric) => {
+                  const status = getMetricStatus(metric, metrics[metric]);
+                  return (
+                    <div key={metric} className="flex items-center justify-between p-2 bg-zion-slate-dark/30 rounded-lg">
+                      <div className="flex items-center gap-2">
+                        {getMetricIcon(status)}
+                        <div className="text-xs text-gray-300">{getMetricLabel(metric)}</div>
+                      </div>
+                      <div className={`text-sm font-mono ${getMetricColor(status)}`}>
+                        {formatMetric(metric, metrics[metric])}
+                      </div>
+                    </div>
+                  );
+                })}
+              </div>
+            )}
+
+            {/* System Metrics */}
+            <div className="space-y-3">
+              <h4 className="text-sm font-semibold text-white flex items-center gap-2">
+                <Activity className="w-4 h-4 text-zion-cyan" />
+                System Resources
+              </h4>
+              
+              <div className="grid grid-cols-3 gap-2">
+                <div className="text-center p-2 bg-zion-slate-dark/30 rounded-lg">
+                  <div className="text-xs text-gray-300">Memory</div>
+                  <div className="text-sm font-mono text-zion-cyan">{formatMetric('memory', metrics.memory)}</div>
+                </div>
+                <div className="text-center p-2 bg-zion-slate-dark/30 rounded-lg">
+                  <div className="text-xs text-gray-300">CPU</div>
+                  <div className="text-sm font-mono text-zion-cyan">{formatMetric('cpu', metrics.cpu)}</div>
+                </div>
+                <div className="text-center p-2 bg-zion-slate-dark/30 rounded-lg">
+                  <div className="text-xs text-gray-300">Network</div>
+                  <div className="text-sm font-mono text-zion-cyan">{formatMetric('network', metrics.network)}</div>
+                </div>
+              </div>
+            </div>
+
+            {/* Last Update */}
+            <div className="text-xs text-zion-cyan/50 text-center">
+              Last updated: {lastUpdate.toLocaleTimeString()}
+            </div>
+
+            {/* Optimization History */}
+            {showHistory && (
+              <AnimatePresence>
+                <motion.div
+                  initial={{ opacity: 0, height: 0 }}
+                  animate={{ opacity: 1, height: 'auto' }}
+                  exit={{ opacity: 0, height: 0 }}
+                  className="space-y-2"
+                >
+                  <h4 className="text-sm font-semibold text-white">Recent Optimizations</h4>
+                  {optimizationHistory.map((item) => (
+                    <div key={item.id} className="p-2 bg-zion-slate-dark/30 rounded-lg text-xs">
+                      <div className="flex items-center justify-between mb-1">
+                        <span className="text-zion-cyan">{item.action}</span>
+                        <span className={`px-2 py-1 rounded text-xs ${
+                          item.impact === 'High' ? 'bg-red-500/20 text-red-400' :
+                          item.impact === 'Medium' ? 'bg-yellow-500/20 text-yellow-400' :
+                          'bg-green-500/20 text-green-400'
                         }`}>
-                          {resource.status}
+                          {item.impact}
                         </span>
                       </div>
-                      <div className="grid grid-cols-2 gap-2 text-xs text-gray-400">
-                        <span>Size: {formatFileSize(resource.size)}</span>
-                        <span>Load: {formatMetric(resource.loadTime)}</span>
+                      <div className="text-gray-400">{item.details}</div>
+                      <div className="text-zion-cyan/50 mt-1">
+                        {item.timestamp.toLocaleTimeString()}
                       </div>
                     </div>
                   ))}
-                </div>
-              </div>
-
-              {/* Optimization History */}
-              <div>
-                <h4 className="text-sm font-medium text-white mb-3 flex items-center gap-2">
-                  <TrendingUp className="w-4 h-4 text-zion-cyan" />
-                  Optimization History
-                </h4>
-                <div className="max-h-32 overflow-y-auto space-y-2">
-                  {optimizationHistory.length > 0 ? (
-                    optimizationHistory.map((item, index) => (
-                      <div key={index} className="bg-zion-slate/30 rounded-lg p-2 text-xs text-gray-300">
-                        {item}
-                      </div>
-                    ))
-                  ) : (
-                    <div className="text-xs text-gray-500 text-center py-4">
-                      No optimizations yet
-                    </div>
-                  )}
-                </div>
-              </div>
-            </motion.div>
-          )}
-        </AnimatePresence>
-      </div>
+                </motion.div>
+              </AnimatePresence>
+            )}
+          </div>
+        )}
+      </motion.div>
     </motion.div>
   );
 }

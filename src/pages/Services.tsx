@@ -44,6 +44,61 @@ export default function Services() {
 
   const serviceCategories = [
     {
+<<<<<<< HEAD
+      name: 'Revolutionary AI Services',
+      icon: Brain,
+      description: 'Next-generation AI solutions that transform enterprise operations',
+      color: 'from-purple-600 to-pink-600',
+      services: [
+        {
+          name: 'AI Enterprise Orchestrator',
+          description: 'Multi-agent AI coordination and workflow automation for enterprise transformation',
+          features: ['Multi-Agent Coordination', 'Intelligent Process Orchestration', 'Predictive Analytics Engine', 'Enterprise Security Suite'],
+          href: '/services/ai-enterprise-orchestrator',
+          price: 'From $15,000',
+          rating: 5.0,
+          reviewCount: 89
+        },
+        {
+          name: 'Quantum AI Platform',
+          description: 'Next-generation quantum computing with AI capabilities for complex problem solving',
+          features: ['Quantum Machine Learning', 'Quantum Cryptography', 'Quantum Optimization', 'Quantum Simulation'],
+          href: '/services/quantum-ai-platform',
+          price: 'From $25,000',
+          rating: 5.0,
+          reviewCount: 67
+        },
+        {
+          name: 'AI Cybersecurity Suite',
+          description: 'AI-powered threat detection and automated incident response with zero-trust architecture',
+          features: ['AI Threat Detection', 'Zero-Trust Architecture', 'Automated Incident Response', 'Compliance Automation'],
+          href: '/services/ai-cybersecurity-suite',
+          price: 'From $8,500',
+          rating: 4.9,
+          reviewCount: 156
+        },
+        {
+          name: 'AI Healthcare Analytics',
+          description: 'Predictive diagnostics and patient care optimization with AI-powered insights',
+          features: ['Predictive Diagnostics', 'Patient Care Optimization', 'Clinical Research Acceleration', 'Healthcare Operations'],
+          href: '/services/ai-healthcare-analytics',
+          price: 'From $12,000',
+          rating: 4.9,
+          reviewCount: 134
+        }
+      ]
+    },
+    {
+      name: 'AI & Analytics',
+      icon: Brain,
+      description: 'Cutting-edge artificial intelligence and data analytics solutions',
+      color: 'from-blue-600 to-cyan-600',
+      services: [
+        {
+          name: 'AI Business Intelligence Platform',
+          description: 'Transform your data into actionable insights with advanced AI algorithms and predictive analytics',
+          features: ['Predictive Analytics', 'Real-time Dashboards', 'Machine Learning Models', 'Data Visualization', 'Automated Reporting'],
+=======
       name: 'AI & Analytics',
       icon: Brain,
       description: 'Cutting-edge artificial intelligence and data analytics solutions',
@@ -53,6 +108,7 @@ export default function Services() {
           name: 'AI Business Intelligence',
           description: 'Transform your data into actionable insights with advanced AI algorithms',
           features: ['Predictive Analytics', 'Real-time Dashboards', 'Machine Learning Models', 'Data Visualization'],
+>>>>>>> cursor/analyze-improve-and-deploy-application-f14e
           href: '/services/ai-business-intelligence',
           price: 'From $5,000',
           rating: 4.9,
@@ -100,7 +156,20 @@ export default function Services() {
           href: '/services/cloud-finops-optimizer',
           price: 'From $4,500',
           rating: 4.8,
+<<<<<<< HEAD
+          reviewCount: 76
+        },
+        {
+          name: 'AI Supply Chain Optimization',
+          description: 'AI-powered supply chain optimization with demand forecasting and route optimization',
+          features: ['AI Demand Forecasting', 'Route Optimization', 'Inventory Management', 'Global Visibility'],
+          href: '/services/ai-supply-chain-optimization',
+          price: 'From $599',
+          rating: 4.9,
+          reviewCount: 98
+=======
           reviewCount: 167
+>>>>>>> cursor/analyze-improve-and-deploy-application-f14e
         }
       ]
     },
@@ -137,6 +206,52 @@ export default function Services() {
       color: 'from-red-600 to-orange-600',
       services: [
         {
+<<<<<<< HEAD
+          name: 'Contract Management System',
+          description: 'Streamlined contract lifecycle management with AI-powered insights',
+          features: ['Contract Creation', 'Approval Workflows', 'Compliance Monitoring', 'AI Analysis', 'Reporting'],
+          href: '/services/contract-management',
+          price: 'From $3,200',
+          rating: 4.6,
+          reviewCount: 78,
+          benefits: ['Faster contract processing', 'Reduced risks', 'Better compliance']
+        },
+        {
+          name: 'AI Customer Success Platform',
+          description: 'Intelligent customer success with predictive analytics and automated engagement',
+          features: ['Churn Prevention', 'Health Scoring', 'Automated Engagement', 'Predictive Analytics'],
+          href: '/services/ai-customer-success-platform',
+          price: 'From $299',
+          rating: 4.9,
+          reviewCount: 234
+        },
+        {
+          name: 'AI Customer Churn Prediction',
+          description: 'Predict and prevent customer churn with 95%+ accuracy using AI-powered analytics',
+          features: ['Churn Prediction', 'Real-time Analytics', 'Proactive Interventions', 'Customer Segmentation'],
+          href: '/services/ai-customer-churn-prediction',
+          price: 'From $299',
+          rating: 4.9,
+          reviewCount: 156
+        },
+        {
+          name: 'AI Financial Fraud Detection',
+          description: 'Protect your business with AI-powered fraud detection and 99.2% accuracy',
+          features: ['Fraud Detection', 'Real-time Monitoring', 'Multi-layer Security', 'Adaptive Learning'],
+          href: '/services/ai-financial-fraud-detection',
+          price: 'From $799',
+          rating: 4.9,
+          reviewCount: 189
+        },
+        {
+          name: 'AI HR Talent Acquisition',
+          description: 'Revolutionize hiring with AI-powered candidate matching and recruitment automation',
+          features: ['AI Matching', 'Intelligent Sourcing', 'Predictive Analytics', 'Smart Screening'],
+          href: '/services/ai-hr-talent-acquisition',
+          price: 'From $399',
+          rating: 4.8,
+          reviewCount: 267
+=======
           name: 'Zero Trust Architecture',
           description: 'Advanced zero-trust security implementation and management',
           features: ['Identity Verification', 'Access Control', 'Network Segmentation', 'Continuous Monitoring'],
@@ -144,6 +259,7 @@ export default function Services() {
           price: 'From $18,000',
           rating: 4.9,
           reviewCount: 134
+>>>>>>> cursor/analyze-improve-and-deploy-application-f14e
         }
       ]
     }
