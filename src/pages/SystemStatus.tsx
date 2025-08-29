@@ -1,14 +1,3 @@
-import React from 'react';
-
-export default function SystemStatus() {
-  return (
-    <div className="container mx-auto px-4 py-16">
-      <h1 className="text-3xl font-bold text-white mb-4">System Status</h1>
-      <p className="text-zion-slate-light">All systems operational.</p>
-    </div>
-  );
-}
-
 import React, { useState, useEffect } from 'react';
 import { CheckCircle, AlertTriangle, XCircle, Clock, Activity, Server, Database, Cloud, Shield, Brain, Zap, Globe, BarChart3, RefreshCw, ExternalLink } from 'lucide-react';
 

@@ -44,7 +44,6 @@ export default function Services() {
 
   const serviceCategories = [
     {
-<<<<<<< HEAD
       name: 'Revolutionary AI Services',
       icon: Brain,
       description: 'Next-generation AI solutions that transform enterprise operations',
@@ -98,17 +97,6 @@ export default function Services() {
           name: 'AI Business Intelligence Platform',
           description: 'Transform your data into actionable insights with advanced AI algorithms and predictive analytics',
           features: ['Predictive Analytics', 'Real-time Dashboards', 'Machine Learning Models', 'Data Visualization', 'Automated Reporting'],
-=======
-      name: 'AI & Analytics',
-      icon: Brain,
-      description: 'Cutting-edge artificial intelligence and data analytics solutions',
-      color: 'from-purple-600 to-pink-600',
-      services: [
-        {
-          name: 'AI Business Intelligence',
-          description: 'Transform your data into actionable insights with advanced AI algorithms',
-          features: ['Predictive Analytics', 'Real-time Dashboards', 'Machine Learning Models', 'Data Visualization'],
->>>>>>> cursor/analyze-improve-and-deploy-application-f14e
           href: '/services/ai-business-intelligence',
           price: 'From $5,000',
           rating: 4.9,
@@ -156,8 +144,7 @@ export default function Services() {
           href: '/services/cloud-finops-optimizer',
           price: 'From $4,500',
           rating: 4.8,
-<<<<<<< HEAD
-          reviewCount: 76
+          reviewCount: 167
         },
         {
           name: 'AI Supply Chain Optimization',
@@ -167,9 +154,6 @@ export default function Services() {
           price: 'From $599',
           rating: 4.9,
           reviewCount: 98
-=======
-          reviewCount: 167
->>>>>>> cursor/analyze-improve-and-deploy-application-f14e
         }
       ]
     },
@@ -206,15 +190,13 @@ export default function Services() {
       color: 'from-red-600 to-orange-600',
       services: [
         {
-<<<<<<< HEAD
-          name: 'Contract Management System',
-          description: 'Streamlined contract lifecycle management with AI-powered insights',
-          features: ['Contract Creation', 'Approval Workflows', 'Compliance Monitoring', 'AI Analysis', 'Reporting'],
-          href: '/services/contract-management',
-          price: 'From $3,200',
-          rating: 4.6,
-          reviewCount: 78,
-          benefits: ['Faster contract processing', 'Reduced risks', 'Better compliance']
+          name: 'Zero Trust Architecture',
+          description: 'Advanced zero-trust security implementation and management',
+          features: ['Identity Verification', 'Access Control', 'Network Segmentation', 'Continuous Monitoring'],
+          href: '/services/zero-trust-network-architecture',
+          price: 'From $18,000',
+          rating: 4.9,
+          reviewCount: 134
         },
         {
           name: 'AI Customer Success Platform',
@@ -251,15 +233,6 @@ export default function Services() {
           price: 'From $399',
           rating: 4.8,
           reviewCount: 267
-=======
-          name: 'Zero Trust Architecture',
-          description: 'Advanced zero-trust security implementation and management',
-          features: ['Identity Verification', 'Access Control', 'Network Segmentation', 'Continuous Monitoring'],
-          href: '/services/zero-trust-network-architecture',
-          price: 'From $18,000',
-          rating: 4.9,
-          reviewCount: 134
->>>>>>> cursor/analyze-improve-and-deploy-application-f14e
         }
       ]
     }
