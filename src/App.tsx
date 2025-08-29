@@ -7,6 +7,8 @@ import { EnhancedFuturisticFooter as Footer } from './components/EnhancedFuturis
 import { ChatAssistant } from './components/ChatAssistant';
 import { PerformanceOptimizer } from './components/PerformanceOptimizer';
 import { AccessibilityEnhancer } from './components/AccessibilityEnhancer';
+import { AdvancedPerformanceMonitor } from './components/AdvancedPerformanceMonitor';
+import { AIServiceRecommendationEngine } from './components/AIServiceRecommendationEngine';
 
 // Core pages
 const Home = lazy(() => import('./pages/Home'));
@@ -149,6 +151,8 @@ function App() {
           <ChatAssistant />
           <PerformanceOptimizer />
           <AccessibilityEnhancer />
+          <AdvancedPerformanceMonitor />
+          <AIServiceRecommendationEngine />
         </div>
       </Router>
     </ErrorBoundary>
