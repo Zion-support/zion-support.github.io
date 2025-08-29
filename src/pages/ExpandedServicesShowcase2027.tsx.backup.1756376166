@@ -57,28 +57,20 @@ import {
   Monitor as Healthcare,
   Cpu as FinTech
 } from 'lucide-react';
-<<<<<<< HEAD
-import SEO from '@/components/SEO';
-import { 
-  ALL_EXPANDED_SERVICES_2027, 
-=======
 import { SEO } from '@/components/SEO';
 import {
   ALL_EXPANDED_SERVICES_2027,
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-c82d
   EXPANDED_SERVICE_CATEGORIES,
   getExpandedServicesByCategory,
   searchExpandedServices,
   type ExpandedService2027
 } from '@/data/expandedInnovativeServices2027';
-
 const ExpandedServicesShowcase2027: React.FC = () => {
   const [selectedCategory, setSelectedCategory] = useState('All');
   const [searchQuery, setSearchQuery] = useState('');
   const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
   const [expandedService, setExpandedService] = useState<string | null>(null);
   const [filteredServices, setFilteredServices] = useState<ExpandedService2027[]>(ALL_EXPANDED_SERVICES_2027);
-
   useEffect(() => {
     let services = getExpandedServicesByCategory(selectedCategory);
     if (searchQuery) {
@@ -86,7 +78,6 @@ const ExpandedServicesShowcase2027: React.FC = () => {
     }
     setFilteredServices(services);
   }, [selectedCategory, searchQuery]);
-
   const getCategoryIcon = (category: string) => {
     switch (category) {
       case 'Cybersecurity':
@@ -105,7 +96,6 @@ const ExpandedServicesShowcase2027: React.FC = () => {
         return Rocket;
     }
   };
-
   const getCategoryColor = (category: string) => {
     switch (category) {
       case 'Cybersecurity':
@@ -124,18 +114,15 @@ const ExpandedServicesShowcase2027: React.FC = () => {
         return 'from-gray-500 to-slate-600';
     }
   };
-
   const formatPrice = (pricing: ExpandedService2027['pricing']) => {
     if (pricing.model === 'Transaction Fees + Governance') {
       return 'Free + Transaction Fees';
     }
     return `$${pricing.basePrice.toLocaleString()}/month`;
   };
-
   const renderServiceCard = (service: ExpandedService2027) => {
     const CategoryIcon = getCategoryIcon(service.category);
     const categoryColor = getCategoryColor(service.category);
-
     return (
       <motion.div
         key={service.id}
@@ -162,13 +149,11 @@ const ExpandedServicesShowcase2027: React.FC = () => {
           </div>
           <p className="text-sm opacity-90">{service.subcategory}</p>
         </div>
-
         {/* Content */}
         <div className="p-6">
           <p className="text-gray-600 dark:text-gray-300 mb-4 line-clamp-3">
             {service.description}
           </p>
-
           {/* Pricing */}
           <div className="bg-gray-50 dark:bg-slate-700 rounded-lg p-4 mb-4">
             <div className="flex items-center justify-between">
@@ -186,7 +171,6 @@ const ExpandedServicesShowcase2027: React.FC = () => {
               </div>
             </div>
           </div>
-
           {/* Key Features */}
           <div className="mb-4">
             <h4 className="font-semibold text-gray-900 dark:text-white mb-2">Key Features</h4>
@@ -207,7 +191,6 @@ const ExpandedServicesShowcase2027: React.FC = () => {
               )}
             </div>
           </div>
-
           {/* Expanded Features */}
           <AnimatePresence>
             {expandedService === service.id && (
@@ -228,7 +211,6 @@ const ExpandedServicesShowcase2027: React.FC = () => {
               </motion.div>
             )}
           </AnimatePresence>
-
           {/* Benefits */}
           <div className="mb-4">
             <h4 className="font-semibold text-gray-900 dark:text-white mb-2">Benefits</h4>
@@ -243,7 +225,6 @@ const ExpandedServicesShowcase2027: React.FC = () => {
               ))}
             </div>
           </div>
-
           {/* Technical Specs */}
           <div className="mb-4">
             <h4 className="font-semibold text-gray-900 dark:text-white mb-2">Technical Specs</h4>
@@ -258,7 +239,6 @@ const ExpandedServicesShowcase2027: React.FC = () => {
               </div>
             </div>
           </div>
-
           {/* ROI and Setup */}
           <div className="grid grid-cols-2 gap-4 mb-4 text-sm">
             <div>
@@ -270,7 +250,6 @@ const ExpandedServicesShowcase2027: React.FC = () => {
               <p className="font-semibold text-gray-900 dark:text-white">{service.setupTime}</p>
             </div>
           </div>
-
           {/* Contact and Actions */}
           <div className="border-t border-gray-200 dark:border-slate-700 pt-4">
             <div className="flex items-center justify-between mb-3">
@@ -286,7 +265,6 @@ const ExpandedServicesShowcase2027: React.FC = () => {
                 {service.status.toUpperCase()}
               </span>
             </div>
-
             <div className="flex space-x-2">
               <a
                 href={`mailto:${service.contactInfo.email}`}
@@ -310,11 +288,9 @@ const ExpandedServicesShowcase2027: React.FC = () => {
       </motion.div>
     );
   };
-
   const renderServiceList = (service: ExpandedService2027) => {
     const CategoryIcon = getCategoryIcon(service.category);
     const categoryColor = getCategoryColor(service.category);
-
     return (
       <motion.div
         key={service.id}
@@ -328,7 +304,6 @@ const ExpandedServicesShowcase2027: React.FC = () => {
           <div className={`bg-gradient-to-r ${categoryColor} p-3 rounded-lg text-white flex-shrink-0`}>
             <CategoryIcon className="w-6 h-6" />
           </div>
-
           {/* Content */}
           <div className="flex-1 min-w-0">
             <div className="flex items-start justify-between mb-2">
@@ -342,11 +317,9 @@ const ExpandedServicesShowcase2027: React.FC = () => {
                 <span className="text-xs text-gray-500">({service.reviews})</span>
               </div>
             </div>
-
             <p className="text-gray-600 dark:text-gray-300 mb-3 line-clamp-2">
               {service.description}
             </p>
-
             {/* Key Info */}
             <div className="grid grid-cols-4 gap-4 mb-3 text-sm">
               <div>
@@ -372,7 +345,6 @@ const ExpandedServicesShowcase2027: React.FC = () => {
                 </span>
               </div>
             </div>
-
             {/* Actions */}
             <div className="flex items-center space-x-3">
               <a
@@ -397,7 +369,6 @@ const ExpandedServicesShowcase2027: React.FC = () => {
       </motion.div>
     );
   };
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-100 dark:from-slate-900 dark:via-slate-800 dark:to-slate-900">
       <SEO
@@ -405,7 +376,6 @@ const ExpandedServicesShowcase2027: React.FC = () => {
         description="Discover our comprehensive portfolio of advanced micro SAAS, IT infrastructure, and AI services. From quantum cybersecurity to healthcare AI, explore cutting-edge solutions."
         keywords="micro SAAS, IT services, AI services, cybersecurity, data analytics, cloud DevOps, IoT, fintech, healthcare technology"
       />
-
       {/* Hero Section */}
       <div className="relative overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
@@ -430,7 +400,6 @@ const ExpandedServicesShowcase2027: React.FC = () => {
               Discover our comprehensive portfolio of advanced micro SAAS, IT infrastructure, and AI services.
               From quantum cybersecurity to healthcare AI, explore cutting-edge solutions that drive innovation and growth.
             </motion.p>
-
             {/* Contact Info */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -466,7 +435,6 @@ const ExpandedServicesShowcase2027: React.FC = () => {
           </div>
         </div>
       </div>
-
       {/* Services Section */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         {/* Filters and Search */}
@@ -485,7 +453,6 @@ const ExpandedServicesShowcase2027: React.FC = () => {
                 />
               </div>
             </div>
-
             {/* Category Filter */}
             <div className="flex items-center space-x-4">
               <select
@@ -499,7 +466,6 @@ const ExpandedServicesShowcase2027: React.FC = () => {
                   </option>
                 ))}
               </select>
-
               {/* View Mode Toggle */}
               <div className="flex items-center space-x-2 bg-gray-100 dark:bg-slate-700 rounded-lg p-1">
                 <button
@@ -526,14 +492,12 @@ const ExpandedServicesShowcase2027: React.FC = () => {
             </div>
           </div>
         </div>
-
         {/* Services Count */}
         <div className="mb-8">
           <p className="text-gray-600 dark:text-gray-300">
             Showing {filteredServices.length} of {ALL_EXPANDED_SERVICES_2027.length} services
           </p>
         </div>
-
         {/* Services Grid/List */}
         {filteredServices.length > 0 ? (
           <div className={viewMode === 'grid' ? 'grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8' : 'space-y-6'}>
@@ -553,7 +517,6 @@ const ExpandedServicesShowcase2027: React.FC = () => {
           </div>
         )}
       </div>
-
       {/* CTA Section */}
       <div className="bg-gradient-to-r from-blue-600 to-purple-600 py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -585,5 +548,4 @@ const ExpandedServicesShowcase2027: React.FC = () => {
     </div>
   );
 };
-
 export default ExpandedServicesShowcase2027;

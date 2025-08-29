@@ -1,36 +1,5 @@
-<<<<<<< HEAD
-import React from 'react';
-import { motion } from 'framer-motion';
-import { 
-  Shield, 
-  CheckCircle, 
-  FileText, 
-  AlertTriangle, 
-  Users, 
-  Clock, 
-  ArrowRight,
-  Play,
-  Settings,
-  Target,
-  Cpu,
-  Cloud,
-  Activity,
-  Sparkles,
-  Search,
-  Zap,
-  Globe,
-  Building,
-  DollarSign,
-  Lock,
-  Eye,
-  BarChart3,
-  TrendingUp
-} from 'lucide-react';
-=======
 import React from 'react'
 import SEO from '@/components/SEO'
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-4b87
-
 const AIComplianceAssistant = () => {
   const features = [
     {
@@ -64,7 +33,6 @@ const AIComplianceAssistant = () => {
       description: 'Streamlined audit preparation with automated documentation and reporting'
     }
   ];
-
   const benefits = [
     'Reduce compliance violations by 90%',
     'Automate 80% of compliance tasks',
@@ -73,7 +41,6 @@ const AIComplianceAssistant = () => {
     'Streamline policy management',
     'Enhance risk mitigation strategies'
   ];
-
   const complianceFrameworks = [
     {
       name: 'GDPR',
@@ -96,7 +63,6 @@ const AIComplianceAssistant = () => {
       icon: Shield
     }
   ];
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       {/* Hero Section */}
@@ -113,17 +79,14 @@ const AIComplianceAssistant = () => {
               <Shield className="w-4 h-4 mr-2" />
               AI-Powered Compliance Management
             </div>
-            
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
               AI Compliance
               <span className="bg-gradient-to-r from-emerald-400 to-teal-500 bg-clip-text text-transparent"> Assistant</span>
             </h1>
-            
             <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
               Simplify regulatory compliance with AI-powered automation that ensures your organization 
               stays ahead of changing requirements and maintains full regulatory adherence.
             </p>
-            
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="px-8 py-4 bg-gradient-to-r from-emerald-500 to-teal-500 text-white font-semibold rounded-lg hover:from-emerald-600 hover:to-teal-600 transition-all duration-200 flex items-center justify-center">
                 <Play className="w-5 h-5 mr-2" />
@@ -137,7 +100,6 @@ const AIComplianceAssistant = () => {
           </motion.div>
         </div>
       </section>
-
       {/* Features Section */}
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -155,7 +117,6 @@ const AIComplianceAssistant = () => {
               to ensure your organization meets all regulatory requirements.
             </p>
           </motion.div>
-
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index) => (
               <motion.div
@@ -175,7 +136,6 @@ const AIComplianceAssistant = () => {
           </div>
         </div>
       </section>
-
       {/* Benefits Section */}
       <section className="py-20 bg-slate-800/30">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -192,7 +152,6 @@ const AIComplianceAssistant = () => {
               Experience measurable improvements in compliance efficiency, risk reduction, and regulatory adherence.
             </p>
           </motion.div>
-
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <div className="space-y-6">
               {benefits.slice(0, 3).map((benefit, index) => (
@@ -225,7 +184,6 @@ const AIComplianceAssistant = () => {
           </div>
         </div>
       </section>
-
       {/* Compliance Frameworks Section */}
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -243,7 +201,6 @@ const AIComplianceAssistant = () => {
               keeping you ahead of changing requirements.
             </p>
           </motion.div>
-
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {complianceFrameworks.map((framework, index) => (
               <motion.div
@@ -263,7 +220,6 @@ const AIComplianceAssistant = () => {
           </div>
         </div>
       </section>
-
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-emerald-500/10 to-teal-500/10">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -294,6 +250,4 @@ const AIComplianceAssistant = () => {
     </div>
   );
 };
-
 export default AIComplianceAssistant;
-

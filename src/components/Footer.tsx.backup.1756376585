@@ -37,10 +37,8 @@ import {
   ShoppingCart
 } from 'lucide-react';
 import { AnimatePresence } from 'framer-motion';
-
 export function Footer() {
   const currentYear = new Date().getFullYear();
-
   // Enhanced footer sections with more services
   const enhancedFooterSections = [
     {
@@ -141,17 +139,12 @@ export function Footer() {
       ]
     }
   ];
-
-<<<<<<< HEAD
-=======
   const legal = [
     { name: "Privacy Policy", path: "/privacy" },
     { name: "Terms of Service", path: "/terms" },
     { name: "Cookie Policy", path: "/cookies" },
     { name: "Sitemap", path: "/sitemap" }
   ];
-
->>>>>>> origin/cursor/website-audit-and-enhancement-3fc6
   const socialLinks = [
     { name: 'Twitter', href: '#', icon: Twitter, color: 'hover:text-blue-400' },
     { name: 'LinkedIn', href: '#', icon: Linkedin, color: 'hover:text-blue-600' },
@@ -159,19 +152,16 @@ export function Footer() {
     { name: 'Instagram', href: '#', icon: Instagram, color: 'hover:text-pink-500' },
     { name: 'GitHub', href: '#', icon: Github, color: 'hover:text-gray-400' }
   ];
-
   const quickActions = [
     { name: 'Request Quote', path: '/request-quote', icon: DollarSign },
     { name: 'Schedule Demo', path: '/demo', icon: Video },
     { name: 'Get Support', path: '/support', icon: HelpCircle },
     { name: 'Join Newsletter', path: '/newsletter', icon: Mail }
   ];
-
   return (
     <footer className="bg-zion-slate-dark text-white relative overflow-hidden">
       {/* Background Pattern */}
       <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxnIGZpbGw9IiNmZmZmZmYiIGZpbGwtb3BhY2l0eT0iMC4wMiI+PGNpcmNsZSBjeD0iMzAiIGN5PSIzMCIgcj0iMiIvPjwvZz48L2c+PC9zdmc+')] opacity-30"/>
-
       <div className="container mx-auto px-4 py-16 relative z-10">
         {/* Main Footer Content */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-8 mb-12">
@@ -206,7 +196,6 @@ export function Footer() {
               ))}
             </div>
           </div>
-
           {/* Navigation Sections */}
           {footerSections.map((section) => (
             <div key={section.title}>
@@ -230,12 +219,10 @@ export function Footer() {
             </div>
           ))}
         </div>
-
         {/* Newsletter Section */}
         <div className="border-t border-zion-slate-light/20 pt-8 mb-8">
           <FooterNewsletter />
         </div>
-
         {/* Bottom Footer */}
         <div className="border-t border-zion-slate-light/20 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
@@ -254,7 +241,6 @@ export function Footer() {
                 ))}
               </div>
             </div>
-
             {/* Social Links */}
             <div className="flex space-x-4">
               {socialLinks.map((social) => (
@@ -272,7 +258,6 @@ export function Footer() {
             </div>
           </div>
         </div>
-
         {/* Scroll to Top Button */}
         <motion.button
           onClick={scrollToTop}
@@ -283,7 +268,6 @@ export function Footer() {
           <ArrowUp className="w-5 h-5" />
         </motion.button>
       </div>
-
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Main Footer Content */}
         <div className="py-16">
@@ -302,12 +286,10 @@ export function Footer() {
                   <p className="text-zion-slate-light text-sm">Innovating the Future</p>
                 </div>
               </div>
-              
               <p className="text-lg text-zion-slate-light leading-relaxed max-w-md">
                 Leading the charge in AI-powered business solutions, quantum computing, and next-generation technology services. 
                 Transform your business with cutting-edge innovation.
               </p>
-
               {/* Contact Information */}
               <div className="space-y-3">
                 <div className="flex items-center space-x-3 text-zion-slate-light hover:text-zion-cyan transition-colors duration-300">
@@ -326,7 +308,6 @@ export function Footer() {
                 </div>
               </div>
             </div>
-
             {/* Newsletter Section */}
             <div className="space-y-6">
               <div>
@@ -334,7 +315,6 @@ export function Footer() {
                 <p className="text-zion-slate-light">Get the latest insights on AI, quantum computing, and emerging technologies.</p>
               </div>
               <FooterNewsletter />
-              
               {/* Quick Actions */}
               <div>
                 <h4 className="text-sm font-semibold text-zion-cyan mb-3">Quick Actions</h4>
@@ -355,7 +335,6 @@ export function Footer() {
               </div>
             </div>
           </div>
-
           {/* Services Grid */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 mb-16">
             {footerSections.map((section, index) => (
@@ -372,7 +351,6 @@ export function Footer() {
                   </div>
                   <h3 className="text-lg font-semibold text-white">{section.title}</h3>
                 </div>
-                
                 <div className="space-y-2">
                   {section.links.map((link) => (
                     <Link
@@ -390,7 +368,6 @@ export function Footer() {
               </motion.div>
             ))}
           </div>
-
           {/* Bottom Section */}
           <div className="pt-8 border-t border-zion-cyan/20">
             <div className="flex flex-col lg:flex-row items-center justify-between space-y-4 lg:space-y-0">
@@ -400,7 +377,6 @@ export function Footer() {
                 <Link to="/privacy" className="ml-2 hover:text-zion-cyan transition-colors duration-300">Privacy Policy</Link> | 
                 <Link to="/terms" className="ml-2 hover:text-zion-cyan transition-colors duration-300">Terms of Service</Link>
               </div>
-
               {/* Social Links */}
               <div className="flex items-center space-x-4">
                 {socialLinks.map((social) => (
@@ -418,7 +394,6 @@ export function Footer() {
           </div>
         </div>
       </div>
-
       {/* Scroll to Top Button */}
       <motion.button
         onClick={scrollToTop}
@@ -432,5 +407,4 @@ export function Footer() {
     </footer>
   );
 };
-
 export default Footer;

@@ -1,17 +1,5 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-<<<<<<< HEAD
-import { 
-  Eye, 
-  EyeOff, 
-  Volume2, 
-  VolumeX, 
-  Type, 
-  Contrast, 
-  ZoomIn, 
-  ZoomOut, 
-  RotateCcw,
-=======
 import {
   Volume2,
   VolumeX,
@@ -19,7 +7,6 @@ import {
   EyeOff,
   Keyboard,
   MousePointer,
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-c82d
   Accessibility,
   Settings,
   X,
@@ -30,7 +17,6 @@ import {
   MousePointer,
   Smartphone
 } from 'lucide-react';
-
 interface AccessibilitySettings {
   highContrast: boolean;
   largeText: boolean;
@@ -41,13 +27,11 @@ interface AccessibilitySettings {
   colorBlind: boolean;
   dyslexia: boolean;
 }
-
 interface EnhancedAccessibilityProps {
   enabled?: boolean;
   showControls?: boolean;
   className?: string;
 }
-
 export const EnhancedAccessibility: React.FC<EnhancedAccessibilityProps> = ({
   enabled = true,
   showControls = true,
@@ -66,11 +50,9 @@ export const EnhancedAccessibility: React.FC<EnhancedAccessibilityProps> = ({
   });
   const [currentFocus, setCurrentFocus] = useState<HTMLElement | null>(null);
   const [announcements, setAnnouncements] = useState<string[]>([]);
-
   // Apply accessibility settings to document
   const applySettings = useCallback((newSettings: AccessibilitySettings) => {
     const root = document.documentElement;
-    
     // High contrast
     if (newSettings.highContrast) {
       root.classList.add('high-contrast');
@@ -85,7 +67,6 @@ export const EnhancedAccessibility: React.FC<EnhancedAccessibilityProps> = ({
       root.style.removeProperty('--bg-primary');
       root.style.removeProperty('--bg-secondary');
     }
-
     // Large text
     if (newSettings.largeText) {
       root.style.fontSize = '18px';
@@ -94,28 +75,24 @@ export const EnhancedAccessibility: React.FC<EnhancedAccessibilityProps> = ({
       root.style.fontSize = '16px';
       root.style.lineHeight = '1.5';
     }
-
     // Reduced motion
     if (newSettings.reducedMotion) {
       root.style.setProperty('--reduced-motion', 'reduce');
     } else {
       root.style.removeProperty('--reduced-motion');
     }
-
     // Focus indicator
     if (newSettings.focusIndicator) {
       root.style.setProperty('--focus-ring', '2px solid #3b82f6');
     } else {
       root.style.setProperty('--focus-ring', 'none');
     }
-
     // Color blind support
     if (newSettings.colorBlind) {
       root.classList.add('color-blind-support');
     } else {
       root.classList.remove('color-blind-support');
     }
-
     // Dyslexia support
     if (newSettings.dyslexia) {
       root.style.fontFamily = 'OpenDyslexic, Arial, sans-serif';
@@ -126,11 +103,9 @@ export const EnhancedAccessibility: React.FC<EnhancedAccessibilityProps> = ({
       root.style.letterSpacing = '';
       root.style.wordSpacing = '';
     }
-
     setSettings(newSettings);
     localStorage.setItem('accessibility-settings', JSON.stringify(newSettings));
   }, []);
-
   // Load saved settings on mount
   useEffect(() => {
     const savedSettings = localStorage.getItem('accessibility-settings');
@@ -140,7 +115,6 @@ export const EnhancedAccessibility: React.FC<EnhancedAccessibilityProps> = ({
       applySettings(parsed);
     }
   }, [applySettings]);
-
   // Screen reader announcements
   const announce = useCallback((message: string) => {
     const announcement = document.createElement('div');
@@ -148,40 +122,31 @@ export const EnhancedAccessibility: React.FC<EnhancedAccessibilityProps> = ({
     announcement.setAttribute('aria-atomic', 'true');
     announcement.className = 'sr-only';
     announcement.textContent = message;
-    
     document.body.appendChild(announcement);
-    
     // Remove after announcement
     setTimeout(() => {
       document.body.removeChild(announcement);
     }, 1000);
-
     setAnnouncements(prev => [...prev, message]);
   }, []);
-
   // Enhanced keyboard navigation
   useEffect(() => {
     if (!settings.keyboardNavigation) return;
-
     const handleKeyDown = (e: KeyboardEvent) => {
       const target = e.target as HTMLElement;
-      
       // Skip if in input/textarea
       if (target.tagName === 'INPUT' || target.tagName === 'TEXTAREA') return;
-
       switch (e.key) {
         case 'Tab':
           // Enhanced tab navigation with visual feedback
           setCurrentFocus(target);
           target.style.outline = '2px solid #3b82f6';
           target.style.outlineOffset = '2px';
-          
           setTimeout(() => {
             target.style.outline = '';
             target.style.outlineOffset = '';
           }, 2000);
           break;
-          
         case 'Enter':
         case ' ':
           if (target.tagName === 'BUTTON' || target.getAttribute('role') === 'button') {
@@ -190,7 +155,6 @@ export const EnhancedAccessibility: React.FC<EnhancedAccessibilityProps> = ({
             announce(`Activated ${target.textContent || target.getAttribute('aria-label') || 'button'}`);
           }
           break;
-          
         case 'Escape':
           // Close modals, dropdowns, etc.
           const modals = document.querySelectorAll('[role="dialog"], [data-modal]');
@@ -202,20 +166,16 @@ export const EnhancedAccessibility: React.FC<EnhancedAccessibilityProps> = ({
           break;
       }
     };
-
     document.addEventListener('keydown', handleKeyDown);
     return () => document.removeEventListener('keydown', handleKeyDown);
   }, [settings.keyboardNavigation, announce]);
-
   // Focus management
   useEffect(() => {
     if (!settings.focusIndicator) return;
-
     const handleFocusIn = (e: FocusEvent) => {
       const target = e.target as HTMLElement;
       target.style.outline = '2px solid #3b82f6';
       target.style.outlineOffset = '2px';
-      
       if (settings.screenReader) {
         const label = target.getAttribute('aria-label') || 
                      target.getAttribute('title') || 
@@ -223,38 +183,31 @@ export const EnhancedAccessibility: React.FC<EnhancedAccessibilityProps> = ({
         if (label) announce(`Focused on ${label}`);
       }
     };
-
     const handleFocusOut = (e: FocusEvent) => {
       const target = e.target as HTMLElement;
       target.style.outline = '';
       target.style.outlineOffset = '';
     };
-
     document.addEventListener('focusin', handleFocusIn);
     document.addEventListener('focusout', handleFocusOut);
-    
     return () => {
       document.removeEventListener('focusin', handleFocusIn);
       document.removeEventListener('focusout', handleFocusOut);
     };
   }, [settings.focusIndicator, settings.screenReader, announce]);
-
   // Skip to main content link
   useEffect(() => {
     const skipLink = document.createElement('a');
     skipLink.href = '#main-content';
     skipLink.textContent = 'Skip to main content';
     skipLink.className = 'skip-link sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-blue-600 text-white px-4 py-2 rounded z-50';
-    
     document.body.insertBefore(skipLink, document.body.firstChild);
-    
     return () => {
       if (skipLink.parentNode) {
         skipLink.parentNode.removeChild(skipLink);
       }
     };
   }, []);
-
   // Quick accessibility actions
   const quickActions = [
     {
@@ -306,9 +259,7 @@ export const EnhancedAccessibility: React.FC<EnhancedAccessibilityProps> = ({
       }
     }
   ];
-
   if (!enabled) return null;
-
   return (
     <>
       {/* Accessibility Toggle Button */}
@@ -326,7 +277,6 @@ export const EnhancedAccessibility: React.FC<EnhancedAccessibilityProps> = ({
           <Accessibility className="w-6 h-6" />
         </motion.button>
       )}
-
       {/* Quick Actions Bar */}
       <motion.div
         initial={{ opacity: 0, y: 20 }}
@@ -352,7 +302,6 @@ export const EnhancedAccessibility: React.FC<EnhancedAccessibilityProps> = ({
           </motion.button>
         ))}
       </motion.div>
-
       {/* Accessibility Panel */}
       <AnimatePresence>
         {isOpen && (
@@ -384,7 +333,6 @@ export const EnhancedAccessibility: React.FC<EnhancedAccessibilityProps> = ({
                   <X className="w-6 h-6" />
                 </button>
               </div>
-
               {/* Settings Grid */}
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
                 {Object.entries(settings).map(([key, value]) => {
@@ -397,7 +345,6 @@ export const EnhancedAccessibility: React.FC<EnhancedAccessibilityProps> = ({
                               key === 'focusIndicator' ? MousePointer : 
                               key === 'colorBlind' ? Eye : 
                               key === 'dyslexia' ? Type : Settings;
-
                   return (
                     <div key={key} className="flex items-center justify-between p-4 bg-slate-800/50 rounded-lg border border-slate-700/50">
                       <div className="flex items-center space-x-3">
@@ -427,7 +374,6 @@ export const EnhancedAccessibility: React.FC<EnhancedAccessibilityProps> = ({
                   );
                 })}
               </div>
-
               {/* Quick Tips */}
               <div className="bg-cyan-500/10 border border-cyan-500/20 rounded-lg p-4 mb-6">
                 <h3 className="text-lg font-semibold text-cyan-400 mb-3 flex items-center space-x-2">
@@ -443,36 +389,17 @@ export const EnhancedAccessibility: React.FC<EnhancedAccessibilityProps> = ({
                   <li>• Screen reader announcements provide audio feedback</li>
                 </ul>
               </div>
-
-<<<<<<< HEAD
-              {/* Status Indicators */}
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-3">
-                <div className="flex items-center space-x-2 p-3 bg-slate-800/50 rounded-lg">
-                  <CheckCircle className="w-4 h-4 text-green-400" />
-                  <span className="text-sm text-gray-300">Focus Management</span>
-                </div>
-                <div className="flex items-center space-x-2 p-3 bg-slate-800/50 rounded-lg">
-                  <CheckCircle className="w-4 h-4 text-green-400" />
-                  <span className="text-sm text-gray-300">Keyboard Navigation</span>
-                </div>
-                <div className="flex items-center space-x-2 p-3 bg-slate-800/50 rounded-lg">
-                  <CheckCircle className="w-4 h-4 text-green-400" />
-                  <span className="text-sm text-gray-300">Screen Reader Ready</span>
-                </div>
-=======
               {/* Help Text */}
               <div className="mt-6 p-4 bg-zion-cyan/10 border border-zion-cyan/20 rounded-lg">
                 <p className="text-sm text-zion-cyan">
                   These accessibility features help make our website more usable for everyone.
                   Changes are automatically saved and will persist across your visits.
                 </p>
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-c82d
               </div>
             </motion.div>
           </motion.div>
         )}
       </AnimatePresence>
-
       {/* Screen Reader Only Announcements */}
       <div className="sr-only" aria-live="polite" aria-atomic="true">
         {announcements.map((announcement, index) => (

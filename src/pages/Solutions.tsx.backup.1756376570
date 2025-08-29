@@ -1,21 +1,6 @@
 import React from 'react';
 import { SEO } from '@/components/SEO';
-<<<<<<< HEAD
-
-export default function Solutions() {
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 py-16">
-      <SEO title="Solutions - Zion Tech Group" description="Industry solutions and use-cases from Zion Tech Group." />
-      <div className="container-responsive text-white">
-        <h1 className="text-4xl font-bold mb-4">Solutions</h1>
-        <p className="text-lg text-gray-300 max-w-2xl">Explore our industry-focused solutions across AI, cybersecurity, cloud, and digital transformation. More detailed content is coming soon.</p>
-      </div>
-    </div>
-  );
-}
-=======
 import { Link } from 'react-router-dom';
-
 const Solutions: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white">
@@ -33,10 +18,7 @@ const Solutions: React.FC = () => {
     </div>
   );
 };
-
 export default Solutions;
->>>>>>> origin/cursor/website-audit-and-enhancement-7ab5
-
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { 
@@ -78,7 +60,6 @@ import {
   Search,
   Filter
 } from 'lucide-react';
-
 const solutionCategories = [
   {
     id: 'ai-ml',
@@ -171,7 +152,6 @@ const solutionCategories = [
     ]
   }
 ];
-
 const industrySolutions = [
   {
     industry: 'Healthcare',
@@ -252,7 +232,6 @@ const industrySolutions = [
     color: 'from-gray-500 to-slate-600'
   }
 ];
-
 const featuredSolutions = [
   {
     id: 1,
@@ -327,23 +306,18 @@ const featuredSolutions = [
     color: 'from-blue-500 to-cyan-600'
   }
 ];
-
 export default function Solutions() {
   const [selectedCategory, setSelectedCategory] = useState('All');
   const [selectedIndustry, setSelectedIndustry] = useState('All');
   const [searchTerm, setSearchTerm] = useState('');
-
   const categories = ['All', ...solutionCategories.map(cat => cat.name)];
   const industries = ['All', ...industrySolutions.map(ind => ind.industry)];
-
   const filteredSolutions = featuredSolutions.filter(solution => {
     const matchesCategory = selectedCategory === 'All' || solution.category === selectedCategory;
     const matchesSearch = solution.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          solution.description.toLowerCase().includes(searchTerm.toLowerCase());
-    
     return matchesCategory && matchesSearch;
   });
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-zinc-900 via-zinc-800 to-zinc-700">
       {/* Hero Section */}
@@ -369,7 +343,6 @@ export default function Solutions() {
           </motion.div>
         </div>
       </section>
-
       {/* Search & Filters */}
       <section className="py-8">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -388,7 +361,6 @@ export default function Solutions() {
                   />
                 </div>
               </div>
-
               {/* Category Filter */}
               <div>
                 <select
@@ -401,7 +373,6 @@ export default function Solutions() {
                   ))}
                 </select>
               </div>
-
               {/* Industry Filter */}
               <div>
                 <select
@@ -418,7 +389,6 @@ export default function Solutions() {
           </div>
         </div>
       </section>
-
       {/* Solution Categories */}
       <section className="py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -432,7 +402,6 @@ export default function Solutions() {
             <h2 className="text-3xl font-bold text-white mb-4">Solution Categories</h2>
             <p className="text-zion-slate-light text-lg">Explore our comprehensive range of technology solutions</p>
           </motion.div>
-
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {solutionCategories.map((category, index) => {
               const IconComponent = category.icon;
@@ -472,7 +441,6 @@ export default function Solutions() {
           </div>
         </div>
       </section>
-
       {/* Industry Solutions */}
       <section className="py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -486,7 +454,6 @@ export default function Solutions() {
             <h2 className="text-3xl font-bold text-white mb-4">Industry-Specific Solutions</h2>
             <p className="text-zion-slate-light text-lg">Tailored solutions designed for your industry's unique challenges</p>
           </motion.div>
-
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {industrySolutions.map((industry, index) => {
               const IconComponent = industry.icon;
@@ -526,7 +493,6 @@ export default function Solutions() {
           </div>
         </div>
       </section>
-
       {/* Featured Solutions */}
       <section className="py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -540,7 +506,6 @@ export default function Solutions() {
             <h2 className="text-3xl font-bold text-white mb-4">Featured Solutions</h2>
             <p className="text-zion-slate-light text-lg">Our most popular and impactful technology solutions</p>
           </motion.div>
-
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
             {filteredSolutions.map((solution, index) => {
               const IconComponent = solution.icon;
@@ -569,10 +534,8 @@ export default function Solutions() {
                       <div className="text-sm text-zion-slate-light">Starting Price</div>
                     </div>
                   </div>
-
                   {/* Description */}
                   <p className="text-zion-slate-light mb-4">{solution.description}</p>
-
                   {/* Features */}
                   <div className="mb-4">
                     <h4 className="font-semibold text-white mb-2">Key Features</h4>
@@ -585,7 +548,6 @@ export default function Solutions() {
                       ))}
                     </div>
                   </div>
-
                   {/* Benefits */}
                   <div className="mb-4">
                     <h4 className="font-semibold text-white mb-2">Business Benefits</h4>
@@ -598,7 +560,6 @@ export default function Solutions() {
                       ))}
                     </div>
                   </div>
-
                   {/* Implementation & CTA */}
                   <div className="flex items-center justify-between">
                     <div className="text-sm text-zion-slate-light">
@@ -621,7 +582,6 @@ export default function Solutions() {
           </div>
         </div>
       </section>
-
       {/* CTA Section */}
       <section className="py-16">
         <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">

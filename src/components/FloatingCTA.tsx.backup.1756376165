@@ -1,8 +1,5 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-<<<<<<< HEAD
-import { Link } from 'react-router-dom';
-=======
 import {
   MessageCircle,
   X,
@@ -100,11 +97,8 @@ import {
   Volume2,
   VolumeX
 } from 'lucide-react';
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-c82d
-
 export function FloatingCTA() {
   const [isExpanded, setIsExpanded] = useState(false);
-
   return (
     <>
       {/* Floating Action Button */}
@@ -124,7 +118,6 @@ export function FloatingCTA() {
           >
             {isExpanded ? '✕' : '💬'}
           </motion.button>
-
           {/* Expanded Menu */}
           <AnimatePresence>
             {isExpanded && (
@@ -147,7 +140,6 @@ export function FloatingCTA() {
                       <div className="text-sm text-gray-400">Get in touch</div>
                     </div>
                   </Link>
-                  
                   <Link
                     to="/services"
                     className="flex items-center gap-3 p-3 rounded-lg hover:bg-slate-700 transition-colors duration-200 text-white"
@@ -159,7 +151,6 @@ export function FloatingCTA() {
                       <div className="text-sm text-gray-400">Explore solutions</div>
                     </div>
                   </Link>
-                  
                   <Link
                     to="/quote"
                     className="flex items-center gap-3 p-3 rounded-lg hover:bg-slate-700 transition-colors duration-200 text-white"
@@ -171,7 +162,6 @@ export function FloatingCTA() {
                       <div className="text-sm text-gray-400">Request pricing</div>
                     </div>
                   </Link>
-                  
                   <div className="border-t border-slate-600 pt-3">
                     <div className="text-center text-sm text-gray-400 mb-2">
                       Available 24/7
@@ -187,7 +177,6 @@ export function FloatingCTA() {
           </AnimatePresence>
         </div>
       </motion.div>
-
       {/* Backdrop */}
       <AnimatePresence>
         {isExpanded && (

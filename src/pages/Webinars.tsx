@@ -264,15 +264,23 @@ const Webinars: React.FC = () => {
     return matchesCategory && matchesSearch;
   });
 
-  const upcomingWebinars = filteredWebinars.filter(w => new Date(w.date) >= new Date());
-  const pastWebinars = filteredWebinars.filter(w => new Date(w.date) < new Date());
+  const featuredWebinars = webinars.filter(webinar => webinar.featured);
+  const upcomingWebinars = webinars.filter(webinar => webinar.status === 'upcoming');
+
+  const formatDate = (dateString: string) => {
+    return new Date(dateString).toLocaleDateString('en-US', {
+      weekday: 'long',
+      year: 'numeric',
+      month: 'long',
+      day: 'numeric'
+    });
+  };
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO 
         title="Webinars - Zion Tech Group"
-        description="Join our expert-led webinars on AI, quantum computing, cybersecurity, and emerging technologies. Learn from industry leaders and gain practical insights."
-        keywords="webinars, AI, quantum computing, cybersecurity, technology learning, expert sessions, Zion Tech Group"
+        description="Join our expert-led webinars on AI, quantum computing, cybersecurity, cloud computing, and emerging technologies"
       />
       
       {/* Hero Section */}
@@ -348,22 +356,26 @@ const Webinars: React.FC = () => {
         </div>
       </section>
 
-      {/* Upcoming Webinars */}
-      {upcomingWebinars.length > 0 && (
-        <section className="py-16">
-          <div className="container mx-auto px-4">
-            <h2 className="text-3xl font-bold text-white mb-12 text-center">
-              Upcoming Webinars
-            </h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {upcomingWebinars.map((webinar, index) => (
-                <motion.div
-                  key={webinar.id}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
-                  className="group relative bg-slate-800/50 rounded-2xl p-6 border border-slate-700/50 hover:border-cyan-500/50 transition-all duration-300 hover:shadow-xl hover:shadow-cyan-500/10"
-                >
+      {/* Featured Webinars */}
+      <section className="py-16">
+        <div className="container mx-auto px-4">
+          <div className="mb-12">
+            <h2 className="text-3xl font-bold text-white mb-4">Featured Webinars</h2>
+            <p className="text-gray-400">Don't miss these highly anticipated sessions with industry experts</p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {featuredWebinars.map((webinar, index) => (
+              <motion.div
+                key={webinar.id}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                className="group bg-slate-800/50 border border-slate-700/50 rounded-2xl overflow-hidden hover:border-cyan-400/50 transition-all duration-300 hover:bg-slate-800/70"
+              >
+                {/* Header */}
+                <div className={`h-32 bg-gradient-to-br ${webinar.color} relative overflow-hidden`}>
+                  <div className="absolute inset-0 bg-black/20"></div>
                   <div className="absolute top-4 right-4">
                     <div className={`w-12 h-12 rounded-xl bg-gradient-to-br ${webinar.color} flex items-center justify-center group-hover:scale-110 transition-transform duration-300`}>
                       <webinar.icon className="w-6 h-6 text-white" />
@@ -527,31 +539,30 @@ const Webinars: React.FC = () => {
       {/* CTA Section */}
       <section className="py-20">
         <div className="container mx-auto px-4">
-          <div className="bg-gradient-to-r from-cyan-500/10 via-blue-500/10 to-purple-500/10 rounded-3xl p-12 text-center border border-cyan-500/20">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              viewport={{ once: true }}
-            >
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-                Stay Updated with Expert Insights
-              </h2>
-              <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
-                Get notified about upcoming webinars, new recordings, and exclusive content from industry experts. Join thousands of technology professionals.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center max-w-md mx-auto">
-                <input
-                  type="email"
-                  placeholder="Enter your email"
-                  className="flex-1 px-6 py-3 bg-slate-800/50 border border-slate-600 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:border-cyan-500 focus:ring-2 focus:ring-cyan-500/20"
-                />
-                <button className="px-8 py-3 bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 text-white font-medium rounded-xl transition-all duration-300 hover:shadow-lg hover:shadow-cyan-500/25">
-                  Subscribe
-                </button>
-              </div>
-            </motion.div>
-          </div>
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.8 }}
+            className="bg-gradient-to-r from-cyan-500/10 to-blue-500/10 border border-cyan-500/20 rounded-2xl p-12 text-center"
+          >
+            <h2 className="text-3xl font-bold text-white mb-6">
+              Stay Updated with Our Webinars
+            </h2>
+            <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
+              Get notified about upcoming webinars, exclusive content, and early access 
+              to registration for our most popular sessions.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center max-w-md mx-auto">
+              <input
+                type="email"
+                placeholder="Enter your email address"
+                className="flex-1 px-4 py-3 bg-slate-800/50 border border-slate-600/50 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20"
+              />
+              <button className="bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-8 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-600 transition-all duration-300 transform hover:scale-105 shadow-lg shadow-cyan-500/25">
+                Subscribe
+              </button>
+            </div>
+          </motion.div>
         </div>
       </section>
     </div>

@@ -1,164 +1,5 @@
 import React from 'react';
-<<<<<<< HEAD
-import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
-import { 
-  Zap, 
-  Target, 
-  CheckCircle, 
-  ArrowRight,
-  Play,
-  Settings,
-  GitFork,
-  Activity,
-  BarChart3,
-  TrendingUp,
-  Shield,
-  Database,
-  Smartphone,
-  Code,
-  FileText,
-  AlertCircle,
-  CheckSquare,
-  Calculator,
-  PieChart,
-  LineChart,
-  Target2,
-  Wallet,
-  PiggyBank,
-  CreditCard,
-  Receipt,
-  Cloud,
-  Zap2,
-  Gauge,
-  BarChart4,
-  TrendingUp2,
-  Lightbulb,
-  Briefcase,
-  Strategy,
-  Brain,
-  Compass,
-  RefreshCw,
-  TrendingUp3,
-  Layers,
-  Workflow,
-  Scale,
-  Award,
-  Lock,
-  Wifi,
-  Bluetooth,
-  Radio,
-  Sensor,
-  Chip,
-  Circuit,
-  Orbit,
-  Planet,
-  Star,
-  Telescope,
-  Antenna,
-  Signal,
-  Navigation,
-  Earth,
-  Moon,
-  Sun,
-  Binary,
-  Network,
-  Database2,
-  Lock2,
-  Key2,
-  Fingerprint2,
-  Eye,
-  Brain2,
-  Cpu2,
-  Memory,
-  HardDrive,
-  Server2,
-  Phone,
-  Mail,
-  Calendar,
-  MessageSquare,
-  UserPlus,
-  UserCheck,
-  UserX,
-  UserMinus,
-  UserEdit,
-  UserSearch,
-  UserList,
-  UserSettings,
-  UserCog,
-  UserShield,
-  UserStar,
-  UserHeart,
-  UserCheck2,
-  UserX2,
-  UserMinus2,
-  UserPlus2,
-  UserEdit2,
-  UserSearch2,
-  UserList2,
-  UserSettings2,
-  UserCog2,
-  UserShield2,
-  UserStar2,
-  UserHeart2,
-  Monitor,
-  Eye2,
-  Users2,
-  MousePointer,
-  Clock,
-  MapPin,
-  Device,
-  Globe2,
-  Smartphone2,
-  Tablet,
-  Laptop,
-  Desktop,
-  Server3,
-  Database3,
-  HardDrive2,
-  Memory2,
-  Cpu3,
-  Network2,
-  Wifi2,
-  Bluetooth2,
-  Radio2,
-  Signal2,
-  Antenna2,
-  Satellite2,
-  Orbit2,
-  Planet2,
-  Star2,
-  Telescope2,
-  Navigation2,
-  Earth2,
-  Moon2,
-  Sun2,
-  Binary2,
-  Network3,
-  Database4,
-  Lock3,
-  Key3,
-  Fingerprint3,
-  Eye3,
-  Brain3,
-  Cpu4,
-  Memory3,
-  HardDrive3,
-  Server4,
-  Rocket,
-  Globe,
-  Building,
-  DollarSign,
-  Users,
-  Clock,
-  Search,
-  Sparkles
-} from 'lucide-react';
-import { SEO } from '@/components/SEO';
-=======
 import SEO from '@/components/SEO';
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-4b87
-
 export default function DigitalTransformation() {
   const features = [
     {
@@ -192,7 +33,6 @@ export default function DigitalTransformation() {
       description: 'Track transformation progress and measure ROI'
     }
   ];
-
   const benefits = [
     'Increase operational efficiency by 40%',
     'Reduce costs by 30% through automation',
@@ -201,7 +41,6 @@ export default function DigitalTransformation() {
     'Accelerate time to market',
     'Enhance competitive advantage'
   ];
-
   const services = [
     {
       icon: Strategy,
@@ -224,7 +63,6 @@ export default function DigitalTransformation() {
       description: 'Implement advanced analytics and business intelligence'
     }
   ];
-
   const useCases = [
     {
       industry: 'Manufacturing',
@@ -275,17 +113,14 @@ export default function DigitalTransformation() {
               <Zap className="w-4 h-4 mr-2" />
               Digital Transformation Solutions
             </div>
-            
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
               Digital
               <span className="bg-gradient-to-r from-orange-400 to-red-500 bg-clip-text text-transparent"> Transformation</span>
             </h1>
-            
             <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
               Transform your business for the digital age with our comprehensive 
               digital transformation solutions that drive innovation and growth.
             </p>
-            
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="px-8 py-4 bg-gradient-to-r from-orange-500 to-red-500 text-white font-semibold rounded-lg hover:from-orange-600 hover:to-red-600 transition-all duration-200 flex items-center justify-center">
                 <Play className="w-5 h-5 mr-2" />
@@ -299,7 +134,6 @@ export default function DigitalTransformation() {
           </motion.div>
         </div>
       </section>
-
       {/* Features Section */}
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -317,7 +151,6 @@ export default function DigitalTransformation() {
               successful digital transformation initiatives.
             </p>
           </motion.div>
-
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index) => (
               <motion.div
@@ -337,7 +170,6 @@ export default function DigitalTransformation() {
           </div>
         </div>
       </section>
-
       {/* Services Section */}
       <section className="py-20 bg-slate-800/30">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -355,7 +187,6 @@ export default function DigitalTransformation() {
               end-to-end digital transformation solutions.
             </p>
           </motion.div>
-
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {services.map((service, index) => (
               <motion.div
@@ -379,7 +210,6 @@ export default function DigitalTransformation() {
           </div>
         </div>
       </section>
-
       {/* Benefits Section */}
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -396,7 +226,6 @@ export default function DigitalTransformation() {
               Experience measurable improvements in efficiency, innovation, and business performance.
             </p>
           </motion.div>
-
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <div className="space-y-6">
               {benefits.slice(0, 3).map((benefit, index) => (
@@ -429,7 +258,6 @@ export default function DigitalTransformation() {
           </div>
         </div>
       </section>
-
       {/* Use Cases Section */}
       <section className="py-20 bg-slate-800/30">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -447,7 +275,6 @@ export default function DigitalTransformation() {
               tailored strategies for different business challenges.
             </p>
           </motion.div>
-
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {useCases.map((useCase, index) => (
               <motion.div
@@ -467,7 +294,6 @@ export default function DigitalTransformation() {
           </div>
         </div>
       </section>
-
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-orange-500/10 to-red-500/10">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -498,5 +324,4 @@ export default function DigitalTransformation() {
     </div>
   );
 };
-
 export default DigitalTransformation;

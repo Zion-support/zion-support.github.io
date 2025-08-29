@@ -1,40 +1,4 @@
 import React, { useState, useEffect } from 'react';
-<<<<<<< HEAD
-import { EnhancedNavigation } from '../components/EnhancedNavigation';
-import { 
-  Brain, 
-  Workflow, 
-  Shield, 
-  Cloud, 
-  Cpu, 
-  Users, 
-  ShoppingCart, 
-  MessageCircle, 
-  BarChart3, 
-  HelpCircle, 
-  FileText, 
-  Truck, 
-  Mail, 
-  Smartphone, 
-  DollarSign, 
-  CheckCircle, 
-  Target, 
-  Zap, 
-  Atom, 
-  Network, 
-  Eye, 
-  Heart, 
-  Building, 
-  Rocket, 
-  Star, 
-  Gauge, 
-  Server, 
-  TrendingUp, 
-  Search, 
-  Lock, 
-  BookOpen
-} from 'lucide-react';
-=======
 import { Link } from 'react-router-dom';
 import { Menu, X, Search, User, Bell, ChevronDown, Zap, Brain, Shield, Cloud, Rocket, Globe, Cpu, Lock, Heart, Users, ShoppingCart, BookOpen, MessageCircle, HelpCircle, DollarSign, Gauge, GitFork, Atom, Star, Target, TrendingUp, Award, Code, Truck, Building, BarChart3, PenTool, Eye, Server, Smartphone, Database, Network, Clock, ArrowRight, PanelLeft, Sparkles, Phone, Mail, MapPin, Satellite, FileText, Newspaper, Briefcase } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -42,25 +6,19 @@ import { ThemeToggle } from '../components/ThemeToggle';
 import { ZionLoadingSpinner } from '../components/ui/EnhancedLoadingSpinner';
 import { Sidebar } from '../components/Sidebar';
 import { EnhancedSearch } from '../components/EnhancedSearch';
->>>>>>> origin/cursor/website-audit-and-enhancement-faff
-
 export default function AppHeader() {
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
   const location = useLocation();
-
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 50);
     };
-
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
-
   const { user, logout } = useAuth();
-
   const navigation = [
     { name: 'Home', href: '/', current: true },
     { name: 'Services', href: '/services', current: false },
@@ -70,7 +28,6 @@ export default function AppHeader() {
     { name: 'About', href: '/about', current: false },
     { name: 'Contact', href: '/contact', current: false },
   ];
-
   const services = [
     // Featured & New Services
     { name: '2025 New Innovative Services', href: '/new-innovative-services-2025', icon: Star, description: 'Revolutionary AI & Micro SAAS Solutions', category: 'Featured', featured: true, color: 'from-zion-cyan to-zion-purple' },
@@ -78,7 +35,6 @@ export default function AppHeader() {
     { name: '2027 Services Overview', href: '/comprehensive-services-showcase-2027', icon: Star, description: 'Cutting-edge Innovation & Emerging Tech', category: 'Featured', featured: true, color: 'from-purple-500 to-pink-500' },
     { name: '2029 Cutting-Edge Services', href: '/zion-cutting-edge-services-2029', icon: Star, description: 'Future-ready Technology Solutions', category: 'Featured', featured: true, color: 'from-indigo-500 to-purple-500' },
     { name: '2029 Comprehensive Services Showcase', href: '/comprehensive-services-showcase-2029', icon: Star, description: 'Complete Portfolio of AI, IT & Micro SaaS Solutions', category: 'Featured', featured: true, color: 'from-cyan-500 to-purple-500' },
-    
     // AI & Machine Learning
     { name: 'AI Workflow Orchestrator', href: '/services/ai-workflow-orchestrator', icon: GitFork, description: 'AI-powered workflow automation', category: 'AI & ML', color: 'from-zion-cyan to-zion-purple' },
     { name: 'AI Data Governance Platform', href: '/services/ai-data-governance-platform', icon: Shield, description: 'AI-powered data governance', category: 'AI & ML', color: 'from-zion-purple to-zion-cyan' },
@@ -102,51 +58,30 @@ export default function AppHeader() {
     { name: 'AI Supply Chain Optimization', href: '/services/ai-supply-chain-optimization', icon: Truck, description: 'AI-powered supply chain optimization', category: 'AI & ML', color: 'from-green-500 to-blue-500' },
     { name: 'AI Autonomous Research Assistant', href: '/services/ai-autonomous-research-assistant', icon: Brain, description: 'AI-powered autonomous research', category: 'AI & ML', color: 'from-blue-500 to-purple-500' },
     { name: 'AI Cybersecurity Threat Intelligence', href: '/services/ai-cybersecurity-threat-intelligence', icon: Shield, description: 'AI-powered threat detection', category: 'AI & ML', color: 'from-red-500 to-orange-500' },
-    
     // Cloud & DevOps
     { name: 'Cloud DevOps', href: '/services/cloud-devops', icon: Cloud, description: 'Infrastructure automation & scaling', category: 'Cloud & DevOps', color: 'from-blue-500 to-cyan-500' },
     { name: 'IT Infrastructure', href: '/services/it-infrastructure', icon: Server, description: 'Enterprise infrastructure solutions', category: 'Cloud & DevOps', color: 'from-gray-500 to-slate-500' },
     { name: 'FinOps Advisor', href: '/services/finops-advisor', icon: DollarSign, description: 'Cloud cost optimization', category: 'Cloud & DevOps', color: 'from-green-500 to-emerald-500' },
     { name: 'Cloud FinOps Optimizer', href: '/services/cloud-finops-optimizer', icon: BarChart3, description: 'Financial operations automation', category: 'Cloud & DevOps', color: 'from-blue-500 to-indigo-500' },
-    
     // Cybersecurity
     { name: 'Security Headers & CSP', href: '/services/security-headers-csp', icon: Lock, description: 'Web security hardening', category: 'Cybersecurity', color: 'from-red-500 to-pink-500' },
     { name: 'DSR Privacy Portal', href: '/services/dsr-portal', icon: Shield, description: 'GDPR/CCPA compliance', category: 'Cybersecurity', color: 'from-purple-500 to-indigo-500' },
     { name: 'Zero Trust Network Access', href: '/services/zero-trust-network-access', icon: Lock, description: 'Modern security architecture', category: 'Cybersecurity', color: 'from-red-500 to-orange-500' },
-    
     // Digital Transformation
     { name: 'Digital Twin', href: '/services/digital-twin', icon: Eye, description: 'Virtual system replicas', category: 'Digital Transformation', color: 'from-cyan-500 to-blue-500' },
     { name: 'Digital Transformation', href: '/services/digital-transformation', icon: Zap, description: 'Strategic technology consulting', category: 'Digital Transformation', color: 'from-yellow-500 to-orange-500' },
     { name: 'IT Consulting', href: '/it-consulting', icon: Cpu, description: 'Technology strategy & planning', category: 'Digital Transformation', color: 'from-gray-500 to-slate-500' },
-    
     // Emerging Technologies
     { name: 'Quantum Computing', href: '/services/quantum-computing', icon: Atom, description: 'Next-gen computational power', category: 'Emerging Tech', color: 'from-indigo-500 to-purple-500' },
     { name: 'IoT Edge Computing', href: '/services/iot-edge-computing', icon: Network, description: 'Smart device networks', category: 'Emerging Tech', color: 'from-blue-500 to-cyan-500' },
     { name: 'Space Technology', href: '/space-tech', icon: Satellite, description: 'Space-based solutions', category: 'Emerging Tech', color: 'from-blue-500 to-indigo-500' },
-    
     // Data & Analytics
     { name: 'Data Analytics', href: '/services/data-analytics', icon: BarChart3, description: 'Business intelligence & insights', category: 'Data & Analytics', color: 'from-blue-500 to-indigo-500' },
-    
     // Micro SaaS Solutions
     { name: 'Micro SaaS Platform', href: '/micro-saas', icon: ShoppingCart, description: 'Niche software solutions', category: 'Micro SaaS', color: 'from-purple-500 to-pink-500' },
     { name: 'Micro CRM', href: '/services/micro-crm', icon: Users, description: 'Customer relationship management', category: 'Micro SaaS', color: 'from-blue-500 to-cyan-500' },
     { name: 'Helpdesk Platform', href: '/services/helpdesk-platform', icon: MessageCircle, description: 'Customer support system', category: 'Micro SaaS', color: 'from-green-500 to-emerald-500' },
     { name: 'Website Analytics', href: '/services/website-analytics', icon: BarChart3, description: 'Performance tracking & insights', category: 'Micro SaaS', color: 'from-blue-500 to-indigo-500' },
-<<<<<<< HEAD
-    { name: 'IT Helpdesk', href: '/services/it-helpdesk', icon: HelpCircle, description: 'IT support system', category: 'Micro SaaS', color: 'from-green-500 to-emerald-500' },
-    { name: 'Affiliate Tracking', href: '/services/affiliate-tracking', icon: TrendingUp, description: 'Affiliate program management', category: 'Micro SaaS', color: 'from-orange-500 to-red-500' },
-    { name: 'Mobile Survey', href: '/services/mobile-survey', icon: Smartphone, description: 'Mobile survey platform', category: 'Micro SaaS', color: 'from-blue-500 to-cyan-500' },
-    { name: 'Podcast Transcription', href: '/services/podcast-transcription', icon: MessageCircle, description: 'Audio to text conversion', category: 'Micro SaaS', color: 'from-green-500 to-emerald-500' },
-    { name: 'Email Sequencer', href: '/services/email-sequencer', icon: Mail, description: 'Automated email campaigns', category: 'Micro SaaS', color: 'from-blue-500 to-indigo-500' },
-    { name: 'Returns Management', href: '/services/returns-management', icon: Truck, description: 'Product returns system', category: 'Micro SaaS', color: 'from-orange-500 to-red-500' },
-    { name: 'LLM Content Studio', href: '/services/llm-content-studio', icon: FileText, description: 'AI content creation', category: 'Micro SaaS', color: 'from-purple-500 to-pink-500' },
-    
-    // New AI-Powered Services
-    { name: 'AI Data Governance Platform', href: '/services/ai-data-governance-platform', icon: Shield, description: 'AI-powered data governance', category: 'AI & ML', color: 'from-indigo-500 to-purple-500' },
-    { name: 'AI Customer Experience Analytics', href: '/services/ai-customer-experience-analytics', icon: Brain, description: 'AI-powered customer insights', category: 'AI & ML', color: 'from-purple-500 to-pink-500' },
-    { name: 'AI Financial Risk Management', href: '/services/ai-financial-risk-management', icon: Shield, description: 'AI-powered financial risk assessment', category: 'AI & ML', color: 'from-red-500 to-orange-500' },
-    { name: 'AI Code Review Security Scanner', href: '/services/ai-code-review-security-scanner', icon: Code, description: 'Automated code security analysis', category: 'AI & ML', color: 'from-green-500 to-emerald-500' },
-=======
     { name: 'IT Helpdesk', href: '/services/it-helpdesk', icon: HelpCircle, description: 'IT support automation', category: 'Micro SaaS', color: 'from-blue-500 to-cyan-500' },
     { name: 'Affiliate Tracking', href: '/services/affiliate-tracking', icon: TrendingUp, description: 'Performance marketing tracking', category: 'Micro SaaS', color: 'from-green-500 to-emerald-500' },
     { name: 'Mobile Survey', href: '/services/mobile-survey', icon: Smartphone, description: 'Mobile data collection', category: 'Micro SaaS', color: 'from-purple-500 to-pink-500' },
@@ -154,19 +89,13 @@ export default function AppHeader() {
     { name: 'Email Sequencer', href: '/services/email-sequencer', icon: Mail, description: 'Automated email campaigns', category: 'Micro SaaS', color: 'from-green-500 to-teal-500' },
     { name: 'Returns Management', href: '/services/returns-management', icon: Truck, description: 'E-commerce returns automation', category: 'Micro SaaS', color: 'from-orange-500 to-red-500' },
     { name: 'LLM Content Studio', href: '/services/llm-content-studio', icon: FileText, description: 'AI content generation', category: 'Micro SaaS', color: 'from-purple-500 to-pink-500' },
->>>>>>> origin/cursor/website-audit-and-enhancement-faff
   ];
-
   const quickLinks = [
     { name: 'Marketplace', href: '/marketplace', icon: ShoppingCart },
     { name: 'Blog', href: '/blog', icon: BookOpen },
     { name: 'FAQ', href: '/faq', icon: HelpCircle },
     { name: 'Pricing', href: '/pricing', icon: DollarSign },
     { name: 'Partners', href: '/partners', icon: Users },
-<<<<<<< HEAD
-    { name: 'Careers', href: '/careers', icon: Users },
-    { name: 'Help Center', href: '/help', icon: MessageCircle },
-=======
     { name: 'Case Studies', href: '/case-studies', icon: FileText },
     { name: 'FAQ', href: '/faq', icon: HelpCircle },
     { name: 'Help Center', href: '/help', icon: HelpCircle },
@@ -174,9 +103,7 @@ export default function AppHeader() {
     { name: 'Blog', href: '/blog', icon: BookOpen },
     { name: 'News', href: '/news', icon: Newspaper },
     { name: 'Careers', href: '/careers', icon: Briefcase },
->>>>>>> origin/cursor/website-audit-and-enhancement-faff
   ];
-
   const featuredServices = [
     { name: 'AI Workflow Orchestrator', href: '/services/ai-workflow-orchestrator', icon: Workflow, description: 'Intelligent Process Automation', category: 'AI & Automation', featured: true },
     { name: 'AI Business Intelligence', href: '/services/ai-business-intelligence', icon: Brain, description: 'Advanced AI-powered analytics', category: 'AI & Analytics', featured: true },
@@ -198,7 +125,6 @@ export default function AppHeader() {
             <div className="absolute top-40 right-40 w-12 h-12 border border-zion-cyan/20 rounded-full animate-pulse delay-3000 float-fast"></div>
           </div>
         </div>
-
         <div className="relative z-10">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="flex justify-between items-center py-4">
@@ -219,7 +145,6 @@ export default function AppHeader() {
                   </div>
                 </Link>
               </div>
-
               {/* Desktop Navigation */}
               <nav className="hidden lg:flex items-center space-x-8">
                 {navigation.slice(0, 6).map((item) => (
@@ -235,14 +160,12 @@ export default function AppHeader() {
                     <span className="absolute inset-x-0 -bottom-px h-px bg-gradient-to-r from-transparent via-zion-cyan to-transparent scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></span>
                   </Link>
                 ))}
-
                 {/* Services Dropdown */}
                 <div className="relative group">
                   <button className="flex items-center space-x-1 px-3 py-2 text-sm font-medium text-white hover:text-zion-cyan transition-colors duration-300">
                     <span>Services</span>
                     <ChevronDown className="w-4 h-4 group-hover:rotate-180 transition-transform duration-300" />
                   </button>
-                  
                   <div className="absolute top-full left-0 mt-2 w-96 bg-zion-slate-dark/95 backdrop-blur-xl border border-zion-cyan/20 rounded-2xl shadow-2xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform translate-y-2 group-hover:translate-y-0">
                     <div className="p-6">
                       <div className="grid grid-cols-1 gap-4">
@@ -277,7 +200,6 @@ export default function AppHeader() {
                     </div>
                   </div>
                 </div>
-
                 {/* Contact */}
                 <Link
                   to="/contact"
@@ -286,7 +208,6 @@ export default function AppHeader() {
                   Get Started
                 </Link>
               </nav>
-
               {/* Mobile menu button */}
               <div className="lg:hidden">
                 <button
@@ -299,7 +220,6 @@ export default function AppHeader() {
             </div>
           </div>
         </div>
-
         {/* Mobile Navigation */}
         <AnimatePresence>
           {isOpen && (
@@ -320,7 +240,6 @@ export default function AppHeader() {
                     {item.name}
                   </Link>
                 ))}
-                
                 {/* Mobile Services */}
                 <div className="space-y-2">
                   <p className="px-3 py-2 text-sm font-medium text-zion-slate-light">Services</p>
@@ -342,7 +261,6 @@ export default function AppHeader() {
                     View All Services →
                   </Link>
                 </div>
-
                 <div className="pt-4">
                   <Link
                     to="/contact"

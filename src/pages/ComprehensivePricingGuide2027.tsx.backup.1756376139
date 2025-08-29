@@ -41,20 +41,11 @@ import {
   Gem,
   Diamond
 } from 'lucide-react';
-<<<<<<< HEAD
-import { SEO } from '@/components/SEO';
-import { REAL_INNOVATIVE_SERVICES_2025 } from '../data/realInnovativeServices2025';
-import { COMPREHENSIVE_MICRO_SAAS_SERVICES_2025 } from '../data/comprehensiveMicroSaasServices2025';
-=======
 import SEO from '../components/SEO';
 import { INNOVATIVE_SERVICES_2025, InnovativeService2025 } from '../data/innovativeServices2025';
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-4b87
-
 export default function ComprehensivePricingGuide2027() {
   const [selectedCategory, setSelectedCategory] = React.useState('all');
-
   const allServices = [...REAL_INNOVATIVE_SERVICES_2025, ...COMPREHENSIVE_MICRO_SAAS_SERVICES_2025];
-  
   const categories = [
     { id: 'all', name: 'All Services', icon: Sparkles, color: 'from-purple-500 to-pink-500' },
     { id: 'AI & Analytics', name: 'AI & Analytics', icon: Brain, color: 'from-blue-500 to-cyan-500' },
@@ -74,28 +65,23 @@ export default function ComprehensivePricingGuide2027() {
     { id: 'Micro SaaS & Finance', name: 'Micro SaaS & Finance', icon: DollarSign, color: 'from-green-500 to-emerald-500' },
     { id: 'Micro SaaS & Operations', name: 'Micro SaaS & Operations', icon: Cpu, color: 'from-gray-500 to-slate-500' }
   ];
-
   const filteredServices = allServices.filter(service => {
     return selectedCategory === 'all' || service.category === selectedCategory;
   });
-
   const getCategoryIcon = (category: string) => {
     const categoryData = categories.find(cat => cat.id === category);
     return categoryData ? categoryData.icon : Sparkles;
   };
-
   const getCategoryColor = (category: string) => {
     const categoryData = categories.find(cat => cat.id === category);
     return categoryData ? categoryData.color : 'from-purple-500 to-pink-500';
   };
-
   const getPricingTier = (price: number) => {
     if (price < 200) return { tier: 'Starter', icon: Star, color: 'from-green-500 to-emerald-500' };
     if (price < 1000) return { tier: 'Professional', icon: Gem, color: 'from-blue-500 to-cyan-500' };
     if (price < 3000) return { tier: 'Business', icon: Crown, color: 'from-purple-500 to-pink-500' };
     return { tier: 'Enterprise', icon: Diamond, color: 'from-red-500 to-orange-500' };
   };
-
   const getInnovationBadge = (level: string) => {
     switch (level.toLowerCase()) {
       case 'advanced':
@@ -108,14 +94,12 @@ export default function ComprehensivePricingGuide2027() {
         return { text: 'Innovative', color: 'bg-gradient-to-r from-orange-500 to-red-500', icon: Sparkles };
     }
   };
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO 
         title="Comprehensive Pricing Guide 2027 - Zion Tech Group"
         description="Explore our comprehensive pricing guide for all AI-powered services, IT solutions, and micro SAAS tools. Find the perfect solution for your business needs and budget."
       />
-      
       {/* Hero Section */}
       <section className="relative py-20 px-6 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-zion-blue/20 to-zion-cyan/20"></div>
@@ -155,7 +139,6 @@ export default function ComprehensivePricingGuide2027() {
           </motion.div>
         </div>
       </section>
-
       {/* Pricing Tiers Overview */}
       <section className="py-16 px-6">
         <div className="max-w-7xl mx-auto">
@@ -226,7 +209,6 @@ export default function ComprehensivePricingGuide2027() {
           </div>
         </div>
       </section>
-
       {/* Category Filter */}
       <section className="py-12 px-6">
         <div className="max-w-7xl mx-auto">
@@ -253,7 +235,6 @@ export default function ComprehensivePricingGuide2027() {
           </div>
         </div>
       </section>
-
       {/* Services Pricing Table */}
       <section className="py-16 px-6">
         <div className="max-w-7xl mx-auto">
@@ -281,7 +262,6 @@ export default function ComprehensivePricingGuide2027() {
                   const TierIcon = pricingTier.icon;
                   const innovationBadge = getInnovationBadge(service.innovationLevel);
                   const BadgeIcon = innovationBadge.icon;
-                  
                   return (
                     <motion.tr
                       key={service.id}
@@ -353,7 +333,6 @@ export default function ComprehensivePricingGuide2027() {
           </div>
         </div>
       </section>
-
       {/* Special Offers Section */}
       <section className="py-16 px-6">
         <div className="max-w-7xl mx-auto">
@@ -385,7 +364,6 @@ export default function ComprehensivePricingGuide2027() {
                 <ArrowRight className="w-5 h-5 ml-2" />
               </a>
             </motion.div>
-
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -413,7 +391,6 @@ export default function ComprehensivePricingGuide2027() {
           </div>
         </div>
       </section>
-
       {/* Contact CTA Section */}
       <section className="py-20 px-6">
         <div className="max-w-4xl mx-auto text-center">
@@ -473,7 +450,6 @@ export default function ComprehensivePricingGuide2027() {
               </a>
             </div>
           </motion.div>
-
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -486,7 +462,6 @@ export default function ComprehensivePricingGuide2027() {
               <h3 className="text-xl font-semibold text-white mb-2">Phone</h3>
               <p className="text-gray-300">{contactInfo.phone}</p>
             </motion.div>
-
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -498,7 +473,6 @@ export default function ComprehensivePricingGuide2027() {
               <h3 className="text-xl font-semibold text-white mb-2">Email</h3>
               <p className="text-gray-300">{contactInfo.email}</p>
             </motion.div>
-
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -510,7 +484,6 @@ export default function ComprehensivePricingGuide2027() {
               <h3 className="text-xl font-semibold text-white mb-2">Address</h3>
               <p className="text-gray-300 text-sm">{contactInfo.address}</p>
             </motion.div>
-
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -525,7 +498,6 @@ export default function ComprehensivePricingGuide2027() {
               </a>
             </motion.div>
           </div>
-
           <div className="text-center">
             <motion.button
               whileHover={{ scale: 1.05 }}

@@ -63,20 +63,17 @@ import {
   Map
 } from 'lucide-react';
 import { AnimatePresence } from 'framer-motion';
-
 interface FooterLink {
   name: string;
   path: string;
   icon: any;
   external?: boolean;
 }
-
 interface FooterSection {
   title: string;
   icon: any;
   links: FooterLink[];
 }
-
 const footerSections = [
   {
     title: 'Company',
@@ -242,13 +239,11 @@ const footerSections = [
     ]
   }
 ];
-
 const contactInfo = [
   { icon: Mail, text: 'kleber@ziontechgroup.com', href: 'mailto:kleber@ziontechgroup.com' },
   { icon: Phone, text: '+1 302 464 0950', href: 'tel:+13024640950' },
   { icon: MapPin, text: '364 E Main St STE 1008 Middletown DE 19709', href: '#' }
 ];
-
 const socialLinks = [
   { name: 'Twitter', icon: Twitter, href: 'https://twitter.com/ziontechgroup', external: true },
   { name: 'LinkedIn', icon: Linkedin, href: 'https://linkedin.com/company/ziontechgroup', external: true },
@@ -256,26 +251,21 @@ const socialLinks = [
   { name: 'Instagram', icon: Instagram, href: 'https://instagram.com/ziontechgroup', external: true },
   { name: 'GitHub', icon: Github, href: 'https://github.com/ziontechgroup', external: true }
 ];
-
 export function Footer() {
   const [showScrollTop, setShowScrollTop] = useState(false);
-
   useEffect(() => {
     const handleScroll = () => {
       setShowScrollTop(window.scrollY > 400);
     };
-
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
-
   const scrollToTop = () => {
     window.scrollTo({
       top: 0,
       behavior: 'smooth'
     });
   };
-
   // Handle link click
   const handleLinkClick = (link: FooterLink) => {
     if (link.external) {
@@ -285,7 +275,6 @@ export function Footer() {
       console.log('Navigate to:', link.path);
     }
   };
-
   return (
     <footer className="bg-zion-slate-dark text-white relative overflow-hidden">
       {/* Enhanced Background */}
@@ -301,7 +290,6 @@ export function Footer() {
           }}
         />
       </div>
-
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         {/* Main Footer Content */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 xl:grid-cols-8 gap-8 mb-12">
@@ -318,12 +306,10 @@ export function Footer() {
                 <p className="text-sm text-gray-400">Innovation Hub</p>
               </div>
             </div>
-            
             <p className="text-gray-300 text-sm leading-relaxed">
               Empowering businesses with cutting-edge AI, cloud infrastructure, and emerging technologies. 
               We transform ideas into innovative solutions that drive growth and success.
             </p>
-
             {/* Contact Info */}
             <div className="space-y-3">
               <div className="flex items-center space-x-3 text-sm text-gray-300">
@@ -336,15 +322,10 @@ export function Footer() {
               </div>
               <div className="flex items-center space-x-3 text-sm text-gray-300">
                 <MapPin className="w-4 h-4 text-cyan-400" />
-<<<<<<< HEAD
-                <span>364 E Main St STE 1008 Middletown DE 19709</span>
-=======
                 <span>364 E Main St STE 1008, Middletown DE 19709</span>
->>>>>>> origin/cursor/enhance-application-with-new-services-and-site-improvements-e824
               </div>
             </div>
           </div>
-
           {/* Service Sections */}
           {footerSections.slice(1).map((section) => (
             <div key={section.title} className="space-y-4">
@@ -369,7 +350,6 @@ export function Footer() {
             </motion.div>
           ))}
         </div>
-
         {/* Contact Information */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -397,7 +377,6 @@ export function Footer() {
             ))}
           </div>
         </motion.div>
-
         {/* Social Links and Bottom Section */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -423,7 +402,6 @@ export function Footer() {
                 </motion.a>
               ))}
             </div>
-
             {/* Copyright */}
             <motion.div
               initial={{ opacity: 0 }}
@@ -437,7 +415,6 @@ export function Footer() {
           </div>
         </motion.div>
       </div>
-
       {/* Scroll to Top Button */}
       <AnimatePresence>
         {showScrollTop && (

@@ -1,24 +1,5 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-<<<<<<< HEAD
-import { motion } from 'framer-motion';
-import { 
-  Search, 
-  HelpCircle, 
-  BookOpen, 
-  MessageCircle, 
-  Phone, 
-  Mail, 
-  FileText, 
-  Video, 
-  Users, 
-  Settings, 
-  Zap, 
-  Brain, 
-  Shield, 
-  Cloud, 
-  ShoppingCart, 
-=======
 import { motion, AnimatePresence } from 'framer-motion';
 import {
   Search,
@@ -31,7 +12,6 @@ import {
   FileText,
   ChevronDown,
   ChevronRight,
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-c82d
   Star,
   ChevronDown,
   ChevronRight,
@@ -54,7 +34,6 @@ import {
   AlertCircle,
   Info
 } from 'lucide-react';
-
 interface HelpSection {
   id: string;
   title: string;
@@ -69,13 +48,11 @@ interface HelpSection {
     readTime: string;
   }>;
 }
-
 interface FAQItem {
   question: string;
   answer: string;
   category: string;
 }
-
 const helpSections: HelpSection[] = [
   {
     title: 'Getting Started',
@@ -293,7 +270,6 @@ const helpSections: HelpSection[] = [
     ]
   }
 ];
-
 const faqData: FAQItem[] = [
   {
     question: 'What services does Zion Tech Group offer?',
@@ -326,83 +302,28 @@ const faqData: FAQItem[] = [
     category: 'Security'
   }
 ];
-
 export function HelpCenter() {
   const [searchQuery, setSearchQuery] = useState('');
   const [expandedSections, setExpandedSections] = useState<Set<string>>(new Set(['getting-started']));
   const [selectedCategory, setSelectedCategory] = useState<string>('All');
-
-<<<<<<< HEAD
-  const toggleSection = (sectionId: string) => {
-    setExpandedSections(prev => {
-      const newSet = new Set(prev);
-      if (newSet.has(sectionId)) {
-        newSet.delete(sectionId);
-      } else {
-        newSet.add(sectionId);
-      }
-      return newSet;
-    });
-=======
   const handleSearch = (query: string) => {
     setSearchQuery(query);
     if (query.trim() === '') {
       setFilteredFAQs(faqData);
       return;
     }
-
     const filtered = faqData.filter(faq =>
       faq.question.toLowerCase().includes(query.toLowerCase()) ||
       faq.answer.toLowerCase().includes(query.toLowerCase()) ||
       faq.tags.some(tag => tag.toLowerCase().includes(query.toLowerCase()))
     );
     setFilteredFAQs(filtered);
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-c82d
   };
-
   const filteredFAQ = selectedCategory === 'All' 
     ? faqData 
     : faqData.filter(item => item.category === selectedCategory);
-
   const categories = ['All', ...Array.from(new Set(faqData.map(item => item.category)))];
-
   return (
-<<<<<<< HEAD
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      {/* Header */}
-      <div className="bg-zion-slate-dark/95 backdrop-blur-md border-b border-cyan-400/20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="text-center"
-          >
-            <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">
-              Help Center
-            </h1>
-            <p className="text-xl text-cyan-300 max-w-3xl mx-auto">
-              Find answers, tutorials, and resources to help you succeed with Zion Tech Group services
-            </p>
-          </motion.div>
-
-          {/* Search Bar */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-            className="max-w-2xl mx-auto mt-8"
-          >
-            <div className="relative">
-              <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
-              <input
-                type="text"
-                placeholder="Search for help articles, tutorials, or FAQs..."
-                value={searchQuery}
-                onChange={(e) => setSearchQuery(e.target.value)}
-                className="w-full pl-12 pr-4 py-4 bg-zion-slate-dark/50 border border-cyan-400/30 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
-              />
-=======
     <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light pt-24">
       <div className="container-responsive">
         {/* Header */}
@@ -417,7 +338,6 @@ export function HelpCenter() {
             Find answers to your questions, learn how to use our services, and get the support you need to succeed with Zion Tech Group.
           </p>
         </motion.div>
-
         {/* Search Bar */}
         <motion.div
           className="max-w-2xl mx-auto mb-12"
@@ -436,7 +356,6 @@ export function HelpCenter() {
             <Search className="absolute right-4 top-1/2 transform -translate-y-1/2 text-zion-slate-light h-6 w-6" />
           </div>
         </motion.div>
-
         {/* Help Categories */}
         <motion.div
           className="mb-16"
@@ -471,7 +390,6 @@ export function HelpCenter() {
             ))}
           </div>
         </motion.div>
-
         {/* Support Options */}
         <motion.div
           className="mb-16"
@@ -505,7 +423,6 @@ export function HelpCenter() {
             ))}
           </div>
         </motion.div>
-
         {/* FAQ Section */}
         <motion.div
           className="mb-16"
@@ -515,7 +432,6 @@ export function HelpCenter() {
         >
           <div className="max-w-4xl mx-auto">
             <h2 className="text-2xl font-bold text-white mb-8 text-center">Frequently Asked Questions</h2>
-
             {/* Category Filter */}
             <div className="flex flex-wrap justify-center gap-3 mb-8">
               <button
@@ -541,12 +457,10 @@ export function HelpCenter() {
                   {category.title}
                 </button>
               ))}
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-c82d
             </div>
           </motion.div>
         </div>
       </div>
-
       {/* Main Content */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="grid lg:grid-cols-3 gap-8">
@@ -558,7 +472,6 @@ export function HelpCenter() {
               transition={{ duration: 0.6, delay: 0.3 }}
             >
               <h2 className="text-2xl font-bold text-white mb-6">Help Articles & Tutorials</h2>
-              
               <div className="space-y-6">
                 {helpSections.map((section, index) => (
                   <motion.div
@@ -589,7 +502,6 @@ export function HelpCenter() {
                         )}
                       </div>
                     </button>
-
                     <AnimatePresence>
                       {expandedSections.has(section.id) && (
                         <motion.div
@@ -666,112 +578,15 @@ export function HelpCenter() {
               </div>
             </motion.div>
           </div>
-
-<<<<<<< HEAD
-          {/* Sidebar */}
-          <div className="space-y-6">
-            {/* Quick Actions */}
-            <motion.div
-              initial={{ opacity: 0, x: 20 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.6, delay: 0.4 }}
-              className="bg-zion-slate-dark/50 backdrop-blur-sm border border-cyan-400/20 rounded-xl p-6"
-            >
-              <h3 className="text-lg font-semibold text-white mb-4">Quick Actions</h3>
-              <div className="space-y-3">
-                <Link
-                  to="/contact"
-                  className="flex items-center space-x-3 p-3 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-lg hover:from-cyan-600 hover:to-blue-600 transition-all duration-300"
-                >
-                  <MessageCircle className="w-5 h-5" />
-                  <span>Contact Support</span>
-                </Link>
-                <Link
-                  to="/faq"
-                  className="flex items-center space-x-3 p-3 bg-gradient-to-r from-purple-500 to-pink-500 text-white rounded-lg hover:from-purple-600 hover:to-pink-600 transition-all duration-300"
-                >
-                  <HelpCircle className="w-5 h-5" />
-                  <span>View FAQ</span>
-                </Link>
-                <Link
-                  to="/sitemap"
-                  className="flex items-center space-x-3 p-3 bg-gradient-to-r from-green-500 to-emerald-500 text-white rounded-lg hover:from-green-600 hover:to-emerald-600 transition-all duration-300"
-                >
-                  <FileText className="w-5 h-5" />
-                  <span>Site Map</span>
-                </Link>
-              </div>
-            </motion.div>
-
-            {/* FAQ Categories */}
-            <motion.div
-              initial={{ opacity: 0, x: 20 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.6, delay: 0.5 }}
-              className="bg-zion-slate-dark/50 backdrop-blur-sm border border-cyan-400/20 rounded-xl p-6"
-            >
-              <h3 className="text-lg font-semibold text-white mb-4">FAQ Categories</h3>
-              <div className="space-y-2">
-                {categories.map((category) => (
-                  <button
-                    key={category}
-                    onClick={() => setSelectedCategory(category)}
-                    className={`w-full text-left px-3 py-2 rounded-lg transition-colors ${
-                      selectedCategory === category
-                        ? 'bg-cyan-500/20 text-cyan-300'
-                        : 'text-gray-400 hover:text-white hover:bg-zion-slate-dark/30'
-                    }`}
-                  >
-                    {category}
-                  </button>
-                ))}
-              </div>
-            </motion.div>
-
-            {/* Contact Information */}
-            <motion.div
-              initial={{ opacity: 0, x: 20 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.6, delay: 0.6 }}
-              className="bg-zion-slate-dark/50 backdrop-blur-sm border border-cyan-400/20 rounded-xl p-6"
-            >
-              <h3 className="text-lg font-semibold text-white mb-4">Need More Help?</h3>
-              <div className="space-y-3 text-sm">
-                <div className="flex items-center space-x-3 text-gray-300">
-                  <MessageCircle className="w-4 h-4 text-cyan-400" />
-                  <span>Live Chat Available</span>
-                </div>
-                <div className="flex items-center space-x-3 text-gray-300">
-                  <Mail className="w-4 h-4 text-cyan-400" />
-                  <span>support@ziontechgroup.com</span>
-                </div>
-                <div className="flex items-center space-x-3 text-gray-300">
-                  <Phone className="w-4 h-4 text-cyan-400" />
-                  <span>+1 (555) 123-4567</span>
-                </div>
-                <div className="flex items-center space-x-3 text-gray-300">
-                  <Clock className="w-4 h-4 text-cyan-400" />
-                  <span>24/7 Support</span>
-                </div>
-              </div>
-            </motion.div>
-          </div>
-        </div>
-
-        {/* FAQ Section */}
-        <motion.div
-=======
         {/* Contact Support */}
         <motion.div
           className="text-center"
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-c82d
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.7 }}
           className="mt-16"
         >
           <h2 className="text-2xl font-bold text-white mb-6">Frequently Asked Questions</h2>
-          
           <div className="grid gap-4">
             {filteredFAQ.map((faq, index) => (
               <motion.div
@@ -801,5 +616,4 @@ export function HelpCenter() {
     </div>
   );
 }
-
 export default HelpCenter;

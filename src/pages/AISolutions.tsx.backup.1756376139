@@ -1,7 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
-import { SEO } from '@/components/SEO';
-=======
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { 
@@ -55,7 +52,6 @@ import {
   Eye
 } from 'lucide-react';
 import SEO from '../components/SEO';
-
 export default function AISolutions() {
   const aiSolutions = [
     {
@@ -130,14 +126,12 @@ export default function AISolutions() {
       ]
     }
   ];
-
   const stats = [
     { label: 'AI Models Deployed', value: '500+', icon: Brain },
     { label: 'Data Points Processed', value: '10M+', icon: Database },
     { label: 'Accuracy Rate', value: '99.7%', icon: Target },
     { label: 'Cost Reduction', value: '40%', icon: DollarSign }
   ];
-
   const capabilities = [
     {
       title: 'Machine Learning & Deep Learning',
@@ -164,8 +158,6 @@ export default function AISolutions() {
       features: ['Trend Analysis', 'Risk Assessment', 'Performance Prediction']
     }
   ];
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-4b87
-
 export default function AiSolutions() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white">
@@ -183,4 +175,3 @@ export default function AiSolutions() {
     </div>
   );
 }
-

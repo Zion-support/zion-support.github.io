@@ -264,7 +264,9 @@ export function AppHeader() {
       icon: ShoppingCart, 
       description: 'AI automations with transparent pricing',
       featured: true,
-      color: 'from-orange-500 to-red-500'
+      color: 'from-orange-500 to-red-500',
+      price: 'Starting at $99/month',
+      category: 'Micro SaaS'
     },
     { 
       name: 'Revolutionary Services 2030', 
@@ -275,28 +277,12 @@ export function AppHeader() {
       color: 'from-indigo-500 to-purple-500'
     },
     { 
-      name: 'Comprehensive Services Showcase 2025', 
-      href: '/comprehensive-services-showcase-2025', 
-      icon: Star, 
-      description: 'Complete Service Portfolio',
-      featured: true,
-      color: 'from-yellow-500 to-orange-500'
-    },
-    { 
-      name: 'Innovative AI Services 2025', 
-      href: '/innovative-ai-services-2025', 
+      name: 'Comprehensive Services 2030', 
+      href: '/comprehensive-services-2030', 
       icon: Brain, 
-      description: 'Cutting-edge AI Solutions',
+      description: 'Complete AI & Tech Solutions',
       featured: true,
-      color: 'from-purple-500 to-pink-500'
-    },
-    { 
-      name: 'Cloud DevOps', 
-      href: '/services/cloud-devops', 
-      icon: Cloud, 
-      description: 'Infrastructure & Automation',
-      featured: false,
-      color: 'from-blue-500 to-cyan-500'
+      color: 'from-cyan-500 to-purple-500'
     }
   ];
 

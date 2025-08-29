@@ -44,11 +44,7 @@ import {
   Shield2,
   Zap2
 } from 'lucide-react';
-<<<<<<< HEAD
-=======
 import SEO from '../components/SEO';
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-4b87
-
 interface Partner {
   id: string;
   name: string;
@@ -60,7 +56,6 @@ interface Partner {
   location: string;
   specialties: string[];
 }
-
 interface PartnershipTier {
   name: string;
   icon: any;
@@ -69,7 +64,6 @@ interface PartnershipTier {
   requirements: string[];
   color: string;
 }
-
 const partners: Partner[] = [
   {
     id: '1',
@@ -160,7 +154,6 @@ const partners: Partner[] = [
     specialties: ['IT Infrastructure', 'Digital Transformation', 'Storage Solutions']
   }
 ];
-
 const partnershipTiers: PartnershipTier[] = [
   {
     name: 'Platinum Partner',
@@ -251,7 +244,6 @@ const partnershipTiers: PartnershipTier[] = [
     color: 'from-amber-600 to-orange-700'
   }
 ];
-
 const partnershipCategories = [
   {
     name: 'Technology Partners',
@@ -290,20 +282,16 @@ const partnershipCategories = [
     color: 'from-indigo-500 to-purple-500'
   }
 ];
-
 export function Partners() {
   const [selectedTier, setSelectedTier] = useState<string>('All');
   const [selectedCategory, setSelectedCategory] = useState<string>('All');
-
   const filteredPartners = partners.filter(partner => {
     const matchesTier = selectedTier === 'All' || partner.tier === selectedTier;
     const matchesCategory = selectedCategory === 'All' || partner.category === selectedCategory;
     return matchesTier && matchesCategory;
   });
-
   const tiers = ['All', ...Array.from(new Set(partners.map(p => p.tier)))];
   const categories = ['All', ...Array.from(new Set(partners.map(p => p.category)))];
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO 
@@ -328,7 +316,6 @@ export function Partners() {
           </motion.div>
         </div>
       </div>
-
       {/* Partnership Categories */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <motion.div
@@ -356,7 +343,6 @@ export function Partners() {
             ))}
           </div>
         </motion.div>
-
         {/* Partnership Tiers */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -383,7 +369,6 @@ export function Partners() {
                     <p className="text-cyan-300 text-sm">{tier.description}</p>
                   </div>
                 </div>
-
                 <div className="grid md:grid-cols-2 gap-6">
                   <div>
                     <h4 className="font-semibold text-white mb-3 flex items-center">
@@ -399,7 +384,6 @@ export function Partners() {
                       ))}
                     </ul>
                   </div>
-
                   <div>
                     <h4 className="font-semibold text-white mb-3 flex items-center">
                       <Target className="w-4 h-4 text-blue-400 mr-2" />
@@ -419,7 +403,6 @@ export function Partners() {
             ))}
           </div>
         </motion.div>
-
         {/* Current Partners */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -429,7 +412,6 @@ export function Partners() {
         >
           <div className="flex flex-col lg:flex-row items-center justify-between mb-8">
             <h2 className="text-3xl font-bold text-white mb-4 lg:mb-0">Our Partners</h2>
-            
             {/* Filters */}
             <div className="flex flex-wrap gap-4">
               <select
@@ -441,7 +423,6 @@ export function Partners() {
                   <option key={tier} value={tier}>{tier} Tier</option>
                 ))}
               </select>
-              
               <select
                 value={selectedCategory}
                 onChange={(e) => setSelectedCategory(e.target.value)}
@@ -453,7 +434,6 @@ export function Partners() {
               </select>
             </div>
           </div>
-
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {filteredPartners.map((partner, index) => (
               <motion.div
@@ -476,10 +456,8 @@ export function Partners() {
                     {partner.tier}
                   </span>
                 </div>
-
                 <h3 className="text-xl font-semibold text-white mb-2">{partner.name}</h3>
                 <p className="text-gray-300 text-sm mb-4">{partner.description}</p>
-                
                 <div className="mb-4">
                   <span className="text-cyan-400 text-sm font-medium">{partner.category}</span>
                   <div className="flex items-center text-gray-400 text-sm mt-1">
@@ -487,7 +465,6 @@ export function Partners() {
                     {partner.location}
                   </div>
                 </div>
-
                 <div className="mb-4">
                   <h4 className="text-white text-sm font-medium mb-2">Specialties:</h4>
                   <div className="flex flex-wrap gap-2">
@@ -501,7 +478,6 @@ export function Partners() {
                     ))}
                   </div>
                 </div>
-
                 <a
                   href={partner.website}
                   target="_blank"
@@ -515,7 +491,6 @@ export function Partners() {
             ))}
           </div>
         </motion.div>
-
         {/* Become a Partner CTA */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -528,7 +503,6 @@ export function Partners() {
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
               Join our ecosystem of technology leaders and help shape the future of AI, quantum computing, and emerging technologies.
             </p>
-            
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
                 href="mailto:partnerships@ziontechgroup.com"
@@ -545,7 +519,6 @@ export function Partners() {
                 Contact Our Team
               </a>
             </div>
-
             <div className="mt-8 grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
               <div>
                 <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-emerald-500 rounded-full flex items-center justify-center mx-auto mb-4">
@@ -575,5 +548,4 @@ export function Partners() {
     </div>
   );
 }
-
 export default Partners;

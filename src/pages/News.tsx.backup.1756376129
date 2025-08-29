@@ -3,25 +3,6 @@ import { motion } from 'framer-motion';
 import { 
   Newspaper, 
   Calendar, 
-<<<<<<< HEAD
-  User, 
-  Tag, 
-  ArrowRight, 
-  Search, 
-  Filter, 
-  Clock,
-  TrendingUp,
-  Star,
-  Eye,
-  Share2,
-  Bookmark,
-  ExternalLink
-} from 'lucide-react';
-
-export default function News() {
-  const [selectedCategory, setSelectedCategory] = useState('all');
-  const [searchQuery, setSearchQuery] = useState('');
-=======
   Clock, 
   User, 
   Tag, 
@@ -69,7 +50,6 @@ export default function News() {
   ChevronDown,
   ChevronRight
 } from 'lucide-react';
-
 interface NewsArticle {
   id: string;
   title: string;
@@ -88,7 +68,6 @@ interface NewsArticle {
   likes: number;
   comments: number;
 }
-
 const newsArticles: NewsArticle[] = [
   {
     id: '1',
@@ -219,24 +198,18 @@ const newsArticles: NewsArticle[] = [
     comments: 45
   }
 ];
-
 const categories = ['All', 'Company News', 'Partnerships', 'Security', 'Research', 'Product Launch', 'Case Studies', 'Space Tech', 'Sustainability'];
-
 export function News() {
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('All');
   const [sortBy, setSortBy] = useState<'date' | 'popularity' | 'relevance'>('date');
-
   const filteredArticles = newsArticles.filter(article => {
     const matchesSearch = article.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
                          article.excerpt.toLowerCase().includes(searchQuery.toLowerCase()) ||
                          article.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()));
-    
     const matchesCategory = selectedCategory === 'All' || article.category === selectedCategory;
-    
     return matchesSearch && matchesCategory;
   });
-
   const sortedArticles = [...filteredArticles].sort((a, b) => {
     switch (sortBy) {
       case 'date':
@@ -249,10 +222,8 @@ export function News() {
         return 0;
     }
   });
-
   const featuredArticles = sortedArticles.filter(article => article.featured);
   const regularArticles = sortedArticles.filter(article => !article.featured);
-
   const formatDate = (dateString: string) => {
     const date = new Date(dateString);
     return date.toLocaleDateString('en-US', {
@@ -261,7 +232,6 @@ export function News() {
       day: 'numeric'
     });
   };
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       {/* Header */}
@@ -280,7 +250,6 @@ export function News() {
               Stay updated with the latest developments in AI, quantum computing, cybersecurity, and emerging technologies from Zion Tech Group.
             </p>
           </motion.div>
-
           {/* Search and Filters */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -299,7 +268,6 @@ export function News() {
                   className="w-full pl-12 pr-4 py-3 bg-zion-slate-dark/50 border border-cyan-400/30 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
                 />
               </div>
-              
               <select
                 value={selectedCategory}
                 onChange={(e) => setSelectedCategory(e.target.value)}
@@ -309,7 +277,6 @@ export function News() {
                   <option key={category} value={category}>{category}</option>
                 ))}
               </select>
-              
               <select
                 value={sortBy}
                 onChange={(e) => setSortBy(e.target.value as 'date' | 'popularity' | 'relevance')}
@@ -323,7 +290,6 @@ export function News() {
           </motion.div>
         </div>
       </div>
-
       {/* Main Content */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         {/* Featured Articles */}
@@ -338,7 +304,6 @@ export function News() {
               <Star className="w-6 h-6 text-yellow-400 mr-2" />
               Featured Stories
             </h2>
-            
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
               {featuredArticles.map((article, index) => (
                 <motion.div
@@ -351,7 +316,6 @@ export function News() {
                   <div className="h-48 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 flex items-center justify-center">
                     <Newspaper className="w-16 h-16 text-cyan-400" />
                   </div>
-                  
                   <div className="p-6">
                     <div className="flex items-center space-x-4 text-sm text-gray-400 mb-3">
                       <span className="px-2 py-1 bg-yellow-500/20 text-yellow-400 rounded-full text-xs font-medium">
@@ -366,19 +330,15 @@ export function News() {
                         {article.readTime}
                       </span>
                     </div>
-                    
                     <h3 className="text-xl font-bold text-white mb-3 hover:text-cyan-300 transition-colors">
                       {article.title}
                     </h3>
-                    
                     <p className="text-gray-300 mb-4">{article.excerpt}</p>
-                    
                     <div className="flex items-center justify-between">
                       <div className="flex items-center space-x-2">
                         <User className="w-4 h-4 text-gray-400" />
                         <span className="text-sm text-gray-400">{article.author}</span>
                       </div>
-                      
                       <div className="flex items-center space-x-4 text-sm text-gray-400">
                         <span className="flex items-center">
                           <Eye className="w-4 h-4 mr-1" />
@@ -390,7 +350,6 @@ export function News() {
                         </span>
                       </div>
                     </div>
-                    
                     <div className="mt-4 flex flex-wrap gap-2">
                       {article.tags.map((tag, idx) => (
                         <span
@@ -407,7 +366,6 @@ export function News() {
             </div>
           </motion.div>
         )}
-
         {/* Regular Articles */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -415,7 +373,6 @@ export function News() {
           transition={{ duration: 0.6, delay: 0.5 }}
         >
           <h2 className="text-2xl font-bold text-white mb-8">Latest News</h2>
-          
           {regularArticles.length === 0 ? (
             <div className="text-center py-12">
               <Newspaper className="w-16 h-16 text-gray-500 mx-auto mb-4" />
@@ -446,7 +403,6 @@ export function News() {
                   <div className="h-40 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 flex items-center justify-center">
                     <Newspaper className="w-12 h-12 text-cyan-400" />
                   </div>
-                  
                   <div className="p-6">
                     <div className="flex items-center space-x-4 text-sm text-gray-400 mb-3">
                       <span className="px-2 py-1 bg-cyan-500/20 text-cyan-400 rounded-full text-xs font-medium">
@@ -457,19 +413,15 @@ export function News() {
                         {formatDate(article.publishDate)}
                       </span>
                     </div>
-                    
                     <h3 className="text-lg font-bold text-white mb-3 hover:text-cyan-300 transition-colors">
                       {article.title}
                     </h3>
-                    
                     <p className="text-gray-300 text-sm mb-4 line-clamp-3">{article.excerpt}</p>
-                    
                     <div className="flex items-center justify-between">
                       <div className="flex items-center space-x-2">
                         <User className="w-4 h-4 text-gray-400" />
                         <span className="text-sm text-gray-400">{article.author}</span>
                       </div>
-                      
                       <div className="flex items-center space-x-4 text-sm text-gray-400">
                         <span className="flex items-center">
                           <Eye className="w-4 h-4 mr-1" />
@@ -481,7 +433,6 @@ export function News() {
                         </span>
                       </div>
                     </div>
-                    
                     <div className="mt-4 flex flex-wrap gap-2">
                       {article.tags.slice(0, 3).map((tag, idx) => (
                         <span
@@ -503,7 +454,6 @@ export function News() {
             </div>
           )}
         </motion.div>
-
         {/* Newsletter Signup */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -516,7 +466,6 @@ export function News() {
             <p className="text-gray-300 mb-6 max-w-2xl mx-auto">
               Subscribe to our newsletter for the latest news, insights, and updates on AI, quantum computing, and emerging technologies.
             </p>
-            
             <div className="flex flex-col sm:flex-row gap-4 justify-center max-w-md mx-auto">
               <input
                 type="email"
@@ -527,7 +476,6 @@ export function News() {
                 Subscribe
               </button>
             </div>
-            
             <p className="text-gray-400 text-sm mt-4">
               We respect your privacy. Unsubscribe at any time.
             </p>
@@ -537,8 +485,6 @@ export function News() {
     </div>
   );
 }
->>>>>>> origin/cursor/website-audit-and-enhancement-15b2
-
   const categories = [
     { id: 'all', name: 'All News', count: 0 },
     { id: 'ai', name: 'AI & Technology', count: 0 },
@@ -547,7 +493,6 @@ export function News() {
     { id: 'quantum', name: 'Quantum Computing', count: 0 },
     { id: 'company', name: 'Company Updates', count: 0 }
   ];
-
   const newsArticles = [
     {
       id: 1,
@@ -638,7 +583,6 @@ export function News() {
       tags: ['Edge Computing', 'IoT', 'Real-time', 'Industrial']
     }
   ];
-
   // Calculate category counts
   categories.forEach(category => {
     if (category.id === 'all') {
@@ -647,7 +591,6 @@ export function News() {
       category.count = newsArticles.filter(article => article.category === category.id).length;
     }
   });
-
   const filteredArticles = newsArticles.filter(article => {
     const matchesCategory = selectedCategory === 'all' || article.category === selectedCategory;
     const matchesSearch = article.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
@@ -655,7 +598,6 @@ export function News() {
                          article.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()));
     return matchesCategory && matchesSearch;
   });
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50">
       {/* Header */}
@@ -678,7 +620,6 @@ export function News() {
           </div>
         </div>
       </div>
-
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         {/* Search and Filters */}
         <div className="mb-8">
@@ -710,7 +651,6 @@ export function News() {
             </div>
           </div>
         </div>
-
         {/* Featured Articles */}
         {filteredArticles.filter(article => article.featured).length > 0 && (
           <div className="mb-12">
@@ -778,7 +718,6 @@ export function News() {
             </div>
           </div>
         )}
-
         {/* All Articles */}
         <div>
           <h2 className="text-2xl font-bold text-gray-900 mb-6">
@@ -839,7 +778,6 @@ export function News() {
               </motion.article>
             ))}
           </div>
-
           {filteredArticles.length === 0 && (
             <div className="text-center py-12">
               <Newspaper className="h-12 w-12 text-gray-400 mx-auto mb-4" />
@@ -848,7 +786,6 @@ export function News() {
             </div>
           )}
         </div>
-
         {/* Newsletter Signup */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}

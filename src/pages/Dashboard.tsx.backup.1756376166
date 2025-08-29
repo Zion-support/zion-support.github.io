@@ -1,22 +1,10 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-<<<<<<< HEAD
-import { 
-  BarChart3, 
-  Users, 
-  TrendingUp, 
-  Shield, 
-  Cloud, 
-  Brain, 
-  Zap, 
-  Star,
-=======
 import {
   BarChart3,
   Users,
   TrendingUp,
   DollarSign,
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-c82d
   Activity,
   DollarSign,
   Clock,
@@ -58,7 +46,6 @@ import {
   Phone,
   MapPin
 } from 'lucide-react';
-
 export default function Dashboard() {
   const stats = [
     { name: 'Active Services', value: '12', icon: Zap, change: '+2', changeType: 'positive', color: 'from-blue-500 to-cyan-500' },
@@ -68,7 +55,6 @@ export default function Dashboard() {
     { name: 'Monthly Usage', value: '2.4TB', icon: Database, change: '+15%', changeType: 'positive', color: 'from-orange-500 to-red-500' },
     { name: 'Response Time', value: '45ms', icon: Activity, change: '-12ms', changeType: 'negative', color: 'from-teal-500 to-green-500' }
   ];
-
   const recentServices = [
     { name: 'AI Business Intelligence', status: 'Active', lastUsed: '2 hours ago', usage: '85%', icon: Brain, color: 'from-blue-500 to-indigo-500' },
     { name: 'Cloud DevOps Platform', status: 'Active', lastUsed: '1 day ago', usage: '92%', icon: Cloud, color: 'from-indigo-500 to-blue-500' },
@@ -76,14 +62,12 @@ export default function Dashboard() {
     { name: 'Quantum Computing Lab', status: 'Active', lastUsed: '1 week ago', usage: '45%', icon: Atom, color: 'from-purple-500 to-indigo-500' },
     { name: 'IoT Edge Platform', status: 'Active', lastUsed: '2 weeks ago', usage: '67%', icon: Network, color: 'from-cyan-500 to-blue-500' }
   ];
-
   const upcomingEvents = [
     { title: 'AI Strategy Workshop', date: 'Dec 15, 2024', time: '10:00 AM', type: 'Workshop', icon: Brain },
     { title: 'Security Audit Review', date: 'Dec 18, 2024', time: '2:00 PM', type: 'Review', icon: Shield },
     { title: 'Cloud Migration Planning', date: 'Dec 22, 2024', time: '11:00 AM', type: 'Planning', icon: Cloud },
     { title: 'Quantum Computing Demo', date: 'Dec 25, 2024', time: '3:00 PM', type: 'Demo', icon: Atom }
   ];
-
   const quickActions = [
     { name: 'Add New Service', icon: Plus, href: '/services', color: 'from-green-500 to-emerald-500' },
     { name: 'View Analytics', icon: BarChart3, href: '/analytics', color: 'from-blue-500 to-indigo-500' },
@@ -92,7 +76,6 @@ export default function Dashboard() {
     { name: 'Billing & Plans', icon: DollarSign, href: '/pricing', color: 'from-yellow-500 to-orange-500' },
     { name: 'API Documentation', icon: Code, href: '/api-docs', color: 'from-gray-500 to-slate-500' }
   ];
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50">
       {/* Header */}
@@ -117,7 +100,6 @@ export default function Dashboard() {
           </div>
         </div>
       </div>
-
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         {/* Stats Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
@@ -147,7 +129,6 @@ export default function Dashboard() {
             </motion.div>
           ))}
         </div>
-
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
           {/* Recent Services */}
           <div className="lg:col-span-2">
@@ -159,10 +140,6 @@ export default function Dashboard() {
                   <ArrowRight className="h-4 w-4 ml-1" />
                 </button>
               </div>
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-c82d
               <div className="space-y-4">
                 {recentServices.map((service, index) => (
                   <motion.div
@@ -184,25 +161,10 @@ export default function Dashboard() {
                         </span>
                         <span>{service.lastUsed}</span>
                       </div>
-<<<<<<< HEAD
-                    </div>
-                    <div className="text-right">
-                      <div className="text-sm font-medium text-gray-900">{service.usage}</div>
-                      <div className="w-20 bg-gray-200 rounded-full h-2 mt-1">
-                        <div 
-                          className="bg-gradient-to-r from-blue-500 to-purple-500 h-2 rounded-full"
-                          style={{ width: service.usage }}
-                        ></div>
-                      </div>
-                    </div>
-                  </motion.div>
-=======
-
                       <div className="flex items-center gap-4 text-sm text-zion-slate-light">
                         <span>Due: {project.dueDate}</span>
                         <span>Progress: {project.progress}%</span>
                       </div>
-
                       <div className="w-full bg-zion-purple/20 rounded-full h-2 mt-2">
                         <div
                           className="bg-zion-cyan h-2 rounded-full transition-all duration-300"
@@ -210,17 +172,14 @@ export default function Dashboard() {
                         ></div>
                       </div>
                     </div>
-
                     <button className="p-2 text-zion-slate-light hover:text-white transition-colors">
                       <ArrowRight className="h-4 w-4" />
                     </button>
                   </div>
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-c82d
                 ))}
               </div>
             </div>
           </div>
-
           {/* Quick Actions & Events */}
           <div className="space-y-6">
             {/* Quick Actions */}
@@ -241,7 +200,6 @@ export default function Dashboard() {
                 ))}
               </div>
             </div>
-
             {/* Upcoming Events */}
             <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-6">
               <h3 className="text-lg font-semibold text-gray-900 mb-4">Upcoming Events</h3>
@@ -276,7 +234,6 @@ export default function Dashboard() {
             </div>
           </div>
         </div>
-
         {/* Service Performance Chart */}
         <div className="mt-8 bg-white rounded-xl shadow-sm border border-gray-200 p-6">
           <div className="flex items-center justify-between mb-6">
@@ -296,7 +253,6 @@ export default function Dashboard() {
               </div>
             </div>
           </div>
-          
           {/* Placeholder for chart */}
           <div className="h-64 bg-gray-50 rounded-lg flex items-center justify-center">
             <div className="text-center">

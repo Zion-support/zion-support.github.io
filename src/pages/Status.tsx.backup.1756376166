@@ -1,14 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
-import SEO from '@/components/SEO';
-import { 
-  CheckCircle, 
-  AlertTriangle, 
-  XCircle, 
-  Clock, 
-  Server, 
-  Database, 
-=======
 import { SEO } from '@/components/SEO';
 import {
   CheckCircle,
@@ -17,13 +7,11 @@ import {
   Clock,
   Server,
   Database,
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-c82d
   Globe,
   Zap,
   Shield,
   Activity
 } from 'lucide-react';
-
 const Status: React.FC = () => (
 	<div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 flex items-center justify-center">
 		<SEO title="Status - Zion Tech Group" description="System status and uptime information." />
@@ -33,5 +21,4 @@ const Status: React.FC = () => (
 		</div>
 	</div>
 );
-
 export default Status;

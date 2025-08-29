@@ -1,11 +1,4 @@
-<<<<<<< HEAD
-import React from 'react';
-import SEO from '@/components/SEO';
-import { MessageCircle, Bot, Zap, Check, ExternalLink, Phone, Mail, ArrowRight, Clock, Users, TrendingUp, Headphones, Shield } from 'lucide-react';
-=======
 import { MessageSquare, Headphones, Check, ExternalLink, Phone, Mail, Brain, Target, Users, Clock, Zap, TrendingUp } from 'lucide-react';
->>>>>>> origin/cursor/expand-services-and-deploy-updates-6ac1
-
 export default function AICustomerSupportAutomation() {
   const features = [
     'AI-powered intelligent chatbot with natural language processing',
@@ -19,7 +12,6 @@ export default function AICustomerSupportAutomation() {
     'Customer satisfaction tracking and analytics',
     'Self-service portal with AI recommendations'
   ];
-
   const benefits = [
     'Reduce support costs by 40-70%',
     'Improve customer satisfaction by 25-50%',
@@ -28,7 +20,6 @@ export default function AICustomerSupportAutomation() {
     'Faster response times and resolution',
     'Scalable support without additional staff'
   ];
-
   const useCases = [
     'E-commerce customer support',
     'SaaS product support',
@@ -37,7 +28,6 @@ export default function AICustomerSupportAutomation() {
     'Telecommunications support',
     'Government citizen services'
   ];
-
   const tiers = [
     { 
       name: 'Starter', 
@@ -55,7 +45,6 @@ export default function AICustomerSupportAutomation() {
       details: ['Unlimited conversations', 'Custom AI models', 'Dedicated support', 'White-label solution'] 
     },
   ];
-
   const supportChannels = [
     'Live Chat',
     'Email Support',
@@ -64,7 +53,6 @@ export default function AICustomerSupportAutomation() {
     'Mobile App',
     'Voice Assistant'
   ];
-
   const aiCapabilities = [
     'Natural language processing',
     'Sentiment analysis',
@@ -73,7 +61,6 @@ export default function AICustomerSupportAutomation() {
     'Learning from interactions',
     'Multi-language support'
   ];
-
   return (
     <div className="min-h-screen bg-white">
       <section className="bg-gradient-to-br from-blue-900 via-blue-800 to-blue-700 py-20 text-center">
@@ -85,7 +72,6 @@ export default function AICustomerSupportAutomation() {
           <p className="text-blue-100 text-xl">Transform your customer support with intelligent automation, 24/7 availability, and personalized customer experiences.</p>
         </div>
       </section>
-
       <section className="py-16 max-w-6xl mx-auto px-6">
         <div className="grid md:grid-cols-2 gap-10">
           <div>
@@ -125,7 +111,6 @@ export default function AICustomerSupportAutomation() {
             </div>
           </div>
         </div>
-
         <div className="mt-12 grid md:grid-cols-2 gap-8">
           <div>
             <h3 className="text-2xl font-bold text-zion-slate-dark mb-4">Support Benefits</h3>
@@ -150,7 +135,6 @@ export default function AICustomerSupportAutomation() {
             </ul>
           </div>
         </div>
-
         <div className="mt-12">
           <h3 className="text-2xl font-bold text-zion-slate-dark mb-6 text-center">Multi-Channel Support</h3>
           <div className="grid md:grid-cols-3 gap-6">
@@ -162,7 +146,6 @@ export default function AICustomerSupportAutomation() {
             ))}
           </div>
         </div>
-
         <div className="mt-12">
           <h3 className="text-2xl font-bold text-zion-slate-dark mb-6 text-center">AI-Powered Capabilities</h3>
           <div className="grid md:grid-cols-3 gap-6">
@@ -174,7 +157,6 @@ export default function AICustomerSupportAutomation() {
             ))}
           </div>
         </div>
-
         <div className="mt-12 bg-gradient-to-r from-blue-50 to-blue-100 rounded-xl p-8">
           <h3 className="text-2xl font-bold text-zion-slate-dark mb-4 text-center">Customer Support Workflow</h3>
           <div className="grid md:grid-cols-4 gap-4 text-center">
@@ -200,7 +182,6 @@ export default function AICustomerSupportAutomation() {
             </div>
           </div>
         </div>
-
         <div className="mt-12 bg-gradient-to-r from-green-50 to-green-100 rounded-xl p-8">
           <h3 className="text-2xl font-bold text-zion-slate-dark mb-4 text-center">Support Metrics & Analytics</h3>
           <div className="grid md:grid-cols-3 gap-6">
@@ -221,7 +202,6 @@ export default function AICustomerSupportAutomation() {
             </div>
           </div>
         </div>
-
         <div className="mt-14 text-center">
           <div className="text-sm text-zion-slate-light mb-2">Ready to revolutionize your customer support?</div>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">

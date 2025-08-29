@@ -1,9 +1,4 @@
-<<<<<<< HEAD:src/pages/MicroSAASServicesPage.tsx.backup.1756376139
-import React from 'react';
-<<<<<<< HEAD
-=======
 import React, { useState } from 'react';
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-c82d:src/pages/MicroSaasServicesPage.tsx
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "../ui/card";
 import { Button } from "../ui/button";
 import { Badge } from "../ui/badge";
@@ -402,9 +397,7 @@ export default function MicroSAASServicesPage() {
   }, [selectedCategory]);
 =======
 import SEO from '@/components/SEO';
-
 const MicroSAASServicesPage = () => {
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-4b87
   return (
     <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-slate to-zion-blue-dark">
       {/* Hero Section */}

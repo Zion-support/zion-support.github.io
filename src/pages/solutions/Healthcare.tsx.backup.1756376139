@@ -1,11 +1,5 @@
-<<<<<<< HEAD
-// React import removed as it's not needed in modern React
-import { SEO } from '@/components/SEO';
-=======
 import React from 'react';
 import SEO from '@/components/SEO';
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-4b87
-
 export default function HealthcareSolutions() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white">
@@ -19,4 +13,3 @@ export default function HealthcareSolutions() {
     </div>
   );
 }
-

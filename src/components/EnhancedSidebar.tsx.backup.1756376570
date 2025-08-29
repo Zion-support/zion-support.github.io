@@ -44,11 +44,9 @@ import {
   Building,
   User
 } from 'lucide-react';
-
 export const EnhancedSidebar: React.FC = () => {
   const [expandedSections, setExpandedSections] = useState<Set<string>>(new Set(['Services']));
   const location = useLocation();
-
   const toggleSection = (section: string) => {
     const newExpanded = new Set(expandedSections);
     if (newExpanded.has(section)) {
@@ -58,9 +56,7 @@ export const EnhancedSidebar: React.FC = () => {
     }
     setExpandedSections(newExpanded);
   };
-
   const isActive = (path: string) => location.pathname === path;
-
   const navigationSections = [
     {
       title: "Main",
@@ -68,11 +64,7 @@ export const EnhancedSidebar: React.FC = () => {
       items: [
         { name: "Home", href: "/", icon: Home },
         { name: "Services", href: "/services", icon: Zap },
-<<<<<<< HEAD
-        { name: "Pricing", href: "/pricing", icon: DollarSign },
-=======
         { name: "Solutions", href: "/solutions", icon: Globe },
->>>>>>> origin/cursor/website-audit-and-enhancement-7ab5
         { name: "Blog", href: "/blog", icon: FileText },
         { name: "Partners", href: "/partners", icon: Handshake },
         { name: "About", href: "/about", icon: Users },
@@ -132,13 +124,11 @@ export const EnhancedSidebar: React.FC = () => {
       ]
     }
   ];
-
   const quickActions = [
     { name: "Get Quote", href: "/contact", icon: MessageCircle, variant: "primary" },
     { name: "Book Demo", href: "/request-quote", icon: Calendar, variant: "secondary" },
     { name: "Support", href: "/support", icon: HelpCircle, variant: "secondary" }
   ];
-
   return (
     <aside className="hidden lg:block w-80 min-h-screen bg-zion-slate-dark/95 backdrop-blur-xl border-r border-zion-cyan/20 overflow-y-auto">
       <div className="p-6">
@@ -164,7 +154,6 @@ export const EnhancedSidebar: React.FC = () => {
             </div>
           </Link>
         </motion.div>
-
         {/* Quick Actions */}
         <motion.div
           className="mb-8"
@@ -196,7 +185,6 @@ export const EnhancedSidebar: React.FC = () => {
             ))}
           </div>
         </motion.div>
-
         {/* Navigation Sections */}
         <div className="space-y-6">
           {navigationSections.map((section, sectionIndex) => (
@@ -220,7 +208,6 @@ export const EnhancedSidebar: React.FC = () => {
                   <ChevronRight className="w-4 h-4 transition-transform duration-300" />
                 )}
               </button>
-
               <AnimatePresence>
                 {expandedSections.has(section.title) && (
                   <motion.div
@@ -256,7 +243,6 @@ export const EnhancedSidebar: React.FC = () => {
             </motion.div>
           ))}
         </div>
-
         {/* Contact Info */}
         <motion.div
           className="mt-8 p-4 bg-zion-slate-dark/50 border border-zion-cyan/20 rounded-lg"

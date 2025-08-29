@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-export { default } from './MicroSAAS';
-
-=======
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
@@ -22,7 +18,6 @@ import {
   CheckCircle,
   ArrowRight
 } from 'lucide-react';
-
 const microSAASSolutions = [
   {
     id: 'ai-business-intelligence',
@@ -97,7 +92,6 @@ const microSAASSolutions = [
     color: 'from-emerald-600 to-green-600'
   }
 ];
-
 const benefits = [
   {
     icon: Zap,
@@ -120,7 +114,6 @@ const benefits = [
     description: 'Expert support whenever you need it'
   }
 ];
-
 export default function MicroSAAS() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-blue-dark to-zion-blue">
@@ -132,7 +125,6 @@ export default function MicroSAAS() {
           <div className="absolute bottom-20 right-20 w-24 h-24 border border-zion-purple rounded-full animate-pulse delay-1000"></div>
           <div className="absolute top-1/2 left-1/2 w-16 h-16 border border-zion-cyan-light rounded-full animate-pulse delay-2000"></div>
         </div>
-
         <div className="container mx-auto px-4 relative z-10">
           <motion.div
             className="text-center max-w-4xl mx-auto"
@@ -149,7 +141,6 @@ export default function MicroSAAS() {
               <Code className="w-4 h-4" />
               Micro SAAS Solutions
             </motion.div>
-
             <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6">
               Powerful
               <span className="block bg-gradient-to-r from-zion-cyan to-zion-purple bg-clip-text text-transparent">
@@ -157,12 +148,10 @@ export default function MicroSAAS() {
               </span>
               Solutions
             </h1>
-
             <p className="text-xl md:text-2xl text-zion-slate-light mb-8 leading-relaxed">
               Transform your business with our suite of specialized, AI-powered micro SAAS applications.
               Each solution is designed to solve specific business challenges with maximum efficiency.
             </p>
-
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 to="/contact"
@@ -178,7 +167,6 @@ export default function MicroSAAS() {
           </motion.div>
         </div>
       </section>
-
       {/* Benefits Section */}
       <section className="py-20 bg-zion-blue-dark/30">
         <div className="container mx-auto px-4">
@@ -200,7 +188,6 @@ export default function MicroSAAS() {
               focused tools without the complexity of enterprise software.
             </p>
           </motion.div>
-
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {benefits.map((benefit, index) => (
               <motion.div
@@ -221,7 +208,6 @@ export default function MicroSAAS() {
           </div>
         </div>
       </section>
-
       {/* Solutions Grid */}
       <section className="py-20">
         <div className="container mx-auto px-4">
@@ -243,7 +229,6 @@ export default function MicroSAAS() {
               address specific business challenges and drive growth.
             </p>
           </motion.div>
-
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {microSAASSolutions.map((solution, index) => (
               <motion.div
@@ -258,15 +243,12 @@ export default function MicroSAAS() {
                   <div className={`inline-flex items-center justify-center w-16 h-16 rounded-xl bg-gradient-to-r ${solution.color} mb-6`}>
                     <solution.icon className="w-8 h-8 text-white" />
                   </div>
-
                   <h3 className="text-xl font-bold text-white mb-4 group-hover:text-zion-cyan transition-colors">
                     {solution.title}
                   </h3>
-
                   <p className="text-zion-slate-light mb-6 leading-relaxed">
                     {solution.description}
                   </p>
-
                   <div className="space-y-2 mb-6">
                     {solution.features.map((feature, idx) => (
                       <div key={idx} className="flex items-center gap-2 text-zion-slate-light/80 text-sm">
@@ -275,7 +257,6 @@ export default function MicroSAAS() {
                       </div>
                     ))}
                   </div>
-
                   <Link
                     to={solution.href}
                     className="inline-flex items-center gap-2 text-zion-cyan hover:text-zion-cyan-light font-semibold transition-colors group-hover:gap-3"
@@ -287,7 +268,6 @@ export default function MicroSAAS() {
               </motion.div>
             ))}
           </div>
-
           {/* Services Grid */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {filteredServices.map((service, index) => (
@@ -309,13 +289,10 @@ export default function MicroSAAS() {
                       <span className="text-sm text-gray-400">({service.reviews})</span>
                     </div>
                   </div>
-
                   <p className="text-gray-600 mb-4">{service.description}</p>
-
                   <div className="mb-4">
                     <span className="text-2xl font-bold text-blue-600">{service.price}</span>
                   </div>
-
                   <div className="mb-6">
                     <h4 className="font-medium text-gray-900 mb-2">Key Features:</h4>
                     <ul className="space-y-1">
@@ -327,7 +304,6 @@ export default function MicroSAAS() {
                       ))}
                     </ul>
                   </div>
-
                   <button className="w-full bg-blue-600 text-white py-2 px-4 rounded-lg hover:bg-blue-700 transition-colors flex items-center justify-center">
                     Get Started
                     <ArrowRight className="h-4 w-4 ml-2" />
@@ -338,7 +314,6 @@ export default function MicroSAAS() {
           </div>
         </div>
       </section>
-
       {/* CTA Section */}
       <section className="py-20 bg-gray-900">
         <div className="container mx-auto px-4 text-center">
@@ -367,7 +342,6 @@ export default function MicroSAAS() {
           </motion.div>
         </div>
       </section>
-
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-zion-cyan/20 to-zion-purple/20">
         <div className="container mx-auto px-4 text-center">
@@ -403,4 +377,3 @@ export default function MicroSAAS() {
     </div>
   );
 }
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-c82d
