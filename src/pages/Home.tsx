@@ -3,8 +3,7 @@ import React, { Suspense, useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 
->>>>>>> cursor/website-audit-content-update-and-deployment-c7b2
-import { SEO } from "@/components/SEO";
+import { HomePageSEO } from "@/components/SEO";
 import { HeroSection } from "@/components/HeroSection";
 import { LoadingSpinner } from "@/components/ui/LoadingSpinner";
 
@@ -240,290 +239,123 @@ const trustSignals = [
 ];
 
 export default function Home() {
-  const [isVisible, setIsVisible] = useState(false);
-
-  useEffect(() => {
-    setIsVisible(true);
-  }, []);
-
-
   return (
-    <div className="min-h-screen bg-slate-900 relative overflow-hidden">
-      <SEO 
-        title="Zion Tech Group - Leading AI & Technology Solutions" 
-        description="Transform your business with Zion's cutting-edge AI solutions, cloud services, cybersecurity, and digital transformation expertise. Join the future of technology."
-        keywords="AI solutions, cloud services, cybersecurity, digital transformation, technology consulting, Zion Tech Group"
-        canonical="https://ziontechgroup.com/"
-      />
-
-      {/* Hero Section */}
-      <HeroSection />
-
-      {/* Service Categories Overview */}
-      <motion.section 
-        className="py-24 bg-gradient-to-b from-slate-800/50 to-slate-900/50 backdrop-blur-sm relative"
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1 }}
-        viewport={{ once: true, margin: "-100px" }}
-        transition={{ duration: 0.8 }}
-      >
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <motion.div 
-            className="text-center mb-20"
-            initial={{ y: 30, opacity: 0 }}
-            whileInView={{ y: 0, opacity: 1 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8 }}
-          >
-            <h2 className="text-5xl md:text-6xl font-bold text-white mb-8">
-              Our <span className="bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent">Service Categories</span>
-            </h2>
-            <p className="text-xl md:text-2xl text-slate-300 max-w-4xl mx-auto leading-relaxed">
-              Explore our comprehensive range of technology solutions designed to transform your business and drive innovation
-            </p>
-          </motion.div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-10">
-            {serviceCategories.map((category, index) => (
-              <motion.div
-                key={category.name}
-                initial={{ y: 30, opacity: 0 }}
-                whileInView={{ y: 0, opacity: 1 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.8, delay: index * 0.1 }}
-                className="group"
-                whileHover={{ y: -8, scale: 1.02 }}
-                transition={{ type: "spring", stiffness: 300, damping: 20 }}
-              >
-                <Link to={category.href} className="block h-full">
-                  <div className="bg-slate-800/50 backdrop-blur-md p-8 rounded-3xl border border-slate-700/50 hover:border-cyan-500/50 transition-all duration-500 hover:shadow-2xl hover:shadow-cyan-500/25 h-full flex flex-col justify-between">
-                    <div>
-                      <div className={`w-20 h-20 bg-gradient-to-r ${category.color} rounded-2xl flex items-center justify-center mb-6 mx-auto group-hover:scale-110 transition-transform duration-500 shadow-lg`}>
-                        <span className="text-3xl">{category.icon}</span>
-                      </div>
-                      <h3 className="text-2xl font-bold text-white mb-4 text-center group-hover:text-cyan-400 transition-colors duration-300">
-                        {category.name}
-                      </h3>
-                      <p className="text-slate-300 text-center mb-6 leading-relaxed">
-                        {category.description}
-                      </p>
-                    </div>
-                    <div className="text-center">
-                      <span className="inline-flex items-center px-4 py-2 rounded-full bg-cyan-500/20 text-cyan-400 text-sm font-semibold border border-cyan-500/30">
-                        {category.count} Services
-                      </span>
-                    </div>
-                  </div>
-                </Link>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </motion.section>
-
-
-      {/* Featured Services Section */}
-      <motion.section 
-        className="py-24 bg-gradient-to-b from-slate-900 to-slate-800"
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1 }}
-        viewport={{ once: true, margin: "-100px" }}
-        transition={{ duration: 0.8 }}
-      >
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div 
-            className="text-center mb-20"
-            initial={{ y: 30, opacity: 0 }}
-            whileInView={{ y: 0, opacity: 1 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8 }}
-          >
-            <h2 className="text-5xl md:text-6xl font-bold text-white mb-8">
-              Featured <span className="bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">Services</span>
-            </h2>
-            <p className="text-xl md:text-2xl text-slate-300 max-w-3xl mx-auto">
-              Discover our most popular and innovative technology solutions
-            </p>
-          </motion.div>
-          
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-            {/* AI-Powered Solutions */}
-            <motion.div 
-              initial={{ x: -30, opacity: 0 }}
-              whileInView={{ x: 0, opacity: 1 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.8 }}
-              className="group"
-            >
-              <div className="bg-gradient-to-br from-cyan-500/20 to-blue-500/20 backdrop-blur-md p-8 rounded-3xl border border-cyan-500/30 hover:border-cyan-500/60 transition-all duration-500 hover:shadow-2xl hover:shadow-cyan-500/25">
-                <div className="flex items-center mb-6">
-                  <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-2xl flex items-center justify-center mr-4 group-hover:scale-110 transition-transform duration-300">
-                    <span className="text-2xl">🤖</span>
-                  </div>
-                  <div>
-                    <h3 className="text-2xl font-bold text-white">AI-Powered Solutions</h3>
-                    <p className="text-cyan-400 text-sm font-medium">Most Popular</p>
-                  </div>
-                </div>
-                <p className="text-slate-300 mb-6 leading-relaxed">
-                  Leverage cutting-edge artificial intelligence to automate processes, gain insights, and transform your business operations with our comprehensive AI solutions.
-                </p>
-                <Link 
-                  to="/ai-services" 
-                  className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-semibold rounded-xl hover:shadow-lg hover:shadow-cyan-500/25 transition-all duration-300 group-hover:scale-105"
-                >
-                  Explore AI Solutions
-                  <svg className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
-                  </svg>
-                </Link>
-              </div>
-            </motion.div>
-
-            {/* Cloud & DevOps */}
-            <motion.div 
-              initial={{ x: 30, opacity: 0 }}
-              whileInView={{ x: 0, opacity: 1 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.8 }}
-              className="group"
-            >
-              <div className="bg-gradient-to-br from-blue-500/20 to-purple-500/20 backdrop-blur-md p-8 rounded-3xl border border-blue-500/30 hover:border-blue-500/60 transition-all duration-500 hover:shadow-2xl hover:shadow-blue-500/25">
-                <div className="flex items-center mb-6">
-                  <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-purple-500 rounded-2xl flex items-center justify-center mr-4 group-hover:scale-110 transition-transform duration-300">
-                    <span className="text-2xl">☁️</span>
-                  </div>
-                  <div>
-                    <h3 className="text-2xl font-bold text-white">Cloud & DevOps</h3>
-                    <p className="text-blue-400 text-sm font-medium">Enterprise Ready</p>
-                  </div>
-                </div>
-                <p className="text-slate-300 mb-6 leading-relaxed">
-                  Build, deploy, and scale your applications with our enterprise-grade cloud infrastructure and automated DevOps practices.
-                </p>
-                <Link 
-                  to="/services/cloud-devops" 
-                  className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-blue-500 to-purple-500 text-white font-semibold rounded-xl hover:shadow-lg hover:shadow-blue-500/25 transition-all duration-300 group-hover:scale-105"
-                >
-                  Explore Cloud Services
-                  <svg className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
-                  </svg>
-                </Link>
-              </div>
-            </motion.div>
-          </div>
-        </div>
-      </motion.section>
-
-      {/* CTA Section */}
-      <motion.section 
-        className="py-20 bg-gradient-to-r from-cyan-600 to-blue-700"
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1 }}
-        viewport={{ once: true, margin: "-100px" }}
-        transition={{ duration: 0.8 }}
-      >
-        <div className="max-w-4xl mx-auto text-center px-6">
-          <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white">
-            Ready to Transform Your Business?
-          </h2>
-          <p className="text-xl text-cyan-100 mb-8">
-            Join hundreds of businesses that have already revolutionized their operations with our AI-powered solutions
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link 
-              to="/contact" 
-              className="px-8 py-4 bg-white text-cyan-600 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300 transform hover:scale-105"
-            >
-              Start Your Journey
-            </Link>
-            <Link 
-              to="/services" 
-              className="px-8 py-4 border-2 border-white text-white rounded-lg font-semibold hover:bg-white hover:text-cyan-600 transition-all duration-300"
-            >
-              Explore Services
-            </Link>
-          </div>
-        </div>
-      </motion.section>
-
-      {/* Lazy Loaded Sections */}
-      <Suspense fallback={<LoadingFallback message="Loading services..." />}>
-        <CategoriesSection />
-      </Suspense>
-      
-      <Suspense fallback={<LoadingFallback message="Loading features..." />}>
-        <FeatureHighlights />
-      </Suspense>
-      
-      <Suspense fallback={<LoadingFallback message="Loading CTA..." />}>
-        <FeatureCTAs />
-      </Suspense>
-
-      <Suspense fallback={<LoadingFallback message="Loading benefits..." />}>
-        <BenefitsSection />
-      </Suspense>
-
-      <Suspense fallback={<LoadingFallback message="Loading how it works..." />}>
-        <HowItWorksSection />
-      </Suspense>
-
-      <Suspense fallback={<LoadingFallback message="Loading tech solutions..." />}>
-        <TechSolutionsSection />
-      </Suspense>
-
-      <Suspense fallback={<LoadingFallback message="Loading case studies..." />}>
-        <CaseStudiesSection />
-      </Suspense>
-
-      <Suspense fallback={<LoadingFallback message="Loading team expertise..." />}>
-        <TeamExpertiseSection />
-      </Suspense>
-
-      <Suspense fallback={<LoadingFallback message="Loading global presence..." />}>
-        <GlobalPresenceSection />
-      </Suspense>
-
-      <Suspense fallback={<LoadingFallback message="Loading innovation research..." />}>
-        <InnovationResearchSection />
-      </Suspense>
-
-      <Suspense fallback={<LoadingFallback message="Loading client stories..." />}>
-        <ClientSuccessStoriesSection />
-      </Suspense>
-
-      <Suspense fallback={<LoadingFallback message="Loading testimonials..." />}>
-        <InteractiveTestimonials />
-      </Suspense>
-
-      <Suspense fallback={<LoadingFallback message="Loading technology stack..." />}>
-        <TechnologyStackSection />
-      </Suspense>
-
-      <Suspense fallback={<LoadingFallback message="Loading security compliance..." />}>
-        <SecurityComplianceSection />
-      </Suspense>
-
-      <Suspense fallback={<LoadingFallback message="Loading pricing..." />}>
-        <PricingSection />
-      </Suspense>
-
-      <Suspense fallback={<LoadingFallback message="Loading featured listings..." />}>
-        <FeaturedListingsSection />
-      </Suspense>
-
-      <Suspense fallback={<LoadingFallback message="Loading newsletter..." />}>
-        <NewsletterSection />
-      </Suspense>
-
-      <Suspense fallback={<LoadingFallback message="Loading IT service request..." />}>
-        <ITServiceRequestHero />
-      </Suspense>
-
-      <Suspense fallback={<LoadingFallback message="Loading floating CTA..." />}>
-        <FloatingCTA />
-      </Suspense>
-    </div>
+    <>
+      <HomePageSEO />
+      <div className="min-h-screen">
+        {/* Hero Section */}
+        <HeroSection />
+        
+        {/* Service Categories Section */}
+        <Suspense fallback={<LoadingSpinner size="lg" text="Loading services..." />}>
+          <CategoriesSection />
+        </Suspense>
+        
+        {/* Benefits Section */}
+        <Suspense fallback={<LoadingSpinner size="lg" text="Loading benefits..." />}>
+          <BenefitsSection />
+        </Suspense>
+        
+        {/* How It Works Section */}
+        <Suspense fallback={<LoadingSpinner size="lg" text="Loading process..." />}>
+          <HowItWorksSection />
+        </Suspense>
+        
+        {/* Newsletter Section */}
+        <Suspense fallback={<LoadingSpinner size="lg" text="Loading newsletter..." />}>
+          <NewsletterSection />
+        </Suspense>
+        
+        {/* Featured Listings Section */}
+        <Suspense fallback={<LoadingSpinner size="lg" text="Loading featured listings..." />}>
+          <FeaturedListingsSection />
+        </Suspense>
+        
+        {/* Quick Access Section */}
+        <Suspense fallback={<LoadingSpinner size="lg" text="Loading quick access..." />}>
+          <QuickAccess />
+        </Suspense>
+        
+        {/* Feature CTAs Section */}
+        <Suspense fallback={<LoadingSpinner size="lg" text="Loading features..." />}>
+          <FeatureCTAs />
+        </Suspense>
+        
+        {/* Feature Highlights Section */}
+        <Suspense fallback={<LoadingSpinner size="lg" text="Loading highlights..." />}>
+          <FeatureHighlights />
+        </Suspense>
+        
+        {/* IT Service Request Hero Section */}
+        <Suspense fallback={<LoadingSpinner size="lg" text="Loading IT services..." />}>
+          <ITServiceRequestHero />
+        </Suspense>
+        
+        {/* Floating CTA Section */}
+        <Suspense fallback={<LoadingSpinner size="lg" text="Loading CTA..." />}>
+          <FloatingCTA />
+        </Suspense>
+        
+        {/* Pricing Section */}
+        <Suspense fallback={<LoadingSpinner size="lg" text="Loading pricing..." />}>
+          <PricingSection />
+        </Suspense>
+        
+        {/* Tech Solutions Section */}
+        <Suspense fallback={<LoadingSpinner size="lg" text="Loading tech solutions..." />}>
+          <TechSolutionsSection />
+        </Suspense>
+        
+        {/* Case Studies Section */}
+        <Suspense fallback={<LoadingSpinner size="lg" text="Loading case studies..." />}>
+          <CaseStudiesSection />
+        </Suspense>
+        
+        {/* Team Expertise Section */}
+        <Suspense fallback={<LoadingSpinner size="lg" text="Loading team expertise..." />}>
+          <TeamExpertiseSection />
+        </Suspense>
+        
+        {/* Global Presence Section */}
+        <Suspense fallback={<LoadingSpinner size="lg" text="Loading global presence..." />}>
+          <GlobalPresenceSection />
+        </Suspense>
+        
+        {/* Innovation Research Section */}
+        <Suspense fallback={<LoadingSpinner size="lg" text="Loading innovation..." />}>
+          <InnovationResearchSection />
+        </Suspense>
+        
+        {/* Client Success Stories Section */}
+        <Suspense fallback={<LoadingSpinner size="lg" text="Loading success stories..." />}>
+          <ClientSuccessStoriesSection />
+        </Suspense>
+        
+        {/* Technology Stack Section */}
+        <Suspense fallback={<LoadingSpinner size="lg" text="Loading tech stack..." />}>
+          <TechnologyStackSection />
+        </Suspense>
+        
+        {/* Security Compliance Section */}
+        <Suspense fallback={<LoadingSpinner size="lg" text="Loading security..." />}>
+          <SecurityComplianceSection />
+        </Suspense>
+        
+        {/* AI Services Showcase Section */}
+        <Suspense fallback={<LoadingSpinner size="lg" text="Loading AI services..." />}>
+          <AIServicesShowcase />
+        </Suspense>
+        
+        {/* Interactive Testimonials Section */}
+        <Suspense fallback={<LoadingSpinner size="lg" text="Loading testimonials..." />}>
+          <InteractiveTestimonials />
+        </Suspense>
+        
+        {/* Services Showcase Section */}
+        <Suspense fallback={<LoadingSpinner size="lg" text="Loading services showcase..." />}>
+          <ServicesShowcase />
+        </Suspense>
+      </div>
+    </>
   );
 }
