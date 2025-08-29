@@ -1,4 +1,4 @@
-import { ArrowRight, Atom, BookOpen, Brain, Building, Building2, ChevronDown, Cloud, Code, Cpu, DollarSign, FileText, Globe, HeartHandshake, Heart, HelpCircle, Leaf, Lock, Mail, MapPin, Menu, MessageCircle, PenTool, Phone, Rocket, Scale, Search, Settings, Shield, ShoppingCart, Star, Target, TrendingUp, Users, X, Zap } from 'lucide-react';
+import { ArrowRight, Atom, BookOpen, Brain, Building, Building2, ChevronDown, Cloud, Code, Cpu, DollarSign, FileText, Globe, HeartHandshake, Heart, HelpCircle, Leaf, Lock, Mail, MapPin, Menu, MessageCircle, PenTool, Phone, Rocket, Scale, Search, Settings, Shield, ShoppingCart, Star, Target, TrendingUp, Users, X, Zap, Truck, BarChart3, Server, Factory, Play } from 'lucide-react';
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { ThemeToggle } from '../components/ThemeToggle';
@@ -45,14 +45,6 @@ export function AppHeader() {
 
   const services = [
     { 
-      name: 'Innovative Micro SAAS 2025', 
-      href: '/innovative-micro-saas-services-2025', 
-      icon: Rocket, 
-      description: 'Cutting-edge AI Services',
-      featured: true,
-      color: 'from-purple-500 to-pink-500'
-    },
-    { 
       name: 'AI Business Intelligence', 
       href: '/services/ai-business-intelligence', 
       icon: Brain, 
@@ -61,44 +53,36 @@ export function AppHeader() {
       color: 'from-purple-500 to-cyan-500'
     },
     { 
-      name: 'AI Healthcare Platform', 
-      href: '/services/ai-healthcare-platform', 
+      name: 'AI Healthcare Analytics', 
+      href: '/services/ai-healthcare-analytics', 
       icon: Heart, 
       description: 'Medical AI & Diagnostics',
       featured: true,
       color: 'from-red-500 to-pink-500'
     },
     { 
-      name: 'AI Content Creation', 
-      href: '/services/ai-content-creation', 
-      icon: PenTool, 
-      description: 'Content Generation & Optimization',
+      name: 'AI Legal Document Analysis', 
+      href: '/services/ai-legal-document-analysis', 
+      icon: Scale, 
+      description: 'Legal AI & Document Processing',
       featured: true,
       color: 'from-blue-500 to-indigo-500'
     },
     { 
-      name: 'AI Cybersecurity', 
-      href: '/services/ai-cybersecurity', 
-      icon: Shield, 
-      description: 'AI-Powered Security',
+      name: 'AI Supply Chain Optimization', 
+      href: '/services/ai-supply-chain-optimization', 
+      icon: Truck, 
+      description: 'Supply Chain AI & Analytics',
       featured: true,
       color: 'from-green-500 to-blue-500'
     },
     { 
-      name: 'Quantum Computing', 
-      href: '/services/quantum-computing', 
-      icon: Atom, 
-      description: 'Quantum AI & Optimization',
+      name: 'AI Financial Trading', 
+      href: '/services/ai-financial-trading', 
+      icon: TrendingUp, 
+      description: 'AI-Powered Trading & Finance',
       featured: true,
       color: 'from-purple-500 to-pink-500'
-    },
-    { 
-      name: 'IoT Edge Computing', 
-      href: '/services/iot-edge-computing', 
-      icon: Cpu, 
-      description: 'IoT & Real-time Processing',
-      featured: true,
-      color: 'from-blue-500 to-cyan-500'
     },
     { 
       name: 'Digital Twin Platform', 
@@ -115,6 +99,22 @@ export function AppHeader() {
       description: 'DevOps & Infrastructure',
       featured: true,
       color: 'from-blue-500 to-cyan-500'
+    },
+    { 
+      name: 'Data Analytics', 
+      href: '/services/data-analytics', 
+      icon: BarChart3, 
+      description: 'Advanced Data Analysis',
+      featured: true,
+      color: 'from-orange-500 to-red-500'
+    },
+    { 
+      name: 'IT Infrastructure', 
+      href: '/services/it-infrastructure', 
+      icon: Server, 
+      description: 'IT Solutions & Support',
+      featured: true,
+      color: 'from-gray-500 to-blue-500'
     },
     { 
       name: 'Micro SaaS Products', 
@@ -143,39 +143,53 @@ export function AppHeader() {
       featured: true
     },
     {
-      name: 'SMB Solutions',
-      href: '/solutions',
-      icon: Building,
-      description: 'Small to medium business growth',
-      featured: false
-    },
-    {
-      name: 'Startup Solutions',
-      href: '/solutions',
-      icon: Rocket,
-      description: 'Accelerate your startup growth',
-      featured: false
-    },
-    {
-      name: 'Government Solutions',
-      href: '/solutions',
-      icon: Shield,
-      description: 'Public sector innovation',
-      featured: false
-    },
-    {
       name: 'Healthcare Solutions',
-      href: '/solutions',
+      href: '/solutions#healthcare',
       icon: Heart,
       description: 'Digital health transformation',
       featured: true
     },
     {
       name: 'Financial Solutions',
-      href: '/solutions',
+      href: '/solutions#financial',
       icon: TrendingUp,
       description: 'Fintech innovation & compliance',
       featured: true
+    },
+    {
+      name: 'Legal Solutions',
+      href: '/solutions#legal',
+      icon: Scale,
+      description: 'Legal tech & automation',
+      featured: true
+    },
+    {
+      name: 'Manufacturing Solutions',
+      href: '/solutions#manufacturing',
+      icon: Factory,
+      description: 'Smart manufacturing & Industry 4.0',
+      featured: false
+    },
+    {
+      name: 'Retail & E-commerce',
+      href: '/solutions#retail',
+      icon: ShoppingCart,
+      description: 'Digital commerce transformation',
+      featured: false
+    },
+    {
+      name: 'Government Solutions',
+      href: '/solutions#government',
+      icon: Shield,
+      description: 'Public sector innovation',
+      featured: false
+    },
+    {
+      name: 'Space & Aerospace',
+      href: '/solutions#space',
+      icon: Rocket,
+      description: 'Space technology & exploration',
+      featured: false
     }
   ];
 
@@ -228,6 +242,20 @@ export function AppHeader() {
       icon: DollarSign,
       description: 'Complete pricing information',
       featured: true
+    },
+    {
+      name: 'Pricing Guide 2027',
+      href: '/pricing-guide-2027',
+      icon: DollarSign,
+      description: 'Advanced pricing strategies',
+      featured: false
+    },
+    {
+      name: 'Pricing Guide 2030',
+      href: '/pricing-guide-2030',
+      icon: DollarSign,
+      description: 'Future pricing models',
+      featured: false
     }
   ];
 
@@ -239,6 +267,9 @@ export function AppHeader() {
     { name: 'Partners', href: '/partners', icon: HeartHandshake },
     { name: 'Privacy', href: '/privacy', icon: Shield },
     { name: 'Terms', href: '/terms', icon: BookOpen },
+    { name: 'Schedule Demo', href: '/schedule-demo', icon: Play },
+    { name: 'Community', href: '/community', icon: Users },
+    { name: 'Developers', href: '/developers', icon: Code }
   ];
 
   const contactInfo = {
