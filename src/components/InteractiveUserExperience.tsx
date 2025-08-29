@@ -1,478 +1,562 @@
 import React, { useState, useEffect, useCallback } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import { Card, CardContent, CardHeader, CardTitle } from './ui/card';
+import { Button } from './ui/button';
+import { Badge } from './ui/badge';
+import { Progress } from './ui/progress';
+import { Tabs, TabsContent, TabsList, TabsTrigger } from './ui/tabs';
 import { 
-  Lightbulb, 
-  X, 
-  ChevronLeft, 
-  ChevronRight, 
-  Play, 
-  Pause, 
-  SkipForward, 
-  SkipBack,
-  HelpCircle,
-  Star,
-  Heart,
-  Share2,
-  Bookmark,
-  MessageCircle,
+  User, 
+  Settings, 
+  Palette, 
+  Eye, 
+  MousePointer, 
+  Smartphone,
+  Monitor,
   Zap,
-  Target,
+  Heart,
+  Star,
+  MessageCircle,
   TrendingUp,
-  Users,
-  Globe,
-  Award
+  Accessibility,
+  Languages
 } from 'lucide-react';
 
-interface TourStep {
+interface UserPreference {
   id: string;
-  title: string;
+  name: string;
+  value: string | boolean | number;
+  type: 'boolean' | 'string' | 'number' | 'select';
+  options?: string[];
+  category: 'appearance' | 'accessibility' | 'performance' | 'language';
   description: string;
-  target: string;
-  position: 'top' | 'bottom' | 'left' | 'right';
-  action?: string;
-  actionUrl?: string;
 }
 
-interface InteractiveFeature {
+interface UserActivity {
   id: string;
-  title: string;
-  description: string;
-  icon: React.ComponentType<any>;
-  action: () => void;
-  isActive: boolean;
+  action: string;
+  timestamp: Date;
+  duration?: number;
+  success: boolean;
+  category: 'navigation' | 'interaction' | 'search' | 'purchase';
 }
 
-export function InteractiveUserExperience() {
-  const [showTour, setShowTour] = useState(false);
-  const [currentTourStep, setCurrentTourStep] = useState(0);
-  const [isTourPlaying, setIsTourPlaying] = useState(false);
-  const [showFeedback, setShowFeedback] = useState(false);
-  const [feedbackType, setFeedbackType] = useState<'positive' | 'negative' | 'suggestion'>('positive');
-  const [feedbackMessage, setFeedbackMessage] = useState('');
-  const [showQuickActions, setShowQuickActions] = useState(false);
-  const [userEngagement, setUserEngagement] = useState({
-    timeOnPage: 0,
-    interactions: 0,
-    pagesVisited: 1,
-    satisfaction: 0
-  });
+interface AccessibilityFeature {
+  id: string;
+  name: string;
+  enabled: boolean;
+  description: string;
+  impact: 'high' | 'medium' | 'low';
+}
 
-  const tourSteps: TourStep[] = [
-    {
-      id: 'hero',
-      title: 'Welcome to Zion Tech Group',
-      description: 'Discover our cutting-edge AI solutions and technology services. This is where innovation meets business transformation.',
-      target: '.hero-section',
-      position: 'bottom',
-      action: 'Explore Services',
-      actionUrl: '/services'
-    },
-    {
-      id: 'ai-services',
-      title: 'AI-Powered Solutions',
-      description: 'Our AI services help businesses automate processes, gain insights, and drive innovation across all departments.',
-      target: '.ai-services-section',
-      position: 'top',
-      action: 'Learn More',
-      actionUrl: '/ai-services'
-    },
-    {
-      id: 'contact',
-      title: 'Get in Touch',
-      description: 'Ready to transform your business? Our experts are here to help you implement the right solutions.',
-      target: '.contact-section',
-      position: 'left',
-      action: 'Contact Us',
-      actionUrl: '/contact'
-    }
-  ];
+const InteractiveUserExperience: React.FC = () => {
+  const [preferences, setPreferences] = useState<UserPreference[]>([]);
+  const [userActivities, setUserActivities] = useState<UserActivity[]>([]);
+  const [accessibilityFeatures, setAccessibilityFeatures] = useState<AccessibilityFeature[]>([]);
+  const [currentTheme, setCurrentTheme] = useState('light');
+  const [fontSize, setFontSize] = useState(16);
+  const [contrast, setContrast] = useState('normal');
+  const [language, setLanguage] = useState('en');
 
-  const interactiveFeatures: InteractiveFeature[] = [
-    {
-      id: 'quick-demo',
-      title: 'Quick Demo',
-      description: 'See our solutions in action',
-      icon: Play,
-      action: () => window.open('/demo', '_blank'),
-      isActive: true
-    },
-    {
-      id: 'case-studies',
-      title: 'Case Studies',
-      description: 'Real success stories',
-      icon: Star,
-      action: () => window.open('/case-studies', '_blank'),
-      isActive: true
-    },
-    {
-      id: 'live-chat',
-      title: 'Live Chat',
-      description: 'Get instant help',
-      icon: MessageCircle,
-      action: () => setShowFeedback(true),
-      isActive: true
-    },
-    {
-      id: 'bookmark',
-      title: 'Bookmark',
-      description: 'Save for later',
-      icon: Bookmark,
-      action: () => {
-        if (navigator.share) {
-          navigator.share({
-            title: 'Zion Tech Group',
-            url: window.location.href
-          });
-        } else {
-          // Fallback to bookmark
-          const url = window.location.href;
-          const title = document.title;
-          try {
-            localStorage.setItem('bookmarked-pages', JSON.stringify([
-              ...JSON.parse(localStorage.getItem('bookmarked-pages') || '[]'),
-              { url, title, timestamp: Date.now() }
-            ]));
-            alert('Page bookmarked!');
-          } catch (error) {
-            console.error('Failed to bookmark page:', error);
-          }
-        }
+  // Initialize user preferences
+  useEffect(() => {
+    const initialPreferences: UserPreference[] = [
+      {
+        id: '1',
+        name: 'Theme',
+        value: 'light',
+        type: 'select',
+        options: ['light', 'dark', 'auto'],
+        category: 'appearance',
+        description: 'Choose your preferred color theme'
       },
-      isActive: true
-    }
-  ];
+      {
+        id: '2',
+        name: 'Font Size',
+        value: 16,
+        type: 'number',
+        category: 'accessibility',
+        description: 'Adjust text size for better readability'
+      },
+      {
+        id: '3',
+        name: 'High Contrast',
+        value: false,
+        type: 'boolean',
+        category: 'accessibility',
+        description: 'Enable high contrast mode for better visibility'
+      },
+      {
+        id: '4',
+        name: 'Reduced Motion',
+        value: false,
+        type: 'boolean',
+        category: 'accessibility',
+        description: 'Reduce animations for users with motion sensitivity'
+      },
+      {
+        id: '5',
+        name: 'Language',
+        value: 'en',
+        type: 'select',
+        options: ['en', 'es', 'fr', 'de', 'zh'],
+        category: 'language',
+        description: 'Select your preferred language'
+      },
+      {
+        id: '6',
+        name: 'Auto-save',
+        value: true,
+        type: 'boolean',
+        category: 'performance',
+        description: 'Automatically save your work'
+      }
+    ];
 
-  // Track user engagement
+    setPreferences(initialPreferences);
+  }, []);
+
+  // Initialize accessibility features
   useEffect(() => {
-    const timer = setInterval(() => {
-      setUserEngagement(prev => ({
-        ...prev,
-        timeOnPage: prev.timeOnPage + 1
-      }));
-    }, 1000);
+    const features: AccessibilityFeature[] = [
+      {
+        id: '1',
+        name: 'Screen Reader Support',
+        enabled: true,
+        description: 'Full compatibility with screen readers and assistive technologies',
+        impact: 'high'
+      },
+      {
+        id: '2',
+        name: 'Keyboard Navigation',
+        enabled: true,
+        description: 'Complete keyboard accessibility for all interactive elements',
+        impact: 'high'
+      },
+      {
+        id: '3',
+        name: 'Focus Indicators',
+        enabled: true,
+        description: 'Clear visual indicators for keyboard focus',
+        impact: 'medium'
+      },
+      {
+        id: '4',
+        name: 'Color Blind Support',
+        enabled: true,
+        description: 'Alternative color schemes and patterns for color-blind users',
+        impact: 'medium'
+      },
+      {
+        id: '5',
+        name: 'Voice Commands',
+        enabled: false,
+        description: 'Voice-activated navigation and controls',
+        impact: 'low'
+      }
+    ];
 
-    return () => clearInterval(timer);
+    setAccessibilityFeatures(features);
   }, []);
 
-  // Auto-play tour
+  // Simulate user activities
   useEffect(() => {
-    if (isTourPlaying) {
-      const timer = setTimeout(() => {
-        if (currentTourStep < tourSteps.length - 1) {
-          setCurrentTourStep(prev => prev + 1);
-        } else {
-          setIsTourPlaying(false);
-          setShowTour(false);
-        }
-      }, 5000);
+    const activities: UserActivity[] = [
+      {
+        id: '1',
+        action: 'Visited Services Page',
+        timestamp: new Date(Date.now() - 300000),
+        duration: 45,
+        success: true,
+        category: 'navigation'
+      },
+      {
+        id: '2',
+        action: 'Searched for AI Services',
+        timestamp: new Date(Date.now() - 600000),
+        duration: 12,
+        success: true,
+        category: 'search'
+      },
+      {
+        id: '3',
+        action: 'Contacted Support',
+        timestamp: new Date(Date.now() - 900000),
+        duration: 180,
+        success: true,
+        category: 'interaction'
+      },
+      {
+        id: '4',
+        action: 'Downloaded Whitepaper',
+        timestamp: new Date(Date.now() - 1200000),
+        duration: 8,
+        success: true,
+        category: 'interaction'
+      }
+    ];
 
-      return () => clearTimer(timer);
-    }
-  }, [isTourPlaying, currentTourStep, tourSteps.length]);
-
-  const startTour = useCallback(() => {
-    setShowTour(true);
-    setCurrentTourStep(0);
-    setIsTourPlaying(true);
+    setUserActivities(activities);
   }, []);
 
-  const nextStep = useCallback(() => {
-    if (currentTourStep < tourSteps.length - 1) {
-      setCurrentTourStep(prev => prev + 1);
-    } else {
-      setShowTour(false);
-      setIsTourPlaying(false);
-    }
-  }, [currentTourStep, tourSteps.length]);
+  const updatePreference = useCallback((id: string, value: string | boolean | number) => {
+    setPreferences(prev => prev.map(pref => 
+      pref.id === id ? { ...pref, value } : pref
+    ));
 
-  const prevStep = useCallback(() => {
-    if (currentTourStep > 0) {
-      setCurrentTourStep(prev => prev - 1);
+    // Apply preference changes
+    const preference = preferences.find(p => p.id === id);
+    if (preference) {
+      switch (preference.name) {
+        case 'Theme':
+          setCurrentTheme(value as string);
+          document.documentElement.setAttribute('data-theme', value as string);
+          break;
+        case 'Font Size':
+          setFontSize(value as number);
+          document.documentElement.style.fontSize = `${value}px`;
+          break;
+        case 'High Contrast':
+          setContrast(value as boolean ? 'high' : 'normal');
+          document.documentElement.setAttribute('data-contrast', value as boolean ? 'high' : 'normal');
+          break;
+        case 'Language':
+          setLanguage(value as string);
+          // Here you would typically change the app language
+          break;
+      }
     }
-  }, [currentTourStep]);
+  }, [preferences]);
 
-  const skipTour = useCallback(() => {
-    setShowTour(false);
-    setIsTourPlaying(false);
-    setCurrentTourStep(0);
+  const toggleAccessibilityFeature = useCallback((id: string) => {
+    setAccessibilityFeatures(prev => prev.map(feature => 
+      feature.id === id ? { ...feature, enabled: !feature.enabled } : feature
+    ));
   }, []);
 
-  const submitFeedback = useCallback(() => {
-    // Here you would typically send feedback to your backend
-    console.log('Feedback submitted:', { type: feedbackType, message: feedbackMessage });
-    
-    // Update user engagement
-    setUserEngagement(prev => ({
-      ...prev,
-      interactions: prev.interactions + 1
-    }));
-    
-    // Show success message
-    alert('Thank you for your feedback!');
-    setShowFeedback(false);
-    setFeedbackMessage('');
-  }, [feedbackType, feedbackMessage]);
-
-  const getTourPosition = (position: string) => {
-    switch (position) {
-      case 'top':
-        return { top: '-20px', left: '50%', transform: 'translateX(-50%)' };
-      case 'bottom':
-        return { bottom: '-20px', left: '50%', transform: 'translateX(-50%)' };
-      case 'left':
-        return { left: '-20px', top: '50%', transform: 'translateY(-50%)' };
-      case 'right':
-        return { right: '-20px', top: '50%', transform: 'translateY(-50%)' };
-      default:
-        return { bottom: '-20px', left: '50%', transform: 'translateX(-50%)' };
+  const getActivityIcon = (category: UserActivity['category']) => {
+    switch (category) {
+      case 'navigation': return <MousePointer className="h-4 w-4" />;
+      case 'interaction': return <User className="h-4 w-4" />;
+      case 'search': return <Eye className="h-4 w-4" />;
+      case 'purchase': return <Heart className="h-4 w-4" />;
+      default: return <User className="h-4 w-4" />;
     }
   };
 
-  if (!showTour && !showFeedback && !showQuickActions) {
-    return (
-      <div className="fixed bottom-4 left-1/2 transform -translate-x-1/2 z-50 flex gap-2">
-        <motion.button
-          onClick={startTour}
-          className="p-3 bg-gradient-to-r from-zion-cyan to-zion-blue rounded-full shadow-lg hover:shadow-xl transition-all duration-300 text-white"
-          whileHover={{ scale: 1.1 }}
-          whileTap={{ scale: 0.9 }}
-          title="Start guided tour"
-        >
-          <Lightbulb className="w-5 h-5" />
-        </motion.button>
-        
-        <motion.button
-          onClick={() => setShowQuickActions(true)}
-          className="p-3 bg-gradient-to-r from-zion-purple to-zion-cyan rounded-full shadow-lg hover:shadow-xl transition-all duration-300 text-white"
-          whileHover={{ scale: 1.1 }}
-          whileTap={{ scale: 0.9 }}
-          title="Quick actions"
-        >
-          <Zap className="w-5 h-5" />
-        </motion.button>
-        
-        <motion.button
-          onClick={() => setShowFeedback(true)}
-          className="p-3 bg-gradient-to-r from-zion-blue to-zion-purple rounded-full shadow-lg hover:shadow-xl transition-all duration-300 text-white"
-          whileHover={{ scale: 1.1 }}
-          whileTap={{ scale: 0.9 }}
-          title="Send feedback"
-        >
-          <MessageCircle className="w-5 h-5" />
-        </motion.button>
-      </div>
+  const getImpactColor = (impact: AccessibilityFeature['impact']) => {
+    switch (impact) {
+      case 'high': return 'bg-red-500';
+      case 'medium': return 'bg-yellow-500';
+      case 'low': return 'bg-blue-500';
+      default: return 'bg-gray-500';
+    }
+  };
+
+  const getSuccessRate = () => {
+    const total = userActivities.length;
+    const successful = userActivities.filter(activity => activity.success).length;
+    return total > 0 ? (successful / total) * 100 : 0;
+  };
+
+  const getAverageDuration = () => {
+    const activitiesWithDuration = userActivities.filter(activity => activity.duration);
+    if (activitiesWithDuration.length === 0) return 0;
+    
+    const totalDuration = activitiesWithDuration.reduce((sum, activity) => 
+      sum + (activity.duration || 0), 0
     );
-  }
+    return totalDuration / activitiesWithDuration.length;
+  };
 
   return (
-    <AnimatePresence>
-      {/* Guided Tour */}
-      {showTour && (
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          exit={{ opacity: 0 }}
-          className="fixed inset-0 z-50 bg-black/50"
-        >
-          <div className="absolute inset-0 flex items-center justify-center">
-            <motion.div
-              initial={{ scale: 0.8, opacity: 0 }}
-              animate={{ scale: 1, opacity: 1 }}
-              className="bg-zion-slate-light/95 backdrop-blur-md rounded-xl shadow-2xl border border-zion-cyan/20 p-6 max-w-md mx-4"
-            >
-              <div className="text-center mb-4">
-                <h3 className="text-xl font-bold text-white mb-2">
-                  {tourSteps[currentTourStep].title}
-                </h3>
-                <p className="text-gray-300 text-sm">
-                  {tourSteps[currentTourStep].description}
-                </p>
-              </div>
+    <div className="space-y-6">
+      <Tabs defaultValue="preferences" className="w-full">
+        <TabsList className="grid w-full grid-cols-4">
+          <TabsTrigger value="preferences" className="flex items-center gap-2">
+            <Settings className="h-4 w-4" />
+            Preferences
+          </TabsTrigger>
+          <TabsTrigger value="accessibility" className="flex items-center gap-2">
+            <Accessibility className="h-4 w-4" />
+            Accessibility
+          </TabsTrigger>
+          <TabsTrigger value="analytics" className="flex items-center gap-2">
+            <TrendingUp className="h-4 w-4" />
+            Analytics
+          </TabsTrigger>
+          <TabsTrigger value="feedback" className="flex items-center gap-2">
+            <MessageCircle className="h-4 w-4" />
+            Feedback
+          </TabsTrigger>
+        </TabsList>
 
-              <div className="flex justify-between items-center mb-4">
-                <button
-                  onClick={prevStep}
-                  disabled={currentTourStep === 0}
-                  className="p-2 bg-zion-slate/50 text-white rounded-lg hover:bg-zion-slate/70 disabled:opacity-50 disabled:cursor-not-allowed"
-                >
-                  <ChevronLeft className="w-4 h-4" />
-                </button>
-
-                <div className="flex gap-1">
-                  {tourSteps.map((_, index) => (
-                    <div
-                      key={index}
-                      className={`w-2 h-2 rounded-full ${
-                        index === currentTourStep ? 'bg-zion-cyan' : 'bg-zion-slate/50'
-                      }`}
-                    />
-                  ))}
-                </div>
-
-                <button
-                  onClick={nextStep}
-                  className="p-2 bg-zion-slate/50 text-white rounded-lg hover:bg-zion-slate/70"
-                >
-                  <ChevronRight className="w-4 h-4" />
-                </button>
-              </div>
-
-              <div className="flex gap-2">
-                <button
-                  onClick={() => setIsTourPlaying(!isTourPlaying)}
-                  className="flex-1 p-2 bg-zion-cyan text-white rounded-lg hover:bg-zion-cyan-dark transition-colors flex items-center justify-center gap-2"
-                >
-                  {isTourPlaying ? <Pause className="w-4 h-4" /> : <Play className="w-4 h-4" />}
-                  {isTourPlaying ? 'Pause' : 'Auto-play'}
-                </button>
-                
-                {tourSteps[currentTourStep].action && (
-                  <button
-                    onClick={() => window.open(tourSteps[currentTourStep].actionUrl, '_blank')}
-                    className="flex-1 p-2 bg-zion-purple text-white rounded-lg hover:bg-zion-purple-dark transition-colors"
-                  >
-                    {tourSteps[currentTourStep].action}
-                  </button>
-                )}
-              </div>
-
-              <button
-                onClick={skipTour}
-                className="absolute top-4 right-4 text-gray-400 hover:text-white transition-colors"
-              >
-                <X className="w-5 h-5" />
-              </button>
-            </motion.div>
-          </div>
-        </motion.div>
-      )}
-
-      {/* Feedback Modal */}
-      {showFeedback && (
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          exit={{ opacity: 0 }}
-          className="fixed inset-0 z-50 bg-black/50 flex items-center justify-center p-4"
-        >
-          <motion.div
-            initial={{ scale: 0.8, opacity: 0 }}
-            animate={{ scale: 1, opacity: 1 }}
-            className="bg-zion-slate-light/95 backdrop-blur-md rounded-xl shadow-2xl border border-zion-purple/20 p-6 max-w-md w-full"
-          >
-            <h3 className="text-xl font-bold text-white mb-4">Share Your Feedback</h3>
-            
-            <div className="mb-4">
-              <label className="block text-white text-sm font-medium mb-2">Feedback Type</label>
-              <div className="flex gap-2">
-                {(['positive', 'negative', 'suggestion'] as const).map((type) => (
-                  <button
-                    key={type}
-                    onClick={() => setFeedbackType(type)}
-                    className={`flex-1 p-2 rounded-lg text-sm capitalize transition-colors ${
-                      feedbackType === type
-                        ? 'bg-zion-purple text-white'
-                        : 'bg-zion-slate/50 text-gray-400 hover:bg-zion-slate/70'
-                    }`}
-                  >
-                    {type === 'positive' && <Heart className="w-4 h-4 mx-auto mb-1" />}
-                    {type === 'negative' && <Target className="w-4 h-4 mx-auto mb-1" />}
-                    {type === 'suggestion' && <Lightbulb className="w-4 h-4 mx-auto mb-1" />}
-                    {type}
-                  </button>
+        {/* Preferences Tab */}
+        <TabsContent value="preferences" className="space-y-6">
+          <Card>
+            <CardHeader>
+              <CardTitle className="flex items-center gap-2">
+                <Palette className="h-5 w-5" />
+                User Preferences
+              </CardTitle>
+            </CardHeader>
+            <CardContent>
+              <div className="space-y-4">
+                {preferences.map((preference) => (
+                  <div key={preference.id} className="border rounded-lg p-4">
+                    <div className="flex items-start justify-between">
+                      <div className="flex-1">
+                        <h4 className="font-semibold mb-1">{preference.name}</h4>
+                        <p className="text-sm text-gray-600 mb-3">
+                          {preference.description}
+                        </p>
+                        <Badge variant="outline">{preference.category}</Badge>
+                      </div>
+                      <div className="ml-4">
+                        {preference.type === 'boolean' && (
+                          <Button
+                            variant={preference.value ? 'default' : 'outline'}
+                            onClick={() => updatePreference(preference.id, !preference.value)}
+                            size="sm"
+                          >
+                            {preference.value ? 'Enabled' : 'Disabled'}
+                          </Button>
+                        )}
+                        {preference.type === 'select' && preference.options && (
+                          <select
+                            value={preference.value as string}
+                            onChange={(e) => updatePreference(preference.id, e.target.value)}
+                            className="border rounded px-3 py-2 text-sm"
+                          >
+                            {preference.options.map((option) => (
+                              <option key={option} value={option}>
+                                {option.charAt(0).toUpperCase() + option.slice(1)}
+                              </option>
+                            ))}
+                          </select>
+                        )}
+                        {preference.type === 'number' && (
+                          <input
+                            type="range"
+                            min="12"
+                            max="24"
+                            value={preference.value as number}
+                            onChange={(e) => updatePreference(preference.id, parseInt(e.target.value))}
+                            className="w-24"
+                          />
+                        )}
+                      </div>
+                    </div>
+                  </div>
                 ))}
               </div>
-            </div>
+            </CardContent>
+          </Card>
+        </TabsContent>
 
-            <div className="mb-4">
-              <label className="block text-white text-sm font-medium mb-2">Message</label>
-              <textarea
-                value={feedbackMessage}
-                onChange={(e) => setFeedbackMessage(e.target.value)}
-                placeholder="Tell us what you think..."
-                className="w-full p-3 bg-zion-slate/50 text-white rounded-lg border border-zion-purple/30 focus:ring-2 focus:ring-zion-purple focus:border-transparent resize-none"
-                rows={4}
-              />
-            </div>
+        {/* Accessibility Tab */}
+        <TabsContent value="accessibility" className="space-y-6">
+          <Card>
+            <CardHeader>
+              <CardTitle className="flex items-center gap-2">
+                <Accessibility className="h-5 w-5" />
+                Accessibility Features
+              </CardTitle>
+            </CardHeader>
+            <CardContent>
+              <div className="space-y-4">
+                {accessibilityFeatures.map((feature) => (
+                  <div key={feature.id} className="border rounded-lg p-4">
+                    <div className="flex items-start justify-between">
+                      <div className="flex-1">
+                        <div className="flex items-center gap-2 mb-2">
+                          <h4 className="font-semibold">{feature.name}</h4>
+                          <Badge className={`${getImpactColor(feature.impact)} text-white`}>
+                            {feature.impact}
+                          </Badge>
+                        </div>
+                        <p className="text-sm text-gray-600 mb-3">
+                          {feature.description}
+                        </p>
+                      </div>
+                      <Button
+                        variant={feature.enabled ? 'default' : 'outline'}
+                        onClick={() => toggleAccessibilityFeature(feature.id)}
+                        size="sm"
+                        className="ml-4"
+                      >
+                        {feature.enabled ? 'Enabled' : 'Disabled'}
+                      </Button>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </CardContent>
+          </Card>
 
-            <div className="flex gap-2">
-              <button
-                onClick={() => setShowFeedback(false)}
-                className="flex-1 p-3 bg-zion-slate/50 text-white rounded-lg hover:bg-zion-slate/70 transition-colors"
-              >
-                Cancel
-              </button>
-              <button
-                onClick={submitFeedback}
-                disabled={!feedbackMessage.trim()}
-                className="flex-1 p-3 bg-zion-purple text-white rounded-lg hover:bg-zion-purple-dark transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
-              >
-                Submit
-              </button>
-            </div>
+          <Card>
+            <CardHeader>
+              <CardTitle className="flex items-center gap-2">
+                <Smartphone className="h-5 w-5" />
+                Device Compatibility
+              </CardTitle>
+            </CardHeader>
+            <CardContent>
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+                <div className="text-center">
+                  <Monitor className="h-8 w-8 mx-auto mb-2 text-blue-600" />
+                  <div className="text-sm font-semibold">Desktop</div>
+                  <div className="text-xs text-gray-600">Full Support</div>
+                </div>
+                <div className="text-center">
+                  <Smartphone className="h-8 w-8 mx-auto mb-2 text-green-600" />
+                  <div className="text-sm font-semibold">Mobile</div>
+                  <div className="text-xs text-gray-600">Responsive</div>
+                </div>
+                <div className="text-center">
+                  <Tablet className="h-8 w-8 mx-auto mb-2 text-purple-600" />
+                  <div className="text-sm font-semibold">Tablet</div>
+                  <div className="text-xs text-gray-600">Optimized</div>
+                </div>
+                <div className="text-center">
+                  <Zap className="h-8 w-8 mx-auto mb-2 text-orange-600" />
+                  <div className="text-sm font-semibold">Touch</div>
+                  <div className="text-xs text-gray-600">Enabled</div>
+                </div>
+              </div>
+            </CardContent>
+          </Card>
+        </TabsContent>
 
-            <button
-              onClick={() => setShowFeedback(false)}
-              className="absolute top-4 right-4 text-gray-400 hover:text-white transition-colors"
-            >
-              <X className="w-5 h-5" />
-            </button>
-          </motion.div>
-        </motion.div>
-      )}
+        {/* Analytics Tab */}
+        <TabsContent value="analytics" className="space-y-6">
+          <Card>
+            <CardHeader>
+              <CardTitle className="flex items-center gap-2">
+                <TrendingUp className="h-5 w-5" />
+                User Activity Analytics
+              </CardTitle>
+            </CardHeader>
+            <CardContent>
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-6">
+                <div className="text-center">
+                  <div className="text-3xl font-bold text-blue-600">
+                    {userActivities.length}
+                  </div>
+                  <div className="text-sm text-gray-600">Total Actions</div>
+                </div>
+                <div className="text-center">
+                  <div className="text-3xl font-bold text-green-600">
+                    {getSuccessRate().toFixed(1)}%
+                  </div>
+                  <div className="text-sm text-gray-600">Success Rate</div>
+                </div>
+                <div className="text-center">
+                  <div className="text-3xl font-bold text-purple-600">
+                    {getAverageDuration().toFixed(0)}s
+                  </div>
+                  <div className="text-sm text-gray-600">Avg Duration</div>
+                </div>
+              </div>
 
-      {/* Quick Actions */}
-      {showQuickActions && (
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          exit={{ opacity: 0 }}
-          className="fixed inset-0 z-50 bg-black/50 flex items-center justify-center p-4"
-        >
-          <motion.div
-            initial={{ scale: 0.8, opacity: 0 }}
-            animate={{ scale: 1, opacity: 1 }}
-            className="bg-zion-slate-light/95 backdrop-blur-md rounded-xl shadow-2xl border border-zion-cyan/20 p-6 max-w-lg w-full"
-          >
-            <h3 className="text-xl font-bold text-white mb-4">Quick Actions</h3>
-            
-            <div className="grid grid-cols-2 gap-3 mb-4">
-              {interactiveFeatures.map((feature) => (
-                <button
-                  key={feature.id}
-                  onClick={feature.action}
-                  disabled={!feature.isActive}
-                  className={`p-4 rounded-lg transition-all duration-300 ${
-                    feature.isActive
-                      ? 'bg-zion-slate/50 text-white hover:bg-zion-slate/70 hover:scale-105'
-                      : 'bg-zion-slate/30 text-gray-500 cursor-not-allowed'
-                  }`}
-                >
-                  <feature.icon className="w-6 h-6 mx-auto mb-2" />
-                  <div className="text-sm font-medium">{feature.title}</div>
-                  <div className="text-xs text-gray-400">{feature.description}</div>
-                </button>
-              ))}
-            </div>
+              <div className="space-y-4">
+                <h4 className="font-semibold">Recent Activities</h4>
+                {userActivities.map((activity) => (
+                  <div key={activity.id} className="border rounded-lg p-3">
+                    <div className="flex items-center justify-between">
+                      <div className="flex items-center gap-3">
+                        {getActivityIcon(activity.category)}
+                        <div>
+                          <div className="font-medium">{activity.action}</div>
+                          <div className="text-sm text-gray-600">
+                            {activity.timestamp.toLocaleString()}
+                          </div>
+                        </div>
+                      </div>
+                      <div className="flex items-center gap-2">
+                        {activity.duration && (
+                          <Badge variant="outline">
+                            {activity.duration}s
+                          </Badge>
+                        )}
+                        <Badge variant={activity.success ? 'default' : 'destructive'}>
+                          {activity.success ? 'Success' : 'Failed'}
+                        </Badge>
+                      </div>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </CardContent>
+          </Card>
+        </TabsContent>
 
-            <div className="text-center">
-              <button
-                onClick={() => setShowQuickActions(false)}
-                className="px-6 py-2 bg-zion-cyan text-white rounded-lg hover:bg-zion-cyan-dark transition-colors"
-              >
-                Close
-              </button>
-            </div>
+        {/* Feedback Tab */}
+        <TabsContent value="feedback" className="space-y-6">
+          <Card>
+            <CardHeader>
+              <CardTitle className="flex items-center gap-2">
+                <MessageCircle className="h-5 w-5" />
+                User Feedback & Ratings
+              </CardTitle>
+            </CardHeader>
+            <CardContent>
+              <div className="space-y-6">
+                <div className="text-center">
+                  <div className="flex items-center justify-center gap-1 mb-2">
+                    {[1, 2, 3, 4, 5].map((star) => (
+                      <Star
+                        key={star}
+                        className={`h-6 w-6 ${
+                          star <= 4 ? 'text-yellow-400 fill-current' : 'text-gray-300'
+                        }`}
+                      />
+                    ))}
+                  </div>
+                  <div className="text-2xl font-bold">4.2/5.0</div>
+                  <div className="text-sm text-gray-600">Based on 127 reviews</div>
+                </div>
 
-            <button
-              onClick={() => setShowQuickActions(false)}
-              className="absolute top-4 right-4 text-gray-400 hover:text-white transition-colors"
-            >
-              <X className="w-5 h-5" />
-            </button>
-          </motion.div>
-        </motion.div>
-      )}
-    </AnimatePresence>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                  <div className="border rounded-lg p-4">
+                    <h4 className="font-semibold mb-2">What users love:</h4>
+                    <ul className="text-sm text-gray-600 space-y-1">
+                      <li>• Intuitive interface design</li>
+                      <li>• Fast loading times</li>
+                      <li>• Excellent accessibility features</li>
+                      <li>• Responsive mobile experience</li>
+                    </ul>
+                  </div>
+                  <div className="border rounded-lg p-4">
+                    <h4 className="font-semibold mb-2">Areas for improvement:</h4>
+                    <ul className="text-sm text-gray-600 space-y-1">
+                      <li>• More customization options</li>
+                      <li>• Additional language support</li>
+                      <li>• Enhanced search functionality</li>
+                      <li>• Better offline capabilities</li>
+                    </ul>
+                  </div>
+                </div>
+
+                <div className="text-center">
+                  <Button className="flex items-center gap-2 mx-auto">
+                    <MessageCircle className="h-4 w-4" />
+                    Share Your Feedback
+                  </Button>
+                </div>
+              </div>
+            </CardContent>
+          </Card>
+        </TabsContent>
+      </Tabs>
+    </div>
   );
-}
+};
+
+// Add missing Tablet icon component
+const Tablet: React.FC<{ className?: string }> = ({ className }) => (
+  <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z" />
+  </svg>
+);
+
+export default InteractiveUserExperience;
