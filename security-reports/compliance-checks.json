@@ -1,0 +1,23 @@
+{
+  "checks": [
+    {
+      "file": "index.html",
+      "csp": false,
+      "xFrame": false,
+      "xContent": false
+    },
+    {
+      "file": "offline.html",
+      "csp": false,
+      "xFrame": false,
+      "xContent": false
+    },
+    {
+      "type": "package-scripts",
+      "hasSecurityScript": false,
+      "hasAuditScript": false,
+      "hasLintScript": true
+    }
+  ],
+  "timestamp": "2025-08-29T12:16:16.691Z"
+}

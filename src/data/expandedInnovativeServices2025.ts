@@ -371,7 +371,7 @@ export const EXPANDED_INNOVATIVE_SERVICES_2025: ExpandedInnovativeService[] = [
       uptime: "99.9%",
       security: ["SSO", "Row‑level security"]
     }
-  }
+  },
 
   // Blockchain-Based Supply Chain Transparency
   {

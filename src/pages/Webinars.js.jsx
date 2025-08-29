@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import Link from 'next/link';
+import { Link } from "react-router-dom";
 import { Video, Brain, Cpu, Shield, Zap, Rocket, Building } from 'lucide-react';
 export default function Webinars() {
     const [selectedCategory, setSelectedCategory] = useState('all');

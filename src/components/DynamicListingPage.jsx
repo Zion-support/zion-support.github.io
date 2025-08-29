@@ -215,9 +215,7 @@ export function DynamicListingPage({ title, description, categorySlug, listings:
                 ? "grid grid-cols-1 md:grid-cols-2 gap-6"
                 : "flex flex-col gap-6"}>
                 {paginatedListings.map((listing) => (<ProductListingCard key={listing.id} listing={listing} view={view} onRequestQuote={handleRequestQuote} detailBasePath={detailBasePath}/>))}
-              </div>)
-            :
-        }
+              </div>) : (
               {totalPages > 1 && (<div className="mt-8">
                   <Pagination className="justify-center">
                     <PaginationContent>
