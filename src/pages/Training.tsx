@@ -1,569 +1,848 @@
 import React, { useState } from 'react';
-import { GraduationCap, BookOpen, Users, Clock, Star, Search, Filter, Play, Download, ExternalLink, ArrowRight, Brain, Cloud, Shield, Database, Zap, Globe, Target, TrendingUp, Award, CheckCircle, Calendar, MapPin, DollarSign, FileText, Lightbulb, Microscope, Rocket, Code, Network, Cpu, Lock, BarChart3, Palette, Smartphone, Eye, Star as StarIcon } from 'lucide-react';
+import { Link } from 'react-router-dom';
+import { motion } from 'framer-motion';
+import { 
+  GraduationCap, 
+  BookOpen, 
+  Users, 
+  Clock, 
+  Star, 
+  Award, 
+  Play, 
+  Download, 
+  ExternalLink, 
+  ArrowRight,
+  CheckCircle,
+  Calendar,
+  MapPin,
+  Globe,
+  Zap,
+  Brain,
+  Cloud,
+  Shield,
+  Cpu,
+  Network,
+  BarChart3,
+  Code,
+  Database,
+  Smartphone,
+  Monitor,
+  Server,
+  Lock,
+  Settings,
+  Palette,
+  Rocket,
+  Target,
+  TrendingUp,
+  Lightbulb,
+  Briefcase,
+  UserCheck,
+  FileText,
+  Video,
+  Headphones,
+  Bookmark,
+  Share2
+} from 'lucide-react';
+import { SEO } from '../components/SEO';
 
-export default function Training() {
-  const [searchQuery, setSearchQuery] = useState('');
-  const [activeCategory, setActiveCategory] = useState('all');
-  const [activeLevel, setActiveLevel] = useState('all');
-  const [activeFormat, setActiveFormat] = useState('all');
+export const Training: React.FC = () => {
+  const [selectedCategory, setSelectedCategory] = useState('all');
+  const [selectedLevel, setSelectedLevel] = useState('all');
 
-  const categories = [
-    { id: 'all', name: 'All Categories', icon: <GraduationCap className="w-5 h-5" />, count: 0 },
-    { id: 'ai-ml', name: 'AI & Machine Learning', icon: <Brain className="w-5 h-5" />, count: 8 },
-    { id: 'cloud', name: 'Cloud & Infrastructure', icon: <Cloud className="w-5 h-5" />, count: 6 },
-    { id: 'security', name: 'Cybersecurity', icon: <Shield className="w-5 h-5" />, count: 5 },
-    { id: 'data', name: 'Data & Analytics', icon: <Database className="w-5 h-5" />, count: 7 },
-    { id: 'emerging', name: 'Emerging Technologies', icon: <Zap className="w-5 h-5" />, count: 4 },
-    { id: 'strategy', name: 'Digital Strategy', icon: <Target className="w-5 h-5" />, count: 3 },
-    { id: 'leadership', name: 'Leadership & Management', icon: <Users className="w-5 h-5" />, count: 4 }
+  const trainingCategories = [
+    {
+      id: 'all',
+      name: 'All Training',
+      icon: GraduationCap,
+      color: 'from-blue-600 to-cyan-600',
+      count: '50+'
+    },
+    {
+      id: 'ai-services',
+      name: 'AI Services',
+      icon: Brain,
+      color: 'from-purple-600 to-pink-600',
+      count: '15+'
+    },
+    {
+      id: 'cloud-devops',
+      name: 'Cloud & DevOps',
+      icon: Cloud,
+      color: 'from-green-600 to-emerald-600',
+      count: '12+'
+    },
+    {
+      id: 'security',
+      name: 'Security',
+      icon: Shield,
+      color: 'from-red-600 to-orange-600',
+      count: '10+'
+    },
+    {
+      id: 'quantum',
+      name: 'Quantum Tech',
+      icon: Cpu,
+      color: 'from-indigo-600 to-purple-600',
+      count: '8+'
+    },
+    {
+      id: 'iot-edge',
+      name: 'IoT & Edge',
+      icon: Network,
+      color: 'from-yellow-600 to-orange-600',
+      count: '5+'
+    }
   ];
 
-  const levels = [
-    { id: 'all', name: 'All Levels', count: 0 },
-    { id: 'beginner', name: 'Beginner', count: 0 },
-    { id: 'intermediate', name: 'Intermediate', count: 0 },
-    { id: 'advanced', name: 'Advanced', count: 0 },
-    { id: 'expert', name: 'Expert', count: 0 }
+  const skillLevels = [
+    { id: 'all', name: 'All Levels', color: 'from-gray-500 to-slate-500' },
+    { id: 'beginner', name: 'Beginner', color: 'from-green-500 to-emerald-500' },
+    { id: 'intermediate', name: 'Intermediate', color: 'from-blue-500 to-cyan-500' },
+    { id: 'advanced', name: 'Advanced', color: 'from-purple-500 to-pink-500' },
+    { id: 'expert', name: 'Expert', color: 'from-red-500 to-orange-500' }
   ];
 
-  const formats = [
-    { id: 'all', name: 'All Formats', count: 0 },
-    { id: 'online', name: 'Online', count: 0 },
-    { id: 'in-person', name: 'In-Person', count: 0 },
-    { id: 'hybrid', name: 'Hybrid', count: 0 },
-    { id: 'self-paced', name: 'Self-Paced', count: 0 }
+  const featuredCourses = [
+    {
+      title: 'AI Business Intelligence Masterclass',
+      description: 'Learn to implement AI-powered business intelligence solutions',
+      category: 'AI Services',
+      level: 'Intermediate',
+      duration: '8 weeks',
+      format: 'Online',
+      instructor: 'Dr. Sarah Chen',
+      rating: 4.9,
+      students: 1250,
+      price: '$1,299',
+      originalPrice: '$1,599',
+      features: ['Live Sessions', 'Project Portfolio', 'Certificate', '1-on-1 Mentoring'],
+      icon: Brain,
+      color: 'from-purple-500 to-pink-500',
+      link: '/training/ai-business-intelligence'
+    },
+    {
+      title: 'Cloud Migration & DevOps Excellence',
+      description: 'Master cloud migration strategies and DevOps best practices',
+      category: 'Cloud & DevOps',
+      level: 'Advanced',
+      duration: '10 weeks',
+      format: 'Hybrid',
+      instructor: 'Mike Rodriguez',
+      rating: 4.8,
+      students: 980,
+      price: '$1,499',
+      originalPrice: '$1,899',
+      features: ['Hands-on Labs', 'Real Projects', 'Industry Certification', 'Career Support'],
+      icon: Cloud,
+      color: 'from-green-500 to-emerald-500',
+      link: '/training/cloud-migration-devops'
+    },
+    {
+      title: 'Zero Trust Security Architecture',
+      description: 'Design and implement comprehensive zero trust security frameworks',
+      category: 'Security',
+      level: 'Expert',
+      duration: '6 weeks',
+      format: 'Online',
+      instructor: 'Alex Thompson',
+      rating: 4.9,
+      students: 750,
+      price: '$1,199',
+      originalPrice: '$1,399',
+      features: ['Security Lab Access', 'Compliance Training', 'Expert Certification', 'Network Access'],
+      icon: Shield,
+      color: 'from-red-500 to-orange-500',
+      link: '/training/zero-trust-security'
+    },
+    {
+      title: 'Quantum Computing Fundamentals',
+      description: 'Introduction to quantum computing principles and applications',
+      category: 'Quantum Tech',
+      level: 'Beginner',
+      duration: '4 weeks',
+      format: 'Online',
+      instructor: 'Dr. Emily Watson',
+      rating: 4.7,
+      students: 2100,
+      price: '$799',
+      originalPrice: '$999',
+      features: ['Interactive Simulations', 'Quantum Lab Access', 'Foundation Certificate', 'Community Access'],
+      icon: Cpu,
+      color: 'from-indigo-500 to-purple-500',
+      link: '/training/quantum-computing-fundamentals'
+    }
   ];
 
   const trainingPrograms = [
     {
-      id: 1,
-      title: 'AI Fundamentals for Business Leaders',
-      description: 'Essential AI concepts and strategies for business leaders to drive digital transformation and innovation.',
-      category: 'ai-ml',
-      level: 'beginner',
-      format: 'hybrid',
-      duration: '8 weeks',
-      hours: 40,
-      price: 2499,
-      location: 'Online + NYC',
-      startDate: '2025-03-01',
-      instructor: 'Dr. Sarah Chen',
-      rating: 4.9,
-      students: 156,
-      featured: true,
-      certification: 'AI Business Leadership Certificate',
-      tags: ['AI', 'Leadership', 'Digital Transformation', 'Strategy'],
-      modules: [
-        'AI Fundamentals and Business Impact',
-        'Machine Learning Applications',
-        'AI Strategy Development',
-        'Implementation Roadmap',
-        'ROI Measurement and KPIs'
+      title: 'AI Solutions Architect',
+      description: 'Comprehensive program to become an AI solutions architect',
+      duration: '6 months',
+      format: 'Hybrid',
+      level: 'Advanced to Expert',
+      modules: 12,
+      projects: 8,
+      certification: 'AI Solutions Architect Professional',
+      price: '$4,999',
+      originalPrice: '$6,499',
+      features: [
+        'Comprehensive AI curriculum',
+        'Real-world project portfolio',
+        'Industry expert mentorship',
+        'Career placement support',
+        'Lifetime access to resources'
       ],
-      skills: ['AI Strategy', 'Business Analysis', 'Change Management', 'Data Literacy']
+      icon: Brain,
+      color: 'from-purple-500 to-pink-500',
+      link: '/training/programs/ai-solutions-architect'
     },
     {
-      id: 2,
-      title: 'Advanced Cybersecurity Architecture',
-      description: 'Comprehensive training on designing and implementing enterprise-grade security architectures.',
-      category: 'security',
-      level: 'advanced',
-      format: 'in-person',
-      duration: '6 weeks',
-      hours: 60,
-      price: 3499,
-      location: 'San Francisco, CA',
-      startDate: '2025-03-15',
-      instructor: 'Michael Rodriguez',
-      rating: 4.8,
-      students: 89,
-      featured: true,
-      certification: 'Cybersecurity Architecture Professional',
-      tags: ['Cybersecurity', 'Architecture', 'Enterprise', 'Security Design'],
-      modules: [
-        'Security Architecture Principles',
-        'Threat Modeling and Risk Assessment',
-        'Identity and Access Management',
-        'Network Security Design',
-        'Incident Response Planning'
+      title: 'Cloud & DevOps Engineering',
+      description: 'Full-stack cloud and DevOps engineering program',
+      duration: '8 months',
+      format: 'Hybrid',
+      level: 'Intermediate to Advanced',
+      modules: 15,
+      projects: 10,
+      certification: 'Cloud & DevOps Engineering Professional',
+      price: '$5,499',
+      originalPrice: '$6,999',
+      features: [
+        'Multi-cloud expertise',
+        'DevOps automation mastery',
+        'Infrastructure as code',
+        'Performance optimization',
+        'Industry best practices'
       ],
-      skills: ['Security Architecture', 'Risk Assessment', 'IAM', 'Network Security', 'Incident Response']
+      icon: Cloud,
+      color: 'from-green-500 to-emerald-500',
+      link: '/training/programs/cloud-devops-engineering'
     },
     {
-      id: 3,
-      title: 'Cloud-Native Application Development',
-      description: 'Learn to build scalable, resilient applications using modern cloud-native technologies and practices.',
-      category: 'cloud',
-      level: 'intermediate',
-      format: 'online',
-      duration: '10 weeks',
-      hours: 80,
-      price: 1999,
-      location: 'Online',
-      startDate: '2025-02-20',
-      instructor: 'David Kim',
-      rating: 4.7,
-      students: 234,
-      featured: false,
-      certification: 'Cloud-Native Developer',
-      tags: ['Cloud Computing', 'Application Development', 'Microservices', 'DevOps'],
-      modules: [
-        'Cloud-Native Principles',
-        'Container Technologies (Docker, Kubernetes)',
-        'Microservices Architecture',
-        'CI/CD Pipelines',
-        'Monitoring and Observability'
+      title: 'Cybersecurity Leadership',
+      description: 'Advanced cybersecurity and leadership development program',
+      duration: '7 months',
+      format: 'Hybrid',
+      level: 'Advanced to Expert',
+      modules: 14,
+      projects: 6,
+      certification: 'Cybersecurity Leadership Professional',
+      price: '$5,999',
+      originalPrice: '$7,499',
+      features: [
+        'Strategic security planning',
+        'Incident response leadership',
+        'Compliance management',
+        'Team leadership skills',
+        'Executive communication'
       ],
-      skills: ['Docker', 'Kubernetes', 'Microservices', 'CI/CD', 'Cloud Platforms']
-    },
-    {
-      id: 4,
-      title: 'Data Science for Business Intelligence',
-      description: 'Transform raw data into actionable insights using advanced analytics and visualization techniques.',
-      category: 'data',
-      level: 'intermediate',
-      format: 'hybrid',
-      duration: '12 weeks',
-      hours: 100,
-      price: 2999,
-      location: 'Online + Chicago',
-      startDate: '2025-04-01',
-      instructor: 'Dr. Robert Kim',
-      rating: 4.6,
-      students: 178,
-      featured: false,
-      certification: 'Data Science Professional',
-      tags: ['Data Science', 'Business Intelligence', 'Analytics', 'Visualization'],
-      modules: [
-        'Data Analysis Fundamentals',
-        'Statistical Methods and Modeling',
-        'Machine Learning for Business',
-        'Data Visualization and Storytelling',
-        'Business Intelligence Tools'
-      ],
-      skills: ['Python', 'R', 'SQL', 'Tableau', 'Statistical Analysis', 'Machine Learning']
-    },
-    {
-      id: 5,
-      title: 'Quantum Computing Fundamentals',
-      description: 'Introduction to quantum computing principles and their potential applications in business.',
-      category: 'emerging',
-      level: 'beginner',
-      format: 'online',
-      duration: '6 weeks',
-      hours: 30,
-      price: 1499,
-      location: 'Online',
-      startDate: '2025-05-01',
-      instructor: 'Dr. Elena Vasquez',
-      rating: 4.9,
-      students: 67,
-      featured: true,
-      certification: 'Quantum Computing Fundamentals',
-      tags: ['Quantum Computing', 'Emerging Tech', 'Future Computing', 'Innovation'],
-      modules: [
-        'Quantum Mechanics Basics',
-        'Qubits and Quantum Gates',
-        'Quantum Algorithms',
-        'Quantum Applications',
-        'Future of Quantum Computing'
-      ],
-      skills: ['Quantum Mechanics', 'Quantum Algorithms', 'Innovation Strategy', 'Technology Trends']
-    },
-    {
-      id: 6,
-      title: 'Digital Transformation Leadership',
-      description: 'Strategic leadership skills for driving successful digital transformation initiatives.',
-      category: 'leadership',
-      level: 'advanced',
-      format: 'in-person',
-      duration: '4 weeks',
-      hours: 32,
-      price: 3999,
-      location: 'Boston, MA',
-      startDate: '2025-06-01',
-      instructor: 'Jennifer Park',
-      rating: 4.8,
-      students: 45,
-      featured: false,
-      certification: 'Digital Transformation Leader',
-      tags: ['Leadership', 'Digital Transformation', 'Change Management', 'Strategy'],
-      modules: [
-        'Digital Strategy Development',
-        'Change Management and Culture',
-        'Technology Selection and Implementation',
-        'Stakeholder Management',
-        'Success Measurement'
-      ],
-      skills: ['Strategic Planning', 'Change Management', 'Stakeholder Management', 'Technology Strategy']
+      icon: Shield,
+      color: 'from-red-500 to-orange-500',
+      link: '/training/programs/cybersecurity-leadership'
     }
   ];
 
-  // Update counts
-  categories.forEach(cat => {
-    cat.count = trainingPrograms.filter(p => p.category === cat.id).length;
-  });
-
-  levels.forEach(level => {
-    level.count = trainingPrograms.filter(p => p.level === level.id).length;
-  });
-
-  formats.forEach(format => {
-    format.count = trainingPrograms.filter(p => p.format === format.id).length;
-  });
-
-  const filteredPrograms = trainingPrograms.filter(program => {
-    const matchesSearch = program.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
-                         program.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
-                         program.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()));
-    
-    const matchesCategory = activeCategory === 'all' || program.category === activeCategory;
-    const matchesLevel = activeLevel === 'all' || program.level === activeLevel;
-    const matchesFormat = activeFormat === 'all' || program.format === activeFormat;
-    
-    return matchesSearch && matchesCategory && matchesLevel && matchesFormat;
-  });
-
-  const getCategoryIcon = (categoryId: string) => {
-    return categories.find(c => c.id === categoryId)?.icon || <GraduationCap className="w-5 h-5" />;
-  };
-
-  const getLevelColor = (level: string) => {
-    switch (level) {
-      case 'beginner': return 'text-green-400';
-      case 'intermediate': return 'text-yellow-400';
-      case 'advanced': return 'text-orange-400';
-      case 'expert': return 'text-red-400';
-      default: return 'text-zion-slate-light';
+  const upcomingWorkshops = [
+    {
+      title: 'AI Implementation Workshop',
+      date: 'Dec 20, 2024',
+      time: '9:00 AM - 5:00 PM EST',
+      type: 'In-Person',
+      location: 'New York, NY',
+      capacity: 25,
+      price: '$299',
+      instructor: 'Dr. Sarah Chen',
+      description: 'Hands-on workshop for implementing AI solutions in business',
+      topics: ['AI Strategy Planning', 'Model Selection', 'Implementation Best Practices', 'ROI Measurement']
+    },
+    {
+      title: 'Cloud Security Bootcamp',
+      date: 'Jan 15, 2025',
+      time: '10:00 AM - 6:00 PM EST',
+      type: 'Virtual',
+      capacity: 50,
+      price: '$199',
+      instructor: 'Alex Thompson',
+      description: 'Intensive cloud security training with hands-on labs',
+      topics: ['Cloud Security Fundamentals', 'Identity Management', 'Data Protection', 'Compliance']
+    },
+    {
+      title: 'Quantum Computing Workshop',
+      date: 'Jan 25, 2025',
+      time: '1:00 PM - 9:00 PM EST',
+      type: 'Hybrid',
+      location: 'San Francisco, CA',
+      capacity: 30,
+      price: '$399',
+      instructor: 'Dr. Emily Watson',
+      description: 'Introduction to quantum computing with practical applications',
+      topics: ['Quantum Principles', 'Qubit Operations', 'Quantum Algorithms', 'Real Applications']
     }
-  };
+  ];
 
-  const getFormatIcon = (format: string) => {
-    switch (format) {
-      case 'online': return <Globe className="w-4 h-4" />;
-      case 'in-person': return <MapPin className="w-4 h-4" />;
-      case 'hybrid': return <Users className="w-4 h-4" />;
-      case 'self-paced': return <Clock className="w-4 h-5" />;
-      default: return <BookOpen className="w-4 h-4" />;
+  const learningResources = [
+    {
+      title: 'Video Library',
+      icon: Video,
+      description: 'Access to 500+ training videos and tutorials',
+      count: '500+ videos',
+      link: '/training/videos'
+    },
+    {
+      title: 'Documentation',
+      icon: FileText,
+      description: 'Comprehensive training materials and guides',
+      count: '200+ guides',
+      link: '/training/docs'
+    },
+    {
+      title: 'Practice Labs',
+      icon: Code,
+      description: 'Hands-on practice environments and exercises',
+      count: '100+ labs',
+      link: '/training/labs'
+    },
+    {
+      title: 'Community Forum',
+      icon: Users,
+      description: 'Connect with fellow learners and instructors',
+      count: '10,000+ members',
+      link: '/training/community'
     }
-  };
+  ];
 
-  const formatDate = (dateString: string) => {
-    return new Date(dateString).toLocaleDateString('en-US', {
-      year: 'numeric',
-      month: 'long',
-      day: 'numeric'
-    });
+  const testimonials = [
+    {
+      name: 'Jennifer Martinez',
+      role: 'Senior Data Scientist',
+      company: 'TechCorp Inc.',
+      rating: 5,
+      comment: 'The AI Solutions Architect program transformed my career. The hands-on projects and expert mentorship were invaluable.',
+      avatar: 'JM'
+    },
+    {
+      name: 'David Kim',
+      role: 'DevOps Engineer',
+      company: 'CloudFlow Systems',
+      rating: 5,
+      comment: 'Excellent cloud and DevOps training. I gained practical skills that I use daily in my role.',
+      avatar: 'DK'
+    },
+    {
+      name: 'Amanda Foster',
+      role: 'Security Manager',
+      company: 'SecureNet Solutions',
+      rating: 5,
+      comment: 'The cybersecurity leadership program gave me the skills and confidence to lead security initiatives.',
+      avatar: 'AF'
+    }
+  ];
+
+  const filteredCourses = () => {
+    let courses = featuredCourses;
+    
+    if (selectedCategory !== 'all') {
+      courses = courses.filter(course => course.category.toLowerCase().includes(selectedCategory));
+    }
+    
+    if (selectedLevel !== 'all') {
+      courses = courses.filter(course => course.level.toLowerCase() === selectedLevel);
+    }
+    
+    return courses;
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+      <SEO 
+        title="Training & Education - Zion Tech Group"
+        description="Comprehensive training programs, courses, and workshops to advance your technology skills and career with Zion Tech Group."
+      />
+      
       {/* Hero Section */}
-      <div className="bg-gradient-to-r from-zion-blue-dark to-zion-purple py-20">
-        <div className="container mx-auto px-4 text-center">
-          <div className="flex justify-center mb-6">
-            <div className="p-4 bg-zion-cyan/20 rounded-full">
-              <GraduationCap className="w-16 h-16 text-zion-cyan" />
+      <section className="relative py-20 px-4">
+        <div className="container mx-auto text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+          >
+            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
+              Advance Your
+              <span className="block bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent">
+                Tech Career
+              </span>
+            </h1>
+            <p className="text-xl text-slate-300 mb-8 max-w-3xl mx-auto">
+              Comprehensive training programs, expert-led courses, and hands-on workshops designed to accelerate your technology expertise and career growth.
+            </p>
+            
+            <div className="flex flex-wrap justify-center gap-4">
+              <Link
+                to="/training/programs"
+                className="px-8 py-4 bg-gradient-to-r from-cyan-400 to-blue-500 text-white font-semibold rounded-lg hover:from-cyan-500 hover:to-blue-600 transition-all duration-300 transform hover:scale-105"
+              >
+                Explore Programs
+              </Link>
+              <Link
+                to="/training/courses"
+                className="px-8 py-4 border-2 border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400 hover:text-white transition-all duration-300"
+              >
+                Browse Courses
+              </Link>
             </div>
-          </div>
-          <h1 className="text-5xl font-bold text-white mb-6">
-            Professional Training & Certification
-          </h1>
-          <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
-            Advance your career with our industry-leading training programs, expert-led courses, and recognized certifications.
-          </p>
+          </motion.div>
         </div>
-      </div>
+      </section>
 
-      {/* Search and Filters */}
-      <div className="py-12">
-        <div className="container mx-auto px-4">
-          <div className="max-w-6xl mx-auto">
-            {/* Search Bar */}
-            <div className="relative mb-8">
-              <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-zion-slate-light w-5 h-5" />
-              <input
-                type="text"
-                value={searchQuery}
-                onChange={(e) => setSearchQuery(e.target.value)}
-                placeholder="Search training programs..."
-                className="w-full pl-12 pr-4 py-4 bg-zion-slate border border-zion-slate-light rounded-lg text-white placeholder-zion-slate-light focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent"
-              />
-            </div>
-
-            {/* Filters */}
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
-              {/* Categories */}
-              <div className="space-y-3">
-                <label className="text-white font-medium">Category</label>
-                <div className="flex flex-wrap gap-2">
-                  {categories.slice(0, 4).map((category) => (
-                    <button
-                      key={category.id}
-                      onClick={() => setActiveCategory(category.id)}
-                      className={`flex items-center gap-2 px-3 py-2 rounded-lg text-sm font-medium transition-colors ${
-                        activeCategory === category.id
-                          ? 'bg-zion-cyan text-zion-slate-dark'
-                          : 'bg-zion-slate text-zion-slate-light hover:bg-zion-slate-light hover:text-white'
-                      }`}
-                    >
-                      {category.icon}
-                      {category.name}
-                    </button>
-                  ))}
+      {/* Training Categories */}
+      <section className="py-16 px-4">
+        <div className="container mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            className="text-center mb-12"
+          >
+            <h2 className="text-3xl font-bold text-white mb-4">Training Categories</h2>
+            <p className="text-slate-300 max-w-2xl mx-auto">
+              Choose from our comprehensive range of technology training areas.
+            </p>
+          </motion.div>
+          
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
+            {trainingCategories.map((category) => (
+              <motion.button
+                key={category.id}
+                onClick={() => setSelectedCategory(category.id)}
+                className={`text-center p-4 rounded-xl border transition-all duration-300 ${
+                  selectedCategory === category.id
+                    ? 'border-cyan-400 bg-cyan-400/20'
+                    : 'border-slate-700 hover:border-slate-600 hover:bg-slate-800/50'
+                }`}
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+              >
+                <div className={`w-12 h-12 bg-gradient-to-br ${category.color} rounded-lg flex items-center justify-center mx-auto mb-3`}>
+                  <category.icon className="w-6 h-6 text-white" />
                 </div>
-              </div>
-
-              {/* Levels */}
-              <div className="space-y-3">
-                <label className="text-white font-medium">Level</label>
-                <div className="flex flex-wrap gap-2">
-                  {levels.map((level) => (
-                    <button
-                      key={level.id}
-                      onClick={() => setActiveLevel(level.id)}
-                      className={`px-3 py-2 rounded-lg text-sm font-medium transition-colors ${
-                        activeLevel === level.id
-                          ? 'bg-zion-purple text-white'
-                          : 'bg-zion-slate text-zion-slate-light hover:bg-zion-slate-light hover:text-white'
-                      }`}
-                    >
-                      {level.name} ({level.count})
-                    </button>
-                  ))}
-                </div>
-              </div>
-
-              {/* Formats */}
-              <div className="space-y-3">
-                <label className="text-white font-medium">Format</label>
-                <div className="flex flex-wrap gap-2">
-                  {formats.map((format) => (
-                    <button
-                      key={format.id}
-                      onClick={() => setActiveFormat(format.id)}
-                      className={`px-3 py-2 rounded-lg text-sm font-medium transition-colors ${
-                        activeFormat === format.id
-                          ? 'bg-zion-cyan text-zion-slate-dark'
-                          : 'bg-zion-slate text-zion-slate-light hover:bg-zion-slate-light hover:text-white'
-                      }`}
-                    >
-                      {format.name} ({format.count})
-                    </button>
-                  ))}
-                </div>
-              </div>
-            </div>
+                <div className="text-sm font-medium text-white mb-1">{category.name}</div>
+                <div className="text-xs text-slate-400">{category.count}</div>
+              </motion.button>
+            ))}
           </div>
         </div>
-      </div>
+      </section>
 
-      {/* Featured Programs */}
-      {trainingPrograms.filter(p => p.featured).length > 0 && (
-        <div className="py-12 bg-zion-slate-dark">
-          <div className="container mx-auto px-4">
-            <h2 className="text-3xl font-bold text-center text-white mb-12">
-              Featured Training Programs
-            </h2>
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-6xl mx-auto">
-              {trainingPrograms.filter(p => p.featured).map((program) => (
-                <div
-                  key={program.id}
-                  className="bg-zion-slate border border-zion-slate-light rounded-lg overflow-hidden hover:shadow-lg transition-shadow"
+      {/* Skill Level Filter */}
+      <section className="py-8 px-4">
+        <div className="container mx-auto">
+          <div className="text-center mb-6">
+            <h3 className="text-lg font-semibold text-white mb-4">Filter by Skill Level</h3>
+            <div className="flex flex-wrap justify-center gap-3">
+              {skillLevels.map((level) => (
+                <button
+                  key={level.id}
+                  onClick={() => setSelectedLevel(level.id)}
+                  className={`px-4 py-2 rounded-lg border transition-all duration-300 ${
+                    selectedLevel === level.id
+                      ? 'border-cyan-400 bg-cyan-400/20 text-cyan-400'
+                      : 'border-slate-600 text-slate-300 hover:border-slate-500 hover:text-white'
+                  }`}
                 >
-                  <div className="relative h-48 bg-gradient-to-br from-zion-blue to-zion-purple">
-                    <div className="absolute inset-0 bg-black/20"></div>
-                    <div className="absolute top-4 left-4">
-                      <span className="px-3 py-1 bg-zion-cyan text-zion-slate-dark rounded-full text-xs font-medium">
-                        Featured
-                      </span>
-                    </div>
-                    <div className="absolute top-4 right-4">
-                      <div className="flex items-center gap-1 text-white">
-                        <Star className="w-4 h-4 text-yellow-400 fill-current" />
-                        <span className="text-sm font-medium">{program.rating}</span>
-                      </div>
-                    </div>
-                    <div className="absolute bottom-4 left-4 right-4">
-                      <div className="flex items-center justify-between text-white">
-                        <div className="flex items-center gap-2">
-                          <Calendar className="w-4 h-4" />
-                          <span className="text-sm">{formatDate(program.startDate)}</span>
-                        </div>
-                        <div className="flex items-center gap-2">
-                          <Clock className="w-4 h-4" />
-                          <span className="text-sm">{program.duration}</span>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  
-                  <div className="p-6">
-                    <div className="flex items-center gap-2 mb-3">
-                      {getCategoryIcon(program.category)}
-                      <span className="text-sm text-zion-slate-light bg-zion-slate-light/20 px-2 py-1 rounded-full">
-                        {categories.find(c => c.id === program.category)?.name}
-                      </span>
-                      <span className={`text-sm font-medium ${getLevelColor(program.level)}`}>
-                        {levels.find(l => l.id === program.level)?.name}
-                      </span>
-                    </div>
-                    
-                    <h3 className="text-xl font-semibold text-white mb-2">{program.title}</h3>
-                    <p className="text-zion-slate-light text-sm mb-4">{program.description}</p>
-                    
-                    <div className="flex items-center justify-between mb-4 text-sm text-zion-slate-light">
-                      <div className="flex items-center gap-1">
-                        <Users className="w-4 h-4" />
-                        {program.students} students
-                      </div>
-                      <div className="flex items-center gap-1">
-                        <DollarSign className="w-4 h-4" />
-                        ${program.price.toLocaleString()}
-                      </div>
-                    </div>
-                    
-                    <button className="w-full bg-zion-cyan text-zion-slate-dark py-2 rounded-lg font-semibold hover:bg-zion-cyan-light transition-colors">
-                      Learn More
-                    </button>
-                  </div>
-                </div>
+                  {level.name}
+                </button>
               ))}
             </div>
           </div>
         </div>
-      )}
+      </section>
 
-      {/* All Training Programs */}
-      <div className="py-16">
-        <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold text-center text-white mb-12">
-            All Training Programs
-          </h2>
+      {/* Featured Courses */}
+      <section className="py-16 px-4">
+        <div className="container mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            className="text-center mb-12"
+          >
+            <h2 className="text-3xl font-bold text-white mb-4">Featured Courses</h2>
+            <p className="text-slate-300 max-w-2xl mx-auto">
+              Master in-demand technology skills with our expert-led courses.
+            </p>
+          </motion.div>
           
-          {filteredPrograms.length > 0 ? (
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-6xl mx-auto">
-              {filteredPrograms.map((program) => (
-                <div
-                  key={program.id}
-                  className="bg-zion-slate border border-zion-slate-light rounded-lg p-6 hover:shadow-lg transition-shadow"
-                >
-                  <div className="flex items-start justify-between mb-4">
-                    <div className="flex items-center gap-2">
-                      {getCategoryIcon(program.category)}
-                      <span className="text-sm text-zion-slate-light bg-zion-slate-light/20 px-2 py-1 rounded-full">
-                        {categories.find(c => c.id === program.category)?.name}
-                      </span>
-                      {program.featured && (
-                        <span className="px-2 py-1 bg-zion-cyan text-zion-slate-dark rounded-full text-xs font-medium">
-                          Featured
-                        </span>
-                      )}
-                    </div>
-                    <div className="text-right">
-                      <div className="flex items-center gap-1 text-sm text-zion-slate-light mb-1">
-                        {getFormatIcon(program.format)}
-                        <span>{formats.find(f => f.id === program.format)?.name}</span>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {filteredCourses().map((course, index) => (
+              <motion.div
+                key={course.title}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                className="group"
+              >
+                <Link to={course.link}>
+                  <div className="bg-slate-800/50 rounded-xl p-6 border border-slate-700 hover:border-cyan-400/50 transition-all duration-300 hover:bg-slate-800/70 h-full">
+                    <div className="flex items-start justify-between mb-4">
+                      <div className={`w-16 h-16 bg-gradient-to-br ${course.color} rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform`}>
+                        <course.icon className="w-8 h-8 text-white" />
                       </div>
-                      <div className={`text-sm font-medium ${getLevelColor(program.level)}`}>
-                        {levels.find(l => l.id === program.level)?.name}
+                      <div className="text-right">
+                        <div className="text-2xl font-bold text-white">{course.price}</div>
+                        <div className="text-slate-400 line-through text-sm">{course.originalPrice}</div>
+                      </div>
+                    </div>
+                    
+                    <h3 className="text-xl font-semibold text-white mb-3 group-hover:text-cyan-400 transition-colors">
+                      {course.title}
+                    </h3>
+                    <p className="text-slate-300 text-sm mb-4">{course.description}</p>
+                    
+                    <div className="grid grid-cols-2 gap-4 mb-4 text-sm">
+                      <div className="flex items-center space-x-2 text-slate-400">
+                        <Users className="w-4 h-4" />
+                        <span>{course.instructor}</span>
+                      </div>
+                      <div className="flex items-center space-x-2 text-slate-400">
+                        <Clock className="w-4 h-4" />
+                        <span>{course.duration}</span>
+                      </div>
+                      <div className="flex items-center space-x-2 text-slate-400">
+                        <Globe className="w-4 h-4" />
+                        <span>{course.format}</span>
+                      </div>
+                      <div className="flex items-center space-x-2 text-slate-400">
+                        <Target className="w-4 h-4" />
+                        <span>{course.level}</span>
+                      </div>
+                    </div>
+                    
+                    <div className="flex items-center justify-between mb-4">
+                      <div className="flex items-center space-x-2">
+                        <div className="flex items-center space-x-1">
+                          <Star className="w-4 h-4 text-yellow-400 fill-current" />
+                          <span className="text-white text-sm">{course.rating}</span>
+                        </div>
+                        <span className="text-slate-400 text-sm">({course.students} students)</span>
+                      </div>
+                    </div>
+                    
+                    <div className="grid grid-cols-2 gap-2 mb-4">
+                      {course.features.map((feature, idx) => (
+                        <div key={idx} className="flex items-center space-x-2 text-xs text-slate-300">
+                          <CheckCircle className="w-3 h-3 text-green-400" />
+                          <span>{feature}</span>
+                        </div>
+                      ))}
+                    </div>
+                    
+                    <div className="text-center">
+                      <div className="text-cyan-400 group-hover:text-cyan-300 transition-colors">
+                        <span className="text-sm font-medium">Learn More</span>
+                        <ArrowRight className="w-4 h-4 ml-2 inline group-hover:translate-x-1 transition-transform" />
                       </div>
                     </div>
                   </div>
+                </Link>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
 
-                  <h3 className="text-xl font-semibold text-white mb-3">{program.title}</h3>
-                  <p className="text-zion-slate-light mb-4">{program.description}</p>
+      {/* Training Programs */}
+      <section className="py-16 px-4">
+        <div className="container mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            className="text-center mb-12"
+          >
+            <h2 className="text-3xl font-bold text-white mb-4">Comprehensive Training Programs</h2>
+            <p className="text-slate-300 max-w-2xl mx-auto">
+              Transform your career with our intensive, project-based training programs.
+            </p>
+          </motion.div>
+          
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+            {trainingPrograms.map((program, index) => (
+              <motion.div
+                key={program.title}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                className="group"
+              >
+                <Link to={program.link}>
+                  <div className="bg-slate-800/50 rounded-xl p-6 border border-slate-700 hover:border-cyan-400/50 transition-all duration-300 hover:bg-slate-800/70 h-full">
+                    <div className="text-center mb-6">
+                      <div className={`w-20 h-20 bg-gradient-to-br ${program.color} rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform`}>
+                        <program.icon className="w-10 h-10 text-white" />
+                      </div>
+                      <h3 className="text-xl font-semibold text-white mb-2 group-hover:text-cyan-400 transition-colors">
+                        {program.title}
+                      </h3>
+                      <p className="text-slate-300 text-sm mb-4">{program.description}</p>
+                    </div>
+                    
+                    <div className="space-y-3 mb-6">
+                      <div className="flex items-center justify-between text-sm">
+                        <span className="text-slate-400">Duration:</span>
+                        <span className="text-white">{program.duration}</span>
+                      </div>
+                      <div className="flex items-center justify-between text-sm">
+                        <span className="text-slate-400">Format:</span>
+                        <span className="text-white">{program.format}</span>
+                      </div>
+                      <div className="flex items-center justify-between text-sm">
+                        <span className="text-slate-400">Level:</span>
+                        <span className="text-white">{program.level}</span>
+                      </div>
+                      <div className="flex items-center justify-between text-sm">
+                        <span className="text-slate-400">Modules:</span>
+                        <span className="text-white">{program.modules}</span>
+                      </div>
+                      <div className="flex items-center justify-between text-sm">
+                        <span className="text-slate-400">Projects:</span>
+                        <span className="text-white">{program.projects}</span>
+                      </div>
+                    </div>
+                    
+                    <div className="text-center mb-6">
+                      <div className="text-2xl font-bold text-white mb-1">{program.price}</div>
+                      <div className="text-slate-400 line-through text-sm">{program.originalPrice}</div>
+                    </div>
+                    
+                    <div className="space-y-2 mb-6">
+                      {program.features.map((feature, idx) => (
+                        <div key={idx} className="flex items-center space-x-2 text-xs text-slate-300">
+                          <CheckCircle className="w-3 h-3 text-green-400" />
+                          <span>{feature}</span>
+                        </div>
+                      ))}
+                    </div>
+                    
+                    <div className="text-center">
+                      <div className="text-cyan-400 group-hover:text-cyan-300 transition-colors">
+                        <span className="text-sm font-medium">View Program Details</span>
+                        <ArrowRight className="w-4 h-4 ml-2 inline group-hover:translate-x-1 transition-transform" />
+                      </div>
+                    </div>
+                  </div>
+                </Link>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
 
-                  <div className="flex flex-wrap gap-2 mb-4">
-                    {program.tags.slice(0, 4).map((tag, index) => (
-                      <span
-                        key={index}
-                        className="px-2 py-1 bg-zion-slate-light/20 text-zion-slate-light text-xs rounded-full"
-                      >
-                        {tag}
+      {/* Upcoming Workshops */}
+      <section className="py-16 px-4">
+        <div className="container mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            className="text-center mb-12"
+          >
+            <h2 className="text-3xl font-bold text-white mb-4">Upcoming Workshops</h2>
+            <p className="text-slate-300 max-w-2xl mx-auto">
+              Join our intensive hands-on workshops to gain practical skills quickly.
+            </p>
+          </motion.div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {upcomingWorkshops.map((workshop, index) => (
+              <motion.div
+                key={workshop.title}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                className="bg-slate-800/50 rounded-xl p-6 border border-slate-700 hover:border-cyan-400/50 transition-all duration-300"
+              >
+                <div className="flex items-center justify-between mb-4">
+                  <div className="w-12 h-12 bg-gradient-to-br from-cyan-400 to-blue-500 rounded-lg flex items-center justify-center">
+                    <Calendar className="w-6 h-6 text-white" />
+                  </div>
+                  <span className="text-sm text-cyan-400 font-medium">{workshop.type}</span>
+                </div>
+                
+                <h3 className="text-lg font-semibold text-white mb-2">{workshop.title}</h3>
+                <p className="text-slate-300 text-sm mb-4">{workshop.description}</p>
+                
+                <div className="space-y-2 mb-4 text-sm text-slate-400">
+                  <div className="flex items-center space-x-2">
+                    <Calendar className="w-4 h-4" />
+                    <span>{workshop.date} at {workshop.time}</span>
+                  </div>
+                  {workshop.location && (
+                    <div className="flex items-center space-x-2">
+                      <MapPin className="w-4 h-4" />
+                      <span>{workshop.location}</span>
+                    </div>
+                  )}
+                  <div className="flex items-center space-x-2">
+                    <Users className="w-4 h-4" />
+                    <span>Capacity: {workshop.capacity}</span>
+                  </div>
+                  <div className="flex items-center space-x-2">
+                    <UserCheck className="w-4 h-4" />
+                    <span>Instructor: {workshop.instructor}</span>
+                  </div>
+                </div>
+                
+                <div className="mb-4">
+                  <h4 className="text-sm font-semibold text-white mb-2">Topics Covered:</h4>
+                  <div className="flex flex-wrap gap-2">
+                    {workshop.topics.map((topic, idx) => (
+                      <span key={idx} className="px-2 py-1 bg-slate-700 text-slate-300 text-xs rounded">
+                        {topic}
                       </span>
                     ))}
                   </div>
-
-                  <div className="grid grid-cols-2 gap-4 mb-4 text-sm text-zion-slate-light">
-                    <div className="flex items-center gap-2">
-                      <Calendar className="w-4 h-4" />
-                      <span>Starts {formatDate(program.startDate)}</span>
-                    </div>
-                    <div className="flex items-center gap-2">
-                      <Clock className="w-4 h-4" />
-                      <span>{program.duration} ({program.hours}h)</span>
-                    </div>
-                    <div className="flex items-center gap-2">
-                      <MapPin className="w-4 h-4" />
-                      <span>{program.location}</span>
-                    </div>
-                    <div className="flex items-center gap-2">
-                      <DollarSign className="w-4 h-4" />
-                      <span>${program.price.toLocaleString()}</span>
-                    </div>
-                  </div>
-
-                  <div className="flex items-center justify-between mb-4">
-                    <div className="flex items-center gap-4 text-sm text-zion-slate-light">
-                      <div className="flex items-center gap-1">
-                        <Users className="w-4 h-4" />
-                        {program.students} students
-                      </div>
-                      <div className="flex items-center gap-1">
-                        <Star className="w-4 h-4 text-yellow-400 fill-current" />
-                        {program.rating}
-                      </div>
-                    </div>
-                    <div className="flex items-center gap-1 text-sm text-zion-slate-light">
-                      <FileText className="w-4 h-4" />
-                      <span>{program.certification}</span>
-                    </div>
-                  </div>
-
-                  <div className="flex items-center justify-between">
-                    <button className="bg-zion-purple text-white px-6 py-2 rounded-lg font-semibold hover:bg-zion-purple-light transition-colors inline-flex items-center gap-2">
-                      <Play className="w-4 h-4" />
-                      View Details
-                    </button>
-                    <button className="bg-zion-cyan text-zion-slate-dark px-6 py-2 rounded-lg font-semibold hover:bg-zion-cyan-light transition-colors">
-                      Enroll Now
-                    </button>
-                  </div>
                 </div>
-              ))}
-            </div>
-          ) : (
-            <div className="text-center py-12">
-              <GraduationCap className="w-16 h-16 text-zion-slate-light mx-auto mb-4" />
-              <h3 className="text-xl font-semibold text-white mb-2">No training programs found</h3>
-              <p className="text-zion-slate-light">
-                Try adjusting your search terms or browse all categories
-              </p>
-            </div>
-          )}
-        </div>
-      </div>
-
-      {/* CTA Section */}
-      <div className="py-16 bg-gradient-to-r from-zion-blue-dark to-zion-purple">
-        <div className="container mx-auto px-4 text-center">
-          <h2 className="text-3xl font-bold text-white mb-6">
-            Ready to Advance Your Career?
-          </h2>
-          <p className="text-xl text-zion-slate-light mb-8 max-w-2xl mx-auto">
-            Join thousands of professionals who have transformed their careers with our training programs.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center max-w-md mx-auto">
-            <button className="bg-zion-cyan text-zion-slate-dark px-8 py-3 rounded-lg font-semibold hover:bg-zion-cyan-light transition-colors">
-              Browse All Programs
-            </button>
-            <button className="bg-transparent border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-zion-slate-dark transition-colors">
-              Contact Advisor
-            </button>
+                
+                <div className="flex items-center justify-between">
+                  <div className="text-2xl font-bold text-white">{workshop.price}</div>
+                  <button className="px-6 py-2 bg-gradient-to-r from-cyan-400 to-blue-500 text-white rounded-lg font-semibold hover:from-cyan-500 hover:to-blue-600 transition-all duration-300">
+                    Register
+                  </button>
+                </div>
+              </motion.div>
+            ))}
           </div>
         </div>
-      </div>
+      </section>
+
+      {/* Learning Resources */}
+      <section className="py-16 px-4">
+        <div className="container mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            className="text-center mb-12"
+          >
+            <h2 className="text-3xl font-bold text-white mb-4">Learning Resources</h2>
+            <p className="text-slate-300 max-w-2xl mx-auto">
+              Access our comprehensive library of learning materials and resources.
+            </p>
+          </motion.div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {learningResources.map((resource, index) => (
+              <motion.div
+                key={resource.title}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                className="group"
+              >
+                <Link to={resource.link}>
+                  <div className="bg-slate-800/50 rounded-xl p-6 border border-slate-700 hover:border-cyan-400/50 transition-all duration-300 hover:bg-slate-800/70 h-full">
+                    <div className="w-12 h-12 bg-gradient-to-br from-cyan-400 to-blue-500 rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+                      <resource.icon className="w-6 h-6 text-white" />
+                    </div>
+                    <h3 className="text-lg font-semibold text-white mb-2 group-hover:text-cyan-400 transition-colors">
+                      {resource.title}
+                    </h3>
+                    <p className="text-slate-300 text-sm mb-4">{resource.description}</p>
+                    <div className="text-cyan-400 text-sm font-medium mb-4">{resource.count}</div>
+                    <div className="flex items-center text-cyan-400 group-hover:text-cyan-300 transition-colors">
+                      <span className="text-sm font-medium">Access Resource</span>
+                      <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
+                    </div>
+                  </div>
+                </Link>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Testimonials */}
+      <section className="py-16 px-4">
+        <div className="container mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            className="text-center mb-12"
+          >
+            <h2 className="text-3xl font-bold text-white mb-4">What Our Students Say</h2>
+            <p className="text-slate-300 max-w-2xl mx-auto">
+              Hear from professionals who have transformed their careers with our training programs.
+            </p>
+          </motion.div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {testimonials.map((testimonial, index) => (
+              <motion.div
+                key={testimonial.name}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                className="bg-slate-800/50 rounded-xl p-6 border border-slate-700"
+              >
+                <div className="flex items-center space-x-1 mb-4">
+                  {[...Array(testimonial.rating)].map((_, i) => (
+                    <Star key={i} className="w-4 h-4 text-yellow-400 fill-current" />
+                  ))}
+                </div>
+                
+                <p className="text-slate-300 text-sm mb-6 italic">"{testimonial.comment}"</p>
+                
+                <div className="flex items-center space-x-3">
+                  <div className="w-10 h-10 bg-gradient-to-br from-cyan-400 to-blue-500 rounded-full flex items-center justify-center">
+                    <span className="text-white font-bold text-sm">{testimonial.avatar}</span>
+                  </div>
+                  <div>
+                    <div className="font-semibold text-white">{testimonial.name}</div>
+                    <div className="text-slate-400 text-sm">{testimonial.role}</div>
+                    <div className="text-slate-400 text-sm">{testimonial.company}</div>
+                  </div>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="py-16 px-4">
+        <div className="container mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            className="bg-gradient-to-r from-slate-800 to-slate-700 rounded-2xl p-8 border border-slate-600 text-center"
+          >
+            <h2 className="text-3xl font-bold text-white mb-4">Ready to Advance Your Career?</h2>
+            <p className="text-slate-300 max-w-2xl mx-auto mb-8">
+              Join thousands of professionals who have accelerated their careers with our comprehensive training programs.
+            </p>
+            
+            <div className="flex flex-wrap justify-center gap-4">
+              <Link
+                to="/training/programs"
+                className="px-8 py-4 bg-gradient-to-r from-cyan-400 to-blue-500 text-white font-semibold rounded-lg hover:from-cyan-500 hover:to-blue-600 transition-all duration-300 transform hover:scale-105"
+              >
+                Explore Programs
+              </Link>
+              <Link
+                to="/contact"
+                className="px-8 py-4 border-2 border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400 hover:text-white transition-all duration-300"
+              >
+                Talk to an Advisor
+              </Link>
+            </div>
+          </motion.div>
+        </div>
+      </section>
     </div>
   );
-}
+};
+
+export default Training;
