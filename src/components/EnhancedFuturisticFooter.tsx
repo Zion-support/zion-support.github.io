@@ -43,7 +43,8 @@ import {
   Building,
   MailIcon,
   BookOpen,
-  Calendar
+  Calendar,
+  Settings
 } from 'lucide-react';
 
 export const EnhancedFuturisticFooter: React.FC = () => {
@@ -51,29 +52,55 @@ export const EnhancedFuturisticFooter: React.FC = () => {
 
   const footerSections = [
     {
-      title: 'Core Services',
+      title: 'Services',
       icon: Rocket,
       color: 'from-blue-600 to-cyan-600',
       links: [
-        { name: 'AI & Analytics', href: '/services/ai-business-intelligence' },
-        { name: 'Cloud & DevOps', href: '/services/cloud-devops' },
-        { name: 'Cybersecurity', href: '/services/ai-compliance-copilot' },
-        { name: 'Digital Twin', href: '/services/digital-twin' },
-        { name: 'IoT & Edge', href: '/services/iot-edge' },
-        { name: 'Micro SaaS', href: '/services/micro-saas-solutions' }
+        { name: 'Services Overview', href: '/services-overview' },
+        { name: 'AI Services', href: '/ai-services' },
+        { name: 'IT Services', href: '/it-services' },
+        { name: 'Micro SaaS', href: '/micro-saas' },
+        { name: 'Services Catalog', href: '/services-catalog' },
+        { name: 'Services Comparison', href: '/services-comparison' }
       ]
     },
     {
-      title: 'Innovative Solutions',
+      title: 'Core Technologies',
+      icon: Brain,
+      color: 'from-indigo-600 to-purple-600',
+      links: [
+        { name: 'AI Business Intelligence', href: '/services/ai-business-intelligence' },
+        { name: 'Cloud DevOps', href: '/services/cloud-devops' },
+        { name: 'Digital Twin', href: '/services/digital-twin' },
+        { name: 'IoT Edge Computing', href: '/services/iot-edge' },
+        { name: 'Cybersecurity Suite', href: '/services/ai-compliance-copilot' },
+        { name: 'Data Analytics', href: '/services/data-analytics' }
+      ]
+    },
+    {
+      title: 'Innovation Hub',
       icon: Star,
       color: 'from-purple-600 to-pink-600',
       links: [
         { name: 'Innovative Services 2025', href: '/innovative-services-showcase-2025' },
         { name: 'Revolutionary Services 2030', href: '/revolutionary-services-2030' },
         { name: 'Comprehensive Services 2028', href: '/comprehensive-services-landing-2028' },
-        { name: 'AI Sales Automation', href: '/innovative-services-showcase-2025' },
-        { name: 'AI Customer Support', href: '/innovative-services-showcase-2025' },
-        { name: 'AI Financial Analytics', href: '/innovative-services-showcase-2025' }
+        { name: 'Emerging Tech 2030', href: '/emerging-tech-2030' },
+        { name: 'AI Sales Copilot', href: '/services/ai-sales-copilot' },
+        { name: 'AI Content Marketing', href: '/services/ai-content-marketing-automation' }
+      ]
+    },
+    {
+      title: 'Pricing & Plans',
+      icon: DollarSign,
+      color: 'from-emerald-600 to-teal-600',
+      links: [
+        { name: 'Pricing Overview', href: '/pricing' },
+        { name: 'Pricing Guide', href: '/pricing-guide' },
+        { name: 'Comprehensive Pricing 2026', href: '/comprehensive-pricing-guide-2026' },
+        { name: 'Request Quote', href: '/request-quote' },
+        { name: 'Schedule Demo', href: '/schedule-demo' },
+        { name: 'Contact Sales', href: '/contact' }
       ]
     },
     {
@@ -86,20 +113,52 @@ export const EnhancedFuturisticFooter: React.FC = () => {
         { name: 'Careers', href: '/careers' },
         { name: 'Partners', href: '/partners' },
         { name: 'News & Press', href: '/news' },
-        { name: 'Case Studies', href: '/case-studies' }
+        { name: 'Events', href: '/events' },
+        { name: 'Case Studies', href: '/case-studies' },
+        { name: 'Marketplace', href: '/marketplace' }
       ]
     },
     {
-      title: 'Resources & Support',
+      title: 'Resources & Learning',
       icon: BookOpen,
       color: 'from-orange-600 to-red-600',
       links: [
         { name: 'Help Center', href: '/help' },
+        { name: 'Documentation', href: '/documentation' },
+        { name: 'Training', href: '/training' },
         { name: 'Blog', href: '/blog' },
         { name: 'Webinars', href: '/webinars' },
         { name: 'White Papers', href: '/white-papers' },
         { name: 'FAQ', href: '/faq' },
-        { name: 'Documentation', href: '/help' }
+        { name: 'Support Center', href: '/support' },
+        { name: 'Community', href: '/community' }
+      ]
+    },
+    {
+      title: 'Platform & Tools',
+      icon: Settings,
+      color: 'from-slate-600 to-gray-600',
+      links: [
+        { name: 'Dashboard', href: '/dashboard' },
+        { name: 'Login', href: '/login' },
+        { name: 'Sign Up', href: '/signup' },
+        { name: 'System Status', href: '/status' },
+        { name: 'API Documentation', href: '/documentation' },
+        { name: 'Developer Tools', href: '/documentation' }
+      ]
+    },
+    {
+      title: 'Legal & Compliance',
+      icon: Shield,
+      color: 'from-gray-600 to-slate-600',
+      links: [
+        { name: 'Privacy Policy', href: '/privacy' },
+        { name: 'Terms of Service', href: '/terms' },
+        { name: 'Cookie Policy', href: '/cookies' },
+        { name: 'Security', href: '/security' },
+        { name: 'Compliance', href: '/compliance' },
+        { name: 'Accessibility', href: '/accessibility' },
+        { name: 'Sitemap', href: '/sitemap' }
       ]
     }
   ];

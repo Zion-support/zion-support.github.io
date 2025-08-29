@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { Menu, X, Search, User, Bell, ChevronDown, Zap, Brain, Shield, Cloud, Rocket, Globe, Cpu, Lock, Heart, Users, ShoppingCart, BookOpen, MessageCircle, HelpCircle, DollarSign, Star, TrendingUp, Award, Settings, Phone, Mail, MapPin, Building, Target, BarChart3, Sparkles, GraduationCap, FileText, Crown } from 'lucide-react';
+import { Menu, X, Search, User, Bell, ChevronDown, Zap, Brain, Shield, Cloud, Rocket, Globe, Cpu, Lock, Heart, Users, ShoppingCart, BookOpen, MessageCircle, HelpCircle, DollarSign, Star, TrendingUp, Award, Settings, Phone, Mail, MapPin, Building, Target, BarChart3, Sparkles, GraduationCap, FileText, Crown, Database, Scale, Calendar, PhoneCall, Briefcase, Package, Search as SearchIcon, Book, Calendar as CalendarIcon, Smartphone } from 'lucide-react';
 import { ThemeToggle } from '../components/ThemeToggle';
 import { ZionLoadingSpinner } from '../components/ui/EnhancedLoadingSpinner';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -47,66 +47,141 @@ export function AppHeader({ onSidebarToggle, isSidebarOpen }: AppHeaderProps) {
     { name: 'Home', href: '/', current: true },
     { name: 'Services', href: '/services-overview', current: false, hasDropdown: true },
     { name: 'Solutions', href: '/ai-services', current: false, hasDropdown: true },
+    { name: 'Pricing', href: '/pricing', current: false, hasDropdown: true },
     { name: 'Company', href: '/about', current: false, hasDropdown: true },
     { name: 'Resources', href: '/help', current: false, hasDropdown: true },
     { name: 'Contact', href: '/contact', current: false },
     { name: 'Get Quote', href: '/request-quote', current: false },
   ];
 
-  const services = [
-    { name: 'AI & Analytics', href: '/services/ai-business-intelligence', icon: Brain, description: 'Machine Learning & Data Science' },
-    { name: 'Digital Twin', href: '/services/digital-twin', icon: Rocket, description: 'Simulation & Monitoring' },
-    { name: 'Cybersecurity', href: '/services/ai-compliance-copilot', icon: Shield, description: 'AI-Powered Security' },
-    { name: 'Cloud & DevOps', href: '/services/cloud-devops', icon: Cloud, description: 'Infrastructure & Automation' },
-    { name: 'IoT & Edge', href: '/services/iot-edge', icon: Cpu, description: 'Smart Devices & Networks' },
-    { name: 'Blockchain', href: '/services/blockchain-enterprise-solutions', icon: Lock, description: 'DeFi & Smart Contracts' },
-    { name: 'Healthcare Tech', href: '/services/healthcare-tech', icon: Heart, description: 'AI Medicine & Diagnostics' },
-    { name: 'Sustainability', href: '/services/sustainability', icon: Globe, description: 'Green IT Solutions' },
-    { name: 'Micro SaaS', href: '/services/micro-saas-solutions', icon: ShoppingCart, description: 'Productized SaaS for niches' },
-    { name: 'View All Services', href: '/services-overview', icon: Settings, description: 'Complete service portfolio' },
-  ];
-
-  const servicesCategories = [
+  const servicesDropdown = [
     {
-      name: 'Core Services',
+      name: 'Service Categories',
       icon: Settings,
       color: 'from-blue-600 to-cyan-600',
       services: [
-        { name: 'Services Overview', href: '/services-overview', description: 'Complete service portfolio' },
-        { name: 'AI Services', href: '/ai-services', description: 'AI-powered solutions' },
-        { name: 'IT Services', href: '/it-services', description: 'Enterprise IT solutions' },
-        { name: 'Micro SaaS', href: '/micro-saas', description: 'Scalable software solutions' },
-        { name: 'Innovative Services 2025', href: '/innovative-services-showcase-2025', description: 'Latest cutting-edge solutions' }
+        { name: 'Services Overview', href: '/services-overview', description: 'Complete service portfolio', icon: BarChart3 },
+        { name: 'Services Catalog', href: '/services-catalog', description: 'Browse all services', icon: FileText },
+        { name: 'Services Comparison', href: '/services-comparison', description: 'Compare offerings', icon: TrendingUp },
+        { name: 'AI Services', href: '/ai-services', description: 'Artificial Intelligence solutions', icon: Brain },
+        { name: 'IT Services', href: '/it-services', description: 'Enterprise IT solutions', icon: Cloud },
+        { name: 'Micro SaaS', href: '/micro-saas', description: 'Software-as-a-Service products', icon: ShoppingCart }
       ]
     },
     {
-      name: 'Innovative Solutions',
+      name: 'Core Technologies',
+      icon: Cpu,
+      color: 'from-green-600 to-emerald-600',
+      services: [
+        { name: 'AI Business Intelligence', href: '/services/ai-business-intelligence', description: 'AI-powered analytics', icon: Brain },
+        { name: 'Cloud DevOps', href: '/services/cloud-devops', description: 'Cloud infrastructure', icon: Cloud },
+        { name: 'Digital Twin', href: '/services/digital-twin', description: 'Digital simulation', icon: Rocket },
+        { name: 'IoT Edge Computing', href: '/services/iot-edge', description: 'Internet of Things', icon: Cpu },
+        { name: 'Cybersecurity Suite', href: '/services/ai-compliance-copilot', description: 'Security solutions', icon: Shield },
+        { name: 'Data Analytics', href: '/services/data-analytics', description: 'Data processing', icon: Database }
+      ]
+    },
+    {
+      name: 'Innovation Showcase',
       icon: Star,
       color: 'from-purple-600 to-pink-600',
       services: [
-        { name: 'Innovative Services 2025', href: '/innovative-services-showcase-2025', description: 'AI-powered business solutions' },
-        { name: 'Revolutionary Services 2030', href: '/revolutionary-services-2030', description: 'Future technology solutions' },
-        { name: 'Comprehensive Services 2028', href: '/comprehensive-services-landing-2028', description: 'Complete service portfolio' }
+        { name: 'Innovative Services 2025', href: '/innovative-services-showcase-2025', description: 'Latest innovations', icon: Star },
+        { name: 'Revolutionary Services 2030', href: '/revolutionary-services-2030', description: 'Future technologies', icon: Rocket },
+        { name: 'Comprehensive Services 2028', href: '/comprehensive-services-landing-2028', description: 'Complete portfolio', icon: BarChart3 },
+        { name: 'Emerging Tech 2030', href: '/emerging-tech-2030', description: 'Emerging technologies', icon: Zap }
+      ]
+    }
+  ];
+
+  const solutionsDropdown = [
+    {
+      name: 'AI Solutions',
+      icon: Brain,
+      color: 'from-indigo-600 to-purple-600',
+      services: [
+        { name: 'AI Sales Copilot', href: '/services/ai-sales-copilot', description: 'Sales automation', icon: Target },
+        { name: 'AI Content Marketing', href: '/services/ai-content-marketing-automation', description: 'Content generation', icon: FileText },
+        { name: 'AI Supply Chain', href: '/services/ai-supply-chain-optimization', description: 'Supply chain optimization', icon: TrendingUp },
+        { name: 'AI HR Platform', href: '/services/ai-hr-platform', description: 'Human resources automation', icon: Users },
+        { name: 'AI Legal Research', href: '/services/ai-legal-research-platform', description: 'Legal document analysis', icon: Scale },
+        { name: 'AI Education Platform', href: '/services/ai-education-platform', description: 'Educational technology', icon: GraduationCap }
+      ]
+    },
+    {
+      name: 'Enterprise Solutions',
+      icon: Building,
+      color: 'from-teal-600 to-blue-600',
+      services: [
+        { name: 'Healthcare Tech', href: '/services/healthcare-tech', description: 'Medical technology', icon: Heart },
+        { name: 'Blockchain Solutions', href: '/services/blockchain-enterprise-solutions', description: 'Blockchain technology', icon: Lock },
+        { name: 'Quantum Computing', href: '/services/quantum-computing', description: 'Quantum solutions', icon: Zap },
+        { name: 'Space Technology', href: '/services/space-tech', description: 'Aerospace solutions', icon: Rocket },
+        { name: 'Sustainability Tech', href: '/services/sustainability', description: 'Green technology', icon: Globe },
+        { name: 'Digital Transformation', href: '/services/digital-transformation', description: 'Business modernization', icon: TrendingUp }
+      ]
+    },
+    {
+      name: 'Micro SaaS Products',
+      icon: ShoppingCart,
+      color: 'from-orange-600 to-red-600',
+      services: [
+        { name: 'AI Lead Scoring', href: '/services/ai-lead-scoring', description: 'Lead qualification', icon: Target },
+        { name: 'Website AI Chatbot', href: '/services/website-ai-chatbot', description: 'Customer support', icon: MessageCircle },
+        { name: 'AI SEO Optimizer', href: '/services/ai-seo-optimizer', description: 'SEO automation', icon: SearchIcon },
+        { name: 'SaaS Churn Predictor', href: '/services/saas-churn-predictor', description: 'Customer retention', icon: TrendingUp },
+        { name: 'API Monitoring', href: '/services/api-monitoring', description: 'API health tracking', icon: Smartphone },
+        { name: 'Returns Management', href: '/services/returns-management', description: 'E-commerce returns', icon: Package }
+      ]
+    }
+  ];
+
+  const pricingDropdown = [
+    {
+      name: 'Pricing Plans',
+      icon: DollarSign,
+      color: 'from-emerald-600 to-teal-600',
+      services: [
+        { name: 'Pricing Overview', href: '/pricing', description: 'Service pricing', icon: DollarSign },
+        { name: 'Pricing Guide', href: '/pricing-guide', description: 'Detailed pricing info', icon: FileText },
+        { name: 'Comprehensive Pricing 2026', href: '/comprehensive-pricing-guide-2026', description: 'Future pricing', icon: BarChart3 },
+        { name: 'Pricing Guide 2025', href: '/pricing-guide-2025', description: 'Current pricing', icon: TrendingUp }
+      ]
+    },
+    {
+      name: 'Get Started',
+      icon: Star,
+      color: 'from-cyan-600 to-blue-600',
+      services: [
+        { name: 'Request Quote', href: '/request-quote', description: 'Get custom pricing', icon: DollarSign },
+        { name: 'Schedule Demo', href: '/schedule-demo', description: 'Book a demo', icon: CalendarIcon },
+        { name: 'Contact Sales', href: '/contact', description: 'Speak with sales', icon: PhoneCall },
+        { name: 'Free Trial', href: '/signup', description: 'Start free trial', icon: Star }
       ]
     }
   ];
 
   const companyLinks = [
-    { name: 'About Us', href: '/about', description: 'Our story and mission' },
-    { name: 'Our Team', href: '/team', description: 'Meet our experts' },
-    { name: 'Careers', href: '/careers', description: 'Join our team' },
-    { name: 'Partners', href: '/partners', description: 'Strategic partnerships' },
-    { name: 'News & Press', href: '/news', description: 'Latest updates' },
-    { name: 'Case Studies', href: '/case-studies', description: 'Success stories' }
+    { name: 'About Us', href: '/about', description: 'Our story and mission', icon: Building },
+    { name: 'Our Team', href: '/team', description: 'Meet our experts', icon: Users },
+    { name: 'Careers', href: '/careers', description: 'Join our team', icon: Briefcase },
+    { name: 'Partners', href: '/partners', description: 'Strategic partnerships', icon: Building },
+    { name: 'News & Press', href: '/news', description: 'Latest updates', icon: FileText },
+    { name: 'Events', href: '/events', description: 'Upcoming events', icon: CalendarIcon },
+    { name: 'Case Studies', href: '/case-studies', description: 'Success stories', icon: Award },
+    { name: 'Marketplace', href: '/marketplace', description: 'Service marketplace', icon: ShoppingCart }
   ];
 
   const resourceLinks = [
-    { name: 'Help Center', href: '/help', description: 'Support and documentation' },
-    { name: 'Blog', href: '/blog', description: 'Insights and updates' },
-    { name: 'Webinars', href: '/webinars', description: 'Educational content' },
-    { name: 'White Papers', href: '/white-papers', description: 'In-depth research' },
-    { name: 'FAQ', href: '/faq', description: 'Common questions' },
-    { name: 'Training', href: '/training', description: 'Skill development' }
+    { name: 'Help Center', href: '/help', description: 'Support and documentation', icon: HelpCircle },
+    { name: 'Documentation', href: '/documentation', description: 'Technical docs', icon: FileText },
+    { name: 'Training', href: '/training', description: 'Learning resources', icon: GraduationCap },
+    { name: 'Blog', href: '/blog', description: 'Latest insights', icon: BookOpen },
+    { name: 'Webinars', href: '/webinars', description: 'Educational events', icon: CalendarIcon },
+    { name: 'White Papers', href: '/white-papers', description: 'Research papers', icon: FileText },
+    { name: 'FAQ', href: '/faq', description: 'Common questions', icon: HelpCircle },
+    { name: 'Support Center', href: '/support', description: 'Technical support', icon: HelpCircle },
+    { name: 'Community', href: '/community', description: 'User community', icon: Users }
   ];
 
   const handleNavClick = (nav: any) => {
@@ -119,6 +194,12 @@ export function AppHeader({ onSidebarToggle, isSidebarOpen }: AppHeaderProps) {
         setCompanyDropdownOpen(false);
         setResourcesDropdownOpen(false);
       } else if (nav.name === 'Solutions') {
+        setSolutionsDropdownOpen(true);
+        setServicesDropdownOpen(false);
+        setCompanyDropdownOpen(false);
+        setResourcesDropdownOpen(false);
+      } else if (nav.name === 'Pricing') {
+        // Use the same dropdown state as solutions for pricing
         setSolutionsDropdownOpen(true);
         setServicesDropdownOpen(false);
         setCompanyDropdownOpen(false);
@@ -275,29 +356,7 @@ export function AppHeader({ onSidebarToggle, isSidebarOpen }: AppHeaderProps) {
                         <div>
                           <h3 className="text-lg font-semibold text-white mb-4">Featured Services</h3>
                           <div className="space-y-3">
-                            {services.slice(0, 6).map((service) => (
-                              <Link
-                                key={service.name}
-                                to={service.href}
-                                className="flex items-center space-x-3 p-3 rounded-lg hover:bg-slate-800 transition-colors group"
-                              >
-                                <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-cyan-500 to-blue-500 flex items-center justify-center">
-                                  <service.icon className="w-5 h-5 text-white" />
-                                </div>
-                                <div>
-                                  <div className="font-medium text-white group-hover:text-cyan-400 transition-colors">
-                                    {service.name}
-                                  </div>
-                                  <div className="text-sm text-slate-400">{service.description}</div>
-                                </div>
-                              </Link>
-                            ))}
-                          </div>
-                        </div>
-                        <div>
-                          <h3 className="text-lg font-semibold text-white mb-4">Service Categories</h3>
-                          <div className="space-y-3">
-                            {servicesCategories.map((category) => (
+                            {servicesDropdown.map((category) => (
                               <div key={category.name} className="p-3 rounded-lg border border-slate-700">
                                 <div className="flex items-center space-x-3 mb-2">
                                   <div className={`w-8 h-8 rounded-lg bg-gradient-to-br ${category.color} flex items-center justify-center`}>
@@ -312,7 +371,13 @@ export function AppHeader({ onSidebarToggle, isSidebarOpen }: AppHeaderProps) {
                                       to={service.href}
                                       className="block text-sm text-slate-300 hover:text-cyan-400 transition-colors"
                                     >
-                                      {service.name}
+                                      <div className="flex items-center space-x-3">
+                                        {service.icon && <service.icon className="w-5 h-5 text-cyan-400" />}
+                                        <div>
+                                          <div className="font-medium text-white">{service.name}</div>
+                                          <div className="text-sm text-cyan-400">{service.description}</div>
+                                        </div>
+                                      </div>
                                     </Link>
                                   ))}
                                 </div>
@@ -357,53 +422,33 @@ export function AppHeader({ onSidebarToggle, isSidebarOpen }: AppHeaderProps) {
                         <div>
                           <h3 className="text-lg font-semibold text-white mb-4">AI Solutions</h3>
                           <div className="space-y-3">
-                            <Link
-                              to="/ai-services"
-                              className="flex items-center space-x-3 p-3 rounded-lg hover:bg-slate-800 transition-colors group"
-                            >
-                              <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-purple-500 to-pink-500 flex items-center justify-center">
-                                <Brain className="w-5 h-5 text-white" />
-                              </div>
-                              <div>
-                                <div className="font-medium text-white group-hover:text-cyan-400 transition-colors">
-                                  AI & Machine Learning
+                            {solutionsDropdown.map((category) => (
+                              <div key={category.name} className="p-3 rounded-lg border border-slate-700">
+                                <div className="flex items-center space-x-3 mb-2">
+                                  <div className={`w-8 h-8 rounded-lg bg-gradient-to-br ${category.color} flex items-center justify-center`}>
+                                    <category.icon className="w-4 h-4 text-white" />
+                                  </div>
+                                  <span className="font-medium text-white">{category.name}</span>
                                 </div>
-                                <div className="text-sm text-slate-400">Intelligent automation & insights</div>
-                              </div>
-                            </Link>
-                            <Link
-                              to="/services/ai-business-intelligence"
-                              className="flex items-center space-x-3 p-3 rounded-lg hover:bg-slate-800 transition-colors group"
-                            >
-                              <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-blue-500 to-cyan-500 flex items-center justify-center">
-                                <BarChart3 className="w-5 h-5 text-white" />
-                              </div>
-                              <div>
-                                <div className="font-medium text-white group-hover:text-cyan-400 transition-colors">
-                                  Business Intelligence
+                                <div className="space-y-2">
+                                  {category.services.map((service) => (
+                                    <Link
+                                      key={service.name}
+                                      to={service.href}
+                                      className="block text-sm text-slate-300 hover:text-cyan-400 transition-colors"
+                                    >
+                                      <div className="flex items-center space-x-3">
+                                        {service.icon && <service.icon className="w-5 h-5 text-cyan-400" />}
+                                        <div>
+                                          <div className="font-medium text-white">{service.name}</div>
+                                          <div className="text-sm text-cyan-400">{service.description}</div>
+                                        </div>
+                                      </div>
+                                    </Link>
+                                  ))}
                                 </div>
-                                <div className="text-sm text-slate-400">Data-driven decision making</div>
                               </div>
-                            </Link>
-                          </div>
-                        </div>
-                        <div>
-                          <h3 className="text-lg font-semibold text-white mb-4">Industry Solutions</h3>
-                          <div className="space-y-3">
-                            <Link
-                              to="/solutions/enterprise"
-                              className="block p-3 rounded-lg hover:bg-slate-800 transition-colors"
-                            >
-                              <div className="font-medium text-white">Enterprise Solutions</div>
-                              <div className="text-sm text-slate-400">Large-scale business transformation</div>
-                            </Link>
-                            <Link
-                              to="/solutions/healthcare"
-                              className="block p-3 rounded-lg hover:bg-slate-800 transition-colors"
-                            >
-                              <div className="font-medium text-white">Healthcare Technology</div>
-                              <div className="text-sm text-slate-400">AI-powered medical solutions</div>
-                            </Link>
+                            ))}
                           </div>
                         </div>
                         <div>
@@ -426,19 +471,56 @@ export function AppHeader({ onSidebarToggle, isSidebarOpen }: AppHeaderProps) {
                       </>
                     )}
 
+                    {activeNav.name === 'Pricing' && (
+                      <>
+                        <div>
+                          <h3 className="text-lg font-semibold text-white mb-4">Pricing Plans</h3>
+                          <div className="space-y-3">
+                            {pricingDropdown.map((category) => (
+                              <div key={category.name} className="p-3 rounded-lg border border-slate-700">
+                                <div className="flex items-center space-x-3 mb-2">
+                                  <div className={`w-8 h-8 rounded-lg bg-gradient-to-br ${category.color} flex items-center justify-center`}>
+                                    <category.icon className="w-4 h-4 text-white" />
+                                  </div>
+                                  <span className="font-medium text-white">{category.name}</span>
+                                </div>
+                                <div className="space-y-2">
+                                  {category.services.map((service) => (
+                                    <Link
+                                      key={service.name}
+                                      to={service.href}
+                                      className="block text-sm text-slate-300 hover:text-cyan-400 transition-colors"
+                                    >
+                                      <div className="flex items-center space-x-3">
+                                        {service.icon && <service.icon className="w-5 h-5 text-cyan-400" />}
+                                        <div>
+                                          <div className="font-medium text-white">{service.name}</div>
+                                          <div className="text-sm text-cyan-400">{service.description}</div>
+                                        </div>
+                                      </div>
+                                    </Link>
+                                  ))}
+                                </div>
+                              </div>
+                            ))}
+                          </div>
+                        </div>
+                      </>
+                    )}
+
                     {activeNav.name === 'Company' && (
                       <>
                         <div>
                           <h3 className="text-lg font-semibold text-white mb-4">About Zion Tech</h3>
                           <div className="space-y-3">
-                            {companyLinks.slice(0, 3).map((link) => (
+                            {companyLinks.map((link) => (
                               <Link
                                 key={link.name}
                                 to={link.href}
                                 className="flex items-center space-x-3 p-3 rounded-lg hover:bg-slate-800 transition-colors group"
                               >
                                 <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-green-500 to-emerald-500 flex items-center justify-center">
-                                  <Building className="w-5 h-5 text-white" />
+                                  <link.icon className="w-5 h-5 text-white" />
                                 </div>
                                 <div>
                                   <div className="font-medium text-white group-hover:text-cyan-400 transition-colors">
@@ -446,21 +528,6 @@ export function AppHeader({ onSidebarToggle, isSidebarOpen }: AppHeaderProps) {
                                   </div>
                                   <div className="text-sm text-slate-400">{link.description}</div>
                                 </div>
-                              </Link>
-                            ))}
-                          </div>
-                        </div>
-                        <div>
-                          <h3 className="text-lg font-semibold text-white mb-4">More About Us</h3>
-                          <div className="space-y-3">
-                            {companyLinks.slice(3).map((link) => (
-                              <Link
-                                key={link.name}
-                                to={link.href}
-                                className="block p-3 rounded-lg hover:bg-slate-800 transition-colors"
-                              >
-                                <div className="font-medium text-white">{link.name}</div>
-                                <div className="text-sm text-slate-400">{link.description}</div>
                               </Link>
                             ))}
                           </div>
@@ -490,14 +557,14 @@ export function AppHeader({ onSidebarToggle, isSidebarOpen }: AppHeaderProps) {
                         <div>
                           <h3 className="text-lg font-semibold text-white mb-4">Help & Support</h3>
                           <div className="space-y-3">
-                            {resourceLinks.slice(0, 3).map((link) => (
+                            {resourceLinks.map((link) => (
                               <Link
                                 key={link.name}
                                 to={link.href}
                                 className="flex items-center space-x-3 p-3 rounded-lg hover:bg-slate-800 transition-colors group"
                               >
                                 <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-orange-500 to-red-500 flex items-center justify-center">
-                                  <BookOpen className="w-5 h-5 text-white" />
+                                  <link.icon className="w-5 h-5 text-white" />
                                 </div>
                                 <div>
                                   <div className="font-medium text-white group-hover:text-cyan-400 transition-colors">
@@ -505,21 +572,6 @@ export function AppHeader({ onSidebarToggle, isSidebarOpen }: AppHeaderProps) {
                                   </div>
                                   <div className="text-sm text-slate-400">{link.description}</div>
                                 </div>
-                              </Link>
-                            ))}
-                          </div>
-                        </div>
-                        <div>
-                          <h3 className="text-lg font-semibold text-white mb-4">Learning Resources</h3>
-                          <div className="space-y-3">
-                            {resourceLinks.slice(3).map((link) => (
-                              <Link
-                                key={link.name}
-                                to={link.href}
-                                className="block p-3 rounded-lg hover:bg-slate-800 transition-colors"
-                              >
-                                <div className="font-medium text-white">{link.name}</div>
-                                <div className="text-sm text-slate-400">{link.description}</div>
                               </Link>
                             ))}
                           </div>
