@@ -50,6 +50,9 @@ const InnovativeServicesShowcase2025 = React.lazy(() => import('./pages/Innovati
 // Comprehensive Services Showcase 2025
 const ComprehensiveServicesShowcase2025 = React.lazy(() => import('./pages/ComprehensiveServicesShowcase2025'));
 
+// Innovative AI Services Showcase 2025
+const InnovativeAIServicesShowcase2025 = React.lazy(() => import('./pages/InnovativeAIServicesShowcase2025'));
+
 // Service pages - only import existing ones
 const CloudDevOps = React.lazy(() => import('./pages/services/CloudDevOps'));
 const DigitalTwin = React.lazy(() => import('./pages/services/DigitalTwin'));
@@ -90,6 +93,13 @@ const AIWorkflowOrchestrator = React.lazy(() => import('./pages/services/AIWorkf
 const AIDataGovernance = React.lazy(() => import('./pages/services/AIDataGovernance'));
 const EdgeComputingPlatform = React.lazy(() => import('./pages/services/EdgeComputingPlatform'));
 const AICustomerSuccessPlatform = React.lazy(() => import('./pages/services/AICustomerSuccessPlatform'));
+
+// Additional Innovative AI Services
+const AIProjectManagementAssistant = React.lazy(() => import('./pages/services/AIProjectManagementAssistant'));
+const AIFinancialPlanningAssistant = React.lazy(() => import('./pages/services/AIFinancialPlanningAssistant'));
+const AIHealthcareAnalyticsPlatform = React.lazy(() => import('./pages/services/AIHealthcareAnalyticsPlatform'));
+const AISupplyChainOptimizationPlatform = React.lazy(() => import('./pages/services/AISupplyChainOptimizationPlatform'));
+const AICybersecurityThreatIntelligencePlatform = React.lazy(() => import('./pages/services/AICybersecurityThreatIntelligencePlatform'));
 
 // Simple placeholder pages for missing ones
 const Community = React.lazy(() => import('./pages/Community'));
@@ -167,6 +177,7 @@ function App() {
               <Route path="/revolutionary-services-showcase-2030" element={<RevolutionaryServicesShowcase2030 />} />
               <Route path="/innovative-services-showcase-2025" element={<InnovativeServicesShowcase2025 />} />
               <Route path="/comprehensive-services-showcase-2025" element={<ComprehensiveServicesShowcase2025 />} />
+              <Route path="/innovative-ai-services-showcase-2025" element={<InnovativeAIServicesShowcase2025 />} />
               <Route path="/ai-services" element={<AIServices />} />
               <Route path="/it-services" element={<ITServices />} />
               <Route path="/micro-saas" element={<MicroSaaS />} />
@@ -213,6 +224,11 @@ function App() {
               <Route path="/services/ai-customer-experience-platform" element={<AICustomerExperiencePlatform />} />
               <Route path="/services/ai-supply-chain-optimization" element={<AISupplyChainOptimization />} />
               <Route path="/services/ai-autonomous-business-operations" element={<AIAutonomousBusinessOperations />} />
+              <Route path="/services/ai-project-management-assistant" element={<AIProjectManagementAssistant />} />
+              <Route path="/services/ai-financial-planning-assistant" element={<AIFinancialPlanningAssistant />} />
+              <Route path="/services/ai-healthcare-analytics-platform" element={<AIHealthcareAnalyticsPlatform />} />
+              <Route path="/services/ai-supply-chain-optimization-platform" element={<AISupplyChainOptimizationPlatform />} />
+              <Route path="/services/ai-cybersecurity-threat-intelligence-platform" element={<AICybersecurityThreatIntelligencePlatform />} />
               <Route path="/services/quantum-computing-solutions" element={<QuantumComputingSolutions />} />
               <Route path="/services/ai-workflow-orchestrator" element={<AIWorkflowOrchestrator />} />
               <Route path="/services/ai-data-governance" element={<AIDataGovernance />} />
