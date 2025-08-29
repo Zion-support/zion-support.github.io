@@ -19,7 +19,7 @@ import {
 } from 'lucide-react';
 import { SEO } from '../components/SEO';
 import { COMPREHENSIVE_SERVICES_INDEX_2030, SERVICE_CATEGORIES_2030, SERVICE_STATISTICS_2030 } from '../data/comprehensiveServicesIndex2030';
-import { COMPREHENSIVE_PRICING_GUIDE_2030, PRICING_ANALYSIS_2030, PAYMENT_OPTIONS_2030, PRICING_CONTACT_2030 } from '../data/comprehensivePricingGuide2030';
+import { comprehensivePricingGuide2030 } from '../data/comprehensivePricingGuide2030';
 
 export default function ComprehensiveServicesLanding2030() {
   const [activeCategory, setActiveCategory] = useState('all');
@@ -436,21 +436,21 @@ export default function ComprehensiveServicesLanding2030() {
             </motion.div>
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              {COMPREHENSIVE_PRICING_GUIDE_2030.slice(0, 3).map((service, index) => (
+                              {comprehensivePricingGuide2030.slice(0, 3).map((service, index) => (
                 <motion.div
-                  key={service.serviceId}
+                  key={service.id}
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5, delay: index * 0.2 }}
                   className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20"
                 >
-                  <h3 className="text-2xl font-semibold text-white mb-4">{service.serviceName}</h3>
+                  <h3 className="text-2xl font-semibold text-white mb-4">{service.name}</h3>
                   <div className="text-4xl font-bold text-blue-400 mb-6">
-                    ${service.basePrice.toLocaleString()}
+                    ${service.pricing[0].price.toLocaleString()}
                   </div>
                   
                   <div className="space-y-4 mb-6">
-                    {service.pricingTiers[0].features.map((feature, idx) => (
+                    {service.pricing[0].features.map((feature, idx) => (
                       <div key={idx} className="flex items-center gap-3">
                         <div className="w-2 h-2 bg-green-400 rounded-full" />
                         <span className="text-gray-300">{feature}</span>
@@ -490,7 +490,7 @@ export default function ComprehensiveServicesLanding2030() {
                   <div className="w-12 h-12 bg-blue-500 rounded-lg flex items-center justify-center mx-auto mb-4">
                     <Phone className="w-6 h-6 text-white" />
                   </div>
-                  <div className="text-white font-semibold">{PRICING_CONTACT_2030.phone}</div>
+                  <div className="text-white font-semibold">+1 302 464 0950</div>
                   <div className="text-gray-300 text-sm">Phone</div>
                 </div>
                 
@@ -498,7 +498,7 @@ export default function ComprehensiveServicesLanding2030() {
                   <div className="w-12 h-12 bg-purple-500 rounded-lg flex items-center justify-center mx-auto mb-4">
                     <Users className="w-6 h-6 text-white" />
                   </div>
-                  <div className="text-white font-semibold">{PRICING_CONTACT_2030.email}</div>
+                  <div className="text-white font-semibold">kleber@ziontechgroup.com</div>
                   <div className="text-gray-300 text-sm">Email</div>
                 </div>
                 
@@ -506,7 +506,7 @@ export default function ComprehensiveServicesLanding2030() {
                   <div className="w-12 h-12 bg-green-500 rounded-lg flex items-center justify-center mx-auto mb-4">
                     <Globe className="w-6 h-6 text-white" />
                   </div>
-                  <div className="text-white font-semibold">{PRICING_CONTACT_2030.website}</div>
+                  <div className="text-white font-semibold">https://ziontechgroup.com</div>
                   <div className="text-gray-300 text-sm">Website</div>
                 </div>
               </div>
@@ -613,9 +613,9 @@ export default function ComprehensiveServicesLanding2030() {
                   <div className="mt-6">
                     <h4 className="text-lg font-semibold text-white mb-3">Contact Information</h4>
                     <div className="space-y-2 text-gray-300">
-                      <p><strong>Phone:</strong> {PRICING_CONTACT_2030.phone}</p>
-                      <p><strong>Email:</strong> {PRICING_CONTACT_2030.email}</p>
-                      <p><strong>Website:</strong> {PRICING_CONTACT_2030.website}</p>
+                                      <p><strong>Phone:</strong> +1 302 464 0950</p>
+                <p><strong>Email:</strong> kleber@ziontechgroup.com</p>
+                <p><strong>Website:</strong> https://ziontechgroup.com</p>
                     </div>
                   </div>
                 </div>
