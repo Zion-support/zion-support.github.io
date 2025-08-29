@@ -4,7 +4,7 @@ module.exports = {
     {
       name: 'zion-app',
       script: 'npm',
-      args: 'start',
+      args: 'run preview',
       instances: 1,
       autorestart: true,
       watch: false,
@@ -15,24 +15,23 @@ module.exports = {
       }
     },
     
-    // Backend services
+    // Build and serve application
     {
-      name: 'zion-backend',
+      name: 'zion-build',
       script: 'npm',
-      args: 'run dev',
+      args: 'run build',
       instances: 1,
-      autorestart: true,
+      autorestart: false,
       watch: false,
-      max_memory_restart: '512M',
+      max_memory_restart: '1G',
       env: {
-        NODE_ENV: 'development',
-        PORT: 5000
+        NODE_ENV: 'production'
       }
     }
   ],
 
   // Enhanced Automation Processes
-  automation: [
+  apps: [
     // Core automation processes
     {
       name: 'console-error-fixer',

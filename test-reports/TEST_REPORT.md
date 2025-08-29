@@ -18,7 +18,8 @@
 | Performance | ✅ PASS | Hello, this is AnupamAS01!
 ... |
 | Accessibility | ✅ PASS | Lint check failed: Command failed: npm run lint
-(node:31284) [MODULE_TYPELESS_PACKAGE_JSON] Warning:... |
+sh: 1: eslint: not found
+... |
 | Coverage | ✅ PASS | Coverage generation failed
 ... |
 
