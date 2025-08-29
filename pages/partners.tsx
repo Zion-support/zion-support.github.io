@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion'
+<<<<<<< HEAD
 import {
     Award,
     Brain,
@@ -8,6 +9,20 @@ import {
     Rocket,
     Shield,
     Zap
+=======
+import { 
+  Shield, 
+  Cloud, 
+  Brain, 
+  Users, 
+  Globe,
+  Award,
+  Zap,
+  Cpu,
+  Database,
+  Lock,
+  Rocket
+>>>>>>> pr-9553
 } from 'lucide-react'
 import Head from 'next/head'
 import React from 'react'
@@ -133,7 +148,7 @@ export default function Partners() {
               transition={{ duration: 0.6 }}
               className="mb-6"
             >
-              <Handshake className="w-20 h-20 mx-auto text-zion-cyan mb-4" />
+              <Shield className="w-20 h-20 mx-auto text-zion-cyan mb-4" />
             </motion.div>
             <motion.h1 
               initial={{ opacity: 0, y: 20 }}

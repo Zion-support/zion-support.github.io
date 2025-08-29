@@ -1,172 +1,155 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import {
-  Lightbulb,
+import { Link } from 'react-router-dom';
+import { 
+  ArrowRight, 
+  CheckCircle, 
+  Cloud, 
+  Shield, 
+  Zap, 
+  Brain, 
+  Users, 
   Target,
-  TrendingUp,
-  Users,
   BarChart3,
-  Zap,
-  Shield,
+  Rocket,
   Globe,
-  ArrowRight,
-  CheckCircle,
-  Star,
-  Globe,
-  Lock,
-  Activity,
-  BarChart3,
-  Settings,
-  Bell,
-  Download,
-  Upload,
-  RefreshCw,
-  Monitor,
-  Smartphone,
-  Server,
-  Chip,
-  Wifi,
-  Satellite,
-  Radar,
-  Camera,
-  Video,
-  FileText,
-  Calendar,
-  Tag,
-  TrendingUp,
-  PieChart,
-  LineChart,
-  Scatter,
-  Layers,
-  Cube,
-  Box,
-  Package,
-  Truck,
-  Building,
-  Factory,
-  Warehouse,
-  Home,
-  Car,
-  Plane,
-  Ship,
-  Database,
-  Cloud,
-  Eye,
-  Brain,
-  Network,
-  Rocket
+  Lock
 } from 'lucide-react';
+import { SEO } from '../components/SEO';
+
+const features = [
+  {
+    icon: Brain,
+    title: 'Strategic Expertise',
+    description: 'Deep industry knowledge and strategic thinking to guide your technology decisions.',
+    color: 'from-blue-500 to-cyan-500'
+  },
+  {
+    icon: Users,
+    title: 'Experienced Team',
+    description: 'Certified consultants with decades of combined experience in enterprise IT.',
+    color: 'from-purple-500 to-pink-500'
+  },
+  {
+    icon: Target,
+    title: 'Results-Driven',
+    description: 'Focus on measurable outcomes and ROI for every consulting engagement.',
+    color: 'from-green-500 to-emerald-500'
+  },
+  {
+    icon: Shield,
+    title: 'Security First',
+    description: 'Security and compliance built into every solution and recommendation.',
+    color: 'from-red-500 to-orange-500'
+  },
+  {
+    icon: Zap,
+    title: 'Rapid Implementation',
+    description: 'Quick turnaround times without compromising quality or thoroughness.',
+    color: 'from-yellow-500 to-orange-500'
+  },
+  {
+    icon: Cloud,
+    title: 'Cloud-Native',
+    description: 'Modern cloud-first approach for scalable and flexible solutions.',
+    color: 'from-indigo-500 to-purple-500'
+  }
+];
+
+const consultingServices = [
+  {
+    icon: Brain,
+    title: 'Technology Strategy',
+    description: 'Comprehensive technology roadmaps aligned with your business objectives and growth plans.'
+  },
+  {
+    icon: Cloud,
+    title: 'Cloud Migration',
+    description: 'Strategic planning and execution of cloud migration initiatives for optimal performance and cost.'
+  },
+  {
+    icon: Shield,
+    title: 'Security Assessment',
+    description: 'Thorough security audits and recommendations to protect your digital assets and ensure compliance.'
+  },
+  {
+    icon: BarChart3,
+    title: 'Performance Optimization',
+    description: 'Identify and resolve performance bottlenecks to improve user experience and operational efficiency.'
+  },
+  {
+    icon: Rocket,
+    title: 'Digital Transformation',
+    description: 'End-to-end digital transformation consulting to modernize your business processes and technology stack.'
+  },
+  {
+    icon: Globe,
+    title: 'Infrastructure Design',
+    description: 'Scalable and resilient infrastructure architecture designed for your specific business requirements.'
+  },
+  {
+    icon: Lock,
+    title: 'Compliance & Governance',
+    description: 'Ensure your technology solutions meet industry standards and regulatory requirements.'
+  },
+  {
+    icon: Users,
+    title: 'Team Training',
+    description: 'Comprehensive training programs to upskill your team and maximize technology adoption.'
+  }
+];
+
+const containerVariants = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.1
+    }
+  }
+};
 
 export default function ITConsulting() {
-  const features = [
-    {
-      icon: Users,
-      title: "Expert Team",
-      description: "Experienced IT professionals with deep industry knowledge",
-      color: "from-blue-500 to-cyan-500"
-    },
-    {
-      icon: Cpu,
-      title: "Technology Strategy",
-      description: "Comprehensive technology roadmaps and planning",
-      color: "from-purple-500 to-pink-500"
-    },
-    {
-      icon: Zap,
-      title: "Digital Transformation",
-      description: "End-to-end digital transformation solutions",
-      color: "from-yellow-500 to-orange-500"
-    },
-    {
-      icon: Shield,
-      title: "Security & Compliance",
-      description: "Cybersecurity and regulatory compliance expertise",
-      color: "from-red-500 to-pink-500"
-    },
-    {
-      icon: Target,
-      title: "Performance Optimization",
-      description: "System optimization and performance tuning",
-      color: "from-green-500 to-emerald-500"
-    },
-    {
-      icon: Cloud,
-      title: "Cloud Migration",
-      description: "Seamless cloud adoption and migration strategies",
-      color: "from-indigo-500 to-blue-500"
-    }
-  ];
-
-  const services = [
-    {
-      title: "Technology Assessment",
-      description: "Comprehensive evaluation of current IT infrastructure and systems",
-      icon: Eye,
-      benefits: ["Infrastructure review", "Technology audit", "Gap analysis"]
-    },
-    {
-      title: "Strategic Planning",
-      description: "Long-term technology roadmaps aligned with business goals",
-      icon: Target,
-      benefits: ["Technology strategy", "Implementation roadmap", "ROI analysis"]
-    },
-    {
-      title: "Digital Transformation",
-      description: "End-to-end digital transformation consulting and implementation",
-      icon: Rocket,
-      benefits: ["Process optimization", "Technology adoption", "Change management"]
-    },
-    {
-      title: "Security & Compliance",
-      description: "Cybersecurity assessment and regulatory compliance consulting",
-      icon: Shield,
-      benefits: ["Security audit", "Compliance review", "Risk assessment"]
-    }
-  ];
-
-  const industries = [
-    "Healthcare", "Finance", "Manufacturing", "Retail", "Education", 
-    "Government", "Technology", "Energy", "Transportation", "Media"
-  ];
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
+      <SEO
+        title="IT Consulting Services - Zion Tech Group"
+        description="Expert IT consulting services to transform your business technology strategy, cloud migration, and digital transformation initiatives."
+        keywords="IT consulting, technology strategy, cloud migration, digital transformation, security assessment, performance optimization"
+        canonical="https://ziontechgroup.com/services/it-consulting"
+      />
+      
       {/* Hero Section */}
-      <section className="relative py-32 bg-gradient-to-br from-zion-slate-dark via-zion-blue-dark to-zion-blue overflow-hidden">
-        <div className="absolute inset-0 opacity-10">
-          <div className="absolute top-20 left-20 w-64 h-64 border border-zion-cyan rounded-full animate-pulse"></div>
-          <div className="absolute bottom-20 right-20 w-48 h-48 border border-zion-purple rounded-full animate-pulse delay-1000"></div>
-        </div>
-
-        <div className="container mx-auto px-4 text-center relative z-10">
-          <motion.div
+      <section className="relative pt-32 pb-20 overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light" />
+        <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg%20width%3D%2260%22%20height%3D%2260%22%20viewBox%3D%220%200%2060%2060%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Cg%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%3E%3Cg%20fill%3D%22%239C92AC%22%20fill-opacity%3D%220.1%22%3E%3Ccircle%20cx%3D%2230%22%20cy%3D%2230%22%20r%3D%222%22/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-20" />
+        
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div 
+            className="text-center"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            className="text-center mb-16"
           >
-            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
-              IT Consulting Services
+            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
+              <span className="bg-gradient-to-r from-zion-cyan to-blue-400 bg-clip-text text-transparent">
+                Expert IT
+              </span>
+              <br />
+              <span className="text-white">Consulting</span>
             </h1>
-            <p className="text-xl md:text-2xl text-zion-slate-light mb-12 max-w-4xl mx-auto leading-relaxed">
-              Transform your business with strategic technology guidance from industry experts.
-              We help you navigate digital transformation and achieve sustainable competitive advantage.
+            <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto mb-8">
+              Transform your business with strategic technology guidance from industry experts. 
+              We help you make informed decisions and implement solutions that drive growth.
             </p>
-
-            <motion.div
-              className="flex flex-col sm:flex-row gap-6 justify-center mb-16"
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.3 }}
-            >
-              <motion.button
-                className="group px-10 py-5 bg-gradient-to-r from-zion-cyan to-zion-purple text-white rounded-xl font-semibold text-lg hover:scale-105 transition-all duration-300 shadow-2xl hover:shadow-zion-cyan/25 flex items-center gap-3"
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link
+                to="/contact"
+                className="inline-flex items-center px-10 py-5 bg-gradient-to-r from-zion-cyan to-blue-500 text-white font-semibold text-lg rounded-xl hover:from-zion-cyan-dark hover:to-blue-600 transition-all duration-300"
               >
-                Get Consultation
-                <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-              </motion.button>
+                <span>Get Started</span>
+                <ArrowRight className="w-5 h-5 ml-2" />
+              </Link>
               <motion.button
                 className="px-10 py-5 border-2 border-zion-cyan text-zion-cyan rounded-xl font-semibold text-lg hover:bg-zion-cyan hover:text-white transition-all duration-300 flex items-center gap-3"
                 whileHover={{ scale: 1.05 }}
@@ -174,7 +157,7 @@ export default function ITConsulting() {
               >
                 <span>Explore Services</span>
                 <ArrowRight className="w-5 h-5" />
-              </Link>
+              </motion.button>
             </div>
           </motion.div>
         </div>
@@ -189,7 +172,6 @@ export default function ITConsulting() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
-            className="text-center mb-16"
           >
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               Why Choose Our IT Consulting?
@@ -263,16 +245,21 @@ export default function ITConsulting() {
                   <h3 className="text-2xl font-semibold text-white">{service.title}</h3>
                 </div>
 
-                <h3 className="text-xl font-bold text-white mb-4">{service.title}</h3>
                 <p className="text-zion-slate-light mb-6 leading-relaxed">{service.description}</p>
 
                 <ul className="space-y-3">
-                  {service.features.map((feature, featureIndex) => (
-                    <li key={featureIndex} className="flex items-center gap-3 text-zion-slate-light text-sm">
-                      <CheckCircle className="w-4 h-4 text-zion-cyan flex-shrink-0" />
-                      {feature}
-                    </li>
-                  ))}
+                  <li className="flex items-center text-sm text-gray-300">
+                    <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
+                    Strategic planning and analysis
+                  </li>
+                  <li className="flex items-center text-sm text-gray-300">
+                    <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
+                    Implementation guidance
+                  </li>
+                  <li className="flex items-center text-sm text-gray-300">
+                    <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
+                    Ongoing support and optimization
+                  </li>
                 </ul>
               </motion.div>
             ))}
@@ -280,115 +267,37 @@ export default function ITConsulting() {
         </div>
       </section>
 
-      {/* Benefits Section */}
-      <section className="py-20 bg-zion-blue-dark">
-        <div className="container mx-auto px-4">
-          <motion.div
-            className="text-center mb-16"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
-          >
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-              Why Choose Our Consulting?
-            </h2>
-            <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
-              Experience the difference of working with industry experts who understand
-              your business challenges and deliver proven solutions.
-            </p>
-          </motion.div>
-
-          <motion.div
-            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"
-            variants={containerVariants}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true }}
-          >
-            {benefits.map((benefit, index) => (
-              <motion.div
-                key={index}
-                className="text-center"
-                variants={itemVariants}
-              >
-                <div className="w-20 h-20 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-full flex items-center justify-center mx-auto mb-6">
-                  <benefit.icon className="w-10 h-10 text-white" />
-                </div>
-                <h3 className="text-xl font-bold text-white mb-4">{benefit.title}</h3>
-                <p className="text-zion-slate-light leading-relaxed">{benefit.description}</p>
-              </motion.div>
-            ))}
-          </motion.div>
-        </div>
-      </section>
-
-      {/* Industries Section */}
-      <section className="py-20 bg-zion-slate-dark">
-        <div className="container mx-auto px-4">
-          <motion.div
-            className="text-center mb-16"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-              Industries We Serve
-            </h2>
-            <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
-              Our consulting expertise spans across diverse industries, helping businesses
-              of all sizes achieve their technology goals.
-            </p>
-          </motion.div>
-
-          <motion.div
-            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
-            variants={containerVariants}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true }}
-          >
-            {industries.map((industry, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, scale: 0.8 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="bg-white/5 backdrop-blur-sm border border-blue-400/20 rounded-xl p-4 text-center hover:bg-white/10 hover:border-blue-400/40 transition-all duration-300"
-              >
-                <span className="text-white font-medium">{industry}</span>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* CTA Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
-        <div className="max-w-7xl mx-auto text-center">
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-4xl mx-auto text-center">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
           >
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-              Ready to Transform Your IT Strategy?
+              Ready to Transform Your Technology Strategy?
             </h2>
-            <p className="text-xl text-zion-slate-light mb-8 max-w-3xl mx-auto">
-              Let our expert consultants help you navigate the complex world of technology
-              and achieve sustainable business success.
+            <p className="text-xl text-gray-300 mb-8">
+              Let's discuss how our expert IT consulting can help you achieve your business goals 
+              and stay ahead of the competition.
             </p>
-            <motion.button
-              className="px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-purple text-white rounded-xl font-semibold text-lg hover:scale-105 transition-all duration-300 shadow-2xl hover:shadow-zion-cyan/25"
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-            >
-              Start Your Consultation
-            </motion.button>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link
+                to="/contact"
+                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-zion-cyan to-blue-500 text-white font-semibold text-lg rounded-lg hover:from-zion-cyan-dark hover:to-blue-600 transition-all duration-300"
+              >
+                <span>Schedule Consultation</span>
+                <ArrowRight className="w-5 h-5 ml-2" />
+              </Link>
+              <Link
+                to="/services"
+                className="inline-flex items-center px-8 py-4 border-2 border-zion-cyan text-zion-cyan font-semibold text-lg rounded-lg hover:bg-zion-cyan hover:text-white transition-all duration-300"
+              >
+                <span>View All Services</span>
+              </Link>
+            </div>
           </motion.div>
         </div>
       </section>
