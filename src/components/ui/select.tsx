@@ -32,11 +32,15 @@ export function Select({
 interface SelectItemProps {
   children: React.ReactNode;
   value: string;
+  className?: string;
 }
 
-export function SelectItem({ children, value }: SelectItemProps) {
+export function SelectItem({ children, value, className = '' }: SelectItemProps) {
   return (
-    <option value={value}>
+    <option
+      value={value}
+      className={`px-3 py-2 text-sm ${className}`}
+    >
       {children}
     </option>
   );

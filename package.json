@@ -45,6 +45,7 @@
     "prefer-offline": true
   },
   "dependencies": {
+    "@esbuild/linux-x64": "^0.21.5",
     "@hookform/resolvers": "^5.2.1",
     "@radix-ui/react-accordion": "^1.1.2",
     "@radix-ui/react-alert-dialog": "^1.0.5",
@@ -126,5 +127,8 @@
     "rollup": {
       "@rollup/rollup-linux-x64-gnu": "^4.18.0"
     }
+  },
+  "resolutions": {
+    "@rollup/rollup-darwin-x64": "@rollup/rollup-linux-x64-gnu"
   }
 }
