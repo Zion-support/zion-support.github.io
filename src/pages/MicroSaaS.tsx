@@ -118,7 +118,7 @@ const MicroSaaS: React.FC = () => {
             Contact: +1 302 464 0950 · kleber@ziontechgroup.com · 364 E Main St STE 1008 Middletown DE 19709
           </div>
         </div>
-      </div>
+      </section>
     </div>
   );
 }

@@ -123,12 +123,7 @@ const OnsiteSupport = React.lazy(() => import('./pages/OnsiteSupport'));
 
 const Careers = React.lazy(() => import('./pages/Careers'));
 
-// Company/resources simple pages
-const Team = React.lazy(() => import('./pages/Team'));
-const Press = React.lazy(() => import('./pages/Press'));
-const CaseStudies = React.lazy(() => import('./pages/CaseStudies'));
-const WhitePapers = React.lazy(() => import('./pages/WhitePapers'));
-const Webinars = React.lazy(() => import('./pages/Webinars'));
+// Company/resources simple pages (declared above in New pages section)
 
 const Marketplace = () => (
   <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 flex items-center justify-center">
