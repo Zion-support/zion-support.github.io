@@ -1,4 +1,5 @@
 import React from 'react';
+import { SEO } from '@/components/SEO';
 import { Link } from 'react-router-dom';
 import { Zap, BarChart3, Bot, Globe, Database, Shield, ExternalLink, DollarSign } from 'lucide-react';
 
@@ -120,7 +121,13 @@ const MicroSaaS: React.FC = () => {
       </section>
     </div>
   );
-};
+}
 
-export default MicroSaaS;
-
+function FeatureCard({ title, desc, to }: { title: string; desc: string; to: string }) {
+  return (
+    <Link to={to} className="block p-5 rounded-xl border border-slate-800 hover:border-cyan-500 bg-slate-900/40 transition-colors">
+      <div className="text-lg font-semibold mb-1">{title}</div>
+      <div className="text-slate-400 text-sm">{desc}</div>
+    </Link>
+  );
+}

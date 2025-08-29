@@ -91,6 +91,11 @@ export function Footer() {
     {
       title: "Services",
       links: [
+        { label: "Services Catalog", path: "/services-catalog" },
+        { label: "Website AI Chatbot", path: "/services/website-ai-chatbot" },
+        { label: "API Monitoring & Status", path: "/services/api-monitoring" },
+        { label: "GDPR & Cookie Compliance", path: "/services/gdpr-cookie-compliance" },
+        { label: "AI Proofreading Studio", path: "/services/ai-proofreading-studio" },
         { label: "AI Solutions", path: "/services/ai" },
         { label: "Cloud & DevOps", path: "/services/cloud-devops" },
         { label: "Cybersecurity", path: "/services/ai-cybersecurity-suite" },
@@ -140,7 +145,7 @@ export function Footer() {
   const contactInfo = [
     { icon: Mail, label: "Email", value: "kleber@ziontechgroup.com", href: "mailto:kleber@ziontechgroup.com" },
     { icon: Phone, label: "Phone", value: "+1 302 464 0950", href: "tel:+13024640950" },
-    { icon: MapPin, label: "Address", value: "364 E Main St STE 1008, Middletown DE 19709", href: "#" },
+    { icon: MapPin, label: "Address", value: "364 E Main St STE 1008, Middletown DE 19709", href: "https://maps.google.com/?q=364+E+Main+St+STE+1008+Middletown+DE+19709" },
     { icon: Globe, label: "Website", value: "ziontechgroup.com", href: "https://ziontechgroup.com" }
   ];
 
