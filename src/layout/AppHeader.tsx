@@ -39,6 +39,7 @@ export function AppHeader() {
     { name: 'Services', href: '/services', current: false, hasDropdown: true },
     { name: 'Solutions', href: '/solutions', current: false, hasDropdown: true },
     { name: 'Resources', href: '/resources', current: false, hasDropdown: true },
+    { name: 'Pricing', href: '/pricing', current: false },
     { name: 'About', href: '/about', current: false },
     { name: 'Contact', href: '/contact', current: false },
   ];
@@ -49,6 +50,22 @@ export function AppHeader() {
       href: '/innovative-micro-saas-services-2025', 
       icon: Rocket, 
       description: 'Cutting-edge AI Services',
+      featured: true,
+      color: 'from-purple-500 to-pink-500'
+    },
+    { 
+      name: 'AI Ethics Guardian Platform', 
+      href: '/services/ai-ethics-guardian-platform', 
+      icon: Shield, 
+      description: 'Responsible AI Development',
+      featured: true,
+      color: 'from-indigo-500 to-blue-500'
+    },
+    { 
+      name: 'AI Neural Interface Platform', 
+      href: '/services/ai-neural-interface-platform', 
+      icon: Brain, 
+      description: 'Brain-Computer Interface',
       featured: true,
       color: 'from-purple-500 to-pink-500'
     },
