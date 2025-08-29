@@ -341,6 +341,75 @@ module.exports = {
       time: true,
       max_restarts: 10,
       min_uptime: '10s'
+    },
+
+    // AI-Powered Code Review Automation
+    {
+      name: 'ai-code-review',
+      script: './automation/ai-code-review-automation.js',
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      max_memory_restart: '1G',
+      env: {
+        NODE_ENV: 'production',
+        REVIEW_INTERVAL: '300000', // 5 minutes
+        MAX_FILE_SIZE: '1000000' // 1MB
+      },
+      error_file: './logs/ai-code-review-error.log',
+      out_file: './logs/ai-code-review-out.log',
+      log_file: './logs/ai-code-review-combined.log',
+      time: true,
+      max_restarts: 10,
+      min_uptime: '10s'
+    },
+
+    // Intelligent Performance Optimizer
+    {
+      name: 'intelligent-performance-optimizer',
+      script: './automation/intelligent-performance-optimizer.js',
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      max_memory_restart: '1G',
+      env: {
+        NODE_ENV: 'production',
+        OPTIMIZATION_INTERVAL: '1800000', // 30 minutes
+        BUNDLE_SIZE_THRESHOLD: '500000' // 500KB
+      },
+      error_file: './logs/performance-optimizer-error.log',
+      out_file: './logs/performance-optimizer-out.log',
+      log_file: './logs/performance-optimizer-combined.log',
+      time: true,
+      max_restarts: 10,
+      min_uptime: '10s'
+    },
+
+    // Smart Dependency Manager
+    {
+      name: 'smart-dependency-manager',
+      script: './automation/smart-dependency-manager.js',
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      max_memory_restart: '1G',
+      env: {
+        NODE_ENV: 'production',
+        DEPENDENCY_CHECK_INTERVAL: '3600000', // 1 hour
+        AUTO_UPDATE_DEPENDENCIES: 'false',
+        UPDATE_STRATEGY: 'conservative',
+        CRITICAL_UPDATES: 'true',
+        SECURITY_UPDATES: 'true',
+        BACKUP_BEFORE_UPDATE: 'true',
+        TEST_AFTER_UPDATE: 'true',
+        ROLLBACK_ON_FAILURE: 'true'
+      },
+      error_file: './logs/dependency-manager-error.log',
+      out_file: './logs/dependency-manager-out.log',
+      log_file: './logs/dependency-manager-combined.log',
+      time: true,
+      max_restarts: 10,
+      min_uptime: '10s'
     }
   ],
 
