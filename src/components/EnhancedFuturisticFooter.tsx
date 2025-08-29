@@ -61,56 +61,58 @@ export const EnhancedFuturisticFooter: React.FC = () => {
 
   const footerSections = [
     {
-      title: 'AI & Consciousness',
+      title: 'AI & Analytics',
       links: [
-        { name: 'AI Consciousness Simulator', href: '/ai-services/consciousness-simulator' },
-        { name: 'Quantum Emotion Processor', href: '/ai-services/quantum-emotion' },
-        { name: 'AI Autonomous Systems', href: '/ai-services/autonomous-systems' },
-        { name: 'Neural Network Architect', href: '/ai-services/neural-architect' },
-        { name: 'AI Ethics Framework', href: '/ai-services/ai-ethics' },
-        { name: 'Predictive Analytics', href: '/ai-services/predictive-analytics' }
+        { name: 'AI Business Intelligence', href: '/services/ai-business-intelligence' },
+        { name: 'AI Sales Automation', href: '/innovative-services-showcase-2025' },
+        { name: 'AI Healthcare Diagnostics', href: '/innovative-services-showcase-2025' },
+        { name: 'AI Legal Document Analysis', href: '/innovative-services-showcase-2025' },
+        { name: 'AI Content Creation Studio', href: '/innovative-services-showcase-2025' },
+        { name: 'AI Cybersecurity Platform', href: '/innovative-services-showcase-2025' }
       ]
     },
     {
-      title: 'Micro SAAS',
+      title: 'Quantum & Emerging Tech',
       links: [
-        { name: 'AI Business Intelligence', href: '/micro-saas/ai-business-intelligence' },
-        { name: 'Customer Experience Hub', href: '/micro-saas/customer-experience' },
-        { name: 'Quantum Computing Suite', href: '/micro-saas/quantum-computing' },
-        { name: 'Supply Chain Optimizer', href: '/micro-saas/supply-chain' },
-        { name: 'Cybersecurity Platform', href: '/micro-saas/cybersecurity' },
-        { name: 'IoT Edge Computing', href: '/micro-saas/iot-edge' }
+        { name: 'Quantum AI Trading Platform', href: '/innovative-services-showcase-2025' },
+        { name: 'Quantum Machine Learning', href: '/innovative-services-showcase-2025' },
+        { name: 'Edge Computing AI Platform', href: '/innovative-services-showcase-2025' },
+        { name: 'Blockchain Supply Chain', href: '/innovative-services-showcase-2025' },
+        { name: 'IoT Smart City Platform', href: '/innovative-services-showcase-2025' },
+        { name: 'Innovative Services Showcase', href: '/innovative-services-showcase-2025' }
       ]
     },
     {
-      title: 'IT Services',
+      title: 'IT & Infrastructure',
       links: [
-        { name: 'Infrastructure Management', href: '/it-services/infrastructure' },
-        { name: 'Digital Transformation', href: '/it-services/digital-transformation' },
-        { name: 'IT Consulting', href: '/it-services/consulting' },
-        { name: 'Onsite Support', href: '/it-services/onsite-support' },
-        { name: 'Green IT Solutions', href: '/it-services/green-it' },
-        { name: '5G Network Solutions', href: '/it-services/5g-solutions' }
+        { name: 'Cloud DevOps Services', href: '/services/cloud-devops' },
+        { name: 'Digital Twin Solutions', href: '/services/digital-twin' },
+        { name: 'Data Analytics Platform', href: '/services/data-analytics' },
+        { name: 'IT Infrastructure Management', href: '/services/it-infrastructure' },
+        { name: 'Micro SaaS Solutions', href: '/services/micro-saas-solutions' },
+        { name: 'Comprehensive Services', href: '/services' }
       ]
     },
     {
-      title: 'Emerging Tech',
+      title: 'Business Solutions',
       links: [
-        { name: 'Quantum Computing', href: '/emerging-tech/quantum-computing' },
-        { name: 'Blockchain & DeFi', href: '/emerging-tech/blockchain-defi' },
-        { name: 'Space Technology', href: '/emerging-tech/space-tech' },
-        { name: 'Biotechnology', href: '/emerging-tech/biotech' },
-        { name: 'Nanotechnology', href: '/emerging-tech/nanotech' },
-        { name: 'Augmented Reality', href: '/emerging-tech/ar-vr' }
+        { name: 'AI Sales Copilot', href: '/services/ai-sales-copilot' },
+        { name: 'Cloud FinOps Optimizer', href: '/services/cloud-finops-optimizer' },
+        { name: 'AI Compliance Assistant', href: '/services/ai-compliance-assistant' },
+        { name: 'AI Auto Email Responder', href: '/services/ai-auto-email-responder' },
+        { name: 'Customer Feedback Surveys', href: '/services/mobile-feedback-surveys' },
+        { name: 'Request Custom Quote', href: '/request-quote' }
       ]
     }
   ];
 
   const quickLinks = [
-    { name: 'Services Overview', href: '/services-overview' },
-    { name: 'Pricing Guide', href: '/pricing-guide' },
-    { name: 'Innovative Services 2027', href: '/innovative-services-2027' },
-    { name: 'Ultimate Services 2027', href: '/enhanced-innovative-services-2027' },
+    { name: 'Services Overview', href: '/services' },
+    { name: 'Innovative Services Showcase', href: '/innovative-services-showcase-2025' },
+    { name: 'Pricing Guide', href: '/pricing' },
+    { name: 'AI Services', href: '/ai-services' },
+    { name: 'IT Services', href: '/it-services' },
+    { name: 'Micro SaaS', href: '/micro-saas' },
     { name: 'About Us', href: '/about' },
     { name: 'Contact', href: '/contact' },
     { name: 'Blog', href: '/blog' },
