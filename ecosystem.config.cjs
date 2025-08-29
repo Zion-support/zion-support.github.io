@@ -1,37 +1,22 @@
 module.exports = {
   apps: [
-    // Main application
+    // Main application - using dev script since start doesn't exist
     {
       name: 'zion-app',
-      script: 'npm',
-      args: 'start',
-      instances: 1,
-      autorestart: true,
-      watch: false,
-      max_memory_restart: '1G',
-      env: {
-        NODE_ENV: 'production',
-        PORT: 3000
-      }
-    },
-    
-    // Backend services
-    {
-      name: 'zion-backend',
       script: 'npm',
       args: 'run dev',
       instances: 1,
       autorestart: true,
       watch: false,
-      max_memory_restart: '512M',
+      max_memory_restart: '1G',
       env: {
         NODE_ENV: 'development',
-        PORT: 5000
+        PORT: 3000
       }
     }
   ],
 
-  // Enhanced Automation Processes
+  // Enhanced Automation Processes (GitHub workflow replacements)
   automation: [
     // Core automation processes
     {

@@ -1,8 +1,1062 @@
 {
-  "timestamp": "2025-08-29T12:09:23.205Z",
-  "consoleStatements": 290,
-  "buildConsoleStatements": 13,
-  "errorPatterns": 282,
-  "summary": "Console error fixer completed",
-  "status": "completed"
+  "timestamp": "2025-08-29T16:00:31.867Z",
+  "errors": [
+    {
+      "file": "/workspace/src/components/AccessibilityEnhancer.tsx",
+      "line": 56,
+      "content": "console.warn('Failed to load accessibility settings:', error);",
+      "type": "console-statement",
+      "severity": "medium"
+    },
+    {
+      "file": "/workspace/src/components/AdvancedReportingDashboard.tsx",
+      "line": 362,
+      "content": "console.log(`Downloading ${report.title}`);",
+      "type": "console-statement",
+      "severity": "medium"
+    },
+    {
+      "file": "/workspace/src/components/AdvancedReportingDashboard.tsx",
+      "line": 366,
+      "content": "console.log(`Sharing ${report.title}`);",
+      "type": "console-statement",
+      "severity": "medium"
+    },
+    {
+      "file": "/workspace/src/components/AdvancedReportingDashboard.tsx",
+      "line": 370,
+      "content": "console.log(`Printing ${report.title}`);",
+      "type": "console-statement",
+      "severity": "medium"
+    },
+    {
+      "file": "/workspace/src/components/AdvancedReportingDashboard.tsx",
+      "line": 378,
+      "content": "console.log(`Exporting ${report.title} as ${format}`);",
+      "type": "console-statement",
+      "severity": "medium"
+    },
+    {
+      "file": "/workspace/src/components/EnhancedAccessibilityPanel.tsx",
+      "line": 55,
+      "content": "console.error('Failed to parse accessibility settings:', error);",
+      "type": "console-statement",
+      "severity": "medium"
+    },
+    {
+      "file": "/workspace/src/components/EnhancedContact.tsx",
+      "line": 109,
+      "content": "console.error('Error submitting form:', error);",
+      "type": "console-statement",
+      "severity": "medium"
+    },
+    {
+      "file": "/workspace/src/components/EnhancedNewsletter.tsx",
+      "line": 73,
+      "content": "console.log('Newsletter subscription:', formData);",
+      "type": "console-statement",
+      "severity": "medium"
+    },
+    {
+      "file": "/workspace/src/components/EnhancedNewsletter.tsx",
+      "line": 90,
+      "content": "console.error('Newsletter subscription error:', error);",
+      "type": "console-statement",
+      "severity": "medium"
+    },
+    {
+      "file": "/workspace/src/components/ErrorBoundary.tsx",
+      "line": 45,
+      "content": "console.error('Error caught by boundary:', error, errorInfo);",
+      "type": "console-statement",
+      "severity": "medium"
+    },
+    {
+      "file": "/workspace/src/components/ErrorBoundary.tsx",
+      "line": 84,
+      "content": "console.log('Error reported:', errorReport);",
+      "type": "console-statement",
+      "severity": "medium"
+    },
+    {
+      "file": "/workspace/src/components/ErrorBoundary.tsx",
+      "line": 86,
+      "content": "console.warn('Failed to report error:', reportingError);",
+      "type": "console-statement",
+      "severity": "medium"
+    },
+    {
+      "file": "/workspace/src/components/ErrorBoundary.tsx",
+      "line": 122,
+      "content": "console.log('Error details copied to clipboard');",
+      "type": "console-statement",
+      "severity": "medium"
+    },
+    {
+      "file": "/workspace/src/components/ErrorBoundary.tsx",
+      "line": 124,
+      "content": "console.warn('Failed to copy error details:', err);",
+      "type": "console-statement",
+      "severity": "medium"
+    },
+    {
+      "file": "/workspace/src/components/ErrorBoundary.tsx",
+      "line": 270,
+      "content": "console.error('Error caught by hook:', error);",
+      "type": "console-statement",
+      "severity": "medium"
+    },
+    {
+      "file": "/workspace/src/components/FavoriteButton.tsx",
+      "line": 20,
+      "content": "console.log(`Removed ${itemType} ${itemId} from favorites`);",
+      "type": "console-statement",
+      "severity": "medium"
+    },
+    {
+      "file": "/workspace/src/components/FavoriteButton.tsx",
+      "line": 23,
+      "content": "console.log(`Added ${itemType} ${itemId} to favorites`);",
+      "type": "console-statement",
+      "severity": "medium"
+    },
+    {
+      "file": "/workspace/src/components/FooterNewsletter.tsx",
+      "line": 25,
+      "content": "console.error('Newsletter subscription failed:', error);",
+      "type": "console-statement",
+      "severity": "medium"
+    },
+    {
+      "file": "/workspace/src/components/InteractiveUserExperience.tsx",
+      "line": 137,
+      "content": "console.error('Failed to bookmark page:', error);",
+      "type": "console-statement",
+      "severity": "medium"
+    },
+    {
+      "file": "/workspace/src/components/InteractiveUserExperience.tsx",
+      "line": 202,
+      "content": "console.log('Feedback submitted:', { type: feedbackType, message: feedbackMessage });",
+      "type": "console-statement",
+      "severity": "medium"
+    },
+    {
+      "file": "/workspace/src/components/NotificationSystem.tsx",
+      "line": 119,
+      "content": "console.warn('Could not play notification sound:', error);",
+      "type": "console-statement",
+      "severity": "medium"
+    },
+    {
+      "file": "/workspace/src/components/NotificationSystem.tsx",
+      "line": 130,
+      "content": "console.warn('Could not trigger vibration:', error);",
+      "type": "console-statement",
+      "severity": "medium"
+    },
+    {
+      "file": "/workspace/src/components/PerformanceOptimizer.tsx",
+      "line": 106,
+      "content": "console.log('Service worker registration failed:', error);",
+      "type": "console-statement",
+      "severity": "medium"
+    },
+    {
+      "file": "/workspace/src/components/PerformanceOptimizer.tsx",
+      "line": 123,
+      "content": "console.error('Optimization failed:', error);",
+      "type": "console-statement",
+      "severity": "medium"
+    },
+    {
+      "file": "/workspace/src/components/SecurityEnhancer.tsx",
+      "line": 111,
+      "content": "console.error('Security check failed:', error);",
+      "type": "console-statement",
+      "severity": "medium"
+    },
+    {
+      "file": "/workspace/src/components/SecurityEnhancer.tsx",
+      "line": 240,
+      "content": "console.error('Threat detection failed:', error);",
+      "type": "console-statement",
+      "severity": "medium"
+    },
+    {
+      "file": "/workspace/src/components/ui/EnhancedNotificationSystem.tsx",
+      "line": 202,
+      "content": "console.log('Success notification:', { title, message, ...options });",
+      "type": "console-statement",
+      "severity": "medium"
+    },
+    {
+      "file": "/workspace/src/components/ui/EnhancedNotificationSystem.tsx",
+      "line": 205,
+      "content": "console.log('Error notification:', { title, message, ...options });",
+      "type": "console-statement",
+      "severity": "medium"
+    },
+    {
+      "file": "/workspace/src/components/ui/EnhancedNotificationSystem.tsx",
+      "line": 208,
+      "content": "console.log('Warning notification:', { title, message, ...options });",
+      "type": "console-statement",
+      "severity": "medium"
+    },
+    {
+      "file": "/workspace/src/components/ui/EnhancedNotificationSystem.tsx",
+      "line": 211,
+      "content": "console.log('Info notification:', { title, message, ...options });",
+      "type": "console-statement",
+      "severity": "medium"
+    },
+    {
+      "file": "/workspace/src/context/auth/useAuthState.ts",
+      "line": 46,
+      "content": "console.error('Error checking auth state:', error);",
+      "type": "console-statement",
+      "severity": "medium"
+    },
+    {
+      "file": "/workspace/src/hooks/use-toast.js",
+      "line": 6,
+      "content": "console.log(`Toast [${variant}]: ${title} - ${description}`);",
+      "type": "console-statement",
+      "severity": "medium"
+    },
+    {
+      "file": "/workspace/src/hooks/use-toast.ts",
+      "line": 48,
+      "content": "console.log('Toast:', { title, description, variant, duration });",
+      "type": "console-statement",
+      "severity": "medium"
+    },
+    {
+      "file": "/workspace/src/hooks/useAuth.ts",
+      "line": 41,
+      "content": "console.error('Error parsing stored user:', error);",
+      "type": "console-statement",
+      "severity": "medium"
+    },
+    {
+      "file": "/workspace/src/hooks/usePerformance.ts",
+      "line": 43,
+      "content": "console.warn('PerformanceObserver not supported');",
+      "type": "console-statement",
+      "severity": "medium"
+    },
+    {
+      "file": "/workspace/src/hooks/usePerformance.ts",
+      "line": 88,
+      "content": "console.warn('Error setting up performance observers:', error);",
+      "type": "console-statement",
+      "severity": "medium"
+    },
+    {
+      "file": "/workspace/src/hooks/usePerformance.ts",
+      "line": 166,
+      "content": "console.warn('Long task detected:', {",
+      "type": "console-statement",
+      "severity": "medium"
+    },
+    {
+      "file": "/workspace/src/hooks/usePerformance.ts",
+      "line": 177,
+      "content": "console.warn('Error setting up long task observer:', error);",
+      "type": "console-statement",
+      "severity": "medium"
+    },
+    {
+      "file": "/workspace/src/hooks/usePerformance.ts",
+      "line": 202,
+      "content": "console.warn(`Error observing ${eventName}:`, error);",
+      "type": "console-statement",
+      "severity": "medium"
+    },
+    {
+      "file": "/workspace/src/hooks/usePerformanceOptimization.ts",
+      "line": 74,
+      "content": "console.warn(`Low FPS detected: ${fps}`);",
+      "type": "console-statement",
+      "severity": "medium"
+    },
+    {
+      "file": "/workspace/src/hooks/usePerformanceOptimization.ts",
+      "line": 101,
+      "content": "console.warn('High memory usage detected:', metricsRef.current.memoryUsage.toFixed(2), 'MB');",
+      "type": "console-statement",
+      "severity": "medium"
+    },
+    {
+      "file": "/workspace/src/hooks/usePerformanceOptimization.ts",
+      "line": 158,
+      "content": "console.warn(`Slow render detected in ${componentName}:`, renderTime.toFixed(2), 'ms');",
+      "type": "console-statement",
+      "severity": "medium"
+    },
+    {
+      "file": "/workspace/src/hooks/useSEO.ts",
+      "line": 235,
+      "content": "console.log('Web Vitals available');",
+      "type": "console-statement",
+      "severity": "medium"
+    },
+    {
+      "file": "/workspace/src/layout/PrimaryNav.tsx",
+      "line": 48,
+      "content": "console.log('PrimaryNav search submit:', query);",
+      "type": "console-statement",
+      "severity": "medium"
+    },
+    {
+      "file": "/workspace/src/layout/PrimaryNav.tsx",
+      "line": 78,
+      "content": "console.log('PrimaryNav search suggestion selected:', sugg);",
+      "type": "console-statement",
+      "severity": "medium"
+    },
+    {
+      "file": "/workspace/src/pages/Cookies.tsx",
+      "line": 76,
+      "content": "console.log('Cookie preferences saved:', cookiePreferences);",
+      "type": "console-statement",
+      "severity": "medium"
+    },
+    {
+      "file": "/workspace/src/pages/DeveloperPortal.tsx",
+      "line": 167,
+      "content": "console.log(data);`,",
+      "type": "console-statement",
+      "severity": "medium"
+    },
+    {
+      "file": "/workspace/src/pages/Documentation.tsx",
+      "line": 155,
+      "content": "console.log('Received event:', event.type);",
+      "type": "console-statement",
+      "severity": "medium"
+    },
+    {
+      "file": "/workspace/src/pages/ScheduleDemo.tsx",
+      "line": 70,
+      "content": "console.error('Error submitting form:', error);",
+      "type": "console-statement",
+      "severity": "medium"
+    },
+    {
+      "file": "/workspace/src/utils/apiErrorHandler.ts",
+      "line": 11,
+      "content": "console.error('API Error:', error);",
+      "type": "console-statement",
+      "severity": "medium"
+    },
+    {
+      "file": "/workspace/src/utils/authUtils.ts",
+      "line": 10,
+      "content": "console.error('Error cleaning up auth state:', error);",
+      "type": "console-statement",
+      "severity": "medium"
+    },
+    {
+      "file": "/workspace/src/utils/authUtils.ts",
+      "line": 22,
+      "content": "console.error('Error checking authentication status:', error);",
+      "type": "console-statement",
+      "severity": "medium"
+    },
+    {
+      "file": "/workspace/src/utils/authUtils.ts",
+      "line": 38,
+      "content": "console.error('Error getting auth token:', error);",
+      "type": "console-statement",
+      "severity": "medium"
+    },
+    {
+      "file": "/workspace/src/utils/authUtils.ts",
+      "line": 54,
+      "content": "console.error('Error getting user data:', error);",
+      "type": "console-statement",
+      "severity": "medium"
+    },
+    {
+      "file": "/workspace/src/utils/cartUtils.js",
+      "line": 34,
+      "content": "console.error('Error reading cart from storage:', error);",
+      "type": "console-statement",
+      "severity": "medium"
+    },
+    {
+      "file": "/workspace/src/utils/cartUtils.js",
+      "line": 49,
+      "content": "console.error('Error saving cart to storage:', error);",
+      "type": "console-statement",
+      "severity": "medium"
+    },
+    {
+      "file": "/workspace/src/utils/cartUtils.js",
+      "line": 61,
+      "content": "console.error('Error clearing cart from storage:', error);",
+      "type": "console-statement",
+      "severity": "medium"
+    },
+    {
+      "file": "/workspace/src/utils/cartUtils.js",
+      "line": 73,
+      "content": "console.error('Invalid item provided to addToCart');",
+      "type": "console-statement",
+      "severity": "medium"
+    },
+    {
+      "file": "/workspace/src/utils/cartUtils.js",
+      "line": 276,
+      "content": "console.error('Error exporting cart data:', error);",
+      "type": "console-statement",
+      "severity": "medium"
+    },
+    {
+      "file": "/workspace/src/utils/cartUtils.js",
+      "line": 294,
+      "content": "console.error('Error importing cart data:', error);",
+      "type": "console-statement",
+      "severity": "medium"
+    },
+    {
+      "file": "/workspace/src/utils/productionLogger.js",
+      "line": 6,
+      "content": "console.error(message, error);",
+      "type": "console-statement",
+      "severity": "medium"
+    },
+    {
+      "file": "/workspace/src/utils/productionLogger.ts",
+      "line": 3,
+      "content": "// For now, just console.error in development",
+      "type": "console-statement",
+      "severity": "medium"
+    },
+    {
+      "file": "/workspace/src/utils/productionLogger.ts",
+      "line": 5,
+      "content": "console.error(message, error);",
+      "type": "console-statement",
+      "severity": "medium"
+    },
+    {
+      "file": "/workspace/src/utils/safeStorage.js",
+      "line": 37,
+      "content": "console.error(message, error);",
+      "type": "console-statement",
+      "severity": "medium"
+    },
+    {
+      "file": "/workspace/src/utils/safeStorage.js",
+      "line": 40,
+      "content": "// Silent fail if console.error causes recursion",
+      "type": "console-statement",
+      "severity": "medium"
+    },
+    {
+      "file": "/workspace/src/utils/safeStorage.js",
+      "line": 48,
+      "content": "console.warn('Failed to get item from localStorage:', error);",
+      "type": "console-statement",
+      "severity": "medium"
+    },
+    {
+      "file": "/workspace/src/utils/safeStorage.js",
+      "line": 58,
+      "content": "console.warn('Failed to set item in localStorage:', error);",
+      "type": "console-statement",
+      "severity": "medium"
+    },
+    {
+      "file": "/workspace/src/utils/safeStorage.js",
+      "line": 68,
+      "content": "console.warn('Failed to remove item from localStorage:', error);",
+      "type": "console-statement",
+      "severity": "medium"
+    },
+    {
+      "file": "/workspace/src/utils/safeStorage.js",
+      "line": 78,
+      "content": "console.warn('Failed to clear localStorage:', error);",
+      "type": "console-statement",
+      "severity": "medium"
+    },
+    {
+      "file": "/workspace/pages/contact.tsx",
+      "line": 18,
+      "content": "console.log('Form submitted:', formData)",
+      "type": "console-statement",
+      "severity": "medium"
+    },
+    {
+      "file": "/workspace/pages/login.tsx",
+      "line": 60,
+      "content": "console.log('Login successful:', formData)",
+      "type": "console-statement",
+      "severity": "medium"
+    },
+    {
+      "file": "/workspace/pages/login.tsx",
+      "line": 63,
+      "content": "console.error('Login error:', error)",
+      "type": "console-statement",
+      "severity": "medium"
+    },
+    {
+      "file": "/workspace/pages/signup.tsx",
+      "line": 104,
+      "content": "console.log('Signup successful:', formData)",
+      "type": "console-statement",
+      "severity": "medium"
+    },
+    {
+      "file": "/workspace/pages/signup.tsx",
+      "line": 107,
+      "content": "console.error('Signup error:', error)",
+      "type": "console-statement",
+      "severity": "medium"
+    },
+    {
+      "file": "build-output",
+      "line": 0,
+      "content": "Command failed: npm run build\nsh: 1: vite: not found\n",
+      "type": "build-failure",
+      "severity": "high"
+    }
+  ],
+  "fixes": [
+    {
+      "file": "/workspace/src/components/AccessibilityEnhancer.tsx",
+      "line": 56,
+      "original": "        console.warn('Failed to load accessibility settings:', error);",
+      "replacement": "        // console.warn('Failed to load accessibility settings:', error);",
+      "description": "Comment out console statement for production"
+    },
+    {
+      "file": "/workspace/src/components/AdvancedReportingDashboard.tsx",
+      "line": 362,
+      "original": "          console.log(`Downloading ${report.title}`);",
+      "replacement": "          // console.log(`Downloading ${report.title}`);",
+      "description": "Comment out console statement for production"
+    },
+    {
+      "file": "/workspace/src/components/AdvancedReportingDashboard.tsx",
+      "line": 366,
+      "original": "          console.log(`Sharing ${report.title}`);",
+      "replacement": "          // console.log(`Sharing ${report.title}`);",
+      "description": "Comment out console statement for production"
+    },
+    {
+      "file": "/workspace/src/components/AdvancedReportingDashboard.tsx",
+      "line": 370,
+      "original": "          console.log(`Printing ${report.title}`);",
+      "replacement": "          // console.log(`Printing ${report.title}`);",
+      "description": "Comment out console statement for production"
+    },
+    {
+      "file": "/workspace/src/components/AdvancedReportingDashboard.tsx",
+      "line": 378,
+      "original": "    console.log(`Exporting ${report.title} as ${format}`);",
+      "replacement": "    // console.log(`Exporting ${report.title} as ${format}`);",
+      "description": "Comment out console statement for production"
+    },
+    {
+      "file": "/workspace/src/components/EnhancedAccessibilityPanel.tsx",
+      "line": 55,
+      "original": "        console.error('Failed to parse accessibility settings:', error);",
+      "replacement": "        // console.error('Failed to parse accessibility settings:', error);",
+      "description": "Comment out console statement for production"
+    },
+    {
+      "file": "/workspace/src/components/EnhancedContact.tsx",
+      "line": 109,
+      "original": "      console.error('Error submitting form:', error);",
+      "replacement": "      // console.error('Error submitting form:', error);",
+      "description": "Comment out console statement for production"
+    },
+    {
+      "file": "/workspace/src/components/EnhancedNewsletter.tsx",
+      "line": 73,
+      "original": "      console.log('Newsletter subscription:', formData);",
+      "replacement": "      // console.log('Newsletter subscription:', formData);",
+      "description": "Comment out console statement for production"
+    },
+    {
+      "file": "/workspace/src/components/EnhancedNewsletter.tsx",
+      "line": 90,
+      "original": "      console.error('Newsletter subscription error:', error);",
+      "replacement": "      // console.error('Newsletter subscription error:', error);",
+      "description": "Comment out console statement for production"
+    },
+    {
+      "file": "/workspace/src/components/ErrorBoundary.tsx",
+      "line": 45,
+      "original": "      console.error('Error caught by boundary:', error, errorInfo);",
+      "replacement": "      // console.error('Error caught by boundary:', error, errorInfo);",
+      "description": "Comment out console statement for production"
+    },
+    {
+      "file": "/workspace/src/components/ErrorBoundary.tsx",
+      "line": 84,
+      "original": "      console.log('Error reported:', errorReport);",
+      "replacement": "      // console.log('Error reported:', errorReport);",
+      "description": "Comment out console statement for production"
+    },
+    {
+      "file": "/workspace/src/components/ErrorBoundary.tsx",
+      "line": 86,
+      "original": "      console.warn('Failed to report error:', reportingError);",
+      "replacement": "      // console.warn('Failed to report error:', reportingError);",
+      "description": "Comment out console statement for production"
+    },
+    {
+      "file": "/workspace/src/components/ErrorBoundary.tsx",
+      "line": 122,
+      "original": "        console.log('Error details copied to clipboard');",
+      "replacement": "        // console.log('Error details copied to clipboard');",
+      "description": "Comment out console statement for production"
+    },
+    {
+      "file": "/workspace/src/components/ErrorBoundary.tsx",
+      "line": 124,
+      "original": "        console.warn('Failed to copy error details:', err);",
+      "replacement": "        // console.warn('Failed to copy error details:', err);",
+      "description": "Comment out console statement for production"
+    },
+    {
+      "file": "/workspace/src/components/ErrorBoundary.tsx",
+      "line": 270,
+      "original": "    console.error('Error caught by hook:', error);",
+      "replacement": "    // console.error('Error caught by hook:', error);",
+      "description": "Comment out console statement for production"
+    },
+    {
+      "file": "/workspace/src/components/FavoriteButton.tsx",
+      "line": 20,
+      "original": "      console.log(`Removed ${itemType} ${itemId} from favorites`);",
+      "replacement": "      // console.log(`Removed ${itemType} ${itemId} from favorites`);",
+      "description": "Comment out console statement for production"
+    },
+    {
+      "file": "/workspace/src/components/FavoriteButton.tsx",
+      "line": 23,
+      "original": "      console.log(`Added ${itemType} ${itemId} to favorites`);",
+      "replacement": "      // console.log(`Added ${itemType} ${itemId} to favorites`);",
+      "description": "Comment out console statement for production"
+    },
+    {
+      "file": "/workspace/src/components/FooterNewsletter.tsx",
+      "line": 25,
+      "original": "      console.error('Newsletter subscription failed:', error);",
+      "replacement": "      // console.error('Newsletter subscription failed:', error);",
+      "description": "Comment out console statement for production"
+    },
+    {
+      "file": "/workspace/src/components/InteractiveUserExperience.tsx",
+      "line": 137,
+      "original": "            console.error('Failed to bookmark page:', error);",
+      "replacement": "            // console.error('Failed to bookmark page:', error);",
+      "description": "Comment out console statement for production"
+    },
+    {
+      "file": "/workspace/src/components/InteractiveUserExperience.tsx",
+      "line": 202,
+      "original": "    console.log('Feedback submitted:', { type: feedbackType, message: feedbackMessage });",
+      "replacement": "    // console.log('Feedback submitted:', { type: feedbackType, message: feedbackMessage });",
+      "description": "Comment out console statement for production"
+    },
+    {
+      "file": "/workspace/src/components/NotificationSystem.tsx",
+      "line": 119,
+      "original": "        console.warn('Could not play notification sound:', error);",
+      "replacement": "        // console.warn('Could not play notification sound:', error);",
+      "description": "Comment out console statement for production"
+    },
+    {
+      "file": "/workspace/src/components/NotificationSystem.tsx",
+      "line": 130,
+      "original": "        console.warn('Could not trigger vibration:', error);",
+      "replacement": "        // console.warn('Could not trigger vibration:', error);",
+      "description": "Comment out console statement for production"
+    },
+    {
+      "file": "/workspace/src/components/PerformanceOptimizer.tsx",
+      "line": 106,
+      "original": "          console.log('Service worker registration failed:', error);",
+      "replacement": "          // console.log('Service worker registration failed:', error);",
+      "description": "Comment out console statement for production"
+    },
+    {
+      "file": "/workspace/src/components/PerformanceOptimizer.tsx",
+      "line": 123,
+      "original": "      console.error('Optimization failed:', error);",
+      "replacement": "      // console.error('Optimization failed:', error);",
+      "description": "Comment out console statement for production"
+    },
+    {
+      "file": "/workspace/src/components/SecurityEnhancer.tsx",
+      "line": 111,
+      "original": "      console.error('Security check failed:', error);",
+      "replacement": "      // console.error('Security check failed:', error);",
+      "description": "Comment out console statement for production"
+    },
+    {
+      "file": "/workspace/src/components/SecurityEnhancer.tsx",
+      "line": 240,
+      "original": "      console.error('Threat detection failed:', error);",
+      "replacement": "      // console.error('Threat detection failed:', error);",
+      "description": "Comment out console statement for production"
+    },
+    {
+      "file": "/workspace/src/components/ui/EnhancedNotificationSystem.tsx",
+      "line": 202,
+      "original": "    console.log('Success notification:', { title, message, ...options });",
+      "replacement": "    // console.log('Success notification:', { title, message, ...options });",
+      "description": "Comment out console statement for production"
+    },
+    {
+      "file": "/workspace/src/components/ui/EnhancedNotificationSystem.tsx",
+      "line": 205,
+      "original": "    console.log('Error notification:', { title, message, ...options });",
+      "replacement": "    // console.log('Error notification:', { title, message, ...options });",
+      "description": "Comment out console statement for production"
+    },
+    {
+      "file": "/workspace/src/components/ui/EnhancedNotificationSystem.tsx",
+      "line": 208,
+      "original": "    console.log('Warning notification:', { title, message, ...options });",
+      "replacement": "    // console.log('Warning notification:', { title, message, ...options });",
+      "description": "Comment out console statement for production"
+    },
+    {
+      "file": "/workspace/src/components/ui/EnhancedNotificationSystem.tsx",
+      "line": 211,
+      "original": "    console.log('Info notification:', { title, message, ...options });",
+      "replacement": "    // console.log('Info notification:', { title, message, ...options });",
+      "description": "Comment out console statement for production"
+    },
+    {
+      "file": "/workspace/src/context/auth/useAuthState.ts",
+      "line": 46,
+      "original": "        console.error('Error checking auth state:', error);",
+      "replacement": "        // console.error('Error checking auth state:', error);",
+      "description": "Comment out console statement for production"
+    },
+    {
+      "file": "/workspace/src/hooks/use-toast.js",
+      "line": 6,
+      "original": "  console.log(`Toast [${variant}]: ${title} - ${description}`);",
+      "replacement": "  // console.log(`Toast [${variant}]: ${title} - ${description}`);",
+      "description": "Comment out console statement for production"
+    },
+    {
+      "file": "/workspace/src/hooks/use-toast.ts",
+      "line": 48,
+      "original": "  console.log('Toast:', { title, description, variant, duration });",
+      "replacement": "  // console.log('Toast:', { title, description, variant, duration });",
+      "description": "Comment out console statement for production"
+    },
+    {
+      "file": "/workspace/src/hooks/useAuth.ts",
+      "line": 41,
+      "original": "          console.error('Error parsing stored user:', error);",
+      "replacement": "          // console.error('Error parsing stored user:', error);",
+      "description": "Comment out console statement for production"
+    },
+    {
+      "file": "/workspace/src/hooks/usePerformance.ts",
+      "line": 43,
+      "original": "      console.warn('PerformanceObserver not supported');",
+      "replacement": "      // console.warn('PerformanceObserver not supported');",
+      "description": "Comment out console statement for production"
+    },
+    {
+      "file": "/workspace/src/hooks/usePerformance.ts",
+      "line": 88,
+      "original": "      console.warn('Error setting up performance observers:', error);",
+      "replacement": "      // console.warn('Error setting up performance observers:', error);",
+      "description": "Comment out console statement for production"
+    },
+    {
+      "file": "/workspace/src/hooks/usePerformance.ts",
+      "line": 166,
+      "original": "          console.warn('Long task detected:', {",
+      "replacement": "          // console.warn('Long task detected:', {",
+      "description": "Comment out console statement for production"
+    },
+    {
+      "file": "/workspace/src/hooks/usePerformance.ts",
+      "line": 177,
+      "original": "      console.warn('Error setting up long task observer:', error);",
+      "replacement": "      // console.warn('Error setting up long task observer:', error);",
+      "description": "Comment out console statement for production"
+    },
+    {
+      "file": "/workspace/src/hooks/usePerformance.ts",
+      "line": 202,
+      "original": "      console.warn(`Error observing ${eventName}:`, error);",
+      "replacement": "      // console.warn(`Error observing ${eventName}:`, error);",
+      "description": "Comment out console statement for production"
+    },
+    {
+      "file": "/workspace/src/hooks/usePerformanceOptimization.ts",
+      "line": 74,
+      "original": "          console.warn(`Low FPS detected: ${fps}`);",
+      "replacement": "          // console.warn(`Low FPS detected: ${fps}`);",
+      "description": "Comment out console statement for production"
+    },
+    {
+      "file": "/workspace/src/hooks/usePerformanceOptimization.ts",
+      "line": 101,
+      "original": "          console.warn('High memory usage detected:', metricsRef.current.memoryUsage.toFixed(2), 'MB');",
+      "replacement": "          // console.warn('High memory usage detected:', metricsRef.current.memoryUsage.toFixed(2), 'MB');",
+      "description": "Comment out console statement for production"
+    },
+    {
+      "file": "/workspace/src/hooks/usePerformanceOptimization.ts",
+      "line": 158,
+      "original": "        console.warn(`Slow render detected in ${componentName}:`, renderTime.toFixed(2), 'ms');",
+      "replacement": "        // console.warn(`Slow render detected in ${componentName}:`, renderTime.toFixed(2), 'ms');",
+      "description": "Comment out console statement for production"
+    },
+    {
+      "file": "/workspace/src/hooks/useSEO.ts",
+      "line": 235,
+      "original": "      console.log('Web Vitals available');",
+      "replacement": "      // console.log('Web Vitals available');",
+      "description": "Comment out console statement for production"
+    },
+    {
+      "file": "/workspace/src/layout/PrimaryNav.tsx",
+      "line": 48,
+      "original": "      console.log('PrimaryNav search submit:', query);",
+      "replacement": "      // console.log('PrimaryNav search submit:', query);",
+      "description": "Comment out console statement for production"
+    },
+    {
+      "file": "/workspace/src/layout/PrimaryNav.tsx",
+      "line": 78,
+      "original": "                  console.log('PrimaryNav search suggestion selected:', sugg);",
+      "replacement": "                  // console.log('PrimaryNav search suggestion selected:', sugg);",
+      "description": "Comment out console statement for production"
+    },
+    {
+      "file": "/workspace/src/pages/Cookies.tsx",
+      "line": 76,
+      "original": "    console.log('Cookie preferences saved:', cookiePreferences);",
+      "replacement": "    // console.log('Cookie preferences saved:', cookiePreferences);",
+      "description": "Comment out console statement for production"
+    },
+    {
+      "file": "/workspace/src/pages/DeveloperPortal.tsx",
+      "line": 167,
+      "original": "console.log(data);`,",
+      "replacement": "// console.log(data);`,",
+      "description": "Comment out console statement for production"
+    },
+    {
+      "file": "/workspace/src/pages/Documentation.tsx",
+      "line": 155,
+      "original": "    console.log('Received event:', event.type);",
+      "replacement": "    // console.log('Received event:', event.type);",
+      "description": "Comment out console statement for production"
+    },
+    {
+      "file": "/workspace/src/pages/ScheduleDemo.tsx",
+      "line": 70,
+      "original": "      console.error('Error submitting form:', error);",
+      "replacement": "      // console.error('Error submitting form:', error);",
+      "description": "Comment out console statement for production"
+    },
+    {
+      "file": "/workspace/src/utils/apiErrorHandler.ts",
+      "line": 11,
+      "original": "    console.error('API Error:', error);",
+      "replacement": "    // console.error('API Error:', error);",
+      "description": "Comment out console statement for production"
+    },
+    {
+      "file": "/workspace/src/utils/authUtils.ts",
+      "line": 10,
+      "original": "    console.error('Error cleaning up auth state:', error);",
+      "replacement": "    // console.error('Error cleaning up auth state:', error);",
+      "description": "Comment out console statement for production"
+    },
+    {
+      "file": "/workspace/src/utils/authUtils.ts",
+      "line": 22,
+      "original": "    console.error('Error checking authentication status:', error);",
+      "replacement": "    // console.error('Error checking authentication status:', error);",
+      "description": "Comment out console statement for production"
+    },
+    {
+      "file": "/workspace/src/utils/authUtils.ts",
+      "line": 38,
+      "original": "    console.error('Error getting auth token:', error);",
+      "replacement": "    // console.error('Error getting auth token:', error);",
+      "description": "Comment out console statement for production"
+    },
+    {
+      "file": "/workspace/src/utils/authUtils.ts",
+      "line": 54,
+      "original": "    console.error('Error getting user data:', error);",
+      "replacement": "    // console.error('Error getting user data:', error);",
+      "description": "Comment out console statement for production"
+    },
+    {
+      "file": "/workspace/src/utils/cartUtils.js",
+      "line": 34,
+      "original": "    console.error('Error reading cart from storage:', error);",
+      "replacement": "    // console.error('Error reading cart from storage:', error);",
+      "description": "Comment out console statement for production"
+    },
+    {
+      "file": "/workspace/src/utils/cartUtils.js",
+      "line": 49,
+      "original": "    console.error('Error saving cart to storage:', error);",
+      "replacement": "    // console.error('Error saving cart to storage:', error);",
+      "description": "Comment out console statement for production"
+    },
+    {
+      "file": "/workspace/src/utils/cartUtils.js",
+      "line": 61,
+      "original": "    console.error('Error clearing cart from storage:', error);",
+      "replacement": "    // console.error('Error clearing cart from storage:', error);",
+      "description": "Comment out console statement for production"
+    },
+    {
+      "file": "/workspace/src/utils/cartUtils.js",
+      "line": 73,
+      "original": "    console.error('Invalid item provided to addToCart');",
+      "replacement": "    // console.error('Invalid item provided to addToCart');",
+      "description": "Comment out console statement for production"
+    },
+    {
+      "file": "/workspace/src/utils/cartUtils.js",
+      "line": 276,
+      "original": "    console.error('Error exporting cart data:', error);",
+      "replacement": "    // console.error('Error exporting cart data:', error);",
+      "description": "Comment out console statement for production"
+    },
+    {
+      "file": "/workspace/src/utils/cartUtils.js",
+      "line": 294,
+      "original": "    console.error('Error importing cart data:', error);",
+      "replacement": "    // console.error('Error importing cart data:', error);",
+      "description": "Comment out console statement for production"
+    },
+    {
+      "file": "/workspace/src/utils/productionLogger.js",
+      "line": 6,
+      "original": "    console.error(message, error);",
+      "replacement": "    // console.error(message, error);",
+      "description": "Comment out console statement for production"
+    },
+    {
+      "file": "/workspace/src/utils/productionLogger.ts",
+      "line": 3,
+      "original": "  // For now, just console.error in development",
+      "replacement": "  // For now, just // console.error in development",
+      "description": "Comment out console statement for production"
+    },
+    {
+      "file": "/workspace/src/utils/productionLogger.ts",
+      "line": 5,
+      "original": "    console.error(message, error);",
+      "replacement": "    // console.error(message, error);",
+      "description": "Comment out console statement for production"
+    },
+    {
+      "file": "/workspace/src/utils/safeStorage.js",
+      "line": 37,
+      "original": "        console.error(message, error);",
+      "replacement": "        // console.error(message, error);",
+      "description": "Comment out console statement for production"
+    },
+    {
+      "file": "/workspace/src/utils/safeStorage.js",
+      "line": 40,
+      "original": "        // Silent fail if console.error causes recursion",
+      "replacement": "        // Silent fail if // console.error causes recursion",
+      "description": "Comment out console statement for production"
+    },
+    {
+      "file": "/workspace/src/utils/safeStorage.js",
+      "line": 48,
+      "original": "      console.warn('Failed to get item from localStorage:', error);",
+      "replacement": "      // console.warn('Failed to get item from localStorage:', error);",
+      "description": "Comment out console statement for production"
+    },
+    {
+      "file": "/workspace/src/utils/safeStorage.js",
+      "line": 58,
+      "original": "      console.warn('Failed to set item in localStorage:', error);",
+      "replacement": "      // console.warn('Failed to set item in localStorage:', error);",
+      "description": "Comment out console statement for production"
+    },
+    {
+      "file": "/workspace/src/utils/safeStorage.js",
+      "line": 68,
+      "original": "      console.warn('Failed to remove item from localStorage:', error);",
+      "replacement": "      // console.warn('Failed to remove item from localStorage:', error);",
+      "description": "Comment out console statement for production"
+    },
+    {
+      "file": "/workspace/src/utils/safeStorage.js",
+      "line": 78,
+      "original": "      console.warn('Failed to clear localStorage:', error);",
+      "replacement": "      // console.warn('Failed to clear localStorage:', error);",
+      "description": "Comment out console statement for production"
+    },
+    {
+      "file": "/workspace/pages/contact.tsx",
+      "line": 18,
+      "original": "\t\tconsole.log('Form submitted:', formData)",
+      "replacement": "\t\t// console.log('Form submitted:', formData)",
+      "description": "Comment out console statement for production"
+    },
+    {
+      "file": "/workspace/pages/login.tsx",
+      "line": 60,
+      "original": "      console.log('Login successful:', formData)",
+      "replacement": "      // console.log('Login successful:', formData)",
+      "description": "Comment out console statement for production"
+    },
+    {
+      "file": "/workspace/pages/login.tsx",
+      "line": 63,
+      "original": "      console.error('Login error:', error)",
+      "replacement": "      // console.error('Login error:', error)",
+      "description": "Comment out console statement for production"
+    },
+    {
+      "file": "/workspace/pages/signup.tsx",
+      "line": 104,
+      "original": "      console.log('Signup successful:', formData)",
+      "replacement": "      // console.log('Signup successful:', formData)",
+      "description": "Comment out console statement for production"
+    },
+    {
+      "file": "/workspace/pages/signup.tsx",
+      "line": 107,
+      "original": "      console.error('Signup error:', error)",
+      "replacement": "      // console.error('Signup error:', error)",
+      "description": "Comment out console statement for production"
+    }
+  ],
+  "summary": {
+    "totalErrors": 75,
+    "totalFixes": 74,
+    "byType": {
+      "console-statement": 74,
+      "build-failure": 1
+    },
+    "bySeverity": {
+      "medium": 74,
+      "high": 1
+    }
+  }
 }

@@ -164,7 +164,7 @@ const DeveloperPortal = () => {
 });
 
 const data = await response.json();
-console.log(data);`,
+// console.log(data);`,
       icon: Code
     },
     {

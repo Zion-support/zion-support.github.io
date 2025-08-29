@@ -1,5 +1,18 @@
 {
-  "timestamp": "2025-08-29T10:24:45.601Z",
-  "summary": "Security audit completed",
-  "status": "completed"
+  "timestamp": "2025-08-29T16:00:59.758Z",
+  "vulnerabilities": [],
+  "metrics": {
+    "npmAudit": {
+      "status": "failed",
+      "error": "Command failed: npm audit --json",
+      "timestamp": "2025-08-29T16:00:58.839Z"
+    }
+  },
+  "summary": {
+    "totalVulnerabilities": 0,
+    "byType": {},
+    "bySeverity": {},
+    "overallRisk": "none"
+  },
+  "recommendations": []
 }

@@ -108,7 +108,7 @@ export function SecurityEnhancer() {
       
       setLastScan(new Date());
     } catch (error) {
-      console.error('Security check failed:', error);
+      // console.error('Security check failed:', error);
     } finally {
       setIsScanning(false);
     }
@@ -237,7 +237,7 @@ export function SecurityEnhancer() {
         setThreats(prev => [...threatsFound, ...prev].slice(0, 20));
       }
     } catch (error) {
-      console.error('Threat detection failed:', error);
+      // console.error('Threat detection failed:', error);
     }
   };
 

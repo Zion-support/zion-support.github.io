@@ -359,15 +359,15 @@ export const AdvancedReportingDashboard: React.FC<AdvancedReportingDashboardProp
           break;
         case 'download':
           // Simulate download
-          console.log(`Downloading ${report.title}`);
+          // console.log(`Downloading ${report.title}`);
           break;
         case 'share':
           // Simulate share
-          console.log(`Sharing ${report.title}`);
+          // console.log(`Sharing ${report.title}`);
           break;
         case 'print':
           // Simulate print
-          console.log(`Printing ${report.title}`);
+          // console.log(`Printing ${report.title}`);
           break;
       }
     }
@@ -375,7 +375,7 @@ export const AdvancedReportingDashboard: React.FC<AdvancedReportingDashboardProp
 
   // Export report data
   const exportReport = (report: ReportData, format: 'pdf' | 'excel' | 'csv') => {
-    console.log(`Exporting ${report.title} as ${format}`);
+    // console.log(`Exporting ${report.title} as ${format}`);
     // In a real implementation, this would generate and download the file
   };
 

@@ -1,5 +1,52 @@
 {
-  "timestamp": "2025-08-29T08:27:06.437Z",
-  "summary": "Quality checks completed",
-  "status": "completed"
+  "timestamp": "2025-08-29T16:00:35.026Z",
+  "issues": [
+    {
+      "type": "eslint",
+      "severity": "medium",
+      "message": "ESLint found issues",
+      "details": "\n> bolt.new.zion.app@0.1.0 lint\n> eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0\n\n",
+      "timestamp": "2025-08-29T16:00:34.848Z"
+    },
+    {
+      "type": "typescript",
+      "severity": "high",
+      "message": "TypeScript check failed",
+      "details": "\n> bolt.new.zion.app@0.1.0 type-check\n> tsc --noEmit\n\n",
+      "timestamp": "2025-08-29T16:00:34.941Z"
+    }
+  ],
+  "metrics": {
+    "eslint": {
+      "status": "failed",
+      "issues": 1,
+      "timestamp": "2025-08-29T16:00:34.848Z"
+    },
+    "typescript": {
+      "status": "failed",
+      "issues": 1,
+      "timestamp": "2025-08-29T16:00:34.941Z"
+    },
+    "coverage": {
+      "status": "no-coverage",
+      "timestamp": "2025-08-29T16:00:34.941Z"
+    },
+    "bundleSize": {
+      "status": "error",
+      "error": "Command failed: npm run build\nsh: 1: vite: not found\n",
+      "timestamp": "2025-08-29T16:00:35.026Z"
+    }
+  },
+  "summary": {
+    "totalIssues": 2,
+    "byType": {
+      "eslint": 1,
+      "typescript": 1
+    },
+    "bySeverity": {
+      "medium": 1,
+      "high": 1
+    },
+    "overallStatus": "critical"
+  }
 }
