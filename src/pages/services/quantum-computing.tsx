@@ -1,103 +1,161 @@
 import React from 'react';
-import SEO from '../../components/SEO';
+import { SEO } from '../../components/SEO';
 import { motion } from 'framer-motion';
-import { Zap, Brain, Shield, Cpu, Rocket, Globe, Users, Award, Star, ArrowRight, CheckCircle, Clock, TrendingUp, Target, Lightbulb, Code, Database, Network, Lock, Cloud } from 'lucide-react';
+import { 
+  Atom, 
+  Brain, 
+  Zap, 
+  Users, 
+  TrendingUp, 
+  CheckCircle, 
+  ArrowRight,
+  Cpu,
+  Database,
+  Network,
+  Server,
+  Smartphone,
+  Monitor,
+  BarChart3,
+  MessageCircle,
+  Clock,
+  Target,
+  Sparkles,
+  FileText,
+  Globe,
+  Lock,
+  Shield,
+  Calculator,
+  Microscope,
+  Flask,
+  Rocket,
+  Code,
+  BookOpen
+} from 'lucide-react';
 
 const QuantumComputing: React.FC = () => {
   const features = [
     {
-      icon: Zap,
-      title: 'Quantum Supremacy',
-      description: 'Achieve computational power beyond classical computers'
+      icon: Atom,
+      title: "Quantum Processing",
+      description: "Harness the power of quantum mechanics for unprecedented computational speed",
+      color: "from-purple-500 to-pink-500"
     },
     {
       icon: Brain,
-      title: 'AI Acceleration',
-      description: 'Train machine learning models exponentially faster'
+      title: "Quantum AI",
+      description: "Quantum machine learning algorithms that outperform classical AI systems",
+      color: "from-blue-500 to-cyan-500"
     },
     {
-      icon: Shield,
-      title: 'Quantum Cryptography',
-      description: 'Unbreakable encryption for next-generation security'
+      icon: Zap,
+      title: "Quantum Optimization",
+      description: "Solve complex optimization problems in seconds instead of years",
+      color: "from-green-500 to-emerald-500"
     },
     {
-      icon: Cpu,
-      title: 'Quantum Simulation',
-      description: 'Model complex molecular and physical systems'
-    }
-  ];
-
-  const useCases = [
-    {
-      title: 'Drug Discovery',
-      description: 'Accelerate pharmaceutical research and development',
-      icon: '💊'
-    },
-    {
-      title: 'Financial Modeling',
-      description: 'Optimize portfolio management and risk assessment',
-      icon: '💰'
-    },
-    {
-      title: 'Climate Research',
-      description: 'Advanced climate modeling and prediction',
-      icon: '🌍'
-    },
-    {
-      title: 'Logistics Optimization',
-      description: 'Solve complex routing and supply chain problems',
-      icon: '🚚'
+      icon: Lock,
+      title: "Quantum Cryptography",
+      description: "Unbreakable encryption using quantum key distribution and quantum-resistant algorithms",
+      color: "from-orange-500 to-red-500"
     }
   ];
 
   const benefits = [
-    'Exponential speedup for specific algorithms',
-    'Unprecedented computational power',
-    'Breakthrough capabilities in cryptography',
-    'Revolutionary AI and machine learning',
-    'Advanced scientific research capabilities',
-    'Competitive advantage in innovation'
+    "Exponential speedup for complex computational problems",
+    "Revolutionary breakthroughs in drug discovery and materials science",
+    "Unbreakable quantum encryption for ultimate security",
+    "Quantum machine learning with superior pattern recognition",
+    "Optimization solutions for logistics, finance, and manufacturing",
+    "Future-proof technology investment for competitive advantage"
+  ];
+
+  const applications = [
+    {
+      title: "Drug Discovery",
+      description: "Accelerate pharmaceutical research with quantum molecular modeling",
+      icon: Flask,
+      color: "from-blue-500 to-cyan-500"
+    },
+    {
+      title: "Financial Modeling",
+      description: "Advanced risk assessment and portfolio optimization using quantum algorithms",
+      icon: Calculator,
+      color: "from-green-500 to-emerald-500"
+    },
+    {
+      title: "Logistics Optimization",
+      description: "Solve complex routing and supply chain problems with quantum computing",
+      icon: Network,
+      color: "from-purple-500 to-pink-500"
+    },
+    {
+      title: "Climate Modeling",
+      description: "Advanced climate prediction and environmental impact analysis",
+      icon: Globe,
+      color: "from-orange-500 to-red-500"
+    }
+  ];
+
+  const quantumServices = [
+    {
+      title: "Quantum Consulting",
+      description: "Strategic guidance on quantum computing adoption and implementation",
+      icon: Users
+    },
+    {
+      title: "Algorithm Development",
+      description: "Custom quantum algorithms for specific business problems and use cases",
+      icon: Code
+    },
+    {
+      title: "Quantum Software",
+      description: "Quantum programming and software development for quantum computers",
+      icon: Cpu
+    },
+    {
+      title: "Quantum Education",
+      description: "Training programs and workshops for quantum computing literacy",
+      icon: BookOpen
+    }
   ];
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO 
-        title="Quantum Computing Services - Zion Tech Group"
-        description="Revolutionary quantum computing solutions for AI, cryptography, and scientific research. Achieve quantum supremacy with our cutting-edge technology."
+        title="Quantum Computing - Zion Tech Group"
+        description="Revolutionary quantum computing solutions for the future. Quantum AI, optimization, cryptography, and consulting services for enterprises."
+        keywords="quantum computing, quantum AI, quantum optimization, quantum cryptography, Zion Tech Group"
+        ogType="website"
       />
       
       {/* Hero Section */}
-      <section className="pt-20 pb-16 px-4">
-        <div className="max-w-7xl mx-auto">
+      <section className="relative overflow-hidden py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="text-center"
+            transition={{ duration: 0.8 }}
           >
-            <div className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-purple-500/20 to-blue-500/20 rounded-full border border-purple-400/30 mb-6">
-              <Zap className="w-5 h-5 text-purple-400 mr-2" />
-              <span className="text-purple-300 font-medium">Quantum Computing</span>
+            <div className="flex justify-center mb-6">
+              <div className="p-3 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full">
+                <Atom className="h-8 w-8 text-white" />
+              </div>
             </div>
-            
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
               Quantum Computing
-              <span className="block text-transparent bg-clip-text bg-gradient-to-r from-purple-400 via-blue-500 to-cyan-400">
-                Revolution
-              </span>
             </h1>
-            
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-              Unlock the power of quantum mechanics to solve problems that are impossible for classical computers. 
-              Our quantum computing services deliver exponential speedup for AI, cryptography, and scientific research.
+            <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
+              Experience the future of computing with quantum technology. From AI and optimization 
+              to cryptography and drug discovery, unlock unprecedented computational power.
             </p>
-            
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="px-8 py-4 bg-gradient-to-r from-purple-500 to-blue-600 text-white font-semibold rounded-lg hover:from-purple-400 hover:to-blue-500 transition-all duration-200 hover:scale-105 shadow-lg shadow-purple-500/20">
-                Get Started
+              <button className="btn-futuristic bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600">
+                <Rocket className="h-5 w-5 mr-2" />
+                Quantum Assessment
               </button>
-              <button className="px-8 py-4 border border-purple-400/30 text-purple-300 font-semibold rounded-lg hover:bg-purple-400/10 transition-all duration-200">
-                Learn More
+              <button className="btn-futuristic-outline">
+                <FileText className="h-5 w-5 mr-2" />
+                Download Quantum Guide
               </button>
             </div>
           </motion.div>
@@ -105,74 +163,90 @@ const QuantumComputing: React.FC = () => {
       </section>
 
       {/* Features Section */}
-      <section className="py-16 px-4">
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
             className="text-center mb-16"
           >
             <h2 className="text-4xl font-bold text-white mb-4">
-              Quantum Computing Features
+              Quantum Computing Capabilities
             </h2>
-            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              Experience the future of computing with our advanced quantum capabilities
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Our quantum computing platform leverages the principles of quantum mechanics 
+              to solve problems that are impossible for classical computers.
             </p>
           </motion.div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {features.map((feature, index) => (
               <motion.div
                 key={feature.title}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 hover:border-purple-400/30 transition-all duration-200 hover:scale-105"
+                transition={{ duration: 0.8, delay: index * 0.1 }}
+                viewport={{ once: true }}
+                className="group"
               >
-                <div className="w-12 h-12 bg-gradient-to-br from-purple-500/20 to-blue-500/20 rounded-lg flex items-center justify-center mb-4">
-                  <feature.icon className="w-6 h-6 text-purple-400" />
+                <div className={`p-6 rounded-2xl bg-gradient-to-br ${feature.color} bg-opacity-10 border border-opacity-20 hover:bg-opacity-20 transition-all duration-300 h-full`}>
+                  <div className={`inline-flex p-3 rounded-xl bg-gradient-to-r ${feature.color} mb-4`}>
+                    <feature.icon className="h-6 w-6 text-white" />
+                  </div>
+                  <h3 className="text-xl font-semibold text-white mb-3">
+                    {feature.title}
+                  </h3>
+                  <p className="text-gray-300">
+                    {feature.description}
+                  </p>
                 </div>
-                <h3 className="text-xl font-semibold text-white mb-2">{feature.title}</h3>
-                <p className="text-gray-300">{feature.description}</p>
               </motion.div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Use Cases Section */}
-      <section className="py-16 px-4 bg-slate-800/30">
+      {/* Applications Section */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-slate-800 to-slate-900">
         <div className="max-w-7xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
             className="text-center mb-16"
           >
             <h2 className="text-4xl font-bold text-white mb-4">
-              Quantum Computing Use Cases
+              Revolutionary Applications
             </h2>
-            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              Transform industries with quantum computing applications
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Quantum computing is transforming industries by solving previously 
+              intractable problems with unprecedented speed and accuracy.
             </p>
           </motion.div>
 
-          <div className="grid md:grid-cols-2 gap-8">
-            {useCases.map((useCase, index) => (
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {applications.map((application, index) => (
               <motion.div
-                key={useCase.title}
-                initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 hover:border-purple-400/30 transition-all duration-200"
+                key={application.title}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: index * 0.1 }}
+                viewport={{ once: true }}
+                className="group"
               >
-                <div className="flex items-start space-x-4">
-                  <div className="text-4xl">{useCase.icon}</div>
-                  <div>
-                    <h3 className="text-xl font-semibold text-white mb-2">{useCase.title}</h3>
-                    <p className="text-gray-300">{useCase.description}</p>
+                <div className="p-6 rounded-2xl bg-gradient-to-br from-slate-800 to-slate-700 border border-slate-600 hover:border-slate-500 transition-all duration-300 h-full">
+                  <div className={`inline-flex p-3 rounded-xl bg-gradient-to-r ${application.color} mb-4`}>
+                    <application.icon className="h-6 w-6 text-white" />
                   </div>
+                  <h3 className="text-xl font-semibold text-white mb-3">
+                    {application.title}
+                  </h3>
+                  <p className="text-gray-300">
+                    {application.description}
+                  </p>
                 </div>
               </motion.div>
             ))}
@@ -181,78 +255,111 @@ const QuantumComputing: React.FC = () => {
       </section>
 
       {/* Benefits Section */}
-      <section className="py-16 px-4">
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
             className="text-center mb-16"
           >
             <h2 className="text-4xl font-bold text-white mb-4">
               Why Choose Quantum Computing?
             </h2>
-            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              Unlock unprecedented computational power and capabilities
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Stay ahead of the competition with quantum computing technology that 
+              provides exponential advantages over classical computing methods.
             </p>
           </motion.div>
 
-          <div className="grid md:grid-cols-2 gap-8">
-            <motion.div
-              initial={{ opacity: 0, x: -20 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.6 }}
-              className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-8"
-            >
-              <h3 className="text-2xl font-semibold text-white mb-6">Key Benefits</h3>
-              <ul className="space-y-4">
-                {benefits.map((benefit, index) => (
-                  <li key={index} className="flex items-center space-x-3">
-                    <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0" />
-                    <span className="text-gray-300">{benefit}</span>
-                  </li>
-                ))}
-              </ul>
-            </motion.div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {benefits.map((benefit, index) => (
+              <motion.div
+                key={benefit}
+                initial={{ opacity: 0, x: -20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.8, delay: index * 0.1 }}
+                viewport={{ once: true }}
+                className="flex items-start space-x-3"
+              >
+                <CheckCircle className="h-6 w-6 text-purple-400 mt-1 flex-shrink-0" />
+                <span className="text-gray-300 text-lg">{benefit}</span>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
 
-            <motion.div
-              initial={{ opacity: 0, x: 20 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.6 }}
-              className="bg-gradient-to-br from-purple-500/20 to-blue-500/20 border border-purple-400/30 rounded-xl p-8"
-            >
-              <h3 className="text-2xl font-semibold text-white mb-6">Get Started Today</h3>
-              <p className="text-gray-300 mb-6">
-                Ready to experience the future of computing? Our quantum computing experts are here to help you 
-                harness the power of quantum mechanics for your business.
-              </p>
-              <button className="w-full px-6 py-3 bg-gradient-to-r from-purple-500 to-blue-600 text-white font-semibold rounded-lg hover:from-purple-400 hover:to-blue-500 transition-all duration-200 hover:scale-105 shadow-lg shadow-purple-500/20">
-                Contact Our Experts
-              </button>
-            </motion.div>
+      {/* Services Section */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-slate-800 to-slate-900">
+        <div className="max-w-7xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-4xl font-bold text-white mb-4">
+              Quantum Computing Services
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              From strategic consulting to custom algorithm development, we provide 
+              comprehensive quantum computing solutions for enterprises.
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {quantumServices.map((service, index) => (
+              <motion.div
+                key={service.title}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: index * 0.1 }}
+                viewport={{ once: true }}
+                className="group"
+              >
+                <div className="p-6 rounded-2xl bg-gradient-to-br from-slate-700 to-slate-600 border border-slate-500 hover:border-slate-400 transition-all duration-300 h-full">
+                  <div className="inline-flex p-3 rounded-xl bg-gradient-to-r from-purple-500 to-pink-500 mb-4">
+                    <service.icon className="h-6 w-6 text-white" />
+                  </div>
+                  <h3 className="text-xl font-semibold text-white mb-3">
+                    {service.title}
+                  </h3>
+                  <p className="text-gray-300">
+                    {service.description}
+                  </p>
+                </div>
+              </motion.div>
+            ))}
           </div>
         </div>
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 px-4">
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-purple-600 to-pink-600">
         <div className="max-w-4xl mx-auto text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
           >
-            <h2 className="text-4xl font-bold text-white mb-4">
+            <h2 className="text-4xl font-bold text-white mb-6">
               Ready for the Quantum Future?
             </h2>
-            <p className="text-xl text-gray-300 mb-8">
-              Join the quantum revolution and transform your business with unprecedented computational power
+            <p className="text-xl text-purple-100 mb-8">
+              Join the quantum revolution and gain a competitive advantage with 
+              next-generation computing technology.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="px-8 py-4 bg-gradient-to-r from-purple-500 to-blue-600 text-white font-semibold rounded-lg hover:from-purple-400 hover:to-blue-500 transition-all duration-200 hover:scale-105 shadow-lg shadow-purple-500/20">
-                Start Quantum Journey
+              <button className="btn-futuristic bg-white text-purple-600 hover:bg-gray-100">
+                <MessageCircle className="h-5 w-5 mr-2" />
+                Quantum Consultation
               </button>
-              <button className="px-8 py-4 border border-purple-400/30 text-purple-300 font-semibold rounded-lg hover:bg-purple-400/10 transition-all duration-200">
+              <button className="btn-futuristic-outline border-white text-white hover:bg-white hover:text-purple-600">
+                <Clock className="h-5 w-5 mr-2" />
                 Schedule Demo
               </button>
             </div>
