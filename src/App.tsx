@@ -33,6 +33,19 @@ const Partners = lazy(() => import('./pages/Partners').then(module => ({ default
 const Pricing = lazy(() => import('./pages/Pricing').then(module => ({ default: module.default })));
 const SearchPage = lazy(() => import('./pages/SearchPage').then(module => ({ default: module.default })));
 const RevolutionaryServices2030 = lazy(() => import('./pages/RevolutionaryServices2030').then(module => ({ default: module.default })));
+// Additional pages from incoming branch
+const AISolutions = lazy(() => import('./pages/AISolutions').then(module => ({ default: module.default })));
+const ResearchDevelopment = lazy(() => import('./pages/ResearchDevelopment').then(module => ({ default: module.default })));
+const News = lazy(() => import('./pages/News').then(module => ({ default: module.default })));
+const Team = lazy(() => import('./pages/Team').then(module => ({ default: module.default })));
+const Events = lazy(() => import('./pages/Events').then(module => ({ default: module.default })));
+const Help = lazy(() => import('./pages/Help').then(module => ({ default: module.default })));
+const Docs = lazy(() => import('./pages/Docs').then(module => ({ default: module.default })));
+const Sitemap = lazy(() => import('./pages/sitemap').then(module => ({ default: module.default })));
+const Support = lazy(() => import('./pages/Support').then(module => ({ default: module.default })));
+const EnhancedServicesShowcase2025 = lazy(() => import('./pages/EnhancedServicesShowcase2025').then(module => ({ default: module.default })));
+const EnhancedServicesShowcase2030 = lazy(() => import('./pages/EnhancedServicesShowcase2030').then(module => ({ default: module.default })));
+const ComprehensivePricingGuide2025 = lazy(() => import('./pages/ComprehensivePricingGuide2025').then(module => ({ default: module.default })));
 
 // Enhanced services pages with better error handling
 const ComprehensivePricingGuide2027 = lazy(() => import('./pages/ComprehensivePricingGuide2027.tsx').then(module => ({ default: module.default })));
@@ -169,6 +182,13 @@ function App() {
                 <Route path="/login" element={<Login />} />
                 <Route path="/marketplace" element={<Marketplace />} />
                 {/* Service Routes with enhanced error handling */}
+                <Route path="/sitemap" element={<Sitemap />} />
+                <Route path="/webinars" element={<Webinars />} />
+                <Route path="/white-papers" element={<WhitePapers />} />
+                <Route path="/support" element={<Support />} />
+                <Route path="/enhanced-services-2025" element={<EnhancedServicesShowcase2025 />} />
+                <Route path="/enhanced-services-2030" element={<EnhancedServicesShowcase2030 />} />
+                <Route path="/comprehensive-pricing-2025" element={<ComprehensivePricingGuide2025 />} />
                 
                 {/* Additional Routes */}
                 <Route path="/innovative-services-showcase-2027" element={<InnovativeServicesShowcase2027 />} />
