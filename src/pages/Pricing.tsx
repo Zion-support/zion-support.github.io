@@ -88,6 +88,7 @@ function Pricing() {
     'Priority feature development requests'
   ];
 
+  const billingCycle = 'monthly'; // Default billing cycle
   const savings = billingCycle === 'annual' ? 20 : 0;
 
   return (
@@ -272,6 +273,4 @@ function Pricing() {
       </div>
     </>
   );
-};
-
-export default Pricing;
+}

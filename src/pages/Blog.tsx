@@ -375,6 +375,4 @@ function Blog() {
       </section>
     </div>
   );
-};
-
-export default Blog;
+}
