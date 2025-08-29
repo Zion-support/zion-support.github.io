@@ -39,6 +39,7 @@ const ServicesComparisonPage = React.lazy(() => import('./pages/ServicesComparis
 const RevolutionaryServices2030 = React.lazy(() => import('./pages/RevolutionaryServices2030'));
 const RevolutionaryServicesShowcase2030 = React.lazy(() => import('./pages/RevolutionaryServicesShowcase2030'));
 const ComprehensiveServicesShowcase2026 = React.lazy(() => import('./pages/ComprehensiveServicesShowcase2026'));
+const ComprehensiveServicesShowcase2026New = React.lazy(() => import('./pages/ComprehensiveServicesShowcase2026'));
 const ComprehensivePricingGuide2027 = React.lazy(() => import('./pages/ComprehensivePricingGuide2027'));
 const InnovativeServicesShowcase2025 = React.lazy(() => import('./pages/InnovativeServicesShowcase2025'));
 const InnovativeServicesShowcase2030 = React.lazy(() => import('./pages/InnovativeServicesShowcase2030'));
@@ -134,6 +135,7 @@ const App = React.memo(() => {
     { path: '/revolutionary-services-2030', element: <RevolutionaryServices2030 /> },
     { path: '/revolutionary-services-showcase-2030', element: <RevolutionaryServicesShowcase2030 /> },
     { path: '/comprehensive-services-showcase-2026', element: <ComprehensiveServicesShowcase2026 /> },
+    { path: '/comprehensive-services-showcase-2026-new', element: <ComprehensiveServicesShowcase2026New /> },
     { path: '/comprehensive-pricing-guide-2027', element: <ComprehensivePricingGuide2027 /> },
     { path: '/innovative-services-showcase-2025', element: <InnovativeServicesShowcase2025 /> },
     { path: '/innovative-services-showcase-2030', element: <InnovativeServicesShowcase2030 /> },
