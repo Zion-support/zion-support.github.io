@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import React, { useState, useEffect, useRef } from 'react';
+import { motion, AnimatePresence, useScroll, useTransform } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { 
   ArrowRight, 
@@ -15,7 +15,13 @@ import {
   Rocket,
   Target,
   TrendingUp,
-  Sparkles
+  Sparkles,
+  Code,
+  Database,
+  Cloud,
+  Lock,
+  Users,
+  BarChart3
 } from 'lucide-react';
 
 interface HeroSlide {
@@ -29,11 +35,21 @@ interface HeroSlide {
   gradient: string;
   icon: React.ComponentType<any>;
   stats: { label: string; value: string; icon: React.ComponentType<any> }[];
+  bgPattern: string;
 }
 
 export default function EnhancedHeroSection() {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [isAutoPlaying, setIsAutoPlaying] = useState(true);
+  const [isHovered, setIsHovered] = useState(false);
+  const containerRef = useRef<HTMLDivElement>(null);
+  const { scrollYProgress } = useScroll({
+    target: containerRef,
+    offset: ["start start", "end start"]
+  });
+
+  const y = useTransform(scrollYProgress, [0, 1], ["0%", "50%"]);
+  const opacity = useTransform(scrollYProgress, [0, 0.5], [1, 0]);
 
   const heroSlides: HeroSlide[] = [
     {
@@ -50,7 +66,8 @@ export default function EnhancedHeroSection() {
         { label: "Accuracy Rate", value: "95%+", icon: Target },
         { label: "ROI Increase", value: "450%", icon: TrendingUp },
         { label: "Market Growth", value: "280%", icon: Rocket }
-      ]
+      ],
+      bgPattern: "radial-gradient(circle at 20% 80%, rgba(34, 221, 210, 0.15) 0%, transparent 50%)"
     },
     {
       title: "Comprehensive IT Services",
@@ -66,7 +83,8 @@ export default function EnhancedHeroSection() {
         { label: "Uptime", value: "99.99%", icon: Target },
         { label: "Cost Savings", value: "700%", icon: TrendingUp },
         { label: "Response Time", value: "<5min", icon: Rocket }
-      ]
+      ],
+      bgPattern: "radial-gradient(circle at 80% 20%, rgba(140, 21, 233, 0.15) 0%, transparent 50%)"
     },
     {
       title: "Green IT Solutions",
@@ -76,22 +94,25 @@ export default function EnhancedHeroSection() {
       cta: "Learn More",
       path: "/green-it",
       features: ["Energy Efficiency", "Carbon Reduction", "Sustainable Practices", "Cost Savings"],
-      gradient: "from-cyan-500 via-blue-500 to-purple-500",
+      gradient: "from-green-500 via-emerald-500 to-teal-500",
       icon: Globe,
       stats: [
-        { label: "Energy Savings", value: "60%", icon: Target },
-        { label: "Carbon Reduction", value: "75%", icon: TrendingUp },
-        { label: "Cost Reduction", value: "40%", icon: Rocket }
-      ]
+        { label: "Energy Savings", value: "40%", icon: Target },
+        { label: "Carbon Reduction", value: "60%", icon: TrendingUp },
+        { label: "Cost Reduction", value: "35%", icon: Rocket }
+      ],
+      bgPattern: "radial-gradient(circle at 50% 50%, rgba(34, 197, 94, 0.15) 0%, transparent 50%)"
     }
   ];
+
+  const currentSlideData = heroSlides[currentSlide];
 
   useEffect(() => {
     if (!isAutoPlaying) return;
 
     const interval = setInterval(() => {
       setCurrentSlide((prev) => (prev + 1) % heroSlides.length);
-    }, 6000);
+    }, 5000);
 
     return () => clearInterval(interval);
   }, [isAutoPlaying, heroSlides.length]);
@@ -115,177 +136,247 @@ export default function EnhancedHeroSection() {
   };
 
   return (
-    <section className="relative min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 overflow-hidden">
-      {/* Background Pattern */}
-      <div className="absolute inset-0 bg-[url('/images/grid-pattern.svg')] bg-center opacity-10"></div>
-      
-      {/* Floating Elements */}
-      <div className="absolute inset-0 overflow-hidden">
-        <motion.div 
-          className="absolute top-20 left-10 w-4 h-4 bg-cyan-400 rounded-full opacity-60"
-          animate={{ y: [0, -20, 0] }}
-          transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
-        />
-        <motion.div 
-          className="absolute top-40 right-20 w-3 h-3 bg-blue-400 rounded-full opacity-60"
-          animate={{ y: [0, -15, 0] }}
-          transition={{ duration: 3, repeat: Infinity, ease: "easeInOut", delay: 1 }}
-        />
-        <motion.div 
-          className="absolute bottom-40 left-20 w-2 h-2 bg-purple-400 rounded-full opacity-60"
-          animate={{ y: [0, -25, 0] }}
-          transition={{ duration: 3, repeat: Infinity, ease: "easeInOut", delay: 2 }}
-        />
-      </div>
+    <section
+      ref={containerRef}
+      className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-zion-slate via-zion-slate-dark to-black"
+      style={{ background: heroSlides[currentSlide].bgPattern }}
+    >
+      {/* Animated Background Elements */}
+      <motion.div
+        className="absolute inset-0 opacity-20"
+        style={{ y, opacity }}
+      >
+        <div className="absolute top-20 left-10 w-32 h-32 bg-zion-cyan/20 rounded-full blur-3xl animate-pulse"></div>
+        <div className="absolute top-40 right-20 w-40 h-40 bg-zion-purple/20 rounded-full blur-3xl animate-pulse delay-1000"></div>
+        <div className="absolute bottom-40 left-20 w-24 h-24 bg-zion-blue/20 rounded-full blur-3xl animate-pulse delay-2000"></div>
+        <div className="absolute bottom-20 right-40 w-36 h-36 bg-zion-cyan/20 rounded-full blur-3xl animate-pulse delay-3000"></div>
+      </motion.div>
 
-      {/* Hero Content */}
-      <div className="relative z-10 flex items-center justify-center min-h-screen px-6">
-        <div className="max-w-7xl mx-auto text-center">
-          <motion.div 
-            initial={{ opacity: 0, y: 30 }}
+      {/* Grid Pattern Overlay */}
+      <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%23ffffff" fill-opacity="0.02"%3E%3Cpath d="M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-30"></div>
+
+      {/* Main Content */}
+      <div className="relative z-10 container-responsive text-center">
+        <AnimatePresence mode="wait">
+          <motion.div
+            key={currentSlide}
+            initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1, delay: 0.2 }}
-            className="mb-8"
+            exit={{ opacity: 0, y: -50 }}
+            transition={{ duration: 0.8, ease: "easeInOut" }}
+            className="max-w-6xl mx-auto"
           >
-            <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent">
-              Zion Tech Group
-            </h1>
-            <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
-              Pioneering the future with AI-powered solutions, quantum technology, and innovative IT services that transform businesses and drive unprecedented growth.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
-              <Link 
-                to="/comprehensive-services" 
-                className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-cyan-500/25"
-              >
-                Explore All Services
-              </Link>
-              <Link 
-                to="/revolutionary-services-2030" 
-                className="px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-600 rounded-lg font-semibold hover:from-purple-600 hover:to-pink-700 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-purple-500/25"
-              >
-                Revolutionary 2030
-              </Link>
-              <Link 
-                to="/contact" 
-                className="px-8 py-4 border-2 border-cyan-500 text-cyan-400 rounded-lg font-semibold hover:bg-cyan-500 hover:text-white transition-all duration-300"
-              >
-                Get Started
-              </Link>
-            </div>
-          </motion.div>
+            {/* Icon and Badge */}
+            <motion.div
+              initial={{ scale: 0, rotate: -180 }}
+              animate={{ scale: 1, rotate: 0 }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+              className="inline-flex items-center gap-2 px-4 py-2 bg-zion-cyan/10 border border-zion-cyan/20 rounded-full text-zion-cyan mb-6"
+            >
+              <currentSlideData.icon className="w-4 h-4" />
+              <span className="text-sm font-medium">Featured Solution</span>
+              <Sparkles className="w-4 h-4 animate-pulse" />
+            </motion.div>
 
-          {/* Interactive Service Showcase */}
-          <div className="relative max-w-6xl mx-auto">
-            <div className="relative h-96 bg-gradient-to-br from-slate-800/60 to-slate-900/60 backdrop-blur-md rounded-3xl border border-slate-700/50 overflow-hidden">
-              <AnimatePresence mode="wait">
+            {/* Main Title */}
+            <motion.h1
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.3 }}
+              className="text-5xl md:text-7xl lg:text-8xl font-bold mb-6"
+            >
+              <span className={`bg-gradient-to-r ${currentSlideData.gradient} bg-clip-text text-transparent`}>
+                {currentSlideData.title}
+              </span>
+            </motion.h1>
+
+            {/* Subtitle */}
+            <motion.p
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.4 }}
+              className="text-xl md:text-2xl lg:text-3xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed"
+            >
+              {currentSlideData.subtitle}
+            </motion.p>
+
+            {/* Description */}
+            <motion.p
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.5 }}
+              className="text-lg text-gray-400 mb-10 max-w-3xl mx-auto leading-relaxed"
+            >
+              {currentSlideData.description}
+            </motion.p>
+
+            {/* Features Grid */}
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.6 }}
+              className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-10 max-w-4xl mx-auto"
+            >
+              {currentSlideData.features.map((feature, index) => (
                 <motion.div
-                  key={currentSlide}
-                  initial={{ opacity: 0, x: 100 }}
-                  animate={{ opacity: 1, x: 0 }}
-                  exit={{ opacity: 0, x: -100 }}
-                  transition={{ duration: 0.5 }}
-                  className="absolute inset-0 flex items-center justify-center p-8"
+                  key={index}
+                  initial={{ opacity: 0, scale: 0.8 }}
+                  animate={{ opacity: 1, scale: 1 }}
+                  transition={{ duration: 0.5, delay: 0.7 + index * 0.1 }}
+                  className="flex items-center gap-2 text-sm text-gray-300 bg-zion-slate/20 rounded-lg px-3 py-2 border border-zion-slate/30"
                 >
-                  <div className="text-center max-w-4xl">
-                    <div className={`w-20 h-20 bg-gradient-to-br ${heroSlides[currentSlide].gradient} rounded-2xl flex items-center justify-center mx-auto mb-6`}>
-                      <heroSlides[currentSlide].icon className="w-10 h-10 text-white" />
-                    </div>
-                    <h2 className="text-3xl md:text-4xl font-bold mb-4 bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
-                      {heroSlides[currentSlide].title}
-                    </h2>
-                    <p className="text-lg text-slate-300 mb-6 max-w-2xl mx-auto">
-                      {heroSlides[currentSlide].description}
-                    </p>
-                    
-                    {/* Features */}
-                    <div className="grid grid-cols-2 md:grid-cols-4 gap-3 mb-6">
-                      {heroSlides[currentSlide].features.map((feature, index) => (
-                        <motion.div
-                          key={index}
-                          initial={{ opacity: 0, y: 20 }}
-                          animate={{ opacity: 1, y: 0 }}
-                          transition={{ duration: 0.3, delay: index * 0.1 }}
-                          className="flex items-center text-sm text-slate-300"
-                        >
-                          <CheckCircle className="w-4 h-4 text-cyan-400 mr-2 flex-shrink-0" />
-                          {feature}
-                        </motion.div>
-                      ))}
-                    </div>
+                  <CheckCircle className="w-4 h-4 text-zion-cyan flex-shrink-0" />
+                  <span>{feature}</span>
+                </motion.div>
+              ))}
+            </motion.div>
 
-                    {/* Stats */}
-                    <div className="grid grid-cols-3 gap-4 mb-6">
-                      {heroSlides[currentSlide].stats.map((stat, index) => (
-                        <motion.div
-                          key={index}
-                          initial={{ opacity: 0, scale: 0.8 }}
-                          animate={{ opacity: 1, scale: 1 }}
-                          transition={{ duration: 0.3, delay: index * 0.1 }}
-                          className="text-center"
-                        >
-                          <div className="text-2xl font-bold text-cyan-400">{stat.value}</div>
-                          <div className="text-sm text-slate-400">{stat.label}</div>
-                        </motion.div>
-                      ))}
-                    </div>
-
-                    <Link 
-                      to={heroSlides[currentSlide].path}
-                      className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-semibold rounded-xl hover:shadow-lg hover:shadow-cyan-500/25 transition-all duration-300 transform hover:scale-105"
-                    >
-                      {heroSlides[currentSlide].cta}
-                      <ArrowRight className="ml-2 w-5 h-5" />
-                    </Link>
+            {/* Stats Display */}
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.8 }}
+              className="grid grid-cols-2 md:grid-cols-3 gap-6 mb-10 max-w-3xl mx-auto"
+            >
+              {currentSlideData.stats.map((stat, index) => (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, scale: 0.8 }}
+                  animate={{ opacity: 1, scale: 1 }}
+                  transition={{ duration: 0.5, delay: 0.9 + index * 0.1 }}
+                  className="text-center group"
+                >
+                  <div className={`inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r ${stat.color || 'from-zion-cyan to-zion-blue'} bg-opacity-20 rounded-2xl mb-3 group-hover:scale-110 transition-transform duration-300`}>
+                    <stat.icon className="w-8 h-8 text-white" />
+                  </div>
+                  <div className="text-2xl font-bold text-white mb-1 group-hover:text-zion-cyan transition-colors">
+                    {stat.value}
+                  </div>
+                  <div className="text-sm text-gray-400 group-hover:text-gray-300 transition-colors">
+                    {stat.label}
                   </div>
                 </motion.div>
-              </AnimatePresence>
-
-              {/* Navigation Arrows */}
-              <button
-                onClick={prevSlide}
-                className="absolute left-4 top-1/2 -translate-y-1/2 w-12 h-12 bg-slate-800/80 hover:bg-slate-700/80 rounded-full flex items-center justify-center text-white transition-all duration-300 hover:scale-110"
-              >
-                <ChevronLeft className="w-6 h-6" />
-              </button>
-              <button
-                onClick={nextSlide}
-                className="absolute right-4 top-1/2 -translate-y-1/2 w-12 h-12 bg-slate-800/80 hover:bg-slate-700/80 rounded-full flex items-center justify-center text-white transition-all duration-300 hover:scale-110"
-              >
-                <ChevronRight className="w-6 h-6" />
-              </button>
-            </div>
-
-            {/* Slide Indicators */}
-            <div className="flex justify-center mt-6 space-x-2">
-              {heroSlides.map((_, index) => (
-                <button
-                  key={index}
-                  onClick={() => goToSlide(index)}
-                  className={`w-3 h-3 rounded-full transition-all duration-300 ${
-                    index === currentSlide 
-                      ? 'bg-cyan-500 scale-125' 
-                      : 'bg-slate-600 hover:bg-slate-500'
-                  }`}
-                />
               ))}
-            </div>
+            </motion.div>
+
+            {/* CTA Buttons */}
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 1.0 }}
+              className="flex flex-col sm:flex-row gap-4 justify-center items-center"
+            >
+              <Link
+                to={currentSlideData.path}
+                onMouseEnter={() => setIsHovered(true)}
+                onMouseLeave={() => setIsHovered(false)}
+                className="group relative inline-flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-blue rounded-lg font-semibold text-white hover:from-zion-cyan/90 hover:to-zion-blue/90 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-zion-cyan/25"
+              >
+                <span>{currentSlideData.cta}</span>
+                <motion.div
+                  animate={{ x: isHovered ? 5 : 0 }}
+                  transition={{ duration: 0.2 }}
+                >
+                  <ArrowRight className="w-5 h-5" />
+                </motion.div>
+              </Link>
+              
+              <button
+                className="group relative inline-flex items-center gap-2 px-8 py-4 border-2 border-zion-cyan text-zion-cyan rounded-lg font-semibold hover:bg-zion-cyan hover:text-zion-slate transition-all duration-300 transform hover:scale-105"
+              >
+                <Play className="w-5 h-5" />
+                <span>Watch Demo</span>
+              </button>
+            </motion.div>
+          </motion.div>
+        </AnimatePresence>
+
+        {/* Navigation Controls */}
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.8, delay: 1.2 }}
+          className="absolute bottom-8 left-1/2 transform -translate-x-1/2 flex items-center gap-4"
+        >
+          <button
+            onClick={prevSlide}
+            className="p-2 rounded-full bg-zion-slate/50 border border-zion-cyan/20 text-zion-cyan hover:bg-zion-cyan/20 transition-colors"
+          >
+            <ChevronLeft className="w-5 h-5" />
+          </button>
+          
+          <div className="flex gap-2">
+            {heroSlides.map((_, index) => (
+              <button
+                key={index}
+                onClick={() => goToSlide(index)}
+                className={`w-3 h-3 rounded-full transition-all duration-300 ${
+                  index === currentSlide 
+                    ? 'bg-zion-cyan scale-125' 
+                    : 'bg-zion-cyan/30 hover:bg-zion-cyan/60'
+                }`}
+              />
+            ))}
           </div>
-        </div>
+          
+          <button
+            onClick={nextSlide}
+            className="p-3 rounded-full bg-zion-slate/50 border border-zion-cyan/20 text-zion-cyan hover:bg-zion-cyan/20 transition-colors"
+          >
+            <ChevronRight className="w-5 h-5" />
+          </button>
+        </motion.div>
       </div>
 
-      {/* Scroll Indicator */}
-      <motion.div 
-        className="absolute bottom-8 left-1/2 transform -translate-x-1/2"
-        animate={{ y: [0, 10, 0] }}
-        transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
+      {/* Floating Tech Icons */}
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 1, delay: 1.5 }}
+        className="absolute top-20 right-20 hidden lg:block"
       >
-        <div className="w-6 h-10 border-2 border-cyan-400 rounded-full flex justify-center">
+        <div className="relative">
           <motion.div
-            className="w-1 h-3 bg-cyan-400 rounded-full mt-2"
-            animate={{ y: [0, 12, 0] }}
-            transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
-          />
+            animate={{ rotate: 360 }}
+            transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
+            className="w-16 h-16 border border-zion-cyan/30 rounded-full flex items-center justify-center"
+          >
+            <Brain className="w-8 h-8 text-zion-cyan" />
+          </motion.div>
+        </div>
+      </motion.div>
+
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 1, delay: 1.7 }}
+        className="absolute bottom-20 left-20 hidden lg:block"
+      >
+        <div className="relative">
+          <motion.div
+            animate={{ rotate: -360 }}
+            transition={{ duration: 25, repeat: Infinity, ease: "linear" }}
+            className="w-12 h-12 border border-zion-purple/30 rounded-full flex items-center justify-center"
+          >
+            <Code className="w-6 h-6 text-zion-purple" />
+          </motion.div>
+        </div>
+      </motion.div>
+
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 1, delay: 1.9 }}
+        className="absolute top-1/2 left-10 hidden lg:block"
+      >
+        <div className="relative">
+          <motion.div
+            animate={{ y: [-10, 10, -10] }}
+            transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
+            className="w-10 h-10 border border-zion-blue/30 rounded-full flex items-center justify-center"
+          >
+            <Database className="w-5 h-5 text-zion-blue" />
+          </motion.div>
         </div>
       </motion.div>
     </section>

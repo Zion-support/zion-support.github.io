@@ -1,379 +1,313 @@
 import React, { Suspense, useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import { ArrowRight, Brain, Shield, Zap, Star, CheckCircle, Rocket, Target, TrendingUp } from 'lucide-react';
-import EnhancedSEO from "@/components/EnhancedSEO";
-import { HeroSection } from "@/components/HeroSection";
-import { LoadingSpinner } from "@/components/ui/LoadingSpinner";
+import { ArrowRight, Brain, Shield, Zap, Sparkles, Star, TrendingUp, Users, Award } from 'lucide-react';
+import { SEO } from "@/components/SEO";
+import { EnhancedHeroSection } from "@/components/EnhancedHeroSection";
 
 // Lazy load components for better performance
-const CategoriesSection = React.lazy(() => import("@/components/CategoriesSection"));
-const BenefitsSection = React.lazy(() => import("@/components/BenefitsSection"));
-const HowItWorksSection = React.lazy(() => import("@/components/HowItWorksSection"));
-const NewsletterSection = React.lazy(() => import("@/components/NewsletterSection"));
-const FeaturedListingsSection = React.lazy(() => import("@/components/FeaturedListingsSection"));
 const QuickAccess = React.lazy(() => import("@/components/home/QuickAccess"));
-const FeatureCTAs = React.lazy(() => import("@/components/home/FeatureCTAs"));
 const FeatureHighlights = React.lazy(() => import("@/components/home/FeatureHighlights"));
-const ITServiceRequestHero = React.lazy(() => import("@/components/home/ITServiceRequestHero"));
+const AIServicesShowcase = React.lazy(() => import("@/components/home/AIServicesShowcase"));
+const TechSolutionsSection = React.lazy(() => import("@/components/home/TechSolutionsSection"));
+const CaseStudiesSection = React.lazy(() => import("@/components/home/CaseStudiesSection"));
+const TeamExpertiseSection = React.lazy(() => import("@/components/home/TeamExpertiseSection"));
+const GlobalPresenceSection = React.lazy(() => import("@/components/home/GlobalPresenceSection"));
+const InnovationResearchSection = React.lazy(() => import("@/components/home/InnovationResearchSection"));
+const ClientSuccessStoriesSection = React.lazy(() => import("@/components/home/ClientSuccessStoriesSection"));
+const TechnologyStackSection = React.lazy(() => import("@/components/home/TechnologyStackSection"));
+const SecurityComplianceSection = React.lazy(() => import("@/components/home/SecurityComplianceSection"));
+const InteractiveTestimonials = React.lazy(() => import("@/components/home/InteractiveTestimonials"));
+const ServicesShowcase = React.lazy(() => import("@/components/home/ServicesShowcase"));
 const FloatingCTA = React.lazy(() => import("@/components/FloatingCTA"));
-const PricingSection = React.lazy(() => import("@/components/PricingSection"));
-const TechSolutionsSection = React.lazy(() => import("@/components/TechSolutionsSection"));
-const CaseStudiesSection = React.lazy(() => import("@/components/CaseStudiesSection"));
-const TeamExpertiseSection = React.lazy(() => import("@/components/TeamExpertiseSection"));
-const GlobalPresenceSection = React.lazy(() => import("@/components/GlobalPresenceSection"));
-const InnovationResearchSection = React.lazy(() => import("@/components/InnovationResearchSection"));
-const ClientSuccessStoriesSection = React.lazy(() => import("@/components/ClientSuccessStoriesSection"));
-const TechnologyStackSection = React.lazy(() => import("@/components/TechnologyStackSection"));
-const SecurityComplianceSection = React.lazy(() => import("@/components/SecurityComplianceSection"));
-const AIServicesShowcase = React.lazy(() => import("@/components/AIServicesShowcase"));
-const InteractiveTestimonials = React.lazy(() => import("@/components/InteractiveTestimonials"));
-const ServicesShowcase = React.lazy(() => import("@/components/ServicesShowcase"));
-
-// Loading fallback component
-const LoadingFallback = ({ message }: { message: string }) => (
-  <div className="py-20 bg-slate-900">
-    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div className="text-center">
-        <div className="animate-pulse">
-          <div className="h-12 bg-slate-700 rounded-lg mb-4 max-w-md mx-auto"></div>
-          <div className="h-6 bg-slate-700 rounded-lg max-w-2xl mx-auto"></div>
-        </div>
-        <p className="text-slate-400 mt-4">{message}</p>
-      </div>
-    </div>
-  </div>
-);
-
-// Service categories data
-const serviceCategories = [
-  {
-    name: "AI Solutions",
-    description: "Cutting-edge artificial intelligence services for business transformation",
-    icon: "🤖",
-    href: "/ai-services",
-    count: 20,
-    color: "from-cyan-500 to-blue-600"
-  },
-  {
-    name: "Edge & IoT",
-    description: "Ultra-low latency edge computing and IoT platform solutions",
-    icon: "⚡",
-    href: "/services/edge-computing-platform",
-    count: 8,
-    color: "from-blue-500 to-purple-600"
-  },
-  {
-    name: "Cloud & DevOps",
-    description: "Scalable cloud infrastructure and automated deployment solutions",
-    icon: "☁️",
-    href: "/services/cloud-devops",
-    count: 12,
-    color: "from-green-500 to-emerald-600"
-  },
-  {
-    name: "Cybersecurity",
-    description: "Advanced security protocols and threat protection systems",
-    icon: "🔒",
-    href: "/services/ai-compliance-copilot",
-    count: 10,
-    color: "from-red-500 to-orange-600"
-  },
-  {
-    name: "Data Governance",
-    description: "AI-powered data protection and compliance management",
-    icon: "🛡️",
-    href: "/services/ai-data-governance",
-    count: 6,
-    color: "from-purple-500 to-pink-600"
-  },
-  {
-    name: "Customer Success",
-    description: "AI-driven customer engagement and retention platforms",
-    icon: "💝",
-    href: "/services/ai-customer-success-platform",
-    count: 5,
-    color: "from-yellow-500 to-orange-600"
-  }
-];
 
 export default function Home() {
-  const [isLoading, setIsLoading] = useState(true);
-  const [activeCategory, setActiveCategory] = useState(0);
+  const [isVisible, setIsVisible] = useState(false);
+  const [scrollY, setScrollY] = useState(0);
 
   useEffect(() => {
-    // Simulate loading time for better UX
-    const timer = setTimeout(() => setIsLoading(false), 1000);
-    return () => clearTimeout(timer);
+    setIsVisible(true);
+
+    const handleScroll = () => setScrollY(window.scrollY);
+    window.addEventListener('scroll', handleScroll);
+
+    return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
   const stats = [
-    {
-      value: "500+",
-      label: "Global Clients",
-      description: "Trusted by businesses worldwide",
-      icon: Target
-    },
-    {
-      value: "99.9%",
-      label: "Uptime",
-      description: "Reliable infrastructure",
-      icon: Shield
-    },
-    {
-      value: "24/7",
-      label: "Support",
-      description: "Always here to help",
-      icon: Star
-    },
-    {
-      value: "50+",
-      label: "Services",
-      description: "Comprehensive solutions",
-      icon: Rocket
-    }
+    { label: "Happy Clients", value: "500+", icon: Users, color: "from-zion-cyan to-zion-blue" },
+    { label: "Projects Completed", value: "1000+", icon: Award, color: "from-zion-blue to-zion-purple" },
+    { label: "Success Rate", value: "98%", icon: TrendingUp, color: "from-zion-purple to-zion-cyan" },
+    { label: "Years Experience", value: "15+", icon: Star, color: "from-zion-cyan to-zion-blue" }
   ];
-
-  const features = [
-    {
-      title: "AI-Powered Solutions",
-      description: "Cutting-edge artificial intelligence and machine learning solutions",
-      icon: Brain,
-      color: "from-purple-500 to-pink-500"
-    },
-    {
-      title: "Cybersecurity Excellence",
-      description: "Advanced security solutions protecting your digital assets",
-      icon: Shield,
-      color: "from-red-500 to-orange-500"
-    },
-    {
-      title: "Cloud & DevOps",
-      description: "Scalable cloud infrastructure and efficient development operations",
-      icon: Zap,
-      color: "from-blue-500 to-cyan-500"
-    },
-    {
-      title: "Digital Transformation",
-      description: "End-to-end digital transformation services for modern businesses",
-      icon: Rocket,
-      color: "from-green-500 to-emerald-500"
-    }
-  ];
-
-  if (isLoading) {
-    return <LoadingFallback message="Loading Zion Tech Group..." />;
-  }
 
   return (
     <>
-      <EnhancedSEO 
-        title="Zion Tech Group - Leading AI & Technology Solutions"
-        description="Discover cutting-edge AI solutions, expert talent, and innovative technology services. Transform your business with Zion Tech Group's comprehensive tech ecosystem."
-        canonical="/"
+      <SEO
+        title="Zion Tech Group - AI-Powered Business Solutions & IT Services"
+        description="Transform your business with cutting-edge AI solutions, quantum technology, and innovative IT services. Expert consulting, development, and digital transformation."
+        keywords="AI solutions, IT services, digital transformation, quantum computing, cybersecurity, cloud services, business intelligence"
+        author="Zion Tech Group"
         url="https://ziontechgroup.com"
-        type="website"
-        tags={['AI Solutions', 'Technology Services', 'Digital Transformation', 'IT Consulting', 'Cloud Services', 'Cybersecurity']}
-        services={[
-          {
-            name: 'AI Business Intelligence',
-            description: 'Transform your business with AI-powered insights and analytics',
-            url: '/services/ai-business-intelligence',
-            category: 'Artificial Intelligence'
-          },
-          {
-            name: 'Cloud DevOps',
-            description: 'Streamline your development and operations with cloud-native solutions',
-            url: '/services/cloud-devops',
-            category: 'Cloud Services'
-          },
-          {
-            name: 'Digital Transformation',
-            description: 'Modernize your business processes and technology infrastructure',
-            url: '/services/digital-transformation',
-            category: 'Consulting'
-          }
-        ]}
       />
-      
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-        {/* Hero Section */}
-        <HeroSection />
 
-        {/* Quick Access Section */}
-        <Suspense fallback={<LoadingFallback message="Loading quick access..." />}>
-          <QuickAccess />
-        </Suspense>
+      {/* Enhanced Hero Section */}
+      <EnhancedHeroSection />
 
-        {/* Service Categories */}
-        <Suspense fallback={<LoadingFallback message="Loading services..." />}>
-          <CategoriesSection 
-            categories={serviceCategories}
-            activeCategory={activeCategory}
-            onCategoryChange={setActiveCategory}
-          />
-        </Suspense>
+      {/* Stats Section */}
+      <section className="py-16 bg-gradient-to-r from-zion-slate/50 to-zion-slate-dark/50 relative overflow-hidden">
+        <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%23ffffff" fill-opacity="0.02"%3E%3Cpath d="M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-30"></div>
 
-        {/* Stats Section */}
-        <section className="py-16 px-4 sm:px-6 lg:px-8 bg-slate-800/30">
-          <div className="max-w-7xl mx-auto">
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-              {stats.map((stat, index) => (
-                <motion.div
-                  key={index}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ delay: index * 0.1, duration: 0.6 }}
-                  viewport={{ once: true }}
-                  className="text-center"
-                >
-                  <div className="w-16 h-16 bg-gradient-to-br from-cyan-500 to-blue-600 rounded-2xl flex items-center justify-center mx-auto mb-4">
-                    <stat.icon className="w-8 h-8 text-white" />
-                  </div>
-                  <div className="text-3xl font-bold text-white mb-2">{stat.value}</div>
-                  <div className="text-lg font-semibold text-cyan-400 mb-2">{stat.label}</div>
-                  <div className="text-gray-400">{stat.description}</div>
-                </motion.div>
-              ))}
-            </div>
+        <div className="container-responsive relative z-10">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="text-center mb-12"
+          >
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              Trusted by Industry Leaders
+            </h2>
+            <p className="text-lg text-gray-300 max-w-2xl mx-auto">
+              Our track record speaks for itself. Join hundreds of satisfied clients who have transformed their businesses with our technology solutions.
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+            {stats.map((stat, index) => (
+              <motion.div
+                key={stat.label}
+                initial={{ opacity: 0, scale: 0.8 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                viewport={{ once: true }}
+                className="text-center group"
+              >
+                <div className={`inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r ${stat.color} bg-opacity-20 rounded-2xl mb-4 group-hover:scale-110 transition-transform duration-300`}>
+                  <stat.icon className="w-8 h-8 text-white" />
+                </div>
+                <div className="text-3xl font-bold text-white mb-2 group-hover:text-zion-cyan transition-colors">
+                  {stat.value}
+                </div>
+                <div className="text-sm text-gray-400 group-hover:text-gray-300 transition-colors">
+                  {stat.label}
+                </div>
+              </motion.div>
+            ))}
           </div>
-        </section>
+        </div>
+      </section>
 
-        {/* Features Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-800/30">
-          <div className="max-w-7xl mx-auto">
+      {/* Quick Access Section */}
+      <Suspense fallback={
+        <div className="py-20 bg-gradient-to-br from-zion-slate via-zion-slate-dark to-black">
+          <div className="container-responsive">
+            <div className="h-32 bg-zion-slate/50 animate-pulse rounded-2xl"></div>
+          </div>
+        </div>
+      }>
+        <QuickAccess />
+      </Suspense>
+
+      {/* Feature Highlights Section */}
+      <Suspense fallback={
+        <div className="py-20 bg-gradient-to-br from-zion-slate via-zion-slate-dark to-black">
+          <div className="container-responsive">
+            <div className="h-32 bg-zion-slate/50 animate-pulse rounded-2xl"></div>
+          </div>
+        </div>
+      }>
+        <FeatureHighlights />
+      </Suspense>
+
+      {/* AI Services Showcase */}
+      <Suspense fallback={
+        <div className="py-20 bg-gradient-to-br from-zion-slate via-zion-slate-dark to-black">
+          <div className="container-responsive">
+            <div className="h-32 bg-zion-slate/50 animate-pulse rounded-2xl"></div>
+          </div>
+        </div>
+      }>
+        <AIServicesShowcase />
+      </Suspense>
+
+      {/* Tech Solutions Section */}
+      <Suspense fallback={
+        <div className="py-20 bg-gradient-to-br from-zion-slate via-zion-slate-dark to-black">
+          <div className="container-responsive">
+            <div className="h-32 bg-zion-slate/50 animate-pulse rounded-2xl"></div>
+          </div>
+        </div>
+      }>
+        <TechSolutionsSection />
+      </Suspense>
+
+      {/* Case Studies Section */}
+      <Suspense fallback={
+        <div className="py-20 bg-gradient-to-br from-zion-slate via-zion-slate-dark to-black">
+          <div className="container-responsive">
+            <div className="h-32 bg-zion-slate/50 animate-pulse rounded-2xl"></div>
+          </div>
+        </div>
+      }>
+        <CaseStudiesSection />
+      </Suspense>
+
+      {/* Team Expertise Section */}
+      <Suspense fallback={
+        <div className="py-20 bg-gradient-to-br from-zion-slate via-zion-slate-dark to-black">
+          <div className="container-responsive">
+            <div className="h-32 bg-zion-slate/50 animate-pulse rounded-2xl"></div>
+          </div>
+        </div>
+      }>
+        <TeamExpertiseSection />
+      </Suspense>
+
+      {/* Global Presence Section */}
+      <Suspense fallback={
+        <div className="py-20 bg-gradient-to-br from-zion-slate via-zion-slate-dark to-black">
+          <div className="container-responsive">
+            <div className="h-32 bg-zion-slate/50 animate-pulse rounded-2xl"></div>
+          </div>
+        </div>
+      }>
+        <GlobalPresenceSection />
+      </Suspense>
+
+      {/* Innovation Research Section */}
+      <Suspense fallback={
+        <div className="py-20 bg-gradient-to-br from-zion-slate via-zion-slate-dark to-black">
+          <div className="container-responsive">
+            <div className="h-32 bg-zion-slate/50 animate-pulse rounded-2xl"></div>
+          </div>
+        </div>
+      }>
+        <InnovationResearchSection />
+      </Suspense>
+
+      {/* Client Success Stories Section */}
+      <Suspense fallback={
+        <div className="py-20 bg-gradient-to-br from-zion-slate via-zion-slate-dark to-black">
+          <div className="container-responsive">
+            <div className="h-32 bg-zion-slate/50 animate-pulse rounded-2xl"></div>
+          </div>
+        </div>
+      }>
+        <ClientSuccessStoriesSection />
+      </Suspense>
+
+      {/* Technology Stack Section */}
+      <Suspense fallback={
+        <div className="py-20 bg-gradient-to-br from-zion-slate via-zion-slate-dark to-black">
+          <div className="container-responsive">
+            <div className="h-32 bg-zion-slate/50 animate-pulse rounded-2xl"></div>
+          </div>
+        </div>
+      }>
+        <TechnologyStackSection />
+      </Suspense>
+
+      {/* Security Compliance Section */}
+      <Suspense fallback={
+        <div className="py-20 bg-gradient-to-br from-zion-slate via-zion-slate-dark to-black">
+          <div className="container-responsive">
+            <div className="h-32 bg-zion-slate/50 animate-pulse rounded-2xl"></div>
+          </div>
+        </div>
+      }>
+        <SecurityComplianceSection />
+      </Suspense>
+
+      {/* Interactive Testimonials */}
+      <Suspense fallback={
+        <div className="py-20 bg-gradient-to-br from-zion-slate via-zion-slate-dark to-black">
+          <div className="container-responsive">
+            <div className="h-32 bg-zion-slate/50 animate-pulse rounded-2xl"></div>
+          </div>
+        </div>
+      }>
+        <InteractiveTestimonials />
+      </Suspense>
+
+      {/* Services Showcase */}
+      <Suspense fallback={
+        <div className="py-20 bg-gradient-to-br from-zion-slate via-zion-slate-dark to-black">
+          <div className="container-responsive">
+            <div className="h-32 bg-zion-slate/50 animate-pulse rounded-2xl"></div>
+          </div>
+        </div>
+      }>
+        <ServicesShowcase />
+      </Suspense>
+
+      {/* Final CTA Section */}
+      <section className="py-20 bg-gradient-to-br from-zion-slate via-zion-slate-dark to-black relative overflow-hidden">
+        <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%23ffffff" fill-opacity="0.02"%3E%3Cpath d="M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-30"></div>
+
+        <div className="container-responsive relative z-10 text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+          >
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
+              initial={{ scale: 0 }}
+              whileInView={{ scale: 1 }}
+              transition={{ duration: 0.6, delay: 0.2 }}
               viewport={{ once: true }}
-              className="text-center mb-16"
+              className="inline-flex items-center gap-2 px-4 py-2 bg-zion-cyan/10 border border-zion-cyan/20 rounded-full text-zion-cyan mb-6"
             >
-              <h2 className="text-4xl font-bold text-white mb-6">
-                Why Choose
-                <span className="bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
-                  {' '}Zion Tech Group?
-                </span>
-              </h2>
-              <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-                We combine cutting-edge technology with deep industry expertise to deliver 
-                solutions that drive real business value and competitive advantage.
-              </p>
+              <Sparkles className="w-4 h-4" />
+              <span className="text-sm font-medium">Ready to Transform?</span>
+              <Star className="w-4 h-4" />
             </motion.div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {features.map((feature, index) => (
+            <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
+              <span className="bg-gradient-to-r from-zion-cyan via-zion-blue to-zion-purple bg-clip-text text-transparent">
+                Let's Build the Future Together
+              </span>
+            </h2>
+
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-10 leading-relaxed">
+              Join the ranks of industry leaders who have already transformed their businesses with our cutting-edge technology solutions. The future is waiting.
+            </p>
+
+            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+              <Link
+                to="/contact"
+                className="group relative inline-flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-blue rounded-lg font-semibold text-white hover:from-zion-cyan/90 hover:to-zion-blue/90 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-zion-cyan/25"
+              >
+                <span>Start Your Journey</span>
                 <motion.div
-                  key={index}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
-                  viewport={{ once: true }}
-                  className="bg-slate-800/50 backdrop-blur-xl rounded-2xl border border-slate-700/50 p-6 hover:border-cyan-400/50 transition-all duration-300"
+                  animate={{ x: [0, 5, 0] }}
+                  transition={{ duration: 1.5, repeat: Infinity }}
                 >
-                  <div className={`w-12 h-12 bg-gradient-to-br ${feature.color} rounded-xl flex items-center justify-center mb-4`}>
-                    <feature.icon className="w-6 h-6 text-white" />
-                  </div>
-                  <h3 className="text-xl font-semibold text-white mb-2">{feature.title}</h3>
-                  <p className="text-gray-300 text-sm">{feature.description}</p>
+                  <ArrowRight className="w-5 h-5" />
                 </motion.div>
-              ))}
+              </Link>
+
+              <Link
+                to="/services"
+                className="group relative inline-flex items-center gap-2 px-8 py-4 border-2 border-zion-cyan text-zion-cyan rounded-lg font-semibold hover:bg-zion-cyan hover:text-zion-slate transition-all duration-300 transform hover:scale-105"
+              >
+                <span>Explore Services</span>
+                <motion.div
+                  animate={{ rotate: [0, 15, 0] }}
+                  transition={{ duration: 2, repeat: Infinity }}
+                >
+                  <Zap className="w-5 h-5" />
+                </motion.div>
+              </Link>
             </div>
-          </div>
-        </section>
+          </motion.div>
+        </div>
+      </section>
 
-        {/* Additional Sections */}
-        <Suspense fallback={<LoadingFallback message="Loading features..." />}>
-          <FeatureHighlights />
-        </Suspense>
-
-        <Suspense fallback={<LoadingFallback message="Loading tech solutions..." />}>
-          <TechSolutionsSection />
-        </Suspense>
-
-        <Suspense fallback={<LoadingFallback message="Loading case studies..." />}>
-          <CaseStudiesSection />
-        </Suspense>
-
-        <Suspense fallback={<LoadingFallback message="Loading team expertise..." />}>
-          <TeamExpertiseSection />
-        </Suspense>
-
-        <Suspense fallback={<LoadingFallback message="Loading global presence..." />}>
-          <GlobalPresenceSection />
-        </Suspense>
-
-        <Suspense fallback={<LoadingFallback message="Loading innovation..." />}>
-          <InnovationResearchSection />
-        </Suspense>
-
-        <Suspense fallback={<LoadingFallback message="Loading success stories..." />}>
-          <ClientSuccessStoriesSection />
-        </Suspense>
-
-        <Suspense fallback={<LoadingFallback message="Loading technology stack..." />}>
-          <TechnologyStackSection />
-        </Suspense>
-
-        <Suspense fallback={<LoadingFallback message="Loading security..." />}>
-          <SecurityComplianceSection />
-        </Suspense>
-
-        <Suspense fallback={<LoadingFallback message="Loading AI services..." />}>
-          <AIServicesShowcase />
-        </Suspense>
-
-        <Suspense fallback={<LoadingFallback message="Loading testimonials..." />}>
-          <InteractiveTestimonials />
-        </Suspense>
-
-        <Suspense fallback={<LoadingFallback message="Loading services showcase..." />}>
-          <ServicesShowcase />
-        </Suspense>
-
-        {/* CTA Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-4xl mx-auto text-center">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              viewport={{ once: true }}
-            >
-              <h2 className="text-4xl font-bold text-white mb-6">
-                Ready to Transform Your
-                <span className="bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
-                  {' '}Business?
-                </span>
-              </h2>
-              <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
-                Join hundreds of companies already leveraging our cutting-edge solutions 
-                to drive innovation and achieve remarkable results.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Link
-                  to="/request-quote"
-                  className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-semibold rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-cyan-500/25"
-                >
-                  Get Your Quote
-                  <ArrowRight className="w-5 h-5 ml-2 inline" />
-                </Link>
-                <Link
-                  to="/schedule-demo"
-                  className="px-8 py-4 bg-slate-700/50 hover:bg-slate-600/50 text-white font-semibold rounded-lg transition-all duration-300 border border-slate-600 hover:border-slate-500"
-                >
-                  Schedule Demo
-                </Link>
-              </div>
-            </motion.div>
-          </div>
-        </section>
-
-        {/* Floating CTA */}
-        <Suspense fallback={null}>
-          <FloatingCTA />
-        </Suspense>
-      </div>
+      {/* Floating CTA */}
+      <FloatingCTA />
     </>
   );
 }
