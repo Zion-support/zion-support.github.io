@@ -57,8 +57,8 @@ class EnhancedErrorBoundary extends Component {
         // Log to console for development
         if (process.env.NODE_ENV === 'development') {
             console.group('Error Report');
-            console.log('Error ID:', errorReport.id);
-            console.log('Error Details:', errorReport);
+            // console.log removed for production
+            // console.log removed for production
             console.groupEnd();
         }
         // In production, you would send this to your error reporting service

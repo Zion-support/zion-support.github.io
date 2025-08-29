@@ -199,7 +199,7 @@ export function InteractiveUserExperience() {
 
   const submitFeedback = useCallback(() => {
     // Here you would typically send feedback to your backend
-    console.log('Feedback submitted:', { type: feedbackType, message: feedbackMessage });
+    // console.log removed for production
     
     // Update user engagement
     setUserEngagement(prev => ({

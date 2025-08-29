@@ -66,7 +66,7 @@ export function AdvancedDataVisualization() {
     }, [autoRefresh]);
     const downloadChart = (format) => {
         // Simulate chart download
-        console.log(`Downloading chart as ${format}`);
+        // console.log removed for production
     };
     const renderChart = () => {
         switch (selectedChartType) {

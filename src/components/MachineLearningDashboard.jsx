@@ -65,7 +65,7 @@ export const MachineLearningDashboard = ({ className = '' }) => {
             try {
                 const input = JSON.parse(predictionForm.input);
                 const result = await makePrediction(predictionForm.modelId, input);
-                console.log('Prediction result:', result);
+                // console.log removed for production
                 setPredictionForm({ modelId: '', input: '' });
                 trackEvent('ml', 'dashboard', 'prediction_made');
             }

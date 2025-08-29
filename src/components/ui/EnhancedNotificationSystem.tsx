@@ -199,15 +199,15 @@ const NotificationItem: React.FC<NotificationItemProps> = ({ notification, onRem
 export const notify = {
   success: (title: string, message: string, options?: Partial<Notification>) => {
     // This would be used with the context
-    console.log('Success notification:', { title, message, ...options });
+    // console.log removed for production
   },
   error: (title: string, message: string, options?: Partial<Notification>) => {
-    console.log('Error notification:', { title, message, ...options });
+    // console.log removed for production
   },
   warning: (title: string, message: string, options?: Partial<Notification>) => {
-    console.log('Warning notification:', { title, message, ...options });
+    // console.log removed for production
   },
   info: (title: string, message: string, options?: Partial<Notification>) => {
-    console.log('Info notification:', { title, message, ...options });
+    // console.log removed for production
   }
 };

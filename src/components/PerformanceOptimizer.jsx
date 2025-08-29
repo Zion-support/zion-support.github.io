@@ -68,10 +68,10 @@ export const PerformanceOptimizer = ({ children }) => {
             navigator.serviceWorker
                 .register('/sw.js')
                 .then((registration) => {
-                console.log('SW registered: ', registration);
+                // console.log removed for production
             })
                 .catch((registrationError) => {
-                console.log('SW registration failed: ', registrationError);
+                // console.log removed for production
             });
         }
     }, []);

@@ -118,7 +118,7 @@ export function usePerformance() {
         console.group('🚀 Performance Metrics');
         metricsWithRatings.forEach(({ name, value, rating }) => {
             const emoji = rating === 'good' ? '✅' : rating === 'needs-improvement' ? '⚠️' : '❌';
-            console.log(`${emoji} ${name}: ${value.toFixed(2)}ms (${rating})`);
+            // console.log removed for production}ms (${rating})`);
         });
         console.groupEnd();
     };

@@ -112,7 +112,7 @@ export const QuoteRequestForm = () => {
       await new Promise(resolve => setTimeout(resolve, 2000));
       
       // In a real app, you would send the data to your backend
-      console.log('Quote request submitted:', formData);
+      // console.log removed for production
       
       setIsSubmitted(true);
       setFormData({

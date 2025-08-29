@@ -234,7 +234,7 @@ export const useAnalytics = (config = {}) => {
     const sendEventsToServer = useCallback(async (eventsToSend) => {
         try {
             // In a real implementation, this would send to your analytics server
-            console.log('Sending analytics events:', eventsToSend);
+            // console.log removed for production
             // Simulate API call
             await fetch('/api/analytics/events', {
                 method: 'POST',

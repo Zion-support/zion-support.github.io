@@ -300,7 +300,7 @@ app.get('/', (req, res) => {
 // TODO: Implement additional routes based on prompt
 
 app.listen(PORT, () => {
-  console.log(\`Server running on port \${PORT}\`);
+  // console.log removed for production
 });`;
     };
     const generatePythonCode = (prompt, _options) => {
@@ -343,9 +343,9 @@ if __name__ == "__main__":
 // TODO: Implement code based on prompt requirements
 // This is a placeholder implementation
 
-console.log("Generated code placeholder");
-console.log("Prompt:", "${prompt}");
-console.log("Language:", "${options.language}");`;
+// console.log removed for production
+// console.log removed for production
+// console.log removed for production`;
     };
     // Helper functions for code analysis
     const calculateComplexity = (code) => {

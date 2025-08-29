@@ -118,7 +118,7 @@ export default function Help() {
     e.preventDefault();
     if (searchQuery.trim()) {
       // Implement search functionality
-      console.log('Searching for:', searchQuery);
+      // console.log removed for production
     }
   };
 

@@ -70,7 +70,7 @@ export const EnhancedNewsletter: React.FC = () => {
       await new Promise(resolve => setTimeout(resolve, 2000));
       
       // Here you would typically send the data to your newsletter service
-      console.log('Newsletter subscription:', formData);
+      // console.log removed for production
       
       setStatus('success');
       

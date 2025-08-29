@@ -150,7 +150,7 @@ export const EnterpriseDashboard = () => {
             await new Promise(resolve => setTimeout(resolve, 1000));
             // Update timestamps (simplified for demo)
             const now = new Date();
-            console.log('Data refreshed at:', now.toLocaleTimeString());
+            // console.log removed for production);
             trackEvent('enterprise_dashboard', 'data_refreshed', 'manual', undefined, {
                 tab: activeTab,
                 dateRange

@@ -81,7 +81,7 @@ export class ErrorBoundary extends Component<Props, State> {
       //   body: JSON.stringify(errorReport)
       // });
 
-      console.log('Error reported:', errorReport);
+      // console.log removed for production
     } catch (reportingError) {
       console.warn('Failed to report error:', reportingError);
     }
@@ -119,7 +119,7 @@ Timestamp: ${new Date().toISOString()}
       try {
         await navigator.clipboard.writeText(errorDetails);
         // You could show a toast notification here
-        console.log('Error details copied to clipboard');
+        // console.log removed for production
       } catch (err) {
         console.warn('Failed to copy error details:', err);
       }
