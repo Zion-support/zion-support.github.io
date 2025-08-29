@@ -270,7 +270,7 @@ export function BenefitsSection() {
                 className="text-center group"
               >
                 <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-br from-cyan-500 to-blue-600 rounded-full mb-4 group-hover:scale-110 transition-transform duration-300">
-                  <stat.icon className="w-10 h-10 text-white" />
+                  {stat.icon}
                 </div>
                 <div className="text-4xl font-bold text-cyan-400 mb-2">{stat.value}</div>
                 <div className="text-gray-300 font-medium">{stat.label}</div>

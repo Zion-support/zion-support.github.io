@@ -947,368 +947,39 @@ export const MICRO_SAAS_SERVICES: MicroSaasService[] = [
     images: ["https://images.unsplash.com/photo-1633412802994-5c058f151b66?auto=format&fit=crop&w=800&h=500"],
     createdAt: "2024-01-15T10:00:00.000Z"
   },
-  // AI-Powered Business Intelligence Platform
   {
-    id: "ai-business-intelligence-platform",
-    title: "AI Business Intelligence Platform",
-    description: "Advanced AI-powered business intelligence platform that provides real-time insights, predictive analytics, and automated reporting for data-driven decision making.",
+    id: "ai-powered-hr-automation",
+    title: "AI-Powered HR Automation Suite",
+    description: "Comprehensive HR automation platform using AI for recruitment, employee management, performance tracking, and compliance.",
     category: "AI Services",
-    subcategory: "Business Intelligence",
-    price: 199,
-    currency: "$",
-    pricingModel: "monthly",
-    features: [
-      "Real-time data analytics",
-      "Predictive modeling",
-      "Automated reporting",
-      "Custom dashboards",
-      "Data visualization",
-      "API integrations",
-      "Multi-user collaboration",
-      "Mobile app access"
-    ],
-    benefits: [
-      "Improve decision-making speed by 80%",
-      "Reduce manual reporting by 90%",
-      "Identify business opportunities 3x faster",
-      "Increase operational efficiency by 45%"
-    ],
-    targetAudience: ["Enterprise companies", "Data analysts", "Business consultants", "C-level executives"],
-    marketPrice: "$199-599/month",
-    website: "https://ziontechgroup.com/ai-business-intelligence",
-    contactEmail: "kleber@ziontechgroup.com",
-    tags: ["AI Analytics", "Business Intelligence", "Predictive Analytics", "Data Visualization"],
-    aiScore: 96,
-    rating: 4.9,
-    reviewCount: 234,
-    featured: true,
-    location: "Global",
-    availability: "Immediate",
-    author: {
-      name: "Zion Tech Group",
-      id: "zion-tech-group",
-      avatarUrl: "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto=format&fit=crop&w=100&h=100",
-      verified: true
-    },
-    images: ["https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&h=500"],
-    createdAt: "2024-12-01T10:00:00.000Z"
-  },
-
-  // AI-Powered Cybersecurity Suite
-  {
-    id: "ai-cybersecurity-suite",
-    title: "AI Cybersecurity Suite",
-    description: "Comprehensive AI-powered cybersecurity platform that provides real-time threat detection, automated incident response, and advanced security analytics.",
-    category: "AI Services",
-    subcategory: "Cybersecurity",
-    price: 299,
-    currency: "$",
-    pricingModel: "monthly",
-    features: [
-      "AI threat detection",
-      "Automated incident response",
-      "Security analytics dashboard",
-      "Vulnerability assessment",
-      "Compliance monitoring",
-      "Real-time alerts",
-      "Security training modules",
-      "24/7 monitoring"
-    ],
-    benefits: [
-      "Reduce security incidents by 85%",
-      "Automate 90% of security tasks",
-      "Improve compliance scores by 95%",
-      "Reduce response time to threats by 70%"
-    ],
-    targetAudience: ["IT security teams", "Compliance officers", "Risk managers", "Security consultants"],
-    marketPrice: "$299-899/month",
-    website: "https://ziontechgroup.com/ai-cybersecurity-suite",
-    contactEmail: "kleber@ziontechgroup.com",
-    tags: ["AI Security", "Cybersecurity", "Threat Detection", "Compliance"],
-    aiScore: 97,
-    rating: 4.8,
-    reviewCount: 189,
-    featured: true,
-    location: "Global",
-    availability: "Immediate",
-    author: {
-      name: "Zion Tech Group",
-      id: "zion-tech-group",
-      avatarUrl: "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto=format&fit=crop&w=100&h=100",
-      verified: true
-    },
-    images: ["https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&w=800&h=500"],
-    createdAt: "2024-12-01T11:00:00.000Z"
-  },
-
-  // AI-Powered Customer Success Platform
-  {
-    id: "ai-customer-success-platform",
-    title: "AI Customer Success Platform",
-    description: "Intelligent customer success platform that uses AI to predict churn, automate onboarding, and optimize customer engagement strategies.",
-    category: "AI Services",
-    subcategory: "Customer Success",
+    subcategory: "Human Resources",
     price: 149,
     currency: "$",
     pricingModel: "monthly",
     features: [
-      "AI churn prediction",
-      "Automated onboarding",
-      "Customer health scoring",
-      "Engagement automation",
-      "Success metrics tracking",
-      "Integration with CRM",
-      "Mobile app",
+      "AI-powered recruitment",
+      "Employee onboarding automation",
+      "Performance analytics",
+      "Compliance monitoring",
+      "Payroll integration",
+      "Benefits management",
+      "Employee self-service",
       "Analytics dashboard"
     ],
     benefits: [
-      "Reduce customer churn by 40%",
-      "Increase customer lifetime value by 60%",
-      "Automate 80% of onboarding tasks",
-      "Improve customer satisfaction by 75%"
+      "Reduce HR workload by 70%",
+      "Improve hiring quality",
+      "Ensure compliance",
+      "Better employee experience",
+      "Data-driven decisions"
     ],
-    targetAudience: ["Customer success managers", "SaaS companies", "B2B businesses", "Customer support teams"],
-    marketPrice: "$149-449/month",
-    website: "https://ziontechgroup.com/ai-customer-success",
+    targetAudience: ["HR departments", "Recruitment agencies", "Small businesses", "Enterprises", "Startups"],
+    marketPrice: "$149-399/month",
+    website: "https://ziontechgroup.com/ai-hr-automation",
     contactEmail: "kleber@ziontechgroup.com",
-    tags: ["Customer Success", "AI Automation", "Churn Prevention", "Customer Engagement"],
-    aiScore: 94,
-    rating: 4.7,
-    reviewCount: 167,
-    featured: true,
-    location: "Global",
-    availability: "Immediate",
-    author: {
-      name: "Zion Tech Group",
-      id: "zion-tech-group",
-      avatarUrl: "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto=format&fit=crop&w=100&h=100",
-      verified: true
-    },
-    images: ["https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&w=800&h=500"],
-    createdAt: "2024-12-01T12:00:00.000Z"
-  },
-
-  // AI-Powered Workflow Orchestrator
-  {
-    id: "ai-workflow-orchestrator",
-    title: "AI Workflow Orchestrator",
-    description: "Intelligent workflow automation platform that uses AI to optimize business processes, reduce manual tasks, and improve operational efficiency.",
-    category: "AI Services",
-    subcategory: "Workflow Automation",
-    price: 179,
-    currency: "$",
-    pricingModel: "monthly",
-    features: [
-      "AI process optimization",
-      "Workflow automation",
-      "Process mining",
-      "Performance analytics",
-      "Custom workflow builder",
-      "Integration APIs",
-      "Mobile access",
-      "Real-time monitoring"
-    ],
-    benefits: [
-      "Reduce manual tasks by 70%",
-      "Improve process efficiency by 50%",
-      "Reduce operational costs by 35%",
-      "Increase productivity by 60%"
-    ],
-    targetAudience: ["Operations managers", "Process engineers", "Business analysts", "IT managers"],
-    marketPrice: "$179-549/month",
-    website: "https://ziontechgroup.com/ai-workflow-orchestrator",
-    contactEmail: "kleber@ziontechgroup.com",
-    tags: ["Workflow Automation", "Process Optimization", "AI Automation", "Business Process"],
-    aiScore: 95,
+    tags: ["HR Automation", "AI Recruitment", "Employee Management", "Compliance", "Performance Tracking"],
+    aiScore: 92,
     rating: 4.8,
-    reviewCount: 145,
-    featured: true,
-    location: "Global",
-    availability: "Immediate",
-    author: {
-      name: "Zion Tech Group",
-      id: "zion-tech-group",
-      avatarUrl: "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto=format&fit=crop&w=100&h=100",
-      verified: true
-    },
-    images: ["https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&h=500"],
-    createdAt: "2024-12-01T13:00:00.000Z"
-  },
-
-  // AI-Powered Data Governance Platform
-  {
-    id: "ai-data-governance-platform",
-    title: "AI Data Governance Platform",
-    description: "Comprehensive data governance platform that uses AI to ensure data quality, compliance, and security across all data assets.",
-    category: "AI Services",
-    subcategory: "Data Governance",
-    price: 249,
-    currency: "$",
-    pricingModel: "monthly",
-    features: [
-      "AI data quality monitoring",
-      "Compliance automation",
-      "Data lineage tracking",
-      "Privacy management",
-      "Access control",
-      "Audit trails",
-      "Policy management",
-      "Real-time alerts"
-    ],
-    benefits: [
-      "Ensure 99.9% data quality",
-      "Automate 90% of compliance tasks",
-      "Reduce data breaches by 95%",
-      "Improve regulatory compliance by 100%"
-    ],
-    targetAudience: ["Data officers", "Compliance managers", "IT security teams", "Legal teams"],
-    marketPrice: "$249-749/month",
-    website: "https://ziontechgroup.com/ai-data-governance",
-    contactEmail: "kleber@ziontechgroup.com",
-    tags: ["Data Governance", "Compliance", "Data Quality", "Privacy Management"],
-    aiScore: 96,
-    rating: 4.9,
-    reviewCount: 178,
-    featured: true,
-    location: "Global",
-    availability: "Immediate",
-    author: {
-      name: "Zion Tech Group",
-      id: "zion-tech-group",
-      avatarUrl: "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto=format&fit=crop&w=100&h=100",
-      verified: true
-    },
-    images: ["https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&h=500"],
-    createdAt: "2024-12-01T14:00:00.000Z"
-  },
-
-  // Edge Computing Platform
-  {
-    id: "edge-computing-platform",
-    title: "Edge Computing Platform",
-    description: "Advanced edge computing platform that brings AI processing closer to data sources, reducing latency and improving real-time decision making.",
-    category: "IT Services",
-    subcategory: "Edge Computing",
-    price: 399,
-    currency: "$",
-    pricingModel: "monthly",
-    features: [
-      "Edge AI processing",
-      "Real-time analytics",
-      "Low latency computing",
-      "Distributed architecture",
-      "IoT integration",
-      "Security protocols",
-      "Scalable infrastructure",
-      "Monitoring dashboard"
-    ],
-    benefits: [
-      "Reduce latency by 90%",
-      "Improve real-time processing by 80%",
-      "Reduce bandwidth costs by 60%",
-      "Increase reliability by 95%"
-    ],
-    targetAudience: ["IoT developers", "Edge computing engineers", "Network architects", "System administrators"],
-    marketPrice: "$399-1199/month",
-    website: "https://ziontechgroup.com/edge-computing-platform",
-    contactEmail: "kleber@ziontechgroup.com",
-    tags: ["Edge Computing", "IoT", "Real-time Processing", "Distributed Systems"],
-    aiScore: 93,
-    rating: 4.7,
-    reviewCount: 134,
-    featured: true,
-    location: "Global",
-    availability: "Immediate",
-    author: {
-      name: "Zion Tech Group",
-      id: "zion-tech-group",
-      avatarUrl: "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto=format&fit=crop&w=100&h=100",
-      verified: true
-    },
-    images: ["https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&h=500"],
-    createdAt: "2024-12-01T15:00:00.000Z"
-  },
-
-  // Quantum AI Platform
-  {
-    id: "quantum-ai-platform",
-    title: "Quantum AI Platform",
-    description: "Revolutionary platform that combines quantum computing with AI to solve complex problems that are impossible for classical computers.",
-    category: "AI Services",
-    subcategory: "Quantum Computing",
-    price: 999,
-    currency: "$",
-    pricingModel: "monthly",
-    features: [
-      "Quantum AI algorithms",
-      "Hybrid quantum-classical computing",
-      "Advanced optimization",
-      "Machine learning models",
-      "API access",
-      "Cloud integration",
-      "Developer tools",
-      "Performance analytics"
-    ],
-    benefits: [
-      "Solve complex problems 1000x faster",
-      "Improve optimization accuracy by 99%",
-      "Enable new AI capabilities",
-      "Future-proof your technology stack"
-    ],
-    targetAudience: ["Research institutions", "Pharmaceutical companies", "Financial institutions", "AI researchers"],
-    marketPrice: "$999-2999/month",
-    website: "https://ziontechgroup.com/quantum-ai-platform",
-    contactEmail: "kleber@ziontechgroup.com",
-    tags: ["Quantum Computing", "AI", "Optimization", "Research"],
-    aiScore: 99,
-    rating: 5.0,
-    reviewCount: 89,
-    featured: true,
-    location: "Global",
-    availability: "Limited",
-    author: {
-      name: "Zion Tech Group",
-      id: "zion-tech-group",
-      avatarUrl: "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto=format&fit=crop&w=100&h=100",
-      verified: true
-    },
-    images: ["https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&h=500"],
-    createdAt: "2024-12-01T16:00:00.000Z"
-  },
-
-  // AI Healthcare Analytics Platform
-  {
-    id: "ai-healthcare-analytics",
-    title: "AI Healthcare Analytics Platform",
-    description: "Advanced AI platform for healthcare analytics that provides predictive diagnostics, patient monitoring, and medical research insights.",
-    category: "AI Services",
-    subcategory: "Healthcare",
-    price: 599,
-    currency: "$",
-    pricingModel: "monthly",
-    features: [
-      "Predictive diagnostics",
-      "Patient monitoring",
-      "Medical research tools",
-      "HIPAA compliance",
-      "Real-time analytics",
-      "Integration with EHR",
-      "Mobile app",
-      "Custom dashboards"
-    ],
-    benefits: [
-      "Improve diagnostic accuracy by 85%",
-      "Reduce patient readmissions by 40%",
-      "Accelerate medical research by 60%",
-      "Enhance patient outcomes by 70%"
-    ],
-    targetAudience: ["Healthcare providers", "Medical researchers", "Hospitals", "Clinics"],
-    marketPrice: "$599-1799/month",
-    website: "https://ziontechgroup.com/ai-healthcare-analytics",
-    contactEmail: "kleber@ziontechgroup.com",
-    tags: ["Healthcare AI", "Medical Analytics", "Predictive Diagnostics", "Patient Care"],
-    aiScore: 97,
-    rating: 4.9,
     reviewCount: 234,
     featured: true,
     location: "Global",
@@ -1319,139 +990,44 @@ export const MICRO_SAAS_SERVICES: MicroSaasService[] = [
       avatarUrl: "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto=format&fit=crop&w=100&h=100",
       verified: true
     },
-    images: ["https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&h=500"],
-    createdAt: "2024-12-01T17:00:00.000Z"
+    images: ["https://images.unsplash.com/photo-1633412802994-5c058f151b66?auto=format&fit=crop&w=800&h=500"],
+    createdAt: "2024-01-15T10:00:00.000Z"
   },
-
-  // AI-Powered Financial Trading Platform
   {
-    id: "ai-financial-trading-platform",
-    title: "AI Financial Trading Platform",
-    description: "Intelligent trading platform that uses AI to analyze market data, predict trends, and execute automated trading strategies.",
-    category: "AI Services",
-    subcategory: "Financial Services",
-    price: 799,
-    currency: "$",
-    pricingModel: "monthly",
-    features: [
-      "AI market analysis",
-      "Predictive trading signals",
-      "Automated trading",
-      "Risk management",
-      "Portfolio optimization",
-      "Real-time data feeds",
-      "Mobile trading app",
-      "Performance analytics"
-    ],
-    benefits: [
-      "Improve trading accuracy by 75%",
-      "Reduce trading risks by 60%",
-      "Increase portfolio returns by 40%",
-      "Automate 90% of trading decisions"
-    ],
-    targetAudience: ["Traders", "Investment firms", "Hedge funds", "Individual investors"],
-    marketPrice: "$799-2499/month",
-    website: "https://ziontechgroup.com/ai-financial-trading",
-    contactEmail: "kleber@ziontechgroup.com",
-    tags: ["AI Trading", "Financial Services", "Market Analysis", "Portfolio Management"],
-    aiScore: 96,
-    rating: 4.8,
-    reviewCount: 167,
-    featured: true,
-    location: "Global",
-    availability: "Immediate",
-    author: {
-      name: "Zion Tech Group",
-      id: "zion-tech-group",
-      avatarUrl: "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto=format&fit=crop&w=100&h=100",
-      verified: true
-    },
-    images: ["https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&h=500"],
-    createdAt: "2024-12-01T18:00:00.000Z"
-  },
-
-  // AI-Powered Supply Chain Optimization
-  {
-    id: "ai-supply-chain-optimization",
-    title: "AI Supply Chain Optimization",
-    description: "Intelligent supply chain platform that uses AI to optimize inventory, predict demand, and streamline logistics operations.",
-    category: "AI Services",
+    id: "blockchain-supply-chain-tracking",
+    title: "Blockchain Supply Chain Tracking Platform",
+    description: "End-to-end supply chain visibility platform using blockchain for transparency, traceability, and compliance.",
+    category: "Blockchain & Web3",
     subcategory: "Supply Chain",
-    price: 349,
-    currency: "$",
-    pricingModel: "monthly",
-    features: [
-      "Demand forecasting",
-      "Inventory optimization",
-      "Route optimization",
-      "Supplier management",
-      "Real-time tracking",
-      "Analytics dashboard",
-      "Mobile app",
-      "API integrations"
-    ],
-    benefits: [
-      "Reduce inventory costs by 30%",
-      "Improve delivery times by 50%",
-      "Reduce supply chain disruptions by 80%",
-      "Increase operational efficiency by 45%"
-    ],
-    targetAudience: ["Logistics managers", "Supply chain directors", "Operations managers", "Retail companies"],
-    marketPrice: "$349-1049/month",
-    website: "https://ziontechgroup.com/ai-supply-chain",
-    contactEmail: "kleber@ziontechgroup.com",
-    tags: ["Supply Chain", "Logistics", "Inventory Management", "Demand Forecasting"],
-    aiScore: 94,
-    rating: 4.7,
-    reviewCount: 145,
-    featured: true,
-    location: "Global",
-    availability: "Immediate",
-    author: {
-      name: "Zion Tech Group",
-      id: "zion-tech-group",
-      avatarUrl: "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto=format&fit=crop&w=100&h=100",
-      verified: true
-    },
-    images: ["https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&h=500"],
-    createdAt: "2024-12-01T19:00:00.000Z"
-  },
-
-  // AI-Powered Human Resources Platform
-  {
-    id: "ai-hr-platform",
-    title: "AI HR Platform",
-    description: "Intelligent human resources platform that uses AI to streamline recruitment, employee management, and HR analytics.",
-    category: "AI Services",
-    subcategory: "Human Resources",
     price: 199,
     currency: "$",
     pricingModel: "monthly",
     features: [
-      "AI recruitment screening",
-      "Employee performance analytics",
-      "Talent management",
-      "HR automation",
-      "Compliance monitoring",
-      "Employee self-service",
-      "Mobile app",
-      "Integration with HRIS"
+      "Real-time tracking",
+      "Blockchain verification",
+      "Compliance reporting",
+      "Supplier management",
+      "Quality assurance",
+      "Cost optimization",
+      "Risk assessment",
+      "Analytics dashboard"
     ],
     benefits: [
-      "Reduce hiring time by 60%",
-      "Improve candidate quality by 40%",
-      "Automate 80% of HR tasks",
-      "Increase employee satisfaction by 65%"
+      "100% supply chain transparency",
+      "Reduce fraud and errors",
+      "Improve compliance",
+      "Optimize costs",
+      "Build trust"
     ],
-    targetAudience: ["HR managers", "Recruiters", "Talent acquisition teams", "Small to medium businesses"],
+    targetAudience: ["Manufacturers", "Retailers", "Logistics companies", "Food industry", "Pharmaceuticals"],
     marketPrice: "$199-599/month",
-    website: "https://ziontechgroup.com/ai-hr-platform",
+    website: "https://ziontechgroup.com/blockchain-supply-chain",
     contactEmail: "kleber@ziontechgroup.com",
-    tags: ["HR AI", "Recruitment", "Talent Management", "Employee Analytics"],
-    aiScore: 93,
+    tags: ["Blockchain", "Supply Chain", "Transparency", "Compliance", "Traceability"],
+    aiScore: 88,
     rating: 4.6,
-    reviewCount: 123,
-    featured: true,
+    reviewCount: 167,
+    featured: false,
     location: "Global",
     availability: "Immediate",
     author: {
@@ -1460,90 +1036,134 @@ export const MICRO_SAAS_SERVICES: MicroSaasService[] = [
       avatarUrl: "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto=format&fit=crop&w=100&h=100",
       verified: true
     },
-    images: ["https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&h=500"],
-    createdAt: "2024-12-01T20:00:00.000Z"
+    images: ["https://images.unsplash.com/photo-1633412802994-5c058f151b66?auto=format&fit=crop&w=800&h=500"],
+    createdAt: "2024-01-15T10:00:00.000Z"
   },
-
-  // AI-Powered Marketing Automation
   {
-    id: "ai-marketing-automation",
-    title: "AI Marketing Automation",
-    description: "Advanced marketing automation platform that uses AI to personalize campaigns, optimize conversions, and automate marketing workflows.",
-    category: "AI Services",
-    subcategory: "Marketing",
-    price: 179,
-    currency: "$",
-    pricingModel: "monthly",
-    features: [
-      "AI campaign optimization",
-      "Personalization engine",
-      "Lead scoring",
-      "Email automation",
-      "Social media management",
-      "Analytics dashboard",
-      "A/B testing",
-      "CRM integration"
-    ],
-    benefits: [
-      "Increase conversion rates by 50%",
-      "Reduce marketing costs by 35%",
-      "Improve customer engagement by 80%",
-      "Automate 90% of marketing tasks"
-    ],
-    targetAudience: ["Marketing managers", "Digital marketers", "E-commerce businesses", "Marketing agencies"],
-    marketPrice: "$179-539/month",
-    website: "https://ziontechgroup.com/ai-marketing-automation",
-    contactEmail: "kleber@ziontechgroup.com",
-    tags: ["Marketing AI", "Automation", "Personalization", "Lead Generation"],
-    aiScore: 95,
-    rating: 4.8,
-    reviewCount: 189,
-    featured: true,
-    location: "Global",
-    availability: "Immediate",
-    author: {
-      name: "Zion Tech Group",
-      id: "zion-tech-group",
-      avatarUrl: "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto=format&fit=crop&w=100&h=100",
-      verified: true
-    },
-    images: ["https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&h=500"],
-    createdAt: "2024-12-01T21:00:00.000Z"
-  },
-
-  // AI-Powered Legal Research Platform
-  {
-    id: "ai-legal-research-platform",
-    title: "AI Legal Research Platform",
-    description: "Intelligent legal research platform that uses AI to analyze case law, predict outcomes, and streamline legal research processes.",
-    category: "AI Services",
-    subcategory: "Legal Services",
+    id: "quantum-financial-modeling",
+    title: "Quantum Financial Modeling Platform",
+    description: "Advanced financial modeling platform using quantum computing principles for portfolio optimization and risk assessment.",
+    category: "Quantum Computing",
+    subcategory: "Financial Services",
     price: 299,
     currency: "$",
     pricingModel: "monthly",
     features: [
-      "AI case analysis",
-      "Legal research automation",
-      "Outcome prediction",
-      "Document analysis",
-      "Legal database access",
-      "Collaboration tools",
-      "Mobile app",
-      "Integration with legal software"
+      "Quantum-inspired algorithms",
+      "Portfolio optimization",
+      "Risk assessment",
+      "Market simulation",
+      "Real-time analytics",
+      "Custom models",
+      "API integration",
+      "Expert support"
     ],
     benefits: [
-      "Reduce research time by 70%",
-      "Improve case outcomes by 40%",
-      "Automate 80% of research tasks",
-      "Increase research accuracy by 90%"
+      "Superior portfolio performance",
+      "Advanced risk management",
+      "Faster calculations",
+      "Better insights",
+      "Competitive advantage"
     ],
-    targetAudience: ["Lawyers", "Legal researchers", "Law firms", "Legal departments"],
+    targetAudience: ["Investment firms", "Banks", "Hedge funds", "Financial advisors", "Trading companies"],
     marketPrice: "$299-899/month",
-    website: "https://ziontechgroup.com/ai-legal-research",
+    website: "https://ziontechgroup.com/quantum-financial-modeling",
     contactEmail: "kleber@ziontechgroup.com",
-    tags: ["Legal AI", "Case Analysis", "Legal Research", "Outcome Prediction"],
-    aiScore: 96,
+    tags: ["Quantum Computing", "Financial Modeling", "Portfolio Optimization", "Risk Assessment", "Trading"],
+    aiScore: 95,
     rating: 4.9,
+    reviewCount: 89,
+    featured: true,
+    location: "Global",
+    availability: "Immediate",
+    author: {
+      name: "Zion Tech Group",
+      id: "zion-tech-group",
+      avatarUrl: "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto=format&fit=crop&w=100&h=100",
+      verified: true
+    },
+    images: ["https://images.unsplash.com/photo-1633412802994-5c058f151b66?auto=format&fit=crop&w=800&h=500"],
+    createdAt: "2024-01-15T10:00:00.000Z"
+  },
+  {
+    id: "iot-health-monitoring",
+    title: "IoT Health Monitoring Platform",
+    description: "Comprehensive health monitoring platform using IoT devices for real-time health tracking and preventive care.",
+    category: "IoT & Edge",
+    subcategory: "Healthcare",
+    price: 129,
+    currency: "$",
+    pricingModel: "monthly",
+    features: [
+      "Real-time monitoring",
+      "Health analytics",
+      "Alert system",
+      "Device integration",
+      "Data visualization",
+      "Mobile app",
+      "Caregiver access",
+      "HIPAA compliance"
+    ],
+    benefits: [
+      "Early health issue detection",
+      "Reduce healthcare costs",
+      "Better patient outcomes",
+      "24/7 monitoring",
+      "Preventive care"
+    ],
+    targetAudience: ["Healthcare providers", "Patients", "Caregivers", "Insurance companies", "Wellness centers"],
+    marketPrice: "$129-349/month",
+    website: "https://ziontechgroup.com/iot-health-monitoring",
+    contactEmail: "kleber@ziontechgroup.com",
+    tags: ["IoT", "Healthcare", "Monitoring", "Preventive Care", "Wearables"],
+    aiScore: 91,
+    rating: 4.7,
+    reviewCount: 203,
+    featured: false,
+    location: "Global",
+    availability: "Immediate",
+    author: {
+      name: "Zion Tech Group",
+      id: "zion-tech-group",
+      avatarUrl: "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto=format&fit=crop&w=100&h=100",
+      verified: true
+    },
+    images: ["https://images.unsplash.com/photo-1633412802994-5c058f151b66?auto=format&fit=crop&w=800&h=500"],
+    createdAt: "2024-01-15T10:00:00.000Z"
+  },
+  {
+    id: "ai-legal-document-review",
+    title: "AI Legal Document Review Platform",
+    description: "Intelligent legal document review platform using AI for contract analysis, risk assessment, and compliance checking.",
+    category: "AI Services",
+    subcategory: "Legal Tech",
+    price: 179,
+    currency: "$",
+    pricingModel: "monthly",
+    features: [
+      "AI document analysis",
+      "Risk assessment",
+      "Compliance checking",
+      "Contract templates",
+      "Legal research",
+      "Collaboration tools",
+      "Version control",
+      "Audit trail"
+    ],
+    benefits: [
+      "Reduce review time by 80%",
+      "Improve accuracy",
+      "Risk mitigation",
+      "Cost savings",
+      "Better compliance"
+    ],
+    targetAudience: ["Law firms", "Legal departments", "Compliance officers", "Contract managers", "Risk managers"],
+    marketPrice: "$179-499/month",
+    website: "https://ziontechgroup.com/ai-legal-document-review",
+    contactEmail: "kleber@ziontechgroup.com",
+    tags: ["AI Legal", "Document Review", "Contract Analysis", "Compliance", "Risk Assessment"],
+    aiScore: 93,
+    rating: 4.8,
     reviewCount: 156,
     featured: true,
     location: "Global",
@@ -1554,43 +1174,42 @@ export const MICRO_SAAS_SERVICES: MicroSaasService[] = [
       avatarUrl: "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto=format&fit=crop&w=100&h=100",
       verified: true
     },
-    images: ["https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&h=500"],
-    createdAt: "2024-12-01T22:00:00.000Z"
+    images: ["https://images.unsplash.com/photo-1633412802994-5c058f151b66?auto=format&fit=crop&w=800&h=500"],
+    createdAt: "2024-01-15T10:00:00.000Z"
   },
-
-  // AI-Powered Education Platform
   {
-    id: "ai-education-platform",
-    title: "AI Education Platform",
-    description: "Intelligent education platform that uses AI to personalize learning experiences, track progress, and optimize educational outcomes.",
-    category: "AI Services",
-    subcategory: "Education",
-    price: 149,
+    id: "quantum-cybersecurity-suite",
+    title: "Quantum Cybersecurity Suite",
+    description: "Future-proof cybersecurity platform using quantum-resistant encryption and AI-powered threat detection.",
+    category: "Quantum Computing",
+    subcategory: "Cybersecurity",
+    price: 399,
     currency: "$",
     pricingModel: "monthly",
     features: [
-      "Personalized learning paths",
-      "Adaptive assessments",
-      "Progress tracking",
-      "Content recommendations",
-      "Student analytics",
-      "Teacher dashboard",
-      "Mobile app",
-      "LMS integration"
+      "Quantum-resistant encryption",
+      "AI threat detection",
+      "Zero-trust architecture",
+      "Compliance monitoring",
+      "Incident response",
+      "Security analytics",
+      "24/7 monitoring",
+      "Expert support"
     ],
     benefits: [
-      "Improve learning outcomes by 60%",
-      "Reduce learning time by 40%",
-      "Personalize education for each student",
-      "Increase student engagement by 80%"
+      "Future-proof security",
+      "Advanced threat protection",
+      "Compliance assurance",
+      "Risk reduction",
+      "Peace of mind"
     ],
-    targetAudience: ["Educational institutions", "Teachers", "Students", "Corporate training"],
-    marketPrice: "$149-449/month",
-    website: "https://ziontechgroup.com/ai-education",
+    targetAudience: ["Enterprises", "Financial institutions", "Healthcare", "Government", "Critical infrastructure"],
+    marketPrice: "$399-1,199/month",
+    website: "https://ziontechgroup.com/quantum-cybersecurity",
     contactEmail: "kleber@ziontechgroup.com",
-    tags: ["Education AI", "Personalized Learning", "Adaptive Learning", "Student Analytics"],
-    aiScore: 94,
-    rating: 4.7,
+    tags: ["Quantum Security", "Cybersecurity", "Encryption", "Threat Detection", "Compliance"],
+    aiScore: 96,
+    rating: 4.9,
     reviewCount: 134,
     featured: true,
     location: "Global",
@@ -1601,8 +1220,54 @@ export const MICRO_SAAS_SERVICES: MicroSaasService[] = [
       avatarUrl: "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto=format&fit=crop&w=100&h=100",
       verified: true
     },
-    images: ["https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&h=500"],
-    createdAt: "2024-12-01T23:00:00.000Z"
+    images: ["https://images.unsplash.com/photo-1633412802994-5c058f151b66?auto=format&fit=crop&w=800&h=500"],
+    createdAt: "2024-01-15T10:00:00.000Z"
+  },
+  {
+    id: "ai-powered-project-management",
+    title: "AI-Powered Project Management Platform",
+    description: "Intelligent project management platform using AI for task optimization, resource allocation, and risk prediction.",
+    category: "AI Services",
+    subcategory: "Project Management",
+    price: 119,
+    currency: "$",
+    pricingModel: "monthly",
+    features: [
+      "AI task optimization",
+      "Resource allocation",
+      "Risk prediction",
+      "Progress tracking",
+      "Team collaboration",
+      "Time management",
+      "Budget tracking",
+      "Reporting tools"
+    ],
+    benefits: [
+      "Improve project success rate",
+      "Optimize resources",
+      "Reduce delays",
+      "Better collaboration",
+      "Data-driven decisions"
+    ],
+    targetAudience: ["Project managers", "Teams", "Consultants", "Agencies", "Enterprises"],
+    marketPrice: "$119-349/month",
+    website: "https://ziontechgroup.com/ai-project-management",
+    contactEmail: "kleber@ziontechgroup.com",
+    tags: ["AI Project Management", "Task Optimization", "Resource Management", "Risk Assessment", "Collaboration"],
+    aiScore: 89,
+    rating: 4.6,
+    reviewCount: 278,
+    featured: false,
+    location: "Global",
+    availability: "Immediate",
+    author: {
+      name: "Zion Tech Group",
+      id: "zion-tech-group",
+      avatarUrl: "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto=format&fit=crop&w=100&h=100",
+      verified: true
+    },
+    images: ["https://images.unsplash.com/photo-1633412802994-5c058f151b66?auto=format&fit=crop&w=800&h=500"],
+    createdAt: "2024-01-15T10:00:00.000Z"
   }
 ];
 export const getMicroSaasServiceById = (id: string): MicroSaasService | undefined => {

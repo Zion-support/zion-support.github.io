@@ -10,7 +10,7 @@ export const PerformanceOptimizedLoader = memo<LoadingSpinnerProps>(({
   color = 'primary', 
   text,
   fullScreen = false 
-}: LoaderProps) {
+}: LoaderProps) => {
   const sizeClasses = {
     sm: 'w-6 h-6',
     md: 'w-12 h-12',

@@ -154,21 +154,8 @@ export function PrimaryNav() {
                   </Link>
                 </>
               )}
-            </Link>
-            <LanguageSelector />
-            <ModeToggle />
-            {!isLoggedIn && (
-              <>
-                <Link href="/login" className="text-sm hover:text-primary" data-testid="login-link">
-                  {t('login', 'Login')}
-                </Link>
-                <Link href="/signup" className="ml-2 text-sm hover:text-primary">
-                  {t('signup', 'Sign up')}
-                </Link>
-              </>
-            )}
-            {isLoggedIn && <UserMenu />}
-          </div>
+              {isLoggedIn && <UserMenu />}
+            </div>
           
           {/* Mobile menu button */}
           <button

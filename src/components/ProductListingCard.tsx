@@ -9,7 +9,7 @@ import { FavoriteButton } from "@/components/FavoriteButton";
 import { useDispatch } from 'react-redux';
 import type { AppDispatch } from '@/store';
 import { addItem } from '@/store/cartSlice';
-import Image from 'next/image'; // Import next/image
+// import Image from "next/image"; // TODO: Replace with regular img or custom Image component // Import next/image
 
 interface ProductListingCardProps {
   listing: ProductListing;

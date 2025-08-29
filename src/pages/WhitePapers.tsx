@@ -149,7 +149,7 @@ export default function WhitePapers() {
       author: 'Dr. James Kim, Head of Quantum Research',
       date: '2023-12-10',
       category: 'emerging-tech',
-      summary: 'Forward-looking analysis of quantum computing's potential impact on business operations, cryptography, and competitive advantage.',
+      summary: 'Forward-looking analysis of quantum computing\'s potential impact on business operations, cryptography, and competitive advantage.',
       keyInsights: [
         'Quantum computing will revolutionize cryptography by 2030',
         'Early adoption provides competitive advantages',
