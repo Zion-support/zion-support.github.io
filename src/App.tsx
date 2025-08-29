@@ -145,6 +145,16 @@ const Careers = React.lazy(() => import('./pages/Careers'));
 
 // Company/resources simple pages (declared above in New pages section)
 
+// Missing service components that are referenced in routes
+const AffiliateMarketingTracker = React.lazy(() => import('./pages/services/AffiliateMarketingTracker'));
+const UptimeSLAMonitor = React.lazy(() => import('./pages/services/UptimeSLAMonitor'));
+const SOC2ComplianceTracker = React.lazy(() => import('./pages/services/SOC2ComplianceTracker'));
+const EmployeeSchedulingSaaS = React.lazy(() => import('./pages/services/EmployeeSchedulingSaaS'));
+const AISupportHelpdesk = React.lazy(() => import('./pages/services/AISupportHelpdesk'));
+
+// Missing comparison page
+const ServicesComparisonPage = React.lazy(() => import('./pages/ServicesComparisonPage'));
+
 const Marketplace = () => (
   <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 flex items-center justify-center">
     <SEO 
