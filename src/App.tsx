@@ -112,6 +112,7 @@ const ITConsulting = React.lazy(() => import('./pages/services/ITConsulting'));
 const OnsiteSupport = React.lazy(() => import('./pages/OnsiteSupport'));
 const GreenIT = React.lazy(() => import('./pages/services/GreenIT'));
 const QuantumComputing = React.lazy(() => import('./pages/services/QuantumComputing'));
+const QuantumComputingAsAService = React.lazy(() => import('./pages/services/QuantumComputingAsAService'));
 const SpaceTech = React.lazy(() => import('./pages/services/SpaceTech'));
 
 // Advanced AI services
@@ -136,6 +137,7 @@ const AIContentGenerator = React.lazy(() => import('./pages/services/AIContentGe
 const AIBusinessIntelligencePlatform = React.lazy(() => import('./pages/services/AIBusinessIntelligencePlatform'));
 const AIFinancialTradingPlatform = React.lazy(() => import('./pages/services/AIFinancialTradingPlatform'));
 const AISupplyChainOptimization = React.lazy(() => import('./pages/services/AISupplyChainOptimization'));
+const AICustomerSuccessPrediction = React.lazy(() => import('./pages/services/AICustomerSuccessPrediction'));
 const AIHRPlatform = React.lazy(() => import('./pages/services/AIHRPlatform'));
 const AIMarketingAutomation = React.lazy(() => import('./pages/services/AIMarketingAutomation'));
 const AILegalResearchPlatform = React.lazy(() => import('./pages/services/AILegalResearchPlatform'));
@@ -144,7 +146,7 @@ const AIEducationPlatform = React.lazy(() => import('./pages/services/AIEducatio
 // Additional Innovative AI Services
 const AIProjectManagementPlatform = React.lazy(() => import('./pages/services/ai-project-management-platform'));
 const AICybersecurityThreatDetection = React.lazy(() => import('./pages/services/ai-cybersecurity-threat-detection'));
-const AIHealthcareAnalyticsPlatform = React.lazy(() => import('./pages/services/ai-healthcare-analytics-platform'));
+const AIHealthcareAnalyticsPlatform = React.lazy(() => import('./pages/services/AIHealthcareAnalyticsPlatform'));
 
 // New innovative services
 const AIContentGenerationPlatform = React.lazy(() => import('./pages/services/AIContentGenerationPlatform'));
@@ -306,6 +308,7 @@ function App() {
               <Route path="/services/it-consulting" element={<ITConsulting />} />
               <Route path="/services/green-it" element={<GreenIT />} />
               <Route path="/services/quantum-computing" element={<QuantumComputing />} />
+              <Route path="/services/quantum-computing-as-a-service" element={<QuantumComputingAsAService />} />
               <Route path="/services/space-tech" element={<SpaceTech />} />
               
               {/* Advanced AI Service Routes */}
@@ -322,6 +325,7 @@ function App() {
               <Route path="/services/ai-business-intelligence-platform" element={<AIBusinessIntelligencePlatform />} />
               <Route path="/services/ai-financial-trading-platform" element={<AIFinancialTradingPlatform />} />
               <Route path="/services/ai-supply-chain-optimization" element={<AISupplyChainOptimization />} />
+              <Route path="/services/ai-customer-success-prediction" element={<AICustomerSuccessPrediction />} />
               <Route path="/services/ai-hr-platform" element={<AIHRPlatform />} />
               <Route path="/services/ai-marketing-automation" element={<AIMarketingAutomation />} />
               <Route path="/services/ai-legal-research-platform" element={<AILegalResearchPlatform />} />
