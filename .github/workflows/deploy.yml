@@ -1,82 +1,32 @@
-name: Deploy
+name: Deploy (DISABLED - Migrated to PM2)
 
 on:
-  push:
-    branches: [ main ]
-  workflow_dispatch:
-
-permissions:
-  contents: read
+  # This workflow is disabled and migrated to PM2 automation
+  # The original workflow was handling automation tasks
+  # Now handled by PM2 processes as configured in ecosystem.config.cjs
+  workflow_dispatch: # Only manual triggers allowed
+  # All automatic triggers removed
 
 jobs:
-  deploy:
+  disabled:
     runs-on: ubuntu-latest
-    environment: production
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v4
-
-      - name: Setup Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: '20'
-          cache: 'npm'
-
-      - name: Install dependencies
-        run: npm ci
-
-      - name: Build project
-        run: npm run build
-
-      - name: Verify build output
+      - name: Workflow Disabled
         run: |
-          if [ ! -d dist ]; then
-            echo "Build failed: dist folder not found"
-            exit 1
-          fi
-          echo "Build successful! Found dist folder with:"
-          ls -la dist/
-          
-          # Check for essential files
-          if [ -f dist/index.html ]; then
-            echo "✓ index.html found"
-          else
-            echo "✗ index.html not found"
-            exit 1
-          fi
-          
-          if [ -f dist/css/index-*.css ]; then
-            echo "✓ CSS files found"
-          else
-            echo "✗ CSS files not found"
-            exit 1
-          fi
-          
-          if [ -f dist/js/index-*.js ]; then
-            echo "✓ JavaScript files found"
-          else
-            echo "✗ JavaScript files not found"
-            exit 1
-          fi
-
-      - name: Upload build artifacts
-        uses: actions/upload-artifact@v4
-        with:
-          name: production-build
-          path: dist
-          retention-days: 30
-
-      - name: Deploy to production
-        run: |
-          echo "🚀 Deploying to production..."
-          echo "Build completed successfully at $(date)"
-          echo "Ready for deployment to your hosting platform"
-          
-          # Add your deployment commands here
-          # Examples:
-          # - AWS S3: aws s3 sync dist/ s3://your-bucket-name/
-          # - Netlify: npx netlify-cli deploy --prod --dir=dist
-          # - Vercel: npx vercel --prod --cwd=dist
-          # - Custom script: ./scripts/deploy.sh
-          
-          echo "✅ Deployment workflow completed"
+          echo "This workflow has been disabled and migrated to PM2 automation."
+          echo "Automation tasks are now handled by PM2 processes:"
+          echo "- console-error-fixer (every 15 minutes)"
+          echo "- link-checker (every 30 minutes)"
+          echo "- continuous-improvement (every 2 hours)"
+          echo "- daily-build-test (every hour)"
+          echo "- security-audit (every 4 hours)"
+          echo "- dependency-updates (every 6 hours)"
+          echo "- performance-monitor (every 2 hours)"
+          echo "- quality-checks (every 3 hours)"
+          echo "- link-integrity (every 2 hours)"
+          echo "- front-maximizer (every 4 hours)"
+          echo "- sitemap-runner (every 6 hours)"
+          echo ""
+          echo "PM2 ecosystem.config.cjs contains the full automation configuration."
+          echo "Check PM2 status with: pm2 status"
+          exit 0
