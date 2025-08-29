@@ -15,7 +15,6 @@ import {
   Award,
   Calendar,
   MapPin,
-  Device,
   Monitor,
   Smartphone,
   Tablet

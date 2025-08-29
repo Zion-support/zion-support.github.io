@@ -84,6 +84,10 @@ const AIProjectManagement = lazy(() => import('./pages/services/AIProjectManagem
 const AICustomerSupportAutomation = lazy(() => import('./pages/services/AICustomerSupportAutomation'));
 const AIFinancialAnalytics = lazy(() => import('./pages/services/AIFinancialAnalytics'));
 const AIMarketingAutomation = lazy(() => import('./pages/services/AIMarketingAutomation'));
+const AICustomerSuccessPrediction = lazy(() => import('./pages/services/AICustomerSuccessPrediction'));
+const AISupplyChainOptimization = lazy(() => import('./pages/services/AISupplyChainOptimization'));
+const AICybersecurityPlatform = lazy(() => import('./pages/services/AICybersecurityPlatform'));
+const AIContentMarketingSuite = lazy(() => import('./pages/services/AIContentMarketingSuite'));
 const NewServicesShowcase2025 = lazy(() => import('./pages/NewServicesShowcase2025'));
 
 // Comprehensive improvements components
@@ -94,10 +98,7 @@ const ComprehensiveImprovements2025 = lazy(() => import('./pages/ComprehensiveIm
 
 // New innovative AI services
 const AIAutonomousResearchAssistant = lazy(() => import('./pages/services/AIAutonomousResearchAssistant'));
-const AISupplyChainOptimization = lazy(() => import('./pages/services/AISupplyChainOptimization'));
-const AIContentMarketingSuite = lazy(() => import('./pages/services/AIContentMarketingSuite'));
 const AIQuantumHybridPlatform = lazy(() => import('./pages/services/AIQuantumHybridPlatform'));
-const AICybersecurityPlatform = lazy(() => import('./pages/services/AICybersecurityPlatform'));
 const AIHealthcarePlatform = lazy(() => import('./pages/services/AIHealthcarePlatform'));
 const AIBusinessIntelligence = lazy(() => import('./pages/services/AIBusinessIntelligence'));
 const DigitalTransformation = lazy(() => import('./pages/services/DigitalTransformation'));
@@ -195,7 +196,7 @@ function App() {
     <HelmetProvider>
       <ErrorBoundary fallback={<ErrorFallback error={new Error()} resetErrorBoundary={() => {}} />}>
         <Router>
-          <div className="App min-h-screen bg-white">
+          <div className="App min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
             {/* SEO Component */}
             <SEO />
             
@@ -333,6 +334,9 @@ function App() {
                     <Route path="/services/ai-seo" element={<AIPoweredSEO />} />
                     <Route path="/services/interview-assessment" element={<InterviewAssessmentAI />} />
                     <Route path="/services/ai-content-marketing-suite" element={<AIContentMarketingSuite />} />
+                    <Route path="/services/ai-customer-success-prediction" element={<AICustomerSuccessPrediction />} />
+                    <Route path="/services/ai-supply-chain-optimization" element={<AISupplyChainOptimization />} />
+                    <Route path="/services/ai-cybersecurity-platform" element={<AICybersecurityPlatform />} />
                     <Route path="/services/ai-customer-support-automation" element={<AICustomerSupportAutomation />} />
                     <Route path="/services/ai-project-management" element={<AIProjectManagement />} />
                     <Route path="/services/ai-financial-analytics" element={<AIFinancialAnalytics />} />
@@ -444,47 +448,7 @@ function App() {
       </ErrorBoundary>
     </HelmetProvider>
   );
-
-  // Memoize the header and footer to prevent unnecessary re-renders
-  const header = useMemo(() => <AppHeader />, []);
-  const footer = useMemo(() => <Footer />, []);
-
-  // Memoize the chat assistant to prevent unnecessary re-renders
-  const chatAssistant = useMemo(() => <ChatAssistant />, []);
-
-  // Memoize the performance components to prevent unnecessary re-renders
-  const performanceComponents = useMemo(() => (
-    <>
-      {/* <PerformanceOptimizer />
-      <AdvancedPerformanceMonitor />
-      <InteractiveUserExperience />
-      <SecurityEnhancer />
-      <EnhancedAccessibilityPanel /> */}
-    </>
-  ), []);
-
-  return (
-    <EnhancedErrorBoundary>
-      <Router>
-        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-          {header}
-          
-          <main className="flex-1">
-            <Suspense fallback={<EnhancedLoadingSpinner />}>
-              <Routes>
-                {routeElements}
-              </Routes>
-            </Suspense>
-          </main>
-
-          {footer}
-          {chatAssistant}
-          {performanceComponents}
-        </div>
-      </Router>
-    </EnhancedErrorBoundary>
-  );
-});
+}
 
 App.displayName = 'App';
 
