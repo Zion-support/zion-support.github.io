@@ -1,18 +1,13 @@
 import React, { useState, useEffect, useRef, useCallback } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-<<<<<<< HEAD
-import { Search, X, Filter, TrendingUp, Clock, Globe, Building, Code, Shield } from 'lucide-react';
+import { Search, X, Filter, TrendingUp, Clock, Globe, Building, Code, Shield, Sparkles, Brain, Zap, ArrowRight } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
 import { useDebounce } from '@/hooks/useDebounce';
-=======
-import { Search, X, Sparkles, Brain, Zap, TrendingUp, Clock, ArrowRight } from 'lucide-react';
->>>>>>> c96b5a35dcd0e882c20e1a1b4af59f1237edbcbf
 
 interface SearchResult {
   id: string;
   title: string;
   description: string;
-<<<<<<< HEAD
   url: string;
   type: 'service' | 'page' | 'blog' | 'case-study';
   category: string;
@@ -231,10 +226,7 @@ export function EnhancedSearch({
     const handleClickOutside = (event: MouseEvent) => {
       if (searchRef.current && !searchRef.current.contains(event.target as Node)) {
         setIsOpen(false);
-<<<<<<< HEAD
-=======
         setSelectedIndex(-1);
->>>>>>> c96b5a35dcd0e882c20e1a1b4af59f1237edbcbf
       }
     };
 
@@ -245,71 +237,46 @@ export function EnhancedSearch({
   // Handle keyboard navigation
   useEffect(() => {
     const handleKeyDown = (event: KeyboardEvent) => {
-<<<<<<< HEAD
       if (event.key === 'Escape') {
         setIsOpen(false);
+        setSelectedIndex(-1);
       } else if (event.key === 'k' && (event.metaKey || event.ctrlKey)) {
         event.preventDefault();
         setIsOpen(true);
         inputRef.current?.focus();
-=======
-      if (!isOpen) return;
-
-      switch (event.key) {
-        case 'ArrowDown':
-          event.preventDefault();
-          setSelectedIndex(prev => 
-            prev < results.length - 1 ? prev + 1 : 0
-          );
-          break;
-        case 'ArrowUp':
-          event.preventDefault();
-          setSelectedIndex(prev => 
-            prev > 0 ? prev - 1 : results.length - 1
-          );
-          break;
-        case 'Enter':
-          event.preventDefault();
-          if (selectedIndex >= 0 && results[selectedIndex]) {
-            handleResultClick(results[selectedIndex]);
-          } else if (query.trim()) {
-            handleSearch();
-          }
-          break;
-        case 'Escape':
-          setIsOpen(false);
-          setSelectedIndex(-1);
-          break;
->>>>>>> c96b5a35dcd0e882c20e1a1b4af59f1237edbcbf
+      } else if (isOpen) {
+        switch (event.key) {
+          case 'ArrowDown':
+            event.preventDefault();
+            setSelectedIndex(prev => 
+              prev < results.length - 1 ? prev + 1 : 0
+            );
+            break;
+          case 'ArrowUp':
+            event.preventDefault();
+            setSelectedIndex(prev => 
+              prev > 0 ? prev - 1 : results.length - 1
+            );
+            break;
+          case 'Enter':
+            event.preventDefault();
+            if (selectedIndex >= 0 && results[selectedIndex]) {
+              handleResultClick(results[selectedIndex]);
+            } else if (query.trim()) {
+              handleSearch();
+            }
+            break;
+        }
       }
     };
 
     document.addEventListener('keydown', handleKeyDown);
     return () => document.removeEventListener('keydown', handleKeyDown);
-<<<<<<< HEAD
-  }, []);
-
-  const handleSearch = useCallback((searchQuery: string) => {
-    if (searchQuery.trim()) {
-      // Add to recent searches
-      const updated = [searchQuery, ...recentSearches.filter(s => s !== searchQuery)].slice(0, 5);
-      setRecentSearches(updated);
-      localStorage.setItem('zion-recent-searches', JSON.stringify(updated));
-      
-      // Navigate to search results or close search
-      setIsOpen(false);
-      setQuery('');
-    }
-  }, [recentSearches]);
-
-  const handleResultClick = (result: SearchResult) => {
-    handleSearch(result.title);
-    navigate(result.url);
-=======
   }, [isOpen, results, selectedIndex, query]);
 
-  const handleSearch = useCallback(async () => {
-    if (!query.trim()) return;
+  const handleSearch = useCallback(async (searchQuery?: string) => {
+    const queryToSearch = searchQuery || query;
+    if (!queryToSearch.trim()) return;
 
     setIsLoading(true);
     
@@ -317,29 +284,32 @@ export function EnhancedSearch({
     await new Promise(resolve => setTimeout(resolve, 500));
     
     // Filter results based on query
-    const filteredResults = mockSearchResults.filter(result =>
-      result.title.toLowerCase().includes(query.toLowerCase()) ||
-      result.description.toLowerCase().includes(query.toLowerCase())
+    const filteredResults = searchData.filter(result =>
+      result.title.toLowerCase().includes(queryToSearch.toLowerCase()) ||
+      result.description.toLowerCase().includes(queryToSearch.toLowerCase())
     );
 
     setResults(filteredResults);
-    setSuggestions(mockSuggestions);
     setIsLoading(false);
     setIsOpen(true);
+    
+    // Add to recent searches
+    const updated = [queryToSearch, ...recentSearches.filter(s => s !== queryToSearch)].slice(0, 5);
+    setRecentSearches(updated);
+    localStorage.setItem('zion-recent-searches', JSON.stringify(updated));
+  }, [query, recentSearches]);
+
+  const handleResultClick = (result: SearchResult) => {
+    handleSearch(result.title);
+    navigate(result.url);
+    setIsOpen(false);
+    setQuery('');
     
     if (onSearch) {
       onSearch(query);
     }
-  }, [query, onSearch]);
-
-  const handleResultClick = (result: SearchResult) => {
-    window.location.href = result.url;
->>>>>>> c96b5a35dcd0e882c20e1a1b4af59f1237edbcbf
-    setIsOpen(false);
-    setQuery('');
   };
 
-<<<<<<< HEAD
   const toggleFilter = (filterType: keyof SearchFilter, value: string) => {
     setFilters(prev => ({
       ...prev,
@@ -353,14 +323,6 @@ export function EnhancedSearch({
     setFilters({ type: [], category: [], tags: [] });
   };
 
-  const getTypeIcon = (type: string) => {
-    switch (type) {
-      case 'service': return <Code className="h-4 w-4" />;
-      case 'page': return <Globe className="h-4 w-4" />;
-      case 'blog': return <TrendingUp className="h-4 w-4" />;
-      case 'case-study': return <Building className="h-4 w-4" />;
-      default: return <Search className="h-4 w-4" />;
-=======
   const handleSuggestionClick = (suggestion: SearchSuggestion) => {
     setQuery(suggestion.text);
     handleSearch();
@@ -388,6 +350,16 @@ export function EnhancedSearch({
     return <Search className="w-5 h-5" />;
   };
 
+  const getTypeIcon = (type: string) => {
+    switch (type) {
+      case 'service': return <Code className="h-4 w-4" />;
+      case 'page': return <Globe className="h-4 w-4" />;
+      case 'blog': return <TrendingUp className="h-4 w-4" />;
+      case 'case-study': return <Building className="h-4 w-4" />;
+      default: return <Search className="h-4 w-4" />;
+    }
+  };
+
   const getVariantClasses = () => {
     switch (variant) {
       case 'futuristic':
@@ -396,7 +368,6 @@ export function EnhancedSearch({
         return 'bg-gray-100 border border-gray-200 hover:border-gray-300 focus-within:border-blue-500 focus-within:ring-2 focus-within:ring-blue-500/20';
       default:
         return 'bg-white border border-gray-300 hover:border-gray-400 focus-within:border-blue-500 focus-within:ring-2 focus-within:ring-blue-500/20';
->>>>>>> c96b5a35dcd0e882c20e1a1b4af59f1237edbcbf
     }
   };
 
@@ -750,14 +721,9 @@ export function EnhancedSearch({
                 </p>
               </div>
             )}
->>>>>>> c96b5a35dcd0e882c20e1a1b4af59f1237edbcbf
           </motion.div>
         )}
       </AnimatePresence>
     </div>
   );
-<<<<<<< HEAD
 };
-=======
-}
->>>>>>> c96b5a35dcd0e882c20e1a1b4af59f1237edbcbf

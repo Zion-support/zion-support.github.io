@@ -125,6 +125,7 @@ export function PrimaryNav() {
                 </>)}
               {isLoggedIn && <UserMenu />}
             </div>
+          </div>
           
           {/* Mobile menu button */}
           <button className="md:hidden p-2 rounded focus:outline-none flex-shrink-0" onClick={() => setMobileMenuOpen(!mobileMenuOpen)} aria-expanded={mobileMenuOpen} aria-label={t('general.toggle_mobile_menu')}>
