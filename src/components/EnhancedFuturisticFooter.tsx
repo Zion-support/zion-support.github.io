@@ -118,6 +118,19 @@ export const EnhancedFuturisticFooter: React.FC = () => {
       ]
     },
     {
+      title: 'Innovative AI Services',
+      icon: Brain,
+      color: 'from-cyan-600 to-blue-600',
+      links: [
+        { name: 'AI Content Generation Platform', href: '/services/ai-content-generation-platform' },
+        { name: 'AI Cybersecurity Threat Intelligence', href: '/services/ai-cybersecurity-threat-intelligence' },
+        { name: 'AI Customer Experience Analytics', href: '/services/ai-customer-experience-analytics' },
+        { name: 'AI Business Intelligence', href: '/services/ai-business-intelligence' },
+        { name: 'AI Sales Copilot', href: '/services/ai-sales-copilot' },
+        { name: 'AI Compliance Assistant', href: '/services/ai-compliance-assistant' }
+      ]
+    },
+    {
       title: 'AI & Machine Learning',
       icon: Brain,
       color: 'from-indigo-600 to-purple-600',
