@@ -2,6 +2,7 @@ import { TestimonialsSection } from '@/components/TestimonialsSection';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
+
 import { COMPREHENSIVE_SERVICES } from '@/data/comprehensiveServices';
 import {
   AlertTriangle,
@@ -236,32 +237,55 @@ export default function CybersecurityServicesPage() {
                 Discover how our cybersecurity solutions can protect your business and ensure compliance
               </p>
             </div>
-            <Tabs value={selectedCategory} onValueChange={setSelectedCategory} className="w-full">
-              <TabsList className="grid w-full grid-cols-3 mb-8">
-                <TabsTrigger value="all">All Security Services</TabsTrigger>
+            <div className="w-full">
+              <div className="flex flex-wrap gap-2 mb-8 justify-center">
+                <button
+                  onClick={() => setSelectedCategory('all')}
+                  className={`px-4 py-2 rounded-lg font-medium transition-all duration-300 ${
+                    selectedCategory === 'all'
+                      ? 'bg-zion-cyan text-white'
+                      : 'bg-zion-blue text-zion-slate-light hover:bg-zion-blue-light'
+                  }`}
+                >
+                  All Security Services
+                </button>
                 {SECURITY_SERVICE_CATEGORIES.map((category) => (
-                  <TabsTrigger key={category.id} value={category.id}>
+                  <button
+                    key={category.id}
+                    onClick={() => setSelectedCategory(category.id)}
+                    className={`px-4 py-2 rounded-lg font-medium transition-all duration-300 ${
+                      selectedCategory === category.id
+                        ? 'bg-zion-cyan text-white'
+                        : 'bg-zion-blue text-zion-slate-light hover:bg-zion-blue-light'
+                    }`}
+                  >
                     {category.name}
-                  </TabsTrigger>
+                  </button>
                 ))}
-              </TabsList>
-              <TabsContent value="all" className="space-y-6">
-                <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-                  {CYBERSECURITY_SERVICES.map((service) => (
-                    <SecurityServiceCard key={service.id} service={service} />
-                  ))}
-                </div>
-              </TabsContent>
-              {SECURITY_SERVICE_CATEGORIES.map((category) => (
-                <TabsContent key={category.id} value={category.id} className="space-y-6">
+              </div>
+              
+              {selectedCategory === 'all' && (
+                <div className="space-y-6">
                   <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-                    {category.services.map((service) => (
+                    {CYBERSECURITY_SERVICES.map((service) => (
                       <SecurityServiceCard key={service.id} service={service} />
                     ))}
                   </div>
-                </TabsContent>
+                </div>
+              )}
+              
+              {SECURITY_SERVICE_CATEGORIES.map((category) => (
+                selectedCategory === category.id && (
+                  <div key={category.id} className="space-y-6">
+                    <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+                      {category.services.map((service) => (
+                        <SecurityServiceCard key={service.id} service={service} />
+                      ))}
+                    </div>
+                  </div>
+                )
               ))}
-            </Tabs>
+            </div>
           </div>
         </section>
         {/* Security Benefits Section */}
