@@ -1,7 +1,7 @@
 import React, { Suspense, lazy } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { AppHeader } from './layout/AppHeader';
-import { Sidebar } from './components/Sidebar';
+import EnhancedSidebar from './components/EnhancedSidebar';
 import { EnhancedFuturisticFooter as Footer } from './components/EnhancedFuturisticFooter';
 import { ChatAssistant } from './components/ChatAssistant';
 import LoadingSpinner from './components/ui/LoadingSpinner';
@@ -154,6 +154,9 @@ const ComprehensiveServicesShowcase2029 = lazy(() => import('./pages/Comprehensi
 // 2031 Comprehensive Services Showcase
 const ComprehensiveServicesShowcase2031 = lazy(() => import('./pages/ComprehensiveServicesShowcase2031'));
 
+// 2032 Comprehensive Services Showcase
+const ComprehensiveServicesShowcase2032 = lazy(() => import('./pages/ComprehensiveServicesShowcase2032'));
+
 // Additional innovative AI services
 const AIAutonomousSupplyChain = lazy(() => import('./pages/services/AIAutonomousSupplyChain'));
 const AICybersecurityThreatIntelligence = lazy(() => import('./pages/services/AICybersecurityThreatIntelligence'));
@@ -200,7 +203,7 @@ function App() {
       <Router>
         <div className="min-h-screen bg-futuristic">
           <AppHeader />
-          <Sidebar />
+          <EnhancedSidebar />
           
           <main className="flex-1 lg:ml-80">
             <Suspense fallback={<LoadingSpinner />}>
@@ -325,6 +328,14 @@ function App() {
                 <Route path="/ai-services-2031" element={<ComprehensiveServicesShowcase2031 />} />
                 <Route path="/it-services-2031" element={<ComprehensiveServicesShowcase2031 />} />
                 <Route path="/micro-saas-2031" element={<ComprehensiveServicesShowcase2031 />} />
+                
+                {/* 2032 Comprehensive Services Showcase */}
+                <Route path="/comprehensive-services-showcase-2032" element={<ComprehensiveServicesShowcase2032 />} />
+                <Route path="/services-2032" element={<ComprehensiveServicesShowcase2032 />} />
+                <Route path="/ai-services-2032" element={<ComprehensiveServicesShowcase2032 />} />
+                <Route path="/it-services-2032" element={<ComprehensiveServicesShowcase2032 />} />
+                <Route path="/micro-saas-2032" element={<ComprehensiveServicesShowcase2032 />} />
+                <Route path="/revolutionary-ai-services-2032" element={<ComprehensiveServicesShowcase2032 />} />
                 
                 {/* Additional Pages */}
                 <Route path="/marketplace" element={<Marketplace />} />

@@ -75,6 +75,23 @@ export const EnhancedFuturisticFooter: React.FC = () => {
 
   const footerSections = [
     {
+      title: 'Revolutionary AI Services 2032',
+      featured: true,
+      links: [
+        { name: 'Revolutionary AI Services 2032', href: '/revolutionary-ai-services-2032', featured: true },
+        { name: 'AI Autonomous Business Intelligence', href: '/revolutionary-ai-services-2032#ai-autonomous-business-intelligence-2032', featured: true },
+        { name: 'AI Customer Experience Orchestrator', href: '/revolutionary-ai-services-2032#ai-customer-experience-orchestrator-2032', featured: true },
+        { name: 'AI Cybersecurity Threat Hunter', href: '/revolutionary-ai-services-2032#ai-cybersecurity-threat-hunter-2032', featured: true },
+        { name: 'AI Financial Analytics Suite', href: '/revolutionary-ai-services-2032#ai-financial-analytics-suite-2032', featured: true },
+        { name: 'AI Healthcare Analytics Platform', href: '/revolutionary-ai-services-2032#ai-healthcare-analytics-platform-2032', featured: true },
+        { name: 'AI Supply Chain Optimizer', href: '/revolutionary-ai-services-2032#ai-supply-chain-optimizer-2032', featured: true },
+        { name: 'AI Marketing Automation Suite', href: '/revolutionary-ai-services-2032#ai-marketing-automation-suite-2032', featured: true },
+        { name: 'AI HR Talent Management Platform', href: '/revolutionary-ai-services-2032#ai-hr-talent-platform-2032', featured: true },
+        { name: 'AI Legal Document Automation', href: '/revolutionary-ai-services-2032#ai-legal-document-automation-2032', featured: true },
+        { name: 'AI Content Creation Studio', href: '/revolutionary-ai-services-2032#ai-content-creation-studio-2032', featured: true }
+      ]
+    },
+    {
       title: 'Revolutionary 2030 Services',
       featured: true,
       links: [

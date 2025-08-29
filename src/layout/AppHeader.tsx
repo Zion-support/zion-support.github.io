@@ -131,6 +131,14 @@ export function AppHeader() {
       description: 'Future Technology Solutions',
       featured: true,
       color: 'from-purple-500 to-pink-500'
+    },
+    { 
+      name: 'Revolutionary AI Services 2032', 
+      href: '/revolutionary-ai-services-2032', 
+      icon: Rocket, 
+      description: 'Next-Gen AI Solutions',
+      featured: true,
+      color: 'from-indigo-500 to-purple-500'
     }
   ];
 
