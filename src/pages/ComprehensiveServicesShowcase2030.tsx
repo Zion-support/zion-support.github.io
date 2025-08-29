@@ -71,12 +71,19 @@ import {
   Phone as PhoneIcon,
   Mail as MailIcon3,
   MapPin as MapPinIcon,
-  Infinity as InfinityIcon
+  Infinity as InfinityIcon,
+  BarChart3 as BarChart3Icon2,
+  Calculator,
+  Scale,
+  Users as UsersIcon
 } from 'lucide-react';
 import { SEO } from '../components/SEO';
 import { COMPREHENSIVE_INNOVATIVE_SERVICES_2030 } from '../data/comprehensiveInnovativeServices2030';
 import { ADDITIONAL_INNOVATIVE_SERVICES_2030 } from '../data/additionalInnovativeServices2030';
 import { SPECIALIZED_MICRO_SAAS_SERVICES_2030 } from '../data/specializedMicroSaasServices2030';
+import { ServiceComparisonTool } from '../components/ServiceComparisonTool';
+import { ROICalculator } from '../components/ROICalculator';
+import { EnhancedContactIntegration } from '../components/EnhancedContactIntegration';
 
 // Combine all services
 const ALL_SERVICES = [
@@ -89,6 +96,10 @@ export default function ComprehensiveServicesShowcase2030() {
   const [activeCategory, setActiveCategory] = useState('all');
   const [searchTerm, setSearchTerm] = useState('');
   const [sortBy, setSortBy] = useState('rating');
+  const [showComparisonTool, setShowComparisonTool] = useState(false);
+  const [showROICalculator, setShowROICalculator] = useState(false);
+  const [showContactIntegration, setShowContactIntegration] = useState(false);
+  const [selectedServiceForROI, setSelectedServiceForROI] = useState<any>(null);
 
   // Get unique categories from all services
   const categories = [
@@ -239,6 +250,31 @@ export default function ComprehensiveServicesShowcase2030() {
                   <MapPin className="w-5 h-5 text-cyan-400" />
                   <span>364 E Main St STE 1008, Middletown DE 19709</span>
                 </div>
+              </div>
+              
+              {/* Enhanced Action Buttons */}
+              <div className="flex flex-wrap justify-center gap-4 mt-8">
+                <button
+                  onClick={() => setShowComparisonTool(true)}
+                  className="px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-500 text-white font-medium rounded-lg hover:from-purple-600 hover:to-pink-600 transition-all duration-300 flex items-center gap-2"
+                >
+                  <Scale className="h-5 w-5" />
+                  Compare Services
+                </button>
+                <button
+                  onClick={() => setShowContactIntegration(true)}
+                  className="px-6 py-3 bg-gradient-to-r from-green-500 to-emerald-500 text-white font-medium rounded-lg hover:from-green-600 hover:to-emerald-600 transition-all duration-300 flex items-center gap-2"
+                >
+                  <Phone className="h-5 w-5" />
+                  Contact Us
+                </button>
+                <button
+                  onClick={() => setShowContactIntegration(true)}
+                  className="px-6 py-3 bg-gradient-to-r from-orange-500 to-red-500 text-white font-medium rounded-lg hover:from-orange-600 hover:to-red-600 transition-all duration-300 flex items-center gap-2"
+                >
+                  <Calendar className="h-5 w-5" />
+                  Schedule Demo
+                </button>
               </div>
               
               {/* Website Link */}
@@ -392,6 +428,20 @@ export default function ComprehensiveServicesShowcase2030() {
                           {tag}
                         </span>
                       ))}
+                    </div>
+
+                    {/* ROI Calculator Button */}
+                    <div className="mb-4">
+                      <button
+                        onClick={() => {
+                          setSelectedServiceForROI(service);
+                          setShowROICalculator(true);
+                        }}
+                        className="w-full px-4 py-2 bg-gradient-to-r from-green-500 to-emerald-500 text-white text-sm rounded-lg font-medium hover:from-green-600 hover:to-emerald-600 transition-all duration-200 flex items-center justify-center gap-2"
+                      >
+                        <Calculator className="h-4 w-4" />
+                        Calculate ROI
+                      </button>
                     </div>
 
                     <div className="flex gap-3">
@@ -660,6 +710,32 @@ export default function ComprehensiveServicesShowcase2030() {
             </div>
           </div>
         </section>
+
+        {/* Modal Components */}
+        <AnimatePresence>
+          {showComparisonTool && (
+            <ServiceComparisonTool
+              services={ALL_SERVICES}
+              onClose={() => setShowComparisonTool(false)}
+            />
+          )}
+          
+          {showROICalculator && selectedServiceForROI && (
+            <ROICalculator
+              service={selectedServiceForROI}
+              onClose={() => {
+                setShowROICalculator(false);
+                setSelectedServiceForROI(null);
+              }}
+            />
+          )}
+          
+          {showContactIntegration && (
+            <EnhancedContactIntegration
+              onClose={() => setShowContactIntegration(false)}
+            />
+          )}
+        </AnimatePresence>
       </div>
     </>
   );
