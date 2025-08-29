@@ -134,7 +134,7 @@ export function InteractiveUserExperience() {
             ]));
             alert('Page bookmarked!');
           } catch (error) {
-            // // console.error('Failed to bookmark page:', error);
+            // // // // console.error('Failed to bookmark page:', error);
           }
         }
       },
@@ -199,7 +199,7 @@ export function InteractiveUserExperience() {
 
   const submitFeedback = useCallback(() => {
     // Here you would typically send feedback to your backend
-    // // console.log('Feedback submitted:', { type: feedbackType, message: feedbackMessage });
+    // // // // console.log('Feedback submitted:', { type: feedbackType, message: feedbackMessage });
     
     // Update user engagement
     setUserEngagement(prev => ({

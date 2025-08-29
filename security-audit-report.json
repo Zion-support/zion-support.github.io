@@ -1,11 +1,11 @@
 {
-  "timestamp": "2025-08-29T16:00:59.758Z",
+  "timestamp": "2025-08-29T23:07:42.709Z",
   "vulnerabilities": [],
   "metrics": {
     "npmAudit": {
       "status": "failed",
       "error": "Command failed: npm audit --json",
-      "timestamp": "2025-08-29T16:00:58.839Z"
+      "timestamp": "2025-08-29T23:07:41.638Z"
     }
   },
   "summary": {

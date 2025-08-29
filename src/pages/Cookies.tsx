@@ -73,7 +73,7 @@ const Cookies: React.FC = () => {
 
   const savePreferences = () => {
     // In a real implementation, this would save to localStorage and update cookie consent
-    // // console.log('Cookie preferences saved:', cookiePreferences);
+    // // // // console.log('Cookie preferences saved:', cookiePreferences);
     // Show success message
     alert('Cookie preferences saved successfully!');
   };

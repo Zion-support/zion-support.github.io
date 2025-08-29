@@ -70,7 +70,7 @@ export const EnhancedNewsletter: React.FC = () => {
       await new Promise(resolve => setTimeout(resolve, 2000));
       
       // Here you would typically send the data to your newsletter service
-      // // console.log('Newsletter subscription:', formData);
+      // // // // console.log('Newsletter subscription:', formData);
       
       setStatus('success');
       
@@ -87,7 +87,7 @@ export const EnhancedNewsletter: React.FC = () => {
       
     } catch (error) {
       setStatus('error');
-      // // console.error('Newsletter subscription error:', error);
+      // // // // console.error('Newsletter subscription error:', error);
     }
   };
 

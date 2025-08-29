@@ -103,7 +103,7 @@ export const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
           await navigator.serviceWorker.register('/sw.js');
           newOptimizations.push('Service worker registered for offline caching');
         } catch (error) {
-          // // console.log('Service worker registration failed:', error);
+          // // // // console.log('Service worker registration failed:', error);
         }
       }
 
@@ -120,7 +120,7 @@ export const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
       }
 
     } catch (error) {
-      // // console.error('Optimization failed:', error);
+      // // // // console.error('Optimization failed:', error);
     }
 
     setOptimizations(prev => [...prev, ...newOptimizations]);

@@ -17,10 +17,10 @@ export function FavoriteButton({ itemId, itemType, className = '' }: FavoriteBut
     // Here you would typically make an API call to save/remove from favorites
     if (isFavorited) {
       // Remove from favorites
-      // // console.log(`Removed ${itemType} ${itemId} from favorites`);
+      // // // // console.log(`Removed ${itemType} ${itemId} from favorites`);
     } else {
       // Add to favorites
-      // // console.log(`Added ${itemType} ${itemId} to favorites`);
+      // // // // console.log(`Added ${itemType} ${itemId} to favorites`);
     }
   };
 
