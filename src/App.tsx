@@ -1,6 +1,7 @@
 import React, { Suspense } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { AppHeader } from './layout/AppHeader';
+import { Sidebar } from './components/Sidebar';
 import { EnhancedFuturisticFooter as Footer } from './components/EnhancedFuturisticFooter';
 import { ChatAssistant } from './components/ChatAssistant';
 import { LoadingSpinner } from './components/ui/LoadingSpinner';
@@ -79,8 +80,9 @@ function App() {
       <Router>
         <div className="min-h-screen bg-futuristic">
           <AppHeader />
+          <Sidebar />
           
-          <main className="flex-1">
+          <main className="flex-1 lg:ml-80">
             <Suspense fallback={<LoadingSpinner />}>
               <Routes>
                 <Route path="/" element={<Home />} />

@@ -1,4 +1,4 @@
-import { ArrowRight, Atom, BookOpen, Brain, Building, Building2, ChevronDown, Cloud, Code, Cpu, DollarSign, FileText, Globe, HeartHandshake, Heart, HelpCircle, Leaf, Lock, Mail, MapPin, Menu, MessageCircle, PenTool, Phone, Rocket, Scale, Search, Settings, Shield, ShoppingCart, Star, Target, TrendingUp, Users, X, Zap } from 'lucide-react';
+import { ArrowRight, Atom, BookOpen, Brain, Building, Building2, ChevronDown, Cloud, Code, Cpu, DollarSign, FileText, Globe, HeartHandshake, Heart, HelpCircle, Leaf, Lock, Mail, MapPin, Menu, MessageCircle, PenTool, Phone, Rocket, Scale, Search, Settings, Shield, ShoppingCart, Star, Target, TrendingUp, Users, X, Zap, Workflow, Calendar } from 'lucide-react';
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { ThemeToggle } from '../components/ThemeToggle';
@@ -45,14 +45,6 @@ export function AppHeader() {
 
   const services = [
     { 
-      name: 'Innovative Micro SAAS 2025', 
-      href: '/innovative-micro-saas-services-2025', 
-      icon: Rocket, 
-      description: 'Cutting-edge AI Services',
-      featured: true,
-      color: 'from-purple-500 to-pink-500'
-    },
-    { 
       name: 'AI Business Intelligence', 
       href: '/services/ai-business-intelligence', 
       icon: Brain, 
@@ -61,44 +53,52 @@ export function AppHeader() {
       color: 'from-purple-500 to-cyan-500'
     },
     { 
-      name: 'AI Healthcare Platform', 
-      href: '/services/ai-healthcare-platform', 
+      name: 'AI Healthcare Analytics', 
+      href: '/services/ai-healthcare-analytics', 
       icon: Heart, 
       description: 'Medical AI & Diagnostics',
       featured: true,
       color: 'from-red-500 to-pink-500'
     },
     { 
-      name: 'AI Content Creation', 
-      href: '/services/ai-content-creation', 
-      icon: PenTool, 
-      description: 'Content Generation & Optimization',
+      name: 'AI Legal Document Analysis', 
+      href: '/services/ai-legal-document-analysis', 
+      icon: FileText, 
+      description: 'Legal Tech Platform',
       featured: true,
       color: 'from-blue-500 to-indigo-500'
     },
     { 
-      name: 'AI Cybersecurity', 
-      href: '/services/ai-cybersecurity', 
-      icon: Shield, 
-      description: 'AI-Powered Security',
+      name: 'AI Financial Trading', 
+      href: '/services/ai-financial-trading', 
+      icon: TrendingUp, 
+      description: 'FinTech AI Solutions',
       featured: true,
-      color: 'from-green-500 to-blue-500'
+      color: 'from-green-500 to-emerald-500'
     },
     { 
-      name: 'Quantum Computing', 
-      href: '/services/quantum-computing', 
-      icon: Atom, 
-      description: 'Quantum AI & Optimization',
+      name: 'AI Supply Chain Optimization', 
+      href: '/services/ai-supply-chain-optimization', 
+      icon: Workflow, 
+      description: 'Supply Chain AI',
       featured: true,
-      color: 'from-purple-500 to-pink-500'
+      color: 'from-orange-500 to-red-500'
     },
     { 
-      name: 'IoT Edge Computing', 
-      href: '/services/iot-edge-computing', 
-      icon: Cpu, 
-      description: 'IoT & Real-time Processing',
+      name: 'Cloud & DevOps', 
+      href: '/services/cloud-devops', 
+      icon: Cloud, 
+      description: 'DevOps & Infrastructure',
       featured: true,
       color: 'from-blue-500 to-cyan-500'
+    },
+    { 
+      name: 'IT Infrastructure', 
+      href: '/services/it-infrastructure', 
+      icon: Building, 
+      description: 'Enterprise Infrastructure',
+      featured: true,
+      color: 'from-slate-500 to-gray-500'
     },
     { 
       name: 'Digital Twin Platform', 
@@ -109,14 +109,6 @@ export function AppHeader() {
       color: 'from-green-500 to-emerald-500'
     },
     { 
-      name: 'Cloud DevOps', 
-      href: '/services/cloud-devops', 
-      icon: Cloud, 
-      description: 'DevOps & Infrastructure',
-      featured: true,
-      color: 'from-blue-500 to-cyan-500'
-    },
-    { 
       name: 'Micro SaaS Products', 
       href: '/services/micro-saas', 
       icon: ShoppingCart, 
@@ -125,12 +117,20 @@ export function AppHeader() {
       color: 'from-orange-500 to-red-500'
     },
     { 
+      name: 'Innovative Services 2025', 
+      href: '/services/innovative-2025', 
+      icon: Rocket, 
+      description: 'Cutting-edge AI Services',
+      featured: true,
+      color: 'from-indigo-500 to-purple-500'
+    },
+    { 
       name: 'Revolutionary Services 2030', 
       href: '/revolutionary-services-2030', 
       icon: Rocket, 
       description: 'Future Technology Solutions',
       featured: true,
-      color: 'from-indigo-500 to-purple-500'
+      color: 'from-purple-500 to-pink-500'
     }
   ];
 
@@ -141,27 +141,6 @@ export function AppHeader() {
       icon: Building2,
       description: 'Large-scale business transformations',
       featured: true
-    },
-    {
-      name: 'SMB Solutions',
-      href: '/solutions',
-      icon: Building,
-      description: 'Small to medium business growth',
-      featured: false
-    },
-    {
-      name: 'Startup Solutions',
-      href: '/solutions',
-      icon: Rocket,
-      description: 'Accelerate your startup growth',
-      featured: false
-    },
-    {
-      name: 'Government Solutions',
-      href: '/solutions',
-      icon: Shield,
-      description: 'Public sector innovation',
-      featured: false
     },
     {
       name: 'Healthcare Solutions',
@@ -176,6 +155,27 @@ export function AppHeader() {
       icon: TrendingUp,
       description: 'Fintech innovation & compliance',
       featured: true
+    },
+    {
+      name: 'Government Solutions',
+      href: '/solutions',
+      icon: Shield,
+      description: 'Public sector innovation',
+      featured: false
+    },
+    {
+      name: 'SMB Solutions',
+      href: '/solutions',
+      icon: Building,
+      description: 'Small to medium business growth',
+      featured: false
+    },
+    {
+      name: 'Startup Solutions',
+      href: '/solutions',
+      icon: Rocket,
+      description: 'Accelerate your startup growth',
+      featured: false
     }
   ];
 
@@ -228,6 +228,20 @@ export function AppHeader() {
       icon: DollarSign,
       description: 'Complete pricing information',
       featured: true
+    },
+    {
+      name: 'Community',
+      href: '/community',
+      icon: Users,
+      description: 'Join our community',
+      featured: false
+    },
+    {
+      name: 'Developers',
+      href: '/developers',
+      icon: Code,
+      description: 'Developer resources',
+      featured: false
     }
   ];
 
@@ -237,6 +251,9 @@ export function AppHeader() {
     { name: 'Pricing', href: '/pricing', icon: DollarSign },
     { name: 'Careers', href: '/careers', icon: Users },
     { name: 'Partners', href: '/partners', icon: HeartHandshake },
+    { name: 'Schedule Demo', href: '/schedule-demo', icon: Calendar },
+    { name: 'Community', href: '/community', icon: Users },
+    { name: 'Developers', href: '/developers', icon: Code },
     { name: 'Privacy', href: '/privacy', icon: Shield },
     { name: 'Terms', href: '/terms', icon: BookOpen },
   ];
@@ -343,14 +360,35 @@ export function AppHeader() {
                               ))}
                             </div>
                             <div className="mt-6 pt-6 border-t border-slate-700/50">
-                              <Link
-                                to="/services"
-                                className="inline-flex items-center gap-2 text-cyan-400 hover:text-cyan-300 transition-colors font-medium"
-                                onClick={() => setServicesDropdownOpen(false)}
-                              >
-                                View All Services
-                                <ArrowRight className="w-4 h-4" />
-                              </Link>
+                              <div className="flex items-center justify-between">
+                                <Link
+                                  to="/services"
+                                  className="inline-flex items-center gap-2 text-cyan-400 hover:text-cyan-300 transition-colors font-medium"
+                                  onClick={() => setServicesDropdownOpen(false)}
+                                >
+                                  View All Services
+                                  <ArrowRight className="w-4 h-4" />
+                                </Link>
+                                <div className="flex items-center gap-4 text-sm text-gray-400">
+                                  <span>Quick Access:</span>
+                                  <div className="flex gap-2">
+                                    <Link
+                                      to="/request-quote"
+                                      className="px-3 py-1 bg-slate-700/50 rounded-md hover:bg-slate-600/50 hover:text-white transition-colors"
+                                      onClick={() => setServicesDropdownOpen(false)}
+                                    >
+                                      Get Quote
+                                    </Link>
+                                    <Link
+                                      to="/schedule-demo"
+                                      className="px-3 py-1 bg-slate-700/50 rounded-md hover:bg-slate-600/50 hover:text-white transition-colors"
+                                      onClick={() => setServicesDropdownOpen(false)}
+                                    >
+                                      Schedule Demo
+                                    </Link>
+                                  </div>
+                                </div>
+                              </div>
                             </div>
                           </div>
                         </div>
@@ -392,6 +430,37 @@ export function AppHeader() {
                                 </Link>
                               ))}
                             </div>
+                            <div className="mt-6 pt-6 border-t border-slate-700/50">
+                              <div className="flex items-center justify-between">
+                                <Link
+                                  to="/solutions"
+                                  className="inline-flex items-center gap-2 text-cyan-400 hover:text-cyan-300 transition-colors font-medium"
+                                  onClick={() => setSolutionsDropdownOpen(false)}
+                                >
+                                  View All Solutions
+                                  <ArrowRight className="w-4 h-4" />
+                                </Link>
+                                <div className="flex items-center gap-4 text-sm text-gray-400">
+                                  <span>Quick Access:</span>
+                                  <div className="flex gap-2">
+                                    <Link
+                                      to="/contact"
+                                      className="px-3 py-1 bg-slate-700/50 rounded-md hover:bg-slate-600/50 hover:text-white transition-colors"
+                                      onClick={() => setSolutionsDropdownOpen(false)}
+                                    >
+                                      Contact Us
+                                    </Link>
+                                    <Link
+                                      to="/schedule-demo"
+                                      className="px-3 py-1 bg-slate-700/50 rounded-md hover:bg-slate-600/50 hover:text-white transition-colors"
+                                      onClick={() => setSolutionsDropdownOpen(false)}
+                                    >
+                                      Schedule Demo
+                                    </Link>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
                           </div>
                         </div>
                       )}
@@ -431,6 +500,37 @@ export function AppHeader() {
                                   </div>
                                 </Link>
                               ))}
+                            </div>
+                            <div className="mt-6 pt-6 border-t border-slate-700/50">
+                              <div className="flex items-center justify-between">
+                                <Link
+                                  to="/resources"
+                                  className="inline-flex items-center gap-2 text-cyan-400 hover:text-cyan-300 transition-colors font-medium"
+                                  onClick={() => setResourcesDropdownOpen(false)}
+                                >
+                                  View All Resources
+                                  <ArrowRight className="w-4 h-4" />
+                                </Link>
+                                <div className="flex items-center gap-4 text-sm text-gray-400">
+                                  <span>Quick Access:</span>
+                                  <div className="flex gap-2">
+                                    <Link
+                                      to="/faq"
+                                      className="px-3 py-1 bg-slate-700/50 rounded-md hover:bg-slate-600/50 hover:text-white transition-colors"
+                                      onClick={() => setResourcesDropdownOpen(false)}
+                                    >
+                                      FAQ
+                                    </Link>
+                                    <Link
+                                      to="/contact"
+                                      className="px-3 py-1 bg-slate-700/50 rounded-md hover:bg-slate-600/50 hover:text-white transition-colors"
+                                      onClick={() => setResourcesDropdownOpen(false)}
+                                    >
+                                      Contact
+                                    </Link>
+                                  </div>
+                                </div>
+                              </div>
                             </div>
                           </div>
                         </div>

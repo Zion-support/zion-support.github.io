@@ -25,14 +25,27 @@ import {
   TrendingUp, 
   Globe,
   ChevronDown,
-  ChevronRight
+  ChevronRight,
+  Briefcase,
+  Phone,
+  Building,
+  FileText,
+  TestTube,
+  BarChart3,
+  Database,
+  Monitor,
+  Code
 } from 'lucide-react';
 
 interface SidebarItem {
-  name: string;
-  href: string;
+  title: string;
   icon: React.ComponentType<any>;
-  children?: SidebarItem[];
+  items: {
+    name: string;
+    path: string;
+    icon: React.ComponentType<any>;
+    description: string;
+  }[];
 }
 
 export const Sidebar: React.FC = () => {
@@ -48,16 +61,20 @@ export const Sidebar: React.FC = () => {
         { name: 'Home', path: '/', icon: Home, description: 'Welcome to Zion Tech Group' },
         { name: 'Services Overview', path: '/services', icon: Briefcase, description: 'All our services' },
         { name: 'Solutions', path: '/solutions', icon: Rocket, description: 'Industry solutions' },
-        // Pricing page currently not implemented
+        { name: 'Resources', path: '/resources', icon: BookOpen, description: 'Knowledge and insights' },
         { name: 'About Us', path: '/about', icon: Users, description: 'Learn about our company' },
         { name: 'Contact', path: '/contact', icon: Phone, description: 'Get in touch with us' }
       ]
     },
     {
-      title: 'AI & Analytics',
+      title: 'AI & Analytics Services',
       icon: Brain,
       items: [
-        { name: 'AI Business Intelligence', path: '/services/ai-business-intelligence', icon: Brain, description: 'Machine Learning & Data Science' }
+        { name: 'AI Business Intelligence', path: '/services/ai-business-intelligence', icon: Brain, description: 'Machine Learning & Data Science' },
+        { name: 'AI Healthcare Analytics', path: '/services/ai-healthcare-analytics', icon: Brain, description: 'Medical AI & Diagnostics' },
+        { name: 'AI Legal Document Analysis', path: '/services/ai-legal-document-analysis', icon: Brain, description: 'Legal Tech Platform' },
+        { name: 'AI Financial Trading', path: '/services/ai-financial-trading', icon: Brain, description: 'FinTech AI Solutions' },
+        { name: 'AI Supply Chain Optimization', path: '/services/ai-supply-chain-optimization', icon: Brain, description: 'Supply Chain AI' }
       ]
     },
     {
@@ -65,49 +82,47 @@ export const Sidebar: React.FC = () => {
       icon: Cloud,
       items: [
         { name: 'Cloud & DevOps', path: '/services/cloud-devops', icon: Cloud, description: 'Cloud migration and DevOps' },
-        { name: 'IT Infrastructure', path: '/services/it-infrastructure', icon: Building, description: 'Enterprise infrastructure' }
+        { name: 'IT Infrastructure', path: '/services/it-infrastructure', icon: Building, description: 'Enterprise infrastructure' },
+        { name: 'Digital Twin', path: '/services/digital-twin', icon: Globe, description: 'Virtual replicas & simulation' },
+        { name: 'IoT Edge Computing', path: '/services/iot-edge-computing', icon: Cpu, description: 'IoT & real-time processing' }
       ]
     },
     {
       title: 'Cybersecurity & Compliance',
       icon: Shield,
       items: [
-        { name: 'Cybersecurity', path: '/services/cybersecurity', icon: Shield, description: 'AI-Powered Security' }
+        { name: 'Cybersecurity', path: '/services/cybersecurity', icon: Shield, description: 'AI-Powered Security' },
+        { name: 'Zero Trust Security', path: '/services/zero-trust-network-access', icon: Shield, description: 'Advanced security framework' }
       ]
     },
     {
       title: 'Data & Analytics',
       icon: Database,
       items: [
-        { name: 'Data Analytics', path: '/services/data-analytics', icon: BarChart3, description: 'Transform data into insights' }
+        { name: 'Data Analytics', path: '/services/data-analytics', icon: BarChart3, description: 'Transform data into insights' },
+        { name: 'Business Intelligence', path: '/services/ai-business-intelligence', icon: TrendingUp, description: 'Data-driven decisions' }
       ]
     },
     {
-      title: 'Monitoring & Observability',
-      icon: Monitor,
-      items: []
-    },
-    {
-      title: 'Business Solutions',
-      icon: Building,
-      items: []
-    },
-    {
-      title: 'Quantum Technology',
-      icon: Atom,
-      items: []
-    },
-    {
-      title: 'Space Technology',
+      title: 'Innovative Services',
       icon: Rocket,
-      items: []
+      items: [
+        { name: 'Micro SaaS Products', path: '/services/micro-saas', icon: ShoppingCart, description: 'AI automations with transparent pricing' },
+        { name: 'Innovative Services 2025', path: '/services/innovative-2025', icon: Rocket, description: 'Cutting-edge solutions' },
+        { name: 'Revolutionary Services 2030', path: '/revolutionary-services-2030', icon: Rocket, description: 'Future technology solutions' }
+      ]
     },
     {
       title: 'Resources & Insights',
       icon: FileText,
       items: [
         { name: 'Blog', path: '/blog', icon: FileText, description: 'Latest insights and news' },
-        { name: 'Research & Development', path: '/research-development', icon: TestTube, description: 'R&D projects' }
+        { name: 'Case Studies', path: '/case-studies', icon: Target, description: 'Real-world success stories' },
+        { name: 'White Papers', path: '/white-papers', icon: FileText, description: 'In-depth research and analysis' },
+        { name: 'Webinars', path: '/webinars', icon: Users, description: 'Expert-led learning sessions' },
+        { name: 'Documentation', path: '/docs', icon: Code, description: 'Technical guides and APIs' },
+        { name: 'FAQ & Support', path: '/faq', icon: HelpCircle, description: 'Get help and answers' },
+        { name: 'Pricing Guide 2025', path: '/pricing-guide-2025', icon: DollarSign, description: 'Complete pricing information' }
       ]
     },
     {
@@ -116,83 +131,67 @@ export const Sidebar: React.FC = () => {
       items: [
         { name: 'About Us', path: '/about', icon: Users, description: 'Our story and mission' },
         { name: 'Careers', path: '/careers', icon: Briefcase, description: 'Join our team' },
+        { name: 'Partners', path: '/partners', icon: Users, description: 'Strategic partnerships' },
         { name: 'Contact', path: '/contact', icon: Phone, description: 'Get in touch with us' }
       ]
     }
   ];
 
-  const toggleSection = (sectionName: string) => {
+  const toggleSection = (sectionTitle: string) => {
     setExpandedSections(prev => 
-      prev.includes(sectionName) 
-        ? prev.filter(name => name !== sectionName)
-        : [...prev, sectionName]
+      prev.includes(sectionTitle) 
+        ? prev.filter(name => name !== sectionTitle)
+        : [...prev, sectionTitle]
     );
   };
 
-  const isActive = (href: string) => {
-    if (href === '/') {
+  const isActive = (path: string) => {
+    if (path === '/') {
       return location.pathname === '/';
     }
-    return location.pathname.startsWith(href);
+    return location.pathname.startsWith(path);
   };
 
   const renderNavItem = (item: SidebarItem, level: number = 0) => {
-    const hasChildren = item.children && item.children.length > 0;
-    const isExpanded = expandedSections.includes(item.name.toLowerCase());
-    const active = isActive(item.href);
+    const isExpanded = expandedSections.includes(item.title);
 
     return (
-      <div key={item.name}>
-        <div className="flex items-center">
-          {hasChildren ? (
-            <button
-              onClick={() => toggleSection(item.name.toLowerCase())}
-              className={`flex items-center w-full px-3 py-2 text-sm font-medium rounded-md transition-colors ${
-                active 
-                  ? 'bg-cyan-500/20 text-cyan-300 border border-cyan-400/30' 
-                  : 'text-slate-300 hover:text-white hover:bg-slate-700/50'
-              }`}
-            >
-              <item.icon className="w-4 h-4 mr-3 flex-shrink-0" />
-              <span className="flex-1 text-left">{item.name}</span>
-              {isExpanded ? (
-                <ChevronDown className="w-4 h-4 ml-auto" />
-              ) : (
-                <ChevronRight className="w-4 h-4 ml-auto" />
-              )}
-            </button>
+      <div key={item.title} className="mb-4">
+        <button
+          onClick={() => toggleSection(item.title)}
+          className={`flex items-center w-full px-3 py-2 text-sm font-medium rounded-md transition-colors ${
+            isExpanded 
+              ? 'bg-cyan-500/20 text-cyan-300 border border-cyan-400/30' 
+              : 'text-slate-300 hover:text-white hover:bg-slate-700/50'
+          }`}
+        >
+          <item.icon className="w-4 h-4 mr-3 flex-shrink-0" />
+          <span className="flex-1 text-left">{item.title}</span>
+          {isExpanded ? (
+            <ChevronDown className="w-4 h-4 ml-auto" />
           ) : (
-            <Link
-              to={item.href}
-              className={`flex items-center w-full px-3 py-2 text-sm font-medium rounded-md transition-colors ${
-                active 
-                  ? 'bg-cyan-500/20 text-cyan-300 border border-cyan-400/30' 
-                  : 'text-slate-300 hover:text-white hover:bg-slate-700/50'
-              }`}
-            >
-              <item.icon className="w-4 h-4 mr-3 flex-shrink-0" />
-              <span>{item.name}</span>
-            </Link>
+            <ChevronRight className="w-4 h-4 ml-auto" />
           )}
-        </div>
+        </button>
         
-        {hasChildren && isExpanded && (
+        {isExpanded && (
           <motion.div
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}
             transition={{ duration: 0.2 }}
-            className="ml-4 mt-1 space-y-1"
+            className="ml-4 mt-2 space-y-1"
           >
-            {item.children!.map(child => (
+            {item.items.map(child => (
               <Link
                 key={child.name}
-                to={child.href}
+                to={child.path}
                 className={`flex items-center px-3 py-2 text-sm font-medium rounded-md transition-colors ${
-                  isActive(child.href)
+                  isActive(child.path)
                     ? 'bg-cyan-500/10 text-cyan-300 border border-cyan-400/20'
                     : 'text-slate-400 hover:text-white hover:bg-slate-700/30'
                 }`}
+                onClick={() => setIsOpen(false)}
               >
                 <child.icon className="w-4 h-4 mr-3 flex-shrink-0" />
                 <span>{child.name}</span>
@@ -214,7 +213,7 @@ export const Sidebar: React.FC = () => {
         <Menu className="w-6 h-6" />
       </button>
 
-      {/* Sidebar */}
+      {/* Mobile Sidebar */}
       <AnimatePresence>
         {isOpen && (
           <motion.div
@@ -252,12 +251,25 @@ export const Sidebar: React.FC = () => {
               <nav className="flex-1 p-4 space-y-2 overflow-y-auto">
                 {navigation.map(item => renderNavItem(item))}
               </nav>
+
+              {/* Footer */}
+              <div className="p-4 border-t border-slate-700/50">
+                <div className="text-center">
+                  <Link
+                    to="/contact"
+                    className="w-full px-4 py-2 bg-gradient-to-r from-cyan-500 to-blue-600 text-white text-sm font-medium rounded-lg hover:from-cyan-400 hover:to-blue-500 transition-all duration-200 hover:scale-105 shadow-lg shadow-cyan-500/20"
+                    onClick={() => setIsOpen(false)}
+                  >
+                    Get Started
+                  </Link>
+                </div>
+              </div>
             </motion.div>
           </motion.div>
         )}
       </AnimatePresence>
 
-      {/* Desktop sidebar */}
+      {/* Desktop Sidebar */}
       <div className="hidden lg:block fixed left-0 top-0 h-full w-80 bg-slate-900/95 border-r border-slate-700/50 backdrop-blur-xl z-40">
         {/* Header */}
         <div className="p-6 border-b border-slate-700/50">
