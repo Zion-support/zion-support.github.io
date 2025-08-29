@@ -23,7 +23,41 @@
     "type-check:all": "npm run type-check && npm run type-check:backend",
     "prepare": "git config core.hooksPath .husky || true",
     "fix:all": "npm run lint --fix || true",
-    "install:all": "npm install && cd server && npm install"
+    "install:all": "npm install && cd server && npm install",
+    
+    "pm2:start": "pm2 start ecosystem.config.js",
+    "pm2:stop": "pm2 stop all",
+    "pm2:restart": "pm2 restart all",
+    "pm2:reload": "pm2 reload all",
+    "pm2:status": "pm2 status",
+    "pm2:logs": "pm2 logs",
+    "pm2:monit": "pm2 monit",
+    "pm2:delete": "pm2 delete all",
+    "pm2:save": "pm2 save",
+    "pm2:resurrect": "pm2 resurrect",
+    
+    "automation:start": "bash scripts/pm2-manager.sh start",
+    "automation:stop": "bash scripts/pm2-manager.sh stop",
+    "automation:restart": "bash scripts/pm2-manager.sh restart",
+    "automation:status": "bash scripts/pm2-manager.sh status",
+    "automation:logs": "bash scripts/pm2-manager.sh logs",
+    "automation:monitor": "bash scripts/pm2-manager.sh monitor",
+    "automation:backup": "bash scripts/pm2-manager.sh backup",
+    "automation:cleanup": "bash scripts/pm2-manager.sh cleanup",
+    
+    "ai:analyze": "node automation/ai-code-analyzer.cjs analyze",
+    "ai:analyze:continuous": "node automation/ai-code-analyzer.cjs continuous",
+    "ai:analyze:file": "node automation/ai-code-analyzer.cjs analyze-file",
+    
+    "deploy:smart": "node automation/smart-deployment.cjs start",
+    "deploy:monitor": "node automation/smart-deployment.cjs monitor",
+    "deploy:status": "node automation/smart-deployment.cjs status",
+    
+    "quality:check": "npm run lint:all && npm run type-check:all && npm run ai:analyze",
+    "quality:fix": "npm run fix:all && npm run quality:check",
+    
+    "dev:full": "concurrently \"npm run dev\" \"npm run dev:backend\" \"npm run automation:start\"",
+    "dev:monitor": "concurrently \"npm run dev:hybrid\" \"npm run automation:monitor\""
   },
   "dependencies": {
     "@hookform/resolvers": "^5.2.1",
