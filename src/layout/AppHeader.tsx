@@ -118,7 +118,7 @@ export function AppHeader() {
     },
     { 
       name: 'Innovative Services 2025', 
-      href: '/services/innovative-2025', 
+      href: '/new-innovative-services-2025', 
       icon: Rocket, 
       description: 'Cutting-edge AI Services',
       featured: true,
