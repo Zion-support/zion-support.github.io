@@ -48,6 +48,18 @@ const AIServices: React.FC = () => {
       price: '$6,000 - $55,000+'
     },
     {
+      icon: Workflow,
+      title: 'AI Workflow Orchestrator',
+      desc: 'Intelligent workflow automation with multi-agent coordination and real-time optimization.',
+      price: '$2,500 - $15,000+'
+    },
+    {
+      icon: Shield,
+      title: 'AI Data Governance',
+      desc: 'AI-powered data classification, compliance automation, and intelligent access control.',
+      price: '$3,500 - $18,000+'
+    },
+    {
       icon: Globe,
       title: 'Multilingual CX & Localization AI',
       desc: 'Real-time translation, NLU for 50+ languages, sentiment, and locale-aware responses across channels.',

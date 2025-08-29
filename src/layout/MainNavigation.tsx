@@ -64,61 +64,37 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className = '
       key: 'services',
       href: '/services',
       name: 'Services',
-      matches: (path: string) => path.startsWith('/services'),
+      matches: (path: string) => path.startsWith('/services') || path.startsWith('/ai-services') || path.startsWith('/it-services') || path.startsWith('/micro-saas') || path.startsWith('/comprehensive-services'),
       children: [
         {
+          key: 'services-overview',
+          href: '/services',
+          name: 'All Services',
+          matches: (path: string) => path === '/services'
+        },
+        {
           key: 'ai-services',
-          href: '/services/ai',
-          name: 'AI & Analytics',
-          matches: (path: string) => path.startsWith('/services/ai')
+          href: '/ai-services',
+          name: 'AI Services',
+          matches: (path: string) => path.startsWith('/ai-services')
         },
         {
-          key: 'quantum',
-          href: '/services/quantum',
-          name: 'Quantum Computing',
-          matches: (path: string) => path.startsWith('/services/quantum')
+          key: 'it-services',
+          href: '/it-services',
+          name: 'IT Services',
+          matches: (path: string) => path.startsWith('/it-services')
         },
         {
-          key: 'blockchain',
-          href: '/services/blockchain',
-          name: 'Blockchain',
-          matches: (path: string) => path.startsWith('/services/blockchain')
+          key: 'micro-saas',
+          href: '/micro-saas',
+          name: 'Micro SaaS',
+          matches: (path: string) => path.startsWith('/micro-saas')
         },
         {
-          key: 'iot',
-          href: '/services/iot',
-          name: 'IoT & Edge',
-          matches: (path: string) => path.startsWith('/services/iot')
-        },
-        {
-          key: 'cybersecurity',
-          href: '/services/cybersecurity',
-          name: 'Cybersecurity',
-          matches: (path: string) => path.startsWith('/services/cybersecurity')
-        },
-        {
-          key: 'healthcare',
-          href: '/services/healthcare',
-          name: 'Healthcare',
-          matches: (path: string) => path.startsWith('/services/healthcare')
-        },
-        {
-          key: 'finance',
-          href: '/services/finance',
-          name: 'Finance',
-          matches: (path: string) => path.startsWith('/services/finance')
-        },
-        {
-          key: 'manufacturing',
-          href: '/services/manufacturing',
-          name: 'Manufacturing',
-          matches: (path: string) => path.startsWith('/services/manufacturing')
-        },
-        {
-          key: 'sustainability',
-          href: '/services/sustainability',
-          name: 'Sustainability',
-          matches: (path: string) => path.startsWith('/services/sustainability')
+          key: 'comprehensive-services',
+          href: '/comprehensive-services',
+          name: 'Services Catalog',
+          matches: (path: string) => path.startsWith('/comprehensive-services')
         }
       ]
     },

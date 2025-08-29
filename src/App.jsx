@@ -51,6 +51,9 @@ const LoadingSpinner = () => (
   </div>
 );
 
+// Pricing
+const Pricing = React.lazy(() => import('./pages/Pricing.tsx'));
+
 function App() {
   return (
     <Router>
@@ -72,7 +75,7 @@ function App() {
               <Route path="/sitemap" element={<Sitemap />} />
               <Route path="/partners" element={<PartnersPage />} />
               <Route path="/login" element={<Login />} />
-              <Route path="/pricing" element={<ComprehensivePricing />} />
+              <Route path="/pricing" element={<Pricing />} />
 
               {/* Services routes */}
               <Route path="/services" element={<ServicesPage />} />
