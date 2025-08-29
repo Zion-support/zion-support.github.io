@@ -374,7 +374,6 @@ const AllServices2027: React.FC = () => {
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-cyan-600 to-blue-600">
         <div className="max-w-4xl mx-auto px-6 text-center">
->>>>>>> 6dd29c142034ec935b31fa0640beb1de37312487
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
