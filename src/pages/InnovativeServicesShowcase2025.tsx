@@ -331,7 +331,7 @@ export default function InnovativeServicesShowcase2025() {
                   {/* Description */}
                   <p className="text-gray-300 text-sm mb-4 line-clamp-3">
                     {service.description}
-                  </div>
+                  </p>
                   {/* Key Features */}
                   <div className="mb-4">
                     <h4 className="text-sm font-semibold text-white mb-2">Key Features:</h4>
@@ -424,7 +424,7 @@ export default function InnovativeServicesShowcase2025() {
             ))}
           </div>
         </div>
-      </div>
+      </section>
       {/* Featured Services */}
       <section className="py-20 bg-gradient-to-r from-gray-800/50 to-gray-900/50">
         <div className="container mx-auto px-4">
@@ -495,10 +495,10 @@ export default function InnovativeServicesShowcase2025() {
                     Learn More
                   </motion.button>
                 </div>
-              </div>
-            </motion.div>
-          ))}
+              </motion.div>
+            ))}
         </div>
+      </section>
       {/* Market Insights */}
       <section className="py-20">
         <div className="container mx-auto px-4">
@@ -564,9 +564,9 @@ export default function InnovativeServicesShowcase2025() {
         <div className="max-w-4xl mx-auto text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
+            whileInView={{ opacity: 1, y: 0 }
+            transition={{ duration: 0.8 }
+            viewport={{ once: true }
           >
             <h2 className="text-4xl font-bold text-white mb-6">
               Ready to Transform Your Business?
