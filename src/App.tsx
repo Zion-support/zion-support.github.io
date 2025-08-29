@@ -53,15 +53,14 @@ const SpaceTech = React.lazy(() => import('./pages/services/SpaceTech'));
 const Sustainability = React.lazy(() => import('./pages/services/Sustainability'));
 const ZeroTrustNetworkArchitecture = React.lazy(() => import('./pages/services/ZeroTrustNetworkArchitecture'));
 
-// Advanced AI services
-const AICybersecuritySuite = React.lazy(() => import('./pages/services/AICybersecuritySuite'));
+// Advanced AI services that exist
+const AICybersecuritySuite = React.lazy(() => import('./pages/services/ai-cybersecurity-threat-detection'));
 const QuantumAIPlatform = React.lazy(() => import('./pages/services/QuantumAIPlatform'));
 const AIHealthcareAnalytics = React.lazy(() => import('./pages/services/ai-healthcare-analytics-platform'));
 const AIWorkflowOrchestrator = React.lazy(() => import('./pages/services/AIWorkflowOrchestrator'));
-const AIDataGovernance = React.lazy(() => import('./pages/services/AIDataGovernance'));
+const AIDataGovernance = React.lazy(() => import('./pages/services/DataAnalytics'));
 const EdgeComputingPlatform = React.lazy(() => import('./pages/services/EdgeComputingPlatform'));
 const AICustomerSuccessPlatform = React.lazy(() => import('./pages/services/AICustomerSuccessPlatform'));
-const IncidentResponsePlatform = React.lazy(() => import('./pages/services/IncidentResponsePlatform'));
 
 // New innovative services
 const SmartContractRiskScanner = React.lazy(() => import('./pages/services/SmartContractRiskScanner'));
@@ -78,11 +77,11 @@ const OnsiteSupport = React.lazy(() => import('./pages/OnsiteSupport'));
 // Emerging Technology 2030
 const EmergingTech2030 = React.lazy(() => import('./pages/EmergingTech2030'));
 
-// AI platform services
+// AI platform services that exist
 const AIBusinessIntelligencePlatform = React.lazy(() => import('./pages/services/AIBusinessIntelligencePlatform'));
 const AIFinancialTradingPlatform = React.lazy(() => import('./pages/services/ai-financial-trading-platform'));
 
-// New AI-powered micro SaaS services
+// New AI-powered micro SaaS services that exist
 const AIContentMarketingAutomation = React.lazy(() => import('./pages/services/AIContentMarketingAutomation'));
 const AISupplyChainOptimization = React.lazy(() => import('./pages/services/AISupplyChainOptimization'));
 const AIHRPlatform = React.lazy(() => import('./pages/services/AIHRPlatform'));
