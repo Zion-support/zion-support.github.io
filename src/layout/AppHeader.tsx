@@ -56,7 +56,7 @@ export function AppHeader() {
       color: 'from-blue-500 to-indigo-500',
       price: '$299/month',
       category: 'AI & Legal Tech'
->>>>>>> cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-5ff9
+
     },
     { 
       name: 'AI Healthcare Analytics Suite', 

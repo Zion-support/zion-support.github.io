@@ -85,7 +85,6 @@ export const EnhancedFuturisticFooter: React.FC = () => {
         { name: 'AI Financial Trading Platform', href: '/services/ai-financial-trading', featured: true },
         { name: 'AI Development Platform', href: '/services/ai-development', featured: true },
         { name: 'AI Autonomous Research Assistant', href: '/services/ai-autonomous-research-assistant', featured: true }
->>>>>>> cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-5ff9
       ]
     },
     {
@@ -147,7 +146,6 @@ export const EnhancedFuturisticFooter: React.FC = () => {
         { name: 'AI Marketing Automation Platform', href: '/services#ai-marketing-automation-platform', featured: true },
         { name: 'AI Legal Document Analyzer Pro', href: '/services/ai-legal-document-analysis', featured: true },
         { name: 'AI Healthcare Analytics Suite', href: '/services/ai-healthcare-analytics', featured: true }
->>>>>>> cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-5ff9
       ]
     }
   ];
@@ -189,7 +187,6 @@ export const EnhancedFuturisticFooter: React.FC = () => {
   };
 
 
->>>>>>> cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-5ff9
   return (
     <footer className="bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 text-white">
       {/* Main Footer Content */}

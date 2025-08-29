@@ -22,7 +22,6 @@ interface SEOProps {
   modifiedTime?: string;
   section?: string;
   tags?: string[];
->>>>>>> cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-5ff9
 }
 
 interface OrganizationSchema {
@@ -303,9 +302,8 @@ export function SEO({
     { rel: 'apple-touch-icon', sizes: '180x180', href: '/apple-touch-icon.png' },
     { rel: 'mask-icon', href: '/safari-pinned-tab.svg', color: '#06b6d4' }
   ];
->>>>>>> cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-5ff9
 
-    return {
+  return {
       organization: organizationSchema,
       website: webSiteSchema,
       breadcrumb: breadcrumbSchema
