@@ -65,7 +65,7 @@ const ComprehensiveServicesLanding2028 = React.lazy(() => import('./pages/Compre
 const AIServices = React.lazy(() => import('./pages/AIServices'));
 const ITServices = React.lazy(() => import('./pages/ITServices'));
 const MicroSaaS = React.lazy(() => import('./pages/MicroSaaS'));
-const MicroSAASSolutions = React.lazy(() => import('./pages/services/MicroSAASSolutions'));
+const MicroSAASSolutions = React.lazy(() => import('./pages/services/MicroSAAS'));
 const ServicesCatalog = React.lazy(() => import('./pages/ServicesCatalog'));
 
 // Individual service pages

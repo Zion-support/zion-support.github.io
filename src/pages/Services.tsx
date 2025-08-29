@@ -44,7 +44,6 @@ export default function Services() {
 
   const serviceCategories = [
     {
-<<<<<<< HEAD
       name: 'Revolutionary AI Services',
       icon: Brain,
       description: 'Next-generation AI solutions that transform enterprise operations',
@@ -98,17 +97,6 @@ export default function Services() {
           name: 'AI Business Intelligence Platform',
           description: 'Transform your data into actionable insights with advanced AI algorithms and predictive analytics',
           features: ['Predictive Analytics', 'Real-time Dashboards', 'Machine Learning Models', 'Data Visualization', 'Automated Reporting'],
-=======
-      name: 'AI & Analytics',
-      icon: Brain,
-      description: 'Cutting-edge artificial intelligence and data analytics solutions',
-      color: 'from-purple-600 to-pink-600',
-      services: [
-        {
-          name: 'AI Business Intelligence',
-          description: 'Transform your data into actionable insights with advanced AI algorithms',
-          features: ['Predictive Analytics', 'Real-time Dashboards', 'Machine Learning Models', 'Data Visualization'],
->>>>>>> cursor/analyze-improve-and-deploy-application-f14e
           href: '/services/ai-business-intelligence',
           price: 'From $5,000',
           rating: 4.9,
@@ -131,6 +119,15 @@ export default function Services() {
           price: 'From $199/month',
           rating: 4.9,
           reviewCount: 156
+        },
+        {
+          name: 'AI Customer Success Platform',
+          description: 'Intelligent customer success with predictive analytics and automated engagement',
+          features: ['Churn Prevention', 'Health Scoring', 'Automated Engagement', 'Predictive Analytics'],
+          href: '/services/ai-customer-success-platform',
+          price: 'From $299',
+          rating: 4.9,
+          reviewCount: 234
         }
       ]
     },
@@ -156,20 +153,16 @@ export default function Services() {
           href: '/services/cloud-finops-optimizer',
           price: 'From $4,500',
           rating: 4.8,
-<<<<<<< HEAD
-          reviewCount: 76
+          reviewCount: 167
         },
         {
-          name: 'AI Supply Chain Optimization',
-          description: 'AI-powered supply chain optimization with demand forecasting and route optimization',
-          features: ['AI Demand Forecasting', 'Route Optimization', 'Inventory Management', 'Global Visibility'],
-          href: '/services/ai-supply-chain-optimization',
-          price: 'From $599',
+          name: 'Edge Computing Platform',
+          description: 'Next-generation edge computing infrastructure for IoT and real-time applications',
+          features: ['Edge Analytics', 'Real-time Processing', 'Low Latency', 'Distributed Computing'],
+          href: '/services/edge-computing-platform',
+          price: 'From $12,000',
           rating: 4.9,
           reviewCount: 98
-=======
-          reviewCount: 167
->>>>>>> cursor/analyze-improve-and-deploy-application-f14e
         }
       ]
     },
@@ -196,43 +189,32 @@ export default function Services() {
           price: 'From $12,000',
           rating: 4.8,
           reviewCount: 145
+        },
+        {
+          name: 'Blockchain Enterprise Solutions',
+          description: 'Enterprise blockchain implementation and smart contract solutions',
+          features: ['Smart Contracts', 'Supply Chain Tracking', 'Digital Identity', 'DeFi Solutions'],
+          href: '/services/blockchain-enterprise-solutions',
+          price: 'From $18,000',
+          rating: 4.9,
+          reviewCount: 89
         }
       ]
     },
     {
-      name: 'Cybersecurity',
+      name: 'Cybersecurity & Compliance',
       icon: Shield,
       description: 'Advanced security protocols and threat protection systems',
       color: 'from-red-600 to-orange-600',
       services: [
         {
-<<<<<<< HEAD
-          name: 'Contract Management System',
-          description: 'Streamlined contract lifecycle management with AI-powered insights',
-          features: ['Contract Creation', 'Approval Workflows', 'Compliance Monitoring', 'AI Analysis', 'Reporting'],
-          href: '/services/contract-management',
-          price: 'From $3,200',
-          rating: 4.6,
-          reviewCount: 78,
-          benefits: ['Faster contract processing', 'Reduced risks', 'Better compliance']
-        },
-        {
-          name: 'AI Customer Success Platform',
-          description: 'Intelligent customer success with predictive analytics and automated engagement',
-          features: ['Churn Prevention', 'Health Scoring', 'Automated Engagement', 'Predictive Analytics'],
-          href: '/services/ai-customer-success-platform',
-          price: 'From $299',
+          name: 'Zero Trust Architecture',
+          description: 'Advanced zero-trust security implementation and management',
+          features: ['Identity Verification', 'Access Control', 'Network Segmentation', 'Continuous Monitoring'],
+          href: '/services/zero-trust-network-architecture',
+          price: 'From $18,000',
           rating: 4.9,
-          reviewCount: 234
-        },
-        {
-          name: 'AI Customer Churn Prediction',
-          description: 'Predict and prevent customer churn with 95%+ accuracy using AI-powered analytics',
-          features: ['Churn Prediction', 'Real-time Analytics', 'Proactive Interventions', 'Customer Segmentation'],
-          href: '/services/ai-customer-churn-prediction',
-          price: 'From $299',
-          rating: 4.9,
-          reviewCount: 156
+          reviewCount: 134
         },
         {
           name: 'AI Financial Fraud Detection',
@@ -244,6 +226,41 @@ export default function Services() {
           reviewCount: 189
         },
         {
+          name: 'Contract Management System',
+          description: 'Streamlined contract lifecycle management with AI-powered insights',
+          features: ['Contract Creation', 'Approval Workflows', 'Compliance Monitoring', 'AI Analysis', 'Reporting'],
+          href: '/services/contract-management',
+          price: 'From $3,200',
+          rating: 4.6,
+          reviewCount: 78
+        }
+      ]
+    },
+    {
+      name: 'Micro SaaS Solutions',
+      icon: Zap,
+      description: 'Specialized software-as-a-service solutions for specific business needs',
+      color: 'from-yellow-600 to-orange-600',
+      services: [
+        {
+          name: 'AI Lead Scoring',
+          description: 'Intelligent lead qualification and scoring with AI-powered analytics',
+          features: ['Lead Qualification', 'Scoring Algorithms', 'CRM Integration', 'Performance Analytics'],
+          href: '/services/ai-lead-scoring',
+          price: 'From $199/month',
+          rating: 4.8,
+          reviewCount: 156
+        },
+        {
+          name: 'Website AI Chatbot',
+          description: 'Intelligent customer support chatbot with natural language processing',
+          features: ['24/7 Support', 'Natural Language Processing', 'Multi-language Support', 'Integration APIs'],
+          href: '/services/website-ai-chatbot',
+          price: 'From $99/month',
+          rating: 4.9,
+          reviewCount: 234
+        },
+        {
           name: 'AI HR Talent Acquisition',
           description: 'Revolutionize hiring with AI-powered candidate matching and recruitment automation',
           features: ['AI Matching', 'Intelligent Sourcing', 'Predictive Analytics', 'Smart Screening'],
@@ -251,15 +268,6 @@ export default function Services() {
           price: 'From $399',
           rating: 4.8,
           reviewCount: 267
-=======
-          name: 'Zero Trust Architecture',
-          description: 'Advanced zero-trust security implementation and management',
-          features: ['Identity Verification', 'Access Control', 'Network Segmentation', 'Continuous Monitoring'],
-          href: '/services/zero-trust-network-architecture',
-          price: 'From $18,000',
-          rating: 4.9,
-          reviewCount: 134
->>>>>>> cursor/analyze-improve-and-deploy-application-f14e
         }
       ]
     }
