@@ -29,7 +29,7 @@ import {
   Filter,
   Sparkles
 } from 'lucide-react';
-  };
+
   const getServicePrice = (service: any) => {
     if (typeof service.price === 'number') {
       return service.price;

@@ -126,6 +126,7 @@ export default function ComprehensiveServicesOverview2027() {
   const [sortBy, setSortBy] = useState<'rating' | 'price' | 'aiScore' | 'newest'>('rating');
   const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
   const [expandedService, setExpandedService] = useState<string | null>(null);
+  
   useEffect(() => {
     let filtered = MICRO_SAAS_SERVICES;
     if (selectedCategory !== 'all') {
@@ -272,7 +273,7 @@ export default function ComprehensiveServicesOverview2027() {
       </div>
     </motion.div>
   );
-const ComprehensiveServicesOverview2027 = () => {
+  
   return (
     <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
       <SEO 
