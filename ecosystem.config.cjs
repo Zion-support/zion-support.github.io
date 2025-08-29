@@ -1,39 +1,39 @@
 module.exports = {
   apps: [
-    // Main application
-    {
-      name: 'zion-app',
-      script: 'npm',
-      args: 'start',
-      instances: 1,
-      autorestart: true,
-      watch: false,
-      max_memory_restart: '1G',
-      env: {
-        NODE_ENV: 'production',
-        PORT: 3000
-      }
-    },
+    // Main application - commented out until proper start script is available
+    // {
+    //   name: 'zion-app',
+    //   script: 'npm',
+    //   args: 'start',
+    //   instances: 1,
+    //   autorestart: true,
+    //   watch: false,
+    //   max_memory_restart: '1G',
+    //   env: {
+    //     NODE_ENV: 'production',
+    //     PORT: 3000
+    //   }
+    // },
     
-    // Backend services
-    {
-      name: 'zion-backend',
-      script: 'npm',
-      args: 'run dev',
-      instances: 1,
-      autorestart: true,
-      watch: false,
-      max_memory_restart: '512M',
-      env: {
-        NODE_ENV: 'development',
-        PORT: 5000
-      }
-    }
+    // Backend services - commented out until proper start script is available
+    // {
+    //   name: 'zion-backend',
+    //   script: 'npm',
+    //   args: 'run dev',
+    //   instances: 1,
+    //   autorestart: true,
+    //   watch: false,
+    //   max_memory_restart: '512M',
+    //   env: {
+    //     NODE_ENV: 'development',
+    //     PORT: 5000
+    //   }
+    // }
   ],
 
   // Enhanced Automation Processes
   automation: [
-    // Core automation processes
+    // Basic automation processes
     {
       name: 'console-error-fixer',
       script: './scripts/automation/console-error-fixer.cjs',
@@ -70,110 +70,6 @@ module.exports = {
       env: {
         NODE_ENV: 'production',
         AUTOMATION_INTERVAL: '3600000' // 1 hour
-      }
-    },
-    
-    {
-      name: 'daily-build-test',
-      script: './scripts/automation/daily-build-test.cjs',
-      instances: 1,
-      autorestart: true,
-      watch: false,
-      max_memory_restart: '512M',
-      env: {
-        NODE_ENV: 'production',
-        AUTOMATION_INTERVAL: '86400000' // 24 hours
-      }
-    },
-    
-    {
-      name: 'security-audit',
-      script: './scripts/automation/security-audit.cjs',
-      instances: 1,
-      autorestart: true,
-      watch: false,
-      max_memory_restart: '512M',
-      env: {
-        NODE_ENV: 'production',
-        AUTOMATION_INTERVAL: '7200000' // 2 hours
-      }
-    },
-    
-    {
-      name: 'dependency-updates',
-      script: './scripts/automation/dependency-updates.cjs',
-      instances: 1,
-      autorestart: true,
-      watch: false,
-      max_memory_restart: '512M',
-      env: {
-        NODE_ENV: 'production',
-        AUTOMATION_INTERVAL: '86400000' // 24 hours
-      }
-    },
-    
-    {
-      name: 'performance-monitor',
-      script: './scripts/automation/performance-monitor.cjs',
-      instances: 1,
-      autorestart: true,
-      watch: false,
-      max_memory_restart: '512M',
-      env: {
-        NODE_ENV: 'production',
-        AUTOMATION_INTERVAL: '1800000' // 30 minutes
-      }
-    },
-    
-    {
-      name: 'quality-checks',
-      script: './scripts/automation/quality-checks.cjs',
-      instances: 1,
-      autorestart: true,
-      watch: false,
-      max_memory_restart: '512M',
-      env: {
-        NODE_ENV: 'production',
-        AUTOMATION_INTERVAL: '3600000' // 1 hour
-      }
-    },
-    
-    {
-      name: 'link-integrity',
-      script: './scripts/automation/link-integrity.cjs',
-      instances: 1,
-      autorestart: true,
-      watch: false,
-      max_memory_restart: '512M',
-      env: {
-        NODE_ENV: 'production',
-        AUTOMATION_INTERVAL: '7200000' // 2 hours
-      }
-    },
-    
-    {
-      name: 'front-maximizer',
-      script: './scripts/automation/front-maximizer.cjs',
-      instances: 1,
-      autorestart: true,
-      watch: false,
-      max_memory_restart: '512M',
-      env: {
-        NODE_ENV: 'production',
-        AUTOMATION_INTERVAL: '3600000' // 1 hour
-      }
-    },
-    
-    {
-      name: 'sitemap-runner',
-      script: './scripts/automation/sitemap-runner.cjs',
-      instances: 1,
-      autorestart: true,
-      watch: false,
-      max_memory_restart: '512M',
-      env: {
-        NODE_ENV: 'production',
-        AUTOMATION_INTERVAL: '86400000' // 24 hours
       }
     },
 
