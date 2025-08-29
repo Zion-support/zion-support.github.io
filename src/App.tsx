@@ -45,7 +45,6 @@ const ComprehensiveServicesShowcase2030 = lazy(() => import('./pages/Comprehensi
 // Add missing imports
 const EnhancedContact = lazy(() => import('./pages/EnhancedContact').then(module => ({ default: module.default })));
 
-<<<<<<< HEAD
 // Service pages with enhanced error boundaries
 const CloudDevOps = lazy(() => import('./pages/services/CloudDevOps').then(module => ({ default: module.default })));
 const DigitalTwin = lazy(() => import('./pages/services/DigitalTwin').then(module => ({ default: module.default })));
