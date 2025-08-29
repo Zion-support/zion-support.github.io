@@ -154,8 +154,6 @@ const AllServices2027: React.FC = () => {
               specific business challenges and drive innovation.
             </p>
           </div>
-            </p>
-          </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {categories.map((category) => {
               const stats = getCategoryStats(category.id);

@@ -2,10 +2,24 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { cn } from "@/lib/utils";
 import { NavLink } from "react-router-dom";
-import { ChevronDown, Zap, Brain, Shield, Users, HardDrive, TrendingUp } from "lucide-react";
+import { 
+  ChevronDown, 
+  Zap, 
+  Brain, 
+  Shield, 
+  Users, 
+  HardDrive, 
+  TrendingUp,
+  HelpCircle,
+  BarChart3,
+  FileText,
+  Building2
+} from "lucide-react";
 export function MainNavigation({ className }) {
     const [isServicesOpen, setIsServicesOpen] = useState(false);
     const [isSolutionsOpen, setIsSolutionsOpen] = useState(false);
+    const [isCompanyOpen, setIsCompanyOpen] = useState(false);
+    const [isResourcesOpen, setIsResourcesOpen] = useState(false);
     return (<nav className={cn("hidden md:flex items-center space-x-6", className)}>
       <NavLink to="/" className={({ isActive }) => cn("text-sm font-medium transition-colors hover:text-primary", isActive ? "text-zion-cyan" : "text-muted-foreground")}>
         Home
@@ -30,8 +44,8 @@ export function MainNavigation({ className }) {
                     <li><Link to="/services/ai-sales-copilot" className="text-zion-slate-light hover:text-zion-cyan transition-colors">AI Sales Copilot</Link></li>
                     <li><Link to="/services/cloud-finops-optimizer" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Cloud FinOps Optimizer</Link></li>
                     <li><Link to="/services/ai-compliance-assistant" className="text-zion-slate-light hover:text-zion-cyan transition-colors">AI Compliance Assistant</Link></li>
-                    <li><Link to="/services/cloud" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Cloud & DevOps</Link></li>
-                    <li><Link to="/services/cybersecurity" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Cybersecurity</Link></li>
+                    <li><Link to="/services/cloud-devops" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Cloud & DevOps</Link></li>
+                    <li><Link to="/services/ai-cybersecurity-suite" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Cybersecurity</Link></li>
                   </ul>
                 </div>
                 <div>
@@ -44,7 +58,7 @@ export function MainNavigation({ className }) {
                     <li><Link to="/autonomous-business-operations-platform" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Autonomous Operations</Link></li>
                     <li><Link to="/ai-powered-it-asset-management" className="text-zion-slate-light hover:text-zion-cyan transition-colors">AI Asset Management</Link></li>
                     <li><Link to="/enhanced-services" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Enhanced Services</Link></li>
-                    <li><Link to="/it-onsite-services" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Onsite Support</Link></li>
+                    <li><Link to="/services/onsite-support" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Onsite Support</Link></li>
                   </ul>
                 </div>
               </div>

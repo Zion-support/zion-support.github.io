@@ -72,7 +72,7 @@ const benefits: Benefit[] = [
   }
 ];
 
-const stats = [
+const initialStats = [
   { icon: <Clock className="w-6 h-6" />, value: "3x Faster", label: "Project Delivery" },
   { icon: <CheckCircle className="w-6 h-6" />, value: "99.9%", label: "Success Rate" },
   { icon: <TrendingDown className="w-6 h-6" />, value: "50%", label: "Cost Reduction" },
@@ -94,10 +94,10 @@ export function BenefitsSection() {
   ];
 
   const stats = [
-    { value: "500+", label: "Projects Delivered", icon: Rocket },
-    { value: "50+", label: "Expert Team Members", icon: Users },
-    { value: "99.9%", label: "Client Satisfaction", icon: Star },
-    { value: "24/7", label: "Support Availability", icon: Clock }
+    { value: "500+", label: "Projects Delivered", icon: <Clock className="w-6 h-6" /> },
+    { value: "50+", label: "Expert Team Members", icon: <Globe className="w-6 h-6" /> },
+    { value: "99.9%", label: "Client Satisfaction", icon: <CheckCircle className="w-6 h-6" /> },
+    { value: "24/7", label: "Support Availability", icon: <Clock className="w-6 h-6" /> }
   ];
 
   return (
