@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useMemo } from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { 
@@ -65,39 +65,14 @@ import {
   Factory,
   City,
   CheckCircle,
-  Award,
-  Code,
-  Truck,
-  Building,
-  BarChart3,
-  PenTool,
-  Eye,
-  Server,
-  Smartphone,
-  Database,
-  Network,
-  Clock,
-  ShoppingCart,
-  Lock,
-  FileText,
-  Settings,
-  Key,
-  Globe2,
-  ShieldCheck,
-  Leaf,
-  Scale,
-  Building2,
-  Car,
-  Home,
-  Factory,
-  City,
   ArrowUpRight,
   Play,
   MailIcon
 } from 'lucide-react';
-export const EnhancedFuturisticFooter: React.FC = () => {
+export const EnhancedFuturisticFooter: React.FC = React.memo(() => {
   const currentYear = new Date().getFullYear();
-  const footerSections = [
+  
+  const footerSections = useMemo(() => [
     {
       title: 'AI & Analytics',
       icon: Brain,
@@ -187,7 +162,7 @@ export const EnhancedFuturisticFooter: React.FC = () => {
         { name: 'Compliance', href: '/compliance' }
       ]
     }
-  ];
+  ], []);
   const socialLinks = [
     { name: 'LinkedIn', href: 'https://linkedin.com/company/ziontechgroup', icon: Linkedin },
     { name: 'Twitter', href: 'https://twitter.com/ziontechgroup', icon: Twitter },
@@ -350,4 +325,4 @@ export const EnhancedFuturisticFooter: React.FC = () => {
       </div>
     </footer>
   );
-};
+});
