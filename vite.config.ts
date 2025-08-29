@@ -1,6 +1,8 @@
 import react from '@vitejs/plugin-react'
 import path from 'path'
 import { defineConfig } from 'vite'
+import { VitePWA } from 'vite-plugin-pwa'
+import compression from 'vite-plugin-compression'
 
 // https://vite.dev/config/
 export default defineConfig(({ command, mode }) => {
@@ -9,6 +11,45 @@ export default defineConfig(({ command, mode }) => {
   return {
     plugins: [
       react(),
+      VitePWA({
+        registerType: 'autoUpdate',
+        workbox: {
+          globPatterns: ['**/*.{js,css,html,ico,png,svg,woff2}'],
+          cleanupOutdatedCaches: true,
+          sourcemap: false
+        },
+        manifest: {
+          name: 'Zion Tech Group - Revolutionary AI & Tech Solutions',
+          short_name: 'Zion Tech',
+          description: 'Cutting-edge AI services, quantum computing, and innovative tech solutions',
+          theme_color: '#0f172a',
+          background_color: '#0f172a',
+          display: 'standalone',
+          orientation: 'portrait',
+          scope: '/',
+          start_url: '/',
+          icons: [
+            {
+              src: '/icon-192x192.png',
+              sizes: '192x192',
+              type: 'image/png'
+            },
+            {
+              src: '/icon-512x512.png',
+              sizes: '512x512',
+              type: 'image/png'
+            }
+          ]
+        }
+      }),
+      compression({
+        algorithm: 'gzip',
+        ext: '.gz'
+      }),
+      compression({
+        algorithm: 'brotliCompress',
+        ext: '.br'
+      })
     ],
     resolve: {
       alias: {
@@ -21,10 +62,10 @@ export default defineConfig(({ command, mode }) => {
         '@styles': path.resolve(__dirname, './src/styles'),
         '@assets': path.resolve(__dirname, './src/assets'),
       },
-      dedupe: ['date-fns'],
+      dedupe: ['date-fns', 'react', 'react-dom'],
     },
     build: {
-      target: 'es2018',
+      target: 'es2020',
       minify: 'terser',
       sourcemap: false,
       outDir: 'dist',
@@ -32,11 +73,15 @@ export default defineConfig(({ command, mode }) => {
       modulePreload: {
         polyfill: true,
       },
-      assetsInlineLimit: 4096,
+      assetsInlineLimit: 8192,
       terserOptions: {
         compress: {
-          drop_console: true,
-          drop_debugger: true,
+          drop_console: isProduction,
+          drop_debugger: isProduction,
+          pure_funcs: isProduction ? ['console.log', 'console.info'] : [],
+        },
+        mangle: {
+          safari10: true,
         },
       },
       rollupOptions: {
@@ -51,6 +96,8 @@ export default defineConfig(({ command, mode }) => {
             'form-vendor': ['react-hook-form', '@hookform/resolvers', 'zod'],
             'utils-vendor': ['clsx', 'class-variance-authority', 'tailwind-merge', 'date-fns'],
             'charts-vendor': ['recharts', 'd3-color', 'd3-format', 'd3-path', 'd3-time-format'],
+            'animation-vendor': ['framer-motion'],
+            'state-vendor': ['@reduxjs/toolkit', 'react-redux'],
           },
           chunkFileNames: (chunkInfo) => {
             const facadeModuleId = chunkInfo.facadeModuleId ? chunkInfo.facadeModuleId.split('/').pop() : 'chunk';
@@ -60,11 +107,14 @@ export default defineConfig(({ command, mode }) => {
           assetFileNames: (assetInfo) => {
             const info = assetInfo.name.split('.');
             const ext = info[info.length - 1];
-            if (/png|jpe?g|svg|gif|tiff|bmp|ico/i.test(ext)) {
+            if (/png|jpe?g|svg|gif|tiff|bmp|ico|webp|avif/i.test(ext)) {
               return `images/[name]-[hash][extname]`;
             }
             if (/css/i.test(ext)) {
               return `css/[name]-[hash][extname]`;
+            }
+            if (/woff2?|ttf|eot/i.test(ext)) {
+              return `fonts/[name]-[hash][extname]`;
             }
             return `assets/[name]-[hash][extname]`;
           },
@@ -72,17 +122,29 @@ export default defineConfig(({ command, mode }) => {
         onwarn(warning, warn) {
           // Suppress warnings about missing optional dependencies
           if (warning.code === 'MODULE_LEVEL_DIRECTIVE') return;
+          if (warning.code === 'CIRCULAR_DEPENDENCY') return;
           warn(warning);
         },
       },
       brotliSize: true,
+      chunkSizeWarningLimit: 1000,
     },
     optimizeDeps: {
-      include: ['react', 'react-dom', 'react-router-dom'],
+      include: [
+        'react', 
+        'react-dom', 
+        'react-router-dom',
+        '@radix-ui/react-accordion',
+        '@radix-ui/react-dialog',
+        'framer-motion',
+        'clsx',
+        'tailwind-merge'
+      ],
+      exclude: ['@radix-ui/react-toast'],
       ...(isProduction && {
         force: true,
         esbuildOptions: {
-          target: 'es2018',
+          target: 'es2020',
           platform: 'browser',
         }
       })
@@ -91,10 +153,19 @@ export default defineConfig(({ command, mode }) => {
       port: 3000,
       host: true,
       open: true,
+      cors: true,
+      headers: {
+        'X-Frame-Options': 'DENY',
+        'X-Content-Type-Options': 'nosniff',
+        'Referrer-Policy': 'strict-origin-when-cross-origin'
+      }
     },
     preview: {
       port: 4173,
       host: true,
     },
+    css: {
+      postcss: './postcss.config.js'
+    }
   }
 })
