@@ -30,7 +30,8 @@ import {
   Phone,
   Mail,
   MapPin,
-  ExternalLink
+  ExternalLink,
+  BarChart3
 } from 'lucide-react';
 import expandedServices2025 from '../data/expandedServices2025';
 
@@ -75,6 +76,33 @@ export default function Services() {
           price: 'From $199/month',
           rating: 4.9,
           reviewCount: 156
+        },
+        {
+          name: 'AI Legal Document Automation',
+          description: 'Automate legal document creation and compliance with AI',
+          features: ['Contract Generation', 'Compliance Checking', 'Risk Assessment', 'Template Library'],
+          href: '/services/ai-legal-document-automation',
+          price: 'From $399/month',
+          rating: 4.9,
+          reviewCount: 203
+        },
+        {
+          name: 'AI Healthcare Analytics',
+          description: 'Predictive healthcare analytics for better patient outcomes',
+          features: ['Patient Outcome Prediction', 'Treatment Optimization', 'Risk Scoring', 'EHR Integration'],
+          href: '/services/ai-healthcare-analytics',
+          price: 'From $599/month',
+          rating: 4.9,
+          reviewCount: 178
+        },
+        {
+          name: 'AI Financial Trading Platform',
+          description: 'AI-powered financial trading and risk management',
+          features: ['Risk Assessment', 'Portfolio Optimization', 'Market Prediction', 'Compliance Monitoring'],
+          href: '/services/ai-financial-trading-platform',
+          price: 'From $799/month',
+          rating: 4.8,
+          reviewCount: 145
         }
       ]
     },
@@ -85,65 +113,207 @@ export default function Services() {
       color: 'from-blue-600 to-cyan-600',
       services: [
         {
-          name: 'Cloud DevOps',
-          description: 'End-to-end cloud infrastructure and automated deployment solutions',
-          features: ['CI/CD Pipelines', 'Infrastructure as Code', 'Monitoring & Logging', 'Auto-scaling'],
-          href: '/services/cloud-devops',
-          price: 'From $8,000',
+          name: 'Cloud Migration Services',
+          description: 'Expert cloud migration and consulting services',
+          features: ['Strategy Planning', 'Application Modernization', 'Data Migration', 'Cost Optimization'],
+          href: '/services/cloud-migration',
+          price: 'From $3,200/month',
           rating: 4.9,
           reviewCount: 234
         },
         {
-          name: 'Cloud FinOps Optimizer',
-          description: 'Cloud cost optimization and financial operations management',
-          features: ['Cost Analysis', 'Resource Optimization', 'Budget Management', 'ROI Tracking'],
-          href: '/services/cloud-finops-optimizer',
-          price: 'From $4,500',
+          name: 'DevOps Automation',
+          description: 'Streamline development and operations with CI/CD pipelines',
+          features: ['CI/CD Setup', 'Infrastructure as Code', 'Automated Testing', 'Performance Monitoring'],
+          href: '/services/devops-automation',
+          price: 'From $2,100/month',
           rating: 4.8,
           reviewCount: 167
-        }
-      ]
-    },
-    {
-      name: 'Digital Solutions',
-      icon: Rocket,
-      description: 'Digital transformation and innovative technology solutions',
-      color: 'from-green-600 to-emerald-600',
-      services: [
-        {
-          name: 'Digital Twin',
-          description: 'Real-time digital simulation and monitoring solutions',
-          features: ['3D Modeling', 'Real-time Monitoring', 'Predictive Maintenance', 'Performance Analytics'],
-          href: '/services/digital-twin',
-          price: 'From $15,000',
-          rating: 4.9,
-          reviewCount: 78
         },
         {
-          name: 'IT Infrastructure',
-          description: 'Enterprise-grade IT infrastructure and network management',
-          features: ['Network Design', 'Server Management', 'Security Implementation', '24/7 Monitoring'],
-          href: '/services/it-infrastructure',
-          price: 'From $12,000',
-          rating: 4.8,
-          reviewCount: 145
+          name: 'Edge Computing Platform',
+          description: 'Intelligent edge computing for IoT and real-time processing',
+          features: ['Edge AI Processing', 'Real-time Analytics', 'IoT Management', 'Low-latency Computing'],
+          href: '/services/edge-computing-platform',
+          price: 'From $699/month',
+          rating: 4.9,
+          reviewCount: 189
+        },
+        {
+          name: 'Micro SaaS Solutions',
+          description: 'AI-powered micro SaaS products with transparent pricing',
+          features: ['AI Automation', 'Transparent Pricing', 'Quick Implementation', '24/7 Support'],
+          href: '/services/micro-saas',
+          price: 'From $199/month',
+          rating: 4.9,
+          reviewCount: 312
         }
       ]
     },
     {
       name: 'Cybersecurity',
       icon: Shield,
-      description: 'Advanced security protocols and threat protection systems',
+      description: 'Advanced cybersecurity solutions and threat protection',
       color: 'from-red-600 to-orange-600',
       services: [
         {
-          name: 'Zero Trust Architecture',
-          description: 'Advanced zero-trust security implementation and management',
-          features: ['Identity Verification', 'Access Control', 'Network Segmentation', 'Continuous Monitoring'],
+          name: 'AI Cybersecurity Suite',
+          description: 'AI-powered threat detection and response platform',
+          features: ['Real-time Detection', 'AI Analysis', 'Automated Response', 'Threat Intelligence'],
+          href: '/services/ai-cybersecurity-suite',
+          price: 'From $599/month',
+          rating: 4.9,
+          reviewCount: 198
+        },
+        {
+          name: 'Zero Trust Network Architecture',
+          description: 'Advanced network security with zero trust principles',
+          features: ['Identity Verification', 'Continuous Monitoring', 'Access Control', 'Threat Prevention'],
           href: '/services/zero-trust-network-architecture',
-          price: 'From $18,000',
+          price: 'From $2,500/month',
+          rating: 4.8,
+          reviewCount: 156
+        },
+        {
+          name: 'Smart Contract Risk Scanner',
+          description: 'Blockchain security and smart contract auditing',
+          features: ['Vulnerability Detection', 'Compliance Checking', 'Security Auditing', 'Risk Assessment'],
+          href: '/services/smart-contract-risk-scanner',
+          price: 'From $449/month',
           rating: 4.9,
           reviewCount: 134
+        },
+        {
+          name: 'Cybersecurity Audit & Compliance',
+          description: 'Comprehensive security auditing and compliance services',
+          features: ['Vulnerability Assessment', 'Penetration Testing', 'Compliance Auditing', 'Security Training'],
+          href: '/services/cybersecurity-audit',
+          price: 'From $1,800/month',
+          rating: 4.8,
+          reviewCount: 223
+        }
+      ]
+    },
+    {
+      name: 'IT Services',
+      icon: Server,
+      description: 'Comprehensive IT infrastructure and management services',
+      color: 'from-gray-600 to-slate-600',
+      services: [
+        {
+          name: 'Enterprise IT Infrastructure',
+          description: 'Complete IT infrastructure management and optimization',
+          features: ['Network Design', 'Server Management', 'Cloud Migration', '24/7 Monitoring'],
+          href: '/services/enterprise-it-infrastructure',
+          price: 'From $2,500/month',
+          rating: 4.9,
+          reviewCount: 189
+        },
+        {
+          name: 'Managed IT Services',
+          description: '24/7 IT monitoring, support, and proactive maintenance',
+          features: ['24/7 Monitoring', 'Help Desk Support', 'Proactive Maintenance', 'Security Management'],
+          href: '/services/managed-it',
+          price: 'From $1,500/month',
+          rating: 4.8,
+          reviewCount: 267
+        },
+        {
+          name: 'Mobile App Development',
+          description: 'Custom mobile applications for iOS and Android',
+          features: ['Native Development', 'UI/UX Design', 'Performance Optimization', 'App Store Optimization'],
+          href: '/services/mobile-development',
+          price: 'From $1,800/month',
+          rating: 4.9,
+          reviewCount: 198
+        },
+        {
+          name: 'Web Development Services',
+          description: 'Custom websites, e-commerce platforms, and web applications',
+          features: ['Custom Development', 'Responsive Design', 'SEO Optimization', 'Performance Optimization'],
+          href: '/services/web-development',
+          price: 'From $1,200/month',
+          rating: 4.8,
+          reviewCount: 234
+        }
+      ]
+    },
+    {
+      name: 'Emerging Technologies',
+      icon: Rocket,
+      description: 'Cutting-edge technologies for the future',
+      color: 'from-indigo-600 to-purple-600',
+      services: [
+        {
+          name: 'Quantum Computing Solutions',
+          description: 'Quantum computing and optimization platform',
+          features: ['Quantum Algorithms', 'Hybrid Computing', 'Complex Problem Solving', 'Performance Benchmarking'],
+          href: '/services/quantum-computing',
+          price: 'From $999/month',
+          rating: 4.9,
+          reviewCount: 89
+        },
+        {
+          name: 'Space Technology',
+          description: 'Advanced space technology and satellite management',
+          features: ['Satellite Operations', 'Mission Planning', 'Earth Observation', 'Communication Optimization'],
+          href: '/services/space-tech',
+          price: 'From $1,299/month',
+          rating: 4.9,
+          reviewCount: 67
+        },
+        {
+          name: 'Sustainability Solutions',
+          description: 'Green technology and ESG monitoring platform',
+          features: ['ESG Tracking', 'Carbon Footprint', 'Sustainability Reporting', 'Compliance Monitoring'],
+          href: '/services/sustainability',
+          price: 'From $349/month',
+          rating: 4.8,
+          reviewCount: 145
+        },
+        {
+          name: 'IoT Solutions Development',
+          description: 'End-to-end IoT solutions and integration services',
+          features: ['Device Development', 'Sensor Integration', 'Data Processing', 'Cloud Integration'],
+          href: '/services/iot-development',
+          price: 'From $2,800/month',
+          rating: 4.9,
+          reviewCount: 178
+        }
+      ]
+    },
+    {
+      name: 'Data & Analytics',
+      icon: BarChart3,
+      description: 'Data-driven insights and business intelligence solutions',
+      color: 'from-green-600 to-emerald-600',
+      services: [
+        {
+          name: 'Data Analytics & BI',
+          description: 'Transform data into actionable business insights',
+          features: ['Data Warehouse Design', 'ETL Pipelines', 'Dashboard Creation', 'Predictive Analytics'],
+          href: '/services/data-analytics',
+          price: 'From $1,500/month',
+          rating: 4.9,
+          reviewCount: 234
+        },
+        {
+          name: 'AI Data Governance',
+          description: 'Comprehensive data governance and compliance platform',
+          features: ['Data Quality Assessment', 'Compliance Monitoring', 'Data Lineage Tracking', 'Privacy Management'],
+          href: '/services/ai-data-governance',
+          price: 'From $499/month',
+          rating: 4.8,
+          reviewCount: 167
+        },
+        {
+          name: 'Data Backup & Recovery',
+          description: 'Comprehensive data protection and disaster recovery',
+          features: ['Automated Backup', 'Cloud Backup', 'Disaster Recovery', 'Business Continuity'],
+          href: '/services/data-backup',
+          price: 'From $800/month',
+          rating: 4.9,
+          reviewCount: 289
         }
       ]
     }

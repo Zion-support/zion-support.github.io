@@ -48,52 +48,100 @@ const LoadingFallback = ({ message }: { message: string }) => (
 // Service categories data
 const serviceCategories = [
   {
-    name: "AI Solutions",
-    description: "Cutting-edge artificial intelligence services for business transformation",
+    name: "AI & Analytics",
+    description: "Cutting-edge artificial intelligence and data analytics solutions",
     icon: "🤖",
-    href: "/ai-services",
-    count: 20,
-    color: "from-cyan-500 to-blue-600"
-  },
-  {
-    name: "Edge & IoT",
-    description: "Ultra-low latency edge computing and IoT platform solutions",
-    icon: "⚡",
-    href: "/services/edge-computing-platform",
-    count: 8,
-    color: "from-blue-500 to-purple-600"
+    href: "/services",
+    count: 25,
+    color: "from-purple-500 to-pink-600"
   },
   {
     name: "Cloud & DevOps",
     description: "Scalable cloud infrastructure and automated deployment solutions",
     icon: "☁️",
-    href: "/services/cloud-devops",
-    count: 12,
-    color: "from-green-500 to-emerald-600"
+    href: "/services",
+    count: 15,
+    color: "from-blue-500 to-cyan-600"
   },
   {
     name: "Cybersecurity",
     description: "Advanced security protocols and threat protection systems",
     icon: "🔒",
-    href: "/services/ai-compliance-copilot",
-    count: 10,
+    href: "/services",
+    count: 18,
     color: "from-red-500 to-orange-600"
   },
   {
-    name: "Data Governance",
-    description: "AI-powered data protection and compliance management",
-    icon: "🛡️",
-    href: "/services/ai-data-governance",
-    count: 6,
-    color: "from-purple-500 to-pink-600"
+    name: "IT Services",
+    description: "Comprehensive IT infrastructure and management services",
+    icon: "🖥️",
+    href: "/services",
+    count: 22,
+    color: "from-gray-500 to-slate-600"
   },
   {
-    name: "Customer Success",
-    description: "AI-driven customer engagement and retention platforms",
-    icon: "💝",
-    href: "/services/ai-customer-success-platform",
-    count: 5,
+    name: "Emerging Tech",
+    description: "Cutting-edge technologies for the future",
+    icon: "🚀",
+    href: "/services",
+    count: 20,
+    color: "from-indigo-500 to-purple-600"
+  },
+  {
+    name: "Data & Analytics",
+    description: "Data-driven insights and business intelligence solutions",
+    icon: "📊",
+    href: "/services",
+    count: 12,
+    color: "from-green-500 to-emerald-600"
+  },
+  {
+    name: "Micro SaaS",
+    description: "AI-powered micro SaaS solutions with transparent pricing",
+    icon: "💼",
+    href: "/services/micro-saas",
+    count: 30,
+    color: "from-orange-500 to-red-600"
+  },
+  {
+    name: "Blockchain & Web3",
+    description: "Decentralized solutions and blockchain development",
+    icon: "⛓️",
+    href: "/services",
+    count: 8,
     color: "from-yellow-500 to-orange-600"
+  },
+  {
+    name: "IoT & Edge",
+    description: "Ultra-low latency edge computing and IoT platform solutions",
+    icon: "⚡",
+    href: "/services",
+    count: 14,
+    color: "from-cyan-500 to-blue-600"
+  },
+  {
+    name: "Healthcare Tech",
+    description: "AI-powered healthcare analytics and predictive medicine",
+    icon: "🏥",
+    href: "/services",
+    count: 9,
+    color: "from-red-500 to-pink-600"
+  },
+  {
+    name: "FinTech & DeFi",
+    description: "Next-generation financial technology and decentralized finance",
+    icon: "💰",
+    href: "/services",
+    count: 11,
+    color: "from-green-500 to-emerald-600"
+  },
+  {
+    name: "Sustainability",
+    description: "Green technology and ESG monitoring solutions",
+    icon: "🌱",
+    href: "/services",
+    count: 7,
+    color: "from-green-500 to-teal-600"
   }
 ];
 

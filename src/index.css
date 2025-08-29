@@ -340,3 +340,348 @@ body {
     background-color: #ffffff;
   }
 }
+
+/* Responsive Design Utilities */
+.responsive-grid {
+  @apply grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6 lg:gap-8;
+}
+
+.responsive-text {
+  @apply text-sm sm:text-base lg:text-lg xl:text-xl;
+}
+
+.responsive-heading {
+  @apply text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-bold;
+}
+
+.responsive-subheading {
+  @apply text-lg sm:text-xl lg:text-2xl xl:text-3xl font-semibold;
+}
+
+.responsive-padding {
+  @apply px-4 sm:px-6 lg:px-8 xl:px-12;
+}
+
+.responsive-margin {
+  @apply mx-4 sm:mx-6 lg:mx-8 xl:mx-12;
+}
+
+.responsive-section {
+  @apply py-8 sm:py-12 lg:py-16 xl:py-20;
+}
+
+.responsive-container {
+  @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 xl:px-12;
+}
+
+/* Improved Spacing */
+.space-y-responsive > * + * {
+  @apply mt-4 sm:mt-6 lg:mt-8 xl:mt-10;
+}
+
+.space-x-responsive > * + * {
+  @apply ml-4 sm:ml-6 lg:ml-8 xl:ml-10;
+}
+
+/* Mobile-First Navigation */
+.mobile-nav {
+  @apply fixed inset-0 z-50 bg-white dark:bg-gray-900 transform transition-transform duration-300 ease-in-out;
+}
+
+.mobile-nav.hidden {
+  @apply -translate-x-full;
+}
+
+.mobile-nav.visible {
+  @apply translate-x-0;
+}
+
+/* Improved Card Design */
+.card-responsive {
+  @apply bg-white dark:bg-gray-800 rounded-lg shadow-sm hover:shadow-lg transition-all duration-300 border border-gray-200 dark:border-gray-700;
+}
+
+.card-padding {
+  @apply p-4 sm:p-6 lg:p-8;
+}
+
+/* Button Responsiveness */
+.btn-responsive {
+  @apply px-4 py-2 sm:px-6 sm:py-3 lg:px-8 lg:py-4 text-sm sm:text-base lg:text-lg font-medium rounded-lg transition-all duration-200;
+}
+
+.btn-primary-responsive {
+  @apply btn-responsive bg-blue-600 hover:bg-blue-700 text-white shadow-lg hover:shadow-xl;
+}
+
+.btn-secondary-responsive {
+  @apply btn-responsive bg-gray-200 hover:bg-gray-300 dark:bg-gray-700 dark:hover:bg-gray-600 text-gray-900 dark:text-white;
+}
+
+/* Form Responsiveness */
+.form-responsive {
+  @apply w-full max-w-md sm:max-w-lg lg:max-w-xl mx-auto;
+}
+
+.input-responsive {
+  @apply w-full px-3 py-2 sm:px-4 sm:py-3 text-sm sm:text-base border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent;
+}
+
+/* Table Responsiveness */
+.table-responsive {
+  @apply w-full overflow-x-auto;
+}
+
+.table-responsive table {
+  @apply min-w-full divide-y divide-gray-200 dark:divide-gray-700;
+}
+
+/* Image Responsiveness */
+.img-responsive {
+  @apply w-full h-auto object-cover;
+}
+
+.img-responsive-sm {
+  @apply w-full sm:w-auto h-32 sm:h-40 lg:h-48 object-cover;
+}
+
+.img-responsive-md {
+  @apply w-full sm:w-auto h-40 sm:h-48 lg:h-56 object-cover;
+}
+
+.img-responsive-lg {
+  @apply w-full sm:w-auto h-48 sm:h-56 lg:h-64 object-cover;
+}
+
+/* Grid Responsiveness */
+.grid-responsive-1 {
+  @apply grid grid-cols-1 gap-4 sm:gap-6;
+}
+
+.grid-responsive-2 {
+  @apply grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6;
+}
+
+.grid-responsive-3 {
+  @apply grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6;
+}
+
+.grid-responsive-4 {
+  @apply grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6;
+}
+
+/* Flexbox Responsiveness */
+.flex-responsive {
+  @apply flex flex-col sm:flex-row;
+}
+
+.flex-responsive-center {
+  @apply flex flex-col sm:flex-row items-center justify-center;
+}
+
+.flex-responsive-between {
+  @apply flex flex-col sm:flex-row items-center justify-between;
+}
+
+/* Text Responsiveness */
+.text-responsive-xs {
+  @apply text-xs sm:text-sm;
+}
+
+.text-responsive-sm {
+  @apply text-sm sm:text-base;
+}
+
+.text-responsive-base {
+  @apply text-base sm:text-lg;
+}
+
+.text-responsive-lg {
+  @apply text-lg sm:text-xl;
+}
+
+.text-responsive-xl {
+  @apply text-xl sm:text-2xl;
+}
+
+.text-responsive-2xl {
+  @apply text-2xl sm:text-3xl;
+}
+
+.text-responsive-3xl {
+  @apply text-3xl sm:text-4xl;
+}
+
+.text-responsive-4xl {
+  @apply text-4xl sm:text-5xl;
+}
+
+.text-responsive-5xl {
+  @apply text-5xl sm:text-6xl;
+}
+
+/* Margin and Padding Responsiveness */
+.m-responsive-0 { @apply m-0 sm:m-2 lg:m-4; }
+.m-responsive-1 { @apply m-1 sm:m-2 lg:m-4; }
+.m-responsive-2 { @apply m-2 sm:m-4 lg:m-6; }
+.m-responsive-3 { @apply m-3 sm:m-6 lg:m-8; }
+.m-responsive-4 { @apply m-4 sm:m-6 lg:m-8; }
+.m-responsive-5 { @apply m-5 sm:m-8 lg:m-10; }
+.m-responsive-6 { @apply m-6 sm:m-8 lg:m-10; }
+.m-responsive-8 { @apply m-8 sm:m-10 lg:m-12; }
+.m-responsive-10 { @apply m-10 sm:m-12 lg:m-16; }
+.m-responsive-12 { @apply m-12 sm:m-16 lg:m-20; }
+.m-responsive-16 { @apply m-16 sm:m-20 lg:m-24; }
+.m-responsive-20 { @apply m-20 sm:m-24 lg:m-32; }
+
+.p-responsive-0 { @apply p-0 sm:p-2 lg:p-4; }
+.p-responsive-1 { @apply p-1 sm:p-2 lg:p-4; }
+.p-responsive-2 { @apply p-2 sm:p-4 lg:p-6; }
+.p-responsive-3 { @apply p-3 sm:p-6 lg:p-8; }
+.p-responsive-4 { @apply p-4 sm:p-6 lg:p-8; }
+.p-responsive-5 { @apply p-5 sm:p-8 lg:p-10; }
+.p-responsive-6 { @apply p-6 sm:p-8 lg:p-10; }
+.p-responsive-8 { @apply p-8 sm:p-10 lg:p-12; }
+.p-responsive-10 { @apply p-10 sm:p-12 lg:p-16; }
+.p-responsive-12 { @apply p-12 sm:p-16 lg:p-20; }
+.p-responsive-16 { @apply p-16 sm:p-20 lg:p-24; }
+.p-responsive-20 { @apply p-20 sm:p-24 lg:p-32; }
+
+/* Improved Hover Effects */
+.hover-lift {
+  @apply transition-all duration-300 hover:-translate-y-1 hover:shadow-lg;
+}
+
+.hover-scale {
+  @apply transition-all duration-300 hover:scale-105;
+}
+
+.hover-glow {
+  @apply transition-all duration-300 hover:shadow-lg hover:shadow-blue-500/25;
+}
+
+/* Loading States */
+.loading-skeleton {
+  @apply animate-pulse bg-gray-200 dark:bg-gray-700 rounded;
+}
+
+.loading-spinner {
+  @apply animate-spin rounded-full border-2 border-gray-300 border-t-blue-600;
+}
+
+/* Focus States */
+.focus-ring {
+  @apply focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2;
+}
+
+.focus-ring-dark {
+  @apply focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 dark:focus:ring-offset-gray-900;
+}
+
+/* Print Styles */
+@media print {
+  .no-print {
+    display: none !important;
+  }
+  
+  .print-break {
+    page-break-before: always;
+  }
+  
+  .print-break-avoid {
+    page-break-inside: avoid;
+  }
+}
+
+/* High DPI Displays */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  .high-dpi {
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: crisp-edges;
+  }
+}
+
+/* Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Dark Mode Transitions */
+.dark-mode-transition {
+  @apply transition-colors duration-300;
+}
+
+/* Custom Scrollbar */
+.custom-scrollbar {
+  scrollbar-width: thin;
+  scrollbar-color: rgb(156 163 175) transparent;
+}
+
+.custom-scrollbar::-webkit-scrollbar {
+  width: 6px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background-color: rgb(156 163 175);
+  border-radius: 3px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background-color: rgb(107 114 128);
+}
+
+/* Improved Accessibility */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.sr-only-focusable:focus {
+  position: static;
+  width: auto;
+  height: auto;
+  overflow: visible;
+  clip: auto;
+  white-space: normal;
+}
+
+/* Focus Visible */
+.focus-visible:focus {
+  outline: 2px solid rgb(59 130 246);
+  outline-offset: 2px;
+}
+
+/* Skip Link */
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 6px;
+  background: rgb(59 130 246);
+  color: white;
+  padding: 8px;
+  text-decoration: none;
+  border-radius: 4px;
+  z-index: 1000;
+}
+
+.skip-link:focus {
+  top: 6px;
+}

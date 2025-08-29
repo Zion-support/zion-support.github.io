@@ -16,7 +16,14 @@ import {
   Rocket,
   Brain,
   Cloud,
-  Lock
+  Lock,
+  FileText,
+  Heart,
+  TrendingUp,
+  Cpu,
+  Atom,
+  Smartphone,
+  Server
 } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
@@ -35,7 +42,9 @@ const Pricing: React.FC = () => {
         'Basic Security Monitoring',
         'Email Support',
         'Monthly Reports',
-        'Up to 5 Users'
+        'Up to 5 Users',
+        'Basic AI Content Optimization',
+        'Standard Backup Services'
       ],
       color: 'from-blue-500 to-cyan-600',
       popular: false
@@ -53,7 +62,11 @@ const Pricing: React.FC = () => {
         'Priority Support',
         'Up to 25 Users',
         'Custom Integrations',
-        'Quarterly Strategy Sessions'
+        'Quarterly Strategy Sessions',
+        'AI Legal Document Automation',
+        'Healthcare Analytics Platform',
+        'Financial Trading Risk Management',
+        'Supply Chain Optimization'
       ],
       color: 'from-purple-500 to-pink-600',
       popular: true
@@ -71,7 +84,11 @@ const Pricing: React.FC = () => {
         'Dedicated Account Manager',
         'Unlimited Users',
         'Onsite Support',
-        'Custom SLA Agreements'
+        'Custom SLA Agreements',
+        'Quantum Computing Platform',
+        'Space Technology Solutions',
+        'Advanced Cybersecurity Suite',
+        'Biotech & Health Innovation'
       ],
       color: 'from-amber-500 to-orange-600',
       popular: false
@@ -98,10 +115,126 @@ const Pricing: React.FC = () => {
       icon: Shield
     },
     {
-      name: 'Digital Transformation',
-      description: 'End-to-end business transformation consulting',
-      price: { monthly: 1200, annual: 10800 },
+      name: 'AI Legal Document Automation',
+      description: 'Legal document automation and compliance',
+      price: { monthly: 399, annual: 3591 },
+      icon: FileText
+    },
+    {
+      name: 'AI Healthcare Analytics',
+      description: 'Predictive healthcare analytics platform',
+      price: { monthly: 599, annual: 5391 },
+      icon: Heart
+    },
+    {
+      name: 'AI Financial Trading Platform',
+      description: 'Financial trading and risk management',
+      price: { monthly: 799, annual: 7191 },
+      icon: TrendingUp
+    },
+    {
+      name: 'Edge Computing Platform',
+      description: 'IoT and edge computing solutions',
+      price: { monthly: 699, annual: 6291 },
+      icon: Cpu
+    },
+    {
+      name: 'Quantum Computing Platform',
+      description: 'Quantum computing and optimization',
+      price: { monthly: 999, annual: 8991 },
+      icon: Atom
+    },
+    {
+      name: 'Space Technology Solutions',
+      description: 'Satellite and space technology management',
+      price: { monthly: 1299, annual: 11691 },
       icon: Rocket
+    },
+    {
+      name: 'Blockchain Development',
+      description: 'Custom blockchain and smart contract solutions',
+      price: { monthly: 449, annual: 4041 },
+      icon: Lock
+    },
+    {
+      name: 'Mobile App Development',
+      description: 'Custom mobile application development',
+      price: { monthly: 1800, annual: 16200 },
+      icon: Smartphone
+    },
+    {
+      name: 'Web Development Services',
+      description: 'Custom website and e-commerce development',
+      price: { monthly: 1200, annual: 10800 },
+      icon: Globe
+    }
+  ];
+
+  const serviceCategories = [
+    {
+      name: 'AI & Analytics',
+      services: [
+        { name: 'AI Business Intelligence', price: 'From $5,000' },
+        { name: 'AI Sales Copilot', price: 'From $3,500' },
+        { name: 'AI Content Optimizer Pro', price: 'From $199/month' },
+        { name: 'AI Legal Document Automation', price: 'From $399/month' },
+        { name: 'AI Healthcare Analytics', price: 'From $599/month' },
+        { name: 'AI Financial Trading Platform', price: 'From $799/month' },
+        { name: 'AI Supply Chain Optimization', price: 'From $349/month' },
+        { name: 'AI HR Platform', price: 'From $249/month' },
+        { name: 'AI Education Platform', price: 'From $199/month' },
+        { name: 'AI Project Management', price: 'From $299/month' },
+        { name: 'AI Customer Success Platform', price: 'From $399/month' }
+      ]
+    },
+    {
+      name: 'Cloud & DevOps',
+      services: [
+        { name: 'Cloud Migration Services', price: 'From $3,200/month' },
+        { name: 'DevOps Automation', price: 'From $2,100/month' },
+        { name: 'Edge Computing Platform', price: 'From $699/month' },
+        { name: 'Micro SaaS Solutions', price: 'From $199/month' },
+        { name: 'Cloud FinOps Optimizer', price: 'From $1,500/month' },
+        { name: 'FinOps Advisor', price: 'From $800/month' }
+      ]
+    },
+    {
+      name: 'Cybersecurity',
+      services: [
+        { name: 'AI Cybersecurity Suite', price: 'From $599/month' },
+        { name: 'Zero Trust Network Architecture', price: 'From $2,500/month' },
+        { name: 'Smart Contract Risk Scanner', price: 'From $449/month' },
+        { name: 'Cybersecurity Audit & Compliance', price: 'From $1,800/month' },
+        { name: 'Network Security Services', price: 'From $1,200/month' },
+        { name: 'Email Security Services', price: 'From $600/month' },
+        { name: 'Endpoint Security Services', price: 'From $900/month' }
+      ]
+    },
+    {
+      name: 'IT Services',
+      services: [
+        { name: 'Enterprise IT Infrastructure', price: 'From $2,500/month' },
+        { name: 'Managed IT Services', price: 'From $1,500/month' },
+        { name: 'Data Backup & Recovery', price: 'From $800/month' },
+        { name: 'Mobile App Development', price: 'From $1,800/month' },
+        { name: 'Web Development Services', price: 'From $1,200/month' },
+        { name: 'Data Analytics & BI', price: 'From $1,500/month' },
+        { name: 'Digital Transformation', price: 'From $4,500/month' },
+        { name: 'IoT Solutions Development', price: 'From $2,800/month' },
+        { name: 'Blockchain Development', price: 'From $3,500/month' }
+      ]
+    },
+    {
+      name: 'Emerging Technologies',
+      services: [
+        { name: 'Quantum Computing Solutions', price: 'From $999/month' },
+        { name: 'Space Technology', price: 'From $1,299/month' },
+        { name: 'Sustainability Solutions', price: 'From $349/month' },
+        { name: 'Metaverse Development', price: 'From $599/month' },
+        { name: 'Autonomous Systems', price: 'From $799/month' },
+        { name: 'Biotech & Health Innovation', price: 'From $899/month' },
+        { name: 'FinTech & DeFi Platform', price: 'From $649/month' }
+      ]
     }
   ];
 
@@ -281,6 +414,44 @@ const Pricing: React.FC = () => {
                   Add Service
                 </Link>
               </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Service Categories */}
+      <section className="py-16 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-bold text-gray-900 mb-4">
+              Complete Service Pricing
+            </h2>
+            <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+              Explore our comprehensive range of services with transparent pricing. 
+              All services include 24/7 support and regular updates.
+            </p>
+          </div>
+
+          <div className="space-y-8">
+            {serviceCategories.map((category, categoryIndex) => (
+              <div key={categoryIndex} className="bg-white rounded-lg shadow-lg p-6">
+                <h3 className="text-xl font-semibold text-gray-900 mb-4 flex items-center">
+                  {category.name === 'AI & Analytics' && <Brain className="w-6 h-6 mr-2 text-purple-600" />}
+                  {category.name === 'Cloud & DevOps' && <Cloud className="w-6 h-6 mr-2 text-blue-600" />}
+                  {category.name === 'Cybersecurity' && <Shield className="w-6 h-6 mr-2 text-red-600" />}
+                  {category.name === 'IT Services' && <Server className="w-6 h-6 mr-2 text-gray-600" />}
+                  {category.name === 'Emerging Technologies' && <Rocket className="w-6 h-6 mr-2 text-indigo-600" />}
+                  {category.name}
+                </h3>
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                  {category.services.map((service, serviceIndex) => (
+                    <div key={serviceIndex} className="border border-gray-200 rounded-lg p-4 hover:shadow-md transition-shadow">
+                      <h4 className="font-medium text-gray-900 mb-2">{service.name}</h4>
+                      <p className="text-lg font-semibold text-blue-600">{service.price}</p>
+                    </div>
+                  ))}
+                </div>
+              </div>
             ))}
           </div>
         </div>
