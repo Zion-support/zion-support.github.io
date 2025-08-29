@@ -1,17 +1,17 @@
 module.exports = {
   apps: [
-    // Main application
+    // Main application - Vite dev server
     {
       name: 'zion-app',
       script: 'npm',
-      args: 'start',
+      args: 'run dev',
       cwd: './',
       instances: 1,
       autorestart: true,
       watch: false,
       max_memory_restart: '1G',
       env: {
-        NODE_ENV: 'production',
+        NODE_ENV: 'development',
         NODE_OPTIONS: '--max-old-space-size=6144 --openssl-legacy-provider'
       },
       env_production: {
@@ -20,20 +20,20 @@ module.exports = {
       }
     },
     
-    // Backend server
-    {
-      name: 'zion-backend',
-      script: 'npm',
-      args: 'start',
-      cwd: './server',
-      instances: 1,
-      autorestart: true,
-      watch: false,
-      max_memory_restart: '1G',
-      env: {
-        NODE_ENV: 'production'
-      }
-    },
+    // Backend server - commented out as server directory may not exist
+    // {
+    //   name: 'zion-backend',
+    //   script: 'npm',
+    //   args: 'start',
+    //   cwd: './server',
+    //   instances: 1,
+    //   autorestart: true,
+    //   watch: false,
+    //   max_memory_restart: '1G',
+    //   env: {
+    //     NODE_ENV: 'production'
+    //   }
+    // },
 
     // Continuous console error fixer - runs every 15 minutes (HIGHEST PRIORITY)
     {
