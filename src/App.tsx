@@ -12,6 +12,7 @@ import { EnhancedAccessibilityPanel } from './components/EnhancedAccessibilityPa
 import { AdvancedPerformanceMonitor } from './components/AdvancedPerformanceMonitor';
 import { InteractiveUserExperience } from './components/InteractiveUserExperience';
 import { SecurityEnhancer } from './components/SecurityEnhancer';
+
 // Core pages
 const Home = React.lazy(() => import('./pages/Home'));
 const About = React.lazy(() => import('./pages/About'));
@@ -35,6 +36,7 @@ const Community = React.lazy(() => import('./pages/Community'));
 const Demo = React.lazy(() => import('./pages/Demo'));
 const Careers = React.lazy(() => import('./pages/Careers'));
 const Marketplace = React.lazy(() => import('./pages/Marketplace'));
+
 // Service pages - only import existing ones
 const DigitalTwin = React.lazy(() => import('./pages/services/DigitalTwin'));
 const IoTServices = React.lazy(() => import('./pages/services/IoTServices'));
@@ -52,6 +54,7 @@ const ITInfrastructure = React.lazy(() => import('./pages/services/ITInfrastruct
 const DigitalTransformation = React.lazy(() => import('./pages/services/DigitalTransformation'));
 const ITConsulting = React.lazy(() => import('./pages/services/ITConsulting'));
 const GreenIT = React.lazy(() => import('./pages/services/GreenIT'));
+
 // AI services that exist
 const AICybersecuritySuite = React.lazy(() => import('./pages/services/ai-cybersecurity-threat-detection'));
 const QuantumAIPlatform = React.lazy(() => import('./pages/services/QuantumAIPlatform'));
@@ -69,6 +72,7 @@ const AILegalResearchPlatform = React.lazy(() => import('./pages/services/AILega
 const AIEducationPlatform = React.lazy(() => import('./pages/services/AIEducationPlatform'));
 const AIProjectManagementPlatform = React.lazy(() => import('./pages/services/ai-project-management-platform'));
 const AIContentMarketingAutomation = React.lazy(() => import('./pages/services/AIContentMarketingAutomation'));
+
 // Micro SaaS services that exist
 const AffiliateMarketingTracker = React.lazy(() => import('./pages/services/AffiliateMarketingTracker'));
 const UptimeSLAMonitor = React.lazy(() => import('./pages/services/UptimeSLAMonitor'));
@@ -95,6 +99,18 @@ const AIHRTalentAcquisition = React.lazy(() => import('./pages/services/AIHRTale
 const AILegalDocumentAutomation = React.lazy(() => import('./pages/services/AILegalDocumentAutomation'));
 const AIHealthcarePredictiveAnalytics = React.lazy(() => import('./pages/services/AIHealthcarePredictiveAnalytics'));
 const AIFinancialTradingRiskManagement = React.lazy(() => import('./pages/services/AIFinancialTradingRiskManagement'));
+
+// Additional new services from the incoming branch
+const ComprehensiveAIServicesShowcase2025 = React.lazy(() => import('./pages/ComprehensiveAIServicesShowcase2025'));
+const EmergingTech2030 = React.lazy(() => import('./pages/EmergingTech2030'));
+const ComprehensivePricingGuide2026 = React.lazy(() => import('./pages/ComprehensivePricingGuide2026'));
+const ComprehensivePricingGuide2027 = React.lazy(() => import('./pages/ComprehensivePricingGuide2027'));
+const ComprehensiveServicesShowcase2026 = React.lazy(() => import('./pages/ComprehensiveServicesShowcase2026'));
+const RevolutionaryServices2030 = React.lazy(() => import('./pages/RevolutionaryServices2030'));
+const ComprehensivePricingGuide2025 = React.lazy(() => import('./pages/ComprehensivePricingGuide2025'));
+const ScheduleDemo = React.lazy(() => import('./pages/ScheduleDemo'));
+const AIBusinessIntelligence = React.lazy(() => import('./pages/services/AIBusinessIntelligence'));
+
 function App() {
   return (
     <ErrorBoundary>
@@ -128,6 +144,7 @@ function App() {
                   <Route path="/community" element={<Community />} />
                   <Route path="/demo" element={<Demo />} />
                   <Route path="/careers" element={<Careers />} />
+                  
                   {/* Service Routes */}
                   <Route path="/services/digital-twin" element={<DigitalTwin />} />
                   <Route path="/services/iot-services" element={<IoTServices />} />
@@ -145,6 +162,7 @@ function App() {
                   <Route path="/services/digital-transformation" element={<DigitalTransformation />} />
                   <Route path="/services/it-consulting" element={<ITConsulting />} />
                   <Route path="/services/green-it" element={<GreenIT />} />
+                  
                   {/* AI Service Routes */}
                   <Route path="/services/ai-cybersecurity-suite" element={<AICybersecuritySuite />} />
                   <Route path="/services/quantum-ai-platform" element={<QuantumAIPlatform />} />
@@ -162,6 +180,7 @@ function App() {
                   <Route path="/services/ai-education-platform" element={<AIEducationPlatform />} />
                   <Route path="/services/ai-project-management-platform" element={<AIProjectManagementPlatform />} />
                   <Route path="/services/ai-content-marketing-automation" element={<AIContentMarketingAutomation />} />
+                  
                   {/* Micro SaaS Service Routes */}
                   <Route path="/services/affiliate-marketing-tracker" element={<AffiliateMarketingTracker />} />
                   <Route path="/services/uptime-sla-monitor" element={<UptimeSLAMonitor />} />
@@ -188,6 +207,18 @@ function App() {
                   <Route path="/services/ai-legal-document-automation" element={<AILegalDocumentAutomation />} />
                   <Route path="/services/ai-healthcare-predictive-analytics" element={<AIHealthcarePredictiveAnalytics />} />
                   <Route path="/services/ai-financial-trading-risk-management" element={<AIFinancialTradingRiskManagement />} />
+                  
+                  {/* Additional new routes from the incoming branch */}
+                  <Route path="/comprehensive-ai-services-showcase-2025" element={<ComprehensiveAIServicesShowcase2025 />} />
+                  <Route path="/emerging-tech-2030" element={<EmergingTech2030 />} />
+                  <Route path="/comprehensive-pricing-guide-2026" element={<ComprehensivePricingGuide2026 />} />
+                  <Route path="/comprehensive-pricing-guide-2027" element={<ComprehensivePricingGuide2027 />} />
+                  <Route path="/comprehensive-services-showcase-2026" element={<ComprehensiveServicesShowcase2026 />} />
+                  <Route path="/revolutionary-services-2030" element={<RevolutionaryServices2030 />} />
+                  <Route path="/pricing-guide-2025" element={<ComprehensivePricingGuide2025 />} />
+                  <Route path="/schedule-demo" element={<ScheduleDemo />} />
+                  <Route path="/services/ai-business-intelligence" element={<AIBusinessIntelligence />} />
+                  
                   {/* Catch all route */}
                   <Route path="*" element={<Home />} />
                 </Routes>
@@ -206,4 +237,5 @@ function App() {
     </ErrorBoundary>
   );
 }
+
 export default App;
