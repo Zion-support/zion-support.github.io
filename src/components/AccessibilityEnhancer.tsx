@@ -1,461 +1,313 @@
-import React, { useEffect, useCallback, useRef, useState } from 'react';
+import React, { useEffect, useCallback, useState } from 'react';
+import { useLocation } from 'react-router-dom';
 
-interface AccessibilityMetrics {
-  contrastRatio: number;
-  focusableElements: number;
-  headingStructure: boolean;
-  altTextCoverage: number;
-  ariaLabels: number;
-  keyboardNavigation: boolean;
+interface AccessibilitySettings {
+  highContrast: boolean;
+  largeText: boolean;
+  reducedMotion: boolean;
+  focusVisible: boolean;
+  skipLinks: boolean;
 }
 
-interface AccessibilityEnhancerProps {
-  enableMonitoring?: boolean;
-  enableEnhancements?: boolean;
-  showAccessibilityPanel?: boolean;
-  logMetrics?: boolean;
-}
-
-export const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
-  enableMonitoring = true,
-  enableEnhancements = true,
-  showAccessibilityPanel = false,
-  logMetrics = false
-}) => {
-  const [isVisible, setIsVisible] = useState(false);
-  const [metrics, setMetrics] = useState<AccessibilityMetrics>({
-    contrastRatio: 0,
-    focusableElements: 0,
-    headingStructure: false,
-    altTextCoverage: 0,
-    ariaLabels: 0,
-    keyboardNavigation: false
+export function AccessibilityEnhancer() {
+  const location = useLocation();
+  const [settings, setSettings] = useState<AccessibilitySettings>({
+    highContrast: false,
+    largeText: false,
+    reducedMotion: false,
+    focusVisible: true,
+    skipLinks: true
   });
 
-  const metricsRef = useRef<AccessibilityMetrics>(metrics);
-  const focusTrapRef = useRef<HTMLDivElement>(null);
+  // Apply high contrast mode
+  const applyHighContrast = useCallback((enabled: boolean) => {
+    if (enabled) {
+      document.documentElement.classList.add('high-contrast');
+      document.documentElement.style.setProperty('--text-primary', '#ffffff');
+      document.documentElement.style.setProperty('--text-secondary', '#e5e7eb');
+      document.documentElement.style.setProperty('--bg-primary', '#000000');
+      document.documentElement.style.setProperty('--bg-secondary', '#1f2937');
+    } else {
+      document.documentElement.classList.remove('high-contrast');
+      document.documentElement.style.removeProperty('--text-primary');
+      document.documentElement.style.removeProperty('--text-secondary');
+      document.documentElement.style.removeProperty('--bg-primary');
+      document.documentElement.style.removeProperty('--bg-secondary');
+    }
+  }, []);
 
-  // Enhanced keyboard navigation
-  const enhanceKeyboardNavigation = useCallback(() => {
-    if (!enableEnhancements) return;
+  // Apply large text mode
+  const applyLargeText = useCallback((enabled: boolean) => {
+    if (enabled) {
+      document.documentElement.classList.add('large-text');
+      document.documentElement.style.fontSize = '18px';
+    } else {
+      document.documentElement.classList.remove('large-text');
+      document.documentElement.style.fontSize = '16px';
+    }
+  }, []);
 
-    // Skip to main content link
-    const skipLink = document.createElement('a');
-    skipLink.href = '#main-content';
-    skipLink.textContent = 'Skip to main content';
-    skipLink.className = 'sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 z-50 bg-blue-600 text-white px-4 py-2 rounded';
-    document.body.insertBefore(skipLink, document.body.firstChild);
+  // Apply reduced motion
+  const applyReducedMotion = useCallback((enabled: boolean) => {
+    if (enabled) {
+      document.documentElement.classList.add('reduced-motion');
+      document.documentElement.style.setProperty('--transition-duration', '0.1s');
+    } else {
+      document.documentElement.classList.remove('reduced-motion');
+      document.documentElement.style.removeProperty('--transition-duration');
+    }
+  }, []);
 
-    // Add main content ID
+  // Enhanced focus management
+  const enhanceFocusManagement = useCallback(() => {
+    // Add focus-visible class to all focusable elements
+    const focusableElements = document.querySelectorAll(
+      'a[href], button, input, select, textarea, [tabindex]:not([tabindex="-1"])'
+    );
+
+    focusableElements.forEach((element) => {
+      element.addEventListener('focus', () => {
+        element.classList.add('focus-visible');
+      });
+
+      element.addEventListener('blur', () => {
+        element.classList.remove('focus-visible');
+      });
+    });
+
+    // Handle keyboard navigation
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Tab') {
+        document.body.classList.add('keyboard-navigation');
+      }
+    });
+
+    document.addEventListener('mousedown', () => {
+      document.body.classList.remove('keyboard-navigation');
+    });
+  }, []);
+
+  // Add skip links
+  const addSkipLinks = useCallback(() => {
+    if (!document.getElementById('skip-links')) {
+      const skipLinks = document.createElement('div');
+      skipLinks.id = 'skip-links';
+      skipLinks.className = 'sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-50';
+      
+      skipLinks.innerHTML = `
+        <a href="#main-content" class="block px-4 py-2 bg-blue-600 text-white rounded shadow-lg">
+          Skip to main content
+        </a>
+        <a href="#navigation" class="block px-4 py-2 bg-blue-600 text-white rounded shadow-lg mt-2">
+          Skip to navigation
+        </a>
+      `;
+      
+      document.body.insertBefore(skipLinks, document.body.firstChild);
+    }
+  }, []);
+
+  // Enhance form accessibility
+  const enhanceFormAccessibility = useCallback(() => {
+    const forms = document.querySelectorAll('form');
+    forms.forEach((form) => {
+      const inputs = form.querySelectorAll('input, select, textarea');
+      inputs.forEach((input) => {
+        const id = input.getAttribute('id');
+        const name = input.getAttribute('name');
+        
+        if (!id && name) {
+          input.setAttribute('id', name);
+        }
+        
+        // Add aria-describedby for validation messages
+        const validationMessage = input.parentNode?.querySelector('.validation-message');
+        if (validationMessage) {
+          const messageId = `validation-${Math.random().toString(36).substr(2, 9)}`;
+          validationMessage.id = messageId;
+          input.setAttribute('aria-describedby', messageId);
+        }
+      });
+    });
+  }, []);
+
+  // Add ARIA landmarks
+  const addAriaLandmarks = useCallback(() => {
+    // Main content area
     const mainContent = document.querySelector('main');
-    if (mainContent && !mainContent.id) {
+    if (mainContent && !mainContent.getAttribute('role')) {
+      mainContent.setAttribute('role', 'main');
       mainContent.id = 'main-content';
     }
 
-    // Enhanced focus management
-    const focusableElements = document.querySelectorAll(
-      'a[href], button:not([disabled]), input:not([disabled]), select:not([disabled]), textarea:not([disabled]), [tabindex]:not([tabindex="-1"])'
-    );
+    // Navigation
+    const navigation = document.querySelector('nav, [role="navigation"]');
+    if (navigation && !navigation.id) {
+      navigation.id = 'navigation';
+    }
 
-    let currentFocusIndex = 0;
+    // Search
+    const search = document.querySelector('form[role="search"], .search-form');
+    if (search && !search.getAttribute('role')) {
+      search.setAttribute('role', 'search');
+    }
 
-    const handleTabKey = (e: KeyboardEvent) => {
-      if (e.key === 'Tab') {
-        e.preventDefault();
-        
-        if (e.shiftKey) {
-          currentFocusIndex = currentFocusIndex > 0 ? currentFocusIndex - 1 : focusableElements.length - 1;
-        } else {
-          currentFocusIndex = currentFocusIndex < focusableElements.length - 1 ? currentFocusIndex + 1 : 0;
-        }
+    // Banner
+    const header = document.querySelector('header');
+    if (header && !header.getAttribute('role')) {
+      header.setAttribute('role', 'banner');
+    }
 
-        (focusableElements[currentFocusIndex] as HTMLElement).focus();
-      }
-    };
-
-    document.addEventListener('keydown', handleTabKey);
-
-    return () => {
-      document.removeEventListener('keydown', handleTabKey);
-    };
-  }, [enableEnhancements]);
-
-  // Enhanced ARIA labels and roles
-  const enhanceARIA = useCallback(() => {
-    if (!enableEnhancements) return;
-
-    // Add missing ARIA labels to interactive elements
-    const buttons = document.querySelectorAll('button:not([aria-label]):not([aria-labelledby])');
-    buttons.forEach((button, index) => {
-      if (!button.textContent?.trim()) {
-        button.setAttribute('aria-label', `Button ${index + 1}`);
-      }
-    });
-
-    // Add missing ARIA labels to form inputs
-    const inputs = document.querySelectorAll('input:not([aria-label]):not([aria-labelledby]):not([placeholder])');
-    inputs.forEach((input, index) => {
-      const label = input.closest('label');
-      if (!label) {
-        input.setAttribute('aria-label', `Input ${index + 1}`);
-      }
-    });
-
-    // Add role attributes where missing
-    const navs = document.querySelectorAll('nav:not([role])');
-    navs.forEach(nav => nav.setAttribute('role', 'navigation'));
-
-    const mains = document.querySelectorAll('main:not([role])');
-    mains.forEach(main => main.setAttribute('role', 'main'));
-
-    const footers = document.querySelectorAll('footer:not([role])');
-    footers.forEach(footer => footer.setAttribute('role', 'contentinfo'));
-
-    // Add landmark roles
-    const headers = document.querySelectorAll('header:not([role])');
-    headers.forEach(header => header.setAttribute('role', 'banner'));
-
-    const asides = document.querySelectorAll('aside:not([role])');
-    asides.forEach(aside => aside.setAttribute('role', 'complementary'));
-  }, [enableEnhancements]);
-
-  // Enhanced color contrast
-  const enhanceColorContrast = useCallback(() => {
-    if (!enableEnhancements) return;
-
-    // Add high contrast mode toggle
-    const contrastToggle = document.createElement('button');
-    contrastToggle.textContent = 'High Contrast';
-    contrastToggle.className = 'fixed top-4 right-4 z-50 bg-yellow-600 text-black px-3 py-2 rounded text-sm font-medium';
-    contrastToggle.setAttribute('aria-label', 'Toggle high contrast mode');
-    
-    let highContrast = false;
-    
-    contrastToggle.addEventListener('click', () => {
-      highContrast = !highContrast;
-      document.documentElement.classList.toggle('high-contrast', highContrast);
-      contrastToggle.textContent = highContrast ? 'Normal Contrast' : 'High Contrast';
-    });
-
-    document.body.appendChild(contrastToggle);
-
-    // Add focus visible styles
-    const style = document.createElement('style');
-    style.textContent = `
-      .focus-visible:focus {
-        outline: 3px solid #22ddd2 !important;
-        outline-offset: 2px !important;
-      }
-      
-      .high-contrast {
-        --zion-cyan: #00ffff !important;
-        --zion-purple: #ff00ff !important;
-        --zion-blue: #0080ff !important;
-        --zion-slate: #ffffff !important;
-        --zion-slate-dark: #000000 !important;
-      }
-      
-      .high-contrast * {
-        background-color: var(--zion-slate-dark) !important;
-        color: var(--zion-slate) !important;
-        border-color: var(--zion-cyan) !important;
-      }
-      
-      .high-contrast .btn-futuristic {
-        background: var(--zion-cyan) !important;
-        color: var(--zion-slate-dark) !important;
-        border: 2px solid var(--zion-slate) !important;
-      }
-    `;
-    document.head.appendChild(style);
-  }, [enableEnhancements]);
-
-  // Enhanced screen reader support
-  const enhanceScreenReaderSupport = useCallback(() => {
-    if (!enableEnhancements) return;
-
-    // Add live regions for dynamic content
-    const liveRegion = document.createElement('div');
-    liveRegion.setAttribute('aria-live', 'polite');
-    liveRegion.setAttribute('aria-atomic', 'true');
-    liveRegion.className = 'sr-only';
-    liveRegion.id = 'live-region';
-    document.body.appendChild(liveRegion);
-
-    // Announce page changes
-    const announcePageChange = (title: string) => {
-      const liveRegion = document.getElementById('live-region');
-      if (liveRegion) {
-        liveRegion.textContent = `Page loaded: ${title}`;
-      }
-    };
-
-    // Monitor route changes
-    const observer = new MutationObserver(() => {
-      const title = document.title;
-      if (title) {
-        announcePageChange(title);
-      }
-    });
-
-    observer.observe(document.head, { childList: true, subtree: true });
-
-    return () => {
-      observer.disconnect();
-    };
-  }, [enableEnhancements]);
-
-  // Monitor accessibility metrics
-  const monitorAccessibility = useCallback(() => {
-    if (!enableMonitoring) return;
-
-    const calculateMetrics = (): AccessibilityMetrics => {
-      // Calculate contrast ratio (simplified)
-      const contrastRatio = 4.5; // Placeholder - would need actual calculation
-
-      // Count focusable elements
-      const focusableElements = document.querySelectorAll(
-        'a[href], button:not([disabled]), input:not([disabled]), select:not([disabled]), textarea:not([disabled]), [tabindex]:not([tabindex="-1"])'
-      ).length;
-
-      // Check heading structure
-      const headings = document.querySelectorAll('h1, h2, h3, h4, h5, h6');
-      let headingStructure = true;
-      let previousLevel = 0;
-      
-      headings.forEach(heading => {
-        const level = parseInt(heading.tagName.charAt(1));
-        if (level > previousLevel + 1) {
-          headingStructure = false;
-        }
-        previousLevel = level;
-      });
-
-      // Check alt text coverage
-      const images = document.querySelectorAll('img');
-      const imagesWithAlt = document.querySelectorAll('img[alt]:not([alt=""])');
-      const altTextCoverage = images.length > 0 ? (imagesWithAlt.length / images.length) * 100 : 100;
-
-      // Count ARIA labels
-      const ariaLabels = document.querySelectorAll('[aria-label], [aria-labelledby]').length;
-
-      // Check keyboard navigation
-      const keyboardNavigation = document.querySelectorAll('a[href], button, input, select, textarea').length > 0;
-
-      return {
-        contrastRatio,
-        focusableElements,
-        headingStructure,
-        altTextCoverage,
-        ariaLabels,
-        keyboardNavigation
-      };
-    };
-
-    // Update metrics periodically
-    const updateMetrics = () => {
-      const newMetrics = calculateMetrics();
-      setMetrics(newMetrics);
-      metricsRef.current = newMetrics;
-      
-      if (logMetrics) {
-        console.log('Accessibility Metrics:', newMetrics);
-      }
-    };
-
-    // Initial calculation
-    updateMetrics();
-
-    // Update on DOM changes
-    const observer = new MutationObserver(updateMetrics);
-    observer.observe(document.body, { childList: true, subtree: true });
-
-    // Periodic updates
-    const interval = setInterval(updateMetrics, 5000);
-
-    return () => {
-      observer.disconnect();
-      clearInterval(interval);
-    };
-  }, [enableMonitoring, logMetrics]);
-
-  // Toggle accessibility panel
-  const toggleAccessibilityPanel = () => setIsVisible(!isVisible);
-
-  // Get accessibility score
-  const getAccessibilityScore = useCallback((): number => {
-    let score = 100;
-    
-    if (metrics.contrastRatio < 4.5) score -= 20;
-    if (!metrics.headingStructure) score -= 15;
-    if (metrics.altTextCoverage < 90) score -= 15;
-    if (metrics.ariaLabels < 5) score -= 10;
-    if (!metrics.keyboardNavigation) score -= 10;
-    
-    return Math.max(0, score);
-  }, [metrics]);
-
-  // Get accessibility grade
-  const getAccessibilityGrade = useCallback((score: number): { grade: string; color: string } => {
-    if (score >= 90) return { grade: 'A', color: 'text-green-400' };
-    if (score >= 80) return { grade: 'B', color: 'text-yellow-400' };
-    if (score >= 70) return { grade: 'C', color: 'text-orange-400' };
-    if (score >= 60) return { grade: 'D', color: 'text-red-400' };
-    return { grade: 'F', color: 'text-red-600' };
-  }, []);
-
-  useEffect(() => {
-    // Initialize enhancements
-    const cleanupFunctions = [
-      enhanceKeyboardNavigation(),
-      enhanceARIA(),
-      enhanceColorContrast(),
-      enhanceScreenReaderSupport(),
-      monitorAccessibility()
-    ].filter(Boolean);
-
-    return () => {
-      cleanupFunctions.forEach(cleanup => {
-        if (typeof cleanup === 'function') cleanup();
-      });
-    };
-  }, [
-    enhanceKeyboardNavigation,
-    enhanceARIA,
-    enhanceColorContrast,
-    enhanceScreenReaderSupport,
-    monitorAccessibility
-  ]);
-
-  // Expose metrics for external monitoring
-  useEffect(() => {
-    if (typeof window !== 'undefined') {
-      (window as any).zionAccessibilityMetrics = metricsRef.current;
+    // Content info
+    const footer = document.querySelector('footer');
+    if (footer && !footer.getAttribute('role')) {
+      footer.setAttribute('role', 'contentinfo');
     }
   }, []);
 
-  if (!showAccessibilityPanel) return null;
+  // Enhance image accessibility
+  const enhanceImageAccessibility = useCallback(() => {
+    const images = document.querySelectorAll('img');
+    images.forEach((img) => {
+      if (!img.alt && !img.getAttribute('aria-label')) {
+        // Generate descriptive alt text for decorative images
+        const src = img.src || '';
+        const filename = src.split('/').pop()?.split('.')[0] || '';
+        img.alt = `Image: ${filename}`;
+      }
+      
+      // Add loading state for better UX
+      if (!img.loading) {
+        img.loading = 'lazy';
+      }
+    });
+  }, []);
 
-  const score = getAccessibilityScore();
-  const { grade, color } = getAccessibilityGrade(score);
+  // Add live regions for dynamic content
+  const addLiveRegions = useCallback(() => {
+    if (!document.getElementById('live-region')) {
+      const liveRegion = document.createElement('div');
+      liveRegion.id = 'live-region';
+      liveRegion.setAttribute('aria-live', 'polite');
+      liveRegion.setAttribute('aria-atomic', 'true');
+      liveRegion.className = 'sr-only';
+      document.body.appendChild(liveRegion);
+    }
+  }, []);
 
-  return (
-    <>
-      {/* Accessibility Toggle Button */}
-      <button
-        onClick={toggleAccessibilityPanel}
-        className="fixed bottom-6 left-6 z-50 p-3 bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white rounded-full shadow-lg hover:shadow-xl transition-all duration-200"
-        title="Accessibility Monitor"
-        aria-label="Toggle accessibility panel"
-      >
-        <span className="text-lg">♿</span>
-      </button>
+  // Announce route changes to screen readers
+  const announceRouteChange = useCallback(() => {
+    const liveRegion = document.getElementById('live-region');
+    if (liveRegion) {
+      const pageTitle = document.title || 'Page loaded';
+      liveRegion.textContent = `Navigated to ${pageTitle}`;
+      
+      // Clear after announcement
+      setTimeout(() => {
+        liveRegion.textContent = '';
+      }, 1000);
+    }
+  }, []);
 
-      {/* Accessibility Panel */}
-      {isVisible && (
-        <div className="fixed bottom-6 left-20 z-40 w-80 bg-slate-900/95 backdrop-blur-sm border border-slate-700 rounded-lg shadow-2xl">
-          {/* Header */}
-          <div className="flex items-center justify-between p-4 border-b border-slate-700">
-            <div className="flex items-center space-x-2">
-              <span className="text-2xl">♿</span>
-              <h3 className="text-white font-semibold">Accessibility Monitor</h3>
-            </div>
-            <button
-              onClick={toggleAccessibilityPanel}
-              className="p-1 text-slate-400 hover:text-white transition-colors"
-              title="Close"
-              aria-label="Close accessibility panel"
-            >
-              ✕
-            </button>
-          </div>
+  // Initialize accessibility features
+  useEffect(() => {
+    enhanceFocusManagement();
+    addSkipLinks();
+    enhanceFormAccessibility();
+    addAriaLandmarks();
+    enhanceImageAccessibility();
+    addLiveRegions();
+  }, [
+    enhanceFocusManagement,
+    addSkipLinks,
+    enhanceFormAccessibility,
+    addAriaLandmarks,
+    enhanceImageAccessibility,
+    addLiveRegions
+  ]);
 
-          {/* Content */}
-          <div className="p-4 space-y-4 max-h-96 overflow-y-auto">
-            {/* Accessibility Score */}
-            <div className="text-center p-4 bg-slate-800/50 rounded-lg">
-              <div className="text-3xl font-bold text-white mb-2">{score}</div>
-              <div className={`text-2xl font-bold ${color} mb-2`}>{grade}</div>
-              <div className="text-slate-400 text-sm">Accessibility Score</div>
-            </div>
+  // Apply settings when they change
+  useEffect(() => {
+    applyHighContrast(settings.highContrast);
+    applyLargeText(settings.largeText);
+    applyReducedMotion(settings.reducedMotion);
+  }, [settings.highContrast, settings.largeText, settings.reducedMotion, applyHighContrast, applyLargeText, applyReducedMotion]);
 
-            {/* Metrics */}
-            <div className="space-y-3">
-              <h4 className="text-white font-semibold">Accessibility Metrics</h4>
-              
-              <div className="grid grid-cols-2 gap-3">
-                <MetricCard
-                  label="Contrast"
-                  value={metrics.contrastRatio}
-                  unit=":1"
-                  good={metrics.contrastRatio >= 4.5}
-                  description="Color Contrast Ratio"
-                />
-                <MetricCard
-                  label="Focusable"
-                  value={metrics.focusableElements}
-                  unit=""
-                  good={metrics.focusableElements > 0}
-                  description="Focusable Elements"
-                />
-                <MetricCard
-                  label="Headings"
-                  value={metrics.headingStructure ? 100 : 0}
-                  unit="%"
-                  good={metrics.headingStructure}
-                  description="Heading Structure"
-                />
-                <MetricCard
-                  label="Alt Text"
-                  value={metrics.altTextCoverage}
-                  unit="%"
-                  good={metrics.altTextCoverage >= 90}
-                  description="Image Alt Text"
-                />
-              </div>
-            </div>
+  // Announce route changes
+  useEffect(() => {
+    announceRouteChange();
+  }, [location, announceRouteChange]);
 
-            {/* Quick Actions */}
-            <div className="space-y-2">
-              <h4 className="text-white font-semibold">Quick Actions</h4>
-              <button
-                onClick={() => document.documentElement.classList.toggle('high-contrast')}
-                className="w-full px-3 py-2 bg-purple-600 hover:bg-purple-700 text-white text-sm font-medium rounded transition-colors"
-              >
-                Toggle High Contrast
-              </button>
-              <button
-                onClick={() => document.querySelector('main')?.focus()}
-                className="w-full px-3 py-2 bg-blue-600 hover:bg-blue-700 text-white text-sm font-medium rounded transition-colors"
-              >
-                Focus Main Content
-              </button>
-            </div>
-          </div>
-        </div>
-      )}
-    </>
-  );
-};
+  // Add CSS for accessibility features
+  useEffect(() => {
+    const style = document.createElement('style');
+    style.textContent = `
+      .sr-only {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        padding: 0;
+        margin: -1px;
+        overflow: hidden;
+        clip: rect(0, 0, 0, 0);
+        white-space: nowrap;
+        border: 0;
+      }
 
-// Metric Card Component
-interface MetricCardProps {
-  label: string;
-  value: number;
-  unit: string;
-  good: boolean;
-  description: string;
+      .focus-visible {
+        outline: 3px solid #3b82f6;
+        outline-offset: 2px;
+      }
+
+      .keyboard-navigation .focus-visible {
+        outline: 3px solid #3b82f6;
+        outline-offset: 2px;
+      }
+
+      .high-contrast {
+        color-scheme: dark;
+      }
+
+      .large-text {
+        font-size: 18px;
+      }
+
+      .reduced-motion * {
+        animation-duration: 0.1s !important;
+        transition-duration: 0.1s !important;
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        .reduced-motion * {
+          animation-duration: 0.1s !important;
+          transition-duration: 0.1s !important;
+        }
+      }
+
+      @media (prefers-contrast: high) {
+        .high-contrast {
+          color-scheme: dark;
+        }
+      }
+    `;
+    document.head.appendChild(style);
+
+    return () => {
+      document.head.removeChild(style);
+    };
+  }, []);
+
+  // Expose accessibility controls to window for testing
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      (window as any).zionAccessibility = {
+        setHighContrast: (enabled: boolean) => setSettings(prev => ({ ...prev, highContrast: enabled })),
+        setLargeText: (enabled: boolean) => setSettings(prev => ({ ...prev, largeText: enabled })),
+        setReducedMotion: (enabled: boolean) => setSettings(prev => ({ ...prev, reducedMotion: enabled })),
+        getSettings: () => settings
+      };
+    }
+  }, [settings]);
+
+  return null; // This component doesn't render anything
 }
-
-const MetricCard: React.FC<MetricCardProps> = ({ label, value, unit, good, description }) => (
-  <div className="bg-slate-800/50 p-3 rounded-lg">
-    <div className="flex items-center justify-between mb-1">
-      <span className="text-xs text-slate-400">{label}</span>
-      <div className={`w-2 h-2 rounded-full ${good ? 'bg-green-400' : 'bg-red-400'}`} />
-    </div>
-    <div className="text-lg font-semibold text-white">
-      {value.toFixed(1)}{unit}
-    </div>
-    <div className="text-xs text-slate-500">{description}</div>
-  </div>
-);
