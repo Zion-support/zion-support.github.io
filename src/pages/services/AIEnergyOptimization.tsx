@@ -1,78 +1,78 @@
-import { Truck, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, BarChart3, Target, Zap, Shield, Globe } from 'lucide-react';
+import { Zap, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Leaf, BarChart3, Target, Shield, Globe } from 'lucide-react';
 
-export default function AISupplyChainOptimization() {
+export default function AIEnergyOptimization() {
   const features = [
-    'AI-powered demand forecasting and inventory optimization',
-    'Real-time supply chain visibility and tracking',
-    'Predictive analytics for supplier performance',
-    'Automated route optimization and logistics planning',
-    'Risk assessment and mitigation strategies',
-    'Sustainability metrics and carbon footprint tracking',
-    'Integration with major ERP and WMS systems',
-    'Custom AI models for industry-specific optimization'
+    'AI-powered energy consumption forecasting and optimization',
+    'Real-time monitoring of energy usage across facilities',
+    'Predictive maintenance for energy infrastructure',
+    'Smart grid integration and demand response optimization',
+    'Renewable energy integration and storage optimization',
+    'Carbon footprint tracking and sustainability reporting',
+    'Custom AI models for industry-specific energy patterns',
+    'Integration with major building management systems'
   ];
 
   const tiers = [
     { 
-      name: 'Starter', 
-      price: '$599/mo', 
-      details: ['Up to 5 locations', 'Basic forecasting', 'Standard integrations', 'Email support'] 
+      name: 'Basic', 
+      price: '$299/mo', 
+      details: ['Up to 5 facilities', 'Basic energy monitoring', 'Standard reporting', 'Email support'] 
     },
     { 
       name: 'Professional', 
-      price: '$1,299/mo', 
-      details: ['Up to 25 locations', 'Advanced AI forecasting', 'Custom integrations', 'Priority support'] 
+      price: '$799/mo', 
+      details: ['Up to 25 facilities', 'Advanced AI optimization', 'Custom analytics', 'Priority support'] 
     },
     { 
       name: 'Enterprise', 
-      price: '$2,999/mo', 
-      details: ['Unlimited locations', 'Custom AI models', 'Full system integration', '24/7 dedicated support'] 
+      price: '$1,999/mo', 
+      details: ['Unlimited facilities', 'Custom AI models', 'Full system integration', '24/7 dedicated support'] 
     },
   ];
 
   const useCases = [
-    'Retail inventory optimization and demand planning',
-    'Manufacturing supply chain management',
-    'E-commerce fulfillment optimization',
-    'Healthcare supply chain coordination',
-    'Food and beverage distribution',
-    'Automotive parts supply chain'
+    'Commercial building energy optimization',
+    'Manufacturing facility energy management',
+    'Data center power efficiency',
+    'Retail chain energy optimization',
+    'Healthcare facility energy management',
+    'Educational campus energy systems'
   ];
 
   const benefits = [
-    'Reduce inventory costs by 20-35%',
-    'Improve forecast accuracy by 40-60%',
-    'Cut logistics costs by 15-25%',
-    'Reduce stockouts by 50-70%',
-    'Optimize warehouse space utilization',
-    'Enhance supplier relationship management'
+    'Reduce energy costs by 20-40%',
+    'Improve energy efficiency by 25-45%',
+    'Cut carbon emissions by 30-50%',
+    'Optimize renewable energy utilization',
+    'Enhance equipment lifespan and reliability',
+    'Achieve sustainability and ESG goals'
   ];
 
   const industries = [
-    'Retail & E-commerce',
-    'Manufacturing',
-    'Healthcare & Pharmaceuticals',
-    'Food & Beverage',
-    'Automotive',
-    'Logistics & Transportation'
+    'Commercial Real Estate',
+    'Manufacturing & Industrial',
+    'Data Centers & IT',
+    'Healthcare & Hospitals',
+    'Retail & Shopping Centers',
+    'Education & Universities'
   ];
 
   return (
     <div className="min-h-screen bg-white">
-      <section className="bg-gradient-to-br from-orange-600 via-amber-600 to-yellow-600 py-20 text-center">
+      <section className="bg-gradient-to-br from-green-600 via-emerald-600 to-teal-600 py-20 text-center">
         <div className="max-w-5xl mx-auto px-6">
           <div className="inline-flex items-center px-4 py-2 rounded-full bg-white/10 text-white mb-6">
-            <Truck className="w-4 h-4 mr-2" /> AI-Powered Supply Chain Intelligence
+            <Zap className="w-4 h-4 mr-2" /> AI-Powered Energy Intelligence
           </div>
-          <h1 className="text-4xl md:text-6xl font-bold text-white mb-4">AI Supply Chain Optimization Platform</h1>
-          <p className="text-amber-100 text-xl">Revolutionize your supply chain with AI-powered optimization that reduces costs, improves efficiency, and ensures seamless operations across your global network.</p>
+          <h1 className="text-4xl md:text-6xl font-bold text-white mb-4">AI Energy Optimization Platform</h1>
+          <p className="text-emerald-100 text-xl">Transform your energy management with AI-powered optimization that reduces costs, improves efficiency, and accelerates your journey to sustainability.</p>
         </div>
       </section>
 
       <section className="py-16 max-w-6xl mx-auto px-6">
         <div className="grid md:grid-cols-2 gap-10">
           <div>
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">Advanced Supply Chain Features</h2>
+            <h2 className="text-3xl font-bold text-gray-900 mb-4">Advanced Energy Intelligence</h2>
             <ul className="space-y-3">
               {features.map((f) => (
                 <li key={f} className="flex items-start">
@@ -82,16 +82,16 @@ export default function AISupplyChainOptimization() {
               ))}
             </ul>
             <div className="mt-6 text-sm text-gray-600">
-              Built with enterprise-grade security, ISO 27001 compliance, and 99.9% uptime SLA.
+              Built with enterprise-grade security, ISO 50001 compliance, and 99.9% uptime SLA.
             </div>
           </div>
           <div className="bg-white border border-gray-200 rounded-xl p-6 shadow-lg">
             <h3 className="text-2xl font-semibold text-gray-900 mb-4">Competitive Pricing</h3>
             <div className="grid md:grid-cols-3 gap-4">
               {tiers.map((t) => (
-                <div key={t.name} className="rounded-lg p-4 border border-gray-200 hover:border-orange-300 transition-colors">
+                <div key={t.name} className="rounded-lg p-4 border border-gray-200 hover:border-green-300 transition-colors">
                   <div className="text-lg font-semibold mb-1">{t.name}</div>
-                  <div className="text-2xl font-bold text-orange-600 mb-2">{t.price}</div>
+                  <div className="text-2xl font-bold text-green-600 mb-2">{t.price}</div>
                   <ul className="text-sm text-gray-600 space-y-1">
                     {t.details.map((d) => (<li key={d}>{d}</li>))}
                   </ul>
@@ -99,10 +99,10 @@ export default function AISupplyChainOptimization() {
               ))}
             </div>
             <div className="mt-6 flex flex-wrap gap-3">
-              <a href="/pricing" className="px-5 py-3 bg-orange-600 text-white rounded-lg hover:bg-orange-700 transition-colors inline-flex items-center">
+              <a href="/pricing" className="px-5 py-3 bg-green-600 text-white rounded-lg hover:bg-green-700 transition-colors inline-flex items-center">
                 View Full Pricing <ArrowRight className="w-4 h-4 ml-2" />
               </a>
-              <a href="https://ziontechgroup.com" target="_blank" rel="noreferrer" className="px-5 py-3 border border-gray-300 rounded-lg hover:border-orange-400 transition-colors inline-flex items-center">
+              <a href="https://ziontechgroup.com" target="_blank" rel="noreferrer" className="px-5 py-3 border border-gray-300 rounded-lg hover:border-green-400 transition-colors inline-flex items-center">
                 Learn More <ExternalLink className="w-4 h-4 ml-2" />
               </a>
             </div>
@@ -110,9 +110,9 @@ export default function AISupplyChainOptimization() {
         </div>
 
         <div className="mt-12 grid md:grid-cols-3 gap-6">
-          {['20-35% cost reduction', '40-60% forecast accuracy', 'Real-time optimization'].map((t) => (
+          {['20-40% cost reduction', '25-45% efficiency gain', '30-50% emission cut'].map((t) => (
             <div key={t} className="p-6 bg-white border border-gray-200 rounded-xl shadow-sm hover:shadow-md transition-shadow">
-              <Brain className="w-6 h-6 text-orange-600 mb-3" />
+              <Brain className="w-6 h-6 text-green-600 mb-3" />
               <div className="text-gray-900 font-semibold">{t}</div>
             </div>
           ))}
@@ -123,19 +123,19 @@ export default function AISupplyChainOptimization() {
           <div className="grid md:grid-cols-2 gap-6">
             {useCases.map((useCase) => (
               <div key={useCase} className="flex items-center p-4 bg-white rounded-lg border border-gray-200">
-                <Target className="w-5 h-5 text-orange-600 mr-3" />
+                <Target className="w-5 h-5 text-green-600 mr-3" />
                 <span className="text-gray-700">{useCase}</span>
               </div>
             ))}
           </div>
         </div>
 
-        <div className="mt-16 bg-orange-50 rounded-xl p-8">
+        <div className="mt-16 bg-green-50 rounded-xl p-8">
           <h3 className="text-2xl font-bold text-gray-900 mb-6 text-center">Measurable Business Impact</h3>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {benefits.map((benefit) => (
-              <div key={benefit} className="flex items-start p-4 bg-white rounded-lg border border-orange-200">
-                <Zap className="w-5 h-5 text-orange-600 mr-3 mt-0.5 flex-shrink-0" />
+              <div key={benefit} className="flex items-start p-4 bg-white rounded-lg border border-green-200">
+                <Leaf className="w-5 h-5 text-green-600 mr-3 mt-0.5 flex-shrink-0" />
                 <span className="text-gray-700">{benefit}</span>
               </div>
             ))}
@@ -147,7 +147,7 @@ export default function AISupplyChainOptimization() {
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {industries.map((industry) => (
               <div key={industry} className="flex items-center p-4 bg-gray-50 rounded-lg border border-gray-200">
-                <Globe className="w-5 h-5 text-orange-600 mr-3" />
+                <Globe className="w-5 h-5 text-green-600 mr-3" />
                 <span className="text-gray-700">{industry}</span>
               </div>
             ))}
@@ -155,12 +155,12 @@ export default function AISupplyChainOptimization() {
         </div>
 
         <div className="mt-14 text-center">
-          <div className="text-sm text-gray-600 mb-2">Ready to optimize your supply chain?</div>
+          <div className="text-sm text-gray-600 mb-2">Ready to optimize your energy consumption?</div>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a href="tel:+13024640950" className="inline-flex items-center px-5 py-3 bg-orange-600 text-white rounded-lg hover:bg-orange-700 transition-colors">
+            <a href="tel:+13024640950" className="inline-flex items-center px-5 py-3 bg-green-600 text-white rounded-lg hover:bg-green-700 transition-colors">
               <Phone className="w-4 h-4 mr-2"/> +1 302 464 0950
             </a>
-            <a href="mailto:kleber@ziontechgroup.com" className="inline-flex items-center px-5 py-3 border border-orange-600 text-orange-600 rounded-lg hover:bg-orange-50 transition-colors">
+            <a href="mailto:kleber@ziontechgroup.com" className="inline-flex items-center px-5 py-3 border border-green-600 text-green-600 rounded-lg hover:bg-green-50 transition-colors">
               <Mail className="w-4 h-4 mr-2"/> kleber@ziontechgroup.com
             </a>
           </div>

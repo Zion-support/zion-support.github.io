@@ -1,78 +1,78 @@
-import { Truck, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, BarChart3, Target, Zap, Shield, Globe } from 'lucide-react';
+import { Factory, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, Settings, BarChart3 } from 'lucide-react';
 
-export default function AISupplyChainOptimization() {
+export default function AIManufacturing() {
   const features = [
-    'AI-powered demand forecasting and inventory optimization',
-    'Real-time supply chain visibility and tracking',
-    'Predictive analytics for supplier performance',
-    'Automated route optimization and logistics planning',
-    'Risk assessment and mitigation strategies',
-    'Sustainability metrics and carbon footprint tracking',
-    'Integration with major ERP and WMS systems',
-    'Custom AI models for industry-specific optimization'
+    'AI-powered predictive maintenance and equipment monitoring',
+    'Intelligent quality control and defect detection',
+    'Automated production planning and optimization',
+    'Real-time supply chain and inventory management',
+    'Predictive analytics for production efficiency',
+    'Smart factory automation and IoT integration',
+    'Integration with major ERP and MES systems',
+    'Custom AI models for industry-specific processes'
   ];
 
   const tiers = [
     { 
-      name: 'Starter', 
+      name: 'Small Manufacturer', 
       price: '$599/mo', 
-      details: ['Up to 5 locations', 'Basic forecasting', 'Standard integrations', 'Email support'] 
+      details: ['Up to 10 production lines', 'Basic AI features', 'Standard reports', 'Email support'] 
     },
     { 
-      name: 'Professional', 
+      name: 'Medium Manufacturer', 
       price: '$1,299/mo', 
-      details: ['Up to 25 locations', 'Advanced AI forecasting', 'Custom integrations', 'Priority support'] 
+      details: ['Up to 50 production lines', 'Advanced AI features', 'Custom reports', 'Priority support'] 
     },
     { 
-      name: 'Enterprise', 
+      name: 'Large Manufacturer', 
       price: '$2,999/mo', 
-      details: ['Unlimited locations', 'Custom AI models', 'Full system integration', '24/7 dedicated support'] 
+      details: ['Unlimited production lines', 'Custom AI models', 'Full system integration', '24/7 dedicated support'] 
     },
   ];
 
   const useCases = [
-    'Retail inventory optimization and demand planning',
-    'Manufacturing supply chain management',
-    'E-commerce fulfillment optimization',
-    'Healthcare supply chain coordination',
-    'Food and beverage distribution',
-    'Automotive parts supply chain'
+    'Production line optimization and monitoring',
+    'Quality control and defect prevention',
+    'Predictive maintenance and equipment management',
+    'Supply chain optimization and inventory management',
+    'Energy efficiency and sustainability',
+    'Workforce safety and compliance'
   ];
 
   const benefits = [
-    'Reduce inventory costs by 20-35%',
-    'Improve forecast accuracy by 40-60%',
-    'Cut logistics costs by 15-25%',
-    'Reduce stockouts by 50-70%',
-    'Optimize warehouse space utilization',
-    'Enhance supplier relationship management'
+    'Improve production efficiency by 25-40%',
+    'Reduce equipment downtime by 30-50%',
+    'Cut quality defects by 40-60%',
+    'Optimize inventory levels by 20-35%',
+    'Enhance worker safety and compliance',
+    'Scale manufacturing operations efficiently'
   ];
 
   const industries = [
-    'Retail & E-commerce',
-    'Manufacturing',
-    'Healthcare & Pharmaceuticals',
-    'Food & Beverage',
-    'Automotive',
-    'Logistics & Transportation'
+    'Automotive Manufacturing',
+    'Electronics & Semiconductors',
+    'Food & Beverage Processing',
+    'Pharmaceutical Manufacturing',
+    'Textiles & Apparel',
+    'Aerospace & Defense'
   ];
 
   return (
     <div className="min-h-screen bg-white">
-      <section className="bg-gradient-to-br from-orange-600 via-amber-600 to-yellow-600 py-20 text-center">
+      <section className="bg-gradient-to-br from-gray-600 via-slate-600 to-zinc-600 py-20 text-center">
         <div className="max-w-5xl mx-auto px-6">
           <div className="inline-flex items-center px-4 py-2 rounded-full bg-white/10 text-white mb-6">
-            <Truck className="w-4 h-4 mr-2" /> AI-Powered Supply Chain Intelligence
+            <Factory className="w-4 h-4 mr-2" /> AI-Powered Manufacturing Intelligence
           </div>
-          <h1 className="text-4xl md:text-6xl font-bold text-white mb-4">AI Supply Chain Optimization Platform</h1>
-          <p className="text-amber-100 text-xl">Revolutionize your supply chain with AI-powered optimization that reduces costs, improves efficiency, and ensures seamless operations across your global network.</p>
+          <h1 className="text-4xl md:text-6xl font-bold text-white mb-4">AI Manufacturing Platform</h1>
+          <p className="text-slate-100 text-xl">Transform your manufacturing operations with AI-powered insights that optimize production, enhance quality, and maximize efficiency.</p>
         </div>
       </section>
 
       <section className="py-16 max-w-6xl mx-auto px-6">
         <div className="grid md:grid-cols-2 gap-10">
           <div>
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">Advanced Supply Chain Features</h2>
+            <h2 className="text-3xl font-bold text-gray-900 mb-4">Advanced Manufacturing Features</h2>
             <ul className="space-y-3">
               {features.map((f) => (
                 <li key={f} className="flex items-start">
@@ -89,9 +89,9 @@ export default function AISupplyChainOptimization() {
             <h3 className="text-2xl font-semibold text-gray-900 mb-4">Competitive Pricing</h3>
             <div className="grid md:grid-cols-3 gap-4">
               {tiers.map((t) => (
-                <div key={t.name} className="rounded-lg p-4 border border-gray-200 hover:border-orange-300 transition-colors">
+                <div key={t.name} className="rounded-lg p-4 border border-gray-200 hover:border-gray-300 transition-colors">
                   <div className="text-lg font-semibold mb-1">{t.name}</div>
-                  <div className="text-2xl font-bold text-orange-600 mb-2">{t.price}</div>
+                  <div className="text-2xl font-bold text-gray-600 mb-2">{t.price}</div>
                   <ul className="text-sm text-gray-600 space-y-1">
                     {t.details.map((d) => (<li key={d}>{d}</li>))}
                   </ul>
@@ -99,10 +99,10 @@ export default function AISupplyChainOptimization() {
               ))}
             </div>
             <div className="mt-6 flex flex-wrap gap-3">
-              <a href="/pricing" className="px-5 py-3 bg-orange-600 text-white rounded-lg hover:bg-orange-700 transition-colors inline-flex items-center">
+              <a href="/pricing" className="px-5 py-3 bg-gray-600 text-white rounded-lg hover:bg-gray-700 transition-colors inline-flex items-center">
                 View Full Pricing <ArrowRight className="w-4 h-4 ml-2" />
               </a>
-              <a href="https://ziontechgroup.com" target="_blank" rel="noreferrer" className="px-5 py-3 border border-gray-300 rounded-lg hover:border-orange-400 transition-colors inline-flex items-center">
+              <a href="https://ziontechgroup.com" target="_blank" rel="noreferrer" className="px-5 py-3 border border-gray-300 rounded-lg hover:border-gray-400 transition-colors inline-flex items-center">
                 Learn More <ExternalLink className="w-4 h-4 ml-2" />
               </a>
             </div>
@@ -110,9 +110,9 @@ export default function AISupplyChainOptimization() {
         </div>
 
         <div className="mt-12 grid md:grid-cols-3 gap-6">
-          {['20-35% cost reduction', '40-60% forecast accuracy', 'Real-time optimization'].map((t) => (
+          {['25-40% efficiency improvement', '30-50% downtime reduction', '40-60% defect reduction'].map((t) => (
             <div key={t} className="p-6 bg-white border border-gray-200 rounded-xl shadow-sm hover:shadow-md transition-shadow">
-              <Brain className="w-6 h-6 text-orange-600 mb-3" />
+              <Brain className="w-6 h-6 text-gray-600 mb-3" />
               <div className="text-gray-900 font-semibold">{t}</div>
             </div>
           ))}
@@ -123,19 +123,19 @@ export default function AISupplyChainOptimization() {
           <div className="grid md:grid-cols-2 gap-6">
             {useCases.map((useCase) => (
               <div key={useCase} className="flex items-center p-4 bg-white rounded-lg border border-gray-200">
-                <Target className="w-5 h-5 text-orange-600 mr-3" />
+                <Target className="w-5 h-5 text-gray-600 mr-3" />
                 <span className="text-gray-700">{useCase}</span>
               </div>
             ))}
           </div>
         </div>
 
-        <div className="mt-16 bg-orange-50 rounded-xl p-8">
-          <h3 className="text-2xl font-bold text-gray-900 mb-6 text-center">Measurable Business Impact</h3>
+        <div className="mt-16 bg-gray-100 rounded-xl p-8">
+          <h3 className="text-2xl font-bold text-gray-900 mb-6 text-center">Measurable Manufacturing Impact</h3>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {benefits.map((benefit) => (
-              <div key={benefit} className="flex items-start p-4 bg-white rounded-lg border border-orange-200">
-                <Zap className="w-5 h-5 text-orange-600 mr-3 mt-0.5 flex-shrink-0" />
+              <div key={benefit} className="flex items-start p-4 bg-white rounded-lg border border-gray-300">
+                <Zap className="w-5 h-5 text-gray-600 mr-3 mt-0.5 flex-shrink-0" />
                 <span className="text-gray-700">{benefit}</span>
               </div>
             ))}
@@ -147,7 +147,7 @@ export default function AISupplyChainOptimization() {
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {industries.map((industry) => (
               <div key={industry} className="flex items-center p-4 bg-gray-50 rounded-lg border border-gray-200">
-                <Globe className="w-5 h-5 text-orange-600 mr-3" />
+                <Settings className="w-5 h-5 text-gray-600 mr-3" />
                 <span className="text-gray-700">{industry}</span>
               </div>
             ))}
@@ -155,12 +155,12 @@ export default function AISupplyChainOptimization() {
         </div>
 
         <div className="mt-14 text-center">
-          <div className="text-sm text-gray-600 mb-2">Ready to optimize your supply chain?</div>
+          <div className="text-sm text-gray-600 mb-2">Ready to transform your manufacturing with AI?</div>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a href="tel:+13024640950" className="inline-flex items-center px-5 py-3 bg-orange-600 text-white rounded-lg hover:bg-orange-700 transition-colors">
+            <a href="tel:+13024640950" className="inline-flex items-center px-5 py-3 bg-gray-600 text-white rounded-lg hover:bg-gray-700 transition-colors">
               <Phone className="w-4 h-4 mr-2"/> +1 302 464 0950
             </a>
-            <a href="mailto:kleber@ziontechgroup.com" className="inline-flex items-center px-5 py-3 border border-orange-600 text-orange-600 rounded-lg hover:bg-orange-50 transition-colors">
+            <a href="mailto:kleber@ziontechgroup.com" className="inline-flex items-center px-5 py-3 border border-gray-600 text-gray-600 rounded-lg hover:bg-gray-50 transition-colors">
               <Mail className="w-4 h-4 mr-2"/> kleber@ziontechgroup.com
             </a>
           </div>

@@ -1,60 +1,60 @@
-import { Truck, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, BarChart3, Target, Zap, Shield, Globe } from 'lucide-react';
+import { Truck, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, Route, BarChart3 } from 'lucide-react';
 
-export default function AISupplyChainOptimization() {
+export default function AITransportation() {
   const features = [
-    'AI-powered demand forecasting and inventory optimization',
-    'Real-time supply chain visibility and tracking',
-    'Predictive analytics for supplier performance',
-    'Automated route optimization and logistics planning',
-    'Risk assessment and mitigation strategies',
-    'Sustainability metrics and carbon footprint tracking',
-    'Integration with major ERP and WMS systems',
-    'Custom AI models for industry-specific optimization'
+    'AI-powered route optimization and fleet management',
+    'Intelligent traffic prediction and congestion avoidance',
+    'Automated vehicle maintenance and predictive diagnostics',
+    'Real-time logistics optimization and delivery tracking',
+    'Predictive analytics for demand forecasting',
+    'Smart traffic signal optimization and control',
+    'Integration with major transportation management systems',
+    'Custom AI models for transportation-specific insights'
   ];
 
   const tiers = [
     { 
-      name: 'Starter', 
-      price: '$599/mo', 
-      details: ['Up to 5 locations', 'Basic forecasting', 'Standard integrations', 'Email support'] 
+      name: 'Small Fleet', 
+      price: '$399/mo', 
+      details: ['Up to 25 vehicles', 'Basic AI features', 'Standard reports', 'Email support'] 
     },
     { 
-      name: 'Professional', 
-      price: '$1,299/mo', 
-      details: ['Up to 25 locations', 'Advanced AI forecasting', 'Custom integrations', 'Priority support'] 
+      name: 'Medium Fleet', 
+      price: '$999/mo', 
+      details: ['Up to 100 vehicles', 'Advanced AI features', 'Custom reports', 'Priority support'] 
     },
     { 
-      name: 'Enterprise', 
-      price: '$2,999/mo', 
-      details: ['Unlimited locations', 'Custom AI models', 'Full system integration', '24/7 dedicated support'] 
+      name: 'Large Fleet', 
+      price: '$2,499/mo', 
+      details: ['Unlimited vehicles', 'Custom AI models', 'Full system integration', '24/7 dedicated support'] 
     },
   ];
 
   const useCases = [
-    'Retail inventory optimization and demand planning',
-    'Manufacturing supply chain management',
-    'E-commerce fulfillment optimization',
-    'Healthcare supply chain coordination',
-    'Food and beverage distribution',
-    'Automotive parts supply chain'
+    'Fleet management and route optimization',
+    'Public transportation optimization',
+    'Logistics and supply chain management',
+    'Traffic management and smart cities',
+    'Ride-sharing and mobility services',
+    'Freight and cargo transportation'
   ];
 
   const benefits = [
-    'Reduce inventory costs by 20-35%',
-    'Improve forecast accuracy by 40-60%',
-    'Cut logistics costs by 15-25%',
-    'Reduce stockouts by 50-70%',
-    'Optimize warehouse space utilization',
-    'Enhance supplier relationship management'
+    'Reduce fuel costs by 15-30%',
+    'Improve delivery efficiency by 25-40%',
+    'Cut maintenance costs by 20-35%',
+    'Optimize routes for maximum productivity',
+    'Enhance driver safety and compliance',
+    'Scale transportation operations efficiently'
   ];
 
   const industries = [
-    'Retail & E-commerce',
-    'Manufacturing',
-    'Healthcare & Pharmaceuticals',
-    'Food & Beverage',
-    'Automotive',
-    'Logistics & Transportation'
+    'Logistics & Freight',
+    'Public Transportation',
+    'Ride-sharing & Mobility',
+    'E-commerce Delivery',
+    'Construction & Heavy Equipment',
+    'Emergency Services'
   ];
 
   return (
@@ -62,17 +62,17 @@ export default function AISupplyChainOptimization() {
       <section className="bg-gradient-to-br from-orange-600 via-amber-600 to-yellow-600 py-20 text-center">
         <div className="max-w-5xl mx-auto px-6">
           <div className="inline-flex items-center px-4 py-2 rounded-full bg-white/10 text-white mb-6">
-            <Truck className="w-4 h-4 mr-2" /> AI-Powered Supply Chain Intelligence
+            <Truck className="w-4 h-4 mr-2" /> AI-Powered Transportation Intelligence
           </div>
-          <h1 className="text-4xl md:text-6xl font-bold text-white mb-4">AI Supply Chain Optimization Platform</h1>
-          <p className="text-amber-100 text-xl">Revolutionize your supply chain with AI-powered optimization that reduces costs, improves efficiency, and ensures seamless operations across your global network.</p>
+          <h1 className="text-4xl md:text-6xl font-bold text-white mb-4">AI Transportation Platform</h1>
+          <p className="text-amber-100 text-xl">Transform your transportation operations with AI-powered insights that optimize routes, enhance efficiency, and reduce costs.</p>
         </div>
       </section>
 
       <section className="py-16 max-w-6xl mx-auto px-6">
         <div className="grid md:grid-cols-2 gap-10">
           <div>
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">Advanced Supply Chain Features</h2>
+            <h2 className="text-3xl font-bold text-gray-900 mb-4">Advanced Transportation Features</h2>
             <ul className="space-y-3">
               {features.map((f) => (
                 <li key={f} className="flex items-start">
@@ -110,7 +110,7 @@ export default function AISupplyChainOptimization() {
         </div>
 
         <div className="mt-12 grid md:grid-cols-3 gap-6">
-          {['20-35% cost reduction', '40-60% forecast accuracy', 'Real-time optimization'].map((t) => (
+          {['15-30% fuel cost reduction', '25-40% efficiency improvement', '20-35% maintenance savings'].map((t) => (
             <div key={t} className="p-6 bg-white border border-gray-200 rounded-xl shadow-sm hover:shadow-md transition-shadow">
               <Brain className="w-6 h-6 text-orange-600 mb-3" />
               <div className="text-gray-900 font-semibold">{t}</div>
@@ -131,7 +131,7 @@ export default function AISupplyChainOptimization() {
         </div>
 
         <div className="mt-16 bg-orange-50 rounded-xl p-8">
-          <h3 className="text-2xl font-bold text-gray-900 mb-6 text-center">Measurable Business Impact</h3>
+          <h3 className="text-2xl font-bold text-gray-900 mb-6 text-center">Measurable Transportation Impact</h3>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {benefits.map((benefit) => (
               <div key={benefit} className="flex items-start p-4 bg-white rounded-lg border border-orange-200">
@@ -147,7 +147,7 @@ export default function AISupplyChainOptimization() {
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {industries.map((industry) => (
               <div key={industry} className="flex items-center p-4 bg-gray-50 rounded-lg border border-gray-200">
-                <Globe className="w-5 h-5 text-orange-600 mr-3" />
+                <Route className="w-5 h-5 text-orange-600 mr-3" />
                 <span className="text-gray-700">{industry}</span>
               </div>
             ))}
@@ -155,7 +155,7 @@ export default function AISupplyChainOptimization() {
         </div>
 
         <div className="mt-14 text-center">
-          <div className="text-sm text-gray-600 mb-2">Ready to optimize your supply chain?</div>
+          <div className="text-sm text-gray-600 mb-2">Ready to transform your transportation with AI?</div>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a href="tel:+13024640950" className="inline-flex items-center px-5 py-3 bg-orange-600 text-white rounded-lg hover:bg-orange-700 transition-colors">
               <Phone className="w-4 h-4 mr-2"/> +1 302 464 0950

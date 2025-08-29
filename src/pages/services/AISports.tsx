@@ -1,60 +1,60 @@
-import { TrendingUp, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, DollarSign, BarChart3 } from 'lucide-react';
+import { Trophy, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, Users, BarChart3 } from 'lucide-react';
 
-export default function AIFinancialTrading() {
+export default function AISports() {
   const features = [
-    'AI-powered market analysis and trend prediction',
-    'Intelligent portfolio optimization and risk management',
-    'Automated trading strategies and execution',
-    'Real-time market data processing and insights',
-    'Predictive analytics for asset performance',
-    'Risk assessment and portfolio diversification',
-    'Integration with major trading platforms',
-    'Custom AI models for specific asset classes'
+    'AI-powered performance analysis and optimization',
+    'Intelligent training program design and monitoring',
+    'Automated injury prevention and risk assessment',
+    'Predictive analytics for player development',
+    'Real-time game strategy and tactical analysis',
+    'Smart scouting and talent identification',
+    'Integration with major sports analytics platforms',
+    'Custom AI models for sports-specific insights'
   ];
 
   const tiers = [
     { 
-      name: 'Individual Trader', 
-      price: '$299/mo', 
-      details: ['Up to $100k portfolio', 'Basic AI analysis', 'Standard reports', 'Email support'] 
+      name: 'Amateur Team', 
+      price: '$199/mo', 
+      details: ['Up to 25 players', 'Basic AI features', 'Standard reports', 'Email support'] 
     },
     { 
-      name: 'Professional Trader', 
-      price: '$799/mo', 
-      details: ['Up to $1M portfolio', 'Advanced AI features', 'Custom strategies', 'Priority support'] 
+      name: 'Professional Team', 
+      price: '$599/mo', 
+      details: ['Up to 100 players', 'Advanced AI features', 'Custom reports', 'Priority support'] 
     },
     { 
-      name: 'Institutional', 
-      price: '$2,499/mo', 
-      details: ['Unlimited portfolio size', 'Custom AI models', 'Full platform integration', '24/7 dedicated support'] 
+      name: 'Major League', 
+      price: '$1,499/mo', 
+      details: ['Unlimited players', 'Custom AI models', 'Full platform integration', '24/7 dedicated support'] 
     },
   ];
 
   const useCases = [
-    'Stock market trading and analysis',
-    'Cryptocurrency trading and portfolio management',
-    'Forex trading and currency analysis',
-    'Options and derivatives trading',
-    'Commodity trading and futures',
-    'Portfolio management and rebalancing'
+    'Player performance analysis and optimization',
+    'Training program design and monitoring',
+    'Injury prevention and risk assessment',
+    'Game strategy and tactical analysis',
+    'Scouting and talent identification',
+    'Fan engagement and marketing optimization'
   ];
 
   const benefits = [
-    'Improve trading performance by 20-40%',
-    'Reduce portfolio risk by 25-45%',
-    'Increase returns through optimized strategies',
-    'Automate routine trading operations',
-    'Enhance decision-making with AI insights',
-    'Scale trading operations efficiently'
+    'Improve player performance by 20-40%',
+    'Reduce injury risk by 30-50%',
+    'Cut training costs by 25-40%',
+    'Optimize game strategy and tactics',
+    'Enhance player development and scouting',
+    'Scale sports operations efficiently'
   ];
 
   const industries = [
-    'Individual Trading',
-    'Professional Trading',
-    'Institutional Investment',
-    'Hedge Funds',
-    'Asset Management',
-    'Quantitative Trading'
+    'Professional Sports Teams',
+    'College & University Athletics',
+    'Youth Sports Organizations',
+    'Sports Training Facilities',
+    'Sports Analytics & Media',
+    'Sports Technology Companies'
   ];
 
   return (
@@ -62,17 +62,17 @@ export default function AIFinancialTrading() {
       <section className="bg-gradient-to-br from-green-600 via-emerald-600 to-teal-600 py-20 text-center">
         <div className="max-w-5xl mx-auto px-6">
           <div className="inline-flex items-center px-4 py-2 rounded-full bg-white/10 text-white mb-6">
-            <TrendingUp className="w-4 h-4 mr-2" /> AI-Powered Financial Intelligence
+            <Trophy className="w-4 h-4 mr-2" /> AI-Powered Sports Intelligence
           </div>
-          <h1 className="text-4xl md:text-6xl font-bold text-white mb-4">AI Financial Trading Platform</h1>
-          <p className="text-emerald-100 text-xl">Revolutionize your trading with AI-powered analysis, automated strategies, and intelligent portfolio management that maximizes returns and minimizes risk.</p>
+          <h1 className="text-4xl md:text-6xl font-bold text-white mb-4">AI Sports Platform</h1>
+          <p className="text-emerald-100 text-xl">Transform your sports organization with AI-powered tools that enhance player performance, optimize training, and maximize success.</p>
         </div>
       </section>
 
       <section className="py-16 max-w-6xl mx-auto px-6">
         <div className="grid md:grid-cols-2 gap-10">
           <div>
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">Advanced Trading Features</h2>
+            <h2 className="text-3xl font-bold text-gray-900 mb-4">Advanced Sports Features</h2>
             <ul className="space-y-3">
               {features.map((f) => (
                 <li key={f} className="flex items-start">
@@ -110,7 +110,7 @@ export default function AIFinancialTrading() {
         </div>
 
         <div className="mt-12 grid md:grid-cols-3 gap-6">
-          {['20-40% performance improvement', '25-45% risk reduction', 'Automated strategies'].map((t) => (
+          {['20-40% performance improvement', '30-50% injury risk reduction', '25-40% cost reduction'].map((t) => (
             <div key={t} className="p-6 bg-white border border-gray-200 rounded-xl shadow-sm hover:shadow-md transition-shadow">
               <Brain className="w-6 h-6 text-green-600 mb-3" />
               <div className="text-gray-900 font-semibold">{t}</div>
@@ -131,7 +131,7 @@ export default function AIFinancialTrading() {
         </div>
 
         <div className="mt-16 bg-green-50 rounded-xl p-8">
-          <h3 className="text-2xl font-bold text-gray-900 mb-6 text-center">Measurable Trading Impact</h3>
+          <h3 className="text-2xl font-bold text-gray-900 mb-6 text-center">Measurable Sports Impact</h3>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {benefits.map((benefit) => (
               <div key={benefit} className="flex items-start p-4 bg-white rounded-lg border border-green-200">
@@ -147,7 +147,7 @@ export default function AIFinancialTrading() {
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {industries.map((industry) => (
               <div key={industry} className="flex items-center p-4 bg-gray-50 rounded-lg border border-gray-200">
-                <DollarSign className="w-5 h-5 text-green-600 mr-3" />
+                <Users className="w-5 h-5 text-green-600 mr-3" />
                 <span className="text-gray-700">{industry}</span>
               </div>
             ))}
@@ -155,7 +155,7 @@ export default function AIFinancialTrading() {
         </div>
 
         <div className="mt-14 text-center">
-          <div className="text-sm text-gray-600 mb-2">Ready to transform your trading with AI?</div>
+          <div className="text-sm text-gray-600 mb-2">Ready to transform your sports organization with AI?</div>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a href="tel:+13024640950" className="inline-flex items-center px-5 py-3 bg-green-600 text-white rounded-lg hover:bg-green-700 transition-colors">
               <Phone className="w-4 h-4 mr-2"/> +1 302 464 0950

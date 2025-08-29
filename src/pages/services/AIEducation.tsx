@@ -1,60 +1,78 @@
-import { Workflow, Zap, Check, ExternalLink, Phone, Mail, ArrowRight, Brain, Clock, BarChart3 } from 'lucide-react';
+import { GraduationCap, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, BookOpen, BarChart3 } from 'lucide-react';
 
-export default function AIWorkflowAutomation() {
+export default function AIEducation() {
   const features = [
-    'Intelligent process mapping and optimization',
-    'AI-powered decision trees and conditional logic',
-    'Multi-platform integration (Slack, Teams, Zapier)',
-    'Real-time workflow analytics and performance metrics',
-    'Automated error handling and fallback procedures',
-    'Custom workflow templates for common business processes',
-    'Role-based access control and approval workflows',
-    'Mobile workflow management and notifications'
+    'AI-powered personalized learning paths and recommendations',
+    'Intelligent assessment and adaptive testing',
+    'Automated content generation and curriculum optimization',
+    'Predictive analytics for student performance',
+    'Smart tutoring and homework assistance',
+    'Learning analytics and progress tracking',
+    'Integration with major LMS and educational platforms',
+    'Custom AI models for subject-specific learning'
   ];
 
   const tiers = [
     { 
-      name: 'Starter', 
-      price: '$199/mo', 
-      details: ['Up to 10 workflows', '5 team members', 'Basic integrations', 'Email support'] 
+      name: 'Individual Teacher', 
+      price: '$99/mo', 
+      details: ['Up to 50 students', 'Basic AI features', 'Standard content', 'Email support'] 
     },
     { 
-      name: 'Professional', 
-      price: '$499/mo', 
-      details: ['Up to 50 workflows', '25 team members', 'Advanced integrations', 'Priority support'] 
+      name: 'School District', 
+      price: '$399/mo', 
+      details: ['Up to 1,000 students', 'Advanced AI features', 'Custom content', 'Priority support'] 
     },
     { 
-      name: 'Enterprise', 
-      price: '$1,299/mo', 
-      details: ['Unlimited workflows', 'Unlimited team members', 'Custom integrations', '24/7 support'] 
+      name: 'University', 
+      price: '$999/mo', 
+      details: ['Unlimited students', 'Custom AI models', 'Full platform integration', '24/7 dedicated support'] 
     },
   ];
 
   const useCases = [
-    'Customer onboarding automation',
-    'Invoice processing and approval',
-    'Employee onboarding and offboarding',
-    'Project approval workflows',
-    'Quality assurance processes',
-    'Compliance documentation flows'
+    'K-12 personalized learning and tutoring',
+    'Higher education course optimization',
+    'Corporate training and skill development',
+    'Language learning and proficiency testing',
+    'Special education and accessibility',
+    'Professional certification and licensing'
+  ];
+
+  const benefits = [
+    'Improve student performance by 25-40%',
+    'Reduce learning time by 30-50%',
+    'Increase engagement and retention by 40-60%',
+    'Optimize curriculum and teaching methods',
+    'Provide personalized learning experiences',
+    'Scale educational programs without additional staff'
+  ];
+
+  const industries = [
+    'K-12 Education',
+    'Higher Education',
+    'Corporate Training',
+    'Online Learning',
+    'Special Education',
+    'Professional Development'
   ];
 
   return (
     <div className="min-h-screen bg-white">
-      <section className="bg-gradient-to-br from-purple-600 via-blue-600 to-indigo-700 py-20 text-center">
+      <section className="bg-gradient-to-br from-blue-600 via-indigo-600 to-purple-600 py-20 text-center">
         <div className="max-w-5xl mx-auto px-6">
           <div className="inline-flex items-center px-4 py-2 rounded-full bg-white/10 text-white mb-6">
-            <Workflow className="w-4 h-4 mr-2" /> AI-Powered Business Process Automation
+            <GraduationCap className="w-4 h-4 mr-2" /> AI-Powered Educational Intelligence
           </div>
-          <h1 className="text-4xl md:text-6xl font-bold text-white mb-4">AI Workflow Automation Platform</h1>
-          <p className="text-blue-100 text-xl">Transform your business processes with intelligent automation that learns, adapts, and scales with your organization.</p>
+          <h1 className="text-4xl md:text-6xl font-bold text-white mb-4">AI Education Platform</h1>
+          <p className="text-indigo-100 text-xl">Transform education with AI-powered learning that personalizes instruction, optimizes curriculum, and accelerates student achievement.</p>
         </div>
       </section>
 
       <section className="py-16 max-w-6xl mx-auto px-6">
         <div className="grid md:grid-cols-2 gap-10">
           <div>
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">Revolutionary Features</h2>
+            <h2 className="text-3xl font-bold text-gray-900 mb-4">Advanced Educational Features</h2>
             <ul className="space-y-3">
               {features.map((f) => (
                 <li key={f} className="flex items-start">
@@ -64,7 +82,7 @@ export default function AIWorkflowAutomation() {
               ))}
             </ul>
             <div className="mt-6 text-sm text-gray-600">
-              Built with enterprise-grade security, SOC 2 compliance, and 99.9% uptime guarantee.
+              Built with enterprise-grade security, FERPA compliance, and 99.9% uptime SLA.
             </div>
           </div>
           <div className="bg-white border border-gray-200 rounded-xl p-6 shadow-lg">
@@ -92,7 +110,7 @@ export default function AIWorkflowAutomation() {
         </div>
 
         <div className="mt-12 grid md:grid-cols-3 gap-6">
-          {['AI-powered optimization', 'Real-time analytics', 'Multi-platform support'].map((t) => (
+          {['25-40% performance improvement', '30-50% faster learning', '40-60% engagement increase'].map((t) => (
             <div key={t} className="p-6 bg-white border border-gray-200 rounded-xl shadow-sm hover:shadow-md transition-shadow">
               <Brain className="w-6 h-6 text-blue-600 mb-3" />
               <div className="text-gray-900 font-semibold">{t}</div>
@@ -105,15 +123,39 @@ export default function AIWorkflowAutomation() {
           <div className="grid md:grid-cols-2 gap-6">
             {useCases.map((useCase) => (
               <div key={useCase} className="flex items-center p-4 bg-white rounded-lg border border-gray-200">
-                <Zap className="w-5 h-5 text-blue-600 mr-3" />
+                <Target className="w-5 h-5 text-blue-600 mr-3" />
                 <span className="text-gray-700">{useCase}</span>
               </div>
             ))}
           </div>
         </div>
 
+        <div className="mt-16 bg-blue-50 rounded-xl p-8">
+          <h3 className="text-2xl font-bold text-gray-900 mb-6 text-center">Measurable Educational Impact</h3>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {benefits.map((benefit) => (
+              <div key={benefit} className="flex items-start p-4 bg-white rounded-lg border border-blue-200">
+                <Zap className="w-5 h-5 text-blue-600 mr-3 mt-0.5 flex-shrink-0" />
+                <span className="text-gray-700">{benefit}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        <div className="mt-16 bg-white border border-gray-200 rounded-xl p-8">
+          <h3 className="text-2xl font-bold text-gray-900 mb-6 text-center">Industries We Serve</h3>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {industries.map((industry) => (
+              <div key={industry} className="flex items-center p-4 bg-gray-50 rounded-lg border border-gray-200">
+                <BookOpen className="w-5 h-5 text-blue-600 mr-3" />
+                <span className="text-gray-700">{industry}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+
         <div className="mt-14 text-center">
-          <div className="text-sm text-gray-600 mb-2">Ready to automate your workflows?</div>
+          <div className="text-sm text-gray-600 mb-2">Ready to transform education with AI?</div>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a href="tel:+13024640950" className="inline-flex items-center px-5 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors">
               <Phone className="w-4 h-4 mr-2"/> +1 302 464 0950
