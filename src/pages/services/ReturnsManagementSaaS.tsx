@@ -1,3 +1,4 @@
+import { motion } from "framer-motion";
 import React from 'react';
 import { SEO } from '@/components/SEO';
 import { Package, Truck, CheckCircle, DollarSign, Link as LinkIcon } from 'lucide-react';

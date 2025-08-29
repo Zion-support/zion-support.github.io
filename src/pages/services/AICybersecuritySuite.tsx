@@ -1,4 +1,6 @@
+import { motion } from "framer-motion";
 import React from 'react';
+import { SEO } from '../../components/SEO';
 import { motion } from 'framer-motion';
 import { 
   Shield, 
@@ -22,129 +24,184 @@ import {
   Cpu,
   Network
 } from 'lucide-react';
-import { SEO } from '@/components/SEO';
-import { Button } from '@/components/ui/button';
-import { Badge } from '@/components/ui/badge';
 
-export default function AICybersecuritySuite() {
+const AICybersecuritySuite: React.FC = () => {
+  const serviceData = {
+    title: "AI-Powered Cybersecurity Suite",
+    subtitle: "Next-generation threat detection and response powered by artificial intelligence",
+    description: "Protect your organization with our comprehensive AI cybersecurity suite that detects, prevents, and responds to threats in real-time. Reduce security incidents by 95% and achieve compliance with industry standards.",
+    heroImage: "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&w=1200&h=600",
+    category: "Cybersecurity",
+    price: 2499,
+    currency: "$",
+    pricingModel: "monthly",
+    marketPrice: "$2,499 - $7,999/month",
+    website: "https://ziontechgroup.com/services/ai-cybersecurity-suite",
+    contactEmail: "kleber@ziontechgroup.com",
+    contactPhone: "+1 302 464 0950"
+  };
+
   const features = [
     {
-      icon: Brain,
       title: "AI Threat Detection",
-      description: "Advanced machine learning algorithms that identify and respond to threats in real-time, even before they become active."
+      description: "Machine learning algorithms detect zero-day threats and advanced persistent threats in real-time",
+      icon: "🛡️"
     },
     {
-      icon: Shield,
-      title: "Zero Trust Architecture",
-      description: "Implement comprehensive security that never trusts and always verifies every user, device, and connection."
-    },
-    {
-      icon: Eye,
       title: "Behavioral Analytics",
-      description: "Monitor user and system behavior patterns to detect anomalies and potential security breaches."
+      description: "AI-powered user behavior analysis to identify insider threats and anomalous activities",
+      icon: "🔍"
     },
     {
-      icon: Zap,
-      title: "Automated Response",
-      description: "Instant threat containment and response without human intervention, reducing response time to seconds."
+      title: "Automated Incident Response",
+      description: "Intelligent automation that responds to security incidents within seconds",
+      icon: "⚡"
     },
     {
-      icon: Lock,
-      title: "Quantum-Resistant Encryption",
-      description: "Future-proof your security with encryption that withstands quantum computing attacks."
+      title: "Threat Intelligence",
+      description: "Real-time threat intelligence feeds and predictive threat modeling",
+      icon: "📡"
     },
     {
-      icon: Network,
-      title: "Network Security",
-      description: "Comprehensive network protection including firewall management, intrusion detection, and traffic analysis."
+      title: "Compliance Automation",
+      description: "Automated compliance reporting for SOC 2, ISO 27001, GDPR, and HIPAA",
+      icon: "📋"
+    },
+    {
+      title: "Cloud Security",
+      description: "Comprehensive cloud security monitoring and threat prevention",
+      icon: "☁️"
     }
   ];
 
   const benefits = [
-    "Reduce security incidents by 85%",
-    "Automate 90% of security tasks",
-    "Improve compliance scores by 95%",
-    "Reduce response time to threats by 70%",
-    "Prevent 99.9% of known attacks",
-    "Reduce false positives by 80%"
+    "Reduce security incidents by 95%",
+    "Detect threats 10x faster than traditional solutions",
+    "Automate 80% of security operations",
+    "Achieve compliance with major standards",
+    "Reduce false positives by 90%",
+    "24/7 automated threat monitoring and response"
   ];
 
-  const pricingTiers = [
+  const useCases = [
     {
-      name: "Essential",
-      price: 299,
+      title: "Enterprise Security Operations",
+      description: "Comprehensive security monitoring and incident response for large organizations",
+      industry: "Enterprise & Fortune 500"
+    },
+    {
+      title: "Financial Services Security",
+      description: "Advanced threat detection and compliance for banks and financial institutions",
+      industry: "Financial Services"
+    },
+    {
+      title: "Healthcare Cybersecurity",
+      description: "HIPAA-compliant security solutions for healthcare organizations",
+      industry: "Healthcare"
+    },
+    {
+      title: "Government & Defense",
+      description: "High-security solutions for government agencies and defense contractors",
+      industry: "Government & Defense"
+    }
+  ];
+
+  const pricingPlans = [
+    {
+      name: "Professional",
+      price: 2499,
+      currency: "$",
       period: "month",
-      description: "Perfect for small businesses starting their security journey",
       features: [
-        "Up to 50 users",
-        "Basic AI threat detection",
-        "Email security",
-        "Basic compliance reporting",
-        "Email support",
-        "Standard integrations"
+        "Up to 1000 endpoints",
+        "AI threat detection",
+        "Basic incident response",
+        "Compliance reporting",
+        "24/7 monitoring",
+        "Email support"
       ],
       popular: false
     },
     {
-      name: "Professional",
-      price: 799,
+      name: "Enterprise",
+      price: 4999,
+      currency: "$",
       period: "month",
-      description: "Ideal for growing businesses with advanced security needs",
       features: [
-        "Up to 250 users",
-        "Advanced AI algorithms",
-        "Zero trust architecture",
-        "Behavioral analytics",
+        "Up to 10000 endpoints",
+        "Advanced AI threat detection",
+        "Automated incident response",
+        "Full compliance suite",
+        "Threat intelligence feeds",
         "Priority support",
-        "Advanced integrations",
-        "Compliance automation",
-        "24/7 monitoring"
+        "Custom integrations"
       ],
       popular: true
     },
     {
-      name: "Enterprise",
-      price: 1999,
+      name: "Government",
+      price: 7999,
+      currency: "$",
       period: "month",
-      description: "For large organizations with complex security requirements",
       features: [
-        "Unlimited users",
+        "Unlimited endpoints",
+        "Military-grade security",
         "Custom AI models",
-        "Full zero trust implementation",
-        "Quantum-resistant encryption",
+        "On-premise deployment",
         "Dedicated security team",
-        "Custom integrations",
-        "SLA guarantees",
-        "On-site support"
+        "Custom compliance frameworks",
+        "White-glove support"
       ],
       popular: false
     }
   ];
 
-  const securityFeatures = [
+  const competitors = [
     {
-      category: "Threat Prevention",
-      items: ["AI-powered malware detection", "Phishing protection", "Ransomware prevention", "Zero-day threat blocking"]
+      name: "CrowdStrike",
+      price: "$4,000 - $12,000/month",
+      pros: ["Market leader", "Advanced features"],
+      cons: ["Very expensive", "Complex setup"]
     },
     {
-      category: "Network Security",
-      items: ["Next-gen firewall", "Intrusion prevention", "DDoS protection", "VPN management"]
+      name: "SentinelOne",
+      price: "$3,500 - $10,000/month",
+      pros: ["Good performance", "Cloud-native"],
+      cons: ["High cost", "Limited AI"]
     },
     {
-      category: "Data Protection",
-      items: ["Data encryption", "Access control", "Data loss prevention", "Backup security"]
+      name: "Zion Tech Group AI Cybersecurity",
+      price: "$2,499 - $7,999/month",
+      pros: ["Advanced AI", "Cost-effective", "Easy deployment"],
+      cons: ["Newer platform", "Growing ecosystem"]
+    }
+  ];
+
+  const faqs = [
+    {
+      question: "How does AI improve threat detection?",
+      answer: "Our AI algorithms analyze millions of data points in real-time, learning from patterns to detect unknown threats that traditional signature-based systems miss."
     },
     {
-      category: "Compliance",
-      items: ["GDPR compliance", "HIPAA compliance", "SOC 2 Type II", "ISO 27001"]
+      question: "What compliance standards do you support?",
+      answer: "We support SOC 2 Type II, ISO 27001, GDPR, HIPAA, PCI DSS, and many other industry-specific compliance frameworks."
+    },
+    {
+      question: "How quickly can you respond to threats?",
+      answer: "Our automated response system can respond to threats within seconds, with human analysts reviewing and escalating complex incidents."
+    },
+    {
+      question: "Do you offer on-premise deployment?",
+      answer: "Yes, we offer both cloud and on-premise deployment options for organizations with specific security requirements."
     }
   ];
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO 
-        title="AI Cybersecurity Suite - Zion Tech Group"
-        description="Comprehensive AI-powered cybersecurity platform providing real-time threat detection, automated incident response, and advanced security analytics."
+        title="AI-Powered Cybersecurity Suite - Zion Tech Group"
+        description="Protect your organization with AI-powered cybersecurity. Reduce security incidents by 95% and achieve compliance with industry standards."
+        keywords="AI cybersecurity, threat detection, incident response, compliance automation, security monitoring"
       />
       
       {/* Hero Section */}
@@ -155,25 +212,42 @@ export default function AICybersecuritySuite() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
-            <Badge className="mb-6 bg-gradient-to-r from-red-600 to-pink-600 text-white border-0">
-              AI-Powered Cybersecurity
-            </Badge>
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              Protect Your Business with
-              <span className="bg-gradient-to-r from-red-400 to-pink-500 bg-clip-text text-transparent"> AI-Powered Security</span>
+            <div className="flex justify-center mb-6">
+              <div className="w-20 h-20 bg-gradient-to-br from-red-500 to-pink-500 rounded-2xl flex items-center justify-center">
+                <Shield className="w-10 h-10 text-white" />
+              </div>
+            </div>
+            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
+              {serviceData.title}
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Comprehensive AI-powered cybersecurity platform that provides real-time threat detection, 
-              automated incident response, and advanced security analytics.
+              {serviceData.subtitle}
             </p>
+            <p className="text-lg text-gray-400 mb-8 max-w-4xl mx-auto">
+              {serviceData.description}
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
+              <div className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-4 border border-slate-700">
+                <p className="text-sm text-gray-400">Starting at</p>
+                <p className="text-3xl font-bold text-white">${serviceData.price.toLocaleString()}/{serviceData.pricingModel}</p>
+                <p className="text-sm text-gray-400">Market: {serviceData.marketPrice}</p>
+              </div>
+            </div>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button size="lg" className="bg-gradient-to-r from-red-500 to-pink-600 hover:from-red-600 hover:to-pink-700">
-                Start Free Trial
-                <ArrowRight className="ml-2 h-5 w-5" />
-              </Button>
-              <Button size="lg" variant="outline" className="border-gray-600 text-white hover:bg-gray-800">
-                Security Assessment
-              </Button>
+              <a 
+                href="/contact" 
+                className="bg-gradient-to-r from-red-500 to-pink-500 text-white px-8 py-3 rounded-lg font-semibold hover:from-red-600 hover:to-pink-600 transition-all duration-300 flex items-center justify-center gap-2"
+              >
+                Get Started
+                <ArrowRight className="w-5 h-5" />
+              </a>
+              <a 
+                href={`tel:${serviceData.contactPhone}`} 
+                className="border border-red-500 text-red-400 px-8 py-3 rounded-lg font-semibold hover:bg-red-500 hover:text-white transition-all duration-300 flex items-center justify-center gap-2"
+              >
+                <Phone className="w-5 h-5" />
+                Call Now
+              </a>
             </div>
           </motion.div>
         </div>
@@ -189,10 +263,10 @@ export default function AICybersecuritySuite() {
             viewport={{ once: true }}
             className="text-center mb-16"
           >
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+            <h2 className="text-4xl font-bold text-white mb-4">
               Advanced Security Features
             </h2>
-            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Our AI-powered platform combines cutting-edge security technology with intelligent automation 
               to provide comprehensive protection for your business.
             </p>
@@ -208,9 +282,7 @@ export default function AICybersecuritySuite() {
                 viewport={{ once: true }}
                 className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700 hover:border-red-500/50 transition-all duration-300"
               >
-                <div className="w-12 h-12 bg-gradient-to-r from-red-500 to-pink-600 rounded-lg flex items-center justify-center mb-4">
-                  <feature.icon className="h-6 w-6 text-white" />
-                </div>
+                <div className="text-4xl mb-4">{feature.icon}</div>
                 <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
                 <p className="text-gray-300">{feature.description}</p>
               </motion.div>
@@ -219,7 +291,7 @@ export default function AICybersecuritySuite() {
         </div>
       </section>
 
-      {/* Security Features Grid */}
+      {/* Benefits Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-800/30">
         <div className="max-w-7xl mx-auto">
           <motion.div
@@ -229,53 +301,7 @@ export default function AICybersecuritySuite() {
             viewport={{ once: true }}
             className="text-center mb-16"
           >
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Comprehensive Security Coverage
-            </h2>
-            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              Protect every aspect of your business with our multi-layered security approach.
-            </p>
-          </motion.div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {securityFeatures.map((category, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700"
-              >
-                <h3 className="text-xl font-semibold text-white mb-4 flex items-center">
-                  <Shield className="h-6 w-6 text-red-500 mr-2" />
-                  {category.category}
-                </h3>
-                <ul className="space-y-2">
-                  {category.items.map((item, itemIndex) => (
-                    <li key={itemIndex} className="flex items-center text-gray-300">
-                      <CheckCircle className="h-4 w-4 text-red-500 mr-2 flex-shrink-0" />
-                      {item}
-                    </li>
-                  ))}
-                </ul>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Benefits Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+            <h2 className="text-4xl font-bold text-white mb-4">
               Why Choose Our AI Cybersecurity Suite?
             </h2>
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
@@ -301,79 +327,6 @@ export default function AICybersecuritySuite() {
         </div>
       </section>
 
-      {/* Pricing Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-800/30">
-        <div className="max-w-7xl mx-auto">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Security Plans for Every Business
-            </h2>
-            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              Choose the security level that matches your business needs and budget.
-            </p>
-          </motion.div>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {pricingTiers.map((tier, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className={`relative bg-slate-800/50 backdrop-blur-sm rounded-xl p-8 border ${
-                  tier.popular 
-                    ? 'border-red-500/50 ring-2 ring-red-500/20' 
-                    : 'border-slate-700'
-                }`}
-              >
-                {tier.popular && (
-                  <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                    <Badge className="bg-gradient-to-r from-red-500 to-pink-600 text-white border-0">
-                      Most Popular
-                    </Badge>
-                  </div>
-                )}
-
-                <div className="text-center mb-8">
-                  <h3 className="text-2xl font-bold text-white mb-2">{tier.name}</h3>
-                  <p className="text-gray-400 mb-6">{tier.description}</p>
-                  <div className="flex items-baseline justify-center">
-                    <span className="text-4xl font-bold text-white">${tier.price}</span>
-                    <span className="text-gray-400 ml-2">/{tier.period}</span>
-                  </div>
-                </div>
-
-                <ul className="space-y-4 mb-8">
-                  {tier.features.map((feature, featureIndex) => (
-                    <li key={featureIndex} className="flex items-center">
-                      <CheckCircle className="h-5 w-5 text-red-500 mr-3 flex-shrink-0" />
-                      <span className="text-gray-300">{feature}</span>
-                    </li>
-                  ))}
-                </ul>
-
-                <Button 
-                  className={`w-full ${
-                    tier.popular 
-                      ? 'bg-gradient-to-r from-red-500 to-pink-600 hover:from-red-600 hover:to-pink-700' 
-                      : 'bg-slate-700 hover:bg-slate-600'
-                  }`}
-                >
-                  Get Started
-                </Button>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* CTA Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
@@ -382,71 +335,35 @@ export default function AICybersecuritySuite() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
+            className="bg-gradient-to-r from-red-600 to-pink-600 rounded-3xl p-12"
           >
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+            <h2 className="text-4xl font-bold text-white mb-6">
               Ready to Secure Your Business?
             </h2>
-            <p className="text-xl text-gray-300 mb-8">
+            <p className="text-xl text-red-100 mb-8 max-w-3xl mx-auto">
               Join thousands of businesses already protected by our AI-powered cybersecurity platform.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button size="lg" className="bg-gradient-to-r from-red-500 to-pink-600 hover:from-red-600 hover:to-pink-700">
+              <a 
+                href="/contact" 
+                className="bg-white text-red-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300 flex items-center justify-center gap-2"
+              >
                 Start Free Trial
                 <ArrowRight className="ml-2 h-5 w-5" />
-              </Button>
-              <Button size="lg" variant="outline" className="border-gray-600 text-white hover:bg-gray-800">
-                Security Assessment
-              </Button>
-            </div>
-          </motion.div>
-        </div>
-      </section>
-
-      {/* Contact Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-800/30">
-        <div className="max-w-4xl mx-auto text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-          >
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-              Get in Touch
-            </h2>
-            <p className="text-xl text-gray-300 mb-8">
-              Have security questions? Our cybersecurity experts are here to help.
-            </p>
-            
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
-              <div className="flex flex-col items-center">
-                <Phone className="h-8 w-8 text-red-500 mb-4" />
-                <h3 className="text-lg font-semibold text-white mb-2">Phone</h3>
-                <p className="text-gray-300">+1 302 464 0950</p>
-              </div>
-              <div className="flex flex-col items-center">
-                <Mail className="h-8 w-8 text-red-500 mb-4" />
-                <h3 className="text-lg font-semibold text-white mb-2">Email</h3>
-                <p className="text-gray-300">kleber@ziontechgroup.com</p>
-              </div>
-              <div className="flex flex-col items-center">
-                <MapPin className="h-8 w-8 text-red-500 mb-4" />
-                <h3 className="text-lg font-semibold text-white mb-2">Address</h3>
-                <p className="text-gray-300">364 E Main St STE 1008<br />Middletown DE 19709</p>
-              </div>
-            </div>
-
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button size="lg" className="bg-gradient-to-r from-red-500 to-pink-600 hover:from-red-600 hover:to-pink-700">
-                Schedule Security Review
-              </Button>
-              <Button size="lg" variant="outline" className="border-gray-600 text-white hover:bg-gray-800">
-                Send Message
-              </Button>
+              </a>
+              <a 
+                href={`tel:${serviceData.contactPhone}`} 
+                className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-red-600 transition-all duration-300 flex items-center justify-center gap-2"
+              >
+                <Phone className="w-5 h-5" />
+                Call {serviceData.contactPhone}
+              </a>
             </div>
           </motion.div>
         </div>
       </section>
     </div>
   );
-}
+};
+
+export default AICybersecuritySuite;

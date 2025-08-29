@@ -121,13 +121,16 @@ const AICustomerSuccessPlatform = React.lazy(() => import('./pages/services/AICu
 const IncidentResponsePlatform = React.lazy(() => import('./pages/services/IncidentResponsePlatform'));
 
 // Additional innovative services
-const AIBusinessIntelligencePlatform = React.lazy(() => import('./pages/services/AIBusinessIntelligencePlatform'));
-const AIFinancialTradingPlatform = React.lazy(() => import('./pages/services/AIFinancialTradingPlatform'));
+const AIWorkflowAutomation = React.lazy(() => import('./pages/services/AIWorkflowAutomation'));
 const AISupplyChainOptimization = React.lazy(() => import('./pages/services/AISupplyChainOptimization'));
+const AIFinancialTradingPlatform = React.lazy(() => import('./pages/services/AIFinancialTradingPlatform'));
 const AIHRPlatform = React.lazy(() => import('./pages/services/AIHRPlatform'));
 const AIMarketingAutomation = React.lazy(() => import('./pages/services/AIMarketingAutomation'));
 const AILegalResearchPlatform = React.lazy(() => import('./pages/services/AILegalResearchPlatform'));
 const AIEducationPlatform = React.lazy(() => import('./pages/services/AIEducationPlatform'));
+
+// Additional innovative services
+const AIBusinessIntelligencePlatform = React.lazy(() => import('./pages/services/AIBusinessIntelligencePlatform'));
 const Status = React.lazy(() => import('./pages/Status'));
 const Demo = React.lazy(() => import('./pages/Demo'));
 
@@ -288,13 +291,16 @@ function App() {
               <Route path="/services/ai-customer-success-platform" element={<AICustomerSuccessPlatform />} />
               
               {/* Additional innovative services routes */}
-              <Route path="/services/ai-business-intelligence-platform" element={<AIBusinessIntelligencePlatform />} />
-              <Route path="/services/ai-financial-trading-platform" element={<AIFinancialTradingPlatform />} />
+              <Route path="/services/ai-workflow-automation" element={<AIWorkflowAutomation />} />
               <Route path="/services/ai-supply-chain-optimization" element={<AISupplyChainOptimization />} />
+              <Route path="/services/ai-financial-trading-platform" element={<AIFinancialTradingPlatform />} />
               <Route path="/services/ai-hr-platform" element={<AIHRPlatform />} />
               <Route path="/services/ai-marketing-automation" element={<AIMarketingAutomation />} />
               <Route path="/services/ai-legal-research-platform" element={<AILegalResearchPlatform />} />
               <Route path="/services/ai-education-platform" element={<AIEducationPlatform />} />
+              
+              {/* Additional innovative services routes */}
+              <Route path="/services/ai-business-intelligence-platform" element={<AIBusinessIntelligencePlatform />} />
               
               {/* Catch all route */}
               <Route path="*" element={<Home />} />
