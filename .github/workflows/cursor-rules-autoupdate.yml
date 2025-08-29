@@ -1,9 +1,9 @@
-name: Release (DISABLED - Migrated to PM2)
+name: Cursor Rules Autoupdate (DISABLED - Migrated to PM2)
 
 on:
   # This workflow is disabled and migrated to PM2 automation
-  # The original workflow was handling release tasks
-  # Now handled by PM2 processes: daily-build-test, continuous-improvement
+  # The original workflow was handling cursor rules auto-updates
+  # Now handled by PM2 processes: continuous-improvement, quality-checks
   workflow_dispatch: # Only manual triggers allowed
   # All automatic triggers removed
 
@@ -14,8 +14,8 @@ jobs:
       - name: Workflow Disabled
         run: |
           echo "This workflow has been disabled and migrated to PM2 automation."
-          echo "Release tasks are now handled by:"
-          echo "- daily-build-test PM2 process (every hour)"
+          echo "Cursor rules auto-updates are now handled by:"
           echo "- continuous-improvement PM2 process (every 2 hours)"
+          echo "- quality-checks PM2 process (every 3 hours)"
           echo "PM2 ecosystem.config.cjs contains the full automation configuration."
           exit 0
