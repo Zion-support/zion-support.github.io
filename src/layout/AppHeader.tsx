@@ -12,6 +12,38 @@ export function AppHeader() {
   const [scrolled, setScrolled] = useState(false);
   const [isSearching, setIsSearching] = useState(false);
 
+  // Prefetch lazily-loaded routes on hover for snappier navigation
+  const prefetchRoute = (path: string) => {
+    switch (path) {
+      case '/':
+        import('../pages/Home');
+        break;
+      case '/services':
+        import('../pages/Services');
+        break;
+      case '/ai-services':
+        import('../pages/AIServices');
+        break;
+      case '/it-services':
+        import('../pages/ITServices');
+        break;
+      case '/micro-saas':
+        import('../pages/MicroSaaS');
+        break;
+      case '/pricing-guide':
+        import('../pages/PricingGuide');
+        break;
+      case '/about':
+        import('../pages/About');
+        break;
+      case '/contact':
+        import('../pages/Contact');
+        break;
+      default:
+        break;
+    }
+  };
+
   useEffect(() => {
     const handleScroll = () => {
       setScrolled(window.scrollY > 10);
@@ -36,7 +68,7 @@ export function AppHeader() {
 
   const mainNavigation = [
     { name: 'Home', href: '/', current: true, hasDropdown: false },
-    { name: 'Services', href: '/services-overview', current: false, hasDropdown: true },
+    { name: 'Services', href: '/services', current: false, hasDropdown: true },
     { name: 'AI Services', href: '/ai-services', current: false, hasDropdown: false },
     { name: 'IT Services', href: '/it-services', current: false, hasDropdown: false },
     { name: 'Micro SaaS', href: '/micro-saas', current: false, hasDropdown: false },
@@ -79,7 +111,8 @@ export function AppHeader() {
         { name: 'Digital Twin', href: '/services/digital-twin', description: 'Virtual simulation & monitoring' },
         { name: 'IoT Edge Computing', href: '/services/iot-edge', description: 'Smart device networks' },
         { name: 'Data Analytics', href: '/services/data-analytics', description: 'Advanced data processing' },
-        { name: 'IT Infrastructure', href: '/services/it-infrastructure', description: 'Enterprise infrastructure' }
+        { name: 'IT Infrastructure', href: '/services/it-infrastructure', description: 'Enterprise infrastructure' },
+        { name: 'Returns Management', href: '/services/returns-management', description: 'E-commerce RMA & logistics' }
       ]
     },
     {
@@ -163,6 +196,7 @@ export function AppHeader() {
                     <Link
                       to={item.href}
                       className="text-slate-300 hover:text-white transition-colors py-2"
+                      onMouseEnter={() => prefetchRoute(item.href)}
                     >
                       {item.name}
                     </Link>

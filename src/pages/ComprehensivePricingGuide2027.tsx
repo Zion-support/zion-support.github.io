@@ -207,6 +207,7 @@ const ComprehensivePricingGuide2027: React.FC = () => {
               </motion.div>
             ))}
           </div>
+          {/* close container */}
         </div>
       </section>
 
