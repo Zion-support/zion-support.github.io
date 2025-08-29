@@ -95,8 +95,11 @@ export const EnhancedFuturisticFooter: React.FC = () => {
       title: 'AI & Technology Services',
       featured: true,
       links: [
-        { name: 'AI Business Intelligence', href: '/services#ai-business-intelligence', featured: true },
-        { name: 'AI Healthcare Diagnostics', href: '/services#ai-healthcare', featured: true },
+        { name: 'AI Business Intelligence', href: '/services/ai-business-intelligence', featured: true },
+        { name: 'AI Contract Analysis', href: '/services/ai-contract-analysis', featured: true },
+        { name: 'AI Supply Chain Optimization', href: '/services/ai-supply-chain-optimization', featured: true },
+        { name: 'AI Cybersecurity Intelligence', href: '/services/ai-cybersecurity-threat-intelligence', featured: true },
+        { name: 'AI Healthcare Diagnostics', href: '/services/ai-healthcare-diagnostics', featured: true },
         { name: 'AI Legal Tech Platform', href: '/services#ai-legal-tech', featured: true },
         { name: 'AI Research & Discovery', href: '/services#ai-research', featured: true },
         { name: 'AI Green Technology', href: '/services#ai-green-tech', featured: true },

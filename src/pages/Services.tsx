@@ -69,6 +69,10 @@ export default function Services() {
   const categories = [
     { id: 'all', name: 'All Services', count: COMPREHENSIVE_INNOVATIVE_SERVICES_2030.length, icon: '🚀', color: 'from-cyan-500 to-blue-500' },
     { id: 'AI & Autonomous Operations', name: 'AI & Autonomous Operations', count: COMPREHENSIVE_INNOVATIVE_SERVICES_2030.filter(s => s.category === 'AI & Autonomous Operations').length, icon: '🤖', color: 'from-purple-500 to-pink-500' },
+    { id: 'AI & Legal Tech', name: 'AI & Legal Tech', count: COMPREHENSIVE_INNOVATIVE_SERVICES_2030.filter(s => s.category === 'AI & Legal Tech').length, icon: '⚖️', color: 'from-blue-500 to-indigo-500' },
+    { id: 'AI & Supply Chain', name: 'AI & Supply Chain', count: COMPREHENSIVE_INNOVATIVE_SERVICES_2030.filter(s => s.category === 'AI & Supply Chain').length, icon: '🚚', color: 'from-green-500 to-blue-500' },
+    { id: 'AI & Cybersecurity', name: 'AI & Cybersecurity', count: COMPREHENSIVE_INNOVATIVE_SERVICES_2030.filter(s => s.category === 'AI & Cybersecurity').length, icon: '🛡️', color: 'from-red-500 to-orange-500' },
+    { id: 'AI & Healthcare', name: 'AI & Healthcare', count: COMPREHENSIVE_INNOVATIVE_SERVICES_2030.filter(s => s.category === 'AI & Healthcare').length, icon: '🏥', color: 'from-pink-500 to-red-500' },
     { id: 'Quantum Computing', name: 'Quantum Computing', count: COMPREHENSIVE_INNOVATIVE_SERVICES_2030.filter(s => s.category === 'Quantum Computing').length, icon: '⚛️', color: 'from-indigo-500 to-purple-500' },
     { id: 'AI & Content', name: 'AI & Content', count: COMPREHENSIVE_INNOVATIVE_SERVICES_2030.filter(s => s.category === 'AI & Content').length, icon: '✍️', color: 'from-orange-500 to-red-500' },
     { id: 'AI & Business Intelligence', name: 'AI & Business Intelligence', count: COMPREHENSIVE_INNOVATIVE_SERVICES_2030.filter(s => s.category === 'AI & Business Intelligence').length, icon: '📊', color: 'from-blue-500 to-cyan-500' },
@@ -78,15 +82,12 @@ export default function Services() {
     { id: 'Digital Twin', name: 'Digital Twin', count: COMPREHENSIVE_INNOVATIVE_SERVICES_2030.filter(s => s.category === 'Digital Twin').length, icon: '🔄', color: 'from-blue-500 to-indigo-500' },
     { id: 'Blockchain & Web3', name: 'Blockchain & Web3', count: COMPREHENSIVE_INNOVATIVE_SERVICES_2030.filter(s => s.category === 'Blockchain & Web3').length, icon: '🔗', color: 'from-yellow-500 to-orange-500' },
     { id: 'AI & Research', name: 'AI & Research', count: COMPREHENSIVE_INNOVATIVE_SERVICES_2030.filter(s => s.category === 'AI & Research').length, icon: '🔬', color: 'from-purple-500 to-violet-500' },
-    { id: 'AI & Legal Tech', name: 'AI & Legal Tech', count: COMPREHENSIVE_INNOVATIVE_SERVICES_2030.filter(s => s.category === 'AI & Legal Tech').length, icon: '⚖️', color: 'from-blue-500 to-indigo-500' },
-    { id: 'AI & Healthcare', name: 'AI & Healthcare', count: COMPREHENSIVE_INNOVATIVE_SERVICES_2030.filter(s => s.category === 'AI & Healthcare').length, icon: '🏥', color: 'from-pink-500 to-red-500' },
     { id: 'AI & Education', name: 'AI & Education', count: COMPREHENSIVE_INNOVATIVE_SERVICES_2030.filter(s => s.category === 'AI & Education').length, icon: '🎓', color: 'from-blue-500 to-indigo-500' },
     { id: 'AI & Entertainment', name: 'AI & Entertainment', count: COMPREHENSIVE_INNOVATIVE_SERVICES_2030.filter(s => s.category === 'AI & Entertainment').length, icon: '🎮', color: 'from-purple-500 to-pink-500' },
     { id: 'AI & Metaverse', name: 'AI & Metaverse', count: COMPREHENSIVE_INNOVATIVE_SERVICES_2030.filter(s => s.category === 'AI & Metaverse').length, icon: '🌍', color: 'from-purple-500 to-indigo-500' },
     { id: 'AI & Space Tech', name: 'AI & Space Tech', count: COMPREHENSIVE_INNOVATIVE_SERVICES_2030.filter(s => s.category === 'AI & Space Tech').length, icon: '🛸', color: 'from-indigo-500 to-purple-500' },
     { id: 'AI & Green Tech', name: 'AI & Green Tech', count: COMPREHENSIVE_INNOVATIVE_SERVICES_2030.filter(s => s.category === 'AI & Green Tech').length, icon: '🌿', color: 'from-green-500 to-emerald-500' },
     { id: 'AI & Development', name: 'AI & Development', count: COMPREHENSIVE_INNOVATIVE_SERVICES_2030.filter(s => s.category === 'AI & Development').length, icon: '💻', color: 'from-cyan-500 to-blue-500' },
-    { id: 'Cybersecurity', name: 'Cybersecurity', count: COMPREHENSIVE_INNOVATIVE_SERVICES_2030.filter(s => s.category === 'Cybersecurity').length, icon: '🛡️', color: 'from-red-500 to-orange-500' },
     { id: 'AI & Marketing', name: 'AI & Marketing', count: COMPREHENSIVE_INNOVATIVE_SERVICES_2030.filter(s => s.category === 'AI & Marketing').length, icon: '📈', color: 'from-green-500 to-emerald-500' },
     { id: 'Space Technology', name: 'Space Technology', count: COMPREHENSIVE_INNOVATIVE_SERVICES_2030.filter(s => s.category === 'Space Technology').length, icon: '🚀', color: 'from-purple-500 to-pink-500' },
     { id: 'Sustainable Technology', name: 'Sustainable Technology', count: COMPREHENSIVE_INNOVATIVE_SERVICES_2030.filter(s => s.category === 'Sustainable Technology').length, icon: '🌱', color: 'from-green-500 to-teal-500' },
@@ -254,9 +255,9 @@ export default function Services() {
         <section className="py-12 px-4 sm:px-6 lg:px-8 bg-white/5">
           <div className="max-w-7xl mx-auto">
             <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-white/20">
-              <div className="grid grid-cols-1 lg:grid-cols-4 gap-6">
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
                 {/* Search */}
-                <div className="lg:col-span-2">
+                <div className="md:col-span-2">
                   <label htmlFor="search" className="block text-sm font-medium text-gray-300 mb-2">
                     Search Services
                   </label>
@@ -265,10 +266,10 @@ export default function Services() {
                     <input
                       id="search"
                       type="text"
-                      placeholder="Search by name, description, category, or tags..."
+                      placeholder="Search services..."
                       value={searchTerm}
                       onChange={(e) => handleSearchChange(e.target.value)}
-                      className="w-full pl-10 pr-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
+                      className="w-full pl-10 pr-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent text-sm md:text-base"
                     />
                   </div>
                 </div>
@@ -321,7 +322,7 @@ export default function Services() {
               variants={containerVariants}
               initial="hidden"
               animate="visible"
-              className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 lg:gap-8"
+              className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 md:gap-6 lg:gap-8"
             >
               {currentServices.map((service) => (
                 <motion.div
@@ -330,7 +331,7 @@ export default function Services() {
                   className="bg-white/10 backdrop-blur-lg rounded-2xl border border-white/20 hover:border-cyan-500/30 transition-all duration-300 overflow-hidden group"
                 >
                   {/* Service Image */}
-                  <div className="relative h-48 bg-gradient-to-br from-cyan-500/20 to-blue-500/20 overflow-hidden">
+                  <div className="relative h-40 sm:h-48 bg-gradient-to-br from-cyan-500/20 to-blue-500/20 overflow-hidden">
                     {service.images && service.images.length > 0 ? (
                       <img
                         src={service.images[0]}
@@ -339,39 +340,39 @@ export default function Services() {
                       />
                     ) : (
                       <div className="w-full h-full flex items-center justify-center">
-                        <div className={`w-16 h-16 rounded-full bg-gradient-to-br ${getCategoryColor(service.category)} flex items-center justify-center text-2xl`}>
+                        <div className={`w-12 h-12 sm:w-16 sm:h-16 rounded-full bg-gradient-to-br ${getCategoryColor(service.category)} flex items-center justify-center text-lg sm:text-2xl`}>
                           {getCategoryIcon(service.category)}
                         </div>
                       </div>
                     )}
-                    <div className="absolute top-4 right-4">
-                      <div className="bg-black/50 backdrop-blur-sm rounded-full px-3 py-1 text-white text-sm font-medium">
+                    <div className="absolute top-2 right-2 sm:top-4 sm:right-4">
+                      <div className="bg-black/50 backdrop-blur-sm rounded-full px-2 py-1 sm:px-3 sm:py-1 text-white text-xs sm:text-sm font-medium">
                         {service.currency}{service.price.toLocaleString()}
                       </div>
                     </div>
                   </div>
 
                   {/* Service Content */}
-                  <div className="p-6">
-                    <div className="flex items-center justify-between mb-4">
+                  <div className="p-4 sm:p-6">
+                    <div className="flex items-center justify-between mb-3 sm:mb-4">
                       <div className="flex items-center space-x-2">
-                        <div className={`w-8 h-8 rounded-lg bg-gradient-to-br ${getCategoryColor(service.category)} flex items-center justify-center text-white text-sm font-bold`}>
+                        <div className={`w-6 h-6 sm:w-8 sm:h-8 rounded-lg bg-gradient-to-br ${getCategoryColor(service.category)} flex items-center justify-center text-white text-xs sm:text-sm font-bold`}>
                           {getCategoryIcon(service.category)}
                         </div>
-                        <span className="text-sm text-gray-400">{service.category}</span>
+                        <span className="text-xs sm:text-sm text-gray-400">{service.category}</span>
                       </div>
                       <div className="flex items-center space-x-1">
-                        <Star className="w-4 h-4 text-yellow-400 fill-current" />
-                        <span className="text-white font-semibold">{service.rating}</span>
-                        <span className="text-gray-400 text-sm">({service.reviewCount})</span>
+                        <Star className="w-3 h-3 sm:w-4 sm:h-4 text-yellow-400 fill-current" />
+                        <span className="text-white font-semibold text-sm sm:text-base">{service.rating}</span>
+                        <span className="text-gray-400 text-xs sm:text-sm">({service.reviewCount})</span>
                       </div>
                     </div>
 
-                    <h3 className="text-xl font-bold text-white mb-3 group-hover:text-cyan-400 transition-colors duration-200">
+                    <h3 className="text-lg sm:text-xl font-bold text-white mb-2 sm:mb-3 group-hover:text-cyan-400 transition-colors duration-200">
                       {service.title}
                     </h3>
                     
-                    <p className="text-gray-300 mb-4 line-clamp-3">
+                    <p className="text-gray-300 mb-3 sm:mb-4 line-clamp-3 text-sm sm:text-base">
                       {service.description}
                     </p>
 
@@ -526,17 +527,17 @@ export default function Services() {
         </section>
 
         {/* Pagination */}
-        <section className="py-8 px-4 sm:px-6 lg:px-8">
+        <section className="py-6 sm:py-8 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
-            <div className="flex justify-center items-center space-x-2">
-              <button className="px-4 py-2 bg-slate-800/50 text-slate-300 rounded-lg hover:bg-slate-700/50 transition-colors disabled:opacity-50 disabled:cursor-not-allowed">
+            <div className="flex justify-center items-center space-x-1 sm:space-x-2">
+              <button className="px-3 py-2 sm:px-4 sm:py-2 bg-slate-800/50 text-slate-300 rounded-lg hover:bg-slate-700/50 transition-colors disabled:opacity-50 disabled:cursor-not-allowed text-sm sm:text-base">
                 Previous
               </button>
               <div className="flex space-x-1">
                 {[1, 2, 3, 4, 5].map((page) => (
                   <button
                     key={page}
-                    className={`px-3 py-2 rounded-lg transition-colors ${
+                    className={`px-2 py-2 sm:px-3 sm:py-2 rounded-lg transition-colors text-sm sm:text-base ${
                       page === 1
                         ? 'bg-cyan-500 text-white'
                         : 'bg-slate-800/50 text-slate-300 hover:bg-slate-700/50'
@@ -546,7 +547,7 @@ export default function Services() {
                   </button>
                 ))}
               </div>
-              <button className="px-4 py-2 bg-slate-800/50 text-slate-300 rounded-lg hover:bg-slate-700/50 transition-colors">
+              <button className="px-3 py-2 sm:px-4 sm:py-2 bg-slate-800/50 text-slate-300 rounded-lg hover:bg-slate-700/50 transition-colors text-sm sm:text-base">
                 Next
               </button>
             </div>

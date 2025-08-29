@@ -69,6 +69,38 @@ export function AppHeader() {
       color: 'from-purple-500 to-cyan-500'
     },
     { 
+      name: 'AI Contract Analysis', 
+      href: '/services/ai-contract-analysis', 
+      icon: FileText, 
+      description: 'Legal AI & Contract Review',
+      featured: true,
+      color: 'from-blue-500 to-indigo-500'
+    },
+    { 
+      name: 'AI Supply Chain Optimization', 
+      href: '/services/ai-supply-chain-optimization', 
+      icon: Truck, 
+      description: 'Supply Chain AI & Logistics',
+      featured: true,
+      color: 'from-green-500 to-blue-500'
+    },
+    { 
+      name: 'AI Cybersecurity Intelligence', 
+      href: '/services/ai-cybersecurity-threat-intelligence', 
+      icon: Shield, 
+      description: 'AI Security & Threat Detection',
+      featured: true,
+      color: 'from-red-500 to-orange-500'
+    },
+    { 
+      name: 'AI Healthcare Diagnostics', 
+      href: '/services/ai-healthcare-diagnostics', 
+      icon: Heart, 
+      description: 'Medical AI & Diagnostics',
+      featured: true,
+      color: 'from-pink-500 to-purple-500'
+    },
+    { 
       name: 'Innovative Services 2025', 
       href: '/services/innovative-2025', 
       icon: Rocket, 
