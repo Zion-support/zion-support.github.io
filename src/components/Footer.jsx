@@ -91,6 +91,7 @@ export function Footer() {
     {
       title: "Services",
       links: [
+        { label: "Services Overview", path: "/services-overview" },
         { label: "Services Catalog", path: "/services-catalog" },
         { label: "Website AI Chatbot", path: "/services/website-ai-chatbot" },
         { label: "API Monitoring & Status", path: "/services/api-monitoring" },
@@ -99,20 +100,15 @@ export function Footer() {
         { label: "AI Solutions", path: "/services/ai" },
         { label: "Cloud & DevOps", path: "/services/cloud-devops" },
         { label: "Cybersecurity", path: "/services/ai-cybersecurity-suite" },
-        { label: "IT Infrastructure", path: "/services/infrastructure" },
-        { label: "Digital Transformation", path: "/services/transformation" },
-        { label: "Quantum Neural Network", path: "/quantum-neural-network-platform" },
-        { label: "Autonomous Operations", path: "/autonomous-business-operations-platform" },
-        { label: "IT Asset Management", path: "/ai-powered-it-asset-management" }
+        { label: "IT Infrastructure", path: "/services/it-infrastructure" },
+        { label: "Digital Transformation", path: "/services/digital-transformation" }
       ]
     },
     {
       title: "Company",
       links: [
         { label: "About Us", path: "/about" },
-        { label: "Our Team", path: "/about" },
         { label: "Careers", path: "/careers" },
-        { label: "News & Updates", path: "/news" },
         { label: "Case Studies", path: "/case-studies" },
         { label: "Partners", path: "/partners" }
       ]
@@ -121,12 +117,7 @@ export function Footer() {
       title: "Resources",
       links: [
         { label: "Blog", path: "/blog" },
-        { label: "Documentation", path: "/docs" },
-        { label: "White Papers", path: "/white-papers" },
-        { label: "Webinars", path: "/webinars" },
-        { label: "Research", path: "/research-development" },
-        { label: "Events", path: "/events" },
-        { label: "Training", path: "/training" }
+        { label: "Documentation", path: "/docs" }
       ]
     },
     {
@@ -135,9 +126,7 @@ export function Footer() {
         { label: "Contact Us", path: "/contact" },
         { label: "Help Center", path: "/help" },
         { label: "Support Portal", path: "/support" },
-        { label: "FAQ", path: "/faq" },
-        { label: "Consulting", path: "/services/consulting" },
-        { label: "Request Quote", path: "/contact" }
+        { label: "FAQ", path: "/faq" }
       ]
     }
   ];

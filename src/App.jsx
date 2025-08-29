@@ -18,11 +18,11 @@ const Terms = React.lazy(() => import('./pages/Terms.tsx'));
 const Sitemap = React.lazy(() => import('./pages/Sitemap.tsx'));
 
 // Services pages
-const ServicesPage = React.lazy(() => import('./pages/ServicesPage.tsx'));
-const ServicesPricingPage = React.lazy(() => import('./pages/ServicesPricingPage.tsx'));
+const ServicesPage = React.lazy(() => import('./pages/ServicesPage.jsx'));
+const ServicesPricingPage = React.lazy(() => import('./pages/ServicesPricingPage.jsx'));
 
 // Marketplace pages
-const Marketplace = React.lazy(() => import('./pages/Marketplace.tsx'));
+const Marketplace = React.lazy(() => import('./pages/Marketplace.jsx'));
 
 // Support pages
 const Support = React.lazy(() => import('./pages/Support.tsx'));
@@ -43,6 +43,7 @@ const Categories = React.lazy(() => import('./pages/Categories.tsx'));
 
 // API Playground
 const ApiPlayground = React.lazy(() => import('./pages/ApiPlayground.tsx'));
+const ComprehensivePricing = React.lazy(() => import('./pages/ComprehensivePricing.jsx'));
 
 // Loading component
 const LoadingSpinner = () => (
