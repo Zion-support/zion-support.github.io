@@ -121,7 +121,7 @@ export function AppHeader() {
   const services = [
     { 
       name: '2025 Services Showcase', 
-      href: '/services/showcase-2025', 
+      href: '/comprehensive-services-showcase-2025', 
       icon: Rocket, 
       description: 'Complete 2025 Portfolio',
       featured: true,
@@ -145,10 +145,10 @@ export function AppHeader() {
       badge: 'Popular'
     },
     { 
-      name: 'Innovative Services 2025', 
-      href: '/services/innovative-2025', 
+      name: 'Innovative AI Services 2025', 
+      href: '/innovative-ai-services-2025', 
       icon: Rocket, 
-      description: 'Cutting-edge Micro SAAS',
+      description: 'Cutting-edge AI Solutions',
       featured: true,
       color: 'from-purple-500 to-pink-500'
     },
@@ -312,7 +312,6 @@ export function AppHeader() {
     { 
       name: 'SMB Solutions', 
       href: '/solutions/smb', 
-      icon: Building2, 
       icon: Building2, 
       description: 'Small & medium business solutions',
       featured: true,

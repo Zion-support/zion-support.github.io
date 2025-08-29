@@ -51,6 +51,25 @@ const AIContentCreation = React.lazy(() => import('./pages/services/ai-content-c
 const AICybersecurity = React.lazy(() => import('./pages/services/ai-cybersecurity'));
 const QuantumComputing = React.lazy(() => import('./pages/services/quantum-computing'));
 const IoTEdgeComputing = React.lazy(() => import('./pages/services/iot-edge-computing'));
+const BlockchainWeb3Platform = React.lazy(() => import('./pages/services/blockchain-web3-platform'));
+const AIHealthcareDiagnosticsPlatform = React.lazy(() => import('./pages/services/ai-healthcare-diagnostics-platform'));
+const AIEducationPlatform = React.lazy(() => import('./pages/services/ai-education-platform'));
+const AIMetaversePlatform = React.lazy(() => import('./pages/services/ai-metaverse-platform'));
+const AISpaceTechnologyPlatform = React.lazy(() => import('./pages/services/ai-space-technology-platform'));
+const AIGreenTechnologyPlatform = React.lazy(() => import('./pages/services/ai-green-technology-platform'));
+const AIDevelopmentPlatform = React.lazy(() => import('./pages/services/ai-development-platform'));
+
+// Solution pages
+const EnterpriseSolutions = React.lazy(() => import('./pages/solutions/Enterprise'));
+const SMBSolutions = React.lazy(() => import('./pages/solutions/smb'));
+const StartupSolutions = React.lazy(() => import('./pages/solutions/startup'));
+const GovernmentSolutions = React.lazy(() => import('./pages/solutions/government'));
+const HealthcareSolutions = React.lazy(() => import('./pages/solutions/healthcare'));
+const FinancialSolutions = React.lazy(() => import('./pages/solutions/financial'));
+const EducationSolutions = React.lazy(() => import('./pages/solutions/education'));
+const ManufacturingSolutions = React.lazy(() => import('./pages/solutions/manufacturing'));
+const RetailSolutions = React.lazy(() => import('./pages/solutions/retail'));
+const TransportationSolutions = React.lazy(() => import('./pages/solutions/transportation'));
 
 // Enhanced services pages - only import existing ones
 const ComprehensivePricingGuide2027 = React.lazy(() => import('./pages/ComprehensivePricingGuide2027.tsx'));
@@ -59,6 +78,8 @@ const ComprehensiveServicesLanding2025 = React.lazy(() => import('./pages/Compre
 const EnhancedServicesLanding = React.lazy(() => import('./pages/EnhancedServicesLanding.tsx'));
 const ComprehensiveServicesAdvertising = React.lazy(() => import('./pages/ComprehensiveServicesAdvertising.tsx'));
 const ComprehensiveServicesShowcase2030 = React.lazy(() => import('./pages/ComprehensiveServicesShowcase2030.tsx'));
+const ComprehensiveServicesShowcase2025 = React.lazy(() => import('./pages/comprehensive-services-showcase-2025.tsx'));
+const InnovativeAIServices2025 = React.lazy(() => import('./pages/innovative-ai-services-2025.tsx'));
 
 // Service pages - only import existing ones
 const CloudDevOps = React.lazy(() => import('./pages/services/CloudDevOps'));
@@ -157,6 +178,8 @@ function App() {
                       <Route path="/services/micro-saas" element={<MicroSaaSProducts />} />
                       <Route path="/services/comprehensive-advertising" element={<ComprehensiveServicesAdvertising />} />
                       <Route path="/services/showcase-2030" element={<ComprehensiveServicesShowcase2030 />} />
+                      <Route path="/comprehensive-services-showcase-2025" element={<ComprehensiveServicesShowcase2025 />} />
+                      <Route path="/innovative-ai-services-2025" element={<InnovativeAIServices2025 />} />
                       <Route path="/pricing-guide-2027" element={<ComprehensivePricingGuide2027 />} />
                       <Route path="/pricing-guide-2030" element={<ComprehensivePricingGuide2030 />} />
                       <Route path="/request-quote" element={<RequestQuote />} />
@@ -182,6 +205,13 @@ function App() {
                       <Route path="/services/ai-cybersecurity" element={<AICybersecurity />} />
                       <Route path="/services/quantum-computing" element={<QuantumComputing />} />
                       <Route path="/services/iot-edge-computing" element={<IoTEdgeComputing />} />
+                      <Route path="/services/blockchain-web3-platform" element={<BlockchainWeb3Platform />} />
+                      <Route path="/services/ai-healthcare-diagnostics-platform" element={<AIHealthcareDiagnosticsPlatform />} />
+                      <Route path="/services/ai-education-platform" element={<AIEducationPlatform />} />
+                      <Route path="/services/ai-metaverse-platform" element={<AIMetaversePlatform />} />
+                      <Route path="/services/ai-space-technology-platform" element={<AISpaceTechnologyPlatform />} />
+                      <Route path="/services/ai-green-technology-platform" element={<AIGreenTechnologyPlatform />} />
+                      <Route path="/services/ai-development-platform" element={<AIDevelopmentPlatform />} />
                       <Route path="/services/ai-legal-document-analyzer" element={<AILegalDocumentAnalyzer />} />
                       <Route path="/services/ai-real-estate-investment-analyzer" element={<AIRealEstateInvestmentAnalyzer />} />
                       <Route path="/services/ai-restaurant-management-system" element={<AIRestaurantManagementSystem />} />
@@ -192,6 +222,18 @@ function App() {
                       <Route path="/services/ai-customer-churn-prediction" element={<AICustomerChurnPrediction />} />
                       <Route path="/services/ai-financial-fraud-detection" element={<AIFinancialFraudDetection />} />
                       <Route path="/services/ai-energy-management-system" element={<AIEnergyManagementSystem />} />
+
+                      {/* Solution Routes */}
+                      <Route path="/solutions/enterprise" element={<EnterpriseSolutions />} />
+                      <Route path="/solutions/smb" element={<SMBSolutions />} />
+                      <Route path="/solutions/startup" element={<StartupSolutions />} />
+                      <Route path="/solutions/government" element={<GovernmentSolutions />} />
+                      <Route path="/solutions/healthcare" element={<HealthcareSolutions />} />
+                      <Route path="/solutions/financial" element={<FinancialSolutions />} />
+                      <Route path="/solutions/education" element={<EducationSolutions />} />
+                      <Route path="/solutions/manufacturing" element={<ManufacturingSolutions />} />
+                      <Route path="/solutions/retail" element={<RetailSolutions />} />
+                      <Route path="/solutions/transportation" element={<TransportationSolutions />} />
 
                       {/* Catch all route */}
                       <Route path="*" element={<Home />} />
