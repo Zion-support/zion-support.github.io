@@ -79,3 +79,8 @@ temp/
 .vite/
 
 tsconfig.tsbuildinfo
+core
+
+# ignore build artifacts and crash dumps
+tsconfig.tsbuildinfo
+core
