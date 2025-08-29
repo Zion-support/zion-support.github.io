@@ -1,5 +1,64 @@
 import React from 'react';
+import { motion } from 'framer-motion';
+import { ArrowRight, CheckCircle, Target, Users, Calendar, DollarSign, MessageSquare, BarChart3 } from 'lucide-react';
 import SEO from '@/components/SEO';
+
+const MicroCRM = () => {
+  const services = [
+    {
+      icon: Users,
+      title: "Contact Management",
+      description: "Organize and track customer information, interactions, and communication history"
+    },
+    {
+      icon: Calendar,
+      title: "Appointment Scheduling",
+      description: "Book appointments, send reminders, and manage your calendar efficiently"
+    },
+    {
+      icon: DollarSign,
+      title: "Invoice & Payments",
+      description: "Create invoices, track payments, and integrate with payment processors"
+    },
+    {
+      icon: MessageSquare,
+      title: "Communication Tools",
+      description: "Send SMS reminders, email confirmations, and automated follow-ups"
+    },
+    {
+      icon: BarChart3,
+      title: "Sales Analytics",
+      description: "Track sales performance, customer metrics, and business insights"
+    }
+  ];
+
+  const benefits = [
+    "Increase customer retention by 25%",
+    "Reduce no-shows by 60%",
+    "Improve response time by 40%",
+    "Boost sales conversion by 30%",
+    "Streamline operations",
+    "Enhance customer satisfaction"
+  ];
+
+  const useCases = [
+    {
+      industry: "Service Business",
+      description: "Manage appointments and customer relationships"
+    },
+    {
+      industry: "Retail",
+      description: "Track customer preferences and purchase history"
+    },
+    {
+      industry: "Healthcare",
+      description: "Patient scheduling and follow-up management"
+    },
+    {
+      industry: "Real Estate",
+      description: "Lead tracking and client communication"
+    }
+  ];
 
   return (
     <div className="min-h-screen bg-futuristic text-white">

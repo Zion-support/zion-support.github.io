@@ -1,5 +1,54 @@
 import React from 'react';
+import { motion } from 'framer-motion';
+import { ArrowRight, CheckCircle, DollarSign, Play, Settings, Target } from 'lucide-react';
 import SEO from '@/components/SEO';
+
+const FinOpsAdvisor = () => {
+  const features = [
+    {
+      icon: DollarSign,
+      title: "Cost Optimization",
+      description: "Identify and eliminate unnecessary cloud spending with AI-powered cost analysis"
+    },
+    {
+      icon: Target,
+      title: "Budget Management",
+      description: "Set and track budgets with real-time alerts and forecasting"
+    },
+    {
+      icon: Settings,
+      title: "Resource Optimization",
+      description: "Automatically optimize resource allocation for cost efficiency"
+    }
+  ];
+
+  const benefits = [
+    "Reduce cloud costs by 30-50%",
+    "Improve resource utilization",
+    "Real-time cost monitoring",
+    "Automated cost optimization",
+    "Budget compliance",
+    "ROI tracking and reporting"
+  ];
+
+  const useCases = [
+    {
+      industry: "E-commerce",
+      description: "Optimize costs during peak shopping seasons"
+    },
+    {
+      industry: "SaaS",
+      description: "Scale efficiently while controlling costs"
+    },
+    {
+      industry: "Healthcare",
+      description: "Compliance-focused cost optimization"
+    },
+    {
+      industry: "Finance",
+      description: "Secure and cost-effective cloud operations"
+    }
+  ];
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
