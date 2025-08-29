@@ -79,6 +79,11 @@ const AIEducationPlatform = React.lazy(() => import('./pages/services/AIEducatio
 const AIProjectManagementPlatform = React.lazy(() => import('./pages/services/ai-project-management-platform'));
 const AIContentMarketingAutomation = React.lazy(() => import('./pages/services/AIContentMarketingAutomation'));
 
+// New AI services from remote branch
+const AICustomerSuccessPrediction = React.lazy(() => import('./pages/services/AICustomerSuccessPrediction'));
+const AIHealthcareAnalyticsPlatform = React.lazy(() => import('./pages/services/AIHealthcareAnalyticsPlatform'));
+const QuantumComputingAsAService = React.lazy(() => import('./pages/services/QuantumComputingAsAService'));
+
 // Micro SaaS services that exist
 const AffiliateMarketingTracker = React.lazy(() => import('./pages/services/AffiliateMarketingTracker'));
 const UptimeSLAMonitor = React.lazy(() => import('./pages/services/UptimeSLAMonitor'));
@@ -273,6 +278,11 @@ function App() {
                     <Route path="/services/ai-legal-document-automation" element={<AILegalDocumentAutomation />} />
                     <Route path="/services/ai-healthcare-predictive-analytics" element={<AIHealthcarePredictiveAnalytics />} />
                     <Route path="/services/ai-financial-trading-risk-management" element={<AIFinancialTradingRiskManagement />} />
+                    
+                    {/* New AI Service Routes from remote branch */}
+                    <Route path="/services/ai-customer-success-prediction" element={<AICustomerSuccessPrediction />} />
+                    <Route path="/services/ai-healthcare-analytics-platform" element={<AIHealthcareAnalyticsPlatform />} />
+                    <Route path="/services/quantum-computing-as-a-service" element={<QuantumComputingAsAService />} />
                     
                     {/* Micro SaaS Service Routes */}
                     <Route path="/services/affiliate-marketing-tracker" element={<AffiliateMarketingTracker />} />
