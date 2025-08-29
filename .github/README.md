@@ -1,137 +1,132 @@
-# GitHub Actions Workflows
+# PM2 Automation System
 
-This directory contains all the GitHub Actions workflows for the Zion Tech Group website.
+This directory contains documentation for the PM2-based automation system that has replaced GitHub Actions workflows for the Zion Tech Group website.
 
-## Workflows Overview
+## Automation Overview
 
-### 🔄 CI (Continuous Integration)
-- **File**: `.github/workflows/ci.yml`
-- **Trigger**: Push to main branch or pull requests
-- **Purpose**: Build verification, linting, and type checking
-- **Jobs**: Build and Test
+The Zion Tech Group website now uses PM2 (Process Manager 2) for all automation tasks, providing:
+- **Continuous monitoring** of all processes
+- **Automatic restart** on failures
+- **Resource management** with memory limits
+- **Scheduled automation** at various intervals
+- **Real-time process monitoring**
 
-### 🧪 Test
-- **File**: `.github/workflows/test.yml`
-- **Trigger**: Push to main branch or pull requests
-- **Purpose**: Comprehensive testing and build verification
-- **Jobs**: Main testing job with build artifacts
+## PM2 Processes
 
-### 🔒 CodeQL Security Analysis
-- **File**: `.github/workflows/codeql.yml`
-- **Trigger**: Push to main/develop branches, pull requests, and weekly schedule
-- **Purpose**: Security vulnerability scanning using GitHub's CodeQL
-- **Jobs**: JavaScript/TypeScript security analysis
+### 🚀 Main Applications
+- **zion-app**: Main frontend application
+- **zion-backend**: Backend server
 
-### 📦 NPM Package Check
-- **File**: `.github/workflows/npm-publish.yml`
-- **Trigger**: Push to main branch (excluding markdown files)
-- **Purpose**: Package verification and build testing
-- **Jobs**: Package validation and build verification
+### 🔄 Automation Processes
 
-### 🚀 Deploy to Production
-- **File**: `.github/workflows/deploy.yml`
-- **Trigger**: Push to main branch or manual dispatch
-- **Purpose**: Production deployment with build verification
-- **Jobs**: Production deployment with artifacts
+#### High Priority (15 minutes)
+- **console-error-fixer**: Continuous console error detection and fixing
 
-### 🔍 Dependency Review
-- **File**: `.github/workflows/dependency-review.yml`
-- **Trigger**: Pull requests to main/develop branches
-- **Purpose**: Security vulnerability checking in dependencies
-- **Jobs**: Dependency security analysis
+#### Regular Intervals
+- **link-checker**: Link validation every 30 minutes
+- **continuous-improvement**: Code improvements every 2 hours
+- **daily-build-test**: Build and test automation every hour
+- **security-audit**: Security scanning every 4 hours
+- **dependency-updates**: Package updates every 6 hours
+- **performance-monitor**: Performance monitoring every 2 hours
+- **quality-checks**: Code quality checks every 3 hours
+- **link-integrity**: Link integrity verification every 2 hours
+- **front-maximizer**: Frontend optimization every 4 hours
+- **sitemap-runner**: Sitemap generation every 6 hours
 
-### ✅ Quality Check
-- **File**: `.github/workflows/quality-check.yml`
-- **Trigger**: Push to main/develop branches and pull requests
-- **Purpose**: Code quality, linting, and security audits
-- **Jobs**: Comprehensive quality assurance
+## Configuration
 
-### 🔄 Continuous Improvement
-- **File**: `.github/workflows/continuous-improvement.yml`
-- **Trigger**: Every 4 hours and manual dispatch
-- **Purpose**: Automated improvement suggestions and PR creation
-- **Jobs**: Improvement automation with auto-merge
+### Ecosystem Configuration
+- **File**: `ecosystem.config.cjs`
+- **Memory Limits**: 512MB for automation processes, 1GB for main apps
+- **Auto-restart**: Enabled for all processes
+- **Environment**: Production mode with optimized Node.js settings
 
-### 🕷️ Link Crawler Factory
-- **File**: `.github/workflows/agent-factory.yml`
-- **Trigger**: Every 30 minutes and manual dispatch
-- **Purpose**: Automated link checking and broken link detection
-- **Jobs**: Distributed link crawling with issue reporting
+### Environment Variables
+- `NODE_ENV`: Production
+- `NODE_OPTIONS`: Optimized memory settings
+- `AUTOMATION_INTERVAL`: Process-specific timing intervals
 
-## Configuration Files
+## Management Commands
 
-### CodeQL Configuration
-- **File**: `.github/codeql/codeql-config.yml`
-- **Purpose**: Security analysis configuration for TypeScript/React projects
-
-## Scripts Required
-
-The following npm scripts must be available in `package.json`:
-
-```json
-{
-  "scripts": {
-    "test": "echo 'No tests configured yet'",
-    "test:ci": "echo 'CI tests placeholder'",
-    "security:scan": "echo 'Security scan placeholder'",
-    "cypress:run": "echo 'Cypress tests placeholder'",
-    "automation:improvement": "echo 'Automation improvement placeholder'",
-    "diversify": "echo 'Diversification placeholder'"
-  }
-}
+### Start All Processes
+```bash
+pm2 start ecosystem.config.cjs
 ```
 
-## Environment Variables
+### Monitor Processes
+```bash
+pm2 list
+pm2 monit
+```
 
-The following secrets may be required (depending on your setup):
+### Restart Specific Process
+```bash
+pm2 restart <process-name>
+```
 
-- `GITHUB_TOKEN` - Automatically provided by GitHub
-- `NPM_TOKEN` - For NPM package publishing (if applicable)
-- `CYPRESS_*` - For Cypress testing (if applicable)
-- `CODECOV_TOKEN` - For code coverage reporting (if applicable)
+### Stop All Processes
+```bash
+pm2 stop all
+```
 
-## Branch Protection
+### Delete All Processes
+```bash
+pm2 delete all
+```
 
-Recommended branch protection rules for `main`:
+### View Logs
+```bash
+pm2 logs <process-name>
+pm2 logs --lines 100
+```
 
-- Require status checks to pass before merging
-- Require branches to be up to date before merging
-- Require pull request reviews before merging
-- Require conversation resolution before merging
+## Benefits Over GitHub Actions
 
-## Monitoring
+1. **Real-time Processing**: Continuous operation instead of triggered runs
+2. **Resource Efficiency**: Lower overhead and faster execution
+3. **Immediate Response**: Instant error detection and recovery
+4. **Cost Effective**: No GitHub Actions minutes consumption
+5. **Local Control**: Full control over automation timing and resources
+6. **Scalability**: Easy to add new automation processes
 
-- All workflows run on Ubuntu latest with Node.js 20
-- Build artifacts are uploaded for inspection
-- Security scans run automatically
-- Quality checks run on every push and PR
+## Monitoring & Maintenance
 
-## Troubleshooting
+### Health Checks
+- Monitor process status with `pm2 list`
+- Check memory usage and restart counts
+- Review logs for errors or warnings
 
-### Common Issues
+### Performance Optimization
+- Adjust memory limits in ecosystem config
+- Modify automation intervals as needed
+- Monitor CPU usage patterns
 
-1. **Build Failures**: Check Node.js version compatibility
-2. **Missing Scripts**: Ensure all required npm scripts exist
-3. **Permission Errors**: Verify workflow permissions are correctly set
-4. **Timeout Issues**: Increase timeout values for long-running jobs
+### Troubleshooting
+1. **Process Crashes**: Check logs with `pm2 logs <name>`
+2. **Memory Issues**: Adjust max_memory_restart values
+3. **High Restart Counts**: Investigate underlying issues
+4. **Performance Issues**: Monitor resource usage
 
-### Debug Mode
+## Security
 
-To debug workflows, add `ACTIONS_STEP_DEBUG: true` to your repository secrets.
+- All processes run in production environment
+- Memory limits prevent resource exhaustion
+- Auto-restart ensures service availability
+- Process isolation for security
 
-## Contributing
+## Future Enhancements
 
-When adding new workflows:
-
-1. Follow the existing naming conventions
-2. Include proper error handling and continue-on-error where appropriate
-3. Add comprehensive documentation
-4. Test workflows in a fork before submitting
+- Add monitoring dashboards
+- Implement alerting for critical failures
+- Add process dependency management
+- Create backup automation processes
 
 ## Support
 
-For workflow issues, check:
-1. GitHub Actions logs for detailed error messages
-2. Required scripts and dependencies
-3. Permission configurations
-4. Environment variable requirements
+For PM2 automation issues:
+1. Check process status with `pm2 list`
+2. Review logs for error details
+3. Verify ecosystem configuration
+4. Check system resources
+5. Contact the development team

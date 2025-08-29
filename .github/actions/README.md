@@ -1,167 +1,213 @@
-# GitHub Actions Workflows
+# PM2 Automation System
 
-This directory contains comprehensive GitHub Actions workflows for the Zion Tech Group application.
+This directory contains documentation for the PM2-based automation system that has replaced GitHub Actions workflows for the Zion Tech Group application.
 
-## Workflows Overview
+## System Overview
 
-### 1. CI/CD Pipeline (`ci-cd.yml`)
-**Purpose**: Main continuous integration and deployment pipeline
-**Triggers**: Push to main/develop, pull requests, manual dispatch
-**Features**:
-- Code quality & security checks
-- Multi-platform build & testing
-- Performance testing with Lighthouse
-- Automated deployment to Vercel and GitHub Pages
-- Post-deployment health checks
+The Zion Tech Group application now uses PM2 (Process Manager 2) for comprehensive automation, providing:
+- **Continuous monitoring** and management of all processes
+- **Automated restart** on failures with configurable memory limits
+- **Scheduled automation** at various intervals for different tasks
+- **Resource management** with memory and CPU monitoring
+- **Real-time process monitoring** and logging
 
-### 2. Security & Dependency Management (`security.yml`)
-**Purpose**: Security scanning and dependency management
-**Triggers**: Daily schedule, push to main/develop, pull requests, manual dispatch
-**Features**:
-- Dependency vulnerability scanning
-- Code security analysis with Semgrep
-- Container security scanning with Trivy
-- Automated dependency updates
-- Security policy compliance checks
+## Automation Processes
 
-### 3. Testing & Quality Assurance (`testing.yml`)
-**Purpose**: Comprehensive testing automation
-**Triggers**: Push to main/develop, pull requests, weekly schedule, manual dispatch
-**Features**:
-- Unit, integration, and E2E testing
-- Performance testing
-- Accessibility testing
-- Test coverage reporting
-- Quality gates enforcement
+### 🚀 Core Applications
+- **zion-app**: Main frontend application with production optimizations
+- **zion-backend**: Backend server for API and services
 
-### 4. Release Management (`release.yml`)
-**Purpose**: Automated release process
-**Triggers**: Version tags, manual dispatch
-**Features**:
-- Automated version management
-- Release artifact creation
-- GitHub release creation
-- Automated deployment
-- Post-release tasks
+### 🔄 Continuous Automation
 
-### 5. Dependency Management (`dependencies.yml`)
-**Purpose**: Automated dependency updates
-**Triggers**: Daily schedule, manual dispatch
-**Features**:
-- Outdated package detection
-- Security vulnerability scanning
-- Automated update PR creation
-- Breaking change detection
-- Team notifications
+#### High Priority (15 minutes)
+- **console-error-fixer**: Continuous console error detection and fixing
+  - Memory limit: 512MB
+  - Auto-restart: Enabled
+  - Purpose: Maintain error-free console output
+
+#### Regular Intervals
+- **link-checker**: Link validation every 30 minutes
+  - Memory limit: 512MB
+  - Purpose: Ensure all links are functional
+
+- **continuous-improvement**: Code improvements every 2 hours
+  - Memory limit: 512MB
+  - Purpose: Automated code quality improvements
+
+- **daily-build-test**: Build and test automation every hour
+  - Memory limit: 512MB
+  - Purpose: Continuous build verification
+
+- **security-audit**: Security scanning every 4 hours
+  - Memory limit: 512MB
+  - Purpose: Vulnerability detection and security monitoring
+
+- **dependency-updates**: Package updates every 6 hours
+  - Memory limit: 512MB
+  - Purpose: Keep dependencies up-to-date and secure
+
+- **performance-monitor**: Performance monitoring every 2 hours
+  - Memory limit: 512MB
+  - Purpose: Track application performance metrics
+
+- **quality-checks**: Code quality checks every 3 hours
+  - Memory limit: 512MB
+  - Purpose: Maintain code quality standards
+
+- **link-integrity**: Link integrity verification every 2 hours
+  - Memory limit: 512MB
+  - Purpose: Deep link validation and reporting
+
+- **front-maximizer**: Frontend optimization every 4 hours
+  - Memory limit: 512MB
+  - Purpose: Optimize frontend performance and SEO
+
+- **sitemap-runner**: Sitemap generation every 6 hours
+  - Memory limit: 512MB
+  - Purpose: Keep sitemaps current and accurate
 
 ## Configuration
 
+### Ecosystem Configuration
+- **File**: `ecosystem.config.cjs`
+- **Memory Limits**: 
+  - Main apps: 1GB
+  - Automation processes: 512MB
+- **Auto-restart**: Enabled for all processes
+- **Watch Mode**: Disabled for production stability
+- **Environment**: Production mode with optimized Node.js settings
+
 ### Environment Variables
-The workflows use the following environment variables:
-- `NODE_VERSION`: Node.js version (default: 20.18.1)
-- `NPM_VERSION`: npm version (default: 10.0.0)
+- `NODE_ENV`: Production
+- `NODE_OPTIONS`: Optimized memory settings for main apps
+- `AUTOMATION_INTERVAL`: Process-specific timing intervals
 
-### Secrets Required
-The following secrets need to be configured in your repository:
+## Management & Monitoring
 
-#### Vercel Deployment
-- `VERCEL_TOKEN`: Vercel authentication token
-- `VERCEL_ORG_ID`: Vercel organization ID
-- `VERCEL_PROJECT_ID`: Vercel project ID
+### Process Management
+```bash
+# Start all processes
+pm2 start ecosystem.config.cjs
 
-#### Code Coverage
-- `CODECOV_TOKEN`: Codecov authentication token
+# Monitor processes
+pm2 list
+pm2 monit
 
-#### Security Scanning
-- `GITHUB_TOKEN`: GitHub authentication token (automatically provided)
+# Restart specific process
+pm2 restart <process-name>
 
-## Usage
+# Stop all processes
+pm2 stop all
 
-### Manual Workflow Dispatch
-You can manually trigger workflows from the GitHub Actions tab:
+# Delete all processes
+pm2 delete all
+```
 
-1. Go to **Actions** tab in your repository
-2. Select the workflow you want to run
-3. Click **Run workflow**
-4. Fill in the required parameters
-5. Click **Run workflow**
+### Logging & Debugging
+```bash
+# View logs for specific process
+pm2 logs <process-name>
 
-### Scheduled Workflows
-- **Security scanning**: Daily at 2 AM UTC
-- **Dependency updates**: Daily at 4 AM UTC
-- **Testing**: Weekly on Sundays at 3 AM UTC
+# View last 100 lines of all logs
+pm2 logs --lines 100
 
-### Branch Protection
-The workflows are designed to work with branch protection rules:
-- Require status checks to pass before merging
-- Require up-to-date branches before merging
-- Enforce review requirements
+# Clear logs
+pm2 flush
+```
 
-## Customization
+### Performance Monitoring
+```bash
+# Real-time monitoring
+pm2 monit
 
-### Adding New Workflows
-1. Create a new `.yml` file in `.github/workflows/`
-2. Follow the existing workflow structure
-3. Add appropriate triggers and jobs
-4. Test locally with `act` if possible
+# Process statistics
+pm2 show <process-name>
 
-### Modifying Existing Workflows
-1. Update the workflow file
-2. Test the changes
-3. Commit and push to trigger the workflow
-4. Monitor the execution
+# Resource usage
+pm2 status
+```
 
-### Environment-Specific Configurations
-You can create environment-specific configurations by:
-1. Adding environment blocks in workflows
-2. Using environment variables for configuration
-3. Creating environment-specific secrets
+## Benefits Over GitHub Actions
 
-## Monitoring & Troubleshooting
+1. **Real-time Processing**: Continuous operation instead of triggered runs
+2. **Resource Efficiency**: Lower overhead and faster execution
+3. **Immediate Response**: Instant error detection and recovery
+4. **Cost Effective**: No GitHub Actions minutes consumption
+5. **Local Control**: Full control over automation timing and resources
+6. **Scalability**: Easy to add new automation processes
+7. **Memory Management**: Configurable memory limits prevent resource exhaustion
+8. **Process Isolation**: Each automation runs independently
 
-### Workflow Status
-- Monitor workflow execution in the **Actions** tab
-- Check job logs for detailed information
-- Review artifacts for test results and reports
+## Health Monitoring
+
+### Status Indicators
+- **Online**: Process is running normally
+- **Launching**: Process is starting up
+- **Stopped**: Process has been stopped
+- **Error**: Process has encountered an error
+
+### Performance Metrics
+- **CPU Usage**: Real-time CPU consumption
+- **Memory Usage**: Current memory footprint
+- **Restart Count**: Number of times process has restarted
+- **Uptime**: How long process has been running
+
+## Troubleshooting
 
 ### Common Issues
-1. **Build failures**: Check Node.js version compatibility
-2. **Test failures**: Review test output and fix issues
-3. **Deployment failures**: Verify secrets and permissions
-4. **Timeout issues**: Adjust timeout values if needed
+1. **High Restart Counts**: Check logs for underlying errors
+2. **Memory Issues**: Adjust max_memory_restart values
+3. **Process Crashes**: Review logs and fix root causes
+4. **Performance Issues**: Monitor resource usage patterns
 
-### Performance Optimization
-- Use caching for dependencies
-- Parallel job execution where possible
-- Optimize build steps
-- Use appropriate runner types
+### Debug Steps
+1. Check process status: `pm2 list`
+2. Review logs: `pm2 logs <name>`
+3. Verify configuration: Check ecosystem.config.cjs
+4. Monitor resources: `pm2 monit`
+5. Check system resources: `htop` or `top`
 
-## Security Considerations
+## Security & Best Practices
 
-### Secret Management
-- Never hardcode secrets in workflows
-- Use repository secrets for sensitive data
-- Rotate secrets regularly
-- Limit secret access to necessary workflows
+### Security Features
+- All processes run in production environment
+- Memory limits prevent resource exhaustion attacks
+- Auto-restart ensures service availability
+- Process isolation for security
 
-### Code Scanning
-- Enable automated security scanning
-- Review security alerts promptly
-- Fix vulnerabilities in a timely manner
-- Maintain security policy compliance
+### Best Practices
+- Monitor restart counts regularly
+- Set appropriate memory limits
+- Review logs for security issues
+- Keep PM2 updated to latest version
+- Use environment-specific configurations
 
-## Support
+## Future Enhancements
 
-For questions or issues with GitHub Actions:
-1. Check the workflow logs for error details
-2. Review GitHub Actions documentation
-3. Contact the development team
-4. Create an issue with detailed information
+- **Monitoring Dashboards**: Web-based PM2 monitoring
+- **Alerting System**: Notifications for critical failures
+- **Process Dependencies**: Manage process startup order
+- **Backup Processes**: Redundant automation processes
+- **Metrics Collection**: Performance data aggregation
+- **Auto-scaling**: Dynamic process scaling based on load
 
-## Contributing
+## Support & Maintenance
 
-When contributing to workflows:
-1. Follow the existing patterns and structure
-2. Test changes thoroughly
-3. Update documentation as needed
-4. Ensure security best practices are followed
+### Regular Maintenance
+- Monitor process health daily
+- Review logs weekly for patterns
+- Update PM2 and dependencies monthly
+- Review and optimize automation intervals
+
+### Getting Help
+For PM2 automation issues:
+1. Check process status with `pm2 list`
+2. Review logs for error details
+3. Verify ecosystem configuration
+4. Check system resources
+5. Contact the development team
+
+### Documentation Resources
+- PM2 Official Documentation: https://pm2.keymetrics.io/
+- Node.js Performance Best Practices
+- Process Management Guidelines

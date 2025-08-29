@@ -62,7 +62,7 @@ zion-tech-group-website/
 ├── 📁 public/                        # Static assets
 ├── 📁 styles/                        # Global styles and CSS
 ├── 📁 tests/                         # Test files
-├── 📁 .github/                       # GitHub Actions workflows
+├── 📁 .github/                       # PM2 automation documentation
 └── 📁 docs/                          # Documentation
 ```
 

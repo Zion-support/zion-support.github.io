@@ -8,9 +8,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 
 ### Added
-- Comprehensive GitHub Actions workflows for CI/CD
+- Comprehensive PM2 automation system for CI/CD
 - Automated security scanning and dependency management
-- Performance testing with Lighthouse CI
+- Performance testing and monitoring
 - Automated release management
 - Issue and pull request templates
 - Security policy documentation
@@ -167,4 +167,4 @@ For support and questions:
 
 ---
 
-**Note**: This changelog is automatically maintained by GitHub Actions. For detailed information about each release, please refer to the GitHub releases page.
+**Note**: This changelog is automatically maintained by the PM2 automation system. For detailed information about each release, please refer to the GitHub releases page.
