@@ -8,6 +8,7 @@ import { SEO } from './components/SEO';
 import { PerformanceOptimizer } from './components/PerformanceOptimizer';
 import { AccessibilityEnhancer } from './components/AccessibilityEnhancer';
 import { ErrorBoundary } from './components/ErrorBoundary';
+import { PerformanceMonitor } from './components/PerformanceMonitor';
 
 // Lazy load pages - only import existing ones
 const Home = React.lazy(() => import('./pages/Home'));
@@ -229,6 +230,7 @@ function App() {
         <ChatAssistant />
         <PerformanceOptimizer />
         <AccessibilityEnhancer />
+        <PerformanceMonitor />
       </div>
     </ErrorBoundary>
   );

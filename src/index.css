@@ -85,16 +85,75 @@ img {
   loading: lazy;
 }
 
-/* Smooth scrolling for reduced motion users */
+/* Lightweight lazy rendering for media */
+img, iframe, video {
+  content-visibility: auto;
+  contain-intrinsic-size: 300px 150px;
+}
+
+/* Performance optimizations */
+.animate-fade-in {
+  will-change: opacity, transform;
+  contain: layout style paint;
+}
+
+.animate-slide-up {
+  will-change: opacity, transform;
+  contain: layout style paint;
+}
+
+.animate-slide-down {
+  will-change: opacity, transform;
+  contain: layout style paint;
+}
+
+.animate-slide-left {
+  will-change: opacity, transform;
+  contain: layout style paint;
+}
+
+.animate-slide-right {
+  will-change: opacity, transform;
+  contain: layout style paint;
+}
+
+.animate-scale-in {
+  will-change: opacity, transform;
+  contain: layout style paint;
+}
+
+.animate-bounce-in {
+  will-change: opacity, transform;
+  contain: layout style paint;
+}
+
+/* Improved scroll performance */
+.scroll-smooth {
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+}
+
+/* Focus management for accessibility */
+.focus-visible:focus {
+  outline: 2px solid var(--zion-cyan);
+  outline-offset: 2px;
+}
+
+/* Reduced motion support */
 @media (prefers-reduced-motion: reduce) {
-  html {
-    scroll-behavior: auto;
+  .animate-fade-in,
+  .animate-slide-up,
+  .animate-slide-down,
+  .animate-slide-left,
+  .animate-slide-right,
+  .animate-scale-in,
+  .animate-bounce-in {
+    animation: none;
+    transition: none;
   }
   
-  * {
-    animation-duration: 0.01ms !important;
-    animation-iteration-count: 1 !important;
-    transition-duration: 0.01ms !important;
+  .scroll-smooth {
+    scroll-behavior: auto;
   }
 }
 
@@ -111,14 +170,6 @@ img {
 
 .container-responsive {
   @apply mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl;
-}
-
-.animate-fade-in {
-  animation: fadeIn 220ms ease-out both;
-}
-
-.animate-slide-up {
-  animation: slideUp 220ms ease-out both;
 }
 
 @keyframes fadeIn {
