@@ -98,33 +98,37 @@ export default defineConfig(({ command, mode }) => {
             'charts-vendor': ['recharts', 'd3-color', 'd3-format', 'd3-path', 'd3-time-format'],
             'animation-vendor': ['framer-motion'],
             'state-vendor': ['@reduxjs/toolkit', 'react-redux'],
+            'query-vendor': ['@tanstack/react-query'],
+            'i18n-vendor': ['i18next', 'react-i18next', 'i18next-browser-languagedetector'],
+            'pwa-vendor': ['workbox-window'],
+            'stripe-vendor': ['@stripe/stripe-js']
           },
           chunkFileNames: (chunkInfo) => {
             const facadeModuleId = chunkInfo.facadeModuleId ? chunkInfo.facadeModuleId.split('/').pop() : 'chunk';
-            return `js/${facadeModuleId}-[hash].js`;
+            return `js/[name]-[hash].js`;
           },
-          entryFileNames: 'js/[name]-[hash].js',
           assetFileNames: (assetInfo) => {
             const info = assetInfo.name.split('.');
             const ext = info[info.length - 1];
-            if (/png|jpe?g|svg|gif|tiff|bmp|ico|webp|avif/i.test(ext)) {
-              return `images/[name]-[hash][extname]`;
+            if (/\.(css)$/.test(assetInfo.name)) {
+              return `css/[name]-[hash].${ext}`;
             }
-            if (/css/i.test(ext)) {
-              return `css/[name]-[hash][extname]`;
+            if (/\.(png|jpe?g|gif|svg|ico|webp)$/.test(assetInfo.name)) {
+              return `images/[name]-[hash].${ext}`;
             }
-            if (/woff2?|ttf|eot/i.test(ext)) {
-              return `fonts/[name]-[hash][extname]`;
+            if (/\.(woff2?|eot|ttf|otf)$/.test(assetInfo.name)) {
+              return `fonts/[name]-[hash].${ext}`;
             }
-            return `assets/[name]-[hash][extname]`;
-          },
+            return `assets/[name]-[hash].${ext}`;
+          }
         },
+        external: ['fsevents'],
         onwarn(warning, warn) {
-          // Suppress warnings about missing optional dependencies
-          if (warning.code === 'MODULE_LEVEL_DIRECTIVE') return;
+          // Ignore certain warnings
           if (warning.code === 'CIRCULAR_DEPENDENCY') return;
+          if (warning.code === 'UNUSED_EXTERNAL_IMPORT') return;
           warn(warning);
-        },
+        }
       },
       brotliSize: true,
       chunkSizeWarningLimit: 1000,
