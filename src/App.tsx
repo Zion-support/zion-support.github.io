@@ -136,6 +136,9 @@ const AIContentGenerationPlatform = React.lazy(() => import('./pages/services/AI
 const AICybersecurityThreatIntelligence = React.lazy(() => import('./pages/services/AICybersecurityThreatIntelligence'));
 const AICustomerExperienceAnalytics = React.lazy(() => import('./pages/services/AICustomerExperienceAnalytics'));
 
+// Additional innovative services
+const AIContentMarketingAutomation = React.lazy(() => import('./pages/services/AIContentMarketingAutomation'));
+
 // Utility and support pages
 const Status = React.lazy(() => import('./pages/Status'));
 const Demo = React.lazy(() => import('./pages/Demo'));
@@ -330,6 +333,16 @@ function App() {
               <Route path="/services/ai-content-generation-platform" element={<AIContentGenerationPlatform />} />
               <Route path="/services/ai-cybersecurity-threat-intelligence" element={<AICybersecurityThreatIntelligence />} />
               <Route path="/services/ai-customer-experience-analytics" element={<AICustomerExperienceAnalytics />} />
+              
+              {/* Additional Innovative Service Routes */}
+              <Route path="/services/ai-content-marketing-automation" element={<AIContentMarketingAutomation />} />
+              <Route path="/services/ai-supply-chain-optimization" element={<AISupplyChainOptimization />} />
+              <Route path="/services/ai-financial-trading-platform" element={<AIFinancialTradingPlatform />} />
+              <Route path="/services/ai-hr-platform" element={<AIHRPlatform />} />
+              <Route path="/services/ai-legal-research-platform" element={<AILegalResearchPlatform />} />
+              <Route path="/services/ai-education-platform" element={<AIEducationPlatform />} />
+              <Route path="/services/ai-marketing-automation" element={<AIMarketingAutomation />} />
+              <Route path="/services/ai-project-management-platform" element={<AIProjectManagementPlatform />} />
               
               {/* Micro SaaS Solutions Routes */}
               <Route path="/services/affiliate-marketing-tracker" element={<AffiliateMarketingTracker />} />
