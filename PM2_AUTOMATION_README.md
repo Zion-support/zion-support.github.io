@@ -1,335 +1,423 @@
-# PM2 Automation System - Zion Tech Group
+# 🚀 Enhanced PM2 Automation System
 
-## 🚀 Overview
+A comprehensive, intelligent automation system built with PM2 that provides continuous monitoring, optimization, and improvement of your development workflow.
 
-The PM2 Automation System provides continuous monitoring, maintenance, and improvement of the Zion Tech Group website. It consists of 11 automated processes that run continuously to ensure optimal performance, security, and quality.
+## ✨ Features
 
-## 📊 Automation Processes
+### 🔧 Core Automation Processes
+- **Lint Fixer** - AI-powered code linting with intelligent suggestions
+- **Code Quality Monitor** - Comprehensive code quality analysis
+- **Auto-commit Fixes** - Automated git commits for code improvements
+- **Dependency Monitor** - Security vulnerability scanning and updates
+- **Performance Monitor** - Build performance and bundle analysis
 
-### Core Automation Services
+### 🆕 New Intelligent Automations
+- **Test Automation** - Intelligent test running with retry logic and coverage analysis
+- **Security Scanner** - Comprehensive security vulnerability detection
+- **Build Optimizer** - Bundle optimization and build performance analysis
+- **Git Workflow** - Automated git operations and conflict resolution
+- **Health Monitor** - System and process health monitoring
+- **Documentation Generator** - Automated documentation updates
+- **SEO & Accessibility** - SEO and accessibility compliance checking
 
-| Process | Purpose | Status | Memory | CPU |
-|---------|---------|--------|--------|-----|
-| **console-error-fixer** | Continuously fixes console errors and build issues | 🟢 Online | ~71MB | 0.3% |
-| **link-checker** | Monitors and reports broken internal/external links | 🟢 Online | ~61MB | 0.3% |
-| **continuous-improvement** | Implements ongoing website enhancements | 🟢 Online | ~61MB | 0.3% |
-| **daily-build-test** | Ensures daily builds complete successfully | 🟢 Online | ~61MB | 0.3% |
-| **security-audit** | Continuous security monitoring and updates | 🟢 Online | ~61MB | 0.3% |
-| **dependency-updates** | Manages package updates and security patches | 🟢 Online | ~60MB | 0.2% |
-| **performance-monitor** | Tracks website performance metrics | 🟢 Online | ~60MB | 0.3% |
-| **quality-checks** | Runs automated quality assurance tests | 🟢 Online | ~60MB | 0.3% |
-| **link-integrity** | Validates internal link structure | 🟢 Online | ~61MB | 0.2% |
-| **front-maximizer** | Optimizes frontend performance | 🟢 Online | ~60MB | 0.2% |
-| **sitemap-runner** | Generates and updates sitemaps | 🟢 Online | ~60MB | 0.3% |
+### 📊 Monitoring & Analytics
+- **Real-time Dashboard** - Live monitoring of all automation processes
+- **Intelligent Alerts** - Smart alerting based on process health
+- **Performance Metrics** - Detailed performance analysis and recommendations
+- **Automated Reports** - Comprehensive reports for all automation activities
 
-## 🛠️ Management Commands
+## 🚀 Quick Start
 
-### Quick Commands
-
+### 1. Install Dependencies
 ```bash
-# Start all automation processes
-npm run automation:start
-
-# Stop all automation processes
-npm run automation:stop
-
-# Restart all automation processes
-npm run automation:restart
-
-# Check automation status
-npm run automation:status
-
-# View recent logs
-npm run automation:logs
-
-# Open PM2 monitoring interface
-npm run automation:monit
-
-# Check automation health
-npm run automation:health
-
-# Generate reports
-npm run automation:reports
+npm install -g pm2
+npm install
 ```
 
-### Direct PM2 Commands
-
+### 2. Start the Automation System
 ```bash
-# Start automation only
-npm run pm2:start
+npm run automation:setup
+```
 
-# Stop automation only
-npm run pm2:stop
-
-# Restart automation only
-npm run pm2:restart
-
-# View all PM2 processes
-npm run pm2:status
-
-# View PM2 logs
-npm run pm2:logs
-
-# Open PM2 monitoring
+### 3. Monitor the System
+```bash
+npm run automation:status
 npm run pm2:monit
 ```
 
-### Shell Script Commands
-
+### 4. View the Dashboard
 ```bash
-# Using the shell script directly
-./scripts/start-automation.sh start
-./scripts/start-automation.sh status
-./scripts/start-automation.sh logs
-./scripts/start-automation.sh monit
-./scripts/start-automation.sh health
-./scripts/start-automation.sh reports
+npm run dashboard
 ```
 
-## 📁 File Structure
+## 📋 Available Commands
 
+### 🎯 Core Automation
+```bash
+# Start/Stop/Manage PM2 processes
+npm run pm2:start          # Start all automation processes
+npm run pm2:stop           # Stop all automation processes
+npm run pm2:restart        # Restart all automation processes
+npm run pm2:status         # Show process status
+npm run pm2:logs           # View all logs
+npm run pm2:monit          # Monitor processes in real-time
+
+# Quality and Testing
+npm run quality:check      # Run code quality analysis
+npm run quality:fix        # Fix code quality issues
+npm run test:automation    # Run intelligent test automation
+npm run security:scan      # Run security vulnerability scan
+
+# Performance and Build
+npm run perf:check         # Check performance metrics
+npm run build:optimize     # Analyze and optimize build process
+npm run build:analyze      # Build with analysis
+
+# Health and Monitoring
+npm run health:check       # Check system health
+npm run health:full        # Comprehensive health check
+npm run dashboard          # Launch monitoring dashboard
 ```
-scripts/
-├── automation-manager.js          # Node.js automation manager
-├── start-automation.sh            # Shell script for automation management
-├── automation-dashboard.js        # Real-time monitoring dashboard
-└── automation/
-    ├── console-error-fixer.cjs    # Console error fixing automation
-    ├── link-checker.cjs           # Link validation automation
-    ├── continuous-improvement.cjs # Continuous improvement automation
-    ├── daily-build-test.cjs       # Daily build testing automation
-    ├── security-audit.cjs         # Security monitoring automation
-    ├── dependency-updates.cjs     # Dependency management automation
-    ├── performance-monitor.cjs    # Performance monitoring automation
-    ├── quality-checks.cjs         # Quality assurance automation
-    ├── link-integrity.cjs         # Link integrity validation
-    ├── front-maximizer.cjs        # Frontend optimization automation
-    └── sitemap-runner.cjs         # Sitemap generation automation
 
-ecosystem.config.cjs               # PM2 configuration file
+### 🔄 Workflow Commands
+```bash
+# Development workflows
+npm run dev:quality        # Development with quality monitoring
+npm run dev:secure         # Development with security monitoring
+npm run dev:test           # Development with test automation
+
+# Quality assurance
+npm run quality:full       # Full quality check suite
+npm run quality:security   # Security-focused quality check
+npm run quality:performance # Performance-focused quality check
+
+# Build and deploy
+npm run build:secure       # Secure build process
+npm run build:quality      # Quality-focused build
+npm run build:full         # Complete build with all checks
 ```
 
-## 🔧 Configuration
+### 🧹 Maintenance Commands
+```bash
+# Cleanup and maintenance
+npm run clean:all          # Clean all generated files and reinstall
+npm run clean:logs         # Clean log files
+npm run clean:cache        # Clean build and cache files
 
-### PM2 Ecosystem Configuration
+# Documentation
+npm run docs:generate      # Generate/update documentation
+npm run docs:full          # Full documentation update with SEO check
+```
 
-The `ecosystem.config.cjs` file configures all automation processes with:
-
-- **Memory limits**: 512MB per process
-- **Auto-restart**: Enabled for all processes
-- **Environment**: Production mode with 15-minute intervals
-- **Monitoring**: Full process monitoring and logging
+## ⚙️ Configuration
 
 ### Environment Variables
+The system is highly configurable through environment variables:
 
-- `NODE_ENV`: Set to 'production' for all automation processes
-- `AUTOMATION_INTERVAL`: 900000ms (15 minutes) between automation cycles
+```bash
+# Lint Fixer
+AUTO_FIX=true              # Enable automatic fixing
+STRICT_MODE=true           # Enable strict linting mode
 
-## 📊 Monitoring & Reporting
+# Code Quality Monitor
+QUALITY_THRESHOLD=80       # Minimum quality score threshold
+AUTO_FIX_CRITICAL=true     # Auto-fix critical issues
+
+# Test Automation
+TEST_COVERAGE_THRESHOLD=80 # Minimum test coverage threshold
+AUTO_RETRY_FAILED=true     # Auto-retry failed tests
+PARALLEL_TESTS=true        # Enable parallel test execution
+
+# Security Scanner
+SCAN_DEPENDENCIES=true     # Scan for dependency vulnerabilities
+SCAN_CODE=true             # Scan code for security issues
+SCAN_CONFIGS=true          # Scan configuration files
+ALERT_ON_CRITICAL=true     # Alert on critical security issues
+
+# Build Optimizer
+OPTIMIZE_BUNDLES=true      # Enable bundle optimization
+TREE_SHAKING=true          # Enable tree shaking
+CODE_SPLITTING=true        # Enable code splitting
+MINIFICATION=true          # Enable minification
+```
+
+### Ecosystem Configuration
+The `ecosystem.config.js` file contains all process configurations with intelligent scheduling:
+
+```javascript
+// Example process configuration
+{
+  name: 'security-scanner',
+  script: 'scripts/pm2/security-scanner.js',
+  instances: 1,
+  autorestart: true,
+  cron_restart: '0 */12 * * *', // Restart every 12 hours
+  env: {
+    SCAN_DEPENDENCIES: 'true',
+    SCAN_CODE: 'true',
+    ALERT_ON_CRITICAL: 'true'
+  }
+}
+```
+
+## 📊 Monitoring and Reports
 
 ### Real-time Dashboard
-
-```bash
-# Start the real-time monitoring dashboard
-node scripts/automation-dashboard.js
-```
-
-The dashboard provides:
-- Live process status updates
-- Memory and CPU usage monitoring
-- Recent log activity
-- Health recommendations
+The automation dashboard provides:
+- Live process status monitoring
+- System resource utilization
+- Real-time alerts and recommendations
 - Performance metrics
+- Error rate analysis
 
-### Health Reports
+### Automated Reports
+All automation processes generate detailed reports:
+- JSON format for programmatic access
+- Stored in `logs/pm2/` directory
+- Include timestamps, metrics, and recommendations
+- Configurable report formats
 
-```bash
-# Generate health report
-npm run automation:health
+### Log Management
+- Structured logging with log levels
+- Automatic log rotation
+- Centralized log storage
+- Error tracking and analysis
 
-# Generate performance report
-npm run automation:reports
-```
+## 🔍 Process Details
 
-Reports are saved as:
-- `automation-health-report.json` - Process health status
-- `automation-performance-report.json` - Performance metrics
-- `automation-status-report.txt` - Human-readable status
+### 1. Lint Fixer (`lint-fixer`)
+- **Purpose**: Automated code linting and fixing
+- **Schedule**: Every 4 hours
+- **Features**: 
+  - AI-powered code suggestions
+  - Automatic issue categorization
+  - ESLint and Prettier integration
+  - Intelligent fix prioritization
 
-## 🚨 Troubleshooting
+### 2. Code Quality Monitor (`code-quality-monitor`)
+- **Purpose**: Comprehensive code quality analysis
+- **Schedule**: Every 6 hours
+- **Features**:
+  - Static code analysis
+  - Quality score calculation
+  - Issue trend analysis
+  - Automated quality reporting
+
+### 3. Test Automation (`test-automation`)
+- **Purpose**: Intelligent test execution and analysis
+- **Schedule**: Every 3 hours
+- **Features**:
+  - Test discovery and execution
+  - Coverage analysis
+  - Failed test retry logic
+  - Performance optimization suggestions
+
+### 4. Security Scanner (`security-scanner`)
+- **Purpose**: Security vulnerability detection
+- **Schedule**: Every 12 hours
+- **Features**:
+  - Dependency vulnerability scanning
+  - Code security analysis
+  - Configuration security review
+  - Risk scoring and recommendations
+
+### 5. Build Optimizer (`build-optimizer`)
+- **Purpose**: Build performance and bundle optimization
+- **Schedule**: Daily at midnight
+- **Features**:
+  - Build configuration analysis
+  - Bundle size optimization
+  - Performance benchmarking
+  - Optimization recommendations
+
+## 🚨 Alerts and Notifications
+
+### Alert Types
+- **Critical**: Immediate action required
+- **High**: Action required within 24 hours
+- **Medium**: Action required within 1 week
+- **Low**: Informational alerts
+
+### Alert Channels
+- Log files with structured formatting
+- Dashboard notifications
+- Automated reports
+- Process status monitoring
+
+## 📈 Performance Optimization
+
+### Bundle Optimization
+- Automatic bundle size analysis
+- Code splitting recommendations
+- Tree shaking optimization
+- Minification analysis
+
+### Build Performance
+- Build time monitoring
+- Resource utilization tracking
+- Parallel build optimization
+- Caching strategies
+
+### Test Performance
+- Test execution time analysis
+- Parallel test execution
+- Coverage optimization
+- Flaky test detection
+
+## 🔧 Troubleshooting
 
 ### Common Issues
 
-1. **Process Not Starting**
-   ```bash
-   # Check PM2 installation
-   npm install -g pm2
-   
-   # Restart all processes
-   npm run automation:restart
-   ```
-
-2. **High Memory Usage**
-   ```bash
-   # Check memory usage
-   npm run pm2:status
-   
-   # Restart specific process
-   npm run pm2:restart <process-name>
-   ```
-
-3. **Process Errors**
-   ```bash
-   # Check process logs
-   npm run automation:logs
-   
-   # Auto-fix failed processes
-   node scripts/automation-manager.js fix
-   ```
-
-### Log Management
-
+#### Process Not Starting
 ```bash
-# View specific process logs
-pm2 logs <process-name>
+# Check PM2 status
+npm run pm2:status
 
-# View all logs
-pm2 logs
+# View process logs
+npm run pm2:logs
 
-# Clear logs
-pm2 flush
+# Restart processes
+npm run pm2:restart
 ```
 
-## 🔄 Automation Workflows
-
-### Console Error Fixing
-- **Frequency**: Every 15 minutes
-- **Process**: Builds project, scans for errors, applies fixes
-- **Output**: Error reports and fix confirmations
-
-### Link Validation
-- **Frequency**: Every 15 minutes
-- **Process**: Scans internal and external links
-- **Output**: Broken link reports and status updates
-
-### Security Auditing
-- **Frequency**: Every 15 minutes
-- **Process**: Dependency vulnerability scanning
-- **Output**: Security alerts and update recommendations
-
-### Performance Monitoring
-- **Frequency**: Every 15 minutes
-- **Process**: Website performance metrics collection
-- **Output**: Performance reports and optimization suggestions
-
-## 📈 Performance Metrics
-
-### Current System Status
-- **Total Processes**: 11
-- **Online Processes**: 11 (100%)
-- **Total Memory Usage**: ~670MB
-- **Average CPU Usage**: 0.3%
-- **Uptime**: Continuous operation
-- **Restart Count**: 0 (stable)
-
-### Resource Optimization
-- Each process runs independently
-- Memory limits prevent resource exhaustion
-- Auto-restart ensures continuous operation
-- Efficient logging and monitoring
-
-## 🚀 Getting Started
-
-### First Time Setup
-
-1. **Install PM2 globally**
-   ```bash
-   npm install -g pm2
-   ```
-
-2. **Start automation system**
-   ```bash
-   npm run automation:start
-   ```
-
-3. **Verify status**
-   ```bash
-   npm run automation:status
-   ```
-
-4. **Monitor processes**
-   ```bash
-   npm run automation:monit
-   ```
-
-### Daily Operations
-
-1. **Check status**: `npm run automation:status`
-2. **View logs**: `npm run automation:logs`
-3. **Monitor health**: `npm run automation:health`
-4. **Generate reports**: `npm run automation:reports`
-
-## 🔒 Security Features
-
-- **Process isolation**: Each automation runs independently
-- **Memory limits**: Prevents resource exhaustion attacks
-- **Auto-restart**: Ensures continuous operation
-- **Logging**: Full audit trail of all operations
-- **Error handling**: Graceful failure recovery
-
-## 📋 Maintenance Schedule
-
-### Daily
-- Status checks and health monitoring
-- Log review and error analysis
-- Performance metric collection
-
-### Weekly
-- Comprehensive health reports
-- Performance optimization analysis
-- Security audit reviews
-
-### Monthly
-- System performance review
-- Automation process optimization
-- Resource usage analysis
-
-## 🆘 Support & Troubleshooting
-
-### Quick Diagnostics
-
+#### High Resource Usage
 ```bash
 # Check system health
-npm run automation:health
+npm run health:check
 
-# View recent activity
-npm run automation:logs
+# Monitor processes
+npm run pm2:monit
 
-# Monitor real-time
-npm run automation:monit
+# Clean up resources
+npm run clean:cache
 ```
 
-### Advanced Troubleshooting
-
+#### Quality Issues
 ```bash
-# Use automation manager
-node scripts/automation-manager.js help
+# Run comprehensive quality check
+npm run quality:full
 
-# Check specific process
-node scripts/automation-manager.js logs <process-name>
+# Fix specific issues
+npm run quality:fix
 
-# Auto-fix issues
-node scripts/automation-manager.js fix
+# Check security
+npm run security:scan
 ```
 
-## 📚 Additional Resources
+### Log Analysis
+All logs are stored in `logs/pm2/` with structured formatting:
+- Timestamp and log level
+- Process identification
+- Detailed error information
+- Performance metrics
 
-- [PM2 Documentation](https://pm2.keymetrics.io/docs/)
-- [Node.js Process Management](https://nodejs.org/api/process.html)
-- [Automation Best Practices](https://github.com/Zion-Holdings/zion.app)
+## 🚀 Advanced Usage
+
+### Custom Automation Scripts
+Create custom automation scripts by extending the base classes:
+
+```javascript
+const { IntelligentLintFixer } = require('./scripts/pm2/lint-fixer');
+
+class CustomLintFixer extends IntelligentLintFixer {
+  async customAnalysis() {
+    // Custom analysis logic
+  }
+}
+```
+
+### Integration with CI/CD
+The automation system can be integrated with CI/CD pipelines:
+
+```yaml
+# GitHub Actions example
+- name: Run Quality Checks
+  run: npm run quality:full
+
+- name: Security Scan
+  run: npm run security:scan
+
+- name: Performance Check
+  run: npm run perf:check
+```
+
+### Custom Scheduling
+Modify the ecosystem configuration for custom scheduling:
+
+```javascript
+// Custom cron schedule
+cron_restart: '0 2 * * 1-5', // Weekdays at 2 AM
+```
+
+## 📚 API Reference
+
+### Dashboard API
+```javascript
+const dashboard = new PM2AutomationDashboard();
+
+// Get system metrics
+const metrics = await dashboard.getSystemMetrics();
+
+// Analyze process health
+const health = await dashboard.analyzeProcessHealth('lint-fixer');
+
+// Generate reports
+const report = await dashboard.generateDashboardReport();
+```
+
+### Process Management
+```javascript
+// Start specific process
+execSync('pm2 start ecosystem.config.js --only lint-fixer');
+
+// Monitor specific process
+execSync('pm2 monit lint-fixer');
+
+// View process logs
+execSync('pm2 logs lint-fixer');
+```
+
+## 🤝 Contributing
+
+### Adding New Automation Processes
+1. Create a new script in `scripts/pm2/`
+2. Extend the base automation class
+3. Add configuration to `ecosystem.config.js`
+4. Update the dashboard process list
+5. Add npm scripts to `package.json`
+
+### Testing New Features
+```bash
+# Test individual process
+node scripts/pm2/your-new-process.js
+
+# Test with PM2
+pm2 start scripts/pm2/your-new-process.js
+
+# Integration test
+npm run automation:restart
+```
+
+## 📄 License
+
+This project is licensed under the MIT License - see the LICENSE file for details.
+
+## 🆘 Support
+
+### Getting Help
+- Check the logs: `npm run pm2:logs`
+- View process status: `npm run pm2:status`
+- Run health check: `npm run health:check`
+- Launch dashboard: `npm run dashboard`
+
+### Reporting Issues
+1. Check existing logs for error details
+2. Run relevant diagnostic commands
+3. Provide error logs and system information
+4. Include steps to reproduce the issue
 
 ---
 
-**Last Updated**: $(date)
-**System Version**: PM2 v5.x
-**Status**: All systems operational ✅
+**🚀 Happy Automating!** 
+
+The Enhanced PM2 Automation System is designed to make your development workflow more efficient, secure, and maintainable. Use it wisely and let it handle the repetitive tasks while you focus on building amazing features!
