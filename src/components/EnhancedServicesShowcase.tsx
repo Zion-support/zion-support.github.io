@@ -13,9 +13,9 @@ import {
   TrendingUp,
   Users,
   Clock,
-  CheckCircle
+  CheckCircle,
+  Search
 } from 'lucide-react';
-import { NEXT_GEN_INNOVATIVE_SERVICES_2025 } from '../data/nextGenInnovativeServices2025';
 
 interface Service {
   id: string;
@@ -117,6 +117,7 @@ const categories = ['All', 'AI & Analytics', 'Quantum Computing', 'Cybersecurity
 export default function EnhancedServicesShowcase() {
   const [selectedCategory, setSelectedCategory] = useState('All');
   const [hoveredService, setHoveredService] = useState<string | null>(null);
+  const [searchTerm, setSearchTerm] = useState('');
 
   const filteredServices = selectedCategory === 'All' 
     ? services 
@@ -174,6 +175,26 @@ export default function EnhancedServicesShowcase() {
               {category}
             </motion.button>
           ))}
+        </motion.div>
+
+        {/* Search */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6, delay: 0.2 }}
+          className="flex justify-center mb-12"
+        >
+          <div className="relative">
+            <input
+              type="text"
+              placeholder="Search services..."
+              value={searchTerm}
+              onChange={(e) => setSearchTerm(e.target.value)}
+              className="w-64 px-4 py-2 bg-zion-slate-dark/50 border border-zion-slate/30 rounded-lg text-white placeholder-zion-slate-light focus:outline-none focus:border-zion-cyan focus:ring-2 focus:ring-zion-cyan/20"
+            />
+            <Search className="absolute right-3 top-2.5 w-5 h-5 text-zion-slate-light" />
+          </div>
         </motion.div>
 
         {/* Services Grid */}
@@ -305,82 +326,18 @@ export default function EnhancedServicesShowcase() {
                 to="/contact"
                 className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-purple text-white font-semibold rounded-2xl hover:shadow-2xl hover:shadow-zion-cyan/25 transition-all duration-300 transform hover:-translate-y-1"
               >
-                {category === 'all' ? 'All Services' : category}
-              </button>
-            ))}
-          </div>
-
-          {/* Search */}
-          <div className="relative">
-            <input
-              type="text"
-              placeholder="Search services..."
-              value={searchTerm}
-              onChange={(e) => setSearchTerm(e.target.value)}
-              className="w-64 px-4 py-2 bg-zion-slate-dark/50 border border-zion-slate/30 rounded-lg text-white placeholder-zion-slate-light focus:outline-none focus:border-zion-cyan focus:ring-2 focus:ring-zion-cyan/20"
-            />
-            <Search className="absolute right-3 top-2.5 w-5 h-5 text-zion-slate-light" />
-          </div>
-        </div>
-      </div>
-
-      {/* Services Grid */}
-      <div className="max-w-7xl mx-auto">
-        {filteredServices.length > 0 ? (
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {filteredServices.map((service, index) => (
-              <ServiceCard key={service.id} service={service} index={index} />
-            ))}
-          </div>
-        ) : (
-          <div className="text-center py-16">
-            <div className="text-zion-slate-light text-lg">No services found matching your criteria.</div>
-            <button
-              onClick={() => {
-                setSelectedCategory('all');
-                setSearchTerm('');
-              }}
-              className="mt-4 text-zion-cyan hover:text-zion-cyan-light transition-colors duration-300"
-            >
-              Clear filters
-            </button>
-          </div>
-        )}
-      </div>
-
-      {/* CTA Section */}
-      <div className="text-center mt-20">
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.4 }}
-          className="bg-gradient-to-r from-zion-slate-dark/80 to-zion-slate/80 backdrop-blur-xl border border-zion-cyan/20 rounded-2xl p-8 max-w-4xl mx-auto"
-        >
-          <h2 className="text-3xl font-bold text-white mb-4">
-            Ready to Transform Your Business?
-          </h2>
-          <p className="text-zion-slate-light mb-6 max-w-2xl mx-auto">
-            Our team of experts is ready to help you implement these cutting-edge solutions and drive innovation in your organization.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
-              to="/contact"
-              className="bg-gradient-to-r from-zion-cyan to-zion-blue text-white px-8 py-3 rounded-lg font-semibold hover:from-zion-cyan/90 hover:to-zion-blue/90 transition-all duration-300 flex items-center justify-center"
-            >
-              Get Started Today
-              <ArrowRight className="w-5 h-5 ml-2" />
-            </Link>
-            <Link
-              to="/about"
-              className="border border-zion-cyan/30 text-zion-cyan px-8 py-3 rounded-lg font-semibold hover:bg-zion-cyan/10 transition-all duration-300"
-            >
-              Learn More About Us
-            </Link>
+                Get Started Today
+              </Link>
+              <Link
+                to="/about"
+                className="inline-flex items-center px-8 py-4 border-2 border-zion-cyan text-zion-cyan font-semibold rounded-2xl hover:bg-zion-cyan hover:text-white transition-all duration-300"
+              >
+                Learn More About Us
+              </Link>
+            </div>
           </div>
         </motion.div>
       </div>
-    </div>
+    </section>
   );
-};
-
-export default EnhancedServicesShowcase;
+}
