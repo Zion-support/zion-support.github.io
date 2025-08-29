@@ -1,19 +1,19 @@
 # Link Check Report - 8/29/2025
 
 ## 📊 Summary
-- **Total Links**: 22
-- **Working Links**: 18 ✅
+- **Total Links**: 15
+- **Working Links**: 11 ✅
 - **Broken Links**: 4 ❌
-- **Success Rate**: 81.82%
+- **Success Rate**: 73.33%
 
 ## 🔍 Internal Links
-- **Total**: 17
-- **Working**: 15 ✅
+- **Total**: 11
+- **Working**: 9 ✅
 - **Broken**: 2 ❌
 
 ## 🌐 External Links
-- **Total**: 5
-- **Working**: 3 ✅
+- **Total**: 4
+- **Working**: 2 ✅
 - **Broken**: 2 ❌
 
 ## ❌ Broken Links
