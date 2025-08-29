@@ -1,4 +1,15 @@
 import React from 'react';
+
+export default function WhitePapers() {
+  return (
+    <div className="container mx-auto px-4 py-16">
+      <h1 className="text-3xl font-bold text-white mb-4">White Papers</h1>
+      <p className="text-zion-slate-light">In-depth research and insights.</p>
+    </div>
+  );
+}
+
+import React from 'react';
 import { SEO } from '../components/SEO';
 
 import React, { useState } from 'react';

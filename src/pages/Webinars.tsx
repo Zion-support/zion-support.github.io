@@ -1,4 +1,15 @@
 import React from 'react';
+
+export default function Webinars() {
+  return (
+    <div className="container mx-auto px-4 py-16">
+      <h1 className="text-3xl font-bold text-white mb-4">Webinars</h1>
+      <p className="text-zion-slate-light">Join our upcoming webinars and watch past sessions.</p>
+    </div>
+  );
+}
+
+import React from 'react';
 import { SEO } from '../components/SEO';
 
 export default function Webinars() {

@@ -52,6 +52,12 @@
 }
 
 /* Base Styles */
+/* Lightweight lazy rendering for media */
+img, iframe, video {
+  content-visibility: auto;
+  contain-intrinsic-size: 300px 150px;
+}
+
 .bg-futuristic {
   background: 
     radial-gradient(1200px 600px at 10% -10%, rgba(34, 221, 210, 0.15), transparent 60%),

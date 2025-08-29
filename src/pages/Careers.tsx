@@ -1,4 +1,15 @@
 import React from 'react';
+
+export default function Careers() {
+  return (
+    <div className="container mx-auto px-4 py-16">
+      <h1 className="text-3xl font-bold text-white mb-4">Careers</h1>
+      <p className="text-zion-slate-light">Join us to build the future of technology.</p>
+    </div>
+  );
+}
+
+import React from 'react';
 import { motion } from 'framer-motion';
 import { 
   Users, 

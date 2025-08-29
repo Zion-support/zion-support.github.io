@@ -1,3 +1,14 @@
+import React from 'react';
+
+export default function ServicesPricingPage() {
+  return (
+    <div className="container mx-auto px-4 py-16">
+      <h1 className="text-3xl font-bold text-white mb-4">Services Pricing</h1>
+      <p className="text-zion-slate-light">Transparent pricing for our service offerings.</p>
+    </div>
+  );
+}
+
 import React, { useState } from 'react';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
