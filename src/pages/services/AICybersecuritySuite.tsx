@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { SEO } from '@/components/SEO';
+import SEO from '@/components/SEO';
 import { 
   Shield, 
   Zap, 
@@ -30,7 +30,7 @@ import {
   Monitor,
   Activity
 } from 'lucide-react';
-import { SEO } from '@/components/SEO';
+import SEO from '@/components/SEO';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 

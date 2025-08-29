@@ -1,4 +1,4 @@
-import { SEO } from "@/components/SEO";
+import SEO from "@/components/SEO";
 import { GradientHeading } from "@/components/GradientHeading";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";

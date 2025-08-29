@@ -1,5 +1,5 @@
 import React from 'react';
-import { SEO } from '@/components/SEO';
+import SEO from '@/components/SEO';
 
 const AISEOOptimizer: React.FC = () => (
   <div className="min-h-screen bg-slate-900 text-white">

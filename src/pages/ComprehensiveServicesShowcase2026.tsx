@@ -19,7 +19,7 @@ import {
   CheckCircle,
   ArrowRight
 } from 'lucide-react';
-import { SEO } from '../components/SEO';
+import SEO from '../components/SEO';
 import { 
   revolutionaryMicroSaasServices2026,
   revolutionaryITInfrastructureServices2026,

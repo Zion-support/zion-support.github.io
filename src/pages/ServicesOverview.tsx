@@ -51,7 +51,7 @@ import {
   Eye,
   ArrowUpRight
 } from 'lucide-react';
-import { SEO } from '../components/SEO';
+import SEO from '../components/SEO';
 import { INNOVATIVE_MICRO_SAAS_SERVICES_2025 } from '../data/innovativeMicroSaasServices2025';
 
 const categoryIcons: Record<string, React.ReactNode> = {

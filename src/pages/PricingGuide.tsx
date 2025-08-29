@@ -27,7 +27,7 @@ import {
   Atom,
   Satellite
 } from 'lucide-react';
-import { SEO } from '../components/SEO';
+import SEO from '../components/SEO';
 
 export default function PricingGuide() {
   const [selectedCurrency, setSelectedCurrency] = useState('USD');

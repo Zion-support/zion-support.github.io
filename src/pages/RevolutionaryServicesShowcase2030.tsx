@@ -45,7 +45,7 @@ import {
   SortDesc,
   X
 } from 'lucide-react';
-import { SEO } from '../components/SEO';
+import SEO from '../components/SEO';
 import { REVOLUTIONARY_SERVICES_2030 } from '../data/revolutionaryServices2030';
 
 export default function RevolutionaryServicesShowcase2030() {

@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { useNavigate, useLocation, useParams } from "react-router-dom";
 import { CASE_STUDIES } from "@/data/case-studies";
-import { SEO } from "@/components/SEO";
+import SEO from "@/components/SEO";
 import { Button } from "@/components/ui/button";
 import { ArrowLeft } from "lucide-react";
 export default function CaseStudy() {

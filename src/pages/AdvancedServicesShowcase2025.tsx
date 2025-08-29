@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { SEO } from '../components/SEO';
+import SEO from '../components/SEO';
 import { ADVANCED_MICRO_SAAS_SERVICES_2025 } from '../data/advancedMicroSaasServices2025';
 import { SPECIALIZED_IT_SERVICES_2025 } from '../data/specializedITServices2025';
 import { ADVANCED_AI_SERVICES_2025 } from '../data/advancedAIServices2025';

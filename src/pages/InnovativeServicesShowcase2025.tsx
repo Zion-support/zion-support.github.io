@@ -1,7 +1,7 @@
 import React, { useState, useMemo } from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import { SEO } from '../components/SEO';
+import SEO from '../components/SEO';
 import { 
   Brain, 
   Shield, 
@@ -33,7 +33,7 @@ import {
   Lightbulb,
   Sparkles
 } from 'lucide-react';
-import { SEO } from '../components/SEO';
+import SEO from '../components/SEO';
 import { INNOVATIVE_MICRO_SAAS_SERVICES_2025 } from '../data/innovativeMicroSaasServices2025';
 
 const categoryIcons: Record<string, React.ReactNode> = {

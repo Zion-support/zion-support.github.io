@@ -19,7 +19,7 @@ import React from 'react';
             <QuoteRequestForm />
           </div>
         </div>
-import {SEO} from "@/components/SEO";
+import SEO from "@/components/SEO";
 import {Header} from "@/components/Header";
 import {Footer} from "@/components/Footer";
 import {QuoteRequestForm} from "@/components/QuoteRequestForm";

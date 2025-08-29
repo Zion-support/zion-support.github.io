@@ -47,7 +47,7 @@ import {
   revolutionaryITInfrastructureServices2028, 
   revolutionaryAIServices2028 
 } from '@/data/innovativeMicroSaasServices2028';
-import { SEO } from '@/components/SEO';
+import SEO from '@/components/SEO';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 

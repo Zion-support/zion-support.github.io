@@ -11,7 +11,7 @@ export default function Pricing() {
 
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { SEO } from '@/components/SEO';
+import SEO from '@/components/SEO';
 import { 
   Check, 
   Star, 

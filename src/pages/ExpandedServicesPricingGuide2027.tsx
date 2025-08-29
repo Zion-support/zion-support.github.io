@@ -61,7 +61,7 @@ import {
   AlertTriangle,
   Zap
 } from 'lucide-react';
-import { SEO } from '@/components/SEO';
+import SEO from '@/components/SEO';
 import { 
   ALL_EXPANDED_SERVICES_PRICING,
   type ExpandedServicePricing 

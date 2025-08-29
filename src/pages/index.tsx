@@ -10,7 +10,7 @@ import { BenefitsSection } from "@/components/BenefitsSection";
 import { HowItWorksSection } from "@/components/HowItWorksSection";
 import { WaitlistSection } from "@/components/WaitlistSection";
 import { BlogSection } from "@/components/BlogSection";
-import { SEO } from "@/components/SEO";
+import SEO from "@/components/SEO";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { FeaturedListingsSection } from "@/components/FeaturedListingsSection";

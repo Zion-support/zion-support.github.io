@@ -1,5 +1,5 @@
 import React from 'react';
-import { SEO } from '../../components/SEO';
+import SEO from '../../components/SEO';
 import { motion } from 'framer-motion';
 import { Server, Network, Shield, Database, Cloud, Cpu, Users, CheckCircle, ArrowRight, Settings, Monitor, HardDrive, Wifi, Lock, TrendingUp, BarChart3, Zap } from 'lucide-react';
 
