@@ -1,26 +1,33 @@
-import React, { useEffect, useRef, useState, useCallback } from 'react';
-import { motion, useInView } from 'framer-motion';
+import React, { useEffect, useState, useCallback } from 'react';
+import { useInView } from 'framer-motion';
+
+interface PerformanceMetrics {
+  fcp: number;
+  lcp: number;
+  fid: number;
+  cls: number;
+  ttfb: number;
+}
 
 interface PerformanceOptimizerProps {
-  enableMonitoring?: boolean;
-  enableOptimizations?: boolean;
-  logMetrics?: boolean;
+  children: React.ReactNode;
+  threshold?: number;
+  rootMargin?: string;
 }
 
 export const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
-  enableMonitoring = true,
-  enableOptimizations = true,
-  logMetrics = false
+  children,
+  threshold = 0.1,
+  rootMargin = '50px'
 }) => {
-  const metricsRef = useRef<PerformanceMetrics>({
-    fcp: 0,
-    lcp: 0,
-    fid: 0,
-    cls: 0,
-    ttfb: 0
-  });
+  const [metrics, setMetrics] = useState<PerformanceMetrics | null>(null);
+  const [isOptimized, setIsOptimized] = useState(false);
+  const [enableOptimizations, setEnableOptimizations] = useState(true);
 
+  // Performance monitoring
   useEffect(() => {
+    if (!enableOptimizations) return;
+
     // Monitor First Contentful Paint
     const fcpObserver = new PerformanceObserver((list) => {
       const entries = list.getEntries();
@@ -68,18 +75,17 @@ export const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
       fidObserver.disconnect();
       clsObserver.disconnect();
     };
-  }, []);
+  }, [enableOptimizations]);
 
-  return (
-    <div className="fixed bottom-4 right-4 bg-zion-slate-dark/90 backdrop-blur-sm border border-zion-cyan/20 rounded-lg p-4 text-white text-xs font-mono z-50">
-      <div className="mb-2 font-semibold text-zion-cyan">Performance Metrics</div>
-      <div>FCP: {metrics.fcp.toFixed(0)}ms</div>
-      <div>LCP: {metrics.lcp.toFixed(0)}ms</div>
-      <div>FID: {metrics.fid.toFixed(0)}ms</div>
-      <div>CLS: {metrics.cls.toFixed(3)}</div>
-    </div>
-  );
-};
+  // Resource optimization
+  useEffect(() => {
+    if (!enableOptimizations) return;
+
+    // DNS prefetch for external domains
+    const externalDomains = [
+      'api.ziontechgroup.com',
+      'cdn.ziontechgroup.com'
+    ];
 
     externalDomains.forEach((domain) => {
       const link = document.createElement('link');
@@ -107,64 +113,104 @@ export const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
   const optimizeServiceWorker = useCallback(() => {
     if (!enableOptimizations) return;
 
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('/sw.js')
+        .then(registration => {
+          console.log('SW registered: ', registration);
+        })
+        .catch(registrationError => {
+          console.log('SW registration failed: ', registrationError);
+        });
+    }
+  }, [enableOptimizations]);
+
+  useEffect(() => {
+    optimizeServiceWorker();
+  }, [optimizeServiceWorker]);
+
+  // Image optimization
+  const optimizeImages = useCallback(() => {
+    if (!enableOptimizations) return;
+
+    const images = document.querySelectorAll('img');
+    images.forEach(img => {
+      if (img.dataset.src) {
+        img.src = img.dataset.src;
+        img.classList.remove('lazy');
+      }
+    });
+  }, [enableOptimizations]);
+
+  useEffect(() => {
+    optimizeImages();
+  }, [optimizeImages]);
+
   return (
-    <div
-      ref={containerRef}
-      style={{ height: containerHeight, overflow: 'auto' }}
-      onScroll={handleScroll}
-    >
-      <div style={{ height: totalHeight, position: 'relative' }}>
-        <div style={{ transform: `translateY(${offsetY}px)` }}>
-          {items.slice(startIndex, endIndex).map((item, index) => (
-            <div key={startIndex + index} style={{ height: itemHeight }}>
-              {renderItem(item, startIndex + index)}
-            </div>
-          ))}
+    <>
+      {children}
+      {metrics && (
+        <div className="fixed bottom-4 right-4 bg-zion-slate-dark/90 backdrop-blur-sm border border-zion-cyan/20 rounded-lg p-4 text-white text-xs font-mono z-50">
+          <div className="mb-2 font-semibold text-zion-cyan">Performance Metrics</div>
+          <div>FCP: {metrics.fcp?.toFixed(0) || 'N/A'}ms</div>
+          <div>LCP: {metrics.lcp?.toFixed(0) || 'N/A'}ms</div>
+          <div>FID: {metrics.fid?.toFixed(0) || 'N/A'}ms</div>
+          <div>CLS: {metrics.cls?.toFixed(3) || 'N/A'}</div>
         </div>
-      </div>
-    </div>
+      )}
+    </>
   );
 };
 
-// Debounced input component
-export const DebouncedInput: React.FC<{
-  value: string;
-  onChange: (value: string) => void;
-  placeholder?: string;
-  className?: string;
-  delay?: number;
-}> = ({ value, onChange, placeholder = '', className = '', delay = 300 }) => {
-  const [inputValue, setInputValue] = useState(value);
-  const timeoutRef = useRef<NodeJS.Timeout>();
+// Intersection Observer Hook for lazy loading
+export const useLazyLoad = (threshold = 0.1, rootMargin = '50px') => {
+  const [ref, inView] = useInView({
+    threshold,
+    rootMargin,
+    triggerOnce: true
+  });
+
+  return [ref, inView];
+};
+
+// Resource preloader
+export const ResourcePreloader: React.FC<{ resources: string[] }> = ({ resources }) => {
+  useEffect(() => {
+    resources.forEach(resource => {
+      const link = document.createElement('link');
+      link.rel = 'preload';
+      link.href = resource;
+      link.as = resource.endsWith('.woff2') ? 'font' : 
+                resource.endsWith('.jpg') || resource.endsWith('.png') || resource.endsWith('.webp') ? 'image' : 
+                resource.endsWith('.css') ? 'style' : 'script';
+      document.head.appendChild(link);
+    });
+  }, [resources]);
+
+  return null;
+};
+
+// Performance budget component
+export const PerformanceBudget: React.FC<{ budget: Partial<PerformanceMetrics> }> = ({ budget }) => {
+  const [currentMetrics, setCurrentMetrics] = useState<PerformanceMetrics | null>(null);
 
   useEffect(() => {
-    if (timeoutRef.current) {
-      clearTimeout(timeoutRef.current);
-    }
+    const observer = new PerformanceObserver((list) => {
+      const entries = list.getEntries();
+      // Update metrics based on entries
+      // This is a simplified version - you'd want more sophisticated logic
+    });
 
-    timeoutRef.current = setTimeout(() => {
-      onChange(inputValue);
-    }, delay);
+    observer.observe({ entryTypes: ['navigation', 'paint', 'largest-contentful-paint', 'first-input', 'layout-shift'] });
 
-    return () => {
-      if (timeoutRef.current) {
-        clearTimeout(timeoutRef.current);
-      }
-    };
-  }, [inputValue, onChange, delay]);
+    return () => observer.disconnect();
+  }, []);
 
-  useEffect(() => {
-    setInputValue(value);
-  }, [value]);
+  if (!currentMetrics) return null;
 
   return (
-    <input
-      type="text"
-      value={inputValue}
-      onChange={(e) => setInputValue(e.target.value)}
-      placeholder={placeholder}
-      className={`px-3 py-2 border border-zion-cyan/20 bg-zion-blue-dark/50 text-white placeholder-zion-slate-light rounded-md focus:outline-none focus:border-zion-cyan/40 transition-colors ${className}`}
-    />
+    <div className="performance-budget">
+      {/* Budget visualization */}
+    </div>
   );
 };
 

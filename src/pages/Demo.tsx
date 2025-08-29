@@ -1,291 +1,341 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { motion } from 'framer-motion';
-import { Play, Pause, Square, RotateCcw, Settings, Download, Share2, Eye, EyeOff, Maximize2, Minimize2 } from 'lucide-react';
-import { SEO } from '../components/SEO';
+import { Link } from 'react-router-dom';
+import { 
+  Play, 
+  Calendar, 
+  Clock, 
+  Users, 
+  CheckCircle, 
+  ArrowRight, 
+  Star, 
+  TrendingUp, 
+  Lock, 
+  Database, 
+  Globe, 
+  FileText,
+  MessageCircle,
+  Phone,
+  Mail,
+  MapPin,
+  Shield,
+  Brain,
+  Cpu,
+  Network,
+  Server,
+  Cloud,
+  Smartphone,
+  Monitor,
+  BarChart3,
+  Eye,
+  Building,
+  Video,
+  Image,
+  Music,
+  Code,
+  Zap,
+  Rocket,
+  Leaf,
+  Sparkles,
+  Target,
+  DollarSign,
+  Award,
+  Heart,
+  Atom,
+  PenTool
+} from 'lucide-react';
+import { SEO } from '@/components/SEO';
 
-export default function Demo() {
-  const [isPlaying, setIsPlaying] = useState(false);
-  const [currentTime, setCurrentTime] = useState(0);
-  const [duration, setDuration] = useState(120);
-  const [showControls, setShowControls] = useState(true);
-  const [isFullscreen, setIsFullscreen] = useState(false);
-
-  const demos = [
+const Demo: React.FC = () => {
+  const demoTypes = [
     {
-      id: 1,
-      title: 'AI Business Intelligence Dashboard',
-      description: 'Real-time analytics and insights powered by AI',
-      duration: '2:30',
-      thumbnail: '/demos/ai-bi-dashboard.jpg',
-      category: 'AI & Analytics'
+      icon: Brain,
+      title: 'AI Solutions Demo',
+      description: 'Experience our AI-powered platforms in action',
+      duration: '45 minutes',
+      features: ['Live AI demonstrations', 'Use case scenarios', 'Performance metrics', 'Q&A session'],
+      color: 'from-blue-500 to-cyan-500'
     },
     {
-      id: 2,
-      title: 'Cybersecurity Threat Detection',
-      description: 'AI-powered security monitoring and response',
-      duration: '1:45',
-      thumbnail: '/demos/cybersecurity.jpg',
-      category: 'Security'
+      icon: Cpu,
+      title: 'Technology Stack Demo',
+      description: 'Explore our cutting-edge technology infrastructure',
+      duration: '30 minutes',
+      features: ['Architecture overview', 'Performance testing', 'Security features', 'Scalability demo'],
+      color: 'from-green-500 to-emerald-500'
     },
     {
-      id: 3,
-      title: 'Digital Twin Platform',
-      description: 'IoT and AI integration for smart operations',
-      duration: '3:15',
-      thumbnail: '/demos/digital-twin.jpg',
-      category: 'IoT & AI'
+      icon: Shield,
+      title: 'Security & Compliance Demo',
+      description: 'See our security measures and compliance standards',
+      duration: '40 minutes',
+      features: ['Security protocols', 'Compliance frameworks', 'Penetration testing', 'Audit reports'],
+      color: 'from-purple-500 to-pink-500'
     },
     {
-      id: 4,
-      title: 'AI Content Generation',
-      description: 'Automated content creation and optimization',
-      duration: '2:00',
-      thumbnail: '/demos/ai-content.jpg',
-      category: 'Content AI'
+      icon: Rocket,
+      title: 'Custom Solution Demo',
+      description: 'Tailored demonstration for your specific needs',
+      duration: '60 minutes',
+      features: ['Customized scenarios', 'Industry-specific solutions', 'Integration examples', 'ROI analysis'],
+      color: 'from-orange-500 to-red-500'
     }
   ];
 
-  const handlePlayPause = () => {
-    setIsPlaying(!isPlaying);
-  };
+  const benefits = [
+    'See our solutions in real-world scenarios',
+    'Ask questions directly to our experts',
+    'Understand implementation timelines',
+    'Evaluate ROI and business impact',
+    'Experience user interface and workflows',
+    'Discuss customization options'
+  ];
 
-  const handleTimeUpdate = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setCurrentTime(parseInt(e.target.value));
-  };
-
-  const formatTime = (seconds: number) => {
-    const mins = Math.floor(seconds / 60);
-    const secs = seconds % 60;
-    return `${mins}:${secs.toString().padStart(2, '0')}`;
-  };
+  const demoProcess = [
+    {
+      step: '1',
+      title: 'Schedule Your Demo',
+      description: 'Choose your preferred time and demo type',
+      icon: Calendar
+    },
+    {
+      step: '2',
+      title: 'Pre-Demo Consultation',
+      description: 'Brief call to understand your specific needs',
+      icon: Phone
+    },
+    {
+      step: '3',
+      title: 'Live Demonstration',
+      description: 'Interactive demo with our expert team',
+      icon: Play
+    },
+    {
+      step: '4',
+      title: 'Q&A & Next Steps',
+      description: 'Address questions and plan implementation',
+      icon: MessageCircle
+    }
+  ];
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO 
-        title="Interactive Demos - Zion Tech Group"
-        description="Experience our AI-powered solutions in action through interactive demonstrations. See how our technology can transform your business operations."
+        title="Schedule a Demo - Zion Tech Group"
+        description="Experience our AI and technology solutions firsthand. Schedule a personalized demo to see how Zion Tech Group can transform your business."
+        keywords="demo, demonstration, AI demo, technology demo, Zion Tech Group, schedule demo"
       />
       
       {/* Hero Section */}
-      <div className="relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 to-purple-600/20" />
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="text-center"
-          >
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              Interactive Demos
-            </h1>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Experience our cutting-edge AI solutions firsthand. Watch live demonstrations 
-              and see how our technology can transform your business operations.
-            </p>
-          </motion.div>
-        </div>
-      </div>
-
-      {/* Demo Player Section */}
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        <div className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10">
-          <div className="text-center mb-8">
-            <h2 className="text-3xl font-bold text-white mb-4">AI Business Intelligence Dashboard</h2>
-            <p className="text-gray-300">Real-time analytics and insights powered by artificial intelligence</p>
-          </div>
-
-          {/* Video Player */}
-          <div className="relative bg-black rounded-xl overflow-hidden mb-6">
-            <div className="aspect-video bg-gradient-to-br from-blue-900 to-purple-900 flex items-center justify-center">
-              <div className="text-center text-white">
-                <div className="w-24 h-24 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Play className="w-12 h-12 text-white ml-2" />
-                </div>
-                <p className="text-lg">Demo Video Player</p>
-                <p className="text-sm text-gray-300">Click to start demonstration</p>
-              </div>
-            </div>
-
-            {/* Video Controls */}
-            {showControls && (
-              <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-4">
-                <div className="flex items-center gap-4">
-                  <button
-                    onClick={handlePlayPause}
-                    className="w-10 h-10 bg-white/20 hover:bg-white/30 rounded-full flex items-center justify-center text-white transition-colors"
-                  >
-                    {isPlaying ? <Pause className="w-5 h-5" /> : <Play className="w-5 h-5 ml-0.5" />}
-                  </button>
-                  
-                  <div className="flex-1">
-                    <input
-                      type="range"
-                      min="0"
-                      max={duration}
-                      value={currentTime}
-                      onChange={handleTimeUpdate}
-                      className="w-full h-2 bg-white/20 rounded-lg appearance-none cursor-pointer slider"
-                    />
-                  </div>
-                  
-                  <div className="text-white text-sm">
-                    {formatTime(currentTime)} / {formatTime(duration)}
-                  </div>
-                  
-                  <div className="flex gap-2">
-                    <button className="w-8 h-8 bg-white/20 hover:bg-white/30 rounded flex items-center justify-center text-white transition-colors">
-                      <RotateCcw className="w-4 h-4" />
-                    </button>
-                    <button className="w-8 h-8 bg-white/20 hover:bg-white/30 rounded flex items-center justify-center text-white transition-colors">
-                      <Settings className="w-4 h-4" />
-                    </button>
-                    <button className="w-8 h-8 bg-white/20 hover:bg-white/30 rounded flex items-center justify-center text-white transition-colors">
-                      {isFullscreen ? <Minimize2 className="w-4 h-4" /> : <Maximize2 className="w-4 h-4" />}
-                    </button>
-                  </div>
-                </div>
-              </div>
-            )}
-          </div>
-
-          {/* Demo Actions */}
-          <div className="flex flex-wrap gap-4 justify-center">
-            <button className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-semibold py-3 px-6 rounded-lg transition-all duration-200 flex items-center gap-2">
-              <Play className="w-5 h-5" />
-              Start Demo
-            </button>
-            <button className="bg-white/10 hover:bg-white/20 text-white font-semibold py-3 px-6 rounded-lg transition-all duration-200 border border-white/20 flex items-center gap-2">
-              <Download className="w-5 h-5" />
-              Download Demo
-            </button>
-            <button className="bg-white/10 hover:bg-white/20 text-white font-semibold py-3 px-6 rounded-lg transition-all duration-200 border border-white/20 flex items-center gap-2">
-              <Share2 className="w-5 h-5" />
-              Share Demo
-            </button>
-          </div>
-        </div>
-      </div>
-
-      {/* Available Demos */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl font-bold text-white mb-4">Available Demonstrations</h2>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Explore our comprehensive suite of AI-powered solutions through interactive demonstrations
-          </p>
-        </div>
-
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-          {demos.map((demo, index) => (
+      <section className="relative pt-32 pb-20 overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-r from-purple-900/20 to-pink-900/20" />
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center">
             <motion.div
-              key={demo.id}
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.3, delay: index * 0.1 }}
-              className="bg-white/5 backdrop-blur-lg rounded-2xl overflow-hidden border border-white/10 hover:border-white/20 transition-all duration-200 cursor-pointer group"
+              transition={{ duration: 0.8 }}
+              className="mb-8"
             >
-              <div className="aspect-video bg-gradient-to-br from-blue-900 to-purple-900 relative overflow-hidden">
-                <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
-                <div className="absolute bottom-4 left-4 right-4">
-                  <span className="inline-block px-2 py-1 bg-blue-600/80 text-white text-xs rounded">
-                    {demo.category}
-                  </span>
-                </div>
-                <div className="absolute top-4 right-4">
-                  <span className="inline-block px-2 py-1 bg-white/20 text-white text-xs rounded">
-                    {demo.duration}
-                  </span>
-                </div>
-                <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
-                  <div className="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center">
-                    <Play className="w-8 h-8 text-white ml-1" />
-                  </div>
-                </div>
+              <div className="inline-flex items-center px-4 py-2 bg-purple-500/10 border border-purple-500/20 rounded-full text-purple-400 text-sm font-medium mb-6">
+                <Play className="w-4 h-4 mr-2" />
+                Live Demo
               </div>
-              
-              <div className="p-6">
-                <h3 className="text-lg font-semibold text-white mb-2 group-hover:text-blue-300 transition-colors">
-                  {demo.title}
-                </h3>
-                <p className="text-gray-400 text-sm mb-4">{demo.description}</p>
-                <button className="w-full bg-white/10 hover:bg-white/20 text-white font-medium py-2 px-4 rounded-lg transition-colors text-sm">
-                  Watch Demo
-                </button>
+              <h1 className="text-5xl lg:text-7xl font-bold text-white mb-6">
+                See Our Solutions
+                <span className="block text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-400">
+                  In Action
+                </span>
+              </h1>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
+                Experience the power of our AI and technology solutions firsthand. 
+                Schedule a personalized demo to see how we can transform your business.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <Link
+                  to="/contact"
+                  className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-600 text-white font-semibold rounded-lg hover:from-purple-600 hover:to-pink-700 transition-all duration-200 transform hover:scale-105"
+                >
+                  Schedule Demo
+                  <ArrowRight className="ml-2 w-5 h-5" />
+                </Link>
+                <Link
+                  to="/services"
+                  className="inline-flex items-center px-8 py-4 border border-purple-500/30 text-purple-400 font-semibold rounded-lg hover:bg-purple-500/10 transition-all duration-200"
+                >
+                  View Services
+                </Link>
               </div>
             </motion.div>
-          ))}
-        </div>
-      </div>
-
-      {/* Demo Features */}
-      <div className="bg-white/5 border-t border-white/10">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="text-center">
-              <div className="w-16 h-16 bg-blue-600/20 rounded-2xl flex items-center justify-center mx-auto mb-4">
-                <Eye className="w-8 h-8 text-blue-400" />
-              </div>
-              <h3 className="text-xl font-semibold text-white mb-2">Interactive Experience</h3>
-              <p className="text-gray-400">Hands-on demonstrations that let you explore our solutions</p>
-            </div>
-            
-            <div className="text-center">
-              <div className="w-16 h-16 bg-purple-600/20 rounded-2xl flex items-center justify-center mx-auto mb-4">
-                <Settings className="w-8 h-8 text-purple-400" />
-              </div>
-              <h3 className="text-xl font-semibold text-white mb-2">Customizable Demos</h3>
-              <p className="text-gray-400">Tailored demonstrations based on your specific needs</p>
-            </div>
-            
-            <div className="text-center">
-              <div className="w-16 h-16 bg-green-600/20 rounded-2xl flex items-center justify-center mx-auto mb-4">
-                <Download className="w-8 h-8 text-green-400" />
-              </div>
-              <h3 className="text-xl font-semibold text-white mb-2">Download & Share</h3>
-              <p className="text-gray-400">Save demos for offline viewing or share with your team</p>
-            </div>
           </div>
         </div>
-      </div>
+      </section>
+
+      {/* Demo Types Section */}
+      <section className="py-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-4xl font-bold text-white mb-4">
+              Choose Your Demo Type
+            </h2>
+            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
+              Select the demonstration that best fits your interests and business needs.
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {demoTypes.map((demo, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: index * 0.1 }}
+                viewport={{ once: true }}
+                className="group p-8 rounded-2xl bg-slate-800/50 border border-slate-700/50 hover:border-purple-500/50 hover:bg-slate-800/70 transition-all duration-300 hover:transform hover:scale-105"
+              >
+                <div className={`w-16 h-16 rounded-2xl bg-gradient-to-r ${demo.color} flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}>
+                  <demo.icon className="w-8 h-8 text-white" />
+                </div>
+                <h3 className="text-2xl font-semibold text-white mb-4">{demo.title}</h3>
+                <p className="text-gray-300 mb-4">{demo.description}</p>
+                <div className="flex items-center text-sm text-purple-400 mb-4">
+                  <Clock className="w-4 h-4 mr-2" />
+                  Duration: {demo.duration}
+                </div>
+                <ul className="space-y-2 mb-6">
+                  {demo.features.map((feature, featureIndex) => (
+                    <li key={featureIndex} className="flex items-center text-sm text-gray-300">
+                      <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
+                      {feature}
+                    </li>
+                  ))}
+                </ul>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Benefits Section */}
+      <section className="py-20 bg-slate-800/30">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-4xl font-bold text-white mb-4">
+              Why Schedule a Demo?
+            </h2>
+            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
+              Get the most out of your demo experience with these benefits.
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {benefits.map((benefit, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, x: -20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.8, delay: index * 0.1 }}
+                viewport={{ once: true }}
+                className="flex items-start space-x-4"
+              >
+                <CheckCircle className="w-6 h-6 text-green-400 mt-1 flex-shrink-0" />
+                <p className="text-gray-300 text-lg">{benefit}</p>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Demo Process Section */}
+      <section className="py-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-4xl font-bold text-white mb-4">
+              How Our Demo Process Works
+            </h2>
+            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
+              Simple steps to get you started with a personalized demonstration.
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {demoProcess.map((step, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: index * 0.1 }}
+                viewport={{ once: true }}
+                className="text-center"
+              >
+                <div className="w-20 h-20 rounded-full bg-gradient-to-r from-purple-500 to-pink-500 flex items-center justify-center mx-auto mb-6 text-2xl font-bold text-white">
+                  {step.step}
+                </div>
+                <div className="w-16 h-16 rounded-2xl bg-slate-800/50 border border-slate-700/50 flex items-center justify-center mx-auto mb-4">
+                  <step.icon className="w-8 h-8 text-purple-400" />
+                </div>
+                <h3 className="text-xl font-semibold text-white mb-4">{step.title}</h3>
+                <p className="text-gray-300">{step.description}</p>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
 
       {/* CTA Section */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        <div className="text-center">
-          <h2 className="text-3xl font-bold text-white mb-4">Ready to See More?</h2>
-          <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
-            Schedule a personalized demo with our team and discover how our AI solutions can transform your business.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-semibold py-3 px-8 rounded-lg transition-all duration-200 transform hover:scale-105">
-              Schedule Live Demo
-            </button>
-            <button className="bg-white/10 hover:bg-white/20 text-white font-semibold py-3 px-8 rounded-lg transition-all duration-200 border border-white/20">
-              Contact Sales Team
-            </button>
-          </div>
+      <section className="py-20 bg-gradient-to-r from-purple-900/20 to-pink-900/20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+          >
+            <h2 className="text-4xl font-bold text-white mb-6">
+              Ready to See the Future?
+            </h2>
+            <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
+              Schedule your demo today and discover how our AI and technology solutions 
+              can transform your business operations and drive growth.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link
+                to="/contact"
+                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-600 text-white font-semibold rounded-lg hover:from-purple-600 hover:to-pink-700 transition-all duration-200 transform hover:scale-105"
+              >
+                Schedule Your Demo
+                <ArrowRight className="ml-2 w-5 h-5" />
+              </Link>
+              <Link
+                to="/services"
+                className="inline-flex items-center px-8 py-4 border border-purple-500/30 text-purple-400 font-semibold rounded-lg hover:bg-purple-500/10 transition-all duration-200"
+              >
+                Explore Services
+              </Link>
+            </div>
+          </motion.div>
         </div>
-      </div>
-
-      <style>{`
-        .slider::-webkit-slider-thumb {
-          appearance: none;
-          height: 20px;
-          width: 20px;
-          border-radius: 50%;
-          background: #3b82f6;
-          cursor: pointer;
-        }
-        
-        .slider::-moz-range-thumb {
-          height: 20px;
-          width: 20px;
-          border-radius: 50%;
-          background: #3b82f6;
-          cursor: pointer;
-          border: none;
-        }
-      `}</style>
+      </section>
     </div>
   );
-}
+};
+
+export default Demo;
