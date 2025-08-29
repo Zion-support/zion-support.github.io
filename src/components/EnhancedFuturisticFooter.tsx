@@ -155,13 +155,17 @@ export const EnhancedFuturisticFooter: React.FC = () => {
 
   const quickLinks = [
     { name: 'Services Overview', href: '/services-overview' },
+    { name: 'Services Catalog', href: '/services-catalog' },
+    { name: 'Services Comparison', href: '/services-comparison' },
     { name: 'Pricing Guide', href: '/pricing-guide' },
     { name: 'Help Center', href: '/help' },
     { name: 'FAQ', href: '/faq' },
     { name: 'About Us', href: '/about' },
     { name: 'Contact', href: '/contact' },
     { name: 'Blog', href: '/blog' },
-    { name: 'Careers', href: '/careers' }
+    { name: 'Careers', href: '/careers' },
+    { name: 'Demo', href: '/demo' },
+    { name: 'Request Quote', href: '/request-quote' }
   ];
 
   const companyLinks = [

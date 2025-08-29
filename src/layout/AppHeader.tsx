@@ -141,10 +141,12 @@ export function AppHeader() {
   ];
 
   const quickLinks = [
-    { name: 'Innovative Services 2025', href: '/innovative-services-showcase-2025', icon: Star, description: 'Latest cutting-edge solutions' },
-    { name: 'Revolutionary Services 2030', href: '/revolutionary-services-showcase-2030', icon: TrendingUp, description: 'Future-ready services' },
-    { name: 'Pricing Guide 2030', href: '/pricing-2030', icon: DollarSign, description: 'Advanced pricing strategies' },
+    { name: 'Services Catalog', href: '/services-catalog', icon: Star, description: 'Complete services catalog' },
+    { name: 'Services Comparison', href: '/services-comparison', icon: TrendingUp, description: 'Compare our services' },
+    { name: 'Pricing Guide', href: '/pricing-guide', icon: DollarSign, description: 'View pricing options' },
     { name: 'Request Quote', href: '/request-quote', icon: MessageCircle, description: 'Get custom pricing' },
+    { name: 'Revolutionary Services 2030', href: '/revolutionary-services-showcase-2030', icon: Rocket, description: 'Future-ready services' },
+    { name: 'Innovative Services 2025', href: '/innovative-services-showcase-2025', icon: Brain, description: 'Latest cutting-edge solutions' },
   ];
 
   const supportLinks = [

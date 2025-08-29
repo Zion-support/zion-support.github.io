@@ -9,18 +9,20 @@ export function MainSidebar() {
             title: 'Main',
             items: [
                 { key: 'home', href: '/', icon: <Home className="w-4 h-4"/>, label: 'Home' },
-                { key: 'marketplace', href: '/marketplace', icon: <ShoppingCart className="w-4 h-4"/>, label: 'Marketplace' },
                 { key: 'services', href: '/services', icon: <Settings className="w-4 h-4"/>, label: 'Services' },
-                { key: 'talent', href: '/talent', icon: <Users className="w-4 h-4"/>, label: 'Talent' },
-                { key: 'equipment', href: '/equipment', icon: <BarChart3 className="w-4 h-4"/>, label: 'Equipment' },
+                { key: 'services-catalog', href: '/services-catalog', icon: <BarChart3 className="w-4 h-4"/>, label: 'Services Catalog' },
+                { key: 'services-comparison', href: '/services-comparison', icon: <ShoppingCart className="w-4 h-4"/>, label: 'Compare Services' },
+                { key: 'pricing', href: '/pricing-guide', icon: <Users className="w-4 h-4"/>, label: 'Pricing' },
             ]
         },
         {
             title: 'Company',
             items: [
                 { key: 'about', href: '/about', icon: <Building className="w-4 h-4"/>, label: 'About Us' },
+                { key: 'team', href: '/team', icon: <Users className="w-4 h-4"/>, label: 'Team' },
                 { key: 'careers', href: '/careers', icon: <Briefcase className="w-4 h-4"/>, label: 'Careers' },
                 { key: 'partners', href: '/partners', icon: <Users className="w-4 h-4"/>, label: 'Partners' },
+                { key: 'press', href: '/press', icon: <FileText className="w-4 h-4"/>, label: 'Press' },
                 { key: 'contact', href: '/contact', icon: <Mail className="w-4 h-4"/>, label: 'Contact' },
             ]
         },
@@ -28,18 +30,21 @@ export function MainSidebar() {
             title: 'Resources',
             items: [
                 { key: 'blog', href: '/blog', icon: <FileText className="w-4 h-4"/>, label: 'Blog' },
-                { key: 'community', href: '/community', icon: <Globe className="w-4 h-4"/>, label: 'Community' },
-                { key: 'green-it', href: '/green-it', icon: <Leaf className="w-4 h-4"/>, label: 'Green IT' },
-                { key: 'zion-hire-ai', href: '/zion-hire-ai', icon: <Zap className="w-4 h-4"/>, label: 'AI Hiring' },
+                { key: 'docs', href: '/docs', icon: <Code className="w-4 h-4"/>, label: 'Documentation' },
+                { key: 'webinars', href: '/webinars', icon: <Calendar className="w-4 h-4"/>, label: 'Webinars' },
+                { key: 'training', href: '/training', icon: <Zap className="w-4 h-4"/>, label: 'Training' },
+                { key: 'case-studies', href: '/case-studies', icon: <BarChart3 className="w-4 h-4"/>, label: 'Case Studies' },
+                { key: 'white-papers', href: '/white-papers', icon: <FileText className="w-4 h-4"/>, label: 'White Papers' },
             ]
         },
         {
             title: 'Support',
             items: [
                 { key: 'help', href: '/help', icon: <HelpCircle className="w-4 h-4"/>, label: 'Help Center' },
-                { key: 'developers', href: '/developers', icon: <Code className="w-4 h-4"/>, label: 'Developer Portal' },
-                { key: 'api-docs', href: '/api-docs', icon: <Code className="w-4 h-4"/>, label: 'API Docs' },
-                { key: 'sitemap', href: '/sitemap', icon: <Calendar className="w-4 h-4"/>, label: 'Sitemap' },
+                { key: 'support', href: '/support', icon: <Users className="w-4 h-4"/>, label: 'Support' },
+                { key: 'faq', href: '/faq', icon: <HelpCircle className="w-4 h-4"/>, label: 'FAQ' },
+                { key: 'demo', href: '/demo', icon: <Code className="w-4 h-4"/>, label: 'Demo' },
+                { key: 'sitemap', href: '/sitemap', icon: <Globe className="w-4 h-4"/>, label: 'Sitemap' },
             ]
         }
     ];

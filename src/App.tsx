@@ -20,7 +20,7 @@ const ComprehensiveServices = React.lazy(() => import('./pages/ComprehensiveServ
 const AIServices = React.lazy(() => import('./pages/AIServices'));
 const ITServices = React.lazy(() => import('./pages/ITServices'));
 const MicroSaaS = React.lazy(() => import('./pages/MicroSaaS'));
-const MicroSAASSolutions = React.lazy(() => import('./pages/services/MicroSAASSolutions'));
+const MicroSAASSolutions = React.lazy(() => import('./pages/MicroSAASSolutions'));
 const RequestQuote = React.lazy(() => import('./pages/RequestQuote'));
 const Dashboard = React.lazy(() => import('./pages/Dashboard'));
 const Login = React.lazy(() => import('./pages/Login'));
@@ -29,6 +29,7 @@ const Privacy = React.lazy(() => import('./pages/Privacy'));
 const Terms = React.lazy(() => import('./pages/Terms'));
 const Cookies = React.lazy(() => import('./pages/Cookies'));
 const SearchPage = React.lazy(() => import('./pages/SearchPage'));
+const ServicesComparisonPage = React.lazy(() => import('./pages/ServicesComparisonPage'));
 
 // New pages
 const ServicesOverview = React.lazy(() => import('./pages/ServicesOverview'));
@@ -44,7 +45,7 @@ const Sitemap = React.lazy(() => import('./pages/Sitemap'));
 const Signup = React.lazy(() => import('./pages/Signup'));
 
 // Enhanced services pages - only import existing ones
-const ComprehensivePricingGuide2027 = React.lazy(() => import('./pages/ComprehensivePricingGuide2027.tsx'));
+const ComprehensivePricingGuide2027 = React.lazy(() => import('./pages/ComprehensivePricingGuide2027'));
 const ComprehensiveServicesLanding2025 = React.lazy(() => import('./pages/ComprehensiveServicesLanding2025'));
 const RevolutionaryServices2030 = React.lazy(() => import('./pages/RevolutionaryServices2030'));
 
@@ -94,6 +95,11 @@ const VendorRiskManagement = React.lazy(() => import('./pages/services/VendorRis
 const AISEOOptimizer = React.lazy(() => import('./pages/services/AISEOOptimizer'));
 const SaaSChurnPredictor = React.lazy(() => import('./pages/services/SaaSChurnPredictor'));
 const AIIncidentPostmortems = React.lazy(() => import('./pages/services/AIIncidentPostmortems'));
+const SOC2ComplianceTracker = React.lazy(() => import('./pages/services/SOC2ComplianceTracker'));
+const EmployeeSchedulingSaaS = React.lazy(() => import('./pages/services/EmployeeSchedulingSaaS'));
+const AISupportHelpdesk = React.lazy(() => import('./pages/services/AISupportHelpdesk'));
+const AffiliateMarketingTracker = React.lazy(() => import('./pages/services/AffiliateMarketingTracker'));
+const UptimeSLAMonitor = React.lazy(() => import('./pages/services/UptimeSLAMonitor'));
 
 // New services added in this iteration
 const APIMonitoringSaaS = React.lazy(() => import('./pages/services/APIMonitoringSaaS'));
@@ -142,6 +148,7 @@ const Compliance = React.lazy(() => import('./pages/Compliance'));
 const OnsiteSupport = React.lazy(() => import('./pages/OnsiteSupport'));
 
 const Careers = React.lazy(() => import('./pages/Careers'));
+const DeveloperPortal = React.lazy(() => import('./pages/DeveloperPortal'));
 
 // Company/resources simple pages (declared above in New pages section)
 
@@ -194,6 +201,8 @@ function App() {
               <Route path="/signup" element={<Signup />} />
               <Route path="/status" element={<Status />} />
               <Route path="/demo" element={<Demo />} />
+              <Route path="/search" element={<SearchPage />} />
+              <Route path="/developer-portal" element={<DeveloperPortal />} />
               {/** duplicates removed */}
               <Route path="/onsite-support" element={<OnsiteSupport />} />
               <Route path="/pricing" element={<ComprehensivePricingGuide2027 />} />
