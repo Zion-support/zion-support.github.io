@@ -621,5 +621,98 @@ export const innovativeMicroSaasServices2025 = [
     }
 ];
 
+export const additionalInnovativeMicroSaasServices = [
+  {
+    id: 'ai-customer-sentiment-analyzer',
+    title: 'AI Customer Sentiment Analyzer Pro',
+    description: 'Real-time sentiment analysis across all customer touchpoints with predictive insights and automated response recommendations.',
+    category: 'AI & Analytics',
+    price: '$199',
+    billing: 'month',
+    features: [
+      'Multi-channel sentiment tracking (email, chat, social, reviews)',
+      'Real-time sentiment scoring and alerts',
+      'Predictive customer churn detection',
+      'Automated response recommendations',
+      'Sentiment trend analysis and reporting',
+      'Integration with CRM and support systems'
+    ],
+    ctaLabel: 'Analyze Sentiment',
+    href: 'https://ziontechgroup.com/services/ai-customer-sentiment-analyzer'
+  },
+  {
+    id: 'smart-inventory-optimizer',
+    title: 'Smart Inventory Optimizer',
+    description: 'AI-powered inventory management with demand forecasting, automated reordering, and cost optimization.',
+    category: 'Digital Innovation',
+    price: '$149',
+    billing: 'month',
+    features: [
+      'Machine learning demand forecasting',
+      'Automated reorder point calculations',
+      'Multi-warehouse optimization',
+      'Seasonal trend analysis',
+      'Cost optimization recommendations',
+      'Real-time inventory tracking and alerts'
+    ],
+    ctaLabel: 'Optimize Inventory',
+    href: 'https://ziontechgroup.com/services/smart-inventory-optimizer'
+  },
+  {
+    id: 'ai-powered-crm-enhancer',
+    title: 'AI-Powered CRM Enhancer',
+    description: 'Transform your existing CRM with AI capabilities including lead scoring, opportunity prediction, and automated follow-ups.',
+    category: 'AI & Analytics',
+    price: '$89',
+    billing: 'month',
+    features: [
+      'Intelligent lead scoring and prioritization',
+      'Opportunity win probability prediction',
+      'Automated follow-up scheduling',
+      'Customer behavior pattern analysis',
+      'Sales performance insights and coaching',
+      'Integration with major CRM platforms'
+    ],
+    ctaLabel: 'Enhance CRM',
+    href: 'https://ziontechgroup.com/services/ai-powered-crm-enhancer'
+  },
+  {
+    id: 'smart-contract-lifecycle-manager',
+    title: 'Smart Contract Lifecycle Manager',
+    description: 'End-to-end contract management with AI-powered risk assessment, compliance monitoring, and automated renewals.',
+    category: 'Micro SaaS Solutions',
+    price: '$299',
+    billing: 'month',
+    features: [
+      'AI-powered contract risk assessment',
+      'Automated compliance monitoring',
+      'Contract renewal reminders and automation',
+      'Template library and version control',
+      'Electronic signature integration',
+      'Contract performance analytics'
+    ],
+    ctaLabel: 'Manage Contracts',
+    href: 'https://ziontechgroup.com/services/smart-contract-lifecycle-manager'
+  },
+  {
+    id: 'ai-powered-hr-recruitment-platform',
+    title: 'AI-Powered HR Recruitment Platform',
+    description: 'Streamline your hiring process with AI candidate matching, automated screening, and bias-free selection.',
+    category: 'AI & Analytics',
+    price: '$179',
+    billing: 'month',
+    features: [
+      'AI-powered candidate-job matching',
+      'Automated resume screening and ranking',
+      'Bias-free candidate selection',
+      'Interview scheduling automation',
+      'Candidate experience tracking',
+      'Hiring analytics and insights'
+    ],
+    ctaLabel: 'Streamline Hiring',
+    href: 'https://ziontechgroup.com/services/ai-powered-hr-recruitment-platform'
+  }
+];
+
 export const INNOVATIVE_MICRO_SAAS_SERVICES_2025 = innovativeMicroSaasServices2025;
 export default innovativeMicroSaasServices2025;

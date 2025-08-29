@@ -1,8 +1,7 @@
-import { ArrowRight, Atom, BookOpen, Brain, Building, Building2, ChevronDown, Cloud, Code, Cpu, DollarSign, FileText, Globe, HeartHandshake, Heart, HelpCircle, Leaf, Lock, Mail, MapPin, Menu, MessageCircle, PenTool, Phone, Rocket, Scale, Search, Settings, Shield, ShoppingCart, Star, Target, TrendingUp, Users, X, Zap, Truck, Play } from 'lucide-react';
+import { ArrowRight, Atom, BookOpen, Brain, Building, Building2, ChevronDown, Cloud, Code, Cpu, DollarSign, FileText, Globe, HeartHandshake, Heart, HelpCircle, Leaf, Lock, Mail, MapPin, Menu, MessageCircle, PenTool, Phone, Rocket, Scale, Search, Settings, Shield, ShoppingCart, Star, Target, TrendingUp, Users, X, Zap, User, Bell, Award, GraduationCap, LifeBuoy } from 'lucide-react';
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { ThemeToggle } from '../components/ThemeToggle';
-
 export function AppHeader() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [searchQuery, setSearchQuery] = useState('');
@@ -11,16 +10,13 @@ export function AppHeader() {
   const [resourcesDropdownOpen, setResourcesDropdownOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const [isSearching, setIsSearching] = useState(false);
-
   useEffect(() => {
     const handleScroll = () => {
       setScrolled(window.scrollY > 10);
     };
-
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
-
   const handleSearch = async (e: React.FormEvent) => {
     e.preventDefault();
     if (searchQuery.trim()) {
@@ -33,7 +29,6 @@ export function AppHeader() {
       }
     }
   };
-
   const navigation = [
     { name: 'Home', href: '/', current: true },
     { name: 'Services', href: '/services', current: false, hasDropdown: true },
@@ -42,76 +37,16 @@ export function AppHeader() {
     { name: 'About', href: '/about', current: false },
     { name: 'Contact', href: '/contact', current: false },
   ];
-
   const services = [
-    { name: 'AI Enterprise Orchestrator', href: '/services/ai-enterprise-orchestrator', icon: Brain, description: 'Multi-agent AI coordination & workflow automation' },
-    { name: 'AI & Analytics', href: '/services/ai-business-intelligence', icon: Brain, description: 'Machine Learning & Data Science' },
-    { name: 'AI Cybersecurity Suite', href: '/services/ai-cybersecurity-suite', icon: Shield, description: 'AI-Powered Threat Detection & Response' },
-    { name: 'Quantum AI Platform', href: '/services/quantum-ai-platform', icon: Zap, description: 'Next-Generation Quantum Computing' },
-    { name: 'AI Healthcare Analytics', href: '/services/ai-healthcare-analytics', icon: Heart, description: 'Predictive Diagnostics & Care Optimization' },
-    { name: 'Digital Twin', href: '/services/digital-twin', icon: Rocket, description: 'Simulation & Monitoring' },
-    { name: 'Cloud & DevOps', href: '/services/cloud-devops', icon: Cloud, description: 'Infrastructure & Automation' },
-    { name: 'IoT & Edge', href: '/services/iot-edge', icon: Cpu, description: 'Smart Devices & Networks' },
-    { name: 'Blockchain', href: '/services/blockchain-enterprise-solutions', icon: Lock, description: 'DeFi & Smart Contracts' },
-    { name: 'Healthcare Tech', href: '/services/healthcare-tech', icon: Heart, description: 'AI Medicine & Diagnostics' },
-    { name: 'Sustainability', href: '/services/sustainability', icon: Globe, description: 'Green IT Solutions' },
-    { name: 'Micro SaaS', href: '/services/micro-saas-solutions', icon: ShoppingCart, description: 'Productized SaaS for niches' },
-    { name: 'AI Auto Email', href: '/services/ai-auto-email-responder', icon: MessageCircle, description: 'Faster replies, CRM logging' },
-    { name: 'Feedback Surveys', href: '/services/mobile-feedback-surveys', icon: Users, description: 'NPS/CSAT with AI insights' },
-    { name: 'LLM Content Studio', href: '/services/llm-content-studio', icon: BookOpen, description: 'On-brand AI content' },
-    { name: 'FinOps Advisor', href: '/services/finops-advisor', icon: DollarSign, description: 'Cloud cost optimization' },
-    { name: 'AI Lead Scoring', href: '/services/ai-lead-scoring', icon: TrendingUp, description: 'Prioritize deals with ML' },
-    { name: 'Website AI Chatbot', href: '/services/website-ai-chatbot', icon: MessageCircle, description: '24/7 on-site assistant' },
-    { name: 'RAG Search', href: '/services/rag-search', icon: BookOpen, description: 'AI answers with citations' },
-    { name: 'MLOps Pipeline', href: '/services/mlops-pipeline', icon: Settings, description: 'Train, deploy, monitor' },
-    { name: 'eCommerce Personalization', href: '/services/ecommerce-personalization', icon: ShoppingCart, description: 'Recos & search' },
-    { name: 'AI Sales Automation', href: '/innovative-services-showcase-2025', icon: TrendingUp, description: 'Complete sales automation suite' },
-    { name: 'AI Customer Support', href: '/innovative-services-showcase-2025', icon: MessageCircle, description: 'Intelligent support platform' },
-    { name: 'AI Financial Analytics', href: '/innovative-services-showcase-2025', icon: DollarSign, description: 'Advanced financial insights' },
-    { name: 'AI Supply Chain', href: '/innovative-services-showcase-2025', icon: Settings, description: 'Supply chain optimization' },
-    { name: 'AI HR Platform', href: '/innovative-services-showcase-2025', icon: Users, description: 'HR automation & analytics' },
-    { name: 'AI Project Management', href: '/innovative-services-showcase-2025', icon: Target, description: 'Smart project optimization' },
-    { name: 'AI Marketing Automation', href: '/innovative-services-showcase-2025', icon: BarChart3, description: 'Marketing campaign optimization' },
-    { name: 'AI Learning Management', href: '/innovative-services-showcase-2025', icon: GraduationCap, description: 'Personalized learning platform' },
-    { name: 'AI Legal Automation', href: '/innovative-services-showcase-2025', icon: FileText, description: 'Legal document automation' },
-    { name: 'AI Healthcare Analytics', href: '/innovative-services-showcase-2025', icon: Heart, description: 'Healthcare insights platform' },
-    { name: 'AI Project Management Platform', href: '/services/ai-project-management-platform', icon: Target, description: 'AI-powered project optimization' },
-    { name: 'AI Cybersecurity Threat Detection', href: '/services/ai-cybersecurity-threat-detection', icon: Shield, description: 'Advanced threat detection' },
-    { name: 'AI Financial Trading Platform', href: '/services/ai-financial-trading-platform', icon: DollarSign, description: 'AI-powered trading' },
-    { name: 'AI Healthcare Analytics Platform', href: '/services/ai-healthcare-analytics-platform', icon: Heart, description: 'Healthcare analytics platform' }
-  ];
-
-  const servicesCategories = [
-    {
-      name: 'Core Services',
-      icon: Settings,
-      color: 'from-blue-600 to-cyan-600',
-      services: [
-        { name: 'Services Overview', href: '/services-overview', description: 'Complete service portfolio' },
-        { name: 'AI Services', href: '/ai-services', description: 'AI-powered solutions' },
-        { name: 'IT Services', href: '/it-services', description: 'Enterprise IT solutions' },
-        { name: 'Micro SaaS', href: '/micro-saas', description: 'Scalable software solutions' }
-      ]
-    },
-    {
-      name: 'AI & Analytics',
-      icon: Brain,
-      color: 'from-purple-600 to-pink-600',
-      services: [
-        { name: 'AI Enterprise Orchestrator', href: '/services/ai-enterprise-orchestrator', description: 'Multi-agent AI coordination & workflow automation' },
-        { name: 'AI Business Intelligence', href: '/services/ai-business-intelligence', description: 'Machine Learning & Data Science' },
-        { name: 'AI Sales Copilot', href: '/services/ai-sales-copilot', description: 'AI-powered sales automation' },
-        { name: 'AI Compliance Assistant', href: '/services/ai-compliance-assistant', description: 'Regulatory compliance automation' },
-        { name: 'LLM Content Studio', href: '/services/llm-content-studio', description: 'AI content generation' },
-        { name: 'AI Sales Automation Suite', href: '/innovative-services-showcase-2025', description: 'Complete sales automation' },
-        { name: 'AI Customer Support Platform', href: '/innovative-services-showcase-2025', description: 'Intelligent support system' },
-        { name: 'AI Financial Analytics', href: '/innovative-services-showcase-2025', description: 'Financial insights platform' },
-        { name: 'AI Project Management Platform', href: '/services/ai-project-management-platform', description: 'AI-powered project optimization' },
-        { name: 'AI Cybersecurity Threat Detection', href: '/services/ai-cybersecurity-threat-detection', description: 'Advanced threat detection' },
-        { name: 'AI Financial Trading Platform', href: '/services/ai-financial-trading-platform', description: 'AI-powered trading' },
-        { name: 'AI Healthcare Analytics Platform', href: '/services/ai-healthcare-analytics-platform', description: 'Healthcare analytics platform' }
-      ]
 =======
+    { 
+      name: 'Comprehensive Services 2026', 
+      href: '/comprehensive-services-showcase-2026', 
+      icon: Rocket, 
+      description: 'All Services & Pricing',
+      featured: true,
+      color: 'from-cyan-500 to-blue-500'
+    },
     { 
       name: 'Innovative Micro SAAS 2025', 
       href: '/innovative-micro-saas-services-2025', 
@@ -129,8 +64,8 @@ export function AppHeader() {
       color: 'from-purple-500 to-cyan-500'
     },
     { 
-      name: 'AI Healthcare Analytics', 
-      href: '/services/ai-healthcare-analytics', 
+      name: 'AI Healthcare Platform', 
+      href: '/services/ai-healthcare-platform', 
       icon: Heart, 
       description: 'Medical AI & Diagnostics',
       featured: true,
@@ -144,26 +79,6 @@ export function AppHeader() {
       featured: true,
       color: 'from-blue-500 to-indigo-500'
     },
-    {
-      name: 'Cybersecurity',
-      icon: Shield,
-      color: 'from-indigo-600 to-purple-600',
-      services: [
-        { name: 'AI Cybersecurity Suite', href: '/services/ai-cybersecurity-suite', description: 'AI-Powered Threat Detection & Response' },
-        { name: 'AI Compliance Copilot', href: '/services/ai-compliance-copilot', description: 'AI-Powered Security' },
-        { name: 'Zero Trust Architecture', href: '/services/zero-trust-network-architecture', description: 'Advanced security' }
-      ]
-    },
-    {
-      name: 'Emerging Technologies',
-      icon: Zap,
-      color: 'from-blue-600 to-cyan-600',
-      services: [
-        { name: 'Quantum AI Platform', href: '/services/quantum-ai-platform', description: 'Next-Generation Quantum Computing' },
-        { name: 'AI Healthcare Analytics', href: '/services/ai-healthcare-analytics', description: 'Predictive Diagnostics & Care' },
-        { name: 'Edge Computing Platform', href: '/services/edge-computing-platform', description: 'Distributed computing at the edge' }
-      ]
-    },
     { 
       name: 'AI Cybersecurity', 
       href: '/services/ai-cybersecurity', 
@@ -173,28 +88,20 @@ export function AppHeader() {
       color: 'from-green-500 to-blue-500'
     },
     { 
-      name: 'AI Financial Trading', 
-      href: '/services/ai-financial-trading', 
-      icon: TrendingUp, 
-      description: 'AI-Powered Trading Systems',
+      name: 'Quantum Computing', 
+      href: '/services/quantum-computing', 
+      icon: Atom, 
+      description: 'Quantum AI & Optimization',
       featured: true,
-      color: 'from-green-500 to-emerald-500'
+      color: 'from-purple-500 to-pink-500'
     },
     { 
-      name: 'AI Supply Chain Optimization', 
-      href: '/services/ai-supply-chain-optimization', 
-      icon: Truck, 
-      description: 'Supply Chain AI Solutions',
+      name: 'IoT Edge Computing', 
+      href: '/services/iot-edge-computing', 
+      icon: Cpu, 
+      description: 'IoT & Real-time Processing',
       featured: true,
-      color: 'from-orange-500 to-red-500'
-    },
-    { 
-      name: 'AI Legal Document Analysis', 
-      href: '/services/ai-legal-document-analysis', 
-      icon: FileText, 
-      description: 'Legal AI & Document Processing',
-      featured: true,
-      color: 'from-blue-500 to-purple-500'
+      color: 'from-blue-500 to-cyan-500'
     },
     { 
       name: 'Digital Twin Platform', 
@@ -227,9 +134,40 @@ export function AppHeader() {
       description: 'Future Technology Solutions',
       featured: true,
       color: 'from-indigo-500 to-purple-500'
+    },
+    { 
+      name: 'Pricing Guide 2026', 
+      href: '/comprehensive-pricing-guide-2026', 
+      icon: DollarSign, 
+      description: 'Complete Pricing & ROI Analysis',
+      featured: true,
+      color: 'from-green-500 to-emerald-500'
+    },
+    { 
+      name: 'AI Business Intelligence', 
+      href: '/services/ai-business-intelligence', 
+      icon: Brain, 
+      description: 'Machine Learning & Data Science',
+      featured: false,
+      color: 'from-purple-500 to-cyan-500'
+    },
+    { 
+      name: 'Cloud DevOps', 
+      href: '/services/cloud-devops', 
+      icon: Cloud, 
+      description: 'DevOps & Infrastructure',
+      featured: false,
+      color: 'from-blue-500 to-cyan-500'
+    },
+    { 
+      name: 'Digital Twin Platform', 
+      href: '/services/digital-twin', 
+      icon: Globe, 
+      description: 'Virtual Replicas & Simulation',
+      featured: false,
+      color: 'from-green-500 to-emerald-500'
     }
   ];
-
   const solutions = [
     {
       name: 'Enterprise Solutions',
@@ -239,42 +177,41 @@ export function AppHeader() {
       featured: true
     },
     {
+      name: 'SMB Solutions',
+      href: '/solutions',
+      icon: Building,
+      description: 'Small to medium business growth',
+      featured: false
+    },
+    {
+      name: 'Startup Solutions',
+      href: '/solutions',
+      icon: Rocket,
+      description: 'Accelerate your startup growth',
+      featured: false
+    },
+    {
+      name: 'Government Solutions',
+      href: '/solutions',
+      icon: Shield,
+      description: 'Public sector innovation',
+      featured: false
+    },
+    {
       name: 'Healthcare Solutions',
-      href: '/solutions#healthcare',
+      href: '/solutions',
       icon: Heart,
       description: 'Digital health transformation',
       featured: true
     },
     {
       name: 'Financial Solutions',
-      href: '/solutions#financial',
+      href: '/solutions',
       icon: TrendingUp,
       description: 'Fintech innovation & compliance',
       featured: true
-    },
-    {
-      name: 'Manufacturing Solutions',
-      href: '/solutions#manufacturing',
-      icon: Building,
-      description: 'Smart manufacturing & automation',
-      featured: false
-    },
-    {
-      name: 'Legal Solutions',
-      href: '/solutions#legal',
-      icon: Scale,
-      description: 'Legal tech & compliance',
-      featured: false
-    },
-    {
-      name: 'Research & Development',
-      href: '/research-development',
-      icon: Code,
-      description: 'Innovation & R&D support',
-      featured: false
     }
   ];
-
   const resources = [
     {
       name: 'Blog & Insights',
@@ -324,33 +261,29 @@ export function AppHeader() {
       icon: DollarSign,
       description: 'Complete pricing information',
       featured: true
-    },
-    {
-      name: 'Training & Certification',
-      href: '/training',
-      icon: BookOpen,
-      description: 'Professional development',
-      featured: false
     }
   ];
-
   const quickLinks = [
-    { name: 'Marketplace', href: '/marketplace', icon: ShoppingCart },
-    { name: 'Request Quote', href: '/request-quote', icon: MessageCircle },
-    { name: 'Pricing', href: '/pricing', icon: DollarSign },
-    { name: 'Careers', href: '/careers', icon: Users },
-    { name: 'Partners', href: '/partners', icon: HeartHandshake },
-    { name: 'Schedule Demo', href: '/schedule-demo', icon: Play },
-    { name: 'Privacy', href: '/privacy', icon: Shield },
-    { name: 'Terms', href: '/terms', icon: BookOpen },
+    { name: 'Innovative Services 2025', href: '/innovative-services-showcase-2025', icon: Star, description: 'Latest cutting-edge solutions' },
+    { name: 'Revolutionary Services 2030', href: '/revolutionary-services-showcase-2030', icon: TrendingUp, description: 'Future-ready services' },
+    { name: 'Emerging Tech 2030', href: '/emerging-tech-2030', icon: Rocket, description: 'Next-generation technologies' },
+    { name: 'Pricing Guide 2030', href: '/pricing-2030', icon: DollarSign, description: 'Advanced pricing strategies' },
+    { name: 'Request Quote', href: '/request-quote', icon: MessageCircle, description: 'Get custom pricing' },
   ];
-
+  const supportLinks = [
+    { name: 'FAQ', href: '/faq', icon: HelpCircle },
+    { name: 'Blog', href: '/blog', icon: BookOpen },
+    { name: 'Help', href: '/help', icon: MessageCircle },
+    { name: 'Partners', href: '/partners', icon: Users },
+    { name: 'Documentation', href: '/docs', icon: BookOpen },
+    { name: 'Training', href: '/training', icon: GraduationCap },
+    { name: 'Support', href: '/support', icon: LifeBuoy },
+  ];
   const contactInfo = {
     phone: '+1 302 464 0950',
     email: 'kleber@ziontechgroup.com',
     address: '364 E Main St STE 1008 Middletown DE 19709'
   };
-
   return (
     <>
       <header className={`sticky top-0 z-50 w-full transition-all duration-300 ${
@@ -376,7 +309,6 @@ export function AppHeader() {
                 </div>
               </Link>
             </div>
-            
             {/* Desktop Navigation */}
             <nav className="hidden lg:flex items-center space-x-8">
               {navigation.map((item) => (
@@ -409,7 +341,6 @@ export function AppHeader() {
                             ? 'rotate-180' : ''
                         }`} />
                       </button>
-
                       {/* Services Dropdown */}
                       {item.name === 'Services' && servicesDropdownOpen && (
                         <div className="absolute top-full left-0 mt-2 w-[800px] bg-slate-800/95 backdrop-blur-xl rounded-2xl border border-slate-700/50 shadow-2xl shadow-black/50 overflow-hidden">
@@ -459,7 +390,6 @@ export function AppHeader() {
                           </div>
                         </div>
                       )}
-
                       {/* Solutions Dropdown */}
                       {item.name === 'Solutions' && solutionsDropdownOpen && (
                         <div className="absolute top-full left-0 mt-2 w-[600px] bg-slate-800/95 backdrop-blur-xl rounded-2xl border border-slate-700/50 shadow-2xl shadow-black/50 overflow-hidden">
@@ -499,7 +429,6 @@ export function AppHeader() {
                           </div>
                         </div>
                       )}
-
                       {/* Resources Dropdown */}
                       {item.name === 'Resources' && resourcesDropdownOpen && (
                         <div className="absolute top-full left-0 mt-2 w-[600px] bg-slate-800/95 backdrop-blur-xl rounded-2xl border border-slate-700/50 shadow-2xl shadow-black/50 overflow-hidden">
@@ -551,7 +480,6 @@ export function AppHeader() {
                 </div>
               ))}
             </nav>
-
             {/* Right side - Search, Actions, Mobile menu */}
             <div className="flex items-center space-x-4">
               {/* Search */}
@@ -567,7 +495,6 @@ export function AppHeader() {
                   />
                 </div>
               </form>
-
               {/* Contact Info */}
               <div className="hidden lg:flex items-center space-x-4">
                 <a
@@ -585,7 +512,6 @@ export function AppHeader() {
                   <span className="hidden xl:inline">{contactInfo.email}</span>
                 </a>
               </div>
-
               {/* CTA Button */}
               <Link
                 to="/request-quote"
@@ -593,10 +519,8 @@ export function AppHeader() {
               >
                 Get Quote
               </Link>
-
               {/* Theme Toggle */}
               <ThemeToggle />
-
               {/* Mobile menu button */}
               <button
                 onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
@@ -607,7 +531,6 @@ export function AppHeader() {
             </div>
           </div>
         </div>
-
         {/* Mobile menu */}
         {mobileMenuOpen && (
           <div className="lg:hidden bg-slate-800/95 backdrop-blur-xl border-t border-slate-700/50">
@@ -625,7 +548,6 @@ export function AppHeader() {
                   />
                 </div>
               </form>
-
               {/* Mobile Navigation */}
               <nav className="space-y-4">
                 {navigation.map((item) => (
@@ -648,7 +570,6 @@ export function AppHeader() {
                               ? 'rotate-180' : ''
                           }`} />
                         </button>
-                        
                         {/* Mobile Services Dropdown */}
                         {item.name === 'Services' && servicesDropdownOpen && (
                           <div className="ml-4 mt-2 space-y-2">
@@ -671,7 +592,6 @@ export function AppHeader() {
                             </Link>
                           </div>
                         )}
-
                         {/* Mobile Solutions Dropdown */}
                         {item.name === 'Solutions' && solutionsDropdownOpen && (
                           <div className="ml-4 mt-2 space-y-2">
@@ -687,7 +607,6 @@ export function AppHeader() {
                             ))}
                           </div>
                         )}
-
                         {/* Mobile Resources Dropdown */}
                         {item.name === 'Resources' && resourcesDropdownOpen && (
                           <div className="ml-4 mt-2 space-y-2">
@@ -716,7 +635,6 @@ export function AppHeader() {
                   </div>
                 ))}
               </nav>
-
               {/* Mobile Contact Info */}
               <div className="mt-8 pt-6 border-t border-slate-700/50 space-y-3">
                 <a
@@ -738,7 +656,6 @@ export function AppHeader() {
                   <span className="text-sm">{contactInfo.address}</span>
                 </div>
               </div>
-
               {/* Mobile CTA */}
               <div className="mt-6">
                 <Link
@@ -753,7 +670,6 @@ export function AppHeader() {
           </div>
         )}
       </header>
-
       {/* Click outside to close dropdowns */}
       {(servicesDropdownOpen || solutionsDropdownOpen || resourcesDropdownOpen) && (
         <div
