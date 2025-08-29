@@ -22,6 +22,8 @@ import {
   MessageCircle,
   BookOpen,
   CheckCircle
+} from 'lucide-react';
+
 const events = [
   {
     id: 1,
@@ -148,7 +150,7 @@ const events = [
       "Success metrics"
     ],
     image: "/images/digital-transformation-summit.jpg"
-
+  }
 ];
 
 const eventTypes = ['All', 'Conference', 'Workshop', 'Webinar', 'Symposium'];
@@ -194,7 +196,7 @@ export default function Events() {
       case 'IoT & Edge': return Zap;
       case 'Digital Transformation': return Globe;
       default: return BookOpen;
-
+    }
   };
 
   const getStatusBadge = (status: string) => {
@@ -202,7 +204,7 @@ export default function Events() {
       return <span className="px-3 py-1 bg-green-500/20 text-green-400 text-xs rounded-full border border-green-500/30">Upcoming</span>;
     } else {
       return <span className="px-3 py-1 bg-gray-500/20 text-gray-400 text-xs rounded-full border border-gray-500/30">Past</span>;
-
+    }
   };
 
   return (
@@ -215,7 +217,7 @@ export default function Events() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             className="text-center"
-
+          >
             <div className="inline-flex items-center gap-2 bg-zion-cyan/20 text-zion-cyan px-6 py-3 rounded-full border border-zion-cyan/30 mb-6">
               <Calendar className="w-5 h-5" />
               <span className="font-medium">Events & Webinars</span>
@@ -256,7 +258,7 @@ export default function Events() {
                   value={selectedType}
                   onChange={(e) => setSelectedType(e.target.value)}
                   className="w-full px-4 py-3 bg-white/10 border border-white/20 text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-zion-cyan"
-
+                >
                   {eventTypes.map(type => (
                     <option key={type} value={type}>{type}</option>
                   ))}
@@ -269,7 +271,7 @@ export default function Events() {
                   value={selectedCategory}
                   onChange={(e) => setSelectedCategory(e.target.value)}
                   className="w-full px-4 py-3 bg-white/10 border border-white/20 text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-zion-cyan"
-
+                >
                   {categories.map(category => (
                     <option key={category} value={category}>{category}</option>
                   ))}
@@ -282,7 +284,7 @@ export default function Events() {
                   value={selectedStatus}
                   onChange={(e) => setSelectedStatus(e.target.value)}
                   className="w-full px-4 py-3 bg-white/10 border border-white/20 text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-zion-cyan"
-
+                >
                   {statuses.map(status => (
                     <option key={status} value={status}>
                       {status === 'upcoming' ? 'Upcoming' : status === 'past' ? 'Past' : status}
@@ -305,7 +307,7 @@ export default function Events() {
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
               className="mb-12"
-
+            >
               <h2 className="text-3xl font-bold text-white mb-4">Upcoming Events</h2>
               <p className="text-zion-slate-light">Don't miss these exciting opportunities to learn and network</p>
             </motion.div>
@@ -321,7 +323,7 @@ export default function Events() {
                     transition={{ duration: 0.6, delay: index * 0.1 }}
                     viewport={{ once: true }}
                     className="bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl p-6 hover:bg-white/10 hover:border-zion-cyan/30 transition-all duration-300"
-
+                  >
                     {/* Header */}
                     <div className="flex items-start justify-between mb-4">
                       <div className="flex items-center gap-3">
@@ -395,7 +397,7 @@ export default function Events() {
                       <Link
                         href={`/events/${event.id}`}
                         className="inline-flex items-center text-zion-cyan hover:text-zion-cyan-light transition-colors duration-300"
-
+                      >
                         Learn More
                         <ArrowRight className="ml-2 h-4 w-4" />
                       </Link>
@@ -422,7 +424,7 @@ export default function Events() {
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
               className="mb-12"
-
+            >
               <h2 className="text-3xl font-bold text-white mb-4">Past Events</h2>
               <p className="text-zion-slate-light">Missed an event? Check out our past events and stay updated</p>
             </motion.div>
@@ -438,7 +440,7 @@ export default function Events() {
                     transition={{ duration: 0.6, delay: index * 0.1 }}
                     viewport={{ once: true }}
                     className="bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl p-6 opacity-75"
-
+                  >
                     {/* Header */}
                     <div className="flex items-start justify-between mb-4">
                       <div className="flex items-center gap-3">
@@ -475,7 +477,7 @@ export default function Events() {
                       <Link
                         href={`/events/${event.id}`}
                         className="inline-flex items-center text-zion-cyan hover:text-zion-cyan-light transition-colors duration-300"
-
+                      >
                         View Event Details
                         <ArrowRight className="ml-2 h-4 w-4" />
                       </Link>
@@ -501,7 +503,7 @@ export default function Events() {
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
             className="bg-gradient-to-r from-zion-cyan to-zion-purple rounded-3xl p-8"
-
+          >
             <h2 className="text-3xl font-bold text-white mb-4">
               Want to Host an Event?
             </h2>
@@ -513,14 +515,14 @@ export default function Events() {
               <Link
                 href="/contact"
                 className="inline-flex items-center bg-white text-zion-cyan px-8 py-4 rounded-xl hover:bg-zion-slate-light transition-all duration-300 font-medium text-lg"
-
+              >
                 Partner With Us
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Link>
               <Link
                 href="/services"
                 className="inline-flex items-center border-2 border-white text-white px-8 py-4 rounded-xl hover:bg-white hover:text-zion-cyan transition-all duration-300 font-medium text-lg"
-
+              >
                 View Our Services
               </Link>
             </div>
@@ -529,4 +531,4 @@ export default function Events() {
       </section>
     </div>
   );
-}}}}}
+}

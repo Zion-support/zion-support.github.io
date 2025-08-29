@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { Search, Star, Zap, Shield, Globe, Code, Users, TrendingUp, CheckCircle, ExternalLink, Mail, Phone, MapPin import { MICRO_SAAS_SERVICES, getMicroSaasServicesByCategory } from '@/data/microSaasServices';
+import { Search, Star, Zap, Shield, Globe, Code, Users, TrendingUp, CheckCircle, ExternalLink, Mail, Phone, MapPin } from 'lucide-react';
+import { MICRO_SAAS_SERVICES, getMicroSaasServicesByCategory } from '@/data/microSaasServices';
 import { SEO } from '@/components/SEO';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
@@ -29,11 +30,11 @@ export default function MicroSaasServicesPage() {
         // Filter by category
         if (selectedCategory !== 'all') {
             filtered = filtered.filter(service => service.category === selectedCategory);
-
+        }
         // Filter by pricing model
         if (selectedPricing !== 'all') {
             filtered = filtered.filter(service => service.pricingModel === selectedPricing);
-
+        }
         // Filter by search query
         if (searchQuery.trim()) {
             const query = searchQuery.toLowerCase();
@@ -41,7 +42,7 @@ export default function MicroSaasServicesPage() {
                 service.description.toLowerCase().includes(query) ||
                 service.tags.some(tag => tag.toLowerCase().includes(query)) ||
                 service.subcategory.toLowerCase().includes(query));
-
+        }
         // Sort services
         filtered.sort((a, b) => {
             switch (sortBy) {
@@ -55,7 +56,7 @@ export default function MicroSaasServicesPage() {
                     return new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime();
                 default:
                     return 0;
-
+            }
         });
         setFilteredServices(filtered);
     }, [selectedCategory, selectedPricing, searchQuery, sortBy]);
@@ -108,7 +109,8 @@ import {Star,
             FileText,
             MessageCircle,
             ArrowRight,
-            Sparklesimport {Link} from 'react-router-dom';
+            Sparkles} from 'lucide-react';
+import {Link} from 'react-router-dom';
 
 export default function MicroSaasServicesPage() { /* empty */ }
   const [selectedCategory, setSelectedCategory] = useState<string>('all');
@@ -416,4 +418,4 @@ export default function MicroSaasServicesPage() { /* empty */ }
     </div>
   );
 }</></></></></></>);
-</div></div></div></div></Card></Card></Card></Card></Card>}</CardContent>}
+}

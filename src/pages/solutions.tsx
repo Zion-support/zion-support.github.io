@@ -1,14 +1,14 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import {
-  Building,
-  Heart,
-  DollarSign,
-  Truck,
-  BookOpen,
-  Shield,
-  Users,
+import { 
+  Building, 
+  Heart, 
+  DollarSign, 
+  Truck, 
+  BookOpen, 
+  Shield, 
+  Users, 
   Globe,
   Brain,
   Server,
@@ -22,6 +22,8 @@ import {
   Award,
   CheckCircle,
   ArrowRight
+} from 'lucide-react';
+
 export default function Solutions() {
   const industrySolutions = [
     {
@@ -149,7 +151,7 @@ export default function Solutions() {
         'AI-Powered Assessment'
       ],
       href: '/solutions/education'
-
+    }
   ];
 
   const technologySolutions = [
@@ -208,7 +210,7 @@ export default function Solutions() {
         'Hybrid Quantum-Classical',
         'Quantum Optimization'
       ]
-
+    }
   ];
 
   const successMetrics = [
@@ -228,7 +230,7 @@ export default function Solutions() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             className="text-center"
-
+          >
             <div className="flex items-center justify-center space-x-3 mb-6">
               <div className="w-16 h-16 bg-gradient-to-br from-cyan-500 to-blue-600 rounded-2xl flex items-center justify-center shadow-lg shadow-cyan-500/50">
                 <Target className="w-8 h-8 text-white" />
@@ -242,9 +244,9 @@ export default function Solutions() {
                 </p>
               </div>
             </div>
-
+            
             <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
-              Discover tailored solutions designed for your industry. From healthcare to finance,
+              Discover tailored solutions designed for your industry. From healthcare to finance, 
               manufacturing to government, we provide cutting-edge technology solutions that drive real results.
             </p>
           </motion.div>
@@ -258,7 +260,7 @@ export default function Solutions() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.2 }}
           className="mb-16"
-
+        >
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             {successMetrics.map((item, index) => (
               <motion.div
@@ -267,7 +269,7 @@ export default function Solutions() {
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.4, delay: 0.3 + index * 0.1 }}
                 className="text-center"
-
+              >
                 <div className="w-16 h-16 bg-gradient-to-br from-cyan-500 to-blue-600 rounded-2xl flex items-center justify-center mx-auto mb-4">
                   <item.icon className={`w-8 h-8 ${item.color}`} />
                 </div>
@@ -284,7 +286,7 @@ export default function Solutions() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.4 }}
           className="mb-16"
-
+        >
           <h2 className="text-3xl font-bold font-rajdhani text-cyan-400 text-center mb-12 uppercase tracking-wider">
             Industry Solutions
           </h2>
@@ -295,11 +297,11 @@ export default function Solutions() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.5 + index * 0.1 }}
-
+              >
                 <Link
                   to={solution.href}
                   className="block p-8 bg-black/50 backdrop-blur-xl border border-cyan-500/30 rounded-2xl hover:border-cyan-400/50 transition-all duration-300 group h-full"
-
+                >
                   <div className="flex items-center space-x-4 mb-6">
                     <div className={`w-16 h-16 bg-gradient-to-br ${solution.color} rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform`}>
                       <solution.icon className="w-8 h-8 text-white" />
@@ -313,7 +315,7 @@ export default function Solutions() {
                       </p>
                     </div>
                   </div>
-
+                  
                   <div className="mb-6">
                     <h4 className="text-lg font-semibold text-cyan-300 mb-3">Key Features</h4>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
@@ -356,7 +358,7 @@ export default function Solutions() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.6 }}
           className="mb-16"
-
+        >
           <h2 className="text-3xl font-bold font-rajdhani text-cyan-400 text-center mb-12 uppercase tracking-wider">
             Technology Solutions
           </h2>
@@ -367,7 +369,7 @@ export default function Solutions() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.7 + index * 0.1 }}
-
+              >
                 <div className="p-6 bg-black/50 backdrop-blur-xl border border-cyan-500/30 rounded-2xl hover:border-cyan-400/50 transition-all duration-300 h-full">
                   <div className={`w-12 h-12 bg-gradient-to-br ${tech.color} rounded-xl flex items-center justify-center mb-4`}>
                     <tech.icon className="w-6 h-6 text-white" />
@@ -398,7 +400,7 @@ export default function Solutions() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.8 }}
           className="text-center"
-
+        >
           <div className="bg-black/50 backdrop-blur-xl border border-cyan-500/30 rounded-2xl p-8">
             <h3 className="text-2xl font-bold font-rajdhani text-cyan-400 mb-4">
               Ready to Transform Your Business?
@@ -410,19 +412,19 @@ export default function Solutions() {
               <Link
                 to="/contact"
                 className="px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 font-semibold"
-
+              >
                 Get Started
               </Link>
               <Link
                 to="/request-quote"
                 className="px-6 py-3 bg-gray-700 text-white rounded-lg hover:bg-gray-600 transition-all duration-300 font-semibold"
-
+              >
                 Request Quote
               </Link>
               <Link
                 to="/case-studies"
                 className="px-6 py-3 bg-gray-700 text-white rounded-lg hover:bg-gray-600 transition-all duration-300 font-semibold"
-
+              >
                 View Case Studies
               </Link>
             </div>
@@ -431,4 +433,4 @@ export default function Solutions() {
       </div>
     </div>
   );
-}}}}
+}
