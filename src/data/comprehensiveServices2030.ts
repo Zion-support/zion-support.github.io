@@ -1,5 +1,5 @@
 import { ProductListing } from "@/types/listings";
-import { COMPREHENSIVE_INNOVATIVE_SERVICES_2030 } from "./comprehensiveInnovativeServices2030";
+
 import { INNOVATIVE_MICRO_SAAS_SERVICES_2030 } from "./innovativeMicroSaasServices2030";
 
 export const COMPREHENSIVE_SERVICES_2030: ProductListing[] = [

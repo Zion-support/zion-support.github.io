@@ -1,15 +1,4 @@
 import { motion } from 'framer-motion'
-<<<<<<< HEAD
-import {
-    Award,
-    Brain,
-    Cloud,
-    Database,
-    Handshake,
-    Rocket,
-    Shield,
-    Zap
-=======
 import { 
   Shield, 
   Cloud, 
@@ -21,8 +10,8 @@ import {
   Cpu,
   Database,
   Lock,
-  Rocket
->>>>>>> pr-9553
+  Rocket,
+  Handshake
 } from 'lucide-react'
 import Head from 'next/head'
 import React from 'react'
