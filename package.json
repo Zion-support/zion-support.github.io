@@ -14,6 +14,7 @@
     "type-check": "tsc --noEmit",
     "prepare": "git config core.hooksPath .husky || true",
     "fix:all": "yarn lint --fix || true",
+    
     "automation:start": "./scripts/start-automation.sh start",
     "automation:stop": "./scripts/start-automation.sh stop",
     "automation:restart": "./scripts/start-automation.sh restart",
@@ -22,12 +23,28 @@
     "automation:monit": "./scripts/start-automation.sh monit",
     "automation:health": "./scripts/start-automation.sh health",
     "automation:reports": "./scripts/start-automation.sh reports",
+    
     "pm2:start": "pm2 start ecosystem.config.cjs --only automation",
     "pm2:stop": "pm2 stop ecosystem.config.cjs --only automation",
     "pm2:restart": "pm2 restart ecosystem.config.cjs --only automation",
     "pm2:status": "pm2 status",
     "pm2:logs": "pm2 logs --lines 50",
-    "pm2:monit": "pm2 monit"
+    "pm2:monit": "pm2 monit",
+    
+    "intelligent:start": "node scripts/enhanced-automation-manager.js start",
+    "intelligent:stop": "node scripts/enhanced-automation-manager.js stop",
+    "intelligent:restart": "node scripts/enhanced-automation-manager.js restart",
+    "intelligent:status": "node scripts/enhanced-automation-manager.js status",
+    "intelligent:health": "node scripts/enhanced-automation-manager.js health",
+    "intelligent:analyze": "node scripts/enhanced-automation-manager.js analyze",
+    "intelligent:optimize": "node scripts/enhanced-automation-manager.js optimize",
+    "intelligent:insights": "node scripts/enhanced-automation-manager.js insights",
+    "intelligent:orchestrate": "node scripts/enhanced-automation-manager.js orchestrate",
+    
+    "ai:error-fix": "node scripts/automation/intelligent-error-fixer.cjs",
+    "ai:optimize": "node scripts/automation/ai-code-optimizer.cjs",
+    "ai:performance": "node scripts/automation/performance-intelligence.cjs",
+    "ai:orchestrate": "node scripts/automation/orchestration-master.cjs"
   },
   "dependencies": {
     "@hookform/resolvers": "^5.2.1",
