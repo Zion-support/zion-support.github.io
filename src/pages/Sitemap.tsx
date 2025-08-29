@@ -170,7 +170,6 @@ interface SitemapSection {
       ]
     }
   ];
->>>>>>> a60fd14b1f4af08675c8666f6e8b9dd6f8ec5cb9
 
 const sitemapSections: SitemapSection[] = [
   {
