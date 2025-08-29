@@ -95,6 +95,13 @@ const MicroSaaS: React.FC = () => {
       desc: 'String extraction, machine translation + human review, versioning, and per-locale rollout controls.',
       pricing: 'From $69/mo',
       href: 'https://ziontechgroup.com/services'
+    },
+    {
+      icon: Users,
+      name: 'AI Customer Success Platform',
+      desc: 'Intelligent customer success with predictive analytics, churn prevention, and automated engagement.',
+      pricing: 'From $299/mo',
+      href: 'https://ziontechgroup.com/services/ai-customer-success-platform'
     }
   ];
 
