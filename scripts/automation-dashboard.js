@@ -28,11 +28,114 @@ class AutomationDashboard {
         proc.name !== 'zion-backend'
       );
       
+      // Categorize processes by type for intelligent insights
+      this.categorizeProcesses();
+      
       return this.processes;
     } catch (error) {
       console.error('❌ Failed to get PM2 status:', error.message);
       return [];
     }
+  }
+
+  categorizeProcesses() {
+    this.processCategories = {
+      core: [],
+      monitoring: [],
+      optimization: [],
+      testing: [],
+      quality: [],
+      other: []
+    };
+
+    for (const proc of this.processes) {
+      if (proc.name.includes('monitor') || proc.name.includes('health')) {
+        this.processCategories.monitoring.push(proc);
+      } else if (proc.name.includes('optimizer') || proc.name.includes('build')) {
+        this.processCategories.optimization.push(proc);
+      } else if (proc.name.includes('test') || proc.name.includes('testing')) {
+        this.processCategories.testing.push(proc);
+      } else if (proc.name.includes('quality') || proc.name.includes('review') || proc.name.includes('lint')) {
+        this.processCategories.quality.push(proc);
+      } else {
+        this.processCategories.other.push(proc);
+      }
+    }
+  }
+
+  generateIntelligentInsights() {
+    const insights = [];
+    
+    try {
+      // Analyze process distribution
+      const totalProcesses = this.processes.length;
+      
+      if (this.processCategories.monitoring.length === 0) {
+        insights.push('🔍 Consider adding monitoring processes for better system visibility');
+      }
+      
+      if (this.processCategories.optimization.length === 0) {
+        insights.push('⚡ Add build optimization processes to improve development efficiency');
+      }
+      
+      if (this.processCategories.testing.length === 0) {
+        insights.push('🧪 Implement automated testing processes for code quality');
+      }
+      
+      if (this.processCategories.quality.length === 0) {
+        insights.push('🎯 Add code quality monitoring for better development standards');
+      }
+
+      // Check for process balance
+      if (this.processCategories.monitoring.length > 3) {
+        insights.push('⚖️  Consider consolidating monitoring processes to reduce overhead');
+      }
+      
+      if (this.processCategories.optimization.length > 2) {
+        insights.push('⚖️  Build optimization processes may be competing - review priorities');
+      }
+
+      // Performance insights
+      const highMemoryProcesses = this.processes.filter(p => 
+        p.monit && p.monit.memory > 500 * 1024 * 1024 // 500MB
+      );
+      
+      if (highMemoryProcesses.length > 0) {
+        insights.push(`💾 ${highMemoryProcesses.length} processes using high memory - consider optimization`);
+      }
+
+      const highCPUProcesses = this.processes.filter(p => 
+        p.monit && p.monit.cpu > 80 // 80%
+      );
+      
+      if (highCPUProcesses.length > 0) {
+        insights.push(`🔥 ${highCPUProcesses.length} processes using high CPU - check for bottlenecks`);
+      }
+
+      // Uptime insights
+      const longRunningProcesses = this.processes.filter(p => 
+        p.pm2_env && p.pm2_env.pm_uptime && 
+        (Date.now() - p.pm2_env.pm_uptime) > 24 * 60 * 60 * 1000 // 24 hours
+      );
+      
+      if (longRunningProcesses.length > 0) {
+        insights.push(`⏰ ${longRunningProcesses.length} processes running for over 24 hours - consider scheduled restarts`);
+      }
+
+      // Restart insights
+      const frequentlyRestarting = this.processes.filter(p => 
+        p.pm2_env && p.pm2_env.restart_time > 5
+      );
+      
+      if (frequentlyRestarting.length > 0) {
+        insights.push(`🔄 ${frequentlyRestarting.length} processes restarting frequently - investigate stability issues`);
+      }
+
+    } catch (error) {
+      console.error('Failed to generate intelligent insights:', error.message);
+    }
+    
+    return insights;
   }
 
   async generateHealthReport() {
@@ -58,7 +161,7 @@ class AutomationDashboard {
       recommendations: []
     };
 
-    // Generate recommendations
+    // Generate intelligent recommendations
     if (report.summary.erroredProcesses > 0) {
       report.recommendations.push('⚠️  Some automation processes have errors. Check logs for details.');
     }
@@ -70,6 +173,10 @@ class AutomationDashboard {
     if (report.summary.onlineProcesses > 0 && report.summary.onlineProcesses < report.summary.totalProcesses) {
       report.recommendations.push('⚠️  Some automation processes are not running. Consider restarting failed processes.');
     }
+
+    // Add intelligent insights based on process categories
+    const insights = this.generateIntelligentInsights();
+    report.recommendations.push(...insights);
 
     // Save report
     const reportPath = path.join(process.cwd(), 'automation-health-report.json');

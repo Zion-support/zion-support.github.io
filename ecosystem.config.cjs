@@ -152,6 +152,74 @@ module.exports = {
       log_file: './logs/dependency-manager.log',
       error_file: './logs/dependency-manager-error.log',
       out_file: './logs/dependency-manager-out.log'
+    },
+
+    // NEW: AI-Powered Code Review Automation
+    {
+      name: 'ai-code-review',
+      script: './scripts/automation/ai-code-review.cjs',
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      max_memory_restart: '1G',
+      env: {
+        NODE_ENV: 'production'
+      },
+      cron_restart: '*/30 * * * *', // Every 30 minutes
+      log_file: './logs/ai-code-review.log',
+      error_file: './logs/ai-code-review-error.log',
+      out_file: './logs/ai-code-review-out.log'
+    },
+
+    // NEW: Intelligent Build Optimizer
+    {
+      name: 'intelligent-build-optimizer',
+      script: './scripts/automation/intelligent-build-optimizer.cjs',
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      max_memory_restart: '1G',
+      env: {
+        NODE_ENV: 'production'
+      },
+      cron_restart: '0 * * * *', // Every hour
+      log_file: './logs/intelligent-build-optimizer.log',
+      error_file: './logs/intelligent-build-optimizer-error.log',
+      out_file: './logs/intelligent-build-optimizer-out.log'
+    },
+
+    // NEW: Smart Testing Automation
+    {
+      name: 'smart-testing-automation',
+      script: './scripts/automation/smart-testing-automation.cjs',
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      max_memory_restart: '1G',
+      env: {
+        NODE_ENV: 'production'
+      },
+      cron_restart: '*/45 * * * *', // Every 45 minutes
+      log_file: './logs/smart-testing-automation.log',
+      error_file: './logs/smart-testing-automation-error.log',
+      out_file: './logs/smart-testing-automation-out.log'
+    },
+
+    // NEW: Master Automation Controller
+    {
+      name: 'master-automation-controller',
+      script: './scripts/automation/master-automation-controller.cjs',
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      max_memory_restart: '1G',
+      env: {
+        NODE_ENV: 'production'
+      },
+      cron_restart: '0 */6 * * *', // Every 6 hours
+      log_file: './logs/master-controller.log',
+      error_file: './logs/master-controller-error.log',
+      out_file: './logs/master-controller-out.log'
     }
   ],
 
