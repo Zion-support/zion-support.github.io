@@ -131,6 +131,30 @@ export function AppHeader() {
       description: 'Future Technology Solutions',
       featured: true,
       color: 'from-indigo-500 to-purple-500'
+    },
+    { 
+      name: 'AI Financial Trading', 
+      href: '/services/ai-financial-trading', 
+      icon: TrendingUp, 
+      description: 'AI-Powered Trading & Portfolio Management',
+      featured: true,
+      color: 'from-emerald-500 to-teal-500'
+    },
+    { 
+      name: 'AI Autonomous Research', 
+      href: '/services/ai-autonomous-research-assistant', 
+      icon: Brain, 
+      description: '24/7 AI Research & Discovery',
+      featured: true,
+      color: 'from-purple-500 to-pink-500'
+    },
+    { 
+      name: 'AI Customer Experience', 
+      href: '/services/ai-customer-experience-platform', 
+      icon: Heart, 
+      description: 'AI-Powered CX & Personalization',
+      featured: true,
+      color: 'from-blue-500 to-indigo-500'
     }
   ];
 

@@ -1,8 +1,9 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { 
-  Truck, 
-  Package, 
+  Heart, 
+  MessageCircle, 
+  Users, 
   TrendingUp, 
   Zap, 
   Shield, 
@@ -13,89 +14,84 @@ import {
   Clock,
   DollarSign,
   BarChart3,
+  Smile,
   Target,
   Rocket,
   Brain,
   Eye,
   Settings,
   Palette,
-  MapPin,
-  Route,
-  Warehouse,
-  Factory,
-  Car,
-  Ship,
-  Plane
+  ShoppingCart
 } from 'lucide-react';
 import { SEO } from '../../components/SEO';
 
-export default function AISupplyChainOptimization() {
+export default function AICustomerExperiencePlatform() {
   const features = [
     {
       icon: Brain,
-      title: "AI-Powered Forecasting",
-      description: "Machine learning algorithms that predict demand, optimize inventory levels, and prevent stockouts with 95% accuracy"
+      title: "AI-Powered Personalization",
+      description: "Machine learning algorithms that understand customer behavior and deliver personalized experiences in real-time"
     },
     {
-      icon: Route,
-      title: "Intelligent Route Optimization",
-      description: "AI-driven logistics planning that reduces delivery times by 30% and cuts transportation costs by 25%"
+      icon: MessageCircle,
+      title: "Omnichannel Communication",
+      description: "Seamless customer interactions across email, chat, social media, and voice channels"
     },
     {
       icon: Eye,
-      title: "Real-time Visibility",
-      description: "End-to-end supply chain transparency with real-time tracking and predictive analytics for proactive decision-making"
+      title: "Customer Journey Analytics",
+      description: "Track and analyze every touchpoint to optimize the customer experience journey"
     },
     {
       icon: Zap,
-      title: "Automated Procurement",
-      description: "Smart sourcing and automated purchase order management that reduces procurement costs by 20%"
+      title: "Real-time Response",
+      description: "Instant customer support and automated responses that never keep customers waiting"
     },
     {
       icon: Shield,
-      title: "Risk Management",
-      description: "AI-powered risk assessment and mitigation strategies for supply chain disruptions and compliance"
+      title: "Data Privacy & Security",
+      description: "Enterprise-grade security with GDPR compliance and customer data protection"
     },
     {
       icon: Palette,
-      title: "Customizable Dashboards",
-      description: "White-label solutions and customizable analytics dashboards to match your business requirements"
+      title: "Customizable Interface",
+      description: "White-label solutions and customizable dashboards to match your brand identity"
     }
   ];
 
   const useCases = [
     {
-      title: "Manufacturing Optimization",
-      description: "AI-driven production planning and inventory management for manufacturing efficiency",
-      icon: Factory
+      title: "E-commerce Personalization",
+      description: "AI-driven product recommendations and personalized shopping experiences",
+      icon: ShoppingCart
     },
     {
-      title: "Retail Supply Chain",
-      description: "Omnichannel inventory optimization and demand forecasting for retail operations",
-      icon: Package
+      title: "Customer Support Automation",
+      description: "Intelligent chatbots and automated ticket routing for faster resolution",
+      icon: MessageCircle
     },
     {
-      title: "Logistics & Transportation",
-      description: "Route optimization and fleet management for cost-effective delivery operations",
-      icon: Truck
+      title: "Customer Feedback Analysis",
+      description: "Sentiment analysis and feedback categorization for actionable insights",
+      icon: BarChart3
     },
     {
-      title: "E-commerce Fulfillment",
-      description: "Automated order processing and warehouse optimization for fast fulfillment",
-      icon: Warehouse
+      title: "Loyalty Program Optimization",
+      description: "AI-powered rewards and retention strategies based on customer behavior",
+      icon: Heart
     }
   ];
 
   const pricing = [
     {
       name: "Starter",
-      price: "$599",
+      price: "$399",
       period: "/month",
-      description: "Perfect for small businesses optimizing their supply chain",
+      description: "Perfect for small businesses starting their CX journey",
       features: [
-        "Up to 5 locations",
-        "Basic AI forecasting",
-        "Inventory optimization",
+        "Up to 1,000 customers",
+        "Basic AI personalization",
+        "Email & chat support",
         "Standard analytics",
         "Basic integrations",
         "Email support"
@@ -104,13 +100,13 @@ export default function AISupplyChainOptimization() {
     },
     {
       name: "Professional",
-      price: "$1,299",
+      price: "$899",
       period: "/month",
-      description: "Ideal for growing businesses with complex supply chain needs",
+      description: "Ideal for growing businesses with advanced CX needs",
       features: [
-        "Up to 25 locations",
-        "Advanced AI forecasting",
-        "Route optimization",
+        "Up to 10,000 customers",
+        "Advanced AI personalization",
+        "Omnichannel support",
         "Advanced analytics",
         "API access",
         "Custom dashboards",
@@ -121,11 +117,11 @@ export default function AISupplyChainOptimization() {
     },
     {
       name: "Enterprise",
-      price: "$3,499",
+      price: "$2,499",
       period: "/month",
-      description: "For large organizations with global supply chain operations",
+      description: "For large organizations with complex customer experience needs",
       features: [
-        "Unlimited locations",
+        "Unlimited customers",
         "Custom AI models",
         "White-label solutions",
         "Dedicated support",
@@ -140,50 +136,43 @@ export default function AISupplyChainOptimization() {
 
   const benefits = [
     {
-      title: "Cost Reduction",
-      description: "Reduce supply chain costs through AI optimization and automation",
-      metric: "25%",
-      icon: DollarSign
+      title: "Customer Satisfaction",
+      description: "Improve customer satisfaction scores with personalized experiences",
+      metric: "85%",
+      icon: Smile
     },
     {
-      title: "Efficiency Improvement",
-      description: "Increase operational efficiency with intelligent automation",
+      title: "Customer Retention",
+      description: "Increase customer loyalty and reduce churn with better experiences",
       metric: "40%",
-      icon: TrendingUp
+      icon: Heart
     },
     {
-      title: "Delivery Speed",
-      description: "Faster delivery times through route optimization",
-      metric: "30%",
+      title: "Response Time",
+      description: "Reduce customer response times with AI automation",
+      metric: "90%",
       icon: Clock
     },
     {
-      title: "Inventory Accuracy",
-      description: "Improve inventory accuracy and reduce waste",
-      metric: "95%",
-      icon: Target
+      title: "Revenue Growth",
+      description: "Drive revenue through improved customer experience and loyalty",
+      metric: "25%",
+      icon: TrendingUp
     }
   ];
 
   const integrations = [
-    "SAP", "Oracle", "Microsoft Dynamics", "NetSuite", "QuickBooks", "Shopify",
-    "WooCommerce", "Magento", "Salesforce", "HubSpot", "Zendesk", "Intercom",
-    "FedEx", "UPS", "DHL", "Amazon", "Walmart", "Target", "Costco", "Home Depot",
-    "Google Analytics", "Tableau", "Power BI", "Looker", "Segment", "Zapier"
-  ];
-
-  const industries = [
-    "Manufacturing", "Retail", "E-commerce", "Healthcare", "Pharmaceuticals", "Automotive",
-    "Electronics", "Food & Beverage", "Fashion", "Luxury Goods", "Consumer Goods",
-    "Industrial Equipment", "Construction", "Energy", "Logistics", "Transportation"
+    "Shopify", "WooCommerce", "Salesforce", "HubSpot", "Zendesk", "Intercom",
+    "Mailchimp", "Klaviyo", "Facebook", "Instagram", "Twitter", "LinkedIn",
+    "Google Analytics", "Mixpanel", "Amplitude", "Segment", "Zapier", "Webhooks"
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-green-900 via-emerald-900 to-teal-900">
+    <div className="min-h-screen bg-gradient-to-br from-blue-900 via-indigo-900 to-purple-900">
       <SEO 
-        title="AI-Powered Supply Chain Optimization | Zion Tech Group"
-        description="Revolutionary AI platform that transforms supply chain operations with intelligent forecasting, route optimization, and real-time visibility."
-        keywords="AI supply chain, supply chain optimization, logistics AI, inventory optimization, route optimization, supply chain analytics"
+        title="AI-Powered Customer Experience Platform | Zion Tech Group"
+        description="Revolutionary AI platform that transforms customer interactions with personalized experiences, omnichannel communication, and intelligent automation."
+        keywords="AI customer experience, customer experience platform, AI personalization, omnichannel communication, customer analytics"
       />
       
       {/* Hero Section */}
@@ -195,34 +184,34 @@ export default function AISupplyChainOptimization() {
             transition={{ duration: 0.8 }}
             className="text-center"
           >
-            <div className="inline-flex items-center px-4 py-2 rounded-full bg-green-500/10 border border-green-500/20 text-green-300 text-sm font-medium mb-8">
-              <Truck className="w-4 h-4 mr-2" />
-              AI-Powered Supply Chain
+            <div className="inline-flex items-center px-4 py-2 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-300 text-sm font-medium mb-8">
+              <Heart className="w-4 h-4 mr-2" />
+              AI-Powered Customer Experience
             </div>
             
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              AI-Powered Supply Chain
-              <span className="block bg-gradient-to-r from-green-400 to-emerald-400 bg-clip-text text-transparent">
-                Optimization
+              AI-Powered Customer
+              <span className="block bg-gradient-to-r from-blue-400 to-indigo-400 bg-clip-text text-transparent">
+                Experience Platform
               </span>
             </h1>
             
             <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-              Transform your supply chain operations with AI-powered forecasting, intelligent route optimization, 
-              and real-time visibility. Reduce costs, improve efficiency, and deliver better customer experiences.
+              Transform customer interactions with AI-powered personalization, omnichannel communication, 
+              and intelligent automation. Deliver exceptional experiences that drive loyalty and growth.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
                 href="/contact"
-                className="inline-flex items-center px-8 py-4 rounded-lg bg-gradient-to-r from-green-500 to-emerald-500 text-white font-semibold hover:from-green-600 hover:to-emerald-600 transition-all duration-200 transform hover:scale-105"
+                className="inline-flex items-center px-8 py-4 rounded-lg bg-gradient-to-r from-blue-500 to-indigo-500 text-white font-semibold hover:from-blue-600 hover:to-indigo-600 transition-all duration-200 transform hover:scale-105"
               >
                 Start Free Trial
                 <ArrowRight className="ml-2 w-5 h-5" />
               </a>
               <a
                 href="#demo"
-                className="inline-flex items-center px-8 py-4 rounded-lg border border-green-500/30 text-green-300 font-semibold hover:bg-green-500/10 transition-all duration-200"
+                className="inline-flex items-center px-8 py-4 rounded-lg border border-blue-500/30 text-blue-300 font-semibold hover:bg-blue-500/10 transition-all duration-200"
               >
                 Watch Demo
               </a>
@@ -242,11 +231,11 @@ export default function AISupplyChainOptimization() {
             className="text-center mb-16"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Revolutionary Supply Chain Capabilities
+              Revolutionary CX Capabilities
             </h2>
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              Our AI platform combines cutting-edge technology with deep supply chain expertise 
-              to deliver unprecedented optimization and automation capabilities.
+              Our AI platform combines cutting-edge technology with deep customer experience expertise 
+              to deliver unprecedented personalization and automation capabilities.
             </p>
           </motion.div>
 
@@ -258,9 +247,9 @@ export default function AISupplyChainOptimization() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
-                className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 hover:border-green-500/30 transition-all duration-300"
+                className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 hover:border-blue-500/30 transition-all duration-300"
               >
-                <div className="w-12 h-12 bg-gradient-to-r from-green-500 to-emerald-500 rounded-lg flex items-center justify-center mb-4">
+                <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-indigo-500 rounded-lg flex items-center justify-center mb-4">
                   <feature.icon className="w-6 h-6 text-white" />
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-2">{feature.title}</h3>
@@ -282,11 +271,11 @@ export default function AISupplyChainOptimization() {
             className="text-center mb-16"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Transform Supply Chain Operations
+              Transform Customer Interactions
             </h2>
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              From manufacturing to retail, our AI platform revolutionizes 
-              how you manage and optimize your supply chain operations.
+              From e-commerce to customer support, our AI platform revolutionizes 
+              how you engage with customers across every touchpoint.
             </p>
           </motion.div>
 
@@ -298,10 +287,10 @@ export default function AISupplyChainOptimization() {
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
-                className="bg-gradient-to-r from-green-500/10 to-emerald-500/10 rounded-xl p-8 border border-green-500/20"
+                className="bg-gradient-to-r from-blue-500/10 to-indigo-500/10 rounded-xl p-8 border border-blue-500/20"
               >
                 <div className="flex items-center mb-4">
-                  <div className="w-12 h-12 bg-gradient-to-r from-green-500 to-emerald-500 rounded-lg flex items-center justify-center mr-4">
+                  <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-indigo-500 rounded-lg flex items-center justify-center mr-4">
                     <useCase.icon className="w-6 h-6 text-white" />
                   </div>
                   <h3 className="text-xl font-semibold text-white">{useCase.title}</h3>
@@ -313,44 +302,8 @@ export default function AISupplyChainOptimization() {
         </div>
       </section>
 
-      {/* Industries Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Industry Solutions
-            </h2>
-            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              Our AI platform is designed to work across all industries, 
-              adapting to your specific supply chain challenges and requirements.
-            </p>
-          </motion.div>
-
-          <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-6">
-            {industries.map((industry, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, scale: 0.8 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.4, delay: index * 0.05 }}
-                viewport={{ once: true }}
-                className="bg-white/5 rounded-lg p-4 border border-white/10 hover:border-green-500/30 transition-all duration-200 text-center"
-              >
-                <span className="text-gray-300 font-medium text-sm">{industry}</span>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* Pricing Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -363,7 +316,7 @@ export default function AISupplyChainOptimization() {
               Transparent Pricing
             </h2>
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              Choose the plan that fits your supply chain optimization needs. All plans include our core AI capabilities.
+              Choose the plan that fits your customer experience needs. All plans include our core AI capabilities.
             </p>
           </motion.div>
 
@@ -377,13 +330,13 @@ export default function AISupplyChainOptimization() {
                 viewport={{ once: true }}
                 className={`relative rounded-xl p-8 ${
                   plan.popular 
-                    ? 'bg-gradient-to-br from-green-500/20 to-emerald-500/20 border-2 border-green-500/50' 
+                    ? 'bg-gradient-to-br from-blue-500/20 to-indigo-500/20 border-2 border-blue-500/50' 
                     : 'bg-white/5 border border-white/10'
                 }`}
               >
                 {plan.popular && (
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                    <span className="bg-gradient-to-r from-green-500 to-emerald-500 text-white px-4 py-2 rounded-full text-sm font-semibold">
+                    <span className="bg-gradient-to-r from-blue-500 to-indigo-500 text-white px-4 py-2 rounded-full text-sm font-semibold">
                       Most Popular
                     </span>
                   </div>
@@ -411,7 +364,7 @@ export default function AISupplyChainOptimization() {
                   href="/contact"
                   className={`w-full block text-center py-3 px-6 rounded-lg font-semibold transition-all duration-200 ${
                     plan.popular
-                      ? 'bg-gradient-to-r from-green-500 to-emerald-500 text-white hover:from-green-600 hover:to-emerald-600'
+                      ? 'bg-gradient-to-r from-blue-500 to-indigo-500 text-white hover:from-blue-600 hover:to-indigo-600'
                       : 'bg-white/10 text-white hover:bg-white/20 border border-white/20'
                   }`}
                 >
@@ -424,7 +377,7 @@ export default function AISupplyChainOptimization() {
       </section>
 
       {/* Benefits Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
         <div className="max-w-7xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -437,7 +390,7 @@ export default function AISupplyChainOptimization() {
               Measurable Results
             </h2>
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              See the impact of AI-powered supply chain optimization on your business metrics and operational efficiency.
+              See the impact of AI-powered customer experience on your business metrics and customer satisfaction.
             </p>
           </motion.div>
 
@@ -451,7 +404,7 @@ export default function AISupplyChainOptimization() {
                 viewport={{ once: true }}
                 className="text-center"
               >
-                <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-emerald-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-indigo-500 rounded-full flex items-center justify-center mx-auto mb-4">
                   <benefit.icon className="w-8 h-8 text-white" />
                 </div>
                 <div className="text-3xl font-bold text-white mb-2">{benefit.metric}</div>
@@ -464,7 +417,7 @@ export default function AISupplyChainOptimization() {
       </section>
 
       {/* Integrations Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -477,7 +430,7 @@ export default function AISupplyChainOptimization() {
               Seamless Integrations
             </h2>
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              Connect with your existing ERP, WMS, and logistics systems for a unified supply chain ecosystem.
+              Connect with your existing tools and platforms for a unified customer experience ecosystem.
             </p>
           </motion.div>
 
@@ -489,7 +442,7 @@ export default function AISupplyChainOptimization() {
                 whileInView={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.4, delay: index * 0.05 }}
                 viewport={{ once: true }}
-                className="bg-white/5 rounded-lg p-4 border border-white/10 hover:border-green-500/30 transition-all duration-200 text-center"
+                className="bg-white/5 rounded-lg p-4 border border-white/10 hover:border-blue-500/30 transition-all duration-200 text-center"
               >
                 <span className="text-gray-300 font-medium text-sm">{integration}</span>
               </motion.div>
@@ -508,24 +461,24 @@ export default function AISupplyChainOptimization() {
             viewport={{ once: true }}
           >
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-              Ready to Optimize Your Supply Chain?
+              Ready to Transform Customer Experience?
             </h2>
             <p className="text-xl text-gray-300 mb-8">
-              Join thousands of businesses who have already revolutionized their supply chain 
-              operations with AI-powered optimization and automation.
+              Join thousands of businesses who have already revolutionized their customer 
+              experience with AI-powered personalization and automation.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
                 href="/contact"
-                className="inline-flex items-center px-8 py-4 rounded-lg bg-gradient-to-r from-green-500 to-emerald-500 text-white font-semibold hover:from-green-600 hover:to-emerald-600 transition-all duration-200 transform hover:scale-105"
+                className="inline-flex items-center px-8 py-4 rounded-lg bg-gradient-to-r from-blue-500 to-indigo-500 text-white font-semibold hover:from-blue-600 hover:to-indigo-600 transition-all duration-200 transform hover:scale-105"
               >
                 Start Free Trial
                 <ArrowRight className="ml-2 w-5 h-5" />
               </a>
               <a
                 href="/schedule-demo"
-                className="inline-flex items-center px-8 py-4 rounded-lg border border-green-500/30 text-green-300 font-semibold hover:bg-green-500/10 transition-all duration-200"
+                className="inline-flex items-center px-8 py-4 rounded-lg border border-blue-500/30 text-blue-300 font-semibold hover:bg-blue-500/10 transition-all duration-200"
               >
                 Schedule Demo
               </a>

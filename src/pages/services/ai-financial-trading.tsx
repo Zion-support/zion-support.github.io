@@ -3,174 +3,225 @@ import { motion } from 'framer-motion';
 import { 
   TrendingUp, 
   DollarSign, 
-  Brain, 
+  BarChart3, 
   Zap, 
-  CheckCircle, 
-  Clock, 
-  Shield,
-  Users,
-  BarChart3,
-  Lock,
+  Shield, 
   Globe,
-  Award,
-  Star,
   ArrowRight,
-  Phone,
-  Mail,
-  MapPin,
-  ExternalLink,
-  TrendingUp,
+  CheckCircle,
+  Star,
+  Clock,
   Target,
+  Rocket,
+  Brain,
+  Eye,
+  Settings,
+  Palette,
+  BarChart3,
+  PieChart,
+  LineChart,
+  Activity,
   Cpu,
-  Activity
+  Lock,
+  Users,
+  Monitor,
+  Building
 } from 'lucide-react';
 import { SEO } from '../../components/SEO';
 
 export default function AIFinancialTrading() {
   const features = [
     {
-      icon: <Brain className="w-6 h-6" />,
-      title: "AI-Powered Market Analysis",
-      description: "Advanced machine learning algorithms analyze market patterns, sentiment, and trends with 92% accuracy"
+      icon: Brain,
+      title: "AI-Powered Trading Algorithms",
+      description: "Advanced machine learning models that analyze market patterns and execute trades with millisecond precision"
     },
     {
-      icon: <TrendingUp className="w-6 h-6" />,
-      title: "Predictive Trading Signals",
-      description: "Real-time trading signals based on AI analysis of multiple data sources and market indicators"
+      icon: BarChart3,
+      title: "Real-time Market Analysis",
+      description: "Live market data processing with predictive analytics for informed trading decisions"
     },
     {
-      icon: <Target className="w-6 h-6" />,
+      icon: Zap,
+      title: "High-Frequency Trading",
+      description: "Ultra-fast execution capabilities with latency under 1ms for competitive advantage"
+    },
+    {
+      icon: Shield,
+      title: "Risk Management",
+      description: "AI-powered risk assessment and automated stop-loss mechanisms for portfolio protection"
+    },
+    {
+      icon: Eye,
       title: "Portfolio Optimization",
-      description: "Intelligent portfolio rebalancing and risk management with automated position sizing"
+      description: "Intelligent asset allocation and rebalancing based on market conditions and risk tolerance"
     },
     {
-      icon: <Activity className="w-6 h-6" />,
-      title: "Real-time Market Monitoring",
-      description: "24/7 market surveillance with instant alerts for trading opportunities and risk events"
+      icon: Palette,
+      title: "Customizable Strategies",
+      description: "White-label solutions and customizable trading algorithms to match your investment strategy"
+    }
+  ];
+
+  const useCases = [
+    {
+      title: "Institutional Trading",
+      description: "High-volume trading for hedge funds, banks, and institutional investors",
+      icon: Building
     },
     {
-      icon: <Shield className="w-6 h-6" />,
-      title: "Advanced Risk Management",
-      description: "Multi-layered risk controls including stop-loss automation and position limit management"
+      title: "Retail Trading",
+      description: "Automated trading strategies for individual investors and traders",
+      icon: Users
     },
     {
-      icon: <BarChart3 className="w-6 h-6" />,
-      title: "Performance Analytics",
-      description: "Comprehensive trading performance metrics, backtesting, and strategy optimization tools"
+      title: "Algorithmic Trading",
+      description: "Custom trading algorithms and quantitative strategies",
+      icon: Cpu
+    },
+    {
+      title: "Portfolio Management",
+      description: "AI-powered portfolio optimization and risk management",
+      icon: PieChart
     }
   ];
 
   const pricing = [
     {
       name: "Starter",
-      price: "$299",
+      price: "$799",
       period: "/month",
+      description: "Perfect for individual traders and small investment firms",
       features: [
-        "Basic AI trading signals",
-        "Portfolio tracking",
-        "Email alerts",
+        "Up to $100K trading volume",
+        "Basic AI algorithms",
+        "Real-time market data",
         "Standard analytics",
-        "Basic risk management"
+        "Basic risk management",
+        "Email support"
       ],
       popular: false
     },
     {
       name: "Professional",
-      price: "$799",
+      price: "$1,999",
       period: "/month",
+      description: "Ideal for growing trading firms and professional traders",
       features: [
+        "Up to $1M trading volume",
         "Advanced AI algorithms",
-        "Real-time signals",
-        "Portfolio optimization",
-        "Priority support",
+        "High-frequency trading",
         "Advanced analytics",
         "API access",
-        "Custom strategies"
+        "Custom strategies",
+        "Priority support",
+        "Advanced risk management"
       ],
       popular: true
     },
     {
-      name: "Institutional",
-      price: "$1,999",
+      name: "Enterprise",
+      price: "$4,999",
       period: "/month",
+      description: "For large institutions with high-volume trading needs",
       features: [
+        "Unlimited trading volume",
         "Custom AI models",
-        "White-label platform",
+        "White-label solutions",
         "Dedicated support",
+        "Custom integrations",
+        "Advanced security",
         "SLA guarantees",
-        "Advanced risk controls",
-        "Multi-account management",
-        "On-premise deployment"
+        "On-premise options"
       ],
       popular: false
     }
   ];
 
   const benefits = [
-    "Increase trading returns by 25-40%",
-    "Reduce trading risks by 60%",
-    "Automate 80% of trading decisions",
-    "24/7 market monitoring and alerts",
-    "Professional-grade risk management",
-    "Access to institutional-level tools"
-  ];
-
-  const tradingStrategies = [
     {
-      strategy: "Momentum Trading",
-      description: "AI-powered momentum detection and trend following with dynamic position sizing",
-      performance: "35% annual return"
+      title: "Trading Performance",
+      description: "Improve trading performance with AI-powered insights and automation",
+      metric: "35%",
+      icon: TrendingUp
     },
     {
-      strategy: "Mean Reversion",
-      description: "Statistical arbitrage using machine learning to identify overbought/oversold conditions",
-      performance: "28% annual return"
+      title: "Risk Reduction",
+      description: "Reduce trading risks through intelligent risk management",
+      metric: "60%",
+      icon: Shield
     },
     {
-      strategy: "Sentiment Analysis",
-      description: "Social media and news sentiment analysis for market direction prediction",
-      performance: "42% annual return"
+      title: "Execution Speed",
+      description: "Ultra-fast trade execution for competitive advantage",
+      metric: "1ms",
+      icon: Zap
     },
     {
-      strategy: "Multi-Factor Models",
-      description: "Combined technical, fundamental, and macroeconomic factor analysis",
-      performance: "38% annual return"
+      title: "ROI Improvement",
+      description: "Increase returns through optimized trading strategies",
+      metric: "25%",
+      icon: DollarSign
     }
   ];
 
+  const integrations = [
+    "Interactive Brokers", "TD Ameritrade", "E*TRADE", "Charles Schwab", "Fidelity",
+    "Robinhood", "Webull", "Alpaca", "Polygon", "IEX Cloud", "Alpha Vantage",
+    "Yahoo Finance", "Bloomberg", "Reuters", "MarketWatch", "TradingView",
+    "MetaTrader", "NinjaTrader", "ThinkOrSwim", "Zapier", "Webhooks"
+  ];
+
+  const markets = [
+    "Stocks", "Options", "Futures", "Forex", "Cryptocurrency", "Commodities",
+    "Bonds", "ETFs", "Mutual Funds", "Real Estate", "Private Equity"
+  ];
+
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+    <div className="min-h-screen bg-gradient-to-br from-emerald-900 via-teal-900 to-cyan-900">
       <SEO 
-        title="AI-Powered Financial Trading Platform - Zion Tech Group"
-        description="Revolutionary AI platform for financial trading, portfolio optimization, and risk management. Increase returns by 25-40% while reducing risks by 60%."
+        title="AI-Powered Financial Trading Platform | Zion Tech Group"
+        description="Revolutionary AI platform that transforms financial trading with intelligent algorithms, real-time analysis, and high-frequency execution capabilities."
+        keywords="AI trading, financial trading platform, algorithmic trading, high-frequency trading, AI algorithms, trading automation"
       />
       
       {/* Hero Section */}
       <section className="relative overflow-hidden py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto text-center">
+        <div className="max-w-7xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
+            className="text-center"
           >
-            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
-              AI-Powered Financial Trading Platform
+            <div className="inline-flex items-center px-4 py-2 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-300 text-sm font-medium mb-8">
+              <TrendingUp className="w-4 h-4 mr-2" />
+              AI-Powered Financial Trading
+            </div>
+            
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              AI-Powered Financial
+              <span className="block bg-gradient-to-r from-emerald-400 to-teal-400 bg-clip-text text-transparent">
+                Trading Platform
+              </span>
             </h1>
-            <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
-              Transform your trading with intelligent algorithms, predictive analytics, and automated risk management. 
-              Increase returns by 25-40% while reducing risks by 60%.
+            
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
+              Transform your trading operations with AI-powered algorithms, real-time market analysis, 
+              and high-frequency execution capabilities. Gain competitive advantage with intelligent automation.
             </p>
+            
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
-                href="https://ziontechgroup.com/contact"
-                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-yellow-600 to-orange-600 text-white font-semibold rounded-lg hover:from-yellow-700 hover:to-orange-700 transition-all duration-300 transform hover:scale-105"
+                href="/contact"
+                className="inline-flex items-center px-8 py-4 rounded-lg bg-gradient-to-r from-emerald-500 to-teal-500 text-white font-semibold hover:from-emerald-600 hover:to-teal-600 transition-all duration-200 transform hover:scale-105"
               >
-                Start Trading with AI
+                Start Free Trial
                 <ArrowRight className="ml-2 w-5 h-5" />
               </a>
               <a
                 href="#demo"
-                className="inline-flex items-center px-8 py-4 border-2 border-yellow-500 text-yellow-400 font-semibold rounded-lg hover:bg-yellow-500 hover:text-white transition-all duration-300"
+                className="inline-flex items-center px-8 py-4 rounded-lg border border-emerald-500/30 text-emerald-300 font-semibold hover:bg-emerald-500/10 transition-all duration-200"
               >
                 Watch Demo
               </a>
@@ -179,60 +230,39 @@ export default function AIFinancialTrading() {
         </div>
       </section>
 
-      {/* Key Benefits */}
+      {/* Features Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-white mb-4">
-              Why Choose Our AI Trading Platform?
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              Revolutionary Trading Capabilities
             </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Built by financial experts and AI engineers, our platform delivers institutional-grade trading capabilities.
+            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
+              Our AI platform combines cutting-edge technology with deep financial expertise 
+              to deliver unprecedented trading automation and optimization capabilities.
             </p>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {benefits.map((benefit, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700 hover:border-yellow-500 transition-all duration-300"
-              >
-                <CheckCircle className="w-8 h-8 text-yellow-400 mb-4" />
-                <p className="text-white text-lg font-medium">{benefit}</p>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
+          </motion.div>
 
-      {/* Features */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-800/30">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-white mb-4">
-              Powerful Features for Trading Excellence
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Everything you need to achieve superior trading performance and manage risk effectively.
-            </p>
-          </div>
-          
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index) => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="bg-slate-900/80 backdrop-blur-sm rounded-xl p-6 border border-slate-700 hover:border-yellow-500 transition-all duration-300 group"
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                viewport={{ once: true }}
+                className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 hover:border-emerald-500/30 transition-all duration-300"
               >
-                <div className="text-yellow-400 mb-4 group-hover:text-yellow-300 transition-colors duration-300">
-                  {feature.icon}
+                <div className="w-12 h-12 bg-gradient-to-r from-emerald-500 to-teal-500 rounded-lg flex items-center justify-center mb-4">
+                  <feature.icon className="w-6 h-6 text-white" />
                 </div>
-                <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
+                <h3 className="text-xl font-semibold text-white mb-2">{feature.title}</h3>
                 <p className="text-gray-300">{feature.description}</p>
               </motion.div>
             ))}
@@ -240,95 +270,147 @@ export default function AIFinancialTrading() {
         </div>
       </section>
 
-      {/* Trading Strategies */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
+      {/* Use Cases Section */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
         <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-white mb-4">
-              Advanced Trading Strategies
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              Transform Trading Operations
             </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              AI-powered trading strategies designed for consistent performance across market conditions.
+            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
+              From institutional trading to retail investors, our AI platform revolutionizes 
+              how you approach financial markets and execute trading strategies.
             </p>
-          </div>
-          
+          </motion.div>
+
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {tradingStrategies.map((strategy, index) => (
+            {useCases.map((useCase, index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-8 border border-slate-700 hover:border-yellow-500 transition-all duration-300"
+                initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                viewport={{ once: true }}
+                className="bg-gradient-to-r from-emerald-500/10 to-teal-500/10 rounded-xl p-8 border border-emerald-500/20"
               >
-                <h3 className="text-2xl font-bold text-white mb-4">{strategy.strategy}</h3>
-                <p className="text-gray-300 mb-4">{strategy.description}</p>
-                <div className="flex items-center">
-                  <TrendingUp className="w-5 h-5 text-yellow-400 mr-2" />
-                  <span className="text-yellow-400 font-semibold">{strategy.performance}</span>
+                <div className="flex items-center mb-4">
+                  <div className="w-12 h-12 bg-gradient-to-r from-emerald-500 to-teal-500 rounded-lg flex items-center justify-center mr-4">
+                    <useCase.icon className="w-6 h-6 text-white" />
+                  </div>
+                  <h3 className="text-xl font-semibold text-white">{useCase.title}</h3>
                 </div>
+                <p className="text-gray-300">{useCase.description}</p>
               </motion.div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Pricing */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-800/30">
+      {/* Markets Section */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-white mb-4">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              Multi-Market Support
+            </h2>
+            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
+              Trade across multiple asset classes and markets with our comprehensive AI platform.
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-6">
+            {markets.map((market, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, scale: 0.8 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.4, delay: index * 0.05 }}
+                viewport={{ once: true }}
+                className="bg-white/5 rounded-lg p-4 border border-white/10 hover:border-emerald-500/30 transition-all duration-200 text-center"
+              >
+                <span className="text-gray-300 font-medium text-sm">{market}</span>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Pricing Section */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
+        <div className="max-w-7xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Transparent Pricing
             </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Choose the plan that fits your trading volume and sophistication requirements.
+            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
+              Choose the plan that fits your trading volume and requirements. All plans include our core AI capabilities.
             </p>
-          </div>
-          
+          </motion.div>
+
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {pricing.map((plan, index) => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                className={`relative bg-slate-900/80 backdrop-blur-sm rounded-xl p-8 border ${
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                viewport={{ once: true }}
+                className={`relative rounded-xl p-8 ${
                   plan.popular 
-                    ? 'border-yellow-500 ring-2 ring-yellow-500/20' 
-                    : 'border-slate-700'
-                } hover:border-yellow-500 transition-all duration-300`}
+                    ? 'bg-gradient-to-br from-emerald-500/20 to-teal-500/20 border-2 border-emerald-500/50' 
+                    : 'bg-white/5 border border-white/10'
+                }`}
               >
                 {plan.popular && (
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                    <span className="bg-yellow-500 text-white px-4 py-2 rounded-full text-sm font-semibold">
+                    <span className="bg-gradient-to-r from-emerald-500 to-teal-500 text-white px-4 py-2 rounded-full text-sm font-semibold">
                       Most Popular
                     </span>
                   </div>
                 )}
                 
-                <div className="text-center mb-8">
-                  <h3 className="text-2xl font-bold text-white mb-4">{plan.name}</h3>
-                  <div className="mb-6">
+                <div className="text-center mb-6">
+                  <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
+                  <div className="flex items-baseline justify-center mb-2">
                     <span className="text-4xl font-bold text-white">{plan.price}</span>
-                    <span className="text-gray-400">{plan.period}</span>
+                    <span className="text-gray-400 ml-1">{plan.period}</span>
                   </div>
+                  <p className="text-gray-300">{plan.description}</p>
                 </div>
                 
-                <ul className="space-y-4 mb-8">
+                <ul className="space-y-3 mb-8">
                   {plan.features.map((feature, featureIndex) => (
-                    <li key={featureIndex} className="flex items-center text-gray-300">
-                      <CheckCircle className="w-5 h-5 text-yellow-400 mr-3 flex-shrink-0" />
-                      {feature}
+                    <li key={featureIndex} className="flex items-center">
+                      <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
+                      <span className="text-gray-300">{feature}</span>
                     </li>
                   ))}
                 </ul>
                 
                 <a
-                  href="https://ziontechgroup.com/contact"
-                  className={`w-full block text-center py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
+                  href="/contact"
+                  className={`w-full block text-center py-3 px-6 rounded-lg font-semibold transition-all duration-200 ${
                     plan.popular
-                      ? 'bg-gradient-to-r from-yellow-600 to-orange-600 text-white hover:from-yellow-700 hover:to-orange-700'
-                      : 'bg-slate-700 text-white hover:bg-slate-600'
+                      ? 'bg-gradient-to-r from-emerald-500 to-teal-500 text-white hover:from-emerald-600 hover:to-teal-600'
+                      : 'bg-white/10 text-white hover:bg-white/20 border border-white/20'
                   }`}
                 >
                   Get Started
@@ -339,152 +421,114 @@ export default function AIFinancialTrading() {
         </div>
       </section>
 
-      {/* Market Information */}
+      {/* Benefits Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <motion.div
-              initial={{ opacity: 0, x: -20 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8 }}
-            >
-              <h2 className="text-4xl font-bold text-white mb-6">
-                Market-Leading Trading Solution
-              </h2>
-              <div className="space-y-6">
-                <div className="flex items-center">
-                  <DollarSign className="w-6 h-6 text-yellow-400 mr-4" />
-                  <div>
-                    <p className="text-white font-semibold">Market Price Range</p>
-                    <p className="text-gray-300">$400 - $3,000/month for similar solutions</p>
-                  </div>
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              Measurable Results
+            </h2>
+            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
+              See the impact of AI-powered trading on your performance metrics and investment returns.
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {benefits.map((benefit, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                viewport={{ once: true }}
+                className="text-center"
+              >
+                <div className="w-16 h-16 bg-gradient-to-r from-emerald-500 to-teal-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <benefit.icon className="w-8 h-8 text-white" />
                 </div>
-                <div className="flex items-center">
-                  <Clock className="w-6 h-6 text-blue-400 mr-4" />
-                  <div>
-                    <p className="text-white font-semibold">Setup Time</p>
-                    <p className="text-gray-300">1-3 days for account activation</p>
-                  </div>
-                </div>
-                <div className="flex items-center">
-                  <Award className="w-6 h-6 text-yellow-400 mr-4" />
-                  <div>
-                    <p className="text-white font-semibold">ROI Timeline</p>
-                    <p className="text-gray-300">Immediate performance improvement</p>
-                  </div>
-                </div>
-                <div className="flex items-center">
-                  <Users className="w-6 h-6 text-purple-400 mr-4" />
-                  <div>
-                    <p className="text-white font-semibold">Target Market</p>
-                    <p className="text-gray-300">Individual traders, hedge funds, investment firms</p>
-                  </div>
-                </div>
-              </div>
-            </motion.div>
-            
-            <motion.div
-              initial={{ opacity: 0, x: 20 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8 }}
-              className="bg-slate-900/80 backdrop-blur-sm rounded-xl p-8 border border-slate-700"
-            >
-              <h3 className="text-2xl font-bold text-white mb-6">Performance Metrics</h3>
-              <div className="space-y-4">
-                <div className="flex items-center justify-between">
-                  <span className="text-gray-300">Return Increase</span>
-                  <span className="text-yellow-400 font-semibold">25-40%</span>
-                </div>
-                <div className="flex items-center justify-between">
-                  <span className="text-gray-300">Risk Reduction</span>
-                  <span className="text-blue-400 font-semibold">60%</span>
-                </div>
-                <div className="flex items-center justify-between">
-                  <span className="text-gray-300">Signal Accuracy</span>
-                  <span className="text-purple-400 font-semibold">92%</span>
-                </div>
-                <div className="flex items-center justify-between">
-                  <span className="text-gray-300">Automation Level</span>
-                  <span className="text-green-400 font-semibold">80%</span>
-                </div>
-              </div>
-            </motion.div>
+                <div className="text-3xl font-bold text-white mb-2">{benefit.metric}</div>
+                <h3 className="text-lg font-semibold text-white mb-2">{benefit.title}</h3>
+                <p className="text-gray-300 text-sm">{benefit.description}</p>
+              </motion.div>
+            ))}
           </div>
         </div>
       </section>
 
-      {/* Contact CTA */}
+      {/* Integrations Section */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
+        <div className="max-w-7xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              Seamless Integrations
+            </h2>
+            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
+              Connect with your existing brokerage accounts and trading platforms for a unified trading ecosystem.
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-6">
+            {integrations.map((integration, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, scale: 0.8 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.4, delay: index * 0.05 }}
+                viewport={{ once: true }}
+                className="bg-white/5 rounded-lg p-4 border border-white/10 hover:border-emerald-500/30 transition-all duration-200 text-center"
+              >
+                <span className="text-gray-300 font-medium text-sm">{integration}</span>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            className="bg-gradient-to-r from-yellow-600/20 to-orange-600/20 backdrop-blur-sm rounded-2xl p-12 border border-yellow-500/30"
+            viewport={{ once: true }}
           >
-            <h2 className="text-4xl font-bold text-white mb-6">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
               Ready to Transform Your Trading?
             </h2>
             <p className="text-xl text-gray-300 mb-8">
-              Join thousands of traders who have already revolutionized their trading performance with AI.
+              Join thousands of traders and institutions who have already revolutionized their trading 
+              operations with AI-powered algorithms and automation.
             </p>
+            
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
-                href="https://ziontechgroup.com/contact"
-                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-yellow-600 to-orange-600 text-white font-semibold rounded-lg hover:from-yellow-700 hover:to-orange-700 transition-all duration-300 transform hover:scale-105"
+                href="/contact"
+                className="inline-flex items-center px-8 py-4 rounded-lg bg-gradient-to-r from-emerald-500 to-teal-500 text-white font-semibold hover:from-emerald-600 hover:to-teal-600 transition-all duration-200 transform hover:scale-105"
               >
-                Start Trading Today
+                Start Free Trial
                 <ArrowRight className="ml-2 w-5 h-5" />
               </a>
               <a
-                href="tel:+13024640950"
-                className="inline-flex items-center px-8 py-4 border-2 border-yellow-500 text-yellow-400 font-semibold rounded-lg hover:bg-yellow-500 hover:text-white transition-all duration-300"
+                href="/schedule-demo"
+                className="inline-flex items-center px-8 py-4 rounded-lg border border-emerald-500/30 text-emerald-300 font-semibold hover:bg-emerald-500/10 transition-all duration-200"
               >
-                <Phone className="mr-2 w-5 h-5" />
-                Call Now
+                Schedule Demo
               </a>
             </div>
           </motion.div>
-        </div>
-      </section>
-
-      {/* Contact Information */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-slate-900">
-        <div className="max-w-4xl mx-auto text-center">
-          <h3 className="text-2xl font-bold text-white mb-8">Get in Touch</h3>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="flex flex-col items-center">
-              <Phone className="w-8 h-8 text-yellow-400 mb-4" />
-              <p className="text-white font-semibold mb-2">Phone</p>
-              <a href="tel:+13024640950" className="text-gray-300 hover:text-yellow-400 transition-colors">
-                +1 302 464 0950
-              </a>
-            </div>
-            <div className="flex flex-col items-center">
-              <Mail className="w-8 h-8 text-yellow-400 mb-4" />
-              <p className="text-white font-semibold mb-2">Email</p>
-              <a href="mailto:kleber@ziontechgroup.com" className="text-gray-300 hover:text-yellow-400 transition-colors">
-                kleber@ziontechgroup.com
-              </a>
-            </div>
-            <div className="flex flex-col items-center">
-              <MapPin className="w-8 h-8 text-yellow-400 mb-4" />
-              <p className="text-white font-semibold mb-2">Address</p>
-              <p className="text-gray-300">
-                364 E Main St STE 1008<br />
-                Middletown DE 19709
-              </p>
-            </div>
-          </div>
-          <div className="mt-8">
-            <a
-              href="https://ziontechgroup.com"
-              className="inline-flex items-center text-yellow-400 hover:text-yellow-300 transition-colors"
-            >
-              Visit our website
-              <ExternalLink className="ml-2 w-4 h-4" />
-            </a>
-          </div>
         </div>
       </section>
     </div>
