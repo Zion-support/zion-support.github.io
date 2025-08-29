@@ -105,7 +105,7 @@ export function generateRandomListing(): MarketplaceItem {
 
 export function generateRandomListings(count: number): MarketplaceItem[] {
   const listings: MarketplaceItem[] = [];
-  for (const i = 0; i < count; i++) {
+  for (let i = 0; i < count; i++) {
     listings.push(generateRandomListing());
   }
   return listings;
