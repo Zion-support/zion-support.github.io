@@ -6,6 +6,7 @@ import { ChatAssistant } from './components/ChatAssistant';
 import { LoadingSpinner } from './components/ui/LoadingSpinner';
 import { SEO } from './components/SEO';
 import { PerformanceOptimizer } from './components/PerformanceOptimizer';
+import { AccessibilityEnhancer } from './components/AccessibilityEnhancer';
 import { ErrorBoundary } from './components/ErrorBoundary';
 
 // Lazy load pages - only import existing ones
@@ -92,17 +93,6 @@ const Security = React.lazy(() => import('./pages/Security'));
 const Compliance = React.lazy(() => import('./pages/Compliance'));
 const OnsiteSupport = React.lazy(() => import('./pages/OnsiteSupport'));
 
-// Additional missing pages
-const Talent = React.lazy(() => import('./pages/Talent'));
-const Equipment = React.lazy(() => import('./pages/Equipment'));
-const ITOnsiteServices = React.lazy(() => import('./pages/ITOnsiteServices'));
-const Team = React.lazy(() => import('./pages/Team'));
-const Status = React.lazy(() => import('./pages/Status'));
-const Sitemap = React.lazy(() => import('./pages/Sitemap'));
-const News = React.lazy(() => import('./pages/News'));
-const Events = React.lazy(() => import('./pages/events'));
-const Marketplace = React.lazy(() => import('./pages/Marketplace'));
-
 const Careers = () => (
   <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 flex items-center justify-center">
     <SEO 
@@ -116,13 +106,26 @@ const Careers = () => (
   </div>
 );
 
+const Marketplace = () => (
+  <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 flex items-center justify-center">
+    <SEO 
+      title="Marketplace - Zion Tech Group"
+      description="Explore our marketplace of AI-powered technology solutions and services."
+    />
+    <div className="text-center text-white">
+      <h1 className="text-4xl font-bold mb-4">Marketplace</h1>
+      <p className="text-xl text-gray-300">Explore our solutions</p>
+    </div>
+  </div>
+);
+
 function App() {
   return (
     <ErrorBoundary>
       <div className="min-h-screen bg-futuristic">
         <AppHeader />
         
-        <main className="flex-1">
+        <main id="main-content" className="flex-1">
           <Suspense fallback={<LoadingSpinner />}>
             <Routes>
               <Route path="/" element={<Home />} />
@@ -163,16 +166,6 @@ function App() {
               <Route path="/login" element={<Login />} />
               <Route path="/marketplace" element={<Marketplace />} />
               <Route path="/partners" element={<Partners />} />
-              
-              {/* Additional missing routes */}
-              <Route path="/talent" element={<Talent />} />
-              <Route path="/equipment" element={<Equipment />} />
-              <Route path="/it-onsite-services" element={<ITOnsiteServices />} />
-              <Route path="/team" element={<Team />} />
-              <Route path="/status" element={<Status />} />
-              <Route path="/sitemap" element={<Sitemap />} />
-              <Route path="/news" element={<News />} />
-              <Route path="/events" element={<Events />} />
               
               {/* Service Routes - only for existing pages */}
               <Route path="/services/cloud-devops" element={<CloudDevOps />} />
@@ -219,7 +212,8 @@ function App() {
         
         <EnhancedFuturisticFooter />
         <ChatAssistant />
-        <PerformanceOptimizer showMetrics={true} />
+        <PerformanceOptimizer />
+        <AccessibilityEnhancer />
       </div>
     </ErrorBoundary>
   );
