@@ -51,6 +51,9 @@ export function AppHeader() {
     { name: 'AI Workflow Orchestrator', href: '/services/ai-workflow-orchestrator', icon: Workflow, description: 'Intelligent Process Automation' },
     { name: 'AI Data Governance', href: '/services/ai-data-governance', icon: Shield, description: 'AI-Powered Data Protection' },
     { name: 'AI Customer Success', href: '/services/ai-customer-success-platform', icon: Users, description: 'Proactive Customer Engagement' },
+    { name: 'AI Project Management', href: '/services/ai-project-management', icon: Calendar, description: 'Intelligent project orchestration' },
+    { name: 'AI Cybersecurity Platform', href: '/services/ai-cybersecurity-platform', icon: Shield, description: 'Advanced threat protection' },
+    { name: 'AI Financial Analytics', href: '/services/ai-financial-analytics', icon: DollarSign, description: 'Intelligent financial insights' },
     { name: 'Digital Twin', href: '/services/digital-twin', icon: Rocket, description: 'Simulation & Monitoring' },
     { name: 'Cybersecurity', href: '/services/ai-compliance-copilot', icon: Shield, description: 'AI-Powered Security' },
     { name: 'Cloud & DevOps', href: '/services/cloud-devops', icon: Cloud, description: 'Infrastructure & Automation' },
@@ -62,13 +65,13 @@ export function AppHeader() {
     { name: 'Micro SaaS', href: '/services/micro-saas-solutions', icon: ShoppingCart, description: 'Productized SaaS for niches' },
     { name: 'AI Auto Email', href: '/services/ai-auto-email-responder', icon: MessageCircle, description: 'Faster replies, CRM logging' },
     { name: 'Feedback Surveys', href: '/services/mobile-feedback-surveys', icon: Users, description: 'NPS/CSAT with AI insights' },
-    { name: 'LLM Content Studio', href: '/services/llm-content-studio', icon: BookOpen, description: 'On-brand AI content' },
+    { name: 'LLM Content Studio', href: '/services/ai-content-generator', icon: BookOpen, description: 'On-brand AI content' },
     { name: 'FinOps Advisor', href: '/services/finops-advisor', icon: DollarSign, description: 'Cloud cost optimization' },
     { name: 'AI Lead Scoring', href: '/services/ai-lead-scoring', icon: TrendingUp, description: 'Prioritize deals with ML' },
     { name: 'Website AI Chatbot', href: '/services/website-ai-chatbot', icon: MessageCircle, description: '24/7 on-site assistant' },
     { name: 'RAG Search', href: '/services/rag-search', icon: BookOpen, description: 'AI answers with citations' },
     { name: 'MLOps Pipeline', href: '/services/mlops-pipeline', icon: Settings, description: 'Train, deploy, monitor' },
-    { name: 'eCommerce Personalization', href: '/services/ecommerce-personalization', icon: ShoppingCart, description: 'Recos & search' },
+    { name: 'eCommerce Personalization', href: '/services/ecommerce-personalization', icon: BookOpen, description: 'Recos & search' },
     { name: 'Affiliate Marketing Tracker', href: '/services/affiliate-marketing-tracker', icon: TrendingUp, description: 'Advanced affiliate tracking & analytics' },
     { name: 'Uptime SLA Monitor', href: '/services/uptime-sla-monitor', icon: Activity, description: 'Professional uptime monitoring' },
     { name: 'SOC2 Compliance Tracker', href: '/services/soc2-compliance-tracker', icon: Shield, description: 'Automated compliance management' },
@@ -95,12 +98,13 @@ export function AppHeader() {
       color: 'from-purple-600 to-pink-600',
       services: [
         { name: 'AI Business Intelligence', href: '/services/ai-business-intelligence', description: 'Machine Learning & Data Science' },
+        { name: 'AI Project Management', href: '/services/ai-project-management', description: 'Intelligent project orchestration' },
         { name: 'AI Workflow Orchestrator', href: '/services/ai-workflow-orchestrator', description: 'Intelligent Process Automation' },
         { name: 'AI Data Governance', href: '/services/ai-data-governance', description: 'AI-Powered Data Protection' },
         { name: 'AI Customer Success Platform', href: '/services/ai-customer-success-platform', description: 'Proactive Customer Engagement' },
         { name: 'AI Sales Copilot', href: '/services/ai-sales-copilot', description: 'AI-powered sales automation' },
         { name: 'AI Compliance Assistant', href: '/services/ai-compliance-assistant', description: 'Regulatory compliance automation' },
-        { name: 'LLM Content Studio', href: '/services/llm-content-studio', description: 'AI content generation' }
+        { name: 'LLM Content Studio', href: '/services/ai-content-generator', description: 'AI content generation' }
       ]
     },
     {
@@ -138,8 +142,19 @@ export function AppHeader() {
       icon: Shield,
       color: 'from-indigo-600 to-purple-600',
       services: [
+        { name: 'AI Cybersecurity Platform', href: '/services/ai-cybersecurity-platform', description: 'Advanced threat protection' },
         { name: 'AI Compliance Copilot', href: '/services/ai-compliance-copilot', description: 'AI-Powered Security' },
         { name: 'Zero Trust Architecture', href: '/services/zero-trust-network-architecture', description: 'Advanced security' }
+      ]
+    },
+    {
+      name: 'Specialized AI',
+      icon: Brain,
+      color: 'from-emerald-600 to-teal-600',
+      services: [
+        { name: 'AI Healthcare Analytics', href: '/services/ai-healthcare-analytics', description: 'Healthcare intelligence' },
+        { name: 'AI Financial Analytics', href: '/services/ai-financial-analytics', description: 'Financial insights' },
+        { name: 'AI Project Management', href: '/services/ai-project-management', description: 'Project orchestration' }
       ]
     }
   ];
@@ -151,9 +166,10 @@ export function AppHeader() {
       color: 'from-purple-600 to-pink-600',
       solutions: [
         { name: 'AI Business Intelligence', href: '/services/ai-business-intelligence', description: 'Machine Learning & Data Science' },
+        { name: 'AI Project Management', href: '/services/ai-project-management', description: 'Intelligent project orchestration' },
         { name: 'AI Sales Copilot', href: '/services/ai-sales-copilot', description: 'AI-powered sales automation' },
         { name: 'AI Compliance Assistant', href: '/services/ai-compliance-assistant', description: 'Regulatory compliance automation' },
-        { name: 'LLM Content Studio', href: '/services/llm-content-studio', description: 'AI content generation' }
+        { name: 'LLM Content Studio', href: '/services/ai-content-generator', description: 'AI content generation' }
       ]
     },
     {
@@ -164,6 +180,16 @@ export function AppHeader() {
         { name: 'Quantum AI Platform', href: '/services/quantum-ai-platform', description: 'Next-gen quantum computing' },
         { name: 'AI Cybersecurity Suite', href: '/services/ai-cybersecurity-suite', description: 'Advanced security solutions' },
         { name: 'AI Healthcare Analytics', href: '/services/ai-healthcare-analytics', description: 'Healthcare data insights' }
+      ]
+    },
+    {
+      name: 'Specialized AI Solutions',
+      icon: Brain,
+      color: 'from-emerald-600 to-teal-600',
+      solutions: [
+        { name: 'AI Project Management', href: '/services/ai-project-management', description: 'Intelligent project orchestration' },
+        { name: 'AI Cybersecurity Platform', href: '/services/ai-cybersecurity-platform', description: 'Advanced threat protection' },
+        { name: 'AI Financial Analytics', href: '/services/ai-financial-analytics', description: 'Financial intelligence' }
       ]
     },
     {

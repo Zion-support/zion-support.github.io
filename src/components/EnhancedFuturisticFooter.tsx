@@ -85,10 +85,10 @@ export const EnhancedFuturisticFooter: React.FC = () => {
       links: [
         { name: 'Micro SaaS Solutions', href: '/services/micro-saas-solutions' },
         { name: 'AI Business Intelligence', href: '/services/ai-business-intelligence' },
+        { name: 'AI Project Management', href: '/services/ai-project-management' },
         { name: 'Customer Feedback Surveys', href: '/services/mobile-feedback-surveys' },
         { name: 'Cloud FinOps Optimizer', href: '/services/cloud-finops-optimizer' },
-        { name: 'FinOps Advisor', href: '/services/finops-advisor' },
-        { name: 'Digital Transformation', href: '/services/digital-transformation' }
+        { name: 'FinOps Advisor', href: '/services/finops-advisor' }
       ]
     },
     {
@@ -118,6 +118,19 @@ export const EnhancedFuturisticFooter: React.FC = () => {
         { name: 'Sustainability', href: '/services/sustainability' },
         { name: 'Digital Twin', href: '/services/digital-twin' },
         { name: 'Cloud DevOps', href: '/services/cloud-devops' }
+      ]
+    },
+    {
+      title: 'Specialized AI Services',
+      icon: Brain,
+      color: 'from-emerald-600 to-teal-600',
+      links: [
+        { name: 'AI Healthcare Analytics', href: '/services/ai-healthcare-analytics' },
+        { name: 'AI Financial Analytics', href: '/services/ai-financial-analytics' },
+        { name: 'AI Cybersecurity Platform', href: '/services/ai-cybersecurity-platform' },
+        { name: 'AI Project Management', href: '/services/ai-project-management' },
+        { name: 'AI Workflow Orchestrator', href: '/services/ai-workflow-orchestrator' },
+        { name: 'AI Data Governance', href: '/services/ai-data-governance' }
       ]
     }
   ];

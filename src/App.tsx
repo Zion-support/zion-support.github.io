@@ -113,6 +113,11 @@ const AIDataGovernance = React.lazy(() => import('./pages/services/AIDataGoverna
 const EdgeComputingPlatform = React.lazy(() => import('./pages/services/EdgeComputingPlatform'));
 const AICustomerSuccessPlatform = React.lazy(() => import('./pages/services/AICustomerSuccessPlatform'));
 
+// Additional innovative services
+const AIProjectManagement = React.lazy(() => import('./pages/services/AIProjectManagement'));
+const AICybersecurityPlatform = React.lazy(() => import('./pages/services/AICybersecurityPlatform'));
+const AIFinancialAnalytics = React.lazy(() => import('./pages/services/AIFinancialAnalytics'));
+
 // Additional Micro SaaS Services
 const AffiliateMarketingTracker = React.lazy(() => import('./pages/services/AffiliateMarketingTracker'));
 const UptimeSLAMonitor = React.lazy(() => import('./pages/services/UptimeSLAMonitor'));
@@ -269,6 +274,11 @@ function App() {
                 <Route path="/services/ai-data-governance" element={<AIDataGovernance />} />
                 <Route path="/services/edge-computing-platform" element={<EdgeComputingPlatform />} />
                 <Route path="/services/ai-customer-success-platform" element={<AICustomerSuccessPlatform />} />
+                
+                {/* Additional innovative services */}
+                <Route path="/services/ai-project-management" element={<AIProjectManagement />} />
+                <Route path="/services/ai-cybersecurity-platform" element={<AICybersecurityPlatform />} />
+                <Route path="/services/ai-financial-analytics" element={<AIFinancialAnalytics />} />
                 
                 {/* Catch all route */}
                 <Route path="*" element={<Home />} />
