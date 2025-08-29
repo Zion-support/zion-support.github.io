@@ -2,8 +2,7 @@
 
 const fs = require('fs');
 const path = require('path');
-const { execSync, spawn } = require('child_process');
-const chokidar = require('chokidar');
+const { execSync } = require('child_process');
 
 class AutomationFactory {
   constructor() {

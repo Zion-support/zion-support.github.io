@@ -5,6 +5,12 @@ import {
   Play, 
   Settings, 
   Target, 
+<<<<<<< HEAD
+  ArrowRight, 
+  CheckCircle 
+} from 'lucide-react';
+import SEO from '@/components/SEO';
+=======
   CheckCircle, 
   ArrowRight 
 } from 'lucide-react';
@@ -40,6 +46,55 @@ export default function FinOpsAdvisor() {
     { industry: 'SaaS', description: 'Manage multi-tenant infrastructure costs' },
     { industry: 'Healthcare', description: 'Ensure HIPAA-compliant cost optimization' },
     { industry: 'Finance', description: 'Implement cost controls for regulatory compliance' }
+  ];
+>>>>>>> origin/main
+
+export default function FinOpsAdvisor() {
+  // Data arrays
+  const features = [
+    {
+      title: 'Cost Analysis',
+      description: 'Comprehensive cloud cost analysis and reporting',
+      icon: DollarSign
+    },
+    {
+      title: 'Resource Optimization',
+      description: 'AI-powered resource optimization recommendations',
+      icon: Settings
+    },
+    {
+      title: 'Budget Management',
+      description: 'Automated budget tracking and alerts',
+      icon: Target
+    }
+  ];
+
+  const benefits = [
+    'Reduce cloud costs by up to 40%',
+    'Improve resource utilization',
+    'Automated cost optimization',
+    'Real-time cost monitoring',
+    'Predictive cost forecasting',
+    'Compliance and governance'
+  ];
+
+  const useCases = [
+    {
+      industry: 'E-commerce',
+      description: 'Optimize costs during peak seasons'
+    },
+    {
+      industry: 'SaaS',
+      description: 'Scale efficiently while controlling costs'
+    },
+    {
+      industry: 'Healthcare',
+      description: 'Ensure compliance with cost controls'
+    },
+    {
+      industry: 'Finance',
+      description: 'Real-time cost monitoring and alerts'
+    }
   ];
 
   return (
@@ -280,7 +335,5 @@ export default function FinOpsAdvisor() {
       </section>
     </div>
   );
-};
-
-export default FinOpsAdvisor;
+}
 
