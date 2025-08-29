@@ -81,6 +81,10 @@ const AIContractAnalysis = lazy(() => import('./pages/services/AI-Powered-Contra
 const AISupplyChainOptimizationNew = lazy(() => import('./pages/services/AI-Supply-Chain-Optimization'));
 const AICybersecurityThreatIntelligence = lazy(() => import('./pages/services/AI-Cybersecurity-Threat-Intelligence'));
 const AIHealthcareDiagnostics = lazy(() => import('./pages/services/AI-Healthcare-Diagnostics'));
+const AIPoweredDataAnalyticsPlatform = lazy(() => import('./pages/services/AI-Powered-Data-Analytics-Platform'));
+const AIPoweredCustomerServicePlatform = lazy(() => import('./pages/services/AI-Powered-Customer-Service-Platform'));
+const AIPoweredMarketingAutomationPlatform = lazy(() => import('./pages/services/AI-Powered-Marketing-Automation-Platform'));
+const AIPoweredFinancialAnalyticsPlatform = lazy(() => import('./pages/services/AI-Powered-Financial-Analytics-Platform'));
 
 function App() {
   return (
@@ -142,6 +146,10 @@ function App() {
                 <Route path="/services/ai-supply-chain-optimization" element={<AISupplyChainOptimizationNew />} />
                 <Route path="/services/ai-cybersecurity-threat-intelligence" element={<AICybersecurityThreatIntelligence />} />
                 <Route path="/services/ai-healthcare-diagnostics" element={<AIHealthcareDiagnostics />} />
+                <Route path="/services/ai-powered-data-analytics-platform" element={<AIPoweredDataAnalyticsPlatform />} />
+                <Route path="/services/ai-powered-customer-service-platform" element={<AIPoweredCustomerServicePlatform />} />
+                <Route path="/services/ai-powered-marketing-automation-platform" element={<AIPoweredMarketingAutomationPlatform />} />
+                <Route path="/services/ai-powered-financial-analytics-platform" element={<AIPoweredFinancialAnalyticsPlatform />} />
                 
                 {/* Catch all route */}
                 <Route path="*" element={<Home />} />
