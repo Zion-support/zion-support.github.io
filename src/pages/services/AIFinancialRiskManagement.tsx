@@ -107,7 +107,7 @@ const AIFinancialRiskManagement: React.FC = () => {
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO 
         title="AI Financial Risk Management - Zion Tech Group"
-        description="Transform financial risk management with AI-powered analytics. Monitor risks in real-time, predict market disruptions, and optimize portfolio performance."
+        description="Transform financial risk management with AI-powered analytics. Monitor, predict, and mitigate risks in real-time across your portfolio."
       />
       
       {/* Hero Section */}
@@ -119,28 +119,28 @@ const AIFinancialRiskManagement: React.FC = () => {
             transition={{ duration: 0.6 }}
             className="text-center"
           >
-            <div className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-emerald-500/20 to-teal-500/20 rounded-full border border-emerald-400/30 mb-6">
-              <Shield className="w-5 h-5 text-emerald-400 mr-2" />
-              <span className="text-emerald-300 font-medium">AI Financial Risk Management</span>
+            <div className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-green-500/20 to-emerald-500/20 rounded-full border border-green-400/30 mb-6">
+              <Shield className="w-5 h-5 text-green-400 mr-2" />
+              <span className="text-green-300 font-medium">AI Financial Risk Management</span>
             </div>
             
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
               AI Financial Risk
-              <span className="block text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 via-teal-500 to-cyan-400">
+              <span className="block text-transparent bg-clip-text bg-gradient-to-r from-green-400 via-emerald-500 to-teal-400">
                 Management
               </span>
             </h1>
             
             <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-              Transform financial risk management with AI-powered analytics. Monitor risks in real-time, 
-              predict market disruptions, and optimize portfolio performance with intelligent insights.
+              Transform financial risk management with AI-powered analytics. Monitor, predict, 
+              and mitigate risks in real-time across your portfolio with intelligent risk solutions.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="px-8 py-4 bg-gradient-to-r from-emerald-500 to-teal-600 text-white font-semibold rounded-lg hover:from-emerald-400 hover:to-teal-500 transition-all duration-200 hover:scale-105 shadow-lg shadow-emerald-500/20">
+              <button className="px-8 py-4 bg-gradient-to-r from-green-500 to-emerald-600 text-white font-semibold rounded-lg hover:from-green-400 hover:to-emerald-500 transition-all duration-200 hover:scale-105 shadow-lg shadow-green-500/20">
                 Start Managing Risk
               </button>
-              <button className="px-8 py-4 border border-emerald-400/30 text-emerald-300 font-semibold rounded-lg hover:bg-emerald-400/10 transition-all duration-200">
+              <button className="px-8 py-4 border border-green-400/30 text-green-300 font-semibold rounded-lg hover:bg-green-400/10 transition-all duration-200">
                 Schedule Demo
               </button>
             </div>
@@ -161,7 +161,7 @@ const AIFinancialRiskManagement: React.FC = () => {
               Intelligent Risk Management Features
             </h2>
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              Powered by advanced AI to protect and optimize your financial assets
+              Powered by advanced AI to transform risk management
             </p>
           </motion.div>
 
@@ -172,9 +172,9 @@ const AIFinancialRiskManagement: React.FC = () => {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 hover:border-emerald-400/30 transition-all duration-200 text-center"
+                className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 hover:border-green-400/30 transition-all duration-200 text-center"
               >
-                <div className="w-16 h-16 bg-gradient-to-r from-emerald-500 to-teal-500 rounded-xl flex items-center justify-center mx-auto mb-4">
+                <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-emerald-500 rounded-xl flex items-center justify-center mx-auto mb-4">
                   <feature.icon className="w-8 h-8 text-white" />
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-2">{feature.title}</h3>
@@ -198,24 +198,24 @@ const AIFinancialRiskManagement: React.FC = () => {
               Comprehensive Risk Coverage
             </h2>
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              Monitor and manage all types of financial risks
+              Monitor all types of financial risks in one platform
             </p>
           </motion.div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {riskTypes.map((risk, index) => (
+            {riskTypes.map((type, index) => (
               <motion.div
-                key={risk.title}
+                key={type.title}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 hover:border-emerald-400/30 transition-all duration-200"
+                className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 hover:border-green-400/30 transition-all duration-200"
               >
                 <div className="flex items-start space-x-4">
-                  <div className="text-4xl">{risk.icon}</div>
+                  <div className="text-4xl">{type.icon}</div>
                   <div>
-                    <h3 className="text-xl font-semibold text-white mb-2">{risk.title}</h3>
-                    <p className="text-gray-300">{risk.description}</p>
+                    <h3 className="text-xl font-semibold text-white mb-2">{type.title}</h3>
+                    <p className="text-gray-300">{type.description}</p>
                   </div>
                 </div>
               </motion.div>
@@ -237,7 +237,7 @@ const AIFinancialRiskManagement: React.FC = () => {
               Why Choose AI Financial Risk Management?
             </h2>
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              Transform risk management with intelligent analytics
+              Transform risk management with intelligent automation
             </p>
           </motion.div>
 
@@ -263,14 +263,14 @@ const AIFinancialRiskManagement: React.FC = () => {
               initial={{ opacity: 0, x: 20 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.6 }}
-              className="bg-gradient-to-br from-emerald-500/20 to-teal-500/20 border border-emerald-400/30 rounded-xl p-8"
+              className="bg-gradient-to-br from-green-500/20 to-emerald-500/20 border border-green-400/30 rounded-xl p-8"
             >
               <h3 className="text-2xl font-semibold text-white mb-6">Get Started Today</h3>
               <p className="text-gray-300 mb-6">
                 Ready to transform risk management? Our AI risk experts can help you 
                 set up intelligent risk monitoring and portfolio optimization.
               </p>
-              <button className="w-full px-6 py-3 bg-gradient-to-r from-emerald-500 to-teal-600 text-white font-semibold rounded-lg hover:from-emerald-400 hover:to-teal-500 transition-all duration-200 hover:scale-105 shadow-lg shadow-emerald-500/20">
+              <button className="w-full px-6 py-3 bg-gradient-to-r from-green-500 to-emerald-600 text-white font-semibold rounded-lg hover:from-green-400 hover:to-emerald-500 transition-all duration-200 hover:scale-105 shadow-lg shadow-green-500/20">
                 Start Risk Management
               </button>
             </motion.div>
@@ -304,7 +304,7 @@ const AIFinancialRiskManagement: React.FC = () => {
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 className={`bg-slate-800/50 border rounded-xl p-8 ${
                   plan.plan === 'Professional' 
-                    ? 'border-emerald-400/50 bg-gradient-to-br from-emerald-500/10 to-teal-500/10' 
+                    ? 'border-green-400/50 bg-gradient-to-br from-green-500/10 to-emerald-500/10' 
                     : 'border-slate-700/50'
                 }`}
               >
@@ -325,7 +325,7 @@ const AIFinancialRiskManagement: React.FC = () => {
                 </ul>
                 <button className={`w-full px-6 py-3 rounded-lg font-semibold transition-all duration-200 hover:scale-105 ${
                   plan.plan === 'Professional'
-                    ? 'bg-gradient-to-r from-emerald-500 to-teal-600 text-white hover:from-emerald-400 hover:to-teal-500 shadow-lg shadow-emerald-500/20'
+                    ? 'bg-gradient-to-r from-green-500 to-emerald-600 text-white hover:from-green-400 hover:to-emerald-500 shadow-lg shadow-green-500/20'
                     : 'bg-slate-700 text-white hover:bg-slate-600'
                 }`}>
                   Get Started
@@ -351,10 +351,10 @@ const AIFinancialRiskManagement: React.FC = () => {
               Transform risk management with AI-powered analytics
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="px-8 py-4 bg-gradient-to-r from-emerald-500 to-teal-600 text-white font-semibold rounded-lg hover:from-emerald-400 hover:to-teal-500 transition-all duration-200 hover:scale-105 shadow-lg shadow-emerald-500/20">
+              <button className="px-8 py-4 bg-gradient-to-r from-green-500 to-emerald-600 text-white font-semibold rounded-lg hover:from-green-400 hover:to-emerald-500 transition-all duration-200 hover:scale-105 shadow-lg shadow-green-500/20">
                 Start Free Trial
               </button>
-              <button className="px-8 py-4 border border-emerald-400/30 text-emerald-300 font-semibold rounded-lg hover:bg-emerald-400/10 transition-all duration-200">
+              <button className="px-8 py-4 border border-green-400/30 text-green-300 font-semibold rounded-lg hover:bg-green-400/10 transition-all duration-200">
                 Contact Sales
               </button>
             </div>
@@ -384,7 +384,7 @@ const AIFinancialRiskManagement: React.FC = () => {
               </div>
               <div>
                 <h3 className="text-xl font-semibold text-white mb-2">Website</h3>
-                <a href="https://ziontechgroup.com" className="text-emerald-400 hover:text-emerald-300">
+                <a href="https://ziontechgroup.com" className="text-green-400 hover:text-green-300">
                   ziontechgroup.com
                 </a>
               </div>

@@ -559,6 +559,4 @@ const ComprehensivePricingGuide2027: React.FC = () => {
       </section>
     </div>
   );
-};
-
-export default ComprehensivePricingGuide2027;
+}

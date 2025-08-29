@@ -17,19 +17,76 @@ import { AdvancedAnalytics } from './components/AdvancedAnalytics';
 import { SmartNotificationSystem } from './components/SmartNotificationSystem';
 import { ChatAssistant } from './components/ChatAssistant';
 import { ErrorBoundary } from './components/ErrorBoundary';
+import { LoadingSpinner } from './components/ui/loading-spinner';
 
-// Lazy-loaded pages for better performance
-const Home = lazy(() => import('./pages/Home').then(module => ({ default: module.Home })));
-const About = lazy(() => import('./pages/About').then(module => ({ default: module.About })));
-const Services = lazy(() => import('./pages/Services').then(module => ({ default: module.Services })));
-const Contact = lazy(() => import('./pages/Contact').then(module => ({ default: module.Contact })));
-const Blog = lazy(() => import('./pages/Blog').then(module => ({ default: module.Blog })));
-const Careers = lazy(() => import('./pages/Careers').then(module => ({ default: module.Careers })));
+// Enhanced lazy loading with preloading hints
+const createLazyComponent = (importFn: () => Promise<any>, fallback?: React.ReactNode) => {
+  const LazyComponent = lazy(importFn);
+  return (props: any) => (
+    <Suspense fallback={fallback || <LoadingSpinner />}>
+      <LazyComponent {...props} />
+    </Suspense>
+  );
+};
+
+// Core pages with optimized imports
+const Home = createLazyComponent(() => import('./pages/Home'));
+const Home2026 = createLazyComponent(() => import('./pages/Home2026'));
+const About = createLazyComponent(() => import('./pages/About'));
+const Contact = createLazyComponent(() => import('./pages/Contact'));
+const Careers = createLazyComponent(() => import('./pages/Careers'));
+const News = createLazyComponent(() => import('./pages/News'));
+const Press = createLazyComponent(() => import('./pages/Press'));
+const CaseStudies = createLazyComponent(() => import('./pages/CaseStudies'));
+const WhitePapers = createLazyComponent(() => import('./pages/WhitePapers'));
+const Privacy = createLazyComponent(() => import('./pages/Privacy'));
+const Terms = createLazyComponent(() => import('./pages/Terms'));
+const Blog = createLazyComponent(() => import('./pages/Blog'));
 
 // Service pages
-const AIServices = lazy(() => import('./pages/AIServices'));
-const ITServices = lazy(() => import('./pages/ITServices'));
-const MicroSaaS = lazy(() => import('./pages/MicroSaaS'));
+const Services = createLazyComponent(() => import('./pages/Services'));
+const Services2026 = createLazyComponent(() => import('./pages/Services2026'));
+const Services2027 = createLazyComponent(() => import('./pages/InnovativeServices2027'));
+const AIServices = createLazyComponent(() => import('./pages/AIServices'));
+const AISolutions = createLazyComponent(() => import('./pages/AISolutions'));
+const ITServices = createLazyComponent(() => import('./pages/ITServices'));
+const MicroSaaS = createLazyComponent(() => import('./pages/MicroSaaS'));
+const MicroSAASSolutions = createLazyComponent(() => import('./pages/services/MicroSAASSolutions'));
+const ComprehensiveServices = createLazyComponent(() => import('./pages/ComprehensiveServices'));
+
+// Additional pages
+const Partners = createLazyComponent(() => import('./pages/Partners'));
+const Team = createLazyComponent(() => import('./pages/Team'));
+const HelpCenter = createLazyComponent(() => import('./pages/HelpCenter'));
+const Documentation = createLazyComponent(() => import('./pages/Documentation'));
+const Developers = createLazyComponent(() => import('./pages/Developers'));
+const Webinars = createLazyComponent(() => import('./pages/Webinars'));
+const Status = createLazyComponent(() => import('./pages/Status'));
+const Training = createLazyComponent(() => import('./pages/Training'));
+const Support = createLazyComponent(() => import('./pages/Support'));
+const Events = createLazyComponent(() => import('./pages/Events'));
+const Security = createLazyComponent(() => import('./pages/Security'));
+const Cookies = createLazyComponent(() => import('./pages/Cookies'));
+const Sitemap = createLazyComponent(() => import('./pages/Sitemap'));
+const Talent = createLazyComponent(() => import('./pages/Talent'));
+const Equipment = createLazyComponent(() => import('./pages/Equipment'));
+const GreenIT = createLazyComponent(() => import('./pages/GreenIT'));
+const Marketplace = createLazyComponent(() => import('./pages/Marketplace'));
+const MarketplaceProducts = createLazyComponent(() => import('./pages/marketplace/Products'));
+const MarketplaceTalent = createLazyComponent(() => import('./pages/marketplace/Talent'));
+const MarketplaceEquipment = createLazyComponent(() => import('./pages/marketplace/Equipment'));
+const MarketplaceServices = createLazyComponent(() => import('./pages/marketplace/Services'));
+const Login = createLazyComponent(() => import('./pages/Login'));
+const RequestQuote = createLazyComponent(() => import('./pages/RequestQuote'));
+const Dashboard = createLazyComponent(() => import('./pages/Dashboard'));
+const FAQ = createLazyComponent(() => import('./pages/FAQ'));
+const SearchPage = createLazyComponent(() => import('./pages/SearchPage'));
+const Pricing = createLazyComponent(() => import('./pages/Pricing'));
+const ResearchDevelopment = createLazyComponent(() => import('./pages/research-development'));
+const MobileLaunch = createLazyComponent(() => import('./pages/MobileLaunch'));
+const Analytics = createLazyComponent(() => import('./pages/Analytics'));
+const Match = createLazyComponent(() => import('./pages/Match'));
+const Solutions = createLazyComponent(() => import('./pages/solutions'));
 
 // 2029 Cutting-Edge Services
 const ZionCuttingEdgeServices2029 = lazy(() => import('./pages/ZionCuttingEdgeServices2029'));
@@ -38,9 +95,6 @@ const ZionCuttingEdgeServices2029 = lazy(() => import('./pages/ZionCuttingEdgeSe
 const AiSolutions = lazy(() => import('./pages/AiSolutions'));
 const SolutionsEnterprise = lazy(() => import('./pages/solutions/Enterprise'));
 const SolutionsHealthcare = lazy(() => import('./pages/solutions/Healthcare'));
-
-// Enhanced services pages - only import existing ones
-const ComprehensivePricingGuide2027 = lazy(() => import('./pages/ComprehensivePricingGuide2027.tsx'));
 
 // Service pages - only import existing ones
 const CloudDevOps = lazy(() => import('./pages/services/CloudDevOps'));
@@ -107,7 +161,6 @@ const DigitalTransformation = lazy(() => import('./pages/services/DigitalTransfo
 
 // 2025 Innovative Services
 const InnovativeServicesLanding2025 = lazy(() => import('./pages/InnovativeServicesLanding2025'));
-const ComprehensiveServicesShowcase2025 = lazy(() => import('./pages/ComprehensiveServicesShowcase2025'));
 const ComprehensivePricingGuide2025 = lazy(() => import('./pages/ComprehensivePricingGuide2025'));
 
 // Additional missing imports
@@ -122,8 +175,12 @@ const AIPredictiveMaintenance = lazy(() => import('./pages/services/ai-predictiv
 const QuantumMachineLearning = lazy(() => import('./pages/services/quantum-machine-learning'));
 const AIContentCreation = lazy(() => import('./pages/services/ai-content-creation'));
 
+// New innovative AI services
+const AIQuantumComputingPlatform = lazy(() => import('./pages/services/AIQuantumComputingPlatform'));
+const AIAutonomousVehiclePlatform = lazy(() => import('./pages/services/AIAutonomousVehiclePlatform'));
+const AIMetaverseDevelopmentPlatform = lazy(() => import('./pages/services/AIMetaverseDevelopmentPlatform'));
+
 // Comprehensive services imports
-const ComprehensiveServicesShowcase2025Page = lazy(() => import('./pages/ComprehensiveServicesShowcase2025'));
 const ComprehensiveServicesShowcase2027Page = lazy(() => import('./pages/ComprehensiveServicesShowcase2027'));
 const ComprehensiveServicesLanding2025 = lazy(() => import('./pages/ComprehensiveServicesLanding2025'));
 const ComprehensivePricing2026 = lazy(() => import('./pages/ComprehensivePricing2026'));
@@ -140,54 +197,44 @@ const DataAnalytics = lazy(() => import('./pages/services/DataAnalytics'));
 const QuantumComputing = lazy(() => import('./pages/services/quantum-computing'));
 const IoTEdgeComputing = lazy(() => import('./pages/services/iot-edge-computing'));
 const DigitalTwin = lazy(() => import('./pages/services/DigitalTwin'));
-const Marketplace = lazy(() => import('./pages/Marketplace'));
-const Pricing = lazy(() => import('./pages/Pricing'));
 const ITConsulting = lazy(() => import('./pages/ITConsulting'));
-const Sitemap = lazy(() => import('./pages/Sitemap'));
 
-// Loading component
-const LoadingSpinner = () => (
-  <motion.div
-    initial={{ opacity: 0 }}
-    animate={{ opacity: 1 }}
-    className="min-h-screen flex items-center justify-center bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900"
-  >
-    <div className="text-center">
-      <motion.div
-        animate={{ rotate: 360 }}
-        transition={{ duration: 2, repeat: Infinity, ease: "linear" }}
-        className="w-16 h-16 border-4 border-blue-500 border-t-transparent rounded-full mx-auto mb-4"
-      />
-      <h2 className="text-2xl font-bold text-white mb-2">Zion Tech Group</h2>
-      <p className="text-blue-300">Loading amazing experiences...</p>
+// Service showcase pages
+const UltimateServicesShowcase2025 = React.lazy(() => import('./pages/UltimateServicesShowcase2025'));
+const ComprehensiveServicesShowcase2025 = React.lazy(() => import('./pages/ComprehensiveServicesShowcase2025'));
+
+// New innovative AI services
+const AIWorkflowOrchestrator = React.lazy(() => import('./pages/services/AIWorkflowOrchestrator'));
+const AIDataGovernancePlatform = React.lazy(() => import('./pages/services/AIDataGovernancePlatform'));
+const AICustomerExperienceAnalytics = React.lazy(() => import('./pages/services/AICustomerExperienceAnalytics'));
+const AIFinancialRiskManagement = React.lazy(() => import('./pages/services/AIFinancialRiskManagement'));
+const AIHRTalentAcquisition = React.lazy(() => import('./pages/services/AIHRTalentAcquisition'));
+const AIIoTEdgeComputing = React.lazy(() => import('./pages/services/AIIoTEdgeComputing'));
+const AISustainableTechnology = React.lazy(() => import('./pages/services/AISustainableTechnology'));
+const AIQuantumMachineLearning = React.lazy(() => import('./pages/services/AIQuantumMachineLearning'));
+
+// Additional pages
+const API = createLazyComponent(() => import('./pages/API'));
+const DeveloperPortal = createLazyComponent(() => import('./pages/DeveloperPortal'));
+
+// Accessibility page
+const Accessibility = () => (
+  <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 flex items-center justify-center">
+    <div className="text-center text-white">
+      <h1 className="text-4xl font-bold mb-4">Careers</h1>
+      <p className="text-xl text-gray-300">Join our team</p>
     </div>
-  </motion.div>
+  </div>
 );
 
-// Error fallback component
-const ErrorFallback = ({ error, resetErrorBoundary }: { error: Error; resetErrorBoundary: () => void }) => (
-  <div className="min-h-screen bg-gradient-to-br from-red-50 to-orange-50 flex items-center justify-center p-4">
-    <div className="max-w-md w-full bg-white rounded-2xl shadow-2xl border border-red-200 p-8 text-center">
-      <div className="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-4">
-        <span className="text-3xl">⚠️</span>
-      </div>
-      <h1 className="text-2xl font-bold text-red-800 mb-4">Something went wrong</h1>
-      <p className="text-red-600 mb-6">
-        We're sorry, but something unexpected happened while loading the page.
-      </p>
-      <div className="space-y-3">
-        <button
-          onClick={resetErrorBoundary}
-          className="w-full px-6 py-3 bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition-colors"
-        >
-          Try Again
-        </button>
-        <button
-          onClick={() => window.location.href = '/'}
-          className="w-full px-6 py-3 bg-gray-500 text-white rounded-lg hover:bg-gray-600 transition-colors"
-        >
-          Go Home
-        </button>
+// Enhanced loading component
+const EnhancedLoadingSpinner = () => (
+  <div className="flex items-center justify-center min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
+    <div className="relative">
+      <div className="w-16 h-16 border-4 border-cyan-400/20 rounded-full"></div>
+      <div className="absolute top-0 left-0 w-16 h-16 border-4 border-cyan-400 border-t-transparent rounded-full animate-spin"></div>
+      <div className="mt-4 text-center">
+        <div className="text-cyan-400 text-sm animate-pulse">Loading Zion Tech...</div>
       </div>
     </div>
   </div>
@@ -196,11 +243,17 @@ const ErrorFallback = ({ error, resetErrorBoundary }: { error: Error; resetError
 function App() {
   return (
     <HelmetProvider>
-      <ErrorBoundary fallback={<ErrorFallback error={new Error()} resetErrorBoundary={() => {}} />}>
+      <ErrorBoundary>
         <Router>
-          <div className="App min-h-screen bg-white">
+          <div className="App min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
             {/* SEO Component */}
-            <SEO />
+            <SEO 
+              title="Zion Tech Group - Leading AI & Technology Solutions"
+              description="Transform your business with Zion Tech Group's cutting-edge AI solutions, quantum computing, and innovative micro SAAS services. Leading the future of technology."
+              keywords="AI solutions, quantum computing, micro SAAS, technology consulting, digital transformation"
+              ogImage="/og-image.jpg"
+              canonicalUrl="https://ziontechgroup.com"
+            />
             
             {/* Performance Optimizer */}
             <PerformanceOptimizer enabled={true} />
@@ -219,92 +272,66 @@ function App() {
             
             {/* Main Content */}
             <main className="flex-1">
-              <Suspense fallback={<LoadingSpinner />}>
+              <Suspense fallback={<EnhancedLoadingSpinner />}>
                 <AnimatePresence mode="wait">
                   <Routes>
-                    <Route 
-                      path="/" 
-                      element={
-                        <motion.div
-                          initial={{ opacity: 0 }}
-                          animate={{ opacity: 1 }}
-                          exit={{ opacity: 0 }}
-                          transition={{ duration: 0.3 }}
-                        >
-                          <Home />
-                        </motion.div>
-                      } 
-                    />
-                    <Route 
-                      path="/about" 
-                      element={
-                        <motion.div
-                          initial={{ opacity: 0 }}
-                          animate={{ opacity: 1 }}
-                          exit={{ opacity: 0 }}
-                          transition={{ duration: 0.3 }}
-                        >
-                          <About />
-                        </motion.div>
-                      } 
-                    />
-                    <Route 
-                      path="/services" 
-                      element={
-                        <motion.div
-                          initial={{ opacity: 0 }}
-                          animate={{ opacity: 1 }}
-                          exit={{ opacity: 0 }}
-                          transition={{ duration: 0.3 }}
-                        >
-                          <Services />
-                        </motion.div>
-                      } 
-                    />
-                    <Route 
-                      path="/contact" 
-                      element={
-                        <motion.div
-                          initial={{ opacity: 0 }}
-                          animate={{ opacity: 1 }}
-                          exit={{ opacity: 0 }}
-                          transition={{ duration: 0.3 }}
-                        >
-                          <Contact />
-                        </motion.div>
-                      } 
-                    />
-                    <Route 
-                      path="/blog" 
-                      element={
-                        <motion.div
-                          initial={{ opacity: 0 }}
-                          animate={{ opacity: 1 }}
-                          exit={{ opacity: 0 }}
-                          transition={{ duration: 0.3 }}
-                        >
-                          <Blog />
-                        </motion.div>
-                      } 
-                    />
-                    <Route 
-                      path="/careers" 
-                      element={
-                        <motion.div
-                          initial={{ opacity: 0 }}
-                          animate={{ opacity: 1 }}
-                          exit={{ opacity: 0 }}
-                          transition={{ duration: 0.3 }}
-                        >
-                          <Careers />
-                        </motion.div>
-                      } 
-                    />
+                    {/* Core Routes */}
+                    <Route path="/" element={<Home />} />
+                    <Route path="/home2026" element={<Home2026 />} />
+                    <Route path="/about" element={<About />} />
+                    <Route path="/contact" element={<Contact />} />
+                    <Route path="/blog" element={<Blog />} />
+                    <Route path="/careers" element={<Careers />} />
+                    <Route path="/pricing" element={<Pricing />} />
+                    <Route path="/team" element={<Team />} />
+                    <Route path="/help" element={<HelpCenter />} />
+                    <Route path="/security" element={<Security />} />
+                    <Route path="/status" element={<Status />} />
+                    <Route path="/cookies" element={<Cookies />} />
+                    <Route path="/sitemap" element={<Sitemap />} />
+                    <Route path="/talent" element={<Talent />} />
+                    <Route path="/equipment" element={<Equipment />} />
+                    <Route path="/request-quote" element={<RequestQuote />} />
+                    <Route path="/marketplace" element={<Marketplace />} />
+                    <Route path="/marketplace/products" element={<MarketplaceProducts />} />
+                    <Route path="/marketplace/talent" element={<MarketplaceTalent />} />
+                    <Route path="/marketplace/equipment" element={<MarketplaceEquipment />} />
+                    <Route path="/marketplace/services" element={<MarketplaceServices />} />
+                    <Route path="/login" element={<Login />} />
+                    <Route path="/services" element={<Services />} />
+                    <Route path="/services2026" element={<Services2026 />} />
+                    <Route path="/services2027" element={<Services2027 />} />
                     
-                    {/* Additional Service Routes */}
+                    {/* Service Routes */}
                     <Route path="/ai-services" element={<AIServices />} />
+                    <Route path="/ai-solutions" element={<AISolutions />} />
                     <Route path="/it-services" element={<ITServices />} />
                     <Route path="/micro-saas" element={<MicroSaaS />} />
+                    <Route path="/services/micro-saas-solutions" element={<MicroSAASSolutions />} />
+                    <Route path="/comprehensive-services" element={<ComprehensiveServices />} />
+                    <Route path="/mobile-launch" element={<MobileLaunch />} />
+                    <Route path="/analytics" element={<Analytics />} />
+                    <Route path="/match" element={<Match />} />
+                    <Route path="/search" element={<SearchPage />} />
+                    <Route path="/case-studies" element={<CaseStudies />} />
+                    <Route path="/privacy" element={<Privacy />} />
+                    <Route path="/terms" element={<Terms />} />
+                    <Route path="/white-papers" element={<WhitePapers />} />
+                    <Route path="/press" element={<Press />} />
+                    <Route path="/webinars" element={<Webinars />} />
+                    <Route path="/training" element={<Training />} />
+                    <Route path="/support" element={<Support />} />
+                    <Route path="/documentation" element={<Documentation />} />
+                    <Route path="/developers" element={<Developers />} />
+                    <Route path="/research-development" element={<ResearchDevelopment />} />
+                    <Route path="/dashboard" element={<Dashboard />} />
+                    <Route path="/green-it" element={<GreenIT />} />
+                    <Route path="/space-tech" element={<Accessibility />} />
+                    <Route path="/quantum-technology" element={<Accessibility />} />
+                    <Route path="/financial-solutions" element={<Accessibility />} />
+                    <Route path="/mobile" element={<Accessibility />} />
+                    
+                    {/* Additional Service Routes */}
                     <Route path="/zion-cutting-edge-services-2029" element={<ZionCuttingEdgeServices2029 />} />
                     <Route path="/ai-solutions" element={<AiSolutions />} />
                     <Route path="/solutions/enterprise" element={<SolutionsEnterprise />} />
@@ -382,19 +409,28 @@ function App() {
                     <Route path="/new-innovative-services-2025" element={<NewInnovativeServices2025 />} />
                     
                     {/* Additional Pages */}
-                    <Route path="/dashboard" element={<Dashboard />} />
-                    <Route path="/login" element={<Login />} />
                     <Route path="/faq" element={<FAQ />} />
-                    <Route path="/search" element={<SearchPage />} />
                     <Route path="/partners" element={<Partners />} />
                     <Route path="/news" element={<News />} />
-                    <Route path="/case-studies" element={<CaseStudies />} />
-                    <Route path="/help" element={<HelpCenter />} />
-                    <Route path="/marketplace" element={<Marketplace />} />
-                    <Route path="/pricing" element={<Pricing />} />
                     <Route path="/it-consulting" element={<ITConsulting />} />
-                    <Route path="/space-tech" element={<SpaceTech />} />
-                    <Route path="/sitemap" element={<Sitemap />} />
+                    
+                    {/* 2029 Cutting-Edge Services */}
+                    <Route path="/cutting-edge-services-2029" element={<ZionCuttingEdgeServices2029 />} />
+                    
+                    {/* Additional routes */}
+                    <Route path="/api" element={<API />} />
+                    <Route path="/developer-portal" element={<DeveloperPortal />} />
+                    
+                    {/* Innovative services showcase */}
+                    <Route path="/innovative-services-2025" element={<InnovativeServicesShowcase2025 />} />
+                    
+                    {/* New 2025 service routes */}
+                    <Route path="/ultimate-services-2025" element={<UltimateServicesShowcase2025 />} />
+                    <Route path="/ultimate-services-2026" element={<UltimateServicesShowcase2026 />} />
+                    <Route path="/comprehensive-pricing-2026" element={<ComprehensivePricing2026 />} />
+                    <Route path="/comprehensive-pricing-2028" element={<ComprehensivePricing2028 />} />
+                    <Route path="/comprehensive-services-showcase-2025" element={<ComprehensiveServicesShowcase2025 />} />
+                    <Route path="/innovative-services-showcase-2025" element={<InnovativeServicesShowcase2025 />} />
                     
                     {/* 404 Page */}
                     <Route 

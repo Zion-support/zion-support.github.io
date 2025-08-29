@@ -97,7 +97,7 @@ const AIDataGovernancePlatform: React.FC = () => {
         'White-label solutions',
         'Dedicated support team',
         'Custom integrations',
-        'Advanced security features',
+        'Advanced security',
         'On-premise deployment'
       ]
     }
@@ -107,7 +107,7 @@ const AIDataGovernancePlatform: React.FC = () => {
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO 
         title="AI Data Governance Platform - Zion Tech Group"
-        description="Transform your data governance with AI-powered compliance automation. Ensure data privacy, security, and regulatory compliance across your organization."
+        description="Transform data governance with AI-powered automation. Ensure compliance, security, and data quality across your organization."
       />
       
       {/* Hero Section */}
@@ -119,28 +119,28 @@ const AIDataGovernancePlatform: React.FC = () => {
             transition={{ duration: 0.6 }}
             className="text-center"
           >
-            <div className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-green-500/20 to-emerald-500/20 rounded-full border border-green-400/30 mb-6">
-              <Shield className="w-5 h-5 text-green-400 mr-2" />
-              <span className="text-green-300 font-medium">AI Data Governance Platform</span>
+            <div className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-blue-500/20 to-cyan-500/20 rounded-full border border-blue-400/30 mb-6">
+              <Shield className="w-5 h-5 text-blue-400 mr-2" />
+              <span className="text-blue-300 font-medium">AI Data Governance Platform</span>
             </div>
             
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
               AI Data Governance
-              <span className="block text-transparent bg-clip-text bg-gradient-to-r from-green-400 via-emerald-500 to-teal-400">
+              <span className="block text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-cyan-500 to-blue-600">
                 Platform
               </span>
             </h1>
             
             <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-              Transform your data governance with AI-powered compliance automation. 
-              Ensure data privacy, security, and regulatory compliance across your entire organization.
+              Transform data governance with AI-powered automation. Ensure compliance, security, 
+              and data quality across your organization with intelligent governance solutions.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="px-8 py-4 bg-gradient-to-r from-green-500 to-emerald-600 text-white font-semibold rounded-lg hover:from-green-400 hover:to-emerald-500 transition-all duration-200 hover:scale-105 shadow-lg shadow-green-500/20">
+              <button className="px-8 py-4 bg-gradient-to-r from-blue-500 to-cyan-600 text-white font-semibold rounded-lg hover:from-blue-400 hover:to-cyan-500 transition-all duration-200 hover:scale-105 shadow-lg shadow-blue-500/20">
                 Start Governing
               </button>
-              <button className="px-8 py-4 border border-green-400/30 text-green-300 font-semibold rounded-lg hover:bg-green-400/10 transition-all duration-200">
+              <button className="px-8 py-4 border border-blue-400/30 text-blue-300 font-semibold rounded-lg hover:bg-blue-400/10 transition-all duration-200">
                 Schedule Demo
               </button>
             </div>
@@ -161,7 +161,7 @@ const AIDataGovernancePlatform: React.FC = () => {
               Intelligent Governance Features
             </h2>
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              Powered by advanced AI to ensure comprehensive data protection and compliance
+              Powered by advanced AI to transform data governance
             </p>
           </motion.div>
 
@@ -172,9 +172,9 @@ const AIDataGovernancePlatform: React.FC = () => {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 hover:border-green-400/30 transition-all duration-200 text-center"
+                className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 hover:border-blue-400/30 transition-all duration-200 text-center"
               >
-                <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-emerald-500 rounded-xl flex items-center justify-center mx-auto mb-4">
+                <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-xl flex items-center justify-center mx-auto mb-4">
                   <feature.icon className="w-8 h-8 text-white" />
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-2">{feature.title}</h3>
@@ -198,7 +198,7 @@ const AIDataGovernancePlatform: React.FC = () => {
               Comprehensive Compliance Support
             </h2>
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              Automated compliance with major regulatory frameworks worldwide
+              Automated compliance across major regulatory frameworks
             </p>
           </motion.div>
 
@@ -209,7 +209,7 @@ const AIDataGovernancePlatform: React.FC = () => {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 hover:border-green-400/30 transition-all duration-200"
+                className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 hover:border-blue-400/30 transition-all duration-200"
               >
                 <div className="flex items-start space-x-4">
                   <div className="text-4xl">{framework.icon}</div>
@@ -234,10 +234,10 @@ const AIDataGovernancePlatform: React.FC = () => {
             className="text-center mb-16"
           >
             <h2 className="text-4xl font-bold text-white mb-4">
-              Why Choose AI Data Governance Platform?
+              Why Choose AI Data Governance?
             </h2>
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              Transform your data governance with intelligent automation
+              Transform data governance with intelligent automation
             </p>
           </motion.div>
 
@@ -263,14 +263,14 @@ const AIDataGovernancePlatform: React.FC = () => {
               initial={{ opacity: 0, x: 20 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.6 }}
-              className="bg-gradient-to-br from-green-500/20 to-emerald-500/20 border border-green-400/30 rounded-xl p-8"
+              className="bg-gradient-to-br from-blue-500/20 to-cyan-500/20 border border-blue-400/30 rounded-xl p-8"
             >
               <h3 className="text-2xl font-semibold text-white mb-6">Get Started Today</h3>
               <p className="text-gray-300 mb-6">
-                Ready to transform your data governance? Our AI compliance experts can help you 
-                set up automated governance and ensure regulatory compliance.
+                Ready to transform data governance? Our AI governance experts can help you 
+                set up intelligent data management and compliance automation.
               </p>
-              <button className="w-full px-6 py-3 bg-gradient-to-r from-green-500 to-emerald-600 text-white font-semibold rounded-lg hover:from-green-400 hover:to-emerald-500 transition-all duration-200 hover:scale-105 shadow-lg shadow-green-500/20">
+              <button className="w-full px-6 py-3 bg-gradient-to-r from-blue-500 to-cyan-600 text-white font-semibold rounded-lg hover:from-blue-400 hover:to-cyan-500 transition-all duration-200 hover:scale-105 shadow-lg shadow-blue-500/20">
                 Start Data Governance
               </button>
             </motion.div>
@@ -291,7 +291,7 @@ const AIDataGovernancePlatform: React.FC = () => {
               Transparent Pricing
             </h2>
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              Choose the plan that fits your compliance needs
+              Choose the plan that fits your governance needs
             </p>
           </motion.div>
 
@@ -304,7 +304,7 @@ const AIDataGovernancePlatform: React.FC = () => {
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 className={`bg-slate-800/50 border rounded-xl p-8 ${
                   plan.plan === 'Professional' 
-                    ? 'border-green-400/50 bg-gradient-to-br from-green-500/10 to-emerald-500/10' 
+                    ? 'border-blue-400/50 bg-gradient-to-br from-blue-500/10 to-cyan-500/10' 
                     : 'border-slate-700/50'
                 }`}
               >
@@ -325,7 +325,7 @@ const AIDataGovernancePlatform: React.FC = () => {
                 </ul>
                 <button className={`w-full px-6 py-3 rounded-lg font-semibold transition-all duration-200 hover:scale-105 ${
                   plan.plan === 'Professional'
-                    ? 'bg-gradient-to-r from-green-500 to-emerald-600 text-white hover:from-green-400 hover:to-emerald-500 shadow-lg shadow-green-500/20'
+                    ? 'bg-gradient-to-r from-blue-500 to-cyan-600 text-white hover:from-blue-400 hover:to-cyan-500 shadow-lg shadow-blue-500/20'
                     : 'bg-slate-700 text-white hover:bg-slate-600'
                 }`}>
                   Get Started
@@ -348,13 +348,13 @@ const AIDataGovernancePlatform: React.FC = () => {
               Ready to Govern Your Data?
             </h2>
             <p className="text-xl text-gray-300 mb-8">
-              Transform your data governance with AI-powered compliance automation
+              Transform data governance with AI-powered automation
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="px-8 py-4 bg-gradient-to-r from-green-500 to-emerald-600 text-white font-semibold rounded-lg hover:from-green-400 hover:to-emerald-500 transition-all duration-200 hover:scale-105 shadow-lg shadow-green-500/20">
+              <button className="px-8 py-4 bg-gradient-to-r from-blue-500 to-cyan-600 text-white font-semibold rounded-lg hover:from-blue-400 hover:to-cyan-500 transition-all duration-200 hover:scale-105 shadow-lg shadow-blue-500/20">
                 Start Free Trial
               </button>
-              <button className="px-8 py-4 border border-green-400/30 text-green-300 font-semibold rounded-lg hover:bg-green-400/10 transition-all duration-200">
+              <button className="px-8 py-4 border border-blue-400/30 text-blue-300 font-semibold rounded-lg hover:bg-blue-400/10 transition-all duration-200">
                 Contact Sales
               </button>
             </div>
@@ -384,7 +384,7 @@ const AIDataGovernancePlatform: React.FC = () => {
               </div>
               <div>
                 <h3 className="text-xl font-semibold text-white mb-2">Website</h3>
-                <a href="https://ziontechgroup.com" className="text-green-400 hover:text-green-300">
+                <a href="https://ziontechgroup.com" className="text-blue-400 hover:text-blue-300">
                   ziontechgroup.com
                 </a>
               </div>

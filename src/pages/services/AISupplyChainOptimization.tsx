@@ -93,7 +93,7 @@ const AISupplyChainOptimization: React.FC = () => {
       period: 'month',
       features: [
         'Unlimited locations',
-        'Custom AI models',
+        'Custom AI optimization models',
         'White-label solutions',
         'Dedicated support team',
         'Custom integrations',
@@ -107,7 +107,7 @@ const AISupplyChainOptimization: React.FC = () => {
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO 
         title="AI Supply Chain Optimization - Zion Tech Group"
-        description="Transform your supply chain with AI-powered optimization. Reduce costs, improve efficiency, and gain real-time visibility across your entire supply network."
+        description="Transform supply chain operations with AI-powered optimization. Reduce costs, improve efficiency, and enhance visibility across your entire supply chain."
       />
       
       {/* Hero Section */}
@@ -126,14 +126,14 @@ const AISupplyChainOptimization: React.FC = () => {
             
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
               AI Supply Chain
-              <span className="block text-transparent bg-clip-text bg-gradient-to-r from-orange-400 via-red-500 to-pink-400">
+              <span className="block text-transparent bg-clip-text bg-gradient-to-r from-orange-400 via-red-500 to-orange-600">
                 Optimization
               </span>
             </h1>
             
             <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-              Transform your supply chain with AI-powered optimization. Reduce costs, improve efficiency, 
-              and gain real-time visibility across your entire supply network.
+              Transform supply chain operations with AI-powered optimization. Reduce costs, 
+              improve efficiency, and enhance visibility across your entire supply chain network.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -161,7 +161,7 @@ const AISupplyChainOptimization: React.FC = () => {
               Intelligent Optimization Features
             </h2>
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              Powered by advanced AI to transform your supply chain operations
+              Powered by advanced AI to transform supply chain operations
             </p>
           </motion.div>
 
@@ -195,7 +195,7 @@ const AISupplyChainOptimization: React.FC = () => {
             className="text-center mb-16"
           >
             <h2 className="text-4xl font-bold text-white mb-4">
-              Comprehensive Optimization Coverage
+              Comprehensive Optimization Areas
             </h2>
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
               Optimize every aspect of your supply chain operations
@@ -237,7 +237,7 @@ const AISupplyChainOptimization: React.FC = () => {
               Why Choose AI Supply Chain Optimization?
             </h2>
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              Transform your supply chain with intelligent optimization
+              Transform supply chain operations with intelligent optimization
             </p>
           </motion.div>
 
@@ -267,7 +267,7 @@ const AISupplyChainOptimization: React.FC = () => {
             >
               <h3 className="text-2xl font-semibold text-white mb-6">Get Started Today</h3>
               <p className="text-gray-300 mb-6">
-                Ready to transform your supply chain? Our AI optimization experts can help you 
+                Ready to transform supply chain operations? Our AI optimization experts can help you 
                 set up intelligent supply chain management and optimization.
               </p>
               <button className="w-full px-6 py-3 bg-gradient-to-r from-orange-500 to-red-600 text-white font-semibold rounded-lg hover:from-orange-400 hover:to-red-500 transition-all duration-200 hover:scale-105 shadow-lg shadow-orange-500/20">
@@ -291,7 +291,7 @@ const AISupplyChainOptimization: React.FC = () => {
               Transparent Pricing
             </h2>
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              Choose the plan that fits your supply chain needs
+              Choose the plan that fits your optimization needs
             </p>
           </motion.div>
 
@@ -348,7 +348,7 @@ const AISupplyChainOptimization: React.FC = () => {
               Ready to Optimize Your Supply Chain?
             </h2>
             <p className="text-xl text-gray-300 mb-8">
-              Transform your supply chain with AI-powered optimization
+              Transform supply chain operations with AI-powered optimization
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="px-8 py-4 bg-gradient-to-r from-orange-500 to-red-600 text-white font-semibold rounded-lg hover:from-orange-400 hover:to-red-500 transition-all duration-200 hover:scale-105 shadow-lg shadow-orange-500/20">
