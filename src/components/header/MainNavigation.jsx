@@ -28,10 +28,10 @@ export function MainNavigation({ className }) {
                     Micro SAAS
                   </h4>
                   <ul className="space-y-2 text-sm">
-                    <li><Link to="/enhanced-services" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Content Tools</Link></li>
-                    <li><Link to="/enhanced-services" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Marketing Automation</Link></li>
-                    <li><Link to="/enhanced-services" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Business Tools</Link></li>
-                    <li><Link to="/enhanced-services" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Customer Support</Link></li>
+                    <li><Link to="/services/website-ai-chatbot" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Website AI Chatbot</Link></li>
+                    <li><Link to="/services/api-monitoring" className="text-zion-slate-light hover:text-zion-cyan transition-colors">API Monitoring & Status</Link></li>
+                    <li><Link to="/services/gdpr-cookie-compliance" className="text-zion-slate-light hover:text-zion-cyan transition-colors">GDPR & Cookie Compliance</Link></li>
+                    <li><Link to="/services/ai-proofreading-studio" className="text-zion-slate-light hover:text-zion-cyan transition-colors">AI Proofreading Studio</Link></li>
                   </ul>
                 </div>
                 <div>
@@ -48,8 +48,8 @@ export function MainNavigation({ className }) {
                 </div>
               </div>
               <div className="mt-4 pt-4 border-t border-zion-purple/20">
-                <Link to="/enhanced-services" className="text-zion-cyan hover:text-zion-cyan-light transition-colors text-sm font-medium flex items-center justify-center">
-                  View All Services
+                <Link to="/services-catalog" className="text-zion-cyan hover:text-zion-cyan-light transition-colors text-sm font-medium flex items-center justify-center">
+                  View Services Catalog
                   <TrendingUp className="w-4 h-4 ml-2"/>
                 </Link>
               </div>
