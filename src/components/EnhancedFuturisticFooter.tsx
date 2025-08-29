@@ -75,7 +75,12 @@ export const EnhancedFuturisticFooter: React.FC = () => {
         { name: 'AI Compliance Assistant', href: '/services/ai-compliance-assistant' },
         { name: 'AI Auto Email Responder', href: '/services/ai-auto-email-responder' },
         { name: 'LLM Content Studio', href: '/services/llm-content-studio' },
-        { name: 'AI Compliance Copilot', href: '/services/ai-compliance-copilot' }
+        { name: 'AI Compliance Copilot', href: '/services/ai-compliance-copilot' },
+        { name: 'AI Lead Scoring', href: '/services/ai-lead-scoring' },
+        { name: 'Website AI Chatbot', href: '/services/website-ai-chatbot' },
+        { name: 'RAG Search', href: '/services/rag-search' },
+        { name: 'MLOps Pipeline', href: '/services/mlops-pipeline' },
+        { name: 'eCommerce Personalization', href: '/services/ecommerce-personalization' }
       ]
     },
     {
