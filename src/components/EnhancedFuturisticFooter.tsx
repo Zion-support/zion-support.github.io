@@ -72,6 +72,7 @@ export const EnhancedFuturisticFooter: React.FC = () => {
       links: [
         { name: 'AI Business Intelligence', href: '/services/ai-business-intelligence', description: 'Advanced analytics platform' },
         { name: 'AI Sales Copilot', href: '/services/ai-sales-copilot', description: 'Sales automation & coaching' },
+        { name: 'AI Customer Success Platform', href: '/services/ai-customer-success-platform', description: 'Churn prediction & automation' },
         { name: 'AI Compliance Assistant', href: '/services/ai-compliance-assistant', description: 'Regulatory compliance automation' },
         { name: 'AI Auto Email Responder', href: '/services/ai-auto-email-responder', description: 'Intelligent email automation' },
         { name: 'LLM Content Studio', href: '/services/llm-content-studio', description: 'AI-powered content creation' },
@@ -105,6 +106,17 @@ export const EnhancedFuturisticFooter: React.FC = () => {
       ]
     },
     {
+      title: 'Cybersecurity & Compliance',
+      icon: Shield,
+      color: 'from-red-600 to-orange-600',
+      links: [
+        { name: 'AI Threat Intelligence Platform', href: '/services/ai-threat-intelligence-platform', description: 'AI-powered security operations' },
+        { name: 'AI Compliance Copilot', href: '/services/ai-compliance-copilot', description: 'Advanced compliance management' },
+        { name: 'Zero Trust Architecture', href: '/services/zero-trust-network-architecture', description: 'Modern security framework' },
+        { name: 'Incident Response Platform', href: '/services/incident-response-platform', description: 'Rapid threat response' }
+      ]
+    },
+    {
       title: 'Quantum & Emerging Tech',
       icon: Crown,
       color: 'from-indigo-600 to-purple-600',
@@ -112,9 +124,7 @@ export const EnhancedFuturisticFooter: React.FC = () => {
         { name: 'Quantum Computing Solutions', href: '/services/quantum-computing', description: 'Quantum algorithms & optimization' },
         { name: 'Quantum Neural Networks', href: '/services/quantum-neural-network-platform', description: 'Quantum AI platform' },
         { name: 'Blockchain & Web3', href: '/services/blockchain-web3', description: 'Decentralized solutions' },
-        { name: 'Space Technology', href: '/services/space-tech', description: 'Space tech innovations' },
-        { name: 'Cybersecurity Suite', href: '/services/cybersecurity', description: 'Advanced security solutions' },
-        { name: 'Zero Trust Architecture', href: '/services/zero-trust-network-architecture', description: 'Modern security framework' }
+        { name: 'Space Technology', href: '/services/space-tech', description: 'Space tech innovations' }
       ]
     }
   ];

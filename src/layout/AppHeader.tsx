@@ -54,6 +54,7 @@ export function AppHeader() {
       services: [
         { name: 'AI Business Intelligence', href: '/services/ai-business-intelligence', description: 'Advanced analytics platform' },
         { name: 'AI Sales Copilot', href: '/services/ai-sales-copilot', description: 'Sales automation & coaching' },
+        { name: 'AI Customer Success Platform', href: '/services/ai-customer-success-platform', description: 'Churn prediction & automation' },
         { name: 'AI Compliance Assistant', href: '/services/ai-compliance-assistant', description: 'Regulatory compliance automation' },
         { name: 'AI Auto Email Responder', href: '/services/ai-auto-email-responder', description: 'Intelligent email automation' },
         { name: 'LLM Content Studio', href: '/services/llm-content-studio', description: 'AI-powered content creation' },
@@ -92,6 +93,16 @@ export function AppHeader() {
       ]
     },
     {
+      name: 'Cybersecurity & Compliance',
+      icon: Shield,
+      color: 'from-red-600 to-orange-600',
+      description: 'Advanced security solutions',
+      services: [
+        { name: 'AI Threat Intelligence Platform', href: '/services/ai-threat-intelligence-platform', description: 'AI-powered security operations' },
+        { name: 'AI Compliance Copilot', href: '/services/ai-compliance-copilot', description: 'Advanced compliance management' },
+      ]
+    },
+    {
       name: 'Specialized Solutions',
       icon: Award,
       color: 'from-orange-600 to-red-600',
@@ -99,7 +110,6 @@ export function AppHeader() {
       services: [
         { name: 'FinOps Advisor', href: '/services/finops-advisor', description: 'Financial operations optimization' },
         { name: 'Customer Feedback Platform', href: '/services/mobile-feedback-surveys', description: 'AI-powered feedback analysis' },
-        { name: 'AI Compliance Copilot', href: '/services/ai-compliance-copilot', description: 'Advanced compliance management' },
       ]
     }
   ];
