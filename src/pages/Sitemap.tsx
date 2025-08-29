@@ -1,4 +1,30 @@
 import React from 'react';
+import { SEO } from '@/components/SEO';
+import { Link } from 'react-router-dom';
+
+const links = [
+  '/', '/services', '/ai-services', '/it-services', '/micro-saas',
+  '/blog', '/about', '/contact', '/partners', '/careers', '/faq', '/help', '/support',
+  '/privacy', '/terms', '/cookies'
+];
+
+export default function Sitemap() {
+  return (
+    <div className="min-h-screen bg-slate-950 text-white">
+      <SEO title="Sitemap – Zion Tech Group" description="Explore all pages on Zion Tech Group." canonical="https://ziontechgroup.com/sitemap" />
+      <section className="py-20 px-6 md:px-10 max-w-5xl mx-auto">
+        <h1 className="text-4xl font-extrabold mb-6">Sitemap</h1>
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+          {links.map((l) => (
+            <Link key={l} to={l} className="rounded border border-slate-800 bg-slate-900/40 p-3 hover:border-cyan-500/40">{l}</Link>
+          ))}
+        </div>
+      </section>
+    </div>
+  );
+}
+
+import React from 'react';
 import { Link } from 'react-router-dom';
 import { Sitemap, Home, Users, Settings, FileText, Shield, Mail, HelpCircle, Building, Briefcase, Brain, Cloud, Rocket, Heart, Globe, Lock, Cpu, Zap, Star, TrendingUp, MessageCircle, DollarSign, BookOpen, Phone, MapPin } from 'lucide-react';
 

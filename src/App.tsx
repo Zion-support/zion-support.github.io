@@ -33,6 +33,7 @@ const ServicesOverview = React.lazy(() => import('./pages/ServicesOverview'));
 const PricingGuide = React.lazy(() => import('./pages/PricingGuide'));
 const Help = React.lazy(() => import('./pages/Help'));
 const Partners = React.lazy(() => import('./pages/Partners'));
+const Sitemap = React.lazy(() => import('./pages/Sitemap'));
 
 // Enhanced services pages - only import existing ones
 const ComprehensivePricingGuide2027 = React.lazy(() => import('./pages/ComprehensivePricingGuide2027.tsx'));
@@ -174,6 +175,7 @@ function App() {
               <Route path="/login" element={<Login />} />
               <Route path="/marketplace" element={<Marketplace />} />
               <Route path="/partners" element={<Partners />} />
+              <Route path="/sitemap" element={<Sitemap />} />
               
               {/* Service Routes - only for existing pages */}
               <Route path="/services/cloud-devops" element={<CloudDevOps />} />
