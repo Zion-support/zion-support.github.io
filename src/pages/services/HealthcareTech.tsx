@@ -2,120 +2,116 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { SEO } from '../../components/SEO';
 import { 
-  Rocket, 
-  Satellite, 
-  Globe, 
+  Heart, 
+  Brain, 
+  Shield, 
   Zap, 
+  Users, 
   TrendingUp, 
   CheckCircle, 
   ArrowRight,
-  Planet,
-  Star,
-  Orbit,
-  Signal,
+  Stethoscope,
+  Microscope,
+  Pill,
+  Activity,
+  FileText,
   Database,
-  Shield,
+  Lock,
   Clock,
   DollarSign,
+  Star,
   Award,
   Monitor,
   Smartphone,
   Cloud,
-  Activity,
-  Target,
-  Lightbulb,
-  Gauge,
-  Telescope,
-  Antenna,
-  Navigation,
-  Radar
+  BarChart3
 } from 'lucide-react';
 
-export default function SpaceTech() {
+export default function HealthcareTech() {
   const features = [
     {
-      icon: Satellite,
-      title: 'Satellite Technology',
-      description: 'Advanced satellite systems for communication, navigation, and Earth observation',
-      benefits: ['High-speed data transmission', 'Global coverage', 'Real-time monitoring', 'Low-latency communication']
+      icon: Brain,
+      title: 'AI-Powered Diagnostics',
+      description: 'Advanced machine learning algorithms for accurate disease detection and diagnosis',
+      benefits: ['Early disease detection', 'Reduced diagnostic errors', 'Faster results', 'Cost-effective screening']
     },
     {
-      icon: Globe,
-      title: 'Earth Observation',
-      description: 'AI-powered satellite imagery analysis for environmental and commercial applications',
-      benefits: ['Climate monitoring', 'Agricultural insights', 'Urban planning', 'Disaster response']
+      icon: Heart,
+      title: 'Predictive Healthcare Analytics',
+      description: 'Predictive modeling for patient outcomes and preventive care recommendations',
+      benefits: ['Risk assessment', 'Preventive care planning', 'Population health insights', 'Resource optimization']
     },
     {
-      icon: Signal,
-      title: 'Space Communications',
-      description: 'Next-generation space-based communication networks and infrastructure',
-      benefits: ['Global connectivity', 'High bandwidth', 'Low latency', 'Reliable transmission']
+      icon: Shield,
+      title: 'Healthcare Data Security',
+      description: 'HIPAA-compliant data protection with advanced encryption and access controls',
+      benefits: ['HIPAA compliance', 'End-to-end encryption', 'Audit trails', 'Secure data sharing']
     },
     {
-      icon: Rocket,
-      title: 'Space Infrastructure',
-      description: 'Comprehensive space infrastructure solutions for commercial and government applications',
-      benefits: ['Launch services', 'Orbital platforms', 'Space stations', 'Deep space exploration']
+      icon: Zap,
+      title: 'Telemedicine Platform',
+      description: 'Integrated telemedicine solution with AI-powered triage and remote monitoring',
+      benefits: ['24/7 access', 'AI triage system', 'Remote monitoring', 'Seamless integration']
     }
   ];
 
   const solutions = [
     {
-      title: 'Satellite Constellation Management',
-      description: 'AI-powered management of large satellite constellations for optimal performance',
-      icon: Orbit,
-      features: ['Orbital optimization', 'Collision avoidance', 'Power management', 'Data routing']
+      title: 'Medical Imaging AI',
+      description: 'AI-powered analysis of X-rays, MRIs, and CT scans for accurate diagnosis',
+      icon: Monitor,
+      features: ['Radiology assistance', 'Tumor detection', 'Fracture identification', 'Automated reporting']
     },
     {
-      title: 'Space Data Analytics',
-      description: 'Advanced analytics platform for processing and analyzing space-based data',
-      icon: Database,
-      features: ['Real-time processing', 'Machine learning', 'Predictive analytics', 'Data visualization']
+      title: 'Drug Discovery Platform',
+      description: 'AI-driven pharmaceutical research and drug development acceleration',
+      icon: Pill,
+      features: ['Molecular modeling', 'Clinical trial optimization', 'Drug repurposing', 'Safety prediction']
     },
     {
-      title: 'Space Security Systems',
-      description: 'Comprehensive security solutions for space assets and communications',
-      icon: Shield,
-      features: ['Cyber protection', 'Signal encryption', 'Threat detection', 'Incident response']
+      title: 'Patient Management System',
+      description: 'Comprehensive patient care management with AI-powered insights',
+      icon: Users,
+      features: ['Electronic health records', 'Care coordination', 'Medication management', 'Patient engagement']
     },
     {
-      title: 'Space Tourism Platforms',
-      description: 'Digital platforms for space tourism and commercial space travel',
-      icon: Rocket,
-      features: ['Booking systems', 'Training programs', 'Safety protocols', 'Experience management']
+      title: 'Clinical Decision Support',
+      description: 'AI-powered clinical decision support for evidence-based medicine',
+      icon: Stethoscope,
+      features: ['Treatment recommendations', 'Drug interaction alerts', 'Clinical guidelines', 'Outcome prediction']
     }
   ];
 
   const pricing = [
     {
-      name: 'Starter',
-      price: '$5,000',
+      name: 'Essential',
+      price: '$3,500',
       period: '/month',
-      description: 'Basic space technology solutions for small organizations',
+      description: 'Basic healthcare AI solutions for small practices',
       features: [
-        'Satellite data access (up to 100GB/month)',
-        'Basic Earth observation',
-        'Standard API access',
+        'AI diagnostic assistance (up to 100 scans/month)',
+        'Basic patient analytics',
+        'HIPAA-compliant data storage',
         'Email support',
-        'Basic integrations',
-        'Monthly reports'
+        'Standard integrations',
+        'Basic reporting'
       ],
       cta: 'Get Started',
       popular: false
     },
     {
       name: 'Professional',
-      price: '$15,000',
+      price: '$8,500',
       period: '/month',
-      description: 'Advanced space technology for growing organizations',
+      description: 'Advanced healthcare AI for growing medical facilities',
       features: [
-        'Unlimited satellite data access',
-        'Advanced Earth observation',
-        'AI-powered analytics',
+        'AI diagnostic assistance (unlimited scans)',
+        'Advanced predictive analytics',
+        'Telemedicine platform',
         'Priority support',
         'Custom integrations',
-        'Real-time dashboards',
-        'Space security features',
+        'Advanced reporting and insights',
+        'Clinical decision support',
         'SLA guarantee'
       ],
       cta: 'Start Free Trial',
@@ -125,11 +121,11 @@ export default function SpaceTech() {
       name: 'Enterprise',
       price: 'Custom',
       period: '',
-      description: 'Comprehensive space technology solutions for large organizations',
+      description: 'Tailored solutions for large healthcare systems',
       features: [
-        'Full space technology suite',
-        'Custom satellite solutions',
-        'Multi-constellation support',
+        'Full AI healthcare suite',
+        'Custom AI model training',
+        'Multi-facility management',
         'Dedicated infrastructure',
         '24/7 dedicated support',
         'Custom analytics and reporting',
@@ -142,55 +138,32 @@ export default function SpaceTech() {
   ];
 
   const marketInfo = {
-    marketSize: '$469.8 billion',
-    growthRate: '6.2% CAGR',
-    averageMarketPrice: '$10,000-$50,000/month',
-    setupTime: '4-8 weeks',
-    roi: '500-800% within 24 months'
+    marketSize: '$45.2 billion',
+    growthRate: '44.9% CAGR',
+    averageMarketPrice: '$5,000-$20,000/month',
+    setupTime: '3-6 weeks',
+    roi: '400-600% within 18 months'
   };
 
-  const applications = [
-    {
-      title: 'Telecommunications',
-      description: 'Global satellite communications and internet services',
-      icon: Signal
-    },
-    {
-      title: 'Navigation',
-      description: 'GPS and satellite navigation systems',
-      icon: Navigation
-    },
-    {
-      title: 'Earth Observation',
-      description: 'Environmental monitoring and climate research',
-      icon: Globe
-    },
-    {
-      title: 'Space Exploration',
-      description: 'Deep space missions and planetary exploration',
-      icon: Rocket
-    }
-  ];
-
-  const technologies = [
-    'CubeSat Technology',
-    'Small Satellite Platforms',
-    'Space-Based IoT',
-    'Quantum Communications',
-    'Advanced Propulsion',
-    'Space Debris Management'
+  const compliance = [
+    'HIPAA Compliance',
+    'FDA Regulatory Support',
+    'GDPR Compliance',
+    'SOC 2 Type II',
+    'HITECH Act',
+    'Meaningful Use Standards'
   ];
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO 
-        title="Space Technology Solutions - Zion Tech Group"
-        description="Advanced space technology solutions including satellite systems, Earth observation, space communications, and space infrastructure. Cutting-edge space technology for commercial and government applications."
+        title="Healthcare Technology Solutions - Zion Tech Group"
+        description="AI-powered healthcare solutions including medical diagnostics, predictive analytics, telemedicine, and drug discovery. HIPAA-compliant, FDA-ready healthcare technology."
       />
       
       {/* Hero Section */}
       <section className="relative py-20 px-4 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 to-blue-600/20"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-green-600/20 to-blue-600/20"></div>
         <div className="relative container mx-auto max-w-7xl">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -198,29 +171,29 @@ export default function SpaceTech() {
             transition={{ duration: 0.8 }}
             className="text-center"
           >
-            <div className="inline-flex items-center space-x-2 bg-purple-600/20 text-purple-400 px-4 py-2 rounded-full text-sm font-medium mb-6">
-              <Rocket className="w-4 h-4" />
-              <span>Next-Generation Space Technology</span>
+            <div className="inline-flex items-center space-x-2 bg-green-600/20 text-green-400 px-4 py-2 rounded-full text-sm font-medium mb-6">
+              <Heart className="w-4 h-4" />
+              <span>AI-Powered Healthcare Technology</span>
             </div>
             
             <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
-              <span className="bg-gradient-to-r from-purple-400 via-blue-400 to-cyan-400 bg-clip-text text-transparent">
-                Space
+              <span className="bg-gradient-to-r from-green-400 via-blue-400 to-cyan-400 bg-clip-text text-transparent">
+                Healthcare
               </span>
               <br />
               <span className="text-white">Technology Solutions</span>
             </h1>
             
             <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
-              Pioneer the future of space technology with our advanced satellite systems, 
-              Earth observation platforms, and space infrastructure solutions.
+              Transform healthcare delivery with AI-powered diagnostics, predictive analytics, 
+              and telemedicine solutions. Improve patient outcomes while reducing costs.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-purple-700 hover:to-blue-700 transition-all duration-300 flex items-center justify-center space-x-2"
+                className="bg-gradient-to-r from-green-600 to-blue-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-green-700 hover:to-blue-700 transition-all duration-300 flex items-center justify-center space-x-2"
               >
                 <span>Start Free Trial</span>
                 <ArrowRight className="w-5 h-5" />
@@ -229,7 +202,7 @@ export default function SpaceTech() {
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="border border-gray-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:border-purple-400 hover:text-purple-400 transition-all duration-300"
+                className="border border-gray-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:border-green-400 hover:text-green-400 transition-all duration-300"
               >
                 Schedule Demo
               </motion.button>
@@ -250,48 +223,10 @@ export default function SpaceTech() {
                 transition={{ duration: 0.6 }}
                 className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-lg p-6 text-center"
               >
-                <div className="text-2xl font-bold text-purple-400 mb-2">{value}</div>
+                <div className="text-2xl font-bold text-green-400 mb-2">{value}</div>
                 <div className="text-sm text-gray-400 capitalize">
                   {key.replace(/([A-Z])/g, ' $1').trim()}
                 </div>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Applications Section */}
-      <section className="py-20 px-4 bg-slate-800/30">
-        <div className="container mx-auto max-w-7xl">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-              Space Technology Applications
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Our space technology solutions power critical applications across 
-              telecommunications, navigation, Earth observation, and space exploration.
-            </p>
-          </motion.div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {applications.map((app, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-lg p-6 text-center hover:border-purple-400/50 transition-all duration-300"
-              >
-                <div className="w-16 h-16 bg-gradient-to-br from-purple-600 to-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <app.icon className="w-8 h-8 text-white" />
-                </div>
-                <h3 className="text-lg font-semibold text-white mb-2">{app.title}</h3>
-                <p className="text-gray-400 text-sm">{app.description}</p>
               </motion.div>
             ))}
           </div>
@@ -308,11 +243,11 @@ export default function SpaceTech() {
             className="text-center mb-16"
           >
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-              Advanced Space Technology Features
+              AI-Powered Healthcare Features
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Our space technology solutions leverage cutting-edge innovations 
-              to provide reliable, scalable, and efficient space-based services.
+              Our healthcare technology solutions leverage cutting-edge AI to improve 
+              diagnostic accuracy, patient outcomes, and operational efficiency.
             </p>
           </motion.div>
 
@@ -323,10 +258,10 @@ export default function SpaceTech() {
                 initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-lg p-8 hover:border-purple-400/50 transition-all duration-300"
+                className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-lg p-8 hover:border-green-400/50 transition-all duration-300"
               >
                 <div className="flex items-start space-x-4">
-                  <div className="w-12 h-12 bg-gradient-to-br from-purple-600 to-blue-600 rounded-lg flex items-center justify-center flex-shrink-0">
+                  <div className="w-12 h-12 bg-gradient-to-br from-green-600 to-blue-600 rounded-lg flex items-center justify-center flex-shrink-0">
                     <feature.icon className="w-6 h-6 text-white" />
                   </div>
                   <div className="flex-1">
@@ -335,7 +270,7 @@ export default function SpaceTech() {
                     <ul className="space-y-2">
                       {feature.benefits.map((benefit, idx) => (
                         <li key={idx} className="flex items-center space-x-2 text-sm text-gray-400">
-                          <CheckCircle className="w-4 h-4 text-purple-400" />
+                          <CheckCircle className="w-4 h-4 text-green-400" />
                           <span>{benefit}</span>
                         </li>
                       ))}
@@ -358,11 +293,11 @@ export default function SpaceTech() {
             className="text-center mb-16"
           >
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-              Comprehensive Space Solutions
+              Comprehensive Healthcare Solutions
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              From satellite constellation management to space tourism platforms, 
-              our solutions cover every aspect of modern space technology.
+              From medical imaging to drug discovery, our AI-powered solutions 
+              cover the entire healthcare spectrum.
             </p>
           </motion.div>
 
@@ -373,10 +308,10 @@ export default function SpaceTech() {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-lg p-8 hover:border-purple-400/50 transition-all duration-300"
+                className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-lg p-8 hover:border-green-400/50 transition-all duration-300"
               >
                 <div className="flex items-center space-x-4 mb-6">
-                  <div className="w-16 h-16 bg-gradient-to-br from-purple-600 to-blue-600 rounded-lg flex items-center justify-center">
+                  <div className="w-16 h-16 bg-gradient-to-br from-green-600 to-blue-600 rounded-lg flex items-center justify-center">
                     <solution.icon className="w-8 h-8 text-white" />
                   </div>
                   <div>
@@ -387,7 +322,7 @@ export default function SpaceTech() {
                 <ul className="space-y-2">
                   {solution.features.map((feature, idx) => (
                     <li key={idx} className="flex items-center space-x-2 text-sm text-gray-300">
-                      <CheckCircle className="w-4 h-4 text-purple-400 flex-shrink-0" />
+                      <CheckCircle className="w-4 h-4 text-green-400 flex-shrink-0" />
                       <span>{feature}</span>
                     </li>
                   ))}
@@ -398,7 +333,7 @@ export default function SpaceTech() {
         </div>
       </section>
 
-      {/* Technologies Section */}
+      {/* Compliance Section */}
       <section className="py-20 px-4">
         <div className="container mx-auto max-w-7xl">
           <motion.div
@@ -408,27 +343,27 @@ export default function SpaceTech() {
             className="text-center mb-16"
           >
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-              Cutting-Edge Space Technologies
+              Regulatory Compliance & Security
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              We leverage the latest advancements in space technology to deliver 
-              innovative solutions for the next generation of space exploration.
+              Our healthcare solutions meet the highest standards of regulatory compliance 
+              and data security to protect patient privacy and ensure regulatory approval.
             </p>
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {technologies.map((tech, index) => (
+            {compliance.map((item, index) => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-lg p-6 text-center hover:border-purple-400/50 transition-all duration-300"
+                className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-lg p-6 text-center hover:border-green-400/50 transition-all duration-300"
               >
-                <div className="w-12 h-12 bg-gradient-to-br from-purple-600 to-blue-600 rounded-lg flex items-center justify-center mx-auto mb-4">
-                  <Rocket className="w-6 h-6 text-white" />
+                <div className="w-12 h-12 bg-gradient-to-br from-green-600 to-blue-600 rounded-lg flex items-center justify-center mx-auto mb-4">
+                  <Shield className="w-6 h-6 text-white" />
                 </div>
-                <h3 className="text-lg font-semibold text-white">{tech}</h3>
+                <h3 className="text-lg font-semibold text-white">{item}</h3>
               </motion.div>
             ))}
           </div>
@@ -445,11 +380,11 @@ export default function SpaceTech() {
             className="text-center mb-16"
           >
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-              Space Technology Pricing
+              Transparent Healthcare Pricing
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Choose the space technology solution that best fits your organization's needs. 
-              All plans include advanced satellite technology and space infrastructure.
+              Choose the healthcare AI solution that best fits your facility's needs. 
+              All plans include HIPAA compliance and regulatory support.
             </p>
           </motion.div>
 
@@ -462,13 +397,13 @@ export default function SpaceTech() {
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 className={`relative bg-slate-800/50 backdrop-blur-sm border rounded-lg p-8 ${
                   plan.popular 
-                    ? 'border-purple-400 shadow-lg shadow-purple-400/20' 
+                    ? 'border-green-400 shadow-lg shadow-green-400/20' 
                     : 'border-slate-700'
                 }`}
               >
                 {plan.popular && (
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                    <div className="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-4 py-2 rounded-full text-sm font-medium">
+                    <div className="bg-gradient-to-r from-green-600 to-blue-600 text-white px-4 py-2 rounded-full text-sm font-medium">
                       Most Popular
                     </div>
                   </div>
@@ -486,7 +421,7 @@ export default function SpaceTech() {
                 <ul className="space-y-3 mb-8">
                   {plan.features.map((feature, idx) => (
                     <li key={idx} className="flex items-center space-x-3 text-sm text-gray-300">
-                      <CheckCircle className="w-4 h-4 text-purple-400 flex-shrink-0" />
+                      <CheckCircle className="w-4 h-4 text-green-400 flex-shrink-0" />
                       <span>{feature}</span>
                     </li>
                   ))}
@@ -497,7 +432,7 @@ export default function SpaceTech() {
                   whileTap={{ scale: 0.98 }}
                   className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
                     plan.popular
-                      ? 'bg-gradient-to-r from-purple-600 to-blue-600 text-white hover:from-purple-700 hover:to-blue-700'
+                      ? 'bg-gradient-to-r from-green-600 to-blue-600 text-white hover:from-green-700 hover:to-blue-700'
                       : 'bg-slate-700 text-white hover:bg-slate-600'
                   }`}
                 >
@@ -510,7 +445,7 @@ export default function SpaceTech() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 px-4 bg-gradient-to-r from-purple-600/20 to-blue-600/20">
+      <section className="py-20 px-4 bg-gradient-to-r from-green-600/20 to-blue-600/20">
         <div className="container mx-auto max-w-7xl text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -518,18 +453,18 @@ export default function SpaceTech() {
             transition={{ duration: 0.8 }}
           >
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-              Ready to Explore the Final Frontier?
+              Ready to Transform Healthcare with AI?
             </h2>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Join leading organizations that are already leveraging advanced space technology 
-              to drive innovation and expand human capabilities beyond Earth.
+              Join leading healthcare providers that are already leveraging AI technology 
+              to improve patient outcomes and operational efficiency.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-purple-700 hover:to-blue-700 transition-all duration-300"
+                className="bg-gradient-to-r from-green-600 to-blue-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-green-700 hover:to-blue-700 transition-all duration-300"
               >
                 Start Free Trial
               </motion.button>
@@ -539,7 +474,7 @@ export default function SpaceTech() {
                 whileTap={{ scale: 0.95 }}
                 className="border border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white hover:text-slate-900 transition-all duration-300"
               >
-                Contact Space Team
+                Contact Healthcare Team
               </motion.button>
             </div>
           </motion.div>

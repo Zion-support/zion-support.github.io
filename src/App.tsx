@@ -66,6 +66,13 @@ const AICybersecuritySuite = React.lazy(() => import('./pages/services/AICyberse
 const QuantumAIPlatform = React.lazy(() => import('./pages/services/QuantumAIPlatform'));
 const AIHealthcareAnalytics = React.lazy(() => import('./pages/services/AIHealthcareAnalytics'));
 
+// New innovative services
+const BlockchainEnterpriseSolutions = React.lazy(() => import('./pages/services/BlockchainEnterpriseSolutions'));
+const HealthcareTech = React.lazy(() => import('./pages/services/HealthcareTech'));
+const Sustainability = React.lazy(() => import('./pages/services/Sustainability'));
+const SpaceTech = React.lazy(() => import('./pages/services/SpaceTech'));
+const SmartContractRiskScanner = React.lazy(() => import('./pages/services/SmartContractRiskScanner'));
+
 // Simple placeholder pages for missing ones
 const Careers = () => (
   <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 flex items-center justify-center">
@@ -150,6 +157,13 @@ function App() {
               <Route path="/services/ai-cybersecurity-suite" element={<AICybersecuritySuite />} />
               <Route path="/services/quantum-ai-platform" element={<QuantumAIPlatform />} />
               <Route path="/services/ai-healthcare-analytics" element={<AIHealthcareAnalytics />} />
+              
+              {/* New innovative services routes */}
+              <Route path="/services/blockchain-enterprise-solutions" element={<BlockchainEnterpriseSolutions />} />
+              <Route path="/services/healthcare-tech" element={<HealthcareTech />} />
+              <Route path="/services/sustainability" element={<Sustainability />} />
+              <Route path="/services/space-tech" element={<SpaceTech />} />
+              <Route path="/services/smart-contract-risk-scanner" element={<SmartContractRiskScanner />} />
               
               {/* Catch all route */}
               <Route path="*" element={<Home />} />

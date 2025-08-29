@@ -75,7 +75,10 @@ export const EnhancedFuturisticFooter: React.FC = () => {
         { name: 'AI Compliance Assistant', href: '/services/ai-compliance-assistant' },
         { name: 'AI Auto Email Responder', href: '/services/ai-auto-email-responder' },
         { name: 'LLM Content Studio', href: '/services/llm-content-studio' },
-        { name: 'AI Compliance Copilot', href: '/services/ai-compliance-copilot' }
+        { name: 'AI Compliance Copilot', href: '/services/ai-compliance-copilot' },
+        { name: 'AI Cybersecurity Suite', href: '/services/ai-cybersecurity-suite' },
+        { name: 'Quantum AI Platform', href: '/services/quantum-ai-platform' },
+        { name: 'AI Healthcare Analytics', href: '/services/ai-healthcare-analytics' }
       ]
     },
     {
@@ -83,38 +86,39 @@ export const EnhancedFuturisticFooter: React.FC = () => {
       icon: Zap,
       color: 'from-blue-600 to-cyan-600',
       links: [
+        { name: 'Cloud DevOps', href: '/services/cloud-devops' },
         { name: 'Micro SaaS Solutions', href: '/services/micro-saas-solutions' },
-        { name: 'AI Business Intelligence', href: '/services/ai-business-intelligence' },
-        { name: 'Customer Feedback Surveys', href: '/services/mobile-feedback-surveys' },
         { name: 'Cloud FinOps Optimizer', href: '/services/cloud-finops-optimizer' },
         { name: 'FinOps Advisor', href: '/services/finops-advisor' },
-        { name: 'Digital Transformation', href: '/services/digital-transformation' }
+        { name: 'IT Infrastructure', href: '/services/it-infrastructure' },
+        { name: 'Digital Twin', href: '/services/digital-twin' },
+        { name: 'IoT Edge Computing', href: '/services/iot-edge' },
+        { name: 'Data Analytics', href: '/services/data-analytics' }
       ]
     },
     {
-      title: 'IoT & Digital Twin',
+      title: 'Blockchain & Security',
+      icon: Shield,
+      color: 'from-red-600 to-orange-600',
+      links: [
+        { name: 'Blockchain Enterprise Solutions', href: '/services/blockchain-enterprise-solutions' },
+        { name: 'Smart Contract Risk Scanner', href: '/services/smart-contract-risk-scanner' },
+        { name: 'AI Compliance Copilot', href: '/services/ai-compliance-copilot' },
+        { name: 'Zero Trust Architecture', href: '/services/zero-trust-architecture' },
+        { name: 'Incident Response Platform', href: '/services/incident-response-platform' }
+      ]
+    },
+    {
+      title: 'Innovative Solutions',
       icon: Rocket,
       color: 'from-green-600 to-emerald-600',
       links: [
-        { name: 'IT Infrastructure', href: '/services/it-infrastructure' },
-        { name: 'Digital Transformation', href: '/services/digital-transformation' },
-        { name: 'IT Consulting', href: '/services/it-consulting' },
-        { name: 'Onsite Support', href: '/services/onsite-support' },
-        { name: 'Green IT Solutions', href: '/services/green-it' },
-        { name: 'IoT Edge Computing', href: '/services/iot-edge' }
-      ]
-    },
-    {
-      title: 'Quantum & Emerging Tech',
-      icon: Crown,
-      color: 'from-indigo-600 to-purple-600',
-      links: [
-        { name: 'Quantum Computing', href: '/services/quantum-computing' },
-        { name: 'Blockchain Solutions', href: '/services/blockchain-enterprise-solutions' },
+        { name: 'Healthcare Technology', href: '/services/healthcare-tech' },
+        { name: 'Sustainability Solutions', href: '/services/sustainability' },
         { name: 'Space Technology', href: '/services/space-tech' },
-        { name: 'Sustainability', href: '/services/sustainability' },
-        { name: 'Digital Twin', href: '/services/digital-twin' },
-        { name: 'Cloud DevOps', href: '/services/cloud-devops' }
+        { name: 'Customer Feedback Surveys', href: '/services/mobile-feedback-surveys' },
+        { name: 'Innovative Services 2025', href: '/innovative-services-showcase-2025' },
+        { name: 'Revolutionary Services 2030', href: '/revolutionary-services-showcase-2030' }
       ]
     }
   ];
@@ -339,26 +343,24 @@ export const EnhancedFuturisticFooter: React.FC = () => {
           </div>
 
           {/* Contact Information */}
-          <div>
-            <h4 className="font-semibold text-white mb-4">Contact Us</h4>
-            <div className="space-y-3">
-              <a 
-                href="tel:+13024640950" 
-                className="flex items-center space-x-3 text-sm text-slate-300 hover:text-cyan-400 transition-colors"
-              >
-                <Phone className="w-4 h-4" />
-                <span>+1 302 464 0950</span>
-              </a>
-              <a 
-                href="mailto:kleber@ziontechgroup.com" 
-                className="flex items-center space-x-3 text-sm text-slate-300 hover:text-cyan-400 transition-colors"
-              >
-                <Mail className="w-4 h-4" />
-                <span>kleber@ziontechgroup.com</span>
-              </a>
-              <div className="flex items-start space-x-3 text-sm text-slate-300">
-                <MapPin className="w-4 h-4 mt-0.5 flex-shrink-0" />
-                <span>
+          <div className="text-center lg:text-left">
+            <h3 className="text-lg font-semibold text-white mb-4">Contact Information</h3>
+            <div className="space-y-3 text-sm text-gray-300">
+              <div className="flex items-center justify-center lg:justify-start space-x-3">
+                <Phone className="w-4 h-4 text-cyan-400" />
+                <a href="tel:+13024640950" className="hover:text-cyan-400 transition-colors">
+                  +1 302 464 0950
+                </a>
+              </div>
+              <div className="flex items-center justify-center lg:justify-start space-x-3">
+                <Mail className="w-4 h-4 text-cyan-400" />
+                <a href="mailto:kleber@ziontechgroup.com" className="hover:text-cyan-400 transition-colors">
+                  kleber@ziontechgroup.com
+                </a>
+              </div>
+              <div className="flex items-start justify-center lg:justify-start space-x-3">
+                <MapPin className="w-4 h-4 text-cyan-400 mt-0.5" />
+                <span className="text-left">
                   364 E Main St STE 1008<br />
                   Middletown DE 19709
                 </span>
