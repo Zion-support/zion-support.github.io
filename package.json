@@ -14,20 +14,28 @@
     "type-check": "tsc --noEmit",
     "prepare": "git config core.hooksPath .husky || true",
     "fix:all": "yarn lint --fix || true",
-    "automation:start": "./scripts/start-automation.sh start",
-    "automation:stop": "./scripts/start-automation.sh stop",
-    "automation:restart": "./scripts/start-automation.sh restart",
-    "automation:status": "./scripts/start-automation.sh status",
-    "automation:logs": "./scripts/start-automation.sh logs",
-    "automation:monit": "./scripts/start-automation.sh monit",
-    "automation:health": "./scripts/start-automation.sh health",
-    "automation:reports": "./scripts/start-automation.sh reports",
+    
+    "automation:setup": "./scripts/setup-enhanced-automation.sh setup",
+    "automation:install": "./scripts/setup-enhanced-automation.sh install",
+    "automation:start": "./scripts/setup-enhanced-automation.sh start",
+    "automation:stop": "./scripts/setup-enhanced-automation.sh stop",
+    "automation:restart": "./scripts/setup-enhanced-automation.sh restart",
+    "automation:status": "./scripts/setup-enhanced-automation.sh status",
+    "automation:logs": "./scripts/setup-enhanced-automation.sh logs",
+    "automation:test": "./scripts/setup-enhanced-automation.sh test",
+    "automation:cleanup": "./scripts/setup-enhanced-automation.sh cleanup",
+    
     "pm2:start": "pm2 start ecosystem.config.cjs --only automation",
     "pm2:stop": "pm2 stop ecosystem.config.cjs --only automation",
     "pm2:restart": "pm2 restart ecosystem.config.cjs --only automation",
     "pm2:status": "pm2 status",
     "pm2:logs": "pm2 logs --lines 50",
-    "pm2:monit": "pm2 monit"
+    "pm2:monit": "pm2 monit",
+    
+    "intelligence:health": "node scripts/enhanced-automation-manager.js health",
+    "intelligence:status": "node scripts/enhanced-automation-manager.js status",
+    "intelligence:logs": "node scripts/enhanced-automation-manager.js logs",
+    "intelligence:monit": "node scripts/enhanced-automation-manager.js monit"
   },
   "dependencies": {
     "@hookform/resolvers": "^5.2.1",
