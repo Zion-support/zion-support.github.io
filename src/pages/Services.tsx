@@ -320,7 +320,6 @@ export default function Services() {
                 <div className="text-sm text-slate-300">Emerging Tech</div>
               </div>
             </motion.div>
-            </motion.div>
 
             {/* Search and Filter Controls */}
             <motion.div
@@ -384,7 +383,6 @@ export default function Services() {
                     {category.icon} {category.name} ({category.count})
                   </button>
                 ))}
->>>>>>> 0e63d3ea6cae6932852da2c733a36c5ad5825e94
               </div>
             </motion.div>
           </div>

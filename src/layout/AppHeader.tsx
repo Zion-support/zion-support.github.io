@@ -1,6 +1,7 @@
 import { ArrowRight, Atom, BookOpen, Brain, Building, Building2, ChevronDown, Cloud, Code, Cpu, DollarSign, FileText, Globe, HeartHandshake, Heart, HelpCircle, Leaf, Lock, Mail, MapPin, Menu, MessageCircle, PenTool, Phone, Rocket, Scale, Search, Settings, Shield, ShoppingCart, Star, Target, TrendingUp, Users, X, Zap } from 'lucide-react';
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
+import { motion, AnimatePresence } from 'framer-motion';
 import { ThemeToggle } from '../components/ThemeToggle';
 
 export function AppHeader() {
@@ -11,6 +12,7 @@ export function AppHeader() {
   const [resourcesDropdownOpen, setResourcesDropdownOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const [isSearching, setIsSearching] = useState(false);
+  const [isSearchFocused, setIsSearchFocused] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -451,18 +453,44 @@ export function AppHeader() {
             {/* Right side - Search, Actions, Mobile menu */}
             <div className="flex items-center space-x-4">
               {/* Search */}
-              <form onSubmit={handleSearch} className="hidden md:block">
+              <motion.form 
+                onSubmit={handleSearch} 
+                className="hidden md:block"
+                initial={false}
+                animate={{ scale: isSearchFocused ? 1.02 : 1 }}
+                transition={{ duration: 0.2 }}
+              >
                 <div className="relative">
                   <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-4 h-4" />
                   <input
                     type="text"
-                    placeholder="Search..."
+                    placeholder="Search services, solutions..."
                     value={searchQuery}
                     onChange={(e) => setSearchQuery(e.target.value)}
-                    className="w-64 pl-10 pr-4 py-2 bg-slate-700/50 border border-slate-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent text-sm"
+                    onFocus={() => setIsSearchFocused(true)}
+                    onBlur={() => setIsSearchFocused(false)}
+                    className="w-64 pl-10 pr-4 py-2 bg-slate-700/50 border border-slate-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent text-sm transition-all duration-200 hover:bg-slate-700/70"
                   />
+                  <AnimatePresence>
+                    {searchQuery && (
+                      <motion.button
+                        initial={{ opacity: 0, scale: 0.8 }}
+                        animate={{ opacity: 1, scale: 1 }}
+                        exit={{ opacity: 0, scale: 0.8 }}
+                        type="submit"
+                        disabled={isSearching}
+                        className="absolute right-2 top-1/2 transform -translate-y-1/2 p-1 text-gray-400 hover:text-cyan-400 transition-colors disabled:opacity-50"
+                      >
+                        {isSearching ? (
+                          <div className="w-4 h-4 border-2 border-cyan-400 border-t-transparent rounded-full animate-spin"></div>
+                        ) : (
+                          <ArrowRight className="w-4 h-4" />
+                        )}
+                      </motion.button>
+                    )}
+                  </AnimatePresence>
                 </div>
-              </form>
+              </motion.form>
 
               {/* Contact Info */}
               <div className="hidden lg:flex items-center space-x-4">
@@ -509,7 +537,13 @@ export function AppHeader() {
           <div className="lg:hidden bg-slate-800/95 backdrop-blur-xl border-t border-slate-700/50">
             <div className="container-responsive py-6">
               {/* Mobile Search */}
-              <form onSubmit={handleSearch} className="mb-6">
+              <motion.form 
+                onSubmit={handleSearch} 
+                className="mb-6"
+                initial={{ opacity: 0, y: -10 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.3 }}
+              >
                 <div className="relative">
                   <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-4 h-4" />
                   <input
@@ -517,10 +551,28 @@ export function AppHeader() {
                     placeholder="Search services, solutions..."
                     value={searchQuery}
                     onChange={(e) => setSearchQuery(e.target.value)}
-                    className="w-full pl-10 pr-4 py-3 bg-slate-700/50 border border-slate-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
+                    className="w-full pl-10 pr-4 py-3 bg-slate-700/50 border border-slate-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent transition-all duration-200"
                   />
+                  <AnimatePresence>
+                    {searchQuery && (
+                      <motion.button
+                        initial={{ opacity: 0, scale: 0.8 }}
+                        animate={{ opacity: 1, scale: 1 }}
+                        exit={{ opacity: 0, scale: 0.8 }}
+                        type="submit"
+                        disabled={isSearching}
+                        className="absolute right-3 top-1/2 transform -translate-y-1/2 p-1 text-gray-400 hover:text-cyan-400 transition-colors disabled:opacity-50"
+                      >
+                        {isSearching ? (
+                          <div className="w-4 h-4 border-2 border-cyan-400 border-t-transparent rounded-full animate-spin"></div>
+                        ) : (
+                          <ArrowRight className="w-4 h-4" />
+                        )}
+                      </motion.button>
+                    )}
+                  </AnimatePresence>
                 </div>
-              </form>
+              </motion.form>
 
               {/* Mobile Navigation */}
               <nav className="space-y-4">
