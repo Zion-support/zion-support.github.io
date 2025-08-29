@@ -4,7 +4,7 @@
 
 [build]
   # Use a build script that forces npm usage
-  command = "bash ./scripts/netlify-build.sh"
+  command = "which npm && npm --version && bash ./scripts/netlify-build.sh"
   publish = "dist"
   base = "."
   # Explicitly override any package manager detection
@@ -57,6 +57,14 @@
   YARN_IGNORE_ENGINES = "true"
   YARN_IGNORE_PLATFORM = "true"
   YARN_IGNORE_SCRIPTS = "true"
+  # Completely disable package manager detection
+  NETLIFY_DISABLE_PACKAGE_MANAGER_DETECTION = "true"
+  # Force npm as the only package manager
+  NETLIFY_PACKAGE_MANAGER = "npm"
+  # Disable all Yarn-related features
+  NETLIFY_YARN_DISABLED = "true"
+  # Force npm install with specific flags
+  NETLIFY_NPM_INSTALL_FLAGS = "--ignore-scripts --omit=optional --no-audit --no-fund --no-update-notifier"
 
 # Fix MIME type issues
 [[headers]]
