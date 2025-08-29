@@ -23,7 +23,11 @@ class AutomationManager {
       'quality-checks',
       'link-integrity',
       'front-maximizer',
-      'sitemap-runner'
+      'sitemap-runner',
+      'intelligent-code-analyzer',
+      'intelligent-dependency-resolver',
+      'intelligent-performance-predictor',
+      'intelligent-testing-orchestrator'
     ];
   }
 

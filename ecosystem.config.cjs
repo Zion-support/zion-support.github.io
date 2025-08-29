@@ -187,6 +187,62 @@ module.exports = {
         NODE_ENV: 'production',
         AUTOMATION_INTERVAL: '21600000' // 6 hours
       }
+    },
+
+    // Intelligent code analyzer - runs every 2 hours
+    {
+      name: 'intelligent-code-analyzer',
+      script: './scripts/automation/intelligent-code-analyzer.cjs',
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      max_memory_restart: '512M',
+      env: {
+        NODE_ENV: 'production',
+        AUTOMATION_INTERVAL: '7200000' // 2 hours
+      }
+    },
+
+    // Intelligent dependency resolver - runs every 6 hours
+    {
+      name: 'intelligent-dependency-resolver',
+      script: './scripts/automation/intelligent-dependency-resolver.cjs',
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      max_memory_restart: '512M',
+      env: {
+        NODE_ENV: 'production',
+        AUTOMATION_INTERVAL: '21600000' // 6 hours
+      }
+    },
+
+    // Intelligent performance predictor - runs every hour
+    {
+      name: 'intelligent-performance-predictor',
+      script: './scripts/automation/intelligent-performance-predictor.cjs',
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      max_memory_restart: '512M',
+      env: {
+        NODE_ENV: 'production',
+        AUTOMATION_INTERVAL: '3600000' // 1 hour
+      }
+    },
+
+    // Intelligent testing orchestrator - runs every 30 minutes
+    {
+      name: 'intelligent-testing-orchestrator',
+      script: './scripts/automation/intelligent-testing-orchestrator.cjs',
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      max_memory_restart: '512M',
+      env: {
+        NODE_ENV: 'production',
+        AUTOMATION_INTERVAL: '1800000' // 30 minutes
+      }
     }
   ]
 };
