@@ -24,6 +24,9 @@ const Home: NextPage = () => {
             <Link href="/services" className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-lg font-semibold transition-colors">
               Our Services
             </Link>
+            <Link href="/innovative-services-showcase-2031" className="bg-purple-600 hover:bg-purple-700 text-white px-8 py-3 rounded-lg font-semibold transition-colors">
+              Innovative Services 2031
+            </Link>
             <Link href="/contact" className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-blue-900 px-8 py-3 rounded-lg font-semibold transition-colors">
               Get in Touch
             </Link>
