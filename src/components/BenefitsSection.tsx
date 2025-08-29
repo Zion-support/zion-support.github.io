@@ -72,13 +72,6 @@ const benefits: Benefit[] = [
   }
 ];
 
-const initialStats = [
-  { icon: <Clock className="w-6 h-6" />, value: "3x Faster", label: "Project Delivery" },
-  { icon: <CheckCircle className="w-6 h-6" />, value: "99.9%", label: "Success Rate" },
-  { icon: <TrendingDown className="w-6 h-6" />, value: "50%", label: "Cost Reduction" },
-  { icon: <Globe className="w-6 h-6" />, value: "150+", label: "Countries Served" }
-];
-
 export function BenefitsSection() {
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
 
@@ -92,6 +85,30 @@ export function BenefitsSection() {
       }
     }
   ];
+
+  const statsVariants = {
+    hidden: { opacity: 0, scale: 0.8 },
+    visible: {
+      opacity: 1,
+      scale: 1,
+      transition: {
+        duration: 0.5,
+        ease: "easeOut"
+      }
+    }
+  };
+
+  const itemVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 0.5,
+        ease: "easeOut"
+      }
+    }
+  };
 
   const stats = [
     { value: "500+", label: "Projects Delivered", icon: <Clock className="w-6 h-6" /> },

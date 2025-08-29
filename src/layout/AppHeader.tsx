@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { Menu, X, Search, User, Bell, ChevronDown, Zap, Brain, Shield, Cloud, Rocket, Globe, Cpu, Lock, Heart, Users, ShoppingCart, BookOpen, MessageCircle, HelpCircle, DollarSign, Star, TrendingUp, Award, Settings, Phone, Mail, MapPin, Building, Bot, Atom } from 'lucide-react';
+import { Menu, X, Search, User, Bell, ChevronDown, Zap, Brain, Shield, Cloud, Rocket, Globe, Cpu, Lock, Heart, Users, ShoppingCart, BookOpen, MessageCircle, HelpCircle, DollarSign, Star, TrendingUp, Award, Settings, Phone, Mail, MapPin, Building, Bot, Atom, Workflow, Server, Target, Truck, CheckCircle, BarChart3 } from 'lucide-react';
 import { ThemeToggle } from '../components/ThemeToggle';
 import { ZionLoadingSpinner } from '../components/ui/EnhancedLoadingSpinner';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -63,6 +63,23 @@ export function AppHeader() {
     { name: 'FinOps Advisor', href: '/services/finops-advisor', icon: DollarSign, description: 'Cloud cost optimization' },
     { name: 'AI Autonomous Operations', href: '/services/ai-autonomous-business-operations', icon: Bot, description: 'Fully autonomous business operations' },
     { name: 'Quantum Computing', href: '/services/quantum-computing-solutions', icon: Atom, description: 'Next-generation computational power' },
+    // NEW SERVICES ADDED
+    { name: 'AI Legal Automation', href: '/services/ai-legal-document-automation', icon: BookOpen, description: 'Legal document automation & compliance' },
+    { name: 'Healthcare Revenue Cycle', href: '/services/ai-healthcare-revenue-cycle', icon: Heart, description: 'AI-powered healthcare billing optimization' },
+    { name: 'Real Estate Analytics', href: '/services/ai-real-estate-analytics', icon: Building, description: 'AI-powered real estate investment insights' },
+    { name: 'Manufacturing Quality Control', href: '/services/ai-manufacturing-quality-control', icon: Cpu, description: 'AI-powered quality control & defect detection' },
+    { name: 'Financial Trading AI', href: '/services/ai-financial-trading-algorithm', icon: TrendingUp, description: 'AI-powered algorithmic trading' },
+    { name: 'Customer Service AI', href: '/services/ai-customer-service-automation', icon: MessageCircle, description: '24/7 AI customer service automation' },
+    { name: 'Marketing Automation AI', href: '/services/ai-marketing-automation', icon: Target, description: 'AI-powered marketing optimization' },
+    { name: 'Supply Chain AI', href: '/services/ai-supply-chain-optimization', icon: Truck, description: 'AI-powered supply chain optimization' },
+    { name: 'HR Management AI', href: '/services/ai-hr-management', icon: Users, description: 'AI-powered HR automation' },
+    { name: 'Project Management AI', href: '/services/ai-project-management', icon: CheckCircle, description: 'AI-powered project optimization' },
+    { name: 'Financial Planning AI', href: '/services/ai-financial-planning', icon: DollarSign, description: 'AI-powered financial planning' },
+    { name: 'Energy Management AI', href: '/services/ai-energy-management', icon: Zap, description: 'AI-powered energy optimization' },
+    { name: 'Logistics AI', href: '/services/ai-logistics-optimization', icon: Truck, description: 'AI-powered logistics optimization' },
+    { name: 'Cybersecurity AI', href: '/services/ai-cybersecurity-threat-detection', icon: Shield, description: 'AI-powered threat detection' },
+    { name: 'Content Creation AI', href: '/services/ai-content-creation', icon: BookOpen, description: 'AI-powered content generation' },
+    { name: 'Data Analytics AI', href: '/services/ai-data-analytics', icon: BarChart3, description: 'AI-powered data analytics' }
   ];
 
   const servicesCategories = [
@@ -88,7 +105,29 @@ export function AppHeader() {
         { name: 'AI Customer Success Platform', href: '/services/ai-customer-success-platform', description: 'Proactive Customer Engagement' },
         { name: 'AI Sales Copilot', href: '/services/ai-sales-copilot', description: 'AI-powered sales automation' },
         { name: 'AI Compliance Assistant', href: '/services/ai-compliance-assistant', description: 'Regulatory compliance automation' },
-        { name: 'LLM Content Studio', href: '/services/llm-content-studio', description: 'AI content generation' }
+        { name: 'LLM Content Studio', href: '/services/llm-content-studio', description: 'AI content generation' },
+        { name: 'AI Legal Automation', href: '/services/ai-legal-document-automation', description: 'Legal document automation' },
+        { name: 'AI Content Creation', href: '/services/ai-content-creation', description: 'AI-powered content generation' },
+        { name: 'AI Data Analytics', href: '/services/ai-data-analytics', description: 'AI-powered data analytics' }
+      ]
+    },
+    {
+      name: 'AI Industry Solutions',
+      icon: Building,
+      color: 'from-green-600 to-emerald-600',
+      services: [
+        { name: 'Healthcare Revenue Cycle', href: '/services/ai-healthcare-revenue-cycle', description: 'Healthcare billing optimization' },
+        { name: 'Real Estate Analytics', href: '/services/ai-real-estate-analytics', description: 'Real estate investment insights' },
+        { name: 'Manufacturing Quality Control', href: '/services/ai-manufacturing-quality-control', description: 'Quality control automation' },
+        { name: 'Financial Trading AI', href: '/services/ai-financial-trading-algorithm', description: 'Algorithmic trading' },
+        { name: 'Customer Service AI', href: '/services/ai-customer-service-automation', description: 'Customer service automation' },
+        { name: 'Marketing Automation AI', href: '/services/ai-marketing-automation', description: 'Marketing optimization' },
+        { name: 'Supply Chain AI', href: '/services/ai-supply-chain-optimization', description: 'Supply chain optimization' },
+        { name: 'HR Management AI', href: '/services/ai-hr-management', description: 'HR automation' },
+        { name: 'Project Management AI', href: '/services/ai-project-management', description: 'Project optimization' },
+        { name: 'Financial Planning AI', href: '/services/ai-financial-planning', description: 'Financial planning' },
+        { name: 'Energy Management AI', href: '/services/ai-energy-management', description: 'Energy optimization' },
+        { name: 'Logistics AI', href: '/services/ai-logistics-optimization', description: 'Logistics optimization' }
       ]
     },
     {
@@ -127,7 +166,32 @@ export function AppHeader() {
       color: 'from-indigo-600 to-purple-600',
       services: [
         { name: 'AI Compliance Copilot', href: '/services/ai-compliance-copilot', description: 'AI-Powered Security' },
-        { name: 'Zero Trust Architecture', href: '/services/zero-trust-network-architecture', description: 'Advanced security' }
+        { name: 'Zero Trust Architecture', href: '/services/zero-trust-network-architecture', description: 'Advanced security' },
+        { name: 'AI Cybersecurity Suite', href: '/services/ai-cybersecurity-suite', description: 'Advanced security solutions' },
+        { name: 'AI Cybersecurity Threat Detection', href: '/services/ai-cybersecurity-threat-detection', description: 'AI-powered threat detection' }
+      ]
+    },
+    {
+      name: 'Emerging Technologies',
+      icon: Star,
+      color: 'from-yellow-600 to-orange-600',
+      services: [
+        { name: 'Quantum Computing', href: '/services/quantum-computing-solutions', description: 'Next-generation computing' },
+        { name: 'Quantum AI Platform', href: '/services/quantum-ai-platform', description: 'Quantum AI solutions' },
+        { name: 'Blockchain Solutions', href: '/services/blockchain-enterprise-solutions', description: 'Blockchain & DeFi' },
+        { name: 'Space Technology', href: '/services/space-tech', description: 'AI-powered space solutions' }
+      ]
+    },
+    {
+      name: 'Specialized Solutions',
+      icon: Target,
+      color: 'from-pink-600 to-rose-600',
+      services: [
+        { name: 'Healthcare Technology', href: '/services/healthcare-tech', description: 'AI medicine & diagnostics' },
+        { name: 'Sustainability Solutions', href: '/services/sustainability', description: 'Green IT solutions' },
+        { name: 'Micro SaaS Solutions', href: '/services/micro-saas-solutions', description: 'Productized SaaS' },
+        { name: 'AI Auto Email Responder', href: '/services/ai-auto-email-responder', description: 'Email automation' },
+        { name: 'Customer Feedback Surveys', href: '/services/mobile-feedback-surveys', description: 'Feedback automation' }
       ]
     }
   ];
@@ -141,7 +205,9 @@ export function AppHeader() {
         { name: 'AI Business Intelligence', href: '/services/ai-business-intelligence', description: 'Machine Learning & Data Science' },
         { name: 'AI Sales Copilot', href: '/services/ai-sales-copilot', description: 'AI-powered sales automation' },
         { name: 'AI Compliance Assistant', href: '/services/ai-compliance-assistant', description: 'Regulatory compliance automation' },
-        { name: 'LLM Content Studio', href: '/services/llm-content-studio', description: 'AI content generation' }
+        { name: 'LLM Content Studio', href: '/services/llm-content-studio', description: 'AI content generation' },
+        { name: 'AI Legal Automation', href: '/services/ai-legal-document-automation', description: 'Legal document automation' },
+        { name: 'AI Healthcare Analytics', href: '/services/ai-healthcare-analytics', description: 'Healthcare data insights' }
       ]
     },
     {
@@ -151,7 +217,21 @@ export function AppHeader() {
       solutions: [
         { name: 'Quantum AI Platform', href: '/services/quantum-ai-platform', description: 'Next-gen quantum computing' },
         { name: 'AI Cybersecurity Suite', href: '/services/ai-cybersecurity-suite', description: 'Advanced security solutions' },
-        { name: 'AI Healthcare Analytics', href: '/services/ai-healthcare-analytics', description: 'Healthcare data insights' }
+        { name: 'AI Healthcare Analytics', href: '/services/ai-healthcare-analytics', description: 'Healthcare data insights' },
+        { name: 'Quantum Computing Solutions', href: '/services/quantum-computing-solutions', description: 'Quantum computing power' },
+        { name: 'Space Technology', href: '/services/space-tech', description: 'AI-powered space solutions' }
+      ]
+    },
+    {
+      name: 'Industry Solutions',
+      icon: Building,
+      color: 'from-green-600 to-emerald-600',
+      solutions: [
+        { name: 'Healthcare Revenue Cycle', href: '/services/ai-healthcare-revenue-cycle', description: 'Healthcare billing optimization' },
+        { name: 'Real Estate Analytics', href: '/services/ai-real-estate-analytics', description: 'Real estate investment insights' },
+        { name: 'Manufacturing Quality Control', href: '/services/ai-manufacturing-quality-control', description: 'Quality control automation' },
+        { name: 'Financial Trading AI', href: '/services/ai-financial-trading-algorithm', description: 'Algorithmic trading' },
+        { name: 'Supply Chain AI', href: '/services/ai-supply-chain-optimization', description: 'Supply chain optimization' }
       ]
     },
     {
@@ -171,6 +251,8 @@ export function AppHeader() {
     { name: 'Services Showcase', href: '/revolutionary-services-showcase-2030', icon: TrendingUp, description: 'Future-ready services' },
     { name: 'Pricing Guide 2030', href: '/pricing-2030', icon: DollarSign, description: 'Advanced pricing strategies' },
     { name: 'Request Quote', href: '/request-quote', icon: MessageCircle, description: 'Get custom pricing' },
+    { name: 'New AI Services', href: '/ai-services', icon: Brain, description: 'Latest AI solutions' },
+    { name: 'Quantum Solutions', href: '/services/quantum-computing-solutions', icon: Atom, description: 'Quantum computing services' }
   ];
 
   const companyCategories = [

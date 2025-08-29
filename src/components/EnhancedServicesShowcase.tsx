@@ -305,10 +305,9 @@ export default function EnhancedServicesShowcase() {
                 to="/contact"
                 className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-purple text-white font-semibold rounded-2xl hover:shadow-2xl hover:shadow-zion-cyan/25 transition-all duration-300 transform hover:-translate-y-1"
               >
-                {category === 'all' ? 'All Services' : category}
-              </button>
-            ))}
-          </div>
+                Get Started Today
+              </Link>
+            </div>
 
           {/* Search */}
           <div className="relative">

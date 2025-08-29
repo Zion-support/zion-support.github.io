@@ -84,6 +84,127 @@ export default function ServicesOverview() {
           features: ['Lead scoring', 'Sales automation', 'Performance analytics'],
           link: '/services/ai-sales-copilot',
           popular: false
+        },
+        // NEW AI SERVICES ADDED
+        {
+          title: 'AI Legal Document Automation',
+          description: 'Intelligent legal document generation and compliance automation',
+          price: 'From $1,899/month',
+          features: ['Contract generation', 'Compliance checking', 'Legal research automation'],
+          link: '/services/ai-legal-document-automation',
+          popular: true
+        },
+        {
+          title: 'AI Healthcare Revenue Cycle',
+          description: 'AI-powered healthcare billing and revenue optimization',
+          price: 'From $2,499/month',
+          features: ['Claim processing', 'Denial prevention', 'Revenue forecasting'],
+          link: '/services/ai-healthcare-revenue-cycle',
+          popular: false
+        },
+        {
+          title: 'AI Real Estate Analytics',
+          description: 'Advanced real estate investment analytics and market insights',
+          price: 'From $1,599/month',
+          features: ['Market analysis', 'Investment scoring', 'Portfolio optimization'],
+          link: '/services/ai-real-estate-analytics',
+          popular: false
+        },
+        {
+          title: 'AI Manufacturing Quality Control',
+          description: 'Computer vision and AI-powered quality control automation',
+          price: 'From $3,299/month',
+          features: ['Defect detection', 'Process optimization', 'Quality monitoring'],
+          link: '/services/ai-manufacturing-quality-control',
+          popular: true
+        },
+        {
+          title: 'AI Financial Trading Algorithm',
+          description: 'High-frequency trading algorithms with AI optimization',
+          price: 'From $4,999/month',
+          features: ['Market analysis', 'Risk management', 'Portfolio optimization'],
+          link: '/services/ai-financial-trading-algorithm',
+          popular: false
+        },
+        {
+          title: 'AI Customer Service Automation',
+          description: '24/7 AI-powered customer service and support automation',
+          price: 'From $1,299/month',
+          features: ['Chatbots', 'Ticket routing', 'Knowledge base integration'],
+          link: '/services/ai-customer-service-automation',
+          popular: true
+        },
+        {
+          title: 'AI Marketing Automation',
+          description: 'Intelligent marketing campaign optimization and personalization',
+          price: 'From $1,899/month',
+          features: ['Campaign optimization', 'Content personalization', 'ROI optimization'],
+          link: '/services/ai-marketing-automation',
+          popular: false
+        },
+        {
+          title: 'AI HR Management',
+          description: 'Intelligent HR automation and employee performance optimization',
+          price: 'From $1,599/month',
+          features: ['Recruitment automation', 'Performance analytics', 'Skills gap analysis'],
+          link: '/services/ai-hr-management',
+          popular: false
+        },
+        {
+          title: 'AI Project Management',
+          description: 'AI-powered project planning and resource optimization',
+          price: 'From $1,299/month',
+          features: ['Project planning', 'Risk prediction', 'Resource optimization'],
+          link: '/services/ai-project-management',
+          popular: false
+        },
+        {
+          title: 'AI Financial Planning',
+          description: 'Intelligent financial planning and investment optimization',
+          price: 'From $899/month',
+          features: ['Financial analysis', 'Investment strategies', 'Risk assessment'],
+          link: '/services/ai-financial-planning',
+          popular: false
+        },
+        {
+          title: 'AI Energy Management',
+          description: 'AI-powered energy consumption optimization and sustainability',
+          price: 'From $2,199/month',
+          features: ['Energy optimization', 'Predictive maintenance', 'Sustainability reporting'],
+          link: '/services/ai-energy-management',
+          popular: false
+        },
+        {
+          title: 'AI Logistics Optimization',
+          description: 'Intelligent logistics and route optimization automation',
+          price: 'From $1,899/month',
+          features: ['Route optimization', 'Fleet management', 'Delivery optimization'],
+          link: '/services/ai-logistics-optimization',
+          popular: false
+        },
+        {
+          title: 'AI Cybersecurity Threat Detection',
+          description: 'Advanced AI-powered threat detection and incident response',
+          price: 'From $3,999/month',
+          features: ['Threat detection', 'Incident response', 'Compliance monitoring'],
+          link: '/services/ai-cybersecurity-threat-detection',
+          popular: true
+        },
+        {
+          title: 'AI Content Creation',
+          description: 'AI-powered content generation and brand consistency',
+          price: 'From $799/month',
+          features: ['Content generation', 'Brand voice consistency', 'SEO optimization'],
+          link: '/services/ai-content-creation',
+          popular: false
+        },
+        {
+          title: 'AI Data Analytics',
+          description: 'Advanced AI-powered data analytics and business intelligence',
+          price: 'From $2,499/month',
+          features: ['Data processing', 'Predictive modeling', 'Custom dashboards'],
+          link: '/services/ai-data-analytics',
+          popular: false
         }
       ]
     },
@@ -103,7 +224,7 @@ export default function ServicesOverview() {
         },
         {
           title: 'IT Infrastructure',
-          description: 'Modern infrastructure design and implementation',
+          description: 'Enterprise infrastructure design and implementation',
           price: 'From $8,000',
           features: ['Infrastructure design', 'Implementation', 'Ongoing support'],
           link: '/services/it-infrastructure',
@@ -113,80 +234,144 @@ export default function ServicesOverview() {
           title: 'Digital Transformation',
           description: 'End-to-end digital transformation consulting and implementation',
           price: 'From $15,000',
-          features: ['Strategy development', 'Technology selection', 'Change management'],
+          features: ['Strategy development', 'Technology selection', 'Implementation support'],
           link: '/services/digital-transformation',
-          popular: false
+          popular: true
         },
         {
           title: 'IT Consulting',
           description: 'Strategic IT consulting and technology advisory services',
-          price: 'From $3,500',
-          features: ['Technology assessment', 'Strategic planning', 'Vendor selection'],
+          price: 'From $2,500/month',
+          features: ['Technology assessment', 'Strategy development', 'Implementation guidance'],
           link: '/services/it-consulting',
           popular: false
         },
         {
-          title: 'Zero Trust Network Architecture',
-          description: 'Advanced security architecture implementation',
-          price: 'From $12,000',
-          features: ['Security assessment', 'Architecture design', 'Implementation'],
-          link: '/services/zero-trust-network-architecture',
-          popular: false
-        },
-        {
-          title: 'Green IT Solutions',
-          description: 'Sustainable technology solutions and energy optimization',
-          price: 'From $6,000',
-          features: ['Energy audit', 'Green technology', 'Sustainability reporting'],
-          link: '/services/green-it',
+          title: 'Data Analytics',
+          description: 'Business intelligence and data analytics solutions',
+          price: 'From $3,500',
+          features: ['Data assessment', 'Analytics implementation', 'Dashboard creation'],
+          link: '/services/data-analytics',
           popular: false
         }
       ]
     },
     {
-      name: 'Micro SaaS Solutions',
-      description: 'Specialized software-as-a-service solutions for specific business needs',
-      icon: Zap,
-      color: 'from-green-500 to-emerald-500',
+      name: 'Emerging Technologies',
+      description: 'Cutting-edge quantum computing, blockchain, and space technology solutions',
+      icon: Star,
+      color: 'from-yellow-500 to-orange-500',
       services: [
         {
-          title: 'Cloud FinOps Optimizer',
-          description: 'Cloud cost optimization and financial operations management',
-          price: 'From $1,999/month',
-          features: ['Cost analysis', 'Optimization', 'Financial reporting'],
-          link: '/services/cloud-finops-optimizer',
+          title: 'Quantum Computing Solutions',
+          description: 'Next-generation quantum computing and quantum AI platforms',
+          price: 'From $8,000/month',
+          features: ['Quantum algorithm development', 'Quantum AI integration', 'Performance optimization'],
+          link: '/services/quantum-computing-solutions',
           popular: true
         },
         {
-          title: 'AI Compliance Assistant',
-          description: 'Automated compliance monitoring and reporting',
-          price: 'From $1,500/month',
-          features: ['Compliance monitoring', 'Automated reporting', 'Risk assessment'],
-          link: '/services/ai-compliance-assistant',
+          title: 'Quantum AI Platform',
+          description: 'Revolutionary quantum AI platform for complex problem solving',
+          price: 'From $12,000/month',
+          features: ['Quantum AI algorithms', 'Hybrid quantum-classical computing', 'Custom development'],
+          link: '/services/quantum-ai-platform',
           popular: false
         },
         {
-          title: 'LLM Content Studio',
-          description: 'AI-powered content creation and management platform',
-          price: 'From $999/month',
-          features: ['Content generation', 'AI editing', 'Multi-platform publishing'],
-          link: '/services/llm-content-studio',
+          title: 'Blockchain Enterprise Solutions',
+          description: 'Enterprise blockchain and DeFi solutions',
+          price: 'From $5,000',
+          features: ['Blockchain development', 'Smart contract implementation', 'DeFi integration'],
+          link: '/services/blockchain-enterprise-solutions',
           popular: false
+        },
+        {
+          title: 'Space Technology',
+          description: 'AI-powered space technology and satellite operations',
+          price: 'From $15,000/month',
+          features: ['Satellite operations', 'Space exploration', 'Space analytics'],
+          link: '/services/space-tech',
+          popular: false
+        }
+      ]
+    },
+    {
+      name: 'Specialized Solutions',
+      description: 'Industry-specific solutions for healthcare, sustainability, and specialized needs',
+      icon: Target,
+      color: 'from-pink-500 to-rose-500',
+      services: [
+        {
+          title: 'Healthcare Technology',
+          description: 'AI-powered healthcare solutions and medical technology',
+          price: 'From $6,000',
+          features: ['Medical AI implementation', 'Healthcare analytics', 'Compliance management'],
+          link: '/services/healthcare-tech',
+          popular: true
+        },
+        {
+          title: 'Sustainability Solutions',
+          description: 'Green IT and sustainability technology solutions',
+          price: 'From $4,500',
+          features: ['Sustainability assessment', 'Green technology implementation', 'Environmental monitoring'],
+          link: '/services/sustainability',
+          popular: false
+        },
+        {
+          title: 'Micro SaaS Solutions',
+          description: 'Productized SaaS solutions for specific business niches',
+          price: 'From $2,500',
+          features: ['SaaS development', 'Productization', 'Go-to-market strategy'],
+          link: '/services/micro-saas-solutions',
+          popular: false
+        },
+        {
+          title: 'AI Auto Email Responder',
+          description: 'Intelligent email automation and response management',
+          price: 'From $299/month',
+          features: ['Email automation', 'Response generation', 'CRM integration'],
+          link: '/services/ai-auto-email-responder',
+          popular: true
         },
         {
           title: 'Customer Feedback Surveys',
-          description: 'Intelligent customer feedback collection and analysis',
-          price: 'From $799/month',
-          features: ['Survey creation', 'AI analysis', 'Insight generation'],
+          description: 'AI-powered customer feedback and survey automation',
+          price: 'From $199/month',
+          features: ['Survey automation', 'AI insights', 'Performance analytics'],
           link: '/services/mobile-feedback-surveys',
+          popular: false
+        }
+      ]
+    },
+    {
+      name: 'Edge & IoT Services',
+      description: 'Advanced edge computing and Internet of Things solutions',
+      icon: Cpu,
+      color: 'from-indigo-500 to-purple-500',
+      services: [
+        {
+          title: 'IoT & Edge Computing',
+          description: 'Comprehensive IoT and edge computing solutions',
+          price: 'From $4,500',
+          features: ['IoT implementation', 'Edge computing setup', 'Device management'],
+          link: '/services/iot-edge',
           popular: false
         },
         {
-          title: 'FinOps Advisor',
-          description: 'Financial operations optimization and cost management',
-          price: 'From $2,500/month',
-          features: ['Cost optimization', 'Financial planning', 'Performance analytics'],
-          link: '/services/finops-advisor',
+          title: 'Edge Computing Platform',
+          description: 'Ultra-low latency edge computing platform',
+          price: 'From $6,500/month',
+          features: ['Edge platform setup', 'Performance optimization', 'Scalability management'],
+          link: '/services/edge-computing-platform',
+          popular: true
+        },
+        {
+          title: 'Digital Twin',
+          description: 'Digital twin technology for simulation and monitoring',
+          price: 'From $8,500',
+          features: ['Digital twin creation', 'Real-time monitoring', 'Predictive analytics'],
+          link: '/services/digital-twin',
           popular: false
         }
       ]

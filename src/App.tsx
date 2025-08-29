@@ -70,6 +70,24 @@ const AIComplianceCopilot = React.lazy(() => import('./pages/services/AIComplian
 const LLMContentStudio = React.lazy(() => import('./pages/services/LLMContentStudio'));
 const FinOpsAdvisor = React.lazy(() => import('./pages/services/FinOpsAdvisor'));
 
+// NEW SERVICE COMPONENTS ADDED
+const AILegalDocumentAutomation = React.lazy(() => import('./pages/services/AILegalDocumentAutomation'));
+const AIHealthcareRevenueCycle = React.lazy(() => import('./pages/services/AIHealthcareRevenueCycle'));
+const AIRealEstateAnalytics = React.lazy(() => import('./pages/services/AIRealEstateAnalytics'));
+const AIManufacturingQualityControl = React.lazy(() => import('./pages/services/AIManufacturingQualityControl'));
+const AIFinancialTradingAlgorithm = React.lazy(() => import('./pages/services/AIFinancialTradingAlgorithm'));
+const AICustomerServiceAutomation = React.lazy(() => import('./pages/services/AICustomerServiceAutomation'));
+const AIMarketingAutomation = React.lazy(() => import('./pages/services/AIMarketingAutomation'));
+const AISupplyChainOptimization = React.lazy(() => import('./pages/services/AISupplyChainOptimization'));
+const AIHRManagement = React.lazy(() => import('./pages/services/AIHRManagement'));
+const AIProjectManagement = React.lazy(() => import('./pages/services/AIProjectManagement'));
+const AIFinancialPlanning = React.lazy(() => import('./pages/services/AIFinancialPlanning'));
+const AIEnergyManagement = React.lazy(() => import('./pages/services/AIEnergyManagement'));
+const AILogisticsOptimization = React.lazy(() => import('./pages/services/AILogisticsOptimization'));
+const AICybersecurityThreatDetection = React.lazy(() => import('./pages/services/AICybersecurityThreatDetection'));
+const AIContentCreation = React.lazy(() => import('./pages/services/AIContentCreation'));
+const AIDataAnalytics = React.lazy(() => import('./pages/services/AIDataAnalytics'));
+
 // Additional service pages
 const DigitalTransformation = React.lazy(() => import('./pages/services/DigitalTransformation'));
 const ITConsulting = React.lazy(() => import('./pages/services/ITConsulting'));
@@ -83,7 +101,6 @@ const QuantumAIPlatform = React.lazy(() => import('./pages/services/QuantumAIPla
 const AIHealthcareAnalytics = React.lazy(() => import('./pages/services/AIHealthcareAnalytics'));
 const AIWorkflowAutomation = React.lazy(() => import('./pages/services/AIWorkflowAutomation'));
 const AICustomerExperiencePlatform = React.lazy(() => import('./pages/services/AICustomerExperiencePlatform'));
-const AISupplyChainOptimization = React.lazy(() => import('./pages/services/AISupplyChainOptimization'));
 const AIAutonomousBusinessOperations = React.lazy(() => import('./pages/services/AIAutonomousBusinessOperations'));
 const QuantumComputingSolutions = React.lazy(() => import('./pages/services/QuantumComputingSolutions'));
 const AIWorkflowOrchestrator = React.lazy(() => import('./pages/services/AIWorkflowOrchestrator'));
@@ -196,6 +213,24 @@ function App() {
               <Route path="/services/ai-compliance-copilot" element={<AIComplianceCopilot />} />
               <Route path="/services/llm-content-studio" element={<LLMContentStudio />} />
               <Route path="/services/finops-advisor" element={<FinOpsAdvisor />} />
+              
+              {/* NEW SERVICE ROUTES ADDED */}
+              <Route path="/services/ai-legal-document-automation" element={<AILegalDocumentAutomation />} />
+              <Route path="/services/ai-healthcare-revenue-cycle" element={<AIHealthcareRevenueCycle />} />
+              <Route path="/services/ai-real-estate-analytics" element={<AIRealEstateAnalytics />} />
+              <Route path="/services/ai-manufacturing-quality-control" element={<AIManufacturingQualityControl />} />
+              <Route path="/services/ai-financial-trading-algorithm" element={<AIFinancialTradingAlgorithm />} />
+              <Route path="/services/ai-customer-service-automation" element={<AICustomerServiceAutomation />} />
+              <Route path="/services/ai-marketing-automation" element={<AIMarketingAutomation />} />
+              <Route path="/services/ai-supply-chain-optimization" element={<AISupplyChainOptimization />} />
+              <Route path="/services/ai-hr-management" element={<AIHRManagement />} />
+              <Route path="/services/ai-project-management" element={<AIProjectManagement />} />
+              <Route path="/services/ai-financial-planning" element={<AIFinancialPlanning />} />
+              <Route path="/services/ai-energy-management" element={<AIEnergyManagement />} />
+              <Route path="/services/ai-logistics-optimization" element={<AILogisticsOptimization />} />
+              <Route path="/services/ai-cybersecurity-threat-detection" element={<AICybersecurityThreatDetection />} />
+              <Route path="/services/ai-content-creation" element={<AIContentCreation />} />
+              <Route path="/services/ai-data-analytics" element={<AIDataAnalytics />} />
               
               {/* Additional Service Routes */}
               <Route path="/services/digital-transformation" element={<DigitalTransformation />} />
