@@ -80,6 +80,7 @@ export const EnhancedFuturisticFooter: React.FC = () => {
       links: [
         { name: 'All Services & Pricing', href: '/comprehensive-services-showcase-2026', featured: true },
         { name: 'Pricing Guide 2026', href: '/comprehensive-pricing-guide-2026', featured: true },
+        { name: 'Pricing Guide 2030', href: '/comprehensive-pricing-guide-2030', featured: true },
         { name: 'Micro SaaS Solutions', href: '/services/micro-saas', featured: true },
         { name: 'AI Solutions', href: '/services/ai-business-intelligence', featured: true },
         { name: 'IT Infrastructure', href: '/services/it-infrastructure', featured: true },
@@ -96,8 +97,8 @@ export const EnhancedFuturisticFooter: React.FC = () => {
       featured: true,
       links: [
         { name: 'Revolutionary Services 2030', href: '/revolutionary-services-2030', featured: true },
-        { name: 'Quantum AI Trading Platform', href: '/services#quantum-ai-trading', featured: true },
-        { name: 'Neural Interface Platform', href: '/services#neural-interface', featured: true },
+        { name: 'Quantum AI Trading Platform', href: '/revolutionary-services-2030#quantum-ai-trading', featured: true },
+        { name: 'Neural Interface Platform', href: '/revolutionary-services-2030#neural-interface', featured: true },
         { name: 'Holographic Workspace Platform', href: '/services#holographic-workspace', featured: true },
         { name: 'BioDigital Twin Platform', href: '/services#biodigital-twin', featured: true },
         { name: 'Space Debris Tracking System', href: '/services#space-debris-tracking', featured: true },

@@ -136,7 +136,7 @@ export function AppHeader() {
       name: 'Revolutionary Services 2030', 
       href: '/revolutionary-services-2030', 
       icon: Rocket, 
-      description: 'Future Technology Solutions',
+      description: 'Quantum Computing, Neural Interfaces & Space Tech',
       featured: true,
       color: 'from-indigo-500 to-purple-500'
     },
@@ -147,6 +147,14 @@ export function AppHeader() {
       description: 'Complete Pricing & ROI Analysis',
       featured: true,
       color: 'from-green-500 to-emerald-500'
+    },
+    { 
+      name: 'Pricing Guide 2030', 
+      href: '/comprehensive-pricing-guide-2030', 
+      icon: DollarSign, 
+      description: 'Revolutionary 2030 Services Pricing',
+      featured: true,
+      color: 'from-purple-500 to-pink-500'
     },
     { 
       name: 'AI Business Intelligence', 

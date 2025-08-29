@@ -1,10 +1,10 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { SEO } from "@/components/SEO";
-import { GradientHeading } from "@/components/GradientHeading";
-import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
-import { Header } from "@/components/Header";
-import { Footer } from "@/components/Footer";
+import { ChevronDown, ChevronUp } from 'lucide-react';
+
 export default function FAQ() {
+    const [openItems, setOpenItems] = useState([]);
+
     const faqData = [
         {
             question: "What is Zion Tech Group?",
@@ -55,49 +55,80 @@ export default function FAQ() {
             answer: "Getting started is simple! Create a free account, complete your profile, and start exploring the marketplace. You can immediately browse listings, connect with professionals, or showcase your own services and expertise."
         }
     ];
-    return (<>
-      <SEO title="FAQ - Frequently Asked Questions" description="Find answers to common questions about Zion Tech Group's AI and tech marketplace platform." keywords="FAQ, Zion Tech Group, AI marketplace, tech platform, questions, support" canonical="https://ziontechgroup.com/faq"/>
-      <Header />
-      <main className="min-h-screen bg-zion-blue pt-24 pb-20">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <GradientHeading>Frequently Asked Questions</GradientHeading>
-            <p className="mt-4 text-zion-slate-light text-xl max-w-3xl mx-auto">
-              Find answers to the most common questions about Zion Tech Group and our marketplace platform
-            </p>
-          </div>
-          <div className="max-w-4xl mx-auto">
-            <Accordion type="single" collapsible className="w-full">
-              {faqData.map((item, index) => (<AccordionItem key={index} value={`item-${index}`} className="border-zion-blue-light">
-                  <AccordionTrigger className="text-left text-white hover:text-zion-cyan px-6 py-4">
-                    <span className="text-lg font-medium">{item.question}</span>
-                  </AccordionTrigger>
-                  <AccordionContent className="px-6 pb-4">
-                    <p className="text-zion-slate-light leading-relaxed">
-                      {item.answer}
-                    </p>
-                  </AccordionContent>
-                </AccordionItem>))}
-            </Accordion>
-          </div>
-          <div className="mt-16 text-center">
-            <div className="bg-zion-blue-dark border border-zion-blue-light rounded-xl p-8">
-              <h2 className="text-2xl font-bold text-white mb-4">Still have questions?</h2>
-              <p className="text-zion-slate-light mb-6">
-                Can't find what you're looking for? Our support team is here to help.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <a href="/contact" className="inline-flex items-center justify-center px-6 py-3 bg-zion-purple hover:bg-zion-purple-dark text-white font-medium rounded-lg transition-colors">
-                  Contact Support
-                </a>
-                <a href="/help" className="inline-flex items-center justify-center px-6 py-3 border border-zion-blue-light hover:border-zion-purple text-white font-medium rounded-lg transition-colors">
-                  Help Center
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </main>
-      <Footer />
-    </>);
+
+    const toggleItem = (index) => {
+        setOpenItems(prev => 
+            prev.includes(index) 
+                ? prev.filter(i => i !== index)
+                : [...prev, index]
+        );
+    };
+
+    return (
+        <>
+            <SEO 
+                title="FAQ - Frequently Asked Questions" 
+                description="Find answers to common questions about Zion Tech Group's AI and tech marketplace platform." 
+                canonical="/faq"
+                url="https://ziontechgroup.com/faq"
+            />
+            
+            <main className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 pt-24 pb-20">
+                <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+                    <div className="text-center mb-16">
+                        <h1 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent">
+                            Frequently Asked Questions
+                        </h1>
+                        <p className="mt-4 text-gray-300 text-xl max-w-3xl mx-auto">
+                            Find answers to the most common questions about Zion Tech Group and our marketplace platform
+                        </p>
+                    </div>
+                    
+                    <div className="max-w-4xl mx-auto">
+                        <div className="space-y-4">
+                            {faqData.map((item, index) => (
+                                <div key={index} className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl overflow-hidden">
+                                    <button
+                                        onClick={() => toggleItem(index)}
+                                        className="w-full text-left px-6 py-4 text-white hover:text-cyan-400 transition-colors flex items-center justify-between"
+                                    >
+                                        <span className="text-lg font-medium">{item.question}</span>
+                                        {openItems.includes(index) ? (
+                                            <ChevronUp className="w-5 h-5 text-cyan-400" />
+                                        ) : (
+                                            <ChevronDown className="w-5 h-5 text-gray-400" />
+                                        )}
+                                    </button>
+                                    {openItems.includes(index) && (
+                                        <div className="px-6 pb-4 border-t border-slate-700">
+                                            <p className="text-gray-300 leading-relaxed pt-4">
+                                                {item.answer}
+                                            </p>
+                                        </div>
+                                    )}
+                                </div>
+                            ))}
+                        </div>
+                    </div>
+                    
+                    <div className="mt-16 text-center">
+                        <div className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-2xl p-8">
+                            <h2 className="text-2xl font-bold text-white mb-4">Still have questions?</h2>
+                            <p className="text-gray-300 mb-6">
+                                Can't find what you're looking for? Our support team is here to help.
+                            </p>
+                            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                                <a href="/contact" className="inline-flex items-center justify-center px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-medium rounded-lg transition-all duration-300 transform hover:scale-105">
+                                    Contact Support
+                                </a>
+                                <a href="/help" className="inline-flex items-center justify-center px-6 py-3 border border-slate-600 hover:border-cyan-500 text-white font-medium rounded-lg transition-all duration-300">
+                                    Help Center
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </>
+    );
 }

@@ -1,627 +1,765 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+import { motion } from 'framer-motion';
+import { 
+  Search, 
+  Filter, 
+  Star, 
+  TrendingUp, 
+  Zap, 
+  Shield, 
+  Brain, 
+  Cloud, 
+  Database, 
+  Globe,
+  ArrowRight,
+  CheckCircle,
+  DollarSign,
+  Clock,
+  Users,
+  Target,
+  Award,
+  Rocket,
+  Atom,
+  Lock,
+  Cpu,
+  Leaf,
+  ShoppingCart,
+  BarChart3,
+  Code,
+  Server,
+  Smartphone,
+  Network,
+  Eye,
+  PenTool,
+  Heart,
+  Building,
+  Car,
+  Factory,
+  City,
+  CheckCircle2,
+  ArrowUpRight,
+  Play,
+  Mail,
+  Phone,
+  MapPin,
+  Linkedin,
+  Twitter,
+  Facebook,
+  Instagram,
+  Youtube,
+  Github,
+  Sparkles,
+  Crown,
+  Flame,
+  Infinity,
+  Gauge,
+  GitFork,
+  Truck,
+  Scale,
+  Building2,
+  Home,
+  Calculator,
+  PieChart,
+  TrendingDown,
+  Calendar,
+  CreditCard,
+  Gift,
+  ShieldCheck,
+  Zap as Lightning
+} from 'lucide-react';
+import { REVOLUTIONARY_SERVICES_2030, serviceCategories2030, pricingBenefits2030 } from '../data/revolutionaryServices2030';
 import { SEO } from '../components/SEO';
-import { innovativeMicroSaasServices2030 } from '../data/innovativeMicroSaasServices2030';
-import { comprehensiveITServices2030 } from '../data/comprehensiveITServices2030';
-import { comprehensiveAIServices2030 } from '../data/comprehensiveAIServices2030';
 
-const ComprehensivePricingGuide2030: React.FC = () => {
-  const [activeTab, setActiveTab] = useState<'microsaas' | 'it' | 'ai'>('microsaas');
-  const [priceRange, setPriceRange] = useState<[number, number]>([0, 5000]);
+export default function ComprehensivePricingGuide2030() {
   const [selectedCategory, setSelectedCategory] = useState('all');
+  const [selectedPriceRange, setSelectedPriceRange] = useState('all');
+  const [selectedROI, setSelectedROI] = useState('all');
+  const [sortBy, setSortBy] = useState('featured');
+  const [viewMode, setViewMode] = useState('grid');
+  const [selectedService, setSelectedService] = useState<any>(null);
+  const [showROICalculator, setShowROICalculator] = useState(false);
 
-  const getFilteredServices = () => {
-    let services: any[] = [];
+  const filteredServices = REVOLUTIONARY_SERVICES_2030.filter(service => {
+    const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory;
     
-    switch (activeTab) {
-      case 'microsaas':
-        services = innovativeMicroSaasServices2030;
-        break;
-      case 'it':
-        services = comprehensiveITServices2030;
-        break;
-      case 'ai':
-        services = comprehensiveAIServices2030;
-        break;
+    const matchesPrice = selectedPriceRange === 'all' || 
+                        (selectedPriceRange === 'budget' && service.price < 10000) ||
+                        (selectedPriceRange === 'mid' && service.price >= 10000 && service.price < 30000) ||
+                        (selectedPriceRange === 'premium' && service.price >= 30000);
+
+    const matchesROI = selectedROI === 'all' || 
+                       (selectedROI === 'low' && parseInt(service.roi.replace('%', '')) < 300) ||
+                       (selectedROI === 'medium' && parseInt(service.roi.replace('%', '')) >= 300 && parseInt(service.roi.replace('%', '')) < 600) ||
+                       (selectedROI === 'high' && parseInt(service.roi.replace('%', '')) >= 600);
+
+    return matchesCategory && matchesPrice && matchesROI;
+  });
+
+  const sortedServices = [...filteredServices].sort((a, b) => {
+    switch (sortBy) {
+      case 'price-low':
+        return a.price - b.price;
+      case 'price-high':
+        return b.price - a.price;
+      case 'roi':
+        return parseInt(b.roi.replace('%', '')) - parseInt(a.roi.replace('%', '').replace('%', ''));
+      case 'delivery':
+        return parseInt(a.estimatedDelivery.split('-')[0]) - parseInt(b.estimatedDelivery.split('-')[0]);
+      default:
+        return b.innovationLevel === 'Revolutionary' ? 1 : -1;
     }
+  });
 
-    // Filter by price range
-    services = services.filter(service => {
-      if (activeTab === 'it') {
-        return service.hourlyRate >= priceRange[0] && service.hourlyRate <= priceRange[1];
-      } else {
-        return service.price >= priceRange[0] && service.price <= priceRange[1];
-      }
-    });
-
-    // Filter by category
-    if (selectedCategory !== 'all') {
-      services = services.filter(service => service.category === selectedCategory);
-    }
-
-    return services;
-  };
-
-  const getCategories = () => {
-    let services: any[] = [];
-    
-    switch (activeTab) {
-      case 'microsaas':
-        services = innovativeMicroSaasServices2030;
-        break;
-      case 'it':
-        services = comprehensiveITServices2030;
-        break;
-      case 'ai':
-        services = comprehensiveAIServices2030;
-        break;
-    }
-
-    const categories = [...new Set(services.map(service => service.category))];
-    return categories;
-  };
-
-  const getPriceRange = () => {
-    let services: any[] = [];
-    
-    switch (activeTab) {
-      case 'microsaas':
-        services = innovativeMicroSaasServices2030;
-        break;
-      case 'it':
-        services = comprehensiveITServices2030;
-        break;
-      case 'ai':
-        services = comprehensiveAIServices2030;
-        break;
-    }
-
-    if (activeTab === 'it') {
-      const min = Math.min(...services.map(s => s.hourlyRate));
-      const max = Math.max(...services.map(s => s.hourlyRate));
-      return [min, max];
-    } else {
-      const min = Math.min(...services.map(s => s.price));
-      const max = Math.max(...services.map(s => s.price));
-      return [min, max];
+  const getCategoryIcon = (category: string) => {
+    switch (category) {
+      case 'Quantum Computing': return <Atom className="w-6 h-6" />;
+      case 'Neural Technology': return <Brain className="w-6 h-6" />;
+      case 'AI & Automation': return <Cpu className="w-6 h-6" />;
+      case 'Space Technology': return <Rocket className="w-6 h-6" />;
+      case 'IT Services': return <Server className="w-6 h-6" />;
+      case 'Accessibility': return <Eye className="w-6 h-6" />;
+      default: return <Code className="w-6 h-6" />;
     }
   };
 
-  const renderPricingCard = (service: any) => {
-    if (activeTab === 'microsaas') {
-      return (
-        <div key={service.id} className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100 overflow-hidden">
-          <div className="p-6">
-            <div className="text-center mb-6">
-              <h3 className="text-xl font-bold text-gray-900 mb-2">{service.name}</h3>
-              <span className="px-3 py-1 text-sm font-semibold text-white bg-gradient-to-r from-blue-600 to-purple-600 rounded-full">
-                {service.pricing}
-              </span>
-            </div>
-            
-            <div className="text-center mb-6">
-              <div className="text-4xl font-bold text-gray-900 mb-2">${service.price.toLocaleString()}</div>
-              <div className="text-gray-600">{service.pricingModel}</div>
-              <div className="text-sm text-gray-500 mt-2">
-                <strong>Market Price:</strong> {service.marketPrice}
-              </div>
-            </div>
-
-            <div className="mb-6">
-              <h4 className="font-semibold text-gray-900 mb-3 text-center">Key Benefits</h4>
-              <div className="space-y-2">
-                {service.benefits.slice(0, 4).map((benefit: string, index: number) => (
-                  <div key={index} className="flex items-center text-sm text-gray-600">
-                    <span className="w-2 h-2 bg-green-500 rounded-full mr-3"></span>
-                    {benefit}
-                  </div>
-                ))}
-              </div>
-            </div>
-
-            <div className="mb-6">
-              <h4 className="font-semibold text-gray-900 mb-3 text-center">ROI & Setup</h4>
-              <div className="grid grid-cols-2 gap-4 text-center">
-                <div className="bg-blue-50 p-3 rounded-lg">
-                  <div className="text-sm text-gray-600">ROI</div>
-                  <div className="font-bold text-blue-600">{service.roi}</div>
-                </div>
-                <div className="bg-green-50 p-3 rounded-lg">
-                  <div className="text-sm text-gray-600">Setup Time</div>
-                  <div className="font-bold text-green-600">{service.setupTime}</div>
-                </div>
-              </div>
-            </div>
-
-            <div className="border-t pt-4">
-              <div className="text-center mb-4">
-                <div className="text-sm text-gray-600 mb-2">
-                  <strong>Innovation Level:</strong> {service.innovationLevel}
-                </div>
-                <div className="text-sm text-gray-600 mb-2">
-                  <strong>Market Size:</strong> {service.marketSize}
-                </div>
-                <div className="text-sm text-gray-600">
-                  <strong>Growth Rate:</strong> {service.growthRate}
-                </div>
-              </div>
-              
-              <div className="flex flex-col gap-2">
-                <a
-                  href={`tel:${service.contactInfo.phone}`}
-                  className="w-full px-4 py-2 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-300 text-center"
-                >
-                  Call: {service.contactInfo.phone}
-                </a>
-                <a
-                  href={`mailto:${service.contactInfo.email}`}
-                  className="w-full px-4 py-2 border border-blue-600 text-blue-600 rounded-lg hover:bg-blue-50 transition-colors text-center"
-                >
-                  Email: {service.contactInfo.email}
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-      );
-    } else if (activeTab === 'it') {
-      return (
-        <div key={service.id} className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100 overflow-hidden">
-          <div className="p-6">
-            <div className="text-center mb-6">
-              <h3 className="text-xl font-bold text-gray-900 mb-2">{service.name}</h3>
-              <span className="px-3 py-1 text-sm font-semibold text-white bg-gradient-to-r from-green-600 to-blue-600 rounded-full">
-                {service.category}
-              </span>
-            </div>
-            
-            <div className="text-center mb-6">
-              <div className="grid grid-cols-2 gap-4 mb-4">
-                <div>
-                  <div className="text-2xl font-bold text-gray-900">${service.hourlyRate}</div>
-                  <div className="text-gray-600 text-sm">per hour</div>
-                </div>
-                <div>
-                  <div className="text-2xl font-bold text-gray-900">${service.projectRate.toLocaleString()}</div>
-                  <div className="text-gray-600 text-sm">per project</div>
-                </div>
-              </div>
-              <div className="text-sm text-gray-500">
-                <strong>Market Price:</strong> {service.marketPrice}
-              </div>
-            </div>
-
-            <div className="mb-6">
-              <h4 className="font-semibold text-gray-900 mb-3 text-center">Key Benefits</h4>
-              <div className="space-y-2">
-                {service.benefits.slice(0, 4).map((benefit: string, index: number) => (
-                  <div key={index} className="flex items-center text-sm text-gray-600">
-                    <span className="w-2 h-2 bg-green-500 rounded-full mr-3"></span>
-                    {benefit}
-                  </div>
-                ))}
-              </div>
-            </div>
-
-            <div className="mb-6">
-              <h4 className="font-semibold text-gray-900 mb-3 text-center">Service Details</h4>
-              <div className="grid grid-cols-2 gap-4 text-center">
-                <div className="bg-green-50 p-3 rounded-lg">
-                  <div className="text-sm text-gray-600">Response Time</div>
-                  <div className="font-bold text-green-600">{service.responseTime}</div>
-                </div>
-                <div className="bg-blue-50 p-3 rounded-lg">
-                  <div className="text-sm text-gray-600">SLA</div>
-                  <div className="font-bold text-blue-600 text-xs">{service.sla}</div>
-                </div>
-              </div>
-            </div>
-
-            <div className="border-t pt-4">
-              <div className="text-center mb-4">
-                <div className="text-sm text-gray-600 mb-2">
-                  <strong>Delivery Time:</strong> {service.deliveryTime}
-                </div>
-                <div className="text-sm text-gray-600 mb-2">
-                  <strong>Support:</strong> {service.support}
-                </div>
-                <div className="text-sm text-gray-600">
-                  <strong>ROI:</strong> {service.roi}
-                </div>
-              </div>
-              
-              <div className="flex flex-col gap-2">
-                <a
-                  href={`tel:${service.contactInfo.phone}`}
-                  className="w-full px-4 py-2 bg-gradient-to-r from-green-600 to-blue-600 text-white rounded-lg hover:from-green-700 hover:to-blue-700 transition-all duration-300 text-center"
-                >
-                  Call: {service.contactInfo.phone}
-                </a>
-                <a
-                  href={`mailto:${service.contactInfo.email}`}
-                  className="w-full px-4 py-2 border border-green-600 text-green-600 rounded-lg hover:bg-green-50 transition-colors text-center"
-                >
-                  Email: {service.contactInfo.email}
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-      );
-    } else {
-      return (
-        <div key={service.id} className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100 overflow-hidden">
-          <div className="p-6">
-            <div className="text-center mb-6">
-              <h3 className="text-xl font-bold text-gray-900 mb-2">{service.name}</h3>
-              <div className="flex flex-col items-center gap-2">
-                <span className="px-3 py-1 text-sm font-semibold text-white bg-gradient-to-r from-purple-600 to-pink-600 rounded-full">
-                  {service.category}
-                </span>
-                <div className="text-sm text-gray-600">
-                  AI Score: <span className="font-bold text-purple-600">{service.aiScore}/100</span>
-                </div>
-              </div>
-            </div>
-            
-            <div className="text-center mb-6">
-              <div className="text-4xl font-bold text-gray-900 mb-2">${service.price.toLocaleString()}</div>
-              <div className="text-gray-600">{service.pricingModel}</div>
-              <div className="text-sm text-gray-500 mt-2">
-                <strong>Market Price:</strong> {service.marketPrice}
-              </div>
-              <div className="text-sm text-gray-500">
-                <strong>Accuracy:</strong> {service.accuracy}
-              </div>
-            </div>
-
-            <div className="mb-6">
-              <h4 className="font-semibold text-gray-900 mb-3 text-center">Key Benefits</h4>
-              <div className="space-y-2">
-                {service.benefits.slice(0, 4).map((benefit: string, index: number) => (
-                  <div key={index} className="flex items-center text-sm text-gray-600">
-                    <span className="w-2 h-2 bg-purple-500 rounded-full mr-3"></span>
-                    {benefit}
-                  </div>
-                ))}
-              </div>
-            </div>
-
-            <div className="mb-6">
-              <h4 className="font-semibold text-gray-900 mb-3 text-center">AI Performance</h4>
-              <div className="grid grid-cols-2 gap-4 text-center">
-                <div className="bg-purple-50 p-3 rounded-lg">
-                  <div className="text-sm text-gray-600">ROI</div>
-                  <div className="font-bold text-purple-600">{service.roi}</div>
-                </div>
-                <div className="bg-pink-50 p-3 rounded-lg">
-                  <div className="text-sm text-gray-600">Setup Time</div>
-                  <div className="font-bold text-pink-600">{service.setupTime}</div>
-                </div>
-              </div>
-            </div>
-
-            <div className="border-t pt-4">
-              <div className="text-center mb-4">
-                <div className="text-sm text-gray-600 mb-2">
-                  <strong>Innovation Level:</strong> {service.innovationLevel}
-                </div>
-                <div className="text-sm text-gray-600 mb-2">
-                  <strong>Market Size:</strong> {service.marketSize}
-                </div>
-                <div className="text-sm text-gray-600">
-                  <strong>Training Data:</strong> {service.trainingData}
-                </div>
-              </div>
-              
-              <div className="flex flex-col gap-2">
-                <a
-                  href={`tel:${service.contactInfo.phone}`}
-                  className="w-full px-4 py-2 bg-gradient-to-r from-purple-600 to-pink-600 text-white rounded-lg hover:from-purple-700 hover:to-pink-700 transition-all duration-300 text-center"
-                >
-                  Call: {service.contactInfo.phone}
-                </a>
-                <a
-                  href={`mailto:${service.contactInfo.email}`}
-                  className="w-full px-4 py-2 border border-purple-600 text-purple-600 rounded-lg hover:bg-purple-50 transition-colors text-center"
-                >
-                  Email: {service.contactInfo.email}
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-      );
+  const getInnovationLevelColor = (level: string) => {
+    switch (level) {
+      case 'Revolutionary': return 'from-purple-600 to-pink-600';
+      case 'Advanced': return 'from-blue-600 to-cyan-600';
+      case 'Innovative': return 'from-green-600 to-emerald-600';
+      default: return 'from-gray-600 to-slate-600';
     }
   };
 
-  const priceRangeData = getPriceRange();
+  const contactInfo = {
+    phone: '+1 302 464 0950',
+    email: 'kleber@ziontechgroup.com',
+    address: '364 E Main St STE 1008 Middletown DE 19709',
+    website: 'https://ziontechgroup.com'
+  };
+
+  const pricingTiers = [
+    {
+      name: 'Starter',
+      icon: Zap,
+      price: { monthly: 9999, annual: 8999 },
+      description: 'Perfect for small businesses starting their digital transformation journey',
+      features: [
+        'Basic AI Integration',
+        'Cloud Infrastructure Setup',
+        'Security Monitoring',
+        'Email Support',
+        'Monthly Reports',
+        'Up to 10 Users'
+      ],
+      color: 'from-blue-500 to-cyan-600',
+      popular: false,
+      savings: '10%'
+    },
+    {
+      name: 'Professional',
+      icon: Star,
+      price: { monthly: 24999, annual: 22499 },
+      description: 'Ideal for growing companies with advanced technology needs',
+      features: [
+        'Everything in Starter',
+        'Advanced AI Solutions',
+        'Quantum Computing Access',
+        '24/7 Support',
+        'Priority Support',
+        'Up to 100 Users',
+        'Custom Integrations',
+        'Quarterly Strategy Sessions'
+      ],
+      color: 'from-purple-500 to-pink-600',
+      popular: true,
+      savings: '10%'
+    },
+    {
+      name: 'Enterprise',
+      icon: Crown,
+      price: { monthly: 49999, annual: 44999 },
+      description: 'Comprehensive solutions for large enterprises and corporations',
+      features: [
+        'Everything in Professional',
+        'Custom AI Development',
+        'Full Digital Transformation',
+        'Quantum Security',
+        'Dedicated Account Manager',
+        'Unlimited Users',
+        'Onsite Support',
+        'Custom SLA Agreements'
+      ],
+      color: 'from-amber-500 to-orange-600',
+      popular: false,
+      savings: '10%'
+    }
+  ];
+
+  const addOnServices = [
+    {
+      name: 'Quantum AI Model Training',
+      description: 'Custom quantum AI model development and training',
+      price: { monthly: 15000, annual: 135000 },
+      icon: Brain,
+      category: 'Quantum Computing'
+    },
+    {
+      name: 'Neural Interface Development',
+      description: 'Custom neural interface solutions',
+      price: { monthly: 25000, annual: 225000 },
+      icon: Cpu,
+      category: 'Neural Technology'
+    },
+    {
+      name: 'Space Technology Integration',
+      description: 'Space-based services and satellite integration',
+      price: { monthly: 35000, annual: 315000 },
+      icon: Rocket,
+      category: 'Space Technology'
+    },
+    {
+      name: 'AI-Powered Cybersecurity',
+      description: 'Advanced AI-driven security solutions',
+      price: { monthly: 12000, annual: 108000 },
+      icon: Shield,
+      category: 'Cybersecurity'
+    }
+  ];
 
   return (
     <>
-      <SEO
+      <SEO 
         title="Comprehensive Pricing Guide 2030 - Zion Tech Group"
-        description="Explore our complete pricing guide for micro SAAS, IT infrastructure, and AI services. Compare prices, ROI, and market data to find the perfect solution for your business."
-        keywords="pricing guide, micro SAAS pricing, IT services pricing, AI services pricing, Zion Tech Group, 2030 pricing"
-        ogImage="https://ziontechgroup.com/images/pricing-guide-2030.jpg"
-        ogUrl="https://ziontechgroup.com/comprehensive-pricing-guide-2030"
+        description="Complete pricing guide for revolutionary 2030 services including quantum computing, neural interfaces, space technology, and advanced AI solutions."
+        canonical="/comprehensive-pricing-guide-2030"
+        url="https://ziontechgroup.com/comprehensive-pricing-guide-2030"
       />
       
-      <div className="min-h-screen bg-gradient-to-br from-gray-50 via-blue-50 to-purple-50">
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
         {/* Hero Section */}
-        <div className="bg-gradient-to-r from-blue-900 via-purple-900 to-indigo-900 text-white">
-          <div className="container mx-auto px-4 py-20">
-            <div className="text-center max-w-4xl mx-auto">
-              <h1 className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
-                Comprehensive Pricing Guide 2030
-              </h1>
-              <p className="text-xl md:text-2xl text-gray-200 mb-8">
-                Transparent pricing for all our micro SAAS, IT infrastructure, and AI services. 
-                Compare costs, ROI, and market data to make informed decisions for your business.
+        <section className="relative py-20 px-6 overflow-hidden">
+          <div className="absolute inset-0 bg-[url('/images/grid-pattern.svg')] bg-center opacity-10"></div>
+          <div className="relative z-10 max-w-7xl mx-auto text-center">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 1 }}
+              className="space-y-8"
+            >
+              <div className="flex items-center justify-center space-x-2 mb-6">
+                <DollarSign className="w-8 h-8 text-green-400" />
+                <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-green-400 via-cyan-500 to-blue-600 bg-clip-text text-transparent">
+                  Pricing Guide 2030
+                </h1>
+                <Calculator className="w-8 h-8 text-blue-400" />
+              </div>
+              <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
+                Transparent pricing for revolutionary 2030 services. Discover the true cost and ROI of 
+                quantum computing, neural interfaces, space technology, and advanced AI solutions.
               </p>
               <div className="flex flex-wrap justify-center gap-4 text-sm">
-                <div className="bg-white/10 backdrop-blur-sm rounded-full px-6 py-2">
-                  <strong>Transparent Pricing</strong>
-                </div>
-                <div className="bg-white/10 backdrop-blur-sm rounded-full px-6 py-2">
-                  <strong>Market Comparisons</strong>
-                </div>
-                <div className="bg-white/10 backdrop-blur-sm rounded-full px-6 py-2">
-                  <strong>ROI Analysis</strong>
-                </div>
-                <div className="bg-white/10 backdrop-blur-sm rounded-full px-6 py-2">
-                  <strong>No Hidden Fees</strong>
-                </div>
+                <span className="px-4 py-2 bg-green-500/20 border border-green-500/30 rounded-full text-green-300">
+                  Transparent Pricing
+                </span>
+                <span className="px-4 py-2 bg-cyan-500/20 border border-cyan-500/30 rounded-full text-cyan-300">
+                  ROI Calculator
+                </span>
+                <span className="px-4 py-2 bg-blue-500/20 border border-blue-500/30 rounded-full text-blue-300">
+                  Custom Quotes
+                </span>
+                <span className="px-4 py-2 bg-purple-500/20 border border-purple-500/30 rounded-full text-purple-300">
+                  Flexible Plans
+                </span>
               </div>
-            </div>
+            </motion.div>
           </div>
-        </div>
+        </section>
 
-        {/* Contact Banner */}
-        <div className="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-6">
-          <div className="container mx-auto px-4 text-center">
-            <div className="flex flex-col md:flex-row items-center justify-center gap-6">
-              <div className="flex items-center gap-2">
-                <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
-                  <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z" />
-                  <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z" />
-                </svg>
-                <span>kleber@ziontechgroup.com</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
-                  <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" />
-                </svg>
-                <span>+1 302 464 0950</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
-                  <path fillRule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clipRule="evenodd" />
-                </svg>
-                <span>364 E Main St STE 1008 Middletown DE 19709</span>
-              </div>
+        {/* Pricing Tiers Section */}
+        <section className="px-6 py-20">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl font-bold text-white mb-6">Choose Your Transformation Plan</h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Select the perfect plan for your business needs. All plans include our revolutionary 2030 technology stack.
+              </p>
             </div>
-          </div>
-        </div>
 
-        {/* Main Content */}
-        <div className="container mx-auto px-4 py-12">
-          {/* Service Tabs */}
-          <div className="mb-8">
-            <div className="flex flex-wrap gap-2 justify-center">
-              <button
-                onClick={() => setActiveTab('microsaas')}
-                className={`px-6 py-3 rounded-lg font-semibold transition-all duration-300 ${
-                  activeTab === 'microsaas'
-                    ? 'bg-gradient-to-r from-blue-600 to-purple-600 text-white shadow-lg'
-                    : 'bg-white text-gray-700 hover:bg-gray-50 border border-gray-200'
-                }`}
-              >
-                Micro SAAS Services ({innovativeMicroSaasServices2030.length})
-              </button>
-              <button
-                onClick={() => setActiveTab('it')}
-                className={`px-6 py-3 rounded-lg font-semibold transition-all duration-300 ${
-                  activeTab === 'it'
-                    ? 'bg-gradient-to-r from-green-600 to-blue-600 text-white shadow-lg'
-                    : 'bg-white text-gray-700 hover:bg-gray-50 border border-gray-200'
-                }`}
-              >
-                IT Services ({comprehensiveITServices2030.length})
-              </button>
-              <button
-                onClick={() => setActiveTab('ai')}
-                className={`px-6 py-3 rounded-lg font-semibold transition-all duration-300 ${
-                  activeTab === 'ai'
-                    ? 'bg-gradient-to-r from-purple-600 to-pink-600 text-white shadow-lg'
-                    : 'bg-white text-gray-700 hover:bg-gray-50 border border-gray-200'
-                }`}
-              >
-                AI Services ({comprehensiveAIServices2030.length})
-              </button>
-            </div>
-          </div>
-
-          {/* Filters */}
-          <div className="mb-8">
-            <div className="bg-white rounded-xl p-6 shadow-lg">
-              <h3 className="text-lg font-semibold text-gray-900 mb-4">Filter Services</h3>
-              
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-2">
-                    Price Range: ${priceRange[0]} - ${priceRange[1]}
-                  </label>
-                  <div className="flex items-center gap-4">
-                    <input
-                      type="range"
-                      min={priceRangeData[0]}
-                      max={priceRangeData[1]}
-                      value={priceRange[1]}
-                      onChange={(e) => setPriceRange([priceRange[0], parseInt(e.target.value)])}
-                      className="flex-1"
-                    />
-                    <input
-                      type="range"
-                      min={priceRangeData[0]}
-                      max={priceRangeData[1]}
-                      value={priceRange[0]}
-                      onChange={(e) => setPriceRange([parseInt(e.target.value), priceRange[1]])}
-                      className="flex-1"
-                    />
-                  </div>
-                  <div className="flex justify-between text-sm text-gray-500 mt-1">
-                    <span>${priceRangeData[0]}</span>
-                    <span>${priceRangeData[1]}</span>
-                  </div>
-                </div>
-
-                <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-2">
-                    Category
-                  </label>
-                  <select
-                    value={selectedCategory}
-                    onChange={(e) => setSelectedCategory(e.target.value)}
-                    className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                  >
-                    <option value="all">All Categories</option>
-                    {getCategories().map((category) => (
-                      <option key={category} value={category}>{category}</option>
-                    ))}
-                  </select>
-                </div>
-              </div>
-
-              <div className="mt-4 text-center">
-                <button
-                  onClick={() => {
-                    setPriceRange([priceRangeData[0], priceRangeData[1]]);
-                    setSelectedCategory('all');
-                  }}
-                  className="px-4 py-2 bg-gray-600 text-white rounded-lg hover:bg-gray-700 transition-colors"
+            <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-20">
+              {pricingTiers.map((tier, index) => (
+                <motion.div
+                  key={tier.name}
+                  initial={{ opacity: 0, y: 30 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                  className={`relative bg-slate-800/50 backdrop-blur-sm border rounded-3xl p-8 hover:border-cyan-500/50 transition-all duration-300 hover:shadow-2xl hover:shadow-cyan-500/20 ${
+                    tier.popular ? 'border-cyan-500/50 shadow-2xl shadow-cyan-500/20' : 'border-slate-700'
+                  }`}
                 >
-                  Reset Filters
+                  {tier.popular && (
+                    <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
+                      <span className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-6 py-2 rounded-full text-sm font-semibold">
+                        Most Popular
+                      </span>
+                    </div>
+                  )}
+
+                  <div className="text-center mb-8">
+                    <div className={`inline-flex p-4 rounded-2xl bg-gradient-to-br ${tier.color} mb-4`}>
+                      <tier.icon className="w-8 h-8 text-white" />
+                    </div>
+                    <h3 className="text-2xl font-bold text-white mb-2">{tier.name}</h3>
+                    <p className="text-gray-400">{tier.description}</p>
+                  </div>
+
+                  <div className="text-center mb-8">
+                    <div className="mb-2">
+                      <span className="text-4xl font-bold text-white">${tier.price.monthly.toLocaleString()}</span>
+                      <span className="text-gray-400">/month</span>
+                    </div>
+                    <div className="text-sm text-gray-400 mb-4">
+                      ${tier.price.annual.toLocaleString()}/year
+                      <span className="text-green-400 ml-2">Save {tier.savings}</span>
+                    </div>
+                  </div>
+
+                  <ul className="space-y-4 mb-8">
+                    {tier.features.map((feature, featureIndex) => (
+                      <li key={featureIndex} className="flex items-center space-x-3 text-gray-300">
+                        <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0" />
+                        <span>{feature}</span>
+                      </li>
+                    ))}
+                  </ul>
+
+                  <button className={`w-full py-4 px-6 rounded-xl font-semibold transition-all duration-300 transform hover:scale-105 ${
+                    tier.popular 
+                      ? 'bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white' 
+                      : 'bg-slate-700 hover:bg-slate-600 text-white border border-slate-600'
+                  }`}>
+                    Get Started
+                  </button>
+                </motion.div>
+              ))}
+            </div>
+
+            {/* Add-on Services */}
+            <div className="text-center mb-16">
+              <h2 className="text-4xl font-bold text-white mb-6">Add-on Services</h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Enhance your plan with specialized services and custom solutions.
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-20">
+              {addOnServices.map((service, index) => (
+                <motion.div
+                  key={service.name}
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                  className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-2xl p-6 hover:border-cyan-500/50 transition-all duration-300"
+                >
+                  <div className="text-center mb-4">
+                    <div className="inline-flex p-3 rounded-xl bg-gradient-to-br from-purple-500 to-pink-600 mb-3">
+                      <service.icon className="w-6 h-6 text-white" />
+                    </div>
+                    <h3 className="text-lg font-semibold text-white mb-2">{service.name}</h3>
+                    <p className="text-gray-400 text-sm mb-4">{service.description}</p>
+                    <div className="text-2xl font-bold text-cyan-400 mb-2">
+                      ${service.price.monthly.toLocaleString()}
+                      <span className="text-sm text-gray-400">/month</span>
+                    </div>
+                    <div className="text-sm text-gray-400">
+                      ${service.price.annual.toLocaleString()}/year
+                    </div>
+                  </div>
+                  <button className="w-full bg-gradient-to-r from-purple-500 to-pink-600 hover:from-purple-600 hover:to-pink-700 text-white font-semibold py-3 px-4 rounded-xl transition-all duration-300">
+                    Add Service
+                  </button>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* ROI Calculator Section */}
+        <section className="px-6 py-20">
+          <div className="max-w-7xl mx-auto">
+            <div className="bg-gradient-to-r from-green-500/10 to-blue-500/10 border border-green-500/20 rounded-3xl p-12 text-center">
+              <h2 className="text-4xl font-bold text-white mb-6">ROI Calculator</h2>
+              <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+                Calculate the return on investment for our revolutionary 2030 services and see how they can transform your business.
+              </p>
+              
+              <button
+                onClick={() => setShowROICalculator(!showROICalculator)}
+                className="bg-gradient-to-r from-green-500 to-blue-600 hover:from-green-600 hover:to-blue-700 text-white font-semibold py-4 px-8 rounded-xl transition-all duration-300 transform hover:scale-105 inline-flex items-center space-x-2"
+              >
+                <Calculator className="w-5 h-5" />
+                <span>Open ROI Calculator</span>
+              </button>
+
+              {showROICalculator && (
+                <div className="mt-12 bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-2xl p-8 max-w-4xl mx-auto">
+                  <h3 className="text-2xl font-bold text-white mb-6">Calculate Your ROI</h3>
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div>
+                      <label className="block text-gray-300 mb-2">Current Monthly Revenue</label>
+                      <input
+                        type="number"
+                        placeholder="Enter your current monthly revenue"
+                        className="w-full px-4 py-3 bg-slate-700/50 border border-slate-600 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent"
+                      />
+                    </div>
+                    <div>
+                      <label className="block text-gray-300 mb-2">Service Investment (Monthly)</label>
+                      <select className="w-full px-4 py-3 bg-slate-700/50 border border-slate-600 rounded-xl text-white focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent">
+                        <option>Select a service</option>
+                        {REVOLUTIONARY_SERVICES_2030.map(service => (
+                          <option key={service.id} value={service.price}>
+                            {service.title} - ${service.price.toLocaleString()}/month
+                          </option>
+                        ))}
+                      </select>
+                    </div>
+                  </div>
+                  
+                  <div className="mt-8 text-center">
+                    <button className="bg-gradient-to-r from-green-500 to-blue-600 hover:from-green-600 hover:to-blue-700 text-white font-semibold py-3 px-6 rounded-xl transition-all duration-300">
+                      Calculate ROI
+                    </button>
+                  </div>
+
+                  <div className="mt-8 p-6 bg-green-500/10 border border-green-500/20 rounded-xl">
+                    <h4 className="text-lg font-semibold text-white mb-4">Estimated Results</h4>
+                    <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
+                      <div>
+                        <div className="text-3xl font-bold text-green-400">500%</div>
+                        <div className="text-gray-400">ROI</div>
+                      </div>
+                      <div>
+                        <div className="text-3xl font-bold text-blue-400">$150K</div>
+                        <div className="text-gray-400">Additional Revenue</div>
+                      </div>
+                      <div>
+                        <div className="text-3xl font-bold text-purple-400">6 months</div>
+                        <div className="text-gray-400">Payback Period</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              )}
+            </div>
+          </div>
+        </section>
+
+        {/* Services Pricing Grid */}
+        <section className="px-6 py-20">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl font-bold text-white mb-6">Individual Service Pricing</h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Detailed pricing for each revolutionary 2030 service with comprehensive feature breakdowns.
+              </p>
+            </div>
+
+            {/* Filters */}
+            <div className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-2xl p-6 mb-8">
+              <div className="grid grid-cols-1 lg:grid-cols-4 gap-4">
+                <select
+                  value={selectedCategory}
+                  onChange={(e) => setSelectedCategory(e.target.value)}
+                  className="px-4 py-3 bg-slate-700/50 border border-slate-600 rounded-xl text-white focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
+                >
+                  <option value="all">All Categories</option>
+                  {serviceCategories2030.map(category => (
+                    <option key={category} value={category}>{category}</option>
+                  ))}
+                </select>
+
+                <select
+                  value={selectedPriceRange}
+                  onChange={(e) => setSelectedPriceRange(e.target.value)}
+                  className="px-4 py-3 bg-slate-700/50 border border-slate-600 rounded-xl text-white focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
+                >
+                  <option value="all">All Price Ranges</option>
+                  <option value="budget">Under $10K</option>
+                  <option value="mid">$10K - $30K</option>
+                  <option value="premium">$30K+</option>
+                </select>
+
+                <select
+                  value={selectedROI}
+                  onChange={(e) => setSelectedROI(e.target.value)}
+                  className="px-4 py-3 bg-slate-700/50 border border-slate-600 rounded-xl text-white focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
+                >
+                  <option value="all">All ROI Levels</option>
+                  <option value="low">Under 300%</option>
+                  <option value="medium">300% - 600%</option>
+                  <option value="high">600%+</option>
+                </select>
+
+                <select
+                  value={sortBy}
+                  onChange={(e) => setSortBy(e.target.value)}
+                  className="px-4 py-3 bg-slate-700/50 border border-slate-600 rounded-xl text-white focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
+                >
+                  <option value="featured">Featured</option>
+                  <option value="price-low">Price: Low to High</option>
+                  <option value="price-high">Price: High to Low</option>
+                  <option value="roi">ROI: High to Low</option>
+                  <option value="delivery">Fastest Delivery</option>
+                </select>
+              </div>
+            </div>
+
+            {/* Services Grid */}
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {sortedServices.map((service, index) => (
+                <motion.div
+                  key={service.id}
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                  className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-2xl overflow-hidden hover:border-cyan-500/50 transition-all duration-300 hover:shadow-2xl hover:shadow-cyan-500/20"
+                >
+                  <div className="p-6">
+                    <div className="flex items-start justify-between mb-4">
+                      <div className={`p-3 rounded-xl bg-gradient-to-br ${getInnovationLevelColor(service.innovationLevel)}`}>
+                        {getCategoryIcon(service.category)}
+                      </div>
+                      <div className="text-right">
+                        <span className={`px-3 py-1 rounded-full text-xs font-medium ${
+                          service.innovationLevel === 'Revolutionary' ? 'bg-purple-500/20 text-purple-300 border border-purple-500/30' :
+                          service.innovationLevel === 'Advanced' ? 'bg-blue-500/20 text-blue-300 border border-blue-500/30' :
+                          'bg-green-500/20 text-green-300 border border-green-500/30'
+                        }`}>
+                          {service.innovationLevel}
+                        </span>
+                      </div>
+                    </div>
+
+                    <h3 className="text-xl font-bold text-white mb-3">{service.title}</h3>
+                    <p className="text-gray-400 text-sm mb-4 line-clamp-3">{service.description}</p>
+
+                    <div className="space-y-3 mb-6">
+                      <div className="flex items-center justify-between">
+                        <span className="text-gray-400 text-sm">Price:</span>
+                        <span className="text-2xl font-bold text-cyan-400">
+                          ${service.price.toLocaleString()}
+                          <span className="text-sm text-gray-400">/{service.pricingModel}</span>
+                        </span>
+                      </div>
+                      <div className="flex items-center justify-between">
+                        <span className="text-gray-400 text-sm">ROI:</span>
+                        <span className="text-green-400 font-semibold">{service.roi}</span>
+                      </div>
+                      <div className="flex items-center justify-between">
+                        <span className="text-gray-400 text-sm">Delivery:</span>
+                        <span className="text-yellow-400 text-sm">{service.estimatedDelivery}</span>
+                      </div>
+                    </div>
+
+                    <div className="flex flex-wrap gap-2 mb-6">
+                      {service.tags.slice(0, 3).map((tag, tagIndex) => (
+                        <span key={tagIndex} className="px-2 py-1 bg-slate-700/50 text-xs text-gray-300 rounded-md">
+                          {tag}
+                        </span>
+                      ))}
+                    </div>
+
+                    <button
+                      onClick={() => setSelectedService(service)}
+                      className="w-full bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-semibold py-3 px-6 rounded-xl transition-all duration-300 transform hover:scale-105"
+                    >
+                      View Details
+                    </button>
+                  </div>
+                </motion.div>
+              ))}
+            </div>
+
+            {filteredServices.length === 0 && (
+              <div className="text-center py-20">
+                <Search className="w-16 h-16 text-gray-600 mx-auto mb-4" />
+                <h3 className="text-xl font-semibold text-gray-400 mb-2">No services found</h3>
+                <p className="text-gray-500">Try adjusting your search criteria or filters</p>
+              </div>
+            )}
+          </div>
+        </section>
+
+        {/* Contact Section */}
+        <section className="px-6 py-20">
+          <div className="max-w-7xl mx-auto">
+            <div className="bg-gradient-to-r from-cyan-500/10 to-purple-500/10 border border-cyan-500/20 rounded-3xl p-12 text-center">
+              <h2 className="text-4xl font-bold text-white mb-6">Ready to Get Started?</h2>
+              <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+                Contact our team to discuss your specific needs and get a customized quote for our revolutionary 2030 services.
+              </p>
+              
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+                <div className="flex items-center justify-center space-x-3 text-gray-300">
+                  <Phone className="w-6 h-6 text-cyan-400" />
+                  <span>{contactInfo.phone}</span>
+                </div>
+                <div className="flex items-center justify-center space-x-3 text-gray-300">
+                  <Mail className="w-6 h-6 text-purple-400" />
+                  <span>{contactInfo.email}</span>
+                </div>
+                <div className="flex items-center justify-center space-x-3 text-gray-300">
+                  <MapPin className="w-6 h-6 text-pink-400" />
+                  <span>{contactInfo.address}</span>
+                </div>
+              </div>
+
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <a
+                  href={`mailto:${contactInfo.email}?subject=Pricing Inquiry for 2030 Services`}
+                  className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-semibold py-4 px-8 rounded-xl transition-all duration-300 transform hover:scale-105 inline-flex items-center space-x-2"
+                >
+                  <Mail className="w-5 h-5" />
+                  <span>Get Custom Quote</span>
+                </a>
+                <a
+                  href={`tel:${contactInfo.phone}`}
+                  className="bg-gradient-to-r from-purple-500 to-pink-600 hover:from-purple-600 hover:to-pink-700 text-white font-semibold py-4 px-8 rounded-xl transition-all duration-300 transform hover:scale-105 inline-flex items-center space-x-2"
+                >
+                  <Phone className="w-5 h-5" />
+                  <span>Call for Pricing</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+
+      {/* Service Detail Modal */}
+      {selectedService && (
+        <div className="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-6">
+          <div className="bg-slate-800 rounded-3xl max-w-4xl w-full max-h-[90vh] overflow-y-auto">
+            <div className="p-8">
+              <div className="flex items-start justify-between mb-6">
+                <div className="flex items-center space-x-4">
+                  <div className={`p-4 rounded-xl bg-gradient-to-br ${getInnovationLevelColor(selectedService.innovationLevel)}`}>
+                    {getCategoryIcon(selectedService.category)}
+                  </div>
+                  <div>
+                    <h2 className="text-3xl font-bold text-white">{selectedService.title}</h2>
+                    <p className="text-gray-400">{selectedService.category} • {selectedService.subcategory}</p>
+                  </div>
+                </div>
+                <button
+                  onClick={() => setSelectedService(null)}
+                  className="p-2 hover:bg-slate-700 rounded-lg transition-colors"
+                >
+                  <X className="w-6 h-6 text-gray-400" />
                 </button>
               </div>
-            </div>
-          </div>
 
-          {/* Pricing Summary */}
-          <div className="mb-8">
-            <div className="bg-white rounded-xl p-6 shadow-lg">
-              <h3 className="text-lg font-semibold text-gray-900 mb-4">Pricing Summary</h3>
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                <div className="text-center p-4 bg-blue-50 rounded-lg">
-                  <div className="text-2xl font-bold text-blue-600">
-                    {activeTab === 'microsaas' ? '$299' : activeTab === 'it' ? '$120' : '$699'}
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                <div>
+                  <h3 className="text-xl font-semibold text-white mb-4">Description</h3>
+                  <p className="text-gray-300 mb-6">{selectedService.description}</p>
+
+                  <h3 className="text-xl font-semibold text-white mb-4">Features</h3>
+                  <ul className="space-y-2 mb-6">
+                    {selectedService.features.map((feature, index) => (
+                      <li key={index} className="flex items-center space-x-2 text-gray-300">
+                        <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0" />
+                        <span>{feature}</span>
+                      </li>
+                    ))}
+                  </ul>
+
+                  <h3 className="text-xl font-semibold text-white mb-4">Benefits</h3>
+                  <ul className="space-y-2 mb-6">
+                    {selectedService.benefits.map((benefit, index) => (
+                      <li key={index} className="flex items-center space-x-2 text-gray-300">
+                        <Star className="w-5 h-5 text-yellow-400 flex-shrink-0" />
+                        <span>{benefit}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+
+                <div>
+                  <div className="bg-slate-700/50 rounded-2xl p-6 mb-6">
+                    <h3 className="text-xl font-semibold text-white mb-4">Pricing & Details</h3>
+                    <div className="space-y-4">
+                      <div className="flex justify-between">
+                        <span className="text-gray-400">Price:</span>
+                        <span className="text-3xl font-bold text-cyan-400">
+                          ${selectedService.price.toLocaleString()}
+                          <span className="text-sm text-gray-400">/{selectedService.pricingModel}</span>
+                        </span>
+                      </div>
+                      <div className="flex justify-between">
+                        <span className="text-gray-400">ROI:</span>
+                        <span className="text-green-400 font-semibold">{selectedService.roi}</span>
+                      </div>
+                      <div className="flex justify-between">
+                        <span className="text-gray-400">Delivery:</span>
+                        <span className="text-yellow-400">{selectedService.estimatedDelivery}</span>
+                      </div>
+                      <div className="flex justify-between">
+                        <span className="text-gray-400">Support:</span>
+                        <span className="text-white capitalize">{selectedService.supportLevel}</span>
+                      </div>
+                    </div>
                   </div>
-                  <div className="text-gray-600">Starting Price</div>
-                </div>
-                <div className="text-center p-4 bg-green-50 rounded-lg">
-                  <div className="text-2xl font-bold text-green-600">
-                    {activeTab === 'microsaas' ? '$1,499' : activeTab === 'it' ? '$200' : '$1,499'}
+
+                  <div className="bg-slate-700/50 rounded-2xl p-6 mb-6">
+                    <h3 className="text-xl font-semibold text-white mb-4">Use Cases</h3>
+                    <div className="space-y-2">
+                      {selectedService.useCases.map((useCase, index) => (
+                        <div key={index} className="text-gray-300 text-sm">• {useCase}</div>
+                      ))}
+                    </div>
                   </div>
-                  <div className="text-gray-600">Average Price</div>
-                </div>
-                <div className="text-center p-4 bg-purple-50 rounded-lg">
-                  <div className="text-2xl font-bold text-purple-600">
-                    {activeTab === 'microsaas' ? '$4,999' : activeTab === 'it' ? '$500' : '$2,999'}
+
+                  <div className="bg-slate-700/50 rounded-2xl p-6">
+                    <h3 className="text-xl font-semibold text-white mb-4">Target Audience</h3>
+                    <div className="space-y-2">
+                      {selectedService.targetAudience.map((audience, index) => (
+                        <div key={index} className="text-gray-300 text-sm">• {audience}</div>
+                      ))}
+                    </div>
                   </div>
-                  <div className="text-gray-600">Premium Price</div>
                 </div>
               </div>
-            </div>
-          </div>
 
-          {/* Services Grid */}
-          <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8">
-            {getFilteredServices().map(renderPricingCard)}
-          </div>
-
-          {/* No Results */}
-          {getFilteredServices().length === 0 && (
-            <div className="text-center py-12">
-              <div className="text-gray-500 text-lg mb-4">No services found matching your criteria</div>
-              <button
-                onClick={() => {
-                  setPriceRange([priceRangeData[0], priceRangeData[1]]);
-                  setSelectedCategory('all');
-                }}
-                className="px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
-              >
-                Clear Filters
-              </button>
-            </div>
-          )}
-
-          {/* Pricing Comparison */}
-          <div className="mt-16 bg-white rounded-2xl p-8 shadow-lg">
-            <h2 className="text-3xl font-bold text-center text-gray-900 mb-8">Why Choose Zion Tech Group?</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-              <div className="text-center">
-                <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <svg className="w-8 h-8 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1" />
-                  </svg>
+              <div className="mt-8 pt-6 border-t border-slate-700">
+                <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                  <a
+                    href={`mailto:${contactInfo.email}?subject=Pricing Inquiry for ${selectedService.title}`}
+                    className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-semibold py-3 px-8 rounded-xl transition-all duration-300 transform hover:scale-105 inline-flex items-center space-x-2"
+                  >
+                    <Mail className="w-5 h-5" />
+                    <span>Get Quote</span>
+                  </a>
+                  <a
+                    href={`tel:${contactInfo.phone}`}
+                    className="bg-gradient-to-r from-purple-500 to-pink-600 hover:from-purple-600 hover:to-pink-700 text-white font-semibold py-3 px-8 rounded-xl transition-all duration-300 transform hover:scale-105 inline-flex items-center space-x-2"
+                  >
+                    <Phone className="w-5 h-5" />
+                    <span>Call Now</span>
+                  </a>
                 </div>
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">Competitive Pricing</h3>
-                <p className="text-gray-600">Up to 40% lower than market rates with proven ROI</p>
               </div>
-              <div className="text-center">
-                <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <svg className="w-8 h-8 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                  </svg>
-                </div>
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">No Hidden Fees</h3>
-                <p className="text-gray-600">Transparent pricing with no surprise charges</p>
-              </div>
-              <div className="text-center">
-                <div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <svg className="w-8 h-8 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
-                  </svg>
-                </div>
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">Fast ROI</h3>
-                <p className="text-gray-600">Average ROI of 300-600% within 12-18 months</p>
-              </div>
-              <div className="text-center">
-                <div className="w-16 h-16 bg-pink-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <svg className="w-8 h-8 text-pink-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M18.364 5.636l-3.536 3.536m0 5.656l3.536 3.536M9.172 9.172L5.636 5.636m3.536 9.192L5.636 18.364M12 2.25a9.75 9.75 0 100 19.5 9.75 9.75 0 000-19.5z" />
-                  </svg>
-                </div>
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">24/7 Support</h3>
-                <p className="text-gray-600">Round-the-clock support and monitoring</p>
-              </div>
-            </div>
-          </div>
-
-          {/* Contact CTA */}
-          <div className="mt-16 bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl p-8 text-white text-center">
-            <h2 className="text-3xl font-bold mb-4">Ready to Get Started?</h2>
-            <p className="text-xl text-blue-100 mb-6">
-              Contact our team to discuss your specific needs and get a customized quote for your business.
-            </p>
-            <div className="flex flex-col md:flex-row gap-4 justify-center">
-              <a
-                href="tel:+13024640950"
-                className="px-8 py-3 bg-white text-blue-600 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
-              >
-                Call Now: +1 302 464 0950
-              </a>
-              <a
-                href="mailto:kleber@ziontechgroup.com"
-                className="px-8 py-3 border-2 border-white text-white rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors"
-              >
-                Email Us
-              </a>
             </div>
           </div>
         </div>
-      </div>
+      )}
     </>
   );
-};
+}
 
-export default ComprehensivePricingGuide2030;
+// Helper components
+const X = ({ className }: { className?: string }) => (
+  <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+  </svg>
+);
