@@ -51,6 +51,9 @@ const RevolutionaryServices2030 = React.lazy(() => import('./pages/Revolutionary
 const RevolutionaryServicesShowcase2030 = React.lazy(() => import('./pages/RevolutionaryServicesShowcase2030'));
 const ComprehensivePricingGuide2030 = React.lazy(() => import('./pages/ComprehensivePricingGuide2030'));
 
+// Comprehensive Services Landing 2030
+const ComprehensiveServicesLanding2030 = React.lazy(() => import('./pages/ComprehensiveServicesLanding2030'));
+
 // Innovative Services Showcase 2025
 const InnovativeServicesShowcase2025 = React.lazy(() => import('./pages/InnovativeServicesShowcase2025'));
 
@@ -85,6 +88,13 @@ const WebsiteAiChatbot = React.lazy(() => import('./pages/services/WebsiteAiChat
 const RagSearch = React.lazy(() => import('./pages/services/RagSearch'));
 const MlopsPipeline = React.lazy(() => import('./pages/services/MlopsPipeline'));
 const EcommercePersonalization = React.lazy(() => import('./pages/services/EcommercePersonalization'));
+
+// Additional service components
+const AffiliateMarketingTracker = React.lazy(() => import('./pages/services/AffiliateMarketingTracker'));
+const UptimeSLAMonitor = React.lazy(() => import('./pages/services/UptimeSLAMonitor'));
+const SOC2ComplianceTracker = React.lazy(() => import('./pages/services/SOC2ComplianceTracker'));
+const EmployeeSchedulingSaaS = React.lazy(() => import('./pages/services/EmployeeSchedulingSaaS'));
+const AISupportHelpdesk = React.lazy(() => import('./pages/services/AISupportHelpdesk'));
 
 // Additional service pages
 const DigitalTransformation = React.lazy(() => import('./pages/services/DigitalTransformation'));
@@ -179,6 +189,7 @@ function App() {
               <Route path="/pricing-guide" element={<PricingGuide />} />
               <Route path="/revolutionary-services-2030" element={<RevolutionaryServices2030 />} />
               <Route path="/comprehensive-services" element={<ComprehensiveServicesLanding2025 />} />
+              <Route path="/comprehensive-services-2030" element={<ComprehensiveServicesLanding2030 />} />
               <Route path="/services" element={<Services />} />
               <Route path="/comprehensive-services" element={<ComprehensiveServices />} />
               <Route path="/services-overview" element={<ServicesOverview />} />
