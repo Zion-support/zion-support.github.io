@@ -61,6 +61,11 @@ const AIComplianceCopilot = React.lazy(() => import('./pages/services/AIComplian
 const LLMContentStudio = React.lazy(() => import('./pages/services/LLMContentStudio'));
 const FinOpsAdvisor = React.lazy(() => import('./pages/services/FinOpsAdvisor'));
 
+// New AI Services
+const AICybersecuritySuite = React.lazy(() => import('./pages/services/AICybersecuritySuite'));
+const QuantumAIPlatform = React.lazy(() => import('./pages/services/QuantumAIPlatform'));
+const AIHealthcareAnalytics = React.lazy(() => import('./pages/services/AIHealthcareAnalytics'));
+
 // Simple placeholder pages for missing ones
 const Careers = () => (
   <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 flex items-center justify-center">
@@ -140,6 +145,11 @@ function App() {
               <Route path="/services/ai-compliance-copilot" element={<AIComplianceCopilot />} />
               <Route path="/services/llm-content-studio" element={<LLMContentStudio />} />
               <Route path="/services/finops-advisor" element={<FinOpsAdvisor />} />
+
+              {/* New AI Services Routes */}
+              <Route path="/services/ai-cybersecurity-suite" element={<AICybersecuritySuite />} />
+              <Route path="/services/quantum-ai-platform" element={<QuantumAIPlatform />} />
+              <Route path="/services/ai-healthcare-analytics" element={<AIHealthcareAnalytics />} />
               
               {/* Catch all route */}
               <Route path="*" element={<Home />} />
