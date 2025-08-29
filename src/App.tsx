@@ -109,6 +109,7 @@ function App() {
                 <Route path="/services/comprehensive-advertising" element={<ComprehensiveServicesAdvertising />} />
                 <Route path="/services/showcase-2030" element={<ComprehensiveServicesShowcase2030 />} />
                 <Route path="/services/overview" element={<InnovativeServicesOverview />} />
+                <Route path="/comprehensive-services-advertising" element={<ComprehensiveServicesAdvertising />} />
                 <Route path="/pricing-guide-2027" element={<ComprehensivePricingGuide2027 />} />
                 <Route path="/pricing-guide-2025" element={<ComprehensivePricingGuide2025 />} />
                 <Route path="/pricing-guide-2030" element={<ComprehensivePricingGuide2030 />} />
