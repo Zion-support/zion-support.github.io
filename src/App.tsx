@@ -4,7 +4,7 @@ import { AppHeader } from './layout/AppHeader';
 import { Sidebar } from './components/Sidebar';
 import { EnhancedFuturisticFooter as Footer } from './components/EnhancedFuturisticFooter';
 import { ChatAssistant } from './components/ChatAssistant';
-import { LoadingSpinner } from './components/ui/LoadingSpinner';
+import LoadingSpinner from './components/ui/LoadingSpinner';
 import { SEO } from './components/SEO';
 // import { PerformanceOptimizer } from './components/PerformanceOptimizer';
 import { ErrorBoundary } from './components/ErrorBoundary';
