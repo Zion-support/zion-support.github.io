@@ -46,7 +46,7 @@ export function AppHeader() {
   const services = [
     { name: 'AI & Analytics', href: '/services/ai-business-intelligence', icon: Brain, description: 'Machine Learning & Data Science' },
     { name: 'Digital Twin', href: '/services/digital-twin', icon: Rocket, description: 'Simulation & Monitoring' },
-    { name: 'Cybersecurity', href: '/services/ai-compliance-copilot', icon: Shield, description: 'AI-Powered Security' },
+    { name: 'AI Cybersecurity', href: '/services/ai-cybersecurity-suite', icon: Shield, description: 'AI-Powered Threat Detection' },
     { name: 'Cloud & DevOps', href: '/services/cloud-devops', icon: Cloud, description: 'Infrastructure & Automation' },
     { name: 'IoT & Edge', href: '/services/iot-edge', icon: Cpu, description: 'Smart Devices & Networks' },
     { name: 'Blockchain', href: '/services/blockchain-enterprise-solutions', icon: Lock, description: 'DeFi & Smart Contracts' },
@@ -57,6 +57,8 @@ export function AppHeader() {
     { name: 'Feedback Surveys', href: '/services/mobile-feedback-surveys', icon: Users, description: 'NPS/CSAT with AI insights' },
     { name: 'LLM Content Studio', href: '/services/llm-content-studio', icon: BookOpen, description: 'On-brand AI content' },
     { name: 'FinOps Advisor', href: '/services/finops-advisor', icon: DollarSign, description: 'Cloud cost optimization' },
+    { name: 'Quantum AI Platform', href: '/services/quantum-ai-platform', icon: Star, description: 'Next-gen quantum computing' },
+    { name: 'Smart City IoT', href: '/services/iot-edge', icon: Globe, description: 'Urban infrastructure management' },
   ];
 
   const servicesCategories = [
@@ -79,7 +81,9 @@ export function AppHeader() {
         { name: 'AI Business Intelligence', href: '/services/ai-business-intelligence', description: 'Machine Learning & Data Science' },
         { name: 'AI Sales Copilot', href: '/services/ai-sales-copilot', description: 'AI-powered sales automation' },
         { name: 'AI Compliance Assistant', href: '/services/ai-compliance-assistant', description: 'Regulatory compliance automation' },
-        { name: 'LLM Content Studio', href: '/services/llm-content-studio', description: 'AI content generation' }
+        { name: 'LLM Content Studio', href: '/services/llm-content-studio', description: 'AI content generation' },
+        { name: 'AI Healthcare Analytics', href: '/services/ai-healthcare-analytics', description: 'Medical data insights & diagnostics' },
+        { name: 'AI CRM Automation', href: '/services/ai-powered-crm-automation', description: 'Intelligent customer relationship management' }
       ]
     },
     {
@@ -108,7 +112,18 @@ export function AppHeader() {
       color: 'from-indigo-600 to-purple-600',
       services: [
         { name: 'AI Compliance Copilot', href: '/services/ai-compliance-copilot', description: 'AI-Powered Security' },
-        { name: 'Zero Trust Architecture', href: '/services/zero-trust-network-architecture', description: 'Advanced security' }
+        { name: 'Zero Trust Architecture', href: '/services/zero-trust-network-architecture', description: 'Advanced security' },
+        { name: 'AI Threat Detection', href: '/services/ai-cybersecurity-threat-detection', description: 'Real-time threat detection' }
+      ]
+    },
+    {
+      name: 'Emerging Technologies',
+      icon: Star,
+      color: 'from-yellow-600 to-orange-600',
+      services: [
+        { name: 'Quantum AI Platform', href: '/services/quantum-ai-platform', description: 'Next-gen quantum computing' },
+        { name: 'Blockchain Supply Chain', href: '/services/blockchain-supply-chain-tracker', description: 'Transparent supply chain tracking' },
+        { name: 'IoT Smart City', href: '/services/iot-smart-city-platform', description: 'Urban infrastructure management' }
       ]
     }
   ];
@@ -131,8 +146,11 @@ export function AppHeader() {
       color: 'from-indigo-600 to-purple-600',
       solutions: [
         { name: 'Quantum AI Platform', href: '/services/quantum-ai-platform', description: 'Next-gen quantum computing' },
+        { name: 'Quantum Financial Trading', href: '/services/quantum-financial-trading-platform', description: 'Ultra-fast trading algorithms' },
         { name: 'AI Cybersecurity Suite', href: '/services/ai-cybersecurity-suite', description: 'Advanced security solutions' },
-        { name: 'AI Healthcare Analytics', href: '/services/ai-healthcare-analytics', description: 'Healthcare data insights' }
+        { name: 'AI Healthcare Analytics', href: '/services/ai-healthcare-analytics', description: 'Healthcare data insights' },
+        { name: 'Blockchain Supply Chain', href: '/services/blockchain-supply-chain-tracker', description: 'Transparent tracking' },
+        { name: 'IoT Smart City', href: '/services/iot-smart-city-platform', description: 'Urban infrastructure' }
       ]
     },
     {
@@ -152,6 +170,8 @@ export function AppHeader() {
     { name: 'Services Showcase', href: '/revolutionary-services-showcase-2030', icon: TrendingUp, description: 'Future-ready services' },
     { name: 'Pricing Guide 2030', href: '/pricing-2030', icon: DollarSign, description: 'Advanced pricing strategies' },
     { name: 'Request Quote', href: '/request-quote', icon: MessageCircle, description: 'Get custom pricing' },
+    { name: 'AI Healthcare Analytics', href: '/services/ai-healthcare-analytics', icon: Heart, description: 'Medical insights & diagnostics' },
+    { name: 'Quantum Trading Platform', href: '/services/quantum-financial-trading-platform', icon: TrendingUp, description: 'Next-gen financial trading' },
   ];
 
   const companyCategories = [

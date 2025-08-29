@@ -69,6 +69,7 @@ const FinOpsAdvisor = React.lazy(() => import('./pages/services/FinOpsAdvisor'))
 // Additional service pages
 const DigitalTransformation = React.lazy(() => import('./pages/services/DigitalTransformation'));
 const ITConsulting = React.lazy(() => import('./pages/services/ITConsulting'));
+const OnsiteSupport = React.lazy(() => import('./pages/OnsiteSupport'));
 const GreenIT = React.lazy(() => import('./pages/services/GreenIT'));
 const QuantumComputing = React.lazy(() => import('./pages/services/QuantumComputing'));
 const SpaceTech = React.lazy(() => import('./pages/services/SpaceTech'));

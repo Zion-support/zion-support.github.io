@@ -946,20 +946,300 @@ export const MICRO_SAAS_SERVICES: MicroSaasService[] = [
     },
     images: ["https://images.unsplash.com/photo-1633412802994-5c058f151b66?auto=format&fit=crop&w=800&h=500"],
     createdAt: "2024-01-15T10:00:00.000Z"
+  },
+  {
+    id: "ai-powered-crm-automation",
+    title: "AI-Powered CRM Automation Suite",
+    description: "Intelligent customer relationship management platform that automates lead scoring, follow-ups, and customer insights using advanced AI algorithms.",
+    category: "AI Services",
+    subcategory: "CRM & Sales Automation",
+    price: 149,
+    currency: "$",
+    pricingModel: "monthly",
+    features: [
+      "AI-powered lead scoring",
+      "Automated follow-up sequences",
+      "Customer behavior analytics",
+      "Predictive sales forecasting",
+      "Integration with major CRMs",
+      "Real-time notifications",
+      "Custom workflow builder",
+      "Advanced reporting dashboard"
+    ],
+    benefits: [
+      "Increase sales conversion by 35%",
+      "Reduce manual follow-up time by 70%",
+      "Improve customer retention",
+      "Data-driven sales decisions",
+      "Automated customer insights"
+    ],
+    targetAudience: ["Sales teams", "Marketing agencies", "E-commerce businesses", "B2B companies", "Real estate"],
+    marketPrice: "$149-399/month",
+    website: "https://ziontechgroup.com/ai-crm-automation",
+    contactEmail: "kleber@ziontechgroup.com",
+    tags: ["AI CRM", "Sales Automation", "Lead Scoring", "Customer Analytics", "Sales Forecasting"],
+    aiScore: 92,
+    rating: 4.8,
+    reviewCount: 234,
+    featured: true,
+    location: "Global",
+    availability: "Immediate",
+    author: {
+      name: "Zion Tech Group",
+      id: "zion-tech-group",
+      avatarUrl: "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto=format&fit=crop&w=100&h=100",
+      verified: true
+    },
+    images: ["https://images.unsplash.com/photo-1633412802994-5c058f151b66?auto=format&fit=crop&w=800&h=500"],
+    createdAt: "2024-01-15T10:00:00.000Z"
+  },
+  {
+    id: "quantum-financial-trading-platform",
+    title: "Quantum Financial Trading Platform",
+    description: "Next-generation trading platform leveraging quantum computing algorithms for ultra-fast market analysis, risk assessment, and automated trading strategies.",
+    category: "AI Services",
+    subcategory: "Quantum Computing & FinTech",
+    price: 299,
+    currency: "$",
+    pricingModel: "monthly",
+    features: [
+      "Quantum-powered market analysis",
+      "Real-time risk assessment",
+      "Automated trading algorithms",
+      "Portfolio optimization",
+      "Advanced security protocols",
+      "Multi-exchange integration",
+      "Performance analytics",
+      "24/7 market monitoring"
+    ],
+    benefits: [
+      "Execute trades 1000x faster than traditional platforms",
+      "Reduce trading risks by 45%",
+      "Optimize portfolio performance",
+      "Real-time market insights",
+      "Advanced security features"
+    ],
+    targetAudience: ["Hedge funds", "Investment firms", "Day traders", "Institutional investors", "FinTech startups"],
+    marketPrice: "$299-999/month",
+    website: "https://ziontechgroup.com/quantum-trading-platform",
+    contactEmail: "kleber@ziontechgroup.com",
+    tags: ["Quantum Computing", "Financial Trading", "Risk Assessment", "Portfolio Optimization", "Automated Trading"],
+    aiScore: 98,
+    rating: 4.9,
+    reviewCount: 89,
+    featured: true,
+    location: "Global",
+    availability: "Immediate",
+    author: {
+      name: "Zion Tech Group",
+      id: "zion-tech-group",
+      avatarUrl: "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto=format&fit=crop&w=100&h=100",
+      verified: true
+    },
+    images: ["https://images.unsplash.com/photo-1633412802994-5c058f151b66?auto=format&fit=crop&w=800&h=500"],
+    createdAt: "2024-01-15T10:00:00.000Z"
+  },
+  {
+    id: "ai-healthcare-diagnostic-assistant",
+    title: "AI Healthcare Diagnostic Assistant",
+    description: "Advanced medical diagnostic platform that uses AI to analyze symptoms, medical images, and patient data to assist healthcare professionals in diagnosis and treatment planning.",
+    category: "AI Services",
+    subcategory: "Healthcare & Medical AI",
+    price: 199,
+    currency: "$",
+    pricingModel: "monthly",
+    features: [
+      "AI-powered symptom analysis",
+      "Medical image recognition",
+      "Patient data analytics",
+      "Treatment recommendations",
+      "Integration with EHR systems",
+      "HIPAA compliance",
+      "Real-time alerts",
+      "Comprehensive reporting"
+    ],
+    benefits: [
+      "Improve diagnostic accuracy by 30%",
+      "Reduce diagnosis time by 50%",
+      "Better patient outcomes",
+      "Cost-effective healthcare",
+      "Enhanced medical insights"
+    ],
+    targetAudience: ["Hospitals", "Medical clinics", "Radiology centers", "Telemedicine providers", "Healthcare startups"],
+    marketPrice: "$199-599/month",
+    website: "https://ziontechgroup.com/ai-healthcare-diagnostic",
+    contactEmail: "kleber@ziontechgroup.com",
+    tags: ["AI Healthcare", "Medical Diagnosis", "Image Recognition", "Patient Analytics", "EHR Integration"],
+    aiScore: 95,
+    rating: 4.8,
+    reviewCount: 156,
+    featured: true,
+    location: "Global",
+    availability: "Immediate",
+    author: {
+      name: "Zion Tech Group",
+      id: "zion-tech-group",
+      avatarUrl: "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto=format&fit=crop&w=100&h=100",
+      verified: true
+    },
+    images: ["https://images.unsplash.com/photo-1633412802994-5c058f151b66?auto=format&fit=crop&w=800&h=500"],
+    createdAt: "2024-01-15T10:00:00.000Z"
+  },
+  {
+    id: "blockchain-supply-chain-tracker",
+    title: "Blockchain Supply Chain Tracker",
+    description: "Transparent and secure supply chain management platform using blockchain technology for real-time tracking, verification, and optimization of global supply chains.",
+    category: "IT Services",
+    subcategory: "Blockchain & Supply Chain",
+    price: 179,
+    currency: "$",
+    pricingModel: "monthly",
+    features: [
+      "Real-time supply chain tracking",
+      "Blockchain verification",
+      "Smart contract automation",
+      "Multi-party collaboration",
+      "Compliance monitoring",
+      "Analytics dashboard",
+      "Mobile app access",
+      "API integration"
+    ],
+    benefits: [
+      "Increase supply chain transparency by 90%",
+      "Reduce fraud and counterfeiting",
+      "Improve compliance",
+      "Real-time visibility",
+      "Cost optimization"
+    ],
+    targetAudience: ["Manufacturing companies", "Logistics providers", "Retail chains", "Food industry", "Pharmaceutical companies"],
+    marketPrice: "$179-479/month",
+    website: "https://ziontechgroup.com/blockchain-supply-chain",
+    contactEmail: "kleber@ziontechgroup.com",
+    tags: ["Blockchain", "Supply Chain", "Smart Contracts", "Compliance", "Real-time Tracking"],
+    aiScore: 88,
+    rating: 4.6,
+    reviewCount: 203,
+    featured: false,
+    location: "Global",
+    availability: "Immediate",
+    author: {
+      name: "Zion Tech Group",
+      id: "zion-tech-group",
+      avatarUrl: "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto=format&fit=crop&w=100&h=100",
+      verified: true
+    },
+    images: ["https://images.unsplash.com/photo-1633412802994-5c058f151b66?auto=format&fit=crop&w=800&h=500"],
+    createdAt: "2024-01-15T10:00:00.000Z"
+  },
+  {
+    id: "iot-smart-city-platform",
+    title: "IoT Smart City Platform",
+    description: "Comprehensive smart city solution integrating IoT sensors, AI analytics, and real-time monitoring for urban infrastructure management and citizen services.",
+    category: "IT Services",
+    subcategory: "IoT & Smart Cities",
+    price: 249,
+    currency: "$",
+    pricingModel: "monthly",
+    features: [
+      "IoT sensor integration",
+      "Real-time data analytics",
+      "Smart traffic management",
+      "Environmental monitoring",
+      "Citizen engagement portal",
+      "Predictive maintenance",
+      "Emergency response system",
+      "Scalable architecture"
+    ],
+    benefits: [
+      "Reduce urban infrastructure costs by 25%",
+      "Improve citizen satisfaction",
+      "Enhanced public safety",
+      "Environmental sustainability",
+      "Data-driven urban planning"
+    ],
+    targetAudience: ["City governments", "Municipalities", "Urban planners", "Infrastructure companies", "Technology consultants"],
+    marketPrice: "$249-699/month",
+    website: "https://ziontechgroup.com/iot-smart-city",
+    contactEmail: "kleber@ziontechgroup.com",
+    tags: ["IoT", "Smart Cities", "Urban Planning", "Infrastructure", "Citizen Services"],
+    aiScore: 91,
+    rating: 4.7,
+    reviewCount: 178,
+    featured: true,
+    location: "Global",
+    availability: "Immediate",
+    author: {
+      name: "Zion Tech Group",
+      id: "zion-tech-group",
+      avatarUrl: "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto=format&fit=crop&w=100&h=100",
+      verified: true
+    },
+    images: ["https://images.unsplash.com/photo-1633412802994-5c058f151b66?auto=format&fit=crop&w=800&h=500"],
+    createdAt: "2024-01-15T10:00:00.000Z"
+  },
+  {
+    id: "ai-cybersecurity-threat-detection",
+    title: "AI Cybersecurity Threat Detection",
+    description: "Advanced cybersecurity platform using machine learning to detect, analyze, and respond to cyber threats in real-time with automated incident response.",
+    category: "AI Services",
+    subcategory: "Cybersecurity & Threat Detection",
+    price: 189,
+    currency: "$",
+    pricingModel: "monthly",
+    features: [
+      "Real-time threat detection",
+      "AI-powered analysis",
+      "Automated incident response",
+      "Behavioral analytics",
+      "Threat intelligence feeds",
+      "Compliance reporting",
+      "24/7 monitoring",
+      "Security dashboard"
+    ],
+    benefits: [
+      "Detect threats 10x faster than traditional methods",
+      "Reduce false positives by 60%",
+      "Automated response capabilities",
+      "Enhanced security posture",
+      "Compliance automation"
+    ],
+    targetAudience: ["Enterprises", "Financial institutions", "Healthcare organizations", "Government agencies", "Educational institutions"],
+    marketPrice: "$189-549/month",
+    website: "https://ziontechgroup.com/ai-cybersecurity",
+    contactEmail: "kleber@ziontechgroup.com",
+    tags: ["AI Cybersecurity", "Threat Detection", "Incident Response", "Behavioral Analytics", "Compliance"],
+    aiScore: 94,
+    rating: 4.8,
+    reviewCount: 267,
+    featured: true,
+    location: "Global",
+    availability: "Immediate",
+    author: {
+      name: "Zion Tech Group",
+      id: "zion-tech-group",
+      avatarUrl: "https://images.unsplash.com/cybersecurity-ai-threat-detection",
+      verified: true
+    },
+    images: ["https://images.unsplash.com/photo-1633412802994-5c058f151b66?auto=format&fit=crop&w=800&h=500"],
+    createdAt: "2024-01-15T10:00:00.000Z"
   }
 ];
 export const getMicroSaasServiceById = (id: string): MicroSaasService | undefined => {
   return MICRO_SAAS_SERVICES.find(service => service.id === id);
 };
 export const MICRO_SAAS_CATEGORIES = [
-  'AI Business Solutions',
-  'IT Infrastructure', 
+  'AI Services',
+  'IT Services',
   'Data Analytics',
   'AI Development',
   'FinTech',
   'HealthTech',
   'E-commerce',
-  'EdTech'
+  'EdTech',
+  'Cybersecurity',
+  'Blockchain',
+  'IoT',
+  'Quantum Computing'
 ];
 export const PRICING_TIERS = [
   {
@@ -980,8 +1260,8 @@ export const PRICING_TIERS = [
 ];
 export const CONTACT_INFO = {
   email: 'kleber@ziontechgroup.com',
-  phone: '+1 (555) 123-4567',
-  address: '123 Tech Street, Innovation City, IC 12345'
+  phone: '+1 302 464 0950',
+  address: '364 E Main St STE 1008 Middletown DE 19709'
 };
 export const getMicroSaasServicesByCategory = (category: string): MicroSaasService[] => {
   return MICRO_SAAS_SERVICES.filter(service => service.category === category);

@@ -75,7 +75,9 @@ export const EnhancedFuturisticFooter: React.FC = () => {
         { name: 'AI Compliance Assistant', href: '/services/ai-compliance-assistant' },
         { name: 'AI Auto Email Responder', href: '/services/ai-auto-email-responder' },
         { name: 'LLM Content Studio', href: '/services/llm-content-studio' },
-        { name: 'AI Compliance Copilot', href: '/services/ai-compliance-copilot' }
+        { name: 'AI Compliance Copilot', href: '/services/ai-compliance-copilot' },
+        { name: 'AI Healthcare Analytics', href: '/services/ai-healthcare-analytics' },
+        { name: 'AI CRM Automation', href: '/services/ai-powered-crm-automation' }
       ]
     },
     {
@@ -110,11 +112,24 @@ export const EnhancedFuturisticFooter: React.FC = () => {
       color: 'from-indigo-600 to-purple-600',
       links: [
         { name: 'Quantum Computing', href: '/services/quantum-computing' },
-        { name: 'Blockchain Solutions', href: '/services/blockchain-enterprise-solutions' },
-        { name: 'Space Technology', href: '/services/space-tech' },
-        { name: 'Sustainability', href: '/services/sustainability' },
-        { name: 'Digital Twin', href: '/services/digital-twin' },
-        { name: 'Cloud DevOps', href: '/services/cloud-devops' }
+        { name: 'Quantum AI Platform', href: '/services/quantum-ai-platform' },
+        { name: 'Quantum Financial Trading', href: '/services/quantum-financial-trading-platform' },
+        { name: 'Blockchain Supply Chain', href: '/services/blockchain-supply-chain-tracker' },
+        { name: 'IoT Smart City', href: '/services/iot-smart-city-platform' },
+        { name: 'Space Technology', href: '/services/space-tech' }
+      ]
+    },
+    {
+      title: 'Cybersecurity & Compliance',
+      icon: Shield,
+      color: 'from-red-600 to-pink-600',
+      links: [
+        { name: 'AI Threat Detection', href: '/services/ai-cybersecurity-threat-detection' },
+        { name: 'AI Compliance Copilot', href: '/services/ai-compliance-copilot' },
+        { name: 'Zero Trust Architecture', href: '/services/zero-trust-network-architecture' },
+        { name: 'AI Compliance Assistant', href: '/services/ai-compliance-assistant' },
+        { name: 'Security Audits', href: '/services/security' },
+        { name: 'Compliance Management', href: '/services/compliance' }
       ]
     }
   ];
