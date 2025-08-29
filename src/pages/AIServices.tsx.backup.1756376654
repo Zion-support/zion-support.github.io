@@ -1,0 +1,113 @@
+import React from 'react'
+import { SEO } from '@/components/SEO'
+
+<<<<<<< HEAD
+const AIServices: React.FC = () => (
+	<div className="min-h-screen bg-slate-950 text-white py-16">
+		<SEO title="AI Services" description="Explore our AI-powered services and solutions." />
+		<div className="container mx-auto max-w-3xl px-6">
+			<h1 className="text-3xl font-bold mb-4">AI Services</h1>
+			<p className="text-slate-300">Coming soon.</p>
+		</div>
+	</div>
+)
+=======
+const AIServices: React.FC = () => {
+  const offerings = [
+    {
+      icon: Bot,
+      title: 'Autonomous Agents & Workflows',
+      desc: 'Multi-agent systems for customer support, ops automation, sales outreach, and back-office tasks with human-in-the-loop controls.',
+      price: '$3,000 - $25,000+ per project'
+    },
+    {
+      icon: Database,
+      title: 'RAG + Knowledge Platforms',
+      desc: 'Retrieval Augmented Generation on your docs, wikis, tickets, and data lakes. Secure, auditable answers with citations.',
+      price: '$5,000 - $40,000+'
+    },
+    {
+      icon: LineChart,
+      title: 'ML Forecasting & Optimization',
+      desc: 'Demand forecasting, pricing optimization, churn prediction, lead scoring, and anomaly detection tuned to your KPIs.',
+      price: '$8,000 - $60,000+'
+    },
+    {
+      icon: Shield,
+      title: 'Responsible AI & Governance',
+      desc: 'Policy, guardrails, red-teaming, PII detection, SOC2/ISO-aligned controls, and observability for AI in production.',
+      price: '$2,500 - $20,000+'
+    },
+    // New AI services
+    {
+      icon: ImageIcon,
+      title: 'Vision AI & Document Intelligence',
+      desc: 'OCR, form extraction, document classification, and image/video understanding for inspections and compliance.',
+      price: '$4,000 - $45,000+'
+    },
+    {
+      icon: FileText,
+      title: 'AI Content & Brand Copilots',
+      desc: 'On-brand generation for blogs, ads, and product copy with approval workflows and tone control.',
+      price: '$2,500 - $30,000+'
+    },
+    {
+      icon: Workflow,
+      title: 'Process Automation with LLMs',
+      desc: 'Orchestrate multi-step processes across CRMs, ERPs, and ticketing systems using LLM planning and tools.',
+      price: '$6,000 - $55,000+'
+    },
+    {
+      icon: Globe,
+      title: 'Multilingual CX & Localization AI',
+      desc: 'Real-time translation, NLU for 50+ languages, sentiment, and locale-aware responses across channels.',
+      price: '$3,000 - $25,000+'
+    },
+    {
+      icon: Video,
+      title: 'Speech & Video Intelligence',
+      desc: 'Transcription, speaker diarization, topic extraction, and highlight reels for calls, webinars, and support.',
+      price: '$4,000 - $35,000+'
+    }
+    ,
+    {
+      icon: Brain,
+      title: 'GenAI Safety, Evaluation & Red Teaming',
+      desc: 'Automated evals for toxicity, bias, jailbreaks, PII leaks; alignment tests and mitigations with measurable quality gates.',
+      price: '$3,500 - $40,000+'
+    },
+    {
+      icon: Bot,
+      title: 'Sales & Support AI Agents',
+      desc: 'Goal-driven multi-tool agents for lead qualification, outbound sequences, and L2 support with CRM/ITSM integrations.',
+      price: '$6,000 - $55,000+'
+    },
+    {
+      icon: Database,
+      title: 'Synthetic Data & Data Anonymization',
+      desc: 'Privacy-preserving tabular/time-series/image data generation, k-anonymity, differential privacy, and safe-sharing pipelines.',
+      price: '$5,000 - $45,000+'
+    },
+    {
+      icon: Shield,
+      title: 'AI Security Posture & Model Hardening',
+      desc: 'Prompt injection defenses, model access controls, secrets isolation, rate limiting, and audit trails for regulated workloads.',
+      price: '$4,000 - $35,000+'
+    },
+    {
+      icon: LineChart,
+      title: 'MLOps Platform & Observability',
+      desc: 'Feature stores, drift/quality monitoring, canary/rollback, offline/online testing, and lineage with policy guardrails.',
+      price: '$8,000 - $90,000+'
+    },
+    {
+      icon: Globe,
+      title: 'Edge & On‑prem AI Deployments',
+      desc: 'On-device inference, GPU sizing, model quantization, and offline-first patterns for plants, clinics, and retail sites.',
+      price: '$7,000 - $85,000+'
+    }
+  ];
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-c4ed
+
+export default AIServices
+

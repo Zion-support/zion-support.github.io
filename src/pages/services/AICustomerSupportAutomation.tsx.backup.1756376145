@@ -1,0 +1,242 @@
+<<<<<<< HEAD
+import React from 'react';
+import SEO from '@/components/SEO';
+import { MessageCircle, Bot, Zap, Check, ExternalLink, Phone, Mail, ArrowRight, Clock, Users, TrendingUp, Headphones, Shield } from 'lucide-react';
+=======
+import { MessageSquare, Headphones, Check, ExternalLink, Phone, Mail, Brain, Target, Users, Clock, Zap, TrendingUp } from 'lucide-react';
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-6ac1
+
+export default function AICustomerSupportAutomation() {
+  const features = [
+    'AI-powered intelligent chatbot with natural language processing',
+    '24/7 automated customer support across all channels',
+    'Multi-language support for global customer base',
+    'Sentiment analysis and emotion detection',
+    'Automated ticket routing and escalation',
+    'Knowledge base management and auto-updates',
+    'Integration with CRM and helpdesk systems',
+    'Voice and video call automation',
+    'Customer satisfaction tracking and analytics',
+    'Self-service portal with AI recommendations'
+  ];
+
+  const benefits = [
+    'Reduce support costs by 40-70%',
+    'Improve customer satisfaction by 25-50%',
+    'Handle 80% of support queries automatically',
+    '24/7 customer support availability',
+    'Faster response times and resolution',
+    'Scalable support without additional staff'
+  ];
+
+  const useCases = [
+    'E-commerce customer support',
+    'SaaS product support',
+    'Financial services support',
+    'Healthcare patient support',
+    'Telecommunications support',
+    'Government citizen services'
+  ];
+
+  const tiers = [
+    { 
+      name: 'Starter', 
+      price: '$999/mo', 
+      details: ['Up to 1,000 conversations/month', 'Basic AI chatbot', 'Email support', 'Standard integrations'] 
+    },
+    { 
+      name: 'Professional', 
+      price: '$2,999/mo', 
+      details: ['Up to 10,000 conversations/month', 'Advanced AI capabilities', 'Priority support', 'Custom integrations'] 
+    },
+    { 
+      name: 'Enterprise', 
+      price: '$7,999/mo', 
+      details: ['Unlimited conversations', 'Custom AI models', 'Dedicated support', 'White-label solution'] 
+    },
+  ];
+
+  const supportChannels = [
+    'Live Chat',
+    'Email Support',
+    'Phone Support',
+    'Social Media',
+    'Mobile App',
+    'Voice Assistant'
+  ];
+
+  const aiCapabilities = [
+    'Natural language processing',
+    'Sentiment analysis',
+    'Intent recognition',
+    'Automated responses',
+    'Learning from interactions',
+    'Multi-language support'
+  ];
+
+  return (
+    <div className="min-h-screen bg-white">
+      <section className="bg-gradient-to-br from-blue-900 via-blue-800 to-blue-700 py-20 text-center">
+        <div className="max-w-5xl mx-auto px-6">
+          <div className="inline-flex items-center px-4 py-2 rounded-full bg-white/10 text-white mb-6">
+            <MessageSquare className="w-4 h-4 mr-2" /> AI-Powered Customer Support
+          </div>
+          <h1 className="text-4xl md:text-6xl font-bold text-white mb-4">AI Customer Support Automation</h1>
+          <p className="text-blue-100 text-xl">Transform your customer support with intelligent automation, 24/7 availability, and personalized customer experiences.</p>
+        </div>
+      </section>
+
+      <section className="py-16 max-w-6xl mx-auto px-6">
+        <div className="grid md:grid-cols-2 gap-10">
+          <div>
+            <h2 className="text-3xl font-bold text-zion-slate-dark mb-4">Intelligent Support Features</h2>
+            <ul className="space-y-3">
+              {features.map((f) => (
+                <li key={f} className="flex items-start">
+                  <Check className="w-5 h-5 text-blue-600 mr-3 mt-0.5" />
+                  <span className="text-zion-slate-dark">{f}</span>
+                </li>
+              ))}
+            </ul>
+            <div className="mt-6 text-sm text-zion-slate-light">
+              GDPR/CCPA compliant. 99.9% uptime SLA. Enterprise-grade security.
+            </div>
+          </div>
+          <div className="bg-white border border-zion-slate-light/20 rounded-xl p-6 shadow-md">
+            <h3 className="text-2xl font-semibold text-zion-slate-dark mb-4">Support Plans</h3>
+            <div className="grid md:grid-cols-1 gap-4">
+              {tiers.map((t) => (
+                <div key={t.name} className="rounded-lg p-4 border border-zion-slate-light/30">
+                  <div className="text-lg font-semibold mb-1">{t.name}</div>
+                  <div className="text-2xl font-bold text-blue-600 mb-2">{t.price}</div>
+                  <ul className="text-sm text-zion-slate-dark space-y-1">
+                    {t.details.map((d) => (<li key={d}>{d}</li>))}
+                  </ul>
+                </div>
+              ))}
+            </div>
+            <div className="mt-6 flex flex-wrap gap-3">
+              <a href="/pricing" className="px-5 py-3 bg-blue-600/10 text-blue-600 rounded-lg hover:bg-blue-600/20 transition-colors inline-flex items-center">
+                View Full Pricing <ExternalLink className="w-4 h-4 ml-2" />
+              </a>
+              <a href="https://ziontechgroup.com" target="_blank" rel="noreferrer" className="px-5 py-3 border border-blue-600 text-blue-600 rounded-lg inline-flex items-center">
+                Learn More <ExternalLink className="w-4 h-4 ml-2" />
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div className="mt-12 grid md:grid-cols-2 gap-8">
+          <div>
+            <h3 className="text-2xl font-bold text-zion-slate-dark mb-4">Support Benefits</h3>
+            <ul className="space-y-3">
+              {benefits.map((b) => (
+                <li key={b} className="flex items-start">
+                  <TrendingUp className="w-5 h-5 text-blue-600 mr-3 mt-0.5" />
+                  <span className="text-zion-slate-dark">{b}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+          <div>
+            <h3 className="text-2xl font-bold text-zion-slate-dark mb-4">Use Cases</h3>
+            <ul className="space-y-3">
+              {useCases.map((u) => (
+                <li key={u} className="flex items-start">
+                  <Target className="w-5 h-5 text-blue-600 mr-3 mt-0.5" />
+                  <span className="text-zion-slate-dark">{u}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+
+        <div className="mt-12">
+          <h3 className="text-2xl font-bold text-zion-slate-dark mb-6 text-center">Multi-Channel Support</h3>
+          <div className="grid md:grid-cols-3 gap-6">
+            {supportChannels.map((c) => (
+              <div key={c} className="p-6 bg-white border border-zion-slate-light/20 rounded-xl shadow-sm">
+                <Headphones className="w-6 h-6 text-blue-600 mb-3" />
+                <div className="text-zion-slate-dark font-semibold">{c}</div>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        <div className="mt-12">
+          <h3 className="text-2xl font-bold text-zion-slate-dark mb-6 text-center">AI-Powered Capabilities</h3>
+          <div className="grid md:grid-cols-3 gap-6">
+            {aiCapabilities.map((c) => (
+              <div key={c} className="p-6 bg-white border border-zion-slate-light/20 rounded-xl shadow-sm">
+                <Brain className="w-6 h-6 text-blue-600 mb-3" />
+                <div className="text-zion-slate-dark font-semibold">{c}</div>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        <div className="mt-12 bg-gradient-to-r from-blue-50 to-blue-100 rounded-xl p-8">
+          <h3 className="text-2xl font-bold text-zion-slate-dark mb-4 text-center">Customer Support Workflow</h3>
+          <div className="grid md:grid-cols-4 gap-4 text-center">
+            <div>
+              <div className="w-12 h-12 bg-blue-600 text-white rounded-full flex items-center justify-center mx-auto mb-2 font-bold">1</div>
+              <h4 className="font-semibold text-zion-slate-dark mb-1">Customer Query</h4>
+              <p className="text-sm text-zion-slate-light">Multi-channel input</p>
+            </div>
+            <div>
+              <div className="w-12 h-12 bg-blue-600 text-white rounded-full flex items-center justify-center mx-auto mb-2 font-bold">2</div>
+              <h4 className="font-semibold text-zion-slate-dark mb-1">AI Analysis</h4>
+              <p className="text-sm text-zion-slate-light">Intent recognition</p>
+            </div>
+            <div>
+              <div className="w-12 h-12 bg-blue-600 text-white rounded-full flex items-center justify-center mx-auto mb-2 font-bold">3</div>
+              <h4 className="font-semibold text-zion-slate-dark mb-1">Automated Response</h4>
+              <p className="text-sm text-zion-slate-light">Instant resolution</p>
+            </div>
+            <div>
+              <div className="w-12 h-12 bg-blue-600 text-white rounded-full flex items-center justify-center mx-auto mb-2 font-bold">4</div>
+              <h4 className="font-semibold text-zion-slate-dark mb-1">Human Escalation</h4>
+              <p className="text-sm text-zion-slate-light">Complex cases only</p>
+            </div>
+          </div>
+        </div>
+
+        <div className="mt-12 bg-gradient-to-r from-green-50 to-green-100 rounded-xl p-8">
+          <h3 className="text-2xl font-bold text-zion-slate-dark mb-4 text-center">Support Metrics & Analytics</h3>
+          <div className="grid md:grid-cols-3 gap-6">
+            <div className="text-center">
+              <Clock className="w-12 h-12 text-green-600 mx-auto mb-3" />
+              <h4 className="font-semibold text-zion-slate-dark mb-2">Response Time</h4>
+                              <p className="text-sm text-zion-slate-light">Average: &lt; 30 seconds</p>
+            </div>
+            <div className="text-center">
+              <Users className="w-12 h-12 text-green-600 mx-auto mb-3" />
+              <h4 className="font-semibold text-zion-slate-dark mb-2">Customer Satisfaction</h4>
+                              <p className="text-sm text-zion-slate-light">Target: &gt; 90%</p>
+            </div>
+            <div className="text-center">
+              <Zap className="w-12 h-12 text-green-600 mx-auto mb-3" />
+              <h4 className="font-semibold text-zion-slate-dark mb-2">Resolution Rate</h4>
+                              <p className="text-sm text-zion-slate-light">Target: &gt; 85%</p>
+            </div>
+          </div>
+        </div>
+
+        <div className="mt-14 text-center">
+          <div className="text-sm text-zion-slate-light mb-2">Ready to revolutionize your customer support?</div>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <a href="tel:+13024640950" className="inline-flex items-center px-5 py-3 bg-blue-600 text-white rounded-lg">
+              <Phone className="w-4 h-4 mr-2"/> +1 302 464 0950
+            </a>
+            <a href="mailto:kleber@ziontechgroup.com" className="inline-flex items-center px-5 py-3 border border-blue-600 text-blue-600 rounded-lg">
+              <Mail className="w-4 h-4 mr-2"/> kleber@ziontechgroup.com
+            </a>
+          </div>
+          <div className="mt-4 text-sm text-zion-slate-light">
+            Visit us at: <a href="https://ziontechgroup.com" target="_blank" rel="noreferrer" className="text-blue-600 hover:underline">https://ziontechgroup.com</a>
+          </div>
+        </div>
+      </section>
+    </div>
+  );
+}
