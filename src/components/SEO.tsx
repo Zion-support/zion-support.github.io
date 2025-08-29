@@ -13,17 +13,6 @@ interface SEOProps {
   structuredData?: Record<string, any>;
   noindex?: boolean;
   nofollow?: boolean;
-<<<<<<< HEAD
-
-  structuredData?: object;
-  additionalMeta?: Array<{ name: string; content: string }>;
-  additionalLinks?: Array<{ rel: string; href: string }>;
-  author?: string;
-  publishedTime?: string;
-  modifiedTime?: string;
-  section?: string;
-  tags?: string[];
-=======
   language?: string;
   alternateLanguages?: Array<{ lang: string; url: string }>;
   robots?: string;
@@ -34,7 +23,6 @@ interface SEOProps {
   favicon?: string;
   msTileColor?: string;
   msConfig?: string;
->>>>>>> de64b7d36dddbc5b2729c5b6ebbba576107f3598
 }
 
 interface OrganizationSchema {
@@ -122,31 +110,17 @@ export function SEO({
   structuredData,
   noindex = false,
   nofollow = false,
-<<<<<<< HEAD
-  structuredData,
-  additionalMeta = [],
-  additionalLinks = [],
-  author = 'Zion Tech Group',
-  publishedTime,
-  modifiedTime,
-  section,
-  tags = []
+  language = 'en',
+  alternateLanguages = [],
+  robots = 'index, follow',
+  viewport = 'width=device-width, initial-scale=1, viewport-fit=cover',
+  themeColor = '#22ddd2',
+  manifest = '/manifest.json',
+  appleTouchIcon = '/images/apple-touch-icon.png',
+  favicon = '/favicon.ico',
+  msTileColor = '#22ddd2',
+  msConfig = '/browserconfig.xml'
 }) => {
-  // Default values
-  const defaultOgImage = ogImage || '/images/zion-tech-group-og-image.jpg';
-  const defaultOgUrl = ogUrl || window.location.href;
-  const defaultCanonicalUrl = canonicalUrl || window.location.href;
-  
-  // Enhanced title with brand
-  const enhancedTitle = title.includes('Zion Tech Group') ? title : `${title} | Zion Tech Group`;
-  
-  // Enhanced description
-  const enhancedDescription = description.length > 160 
-    ? `${description.substring(0, 157)}...` 
-    : description;
-
-  // Default keywords if not provided
-  const defaultKeywords = keywords || 'AI, artificial intelligence, technology, business solutions, Zion Tech Group, digital transformation, cloud computing, data analytics, IT infrastructure, micro SaaS, digital twin, enterprise software, machine learning, cybersecurity, DevOps, cloud infrastructure';
 
   // Generate structured data for organization
   const organizationStructuredData = {
@@ -318,18 +292,6 @@ export function SEO({
   ];
 
   return {
-=======
-  language = 'en',
-  alternateLanguages = [],
-  robots = 'index, follow',
-  viewport = 'width=device-width, initial-scale=1, viewport-fit=cover',
-  themeColor = '#22ddd2',
-  manifest = '/manifest.json',
-  appleTouchIcon = '/images/apple-touch-icon.png',
-  favicon = '/favicon.ico',
-  msTileColor = '#22ddd2',
-  msConfig = '/browserconfig.xml'
-}: SEOProps) {
   
   // Generate canonical URL
   const canonicalUrl = useMemo(() => {
@@ -416,7 +378,6 @@ export function SEO({
     };
 
     return {
->>>>>>> de64b7d36dddbc5b2729c5b6ebbba576107f3598
       organization: organizationSchema,
       website: webSiteSchema,
       breadcrumb: breadcrumbSchema
@@ -602,62 +563,6 @@ export function SEO({
       
       {/* Security Headers */}
       <meta httpEquiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.googletagmanager.com https://www.google-analytics.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:; connect-src 'self' https://www.google-analytics.com; frame-src 'self';" />
-
-=======
-      <title>{title}</title>
-      <meta name="description" content={description} />
-      <meta name="keywords" content={keywords.join(', ')} />
-      <meta name="author" content={author} />
-      <meta name="robots" content={noindex ? 'noindex' : robots} />
-      {nofollow && <meta name="robots" content="nofollow" />}
-      <meta name="language" content={language} />
-      <meta name="viewport" content={viewport} />
-      <meta name="theme-color" content={themeColor} />
-      <meta name="msapplication-TileColor" content={msTileColor} />
-      <meta name="msapplication-config" content={msConfig} />
-
-      {/* Canonical URL */}
-      <link rel="canonical" href={canonicalUrl} />
-
-      {/* Alternate Languages */}
-      {alternateLanguages.map(({ lang, url }) => (
-        <link key={lang} rel="alternate" hrefLang={lang} href={url} />
-      ))}
-
-      {/* Favicons */}
-      <link rel="icon" href={favicon} />
-      <link rel="apple-touch-icon" href={appleTouchIcon} />
-      <link rel="manifest" href={manifest} />
-
-      {/* Open Graph Meta Tags */}
-      <meta property="og:title" content={title} />
-      <meta property="og:description" content={description} />
-      <meta property="og:type" content={ogType} />
-      <meta property="og:url" content={canonicalUrl} />
-      <meta property="og:image" content={ogImage} />
-      <meta property="og:image:width" content="1200" />
-      <meta property="og:image:height" content="630" />
-      <meta property="og:site_name" content="Zion Tech Group" />
-      <meta property="og:locale" content={language} />
-
-      {/* Twitter Meta Tags */}
-      <meta name="twitter:card" content={twitterCard} />
-      <meta name="twitter:title" content={title} />
-      <meta name="twitter:description" content={description} />
-      <meta name="twitter:image" content={ogImage} />
-      <meta name="twitter:site" content="@ziontechgroup" />
-      <meta name="twitter:creator" content="@ziontechgroup" />
-
-      {/* Additional Meta Tags */}
-      <meta name="application-name" content="Zion Tech Group" />
-      <meta name="apple-mobile-web-app-title" content="Zion Tech Group" />
-      <meta name="apple-mobile-web-app-capable" content="yes" />
-      <meta name="apple-mobile-web-app-status-bar-style" content="default" />
-      <meta name="format-detection" content="telephone=no" />
-      <meta name="mobile-web-app-capable" content="yes" />
-
-      {/* DNS Prefetch */}
-      <link rel="dns-prefetch" href="//fonts.googleapis.com" />
       <link rel="dns-prefetch" href="//fonts.gstatic.com" />
       <link rel="dns-prefetch" href="//www.google-analytics.com" />
       <link rel="dns-prefetch" href="//www.googletagmanager.com" />
@@ -760,9 +665,8 @@ export function SEO({
             outline: 3px solid #22ddd2 !important;
             outline-offset: 2px !important;
           }
-        `}
+        `        }
       </style>
->>>>>>> de64b7d36dddbc5b2729c5b6ebbba576107f3598
     </Helmet>
   );
 }

@@ -221,7 +221,6 @@ export const EnhancedFuturisticFooter: React.FC = () => {
         { name: 'Careers', href: '/careers', featured: false },
         { name: 'Privacy Policy', href: '/privacy', featured: false },
         { name: 'Terms of Service', href: '/terms', featured: false }
->>>>>>> de64b7d36dddbc5b2729c5b6ebbba576107f3598
       ]
     }
   ];
