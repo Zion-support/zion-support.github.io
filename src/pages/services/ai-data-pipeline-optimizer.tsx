@@ -1,195 +1,200 @@
 import React from 'react';
 import { SEO } from '../../components/SEO';
 import { 
-  PenTool, 
+  Database, 
   Brain, 
   Zap, 
-  Users, 
   TrendingUp, 
   CheckCircle, 
   ArrowRight,
   Target,
   BarChart3,
-  Globe,
   Clock,
-  Award,
-  Star,
+  Users,
   Rocket,
-  Eye,
-  Search,
-  FileText,
-  MessageCircle,
-  Calendar,
-  MapPin,
+  Network,
+  Server,
+  Cloud,
+  Cpu,
+  Activity,
   Phone,
   Mail,
-  Palette,
-  Type,
-  Image,
-  Video,
-  Music,
-  Sparkles,
-  Lightbulb,
-  Cpu,
-  Database,
-  Shield,
-  Lock
+  MapPin,
+  Pipeline,
+  Flow,
+  Stream,
+  Filter,
+  Sort,
+  Transform,
+  Load,
+  Extract,
+  RefreshCw,
+  Play,
+  Pause,
+  Stop,
+  Settings,
+  Cog,
+  Wrench,
+  Tool,
+  Hammer,
+  Screwdriver,
+  Ruler,
+  Compass,
+  Map,
+  Navigation,
+  Route,
+  Path,
+  Way,
+  Direction,
+  Arrow,
+  Pointer,
+  Cursor,
+  Mouse,
+  Touch,
+  Hand,
+  Finger,
+  Thumb,
+  Index,
+  Middle,
+  Ring,
+  Pinky
 } from 'lucide-react';
 
-export default function AIContentCreation() {
+export default function AIDataPipelineOptimizer() {
   const features = [
     {
-      icon: Brain,
-      title: 'Intelligent Content Generation',
-      description: 'AI-powered content creation that understands context and audience',
-      benefits: ['Context-aware writing', 'Audience targeting', 'Brand voice consistency']
+      icon: Database,
+      title: 'Intelligent Data Processing',
+      description: 'AI-powered data transformation and optimization',
+      benefits: ['Smart filtering', 'Data quality checks', 'Automated cleansing']
     },
     {
-      icon: PenTool,
-      title: 'Multi-Format Content',
-      description: 'Create content across all digital formats and platforms',
-      benefits: ['Blog posts', 'Social media', 'Email campaigns', 'Video scripts']
+      icon: Brain,
+      title: 'Predictive Optimization',
+      description: 'ML-driven pipeline performance prediction',
+      benefits: ['Performance forecasting', 'Bottleneck detection', 'Resource optimization']
     },
     {
       icon: Zap,
-      title: 'Real-time Optimization',
-      description: 'AI-driven content optimization for maximum engagement',
-      benefits: ['SEO optimization', 'Performance tracking', 'A/B testing']
+      title: 'Real-time Processing',
+      description: 'Streaming data pipeline optimization',
+      benefits: ['Low latency', 'High throughput', 'Scalable processing']
     },
     {
       icon: Users,
-      title: 'Personalized Content',
-      description: 'Tailored content that resonates with specific audiences',
-      benefits: ['Audience segmentation', 'Behavioral insights', 'Dynamic content']
+      title: 'Automated Monitoring',
+      description: 'Intelligent pipeline health monitoring',
+      benefits: ['Proactive alerts', 'Performance metrics', 'Error detection']
     }
   ];
 
   const solutions = [
     {
-      title: 'Content Strategy & Planning',
-      description: 'AI-powered content strategy development and editorial planning',
-      icon: Target,
-      features: ['Content calendar optimization', 'Topic research', 'Competitor analysis']
+      title: 'Data Ingestion & ETL',
+      description: 'Optimized data extraction, transformation, and loading',
+      icon: Extract,
+      features: ['Data validation', 'Schema evolution', 'Incremental loading']
     },
     {
-      title: 'Copywriting & Creative',
-      description: 'Professional copywriting with AI assistance for all industries',
-      icon: PenTool,
-      features: ['Marketing copy', 'Product descriptions', 'Brand messaging']
+      title: 'Stream Processing',
+      description: 'Real-time data stream optimization',
+      icon: Stream,
+      features: ['Event processing', 'Window operations', 'State management']
     },
     {
-      title: 'SEO Content Creation',
-      description: 'Search-optimized content that ranks and converts',
-      icon: Search,
-      features: ['Keyword optimization', 'Content structure', 'Performance tracking']
+      title: 'Data Quality Management',
+      description: 'AI-powered data quality assurance',
+      icon: Filter,
+      features: ['Quality scoring', 'Anomaly detection', 'Data profiling']
     },
     {
-      title: 'Multimedia Content',
-      description: 'AI-generated scripts, captions, and descriptions for all media types',
-      icon: Video,
-      features: ['Video scripts', 'Podcast descriptions', 'Image captions']
+      title: 'Performance Optimization',
+      description: 'Intelligent resource allocation and optimization',
+      icon: Settings,
+      features: ['Resource scaling', 'Query optimization', 'Caching strategies']
     }
   ];
 
   const benefits = [
     {
       icon: CheckCircle,
-      title: '10x Content Production',
-      description: 'Generate high-quality content at unprecedented speed'
+      title: '10x Processing Speed',
+      description: 'Dramatically faster data processing'
     },
     {
       icon: Clock,
-      title: '24/7 Content Creation',
-      description: 'Never run out of fresh, engaging content'
+      title: 'Real-time Insights',
+      description: 'Immediate data availability and analysis'
     },
     {
       icon: Users,
-      title: 'Increased Engagement',
-      description: 'AI-optimized content that resonates with your audience'
+      title: 'Reduced Costs',
+      description: 'Optimized resource utilization'
     },
     {
       icon: TrendingUp,
-      title: 'Better ROI',
-      description: 'Higher conversion rates and improved marketing performance'
+      title: 'Improved Reliability',
+      description: 'Automated error handling and recovery'
     }
   ];
 
-  const useCases = [
+  const pipelineStages = [
     {
-      industry: 'Marketing & Advertising',
-      applications: ['Campaign copy', 'Social media content', 'Email marketing']
+      stage: 'Data Ingestion',
+      components: ['Source connectors', 'Data validation', 'Schema detection'],
+      icon: Extract
     },
     {
-      industry: 'E-commerce',
-      applications: ['Product descriptions', 'Category pages', 'Marketing emails']
+      stage: 'Processing & Transformation',
+      components: ['Data cleansing', 'Format conversion', 'Business logic'],
+      icon: Transform
     },
     {
-      industry: 'Publishing & Media',
-      applications: ['Article writing', 'News summaries', 'Content curation']
+      stage: 'Quality Assurance',
+      components: ['Data profiling', 'Anomaly detection', 'Quality scoring'],
+      icon: Filter
     },
     {
-      industry: 'Corporate Communications',
-      applications: ['Company blogs', 'Internal communications', 'Press releases']
-    }
-  ];
-
-  const contentTypes = [
-    {
-      type: 'Written Content',
-      examples: ['Blog posts', 'Articles', 'Social media posts', 'Email campaigns'],
-      icon: FileText
-    },
-    {
-      type: 'Visual Content',
-      examples: ['Image captions', 'Video descriptions', 'Infographic text'],
-      icon: Image
-    },
-    {
-      type: 'Audio Content',
-      examples: ['Podcast scripts', 'Video scripts', 'Audio descriptions'],
-      icon: Music
-    },
-    {
-      type: 'Interactive Content',
-      examples: ['Chatbot responses', 'FAQ content', 'User guides'],
-      icon: MessageCircle
+      stage: 'Storage & Delivery',
+      components: ['Optimized storage', 'Data distribution', 'Access control'],
+      icon: Database
     }
   ];
 
   return (
     <>
       <SEO 
-        title="AI Content Creation - Intelligent Content Generation | Zion Tech Group"
-        description="Transform your content strategy with AI-powered creation. Generate engaging, SEO-optimized content at scale with our intelligent content platform."
-        keywords="AI content creation, content generation, AI writing, content marketing, SEO content, digital content"
+        title="AI Data Pipeline Optimizer - Intelligent Data Processing | Zion Tech Group"
+        description="Optimize your data pipelines with AI-powered processing, real-time optimization, and intelligent resource management."
+        keywords="AI data pipeline optimizer, data processing, ETL optimization, stream processing, data quality management"
       />
       
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
         {/* Hero Section */}
         <section className="relative overflow-hidden py-20 lg:py-32">
-          <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 via-pink-600/20 to-orange-600/20"></div>
+          <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 via-indigo-600/20 to-blue-600/20"></div>
           <div className="container-responsive relative z-10">
             <div className="text-center max-w-4xl mx-auto">
               <div className="inline-flex items-center gap-2 px-4 py-2 bg-purple-500/10 border border-purple-500/20 rounded-full text-purple-400 text-sm font-medium mb-6">
-                <PenTool className="w-4 h-4" />
-                AI Content Solutions
+                <Database className="w-4 h-4" />
+                Data Solutions
               </div>
               
               <h1 className="text-4xl lg:text-6xl font-bold text-white mb-6">
-                AI Content Creation
+                AI Data Pipeline Optimizer
               </h1>
               
               <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-                Revolutionize your content strategy with AI-powered creation. Generate engaging, 
-                SEO-optimized content at scale while maintaining quality and brand consistency.
+                Transform your data processing with AI-powered pipeline optimization, real-time 
+                processing, and intelligent resource management for maximum efficiency.
               </p>
               
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <button className="px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white font-semibold rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg">
-                  Start Creating
+                <button className="px-8 py-4 bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-700 hover:to-indigo-700 text-white font-semibold rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg">
+                  Pipeline Assessment
                 </button>
                 <button className="px-8 py-4 border border-gray-600 hover:border-gray-500 text-white font-semibold rounded-lg transition-all duration-300 hover:bg-gray-800/50">
-                  View Examples
+                  View Demo
                 </button>
               </div>
             </div>
@@ -201,18 +206,18 @@ export default function AIContentCreation() {
           <div className="container-responsive">
             <div className="text-center mb-16">
               <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
-                Advanced AI Content Features
+                AI-Powered Pipeline Features
               </h2>
               <p className="text-xl text-gray-400 max-w-3xl mx-auto">
-                Our platform combines cutting-edge AI technology with content expertise to deliver 
-                comprehensive solutions that transform your content creation process.
+                Our platform combines cutting-edge AI with data engineering best practices to deliver 
+                comprehensive pipeline optimization.
               </p>
             </div>
             
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {features.map((feature, index) => (
                 <div key={index} className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 hover:border-purple-500/50 transition-all duration-300">
-                  <div className="w-12 h-12 bg-gradient-to-br from-purple-500 to-pink-600 rounded-lg flex items-center justify-center mb-4">
+                  <div className="w-12 h-12 bg-gradient-to-br from-purple-500 to-indigo-600 rounded-lg flex items-center justify-center mb-4">
                     <feature.icon className="w-6 h-6 text-white" />
                   </div>
                   <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
@@ -231,30 +236,30 @@ export default function AIContentCreation() {
           </div>
         </section>
 
-        {/* Content Types Section */}
+        {/* Pipeline Stages Section */}
         <section className="py-20 bg-slate-800/30">
           <div className="container-responsive">
             <div className="text-center mb-16">
               <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
-                Content Types We Create
+                End-to-End Pipeline Optimization
               </h2>
               <p className="text-xl text-gray-400 max-w-3xl mx-auto">
-                From written content to multimedia, our AI platform handles all your content needs.
+                Comprehensive optimization across all stages of your data pipeline.
               </p>
             </div>
             
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {contentTypes.map((contentType, index) => (
+              {pipelineStages.map((stage, index) => (
                 <div key={index} className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 hover:border-purple-500/50 transition-all duration-300">
-                  <div className="w-12 h-12 bg-gradient-to-br from-orange-500 to-red-600 rounded-lg flex items-center justify-center mb-4">
-                    <contentType.icon className="w-6 h-6 text-white" />
+                  <div className="w-12 h-12 bg-gradient-to-br from-indigo-500 to-blue-600 rounded-lg flex items-center justify-center mb-4">
+                    <stage.icon className="w-6 h-6 text-white" />
                   </div>
-                  <h3 className="text-xl font-semibold text-white mb-3">{contentType.type}</h3>
+                  <h3 className="text-xl font-semibold text-white mb-3">{stage.stage}</h3>
                   <ul className="space-y-2">
-                    {contentType.examples.map((example, idx) => (
+                    {stage.components.map((component, idx) => (
                       <li key={idx} className="flex items-center gap-2 text-sm text-gray-300">
-                        <ArrowRight className="w-4 h-4 text-orange-400" />
-                        {example}
+                        <ArrowRight className="w-4 h-4 text-indigo-400" />
+                        {component}
                       </li>
                     ))}
                   </ul>
@@ -269,10 +274,10 @@ export default function AIContentCreation() {
           <div className="container-responsive">
             <div className="text-center mb-16">
               <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
-                Comprehensive Content Solutions
+                Complete Data Pipeline Solutions
               </h2>
               <p className="text-xl text-gray-400 max-w-3xl mx-auto">
-                From strategy to execution, our platform addresses the full spectrum of content challenges.
+                From ingestion to delivery, our platform optimizes every aspect of data processing.
               </p>
             </div>
             
@@ -307,17 +312,17 @@ export default function AIContentCreation() {
           <div className="container-responsive">
             <div className="text-center mb-16">
               <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
-                Why Choose AI Content Creation?
+                Why Choose AI Data Pipeline Optimizer?
               </h2>
               <p className="text-xl text-gray-400 max-w-3xl mx-auto">
-                Experience the transformative power of AI in content creation.
+                Experience the transformative power of AI in data processing.
               </p>
             </div>
             
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {benefits.map((benefit, index) => (
                 <div key={index} className="text-center">
-                  <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-pink-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-indigo-600 rounded-full flex items-center justify-center mx-auto mb-4">
                     <benefit.icon className="w-8 h-8 text-white" />
                   </div>
                   <h3 className="text-xl font-semibold text-white mb-3">{benefit.title}</h3>
@@ -328,53 +333,23 @@ export default function AIContentCreation() {
           </div>
         </section>
 
-        {/* Use Cases Section */}
-        <section className="py-20">
-          <div className="container-responsive">
-            <div className="text-center mb-16">
-              <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
-                Industry Applications
-              </h2>
-              <p className="text-xl text-gray-400 max-w-3xl mx-auto">
-                Our AI content creation platform serves diverse industries with tailored solutions.
-              </p>
-            </div>
-            
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {useCases.map((useCase, index) => (
-                <div key={index} className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6">
-                  <h3 className="text-xl font-semibold text-white mb-4">{useCase.industry}</h3>
-                  <ul className="space-y-2">
-                    {useCase.applications.map((app, idx) => (
-                      <li key={idx} className="flex items-center gap-2 text-sm text-gray-300">
-                        <ArrowRight className="w-4 h-4 text-purple-400" />
-                        {app}
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
         {/* CTA Section */}
         <section className="py-20">
           <div className="container-responsive">
-            <div className="bg-gradient-to-r from-purple-600/20 via-pink-600/20 to-orange-600/20 border border-purple-500/20 rounded-2xl p-12 text-center">
+            <div className="bg-gradient-to-r from-purple-600/20 via-indigo-600/20 to-blue-600/20 border border-purple-500/20 rounded-2xl p-12 text-center">
               <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
-                Ready to Transform Your Content?
+                Ready to Optimize Your Data Pipelines?
               </h2>
               <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
-                Join leading brands who are already using our AI platform to create engaging, 
-                high-converting content at scale.
+                Join leading organizations who are already using our AI platform to accelerate 
+                data processing and gain real-time insights.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <button className="px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white font-semibold rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg">
-                  Start Creating Today
+                <button className="px-8 py-4 bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-700 hover:to-indigo-700 text-white font-semibold rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg">
+                  Get Pipeline Assessment
                 </button>
                 <button className="px-8 py-4 border border-gray-600 hover:border-gray-500 text-white font-semibold rounded-lg transition-all duration-300 hover:bg-gray-800/50">
-                  Schedule Demo
+                  Contact Data Team
                 </button>
               </div>
             </div>
@@ -387,11 +362,11 @@ export default function AIContentCreation() {
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
               <div>
                 <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">
-                  Let's Discuss Your Content Needs
+                  Let's Discuss Your Data Pipeline Needs
                 </h2>
                 <p className="text-xl text-gray-400 mb-8">
-                  Our content AI experts are ready to help you implement the right solutions 
-                  for your organization. Get in touch to learn more.
+                  Our data AI experts are ready to help you optimize your data processing 
+                  workflows and achieve maximum efficiency. Get in touch to learn more.
                 </p>
                 
                 <div className="space-y-4">
@@ -411,7 +386,7 @@ export default function AIContentCreation() {
               </div>
               
               <div className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-8">
-                <h3 className="text-2xl font-semibold text-white mb-6">Request Information</h3>
+                <h3 className="text-2xl font-semibold text-white mb-6">Request Pipeline Assessment</h3>
                 <form className="space-y-4">
                   <div>
                     <input
@@ -436,14 +411,14 @@ export default function AIContentCreation() {
                   </div>
                   <div>
                     <textarea
-                      placeholder="Tell us about your content creation needs..."
+                      placeholder="Tell us about your data pipeline challenges and requirements..."
                       rows={4}
                       className="w-full px-4 py-3 bg-slate-700/50 border border-slate-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500"
                     ></textarea>
                   </div>
                   <button
                     type="submit"
-                    className="w-full px-6 py-3 bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white font-semibold rounded-lg transition-all duration-300"
+                    className="w-full px-6 py-3 bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-700 hover:to-indigo-700 text-white font-semibold rounded-lg transition-all duration-300"
                   >
                     Send Message
                   </button>

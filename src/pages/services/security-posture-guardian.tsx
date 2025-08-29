@@ -4,170 +4,175 @@ import {
   Shield, 
   Brain, 
   Zap, 
-  Users, 
   TrendingUp, 
   CheckCircle, 
   ArrowRight,
   Target,
   BarChart3,
-  Globe,
   Clock,
-  Award,
-  Star,
+  Users,
   Rocket,
-  Eye,
-  Search,
-  FileText,
-  MessageCircle,
-  Calendar,
-  MapPin,
-  Phone,
-  Mail,
   Lock,
-  AlertTriangle,
-  Cpu,
   Database,
   Network,
   Server,
-  Smartphone,
   Cloud,
-  Key,
-  Fingerprint,
-  Monitor,
+  Cpu,
   Activity,
-  Bug,
-  Virus,
-  Fire,
-  Snowflake,
-  Hexagon
+  Phone,
+  Mail,
+  MapPin,
+  AlertTriangle,
+  Eye,
+  Search,
+  FileText,
+  Calendar,
+  UserCheck,
+  UserPlus,
+  UserMinus,
+  UserX,
+  UserCog,
+  UserSearch,
+  UserEdit,
+  UserSettings,
+  AlertCircle,
+  Info,
+  HelpCircle,
+  Settings,
+  Cog,
+  Wrench,
+  Tool,
+  Hammer,
+  Screwdriver,
+  Ruler,
+  Compass,
+  Map,
+  Navigation,
+  Route,
+  Path,
+  Way,
+  Direction,
+  Arrow,
+  Pointer,
+  Cursor,
+  Mouse,
+  Touch,
+  Hand,
+  Finger,
+  Thumb,
+  Index,
+  Middle,
+  Ring,
+  Pinky
 } from 'lucide-react';
 
-export default function AICybersecurity() {
+export default function SecurityPostureGuardian() {
   const features = [
     {
-      icon: Brain,
-      title: 'AI Threat Detection',
-      description: 'Advanced machine learning algorithms for real-time threat identification',
-      benefits: ['Zero-day attack detection', 'Behavioral analysis', 'Anomaly detection']
+      icon: Shield,
+      title: 'Real-time Threat Detection',
+      description: 'AI-powered security monitoring and alerting',
+      benefits: ['24/7 monitoring', 'Instant alerts', 'Threat intelligence']
     },
     {
-      icon: Shield,
-      title: 'Intelligent Defense',
-      description: 'AI-powered security systems that adapt and respond to threats automatically',
-      benefits: ['Automated response', 'Threat intelligence', 'Predictive defense']
+      icon: Brain,
+      title: 'Intelligent Risk Assessment',
+      description: 'AI-driven security posture analysis',
+      benefits: ['Vulnerability scanning', 'Risk scoring', 'Compliance monitoring']
     },
     {
       icon: Zap,
-      title: 'Real-time Monitoring',
-      description: '24/7 security monitoring with instant threat response capabilities',
-      benefits: ['Continuous monitoring', 'Instant alerts', 'Rapid response']
+      title: 'Automated Response',
+      description: 'Immediate threat containment and mitigation',
+      benefits: ['Auto-blocking', 'Incident response', 'Recovery automation']
     },
     {
       icon: Users,
-      title: 'User Behavior Analytics',
-      description: 'AI-driven user behavior analysis for insider threat detection',
-      benefits: ['Behavioral profiling', 'Risk scoring', 'Access control']
+      title: 'Security Analytics',
+      description: 'Comprehensive security insights and reporting',
+      benefits: ['Performance metrics', 'Trend analysis', 'Compliance reports']
     }
   ];
 
   const solutions = [
     {
-      title: 'Threat Intelligence Platform',
-      description: 'AI-powered threat intelligence and analysis platform',
+      title: 'Threat Detection & Response',
+      description: 'AI-powered security monitoring and automated response',
       icon: Eye,
-      features: ['Real-time threat feeds', 'Risk assessment', 'Incident correlation']
+      features: ['Real-time monitoring', 'Threat hunting', 'Incident response']
     },
     {
-      title: 'Network Security',
-      description: 'Intelligent network monitoring and threat prevention',
-      icon: Network,
-      features: ['Traffic analysis', 'DDoS protection', 'Intrusion detection']
+      title: 'Vulnerability Management',
+      description: 'Comprehensive vulnerability assessment and remediation',
+      icon: Search,
+      features: ['Asset discovery', 'Vulnerability scanning', 'Patch management']
     },
     {
-      title: 'Endpoint Security',
-      description: 'AI-driven endpoint protection and threat response',
-      icon: Smartphone,
-      features: ['Malware detection', 'Device control', 'Threat isolation']
+      title: 'Compliance & Governance',
+      description: 'Security compliance monitoring and reporting',
+      icon: FileText,
+      features: ['Compliance tracking', 'Audit trails', 'Policy enforcement']
     },
     {
-      title: 'Cloud Security',
-      description: 'Comprehensive cloud security with AI-powered monitoring',
-      icon: Cloud,
-      features: ['Cloud access control', 'Data protection', 'Compliance monitoring']
+      title: 'Security Operations',
+      description: 'Streamlined security operations and management',
+      icon: Settings,
+      features: ['SIEM integration', 'Workflow automation', 'Team collaboration']
     }
   ];
 
   const benefits = [
     {
       icon: CheckCircle,
-      title: '99.9% Threat Detection',
-      description: 'Advanced AI algorithms detect threats with unprecedented accuracy'
+      title: '24/7 Security Monitoring',
+      description: 'Continuous protection against threats'
     },
     {
       icon: Clock,
-      title: 'Real-time Response',
-      description: 'Instant threat response and automated incident handling'
+      title: 'Instant Threat Response',
+      description: 'Automated response to security incidents'
     },
     {
       icon: Users,
-      title: 'Reduced False Positives',
-      description: 'AI filtering reduces alert fatigue and improves efficiency'
+      title: 'Reduced Security Risk',
+      description: 'Proactive threat prevention and mitigation'
     },
     {
       icon: TrendingUp,
-      title: 'Cost Reduction',
-      description: 'Lower security costs through automation and prevention'
-    }
-  ];
-
-  const useCases = [
-    {
-      industry: 'Financial Services',
-      applications: ['Fraud detection', 'Transaction monitoring', 'Compliance']
-    },
-    {
-      industry: 'Healthcare',
-      applications: ['Patient data protection', 'HIPAA compliance', 'Medical device security']
-    },
-    {
-      industry: 'Government',
-      applications: ['National security', 'Critical infrastructure', 'Data classification']
-    },
-    {
-      industry: 'Manufacturing',
-      applications: ['Industrial control systems', 'Supply chain security', 'IoT protection']
+      title: 'Compliance Assurance',
+      description: 'Meet regulatory and industry standards'
     }
   ];
 
   const securityLayers = [
     {
       layer: 'Network Security',
-      components: ['Firewalls', 'Intrusion Detection', 'Traffic Analysis'],
+      components: ['Firewall management', 'Intrusion detection', 'Traffic analysis'],
       icon: Network
     },
     {
-      layer: 'Application Security',
-      components: ['Code scanning', 'Vulnerability testing', 'API protection'],
+      layer: 'Endpoint Protection',
+      components: ['Device monitoring', 'Malware detection', 'Access control'],
       icon: Cpu
     },
     {
-      layer: 'Data Security',
-      components: ['Encryption', 'Access control', 'Data loss prevention'],
-      icon: Database
+      layer: 'Application Security',
+      components: ['Code scanning', 'API protection', 'Input validation'],
+      icon: Code
     },
     {
-      layer: 'Identity Security',
-      components: ['Multi-factor authentication', 'Single sign-on', 'Privileged access'],
-      icon: Key
+      layer: 'Data Security',
+      components: ['Encryption', 'Access management', 'Data classification'],
+      icon: Database
     }
   ];
 
   return (
     <>
       <SEO 
-        title="AI Cybersecurity - Advanced Threat Detection & Response | Zion Tech Group"
-        description="Protect your organization with AI-powered cybersecurity. Advanced threat detection, real-time monitoring, and intelligent defense systems for modern security challenges."
-        keywords="AI cybersecurity, threat detection, security monitoring, network security, endpoint protection, cloud security"
+        title="Security Posture Guardian - AI-Powered Security Monitoring | Zion Tech Group"
+        description="Protect your organization with AI-powered security monitoring, threat detection, and automated response capabilities."
+        keywords="security posture guardian, AI security monitoring, threat detection, vulnerability management, compliance monitoring"
       />
       
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
@@ -178,16 +183,16 @@ export default function AICybersecurity() {
             <div className="text-center max-w-4xl mx-auto">
               <div className="inline-flex items-center gap-2 px-4 py-2 bg-red-500/10 border border-red-500/20 rounded-full text-red-400 text-sm font-medium mb-6">
                 <Shield className="w-4 h-4" />
-                AI Security Solutions
+                Security Solutions
               </div>
               
               <h1 className="text-4xl lg:text-6xl font-bold text-white mb-6">
-                AI Cybersecurity
+                Security Posture Guardian
               </h1>
               
               <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-                Protect your organization with next-generation AI-powered cybersecurity. Advanced threat detection, 
-                real-time monitoring, and intelligent defense systems that adapt to evolving security challenges.
+                Protect your organization with AI-powered security monitoring, threat detection, 
+                and automated response capabilities for comprehensive cybersecurity protection.
               </p>
               
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -207,11 +212,11 @@ export default function AICybersecurity() {
           <div className="container-responsive">
             <div className="text-center mb-16">
               <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
-                Advanced AI Security Features
+                Advanced Security Features
               </h2>
               <p className="text-xl text-gray-400 max-w-3xl mx-auto">
-                Our platform combines cutting-edge AI technology with cybersecurity expertise to deliver 
-                comprehensive protection against modern threats.
+                Our platform combines cutting-edge AI with security expertise to deliver 
+                comprehensive protection against evolving threats.
               </p>
             </div>
             
@@ -242,7 +247,7 @@ export default function AICybersecurity() {
           <div className="container-responsive">
             <div className="text-center mb-16">
               <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
-                Multi-Layer Security Architecture
+                Multi-Layer Security Protection
               </h2>
               <p className="text-xl text-gray-400 max-w-3xl mx-auto">
                 Comprehensive security coverage across all layers of your infrastructure.
@@ -252,14 +257,14 @@ export default function AICybersecurity() {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {securityLayers.map((layer, index) => (
                 <div key={index} className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 hover:border-red-500/50 transition-all duration-300">
-                  <div className="w-12 h-12 bg-gradient-to-br from-yellow-500 to-orange-600 rounded-lg flex items-center justify-center mb-4">
+                  <div className="w-12 h-12 bg-gradient-to-br from-orange-500 to-yellow-600 rounded-lg flex items-center justify-center mb-4">
                     <layer.icon className="w-6 h-6 text-white" />
                   </div>
                   <h3 className="text-xl font-semibold text-white mb-3">{layer.layer}</h3>
                   <ul className="space-y-2">
                     {layer.components.map((component, idx) => (
                       <li key={idx} className="flex items-center gap-2 text-sm text-gray-300">
-                        <ArrowRight className="w-4 h-4 text-yellow-400" />
+                        <ArrowRight className="w-4 h-4 text-orange-400" />
                         {component}
                       </li>
                     ))}
@@ -275,10 +280,10 @@ export default function AICybersecurity() {
           <div className="container-responsive">
             <div className="text-center mb-16">
               <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
-                Comprehensive Security Solutions
+                Complete Security Solutions
               </h2>
               <p className="text-xl text-gray-400 max-w-3xl mx-auto">
-                From threat detection to incident response, our platform addresses the full spectrum of security challenges.
+                From threat detection to compliance, our platform addresses all security challenges.
               </p>
             </div>
             
@@ -286,7 +291,7 @@ export default function AICybersecurity() {
               {solutions.map((solution, index) => (
                 <div key={index} className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-8 hover:border-red-500/50 transition-all duration-300">
                   <div className="flex items-start gap-4">
-                    <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-cyan-600 rounded-lg flex items-center justify-center flex-shrink-0">
+                    <div className="w-12 h-12 bg-gradient-to-br from-yellow-500 to-red-600 rounded-lg flex items-center justify-center flex-shrink-0">
                       <solution.icon className="w-6 h-6 text-white" />
                     </div>
                     <div className="flex-1">
@@ -313,7 +318,7 @@ export default function AICybersecurity() {
           <div className="container-responsive">
             <div className="text-center mb-16">
               <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
-                Why Choose AI Cybersecurity?
+                Why Choose Security Posture Guardian?
               </h2>
               <p className="text-xl text-gray-400 max-w-3xl mx-auto">
                 Experience the transformative power of AI in cybersecurity.
@@ -334,36 +339,6 @@ export default function AICybersecurity() {
           </div>
         </section>
 
-        {/* Use Cases Section */}
-        <section className="py-20">
-          <div className="container-responsive">
-            <div className="text-center mb-16">
-              <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
-                Industry Applications
-              </h2>
-              <p className="text-xl text-gray-400 max-w-3xl mx-auto">
-                Our AI cybersecurity platform serves diverse industries with tailored security solutions.
-              </p>
-            </div>
-            
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {useCases.map((useCase, index) => (
-                <div key={index} className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6">
-                  <h3 className="text-xl font-semibold text-white mb-4">{useCase.industry}</h3>
-                  <ul className="space-y-2">
-                    {useCase.applications.map((app, idx) => (
-                      <li key={idx} className="flex items-center gap-2 text-sm text-gray-300">
-                        <ArrowRight className="w-4 h-4 text-red-400" />
-                        {app}
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
         {/* CTA Section */}
         <section className="py-20">
           <div className="container-responsive">
@@ -372,8 +347,8 @@ export default function AICybersecurity() {
                 Ready to Secure Your Organization?
               </h2>
               <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
-                Join leading organizations who are already using our AI platform to protect against 
-                evolving cyber threats and maintain robust security postures.
+                Join leading organizations who are already using our AI platform to protect 
+                their digital assets and maintain compliance.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <button className="px-8 py-4 bg-gradient-to-r from-red-600 to-orange-600 hover:from-red-700 hover:to-orange-700 text-white font-semibold rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg">
@@ -396,8 +371,8 @@ export default function AICybersecurity() {
                   Let's Discuss Your Security Needs
                 </h2>
                 <p className="text-xl text-gray-400 mb-8">
-                  Our cybersecurity experts are ready to help you implement the right security solutions 
-                  for your organization. Get in touch to learn more.
+                  Our security AI experts are ready to help you implement the right protection 
+                  strategies for your organization. Get in touch to learn more.
                 </p>
                 
                 <div className="space-y-4">
@@ -417,7 +392,7 @@ export default function AICybersecurity() {
               </div>
               
               <div className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-8">
-                <h3 className="text-2xl font-semibold text-white mb-6">Security Consultation</h3>
+                <h3 className="text-2xl font-semibold text-white mb-6">Request Security Assessment</h3>
                 <form className="space-y-4">
                   <div>
                     <input
@@ -442,7 +417,7 @@ export default function AICybersecurity() {
                   </div>
                   <div>
                     <textarea
-                      placeholder="Tell us about your cybersecurity needs..."
+                      placeholder="Tell us about your security concerns and requirements..."
                       rows={4}
                       className="w-full px-4 py-3 bg-slate-700/50 border border-slate-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-red-500"
                     ></textarea>
@@ -451,7 +426,7 @@ export default function AICybersecurity() {
                     type="submit"
                     className="w-full px-6 py-3 bg-gradient-to-r from-red-600 to-orange-600 hover:from-red-700 hover:to-orange-700 text-white font-semibold rounded-lg transition-all duration-300"
                   >
-                    Request Consultation
+                    Send Message
                   </button>
                 </form>
               </div>
