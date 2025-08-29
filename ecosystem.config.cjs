@@ -187,6 +187,76 @@ module.exports = {
         NODE_ENV: 'production',
         AUTOMATION_INTERVAL: '21600000' // 6 hours
       }
+    },
+
+    // AI Code Analyzer - runs every hour (NEW)
+    {
+      name: 'ai-code-analyzer',
+      script: './scripts/automation/ai-code-analyzer.cjs',
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      max_memory_restart: '512M',
+      env: {
+        NODE_ENV: 'production',
+        AUTOMATION_INTERVAL: '3600000' // 1 hour
+      }
+    },
+
+    // Smart Dependency Analyzer - runs every 6 hours (NEW)
+    {
+      name: 'smart-dependency-analyzer',
+      script: './scripts/automation/smart-dependency-analyzer.cjs',
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      max_memory_restart: '512M',
+      env: {
+        NODE_ENV: 'production',
+        AUTOMATION_INTERVAL: '21600000' // 6 hours
+      }
+    },
+
+    // Intelligent Performance Optimizer - runs every 2 hours (NEW)
+    {
+      name: 'intelligent-performance-optimizer',
+      script: './scripts/automation/intelligent-performance-optimizer.cjs',
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      max_memory_restart: '512M',
+      env: {
+        NODE_ENV: 'production',
+        AUTOMATION_INTERVAL: '7200000' // 2 hours
+      }
+    },
+
+    // Intelligent Testing Automation - runs every hour (NEW)
+    {
+      name: 'intelligent-testing-automation',
+      script: './scripts/automation/intelligent-testing-automation.cjs',
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      max_memory_restart: '512M',
+      env: {
+        NODE_ENV: 'production',
+        AUTOMATION_INTERVAL: '3600000' // 1 hour
+      }
+    },
+
+    // Intelligent Deployment Automation - runs every 30 minutes (NEW)
+    {
+      name: 'intelligent-deployment-automation',
+      script: './scripts/automation/intelligent-deployment-automation.cjs',
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      max_memory_restart: '512M',
+      env: {
+        NODE_ENV: 'production',
+        AUTOMATION_INTERVAL: '1800000' // 30 minutes
+      }
     }
   ]
 };
