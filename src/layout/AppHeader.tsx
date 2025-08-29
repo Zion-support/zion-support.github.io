@@ -1,4 +1,4 @@
-import { ArrowRight, Atom, BookOpen, Brain, Building, Building2, ChevronDown, Cloud, Code, Cpu, DollarSign, FileText, Globe, HeartHandshake, Heart, HelpCircle, Leaf, Lock, Mail, MapPin, Menu, MessageCircle, PenTool, Phone, Rocket, Scale, Search, Settings, Shield, ShoppingCart, Star, Target, TrendingUp, Users, X, Zap } from 'lucide-react';
+import { ArrowRight, Atom, BookOpen, Brain, Building, Building2, ChevronDown, Cloud, Code, Cpu, DollarSign, FileText, Globe, HeartHandshake, Heart, HelpCircle, Leaf, Lock, Mail, MapPin, Menu, MessageCircle, PenTool, Phone, Rocket, Scale, Search, Settings, Shield, ShoppingCart, Star, Target, TrendingUp, Users, X, Zap, Truck, Play } from 'lucide-react';
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { ThemeToggle } from '../components/ThemeToggle';
@@ -61,8 +61,8 @@ export function AppHeader() {
       color: 'from-purple-500 to-cyan-500'
     },
     { 
-      name: 'AI Healthcare Platform', 
-      href: '/services/ai-healthcare-platform', 
+      name: 'AI Healthcare Analytics', 
+      href: '/services/ai-healthcare-analytics', 
       icon: Heart, 
       description: 'Medical AI & Diagnostics',
       featured: true,
@@ -85,20 +85,28 @@ export function AppHeader() {
       color: 'from-green-500 to-blue-500'
     },
     { 
-      name: 'Quantum Computing', 
-      href: '/services/quantum-computing', 
-      icon: Atom, 
-      description: 'Quantum AI & Optimization',
+      name: 'AI Financial Trading', 
+      href: '/services/ai-financial-trading', 
+      icon: TrendingUp, 
+      description: 'AI-Powered Trading Systems',
       featured: true,
-      color: 'from-purple-500 to-pink-500'
+      color: 'from-green-500 to-emerald-500'
     },
     { 
-      name: 'IoT Edge Computing', 
-      href: '/services/iot-edge-computing', 
-      icon: Cpu, 
-      description: 'IoT & Real-time Processing',
+      name: 'AI Supply Chain Optimization', 
+      href: '/services/ai-supply-chain-optimization', 
+      icon: Truck, 
+      description: 'Supply Chain AI Solutions',
       featured: true,
-      color: 'from-blue-500 to-cyan-500'
+      color: 'from-orange-500 to-red-500'
+    },
+    { 
+      name: 'AI Legal Document Analysis', 
+      href: '/services/ai-legal-document-analysis', 
+      icon: FileText, 
+      description: 'Legal AI & Document Processing',
+      featured: true,
+      color: 'from-blue-500 to-purple-500'
     },
     { 
       name: 'Digital Twin Platform', 
@@ -143,39 +151,39 @@ export function AppHeader() {
       featured: true
     },
     {
-      name: 'SMB Solutions',
-      href: '/solutions',
-      icon: Building,
-      description: 'Small to medium business growth',
-      featured: false
-    },
-    {
-      name: 'Startup Solutions',
-      href: '/solutions',
-      icon: Rocket,
-      description: 'Accelerate your startup growth',
-      featured: false
-    },
-    {
-      name: 'Government Solutions',
-      href: '/solutions',
-      icon: Shield,
-      description: 'Public sector innovation',
-      featured: false
-    },
-    {
       name: 'Healthcare Solutions',
-      href: '/solutions',
+      href: '/solutions#healthcare',
       icon: Heart,
       description: 'Digital health transformation',
       featured: true
     },
     {
       name: 'Financial Solutions',
-      href: '/solutions',
+      href: '/solutions#financial',
       icon: TrendingUp,
       description: 'Fintech innovation & compliance',
       featured: true
+    },
+    {
+      name: 'Manufacturing Solutions',
+      href: '/solutions#manufacturing',
+      icon: Building,
+      description: 'Smart manufacturing & automation',
+      featured: false
+    },
+    {
+      name: 'Legal Solutions',
+      href: '/solutions#legal',
+      icon: Scale,
+      description: 'Legal tech & compliance',
+      featured: false
+    },
+    {
+      name: 'Research & Development',
+      href: '/research-development',
+      icon: Code,
+      description: 'Innovation & R&D support',
+      featured: false
     }
   ];
 
@@ -228,6 +236,13 @@ export function AppHeader() {
       icon: DollarSign,
       description: 'Complete pricing information',
       featured: true
+    },
+    {
+      name: 'Training & Certification',
+      href: '/training',
+      icon: BookOpen,
+      description: 'Professional development',
+      featured: false
     }
   ];
 
@@ -237,6 +252,7 @@ export function AppHeader() {
     { name: 'Pricing', href: '/pricing', icon: DollarSign },
     { name: 'Careers', href: '/careers', icon: Users },
     { name: 'Partners', href: '/partners', icon: HeartHandshake },
+    { name: 'Schedule Demo', href: '/schedule-demo', icon: Play },
     { name: 'Privacy', href: '/privacy', icon: Shield },
     { name: 'Terms', href: '/terms', icon: BookOpen },
   ];
