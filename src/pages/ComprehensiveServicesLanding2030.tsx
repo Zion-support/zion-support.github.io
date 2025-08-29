@@ -25,14 +25,21 @@ export default function ComprehensiveServicesLanding2030() {
   const [activeCategory, setActiveCategory] = useState('all');
   const [searchTerm, setSearchTerm] = useState('');
   const [sortBy, setSortBy] = useState('rating');
+  const [priceRange, setPriceRange] = useState<[number, number]>([0, 50000]);
+  const [aiScoreRange, setAiScoreRange] = useState<[number, number]>([80, 100]);
+  const [showAdvancedFilters, setShowAdvancedFilters] = useState(false);
+  const [selectedService, setSelectedService] = useState<any>(null);
+  const [showModal, setShowModal] = useState(false);
 
-  // Filter services based on category and search
+  // Filter services based on category, search, price, and AI score
   const filteredServices = COMPREHENSIVE_SERVICES_INDEX_2030.filter(service => {
     const matchesCategory = activeCategory === 'all' || service.category === activeCategory;
     const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()));
-    return matchesCategory && matchesSearch;
+    const matchesPrice = service.price >= priceRange[0] && service.price <= priceRange[1];
+    const matchesAiScore = service.aiScore >= aiScoreRange[0] && service.aiScore <= aiScoreRange[1];
+    return matchesCategory && matchesSearch && matchesPrice && matchesAiScore;
   });
 
   // Sort services
@@ -97,6 +104,24 @@ export default function ComprehensiveServicesLanding2030() {
       'Sustainable Technology': 'from-green-500 to-teal-500'
     };
     return colors[category] || 'from-gray-500 to-slate-500';
+  };
+
+  const resetFilters = () => {
+    setActiveCategory('all');
+    setSearchTerm('');
+    setSortBy('rating');
+    setPriceRange([0, 50000]);
+    setAiScoreRange([80, 100]);
+  };
+
+  const openServiceModal = (service: any) => {
+    setSelectedService(service);
+    setShowModal(true);
+  };
+
+  const closeServiceModal = () => {
+    setShowModal(false);
+    setSelectedService(null);
   };
 
   return (
@@ -180,7 +205,7 @@ export default function ComprehensiveServicesLanding2030() {
         <section className="py-12">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 mb-8">
-              <div className="flex flex-col lg:flex-row gap-6">
+              <div className="flex flex-col lg:flex-row gap-6 mb-6">
                 {/* Search */}
                 <div className="flex-1">
                   <div className="relative">
@@ -221,7 +246,85 @@ export default function ComprehensiveServicesLanding2030() {
                     <option value="aiScore">Sort by AI Score</option>
                   </select>
                 </div>
+
+                {/* Advanced Filters Toggle */}
+                <div className="flex gap-3">
+                  <button
+                    onClick={() => setShowAdvancedFilters(!showAdvancedFilters)}
+                    className="px-4 py-3 bg-blue-600 hover:bg-blue-700 text-white rounded-lg transition-colors duration-300"
+                  >
+                    {showAdvancedFilters ? 'Hide' : 'Advanced'} Filters
+                  </button>
+                  <button
+                    onClick={resetFilters}
+                    className="px-4 py-3 bg-gray-600 hover:bg-gray-700 text-white rounded-lg transition-colors duration-300"
+                  >
+                    Reset
+                  </button>
+                </div>
               </div>
+
+              {/* Advanced Filters */}
+              {showAdvancedFilters && (
+                <motion.div
+                  initial={{ opacity: 0, height: 0 }}
+                  animate={{ opacity: 1, height: 'auto' }}
+                  exit={{ opacity: 0, height: 0 }}
+                  className="border-t border-white/20 pt-6"
+                >
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    {/* Price Range */}
+                    <div>
+                      <label className="block text-white text-sm font-medium mb-2">
+                        Price Range: ${priceRange[0].toLocaleString()} - ${priceRange[1].toLocaleString()}
+                      </label>
+                      <div className="flex gap-4">
+                        <input
+                          type="range"
+                          min="0"
+                          max="50000"
+                          value={priceRange[0]}
+                          onChange={(e) => setPriceRange([parseInt(e.target.value), priceRange[1]])}
+                          className="flex-1"
+                        />
+                        <input
+                          type="range"
+                          min="0"
+                          max="50000"
+                          value={priceRange[1]}
+                          onChange={(e) => setPriceRange([priceRange[0], parseInt(e.target.value)])}
+                          className="flex-1"
+                        />
+                      </div>
+                    </div>
+
+                    {/* AI Score Range */}
+                    <div>
+                      <label className="block text-white text-sm font-medium mb-2">
+                        AI Score Range: {aiScoreRange[0]}% - {aiScoreRange[1]}%
+                      </label>
+                      <div className="flex gap-4">
+                        <input
+                          type="range"
+                          min="80"
+                          max="100"
+                          value={aiScoreRange[0]}
+                          onChange={(e) => setAiScoreRange([parseInt(e.target.value), aiScoreRange[1]])}
+                          className="flex-1"
+                        />
+                        <input
+                          type="range"
+                          min="80"
+                          max="100"
+                          value={aiScoreRange[1]}
+                          onChange={(e) => setAiScoreRange([aiScoreRange[0], parseInt(e.target.value)])}
+                          className="flex-1"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </motion.div>
+              )}
             </div>
           </div>
         </section>
@@ -229,6 +332,26 @@ export default function ComprehensiveServicesLanding2030() {
         {/* Services Grid */}
         <section className="py-12">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            {/* Results Counter */}
+            <div className="mb-8 text-center">
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5 }}
+                className="bg-white/10 backdrop-blur-sm rounded-xl p-4 inline-block"
+              >
+                <p className="text-white text-lg">
+                  Showing <span className="font-bold text-blue-400">{sortedServices.length}</span> of{' '}
+                  <span className="font-bold text-purple-400">{COMPREHENSIVE_SERVICES_INDEX_2030.length}</span> services
+                </p>
+                {sortedServices.length === 0 && (
+                  <p className="text-gray-400 text-sm mt-2">
+                    No services match your current filters. Try adjusting your search criteria.
+                  </p>
+                )}
+              </motion.div>
+            </div>
+
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {sortedServices.map((service, index) => (
                 <motion.div
@@ -285,9 +408,10 @@ export default function ComprehensiveServicesLanding2030() {
                   <motion.button
                     whileHover={{ scale: 1.02 }}
                     whileTap={{ scale: 0.98 }}
+                    onClick={() => openServiceModal(service)}
                     className="w-full bg-gradient-to-r from-blue-500 to-purple-500 text-white py-3 rounded-lg font-semibold hover:from-blue-600 hover:to-purple-600 transition-all duration-300 flex items-center justify-center gap-2"
                   >
-                    Learn More
+                    Quick View
                     <ArrowRight className="w-4 h-4" />
                   </motion.button>
                 </motion.div>
@@ -397,6 +521,127 @@ export default function ComprehensiveServicesLanding2030() {
             </motion.div>
           </div>
         </section>
+
+        {/* Service Detail Modal */}
+        {showModal && selectedService && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            className="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-4"
+            onClick={closeServiceModal}
+          >
+            <motion.div
+              initial={{ scale: 0.9, opacity: 0 }}
+              animate={{ scale: 1, opacity: 1 }}
+              exit={{ scale: 0.9, opacity: 0 }}
+              className="bg-gray-900 rounded-2xl p-8 max-w-4xl w-full max-h-[90vh] overflow-y-auto"
+              onClick={(e) => e.stopPropagation()}
+            >
+              {/* Modal Header */}
+              <div className="flex items-start justify-between mb-6">
+                <div className="flex items-center gap-4">
+                  <div className={`p-4 rounded-xl bg-gradient-to-r ${getCategoryColor(selectedService.category)}`}>
+                    {getCategoryIcon(selectedService.category)}
+                  </div>
+                  <div>
+                    <h2 className="text-3xl font-bold text-white">{selectedService.title}</h2>
+                    <p className="text-gray-400">{selectedService.category}</p>
+                  </div>
+                </div>
+                <button
+                  onClick={closeServiceModal}
+                  className="text-gray-400 hover:text-white text-2xl font-bold"
+                >
+                  ×
+                </button>
+              </div>
+
+              {/* Service Details */}
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                <div>
+                  <h3 className="text-xl font-semibold text-white mb-4">Description</h3>
+                  <p className="text-gray-300 leading-relaxed">{selectedService.description}</p>
+                  
+                  <div className="mt-6">
+                    <h4 className="text-lg font-semibold text-white mb-3">Tags</h4>
+                    <div className="flex flex-wrap gap-2">
+                      {selectedService.tags.map((tag: string) => (
+                        <span
+                          key={tag}
+                          className="px-3 py-1 bg-blue-600/20 text-blue-400 text-sm rounded-full border border-blue-600/30"
+                        >
+                          {tag}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+
+                <div>
+                  <div className="bg-white/10 rounded-xl p-6">
+                    <h4 className="text-lg font-semibold text-white mb-4">Service Details</h4>
+                    <div className="space-y-4">
+                      <div className="flex justify-between">
+                        <span className="text-gray-400">Price:</span>
+                        <span className="text-white font-semibold text-xl">${selectedService.price.toLocaleString()}</span>
+                      </div>
+                      <div className="flex justify-between">
+                        <span className="text-gray-400">AI Score:</span>
+                        <span className="text-white font-semibold">{selectedService.aiScore}/100</span>
+                      </div>
+                      <div className="flex justify-between">
+                        <span className="text-gray-400">Setup Time:</span>
+                        <span className="text-white">{selectedService.setupTime}</span>
+                      </div>
+                      <div className="flex justify-between">
+                        <span className="text-gray-400">Rating:</span>
+                        <div className="flex items-center gap-1">
+                          <Star className="w-4 h-4 text-yellow-400 fill-current" />
+                          <span className="text-white">{selectedService.rating}</span>
+                        </div>
+                      </div>
+                      {selectedService.roi && (
+                        <div className="flex justify-between">
+                          <span className="text-gray-400">ROI:</span>
+                          <span className="text-white font-semibold text-green-400">{selectedService.roi}</span>
+                        </div>
+                      )}
+                    </div>
+                  </div>
+
+                  <div className="mt-6">
+                    <h4 className="text-lg font-semibold text-white mb-3">Contact Information</h4>
+                    <div className="space-y-2 text-gray-300">
+                      <p><strong>Phone:</strong> {PRICING_CONTACT_2030.phone}</p>
+                      <p><strong>Email:</strong> {PRICING_CONTACT_2030.email}</p>
+                      <p><strong>Website:</strong> {PRICING_CONTACT_2030.website}</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* Action Buttons */}
+              <div className="flex gap-4 mt-8 pt-6 border-t border-white/20">
+                <motion.button
+                  whileHover={{ scale: 1.02 }}
+                  whileTap={{ scale: 0.98 }}
+                  className="flex-1 bg-gradient-to-r from-blue-500 to-purple-500 text-white py-3 rounded-lg font-semibold hover:from-blue-600 hover:to-purple-600 transition-all duration-300"
+                >
+                  Get Quote
+                </motion.button>
+                <motion.button
+                  whileHover={{ scale: 1.02 }}
+                  whileTap={{ scale: 0.98 }}
+                  onClick={closeServiceModal}
+                  className="px-8 py-3 border border-white/30 text-white rounded-lg font-semibold hover:bg-white/10 transition-all duration-300"
+                >
+                  Close
+                </motion.button>
+              </div>
+            </motion.div>
+          </motion.div>
+        )}
       </div>
     </>
   );
