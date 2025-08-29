@@ -48,7 +48,6 @@ const AIBusinessIntelligence = React.lazy(() => import('./pages/services/AIBusin
 const DigitalTwin = React.lazy(() => import('./pages/services/DigitalTwin'));
 const IoTServices = React.lazy(() => import('./pages/services/IoTServices'));
 const MicroSAAS = React.lazy(() => import('./pages/services/MicroSAAS'));
-const MicroSAASSolutions = React.lazy(() => import('./pages/services/MicroSAASSolutions'));
 const QuantumComputing = React.lazy(() => import('./pages/services/QuantumComputing'));
 const SpaceTech = React.lazy(() => import('./pages/services/SpaceTech'));
 const Sustainability = React.lazy(() => import('./pages/services/Sustainability'));
@@ -57,7 +56,7 @@ const ZeroTrustNetworkArchitecture = React.lazy(() => import('./pages/services/Z
 // Advanced AI services
 const AICybersecuritySuite = React.lazy(() => import('./pages/services/AICybersecuritySuite'));
 const QuantumAIPlatform = React.lazy(() => import('./pages/services/QuantumAIPlatform'));
-const AIHealthcareAnalytics = React.lazy(() => import('./pages/services/AIHealthcareAnalytics'));
+const AIHealthcareAnalytics = React.lazy(() => import('./pages/services/ai-healthcare-analytics-platform'));
 const AIWorkflowOrchestrator = React.lazy(() => import('./pages/services/AIWorkflowOrchestrator'));
 const AIDataGovernance = React.lazy(() => import('./pages/services/AIDataGovernance'));
 const EdgeComputingPlatform = React.lazy(() => import('./pages/services/EdgeComputingPlatform'));
@@ -81,7 +80,7 @@ const EmergingTech2030 = React.lazy(() => import('./pages/EmergingTech2030'));
 
 // AI platform services
 const AIBusinessIntelligencePlatform = React.lazy(() => import('./pages/services/AIBusinessIntelligencePlatform'));
-const AIFinancialTradingPlatform = React.lazy(() => import('./pages/services/AIFinancialTradingPlatform'));
+const AIFinancialTradingPlatform = React.lazy(() => import('./pages/services/ai-financial-trading-platform'));
 
 // New AI-powered micro SaaS services
 const AIContentMarketingAutomation = React.lazy(() => import('./pages/services/AIContentMarketingAutomation'));
@@ -90,7 +89,7 @@ const AIHRPlatform = React.lazy(() => import('./pages/services/AIHRPlatform'));
 const AILegalResearchPlatform = React.lazy(() => import('./pages/services/AILegalResearchPlatform'));
 const AIEducationPlatform = React.lazy(() => import('./pages/services/AIEducationPlatform'));
 const AIMarketingAutomation = React.lazy(() => import('./pages/services/AIMarketingAutomation'));
-const AIProjectManagementPlatform = React.lazy(() => import('./pages/services/AIProjectManagementPlatform'));
+const AIProjectManagementPlatform = React.lazy(() => import('./pages/services/ai-project-management-platform'));
 
 // New AI services we added
 const AILegalDocumentAutomation = React.lazy(() => import('./pages/services/AILegalDocumentAutomation'));
@@ -135,7 +134,6 @@ function App() {
                 <Route path="/services/digital-twin" element={<DigitalTwin />} />
                 <Route path="/services/iot-services" element={<IoTServices />} />
                 <Route path="/services/micro-saas" element={<MicroSAAS />} />
-                <Route path="/services/micro-saas-solutions" element={<MicroSAASSolutions />} />
                 <Route path="/services/quantum-computing" element={<QuantumComputing />} />
                 <Route path="/services/space-tech" element={<SpaceTech />} />
                 <Route path="/services/sustainability" element={<Sustainability />} />
