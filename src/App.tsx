@@ -57,10 +57,10 @@ const ComprehensivePricingGuide2030 = React.lazy(() => import('./pages/Comprehen
 const ComprehensiveServicesLanding2025 = React.lazy(() => import('./pages/ComprehensiveServicesLanding2025.jsx'));
 const ComprehensiveServicesLanding2030 = React.lazy(() => import('./pages/ComprehensiveServicesLanding2030.tsx'));
 const EnhancedServicesLanding = React.lazy(() => import('./pages/EnhancedServicesLanding.tsx'));
-const RevolutionaryServicesLanding = React.lazy(() => import('./pages/RevolutionaryServicesLanding.tsx'));
-const RevolutionaryPricingGuide = React.lazy(() => import('./pages/RevolutionaryPricingGuide.tsx'));
+const RevolutionaryServicesLanding = React.lazy(() => import('./pages/RevolutionaryServices2030.tsx'));
+const RevolutionaryPricingGuide = React.lazy(() => import('./pages/ComprehensivePricingGuide2030.tsx'));
 const ComprehensiveServicesShowcase2029 = React.lazy(() => import('./pages/ComprehensiveServicesShowcase2029.tsx'));
-const InnovativeMicroSaasServicesShowcase2025 = React.lazy(() => import('./pages/InnovativeMicroSaasServicesShowcase2025.tsx'));
+const InnovativeMicroSaasServicesShowcase2025 = React.lazy(() => import('./pages/InnovativeMicroSAASServices2025.tsx'));
 const ComprehensiveServicesAdvertising = React.lazy(() => import('./pages/ComprehensiveServicesAdvertising.tsx'));
 const ComprehensiveServicesShowcase2030 = React.lazy(() => import('./pages/ComprehensiveServicesShowcase2030.tsx'));
 
@@ -72,17 +72,17 @@ const ITInfrastructure = React.lazy(() => import('./pages/services/ITInfrastruct
 const AIBusinessIntelligence = React.lazy(() => import('./pages/services/AIBusinessIntelligence'));
 const MicroSaaSProducts = React.lazy(() => import('./pages/services/MicroSaaSProducts'));
 
-// NEW INNOVATIVE MICRO SAAS SERVICE PAGES
-const AILegalDocumentAnalyzer = React.lazy(() => import('./pages/services/ai-legal-document-analyzer'));
-const AIRealEstateInvestmentAnalyzer = React.lazy(() => import('./pages/services/ai-real-estate-investment-analyzer'));
-const AIRestaurantManagementSystem = React.lazy(() => import('./pages/services/ai-restaurant-management-system'));
-const AIFitnessCoachingPlatform = React.lazy(() => import('./pages/services/ai-fitness-coaching-platform'));
-const AIEcommercePersonalizationEngine = React.lazy(() => import('./pages/services/ai-ecommerce-personalization-engine'));
-const AISupplyChainOptimization = React.lazy(() => import('./pages/services/ai-supply-chain-optimization'));
-const AIVideoContentCreationStudio = React.lazy(() => import('./pages/services/ai-video-content-creation-studio'));
-const AICustomerChurnPrediction = React.lazy(() => import('./pages/services/ai-customer-churn-prediction'));
-const AIFinancialFraudDetection = React.lazy(() => import('./pages/services/ai-financial-fraud-detection'));
-const AIEnergyManagementSystem = React.lazy(() => import('./pages/services/ai-energy-management-system'));
+// NEW INNOVATIVE MICRO SAAS SERVICE PAGES - Commented out until files exist
+// const AILegalDocumentAnalyzer = React.lazy(() => import('./pages/services/ai-legal-document-analyzer'));
+// const AIRealEstateInvestmentAnalyzer = React.lazy(() => import('./pages/services/ai-real-estate-investment-analyzer'));
+// const AIRestaurantManagementSystem = React.lazy(() => import('./pages/services/ai-restaurant-management-system'));
+// const AIFitnessCoachingPlatform = React.lazy(() => import('./pages/services/ai-fitness-coaching-platform'));
+// const AIEcommercePersonalizationEngine = React.lazy(() => import('./pages/services/ai-ecommerce-personalization-engine'));
+// const AISupplyChainOptimization = React.lazy(() => import('./pages/services/ai-supply-chain-optimization'));
+// const AIVideoContentCreationStudio = React.lazy(() => import('./pages/services/ai-video-content-creation-studio'));
+// const AICustomerChurnPrediction = React.lazy(() => import('./pages/services/ai-customer-churn-prediction'));
+// const AIFinancialFraudDetection = React.lazy(() => import('./pages/services/ai-financial-fraud-detection'));
+// const AIEnergyManagementSystem = React.lazy(() => import('./pages/services/ai-energy-management-system'));
 // Simple placeholder pages for missing ones
 const Careers = () => (
   <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 flex items-center justify-center">
@@ -194,17 +194,17 @@ function App() {
                       <Route path="/services/quantum-computing" element={<QuantumComputing />} />
                       <Route path="/services/iot-edge-computing" element={<IoTEdgeComputing />} />
                       
-                      {/* Micro SaaS Service Routes */}
-                      <Route path="/services/ai-legal-document-analyzer" element={<AILegalDocumentAnalyzer />} />
-                      <Route path="/services/ai-real-estate-investment-analyzer" element={<AIRealEstateInvestmentAnalyzer />} />
-                      <Route path="/services/ai-restaurant-management-system" element={<AIRestaurantManagementSystem />} />
-                      <Route path="/services/ai-fitness-coaching-platform" element={<AIFitnessCoachingPlatform />} />
-                      <Route path="/services/ai-ecommerce-personalization-engine" element={<AIEcommercePersonalizationEngine />} />
-                      <Route path="/services/ai-supply-chain-optimization" element={<AISupplyChainOptimization />} />
-                      <Route path="/services/ai-video-content-creation-studio" element={<AIVideoContentCreationStudio />} />
-                      <Route path="/services/ai-customer-churn-prediction" element={<AICustomerChurnPrediction />} />
-                      <Route path="/services/ai-financial-fraud-detection" element={<AIFinancialFraudDetection />} />
-                      <Route path="/services/ai-energy-management-system" element={<AIEnergyManagementSystem />} />
+                      {/* Micro SaaS Service Routes - Commented out until components exist */}
+                      {/* <Route path="/services/ai-legal-document-analyzer" element={<AILegalDocumentAnalyzer />} /> */}
+                      {/* <Route path="/services/ai-real-estate-investment-analyzer" element={<AIRealEstateInvestmentAnalyzer />} /> */}
+                      {/* <Route path="/services/ai-restaurant-management-system" element={<AIRestaurantManagementSystem />} /> */}
+                      {/* <Route path="/services/ai-fitness-coaching-platform" element={<AIFitnessCoachingPlatform />} /> */}
+                      {/* <Route path="/services/ai-ecommerce-personalization-engine" element={<AIEcommercePersonalizationEngine />} /> */}
+                      {/* <Route path="/services/ai-supply-chain-optimization" element={<AISupplyChainOptimization />} /> */}
+                      {/* <Route path="/services/ai-video-content-creation-studio" element={<AIVideoContentCreationStudio />} /> */}
+                      {/* <Route path="/services/ai-customer-churn-prediction" element={<AICustomerChurnPrediction />} /> */}
+                      {/* <Route path="/services/ai-financial-fraud-detection" element={<AIFinancialFraudDetection />} /> */}
+                      {/* <Route path="/services/ai-energy-management-system" element={<AIEnergyManagementSystem />} /> */}
 
                       {/* Catch all route */}
                       <Route path="*" element={<Home />} />

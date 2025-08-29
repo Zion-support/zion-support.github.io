@@ -34,7 +34,7 @@ import {
 } from 'lucide-react';
 import { innovativeServices2029, serviceCategories, pricingTiers, Service } from '../data/innovativeServices2029';
 
-export default function ComprehensiveServicesShowcase2029() {
+function ComprehensiveServicesShowcase2029() {
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [searchTerm, setSearchTerm] = useState('');
 
