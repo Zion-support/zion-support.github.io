@@ -84,7 +84,7 @@ export function AppHeader() {
       icon: Shield, 
       description: 'AI-Powered Security',
       featured: true,
-      color: 'from-green-500 to-blue-500'
+      color: 'from-purple-500 to-green-500'
     },
     { 
       name: 'Quantum Computing', 
@@ -140,30 +140,6 @@ export function AppHeader() {
       icon: DollarSign, 
       description: 'Complete Pricing & ROI Analysis',
       featured: true,
-      color: 'from-green-500 to-emerald-500'
-    },
-    { 
-      name: 'AI Business Intelligence', 
-      href: '/services/ai-business-intelligence', 
-      icon: Brain, 
-      description: 'Machine Learning & Data Science',
-      featured: false,
-      color: 'from-purple-500 to-cyan-500'
-    },
-    { 
-      name: 'Cloud DevOps', 
-      href: '/services/cloud-devops', 
-      icon: Cloud, 
-      description: 'DevOps & Infrastructure',
-      featured: false,
-      color: 'from-blue-500 to-cyan-500'
-    },
-    { 
-      name: 'Digital Twin Platform', 
-      href: '/services/digital-twin', 
-      icon: Globe, 
-      description: 'Virtual Replicas & Simulation',
-      featured: false,
       color: 'from-green-500 to-emerald-500'
     }
   ];
