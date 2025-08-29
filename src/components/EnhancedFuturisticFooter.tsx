@@ -87,7 +87,8 @@ export const EnhancedFuturisticFooter: React.FC = () => {
         { name: 'Cloud FinOps Optimizer', href: '/services/cloud-finops-optimizer' },
         { name: 'FinOps Advisor', href: '/services/finops-advisor' },
         { name: 'Edge Computing Platform', href: '/services/edge-computing-platform' },
-        { name: 'Quantum AI Platform', href: '/services/quantum-ai-platform' }
+        { name: 'Quantum AI Platform', href: '/services/quantum-ai-platform' },
+        { name: 'AI Project Management', href: '/services/ai-project-management' }
       ]
     },
     {
@@ -98,11 +99,30 @@ export const EnhancedFuturisticFooter: React.FC = () => {
         { name: 'IoT Edge Computing', href: '/services/iot-edge' },
         { name: 'Digital Twin', href: '/services/digital-twin' },
         { name: 'Blockchain Enterprise Solutions', href: '/services/blockchain-enterprise-solutions' },
+        { name: 'AI Supply Chain Optimization', href: '/services/ai-supply-chain-optimization' }
+      ]
+    },
+    {
+      title: 'Healthcare & Emerging Tech',
+      icon: Heart,
+      color: 'from-pink-600 to-rose-600',
+      links: [
         { name: 'Healthcare Technology', href: '/services/healthcare-tech' },
         { name: 'Sustainability Solutions', href: '/services/sustainability' },
         { name: 'Green IT', href: '/services/green-it' },
         { name: 'Quantum Computing', href: '/services/quantum-computing' },
         { name: 'Space Technology', href: '/services/space-tech' }
+      ]
+    },
+    {
+      title: 'Cybersecurity & Compliance',
+      icon: Shield,
+      color: 'from-red-600 to-orange-600',
+      links: [
+        { name: 'AI Cybersecurity Platform', href: '/services/ai-cybersecurity-platform' },
+        { name: 'Zero Trust Architecture', href: '/services/zero-trust-network-architecture' },
+        { name: 'AI Compliance Copilot', href: '/services/ai-compliance-copilot' },
+        { name: 'Incident Response Platform', href: '/services/incident-response-platform' }
       ]
     },
     {
@@ -172,6 +192,13 @@ export const EnhancedFuturisticFooter: React.FC = () => {
     { name: 'Press', href: '/press', description: 'Media resources' },
     { name: 'Partners', href: '/partners', description: 'Strategic partnerships' }
   ];
+
+  const contactInfo = {
+    phone: '+1 302 464 0950',
+    email: 'kleber@ziontechgroup.com',
+    address: '364 E Main St STE 1008 Middletown DE 19709',
+    website: 'https://ziontechgroup.com'
+  };
 
   const supportLinks = [
     { name: 'Help Center', href: '/help', description: 'Find answers to questions' },

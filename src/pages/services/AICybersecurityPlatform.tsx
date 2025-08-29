@@ -1,149 +1,149 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { 
-  Users, 
-  Heart, 
-  TrendingUp, 
+  Shield, 
+  Lock, 
+  Eye, 
+  AlertTriangle, 
   Zap, 
   Brain, 
-  MessageSquare, 
-  BarChart3, 
-  Target,
-  CheckCircle,
-  AlertTriangle,
-  Clock,
-  Star,
-  Award,
-  Rocket,
+  Users, 
   Globe,
-  Lock,
-  Shield,
-  Eye,
-  Activity,
-  PieChart,
-  LineChart,
-  Calendar,
-  Bell,
-  Settings,
-  UserPlus,
-  UserCheck,
-  UserX,
-  RefreshCw,
-  Lightbulb,
+  CheckCircle,
+  BarChart3,
+  Cpu,
+  Network,
+  Database,
+  Cloud,
+  Smartphone,
+  Server,
+  Key,
+  Fingerprint,
+  Bug,
+  Virus,
+  Fire,
   Target,
-  Flag,
-  Gift
+  Clock,
+  TrendingUp,
+  Award,
+  Star,
+  Rocket,
+  Globe2,
+  Lock,
+  ShieldCheck,
+  AlertCircle,
+  Activity
 } from 'lucide-react';
 import { SEO } from '../../components/SEO';
 
-export default function AICustomerSuccessPlatform() {
+export default function AICybersecurityPlatform() {
   const features = [
     {
       icon: Brain,
-      title: 'AI-Powered Customer Insights',
-      description: 'Machine learning analyzes customer behavior to predict churn risk and identify upsell opportunities'
+      title: 'AI-Powered Threat Detection',
+      description: 'Machine learning algorithms detect and respond to threats in real-time, learning from every attack pattern'
     },
     {
-      icon: Heart,
-      title: 'Proactive Customer Health Monitoring',
-      description: 'Real-time monitoring of customer engagement, satisfaction, and product usage patterns'
+      icon: Shield,
+      title: 'Zero-Day Vulnerability Protection',
+      description: 'Advanced behavioral analysis identifies unknown threats before they can exploit your systems'
     },
     {
-      icon: MessageSquare,
-      title: 'Intelligent Communication Automation',
-      description: 'AI-driven messaging that reaches customers at the right time with personalized content'
+      icon: Eye,
+      title: '24/7 Security Monitoring',
+      description: 'Continuous monitoring with AI-driven anomaly detection and instant threat response'
     },
     {
-      icon: TrendingUp,
-      title: 'Predictive Churn Prevention',
-      description: 'Advanced algorithms identify at-risk customers and trigger automated retention campaigns'
-    },
-    {
-      icon: Target,
-      title: 'Smart Upsell & Cross-sell',
-      description: 'AI recommendations for additional products and services based on customer behavior'
+      icon: Zap,
+      title: 'Automated Incident Response',
+      description: 'Intelligent automation handles security incidents with human-like decision making'
     },
     {
       icon: Users,
-      title: 'Automated Onboarding & Training',
-      description: 'Personalized onboarding experiences that increase time-to-value and reduce churn'
+      title: 'Identity & Access Management',
+      description: 'Multi-factor authentication, biometric verification, and adaptive access controls'
+    },
+    {
+      icon: Globe,
+      title: 'Global Threat Intelligence',
+      description: 'Real-time threat feeds from global security networks and AI-powered correlation analysis'
     }
   ];
 
-  const platformModules = [
+  const securityLayers = [
     {
-      name: 'Customer Health Scoring',
-      icon: Heart,
-      description: 'AI-powered scoring system that tracks customer satisfaction, engagement, and risk factors',
-      features: ['Real-time scoring', 'Risk alerts', 'Trend analysis', 'Custom metrics']
+      name: 'Network Security',
+      icon: Network,
+      description: 'Advanced firewall, intrusion detection, and DDoS protection with AI-powered traffic analysis',
+      features: ['Next-gen firewall', 'IDS/IPS', 'DDoS mitigation', 'Traffic analysis']
     },
     {
-      name: 'Automated Engagement',
-      icon: MessageSquare,
-      description: 'Intelligent communication workflows that engage customers at optimal times',
-      features: ['Multi-channel messaging', 'A/B testing', 'Personalization', 'Engagement tracking']
+      name: 'Endpoint Protection',
+      icon: Smartphone,
+      description: 'Comprehensive endpoint security with behavioral analysis and threat hunting capabilities',
+      features: ['Antivirus', 'EDR', 'Behavioral analysis', 'Threat hunting']
     },
     {
-      name: 'Success Planning',
-      icon: Target,
-      description: 'AI-driven success plans that adapt to customer goals and business objectives',
-      features: ['Goal tracking', 'Milestone management', 'Progress reporting', 'Success metrics']
+      name: 'Cloud Security',
+      icon: Cloud,
+      description: 'Multi-cloud security with automated compliance checking and threat prevention',
+      features: ['CSPM', 'CASB', 'Compliance automation', 'Threat prevention']
     },
     {
-      name: 'Analytics & Reporting',
-      icon: BarChart3,
-      description: 'Comprehensive dashboards with actionable insights and predictive analytics',
-      features: ['Custom dashboards', 'Predictive analytics', 'ROI tracking', 'Performance metrics']
+      name: 'Data Protection',
+      icon: Database,
+      description: 'Encryption, data loss prevention, and privacy compliance with AI-powered monitoring',
+      features: ['Encryption', 'DLP', 'Privacy compliance', 'Data monitoring']
     }
   ];
 
   const pricingPlans = [
     {
-      name: 'Starter',
-      price: '$99',
+      name: 'Essential',
+      price: '$199',
       period: '/month',
       description: 'Perfect for small businesses',
       features: [
-        'Up to 500 customers',
-        'Basic health scoring',
-        'Email automation',
-        'Basic reporting',
+        'Up to 50 endpoints',
+        'Basic AI threat detection',
+        '24/7 monitoring',
         'Email support',
-        'Standard integrations'
+        'Basic reporting',
+        'Standard compliance'
       ],
       popular: false,
       cta: 'Start Free Trial'
     },
     {
       name: 'Professional',
-      price: '$299',
+      price: '$499',
       period: '/month',
       description: 'Ideal for growing companies',
       features: [
-        'Up to 5,000 customers',
+        'Up to 500 endpoints',
         'Advanced AI analytics',
-        'Multi-channel automation',
-        'Advanced reporting',
+        'Automated response',
         'Priority support',
-        'Custom integrations',
+        'Advanced reporting',
+        'Compliance automation',
         'API access',
-        'Success planning tools'
+        'Custom integrations'
       ],
       popular: true,
       cta: 'Start Free Trial'
     },
     {
       name: 'Enterprise',
-      price: '$799',
+      price: '$1,299',
       period: '/month',
       description: 'For large organizations',
       features: [
-        'Unlimited customers',
+        'Unlimited endpoints',
         'Full AI suite',
         'Custom AI models',
-        'Dedicated success manager',
+        'Dedicated team',
         'White-label options',
-        'Advanced security',
+        'Advanced compliance',
         'Custom integrations',
         'On-premise options'
       ],
@@ -152,34 +152,20 @@ export default function AICustomerSuccessPlatform() {
     }
   ];
 
-  const benefits = [
-    {
-      icon: TrendingUp,
-      title: 'Increase Customer Retention',
-      description: 'Reduce churn by up to 40% with proactive customer success management'
-    },
-    {
-      icon: Users,
-      title: 'Improve Customer Satisfaction',
-      description: 'Boost NPS scores and customer lifetime value through personalized experiences'
-    },
-    {
-      icon: Zap,
-      title: 'Automate Success Operations',
-      description: 'Save 20+ hours per week with AI-powered automation and workflows'
-    },
-    {
-      icon: Target,
-      title: 'Drive Revenue Growth',
-      description: 'Increase upsell and cross-sell revenue by 25% with intelligent recommendations'
-    }
+  const complianceStandards = [
+    { name: 'SOC 2 Type II', icon: CheckCircle, status: 'Certified' },
+    { name: 'ISO 27001', icon: CheckCircle, status: 'Certified' },
+    { name: 'GDPR', icon: CheckCircle, status: 'Compliant' },
+    { name: 'HIPAA', icon: CheckCircle, status: 'Compliant' },
+    { name: 'PCI DSS', icon: CheckCircle, status: 'Compliant' },
+    { name: 'NIST', icon: CheckCircle, status: 'Compliant' }
   ];
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO 
-        title="AI Customer Success Platform - Zion Tech Group"
-        description="Revolutionary AI-powered customer success platform that automates customer engagement, predicts churn risk, and drives customer retention and growth."
+        title="AI Cybersecurity Platform - Zion Tech Group"
+        description="Enterprise-grade AI-powered cybersecurity platform providing real-time threat detection, automated incident response, and comprehensive protection for modern organizations."
       />
       
       {/* Hero Section */}
@@ -191,37 +177,37 @@ export default function AICustomerSuccessPlatform() {
             transition={{ duration: 0.8 }}
             className="text-center"
           >
-            <div className="inline-flex items-center space-x-2 bg-gradient-to-r from-green-500 to-emerald-600 text-white px-4 py-2 rounded-full text-sm font-medium mb-6">
-              <Heart className="w-4 h-4" />
-              <span>AI-Powered Customer Success</span>
+            <div className="inline-flex items-center space-x-2 bg-gradient-to-r from-red-500 to-orange-600 text-white px-4 py-2 rounded-full text-sm font-medium mb-6">
+              <Shield className="w-4 h-4" />
+              <span>AI-Powered Security</span>
             </div>
             
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
-              AI Customer Success Platform
-              <span className="block text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-emerald-500">
-                That Grows Your Business
+              AI Cybersecurity Platform
+              <span className="block text-transparent bg-clip-text bg-gradient-to-r from-red-400 to-orange-500">
+                That Never Sleeps
               </span>
             </h1>
             
             <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-              Transform customer success with AI-powered insights, automated engagement, 
-              and predictive analytics that reduce churn and drive revenue growth.
+              Protect your organization with the most advanced AI-powered cybersecurity platform. 
+              Real-time threat detection, automated response, and 24/7 protection against evolving threats.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="bg-gradient-to-r from-green-500 to-emerald-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:shadow-lg hover:shadow-green-500/25 transition-all duration-300"
+                className="bg-gradient-to-r from-red-500 to-orange-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:shadow-lg hover:shadow-red-500/25 transition-all duration-300"
               >
                 Start Free Trial
               </motion.button>
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="border border-green-500 text-green-400 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-green-500/10 transition-all duration-300"
+                className="border border-red-500 text-red-400 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-red-500/10 transition-all duration-300"
               >
-                Watch Demo
+                Security Assessment
               </motion.button>
             </div>
           </motion.div>
@@ -229,8 +215,8 @@ export default function AICustomerSuccessPlatform() {
         
         {/* Background Elements */}
         <div className="absolute inset-0 -z-10">
-          <div className="absolute top-20 left-20 w-72 h-72 bg-green-500/10 rounded-full blur-3xl"></div>
-          <div className="absolute bottom-20 right-20 w-96 h-96 bg-emerald-500/10 rounded-full blur-3xl"></div>
+          <div className="absolute top-20 left-20 w-72 h-72 bg-red-500/10 rounded-full blur-3xl"></div>
+          <div className="absolute bottom-20 right-20 w-96 h-96 bg-orange-500/10 rounded-full blur-3xl"></div>
         </div>
       </section>
 
@@ -247,8 +233,8 @@ export default function AICustomerSuccessPlatform() {
               Powered by Advanced AI
             </h2>
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              Our AI engine learns from customer interactions and continuously optimizes 
-              success strategies for maximum retention and growth.
+              Our AI engine continuously learns from global threat intelligence and adapts 
+              to protect against the latest cyber threats in real-time.
             </p>
           </motion.div>
 
@@ -259,9 +245,9 @@ export default function AICustomerSuccessPlatform() {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="bg-slate-800/50 backdrop-blur-sm border border-slate-700/50 rounded-xl p-6 hover:border-green-500/50 transition-all duration-300 group"
+                className="bg-slate-800/50 backdrop-blur-sm border border-slate-700/50 rounded-xl p-6 hover:border-red-500/50 transition-all duration-300 group"
               >
-                <div className="w-12 h-12 bg-gradient-to-br from-green-500 to-emerald-600 rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
+                <div className="w-12 h-12 bg-gradient-to-br from-red-500 to-orange-600 rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
                   <feature.icon className="w-6 h-6 text-white" />
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
@@ -272,7 +258,7 @@ export default function AICustomerSuccessPlatform() {
         </div>
       </section>
 
-      {/* Platform Modules Section */}
+      {/* Security Layers Section */}
       <section className="py-20 px-4 bg-slate-800/30">
         <div className="container mx-auto max-w-7xl">
           <motion.div
@@ -282,34 +268,34 @@ export default function AICustomerSuccessPlatform() {
             className="text-center mb-16"
           >
             <h2 className="text-4xl font-bold text-white mb-4">
-              Complete Customer Success Suite
+              Multi-Layer Security Architecture
             </h2>
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              Everything you need to manage customer success from onboarding to renewal, 
-              all powered by intelligent automation.
+              Comprehensive protection across all attack vectors with intelligent 
+              threat correlation and automated response capabilities.
             </p>
           </motion.div>
 
           <div className="grid md:grid-cols-2 gap-8">
-            {platformModules.map((module, index) => (
+            {securityLayers.map((layer, index) => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="bg-slate-800/50 backdrop-blur-sm border border-slate-700/50 rounded-xl p-6 hover:border-green-500/50 transition-all duration-300"
+                className="bg-slate-800/50 backdrop-blur-sm border border-slate-700/50 rounded-xl p-6 hover:border-red-500/50 transition-all duration-300"
               >
                 <div className="flex items-start space-x-4">
-                  <div className="w-12 h-12 bg-gradient-to-br from-green-500 to-emerald-600 rounded-lg flex items-center justify-center flex-shrink-0">
-                    <module.icon className="w-6 h-6 text-white" />
+                  <div className="w-12 h-12 bg-gradient-to-br from-red-500 to-orange-600 rounded-lg flex items-center justify-center flex-shrink-0">
+                    <layer.icon className="w-6 h-6 text-white" />
                   </div>
                   <div className="flex-1">
-                    <h3 className="text-xl font-semibold text-white mb-2">{module.name}</h3>
-                    <p className="text-gray-300 mb-4">{module.description}</p>
+                    <h3 className="text-xl font-semibold text-white mb-2">{layer.name}</h3>
+                    <p className="text-gray-300 mb-4">{layer.description}</p>
                     <ul className="space-y-2">
-                      {module.features.map((feature, featureIndex) => (
+                      {layer.features.map((feature, featureIndex) => (
                         <li key={featureIndex} className="flex items-center space-x-2 text-sm text-gray-300">
-                          <CheckCircle className="w-4 h-4 text-green-500 flex-shrink-0" />
+                          <CheckCircle className="w-4 h-4 text-red-500 flex-shrink-0" />
                           <span>{feature}</span>
                         </li>
                       ))}
@@ -322,7 +308,7 @@ export default function AICustomerSuccessPlatform() {
         </div>
       </section>
 
-      {/* Benefits Section */}
+      {/* Compliance Section */}
       <section className="py-20 px-4">
         <div className="container mx-auto max-w-7xl">
           <motion.div
@@ -332,31 +318,30 @@ export default function AICustomerSuccessPlatform() {
             className="text-center mb-16"
           >
             <h2 className="text-4xl font-bold text-white mb-4">
-              Proven Business Impact
+              Industry Compliance & Certifications
             </h2>
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              Join thousands of companies already using our platform to transform 
-              their customer success operations.
+              Meet the highest security standards with our certified compliance framework 
+              and automated compliance monitoring.
             </p>
           </motion.div>
 
-          <div className="grid md:grid-cols-2 gap-8">
-            {benefits.map((benefit, index) => (
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {complianceStandards.map((standard, index) => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="bg-slate-800/50 backdrop-blur-sm border border-slate-700/50 rounded-xl p-6 hover:border-green-500/50 transition-all duration-300"
+                className="bg-slate-800/50 backdrop-blur-sm border border-slate-700/50 rounded-xl p-6 text-center hover:border-red-500/50 transition-all duration-300"
               >
-                <div className="flex items-start space-x-4">
-                  <div className="w-12 h-12 bg-gradient-to-br from-green-500 to-emerald-600 rounded-lg flex items-center justify-center flex-shrink-0">
-                    <benefit.icon className="w-6 h-6 text-white" />
-                  </div>
-                  <div>
-                    <h3 className="text-xl font-semibold text-white mb-2">{benefit.title}</h3>
-                    <p className="text-gray-300">{benefit.description}</p>
-                  </div>
+                <div className="w-16 h-16 bg-gradient-to-br from-red-500 to-orange-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <standard.icon className="w-8 h-8 text-white" />
+                </div>
+                <h3 className="text-lg font-semibold text-white mb-2">{standard.name}</h3>
+                <div className="inline-flex items-center space-x-2 bg-green-500/20 text-green-400 px-3 py-1 rounded-full text-sm">
+                  <CheckCircle className="w-4 h-4" />
+                  <span>{standard.status}</span>
                 </div>
               </motion.div>
             ))}
@@ -374,11 +359,11 @@ export default function AICustomerSuccessPlatform() {
             className="text-center mb-16"
           >
             <h2 className="text-4xl font-bold text-white mb-4">
-              Transparent Pricing
+              Enterprise Security Pricing
             </h2>
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              Choose the plan that fits your customer base and requirements. 
-              All plans include our core AI features.
+              Choose the security level that matches your organization's needs. 
+              All plans include our core AI protection features.
             </p>
           </motion.div>
 
@@ -391,13 +376,13 @@ export default function AICustomerSuccessPlatform() {
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 className={`relative bg-slate-800/50 backdrop-blur-sm border rounded-xl p-8 ${
                   plan.popular 
-                    ? 'border-green-500/50 shadow-lg shadow-green-500/25' 
+                    ? 'border-red-500/50 shadow-lg shadow-red-500/25' 
                     : 'border-slate-700/50'
                 }`}
               >
                 {plan.popular && (
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                    <div className="bg-gradient-to-r from-green-500 to-emerald-600 text-white px-4 py-2 rounded-full text-sm font-medium">
+                    <div className="bg-gradient-to-r from-red-500 to-orange-600 text-white px-4 py-2 rounded-full text-sm font-medium">
                       Most Popular
                     </div>
                   </div>
@@ -415,7 +400,7 @@ export default function AICustomerSuccessPlatform() {
                 <ul className="space-y-3 mb-8">
                   {plan.features.map((feature, featureIndex) => (
                     <li key={featureIndex} className="flex items-center space-x-3">
-                      <CheckCircle className="w-5 h-5 text-green-500 flex-shrink-0" />
+                      <CheckCircle className="w-5 h-5 text-red-500 flex-shrink-0" />
                       <span className="text-gray-300">{feature}</span>
                     </li>
                   ))}
@@ -426,8 +411,8 @@ export default function AICustomerSuccessPlatform() {
                   whileTap={{ scale: 0.98 }}
                   className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
                     plan.popular
-                      ? 'bg-gradient-to-r from-green-500 to-emerald-600 text-white hover:shadow-lg hover:shadow-green-500/25'
-                      : 'border border-green-500 text-green-400 hover:bg-green-500/10'
+                      ? 'bg-gradient-to-r from-red-500 to-orange-600 text-white hover:shadow-lg hover:shadow-red-500/25'
+                      : 'border border-red-500 text-red-400 hover:bg-red-500/10'
                   }`}
                 >
                   {plan.cta}
@@ -439,7 +424,7 @@ export default function AICustomerSuccessPlatform() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 px-4 bg-gradient-to-r from-green-900/20 to-emerald-900/20">
+      <section className="py-20 px-4 bg-gradient-to-r from-red-900/20 to-orange-900/20">
         <div className="container mx-auto max-w-4xl text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -447,26 +432,26 @@ export default function AICustomerSuccessPlatform() {
             transition={{ duration: 0.8 }}
           >
             <h2 className="text-4xl font-bold text-white mb-6">
-              Ready to Transform Customer Success?
+              Ready to Secure Your Organization?
             </h2>
             <p className="text-xl text-gray-300 mb-8">
-              Join thousands of companies already using AI to improve customer retention 
-              and drive business growth.
+              Join thousands of organizations already protected by our AI-powered 
+              cybersecurity platform.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="bg-gradient-to-r from-green-500 to-emerald-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:shadow-lg hover:shadow-green-500/25 transition-all duration-300"
+                className="bg-gradient-to-r from-red-500 to-orange-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:shadow-lg hover:shadow-red-500/25 transition-all duration-300"
               >
                 Start Free Trial
               </motion.button>
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="border border-green-500 text-green-400 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-green-500/10 transition-all duration-300"
+                className="border border-red-500 text-red-400 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-red-500/10 transition-all duration-300"
               >
-                Schedule Demo
+                Security Assessment
               </motion.button>
             </div>
           </motion.div>

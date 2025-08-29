@@ -88,7 +88,8 @@ export function AppHeader() {
         { name: 'AI Sales Copilot', href: '/services/ai-sales-copilot', description: 'Sales automation & optimization' },
         { name: 'AI Compliance Assistant', href: '/services/ai-compliance-assistant', description: 'Regulatory compliance automation' },
         { name: 'AI Auto Email Responder', href: '/services/ai-auto-email-responder', description: 'Smart email management' },
-        { name: 'LLM Content Studio', href: '/services/llm-content-studio', description: 'AI-powered content creation' }
+        { name: 'LLM Content Studio', href: '/services/llm-content-studio', description: 'AI-powered content creation' },
+        { name: 'AI Project Management', href: '/services/ai-project-management', description: 'Intelligent project optimization' }
       ]
     },
     {
@@ -112,7 +113,8 @@ export function AppHeader() {
         { name: 'IoT Edge Computing', href: '/services/iot-edge', description: 'Smart device networks' },
         { name: 'Data Analytics', href: '/services/data-analytics', description: 'Advanced data processing' },
         { name: 'IT Infrastructure', href: '/services/it-infrastructure', description: 'Enterprise infrastructure' },
-        { name: 'Returns Management', href: '/services/returns-management', description: 'E-commerce RMA & logistics' }
+        { name: 'Returns Management', href: '/services/returns-management', description: 'E-commerce RMA & logistics' },
+        { name: 'AI Supply Chain Optimization', href: '/services/ai-supply-chain-optimization', description: 'Intelligent logistics & inventory' }
       ]
     },
     {
@@ -123,7 +125,8 @@ export function AppHeader() {
       services: [
         { name: 'AI Compliance Copilot', href: '/services/ai-compliance-copilot', description: 'AI-powered security' },
         { name: 'Zero Trust Architecture', href: '/services/zero-trust-network-architecture', description: 'Modern security framework' },
-        { name: 'Incident Response', href: '/services/incident-response-platform', description: 'Security incident management' }
+        { name: 'Incident Response', href: '/services/incident-response-platform', description: 'Security incident management' },
+        { name: 'AI Cybersecurity Platform', href: '/services/ai-cybersecurity-platform', description: 'Enterprise security suite' }
       ]
     },
     {
