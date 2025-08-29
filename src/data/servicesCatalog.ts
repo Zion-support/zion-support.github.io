@@ -2,7 +2,7 @@ export type ServiceItem = {
 	id: string;
 	title: string;
 	description: string;
-	category: 'Micro SaaS' | 'IT Services' | 'AI Solutions' | 'Cybersecurity' | 'Data & Analytics' | 'Cloud & DevOps' | 'Quantum Computing' | 'Blockchain & Web3' | 'IoT & Edge' | 'Green Tech' | 'Space Tech' | 'BioTech & Health' | 'FinTech & DeFi' | 'Metaverse & AR/VR' | 'Autonomous Systems';
+	category: 'Micro SaaS' | 'IT Services' | 'AI Solutions' | 'Cybersecurity' | 'Data & Analytics' | 'Cloud & DevOps' | 'Quantum Computing' | 'Blockchain & Web3' | 'IoT & Edge' | 'Green Technology & Sustainability' | 'Space Technology' | 'BioTech & Health' | 'FinTech & DeFi' | 'Metaverse & AR/VR' | 'Autonomous Systems & Robotics' | 'Emerging Technologies' | 'Healthcare & Biotechnology';
 	price: string; // average market starting price
 	billing: 'month' | 'project' | 'hour';
 	features: string[];
@@ -106,6 +106,74 @@ export const servicesCatalog: ServiceCategory[] = [
 				href: 'https://ziontechgroup.com/contact'
 			},
 			{
+				id: 'ai-powered-inventory-optimizer',
+				title: 'AI Inventory Optimization Suite',
+				description: 'Intelligent inventory management system that predicts demand, optimizes stock levels, and reduces waste using machine learning.',
+				category: 'Micro SaaS',
+				price: '$349',
+				billing: 'month',
+				features: [
+					'Demand forecasting with 95% accuracy',
+					'Automated reorder points',
+					'Seasonal trend analysis',
+					'Supplier performance tracking',
+					'Real-time inventory alerts'
+				],
+				ctaLabel: 'Optimize Inventory',
+				href: 'https://ziontechgroup.com/contact'
+			},
+			{
+				id: 'smart-contract-auditor-pro',
+				title: 'Smart Contract Auditor Pro',
+				description: 'Advanced blockchain smart contract security auditing with AI-powered vulnerability detection and compliance verification.',
+				category: 'Micro SaaS',
+				price: '$799',
+				billing: 'month',
+				features: [
+					'AI-powered vulnerability scanning',
+					'Automated compliance checks',
+					'Gas optimization analysis',
+					'Multi-chain support',
+					'Real-time security monitoring'
+				],
+				ctaLabel: 'Audit Contracts',
+				href: 'https://ziontechgroup.com/contact'
+			},
+			{
+				id: 'quantum-encryption-manager',
+				title: 'Quantum Encryption Manager',
+				description: 'Future-proof encryption management system using quantum-resistant algorithms and post-quantum cryptography standards.',
+				category: 'Micro SaaS',
+				price: '$449',
+				billing: 'month',
+				features: [
+					'Post-quantum cryptography',
+					'Hybrid encryption schemes',
+					'Key management automation',
+					'Compliance reporting',
+					'Zero-trust architecture'
+				],
+				ctaLabel: 'Secure Future',
+				href: 'https://ziontechgroup.com/contact'
+			},
+			{
+				id: 'ai-workflow-orchestrator',
+				title: 'AI Workflow Orchestrator',
+				description: 'Intelligent workflow automation platform that learns from user behavior and optimizes business processes autonomously.',
+				category: 'Micro SaaS',
+				price: '$299',
+				billing: 'month',
+				features: [
+					'Behavioral learning algorithms',
+					'Process optimization',
+					'Integration with 100+ tools',
+					'Performance analytics',
+					'Custom workflow builder'
+				],
+				ctaLabel: 'Automate Workflows',
+				href: 'https://ziontechgroup.com/contact'
+			},
+			{
 				id: 'quantum-supply-chain-optimizer',
 				title: 'Quantum Supply Chain Optimizer',
 				description: 'Revolutionary supply chain optimization using quantum algorithms for complex logistics and inventory management.',
@@ -120,6 +188,74 @@ export const servicesCatalog: ServiceCategory[] = [
 					'Risk assessment'
 				],
 				ctaLabel: 'Optimize Supply Chain',
+				href: 'https://ziontechgroup.com/contact'
+			},
+			{
+				id: 'ai-powered-customer-churn-predictor',
+				title: 'AI Customer Churn Predictor',
+				description: 'Predict customer churn before it happens with 90%+ accuracy using advanced machine learning and behavioral analysis.',
+				category: 'Micro SaaS',
+				price: '$199',
+				billing: 'month',
+				features: [
+					'Early warning system',
+					'Behavioral pattern analysis',
+					'Retention recommendations',
+					'Customer lifetime value prediction',
+					'Automated intervention triggers'
+				],
+				ctaLabel: 'Predict Churn',
+				href: 'https://ziontechgroup.com/contact'
+			},
+			{
+				id: 'quantum-financial-modeling',
+				title: 'Quantum Financial Modeling Platform',
+				description: 'Revolutionary financial modeling using quantum algorithms for portfolio optimization, risk assessment, and market prediction.',
+				category: 'Micro SaaS',
+				price: '$1,299',
+				billing: 'month',
+				features: [
+					'Quantum portfolio optimization',
+					'Real-time risk assessment',
+					'Market prediction algorithms',
+					'Regulatory compliance',
+					'Multi-asset class support'
+				],
+				ctaLabel: 'Model Finances',
+				href: 'https://ziontechgroup.com/contact'
+			},
+			{
+				id: 'ai-powered-seo-analyzer',
+				title: 'AI SEO Analyzer Pro',
+				description: 'Advanced SEO analysis and optimization using AI to improve search rankings, content quality, and user engagement.',
+				category: 'Micro SaaS',
+				price: '$149',
+				billing: 'month',
+				features: [
+					'AI-powered keyword research',
+					'Content optimization suggestions',
+					'Competitor analysis',
+					'Ranking prediction',
+					'Performance tracking'
+				],
+				ctaLabel: 'Analyze SEO',
+				href: 'https://ziontechgroup.com/contact'
+			},
+			{
+				id: 'smart-contract-development-platform',
+				title: 'Smart Contract Development Platform',
+				description: 'Complete platform for developing, testing, and deploying secure smart contracts with AI-powered code review.',
+				category: 'Micro SaaS',
+				price: '$399',
+				billing: 'month',
+				features: [
+					'AI code review',
+					'Automated testing',
+					'Security auditing',
+					'Multi-chain deployment',
+					'Developer tools'
+				],
+				ctaLabel: 'Develop Contracts',
 				href: 'https://ziontechgroup.com/contact'
 			}
 			,
@@ -422,6 +558,74 @@ export const servicesCatalog: ServiceCategory[] = [
 				],
 				ctaLabel: 'Start Recording',
 				href: 'https://ziontechgroup.com/services/ai-meeting-notes-agent'
+			},
+			{
+				id: 'quantum-ai-drug-discovery',
+				title: 'Quantum AI Drug Discovery Platform',
+				description: 'Revolutionary drug discovery platform combining quantum computing with AI to accelerate pharmaceutical research and development.',
+				category: 'AI Solutions',
+				price: '$15,000',
+				billing: 'month',
+				features: [
+					'Quantum molecular modeling',
+					'AI-powered drug screening',
+					'Protein folding prediction',
+					'Clinical trial optimization',
+					'Regulatory compliance tools'
+				],
+				ctaLabel: 'Discover Drugs',
+				href: 'https://ziontechgroup.com/contact'
+			},
+			{
+				id: 'ai-powered-climate-modeling',
+				title: 'AI Climate Modeling & Prediction',
+				description: 'Advanced climate modeling system using AI to predict weather patterns, climate change impacts, and environmental risks.',
+				category: 'AI Solutions',
+				price: '$8,999',
+				billing: 'month',
+				features: [
+					'Climate pattern prediction',
+					'Risk assessment models',
+					'Real-time monitoring',
+					'Policy impact analysis',
+					'Global data integration'
+				],
+				ctaLabel: 'Model Climate',
+				href: 'https://ziontechgroup.com/contact'
+			},
+			{
+				id: 'quantum-ai-cybersecurity',
+				title: 'Quantum AI Cybersecurity Suite',
+				description: 'Next-generation cybersecurity platform using quantum computing and AI to detect and prevent advanced cyber threats.',
+				category: 'AI Solutions',
+				price: '$12,999',
+				billing: 'month',
+				features: [
+					'Quantum threat detection',
+					'AI behavioral analysis',
+					'Zero-day exploit prevention',
+					'Real-time response',
+					'Compliance automation'
+				],
+				ctaLabel: 'Secure Systems',
+				href: 'https://ziontechgroup.com/contact'
+			},
+			{
+				id: 'ai-powered-space-exploration',
+				title: 'AI Space Exploration Platform',
+				description: 'Revolutionary space exploration platform using AI for satellite navigation, planetary mapping, and space mission optimization.',
+				category: 'AI Solutions',
+				price: '$25,000',
+				billing: 'month',
+				features: [
+					'Satellite navigation AI',
+					'Planetary mapping',
+					'Mission optimization',
+					'Space debris tracking',
+					'Interplanetary communication'
+				],
+				ctaLabel: 'Explore Space',
+				href: 'https://ziontechgroup.com/contact'
 			}
 		]
 	},
@@ -549,6 +753,148 @@ export const servicesCatalog: ServiceCategory[] = [
 				],
 				ctaLabel: 'Plan Zero Trust',
 				href: 'https://ziontechgroup.com/services/zero-trust-rollout-coaching'
+			},
+			{
+				id: 'quantum-cloud-infrastructure',
+				title: 'Quantum Cloud Infrastructure',
+				description: 'Next-generation cloud infrastructure leveraging quantum computing principles for ultra-fast processing and quantum advantage.',
+				category: 'IT Services',
+				price: '$50,000',
+				billing: 'project',
+				features: [
+					'Quantum cloud architecture',
+					'Hybrid quantum-classical',
+					'Quantum networking',
+					'Performance optimization',
+					'Scalable infrastructure'
+				],
+				ctaLabel: 'Build Quantum Cloud',
+				href: 'https://ziontechgroup.com/contact'
+			},
+			{
+				id: 'ai-powered-devops-automation',
+				title: 'AI DevOps Automation Platform',
+				description: 'Intelligent DevOps automation using AI to optimize CI/CD pipelines, deployment strategies, and infrastructure management.',
+				category: 'IT Services',
+				price: '$8,999',
+				billing: 'month',
+				features: [
+					'AI-powered CI/CD optimization',
+					'Automated deployment strategies',
+					'Infrastructure as code',
+					'Performance monitoring',
+					'Disaster recovery automation'
+				],
+				ctaLabel: 'Automate DevOps',
+				href: 'https://ziontechgroup.com/contact'
+			},
+			{
+				id: 'quantum-database-optimization',
+				title: 'Quantum Database Optimization',
+				description: 'Revolutionary database optimization using quantum algorithms for query optimization, indexing, and performance tuning.',
+				category: 'IT Services',
+				price: '$15,000',
+				billing: 'project',
+				features: [
+					'Quantum query optimization',
+					'AI-powered indexing',
+					'Performance tuning',
+					'Scalability solutions',
+					'Migration assistance'
+				],
+				ctaLabel: 'Optimize Database',
+				href: 'https://ziontechgroup.com/contact'
+			},
+			{
+				id: 'ai-powered-network-security',
+				title: 'AI Network Security Operations',
+				description: 'Intelligent network security using AI for threat detection, traffic analysis, and automated incident response.',
+				category: 'IT Services',
+				price: '$12,000',
+				billing: 'month',
+				features: [
+					'AI threat detection',
+					'Network traffic analysis',
+					'Automated incident response',
+					'Security monitoring',
+					'Compliance reporting'
+				],
+				ctaLabel: 'Secure Network',
+				href: 'https://ziontechgroup.com/contact'
+			}
+		]
+	},
+	{
+		name: 'Emerging Technologies',
+		slug: 'emerging-technologies',
+		items: [
+			{
+				id: 'quantum-machine-learning-platform',
+				title: 'Quantum Machine Learning Platform',
+				description: 'Revolutionary machine learning platform using quantum computing for unprecedented AI model training and optimization.',
+				category: 'Emerging Technologies',
+				price: '$25,000',
+				billing: 'month',
+				features: [
+					'Quantum neural networks',
+					'Quantum feature selection',
+					'Model optimization',
+					'Training acceleration',
+					'Research collaboration tools'
+				],
+				ctaLabel: 'Quantum ML Access',
+				href: 'https://ziontechgroup.com/contact'
+			},
+			{
+				id: 'ai-powered-biotechnology',
+				title: 'AI Biotechnology Platform',
+				description: 'Advanced biotechnology platform using AI for genetic engineering, protein design, and synthetic biology applications.',
+				category: 'Emerging Technologies',
+				price: '$18,000',
+				billing: 'month',
+				features: [
+					'AI genetic engineering',
+					'Protein design algorithms',
+					'Synthetic biology tools',
+					'Lab automation',
+					'Regulatory compliance'
+				],
+				ctaLabel: 'Biotech Innovation',
+				href: 'https://ziontechgroup.com/contact'
+			},
+			{
+				id: 'quantum-communications-network',
+				title: 'Quantum Communications Network',
+				description: 'Secure quantum communication network using quantum key distribution for unbreakable encryption and secure data transmission.',
+				category: 'Emerging Technologies',
+				price: '$35,000',
+				billing: 'project',
+				features: [
+					'Quantum key distribution',
+					'Quantum repeaters',
+					'Secure communication',
+					'Network infrastructure',
+					'Global connectivity'
+				],
+				ctaLabel: 'Quantum Network',
+				href: 'https://ziontechgroup.com/contact'
+			},
+			{
+				id: 'ai-powered-nanotechnology',
+				title: 'AI Nanotechnology Platform',
+				description: 'Revolutionary nanotechnology platform using AI for material design, nanofabrication, and nanoscale engineering.',
+				category: 'Emerging Technologies',
+				price: '$22,000',
+				billing: 'month',
+				features: [
+					'AI material design',
+					'Nanofabrication automation',
+					'Quality control',
+					'Research tools',
+					'Industry applications'
+				],
+				ctaLabel: 'Nano Innovation',
+				href: 'https://ziontechgroup.com/contact'
 			}
 		]
 	},
@@ -628,6 +974,80 @@ export const servicesCatalog: ServiceCategory[] = [
 		]
 	},
 	{
+		name: 'FinTech & DeFi',
+		slug: 'fintech-defi',
+		items: [
+			{
+				id: 'quantum-trading-algorithm',
+				title: 'Quantum Trading Algorithm Platform',
+				description: 'Revolutionary trading platform using quantum algorithms for high-frequency trading, risk management, and portfolio optimization.',
+				category: 'FinTech & DeFi',
+				price: '$45,000',
+				billing: 'month',
+				features: [
+					'Quantum trading algorithms',
+					'Real-time risk management',
+					'Portfolio optimization',
+					'Market prediction',
+					'Regulatory compliance'
+				],
+				ctaLabel: 'Quantum Trading',
+				href: 'https://ziontechgroup.com/contact'
+			},
+			{
+				id: 'ai-powered-defi-protocol',
+				title: 'AI DeFi Protocol Optimizer',
+				description: 'Intelligent DeFi protocol optimization using AI for yield farming, liquidity management, and risk assessment.',
+				category: 'FinTech & DeFi',
+				price: '$8,999',
+				billing: 'month',
+				features: [
+					'AI yield optimization',
+					'Liquidity management',
+					'Risk assessment',
+					'Protocol analysis',
+					'Automated strategies'
+				],
+				ctaLabel: 'Optimize DeFi',
+				href: 'https://ziontechgroup.com/contact'
+			},
+			{
+				id: 'quantum-blockchain-security',
+				title: 'Quantum Blockchain Security',
+				description: 'Future-proof blockchain security using quantum-resistant cryptography and AI-powered threat detection.',
+				category: 'FinTech & DeFi',
+				price: '$12,000',
+				billing: 'month',
+				features: [
+					'Quantum-resistant crypto',
+					'AI threat detection',
+					'Smart contract security',
+					'Network protection',
+					'Compliance tools'
+				],
+				ctaLabel: 'Secure Blockchain',
+				href: 'https://ziontechgroup.com/contact'
+			},
+			{
+				id: 'ai-powered-credit-scoring',
+				title: 'AI Credit Scoring Platform',
+				description: 'Advanced credit scoring using AI and alternative data for more accurate risk assessment and financial inclusion.',
+				category: 'FinTech & DeFi',
+				price: '$5,999',
+				billing: 'month',
+				features: [
+					'AI risk assessment',
+					'Alternative data analysis',
+					'Real-time scoring',
+					'Regulatory compliance',
+					'API integration'
+				],
+				ctaLabel: 'AI Credit Scoring',
+				href: 'https://ziontechgroup.com/contact'
+			}
+		]
+	},
+	{
 		name: 'Data & Analytics',
 		slug: 'data-analytics',
 		items: [
@@ -699,6 +1119,80 @@ export const servicesCatalog: ServiceCategory[] = [
 				],
 				ctaLabel: 'Migrate Workloads',
 				href: 'https://ziontechgroup.com/services'
+			}
+		]
+	},
+	{
+		name: 'Healthcare & Biotechnology',
+		slug: 'healthcare-biotech',
+		items: [
+			{
+				id: 'ai-powered-medical-imaging',
+				title: 'AI Medical Imaging Analysis',
+				description: 'Advanced medical imaging analysis using AI for early disease detection, diagnosis, and treatment planning.',
+				category: 'Healthcare & Biotechnology',
+				price: '$15,000',
+				billing: 'month',
+				features: [
+					'AI image analysis',
+					'Disease detection',
+					'Treatment planning',
+					'HIPAA compliance',
+					'Integration with PACS'
+				],
+				ctaLabel: 'Medical AI',
+				href: 'https://ziontechgroup.com/contact'
+			},
+			{
+				id: 'quantum-drug-discovery',
+				title: 'Quantum Drug Discovery Platform',
+				description: 'Revolutionary drug discovery platform using quantum computing for molecular modeling and drug development.',
+				category: 'Healthcare & Biotechnology',
+				price: '$35,000',
+				billing: 'month',
+				features: [
+					'Quantum molecular modeling',
+					'Drug screening',
+					'Clinical trial optimization',
+					'Regulatory compliance',
+					'Research collaboration'
+				],
+				ctaLabel: 'Quantum Discovery',
+				href: 'https://ziontechgroup.com/contact'
+			},
+			{
+				id: 'ai-powered-genomics',
+				title: 'AI Genomics Analysis Platform',
+				description: 'Advanced genomics analysis using AI for genetic research, personalized medicine, and disease prediction.',
+				category: 'Healthcare & Biotechnology',
+				price: '$12,000',
+				billing: 'month',
+				features: [
+					'AI genetic analysis',
+					'Personalized medicine',
+					'Disease prediction',
+					'Research tools',
+					'Data security'
+				],
+				ctaLabel: 'Genomics AI',
+				href: 'https://ziontechgroup.com/contact'
+			},
+			{
+				id: 'quantum-bioinformatics',
+				title: 'Quantum Bioinformatics Platform',
+				description: 'Revolutionary bioinformatics platform using quantum computing for protein folding and biological data analysis.',
+				category: 'Healthcare & Biotechnology',
+				price: '$28,000',
+				billing: 'month',
+				features: [
+					'Quantum protein folding',
+					'Biological data analysis',
+					'Research collaboration',
+					'High-performance computing',
+					'Industry applications'
+				],
+				ctaLabel: 'Quantum Bio',
+				href: 'https://ziontechgroup.com/contact'
 			}
 		]
 	},
@@ -792,6 +1286,80 @@ export const servicesCatalog: ServiceCategory[] = [
 				],
 				ctaLabel: 'Enforce Contracts',
 				href: 'https://ziontechgroup.com/services/data-contracts-platform'
+			}
+		]
+	},
+	{
+		name: 'Green Technology & Sustainability',
+		slug: 'green-tech-sustainability',
+		items: [
+			{
+				id: 'ai-powered-energy-optimization',
+				title: 'AI Energy Optimization Platform',
+				description: 'Intelligent energy management system using AI to optimize consumption, reduce costs, and improve sustainability.',
+				category: 'Green Technology & Sustainability',
+				price: '$8,999',
+				billing: 'month',
+				features: [
+					'AI energy optimization',
+					'Real-time monitoring',
+					'Cost reduction',
+					'Sustainability reporting',
+					'Integration with smart grids'
+				],
+				ctaLabel: 'Optimize Energy',
+				href: 'https://ziontechgroup.com/contact'
+			},
+			{
+				id: 'quantum-carbon-capture',
+				title: 'Quantum Carbon Capture Technology',
+				description: 'Revolutionary carbon capture technology using quantum computing for efficient CO2 removal and climate change mitigation.',
+				category: 'Green Technology & Sustainability',
+				price: '$50,000',
+				billing: 'project',
+				features: [
+					'Quantum carbon capture',
+					'Climate modeling',
+					'Efficiency optimization',
+					'Environmental impact',
+					'Regulatory compliance'
+				],
+				ctaLabel: 'Capture Carbon',
+				href: 'https://ziontechgroup.com/contact'
+			},
+			{
+				id: 'ai-powered-waste-management',
+				title: 'AI Waste Management System',
+				description: 'Intelligent waste management using AI for sorting, recycling optimization, and waste reduction strategies.',
+				category: 'Green Technology & Sustainability',
+				price: '$6,999',
+				billing: 'month',
+				features: [
+					'AI waste sorting',
+					'Recycling optimization',
+					'Waste reduction',
+					'Cost savings',
+					'Sustainability metrics'
+				],
+				ctaLabel: 'Manage Waste',
+				href: 'https://ziontechgroup.com/contact'
+			},
+			{
+				id: 'quantum-renewable-energy',
+				title: 'Quantum Renewable Energy Platform',
+				description: 'Revolutionary renewable energy platform using quantum computing for energy storage and grid optimization.',
+				category: 'Green Technology & Sustainability',
+				price: '$35,000',
+				billing: 'month',
+				features: [
+					'Quantum energy storage',
+					'Grid optimization',
+					'Renewable integration',
+					'Energy forecasting',
+					'Smart grid management'
+				],
+				ctaLabel: 'Renewable Energy',
+				href: 'https://ziontechgroup.com/contact'
 			}
 		]
 	},
@@ -893,6 +1461,80 @@ export const servicesCatalog: ServiceCategory[] = [
 		]
 	},
 	{
+		name: 'Space Technology',
+		slug: 'space-technology',
+		items: [
+			{
+				id: 'ai-powered-satellite-navigation',
+				title: 'AI Satellite Navigation System',
+				description: 'Advanced satellite navigation using AI for precise positioning, route optimization, and space traffic management.',
+				category: 'Space Technology',
+				price: '$45,000',
+				billing: 'month',
+				features: [
+					'AI navigation algorithms',
+					'Precise positioning',
+					'Route optimization',
+					'Space traffic management',
+					'Real-time monitoring'
+				],
+				ctaLabel: 'Space Navigation',
+				href: 'https://ziontechgroup.com/contact'
+			},
+			{
+				id: 'quantum-space-communications',
+				title: 'Quantum Space Communications',
+				description: 'Revolutionary space communication system using quantum entanglement for secure, instant communication across vast distances.',
+				category: 'Space Technology',
+				price: '$75,000',
+				billing: 'project',
+				features: [
+					'Quantum entanglement',
+					'Instant communication',
+					'Secure transmission',
+					'Deep space capability',
+					'Interplanetary network'
+				],
+				ctaLabel: 'Quantum Space Comms',
+				href: 'https://ziontechgroup.com/contact'
+			},
+			{
+				id: 'ai-powered-planetary-mapping',
+				title: 'AI Planetary Mapping Platform',
+				description: 'Intelligent planetary mapping using AI for terrain analysis, resource identification, and exploration planning.',
+				category: 'Space Technology',
+				price: '$28,000',
+				billing: 'month',
+				features: [
+					'AI terrain analysis',
+					'Resource identification',
+					'Exploration planning',
+					'3D mapping',
+					'Data visualization'
+				],
+				ctaLabel: 'Map Planets',
+				href: 'https://ziontechgroup.com/contact'
+			},
+			{
+				id: 'quantum-space-propulsion',
+				title: 'Quantum Space Propulsion',
+				description: 'Revolutionary space propulsion technology using quantum mechanics for efficient, high-speed space travel.',
+				category: 'Space Technology',
+				price: '$100,000',
+				billing: 'project',
+				features: [
+					'Quantum propulsion',
+					'High-speed travel',
+					'Fuel efficiency',
+					'Deep space capability',
+					'Mission optimization'
+				],
+				ctaLabel: 'Quantum Propulsion',
+				href: 'https://ziontechgroup.com/contact'
+			}
+		]
+	},
+	{
 		name: 'Blockchain & Web3',
 		slug: 'blockchain-web3',
 		items: [
@@ -928,6 +1570,80 @@ export const servicesCatalog: ServiceCategory[] = [
 					'Enterprise features'
 				],
 				ctaLabel: 'Blockchain Demo',
+				href: 'https://ziontechgroup.com/contact'
+			}
+		]
+	},
+	{
+		name: 'Autonomous Systems & Robotics',
+		slug: 'autonomous-systems-robotics',
+		items: [
+			{
+				id: 'ai-powered-autonomous-vehicles',
+				title: 'AI Autonomous Vehicle Platform',
+				description: 'Complete autonomous vehicle management system with AI-driven navigation, safety, and fleet optimization.',
+				category: 'Autonomous Systems & Robotics',
+				price: '$25,000',
+				billing: 'month',
+				features: [
+					'AI navigation systems',
+					'Safety monitoring',
+					'Fleet management',
+					'Predictive maintenance',
+					'Regulatory compliance'
+				],
+				ctaLabel: 'Autonomous Vehicles',
+				href: 'https://ziontechgroup.com/contact'
+			},
+			{
+				id: 'quantum-robotics-control',
+				title: 'Quantum Robotics Control System',
+				description: 'Revolutionary robotics control using quantum computing for precise movement, learning, and autonomous decision-making.',
+				category: 'Autonomous Systems & Robotics',
+				price: '$35,000',
+				billing: 'month',
+				features: [
+					'Quantum control algorithms',
+					'Precise movement',
+					'Autonomous learning',
+					'Real-time decision making',
+					'Multi-robot coordination'
+				],
+				ctaLabel: 'Quantum Robotics',
+				href: 'https://ziontechgroup.com/contact'
+			},
+			{
+				id: 'ai-powered-industrial-automation',
+				title: 'AI Industrial Automation Platform',
+				description: 'Intelligent industrial automation using AI for manufacturing optimization, quality control, and predictive maintenance.',
+				category: 'Autonomous Systems & Robotics',
+				price: '$18,000',
+				billing: 'month',
+				features: [
+					'AI manufacturing optimization',
+					'Quality control automation',
+					'Predictive maintenance',
+					'Production efficiency',
+					'Safety monitoring'
+				],
+				ctaLabel: 'Industrial Automation',
+				href: 'https://ziontechgroup.com/contact'
+			},
+			{
+				id: 'quantum-drone-navigation',
+				title: 'Quantum Drone Navigation System',
+				description: 'Revolutionary drone navigation using quantum algorithms for precise positioning, obstacle avoidance, and autonomous flight.',
+				category: 'Autonomous Systems & Robotics',
+				price: '$12,000',
+				billing: 'month',
+				features: [
+					'Quantum navigation',
+					'Obstacle avoidance',
+					'Autonomous flight',
+					'Precise positioning',
+					'Fleet coordination'
+				],
+				ctaLabel: 'Quantum Drones',
 				href: 'https://ziontechgroup.com/contact'
 			}
 		]
@@ -1120,6 +1836,80 @@ export const servicesCatalog: ServiceCategory[] = [
 				],
 				ctaLabel: 'Analyze Imagery',
 				href: 'https://ziontechgroup.com/services'
+			}
+		]
+	},
+	{
+		name: 'Metaverse & AR/VR',
+		slug: 'metaverse-ar-vr',
+		items: [
+			{
+				id: 'quantum-metaverse-platform',
+				title: 'Quantum Metaverse Platform',
+				description: 'Revolutionary metaverse platform using quantum computing for immersive experiences, real-time rendering, and virtual reality.',
+				category: 'Metaverse & AR/VR',
+				price: '$45,000',
+				billing: 'month',
+				features: [
+					'Quantum rendering',
+					'Immersive experiences',
+					'Real-time interaction',
+					'Virtual reality',
+					'Cross-platform support'
+				],
+				ctaLabel: 'Quantum Metaverse',
+				href: 'https://ziontechgroup.com/contact'
+			},
+			{
+				id: 'ai-powered-ar-development',
+				title: 'AI AR Development Platform',
+				description: 'Intelligent augmented reality development platform using AI for content creation, object recognition, and user experience optimization.',
+				category: 'Metaverse & AR/VR',
+				price: '$15,000',
+				billing: 'month',
+				features: [
+					'AI content creation',
+					'Object recognition',
+					'User experience optimization',
+					'Development tools',
+					'Multi-platform deployment'
+				],
+				ctaLabel: 'AR Development',
+				href: 'https://ziontechgroup.com/contact'
+			},
+			{
+				id: 'quantum-vr-simulation',
+				title: 'Quantum VR Simulation Platform',
+				description: 'Revolutionary virtual reality simulation using quantum computing for realistic physics, AI interactions, and immersive training.',
+				category: 'Metaverse & AR/VR',
+				price: '$28,000',
+				billing: 'month',
+				features: [
+					'Quantum physics simulation',
+					'AI interactions',
+					'Immersive training',
+					'Realistic environments',
+					'Multi-user collaboration'
+				],
+				ctaLabel: 'Quantum VR',
+				href: 'https://ziontechgroup.com/contact'
+			},
+			{
+				id: 'ai-powered-digital-twin',
+				title: 'AI Digital Twin Platform',
+				description: 'Intelligent digital twin platform using AI for real-time monitoring, predictive maintenance, and virtual representation of physical assets.',
+				category: 'Metaverse & AR/VR',
+				price: '$22,000',
+				billing: 'month',
+				features: [
+					'Real-time monitoring',
+					'Predictive maintenance',
+					'Virtual representation',
+					'Data integration',
+					'Analytics dashboard'
+				],
+				ctaLabel: 'Digital Twin',
+				href: 'https://ziontechgroup.com/contact'
 			}
 		]
 	},
