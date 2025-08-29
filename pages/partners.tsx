@@ -1,17 +1,12 @@
 import { motion } from 'framer-motion'
-import { 
-  Shield, 
-  Cloud, 
-  Brain, 
-  Users, 
-  Globe,
+import {
   Award,
-  Zap,
-  Cpu,
+  Brain,
+  Cloud,
   Database,
-  Lock,
   Rocket,
-  Handshake
+  Shield,
+  Zap
 } from 'lucide-react'
 import Head from 'next/head'
 import React from 'react'
