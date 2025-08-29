@@ -91,6 +91,12 @@ const AIDataGovernance = React.lazy(() => import('./pages/services/AIDataGoverna
 const EdgeComputingPlatform = React.lazy(() => import('./pages/services/EdgeComputingPlatform'));
 const AICustomerSuccessPlatform = React.lazy(() => import('./pages/services/AICustomerSuccessPlatform'));
 
+// New AI-Powered Micro SAAS Services
+const AICodeReviewSecurity = React.lazy(() => import('./pages/services/ai-code-review-security'));
+const AICustomerExperienceAnalytics = React.lazy(() => import('./pages/services/ai-customer-experience-analytics'));
+const AIDevOpsAutomationPlatform = React.lazy(() => import('./pages/services/ai-devops-automation-platform'));
+const AIIoTEdgeComputingPlatform = React.lazy(() => import('./pages/services/ai-iot-edge-computing-platform'));
+
 // Simple placeholder pages for missing ones
 const Community = React.lazy(() => import('./pages/Community'));
 const Documentation = React.lazy(() => import('./pages/Documentation'));
@@ -218,6 +224,12 @@ function App() {
               <Route path="/services/ai-data-governance" element={<AIDataGovernance />} />
               <Route path="/services/edge-computing-platform" element={<EdgeComputingPlatform />} />
               <Route path="/services/ai-customer-success-platform" element={<AICustomerSuccessPlatform />} />
+
+              {/* New AI-Powered Micro SAAS Service Routes */}
+              <Route path="/services/ai-code-review-security" element={<AICodeReviewSecurity />} />
+              <Route path="/services/ai-customer-experience-analytics" element={<AICustomerExperienceAnalytics />} />
+              <Route path="/services/ai-devops-automation-platform" element={<AIDevOpsAutomationPlatform />} />
+              <Route path="/services/ai-iot-edge-computing-platform" element={<AIIoTEdgeComputingPlatform />} />
               
               {/* Catch all route */}
               <Route path="*" element={<Home />} />
