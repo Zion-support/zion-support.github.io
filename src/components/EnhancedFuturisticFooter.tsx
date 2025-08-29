@@ -79,12 +79,11 @@ export function EnhancedFuturisticFooter() {
         { name: 'AI Business Intelligence', href: '/services/ai-business-intelligence' },
         { name: 'AI Workflow Orchestrator', href: '/services/ai-workflow-orchestrator' },
         { name: 'AI Customer Success Platform', href: '/services/ai-customer-success-platform' },
-        { name: 'AI Data Governance', href: '/services/ai-data-governance' },
-        { name: 'AI Healthcare Analytics', href: '/services/ai-healthcare-analytics' },
+        { name: 'AI Data Governance', href: '/services/data-analytics' },
+        { name: 'AI Healthcare Analytics', href: '/services/ai-healthcare-analytics-platform' },
         { name: 'AI Project Management Platform', href: '/services/ai-project-management-platform' },
         { name: 'AI Cybersecurity Threat Detection', href: '/services/ai-cybersecurity-threat-detection' },
         { name: 'AI Financial Trading Platform', href: '/services/ai-financial-trading-platform' },
-        { name: 'AI Healthcare Analytics Platform', href: '/services/ai-healthcare-analytics-platform' },
         { name: 'AI Content Marketing Automation', href: '/services/ai-content-marketing-automation' }
       ]
     },
@@ -126,7 +125,7 @@ export function EnhancedFuturisticFooter() {
         { name: 'API Reference', href: '/api' },
         { name: 'Developer Portal', href: '/developer' },
         { name: 'Community Forum', href: '/community' },
-        { name: 'Support Center', href: '/support' },
+        { name: 'Help Center', href: '/help' },
         { name: 'Training & Certification', href: '/training' },
         { name: 'Blog', href: '/blog' },
         { name: 'Case Studies', href: '/case-studies' },

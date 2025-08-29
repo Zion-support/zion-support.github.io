@@ -1,4 +1,4 @@
-import { ArrowRight, Atom, BookOpen, Brain, Building, Building2, ChevronDown, Cloud, Code, Cpu, DollarSign, FileText, Globe, HeartHandshake, Heart, HelpCircle, Leaf, Lock, Mail, MapPin, Menu, MessageCircle, PenTool, Phone, Rocket, Scale, Search, Settings, Shield, ShoppingCart, Star, Target, TrendingUp, Users, X, Zap, User, Bell, Award, GraduationCap, LifeBuoy } from 'lucide-react';
+import { ArrowRight, Atom, BookOpen, Brain, Building, Building2, ChevronDown, Cloud, Code, Cpu, DollarSign, FileText, Globe, HeartHandshake, Heart, HelpCircle, Leaf, Lock, Mail, MapPin, Menu, MessageCircle, PenTool, Phone, Rocket, Scale, Search, Settings, Shield, ShoppingCart, Star, Target, TrendingUp, Users, X, Zap, User, Bell, Award, GraduationCap, LifeBuoy, BarChart3, Server, Satellite } from 'lucide-react';
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { ThemeToggle } from '../components/ThemeToggle';
@@ -38,23 +38,6 @@ export function AppHeader() {
     { name: 'Contact', href: '/contact', current: false },
   ];
   const services = [
-=======
-    { 
-      name: 'Comprehensive Services 2026', 
-      href: '/comprehensive-services-showcase-2026', 
-      icon: Rocket, 
-      description: 'All Services & Pricing',
-      featured: true,
-      color: 'from-cyan-500 to-blue-500'
-    },
-    { 
-      name: 'Innovative Micro SAAS 2025', 
-      href: '/innovative-micro-saas-services-2025', 
-      icon: Rocket, 
-      description: 'Cutting-edge AI Services',
-      featured: true,
-      color: 'from-purple-500 to-pink-500'
-    },
     { 
       name: 'AI Business Intelligence', 
       href: '/services/ai-business-intelligence', 
@@ -64,24 +47,16 @@ export function AppHeader() {
       color: 'from-purple-500 to-cyan-500'
     },
     { 
-      name: 'AI Healthcare Platform', 
-      href: '/services/ai-healthcare-platform', 
+      name: 'AI Healthcare Analytics', 
+      href: '/services/ai-healthcare-analytics-platform', 
       icon: Heart, 
       description: 'Medical AI & Diagnostics',
       featured: true,
       color: 'from-red-500 to-pink-500'
     },
     { 
-      name: 'AI Content Creation', 
-      href: '/services/ai-content-creation', 
-      icon: PenTool, 
-      description: 'Content Generation & Optimization',
-      featured: true,
-      color: 'from-blue-500 to-indigo-500'
-    },
-    { 
       name: 'AI Cybersecurity', 
-      href: '/services/ai-cybersecurity', 
+      href: '/services/ai-cybersecurity-threat-detection', 
       icon: Shield, 
       description: 'AI-Powered Security',
       featured: true,
@@ -97,7 +72,7 @@ export function AppHeader() {
     },
     { 
       name: 'IoT Edge Computing', 
-      href: '/services/iot-edge-computing', 
+      href: '/services/iot-edge', 
       icon: Cpu, 
       description: 'IoT & Real-time Processing',
       featured: true,
@@ -128,44 +103,36 @@ export function AppHeader() {
       color: 'from-orange-500 to-red-500'
     },
     { 
-      name: 'Revolutionary Services 2030', 
-      href: '/revolutionary-services-2030', 
-      icon: Rocket, 
-      description: 'Future Technology Solutions',
-      featured: true,
+      name: 'Data Analytics', 
+      href: '/services/data-analytics', 
+      icon: BarChart3, 
+      description: 'Business Intelligence & Analytics',
+      featured: false,
+      color: 'from-blue-500 to-indigo-500'
+    },
+    { 
+      name: 'IT Infrastructure', 
+      href: '/services/it-infrastructure', 
+      icon: Server, 
+      description: 'Enterprise IT Solutions',
+      featured: false,
+      color: 'from-gray-500 to-slate-500'
+    },
+    { 
+      name: 'Green IT Solutions', 
+      href: '/services/green-it', 
+      icon: Leaf, 
+      description: 'Sustainable Technology',
+      featured: false,
+      color: 'from-green-500 to-emerald-500'
+    },
+    { 
+      name: 'Space Technology', 
+      href: '/services/space-tech', 
+      icon: Satellite, 
+      description: 'Aerospace & Space Tech',
+      featured: false,
       color: 'from-indigo-500 to-purple-500'
-    },
-    { 
-      name: 'Pricing Guide 2026', 
-      href: '/comprehensive-pricing-guide-2026', 
-      icon: DollarSign, 
-      description: 'Complete Pricing & ROI Analysis',
-      featured: true,
-      color: 'from-green-500 to-emerald-500'
-    },
-    { 
-      name: 'AI Business Intelligence', 
-      href: '/services/ai-business-intelligence', 
-      icon: Brain, 
-      description: 'Machine Learning & Data Science',
-      featured: false,
-      color: 'from-purple-500 to-cyan-500'
-    },
-    { 
-      name: 'Cloud DevOps', 
-      href: '/services/cloud-devops', 
-      icon: Cloud, 
-      description: 'DevOps & Infrastructure',
-      featured: false,
-      color: 'from-blue-500 to-cyan-500'
-    },
-    { 
-      name: 'Digital Twin Platform', 
-      href: '/services/digital-twin', 
-      icon: Globe, 
-      description: 'Virtual Replicas & Simulation',
-      featured: false,
-      color: 'from-green-500 to-emerald-500'
     }
   ];
   const solutions = [
@@ -177,24 +144,24 @@ export function AppHeader() {
       featured: true
     },
     {
-      name: 'SMB Solutions',
+      name: 'AI Solutions',
       href: '/solutions',
-      icon: Building,
-      description: 'Small to medium business growth',
-      featured: false
+      icon: Brain,
+      description: 'Artificial Intelligence & Machine Learning',
+      featured: true
     },
     {
-      name: 'Startup Solutions',
-      href: '/solutions',
-      icon: Rocket,
-      description: 'Accelerate your startup growth',
-      featured: false
-    },
-    {
-      name: 'Government Solutions',
+      name: 'Cybersecurity Solutions',
       href: '/solutions',
       icon: Shield,
-      description: 'Public sector innovation',
+      description: 'Advanced security & threat protection',
+      featured: true
+    },
+    {
+      name: 'Cloud Solutions',
+      href: '/solutions',
+      icon: Cloud,
+      description: 'Cloud infrastructure & migration',
       featured: false
     },
     {
@@ -256,28 +223,28 @@ export function AppHeader() {
       featured: true
     },
     {
-      name: 'Pricing Guide 2025',
-      href: '/pricing-guide-2025',
+      name: 'Pricing Guide',
+      href: '/pricing',
       icon: DollarSign,
       description: 'Complete pricing information',
       featured: true
     }
   ];
   const quickLinks = [
-    { name: 'Innovative Services 2025', href: '/innovative-services-showcase-2025', icon: Star, description: 'Latest cutting-edge solutions' },
-    { name: 'Revolutionary Services 2030', href: '/revolutionary-services-showcase-2030', icon: TrendingUp, description: 'Future-ready services' },
-    { name: 'Emerging Tech 2030', href: '/emerging-tech-2030', icon: Rocket, description: 'Next-generation technologies' },
-    { name: 'Pricing Guide 2030', href: '/pricing-2030', icon: DollarSign, description: 'Advanced pricing strategies' },
+    { name: 'Services Overview', href: '/services', icon: Star, description: 'All our services' },
+    { name: 'AI Solutions', href: '/services/ai-business-intelligence', icon: Brain, description: 'AI-powered solutions' },
+    { name: 'Micro SaaS', href: '/services/micro-saas', icon: ShoppingCart, description: 'SaaS solutions' },
+    { name: 'Pricing', href: '/pricing', icon: DollarSign, description: 'Transparent pricing' },
     { name: 'Request Quote', href: '/request-quote', icon: MessageCircle, description: 'Get custom pricing' },
   ];
   const supportLinks = [
     { name: 'FAQ', href: '/faq', icon: HelpCircle },
     { name: 'Blog', href: '/blog', icon: BookOpen },
-    { name: 'Help', href: '/help', icon: MessageCircle },
+    { name: 'Help Center', href: '/help', icon: MessageCircle },
     { name: 'Partners', href: '/partners', icon: Users },
     { name: 'Documentation', href: '/docs', icon: BookOpen },
     { name: 'Training', href: '/training', icon: GraduationCap },
-    { name: 'Support', href: '/support', icon: LifeBuoy },
+    { name: 'Support', href: '/help', icon: LifeBuoy },
   ];
   const contactInfo = {
     phone: '+1 302 464 0950',
