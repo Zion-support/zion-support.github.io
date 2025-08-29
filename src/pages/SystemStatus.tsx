@@ -209,7 +209,12 @@ export default function SystemStatus() {
       <div className="py-16">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
-            <div className="bg-zion-slate border border-zion-slate-light rounded-2xl p-8 text-center">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.6 }}
+              className="bg-zion-slate border border-zion-slate-light rounded-2xl p-8 text-center"
+            >
               <div className="flex items-center justify-center gap-4 mb-6">
                 {getStatusIcon(systemStatus.overall)}
                 <h2 className="text-3xl font-bold text-white">All Systems Operational</h2>
@@ -231,7 +236,7 @@ export default function SystemStatus() {
               </div>
               <h3 className="text-2xl font-bold text-white mb-2">Overall Status</h3>
               <p className="text-gray-400">All systems operational</p>
-            </div>
+            </motion.div>
 
             {/* Uptime */}
             <div className="text-center">
@@ -248,7 +253,7 @@ export default function SystemStatus() {
               </div>
               <p className="text-gray-400">Updates every 30s</p>
             </div>
-          </motion.div>
+          </div>
         </div>
       </div>
 
