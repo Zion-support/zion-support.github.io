@@ -779,26 +779,25 @@
     animation: slide-in-right 0.6s ease-out;
   }
 
-  .animate-neon-flicker {
-    animation: neon-flicker 2s ease-in-out infinite;
-  }
+.animate-neon-flicker {
+  animation: neon-flicker 2s ease-in-out infinite;
+}
 
-  /* Responsive Utilities */
-  .container-responsive {
-    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
-  }
+/* Responsive Utilities */
+.container-responsive {
+  @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+}
 
-  .section-padding {
-    @apply py-16 sm:py-20 lg:py-24;
-  }
+.section-padding {
+  @apply py-16 sm:py-20 lg:py-24;
+}
 
-  .text-responsive {
-    @apply text-sm sm:text-base lg:text-lg;
-  }
+.text-responsive {
+  @apply text-sm sm:text-base lg:text-lg;
+}
 
-  .heading-responsive {
-    @apply text-2xl sm:text-3xl lg:text-4xl xl:text-5xl;
-  }
+.heading-responsive {
+  @apply text-2xl sm:text-3xl lg:text-4xl xl:text-5xl;
 }
 
 /* Accessibility Styles */
