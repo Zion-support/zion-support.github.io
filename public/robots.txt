@@ -1,17 +1,269 @@
+# Zion Tech Group Robots.txt
+# Version: 2.0.0
+# Purpose: Guide search engine crawlers for optimal SEO
+
 User-agent: *
 Allow: /
-# Sitemap
-Sitemap: https://ziontechgroup.com/sitemap.xml
-# Disallow admin and private areas
+
+# Allow crawling of main content
+Allow: /about
+Allow: /services
+Allow: /solutions
+Allow: /resources
+Allow: /blog
+Allow: /case-studies
+Allow: /white-papers
+Allow: /webinars
+Allow: /pricing
+Allow: /contact
+Allow: /careers
+Allow: /partners
+
+# Allow crawling of service pages
+Allow: /services/
+Allow: /solutions/
+
+# Allow crawling of blog content
+Allow: /blog/
+Allow: /case-studies/
+Allow: /white-papers/
+Allow: /webinars/
+
+# Allow crawling of static assets
+Allow: /images/
+Allow: /fonts/
+Allow: /css/
+Allow: /js/
+
+# Disallow crawling of admin/private areas
 Disallow: /admin/
 Disallow: /private/
+Disallow: /internal/
 Disallow: /api/
 Disallow: /_next/
-Disallow: /static/
-# Allow important files
-Allow: /robots.txt
+Disallow: /temp/
+Disallow: /backup/
+Disallow: /drafts/
+
+# Disallow crawling of temporary files
+Disallow: /*.tmp$
+Disallow: /*.temp$
+Disallow: /*.log$
+Disallow: /*.bak$
+Disallow: /*.old$
+
+# Disallow crawling of development files
+Disallow: /node_modules/
+Disallow: /src/
+Disallow: /tests/
+Disallow: /scripts/
+Disallow: /docs/
+Disallow: /.git/
+Disallow: /.github/
+
+# Disallow crawling of user-specific content
+Disallow: /user/
+Disallow: /profile/
+Disallow: /dashboard/
+Disallow: /account/
+Disallow: /login
+Disallow: /register
+Disallow: /reset-password
+
+# Disallow crawling of search results
+Disallow: /search?
+Disallow: /query?
+Disallow: /filter?
+
+# Disallow crawling of form submissions
+Disallow: /submit/
+Disallow: /post/
+Disallow: /upload/
+
+# Allow crawling of sitemap
 Allow: /sitemap.xml
-Allow: /favicon.ico
+Allow: /sitemap-index.xml
+
+# Allow crawling of manifest and service worker
 Allow: /manifest.json
-# Crawl delay (optional)
+Allow: /sw.js
+
+# Crawl delay for respectful crawling
 Crawl-delay: 1
+
+# Sitemap location
+Sitemap: https://ziontechgroup.com/sitemap.xml
+
+# Additional sitemaps
+Sitemap: https://ziontechgroup.com/sitemap-services.xml
+Sitemap: https://ziontechgroup.com/sitemap-blog.xml
+Sitemap: https://ziontechgroup.com/sitemap-resources.xml
+
+# Host directive
+Host: https://ziontechgroup.com
+
+# Specific rules for major search engines
+
+# Google
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 1
+
+# Bing
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 1
+
+# Yandex
+User-agent: Yandex
+Allow: /
+Crawl-delay: 2
+
+# DuckDuckGo
+User-agent: DuckDuckBot
+Allow: /
+Crawl-delay: 1
+
+# Facebook
+User-agent: facebookexternalhit
+Allow: /
+Disallow: /admin/
+Disallow: /private/
+
+# Twitter
+User-agent: Twitterbot
+Allow: /
+Disallow: /admin/
+Disallow: /private/
+
+# LinkedIn
+User-agent: LinkedInBot
+Allow: /
+Disallow: /admin/
+Disallow: /private/
+
+# WhatsApp
+User-agent: WhatsApp
+Allow: /
+Disallow: /admin/
+Disallow: /private/
+
+# Telegram
+User-agent: TelegramBot
+Allow: /
+Disallow: /admin/
+Disallow: /private/
+
+# Slack
+User-agent: Slackbot
+Allow: /
+Disallow: /admin/
+Disallow: /private/
+
+# Apple
+User-agent: Applebot
+Allow: /
+Crawl-delay: 1
+
+# Baidu
+User-agent: Baiduspider
+Allow: /
+Crawl-delay: 3
+
+# Naver
+User-agent: Yeti
+Allow: /
+Crawl-delay: 2
+
+# Seznam
+User-agent: SeznamBot
+Allow: /
+Crawl-delay: 2
+
+# Ahrefs
+User-agent: AhrefsBot
+Allow: /
+Crawl-delay: 10
+
+# Semrush
+User-agent: SemrushBot
+Allow: /
+Crawl-delay: 10
+
+# Majestic
+User-agent: MJ12bot
+Allow: /
+Crawl-delay: 10
+
+# Screaming Frog
+User-agent: Screaming Frog SEO Spider
+Allow: /
+Crawl-delay: 5
+
+# Block aggressive crawlers
+User-agent: *
+Disallow: /admin/
+Disallow: /private/
+Disallow: /internal/
+Disallow: /api/
+Disallow: /_next/
+Disallow: /temp/
+Disallow: /backup/
+Disallow: /drafts/
+Disallow: /user/
+Disallow: /profile/
+Disallow: /dashboard/
+Disallow: /account/
+Disallow: /login
+Disallow: /register
+Disallow: /reset-password
+Disallow: /search?
+Disallow: /query?
+Disallow: /filter?
+Disallow: /submit/
+Disallow: /post/
+Disallow: /upload/
+Disallow: /*.tmp$
+Disallow: /*.temp$
+Disallow: /*.log$
+Disallow: /*.bak$
+Disallow: /*.old$
+Disallow: /node_modules/
+Disallow: /src/
+Disallow: /tests/
+Disallow: /scripts/
+Disallow: /docs/
+Disallow: /.git/
+Disallow: /.github/
+
+# Allow essential crawling
+Allow: /
+Allow: /about
+Allow: /services
+Allow: /solutions
+Allow: /resources
+Allow: /blog
+Allow: /case-studies
+Allow: /white-papers
+Allow: /webinars
+Allow: /pricing
+Allow: /contact
+Allow: /careers
+Allow: /partners
+Allow: /services/
+Allow: /solutions/
+Allow: /blog/
+Allow: /case-studies/
+Allow: /white-papers/
+Allow: /webinars/
+Allow: /images/
+Allow: /fonts/
+Allow: /css/
+Allow: /js/
+Allow: /sitemap.xml
+Allow: /sitemap-index.xml
+Allow: /manifest.json
+Allow: /sw.js
+
+# Crawl delay for all other bots
+Crawl-delay: 2
