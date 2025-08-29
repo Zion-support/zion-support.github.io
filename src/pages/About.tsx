@@ -1,4 +1,15 @@
 import React from 'react';
+
+export default function About() {
+  return (
+    <div className="container mx-auto px-4 py-16 text-white">
+      <h1 className="text-3xl font-bold mb-4">About Us</h1>
+      <p>Learn more about Zion Tech Group.</p>
+    </div>
+  );
+}
+
+import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { SEO } from '@/components/SEO';
