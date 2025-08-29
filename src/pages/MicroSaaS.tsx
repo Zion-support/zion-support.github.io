@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Mail, MessageSquare, Calendar, PenTool, BarChart3, Users, DollarSign, ExternalLink, Shield, FileSearch, Bug, Globe, CreditCard, ShoppingCart, Bell, Languages } from 'lucide-react';
+import { Mail, MessageSquare, Calendar, PenTool, BarChart3, Users, DollarSign, ExternalLink, Shield, FileSearch, Bug, Globe, CreditCard, ShoppingCart, Bell, Languages, Workflow, Database, FileText, Cloud, Server, Cpu, Lock, Heart, Leaf, Rocket, Building, Network, Zap, TrendingUp, Video, Wrench } from 'lucide-react';
 
 const MicroSaaS: React.FC = () => {
   const products = [
@@ -102,6 +102,175 @@ const MicroSaaS: React.FC = () => {
       desc: 'Intelligent customer success with predictive analytics, churn prevention, and automated engagement.',
       pricing: 'From $299/mo',
       href: 'https://ziontechgroup.com/services/ai-customer-success-platform'
+    },
+    // New innovative micro SaaS services
+    {
+      icon: Shield,
+      name: 'AI Compliance Copilot',
+      desc: 'Automated regulatory compliance monitoring, risk assessment, and audit trail management for GDPR, SOC2, HIPAA.',
+      pricing: 'From $199/mo',
+      href: 'https://ziontechgroup.com/services/ai-compliance-assistant'
+    },
+    {
+      icon: BarChart3,
+      name: 'AI Business Intelligence Suite',
+      desc: 'Self-service BI with AI-powered insights, predictive analytics, and automated reporting for business users.',
+      pricing: 'From $399/mo',
+      href: 'https://ziontechgroup.com/services/ai-business-intelligence'
+    },
+    {
+      icon: MessageSquare,
+      name: 'AI Sales Copilot',
+      desc: 'Intelligent lead scoring, sales forecasting, and automated follow-up sequences with CRM integration.',
+      pricing: 'From $149/mo',
+      href: 'https://ziontechgroup.com/services/ai-sales-copilot'
+    },
+    {
+      icon: Workflow,
+      name: 'AI Workflow Orchestrator',
+      desc: 'Multi-agent workflow automation with intelligent routing, decision making, and performance optimization.',
+      pricing: 'From $89/mo',
+      href: 'https://ziontechgroup.com/services/ai-workflow-orchestrator'
+    },
+    {
+      icon: Database,
+      name: 'AI Data Governance Platform',
+      desc: 'Automated data classification, compliance monitoring, and intelligent access control with audit trails.',
+      pricing: 'From $179/mo',
+      href: 'https://ziontechgroup.com/services/ai-data-governance'
+    },
+    {
+      icon: FileText,
+      name: 'LLM Content Studio Pro',
+      desc: 'Advanced AI content generation with brand voice consistency, SEO optimization, and multi-language support.',
+      pricing: 'From $129/mo',
+      href: 'https://ziontechgroup.com/services/llm-content-studio'
+    },
+    {
+      icon: Cloud,
+      name: 'Cloud FinOps Optimizer',
+      desc: 'Automated cloud cost optimization, budget management, and resource utilization analytics.',
+      pricing: 'From $199/mo',
+      href: 'https://ziontechgroup.com/services/cloud-finops-optimizer'
+    },
+    {
+      icon: Server,
+      name: 'Edge Computing Platform',
+      desc: 'Distributed edge computing with ultra-low latency, real-time analytics, and global edge network.',
+      pricing: 'From $299/mo',
+      href: 'https://ziontechgroup.com/services/edge-computing-platform'
+    },
+    {
+      icon: Cpu,
+      name: 'Quantum AI Platform',
+      desc: 'Hybrid quantum-classical AI platform for complex optimization problems and advanced simulations.',
+      pricing: 'From $1,999/mo',
+      href: 'https://ziontechgroup.com/services/quantum-ai-platform'
+    },
+    {
+      icon: Lock,
+      name: 'Zero Trust Security Suite',
+      desc: 'Comprehensive zero trust implementation with identity verification, access control, and continuous monitoring.',
+      pricing: 'From $399/mo',
+      href: 'https://ziontechgroup.com/services/zero-trust-network-architecture'
+    },
+    {
+      icon: Globe,
+      name: 'IoT Edge Computing Platform',
+      desc: 'Scalable IoT infrastructure with edge analytics, device management, and real-time data processing.',
+      pricing: 'From $249/mo',
+      href: 'https://ziontechgroup.com/services/iot-edge'
+    },
+    {
+      icon: Heart,
+      name: 'AI Healthcare Analytics Platform',
+      desc: 'Advanced healthcare data analytics with patient risk scoring and clinical decision support.',
+      pricing: 'From $599/mo',
+      href: 'https://ziontechgroup.com/services/ai-healthcare-analytics'
+    },
+    {
+      icon: Leaf,
+      name: 'Sustainability Analytics Platform',
+      desc: 'Environmental impact tracking, carbon footprint analysis, and sustainability reporting automation.',
+      pricing: 'From $199/mo',
+      href: 'https://ziontechgroup.com/services/sustainability'
+    },
+    {
+      icon: Rocket,
+      name: 'Space Technology Solutions',
+      desc: 'Satellite communications, space data analytics, and orbital mechanics optimization platform.',
+      pricing: 'From $2,999/mo',
+      href: 'https://ziontechgroup.com/services/space-tech'
+    },
+    {
+      icon: Building,
+      name: 'Digital Twin Platform',
+      desc: 'Real-time digital simulation and monitoring for industrial processes and infrastructure.',
+      pricing: 'From $799/mo',
+      href: 'https://ziontechgroup.com/services/digital-twin'
+    },
+    {
+      icon: Network,
+      name: 'Blockchain Enterprise Platform',
+      desc: 'Enterprise blockchain implementation with smart contracts, DeFi protocols, and supply chain tracking.',
+      pricing: 'From $499/mo',
+      href: 'https://ziontechgroup.com/services/blockchain-enterprise-solutions'
+    },
+    {
+      icon: Zap,
+      name: 'AI Autonomous Operations Platform',
+      desc: 'Fully automated business processes with intelligent decision-making and self-healing capabilities.',
+      pricing: 'From $899/mo',
+      href: 'https://ziontechgroup.com/services/ai-autonomous-business-operations'
+    },
+    {
+      icon: TrendingUp,
+      name: 'AI Supply Chain Optimization',
+      desc: 'Intelligent supply chain analytics, demand forecasting, and inventory optimization platform.',
+      pricing: 'From $349/mo',
+      href: 'https://ziontechgroup.com/services/ai-supply-chain-optimization'
+    },
+    {
+      icon: Users,
+      name: 'Multilingual CX Orchestrator',
+      desc: '50+ language support with AI-powered translation, sentiment analysis, and locale-aware responses.',
+      pricing: 'From $199/mo',
+      href: 'https://ziontechgroup.com/services/multilingual-cx-orchestrator'
+    },
+    {
+      icon: Video,
+      name: 'AI Video Intelligence Platform',
+      desc: 'Advanced video analytics, transcription, speaker diarization, and content summarization.',
+      pricing: 'From $299/mo',
+      href: 'https://ziontechgroup.com/services/ai-video-intelligence'
+    },
+    {
+      icon: FileSearch,
+      name: 'AI Document Intelligence',
+      desc: 'OCR, form extraction, document classification, and intelligent document processing.',
+      pricing: 'From $179/mo',
+      href: 'https://ziontechgroup.com/services/ai-document-intelligence'
+    },
+    {
+      icon: Wrench,
+      name: 'Platform Engineering Hub',
+      desc: 'Internal developer platforms with golden paths, Backstage portals, and governance frameworks.',
+      pricing: 'From $399/mo',
+      href: 'https://ziontechgroup.com/services/platform-engineering'
+    },
+    {
+      icon: Database,
+      name: 'Data Lakehouse Platform',
+      desc: 'Unified data platform combining data lake and warehouse capabilities with MLOps integration.',
+      pricing: 'From $599/mo',
+      href: 'https://ziontechgroup.com/services/data-lakehouse-platform'
+    },
+    {
+      icon: Shield,
+      name: 'AI Threat Intelligence Platform',
+      desc: 'Real-time threat detection, behavioral analysis, and automated incident response.',
+      pricing: 'From $299/mo',
+      href: 'https://ziontechgroup.com/services/ai-threat-intelligence'
     }
   ];
 

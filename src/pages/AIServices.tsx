@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Brain, LineChart, Bot, Database, Shield, DollarSign, ExternalLink, Image as ImageIcon, FileText, Workflow, Globe, Video } from 'lucide-react';
+import { Brain, LineChart, Bot, Database, Shield, DollarSign, ExternalLink, Image as ImageIcon, FileText, Workflow, Globe, Video, TrendingUp, Heart, Leaf, Rocket, Building, Network, Cpu, Zap, Users, BarChart3, MessageSquare, FileText, Calendar, Target } from 'lucide-react';
 
 const AIServices: React.FC = () => {
   const offerings = [
@@ -89,6 +89,121 @@ const AIServices: React.FC = () => {
       title: 'Agentic Process Automation',
       desc: 'Task-centric multi-agent systems integrating CRMs/ERPs/ticketing with guardrails and observability.',
       price: '$6,000 - $55,000+'
+    },
+    // New innovative AI services
+    {
+      icon: Brain,
+      title: 'AI Autonomous Business Operations',
+      desc: 'Fully automated business processes with intelligent decision-making and self-healing capabilities.',
+      price: '$12,000 - $75,000+'
+    },
+    {
+      icon: TrendingUp,
+      title: 'AI Supply Chain Optimization',
+      desc: 'Intelligent supply chain analytics, demand forecasting, and inventory optimization with real-time insights.',
+      price: '$4,500 - $35,000+'
+    },
+    {
+      icon: Heart,
+      title: 'AI Healthcare Analytics Platform',
+      desc: 'Advanced healthcare data analytics with patient risk scoring, treatment optimization, and population health insights.',
+      price: '$8,500 - $65,000+'
+    },
+    {
+      icon: Leaf,
+      title: 'AI Sustainability Analytics',
+      desc: 'Environmental impact tracking, carbon footprint analysis, and sustainability reporting automation.',
+      price: '$3,500 - $25,000+'
+    },
+    {
+      icon: Rocket,
+      title: 'AI Space Technology Solutions',
+      desc: 'Satellite communications optimization, space data analytics, and orbital mechanics with AI assistance.',
+      price: '$25,000 - $150,000+'
+    },
+    {
+      icon: Building,
+      title: 'AI Digital Twin Platform',
+      desc: 'Intelligent digital simulation and monitoring for industrial processes, infrastructure, and smart cities.',
+      price: '$15,000 - $100,000+'
+    },
+    {
+      icon: Network,
+      title: 'AI Blockchain Intelligence',
+      desc: 'Blockchain analytics, smart contract optimization, and DeFi protocol intelligence with AI-powered insights.',
+      price: '$5,000 - $40,000+'
+    },
+    {
+      icon: Cpu,
+      title: 'Quantum AI Integration',
+      desc: 'Hybrid quantum-classical AI systems for complex optimization problems and advanced simulations.',
+      price: '$35,000 - $200,000+'
+    },
+    {
+      icon: Zap,
+      title: 'AI Edge Computing Intelligence',
+      desc: 'Intelligent edge computing with AI-powered optimization, real-time analytics, and distributed intelligence.',
+      price: '$4,500 - $30,000+'
+    },
+    {
+      icon: Users,
+      title: 'AI Customer Experience Orchestrator',
+      desc: 'Omnichannel customer experience management with AI-powered personalization and predictive engagement.',
+      price: '$6,000 - $45,000+'
+    },
+    {
+      icon: Database,
+      title: 'AI Data Lakehouse Platform',
+      desc: 'Unified data platform combining data lake and warehouse capabilities with intelligent MLOps integration.',
+      price: '$8,000 - $60,000+'
+    },
+    {
+      icon: Shield,
+      title: 'AI Threat Intelligence Platform',
+      desc: 'Real-time threat detection, behavioral analysis, and automated incident response with AI-powered insights.',
+      price: '$5,000 - $40,000+'
+    },
+    {
+      icon: Wrench,
+      title: 'AI Platform Engineering',
+      desc: 'Intelligent internal developer platforms with AI-powered golden paths and automated governance.',
+      price: '$8,000 - $70,000+'
+    },
+    {
+      icon: Globe,
+      title: 'AI Multilingual Intelligence',
+      desc: 'Advanced multilingual AI with 100+ language support, cultural context awareness, and real-time translation.',
+      price: '$4,000 - $35,000+'
+    },
+    {
+      icon: BarChart3,
+      title: 'AI Predictive Analytics Suite',
+      desc: 'Comprehensive predictive analytics platform with machine learning models and automated insights generation.',
+      price: '$7,000 - $55,000+'
+    },
+    {
+      icon: MessageSquare,
+      title: 'AI Conversational Intelligence',
+      desc: 'Advanced conversational AI with natural language understanding, sentiment analysis, and context awareness.',
+      price: '$3,500 - $30,000+'
+    },
+    {
+      icon: FileText,
+      title: 'AI Knowledge Management',
+      desc: 'Intelligent knowledge base management with automated content organization and intelligent search capabilities.',
+      price: '$2,500 - $25,000+'
+    },
+    {
+      icon: Calendar,
+      title: 'AI Business Process Intelligence',
+      desc: 'Intelligent business process analysis, optimization, and automation with AI-powered insights.',
+      price: '$5,000 - $40,000+'
+    },
+    {
+      icon: Target,
+      title: 'AI Marketing Intelligence',
+      desc: 'AI-powered marketing analytics, customer segmentation, and campaign optimization with predictive insights.',
+      price: '$4,000 - $35,000+'
     }
   ];
 
