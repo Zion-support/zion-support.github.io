@@ -78,6 +78,13 @@ const AIComplianceCopilot = React.lazy(() => import('./pages/services/AIComplian
 const LLMContentStudio = React.lazy(() => import('./pages/services/LLMContentStudio'));
 const FinOpsAdvisor = React.lazy(() => import('./pages/services/FinOpsAdvisor'));
 
+// Newly added concrete micro SaaS/AI services
+const AiLeadScoring = React.lazy(() => import('./pages/services/AiLeadScoring'));
+const WebsiteAiChatbot = React.lazy(() => import('./pages/services/WebsiteAiChatbot'));
+const RagSearch = React.lazy(() => import('./pages/services/RagSearch'));
+const MlopsPipeline = React.lazy(() => import('./pages/services/MlopsPipeline'));
+const EcommercePersonalization = React.lazy(() => import('./pages/services/EcommercePersonalization'));
+
 // Additional service pages
 const DigitalTransformation = React.lazy(() => import('./pages/services/DigitalTransformation'));
 const ITConsulting = React.lazy(() => import('./pages/services/ITConsulting'));
@@ -210,6 +217,13 @@ function App() {
               <Route path="/services/ai-compliance-copilot" element={<AIComplianceCopilot />} />
               <Route path="/services/llm-content-studio" element={<LLMContentStudio />} />
               <Route path="/services/finops-advisor" element={<FinOpsAdvisor />} />
+
+              {/* New concrete services */}
+              <Route path="/services/ai-lead-scoring" element={<AiLeadScoring />} />
+              <Route path="/services/website-ai-chatbot" element={<WebsiteAiChatbot />} />
+              <Route path="/services/rag-search" element={<RagSearch />} />
+              <Route path="/services/mlops-pipeline" element={<MlopsPipeline />} />
+              <Route path="/services/ecommerce-personalization" element={<EcommercePersonalization />} />
               
               {/* Additional Service Routes */}
               <Route path="/services/digital-transformation" element={<DigitalTransformation />} />
