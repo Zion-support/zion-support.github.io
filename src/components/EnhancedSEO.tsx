@@ -1,5 +1,6 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { Helmet } from 'react-helmet-async';
+
 interface SEOProps {
   title?: string;
   description?: string;
@@ -17,6 +18,7 @@ interface SEOProps {
   nofollow?: boolean;
   structuredData?: any;
 }
+
 export const EnhancedSEO: React.FC<SEOProps> = ({
   title = 'Zion Tech Group - Leading AI-Powered Technology Solutions',
   description = 'Transform your business with Zion Tech Group\'s cutting-edge AI solutions, cybersecurity services, quantum computing, and innovative Micro SaaS platforms. 60+ services with proven ROI up to 800%.',
@@ -41,6 +43,7 @@ export const EnhancedSEO: React.FC<SEOProps> = ({
 }) => {
   const fullTitle = title.includes('Zion Tech Group') ? title : `${title} | Zion Tech Group`;
   const fullUrl = canonical || `${url}${window.location.pathname}`;
+
   // Default structured data for organization
   const defaultStructuredData = {
     '@context': 'https://schema.org',
@@ -72,6 +75,7 @@ export const EnhancedSEO: React.FC<SEOProps> = ({
       description: 'Comprehensive technology solutions including AI, cybersecurity, quantum computing, and more.'
     }
   };
+
   // Service-specific structured data
   const serviceStructuredData = type === 'service' ? {
     '@context': 'https://schema.org',
@@ -83,23 +87,18 @@ export const EnhancedSEO: React.FC<SEOProps> = ({
       name: 'Zion Tech Group'
     },
     areaServed: 'Worldwide',
-    serviceType: section || 'Technology Services',
-    offers: {
-      '@type': 'Offer',
-      price: '1000',
-      priceCurrency: 'USD',
-      priceValidUntil: new Date(Date.now() + 365 * 24 * 60 * 60 * 1000).toISOString()
-    }
+    serviceType: 'Technology Solutions',
+    category: 'Technology Services'
   } : null;
-  // Article structured data
+
+  // Article-specific structured data
   const articleStructuredData = type === 'article' ? {
     '@context': 'https://schema.org',
     '@type': 'Article',
     headline: title,
     description: description,
-    image: image,
     author: {
-      '@type': 'Person',
+      '@type': 'Organization',
       name: author
     },
     publisher: {
@@ -111,86 +110,48 @@ export const EnhancedSEO: React.FC<SEOProps> = ({
       }
     },
     datePublished: publishedTime,
-    dateModified: modifiedTime || publishedTime,
+    dateModified: modifiedTime,
     mainEntityOfPage: {
       '@type': 'WebPage',
       '@id': fullUrl
+    },
+    image: image,
+    keywords: keywords.join(', '),
+    articleSection: section,
+    articleBody: description
+  } : null;
+
+  // Product-specific structured data
+  const productStructuredData = type === 'product' ? {
+    '@context': 'https://schema.org',
+    '@type': 'Product',
+    name: title,
+    description: description,
+    brand: {
+      '@type': 'Brand',
+      name: 'Zion Tech Group'
+    },
+    category: 'Technology Solutions',
+    offers: {
+      '@type': 'Offer',
+      availability: 'https://schema.org/InStock',
+      priceCurrency: 'USD',
+      seller: {
+        '@type': 'Organization',
+        name: 'Zion Tech Group'
+      }
     }
   } : null;
-  // Breadcrumb structured data
-  const breadcrumbStructuredData = {
-    '@context': 'https://schema.org',
-    '@type': 'BreadcrumbList',
-    itemListElement: [
-      {
-        '@type': 'ListItem',
-        position: 1,
-        name: 'Home',
-        item: 'https://ziontechgroup.com'
-      },
-      {
-        '@type': 'ListItem',
-        position: 2,
-        name: section || 'Services',
-        item: fullUrl
-      }
-    ]
-  };
-  // FAQ structured data (if applicable)
-  const faqStructuredData = tags.includes('FAQ') ? {
-    '@context': 'https://schema.org',
-    '@type': 'FAQPage',
-    mainEntity: [
-      {
-        '@type': 'Question',
-        name: 'What services does Zion Tech Group offer?',
-        acceptedAnswer: {
-          '@type': 'Answer',
-          text: 'Zion Tech Group offers over 60 AI-powered technology services including cybersecurity, quantum computing, digital twin platforms, IoT solutions, and innovative Micro SaaS platforms.'
-        }
-      },
-      {
-        '@type': 'Question',
-        name: 'What is the typical ROI for Zion Tech Group services?',
-        acceptedAnswer: {
-          '@type': 'Answer',
-          text: 'Our services typically deliver 350% average ROI, with revolutionary services achieving up to 800% ROI within 6-12 months.'
-        }
-      }
-    ]
-  } : null;
-  useEffect(() => {
-    // Update meta tags dynamically
-    const updateMetaTags = () => {
-      // Update title
-      document.title = fullTitle;
-      // Update meta description
-      let metaDesc = document.querySelector('meta[name="description"]');
-      if (!metaDesc) {
-        metaDesc = document.createElement('meta');
-        metaDesc.setAttribute('name', 'description');
-        document.head.appendChild(metaDesc);
-      }
-      metaDesc.setAttribute('content', description);
-      // Update keywords
-      let metaKeywords = document.querySelector('meta[name="keywords"]');
-      if (!metaKeywords) {
-        metaKeywords = document.createElement('meta');
-        metaKeywords.setAttribute('name', 'keywords');
-        document.head.appendChild(metaKeywords);
-      }
-      metaKeywords.setAttribute('content', keywords.join(', '));
-      // Update canonical
-      let canonicalLink = document.querySelector('link[rel="canonical"]');
-      if (!canonicalLink) {
-        canonicalLink = document.createElement('link');
-        canonicalLink.setAttribute('rel', 'canonical');
-        document.head.appendChild(canonicalLink);
-      }
-      canonicalLink.setAttribute('href', fullUrl);
-    };
-    updateMetaTags();
-  }, [fullTitle, description, keywords, fullUrl]);
+
+  // Combine all structured data
+  const finalStructuredData = [
+    defaultStructuredData,
+    serviceStructuredData,
+    articleStructuredData,
+    productStructuredData,
+    structuredData
+  ].filter(Boolean);
+
   return (
     <Helmet>
       {/* Basic Meta Tags */}
@@ -198,89 +159,132 @@ export const EnhancedSEO: React.FC<SEOProps> = ({
       <meta name="description" content={description} />
       <meta name="keywords" content={keywords.join(', ')} />
       <meta name="author" content={author} />
-      <meta name="robots" content={`${noindex ? 'noindex' : 'index'}, ${nofollow ? 'nofollow' : 'follow'}`} />
+      
       {/* Canonical URL */}
       <link rel="canonical" href={fullUrl} />
-      {/* Open Graph Tags */}
+      
+      {/* Robots Meta */}
+      {noindex && <meta name="robots" content="noindex" />}
+      {nofollow && <meta name="robots" content="nofollow" />}
+      
+      {/* Open Graph Meta Tags */}
       <meta property="og:title" content={fullTitle} />
       <meta property="og:description" content={description} />
-      <meta property="og:image" content={image} />
-      <meta property="og:url" content={fullUrl} />
       <meta property="og:type" content={type} />
+      <meta property="og:url" content={fullUrl} />
+      <meta property="og:image" content={image} />
       <meta property="og:site_name" content="Zion Tech Group" />
       <meta property="og:locale" content="en_US" />
-      {/* Twitter Card Tags */}
+      
+      {/* Twitter Card Meta Tags */}
       <meta name="twitter:card" content="summary_large_image" />
+      <meta name="twitter:site" content="@ziontechgroup" />
+      <meta name="twitter:creator" content="@ziontechgroup" />
       <meta name="twitter:title" content={fullTitle} />
       <meta name="twitter:description" content={description} />
       <meta name="twitter:image" content={image} />
-      <meta name="twitter:site" content="@ziontechgroup" />
-      <meta name="twitter:creator" content="@ziontechgroup" />
+      
       {/* Additional Meta Tags */}
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <meta name="theme-color" content="#06b6d4" />
       <meta name="msapplication-TileColor" content="#06b6d4" />
+      
+      {/* Structured Data */}
+      {finalStructuredData.map((data, index) => (
+        <script
+          key={index}
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(data)
+          }}
+        />
+      ))}
+      
       {/* Preconnect to external domains for performance */}
       <link rel="preconnect" href="https://fonts.googleapis.com" />
       <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-      <link rel="preconnect" href="https://cdn.jsdelivr.net" />
-      {/* DNS Prefetch for performance */}
-      <link rel="dns-prefetch" href="//www.google-analytics.com" />
-      <link rel="dns-prefetch" href="//www.googletagmanager.com" />
-      {/* Structured Data */}
-      <script type="application/ld+json">
-        {JSON.stringify(defaultStructuredData)}
-      </script>
-      {serviceStructuredData && (
-        <script type="application/ld+json">
-          {JSON.stringify(serviceStructuredData)}
-        </script>
-      )}
-      {articleStructuredData && (
-        <script type="application/ld+json">
-          {JSON.stringify(articleStructuredData)}
-        </script>
-      )}
-      <script type="application/ld+json">
-        {JSON.stringify(breadcrumbStructuredData)}
-      </script>
-      {faqStructuredData && (
-        <script type="application/ld+json">
-          {JSON.stringify(faqStructuredData)}
-        </script>
-      )}
-      {structuredData && (
-        <script type="application/ld+json">
-          {JSON.stringify(structuredData)}
-        </script>
-      )}
+      <link rel="preconnect" href="https://www.google-analytics.com" />
+      
+      {/* Favicon and App Icons */}
+      <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+      <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+      <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+      <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+      
+      {/* Manifest */}
+      <link rel="manifest" href="/site.webmanifest" />
+      
       {/* Additional SEO Meta Tags */}
       <meta name="application-name" content="Zion Tech Group" />
       <meta name="apple-mobile-web-app-title" content="Zion Tech Group" />
       <meta name="apple-mobile-web-app-capable" content="yes" />
       <meta name="apple-mobile-web-app-status-bar-style" content="default" />
-      {/* Mobile App Meta Tags */}
-      <meta name="mobile-web-app-capable" content="yes" />
-      <meta name="format-detection" content="telephone=no" />
+      
       {/* Security Meta Tags */}
       <meta httpEquiv="X-Content-Type-Options" content="nosniff" />
       <meta httpEquiv="X-Frame-Options" content="DENY" />
       <meta httpEquiv="X-XSS-Protection" content="1; mode=block" />
       <meta httpEquiv="Referrer-Policy" content="strict-origin-when-cross-origin" />
+      
       {/* Performance Meta Tags */}
-      <meta httpEquiv="Accept-CH" content="DPR, Viewport-Width, Width" />
-      {/* Favicon and App Icons */}
-      <link rel="icon" type="image/x-icon" href="/favicon.ico" />
-      <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
-      <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
-      <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-      <link rel="manifest" href="/site.webmanifest" />
-      {/* Additional Performance Optimizations */}
-      <link rel="preload" href="/fonts/inter-var.woff2" as="font" type="font/woff2" crossOrigin="anonymous" />
-      <link rel="preload" href="/css/critical.css" as="style" />
-      {/* Service Worker */}
-      <link rel="serviceworker" href="/sw.js" />
+      <meta httpEquiv="Cache-Control" content="public, max-age=31536000" />
+      <meta httpEquiv="Expires" content="31536000" />
+      
+      {/* Language and Region */}
+      <meta httpEquiv="Content-Language" content="en" />
+      <meta name="language" content="English" />
+      <meta name="geo.region" content="US-CA" />
+      <meta name="geo.placename" content="San Francisco" />
+      <meta name="geo.position" content="37.7749;-122.4194" />
+      <meta name="ICBM" content="37.7749, -122.4194" />
+      
+      {/* Business Information */}
+      <meta name="company" content="Zion Tech Group" />
+      <meta name="classification" content="Technology Company" />
+      <meta name="category" content="Technology Services" />
+      <meta name="coverage" content="Worldwide" />
+      <meta name="distribution" content="Global" />
+      <meta name="rating" content="General" />
+      <meta name="revisit-after" content="7 days" />
+      
+      {/* Social Media Meta Tags */}
+      <meta property="og:image:width" content="1200" />
+      <meta property="og:image:height" content="630" />
+      <meta property="og:image:alt" content={`${title} - Zion Tech Group`} />
+      
+      {/* Article specific meta tags */}
+      {type === 'article' && publishedTime && (
+        <meta property="article:published_time" content={publishedTime} />
+      )}
+      {type === 'article' && modifiedTime && (
+        <meta property="article:modified_time" content={modifiedTime} />
+      )}
+      {type === 'article' && section && (
+        <meta property="article:section" content={section} />
+      )}
+      {type === 'article' && tags.length > 0 && (
+        tags.map((tag, index) => (
+          <meta key={index} property="article:tag" content={tag} />
+        ))
+      )}
+      
+      {/* Service specific meta tags */}
+      {type === 'service' && (
+        <>
+          <meta property="og:type" content="website" />
+          <meta name="service_type" content="Technology Solutions" />
+          <meta name="service_category" content="Professional Services" />
+        </>
+      )}
+      
+      {/* Product specific meta tags */}
+      {type === 'product' && (
+        <>
+          <meta property="og:type" content="website" />
+          <meta name="product_type" content="Technology Solutions" />
+          <meta name="product_category" content="Software & Services" />
+        </>
+      )}
     </Helmet>
   );
 };
-export default EnhancedSEO;

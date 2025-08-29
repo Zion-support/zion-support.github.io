@@ -100,53 +100,73 @@ import {
 } from 'lucide-react';
 import { EnhancedSEO as SEO } from '../components/EnhancedSEO';
 
-// Animation variants
-const containerVariants = {
-  hidden: { opacity: 0 },
-  visible: {
-    opacity: 1,
-    transition: {
-      staggerChildren: 0.1,
-      delayChildren: 0.2
-    }
+// Quick access actions data
+const quickActions = [
+  {
+    title: "AI Services",
+    description: "Explore our AI-powered solutions",
+    icon: Brain,
+    href: "/services/ai-services",
+    color: "from-purple-600 to-pink-600"
+  },
+  {
+    title: "Cloud & DevOps",
+    description: "Modern infrastructure solutions",
+    icon: Cloud,
+    href: "/services/cloud-devops",
+    color: "from-blue-600 to-cyan-600"
+  },
+  {
+    title: "Cybersecurity",
+    description: "Protect your digital assets",
+    icon: Shield,
+    href: "/services/ai-cybersecurity-suite",
+    color: "from-red-600 to-orange-600"
+  },
+  {
+    title: "Digital Twin",
+    description: "Virtual system modeling",
+    icon: Server,
+    href: "/services/digital-twin",
+    color: "from-green-600 to-emerald-600"
+  },
+  {
+    title: "Quantum Computing",
+    description: "Next-gen computing power",
+    icon: Atom,
+    href: "/services/quantum-computing",
+    color: "from-indigo-600 to-purple-600"
+  },
+  {
+    title: "Micro SaaS",
+    description: "Specialized business tools",
+    icon: Code,
+    href: "/services/micro-saas",
+    color: "from-yellow-600 to-orange-600"
   }
-};
+];
 
-const itemVariants = {
-  hidden: { opacity: 0, y: 20 },
-  visible: {
-    opacity: 1,
-    y: 0,
-    transition: {
-      duration: 0.6,
-      ease: "easeOut"
-    }
+// Benefits data
+const benefits = [
+  {
+    icon: Zap,
+    title: "Lightning Fast",
+    description: "Optimized performance and rapid deployment",
+    color: "from-yellow-600 to-orange-600"
+  },
+  {
+    icon: Shield,
+    title: "Enterprise Security",
+    description: "Bank-grade security with compliance standards",
+    color: "from-green-600 to-emerald-600"
+  },
+  {
+    icon: TrendingUp,
+    title: "Scalable Growth",
+    description: "Flexible solutions that grow with your business and adapt to changing requirements",
+    color: "from-orange-600 to-red-600"
   }
-};
-
-const fadeInUp = {
-  hidden: { opacity: 0, y: 30 },
-  visible: {
-    opacity: 1,
-    y: 0,
-    transition: {
-      duration: 0.8,
-      ease: "easeOut"
-    }
-  }
-};
-
-const scaleIn = {
-  hidden: { opacity: 0, scale: 0.8 },
-  visible: {
-    opacity: 1,
-    scale: 1,
-    transition: {
-      duration: 0.6,
-      ease: "easeOut"
-    }
-  }
-};
+];
 
 // Featured services data
 const featuredServices = [
@@ -238,16 +258,16 @@ const HeroSection: React.FC = () => {
       subtitle: "Next-generation computing power for complex problem-solving",
       description: "Harness the power of quantum mechanics to solve previously unsolvable computational challenges.",
       icon: Atom,
-      cta: "Learn More",
+      cta: "Discover Quantum Solutions",
       href: "/services/quantum-computing"
     },
     {
-      title: "Micro SaaS Solutions",
-      subtitle: "Scalable software solutions for modern businesses",
-      description: "Custom micro SaaS applications designed to streamline operations and boost productivity.",
-      icon: Code,
-      cta: "View Solutions",
-      href: "/micro-saas"
+      title: "Digital Transformation",
+      subtitle: "Modernize your business with cutting-edge technology",
+      description: "Streamline operations, enhance customer experiences, and unlock new growth opportunities.",
+      icon: Rocket,
+      cta: "Start Transformation",
+      href: "/services/digital-transformation"
     }
   ];
 
@@ -259,324 +279,187 @@ const HeroSection: React.FC = () => {
   }, [heroSlides.length]);
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
-      {/* Background Elements */}
-      <div className="absolute inset-0 bg-grid-pattern opacity-10"></div>
-      <div className="absolute inset-0 bg-gradient-to-t from-zion-cyan/5 via-transparent to-transparent"></div>
-      
-      {/* Floating Elements */}
-      <div className="absolute top-20 left-20 animate-float">
-        <div className="w-4 h-4 bg-zion-cyan rounded-full opacity-40 shadow-glow-cyan"></div>
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+      {/* Animated background */}
+      <div className="absolute inset-0">
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(56,189,248,0.1),transparent_50%)]"></div>
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(168,85,247,0.1),transparent_50%)]"></div>
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_40%_40%,rgba(34,211,238,0.05),transparent_50%)]"></div>
       </div>
-      <div className="absolute top-40 right-20 animate-float-delayed">
-        <div className="w-3 h-3 bg-zion-purple rounded-full opacity-40 shadow-glow-purple"></div>
-      </div>
-      <div className="absolute bottom-20 left-1/4 animate-float">
-        <div className="w-5 h-5 bg-zion-pink rounded-full opacity-30 shadow-glow-pink"></div>
+
+      {/* Floating particles */}
+      <div className="absolute inset-0 overflow-hidden">
+        {[...Array(20)].map((_, i) => (
+          <motion.div
+            key={i}
+            className="absolute w-2 h-2 bg-cyan-400 rounded-full opacity-20"
+            animate={{
+              x: [0, 100, 0],
+              y: [0, -100, 0],
+              opacity: [0.2, 0.5, 0.2],
+            }}
+            transition={{
+              duration: 10 + i * 2,
+              repeat: Infinity,
+              delay: i * 0.5,
+            }}
+            style={{
+              left: `${Math.random() * 100}%`,
+              top: `${Math.random() * 100}%`,
+            }}
+          />
+        ))}
       </div>
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-        <motion.div
-          variants={containerVariants}
-          initial="hidden"
-          animate="visible"
-          className="space-y-8"
-        >
-          {/* Icon */}
-          <motion.div variants={itemVariants} className="flex justify-center">
-            <div className="w-20 h-20 bg-gradient-to-br from-zion-cyan to-zion-blue rounded-2xl flex items-center justify-center shadow-glow-blue-lg">
-              {React.createElement(heroSlides[currentSlide].icon, { className: "w-10 h-10 text-white" })}
-            </div>
-          </motion.div>
-
-          {/* Main Content */}
-          <motion.div variants={itemVariants} className="space-y-6">
-            <h1 className="text-5xl md:text-7xl font-bold font-orbitron gradient-text-neon">
-              {heroSlides[currentSlide].title}
-            </h1>
-            <h2 className="text-2xl md:text-3xl font-semibold text-zion-gray-light">
-              {heroSlides[currentSlide].subtitle}
-            </h2>
-            <p className="text-lg md:text-xl text-zion-gray-light max-w-3xl mx-auto leading-relaxed">
-              {heroSlides[currentSlide].description}
-            </p>
-          </motion.div>
-
-          {/* CTA Button */}
-          <motion.div variants={itemVariants}>
-            <Link
-              to={heroSlides[currentSlide].href}
-              className="glass-button bg-gradient-to-r from-zion-cyan to-zion-blue text-white hover:shadow-glow-blue-lg transform hover:scale-105 transition-all duration-300 inline-flex items-center space-x-2"
+        <AnimatePresence mode="wait">
+          <motion.div
+            key={currentSlide}
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -20 }}
+            transition={{ duration: 0.5 }}
+            className="space-y-8"
+          >
+            {/* Icon */}
+            <motion.div
+              initial={{ scale: 0, rotate: -180 }}
+              animate={{ scale: 1, rotate: 0 }}
+              transition={{ duration: 0.8, type: "spring" }}
+              className="mx-auto"
             >
-              <span>{heroSlides[currentSlide].cta}</span>
-              <ArrowRight className="w-5 h-5" />
-            </Link>
-          </motion.div>
+              <div className="w-20 h-20 bg-gradient-to-br from-zion-cyan to-zion-blue rounded-2xl flex items-center justify-center shadow-glow-blue-lg">
+                {React.createElement(heroSlides[currentSlide].icon, { className: "w-10 h-10 text-white" })}
+              </div>
+            </motion.div>
 
-          {/* Slide Indicators */}
-          <motion.div variants={itemVariants} className="flex justify-center space-x-2">
-            {heroSlides.map((_, index) => (
-              <button
-                key={index}
-                onClick={() => setCurrentSlide(index)}
-                className={`w-3 h-3 rounded-full transition-all duration-300 ${
-                  index === currentSlide 
-                    ? 'bg-zion-cyan scale-125' 
-                    : 'bg-zion-gray-light/50 hover:bg-zion-gray-light'
-                }`}
-                aria-label={`Go to slide ${index + 1}`}
-              />
-            ))}
+            {/* Content */}
+            <div className="space-y-6">
+              <motion.h1
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.2 }}
+                className="text-5xl md:text-7xl font-bold text-white leading-tight"
+              >
+                {heroSlides[currentSlide].title}
+              </motion.h1>
+              
+              <motion.h2
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.4 }}
+                className="text-2xl md:text-3xl font-semibold text-cyan-400 leading-relaxed"
+              >
+                {heroSlides[currentSlide].subtitle}
+              </motion.h2>
+              
+              <motion.p
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.6 }}
+                className="text-xl text-slate-300 max-w-3xl mx-auto leading-relaxed"
+              >
+                {heroSlides[currentSlide].description}
+              </motion.p>
+            </div>
+
+            {/* CTA Button */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.8 }}
+            >
+              <Link
+                to={heroSlides[currentSlide].href}
+                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-xl hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 hover:shadow-glow-lg"
+              >
+                {heroSlides[currentSlide].cta}
+                <ArrowRight className="ml-2 w-5 h-5" />
+              </Link>
+            </motion.div>
           </motion.div>
-        </motion.div>
+        </AnimatePresence>
+
+        {/* Slide indicators */}
+        <div className="flex justify-center space-x-2 mt-12">
+          {heroSlides.map((_, index) => (
+            <button
+              key={index}
+              onClick={() => setCurrentSlide(index)}
+              className={`w-3 h-3 rounded-full transition-all duration-300 ${
+                index === currentSlide
+                  ? 'bg-cyan-400 scale-125'
+                  : 'bg-slate-600 hover:bg-slate-500'
+              }`}
+            />
+          ))}
+        </div>
       </div>
+
+      {/* Scroll indicator */}
+      <motion.div
+        animate={{ y: [0, 10, 0] }}
+        transition={{ duration: 2, repeat: Infinity }}
+        className="absolute bottom-8 left-1/2 transform -translate-x-1/2"
+      >
+        <div className="w-6 h-10 border-2 border-slate-400 rounded-full flex justify-center">
+          <motion.div
+            animate={{ y: [0, 12, 0] }}
+            transition={{ duration: 2, repeat: Infinity }}
+            className="w-1 h-3 bg-slate-400 rounded-full mt-2"
+          />
+        </div>
+      </motion.div>
     </section>
   );
 };
 
 // Quick Access Component
 const QuickAccess: React.FC = () => {
-  const quickActions = [
-    { label: 'Get Quote', href: '/request-quote', icon: MessageCircle, color: 'from-zion-cyan to-zion-blue' },
-    { label: 'Schedule Demo', href: '/schedule-demo', icon: Calendar, color: 'from-zion-purple to-zion-pink' },
-    { label: 'View Services', href: '/services', icon: Settings, color: 'from-zion-green to-zion-cyan' },
-    { label: 'Contact Us', href: '/contact', icon: MessageCircle, color: 'from-zion-orange to-zion-red' }
-  ];
-
   return (
-    <section className="py-16 bg-gradient-to-r from-zion-slate-dark to-zion-slate">
+    <section className="py-20 bg-slate-800/50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
-          variants={containerVariants}
-          initial="hidden"
-          whileInView="visible"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
           viewport={{ once: true }}
-          className="grid grid-cols-2 md:grid-cols-4 gap-4"
+          className="text-center mb-16"
         >
+          <h2 className="text-4xl font-bold text-white mb-4">
+            Quick Access to Our Services
+          </h2>
+          <p className="text-xl text-slate-300 max-w-2xl mx-auto">
+            Jump directly to the solutions you need most
+          </p>
+        </motion.div>
+
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
           {quickActions.map((action, index) => (
-            <motion.div key={action.label} variants={itemVariants}>
+            <motion.div
+              key={action.title}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: index * 0.1 }}
+              viewport={{ once: true }}
+            >
               <Link
                 to={action.href}
-                className="glass-card hover:scale-105 transition-all duration-300 text-center group"
+                className="group block text-center p-6 bg-slate-700/50 rounded-xl border border-slate-600/50 hover:border-cyan-500/50 transition-all duration-300 hover:bg-slate-700/70"
               >
                 <div className={`w-12 h-12 bg-gradient-to-r ${action.color} rounded-xl flex items-center justify-center mx-auto mb-3 group-hover:scale-110 transition-transform duration-300`}>
                   {React.createElement(action.icon, { className: "w-6 h-6 text-white" })}
                 </div>
-                <span className="text-white font-semibold">{action.label}</span>
+                <h3 className="text-sm font-semibold text-white mb-2 group-hover:text-cyan-400 transition-colors duration-300">
+                  {action.title}
+                </h3>
+                <p className="text-xs text-slate-400 group-hover:text-slate-300 transition-colors duration-300">
+                  {action.description}
+                </p>
               </Link>
             </motion.div>
           ))}
-        </motion.div>
-      </div>
-    </section>
-  );
-};
-
-// Feature CTAs Component
-const FeatureCTAs: React.FC = () => {
-  const features = [
-    {
-      title: "AI-Powered Solutions",
-      description: "Leverage the latest in artificial intelligence to automate and optimize your business processes.",
-      icon: Brain,
-      cta: "Explore AI Services",
-      href: "/services/ai-services",
-      color: "from-zion-cyan to-zion-blue"
-    },
-    {
-      title: "Quantum Computing",
-      description: "Access next-generation computing power for complex problem-solving and optimization.",
-      icon: Atom,
-      cta: "Learn More",
-      href: "/services/quantum-computing",
-      color: "from-zion-purple to-zion-pink"
-    },
-    {
-      title: "Micro SaaS Platform",
-      description: "Custom software solutions designed to streamline operations and boost productivity.",
-      icon: Code,
-      cta: "View Solutions",
-      href: "/micro-saas",
-      color: "from-zion-green to-zion-cyan"
-    }
-  ];
-
-  return (
-    <section className="py-20 bg-gradient-to-br from-zion-slate via-zion-slate-dark to-zion-slate">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <motion.div
-          variants={containerVariants}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true }}
-          className="text-center mb-16"
-        >
-          <motion.h2 variants={itemVariants} className="text-4xl md:text-5xl font-bold font-orbitron gradient-text-neon mb-6">
-            Revolutionary Services Preview
-          </motion.h2>
-          <motion.p variants={itemVariants} className="text-xl text-zion-gray-light max-w-3xl mx-auto">
-            Experience the future of technology with our cutting-edge solutions designed to transform your business.
-          </motion.p>
-        </motion.div>
-
-        <motion.div
-          variants={containerVariants}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true }}
-          className="grid grid-cols-1 md:grid-cols-3 gap-8"
-        >
-          {features.map((feature, index) => (
-            <motion.div key={feature.title} variants={itemVariants}>
-              <div className="glass-card text-center hover:scale-105 transition-all duration-300">
-                <div className={`w-16 h-16 bg-gradient-to-r ${feature.color} rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300`}>
-                  <feature.icon className="w-8 h-8 text-white" />
-                </div>
-                <h3 className="text-2xl font-bold text-white mb-4 font-orbitron">{feature.title}</h3>
-                <p className="text-zion-gray-light mb-6 leading-relaxed">{feature.description}</p>
-                <Link
-                  to={feature.href}
-                  className="glass-button bg-gradient-to-r from-zion-cyan to-zion-blue text-white hover:shadow-glow-blue-lg transform hover:scale-105 transition-all duration-300 inline-flex items-center space-x-2"
-                >
-                  <span>{feature.cta}</span>
-                  <ArrowRight className="w-4 h-4" />
-                </Link>
-              </div>
-            </motion.div>
-          ))}
-        </motion.div>
-      </div>
-    </section>
-  );
-};
-
-// Feature Highlights Component
-const FeatureHighlights: React.FC = () => {
-  const highlights = [
-    {
-      icon: Zap,
-      title: "Lightning Fast",
-      description: "Optimized performance for instant results and seamless user experience."
-    },
-    {
-      icon: Shield,
-      title: "Enterprise Security",
-      description: "Bank-grade security protocols to protect your sensitive data and operations."
-    },
-    {
-      icon: Globe,
-      title: "Global Reach",
-      description: "Worldwide deployment capabilities with local compliance and support."
-    },
-    {
-      icon: Cpu,
-      title: "Scalable Architecture",
-      description: "Built to grow with your business, from startup to enterprise scale."
-    }
-  ];
-
-  return (
-    <section className="py-20 bg-gradient-to-br from-zion-slate-dark to-zion-slate">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <motion.div
-          variants={containerVariants}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true }}
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"
-        >
-          {highlights.map((highlight, index) => (
-            <motion.div key={highlight.title} variants={itemVariants} className="text-center">
-              <div className="w-16 h-16 bg-gradient-to-br from-zion-cyan/20 to-zion-blue/20 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
-                <highlight.icon className="w-8 h-8 text-zion-cyan" />
-              </div>
-              <h3 className="text-xl font-bold text-white mb-3 font-orbitron">{highlight.title}</h3>
-              <p className="text-zion-gray-light text-sm leading-relaxed">{highlight.description}</p>
-            </motion.div>
-          ))}
-        </motion.div>
-      </div>
-    </section>
-  );
-};
-
-// Categories Section Component
-const CategoriesSection: React.FC = () => {
-  const categories = [
-    {
-      title: "AI & Machine Learning",
-      description: "Intelligent solutions that learn and adapt to your business needs.",
-      icon: Brain,
-      href: "/services/ai-services",
-      color: "from-zion-cyan to-zion-blue"
-    },
-    {
-      title: "Cybersecurity",
-      description: "Advanced protection against evolving digital threats and vulnerabilities.",
-      icon: Shield,
-      href: "/security",
-      color: "from-zion-red to-zion-orange"
-    },
-    {
-      title: "Cloud & DevOps",
-      description: "Scalable infrastructure and streamlined development operations.",
-      icon: Cloud,
-      href: "/services/cloud-devops",
-      color: "from-zion-purple to-zion-pink"
-    },
-    {
-      title: "Digital Transformation",
-      description: "End-to-end modernization of your business processes and technology stack.",
-      icon: Rocket,
-      href: "/services/digital-transformation",
-      color: "from-zion-green to-zion-cyan"
-    }
-  ];
-
-  return (
-    <section className="py-20 bg-gradient-to-br from-zion-slate via-zion-slate-dark to-zion-slate">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <motion.div
-          variants={containerVariants}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true }}
-          className="text-center mb-16"
-        >
-          <motion.h2 variants={itemVariants} className="text-4xl md:text-5xl font-bold font-orbitron gradient-text-neon mb-6">
-            Service Categories
-          </motion.h2>
-          <motion.p variants={itemVariants} className="text-xl text-zion-gray-light max-w-3xl mx-auto">
-            Comprehensive solutions across all major technology domains to meet your business needs.
-          </motion.p>
-        </motion.div>
-
-        <motion.div
-          variants={containerVariants}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true }}
-          className="grid grid-cols-1 md:grid-cols-2 gap-8"
-        >
-          {categories.map((category, index) => (
-            <motion.div key={category.title} variants={itemVariants}>
-              <Link
-                to={category.href}
-                className="glass-card hover:scale-105 transition-all duration-300 group block"
-              >
-                <div className="flex items-start space-x-4">
-                  <div className={`w-16 h-16 bg-gradient-to-r ${category.color} rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300`}>
-                    <category.icon className="w-8 h-8 text-white" />
-                  </div>
-                  <div className="flex-1">
-                    <h3 className="text-2xl font-bold text-white mb-3 font-orbitron">{category.title}</h3>
-                    <p className="text-zion-gray-light leading-relaxed">{category.description}</p>
-                  </div>
-                </div>
-              </Link>
-            </motion.div>
-          ))}
-        </motion.div>
+        </div>
       </div>
     </section>
   );
@@ -584,370 +467,221 @@ const CategoriesSection: React.FC = () => {
 
 // Benefits Section Component
 const BenefitsSection: React.FC = () => {
-  const benefits = [
-    {
-      icon: TrendingUp,
-      title: "Increased Efficiency",
-      description: "Streamline operations and boost productivity with automated workflows."
-    },
-    {
-      icon: DollarSign,
-      title: "Cost Reduction",
-      description: "Optimize resource allocation and reduce operational costs significantly."
-    },
-    {
-      icon: Users,
-      title: "Enhanced User Experience",
-      description: "Deliver seamless, intuitive experiences that keep customers engaged."
-    },
-    {
-      icon: Lock,
-      title: "Improved Security",
-      description: "Protect your assets with enterprise-grade security measures."
-    }
-  ];
-
   return (
-    <section className="py-20 bg-gradient-to-br from-zion-slate-dark to-zion-slate">
+    <section className="py-20 bg-gradient-to-br from-slate-900 to-slate-800">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
-          variants={containerVariants}
-          initial="hidden"
-          whileInView="visible"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <motion.h2 variants={itemVariants} className="text-4xl md:text-5xl font-bold font-orbitron gradient-text-neon mb-6">
+          <h2 className="text-4xl font-bold text-white mb-4">
             Why Choose Zion Tech Group?
-          </motion.h2>
-          <motion.p variants={itemVariants} className="text-xl text-zion-gray-light max-w-3xl mx-auto">
-            Experience the advantages of working with a technology partner that truly understands your business.
-          </motion.p>
+          </h2>
+          <p className="text-xl text-slate-300 max-w-3xl mx-auto">
+            We combine cutting-edge technology with proven expertise to deliver exceptional results
+          </p>
         </motion.div>
 
-        <motion.div
-          variants={containerVariants}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true }}
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"
-        >
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {benefits.map((benefit, index) => (
-            <motion.div key={benefit.title} variants={itemVariants} className="text-center">
-              <div className="w-16 h-16 bg-gradient-to-br from-zion-cyan/20 to-zion-blue/20 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
-                <benefit.icon className="w-8 h-8 text-zion-cyan" />
+            <motion.div
+              key={benefit.title}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: index * 0.2 }}
+              viewport={{ once: true }}
+              className="text-center p-8 bg-slate-800/50 rounded-2xl border border-slate-700/50 hover:border-cyan-500/50 transition-all duration-300 hover:bg-slate-800/70"
+            >
+              <div className={`w-16 h-16 bg-gradient-to-r ${benefit.color} rounded-2xl flex items-center justify-center mx-auto mb-6`}>
+                <benefit.icon className="w-8 h-8 text-white" />
               </div>
-              <h3 className="text-xl font-bold text-white mb-3 font-orbitron">{benefit.title}</h3>
-              <p className="text-zion-gray-light text-sm leading-relaxed">{benefit.description}</p>
+              <h3 className="text-xl font-semibold text-white mb-4">
+                {benefit.title}
+              </h3>
+              <p className="text-slate-300">
+                {benefit.description}
+              </p>
             </motion.div>
           ))}
-        </motion.div>
+        </div>
       </div>
     </section>
   );
 };
 
-// How It Works Section Component
-const HowItWorksSection: React.FC = () => {
-  const steps = [
-    {
-      number: "01",
-      title: "Discovery & Analysis",
-      description: "We analyze your business needs and identify the best technology solutions.",
-      icon: Search
-    },
-    {
-      number: "02",
-      title: "Solution Design",
-      description: "Our experts design a customized solution tailored to your specific requirements.",
-      icon: PenTool
-    },
-    {
-      number: "03",
-      title: "Development & Testing",
-      description: "We build and thoroughly test your solution to ensure quality and reliability.",
-      icon: Code
-    },
-    {
-      number: "04",
-      title: "Deployment & Support",
-      description: "Smooth deployment followed by ongoing support and maintenance services.",
-      icon: CheckCircle
-    }
-  ];
-
+// Featured Services Component
+const FeaturedServices: React.FC = () => {
   return (
-    <section className="py-20 bg-gradient-to-br from-zion-slate via-zion-slate-dark to-zion-slate">
+    <section className="py-20 bg-slate-800/30">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
-          variants={containerVariants}
-          initial="hidden"
-          whileInView="visible"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <motion.h2 variants={itemVariants} className="text-4xl md:text-5xl font-bold font-orbitron gradient-text-neon mb-6">
-            How It Works
-          </motion.h2>
-          <motion.p variants={itemVariants} className="text-xl text-zion-gray-light max-w-3xl mx-auto">
-            Our proven process ensures successful delivery of technology solutions that drive real business value.
-          </motion.p>
+          <h2 className="text-4xl font-bold text-white mb-4">
+            Featured Services
+          </h2>
+          <p className="text-xl text-slate-300 max-w-3xl mx-auto">
+            Discover our most popular and innovative solutions
+          </p>
         </motion.div>
 
-        <motion.div
-          variants={containerVariants}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true }}
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"
-        >
-          {steps.map((step, index) => (
-            <motion.div key={step.number} variants={itemVariants} className="text-center relative">
-              <div className="glass-card relative">
-                <div className="absolute -top-4 left-1/2 transform -translate-x-1/2 w-8 h-8 bg-gradient-to-r from-zion-cyan to-zion-blue rounded-full flex items-center justify-center text-white font-bold text-sm">
-                  {step.number}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          {featuredServices.map((service, index) => (
+            <motion.div
+              key={service.id}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: index * 0.1 }}
+              viewport={{ once: true }}
+              className="group"
+            >
+              <Link
+                to={service.href}
+                className="block p-6 bg-slate-800/50 rounded-2xl border border-slate-700/50 hover:border-cyan-500/50 transition-all duration-300 hover:bg-slate-800/70 hover:transform hover:scale-105"
+              >
+                <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
+                  <service.icon className="w-6 h-6 text-white" />
                 </div>
-                <div className="w-16 h-16 bg-gradient-to-br from-zion-cyan/20 to-zion-blue/20 rounded-2xl flex items-center justify-center mx-auto mb-4 mt-4 group-hover:scale-110 transition-transform duration-300">
-                  <step.icon className="w-8 h-8 text-zion-cyan" />
-                </div>
-                <h3 className="text-xl font-bold text-white mb-3 font-orbitron">{step.title}</h3>
-                <p className="text-zion-gray-light text-sm leading-relaxed">{step.description}</p>
-              </div>
+                <h3 className="text-lg font-semibold text-white mb-2 group-hover:text-cyan-400 transition-colors duration-300">
+                  {service.title}
+                </h3>
+                <p className="text-slate-300 text-sm mb-4">
+                  {service.description}
+                </p>
+                <span className="inline-block px-3 py-1 bg-slate-700/50 text-cyan-400 text-xs font-medium rounded-full">
+                  {service.category}
+                </span>
+              </Link>
             </motion.div>
           ))}
-        </motion.div>
+        </div>
       </div>
     </section>
   );
 };
 
-// Newsletter Section Component
-const NewsletterSection: React.FC = () => {
-  const [email, setEmail] = useState('');
-  const [isSubscribed, setIsSubscribed] = useState(false);
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    if (email.trim()) {
-      setIsSubscribed(true);
-      setEmail('');
-      setTimeout(() => setIsSubscribed(false), 3000);
-    }
-  };
-
+// Micro SaaS Services Component
+const MicroSaaSServices: React.FC = () => {
   return (
-    <section className="py-20 bg-gradient-to-br from-zion-slate-dark to-zion-slate">
-      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+    <section className="py-20 bg-gradient-to-br from-slate-900 to-slate-800">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
-          variants={containerVariants}
-          initial="hidden"
-          whileInView="visible"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          viewport={{ once: true }}
+          className="text-center mb-16"
+        >
+          <h2 className="text-4xl font-bold text-white mb-4">
+            Micro SaaS Solutions
+          </h2>
+          <p className="text-xl text-slate-300 max-w-3xl mx-auto">
+            Specialized tools designed to solve specific business challenges
+          </p>
+        </motion.div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          {microSaaSServices.map((service, index) => (
+            <motion.div
+              key={service.id}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: index * 0.1 }}
+              viewport={{ once: true }}
+              className="group"
+            >
+              <Link
+                to={service.href}
+                className="block p-6 bg-slate-800/50 rounded-2xl border border-slate-700/50 hover:border-cyan-500/50 transition-all duration-300 hover:bg-slate-800/70 hover:transform hover:scale-105"
+              >
+                <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-600 rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
+                  <service.icon className="w-6 h-6 text-white" />
+                </div>
+                <h3 className="text-lg font-semibold text-white mb-2 group-hover:text-cyan-400 transition-colors duration-300">
+                  {service.title}
+                </h3>
+                <p className="text-slate-300 text-sm mb-4">
+                  {service.description}
+                </p>
+                <span className="inline-block px-3 py-1 bg-slate-700/50 text-purple-400 text-xs font-medium rounded-full">
+                  {service.category}
+                </span>
+              </Link>
+            </motion.div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+};
+
+// CTA Section Component
+const CTASection: React.FC = () => {
+  return (
+    <section className="py-20 bg-gradient-to-r from-cyan-600 to-blue-600">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
           viewport={{ once: true }}
           className="space-y-8"
         >
-          <motion.div variants={itemVariants}>
-            <h2 className="text-4xl md:text-5xl font-bold font-orbitron gradient-text-neon mb-6">
-              Stay Updated
-            </h2>
-            <p className="text-xl text-zion-gray-light max-w-2xl mx-auto">
-              Get the latest insights on AI, technology trends, and industry updates delivered to your inbox.
-            </p>
-          </motion.div>
-
-          <motion.form variants={itemVariants} onSubmit={handleSubmit} className="max-w-md mx-auto">
-            <div className="flex space-x-3">
-              <input
-                type="email"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-                placeholder="Enter your email"
-                className="flex-1 px-4 py-3 bg-zion-slate-light/20 border border-zion-cyan/20 rounded-lg text-white placeholder-zion-gray-light focus:outline-none focus:border-zion-cyan/40 focus:ring-2 focus:ring-zion-cyan/20 transition-all duration-200"
-                required
-              />
-              <button
-                type="submit"
-                className="glass-button bg-gradient-to-r from-zion-cyan to-zion-blue text-white hover:shadow-glow-blue-lg transform hover:scale-105 transition-all duration-300"
-                disabled={isSubscribed}
-              >
-                {isSubscribed ? 'Subscribed!' : 'Subscribe'}
-              </button>
-            </div>
-          </motion.form>
+          <h2 className="text-4xl font-bold text-white">
+            Ready to Transform Your Business?
+          </h2>
+          <p className="text-xl text-cyan-100 max-w-2xl mx-auto">
+            Let's discuss how our innovative solutions can drive your success
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link
+              to="/contact"
+              className="inline-flex items-center px-8 py-4 bg-white text-cyan-600 font-semibold rounded-xl hover:bg-slate-100 transition-all duration-300 transform hover:scale-105"
+            >
+              Get Started Today
+              <ArrowRight className="ml-2 w-5 h-5" />
+            </Link>
+            <Link
+              to="/services"
+              className="inline-flex items-center px-8 py-4 bg-transparent text-white font-semibold rounded-xl border-2 border-white hover:bg-white hover:text-cyan-600 transition-all duration-300 transform hover:scale-105"
+            >
+              Explore Services
+            </Link>
+          </div>
         </motion.div>
       </div>
     </section>
   );
 };
-
-// Featured Listings Section Component
-const FeaturedListingsSection: React.FC = () => {
-  return (
-    <section className="py-20 bg-gradient-to-br from-zion-slate via-zion-slate-dark to-zion-slate">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <motion.div
-          variants={containerVariants}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true }}
-          className="text-center mb-16"
-        >
-          <motion.h2 variants={itemVariants} className="text-4xl md:text-5xl font-bold font-orbitron gradient-text-neon mb-6">
-            Featured Services
-          </motion.h2>
-          <motion.p variants={itemVariants} className="text-xl text-zion-gray-light max-w-3xl mx-auto">
-            Discover our most popular and innovative technology solutions.
-          </motion.p>
-        </motion.div>
-
-        <motion.div
-          variants={containerVariants}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true }}
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6"
-        >
-          {featuredServices.map((service, index) => (
-            <motion.div key={service.id} variants={itemVariants}>
-              <Link
-                to={service.href}
-                className="glass-card hover:scale-105 transition-all duration-300 group block"
-              >
-                <div className="w-12 h-12 bg-gradient-to-br from-zion-cyan to-zion-blue rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
-                  <service.icon className="w-6 h-6 text-white" />
-                </div>
-                <div className="text-xs text-zion-cyan mb-2 font-semibold">{service.category}</div>
-                <h3 className="text-lg font-semibold text-white mb-3 font-orbitron">{service.title}</h3>
-                <p className="text-zion-gray-light mb-4 text-sm leading-relaxed">{service.description}</p>
-                <div className="flex items-center text-zion-cyan group-hover:translate-x-2 transition-transform duration-300">
-                  <span className="text-xs font-semibold">Learn More</span>
-                  <ArrowRight className="w-3 h-3 ml-2" />
-                </div>
-              </Link>
-            </motion.div>
-          ))}
-        </motion.div>
-      </div>
-    </section>
-  );
-};
-
-// Services Showcase Component
-const ServicesShowcase: React.FC = () => {
-  return (
-    <section className="py-20 bg-gradient-to-br from-zion-slate-dark to-zion-slate">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <motion.div
-          variants={containerVariants}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true }}
-          className="text-center mb-16"
-        >
-          <motion.h2 variants={itemVariants} className="text-4xl md:text-5xl font-bold font-orbitron gradient-text-neon mb-6">
-            Micro SaaS Solutions
-          </motion.h2>
-          <motion.p variants={itemVariants} className="text-xl text-zion-gray-light max-w-3xl mx-auto">
-            Innovative software solutions designed to solve specific business challenges and boost productivity.
-          </motion.p>
-        </motion.div>
-
-        <motion.div
-          variants={containerVariants}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true }}
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6"
-        >
-          {microSaaSServices.map((service, index) => (
-            <motion.div key={service.id} variants={itemVariants}>
-              <Link
-                to={service.href}
-                className="glass-card hover:scale-105 transition-all duration-300 group block"
-              >
-                <div className="w-12 h-12 bg-gradient-to-br from-zion-purple to-zion-pink rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
-                  <service.icon className="w-6 h-6 text-white" />
-                </div>
-                <div className="text-xs text-zion-purple mb-2 font-semibold">{service.category}</div>
-                <h3 className="text-lg font-semibold text-white mb-3 font-orbitron">{service.title}</h3>
-                <p className="text-zion-gray-light mb-4 text-sm leading-relaxed">{service.description}</p>
-                <div className="flex items-center text-zion-purple group-hover:translate-x-2 transition-transform duration-300">
-                  <span className="text-xs font-semibold">Learn More</span>
-                  <ArrowRight className="w-3 h-3 ml-2" />
-                </div>
-              </Link>
-            </motion.div>
-          ))}
-        </motion.div>
-      </div>
-    </section>
-  );
-};
-
-// Loading Fallback Component
-const LoadingFallback: React.FC = () => (
-  <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
-    <div className="text-center">
-      <div className="w-16 h-16 border-4 border-zion-cyan border-t-transparent rounded-full animate-spin mx-auto mb-4"></div>
-      <p className="text-zion-gray-light">Loading Zion Tech Group...</p>
-    </div>
-  </div>
-);
-
-// Animated Background Component
-const AnimatedBackground: React.FC = () => (
-  <div className="fixed inset-0 pointer-events-none overflow-hidden">
-    <div className="absolute top-0 left-0 w-full h-full">
-      <div className="absolute top-20 left-20 w-32 h-32 bg-zion-cyan/10 rounded-full blur-3xl animate-float"></div>
-      <div className="absolute top-40 right-20 w-24 h-24 bg-zion-purple/10 rounded-full blur-2xl animate-float-delayed"></div>
-      <div className="absolute bottom-20 left-1/4 w-28 h-28 bg-zion-pink/10 rounded-full blur-2xl animate-float"></div>
-    </div>
-  </div>
-);
-
-// Floating Particles Component
-const FloatingParticles: React.FC = () => (
-  <div className="fixed inset-0 pointer-events-none overflow-hidden">
-    {[...Array(20)].map((_, i) => (
-      <div
-        key={i}
-        className="absolute w-2 h-2 bg-zion-cyan/30 rounded-full animate-float"
-        style={{
-          left: `${Math.random() * 100}%`,
-          top: `${Math.random() * 100}%`,
-          animationDelay: `${Math.random() * 3}s`,
-          animationDuration: `${3 + Math.random() * 2}s`
-        }}
-      />
-    ))}
-  </div>
-);
 
 // Main Home Component
 const Home: React.FC = () => {
   return (
     <>
-      <SEO />
+      <SEO
+        title="Zion Tech Group - AI-Powered Innovation & Digital Transformation"
+        description="Transform your business with cutting-edge AI solutions, quantum computing, and digital transformation services. Expert technology consulting for the modern enterprise."
+        keywords="AI services, quantum computing, digital transformation, cybersecurity, cloud solutions, micro SaaS, technology consulting"
+        ogImage="/images/zion-tech-group-og.jpg"
+        ogType="website"
+        twitterCard="summary_large_image"
+      />
       
-      {/* Accessibility Skip Link */}
-      <a href="#main-content" className="skip-link">
-        Skip to main content
-      </a>
-
-      <main id="main-content">
+      <main className="min-h-screen">
         <HeroSection />
         <QuickAccess />
-        <FeatureCTAs />
-        <FeatureHighlights />
-        <CategoriesSection />
         <BenefitsSection />
-        <HowItWorksSection />
-        <NewsletterSection />
-        <FeaturedListingsSection />
-        <ServicesShowcase />
+        <FeaturedServices />
+        <MicroSaaSServices />
+        <CTASection />
       </main>
-
-      <AnimatedBackground />
-      <FloatingParticles />
     </>
   );
 };
