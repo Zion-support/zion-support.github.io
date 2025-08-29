@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { 
-  Cloud, 
+  Heart, 
   Brain, 
   Shield, 
   Users, 
@@ -22,61 +22,55 @@ import {
   TrendingUp,
   AlertTriangle,
   FileText,
-  Network,
-  Server,
-  Smartphone,
-  GitBranch,
-  Code,
-  Settings,
   Phone,
   Mail,
   MapPin
 } from 'lucide-react';
 
-export default function CloudDevOps() {
+export default function AIHealthcarePlatform() {
   const features = [
-    { icon: Cloud, title: 'Cloud Infrastructure', description: 'Multi-cloud infrastructure design and management' },
-    { icon: GitBranch, title: 'CI/CD Pipelines', description: 'Automated continuous integration and deployment' },
-    { icon: Code, title: 'Infrastructure as Code', description: 'Terraform, CloudFormation, and Ansible automation' },
-    { icon: Database, title: 'Container Orchestration', description: 'Kubernetes and Docker container management' },
-    { icon: Shield, title: 'DevSecOps', description: 'Security integrated into the development pipeline' },
-    { icon: Zap, title: 'Monitoring & Alerting', description: 'Comprehensive monitoring and observability solutions' }
+    { icon: Brain, title: 'AI-Powered Diagnostics', description: 'Advanced machine learning algorithms for accurate disease detection and diagnosis' },
+    { icon: Database, title: 'Patient Data Analytics', description: 'Comprehensive analysis of patient data for personalized treatment plans' },
+    { icon: Shield, title: 'HIPAA Compliance', description: 'Full compliance with healthcare data protection regulations' },
+    { icon: Users, title: 'Clinical Decision Support', description: 'AI-assisted clinical decision making for healthcare professionals' },
+    { icon: Activity, title: 'Real-time Monitoring', description: 'Continuous patient monitoring with predictive alerts' },
+    { icon: TrendingUp, title: 'Predictive Analytics', description: 'Forecast health outcomes and identify risk factors early' }
   ];
 
   const benefits = [
-    { icon: CheckCircle, title: 'Faster Deployment', description: 'Deploy applications 10x faster with automation' },
-    { icon: DollarSign, title: 'Cost Optimization', description: 'Reduce cloud costs by 30-50%' },
-    { icon: Users, title: 'Improved Collaboration', description: 'Better team collaboration and productivity' },
-    { icon: Shield, title: 'Enhanced Security', description: 'Security built into every stage of development' },
-    { icon: Zap, title: 'Scalable Infrastructure', description: 'Infrastructure that scales with your business' },
-    { icon: TrendingUp, title: 'Better Reliability', description: '99.9% uptime with automated failover' }
+    { icon: CheckCircle, title: 'Improved Accuracy', description: '95%+ accuracy in diagnostic predictions' },
+    { icon: Clock, title: 'Faster Diagnosis', description: 'Reduce diagnosis time by 60-80%' },
+    { icon: DollarSign, title: 'Cost Reduction', description: 'Lower healthcare costs by 25-40%' },
+    { icon: Users, title: 'Better Outcomes', description: 'Improve patient outcomes by 30-50%' },
+    { icon: Shield, title: 'Enhanced Security', description: 'Enterprise-grade security and compliance' },
+    { icon: Zap, title: 'Scalable Solution', description: 'Grows with your healthcare organization' }
   ];
 
-  const devopsServices = [
-    { title: 'CI/CD Automation', description: 'Automated build, test, and deployment pipelines', icon: GitBranch },
-    { title: 'Infrastructure Management', description: 'Cloud infrastructure provisioning and management', icon: Cloud },
-    { title: 'Container Management', description: 'Docker and Kubernetes orchestration', icon: Code },
-    { title: 'Monitoring & Logging', description: 'Application and infrastructure monitoring', icon: Activity },
-    { title: 'Security & Compliance', description: 'DevSecOps and compliance automation', icon: Shield },
-    { title: 'Performance Optimization', description: 'Application and infrastructure optimization', icon: TrendingUp }
+  const useCases = [
+    { title: 'Early Disease Detection', description: 'Identify diseases at early stages for better treatment outcomes' },
+    { title: 'Personalized Medicine', description: 'Tailor treatment plans based on individual patient data' },
+    { title: 'Population Health Management', description: 'Monitor and manage health across patient populations' },
+    { title: 'Clinical Research', description: 'Accelerate medical research with AI-powered insights' },
+    { title: 'Remote Patient Monitoring', description: 'Monitor patients remotely for continuous care' },
+    { title: 'Drug Discovery', description: 'Accelerate pharmaceutical research and development' }
   ];
 
   const pricing = [
     {
       plan: 'Starter',
-      price: '$1,800',
+      price: '$2,500',
       period: 'monthly',
-      description: 'Perfect for small teams and startups',
-      features: ['Basic CI/CD pipelines', 'Cloud infrastructure setup', 'Monthly support', 'Basic monitoring', 'Security review'],
+      description: 'Perfect for small clinics and practices',
+      features: ['Up to 1,000 patients', 'Basic AI diagnostics', 'Standard support', 'HIPAA compliance'],
       cta: 'Get Started',
       popular: false
     },
     {
       plan: 'Professional',
-      price: '$4,200',
+      price: '$5,000',
       period: 'monthly',
-      description: 'Ideal for growing teams and businesses',
-      features: ['Advanced CI/CD automation', 'Multi-cloud management', 'Priority support', 'Advanced monitoring', 'Security automation', 'Custom integrations'],
+      description: 'Ideal for medium-sized healthcare organizations',
+      features: ['Up to 10,000 patients', 'Advanced AI diagnostics', 'Priority support', 'Custom integrations', 'Analytics dashboard'],
       cta: 'Get Started',
       popular: true
     },
@@ -84,8 +78,8 @@ export default function CloudDevOps() {
       plan: 'Enterprise',
       price: 'Custom',
       period: 'monthly',
-      description: 'For large organizations with complex infrastructure',
-      features: ['Full DevOps transformation', 'Custom automation', '24/7 dedicated support', 'White-label options', 'API access', 'Custom development'],
+      description: 'For large healthcare systems and hospitals',
+      features: ['Unlimited patients', 'Full AI suite', '24/7 dedicated support', 'Custom development', 'White-label options'],
       cta: 'Contact Sales',
       popular: false
     }
@@ -95,35 +89,35 @@ export default function CloudDevOps() {
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-black text-white">
       {/* Hero Section */}
       <section className="relative overflow-hidden py-20 lg:py-32">
-        <div className="absolute inset-0 bg-gradient-to-r from-blue-500/10 via-cyan-500/10 to-indigo-500/10"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-red-500/10 via-pink-500/10 to-purple-500/10"></div>
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
-            <div className="inline-flex items-center px-4 py-2 bg-blue-500/20 border border-blue-400/30 rounded-full text-blue-400 text-sm font-medium mb-6">
-              <Cloud className="w-4 h-4 mr-2" />
-              Cloud DevOps
+            <div className="inline-flex items-center px-4 py-2 bg-red-500/20 border border-red-400/30 rounded-full text-red-400 text-sm font-medium mb-6">
+              <Heart className="w-4 h-4 mr-2" />
+              AI Healthcare Platform
             </div>
-            <h1 className="text-4xl lg:text-6xl font-bold bg-gradient-to-r from-blue-400 via-cyan-500 to-indigo-600 bg-clip-text text-transparent mb-6">
-              Cloud DevOps
+            <h1 className="text-4xl lg:text-6xl font-bold bg-gradient-to-r from-red-400 via-pink-500 to-purple-600 bg-clip-text text-transparent mb-6">
+              AI Healthcare Platform
             </h1>
             <p className="text-xl lg:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
-              Accelerate your development with modern DevOps practices and cloud infrastructure automation. 
-              Deploy faster, scale efficiently, and maintain high reliability with our expert DevOps solutions.
+              Revolutionize healthcare delivery with our AI-powered platform that provides accurate diagnostics, 
+              personalized treatment plans, and predictive analytics for better patient outcomes.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 to="/request-quote"
-                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-500 to-cyan-600 hover:from-blue-600 hover:to-cyan-700 text-white font-semibold rounded-xl transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-blue-500/25"
+                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-red-500 to-pink-600 hover:from-red-600 hover:to-pink-700 text-white font-semibold rounded-xl transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-red-500/25"
               >
                 Get Your Custom Quote
                 <ArrowRight className="ml-2 w-5 h-5" />
               </Link>
               <Link
                 to="/schedule-demo"
-                className="inline-flex items-center px-8 py-4 border border-blue-400/50 text-blue-400 hover:bg-blue-400/10 font-semibold rounded-xl transition-all duration-300"
+                className="inline-flex items-center px-8 py-4 border border-red-400/50 text-red-400 hover:bg-red-400/10 font-semibold rounded-xl transition-all duration-300"
               >
                 Schedule Demo
               </Link>
@@ -142,11 +136,11 @@ export default function CloudDevOps() {
             className="text-center mb-16"
           >
             <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
-              Advanced DevOps Features
+              Advanced AI Healthcare Features
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Our DevOps platform combines cutting-edge automation tools with cloud expertise 
-              to deliver seamless development and deployment workflows.
+              Our platform combines cutting-edge AI technology with healthcare expertise to deliver 
+              accurate, reliable, and actionable insights for healthcare professionals.
             </p>
           </motion.div>
 
@@ -157,10 +151,10 @@ export default function CloudDevOps() {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
-                className="bg-slate-800/50 backdrop-blur-xl rounded-2xl border border-slate-700/50 p-6 hover:border-blue-400/30 transition-all duration-300"
+                className="bg-slate-800/50 backdrop-blur-xl rounded-2xl border border-slate-700/50 p-6 hover:border-red-400/30 transition-all duration-300"
               >
-                <div className="p-3 rounded-xl bg-gradient-to-br from-blue-500/20 to-cyan-500/20 mb-4 inline-block">
-                  <feature.icon className="w-8 h-8 text-blue-400" />
+                <div className="p-3 rounded-xl bg-gradient-to-br from-red-500/20 to-pink-500/20 mb-4 inline-block">
+                  <feature.icon className="w-8 h-8 text-red-400" />
                 </div>
                 <h3 className="text-xl font-bold text-white mb-3">{feature.title}</h3>
                 <p className="text-gray-400">{feature.description}</p>
@@ -180,11 +174,11 @@ export default function CloudDevOps() {
             className="text-center mb-16"
           >
             <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
-              Why Choose Our Cloud DevOps?
+              Why Choose Our AI Healthcare Platform?
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              We deliver measurable improvements in development velocity, infrastructure efficiency, and operational reliability 
-              through our proven DevOps practices and cloud expertise.
+              We deliver measurable improvements in healthcare outcomes, efficiency, and cost reduction 
+              through our proven AI technology and dedicated support.
             </p>
           </motion.div>
 
@@ -197,8 +191,8 @@ export default function CloudDevOps() {
                 transition={{ duration: 0.8, delay: index * 0.1 }}
                 className="text-center"
               >
-                <div className="p-4 rounded-xl bg-gradient-to-br from-blue-500/20 to-cyan-500/20 mb-4 inline-block">
-                  <benefit.icon className="w-12 h-12 text-blue-400" />
+                <div className="p-4 rounded-xl bg-gradient-to-br from-red-500/20 to-pink-500/20 mb-4 inline-block">
+                  <benefit.icon className="w-12 h-12 text-red-400" />
                 </div>
                 <h3 className="text-xl font-bold text-white mb-3">{benefit.title}</h3>
                 <p className="text-gray-400">{benefit.description}</p>
@@ -208,7 +202,7 @@ export default function CloudDevOps() {
         </div>
       </section>
 
-      {/* DevOps Services Section */}
+      {/* Use Cases Section */}
       <section className="py-20 relative">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
@@ -218,28 +212,25 @@ export default function CloudDevOps() {
             className="text-center mb-16"
           >
             <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
-              Comprehensive DevOps Services
+              Healthcare Use Cases
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Our DevOps platform provides end-to-end solutions to streamline your development 
-              and operations processes.
+              Our AI platform addresses critical healthcare challenges across various specialties 
+              and practice sizes.
             </p>
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {devopsServices.map((service, index) => (
+            {useCases.map((useCase, index) => (
               <motion.div
-                key={service.title}
+                key={useCase.title}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
-                className="bg-slate-800/50 backdrop-blur-xl rounded-2xl border border-slate-700/50 p-6 hover:border-blue-400/30 transition-all duration-300 text-center"
+                className="bg-slate-800/50 backdrop-blur-xl rounded-2xl border border-slate-700/50 p-6 hover:border-red-400/30 transition-all duration-300"
               >
-                <div className="p-4 rounded-xl bg-gradient-to-br from-blue-500/20 to-cyan-500/20 mb-4 inline-block">
-                  <service.icon className="w-12 h-12 text-blue-400" />
-                </div>
-                <h3 className="text-xl font-bold text-white mb-3">{service.title}</h3>
-                <p className="text-gray-400">{service.description}</p>
+                <h3 className="text-xl font-bold text-white mb-3">{useCase.title}</h3>
+                <p className="text-gray-400">{useCase.description}</p>
               </motion.div>
             ))}
           </div>
@@ -259,7 +250,7 @@ export default function CloudDevOps() {
               Transparent Pricing
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Choose the DevOps plan that best fits your team's needs and scale as you grow.
+              Choose the plan that best fits your healthcare organization's needs and scale as you grow.
             </p>
           </motion.div>
 
@@ -272,13 +263,13 @@ export default function CloudDevOps() {
                 transition={{ duration: 0.8, delay: index * 0.1 }}
                 className={`relative bg-slate-800/50 backdrop-blur-xl rounded-2xl border p-8 ${
                   plan.popular 
-                    ? 'border-blue-400/50 ring-2 ring-blue-400/20' 
+                    ? 'border-red-400/50 ring-2 ring-red-400/20' 
                     : 'border-slate-700/50'
                 }`}
               >
                 {plan.popular && (
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                    <span className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-blue-500 to-cyan-600 text-white text-sm font-semibold rounded-full">
+                    <span className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-red-500 to-pink-600 text-white text-sm font-semibold rounded-full">
                       <Star className="w-4 h-4 mr-2" />
                       Most Popular
                     </span>
@@ -287,7 +278,7 @@ export default function CloudDevOps() {
 
                 <div className="text-center mb-8">
                   <h3 className="text-2xl font-bold text-white mb-2">{plan.plan}</h3>
-                  <div className="text-4xl font-bold text-blue-400 mb-1">{plan.price}</div>
+                  <div className="text-4xl font-bold text-red-400 mb-1">{plan.price}</div>
                   <div className="text-gray-400">{plan.period}</div>
                   <p className="text-gray-300 mt-2">{plan.description}</p>
                 </div>
@@ -295,7 +286,7 @@ export default function CloudDevOps() {
                 <ul className="space-y-3 mb-8">
                   {plan.features.map((feature, idx) => (
                     <li key={idx} className="flex items-center text-gray-300">
-                      <CheckCircle className="w-5 h-5 text-blue-400 mr-3 flex-shrink-0" />
+                      <CheckCircle className="w-5 h-5 text-red-400 mr-3 flex-shrink-0" />
                       {feature}
                     </li>
                   ))}
@@ -305,8 +296,8 @@ export default function CloudDevOps() {
                   to={plan.plan === 'Enterprise' ? '/contact' : '/request-quote'}
                   className={`w-full inline-flex items-center justify-center px-6 py-3 rounded-xl font-semibold transition-all duration-300 ${
                     plan.popular
-                      ? 'bg-gradient-to-r from-blue-500 to-cyan-600 hover:from-blue-600 hover:to-cyan-700 text-white transform hover:scale-105 shadow-lg hover:shadow-blue-500/25'
-                      : 'border border-blue-400/50 text-blue-400 hover:bg-blue-400/10'
+                      ? 'bg-gradient-to-r from-red-500 to-pink-600 hover:from-red-600 hover:to-pink-700 text-white transform hover:scale-105 shadow-lg hover:shadow-red-500/25'
+                      : 'border border-red-400/50 text-red-400 hover:bg-red-400/10'
                   }`}
                 >
                   {plan.cta}
@@ -325,26 +316,26 @@ export default function CloudDevOps() {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            className="bg-gradient-to-r from-blue-500/10 via-cyan-500/10 to-indigo-500/10 rounded-3xl p-12 border border-blue-400/20"
+            className="bg-gradient-to-r from-red-500/10 via-pink-500/10 to-purple-500/10 rounded-3xl p-12 border border-red-400/20"
           >
             <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">
-              Ready to Transform Your DevOps?
+              Ready to Transform Healthcare?
             </h2>
             <p className="text-xl text-gray-300 mb-8">
-              Let's discuss how our cloud DevOps platform can accelerate your development, 
-              improve infrastructure efficiency, and enhance operational reliability.
+              Let's discuss how our AI healthcare platform can improve patient outcomes, 
+              reduce costs, and enhance your healthcare delivery capabilities.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 to="/request-quote"
-                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-500 to-cyan-600 hover:from-blue-600 hover:to-cyan-700 text-white font-semibold rounded-xl transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-blue-500/25"
+                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-red-500 to-pink-600 hover:from-red-600 hover:to-pink-700 text-white font-semibold rounded-xl transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-red-500/25"
               >
                 Get Started Today
                 <ArrowRight className="ml-2 w-5 h-5" />
               </Link>
               <Link
                 to="/contact"
-                className="inline-flex items-center px-8 py-4 border border-blue-400/50 text-blue-400 hover:bg-blue-400/10 font-semibold rounded-xl transition-all duration-300"
+                className="inline-flex items-center px-8 py-4 border border-red-400/50 text-red-400 hover:bg-red-400/10 font-semibold rounded-xl transition-all duration-300"
               >
                 Contact Our Team
               </Link>

@@ -34,6 +34,10 @@ const Pricing = React.lazy(() => import('./pages/Pricing'));
 const SearchPage = React.lazy(() => import('./pages/SearchPage'));
 const EnhancedContact = React.lazy(() => import('./components/EnhancedContact'));
 
+// New comprehensive pages
+const ComprehensiveServicesShowcase2026 = React.lazy(() => import('./pages/ComprehensiveServicesShowcase2026'));
+const InnovativeMicroSAASServices2025 = React.lazy(() => import('./pages/InnovativeMicroSAASServices2025'));
+
 // Enhanced components
 const Community = React.lazy(() => import('./pages/Community'));
 const Demo = React.lazy(() => import('./pages/Demo'));
@@ -41,7 +45,6 @@ const Demo = React.lazy(() => import('./pages/Demo'));
 // Import real pages
 const Careers = React.lazy(() => import('./pages/Careers'));
 const Marketplace = React.lazy(() => import('./pages/Marketplace'));
-const ComprehensiveServicesShowcase2026 = React.lazy(() => import('./pages/ComprehensiveServicesShowcase2026'));
 const ComprehensivePricingGuide2026 = React.lazy(() => import('./pages/ComprehensivePricingGuide2026'));
 const ComprehensivePricingGuide2027 = React.lazy(() => import('./pages/ComprehensivePricingGuide2027'));
 const RevolutionaryServices2030 = React.lazy(() => import('./pages/RevolutionaryServices2030'));
@@ -57,6 +60,13 @@ const QuantumComputing = React.lazy(() => import('./pages/services/QuantumComput
 const SpaceTech = React.lazy(() => import('./pages/services/SpaceTech'));
 const Sustainability = React.lazy(() => import('./pages/services/Sustainability'));
 const ZeroTrustNetworkArchitecture = React.lazy(() => import('./pages/services/ZeroTrustNetworkArchitecture'));
+
+// New service pages
+const AIHealthcarePlatform = React.lazy(() => import('./pages/services/AIHealthcarePlatform'));
+const AIContentCreation = React.lazy(() => import('./pages/services/AIContentCreation'));
+const AICybersecurity = React.lazy(() => import('./pages/services/AICybersecurity'));
+const IoTEdgeComputing = React.lazy(() => import('./pages/services/IoTEdgeComputing'));
+const CloudDevOps = React.lazy(() => import('./pages/services/CloudDevOps'));
 
 // Advanced AI services that exist
 const AICybersecuritySuite = React.lazy(() => import('./pages/services/ai-cybersecurity-threat-detection'));
@@ -188,9 +198,20 @@ function App() {
                 
                 {/* Schedule Demo */}
                 <Route path="/schedule-demo" element={<ScheduleDemo />} />
+
+                {/* New comprehensive pages */}
+                <Route path="/comprehensive-services-showcase-2026" element={<ComprehensiveServicesShowcase2026 />} />
+                <Route path="/innovative-micro-saas-services-2025" element={<InnovativeMicroSAASServices2025 />} />
                 
                 {/* Service Pages */}
                 <Route path="/services/ai-business-intelligence" element={<AIBusinessIntelligence />} />
+                
+                {/* New service pages */}
+                <Route path="/services/ai-healthcare-platform" element={<AIHealthcarePlatform />} />
+                <Route path="/services/ai-content-creation" element={<AIContentCreation />} />
+                <Route path="/services/ai-cybersecurity" element={<AICybersecurity />} />
+                <Route path="/services/iot-edge-computing" element={<IoTEdgeComputing />} />
+                <Route path="/services/cloud-devops" element={<CloudDevOps />} />
 
                 {/* Catch all route */}
                 <Route path="*" element={<Home />} />

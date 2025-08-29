@@ -80,11 +80,11 @@ export const EnhancedFuturisticFooter: React.FC = () => {
       color: 'from-purple-600 to-indigo-600',
       links: [
         { name: 'AI Business Intelligence', href: '/services/ai-business-intelligence' },
-        { name: 'AI Sales Copilot', href: '/services/ai-sales-copilot' },
-        { name: 'AI Compliance Assistant', href: '/services/ai-compliance-assistant' },
-        { name: 'AI Customer Sentiment Analyzer', href: '/services/ai-customer-sentiment-analyzer' },
-        { name: 'AI-Powered CRM Enhancer', href: '/services/ai-powered-crm-enhancer' },
-        { name: 'AI-Powered HR Recruitment', href: '/services/ai-powered-hr-recruitment-platform' }
+        { name: 'AI Healthcare Platform', href: '/services/ai-healthcare-platform' },
+        { name: 'AI Content Creation', href: '/services/ai-content-creation' },
+        { name: 'AI Cybersecurity', href: '/services/ai-cybersecurity' },
+        { name: 'AI Business Intelligence Platform', href: '/services/ai-business-intelligence-platform' },
+        { name: 'AI Financial Trading Platform', href: '/services/ai-financial-trading-platform' }
       ]
     },
     {
@@ -92,10 +92,10 @@ export const EnhancedFuturisticFooter: React.FC = () => {
       icon: Zap,
       color: 'from-blue-600 to-cyan-600',
       links: [
-        { name: 'Micro SaaS Solutions', href: '/services/micro-saas-solutions' },
-        { name: 'Cloud FinOps Optimizer', href: '/services/cloud-finops-optimizer' },
-        { name: 'FinOps Advisor', href: '/services/finops-advisor' },
+        { name: 'Cloud DevOps', href: '/services/cloud-devops' },
+        { name: 'IoT Edge Computing', href: '/services/iot-edge-computing' },
         { name: 'Edge Computing Platform', href: '/services/edge-computing-platform' },
+        { name: 'Micro SaaS Solutions', href: '/services/micro-saas' },
         { name: 'Quantum AI Platform', href: '/services/quantum-ai-platform' }
       ]
     },
@@ -104,12 +104,12 @@ export const EnhancedFuturisticFooter: React.FC = () => {
       icon: Rocket,
       color: 'from-green-600 to-emerald-600',
       links: [
-        { name: 'IoT Edge Computing', href: '/services/iot-edge' },
+        { name: 'IoT Edge Computing', href: '/services/iot-edge-computing' },
         { name: 'Digital Twin', href: '/services/digital-twin' },
         { name: 'Blockchain Enterprise Solutions', href: '/services/blockchain-enterprise-solutions' },
         { name: 'Data Analytics', href: '/services/data-analytics' },
-        { name: 'Smart Inventory Optimizer', href: '/services/smart-inventory-optimizer' },
-        { name: 'Smart Supply Chain Visibility', href: '/services/smart-supply-chain-visibility' }
+        { name: 'Smart Contract Risk Scanner', href: '/services/smart-contract-risk-scanner' },
+        { name: 'Space Technology', href: '/services/space-tech' }
       ]
     },
     {
@@ -148,7 +148,7 @@ export const EnhancedFuturisticFooter: React.FC = () => {
         { name: 'Careers', href: '/careers' },
         { name: 'Blog', href: '/blog' },
         { name: 'Support', href: '/support' },
-        { name: 'Documentation', href: '/docs' }
+        { name: 'Documentation', href: '/documentation' }
       ]
     },
     {
