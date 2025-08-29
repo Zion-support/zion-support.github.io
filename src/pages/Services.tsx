@@ -138,6 +138,50 @@ export default function Services() {
       ]
     },
     {
+      name: 'Customer Success & Business',
+      icon: Heart,
+      description: 'AI-powered customer success and business automation solutions',
+      color: 'from-pink-600 to-rose-600',
+      services: [
+        {
+          name: 'AI Customer Success Platform',
+          description: 'Intelligent customer success with predictive analytics and automated engagement',
+          features: ['Churn Prevention', 'Health Scoring', 'Automated Engagement', 'Predictive Analytics'],
+          href: '/services/ai-customer-success-platform',
+          price: 'From $299',
+          rating: 4.9,
+          reviewCount: 234
+        },
+        {
+          name: 'AI Auto Email Responder',
+          description: 'Intelligent email automation and CRM integration',
+          features: ['Smart Responses', 'CRM Integration', 'Analytics Tracking', 'Custom Templates'],
+          href: '/services/ai-auto-email-responder',
+          price: 'From $2,800',
+          rating: 4.7,
+          reviewCount: 298
+        },
+        {
+          name: 'Customer Feedback Surveys',
+          description: 'AI-powered customer feedback and survey management',
+          features: ['Survey Creation', 'Response Analysis', 'Sentiment Analysis', 'Actionable Insights'],
+          href: '/services/mobile-feedback-surveys',
+          price: 'From $1,500',
+          rating: 4.6,
+          reviewCount: 445
+        },
+        {
+          name: 'Micro SaaS Solutions',
+          description: 'Custom SaaS applications for specific business niches',
+          features: ['Custom Development', 'User Management', 'Analytics Dashboard', 'API Integration'],
+          href: '/services/micro-saas-solutions',
+          price: 'From $10,000',
+          rating: 4.8,
+          reviewCount: 112
+        }
+      ]
+    },
+    {
       name: 'Digital Solutions',
       icon: Rocket,
       description: 'Digital transformation and innovative technology solutions',
@@ -195,50 +239,6 @@ export default function Services() {
           price: 'From $18,000',
           rating: 4.9,
           reviewCount: 134
-        }
-      ]
-    },
-    {
-      name: 'Business Tools',
-      icon: ShoppingCart,
-      description: 'Productized SaaS solutions for business automation',
-      color: 'from-indigo-600 to-purple-600',
-      services: [
-        {
-          name: 'Micro SaaS Solutions',
-          description: 'Custom SaaS applications for specific business niches',
-          features: ['Custom Development', 'User Management', 'Analytics Dashboard', 'API Integration'],
-          href: '/services/micro-saas-solutions',
-          price: 'From $10,000',
-          rating: 4.8,
-          reviewCount: 112
-        },
-        {
-          name: 'AI Auto Email Responder',
-          description: 'Intelligent email automation and CRM integration',
-          features: ['Smart Responses', 'CRM Integration', 'Analytics Tracking', 'Custom Templates'],
-          href: '/services/ai-auto-email-responder',
-          price: 'From $2,800',
-          rating: 4.7,
-          reviewCount: 298
-        },
-        {
-          name: 'Customer Feedback Surveys',
-          description: 'AI-powered customer feedback and survey management',
-          features: ['Survey Creation', 'Response Analysis', 'Sentiment Analysis', 'Actionable Insights'],
-          href: '/services/mobile-feedback-surveys',
-          price: 'From $1,500',
-          rating: 4.6,
-          reviewCount: 445
-        },
-        {
-          name: 'AI Customer Success Platform',
-          description: 'Intelligent customer success with predictive analytics and automated engagement',
-          features: ['Churn Prevention', 'Health Scoring', 'Automated Engagement', 'Predictive Analytics'],
-          href: '/services/ai-customer-success-platform',
-          price: 'From $299',
-          rating: 4.9,
-          reviewCount: 234
         }
       ]
     }

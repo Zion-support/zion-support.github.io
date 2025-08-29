@@ -79,6 +79,8 @@ export function AppHeader() {
         { name: 'AI Business Intelligence', href: '/services/ai-business-intelligence', description: 'Machine Learning & Data Science' },
         { name: 'AI Sales Copilot', href: '/services/ai-sales-copilot', description: 'AI-powered sales automation' },
         { name: 'AI Compliance Assistant', href: '/services/ai-compliance-assistant', description: 'Regulatory compliance automation' },
+        { name: 'AI Workflow Orchestrator', href: '/services/ai-workflow-orchestrator', description: 'Intelligent workflow automation' },
+        { name: 'AI Data Governance', href: '/services/ai-data-governance', description: 'AI-powered data governance' },
         { name: 'LLM Content Studio', href: '/services/llm-content-studio', description: 'AI content generation' }
       ]
     },
@@ -89,7 +91,8 @@ export function AppHeader() {
       services: [
         { name: 'Cloud DevOps', href: '/services/cloud-devops', description: 'Infrastructure & Automation' },
         { name: 'Cloud FinOps Optimizer', href: '/services/cloud-finops-optimizer', description: 'Cost optimization' },
-        { name: 'FinOps Advisor', href: '/services/finops-advisor', description: 'Financial operations' }
+        { name: 'FinOps Advisor', href: '/services/finops-advisor', description: 'Financial operations' },
+        { name: 'Edge Computing Platform', href: '/services/edge-computing-platform', description: 'Distributed edge computing' }
       ]
     },
     {
@@ -99,7 +102,8 @@ export function AppHeader() {
       services: [
         { name: 'Digital Twin', href: '/services/digital-twin', description: 'Simulation & Monitoring' },
         { name: 'IT Infrastructure', href: '/services/it-infrastructure', description: 'Enterprise infrastructure' },
-        { name: 'Data Analytics', href: '/services/data-analytics', description: 'Business intelligence' }
+        { name: 'Data Analytics', href: '/services/data-analytics', description: 'Business intelligence' },
+        { name: 'IoT Edge Computing', href: '/services/iot-edge', description: 'Smart devices & networks' }
       ]
     },
     {
@@ -108,7 +112,19 @@ export function AppHeader() {
       color: 'from-indigo-600 to-purple-600',
       services: [
         { name: 'AI Compliance Copilot', href: '/services/ai-compliance-copilot', description: 'AI-Powered Security' },
-        { name: 'Zero Trust Architecture', href: '/services/zero-trust-network-architecture', description: 'Advanced security' }
+        { name: 'Zero Trust Architecture', href: '/services/zero-trust-network-architecture', description: 'Advanced security' },
+        { name: 'AI Cybersecurity Suite', href: '/services/ai-cybersecurity-suite', description: 'Comprehensive security' }
+      ]
+    },
+    {
+      name: 'Emerging Tech',
+      icon: Star,
+      color: 'from-violet-600 to-purple-600',
+      services: [
+        { name: 'Quantum Computing', href: '/services/quantum-computing', description: 'Next-gen quantum solutions' },
+        { name: 'Blockchain Solutions', href: '/services/blockchain-enterprise-solutions', description: 'DeFi & Smart Contracts' },
+        { name: 'Space Technology', href: '/services/space-tech', description: 'Advanced space solutions' },
+        { name: 'Sustainability', href: '/services/sustainability', description: 'Green IT solutions' }
       ]
     }
   ];
@@ -122,7 +138,19 @@ export function AppHeader() {
         { name: 'AI Business Intelligence', href: '/services/ai-business-intelligence', description: 'Machine Learning & Data Science' },
         { name: 'AI Sales Copilot', href: '/services/ai-sales-copilot', description: 'AI-powered sales automation' },
         { name: 'AI Compliance Assistant', href: '/services/ai-compliance-assistant', description: 'Regulatory compliance automation' },
+        { name: 'AI Workflow Orchestrator', href: '/services/ai-workflow-orchestrator', description: 'Intelligent workflow automation' },
+        { name: 'AI Data Governance', href: '/services/ai-data-governance', description: 'AI-powered data governance' },
         { name: 'LLM Content Studio', href: '/services/llm-content-studio', description: 'AI content generation' }
+      ]
+    },
+    {
+      name: 'Customer Success',
+      icon: Heart,
+      color: 'from-pink-600 to-rose-600',
+      solutions: [
+        { name: 'AI Customer Success Platform', href: '/services/ai-customer-success-platform', description: 'Intelligent customer success' },
+        { name: 'AI Auto Email Responder', href: '/services/ai-auto-email-responder', description: 'Faster replies, CRM logging' },
+        { name: 'Customer Feedback Surveys', href: '/services/mobile-feedback-surveys', description: 'NPS/CSAT with AI insights' }
       ]
     },
     {
@@ -131,8 +159,8 @@ export function AppHeader() {
       color: 'from-indigo-600 to-purple-600',
       solutions: [
         { name: 'Quantum AI Platform', href: '/services/quantum-ai-platform', description: 'Next-gen quantum computing' },
-        { name: 'AI Cybersecurity Suite', href: '/services/ai-cybersecurity-suite', description: 'Advanced security solutions' },
-        { name: 'AI Healthcare Analytics', href: '/services/ai-healthcare-analytics', description: 'Healthcare data insights' }
+        { name: 'AI Healthcare Analytics', href: '/services/ai-healthcare-analytics', description: 'Healthcare data insights' },
+        { name: 'Edge Computing Platform', href: '/services/edge-computing-platform', description: 'Distributed edge computing' }
       ]
     },
     {
