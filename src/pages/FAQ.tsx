@@ -1,493 +1,312 @@
 import React, { useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { 
-  Search, 
-  ChevronDown, 
-  ChevronUp,
-  MessageCircle,
-  Shield,
-  Zap,
-  Cloud,
-  Brain,
-  Rocket,
-  Users,
-  Globe,
-  Lock,
-  HelpCircle,
-  Mail,
-  Phone,
-  Clock,
-  Star,
-  CheckCircle,
-  AlertCircle,
-  Info
-} from 'lucide-react';
+import { Search, ChevronDown, ChevronUp, HelpCircle, Brain, Cloud, Shield, Rocket, Heart, Globe, ShoppingCart, Star, Building, BookOpen, Settings } from 'lucide-react';
 
-interface FAQItem {
-  id: string;
-  question: string;
-  answer: string;
-  category: string;
-  tags: string[];
-}
-
-interface FAQCategory {
-  id: string;
-  name: string;
-  icon: React.ReactNode;
-  description: string;
-  color: string;
-}
-
-const FAQ: React.FC = () => {
+export default function FAQ() {
   const [searchQuery, setSearchQuery] = useState('');
-  const [selectedCategory, setSelectedCategory] = useState<string>('all');
-  const [expandedItems, setExpandedItems] = useState<Set<string>>(new Set());
+  const [expandedItems, setExpandedItems] = useState<Set<string>>(new Set(['general-1']));
 
-  const categories: FAQCategory[] = [
+  const faqCategories = [
     {
       id: 'general',
-      name: 'General',
-      icon: <HelpCircle className="w-6 h-6" />,
-      description: 'Basic questions about Zion Tech Group',
-      color: 'from-blue-500 to-cyan-500'
+      title: 'General Questions',
+      icon: HelpCircle,
+      color: 'from-blue-600 to-cyan-600',
+      items: [
+        {
+          id: 'general-1',
+          question: 'What is Zion Tech Group?',
+          answer: 'Zion Tech Group is a leading technology company specializing in AI-powered solutions, cloud infrastructure, cybersecurity, and innovative digital transformation services. We help businesses leverage cutting-edge technology to achieve their goals and stay competitive in the digital age.'
+        },
+        {
+          id: 'general-2',
+          question: 'What industries do you serve?',
+          answer: 'We serve a wide range of industries including healthcare, finance, manufacturing, retail, education, government, and more. Our solutions are designed to be adaptable and scalable across different business sectors.'
+        },
+        {
+          id: 'general-3',
+          question: 'Where are you located?',
+          answer: 'Our headquarters is located in the United States, and we serve clients globally. We have a distributed team that allows us to provide 24/7 support and services to clients worldwide.'
+        },
+        {
+          id: 'general-4',
+          question: 'How long have you been in business?',
+          answer: 'Zion Tech Group has been at the forefront of technology innovation for several years, continuously evolving and adapting to meet the changing needs of our clients and the technology landscape.'
+        }
+      ]
     },
     {
       id: 'services',
-      name: 'Services',
-      icon: <Zap className="w-6 h-6" />,
-      description: 'Questions about our service offerings',
-      color: 'from-purple-500 to-pink-500'
+      title: 'Our Services',
+      icon: Settings,
+      color: 'from-green-600 to-emerald-600',
+      items: [
+        {
+          id: 'services-1',
+          question: 'What AI services do you offer?',
+          answer: 'We offer comprehensive AI services including AI Business Intelligence, AI Sales Copilot, AI Compliance Assistant, LLM Content Studio, AI Workflow Orchestrator, and AI Data Governance. Our AI solutions are designed to automate processes, provide insights, and enhance decision-making.'
+        },
+        {
+          id: 'services-2',
+          question: 'Do you provide cloud and DevOps services?',
+          answer: 'Yes, we offer full-stack cloud and DevOps services including infrastructure setup, CI/CD pipeline configuration, monitoring and observability, cost optimization with FinOps, and edge computing solutions. We work with major cloud providers and can help optimize your cloud strategy.'
+        },
+        {
+          id: 'services-3',
+          question: 'What cybersecurity solutions do you provide?',
+          answer: 'Our cybersecurity portfolio includes AI-powered security solutions, Zero Trust Network Architecture, compliance automation, threat detection and response, and comprehensive security audits. We help organizations build robust security postures.'
+        },
+        {
+          id: 'services-4',
+          question: 'What are Micro SaaS solutions?',
+          answer: 'Micro SaaS solutions are specialized, productized software services designed for specific business needs. We offer solutions like AI Lead Scoring, Website AI Chatbot, RAG Search, MLOps Pipeline, and many more that can be quickly deployed and scaled.'
+        }
+      ]
     },
     {
-      id: 'ai',
-      name: 'AI & Analytics',
-      icon: <Brain className="w-6 h-6" />,
-      description: 'AI and data analytics services',
-      color: 'from-green-500 to-emerald-500'
+      id: 'ai-solutions',
+      title: 'AI & Machine Learning',
+      icon: Brain,
+      color: 'from-purple-600 to-pink-600',
+      items: [
+        {
+          id: 'ai-1',
+          question: 'How do I get started with AI integration?',
+          answer: 'Getting started with AI integration involves several steps: 1) Assessment of your current systems and data, 2) Identification of use cases and opportunities, 3) Pilot project implementation, 4) Training and adoption, 5) Scaling and optimization. Our team guides you through each step.'
+        },
+        {
+          id: 'ai-2',
+          question: 'What data requirements do you have for AI projects?',
+          answer: 'Data requirements vary by project type, but generally include: clean, structured data in sufficient quantities, proper data governance and security measures, and clear business objectives. We can help assess your data readiness and recommend improvements.'
+        },
+        {
+          id: 'ai-3',
+          question: 'How do you ensure AI model accuracy and fairness?',
+          answer: 'We implement rigorous testing protocols, bias detection algorithms, continuous monitoring, and regular model updates. Our AI solutions include explainability features and are designed with ethical AI principles in mind.'
+        },
+        {
+          id: 'ai-4',
+          question: 'Can you integrate with existing AI tools?',
+          answer: 'Yes, we specialize in integrating with existing AI tools and platforms. We can work with your current infrastructure, APIs, and tools to create seamless workflows and avoid vendor lock-in.'
+        }
+      ]
     },
     {
-      id: 'cloud',
-      name: 'Cloud & DevOps',
-      icon: <Cloud className="w-6 h-6" />,
-      description: 'Cloud computing and DevOps solutions',
-      color: 'from-orange-500 to-red-500'
+      id: 'cloud-devops',
+      title: 'Cloud & DevOps',
+      icon: Cloud,
+      color: 'from-blue-600 to-indigo-600',
+      items: [
+        {
+          id: 'cloud-1',
+          question: 'Which cloud providers do you support?',
+          answer: 'We support all major cloud providers including AWS, Azure, Google Cloud Platform, and hybrid cloud solutions. We can help you choose the right provider for your needs or implement multi-cloud strategies.'
+        },
+        {
+          id: 'cloud-2',
+          question: 'How do you handle cloud cost optimization?',
+          answer: 'We use FinOps principles and tools to monitor, analyze, and optimize cloud costs. This includes rightsizing resources, implementing auto-scaling, using reserved instances, and identifying cost-saving opportunities.'
+        },
+        {
+          id: 'cloud-3',
+          question: 'What DevOps tools and practices do you implement?',
+          answer: 'We implement modern DevOps practices including CI/CD pipelines, Infrastructure as Code, automated testing, monitoring and alerting, and deployment strategies. We work with tools like Jenkins, GitLab, Terraform, Kubernetes, and more.'
+        },
+        {
+          id: 'cloud-4',
+          question: 'How do you ensure security in cloud deployments?',
+          answer: 'Security is built into every layer of our cloud deployments through secure coding practices, automated security scanning, compliance frameworks, and continuous security monitoring. We follow industry best practices and compliance standards.'
+        }
+      ]
     },
     {
       id: 'security',
-      name: 'Cybersecurity',
-      icon: <Shield className="w-6 h-6" />,
-      description: 'Security and compliance services',
-      color: 'from-red-500 to-pink-500'
+      title: 'Security & Compliance',
+      icon: Shield,
+      color: 'from-red-600 to-pink-600',
+      items: [
+        {
+          id: 'security-1',
+          question: 'What security certifications do you have?',
+          answer: 'We maintain various security certifications and comply with industry standards including SOC 2, ISO 27001, GDPR, HIPAA, and others. Our security practices are regularly audited and updated.'
+        },
+        {
+          id: 'security-2',
+          question: 'How do you protect client data?',
+          answer: 'We implement multiple layers of security including encryption at rest and in transit, access controls, regular security audits, and compliance with data protection regulations. Client data security is our top priority.'
+        },
+        {
+          id: 'security-3',
+          question: 'What is your incident response process?',
+          answer: 'We have a comprehensive incident response plan that includes immediate containment, investigation, communication protocols, recovery procedures, and post-incident analysis to prevent future occurrences.'
+        },
+        {
+          id: 'security-4',
+          question: 'Do you provide compliance consulting?',
+          answer: 'Yes, we provide comprehensive compliance consulting services including gap analysis, policy development, implementation support, and ongoing compliance monitoring for various regulatory frameworks.'
+        }
+      ]
     },
     {
-      id: 'support',
-      name: 'Support',
-      icon: <MessageCircle className="w-6 h-6" />,
-      description: 'Technical support and customer service',
-      color: 'from-indigo-500 to-purple-500'
+      id: 'pricing',
+      title: 'Pricing & Billing',
+      icon: Star,
+      color: 'from-yellow-600 to-orange-600',
+      items: [
+        {
+          id: 'pricing-1',
+          question: 'How do you structure your pricing?',
+          answer: 'Our pricing is typically structured based on the scope of work, complexity of the solution, and ongoing support requirements. We offer flexible pricing models including project-based, subscription, and usage-based pricing.'
+        },
+        {
+          id: 'pricing-2',
+          question: 'Do you offer free consultations?',
+          answer: 'Yes, we offer free initial consultations to understand your needs and provide recommendations. This helps us create a tailored solution that meets your specific requirements and budget.'
+        },
+        {
+          id: 'pricing-3',
+          question: 'What payment terms do you offer?',
+          answer: 'We offer flexible payment terms including upfront payments, milestone-based payments, and monthly/quarterly billing for ongoing services. We work with clients to find payment arrangements that work for their business.'
+        },
+        {
+          id: 'pricing-4',
+          question: 'Are there any hidden costs?',
+          answer: 'No, we believe in transparent pricing. All costs are clearly outlined in our proposals and contracts. We communicate any potential additional costs upfront and get approval before proceeding.'
+        }
+      ]
     }
   ];
 
-  const faqData: FAQItem[] = [
-    // General
-    {
-      id: 'what-is-zion',
-      question: 'What is Zion Tech Group?',
-      answer: 'Zion Tech Group is a leading technology consulting company specializing in AI, cloud computing, cybersecurity, and digital transformation. We help businesses leverage cutting-edge technology to drive innovation and growth.',
-      category: 'general',
-      tags: ['company', 'about', 'overview']
-    },
-    {
-      id: 'where-located',
-      question: 'Where is Zion Tech Group located?',
-      answer: 'We are headquartered in the United States with offices in major tech hubs and serve clients globally through our remote-first approach and strategic partnerships.',
-      category: 'general',
-      tags: ['location', 'offices', 'global']
-    },
-    {
-      id: 'company-size',
-      question: 'How large is your company?',
-      answer: 'Zion Tech Group is a growing company with a team of experienced professionals across various technology domains. We maintain a lean, agile structure to provide personalized service while leveraging our extensive network of experts.',
-      category: 'general',
-      tags: ['size', 'team', 'structure']
-    },
-
-    // Services
-    {
-      id: 'service-offerings',
-      question: 'What services does Zion Tech Group offer?',
-      answer: 'We offer a comprehensive range of services including AI and machine learning solutions, cloud infrastructure and DevOps, cybersecurity services, digital transformation consulting, IoT solutions, and custom software development.',
-      category: 'services',
-      tags: ['services', 'offerings', 'portfolio']
-    },
-    {
-      id: 'custom-solutions',
-      question: 'Do you provide custom solutions?',
-      answer: 'Yes, we specialize in creating custom technology solutions tailored to your specific business needs. Our team works closely with you to understand your requirements and develop solutions that drive real business value.',
-      category: 'services',
-      tags: ['custom', 'tailored', 'solutions']
-    },
-    {
-      id: 'industry-focus',
-      question: 'What industries do you serve?',
-      answer: 'We serve clients across various industries including healthcare, finance, manufacturing, retail, education, and technology. Our solutions are adaptable to meet the unique challenges of different sectors.',
-      category: 'services',
-      tags: ['industries', 'sectors', 'clients']
-    },
-
-    // AI & Analytics
-    {
-      id: 'ai-capabilities',
-      question: 'What AI capabilities do you offer?',
-      answer: 'Our AI services include machine learning model development, natural language processing, computer vision, predictive analytics, recommendation systems, and AI strategy consulting. We help businesses implement AI solutions that deliver measurable results.',
-      category: 'ai',
-      tags: ['AI', 'machine learning', 'analytics']
-    },
-    {
-      id: 'data-privacy',
-      question: 'How do you handle data privacy in AI projects?',
-      answer: 'Data privacy is paramount in all our AI projects. We implement strict data governance practices, ensure compliance with regulations like GDPR and CCPA, and use privacy-preserving techniques when possible.',
-      category: 'ai',
-      tags: ['privacy', 'compliance', 'GDPR']
-    },
-    {
-      id: 'ai-roi',
-      question: 'How do you measure AI project ROI?',
-      answer: 'We establish clear KPIs and success metrics at the start of each project. ROI is measured through improved efficiency, cost savings, revenue growth, and other business metrics relevant to your specific use case.',
-      category: 'ai',
-      tags: ['ROI', 'metrics', 'measurement']
-    },
-
-    // Cloud & DevOps
-    {
-      id: 'cloud-providers',
-      question: 'Which cloud providers do you work with?',
-      answer: 'We work with all major cloud providers including AWS, Azure, and Google Cloud Platform. We help you choose the best platform for your needs and can also implement multi-cloud strategies for optimal performance and cost efficiency.',
-      category: 'cloud',
-      tags: ['AWS', 'Azure', 'GCP', 'multi-cloud']
-    },
-    {
-      id: 'devops-benefits',
-      question: 'What are the benefits of implementing DevOps?',
-      answer: 'DevOps implementation leads to faster software delivery, improved collaboration between development and operations teams, increased deployment frequency, reduced failure rates, and faster recovery from failures.',
-      category: 'cloud',
-      tags: ['DevOps', 'automation', 'deployment']
-    },
-    {
-      id: 'cost-optimization',
-      question: 'How do you optimize cloud costs?',
-      answer: 'We implement various cost optimization strategies including right-sizing resources, implementing auto-scaling, using reserved instances, monitoring usage patterns, and implementing cost governance policies.',
-      category: 'cloud',
-      tags: ['cost', 'optimization', 'savings']
-    },
-
-    // Cybersecurity
-    {
-      id: 'security-standards',
-      question: 'What security standards do you follow?',
-      answer: 'We follow industry best practices and standards including ISO 27001, SOC 2, NIST Cybersecurity Framework, and OWASP guidelines. Our security approach is comprehensive and continuously updated to address emerging threats.',
-      category: 'security',
-      tags: ['standards', 'compliance', 'best practices']
-    },
-    {
-      id: 'incident-response',
-      question: 'Do you provide incident response services?',
-      answer: 'Yes, we offer 24/7 incident response services including threat detection, rapid response, forensic analysis, and recovery assistance. We also help develop incident response plans and conduct security training.',
-      category: 'security',
-      tags: ['incident response', 'threats', 'recovery']
-    },
-    {
-      id: 'compliance-help',
-      question: 'Can you help with compliance requirements?',
-      answer: 'Absolutely. We help businesses achieve and maintain compliance with various regulations including HIPAA, PCI DSS, SOX, and industry-specific requirements. Our team includes compliance experts who understand the technical and regulatory landscape.',
-      category: 'security',
-      tags: ['compliance', 'HIPAA', 'PCI DSS', 'SOX']
-    },
-
-    // Support
-    {
-      id: 'support-hours',
-      question: 'What are your support hours?',
-      answer: 'We provide 24/7 support for critical issues and business hours support for general inquiries. Premium support plans include dedicated support managers and faster response times.',
-      category: 'support',
-      tags: ['support', 'hours', 'availability']
-    },
-    {
-      id: 'response-time',
-      question: 'What is your typical response time?',
-      answer: 'Response times vary by support tier: Critical issues (1 hour), High priority (4 hours), Medium priority (24 hours), and Low priority (48 hours). Premium clients receive faster response times.',
-      category: 'support',
-      tags: ['response', 'SLA', 'priority']
-    },
-    {
-      id: 'training-offered',
-      question: 'Do you provide training for your solutions?',
-      answer: 'Yes, we offer comprehensive training programs including user training, administrator training, and technical training. We also provide documentation, video tutorials, and ongoing support to ensure successful adoption.',
-      category: 'support',
-      tags: ['training', 'documentation', 'adoption']
-    }
-  ];
-
-  const toggleItem = (id: string) => {
+  const toggleItem = (itemId: string) => {
     const newExpanded = new Set(expandedItems);
-    if (newExpanded.has(id)) {
-      newExpanded.delete(id);
+    if (newExpanded.has(itemId)) {
+      newExpanded.delete(itemId);
     } else {
-      newExpanded.add(id);
+      newExpanded.add(itemId);
     }
     setExpandedItems(newExpanded);
   };
 
-  const filteredFAQs = faqData.filter(item => {
-    const matchesSearch = item.question.toLowerCase().includes(searchQuery.toLowerCase()) ||
-                         item.answer.toLowerCase().includes(searchQuery.toLowerCase()) ||
-                         item.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()));
-    const matchesCategory = selectedCategory === 'all' || item.category === selectedCategory;
-    return matchesSearch && matchesCategory;
-  });
-
-  const getCategoryStats = (categoryId: string) => {
-    if (categoryId === 'all') {
-      return faqData.length;
-    }
-    return faqData.filter(item => item.category === categoryId).length;
-  };
+  const filteredCategories = faqCategories.map(category => ({
+    ...category,
+    items: category.items.filter(item =>
+      item.question.toLowerCase().includes(searchQuery.toLowerCase()) ||
+      item.answer.toLowerCase().includes(searchQuery.toLowerCase())
+    )
+  })).filter(category => category.items.length > 0);
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+    <div className="min-h-screen bg-slate-900 text-white">
       {/* Header */}
-      <div className="relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/20 via-blue-500/20 to-purple-500/20"></div>
-        <div className="relative z-10 container mx-auto px-4 py-16">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="text-center max-w-4xl mx-auto"
-          >
-            <h1 className="text-5xl font-bold text-white mb-6">
+      <div className="bg-slate-800/50 border-b border-slate-700">
+        <div className="container mx-auto px-4 py-12">
+          <div className="max-w-4xl mx-auto text-center">
+            <h1 className="text-4xl font-bold mb-4 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
               Frequently Asked Questions
             </h1>
-            <p className="text-xl text-slate-300 mb-8 leading-relaxed">
-              Find answers to common questions about Zion Tech Group's services, 
-              solutions, and how we can help transform your business with cutting-edge technology.
+            <p className="text-xl text-slate-300 mb-8">
+              Find answers to common questions about our services, solutions, and processes
             </p>
             
             {/* Search Bar */}
-            <div className="relative max-w-2xl mx-auto">
-              <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-slate-400 w-5 h-5" />
-              <input
-                type="text"
-                placeholder="Search questions, topics, or keywords..."
-                value={searchQuery}
-                onChange={(e) => setSearchQuery(e.target.value)}
-                className="w-full pl-12 pr-4 py-4 bg-white/10 border border-slate-600/30 rounded-xl text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent backdrop-blur-md"
-              />
+            <div className="max-w-2xl mx-auto">
+              <div className="relative">
+                <Search className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-slate-400" />
+                <input
+                  type="text"
+                  placeholder="Search FAQ topics..."
+                  value={searchQuery}
+                  onChange={(e) => setSearchQuery(e.target.value)}
+                  className="w-full pl-12 pr-4 py-4 bg-slate-800 border border-slate-600 rounded-lg focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20 outline-none text-white placeholder-slate-400"
+                />
+              </div>
             </div>
-          </motion.div>
+          </div>
         </div>
       </div>
 
-      {/* Categories */}
+      {/* FAQ Content */}
       <div className="container mx-auto px-4 py-12">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.2 }}
-          className="mb-12"
-        >
-          <h2 className="text-3xl font-bold text-white text-center mb-8">
-            Browse by Category
-          </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {categories.map((category) => (
-              <motion.button
-                key={category.id}
-                onClick={() => setSelectedCategory(category.id)}
-                className={`p-6 rounded-xl border transition-all duration-300 text-left group ${
-                  selectedCategory === category.id
-                    ? 'border-cyan-500 bg-gradient-to-r from-cyan-500/20 to-blue-500/20'
-                    : 'border-slate-600/30 bg-white/5 hover:border-slate-500/50 hover:bg-white/10'
-                }`}
-                whileHover={{ scale: 1.02 }}
-                whileTap={{ scale: 0.98 }}
-              >
-                <div className={`w-12 h-12 bg-gradient-to-r ${category.color} rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300`}>
-                  {category.icon}
+        <div className="max-w-6xl mx-auto">
+          {filteredCategories.map((category) => (
+            <div key={category.id} className="mb-12">
+              <div className="flex items-center gap-3 mb-6">
+                <div className={`w-10 h-10 rounded-lg bg-gradient-to-br ${category.color} flex items-center justify-center`}>
+                  <category.icon className="w-5 h-5 text-white" />
                 </div>
-                <h3 className="text-xl font-semibold text-white mb-2">
-                  {category.name}
-                </h3>
-                <p className="text-slate-400 text-sm mb-3">
-                  {category.description}
-                </p>
-                <div className="text-cyan-400 font-medium text-sm">
-                  {getCategoryStats(category.id)} questions
-                </div>
-              </motion.button>
-            ))}
-          </div>
-        </motion.div>
-
-        {/* FAQ List */}
-        <div className="max-w-4xl mx-auto">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.4 }}
-            className="mb-8"
-          >
-            <div className="flex items-center justify-between mb-6">
-              <h3 className="text-2xl font-bold text-white">
-                {selectedCategory === 'all' ? 'All Questions' : categories.find(c => c.id === selectedCategory)?.name + ' Questions'}
-              </h3>
-              <span className="text-slate-400">
-                {filteredFAQs.length} of {faqData.length} questions
-              </span>
-            </div>
-          </motion.div>
-
-          <div className="space-y-4">
-            <AnimatePresence>
-              {filteredFAQs.map((item, index) => (
-                <motion.div
-                  key={item.id}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  exit={{ opacity: 0, y: -20 }}
-                  transition={{ duration: 0.3, delay: index * 0.1 }}
-                  className="bg-white/5 border border-slate-600/30 rounded-xl overflow-hidden backdrop-blur-md"
-                >
-                  <button
-                    onClick={() => toggleItem(item.id)}
-                    className="w-full p-6 text-left flex items-center justify-between hover:bg-white/5 transition-colors duration-200"
-                  >
-                    <div className="flex-1">
-                      <h4 className="text-lg font-semibold text-white mb-2">
-                        {item.question}
-                      </h4>
-                      <div className="flex items-center gap-4 text-sm text-slate-400">
-                        <span className="capitalize">{item.category}</span>
-                        <div className="flex gap-2">
-                          {item.tags.slice(0, 3).map((tag) => (
-                            <span key={tag} className="px-2 py-1 bg-slate-700/50 rounded-md text-xs">
-                              {tag}
-                            </span>
-                          ))}
+                <h2 className="text-2xl font-bold">{category.title}</h2>
+              </div>
+              
+              <div className="space-y-4">
+                {category.items.map((item) => (
+                  <div key={item.id} className="bg-slate-800 rounded-lg border border-slate-700">
+                    <button
+                      onClick={() => toggleItem(item.id)}
+                      className="w-full p-6 text-left flex items-center justify-between hover:bg-slate-700/50 transition-colors"
+                    >
+                      <span className="font-medium text-lg pr-4">{item.question}</span>
+                      {expandedItems.has(item.id) ? (
+                        <ChevronUp className="w-5 h-5 text-slate-400 flex-shrink-0" />
+                      ) : (
+                        <ChevronDown className="w-5 h-5 text-slate-400 flex-shrink-0" />
+                      )}
+                    </button>
+                    
+                    {expandedItems.has(item.id) && (
+                      <div className="px-6 pb-6">
+                        <div className="text-slate-300 leading-relaxed">
+                          {item.answer}
                         </div>
                       </div>
-                    </div>
-                    <div className="ml-4 text-slate-400">
-                      {expandedItems.has(item.id) ? (
-                        <ChevronUp className="w-5 h-5" />
-                      ) : (
-                        <ChevronDown className="w-5 h-5" />
-                      )}
-                    </div>
-                  </button>
-                  
-                  <AnimatePresence>
-                    {expandedItems.has(item.id) && (
-                      <motion.div
-                        initial={{ height: 0, opacity: 0 }}
-                        animate={{ height: 'auto', opacity: 1 }}
-                        exit={{ height: 0, opacity: 0 }}
-                        transition={{ duration: 0.3 }}
-                        className="overflow-hidden"
-                      >
-                        <div className="px-6 pb-6 border-t border-slate-600/30">
-                          <p className="text-slate-300 leading-relaxed pt-4">
-                            {item.answer}
-                          </p>
-                        </div>
-                      </motion.div>
                     )}
-                  </AnimatePresence>
-                </motion.div>
-              ))}
-            </AnimatePresence>
-          </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          ))}
 
-          {filteredFAQs.length === 0 && (
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              className="text-center py-12"
-            >
-              <Search className="w-16 h-16 text-slate-500 mx-auto mb-4" />
-              <h3 className="text-xl font-semibold text-white mb-2">
-                No questions found
-              </h3>
-              <p className="text-slate-400">
-                Try adjusting your search terms or browse by category to find what you're looking for.
+          {/* No Results */}
+          {filteredCategories.length === 0 && (
+            <div className="text-center py-12">
+              <HelpCircle className="w-16 h-16 text-slate-400 mx-auto mb-4" />
+              <h3 className="text-xl font-semibold mb-2">No FAQ items found</h3>
+              <p className="text-slate-400 mb-6">
+                Try adjusting your search terms or browse our help categories
               </p>
-            </motion.div>
-          )}
-        </div>
-      </div>
-
-      {/* Contact Section */}
-      <div className="container mx-auto px-4 py-16">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.6 }}
-          className="max-w-4xl mx-auto text-center"
-        >
-          <div className="bg-gradient-to-r from-cyan-500/10 via-blue-500/10 to-purple-500/10 border border-slate-600/30 rounded-2xl p-8 backdrop-blur-md">
-            <h2 className="text-3xl font-bold text-white mb-4">
-              Still have questions?
-            </h2>
-            <p className="text-slate-300 mb-8 text-lg">
-              Can't find the answer you're looking for? Our team is here to help.
-            </p>
-            
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
-              <div className="flex flex-col items-center gap-3">
-                <div className="w-12 h-12 bg-cyan-500/20 rounded-lg flex items-center justify-center">
-                  <Mail className="w-6 h-6 text-cyan-400" />
-                </div>
-                <div>
-                  <h4 className="font-semibold text-white">Email Support</h4>
-                  <p className="text-slate-400 text-sm">support@ziontechgroup.com</p>
-                </div>
-              </div>
-              
-              <div className="flex flex-col items-center gap-3">
-                <div className="w-12 h-12 bg-blue-500/20 rounded-lg flex items-center justify-center">
-                  <Phone className="w-6 h-6 text-blue-400" />
-                </div>
-                <div>
-                  <h4 className="font-semibold text-white">Phone Support</h4>
-                  <p className="text-slate-400 text-sm">+1 (555) 123-4567</p>
-                </div>
-              </div>
-              
-              <div className="flex flex-col items-center gap-3">
-                <div className="w-12 h-12 bg-purple-500/20 rounded-lg flex items-center justify-center">
-                  <Clock className="w-6 h-6 text-purple-400" />
-                </div>
-                <div>
-                  <h4 className="font-semibold text-white">Response Time</h4>
-                  <p className="text-slate-400 text-sm">Within 24 hours</p>
-                </div>
-              </div>
+              <button
+                onClick={() => setSearchQuery('')}
+                className="px-6 py-3 bg-cyan-500 hover:bg-cyan-600 text-white rounded-lg transition-colors"
+              >
+                Clear Search
+              </button>
             </div>
+          )}
 
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="px-8 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-medium rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 shadow-lg shadow-cyan-500/25">
-                Contact Support
-              </button>
-              <button className="px-8 py-3 border border-slate-600/30 text-white font-medium rounded-lg hover:bg-white/10 transition-all duration-300">
-                Schedule a Call
-              </button>
+          {/* Contact Section */}
+          <div className="mt-16 text-center">
+            <div className="bg-slate-800/50 rounded-lg p-8 border border-slate-700">
+              <h3 className="text-2xl font-bold mb-4">Still Have Questions?</h3>
+              <p className="text-slate-300 mb-6 max-w-2xl mx-auto">
+                Can't find the answer you're looking for? Our support team is here to help.
+                Get in touch with us for personalized assistance.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <a
+                  href="/contact"
+                  className="px-6 py-3 bg-cyan-500 hover:bg-cyan-600 text-white rounded-lg transition-colors font-medium"
+                >
+                  Contact Support
+                </a>
+                <a
+                  href="/help"
+                  className="px-6 py-3 border border-cyan-500 text-cyan-400 hover:bg-cyan-500 hover:text-white rounded-lg transition-colors font-medium"
+                >
+                  Browse Help Center
+                </a>
+              </div>
             </div>
           </div>
-        </motion.div>
+        </div>
       </div>
     </div>
   );
-};
-
-export default FAQ;
+}
