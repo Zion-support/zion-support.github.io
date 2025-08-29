@@ -3,49 +3,10 @@ import { motion } from 'framer-motion';
 import { 
   Users, 
   Target, 
-<<<<<<< HEAD
-  ArrowRight, 
-  CheckCircle 
-} from 'lucide-react';
-import SEO from '@/components/SEO';
-=======
   CheckCircle, 
   ArrowRight 
 } from 'lucide-react';
-
-export default function MicroCRM() {
-  const services = [
-    {
-      icon: Users,
-      title: 'Contact Management',
-      description: 'Organize and track customer information'
-    },
-    {
-      icon: Target,
-      title: 'Sales Pipeline',
-      description: 'Manage sales opportunities and track progress'
-    },
-    {
-      icon: CheckCircle,
-      title: 'Task Management',
-      description: 'Organize and prioritize business tasks'
-    }
-  ];
-
-  const benefits = [
-    'Improve customer relationships',
-    'Increase sales conversion rates',
-    'Streamline business processes',
-    'Better customer insights'
-  ];
-
-  const useCases = [
-    { industry: 'Local Services', description: 'Manage appointments and customer follow-ups' },
-    { industry: 'Retail', description: 'Track customer preferences and purchase history' },
-    { industry: 'Consulting', description: 'Manage client relationships and project tracking' },
-    { industry: 'Healthcare', description: 'Patient appointment scheduling and follow-ups' }
-  ];
->>>>>>> origin/main
+import SEO from '@/components/SEO';
 
 export default function MicroCRM() {
   // Data arrays
@@ -101,76 +62,71 @@ export default function MicroCRM() {
   ];
 
   return (
-    <div className="min-h-screen bg-futuristic text-white">
-      <SEO
-        title="Micro CRM for Local Businesses"
-        description="Lightweight customer tracking, reminders, invoices, and reviews for local SMBs."
+    <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
+      <SEO 
+        title="MicroCRM - Lightweight Customer Relationship Management"
+        description="Streamline your business with our lightweight CRM solution. Manage contacts, sales, and tasks efficiently without the complexity of enterprise systems."
+        keywords={['MicroCRM', 'customer relationship management', 'sales pipeline', 'contact management', 'task management']}
       />
-      <section className="container-responsive section-padding">
-        <h1 className="heading-responsive text-gradient">Micro CRM</h1>
-        <p className="mt-4 max-w-3xl text-zion-slate-light text-responsive">
-          Essential CRM without bloat. Track customers, appointments, jobs, and invoices with
-          SMS reminders, online payments, and review requests to grow word‑of‑mouth.
-        </p>
-        <div className="grid-futuristic mt-10">
-          <div className="card-futuristic">
-            <h2 className="text-xl font-semibold mb-2">Highlights</h2>
-            <ul className="list-disc pl-5 space-y-2 text-zion-slate-light">
-              <li>Contacts, pipelines, and tasks in one view</li>
-              <li>SMS/email appointment reminders and confirmations</li>
-              <li>Invoices and online payments with Stripe</li>
-              <li>Automated Google review requests after service</li>
-              <li>Mobile‑first with offline mode</li>
-            </ul>
-          </div>
-          <div className="card-futuristic">
-            <h2 className="text-xl font-semibold mb-2">Pricing</h2>
-            <ul className="list-disc pl-5 space-y-2 text-zion-slate-light">
-              <li>Solo: $19/mo</li>
-              <li>Team: $79/mo up to 10 users</li>
-              <li>Business: $199/mo with custom fields and roles</li>
-            </ul>
-            <a href="/request-quote" className="btn-futuristic mt-4 inline-block">Get started</a>
-          </div>
+      
+      {/* Hero Section */}
+      <section className="py-20">
+        <div className="container-responsive">
+          <motion.div 
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            className="text-center"
+          >
+            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
+              MicroCRM
+            </h1>
+            <p className="text-xl md:text-2xl text-zion-slate-light mb-8 max-w-4xl mx-auto">
+              Lightweight, powerful customer relationship management for growing businesses
+            </p>
+            <motion.button
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-8 py-4 rounded-full text-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 flex items-center gap-2 mx-auto"
+            >
+              Get Started
+              <ArrowRight className="h-5 w-5" />
+            </motion.button>
+          </motion.div>
         </div>
       </section>
 
       {/* Services Section */}
-      <section className="py-20 bg-slate-800/30">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
+      <section className="py-20 bg-zion-slate-dark/30">
+        <div className="container-responsive">
+          <motion.div 
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+            transition={{ duration: 0.6 }}
             className="text-center mb-16"
           >
-            <h2 className="text-4xl font-bold text-white mb-4">
-              Core CRM Services
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+              Essential CRM Features
             </h2>
-            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              From contact management to sales tracking, we provide 
-              comprehensive CRM capabilities for your business.
+            <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
+              Everything you need to manage customer relationships without the complexity
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
             {services.map((service, index) => (
               <motion.div
-                key={index}
-                initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 hover:border-blue-500/30 transition-all duration-200"
+                key={service.title}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                className="bg-zion-slate-dark/50 border border-cyan-400/20 rounded-xl p-8 hover:border-cyan-400/40 transition-all duration-300"
               >
-                <div className="flex items-start space-x-4">
-                  <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-lg flex items-center justify-center flex-shrink-0">
-                    <service.icon className="w-6 h-6 text-white" />
-                  </div>
-                  <div>
-                    <h3 className="text-xl font-semibold text-white mb-2">{service.title}</h3>
-                    <p className="text-gray-300">{service.description}</p>
-                  </div>
+                <div className="bg-gradient-to-br from-cyan-500/20 to-blue-600/20 w-16 h-16 rounded-full flex items-center justify-center mb-6">
+                  <service.icon className="h-8 w-8 text-cyan-400" />
                 </div>
+                <h3 className="text-2xl font-bold text-white mb-4">{service.title}</h3>
+                <p className="text-zion-slate-light">{service.description}</p>
               </motion.div>
             ))}
           </div>
@@ -179,86 +135,66 @@ export default function MicroCRM() {
 
       {/* Benefits Section */}
       <section className="py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
+        <div className="container-responsive">
+          <motion.div 
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+            transition={{ duration: 0.6 }}
             className="text-center mb-16"
           >
-            <h2 className="text-4xl font-bold text-white mb-4">
-              CRM Benefits
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+              Why Choose MicroCRM?
             </h2>
-            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              Experience measurable improvements in sales performance, customer relationships, and business growth.
+            <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
+              Simple, effective, and designed for businesses that want results without complexity
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div className="space-y-6">
-              {benefits.slice(0, 3).map((benefit, index) => (
-                <motion.div
-                  key={index}
-                  initial={{ opacity: 0, x: -20 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
-                  className="flex items-start space-x-3"
-                >
-                  <CheckCircle className="w-6 h-6 text-blue-400 mt-1 flex-shrink-0" />
-                  <span className="text-gray-300 text-lg">{benefit}</span>
-                </motion.div>
-              ))}
-            </div>
-            <div className="space-y-6">
-              {benefits.slice(3).map((benefit, index) => (
-                <motion.div
-                  key={index + 3}
-                  initial={{ opacity: 0, x: 20 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
-                  className="flex items-start space-x-3"
-                >
-                  <CheckCircle className="w-6 h-6 text-blue-400 mt-1 flex-shrink-0" />
-                  <span className="text-gray-300 text-lg">{benefit}</span>
-                </motion.div>
-              ))}
-            </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {benefits.map((benefit, index) => (
+              <motion.div
+                key={benefit}
+                initial={{ opacity: 0, x: -20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                className="flex items-start gap-4"
+              >
+                <CheckCircle className="h-6 w-6 text-cyan-400 mt-1 flex-shrink-0" />
+                <span className="text-zion-slate-light text-lg">{benefit}</span>
+              </motion.div>
+            ))}
           </div>
         </div>
       </section>
 
       {/* Use Cases Section */}
-      <section className="py-20 bg-slate-800/30">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
+      <section className="py-20 bg-zion-slate-dark/30">
+        <div className="container-responsive">
+          <motion.div 
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+            transition={{ duration: 0.6 }}
             className="text-center mb-16"
           >
-            <h2 className="text-4xl font-bold text-white mb-4">
-              Industry Applications
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+              Perfect For Any Business
             </h2>
-            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              Our Micro CRM adapts to various industries, providing 
-              tailored solutions for customer relationship management.
+            <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
+              From local services to healthcare, MicroCRM adapts to your industry needs
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {useCases.map((useCase, index) => (
               <motion.div
-                key={index}
+                key={useCase.industry}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 text-center hover:border-blue-500/30 transition-all duration-200"
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                className="bg-zion-slate-dark/50 border border-cyan-400/20 rounded-xl p-8 hover:border-cyan-400/40 transition-all duration-300"
               >
-                <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Target className="w-8 h-8 text-white" />
-                </div>
-                <h3 className="text-xl font-semibold text-white mb-2">{useCase.industry}</h3>
-                <p className="text-gray-300 text-sm">{useCase.description}</p>
+                <h3 className="text-2xl font-bold text-white mb-4">{useCase.industry}</h3>
+                <p className="text-zion-slate-light">{useCase.description}</p>
               </motion.div>
             ))}
           </div>
@@ -266,35 +202,31 @@ export default function MicroCRM() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-blue-500/10 to-cyan-500/10">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <motion.div
+      <section className="py-20">
+        <div className="container-responsive text-center">
+          <motion.div 
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+            transition={{ duration: 0.6 }}
           >
-            <h2 className="text-4xl font-bold text-white mb-4">
-              Start Managing Your Customers Today
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+              Ready to Streamline Your Business?
             </h2>
-            <p className="text-xl text-gray-300 mb-8">
-              Join businesses worldwide that use our Micro CRM to 
-              build stronger customer relationships and grow sales.
+            <p className="text-xl text-zion-slate-light mb-8 max-w-3xl mx-auto">
+              Join thousands of businesses using MicroCRM to improve customer relationships and boost sales
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="px-8 py-4 bg-gradient-to-r from-blue-500 to-cyan-500 text-white font-semibold rounded-lg hover:from-blue-600 hover:to-cyan-600 transition-all duration-200 flex items-center justify-center">
-                Get Started Today
-                <ArrowRight className="w-5 h-5 ml-2" />
-              </button>
-              <button className="px-8 py-4 border border-blue-500/30 text-blue-400 font-semibold rounded-lg hover:bg-blue-500/10 transition-all duration-200">
-                Contact Sales
-              </button>
-            </div>
+            <motion.button
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-8 py-4 rounded-full text-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 flex items-center gap-2 mx-auto"
+            >
+              Start Free Trial
+              <ArrowRight className="h-5 w-5" />
+            </motion.button>
           </motion.div>
         </div>
       </section>
     </div>
   );
-};
-
-export default MicroCRM;
+}
 
