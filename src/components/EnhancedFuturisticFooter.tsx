@@ -97,6 +97,7 @@ export const EnhancedFuturisticFooter: React.FC = () => {
       links: [
         { name: 'All Services', href: '/services', featured: true },
         { name: 'Innovative Services 2025', href: '/services/innovative-2025', featured: true },
+        { name: 'Innovative Services 2026', href: '/innovative-services-showcase-2026', featured: true },
         { name: 'AI Business Intelligence', href: '/services#ai-business-intelligence', featured: true },
         { name: 'AI Healthcare Diagnostics', href: '/services#ai-healthcare', featured: true },
         { name: 'AI Legal Tech Platform', href: '/services#ai-legal-tech', featured: true },
@@ -166,6 +167,7 @@ export const EnhancedFuturisticFooter: React.FC = () => {
       featured: false,
       links: [
         { name: 'Comprehensive Pricing 2027', href: '/comprehensive-pricing-guide-2027', featured: true },
+        { name: 'Pricing Guide 2026', href: '/pricing-guide-2026', featured: true },
         { name: 'Pricing Guide 2030', href: '/pricing-guide-2030', featured: true },
         { name: 'Blog & Insights', href: '/blog', featured: false },
         { name: 'FAQ & Help Center', href: '/faq', featured: false },

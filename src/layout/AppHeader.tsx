@@ -53,6 +53,14 @@ export function AppHeader() {
       color: 'from-purple-500 to-pink-500'
     },
     { 
+      name: 'Innovative Services 2026', 
+      href: '/innovative-services-showcase-2026', 
+      icon: Crown, 
+      description: 'Next-Gen AI & IT Solutions',
+      featured: true,
+      color: 'from-blue-500 to-cyan-500'
+    },
+    { 
       name: 'AI Business Intelligence', 
       href: '/services/ai-business-intelligence', 
       icon: Brain, 
@@ -67,6 +75,14 @@ export function AppHeader() {
       description: 'Medical AI & Diagnostics',
       featured: true,
       color: 'from-red-500 to-pink-500'
+    },
+    { 
+      name: 'Pricing Guide 2026', 
+      href: '/pricing-guide-2026', 
+      icon: DollarSign, 
+      description: 'Complete Pricing & ROI Analysis',
+      featured: true,
+      color: 'from-emerald-500 to-green-500'
     },
     { 
       name: 'AI Content Creation', 

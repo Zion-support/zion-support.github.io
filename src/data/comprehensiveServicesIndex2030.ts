@@ -4,6 +4,7 @@ import { ADVANCED_AI_SERVICES_2030 } from "./advancedAIServices2030";
 import { INNOVATIVE_MICRO_SAAS_SERVICES_2030 } from "./innovativeMicroSaasServices2030";
 import { CUTTING_EDGE_IT_INFRASTRUCTURE_2030 } from "./cuttingEdgeITInfrastructure2030";
 import { EMERGING_TECHNOLOGY_SERVICES_2030 } from "./emergingTechnologyServices2030";
+import { INNOVATIVE_SERVICES_2026 } from "./innovativeServices2026";
 
 // Comprehensive Services Index 2030 - Zion Tech Group
 // This file combines all services for easy access and management
@@ -13,7 +14,8 @@ export const COMPREHENSIVE_SERVICES_INDEX_2030: ProductListing[] = [
   ...ADVANCED_AI_SERVICES_2030,
   ...INNOVATIVE_MICRO_SAAS_SERVICES_2030,
   ...CUTTING_EDGE_IT_INFRASTRUCTURE_2030,
-  ...EMERGING_TECHNOLOGY_SERVICES_2030
+  ...EMERGING_TECHNOLOGY_SERVICES_2030,
+  ...INNOVATIVE_SERVICES_2026
 ];
 
 // Service Categories for easy filtering
