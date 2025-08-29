@@ -1,11 +1,10 @@
-import React, { useEffect, useMemo } from 'react';
+import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
 interface SEOProps {
   title?: string;
   description?: string;
   keywords?: string[];
-  author?: string;
   canonical?: string;
   ogImage?: string;
   ogType?: 'website' | 'article' | 'product' | 'profile';
@@ -23,65 +22,6 @@ interface SEOProps {
   favicon?: string;
   msTileColor?: string;
   msConfig?: string;
-}
-
-interface OrganizationSchema {
-  '@context': string;
-  '@type': string;
-  name: string;
-  url: string;
-  logo: string;
-  description: string;
-  address: {
-    '@type': string;
-    streetAddress: string;
-    addressLocality: string;
-    addressRegion: string;
-    postalCode: string;
-    addressCountry: string;
-  };
-  contactPoint: {
-    '@type': string;
-    telephone: string;
-    contactType: string;
-    email: string;
-  };
-  sameAs: string[];
-  foundingDate: string;
-  numberOfEmployees: string;
-  industry: string;
-}
-
-interface WebSiteSchema {
-  '@context': string;
-  '@type': string;
-  name: string;
-  url: string;
-  description: string;
-  potentialAction: {
-    '@type': string;
-    target: string;
-    'query-input': string;
-  };
-  publisher: {
-    '@type': string;
-    name: string;
-    logo: {
-      '@type': string;
-      url: string;
-    };
-  };
-}
-
-interface BreadcrumbSchema {
-  '@context': string;
-  '@type': string;
-  itemListElement: Array<{
-    '@type': string;
-    position: number;
-    name: string;
-    item: string;
-  }>;
 }
 
 export function SEO({
@@ -102,7 +42,6 @@ export function SEO({
     'blockchain technology',
     'Zion Tech Group'
   ],
-  author = 'Zion Tech Group',
   canonical = '',
   ogImage = '/images/zion-tech-group-og.jpg',
   ogType = 'website',
@@ -123,7 +62,7 @@ export function SEO({
 }: SEOProps) {
   
   // Generate canonical URL
-  const canonicalUrl = useMemo(() => {
+  const canonicalUrl = React.useMemo(() => {
     if (canonical) return canonical;
     if (typeof window !== 'undefined') {
       return window.location.origin + window.location.pathname;
@@ -132,10 +71,10 @@ export function SEO({
   }, [canonical]);
 
   // Default structured data
-  const defaultStructuredData = useMemo((): Record<string, any> => {
+  const defaultStructuredData = React.useMemo((): Record<string, any> => {
     const baseUrl = 'https://ziontechgroup.com';
     
-    const organizationSchema: OrganizationSchema = {
+    const organizationSchema = {
       '@context': 'https://schema.org',
       '@type': 'Organization',
       name: 'Zion Tech Group',
@@ -144,17 +83,17 @@ export function SEO({
       description: 'Revolutionary AI & Technology Solutions Provider',
       address: {
         '@type': 'PostalAddress',
-        streetAddress: '123 Innovation Drive',
-        addressLocality: 'Tech City',
-        addressRegion: 'CA',
-        postalCode: '90210',
+        streetAddress: '364 E Main St STE 1008',
+        addressLocality: 'Middletown',
+        addressRegion: 'DE',
+        postalCode: '19709',
         addressCountry: 'US'
       },
       contactPoint: {
         '@type': 'ContactPoint',
-        telephone: '+1-555-123-4567',
+        telephone: '+1 302 464 0950',
         contactType: 'customer service',
-        email: 'info@ziontechgroup.com'
+        email: 'kleber@ziontechgroup.com'
       },
       sameAs: [
         'https://twitter.com/ziontechgroup',
@@ -166,7 +105,7 @@ export function SEO({
       industry: 'Technology'
     };
 
-    const webSiteSchema: WebSiteSchema = {
+    const webSiteSchema = {
       '@context': 'https://schema.org',
       '@type': 'WebSite',
       name: 'Zion Tech Group',
@@ -187,7 +126,7 @@ export function SEO({
       }
     };
 
-    const breadcrumbSchema: BreadcrumbSchema = {
+    const breadcrumbSchema = {
       '@context': 'https://schema.org',
       '@type': 'BreadcrumbList',
       itemListElement: [
@@ -214,126 +153,12 @@ export function SEO({
   }, [title, canonicalUrl]);
 
   // Merge custom structured data with defaults
-  const finalStructuredData = useMemo(() => {
+  const finalStructuredData = React.useMemo(() => {
     if (structuredData) {
       return { ...defaultStructuredData, ...structuredData };
     }
     return defaultStructuredData;
   }, [structuredData, defaultStructuredData]);
-
-  // Performance monitoring
-  useEffect(() => {
-    // Monitor Core Web Vitals
-    if ('performance' in window) {
-      // First Contentful Paint (FCP)
-      const fcpObserver = new PerformanceObserver((list) => {
-        const entries = list.getEntries();
-        const fcpEntry = entries.find(entry => entry.name === 'first-contentful-paint');
-        if (fcpEntry) {
-          console.log('FCP:', fcpEntry.startTime);
-          // Send to analytics
-          if (typeof window !== 'undefined' && (window as any).gtag) {
-            (window as any).gtag('event', 'timing_complete', {
-              name: 'fcp',
-              value: Math.round(fcpEntry.startTime)
-            });
-          }
-        }
-      });
-      fcpObserver.observe({ entryTypes: ['paint'] });
-
-      // Largest Contentful Paint (LCP)
-      const lcpObserver = new PerformanceObserver((list) => {
-        const entries = list.getEntries();
-        const lastEntry = entries[entries.length - 1];
-        if (lastEntry) {
-          console.log('LCP:', lastEntry.startTime);
-          if (typeof window !== 'undefined' && (window as any).gtag) {
-            (window as any).gtag('event', 'timing_complete', {
-              name: 'lcp',
-              value: Math.round(lastEntry.startTime)
-            });
-          }
-        }
-      });
-      lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] });
-
-      // First Input Delay (FID)
-      const fidObserver = new PerformanceObserver((list) => {
-        const entries = list.getEntries();
-        entries.forEach((entry) => {
-          if (entry.entryType === 'first-input') {
-            const fid = (entry as any).processingStart - entry.startTime;
-            console.log('FID:', fid);
-            if (typeof window !== 'undefined' && (window as any).gtag) {
-              (window as any).gtag('event', 'timing_complete', {
-                name: 'fid',
-                value: Math.round(fid)
-              });
-            }
-          }
-        });
-      });
-      fidObserver.observe({ entryTypes: ['first-input'] });
-
-      // Cumulative Layout Shift (CLS)
-      const clsObserver = new PerformanceObserver((list) => {
-        let clsValue = 0;
-        list.getEntries().forEach((entry: any) => {
-          if (!entry.hadRecentInput) {
-            clsValue += entry.value;
-          }
-        });
-        console.log('CLS:', clsValue);
-        if (typeof window !== 'undefined' && (window as any).gtag) {
-          (window as any).gtag('event', 'timing_complete', {
-            name: 'cls',
-            value: Math.round(clsValue * 1000)
-          });
-        }
-      });
-      clsObserver.observe({ entryTypes: ['layout-shift'] });
-
-      return () => {
-        fcpObserver.disconnect();
-        lcpObserver.disconnect();
-        fidObserver.disconnect();
-        clsObserver.disconnect();
-      };
-    }
-  }, []);
-
-  // Preload critical resources
-  useEffect(() => {
-    // Preload critical fonts
-    const criticalFonts = [
-      'https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&display=swap',
-      'https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&display=swap'
-    ];
-
-    criticalFonts.forEach(fontUrl => {
-      const link = document.createElement('link');
-      link.rel = 'preload';
-      link.href = fontUrl;
-      link.as = 'style';
-      link.crossOrigin = 'anonymous';
-      document.head.appendChild(link);
-    });
-
-    // Preload critical images
-    const criticalImages = [
-      '/images/zion-logo.png',
-      '/images/hero-bg.jpg'
-    ];
-
-    criticalImages.forEach(imageUrl => {
-      const link = document.createElement('link');
-      link.rel = 'preload';
-      link.href = imageUrl;
-      link.as = 'image';
-      document.head.appendChild(link);
-    });
-  }, []);
 
   return (
     <Helmet>
@@ -341,7 +166,6 @@ export function SEO({
       <title>{title}</title>
       <meta name="description" content={description} />
       <meta name="keywords" content={keywords.join(', ')} />
-      <meta name="author" content={author} />
       <meta name="robots" content={noindex ? 'noindex' : robots} />
       {nofollow && <meta name="robots" content="nofollow" />}
       <meta name="language" content={language} />

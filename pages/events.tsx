@@ -1,5 +1,5 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+import Link from 'next/link'
 import { Calendar, Clock, MapPin, Users, ArrowRight, Video, Globe, Award } from 'lucide-react'
 
 
@@ -135,7 +135,7 @@ export default function Events() {
 									</div>
 									<div className="mt-6 lg:mt-0 lg:ml-6">
 										<Link
-											to={`/events/${event.id}`}
+											href={`/events/${event.id}`}
 											className="inline-flex items-center px-6 py-3 bg-blue-600 text-white font-medium rounded-lg hover:bg-blue-700 transition-colors"
 										>
 											Register Now
@@ -223,7 +223,7 @@ export default function Events() {
 									</div>
 									{event.recording && (
 										<Link
-											to={`/events/${event.id}/recording`}
+											href={`/events/${event.id}/recording`}
 											className="inline-flex items-center text-blue-600 hover:text-blue-700 font-medium"
 										>
 											Watch Recording
@@ -248,14 +248,14 @@ export default function Events() {
 					</p>
 					<div className="flex items-center justify-center gap-x-6">
 						<Link
-							to="/contact"
+							href="/contact"
 							className="rounded-md bg-white px-6 py-3 text-sm font-semibold text-blue-600 shadow-sm hover:bg-gray-50 transition-colors"
 						>
 							Schedule Consultation
 						</Link>
 						<Link
-							to="/services"
-							className="text-sm font-semibold leading-6 text-white hover:text-blue-100 transition-colors"
+							href="/services"
+															className="text-sm font-semibold leading-6 text-white hover:text-blue-100 transition-colors"
 						>
 							View Services <span aria-hidden="true">→</span>
 						</Link>
