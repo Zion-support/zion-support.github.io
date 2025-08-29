@@ -19,12 +19,41 @@ class EnhancedLinkChecker {
     this.reportDir = path.join(process.cwd(), 'link-reports');
     this.ensureReportDirectory();
     this.checkedUrls = new Map(); // Use Map instead of Set for storing results
+    
+    // Specific external links from GitHub Actions workflow
+    this.criticalExternalLinks = [
+      'https://ziontechgroup.com',
+      'https://github.com/ziontechgroup',
+      'https://www.linkedin.com/company/zion-marketplace',
+      'https://www.facebook.com/zionmarketplace',
+      'https://instagram.com/ziontechgroup',
+      'https://twitter.com/ziontechgroup'
+    ];
   }
 
   ensureReportDirectory() {
     if (!fs.existsSync(this.reportDir)) {
       fs.mkdirSync(this.reportDir, { recursive: true });
     }
+  }
+
+  // Check if it's time to run the weekly link check (Monday at 6 AM)
+  shouldRunWeeklyCheck() {
+    const now = new Date();
+    const dayOfWeek = now.getDay(); // 0 = Sunday, 1 = Monday
+    const hour = now.getHours();
+    
+    // Run on Monday (1) at 6 AM (6)
+    if (dayOfWeek === 1 && hour === 6) {
+      return true;
+    }
+    
+    // For testing purposes, also run if forced
+    if (process.env.FORCE_LINK_CHECK === 'true') {
+      return true;
+    }
+    
+    return false;
   }
 
   async buildProject() {
@@ -200,7 +229,7 @@ class EnhancedLinkChecker {
           method: 'HEAD',
           timeout: timeout,
           headers: {
-            'User-Agent': 'Zion-Link-Checker/1.0'
+            'User-Agent': 'Enhanced-Link-Checker/1.0'
           }
         }, (res) => {
           clearTimeout(timer);
@@ -208,7 +237,7 @@ class EnhancedLinkChecker {
             url,
             status: res.statusCode,
             working: res.statusCode >= 200 && res.statusCode < 400,
-            headers: res.headers
+            error: null
           };
           this.checkedUrls.set(url, result);
           resolve(result);
@@ -244,7 +273,7 @@ class EnhancedLinkChecker {
         clearTimeout(timer);
         const result = {
           url,
-          status: 'error',
+          status: 'invalid',
           working: false,
           error: error.message
         };
@@ -255,7 +284,7 @@ class EnhancedLinkChecker {
   }
 
   async checkAllLinks(links) {
-    console.log('🔍 Checking all extracted links...');
+    console.log(`🔍 Checking ${links.length} links...`);
     
     const internalLinks = [];
     const externalLinks = [];
@@ -269,127 +298,134 @@ class EnhancedLinkChecker {
       }
     });
     
-    console.log(`📊 Found ${internalLinks.length} internal links and ${externalLinks.length} external links`);
+    // Add critical external links
+    this.criticalExternalLinks.forEach(url => {
+      if (!externalLinks.some(link => link.url === url)) {
+        externalLinks.push({
+          url,
+          source: 'critical-external',
+          type: 'critical'
+        });
+      }
+    });
+    
+    console.log(`📊 Link breakdown:`);
+    console.log(`  Internal: ${internalLinks.length}`);
+    console.log(`  External: ${externalLinks.length}`);
+    console.log(`  Critical External: ${this.criticalExternalLinks.length}`);
     
     // Check internal links
     if (internalLinks.length > 0) {
-      console.log('🔍 Checking internal links...');
-      await this.checkLinkBatch(internalLinks, 'internal');
+      console.log('\n🔍 Checking internal links...');
+      for (let i = 0; i < internalLinks.length; i++) {
+        const link = internalLinks[i];
+        process.stdout.write(`\r  Progress: ${i + 1}/${internalLinks.length} (${Math.round(((i + 1) / internalLinks.length) * 100)}%)`);
+        
+        const result = await this.checkLink(link.url);
+        this.linkResults.internal.results.push({
+          ...link,
+          ...result
+        });
+        
+        if (result.working) {
+          this.linkResults.internal.working++;
+        } else {
+          this.linkResults.internal.broken++;
+        }
+        
+        // Small delay to avoid overwhelming servers
+        await new Promise(resolve => setTimeout(resolve, 100));
+      }
+      console.log('\n✅ Internal links checked');
     }
     
     // Check external links
     if (externalLinks.length > 0) {
-      console.log('🔍 Checking external links...');
-      await this.checkLinkBatch(externalLinks, 'external');
+      console.log('\n🔍 Checking external links...');
+      for (let i = 0; i < externalLinks.length; i++) {
+        const link = externalLinks[i];
+        process.stdout.write(`\r  Progress: ${i + 1}/${externalLinks.length} (${Math.round(((i + 1) / externalLinks.length) * 100)}%)`);
+        
+        const result = await this.checkLink(link.url);
+        this.linkResults.external.results.push({
+          ...link,
+          ...result
+        });
+        
+        if (result.working) {
+          this.linkResults.external.working++;
+        } else {
+          this.linkResults.external.broken++;
+        }
+        
+        // Longer delay for external links to be respectful
+        await new Promise(resolve => setTimeout(resolve, 200));
+      }
+      console.log('\n✅ External links checked');
     }
     
     // Update summary
-    this.updateSummary();
-  }
-
-  async checkLinkBatch(links, type) {
-    const batchSize = 10; // Check 10 links concurrently
-    const results = [];
-    
-    for (let i = 0; i < links.length; i += batchSize) {
-      const batch = links.slice(i, i + batchSize);
-      const batchPromises = batch.map(async (link) => {
-        const result = await this.checkLink(link.url);
-        return {
-          ...link,
-          ...result
-        };
-      });
-      
-      const batchResults = await Promise.all(batchPromises);
-      results.push(...batchResults);
-      
-      // Progress update
-      const progress = Math.min(i + batchSize, links.length);
-      console.log(`📊 Progress: ${progress}/${links.length} ${type} links checked`);
-      
-      // Small delay to be respectful to servers
-      await new Promise(resolve => setTimeout(resolve, 100));
-    }
-    
-    // Update results
-    this.linkResults[type].results = results;
-    this.linkResults[type].total = results.length;
-    this.linkResults[type].working = results.filter(r => r.working).length;
-    this.linkResults[type].broken = results.filter(r => !r.working).length;
-  }
-
-  updateSummary() {
+    this.linkResults.internal.total = this.linkResults.internal.results.length;
+    this.linkResults.external.total = this.linkResults.external.results.length;
     this.linkResults.summary.total = this.linkResults.internal.total + this.linkResults.external.total;
     this.linkResults.summary.working = this.linkResults.internal.working + this.linkResults.external.working;
     this.linkResults.summary.broken = this.linkResults.internal.broken + this.linkResults.external.broken;
     this.linkResults.summary.rate = this.linkResults.summary.total > 0 ? 
-      (this.linkResults.summary.working / this.linkResults.summary.total * 100).toFixed(2) : 0;
+      Math.round((this.linkResults.summary.working / this.linkResults.summary.total) * 100) : 0;
   }
 
   async generateLinkReport() {
-    console.log('📋 Generating link report...');
+    const timestamp = new Date().toISOString().replace(/[:.]/g, '-');
+    const reportPath = path.join(this.reportDir, `link-report-${timestamp}.md`);
+    const jsonReportPath = path.join(this.reportDir, `link-report-${timestamp}.json`);
     
-    const report = {
+    const brokenInternal = this.linkResults.internal.results.filter(link => !link.working);
+    const brokenExternal = this.linkResults.external.results.filter(link => !link.working);
+    
+    const report = this.generateMarkdownReport(brokenInternal, brokenExternal);
+    
+    // Save markdown report
+    fs.writeFileSync(reportPath, report);
+    
+    // Save JSON report
+    const jsonReport = {
       timestamp: new Date().toISOString(),
       summary: this.linkResults.summary,
       internal: this.linkResults.internal,
       external: this.linkResults.external,
-      brokenLinks: {
-        internal: this.linkResults.internal.results.filter(r => !r.working),
-        external: this.linkResults.external.results.filter(r => !r.working)
-      }
+      brokenInternal: brokenInternal,
+      brokenExternal: brokenExternal
     };
+    fs.writeFileSync(jsonReportPath, JSON.stringify(jsonReport, null, 2));
     
-    // Save JSON report
-    fs.writeFileSync(
-      path.join(this.reportDir, 'link-check-report.json'),
-      JSON.stringify(report, null, 2)
-    );
+    // Save CSV report
+    const csvReport = this.generateCSVReport(jsonReport);
+    const csvReportPath = path.join(this.reportDir, `link-report-${timestamp}.csv`);
+    fs.writeFileSync(csvReportPath, csvReport);
     
-    // Generate markdown report
-    const markdownReport = this.generateMarkdownReport(report);
-    fs.writeFileSync(
-      path.join(this.reportDir, 'LINK_CHECK_REPORT.md'),
-      markdownReport
-    );
+    console.log(`📄 Reports saved:`);
+    console.log(`  Markdown: ${reportPath}`);
+    console.log(`  JSON: ${jsonReportPath}`);
+    console.log(`  CSV: ${csvReportPath}`);
     
-    // Generate CSV report for easy analysis
-    const csvReport = this.generateCSVReport(report);
-    fs.writeFileSync(
-      path.join(this.reportDir, 'link-check-report.csv'),
-      csvReport
-    );
-    
-    console.log('📋 Link report generated successfully');
-    return report;
+    return jsonReport;
   }
 
-  generateMarkdownReport(report) {
-    const brokenInternal = report.brokenLinks.internal;
-    const brokenExternal = report.brokenLinks.external;
-    
-    return `# Link Check Report - ${new Date().toLocaleDateString()}
+  generateMarkdownReport(brokenInternal, brokenExternal) {
+    return `# 🔗 Link Check Report
+
+**Generated on:** ${new Date().toLocaleString()}
+**Total Links Checked:** ${this.linkResults.summary.total}
 
 ## 📊 Summary
-- **Total Links**: ${report.summary.total}
-- **Working Links**: ${report.summary.working} ✅
-- **Broken Links**: ${report.summary.broken} ❌
-- **Success Rate**: ${report.summary.rate}%
 
-## 🔍 Internal Links
-- **Total**: ${report.internal.total}
-- **Working**: ${report.internal.working} ✅
-- **Broken**: ${report.internal.broken} ❌
+| Category | Total | Working | Broken | Success Rate |
+|----------|-------|---------|--------|--------------|
+| **Internal** | ${this.linkResults.internal.total} | ${this.linkResults.internal.working} | ${this.linkResults.internal.broken} | ${this.linkResults.internal.total > 0 ? Math.round((this.linkResults.internal.working / this.linkResults.internal.total) * 100) : 0}% |
+| **External** | ${this.linkResults.external.total} | ${this.linkResults.external.working} | ${this.linkResults.external.broken} | ${this.linkResults.external.total > 0 ? Math.round((this.linkResults.external.working / this.linkResults.external.total) * 100) : 0}% |
+| **Overall** | ${this.linkResults.summary.total} | ${this.linkResults.summary.working} | ${this.linkResults.summary.broken} | **${this.linkResults.summary.rate}%** |
 
-## 🌐 External Links
-- **Total**: ${report.external.total}
-- **Working**: ${report.external.working} ✅
-- **Broken**: ${report.external.broken} ❌
-
-## ❌ Broken Links
-
-### Internal Broken Links (${brokenInternal.length})
+## 🚨 Broken Internal Links (${brokenInternal.length})
 ${brokenInternal.length > 0 ? 
   brokenInternal.map(link => 
     `- **${link.source}** → ${link.url} (${link.status}${link.error ? ` - ${link.error}` : ''})`
@@ -397,13 +433,25 @@ ${brokenInternal.length > 0 ?
   '✅ No broken internal links found!'
 }
 
-### External Broken Links (${brokenExternal.length})
+## 🚨 Broken External Links (${brokenExternal.length})
 ${brokenExternal.length > 0 ? 
   brokenExternal.map(link => 
     `- **${link.source}** → ${link.url} (${link.status}${link.error ? ` - ${link.error}` : ''})`
   ).join('\n') : 
   '✅ No broken external links found!'
 }
+
+## 🌐 Critical External Links Status
+
+${this.criticalExternalLinks.map(url => {
+  const result = this.linkResults.external.results.find(r => r.url === url);
+  if (result) {
+    return result.working ? 
+      `✅ **${url}** - Working (${result.status})` : 
+      `❌ **${url}** - Broken (${result.status}${result.error ? ` - ${result.error}` : ''})`;
+  }
+  return `⚠️ **${url}** - Not checked`;
+}).join('\n')}
 
 ## 🚨 Immediate Actions Required
 
@@ -428,9 +476,11 @@ ${brokenExternal.length > 0 ?
 3. **Link Maintenance**: Regularly review and update external link references
 4. **404 Handling**: Implement proper 404 pages for broken internal routes
 5. **Link Tracking**: Monitor link health over time
+6. **Critical Links**: Pay special attention to critical external links (social media, main website)
 
 ---
 *Report generated by Enhanced Link Checker Automation*
+*Weekly schedule: Every Monday at 6 AM*
 `;
   }
 
@@ -456,6 +506,13 @@ ${brokenExternal.length > 0 ?
   }
 
   async runLinkCheck() {
+    // Check if it's time to run the weekly check
+    if (!this.shouldRunWeeklyCheck()) {
+      console.log('⏰ Not time for weekly link check yet. Schedule: Every Monday at 6 AM');
+      console.log('💡 To force run, set FORCE_LINK_CHECK=true environment variable');
+      return null;
+    }
+
     console.log('🚀 Starting comprehensive link check...');
     
     try {
