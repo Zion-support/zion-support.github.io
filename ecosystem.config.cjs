@@ -187,6 +187,48 @@ module.exports = {
         NODE_ENV: 'production',
         AUTOMATION_INTERVAL: '21600000' // 6 hours
       }
+    },
+
+    // AI-Powered Code Quality Analyzer - runs every 4 hours
+    {
+      name: 'ai-code-analyzer',
+      script: './scripts/automation/ai-code-analyzer.cjs',
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      max_memory_restart: '1G',
+      env: {
+        NODE_ENV: 'production',
+        AUTOMATION_INTERVAL: '14400000' // 4 hours
+      }
+    },
+
+    // Intelligent Dependency Health Monitor - runs every 8 hours
+    {
+      name: 'intelligent-dependency-monitor',
+      script: './scripts/automation/intelligent-dependency-monitor.cjs',
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      max_memory_restart: '1G',
+      env: {
+        NODE_ENV: 'production',
+        AUTOMATION_INTERVAL: '28800000' // 8 hours
+      }
+    },
+
+    // Smart Performance Profiler - runs every 6 hours
+    {
+      name: 'smart-performance-profiler',
+      script: './scripts/automation/smart-performance-profiler.cjs',
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      max_memory_restart: '1G',
+      env: {
+        NODE_ENV: 'production',
+        AUTOMATION_INTERVAL: '21600000' // 6 hours
+      }
     }
   ]
 };
