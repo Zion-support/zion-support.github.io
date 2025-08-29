@@ -69,10 +69,10 @@ export default function CaseStudies() {
                 <span>{s.company}</span>
               </div>
               <h3 className="text-xl font-semibold mb-2">{s.title}</h3>
-              <p className="text-slate-300 text-sm mb-4">{s.summary}</p>
-              <button className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-cyan-500 to-blue-600 text-white text-sm font-medium rounded-lg hover:opacity-90">
-                View Details
-                <ArrowRight className="w-4 h-4 ml-2" />
+              <p className="text-slate-300 text-sm leading-relaxed">{s.summary}</p>
+              <button className="mt-4 text-cyan-400 hover:text-cyan-300 text-sm font-medium flex items-center gap-1 group">
+                Read Full Case Study
+                <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
               </button>
             </motion.div>
           ))}

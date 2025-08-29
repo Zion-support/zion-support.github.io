@@ -28,7 +28,7 @@ import {
   Pause,
   RotateCcw
 } from 'lucide-react';
-import { emergingTechServices2025 } from '../data/emergingTechServices2025';
+import { EMERGING_TECH_SERVICES_2025 } from '../data/emergingTechServices2025';
 
 const EmergingTechShowcase2025: React.FC = () => {
   const [selectedCategory, setSelectedCategory] = useState<string>('all');
@@ -52,9 +52,9 @@ const EmergingTechShowcase2025: React.FC = () => {
     { id: 'Advanced Robotics', name: 'Robotics', icon: Bot, color: 'from-slate-500 to-gray-600' }
   ];
 
-  const filteredServices = selectedCategory === 'all' 
-    ? emergingTechServices2025 
-    : emergingTechServices2025.filter(service => service.category === selectedCategory);
+    const filteredServices = selectedCategory === 'all'
+    ? EMERGING_TECH_SERVICES_2025
+    : EMERGING_TECH_SERVICES_2025.filter(service => service.category === selectedCategory);
 
   useEffect(() => {
     if (autoPlay) {
@@ -380,7 +380,7 @@ const EmergingTechShowcase2025: React.FC = () => {
               onClick={(e) => e.stopPropagation()}
             >
               {(() => {
-                const service = emergingTechServices2025.find(s => s.id === selectedService);
+                const service = EMERGING_TECH_SERVICES_2025.find(s => s.id === selectedService);
                 if (!service) return null;
                 
                 return (

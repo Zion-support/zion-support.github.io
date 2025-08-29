@@ -126,6 +126,11 @@ const AIMarketingAutomation = React.lazy(() => import('./pages/services/AIMarket
 const AILegalResearchPlatform = React.lazy(() => import('./pages/services/AILegalResearchPlatform'));
 const AIEducationPlatform = React.lazy(() => import('./pages/services/AIEducationPlatform'));
 
+// Additional Innovative AI Services
+const AIProjectManagementPlatform = React.lazy(() => import('./pages/services/ai-project-management-platform'));
+const AICybersecurityThreatDetection = React.lazy(() => import('./pages/services/ai-cybersecurity-threat-detection'));
+const AIHealthcareAnalyticsPlatform = React.lazy(() => import('./pages/services/ai-healthcare-analytics-platform'));
+
 // New innovative services
 const AIContentGenerationPlatform = React.lazy(() => import('./pages/services/AIContentGenerationPlatform'));
 const AICybersecurityThreatIntelligence = React.lazy(() => import('./pages/services/AICybersecurityThreatIntelligence'));
@@ -315,6 +320,11 @@ function App() {
               <Route path="/services/ai-marketing-automation" element={<AIMarketingAutomation />} />
               <Route path="/services/ai-legal-research-platform" element={<AILegalResearchPlatform />} />
               <Route path="/services/ai-education-platform" element={<AIEducationPlatform />} />
+              
+              {/* Additional Innovative AI Service Routes */}
+              <Route path="/services/ai-project-management-platform" element={<AIProjectManagementPlatform />} />
+              <Route path="/services/ai-cybersecurity-threat-detection" element={<AICybersecurityThreatDetection />} />
+              <Route path="/services/ai-healthcare-analytics-platform" element={<AIHealthcareAnalyticsPlatform />} />
               
               {/* New Innovative Service Routes */}
               <Route path="/services/ai-content-generation-platform" element={<AIContentGenerationPlatform />} />

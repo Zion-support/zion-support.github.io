@@ -377,6 +377,98 @@ export default function Home() {
       <PricingSection />
       <AIServicesShowcase />
       <ITServiceRequestHero />
+=======
+        </div>
+        <div className="absolute top-40 right-20 animate-float-delayed">
+          <div className="w-6 h-6 bg-purple-400 rounded-full opacity-60"></div>
+        </div>
+        <div className="absolute bottom-40 left-20 animate-float">
+          <div className="w-3 h-3 bg-blue-400 rounded-full opacity-60"></div>
+        </div>
+      </section>
+
+      {/* Quick Access Section */}
+      <Suspense fallback={<div className="h-32 bg-gray-800 animate-pulse rounded-lg"></div>}>
+        <QuickAccess />
+      </Suspense>
+
+      {/* Feature Highlights */}
+      <Suspense fallback={<div className="h-64 bg-gray-800 animate-pulse rounded-lg"></div>}>
+        <FeatureHighlights />
+      </Suspense>
+
+      {/* AI Services Showcase */}
+      <Suspense fallback={<div className="h-96 bg-gray-800 animate-pulse rounded-lg"></div>}>
+        <AIServicesShowcase />
+      </Suspense>
+
+      {/* Tech Solutions Section */}
+      <Suspense fallback={<div className="h-64 bg-gray-800 animate-pulse rounded-lg"></div>}>
+        <TechSolutionsSection />
+      </Suspense>
+
+      {/* Case Studies Section */}
+      <Suspense fallback={<div className="h-64 bg-gray-800 animate-pulse rounded-lg"></div>}>
+        <CaseStudiesSection />
+      </Suspense>
+
+      {/* Team Expertise Section */}
+      <Suspense fallback={<div className="h-64 bg-gray-800 animate-pulse rounded-lg"></div>}>
+        <TeamExpertiseSection />
+      </Suspense>
+
+      {/* Global Presence Section */}
+      <Suspense fallback={<div className="h-64 bg-gray-800 animate-pulse rounded-lg"></div>}>
+        <GlobalPresenceSection />
+      </Suspense>
+
+      {/* Innovation Research Section */}
+      <Suspense fallback={<div className="h-64 bg-gray-800 animate-pulse rounded-lg"></div>}>
+        <InnovationResearchSection />
+      </Suspense>
+
+      {/* Client Success Stories Section */}
+      <Suspense fallback={<div className="h-64 bg-gray-800 animate-pulse rounded-lg"></div>}>
+        <ClientSuccessStoriesSection />
+      </Suspense>
+
+      {/* Technology Stack Section */}
+      <Suspense fallback={<div className="h-64 bg-gray-800 animate-pulse rounded-lg"></div>}>
+        <TechnologyStackSection />
+      </Suspense>
+
+      {/* Security Compliance Section */}
+      <Suspense fallback={<div className="h-64 bg-gray-800 animate-pulse rounded-lg"></div>}>
+        <SecurityComplianceSection />
+      </Suspense>
+
+      {/* Interactive Testimonials */}
+      <Suspense fallback={<div className="h-64 bg-gray-800 animate-pulse rounded-lg"></div>}>
+        <InteractiveTestimonials />
+      </Suspense>
+
+      {/* Services Showcase */}
+      <Suspense fallback={<div className="h-64 bg-gray-800 animate-pulse rounded-lg"></div>}>
+        <ServicesShowcase />
+      </Suspense>
+
+      {/* Feature CTAs */}
+      <Suspense fallback={<div className="h-32 bg-gray-800 animate-pulse rounded-lg"></div>}>
+        <FeatureCTAs />
+      </Suspense>
+
+      {/* IT Service Request Hero */}
+      <Suspense fallback={<div className="h-32 bg-gray-800 animate-pulse rounded-lg"></div>}>
+        <ITServiceRequestHero />
+      </Suspense>
+
+      {/* Pricing Section */}
+      <Suspense fallback={<div className="h-64 bg-gray-800 animate-pulse rounded-lg"></div>}>
+        <PricingSection />
+      </Suspense>
+
+      {/* Floating CTA */}
+>>>>>>> c92696b231688724fd5f78a980fd40151038cf2b
       <FloatingCTA />
     </>
   );

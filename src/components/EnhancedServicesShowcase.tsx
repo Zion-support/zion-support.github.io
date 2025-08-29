@@ -16,7 +16,10 @@ import {
   Rocket,
   Target,
   TrendingUp,
-  CheckCircle
+  CheckCircle,
+  Users,
+  Clock,
+  Search
 } from 'lucide-react';
 
 interface Service {
@@ -118,6 +121,7 @@ const categories = [
 export default function EnhancedServicesShowcase() {
   const [selectedCategory, setSelectedCategory] = React.useState('all');
   const [hoveredService, setHoveredService] = React.useState<string | null>(null);
+  const [searchTerm, setSearchTerm] = useState('');
 
   const filteredServices = selectedCategory === 'all' 
     ? services 
@@ -174,6 +178,26 @@ export default function EnhancedServicesShowcase() {
               </span>
             </button>
           ))}
+        </motion.div>
+
+        {/* Search */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6, delay: 0.2 }}
+          className="flex justify-center mb-12"
+        >
+          <div className="relative">
+            <input
+              type="text"
+              placeholder="Search services..."
+              value={searchTerm}
+              onChange={(e) => setSearchTerm(e.target.value)}
+              className="w-64 px-4 py-2 bg-zion-slate-dark/50 border border-zion-slate/30 rounded-lg text-white placeholder-zion-slate-light focus:outline-none focus:border-zion-cyan focus:ring-2 focus:ring-zion-cyan/20"
+            />
+            <Search className="absolute right-3 top-2.5 w-5 h-5 text-zion-slate-light" />
+          </div>
         </motion.div>
 
         {/* Services Grid */}
@@ -280,25 +304,27 @@ export default function EnhancedServicesShowcase() {
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
         >
-          <h3 className="text-2xl font-bold text-white mb-4">
-            Ready to Transform Your Business?
-          </h3>
-          <p className="text-slate-300 mb-8 max-w-2xl mx-auto">
-            Let's discuss how our technology solutions can help you achieve your business goals and stay ahead of the competition.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link 
-              to="/contact" 
-              className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-cyan-500/25"
-            >
-              Get Started Today
-            </Link>
-            <Link 
-              to="/services" 
-              className="px-8 py-4 border-2 border-cyan-500 text-cyan-400 rounded-lg font-semibold hover:bg-cyan-500 hover:text-white transition-all duration-300"
-            >
-              View All Services
-            </Link>
+          <div className="bg-white/5 backdrop-blur-lg border border-white/20 rounded-3xl p-8 max-w-4xl mx-auto">
+            <h3 className="text-3xl font-bold text-white mb-4">
+              Ready to Transform Your Business?
+            </h3>
+            <p className="text-xl text-gray-300 mb-8">
+              Join hundreds of companies already leveraging our cutting-edge technology solutions
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link
+                to="/contact"
+                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-purple text-white font-semibold rounded-2xl hover:shadow-2xl hover:shadow-zion-cyan/25 transition-all duration-300 transform hover:-translate-y-1"
+              >
+                Get Started Today
+              </Link>
+              <Link
+                to="/about"
+                className="inline-flex items-center px-8 py-4 border-2 border-zion-cyan text-zion-cyan font-semibold rounded-2xl hover:bg-cyan-500 hover:text-white transition-all duration-300"
+              >
+                Learn More About Us
+              </Link>
+            </div>
           </div>
         </motion.div>
       </div>
