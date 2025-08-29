@@ -42,7 +42,7 @@ import {
   Infinity
 } from 'lucide-react';
 import { SEO } from '../components/SEO';
-import { COMPREHENSIVE_SERVICES_2030 } from '../data/comprehensiveServices2030';
+import { COMPREHENSIVE_SERVICES_INDEX_2030, SERVICE_CATEGORIES_2030, SERVICE_STATISTICS_2030 } from '../data/comprehensiveServicesIndex2030';
 import { COMPREHENSIVE_PRICING_GUIDE_2030 } from '../data/comprehensivePricingGuide2030';
 
 export default function Services() {
@@ -50,36 +50,87 @@ export default function Services() {
   const [searchTerm, setSearchTerm] = useState('');
   const [sortBy, setSortBy] = useState('rating');
 
-  // Get unique categories from services
-  const categories = [
-    { id: 'all', name: 'All Services', count: COMPREHENSIVE_SERVICES_2030.length, icon: '🚀', color: 'from-cyan-500 to-blue-500' },
-    { id: 'AI & Business Intelligence', name: 'AI & Business Intelligence', count: COMPREHENSIVE_SERVICES_2030.filter(s => s.category === 'AI & Business Intelligence').length, icon: '🤖', color: 'from-purple-500 to-pink-500' },
-    { id: 'Cybersecurity', name: 'Cybersecurity', count: COMPREHENSIVE_SERVICES_2030.filter(s => s.category === 'Cybersecurity').length, icon: '🛡️', color: 'from-red-500 to-orange-500' },
-    { id: 'Cloud & DevOps', name: 'Cloud & DevOps', count: COMPREHENSIVE_SERVICES_2030.filter(s => s.category === 'Cloud & DevOps').length, icon: '☁️', color: 'from-blue-500 to-cyan-500' },
-    { id: 'AI & Marketing', name: 'AI & Marketing', count: COMPREHENSIVE_SERVICES_2030.filter(s => s.category === 'AI & Marketing').length, icon: '📈', color: 'from-green-500 to-emerald-500' },
-    { id: 'Quantum Computing', name: 'Quantum Computing', count: COMPREHENSIVE_SERVICES_2030.filter(s => s.category === 'Quantum Computing').length, icon: '⚛️', color: 'from-indigo-500 to-purple-500' },
-    { id: 'IoT & Edge Computing', name: 'IoT & Edge Computing', count: COMPREHENSIVE_SERVICES_2030.filter(s => s.category === 'IoT & Edge Computing').length, icon: '🌐', color: 'from-teal-500 to-cyan-500' },
-    { id: 'Blockchain & Web3', name: 'Blockchain & Web3', count: COMPREHENSIVE_SERVICES_2030.filter(s => s.category === 'Blockchain & Web3').length, icon: '🔗', color: 'from-yellow-500 to-orange-500' },
-    { id: 'AI & Healthcare', name: 'AI & Healthcare', count: COMPREHENSIVE_SERVICES_2030.filter(s => s.category === 'AI & Healthcare').length, icon: '🏥', color: 'from-pink-500 to-red-500' },
-    { id: 'FinTech', name: 'FinTech', count: COMPREHENSIVE_SERVICES_2030.filter(s => s.category === 'FinTech').length, icon: '💰', color: 'from-emerald-500 to-green-500' },
-    { id: 'Digital Twin', name: 'Digital Twin', count: COMPREHENSIVE_SERVICES_2030.filter(s => s.category === 'Digital Twin').length, icon: '🔄', color: 'from-blue-500 to-indigo-500' },
-    { id: 'Space Technology', name: 'Space Technology', count: COMPREHENSIVE_SERVICES_2030.filter(s => s.category === 'Space Technology').length, icon: '🚀', color: 'from-purple-500 to-pink-500' },
-    { id: 'Sustainable Technology', name: 'Sustainable Technology', count: COMPREHENSIVE_SERVICES_2030.filter(s => s.category === 'Sustainable Technology').length, icon: '🌱', color: 'from-green-500 to-teal-500' },
-    { id: 'AI & Content', name: 'AI & Content', count: COMPREHENSIVE_SERVICES_2030.filter(s => s.category === 'AI & Content').length, icon: '✍️', color: 'from-orange-500 to-red-500' },
-    { id: 'AI & Customer Support', name: 'AI & Customer Support', count: COMPREHENSIVE_SERVICES_2030.filter(s => s.category === 'AI & Customer Support').length, icon: '💬', color: 'from-blue-500 to-purple-500' },
-    { id: 'AI & HR', name: 'AI & HR', count: COMPREHENSIVE_SERVICES_2030.filter(s => s.category === 'AI & HR').length, icon: '👥', color: 'from-indigo-500 to-blue-500' },
-    { id: 'AI & Legal Tech', name: 'AI & Legal Tech', count: COMPREHENSIVE_SERVICES_2030.filter(s => s.category === 'AI & Legal Tech').length, icon: '⚖️', color: 'from-blue-500 to-indigo-500' },
-    { id: 'AI & Research', name: 'AI & Research', count: COMPREHENSIVE_SERVICES_2030.filter(s => s.category === 'AI & Research').length, icon: '🔬', color: 'from-purple-500 to-violet-500' },
-    { id: 'AI & Green Tech', name: 'AI & Green Tech', count: COMPREHENSIVE_SERVICES_2030.filter(s => s.category === 'AI & Green Tech').length, icon: '🌿', color: 'from-green-500 to-emerald-500' },
-    { id: 'AI & Metaverse', name: 'AI & Metaverse', count: COMPREHENSIVE_SERVICES_2030.filter(s => s.category === 'AI & Metaverse').length, icon: '🌍', color: 'from-purple-500 to-indigo-500' },
-    { id: 'AI & Space Tech', name: 'AI & Space Tech', count: COMPREHENSIVE_SERVICES_2030.filter(s => s.category === 'AI & Space Tech').length, icon: '🛸', color: 'from-indigo-500 to-purple-500' },
-    { id: 'AI & Operations', name: 'AI & Operations', count: COMPREHENSIVE_SERVICES_2030.filter(s => s.category === 'AI & Operations').length, icon: '⚙️', color: 'from-gray-500 to-slate-500' },
-    { id: 'AI & Development', name: 'AI & Development', count: COMPREHENSIVE_SERVICES_2030.filter(s => s.category === 'AI & Development').length, icon: '💻', color: 'from-cyan-500 to-blue-500' },
-    { id: 'AI & Education', name: 'AI & Education', count: COMPREHENSIVE_SERVICES_2030.filter(s => s.category === 'AI & Education').length, icon: '🎓', color: 'from-blue-500 to-indigo-500' },
-    { id: 'AI & Entertainment', name: 'AI & Entertainment', count: COMPREHENSIVE_SERVICES_2030.filter(s => s.category === 'AI & Entertainment').length, icon: '🎮', color: 'from-purple-500 to-pink-500' }
-  ];
+  // Get unique categories from services with dynamic generation
+  const generateCategories = () => {
+    const categoryIcons: { [key: string]: string } = {
+      'AI & Business Intelligence': '🤖',
+      'AI & Marketing': '📈',
+      'AI & Healthcare': '🏥',
+      'AI & Legal Tech': '⚖️',
+      'AI & Real Estate': '🏠',
+      'AI & Operations': '⚙️',
+      'AI & Green Tech': '🌿',
+      'AI & Autonomous Systems': '🚗',
+      'AI & FinTech': '💰',
+      'AI & Environmental Tech': '🌍',
+      'AI & Content': '✍️',
+      'AI & Customer Support': '💬',
+      'AI & HR': '👥',
+      'AI & Research': '🔬',
+      'AI & Metaverse': '🌍',
+      'AI & Space Tech': '🛸',
+      'AI & Development': '💻',
+      'AI & Education': '🎓',
+      'AI & Entertainment': '🎮',
+      'Cybersecurity': '🛡️',
+      'Cloud & DevOps': '☁️',
+      'Quantum Computing': '⚛️',
+      'IoT & Edge Computing': '🌐',
+      'Blockchain & Web3': '🔗',
+      'Digital Twin': '🔄',
+      'Space Technology': '🚀',
+      'Sustainable Technology': '🌱',
+      'IT Infrastructure': '🏗️',
+      'Emerging Technology': '🚀'
+    };
 
-  const filteredServices = COMPREHENSIVE_SERVICES_2030.filter(service => {
+    const categoryColors: { [key: string]: string } = {
+      'AI & Business Intelligence': 'from-purple-500 to-pink-500',
+      'AI & Marketing': 'from-green-500 to-emerald-500',
+      'AI & Healthcare': 'from-pink-500 to-red-500',
+      'AI & Legal Tech': 'from-blue-500 to-indigo-500',
+      'AI & Real Estate': 'from-yellow-500 to-orange-500',
+      'AI & Operations': 'from-gray-500 to-slate-500',
+      'AI & Green Tech': 'from-green-500 to-emerald-500',
+      'AI & Autonomous Systems': 'from-cyan-500 to-blue-500',
+      'AI & FinTech': 'from-emerald-500 to-green-500',
+      'AI & Environmental Tech': 'from-teal-500 to-green-500',
+      'AI & Content': 'from-orange-500 to-red-500',
+      'AI & Customer Support': 'from-blue-500 to-purple-500',
+      'AI & HR': 'from-indigo-500 to-blue-500',
+      'AI & Research': 'from-purple-500 to-violet-500',
+      'AI & Metaverse': 'from-purple-500 to-indigo-500',
+      'AI & Space Tech': 'from-indigo-500 to-purple-500',
+      'AI & Development': 'from-cyan-500 to-blue-500',
+      'AI & Education': 'from-blue-500 to-indigo-500',
+      'AI & Entertainment': 'from-purple-500 to-pink-500',
+      'Cybersecurity': 'from-red-500 to-orange-500',
+      'Cloud & DevOps': 'from-blue-500 to-cyan-500',
+      'Quantum Computing': 'from-indigo-500 to-purple-500',
+      'IoT & Edge Computing': 'from-teal-500 to-cyan-500',
+      'Blockchain & Web3': 'from-yellow-500 to-orange-500',
+      'Digital Twin': 'from-blue-500 to-indigo-500',
+      'Space Technology': 'from-purple-500 to-pink-500',
+      'Sustainable Technology': 'from-green-500 to-teal-500',
+      'IT Infrastructure': 'from-slate-500 to-gray-500',
+      'Emerging Technology': 'from-violet-500 to-purple-500'
+    };
+
+    return [
+      { id: 'all', name: 'All Services', count: COMPREHENSIVE_SERVICES_INDEX_2030.length, icon: '🚀', color: 'from-cyan-500 to-blue-500' },
+      ...SERVICE_CATEGORIES_2030.map(category => ({
+        id: category,
+        name: category,
+        count: COMPREHENSIVE_SERVICES_INDEX_2030.filter(s => s.category === category).length,
+        icon: categoryIcons[category] || '🔧',
+        color: categoryColors[category] || 'from-gray-500 to-slate-500'
+      }))
+    ];
+  };
+
+  const categories = generateCategories();
+
+  const filteredServices = COMPREHENSIVE_SERVICES_INDEX_2030.filter(service => {
     const matchesCategory = activeCategory === 'all' || service.category === activeCategory;
     const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
@@ -177,8 +228,8 @@ export default function Services() {
                 </div>
               </div>
               
-              {/* Enhanced Services Link */}
-              <div className="mt-8">
+              {/* Enhanced Services Links */}
+              <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center">
                 <Link
                   to="/services/enhanced"
                   className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105"
@@ -186,7 +237,40 @@ export default function Services() {
                   <ArrowRight className="w-5 h-5 mr-2" />
                   View Enhanced Services Landing
                 </Link>
+                <Link
+                  to="/services/comprehensive-2030"
+                  className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-600 text-white font-semibold rounded-lg hover:from-purple-600 hover:to-pink-700 transition-all duration-300 transform hover:scale-105"
+                >
+                  <Rocket className="w-5 h-5 mr-2" />
+                  View Comprehensive Services 2030
+                </Link>
               </div>
+            </motion.div>
+
+            {/* Services Statistics */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.3 }}
+              className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto mb-8"
+            >
+              <div className="text-center p-4 bg-slate-800/30 rounded-lg border border-slate-600">
+                <div className="text-2xl font-bold text-cyan-400 mb-2">{SERVICE_STATISTICS_2030.totalServices}</div>
+                <div className="text-sm text-slate-300">Total Services</div>
+              </div>
+              <div className="text-center p-4 bg-slate-800/30 rounded-lg border border-slate-600">
+                <div className="text-2xl font-bold text-purple-400 mb-2">{SERVICE_STATISTICS_2030.totalCategories}</div>
+                <div className="text-sm text-slate-300">Categories</div>
+              </div>
+              <div className="text-center p-4 bg-slate-800/30 rounded-lg border border-slate-600">
+                <div className="text-2xl font-bold text-green-400 mb-2">{SERVICE_STATISTICS_2030.aiServices}</div>
+                <div className="text-sm text-slate-300">AI Services</div>
+              </div>
+              <div className="text-center p-4 bg-slate-800/30 rounded-lg border border-slate-600">
+                <div className="text-2xl font-bold text-yellow-400 mb-2">{SERVICE_STATISTICS_2030.emergingTechServices}</div>
+                <div className="text-sm text-slate-300">Emerging Tech</div>
+              </div>
+            </motion.div>
             </motion.div>
 
             {/* Search and Filter Controls */}
@@ -236,7 +320,7 @@ export default function Services() {
                       : 'bg-slate-800/50 text-slate-300 hover:bg-slate-700/50 border border-slate-600'
                   }`}
                 >
-                  All Services ({COMPREHENSIVE_INNOVATIVE_SERVICES_2030.length})
+                  All Services ({COMPREHENSIVE_SERVICES_INDEX_2030.length})
                 </button>
                 {categories.slice(1).map((category) => (
                   <button
