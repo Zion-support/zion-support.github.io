@@ -112,12 +112,14 @@ function App() {
                 <Route path="/pricing-guide-2027" element={<ComprehensivePricingGuide2027 />} />
                 <Route path="/pricing-guide-2025" element={<ComprehensivePricingGuide2025 />} />
                 <Route path="/pricing-guide-2030" element={<ComprehensivePricingGuide2030 />} />
+                <Route path="/comprehensive-pricing-guide-2030" element={<ComprehensivePricingGuide2030 />} />
                 <Route path="/request-quote" element={<RequestQuote />} />
                 <Route path="/dashboard" element={<Dashboard />} />
                 <Route path="/login" element={<Login />} />
                 <Route path="/marketplace" element={<Marketplace />} />
                 <Route path="/innovative-micro-saas-services-2025" element={<InnovativeMicroSAASServices2025 />} />
                 <Route path="/innovative-services-showcase-2027" element={<InnovativeServicesShowcase2027 />} />
+                <Route path="/innovative-services-showcase-2030" element={<InnovativeServicesShowcase2030 />} />
                 <Route path="/comprehensive-services-landing-2027" element={<ComprehensiveServicesLanding2027 />} />
                 <Route path="/services/innovative-2025" element={<InnovativeServices2025 />} />
                 <Route path="/schedule-demo" element={<ScheduleDemo />} />
