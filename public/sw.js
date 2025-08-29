@@ -6,11 +6,13 @@ const DYNAMIC_CACHE = 'zion-dynamic-v1';
 const STATIC_FILES = [
   '/',
   '/index.html',
-  '/static/js/bundle.js',
-  '/static/css/main.css',
   '/manifest.json',
   '/favicon.ico',
-  '/images/zion-logo.png'
+  '/css/main.css',
+  '/js/main.js',
+  '/images/logo.png',
+  '/images/hero-bg.jpg',
+  '/images/grid-pattern.svg'
 ];
 
 // Install event - cache static files
@@ -21,14 +23,13 @@ self.addEventListener('install', (event) => {
         console.log('Caching static files');
         return cache.addAll(STATIC_FILES);
       })
-      .then(() => {
-        console.log('Static files cached successfully');
-        return self.skipWaiting();
-      })
       .catch((error) => {
-        console.error('Error caching static files:', error);
+        console.error('Failed to cache static files:', error);
       })
   );
+  
+  // Force the waiting service worker to become the active service worker
+  self.skipWaiting();
 });
 
 // Activate event - clean up old caches
@@ -46,7 +47,7 @@ self.addEventListener('activate', (event) => {
         );
       })
       .then(() => {
-        console.log('Service Worker activated');
+        // Take control of all clients
         return self.clients.claim();
       })
   );
@@ -68,126 +69,135 @@ self.addEventListener('fetch', (event) => {
   }
 
   // Handle different types of requests
-  if (isStaticAsset(request)) {
-    // Static assets - cache first strategy
-    event.respondWith(cacheFirst(request, STATIC_CACHE));
-  } else if (isAPIRequest(request)) {
-    // API requests - network first strategy
-    event.respondWith(networkFirst(request, DYNAMIC_CACHE));
+  if (url.pathname === '/') {
+    // Home page - serve from cache first, then network
+    event.respondWith(
+      caches.match(request)
+        .then((response) => {
+          if (response) {
+            // Return cached version and update in background
+            fetch(request).then((freshResponse) => {
+              if (freshResponse.ok) {
+                caches.open(DYNAMIC_CACHE).then((cache) => {
+                  cache.put(request, freshResponse);
+                });
+              }
+            });
+            return response;
+          }
+          return fetch(request);
+        })
+    );
+  } else if (STATIC_FILES.includes(url.pathname)) {
+    // Static files - serve from cache
+    event.respondWith(
+      caches.match(request)
+        .then((response) => {
+          return response || fetch(request);
+        })
+    );
+  } else if (url.pathname.startsWith('/api/')) {
+    // API requests - network first, fallback to cache
+    event.respondWith(
+      fetch(request)
+        .then((response) => {
+          if (response.ok) {
+            // Cache successful API responses
+            const responseClone = response.clone();
+            caches.open(DYNAMIC_CACHE).then((cache) => {
+              cache.put(request, responseClone);
+            });
+          }
+          return response;
+        })
+        .catch(() => {
+          // Fallback to cached version if available
+          return caches.match(request);
+        })
+    );
   } else {
-    // HTML pages - network first strategy
-    event.respondWith(networkFirst(request, DYNAMIC_CACHE));
+    // Other requests - cache first, then network
+    event.respondWith(
+      caches.match(request)
+        .then((response) => {
+          if (response) {
+            return response;
+          }
+          return fetch(request)
+            .then((fetchResponse) => {
+              if (fetchResponse.ok) {
+                // Cache the response
+                const responseClone = fetchResponse.clone();
+                caches.open(DYNAMIC_CACHE).then((cache) => {
+                  cache.put(request, responseClone);
+                });
+              }
+              return fetchResponse;
+            });
+        })
+    );
   }
 });
-
-// Cache first strategy for static assets
-async function cacheFirst(request, cacheName) {
-  try {
-    const cachedResponse = await caches.match(request);
-    if (cachedResponse) {
-      return cachedResponse;
-    }
-    
-    const networkResponse = await fetch(request);
-    if (networkResponse.ok) {
-      const cache = await caches.open(cacheName);
-      cache.put(request, networkResponse.clone());
-    }
-    return networkResponse;
-  } catch (error) {
-    console.error('Cache first strategy failed:', error);
-    return new Response('Network error', { status: 503 });
-  }
-}
-
-// Network first strategy for dynamic content
-async function networkFirst(request, cacheName) {
-  try {
-    const networkResponse = await fetch(request);
-    if (networkResponse.ok) {
-      const cache = await caches.open(cacheName);
-      cache.put(request, networkResponse.clone());
-    }
-    return networkResponse;
-  } catch (error) {
-    console.log('Network failed, trying cache:', error);
-    const cachedResponse = await caches.match(request);
-    if (cachedResponse) {
-      return cachedResponse;
-    }
-    
-    // Return offline page for HTML requests
-    if (request.headers.get('accept')?.includes('text/html')) {
-      return caches.match('/offline.html');
-    }
-    
-    return new Response('Offline', { status: 503 });
-  }
-}
-
-// Check if request is for a static asset
-function isStaticAsset(request) {
-  const url = new URL(request.url);
-  const staticExtensions = ['.js', '.css', '.png', '.jpg', '.jpeg', '.gif', '.svg', '.woff', '.woff2', '.ttf', '.eot'];
-  return staticExtensions.some(ext => url.pathname.endsWith(ext));
-}
-
-// Check if request is for an API
-function isAPIRequest(request) {
-  const url = new URL(request.url);
-  return url.pathname.startsWith('/api/') || url.pathname.includes('analytics');
-}
 
 // Background sync for offline actions
 self.addEventListener('sync', (event) => {
   if (event.tag === 'background-sync') {
-    event.waitUntil(doBackgroundSync());
+    event.waitUntil(
+      // Handle background sync tasks
+      console.log('Background sync triggered')
+    );
   }
 });
 
-// Background sync implementation
-async function doBackgroundSync() {
-  try {
-    // Implement background sync logic here
-    // For example, sync form submissions, analytics data, etc.
-    console.log('Background sync completed');
-  } catch (error) {
-    console.error('Background sync failed:', error);
-  }
-}
-
 // Push notification handling
 self.addEventListener('push', (event) => {
-  if (event.data) {
-    const data = event.data.json();
-    const options = {
-      body: data.body,
-      icon: '/images/zion-logo.png',
-      badge: '/images/badge.png',
-      vibrate: [100, 50, 100],
-      data: {
-        url: data.url
+  const options = {
+    body: event.data ? event.data.text() : 'New notification from Zion Tech Group',
+    icon: '/icons/icon-192x192.png',
+    badge: '/icons/icon-72x72.png',
+    vibrate: [100, 50, 100],
+    data: {
+      dateOfArrival: Date.now(),
+      primaryKey: 1
+    },
+    actions: [
+      {
+        action: 'explore',
+        title: 'Explore',
+        icon: '/icons/explore-icon.png'
+      },
+      {
+        action: 'close',
+        title: 'Close',
+        icon: '/icons/close-icon.png'
       }
-    };
+    ]
+  };
 
-    event.waitUntil(
-      self.registration.showNotification(data.title, options)
-    );
-  }
+  event.waitUntil(
+    self.registration.showNotification('Zion Tech Group', options)
+  );
 });
 
 // Notification click handling
 self.addEventListener('notificationclick', (event) => {
   event.notification.close();
-  
-  if (event.notification.data.url) {
+
+  if (event.action === 'explore') {
     event.waitUntil(
-      clients.openWindow(event.notification.data.url)
+      clients.openWindow('/')
+    );
+  } else if (event.action === 'close') {
+    // Just close the notification
+  } else {
+    // Default action - open the app
+    event.waitUntil(
+      clients.openWindow('/')
     );
   }
 });
 
-// Message handling for communication with main thread
+// Message handling from main thread
 self.addEventListener('message', (event) => {
   if (event.data && event.data.type === 'SKIP_WAITING') {
     self.skipWaiting();
@@ -196,14 +206,4 @@ self.addEventListener('message', (event) => {
   if (event.data && event.data.type === 'GET_VERSION') {
     event.ports[0].postMessage({ version: CACHE_NAME });
   }
-});
-
-// Error handling
-self.addEventListener('error', (event) => {
-  console.error('Service Worker error:', event.error);
-});
-
-// Unhandled rejection handling
-self.addEventListener('unhandledrejection', (event) => {
-  console.error('Service Worker unhandled rejection:', event.reason);
 });

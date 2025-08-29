@@ -6,7 +6,7 @@ import { ChatAssistant } from './components/ChatAssistant';
 import { LoadingSpinner } from './components/ui/LoadingSpinner';
 import { SEO } from './components/SEO';
 import { PerformanceOptimizer } from './components/PerformanceOptimizer';
-import { ErrorBoundary } from './components/ErrorBoundary';
+import { EnhancedErrorBoundary } from './components/EnhancedErrorBoundary';
 import { AccessibilityEnhancer } from './components/AccessibilityEnhancer';
 
 // Lazy load pages - only import existing ones
@@ -44,7 +44,7 @@ const ComprehensivePricingGuide2026 = React.lazy(() => import('./pages/Comprehen
 
 function App() {
   return (
-    <ErrorBoundary>
+    <EnhancedErrorBoundary enableReporting={true}>
       <Router>
         <div className="min-h-screen bg-futuristic">
           <AppHeader />
@@ -93,7 +93,7 @@ function App() {
           <AccessibilityEnhancer />
         </div>
       </Router>
-    </ErrorBoundary>
+    </EnhancedErrorBoundary>
   );
 }
 
