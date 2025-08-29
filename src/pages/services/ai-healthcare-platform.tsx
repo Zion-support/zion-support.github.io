@@ -2,41 +2,38 @@ import React from 'react';
 import { SEO } from '../../components/SEO';
 import { 
   Heart, 
-  Brain, 
   Shield, 
-  Zap, 
+  Activity, 
   Users, 
-  Clock, 
-  TrendingUp, 
-  CheckCircle,
-  Stethoscope,
-  Microscope,
-  Pill,
-  Activity,
-  Database,
-  Lock,
-  Globe,
-  Smartphone,
-  Monitor,
-  AlertTriangle,
-  FileText,
-  BarChart3
+  Target, 
+  Zap, 
+  CheckCircle, 
+  ArrowRight, 
+  Star, 
+  Award, 
+  Lightbulb, 
+  BarChart3, 
+  Smartphone, 
+  Monitor, 
+  AlertTriangle, 
+  FileText, 
+  BarChart3 
 } from 'lucide-react';
 
 const AIHealthcarePlatform: React.FC = () => {
   const features = [
     {
-      icon: Brain,
+      icon: Heart,
       title: 'AI-Powered Diagnostics',
       description: 'Advanced machine learning algorithms for accurate disease detection and diagnosis'
     },
     {
-      icon: Heart,
+      icon: Shield,
       title: 'Patient Monitoring',
       description: 'Real-time health monitoring with predictive analytics and early warning systems'
     },
     {
-      icon: Shield,
+      icon: Activity,
       title: 'HIPAA Compliant',
       description: 'Enterprise-grade security with full HIPAA compliance and data protection'
     },
@@ -49,27 +46,22 @@ const AIHealthcarePlatform: React.FC = () => {
       icon: Users,
       title: 'Multi-user Access',
       description: 'Role-based access control for doctors, nurses, and administrators'
-    },
-    {
-      icon: Clock,
-      title: '24/7 Availability',
-      description: 'Round-the-clock monitoring and support for critical care scenarios'
     }
   ];
 
   const solutions = [
     {
-      icon: Stethoscope,
+      icon: Lightbulb,
       title: 'Clinical Decision Support',
       description: 'AI-powered recommendations for treatment plans and medication management'
     },
     {
-      icon: Microscope,
+      icon: Target,
       title: 'Medical Imaging Analysis',
       description: 'Computer vision for X-rays, MRIs, and CT scans with 99.9% accuracy'
     },
     {
-      icon: Pill,
+      icon: Award,
       title: 'Drug Interaction Checker',
       description: 'Real-time medication interaction analysis and dosage optimization'
     },
@@ -77,16 +69,6 @@ const AIHealthcarePlatform: React.FC = () => {
       icon: Activity,
       title: 'Vital Signs Monitoring',
       description: 'Continuous monitoring of heart rate, blood pressure, and oxygen levels'
-    },
-    {
-      icon: Database,
-      title: 'Electronic Health Records',
-      description: 'Intelligent EHR system with natural language processing capabilities'
-    },
-    {
-      icon: Lock,
-      title: 'Secure Data Exchange',
-      description: 'Blockchain-based secure sharing of patient data between facilities'
     }
   ];
 
@@ -216,7 +198,7 @@ const AIHealthcarePlatform: React.FC = () => {
             <div className="relative">
               <div className="p-8 bg-slate-800/50 border border-cyan-400/20 rounded-xl">
                 <div className="text-center">
-                  <TrendingUp className="w-16 h-16 text-cyan-400 mx-auto mb-4" />
+                  <BarChart3 className="w-16 h-16 text-cyan-400 mx-auto mb-4" />
                   <h3 className="text-2xl font-bold text-white mb-4">Performance Metrics</h3>
                   <div className="grid grid-cols-2 gap-6">
                     <div className="text-center">
