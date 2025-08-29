@@ -151,7 +151,6 @@ export function AdvancedAIBusinessProcessAutomation() {
     const [showAIInsights, setShowAIInsights] = useState(true);
     const [showAutomation, setShowAutomation] = useState(true);
     const [businessProcesses, setBusinessProcesses] = useState(mockBusinessProcesses);
-    const [selectedProcess, setSelectedProcess] = useState(null);
     const [isExecuting, setIsExecuting] = useState(false);
     const containerRef = useRef(null);
     const getStatusColor = (status) => {
