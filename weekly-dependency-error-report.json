@@ -1,0 +1,10 @@
+{
+  "timestamp": "2025-08-29T18:40:48.298Z",
+  "status": "completed",
+  "outdatedPackages": {},
+  "securityIssues": {},
+  "summary": {
+    "totalOutdated": 0,
+    "totalVulnerabilities": 0
+  }
+}

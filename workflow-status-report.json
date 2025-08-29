@@ -1,0 +1,31 @@
+{
+  "timestamp": "2025-08-29T18:40:50.261Z",
+  "status": "completed",
+  "systemStatus": {
+    "disk": "Filesystem      Size  Used Avail Use% Mounted on\noverlay         126G   13G  108G  11% /\n",
+    "memory": "               total        used        free      shared  buff/cache   available\nMem:            15Gi       4.0Gi       993Mi        10Mi        10Gi        11Gi\nSwap:             0B          0B          0B\n",
+    "cpu": " 18:40:50 up 2 days, 23:54,  0 user,  load average: 1.06, 3.50, 6.76\n"
+  },
+  "buildStatus": {
+    "exists": true,
+    "lastModified": "2025-08-29T18:38:27.662Z",
+    "hoursOld": 0,
+    "status": "recent"
+  },
+  "deploymentStatus": {
+    "hasStartScript": "vite preview",
+    "nodeVersion": "v22.16.0",
+    "platform": "linux",
+    "arch": "x64"
+  },
+  "summary": {
+    "buildExists": true,
+    "buildAge": "N/A",
+    "hasStartScript": "vite preview"
+  },
+  "health": {
+    "score": 100,
+    "status": "healthy",
+    "issues": []
+  }
+}
