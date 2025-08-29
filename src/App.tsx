@@ -196,42 +196,43 @@ function App() {
                       <Route path="/services/ai-financial-fraud-detection" element={<AIFinancialFraudDetection />} />
                       <Route path="/services/ai-energy-management-system" element={<AIEnergyManagementSystem />} />
 
-                {/* Enhanced 404 route */}
-                <Route path="*" element={
-                  <div className="min-h-screen bg-futuristic flex items-center justify-center">
-                    <SEO 
-                      title="Page Not Found - Zion Tech Group"
-                      description="The page you're looking for doesn't exist."
-                      keywords="404, page not found, Zion Tech Group"
-                      ogType="website"
-                    />
-                    <div className="text-center text-white">
-                      <h1 className="text-6xl font-bold mb-4 animate-fade-in">404</h1>
-                      <p className="text-xl text-gray-300 mb-8 animate-fade-in animation-delay-200">Page Not Found</p>
-                      <p className="text-gray-400 mb-8 animate-fade-in animation-delay-400">The page you're looking for doesn't exist.</p>
-                      <button 
-                        onClick={() => window.history.back()} 
-                        className="btn-futuristic mr-4"
-                      >
-                        Go Back
-                      </button>
-                      <button 
-                        onClick={() => window.location.href = '/'} 
-                        className="btn-futuristic"
-                      >
-                        Go Home
-                      </button>
-                    </div>
-                  </div>
-                } />
-              </Routes>
-            </Suspense>
-          </main>
-          <Footer />
-          <ChatAssistant />
-          <PerformanceOptimizer />
-          <AccessibilityEnhancer showAccessibilityPanel={true} />
-        </div>
+                      {/* Enhanced 404 route */}
+                      <Route path="*" element={
+                        <div className="min-h-screen bg-futuristic flex items-center justify-center">
+                          <SEO 
+                            title="Page Not Found - Zion Tech Group"
+                            description="The page you're looking for doesn't exist."
+                            keywords="404, page not found, Zion Tech Group"
+                            ogType="website"
+                          />
+                          <div className="text-center text-white">
+                            <h1 className="text-6xl font-bold mb-4 animate-fade-in">404</h1>
+                            <p className="text-xl text-gray-300 mb-8 animate-fade-in animation-delay-200">Page Not Found</p>
+                            <p className="text-gray-400 mb-8 animate-fade-in animation-delay-400">The page you're looking for doesn't exist.</p>
+                            <button 
+                              onClick={() => window.history.back()} 
+                              className="btn-futuristic mr-4"
+                            >
+                              Go Back
+                            </button>
+                            <button 
+                              onClick={() => window.location.href = '/'} 
+                              className="btn-futuristic"
+                            >
+                              Go Home
+                            </button>
+                          </div>
+                        </div>
+                      } />
+                    </Routes>
+                  </Suspense>
+                </main>
+                <Footer />
+                <ChatAssistant />
+              </div>
+            </ModernUIEnhancer>
+          </AccessibilityEnhancer>
+        </PerformanceOptimizer>
       </Router>
     </ErrorBoundary>
   );
