@@ -92,6 +92,18 @@ const footerSections = [
     ]
   },
   {
+    title: 'Core Services',
+    icon: Zap,
+    links: [
+      { name: 'AI Services', path: '/ai-services', icon: Brain },
+      { name: 'IT Services', path: '/it-services', icon: Server },
+      { name: 'Micro SaaS', path: '/micro-saas', icon: ShoppingCart },
+      { name: 'Cloud DevOps', path: '/services/cloud-devops', icon: Cloud },
+      { name: 'Cybersecurity', path: '/services/ai-cybersecurity-platform', icon: Shield },
+      { name: 'Digital Transformation', path: '/services/digital-transformation', icon: Zap }
+    ]
+  },
+  {
     title: 'AI & Research Services',
     icon: Brain,
     links: [

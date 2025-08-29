@@ -71,8 +71,8 @@ const Sitemap = () => {
         { name: 'AI Business Intelligence', path: '/services/ai-business-intelligence', description: 'Advanced analytics & ML insights' },
         { name: 'AI Compliance Assistant', path: '/services/ai-compliance-assistant', description: 'Automated regulatory compliance' },
         { name: 'AI Sales Copilot', path: '/services/ai-sales-copilot', description: 'Intelligent sales optimization' },
-        { name: 'AI-Powered SEO', path: '/services/ai-seo', description: 'Machine learning SEO optimization' },
-        { name: 'Interview Assessment AI', path: '/services/interview-assessment', description: 'AI-powered candidate evaluation' },
+        { name: 'AI-Powered SEO', path: '/services/ai-powered-seo', description: 'Machine learning SEO optimization' },
+        { name: 'Interview Assessment AI', path: '/services/interview-assessment-ai', description: 'AI-powered candidate evaluation' },
         { name: 'AI Content Marketing Suite', path: '/services/ai-content-marketing-suite', description: 'Automated content creation' },
         { name: 'AI Customer Support', path: '/services/ai-customer-support-automation', description: 'Intelligent support automation' },
         { name: 'AI Project Management', path: '/services/ai-project-management', description: 'AI-driven project optimization' },
@@ -138,7 +138,7 @@ const Sitemap = () => {
       icon: ShoppingCart,
       links: [
         { name: 'Micro CRM', path: '/services/micro-crm', description: 'Customer relationship management' },
-        { name: 'Helpdesk Platform', path: '/services/helpdesk', description: 'Customer support system' },
+        { name: 'Helpdesk Platform', path: '/services/helpdesk-platform', description: 'Customer support system' },
         { name: 'Website Analytics', path: '/services/website-analytics', description: 'Performance tracking & insights' },
         { name: 'IT Helpdesk', path: '/services/it-helpdesk', description: 'IT support system' },
         { name: 'Affiliate Tracking', path: '/services/affiliate-tracking', description: 'Affiliate program management' },
@@ -187,6 +187,19 @@ const Sitemap = () => {
         { name: 'Comprehensive Pricing 2026', path: '/comprehensive-pricing-2026', description: '2026 pricing guide' },
         { name: 'Comprehensive Pricing 2028', path: '/comprehensive-pricing-2028', description: '2028 pricing guide' },
         { name: 'Comprehensive Pricing Guide 2027', path: '/comprehensive-pricing-guide-2027', description: '2027 pricing guide' },
+        { name: 'Pricing', path: '/pricing', description: 'Service pricing information' },
+      ]
+    },
+    {
+      title: 'Additional Resources',
+      icon: BookOpen,
+      links: [
+        { name: 'Marketplace', path: '/marketplace', description: 'Product and service marketplace' },
+        { name: 'AI Solutions Hub', path: '/ai-solutions', description: 'AI solutions overview' },
+        { name: 'IT Consulting', path: '/it-consulting', description: 'IT consulting services' },
+        { name: 'Space Technology', path: '/space-tech', description: 'Space technology solutions' },
+        { name: 'Data Analytics', path: '/data-analytics', description: 'Data analytics services' },
+        { name: 'Sitemap', path: '/sitemap', description: 'Complete site navigation' },
       ]
     }
   ];

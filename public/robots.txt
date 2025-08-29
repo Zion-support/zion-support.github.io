@@ -2,26 +2,44 @@ User-agent: *
 Allow: /
 
 # Sitemap
-Sitemap: https://ziontechgroup.com/sitemap.xml
+Sitemap: https://ziontechgroup.com/sitemap
+
+# Allow all important pages
+Allow: /about
+Allow: /services
+Allow: /ai-services
+Allow: /it-services
+Allow: /micro-saas
+Allow: /contact
+Allow: /blog
+Allow: /careers
+Allow: /partners
+Allow: /news
+Allow: /case-studies
+Allow: /help
+Allow: /faq
+Allow: /pricing
+Allow: /marketplace
+Allow: /ai-solutions
+Allow: /it-consulting
+Allow: /space-tech
+Allow: /quantum-computing
+Allow: /iot-edge-computing
+Allow: /digital-twin
+Allow: /data-analytics
+
+# Allow all service pages
+Allow: /services/
+
+# Allow all solution pages
+Allow: /solutions/
 
 # Disallow admin and private areas
 Disallow: /admin/
-Disallow: /api/
 Disallow: /private/
-Disallow: /temp/
-
-# Allow important pages
-Allow: /services/
-Allow: /solutions/
-Allow: /about/
-Allow: /contact/
-Allow: /blog/
-Allow: /careers/
-Allow: /faq/
-Allow: /privacy/
-Allow: /terms/
-
-# Duplicate section removed above; keep a single block for clarity
+Disallow: /api/
+Disallow: /_next/
+Disallow: /static/
 
 # Crawl delay (optional)
 Crawl-delay: 1

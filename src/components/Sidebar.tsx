@@ -77,9 +77,11 @@ export const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
         { name: 'FAQ', href: '/faq', icon: HelpCircle },
         { name: 'Help Center', href: '/help', icon: HelpCircle },
         { name: 'Careers', href: '/careers', icon: Briefcase },
-        { name: 'Partners', path: '/partners', icon: Users },
-        { name: 'News', path: '/news', icon: Newspaper },
-        { name: 'Case Studies', path: '/case-studies', icon: FileText }
+        { name: 'Partners', href: '/partners', icon: Users },
+        { name: 'News', href: '/news', icon: Newspaper },
+        { name: 'Case Studies', href: '/case-studies', icon: FileText },
+        { name: 'Pricing', href: '/pricing', icon: DollarSign },
+        { name: 'Marketplace', href: '/marketplace', icon: ShoppingCart }
       ]
     },
     {

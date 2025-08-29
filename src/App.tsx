@@ -397,6 +397,18 @@ function App() {
                     <Route path="/case-studies" element={<CaseStudies />} />
                     <Route path="/help" element={<HelpCenter />} />
                     
+                    {/* Missing Routes from Navigation */}
+                    <Route path="/pricing" element={<Pricing />} />
+                    <Route path="/marketplace" element={<Marketplace />} />
+                    <Route path="/ai-solutions" element={<AiSolutions />} />
+                    <Route path="/it-consulting" element={<ITConsulting />} />
+                    <Route path="/space-tech" element={<SpaceTech />} />
+                    <Route path="/quantum-computing" element={<QuantumComputing />} />
+                    <Route path="/iot-edge-computing" element={<IoTEdgeComputing />} />
+                    <Route path="/digital-twin" element={<DigitalTwin />} />
+                    <Route path="/data-analytics" element={<DataAnalytics />} />
+                    <Route path="/sitemap" element={<Sitemap />} />
+                    
                     {/* 404 Page */}
                     <Route 
                       path="*" 
