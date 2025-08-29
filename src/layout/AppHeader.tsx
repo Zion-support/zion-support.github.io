@@ -9,6 +9,8 @@ export function AppHeader() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [searchQuery, setSearchQuery] = useState('');
   const [servicesDropdownOpen, setServicesDropdownOpen] = useState(false);
+  const [solutionsDropdownOpen, setSolutionsDropdownOpen] = useState(false);
+  const [companyDropdownOpen, setCompanyDropdownOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const [isSearching, setIsSearching] = useState(false);
 
@@ -69,11 +71,11 @@ export function AppHeader() {
   const mainNavigation = [
     { name: 'Home', href: '/', current: true, hasDropdown: false },
     { name: 'Services', href: '/services', current: false, hasDropdown: true },
-    { name: 'AI Services', href: '/ai-services', current: false, hasDropdown: false },
-    { name: 'IT Services', href: '/it-services', current: false, hasDropdown: false },
-    { name: 'Micro SaaS', href: '/micro-saas', current: false, hasDropdown: false },
-    { name: 'Pricing', href: '/pricing-guide', current: false, hasDropdown: false },
-    { name: 'About', href: '/about', current: false, hasDropdown: false },
+    { name: 'Solutions', href: '/solutions', current: false, hasDropdown: true },
+    { name: 'Talent', href: '/talent', current: false, hasDropdown: false },
+    { name: 'Equipment', href: '/equipment', current: false, hasDropdown: false },
+    { name: 'Marketplace', href: '/marketplace', current: false, hasDropdown: false },
+    { name: 'Company', href: '/about', current: false, hasDropdown: true },
     { name: 'Contact', href: '/contact', current: false, hasDropdown: false },
   ];
 
@@ -140,6 +142,84 @@ export function AppHeader() {
     }
   ];
 
+  const solutionsCategories = [
+    {
+      name: 'Industry Solutions',
+      description: 'Specialized solutions for specific industries',
+      color: 'from-emerald-500 to-teal-600',
+      icon: Building2,
+      services: [
+        { name: 'Healthcare Tech', href: '/services/healthcare-tech', description: 'Healthcare technology solutions' },
+        { name: 'Financial Services', href: '/services/ai-financial-trading-platform', description: 'Fintech and trading solutions' },
+        { name: 'Manufacturing', href: '/services/digital-twin', description: 'Smart manufacturing solutions' },
+        { name: 'Retail & E-commerce', href: '/services/ecommerce-personalization', description: 'Digital commerce solutions' }
+      ]
+    },
+    {
+      name: 'Micro SaaS Solutions',
+      description: 'Ready-to-deploy SaaS applications',
+      color: 'from-violet-500 to-purple-600',
+      icon: Zap,
+      services: [
+        { name: 'AI Lead Scoring', href: '/services/ai-lead-scoring', description: 'Intelligent lead qualification' },
+        { name: 'Website AI Chatbot', href: '/services/website-ai-chatbot', description: 'Customer support automation' },
+        { name: 'RAG Search', href: '/services/rag-search', description: 'Advanced search capabilities' },
+        { name: 'MLOps Pipeline', href: '/services/mlops-pipeline', description: 'Machine learning operations' }
+      ]
+    },
+    {
+      name: 'Onsite Services',
+      description: 'Professional onsite IT support',
+      color: 'from-orange-500 to-red-600',
+      icon: Wrench,
+      services: [
+        { name: 'IT Onsite Support', href: '/it-onsite-services', description: 'Professional onsite assistance' },
+        { name: 'Deployment Services', href: '/services', description: 'Infrastructure deployment' },
+        { name: 'Training & Consulting', href: '/training', description: 'Staff training and consulting' },
+        { name: 'Emergency Response', href: '/contact', description: '24/7 emergency support' }
+      ]
+    }
+  ];
+
+  const companyCategories = [
+    {
+      name: 'About Us',
+      description: 'Learn about our company and mission',
+      color: 'from-slate-500 to-gray-600',
+      icon: Users,
+      services: [
+        { name: 'Our Story', href: '/about', description: 'Company history and mission' },
+        { name: 'Leadership Team', href: '/team', description: 'Meet our leadership' },
+        { name: 'Careers', href: '/careers', description: 'Join our team' },
+        { name: 'Press & Media', href: '/press', description: 'Company news and media' }
+      ]
+    },
+    {
+      name: 'Resources',
+      description: 'Educational content and tools',
+      color: 'from-blue-500 to-indigo-600',
+      icon: FileText,
+      services: [
+        { name: 'Blog & Insights', href: '/blog', description: 'Latest industry insights' },
+        { name: 'Case Studies', href: '/case-studies', description: 'Success stories' },
+        { name: 'White Papers', href: '/white-papers', description: 'In-depth research' },
+        { name: 'Webinars', href: '/webinars', description: 'Educational sessions' }
+      ]
+    },
+    {
+      name: 'Support & Community',
+      description: 'Get help and connect with others',
+      color: 'from-green-500 to-emerald-600',
+      icon: Headphones,
+      services: [
+        { name: 'Help Center', href: '/help', description: 'Documentation and guides' },
+        { name: 'FAQ', href: '/faq', description: 'Frequently asked questions' },
+        { name: 'Community', href: '/community', description: 'User community' },
+        { name: 'Contact Support', href: '/contact', description: 'Get in touch' }
+      ]
+    }
+  ];
+
   const quickLinks = [
     { name: 'Innovative Services 2025', href: '/innovative-services-showcase-2025', icon: Star, description: 'Latest cutting-edge solutions' },
     { name: 'Revolutionary Services 2030', href: '/revolutionary-services-showcase-2030', icon: TrendingUp, description: 'Future-ready services' },
@@ -186,11 +266,23 @@ export function AppHeader() {
                 <div key={item.name} className="relative">
                   {item.hasDropdown ? (
                     <button
-                      onClick={() => setServicesDropdownOpen(!servicesDropdownOpen)}
+                      onClick={() => {
+                        if (item.name === 'Services') {
+                          setServicesDropdownOpen(!servicesDropdownOpen);
+                        } else if (item.name === 'Solutions') {
+                          setSolutionsDropdownOpen(!solutionsDropdownOpen);
+                        } else if (item.name === 'Company') {
+                          setCompanyDropdownOpen(!companyDropdownOpen);
+                        }
+                      }}
                       className="flex items-center space-x-1 text-slate-300 hover:text-white transition-colors py-2"
                     >
                       <span>{item.name}</span>
-                      <ChevronDown className={`w-4 h-4 transition-transform ${servicesDropdownOpen ? 'rotate-180' : ''}`} />
+                      <ChevronDown className={`w-4 h-4 transition-transform ${
+                        (item.name === 'Services' && servicesDropdownOpen) ||
+                        (item.name === 'Solutions' && solutionsDropdownOpen) ||
+                        (item.name === 'Company' && companyDropdownOpen) ? 'rotate-180' : ''
+                      }`} />
                     </button>
                   ) : (
                     <Link
@@ -313,6 +405,100 @@ export function AppHeader() {
             </motion.div>
           )}
         </AnimatePresence>
+
+        {/* Solutions Dropdown */}
+        <AnimatePresence>
+          {solutionsDropdownOpen && (
+            <motion.div
+              initial={{ opacity: 0, height: 0 }}
+              animate={{ opacity: 1, height: 'auto' }}
+              exit={{ opacity: 0, height: 0 }}
+              transition={{ duration: 0.3 }}
+              className="bg-slate-900/95 backdrop-blur-xl border-b border-cyan-400/20"
+            >
+              <div className="container mx-auto px-4 py-8">
+                <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+                  {solutionsCategories.map((category) => (
+                    <div key={category.name} className="space-y-4">
+                      <div className="flex items-center space-x-3">
+                        <div className={`w-10 h-10 rounded-lg bg-gradient-to-br ${category.color} flex items-center justify-center`}>
+                          <category.icon className="w-5 h-5 text-white" />
+                        </div>
+                        <div>
+                          <h3 className="font-semibold text-white">{category.name}</h3>
+                          <p className="text-sm text-slate-400">{category.description}</p>
+                        </div>
+                      </div>
+                      <div className="space-y-2">
+                        {category.services.map((service) => (
+                          <Link
+                            key={service.name}
+                            to={service.href}
+                            className="block p-3 rounded-lg hover:bg-slate-800/50 transition-colors group"
+                          >
+                            <div className="font-medium text-white group-hover:text-cyan-400 transition-colors">
+                              {service.name}
+                            </div>
+                            <div className="text-sm text-slate-400 group-hover:text-slate-300 transition-colors">
+                              {service.description}
+                            </div>
+                          </Link>
+                        ))}
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </motion.div>
+          )}
+        </AnimatePresence>
+
+        {/* Company Dropdown */}
+        <AnimatePresence>
+          {companyDropdownOpen && (
+            <motion.div
+              initial={{ opacity: 0, height: 0 }}
+              animate={{ opacity: 1, height: 'auto' }}
+              exit={{ opacity: 0, height: 0 }}
+              transition={{ duration: 0.3 }}
+              className="bg-slate-900/95 backdrop-blur-xl border-b border-cyan-400/20"
+            >
+              <div className="container mx-auto px-4 py-8">
+                <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+                  {companyCategories.map((category) => (
+                    <div key={category.name} className="space-y-4">
+                      <div className="flex items-center space-x-3">
+                        <div className={`w-10 h-10 rounded-lg bg-gradient-to-br ${category.color} flex items-center justify-center`}>
+                          <category.icon className="w-5 h-5 text-white" />
+                        </div>
+                        <div>
+                          <h3 className="font-semibold text-white">{category.name}</h3>
+                          <p className="text-sm text-slate-400">{category.description}</p>
+                        </div>
+                      </div>
+                      <div className="space-y-2">
+                        {category.services.map((service) => (
+                          <Link
+                            key={service.name}
+                            to={service.href}
+                            className="block p-3 rounded-lg hover:bg-slate-800/50 transition-colors group"
+                          >
+                            <div className="font-medium text-white group-hover:text-cyan-400 transition-colors">
+                              {service.name}
+                            </div>
+                            <div className="text-sm text-slate-400 group-hover:text-slate-300 transition-colors">
+                              {service.description}
+                            </div>
+                          </Link>
+                        ))}
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </motion.div>
+          )}
+        </AnimatePresence>
       </header>
 
       {/* Mobile Menu */}
@@ -360,7 +546,9 @@ export function AppHeader() {
                         <div className="space-y-2">
                           <div className="font-medium text-white py-2">{item.name}</div>
                           <div className="pl-4 space-y-2">
-                            {servicesCategories.map((category) => (
+                            {(item.name === 'Services' ? servicesCategories : 
+                              item.name === 'Solutions' ? solutionsCategories : 
+                              companyCategories).map((category) => (
                               <div key={category.name} className="space-y-2">
                                 <div className="text-sm font-medium text-cyan-400">{category.name}</div>
                                 <div className="pl-4 space-y-1">
