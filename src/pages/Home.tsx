@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { ArrowRight, Brain, Shield, Zap, Star, CheckCircle, Rocket, Target, TrendingUp } from 'lucide-react';
 import EnhancedSEO from "@/components/EnhancedSEO";
-import { HeroSection } from "@/components/HeroSection";
+import EnhancedHeroSection from "@/components/EnhancedHeroSection";
 import { LoadingSpinner } from "@/components/ui/LoadingSpinner";
 
 // Lazy load components for better performance
@@ -198,7 +198,7 @@ export default function Home() {
       
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
         {/* Hero Section */}
-        <HeroSection />
+        <EnhancedHeroSection />
 
         {/* Quick Access Section */}
         <Suspense fallback={<LoadingFallback message="Loading quick access..." />}>
