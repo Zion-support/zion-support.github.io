@@ -1,5 +1,6 @@
-import React, { useState, useRef } from 'react';
-import { GitFork, Brain, Settings, X, Maximize2, Minimize2, Search, CheckCircle, BarChart3, TrendingUp, Target, Activity, Users, FileText, AlertTriangle, Lightbulb, DollarSign, PieChart, MoreVertical, Edit3, Server, Play, Loader } from 'lucide-react';
+import React from 'react';
+import { Activity, AlertTriangle, Brain, CheckCircle, DollarSign, FileText, Lightbulb, Loader, Maximize2, MoreVertical, Play, Search, Server, Settings, Target, TrendingUp, Users, Workflow, X } from 'lucide-react';
+import { useRef, useState } from 'react';
 const mockBusinessProcesses = [
     {
         id: 'bp-001',

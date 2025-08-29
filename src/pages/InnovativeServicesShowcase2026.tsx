@@ -469,7 +469,6 @@ export default function InnovativeServicesShowcase2026() {
         </div>
       </section>
     </motion.div>
-    </div>
   );
 };
 
