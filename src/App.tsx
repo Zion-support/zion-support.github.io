@@ -61,6 +61,30 @@ const AILegalDocumentAnalysis = React.lazy(() => import('./pages/services/ai-leg
 const AISupplyChainOptimization = React.lazy(() => import('./pages/services/ai-supply-chain-optimization'));
 const AIHealthcareAnalytics = React.lazy(() => import('./pages/services/ai-healthcare-analytics'));
 const AIFinancialTrading = React.lazy(() => import('./pages/services/ai-financial-trading'));
+
+// New IT Infrastructure & Cloud Services
+const CloudInfrastructureOptimization = React.lazy(() => import('./pages/services/CloudInfrastructureOptimization'));
+const AdvancedCybersecuritySuite = React.lazy(() => import('./pages/services/AdvancedCybersecuritySuite'));
+const EnterpriseDataPlatform = React.lazy(() => import('./pages/services/EnterpriseDataPlatform'));
+const SoftwareDefinedNetworkPlatform = React.lazy(() => import('./pages/services/SoftwareDefinedNetworkPlatform'));
+const IoTEdgeComputingPlatform = React.lazy(() => import('./pages/services/IoTEdgeComputingPlatform'));
+const BlockchainWeb3Platform = React.lazy(() => import('./pages/services/BlockchainWeb3Platform'));
+const APIManagementPlatform = React.lazy(() => import('./pages/services/APIManagementPlatform'));
+const DisasterRecoveryPlatform = React.lazy(() => import('./pages/services/DisasterRecoveryPlatform'));
+const ITSMPlatform = React.lazy(() => import('./pages/services/ITSMPlatform'));
+const PerformanceMonitoringPlatform = React.lazy(() => import('./pages/services/PerformanceMonitoringPlatform'));
+const IdentityAccessManagementPlatform = React.lazy(() => import('./pages/services/IdentityAccessManagementPlatform'));
+
+// Additional AI Services
+const AICustomerExperiencePlatform = React.lazy(() => import('./pages/services/AICustomerExperiencePlatform'));
+const AIHRTalentAnalytics = React.lazy(() => import('./pages/services/AIHRTalentAnalytics'));
+const AIMarketingAttributionPlatform = React.lazy(() => import('./pages/services/AIMarketingAttributionPlatform'));
+const AIPredictiveMaintenancePlatform = React.lazy(() => import('./pages/services/AIPredictiveMaintenancePlatform'));
+const AIContentOptimizationEngine = React.lazy(() => import('./pages/services/AIContentOptimizationEngine'));
+const AIResearchAssistantPlatform = React.lazy(() => import('./pages/services/AIResearchAssistantPlatform'));
+const AIAutonomousOperationsPlatform = React.lazy(() => import('./pages/services/AIAutonomousOperationsPlatform'));
+const AIMetaverseDevelopmentPlatform = React.lazy(() => import('./pages/services/AIMetaverseDevelopmentPlatform'));
+const AISpaceTechnologyPlatform = React.lazy(() => import('./pages/services/AISpaceTechnologyPlatform'));
 // Service pages - only import existing ones
 const CloudDevOps = React.lazy(() => import('./pages/services/CloudDevOps'));
 const DigitalTwin = React.lazy(() => import('./pages/services/DigitalTwin'));
@@ -137,6 +161,30 @@ function App() {
                 <Route path="/services/ai-supply-chain-optimization" element={<AISupplyChainOptimization />} />
                 <Route path="/services/ai-healthcare-analytics" element={<AIHealthcareAnalytics />} />
                 <Route path="/services/ai-financial-trading" element={<AIFinancialTrading />} />
+                
+                {/* New IT Infrastructure & Cloud Service Routes */}
+                <Route path="/services/cloud-infrastructure-optimization" element={<CloudInfrastructureOptimization />} />
+                <Route path="/services/advanced-cybersecurity-suite" element={<AdvancedCybersecuritySuite />} />
+                <Route path="/services/enterprise-data-platform" element={<EnterpriseDataPlatform />} />
+                <Route path="/services/software-defined-network-platform" element={<SoftwareDefinedNetworkPlatform />} />
+                <Route path="/services/iot-edge-computing-platform" element={<IoTEdgeComputingPlatform />} />
+                <Route path="/services/blockchain-web3-platform" element={<BlockchainWeb3Platform />} />
+                <Route path="/services/api-management-platform" element={<APIManagementPlatform />} />
+                <Route path="/services/disaster-recovery-platform" element={<DisasterRecoveryPlatform />} />
+                <Route path="/services/itsm-platform" element={<ITSMPlatform />} />
+                <Route path="/services/performance-monitoring-platform" element={<PerformanceMonitoringPlatform />} />
+                <Route path="/services/identity-access-management-platform" element={<IdentityAccessManagementPlatform />} />
+                
+                {/* Additional AI Service Routes */}
+                <Route path="/services/ai-customer-experience-platform" element={<AICustomerExperiencePlatform />} />
+                <Route path="/services/ai-hr-talent-analytics" element={<AIHRTalentAnalytics />} />
+                <Route path="/services/ai-marketing-attribution-platform" element={<AIMarketingAttributionPlatform />} />
+                <Route path="/services/ai-predictive-maintenance-platform" element={<AIPredictiveMaintenancePlatform />} />
+                <Route path="/services/ai-content-optimization-engine" element={<AIContentOptimizationEngine />} />
+                <Route path="/services/ai-research-assistant-platform" element={<AIResearchAssistantPlatform />} />
+                <Route path="/services/ai-autonomous-operations-platform" element={<AIAutonomousOperationsPlatform />} />
+                <Route path="/services/ai-metaverse-development-platform" element={<AIMetaverseDevelopmentPlatform />} />
+                <Route path="/services/ai-space-technology-platform" element={<AISpaceTechnologyPlatform />} />
 
                 {/* Catch all route */}
                 <Route path="*" element={<Home />} />

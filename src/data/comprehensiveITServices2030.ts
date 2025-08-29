@@ -1,0 +1,387 @@
+import { ProductListing } from "@/types/listings";
+
+export const COMPREHENSIVE_IT_SERVICES_2030: ProductListing[] = [
+  // Cloud Infrastructure & DevOps
+  {
+    id: "cloud-infrastructure-optimization",
+    title: "Cloud Infrastructure Optimization Platform",
+    description: "Advanced cloud infrastructure optimization platform that automatically scales resources, optimizes costs, and improves performance. Reduces cloud costs by 40% and improves performance by 60%.",
+    category: "Cloud & DevOps",
+    subcategory: "Infrastructure Optimization",
+    price: 7999,
+    currency: "$",
+    tags: ["Cloud Infrastructure", "Cost Optimization", "Auto-scaling", "Performance Monitoring", "DevOps"],
+    author: { name: "Zion Tech Group", id: "zion-tech-group", email: "kleber@ziontechgroup.com", avatarUrl: "https://ziontechgroup.com/logo.png" },
+    images: ["https://ziontechgroup.com/images/cloud-infrastructure-optimization.jpg"],
+    createdAt: "2024-04-20T10:00:00.000Z",
+    rating: 4.8,
+    reviewCount: 156,
+    featured: true,
+    location: "Global",
+    availability: "6-8 Weeks",
+    aiScore: 94,
+    contactInfo: {
+      phone: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      website: "https://ziontechgroup.com/cloud-infrastructure-optimization",
+      address: "364 E Main St STE 1008 Middletown DE 19709"
+    },
+    marketPrice: "$6,000-15,000",
+    competitors: ["AWS", "Azure", "Google Cloud"],
+    roi: "500% within 12 months",
+    setupTime: "6-8 weeks",
+    integrations: ["AWS", "Azure", "Google Cloud", "Kubernetes", "Docker", "Terraform"]
+  },
+
+  // Cybersecurity & Threat Intelligence
+  {
+    id: "advanced-cybersecurity-suite",
+    title: "Advanced Cybersecurity Suite",
+    description: "Comprehensive cybersecurity platform with threat detection, incident response, and security automation. Provides 99.9% threat detection rate and reduces response time by 80%.",
+    category: "Cybersecurity",
+    subcategory: "Threat Intelligence",
+    price: 12999,
+    currency: "$",
+    tags: ["Cybersecurity", "Threat Detection", "Incident Response", "Security Automation", "Zero Trust"],
+    author: { name: "Zion Tech Group", id: "zion-tech-group", email: "kleber@ziontechgroup.com", avatarUrl: "https://ziontechgroup.com/logo.png" },
+    images: ["https://ziontechgroup.com/images/advanced-cybersecurity-suite.jpg"],
+    createdAt: "2024-04-25T10:00:00.000Z",
+    rating: 4.9,
+    reviewCount: 89,
+    featured: true,
+    location: "Global",
+    availability: "8-10 Weeks",
+    aiScore: 97,
+    contactInfo: {
+      phone: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      website: "https://ziontechgroup.com/advanced-cybersecurity-suite",
+      address: "364 E Main St STE 1008 Middletown DE 19709"
+    },
+    marketPrice: "$10,000-25,000",
+    competitors: ["CrowdStrike", "SentinelOne", "Palo Alto Networks"],
+    roi: "600% within 15 months",
+    setupTime: "8-10 weeks",
+    integrations: ["SIEM Systems", "EDR Platforms", "Firewalls", "Identity Management", "Security Orchestration"]
+  },
+
+  // Data Management & Analytics
+  {
+    id: "enterprise-data-platform",
+    title: "Enterprise Data Platform",
+    description: "Unified enterprise data platform that integrates, processes, and analyzes data from multiple sources. Enables real-time insights and improves decision-making by 70%.",
+    category: "Data Analytics",
+    subcategory: "Data Integration",
+    price: 15999,
+    currency: "$",
+    tags: ["Data Platform", "Data Integration", "Real-time Analytics", "Business Intelligence", "Data Governance"],
+    author: { name: "Zion Tech Group", id: "zion-tech-group", email: "kleber@ziontechgroup.com", avatarUrl: "https://ziontechgroup.com/logo.png" },
+    images: ["https://ziontechgroup.com/images/enterprise-data-platform.jpg"],
+    createdAt: "2024-04-30T10:00:00.000Z",
+    rating: 4.8,
+    reviewCount: 112,
+    featured: true,
+    location: "Global",
+    availability: "10-12 Weeks",
+    aiScore: 96,
+    contactInfo: {
+      phone: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      website: "https://ziontechgroup.com/enterprise-data-platform",
+      address: "364 E Main St STE 1008 Middletown DE 19709"
+    },
+    marketPrice: "$12,000-30,000",
+    competitors: ["Snowflake", "Databricks", "Palantir"],
+    roi: "700% within 18 months",
+    setupTime: "10-12 weeks",
+    integrations: ["Data Warehouses", "ETL Tools", "BI Platforms", "Machine Learning", "Cloud Storage"]
+  },
+
+  // Network Infrastructure & SDN
+  {
+    id: "software-defined-network-platform",
+    title: "Software-Defined Network Platform",
+    description: "Next-generation SDN platform that provides centralized network management, automation, and optimization. Reduces network downtime by 90% and improves efficiency by 65%.",
+    category: "IT Infrastructure",
+    subcategory: "Network Management",
+    price: 9999,
+    currency: "$",
+    tags: ["SDN", "Network Automation", "Network Optimization", "Centralized Management", "Network Security"],
+    author: { name: "Zion Tech Group", id: "zion-tech-group", email: "kleber@ziontechgroup.com", avatarUrl: "https://ziontechgroup.com/logo.png" },
+    images: ["https://ziontechgroup.com/images/software-defined-network-platform.jpg"],
+    createdAt: "2024-05-05T10:00:00.000Z",
+    rating: 4.7,
+    reviewCount: 78,
+    featured: true,
+    location: "Global",
+    availability: "7-9 Weeks",
+    aiScore: 93,
+    contactInfo: {
+      phone: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      website: "https://ziontechgroup.com/software-defined-network-platform",
+      address: "364 E Main St STE 1008 Middletown DE 19709"
+    },
+    marketPrice: "$8,000-18,000",
+    competitors: ["Cisco", "VMware", "Juniper Networks"],
+    roi: "550% within 14 months",
+    setupTime: "7-9 weeks",
+    integrations: ["Network Switches", "Routers", "Firewalls", "Load Balancers", "Network Monitoring"]
+  },
+
+  // Digital Transformation Consulting
+  {
+    id: "digital-transformation-consulting",
+    title: "Digital Transformation Consulting Services",
+    description: "Comprehensive digital transformation consulting that helps organizations modernize operations, adopt new technologies, and achieve competitive advantage. Accelerates transformation by 50%.",
+    category: "IT Consulting",
+    subcategory: "Digital Transformation",
+    price: 25000,
+    currency: "$",
+    tags: ["Digital Transformation", "Technology Consulting", "Change Management", "Process Optimization", "Innovation"],
+    author: { name: "Zion Tech Group", id: "zion-tech-group", email: "kleber@ziontechgroup.com", avatarUrl: "https://ziontechgroup.com/logo.png" },
+    images: ["https://ziontechgroup.com/images/digital-transformation-consulting.jpg"],
+    createdAt: "2024-05-10T10:00:00.000Z",
+    rating: 4.9,
+    reviewCount: 45,
+    featured: true,
+    location: "Global",
+    availability: "12-16 Weeks",
+    aiScore: 95,
+    contactInfo: {
+      phone: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      website: "https://ziontechgroup.com/digital-transformation-consulting",
+      address: "364 E Main St STE 1008 Middletown DE 19709"
+    },
+    marketPrice: "$20,000-50,000",
+    competitors: ["McKinsey", "BCG", "Deloitte"],
+    roi: "800% within 24 months",
+    setupTime: "12-16 weeks",
+    integrations: ["Project Management", "Change Management", "Technology Assessment", "Process Mapping", "Training Platforms"]
+  },
+
+  // IoT & Edge Computing Platform
+  {
+    id: "iot-edge-computing-platform",
+    title: "IoT & Edge Computing Platform",
+    description: "Advanced IoT platform with edge computing capabilities for real-time data processing and decision making. Reduces latency by 80% and improves data processing efficiency by 70%.",
+    category: "IoT & Edge Computing",
+    subcategory: "Edge Analytics",
+    price: 6999,
+    currency: "$",
+    tags: ["IoT", "Edge Computing", "Real-time Processing", "Data Analytics", "Device Management"],
+    author: { name: "Zion Tech Group", id: "zion-tech-group", email: "kleber@ziontechgroup.com", avatarUrl: "https://ziontechgroup.com/logo.png" },
+    images: ["https://ziontechgroup.com/images/iot-edge-computing-platform.jpg"],
+    createdAt: "2024-05-15T10:00:00.000Z",
+    rating: 4.8,
+    reviewCount: 134,
+    featured: true,
+    location: "Global",
+    availability: "5-7 Weeks",
+    aiScore: 94,
+    contactInfo: {
+      phone: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      website: "https://ziontechgroup.com/iot-edge-computing-platform",
+      address: "364 E Main St STE 1008 Middletown DE 19709"
+    },
+    marketPrice: "$5,500-12,000",
+    competitors: ["AWS IoT", "Azure IoT", "Google Cloud IoT"],
+    roi: "500% within 12 months",
+    setupTime: "5-7 weeks",
+    integrations: ["IoT Sensors", "Edge Devices", "Cloud Platforms", "Data Analytics", "Device Management"]
+  },
+
+  // Blockchain & Web3 Solutions
+  {
+    id: "blockchain-web3-platform",
+    title: "Blockchain & Web3 Development Platform",
+    description: "Comprehensive blockchain and Web3 development platform for creating decentralized applications, smart contracts, and digital assets. Reduces development time by 60% and improves security.",
+    category: "Blockchain & Web3",
+    subcategory: "Development Platform",
+    price: 8999,
+    currency: "$",
+    tags: ["Blockchain", "Web3", "Smart Contracts", "DeFi", "NFTs"],
+    author: { name: "Zion Tech Group", id: "zion-tech-group", email: "kleber@ziontechgroup.com", avatarUrl: "https://ziontechgroup.com/logo.png" },
+    images: ["https://ziontechgroup.com/images/blockchain-web3-platform.jpg"],
+    createdAt: "2024-05-20T10:00:00.000Z",
+    rating: 4.7,
+    reviewCount: 89,
+    featured: true,
+    location: "Global",
+    availability: "6-8 Weeks",
+    aiScore: 93,
+    contactInfo: {
+      phone: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      website: "https://ziontechgroup.com/blockchain-web3-platform",
+      address: "364 E Main St STE 1008 Middletown DE 19709"
+    },
+    marketPrice: "$7,000-16,000",
+    competitors: ["Ethereum", "Polygon", "Solana"],
+    roi: "600% within 15 months",
+    setupTime: "6-8 weeks",
+    integrations: ["Ethereum", "Polygon", "Solana", "MetaMask", "Web3 Wallets"]
+  },
+
+  // API Management & Integration
+  {
+    id: "api-management-platform",
+    title: "API Management & Integration Platform",
+    description: "Enterprise-grade API management platform that simplifies API development, deployment, and monitoring. Improves API performance by 50% and reduces development time by 40%.",
+    category: "IT Infrastructure",
+    subcategory: "API Management",
+    price: 5499,
+    currency: "$",
+    tags: ["API Management", "API Gateway", "Integration", "API Security", "Developer Experience"],
+    author: { name: "Zion Tech Group", id: "zion-tech-group", email: "kleber@ziontechgroup.com", avatarUrl: "https://ziontechgroup.com/logo.png" },
+    images: ["https://ziontechgroup.com/images/api-management-platform.jpg"],
+    createdAt: "2024-05-25T10:00:00.000Z",
+    rating: 4.6,
+    reviewCount: 167,
+    featured: true,
+    location: "Global",
+    availability: "4-6 Weeks",
+    aiScore: 91,
+    contactInfo: {
+      phone: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      website: "https://ziontechgroup.com/api-management-platform",
+      address: "364 E Main St STE 1008 Middletown DE 19709"
+    },
+    marketPrice: "$4,500-10,000",
+    competitors: ["Kong", "Apigee", "MuleSoft"],
+    roi: "400% within 10 months",
+    setupTime: "4-6 weeks",
+    integrations: ["API Gateways", "Authentication", "Rate Limiting", "Analytics", "Developer Portal"]
+  },
+
+  // Disaster Recovery & Business Continuity
+  {
+    id: "disaster-recovery-platform",
+    title: "Disaster Recovery & Business Continuity Platform",
+    description: "Comprehensive disaster recovery platform that ensures business continuity with automated backup, replication, and recovery. Provides 99.99% uptime and RTO of less than 1 hour.",
+    category: "IT Infrastructure",
+    subcategory: "Disaster Recovery",
+    price: 7999,
+    currency: "$",
+    tags: ["Disaster Recovery", "Business Continuity", "Backup", "Replication", "High Availability"],
+    author: { name: "Zion Tech Group", id: "zion-tech-group", email: "kleber@ziontechgroup.com", avatarUrl: "https://ziontechgroup.com/logo.png" },
+    images: ["https://ziontechgroup.com/images/disaster-recovery-platform.jpg"],
+    createdAt: "2024-05-30T10:00:00.000Z",
+    rating: 4.8,
+    reviewCount: 123,
+    featured: true,
+    location: "Global",
+    availability: "6-8 Weeks",
+    aiScore: 94,
+    contactInfo: {
+      phone: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      website: "https://ziontechgroup.com/disaster-recovery-platform",
+      address: "364 E Main St STE 1008 Middletown DE 19709"
+    },
+    marketPrice: "$6,000-14,000",
+    competitors: ["Veeam", "Zerto", "Commvault"],
+    roi: "500% within 12 months",
+    setupTime: "6-8 weeks",
+    integrations: ["Backup Systems", "Storage Arrays", "Cloud Storage", "Monitoring Tools", "Alerting Systems"]
+  },
+
+  // IT Service Management (ITSM)
+  {
+    id: "itsm-platform",
+    title: "IT Service Management Platform",
+    description: "Modern ITSM platform that streamlines IT service delivery, incident management, and change management. Improves service delivery by 45% and reduces incident resolution time by 60%.",
+    category: "IT Infrastructure",
+    subcategory: "Service Management",
+    price: 4499,
+    currency: "$",
+    tags: ["ITSM", "Service Desk", "Incident Management", "Change Management", "IT Operations"],
+    author: { name: "Zion Tech Group", id: "zion-tech-group", email: "kleber@ziontechgroup.com", avatarUrl: "https://ziontechgroup.com/logo.png" },
+    images: ["https://ziontechgroup.com/images/itsm-platform.jpg"],
+    createdAt: "2024-06-05T10:00:00.000Z",
+    rating: 4.7,
+    reviewCount: 189,
+    featured: true,
+    location: "Global",
+    availability: "3-5 Weeks",
+    aiScore: 92,
+    contactInfo: {
+      phone: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      website: "https://ziontechgroup.com/itsm-platform",
+      address: "364 E Main St STE 1008 Middletown DE 19709"
+    },
+    marketPrice: "$3,500-8,000",
+    competitors: ["ServiceNow", "Jira Service Management", "BMC Helix"],
+    roi: "350% within 9 months",
+    setupTime: "3-5 weeks",
+    integrations: ["Service Desk", "Knowledge Base", "Asset Management", "Change Management", "Reporting Tools"]
+  },
+
+  // Performance Monitoring & Observability
+  {
+    id: "performance-monitoring-platform",
+    title: "Performance Monitoring & Observability Platform",
+    description: "Comprehensive performance monitoring platform that provides real-time visibility into application performance, infrastructure health, and user experience. Reduces MTTR by 70% and improves performance by 50%.",
+    category: "IT Infrastructure",
+    subcategory: "Performance Monitoring",
+    price: 5999,
+    currency: "$",
+    tags: ["Performance Monitoring", "Observability", "APM", "Infrastructure Monitoring", "User Experience"],
+    author: { name: "Zion Tech Group", id: "zion-tech-group", email: "kleber@ziontechgroup.com", avatarUrl: "https://ziontechgroup.com/logo.png" },
+    images: ["https://ziontechgroup.com/images/performance-monitoring-platform.jpg"],
+    createdAt: "2024-06-10T10:00:00.000Z",
+    rating: 4.8,
+    reviewCount: 145,
+    featured: true,
+    location: "Global",
+    availability: "4-6 Weeks",
+    aiScore: 93,
+    contactInfo: {
+      phone: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      website: "https://ziontechgroup.com/performance-monitoring-platform",
+      address: "364 E Main St STE 1008 Middletown DE 19709"
+    },
+    marketPrice: "$4,800-11,000",
+    competitors: ["New Relic", "Datadog", "Dynatrace"],
+    roi: "450% within 11 months",
+    setupTime: "4-6 weeks",
+    integrations: ["APM Tools", "Infrastructure Monitoring", "Log Management", "Alerting", "Dashboards"]
+  },
+
+  // Identity & Access Management
+  {
+    id: "identity-access-management-platform",
+    title: "Identity & Access Management Platform",
+    description: "Enterprise IAM platform that provides secure authentication, authorization, and identity governance. Improves security posture by 80% and reduces access management overhead by 60%.",
+    category: "Cybersecurity",
+    subcategory: "Identity Management",
+    price: 8999,
+    currency: "$",
+    tags: ["IAM", "Authentication", "Authorization", "Single Sign-On", "Identity Governance"],
+    author: { name: "Zion Tech Group", id: "zion-tech-group", email: "kleber@ziontechgroup.com", avatarUrl: "https://ziontechgroup.com/logo.png" },
+    images: ["https://ziontechgroup.com/images/identity-access-management-platform.jpg"],
+    createdAt: "2024-06-15T10:00:00.000Z",
+    rating: 4.8,
+    reviewCount: 112,
+    featured: true,
+    location: "Global",
+    availability: "6-8 Weeks",
+    aiScore: 95,
+    contactInfo: {
+      phone: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      website: "https://ziontechgroup.com/identity-access-management-platform",
+      address: "364 E Main St STE 1008 Middletown DE 19709"
+    },
+    marketPrice: "$7,000-16,000",
+    competitors: ["Okta", "Azure AD", "Ping Identity"],
+    roi: "550% within 14 months",
+    setupTime: "6-8 weeks",
+    integrations: ["Active Directory", "LDAP", "SAML", "OAuth", "Multi-Factor Authentication"]
+  }
+];

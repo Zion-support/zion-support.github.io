@@ -1,4 +1,4 @@
-import { ArrowRight, Atom, BookOpen, Brain, Building, Building2, ChevronDown, Cloud, Code, Cpu, DollarSign, FileText, Globe, HeartHandshake, Heart, HelpCircle, Leaf, Lock, Mail, MapPin, Menu, MessageCircle, PenTool, Phone, Rocket, Scale, Search, Settings, Shield, ShoppingCart, Star, Target, TrendingUp, Users, X, Zap } from 'lucide-react';
+import { ArrowRight, Atom, BookOpen, Brain, Building, Building2, ChevronDown, Cloud, Code, Cpu, Database, DollarSign, FileText, Globe, HeartHandshake, Heart, HelpCircle, Leaf, Lock, Mail, MapPin, Menu, MessageCircle, PenTool, Phone, Rocket, Scale, Search, Settings, Shield, ShoppingCart, Star, Target, TrendingUp, Users, X, Zap } from 'lucide-react';
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { ThemeToggle } from '../components/ThemeToggle';
@@ -85,6 +85,30 @@ export function AppHeader() {
       color: 'from-green-500 to-blue-500'
     },
     { 
+      name: 'Cloud Infrastructure', 
+      href: '/services/cloud-infrastructure-optimization', 
+      icon: Cloud, 
+      description: 'Cloud Optimization & DevOps',
+      featured: true,
+      color: 'from-blue-500 to-cyan-500'
+    },
+    { 
+      name: 'Advanced Cybersecurity', 
+      href: '/services/advanced-cybersecurity-suite', 
+      icon: Shield, 
+      description: 'Threat Detection & Response',
+      featured: true,
+      color: 'from-red-500 to-orange-500'
+    },
+    { 
+      name: 'Enterprise Data Platform', 
+      href: '/services/enterprise-data-platform', 
+      icon: Database, 
+      description: 'Data Integration & Analytics',
+      featured: true,
+      color: 'from-indigo-500 to-purple-500'
+    },
+    { 
       name: 'Quantum Computing', 
       href: '/services/quantum-computing', 
       icon: Atom, 
@@ -107,14 +131,6 @@ export function AppHeader() {
       description: 'Virtual Replicas & Simulation',
       featured: true,
       color: 'from-green-500 to-emerald-500'
-    },
-    { 
-      name: 'Cloud DevOps', 
-      href: '/services/cloud-devops', 
-      icon: Cloud, 
-      description: 'DevOps & Infrastructure',
-      featured: true,
-      color: 'from-blue-500 to-cyan-500'
     },
     { 
       name: 'Micro SaaS Products', 
