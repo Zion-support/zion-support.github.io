@@ -72,6 +72,7 @@ const MicroSaaSProducts = React.lazy(() => import('./pages/services/MicroSaaSPro
 const Careers = React.lazy(() => import('./pages/Careers'));
 const Marketplace = React.lazy(() => import('./pages/Marketplace'));
 const InnovativeMicroSAASServices2025 = React.lazy(() => import('./pages/InnovativeMicroSAASServices2025'));
+const Sitemap = React.lazy(() => import('./components/Sitemap'));
 
 function App() {
   return (
@@ -125,6 +126,7 @@ function App() {
                 <Route path="/developers" element={<Developers />} />
                 <Route path="/demo" element={<Demo />} />
                 <Route path="/legal" element={<Legal />} />
+                <Route path="/sitemap" element={<Sitemap />} />
                 {/* Service Routes - only for existing pages */}
                 <Route path="/services/cloud-devops" element={<CloudDevOps />} />
                 <Route path="/services/digital-twin" element={<DigitalTwin />} />
@@ -145,7 +147,7 @@ function App() {
           </main>
           <Footer />
           <ChatAssistant />
-          <PerformanceOptimizer />
+          <PerformanceOptimizer showMetrics={true} />
           <AccessibilityEnhancer />
         </div>
       </Router>
