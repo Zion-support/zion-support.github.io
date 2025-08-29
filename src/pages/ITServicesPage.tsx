@@ -152,7 +152,26 @@ const ITServices = [
         link: "/request-quote?service=24-7-support"
     }
 ];
+
 const categories = [
+  { name: "All", value: "all", icon: Globe },
+  { name: "Cloud", value: "cloud", icon: Cloud },
+  { name: "Security", value: "security", icon: Shield },
+  { name: "DevOps", value: "devops", icon: Zap },
+  { name: "Database", value: "database", icon: Database },
+  { name: "Networking", value: "networking", icon: Globe },
+  { name: "Consulting", value: "consulting", icon: CheckCircle },
+  { name: "Managed Services", value: "managed services", icon: Settings },
+  { name: "Data Center", value: "data center", icon: Server },
+  { name: "Development", value: "development", icon: Code },
+  { name: "Training", value: "training", icon: Users },
+  { name: "Recovery", value: "recovery", icon: HardDrive },
+  { name: "Compliance", value: "compliance", icon: FileText },
+  { name: "Hardware", value: "hardware", icon: Server },
+  { name: "Project Management", value: "project management", icon: BarChart3 },
+  { name: "Support", value: "support", icon: Monitor }
+];
+
 const ITServicesPage: React.FC = () => {
   const itServices = [
     {

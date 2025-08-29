@@ -115,7 +115,23 @@ const AIServices = [
         link: "/request-quote?service=ai-content"
     }
 ];
+
 const categories = [
+  { name: "All", value: "all", icon: Globe },
+  { name: "Strategy", value: "strategy", icon: CheckCircle },
+  { name: "Development", value: "development", icon: Code },
+  { name: "Data", value: "data", icon: Database },
+  { name: "Analytics", value: "analytics", icon: BarChart3 },
+  { name: "Vision", value: "vision", icon: Eye },
+  { name: "NLP", value: "nlp", icon: MessageSquare },
+  { name: "Compliance", value: "compliance", icon: Shield },
+  { name: "Optimization", value: "optimization", icon: Zap },
+  { name: "Training", value: "training", icon: Users },
+  { name: "Integration", value: "integration", icon: Code },
+  { name: "Security", value: "security", icon: Lock },
+  { name: "Content", value: "content", icon: FileText }
+];
+
 const AIServicesPage: React.FC = () => {
   const aiServices = [
     {
