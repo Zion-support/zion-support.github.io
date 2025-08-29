@@ -1,22 +1,6 @@
 import React from 'react';
-import { SEO } from '@/components/SEO';
-
-export default function DigitalTransformation() {
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white">
-      <SEO title="Digital Transformation - Zion Tech Group" description="Modernize processes with cloud-native platforms, automation, and data-driven operations." />
-      <section className="container mx-auto px-4 py-16">
-        <h1 className="text-4xl font-bold mb-4">Digital Transformation</h1>
-        <p className="text-lg text-gray-300 max-w-3xl">
-          We partner with teams to reimagine workflows, build cloud-native systems, and scale data and AI capabilities across the enterprise.
-        </p>
-      </section>
-    </div>
-  );
-}
-
-import React from 'react';
 import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
 import {
   Rocket,
   Cpu,
@@ -39,6 +23,7 @@ import {
   Monitor,
   Smartphone
 } from 'lucide-react';
+
 export default function DigitalTransformation() {
   const features = [
     {
@@ -408,5 +393,3 @@ export default function DigitalTransformation() {
     </div>
   );
 };
-
-export default DigitalTransformation;

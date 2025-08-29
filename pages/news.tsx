@@ -1,5 +1,5 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+import Link from 'next/link'
 import { Calendar, Clock, ArrowRight, Tag, User } from 'lucide-react'
 
 
@@ -142,7 +142,7 @@ export default function News() {
 										</div>
 									</div>
 									<Link
-										to={`/news/${newsArticles[0].id}`}
+										href={`/news/${newsArticles[0].id}`}
 										className="inline-flex items-center text-blue-600 hover:text-blue-700 font-medium"
 									>
 										Read More
@@ -192,7 +192,7 @@ export default function News() {
 											</div>
 										</div>
 										<Link
-											to={`/news/${article.id}`}
+											href={`/news/${article.id}`}
 											className="inline-flex items-center text-blue-600 hover:text-blue-700 font-medium"
 										>
 											Read More
@@ -241,13 +241,13 @@ export default function News() {
 					</p>
 					<div className="flex items-center justify-center gap-x-6">
 						<Link
-							to="/contact"
+							href="/contact"
 							className="rounded-md bg-white px-6 py-3 text-sm font-semibold text-blue-600 shadow-sm hover:bg-gray-50 transition-colors"
 						>
 							Get Started
 						</Link>
 						<Link
-							to="/services"
+							href="/services"
 							className="text-sm font-semibold leading-6 text-white hover:text-blue-100 transition-colors"
 						>
 							Learn more <span aria-hidden="true">→</span>

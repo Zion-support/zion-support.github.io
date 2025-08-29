@@ -4,15 +4,15 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "dev": "vite",
+    "dev": "NODE_OPTIONS=\"--max-old-space-size=4096 --openssl-legacy-provider\" vite",
     "dev:backend": "cd server && npm run dev",
     "dev:hybrid": "concurrently \"npm run dev\" \"npm run dev:backend\"",
-    "build": "vite build",
-    "build:netlify": "vite build --mode production",
+    "build": "NODE_OPTIONS=\"--max-old-space-size=6144 --openssl-legacy-provider\" vite build",
+    "build:netlify": "NODE_OPTIONS=\"--max-old-space-size=6144 --openssl-legacy-provider\" vite build --mode production",
     "build:backend": "cd server && npm run build",
     "build:hybrid": "npm run build && npm run build:backend",
     "prebuild": "echo 'skip prebuild health-check'",
-    "export": "rm -rf dist && vite build",
+    "export": "rm -rf dist && NODE_OPTIONS=\"--max-old-space-size=6144 --openssl-legacy-provider\" vite build",
     "start": "vite preview",
     "start:backend": "cd server && npm start",
     "start:hybrid": "cd server && npm start",
@@ -38,7 +38,14 @@
     "pm2:save": "pm2 save",
     "pm2:startup": "pm2 startup"
   },
+  "npmConfig": {
+    "optional": false,
+    "legacy-peer-deps": true,
+    "strict-ssl": false,
+    "prefer-offline": true
+  },
   "dependencies": {
+    "@esbuild/linux-x64": "^0.21.5",
     "@hookform/resolvers": "^5.2.1",
     "@radix-ui/react-accordion": "^1.1.2",
     "@radix-ui/react-alert-dialog": "^1.0.5",
@@ -62,7 +69,7 @@
     "@radix-ui/react-toast": "^1.1.5",
     "@radix-ui/react-tooltip": "^1.0.7",
     "@reduxjs/toolkit": "^2.8.2",
-    "@rollup/rollup-darwin-x64": "^4.49.0",
+    "@rollup/rollup-linux-x64-gnu": "^4.49.0",
     "@stripe/stripe-js": "^7.9.0",
     "@tailwindcss/postcss": "^4.1.12",
     "@tanstack/react-query": "^5.85.5",
@@ -78,10 +85,11 @@
     "i18next-browser-languagedetector": "^8.2.0",
     "lucide-react": "^0.294.0",
     "react": "^18.2.0",
-    "react-datepicker": "^8.4.0",
+    "react-day-picker": "^8.9.1",
     "react-dom": "^18.2.0",
+    "react-error-boundary": "^6.0.0",
     "react-helmet-async": "^2.0.5",
-    "react-hook-form": "^7.62.0",
+    "react-hook-form": "^7.47.0",
     "react-hot-toast": "^2.6.0",
     "react-i18next": "^15.7.2",
     "react-redux": "^9.2.0",
@@ -114,5 +122,13 @@
     "terser": "^5.43.1",
     "typescript": "^5.6.3",
     "vite": "^5.4.19"
+  },
+  "overrides": {
+    "rollup": {
+      "@rollup/rollup-linux-x64-gnu": "^4.18.0"
+    }
+  },
+  "resolutions": {
+    "rollup": "^4.18.0"
   }
 }

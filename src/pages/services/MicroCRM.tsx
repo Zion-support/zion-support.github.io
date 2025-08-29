@@ -3,10 +3,49 @@ import { motion } from 'framer-motion';
 import { 
   Users, 
   Target, 
+<<<<<<< HEAD
   ArrowRight, 
   CheckCircle 
 } from 'lucide-react';
 import SEO from '@/components/SEO';
+=======
+  CheckCircle, 
+  ArrowRight 
+} from 'lucide-react';
+
+export default function MicroCRM() {
+  const services = [
+    {
+      icon: Users,
+      title: 'Contact Management',
+      description: 'Organize and track customer information'
+    },
+    {
+      icon: Target,
+      title: 'Sales Pipeline',
+      description: 'Manage sales opportunities and track progress'
+    },
+    {
+      icon: CheckCircle,
+      title: 'Task Management',
+      description: 'Organize and prioritize business tasks'
+    }
+  ];
+
+  const benefits = [
+    'Improve customer relationships',
+    'Increase sales conversion rates',
+    'Streamline business processes',
+    'Better customer insights'
+  ];
+
+  const useCases = [
+    { industry: 'Local Services', description: 'Manage appointments and customer follow-ups' },
+    { industry: 'Retail', description: 'Track customer preferences and purchase history' },
+    { industry: 'Consulting', description: 'Manage client relationships and project tracking' },
+    { industry: 'Healthcare', description: 'Patient appointment scheduling and follow-ups' }
+  ];
+>>>>>>> origin/main
 
 export default function MicroCRM() {
   // Data arrays

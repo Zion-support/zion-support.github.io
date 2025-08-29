@@ -5,10 +5,49 @@ import {
   Play, 
   Settings, 
   Target, 
+<<<<<<< HEAD
   ArrowRight, 
   CheckCircle 
 } from 'lucide-react';
 import SEO from '@/components/SEO';
+=======
+  CheckCircle, 
+  ArrowRight 
+} from 'lucide-react';
+
+export default function FinOpsAdvisor() {
+  const features = [
+    {
+      icon: Target,
+      title: 'Cost Optimization',
+      description: 'Identify and eliminate unnecessary cloud spending'
+    },
+    {
+      icon: CheckCircle,
+      title: 'Resource Management',
+      description: 'Optimize resource allocation and utilization'
+    },
+    {
+      icon: Settings,
+      title: 'Automation',
+      description: 'Automate cost monitoring and optimization'
+    }
+  ];
+
+  const benefits = [
+    'Reduce cloud costs by 30-50%',
+    'Improve resource utilization',
+    'Implement cost governance',
+    'Optimize pricing models'
+  ];
+
+  const useCases = [
+    { industry: 'E-commerce', description: 'Optimize seasonal scaling costs' },
+    { industry: 'SaaS', description: 'Manage multi-tenant infrastructure costs' },
+    { industry: 'Healthcare', description: 'Ensure HIPAA-compliant cost optimization' },
+    { industry: 'Finance', description: 'Implement cost controls for regulatory compliance' }
+  ];
+>>>>>>> origin/main
 
 export default function FinOpsAdvisor() {
   // Data arrays
