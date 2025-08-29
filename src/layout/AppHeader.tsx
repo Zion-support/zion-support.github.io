@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { Menu, X, Search, User, Bell, ChevronDown, Zap, Brain, Shield, Cloud, Rocket, Globe, Cpu, Lock, Heart, Users, ShoppingCart, BookOpen, MessageCircle, HelpCircle, DollarSign, Star, TrendingUp, Award, Settings, Phone, Mail, MapPin } from 'lucide-react';
+import { Menu, X, Search, User, Bell, ChevronDown, Zap, Brain, Shield, Cloud, Rocket, Globe, Cpu, Lock, Heart, Users, ShoppingCart, BookOpen, MessageCircle, HelpCircle, DollarSign, Star, TrendingUp, Award, Settings, Phone, Mail, MapPin, Building } from 'lucide-react';
 import { ThemeToggle } from '../components/ThemeToggle';
 import { ZionLoadingSpinner } from '../components/ui/EnhancedLoadingSpinner';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -37,10 +37,9 @@ export function AppHeader() {
   const mainNavigation = [
     { name: 'Home', href: '/', current: true },
     { name: 'Services', href: '/services-overview', current: false, hasDropdown: true },
-    { name: 'AI Services', href: '/ai-services', current: false },
-    { name: 'IT Services', href: '/it-services', current: false },
-    { name: 'Pricing', href: '/pricing-guide', current: false },
-    { name: 'About', href: '/about', current: false },
+    { name: 'Solutions', href: '/ai-services', current: false, hasDropdown: true },
+    { name: 'Company', href: '/about', current: false, hasDropdown: true },
+    { name: 'Support', href: '/help', current: false, hasDropdown: true },
     { name: 'Contact', href: '/contact', current: false },
   ];
 
@@ -62,6 +61,17 @@ export function AppHeader() {
 
   const servicesCategories = [
     {
+      name: 'Core Services',
+      icon: Settings,
+      color: 'from-blue-600 to-cyan-600',
+      services: [
+        { name: 'Services Overview', href: '/services-overview', description: 'Complete service portfolio' },
+        { name: 'AI Services', href: '/ai-services', description: 'AI-powered solutions' },
+        { name: 'IT Services', href: '/it-services', description: 'Enterprise IT solutions' },
+        { name: 'Micro SaaS', href: '/micro-saas', description: 'Scalable software solutions' }
+      ]
+    },
+    {
       name: 'AI & Analytics',
       icon: Brain,
       color: 'from-purple-600 to-pink-600',
@@ -75,7 +85,7 @@ export function AppHeader() {
     {
       name: 'Cloud & DevOps',
       icon: Cloud,
-      color: 'from-blue-600 to-cyan-600',
+      color: 'from-green-600 to-emerald-600',
       services: [
         { name: 'Cloud DevOps', href: '/services/cloud-devops', description: 'Infrastructure & Automation' },
         { name: 'Cloud FinOps Optimizer', href: '/services/cloud-finops-optimizer', description: 'Cost optimization' },
@@ -85,7 +95,7 @@ export function AppHeader() {
     {
       name: 'Digital Solutions',
       icon: Rocket,
-      color: 'from-green-600 to-emerald-600',
+      color: 'from-orange-600 to-red-600',
       services: [
         { name: 'Digital Twin', href: '/services/digital-twin', description: 'Simulation & Monitoring' },
         { name: 'IT Infrastructure', href: '/services/it-infrastructure', description: 'Enterprise infrastructure' },
@@ -95,20 +105,44 @@ export function AppHeader() {
     {
       name: 'Cybersecurity',
       icon: Shield,
-      color: 'from-red-600 to-orange-600',
+      color: 'from-indigo-600 to-purple-600',
       services: [
         { name: 'AI Compliance Copilot', href: '/services/ai-compliance-copilot', description: 'AI-Powered Security' },
         { name: 'Zero Trust Architecture', href: '/services/zero-trust-network-architecture', description: 'Advanced security' }
       ]
+    }
+  ];
+
+  const solutionsCategories = [
+    {
+      name: 'AI Solutions',
+      icon: Brain,
+      color: 'from-purple-600 to-pink-600',
+      solutions: [
+        { name: 'AI Business Intelligence', href: '/services/ai-business-intelligence', description: 'Machine Learning & Data Science' },
+        { name: 'AI Sales Copilot', href: '/services/ai-sales-copilot', description: 'AI-powered sales automation' },
+        { name: 'AI Compliance Assistant', href: '/services/ai-compliance-assistant', description: 'Regulatory compliance automation' },
+        { name: 'LLM Content Studio', href: '/services/llm-content-studio', description: 'AI content generation' }
+      ]
     },
     {
-      name: 'Business Tools',
-      icon: ShoppingCart,
+      name: 'Quantum & Emerging',
+      icon: Star,
       color: 'from-indigo-600 to-purple-600',
-      services: [
-        { name: 'Micro SaaS Solutions', href: '/services/micro-saas-solutions', description: 'Productized SaaS for niches' },
-        { name: 'AI Auto Email Responder', href: '/services/ai-auto-email-responder', description: 'Faster replies, CRM logging' },
-        { name: 'Customer Feedback Surveys', href: '/services/mobile-feedback-surveys', description: 'NPS/CSAT with AI insights' }
+      solutions: [
+        { name: 'Quantum AI Platform', href: '/services/quantum-ai-platform', description: 'Next-gen quantum computing' },
+        { name: 'AI Cybersecurity Suite', href: '/services/ai-cybersecurity-suite', description: 'Advanced security solutions' },
+        { name: 'AI Healthcare Analytics', href: '/services/ai-healthcare-analytics', description: 'Healthcare data insights' }
+      ]
+    },
+    {
+      name: 'Innovation Showcase',
+      icon: TrendingUp,
+      color: 'from-green-600 to-emerald-600',
+      solutions: [
+        { name: 'Innovative Services 2025', href: '/innovative-services-showcase-2025', icon: Star, description: 'Latest cutting-edge solutions' },
+        { name: 'Revolutionary Services 2030', href: '/revolutionary-services-showcase-2030', icon: TrendingUp, description: 'Future-ready services' },
+        { name: 'Pricing Guide 2030', href: '/pricing-2030', icon: DollarSign, description: 'Advanced pricing strategies' }
       ]
     }
   ];
@@ -118,6 +152,56 @@ export function AppHeader() {
     { name: 'Services Showcase', href: '/revolutionary-services-showcase-2030', icon: TrendingUp, description: 'Future-ready services' },
     { name: 'Pricing Guide 2030', href: '/pricing-2030', icon: DollarSign, description: 'Advanced pricing strategies' },
     { name: 'Request Quote', href: '/request-quote', icon: MessageCircle, description: 'Get custom pricing' },
+  ];
+
+  const companyCategories = [
+    {
+      name: 'About Us',
+      icon: Building,
+      color: 'from-blue-600 to-cyan-600',
+      items: [
+        { name: 'About Us', href: '/about', description: 'Our story and mission' },
+        { name: 'Team', href: '/team', description: 'Meet our experts' },
+        { name: 'Careers', href: '/careers', description: 'Join our team' },
+        { name: 'Partners', href: '/partners', description: 'Strategic partnerships' }
+      ]
+    },
+    {
+      name: 'Resources',
+      icon: BookOpen,
+      color: 'from-green-600 to-emerald-600',
+      items: [
+        { name: 'Blog', href: '/blog', description: 'Latest insights and news' },
+        { name: 'Press', href: '/press', description: 'Media resources' },
+        { name: 'Case Studies', href: '/case-studies', description: 'Success stories' },
+        { name: 'White Papers', href: '/white-papers', description: 'In-depth research' }
+      ]
+    }
+  ];
+
+  const supportCategories = [
+    {
+      name: 'Help & Support',
+      icon: HelpCircle,
+      color: 'from-blue-600 to-cyan-600',
+      items: [
+        { name: 'Help Center', href: '/help', description: 'Find answers to questions' },
+        { name: 'Support Portal', href: '/support', description: 'Technical assistance' },
+        { name: 'FAQ', href: '/faq', description: 'Frequently asked questions' },
+        { name: 'Contact Support', href: '/contact', description: 'Get in touch' }
+      ]
+    },
+    {
+      name: 'Resources',
+      icon: BookOpen,
+      color: 'from-green-600 to-emerald-600',
+      items: [
+        { name: 'Documentation', href: '/docs', description: 'Technical guides' },
+        { name: 'Training', href: '/training', description: 'Learning resources' },
+        { name: 'Webinars', href: '/webinars', description: 'Educational sessions' },
+        { name: 'Community', href: '/community', description: 'User community' }
+      ]
+    }
   ];
 
   const supportLinks = [

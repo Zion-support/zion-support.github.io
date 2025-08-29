@@ -586,6 +586,11 @@
     scroll-margin-top: 8rem;
   }
 
+<<<<<<< HEAD
+  /* Responsive utilities */
+  .container-padding {
+    @apply px-4 sm:px-6 lg:px-8;
+=======
   @keyframes fade-in-up {
     from { transform: translateY(30px); opacity: 0; }
     to { transform: translateY(0); opacity: 1; }
@@ -620,6 +625,7 @@
   /* Responsive Utilities */
   .container-responsive {
     @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+>>>>>>> origin/cursor/add-new-services-and-advertise-them-8ef1
   }
 
   .section-padding {
