@@ -38,71 +38,130 @@ export function AppHeader() {
     { name: 'Contact', href: '/contact', current: false },
   ];
   const services = [
-=======
+    // Featured Services
     { 
-      name: 'Comprehensive Services 2026', 
-      href: '/comprehensive-services-showcase-2026', 
-      icon: Rocket, 
-      description: 'All Services & Pricing',
+      name: 'AI Compliance Copilot', 
+      href: '/services/ai-compliance-copilot', 
+      icon: Shield, 
+      description: 'Automated Regulatory Compliance',
       featured: true,
-      color: 'from-cyan-500 to-blue-500'
+      color: 'from-blue-500 to-cyan-500'
     },
     { 
-      name: 'Innovative Micro SAAS 2025', 
-      href: '/innovative-micro-saas-services-2025', 
-      icon: Rocket, 
-      description: 'Cutting-edge AI Services',
-      featured: true,
-      color: 'from-purple-500 to-pink-500'
-    },
-    { 
-      name: 'AI Business Intelligence', 
-      href: '/services/ai-business-intelligence', 
-      icon: Brain, 
-      description: 'Machine Learning & Data Science',
-      featured: true,
-      color: 'from-purple-500 to-cyan-500'
-    },
-    { 
-      name: 'AI Healthcare Platform', 
-      href: '/services/ai-healthcare-platform', 
+      name: 'AI Healthcare Analytics', 
+      href: '/services/ai-healthcare-predictive-analytics', 
       icon: Heart, 
-      description: 'Medical AI & Diagnostics',
+      description: 'Patient Care Optimization',
       featured: true,
       color: 'from-red-500 to-pink-500'
     },
     { 
-      name: 'AI Content Creation', 
-      href: '/services/ai-content-creation', 
-      icon: PenTool, 
-      description: 'Content Generation & Optimization',
+      name: 'AI Business Intelligence', 
+      href: '/services/ai-business-intelligence-platform', 
+      icon: Brain, 
+      description: 'Advanced Analytics Platform',
       featured: true,
-      color: 'from-blue-500 to-indigo-500'
+      color: 'from-purple-500 to-cyan-500'
     },
     { 
-      name: 'AI Cybersecurity', 
-      href: '/services/ai-cybersecurity', 
-      icon: Shield, 
-      description: 'AI-Powered Security',
+      name: 'Micro SaaS Solutions', 
+      href: '/services/micro-saas', 
+      icon: ShoppingCart, 
+      description: 'AI-Powered Business Tools',
       featured: true,
+      color: 'from-orange-500 to-red-500'
+    },
+    // Core AI Services
+    { 
+      name: 'AI Cybersecurity Suite', 
+      href: '/services/ai-cybersecurity-suite', 
+      icon: Shield, 
+      description: 'Threat Detection & Prevention',
+      featured: false,
       color: 'from-green-500 to-blue-500'
     },
     { 
-      name: 'Quantum Computing', 
-      href: '/services/quantum-computing', 
+      name: 'Quantum AI Platform', 
+      href: '/services/quantum-ai-platform', 
       icon: Atom, 
-      description: 'Quantum AI & Optimization',
-      featured: true,
+      description: 'Quantum Computing Solutions',
+      featured: false,
       color: 'from-purple-500 to-pink-500'
     },
     { 
-      name: 'IoT Edge Computing', 
-      href: '/services/iot-edge-computing', 
+      name: 'Edge Computing Platform', 
+      href: '/services/edge-computing-platform', 
       icon: Cpu, 
       description: 'IoT & Real-time Processing',
-      featured: true,
+      featured: false,
       color: 'from-blue-500 to-cyan-500'
     },
+    { 
+      name: 'Digital Twin Platform', 
+      href: '/services/digital-twin', 
+      icon: Globe, 
+      description: 'Virtual Replicas & Simulation',
+      featured: false,
+      color: 'from-green-500 to-emerald-500'
+    },
+    // Specialized Services
+    { 
+      name: 'AI Legal Automation', 
+      href: '/services/ai-legal-document-automation', 
+      icon: FileText, 
+      description: 'Legal Document Processing',
+      featured: false,
+      color: 'from-indigo-500 to-purple-500'
+    },
+    { 
+      name: 'AI Financial Trading', 
+      href: '/services/ai-financial-trading-platform', 
+      icon: TrendingUp, 
+      description: 'Algorithmic Trading Platform',
+      featured: false,
+      color: 'from-green-500 to-emerald-500'
+    },
+    { 
+      name: 'AI Supply Chain', 
+      href: '/services/ai-supply-chain-optimization', 
+      icon: Truck, 
+      description: 'Supply Chain Optimization',
+      featured: false,
+      color: 'from-blue-500 to-indigo-500'
+    },
+    { 
+      name: 'AI HR Platform', 
+      href: '/services/ai-hr-platform', 
+      icon: Users, 
+      description: 'Human Resources Automation',
+      featured: false,
+      color: 'from-purple-500 to-pink-500'
+    },
+    // Emerging Technologies
+    { 
+      name: 'Space Technology', 
+      href: '/services/space-tech', 
+      icon: Rocket, 
+      description: 'Space Innovation Solutions',
+      featured: false,
+      color: 'from-indigo-500 to-purple-500'
+    },
+    { 
+      name: 'Sustainability Tech', 
+      href: '/services/sustainability', 
+      icon: Leaf, 
+      description: 'Green Technology Solutions',
+      featured: false,
+      color: 'from-green-500 to-emerald-500'
+    },
+        { 
+      name: 'Zero Trust Security', 
+      href: '/services/zero-trust-network-architecture', 
+      icon: Lock, 
+      description: 'Advanced Network Security',
+      featured: false,
+      color: 'from-red-500 to-orange-500'
+    }
     { 
       name: 'Digital Twin Platform', 
       href: '/services/digital-twin', 

@@ -88,6 +88,7 @@ const AIProjectManagementPlatform = React.lazy(() => import('./pages/services/ai
 const AILegalDocumentAutomation = React.lazy(() => import('./pages/services/AILegalDocumentAutomation'));
 const AIHealthcarePredictiveAnalytics = React.lazy(() => import('./pages/services/AIHealthcarePredictiveAnalytics'));
 const AIFinancialTradingRiskManagement = React.lazy(() => import('./pages/services/AIFinancialTradingRiskManagement'));
+const AIComplianceCopilot = React.lazy(() => import('./pages/services/AIComplianceCopilot'));
 const ComprehensiveAIServicesShowcase2025 = React.lazy(() => import('./pages/ComprehensiveAIServicesShowcase2025'));
 const ComprehensiveServicesAdvertising2030 = React.lazy(() => import('./pages/ComprehensiveServicesAdvertising'));
 function App() {
@@ -152,6 +153,7 @@ function App() {
                 <Route path="/services/ai-legal-document-automation" element={<AILegalDocumentAutomation />} />
                 <Route path="/services/ai-healthcare-predictive-analytics" element={<AIHealthcarePredictiveAnalytics />} />
                 <Route path="/services/ai-financial-trading-risk-management" element={<AIFinancialTradingRiskManagement />} />
+                <Route path="/services/ai-compliance-copilot" element={<AIComplianceCopilot />} />
                 <Route path="/comprehensive-ai-services-showcase-2025" element={<ComprehensiveAIServicesShowcase2025 />} />
                 {/* Emerging Tech 2030 */}
                 <Route path="/emerging-tech-2030" element={<EmergingTech2030 />} />

@@ -48,52 +48,56 @@ const LoadingFallback = ({ message }: { message: string }) => (
 // Service categories data
 const serviceCategories = [
   {
-    name: "AI Solutions",
-    description: "Cutting-edge artificial intelligence services for business transformation",
-    icon: "🤖",
-    href: "/ai-services",
-    count: 20,
-    color: "from-cyan-500 to-blue-600"
+    name: "AI Compliance Copilot",
+    description: "Automated regulatory compliance with AI-powered monitoring and risk assessment",
+    icon: "🛡️",
+    href: "/services/ai-compliance-copilot",
+    count: 1,
+    color: "from-blue-500 to-cyan-600",
+    featured: true
   },
   {
-    name: "Edge & IoT",
-    description: "Ultra-low latency edge computing and IoT platform solutions",
+    name: "AI Healthcare Analytics",
+    description: "Predictive healthcare analytics for patient care optimization",
+    icon: "🏥",
+    href: "/services/ai-healthcare-predictive-analytics",
+    count: 1,
+    color: "from-red-500 to-pink-600",
+    featured: true
+  },
+  {
+    name: "AI Business Intelligence",
+    description: "Advanced AI-powered business intelligence and analytics platform",
+    icon: "🤖",
+    href: "/services/ai-business-intelligence-platform",
+    count: 1,
+    color: "from-purple-500 to-cyan-600",
+    featured: true
+  },
+  {
+    name: "Micro SaaS Solutions",
+    description: "AI-powered micro SaaS tools for business automation",
     icon: "⚡",
+    href: "/services/micro-saas",
+    count: 15,
+    color: "from-orange-500 to-red-600",
+    featured: true
+  },
+  {
+    name: "Edge Computing",
+    description: "Ultra-low latency edge computing and IoT platform solutions",
+    icon: "🌐",
     href: "/services/edge-computing-platform",
     count: 8,
     color: "from-blue-500 to-purple-600"
   },
   {
-    name: "Cloud & DevOps",
-    description: "Scalable cloud infrastructure and automated deployment solutions",
-    icon: "☁️",
-    href: "/services/cloud-devops",
-    count: 12,
-    color: "from-green-500 to-emerald-600"
-  },
-  {
-    name: "Cybersecurity",
-    description: "Advanced security protocols and threat protection systems",
-    icon: "🔒",
-    href: "/services/ai-compliance-copilot",
-    count: 10,
-    color: "from-red-500 to-orange-600"
-  },
-  {
-    name: "Data Governance",
-    description: "AI-powered data protection and compliance management",
-    icon: "🛡️",
-    href: "/services/ai-data-governance",
+    name: "Quantum AI",
+    description: "Quantum computing and AI optimization solutions",
+    icon: "⚛️",
+    href: "/services/quantum-ai-platform",
     count: 6,
-    color: "from-purple-500 to-pink-600"
-  },
-  {
-    name: "Customer Success",
-    description: "AI-driven customer engagement and retention platforms",
-    icon: "🎯",
-    href: "/services/ai-customer-success-platform",
-    count: 15,
-    color: "from-orange-500 to-red-600"
+    color: "from-indigo-500 to-purple-600"
   }
 ];
 

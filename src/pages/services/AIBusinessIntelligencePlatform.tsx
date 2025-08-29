@@ -1,258 +1,189 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import { SEO } from '../../components/SEO';
 import { 
   Brain, 
-  TrendingUp, 
   BarChart3, 
+  TrendingUp, 
   Zap, 
-  Shield, 
   Users, 
-  Globe, 
-  CheckCircle,
+  DollarSign, 
+  CheckCircle, 
   ArrowRight,
   Phone,
   Mail,
-  MapPin,
-  ExternalLink,
-  Star,
-  Clock,
-  DollarSign,
-  Target,
-  PieChart,
-  LineChart,
-  Activity
+  MapPin
 } from 'lucide-react';
-import { SEO } from '@/components/SEO';
-import { Button } from '@/components/ui/button';
-import { Badge } from '@/components/ui/badge';
 
 export default function AIBusinessIntelligencePlatform() {
+  const contactInfo = {
+    phone: '+1 302 464 0950',
+    email: 'kleber@ziontechgroup.com',
+    address: '364 E Main St STE 1008 Middletown DE 19709'
+  };
+
   const features = [
     {
-      icon: Brain,
-      title: "AI-Powered Analytics",
-      description: "Advanced machine learning algorithms that automatically identify patterns, trends, and insights from your data."
-    },
-    {
+      title: 'Predictive Analytics',
+      description: 'AI-powered forecasting and trend analysis for business decisions',
       icon: TrendingUp,
-      title: "Real-time Monitoring",
-      description: "Live dashboards and alerts that keep you informed of critical business metrics and performance indicators."
+      color: 'from-blue-500 to-cyan-500'
     },
     {
+      title: 'Real-time Dashboards',
+      description: 'Live data visualization with customizable KPIs and metrics',
       icon: BarChart3,
-      title: "Predictive Modeling",
-      description: "Forecast future trends and outcomes using historical data and advanced statistical models."
+      color: 'from-green-500 to-emerald-500'
     },
     {
+      title: 'Natural Language Queries',
+      description: 'Ask questions in plain English and get instant insights',
+      icon: Brain,
+      color: 'from-purple-500 to-pink-500'
+    },
+    {
+      title: 'Automated Reporting',
+      description: 'AI-generated reports and insights delivered automatically',
       icon: Zap,
-      title: "Automated Reporting",
-      description: "Generate comprehensive reports automatically, saving hours of manual work each week."
-    },
-    {
-      icon: Shield,
-      title: "Data Security",
-      description: "Enterprise-grade security with role-based access control and data encryption at rest and in transit."
-    },
-    {
-      icon: Users,
-      title: "Collaborative Insights",
-      description: "Share dashboards and reports with team members, enabling better collaboration and decision-making."
+      color: 'from-orange-500 to-red-500'
     }
   ];
 
-  const benefits = [
-    "Improve decision-making speed by 80%",
-    "Reduce manual reporting by 90%",
-    "Identify business opportunities 3x faster",
-    "Increase operational efficiency by 45%",
-    "Reduce data analysis time by 70%",
-    "Improve forecast accuracy by 60%"
-  ];
-
-  const pricingTiers = [
+  const pricingPlans = [
     {
-      name: "Starter",
-      price: 199,
-      period: "month",
-      description: "Perfect for small businesses getting started with AI analytics",
+      name: 'Starter',
+      price: '$499',
+      period: '/month',
+      description: 'Perfect for small businesses',
       features: [
-        "Up to 5 users",
-        "Basic AI analytics",
-        "Standard dashboards",
-        "Email support",
-        "Data integration (3 sources)",
-        "Monthly reports"
+        'Up to 5 data sources',
+        'Basic dashboards',
+        'Email support',
+        'Monthly reports'
       ],
-      popular: false
+      cta: 'Start Free Trial'
     },
     {
-      name: "Professional",
-      price: 499,
-      period: "month",
-      description: "Ideal for growing businesses with advanced analytics needs",
+      name: 'Professional',
+      price: '$1,299',
+      period: '/month',
+      description: 'For growing companies',
       features: [
-        "Up to 25 users",
-        "Advanced AI algorithms",
-        "Custom dashboards",
-        "Priority support",
-        "Data integration (10 sources)",
-        "Real-time analytics",
-        "Predictive modeling",
-        "API access"
+        'Up to 20 data sources',
+        'Advanced analytics',
+        'Priority support',
+        'Custom integrations'
       ],
+      cta: 'Get Started',
       popular: true
     },
     {
-      name: "Enterprise",
-      price: 1299,
-      period: "month",
-      description: "For large organizations with complex data analytics requirements",
+      name: 'Enterprise',
+      price: '$2,999',
+      period: '/month',
+      description: 'For large organizations',
       features: [
-        "Unlimited users",
-        "Custom AI models",
-        "White-label dashboards",
-        "24/7 dedicated support",
-        "Unlimited data sources",
-        "Advanced security features",
-        "Custom integrations",
-        "SLA guarantees"
+        'Unlimited data sources',
+        'Full AI suite',
+        'Dedicated support',
+        'Custom development'
       ],
-      popular: false
-    }
-  ];
-
-  const useCases = [
-    {
-      industry: "E-commerce",
-      description: "Customer behavior analysis, inventory optimization, and sales forecasting"
-    },
-    {
-      industry: "Healthcare",
-      description: "Patient outcome prediction, resource optimization, and clinical analytics"
-    },
-    {
-      industry: "Finance",
-      description: "Risk assessment, fraud detection, and portfolio optimization"
-    },
-    {
-      industry: "Manufacturing",
-      description: "Predictive maintenance, quality control, and supply chain optimization"
-    },
-    {
-      industry: "Retail",
-      description: "Demand forecasting, customer segmentation, and store performance analysis"
+      cta: 'Contact Sales'
     }
   ];
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO 
-        title="AI Business Intelligence Platform - Zion Tech Group"
-        description="Advanced AI-powered business intelligence platform providing real-time insights, predictive analytics, and automated reporting for data-driven decision making."
+        title="AI Business Intelligence Platform - Advanced Analytics | Zion Tech Group"
+        description="AI-powered business intelligence platform with predictive analytics, real-time dashboards, and natural language queries. Transform your data into actionable insights."
+        keywords="AI business intelligence, predictive analytics, data visualization, business analytics, BI platform"
       />
       
       {/* Hero Section */}
-      <section className="relative py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-          >
-            <Badge className="mb-6 bg-gradient-to-r from-purple-600 to-pink-600 text-white border-0">
+      <section className="relative overflow-hidden py-20 lg:py-32">
+        <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 to-blue-600/20"></div>
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              className="inline-flex items-center px-4 py-2 rounded-full bg-purple-500/10 border border-purple-500/20 text-purple-400 text-sm font-medium mb-8"
+            >
+              <Brain className="w-4 h-4 mr-2" />
               AI-Powered Business Intelligence
-            </Badge>
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              Transform Your Data Into
-              <span className="bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent"> Actionable Intelligence</span>
-            </h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Advanced AI-powered business intelligence platform that provides real-time insights, 
-              predictive analytics, and automated reporting for data-driven decision making.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button size="lg" className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700">
-                Start Free Trial
-                <ArrowRight className="ml-2 h-5 w-5" />
-              </Button>
-              <Button size="lg" variant="outline" className="border-gray-600 text-white hover:bg-gray-800">
-                Schedule Demo
-              </Button>
-            </div>
-          </motion.div>
-        </div>
-      </section>
-
-      {/* Features Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Powerful Features for Modern Businesses
-            </h2>
-            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              Our AI-powered platform combines cutting-edge technology with intuitive design 
-              to deliver actionable business intelligence.
-            </p>
-          </motion.div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {features.map((feature, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700 hover:border-cyan-500/50 transition-all duration-300"
+            </motion.div>
+            
+            <motion.h1
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.1 }}
+              className="text-4xl md:text-6xl font-bold text-white mb-6"
+            >
+              AI Business Intelligence Platform
+            </motion.h1>
+            
+            <motion.p
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+              className="text-xl text-slate-300 max-w-3xl mx-auto mb-8"
+            >
+              Transform your data into actionable insights with AI-powered analytics, 
+              predictive modeling, and natural language queries.
+            </motion.p>
+            
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.3 }}
+              className="flex flex-col sm:flex-row gap-4 justify-center"
+            >
+              <a
+                href="#pricing"
+                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-600 to-blue-600 text-white font-semibold rounded-lg hover:from-purple-700 hover:to-blue-700 transition-all duration-200 shadow-lg hover:shadow-xl"
               >
-                <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg flex items-center justify-center mb-4">
-                  <feature.icon className="h-6 w-6 text-white" />
-                </div>
-                <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
-                <p className="text-gray-300">{feature.description}</p>
-              </motion.div>
-            ))}
+                Start Free Trial
+                <ArrowRight className="ml-2 w-5 h-5" />
+              </a>
+              <a
+                href="#demo"
+                className="inline-flex items-center px-8 py-4 border border-slate-600 text-slate-300 font-semibold rounded-lg hover:bg-slate-800 transition-all duration-200"
+              >
+                Watch Demo
+              </a>
+            </motion.div>
           </div>
         </div>
       </section>
 
-      {/* Benefits Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-800/30">
-        <div className="max-w-7xl mx-auto">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="text-center mb-16"
-          >
+      {/* Features Section */}
+      <section className="py-20 bg-slate-800/50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Transform Your Business Performance
+              Powerful BI Features
             </h2>
-            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              See measurable improvements in efficiency, decision-making, and business outcomes.
+            <p className="text-xl text-slate-300 max-w-2xl mx-auto">
+              Everything you need to make data-driven decisions
             </p>
-          </motion.div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {benefits.map((benefit, index) => (
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {features.map((feature, index) => (
               <motion.div
-                key={index}
-                initial={{ opacity: 0, x: -20 }}
-                whileInView={{ opacity: 1, x: 0 }}
+                key={feature.title}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="flex items-start space-x-3"
+                className="bg-slate-800/50 border border-slate-700 rounded-xl p-6 hover:border-slate-600 transition-all duration-200"
               >
-                <CheckCircle className="h-6 w-6 text-cyan-500 mt-1 flex-shrink-0" />
-                <span className="text-gray-300">{benefit}</span>
+                <div className={`inline-flex items-center justify-center w-12 h-12 rounded-lg bg-gradient-to-r ${feature.color} mb-4`}>
+                  <feature.icon className="w-6 h-6 text-white" />
+                </div>
+                <h3 className="text-xl font-semibold text-white mb-2">{feature.title}</h3>
+                <p className="text-slate-300">{feature.description}</p>
               </motion.div>
             ))}
           </div>
@@ -260,183 +191,99 @@ export default function AIBusinessIntelligencePlatform() {
       </section>
 
       {/* Pricing Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="text-center mb-16"
-          >
+      <section id="pricing" className="py-20 bg-slate-800/50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Choose Your Plan
+              Simple Pricing
             </h2>
-            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              Flexible pricing options designed to scale with your business needs.
+            <p className="text-xl text-slate-300 max-w-2xl mx-auto">
+              Choose the plan that fits your business needs
             </p>
-          </motion.div>
-
+          </div>
+          
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {pricingTiers.map((tier, index) => (
+            {pricingPlans.map((plan, index) => (
               <motion.div
-                key={index}
+                key={plan.name}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className={`relative bg-slate-800/50 backdrop-blur-sm rounded-xl p-8 border ${
-                  tier.popular 
-                    ? 'border-cyan-500/50 ring-2 ring-cyan-500/20' 
+                className={`relative bg-slate-800 border rounded-xl p-8 ${
+                  plan.popular 
+                    ? 'border-purple-500 shadow-lg shadow-purple-500/20' 
                     : 'border-slate-700'
                 }`}
               >
-                {tier.popular && (
+                {plan.popular && (
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                    <Badge className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white border-0">
+                    <span className="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-4 py-2 rounded-full text-sm font-semibold">
                       Most Popular
-                    </Badge>
+                    </span>
                   </div>
                 )}
-
+                
                 <div className="text-center mb-8">
-                  <h3 className="text-2xl font-bold text-white mb-2">{tier.name}</h3>
-                  <p className="text-gray-400 mb-6">{tier.description}</p>
-                  <div className="flex items-baseline justify-center">
-                    <span className="text-4xl font-bold text-white">${tier.price}</span>
-                    <span className="text-gray-400 ml-2">/{tier.period}</span>
+                  <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
+                  <div className="flex items-baseline justify-center mb-2">
+                    <span className="text-4xl font-bold text-white">{plan.price}</span>
+                    <span className="text-slate-400 ml-1">{plan.period}</span>
                   </div>
+                  <p className="text-slate-300 text-sm">{plan.description}</p>
                 </div>
-
-                <ul className="space-y-4 mb-8">
-                  {tier.features.map((feature, featureIndex) => (
-                    <li key={featureIndex} className="flex items-center">
-                      <CheckCircle className="h-5 w-5 text-cyan-500 mr-3 flex-shrink-0" />
-                      <span className="text-gray-300">{feature}</span>
+                
+                <ul className="space-y-3 mb-8">
+                  {plan.features.map((feature) => (
+                    <li key={feature} className="flex items-center text-slate-300">
+                      <CheckCircle className="w-5 h-5 text-green-500 mr-3 flex-shrink-0" />
+                      {feature}
                     </li>
                   ))}
                 </ul>
-
-                <Button 
-                  className={`w-full ${
-                    tier.popular 
-                      ? 'bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700' 
-                      : 'bg-slate-700 hover:bg-slate-600'
-                  }`}
-                >
-                  Get Started
-                </Button>
+                
+                <button className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-200 ${
+                  plan.popular
+                    ? 'bg-gradient-to-r from-purple-600 to-blue-600 text-white hover:from-purple-700 hover:to-blue-700'
+                    : 'bg-slate-700 text-white hover:bg-slate-600'
+                }`}>
+                  {plan.cta}
+                </button>
               </motion.div>
             ))}
           </div>
-        </div>
-      </section>
-
-      {/* Use Cases Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-800/30">
-        <div className="max-w-7xl mx-auto">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Industry Applications
-            </h2>
-            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              Our platform is designed to work across various industries and use cases.
-            </p>
-          </motion.div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {useCases.map((useCase, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700"
-              >
-                <h3 className="text-xl font-semibold text-white mb-3">{useCase.industry}</h3>
-                <p className="text-gray-300">{useCase.description}</p>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* CTA Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-4xl mx-auto text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-          >
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-              Ready to Transform Your Business Intelligence?
-            </h2>
-            <p className="text-xl text-gray-300 mb-8">
-              Join thousands of businesses already using AI to make better decisions and drive growth.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button size="lg" className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700">
-                Start Free Trial
-                <ArrowRight className="ml-2 h-5 w-5" />
-              </Button>
-              <Button size="lg" variant="outline" className="border-gray-600 text-white hover:bg-gray-800">
-                Contact Sales
-              </Button>
-            </div>
-          </motion.div>
         </div>
       </section>
 
       {/* Contact Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-800/30">
-        <div className="max-w-4xl mx-auto text-center">
+      <section className="py-20">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="bg-gradient-to-r from-purple-600/10 to-blue-600/10 border border-purple-500/20 rounded-2xl p-12"
           >
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-              Get in Touch
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              Ready to Get Started?
             </h2>
-            <p className="text-xl text-gray-300 mb-8">
-              Have questions? Our team is here to help you get started.
+            <p className="text-xl text-slate-300 mb-8">
+              Contact our team to learn more about our AI Business Intelligence Platform
             </p>
-            
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
-              <div className="flex flex-col items-center">
-                <Phone className="h-8 w-8 text-cyan-500 mb-4" />
-                <h3 className="text-lg font-semibold text-white mb-2">Phone</h3>
-                <p className="text-gray-300">+1 302 464 0950</p>
-              </div>
-              <div className="flex flex-col items-center">
-                <Mail className="h-8 w-8 text-cyan-500 mb-4" />
-                <h3 className="text-lg font-semibold text-white mb-2">Email</h3>
-                <p className="text-gray-300">kleber@ziontechgroup.com</p>
-              </div>
-              <div className="flex flex-col items-center">
-                <MapPin className="h-8 w-8 text-cyan-500 mb-4" />
-                <h3 className="text-lg font-semibold text-white mb-2">Address</h3>
-                <p className="text-gray-300">364 E Main St STE 1008<br />Middletown DE 19709</p>
-              </div>
-            </div>
-
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button size="lg" className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700">
-                Schedule a Call
-              </Button>
-              <Button size="lg" variant="outline" className="border-gray-600 text-white hover:bg-gray-800">
-                Send Message
-              </Button>
+              <a
+                href={`tel:${contactInfo.phone}`}
+                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-600 to-blue-600 text-white font-semibold rounded-lg hover:from-purple-700 hover:to-blue-700 transition-all duration-200"
+              >
+                <Phone className="w-5 h-5 mr-2" />
+                Call Now
+              </a>
+              <a
+                href={`mailto:${contactInfo.email}`}
+                className="inline-flex items-center px-8 py-4 border border-slate-600 text-slate-300 font-semibold rounded-lg hover:bg-slate-800 transition-all duration-200"
+              >
+                <Mail className="w-5 h-5 mr-2" />
+                Get Quote
+              </a>
             </div>
           </motion.div>
         </div>
