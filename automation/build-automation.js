@@ -5,7 +5,7 @@ const path = require('path');
 const { execSync, spawn } = require('child_process');
 const cron = require('node-cron');
 
-// console.log('🚀 Build Automation Starting...\n');
+// // console.log('🚀 Build Automation Starting...\n');
 
 class BuildAutomation {
   constructor() {
@@ -34,7 +34,7 @@ class BuildAutomation {
     const timestamp = new Date().toISOString();
     const logEntry = `[${timestamp}] [${level}] ${message}\n`;
     
-    // console.log(logEntry.trim());
+    // // console.log(logEntry.trim());
     
     try {
       fs.appendFileSync(this.logFile, logEntry);

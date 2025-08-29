@@ -51,7 +51,7 @@ class NetlifyBuildAutomation {
     this.log = (message) => {
       const timestamp = new Date().toISOString();
       const logMessage = `[${timestamp}] ${message}`;
-      console.log(logMessage);
+      // console.log(logMessage);
       
       try {
         fs.appendFileSync(this.config.logFile, logMessage + '\n');
@@ -1121,13 +1121,13 @@ if (require.main === module) {
   
   // Handle graceful shutdown
   process.on('SIGINT', async () => {
-    console.log('\nReceived SIGINT, shutting down gracefully...');
+    // console.log('\nReceived SIGINT, shutting down gracefully...');
     await automation.stop();
     process.exit(0);
   });
 
   process.on('SIGTERM', async () => {
-    console.log('\nReceived SIGTERM, shutting down gracefully...');
+    // console.log('\nReceived SIGTERM, shutting down gracefully...');
     await automation.stop();
     process.exit(0);
   });

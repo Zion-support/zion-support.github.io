@@ -11,18 +11,18 @@ class AutoCommitFixes {
     this.startTime = Date.now();
     this.commitsMade = 0;
     this.filesChanged = 0;
+  }
 
   log(message) {
     const timestamp = new Date().toISOString();
     const logMessage = `[${timestamp}] ${message}\n`;
 
-    // // // console.log(message);
-
     try {
       fs.appendFileSync(this.logFile, logMessage);
     } catch (error) {
-      // // // console.error('Failed to write to log file:', error.message);
-
+      // console.error('Failed to write to log file:', error.message);
+    }
+  }
 
   async checkGitStatus() {
     try {
@@ -33,6 +33,7 @@ class AutoCommitFixes {
 
       if (!status.trim()) {
         return { hasChanges: false, files: [] };
+      }
 
       const files = status.split('\n')
         .filter(line => line.trim())
@@ -48,7 +49,8 @@ class AutoCommitFixes {
     } catch (error) {
       this.log(`Error checking git status: ${error.message}`);
       return { hasChanges: false, files: [] };
-
+    }
+  }
 
   async getStagedFiles() {
     try {
@@ -61,7 +63,8 @@ class AutoCommitFixes {
     } catch (error) {
       this.log(`Error getting staged files: ${error.message}`);
       return [];
-
+    }
+  }
 
   async getUnstagedFiles() {
     try {
@@ -74,7 +77,8 @@ class AutoCommitFixes {
     } catch (error) {
       this.log(`Error getting unstaged files: ${error.message}`);
       return [];
-
+    }
+  }
 
   async stageFiles(files) {
     try {
@@ -88,7 +92,8 @@ class AutoCommitFixes {
       this.log(`Staged ${files.length} files`);
     } catch (error) {
       this.log(`Error staging files: ${error.message}`);
-
+    }
+  }
 
   async createCommit(message, files) {
     try {
@@ -105,76 +110,66 @@ class AutoCommitFixes {
     } catch (error) {
       this.log(`Error creating commit: ${error.message}`);
       return false;
-
+    }
+  }
 
   async analyzeChanges(files) {
     const changes = {
-      lint: [],
-      formatting: [],
-      dependencies: [],
-      config: [],
-      source: [],
+      added: [],
+      modified: [],
+      deleted: [],
+      renamed: [],
       other: []
     };
 
     files.forEach(file => {
-      if (file.includes('package.json') || file.includes('package-lock.json') || file.includes('yarn.lock')) {
-        changes.dependencies.push(file);
-      } else if (file.includes('.eslintrc') || file.includes('eslint.config') || file.includes('.prettierrc')) {
-        changes.config.push(file);
-      } else if (file.includes('src/') || file.includes('components/') || file.includes('pages/')) {
-        changes.source.push(file);
-      } else if (file.includes('.js') || file.includes('.jsx') || file.includes('.ts') || file.includes('.tsx')) {
-        changes.lint.push(file);
-      } else if (file.includes('.md') || file.includes('.txt') || file.includes('.json')) {
-        changes.formatting.push(file);
-      } else {
-        changes.other.push(file);
+      const status = file.status;
+      const fileName = file.file;
 
+      if (status === 'A' || status === '??') {
+        changes.added.push(fileName);
+      } else if (status === 'M') {
+        changes.modified.push(fileName);
+      } else if (status === 'D') {
+        changes.deleted.push(fileName);
+      } else if (status === 'R') {
+        changes.renamed.push(fileName);
+      } else {
+        changes.other.push(fileName);
+      }
     });
 
     return changes;
+  }
 
-  generateCommitMessage(changes) {
+  async generateCommitMessage(changes) {
     const messages = [];
 
-    if (changes.lint.length > 0) {
-      messages.push(`Fix lint issues in ${changes.lint.length} files`);
+    if (changes.added.length > 0) {
+      messages.push(`Add ${changes.added.length} new file(s)`);
+    }
 
-    if (changes.formatting.length > 0) {
-      messages.push(`Improve formatting in ${changes.formatting.length} files`);
+    if (changes.modified.length > 0) {
+      messages.push(`Update ${changes.modified.length} file(s)`);
+    }
 
-    if (changes.dependencies.length > 0) {
-      messages.push(`Update dependencies`);
+    if (changes.deleted.length > 0) {
+      messages.push(`Remove ${changes.deleted.length} file(s)`);
+    }
 
-    if (changes.config.length > 0) {
-      messages.push(`Update configuration files`);
-
-    if (changes.source.length > 0) {
-      messages.push(`Update source code in ${changes.source.length} files`);
+    if (changes.renamed.length > 0) {
+      messages.push(`Rename ${changes.renamed.length} file(s)`);
+    }
 
     if (changes.other.length > 0) {
-      messages.push(`Update ${changes.other.length} other files`);
+      messages.push(`Other changes in ${changes.other.length} file(s)`);
+    }
 
     return messages.join(', ');
-
-  async shouldAutoCommit(changes) {
-    // Auto-commit for lint and formatting changes
-    if (changes.lint.length > 0 || changes.formatting.length > 0) {
-      return true;
-
-    // Auto-commit for small source changes (less than 10 files)
-    if (changes.source.length > 0 && changes.source.length < 10) {
-      return true;
-
-    // Don't auto-commit for dependency updates or large changes
-    if (changes.dependencies.length > 0 || changes.source.length >= 10) {
-      return false;
-
-    return true;
+  }
 
   async run() {
-    this.log('🚀 Starting Auto-Commit Fixes...');
+    this.log('🚀 Starting Auto Commit Fixes...');
     this.log(`Project root: ${this.projectRoot}`);
 
     try {
@@ -182,89 +177,70 @@ class AutoCommitFixes {
       const logsDir = path.dirname(this.logFile);
       if (!fs.existsSync(logsDir)) {
         fs.mkdirSync(logsDir, { recursive: true });
+      }
 
       // Check git status
-      const { hasChanges, files } = await this.checkGitStatus();
+      this.log('📋 Checking git status...');
+      const gitStatus = await this.checkGitStatus();
 
-      if (!hasChanges) {
+      if (!gitStatus.hasChanges) {
         this.log('✨ No changes to commit');
         return;
+      }
 
-      this.log(`📁 Found ${files.length} changed files`);
+      this.log(`📁 Found ${gitStatus.files.length} changed files`);
 
       // Analyze changes
-      const changes = await this.analyzeChanges(files.map(f => f.file));
+      const changes = await this.analyzeChanges(gitStatus.files);
+      this.log('🔍 Analyzing changes...');
 
-      // Log change summary
-      this.log('\n📊 Change Summary:');
-      Object.entries(changes).forEach(([type, fileList]) => {
-        if (fileList.length > 0) {
-          this.log(`  ${type}: ${fileList.length} files`);
-
+      Object.entries(changes).forEach(([type, files]) => {
+        if (files.length > 0) {
+          this.log(`  ${type}: ${files.length} files`);
+        }
       });
 
-      // Check if we should auto-commit
-      const shouldCommit = await this.shouldAutoCommit(changes);
-
-      if (!shouldCommit) {
-        this.log('\n⚠️  Changes are too significant for auto-commit');
-        this.log('Please review and commit manually');
-        return;
-
       // Stage all changes
-      this.log('\n📦 Staging files...');
-      await this.stageFiles(files.map(f => f.file));
+      this.log('📦 Staging all changes...');
+      await this.stageFiles(gitStatus.files.map(f => f.file));
+
+      // Generate commit message
+      const commitMessage = await this.generateCommitMessage(changes);
+      this.log(`💬 Commit message: ${commitMessage}`);
 
       // Create commit
-      const commitMessage = this.generateCommitMessage(changes);
-      this.log(`\n💾 Creating commit: ${commitMessage}`);
-
-      const success = await this.createCommit(commitMessage, files.map(f => f.file));
+      this.log('💾 Creating commit...');
+      const success = await this.createCommit(commitMessage, gitStatus.files.map(f => f.file));
 
       if (success) {
-        this.filesChanged = files.length;
-
-        // Try to push if we're on a branch
-        try {
-          const currentBranch = execSync('git branch --show-current', {
-            cwd: this.projectRoot,
-            encoding: 'utf8'
-          }).trim();
-
-          if (currentBranch && currentBranch !== 'main' && currentBranch !== 'master') {
-            this.log(`🔄 Pushing to origin/${currentBranch}...`);
-            execSync(`git push origin ${currentBranch}`, {
-              cwd: this.projectRoot,
-              stdio: 'pipe'
-            });
-            this.log('✅ Changes pushed successfully');
-
-        } catch (error) {
-          this.log(`⚠️  Could not push changes: ${error.message}`);
-
+        this.log('✅ Successfully committed changes');
+        this.filesChanged = gitStatus.files.length;
+      } else {
+        this.log('❌ Failed to create commit');
+      }
 
       const duration = Date.now() - this.startTime;
 
-      this.log('\n📊 Auto-Commit Summary:');
+      this.log('\n📊 Auto Commit Fixes Summary:');
       this.log(`Files changed: ${this.filesChanged}`);
       this.log(`Commits made: ${this.commitsMade}`);
       this.log(`Duration: ${duration}ms`);
 
       if (this.commitsMade > 0) {
-        this.log('✅ Auto-commit completed successfully!');
+        this.log('🎉 Auto-commit process completed successfully!');
       } else {
         this.log('⚠️  No commits were made');
+      }
 
     } catch (error) {
-      this.log(`❌ Error running auto-commit: ${error.message}`);
+      this.log(`❌ Error running auto commit fixes: ${error.message}`);
       process.exit(1);
+    }
+  }
+}
 
-
-
-// Run the auto-commit fixes
+// Run the auto commit fixes
 const autoCommit = new AutoCommitFixes();
 autoCommit.run().catch(error => {
-  // // // console.error('Fatal error:', error);
   process.exit(1);
 });
-}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}

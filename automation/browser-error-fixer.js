@@ -71,14 +71,14 @@ class BrowserErrorFixer {
     };
 
   async analyzeError(error) {
-    console.log(`🔍 Analyzing error: ${error.message}`);
+    // console.log(`🔍 Analyzing error: ${error.message}`);
     
     const fixStrategy = this.identifyFixStrategy(error);
     if (fixStrategy) {
-      console.log(`🔧 Identified fix strategy: ${fixStrategy.type}`);
+      // console.log(`🔧 Identified fix strategy: ${fixStrategy.type}`);
       await this.applyFixStrategy(fixStrategy, error);
     } else {
-      console.log(`⚠️  No fix strategy identified for this error`);
+      // console.log(`⚠️  No fix strategy identified for this error`);
 
 
   identifyFixStrategy(error) {
@@ -96,7 +96,7 @@ class BrowserErrorFixer {
       const sourceFiles = await this.findRelevantSourceFiles(error);
       
       for (const filePath of sourceFiles) {
-        console.log(`📁 Analyzing file: ${path.relative(this.projectRoot, filePath)}`);
+        // console.log(`📁 Analyzing file: ${path.relative(this.projectRoot, filePath)}`);
         
         const fileContent = await fs.readFile(filePath, 'utf8');
         const fixes = await this.applyFixesToFile(strategy, fileContent, filePath);
@@ -193,7 +193,7 @@ class BrowserErrorFixer {
       const backupPath = `${filePath}.backup.${Date.now()}`;
       await fs.copyFile(filePath, backupPath);
       this.backupsCreated.push(backupPath);
-      console.log(`💾 Backup created: ${path.relative(this.projectRoot, backupPath)}`);
+      // console.log(`💾 Backup created: ${path.relative(this.projectRoot, backupPath)}`);
     } catch (error) {
       console.error(`❌ Failed to create backup for ${filePath}:`, error);
 
@@ -208,7 +208,7 @@ class BrowserErrorFixer {
         modifiedContent = this.applySingleFix(modifiedContent, fix);
 
       await fs.writeFile(filePath, modifiedContent, 'utf8');
-      console.log(`✅ Applied ${fixes.length} fixes to ${path.relative(this.projectRoot, filePath)}`);
+      // console.log(`✅ Applied ${fixes.length} fixes to ${path.relative(this.projectRoot, filePath)}`);
     } catch (error) {
       console.error(`❌ Failed to apply fixes to ${filePath}:`, error);
 
@@ -304,7 +304,7 @@ class BrowserErrorFixer {
       await fs.mkdir(path.dirname(reportPath), { recursive: true });
       await fs.writeFile(reportPath, JSON.stringify(report, null, 2));
       
-      console.log(`📄 Auto-fix report generated: ${reportPath}`);
+      // console.log(`📄 Auto-fix report generated: ${reportPath}`);
       return report;
     } catch (error) {
       console.error('❌ Failed to generate fix report:', error);
@@ -321,7 +321,7 @@ class BrowserErrorFixer {
       for (const backup of backupsToRemove) {
         try {
           await fs.unlink(backup);
-          console.log(`🗑️  Removed old backup: ${path.relative(this.projectRoot, backup)}`);
+          // console.log(`🗑️  Removed old backup: ${path.relative(this.projectRoot, backup)}`);
         } catch (err) {
           // Backup already removed or inaccessible
 
@@ -332,7 +332,7 @@ class BrowserErrorFixer {
 
 
   async runFixCycle(errorLog) {
-    console.log('🚀 Starting browser error auto-fix cycle...');
+    // console.log('🚀 Starting browser error auto-fix cycle...');
     
     for (const error of errorLog) {
       await this.analyzeError(error);
@@ -340,7 +340,7 @@ class BrowserErrorFixer {
     await this.generateFixReport();
     await this.cleanupBackups();
     
-    console.log(`✅ Auto-fix cycle completed. Applied ${this.fixesApplied.length} fixes.`);
+    // console.log(`✅ Auto-fix cycle completed. Applied ${this.fixesApplied.length} fixes.`);
     return this.fixesApplied;
 
 
@@ -359,7 +359,7 @@ if (require.main === module) {
   ];
   
   fixer.runFixCycle(sampleErrors).then(() => {
-    console.log('Auto-fix cycle completed successfully');
+    // console.log('Auto-fix cycle completed successfully');
     process.exit(0);
   }).catch((error) => {
     console.error('Auto-fix cycle failed:', error);

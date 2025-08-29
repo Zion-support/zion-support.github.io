@@ -50,7 +50,7 @@ class NetlifyBuildMonitor {
     this.log = (message) => {
       const timestamp = new Date().toISOString();
       const logMessage = `[${timestamp}] ${message}`;
-      console.log(logMessage);
+      // console.log(logMessage);
       
       try {
         fs.appendFileSync(this.config.logFile, logMessage + '\n');
@@ -256,7 +256,7 @@ class NetlifyBuildMonitor {
     }
 
     // Check for common code smells
-    if (content.includes('console.log(') && !filePath.includes('.test.')) {
+    if (content.includes('// console.log(') && !filePath.includes('.test.')) {
       issues.push({ type: 'code_smell', message: 'Console.log found in production code' });
     }
 
@@ -777,13 +777,13 @@ if (require.main === module) {
   
   // Handle graceful shutdown
   process.on('SIGINT', async () => {
-    console.log('\nReceived SIGINT, shutting down gracefully...');
+    // console.log('\nReceived SIGINT, shutting down gracefully...');
     await monitor.stop();
     process.exit(0);
   });
 
   process.on('SIGTERM', async () => {
-    console.log('\nReceived SIGTERM, shutting down gracefully...');
+    // console.log('\nReceived SIGTERM, shutting down gracefully...');
     await monitor.stop();
     process.exit(0);
   });

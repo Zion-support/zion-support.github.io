@@ -15,7 +15,7 @@ export default defineConfig({
       '@types': resolve(__dirname, 'src/types'),
       '@hooks': resolve(__dirname, 'src/hooks'),
       '@services': resolve(__dirname, 'src/services')
-
+    }
   },
   build: {
     target: 'esnext',
@@ -37,20 +37,20 @@ export default defineConfig({
           const ext = info[info.length - 1];
           if (/png|jpe?g|svg|gif|tiff|bmp|ico/i.test(ext)) {
             return `images/[name]-[hash][extname]`;
-
+          }
           if (/css/i.test(ext)) {
             return `css/[name]-[hash][extname]`;
-
+          }
           return `assets/[name]-[hash][extname]`;
-
-
+        }
+      }
     },
     terserOptions: {
       compress: {
         drop_console: true,
         drop_debugger: true,
         pure_funcs: ['console.log', 'console.info', 'console.debug', 'console.warn']
-
+      }
     },
     chunkSizeWarningLimit: 1000
   },
@@ -83,10 +83,10 @@ export default defineConfig({
     devSourcemap: true,
     postcss: {
       plugins: []
-
+    }
   },
   define: {
     __APP_VERSION__: JSON.stringify(process.env.npm_package_version),
     __BUILD_TIME__: JSON.stringify(new Date().toISOString())
-
-});}}}}}}}}
+  }
+});

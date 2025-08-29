@@ -76,7 +76,7 @@ class BrowserErrorMonitor {
 
   async initialize() {
     try {
-      console.log('🚀 Initializing Browser Error Monitor...');
+      // console.log('🚀 Initializing Browser Error Monitor...');
       
       // Ensure log directory exists
       await fs.mkdir(CONFIG.logDir, { recursive: true });
@@ -100,7 +100,7 @@ class BrowserErrorMonitor {
       // Set up error listeners
       await this.setupErrorListeners();
       
-      console.log('✅ Browser Error Monitor initialized successfully');
+      // console.log('✅ Browser Error Monitor initialized successfully');
       return true;
     } catch (error) {
       console.error('❌ Failed to initialize Browser Error Monitor:', error);
@@ -142,7 +142,7 @@ class BrowserErrorMonitor {
     };
 
     this.errorLog.push(error);
-    console.log(`🔴 Console Error: ${error.message}`);
+    // console.log(`🔴 Console Error: ${error.message}`);
     
     // Attempt auto-fix
     await this.attemptAutoFix(error);
@@ -158,7 +158,7 @@ class BrowserErrorMonitor {
     };
 
     this.errorLog.push(pageError);
-    console.log(`🔴 Page Error: ${pageError.message}`);
+    // console.log(`🔴 Page Error: ${pageError.message}`);
     
     // Attempt auto-fix
     await this.attemptAutoFix(pageError);
@@ -174,7 +174,7 @@ class BrowserErrorMonitor {
     };
 
     this.errorLog.push(requestError);
-    console.log(`🔴 Request Failed: ${request.url()} - ${request.failure().errorText}`);
+    // console.log(`🔴 Request Failed: ${request.url()} - ${request.failure().errorText}`);
     
     // Attempt auto-fix
     await this.attemptAutoFix(requestError);
@@ -191,7 +191,7 @@ class BrowserErrorMonitor {
     };
 
     this.errorLog.push(responseError);
-    console.log(`🔴 Response Error: ${response.url()} - ${response.status()} ${response.statusText()}`);
+    // console.log(`🔴 Response Error: ${response.url()} - ${response.status()} ${response.statusText()}`);
     
     // Attempt auto-fix
     await this.attemptAutoFix(responseError);
@@ -222,7 +222,7 @@ class BrowserErrorMonitor {
       const fixStrategy = this.identifyFixStrategy(error);
       
       if (fixStrategy) {
-        console.log(`🔧 Attempting to fix: ${fixStrategy}`);
+        // console.log(`🔧 Attempting to fix: ${fixStrategy}`);
         
         const fixResult = await this.applyFix(fixStrategy, error);
         
@@ -235,10 +235,10 @@ class BrowserErrorMonitor {
             timestamp: new Date().toISOString()
           });
           
-          console.log(`✅ Auto-fix successful: ${fixStrategy}`);
+          // console.log(`✅ Auto-fix successful: ${fixStrategy}`);
         } else {
           this.stats.failedFixes++;
-          console.log(`❌ Auto-fix failed: ${fixStrategy} - ${fixResult.reason}`);
+          // console.log(`❌ Auto-fix failed: ${fixStrategy} - ${fixResult.reason}`);
 
 
     } catch (fixError) {
@@ -368,7 +368,7 @@ class BrowserErrorMonitor {
 
   async fixMissingResource(error) {
     // Log missing resource for manual review
-    console.log(`📝 Missing resource detected: ${error.url || 'unknown'}`);
+    // console.log(`📝 Missing resource detected: ${error.url || 'unknown'}`);
     return { success: true, message: 'Missing resource logged for review' };
 
   async fixCorsError(error) {
@@ -400,7 +400,7 @@ class BrowserErrorMonitor {
 
   async performHealthCheck() {
     try {
-      console.log('🔍 Performing browser health check...');
+      // console.log('🔍 Performing browser health check...');
       
       // Navigate to app
       await this.page.goto(CONFIG.appUrl, { 
@@ -419,7 +419,7 @@ class BrowserErrorMonitor {
       this.stats.lastCheck = new Date().toISOString();
       this.stats.totalErrors = this.errorLog.length;
       
-      console.log(`📊 Health Check Complete - Total Errors: ${this.stats.totalErrors}, Fixed: ${this.stats.fixedErrors}`);
+      // console.log(`📊 Health Check Complete - Total Errors: ${this.stats.totalErrors}, Fixed: ${this.stats.fixedErrors}`);
       
       // Generate report
       await this.generateReport();
@@ -449,14 +449,14 @@ class BrowserErrorMonitor {
       const reportPath = path.join(CONFIG.logDir, 'browser-error-report.json');
       await fs.writeFile(reportPath, JSON.stringify(report, null, 2));
       
-      console.log(`📄 Report generated: ${reportPath}`);
+      // console.log(`📄 Report generated: ${reportPath}`);
     } catch (error) {
       console.error('❌ Failed to generate report:', error);
 
 
   async start() {
     if (this.isRunning) {
-      console.log('⚠️ Monitor is already running');
+      // console.log('⚠️ Monitor is already running');
       return;
 
     const initialized = await this.initialize();
@@ -464,7 +464,7 @@ class BrowserErrorMonitor {
       throw new Error('Failed to initialize monitor');
 
     this.isRunning = true;
-    console.log('🚀 Browser Error Monitor started');
+    // console.log('🚀 Browser Error Monitor started');
     
     // Initial health check
     await this.performHealthCheck();
@@ -485,10 +485,10 @@ class BrowserErrorMonitor {
     if (this.browser) {
       await this.browser.close();
 
-    console.log('🛑 Browser Error Monitor stopped');
+    // console.log('🛑 Browser Error Monitor stopped');
 
   async restart() {
-    console.log('🔄 Restarting Browser Error Monitor...');
+    // console.log('🔄 Restarting Browser Error Monitor...');
     await this.stop();
     await new Promise(resolve => setTimeout(resolve, 2000));
     await this.start();
@@ -499,13 +499,13 @@ const monitor = new BrowserErrorMonitor();
 
 // Handle process signals
 process.on('SIGINT', async () => {
-  console.log('🛑 Received SIGINT, shutting down...');
+  // console.log('🛑 Received SIGINT, shutting down...');
   await monitor.stop();
   process.exit(0);
 });
 
 process.on('SIGTERM', async () => {
-  console.log('🛑 Received SIGTERM, shutting down...');
+  // console.log('🛑 Received SIGTERM, shutting down...');
   await monitor.stop();
   process.exit(0);
 });
