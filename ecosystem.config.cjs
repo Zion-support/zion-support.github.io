@@ -303,6 +303,106 @@ module.exports = {
       min_uptime: '10s'
     },
 
+    // AI-Powered Code Quality Analyzer
+    {
+      name: 'ai-code-quality-analyzer',
+      script: './scripts/automation/ai-code-quality-analyzer.cjs',
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      max_memory_restart: '1G',
+      env: {
+        NODE_ENV: 'production',
+        AUTOMATION_INTERVAL: '1800000' // 30 minutes
+      },
+      error_file: './logs/ai-code-quality-error.log',
+      out_file: './logs/ai-code-quality-out.log',
+      log_file: './logs/ai-code-quality-combined.log',
+      time: true,
+      max_restarts: 10,
+      min_uptime: '10s'
+    },
+
+    // Smart Performance Optimization Monitor
+    {
+      name: 'smart-performance-monitor',
+      script: './scripts/automation/smart-performance-monitor.cjs',
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      max_memory_restart: '1G',
+      env: {
+        NODE_ENV: 'production',
+        AUTOMATION_INTERVAL: '3600000' // 1 hour
+      },
+      error_file: './logs/smart-performance-error.log',
+      out_file: './logs/smart-performance-out.log',
+      log_file: './logs/smart-performance-combined.log',
+      time: true,
+      max_restarts: 10,
+      min_uptime: '10s'
+    },
+
+    // Intelligent Error Prediction & Prevention
+    {
+      name: 'intelligent-error-predictor',
+      script: './scripts/automation/intelligent-error-predictor.cjs',
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      max_memory_restart: '1G',
+      env: {
+        NODE_ENV: 'production',
+        AUTOMATION_INTERVAL: '1800000' // 30 minutes
+      },
+      error_file: './logs/error-predictor-error.log',
+      out_file: './logs/error-predictor-out.log',
+      log_file: './logs/error-predictor-combined.log',
+      time: true,
+      max_restarts: 10,
+      min_uptime: '10s'
+    },
+
+    // Smart Build Optimization Engine
+    {
+      name: 'smart-build-optimizer',
+      script: './scripts/automation/smart-build-optimizer.cjs',
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      max_memory_restart: '1G',
+      env: {
+        NODE_ENV: 'production',
+        AUTOMATION_INTERVAL: '7200000' // 2 hours
+      },
+      error_file: './logs/build-optimizer-error.log',
+      out_file: './logs/build-optimizer-out.log',
+      log_file: './logs/build-optimizer-combined.log',
+      time: true,
+      max_restarts: 10,
+      min_uptime: '10s'
+    },
+
+    // Intelligent Test Coverage Analyzer
+    {
+      name: 'intelligent-test-analyzer',
+      script: './scripts/automation/intelligent-test-analyzer.cjs',
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      max_memory_restart: '1G',
+      env: {
+        NODE_ENV: 'production',
+        AUTOMATION_INTERVAL: '3600000' // 1 hour
+      },
+      error_file: './logs/test-analyzer-error.log',
+      out_file: './logs/test-analyzer-out.log',
+      log_file: './logs/test-analyzer-combined.log',
+      time: true,
+      max_restarts: 10,
+      min_uptime: '10s'
+    },
+
     // Continuous improvement
     {
       name: 'continuous-improvement',
@@ -338,6 +438,26 @@ module.exports = {
       error_file: './logs/daily-build-test-error.log',
       out_file: './logs/daily-build-test-out.log',
       log_file: './logs/daily-build-test-combined.log',
+      time: true,
+      max_restarts: 10,
+      min_uptime: '10s'
+    },
+
+    // Intelligent Automation Dashboard
+    {
+      name: 'intelligent-automation-dashboard',
+      script: './scripts/automation/intelligent-automation-dashboard.cjs',
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      max_memory_restart: '512M',
+      env: {
+        NODE_ENV: 'production',
+        DASHBOARD_PORT: '3001'
+      },
+      error_file: './logs/dashboard-error.log',
+      out_file: './logs/dashboard-out.log',
+      log_file: './logs/dashboard-combined.log',
       time: true,
       max_restarts: 10,
       min_uptime: '10s'
