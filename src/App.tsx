@@ -8,10 +8,10 @@ import { AppHeader } from './layout/AppHeader';
 import { Footer } from './components/Footer';
 
 // Enhanced Components
-import { PerformanceOptimizer } from './components/PerformanceOptimizer';
-import EnhancedAccessibilityEnhancer from './components/EnhancedAccessibilityEnhancer';
-import { MobileExperienceEnhancer } from './components/MobileExperienceEnhancer';
-import { SEO } from './components/SEO';
+import { EnhancedPerformanceOptimizer } from './components/EnhancedPerformanceOptimizer';
+import { EnhancedAccessibilityPanel } from './components/EnhancedAccessibilityPanel';
+import { EnhancedMobileExperience } from './components/EnhancedMobileExperience';
+import { EnhancedSEO } from './components/EnhancedSEO';
 import { FloatingActionButton } from './components/FloatingActionButton';
 import { AdvancedAnalytics } from './components/AdvancedAnalytics';
 import { SmartNotificationSystem } from './components/SmartNotificationSystem';
@@ -238,12 +238,49 @@ function App() {
     <HelmetProvider>
       <ErrorBoundary>
         <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
-          <SEO 
+          <EnhancedSEO 
             title="Zion Tech Group - Leading AI & Technology Solutions"
             description="Transform your business with Zion Tech Group's cutting-edge AI solutions, quantum computing, and innovative micro SAAS services. Leading the future of technology."
-            keywords="AI solutions, quantum computing, micro SAAS, technology consulting, digital transformation"
+            keywords="AI solutions, quantum computing, micro SAAS, technology consulting, digital transformation, cybersecurity, cloud infrastructure, digital transformation"
             ogImage="/og-image.jpg"
             canonicalUrl="https://ziontechgroup.com"
+            structuredData={{
+              "@context": "https://schema.org",
+              "@type": "Organization",
+              "name": "Zion Tech Group",
+              "url": "https://ziontechgroup.com",
+              "logo": "https://ziontechgroup.com/logo.png",
+              "description": "Leading AI & Technology Solutions provider specializing in quantum computing, micro SAAS, and digital transformation services.",
+              "address": {
+                "@type": "PostalAddress",
+                "streetAddress": "364 E Main St STE 1008",
+                "addressLocality": "Middletown",
+                "addressRegion": "DE",
+                "postalCode": "19709",
+                "addressCountry": "US"
+              },
+              "contactPoint": {
+                "@type": "ContactPoint",
+                "telephone": "+1-302-464-0950",
+                "contactType": "customer service",
+                "email": "kleber@ziontechgroup.com"
+              },
+              "sameAs": [
+                "https://linkedin.com/company/zion-tech-group",
+                "https://twitter.com/ziontechgroup",
+                "https://facebook.com/ziontechgroup"
+              ],
+              "foundingDate": "2020",
+              "numberOfEmployees": "50-100",
+              "serviceType": [
+                "AI Solutions",
+                "Quantum Computing",
+                "Micro SAAS",
+                "Digital Transformation",
+                "Cybersecurity",
+                "Cloud Infrastructure"
+              ]
+            }}
           />
           
           <AppHeader />
@@ -358,9 +395,9 @@ function App() {
           
           <Footer />
           <ChatAssistant />
-          <PerformanceOptimizer />
-          <EnhancedAccessibilityEnhancer enabled={true} showControls={true} />
-          <MobileExperienceEnhancer enabled={true} />
+          <EnhancedPerformanceOptimizer enabled={true} showMetrics={true} />
+          <EnhancedAccessibilityPanel enabled={true} showControls={true} />
+          <EnhancedMobileExperience enabled={true} showControls={true} />
           <AdvancedAnalytics enabled={true} showMetrics={true} />
           <SmartNotificationSystem enabled={true} />
           <FloatingActionButton />
