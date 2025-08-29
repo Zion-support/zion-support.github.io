@@ -1,5 +1,5 @@
 {
-  "timestamp": "2025-08-29T16:27:28.462Z",
+  "timestamp": "2025-08-29T16:41:44.650Z",
   "summary": {
     "totalVulnerabilities": 0,
     "criticalVulnerabilities": 0,
@@ -73,18 +73,6 @@
     "compliance": {
       "status": "success",
       "checks": [
-        {
-          "file": "index.html",
-          "csp": false,
-          "xFrame": false,
-          "xContent": false
-        },
-        {
-          "file": "offline.html",
-          "csp": false,
-          "xFrame": false,
-          "xContent": false
-        },
         {
           "type": "package-scripts",
           "hasSecurityScript": false,
