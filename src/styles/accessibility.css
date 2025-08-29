@@ -1,292 +1,7 @@
-/* Enhanced Accessibility Styles */
-:root {
-  --text-primary: #1f2937;
-  --text-secondary: #6b7280;
-  --bg-primary: #ffffff;
-  --bg-secondary: #f9fafb;
-  --accent-color: #06b6d4;
-  --border-color: #e5e7eb;
-  --text-scale: 1;
-  --saturation: 1;
-  --color-filter: none;
-}
+/* Accessibility Enhancements for Zion Tech Group */
 
-/* High Contrast Mode */
-.high-contrast {
-  --text-primary: #ffffff;
-  --text-secondary: #e5e7eb;
-  --bg-primary: #000000;
-  --bg-secondary: #1f2937;
-  --accent-color: #fbbf24;
-  --border-color: #fbbf24;
-}
-
-.high-contrast * {
-  border-color: var(--border-color) !important;
-}
-
-/* Large Text Mode */
-.large-text {
-  font-size: 18px;
-  line-height: 1.6;
-}
-
-.large-text h1 { font-size: 2.5rem; }
-.large-text h2 { font-size: 2rem; }
-.large-text h3 { font-size: 1.75rem; }
-.large-text h4 { font-size: 1.5rem; }
-.large-text h5 { font-size: 1.25rem; }
-.large-text h6 { font-size: 1.125rem; }
-
-/* Reduced Motion */
-.reduced-motion *,
-.reduced-motion *::before,
-.reduced-motion *::after {
-  animation-duration: 0.01ms !important;
-  animation-iteration-count: 1 !important;
-  transition-duration: 0.01ms !important;
-  scroll-behavior: auto !important;
-}
-
-/* High Saturation */
-.high-saturation {
-  filter: saturate(1.5);
-}
-
-/* Color Blindness Filters */
-.color-blind-protanopia {
-  filter: url(#protanopia);
-}
-
-.color-blind-deuteranopia {
-  filter: url(#deuteranopia);
-}
-
-.color-blind-tritanopia {
-  filter: url(#tritanopia);
-}
-
-/* Enhanced Focus Indicators */
-.enhanced-focus *:focus {
-  outline: 3px solid var(--accent-color) !important;
-  outline-offset: 2px !important;
-  border-radius: 4px !important;
-}
-
-.enhanced-focus button:focus,
-.enhanced-focus a:focus,
-.enhanced-focus input:focus,
-.enhanced-focus select:focus,
-.enhanced-focus textarea:focus {
-  box-shadow: 0 0 0 3px rgba(6, 182, 212, 0.3) !important;
-}
-
-/* Keyboard Navigation */
-.keyboard-navigation *:focus-visible {
-  outline: 3px solid var(--accent-color) !important;
-  outline-offset: 2px !important;
-}
-
-/* Screen Reader Optimizations */
-.screen-reader-optimized [role="main"] {
-  outline: 2px solid transparent;
-}
-
-.screen-reader-optimized [role="navigation"] {
-  outline: 2px solid transparent;
-}
-
-.screen-reader-optimized [role="contentinfo"] {
-  outline: 2px solid transparent;
-}
-
-/* Mobile Touch Optimizations */
-.touch-optimized {
-  -webkit-tap-highlight-color: transparent;
-  -webkit-touch-callout: none;
-  -webkit-user-select: none;
-  user-select: none;
-}
-
-.touch-optimized * {
-  -webkit-tap-highlight-color: transparent;
-}
-
-.touch-target-optimized {
-  min-height: 44px !important;
-  min-width: 44px !important;
-  padding: 12px !important;
-}
-
-.touch-active {
-  -webkit-tap-highlight-color: rgba(6, 182, 212, 0.3);
-}
-
-/* Mobile Orientation Optimizations */
-.landscape-optimized .hero-section {
-  min-height: 60vh;
-}
-
-.landscape-optimized .mobile-nav {
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  z-index: 1000;
-}
-
-/* Focus History */
-.focused {
-  position: relative;
-}
-
-.focused::after {
-  content: '';
-  position: absolute;
-  top: -2px;
-  left: -2px;
-  right: -2px;
-  bottom: -2px;
-  border: 2px solid var(--accent-color);
-  border-radius: 6px;
-  pointer-events: none;
-  z-index: 1000;
-}
-
-/* Accessibility Live Regions */
-#accessibility-live-region {
-  position: absolute;
-  left: -10000px;
-  width: 1px;
-  height: 1px;
-  overflow: hidden;
-}
-
-/* Skip Links */
-.skip-link {
-  position: absolute;
-  top: -40px;
-  left: 6px;
-  background: var(--accent-color);
-  color: white;
-  padding: 8px;
-  text-decoration: none;
-  border-radius: 4px;
-  z-index: 10000;
-}
-
-.skip-link:focus {
-  top: 6px;
-}
-
-/* High Contrast Focus */
-.high-contrast .enhanced-focus *:focus {
-  outline: 3px solid var(--accent-color) !important;
-  outline-offset: 3px !important;
-}
-
-/* Mobile Scrollbar */
-.touch-optimized ::-webkit-scrollbar {
-  width: 8px;
-}
-
-.touch-optimized ::-webkit-scrollbar-track {
-  background: rgba(6, 182, 212, 0.1);
-  border-radius: 4px;
-}
-
-.touch-optimized ::-webkit-scrollbar-thumb {
-  background: rgba(6, 182, 212, 0.5);
-  border-radius: 4px;
-}
-
-.touch-optimized ::-webkit-scrollbar-thumb:hover {
-  background: rgba(6, 182, 212, 0.7);
-}
-
-/* Performance Optimizations */
-.lazy {
-  opacity: 0;
-  transition: opacity 0.3s ease-in-out;
-}
-
-.lazy.loaded {
-  opacity: 1;
-}
-
-/* Reduced Motion for Animations */
-@media (prefers-reduced-motion: reduce) {
-  *,
-  *::before,
-  *::after {
-    animation-duration: 0.01ms !important;
-    animation-iteration-count: 1 !important;
-    transition-duration: 0.01ms !important;
-    scroll-behavior: auto !important;
-  }
-}
-
-/* High Contrast Media Query */
-@media (prefers-contrast: high) {
-  :root {
-    --text-primary: #ffffff;
-    --text-secondary: #e5e7eb;
-    --bg-primary: #000000;
-    --bg-secondary: #1f2937;
-    --accent-color: #fbbf24;
-    --border-color: #fbbf24;
-  }
-}
-
-/* Print Styles */
-@media print {
-  .accessibility-controls,
-  .mobile-controls,
-  .performance-monitor {
-    display: none !important;
-  }
-  
-  * {
-    background: white !important;
-    color: black !important;
-    box-shadow: none !important;
-  }
-}
-
-/* Dark Theme Support */
-.dark-theme {
-  --text-primary: #f9fafb;
-  --text-secondary: #d1d5db;
-  --bg-primary: #111827;
-  --bg-secondary: #1f2937;
-  --accent-color: #06b6d4;
-  --border-color: #374151;
-}
-
-/* Light Theme Support */
-.light-theme {
-  --text-primary: #1f2937;
-  --text-secondary: #6b7280;
-  --bg-primary: #ffffff;
-  --bg-secondary: #f9fafb;
-  --accent-color: #06b6d4;
-  --border-color: #e5e7eb;
-}
-
-/* Utility Classes */
+/* Screen Reader Only */
 .sr-only {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  padding: 0;
-  margin: -1px;
-  overflow: hidden;
-  clip: rect(0, 0, 0, 0);
-  white-space: nowrap;
-  border: 0;
-}
-
-.visually-hidden {
   position: absolute !important;
   width: 1px !important;
   height: 1px !important;
@@ -298,51 +13,458 @@
   border: 0 !important;
 }
 
-/* Focus Management */
-.focus-trap {
-  outline: none;
+.sr-only:focus {
+  position: static !important;
+  width: auto !important;
+  height: auto !important;
+  padding: inherit !important;
+  margin: inherit !important;
+  overflow: visible !important;
+  clip: auto !important;
+  white-space: normal !important;
 }
 
-.focus-trap:focus {
-  outline: 3px solid var(--accent-color);
-  outline-offset: 2px;
-}
-
-/* ARIA Support */
-[aria-hidden="true"] {
-  display: none !important;
-}
-
-[aria-expanded="false"] .expanded-content {
-  display: none;
-}
-
-[aria-expanded="true"] .collapsed-content {
-  display: none;
-}
-
-/* Loading States */
-.loading {
-  position: relative;
-  pointer-events: none;
-}
-
-.loading::after {
-  content: '';
+/* Skip Links */
+.skip-link {
   position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 20px;
-  height: 20px;
-  margin: -10px 0 0 -10px;
-  border: 2px solid var(--accent-color);
-  border-top-color: transparent;
-  border-radius: 50%;
-  animation: spin 1s linear infinite;
+  top: -40px;
+  left: 6px;
+  background: var(--zion-blue);
+  color: white;
+  padding: 8px;
+  text-decoration: none;
+  border-radius: 4px;
+  z-index: 1000;
+  transition: top 0.3s;
 }
 
-@keyframes spin {
-  to {
-    transform: rotate(360deg);
+.skip-link:focus {
+  top: 6px;
+}
+
+/* High Contrast Mode */
+.high-contrast {
+  --zion-cyan: #00ffff !important;
+  --zion-purple: #ff00ff !important;
+  --zion-blue: #0080ff !important;
+  --zion-slate: #ffffff !important;
+  --zion-slate-dark: #000000 !important;
+  --text-primary: #ffffff !important;
+  --text-secondary: #cccccc !important;
+  --bg-primary: #000000 !important;
+  --bg-secondary: #111111 !important;
+  --border-primary: #00ffff !important;
+}
+
+.high-contrast * {
+  background-color: var(--bg-primary) !important;
+  color: var(--text-primary) !important;
+  border-color: var(--border-primary) !important;
+}
+
+.high-contrast .bg-futuristic {
+  background: var(--bg-primary) !important;
+}
+
+.high-contrast .text-zion-cyan {
+  color: var(--zion-cyan) !important;
+}
+
+.high-contrast .text-zion-purple {
+  color: var(--zion-purple) !important;
+}
+
+.high-contrast .text-zion-blue {
+  color: var(--zion-blue) !important;
+}
+
+.high-contrast .border-zion-cyan {
+  border-color: var(--zion-cyan) !important;
+}
+
+.high-contrast .border-zion-purple {
+  border-color: var(--zion-purple) !important;
+}
+
+.high-contrast .border-zion-blue {
+  border-color: var(--zion-blue) !important;
+}
+
+/* Large Text Mode */
+.large-text {
+  font-size: 1.2em !important;
+}
+
+.large-text h1 { font-size: 2.5em !important; }
+.large-text h2 { font-size: 2.2em !important; }
+.large-text h3 { font-size: 1.9em !important; }
+.large-text h4 { font-size: 1.6em !important; }
+.large-text h5 { font-size: 1.3em !important; }
+.large-text h6 { font-size: 1.1em !important; }
+.large-text p { font-size: 1.2em !important; }
+.large-text li { font-size: 1.2em !important; }
+.large-text button { font-size: 1.2em !important; }
+.large-text input { font-size: 1.2em !important; }
+.large-text label { font-size: 1.2em !important; }
+
+/* Reduced Motion Mode */
+.reduced-motion *,
+.reduced-motion *::before,
+.reduced-motion *::after {
+  animation-duration: 0.01ms !important;
+  animation-iteration-count: 1 !important;
+  transition-duration: 0.01ms !important;
+  scroll-behavior: auto !important;
+}
+
+.reduced-motion .animate-fade-in,
+.reduced-motion .animate-slide-up,
+.reduced-motion .animate-float,
+.reduced-motion .animate-float-delayed,
+.reduced-motion .animate-pulse-slow,
+.reduced-motion .animate-glow,
+.reduced-motion .animate-neon-flicker,
+.reduced-motion .animate-cyber-grid,
+.reduced-motion .animate-hologram,
+.reduced-motion .animate-quantum-pulse {
+  animation: none !important;
+}
+
+/* Enhanced Focus Indicators */
+.focus-indicator *:focus {
+  outline: 3px solid var(--zion-cyan) !important;
+  outline-offset: 2px !important;
+  border-radius: 4px !important;
+}
+
+.focus-indicator button:focus,
+.focus-indicator a:focus,
+.focus-indicator input:focus,
+.focus-indicator select:focus,
+.focus-indicator textarea:focus {
+  outline: 3px solid var(--zion-cyan) !important;
+  outline-offset: 2px !important;
+  box-shadow: 0 0 0 3px rgba(34, 221, 210, 0.3) !important;
+}
+
+/* Focus Visible (modern browsers) */
+*:focus-visible {
+  outline: 3px solid var(--zion-cyan) !important;
+  outline-offset: 2px !important;
+}
+
+/* High Contrast Focus */
+.high-contrast *:focus {
+  outline: 3px solid var(--zion-cyan) !important;
+  outline-offset: 3px !important;
+}
+
+/* Button Focus States */
+.btn-futuristic:focus,
+.btn-primary:focus,
+.btn-secondary:focus {
+  outline: 3px solid var(--zion-cyan) !important;
+  outline-offset: 2px !important;
+  box-shadow: 0 0 0 3px rgba(34, 221, 210, 0.3) !important;
+}
+
+/* Form Element Focus */
+input:focus,
+textarea:focus,
+select:focus {
+  outline: 3px solid var(--zion-cyan) !important;
+  outline-offset: 2px !important;
+  border-color: var(--zion-cyan) !important;
+  box-shadow: 0 0 0 3px rgba(34, 221, 210, 0.2) !important;
+}
+
+/* Link Focus */
+a:focus {
+  outline: 3px solid var(--zion-cyan) !important;
+  outline-offset: 2px !important;
+  text-decoration: underline !important;
+}
+
+/* Interactive Element Focus */
+[role="button"]:focus,
+[role="tab"]:focus,
+[role="menuitem"]:focus {
+  outline: 3px solid var(--zion-cyan) !important;
+  outline-offset: 2px !important;
+}
+
+/* Skip to Content Focus */
+.skip-link:focus {
+  outline: 3px solid var(--zion-cyan) !important;
+  outline-offset: 2px !important;
+}
+
+/* High Contrast Button Styles */
+.high-contrast .btn-futuristic {
+  background: var(--zion-cyan) !important;
+  color: var(--bg-primary) !important;
+  border: 2px solid var(--text-primary) !important;
+}
+
+.high-contrast .btn-futuristic:hover {
+  background: var(--text-primary) !important;
+  color: var(--bg-primary) !important;
+}
+
+/* High Contrast Link Styles */
+.high-contrast a {
+  color: var(--zion-cyan) !important;
+  text-decoration: underline !important;
+}
+
+.high-contrast a:hover {
+  color: var(--text-primary) !important;
+  background: var(--zion-cyan) !important;
+}
+
+/* High Contrast Form Styles */
+.high-contrast input,
+.high-contrast textarea,
+.high-contrast select {
+  background: var(--bg-secondary) !important;
+  color: var(--text-primary) !important;
+  border: 2px solid var(--border-primary) !important;
+}
+
+.high-contrast input:focus,
+.high-contrast textarea:focus,
+.high-contrast select:focus {
+  background: var(--bg-primary) !important;
+  border-color: var(--zion-cyan) !important;
+  outline-color: var(--zion-cyan) !important;
+}
+
+/* High Contrast Navigation */
+.high-contrast nav {
+  background: var(--bg-secondary) !important;
+  border: 2px solid var(--border-primary) !important;
+}
+
+.high-contrast nav a {
+  color: var(--text-primary) !important;
+  border-bottom: 1px solid var(--border-primary) !important;
+}
+
+.high-contrast nav a:hover,
+.high-contrast nav a:focus {
+  background: var(--zion-cyan) !important;
+  color: var(--bg-primary) !important;
+}
+
+/* High Contrast Cards */
+.high-contrast .card,
+.high-contrast .bg-zion-slate\/20 {
+  background: var(--bg-secondary) !important;
+  border: 2px solid var(--border-primary) !important;
+}
+
+/* High Contrast Tables */
+.high-contrast table {
+  border: 2px solid var(--border-primary) !important;
+}
+
+.high-contrast th,
+.high-contrast td {
+  border: 1px solid var(--border-primary) !important;
+  background: var(--bg-secondary) !important;
+  color: var(--text-primary) !important;
+}
+
+.high-contrast th {
+  background: var(--bg-primary) !important;
+}
+
+/* High Contrast Code Blocks */
+.high-contrast pre,
+.high-contrast code {
+  background: var(--bg-secondary) !important;
+  color: var(--text-primary) !important;
+  border: 1px solid var(--border-primary) !important;
+}
+
+/* High Contrast Alerts */
+.high-contrast .alert,
+.high-contrast .notification {
+  background: var(--bg-secondary) !important;
+  color: var(--text-primary) !important;
+  border: 2px solid var(--border-primary) !important;
+}
+
+/* High Contrast Success/Error States */
+.high-contrast .text-green-500,
+.high-contrast .text-red-500 {
+  color: var(--text-primary) !important;
+}
+
+.high-contrast .bg-green-500,
+.high-contrast .bg-red-500 {
+  background: var(--bg-secondary) !important;
+  border: 2px solid var(--border-primary) !important;
+}
+
+/* Large Text Responsive Adjustments */
+@media (max-width: 768px) {
+  .large-text {
+    font-size: 1.1em !important;
   }
+  
+  .large-text h1 { font-size: 2.2em !important; }
+  .large-text h2 { font-size: 1.9em !important; }
+  .large-text h3 { font-size: 1.6em !important; }
+  .large-text h4 { font-size: 1.3em !important; }
+  .large-text h5 { font-size: 1.1em !important; }
+  .large-text h6 { font-size: 1.0em !important; }
+}
+
+/* Print Styles for Accessibility */
+@media print {
+  .sr-only {
+    position: static !important;
+    width: auto !important;
+    height: auto !important;
+    overflow: visible !important;
+    clip: auto !important;
+  }
+  
+  .skip-link,
+  .accessibility-toggle {
+    display: none !important;
+  }
+  
+  * {
+    background: white !important;
+    color: black !important;
+    border-color: black !important;
+  }
+  
+  a {
+    text-decoration: underline !important;
+  }
+  
+  a[href]:after {
+    content: " (" attr(href) ")" !important;
+  }
+}
+
+/* Dark Mode Accessibility Enhancements */
+@media (prefers-color-scheme: dark) {
+  .focus-indicator *:focus {
+    outline-color: var(--zion-cyan) !important;
+  }
+  
+  .focus-indicator button:focus,
+  .focus-indicator a:focus,
+  .focus-indicator input:focus {
+    outline-color: var(--zion-cyan) !important;
+    box-shadow: 0 0 0 3px rgba(34, 221, 210, 0.4) !important;
+  }
+}
+
+/* Reduced Motion Media Query Support */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* High Contrast Media Query Support */
+@media (prefers-contrast: high) {
+  :root {
+    --zion-cyan: #00ffff;
+    --zion-purple: #ff00ff;
+    --zion-blue: #0080ff;
+    --zion-slate: #ffffff;
+    --zion-slate-dark: #000000;
+  }
+  
+  * {
+    border-color: var(--zion-cyan) !important;
+  }
+  
+  .btn-futuristic {
+    background: var(--zion-cyan) !important;
+    color: var(--zion-slate-dark) !important;
+    border: 2px solid var(--zion-slate) !important;
+  }
+}
+
+/* Focus Management for Modals */
+.modal:focus {
+  outline: none !important;
+}
+
+.modal:focus-visible {
+  outline: 3px solid var(--zion-cyan) !important;
+  outline-offset: 2px !important;
+}
+
+/* Keyboard Navigation Enhancements */
+[tabindex="-1"]:focus {
+  outline: none !important;
+}
+
+/* ARIA Live Regions */
+[aria-live="polite"],
+[aria-live="assertive"] {
+  position: absolute !important;
+  left: -10000px !important;
+  width: 1px !important;
+  height: 1px !important;
+  overflow: hidden !important;
+}
+
+/* Skip to Main Content */
+#main-content:focus {
+  outline: none !important;
+}
+
+/* Enhanced Button States */
+.btn-futuristic:active,
+.btn-primary:active,
+.btn-secondary:active {
+  transform: translateY(1px) !important;
+}
+
+/* High Contrast Active States */
+.high-contrast .btn-futuristic:active {
+  background: var(--text-primary) !important;
+  color: var(--bg-primary) !important;
+}
+
+/* Focus Ring for All Interactive Elements */
+button:focus,
+a:focus,
+input:focus,
+select:focus,
+textarea:focus,
+[role="button"]:focus,
+[role="tab"]:focus,
+[role="menuitem"]:focus,
+[tabindex]:focus {
+  outline: 3px solid var(--zion-cyan) !important;
+  outline-offset: 2px !important;
+}
+
+/* Remove focus ring for mouse users (optional) */
+*:focus:not(:focus-visible) {
+  outline: none !important;
+}
+
+/* Ensure sufficient color contrast */
+.text-low-contrast {
+  color: #6b7280 !important; /* Ensure WCAG AA compliance */
+}
+
+.bg-low-contrast {
+  background-color: #f3f4f6 !important; /* Ensure WCAG AA compliance */
 }
