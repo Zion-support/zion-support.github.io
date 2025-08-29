@@ -48,6 +48,7 @@ const ComprehensivePricingGuide2027 = lazy(() => import('./pages/ComprehensivePr
 const ComprehensivePricingGuide2030 = lazy(() => import('./pages/ComprehensivePricingGuide2030.tsx'));
 const ComprehensiveServicesLanding2025 = lazy(() => import('./pages/ComprehensiveServicesLanding2025.jsx'));
 const EnhancedServicesLanding = lazy(() => import('./pages/EnhancedServicesLanding.tsx'));
+const InnovativeServicesShowcase2025 = lazy(() => import('./pages/InnovativeServicesShowcase2025.tsx'));
 
 // Service pages - only import existing ones
 const CloudDevOps = lazy(() => import('./pages/services/CloudDevOps'));
@@ -105,6 +106,7 @@ function App() {
                 <Route path="/services" element={<Services />} />
                 <Route path="/solutions" element={<Solutions />} />
                 <Route path="/enhanced-services-showcase" element={<EnhancedServiceShowcase />} />
+                <Route path="/innovative-services-2025" element={<InnovativeServicesShowcase2025 />} />
                 <Route path="/resources" element={<Resources />} />
                 <Route path="/pricing" element={<Pricing />} />
                 <Route path="/case-studies" element={<CaseStudies />} />

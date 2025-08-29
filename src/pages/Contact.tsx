@@ -22,12 +22,6 @@ const Contact: React.FC = () => {
       color: 'from-blue-500 to-cyan-500'
     },
     {
-      icon: Phone,
-      title: 'Phone',
-      details: ['+1 302 464 0950'],
-      color: 'from-green-500 to-emerald-500'
-    },
-    {
       icon: MapPin,
       title: 'Office',
       details: ['364 E Main St STE 1008', 'Middletown, DE 19709'],
@@ -86,7 +80,7 @@ const Contact: React.FC = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-              className="text-center"
+              className="text-center lg:text-left"
             >
               <h1 className="text-4xl lg:text-6xl font-bold text-white mb-6">
                 Let's Build the Future
@@ -94,49 +88,47 @@ const Contact: React.FC = () => {
                   Together
                 </span>
               </h1>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto lg:mx-0 mb-8">
                 Ready to transform your business with cutting-edge AI and technology solutions? 
                 Let's discuss how we can help you achieve your goals.
               </p>
-              
-              <div className="flex flex-col sm:flex-row gap-4">
-                <button className="btn-futuristic bg-gradient-to-r from-blue-500 to-cyan-600 hover:from-blue-600 hover:to-cyan-700">
-                  <Phone className="w-5 h-5" />
-                  Call Now
-                </button>
-                <button className="btn-futuristic-outline">
-                  <MessageCircle className="w-5 h-5" />
-                  Send Message
-                </button>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+                <motion.button
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                  className="px-8 py-4 bg-gradient-to-r from-blue-500 to-cyan-600 text-white font-semibold rounded-lg hover:from-blue-600 hover:to-cyan-700 transition-all duration-300"
+                >
+                  Get Started Today
+                </motion.button>
+                <motion.button
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                  className="px-8 py-4 border border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400 hover:text-white transition-all duration-300"
+                >
+                  Learn More
+                </motion.button>
               </div>
             </motion.div>
             
             <motion.div
-              initial={{ opacity: 0, x: 50 }}
+              initial={{ opacity: 0, x: 30 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
               className="relative"
             >
-              <div className="relative z-10">
-                <div className="w-full h-96 bg-gradient-to-br from-blue-500/20 via-cyan-500/20 to-purple-500/20 rounded-2xl border border-blue-500/30 flex items-center justify-center">
-                  <div className="text-center">
-                    <div className="w-24 h-24 bg-gradient-to-br from-blue-500 to-cyan-600 rounded-2xl flex items-center justify-center mx-auto mb-6">
-                      <MessageCircle className="w-12 h-12 text-white" />
-                    </div>
-                    <h3 className="text-2xl font-bold text-white mb-2">Contact Us</h3>
-                    <p className="text-gray-300">We're Here to Help</p>
-                  </div>
+              <div className="w-full h-96 bg-gradient-to-br from-blue-500/20 to-cyan-500/20 rounded-2xl border border-blue-500/30 flex items-center justify-center">
+                <div className="text-center">
+                  <MessageCircle className="w-24 h-24 text-blue-400 mx-auto mb-4" />
+                  <p className="text-blue-400 text-lg font-medium">Ready to Connect?</p>
                 </div>
               </div>
-              
-              <div className="absolute inset-0 bg-gradient-to-br from-blue-500/10 to-cyan-500/10 rounded-2xl blur-3xl"></div>
             </motion.div>
           </div>
         </div>
       </section>
 
       {/* Contact Methods Section */}
-      <section className="py-20 bg-slate-800/50">
+      <section className="py-20">
         <div className="container-responsive">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -167,8 +159,19 @@ const Contact: React.FC = () => {
                   <method.icon className="w-8 h-8 text-white" />
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-3">{method.title}</h3>
-                <div className="text-blue-400 font-medium mb-3 whitespace-pre-line">{method.value}</div>
-                <p className="text-gray-400 leading-relaxed">{method.description}</p>
+                {method.value && (
+                  <div className="text-blue-400 font-medium mb-3 whitespace-pre-line">{method.value}</div>
+                )}
+                {method.details && (
+                  <div className="text-blue-400 font-medium mb-3">
+                    {method.details.map((detail, idx) => (
+                      <div key={idx}>{detail}</div>
+                    ))}
+                  </div>
+                )}
+                {method.description && (
+                  <p className="text-gray-400 leading-relaxed">{method.description}</p>
+                )}
               </motion.div>
             ))}
           </div>
@@ -275,23 +278,27 @@ const Contact: React.FC = () => {
                   className="w-full px-4 py-3 bg-slate-700/50 border border-slate-600/50 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent resize-none"
                 ></textarea>
                 
-                <button
-                  type="submit"
-                  className="w-full btn-futuristic bg-gradient-to-r from-blue-500 to-cyan-600 hover:from-blue-600 hover:to-cyan-700"
-                >
-                  Schedule a Call
-                </motion.button>
-                <motion.button
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
-                  className="px-8 py-4 border border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300"
-                >
-                  View Our Services
-                </motion.button>
-              </div>
+                <div className="space-y-4">
+                  <button
+                    type="submit"
+                    className="w-full px-8 py-4 bg-gradient-to-r from-blue-500 to-cyan-600 text-white font-semibold rounded-lg hover:from-blue-600 hover:to-cyan-700 transition-all duration-300"
+                  >
+                    Schedule a Call
+                  </button>
+                  <motion.button
+                    type="button"
+                    whileHover={{ scale: 1.05 }}
+                    whileTap={{ scale: 0.95 }}
+                    className="w-full px-8 py-4 border border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400 hover:text-white transition-all duration-300"
+                  >
+                    View Our Services
+                  </motion.button>
+                </div>
+              </form>
             </motion.div>
           </div>
-        </section>
+        </div>
+      </section>
 
       {/* Departments Section */}
       <section className="py-20 bg-slate-800/50">
@@ -337,140 +344,46 @@ const Contact: React.FC = () => {
                   </div>
                 </div>
               </motion.div>
-
-              {/* Contact Information */}
-              <motion.div
-                initial={{ opacity: 0, x: 20 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.8, delay: 0.4 }}
-                className="space-y-8"
-              >
-                <div>
-                  <h2 className="text-3xl font-bold text-white mb-8">Get in Touch</h2>
-                  <p className="text-lg text-gray-300 mb-8">
-                    We're here to help you transform your business with cutting-edge AI and technology solutions. 
-                    Let's discuss your needs and explore how we can work together.
-                  </p>
-                </div>
-
-                <div className="space-y-6">
-                  {contactInfo.map((info, index) => (
-                    <motion.div
-                      key={info.title}
-                      initial={{ opacity: 0, y: 20 }}
-                      animate={{ opacity: 1, y: 0 }}
-                      transition={{ duration: 0.6, delay: 0.6 + index * 0.1 }}
-                      className="flex items-start space-x-4 p-6 bg-slate-800/30 rounded-xl border border-slate-700/50 hover:border-cyan-400/30 transition-all duration-300"
-                    >
-                      <div className={`w-12 h-12 rounded-lg bg-gradient-to-br ${info.color} flex items-center justify-center flex-shrink-0`}>
-                        <info.icon className="w-6 h-6 text-white" />
-                      </div>
-                      <div>
-                        <h3 className="text-lg font-semibold text-white mb-2">{info.title}</h3>
-                        {info.details.map((detail, detailIndex) => (
-                          <p key={detailIndex} className="text-gray-300">{detail}</p>
-                        ))}
-                      </div>
-                    </motion.div>
-                  ))}
-                </div>
-
-                {/* Additional Info */}
-                <motion.div
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: 1.0 }}
-                  className="p-6 bg-gradient-to-br from-cyan-500/20 to-blue-500/20 rounded-xl border border-cyan-400/30"
-                >
-                  <h3 className="text-xl font-semibold text-white mb-4">Ready to Get Started?</h3>
-                  <p className="text-gray-300 mb-4">
-                    Schedule a consultation to discuss your technology needs and explore how our solutions can drive your business forward.
-                  </p>
-                  <motion.button
-                    whileHover={{ scale: 1.05 }}
-                    whileTap={{ scale: 0.95 }}
-                    className="px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-medium rounded-lg hover:from-cyan-600 hover:to-blue-600 transition-all duration-300"
-                  >
-                    Schedule Consultation
-                  </motion.button>
-                </motion.div>
-              </motion.div>
-            </div>
+            ))}
           </div>
         </div>
       </section>
 
-        {/* CTA Section */}
-        <section className="py-20 lg:py-32 bg-gradient-to-r from-cyan-600 to-blue-600">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 1.2 }}
-            >
-              <h2 className="text-4xl lg:text-5xl font-bold text-white mb-6">
-                Let's Build Something Amazing Together
-              </h2>
-              <p className="text-xl text-cyan-100 max-w-3xl mx-auto mb-8">
-                Whether you're looking to implement AI solutions, modernize your cloud infrastructure, 
-                or strengthen your cybersecurity posture, we're here to help.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <motion.button
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
-                  className="px-8 py-4 bg-white text-cyan-600 font-semibold rounded-lg hover:bg-gray-100 transition-all duration-300"
-                >
-                  View Our Services
-                </motion.button>
-                <motion.button
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
-                  className="px-8 py-4 border-2 border-white text-white font-semibold rounded-lg hover:bg-white hover:text-cyan-600 transition-all duration-300"
-                >
-                  Learn More About Us
-                </motion.button>
-              </div>
-              <h3 className="text-2xl font-bold text-white mb-2">Zion Tech Group</h3>
-              <p className="text-gray-300 mb-4">364 E Main St STE 1008</p>
-              <p className="text-gray-300">Middletown DE 19709</p>
-              <p className="text-gray-300 mt-4">United States</p>
-            </div>
-          </motion.div>
-        </div>
-      </section>
-
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-blue-500/10 via-cyan-500/10 to-purple-500/10">
-        <div className="container-responsive text-center">
+      <section className="py-20 lg:py-32 bg-gradient-to-r from-cyan-600 to-blue-600">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="max-w-4xl mx-auto"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.2 }}
           >
-            <h2 className="text-3xl lg:text-5xl font-bold text-white mb-6">
-              Ready to Get Started?
+            <h2 className="text-4xl lg:text-5xl font-bold text-white mb-6">
+              Let's Build Something Amazing Together
             </h2>
-            <p className="text-xl text-gray-300 mb-8">
-              Don't wait to transform your business. Contact us today and let's discuss how we can help you achieve your technology goals.
+            <p className="text-xl text-cyan-100 max-w-3xl mx-auto mb-8">
+              Whether you're looking to implement AI solutions, modernize your cloud infrastructure, 
+              or strengthen your cybersecurity posture, we're here to help.
             </p>
-            
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="btn-futuristic bg-gradient-to-r from-blue-500 to-cyan-600 hover:from-blue-600 hover:to-cyan-700">
-                <Phone className="w-5 h-5" />
-                Call Now
-              </button>
-              <button className="btn-futuristic-outline">
-                <MessageCircle className="w-5 h-5" />
+              <motion.button
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="px-8 py-4 bg-white text-cyan-600 font-semibold rounded-lg hover:bg-gray-100 transition-all duration-300"
+              >
+                Start Your Project
+              </motion.button>
+              <motion.button
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="px-8 py-4 border-2 border-white text-white font-semibold rounded-lg hover:bg-white hover:text-cyan-600 transition-all duration-300"
+              >
                 Schedule Consultation
-              </button>
+              </motion.button>
             </div>
           </motion.div>
         </div>
       </section>
-    </div>
+    </>
   );
 };
 

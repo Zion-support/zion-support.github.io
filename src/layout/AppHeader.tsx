@@ -120,15 +120,25 @@ export function AppHeader() {
 
   const services = [
     { 
-      name: '2025 Services Showcase', 
-      href: '/services/showcase-2025', 
+      name: '🚀 Innovative Services 2025', 
+      href: '/innovative-services-2025', 
       icon: Rocket, 
+      description: 'Cutting-edge AI Micro SAAS Solutions',
+      featured: true,
+      color: 'from-purple-500 to-pink-500',
+      badge: 'NEW',
+      highlight: true
+    },
+    { 
+      name: '🎯 2025 Services Showcase', 
+      href: '/services/showcase-2025', 
+      icon: Star, 
       description: 'Complete 2025 Portfolio',
       featured: true,
       color: 'from-cyan-500 to-blue-500'
     },
     { 
-      name: 'All Services', 
+      name: '📊 All Services', 
       href: '/services', 
       icon: Brain, 
       description: 'Complete Service Catalog',
@@ -136,7 +146,7 @@ export function AppHeader() {
       color: 'from-cyan-500 to-blue-500'
     },
     { 
-      name: 'AI Business Intelligence', 
+      name: '🤖 AI Business Intelligence', 
       href: '/services/ai-business-intelligence', 
       icon: Brain, 
       description: 'Machine Learning & Data Science',
@@ -145,15 +155,7 @@ export function AppHeader() {
       badge: 'Popular'
     },
     { 
-      name: 'Innovative Services 2025', 
-      href: '/services/innovative-2025', 
-      icon: Rocket, 
-      description: 'Cutting-edge Micro SAAS',
-      featured: true,
-      color: 'from-purple-500 to-pink-500'
-    },
-    { 
-      name: 'AI Healthcare Platform', 
+      name: '💊 AI Healthcare Platform', 
       href: '/services/ai-healthcare-platform', 
       icon: Heart, 
       description: 'Medical AI & Diagnostics',
@@ -162,7 +164,7 @@ export function AppHeader() {
       badge: 'New'
     },
     { 
-      name: 'AI Content Creation', 
+      name: '✍️ AI Content Creation', 
       href: '/services/ai-content-creation', 
       icon: PenTool, 
       description: 'Content Generation & Optimization',
@@ -170,7 +172,7 @@ export function AppHeader() {
       color: 'from-blue-500 to-indigo-500'
     },
     { 
-      name: 'AI Cybersecurity', 
+      name: '🛡️ AI Cybersecurity', 
       href: '/services/ai-cybersecurity', 
       icon: Shield, 
       description: 'AI-Powered Security',
@@ -178,7 +180,7 @@ export function AppHeader() {
       color: 'from-green-500 to-blue-500'
     },
     { 
-      name: 'Quantum Computing', 
+      name: '⚛️ Quantum Computing', 
       href: '/services/quantum-computing', 
       icon: Atom, 
       description: 'Quantum AI & Optimization',
@@ -187,7 +189,7 @@ export function AppHeader() {
       badge: 'Cutting Edge'
     },
     { 
-      name: 'IoT Edge Computing', 
+      name: '🔌 IoT Edge Computing', 
       href: '/services/iot-edge-computing', 
       icon: Cpu, 
       description: 'IoT & Real-time Processing',
@@ -195,7 +197,7 @@ export function AppHeader() {
       color: 'from-blue-500 to-cyan-500'
     },
     { 
-      name: 'Digital Twin Platform', 
+      name: '🏗️ Digital Twin Platform', 
       href: '/services/digital-twin', 
       icon: Building2, 
       description: 'Digital Twin Solutions',
@@ -203,7 +205,7 @@ export function AppHeader() {
       color: 'from-blue-500 to-indigo-500'
     },
     { 
-      name: 'Blockchain Web3 Platform', 
+      name: '🌐 Blockchain Web3 Platform', 
       href: '/services/blockchain-web3-platform', 
       icon: Globe2, 
       description: 'Blockchain & Web3',
@@ -211,7 +213,7 @@ export function AppHeader() {
       color: 'from-yellow-500 to-orange-500'
     },
     { 
-      name: 'AI Healthcare Diagnostics Platform', 
+      name: '🏥 AI Healthcare Diagnostics Platform', 
       href: '/services/ai-healthcare-diagnostics-platform', 
       icon: Heart, 
       description: 'AI Medical Diagnostics',
@@ -219,7 +221,7 @@ export function AppHeader() {
       color: 'from-pink-500 to-red-500'
     },
     { 
-      name: 'AI Education Platform', 
+      name: '📚 AI Education Platform', 
       href: '/services/ai-education-platform', 
       icon: BookOpen, 
       description: 'AI-Powered Learning',
@@ -227,7 +229,7 @@ export function AppHeader() {
       color: 'from-blue-500 to-indigo-500'
     },
     { 
-      name: 'AI Metaverse Platform', 
+      name: '🌍 AI Metaverse Platform', 
       href: '/services/ai-metaverse-platform', 
       icon: Globe, 
       description: 'AI Metaverse Solutions',
@@ -235,7 +237,7 @@ export function AppHeader() {
       color: 'from-purple-500 to-indigo-500'
     },
     { 
-      name: 'AI Space Technology Platform', 
+      name: '🚀 AI Space Technology Platform', 
       href: '/services/ai-space-technology-platform', 
       icon: Rocket, 
       description: 'AI Space Solutions',
@@ -243,7 +245,7 @@ export function AppHeader() {
       color: 'from-indigo-500 to-purple-500'
     },
     { 
-      name: 'AI Green Technology Platform', 
+      name: '🌱 AI Green Technology Platform', 
       href: '/services/ai-green-technology-platform', 
       icon: Leaf, 
       description: 'Sustainable AI Solutions',
@@ -251,7 +253,7 @@ export function AppHeader() {
       color: 'from-green-500 to-emerald-500'
     },
     { 
-      name: 'AI Development Platform', 
+      name: '💻 AI Development Platform', 
       href: '/services/ai-development-platform', 
       icon: Code, 
       description: 'AI Code Generation',
@@ -259,7 +261,7 @@ export function AppHeader() {
       color: 'from-cyan-500 to-blue-500'
     },
     { 
-      name: 'Micro SAAS Products', 
+      name: '🛒 Micro SAAS Products', 
       href: '/services/micro-saas', 
       icon: ShoppingCart, 
       description: 'AI automations with transparent pricing',
@@ -269,7 +271,7 @@ export function AppHeader() {
       category: 'Micro SaaS'
     },
     { 
-      name: 'Revolutionary Services 2030', 
+      name: '🔮 Revolutionary Services 2030', 
       href: '/revolutionary-services-2030', 
       icon: Rocket, 
       description: 'Future Technology Solutions',
@@ -277,7 +279,7 @@ export function AppHeader() {
       color: 'from-indigo-500 to-purple-500'
     },
     { 
-      name: 'Comprehensive Services 2030', 
+      name: '🧠 Comprehensive Services 2030', 
       href: '/comprehensive-services-2030', 
       icon: Brain, 
       description: 'Complete AI & Tech Solutions',

@@ -75,10 +75,34 @@ export const EnhancedFuturisticFooter: React.FC = () => {
 
   const footerSections = [
     {
-      title: 'AI & Business Intelligence',
+      title: '🚀 Innovative Services 2025',
+      featured: true,
+      highlight: true,
+      links: [
+        { name: '🚀 Innovative Services 2025', href: '/innovative-services-2025', featured: true, highlight: true },
+        { name: '📋 AI Contract Analysis Platform', href: '/innovative-services-2025#ai-contract-analysis', featured: true },
+        { name: '🔗 AI Supply Chain Optimization', href: '/innovative-services-2025#ai-supply-chain', featured: true },
+        { name: '🛡️ AI Cybersecurity Intelligence', href: '/innovative-services-2025#ai-cybersecurity', featured: true },
+        { name: '💊 AI Healthcare Diagnostics', href: '/innovative-services-2025#ai-healthcare', featured: true },
+        { name: '✍️ AI Content Creation Studio', href: '/innovative-services-2025#ai-content-creation', featured: true },
+        { name: '🎯 AI Sales Intelligence', href: '/innovative-services-2025#ai-sales', featured: true },
+        { name: '🤖 AI Customer Support Automation', href: '/innovative-services-2025#ai-support', featured: true },
+        { name: '📊 AI Data Analytics & BI', href: '/innovative-services-2025#ai-analytics', featured: true },
+        { name: '👥 AI HR & Recruitment', href: '/innovative-services-2025#ai-hr', featured: true },
+        { name: '📋 AI Project Management', href: '/innovative-services-2025#ai-project-management', featured: true },
+        { name: '💰 AI Financial Trading', href: '/innovative-services-2025#ai-financial', featured: true },
+        { name: '📚 AI Education & Learning', href: '/innovative-services-2025#ai-education', featured: true },
+        { name: '🔬 AI Research & Development', href: '/innovative-services-2025#ai-research', featured: true },
+        { name: '🌍 AI Metaverse & VR', href: '/innovative-services-2025#ai-metaverse', featured: true },
+        { name: '🛰️ AI Space Technology', href: '/innovative-services-2025#ai-space', featured: true },
+        { name: '🌱 AI Green Technology', href: '/innovative-services-2025#ai-green', featured: true },
+        { name: '💻 AI Development & Code Generation', href: '/innovative-services-2025#ai-development', featured: true }
+      ]
+    },
+    {
+      title: '🤖 AI & Business Intelligence',
       featured: true,
       links: [
-
         { name: 'AI Business Intelligence', href: '/services/ai-business-intelligence', featured: true },
         { name: 'AI Legal Document Analyzer', href: '/services/ai-legal-document-analysis', featured: true },
         { name: 'AI Healthcare Analytics', href: '/services/ai-healthcare-analytics', featured: true },
@@ -88,7 +112,7 @@ export const EnhancedFuturisticFooter: React.FC = () => {
       ]
     },
     {
-      title: 'Comprehensive Services 2030',
+      title: '🧠 Comprehensive Services 2030',
       featured: true,
       links: [
         { name: 'Comprehensive Services 2030', href: '/comprehensive-services-2030', featured: true },
@@ -238,6 +262,38 @@ export const EnhancedFuturisticFooter: React.FC = () => {
         { name: 'Careers', href: '/careers', featured: false },
         { name: 'Privacy Policy', href: '/privacy', featured: false },
         { name: 'Terms of Service', href: '/terms', featured: false }
+      ]
+    },
+    {
+      title: '📞 Contact & Support',
+      featured: true,
+      highlight: true,
+      links: [
+        { name: '📱 Mobile: +1 302 464 0950', href: 'tel:+13024640950', featured: true, highlight: true },
+        { name: '✉️ Email: kleber@ziontechgroup.com', href: 'mailto:kleber@ziontechgroup.com', featured: true, highlight: true },
+        { name: '📍 Address: 364 E Main St STE 1008 Middletown DE 19709', href: '#', featured: true },
+        { name: '🌐 Website: https://ziontechgroup.com', href: 'https://ziontechgroup.com', featured: true },
+        { name: '📋 Request Quote', href: '/request-quote', featured: true },
+        { name: '📅 Schedule Demo', href: '/schedule-demo', featured: true },
+        { name: '❓ FAQ', href: '/faq', featured: true },
+        { name: '📚 Documentation', href: '/documentation', featured: true },
+        { name: '🆘 Support', href: '/support', featured: true }
+      ]
+    },
+    {
+      title: '🔗 Quick Links',
+      featured: true,
+      links: [
+        { name: '🏠 Home', href: '/', featured: true },
+        { name: '📊 All Services', href: '/services', featured: true },
+        { name: '🎯 Solutions', href: '/solutions', featured: true },
+        { name: '📚 Resources', href: '/resources', featured: true },
+        { name: '📰 Blog', href: '/blog', featured: true },
+        { name: '📖 Case Studies', href: '/case-studies', featured: true },
+        { name: '👥 About Us', href: '/about', featured: true },
+        { name: '🤝 Partners', href: '/partners', featured: true },
+        { name: '💰 Pricing', href: '/pricing', featured: true },
+        { name: '📞 Contact', href: '/contact', featured: true }
       ]
     }
   ];
