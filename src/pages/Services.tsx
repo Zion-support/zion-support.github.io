@@ -239,6 +239,24 @@ export default function Services() {
           price: 'From $299',
           rating: 4.9,
           reviewCount: 234
+        },
+        {
+          name: 'AI Project Manager',
+          description: 'AI-powered project management with intelligent planning and team collaboration',
+          features: ['AI Planning', 'Team Collaboration', 'Goal Tracking', 'Performance Analytics'],
+          href: '/services/ai-project-manager',
+          price: 'From $299',
+          rating: 4.9,
+          reviewCount: 156
+        },
+        {
+          name: 'AI Financial Advisor',
+          description: 'Personalized financial planning and investment optimization with AI insights',
+          features: ['Portfolio Management', 'Goal Planning', 'Risk Management', 'Tax Optimization'],
+          href: '/services/ai-financial-advisor',
+          price: 'From $99',
+          rating: 4.9,
+          reviewCount: 203
         }
       ]
     }

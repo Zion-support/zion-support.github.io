@@ -37,7 +37,8 @@ export function AppHeader() {
   const mainNavigation = [
     { name: 'Home', href: '/', current: true },
     { name: 'Services', href: '/services-overview', current: false, hasDropdown: true },
-    { name: 'Solutions', href: '/ai-services', current: false, hasDropdown: true },
+    { name: 'AI Services', href: '/ai-services', current: false, hasDropdown: true },
+    { name: 'IT Services', href: '/it-services', current: false, hasDropdown: true },
     { name: 'Company', href: '/about', current: false, hasDropdown: true },
     { name: 'Support', href: '/help', current: false, hasDropdown: true },
     { name: 'Contact', href: '/contact', current: false },
@@ -57,6 +58,8 @@ export function AppHeader() {
     { name: 'Feedback Surveys', href: '/services/mobile-feedback-surveys', icon: Users, description: 'NPS/CSAT with AI insights' },
     { name: 'LLM Content Studio', href: '/services/llm-content-studio', icon: BookOpen, description: 'On-brand AI content' },
     { name: 'FinOps Advisor', href: '/services/finops-advisor', icon: DollarSign, description: 'Cloud cost optimization' },
+    { name: 'AI Project Manager', href: '/services/ai-project-manager', icon: Calendar, description: 'AI-powered project management' },
+    { name: 'AI Financial Advisor', href: '/services/ai-financial-advisor', icon: TrendingUp, description: 'Personalized financial planning' },
   ];
 
   const servicesCategories = [
