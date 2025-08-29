@@ -1,3 +1,18 @@
+import React from 'react';
+import { SEO } from '../components/SEO';
+
+export default function Webinars() {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 flex items-center justify-center">
+      <SEO title="Webinars - Zion Tech Group" description="Educational webinars and sessions." />
+      <div className="text-center text-white">
+        <h1 className="text-4xl font-bold mb-2">Webinars</h1>
+        <p className="text-slate-300">Upcoming webinars will be listed here.</p>
+      </div>
+    </div>
+  );
+}
+
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Video, Calendar, Clock, Users, Play, Download, Search, Filter, Star, ExternalLink, ArrowRight, BookOpen, Brain, Cloud, Shield, Database, Zap, Globe, Target, TrendingUp, Award, CheckCircle } from 'lucide-react';

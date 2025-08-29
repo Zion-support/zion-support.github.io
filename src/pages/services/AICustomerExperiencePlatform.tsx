@@ -2,11 +2,10 @@ import React from 'react';
 import { SEO } from '../../components/SEO';
 import { motion } from 'framer-motion';
 import { 
-  Shield, 
+  Users, 
   Brain, 
-  Eye, 
-  Lock, 
-  AlertTriangle, 
+  MessageSquare, 
+  Heart, 
   TrendingUp, 
   CheckCircle, 
   ArrowRight, 
@@ -15,149 +14,153 @@ import {
   Globe, 
   ExternalLink,
   Zap,
-  Users,
   BarChart3,
   Target,
   Cpu,
-  Network,
-  Database,
-  FileText,
+  Smartphone,
   Monitor,
-  Activity
+  Activity,
+  Star,
+  Award,
+  Clock,
+  Target,
+  MessageCircle,
+  Bot,
+  Headphones
 } from 'lucide-react';
 
-export default function AICybersecuritySuite() {
+export default function AICustomerExperiencePlatform() {
   const features = [
     {
       icon: Brain,
-      title: 'AI Threat Detection',
-      description: 'Advanced machine learning algorithms that identify and respond to threats in real-time',
-      color: 'from-blue-500 to-cyan-500'
-    },
-    {
-      icon: Eye,
-      title: 'Behavioral Analytics',
-      description: 'Monitor user and system behavior patterns to detect anomalies and potential threats',
-      color: 'from-green-500 to-emerald-500'
-    },
-    {
-      icon: Shield,
-      title: 'Zero-Day Protection',
-      description: 'Protect against unknown threats using AI-powered predictive security models',
+      title: 'AI-Powered Personalization',
+      description: 'Intelligent customer journey mapping and personalized experiences based on behavior analysis',
       color: 'from-purple-500 to-pink-500'
     },
     {
+      icon: MessageSquare,
+      title: 'Omnichannel Communication',
+      description: 'Seamless customer interactions across email, chat, social media, and voice channels',
+      color: 'from-blue-500 to-cyan-500'
+    },
+    {
+      icon: Heart,
+      title: 'Sentiment Analysis',
+      description: 'Real-time emotion detection and sentiment tracking to improve customer satisfaction',
+      color: 'from-green-500 to-emerald-500'
+    },
+    {
       icon: Zap,
-      title: 'Automated Response',
-      description: 'Instant automated threat response and incident containment without human intervention',
+      title: 'Predictive Analytics',
+      description: 'Anticipate customer needs and proactively address issues before they arise',
       color: 'from-yellow-500 to-orange-500'
     },
     {
-      icon: Network,
-      title: 'Network Security',
-      description: 'Comprehensive network monitoring and protection with AI-driven threat intelligence',
+      icon: Users,
+      title: 'Customer Journey Mapping',
+      description: 'Visualize and optimize every touchpoint in the customer experience',
       color: 'from-red-500 to-pink-500'
     },
     {
-      icon: Database,
-      title: 'Data Protection',
-      description: 'Advanced encryption and data loss prevention with AI-powered monitoring',
+      icon: BarChart3,
+      title: 'Performance Analytics',
+      description: 'Comprehensive insights into customer satisfaction, engagement, and loyalty metrics',
       color: 'from-indigo-500 to-purple-500'
     }
   ];
 
   const services = [
     {
-      title: 'Threat Intelligence Platform',
-      description: 'Real-time threat intelligence and analysis powered by AI',
-      price: 'From $2,500/month',
-      features: ['Global threat monitoring', 'AI-powered analysis', 'Custom threat feeds', '24/7 monitoring']
+      title: 'Customer Experience Assessment',
+      description: 'Comprehensive analysis of current customer journey and experience optimization opportunities',
+      price: 'From $4,500',
+      features: ['Journey mapping', 'Pain point identification', 'Optimization strategy', 'ROI analysis']
     },
     {
-      title: 'Security Operations Center (SOC)',
-      description: 'AI-enhanced SOC services with automated threat detection and response',
-      price: 'From $8,000/month',
-      features: ['AI threat detection', 'Automated response', 'Security analysts', 'Incident management']
+      title: 'AI Platform Implementation',
+      description: 'Full implementation of AI-powered customer experience platform',
+      price: 'From $12,000',
+      features: ['Platform setup', 'AI model training', 'Integration configuration', 'Team training']
     },
     {
-      title: 'Vulnerability Assessment',
-      description: 'Comprehensive security assessment using AI-powered scanning and analysis',
-      price: 'From $5,000',
-      features: ['AI vulnerability scanning', 'Penetration testing', 'Security audit', 'Remediation plan']
-    },
-    {
-      title: 'Compliance & Governance',
-      description: 'AI-powered compliance monitoring and reporting for regulatory requirements',
+      title: 'Ongoing Optimization',
+      description: 'Continuous improvement and optimization of customer experience',
       price: 'From $3,500/month',
-      features: ['GDPR compliance', 'SOC 2 monitoring', 'HIPAA compliance', 'Automated reporting']
+      features: ['Performance monitoring', 'AI model updates', 'Journey optimization', 'Analytics reports']
+    },
+    {
+      title: 'Enterprise CX Suite',
+      description: 'Complete enterprise customer experience management with advanced AI capabilities',
+      price: 'From $20,000',
+      features: ['Multi-brand management', 'Advanced AI models', 'Custom integrations', '24/7 support']
     }
   ];
 
-  const securityModules = [
+  const useCases = [
     {
-      title: 'Endpoint Protection',
-      description: 'AI-powered endpoint security with behavioral analysis and threat prevention',
-      features: ['Malware detection', 'Ransomware protection', 'Device control', 'Data encryption']
+      title: 'E-commerce Personalization',
+      description: 'Personalized product recommendations and shopping experiences',
+      benefits: ['Increase conversion rates by 35%', 'Improve customer retention', 'Boost average order value']
     },
     {
-      title: 'Cloud Security',
-      description: 'Comprehensive cloud security monitoring and threat detection',
-      features: ['Multi-cloud protection', 'API security', 'Data encryption', 'Access control']
+      title: 'Customer Support Enhancement',
+      description: 'AI-powered support with intelligent routing and automated responses',
+      benefits: ['Reduce response time by 60%', 'Improve first-call resolution', 'Enhance customer satisfaction']
     },
     {
-      title: 'Identity & Access Management',
-      description: 'AI-enhanced identity verification and access control systems',
-      features: ['Multi-factor authentication', 'Behavioral biometrics', 'Privileged access management', 'Single sign-on']
+      title: 'Marketing Campaign Optimization',
+      description: 'Data-driven marketing with personalized messaging and targeting',
+      benefits: ['Increase campaign ROI by 45%', 'Improve engagement rates', 'Reduce customer churn']
     },
     {
-      title: 'Incident Response',
-      description: 'Automated incident response with AI-powered threat containment',
-      features: ['Automated containment', 'Forensic analysis', 'Recovery procedures', 'Post-incident review']
-    }
-  ];
-
-  const benefits = [
-    {
-      title: 'Proactive Threat Prevention',
-      description: 'Stop threats before they impact your business with AI-powered predictive security',
-      icon: Shield
-    },
-    {
-      title: 'Reduced False Positives',
-      description: 'AI algorithms reduce false alarms by 90%, allowing security teams to focus on real threats',
-      icon: CheckCircle
-    },
-    {
-      title: '24/7 Automated Protection',
-      description: 'Continuous security monitoring and automated response, even when your team is offline',
-      icon: Monitor
-    },
-    {
-      title: 'Cost Optimization',
-      description: 'Reduce security costs by 40% while improving protection through intelligent automation',
-      icon: TrendingUp
+      title: 'Product Development Insights',
+      description: 'Customer feedback analysis and product improvement recommendations',
+      benefits: ['Faster product iteration', 'Better feature prioritization', 'Improved market fit']
     }
   ];
 
   const technologies = [
-    { name: 'Machine Learning', description: 'Advanced ML algorithms for threat detection and analysis' },
-    { name: 'Natural Language Processing', description: 'AI-powered analysis of security logs and reports' },
-    { name: 'Behavioral Analytics', description: 'User and system behavior monitoring for anomaly detection' },
-    { name: 'Threat Intelligence', description: 'Real-time threat feeds and global security intelligence' },
-    { name: 'Automated Response', description: 'Intelligent automation for threat containment and response' },
-    { name: 'Cloud-Native Security', description: 'Built for modern cloud and hybrid environments' }
+    { name: 'Machine Learning', description: 'Advanced ML algorithms for customer behavior analysis' },
+    { name: 'Natural Language Processing', description: 'Intelligent text and voice interaction processing' },
+    { name: 'Predictive Analytics', description: 'Forecast customer needs and behavior patterns' },
+    { name: 'Real-time Processing', description: 'Instant customer interaction analysis and response' },
+    { name: 'API Integration', description: 'Seamless integration with existing business systems' },
+    { name: 'Cloud Infrastructure', description: 'Scalable and secure cloud-based platform' }
+  ];
+
+  const benefits = [
+    {
+      title: 'Increased Customer Satisfaction',
+      description: 'Deliver personalized experiences that exceed customer expectations',
+      icon: Heart
+    },
+    {
+      title: 'Higher Customer Lifetime Value',
+      description: 'Build stronger relationships and increase customer retention rates',
+      icon: TrendingUp
+    },
+    {
+      title: 'Improved Operational Efficiency',
+      description: 'Automate routine tasks and focus on high-value customer interactions',
+      icon: Zap
+    },
+    {
+      title: 'Data-Driven Insights',
+      description: 'Make informed decisions based on comprehensive customer analytics',
+      icon: BarChart3
+    }
   ];
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO 
-        title="AI Cybersecurity Suite - Zion Tech Group"
-        description="Advanced AI-powered cybersecurity solutions that protect your business from evolving threats. Real-time threat detection, automated response, and comprehensive security monitoring."
+        title="AI Customer Experience Platform - Zion Tech Group"
+        description="Transform your customer experience with AI-powered personalization, omnichannel communication, and predictive analytics. Increase satisfaction, retention, and revenue."
       />
       
       {/* Hero Section */}
       <section className="relative overflow-hidden py-20">
-        <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 to-cyan-600/20"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 to-pink-600/20"></div>
         <div className="container mx-auto px-4 relative z-10">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -166,30 +169,30 @@ export default function AICybersecuritySuite() {
             className="text-center max-w-4xl mx-auto"
           >
             <div className="flex justify-center mb-6">
-              <div className="w-20 h-20 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-2xl flex items-center justify-center">
-                <Shield className="w-10 h-10 text-white" />
+              <div className="w-20 h-20 bg-gradient-to-br from-purple-500 to-pink-500 rounded-2xl flex items-center justify-center">
+                <Users className="w-10 h-10 text-white" />
               </div>
             </div>
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
-              AI Cybersecurity Suite
+              AI Customer Experience Platform
             </h1>
             <p className="text-xl text-gray-300 mb-8">
-              Next-generation cybersecurity powered by artificial intelligence. Protect your business from evolving threats with automated detection, response, and prevention.
+              Revolutionize your customer experience with AI-powered personalization, omnichannel communication, and predictive analytics that drive loyalty and growth
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a 
                 href="https://ziontechgroup.com/contact" 
-                className="bg-gradient-to-r from-blue-500 to-cyan-500 text-white px-8 py-3 rounded-lg font-semibold hover:from-blue-600 hover:to-cyan-600 transition-all duration-300 flex items-center justify-center gap-2"
+                className="bg-gradient-to-r from-purple-500 to-pink-500 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-pink-600 transition-all duration-300 flex items-center justify-center gap-2"
               >
-                Get Protected
+                Transform CX
                 <ArrowRight className="w-5 h-5" />
               </a>
               <a 
                 href="tel:+13024640950" 
-                className="border border-blue-500 text-blue-400 px-8 py-3 rounded-lg font-semibold hover:bg-blue-500 hover:text-white transition-all duration-300 flex items-center justify-center gap-2"
+                className="border border-purple-500 text-purple-400 px-8 py-3 rounded-lg font-semibold hover:bg-purple-500 hover:text-white transition-all duration-300 flex items-center justify-center gap-2"
               >
                 <Phone className="w-5 h-5" />
-                Security Consultation
+                CX Consultation
               </a>
             </div>
           </motion.div>
@@ -206,10 +209,10 @@ export default function AICybersecuritySuite() {
             className="text-center mb-16"
           >
             <h2 className="text-4xl font-bold text-white mb-4">
-              Advanced AI-Powered Security Features
+              Powerful CX Features
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Our cybersecurity suite combines cutting-edge AI technology with industry-leading security practices to deliver unmatched protection
+              Our AI platform delivers personalized, intelligent customer experiences across every touchpoint
             </p>
           </motion.div>
 
@@ -220,7 +223,7 @@ export default function AICybersecuritySuite() {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="bg-gradient-to-br from-slate-800 to-slate-700 p-8 rounded-2xl border border-slate-600 hover:border-blue-500 transition-all duration-300"
+                className="bg-gradient-to-br from-slate-800 to-slate-700 p-8 rounded-2xl border border-slate-600 hover:border-purple-500 transition-all duration-300"
               >
                 <div className={`w-16 h-16 bg-gradient-to-br ${feature.color} rounded-xl flex items-center justify-center mb-6`}>
                   <feature.icon className="w-8 h-8 text-white" />
@@ -243,10 +246,10 @@ export default function AICybersecuritySuite() {
             className="text-center mb-16"
           >
             <h2 className="text-4xl font-bold text-white mb-4">
-              Comprehensive Security Solutions
+              Customer Experience Solutions
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Choose the security package that fits your business needs and budget
+              From initial assessment to ongoing optimization, we provide end-to-end CX transformation
             </p>
           </motion.div>
 
@@ -261,7 +264,7 @@ export default function AICybersecuritySuite() {
               >
                 <h3 className="text-2xl font-bold text-white mb-4">{service.title}</h3>
                 <p className="text-gray-300 mb-6">{service.description}</p>
-                <div className="text-3xl font-bold text-blue-400 mb-6">{service.price}</div>
+                <div className="text-3xl font-bold text-purple-400 mb-6">{service.price}</div>
                 <ul className="space-y-3">
                   {service.features.map((feature, featureIndex) => (
                     <li key={featureIndex} className="flex items-center gap-3 text-gray-300">
@@ -276,7 +279,7 @@ export default function AICybersecuritySuite() {
         </div>
       </section>
 
-      {/* Security Modules Section */}
+      {/* Use Cases Section */}
       <section className="py-20">
         <div className="container mx-auto px-4">
           <motion.div
@@ -286,15 +289,15 @@ export default function AICybersecuritySuite() {
             className="text-center mb-16"
           >
             <h2 className="text-4xl font-bold text-white mb-4">
-              Integrated Security Modules
+              Real-World Applications
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Comprehensive security coverage across all aspects of your digital infrastructure
+              See how AI-powered customer experience transforms different business functions
             </p>
           </motion.div>
 
           <div className="grid md:grid-cols-2 gap-8">
-            {securityModules.map((module, index) => (
+            {useCases.map((useCase, index) => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
@@ -302,16 +305,16 @@ export default function AICybersecuritySuite() {
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 className="bg-gradient-to-br from-slate-800 to-slate-700 p-8 rounded-2xl border border-slate-600"
               >
-                <h3 className="text-2xl font-bold text-white mb-4">{module.title}</h3>
-                <p className="text-gray-300 mb-6">{module.description}</p>
-                <ul className="space-y-3">
-                  {module.features.map((feature, featureIndex) => (
-                    <li key={featureIndex} className="flex items-center gap-3 text-gray-300">
-                      <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0" />
-                      {feature}
-                    </li>
+                <h3 className="text-2xl font-bold text-white mb-4">{useCase.title}</h3>
+                <p className="text-gray-300 mb-6">{useCase.description}</p>
+                <div className="space-y-3">
+                  {useCase.benefits.map((benefit, benefitIndex) => (
+                    <div key={benefitIndex} className="flex items-center gap-3 text-green-400">
+                      <TrendingUp className="w-5 h-5 flex-shrink-0" />
+                      {benefit}
+                    </div>
                   ))}
-                </ul>
+                </div>
               </motion.div>
             ))}
           </div>
@@ -328,10 +331,10 @@ export default function AICybersecuritySuite() {
             className="text-center mb-16"
           >
             <h2 className="text-4xl font-bold text-white mb-4">
-              Why Choose AI-Powered Security?
+              Why Choose AI-Powered CX?
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Experience the advantages of intelligent cybersecurity that adapts to your business needs
+              Experience the advantages of intelligent customer experience management
             </p>
           </motion.div>
 
@@ -344,7 +347,7 @@ export default function AICybersecuritySuite() {
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 className="bg-gradient-to-br from-slate-800 to-slate-700 p-8 rounded-2xl border border-slate-600"
               >
-                <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-xl flex items-center justify-center mb-6">
+                <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-pink-500 rounded-xl flex items-center justify-center mb-6">
                   <benefit.icon className="w-8 h-8 text-white" />
                 </div>
                 <h3 className="text-2xl font-bold text-white mb-4">{benefit.title}</h3>
@@ -365,10 +368,10 @@ export default function AICybersecuritySuite() {
             className="text-center mb-16"
           >
             <h2 className="text-4xl font-bold text-white mb-4">
-              Advanced Security Technologies
+              Advanced AI Technologies
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Built on cutting-edge AI and cybersecurity technologies for maximum protection
+              Built on cutting-edge AI and machine learning technologies for exceptional customer experiences
             </p>
           </motion.div>
 
@@ -396,25 +399,25 @@ export default function AICybersecuritySuite() {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-            className="bg-gradient-to-r from-blue-600 to-cyan-600 rounded-3xl p-12 text-center"
+            className="bg-gradient-to-r from-purple-600 to-pink-600 rounded-3xl p-12 text-center"
           >
             <h2 className="text-4xl font-bold text-white mb-6">
-              Secure Your Business Today
+              Ready to Transform Your Customer Experience?
             </h2>
-            <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">
-              Don't wait for a security breach. Protect your business with AI-powered cybersecurity that adapts and evolves with threats.
+            <p className="text-xl text-purple-100 mb-8 max-w-3xl mx-auto">
+              Join hundreds of businesses that have revolutionized their customer experience with AI-powered personalization and insights
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a 
                 href="https://ziontechgroup.com/contact" 
-                className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300 flex items-center justify-center gap-2"
+                className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300 flex items-center justify-center gap-2"
               >
-                Start Security Assessment
+                Start CX Transformation
                 <ArrowRight className="w-5 h-5" />
               </a>
               <a 
                 href="tel:+13024640950" 
-                className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-all duration-300 flex items-center justify-center gap-2"
+                className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300 flex items-center justify-center gap-2"
               >
                 <Phone className="w-5 h-5" />
                 Call +1 302 464 0950
@@ -429,23 +432,23 @@ export default function AICybersecuritySuite() {
         <div className="container mx-auto px-4">
           <div className="grid md:grid-cols-3 gap-8 text-center">
             <div className="flex flex-col items-center">
-              <Phone className="w-8 h-8 text-blue-400 mb-4" />
+              <Phone className="w-8 h-8 text-purple-400 mb-4" />
               <h3 className="text-xl font-semibold text-white mb-2">Phone</h3>
-              <a href="tel:+13024640950" className="text-blue-400 hover:text-blue-300">
+              <a href="tel:+13024640950" className="text-purple-400 hover:text-purple-300">
                 +1 302 464 0950
               </a>
             </div>
             <div className="flex flex-col items-center">
-              <Mail className="w-8 h-8 text-blue-400 mb-4" />
+              <Mail className="w-8 h-8 text-purple-400 mb-4" />
               <h3 className="text-xl font-semibold text-white mb-2">Email</h3>
-              <a href="mailto:kleber@ziontechgroup.com" className="text-blue-400 hover:text-blue-300">
+              <a href="mailto:kleber@ziontechgroup.com" className="text-purple-400 hover:text-purple-300">
                 kleber@ziontechgroup.com
               </a>
             </div>
             <div className="flex flex-col items-center">
-              <Globe className="w-8 h-8 text-blue-400 mb-4" />
+              <Globe className="w-8 h-8 text-purple-400 mb-4" />
               <h3 className="text-xl font-semibold text-white mb-2">Website</h3>
-              <a href="https://ziontechgroup.com" className="text-blue-400 hover:text-blue-300 flex items-center gap-2">
+              <a href="https://ziontechgroup.com" className="text-purple-400 hover:text-purple-300 flex items-center gap-2">
                 ziontechgroup.com
                 <ExternalLink className="w-4 h-4" />
               </a>

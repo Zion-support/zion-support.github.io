@@ -2,11 +2,9 @@ import React from 'react';
 import { SEO } from '../../components/SEO';
 import { motion } from 'framer-motion';
 import { 
-  Shield, 
+  Truck, 
   Brain, 
-  Eye, 
-  Lock, 
-  AlertTriangle, 
+  BarChart3, 
   TrendingUp, 
   CheckCircle, 
   ArrowRight, 
@@ -15,144 +13,148 @@ import {
   Globe, 
   ExternalLink,
   Zap,
-  Users,
-  BarChart3,
   Target,
   Cpu,
-  Network,
-  Database,
-  FileText,
-  Monitor,
-  Activity
+  Package,
+  Warehouse,
+  Route,
+  Clock,
+  DollarSign,
+  Globe2,
+  MapPin,
+  Activity,
+  Gauge,
+  Shield,
+  RefreshCw
 } from 'lucide-react';
 
-export default function AICybersecuritySuite() {
+export default function AISupplyChainOptimization() {
   const features = [
     {
       icon: Brain,
-      title: 'AI Threat Detection',
-      description: 'Advanced machine learning algorithms that identify and respond to threats in real-time',
+      title: 'AI Demand Forecasting',
+      description: 'Predictive analytics for accurate demand forecasting and inventory optimization',
       color: 'from-blue-500 to-cyan-500'
     },
     {
-      icon: Eye,
-      title: 'Behavioral Analytics',
-      description: 'Monitor user and system behavior patterns to detect anomalies and potential threats',
+      icon: Route,
+      title: 'Route Optimization',
+      description: 'Intelligent route planning and logistics optimization for cost reduction',
       color: 'from-green-500 to-emerald-500'
     },
     {
-      icon: Shield,
-      title: 'Zero-Day Protection',
-      description: 'Protect against unknown threats using AI-powered predictive security models',
+      icon: Warehouse,
+      title: 'Inventory Management',
+      description: 'Smart inventory tracking and automated reorder point management',
       color: 'from-purple-500 to-pink-500'
     },
     {
       icon: Zap,
-      title: 'Automated Response',
-      description: 'Instant automated threat response and incident containment without human intervention',
+      title: 'Real-time Monitoring',
+      description: 'Live supply chain visibility and proactive issue detection',
       color: 'from-yellow-500 to-orange-500'
     },
     {
-      icon: Network,
-      title: 'Network Security',
-      description: 'Comprehensive network monitoring and protection with AI-driven threat intelligence',
+      icon: Shield,
+      title: 'Risk Management',
+      description: 'AI-powered risk assessment and mitigation strategies',
       color: 'from-red-500 to-pink-500'
     },
     {
-      icon: Database,
-      title: 'Data Protection',
-      description: 'Advanced encryption and data loss prevention with AI-powered monitoring',
+      icon: BarChart3,
+      title: 'Performance Analytics',
+      description: 'Comprehensive KPIs and supply chain performance insights',
       color: 'from-indigo-500 to-purple-500'
     }
   ];
 
   const services = [
     {
-      title: 'Threat Intelligence Platform',
-      description: 'Real-time threat intelligence and analysis powered by AI',
-      price: 'From $2,500/month',
-      features: ['Global threat monitoring', 'AI-powered analysis', 'Custom threat feeds', '24/7 monitoring']
+      title: 'Supply Chain Assessment',
+      description: 'Comprehensive analysis of current supply chain operations and optimization opportunities',
+      price: 'From $5,500',
+      features: ['Process mapping', 'Bottleneck identification', 'Cost analysis', 'Optimization roadmap']
     },
     {
-      title: 'Security Operations Center (SOC)',
-      description: 'AI-enhanced SOC services with automated threat detection and response',
-      price: 'From $8,000/month',
-      features: ['AI threat detection', 'Automated response', 'Security analysts', 'Incident management']
+      title: 'AI Platform Implementation',
+      description: 'Full implementation of AI-powered supply chain optimization platform',
+      price: 'From $15,000',
+      features: ['Platform setup', 'AI model training', 'Integration configuration', 'Team training']
     },
     {
-      title: 'Vulnerability Assessment',
-      description: 'Comprehensive security assessment using AI-powered scanning and analysis',
-      price: 'From $5,000',
-      features: ['AI vulnerability scanning', 'Penetration testing', 'Security audit', 'Remediation plan']
+      title: 'Ongoing Optimization',
+      description: 'Continuous improvement and optimization of supply chain operations',
+      price: 'From $4,500/month',
+      features: ['Performance monitoring', 'AI model updates', 'Process optimization', 'Analytics reports']
     },
     {
-      title: 'Compliance & Governance',
-      description: 'AI-powered compliance monitoring and reporting for regulatory requirements',
-      price: 'From $3,500/month',
-      features: ['GDPR compliance', 'SOC 2 monitoring', 'HIPAA compliance', 'Automated reporting']
+      title: 'Enterprise Supply Chain Suite',
+      description: 'Complete enterprise supply chain management with advanced AI capabilities',
+      price: 'From $25,000',
+      features: ['Multi-location management', 'Advanced AI models', 'Custom integrations', '24/7 support']
     }
   ];
 
-  const securityModules = [
+  const useCases = [
     {
-      title: 'Endpoint Protection',
-      description: 'AI-powered endpoint security with behavioral analysis and threat prevention',
-      features: ['Malware detection', 'Ransomware protection', 'Device control', 'Data encryption']
+      title: 'Manufacturing Optimization',
+      description: 'Streamline production processes and reduce lead times',
+      benefits: ['Reduce lead times by 40%', 'Improve production efficiency', 'Lower operational costs']
     },
     {
-      title: 'Cloud Security',
-      description: 'Comprehensive cloud security monitoring and threat detection',
-      features: ['Multi-cloud protection', 'API security', 'Data encryption', 'Access control']
+      title: 'Retail Inventory Management',
+      description: 'Optimize stock levels and reduce inventory carrying costs',
+      benefits: ['Reduce stockouts by 60%', 'Lower inventory costs by 25%', 'Improve cash flow']
     },
     {
-      title: 'Identity & Access Management',
-      description: 'AI-enhanced identity verification and access control systems',
-      features: ['Multi-factor authentication', 'Behavioral biometrics', 'Privileged access management', 'Single sign-on']
+      title: 'Logistics Optimization',
+      description: 'Optimize transportation routes and reduce delivery costs',
+      benefits: ['Reduce transportation costs by 30%', 'Improve delivery times', 'Enhance customer satisfaction']
     },
     {
-      title: 'Incident Response',
-      description: 'Automated incident response with AI-powered threat containment',
-      features: ['Automated containment', 'Forensic analysis', 'Recovery procedures', 'Post-incident review']
-    }
-  ];
-
-  const benefits = [
-    {
-      title: 'Proactive Threat Prevention',
-      description: 'Stop threats before they impact your business with AI-powered predictive security',
-      icon: Shield
-    },
-    {
-      title: 'Reduced False Positives',
-      description: 'AI algorithms reduce false alarms by 90%, allowing security teams to focus on real threats',
-      icon: CheckCircle
-    },
-    {
-      title: '24/7 Automated Protection',
-      description: 'Continuous security monitoring and automated response, even when your team is offline',
-      icon: Monitor
-    },
-    {
-      title: 'Cost Optimization',
-      description: 'Reduce security costs by 40% while improving protection through intelligent automation',
-      icon: TrendingUp
+      title: 'Supplier Management',
+      description: 'Intelligent supplier selection and performance monitoring',
+      benefits: ['Improve supplier performance', 'Reduce supply chain risks', 'Optimize procurement costs']
     }
   ];
 
   const technologies = [
-    { name: 'Machine Learning', description: 'Advanced ML algorithms for threat detection and analysis' },
-    { name: 'Natural Language Processing', description: 'AI-powered analysis of security logs and reports' },
-    { name: 'Behavioral Analytics', description: 'User and system behavior monitoring for anomaly detection' },
-    { name: 'Threat Intelligence', description: 'Real-time threat feeds and global security intelligence' },
-    { name: 'Automated Response', description: 'Intelligent automation for threat containment and response' },
-    { name: 'Cloud-Native Security', description: 'Built for modern cloud and hybrid environments' }
+    { name: 'Machine Learning', description: 'Advanced ML algorithms for demand forecasting and optimization' },
+    { name: 'Predictive Analytics', description: 'Forecast supply chain disruptions and demand patterns' },
+    { name: 'IoT Integration', description: 'Real-time data collection from connected devices and sensors' },
+    { name: 'Blockchain', description: 'Secure and transparent supply chain tracking and verification' },
+    { name: 'Cloud Computing', description: 'Scalable and secure cloud-based optimization platform' },
+    { name: 'API Integration', description: 'Seamless integration with existing ERP and logistics systems' }
+  ];
+
+  const benefits = [
+    {
+      title: 'Cost Reduction',
+      description: 'Reduce operational costs by 20-30% through intelligent optimization',
+      icon: DollarSign
+    },
+    {
+      title: 'Improved Efficiency',
+      description: 'Streamline operations and eliminate bottlenecks for better performance',
+      icon: TrendingUp
+    },
+    {
+      title: 'Risk Mitigation',
+      description: 'Identify and mitigate supply chain risks before they impact operations',
+      icon: Shield
+    },
+    {
+      title: 'Enhanced Visibility',
+      description: 'Real-time visibility into supply chain operations for better decision-making',
+      icon: Activity
+    }
   ];
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO 
-        title="AI Cybersecurity Suite - Zion Tech Group"
-        description="Advanced AI-powered cybersecurity solutions that protect your business from evolving threats. Real-time threat detection, automated response, and comprehensive security monitoring."
+        title="AI Supply Chain Optimization - Zion Tech Group"
+        description="Transform your supply chain with AI-powered optimization, demand forecasting, and intelligent logistics. Reduce costs, improve efficiency, and enhance visibility across your operations."
       />
       
       {/* Hero Section */}
@@ -167,21 +169,21 @@ export default function AICybersecuritySuite() {
           >
             <div className="flex justify-center mb-6">
               <div className="w-20 h-20 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-2xl flex items-center justify-center">
-                <Shield className="w-10 h-10 text-white" />
+                <Truck className="w-10 h-10 text-white" />
               </div>
             </div>
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
-              AI Cybersecurity Suite
+              AI Supply Chain Optimization
             </h1>
             <p className="text-xl text-gray-300 mb-8">
-              Next-generation cybersecurity powered by artificial intelligence. Protect your business from evolving threats with automated detection, response, and prevention.
+              Revolutionize your supply chain with AI-powered optimization, demand forecasting, and intelligent logistics that drive efficiency and cost savings
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a 
                 href="https://ziontechgroup.com/contact" 
                 className="bg-gradient-to-r from-blue-500 to-cyan-500 text-white px-8 py-3 rounded-lg font-semibold hover:from-blue-600 hover:to-cyan-600 transition-all duration-300 flex items-center justify-center gap-2"
               >
-                Get Protected
+                Optimize Supply Chain
                 <ArrowRight className="w-5 h-5" />
               </a>
               <a 
@@ -189,7 +191,7 @@ export default function AICybersecuritySuite() {
                 className="border border-blue-500 text-blue-400 px-8 py-3 rounded-lg font-semibold hover:bg-blue-500 hover:text-white transition-all duration-300 flex items-center justify-center gap-2"
               >
                 <Phone className="w-5 h-5" />
-                Security Consultation
+                Supply Chain Consultation
               </a>
             </div>
           </motion.div>
@@ -206,10 +208,10 @@ export default function AICybersecuritySuite() {
             className="text-center mb-16"
           >
             <h2 className="text-4xl font-bold text-white mb-4">
-              Advanced AI-Powered Security Features
+              Advanced Supply Chain Features
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Our cybersecurity suite combines cutting-edge AI technology with industry-leading security practices to deliver unmatched protection
+              Our AI platform delivers intelligent optimization across every aspect of your supply chain
             </p>
           </motion.div>
 
@@ -243,10 +245,10 @@ export default function AICybersecuritySuite() {
             className="text-center mb-16"
           >
             <h2 className="text-4xl font-bold text-white mb-4">
-              Comprehensive Security Solutions
+              Supply Chain Solutions
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Choose the security package that fits your business needs and budget
+              From initial assessment to ongoing optimization, we provide end-to-end supply chain transformation
             </p>
           </motion.div>
 
@@ -276,7 +278,7 @@ export default function AICybersecuritySuite() {
         </div>
       </section>
 
-      {/* Security Modules Section */}
+      {/* Use Cases Section */}
       <section className="py-20">
         <div className="container mx-auto px-4">
           <motion.div
@@ -286,15 +288,15 @@ export default function AICybersecuritySuite() {
             className="text-center mb-16"
           >
             <h2 className="text-4xl font-bold text-white mb-4">
-              Integrated Security Modules
+              Industry Applications
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Comprehensive security coverage across all aspects of your digital infrastructure
+              See how AI-powered supply chain optimization transforms different industries
             </p>
           </motion.div>
 
           <div className="grid md:grid-cols-2 gap-8">
-            {securityModules.map((module, index) => (
+            {useCases.map((useCase, index) => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
@@ -302,16 +304,16 @@ export default function AICybersecuritySuite() {
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 className="bg-gradient-to-br from-slate-800 to-slate-700 p-8 rounded-2xl border border-slate-600"
               >
-                <h3 className="text-2xl font-bold text-white mb-4">{module.title}</h3>
-                <p className="text-gray-300 mb-6">{module.description}</p>
-                <ul className="space-y-3">
-                  {module.features.map((feature, featureIndex) => (
-                    <li key={featureIndex} className="flex items-center gap-3 text-gray-300">
-                      <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0" />
-                      {feature}
-                    </li>
+                <h3 className="text-2xl font-bold text-white mb-4">{useCase.title}</h3>
+                <p className="text-gray-300 mb-6">{useCase.description}</p>
+                <div className="space-y-3">
+                  {useCase.benefits.map((benefit, benefitIndex) => (
+                    <div key={benefitIndex} className="flex items-center gap-3 text-green-400">
+                      <TrendingUp className="w-5 h-5 flex-shrink-0" />
+                      {benefit}
+                    </div>
                   ))}
-                </ul>
+                </div>
               </motion.div>
             ))}
           </div>
@@ -328,10 +330,10 @@ export default function AICybersecuritySuite() {
             className="text-center mb-16"
           >
             <h2 className="text-4xl font-bold text-white mb-4">
-              Why Choose AI-Powered Security?
+              Why Choose AI-Powered Optimization?
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Experience the advantages of intelligent cybersecurity that adapts to your business needs
+              Experience the advantages of intelligent supply chain management
             </p>
           </motion.div>
 
@@ -365,10 +367,10 @@ export default function AICybersecuritySuite() {
             className="text-center mb-16"
           >
             <h2 className="text-4xl font-bold text-white mb-4">
-              Advanced Security Technologies
+              Advanced Technologies
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Built on cutting-edge AI and cybersecurity technologies for maximum protection
+              Built on cutting-edge AI and optimization technologies for maximum efficiency
             </p>
           </motion.div>
 
@@ -399,17 +401,17 @@ export default function AICybersecuritySuite() {
             className="bg-gradient-to-r from-blue-600 to-cyan-600 rounded-3xl p-12 text-center"
           >
             <h2 className="text-4xl font-bold text-white mb-6">
-              Secure Your Business Today
+              Ready to Optimize Your Supply Chain?
             </h2>
             <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">
-              Don't wait for a security breach. Protect your business with AI-powered cybersecurity that adapts and evolves with threats.
+              Join hundreds of businesses that have transformed their supply chain operations with AI-powered optimization and intelligence
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a 
                 href="https://ziontechgroup.com/contact" 
                 className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300 flex items-center justify-center gap-2"
               >
-                Start Security Assessment
+                Start Optimization
                 <ArrowRight className="w-5 h-5" />
               </a>
               <a 
