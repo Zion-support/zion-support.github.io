@@ -75,20 +75,43 @@ export const EnhancedFuturisticFooter: React.FC = () => {
 
   const footerSections = [
     {
-      title: 'Revolutionary 2030 Services',
+      title: 'Innovative Micro SAAS 2025',
       featured: true,
       links: [
+        { name: 'Innovative Micro SAAS Services', href: '/innovative-micro-saas-services-2025', featured: true },
+        { name: 'AI Business Intelligence', href: '/services/ai-business-intelligence', featured: true },
+        { name: 'AI Financial Trading Pro', href: '/services/ai-financial-trading-platform-pro', featured: true },
+        { name: 'AI Healthcare Diagnostics', href: '/services/ai-healthcare-diagnostics-platform', featured: true },
+        { name: 'AI Legal Document Analysis', href: '/services/ai-legal-document-analysis-platform', featured: true },
+        { name: 'AI Supply Chain Optimization', href: '/services/ai-supply-chain-optimization-platform', featured: true },
+        { name: 'AI Cybersecurity Intelligence', href: '/services/ai-cybersecurity-threat-intelligence', featured: true },
+        { name: 'AI Education Personalization', href: '/services/ai-education-personalization-platform', featured: true }
+      ]
+    },
+    {
+      title: 'AI & Industry Solutions',
+      featured: true,
+      links: [
+        { name: 'AI Real Estate Investment', href: '/services/ai-real-estate-investment-analyzer', featured: true },
+        { name: 'AI Restaurant Management', href: '/services/ai-restaurant-management-system', featured: true },
+        { name: 'AI Fitness Coaching', href: '/services/ai-fitness-coaching-platform', featured: true },
+        { name: 'AI Energy Management', href: '/services/ai-energy-management-system', featured: true },
+        { name: 'AI E-commerce Personalization', href: '/services/ai-ecommerce-personalization-engine', featured: true },
+        { name: 'AI Customer Churn Prediction', href: '/services/ai-customer-churn-prediction-platform', featured: true },
+        { name: 'AI Video Content Creation', href: '/services/ai-video-content-creation-studio', featured: true }
+      ]
+    },
+    {
+      title: 'Advanced Technology Services',
+      featured: true,
+      links: [
+        { name: 'Quantum Computing', href: '/services/quantum-computing', featured: true },
+        { name: 'IoT Edge Computing', href: '/services/iot-edge-computing', featured: true },
+        { name: 'Digital Twin Platform', href: '/services/digital-twin', featured: true },
+        { name: 'Cloud DevOps', href: '/services/cloud-devops', featured: true },
+        { name: 'Micro SaaS Products', href: '/services/micro-saas', featured: true },
         { name: 'Revolutionary Services 2030', href: '/revolutionary-services-2030', featured: true },
-        { name: 'Quantum AI Trading Platform', href: '/services#quantum-ai-trading', featured: true },
-        { name: 'Neural Interface Platform', href: '/services#neural-interface', featured: true },
-        { name: 'Holographic Workspace Platform', href: '/services#holographic-workspace', featured: true },
-        { name: 'BioDigital Twin Platform', href: '/services#biodigital-twin', featured: true },
-        { name: 'Space Debris Tracking System', href: '/services#space-debris-tracking', featured: true },
-        { name: 'AI Ethics Guardian Platform', href: '/services#ai-ethics-guardian', featured: true },
-        { name: 'Metaverse Builder Platform', href: '/services#metaverse-builder', featured: true },
-        { name: 'AI Autonomous Operations', href: '/revolutionary-services-2030#ai-autonomous-business-operations-2030' },
-        { name: 'Quantum AI Cybersecurity', href: '/revolutionary-services-2030#quantum-ai-cybersecurity-2030' },
-        { name: 'AI Content Creation Studio', href: '/revolutionary-services-2030#ai-content-creation-studio-2030' }
+        { name: 'AI Autonomous Operations', href: '/revolutionary-services-2030#ai-autonomous-business-operations-2030' }
       ]
     },
     {
