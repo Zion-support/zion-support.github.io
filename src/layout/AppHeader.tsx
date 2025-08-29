@@ -1,4 +1,4 @@
-import { ArrowRight, Atom, BookOpen, Brain, Building, Building2, ChevronDown, Cloud, Code, Cpu, DollarSign, FileText, Globe, HeartHandshake, Heart, HelpCircle, Leaf, Lock, Mail, MapPin, Menu, MessageCircle, PenTool, Phone, Rocket, Scale, Search, Settings, Shield, ShoppingCart, Star, Target, TrendingUp, Users, X, Zap } from 'lucide-react';
+import { ArrowRight, Atom, BookOpen, Brain, Building, Building2, ChevronDown, Cloud, Code, Cpu, DollarSign, FileText, Globe, HeartHandshake, Heart, HelpCircle, Leaf, Lock, Mail, MapPin, Menu, MessageCircle, PenTool, Phone, Rocket, Scale, Search, Settings, Shield, ShoppingCart, Star, Target, TrendingUp, Users, X, Zap, Server, Truck, BarChart3, Video, Factory, GraduationCap } from 'lucide-react';
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { ThemeToggle } from '../components/ThemeToggle';
@@ -53,12 +53,28 @@ export function AppHeader() {
       color: 'from-cyan-500 to-blue-500'
     },
     { 
-      name: 'Innovative Micro SAAS 2025', 
-      href: '/innovative-micro-saas-services-2025', 
+      name: 'Innovative Micro SAAS 2026', 
+      href: '/innovative-micro-saas-services-2026', 
       icon: Rocket, 
       description: 'Cutting-edge AI Services',
       featured: true,
       color: 'from-purple-500 to-pink-500'
+    },
+    { 
+      name: 'AI Services 2026', 
+      href: '/ai-services-2026', 
+      icon: Brain, 
+      description: 'Advanced AI Solutions',
+      featured: true,
+      color: 'from-indigo-500 to-purple-500'
+    },
+    { 
+      name: 'IT Infrastructure 2026', 
+      href: '/it-infrastructure-2026', 
+      icon: Server, 
+      description: 'Modern Infrastructure',
+      featured: true,
+      color: 'from-blue-500 to-cyan-500'
     },
     { 
       name: 'AI Business Intelligence', 
@@ -70,7 +86,7 @@ export function AppHeader() {
     },
     { 
       name: 'AI Healthcare Platform', 
-      href: '/services/ai-healthcare-platform', 
+      href: '/services/ai-healthcare-analytics', 
       icon: Heart, 
       description: 'Medical AI & Diagnostics',
       featured: true,
@@ -86,7 +102,7 @@ export function AppHeader() {
     },
     { 
       name: 'AI Cybersecurity', 
-      href: '/services/ai-cybersecurity', 
+      href: '/services/ai-cybersecurity-threat-detection', 
       icon: Shield, 
       description: 'AI-Powered Security',
       featured: true,
@@ -149,28 +165,44 @@ export function AppHeader() {
       color: 'from-green-500 to-emerald-500'
     },
     { 
-      name: 'AI Business Intelligence', 
-      href: '/services/ai-business-intelligence', 
-      icon: Brain, 
-      description: 'Machine Learning & Data Science',
+      name: 'AI Legal Document Analysis', 
+      href: '/services/ai-legal-document-analysis', 
+      icon: FileText, 
+      description: 'Legal AI & Compliance',
       featured: false,
-      color: 'from-purple-500 to-cyan-500'
+      color: 'from-blue-500 to-indigo-500'
     },
     { 
-      name: 'Cloud DevOps', 
-      href: '/services/cloud-devops', 
-      icon: Cloud, 
-      description: 'DevOps & Infrastructure',
+      name: 'AI Supply Chain Optimization', 
+      href: '/services/ai-supply-chain-optimization', 
+      icon: Truck, 
+      description: 'Supply Chain AI',
       featured: false,
-      color: 'from-blue-500 to-cyan-500'
+      color: 'from-green-500 to-blue-500'
     },
     { 
-      name: 'Digital Twin Platform', 
-      href: '/services/digital-twin', 
-      icon: Globe, 
-      description: 'Virtual Replicas & Simulation',
+      name: 'AI Financial Trading', 
+      href: '/services/ai-financial-trading-platform', 
+      icon: DollarSign, 
+      description: 'Financial AI Platform',
       featured: false,
-      color: 'from-green-500 to-emerald-500'
+      color: 'from-yellow-500 to-orange-500'
+    },
+    { 
+      name: 'Data Analytics', 
+      href: '/services/data-analytics', 
+      icon: BarChart3, 
+      description: 'Advanced Analytics',
+      featured: false,
+      color: 'from-purple-500 to-pink-500'
+    },
+    { 
+      name: 'IT Infrastructure', 
+      href: '/services/it-infrastructure', 
+      icon: Server, 
+      description: 'Infrastructure Solutions',
+      featured: false,
+      color: 'from-gray-500 to-blue-500'
     }
   ];
 
@@ -200,22 +232,36 @@ export function AppHeader() {
       name: 'Government Solutions',
       href: '/solutions',
       icon: Shield,
-      description: 'Public sector innovation',
+      description: 'Public sector digital transformation',
       featured: false
     },
     {
       name: 'Healthcare Solutions',
       href: '/solutions',
       icon: Heart,
-      description: 'Digital health transformation',
-      featured: true
+      description: 'Healthcare technology innovation',
+      featured: false
     },
     {
       name: 'Financial Solutions',
       href: '/solutions',
-      icon: TrendingUp,
-      description: 'Fintech innovation & compliance',
-      featured: true
+      icon: DollarSign,
+      description: 'FinTech and banking solutions',
+      featured: false
+    },
+    {
+      name: 'Manufacturing Solutions',
+      href: '/solutions',
+      icon: Factory,
+      description: 'Industry 4.0 and smart manufacturing',
+      featured: false
+    },
+    {
+      name: 'Retail Solutions',
+      href: '/solutions',
+      icon: ShoppingCart,
+      description: 'E-commerce and retail technology',
+      featured: false
     }
   ];
 
@@ -224,13 +270,13 @@ export function AppHeader() {
       name: 'Blog & Insights',
       href: '/blog',
       icon: BookOpen,
-      description: 'Latest industry trends and insights',
+      description: 'Latest industry insights and trends',
       featured: true
     },
     {
       name: 'Case Studies',
       href: '/case-studies',
-      icon: Target,
+      icon: FileText,
       description: 'Real-world success stories',
       featured: true
     },
@@ -239,35 +285,42 @@ export function AppHeader() {
       href: '/white-papers',
       icon: FileText,
       description: 'In-depth research and analysis',
-      featured: true
+      featured: false
     },
     {
       name: 'Webinars',
       href: '/webinars',
-      icon: Users,
-      description: 'Expert-led learning sessions',
-      featured: true
+      icon: Video,
+      description: 'Expert-led educational sessions',
+      featured: false
     },
     {
       name: 'Documentation',
       href: '/docs',
+      icon: BookOpen,
+      description: 'Technical guides and API docs',
+      featured: false
+    },
+    {
+      name: 'Training',
+      href: '/training',
+      icon: GraduationCap,
+      description: 'Professional development courses',
+      featured: false
+    },
+    {
+      name: 'Community',
+      href: '/community',
+      icon: Users,
+      description: 'Connect with peers and experts',
+      featured: false
+    },
+    {
+      name: 'Developer Hub',
+      href: '/developers',
       icon: Code,
-      description: 'Technical guides and APIs',
-      featured: true
-    },
-    {
-      name: 'FAQ & Support',
-      href: '/faq',
-      icon: HelpCircle,
-      description: 'Get help and answers',
-      featured: true
-    },
-    {
-      name: 'Pricing Guide 2025',
-      href: '/pricing-guide-2025',
-      icon: DollarSign,
-      description: 'Complete pricing information',
-      featured: true
+      description: 'Tools and resources for developers',
+      featured: false
     }
   ];
 

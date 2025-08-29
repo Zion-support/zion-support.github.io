@@ -2,28 +2,13 @@ import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { SEO } from '../components/SEO';
 import { innovativeMicroSaasServices2026 } from '../data/innovativeMicroSaasServices2026';
-import { innovativeAIServices2026 } from '../data/innovativeAIServices2026';
-import { innovativeITInfrastructure2026 } from '../data/innovativeITInfrastructure2026';
 
-const ComprehensiveServicesShowcase2026: React.FC = () => {
-  const [activeTab, setActiveTab] = useState<'microsaas' | 'ai' | 'infrastructure'>('microsaas');
+const InnovativeMicroSaasServices2026: React.FC = () => {
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('all');
 
   const getFilteredServices = () => {
-    let services: any[] = [];
-    
-    switch (activeTab) {
-      case 'microsaas':
-        services = innovativeMicroSaasServices2026;
-        break;
-      case 'ai':
-        services = innovativeAIServices2026;
-        break;
-      case 'infrastructure':
-        services = innovativeITInfrastructure2026;
-        break;
-    }
+    let services = innovativeMicroSaasServices2026;
 
     // Filter by search query
     if (searchQuery) {
@@ -43,21 +28,7 @@ const ComprehensiveServicesShowcase2026: React.FC = () => {
   };
 
   const getCategories = () => {
-    let services: any[] = [];
-    
-    switch (activeTab) {
-      case 'microsaas':
-        services = innovativeMicroSaasServices2026;
-        break;
-      case 'ai':
-        services = innovativeAIServices2026;
-        break;
-      case 'infrastructure':
-        services = innovativeITInfrastructure2026;
-        break;
-    }
-
-    const categories = [...new Set(services.map(service => service.category))];
+    const categories = [...new Set(innovativeMicroSaasServices2026.map(service => service.category))];
     return categories;
   };
 
@@ -72,7 +43,7 @@ const ComprehensiveServicesShowcase2026: React.FC = () => {
       <div className="p-6">
         <div className="text-center mb-6">
           <h3 className="text-xl font-bold text-gray-900 mb-2">{service.name}</h3>
-          <span className="px-3 py-1 text-sm font-semibold text-white bg-gradient-to-r from-blue-600 to-purple-600 rounded-full">
+          <span className="px-3 py-1 text-sm font-semibold text-white bg-gradient-to-r from-purple-600 to-pink-600 rounded-full">
             {service.pricing}
           </span>
         </div>
@@ -99,7 +70,7 @@ const ComprehensiveServicesShowcase2026: React.FC = () => {
           <div className="grid grid-cols-1 gap-1">
             {service.features.slice(0, 4).map((feature: string, index: number) => (
               <div key={index} className="flex items-center text-sm text-gray-600">
-                <span className="w-2 h-2 bg-blue-500 rounded-full mr-2"></span>
+                <span className="w-2 h-2 bg-purple-500 rounded-full mr-2"></span>
                 {feature}
               </div>
             ))}
@@ -148,7 +119,7 @@ const ComprehensiveServicesShowcase2026: React.FC = () => {
           <h4 className="font-semibold text-gray-900 mb-2">Technologies:</h4>
           <div className="flex flex-wrap gap-1">
             {service.technologies.slice(0, 4).map((tech: string, index: number) => (
-              <span key={index} className="px-2 py-1 text-xs bg-blue-100 text-blue-600 rounded">
+              <span key={index} className="px-2 py-1 text-xs bg-purple-100 text-purple-600 rounded">
                 {tech}
               </span>
             ))}
@@ -188,11 +159,11 @@ const ComprehensiveServicesShowcase2026: React.FC = () => {
   );
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-50 to-blue-50">
+    <div className="min-h-screen bg-gradient-to-br from-purple-50 to-pink-50">
       <SEO 
-        title="Comprehensive Services Showcase 2026 - Zion Tech Group"
-        description="Explore our comprehensive portfolio of innovative AI, Micro SaaS, and IT Infrastructure services for 2026. Cutting-edge solutions with transparent pricing and proven ROI."
-        keywords="AI services 2026, Micro SaaS 2026, IT infrastructure 2026, Zion Tech Group, innovative technology solutions"
+        title="Innovative Micro SAAS Services 2026 - Zion Tech Group"
+        description="Discover our cutting-edge Micro SaaS solutions for 2026. AI-powered platforms that drive business growth with transparent pricing and proven ROI."
+        keywords="Micro SaaS 2026, AI platforms, business automation, Zion Tech Group, innovative solutions"
       />
       
       <div className="container mx-auto px-4 py-12">
@@ -204,11 +175,11 @@ const ComprehensiveServicesShowcase2026: React.FC = () => {
           className="text-center mb-12"
         >
           <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-            Comprehensive Services Showcase 2026
+            Innovative Micro SAAS Services 2026
           </h1>
           <p className="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
-            Discover our cutting-edge portfolio of AI-powered solutions, innovative Micro SaaS platforms, and modern IT infrastructure services. 
-            All designed to drive digital transformation and deliver measurable business value in 2026 and beyond.
+            Transform your business with our cutting-edge Micro SaaS platforms. From AI-powered automation to intelligent business solutions, 
+            we deliver innovative tools that drive growth, efficiency, and competitive advantage.
           </p>
         </motion.div>
 
@@ -220,20 +191,20 @@ const ComprehensiveServicesShowcase2026: React.FC = () => {
           className="grid grid-cols-1 md:grid-cols-4 gap-6 mb-12"
         >
           <div className="bg-white rounded-lg p-6 text-center shadow-lg">
-            <div className="text-3xl font-bold text-blue-600 mb-2">30+</div>
-            <div className="text-gray-600">Innovative Services</div>
+            <div className="text-3xl font-bold text-purple-600 mb-2">10</div>
+            <div className="text-gray-600">Micro SaaS Solutions</div>
           </div>
           <div className="bg-white rounded-lg p-6 text-center shadow-lg">
-            <div className="text-3xl font-bold text-green-600 mb-2">$500B+</div>
+            <div className="text-3xl font-bold text-pink-600 mb-2">$200B+</div>
             <div className="text-gray-600">Total Market Size</div>
           </div>
           <div className="bg-white rounded-lg p-6 text-center shadow-lg">
-            <div className="text-3xl font-bold text-purple-600 mb-2">400%</div>
+            <div className="text-3xl font-bold text-green-600 mb-2">400%</div>
             <div className="text-gray-600">Average ROI</div>
           </div>
           <div className="bg-white rounded-lg p-6 text-center shadow-lg">
-            <div className="text-3xl font-bold text-orange-600 mb-2">24/7</div>
-            <div className="text-gray-600">Support Available</div>
+            <div className="text-3xl font-bold text-blue-600 mb-2">2-8</div>
+            <div className="text-gray-600">Weeks Setup</div>
           </div>
         </motion.div>
 
@@ -248,17 +219,17 @@ const ComprehensiveServicesShowcase2026: React.FC = () => {
             <div className="flex-1">
               <input
                 type="text"
-                placeholder="Search services..."
+                placeholder="Search Micro SaaS services..."
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
-                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent"
               />
             </div>
             <div className="flex gap-2">
               <select
                 value={selectedCategory}
                 onChange={(e) => setSelectedCategory(e.target.value)}
-                className="px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                className="px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent"
               >
                 <option value="all">All Categories</option>
                 {getCategories().map((category) => (
@@ -269,50 +240,11 @@ const ComprehensiveServicesShowcase2026: React.FC = () => {
           </div>
         </motion.div>
 
-        {/* Tab Navigation */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.6 }}
-          className="flex flex-wrap justify-center mb-8"
-        >
-          <button
-            onClick={() => setActiveTab('microsaas')}
-            className={`px-6 py-3 rounded-lg font-semibold transition-all duration-300 mx-2 mb-2 ${
-              activeTab === 'microsaas'
-                ? 'bg-gradient-to-r from-purple-600 to-pink-600 text-white shadow-lg'
-                : 'bg-white text-gray-700 hover:bg-gray-50 shadow-md'
-            }`}
-          >
-            Micro SaaS Services (10)
-          </button>
-          <button
-            onClick={() => setActiveTab('ai')}
-            className={`px-6 py-3 rounded-lg font-semibold transition-all duration-300 mx-2 mb-2 ${
-              activeTab === 'ai'
-                ? 'bg-gradient-to-r from-indigo-600 to-purple-600 text-white shadow-lg'
-                : 'bg-white text-gray-700 hover:bg-gray-50 shadow-md'
-            }`}
-          >
-            AI Services (10)
-          </button>
-          <button
-            onClick={() => setActiveTab('infrastructure')}
-            className={`px-6 py-3 rounded-lg font-semibold transition-all duration-300 mx-2 mb-2 ${
-              activeTab === 'infrastructure'
-                ? 'bg-gradient-to-r from-blue-600 to-cyan-600 text-white shadow-lg'
-                : 'bg-white text-gray-700 hover:bg-gray-50 shadow-md'
-            }`}
-          >
-            IT Infrastructure (10)
-          </button>
-        </motion.div>
-
         {/* Services Grid */}
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          transition={{ duration: 0.6, delay: 0.8 }}
+          transition={{ duration: 0.6, delay: 0.6 }}
           className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8"
         >
           {getFilteredServices().map((service) => renderServiceCard(service))}
@@ -322,23 +254,23 @@ const ComprehensiveServicesShowcase2026: React.FC = () => {
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 1.0 }}
-          className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-xl p-8 text-center text-white mt-12"
+          transition={{ duration: 0.6, delay: 0.8 }}
+          className="bg-gradient-to-r from-purple-600 to-pink-600 rounded-xl p-8 text-center text-white mt-12"
         >
-          <h2 className="text-3xl font-bold mb-4">Ready to Transform Your Business?</h2>
+          <h2 className="text-3xl font-bold mb-4">Ready to Scale Your Business?</h2>
           <p className="text-xl mb-6 opacity-90">
-            Contact Zion Tech Group today to discuss how our innovative services can drive your digital transformation journey.
+            Contact Zion Tech Group today to discuss how our Micro SaaS solutions can accelerate your growth and digital transformation.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
               href="/contact"
-              className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors duration-300"
+              className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors duration-300"
             >
               Get Started
             </a>
             <a
               href="/comprehensive-pricing-guide-2026"
-              className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors duration-300"
+              className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-colors duration-300"
             >
               View Pricing
             </a>
@@ -349,4 +281,4 @@ const ComprehensiveServicesShowcase2026: React.FC = () => {
   );
 };
 
-export default ComprehensiveServicesShowcase2026;
+export default InnovativeMicroSaasServices2026;
