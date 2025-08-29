@@ -62,6 +62,44 @@ export function AppHeader() {
     { name: 'FinOps Advisor', href: '/services/finops-advisor', icon: DollarSign, description: 'Cloud cost optimization' },
   ];
 
+  const servicesCategories = [
+    {
+      name: 'AI & Analytics',
+      icon: Brain,
+      color: 'from-cyan-500 to-blue-600',
+      description: 'Intelligent data solutions',
+      services: services.filter(s => s.name.includes('AI') || s.name.includes('Analytics'))
+    },
+    {
+      name: 'Cloud & Infrastructure',
+      icon: Cloud,
+      color: 'from-blue-500 to-purple-600',
+      description: 'Scalable cloud solutions',
+      services: services.filter(s => s.name.includes('Cloud') || s.name.includes('DevOps') || s.name.includes('Infrastructure'))
+    },
+    {
+      name: 'Cybersecurity',
+      icon: Shield,
+      color: 'from-red-500 to-orange-600',
+      description: 'Advanced security solutions',
+      services: services.filter(s => s.name.includes('Security') || s.name.includes('Compliance'))
+    },
+    {
+      name: 'Emerging Tech',
+      icon: Rocket,
+      color: 'from-green-500 to-teal-600',
+      description: 'Cutting-edge innovations',
+      services: services.filter(s => s.name.includes('Quantum') || s.name.includes('Blockchain') || s.name.includes('IoT'))
+    },
+    {
+      name: 'Business Solutions',
+      icon: ShoppingCart,
+      color: 'from-purple-500 to-pink-600',
+      description: 'Enterprise-grade tools',
+      services: services.filter(s => s.name.includes('SaaS') || s.name.includes('Business') || s.name.includes('Content'))
+    }
+  ];
+
   const quickLinks = [
     { name: 'Innovative Services 2025', href: '/innovative-services-showcase-2025', icon: Star, description: 'Latest cutting-edge solutions' },
     { name: 'Services Showcase', href: '/revolutionary-services-showcase-2030', icon: TrendingUp, description: 'Future-ready services' },

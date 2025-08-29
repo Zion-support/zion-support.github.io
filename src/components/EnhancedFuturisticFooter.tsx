@@ -75,7 +75,9 @@ export const EnhancedFuturisticFooter: React.FC = () => {
         { name: 'AI Compliance Assistant', href: '/services/ai-compliance-assistant' },
         { name: 'AI Auto Email Responder', href: '/services/ai-auto-email-responder' },
         { name: 'LLM Content Studio', href: '/services/llm-content-studio' },
-        { name: 'AI Compliance Copilot', href: '/services/ai-compliance-copilot' }
+        { name: 'AI Compliance Copilot', href: '/services/ai-compliance-copilot' },
+        { name: 'AI Cybersecurity Suite', href: '/services/ai-cybersecurity-suite' },
+        { name: 'AI Healthcare Analytics', href: '/services/ai-healthcare-analytics' }
       ]
     },
     {
@@ -84,37 +86,37 @@ export const EnhancedFuturisticFooter: React.FC = () => {
       color: 'from-blue-600 to-cyan-600',
       links: [
         { name: 'Micro SaaS Solutions', href: '/services/micro-saas-solutions' },
-        { name: 'AI Business Intelligence', href: '/services/ai-business-intelligence' },
-        { name: 'Customer Feedback Surveys', href: '/services/mobile-feedback-surveys' },
+        { name: 'Cloud DevOps', href: '/services/cloud-devops' },
         { name: 'Cloud FinOps Optimizer', href: '/services/cloud-finops-optimizer' },
         { name: 'FinOps Advisor', href: '/services/finops-advisor' },
-        { name: 'Digital Transformation', href: '/services/digital-transformation' }
-      ]
-    },
-    {
-      title: 'IoT & Digital Twin',
-      icon: Rocket,
-      color: 'from-green-600 to-emerald-600',
-      links: [
         { name: 'IT Infrastructure', href: '/services/it-infrastructure' },
-        { name: 'Digital Transformation', href: '/services/digital-transformation' },
-        { name: 'IT Consulting', href: '/services/it-consulting' },
-        { name: 'Onsite Support', href: '/services/onsite-support' },
-        { name: 'Green IT Solutions', href: '/services/green-it' },
-        { name: 'IoT Edge Computing', href: '/services/iot-edge' }
+        { name: 'Digital Twin', href: '/services/digital-twin' }
       ]
     },
     {
       title: 'Quantum & Emerging Tech',
-      icon: Crown,
+      icon: Rocket,
       color: 'from-indigo-600 to-purple-600',
       links: [
         { name: 'Quantum Computing', href: '/services/quantum-computing' },
+        { name: 'Quantum AI Platform', href: '/services/quantum-ai-platform' },
         { name: 'Blockchain Solutions', href: '/services/blockchain-enterprise-solutions' },
         { name: 'Space Technology', href: '/services/space-tech' },
         { name: 'Sustainability', href: '/services/sustainability' },
-        { name: 'Digital Twin', href: '/services/digital-twin' },
-        { name: 'Cloud DevOps', href: '/services/cloud-devops' }
+        { name: 'Green IT Solutions', href: '/services/green-it' }
+      ]
+    },
+    {
+      title: 'IoT & Edge Computing',
+      icon: Crown,
+      color: 'from-green-600 to-emerald-600',
+      links: [
+        { name: 'IoT Edge Computing', href: '/services/iot-edge' },
+        { name: 'Customer Feedback Surveys', href: '/services/mobile-feedback-surveys' },
+        { name: 'Data Analytics', href: '/services/data-analytics' },
+        { name: 'IT Consulting', href: '/services/it-consulting' },
+        { name: 'Onsite Support', href: '/services/onsite-support' },
+        { name: 'Digital Transformation', href: '/services/digital-transformation' }
       ]
     }
   ];
