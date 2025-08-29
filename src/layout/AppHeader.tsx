@@ -131,6 +131,14 @@ export function AppHeader() {
       description: 'Future Technology Solutions',
       featured: true,
       color: 'from-indigo-500 to-purple-500'
+    },
+    { 
+      name: 'Comprehensive Services 2030', 
+      href: '/services/comprehensive-advertising', 
+      icon: Star, 
+      description: 'Complete AI & IT Services Portfolio',
+      featured: true,
+      color: 'from-green-500 to-blue-500'
     }
   ];
 
