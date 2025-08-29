@@ -33,6 +33,7 @@ import {
   Lightbulb,
   Sparkles
 } from 'lucide-react';
+<<<<<<< HEAD
 import { SEO } from '../components/SEO';
 import { INNOVATIVE_MICRO_SAAS_SERVICES_2025 } from '../data/innovativeMicroSaasServices2025';
 
@@ -101,6 +102,53 @@ export default function InnovativeServicesShowcase2025() {
   const [selectedCategory, setSelectedCategory] = useState<string>('all');
   const [priceRange, setPriceRange] = useState<string>('all');
   const [sortBy, setSortBy] = useState<string>('name');
+=======
+import { additionalInnovativeMicroSaasServices } from '../data/innovativeMicroSaasServices2025';
+
+export default function InnovativeServicesShowcase2025() {
+  const featuredServices = [
+    {
+      title: 'AI Project Management Platform',
+      description: 'Revolutionize project delivery with AI-powered task prioritization, predictive analytics, and intelligent team collaboration.',
+      icon: Target,
+      href: '/services/ai-project-management-platform',
+      color: 'from-purple-600 to-pink-600',
+      features: ['AI-Powered Task Prioritization', 'Smart Team Collaboration', 'Predictive Timeline Management', 'Performance Analytics'],
+      price: 'From $299/month',
+      category: 'Project Management'
+    },
+    {
+      title: 'AI Cybersecurity Threat Detection',
+      description: 'Advanced AI-powered cybersecurity platform with 99.9% threat detection rate and real-time automated response.',
+      icon: Shield,
+      href: '/services/ai-cybersecurity-threat-detection',
+      color: 'from-red-600 to-orange-600',
+      features: ['Real-time Threat Detection', 'Automated Response', 'Advanced Analytics', 'Compliance Reporting'],
+      price: 'From $399/month',
+      category: 'Cybersecurity'
+    },
+    {
+      title: 'AI Financial Trading Platform',
+      description: 'Revolutionary AI-powered trading platform delivering 25% higher returns through intelligent market analysis and automation.',
+      icon: TrendingUp,
+      href: '/services/ai-financial-trading-platform',
+      color: 'from-green-600 to-blue-600',
+      features: ['AI-Powered Market Analysis', 'Automated Trading Strategies', 'Real-Time Portfolio Optimization', 'Risk Management'],
+      price: 'From $199/month',
+      category: 'Financial Services'
+    },
+    {
+      title: 'AI Healthcare Analytics Platform',
+      description: 'Transform healthcare delivery with AI-powered diagnosis support, predictive analytics, and patient monitoring.',
+      icon: Heart,
+      href: '/services/ai-healthcare-analytics-platform',
+      color: 'from-blue-600 to-cyan-600',
+      features: ['AI-Powered Diagnosis Support', 'Predictive Health Analytics', 'Patient Outcome Prediction', 'Real-Time Monitoring'],
+      price: 'From $799/month',
+      category: 'Healthcare'
+    }
+  ];
+>>>>>>> cursor/analyze-improve-and-deploy-application-f14e
 
   const categories = useMemo(() => {
     const cats = [...new Set(INNOVATIVE_MICRO_SAAS_SERVICES_2025.map(service => service.category))];

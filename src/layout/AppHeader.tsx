@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 import { ArrowRight, Atom, BookOpen, Brain, Building, Building2, ChevronDown, Cloud, Code, Cpu, DollarSign, FileText, Globe, HeartHandshake, Heart, HelpCircle, Leaf, Lock, Mail, MapPin, Menu, MessageCircle, PenTool, Phone, Rocket, Scale, Search, Settings, Shield, ShoppingCart, Star, Target, TrendingUp, Users, X, Zap, Truck, Play } from 'lucide-react';
+=======
+import { ArrowRight, Atom, BookOpen, Brain, Building, Building2, ChevronDown, Cloud, Code, Cpu, DollarSign, FileText, Globe, HeartHandshake, Heart, HelpCircle, Leaf, Lock, Mail, MapPin, Menu, MessageCircle, PenTool, Phone, Rocket, Scale, Search, Settings, Shield, ShoppingCart, Star, Target, TrendingUp, Users, X, Zap, User, Bell, Award, GraduationCap, LifeBuoy } from 'lucide-react';
+>>>>>>> cursor/analyze-improve-and-deploy-application-f14e
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { ThemeToggle } from '../components/ThemeToggle';
@@ -44,6 +48,7 @@ export function AppHeader() {
   ];
 
   const services = [
+<<<<<<< HEAD
     { name: 'AI Enterprise Orchestrator', href: '/services/ai-enterprise-orchestrator', icon: Brain, description: 'Multi-agent AI coordination & workflow automation' },
     { name: 'AI & Analytics', href: '/services/ai-business-intelligence', icon: Brain, description: 'Machine Learning & Data Science' },
     { name: 'AI Cybersecurity Suite', href: '/services/ai-cybersecurity-suite', icon: Shield, description: 'AI-Powered Threat Detection & Response' },
@@ -112,6 +117,16 @@ export function AppHeader() {
         { name: 'AI Healthcare Analytics Platform', href: '/services/ai-healthcare-analytics-platform', description: 'Healthcare analytics platform' }
       ]
 =======
+=======
+    { 
+      name: 'Comprehensive Services 2026', 
+      href: '/comprehensive-services-showcase-2026', 
+      icon: Rocket, 
+      description: 'All Services & Pricing',
+      featured: true,
+      color: 'from-cyan-500 to-blue-500'
+    },
+>>>>>>> cursor/analyze-improve-and-deploy-application-f14e
     { 
       name: 'Innovative Micro SAAS 2025', 
       href: '/innovative-micro-saas-services-2025', 
@@ -129,12 +144,18 @@ export function AppHeader() {
       color: 'from-purple-500 to-cyan-500'
     },
     { 
+<<<<<<< HEAD
       name: 'AI Healthcare Analytics', 
       href: '/services/ai-healthcare-analytics', 
+=======
+      name: 'AI Healthcare Platform', 
+      href: '/services/ai-healthcare-platform', 
+>>>>>>> cursor/analyze-improve-and-deploy-application-f14e
       icon: Heart, 
       description: 'Medical AI & Diagnostics',
       featured: true,
       color: 'from-red-500 to-pink-500'
+<<<<<<< HEAD
     },
     { 
       name: 'AI Content Creation', 
@@ -163,6 +184,16 @@ export function AppHeader() {
         { name: 'AI Healthcare Analytics', href: '/services/ai-healthcare-analytics', description: 'Predictive Diagnostics & Care' },
         { name: 'Edge Computing Platform', href: '/services/edge-computing-platform', description: 'Distributed computing at the edge' }
       ]
+=======
+    },
+    { 
+      name: 'AI Content Creation', 
+      href: '/services/ai-content-creation', 
+      icon: PenTool, 
+      description: 'Content Generation & Optimization',
+      featured: true,
+      color: 'from-blue-500 to-indigo-500'
+>>>>>>> cursor/analyze-improve-and-deploy-application-f14e
     },
     { 
       name: 'AI Cybersecurity', 
@@ -173,6 +204,7 @@ export function AppHeader() {
       color: 'from-green-500 to-blue-500'
     },
     { 
+<<<<<<< HEAD
       name: 'AI Financial Trading', 
       href: '/services/ai-financial-trading', 
       icon: TrendingUp, 
@@ -195,6 +227,22 @@ export function AppHeader() {
       description: 'Legal AI & Document Processing',
       featured: true,
       color: 'from-blue-500 to-purple-500'
+=======
+      name: 'Quantum Computing', 
+      href: '/services/quantum-computing', 
+      icon: Atom, 
+      description: 'Quantum AI & Optimization',
+      featured: true,
+      color: 'from-purple-500 to-pink-500'
+    },
+    { 
+      name: 'IoT Edge Computing', 
+      href: '/services/iot-edge-computing', 
+      icon: Cpu, 
+      description: 'IoT & Real-time Processing',
+      featured: true,
+      color: 'from-blue-500 to-cyan-500'
+>>>>>>> cursor/analyze-improve-and-deploy-application-f14e
     },
     { 
       name: 'Digital Twin Platform', 
@@ -227,6 +275,41 @@ export function AppHeader() {
       description: 'Future Technology Solutions',
       featured: true,
       color: 'from-indigo-500 to-purple-500'
+<<<<<<< HEAD
+=======
+    },
+    { 
+      name: 'Pricing Guide 2026', 
+      href: '/comprehensive-pricing-guide-2026', 
+      icon: DollarSign, 
+      description: 'Complete Pricing & ROI Analysis',
+      featured: true,
+      color: 'from-green-500 to-emerald-500'
+    },
+    { 
+      name: 'AI Business Intelligence', 
+      href: '/services/ai-business-intelligence', 
+      icon: Brain, 
+      description: 'Machine Learning & Data Science',
+      featured: false,
+      color: 'from-purple-500 to-cyan-500'
+    },
+    { 
+      name: 'Cloud DevOps', 
+      href: '/services/cloud-devops', 
+      icon: Cloud, 
+      description: 'DevOps & Infrastructure',
+      featured: false,
+      color: 'from-blue-500 to-cyan-500'
+    },
+    { 
+      name: 'Digital Twin Platform', 
+      href: '/services/digital-twin', 
+      icon: Globe, 
+      description: 'Virtual Replicas & Simulation',
+      featured: false,
+      color: 'from-green-500 to-emerald-500'
+>>>>>>> cursor/analyze-improve-and-deploy-application-f14e
     }
   ];
 
@@ -239,6 +322,7 @@ export function AppHeader() {
       featured: true
     },
     {
+<<<<<<< HEAD
       name: 'Healthcare Solutions',
       href: '/solutions#healthcare',
       icon: Heart,
@@ -272,6 +356,41 @@ export function AppHeader() {
       icon: Code,
       description: 'Innovation & R&D support',
       featured: false
+=======
+      name: 'SMB Solutions',
+      href: '/solutions',
+      icon: Building,
+      description: 'Small to medium business growth',
+      featured: false
+    },
+    {
+      name: 'Startup Solutions',
+      href: '/solutions',
+      icon: Rocket,
+      description: 'Accelerate your startup growth',
+      featured: false
+    },
+    {
+      name: 'Government Solutions',
+      href: '/solutions',
+      icon: Shield,
+      description: 'Public sector innovation',
+      featured: false
+    },
+    {
+      name: 'Healthcare Solutions',
+      href: '/solutions',
+      icon: Heart,
+      description: 'Digital health transformation',
+      featured: true
+    },
+    {
+      name: 'Financial Solutions',
+      href: '/solutions',
+      icon: TrendingUp,
+      description: 'Fintech innovation & compliance',
+      featured: true
+>>>>>>> cursor/analyze-improve-and-deploy-application-f14e
     }
   ];
 
@@ -324,6 +443,7 @@ export function AppHeader() {
       icon: DollarSign,
       description: 'Complete pricing information',
       featured: true
+<<<<<<< HEAD
     },
     {
       name: 'Training & Certification',
@@ -331,10 +451,13 @@ export function AppHeader() {
       icon: BookOpen,
       description: 'Professional development',
       featured: false
+=======
+>>>>>>> cursor/analyze-improve-and-deploy-application-f14e
     }
   ];
 
   const quickLinks = [
+<<<<<<< HEAD
     { name: 'Marketplace', href: '/marketplace', icon: ShoppingCart },
     { name: 'Request Quote', href: '/request-quote', icon: MessageCircle },
     { name: 'Pricing', href: '/pricing', icon: DollarSign },
@@ -344,6 +467,30 @@ export function AppHeader() {
     { name: 'Privacy', href: '/privacy', icon: Shield },
     { name: 'Terms', href: '/terms', icon: BookOpen },
   ];
+
+  const contactInfo = {
+    phone: '+1 302 464 0950',
+    email: 'kleber@ziontechgroup.com',
+    address: '364 E Main St STE 1008 Middletown DE 19709'
+  };
+=======
+    { name: 'Innovative Services 2025', href: '/innovative-services-showcase-2025', icon: Star, description: 'Latest cutting-edge solutions' },
+    { name: 'Revolutionary Services 2030', href: '/revolutionary-services-showcase-2030', icon: TrendingUp, description: 'Future-ready services' },
+    { name: 'Emerging Tech 2030', href: '/emerging-tech-2030', icon: Rocket, description: 'Next-generation technologies' },
+    { name: 'Pricing Guide 2030', href: '/pricing-2030', icon: DollarSign, description: 'Advanced pricing strategies' },
+    { name: 'Request Quote', href: '/request-quote', icon: MessageCircle, description: 'Get custom pricing' },
+  ];
+
+  const supportLinks = [
+    { name: 'FAQ', href: '/faq', icon: HelpCircle },
+    { name: 'Blog', href: '/blog', icon: BookOpen },
+    { name: 'Help', href: '/help', icon: MessageCircle },
+    { name: 'Partners', href: '/partners', icon: Users },
+    { name: 'Documentation', href: '/docs', icon: BookOpen },
+    { name: 'Training', href: '/training', icon: GraduationCap },
+    { name: 'Support', href: '/support', icon: LifeBuoy },
+  ];
+>>>>>>> cursor/analyze-improve-and-deploy-application-f14e
 
   const contactInfo = {
     phone: '+1 302 464 0950',

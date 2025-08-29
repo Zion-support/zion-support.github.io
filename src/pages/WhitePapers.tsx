@@ -77,9 +77,15 @@ import {
   TrendingUp as TrendingUpIcon
 } from 'lucide-react';
 
+<<<<<<< HEAD
 export const WhitePapers: React.FC = () => {
   const [selectedCategory, setSelectedCategory] = useState('All');
   const [selectedIndustry, setSelectedIndustry] = useState('All');
+=======
+const WhitePapers: React.FC = () => {
+  const [selectedCategory, setSelectedCategory] = useState('all');
+  const [selectedYear, setSelectedYear] = useState('all');
+>>>>>>> cursor/analyze-improve-and-deploy-application-f14e
   const [searchQuery, setSearchQuery] = useState('');
 
   const categories = ['All', 'AI & Machine Learning', 'Cloud & DevOps', 'Cybersecurity', 'Digital Transformation', 'IoT & Edge', 'Blockchain', 'Healthcare Tech', 'Sustainability'];
@@ -161,16 +167,24 @@ export const WhitePapers: React.FC = () => {
       industry: 'Technology',
       summary: 'A comprehensive guide to implementing FinOps practices in cloud environments, optimizing costs while maintaining performance and scalability.',
       keyInsights: [
+<<<<<<< HEAD
         'FinOps framework implementation',
         'Cost optimization strategies',
         'Performance monitoring and alerting',
         'Team collaboration and governance models'
+=======
+        'Cloud-native reduces infrastructure costs by 40-60%',
+        'Auto-scaling improves performance during peak loads',
+        'Microservices architecture enhances maintainability',
+        'DevOps integration strategies and tools'
+>>>>>>> cursor/analyze-improve-and-deploy-application-f14e
       ],
       downloads: 734,
       views: 2987,
       featured: false,
       fileSize: '2.9 MB',
       pages: 41,
+<<<<<<< HEAD
       downloadUrl: '/white-papers/cloud-finops-optimization.pdf',
       image: '/images/white-papers/cloud-finops.jpg'
     },
@@ -261,6 +275,10 @@ export const WhitePapers: React.FC = () => {
       pages: 42,
       downloadUrl: '/white-papers/ai-human-collaboration.pdf',
       image: '/images/white-papers/ai-collaboration.jpg'
+=======
+      downloadUrl: '/downloads/cloud-native-architecture-whitepaper.pdf',
+      tags: ['Cloud Native', 'Microservices', 'DevOps', 'Scalability']
+>>>>>>> cursor/analyze-improve-and-deploy-application-f14e
     }
   ];
 
@@ -268,12 +286,18 @@ export const WhitePapers: React.FC = () => {
     const matchesCategory = selectedCategory === 'All' || paper.category === selectedCategory;
     const matchesIndustry = selectedIndustry === 'All' || paper.industry === selectedIndustry;
     const matchesSearch = paper.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
+<<<<<<< HEAD
                          paper.author.toLowerCase().includes(searchQuery.toLowerCase()) ||
                          paper.summary.toLowerCase().includes(searchQuery.toLowerCase());
+=======
+                         paper.summary.toLowerCase().includes(searchQuery.toLowerCase()) ||
+                         paper.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()));
+>>>>>>> cursor/analyze-improve-and-deploy-application-f14e
     
     return matchesCategory && matchesIndustry && matchesSearch;
   });
 
+<<<<<<< HEAD
   const featuredWhitePapers = whitePapers.filter(paper => paper.featured);
 
   const stats = [
@@ -282,11 +306,19 @@ export const WhitePapers: React.FC = () => {
     { number: '50K+', label: 'Views', icon: Eye },
     { number: '45+', label: 'Average Pages', icon: BookOpen }
   ];
+=======
+  const handleDownload = (paper: any) => {
+    // Simulate download
+    console.log(`Downloading: ${paper.title}`);
+    // In a real app, this would trigger an actual download
+  };
+>>>>>>> cursor/analyze-improve-and-deploy-application-f14e
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      <SEO 
+      <SEO
         title="White Papers - Zion Tech Group"
+<<<<<<< HEAD
         description="Access our comprehensive collection of white papers, research reports, and industry insights covering AI, cybersecurity, digital transformation, and emerging technologies."
       />
       
@@ -294,9 +326,19 @@ export const WhitePapers: React.FC = () => {
       <section className="relative py-20 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-cyan-400/10 via-blue-500/10 to-purple-600/10"></div>
         <div className="container mx-auto px-4 relative z-10">
+=======
+        description="Access our comprehensive collection of white papers covering AI, cybersecurity, cloud computing, and digital transformation insights."
+        keywords="white papers, research, AI, cybersecurity, cloud computing, digital transformation, Zion Tech Group"
+      />
+      
+      {/* Hero Section */}
+      <section className="pt-32 pb-16 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto text-center">
+>>>>>>> cursor/analyze-improve-and-deploy-application-f14e
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
+<<<<<<< HEAD
             transition={{ duration: 0.8 }}
             className="text-center max-w-4xl mx-auto"
           >
@@ -329,11 +371,39 @@ export const WhitePapers: React.FC = () => {
                   <div className="text-slate-400">{stat.label}</div>
                 </motion.div>
               ))}
+=======
+            transition={{ duration: 0.6 }}
+          >
+            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
+              White
+              <span className="bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent">
+                {' '}Papers
+              </span>
+            </h1>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
+              Access our comprehensive collection of research, insights, and thought leadership 
+              on the latest technology trends and industry developments.
+            </p>
+            <div className="flex flex-wrap justify-center gap-4 text-sm text-gray-400">
+              <div className="flex items-center gap-2">
+                <FileText className="w-4 h-4 text-cyan-400" />
+                <span>In-depth research</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <Download className="w-4 h-4 text-cyan-400" />
+                <span>Free downloads</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <Star className="w-4 h-4 text-cyan-400" />
+                <span>Expert insights</span>
+              </div>
+>>>>>>> cursor/analyze-improve-and-deploy-application-f14e
             </div>
           </motion.div>
         </div>
       </section>
 
+<<<<<<< HEAD
       {/* Filters Section */}
       <section className="py-12 bg-slate-800/30">
         <div className="container mx-auto px-4">
@@ -506,11 +576,60 @@ export const WhitePapers: React.FC = () => {
                   </div>
                 </motion.div>
               ))}
+=======
+      {/* Search and Filters */}
+      <section className="py-8 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <div className="bg-slate-800/50 backdrop-blur-xl rounded-2xl border border-slate-700/50 p-6">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+              {/* Search */}
+              <div className="relative">
+                <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-4 h-4" />
+                <input
+                  type="text"
+                  placeholder="Search white papers..."
+                  value={searchQuery}
+                  onChange={(e) => setSearchQuery(e.target.value)}
+                  className="w-full pl-10 pr-4 py-3 bg-slate-700/50 border border-slate-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
+                />
+              </div>
+
+              {/* Category Filter */}
+              <div>
+                <select
+                  value={selectedCategory}
+                  onChange={(e) => setSelectedCategory(e.target.value)}
+                  className="w-full px-4 py-3 bg-slate-700/50 border border-slate-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
+                >
+                  {categories.map((category) => (
+                    <option key={category.id} value={category.id}>
+                      {category.name}
+                    </option>
+                  ))}
+                </select>
+              </div>
+
+              {/* Year Filter */}
+              <div>
+                <select
+                  value={selectedYear}
+                  onChange={(e) => setSelectedYear(e.target.value)}
+                  className="w-full px-4 py-3 bg-slate-700/50 border border-slate-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
+                >
+                  {years.map((year) => (
+                    <option key={year.id} value={year.id}>
+                      {year.name}
+                    </option>
+                  ))}
+                </select>
+              </div>
+>>>>>>> cursor/analyze-improve-and-deploy-application-f14e
             </div>
           </div>
-        </section>
-      )}
+        </div>
+      </section>
 
+<<<<<<< HEAD
       {/* All White Papers Grid */}
       <section className="py-20">
         <div className="container mx-auto px-4">
@@ -530,11 +649,19 @@ export const WhitePapers: React.FC = () => {
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {filteredWhitePapers.filter(paper => !paper.featured).map((paper, index) => (
+=======
+      {/* White Papers Grid */}
+      <section className="py-16 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+            {filteredWhitePapers.map((paper, index) => (
+>>>>>>> cursor/analyze-improve-and-deploy-application-f14e
               <motion.div
                 key={paper.id}
-                initial={{ opacity: 0, y: 30 }}
+                initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
+<<<<<<< HEAD
                 className="bg-slate-800/50 backdrop-blur-sm rounded-xl border border-slate-700/50 hover:border-cyan-400/30 transition-all duration-300 hover:transform hover:scale-105"
               >
                 <div className="p-6">
@@ -561,6 +688,58 @@ export const WhitePapers: React.FC = () => {
                           day: 'numeric',
                           year: 'numeric'
                         })}
+=======
+                viewport={{ once: true }}
+                className={`bg-slate-800/50 backdrop-blur-xl rounded-2xl border p-6 hover:border-cyan-500/50 transition-all duration-300 ${
+                  paper.featured ? 'ring-2 ring-cyan-400/50' : 'border-slate-700/50'
+                }`}
+              >
+                {paper.featured && (
+                  <div className="flex items-center gap-2 mb-4">
+                    <Star className="w-4 h-4 text-yellow-400 fill-current" />
+                    <span className="text-sm text-yellow-400 font-medium">Featured</span>
+                  </div>
+                )}
+
+                <div className="mb-4">
+                  <div className="flex items-center gap-2 mb-2">
+                    <span className="px-2 py-1 bg-cyan-500/20 text-cyan-400 text-xs rounded-full">
+                      {paper.category.replace('-', ' ').toUpperCase()}
+                    </span>
+                    <span className="text-sm text-gray-400">{paper.date}</span>
+                  </div>
+                  <h3 className="text-xl font-semibold text-white mb-2 line-clamp-2">
+                    {paper.title}
+                  </h3>
+                  <p className="text-gray-300 text-sm mb-4 line-clamp-3">
+                    {paper.summary}
+                  </p>
+                </div>
+
+                <div className="mb-4">
+                  <div className="flex items-center gap-4 text-sm text-gray-400 mb-3">
+                    <div className="flex items-center gap-1">
+                      <User className="w-4 h-4" />
+                      <span>{paper.author}</span>
+                    </div>
+                    <div className="flex items-center gap-1">
+                      <FileText className="w-4 h-4" />
+                      <span>{paper.pages} pages</span>
+                    </div>
+                    <div className="flex items-center gap-1">
+                      <Download className="w-4 h-4" />
+                      <span>{paper.downloads.toLocaleString()}</span>
+                    </div>
+                  </div>
+
+                  <div className="flex flex-wrap gap-2 mb-4">
+                    {paper.tags.slice(0, 3).map((tag, tagIndex) => (
+                      <span
+                        key={tagIndex}
+                        className="px-2 py-1 bg-slate-700/50 text-gray-300 text-xs rounded"
+                      >
+                        {tag}
+>>>>>>> cursor/analyze-improve-and-deploy-application-f14e
                       </span>
                     </div>
                     <div className="flex items-center space-x-1">
@@ -602,10 +781,28 @@ export const WhitePapers: React.FC = () => {
                       <ArrowRight className="w-4 h-4 ml-1" />
                     </a>
                   </div>
+<<<<<<< HEAD
+=======
+                </div>
+
+                <div className="flex items-center justify-between">
+                  <button
+                    onClick={() => handleDownload(paper)}
+                    className="flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white rounded-lg transition-all duration-300 transform hover:scale-105"
+                  >
+                    <Download className="w-4 h-4" />
+                    Download PDF
+                  </button>
+                  <div className="text-right">
+                    <div className="text-sm text-gray-400">File size</div>
+                    <div className="text-white font-medium">{paper.fileSize}</div>
+                  </div>
+>>>>>>> cursor/analyze-improve-and-deploy-application-f14e
                 </div>
               </motion.div>
             ))}
           </div>
+<<<<<<< HEAD
           
           {filteredWhitePapers.length === 0 && (
             <motion.div
@@ -620,16 +817,33 @@ export const WhitePapers: React.FC = () => {
               <h3 className="text-xl font-semibold text-white mb-2">No white papers found</h3>
               <p className="text-slate-400">Try adjusting your filters or search terms</p>
             </motion.div>
+=======
+
+          {filteredWhitePapers.length === 0 && (
+            <div className="text-center py-16">
+              <div className="w-16 h-16 bg-slate-700/50 rounded-full flex items-center justify-center mx-auto mb-4">
+                <Search className="w-8 h-8 text-gray-400" />
+              </div>
+              <h3 className="text-xl font-semibold text-white mb-2">No white papers found</h3>
+              <p className="text-gray-400">Try adjusting your search criteria or filters.</p>
+            </div>
+>>>>>>> cursor/analyze-improve-and-deploy-application-f14e
           )}
         </div>
       </section>
 
       {/* CTA Section */}
+<<<<<<< HEAD
       <section className="py-20 bg-gradient-to-r from-cyan-400/10 via-blue-500/10 to-purple-600/10">
         <div className="container mx-auto px-4 text-center">
+=======
+      <section className="py-16 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-4xl mx-auto text-center">
+>>>>>>> cursor/analyze-improve-and-deploy-application-f14e
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
+<<<<<<< HEAD
             transition={{ duration: 0.8 }}
             className="max-w-3xl mx-auto"
           >
@@ -639,10 +853,22 @@ export const WhitePapers: React.FC = () => {
             <p className="text-xl text-slate-300 mb-8 leading-relaxed">
               Get notified when we publish new white papers and research. Join thousands of technology 
               leaders who rely on Zion Tech Group for cutting-edge insights and thought leadership.
+=======
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+          >
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+              Stay Updated with Our Latest Research
+            </h2>
+            <p className="text-lg text-gray-300 mb-8">
+              Get notified when we publish new white papers and research insights. 
+              Join thousands of professionals staying ahead of technology trends.
+>>>>>>> cursor/analyze-improve-and-deploy-application-f14e
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
                 href="/contact"
+<<<<<<< HEAD
                 className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-400 to-blue-500 text-white font-semibold rounded-lg hover:from-cyan-500 hover:to-blue-600 transition-all duration-300 transform hover:scale-105"
               >
                 Subscribe to Updates
@@ -653,6 +879,18 @@ export const WhitePapers: React.FC = () => {
                 className="inline-flex items-center px-8 py-4 border border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400 hover:text-white transition-all duration-300"
               >
                 Request Custom Research
+=======
+                className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-semibold rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-cyan-500/25"
+              >
+                Subscribe to Updates
+                <ArrowRight className="w-5 h-5 ml-2 inline" />
+              </a>
+              <a
+                href="/blog"
+                className="px-8 py-4 bg-slate-700/50 hover:bg-slate-600/50 text-white font-semibold rounded-lg transition-all duration-300 border border-slate-600 hover:border-slate-500"
+              >
+                View Blog
+>>>>>>> cursor/analyze-improve-and-deploy-application-f14e
               </a>
             </div>
           </motion.div>

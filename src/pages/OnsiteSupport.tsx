@@ -16,7 +16,6 @@ import {
   Star, 
   Award, 
   Building, 
-  Tool, 
   Wrench, 
   Settings, 
   Database, 
