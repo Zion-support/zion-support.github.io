@@ -61,6 +61,7 @@ const AILegalDocumentAnalysis = React.lazy(() => import('./pages/services/ai-leg
 const AISupplyChainOptimization = React.lazy(() => import('./pages/services/ai-supply-chain-optimization'));
 const AIHealthcareAnalytics = React.lazy(() => import('./pages/services/ai-healthcare-analytics'));
 const AIFinancialTrading = React.lazy(() => import('./pages/services/ai-financial-trading'));
+
 // Service pages - only import existing ones
 const CloudDevOps = React.lazy(() => import('./pages/services/CloudDevOps'));
 const DigitalTwin = React.lazy(() => import('./pages/services/DigitalTwin'));
@@ -68,6 +69,26 @@ const DataAnalytics = React.lazy(() => import('./pages/services/DataAnalytics'))
 const ITInfrastructure = React.lazy(() => import('./pages/services/ITInfrastructure'));
 const AIBusinessIntelligence = React.lazy(() => import('./pages/services/AIBusinessIntelligence'));
 const MicroSaaSProducts = React.lazy(() => import('./pages/services/MicroSaaSProducts'));
+
+// Missing service imports that were causing broken routes
+const AffiliateMarketingTracker = React.lazy(() => import('./pages/services/AffiliateMarketingTracker'));
+const UptimeSLAMonitor = React.lazy(() => import('./pages/services/UptimeSLAMonitor'));
+const SOC2ComplianceTracker = React.lazy(() => import('./pages/services/SOC2ComplianceTracker'));
+const EmployeeSchedulingSaaS = React.lazy(() => import('./pages/services/EmployeeSchedulingSaaS'));
+const AISupportHelpdesk = React.lazy(() => import('./pages/services/AISupportHelpdesk'));
+const AIProofreadingStudio = React.lazy(() => import('./pages/services/AIProofreadingStudio'));
+const AILeadScoring = React.lazy(() => import('./pages/services/AILeadScoring'));
+const AISEOOptimizer = React.lazy(() => import('./pages/services/AISEOOptimizer'));
+const APIMonitoringSaaS = React.lazy(() => import('./pages/services/APIMonitoringSaaS'));
+const GDPRCookieCompliance = React.lazy(() => import('./pages/services/GDPRCookieCompliance'));
+const MLOpsPipeline = React.lazy(() => import('./pages/services/MLOpsPipeline'));
+const FinOpsOptimizer = React.lazy(() => import('./pages/services/FinOpsOptimizer'));
+const ZeroTrustArchitecture = React.lazy(() => import('./pages/services/ZeroTrustArchitecture'));
+const VendorRiskManagement = React.lazy(() => import('./pages/services/VendorRiskManagement'));
+const SaaSChurnPredictor = React.lazy(() => import('./pages/services/SaaSChurnPredictor'));
+const BlockchainSolutions = React.lazy(() => import('./pages/services/BlockchainSolutions'));
+const SpaceTechnology = React.lazy(() => import('./pages/services/SpaceTechnology'));
+
 // Import real pages
 const Careers = React.lazy(() => import('./pages/Careers'));
 const Marketplace = React.lazy(() => import('./pages/Marketplace'));
@@ -137,6 +158,25 @@ function App() {
                 <Route path="/services/ai-supply-chain-optimization" element={<AISupplyChainOptimization />} />
                 <Route path="/services/ai-healthcare-analytics" element={<AIHealthcareAnalytics />} />
                 <Route path="/services/ai-financial-trading" element={<AIFinancialTrading />} />
+
+                {/* Additional service routes to fix broken links */}
+                <Route path="/services/affiliate-marketing-tracker" element={<AffiliateMarketingTracker />} />
+                <Route path="/services/uptime-sla-monitor" element={<UptimeSLAMonitor />} />
+                <Route path="/services/soc2-compliance-tracker" element={<SOC2ComplianceTracker />} />
+                <Route path="/services/employee-scheduling-saas" element={<EmployeeSchedulingSaaS />} />
+                <Route path="/services/ai-support-helpdesk" element={<AISupportHelpdesk />} />
+                <Route path="/services/ai-proofreading-studio" element={<AIProofreadingStudio />} />
+                <Route path="/services/ai-lead-scoring" element={<AILeadScoring />} />
+                <Route path="/services/ai-seo-optimizer" element={<AISEOOptimizer />} />
+                <Route path="/services/api-monitoring-saas" element={<APIMonitoringSaaS />} />
+                <Route path="/services/gdpr-cookie-compliance" element={<GDPRCookieCompliance />} />
+                <Route path="/services/mlops-pipeline" element={<MLOpsPipeline />} />
+                <Route path="/services/finops-optimizer" element={<FinOpsOptimizer />} />
+                <Route path="/services/zero-trust-architecture" element={<ZeroTrustArchitecture />} />
+                <Route path="/services/vendor-risk-management" element={<VendorRiskManagement />} />
+                <Route path="/services/saas-churn-predictor" element={<SaaSChurnPredictor />} />
+                <Route path="/services/blockchain-solutions" element={<BlockchainSolutions />} />
+                <Route path="/services/space-technology" element={<SpaceTechnology />} />
 
                 {/* Catch all route */}
                 <Route path="*" element={<Home />} />
