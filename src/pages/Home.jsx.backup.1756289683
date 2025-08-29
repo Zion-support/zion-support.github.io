@@ -1,0 +1,41 @@
+import React from 'react';
+import { motion } from 'framer-motion';
+import { HeroSection } from "@/components/HeroSection";
+import { QuickAccess } from "@/components/home/QuickAccess";
+import FeatureCTAs from "@/components/home/FeatureCTAs";
+import { FeatureHighlights } from "@/components/home/FeatureHighlights";
+import FeaturedListingsSection from "@/components/FeaturedListingsSection";
+import HowItWorksSection from "@/components/HowItWorksSection";
+import BenefitsSection from "@/components/BenefitsSection";
+import { TestimonialsSection } from "@/components/TestimonialsSection";
+import { SEO } from "@/components/SEO";
+export default function Home() {
+  return (
+    <>
+      <SEO 
+        title="Zion Tech Group - Leading AI & Technology Solutions" 
+        description="Discover cutting-edge AI solutions, expert talent, and innovative technology services. Transform your business with Zion Tech Group's comprehensive tech ecosystem." 
+        canonical="/" 
+        url="https://ziontechgroup.com"
+      />
+      <main className="min-h-screen">
+        {/* Hero Section */}
+        <HeroSection />
+        {/* Quick Access */}
+        <QuickAccess />
+        {/* Feature Highlights */}
+        <FeatureHighlights />
+        {/* Featured Listings */}
+        <FeaturedListingsSection />
+        {/* How It Works */}
+        <HowItWorksSection />
+        {/* Benefits */}
+        <BenefitsSection />
+        {/* Testimonials */}
+        <TestimonialsSection />
+        {/* Feature CTAs */}
+        <FeatureCTAs />
+      </main>
+    </>
+  );
+}

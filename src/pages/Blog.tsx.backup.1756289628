@@ -1,0 +1,249 @@
+import React, { useState } from 'react';
+import { Search, Calendar, Clock, User, Tag } from 'lucide-react';
+interface BlogPost {
+  id: number;
+  title: string;
+  excerpt: string;
+  category: string;
+  author: string;
+  date: string;
+  readTime: string;
+  views: string;
+  tags: string[];
+  featured: boolean;
+  image: string;
+}
+export default function Blog() {
+  const [searchTerm, setSearchTerm] = useState('');
+  const [selectedCategory, setSelectedCategory] = useState('all');
+  const [selectedTag, setSelectedTag] = useState('all');
+  const categories = [
+    { id: 'all', name: 'All Posts', count: 25 },
+    { id: 'ai', name: 'AI & Machine Learning', count: 8 },
+    { id: 'cybersecurity', name: 'Cybersecurity', count: 6 },
+    { id: 'cloud', name: 'Cloud Computing', count: 5 },
+    { id: 'quantum', name: 'Quantum Technology', count: 4 },
+    { id: 'business', name: 'Business & Strategy', count: 2 }
+  ];
+  const blogPosts: BlogPost[] = [
+    {
+      id: 1,
+      title: "The Future of AI in Enterprise: 2024 Trends and Predictions",
+      excerpt: "Discover how artificial intelligence is reshaping enterprise operations and what to expect in the coming year.",
+      author: "Dr. Sarah Chen",
+      date: "2024-01-15",
+      category: "ai",
+      readTime: "8 min read",
+      image: "/images/blog/ai-enterprise-2024.jpg",
+      featured: true
+    },
+    {
+      id: 2,
+      title: "Zero-Trust Security: Building Unbreachable Digital Fortresses",
+      excerpt: "Learn about the latest zero-trust security strategies and how they're revolutionizing cybersecurity.",
+      author: "Marcus Rodriguez",
+      date: "2024-01-12",
+      category: "cybersecurity",
+      readTime: "6 min read",
+      image: "/images/blog/zero-trust-security.jpg",
+      featured: true
+    },
+    {
+      id: 3,
+      title: 'Zero-Trust Security: The New Standard for Enterprise Protection',
+      excerpt: 'Why zero-trust security architecture is becoming essential for modern enterprises and how to implement it effectively.',
+      category: 'cybersecurity',
+      author: 'Michael Rodriguez',
+      date: '2025-01-10',
+      readTime: '10 min read',
+      views: '3.1k',
+      tags: ['Cybersecurity', 'Zero-Trust', 'Enterprise', 'Security'],
+      featured: false,
+      image: '/api/placeholder/400/250'
+    },
+    {
+      id: 4,
+      title: 'DevOps Transformation: From Theory to Practice',
+      excerpt: 'Real-world strategies for implementing DevOps practices and achieving faster, more reliable software delivery.',
+      category: 'cloud',
+      author: 'Emily Watson',
+      date: '2025-01-08',
+      readTime: '15 min read',
+      views: '2.7k',
+      tags: ['DevOps', 'Cloud', 'Automation', 'Software Development'],
+      featured: false,
+      image: '/api/placeholder/400/250'
+    },
+    {
+      id: 5,
+      title: 'AI-Powered Decision Making: Transforming Business Intelligence',
+      excerpt: 'How artificial intelligence is enhancing business intelligence and enabling data-driven decision making at scale.',
+      category: 'ai',
+      author: 'Dr. Sarah Chen',
+      date: '2025-01-05',
+      readTime: '9 min read',
+      views: '1.9k',
+      tags: ['AI', 'Business Intelligence', 'Data', 'Decision Making'],
+      featured: false,
+      image: '/api/placeholder/400/250'
+    },
+    {
+      id: 6,
+      title: 'The Rise of Edge Computing: Bringing Intelligence Closer to Data',
+      excerpt: 'Exploring the benefits of edge computing and how it\'s reshaping the future of IoT and real-time applications.',
+      category: 'cloud',
+      author: 'David Chen',
+      date: '2025-01-03',
+      readTime: '11 min read',
+      views: '1.6k',
+      tags: ['Edge Computing', 'IoT', 'Cloud', 'Real-time'],
+      featured: false,
+      image: '/api/placeholder/400/250'
+    }
+  ];
+  const filteredPosts = blogPosts.filter(post => {
+    const matchesSearch = post.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
+                         post.excerpt.toLowerCase().includes(searchTerm.toLowerCase()) ||
+                         post.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()));
+    const matchesCategory = selectedCategory === 'all' || post.category === selectedCategory;
+    return matchesSearch && matchesCategory;
+  });
+  const featuredPost = blogPosts.find(post => post.featured);
+  return (
+    <div className="min-h-screen bg-slate-900 text-white py-24 px-4 sm:px-6 lg:px-8">
+      <div className="max-w-7xl mx-auto">
+        {/* Hero Section */}
+        <div className="text-center mb-16">
+          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+            AI & Tech
+            <span className="bg-gradient-to-r from-green-400 to-emerald-400 bg-clip-text text-transparent"> Insights</span>
+          </h1>
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
+            Expert perspectives on artificial intelligence, tech innovation, and digital transformation
+          </p>
+          {/* Search and Filter */}
+          <div className="max-w-2xl mx-auto mb-8">
+            <div className="relative mb-6">
+              <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 h-5 w-5 text-gray-400" />
+              <input
+                type="text"
+                placeholder="Search articles..."
+                value={searchTerm}
+                onChange={(e) => setSearchTerm(e.target.value)}
+                className="w-full pl-12 pr-4 py-3 bg-slate-800/50 border border-white/10 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent"
+              />
+            </div>
+            <div className="flex flex-wrap gap-2 justify-center">
+              {categories.map((category) => (
+                <button
+                  key={category.id}
+                  onClick={() => setSelectedCategory(category.id)}
+                  className={`px-4 py-2 rounded-full text-sm font-medium transition-colors ${
+                    selectedCategory === category.id
+                      ? 'bg-green-500 text-white'
+                      : 'bg-slate-800 text-gray-300 hover:bg-slate-700'
+                  }`}
+                >
+                  {category.name} ({category.count})
+                </button>
+              ))}
+            </div>
+          </div>
+        </div>
+        {/* Featured Post */}
+        {featuredPost && (
+          <div className="mb-16">
+            <h2 className="text-2xl font-semibold text-white mb-6">Featured Article</h2>
+            <div className="bg-slate-800/50 border border-white/10 rounded-xl overflow-hidden">
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 p-8">
+                <div className="aspect-video overflow-hidden rounded-lg">
+                  <img
+                    src={featuredPost.image}
+                    alt={featuredPost.title}
+                    className="object-cover w-full h-full hover:scale-105 transition-transform duration-300"
+                  />
+                </div>
+                <div className="flex flex-col justify-center">
+                  <span className="text-sm text-green-400 bg-green-500/10 px-3 py-1 rounded-full inline-block mb-4 w-fit">
+                    {featuredPost.category}
+                  </span>
+                  <h3 className="text-3xl font-bold text-white mb-4">
+                    {featuredPost.title}
+                  </h3>
+                  <p className="text-gray-300 mb-6">
+                    {featuredPost.excerpt}
+                  </p>
+                  <div className="flex items-center text-sm text-gray-400 mb-6">
+                    <User className="w-4 h-4 mr-2" />
+                    <span className="mr-4">{featuredPost.author}</span>
+                    <Calendar className="w-4 h-4 mr-2" />
+                    <span className="mr-4">{featuredPost.date}</span>
+                    <Clock className="w-4 h-4 mr-2" />
+                    <span>{featuredPost.readTime}</span>
+                  </div>
+                  <div className="flex flex-wrap gap-2">
+                    {featuredPost.tags.map((tag, index) => (
+                      <span
+                        key={index}
+                        className="px-3 py-1 bg-slate-700 text-gray-300 rounded-full text-sm"
+                      >
+                        {tag}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        )}
+        {/* Blog Posts Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {filteredPosts.filter(post => !post.featured).map((post) => (
+            <article key={post.id} className="bg-slate-800/50 border border-white/10 rounded-xl overflow-hidden hover:border-green-500/50 transition-all duration-300">
+              <div className="aspect-video overflow-hidden">
+                <img
+                  src={post.image}
+                  alt={post.title}
+                  className="object-cover w-full h-full hover:scale-105 transition-transform duration-300"
+                />
+              </div>
+              <div className="p-6">
+                <span className="text-sm text-green-400 bg-green-500/10 px-3 py-1 rounded-full inline-block mb-4">
+                  {post.category}
+                </span>
+                <h3 className="text-xl font-semibold text-white mb-3 line-clamp-2">
+                  {post.title}
+                </h3>
+                <p className="text-gray-400 mb-4 line-clamp-3">
+                  {post.excerpt}
+                </p>
+                <div className="flex items-center text-sm text-gray-500 mb-4">
+                  <User className="w-4 h-4 mr-2" />
+                  <span className="mr-4">{post.author}</span>
+                  <Calendar className="w-4 h-4 mr-2" />
+                  <span>{post.date}</span>
+                </div>
+                <div className="flex items-center justify-between">
+                  <div className="flex items-center text-sm text-gray-500">
+                    <Clock className="w-4 h-4 mr-1" />
+                    <span>{post.readTime}</span>
+                  </div>
+                  <div className="flex items-center text-sm text-gray-500">
+                    <span>{post.views} views</span>
+                  </div>
+                </div>
+              </div>
+            </article>
+          ))}
+        </div>
+        {filteredPosts.length === 0 && (
+          <div className="text-center py-16">
+            <h3 className="text-xl font-semibold text-gray-400 mb-2">No articles found</h3>
+            <p className="text-gray-500">Try adjusting your search or filter criteria.</p>
+          </div>
+        )}
+      </div>
+    </div>
+  );
+};
+export default Blog;

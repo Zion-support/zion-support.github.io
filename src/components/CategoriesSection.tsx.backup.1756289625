@@ -1,0 +1,240 @@
+import React from 'react';
+import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
+import { 
+  Brain, 
+  Shield, 
+  Cloud, 
+  Zap, 
+  Globe, 
+  Cpu, 
+  Database, 
+  Network,
+  Lock,
+  Code,
+  Rocket,
+  Users,
+  BarChart3,
+  FileImage,
+  TrendingUp,
+  MessageCircle,
+  Video,
+  FileText,
+  Heart,
+  ShoppingCart,
+  Settings,
+  HelpCircle,
+  BookOpen,
+  Briefcase,
+  Award,
+  Target,
+  Lightbulb,
+  ShieldCheck,
+  Server,
+  Smartphone,
+  Monitor,
+  Wifi,
+  Bluetooth,
+  Satellite,
+  Atom,
+  Dna,
+  Microscope,
+  Flask,
+  TestTube,
+  Syringe,
+  Stethoscope,
+  HeartPulse,
+  BrainCircuit,
+  Eye,
+  Ear,
+  Hand,
+  Foot,
+  Bone,
+  Tooth,
+  Pill,
+  Bandage,
+  Thermometer,
+  Scale,
+  Calculator,
+  ChartBar,
+  PieChart,
+  LineChart,
+  Activity,
+  TrendingDown,
+  Minus,
+  Plus,
+  Equal,
+  Divide,
+  Percent,
+  DollarSign,
+  Euro,
+  Pound,
+  Yen,
+  Bitcoin,
+  Ethereum,
+  CreditCard,
+  Wallet,
+  Banknote,
+  Coins,
+  PiggyBank,
+  Safe,
+  Vault,
+  LockKeyhole,
+  Key,
+  Fingerprint,
+  QrCode,
+  Barcode,
+  Scan,
+  Camera,
+  VideoOff,
+  Mic,
+  MicOff,
+  Volume2,
+  VolumeX
+} from 'lucide-react';
+const CategoriesSection: React.FC = () => {
+  const categories = [
+    {
+      title: "AI & Machine Learning",
+      description: "Cutting-edge artificial intelligence solutions",
+      icon: Brain,
+      color: "from-purple-500 to-pink-500",
+      link: "/ai-services",
+      features: ["Predictive Analytics", "Natural Language Processing", "Computer Vision", "Deep Learning"]
+    },
+    {
+      title: "Cybersecurity",
+      description: "Advanced security and compliance solutions",
+      icon: Shield,
+      color: "from-red-500 to-orange-500",
+      link: "/cybersecurity",
+      features: ["Threat Detection", "Incident Response", "Compliance Management", "Security Audits"]
+    },
+    {
+      title: "Cloud Solutions",
+      description: "Scalable cloud infrastructure and services",
+      icon: Cloud,
+      color: "from-blue-500 to-cyan-500",
+      link: "/cloud-solutions",
+      features: ["Cloud Migration", "DevOps Automation", "Container Orchestration", "Serverless Architecture"]
+    },
+    {
+      title: "Digital Transformation",
+      description: "End-to-end business transformation services",
+      icon: Zap,
+      color: "from-yellow-500 to-orange-500",
+      link: "/digital-transformation",
+      features: ["Process Automation", "Legacy Modernization", "Change Management", "Digital Strategy"]
+    },
+    {
+      title: "Enterprise Solutions",
+      description: "Large-scale business solutions",
+      icon: Building,
+      color: "from-indigo-500 to-purple-500",
+      link: "/enterprise",
+      features: ["ERP Integration", "Business Intelligence", "Workflow Automation", "Enterprise Architecture"]
+    },
+    {
+      title: "Emerging Technologies",
+      description: "Next-generation technology solutions",
+      icon: Rocket,
+      color: "from-green-500 to-teal-500",
+      link: "/emerging-tech",
+      features: ["Blockchain", "IoT", "Quantum Computing", "Edge Computing"]
+    }
+  ];
+  return (
+    <section className="py-20 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+      <div className="max-w-7xl mx-auto px-6">
+        <div className="text-center mb-16">
+          <motion.h2 
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            className="text-4xl md:text-5xl font-bold text-white mb-6"
+          >
+            Our Service Categories
+          </motion.h2>
+          <motion.p 
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            className="text-xl text-gray-300 max-w-3xl mx-auto"
+          >
+            Discover our comprehensive range of technology solutions designed to transform your business
+          </motion.p>
+        </div>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {categories.map((category, index) => (
+            <motion.div
+              key={index}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: index * 0.1 }}
+              whileHover={{ y: -10 }}
+              className="group"
+            >
+              <Link to={category.link} className="block">
+                <div className="bg-gradient-to-br from-slate-800 to-slate-700 rounded-2xl p-8 h-full border border-slate-600 hover:border-slate-500 transition-all duration-300 hover:shadow-2xl hover:shadow-cyan-500/20">
+                  <div className={`inline-flex items-center justify-center w-16 h-16 bg-gradient-to-br ${category.color} rounded-2xl mb-6 group-hover:scale-110 transition-transform duration-300`}>
+                    <category.icon className="w-8 h-8 text-white" />
+                  </div>
+                  <h3 className="text-2xl font-bold text-white mb-4 group-hover:text-cyan-400 transition-colors duration-300">
+                    {category.title}
+                  </h3>
+                  <p className="text-gray-300 mb-6 leading-relaxed">
+                    {category.description}
+                  </p>
+                  <div className="space-y-2">
+                    {category.features.map((feature, featureIndex) => (
+                      <div key={featureIndex} className="flex items-center text-sm text-gray-400">
+                        <div className="w-2 h-2 bg-cyan-500 rounded-full mr-3"></div>
+                        {feature}
+                      </div>
+                    ))}
+                  </div>
+                  <div className="mt-6 flex items-center text-cyan-400 group-hover:text-cyan-300 transition-colors duration-300">
+                    <span className="text-sm font-semibold mr-2">Learn More</span>
+                    <motion.div
+                      initial={{ x: 0 }}
+                      whileHover={{ x: 5 }}
+                      transition={{ duration: 0.2 }}
+                    >
+                      →
+                    </motion.div>
+                  </div>
+                </div>
+              </Link>
+            </motion.div>
+          ))}
+        </div>
+        <motion.div 
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.6 }}
+          className="text-center mt-16"
+        >
+          <Link 
+            to="/services"
+            className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-full hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-cyan-500/25"
+          >
+            View All Services
+            <ArrowRight className="ml-2 w-5 h-5" />
+          </Link>
+        </motion.div>
+      </div>
+    </section>
+  );
+};
+// Icon components
+const Building = ({ className }: { className?: string }) => (
+  <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
+  </svg>
+);
+const ArrowRight = ({ className }: { className?: string }) => (
+  <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+  </svg>
+);
+export default CategoriesSection;
