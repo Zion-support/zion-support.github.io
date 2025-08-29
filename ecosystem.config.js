@@ -1,4 +1,4 @@
-module.exports = {
+export default {
   apps: [
     {
       name: 'bolt-app',
@@ -27,7 +27,7 @@ module.exports = {
       ref: 'origin/main',
       repo: 'git@github.com:your-username/bolt.new.zion.app.git',
       path: '/workspace/production',
-      'post-deploy': 'npm install && npm run build && pm2 reload ecosystem.config.cjs --env production',
+      'post-deploy': 'npm install && npm run build && pm2 reload ecosystem.config.js --env production',
       'pre-setup': 'mkdir -p /workspace/production'
     }
   }
