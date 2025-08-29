@@ -1,114 +1,114 @@
 import React from 'react';
 import { 
-  Heart, 
-  Shield, 
+  BookOpen, 
   Users, 
   Brain, 
-  Activity, 
-  Lock, 
+  Globe, 
+  Zap, 
   BarChart3, 
-  Rocket,
-  CheckCircle,
+  CheckCircle, 
   ArrowRight,
-  Stethoscope,
-  TestTube,
-  Smartphone,
-  Building
+  Building,
+  GraduationCap,
+  Lightbulb,
+  Target,
+  Shield,
+  TrendingUp
 } from 'lucide-react';
 
-export default function HealthcareSolutions() {
+export default function EducationSolutions() {
   const features = [
     {
-      icon: Heart,
-      title: 'Patient Care Excellence',
-      description: 'AI-powered patient monitoring and personalized care plans',
-      color: 'from-red-500 to-pink-500'
-    },
-    {
-      icon: Brain,
-      title: 'AI Diagnostics',
-      description: 'Advanced machine learning for accurate disease detection',
+      icon: BookOpen,
+      title: 'Learning Excellence',
+      description: 'AI-powered personalized learning experiences',
       color: 'from-blue-500 to-cyan-500'
     },
     {
-      icon: Shield,
-      title: 'HIPAA Compliance',
-      description: 'Enterprise-grade security with full regulatory compliance',
-      color: 'from-green-500 to-emerald-500'
-    },
-    {
       icon: Users,
-      title: 'Care Team Collaboration',
-      description: 'Seamless communication between healthcare providers',
+      title: 'Student Engagement',
+      description: 'Interactive tools to increase student participation',
       color: 'from-purple-500 to-indigo-500'
     },
     {
-      icon: Activity,
-      title: 'Real-time Monitoring',
-      description: 'Continuous health monitoring with predictive analytics',
+      icon: Brain,
+      title: 'Adaptive Learning',
+      description: 'AI that adapts to individual student needs',
+      color: 'from-green-500 to-emerald-500'
+    },
+    {
+      icon: Globe,
+      title: 'Global Access',
+      description: 'Remote learning capabilities for worldwide access',
+      color: 'from-orange-500 to-red-500'
+    },
+    {
+      icon: Zap,
+      title: 'Real-time Analytics',
+      description: 'Instant insights into student progress and performance',
       color: 'from-yellow-500 to-orange-500'
     },
     {
-      icon: Lock,
-      title: 'Data Security',
-      description: 'End-to-end encryption and secure data handling',
-      color: 'from-indigo-500 to-purple-500'
+      icon: BarChart3,
+      title: 'Performance Tracking',
+      description: 'Comprehensive analytics for educational outcomes',
+      color: 'from-red-500 to-pink-500'
     }
   ];
 
   const solutions = [
     {
-      title: 'AI Healthcare Platform',
-      description: 'Comprehensive AI-powered healthcare management system',
-      features: ['Patient Monitoring', 'AI Diagnostics', 'Care Coordination', 'Analytics Dashboard']
+      title: 'AI Learning Platform',
+      description: 'Comprehensive AI-powered educational management system',
+      features: ['Personalized Learning', 'Student Analytics', 'Content Management', 'Assessment Tools']
     },
     {
-      title: 'Telemedicine Solutions',
-      description: 'Remote healthcare delivery and virtual consultations',
-      features: ['Video Consultations', 'Remote Monitoring', 'Digital Prescriptions', 'Patient Portal']
+      title: 'Virtual Classroom',
+      description: 'Advanced virtual learning environment with collaboration tools',
+      features: ['Video Conferencing', 'Interactive Whiteboards', 'Breakout Rooms', 'Recording']
     },
     {
-      title: 'Clinical Decision Support',
-      description: 'AI-powered recommendations for treatment plans',
-      features: ['Treatment Guidelines', 'Drug Interactions', 'Risk Assessment', 'Clinical Pathways']
+      title: 'Learning Analytics',
+      description: 'Data-driven insights to improve educational outcomes',
+      features: ['Student Progress', 'Performance Metrics', 'Predictive Analytics', 'Reporting']
     },
     {
-      title: 'Healthcare Analytics',
-      description: 'Data-driven insights for improved patient outcomes',
-      features: ['Population Health', 'Quality Metrics', 'Cost Analysis', 'Performance Tracking']
+      title: 'Content Creation',
+      description: 'AI-powered tools for creating engaging educational content',
+      features: ['Interactive Content', 'Multimedia Support', 'Accessibility', 'Localization']
     }
   ];
 
-  const useCases = [
+  const institutions = [
     {
-      industry: 'Hospitals',
-      description: 'Comprehensive patient care and monitoring systems',
+      title: 'K-12 Schools',
+      description: 'Elementary and secondary education solutions',
       icon: Building
     },
     {
-      industry: 'Clinics',
-      description: 'Streamlined patient management and diagnostics',
-      icon: Stethoscope
+      title: 'Universities',
+      description: 'Higher education and research institutions',
+      icon: GraduationCap
     },
     {
-      industry: 'Research',
-      description: 'Advanced AI research and clinical trials support',
-      icon: TestTube
+      title: 'Corporate Training',
+      description: 'Professional development and skills training',
+      icon: Users
     },
     {
-      industry: 'Telemedicine',
-      description: 'Remote healthcare delivery and monitoring',
-      icon: Smartphone
+      title: 'Online Learning',
+      description: 'Digital education platforms and MOOCs',
+      icon: Globe
     }
   ];
 
   const benefits = [
-    'Improve patient outcomes by 40%',
-    'Reduce diagnostic errors by 85%',
-    'Cut healthcare costs by 30%',
-    'Streamline clinical workflows',
-    'Ensure regulatory compliance',
-    'Enable remote patient monitoring'
+    'Improve student engagement by 60%',
+    'Increase learning outcomes by 40%',
+    'Reduce administrative workload by 35%',
+    'Enable personalized learning paths',
+    'Support remote and hybrid learning',
+    'Provide data-driven insights'
   ];
 
   return (
@@ -118,13 +118,13 @@ export default function HealthcareSolutions() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
           <div className="text-center">
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
-              Healthcare Solutions
+              Education Solutions
             </h1>
             <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Transform healthcare delivery with AI-powered solutions that improve patient outcomes and operational efficiency
+              Transform education with AI-powered solutions that enhance learning, engagement, and outcomes
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-gradient-to-r from-red-600 to-pink-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-red-700 hover:to-pink-700 transition-all duration-200 flex items-center justify-center gap-2">
+              <button className="bg-gradient-to-r from-blue-600 to-cyan-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-blue-700 hover:to-cyan-700 transition-all duration-200 flex items-center justify-center gap-2">
                 Get Started
                 <ArrowRight className="w-5 h-5" />
               </button>
@@ -141,10 +141,10 @@ export default function HealthcareSolutions() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-white mb-4">
-              Healthcare-Focused Features
+              Education-Focused Features
             </h2>
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              Built specifically for healthcare organizations with compliance, security, and patient care at the forefront
+              Built specifically for educational institutions with learning, engagement, and outcomes in mind
             </p>
           </div>
           
@@ -167,10 +167,10 @@ export default function HealthcareSolutions() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-white mb-4">
-              Healthcare Solutions
+              Education Solutions
             </h2>
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              Comprehensive solutions designed to address healthcare challenges and improve patient care
+              Comprehensive solutions designed to address educational challenges and improve learning outcomes
             </p>
           </div>
           
@@ -193,26 +193,26 @@ export default function HealthcareSolutions() {
         </div>
       </div>
 
-      {/* Use Cases Section */}
+      {/* Institutions Section */}
       <div className="py-24 bg-slate-800/50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-white mb-4">
-              Healthcare Use Cases
+              Educational Institutions
             </h2>
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              Our solutions are designed to meet the unique needs of different healthcare organizations
+              Our solutions are designed to meet the unique needs of different educational settings
             </p>
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {useCases.map((useCase, index) => (
+            {institutions.map((institution, index) => (
               <div key={index} className="bg-slate-800 p-6 rounded-lg border border-slate-700 text-center">
                 <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-lg flex items-center justify-center mx-auto mb-4">
-                  <useCase.icon className="w-8 h-8 text-white" />
+                  <institution.icon className="w-8 h-8 text-white" />
                 </div>
-                <h3 className="text-lg font-semibold text-white mb-2">{useCase.industry}</h3>
-                <p className="text-gray-300 text-sm">{useCase.description}</p>
+                <h3 className="text-lg font-semibold text-white mb-2">{institution.title}</h3>
+                <p className="text-gray-300 text-sm">{institution.description}</p>
               </div>
             ))}
           </div>
@@ -224,10 +224,10 @@ export default function HealthcareSolutions() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-white mb-4">
-              Why Choose Healthcare Solutions?
+              Why Choose Education Solutions?
             </h2>
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              Proven results and measurable impact for healthcare organizations
+              Proven results and measurable impact for educational institutions
             </p>
           </div>
           
@@ -246,18 +246,18 @@ export default function HealthcareSolutions() {
       <div className="py-24">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-4xl font-bold text-white mb-6">
-            Ready to Transform Healthcare?
+            Ready to Transform Education?
           </h2>
           <p className="text-xl text-gray-300 mb-8">
-            Join leading healthcare organizations that have already improved patient care with our solutions
+            Join leading educational institutions that have already improved learning outcomes with our solutions
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="bg-gradient-to-r from-red-600 to-pink-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-red-700 hover:to-pink-700 transition-all duration-200">
+            <button className="bg-gradient-to-r from-blue-600 to-cyan-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-blue-700 hover:to-cyan-700 transition-all duration-200">
               Contact Sales
             </button>
-              <button className="border border-gray-600 text-white px-8 py-4 rounded-lg font-semibold hover:bg-gray-800 transition-all duration-200">
-                Download Brochure
-              </button>
+            <button className="border border-gray-600 text-white px-8 py-4 rounded-lg font-semibold hover:bg-gray-800 transition-all duration-200">
+              Download Brochure
+            </button>
           </div>
         </div>
       </div>

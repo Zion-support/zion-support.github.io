@@ -1,114 +1,114 @@
 import React from 'react';
 import { 
-  Heart, 
-  Shield, 
+  Rocket, 
+  Zap, 
   Users, 
-  Brain, 
-  Activity, 
-  Lock, 
+  Target, 
+  TrendingUp, 
+  DollarSign, 
   BarChart3, 
-  Rocket,
+  Lightbulb,
   CheckCircle,
   ArrowRight,
-  Stethoscope,
-  TestTube,
-  Smartphone,
-  Building
+  Globe,
+  Shield,
+  Clock,
+  Star
 } from 'lucide-react';
 
-export default function HealthcareSolutions() {
+export default function StartupSolutions() {
   const features = [
     {
-      icon: Heart,
-      title: 'Patient Care Excellence',
-      description: 'AI-powered patient monitoring and personalized care plans',
-      color: 'from-red-500 to-pink-500'
+      icon: Rocket,
+      title: 'Rapid Growth',
+      description: 'Accelerate your startup growth with proven strategies and tools',
+      color: 'from-purple-500 to-pink-500'
     },
     {
-      icon: Brain,
-      title: 'AI Diagnostics',
-      description: 'Advanced machine learning for accurate disease detection',
+      icon: Zap,
+      title: 'Quick Launch',
+      description: 'Get to market faster with our streamlined development process',
       color: 'from-blue-500 to-cyan-500'
     },
     {
-      icon: Shield,
-      title: 'HIPAA Compliance',
-      description: 'Enterprise-grade security with full regulatory compliance',
+      icon: Users,
+      title: 'Team Scaling',
+      description: 'Tools and processes that grow with your team and company',
       color: 'from-green-500 to-emerald-500'
     },
     {
-      icon: Users,
-      title: 'Care Team Collaboration',
-      description: 'Seamless communication between healthcare providers',
-      color: 'from-purple-500 to-indigo-500'
+      icon: Target,
+      title: 'Market Focus',
+      description: 'Stay focused on your core business while we handle the tech',
+      color: 'from-orange-500 to-red-500'
     },
     {
-      icon: Activity,
-      title: 'Real-time Monitoring',
-      description: 'Continuous health monitoring with predictive analytics',
+      icon: TrendingUp,
+      title: 'Scalable Architecture',
+      description: 'Built to handle growth from 10 to 10,000+ users',
       color: 'from-yellow-500 to-orange-500'
     },
     {
-      icon: Lock,
-      title: 'Data Security',
-      description: 'End-to-end encryption and secure data handling',
+      icon: Lightbulb,
+      title: 'Innovation Support',
+      description: 'Cutting-edge technology to keep you ahead of the competition',
       color: 'from-indigo-500 to-purple-500'
     }
   ];
 
   const solutions = [
     {
-      title: 'AI Healthcare Platform',
-      description: 'Comprehensive AI-powered healthcare management system',
-      features: ['Patient Monitoring', 'AI Diagnostics', 'Care Coordination', 'Analytics Dashboard']
+      title: 'MVP Development',
+      description: 'Fast-track your minimum viable product to validate ideas',
+      features: ['Rapid Prototyping', 'User Testing', 'Iteration Support', 'Launch Ready']
     },
     {
-      title: 'Telemedicine Solutions',
-      description: 'Remote healthcare delivery and virtual consultations',
-      features: ['Video Consultations', 'Remote Monitoring', 'Digital Prescriptions', 'Patient Portal']
+      title: 'Growth Marketing',
+      description: 'Data-driven marketing strategies to acquire and retain customers',
+      features: ['SEO & Content', 'Social Media', 'Email Marketing', 'Analytics']
     },
     {
-      title: 'Clinical Decision Support',
-      description: 'AI-powered recommendations for treatment plans',
-      features: ['Treatment Guidelines', 'Drug Interactions', 'Risk Assessment', 'Clinical Pathways']
+      title: 'Customer Analytics',
+      description: 'Understand your users and optimize for growth',
+      features: ['User Behavior', 'Conversion Tracking', 'A/B Testing', 'Insights']
     },
     {
-      title: 'Healthcare Analytics',
-      description: 'Data-driven insights for improved patient outcomes',
-      features: ['Population Health', 'Quality Metrics', 'Cost Analysis', 'Performance Tracking']
+      title: 'Team Collaboration',
+      description: 'Tools to keep your growing team aligned and productive',
+      features: ['Project Management', 'Communication', 'Documentation', 'Workflows']
     }
   ];
 
-  const useCases = [
+  const stages = [
     {
-      industry: 'Hospitals',
-      description: 'Comprehensive patient care and monitoring systems',
-      icon: Building
+      title: 'Ideation',
+      description: 'Validate your concept and market fit',
+      icon: Lightbulb
     },
     {
-      industry: 'Clinics',
-      description: 'Streamlined patient management and diagnostics',
-      icon: Stethoscope
+      title: 'MVP',
+      description: 'Build and launch your first product',
+      icon: Rocket
     },
     {
-      industry: 'Research',
-      description: 'Advanced AI research and clinical trials support',
-      icon: TestTube
+      title: 'Growth',
+      description: 'Scale your user base and operations',
+      icon: TrendingUp
     },
     {
-      industry: 'Telemedicine',
-      description: 'Remote healthcare delivery and monitoring',
-      icon: Smartphone
+      title: 'Scale',
+      description: 'Optimize and expand to new markets',
+      icon: Globe
     }
   ];
 
   const benefits = [
-    'Improve patient outcomes by 40%',
-    'Reduce diagnostic errors by 85%',
-    'Cut healthcare costs by 30%',
-    'Streamline clinical workflows',
-    'Ensure regulatory compliance',
-    'Enable remote patient monitoring'
+    'Launch 3x faster than traditional development',
+    'Reduce development costs by 60%',
+    'Get to market in weeks, not months',
+    'Focus on your core business',
+    'Scale without technical debt',
+    'Stay ahead of competition'
   ];
 
   return (
@@ -118,13 +118,13 @@ export default function HealthcareSolutions() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
           <div className="text-center">
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
-              Healthcare Solutions
+              Startup Solutions
             </h1>
             <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Transform healthcare delivery with AI-powered solutions that improve patient outcomes and operational efficiency
+              Accelerate your startup journey with AI-powered solutions designed for rapid growth and market success
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-gradient-to-r from-red-600 to-pink-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-red-700 hover:to-pink-700 transition-all duration-200 flex items-center justify-center gap-2">
+              <button className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-purple-700 hover:to-pink-700 transition-all duration-200 flex items-center justify-center gap-2">
                 Get Started
                 <ArrowRight className="w-5 h-5" />
               </button>
@@ -141,10 +141,10 @@ export default function HealthcareSolutions() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-white mb-4">
-              Healthcare-Focused Features
+              Startup-Focused Features
             </h2>
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              Built specifically for healthcare organizations with compliance, security, and patient care at the forefront
+              Built specifically for startups with speed, flexibility, and growth in mind
             </p>
           </div>
           
@@ -167,10 +167,10 @@ export default function HealthcareSolutions() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-white mb-4">
-              Healthcare Solutions
+              Startup Solutions
             </h2>
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              Comprehensive solutions designed to address healthcare challenges and improve patient care
+              Comprehensive solutions designed to address startup challenges and accelerate growth
             </p>
           </div>
           
@@ -193,26 +193,26 @@ export default function HealthcareSolutions() {
         </div>
       </div>
 
-      {/* Use Cases Section */}
+      {/* Stages Section */}
       <div className="py-24 bg-slate-800/50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-white mb-4">
-              Healthcare Use Cases
+              Startup Journey Stages
             </h2>
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              Our solutions are designed to meet the unique needs of different healthcare organizations
+              We support you at every stage of your startup journey
             </p>
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {useCases.map((useCase, index) => (
+            {stages.map((stage, index) => (
               <div key={index} className="bg-slate-800 p-6 rounded-lg border border-slate-700 text-center">
-                <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-lg flex items-center justify-center mx-auto mb-4">
-                  <useCase.icon className="w-8 h-8 text-white" />
+                <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-pink-500 rounded-lg flex items-center justify-center mx-auto mb-4">
+                  <stage.icon className="w-8 h-8 text-white" />
                 </div>
-                <h3 className="text-lg font-semibold text-white mb-2">{useCase.industry}</h3>
-                <p className="text-gray-300 text-sm">{useCase.description}</p>
+                <h3 className="text-lg font-semibold text-white mb-2">{stage.title}</h3>
+                <p className="text-gray-300 text-sm">{stage.description}</p>
               </div>
             ))}
           </div>
@@ -224,10 +224,10 @@ export default function HealthcareSolutions() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-white mb-4">
-              Why Choose Healthcare Solutions?
+              Why Choose Startup Solutions?
             </h2>
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              Proven results and measurable impact for healthcare organizations
+              Proven results and measurable impact for startups
             </p>
           </div>
           
@@ -246,18 +246,18 @@ export default function HealthcareSolutions() {
       <div className="py-24">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-4xl font-bold text-white mb-6">
-            Ready to Transform Healthcare?
+            Ready to Accelerate Your Startup?
           </h2>
           <p className="text-xl text-gray-300 mb-8">
-            Join leading healthcare organizations that have already improved patient care with our solutions
+            Join hundreds of startups that have already accelerated their growth with our solutions
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="bg-gradient-to-r from-red-600 to-pink-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-red-700 hover:to-pink-700 transition-all duration-200">
+            <button className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-purple-700 hover:to-pink-700 transition-all duration-200">
               Contact Sales
             </button>
-              <button className="border border-gray-600 text-white px-8 py-4 rounded-lg font-semibold hover:bg-gray-800 transition-all duration-200">
-                Download Brochure
-              </button>
+            <button className="border border-gray-600 text-white px-8 py-4 rounded-lg font-semibold hover:bg-gray-800 transition-all duration-200">
+              Download Brochure
+            </button>
           </div>
         </div>
       </div>

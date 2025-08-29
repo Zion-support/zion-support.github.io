@@ -28,7 +28,7 @@ import {
   MessageCircle,
   Clock,
   Building,
-  Flask
+  TestTube
 } from 'lucide-react';
 
 const AIHealthcarePlatform: React.FC = () => {
@@ -115,7 +115,7 @@ const AIHealthcarePlatform: React.FC = () => {
     {
       industry: 'Research',
       description: 'Advanced AI research and clinical trials support',
-      icon: Flask
+      icon: TestTube
     },
     {
       industry: 'Telemedicine',

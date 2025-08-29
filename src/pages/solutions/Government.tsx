@@ -1,114 +1,112 @@
 import React from 'react';
 import { 
-  Heart, 
   Shield, 
+  Building, 
   Users, 
-  Brain, 
-  Activity, 
+  Globe, 
   Lock, 
   BarChart3, 
-  Rocket,
-  CheckCircle,
+  CheckCircle, 
   ArrowRight,
-  Stethoscope,
-  TestTube,
-  Smartphone,
-  Building
+  FileText,
+  Globe2,
+  Settings,
+  Heart
 } from 'lucide-react';
 
-export default function HealthcareSolutions() {
+export default function GovernmentSolutions() {
   const features = [
     {
-      icon: Heart,
-      title: 'Patient Care Excellence',
-      description: 'AI-powered patient monitoring and personalized care plans',
-      color: 'from-red-500 to-pink-500'
-    },
-    {
-      icon: Brain,
-      title: 'AI Diagnostics',
-      description: 'Advanced machine learning for accurate disease detection',
-      color: 'from-blue-500 to-cyan-500'
-    },
-    {
       icon: Shield,
-      title: 'HIPAA Compliance',
-      description: 'Enterprise-grade security with full regulatory compliance',
+      title: 'Security First',
+      description: 'FedRAMP, FISMA, and SOC2 compliant security measures',
       color: 'from-green-500 to-emerald-500'
     },
     {
+      icon: Building,
+      title: 'Government Architecture',
+      description: 'Built for government scale and compliance requirements',
+      color: 'from-blue-500 to-cyan-500'
+    },
+    {
       icon: Users,
-      title: 'Care Team Collaboration',
-      description: 'Seamless communication between healthcare providers',
+      title: 'Multi-Agency Support',
+      description: 'Solutions that work across different government entities',
       color: 'from-purple-500 to-indigo-500'
     },
     {
-      icon: Activity,
-      title: 'Real-time Monitoring',
-      description: 'Continuous health monitoring with predictive analytics',
-      color: 'from-yellow-500 to-orange-500'
+      icon: Globe,
+      title: 'National Deployment',
+      description: 'Solutions that can scale across the entire nation',
+      color: 'from-orange-500 to-red-500'
     },
     {
       icon: Lock,
-      title: 'Data Security',
-      description: 'End-to-end encryption and secure data handling',
+      title: 'Data Sovereignty',
+      description: 'Ensure data stays within government control and jurisdiction',
+      color: 'from-red-500 to-pink-500'
+    },
+    {
+      icon: BarChart3,
+      title: 'Compliance Reporting',
+      description: 'Built-in reporting for all government compliance requirements',
       color: 'from-indigo-500 to-purple-500'
     }
   ];
 
   const solutions = [
     {
-      title: 'AI Healthcare Platform',
-      description: 'Comprehensive AI-powered healthcare management system',
-      features: ['Patient Monitoring', 'AI Diagnostics', 'Care Coordination', 'Analytics Dashboard']
+      title: 'Digital Government Platform',
+      description: 'Comprehensive platform for modernizing government services',
+      features: ['Citizen Services', 'Internal Operations', 'Data Management', 'Compliance']
     },
     {
-      title: 'Telemedicine Solutions',
-      description: 'Remote healthcare delivery and virtual consultations',
-      features: ['Video Consultations', 'Remote Monitoring', 'Digital Prescriptions', 'Patient Portal']
+      title: 'Cybersecurity Suite',
+      description: 'Advanced security solutions for government protection',
+      features: ['Threat Detection', 'Vulnerability Management', 'Incident Response', 'Compliance']
     },
     {
-      title: 'Clinical Decision Support',
-      description: 'AI-powered recommendations for treatment plans',
-      features: ['Treatment Guidelines', 'Drug Interactions', 'Risk Assessment', 'Clinical Pathways']
+      title: 'Data Analytics Platform',
+      description: 'Government-wide data insights and decision support',
+      features: ['Data Integration', 'Analytics Tools', 'Reporting', 'Visualization']
     },
     {
-      title: 'Healthcare Analytics',
-      description: 'Data-driven insights for improved patient outcomes',
-      features: ['Population Health', 'Quality Metrics', 'Cost Analysis', 'Performance Tracking']
+      title: 'Cloud Infrastructure',
+      description: 'Secure, compliant cloud solutions for government',
+      features: ['Multi-Cloud', 'Security', 'Compliance', 'Scalability']
     }
   ];
 
-  const useCases = [
+  const agencies = [
     {
-      industry: 'Hospitals',
-      description: 'Comprehensive patient care and monitoring systems',
+      title: 'Federal Agencies',
+      description: 'Solutions for federal government departments',
       icon: Building
     },
     {
-      industry: 'Clinics',
-      description: 'Streamlined patient management and diagnostics',
-      icon: Stethoscope
+      title: 'State Governments',
+      description: 'State-level government modernization',
+      icon: Globe2
     },
     {
-      industry: 'Research',
-      description: 'Advanced AI research and clinical trials support',
-      icon: TestTube
+      title: 'Local Governments',
+      description: 'City and county government solutions',
+      icon: Users
     },
     {
-      industry: 'Telemedicine',
-      description: 'Remote healthcare delivery and monitoring',
-      icon: Smartphone
+      title: 'Defense & Security',
+      description: 'Military and security agency support',
+      icon: Shield
     }
   ];
 
   const benefits = [
-    'Improve patient outcomes by 40%',
-    'Reduce diagnostic errors by 85%',
-    'Cut healthcare costs by 30%',
-    'Streamline clinical workflows',
+    'Improve citizen services by 50%',
+    'Reduce operational costs by 30%',
+    'Enhance security posture by 70%',
     'Ensure regulatory compliance',
-    'Enable remote patient monitoring'
+    'Modernize legacy systems',
+    'Enable digital transformation'
   ];
 
   return (
@@ -118,13 +116,13 @@ export default function HealthcareSolutions() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
           <div className="text-center">
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
-              Healthcare Solutions
+              Government Solutions
             </h1>
             <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Transform healthcare delivery with AI-powered solutions that improve patient outcomes and operational efficiency
+              Transform government operations with secure, compliant, and scalable AI-powered solutions
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-gradient-to-r from-red-600 to-pink-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-red-700 hover:to-pink-700 transition-all duration-200 flex items-center justify-center gap-2">
+              <button className="bg-gradient-to-r from-green-600 to-emerald-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-green-700 hover:to-emerald-700 transition-all duration-200 flex items-center justify-center gap-2">
                 Get Started
                 <ArrowRight className="w-5 h-5" />
               </button>
@@ -141,10 +139,10 @@ export default function HealthcareSolutions() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-white mb-4">
-              Healthcare-Focused Features
+              Government-Grade Features
             </h2>
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              Built specifically for healthcare organizations with compliance, security, and patient care at the forefront
+              Built specifically for government organizations with security, compliance, and scalability at the core
             </p>
           </div>
           
@@ -167,10 +165,10 @@ export default function HealthcareSolutions() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-white mb-4">
-              Healthcare Solutions
+              Government Solutions
             </h2>
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              Comprehensive solutions designed to address healthcare challenges and improve patient care
+              Comprehensive solutions designed to address government challenges and modernize operations
             </p>
           </div>
           
@@ -193,26 +191,26 @@ export default function HealthcareSolutions() {
         </div>
       </div>
 
-      {/* Use Cases Section */}
+      {/* Agencies Section */}
       <div className="py-24 bg-slate-800/50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-white mb-4">
-              Healthcare Use Cases
+              Government Agencies
             </h2>
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              Our solutions are designed to meet the unique needs of different healthcare organizations
+              Our solutions are designed to meet the unique needs of different government entities
             </p>
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {useCases.map((useCase, index) => (
+            {agencies.map((agency, index) => (
               <div key={index} className="bg-slate-800 p-6 rounded-lg border border-slate-700 text-center">
-                <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-lg flex items-center justify-center mx-auto mb-4">
-                  <useCase.icon className="w-8 h-8 text-white" />
+                <div className="w-16 h-16 bg-gradient-to-br from-green-500 to-emerald-500 rounded-lg flex items-center justify-center mx-auto mb-4">
+                  <agency.icon className="w-8 h-8 text-white" />
                 </div>
-                <h3 className="text-lg font-semibold text-white mb-2">{useCase.industry}</h3>
-                <p className="text-gray-300 text-sm">{useCase.description}</p>
+                <h3 className="text-lg font-semibold text-white mb-2">{agency.title}</h3>
+                <p className="text-gray-300 text-sm">{agency.description}</p>
               </div>
             ))}
           </div>
@@ -224,10 +222,10 @@ export default function HealthcareSolutions() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-white mb-4">
-              Why Choose Healthcare Solutions?
+              Why Choose Government Solutions?
             </h2>
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              Proven results and measurable impact for healthcare organizations
+              Proven results and measurable impact for government organizations
             </p>
           </div>
           
@@ -246,18 +244,18 @@ export default function HealthcareSolutions() {
       <div className="py-24">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-4xl font-bold text-white mb-6">
-            Ready to Transform Healthcare?
+            Ready to Modernize Government?
           </h2>
           <p className="text-xl text-gray-300 mb-8">
-            Join leading healthcare organizations that have already improved patient care with our solutions
+            Join leading government organizations that have already transformed their operations with our solutions
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="bg-gradient-to-r from-red-600 to-pink-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-red-700 hover:to-pink-700 transition-all duration-200">
+            <button className="bg-gradient-to-r from-green-600 to-emerald-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-green-700 hover:to-emerald-700 transition-all duration-200">
               Contact Sales
             </button>
-              <button className="border border-gray-600 text-white px-8 py-4 rounded-lg font-semibold hover:bg-gray-800 transition-all duration-200">
-                Download Brochure
-              </button>
+            <button className="border border-gray-600 text-white px-8 py-4 rounded-lg font-semibold hover:bg-gray-800 transition-all duration-200">
+              Download Brochure
+            </button>
           </div>
         </div>
       </div>
