@@ -57,28 +57,25 @@ import {
 } from 'lucide-react';
 import { SEO } from '../components/SEO';
 
-export default function Services() {
+export default function InnovativeServices2025() {
   const [activeCategory, setActiveCategory] = useState('all');
   const [searchTerm, setSearchTerm] = useState('');
   const [sortBy, setSortBy] = useState('rating');
   const [currentPage, setCurrentPage] = useState(1);
   const [itemsPerPage] = useState(12);
 
-  // Comprehensive services data
-  const services = [
+  // Mock data for innovative services 2025
+  const innovativeServices = [
     {
       id: 1,
       name: "AI-Powered Business Intelligence Suite",
-      category: "AI & Business Intelligence",
+      category: "AI & Analytics",
       description: "Advanced business intelligence platform powered by machine learning algorithms for predictive analytics and data-driven decision making.",
       price: "$2,999/month",
       rating: 4.9,
       features: ["Predictive Analytics", "Real-time Dashboards", "Custom Reports", "API Integration"],
       icon: Brain,
-      color: "from-purple-500 to-pink-500",
-      marketPrice: "$4,500/month",
-      competitors: ["Tableau", "Power BI", "Qlik"],
-      roi: "300% in 12 months"
+      color: "from-purple-500 to-pink-500"
     },
     {
       id: 2,
@@ -89,38 +86,29 @@ export default function Services() {
       rating: 4.8,
       features: ["Quantum Algorithms", "Hybrid Classical-Quantum", "Industry Solutions", "Expert Support"],
       icon: Cpu,
-      color: "from-blue-500 to-cyan-500",
-      marketPrice: "$8,000/month",
-      competitors: ["IBM Quantum", "Google Quantum", "Microsoft Azure Quantum"],
-      roi: "500% in 18 months"
+      color: "from-blue-500 to-cyan-500"
     },
     {
       id: 3,
       name: "Blockchain Supply Chain Tracker",
-      category: "Blockchain & Web3",
+      category: "Blockchain",
       description: "Transparent and secure supply chain tracking using blockchain technology for end-to-end visibility.",
       price: "$1,999/month",
       rating: 4.7,
       features: ["Real-time Tracking", "Smart Contracts", "Compliance Reporting", "Mobile App"],
       icon: Database,
-      color: "from-green-500 to-emerald-500",
-      marketPrice: "$3,200/month",
-      competitors: ["IBM Blockchain", "Hyperledger", "Ethereum Enterprise"],
-      roi: "250% in 9 months"
+      color: "from-green-500 to-emerald-500"
     },
     {
       id: 4,
       name: "IoT Edge Computing Hub",
-      category: "IoT & Edge Computing",
+      category: "IoT & Edge",
       description: "Intelligent edge computing platform for IoT devices with real-time processing and analytics capabilities.",
       price: "$3,499/month",
       rating: 4.6,
       features: ["Edge AI", "Device Management", "Data Analytics", "Security"],
       icon: Network,
-      color: "from-orange-500 to-red-500",
-      marketPrice: "$5,500/month",
-      competitors: ["AWS IoT", "Azure IoT", "Google Cloud IoT"],
-      roi: "400% in 15 months"
+      color: "from-orange-500 to-red-500"
     },
     {
       id: 5,
@@ -131,128 +119,32 @@ export default function Services() {
       rating: 4.9,
       features: ["Threat Detection", "Automated Response", "Compliance", "24/7 Monitoring"],
       icon: Shield,
-      color: "from-red-500 to-pink-500",
-      marketPrice: "$6,800/month",
-      competitors: ["CrowdStrike", "SentinelOne", "Carbon Black"],
-      roi: "600% in 12 months"
+      color: "from-red-500 to-pink-500"
     },
     {
       id: 6,
       name: "Metaverse Development Studio",
-      category: "AI & Metaverse",
+      category: "Metaverse",
       description: "Complete metaverse development platform for creating immersive virtual experiences and digital assets.",
       price: "$6,999/month",
       rating: 4.8,
       features: ["3D Modeling", "VR/AR Support", "Asset Management", "Multi-platform"],
       icon: Globe,
-      color: "from-indigo-500 to-purple-500",
-      marketPrice: "$10,000/month",
-      competitors: ["Unity", "Unreal Engine", "Roblox Studio"],
-      roi: "800% in 24 months"
-    },
-    {
-      id: 7,
-      name: "AI Healthcare Analytics Platform",
-      category: "AI & Healthcare",
-      description: "Advanced healthcare analytics platform using AI for patient care optimization and medical research.",
-      price: "$3,999/month",
-      rating: 4.9,
-      features: ["Patient Analytics", "Drug Discovery", "Clinical Trials", "HIPAA Compliant"],
-      icon: Heart,
-      color: "from-red-500 to-pink-500",
-      marketPrice: "$6,200/month",
-      competitors: ["Cerner", "Epic", "Allscripts"],
-      roi: "450% in 18 months"
-    },
-    {
-      id: 8,
-      name: "Digital Twin Platform",
-      category: "Digital Twin",
-      description: "Comprehensive digital twin platform for creating virtual replicas of physical systems and processes.",
-      price: "$4,999/month",
-      rating: 4.7,
-      features: ["3D Modeling", "Real-time Sync", "Predictive Maintenance", "IoT Integration"],
-      icon: Globe2,
-      color: "from-green-500 to-emerald-500",
-      marketPrice: "$7,500/month",
-      competitors: ["Siemens", "GE Digital", "PTC"],
-      roi: "350% in 15 months"
-    },
-    {
-      id: 9,
-      name: "Cloud DevOps Automation",
-      category: "Cloud & DevOps",
-      description: "Automated cloud infrastructure management and deployment platform for modern applications.",
-      price: "$2,499/month",
-      rating: 4.8,
-      features: ["CI/CD Pipeline", "Infrastructure as Code", "Monitoring", "Auto-scaling"],
-      icon: Cloud,
-      color: "from-blue-500 to-cyan-500",
-      marketPrice: "$4,000/month",
-      competitors: ["GitLab", "Jenkins", "CircleCI"],
-      roi: "400% in 12 months"
-    },
-    {
-      id: 10,
-      name: "AI Legal Document Analysis",
-      category: "AI & Legal Tech",
-      description: "Intelligent legal document analysis platform using NLP and AI for contract review and legal research.",
-      price: "$3,299/month",
-      rating: 4.8,
-      features: ["Contract Analysis", "Legal Research", "Compliance Check", "Risk Assessment"],
-      icon: Scale,
-      color: "from-indigo-500 to-purple-500",
-      marketPrice: "$5,200/month",
-      competitors: ["LexisNexis", "Westlaw", "Thomson Reuters"],
-      roi: "300% in 12 months"
-    },
-    {
-      id: 11,
-      name: "AI Financial Trading Platform",
-      category: "AI & FinTech",
-      description: "Advanced AI-powered financial trading platform with predictive analytics and automated trading strategies.",
-      price: "$7,999/month",
-      rating: 4.9,
-      features: ["Algorithmic Trading", "Risk Management", "Portfolio Optimization", "Real-time Data"],
-      icon: TrendingUp,
-      color: "from-green-500 to-emerald-500",
-      marketPrice: "$12,000/month",
-      competitors: ["Bloomberg Terminal", "Refinitiv", "FactSet"],
-      roi: "1000% in 24 months"
-    },
-    {
-      id: 12,
-      name: "Space Technology Solutions",
-      category: "Space Technology",
-      description: "Cutting-edge space technology solutions for satellite operations, space debris tracking, and space exploration.",
-      price: "$8,999/month",
-      rating: 4.9,
-      features: ["Satellite Operations", "Space Debris Tracking", "Mission Planning", "Ground Control"],
-      icon: Rocket,
-      color: "from-indigo-500 to-purple-500",
-      marketPrice: "$15,000/month",
-      competitors: ["SpaceX", "Blue Origin", "Virgin Galactic"],
-      roi: "1200% in 36 months"
+      color: "from-indigo-500 to-purple-500"
     }
   ];
 
   const categories = [
-    { id: 'all', name: 'All Services', icon: Star, count: services.length },
-    { id: 'AI & Business Intelligence', name: 'AI & Business Intelligence', icon: '🤖', count: services.filter(s => s.category === 'AI & Business Intelligence').length },
-    { id: 'Quantum Computing', name: 'Quantum Computing', icon: '⚛️', count: services.filter(s => s.category === 'Quantum Computing').length },
-    { id: 'Blockchain & Web3', name: 'Blockchain & Web3', icon: '🔗', count: services.filter(s => s.category === 'Blockchain & Web3').length },
-    { id: 'IoT & Edge Computing', name: 'IoT & Edge Computing', icon: '🌐', count: services.filter(s => s.category === 'IoT & Edge Computing').length },
-    { id: 'Cybersecurity', name: 'Cybersecurity', icon: '🛡️', count: services.filter(s => s.category === 'Cybersecurity').length },
-    { id: 'AI & Metaverse', name: 'AI & Metaverse', icon: '🌍', count: services.filter(s => s.category === 'AI & Metaverse').length },
-    { id: 'AI & Healthcare', name: 'AI & Healthcare', icon: '🏥', count: services.filter(s => s.category === 'AI & Healthcare').length },
-    { id: 'Digital Twin', name: 'Digital Twin', icon: '🔄', count: services.filter(s => s.category === 'Digital Twin').length },
-    { id: 'Cloud & DevOps', name: 'Cloud & DevOps', icon: '☁️', count: services.filter(s => s.category === 'Cloud & DevOps').length },
-    { id: 'AI & Legal Tech', name: 'AI & Legal Tech', icon: '⚖️', count: services.filter(s => s.category === 'AI & Legal Tech').length },
-    { id: 'AI & FinTech', name: 'AI & FinTech', icon: '💰', count: services.filter(s => s.category === 'AI & FinTech').length },
-    { id: 'Space Technology', name: 'Space Technology', icon: '🚀', count: services.filter(s => s.category === 'Space Technology').length }
+    { id: 'all', name: 'All Services', icon: Star },
+    { id: 'ai-analytics', name: 'AI & Analytics', icon: Brain },
+    { id: 'quantum-computing', name: 'Quantum Computing', icon: Cpu },
+    { id: 'blockchain', name: 'Blockchain', icon: Database },
+    { id: 'iot-edge', name: 'IoT & Edge', icon: Network },
+    { id: 'cybersecurity', name: 'Cybersecurity', icon: Shield },
+    { id: 'metaverse', name: 'Metaverse', icon: Globe }
   ];
 
-  const filteredServices = services.filter(service => {
+  const filteredServices = innovativeServices.filter(service => {
     if (activeCategory !== 'all' && service.category !== activeCategory) return false;
     if (searchTerm && !service.name.toLowerCase().includes(searchTerm.toLowerCase())) return false;
     return true;
@@ -262,7 +154,6 @@ export default function Services() {
     switch (sortBy) {
       case 'rating': return b.rating - a.rating;
       case 'price': return parseFloat(a.price.replace(/[^0-9.]/g, '')) - parseFloat(b.price.replace(/[^0-9.]/g, ''));
-      case 'reviews': return b.rating - a.rating;
       case 'name': return a.name.localeCompare(b.name);
       default: return 0;
     }
@@ -275,8 +166,8 @@ export default function Services() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO 
-        title="Innovative Services - Zion Tech Group"
-        description="Discover cutting-edge innovative services including AI, quantum computing, blockchain, IoT, cybersecurity, and more. Transform your business with Zion Tech Group."
+        title="Innovative Services 2025 - Zion Tech Group"
+        description="Discover cutting-edge innovative services for 2025 including AI, quantum computing, blockchain, IoT, cybersecurity, and metaverse solutions."
       />
       
       {/* Hero Section */}
@@ -292,7 +183,7 @@ export default function Services() {
             >
               Innovative Services
               <span className="block text-transparent bg-clip-text bg-gradient-to-r from-zion-cyan to-zion-blue">
-                That Transform
+                2025
               </span>
             </motion.h1>
             <motion.p 
@@ -359,8 +250,8 @@ export default function Services() {
                       : 'bg-slate-700/50 text-slate-300 hover:bg-slate-600/50'
                   }`}
                 >
-                  <span>{category.icon}</span>
-                  {category.name} ({category.count})
+                  <category.icon className="w-4 h-4" />
+                  {category.name}
                 </button>
               ))}
             </div>
@@ -375,7 +266,6 @@ export default function Services() {
               >
                 <option value="rating">Rating</option>
                 <option value="price">Price</option>
-                <option value="reviews">Reviews</option>
                 <option value="name">Name</option>
               </select>
             </div>
@@ -414,7 +304,6 @@ export default function Services() {
 
               <div className="mb-4">
                 <span className="text-2xl font-bold text-zion-cyan">{service.price}</span>
-                <span className="text-sm text-slate-400 ml-2">vs {service.marketPrice}</span>
               </div>
 
               <div className="mb-4">
@@ -433,17 +322,6 @@ export default function Services() {
                       +{service.features.length - 3} more
                     </span>
                   )}
-                </div>
-              </div>
-
-              <div className="mb-4">
-                <div className="flex items-center justify-between text-sm">
-                  <span className="text-slate-400">ROI:</span>
-                  <span className="text-green-400 font-medium">{service.roi}</span>
-                </div>
-                <div className="flex items-center justify-between text-sm">
-                  <span className="text-slate-400">Competitors:</span>
-                  <span className="text-slate-300">{service.competitors.slice(0, 2).join(', ')}</span>
                 </div>
               </div>
 
@@ -512,7 +390,7 @@ export default function Services() {
           className="text-center bg-gradient-to-r from-zion-cyan/10 to-zion-blue/10 rounded-3xl border border-zion-cyan/20 p-12"
         >
           <h2 className="text-4xl font-bold text-white mb-4">
-            Ready to Transform Your Business?
+            Ready to Innovate?
           </h2>
           <p className="text-xl text-slate-300 max-w-3xl mx-auto mb-8">
             Join the future of technology with our innovative services. 
