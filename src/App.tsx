@@ -1,7 +1,8 @@
-import React, { Suspense } from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import React, { Suspense, useState } from 'react';
+import { Routes, Route } from 'react-router-dom';
 import { AppHeader } from './layout/AppHeader';
-import { EnhancedFuturisticFooter as Footer } from './components/EnhancedFuturisticFooter';
+import { Sidebar } from './components/Sidebar';
+import { EnhancedFuturisticFooter } from './components/EnhancedFuturisticFooter';
 import { ChatAssistant } from './components/ChatAssistant';
 import { LoadingSpinner } from './components/ui/LoadingSpinner';
 import { EnhancedSEO } from './components/EnhancedSEO';
@@ -26,6 +27,7 @@ const RequestQuote = React.lazy(() => import('./pages/RequestQuote'));
 const Dashboard = React.lazy(() => import('./pages/Dashboard'));
 const Login = React.lazy(() => import('./pages/Login'));
 const FAQ = React.lazy(() => import('./pages/FAQ'));
+const Help = React.lazy(() => import('./pages/Help'));
 const Privacy = React.lazy(() => import('./pages/Privacy'));
 const Terms = React.lazy(() => import('./pages/Terms'));
 const Cookies = React.lazy(() => import('./pages/Cookies'));
@@ -40,6 +42,10 @@ const Demo = React.lazy(() => import('./pages/Demo'));
 
 // Import real pages
 const Careers = React.lazy(() => import('./pages/Careers'));
+const Team = React.lazy(() => import('./pages/Team'));
+const Press = React.lazy(() => import('./pages/Press'));
+const News = React.lazy(() => import('./pages/News'));
+const Events = React.lazy(() => import('./pages/Events'));
 const Marketplace = React.lazy(() => import('./pages/Marketplace'));
 const ComprehensiveServicesShowcase2026 = React.lazy(() => import('./pages/ComprehensiveServicesShowcase2026'));
 const ComprehensivePricingGuide2026 = React.lazy(() => import('./pages/ComprehensivePricingGuide2026'));
@@ -100,14 +106,81 @@ const AIHealthcarePredictiveAnalytics = React.lazy(() => import('./pages/service
 const AIFinancialTradingRiskManagement = React.lazy(() => import('./pages/services/AIFinancialTradingRiskManagement'));
 const ComprehensiveAIServicesShowcase2025 = React.lazy(() => import('./pages/ComprehensiveAIServicesShowcase2025'));
 
+// Additional service imports
+const AIServices = React.lazy(() => import('./pages/AIServices'));
+const ITServices = React.lazy(() => import('./pages/ITServices'));
+const MicroSaaS = React.lazy(() => import('./pages/MicroSaaS'));
+const ServicesOverview = React.lazy(() => import('./pages/ServicesOverview'));
+const ServicesCatalog = React.lazy(() => import('./pages/ServicesCatalog'));
+const ServicesComparisonPage = React.lazy(() => import('./pages/ServicesComparisonPage'));
+const ComprehensiveServicesLanding2025 = React.lazy(() => import('./pages/ComprehensiveServicesLanding2025'));
+const ComprehensiveServicesLanding2028 = React.lazy(() => import('./pages/ComprehensiveServicesLanding2028'));
+const InnovativeServicesShowcase2025 = React.lazy(() => import('./pages/InnovativeServicesShowcase2025'));
+const InnovativeServicesShowcase2028 = React.lazy(() => import('./pages/InnovativeServicesShowcase2028'));
+const RevolutionaryServicesShowcase2030 = React.lazy(() => import('./pages/RevolutionaryServicesShowcase2030'));
+const ComprehensivePricingGuide2027 = React.lazy(() => import('./pages/ComprehensivePricingGuide2027'));
+const ComprehensivePricingGuide2028 = React.lazy(() => import('./pages/ComprehensivePricingGuide2028'));
+const ComprehensivePricingGuide2030 = React.lazy(() => import('./pages/ComprehensivePricingGuide2030'));
+const PricingGuide = React.lazy(() => import('./pages/PricingGuide'));
+const Talent = React.lazy(() => import('./pages/Talent'));
+const Equipment = React.lazy(() => import('./pages/Equipment'));
+const ITOnsiteServices = React.lazy(() => import('./pages/ITOnsiteServices'));
+const Sitemap = React.lazy(() => import('./pages/Sitemap'));
+const Signup = React.lazy(() => import('./pages/Signup'));
+const Status = React.lazy(() => import('./pages/Status'));
+
+// Service imports
+const CloudDevOps = React.lazy(() => import('./pages/services/CloudDevOps'));
+const DataAnalytics = React.lazy(() => import('./pages/services/DataAnalytics'));
+const IoTEdge = React.lazy(() => import('./pages/services/IoTEdge'));
+const BlockchainEnterpriseSolutions = React.lazy(() => import('./pages/services/BlockchainEnterpriseSolutions'));
+const HealthcareTech = React.lazy(() => import('./pages/services/HealthcareTech'));
+const IncidentResponsePlatform = React.lazy(() => import('./pages/services/IncidentResponsePlatform'));
+const ITInfrastructure = React.lazy(() => import('./pages/services/ITInfrastructure'));
+const AISalesCopilot = React.lazy(() => import('./pages/services/AISalesCopilot'));
+const CloudFinOpsOptimizer = React.lazy(() => import('./pages/services/CloudFinOpsOptimizer'));
+const AIComplianceAssistant = React.lazy(() => import('./pages/services/AIComplianceAssistant'));
+const AIAutoEmailResponder = React.lazy(() => import('./pages/services/AIAutoEmailResponder'));
+const CustomerFeedbackSurveys = React.lazy(() => import('./pages/services/CustomerFeedbackSurveys'));
+const AIComplianceCopilot = React.lazy(() => import('./pages/services/AIComplianceCopilot'));
+const LLMContentStudio = React.lazy(() => import('./pages/services/LLMContentStudio'));
+const FinOpsAdvisor = React.lazy(() => import('./pages/services/FinOpsAdvisor'));
+const VendorRiskManagement = React.lazy(() => import('./pages/services/VendorRiskManagement'));
+const AISEOOptimizer = React.lazy(() => import('./pages/services/AISEOOptimizer'));
+const SaaSChurnPredictor = React.lazy(() => import('./pages/services/SaaSChurnPredictor'));
+const AIIncidentPostmortems = React.lazy(() => import('./pages/services/AIIncidentPostmortems'));
+const AiLeadScoring = React.lazy(() => import('./pages/services/AiLeadScoring'));
+const WebsiteAiChatbot = React.lazy(() => import('./pages/services/WebsiteAiChatbot'));
+const RagSearch = React.lazy(() => import('./pages/services/RagSearch'));
+const MlopsPipeline = React.lazy(() => import('./pages/services/MlopsPipeline'));
+const EcommercePersonalization = React.lazy(() => import('./pages/services/EcommercePersonalization'));
+const ReturnsManagementSaaS = React.lazy(() => import('./pages/services/ReturnsManagementSaaS'));
+const APIMonitoringSaaS = React.lazy(() => import('./pages/services/APIMonitoringSaaS'));
+const GDPRCookieCompliance = React.lazy(() => import('./pages/services/GDPRCookieCompliance'));
+const AIProofreadingStudio = React.lazy(() => import('./pages/services/AIProofreadingStudio'));
+const DigitalTransformation = React.lazy(() => import('./pages/services/DigitalTransformation'));
+const ITConsulting = React.lazy(() => import('./pages/services/ITConsulting'));
+const GreenIT = React.lazy(() => import('./pages/services/GreenIT'));
+const AffiliateMarketingTracker = React.lazy(() => import('./pages/services/AffiliateMarketingTracker'));
+const UptimeSLAMonitor = React.lazy(() => import('./pages/services/UptimeSLAMonitor'));
+const SOC2ComplianceTracker = React.lazy(() => import('./pages/services/SOC2ComplianceTracker'));
+const EmployeeSchedulingSaaS = React.lazy(() => import('./pages/services/EmployeeSchedulingSaaS'));
+const AISupportHelpdesk = React.lazy(() => import('./pages/services/AISupportHelpdesk'));
+const MicroSAASSolutions = React.lazy(() => import('./pages/services/MicroSAASSolutions'));
+
 function App() {
+  const [isSidebarOpen, setIsSidebarOpen] = useState(true);
+
   return (
     <ErrorBoundary>
-      <Router>
-        <div className="min-h-screen bg-futuristic">
-          <AppHeader />
+      <div className="min-h-screen bg-futuristic">
+        <AppHeader onSidebarToggle={() => setIsSidebarOpen(!isSidebarOpen)} isSidebarOpen={isSidebarOpen} />
+        
+        {/* Main Content with Sidebar */}
+        <div className="flex flex-1">
+          <Sidebar isOpen={isSidebarOpen} onToggle={() => setIsSidebarOpen(!isSidebarOpen)} />
           
-          <main className="flex-1">
+          <main className="flex-1 min-h-screen">
             <Suspense fallback={<LoadingSpinner />}>
               <Routes>
                 {/* Core Routes */}
@@ -116,31 +189,111 @@ function App() {
                 <Route path="/contact" element={<Contact />} />
                 <Route path="/blog" element={<Blog />} />
                 <Route path="/faq" element={<FAQ />} />
+                <Route path="/help" element={<Help />} />
+                <Route path="/support" element={<Support />} />
+                <Route path="/community" element={<Community />} />
+                <Route path="/docs" element={<Documentation />} />
+                <Route path="/webinars" element={<Webinars />} />
+                <Route path="/white-papers" element={<WhitePapers />} />
+                <Route path="/case-studies" element={<CaseStudies />} />
+                <Route path="/training" element={<Training />} />
+                <Route path="/accessibility" element={<Accessibility />} />
+                <Route path="/services" element={<Services />} />
+                <Route path="/solutions" element={<Solutions />} />
+                <Route path="/security" element={<Security />} />
+                <Route path="/compliance" element={<Compliance />} />
+                <Route path="/careers" element={<Careers />} />
+                <Route path="/team" element={<Team />} />
+                <Route path="/press" element={<Press />} />
                 <Route path="/privacy" element={<Privacy />} />
                 <Route path="/terms" element={<Terms />} />
                 <Route path="/cookies" element={<Cookies />} />
-                <Route path="/partners" element={<Partners />} />
+                <Route path="/sitemap" element={<Sitemap />} />
+                <Route path="/signup" element={<Signup />} />
+                <Route path="/status" element={<Status />} />
+                <Route path="/demo" element={<Demo />} />
+                <Route path="/onsite-support" element={<OnsiteSupport />} />
                 <Route path="/pricing" element={<Pricing />} />
-                <Route path="/services" element={<Services />} />
-                <Route path="/solutions" element={<Solutions />} />
-                <Route path="/case-studies" element={<CaseStudies />} />
-                <Route path="/white-papers" element={<WhitePapers />} />
-                <Route path="/webinars" element={<Webinars />} />
+                <Route path="/pricing-guide" element={<PricingGuide />} />
+                <Route path="/services-catalog" element={<ServicesCatalog />} />
+                <Route path="/services-overview" element={<ServicesOverview />} />
+                <Route path="/services-comparison" element={<ServicesComparisonPage />} />
+                
+                {/* Comprehensive Services Routes */}
+                <Route path="/revolutionary-services-2030" element={<RevolutionaryServices2030 />} />
+                <Route path="/comprehensive-services" element={<ComprehensiveServicesLanding2025 />} />
+                <Route path="/revolutionary-services-showcase-2030" element={<RevolutionaryServicesShowcase2030 />} />
+                <Route path="/innovative-services-showcase-2025" element={<InnovativeServicesShowcase2025 />} />
+                <Route path="/comprehensive-services-landing-2025" element={<ComprehensiveServicesLanding2025 />} />
+                <Route path="/innovative-services-showcase-2028" element={<InnovativeServicesShowcase2028 />} />
+                <Route path="/pricing-guide-2028" element={<ComprehensivePricingGuide2028 />} />
+                <Route path="/comprehensive-services-landing-2028" element={<ComprehensiveServicesLanding2028 />} />
+                
+                {/* Service Category Routes */}
+                <Route path="/ai-services" element={<AIServices />} />
+                <Route path="/it-services" element={<ITServices />} />
+                <Route path="/micro-saas" element={<MicroSaaS />} />
+                <Route path="/services/affiliate-marketing-tracker" element={<AffiliateMarketingTracker />} />
+                <Route path="/services/uptime-sla-monitor" element={<UptimeSLAMonitor />} />
+                <Route path="/services/soc2-compliance-tracker" element={<SOC2ComplianceTracker />} />
+                <Route path="/services/employee-scheduling-saas" element={<EmployeeSchedulingSaaS />} />
+                <Route path="/services/ai-support-helpdesk" element={<AISupportHelpdesk />} />
+                <Route path="/services/micro-saas-solutions" element={<MicroSAASSolutions />} />
                 <Route path="/request-quote" element={<RequestQuote />} />
                 <Route path="/dashboard" element={<Dashboard />} />
                 <Route path="/login" element={<Login />} />
                 <Route path="/marketplace" element={<Marketplace />} />
-                <Route path="/community" element={<Community />} />
-                <Route path="/demo" element={<Demo />} />
+                <Route path="/partners" element={<Partners />} />
                 
-                {/* Service Routes - only for existing pages */}
+                {/* Additional Routes */}
+                <Route path="/talent" element={<Talent />} />
+                <Route path="/equipment" element={<Equipment />} />
+                <Route path="/it-onsite-services" element={<ITOnsiteServices />} />
+                <Route path="/news" element={<News />} />
+                <Route path="/events" element={<Events />} />
+                
+                {/* Service Routes */}
+                <Route path="/services/cloud-devops" element={<CloudDevOps />} />
                 <Route path="/services/digital-twin" element={<DigitalTwin />} />
-                <Route path="/services/iot-services" element={<IoTServices />} />
-                <Route path="/services/micro-saas" element={<MicroSAAS />} />
-                <Route path="/services/quantum-computing" element={<QuantumComputing />} />
-                <Route path="/services/space-tech" element={<SpaceTech />} />
+                <Route path="/services/data-analytics" element={<DataAnalytics />} />
+                <Route path="/services/iot-edge" element={<IoTEdge />} />
+                <Route path="/services/blockchain-enterprise-solutions" element={<BlockchainEnterpriseSolutions />} />
+                <Route path="/services/healthcare-tech" element={<HealthcareTech />} />
                 <Route path="/services/sustainability" element={<Sustainability />} />
                 <Route path="/services/zero-trust-network-architecture" element={<ZeroTrustNetworkArchitecture />} />
+                <Route path="/services/incident-response-platform" element={<IncidentResponsePlatform />} />
+                <Route path="/services/it-infrastructure" element={<ITInfrastructure />} />
+                <Route path="/services/ai-business-intelligence" element={<AIBusinessIntelligence />} />
+                <Route path="/services/ai-sales-copilot" element={<AISalesCopilot />} />
+                <Route path="/services/cloud-finops-optimizer" element={<CloudFinOpsOptimizer />} />
+                <Route path="/services/ai-compliance-assistant" element={<AIComplianceAssistant />} />
+                <Route path="/services/ai-auto-email-responder" element={<AIAutoEmailResponder />} />
+                <Route path="/services/mobile-feedback-surveys" element={<CustomerFeedbackSurveys />} />
+                <Route path="/services/ai-compliance-copilot" element={<AIComplianceCopilot />} />
+                <Route path="/services/llm-content-studio" element={<LLMContentStudio />} />
+                <Route path="/services/finops-advisor" element={<FinOpsAdvisor />} />
+                
+                {/* Micro SaaS Service Routes */}
+                <Route path="/services/vendor-risk-management" element={<VendorRiskManagement />} />
+                <Route path="/services/ai-seo-optimizer" element={<AISEOOptimizer />} />
+                <Route path="/services/saas-churn-predictor" element={<SaaSChurnPredictor />} />
+                <Route path="/services/ai-incident-postmortems" element={<AIIncidentPostmortems />} />
+                <Route path="/services/ai-lead-scoring" element={<AiLeadScoring />} />
+                <Route path="/services/website-ai-chatbot" element={<WebsiteAiChatbot />} />
+                <Route path="/services/rag-search" element={<RagSearch />} />
+                <Route path="/services/mlops-pipeline" element={<MlopsPipeline />} />
+                <Route path="/services/ecommerce-personalization" element={<EcommercePersonalization />} />
+                <Route path="/services/returns-management" element={<ReturnsManagementSaaS />} />
+                <Route path="/services/api-monitoring" element={<APIMonitoringSaaS />} />
+                <Route path="/services/gdpr-cookie-compliance" element={<GDPRCookieCompliance />} />
+                <Route path="/services/ai-proofreading-studio" element={<AIProofreadingStudio />} />
+                
+                {/* Additional Service Routes */}
+                <Route path="/services/digital-transformation" element={<DigitalTransformation />} />
+                <Route path="/services/it-consulting" element={<ITConsulting />} />
+                <Route path="/services/green-it" element={<GreenIT />} />
+                <Route path="/services/quantum-computing" element={<QuantumComputing />} />
+                <Route path="/services/space-tech" element={<SpaceTech />} />
                 
                 {/* Advanced AI Service Routes */}
                 <Route path="/services/ai-cybersecurity-suite" element={<AICybersecuritySuite />} />
@@ -187,22 +340,22 @@ function App() {
                 
                 {/* Service Pages */}
                 <Route path="/services/ai-business-intelligence" element={<AIBusinessIntelligence />} />
-
+                
                 {/* Catch all route */}
                 <Route path="*" element={<Home />} />
               </Routes>
             </Suspense>
           </main>
-          
-          <Footer />
-          <ChatAssistant />
-          <PerformanceOptimizer showMetrics={true} />
-          <EnhancedAccessibilityPanel />
-          <AdvancedPerformanceMonitor />
-          <InteractiveUserExperience />
-          <SecurityEnhancer />
         </div>
-      </Router>
+        
+        <EnhancedFuturisticFooter />
+        <ChatAssistant />
+        <PerformanceOptimizer showMetrics={true} />
+        <EnhancedAccessibilityPanel />
+        <AdvancedPerformanceMonitor />
+        <InteractiveUserExperience />
+        <SecurityEnhancer />
+      </div>
     </ErrorBoundary>
   );
 }

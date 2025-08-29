@@ -39,6 +39,7 @@ import {
   Target,
   TrendingUp,
   CheckCircle,
+<<<<<<< HEAD
   Award,
   Code,
   Truck,
@@ -68,6 +69,11 @@ import {
   ArrowUpRight,
   Play,
   MailIcon
+=======
+  ShoppingCart,
+  Building,
+  BookOpen
+>>>>>>> cursor/website-audit-content-update-and-deployment-2513
 } from 'lucide-react';
 
 export const EnhancedFuturisticFooter: React.FC = () => {
@@ -75,6 +81,7 @@ export const EnhancedFuturisticFooter: React.FC = () => {
 
   const footerSections = [
     {
+<<<<<<< HEAD
       title: 'AI & Analytics',
       icon: Brain,
       color: 'from-purple-600 to-indigo-600',
@@ -91,15 +98,48 @@ export const EnhancedFuturisticFooter: React.FC = () => {
       title: 'Cloud & DevOps',
       icon: Zap,
       color: 'from-blue-600 to-cyan-600',
+=======
+      title: 'Core Services',
+      icon: Rocket,
+      color: 'from-blue-600 to-cyan-600',
       links: [
-        { name: 'Micro SaaS Solutions', href: '/services/micro-saas-solutions' },
-        { name: 'Cloud FinOps Optimizer', href: '/services/cloud-finops-optimizer' },
-        { name: 'FinOps Advisor', href: '/services/finops-advisor' },
-        { name: 'Edge Computing Platform', href: '/services/edge-computing-platform' },
-        { name: 'Quantum AI Platform', href: '/services/quantum-ai-platform' }
+        { name: 'AI & Analytics', href: '/services/ai-business-intelligence' },
+        { name: 'Cloud & DevOps', href: '/services/cloud-devops' },
+        { name: 'Cybersecurity', href: '/services/ai-compliance-copilot' },
+        { name: 'Digital Twin', href: '/services/digital-twin' },
+        { name: 'IoT & Edge', href: '/services/iot-edge' },
+        { name: 'Micro SaaS', href: '/services/micro-saas-solutions' }
       ]
     },
     {
+      title: 'Innovative Solutions',
+      icon: Star,
+      color: 'from-purple-600 to-pink-600',
+      links: [
+        { name: 'Innovative Services 2025', href: '/innovative-services-showcase-2025' },
+        { name: 'Revolutionary Services 2030', href: '/revolutionary-services-2030' },
+        { name: 'Comprehensive Services 2028', href: '/comprehensive-services-landing-2028' },
+        { name: 'AI Sales Automation', href: '/innovative-services-showcase-2025' },
+        { name: 'AI Customer Support', href: '/innovative-services-showcase-2025' },
+        { name: 'AI Financial Analytics', href: '/innovative-services-showcase-2025' }
+      ]
+    },
+    {
+      title: 'Company',
+      icon: Building,
+      color: 'from-green-600 to-emerald-600',
+>>>>>>> cursor/website-audit-content-update-and-deployment-2513
+      links: [
+        { name: 'About Us', href: '/about' },
+        { name: 'Our Team', href: '/team' },
+        { name: 'Careers', href: '/careers' },
+        { name: 'Partners', href: '/partners' },
+        { name: 'News & Press', href: '/news' },
+        { name: 'Case Studies', href: '/case-studies' }
+      ]
+    },
+    {
+<<<<<<< HEAD
       title: 'IoT & Digital Solutions',
       icon: Rocket,
       color: 'from-green-600 to-emerald-600',
@@ -161,6 +201,18 @@ export const EnhancedFuturisticFooter: React.FC = () => {
         { name: 'Cookie Policy', href: '/cookies' },
         { name: 'Security', href: '/security' },
         { name: 'Compliance', href: '/compliance' }
+=======
+      title: 'Resources & Support',
+      icon: BookOpen,
+      color: 'from-orange-600 to-red-600',
+      links: [
+        { name: 'Help Center', href: '/help' },
+        { name: 'Blog', href: '/blog' },
+        { name: 'Webinars', href: '/webinars' },
+        { name: 'White Papers', href: '/white-papers' },
+        { name: 'FAQ', href: '/faq' },
+        { name: 'Documentation', href: '/help' }
+>>>>>>> cursor/website-audit-content-update-and-deployment-2513
       ]
     }
   ];
