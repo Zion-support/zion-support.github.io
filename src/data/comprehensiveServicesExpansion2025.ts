@@ -710,3 +710,570 @@ export const SERVICES_BY_PRICE = {
   "Mid-range": COMPREHENSIVE_SERVICES_EXPANSION_2025.filter(service => service.price >= 2000 && service.price < 5000),
   "Enterprise": COMPREHENSIVE_SERVICES_EXPANSION_2025.filter(service => service.price >= 5000)
 };
+
+// Additional specialized services for 2025
+export const SPECIALIZED_SERVICES_2025 = [
+  // AI-Powered Business Intelligence & Analytics
+  {
+    id: 'ai-business-intelligence-2025',
+    title: 'AI-Powered Business Intelligence Platform',
+    description: 'Advanced business intelligence platform powered by artificial intelligence, providing real-time analytics, predictive insights, and automated reporting for data-driven decision making.',
+    category: 'AI & Business Intelligence',
+    subcategory: 'Analytics & Reporting',
+    price: 2999,
+    currency: 'USD',
+    tags: ['AI', 'Business Intelligence', 'Analytics', 'Predictive Insights', 'Real-time Data'],
+    author: 'Zion Tech Group',
+    images: ['/images/services/ai-bi-platform.jpg'],
+    createdAt: '2025-01-15',
+    rating: 4.9,
+    reviewCount: 127,
+    featured: true,
+    location: 'Global',
+    availability: 'Available',
+    aiScore: 95,
+    marketPrice: 4500,
+    savings: 33,
+    features: [
+      'Real-time data processing and analytics',
+      'AI-powered predictive modeling',
+      'Automated report generation',
+      'Interactive dashboards and visualizations',
+      'Multi-source data integration',
+      'Advanced machine learning algorithms',
+      'Natural language query interface',
+      'Mobile-responsive design',
+      'API integration capabilities',
+      'Custom alerting and notifications'
+    ],
+    benefits: [
+      'Reduce decision-making time by 60%',
+      'Increase operational efficiency by 40%',
+      'Identify new business opportunities',
+      'Optimize resource allocation',
+      'Improve customer insights and satisfaction'
+    ]
+  },
+
+  // Quantum Computing Solutions
+  {
+    id: 'quantum-computing-solutions-2025',
+    title: 'Quantum Computing Solutions & Optimization',
+    description: 'Cutting-edge quantum computing solutions for complex optimization problems, cryptography, and scientific research applications.',
+    category: 'Quantum Computing',
+    subcategory: 'Optimization & Research',
+    price: 15000,
+    currency: 'USD',
+    tags: ['Quantum Computing', 'Optimization', 'Cryptography', 'Scientific Research', 'High Performance'],
+    author: 'Zion Tech Group',
+    images: ['/images/services/quantum-computing.jpg'],
+    createdAt: '2025-01-20',
+    rating: 4.8,
+    reviewCount: 89,
+    featured: true,
+    location: 'Global',
+    availability: 'Available',
+    aiScore: 98,
+    marketPrice: 25000,
+    savings: 40,
+    features: [
+      'Quantum algorithm development',
+      'Optimization problem solving',
+      'Cryptographic security enhancement',
+      'Scientific simulation capabilities',
+      'High-performance computing integration',
+      'Custom quantum circuit design',
+      'Error correction and mitigation',
+      'Scalable quantum architecture',
+      'Research collaboration support',
+      'Training and certification programs'
+    ],
+    benefits: [
+      'Solve previously intractable problems',
+      'Exponential speedup for specific algorithms',
+      'Enhanced security for critical systems',
+      'Accelerate scientific discoveries',
+      'Future-proof technology investment'
+    ]
+  },
+
+  // Blockchain & Web3 Development
+  {
+    id: 'blockchain-web3-development-2025',
+    title: 'Blockchain & Web3 Development Platform',
+    description: 'Comprehensive blockchain and Web3 development platform for creating decentralized applications, smart contracts, and digital asset solutions.',
+    category: 'Blockchain & Web3',
+    subcategory: 'Development & DeFi',
+    price: 3999,
+    currency: 'USD',
+    tags: ['Blockchain', 'Web3', 'Smart Contracts', 'DeFi', 'NFTs', 'DApps'],
+    author: 'Zion Tech Group',
+    images: ['/images/services/blockchain-web3.jpg'],
+    createdAt: '2025-01-25',
+    rating: 4.7,
+    reviewCount: 156,
+    featured: true,
+    location: 'Global',
+    availability: 'Available',
+    aiScore: 92,
+    marketPrice: 6000,
+    savings: 33,
+    features: [
+      'Multi-blockchain support (Ethereum, Polygon, Solana)',
+      'Smart contract development and auditing',
+      'DeFi protocol integration',
+      'NFT marketplace development',
+      'Decentralized application (DApp) creation',
+      'Web3 wallet integration',
+      'Cross-chain interoperability solutions',
+      'Security and compliance tools',
+      'Scalability optimization',
+      'Community governance features'
+    ],
+    benefits: [
+      'Reduce development time by 50%',
+      'Lower transaction costs',
+      'Enhanced security and transparency',
+      'Access to global markets',
+      'Innovative business models'
+    ]
+  },
+
+  // IoT & Edge Computing Platform
+  {
+    id: 'iot-edge-computing-2025',
+    title: 'IoT & Edge Computing Platform',
+    description: 'Comprehensive IoT and edge computing platform for real-time data processing, device management, and intelligent automation across industries.',
+    category: 'IoT & Edge Computing',
+    subcategory: 'Platform & Automation',
+    price: 2499,
+    currency: 'USD',
+    tags: ['IoT', 'Edge Computing', 'Real-time Processing', 'Device Management', 'Automation'],
+    author: 'Zion Tech Group',
+    images: ['/images/services/iot-edge-platform.jpg'],
+    createdAt: '2025-02-01',
+    rating: 4.6,
+    reviewCount: 203,
+    featured: true,
+    location: 'Global',
+    availability: 'Available',
+    aiScore: 89,
+    marketPrice: 4000,
+    savings: 38,
+    features: [
+      'Real-time data processing and analytics',
+      'Device management and monitoring',
+      'Edge AI and machine learning',
+      'Predictive maintenance capabilities',
+      'Scalable IoT infrastructure',
+      'Security and privacy controls',
+      'Integration with existing systems',
+      'Custom dashboard development',
+      'API and webhook support',
+      'Multi-cloud deployment options'
+    ],
+    benefits: [
+      'Reduce latency by 80%',
+      'Lower bandwidth costs',
+      'Improve operational efficiency',
+      'Enable real-time decision making',
+      'Scale IoT deployments easily'
+    ]
+  },
+
+  // Cybersecurity & Threat Intelligence
+  {
+    id: 'cybersecurity-threat-intelligence-2025',
+    title: 'Advanced Cybersecurity & Threat Intelligence',
+    description: 'Comprehensive cybersecurity solution with AI-powered threat detection, real-time monitoring, and proactive security measures.',
+    category: 'Cybersecurity',
+    subcategory: 'Threat Detection & Response',
+    price: 4999,
+    currency: 'USD',
+    tags: ['Cybersecurity', 'Threat Intelligence', 'AI Security', 'Real-time Monitoring', 'Incident Response'],
+    author: 'Zion Tech Group',
+    images: ['/images/services/cybersecurity-platform.jpg'],
+    createdAt: '2025-02-05',
+    rating: 4.9,
+    reviewCount: 178,
+    featured: true,
+    location: 'Global',
+    availability: 'Available',
+    aiScore: 96,
+    marketPrice: 8000,
+    savings: 38,
+    features: [
+      'AI-powered threat detection and analysis',
+      'Real-time security monitoring',
+      'Automated incident response',
+      'Vulnerability assessment and management',
+      'Security awareness training',
+      'Compliance and audit support',
+      '24/7 security operations center',
+      'Threat intelligence sharing',
+      'Penetration testing services',
+      'Security architecture consulting'
+    ],
+    benefits: [
+      'Reduce security incidents by 70%',
+      'Improve incident response time by 80%',
+      'Meet compliance requirements',
+      'Protect against advanced threats',
+      'Reduce security operational costs'
+    ]
+  },
+
+  // Healthcare AI & Telemedicine Platform
+  {
+    id: 'healthcare-ai-telemedicine-2025',
+    title: 'Healthcare AI & Telemedicine Platform',
+    description: 'Comprehensive healthcare platform combining AI-powered diagnostics, telemedicine capabilities, and patient management systems.',
+    category: 'Healthcare & Biotechnology',
+    subcategory: 'AI Diagnostics & Telemedicine',
+    price: 5999,
+    currency: 'USD',
+    tags: ['Healthcare AI', 'Telemedicine', 'Diagnostics', 'Patient Management', 'HIPAA Compliant'],
+    author: 'Zion Tech Group',
+    images: ['/images/services/healthcare-ai-platform.jpg'],
+    createdAt: '2025-02-10',
+    rating: 4.8,
+    reviewCount: 234,
+    featured: true,
+    location: 'Global',
+    availability: 'Available',
+    aiScore: 94,
+    marketPrice: 10000,
+    savings: 40,
+    features: [
+      'AI-powered diagnostic assistance',
+      'Secure video consultations',
+      'Electronic health records (EHR)',
+      'Patient appointment scheduling',
+      'Prescription management',
+      'Medical image analysis',
+      'Health monitoring and alerts',
+      'HIPAA compliance and security',
+      'Integration with medical devices',
+      'Analytics and reporting tools'
+    ],
+    benefits: [
+      'Improve diagnostic accuracy by 30%',
+      'Reduce patient wait times by 60%',
+      'Lower healthcare costs',
+      'Enhance patient experience',
+      'Streamline administrative processes'
+    ]
+  },
+
+  // Financial Technology & RegTech
+  {
+    id: 'fintech-regtech-2025',
+    title: 'Financial Technology & Regulatory Technology',
+    description: 'Comprehensive fintech and regtech solutions for financial institutions, including compliance automation, risk management, and digital banking.',
+    category: 'Financial Technology',
+    subcategory: 'Banking & Compliance',
+    price: 7999,
+    currency: 'USD',
+    tags: ['FinTech', 'RegTech', 'Compliance', 'Risk Management', 'Digital Banking'],
+    author: 'Zion Tech Group',
+    images: ['/images/services/fintech-regtech.jpg'],
+    createdAt: '2025-02-15',
+    rating: 4.7,
+    reviewCount: 167,
+    featured: true,
+    location: 'Global',
+    availability: 'Available',
+    aiScore: 91,
+    marketPrice: 12000,
+    savings: 33,
+    features: [
+      'Automated regulatory compliance',
+      'Risk assessment and management',
+      'Anti-money laundering (AML) detection',
+      'Know Your Customer (KYC) automation',
+      'Digital banking platform',
+      'Payment processing solutions',
+      'Fraud detection and prevention',
+      'Financial reporting and analytics',
+      'API integration capabilities',
+      'Multi-currency support'
+    ],
+    benefits: [
+      'Reduce compliance costs by 50%',
+      'Improve risk management efficiency',
+      'Enhance customer experience',
+      'Meet regulatory requirements',
+      'Increase operational efficiency'
+    ]
+  },
+
+  // Education & Learning Technology
+  {
+    id: 'education-learning-tech-2025',
+    title: 'AI-Powered Education & Learning Technology',
+    description: 'Innovative educational technology platform with AI-powered personalized learning, virtual classrooms, and adaptive assessment systems.',
+    category: 'Education & Learning',
+    subcategory: 'Personalized Learning & Virtual Classrooms',
+    price: 1999,
+    currency: 'USD',
+    tags: ['Education Technology', 'AI Learning', 'Virtual Classrooms', 'Personalized Learning', 'Assessment'],
+    author: 'Zion Tech Group',
+    images: ['/images/services/education-tech.jpg'],
+    createdAt: '2025-02-20',
+    rating: 4.6,
+    reviewCount: 189,
+    featured: true,
+    location: 'Global',
+    availability: 'Available',
+    aiScore: 88,
+    marketPrice: 3500,
+    savings: 43,
+    features: [
+      'AI-powered personalized learning paths',
+      'Virtual classroom and collaboration tools',
+      'Adaptive assessment and testing',
+      'Content creation and management',
+      'Student progress tracking',
+      'Gamification and engagement features',
+      'Multi-language support',
+      'Mobile learning capabilities',
+      'Analytics and reporting',
+      'Integration with existing LMS'
+    ],
+    benefits: [
+      'Improve learning outcomes by 40%',
+      'Reduce administrative workload by 50%',
+      'Enhance student engagement',
+      'Provide personalized learning experiences',
+      'Scale educational programs easily'
+    ]
+  },
+
+  // Manufacturing & Industry 4.0
+  {
+    id: 'manufacturing-industry4-2025',
+    title: 'Smart Manufacturing & Industry 4.0 Solutions',
+    description: 'Comprehensive Industry 4.0 solutions for smart manufacturing, including IoT integration, predictive maintenance, and supply chain optimization.',
+    category: 'Manufacturing & Industry 4.0',
+    subcategory: 'Smart Manufacturing & Automation',
+    price: 8999,
+    currency: 'USD',
+    tags: ['Industry 4.0', 'Smart Manufacturing', 'IoT', 'Predictive Maintenance', 'Supply Chain'],
+    author: 'Zion Tech Group',
+    images: ['/images/services/smart-manufacturing.jpg'],
+    createdAt: '2025-02-25',
+    rating: 4.8,
+    reviewCount: 145,
+    featured: true,
+    location: 'Global',
+    availability: 'Available',
+    aiScore: 93,
+    marketPrice: 15000,
+    savings: 40,
+    features: [
+      'IoT sensor integration and monitoring',
+      'Predictive maintenance systems',
+      'Supply chain optimization',
+      'Quality control automation',
+      'Energy management and optimization',
+      'Production planning and scheduling',
+      'Real-time performance monitoring',
+      'Digital twin technology',
+      'Workforce safety systems',
+      'Sustainability tracking and reporting'
+    ],
+    benefits: [
+      'Reduce downtime by 60%',
+      'Improve production efficiency by 35%',
+      'Lower maintenance costs by 40%',
+      'Enhance product quality',
+      'Optimize resource utilization'
+    ]
+  },
+
+  // Energy & Sustainability Technology
+  {
+    id: 'energy-sustainability-tech-2025',
+    title: 'Energy & Sustainability Technology Platform',
+    description: 'Advanced energy management and sustainability platform for monitoring, optimizing, and reducing environmental impact across organizations.',
+    category: 'Energy & Sustainability',
+    subcategory: 'Energy Management & Environmental Impact',
+    price: 3499,
+    currency: 'USD',
+    tags: ['Energy Management', 'Sustainability', 'Environmental Impact', 'Renewable Energy', 'Carbon Tracking'],
+    author: 'Zion Tech Group',
+    images: ['/images/services/energy-sustainability.jpg'],
+    createdAt: '2025-03-01',
+    rating: 4.7,
+    reviewCount: 198,
+    featured: true,
+    location: 'Global',
+    availability: 'Available',
+    aiScore: 90,
+    marketPrice: 6000,
+    savings: 42,
+    features: [
+      'Real-time energy consumption monitoring',
+      'Carbon footprint tracking and reporting',
+      'Renewable energy integration',
+      'Energy efficiency optimization',
+      'Sustainability goal setting and tracking',
+      'Environmental compliance reporting',
+      'Smart grid integration',
+      'Predictive energy analytics',
+      'Green building certification support',
+      'Stakeholder engagement tools'
+    ],
+    benefits: [
+      'Reduce energy costs by 30%',
+      'Lower carbon emissions by 40%',
+      'Meet sustainability goals',
+      'Improve regulatory compliance',
+      'Enhance brand reputation'
+    ]
+  }
+];
+
+// Export all services combined
+export const ALL_COMPREHENSIVE_SERVICES_2025 = [
+  ...COMPREHENSIVE_SERVICES_EXPANSION_2025,
+  ...SPECIALIZED_SERVICES_2025
+];
+
+// Enhanced service categories with descriptions
+export const ENHANCED_SERVICE_CATEGORIES = [
+  {
+    name: 'AI & Machine Learning',
+    description: 'Cutting-edge artificial intelligence and machine learning solutions',
+    icon: 'Brain',
+    color: 'from-purple-500 to-pink-500',
+    serviceCount: 8
+  },
+  {
+    name: 'Cloud & Infrastructure',
+    description: 'Scalable cloud solutions and enterprise infrastructure',
+    icon: 'Cloud',
+    color: 'from-blue-500 to-cyan-500',
+    serviceCount: 6
+  },
+  {
+    name: 'Cybersecurity',
+    description: 'Advanced security solutions and threat intelligence',
+    icon: 'Shield',
+    color: 'from-green-500 to-blue-500',
+    serviceCount: 5
+  },
+  {
+    name: 'IoT & Edge Computing',
+    description: 'Internet of Things and edge computing platforms',
+    icon: 'Cpu',
+    color: 'from-blue-500 to-indigo-500',
+    serviceCount: 4
+  },
+  {
+    name: 'Blockchain & Web3',
+    description: 'Decentralized applications and blockchain solutions',
+    icon: 'Lock',
+    color: 'from-yellow-500 to-orange-500',
+    serviceCount: 3
+  },
+  {
+    name: 'Healthcare & Biotechnology',
+    description: 'AI-powered healthcare and medical technology',
+    icon: 'Heart',
+    color: 'from-red-500 to-pink-500',
+    serviceCount: 4
+  },
+  {
+    name: 'Financial Technology',
+    description: 'Innovative fintech and regulatory technology',
+    icon: 'DollarSign',
+    color: 'from-emerald-500 to-green-500',
+    serviceCount: 3
+  },
+  {
+    name: 'Education & Learning',
+    description: 'Educational technology and personalized learning',
+    icon: 'BookOpen',
+    color: 'from-indigo-500 to-purple-500',
+    serviceCount: 3
+  },
+  {
+    name: 'Manufacturing & Industry 4.0',
+    description: 'Smart manufacturing and industrial automation',
+    icon: 'Building',
+    color: 'from-orange-500 to-red-500',
+    serviceCount: 3
+  },
+  {
+    name: 'Energy & Sustainability',
+    description: 'Energy management and environmental sustainability',
+    icon: 'Leaf',
+    color: 'from-green-500 to-teal-500',
+    serviceCount: 3
+  }
+];
+
+// Enhanced pricing tiers with more options
+export const ENHANCED_PRICING_TIERS = [
+  {
+    name: 'Starter',
+    price: 299,
+    currency: 'USD',
+    description: 'Perfect for small businesses and startups',
+    features: [
+      'Basic service access',
+      'Email support',
+      'Standard features',
+      'Community forum access',
+      'Basic analytics'
+    ],
+    popular: false
+  },
+  {
+    name: 'Professional',
+    price: 999,
+    currency: 'USD',
+    description: 'Ideal for growing businesses',
+    features: [
+      'All Starter features',
+      'Priority support',
+      'Advanced features',
+      'Custom integrations',
+      'Advanced analytics',
+      'Training sessions'
+    ],
+    popular: true
+  },
+  {
+    name: 'Enterprise',
+    price: 2999,
+    currency: 'USD',
+    description: 'For large organizations',
+    features: [
+      'All Professional features',
+      '24/7 dedicated support',
+      'Custom development',
+      'White-label options',
+      'Advanced security',
+      'SLA guarantees',
+      'On-site training'
+    ],
+    popular: false
+  },
+  {
+    name: 'Custom',
+    price: 'Contact Us',
+    currency: 'USD',
+    description: 'Tailored solutions for unique requirements',
+    features: [
+      'Fully customized solution',
+      'Dedicated account manager',
+      'Custom integrations',
+      'Advanced security features',
+      'Training and certification',
+      'Ongoing support and maintenance'
+    ],
+    popular: false
+  }
+];

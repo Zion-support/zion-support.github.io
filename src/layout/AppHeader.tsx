@@ -1,4 +1,4 @@
-import { ArrowRight, Atom, BookOpen, Brain, Building, Building2, ChevronDown, Cloud, Code, Cpu, DollarSign, FileText, Globe, HeartHandshake, Heart, HelpCircle, Leaf, Lock, Mail, MapPin, Menu, MessageCircle, PenTool, Phone, Rocket, Scale, Search, Settings, Shield, ShoppingCart, Star, Target, TrendingUp, Users, X, Zap } from 'lucide-react';
+import { ArrowRight, Atom, BookOpen, Brain, Building, Building2, ChevronDown, Cloud, Code, Cpu, DollarSign, FileText, Globe, HeartHandshake, Heart, HelpCircle, Leaf, Lock, Mail, MapPin, Menu, MessageSquare, PenTool, Phone, Rocket, Scale, Search, Settings, Shield, ShoppingCart, Star, Target, TrendingUp, Users, X, Zap, Database, BarChart3, Bot, Smartphone, Eye, Target, Server, HardDrive, Monitor, FileText as FileTextIcon, CheckCircle, GitBranch, Video } from 'lucide-react';
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { ThemeToggle } from '../components/ThemeToggle';
@@ -44,60 +44,53 @@ export function AppHeader() {
     { name: 'Contact', href: '/contact', current: false },
   ];
 
+  // Enhanced services with better categorization
   const services = [
-    { 
-      name: 'Innovative Micro SAAS 2025', 
-      href: '/innovative-micro-saas-services-2025', 
-      icon: Rocket, 
-      description: 'Cutting-edge AI Services',
-      featured: true,
-      color: 'from-purple-500 to-pink-500'
-    },
+    // AI & Machine Learning Services
     { 
       name: 'AI Business Intelligence', 
       href: '/services/ai-business-intelligence', 
       icon: Brain, 
       description: 'Machine Learning & Data Science',
+      category: 'AI & ML',
       featured: true,
       color: 'from-purple-500 to-cyan-500'
-    },
-    { 
-      name: 'AI Healthcare Platform', 
-      href: '/services/ai-healthcare-platform', 
-      icon: Heart, 
-      description: 'Medical AI & Diagnostics',
-      featured: true,
-      color: 'from-red-500 to-pink-500'
     },
     { 
       name: 'AI Content Creation', 
       href: '/services/ai-content-creation', 
       icon: PenTool, 
       description: 'Content Generation & Optimization',
+      category: 'AI & ML',
       featured: true,
       color: 'from-blue-500 to-indigo-500'
+    },
+    { 
+      name: 'AI Healthcare Platform', 
+      href: '/services/ai-healthcare-platform', 
+      icon: Heart, 
+      description: 'Medical AI & Diagnostics',
+      category: 'AI & ML',
+      featured: true,
+      color: 'from-red-500 to-pink-500'
     },
     { 
       name: 'AI Cybersecurity', 
       href: '/services/ai-cybersecurity', 
       icon: Shield, 
       description: 'AI-Powered Security',
+      category: 'AI & ML',
       featured: true,
       color: 'from-green-500 to-blue-500'
     },
+    
+    // Cloud & Infrastructure Services
     { 
-      name: 'Quantum Computing', 
-      href: '/services/quantum-computing', 
-      icon: Atom, 
-      description: 'Quantum AI & Optimization',
-      featured: true,
-      color: 'from-purple-500 to-pink-500'
-    },
-    { 
-      name: 'IoT Edge Computing', 
-      href: '/services/iot-edge-computing', 
-      icon: Cpu, 
-      description: 'IoT & Real-time Processing',
+      name: 'Cloud DevOps', 
+      href: '/services/cloud-devops', 
+      icon: Cloud, 
+      description: 'DevOps & Infrastructure',
+      category: 'Cloud & Infrastructure',
       featured: true,
       color: 'from-blue-500 to-cyan-500'
     },
@@ -106,191 +99,285 @@ export function AppHeader() {
       href: '/services/digital-twin', 
       icon: Globe, 
       description: 'Virtual Replicas & Simulation',
+      category: 'Cloud & Infrastructure',
       featured: true,
       color: 'from-green-500 to-emerald-500'
     },
     { 
-      name: 'Cloud DevOps', 
-      href: '/services/cloud-devops', 
-      icon: Cloud, 
-      description: 'DevOps & Infrastructure',
+      name: 'IT Infrastructure', 
+      href: '/services/it-infrastructure', 
+      icon: Server, 
+      description: 'Enterprise IT Solutions',
+      category: 'Cloud & Infrastructure',
       featured: true,
-      color: 'from-blue-500 to-cyan-500'
+      color: 'from-indigo-500 to-purple-500'
     },
+    
+    // Data & Analytics Services
     { 
-      name: 'FinTech Solutions', 
-      href: '/services', 
-      icon: DollarSign, 
-      description: 'AI-Powered Financial Services',
-      featured: true,
-      color: 'from-emerald-500 to-green-500'
-    },
-    { 
-      name: 'AI & Marketing', 
-      href: '/services', 
-      icon: TrendingUp, 
-      description: 'Automated Marketing & Analytics',
-      featured: true,
-      color: 'from-green-500 to-emerald-500'
-    },
-    { 
-      name: 'AI & Content', 
-      href: '/services', 
-      icon: FileText, 
-      description: 'Content Creation & Management',
+      name: 'Data Analytics', 
+      href: '/services/data-analytics', 
+      icon: BarChart3, 
+      description: 'Big Data & Analytics',
+      category: 'Data & Analytics',
       featured: true,
       color: 'from-orange-500 to-red-500'
     },
     { 
-      name: 'AI & Customer Support', 
-      href: '/services', 
+      name: 'Database Management', 
+      href: '/services/database-management', 
+      icon: Database, 
+      description: 'Database Solutions & Optimization',
+      category: 'Data & Analytics',
+      featured: true,
+      color: 'from-teal-500 to-green-500'
+    },
+    
+    // Emerging Technology Services
+    { 
+      name: 'Quantum Computing', 
+      href: '/services/quantum-computing', 
+      icon: Atom, 
+      description: 'Quantum AI & Optimization',
+      category: 'Emerging Tech',
+      featured: true,
+      color: 'from-purple-500 to-pink-500'
+    },
+    { 
+      name: 'IoT Edge Computing', 
+      href: '/services/iot-edge-computing', 
+      icon: Cpu, 
+      description: 'IoT & Real-time Processing',
+      category: 'Emerging Tech',
+      featured: true,
+      color: 'from-blue-500 to-cyan-500'
+    },
+    { 
+      name: 'Blockchain Solutions', 
+      href: '/services/blockchain', 
+      icon: Lock, 
+      description: 'Decentralized Applications',
+      category: 'Emerging Tech',
+      featured: true,
+      color: 'from-yellow-500 to-orange-500'
+    },
+    
+    // Business Solutions
+    { 
+      name: 'FinTech Solutions', 
+      href: '/services/fintech', 
+      icon: DollarSign, 
+      description: 'AI-Powered Financial Services',
+      category: 'Business Solutions',
+      featured: true,
+      color: 'from-emerald-500 to-green-500'
+    },
+    { 
+      name: 'AI Marketing Automation', 
+      href: '/services/ai-marketing', 
+      icon: TrendingUp, 
+      description: 'Automated Marketing & Analytics',
+      category: 'Business Solutions',
+      featured: true,
+      color: 'from-green-500 to-emerald-500'
+    },
+    { 
+      name: 'AI Customer Support', 
+      href: '/services/ai-support', 
       icon: MessageSquare, 
       description: '24/7 Support Automation',
+      category: 'Business Solutions',
       featured: true,
       color: 'from-blue-500 to-purple-500'
     },
     { 
-      name: 'AI & HR', 
-      href: '/services', 
+      name: 'AI HR Solutions', 
+      href: '/services/ai-hr', 
       icon: Users, 
       description: 'HR Automation & Analytics',
+      category: 'Business Solutions',
       featured: true,
       color: 'from-indigo-500 to-blue-500'
     },
-    { 
-      name: 'Digital Twin', 
-      href: '/services', 
-      icon: Cpu, 
-      description: 'Virtual Replication & Simulation',
-      featured: true,
-      color: 'from-blue-500 to-indigo-500'
-    },
-    { 
-      name: 'Sustainable Tech', 
-      href: '/services', 
-      icon: Leaf, 
-      description: 'Green Technology Solutions',
-      featured: true,
-      color: 'from-green-500 to-teal-500'
-    },
+    
+    // Specialized Services
     { 
       name: 'Micro SaaS Products', 
       href: '/services/micro-saas', 
       icon: ShoppingCart, 
       description: 'AI automations with transparent pricing',
+      category: 'Specialized',
       featured: true,
       color: 'from-orange-500 to-red-500'
+    },
+    { 
+      name: 'Sustainable Tech', 
+      href: '/services/sustainable-tech', 
+      icon: Leaf, 
+      description: 'Green Technology Solutions',
+      category: 'Specialized',
+      featured: true,
+      color: 'from-green-500 to-teal-500'
+    },
+    { 
+      name: 'Innovative Services 2025', 
+      href: '/innovative-services-2025', 
+      icon: Rocket, 
+      description: 'Cutting-edge AI Services',
+      category: 'Specialized',
+      featured: true,
+      color: 'from-purple-500 to-pink-500'
     },
     { 
       name: 'Revolutionary Services 2030', 
       href: '/revolutionary-services-2030', 
       icon: Rocket, 
       description: 'Future Technology Solutions',
+      category: 'Specialized',
       featured: true,
       color: 'from-indigo-500 to-purple-500'
     }
   ];
 
+  // Enhanced solutions with better categorization
   const solutions = [
     {
       name: 'Enterprise Solutions',
-      href: '/solutions',
+      href: '/solutions/enterprise',
       icon: Building2,
       description: 'Large-scale business transformations',
+      category: 'Enterprise',
       featured: true
     },
     {
-      name: 'SMB Solutions',
-      href: '/solutions',
+      name: 'SME Solutions',
+      href: '/solutions/sme',
       icon: Building,
-      description: 'Small to medium business growth',
-      featured: false
+      description: 'Small and medium business solutions',
+      category: 'SME',
+      featured: true
     },
     {
       name: 'Startup Solutions',
-      href: '/solutions',
+      href: '/solutions/startup',
       icon: Rocket,
-      description: 'Accelerate your startup growth',
-      featured: false
+      description: 'Innovation and growth solutions',
+      category: 'Startup',
+      featured: true
     },
     {
       name: 'Government Solutions',
-      href: '/solutions',
+      href: '/solutions/government',
       icon: Shield,
-      description: 'Public sector innovation',
-      featured: false
+      description: 'Public sector digital transformation',
+      category: 'Government',
+      featured: true
     },
     {
       name: 'Healthcare Solutions',
-      href: '/solutions',
+      href: '/solutions/healthcare',
       icon: Heart,
-      description: 'Digital health transformation',
+      description: 'Medical technology and AI solutions',
+      category: 'Healthcare',
       featured: true
     },
     {
       name: 'Financial Solutions',
-      href: '/solutions',
-      icon: TrendingUp,
-      description: 'Fintech innovation & compliance',
+      href: '/solutions/financial',
+      icon: DollarSign,
+      description: 'FinTech and banking solutions',
+      category: 'Financial',
+      featured: true
+    },
+    {
+      name: 'Manufacturing Solutions',
+      href: '/solutions/manufacturing',
+      icon: Cpu,
+      description: 'Industry 4.0 and smart manufacturing',
+      category: 'Manufacturing',
+      featured: true
+    },
+    {
+      name: 'Retail Solutions',
+      href: '/solutions/retail',
+      icon: ShoppingCart,
+      description: 'E-commerce and retail technology',
+      category: 'Retail',
       featured: true
     }
   ];
 
+  // Enhanced resources with better categorization
   const resources = [
     {
-      name: 'Blog & Insights',
-      href: '/blog',
+      name: 'Documentation',
+      href: '/docs',
       icon: BookOpen,
-      description: 'Latest industry trends and insights',
+      description: 'Technical documentation and guides',
+      category: 'Technical',
+      featured: true
+    },
+    {
+      name: 'API Reference',
+      href: '/api-docs',
+      icon: Code,
+      description: 'API documentation and examples',
+      category: 'Technical',
       featured: true
     },
     {
       name: 'Case Studies',
       href: '/case-studies',
       icon: Target,
-      description: 'Real-world success stories',
+      description: 'Success stories and implementations',
+      category: 'Business',
       featured: true
     },
     {
       name: 'White Papers',
       href: '/white-papers',
-      icon: FileText,
-      description: 'In-depth research and analysis',
+      icon: FileTextIcon,
+      description: 'Industry insights and research',
+      category: 'Business',
       featured: true
     },
     {
       name: 'Webinars',
       href: '/webinars',
-      icon: Users,
-      description: 'Expert-led learning sessions',
+      icon: Video,
+      description: 'Educational sessions and training',
+      category: 'Educational',
       featured: true
     },
     {
-      name: 'Documentation',
-      href: '/docs',
-      icon: Code,
-      description: 'Technical guides and APIs',
+      name: 'Blog',
+      href: '/blog',
+      icon: PenTool,
+      description: 'Latest insights and updates',
+      category: 'Educational',
       featured: true
     },
     {
-      name: 'FAQ & Support',
-      href: '/faq',
+      name: 'Help Center',
+      href: '/help',
       icon: HelpCircle,
-      description: 'Get help and answers',
+      description: 'Support and troubleshooting',
+      category: 'Support',
       featured: true
     },
     {
-      name: 'Pricing Guide 2025',
-      href: '/pricing-guide-2025',
-      icon: DollarSign,
-      description: 'Complete pricing information',
+      name: 'Community',
+      href: '/community',
+      icon: Users,
+      description: 'Developer community and forums',
+      category: 'Support',
       featured: true
     }
   ];
 
   const quickLinks = [
     { name: 'Marketplace', href: '/marketplace', icon: ShoppingCart },
-    { name: 'Request Quote', href: '/request-quote', icon: MessageCircle },
+    { name: 'Request Quote', href: '/request-quote', icon: MessageSquare },
     { name: 'Pricing', href: '/pricing', icon: DollarSign },
     { name: 'Careers', href: '/careers', icon: Users },
     { name: 'Partners', href: '/partners', icon: HeartHandshake },
@@ -365,49 +452,171 @@ export function AppHeader() {
 
                       {/* Services Dropdown */}
                       {item.name === 'Services' && servicesDropdownOpen && (
-                        <div className="absolute top-full left-0 mt-2 w-[800px] bg-slate-800/95 backdrop-blur-xl rounded-2xl border border-slate-700/50 shadow-2xl shadow-black/50 overflow-hidden">
+                        <div className="absolute top-full left-0 mt-2 w-[900px] bg-slate-800/95 backdrop-blur-xl rounded-2xl border border-slate-700/50 shadow-2xl shadow-black/50 overflow-hidden">
                           <div className="p-6">
-                            <div className="grid grid-cols-2 gap-6">
-                              {services.map((service) => (
-                                <Link
-                                  key={service.name}
-                                  to={service.href}
-                                  className={`group p-4 rounded-xl transition-all duration-300 hover:bg-slate-700/50 ${
-                                    service.featured ? 'ring-2 ring-cyan-400/50' : ''
+                            {/* Category Tabs */}
+                            <div className="flex space-x-1 mb-6 bg-slate-700/50 rounded-lg p-1">
+                              {['All', 'AI & ML', 'Cloud & Infrastructure', 'Data & Analytics', 'Emerging Tech', 'Business Solutions', 'Specialized'].map((category) => (
+                                <button
+                                  key={category}
+                                  className={`px-4 py-2 text-sm font-medium rounded-md transition-all duration-200 ${
+                                    category === 'All' 
+                                      ? 'bg-cyan-500 text-white shadow-lg' 
+                                      : 'text-slate-300 hover:text-white hover:bg-slate-600/50'
                                   }`}
-                                  onClick={() => setServicesDropdownOpen(false)}
                                 >
-                                  <div className="flex items-start gap-3">
-                                    <div className={`p-2 rounded-lg bg-gradient-to-br ${service.color}`}>
-                                      {React.createElement(service.icon, { className: "w-5 h-5 text-white" })}
-                                    </div>
-                                    <div className="flex-1">
-                                      <h3 className="font-semibold text-white group-hover:text-cyan-400 transition-colors">
-                                        {service.name}
-                                      </h3>
-                                      <p className="text-sm text-gray-400 mt-1">
-                                        {service.description}
-                                      </p>
-                                      {service.featured && (
+                                  {category}
+                                </button>
+                              ))}
+                            </div>
+                            
+                            {/* Services Grid by Category */}
+                            <div className="space-y-6">
+                              {/* AI & ML Services */}
+                              <div>
+                                <h3 className="text-lg font-semibold text-white mb-3 flex items-center gap-2">
+                                  <Brain className="w-5 h-5 text-purple-400" />
+                                  AI & Machine Learning
+                                </h3>
+                                <div className="grid grid-cols-2 gap-3">
+                                  {services.filter(s => s.category === 'AI & ML').map((service) => (
+                                    <Link
+                                      key={service.name}
+                                      to={service.href}
+                                      className="group p-3 rounded-lg transition-all duration-300 hover:bg-slate-700/50 border border-slate-700/30 hover:border-cyan-400/50"
+                                      onClick={() => setServicesDropdownOpen(false)}
+                                    >
+                                      <div className="flex items-start gap-3">
+                                        <div className={`p-2 rounded-lg bg-gradient-to-br ${service.color}`}>
+                                          {React.createElement(service.icon, { className: "w-4 h-4 text-white" })}
+                                        </div>
+                                        <div className="flex-1 min-w-0">
+                                          <h4 className="font-medium text-white group-hover:text-cyan-400 transition-colors text-sm">
+                                            {service.name}
+                                          </h4>
+                                          <p className="text-xs text-gray-400 mt-1 line-clamp-2">
+                                            {service.description}
+                                          </p>
+                                        </div>
+                                      </div>
+                                    </Link>
+                                  ))}
+                                </div>
+                              </div>
+
+                              {/* Cloud & Infrastructure Services */}
+                              <div>
+                                <h3 className="text-lg font-semibold text-white mb-3 flex items-center gap-2">
+                                  <Cloud className="w-5 h-5 text-blue-400" />
+                                  Cloud & Infrastructure
+                                </h3>
+                                <div className="grid grid-cols-2 gap-3">
+                                  {services.filter(s => s.category === 'Cloud & Infrastructure').map((service) => (
+                                    <Link
+                                      key={service.name}
+                                      to={service.href}
+                                      className="group p-3 rounded-lg transition-all duration-300 hover:bg-slate-700/50 border border-slate-700/30 hover:border-blue-400/50"
+                                      onClick={() => setServicesDropdownOpen(false)}
+                                    >
+                                      <div className="flex items-start gap-3">
+                                        <div className={`p-2 rounded-lg bg-gradient-to-br ${service.color}`}>
+                                          {React.createElement(service.icon, { className: "w-4 h-4 text-white" })}
+                                        </div>
+                                        <div className="flex-1 min-w-0">
+                                          <h4 className="font-medium text-white group-hover:text-blue-400 transition-colors text-sm">
+                                            {service.name}
+                                          </h4>
+                                          <p className="text-xs text-gray-400 mt-1 line-clamp-2">
+                                            {service.description}
+                                          </p>
+                                        </div>
+                                      </div>
+                                    </Link>
+                                  ))}
+                                </div>
+                              </div>
+
+                              {/* Data & Analytics Services */}
+                              <div>
+                                <h3 className="text-lg font-semibold text-white mb-3 flex items-center gap-2">
+                                  <BarChart3 className="w-5 h-5 text-orange-400" />
+                                  Data & Analytics
+                                </h3>
+                                <div className="grid grid-cols-2 gap-3">
+                                  {services.filter(s => s.category === 'Data & Analytics').map((service) => (
+                                    <Link
+                                      key={service.name}
+                                      to={service.href}
+                                      className="group p-3 rounded-lg transition-all duration-300 hover:bg-slate-700/50 border border-slate-700/30 hover:border-orange-400/50"
+                                      onClick={() => setServicesDropdownOpen(false)}
+                                    >
+                                      <div className="flex items-start gap-3">
+                                        <div className={`p-2 rounded-lg bg-gradient-to-br ${service.color}`}>
+                                          {React.createElement(service.icon, { className: "w-4 h-4 text-white" })}
+                                        </div>
+                                        <div className="flex-1 min-w-0">
+                                          <h4 className="font-medium text-white group-hover:text-orange-400 transition-colors text-sm">
+                                            {service.name}
+                                          </h4>
+                                          <p className="text-xs text-gray-400 mt-1 line-clamp-2">
+                                            {service.description}
+                                          </p>
+                                        </div>
+                                      </div>
+                                    </Link>
+                                  ))}
+                                </div>
+                              </div>
+
+                              {/* Featured Services Row */}
+                              <div className="pt-4 border-t border-slate-700/50">
+                                <h3 className="text-lg font-semibold text-white mb-3 flex items-center gap-2">
+                                  <Star className="w-5 h-5 text-yellow-400" />
+                                  Featured Services
+                                </h3>
+                                <div className="grid grid-cols-3 gap-3">
+                                  {services.filter(s => s.featured).slice(0, 3).map((service) => (
+                                    <Link
+                                      key={service.name}
+                                      to={service.href}
+                                      className="group p-3 rounded-lg transition-all duration-300 hover:bg-slate-700/50 border-2 border-cyan-400/30 hover:border-cyan-400/60 bg-gradient-to-br from-slate-700/30 to-slate-800/30"
+                                      onClick={() => setServicesDropdownOpen(false)}
+                                    >
+                                      <div className="text-center">
+                                        <div className={`p-3 rounded-lg bg-gradient-to-br ${service.color} mx-auto mb-2 w-fit`}>
+                                          {React.createElement(service.icon, { className: "w-5 h-5 text-white" })}
+                                        </div>
+                                        <h4 className="font-medium text-white group-hover:text-cyan-400 transition-colors text-sm">
+                                          {service.name}
+                                        </h4>
+                                        <p className="text-xs text-gray-400 mt-1 line-clamp-2">
+                                          {service.description}
+                                        </p>
                                         <span className="inline-flex items-center gap-1 mt-2 text-xs text-cyan-400">
                                           <Star className="w-3 h-3" />
                                           Featured
                                         </span>
-                                      )}
-                                    </div>
-                                  </div>
-                                </Link>
-                              ))}
+                                      </div>
+                                    </Link>
+                                  ))}
+                                </div>
+                              </div>
                             </div>
+
                             <div className="mt-6 pt-6 border-t border-slate-700/50">
-                              <Link
-                                to="/services"
-                                className="inline-flex items-center gap-2 text-cyan-400 hover:text-cyan-300 transition-colors font-medium"
-                                onClick={() => setServicesDropdownOpen(false)}
-                              >
-                                View All Services
-                                <ArrowRight className="w-4 h-4" />
-                              </Link>
+                              <div className="flex items-center justify-between">
+                                <Link
+                                  to="/services"
+                                  className="inline-flex items-center gap-2 text-cyan-400 hover:text-cyan-300 transition-colors font-medium"
+                                  onClick={() => setServicesDropdownOpen(false)}
+                                >
+                                  View All Services
+                                  <ArrowRight className="w-4 h-4" />
+                                </Link>
+                                <div className="text-sm text-gray-400">
+                                  {services.length} services available
+                                </div>
+                              </div>
                             </div>
                           </div>
                         </div>
@@ -415,39 +624,139 @@ export function AppHeader() {
 
                       {/* Solutions Dropdown */}
                       {item.name === 'Solutions' && solutionsDropdownOpen && (
-                        <div className="absolute top-full left-0 mt-2 w-[600px] bg-slate-800/95 backdrop-blur-xl rounded-2xl border border-slate-700/50 shadow-2xl shadow-black/50 overflow-hidden">
+                        <div className="absolute top-full left-0 mt-2 w-[700px] bg-slate-800/95 backdrop-blur-xl rounded-2xl border border-slate-700/50 shadow-2xl shadow-black/50 overflow-hidden">
                           <div className="p-6">
-                            <div className="grid grid-cols-2 gap-4">
-                              {solutions.map((solution) => (
-                                <Link
-                                  key={solution.name}
-                                  to={solution.href}
-                                  className={`group p-4 rounded-xl transition-all duration-300 hover:bg-slate-700/50 ${
-                                    solution.featured ? 'ring-2 ring-cyan-400/50' : ''
+                            {/* Category Tabs */}
+                            <div className="flex space-x-1 mb-6 bg-slate-700/50 rounded-lg p-1">
+                              {['All', 'Enterprise', 'SME', 'Startup', 'Government', 'Healthcare', 'Financial', 'Manufacturing', 'Retail'].map((category) => (
+                                <button
+                                  key={category}
+                                  className={`px-3 py-2 text-sm font-medium rounded-md transition-all duration-200 ${
+                                    category === 'All' 
+                                      ? 'bg-blue-500 text-white shadow-lg' 
+                                      : 'text-slate-300 hover:text-white hover:bg-slate-600/50'
                                   }`}
-                                  onClick={() => setSolutionsDropdownOpen(false)}
                                 >
-                                  <div className="flex items-start gap-3">
-                                    <div className="p-2 rounded-lg bg-gradient-to-br from-blue-500 to-cyan-500">
-                                      {React.createElement(solution.icon, { className: "w-5 h-5 text-white" })}
-                                    </div>
-                                    <div className="flex-1">
-                                      <h3 className="font-semibold text-white group-hover:text-cyan-400 transition-colors">
-                                        {solution.name}
-                                      </h3>
-                                      <p className="text-sm text-gray-400 mt-1">
-                                        {solution.description}
-                                      </p>
-                                      {solution.featured && (
-                                        <span className="inline-flex items-center gap-1 mt-2 text-xs text-cyan-400">
+                                  {category}
+                                </button>
+                              ))}
+                            </div>
+                            
+                            {/* Solutions Grid by Category */}
+                            <div className="space-y-6">
+                              {/* Enterprise Solutions */}
+                              <div>
+                                <h3 className="text-lg font-semibold text-white mb-3 flex items-center gap-2">
+                                  <Building2 className="w-5 h-5 text-blue-400" />
+                                  Enterprise Solutions
+                                </h3>
+                                <div className="grid grid-cols-2 gap-3">
+                                  {solutions.filter(s => s.category === 'Enterprise').map((solution) => (
+                                    <Link
+                                      key={solution.name}
+                                      to={solution.href}
+                                      className="group p-3 rounded-lg transition-all duration-300 hover:bg-slate-700/50 border border-slate-700/30 hover:border-blue-400/50"
+                                      onClick={() => setSolutionsDropdownOpen(false)}
+                                    >
+                                      <div className="flex items-start gap-3">
+                                        <div className="p-2 rounded-lg bg-gradient-to-br from-blue-500 to-cyan-500">
+                                          {React.createElement(solution.icon, { className: "w-4 h-4 text-white" })}
+                                        </div>
+                                        <div className="flex-1 min-w-0">
+                                          <h4 className="font-medium text-white group-hover:text-blue-400 transition-colors text-sm">
+                                            {solution.name}
+                                          </h4>
+                                          <p className="text-xs text-gray-400 mt-1 line-clamp-2">
+                                            {solution.description}
+                                          </p>
+                                        </div>
+                                      </div>
+                                    </Link>
+                                  ))}
+                                </div>
+                              </div>
+
+                              {/* SME Solutions */}
+                              <div>
+                                <h3 className="text-lg font-semibold text-white mb-3 flex items-center gap-2">
+                                  <Building className="w-5 h-5 text-green-400" />
+                                  SME Solutions
+                                </h3>
+                                <div className="grid grid-cols-2 gap-3">
+                                  {solutions.filter(s => s.category === 'SME').map((solution) => (
+                                    <Link
+                                      key={solution.name}
+                                      to={solution.href}
+                                      className="group p-3 rounded-lg transition-all duration-300 hover:bg-slate-700/50 border border-slate-700/30 hover:border-green-400/50"
+                                      onClick={() => setSolutionsDropdownOpen(false)}
+                                    >
+                                      <div className="flex items-start gap-3">
+                                        <div className="p-2 rounded-lg bg-gradient-to-br from-green-500 to-emerald-500">
+                                          {React.createElement(solution.icon, { className: "w-4 h-4 text-white" })}
+                                        </div>
+                                        <div className="flex-1 min-w-0">
+                                          <h4 className="font-medium text-white group-hover:text-green-400 transition-colors text-sm">
+                                            {solution.name}
+                                          </h4>
+                                          <p className="text-xs text-gray-400 mt-1 line-clamp-2">
+                                            {solution.description}
+                                          </p>
+                                        </div>
+                                      </div>
+                                    </Link>
+                                  ))}
+                                </div>
+                              </div>
+
+                              {/* Featured Solutions Row */}
+                              <div className="pt-4 border-t border-slate-700/50">
+                                <h3 className="text-lg font-semibold text-white mb-3 flex items-center gap-2">
+                                  <Star className="w-5 h-5 text-yellow-400" />
+                                  Featured Solutions
+                                </h3>
+                                <div className="grid grid-cols-3 gap-3">
+                                  {solutions.filter(s => s.featured).slice(0, 3).map((solution) => (
+                                    <Link
+                                      key={solution.name}
+                                      to={solution.href}
+                                      className="group p-3 rounded-lg transition-all duration-300 hover:bg-slate-700/50 border-2 border-blue-400/30 hover:border-blue-400/60 bg-gradient-to-br from-slate-700/30 to-slate-800/30"
+                                      onClick={() => setSolutionsDropdownOpen(false)}
+                                    >
+                                      <div className="text-center">
+                                        <div className="p-3 rounded-lg bg-gradient-to-br from-blue-500 to-cyan-500 mx-auto mb-2 w-fit">
+                                          {React.createElement(solution.icon, { className: "w-5 h-5 text-white" })}
+                                        </div>
+                                        <h4 className="font-medium text-white group-hover:text-blue-400 transition-colors text-sm">
+                                          {solution.name}
+                                        </h4>
+                                        <p className="text-xs text-gray-400 mt-1 line-clamp-2">
+                                          {solution.description}
+                                        </p>
+                                        <span className="inline-flex items-center gap-1 mt-2 text-xs text-blue-400">
                                           <Star className="w-3 h-3" />
                                           Featured
                                         </span>
-                                      )}
-                                    </div>
-                                  </div>
+                                      </div>
+                                    </Link>
+                                  ))}
+                                </div>
+                              </div>
+                            </div>
+
+                            <div className="mt-6 pt-6 border-t border-slate-700/50">
+                              <div className="flex items-center justify-between">
+                                <Link
+                                  to="/solutions"
+                                  className="inline-flex items-center gap-2 text-blue-400 hover:text-blue-300 transition-colors font-medium"
+                                  onClick={() => setSolutionsDropdownOpen(false)}
+                                >
+                                  View All Solutions
+                                  <ArrowRight className="w-4 h-4" />
                                 </Link>
-                              ))}
+                                <div className="text-sm text-gray-400">
+                                  {solutions.length} solutions available
+                                </div>
+                              </div>
                             </div>
                           </div>
                         </div>
@@ -455,39 +764,139 @@ export function AppHeader() {
 
                       {/* Resources Dropdown */}
                       {item.name === 'Resources' && resourcesDropdownOpen && (
-                        <div className="absolute top-full left-0 mt-2 w-[600px] bg-slate-800/95 backdrop-blur-xl rounded-2xl border border-slate-700/50 shadow-2xl shadow-black/50 overflow-hidden">
+                        <div className="absolute top-full left-0 mt-2 w-[700px] bg-slate-800/95 backdrop-blur-xl rounded-2xl border border-slate-700/50 shadow-2xl shadow-black/50 overflow-hidden">
                           <div className="p-6">
-                            <div className="grid grid-cols-2 gap-4">
-                              {resources.map((resource) => (
-                                <Link
-                                  key={resource.name}
-                                  to={resource.href}
-                                  className={`group p-4 rounded-xl transition-all duration-300 hover:bg-slate-700/50 ${
-                                    resource.featured ? 'ring-2 ring-cyan-400/50' : ''
+                            {/* Category Tabs */}
+                            <div className="flex space-x-1 mb-6 bg-slate-700/50 rounded-lg p-1">
+                              {['All', 'Technical', 'Business', 'Educational', 'Support'].map((category) => (
+                                <button
+                                  key={category}
+                                  className={`px-3 py-2 text-sm font-medium rounded-md transition-all duration-200 ${
+                                    category === 'All' 
+                                      ? 'bg-purple-500 text-white shadow-lg' 
+                                      : 'text-slate-300 hover:text-white hover:bg-slate-600/50'
                                   }`}
-                                  onClick={() => setResourcesDropdownOpen(false)}
                                 >
-                                  <div className="flex items-start gap-3">
-                                    <div className="p-2 rounded-lg bg-gradient-to-br from-purple-500 to-pink-500">
-                                      {React.createElement(resource.icon, { className: "w-5 h-5 text-white" })}
-                                    </div>
-                                    <div className="flex-1">
-                                      <h3 className="font-semibold text-white group-hover:text-cyan-400 transition-colors">
-                                        {resource.name}
-                                      </h3>
-                                      <p className="text-sm text-gray-400 mt-1">
-                                        {resource.description}
-                                      </p>
-                                      {resource.featured && (
-                                        <span className="inline-flex items-center gap-1 mt-2 text-xs text-cyan-400">
+                                  {category}
+                                </button>
+                              ))}
+                            </div>
+                            
+                            {/* Resources Grid by Category */}
+                            <div className="space-y-6">
+                              {/* Technical Resources */}
+                              <div>
+                                <h3 className="text-lg font-semibold text-white mb-3 flex items-center gap-2">
+                                  <Code className="w-5 h-5 text-purple-400" />
+                                  Technical Resources
+                                </h3>
+                                <div className="grid grid-cols-2 gap-3">
+                                  {resources.filter(r => r.category === 'Technical').map((resource) => (
+                                    <Link
+                                      key={resource.name}
+                                      to={resource.href}
+                                      className="group p-3 rounded-lg transition-all duration-300 hover:bg-slate-700/50 border border-slate-700/30 hover:border-purple-400/50"
+                                      onClick={() => setResourcesDropdownOpen(false)}
+                                    >
+                                      <div className="flex items-start gap-3">
+                                        <div className="p-2 rounded-lg bg-gradient-to-br from-purple-500 to-pink-500">
+                                          {React.createElement(resource.icon, { className: "w-4 h-4 text-white" })}
+                                        </div>
+                                        <div className="flex-1 min-w-0">
+                                          <h4 className="font-medium text-white group-hover:text-purple-400 transition-colors text-sm">
+                                            {resource.name}
+                                          </h4>
+                                          <p className="text-xs text-gray-400 mt-1 line-clamp-2">
+                                            {resource.description}
+                                          </p>
+                                        </div>
+                                      </div>
+                                    </Link>
+                                  ))}
+                                </div>
+                              </div>
+
+                              {/* Business Resources */}
+                              <div>
+                                <h3 className="text-lg font-semibold text-white mb-3 flex items-center gap-2">
+                                  <Target className="w-5 h-5 text-green-400" />
+                                  Business Resources
+                                </h3>
+                                <div className="grid grid-cols-2 gap-3">
+                                  {resources.filter(r => r.category === 'Business').map((resource) => (
+                                    <Link
+                                      key={resource.name}
+                                      to={resource.href}
+                                      className="group p-3 rounded-lg transition-all duration-300 hover:bg-slate-700/50 border border-slate-700/30 hover:border-green-400/50"
+                                      onClick={() => setResourcesDropdownOpen(false)}
+                                    >
+                                      <div className="flex items-start gap-3">
+                                        <div className="p-2 rounded-lg bg-gradient-to-br from-green-500 to-emerald-500">
+                                          {React.createElement(resource.icon, { className: "w-4 h-4 text-white" })}
+                                        </div>
+                                        <div className="flex-1 min-w-0">
+                                          <h4 className="font-medium text-white group-hover:text-green-400 transition-colors text-sm">
+                                            {resource.name}
+                                          </h4>
+                                          <p className="text-xs text-gray-400 mt-1 line-clamp-2">
+                                            {resource.description}
+                                          </p>
+                                        </div>
+                                      </div>
+                                    </Link>
+                                  ))}
+                                </div>
+                              </div>
+
+                              {/* Featured Resources Row */}
+                              <div className="pt-4 border-t border-slate-700/50">
+                                <h3 className="text-lg font-semibold text-white mb-3 flex items-center gap-2">
+                                  <Star className="w-5 h-5 text-yellow-400" />
+                                  Featured Resources
+                                </h3>
+                                <div className="grid grid-cols-3 gap-3">
+                                  {resources.filter(r => r.featured).slice(0, 3).map((resource) => (
+                                    <Link
+                                      key={resource.name}
+                                      to={resource.href}
+                                      className="group p-3 rounded-lg transition-all duration-300 hover:bg-slate-700/50 border-2 border-purple-400/30 hover:border-purple-400/60 bg-gradient-to-br from-slate-700/30 to-slate-800/30"
+                                      onClick={() => setResourcesDropdownOpen(false)}
+                                    >
+                                      <div className="text-center">
+                                        <div className="p-3 rounded-lg bg-gradient-to-br from-purple-500 to-pink-500 mx-auto mb-2 w-fit">
+                                          {React.createElement(resource.icon, { className: "w-5 h-5 text-white" })}
+                                        </div>
+                                        <h4 className="font-medium text-white group-hover:text-purple-400 transition-colors text-sm">
+                                          {resource.name}
+                                        </h4>
+                                        <p className="text-xs text-gray-400 mt-1 line-clamp-2">
+                                          {resource.description}
+                                        </p>
+                                        <span className="inline-flex items-center gap-1 mt-2 text-xs text-purple-400">
                                           <Star className="w-3 h-3" />
                                           Featured
                                         </span>
-                                      )}
-                                    </div>
-                                  </div>
+                                      </div>
+                                    </Link>
+                                  ))}
+                                </div>
+                              </div>
+                            </div>
+
+                            <div className="mt-6 pt-6 border-t border-slate-700/50">
+                              <div className="flex items-center justify-between">
+                                <Link
+                                  to="/resources"
+                                  className="inline-flex items-center gap-2 text-purple-400 hover:text-purple-300 transition-colors font-medium"
+                                  onClick={() => setResourcesDropdownOpen(false)}
+                                >
+                                  View All Resources
+                                  <ArrowRight className="w-4 h-4" />
                                 </Link>
-                              ))}
+                                <div className="text-sm text-gray-400">
+                                  {resources.length} resources available
+                                </div>
+                              </div>
                             </div>
                           </div>
                         </div>
