@@ -56,7 +56,7 @@ import {
   Network2
 } from 'lucide-react';
 import { SEO } from '../components/SEO';
-import { INNOVATIVE_MICRO_SAAS_SERVICES_2025 } from '../data/innovativeMicroSaasServices2025';
+import { INNOVATIVE_MICRO_SAAS_SERVICES_2025 } from '../data/innovativeMicroSAASServices2025';
 
 const EnhancedServicesShowcase2025: React.FC = () => {
   const [activeCategory, setActiveCategory] = useState('all');
