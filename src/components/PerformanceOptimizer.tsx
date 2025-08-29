@@ -1,5 +1,5 @@
-import React, { useEffect, useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import React, { useEffect, useCallback, useState } from 'react';
+import { useLocation } from 'react-router-dom';
 
 interface PerformanceMetrics {
   fcp: number;
@@ -9,60 +9,38 @@ interface PerformanceMetrics {
   ttfb: number;
 }
 
-export function PerformanceOptimizer() {
-  const [metrics, setMetrics] = useState<PerformanceMetrics | null>(null);
-  const [isVisible, setIsVisible] = useState(false);
+interface PerformanceOptimizerProps {
+  showMetrics?: boolean;
+}
 
-  // Enhanced preload critical resources
+export function PerformanceOptimizer({ showMetrics = false }: PerformanceOptimizerProps) {
+  const location = useLocation();
+  const [metrics, setMetrics] = useState<PerformanceMetrics>({
+    fcp: 0,
+    lcp: 0,
+    fid: 0,
+    cls: 0,
+    ttfb: 0
+  });
+
+  // Preload critical resources
   const preloadCriticalResources = useCallback(() => {
     const criticalPaths = [
       '/services',
       '/ai-services',
       '/contact',
-      '/about',
-      '/pricing-guide',
-      '/revolutionary-services-2030'
+      '/about'
     ];
 
-    // Preload critical routes
     criticalPaths.forEach(path => {
       const link = document.createElement('link');
       link.rel = 'prefetch';
       link.href = path;
       document.head.appendChild(link);
     });
-
-    // Preload critical fonts
-    const fontLinks = [
-      'https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&display=swap',
-      'https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&display=swap'
-    ];
-
-    fontLinks.forEach(href => {
-      const link = document.createElement('link');
-      link.rel = 'preload';
-      link.as = 'style';
-      link.href = href;
-      document.head.appendChild(link);
-    });
-
-    // Preload critical images
-    const criticalImages = [
-      '/images/hero-ai-solutions.jpg',
-      '/images/hero-it-services.jpg',
-      '/images/hero-green-it.jpg'
-    ];
-
-    criticalImages.forEach(src => {
-      const link = document.createElement('link');
-      link.rel = 'preload';
-      link.as = 'image';
-      link.href = src;
-      document.head.appendChild(link);
-    });
   }, []);
 
-  // Enhanced Core Web Vitals monitoring
+  // Monitor Core Web Vitals
   const monitorCoreWebVitals = useCallback(() => {
     if ('PerformanceObserver' in window) {
       // First Contentful Paint
@@ -71,15 +49,13 @@ export function PerformanceOptimizer() {
         entries.forEach((entry) => {
           if (entry.name === 'first-contentful-paint') {
             const fcp = entry.startTime;
+            setMetrics(prev => ({ ...prev, fcp }));
             console.log('FCP:', fcp);
-            
             // Send to analytics
             if (fcp < 1800) {
-              console.log('✅ FCP is excellent');
-            } else if (fcp < 3000) {
-              console.log('⚠️ FCP needs improvement');
+              console.log('✅ FCP is good');
             } else {
-              console.log('❌ FCP is poor');
+              console.log('⚠️ FCP needs improvement');
             }
           }
         });
@@ -92,14 +68,12 @@ export function PerformanceOptimizer() {
         const lastEntry = entries[entries.length - 1];
         if (lastEntry) {
           const lcp = lastEntry.startTime;
+          setMetrics(prev => ({ ...prev, lcp }));
           console.log('LCP:', lcp);
-          
           if (lcp < 2500) {
-            console.log('✅ LCP is excellent');
-          } else if (lcp < 4000) {
-            console.log('⚠️ LCP needs improvement');
+            console.log('✅ LCP is good');
           } else {
-            console.log('❌ LCP is poor');
+            console.log('⚠️ LCP needs improvement');
           }
         }
       });
@@ -108,16 +82,14 @@ export function PerformanceOptimizer() {
       // First Input Delay
       const fidObserver = new PerformanceObserver((list) => {
         const entries = list.getEntries();
-        entries.forEach((entry: any) => {
+        entries.forEach((entry) => {
           const fid = entry.processingStart - entry.startTime;
+          setMetrics(prev => ({ ...prev, fid }));
           console.log('FID:', fid);
-          
           if (fid < 100) {
-            console.log('✅ FID is excellent');
-          } else if (fid < 300) {
-            console.log('⚠️ FID needs improvement');
+            console.log('✅ FID is good');
           } else {
-            console.log('❌ FID is poor');
+            console.log('⚠️ FID needs improvement');
           }
         });
       });
@@ -126,160 +98,167 @@ export function PerformanceOptimizer() {
       // Cumulative Layout Shift
       const clsObserver = new PerformanceObserver((list) => {
         let clsValue = 0;
-        for (const entry of list.getEntries()) {
-          if (!entry.hadRecentInput) {
-            clsValue += (entry as any).value;
-          }
-        });
-        console.log('CLS:', clsValue);
-        
-        if (clsValue < 0.1) {
-          console.log('✅ CLS is excellent');
-        } else if (clsValue < 0.25) {
-          console.log('⚠️ CLS needs improvement');
-        } else {
-          console.log('❌ CLS is poor');
-        }
-        setMetrics(prev => ({ ...prev, cls: clsValue }));
-      });
-      clsObserver.observe({ entryTypes: ['layout-shift'] });
-
-      // Time to First Byte
-      const navigationObserver = new PerformanceObserver((list) => {
         const entries = list.getEntries();
         entries.forEach((entry: any) => {
-          if (entry.entryType === 'navigation') {
-            const ttfb = entry.responseStart - entry.requestStart;
-            console.log('TTFB:', ttfb);
-            
-            if (ttfb < 800) {
-              console.log('✅ TTFB is excellent');
-            } else if (ttfb < 1800) {
-              console.log('⚠️ TTFB needs improvement');
-            } else {
-              console.log('❌ TTFB is poor');
-            }
+          if (!entry.hadRecentInput) {
+            clsValue += entry.value;
           }
         });
+        setMetrics(prev => ({ ...prev, cls: clsValue }));
+        console.log('CLS:', clsValue);
+        if (clsValue < 0.1) {
+          console.log('✅ CLS is good');
+        } else {
+          console.log('⚠️ CLS needs improvement');
+        }
       });
-      navigationObserver.observe({ entryTypes: ['navigation'] });
+      clsObserver.observe({ entryTypes: ['layout-shift'] });
     }
+  }, []);
 
-  // Image optimization
+  // Optimize images
   const optimizeImages = useCallback(() => {
     const images = document.querySelectorAll('img');
-    images.forEach(img => {
-      // Add loading="lazy" for non-critical images
-      if (!img.classList.contains('critical')) {
+    images.forEach((img) => {
+      // Add loading="lazy" for images below the fold
+      if (!img.loading) {
         img.loading = 'lazy';
       }
       
       // Add decoding="async" for better performance
-      img.decoding = 'async';
-      
-      // Add error handling
-      img.onerror = () => {
-        img.style.display = 'none';
-        console.warn(`Failed to load image: ${img.src}`);
-      };
+      if (!img.decoding) {
+        img.decoding = 'async';
+      }
     });
   }, []);
 
-  // Resource hints optimization
-  const optimizeResourceHints = useCallback(() => {
-    // DNS prefetch for external domains
-    const externalDomains = [
-      'fonts.googleapis.com',
-      'fonts.gstatic.com',
-      'cdn.jsdelivr.net'
-    ];
+  // Add intersection observer for animations
+  const setupIntersectionObserver = useCallback(() => {
+    const observerOptions = {
+      threshold: 0.1,
+      rootMargin: '0px 0px -50px 0px'
+    };
 
-    externalDomains.forEach(domain => {
-      const link = document.createElement('link');
-      link.rel = 'dns-prefetch';
-      link.href = `//${domain}`;
-      document.head.appendChild(link);
-    });
-
-    // Preconnect to critical third-party origins
-    const criticalOrigins = [
-      'https://fonts.googleapis.com',
-      'https://fonts.gstatic.com'
-    ];
-
-    criticalOrigins.forEach(origin => {
-      const link = document.createElement('link');
-      link.rel = 'preconnect';
-      link.href = origin;
-      document.head.appendChild(link);
-    });
-  }, []);
-
-  // Bundle size optimization
-  const optimizeBundleSize = useCallback(() => {
-    // Monitor bundle size
-    if ('PerformanceObserver' in window) {
-      const observer = new PerformanceObserver((list) => {
-        const entries = list.getEntries();
-        entries.forEach((entry: any) => {
-          if (entry.entryType === 'resource') {
-            const size = entry.transferSize || entry.decodedBodySize;
-            if (size > 50000) { // 50KB threshold
-              console.warn(`Large resource detected: ${entry.name} (${Math.round(size / 1024)}KB)`);
-            }
-          }
-        });
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('animate-in');
+        }
       });
-      observer.observe({ entryTypes: ['resource'] });
-    }
+    }, observerOptions);
+
+    // Observe elements with data-animate attribute
+    const animatedElements = document.querySelectorAll('[data-animate]');
+    animatedElements.forEach((el) => observer.observe(el));
   }, []);
 
-  // Memory leak prevention
-  const preventMemoryLeaks = useCallback(() => {
-    // Clean up event listeners on route change
-    return () => {
-      // This will be called when component unmounts
-      const observers = PerformanceObserver;
-      if (observers) {
-        observers.disconnect && observers.disconnect();
+  // Route change optimization
+  useEffect(() => {
+    // Preload critical resources on route change
+    preloadCriticalResources();
+    
+    // Optimize images on route change
+    setTimeout(optimizeImages, 100);
+    
+    // Setup intersection observer
+    setupIntersectionObserver();
+  }, [location.pathname, preloadCriticalResources, optimizeImages, setupIntersectionObserver]);
+
+  // Initial setup
+  useEffect(() => {
+    monitorCoreWebVitals();
+    preloadCriticalResources();
+    optimizeImages();
+    setupIntersectionObserver();
+
+    // Add performance monitoring to window for debugging
+    (window as any).performanceMetrics = {
+      getMetrics: () => {
+        const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
+        const ttfb = navigation.responseStart - navigation.requestStart;
+        setMetrics(prev => ({ ...prev, ttfb }));
+        return {
+          ttfb,
+          domContentLoaded: navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart,
+          loadComplete: navigation.loadEventEnd - navigation.loadEventStart,
+          totalTime: navigation.loadEventEnd - navigation.navigationStart
+        };
       }
     };
-  }, []);
+  }, [monitorCoreWebVitals, preloadCriticalResources, optimizeImages, setupIntersectionObserver]);
 
-  useEffect(() => {
-    preloadCriticalResources();
-    monitorCoreWebVitals();
-    optimizeImages();
-    optimizeResourceHints();
-    optimizeBundleSize();
+  // Performance score calculation
+  const calculatePerformanceScore = () => {
+    let score = 100;
     
-    return preventMemoryLeaks();
-  }, [preloadCriticalResources, monitorCoreWebVitals, optimizeImages, optimizeResourceHints, optimizeBundleSize, preventMemoryLeaks]);
+    if (metrics.fcp > 1800) score -= 20;
+    if (metrics.lcp > 2500) score -= 25;
+    if (metrics.fid > 100) score -= 25;
+    if (metrics.cls > 0.1) score -= 30;
+    
+    return Math.max(0, score);
+  };
 
-  // Route-based optimization
-  useEffect(() => {
-    // Optimize for specific routes
-    if (location.pathname === '/') {
-      // Homepage optimizations
-      const heroImages = document.querySelectorAll('.hero-image');
-      heroImages.forEach(img => {
-        if (img instanceof HTMLImageElement) {
-          img.loading = 'eager';
-          img.classList.add('critical');
-        }
-      });
-    }
+  const performanceScore = calculatePerformanceScore();
+  const grade = performanceScore >= 90 ? 'A' : performanceScore >= 80 ? 'B' : performanceScore >= 70 ? 'C' : performanceScore >= 60 ? 'D' : 'F';
+  const gradeColor = performanceScore >= 90 ? 'text-green-500' : performanceScore >= 80 ? 'text-yellow-500' : performanceScore >= 70 ? 'text-orange-500' : 'text-red-500';
 
-    if (location.pathname.startsWith('/services/')) {
-      // Service page optimizations
-      const serviceImages = document.querySelectorAll('.service-image');
-      serviceImages.forEach(img => {
-        if (img instanceof HTMLImageElement) {
-          img.loading = 'lazy';
-        }
-      });
-    }
-  }, [location.pathname]);
+  if (!showMetrics) {
+    return null;
+  }
 
-  return null;
+  return (
+    <div className="fixed bottom-4 right-4 bg-white dark:bg-gray-800 rounded-lg shadow-lg p-4 max-w-sm z-50">
+      <div className="flex items-center justify-between mb-3">
+        <h3 className="text-sm font-semibold text-gray-900 dark:text-white">
+          Performance Monitor
+        </h3>
+        <div className={`text-lg font-bold ${gradeColor}`}>
+          {grade}
+        </div>
+      </div>
+
+      <div className="space-y-2 text-xs">
+        <div className="flex justify-between">
+          <span className="text-gray-600 dark:text-gray-400">FCP:</span>
+          <span className={metrics.fcp > 1800 ? 'text-red-500' : 'text-green-500'}>
+            {metrics.fcp}ms
+          </span>
+        </div>
+        <div className="flex justify-between">
+          <span className="text-gray-600 dark:text-gray-400">LCP:</span>
+          <span className={metrics.lcp > 2500 ? 'text-red-500' : 'text-green-500'}>
+            {metrics.lcp}ms
+          </span>
+        </div>
+        <div className="flex justify-between">
+          <span className="text-gray-600 dark:text-gray-400">FID:</span>
+          <span className={metrics.fid > 100 ? 'text-red-500' : 'text-green-500'}>
+            {metrics.fid}ms
+          </span>
+        </div>
+        <div className="flex justify-between">
+          <span className="text-gray-600 dark:text-gray-400">CLS:</span>
+          <span className={metrics.cls > 0.1 ? 'text-red-500' : 'text-green-500'}>
+            {metrics.cls.toFixed(3)}
+          </span>
+        </div>
+        <div className="flex justify-between">
+          <span className="text-gray-600 dark:text-gray-400">TTFB:</span>
+          <span className={metrics.ttfb > 800 ? 'text-red-500' : 'text-green-500'}>
+            {metrics.ttfb}ms
+          </span>
+        </div>
+      </div>
+
+      <div className="mt-3 pt-3 border-t border-gray-200 dark:border-gray-700">
+        <div className="flex justify-between items-center">
+          <span className="text-xs text-gray-600 dark:text-gray-400">Score:</span>
+          <span className={`text-sm font-semibold ${gradeColor}`}>
+            {performanceScore}/100
+          </span>
+        </div>
+      </div>
+    </div>
+  );
 }

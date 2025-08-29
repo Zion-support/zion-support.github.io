@@ -161,7 +161,8 @@ export const EnhancedFuturisticFooter: React.FC = () => {
     { name: 'About Us', href: '/about' },
     { name: 'Contact', href: '/contact' },
     { name: 'Blog', href: '/blog' },
-    { name: 'Careers', href: '/careers' }
+    { name: 'Careers', href: '/careers' },
+    { name: 'Sitemap', href: '/sitemap' }
   ];
 
   const companyLinks = [

@@ -141,22 +141,18 @@ const Security = React.lazy(() => import('./pages/Security'));
 const Compliance = React.lazy(() => import('./pages/Compliance'));
 const OnsiteSupport = React.lazy(() => import('./pages/OnsiteSupport'));
 
+// Additional missing pages
+const Talent = React.lazy(() => import('./pages/Talent'));
+const Equipment = React.lazy(() => import('./pages/Equipment'));
+const ITOnsiteServices = React.lazy(() => import('./pages/ITOnsiteServices'));
+const Team = React.lazy(() => import('./pages/Team'));
+const Status = React.lazy(() => import('./pages/Status'));
+const Sitemap = React.lazy(() => import('./pages/Sitemap'));
+const News = React.lazy(() => import('./pages/News'));
+const Events = React.lazy(() => import('./pages/events'));
+const Marketplace = React.lazy(() => import('./pages/Marketplace'));
+
 const Careers = React.lazy(() => import('./pages/Careers'));
-
-// Company/resources simple pages (declared above in New pages section)
-
-const Marketplace = () => (
-  <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 flex items-center justify-center">
-    <SEO 
-      title="Marketplace - Zion Tech Group"
-      description="Explore our marketplace of AI-powered technology solutions and services."
-    />
-    <div className="text-center text-white">
-      <h1 className="text-4xl font-bold mb-4">Marketplace</h1>
-      <p className="text-xl text-gray-300">Explore our solutions</p>
-    </div>
-  </div>
-);
 
 function App() {
   return (
@@ -229,6 +225,16 @@ function App() {
               <Route path="/partners" element={<Partners />} />
               <Route path="/team" element={<Team />} />
               <Route path="/press" element={<Press />} />
+              
+              {/* Additional missing routes */}
+              <Route path="/talent" element={<Talent />} />
+              <Route path="/equipment" element={<Equipment />} />
+              <Route path="/it-onsite-services" element={<ITOnsiteServices />} />
+              <Route path="/team" element={<Team />} />
+              <Route path="/status" element={<Status />} />
+              <Route path="/sitemap" element={<Sitemap />} />
+              <Route path="/news" element={<News />} />
+              <Route path="/events" element={<Events />} />
               
               {/* Service Routes - only for existing pages */}
               <Route path="/services/cloud-devops" element={<CloudDevOps />} />
@@ -304,7 +310,7 @@ function App() {
         
         <EnhancedFuturisticFooter />
         <ChatAssistant />
-        <PerformanceOptimizer />
+        <PerformanceOptimizer showMetrics={true} />
         <AccessibilityEnhancer />
       </div>
     </ErrorBoundary>
