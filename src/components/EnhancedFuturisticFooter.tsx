@@ -61,25 +61,47 @@ export const EnhancedFuturisticFooter: React.FC = () => {
 
   const footerSections = [
     {
-      title: 'AI & Consciousness',
+      title: 'AI & Analytics',
       links: [
-        { name: 'AI Consciousness Simulator', href: '/ai-services/consciousness-simulator' },
-        { name: 'Quantum Emotion Processor', href: '/ai-services/quantum-emotion' },
-        { name: 'AI Autonomous Systems', href: '/ai-services/autonomous-systems' },
-        { name: 'Neural Network Architect', href: '/ai-services/neural-architect' },
-        { name: 'AI Ethics Framework', href: '/ai-services/ai-ethics' },
-        { name: 'Predictive Analytics', href: '/ai-services/predictive-analytics' }
+        { name: 'AI Business Intelligence', href: '/services?category=AI%20%26%20Analytics' },
+        { name: 'Machine Learning Platforms', href: '/services?category=AI%20%26%20Analytics' },
+        { name: 'Predictive Analytics', href: '/services?category=AI%20%26%20Analytics' },
+        { name: 'Computer Vision', href: '/services?category=AI%20%26%20Analytics' },
+        { name: 'Natural Language Processing', href: '/services?category=AI%20%26%20Analytics' },
+        { name: 'Data Science Solutions', href: '/services?category=AI%20%26%20Analytics' }
       ]
     },
     {
-      title: 'Micro SAAS',
+      title: 'Emerging Technologies',
       links: [
-        { name: 'AI Business Intelligence', href: '/micro-saas/ai-business-intelligence' },
-        { name: 'Customer Experience Hub', href: '/micro-saas/customer-experience' },
-        { name: 'Quantum Computing Suite', href: '/micro-saas/quantum-computing' },
-        { name: 'Supply Chain Optimizer', href: '/micro-saas/supply-chain' },
-        { name: 'Cybersecurity Platform', href: '/micro-saas/cybersecurity' },
-        { name: 'IoT Edge Computing', href: '/micro-saas/iot-edge' }
+        { name: 'Quantum Computing', href: '/services?category=Emerging%20Tech' },
+        { name: 'Neuromorphic Computing', href: '/services?category=Emerging%20Tech' },
+        { name: 'DNA Computing', href: '/services?category=Emerging%20Tech' },
+        { name: 'Photonic Computing', href: '/services?category=Emerging%20Tech' },
+        { name: 'Biological Computing', href: '/services?category=Emerging%20Tech' },
+        { name: 'Holographic Computing', href: '/services?category=Emerging%20Tech' }
+      ]
+    },
+    {
+      title: 'Industry Solutions',
+      links: [
+        { name: 'Healthcare AI', href: '/services?industry=Healthcare' },
+        { name: 'Financial Services AI', href: '/services?industry=Financial%20Services' },
+        { name: 'Manufacturing AI', href: '/services?industry=Manufacturing' },
+        { name: 'Retail AI', href: '/services?industry=Retail' },
+        { name: 'Education AI', href: '/services?industry=Education' },
+        { name: 'Transportation AI', href: '/services?industry=Transportation' }
+      ]
+    },
+    {
+      title: 'Micro SaaS',
+      links: [
+        { name: 'AI Business Intelligence', href: '/services?category=Micro%20SaaS' },
+        { name: 'Customer Experience Hub', href: '/services?category=Micro%20SaaS' },
+        { name: 'Quantum Computing Suite', href: '/services?category=Micro%20SaaS' },
+        { name: 'Supply Chain Optimizer', href: '/services?category=Micro%20SaaS' },
+        { name: 'Cybersecurity Platform', href: '/services?category=Micro%20SaaS' },
+        { name: 'IoT Edge Computing', href: '/services?category=Micro%20SaaS' }
       ]
     },
     {
@@ -94,14 +116,14 @@ export const EnhancedFuturisticFooter: React.FC = () => {
       ]
     },
     {
-      title: 'Emerging Tech',
+      title: 'Advanced Solutions',
       links: [
-        { name: 'Quantum Computing', href: '/emerging-tech/quantum-computing' },
-        { name: 'Blockchain & DeFi', href: '/emerging-tech/blockchain-defi' },
-        { name: 'Space Technology', href: '/emerging-tech/space-tech' },
-        { name: 'Biotechnology', href: '/emerging-tech/biotech' },
-        { name: 'Nanotechnology', href: '/emerging-tech/nanotech' },
-        { name: 'Augmented Reality', href: '/emerging-tech/ar-vr' }
+        { name: 'Digital Twin Platform', href: '/services/digital-twin' },
+        { name: 'Cloud DevOps', href: '/services/cloud-devops' },
+        { name: 'Data Analytics', href: '/services/data-analytics' },
+        { name: 'IT Infrastructure', href: '/services/it-infrastructure' },
+        { name: 'AI Sales Copilot', href: '/services/ai-sales-copilot' },
+        { name: 'Cloud FinOps Optimizer', href: '/services/cloud-finops-optimizer' }
       ]
     }
   ];
