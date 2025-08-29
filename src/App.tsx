@@ -201,6 +201,11 @@ const AICustomerExperienceSupport = lazy(() => import('./pages/services/AICustom
 const AIMarketingAutomationPersonalization = lazy(() => import('./pages/services/AIMarketingAutomationPersonalization'));
 const AIQuantumFinancialTrading = lazy(() => import('./pages/services/AIQuantumFinancialTrading'));
 
+// New innovative micro SAAS services
+const AICustomerFeedbackAnalytics = lazy(() => import('./pages/services/AICustomerFeedbackAnalytics'));
+const AIInventoryManagement = lazy(() => import('./pages/services/AIInventoryManagement'));
+const AIEmployeePerformanceAnalytics = lazy(() => import('./pages/services/AIEmployeePerformanceAnalytics'));
+const AIFinancialPlanning = lazy(() => import('./pages/services/AIFinancialPlanning'));
 function App() {
   return (
     <HelmetProvider>
@@ -462,6 +467,11 @@ function App() {
                   <Route path="/services/ai-customer-experience-analytics" element={<AICustomerExperienceAnalytics />} />
                   <Route path="/services/ai-financial-risk-management" element={<AIFinancialRiskManagement />} />
                   
+                  {/* New innovative micro SAAS service routes */}
+                  <Route path="/services/ai-customer-feedback-analytics" element={<AICustomerFeedbackAnalytics />} />
+                  <Route path="/services/ai-inventory-management" element={<AIInventoryManagement />} />
+                  <Route path="/services/ai-employee-performance-analytics" element={<AIEmployeePerformanceAnalytics />} />
+                  <Route path="/services/ai-financial-planning" element={<AIFinancialPlanning />} />
                   {/* Advanced AI service routes */}
                   <Route path="/services/ai-autonomous-business-intelligence" element={<AIAutonomousBusinessIntelligence />} />
                   <Route path="/services/ai-quantum-computing-platform" element={<AIQuantumComputingPlatform />} />
