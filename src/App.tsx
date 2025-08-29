@@ -195,7 +195,6 @@ const ITConsulting = lazy(() => import('./pages/ITConsulting'));
 
 // Service showcase pages
 const UltimateServicesShowcase2025 = React.lazy(() => import('./pages/UltimateServicesShowcase2025'));
-const ComprehensiveServicesShowcase2025 = React.lazy(() => import('./pages/ComprehensiveServicesShowcase2025'));
 
 // New innovative AI services
 const AIWorkflowOrchestrator = React.lazy(() => import('./pages/services/AIWorkflowOrchestrator'));
