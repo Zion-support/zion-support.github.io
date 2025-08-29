@@ -152,6 +152,13 @@ const AIHealthcarePlatform = lazy(() => import('./pages/services/AIHealthcarePla
 const AIBusinessIntelligence = lazy(() => import('./pages/services/AIBusinessIntelligence'));
 const DigitalTransformation = lazy(() => import('./pages/services/DigitalTransformation'));
 
+// 2025 New Innovative Services
+const AISupplyChainRiskManagement = lazy(() => import('./pages/services/AISupplyChainRiskManagement'));
+const AIESGCompliancePlatform = lazy(() => import('./pages/services/AIESGCompliancePlatform'));
+const AIDigitalTwinPlatform = lazy(() => import('./pages/services/AIDigitalTwinPlatform'));
+const AIQuantumComputingPlatform = lazy(() => import('./pages/services/AIQuantumComputingPlatform'));
+const AIEdgeComputingPlatform = lazy(() => import('./pages/services/AIEdgeComputingPlatform'));
+
 // 2025 Innovative Services
 const InnovativeServicesLanding2025 = lazy(() => import('./pages/InnovativeServicesLanding2025'));
 const ComprehensivePricingGuide2025 = lazy(() => import('./pages/ComprehensivePricingGuide2025'));
@@ -169,7 +176,6 @@ const QuantumMachineLearning = lazy(() => import('./pages/services/quantum-machi
 const AIContentCreation = lazy(() => import('./pages/services/ai-content-creation'));
 
 // New innovative AI services
-const AIQuantumComputingPlatform = lazy(() => import('./pages/services/AIQuantumComputingPlatform'));
 const AIAutonomousVehiclePlatform = lazy(() => import('./pages/services/AIAutonomousVehiclePlatform'));
 const AIMetaverseDevelopmentPlatform = lazy(() => import('./pages/services/AIMetaverseDevelopmentPlatform'));
 
@@ -321,6 +327,13 @@ function App() {
                 <Route path="/services/ai-predictive-maintenance" element={<AIPredictiveMaintenance />} />
                 <Route path="/services/ai-sustainable-technology" element={<AISustainableTechnology />} />
                 <Route path="/services/ai-quantum-machine-learning" element={<AIQuantumMachineLearning />} />
+
+                {/* 2025 New Innovative Services */}
+                <Route path="/services/ai-supply-chain-risk-management" element={<AISupplyChainRiskManagement />} />
+                <Route path="/services/ai-esg-compliance-platform" element={<AIESGCompliancePlatform />} />
+                <Route path="/services/ai-digital-twin-platform" element={<AIDigitalTwinPlatform />} />
+                <Route path="/services/ai-quantum-computing-platform" element={<AIQuantumComputingPlatform />} />
+                <Route path="/services/ai-edge-computing-platform" element={<AIEdgeComputingPlatform />} />
 
                                        {/* Innovative services showcase */}
                        <Route path="/innovative-services-2025" element={<InnovativeServicesShowcase2025 />} />

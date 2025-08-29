@@ -1,82 +1,84 @@
-import { Atom, TrendingUp, BarChart3, CheckCircle, ArrowRight, ExternalLink, Phone, Mail, DollarSign, Target, Zap, Globe, Database, Cpu, Network, Cloud, Zap as Lightning } from 'lucide-react';
+import { Leaf, TrendingUp, BarChart3, CheckCircle, ArrowRight, ExternalLink, Phone, Mail, DollarSign, Target, Zap, Globe, Database, Cpu, Shield, Award } from 'lucide-react';
 
-export default function AIQuantumComputingPlatform() {
+export default function AIESGCompliancePlatform() {
   const features = [
-    'AI-powered quantum algorithm optimization',
-    'Hybrid quantum-classical computing solutions',
-    'Quantum machine learning frameworks',
-    'Real-time quantum circuit simulation',
-    'Quantum error correction and optimization',
-    'Multi-qubit system management',
-    'Quantum cryptography and security',
-    'Custom quantum algorithm development',
-    'Quantum cloud infrastructure access',
-    'Advanced quantum analytics and visualization'
+    'AI-powered ESG data collection and analysis',
+    'Automated compliance reporting and monitoring',
+    'Real-time sustainability performance tracking',
+    'Carbon footprint calculation and optimization',
+    'Social responsibility metrics and reporting',
+    'Governance risk assessment and monitoring',
+    'Regulatory compliance automation',
+    'Stakeholder engagement tracking',
+    'ESG scoring and benchmarking',
+    'Custom sustainability dashboard creation'
   ];
 
   const benefits = [
-    'Solve complex problems 1000x faster',
-    'Reduce computational costs by 60-80%',
-    'Enable breakthrough scientific discoveries',
-    'Real-time quantum optimization',
-    'Access to cutting-edge quantum hardware',
-    'Future-proof your computational capabilities'
+    'Reduce ESG reporting time by 85%',
+    'Improve compliance accuracy by 90%',
+    'Cut carbon emissions tracking costs by 70%',
+    'Real-time sustainability performance insights',
+    'Automated regulatory compliance updates',
+    'Enhanced stakeholder transparency and trust'
   ];
 
   const pricing = [
     { 
       name: 'Starter', 
-      price: '$1,299/mo', 
-      features: ['Up to 10 qubits', 'Basic quantum simulation', 'Standard algorithms', 'Email support', 'Monthly usage reports'],
+      price: '$399/mo', 
+      features: ['Up to 50 ESG metrics', 'Basic compliance reporting', 'Standard dashboards', 'Email support', 'Monthly sustainability reports'],
       popular: false
     },
     { 
       name: 'Professional', 
-      price: '$2,999/mo', 
-      features: ['Up to 50 qubits', 'Advanced quantum AI', 'Real-time optimization', 'Priority support', 'Custom algorithms', 'API access'],
+      price: '$899/mo', 
+      features: ['Up to 200 ESG metrics', 'Advanced AI analytics', 'Real-time monitoring', 'Priority support', 'Custom dashboards', 'API access'],
       popular: true
     },
     { 
       name: 'Enterprise', 
-      price: '$7,999/mo', 
-      features: ['Unlimited qubits', 'Full quantum suite', 'Custom quantum models', 'Dedicated support', 'White-label solutions', 'Hardware access'],
+      price: '$2,999/mo', 
+      features: ['Unlimited ESG metrics', 'Full AI suite', 'Custom compliance models', 'Dedicated support', 'White-label solutions', 'Advanced integrations'],
       popular: false
     }
   ];
 
   const useCases = [
-    'Drug discovery and molecular modeling',
-    'Financial portfolio optimization',
-    'Cryptography and cybersecurity',
-    'Climate modeling and prediction',
-    'Machine learning acceleration',
-    'Supply chain optimization'
+    'Corporate sustainability reporting',
+    'ESG investment portfolio analysis',
+    'Supply chain sustainability tracking',
+    'Regulatory compliance automation',
+    'Stakeholder ESG communication',
+    'Sustainability performance benchmarking'
   ];
 
-  const industries = [
-    'Pharmaceuticals & Healthcare',
-    'Financial Services & Banking',
-    'Cybersecurity & Defense',
-    'Climate Science & Energy',
-    'Artificial Intelligence & ML',
-    'Logistics & Transportation'
+  const esgCategories = [
+    'Environmental Impact Assessment',
+    'Carbon Footprint Management',
+    'Renewable Energy Tracking',
+    'Waste Management Analytics',
+    'Social Responsibility Metrics',
+    'Diversity & Inclusion Tracking',
+    'Governance Risk Assessment',
+    'Compliance Monitoring'
   ];
 
   return (
     <div className="min-h-screen bg-white">
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-purple-600 via-indigo-600 to-blue-800 py-20 text-center text-white">
+      <section className="bg-gradient-to-br from-green-600 via-emerald-600 to-teal-800 py-20 text-center text-white">
         <div className="max-w-5xl mx-auto px-6">
           <div className="inline-flex items-center px-4 py-2 rounded-full bg-white/10 text-white mb-6">
-            <Atom className="w-4 h-4 mr-2" /> AI-Powered Quantum Computing Platform
+            <Leaf className="w-4 h-4 mr-2" /> AI-Powered ESG Compliance Platform
           </div>
-          <h1 className="text-4xl md:text-6xl font-bold mb-6">AI Quantum Computing Platform</h1>
-          <p className="text-xl text-purple-100 mb-8 max-w-3xl mx-auto">
-            Harness the power of quantum computing with AI-driven optimization, hybrid quantum-classical solutions, 
-            and breakthrough computational capabilities. Solve the impossible with quantum intelligence.
+          <h1 className="text-4xl md:text-6xl font-bold mb-6">AI ESG Compliance Platform</h1>
+          <p className="text-xl text-green-100 mb-8 max-w-3xl mx-auto">
+            Streamline your ESG compliance with AI-driven data collection, automated reporting, and real-time sustainability 
+            monitoring. Meet regulatory requirements while driving positive environmental and social impact.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a href="#pricing" className="px-8 py-4 bg-white text-purple-600 rounded-lg font-semibold hover:bg-purple-50 transition-colors">
+            <a href="#pricing" className="px-8 py-4 bg-white text-green-600 rounded-lg font-semibold hover:bg-green-50 transition-colors">
               View Pricing
             </a>
             <a href="https://ziontechgroup.com" target="_blank" rel="noreferrer" className="px-8 py-4 border border-white/30 text-white rounded-lg hover:bg-white/10 transition-colors">
@@ -89,8 +91,8 @@ export default function AIQuantumComputingPlatform() {
       {/* Features Section */}
       <section className="py-16 max-w-6xl mx-auto px-6">
         <div className="text-center mb-16">
-          <h2 className="text-3xl font-bold text-gray-900 mb-4">Quantum Computing Intelligence</h2>
-          <p className="text-xl text-gray-600">Advanced quantum computing solutions powered by AI</p>
+          <h2 className="text-3xl font-bold text-gray-900 mb-4">Comprehensive ESG Intelligence</h2>
+          <p className="text-xl text-gray-600">End-to-end ESG compliance and sustainability management powered by AI</p>
         </div>
         
         <div className="grid md:grid-cols-2 gap-8">
@@ -99,7 +101,7 @@ export default function AIQuantumComputingPlatform() {
             <ul className="space-y-4">
               {features.map((feature, index) => (
                 <li key={index} className="flex items-start">
-                  <CheckCircle className="w-5 h-5 text-purple-500 mr-3 mt-0.5 flex-shrink-0" />
+                  <CheckCircle className="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" />
                   <span className="text-gray-700">{feature}</span>
                 </li>
               ))}
@@ -107,12 +109,12 @@ export default function AIQuantumComputingPlatform() {
           </div>
           
           <div>
-            <h3 className="text-2xl font-semibold text-gray-900 mb-6">Target Industries</h3>
+            <h3 className="text-2xl font-semibold text-gray-900 mb-6">ESG Categories</h3>
             <div className="grid grid-cols-1 gap-3">
-              {industries.map((industry, index) => (
+              {esgCategories.map((category, index) => (
                 <div key={index} className="flex items-center p-3 bg-gray-50 rounded-lg">
-                  <Lightning className="w-4 h-4 text-purple-500 mr-3" />
-                  <span className="text-gray-700">{industry}</span>
+                  <Award className="w-4 h-4 text-green-500 mr-3" />
+                  <span className="text-gray-700">{category}</span>
                 </div>
               ))}
             </div>
@@ -124,15 +126,15 @@ export default function AIQuantumComputingPlatform() {
       <section className="py-16 bg-gray-50">
         <div className="max-w-6xl mx-auto px-6">
           <div className="text-center mb-16">
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">Why Choose AI Quantum Computing Platform?</h2>
-            <p className="text-xl text-gray-600">Transform your computational capabilities with quantum intelligence</p>
+            <h2 className="text-3xl font-bold text-gray-900 mb-4">Why Choose AI ESG Compliance Platform?</h2>
+            <p className="text-xl text-gray-600">Transform your sustainability reporting and compliance with intelligent automation</p>
           </div>
           
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {benefits.map((benefit, index) => (
               <div key={index} className="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
-                <div className="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mb-4">
-                  <TrendingUp className="w-6 h-6 text-purple-600" />
+                <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mb-4">
+                  <TrendingUp className="w-6 h-6 text-green-600" />
                 </div>
                 <p className="text-gray-700 font-medium">{benefit}</p>
               </div>
@@ -145,14 +147,14 @@ export default function AIQuantumComputingPlatform() {
       <section className="py-16 max-w-6xl mx-auto px-6">
         <div className="text-center mb-16">
           <h2 className="text-3xl font-bold text-gray-900 mb-4">Industry Applications</h2>
-          <p className="text-xl text-gray-600">Revolutionary applications across cutting-edge industries</p>
+          <p className="text-xl text-gray-600">Trusted by leading organizations across industries</p>
         </div>
         
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           {useCases.map((useCase, index) => (
             <div key={index} className="bg-white border border-gray-200 rounded-lg p-6 hover:shadow-md transition-shadow">
-              <div className="w-10 h-10 bg-purple-100 rounded-lg flex items-center justify-center mb-4">
-                <Cpu className="w-5 h-5 text-purple-600" />
+              <div className="w-10 h-10 bg-green-100 rounded-lg flex items-center justify-center mb-4">
+                <Database className="w-5 h-5 text-green-600" />
               </div>
               <h3 className="font-semibold text-gray-900 mb-2">{useCase}</h3>
             </div>
@@ -165,17 +167,17 @@ export default function AIQuantumComputingPlatform() {
         <div className="max-w-6xl mx-auto px-6">
           <div className="text-center mb-16">
             <h2 className="text-3xl font-bold text-gray-900 mb-4">Transparent Pricing</h2>
-            <p className="text-xl text-gray-600">Choose the plan that fits your quantum computing needs</p>
+            <p className="text-xl text-gray-600">Choose the plan that fits your ESG compliance needs</p>
           </div>
           
           <div className="grid md:grid-cols-3 gap-8">
             {pricing.map((plan, index) => (
               <div key={index} className={`relative bg-white rounded-2xl shadow-lg border-2 ${
-                plan.popular ? 'border-purple-500' : 'border-gray-200'
+                plan.popular ? 'border-green-500' : 'border-gray-200'
               } p-8`}>
                 {plan.popular && (
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                    <span className="bg-purple-500 text-white px-4 py-2 rounded-full text-sm font-semibold">
+                    <span className="bg-green-500 text-white px-4 py-2 rounded-full text-sm font-semibold">
                       Most Popular
                     </span>
                   </div>
@@ -183,14 +185,14 @@ export default function AIQuantumComputingPlatform() {
                 
                 <div className="text-center mb-8">
                   <h3 className="text-2xl font-bold text-gray-900 mb-2">{plan.name}</h3>
-                  <div className="text-4xl font-bold text-purple-600 mb-2">{plan.price}</div>
+                  <div className="text-4xl font-bold text-green-600 mb-2">{plan.price}</div>
                   <p className="text-gray-600">per month</p>
                 </div>
                 
                 <ul className="space-y-3 mb-8">
                   {plan.features.map((feature, featureIndex) => (
                     <li key={featureIndex} className="flex items-start">
-                      <CheckCircle className="w-5 h-5 text-purple-500 mr-3 mt-0.5 flex-shrink-0" />
+                      <CheckCircle className="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" />
                       <span className="text-gray-700">{feature}</span>
                     </li>
                   ))}
@@ -198,7 +200,7 @@ export default function AIQuantumComputingPlatform() {
                 
                 <button className={`w-full py-3 px-6 rounded-lg font-semibold transition-colors ${
                   plan.popular 
-                    ? 'bg-purple-600 text-white hover:bg-purple-700' 
+                    ? 'bg-green-600 text-white hover:bg-green-700' 
                     : 'bg-gray-100 text-gray-900 hover:bg-gray-200'
                 }`}>
                   Get Started
@@ -209,7 +211,7 @@ export default function AIQuantumComputingPlatform() {
           
           <div className="text-center mt-12">
             <p className="text-gray-600 mb-4">Need a custom plan? Contact us for enterprise pricing</p>
-            <a href="mailto:kleber@ziontechgroup.com" className="text-purple-600 hover:text-purple-700 font-semibold">
+            <a href="mailto:kleber@ziontechgroup.com" className="text-green-600 hover:text-green-700 font-semibold">
               Contact Sales Team
             </a>
           </div>
@@ -217,21 +219,21 @@ export default function AIQuantumComputingPlatform() {
       </section>
 
       {/* ROI Section */}
-      <section className="py-16 bg-purple-50">
+      <section className="py-16 bg-green-50">
         <div className="max-w-6xl mx-auto px-6 text-center">
           <h2 className="text-3xl font-bold text-gray-900 mb-6">Proven Results</h2>
           <div className="grid md:grid-cols-3 gap-8">
             <div className="bg-white rounded-lg p-6 shadow-sm">
-              <div className="text-3xl font-bold text-purple-600 mb-2">1000x</div>
-              <p className="text-gray-700">Faster problem solving</p>
+              <div className="text-3xl font-bold text-green-600 mb-2">85%</div>
+              <p className="text-gray-700">Faster ESG reporting time</p>
             </div>
             <div className="bg-white rounded-lg p-6 shadow-sm">
-              <div className="text-3xl font-bold text-purple-600 mb-2">60-80%</div>
-              <p className="text-gray-700">Reduction in computational costs</p>
+              <div className="text-3xl font-bold text-green-600 mb-2">90%</div>
+              <p className="text-gray-700">Improved compliance accuracy</p>
             </div>
             <div className="bg-white rounded-lg p-6 shadow-sm">
-              <div className="text-3xl font-bold text-purple-600 mb-2">Breakthrough</div>
-              <p className="text-gray-700">Scientific discoveries enabled</p>
+              <div className="text-3xl font-bold text-green-600 mb-2">70%</div>
+              <p className="text-gray-700">Reduced tracking costs</p>
             </div>
           </div>
         </div>
@@ -240,12 +242,12 @@ export default function AIQuantumComputingPlatform() {
       {/* CTA Section */}
       <section className="py-16 bg-gray-900 text-white">
         <div className="max-w-4xl mx-auto px-6 text-center">
-          <h2 className="text-3xl font-bold mb-6">Ready to Harness Quantum Power?</h2>
+          <h2 className="text-3xl font-bold mb-6">Ready to Transform Your ESG Compliance?</h2>
           <p className="text-xl text-gray-300 mb-8">
-            Join leading organizations already using AI Quantum Computing Platform to solve the impossible.
+            Join hundreds of organizations already using AI ESG Compliance Platform to meet sustainability goals.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a href="mailto:kleber@ziontechgroup.com" className="px-8 py-4 bg-purple-600 text-white rounded-lg font-semibold hover:bg-purple-700 transition-colors">
+            <a href="mailto:kleber@ziontechgroup.com" className="px-8 py-4 bg-green-600 text-white rounded-lg font-semibold hover:bg-green-700 transition-colors">
               Start Free Trial
             </a>
             <a href="tel:+13024640950" className="px-8 py-4 border border-white/30 text-white rounded-lg hover:bg-white/10 transition-colors">
@@ -260,19 +262,19 @@ export default function AIQuantumComputingPlatform() {
         <h2 className="text-3xl font-bold text-gray-900 mb-8">Questions? We're Here to Help</h2>
         <div className="grid md:grid-cols-2 gap-8">
           <div className="bg-white border border-gray-200 rounded-xl p-6 shadow-sm">
-            <Phone className="w-8 h-8 text-purple-500 mx-auto mb-4" />
+            <Phone className="w-8 h-8 text-green-500 mx-auto mb-4" />
             <h3 className="text-xl font-semibold text-gray-900 mb-2">Call Us</h3>
-            <p className="text-gray-600 mb-4">Speak with our quantum computing experts</p>
-            <a href="tel:+13024640950" className="text-purple-600 hover:text-purple-700 font-semibold">
+            <p className="text-gray-600 mb-4">Speak with our ESG compliance experts</p>
+            <a href="tel:+13024640950" className="text-green-600 hover:text-green-700 font-semibold">
               +1 302 464 0950
             </a>
           </div>
           
           <div className="bg-white border border-gray-200 rounded-xl p-6 shadow-sm">
-            <Mail className="w-8 h-8 text-purple-500 mx-auto mb-4" />
+            <Mail className="w-8 h-8 text-green-500 mx-auto mb-4" />
             <h3 className="text-xl font-semibold text-gray-900 mb-2">Email Us</h3>
             <p className="text-gray-600 mb-4">Get detailed information and pricing</p>
-            <a href="mailto:kleber@ziontechgroup.com" className="text-purple-600 hover:text-purple-700 font-semibold">
+            <a href="mailto:kleber@ziontechgroup.com" className="text-green-600 hover:text-green-700 font-semibold">
               kleber@ziontechgroup.com
             </a>
           </div>
@@ -287,7 +289,7 @@ export default function AIQuantumComputingPlatform() {
             href="https://ziontechgroup.com" 
             target="_blank" 
             rel="noreferrer" 
-            className="inline-flex items-center text-purple-600 hover:text-purple-700 font-semibold"
+            className="inline-flex items-center text-green-600 hover:text-green-700 font-semibold"
           >
             Visit ziontechgroup.com <ExternalLink className="w-4 h-4 ml-2" />
           </a>
