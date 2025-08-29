@@ -1,19 +1,19 @@
 import { motion } from 'framer-motion';
 import {
-    ArrowRight,
-    Cpu,
-    Database,
-    Filter,
-    Globe,
-    Leaf,
-    Mail,
-    MapPin,
-    Phone,
-    Search,
-    Shield,
-    Star,
-    TrendingUp,
-    Zap
+  ArrowRight,
+  Cpu,
+  Database,
+  Filter,
+  Globe,
+  Leaf,
+  Mail,
+  MapPin,
+  Phone,
+  Search,
+  Shield,
+  Star,
+  TrendingUp,
+  Zap
 } from 'lucide-react';
 import { useMemo, useState } from 'react';
 export default function InnovativeServicesShowcase2026() {
