@@ -24,7 +24,16 @@
     "type-check:all": "npm run type-check && npm run type-check:backend",
     "prepare": "git config core.hooksPath .husky || true",
     "fix:all": "npm run lint --fix || true",
-    "install:all": "npm install && cd server && npm install"
+    "install:all": "npm install && cd server && npm install",
+    "pm2:setup": "./scripts/start-pm2-automation.sh",
+    "pm2:start": "pm2 start ecosystem.config.js",
+    "pm2:stop": "pm2 stop all",
+    "pm2:restart": "pm2 restart all",
+    "pm2:status": "pm2 status",
+    "pm2:logs": "pm2 logs",
+    "pm2:monitor": "pm2 monit",
+    "pm2:health": "node scripts/pm2-intelligent-manager.js health",
+    "pm2:orchestrator": "node automation/pm2-enhanced-orchestrator.cjs"
   },
   "dependencies": {
     "@hookform/resolvers": "^5.2.1",
