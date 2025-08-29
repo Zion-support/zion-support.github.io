@@ -100,6 +100,10 @@ const APIMonitoringSaaS = React.lazy(() => import('./pages/services/APIMonitorin
 const GDPRCookieCompliance = React.lazy(() => import('./pages/services/GDPRCookieCompliance'));
 const AIProofreadingStudio = React.lazy(() => import('./pages/services/AIProofreadingStudio'));
 
+// Additional innovative services
+const AIContentOptimizer = React.lazy(() => import('./pages/services/AIContentOptimizer'));
+const AISupplyChainOptimization = React.lazy(() => import('./pages/services/AISupplyChainOptimization'));
+
 // Catalog page
 const ServicesCatalog = React.lazy(() => import('./pages/ServicesCatalog'));
 
@@ -123,7 +127,6 @@ const IncidentResponsePlatform = React.lazy(() => import('./pages/services/Incid
 // Additional innovative services
 const AIBusinessIntelligencePlatform = React.lazy(() => import('./pages/services/AIBusinessIntelligencePlatform'));
 const AIFinancialTradingPlatform = React.lazy(() => import('./pages/services/AIFinancialTradingPlatform'));
-const AISupplyChainOptimization = React.lazy(() => import('./pages/services/AISupplyChainOptimization'));
 const AIHRPlatform = React.lazy(() => import('./pages/services/AIHRPlatform'));
 const AIMarketingAutomation = React.lazy(() => import('./pages/services/AIMarketingAutomation'));
 const AILegalResearchPlatform = React.lazy(() => import('./pages/services/AILegalResearchPlatform'));
@@ -266,6 +269,10 @@ function App() {
               <Route path="/services/api-monitoring" element={<APIMonitoringSaaS />} />
               <Route path="/services/gdpr-cookie-compliance" element={<GDPRCookieCompliance />} />
               <Route path="/services/ai-proofreading-studio" element={<AIProofreadingStudio />} />
+              
+              {/* Additional innovative services */}
+              <Route path="/services/ai-content-optimizer" element={<AIContentOptimizer />} />
+              <Route path="/services/ai-supply-chain-optimization" element={<AISupplyChainOptimization />} />
               
               {/* Additional Service Routes */}
               <Route path="/services/digital-transformation" element={<DigitalTransformation />} />

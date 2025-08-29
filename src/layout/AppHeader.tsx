@@ -88,7 +88,8 @@ export function AppHeader() {
         { name: 'AI Sales Copilot', href: '/services/ai-sales-copilot', description: 'Sales automation & optimization' },
         { name: 'AI Compliance Assistant', href: '/services/ai-compliance-assistant', description: 'Regulatory compliance automation' },
         { name: 'AI Auto Email Responder', href: '/services/ai-auto-email-responder', description: 'Smart email management' },
-        { name: 'LLM Content Studio', href: '/services/llm-content-studio', description: 'AI-powered content creation' }
+        { name: 'LLM Content Studio', href: '/services/llm-content-studio', description: 'AI-powered content creation' },
+        { name: 'AI Content Optimizer', href: '/services/ai-content-optimizer', description: 'Content performance optimization' }
       ]
     },
     {
@@ -124,6 +125,18 @@ export function AppHeader() {
         { name: 'AI Compliance Copilot', href: '/services/ai-compliance-copilot', description: 'AI-powered security' },
         { name: 'Zero Trust Architecture', href: '/services/zero-trust-network-architecture', description: 'Modern security framework' },
         { name: 'Incident Response', href: '/services/incident-response-platform', description: 'Security incident management' }
+      ]
+    },
+    {
+      name: 'Supply Chain & Operations',
+      description: 'Streamline operations and logistics',
+      color: 'from-emerald-500 to-teal-600',
+      icon: Truck,
+      services: [
+        { name: 'AI Supply Chain Optimization', href: '/services/ai-supply-chain-optimization', description: 'Intelligent logistics & inventory' },
+        { name: 'Returns Management', href: '/services/returns-management', description: 'E-commerce RMA & logistics' },
+        { name: 'IoT Edge Computing', href: '/services/iot-edge', description: 'Smart device networks' },
+        { name: 'Data Analytics', href: '/services/data-analytics', description: 'Advanced data processing' }
       ]
     },
     {
@@ -414,15 +427,15 @@ export function AppHeader() {
                 <div className="mt-8 pt-8 border-t border-slate-700">
                   <h3 className="font-medium text-white mb-4">Contact Us</h3>
                   <div className="space-y-3 text-sm text-slate-300">
-                    <a href="tel:+13024640950" className="flex items-center space-x-3 hover:text-cyan-400 transition-colors">
+                    <a href="tel:+13024640950" className="flex items-center space-x-3 hover:text-cyan-400 transition-colors p-2 rounded-lg hover:bg-slate-800/50">
                       <Phone className="w-4 h-4" />
                       <span>+1 302 464 0950</span>
                     </a>
-                    <a href="mailto:kleber@ziontechgroup.com" className="flex items-center space-x-3 hover:text-cyan-400 transition-colors">
+                    <a href="mailto:kleber@ziontechgroup.com" className="flex items-center space-x-3 hover:text-cyan-400 transition-colors p-2 rounded-lg hover:bg-slate-800/50">
                       <Mail className="w-4 h-4" />
                       <span>kleber@ziontechgroup.com</span>
                     </a>
-                    <div className="flex items-start space-x-3">
+                    <div className="flex items-start space-x-3 p-2 rounded-lg">
                       <MapPin className="w-4 h-4 mt-0.5" />
                       <span>364 E Main St STE 1008<br />Middletown DE 19709</span>
                     </div>

@@ -29,6 +29,14 @@ const Services: React.FC = () => (
         <h3 className="font-semibold text-lg mb-1">AI Proofreading Studio</h3>
         <p className="text-slate-300 text-sm">Brand tone, compliance, and localization.</p>
       </a>
+      <a href="/services/ai-content-optimizer" className="p-6 bg-slate-800 rounded-xl border border-slate-700 hover:border-cyan-600 transition">
+        <h3 className="font-semibold text-lg mb-1">AI Content Optimizer</h3>
+        <p className="text-slate-300 text-sm">Increase organic traffic by 40-60% with AI optimization.</p>
+      </a>
+      <a href="/services/ai-supply-chain-optimization" className="p-6 bg-slate-800 rounded-xl border border-slate-700 hover:border-cyan-600 transition">
+        <h3 className="font-semibold text-lg mb-1">AI Supply Chain Optimization</h3>
+        <p className="text-slate-300 text-sm">Reduce costs by 20-35% and improve inventory accuracy.</p>
+      </a>
       <a href="/contact" className="p-6 bg-slate-800 rounded-xl border border-slate-700 hover:border-cyan-600 transition">
         <h3 className="font-semibold text-lg mb-1">Talk to an Expert</h3>
         <p className="text-slate-300 text-sm">Call +1 302 464 0950 or email kleber@ziontechgroup.com</p>

@@ -91,6 +91,28 @@ export const EnhancedFuturisticFooter: React.FC = () => {
       ]
     },
     {
+      title: 'Supply Chain & Operations',
+      icon: Truck,
+      color: 'from-emerald-600 to-teal-600',
+      links: [
+        { name: 'AI Supply Chain Optimization', href: '/services/ai-supply-chain-optimization' },
+        { name: 'Returns Management SaaS', href: '/services/returns-management' },
+        { name: 'Data Analytics', href: '/services/data-analytics' },
+        { name: 'Digital Twin', href: '/services/digital-twin' }
+      ]
+    },
+    {
+      title: 'AI & Content Solutions',
+      icon: Brain,
+      color: 'from-purple-600 to-pink-600',
+      links: [
+        { name: 'AI Content Optimizer', href: '/services/ai-content-optimizer' },
+        { name: 'AI Business Intelligence', href: '/services/ai-business-intelligence' },
+        { name: 'AI Sales Copilot', href: '/services/ai-sales-copilot' },
+        { name: 'LLM Content Studio', href: '/services/llm-content-studio' }
+      ]
+    },
+    {
       title: 'IoT & Digital Solutions',
       icon: Rocket,
       color: 'from-green-600 to-emerald-600',
@@ -376,6 +398,18 @@ export const EnhancedFuturisticFooter: React.FC = () => {
           <div>
             <h4 className="font-semibold text-white mb-4">Contact Us</h4>
             <div className="space-y-3">
+              <a href="tel:+13024640950" className="flex items-center space-x-2 text-sm text-slate-300 hover:text-cyan-400 transition-colors">
+                <Phone className="w-4 h-4" />
+                <span>+1 302 464 0950</span>
+              </a>
+              <a href="mailto:kleber@ziontechgroup.com" className="flex items-center space-x-2 text-sm text-slate-300 hover:text-cyan-400 transition-colors">
+                <Mail className="w-4 h-4" />
+                <span>kleber@ziontechgroup.com</span>
+              </a>
+              <div className="flex items-start space-x-2 text-sm text-slate-300">
+                <MapPin className="w-4 h-4 mt-0.5" />
+                <span>364 E Main St STE 1008<br />Middletown DE 19709</span>
+              </div>
               <a 
                 href="tel:+13024640950" 
                 className="flex items-center space-x-3 text-sm text-slate-300 hover:text-cyan-400 transition-colors"
