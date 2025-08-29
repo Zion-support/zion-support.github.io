@@ -1,320 +1,272 @@
-import React, { useState, useEffect } from 'react';
+import React, { memo, useEffect, useState, useCallback } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { 
-  Eye, 
-  EyeOff, 
-  Volume2, 
-  VolumeX, 
-  Type, 
-  TypeOff, 
-  Contrast, 
-  Sun, 
-  Moon,
-  HelpCircle,
-  X
-} from 'lucide-react';
+import { Eye, EyeOff, Volume2, VolumeX, Keyboard, MousePointer, Sun, Moon, Contrast, ZoomIn, ZoomOut } from 'lucide-react';
 
-interface AccessibilityState {
-  highContrast: boolean;
-  largeText: boolean;
-  reducedMotion: boolean;
-  screenReader: boolean;
-  darkMode: boolean;
-  fontSize: number;
+interface AccessibilityEnhancerProps {
+  showControls?: boolean;
 }
 
-export function AccessibilityEnhancer() {
-  const [isOpen, setIsOpen] = useState(false);
-  const [accessibility, setAccessibility] = useState<AccessibilityState>({
-    highContrast: false,
-    largeText: false,
-    reducedMotion: false,
-    screenReader: false,
-    darkMode: false,
-    fontSize: 16
-  });
+export const AccessibilityEnhancer = memo<AccessibilityEnhancerProps>(({ showControls = false }) => {
+  const [isVisible, setIsVisible] = useState(false);
+  const [highContrast, setHighContrast] = useState(false);
+  const [reducedMotion, setReducedMotion] = useState(false);
+  const [fontSize, setFontSize] = useState(16);
+  const [isMuted, setIsMuted] = useState(false);
+  const [showKeyboardShortcuts, setShowKeyboardShortcuts] = useState(false);
 
-  const [showHelp, setShowHelp] = useState(false);
-
-  useEffect(() => {
-    // Load saved preferences from localStorage
-    const saved = localStorage.getItem('zion-accessibility');
-    if (saved) {
-      const savedState = JSON.parse(saved);
-      setAccessibility(prev => ({ ...prev, ...savedState }));
-      applyAccessibilitySettings(savedState);
+  // Keyboard shortcuts
+  const handleKeyboardShortcuts = useCallback((e: KeyboardEvent) => {
+    // Ctrl/Cmd + Plus to increase font size
+    if ((e.ctrlKey || e.metaKey) && e.key === '=') {
+      e.preventDefault();
+      setFontSize(prev => Math.min(prev + 2, 24));
+    }
+    
+    // Ctrl/Cmd + Minus to decrease font size
+    if ((e.ctrlKey || e.metaKey) && e.key === '-') {
+      e.preventDefault();
+      setFontSize(prev => Math.max(prev - 2, 12));
+    }
+    
+    // Ctrl/Cmd + 0 to reset font size
+    if ((e.ctrlKey || e.metaKey) && e.key === '0') {
+      e.preventDefault();
+      setFontSize(16);
+    }
+    
+    // Alt + H to toggle high contrast
+    if (e.altKey && e.key === 'h') {
+      e.preventDefault();
+      setHighContrast(prev => !prev);
+    }
+    
+    // Alt + M to toggle reduced motion
+    if (e.altKey && e.key === 'm') {
+      e.preventDefault();
+      setReducedMotion(prev => !prev);
     }
   }, []);
 
-  const applyAccessibilitySettings = (settings: Partial<AccessibilityState>) => {
+  // Apply accessibility settings
+  useEffect(() => {
     const root = document.documentElement;
     
-    if (settings.highContrast) {
-      root.style.setProperty('--foreground', '142 71% 95%');
-      root.style.setProperty('--background', '0 0% 5%');
-      root.style.setProperty('--border', '0 0% 90%');
-    } else {
-      root.style.removeProperty('--foreground');
-      root.style.removeProperty('--background');
-      root.style.removeProperty('--border');
-    }
-
-    if (settings.largeText) {
-      root.style.setProperty('--font-size-base', '18px');
-      root.style.setProperty('--font-size-lg', '20px');
-      root.style.setProperty('--font-size-xl', '24px');
-    } else {
-      root.style.removeProperty('--font-size-base');
-      root.style.removeProperty('--font-size-lg');
-      root.style.removeProperty('--font-size-xl');
-    }
-
-    if (settings.reducedMotion) {
-      root.style.setProperty('--animation-duration', '0.01ms');
-    } else {
-      root.style.removeProperty('--animation-duration');
-    }
-
-    if (settings.fontSize !== undefined) {
-      root.style.fontSize = `${settings.fontSize}px`;
-    }
-
-    // Apply dark mode
-    if (settings.darkMode) {
-      root.classList.add('dark');
-    } else {
-      root.classList.remove('dark');
-    }
-  };
-
-  const updateAccessibility = (updates: Partial<AccessibilityState>) => {
-    const newState = { ...accessibility, ...updates };
-    setAccessibility(newState);
-    applyAccessibilitySettings(updates);
+    // Apply font size
+    root.style.fontSize = `${fontSize}px`;
     
-    // Save to localStorage
-    localStorage.setItem('zion-accessibility', JSON.stringify(newState));
-  };
-
-  const resetAccessibility = () => {
-    const defaultState: AccessibilityState = {
-      highContrast: false,
-      largeText: false,
-      reducedMotion: false,
-      screenReader: false,
-      darkMode: false,
-      fontSize: 16
-    };
-    
-    setAccessibility(defaultState);
-    applyAccessibilitySettings(defaultState);
-    localStorage.removeItem('zion-accessibility');
-  };
-
-  const accessibilityFeatures = [
-    {
-      id: 'highContrast',
-      title: 'High Contrast',
-      description: 'Increase contrast for better visibility',
-      icon: Contrast,
-      active: accessibility.highContrast
-    },
-    {
-      id: 'largeText',
-      title: 'Large Text',
-      description: 'Increase text size for better readability',
-      icon: Type,
-      active: accessibility.largeText
-    },
-    {
-      id: 'reducedMotion',
-      title: 'Reduced Motion',
-      description: 'Reduce animations for motion sensitivity',
-      icon: Eye,
-      active: accessibility.reducedMotion
-    },
-    {
-      id: 'darkMode',
-      title: 'Dark Mode',
-      description: 'Switch to dark theme',
-      icon: accessibility.darkMode ? Moon : Sun,
-      active: accessibility.darkMode
+    // Apply high contrast
+    if (highContrast) {
+      root.classList.add('high-contrast');
+    } else {
+      root.classList.remove('high-contrast');
     }
-  ];
+    
+    // Apply reduced motion
+    if (reducedMotion) {
+      root.classList.add('reduce-motion');
+    } else {
+      root.classList.remove('reduce-motion');
+    }
+  }, [fontSize, highContrast, reducedMotion]);
+
+  // Setup keyboard shortcuts
+  useEffect(() => {
+    document.addEventListener('keydown', handleKeyboardShortcuts);
+    return () => document.removeEventListener('keydown', handleKeyboardShortcuts);
+  }, [handleKeyboardShortcuts]);
+
+  // Focus management
+  useEffect(() => {
+    const focusableElements = document.querySelectorAll(
+      'a, button, input, textarea, select, [tabindex]:not([tabindex="-1"])'
+    );
+    
+    focusableElements.forEach((el, index) => {
+      if (el instanceof HTMLElement) {
+        el.setAttribute('tabindex', index.toString());
+      }
+    });
+  }, []);
+
+  // Screen reader announcements
+  const announceToScreenReader = useCallback((message: string) => {
+    const announcement = document.createElement('div');
+    announcement.setAttribute('aria-live', 'polite');
+    announcement.setAttribute('aria-atomic', 'true');
+    announcement.className = 'sr-only';
+    announcement.textContent = message;
+    
+    document.body.appendChild(announcement);
+    
+    setTimeout(() => {
+      document.body.removeChild(announcement);
+    }, 1000);
+  }, []);
+
+  const toggleHighContrast = useCallback(() => {
+    setHighContrast(prev => {
+      const newValue = !prev;
+      announceToScreenReader(`High contrast mode ${newValue ? 'enabled' : 'disabled'}`);
+      return newValue;
+    });
+  }, [announceToScreenReader]);
+
+  const toggleReducedMotion = useCallback(() => {
+    setReducedMotion(prev => {
+      const newValue = !prev;
+      announceToScreenReader(`Reduced motion ${newValue ? 'enabled' : 'disabled'}`);
+      return newValue;
+    });
+  }, [announceToScreenReader]);
+
+  const increaseFontSize = useCallback(() => {
+    setFontSize(prev => {
+      const newSize = Math.min(prev + 2, 24);
+      announceToScreenReader(`Font size increased to ${newSize}px`);
+      return newSize;
+    });
+  }, [announceToScreenReader]);
+
+  const decreaseFontSize = useCallback(() => {
+    setFontSize(prev => {
+      const newSize = Math.max(prev - 2, 12);
+      announceToScreenReader(`Font size decreased to ${newSize}px`);
+      return newSize;
+    });
+  }, [announceToScreenReader]);
+
+  const resetFontSize = useCallback(() => {
+    setFontSize(16);
+    announceToScreenReader('Font size reset to default');
+  }, [announceToScreenReader]);
+
+  if (!showControls) return null;
 
   return (
     <>
-      {/* Accessibility Toggle Button */}
-      <button
-        onClick={() => setIsOpen(!isOpen)}
-        className="fixed bottom-4 right-4 z-50 p-3 bg-zion-purple text-white rounded-full shadow-lg hover:bg-zion-purple/80 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:ring-offset-2 focus:ring-offset-black"
-        aria-label="Accessibility settings"
-        title="Accessibility Settings"
+      {/* Accessibility Controls */}
+      <motion.div
+        initial={{ opacity: 0, x: 100 }}
+        animate={{ opacity: isVisible ? 1 : 0, x: isVisible ? 0 : 100 }}
+        transition={{ duration: 0.5 }}
+        className="fixed top-4 right-4 bg-zion-slate-light/95 backdrop-blur-sm border border-zion-cyan/30 rounded-lg p-4 text-white shadow-2xl z-50"
       >
-        <HelpCircle className="w-6 h-6" />
-      </button>
-
-      {/* Accessibility Panel */}
-      <AnimatePresence>
-        {isOpen && (
-          <motion.div
-            initial={{ opacity: 0, y: 20, scale: 0.95 }}
-            animate={{ opacity: 1, y: 0, scale: 1 }}
-            exit={{ opacity: 0, y: 20, scale: 0.95 }}
-            className="fixed bottom-20 right-4 z-50 w-80 bg-slate-800 border border-slate-700 rounded-lg shadow-2xl"
+        <div className="flex items-center gap-2 mb-3">
+          <div className="w-2 h-2 bg-blue-400 rounded-full"></div>
+          <span className="font-semibold text-zion-cyan">Accessibility</span>
+        </div>
+        
+        <div className="space-y-3">
+          {/* Font Size Controls */}
+          <div className="flex items-center gap-2">
+            <ZoomOut className="w-4 h-4 text-zion-cyan" />
+            <button
+              onClick={decreaseFontSize}
+              className="px-2 py-1 bg-zion-cyan/20 hover:bg-zion-cyan/30 rounded text-xs transition-colors"
+              aria-label="Decrease font size"
+            >
+              A-
+            </button>
+            <span className="text-xs min-w-[2rem] text-center">{fontSize}px</span>
+            <button
+              onClick={increaseFontSize}
+              className="px-2 py-1 bg-zion-cyan/20 hover:bg-zion-cyan/30 rounded text-xs transition-colors"
+              aria-label="Increase font size"
+            >
+              A+
+            </button>
+            <button
+              onClick={resetFontSize}
+              className="px-2 py-1 bg-zion-cyan/20 hover:bg-zion-cyan/30 rounded text-xs transition-colors"
+              aria-label="Reset font size"
+            >
+              Reset
+            </button>
+          </div>
+          
+          {/* High Contrast Toggle */}
+          <button
+            onClick={toggleHighContrast}
+            className={`w-full flex items-center gap-2 px-3 py-2 rounded transition-colors ${
+              highContrast 
+                ? 'bg-zion-cyan text-white' 
+                : 'bg-zion-cyan/20 hover:bg-zion-cyan/30'
+            }`}
+            aria-label={`${highContrast ? 'Disable' : 'Enable'} high contrast mode`}
           >
-            <div className="p-4">
-              <div className="flex items-center justify-between mb-4">
-                <h3 className="text-lg font-semibold text-white">Accessibility</h3>
-                <button
-                  onClick={() => setIsOpen(false)}
-                  className="text-slate-400 hover:text-white transition-colors"
-                  aria-label="Close accessibility panel"
-                >
-                  <X className="w-5 h-5" />
-                </button>
-              </div>
+            <Contrast className="w-4 h-4" />
+            <span className="text-xs">High Contrast</span>
+          </button>
+          
+          {/* Reduced Motion Toggle */}
+          <button
+            onClick={toggleReducedMotion}
+            className={`w-full flex items-center gap-2 px-3 py-2 rounded transition-colors ${
+              reducedMotion 
+                ? 'bg-zion-cyan text-white' 
+                : 'bg-zion-cyan/20 hover:bg-zion-cyan/30'
+            }`}
+            aria-label={`${reducedMotion ? 'Disable' : 'Enable'} reduced motion`}
+          >
+            {reducedMotion ? <EyeOff className="w-4 h-4" /> : <Eye className="w-4 h-4" />}
+            <span className="text-xs">Reduced Motion</span>
+          </button>
+          
+          {/* Keyboard Shortcuts Help */}
+          <button
+            onClick={() => setShowKeyboardShortcuts(!showKeyboardShortcuts)}
+            className="w-full flex items-center gap-2 px-3 py-2 bg-zion-cyan/20 hover:bg-zion-cyan/30 rounded transition-colors"
+            aria-label="Show keyboard shortcuts"
+          >
+            <Keyboard className="w-4 h-4" />
+            <span className="text-xs">Keyboard Shortcuts</span>
+          </button>
+        </div>
+      </motion.div>
 
-              {/* Font Size Control */}
-              <div className="mb-4">
-                <label className="block text-sm font-medium text-slate-300 mb-2">
-                  Font Size
-                </label>
-                <div className="flex items-center gap-2">
-                  <button
-                    onClick={() => updateAccessibility({ fontSize: Math.max(12, accessibility.fontSize - 1) })}
-                    className="px-2 py-1 bg-slate-700 text-white rounded hover:bg-slate-600 transition-colors"
-                    aria-label="Decrease font size"
-                  >
-                    A-
-                  </button>
-                  <span className="text-sm text-slate-300 min-w-[3rem] text-center">
-                    {accessibility.fontSize}px
-                  </span>
-                  <button
-                    onClick={() => updateAccessibility({ fontSize: Math.min(24, accessibility.fontSize + 1) })}
-                    className="px-2 py-1 bg-slate-700 text-white rounded hover:bg-slate-600 transition-colors"
-                    aria-label="Increase font size"
-                  >
-                    A+
-                  </button>
-                </div>
-              </div>
-
-              {/* Accessibility Features */}
-              <div className="space-y-3">
-                {accessibilityFeatures.map((feature) => (
-                  <button
-                    key={feature.id}
-                    onClick={() => updateAccessibility({ [feature.id]: !feature.active })}
-                    className={`w-full flex items-center justify-between p-3 rounded-lg transition-all duration-200 ${
-                      feature.active
-                        ? 'bg-zion-purple/20 border border-zion-purple/40'
-                        : 'bg-slate-700/50 border border-slate-600 hover:bg-slate-700'
-                    }`}
-                    aria-pressed={feature.active}
-                  >
-                    <div className="flex items-center gap-3">
-                      <feature.icon className={`w-5 h-5 ${
-                        feature.active ? 'text-zion-purple' : 'text-slate-400'
-                      }`} />
-                      <div className="text-left">
-                        <div className="text-sm font-medium text-white">
-                          {feature.title}
-                        </div>
-                        <div className="text-xs text-slate-400">
-                          {feature.description}
-                        </div>
-                      </div>
-                    </div>
-                    <div className={`w-4 h-4 rounded-full border-2 ${
-                      feature.active
-                        ? 'bg-zion-purple border-zion-purple'
-                        : 'border-slate-500'
-                    }`} />
-                  </button>
-                ))}
-              </div>
-
-              {/* Reset Button */}
-              <button
-                onClick={resetAccessibility}
-                className="w-full mt-4 px-4 py-2 bg-slate-700 text-white rounded-lg hover:bg-slate-600 transition-colors text-sm"
-              >
-                Reset to Default
-              </button>
-
-              {/* Help Button */}
-              <button
-                onClick={() => setShowHelp(!showHelp)}
-                className="w-full mt-2 px-4 py-2 bg-zion-cyan/20 text-zion-cyan rounded-lg hover:bg-zion-cyan/30 transition-colors text-sm flex items-center justify-center gap-2"
-              >
-                <HelpCircle className="w-4 h-4" />
-                Accessibility Help
-              </button>
-            </div>
-          </motion.div>
-        )}
-      </AnimatePresence>
-
-      {/* Help Modal */}
+      {/* Keyboard Shortcuts Modal */}
       <AnimatePresence>
-        {showHelp && (
+        {showKeyboardShortcuts && (
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            className="fixed inset-0 z-50 bg-black/50 flex items-center justify-center p-4"
-            onClick={() => setShowHelp(false)}
+            className="fixed inset-0 bg-black/50 backdrop-blur-sm z-50 flex items-center justify-center p-4"
+            onClick={() => setShowKeyboardShortcuts(false)}
           >
             <motion.div
-              initial={{ opacity: 0, scale: 0.95 }}
-              animate={{ opacity: 1, scale: 1 }}
-              exit={{ opacity: 0, scale: 0.95 }}
-              className="bg-slate-800 rounded-lg p-6 max-w-md w-full border border-slate-700"
+              initial={{ scale: 0.9, opacity: 0 }}
+              animate={{ scale: 1, opacity: 1 }}
+              exit={{ scale: 0.9, opacity: 0 }}
+              className="bg-zion-slate-light border border-zion-cyan/30 rounded-lg p-6 max-w-md w-full"
               onClick={(e) => e.stopPropagation()}
             >
-              <h3 className="text-xl font-semibold text-white mb-4">
-                Accessibility Features
-              </h3>
-              
-              <div className="space-y-4 text-sm text-slate-300">
-                <div>
-                  <h4 className="font-medium text-white mb-2">High Contrast</h4>
-                  <p>Increases color contrast for better visibility, especially useful for users with visual impairments.</p>
+              <h3 className="text-lg font-semibold text-zion-cyan mb-4">Keyboard Shortcuts</h3>
+              <div className="space-y-2 text-sm">
+                <div className="flex justify-between">
+                  <span>Increase Font Size:</span>
+                  <kbd className="px-2 py-1 bg-zion-slate rounded text-xs">Ctrl/Cmd + +</kbd>
                 </div>
-                
-                <div>
-                  <h4 className="font-medium text-white mb-2">Large Text</h4>
-                  <p>Increases text size throughout the website for better readability.</p>
+                <div className="flex justify-between">
+                  <span>Decrease Font Size:</span>
+                  <kbd className="px-2 py-1 bg-zion-slate rounded text-xs">Ctrl/Cmd + -</kbd>
                 </div>
-                
-                <div>
-                  <h4 className="font-medium text-white mb-2">Reduced Motion</h4>
-                  <p>Reduces animations and transitions for users sensitive to motion or with vestibular disorders.</p>
+                <div className="flex justify-between">
+                  <span>Reset Font Size:</span>
+                  <kbd className="px-2 py-1 bg-zion-slate rounded text-xs">Ctrl/Cmd + 0</kbd>
                 </div>
-                
-                <div>
-                  <h4 className="font-medium text-white mb-2">Dark Mode</h4>
-                  <p>Switches to a dark color scheme for better visibility in low-light environments.</p>
+                <div className="flex justify-between">
+                  <span>Toggle High Contrast:</span>
+                  <kbd className="px-2 py-1 bg-zion-slate rounded text-xs">Alt + H</kbd>
                 </div>
-                
-                <div>
-                  <h4 className="font-medium text-white mb-2">Font Size Control</h4>
-                  <p>Adjust the base font size from 12px to 24px to suit your reading preferences.</p>
+                <div className="flex justify-between">
+                  <span>Toggle Reduced Motion:</span>
+                  <kbd className="px-2 py-1 bg-zion-slate rounded text-xs">Alt + M</kbd>
                 </div>
               </div>
-
-              <div className="mt-6 pt-4 border-t border-slate-700">
-                <h4 className="font-medium text-white mb-2">Keyboard Navigation</h4>
-                <p className="text-sm text-slate-300">
-                  Use Tab to navigate through interactive elements. Press Enter or Space to activate buttons and links.
-                </p>
-              </div>
-
               <button
-                onClick={() => setShowHelp(false)}
-                className="w-full mt-4 px-4 py-2 bg-zion-purple text-white rounded-lg hover:bg-zion-purple/80 transition-colors"
+                onClick={() => setShowKeyboardShortcuts(false)}
+                className="mt-4 w-full px-4 py-2 bg-zion-cyan hover:bg-zion-cyan/80 rounded transition-colors"
               >
                 Close
               </button>
@@ -322,6 +274,36 @@ export function AccessibilityEnhancer() {
           </motion.div>
         )}
       </AnimatePresence>
+
+      {/* Screen Reader Only Styles */}
+      <style jsx>{`
+        .sr-only {
+          position: absolute;
+          width: 1px;
+          height: 1px;
+          padding: 0;
+          margin: -1px;
+          overflow: hidden;
+          clip: rect(0, 0, 0, 0);
+          white-space: nowrap;
+          border: 0;
+        }
+        
+        .high-contrast {
+          --zion-bg-primary: 0 0 0;
+          --zion-bg-secondary: 255 255 255;
+          --zion-text-primary: 255 255 255;
+          --zion-text-secondary: 0 0 0;
+        }
+        
+        .reduce-motion * {
+          animation-duration: 0.01ms !important;
+          animation-iteration-count: 1 !important;
+          transition-duration: 0.01ms !important;
+        }
+      `}</style>
     </>
   );
-}
+});
+
+AccessibilityEnhancer.displayName = 'AccessibilityEnhancer';
