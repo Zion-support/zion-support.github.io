@@ -1,4 +1,4 @@
-import { ArrowRight, Atom, BookOpen, Brain, Building, Building2, ChevronDown, Cloud, Code, Cpu, DollarSign, FileText, Globe, HeartHandshake, Heart, HelpCircle, Leaf, Lock, Mail, MapPin, Menu, MessageCircle, PenTool, Phone, Rocket, Scale, Search, Settings, Shield, ShoppingCart, Star, Target, TrendingUp, Users, X, Zap } from 'lucide-react';
+import { ArrowRight, Atom, BookOpen, Brain, Building, Building2, ChevronDown, Cloud, Code, Cpu, DollarSign, FileText, Globe, HeartHandshake, Heart, HelpCircle, Leaf, Lock, Mail, MapPin, Menu, MessageCircle, PenTool, Phone, Rocket, Scale, Search, Settings, Shield, ShoppingCart, Star, Target, TrendingUp, Users, X, Zap, Truck } from 'lucide-react';
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { ThemeToggle } from '../components/ThemeToggle';
@@ -53,6 +53,38 @@ export function AppHeader() {
       color: 'from-purple-500 to-pink-500'
     },
     { 
+      name: 'AI Legal Document Analysis', 
+      href: '/services/ai-legal-document-analysis', 
+      icon: FileText, 
+      description: 'Legal AI with 99.2% accuracy',
+      featured: true,
+      color: 'from-blue-500 to-indigo-500'
+    },
+    { 
+      name: 'AI Supply Chain Optimization', 
+      href: '/services/ai-supply-chain-optimization', 
+      icon: Truck, 
+      description: '95% forecast accuracy, 30% cost reduction',
+      featured: true,
+      color: 'from-green-500 to-emerald-500'
+    },
+    { 
+      name: 'AI Healthcare Analytics', 
+      href: '/services/ai-healthcare-analytics', 
+      icon: Heart, 
+      description: '96% accuracy, 40% cost reduction',
+      featured: true,
+      color: 'from-red-500 to-pink-500'
+    },
+    { 
+      name: 'AI Financial Trading', 
+      href: '/services/ai-financial-trading', 
+      icon: TrendingUp, 
+      description: '94% accuracy, 35% ROI increase',
+      featured: true,
+      color: 'from-emerald-500 to-green-500'
+    },
+    { 
       name: 'AI Business Intelligence', 
       href: '/services/ai-business-intelligence', 
       icon: Brain, 
@@ -65,7 +97,7 @@ export function AppHeader() {
       href: '/services/ai-healthcare-platform', 
       icon: Heart, 
       description: 'Medical AI & Diagnostics',
-      featured: true,
+      featured: false,
       color: 'from-red-500 to-pink-500'
     },
     { 
@@ -73,7 +105,7 @@ export function AppHeader() {
       href: '/services/ai-content-creation', 
       icon: PenTool, 
       description: 'Content Generation & Optimization',
-      featured: true,
+      featured: false,
       color: 'from-blue-500 to-indigo-500'
     },
     { 
@@ -81,7 +113,7 @@ export function AppHeader() {
       href: '/services/ai-cybersecurity', 
       icon: Shield, 
       description: 'AI-Powered Security',
-      featured: true,
+      featured: false,
       color: 'from-green-500 to-blue-500'
     },
     { 
@@ -89,7 +121,7 @@ export function AppHeader() {
       href: '/services/quantum-computing', 
       icon: Atom, 
       description: 'Quantum AI & Optimization',
-      featured: true,
+      featured: false,
       color: 'from-purple-500 to-pink-500'
     },
     { 
@@ -97,7 +129,7 @@ export function AppHeader() {
       href: '/services/iot-edge-computing', 
       icon: Cpu, 
       description: 'IoT & Real-time Processing',
-      featured: true,
+      featured: false,
       color: 'from-blue-500 to-cyan-500'
     },
     { 
@@ -105,7 +137,7 @@ export function AppHeader() {
       href: '/services/digital-twin', 
       icon: Globe, 
       description: 'Virtual Replicas & Simulation',
-      featured: true,
+      featured: false,
       color: 'from-green-500 to-emerald-500'
     },
     { 
@@ -113,7 +145,7 @@ export function AppHeader() {
       href: '/services/cloud-devops', 
       icon: Cloud, 
       description: 'DevOps & Infrastructure',
-      featured: true,
+      featured: false,
       color: 'from-blue-500 to-cyan-500'
     },
     { 
@@ -121,7 +153,7 @@ export function AppHeader() {
       href: '/services/micro-saas', 
       icon: ShoppingCart, 
       description: 'AI automations with transparent pricing',
-      featured: true,
+      featured: false,
       color: 'from-orange-500 to-red-500'
     },
     { 
@@ -129,7 +161,7 @@ export function AppHeader() {
       href: '/revolutionary-services-2030', 
       icon: Rocket, 
       description: 'Future Technology Solutions',
-      featured: true,
+      featured: false,
       color: 'from-indigo-500 to-purple-500'
     }
   ];
