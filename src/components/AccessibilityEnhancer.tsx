@@ -1,461 +1,476 @@
-import React, { useEffect, useCallback, useRef, useState } from 'react';
+import React, { useEffect, useCallback, useState } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
+import { 
+  Eye, 
+  EyeOff, 
+  Volume2, 
+  VolumeX, 
+  Contrast, 
+  Type, 
+  MousePointer, 
+  Keyboard,
+  Accessibility,
+  HelpCircle,
+  X,
+  CheckCircle,
+  AlertCircle
+} from 'lucide-react';
 
-interface AccessibilityMetrics {
-  contrastRatio: number;
-  focusableElements: number;
-  headingStructure: boolean;
-  altTextCoverage: number;
-  ariaLabels: number;
+interface AccessibilitySettings {
+  highContrast: boolean;
+  largeText: boolean;
+  reducedMotion: boolean;
+  screenReader: boolean;
   keyboardNavigation: boolean;
+  focusIndicator: boolean;
 }
 
 interface AccessibilityEnhancerProps {
-  enableMonitoring?: boolean;
-  enableEnhancements?: boolean;
-  showAccessibilityPanel?: boolean;
-  logMetrics?: boolean;
+  enableFeatures?: boolean;
+  showControls?: boolean;
 }
 
 export const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
-  enableMonitoring = true,
-  enableEnhancements = true,
-  showAccessibilityPanel = false,
-  logMetrics = false
+  enableFeatures = true,
+  showControls = true
 }) => {
-  const [isVisible, setIsVisible] = useState(false);
-  const [metrics, setMetrics] = useState<AccessibilityMetrics>({
-    contrastRatio: 0,
-    focusableElements: 0,
-    headingStructure: false,
-    altTextCoverage: 0,
-    ariaLabels: 0,
-    keyboardNavigation: false
+  const [settings, setSettings] = useState<AccessibilitySettings>({
+    highContrast: false,
+    largeText: false,
+    reducedMotion: false,
+    screenReader: false,
+    keyboardNavigation: false,
+    focusIndicator: true
   });
 
-  const metricsRef = useRef<AccessibilityMetrics>(metrics);
-  const focusTrapRef = useRef<HTMLDivElement>(null);
+  const [showPanel, setShowPanel] = useState(false);
+  const [announcements, setAnnouncements] = useState<string[]>([]);
+
+  // Apply accessibility settings
+  const applySettings = useCallback((newSettings: Partial<AccessibilitySettings>) => {
+    const updatedSettings = { ...settings, ...newSettings };
+    setSettings(updatedSettings);
+
+    // Apply high contrast
+    if (updatedSettings.highContrast) {
+      document.documentElement.classList.add('high-contrast');
+      document.documentElement.style.setProperty('--text-color', '#ffffff');
+      document.documentElement.style.setProperty('--bg-color', '#000000');
+      document.documentElement.style.setProperty('--accent-color', '#ffff00');
+    } else {
+      document.documentElement.classList.remove('high-contrast');
+      document.documentElement.style.removeProperty('--text-color');
+      document.documentElement.style.removeProperty('--bg-color');
+      document.documentElement.style.removeProperty('--accent-color');
+    }
+
+    // Apply large text
+    if (updatedSettings.largeText) {
+      document.documentElement.style.setProperty('--font-size-base', '18px');
+      document.documentElement.style.setProperty('--font-size-lg', '22px');
+      document.documentElement.style.setProperty('--font-size-xl', '26px');
+    } else {
+      document.documentElement.style.removeProperty('--font-size-base');
+      document.documentElement.style.removeProperty('--font-size-lg');
+      document.documentElement.style.removeProperty('--font-size-xl');
+    }
+
+    // Apply reduced motion
+    if (updatedSettings.reducedMotion) {
+      document.documentElement.style.setProperty('--animation-duration', '0.1s');
+      document.documentElement.style.setProperty('--animation-delay', '0s');
+      document.documentElement.classList.add('reduced-motion');
+    } else {
+      document.documentElement.style.removeProperty('--animation-duration');
+      document.documentElement.style.removeProperty('--animation-delay');
+      document.documentElement.classList.remove('reduced-motion');
+    }
+
+    // Apply focus indicator
+    if (updatedSettings.focusIndicator) {
+      document.documentElement.style.setProperty('--focus-ring', '2px solid #22ddd2');
+      document.documentElement.style.setProperty('--focus-ring-offset', '2px');
+    } else {
+      document.documentElement.style.removeProperty('--focus-ring');
+      document.documentElement.style.removeProperty('--focus-ring-offset');
+    }
+
+    // Save to localStorage
+    localStorage.setItem('zion-accessibility-settings', JSON.stringify(updatedSettings));
+  }, [settings]);
+
+  // Screen reader announcements
+  const announceToScreenReader = useCallback((message: string) => {
+    if (!settings.screenReader) return;
+
+    const announcement = document.createElement('div');
+    announcement.setAttribute('aria-live', 'polite');
+    announcement.setAttribute('aria-atomic', 'true');
+    announcement.className = 'sr-only';
+    announcement.textContent = message;
+
+    document.body.appendChild(announcement);
+    
+    // Remove after announcement
+    setTimeout(() => {
+      document.body.removeChild(announcement);
+    }, 1000);
+
+    // Add to announcements list
+    setAnnouncements(prev => [...prev, message]);
+  }, [settings.screenReader]);
 
   // Enhanced keyboard navigation
   const enhanceKeyboardNavigation = useCallback(() => {
-    if (!enableEnhancements) return;
+    if (!settings.keyboardNavigation) return;
 
-    // Skip to main content link
-    const skipLink = document.createElement('a');
-    skipLink.href = '#main-content';
-    skipLink.textContent = 'Skip to main content';
-    skipLink.className = 'sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 z-50 bg-blue-600 text-white px-4 py-2 rounded';
-    document.body.insertBefore(skipLink, document.body.firstChild);
-
-    // Add main content ID
-    const mainContent = document.querySelector('main');
-    if (mainContent && !mainContent.id) {
-      mainContent.id = 'main-content';
-    }
-
-    // Enhanced focus management
     const focusableElements = document.querySelectorAll(
-      'a[href], button:not([disabled]), input:not([disabled]), select:not([disabled]), textarea:not([disabled]), [tabindex]:not([tabindex="-1"])'
+      'a[href], button, input, select, textarea, [tabindex]:not([tabindex="-1"])'
     );
 
-    let currentFocusIndex = 0;
-
-    const handleTabKey = (e: KeyboardEvent) => {
-      if (e.key === 'Tab') {
-        e.preventDefault();
-        
-        if (e.shiftKey) {
-          currentFocusIndex = currentFocusIndex > 0 ? currentFocusIndex - 1 : focusableElements.length - 1;
-        } else {
-          currentFocusIndex = currentFocusIndex < focusableElements.length - 1 ? currentFocusIndex + 1 : 0;
+    focusableElements.forEach((element) => {
+      element.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault();
+          if (element instanceof HTMLElement) {
+            element.click();
+          }
         }
-
-        (focusableElements[currentFocusIndex] as HTMLElement).focus();
-      }
-    };
-
-    document.addEventListener('keydown', handleTabKey);
-
-    return () => {
-      document.removeEventListener('keydown', handleTabKey);
-    };
-  }, [enableEnhancements]);
-
-  // Enhanced ARIA labels and roles
-  const enhanceARIA = useCallback(() => {
-    if (!enableEnhancements) return;
-
-    // Add missing ARIA labels to interactive elements
-    const buttons = document.querySelectorAll('button:not([aria-label]):not([aria-labelledby])');
-    buttons.forEach((button, index) => {
-      if (!button.textContent?.trim()) {
-        button.setAttribute('aria-label', `Button ${index + 1}`);
-      }
-    });
-
-    // Add missing ARIA labels to form inputs
-    const inputs = document.querySelectorAll('input:not([aria-label]):not([aria-labelledby]):not([placeholder])');
-    inputs.forEach((input, index) => {
-      const label = input.closest('label');
-      if (!label) {
-        input.setAttribute('aria-label', `Input ${index + 1}`);
-      }
-    });
-
-    // Add role attributes where missing
-    const navs = document.querySelectorAll('nav:not([role])');
-    navs.forEach(nav => nav.setAttribute('role', 'navigation'));
-
-    const mains = document.querySelectorAll('main:not([role])');
-    mains.forEach(main => main.setAttribute('role', 'main'));
-
-    const footers = document.querySelectorAll('footer:not([role])');
-    footers.forEach(footer => footer.setAttribute('role', 'contentinfo'));
-
-    // Add landmark roles
-    const headers = document.querySelectorAll('header:not([role])');
-    headers.forEach(header => header.setAttribute('role', 'banner'));
-
-    const asides = document.querySelectorAll('aside:not([role])');
-    asides.forEach(aside => aside.setAttribute('role', 'complementary'));
-  }, [enableEnhancements]);
-
-  // Enhanced color contrast
-  const enhanceColorContrast = useCallback(() => {
-    if (!enableEnhancements) return;
-
-    // Add high contrast mode toggle
-    const contrastToggle = document.createElement('button');
-    contrastToggle.textContent = 'High Contrast';
-    contrastToggle.className = 'fixed top-4 right-4 z-50 bg-yellow-600 text-black px-3 py-2 rounded text-sm font-medium';
-    contrastToggle.setAttribute('aria-label', 'Toggle high contrast mode');
-    
-    let highContrast = false;
-    
-    contrastToggle.addEventListener('click', () => {
-      highContrast = !highContrast;
-      document.documentElement.classList.toggle('high-contrast', highContrast);
-      contrastToggle.textContent = highContrast ? 'Normal Contrast' : 'High Contrast';
-    });
-
-    document.body.appendChild(contrastToggle);
-
-    // Add focus visible styles
-    const style = document.createElement('style');
-    style.textContent = `
-      .focus-visible:focus {
-        outline: 3px solid #22ddd2 !important;
-        outline-offset: 2px !important;
-      }
-      
-      .high-contrast {
-        --zion-cyan: #00ffff !important;
-        --zion-purple: #ff00ff !important;
-        --zion-blue: #0080ff !important;
-        --zion-slate: #ffffff !important;
-        --zion-slate-dark: #000000 !important;
-      }
-      
-      .high-contrast * {
-        background-color: var(--zion-slate-dark) !important;
-        color: var(--zion-slate) !important;
-        border-color: var(--zion-cyan) !important;
-      }
-      
-      .high-contrast .btn-futuristic {
-        background: var(--zion-cyan) !important;
-        color: var(--zion-slate-dark) !important;
-        border: 2px solid var(--zion-slate) !important;
-      }
-    `;
-    document.head.appendChild(style);
-  }, [enableEnhancements]);
-
-  // Enhanced screen reader support
-  const enhanceScreenReaderSupport = useCallback(() => {
-    if (!enableEnhancements) return;
-
-    // Add live regions for dynamic content
-    const liveRegion = document.createElement('div');
-    liveRegion.setAttribute('aria-live', 'polite');
-    liveRegion.setAttribute('aria-atomic', 'true');
-    liveRegion.className = 'sr-only';
-    liveRegion.id = 'live-region';
-    document.body.appendChild(liveRegion);
-
-    // Announce page changes
-    const announcePageChange = (title: string) => {
-      const liveRegion = document.getElementById('live-region');
-      if (liveRegion) {
-        liveRegion.textContent = `Page loaded: ${title}`;
-      }
-    };
-
-    // Monitor route changes
-    const observer = new MutationObserver(() => {
-      const title = document.title;
-      if (title) {
-        announcePageChange(title);
-      }
-    });
-
-    observer.observe(document.head, { childList: true, subtree: true });
-
-    return () => {
-      observer.disconnect();
-    };
-  }, [enableEnhancements]);
-
-  // Monitor accessibility metrics
-  const monitorAccessibility = useCallback(() => {
-    if (!enableMonitoring) return;
-
-    const calculateMetrics = (): AccessibilityMetrics => {
-      // Calculate contrast ratio (simplified)
-      const contrastRatio = 4.5; // Placeholder - would need actual calculation
-
-      // Count focusable elements
-      const focusableElements = document.querySelectorAll(
-        'a[href], button:not([disabled]), input:not([disabled]), select:not([disabled]), textarea:not([disabled]), [tabindex]:not([tabindex="-1"])'
-      ).length;
-
-      // Check heading structure
-      const headings = document.querySelectorAll('h1, h2, h3, h4, h5, h6');
-      let headingStructure = true;
-      let previousLevel = 0;
-      
-      headings.forEach(heading => {
-        const level = parseInt(heading.tagName.charAt(1));
-        if (level > previousLevel + 1) {
-          headingStructure = false;
-        }
-        previousLevel = level;
       });
 
-      // Check alt text coverage
-      const images = document.querySelectorAll('img');
-      const imagesWithAlt = document.querySelectorAll('img[alt]:not([alt=""])');
-      const altTextCoverage = images.length > 0 ? (imagesWithAlt.length / images.length) * 100 : 100;
-
-      // Count ARIA labels
-      const ariaLabels = document.querySelectorAll('[aria-label], [aria-labelledby]').length;
-
-      // Check keyboard navigation
-      const keyboardNavigation = document.querySelectorAll('a[href], button, input, select, textarea').length > 0;
-
-      return {
-        contrastRatio,
-        focusableElements,
-        headingStructure,
-        altTextCoverage,
-        ariaLabels,
-        keyboardNavigation
-      };
-    };
-
-    // Update metrics periodically
-    const updateMetrics = () => {
-      const newMetrics = calculateMetrics();
-      setMetrics(newMetrics);
-      metricsRef.current = newMetrics;
-      
-      if (logMetrics) {
-        console.log('Accessibility Metrics:', newMetrics);
-      }
-    };
-
-    // Initial calculation
-    updateMetrics();
-
-    // Update on DOM changes
-    const observer = new MutationObserver(updateMetrics);
-    observer.observe(document.body, { childList: true, subtree: true });
-
-    // Periodic updates
-    const interval = setInterval(updateMetrics, 5000);
-
-    return () => {
-      observer.disconnect();
-      clearInterval(interval);
-    };
-  }, [enableMonitoring, logMetrics]);
-
-  // Toggle accessibility panel
-  const toggleAccessibilityPanel = () => setIsVisible(!isVisible);
-
-  // Get accessibility score
-  const getAccessibilityScore = useCallback((): number => {
-    let score = 100;
-    
-    if (metrics.contrastRatio < 4.5) score -= 20;
-    if (!metrics.headingStructure) score -= 15;
-    if (metrics.altTextCoverage < 90) score -= 15;
-    if (metrics.ariaLabels < 5) score -= 10;
-    if (!metrics.keyboardNavigation) score -= 10;
-    
-    return Math.max(0, score);
-  }, [metrics]);
-
-  // Get accessibility grade
-  const getAccessibilityGrade = useCallback((score: number): { grade: string; color: string } => {
-    if (score >= 90) return { grade: 'A', color: 'text-green-400' };
-    if (score >= 80) return { grade: 'B', color: 'text-yellow-400' };
-    if (score >= 70) return { grade: 'C', color: 'text-orange-400' };
-    if (score >= 60) return { grade: 'D', color: 'text-red-400' };
-    return { grade: 'F', color: 'text-red-600' };
-  }, []);
-
-  useEffect(() => {
-    // Initialize enhancements
-    const cleanupFunctions = [
-      enhanceKeyboardNavigation(),
-      enhanceARIA(),
-      enhanceColorContrast(),
-      enhanceScreenReaderSupport(),
-      monitorAccessibility()
-    ].filter(Boolean);
-
-    return () => {
-      cleanupFunctions.forEach(cleanup => {
-        if (typeof cleanup === 'function') cleanup();
+      // Enhanced focus styles
+      element.addEventListener('focus', () => {
+        element.classList.add('enhanced-focus');
+        announceToScreenReader(`${element.textContent || element.getAttribute('aria-label') || 'Element'} focused`);
       });
-    };
-  }, [
-    enhanceKeyboardNavigation,
-    enhanceARIA,
-    enhanceColorContrast,
-    enhanceScreenReaderSupport,
-    monitorAccessibility
-  ]);
 
-  // Expose metrics for external monitoring
-  useEffect(() => {
-    if (typeof window !== 'undefined') {
-      (window as any).zionAccessibilityMetrics = metricsRef.current;
+      element.addEventListener('blur', () => {
+        element.classList.remove('enhanced-focus');
+      });
+    });
+  }, [settings.keyboardNavigation, announceToScreenReader]);
+
+  // Add skip links
+  const addSkipLinks = useCallback(() => {
+    if (!enableFeatures) return;
+
+    const skipLinks = [
+      { href: '#main-content', text: 'Skip to main content' },
+      { href: '#navigation', text: 'Skip to navigation' },
+      { href: '#footer', text: 'Skip to footer' }
+    ];
+
+    const skipLinksContainer = document.createElement('div');
+    skipLinksContainer.className = 'skip-links';
+    skipLinksContainer.setAttribute('role', 'navigation');
+    skipLinksContainer.setAttribute('aria-label', 'Skip links');
+
+    skipLinks.forEach(({ href, text }) => {
+      const link = document.createElement('a');
+      link.href = href;
+      link.textContent = text;
+      link.className = 'skip-link';
+      link.setAttribute('tabindex', '0');
+      skipLinksContainer.appendChild(link);
+    });
+
+    document.body.insertBefore(skipLinksContainer, document.body.firstChild);
+  }, [enableFeatures]);
+
+  // Add ARIA landmarks
+  const addARIALandmarks = useCallback(() => {
+    if (!enableFeatures) return;
+
+    // Main content
+    const main = document.querySelector('main');
+    if (main && !main.getAttribute('id')) {
+      main.setAttribute('id', 'main-content');
+      main.setAttribute('role', 'main');
     }
-  }, []);
 
-  if (!showAccessibilityPanel) return null;
+    // Navigation
+    const nav = document.querySelector('nav, header');
+    if (nav && !nav.getAttribute('id')) {
+      nav.setAttribute('id', 'navigation');
+      nav.setAttribute('role', 'navigation');
+    }
 
-  const score = getAccessibilityScore();
-  const { grade, color } = getAccessibilityGrade(score);
+    // Footer
+    const footer = document.querySelector('footer');
+    if (footer && !footer.getAttribute('id')) {
+      footer.setAttribute('id', 'footer');
+      footer.setAttribute('role', 'contentinfo');
+    }
+
+    // Search
+    const search = document.querySelector('input[type="search"], .search-container');
+    if (search && !search.getAttribute('role')) {
+      search.setAttribute('role', 'search');
+    }
+  }, [enableFeatures]);
+
+  // Initialize accessibility features
+  useEffect(() => {
+    if (!enableFeatures) return;
+
+    // Load saved settings
+    const savedSettings = localStorage.getItem('zion-accessibility-settings');
+    if (savedSettings) {
+      try {
+        const parsed = JSON.parse(savedSettings);
+        setSettings(parsed);
+        applySettings(parsed);
+      } catch (error) {
+        console.warn('Failed to parse saved accessibility settings');
+      }
+    }
+
+    // Add skip links and ARIA landmarks
+    addSkipLinks();
+    addARIALandmarks();
+
+    // Apply initial settings
+    applySettings(settings);
+  }, [enableFeatures, applySettings, addSkipLinks, addARIALandmarks, settings]);
+
+  // Apply settings when they change
+  useEffect(() => {
+    enhanceKeyboardNavigation();
+  }, [enhanceKeyboardNavigation]);
+
+  // Keyboard shortcuts
+  useEffect(() => {
+    const handleKeyDown = (e: KeyboardEvent) => {
+      // Ctrl/Cmd + U: Toggle accessibility panel
+      if ((e.ctrlKey || e.metaKey) && e.key === 'u') {
+        e.preventDefault();
+        setShowPanel(prev => !prev);
+      }
+
+      // Ctrl/Cmd + Shift + A: Toggle high contrast
+      if ((e.ctrlKey || e.metaKey) && e.shiftKey && e.key === 'A') {
+        e.preventDefault();
+        applySettings({ highContrast: !settings.highContrast });
+      }
+
+      // Ctrl/Cmd + Shift + T: Toggle large text
+      if ((e.ctrlKey || e.metaKey) && e.shiftKey && e.key === 'T') {
+        e.preventDefault();
+        applySettings({ largeText: !settings.largeText });
+      }
+    };
+
+    document.addEventListener('keydown', handleKeyDown);
+    return () => document.removeEventListener('keydown', handleKeyDown);
+  }, [applySettings, settings]);
+
+  if (!showControls) return null;
 
   return (
     <>
       {/* Accessibility Toggle Button */}
-      <button
-        onClick={toggleAccessibilityPanel}
-        className="fixed bottom-6 left-6 z-50 p-3 bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white rounded-full shadow-lg hover:shadow-xl transition-all duration-200"
-        title="Accessibility Monitor"
-        aria-label="Toggle accessibility panel"
+      <motion.button
+        initial={{ opacity: 0, scale: 0.8 }}
+        animate={{ opacity: 1, scale: 1 }}
+        whileHover={{ scale: 1.1 }}
+        whileTap={{ scale: 0.9 }}
+        onClick={() => setShowPanel(prev => !prev)}
+        className="fixed top-4 right-4 z-50 p-3 bg-zion-cyan/20 backdrop-blur-sm border border-zion-cyan/30 rounded-full text-zion-cyan hover:bg-zion-cyan/30 transition-all duration-300"
+        aria-label="Accessibility settings"
+        aria-expanded={showPanel}
+        aria-controls="accessibility-panel"
       >
-        <span className="text-lg">♿</span>
-      </button>
+        <Accessibility size={24} />
+      </motion.button>
 
       {/* Accessibility Panel */}
-      {isVisible && (
-        <div className="fixed bottom-6 left-20 z-40 w-80 bg-slate-900/95 backdrop-blur-sm border border-slate-700 rounded-lg shadow-2xl">
-          {/* Header */}
-          <div className="flex items-center justify-between p-4 border-b border-slate-700">
-            <div className="flex items-center space-x-2">
-              <span className="text-2xl">♿</span>
-              <h3 className="text-white font-semibold">Accessibility Monitor</h3>
-            </div>
-            <button
-              onClick={toggleAccessibilityPanel}
-              className="p-1 text-slate-400 hover:text-white transition-colors"
-              title="Close"
-              aria-label="Close accessibility panel"
-            >
-              ✕
-            </button>
-          </div>
-
-          {/* Content */}
-          <div className="p-4 space-y-4 max-h-96 overflow-y-auto">
-            {/* Accessibility Score */}
-            <div className="text-center p-4 bg-slate-800/50 rounded-lg">
-              <div className="text-3xl font-bold text-white mb-2">{score}</div>
-              <div className={`text-2xl font-bold ${color} mb-2`}>{grade}</div>
-              <div className="text-slate-400 text-sm">Accessibility Score</div>
-            </div>
-
-            {/* Metrics */}
-            <div className="space-y-3">
-              <h4 className="text-white font-semibold">Accessibility Metrics</h4>
-              
-              <div className="grid grid-cols-2 gap-3">
-                <MetricCard
-                  label="Contrast"
-                  value={metrics.contrastRatio}
-                  unit=":1"
-                  good={metrics.contrastRatio >= 4.5}
-                  description="Color Contrast Ratio"
-                />
-                <MetricCard
-                  label="Focusable"
-                  value={metrics.focusableElements}
-                  unit=""
-                  good={metrics.focusableElements > 0}
-                  description="Focusable Elements"
-                />
-                <MetricCard
-                  label="Headings"
-                  value={metrics.headingStructure ? 100 : 0}
-                  unit="%"
-                  good={metrics.headingStructure}
-                  description="Heading Structure"
-                />
-                <MetricCard
-                  label="Alt Text"
-                  value={metrics.altTextCoverage}
-                  unit="%"
-                  good={metrics.altTextCoverage >= 90}
-                  description="Image Alt Text"
-                />
+      <AnimatePresence>
+        {showPanel && (
+          <motion.div
+            initial={{ opacity: 0, x: 300 }}
+            animate={{ opacity: 1, x: 0 }}
+            exit={{ opacity: 0, x: 300 }}
+            className="fixed top-0 right-0 h-full w-80 bg-black/95 backdrop-blur-md border-l border-zion-cyan/30 z-40 overflow-y-auto"
+            id="accessibility-panel"
+            role="dialog"
+            aria-label="Accessibility settings"
+            aria-modal="true"
+          >
+            <div className="p-6">
+              <div className="flex items-center justify-between mb-6">
+                <h2 className="text-xl font-bold text-zion-cyan">Accessibility</h2>
+                <button
+                  onClick={() => setShowPanel(false)}
+                  className="p-2 text-zion-cyan hover:text-white transition-colors"
+                  aria-label="Close accessibility panel"
+                >
+                  <X size={20} />
+                </button>
               </div>
-            </div>
 
-            {/* Quick Actions */}
-            <div className="space-y-2">
-              <h4 className="text-white font-semibold">Quick Actions</h4>
-              <button
-                onClick={() => document.documentElement.classList.toggle('high-contrast')}
-                className="w-full px-3 py-2 bg-purple-600 hover:bg-purple-700 text-white text-sm font-medium rounded transition-colors"
-              >
-                Toggle High Contrast
-              </button>
-              <button
-                onClick={() => document.querySelector('main')?.focus()}
-                className="w-full px-3 py-2 bg-blue-600 hover:bg-blue-700 text-white text-sm font-medium rounded transition-colors"
-              >
-                Focus Main Content
-              </button>
+              {/* Settings */}
+              <div className="space-y-4">
+                {/* High Contrast */}
+                <div className="flex items-center justify-between">
+                  <div className="flex items-center space-x-3">
+                    <Contrast size={20} className="text-zion-cyan" />
+                    <span className="text-white">High Contrast</span>
+                  </div>
+                  <button
+                    onClick={() => applySettings({ highContrast: !settings.highContrast })}
+                    className={`w-12 h-6 rounded-full transition-colors ${
+                      settings.highContrast ? 'bg-zion-cyan' : 'bg-gray-600'
+                    }`}
+                    aria-label={`${settings.highContrast ? 'Disable' : 'Enable'} high contrast`}
+                  >
+                    <div className={`w-4 h-4 bg-white rounded-full transition-transform ${
+                      settings.highContrast ? 'translate-x-6' : 'translate-x-1'
+                    }`} />
+                  </button>
+                </div>
+
+                {/* Large Text */}
+                <div className="flex items-center justify-between">
+                  <div className="flex items-center space-x-3">
+                    <Type size={20} className="text-zion-cyan" />
+                    <span className="text-white">Large Text</span>
+                  </div>
+                  <button
+                    onClick={() => applySettings({ largeText: !settings.largeText })}
+                    className={`w-12 h-6 rounded-full transition-colors ${
+                      settings.largeText ? 'bg-zion-cyan' : 'bg-gray-600'
+                    }`}
+                    aria-label={`${settings.largeText ? 'Disable' : 'Enable'} large text`}
+                  >
+                    <div className={`w-4 h-4 bg-white rounded-full transition-transform ${
+                      settings.largeText ? 'translate-x-6' : 'translate-x-1'
+                    }`} />
+                  </button>
+                </div>
+
+                {/* Reduced Motion */}
+                <div className="flex items-center justify-between">
+                  <div className="flex items-center space-x-3">
+                    <MousePointer size={20} className="text-zion-cyan" />
+                    <span className="text-white">Reduced Motion</span>
+                  </div>
+                  <button
+                    onClick={() => applySettings({ reducedMotion: !settings.reducedMotion })}
+                    className={`w-12 h-6 rounded-full transition-colors ${
+                      settings.reducedMotion ? 'bg-zion-cyan' : 'bg-gray-600'
+                    }`}
+                    aria-label={`${settings.reducedMotion ? 'Disable' : 'Enable'} reduced motion`}
+                  >
+                    <div className={`w-4 h-4 bg-white rounded-full transition-transform ${
+                      settings.reducedMotion ? 'translate-x-6' : 'translate-x-1'
+                    }`} />
+                  </button>
+                </div>
+
+                {/* Focus Indicator */}
+                <div className="flex items-center justify-between">
+                  <div className="flex items-center space-x-3">
+                    <Keyboard size={20} className="text-zion-cyan" />
+                    <span className="text-white">Focus Indicator</span>
+                  </div>
+                  <button
+                    onClick={() => applySettings({ focusIndicator: !settings.focusIndicator })}
+                    className={`w-12 h-6 rounded-full transition-colors ${
+                      settings.focusIndicator ? 'bg-zion-cyan' : 'bg-gray-600'
+                    }`}
+                    aria-label={`${settings.focusIndicator ? 'Disable' : 'Enable'} focus indicator`}
+                  >
+                    <div className={`w-4 h-4 bg-white rounded-full transition-transform ${
+                      settings.focusIndicator ? 'translate-x-6' : 'translate-x-1'
+                    }`} />
+                  </button>
+                </div>
+              </div>
+
+              {/* Keyboard Shortcuts */}
+              <div className="mt-8 p-4 bg-zion-cyan/10 rounded-lg border border-zion-cyan/20">
+                <h3 className="text-lg font-semibold text-zion-cyan mb-3">Keyboard Shortcuts</h3>
+                <div className="space-y-2 text-sm text-gray-300">
+                  <div><kbd className="px-2 py-1 bg-gray-700 rounded text-xs">Ctrl/Cmd + U</kbd> Toggle panel</div>
+                  <div><kbd className="px-2 py-1 bg-gray-700 rounded text-xs">Ctrl/Cmd + Shift + A</kbd> High contrast</div>
+                  <div><kbd className="px-2 py-1 bg-gray-700 rounded text-xs">Ctrl/Cmd + Shift + T</kbd> Large text</div>
+                </div>
+              </div>
+
+              {/* Recent Announcements */}
+              {announcements.length > 0 && (
+                <div className="mt-6">
+                  <h3 className="text-lg font-semibold text-zion-cyan mb-3">Recent Announcements</h3>
+                  <div className="space-y-2 max-h-32 overflow-y-auto">
+                    {announcements.slice(-5).map((announcement, index) => (
+                      <div key={index} className="text-sm text-gray-300 bg-zion-cyan/10 p-2 rounded">
+                        {announcement}
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              )}
             </div>
-          </div>
-        </div>
-      )}
+          </motion.div>
+        )}
+      </AnimatePresence>
+
+      {/* Skip Links Styles */}
+      <style jsx>{`
+        .skip-links {
+          position: absolute;
+          top: -40px;
+          left: 6px;
+          z-index: 100;
+        }
+
+        .skip-link {
+          position: absolute;
+          top: 6px;
+          left: 6px;
+          background: #22ddd2;
+          color: #000;
+          padding: 8px 16px;
+          text-decoration: none;
+          border-radius: 4px;
+          font-weight: bold;
+          transform: translateY(-100%);
+          transition: transform 0.3s;
+        }
+
+        .skip-link:focus {
+          transform: translateY(0);
+        }
+
+        .sr-only {
+          position: absolute;
+          width: 1px;
+          height: 1px;
+          padding: 0;
+          margin: -1px;
+          overflow: hidden;
+          clip: rect(0, 0, 0, 0);
+          white-space: nowrap;
+          border: 0;
+        }
+
+        .enhanced-focus {
+          outline: 2px solid #22ddd2 !important;
+          outline-offset: 2px !important;
+        }
+
+        .high-contrast {
+          --text-color: #ffffff;
+          --bg-color: #000000;
+          --accent-color: #ffff00;
+        }
+
+        .reduced-motion * {
+          animation-duration: 0.1s !important;
+          animation-delay: 0s !important;
+          transition-duration: 0.1s !important;
+        }
+      `}</style>
     </>
   );
 };
-
-// Metric Card Component
-interface MetricCardProps {
-  label: string;
-  value: number;
-  unit: string;
-  good: boolean;
-  description: string;
-}
-
-const MetricCard: React.FC<MetricCardProps> = ({ label, value, unit, good, description }) => (
-  <div className="bg-slate-800/50 p-3 rounded-lg">
-    <div className="flex items-center justify-between mb-1">
-      <span className="text-xs text-slate-400">{label}</span>
-      <div className={`w-2 h-2 rounded-full ${good ? 'bg-green-400' : 'bg-red-400'}`} />
-    </div>
-    <div className="text-lg font-semibold text-white">
-      {value.toFixed(1)}{unit}
-    </div>
-    <div className="text-xs text-slate-500">{description}</div>
-  </div>
-);
