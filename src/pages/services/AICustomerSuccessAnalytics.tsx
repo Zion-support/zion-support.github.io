@@ -2,9 +2,9 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { 
-  TrendingUp, 
-  DollarSign, 
   BarChart3, 
+  Users, 
+  TrendingUp, 
   Shield, 
   Zap, 
   Brain, 
@@ -12,6 +12,7 @@ import {
   Clock, 
   CheckCircle, 
   AlertTriangle,
+  MessageSquare,
   Activity,
   PieChart,
   LineChart,
@@ -30,129 +31,122 @@ import {
   Bell,
   Mail,
   Phone,
-  MapPin,
-  Building2,
-  Users,
-  Target,
-  Zap,
-  TrendingDown,
-  ArrowUpDown,
-  CandlestickChart
+  MapPin
 } from 'lucide-react';
 import { SEO } from '@/components/SEO';
 
-export default function AIFinancialTradingPlatform() {
+export default function AICustomerSuccessAnalytics() {
   const features = [
     {
       icon: Brain,
-      title: "AI-Powered Trading Algorithms",
-      description: "Advanced machine learning algorithms that analyze market data and execute trades with high precision."
+      title: "AI-Powered Insights",
+      description: "Advanced machine learning algorithms that predict customer behavior and identify success opportunities."
     },
     {
       icon: BarChart3,
-      title: "Real-time Market Analysis",
-      description: "Live market data feeds with AI-powered pattern recognition and trend analysis across multiple asset classes."
+      title: "Real-time Analytics",
+      description: "Live dashboards and metrics that provide instant visibility into customer success metrics and KPIs."
+    },
+    {
+      icon: Users,
+      title: "Customer Journey Mapping",
+      description: "Comprehensive tracking of customer interactions across all touchpoints and channels."
     },
     {
       icon: TrendingUp,
       title: "Predictive Analytics",
-      description: "Forecast market movements, identify trading opportunities, and predict price trends with high accuracy."
+      description: "Forecast customer churn, expansion opportunities, and success milestones with high accuracy."
     },
     {
       icon: Shield,
-      title: "Risk Management",
-      description: "Advanced risk management tools with AI-powered position sizing and stop-loss optimization."
+      title: "Data Security & Compliance",
+      description: "Enterprise-grade security with GDPR, SOC2, and HIPAA compliance for sensitive customer data."
     },
     {
       icon: Zap,
-      title: "Automated Trading",
-      description: "Fully automated trading systems that execute strategies 24/7 without emotional bias."
-    },
-    {
-      icon: Globe,
-      title: "Multi-Asset Support",
-      description: "Trade stocks, forex, cryptocurrencies, commodities, and derivatives from a single platform."
+      title: "Automated Workflows",
+      description: "Intelligent automation of customer success tasks, alerts, and follow-up actions."
     }
   ];
 
-  const tradingModules = [
+  const analyticsModules = [
     {
       icon: Activity,
-      title: "Algorithmic Trading",
-      description: "Custom trading algorithms that execute complex strategies automatically based on market conditions"
+      title: "Health Score Monitoring",
+      description: "Real-time customer health scoring based on usage patterns, engagement, and satisfaction metrics"
     },
     {
       icon: LineChart,
-      title: "Technical Analysis",
-      description: "AI-powered technical indicators, chart patterns, and market structure analysis"
+      title: "Usage Analytics",
+      description: "Deep insights into product adoption, feature utilization, and user behavior patterns"
     },
     {
       icon: PieChart,
-      title: "Portfolio Management",
-      description: "Intelligent portfolio optimization with risk-adjusted returns and diversification strategies"
+      title: "Churn Prediction",
+      description: "AI-powered early warning system for customer churn with actionable retention strategies"
     },
     {
       icon: UserCheck,
+      title: "Success Milestone Tracking",
+      description: "Automated tracking of customer success milestones and achievement of business outcomes"
+    },
+    {
+      icon: MessageSquare,
       title: "Sentiment Analysis",
-      description: "Real-time analysis of market sentiment using news, social media, and social trading data"
+      description: "Natural language processing to analyze customer feedback, support tickets, and communication sentiment"
     },
     {
       icon: Target,
-      title: "Backtesting Engine",
-      description: "Comprehensive backtesting of trading strategies using historical data and Monte Carlo simulations"
-    },
-    {
-      icon: CandlestickChart,
-      title: "Market Microstructure",
-      description: "Advanced analysis of order flow, liquidity, and market microstructure patterns"
+      title: "Expansion Opportunities",
+      description: "Identify upsell and cross-sell opportunities based on usage patterns and success indicators"
     }
   ];
 
   const pricingPlans = [
     {
       name: "Starter",
-      price: "$199",
+      price: "$299",
       period: "/month",
-      description: "Perfect for individual traders",
+      description: "Perfect for growing SaaS companies",
       features: [
-        "Up to $100K trading volume/month",
-        "Basic AI trading algorithms",
-        "Standard market data feeds",
+        "Up to 1,000 customer profiles",
+        "Basic AI insights and predictions",
+        "Standard analytics dashboard",
         "Email support",
-        "Basic risk management",
-        "Mobile app access"
+        "Basic integrations (5)",
+        "Monthly reports"
       ],
       popular: false
     },
     {
       name: "Professional",
-      price: "$599",
+      price: "$799",
       period: "/month",
-      description: "Ideal for active traders",
+      description: "Ideal for established businesses",
       features: [
-        "Up to $1M trading volume/month",
+        "Up to 10,000 customer profiles",
         "Advanced AI algorithms",
-        "Premium market data",
+        "Custom dashboards",
         "Priority support",
-        "Advanced risk management",
+        "Advanced integrations (25)",
+        "Real-time alerts",
         "API access",
-        "Custom strategies",
-        "Portfolio analytics"
+        "Team collaboration"
       ],
       popular: true
     },
     {
       name: "Enterprise",
-      price: "$1,999",
+      price: "$2,499",
       period: "/month",
-      description: "For institutional traders",
+      description: "For large organizations",
       features: [
-        "Unlimited trading volume",
+        "Unlimited customer profiles",
         "Custom AI models",
-        "Institutional data feeds",
-        "Dedicated account manager",
-        "Advanced analytics",
         "White-label solutions",
+        "Dedicated success manager",
+        "Advanced analytics",
+        "Custom training",
         "On-premise options",
         "SLA guarantees"
       ],
@@ -162,66 +156,66 @@ export default function AIFinancialTradingPlatform() {
 
   const benefits = [
     {
-      title: "Increase Trading Profits",
-      description: "AI-powered algorithms identify profitable trading opportunities and execute trades with precision.",
+      title: "Reduce Customer Churn",
+      description: "Predict and prevent customer churn with AI-powered early warning systems and proactive interventions.",
+      icon: Heart
+    },
+    {
+      title: "Increase Customer Lifetime Value",
+      description: "Identify expansion opportunities and optimize customer success strategies to maximize revenue per customer.",
       icon: TrendingUp
     },
     {
-      title: "Reduce Trading Risks",
-      description: "Advanced risk management tools protect your capital and optimize position sizing.",
-      icon: Shield
+      title: "Improve Customer Satisfaction",
+      description: "Proactively address customer needs and optimize the customer experience based on real-time insights.",
+      icon: Star
     },
     {
-      title: "Eliminate Emotional Bias",
-      description: "Automated trading systems remove human emotions and maintain consistent strategy execution.",
-      icon: Brain
-    },
-    {
-      title: "24/7 Market Coverage",
-      description: "Trade around the clock across global markets without missing opportunities.",
-      icon: Globe
+      title: "Scale Success Operations",
+      description: "Automate routine tasks and focus your team on high-value customer relationships and strategic initiatives.",
+      icon: Users
     }
   ];
 
   const useCases = [
     {
       icon: Users,
-      title: "Individual Traders",
-      description: "Access institutional-grade AI trading tools and analytics"
+      title: "SaaS Companies",
+      description: "Monitor subscription health, predict churn, and optimize customer success strategies"
     },
     {
       icon: Building2,
-      title: "Hedge Funds",
-      description: "Deploy sophisticated AI strategies across multiple asset classes"
-    },
-    {
-      icon: DollarSign,
-      title: "Asset Managers",
-      description: "Optimize portfolio performance with AI-driven insights"
-    },
-    {
-      icon: TrendingUp,
-      title: "Day Traders",
-      description: "Execute high-frequency strategies with millisecond precision"
+      title: "Enterprise B2B",
+      description: "Track complex customer journeys and manage multi-stakeholder relationships"
     },
     {
       icon: Globe,
-      title: "International Traders",
-      description: "Access global markets with AI-powered analysis and execution"
+      title: "E-commerce",
+      description: "Analyze customer behavior and optimize retention strategies"
+    },
+    {
+      icon: Server,
+      title: "Technology Companies",
+      description: "Monitor product adoption and identify expansion opportunities"
+    },
+    {
+      icon: Award,
+      title: "Consulting Firms",
+      description: "Track client success metrics and optimize service delivery"
     },
     {
       icon: Target,
-      title: "Quantitative Traders",
-      description: "Develop and backtest custom AI trading strategies"
+      title: "Startups",
+      description: "Build data-driven customer success processes from the ground up"
     }
   ];
 
   return (
     <>
       <SEO 
-        title="AI Financial Trading Platform - Zion Tech Group"
-        description="Advanced AI-powered financial trading platform for algorithmic trading, market analysis, and automated portfolio management with institutional-grade tools."
-        canonical="/services/ai-financial-trading-platform"
+        title="AI Customer Success Analytics Platform - Zion Tech Group"
+        description="Advanced AI-powered customer success analytics platform for predicting churn, tracking success metrics, and optimizing customer relationships with real-time insights."
+        canonical="/services/ai-customer-success-analytics"
       />
       
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
@@ -237,12 +231,12 @@ export default function AIFinancialTradingPlatform() {
               >
                 <h1 className="text-5xl md:text-6xl font-bold mb-6">
                   <span className="bg-gradient-to-r from-green-400 via-blue-500 to-cyan-400 bg-clip-text text-transparent">
-                    AI Financial Trading Platform
+                    AI Customer Success Analytics
                   </span>
                 </h1>
                 <p className="text-xl text-slate-300 mb-8 max-w-4xl mx-auto">
-                  Revolutionize your trading with AI-powered algorithms, real-time market analysis, 
-                  and automated portfolio management across all asset classes.
+                  Transform your customer success operations with AI-powered analytics that predict churn, 
+                  track success metrics, and optimize customer relationships in real-time.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
                   <Link
@@ -273,10 +267,10 @@ export default function AIFinancialTradingPlatform() {
               className="text-center mb-16"
             >
               <h2 className="text-4xl font-bold text-white mb-6">
-                Powerful Features for Financial Trading
+                Powerful Features for Customer Success
               </h2>
               <p className="text-xl text-slate-300 max-w-3xl mx-auto">
-                Our AI-powered platform provides institutional-grade trading tools and analytics for all market participants.
+                Our AI-powered platform provides comprehensive insights and automation to drive customer success.
               </p>
             </motion.div>
 
@@ -300,7 +294,7 @@ export default function AIFinancialTradingPlatform() {
           </div>
         </section>
 
-        {/* Trading Modules Section */}
+        {/* Analytics Modules Section */}
         <section className="py-20 bg-slate-800/30">
           <div className="max-w-7xl mx-auto px-6">
             <motion.div
@@ -310,15 +304,15 @@ export default function AIFinancialTradingPlatform() {
               className="text-center mb-16"
             >
               <h2 className="text-4xl font-bold text-white mb-6">
-                Comprehensive Trading Modules
+                Comprehensive Analytics Modules
               </h2>
               <p className="text-xl text-slate-300 max-w-3xl mx-auto">
-                Get access to advanced trading tools and analytics that give you the edge in financial markets.
+                Get deep insights into every aspect of your customer success operations with our specialized analytics modules.
               </p>
             </motion.div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {tradingModules.map((module, index) => (
+              {analyticsModules.map((module, index) => (
                 <motion.div
                   key={module.title}
                   initial={{ opacity: 0, y: 20 }}
@@ -350,7 +344,7 @@ export default function AIFinancialTradingPlatform() {
                 Transparent Pricing Plans
               </h2>
               <p className="text-xl text-slate-300 max-w-3xl mx-auto">
-                Choose the plan that fits your trading volume and access institutional-grade tools at competitive prices.
+                Choose the plan that fits your business needs and scale as you grow.
               </p>
             </motion.div>
 
@@ -419,10 +413,10 @@ export default function AIFinancialTradingPlatform() {
               className="text-center mb-16"
             >
               <h2 className="text-4xl font-bold text-white mb-6">
-                Why Choose AI Financial Trading?
+                Why Choose AI Customer Success Analytics?
               </h2>
               <p className="text-xl text-slate-300 max-w-3xl mx-auto">
-                Transform your trading performance with data-driven insights and AI-powered execution.
+                Transform your customer success operations with data-driven insights and AI-powered automation.
               </p>
             </motion.div>
 
@@ -458,10 +452,10 @@ export default function AIFinancialTradingPlatform() {
               className="text-center mb-16"
             >
               <h2 className="text-4xl font-bold text-white mb-6">
-                Perfect for Every Trader
+                Perfect for Every Industry
               </h2>
               <p className="text-xl text-slate-300 max-w-3xl mx-auto">
-                Our platform is designed to meet the unique needs of traders across all experience levels and strategies.
+                Our platform is designed to meet the unique needs of businesses across all industries.
               </p>
             </motion.div>
 
@@ -494,10 +488,10 @@ export default function AIFinancialTradingPlatform() {
               transition={{ duration: 0.6 }}
             >
               <h2 className="text-4xl font-bold text-white mb-6">
-                Ready to Revolutionize Your Trading?
+                Ready to Transform Your Customer Success?
               </h2>
               <p className="text-xl text-slate-300 mb-8 max-w-3xl mx-auto">
-                Join thousands of traders who have transformed their performance with AI-powered trading tools.
+                Join hundreds of companies that have revolutionized their customer success operations with AI-powered analytics.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link
