@@ -1,5 +1,5 @@
-import React, { Suspense } from 'react';
-import { Routes, Route } from 'react-router-dom';
+import React, { Suspense, useEffect, useState } from 'react';
+import { Routes, Route, useLocation } from 'react-router-dom';
 import { AppHeader } from './layout/AppHeader';
 import { EnhancedFuturisticFooter } from './components/EnhancedFuturisticFooter';
 import { ChatAssistant } from './components/ChatAssistant';
@@ -7,6 +7,9 @@ import { LoadingSpinner } from './components/ui/LoadingSpinner';
 import { SEO } from './components/SEO';
 import { PerformanceOptimizer } from './components/PerformanceOptimizer';
 import { ErrorBoundary } from './components/ErrorBoundary';
+import { ServiceWorkerRegistration } from './components/ServiceWorkerRegistration';
+import { Analytics } from './components/Analytics';
+import { ScrollToTop } from './components/ScrollToTop';
 
 // Lazy load pages - only import existing ones
 const Home = React.lazy(() => import('./pages/Home'));
@@ -94,9 +97,41 @@ const Marketplace = () => (
 );
 
 function App() {
+  const [isOnline, setIsOnline] = useState(navigator.onLine);
+  const [isLoading, setIsLoading] = useState(true);
+  const location = useLocation();
+
+  useEffect(() => {
+    // Handle online/offline status
+    const handleOnline = () => setIsOnline(true);
+    const handleOffline = () => setIsOnline(false);
+
+    window.addEventListener('online', handleOnline);
+    window.addEventListener('offline', handleOffline);
+
+    // Simulate initial loading
+    const timer = setTimeout(() => setIsLoading(false), 1000);
+
+    return () => {
+      window.removeEventListener('online', handleOnline);
+      window.removeEventListener('offline', handleOffline);
+      clearTimeout(timer);
+    };
+  }, []);
+
+  useEffect(() => {
+    // Scroll to top on route change
+    window.scrollTo(0, 0);
+  }, [location.pathname]);
+
+  if (isLoading) {
+    return <LoadingSpinner />;
+  }
+
   return (
     <ErrorBoundary>
       <div className="min-h-screen bg-futuristic">
+        <ScrollToTop />
         <AppHeader />
         
         <main className="flex-1">
@@ -160,6 +195,20 @@ function App() {
         <EnhancedFuturisticFooter />
         <ChatAssistant />
         <PerformanceOptimizer />
+        
+        {/* Enhanced features */}
+        <ServiceWorkerRegistration />
+        <Analytics />
+        
+        {/* Online/Offline indicator */}
+        {!isOnline && (
+          <div className="fixed top-4 right-4 bg-red-500 text-white px-4 py-2 rounded-lg shadow-lg z-50 animate-pulse">
+            <span className="flex items-center gap-2">
+              <div className="w-2 h-2 bg-white rounded-full"></div>
+              Offline Mode
+            </span>
+          </div>
+        )}
       </div>
     </ErrorBoundary>
   );
