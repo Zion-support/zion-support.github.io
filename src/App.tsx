@@ -56,6 +56,12 @@ const ComprehensiveServicesAdvertising = React.lazy(() => import('./pages/Compre
 const ComprehensiveServicesShowcase2030 = React.lazy(() => import('./pages/ComprehensiveServicesShowcase2030'));
 const InnovativeServicesOverview = React.lazy(() => import('./pages/InnovativeServicesOverview'));
 
+// Additional pages referenced in footer navigation
+const APIDocs = React.lazy(() => import('./pages/APIDocs'));
+const Training = React.lazy(() => import('./pages/Training'));
+const Investors = React.lazy(() => import('./pages/Investors'));
+const Press = React.lazy(() => import('./pages/Press'));
+
 // New innovative services
 const AILegalDocumentAnalysis = React.lazy(() => import('./pages/services/ai-legal-document-analysis'));
 const AISupplyChainOptimization = React.lazy(() => import('./pages/services/ai-supply-chain-optimization'));
@@ -73,6 +79,13 @@ const MicroSaaSProducts = React.lazy(() => import('./pages/services/MicroSaaSPro
 const Careers = React.lazy(() => import('./pages/Careers'));
 const Marketplace = React.lazy(() => import('./pages/Marketplace'));
 const InnovativeMicroSAASServices2025 = React.lazy(() => import('./pages/InnovativeMicroSAASServices2025'));
+
+// Additional service components referenced in navigation
+const AIHealthcarePlatform = React.lazy(() => import('./pages/services/ai-healthcare-platform'));
+const AIContentCreation = React.lazy(() => import('./pages/services/ai-content-creation'));
+const AICybersecurity = React.lazy(() => import('./pages/services/ai-cybersecurity'));
+const QuantumComputing = React.lazy(() => import('./pages/services/quantum-computing'));
+const IoTEdgeComputing = React.lazy(() => import('./pages/services/iot-edge-computing'));
 
 function App() {
   return (
@@ -133,12 +146,25 @@ function App() {
                 <Route path="/services/it-infrastructure" element={<ITInfrastructure />} />
                 <Route path="/services/ai-business-intelligence" element={<AIBusinessIntelligence />} />
                 
+                {/* Additional service routes referenced in navigation */}
+                <Route path="/services/ai-healthcare-platform" element={<AIHealthcarePlatform />} />
+                <Route path="/services/ai-content-creation" element={<AIContentCreation />} />
+                <Route path="/services/ai-cybersecurity" element={<AICybersecurity />} />
+                <Route path="/services/quantum-computing" element={<QuantumComputing />} />
+                <Route path="/services/iot-edge-computing" element={<IoTEdgeComputing />} />
+                
                 {/* New innovative service routes */}
                 <Route path="/services/ai-legal-document-analysis" element={<AILegalDocumentAnalysis />} />
                 <Route path="/services/ai-supply-chain-optimization" element={<AISupplyChainOptimization />} />
                 <Route path="/services/ai-healthcare-analytics" element={<AIHealthcareAnalytics />} />
                 <Route path="/services/ai-financial-trading" element={<AIFinancialTrading />} />
                 <Route path="/services/ai-fraud-detection-platform" element={<AIFraudDetectionPlatform />} />
+
+                {/* Additional pages referenced in footer navigation */}
+                <Route path="/api-docs" element={<APIDocs />} />
+                <Route path="/training" element={<Training />} />
+                <Route path="/investors" element={<Investors />} />
+                <Route path="/press" element={<Press />} />
 
                 {/* Catch all route */}
                 <Route path="*" element={<Home />} />
