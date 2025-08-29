@@ -1,434 +1,440 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
 import { 
   Building, 
+  Building2, 
+  Rocket, 
   Shield, 
-  Cloud, 
-  Brain, 
-  Zap, 
-  Globe,
-  Users,
+  Heart, 
+  TrendingUp, 
+  Factory, 
+  ShoppingCart, 
+  GraduationCap, 
+  Scale, 
+  Users, 
+  Globe, 
+  CheckCircle, 
+  Star, 
+  ArrowRight,
+  Phone,
+  Mail,
+  MapPin,
+  Brain,
+  Cloud,
+  Cpu,
   Database,
   Lock,
-  TrendingUp,
-  CheckCircle,
-  ArrowRight,
-  Play
+  Zap,
+  Target,
+  BarChart3
 } from 'lucide-react';
-import { Link } from 'react-router-dom';
-import { SEO } from '../components/SEO';
 
-const Solutions: React.FC = () => {
-  const [selectedIndustry, setSelectedIndustry] = useState('all');
-  const [selectedCategory, setSelectedCategory] = useState('all');
+export default function Solutions() {
+  const [activeIndustry, setActiveIndustry] = useState('all');
 
   const industries = [
-    { id: 'all', name: 'All Industries', icon: Building },
-    { id: 'healthcare', name: 'Healthcare', icon: Shield },
-    { id: 'finance', name: 'Financial Services', icon: Lock },
-    { id: 'manufacturing', name: 'Manufacturing', icon: Building },
-    { id: 'retail', name: 'Retail & E-commerce', icon: Users },
-    { id: 'technology', name: 'Technology', icon: Brain }
+    { id: 'all', name: 'All Industries', icon: Globe, color: 'from-purple-500 to-pink-500' },
+    { id: 'enterprise', name: 'Enterprise', icon: Building2, color: 'from-blue-500 to-cyan-500' },
+    { id: 'healthcare', name: 'Healthcare', icon: Heart, color: 'from-red-500 to-pink-500' },
+    { id: 'financial', name: 'Financial Services', icon: TrendingUp, color: 'from-green-500 to-emerald-500' },
+    { id: 'manufacturing', name: 'Manufacturing', icon: Factory, color: 'from-orange-500 to-red-500' },
+    { id: 'retail', name: 'Retail & E-commerce', icon: ShoppingCart, color: 'from-purple-500 to-indigo-500' },
+    { id: 'education', name: 'Education', icon: GraduationCap, color: 'from-blue-500 to-indigo-500' },
+    { id: 'legal', name: 'Legal Services', icon: Scale, color: 'from-gray-500 to-blue-500' },
+    { id: 'startup', name: 'Startups', icon: Rocket, color: 'from-yellow-500 to-orange-500' },
+    { id: 'government', name: 'Government', icon: Shield, color: 'from-indigo-500 to-purple-500' }
   ];
 
-  const solutionCategories = [
-    { id: 'ai', title: 'Artificial Intelligence' },
-    { id: 'cloud', title: 'Cloud Solutions' },
-    { id: 'security', title: 'Cybersecurity' },
-    { id: 'data', title: 'Data Analytics' },
-    { id: 'iot', title: 'IoT & Automation' }
-  ];
-
-  const industrySolutions = [
+  const solutions = [
+    // Enterprise Solutions
     {
-      id: 1,
-      title: 'Healthcare',
-      icon: Shield,
-      description: 'AI-powered diagnostic tools, patient management systems, and healthcare analytics platforms.',
-      solutions: ['Predictive Analytics', 'Medical Imaging AI', 'Patient Care Management', 'Drug Discovery'],
-      caseStudies: 15,
-      clients: 25
+      id: 'enterprise-digital-transformation',
+      title: 'Enterprise Digital Transformation',
+      description: 'Comprehensive digital transformation strategy and implementation for large organizations.',
+      industry: 'enterprise',
+      challenges: ['Legacy system modernization', 'Process automation', 'Data silo integration', 'Change management'],
+      solutions: ['AI-powered workflow automation', 'Cloud migration strategy', 'Data governance framework', 'Employee training programs'],
+      benefits: ['30% operational efficiency improvement', 'Reduced IT costs by 25%', 'Improved customer experience', 'Faster time to market'],
+      technologies: ['AI/ML', 'Cloud Computing', 'Data Analytics', 'IoT', 'Blockchain'],
+      icon: Building2,
+      color: 'from-blue-500 to-cyan-500',
+      href: '/solutions/enterprise-digital-transformation'
     },
     {
-      id: 2,
-      title: 'Financial Services',
-      icon: Lock,
-      description: 'Secure banking solutions, fraud detection systems, and regulatory compliance platforms.',
-      solutions: ['Fraud Detection', 'Compliance Automation', 'Risk Management', 'Digital Banking'],
-      caseStudies: 12,
-      clients: 18
-    },
-    {
-      id: 3,
-      title: 'Manufacturing',
-      icon: Building,
-      description: 'Smart factory solutions, predictive maintenance, and quality control automation.',
-      solutions: ['Predictive Maintenance', 'Quality Control', 'Supply Chain Optimization', 'Energy Management'],
-      caseStudies: 20,
-      clients: 30
-    },
-    {
-      id: 4,
-      title: 'Retail & E-commerce',
-      icon: Users,
-      description: 'Customer experience platforms, inventory management, and personalized marketing solutions.',
-      solutions: ['Personalization Engine', 'Inventory Management', 'Customer Analytics', 'Omnichannel Solutions'],
-      caseStudies: 18,
-      clients: 22
-    },
-    {
-      id: 5,
-      title: 'Technology',
+      id: 'enterprise-ai-platform',
+      title: 'Enterprise AI Platform',
+      description: 'Scalable AI infrastructure for enterprise-wide machine learning and automation.',
+      industry: 'enterprise',
+      challenges: ['AI talent shortage', 'Data quality issues', 'Model deployment complexity', 'Scalability concerns'],
+      solutions: ['AI model management platform', 'Automated data pipeline', 'MLOps infrastructure', 'AI governance framework'],
+      benefits: ['10x faster AI model deployment', 'Reduced AI project costs', 'Improved model accuracy', 'Centralized AI operations'],
+      technologies: ['Machine Learning', 'MLOps', 'Data Engineering', 'Model Serving', 'AutoML'],
       icon: Brain,
-      description: 'AI development platforms, cloud infrastructure, and software development tools.',
-      solutions: ['AI Development', 'Cloud Infrastructure', 'DevOps Tools', 'API Management'],
-      caseStudies: 25,
-      clients: 35
+      color: 'from-purple-500 to-cyan-500',
+      href: '/solutions/enterprise-ai-platform'
+    },
+
+    // Healthcare Solutions
+    {
+      id: 'healthcare-ai-analytics',
+      title: 'Healthcare AI Analytics Platform',
+      description: 'AI-powered healthcare analytics for improved patient outcomes and operational efficiency.',
+      industry: 'healthcare',
+      challenges: ['Patient data privacy', 'Clinical decision support', 'Operational inefficiency', 'Cost management'],
+      solutions: ['HIPAA-compliant AI platform', 'Predictive analytics', 'Process optimization', 'Resource allocation'],
+      benefits: ['20% improvement in patient outcomes', '15% reduction in operational costs', 'Faster diagnosis', 'Better resource utilization'],
+      technologies: ['AI/ML', 'Predictive Analytics', 'Natural Language Processing', 'Computer Vision', 'IoT'],
+      icon: Heart,
+      color: 'from-red-500 to-pink-500',
+      href: '/solutions/healthcare-ai-analytics'
+    },
+    {
+      id: 'healthcare-telemedicine',
+      title: 'Telemedicine & Remote Care',
+      description: 'Comprehensive telemedicine platform with AI-powered diagnostics and remote monitoring.',
+      industry: 'healthcare',
+      challenges: ['Remote patient monitoring', 'Diagnostic accuracy', 'Healthcare accessibility', 'Regulatory compliance'],
+      solutions: ['AI diagnostic tools', 'Remote monitoring devices', 'Secure video conferencing', 'Compliance management'],
+      benefits: ['Improved healthcare access', 'Reduced hospital visits', 'Better patient engagement', 'Cost savings'],
+      technologies: ['AI Diagnostics', 'IoT Devices', 'Video Conferencing', 'Mobile Apps', 'Cloud Security'],
+      icon: Heart,
+      color: 'from-red-500 to-orange-500',
+      href: '/solutions/healthcare-telemedicine'
+    },
+
+    // Financial Services Solutions
+    {
+      id: 'fintech-ai-platform',
+      title: 'FinTech AI Platform',
+      description: 'AI-powered financial services platform for fraud detection, risk assessment, and customer insights.',
+      industry: 'financial',
+      challenges: ['Fraud detection', 'Risk management', 'Customer experience', 'Regulatory compliance'],
+      solutions: ['Real-time fraud detection', 'AI risk scoring', 'Personalized services', 'Compliance automation'],
+      benefits: ['99.9% fraud detection accuracy', '30% reduction in false positives', 'Improved customer satisfaction', 'Regulatory compliance'],
+      technologies: ['Machine Learning', 'Real-time Analytics', 'Blockchain', 'API Integration', 'Cloud Security'],
+      icon: TrendingUp,
+      color: 'from-green-500 to-emerald-500',
+      href: '/solutions/fintech-ai-platform'
+    },
+    {
+      id: 'financial-risk-management',
+      title: 'AI-Powered Risk Management',
+      description: 'Advanced risk management system using AI for real-time monitoring and predictive analytics.',
+      industry: 'financial',
+      challenges: ['Real-time risk monitoring', 'Predictive risk modeling', 'Regulatory reporting', 'Portfolio optimization'],
+      solutions: ['Real-time risk dashboard', 'AI risk prediction', 'Automated reporting', 'Portfolio analytics'],
+      benefits: ['Real-time risk visibility', 'Improved risk prediction', 'Automated compliance', 'Better investment decisions'],
+      technologies: ['AI/ML', 'Real-time Analytics', 'Big Data', 'Cloud Computing', 'API Integration'],
+      icon: Shield,
+      color: 'from-blue-500 to-indigo-500',
+      href: '/solutions/financial-risk-management'
+    },
+
+    // Manufacturing Solutions
+    {
+      id: 'industry-4-0-platform',
+      title: 'Industry 4.0 & Smart Manufacturing',
+      description: 'Comprehensive Industry 4.0 solution for smart factories and connected manufacturing.',
+      industry: 'manufacturing',
+      challenges: ['Equipment monitoring', 'Predictive maintenance', 'Quality control', 'Supply chain optimization'],
+      solutions: ['IoT sensor network', 'AI predictive maintenance', 'Computer vision QC', 'Supply chain analytics'],
+      benefits: ['25% reduction in downtime', '15% improvement in quality', '20% cost savings', 'Real-time visibility'],
+      technologies: ['IoT', 'AI/ML', 'Computer Vision', 'Edge Computing', 'Cloud Analytics'],
+      icon: Factory,
+      color: 'from-orange-500 to-red-500',
+      href: '/solutions/industry-4-0-platform'
+    },
+    {
+      id: 'manufacturing-automation',
+      title: 'Manufacturing Process Automation',
+      description: 'AI-powered automation for manufacturing processes and quality control.',
+      industry: 'manufacturing',
+      challenges: ['Process optimization', 'Quality control', 'Resource allocation', 'Production planning'],
+      solutions: ['Process automation', 'AI quality inspection', 'Resource optimization', 'Production scheduling'],
+      benefits: ['30% productivity improvement', 'Reduced defects by 40%', 'Better resource utilization', 'Faster production'],
+      technologies: ['Robotic Process Automation', 'AI/ML', 'Computer Vision', 'IoT', 'Cloud Computing'],
+      icon: Cpu,
+      color: 'from-gray-500 to-blue-500',
+      href: '/solutions/manufacturing-automation'
+    },
+
+    // Retail & E-commerce Solutions
+    {
+      id: 'retail-ai-platform',
+      title: 'Retail AI Platform',
+      description: 'AI-powered retail platform for personalized shopping, inventory management, and customer insights.',
+      industry: 'retail',
+      challenges: ['Customer personalization', 'Inventory optimization', 'Customer retention', 'Omnichannel experience'],
+      solutions: ['AI recommendation engine', 'Predictive inventory', 'Customer analytics', 'Unified commerce platform'],
+      benefits: ['25% increase in sales', '20% reduction in inventory costs', 'Improved customer loyalty', 'Better omnichannel experience'],
+      technologies: ['AI/ML', 'Recommendation Systems', 'Predictive Analytics', 'Mobile Apps', 'Cloud Computing'],
+      icon: ShoppingCart,
+      color: 'from-purple-500 to-indigo-500',
+      href: '/solutions/retail-ai-platform'
+    },
+    {
+      id: 'ecommerce-optimization',
+      title: 'E-commerce Optimization',
+      description: 'AI-powered e-commerce optimization for conversion rate improvement and customer experience.',
+      industry: 'retail',
+      challenges: ['Conversion rate optimization', 'Customer experience', 'Search optimization', 'Personalization'],
+      solutions: ['AI-powered CRO', 'Personalized UX', 'Smart search', 'Customer journey optimization'],
+      benefits: ['35% improvement in conversion', 'Better customer experience', 'Increased average order value', 'Reduced cart abandonment'],
+      technologies: ['AI/ML', 'A/B Testing', 'Personalization', 'Search Optimization', 'Analytics'],
+      icon: ShoppingCart,
+      color: 'from-pink-500 to-purple-500',
+      href: '/solutions/ecommerce-optimization'
+    },
+
+    // Education Solutions
+    {
+      id: 'edtech-ai-platform',
+      title: 'EdTech AI Platform',
+      description: 'AI-powered educational platform for personalized learning and student success.',
+      industry: 'education',
+      challenges: ['Personalized learning', 'Student engagement', 'Performance tracking', 'Administrative efficiency'],
+      solutions: ['Adaptive learning paths', 'AI tutoring systems', 'Performance analytics', 'Administrative automation'],
+      benefits: ['Improved learning outcomes', 'Higher student engagement', 'Better resource allocation', 'Reduced administrative burden'],
+      technologies: ['AI/ML', 'Natural Language Processing', 'Learning Analytics', 'Mobile Apps', 'Cloud Computing'],
+      icon: GraduationCap,
+      color: 'from-blue-500 to-indigo-500',
+      href: '/solutions/edtech-ai-platform'
+    },
+
+    // Legal Services Solutions
+    {
+      id: 'legal-ai-platform',
+      title: 'Legal AI Platform',
+      description: 'AI-powered legal research and document automation platform.',
+      industry: 'legal',
+      challenges: ['Legal research efficiency', 'Document automation', 'Compliance management', 'Case analysis'],
+      solutions: ['AI legal research', 'Document generation', 'Compliance tracking', 'Case analytics'],
+      benefits: ['80% faster legal research', 'Reduced document preparation time', 'Better compliance', 'Improved case outcomes'],
+      technologies: ['AI/ML', 'Natural Language Processing', 'Document Processing', 'Analytics', 'Cloud Security'],
+      icon: Scale,
+      color: 'from-gray-500 to-blue-500',
+      href: '/solutions/legal-ai-platform'
+    },
+
+    // Startup Solutions
+    {
+      id: 'startup-acceleration',
+      title: 'Startup Technology Acceleration',
+      description: 'Rapid technology development and deployment for startups and scale-ups.',
+      industry: 'startup',
+      challenges: ['Rapid development', 'Scalable architecture', 'Cost optimization', 'Time to market'],
+      solutions: ['MVP development', 'Scalable cloud architecture', 'Cost-effective solutions', 'Agile development'],
+      benefits: ['Faster time to market', 'Scalable technology foundation', 'Cost optimization', 'Competitive advantage'],
+      technologies: ['Cloud Computing', 'Microservices', 'DevOps', 'AI/ML', 'Mobile Development'],
+      icon: Rocket,
+      color: 'from-yellow-500 to-orange-500',
+      href: '/solutions/startup-acceleration'
+    },
+
+    // Government Solutions
+    {
+      id: 'government-digital-transformation',
+      title: 'Government Digital Transformation',
+      description: 'Digital transformation solutions for government agencies and public services.',
+      industry: 'government',
+      challenges: ['Legacy system modernization', 'Citizen experience', 'Security compliance', 'Operational efficiency'],
+      solutions: ['Modern government platforms', 'Citizen portals', 'Security frameworks', 'Process automation'],
+      benefits: ['Improved citizen services', 'Enhanced security', 'Operational efficiency', 'Cost savings'],
+      technologies: ['Cloud Computing', 'AI/ML', 'Cybersecurity', 'API Integration', 'Mobile Apps'],
+      icon: Shield,
+      color: 'from-indigo-500 to-purple-500',
+      href: '/solutions/government-digital-transformation'
     }
   ];
 
-  const featuredSolutions = [
-    {
-      id: 1,
-      title: 'AI Business Intelligence Platform',
-      category: 'Artificial Intelligence',
-      industry: 'All Industries',
-      description: 'Comprehensive AI-powered business intelligence solution that transforms raw data into actionable insights.',
-      features: ['Predictive Analytics', 'Natural Language Processing', 'Real-time Dashboards', 'Custom Reports'],
-      benefits: ['Data-driven Decisions', 'Improved Efficiency', 'Competitive Advantage', 'Cost Reduction'],
-      pricing: '$2,500',
-      demo: true,
-      trial: true
-    },
-    {
-      id: 2,
-      title: 'Cloud Security Suite',
-      category: 'Cybersecurity',
-      industry: 'All Industries',
-      description: 'Enterprise-grade security solution for cloud environments with zero-trust architecture.',
-      features: ['Threat Detection', 'Access Control', 'Compliance Monitoring', 'Incident Response'],
-      benefits: ['Enhanced Security', 'Regulatory Compliance', 'Risk Reduction', '24/7 Protection'],
-      pricing: '$3,200',
-      demo: true,
-      trial: false
-    },
-    {
-      id: 3,
-      title: 'IoT Manufacturing Platform',
-      category: 'IoT & Automation',
-      industry: 'Manufacturing',
-      description: 'End-to-end IoT solution for smart manufacturing with predictive maintenance and quality control.',
-      features: ['Sensor Integration', 'Predictive Maintenance', 'Quality Control', 'Energy Monitoring'],
-      benefits: ['Reduced Downtime', 'Improved Quality', 'Cost Savings', 'Increased Productivity'],
-      pricing: '$4,500',
-      demo: true,
-      trial: true
-    },
-    {
-      id: 4,
-      title: 'Data Analytics Engine',
-      category: 'Data Analytics',
-      industry: 'All Industries',
-      description: 'Advanced analytics platform for big data processing and business intelligence.',
-      features: ['Real-time Processing', 'Machine Learning', 'Data Visualization', 'Custom Dashboards'],
-      benefits: ['Faster Insights', 'Better Decisions', 'Operational Efficiency', 'Revenue Growth'],
-      pricing: '$2,800',
-      demo: true,
-      trial: true
-    }
-  ];
-
-  const filteredSolutions = featuredSolutions.filter(solution => 
-    (selectedIndustry === 'all' || solution.industry === selectedIndustry) &&
-    (selectedCategory === 'all' || solution.category === selectedCategory)
-  );
+  const filteredSolutions = activeIndustry === 'all' 
+    ? solutions 
+    : solutions.filter(solution => solution.industry === activeIndustry);
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      <SEO
-        title="Solutions - Zion Tech Group"
-        description="Comprehensive technology solutions for healthcare, finance, manufacturing, retail, and technology industries. AI, cloud, cybersecurity, and data analytics solutions."
-        keywords="technology solutions, AI solutions, cloud solutions, cybersecurity, data analytics, industry solutions, Zion Tech Group"
-      />
-
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       {/* Hero Section */}
-      <section className="pt-32 pb-16 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-          >
-            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
-              Industry
-              <span className="bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent">
-                {' '}Solutions
-              </span>
-            </h1>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-              Tailored technology solutions that address the unique challenges of your industry 
-              and drive measurable results through AI, cloud, and cybersecurity innovation.
-            </p>
-          </motion.div>
-        </div>
-      </section>
-
-      {/* Industry Filter */}
-      <section className="py-12 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="flex flex-wrap justify-center gap-4">
-            {industries.map((industry) => (
-              <button
-                key={industry.id}
-                onClick={() => setSelectedIndustry(industry.id)}
-                className={`flex items-center gap-2 px-6 py-3 rounded-lg font-medium transition-all duration-300 ${
-                  selectedIndustry === industry.id
-                    ? 'bg-cyan-500 text-slate-900'
-                    : 'bg-slate-800/50 text-gray-300 hover:bg-slate-700/50 border border-slate-600 hover:border-cyan-500/50'
-                }`}
-              >
-                <industry.icon className="w-5 h-5" />
-                {industry.name}
-              </button>
-            ))}
+      <div className="container mx-auto px-4 py-16">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          className="text-center mb-16"
+        >
+          <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
+            Industry <span className="bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">Solutions</span>
+          </h1>
+          <p className="text-xl text-slate-300 max-w-3xl mx-auto mb-8">
+            Tailored technology solutions designed for your specific industry challenges. 
+            From healthcare to finance, manufacturing to retail, we deliver results that drive business transformation.
+          </p>
+          
+          {/* Contact Information */}
+          <div className="bg-gradient-to-r from-slate-800/50 to-slate-700/50 rounded-2xl p-6 mb-8 max-w-4xl mx-auto backdrop-blur-sm">
+            <div className="grid md:grid-cols-3 gap-6 text-center">
+              <div className="flex flex-col items-center">
+                <Phone className="w-6 h-6 text-cyan-400 mb-2" />
+                <span className="text-white font-semibold">+1 302 464 0950</span>
+              </div>
+              <div className="flex flex-col items-center">
+                <Mail className="w-6 h-6 text-cyan-400 mb-2" />
+                <span className="text-white font-semibold">kleber@ziontechgroup.com</span>
+              </div>
+              <div className="flex flex-col items-center">
+                <MapPin className="w-6 h-6 text-cyan-400 mb-2" />
+                <span className="text-white font-semibold">364 E Main St STE 1008<br />Middletown DE 19709</span>
+              </div>
+            </div>
           </div>
-        </div>
-      </section>
+        </motion.div>
 
-      {/* Industry Solutions */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-slate-800/30">
-        <div className="max-w-7xl mx-auto">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Industry Solutions
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Tailored technology solutions designed specifically for the unique challenges 
-              and opportunities of different industries.
-            </p>
-          </motion.div>
+        {/* Industry Filter */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.2 }}
+          className="flex flex-wrap justify-center gap-4 mb-12"
+        >
+          {industries.map((industry) => (
+            <button
+              key={industry.id}
+              onClick={() => setActiveIndustry(industry.id)}
+              className={`flex items-center px-6 py-3 rounded-full transition-all duration-300 ${
+                activeIndustry === industry.id
+                  ? `bg-gradient-to-r ${industry.color} text-white shadow-lg`
+                  : 'bg-slate-800 text-slate-300 hover:bg-slate-700'
+              }`}
+            >
+              <industry.icon className="w-5 h-5 mr-2" />
+              {industry.name}
+            </button>
+          ))}
+        </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {industrySolutions.map((industry, index) => (
-              <motion.div
-                key={industry.id}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="group bg-slate-800/50 border border-slate-700/50 rounded-2xl p-6 hover:border-cyan-500/50 transition-all duration-300"
-              >
-                {/* Icon */}
-                <div className="w-16 h-16 bg-gradient-to-br from-cyan-500 to-blue-600 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
-                  <industry.icon className="w-8 h-8 text-white" />
-                </div>
-
-                {/* Title & Description */}
-                <h3 className="text-xl font-bold text-white mb-4 group-hover:text-cyan-400 transition-colors duration-300">
-                  {industry.title}
-                </h3>
-                <p className="text-gray-300 mb-6 leading-relaxed">
-                  {industry.description}
-                </p>
-
-                {/* Solutions */}
-                <div className="mb-6">
-                  <h4 className="text-sm font-semibold text-cyan-400 mb-3">Solutions</h4>
+        {/* Solutions Grid */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.4 }}
+          className="grid grid-cols-1 lg:grid-cols-2 gap-8"
+        >
+          {filteredSolutions.map((solution, index) => (
+            <motion.div
+              key={solution.id}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.1 * index }}
+              className="bg-gradient-to-br from-slate-800 to-slate-700 rounded-2xl p-8 hover:shadow-2xl transition-all duration-300 hover:scale-105 border border-slate-600"
+            >
+              <div className={`w-16 h-16 rounded-xl bg-gradient-to-r ${solution.color} flex items-center justify-center mb-6`}>
+                <solution.icon className="w-8 h-8 text-white" />
+              </div>
+              
+              <h3 className="text-2xl font-bold text-white mb-4">{solution.title}</h3>
+              <p className="text-slate-300 mb-6 leading-relaxed">{solution.description}</p>
+              
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                <div>
+                  <h4 className="text-white font-semibold mb-3 flex items-center">
+                    <Target className="w-4 h-4 text-cyan-400 mr-2" />
+                    Key Challenges
+                  </h4>
                   <ul className="space-y-2">
-                    {industry.solutions.slice(0, 4).map((solution, idx) => (
-                      <li key={idx} className="flex items-start space-x-2 text-gray-300 text-sm">
-                        <div className="w-1.5 h-1.5 bg-cyan-400 rounded-full mt-2 flex-shrink-0"></div>
-                        <span>{solution}</span>
+                    {solution.challenges.map((challenge, idx) => (
+                      <li key={idx} className="text-slate-300 text-sm flex items-start">
+                        <CheckCircle className="w-3 h-3 text-cyan-400 mr-2 mt-0.5 flex-shrink-0" />
+                        {challenge}
                       </li>
                     ))}
                   </ul>
                 </div>
-
-                {/* Stats */}
-                <div className="grid grid-cols-2 gap-4 pt-4 border-t border-slate-600/50">
-                  <div className="text-center">
-                    <div className="text-lg font-bold text-cyan-400">{industry.caseStudies}</div>
-                    <div className="text-xs text-gray-400">Case Studies</div>
-                  </div>
-                  <div className="text-center">
-                    <div className="text-lg font-bold text-purple-400">{industry.clients}</div>
-                    <div className="text-xs text-gray-400">Clients</div>
-                  </div>
+                
+                <div>
+                  <h4 className="text-white font-semibold mb-3 flex items-center">
+                    <Zap className="w-4 h-4 text-yellow-400 mr-2" />
+                    Our Solutions
+                  </h4>
+                  <ul className="space-y-2">
+                    {solution.solutions.map((sol, idx) => (
+                      <li key={idx} className="text-slate-300 text-sm flex items-start">
+                        <Star className="w-3 h-3 text-yellow-400 mr-2 mt-0.5 flex-shrink-0" />
+                        {sol}
+                      </li>
+                    ))}
+                  </ul>
                 </div>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
+              </div>
 
-      {/* Featured Solutions */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Featured Solutions
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Our flagship technology solutions that deliver exceptional value and transformative results 
-              for organizations worldwide.
-            </p>
-          </motion.div>
+              <div className="mb-6">
+                <h4 className="text-white font-semibold mb-3 flex items-center">
+                  <BarChart3 className="w-4 h-4 text-green-400 mr-2" />
+                  Expected Benefits
+                </h4>
+                <ul className="space-y-2">
+                  {solution.benefits.map((benefit, idx) => (
+                    <li key={idx} className="text-slate-300 text-sm flex items-start">
+                      <CheckCircle className="w-3 h-3 text-green-400 mr-2 mt-0.5 flex-shrink-0" />
+                      {benefit}
+                    </li>
+                  ))}
+                </ul>
+              </div>
 
-          {/* Filters */}
-          <div className="flex flex-wrap justify-center gap-4 mb-12">
-            <select
-              value={selectedCategory}
-              onChange={(e) => setSelectedCategory(e.target.value)}
-              className="px-4 py-2 bg-slate-800 border border-slate-600 rounded-lg text-white focus:outline-none focus:border-cyan-500/50"
-            >
-              <option value="all">All Categories</option>
-              {solutionCategories.map((category) => (
-                <option key={category.id} value={category.title}>{category.title}</option>
-              ))}
-            </select>
-            <select
-              value={selectedIndustry}
-              onChange={(e) => setSelectedIndustry(e.target.value)}
-              className="px-4 py-2 bg-slate-800 border border-slate-600 rounded-lg text-white focus:outline-none focus:border-cyan-500/50"
-            >
-              <option value="all">All Industries</option>
-              {industrySolutions.map((industry) => (
-                <option key={industry.id} value={industry.title}>{industry.title}</option>
-              ))}
-            </select>
-          </div>
-
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-            {filteredSolutions.map((solution, index) => (
-              <motion.div
-                key={solution.id}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="bg-slate-800/50 border border-slate-700/50 rounded-2xl p-6 hover:border-cyan-500/50 transition-all duration-300"
-              >
-                {/* Header */}
-                <div className="flex items-start justify-between mb-4">
-                  <div>
-                    <span className="inline-flex items-center px-3 py-1 bg-cyan-500/10 border border-cyan-500/20 rounded-full text-cyan-400 text-sm font-medium mb-2">
-                      {solution.category}
+              <div className="mb-6">
+                <h4 className="text-white font-semibold mb-3">Technologies Used</h4>
+                <div className="flex flex-wrap gap-2">
+                  {solution.technologies.map((tech, idx) => (
+                    <span key={idx} className="px-3 py-1 bg-slate-700 text-cyan-400 text-xs rounded-full">
+                      {tech}
                     </span>
-                    <h3 className="text-xl font-bold text-white mb-2">{solution.title}</h3>
-                  </div>
-                  <div className="text-right">
-                    <div className="text-lg font-bold text-cyan-400">{solution.pricing}</div>
-                    <div className="text-xs text-gray-400">Starting Price</div>
-                  </div>
+                  ))}
                 </div>
+              </div>
 
-                {/* Description */}
-                <p className="text-gray-300 mb-6 leading-relaxed">
-                  {solution.description}
-                </p>
+              <Link
+                to={solution.href}
+                className="inline-flex items-center justify-center w-full px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-600 transition-all duration-300 group"
+              >
+                Learn More
+                <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
+              </Link>
+            </motion.div>
+          ))}
+        </motion.div>
 
-                {/* Features */}
-                <div className="mb-6">
-                  <h4 className="text-sm font-semibold text-cyan-400 mb-3">Key Features</h4>
-                  <div className="grid grid-cols-2 gap-2">
-                    {solution.features.slice(0, 4).map((feature, idx) => (
-                      <div key={idx} className="flex items-center space-x-2 text-gray-300 text-sm">
-                        <CheckCircle className="w-4 h-4 text-cyan-400 flex-shrink-0" />
-                        <span>{feature}</span>
-                      </div>
-                    ))}
-                  </div>
-                </div>
-
-                {/* Benefits */}
-                <div className="mb-6">
-                  <h4 className="text-sm font-semibold text-purple-400 mb-3">Key Benefits</h4>
-                  <ul className="space-y-2">
-                    {solution.benefits.map((benefit, idx) => (
-                      <li key={idx} className="flex items-start space-x-2 text-gray-300 text-sm">
-                        <div className="w-1.5 h-1.5 bg-purple-400 rounded-full mt-2 flex-shrink-0"></div>
-                        <span>{benefit}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-
-                {/* Actions */}
-                <div className="flex items-center justify-between pt-4 border-t border-slate-600/50">
-                  <div className="flex space-x-2">
-                    {solution.demo && (
-                      <button className="px-4 py-2 bg-cyan-500 text-white text-sm font-medium rounded-lg hover:bg-cyan-600 transition-colors duration-300">
-                        <Play className="w-4 h-4 mr-1 inline" />
-                        Demo
-                      </button>
-                    )}
-                    {solution.trial && (
-                      <button className="px-4 py-2 border border-cyan-500 text-cyan-400 text-sm font-medium rounded-lg hover:bg-cyan-500 hover:text-white transition-colors duration-300">
-                        Start Trial
-                      </button>
-                    )}
-                  </div>
-                  <Link
-                    to={`/solutions/${solution.id}`}
-                    className="text-cyan-400 hover:text-cyan-300 text-sm font-medium"
-                  >
-                    Learn More
-                  </Link>
-                </div>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* CTA Section */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-slate-800/30">
-        <div className="max-w-4xl mx-auto text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
-          >
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-              Ready to Transform Your Business?
+        {/* Call to Action */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.6 }}
+          className="text-center mt-16"
+        >
+          <div className="bg-gradient-to-r from-slate-800 to-slate-700 rounded-2xl p-8 max-w-3xl mx-auto">
+            <h2 className="text-3xl font-bold text-white mb-4">
+              Ready to Transform Your Industry?
             </h2>
-            <p className="text-lg text-gray-300 mb-8">
-              Let our technology solutions drive your digital transformation and unlock new possibilities 
-              for growth and innovation.
+            <p className="text-slate-300 mb-6">
+              Let's discuss how our industry-specific solutions can address your unique challenges 
+              and drive measurable business results.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 to="/contact"
-                className="inline-flex items-center justify-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105"
+                className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-600 transition-all duration-300"
               >
-                Get Started Today
-                <ArrowRight className="w-5 h-5 ml-2" />
+                Schedule Industry Consultation
               </Link>
               <Link
                 to="/request-quote"
-                className="inline-flex items-center justify-center px-8 py-4 border border-cyan-500 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-500 hover:text-white transition-all duration-300"
+                className="px-8 py-4 border-2 border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300"
               >
-                Request Quote
+                Get Custom Quote
               </Link>
             </div>
-          </motion.div>
-        </div>
-      </section>
+          </div>
+        </motion.div>
+      </div>
     </div>
   );
-};
-
-export default Solutions;
+}
