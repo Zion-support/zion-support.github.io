@@ -6,7 +6,7 @@ import { ChatAssistant } from './components/ChatAssistant';
 
 // Lazy load all pages
 const Home = React.lazy(() => import('./pages/Home.tsx'));
-const About = React.lazy(() => import('./pages/About.tsx'));
+const About = React.lazy(() => import('./pages/about.tsx'));
 const Contact = React.lazy(() => import('./pages/Contact.tsx'));
 const Blog = React.lazy(() => import('./pages/Blog.tsx'));
 const PartnersPage = React.lazy(() => import('./pages/Partners.tsx'));
@@ -20,6 +20,10 @@ const Sitemap = React.lazy(() => import('./pages/Sitemap.tsx'));
 // Services pages
 const ServicesPage = React.lazy(() => import('./pages/ServicesPage.tsx'));
 const ServicesPricingPage = React.lazy(() => import('./pages/ServicesPricingPage.tsx'));
+const ComprehensivePricing2027 = React.lazy(() => import('./pages/ComprehensivePricing2027.tsx'));
+const AIServicesPage = React.lazy(() => import('./pages/AIServicesPage.tsx'));
+const ITServices = React.lazy(() => import('./pages/ITServices.tsx'));
+const MicroSaasServicesPage = React.lazy(() => import('./pages/MicroSaasServicesPage.tsx'));
 
 // Marketplace pages
 const Marketplace = React.lazy(() => import('./pages/Marketplace.tsx'));
@@ -29,6 +33,7 @@ const Support = React.lazy(() => import('./pages/Support.tsx'));
 const Security = React.lazy(() => import('./pages/Security.tsx'));
 const SystemStatus = React.lazy(() => import('./pages/SystemStatus.tsx'));
 const Accessibility = React.lazy(() => import('./pages/Accessibility.tsx'));
+const Dashboard = React.lazy(() => import('./pages/Dashboard.tsx'));
 
 // Documentation pages
 const Documentation = React.lazy(() => import('./pages/Documentation.tsx'));
@@ -43,6 +48,7 @@ const Categories = React.lazy(() => import('./pages/Categories.tsx'));
 
 // API Playground
 const ApiPlayground = React.lazy(() => import('./pages/ApiPlayground.tsx'));
+const RequestQuote = React.lazy(() => import('./pages/RequestQuote.tsx'));
 
 // Loading component
 const LoadingSpinner = () => (
@@ -72,11 +78,14 @@ function App() {
               <Route path="/sitemap" element={<Sitemap />} />
               <Route path="/partners" element={<PartnersPage />} />
               <Route path="/login" element={<Login />} />
-              <Route path="/pricing" element={<ComprehensivePricing />} />
+              <Route path="/pricing" element={<ComprehensivePricing2027 />} />
 
               {/* Services routes */}
               <Route path="/services" element={<ServicesPage />} />
               <Route path="/services/pricing" element={<ServicesPricingPage />} />
+              <Route path="/ai-services" element={<AIServicesPage />} />
+              <Route path="/it-services" element={<ITServices />} />
+              <Route path="/micro-saas" element={<MicroSaasServicesPage />} />
 
               {/* Marketplace routes */}
               <Route path="/marketplace" element={<Marketplace />} />
@@ -86,6 +95,7 @@ function App() {
               <Route path="/security" element={<Security />} />
               <Route path="/status" element={<SystemStatus />} />
               <Route path="/accessibility" element={<Accessibility />} />
+              <Route path="/dashboard" element={<Dashboard />} />
 
               {/* Documentation routes */}
               <Route path="/docs" element={<Documentation />} />
@@ -97,6 +107,7 @@ function App() {
               {/* Search and categories */}
               <Route path="/search" element={<Search />} />
               <Route path="/categories" element={<Categories />} />
+              <Route path="/request-quote" element={<RequestQuote />} />
 
               {/* API Playground */}
               <Route path="/api-playground" element={<ApiPlayground />} />
