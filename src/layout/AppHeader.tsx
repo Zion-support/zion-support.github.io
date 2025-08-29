@@ -98,6 +98,7 @@ export function AppHeader() {
       color: 'from-orange-600 to-red-600',
       services: [
         { name: 'Digital Twin', href: '/services/digital-twin', description: 'Simulation & Monitoring' },
+        { name: 'Digital Transformation', href: '/services/digital-transformation', description: 'Business modernization' },
         { name: 'IT Infrastructure', href: '/services/it-infrastructure', description: 'Enterprise infrastructure' },
         { name: 'Data Analytics', href: '/services/data-analytics', description: 'Business intelligence' }
       ]
