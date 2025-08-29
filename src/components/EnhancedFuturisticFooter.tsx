@@ -140,8 +140,6 @@ export const EnhancedFuturisticFooter: React.FC = () => {
         { name: 'AI Green Tech', href: '/services/ai-powered-green-technology', featured: true }
       ]
     },
-      ]
-    },
     {
       title: 'Industry Solutions',
       featured: false,
