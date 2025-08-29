@@ -18,21 +18,21 @@ export default function EnhancedNavigation2025() {
 			name: 'Services',
 			href: '/services',
 			children: [
-				{ name: 'AI Solutions', href: '/services/ai-solutions', description: 'Autonomous AI systems and workflows' },
-				{ name: 'Cloud & DevOps', href: '/services/cloud', description: 'Scalable infrastructure and automation' },
-				{ name: 'Cybersecurity', href: '/services/cybersecurity', description: 'Zero-trust security frameworks' },
-				{ name: 'Data & Analytics', href: '/services/data', description: 'Data pipelines and ML ops' },
-				{ name: 'Micro SaaS', href: '/services/micro-saas', description: 'Rapid product development' },
+				{ name: 'AI Business Intelligence', href: '/services/ai-business-intelligence', description: 'Predictive analytics and insights' },
+				{ name: 'AI Cybersecurity Platform', href: '/services/ai-cybersecurity-platform', description: 'Advanced threat detection' },
+				{ name: 'Micro SAAS Platform', href: '/services/micro-saas-platform', description: 'Rapid application development' },
+				{ name: 'AI Content Creation', href: '/services/ai-content-creation-suite', description: 'Automated content generation' },
+				{ name: 'AI Sales Copilot', href: '/services/ai-sales-copilot', description: 'Intelligent sales automation' },
 			]
 		},
 		{
 			name: 'Solutions',
 			href: '/solutions',
 			children: [
-				{ name: 'Enterprise', href: '/solutions/enterprise', description: 'Large-scale implementations' },
-				{ name: 'SMB', href: '/solutions/smb', description: 'Small business focused' },
-				{ name: 'Startup', href: '/solutions/startup', description: 'Growth acceleration' },
-				{ name: 'Government', href: '/solutions/government', description: 'Public sector expertise' },
+				{ name: 'Financial Services', href: '/solutions/financial', description: 'AI risk management & compliance' },
+				{ name: 'Healthcare', href: '/solutions/healthcare', description: 'Patient data security & AI diagnostics' },
+				{ name: 'Manufacturing', href: '/solutions/manufacturing', description: 'IoT & predictive maintenance' },
+				{ name: 'Retail & E-commerce', href: '/solutions/retail', description: 'Customer analytics & personalization' },
 			]
 		},
 		{

@@ -1,16 +1,16 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import {
-  Twitter,
-  Linkedin,
-  Facebook,
-  Instagram,
-  Github,
-  Mail,
-  Phone,
-  MapPin,
-  ArrowUp,
-  Globe,
+import { 
+  Twitter, 
+  Linkedin, 
+  Facebook, 
+  Instagram, 
+  Github, 
+  Mail, 
+  Phone, 
+  MapPin, 
+  ArrowUp, 
+  Globe, 
   Heart,
   Zap,
   Shield,
@@ -28,23 +28,23 @@ const footerNavigation = {
 	services: {
 		title: 'Services',
 		items: [
-			{ name: 'AI Solutions', href: '/services/ai-solutions' },
-			{ name: 'Cloud & DevOps', href: '/services/cloud' },
-			{ name: 'Cybersecurity', href: '/services/cybersecurity' },
-			{ name: 'Data & Analytics', href: '/services/data' },
-			{ name: 'Micro SaaS', href: '/services/micro-saas' },
+			{ name: 'AI Business Intelligence', href: '/services/ai-business-intelligence' },
+			{ name: 'AI Cybersecurity Platform', href: '/services/ai-cybersecurity-platform' },
+			{ name: 'Micro SAAS Platform', href: '/services/micro-saas-platform' },
+			{ name: 'AI Content Creation', href: '/services/ai-content-creation-suite' },
+			{ name: 'AI Sales Copilot', href: '/services/ai-sales-copilot' },
 			{ name: 'Digital Transformation', href: '/services/transformation' },
 		],
 	},
 	solutions: {
 		title: 'Solutions',
 		items: [
-			{ name: 'Enterprise', href: '/solutions/enterprise' },
-			{ name: 'SMB', href: '/solutions/smb' },
-			{ name: 'Startup', href: '/solutions/startup' },
-			{ name: 'Government', href: '/solutions/government' },
-			{ name: 'Healthcare', href: '/solutions/healthcare' },
 			{ name: 'Financial Services', href: '/solutions/financial' },
+			{ name: 'Healthcare', href: '/solutions/healthcare' },
+			{ name: 'Manufacturing', href: '/solutions/manufacturing' },
+			{ name: 'Retail & E-commerce', href: '/solutions/retail' },
+			{ name: 'Enterprise', href: '/solutions/enterprise' },
+			{ name: 'Government', href: '/solutions/government' },
 		],
 	},
 	company: {
@@ -119,7 +119,7 @@ const EnhancedFooter: React.FC = () => {
 							</div>
 						</div>
 						<p className="text-zion-slate-light mb-6 max-w-sm leading-relaxed">
-							Leading provider of AI autonomous systems, cloud-native platforms, and
+							Leading provider of AI autonomous systems, cloud-native platforms, and 
 							zero-trust cybersecurity solutions that drive measurable business outcomes.
 						</p>
 
@@ -164,8 +164,8 @@ const EnhancedFooter: React.FC = () => {
 							<ul className="space-y-3">
 								{section.items.map((item) => (
 									<li key={item.name}>
-										<Link
-											href={item.href}
+										<Link 
+											href={item.href} 
 											className="text-zion-slate-light hover:text-zion-cyan transition-colors text-sm hover:translate-x-1 inline-block"
 										>
 											{item.name}
@@ -239,10 +239,10 @@ const EnhancedFooter: React.FC = () => {
 						<Link href="/sitemap" className="hover:text-zion-cyan transition-colors duration-200">
 							Sitemap
 						</Link>
-						<a
-							href="https://ziontechgroup.com"
-							target="_blank"
-							rel="noopener noreferrer"
+						<a 
+							href="https://ziontechgroup.com" 
+							target="_blank" 
+							rel="noopener noreferrer" 
 							className="hover:text-zion-cyan transition-colors duration-200 flex items-center space-x-1"
 						>
 							<Globe className="w-4 h-4" />
