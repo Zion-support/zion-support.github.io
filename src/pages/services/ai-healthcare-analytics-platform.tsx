@@ -1,17 +1,16 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { 
-  Home, 
+  Activity, 
   TrendingUp, 
   BarChart3, 
-  MapPin, 
+  Users, 
   DollarSign, 
   Target, 
-  Users, 
+  Clock, 
   Zap, 
   ArrowRight,
   Star,
-  Clock,
   CheckCircle,
   Shield,
   Brain,
@@ -24,7 +23,7 @@ import {
   Sparkles,
   Phone,
   Mail,
-  MapPin as MapPinIcon,
+  MapPin,
   Calendar,
   CheckSquare,
   AlertTriangle,
@@ -41,48 +40,54 @@ import {
   Eye,
   Globe,
   Award,
-  Building
+  Heart,
+  Stethoscope,
+  Pill,
+  Microscope,
+  TestTube,
+  UserCheck,
+  Lock
 } from 'lucide-react';
 import { SEO } from '../../components/SEO';
 import { Link } from 'react-router-dom';
 
-export default function AIRealEstateInvestmentAnalyzer() {
+export default function AIHealthcareAnalyticsPlatform() {
   const features = [
     {
       icon: Brain,
-      title: "AI-Powered Market Analysis",
-      description: "Advanced machine learning algorithms analyze market trends, property values, and investment opportunities with 95.8% accuracy",
+      title: "AI-Powered Patient Analytics",
+      description: "Advanced machine learning algorithms analyze patient data for early disease detection and personalized treatment plans",
       color: "from-blue-500 to-cyan-500"
     },
     {
-      icon: TrendingUp,
-      title: "Predictive Analytics",
-      description: "Forecast property appreciation, rental yields, and market movements using historical data and AI predictions",
+      icon: Activity,
+      title: "Real-Time Monitoring",
+      description: "Continuous patient monitoring with AI-driven alerts for critical health indicators and predictive health outcomes",
       color: "from-green-500 to-emerald-500"
     },
     {
       icon: BarChart3,
-      title: "ROI Calculator",
-      description: "Comprehensive ROI analysis including cash flow, appreciation, tax benefits, and maintenance costs",
+      title: "Predictive Analytics",
+      description: "Forecast patient outcomes, readmission risks, and resource utilization using historical data and AI predictions",
       color: "from-purple-500 to-pink-500"
     },
     {
-      icon: MapPin,
-      title: "Geographic Intelligence",
-      description: "Location-based insights including school ratings, crime statistics, and future development plans",
-      color: "from-orange-500 to-red-500"
-    },
-    {
       icon: Shield,
-      title: "Risk Assessment",
-      description: "Identify potential risks including market volatility, property condition, and regulatory changes",
-      color: "from-red-500 to-pink-500"
+      title: "Compliance & Security",
+      description: "HIPAA-compliant platform with end-to-end encryption and secure data handling for patient privacy",
+      color: "from-red-500 to-orange-500"
     },
     {
       icon: Users,
-      title: "Portfolio Management",
-      description: "Track multiple properties, diversify investments, and optimize your real estate portfolio",
+      title: "Care Team Collaboration",
+      description: "Seamless communication between doctors, nurses, and specialists with AI-powered insights and recommendations",
       color: "from-indigo-500 to-purple-500"
+    },
+    {
+      icon: Target,
+      title: "Outcome Optimization",
+      description: "Data-driven treatment optimization, resource allocation, and quality improvement initiatives",
+      color: "from-teal-500 to-cyan-500"
     }
   ];
 
@@ -90,73 +95,73 @@ export default function AIRealEstateInvestmentAnalyzer() {
     {
       icon: Clock,
       title: "Time Savings",
-      description: "Reduce research time by 80%",
-      metric: "80%"
+      description: "Reduce diagnosis time by 60%",
+      metric: "60%"
     },
     {
       icon: DollarSign,
-      title: "Better Returns",
-      description: "Increase investment returns by 25%",
-      metric: "25%"
+      title: "Cost Reduction",
+      description: "Lower healthcare costs by 30%",
+      metric: "30%"
     },
     {
       icon: Target,
       title: "Accuracy",
-      description: "95.8% accuracy in market predictions",
-      metric: "95.8%"
+      description: "95.7% accuracy in predictions",
+      metric: "95.7%"
     },
     {
       icon: TrendingUp,
-      title: "Efficiency",
-      description: "Analyze 10x more properties",
-      metric: "10x"
+      title: "Patient Outcomes",
+      description: "Improve outcomes by 40%",
+      metric: "40%"
     }
   ];
 
   const pricing = [
     {
-      name: "Starter",
-      price: 2999,
+      name: "Clinic",
+      price: 4999,
       period: "one-time setup",
       features: [
-        "Property analysis up to 50 properties/month",
-        "Basic market insights",
-        "ROI calculations",
+        "Up to 50 patients/month",
+        "Basic analytics dashboard",
+        "Patient monitoring",
         "Email support",
         "Standard reports",
-        "3 user licenses"
+        "Mobile app access"
       ],
       popular: false,
       cta: "Get Started"
     },
     {
-      name: "Professional",
-      price: 4999,
+      name: "Hospital",
+      price: 14999,
       period: "one-time setup",
       features: [
-        "Everything in Starter",
-        "Unlimited property analysis",
-        "Advanced market predictions",
-        "Custom risk models",
+        "Everything in Clinic",
+        "Up to 500 patients/month",
+        "Advanced AI analytics",
+        "Predictive modeling",
         "Priority support",
         "API access",
-        "10 user licenses"
+        "Custom integrations"
       ],
       popular: true,
       cta: "Most Popular"
     },
     {
       name: "Enterprise",
-      price: 8999,
+      price: 29999,
       period: "one-time setup",
       features: [
-        "Everything in Professional",
+        "Everything in Hospital",
+        "Unlimited patients",
         "Custom AI models",
         "White-label solution",
         "Dedicated support",
-        "Custom integrations",
-        "Training & onboarding",
-        "Unlimited users"
+        "Advanced integrations",
+        "Training & onboarding"
       ],
       popular: false,
       cta: "Contact Sales"
@@ -164,37 +169,37 @@ export default function AIRealEstateInvestmentAnalyzer() {
   ];
 
   const integrations = [
-    { name: "Zillow", icon: Home, category: "Property Data" },
-    { name: "Redfin", icon: MapPin, category: "Market Data" },
-    { name: "Realtor.com", icon: Database, category: "Listing Platform" },
-    { name: "PropStream", icon: BarChart3, category: "Investment Data" },
-    { name: "RentSpree", icon: DollarSign, category: "Rental Analysis" },
-    { name: "PropertyRadar", icon: Search, category: "Market Research" }
+    { name: "Epic", icon: Database, category: "EHR System" },
+    { name: "Cerner", icon: Server, category: "Health IT" },
+    { name: "Allscripts", icon: Monitor, category: "Practice Management" },
+    { name: "Meditech", icon: Cloud, category: "Hospital Systems" },
+    { name: "Athenahealth", icon: Network, category: "Cloud EHR" },
+    { name: "Practice Fusion", icon: Globe, category: "EHR Platform" }
   ];
 
   const useCases = [
     {
-      title: "Residential Investment",
-      description: "Analyze single-family homes, condos, and multi-family properties for optimal investment returns",
-      icon: Home,
+      title: "Early Disease Detection",
+      description: "AI algorithms identify patterns in patient data to detect diseases at early stages for better treatment outcomes",
+      icon: Microscope,
       color: "from-blue-500 to-cyan-500"
     },
     {
-      title: "Commercial Real Estate",
-      description: "Evaluate office buildings, retail spaces, and industrial properties with advanced market insights",
-      icon: Building,
-      color: "from-purple-500 to-pink-500"
-    },
-    {
-      title: "Portfolio Optimization",
-      description: "Diversify and optimize your real estate portfolio using AI-driven recommendations",
-      icon: BarChart3,
+      title: "Predictive Analytics",
+      description: "Forecast patient readmissions, complications, and resource needs to improve care planning and efficiency",
+      icon: TrendingUp,
       color: "from-green-500 to-emerald-500"
     },
     {
-      title: "Market Timing",
-      description: "Identify the best times to buy, sell, or hold properties using predictive analytics",
-      icon: TrendingUp,
+      title: "Personalized Medicine",
+      description: "Tailor treatment plans based on individual patient data, genetics, and response patterns",
+      icon: UserCheck,
+      color: "from-purple-500 to-pink-500"
+    },
+    {
+      title: "Population Health",
+      description: "Analyze population health trends, identify risk factors, and develop preventive care strategies",
+      icon: Users,
       color: "from-orange-500 to-red-500"
     }
   ];
@@ -202,8 +207,8 @@ export default function AIRealEstateInvestmentAnalyzer() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO 
-        title="AI Real Estate Investment Analyzer - Zion Tech Group"
-        description="Advanced AI platform that analyzes real estate investments, market trends, and property opportunities with 95.8% accuracy. Maximize your real estate ROI with intelligent insights and predictions."
+        title="AI Healthcare Analytics Platform - Zion Tech Group"
+        description="Advanced AI-powered healthcare analytics platform that provides intelligent patient monitoring, predictive analytics, and personalized treatment recommendations. Transform healthcare delivery with data-driven insights."
       />
 
       {/* Hero Section */}
@@ -217,8 +222,8 @@ export default function AIRealEstateInvestmentAnalyzer() {
               transition={{ duration: 0.6 }}
               className="inline-flex items-center px-4 py-2 bg-blue-500/20 border border-blue-500/30 rounded-full text-blue-300 text-sm font-medium mb-8"
             >
-              <Home className="w-4 h-4 mr-2" />
-              AI-Powered Real Estate Technology
+              <Activity className="w-4 h-4 mr-2" />
+              AI-Powered Healthcare Technology
             </motion.div>
             
             <motion.h1
@@ -227,9 +232,9 @@ export default function AIRealEstateInvestmentAnalyzer() {
               transition={{ duration: 0.6, delay: 0.1 }}
               className="text-4xl md:text-6xl font-bold text-white mb-6"
             >
-              AI Real Estate
+              AI Healthcare
               <span className="block text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">
-                Investment Analyzer
+                Analytics Platform
               </span>
             </motion.h1>
             
@@ -239,8 +244,8 @@ export default function AIRealEstateInvestmentAnalyzer() {
               transition={{ duration: 0.6, delay: 0.2 }}
               className="text-xl text-gray-300 max-w-3xl mx-auto mb-8"
             >
-              Advanced AI platform that analyzes real estate investments, market trends, and property opportunities with 95.8% accuracy. 
-              Maximize your real estate ROI with intelligent insights and predictions.
+              Advanced AI-powered healthcare analytics platform that provides intelligent patient monitoring, 
+              predictive analytics, and personalized treatment recommendations. Transform healthcare delivery with data-driven insights.
             </motion.p>
             
             <motion.div
@@ -272,10 +277,10 @@ export default function AIRealEstateInvestmentAnalyzer() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Transform Your Real Estate Investments
+              Transform Healthcare Delivery
             </h2>
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              Leverage the power of AI to make smarter real estate investment decisions
+              Leverage the power of AI to improve patient outcomes and operational efficiency
             </p>
           </div>
           
@@ -309,7 +314,7 @@ export default function AIRealEstateInvestmentAnalyzer() {
               Powerful Features
             </h2>
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              Everything you need to revolutionize your real estate investment strategy
+              Everything you need to revolutionize healthcare analytics and patient care
             </p>
           </div>
           
@@ -342,7 +347,7 @@ export default function AIRealEstateInvestmentAnalyzer() {
               Use Cases
             </h2>
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              Discover how AI can transform different aspects of your real estate investments
+              Discover how AI can transform different aspects of healthcare delivery
             </p>
           </div>
           
@@ -375,7 +380,7 @@ export default function AIRealEstateInvestmentAnalyzer() {
               Pricing Plans
             </h2>
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              Choose the plan that best fits your real estate investment needs
+              Choose the plan that best fits your healthcare organization's needs
             </p>
           </div>
           
@@ -440,7 +445,7 @@ export default function AIRealEstateInvestmentAnalyzer() {
               Seamless Integrations
             </h2>
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              Works with your existing real estate platforms and tools
+              Works with your existing healthcare systems and EHR platforms
             </p>
           </div>
           
@@ -475,7 +480,7 @@ export default function AIRealEstateInvestmentAnalyzer() {
             viewport={{ once: true }}
             className="text-3xl md:text-4xl font-bold text-white mb-6"
           >
-            Ready to Transform Your Real Estate Investments?
+            Ready to Transform Healthcare Delivery?
           </motion.h2>
           
           <motion.p
@@ -485,7 +490,7 @@ export default function AIRealEstateInvestmentAnalyzer() {
             viewport={{ once: true }}
             className="text-xl text-gray-300 mb-8"
           >
-            Join thousands of real estate investors who are already using AI to maximize their returns and minimize risks.
+            Join leading healthcare organizations that are already using AI to improve patient outcomes and operational efficiency.
           </motion.p>
           
           <motion.div
@@ -521,7 +526,7 @@ export default function AIRealEstateInvestmentAnalyzer() {
                 Get in Touch
               </h2>
               <p className="text-xl text-gray-300 mb-8">
-                Ready to revolutionize your real estate investments with AI? Our team is here to help you get started.
+                Ready to revolutionize healthcare delivery with AI? Our team is here to help you get started.
               </p>
               
               <div className="space-y-6">
@@ -551,7 +556,7 @@ export default function AIRealEstateInvestmentAnalyzer() {
                 
                 <div className="flex items-center space-x-4">
                   <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-500 rounded-lg flex items-center justify-center">
-                    <MapPinIcon className="w-6 h-6 text-white" />
+                    <MapPin className="w-6 h-6 text-white" />
                   </div>
                   <div>
                     <p className="text-gray-400">Address</p>
@@ -569,15 +574,15 @@ export default function AIRealEstateInvestmentAnalyzer() {
               <div className="space-y-4">
                 <div className="flex justify-between items-center">
                   <span className="text-gray-400">Accuracy Rate</span>
-                  <span className="text-white font-semibold">95.8%</span>
+                  <span className="text-white font-semibold">95.7%</span>
                 </div>
                 <div className="flex justify-between items-center">
                   <span className="text-gray-400">Setup Time</span>
-                  <span className="text-white font-semibold">2-4 weeks</span>
+                  <span className="text-white font-semibold">4-6 weeks</span>
                 </div>
                 <div className="flex justify-between items-center">
                   <span className="text-gray-400">ROI Timeline</span>
-                  <span className="text-white font-semibold">3 months</span>
+                  <span className="text-white font-semibold">6 months</span>
                 </div>
                 <div className="flex justify-between items-center">
                   <span className="text-gray-400">Support</span>
@@ -585,7 +590,7 @@ export default function AIRealEstateInvestmentAnalyzer() {
                 </div>
                 <div className="flex justify-between items-center">
                   <span className="text-gray-400">Market Price</span>
-                  <span className="text-white font-semibold">$2,500-5,000</span>
+                  <span className="text-white font-semibold">$5,000-30,000</span>
                 </div>
               </div>
             </div>

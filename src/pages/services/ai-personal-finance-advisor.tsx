@@ -1,17 +1,16 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { 
-  Home, 
+  PiggyBank, 
   TrendingUp, 
   BarChart3, 
-  MapPin, 
+  Users, 
   DollarSign, 
   Target, 
-  Users, 
+  Clock, 
   Zap, 
   ArrowRight,
   Star,
-  Clock,
   CheckCircle,
   Shield,
   Brain,
@@ -24,7 +23,7 @@ import {
   Sparkles,
   Phone,
   Mail,
-  MapPin as MapPinIcon,
+  MapPin,
   Calendar,
   CheckSquare,
   AlertTriangle,
@@ -41,48 +40,57 @@ import {
   Eye,
   Globe,
   Award,
+  CreditCard,
+  Wallet,
+  PieChart,
+  Calculator,
+  LineChart,
+  Target as TargetIcon,
+  Lock,
+  Bell,
+  Building,
   Building
 } from 'lucide-react';
 import { SEO } from '../../components/SEO';
 import { Link } from 'react-router-dom';
 
-export default function AIRealEstateInvestmentAnalyzer() {
+export default function AIPersonalFinanceAdvisor() {
   const features = [
     {
       icon: Brain,
-      title: "AI-Powered Market Analysis",
-      description: "Advanced machine learning algorithms analyze market trends, property values, and investment opportunities with 95.8% accuracy",
+      title: "AI-Powered Financial Planning",
+      description: "Intelligent financial planning with personalized recommendations based on your goals and risk tolerance",
       color: "from-blue-500 to-cyan-500"
     },
     {
-      icon: TrendingUp,
-      title: "Predictive Analytics",
-      description: "Forecast property appreciation, rental yields, and market movements using historical data and AI predictions",
+      icon: PieChart,
+      title: "Smart Budgeting",
+      description: "Automated budget creation, expense tracking, and spending pattern analysis with AI insights",
       color: "from-green-500 to-emerald-500"
     },
     {
-      icon: BarChart3,
-      title: "ROI Calculator",
-      description: "Comprehensive ROI analysis including cash flow, appreciation, tax benefits, and maintenance costs",
+      icon: LineChart,
+      title: "Investment Optimization",
+      description: "AI-driven investment recommendations, portfolio rebalancing, and risk management strategies",
       color: "from-purple-500 to-pink-500"
     },
     {
-      icon: MapPin,
-      title: "Geographic Intelligence",
-      description: "Location-based insights including school ratings, crime statistics, and future development plans",
-      color: "from-orange-500 to-red-500"
-    },
-    {
       icon: Shield,
-      title: "Risk Assessment",
-      description: "Identify potential risks including market volatility, property condition, and regulatory changes",
-      color: "from-red-500 to-pink-500"
+      title: "Debt Management",
+      description: "Intelligent debt payoff strategies, interest optimization, and credit score improvement plans",
+      color: "from-red-500 to-orange-500"
     },
     {
-      icon: Users,
-      title: "Portfolio Management",
-      description: "Track multiple properties, diversify investments, and optimize your real estate portfolio",
+      icon: TargetIcon,
+      title: "Goal Tracking",
+      description: "Personalized financial goal setting, progress monitoring, and milestone achievement tracking",
       color: "from-indigo-500 to-purple-500"
+    },
+    {
+      icon: Lock,
+      title: "Security & Privacy",
+      description: "Bank-level security, encrypted data storage, and privacy protection for your financial information",
+      color: "from-teal-500 to-cyan-500"
     }
   ];
 
@@ -90,73 +98,73 @@ export default function AIRealEstateInvestmentAnalyzer() {
     {
       icon: Clock,
       title: "Time Savings",
-      description: "Reduce research time by 80%",
-      metric: "80%"
+      description: "Reduce financial planning time by 75%",
+      metric: "75%"
     },
     {
       icon: DollarSign,
-      title: "Better Returns",
-      description: "Increase investment returns by 25%",
-      metric: "25%"
+      title: "Cost Savings",
+      description: "Save up to $2,000 annually on fees",
+      metric: "$2,000"
     },
     {
       icon: Target,
-      title: "Accuracy",
-      description: "95.8% accuracy in market predictions",
-      metric: "95.8%"
+      title: "Goal Achievement",
+      description: "90% success rate in reaching goals",
+      metric: "90%"
     },
     {
       icon: TrendingUp,
-      title: "Efficiency",
-      description: "Analyze 10x more properties",
-      metric: "10x"
+      title: "Investment Returns",
+      description: "Improve returns by 15-25%",
+      metric: "15-25%"
     }
   ];
 
   const pricing = [
     {
-      name: "Starter",
-      price: 2999,
-      period: "one-time setup",
+      name: "Basic",
+      price: 99,
+      period: "per month",
       features: [
-        "Property analysis up to 50 properties/month",
-        "Basic market insights",
-        "ROI calculations",
+        "Personal financial dashboard",
+        "Basic budgeting tools",
+        "Expense tracking",
         "Email support",
-        "Standard reports",
-        "3 user licenses"
+        "Mobile app access",
+        "Basic financial reports"
       ],
       popular: false,
       cta: "Get Started"
     },
     {
       name: "Professional",
-      price: 4999,
-      period: "one-time setup",
+      price: 199,
+      period: "per month",
       features: [
-        "Everything in Starter",
-        "Unlimited property analysis",
-        "Advanced market predictions",
-        "Custom risk models",
+        "Everything in Basic",
+        "AI-powered financial planning",
+        "Investment recommendations",
+        "Debt management strategies",
         "Priority support",
-        "API access",
-        "10 user licenses"
+        "Advanced analytics",
+        "Goal tracking"
       ],
       popular: true,
       cta: "Most Popular"
     },
     {
-      name: "Enterprise",
-      price: 8999,
-      period: "one-time setup",
+      name: "Premium",
+      price: 399,
+      period: "per month",
       features: [
         "Everything in Professional",
-        "Custom AI models",
-        "White-label solution",
+        "Personal financial advisor",
+        "Custom investment strategies",
+        "Tax optimization",
+        "Estate planning guidance",
         "Dedicated support",
-        "Custom integrations",
-        "Training & onboarding",
-        "Unlimited users"
+        "Family account management"
       ],
       popular: false,
       cta: "Contact Sales"
@@ -164,37 +172,37 @@ export default function AIRealEstateInvestmentAnalyzer() {
   ];
 
   const integrations = [
-    { name: "Zillow", icon: Home, category: "Property Data" },
-    { name: "Redfin", icon: MapPin, category: "Market Data" },
-    { name: "Realtor.com", icon: Database, category: "Listing Platform" },
-    { name: "PropStream", icon: BarChart3, category: "Investment Data" },
-    { name: "RentSpree", icon: DollarSign, category: "Rental Analysis" },
-    { name: "PropertyRadar", icon: Search, category: "Market Research" }
+    { name: "Mint", icon: PiggyBank, category: "Budgeting" },
+    { name: "YNAB", icon: Calculator, category: "Financial Planning" },
+    { name: "Robinhood", icon: LineChart, category: "Investment" },
+    { name: "Chase", icon: CreditCard, category: "Banking" },
+    { name: "Wells Fargo", icon: Building, category: "Banking" },
+    { name: "Fidelity", icon: PieChart, category: "Investment" }
   ];
 
   const useCases = [
     {
-      title: "Residential Investment",
-      description: "Analyze single-family homes, condos, and multi-family properties for optimal investment returns",
-      icon: Home,
+      title: "Young Professionals",
+      description: "Build wealth early with smart budgeting, debt management, and investment strategies",
+      icon: Users,
       color: "from-blue-500 to-cyan-500"
     },
     {
-      title: "Commercial Real Estate",
-      description: "Evaluate office buildings, retail spaces, and industrial properties with advanced market insights",
-      icon: Building,
-      color: "from-purple-500 to-pink-500"
-    },
-    {
-      title: "Portfolio Optimization",
-      description: "Diversify and optimize your real estate portfolio using AI-driven recommendations",
-      icon: BarChart3,
+      title: "Families",
+      description: "Plan for children's education, retirement, and family financial security",
+      icon: Users,
       color: "from-green-500 to-emerald-500"
     },
     {
-      title: "Market Timing",
-      description: "Identify the best times to buy, sell, or hold properties using predictive analytics",
-      icon: TrendingUp,
+      title: "Pre-Retirement",
+      description: "Optimize retirement planning, maximize savings, and prepare for financial independence",
+      icon: TargetIcon,
+      color: "from-purple-500 to-pink-500"
+    },
+    {
+      title: "Small Business Owners",
+      description: "Separate personal and business finances, optimize tax strategies, and plan for growth",
+      icon: Building,
       color: "from-orange-500 to-red-500"
     }
   ];
@@ -202,8 +210,8 @@ export default function AIRealEstateInvestmentAnalyzer() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO 
-        title="AI Real Estate Investment Analyzer - Zion Tech Group"
-        description="Advanced AI platform that analyzes real estate investments, market trends, and property opportunities with 95.8% accuracy. Maximize your real estate ROI with intelligent insights and predictions."
+        title="AI Personal Finance Advisor - Zion Tech Group"
+        description="Advanced AI-powered personal finance platform that provides intelligent financial planning, budgeting, investment optimization, and debt management. Achieve your financial goals with AI-driven insights."
       />
 
       {/* Hero Section */}
@@ -217,8 +225,8 @@ export default function AIRealEstateInvestmentAnalyzer() {
               transition={{ duration: 0.6 }}
               className="inline-flex items-center px-4 py-2 bg-blue-500/20 border border-blue-500/30 rounded-full text-blue-300 text-sm font-medium mb-8"
             >
-              <Home className="w-4 h-4 mr-2" />
-              AI-Powered Real Estate Technology
+              <PiggyBank className="w-4 h-4 mr-2" />
+              AI-Powered Financial Technology
             </motion.div>
             
             <motion.h1
@@ -227,9 +235,9 @@ export default function AIRealEstateInvestmentAnalyzer() {
               transition={{ duration: 0.6, delay: 0.1 }}
               className="text-4xl md:text-6xl font-bold text-white mb-6"
             >
-              AI Real Estate
+              AI Personal Finance
               <span className="block text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">
-                Investment Analyzer
+                Advisor
               </span>
             </motion.h1>
             
@@ -239,8 +247,8 @@ export default function AIRealEstateInvestmentAnalyzer() {
               transition={{ duration: 0.6, delay: 0.2 }}
               className="text-xl text-gray-300 max-w-3xl mx-auto mb-8"
             >
-              Advanced AI platform that analyzes real estate investments, market trends, and property opportunities with 95.8% accuracy. 
-              Maximize your real estate ROI with intelligent insights and predictions.
+              Advanced AI-powered personal finance platform that provides intelligent financial planning, budgeting, 
+              investment optimization, and debt management. Achieve your financial goals with AI-driven insights.
             </motion.p>
             
             <motion.div
@@ -272,10 +280,10 @@ export default function AIRealEstateInvestmentAnalyzer() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Transform Your Real Estate Investments
+              Transform Your Financial Future
             </h2>
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              Leverage the power of AI to make smarter real estate investment decisions
+              Leverage the power of AI to make smarter financial decisions and achieve your goals faster
             </p>
           </div>
           
@@ -309,7 +317,7 @@ export default function AIRealEstateInvestmentAnalyzer() {
               Powerful Features
             </h2>
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              Everything you need to revolutionize your real estate investment strategy
+              Everything you need to take control of your financial future
             </p>
           </div>
           
@@ -342,7 +350,7 @@ export default function AIRealEstateInvestmentAnalyzer() {
               Use Cases
             </h2>
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              Discover how AI can transform different aspects of your real estate investments
+              Discover how AI can transform different aspects of your financial life
             </p>
           </div>
           
@@ -375,7 +383,7 @@ export default function AIRealEstateInvestmentAnalyzer() {
               Pricing Plans
             </h2>
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              Choose the plan that best fits your real estate investment needs
+              Choose the plan that best fits your financial planning needs
             </p>
           </div>
           
@@ -402,7 +410,7 @@ export default function AIRealEstateInvestmentAnalyzer() {
                 
                 <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
                 <div className="mb-6">
-                  <span className="text-4xl font-bold text-white">${plan.price.toLocaleString()}</span>
+                  <span className="text-4xl font-bold text-white">${plan.price}</span>
                   <span className="text-gray-400 ml-2">{plan.period}</span>
                 </div>
                 
@@ -416,7 +424,7 @@ export default function AIRealEstateInvestmentAnalyzer() {
                 </ul>
                 
                 <Link
-                  to={plan.name === "Enterprise" ? "/contact" : "/request-quote"}
+                  to={plan.name === "Premium" ? "/contact" : "/request-quote"}
                   className={`w-full inline-flex items-center justify-center px-6 py-3 rounded-lg font-semibold transition-all duration-200 ${
                     plan.popular
                       ? 'bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 text-white transform hover:scale-105'
@@ -440,7 +448,7 @@ export default function AIRealEstateInvestmentAnalyzer() {
               Seamless Integrations
             </h2>
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              Works with your existing real estate platforms and tools
+              Works with your existing financial tools and platforms
             </p>
           </div>
           
@@ -475,7 +483,7 @@ export default function AIRealEstateInvestmentAnalyzer() {
             viewport={{ once: true }}
             className="text-3xl md:text-4xl font-bold text-white mb-6"
           >
-            Ready to Transform Your Real Estate Investments?
+            Ready to Transform Your Financial Future?
           </motion.h2>
           
           <motion.p
@@ -485,7 +493,7 @@ export default function AIRealEstateInvestmentAnalyzer() {
             viewport={{ once: true }}
             className="text-xl text-gray-300 mb-8"
           >
-            Join thousands of real estate investors who are already using AI to maximize their returns and minimize risks.
+            Join thousands of people who are already using AI to achieve their financial goals and build wealth.
           </motion.p>
           
           <motion.div
@@ -521,7 +529,7 @@ export default function AIRealEstateInvestmentAnalyzer() {
                 Get in Touch
               </h2>
               <p className="text-xl text-gray-300 mb-8">
-                Ready to revolutionize your real estate investments with AI? Our team is here to help you get started.
+                Ready to revolutionize your financial planning with AI? Our team is here to help you get started.
               </p>
               
               <div className="space-y-6">
@@ -551,7 +559,7 @@ export default function AIRealEstateInvestmentAnalyzer() {
                 
                 <div className="flex items-center space-x-4">
                   <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-500 rounded-lg flex items-center justify-center">
-                    <MapPinIcon className="w-6 h-6 text-white" />
+                    <MapPin className="w-6 h-6 text-white" />
                   </div>
                   <div>
                     <p className="text-gray-400">Address</p>
@@ -568,16 +576,12 @@ export default function AIRealEstateInvestmentAnalyzer() {
               <h3 className="text-2xl font-bold text-white mb-6">Quick Facts</h3>
               <div className="space-y-4">
                 <div className="flex justify-between items-center">
-                  <span className="text-gray-400">Accuracy Rate</span>
-                  <span className="text-white font-semibold">95.8%</span>
-                </div>
-                <div className="flex justify-between items-center">
                   <span className="text-gray-400">Setup Time</span>
-                  <span className="text-white font-semibold">2-4 weeks</span>
+                  <span className="text-white font-semibold">Instant</span>
                 </div>
                 <div className="flex justify-between items-center">
                   <span className="text-gray-400">ROI Timeline</span>
-                  <span className="text-white font-semibold">3 months</span>
+                  <span className="text-white font-semibold">1 month</span>
                 </div>
                 <div className="flex justify-between items-center">
                   <span className="text-gray-400">Support</span>
@@ -585,7 +589,11 @@ export default function AIRealEstateInvestmentAnalyzer() {
                 </div>
                 <div className="flex justify-between items-center">
                   <span className="text-gray-400">Market Price</span>
-                  <span className="text-white font-semibold">$2,500-5,000</span>
+                  <span className="text-white font-semibold">$99-399/month</span>
+                </div>
+                <div className="flex justify-between items-center">
+                  <span className="text-gray-400">Security</span>
+                  <span className="text-white font-semibold">Bank-Level</span>
                 </div>
               </div>
             </div>

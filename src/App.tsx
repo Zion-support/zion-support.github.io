@@ -81,6 +81,8 @@ const AIVideoContentCreationStudio = React.lazy(() => import('./pages/services/a
 const AICustomerChurnPrediction = React.lazy(() => import('./pages/services/ai-customer-churn-prediction'));
 const AIFinancialFraudDetection = React.lazy(() => import('./pages/services/ai-financial-fraud-detection'));
 const AIEnergyManagementSystem = React.lazy(() => import('./pages/services/ai-energy-management-system'));
+const AIPersonalFinanceAdvisor = React.lazy(() => import('./pages/services/ai-personal-finance-advisor'));
+const AIHealthcareAnalyticsPlatform = React.lazy(() => import('./pages/services/ai-healthcare-analytics-platform'));
 
 // Simple placeholder pages for missing ones
 const Careers = () => (
@@ -194,6 +196,8 @@ function App() {
                       <Route path="/services/ai-customer-churn-prediction" element={<AICustomerChurnPrediction />} />
                       <Route path="/services/ai-financial-fraud-detection" element={<AIFinancialFraudDetection />} />
                       <Route path="/services/ai-energy-management-system" element={<AIEnergyManagementSystem />} />
+                      <Route path="/services/ai-personal-finance-advisor" element={<AIPersonalFinanceAdvisor />} />
+                      <Route path="/services/ai-healthcare-analytics-platform" element={<AIHealthcareAnalyticsPlatform />} />
 
                       {/* Catch all route */}
                       <Route path="*" element={<Home />} />
