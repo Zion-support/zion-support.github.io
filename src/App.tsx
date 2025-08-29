@@ -61,13 +61,21 @@ const AILegalDocumentAnalysis = React.lazy(() => import('./pages/services/ai-leg
 const AISupplyChainOptimization = React.lazy(() => import('./pages/services/ai-supply-chain-optimization'));
 const AIHealthcareAnalytics = React.lazy(() => import('./pages/services/ai-healthcare-analytics'));
 const AIFinancialTrading = React.lazy(() => import('./pages/services/ai-financial-trading'));
+const AIContentCreation = React.lazy(() => import('./pages/services/ai-content-creation'));
+const AICybersecurity = React.lazy(() => import('./pages/services/ai-cybersecurity'));
+const AIHealthcarePlatform = React.lazy(() => import('./pages/services/ai-healthcare-platform'));
+const AIWorkflowAutomation = React.lazy(() => import('./pages/services/ai-workflow-automation'));
+
 // Service pages - only import existing ones
 const CloudDevOps = React.lazy(() => import('./pages/services/CloudDevOps'));
 const DigitalTwin = React.lazy(() => import('./pages/services/DigitalTwin'));
 const DataAnalytics = React.lazy(() => import('./pages/services/DataAnalytics'));
 const ITInfrastructure = React.lazy(() => import('./pages/services/ITInfrastructure'));
-const AIBusinessIntelligence = React.lazy(() => import('./pages/services/AIBusinessIntelligence'));
+const AIBusinessIntelligence = React.lazy(() => import('./pages/services/ai-business-intelligence'));
 const MicroSaaSProducts = React.lazy(() => import('./pages/services/MicroSaaSProducts'));
+const QuantumComputing = React.lazy(() => import('./pages/services/quantum-computing'));
+const IoTEdgeComputing = React.lazy(() => import('./pages/services/iot-edge-computing'));
+
 // Import real pages
 const Careers = React.lazy(() => import('./pages/Careers'));
 const Marketplace = React.lazy(() => import('./pages/Marketplace'));
@@ -125,18 +133,26 @@ function App() {
                 <Route path="/developers" element={<Developers />} />
                 <Route path="/demo" element={<Demo />} />
                 <Route path="/legal" element={<Legal />} />
-                {/* Service Routes - only for existing pages */}
+                
+                {/* Service Routes - Fixed and organized */}
                 <Route path="/services/cloud-devops" element={<CloudDevOps />} />
                 <Route path="/services/digital-twin" element={<DigitalTwin />} />
                 <Route path="/services/data-analytics" element={<DataAnalytics />} />
                 <Route path="/services/it-infrastructure" element={<ITInfrastructure />} />
                 <Route path="/services/ai-business-intelligence" element={<AIBusinessIntelligence />} />
+                <Route path="/services/micro-saas" element={<MicroSaaSProducts />} />
                 
-                {/* New innovative service routes */}
+                {/* New innovative service routes - Fixed paths */}
                 <Route path="/services/ai-legal-document-analysis" element={<AILegalDocumentAnalysis />} />
                 <Route path="/services/ai-supply-chain-optimization" element={<AISupplyChainOptimization />} />
                 <Route path="/services/ai-healthcare-analytics" element={<AIHealthcareAnalytics />} />
                 <Route path="/services/ai-financial-trading" element={<AIFinancialTrading />} />
+                <Route path="/services/ai-content-creation" element={<AIContentCreation />} />
+                <Route path="/services/ai-cybersecurity" element={<AICybersecurity />} />
+                <Route path="/services/ai-healthcare-platform" element={<AIHealthcarePlatform />} />
+                <Route path="/services/ai-workflow-automation" element={<AIWorkflowAutomation />} />
+                <Route path="/services/quantum-computing" element={<QuantumComputing />} />
+                <Route path="/services/iot-edge-computing" element={<IoTEdgeComputing />} />
 
                 {/* Catch all route */}
                 <Route path="*" element={<Home />} />
