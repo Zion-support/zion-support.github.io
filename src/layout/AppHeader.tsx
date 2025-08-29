@@ -1,4 +1,4 @@
-import { ArrowRight, Atom, BookOpen, Brain, Building, Building2, ChevronDown, Cloud, Code, Cpu, DollarSign, FileText, Globe, HeartHandshake, Heart, HelpCircle, Leaf, Lock, Mail, MapPin, Menu, MessageCircle, PenTool, Phone, Rocket, Scale, Search, Settings, Shield, ShoppingCart, Star, Target, TrendingUp, Users, X, Zap } from 'lucide-react';
+import { ArrowRight, Atom, BookOpen, Brain, Building, Building2, ChevronDown, Cloud, Code, Cpu, DollarSign, FileText, Globe, HeartHandshake, Heart, HelpCircle, Leaf, Lock, Mail, MapPin, Menu, MessageCircle, PenTool, Phone, Rocket, Scale, Search, Settings, Shield, ShoppingCart, Star, Target, TrendingUp, Users, X, Zap, Truck } from 'lucide-react';
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { ThemeToggle } from '../components/ThemeToggle';
@@ -131,6 +131,38 @@ export function AppHeader() {
       description: 'Future Technology Solutions',
       featured: true,
       color: 'from-indigo-500 to-purple-500'
+    },
+    { 
+      name: 'AI Legal Document Analysis', 
+      href: '/services/ai-legal-document-analysis', 
+      icon: Scale, 
+      description: 'Legal AI & Document Processing',
+      featured: true,
+      color: 'from-blue-500 to-indigo-500'
+    },
+    { 
+      name: 'AI Supply Chain Optimization', 
+      href: '/services/ai-supply-chain-optimization', 
+      icon: Truck, 
+      description: 'Supply Chain AI & Optimization',
+      featured: true,
+      color: 'from-green-500 to-blue-500'
+    },
+    { 
+      name: 'AI Healthcare Analytics', 
+      href: '/services/ai-healthcare-analytics', 
+      icon: Heart, 
+      description: 'Healthcare Analytics & Insights',
+      featured: true,
+      color: 'from-red-500 to-pink-500'
+    },
+    { 
+      name: 'AI Financial Trading', 
+      href: '/services/ai-financial-trading', 
+      icon: TrendingUp, 
+      description: 'AI-Powered Financial Trading',
+      featured: true,
+      color: 'from-emerald-500 to-green-500'
     }
   ];
 
@@ -175,6 +207,48 @@ export function AppHeader() {
       href: '/solutions',
       icon: TrendingUp,
       description: 'Fintech innovation & compliance',
+      featured: true
+    },
+    {
+      name: 'Manufacturing Solutions',
+      href: '/solutions',
+      icon: Settings,
+      description: 'Industry 4.0 & Smart Manufacturing',
+      featured: true
+    },
+    {
+      name: 'Retail Solutions',
+      href: '/solutions',
+      icon: ShoppingCart,
+      description: 'Retail optimization & customer experience',
+      featured: true
+    },
+    {
+      name: 'Education Solutions',
+      href: '/solutions',
+      icon: BookOpen,
+      description: 'AI-powered learning & analytics',
+      featured: true
+    },
+    {
+      name: 'Agriculture Solutions',
+      href: '/solutions',
+      icon: Leaf,
+      description: 'Precision agriculture & sustainability',
+      featured: true
+    },
+    {
+      name: 'Energy Solutions',
+      href: '/solutions',
+      icon: Zap,
+      description: 'Smart grid & renewable energy',
+      featured: true
+    },
+    {
+      name: 'Transportation Solutions',
+      href: '/solutions',
+      icon: Truck,
+      description: 'Logistics optimization & fleet management',
       featured: true
     }
   ];
@@ -227,6 +301,41 @@ export function AppHeader() {
       href: '/pricing-guide-2025',
       icon: DollarSign,
       description: 'Complete pricing information',
+      featured: true
+    },
+    {
+      name: 'Pricing Guide 2027',
+      href: '/pricing-guide-2027',
+      icon: DollarSign,
+      description: 'Advanced pricing strategies',
+      featured: true
+    },
+    {
+      name: 'Pricing Guide 2030',
+      href: '/pricing-guide-2030',
+      icon: DollarSign,
+      description: 'Future pricing models',
+      featured: true
+    },
+    {
+      name: 'Marketplace',
+      href: '/marketplace',
+      icon: ShoppingCart,
+      description: 'Browse our service marketplace',
+      featured: true
+    },
+    {
+      name: 'Talent Directory',
+      href: '/talent',
+      icon: Users,
+      description: 'Find skilled professionals',
+      featured: true
+    },
+    {
+      name: 'Research & Development',
+      href: '/research-development',
+      icon: Atom,
+      description: 'Cutting-edge research projects',
       featured: true
     }
   ];
