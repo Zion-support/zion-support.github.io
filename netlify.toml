@@ -3,23 +3,21 @@
 # No Next.js plugins or configurations are needed
 
 [build]
-  # Use `npm ci` for consistent dependency management, Vite builds to dist/
-  # Force npm usage explicitly in the command
-  command = "which npm && npm --version && npm ci --ignore-scripts --no-optional && npm run build:netlify"
+  # Use a build script that forces npm usage
+  command = "bash ./scripts/netlify-build.sh"
   publish = "dist"
-  # Force static site build (not Next.js)
-  # Functions moved to PM2 automation
-  # Explicitly specify this is a static site, not a framework
   base = "."
+  # Explicitly override any package manager detection
+  ignore = "yarn.lock .yarnrc .yarnrc.yml .yarn"
 
 [build.environment]
   NODE_VERSION = "20"
   NODE_OPTIONS = "--max_old_space_size=6144"
-  # Force npm for dependency management
+  # Force npm for dependency management - AGGRESSIVE SETTINGS
   NPM_FLAGS = "--ignore-scripts --no-optional"
   # Skip Netlify's Next.js plugin since this is a Vite static site
   NETLIFY_NEXT_PLUGIN_SKIP = "true"
-  # Force npm usage and disable Yarn completely
+  # Force npm usage and disable Yarn completely - MORE AGGRESSIVE
   NETLIFY_USE_YARN = "false"
   NETLIFY_USE_NPM = "true"
   # Disable framework detection
@@ -32,6 +30,12 @@
   COREPACK_ENABLE = "false"
   # Force npm install
   NPM_CONFIG_PACKAGE_MANAGER = "npm"
+  # Additional npm forcing
+  NPM_CONFIG_ENGINE_STRICT = "false"
+  NPM_CONFIG_FUND = "false"
+  NPM_CONFIG_AUDIT = "false"
+  NPM_CONFIG_UPDATE_NOTIFIER = "false"
+  NPM_CONFIG_PREFER_OFFLINE = "true"
   CANONICAL_URL = "https://ziontechgroup.com"
   # Fix Rollup module issues
   NPM_CONFIG_OPTIONAL = "false"
@@ -42,12 +46,17 @@
   NPM_CONFIG_LEGACY_PEER_DEPS = "true"
   NPM_CONFIG_STRICT_SSL = "false"
   NPM_CONFIG_BUILD_FROM_SOURCE = "false"
-  NPM_CONFIG_PREFER_OFFLINE = "true"
   # Additional Rollup fixes
   VITE_ROLLUP_PLATFORM = "linux"
   VITE_ROLLUP_ARCH = "x64"
   ROLLUP_PLATFORM = "linux"
   ROLLUP_ARCH = "x64"
+  # Explicitly disable Yarn and force npm
+  YARN_ENABLE = "false"
+  YARN_IGNORE_PATH = "true"
+  YARN_IGNORE_ENGINES = "true"
+  YARN_IGNORE_PLATFORM = "true"
+  YARN_IGNORE_SCRIPTS = "true"
 
 # Fix MIME type issues
 [[headers]]
