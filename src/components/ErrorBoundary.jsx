@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
-import { AlertTriangle, RefreshCw, Home, ArrowLeft } from "lucide-react";
-import { Link, useNavigate } from 'react-router-dom';
+import { AlertTriangle, RefreshCw, Home, ArrowLeft import { Link, useNavigate } from 'react-router-dom';
 function ErrorFallback({ error, resetError }) {
     const navigate = useNavigate();
     return (<div className="min-h-screen bg-zion-blue-dark flex items-center justify-center p-4">
@@ -50,7 +49,6 @@ function ErrorFallback({ error, resetError }) {
         </div>
       </div>
     </div>);
-}
 
 export function ErrorBoundary({ children, fallback, onError }) {
     const [hasError, setHasError] = useState(false);

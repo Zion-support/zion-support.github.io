@@ -11,7 +11,6 @@ class AutoCommitFixes {
     this.startTime = Date.now();
     this.commitsMade = 0;
     this.filesChanged = 0;
-  }
 
   log(message) {
     const timestamp = new Date().toISOString();
@@ -21,8 +20,7 @@ class AutoCommitFixes {
       fs.appendFileSync(this.logFile, logMessage);
     } catch (error) {
       // console.error('Failed to write to log file:', error.message);
-    }
-  }
+
 
   async checkGitStatus() {
     try {
@@ -33,7 +31,6 @@ class AutoCommitFixes {
 
       if (!status.trim()) {
         return { hasChanges: false, files: [] };
-      }
 
       const files = status.split('\n')
         .filter(line => line.trim())
@@ -49,8 +46,7 @@ class AutoCommitFixes {
     } catch (error) {
       this.log(`Error checking git status: ${error.message}`);
       return { hasChanges: false, files: [] };
-    }
-  }
+
 
   async getStagedFiles() {
     try {
@@ -63,8 +59,7 @@ class AutoCommitFixes {
     } catch (error) {
       this.log(`Error getting staged files: ${error.message}`);
       return [];
-    }
-  }
+
 
   async getUnstagedFiles() {
     try {
@@ -77,8 +72,7 @@ class AutoCommitFixes {
     } catch (error) {
       this.log(`Error getting unstaged files: ${error.message}`);
       return [];
-    }
-  }
+
 
   async stageFiles(files) {
     try {
@@ -92,8 +86,7 @@ class AutoCommitFixes {
       this.log(`Staged ${files.length} files`);
     } catch (error) {
       this.log(`Error staging files: ${error.message}`);
-    }
-  }
+
 
   async createCommit(message, files) {
     try {
@@ -110,8 +103,7 @@ class AutoCommitFixes {
     } catch (error) {
       this.log(`Error creating commit: ${error.message}`);
       return false;
-    }
-  }
+
 
   async analyzeChanges(files) {
     const changes = {
@@ -136,37 +128,30 @@ class AutoCommitFixes {
         changes.renamed.push(fileName);
       } else {
         changes.other.push(fileName);
-      }
+
     });
 
     return changes;
-  }
 
   async generateCommitMessage(changes) {
     const messages = [];
 
     if (changes.added.length > 0) {
       messages.push(`Add ${changes.added.length} new file(s)`);
-    }
 
     if (changes.modified.length > 0) {
       messages.push(`Update ${changes.modified.length} file(s)`);
-    }
 
     if (changes.deleted.length > 0) {
       messages.push(`Remove ${changes.deleted.length} file(s)`);
-    }
 
     if (changes.renamed.length > 0) {
       messages.push(`Rename ${changes.renamed.length} file(s)`);
-    }
 
     if (changes.other.length > 0) {
       messages.push(`Other changes in ${changes.other.length} file(s)`);
-    }
 
     return messages.join(', ');
-  }
 
   async run() {
     this.log('🚀 Starting Auto Commit Fixes...');
@@ -177,7 +162,6 @@ class AutoCommitFixes {
       const logsDir = path.dirname(this.logFile);
       if (!fs.existsSync(logsDir)) {
         fs.mkdirSync(logsDir, { recursive: true });
-      }
 
       // Check git status
       this.log('📋 Checking git status...');
@@ -186,7 +170,6 @@ class AutoCommitFixes {
       if (!gitStatus.hasChanges) {
         this.log('✨ No changes to commit');
         return;
-      }
 
       this.log(`📁 Found ${gitStatus.files.length} changed files`);
 
@@ -197,7 +180,7 @@ class AutoCommitFixes {
       Object.entries(changes).forEach(([type, files]) => {
         if (files.length > 0) {
           this.log(`  ${type}: ${files.length} files`);
-        }
+
       });
 
       // Stage all changes
@@ -217,7 +200,6 @@ class AutoCommitFixes {
         this.filesChanged = gitStatus.files.length;
       } else {
         this.log('❌ Failed to create commit');
-      }
 
       const duration = Date.now() - this.startTime;
 
@@ -230,17 +212,16 @@ class AutoCommitFixes {
         this.log('🎉 Auto-commit process completed successfully!');
       } else {
         this.log('⚠️  No commits were made');
-      }
 
     } catch (error) {
       this.log(`❌ Error running auto commit fixes: ${error.message}`);
       process.exit(1);
-    }
-  }
-}
+
+
 
 // Run the auto commit fixes
 const autoCommit = new AutoCommitFixes();
 autoCommit.run().catch(error => {
   process.exit(1);
 });
+}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}

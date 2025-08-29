@@ -11,7 +11,6 @@ class AutomationOrchestrator {
     this.reportFile = path.join(this.projectRoot, 'logs/pm2/automation-report.json');
     this.startTime = Date.now();
     this.processes = [];
-  }
 
   log(message) {
     const timestamp = new Date().toISOString();
@@ -21,8 +20,7 @@ class AutomationOrchestrator {
       fs.appendFileSync(this.logFile, logMessage);
     } catch (error) {
       // console.error('Failed to write to log file:', error.message);
-    }
-  }
+
 
   async runProcess(scriptName, description) {
     try {
@@ -32,7 +30,6 @@ class AutomationOrchestrator {
       if (!fs.existsSync(scriptPath)) {
         this.log(`❌ Script not found: ${scriptPath}`);
         return { success: false, error: 'Script not found' };
-      }
 
       const startTime = Date.now();
       const result = execSync(`node ${scriptPath}`, { 
@@ -48,8 +45,7 @@ class AutomationOrchestrator {
     } catch (error) {
       this.log(`❌ ${description} failed: ${error.message}`);
       return { success: false, error: error.message };
-    }
-  }
+
 
   async runSequentialProcesses() {
     this.log('🔄 Running sequential processes...');
@@ -74,10 +70,8 @@ class AutomationOrchestrator {
       
       // Wait a bit between processes to avoid overwhelming the system
       await new Promise(resolve => setTimeout(resolve, 2000));
-    }
 
     return results;
-  }
 
   async runParallelProcesses() {
     this.log('⚡ Running parallel processes...');
@@ -105,9 +99,8 @@ class AutomationOrchestrator {
           success: false,
           error: result.reason.message
         };
-      }
+
     });
-  }
 
   async checkSystemHealth() {
     this.log('🏥 Checking system health...');
@@ -131,7 +124,6 @@ class AutomationOrchestrator {
         message: 'Could not check disk space',
         error: error.message
       });
-    }
 
     // Check git status
     try {
@@ -151,7 +143,6 @@ class AutomationOrchestrator {
         message: 'Could not check git status',
         error: error.message
       });
-    }
 
     // Check PM2 status
     try {
@@ -171,10 +162,8 @@ class AutomationOrchestrator {
         message: 'Could not check PM2 status',
         error: error.message
       });
-    }
 
     return healthChecks;
-  }
 
   async generateReport(sequentialResults, parallelResults, healthChecks) {
     const totalProcesses = sequentialResults.length + parallelResults.length;
@@ -203,7 +192,6 @@ class AutomationOrchestrator {
         message: `${failedProcesses} processes failed`,
         action: 'Review failed processes and fix underlying issues'
       });
-    }
 
     if (report.summary.successRate < 80) {
       report.recommendations.push({
@@ -211,7 +199,6 @@ class AutomationOrchestrator {
         message: 'Low success rate detected',
         action: 'Investigate and improve automation reliability'
       });
-    }
 
     const healthIssues = healthChecks.filter(check => check.status !== 'ok');
     if (healthIssues.length > 0) {
@@ -220,24 +207,20 @@ class AutomationOrchestrator {
         message: `${healthIssues.length} system health issues detected`,
         action: 'Address system health issues to improve automation performance'
       });
-    }
 
     return report;
-  }
 
   async saveReport(report) {
     try {
       const reportDir = path.dirname(this.reportFile);
       if (!fs.existsSync(reportDir)) {
         fs.mkdirSync(reportDir, { recursive: true });
-      }
 
       fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2));
       this.log(`Report saved to: ${this.reportFile}`);
     } catch (error) {
       this.log(`Error saving report: ${error.message}`);
-    }
-  }
+
 
   async run() {
     this.log('🎯 Starting Automation Orchestrator...');
@@ -248,7 +231,6 @@ class AutomationOrchestrator {
       const logsDir = path.dirname(this.logFile);
       if (!fs.existsSync(logsDir)) {
         fs.mkdirSync(logsDir, { recursive: true });
-      }
 
       // Check system health first
       const healthChecks = await this.checkSystemHealth();
@@ -298,23 +280,21 @@ class AutomationOrchestrator {
           this.log(`  [${rec.priority.toUpperCase()}] ${rec.message}`);
           this.log(`    Action: ${rec.action}`);
         });
-      }
 
       if (report.summary.successRate === 100) {
         this.log('\n🎉 All automation processes completed successfully!');
       } else {
         this.log(`\n⚠️  ${report.summary.failedProcesses} processes failed. Check logs for details.`);
-      }
 
     } catch (error) {
       this.log(`❌ Error running automation orchestrator: ${error.message}`);
       process.exit(1);
-    }
-  }
-}
+
+
 
 // Run the automation orchestrator
 const orchestrator = new AutomationOrchestrator();
 orchestrator.run().catch(error => {
   process.exit(1);
 });
+}}}}}}}}}}}}}}}}}}}}}}}}}}}

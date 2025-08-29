@@ -14,7 +14,6 @@ import {
     Target,
     TrendingUp,
     Users
-} from 'lucide-react';
 import React, { useState } from 'react';
 
 interface ChartData {
@@ -26,7 +25,6 @@ interface ChartData {
     borderColor: string[];
     borderWidth: number;
   }[];
-}
 
 interface MetricCard {
   title: string;
@@ -35,14 +33,12 @@ interface MetricCard {
   changeType: 'increase' | 'decrease' | 'neutral';
   icon: React.ReactNode;
   color: string;
-}
 
 interface DataVisualizationProps {
   title?: string;
   showMetrics?: boolean;
   showCharts?: boolean;
   showActions?: boolean;
-}
 
 export const DataVisualization: React.FC<DataVisualizationProps> = ({
   title = "Data Analytics Dashboard",
@@ -482,4 +478,4 @@ export const DataVisualization: React.FC<DataVisualizationProps> = ({
       </div>
     </div>
   );
-};
+};</div></motion.div>}}}}}

@@ -329,4 +329,4 @@ export class ContentOptimizer {
         return `${baseDescription} ${pageKeywords}. Transform your business with Zion Tech Group.`;
 
 
-export const contentOptimizer = new ContentOptimizer();
+export const contentOptimizer = new ContentOptimizer();}}}}}}}}}}}}}}}}}}}}}}}

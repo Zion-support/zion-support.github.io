@@ -33,7 +33,7 @@ export function EnhancedContact() {
     message: ''
   });
 
-  const [errors, setErrors] = useState<ContactFormErrors>({ /* empty */ });
+  const [errors, setErrors] = useState<ContactFormErrors>({});
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
 
@@ -49,31 +49,34 @@ export function EnhancedContact() {
   ];
 
   const validateForm = (): boolean => {
-    const newErrors: ContactFormErrors = { /* empty */ };
+    const newErrors: ContactFormErrors = {};
 
     if (!formData.name.trim()) {
-      newErrors.name = 'Name is required';
+      newErrors['name'] = 'Name is required';
     }
+
     if (!formData.email.trim()) {
-      newErrors.email = 'Email is required';
+      newErrors['email'] = 'Email is required';
     } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email)) {
-      newErrors.email = 'Please enter a valid email address';
+      newErrors['email'] = 'Please enter a valid email address';
     }
+
     if (!formData.message.trim()) {
-      newErrors.message = 'Message is required';
+      newErrors['message'] = 'Message is required';
     } else if (formData.message.length < 10) {
-      newErrors.message = 'Message must be at least 10 characters long';
+      newErrors['message'] = 'Message must be at least 10 characters long';
     }
+
     setErrors(newErrors);
     return Object.keys(newErrors).length === 0;
   };
 
   const handleInputChange = (field: keyof ContactFormData, value: string) => {
-    setFormData(prev => ({ ...prev, [field]: value }));
+    setFormData((prev: ContactFormData) => ({ ...prev, [field]: value }));
 
     // Clear error when user starts typing
     if (errors[field]) {
-      setErrors(prev => ({ ...prev, [field]: '' }));
+      setErrors((prev: ContactFormErrors) => ({ ...prev, [field]: '' }));
     }
   };
 
@@ -100,7 +103,7 @@ export function EnhancedContact() {
         message: ''
       });
     } catch (error) {
-      // // // console.error('Error submitting form:', error);
+      console.error('Error submitting form:', error);
     } finally {
       setIsSubmitting(false);
     }
@@ -252,14 +255,14 @@ export function EnhancedContact() {
                   value={formData.name}
                   onChange={(e) => handleInputChange('name', e.target.value)}
                   className={`w-full px-4 py-3 rounded-lg bg-zion-slate-dark border transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-zion-cyan ${
-                    errors.name
+                    errors['name']
                       ? 'border-red-500 focus:ring-red-500'
                       : 'border-zion-slate-light focus:border-zion-cyan'
                   } text-white placeholder-zion-slate-light`}
                   placeholder="Enter your full name"
                 />
                 <AnimatePresence>
-                  {errors.name && (
+                  {errors['name'] && (
                     <motion.p
                       initial={{ opacity: 0, y: -10 }}
                       animate={{ opacity: 1, y: 0 }}
@@ -267,7 +270,7 @@ export function EnhancedContact() {
                       className="text-red-400 text-sm mt-1 flex items-center"
                     >
                       <AlertCircle className="w-4 h-4 mr-1" />
-                      {errors.name}
+                      {errors['name']}
                     </motion.p>
                   )}
                 </AnimatePresence>
@@ -284,14 +287,14 @@ export function EnhancedContact() {
                   value={formData.email}
                   onChange={(e) => handleInputChange('email', e.target.value)}
                   className={`w-full px-4 py-3 rounded-lg bg-zion-slate-dark border transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-zion-cyan ${
-                    errors.email
+                    errors['email']
                       ? 'border-red-500 focus:ring-red-500'
                       : 'border-zion-slate-light focus:border-zion-cyan'
                   } text-white placeholder-zion-slate-light`}
                   placeholder="Enter your email address"
                 />
                 <AnimatePresence>
-                  {errors.email && (
+                  {errors['email'] && (
                     <motion.p
                       initial={{ opacity: 0, y: -10 }}
                       animate={{ opacity: 1, y: 0 }}
@@ -299,7 +302,7 @@ export function EnhancedContact() {
                       className="text-red-400 text-sm mt-1 flex items-center"
                     >
                       <AlertCircle className="w-4 h-4 mr-1" />
-                      {errors.email}
+                      {errors['email']}
                     </motion.p>
                   )}
                 </AnimatePresence>
@@ -365,14 +368,14 @@ export function EnhancedContact() {
                   value={formData.message}
                   onChange={(e) => handleInputChange('message', e.target.value)}
                   className={`w-full px-4 py-3 rounded-lg bg-zion-slate-dark border transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-zion-cyan resize-none ${
-                    errors.message
+                    errors['message']
                       ? 'border-red-500 focus:ring-red-500'
                       : 'border-zion-slate-light focus:border-zion-cyan'
                   } text-white placeholder-zion-slate-light`}
                   placeholder="Tell us about your project or inquiry..."
                 />
                 <AnimatePresence>
-                  {errors.message && (
+                  {errors['message'] && (
                     <motion.p
                       initial={{ opacity: 0, y: -10 }}
                       animate={{ opacity: 1, y: 0 }}
@@ -380,7 +383,7 @@ export function EnhancedContact() {
                       className="text-red-400 text-sm mt-1 flex items-center"
                     >
                       <AlertCircle className="w-4 h-4 mr-1" />
-                      {errors.message}
+                      {errors['message']}
                     </motion.p>
                   )}
                 </AnimatePresence>
