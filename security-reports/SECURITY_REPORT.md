@@ -7,7 +7,7 @@
 - **Critical Vulnerabilities**: 0 🔴
 - **High Vulnerabilities**: 0 🟠
 - **Outdated Packages**: 0
-- **Security Issues**: 0
+- **Security Issues**: 6
 - **Potential Secrets**: 5
 
 ## Detailed Results
@@ -24,8 +24,8 @@
 
 ### 🔍 Code Analysis
 - **Status**: ✅ Completed
-- **Security Issues**: 0
-- **Breakdown**: High: 0, Medium: 0, Low: 0
+- **Security Issues**: 6
+- **Breakdown**: High: 1, Medium: 5, Low: 0
 
 ### 🔐 Secret Scan
 - **Status**: ✅ Completed
@@ -33,7 +33,7 @@
 
 ### 📋 Compliance
 - **Status**: ✅ Completed
-- **Checks Performed**: 3
+- **Checks Performed**: 1
 
 ## 🚨 Immediate Actions Required
 
