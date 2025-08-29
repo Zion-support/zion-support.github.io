@@ -4,7 +4,7 @@ const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
 
-// console.log('🔧 Starting comprehensive Next.js import fix...\n');
+// // // // // // // console.log('🔧 Starting comprehensive Next.js import fix...\n');
 
 // Define the replacements
 const replacements = [
@@ -85,11 +85,11 @@ function processFile(filePath) {
 
     if (modified) {
       fs.writeFileSync(filePath, newContent, 'utf8');
-      // console.log(`✅ Fixed: ${filePath}`);
+      // // // // // // // console.log(`✅ Fixed: ${filePath}`);
       return true;
     }
   } catch (error) {
-    // console.error(`❌ Error processing ${filePath}:`, error.message);
+    // // // // // // // console.error(`❌ Error processing ${filePath}:`, error.message);
   }
   return false;
 }
@@ -123,10 +123,10 @@ function findFiles(dir, extensions = ['.ts', '.tsx', '.js', '.jsx']) {
 // Main execution
 try {
   const projectRoot = process.cwd();
-  // console.log(`📁 Scanning project root: ${projectRoot}\n`);
+  // // // // // // // console.log(`📁 Scanning project root: ${projectRoot}\n`);
 
   const files = findFiles(projectRoot);
-  // console.log(`📋 Found ${files.length} files to process\n`);
+  // // // // // // // console.log(`📋 Found ${files.length} files to process\n`);
 
   const fixedCount = 0;
 
@@ -136,17 +136,17 @@ try {
     }
   }
 
-  // console.log(`\n🎉 Completed! Fixed ${fixedCount} files.`);
+  // // // // // // // console.log(`\n🎉 Completed! Fixed ${fixedCount} files.`);
 
   if (fixedCount > 0) {
-    // console.log('\n📝 Next steps:');
-    // console.log('1. Review the changes');
-    // console.log('2. Test the build: npm run build');
-    // console.log('3. Fix any remaining issues manually');
-    // console.log('4. Commit and push changes');
+    // // // // // // // console.log('\n📝 Next steps:');
+    // // // // // // // console.log('1. Review the changes');
+    // // // // // // // console.log('2. Test the build: npm run build');
+    // // // // // // // console.log('3. Fix any remaining issues manually');
+    // // // // // // // console.log('4. Commit and push changes');
   }
 
 } catch (error) {
-  // console.error('❌ Script failed:', error.message);
+  // // // // // // // console.error('❌ Script failed:', error.message);
   process.exit(1);
 }

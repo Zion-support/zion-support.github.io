@@ -80,7 +80,7 @@ export default function Signup() {
                     // Set the session directly if verification is not required
                     const { error: sessionError } = await supabase.auth.setSession(resData.session);
                     if (sessionError) {
-                        // console.error("Error setting session:", sessionError);
+                        // // // // // // // console.error("Error setting session:", sessionError);
                         form.setError("root", { message: sessionError.message || "Failed to set session. Please try logging in." });
                         toast.error(sessionError.message || "Failed to set session. Please try logging in.");
                         return;
@@ -93,7 +93,7 @@ export default function Signup() {
                 }
                 else {
                     // This case might indicate an unexpected response from the API
-                    // console.error("Registration response did not include session or emailVerificationRequired flag.", resData);
+                    // // // // // // // console.error("Registration response did not include session or emailVerificationRequired flag.", resData);
                     form.setError("root", { message: "Registration complete, but an unexpected issue occurred. Please try logging in." });
                     toast.error("Registration complete, but an unexpected issue occurred. Please try logging in manually.");
                     // Potentially navigate to login or show a more specific error
@@ -109,7 +109,7 @@ export default function Signup() {
                         await mailchimpService.sendWelcomeEmail(data.email, 'NEW10');
                     }
                     catch (err) {
-                        // console.error('Mailchimp subscription failed', err);
+                        // // // // // // // console.error('Mailchimp subscription failed', err);
                         // Non-critical error, don't block user flow
                     }
                 }

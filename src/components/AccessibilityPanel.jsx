@@ -22,7 +22,7 @@ export const AccessibilityPanel = ({ isOpen, onToggle }) => {
                 setSettings(prev => ({ ...prev, ...parsed }));
             }
             catch (error) {
-                // console.error('Failed to parse accessibility settings:', error);
+                // // // // // // // console.error('Failed to parse accessibility settings:', error);
             }
         }
     }, []);

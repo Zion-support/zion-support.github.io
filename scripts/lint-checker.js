@@ -82,7 +82,7 @@ function checkFile(filePath) {
     }
 
   } catch (error) {
-    // console.warn(`Warning: Could not read file ${filePath}: ${error.message}`);
+    // // // // // // // console.warn(`Warning: Could not read file ${filePath}: ${error.message}`);
   }
 }
 
@@ -107,13 +107,13 @@ function walkDir(dir) {
 }
 
 function generateReport() {
-  // console.log('\n=== LINT CHECK REPORT ===\n');
-  // console.log(`Total files checked: ${totalFiles}`);
-  // console.log(`Files with issues: ${filesWithIssues}`);
-  // console.log(`Total issues found: ${issues.length}\n`);
+  // // // // // // // console.log('\n=== LINT CHECK REPORT ===\n');
+  // // // // // // // console.log(`Total files checked: ${totalFiles}`);
+  // // // // // // // console.log(`Files with issues: ${filesWithIssues}`);
+  // // // // // // // console.log(`Total issues found: ${issues.length}\n`);
 
   if (issues.length === 0) {
-    // console.log('✅ No lint issues found!');
+    // // // // // // // console.log('✅ No lint issues found!');
     return;
   }
 
@@ -127,14 +127,14 @@ function generateReport() {
   });
 
   Object.entries(issuesByFile).forEach(([file, fileIssues]) => {
-    // console.log(`\n📁 ${file} (${fileIssues.length} issues):`);
+    // // // // // // // console.log(`\n📁 ${file} (${fileIssues.length} issues):`);
     fileIssues.forEach(issue => {
-      // console.log(`  Line ${issue.line}: [${issue.rule}] ${issue.content}`);
+      // // // // // // // console.log(`  Line ${issue.line}: [${issue.rule}] ${issue.content}`);
     });
   });
 
   // Summary by rule
-  // console.log('\n📊 Issues by rule:');
+  // // // // // // // console.log('\n📊 Issues by rule:');
   const ruleCounts = { /* empty */ };
   issues.forEach(issue => {
     ruleCounts[issue.rule] = (ruleCounts[issue.rule] || 0) + 1;
@@ -143,12 +143,12 @@ function generateReport() {
   Object.entries(ruleCounts)
     .sort(([,a], [,b]) => b - a)
     .forEach(([rule, count]) => {
-      // console.log(`  ${rule}: ${count}`);
+      // // // // // // // console.log(`  ${rule}: ${count}`);
     });
 }
 
 function main() {
-  // console.log('🔍 Starting lint check...');
+  // // // // // // // console.log('🔍 Starting lint check...');
 
   const startTime = Date.now();
   walkDir('.');
@@ -156,7 +156,7 @@ function main() {
 
   generateReport();
 
-  // console.log(`\n⏱️  Check completed in ${endTime - startTime}ms`);
+  // // // // // // // console.log(`\n⏱️  Check completed in ${endTime - startTime}ms`);
 
   // Exit with error code if issues found
   if (issues.length > 0) {

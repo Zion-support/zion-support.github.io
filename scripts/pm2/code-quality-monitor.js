@@ -17,12 +17,12 @@ class CodeQualityMonitor {
     const timestamp = new Date().toISOString();
     const logMessage = `[${timestamp}] ${message}\n`;
 
-    // console.log(message);
+    // // // // // // // console.log(message);
 
     try {
       fs.appendFileSync(this.logFile, logMessage);
     } catch (error) {
-      // console.error('Failed to write to log file:', error.message);
+      // // // // // // // console.error('Failed to write to log file:', error.message);
     }
   }
 
@@ -317,6 +317,6 @@ class CodeQualityMonitor {
 // Run the code quality monitor
 const monitor = new CodeQualityMonitor();
 monitor.run().catch(error => {
-  // console.error('Fatal error:', error);
+  // // // // // // // console.error('Fatal error:', error);
   process.exit(1);
 });

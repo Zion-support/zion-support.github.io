@@ -18,13 +18,13 @@ class LintFixer {
     const logMessage = `[${timestamp}] ${message}\n`;
 
     // Console output
-    // console.log(message);
+    // // // // // // // console.log(message);
 
     // File output
     try {
       fs.appendFileSync(this.logFile, logMessage);
     } catch (error) {
-      // console.error('Failed to write to log file:', error.message);
+      // // // // // // // console.error('Failed to write to log file:', error.message);
     }
   }
 
@@ -85,11 +85,11 @@ class LintFixer {
 
       // Replace console statements with proper logging or remove them
       let fixedContent = content
-        .replace(/console\.log\(/g, '// // console.log(')
-        .replace(/console\.warn\(/g, '// // console.warn(')
-        .replace(/console\.error\(/g, '// // console.error(')
-        .replace(/console\.info\(/g, '// // console.info(')
-        .replace(/console\.debug\(/g, '// // console.debug(');
+        .replace(/console\.log\(/g, '// // // // // // // // console.log(')
+        .replace(/console\.warn\(/g, '// // // // // // // // console.warn(')
+        .replace(/console\.error\(/g, '// // // // // // // // console.error(')
+        .replace(/console\.info\(/g, '// // // // // // // // console.info(')
+        .replace(/console\.debug\(/g, '// // // // // // // // console.debug(');
 
       if (originalContent !== fixedContent) {
         fs.writeFileSync(filePath, fixedContent, 'utf8');
@@ -256,6 +256,6 @@ class LintFixer {
 // Run the lint fixer
 const fixer = new LintFixer();
 fixer.run().catch(error => {
-  // console.error('Fatal error:', error);
+  // // // // // // // console.error('Fatal error:', error);
   process.exit(1);
 });

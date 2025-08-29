@@ -27,7 +27,7 @@ export default function CheckoutPage() {
                 setProduct(data);
             }
             catch (err) {
-                // console.error('Failed to load product', err);
+                // // // // // // // console.error('Failed to load product', err);
                 setError(err.message);
                 const fallback = NEW_PRODUCTS.find(p => p.id === id) || null;
                 setProduct(fallback);

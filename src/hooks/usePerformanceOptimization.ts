@@ -71,7 +71,7 @@ export const usePerformanceOptimization = (options: UsePerformanceOptimizationOp
 
         // Log low FPS for debugging
         if (fps < 30) {
-          // console.warn(`Low FPS detected: ${fps}`);
+          // // // // // // // console.warn(`Low FPS detected: ${fps}`);
         }
       }
 
@@ -98,7 +98,7 @@ export const usePerformanceOptimization = (options: UsePerformanceOptimizationOp
 
         // Warn if memory usage is high
         if (memory.usedJSHeapSize > 100 * 1024 * 1024) { // 100MB
-          // console.warn('High memory usage detected:', metricsRef.current.memoryUsage.toFixed(2), 'MB');
+          // // // // // // // console.warn('High memory usage detected:', metricsRef.current.memoryUsage.toFixed(2), 'MB');
         }
       }
     };
@@ -155,7 +155,7 @@ export const usePerformanceOptimization = (options: UsePerformanceOptimizationOp
 
       // Log slow renders
       if (renderTime > 16) { // 60fps threshold
-        // console.warn(`Slow render detected in ${componentName}:`, renderTime.toFixed(2), 'ms');
+        // // // // // // // console.warn(`Slow render detected in ${componentName}:`, renderTime.toFixed(2), 'ms');
       }
 
       // Report to analytics if available

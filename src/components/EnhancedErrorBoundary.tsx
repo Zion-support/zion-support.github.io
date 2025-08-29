@@ -57,7 +57,7 @@ export class EnhancedErrorBoundary extends Component<Props, State> {
     });
 
     // Log error to console
-    // console.error('Error caught by boundary:', error, errorInfo);
+    // // // // // // // console.error('Error caught by boundary:', error, errorInfo);
 
     // Call custom error handler if provided
     if (this.props.onError) {
@@ -104,7 +104,7 @@ export class EnhancedErrorBoundary extends Component<Props, State> {
       errors.push(errorData);
       localStorage.setItem('error-log', JSON.stringify(errors.slice(-10))); // Keep last 10 errors
     } catch (logError) {
-      // console.error('Failed to log error:', logError);
+      // // // // // // // console.error('Failed to log error:', logError);
     }
   }
 

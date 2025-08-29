@@ -1,14 +1,14 @@
 import React, { useState, useEffect, useCallback, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { 
-  Smartphone, 
-  Tablet, 
-  Monitor, 
-  Hand, 
-  Gesture, 
-  ArrowLeft, 
-  ArrowRight, 
-  ArrowUp, 
+import {
+  Smartphone,
+  Tablet,
+  Monitor,
+  Hand,
+  Gesture,
+  ArrowLeft,
+  ArrowRight,
+  ArrowUp,
   ArrowDown,
   ZoomIn,
   ZoomOut,
@@ -64,13 +64,13 @@ export function MobileExperienceEnhancer() {
   const [mobileOptimizations, setMobileOptimizations] = useState<Set<string>>(new Set());
   const [isOptimizing, setIsOptimizing] = useState(false);
   const [showAdvanced, setShowAdvanced] = useState(false);
-  
+
   // Touch gesture handlers
   const [touchStart, setTouchStart] = useState<{ x: number; y: number } | null>(null);
   const [touchEnd, setTouchEnd] = useState<{ x: number; y: number } | null>(null);
   const [pinchDistance, setPinchDistance] = useState<number>(0);
   const [rotationAngle, setRotationAngle] = useState<number>(0);
-  
+
   // Mobile-specific settings
   const [mobileFontSize, setMobileFontSize] = useState(16);
   const [mobileSpacing, setMobileSpacing] = useState(1);
@@ -212,10 +212,10 @@ export function MobileExperienceEnhancer() {
   // Touch event handlers
   const handleTouchStart = useCallback((e: React.TouchEvent) => {
     if (!mobileGestures) return;
-    
+
     const touch = e.touches[0];
     setTouchStart({ x: touch.clientX, y: touch.clientY });
-    
+
     // Handle pinch start
     if (e.touches.length === 2) {
       const touch1 = e.touches[0];
@@ -230,7 +230,7 @@ export function MobileExperienceEnhancer() {
 
   const handleTouchMove = useCallback((e: React.TouchEvent) => {
     if (!mobileGestures) return;
-    
+
     // Handle pinch zoom
     if (e.touches.length === 2) {
       const touch1 = e.touches[0];
@@ -239,12 +239,12 @@ export function MobileExperienceEnhancer() {
         Math.pow(touch2.clientX - touch1.clientX, 2) +
         Math.pow(touch2.clientY - touch1.clientY, 2)
       );
-      
+
       if (pinchDistance > 0) {
         const scale = distance / pinchDistance;
         document.documentElement.style.setProperty('--mobile-zoom', scale.toString());
       }
-      
+
       // Handle rotation
       const angle = Math.atan2(
         touch2.clientY - touch1.clientY,
@@ -256,14 +256,14 @@ export function MobileExperienceEnhancer() {
 
   const handleTouchEnd = useCallback((e: React.TouchEvent) => {
     if (!mobileGestures || !touchStart) return;
-    
+
     const touch = e.changedTouches[0];
     const endX = touch.clientX;
     const endY = touch.clientY;
-    
+
     const diffX = touchStart.x - endX;
     const diffY = touchStart.y - endY;
-    
+
     // Determine swipe direction
     if (Math.abs(diffX) > Math.abs(diffY)) {
       if (diffX > 50) {
@@ -278,7 +278,7 @@ export function MobileExperienceEnhancer() {
         handleSwipe('down');
       }
     }
-    
+
     setTouchStart(null);
     setTouchEnd(null);
     setPinchDistance(0);
@@ -293,19 +293,19 @@ export function MobileExperienceEnhancer() {
       switch (direction) {
         case 'left':
           // Navigate next
-          console.log('Swipe left - Next');
+          // // // // // // console.log('Swipe left - Next');
           break;
         case 'right':
           // Navigate previous
-          console.log('Swipe right - Previous');
+          // // // // // // console.log('Swipe right - Previous');
           break;
         case 'up':
           // Expand
-          console.log('Swipe up - Expand');
+          // // // // // // console.log('Swipe up - Expand');
           break;
         case 'down':
           // Refresh
-          console.log('Swipe down - Refresh');
+          // // // // // // console.log('Swipe down - Refresh');
           break;
       }
     }
@@ -335,11 +335,11 @@ export function MobileExperienceEnhancer() {
           document.documentElement.style.removeProperty('--touch-target-size');
         }
         break;
-      
+
       case 'gesture-support':
         setMobileGestures(enabled);
         break;
-      
+
       case 'mobile-layout':
         if (enabled) {
           document.documentElement.classList.add('mobile-layout');
@@ -347,7 +347,7 @@ export function MobileExperienceEnhancer() {
           document.documentElement.classList.remove('mobile-layout');
         }
         break;
-      
+
       case 'performance-optimization':
         setMobileAnimations(!enabled);
         if (enabled) {
@@ -356,7 +356,7 @@ export function MobileExperienceEnhancer() {
           document.documentElement.classList.remove('mobile-performance');
         }
         break;
-      
+
       case 'visual-optimization':
         if (enabled) {
           document.documentElement.classList.add('mobile-visual');
@@ -407,20 +407,20 @@ export function MobileExperienceEnhancer() {
   // Auto-optimize for mobile
   const autoOptimizeMobile = useCallback(async () => {
     setIsOptimizing(true);
-    
+
     // Simulate optimization process
     await new Promise(resolve => setTimeout(resolve, 2000));
-    
+
     // Enable all mobile optimizations
     mobileOptimizationFeatures.forEach(optimization => {
       applyMobileOptimization(optimization.id, true);
     });
-    
+
     // Enable common touch gestures
     ['swipe-left', 'swipe-right', 'double-tap', 'long-press'].forEach(gestureId => {
       toggleTouchGesture(gestureId, true);
     });
-    
+
     setIsOptimizing(false);
   }, [mobileOptimizationFeatures, applyMobileOptimization, toggleTouchGesture]);
 
@@ -514,7 +514,7 @@ export function MobileExperienceEnhancer() {
                     <ZoomIn className="w-6 h-6 mx-auto mb-2" />
                     <span className="text-sm font-medium">Increase Text</span>
                   </button>
-                  
+
                   <button
                     onClick={() => setMobileFontSize(prev => Math.max(prev - 2, 12))}
                     className="p-4 bg-gradient-to-r from-green-500 to-green-600 text-white rounded-xl hover:from-green-600 hover:to-green-700 transition-all"
@@ -522,7 +522,7 @@ export function MobileExperienceEnhancer() {
                     <ZoomOut className="w-6 h-6 mx-auto mb-2" />
                     <span className="text-sm font-medium">Decrease Text</span>
                   </button>
-                  
+
                   <button
                     onClick={() => setMobileSpacing(prev => prev === 1 ? 1.5 : prev === 1.5 ? 2 : 1)}
                     className="p-4 bg-gradient-to-r from-purple-500 to-purple-600 text-white rounded-xl hover:from-purple-600 hover:to-purple-700 transition-all"
@@ -532,7 +532,7 @@ export function MobileExperienceEnhancer() {
                       Spacing: {mobileSpacing === 1 ? 'Normal' : mobileSpacing === 1.5 ? 'Wide' : 'Extra Wide'}
                     </span>
                   </button>
-                  
+
                   <button
                     onClick={() => setMobileLayout(prev => prev === 'grid' ? 'list' : prev === 'list' ? 'compact' : 'grid')}
                     className="p-4 bg-gradient-to-r from-orange-500 to-orange-600 text-white rounded-xl hover:from-orange-600 hover:to-orange-700 transition-all"
@@ -600,7 +600,7 @@ export function MobileExperienceEnhancer() {
                               {optimization.description}
                             </p>
                           </div>
-                          
+
                           <label className="flex items-center">
                             <input
                               type="checkbox"
@@ -648,7 +648,7 @@ export function MobileExperienceEnhancer() {
                               Action: {gesture.action}
                             </div>
                           </div>
-                          
+
                           <label className="flex items-center">
                             <input
                               type="checkbox"
@@ -672,7 +672,7 @@ export function MobileExperienceEnhancer() {
                     <Settings className="w-4 h-4" />
                     <span>{showAdvanced ? 'Hide' : 'Show'} Advanced Settings</span>
                   </button>
-                  
+
                   {showAdvanced && (
                     <motion.div
                       initial={{ opacity: 0, height: 0 }}

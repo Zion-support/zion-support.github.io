@@ -6,8 +6,8 @@ if (!jwtSecret) {
   throw new Error('JWT_SECRET not defined');
 }
 exports.loginUser = async function (req, res) {
-  // console.info('[LOGIN]', req.body.email);
-  // console.info('[ENV] JWT_SECRET:', jwtSecret);
+  // // // // // // // console.info('[LOGIN]', req.body.email);
+  // // // // // // // console.info('[ENV] JWT_SECRET:', jwtSecret);
   try {
     const email = req.body.email.toLowerCase().trim();
     const user = await User.findOne({ email }).select('+passwordHash');
@@ -22,7 +22,7 @@ exports.loginUser = async function (req, res) {
       user: { id: user._id, email: user.email, name: user.name },
     });
   } catch (err) {
-    // console.error(err);
+    // // // // // // // console.error(err);
     res.status(500).json({ message: 'Server error' });
   }
 };
@@ -50,7 +50,7 @@ exports.registerUser = async function (req, res) {
         .status(409)
         .json({ code: 'EMAIL_EXISTS', message: 'Email already registered' });
     }
-    // console.error(err);
+    // // // // // // // console.error(err);
     return res.status(500).json({ message: 'Server error' });
   }
 };

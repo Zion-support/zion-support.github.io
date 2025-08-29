@@ -6,7 +6,7 @@ const { execSync, spawn } = require('child_process');
 const cron = require('node-cron');
 const crypto = require('crypto');
 
-// // console.log('🔒 File Integrity Monitor Starting...\n');
+// // // // // // // // console.log('🔒 File Integrity Monitor Starting...\n');
 
 class FileIntegrityMonitor {
   constructor() {
@@ -36,12 +36,12 @@ class FileIntegrityMonitor {
     const timestamp = new Date().toISOString();
     const logEntry = `[${timestamp}] [${level}] ${message}\n`;
 
-    // // console.log(logEntry.trim());
+    // // // // // // // // console.log(logEntry.trim());
 
     try {
       fs.appendFileSync(this.logFile, logEntry);
     } catch (error) {
-      // console.error('Failed to write to log file:', error.message);
+      // // // // // // // console.error('Failed to write to log file:', error.message);
     }
   }
 

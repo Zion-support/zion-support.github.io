@@ -20,7 +20,7 @@ class IntelligentOrchestrator {
   log(message) {
     const timestamp = new Date().toISOString();
     const logMessage = `[${timestamp}] ${message}\n`;
-    // // console.log(message);
+    // // // // // // // // console.log(message);
     fs.appendFileSync(this.logFile, logMessage);
   }
   loadAutomationSystems() {
@@ -374,18 +374,18 @@ switch (command) {
     break;
   case 'report':
     const report = orchestrator.generateIntelligenceReport();
-    // // console.log(JSON.stringify(report, null, 2));
+    // // // // // // // // console.log(JSON.stringify(report, null, 2));
     process.exit(0);
     break;
   default:
-    // // console.log('Usage: node intelligent-orchestrator.js [run|continuous|optimize|status|report] [priority|intelligent]');
-    // // console.log('\nCommands:');
-    // // console.log('  run priority     - Run priority-based execution');
-    // // console.log('  run intelligent  - Run intelligent execution');
-    // // console.log('  continuous       - Start continuous intelligent automation');
-    // // console.log('  optimize         - Optimize systems based on performance');
-    // // console.log('  status           - Show current status');
-    // // console.log('  report           - Generate intelligence report');
+    // // // // // // // // console.log('Usage: node intelligent-orchestrator.js [run|continuous|optimize|status|report] [priority|intelligent]');
+    // // // // // // // // console.log('\nCommands:');
+    // // // // // // // // console.log('  run priority     - Run priority-based execution');
+    // // // // // // // // console.log('  run intelligent  - Run intelligent execution');
+    // // // // // // // // console.log('  continuous       - Start continuous intelligent automation');
+    // // // // // // // // console.log('  optimize         - Optimize systems based on performance');
+    // // // // // // // // console.log('  status           - Show current status');
+    // // // // // // // // console.log('  report           - Generate intelligence report');
     process.exit(1);
 }
 // Graceful shutdown

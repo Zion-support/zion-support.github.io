@@ -3,7 +3,7 @@
 const fs = require('fs');
 const path = require('path');
 
-// console.log('🔧 Fixing Next.js imports to React Router...');
+// // // // // // // console.log('🔧 Fixing Next.js imports to React Router...');
 
 // Function to replace Next.js imports with React Router
 function replaceNextImports(content, filePath) {
@@ -45,13 +45,13 @@ function processFile(filePath) {
 
     if (modified) {
       fs.writeFileSync(filePath, newContent);
-      // console.log(`✅ Fixed: ${filePath}`);
+      // // // // // // // console.log(`✅ Fixed: ${filePath}`);
       return true;
     }
 
     return false;
   } catch (error) {
-    // console.log(`❌ Error processing ${filePath}:`, error.message);
+    // // // // // // // console.log(`❌ Error processing ${filePath}:`, error.message);
     return false;
   }
 }
@@ -76,7 +76,7 @@ function walkDir(dir, extensions = ['.jsx', '.js', '.tsx', '.ts']) {
       }
     });
   } catch (error) {
-    // console.log(`⚠️ Could not read directory ${dir}:`, error.message);
+    // // // // // // // console.log(`⚠️ Could not read directory ${dir}:`, error.message);
   }
 
   return filesFixed;
@@ -87,25 +87,25 @@ function main() {
   const srcDir = path.join(process.cwd(), 'src');
 
   if (!fs.existsSync(srcDir)) {
-    // console.log('❌ src directory not found');
+    // // // // // // // console.log('❌ src directory not found');
     return;
   }
 
-  // console.log('🔍 Scanning for Next.js imports...');
+  // // // // // // // console.log('🔍 Scanning for Next.js imports...');
   const filesFixed = walkDir(srcDir);
 
-  // console.log(`\n🎯 Migration Summary:`);
-  // console.log(`Files processed: ${filesFixed}`);
-  // console.log(`Next.js imports replaced with React Router equivalents`);
+  // // // // // // // console.log(`\n🎯 Migration Summary:`);
+  // // // // // // // console.log(`Files processed: ${filesFixed}`);
+  // // // // // // // console.log(`Next.js imports replaced with React Router equivalents`);
 
   if (filesFixed > 0) {
-    // console.log('\n📝 Next steps:');
-    // console.log('1. Review the changes made');
-    // console.log('2. Test the application to ensure routing works correctly');
-    // console.log('3. Update any remaining Next.js specific patterns');
-    // console.log('4. Run the enhanced testing automation to verify fixes');
+    // // // // // // // console.log('\n📝 Next steps:');
+    // // // // // // // console.log('1. Review the changes made');
+    // // // // // // // console.log('2. Test the application to ensure routing works correctly');
+    // // // // // // // console.log('3. Update any remaining Next.js specific patterns');
+    // // // // // // // console.log('4. Run the enhanced testing automation to verify fixes');
   } else {
-    // console.log('\n✅ No Next.js imports found to fix');
+    // // // // // // // console.log('\n✅ No Next.js imports found to fix');
   }
 }
 

@@ -116,7 +116,7 @@ export const NotificationSystem: React.FC<NotificationSystemProps> = ({
           // Ignore autoplay restrictions
         });
       } catch (error) {
-        // console.warn('Could not play notification sound:', error);
+        // // // // // // // console.warn('Could not play notification sound:', error);
       }
     }
   }, [settings.sound]);
@@ -127,7 +127,7 @@ export const NotificationSystem: React.FC<NotificationSystemProps> = ({
       try {
         navigator.vibrate(200);
       } catch (error) {
-        // console.warn('Could not trigger vibration:', error);
+        // // // // // // // console.warn('Could not trigger vibration:', error);
       }
     }
   }, [settings.vibration]);

@@ -23,9 +23,9 @@ function fixFile(filePath) {
     );
 
     fs.writeFileSync(filePath, fixedContent);
-    // console.log(`Fixed: ${filePath}`);
+    // // // // // // // console.log(`Fixed: ${filePath}`);
   } catch (error) {
-    // console.error(`Error fixing ${filePath}:`, error.message);
+    // // // // // // // console.error(`Error fixing ${filePath}:`, error.message);
   }
 }
 // Fix blog pages
@@ -52,4 +52,4 @@ if (fs.existsSync(servicesDir)) {
     fixFile(path.join(servicesDir, file));
   });
 }
-// console.log('Variable name fixing completed!');
+// // // // // // // console.log('Variable name fixing completed!');

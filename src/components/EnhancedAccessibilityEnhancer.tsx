@@ -1,15 +1,15 @@
 import React, { useState, useEffect, useCallback, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { 
-  Eye, 
-  EyeOff, 
-  Volume2, 
-  VolumeX, 
-  Keyboard, 
-  MousePointer, 
-  Accessibility, 
-  CheckCircle, 
-  AlertTriangle, 
+import {
+  Eye,
+  EyeOff,
+  Volume2,
+  VolumeX,
+  Keyboard,
+  MousePointer,
+  Accessibility,
+  CheckCircle,
+  AlertTriangle,
   X,
   Settings,
   Contrast,
@@ -54,7 +54,7 @@ export default function EnhancedAccessibilityEnhancer() {
   const [screenReaderMode, setScreenReaderMode] = useState(false);
   const [keyboardNavigation, setKeyboardNavigation] = useState(true);
   const [colorBlindMode, setColorBlindMode] = useState(false);
-  
+
   const accessibilityFeatures: AccessibilityFeature[] = [
     {
       id: 'high-contrast',
@@ -140,7 +140,7 @@ export default function EnhancedAccessibilityEnhancer() {
           setContrastMode('normal');
         }
         break;
-      
+
       case 'large-text':
         if (enabled) {
           setFontSize(20);
@@ -148,7 +148,7 @@ export default function EnhancedAccessibilityEnhancer() {
           setFontSize(16);
         }
         break;
-      
+
       case 'reduced-motion':
         if (enabled) {
           document.documentElement.classList.add('reduced-motion');
@@ -158,19 +158,19 @@ export default function EnhancedAccessibilityEnhancer() {
           setReducedMotion(false);
         }
         break;
-      
+
       case 'focus-indicator':
         setFocusIndicator(enabled);
         break;
-      
+
       case 'keyboard-navigation':
         setKeyboardNavigation(enabled);
         break;
-      
+
       case 'screen-reader':
         setScreenReaderMode(enabled);
         break;
-      
+
       case 'color-blind-friendly':
         setColorBlindMode(enabled);
         break;
@@ -221,7 +221,7 @@ export default function EnhancedAccessibilityEnhancer() {
       const id = control.getAttribute('id');
       const label = document.querySelector(`label[for="${id}"]`);
       const ariaLabel = control.getAttribute('aria-label');
-      
+
       if (!label && !ariaLabel && !control.getAttribute('aria-labelledby')) {
         results.push({
           id: `label-${index}`,
@@ -240,7 +240,7 @@ export default function EnhancedAccessibilityEnhancer() {
       const style = window.getComputedStyle(element);
       const color = style.color;
       const backgroundColor = style.backgroundColor;
-      
+
       // Simple contrast check (this is a simplified version)
       if (color === backgroundColor) {
         results.push({
@@ -272,7 +272,7 @@ export default function EnhancedAccessibilityEnhancer() {
 
     // Simulate audit time
     await new Promise(resolve => setTimeout(resolve, 2000));
-    
+
     setAuditResults(results);
     setIsAuditing(false);
   }, []);
@@ -384,7 +384,7 @@ export default function EnhancedAccessibilityEnhancer() {
                     <ZoomIn className="w-6 h-6 mx-auto mb-2" />
                     <span className="text-sm font-medium">Increase Text</span>
                   </button>
-                  
+
                   <button
                     onClick={() => setFontSize(prev => Math.max(prev - 2, 12))}
                     className="p-4 bg-gradient-to-r from-green-500 to-green-600 text-white rounded-xl hover:from-green-600 hover:to-green-700 transition-all"
@@ -392,7 +392,7 @@ export default function EnhancedAccessibilityEnhancer() {
                     <ZoomOut className="w-6 h-6 mx-auto mb-2" />
                     <span className="text-sm font-medium">Decrease Text</span>
                   </button>
-                  
+
                   <button
                     onClick={() => setContrastMode(prev => prev === 'normal' ? 'high' : 'normal')}
                     className="p-4 bg-gradient-to-r from-purple-500 to-purple-600 text-white rounded-xl hover:from-purple-600 hover:to-purple-700 transition-all"
@@ -400,7 +400,7 @@ export default function EnhancedAccessibilityEnhancer() {
                     <Contrast className="w-6 h-6 mx-auto mb-2" />
                     <span className="text-sm font-medium">Toggle Contrast</span>
                   </button>
-                  
+
                   <button
                     onClick={() => setReducedMotion(!reducedMotion)}
                     className="p-4 bg-gradient-to-r from-orange-500 to-orange-600 text-white rounded-xl hover:from-orange-600 hover:to-orange-700 transition-all"
@@ -453,7 +453,7 @@ export default function EnhancedAccessibilityEnhancer() {
                               {feature.description}
                             </p>
                           </div>
-                          
+
                           <label className="flex items-center">
                             <input
                               type="checkbox"
@@ -482,7 +482,7 @@ export default function EnhancedAccessibilityEnhancer() {
                       {isAuditing ? 'Auditing...' : 'Run Audit'}
                     </button>
                   </div>
-                  
+
                   {auditResults.length > 0 && (
                     <div className="space-y-3">
                       {auditResults.map((result) => (
@@ -535,7 +535,7 @@ export default function EnhancedAccessibilityEnhancer() {
                       ))}
                     </div>
                   )}
-                  
+
                   {auditResults.length === 0 && !isAuditing && (
                     <div className="text-center py-8 text-gray-500 dark:text-gray-400">
                       <CheckCircle className="w-12 h-12 mx-auto mb-3 text-green-500" />

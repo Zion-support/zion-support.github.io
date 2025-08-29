@@ -47,7 +47,7 @@ export default function FraudDetection() {
             setStats(newStats);
         }
         catch (error) {
-            // console.error("Error fetching fraud flags:", error);
+            // // // // // // // console.error("Error fetching fraud flags:", error);
             toast({
                 title: "Error",
                 description: "Failed to load fraud detection data",
@@ -109,7 +109,7 @@ export default function FraudDetection() {
             fetchFraudFlags();
         }
         catch (error) {
-            // console.error("Error updating fraud flag:", error);
+            // // // // // // // console.error("Error updating fraud flag:", error);
             toast({
                 title: "Error",
                 description: "Failed to update flag",

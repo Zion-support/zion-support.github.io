@@ -56,14 +56,14 @@ function fixFunctionName(filePath) {
     );
     if (fixedContent !== content) {
       fs.writeFileSync(filePath, fixedContent, "utf8");
-      // console.log(
+      // // // // // // // console.log(
         `Fixed function name in: ${filePath} (${currentFunctionName} -> ${functionName})`,
       );
       return true;
     }
     return false;
   } catch (error) {
-    // console.error(`Error processing ${filePath}:`, error.message);
+    // // // // // // // console.error(`Error processing ${filePath}:`, error.message);
     return false;
   }
 }
@@ -77,6 +77,6 @@ async function fixAllFiles() {
       fixedCount++;
     }
   }
-  // console.log(`Fixed ${fixedCount} files.`);
+  // // // // // // // console.log(`Fixed ${fixedCount} files.`);
 }
 fixAllFiles();

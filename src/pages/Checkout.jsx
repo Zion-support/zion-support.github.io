@@ -58,7 +58,7 @@ export default function CheckoutPage() {
                         });
                     }
                     catch (e) {
-                        // console.error('Failed to add points', e);
+                        // // // // // // // console.error('Failed to add points', e);
                     }
                 }
                 safeStorage.removeItem(getCartKey(user?.id));
@@ -66,7 +66,7 @@ export default function CheckoutPage() {
             }
         }
         catch (err) {
-            // console.error('Payment failed', err);
+            // // // // // // // console.error('Payment failed', err);
         }
     };
     return (<div className="max-w-2xl mx-auto p-6">

@@ -59,7 +59,7 @@ export function SmartNotificationSystem({ enabled = true }: Props) {
         category: 'onboarding',
         action: {
           label: 'Get Started',
-          onClick: () => // console.log('Get Started clicked')
+          onClick: () => // // // // // // // console.log('Get Started clicked')
         }
       },
       {
@@ -73,7 +73,7 @@ export function SmartNotificationSystem({ enabled = true }: Props) {
         category: 'performance',
         action: {
           label: 'View Details',
-          onClick: () => // console.log('View Details clicked')
+          onClick: () => // // // // // // // console.log('View Details clicked')
         }
       },
       {
@@ -97,7 +97,7 @@ export function SmartNotificationSystem({ enabled = true }: Props) {
         category: 'security',
         action: {
           label: 'Update Now',
-          onClick: () => // console.log('Update Now clicked')
+          onClick: () => // // // // // // // console.log('Update Now clicked')
         }
       }
     ];

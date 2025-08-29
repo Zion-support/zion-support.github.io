@@ -166,7 +166,7 @@ export class APIDocGeneratorService {
       // Calculate coverage
       documentation.metadata.coverage = this.calculateCoverage(documentation.endpoints);
     } catch (error) {
-      // console.error('Error generating documentation:', error);
+      // // // // // // // console.error('Error generating documentation:', error);
       // Fallback to basic documentation
       documentation.endpoints = this.generateFallbackEndpoints();
       documentation.metadata.totalEndpoints = documentation.endpoints.length;

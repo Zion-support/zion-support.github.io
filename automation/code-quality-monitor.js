@@ -5,7 +5,7 @@ const path = require('path');
 const { execSync, spawn } = require('child_process');
 const cron = require('node-cron');
 
-// // console.log('🔍 Code Quality Monitor Starting...\n');
+// // // // // // // // console.log('🔍 Code Quality Monitor Starting...\n');
 
 class CodeQualityMonitor {
   constructor() {
@@ -33,12 +33,12 @@ class CodeQualityMonitor {
     const timestamp = new Date().toISOString();
     const logEntry = `[${timestamp}] [${level}] ${message}\n`;
 
-    // // console.log(logEntry.trim());
+    // // // // // // // // console.log(logEntry.trim());
 
     try {
       fs.appendFileSync(this.logFile, logEntry);
     } catch (error) {
-      // console.error('Failed to write to log file:', error.message);
+      // // // // // // // console.error('Failed to write to log file:', error.message);
     }
   }
 
@@ -213,11 +213,11 @@ class CodeQualityMonitor {
           const content = fs.readFileSync(file, 'utf8');
 
           // Check for potential issues
-          if (content.includes('// // console.log(') && !file.includes('.test.')) {
+          if (content.includes('// // // // // // // // console.log(') && !file.includes('.test.')) {
             bugs.push({
               file: path.relative(this.projectRoot, file),
               issue: 'console.log in production code',
-              line: this.findLineNumber(content, '// // console.log(')
+              line: this.findLineNumber(content, '// // // // // // // // console.log(')
             });
           }
 
@@ -323,8 +323,8 @@ class CodeQualityMonitor {
           modified = true;
         }
 
-        if (newContent.includes('// // console.log(') && !file.includes('.test.')) {
-          newContent = newContent.replace(/console\.log\(/g, '// // // console.log(');
+        if (newContent.includes('// // // // // // // // console.log(') && !file.includes('.test.')) {
+          newContent = newContent.replace(/console\.log\(/g, '// // // // // // // // // console.log(');
           modified = true;
         }
 
@@ -420,7 +420,7 @@ class CodeQualityMonitor {
 
           // Fix console.log statements
           if (bug.issue === 'console.log in production code') {
-            newContent = newContent.replace(/console\.log\(/g, '// // // console.log(');
+            newContent = newContent.replace(/console\.log\(/g, '// // // // // // // // // console.log(');
             modified = true;
           }
 

@@ -52,7 +52,7 @@ export const EnhancedAccessibilityPanel: React.FC = () => {
         setSettings(prev => ({ ...prev, ...parsed }));
         applySettings({ ...prev, ...parsed });
       } catch (error) {
-        // console.error('Failed to parse accessibility settings:', error);
+        // // // // // // // console.error('Failed to parse accessibility settings:', error);
       }
     }
   }, []);
