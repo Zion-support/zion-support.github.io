@@ -50,12 +50,44 @@ const LoadingFallback = ({ message }: { message: string }) => (
 // Service categories data
 const serviceCategories = [
   {
+    name: "AI Enterprise Orchestrator",
+    description: "Multi-agent AI coordination & workflow automation for enterprise transformation",
+    icon: "🤖",
+    href: "/services/ai-enterprise-orchestrator",
+    count: 1,
+    color: "from-purple-500 to-pink-600"
+  },
+  {
     name: "AI Solutions",
     description: "Cutting-edge artificial intelligence services for business transformation",
-    icon: "🤖",
+    icon: "🧠",
     href: "/ai-services",
     count: 15,
     color: "from-cyan-500 to-blue-600"
+  },
+  {
+    name: "Quantum AI Platform",
+    description: "Next-generation quantum computing with AI capabilities",
+    icon: "⚛️",
+    href: "/services/quantum-ai-platform",
+    count: 1,
+    color: "from-blue-500 to-cyan-600"
+  },
+  {
+    name: "AI Cybersecurity Suite",
+    description: "AI-powered threat detection and automated incident response",
+    icon: "🔒",
+    href: "/services/ai-cybersecurity-suite",
+    count: 1,
+    color: "from-red-500 to-orange-600"
+  },
+  {
+    name: "AI Healthcare Analytics",
+    description: "Predictive diagnostics and patient care optimization",
+    icon: "🏥",
+    href: "/services/ai-healthcare-analytics",
+    count: 1,
+    color: "from-green-500 to-emerald-600"
   },
   {
     name: "Cloud & DevOps",
@@ -63,39 +95,7 @@ const serviceCategories = [
     icon: "☁️",
     href: "/services/cloud-devops",
     count: 12,
-    color: "from-blue-500 to-purple-600"
-  },
-  {
-    name: "Cybersecurity",
-    description: "Advanced security protocols and threat protection systems",
-    icon: "🔒",
-    href: "/services/ai-compliance-copilot",
-    count: 8,
-    color: "from-red-500 to-orange-600"
-  },
-  {
-    name: "Digital Transformation",
-    description: "End-to-end business process modernization and optimization",
-    icon: "🚀",
-    href: "/services/digital-transformation",
-    count: 10,
-    color: "from-green-500 to-cyan-600"
-  },
-  {
-    name: "Infrastructure",
-    description: "Robust IT infrastructure and network management solutions",
-    icon: "🏗️",
-    href: "/services/it-infrastructure",
-    count: 6,
-    color: "from-purple-500 to-pink-600"
-  },
-  {
-    name: "Consulting",
-    description: "Strategic technology consulting and implementation guidance",
-    icon: "💡",
-    href: "/services/it-consulting",
-    count: 9,
-    color: "from-orange-500 to-green-600"
+    color: "from-indigo-500 to-purple-600"
   }
 ];
 
