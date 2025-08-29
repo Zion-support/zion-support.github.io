@@ -76,7 +76,8 @@
     "health:check": "npm run health:monitor && npm run quality:check",
     "health:check": "npm run health:monitor && npm run quality:check",
     "health:full": "npm run health:check && npm run security:scan && npm run perf:check",
-    "docs:update": "npm run docs:generate && npm run quality:check",
+    "dashboard": "node scripts/pm2/automation-dashboard.js",
+    "docs:update": "npm run docs:generate && npm run quality:check"
     "docs:update": "npm run docs:generate && npm run quality:check",
     "docs:full": "npm run docs:generate && npm run seo:check"
   },
