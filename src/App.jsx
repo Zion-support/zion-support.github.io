@@ -53,6 +53,13 @@ const LoadingSpinner = () => (
 
 // Pricing
 const Pricing = React.lazy(() => import('./pages/Pricing.tsx'));
+// Additional pages referenced by header/navigation
+const ServicesOverview = React.lazy(() => import('./pages/ServicesOverview.tsx'));
+const AIServicesPage = React.lazy(() => import('./pages/AIServicesPage.tsx'));
+const ITServicesPage = React.lazy(() => import('./pages/ITServicesPage.tsx'));
+const MicroSaasServicesPage = React.lazy(() => import('./pages/MicroSaasServicesPage.tsx'));
+const PricingGuide = React.lazy(() => import('./pages/PricingGuide.tsx'));
+const CybersecurityServicesPage = React.lazy(() => import('./pages/CybersecurityServicesPage.tsx'));
 
 function App() {
   return (
@@ -76,6 +83,14 @@ function App() {
               <Route path="/partners" element={<PartnersPage />} />
               <Route path="/login" element={<Login />} />
               <Route path="/pricing" element={<Pricing />} />
+
+              {/* Header-referenced routes to avoid broken links */}
+              <Route path="/services-overview" element={<ServicesOverview />} />
+              <Route path="/ai-services" element={<AIServicesPage />} />
+              <Route path="/it-services" element={<ITServicesPage />} />
+              <Route path="/micro-saas" element={<MicroSaasServicesPage />} />
+              <Route path="/pricing-guide" element={<PricingGuide />} />
+              <Route path="/cybersecurity" element={<CybersecurityServicesPage />} />
 
               {/* Services routes */}
               <Route path="/services" element={<ServicesPage />} />

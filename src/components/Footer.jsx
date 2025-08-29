@@ -91,14 +91,12 @@ export function Footer() {
     {
       title: "Services",
       links: [
-        { label: "AI Solutions", path: "/services/ai" },
-        { label: "Cloud & DevOps", path: "/services/cloud-devops" },
-        { label: "Cybersecurity", path: "/services/ai-cybersecurity-suite" },
-        { label: "IT Infrastructure", path: "/services/infrastructure" },
-        { label: "Digital Transformation", path: "/services/transformation" },
-        { label: "Quantum Neural Network", path: "/quantum-neural-network-platform" },
-        { label: "Autonomous Operations", path: "/autonomous-business-operations-platform" },
-        { label: "IT Asset Management", path: "/ai-powered-it-asset-management" }
+        { label: "Services Overview", path: "/services-overview" },
+        { label: "AI Services", path: "/ai-services" },
+        { label: "IT Services", path: "/it-services" },
+        { label: "Micro SaaS", path: "/micro-saas" },
+        { label: "All Services", path: "/services" },
+        { label: "Pricing Guide", path: "/pricing-guide" }
       ]
     },
     {
@@ -128,10 +126,9 @@ export function Footer() {
       title: "Support",
       links: [
         { label: "Contact Us", path: "/contact" },
-        { label: "Help Center", path: "/help" },
-        { label: "Support Portal", path: "/support" },
+        { label: "Help Center", path: "/support" },
+        { label: "System Status", path: "/status" },
         { label: "FAQ", path: "/faq" },
-        { label: "Consulting", path: "/services/consulting" },
         { label: "Request Quote", path: "/contact" }
       ]
     }

@@ -84,11 +84,11 @@ export function AppHeader() {
       color: 'from-purple-500 to-pink-600',
       icon: Brain,
       services: [
-        { name: 'AI Business Intelligence', href: '/services/ai-business-intelligence', description: 'Advanced analytics & insights' },
-        { name: 'AI Sales Copilot', href: '/services/ai-sales-copilot', description: 'Sales automation & optimization' },
-        { name: 'AI Compliance Assistant', href: '/services/ai-compliance-assistant', description: 'Regulatory compliance automation' },
-        { name: 'AI Auto Email Responder', href: '/services/ai-auto-email-responder', description: 'Smart email management' },
-        { name: 'LLM Content Studio', href: '/services/llm-content-studio', description: 'AI-powered content creation' }
+        { name: 'AI Business Intelligence', href: '/services?q=AI%20Business%20Intelligence', description: 'Advanced analytics & insights' },
+        { name: 'AI Sales Copilot', href: '/services?q=AI%20Sales%20Copilot', description: 'Sales automation & optimization' },
+        { name: 'AI Compliance Assistant', href: '/services?q=AI%20Compliance%20Assistant', description: 'Regulatory compliance automation' },
+        { name: 'AI Auto Email Responder', href: '/services?q=AI%20Auto%20Email%20Responder', description: 'Smart email management' },
+        { name: 'LLM Content Studio', href: '/services?q=LLM%20Content%20Studio', description: 'AI-powered content creation' }
       ]
     },
     {
@@ -97,9 +97,9 @@ export function AppHeader() {
       color: 'from-blue-500 to-cyan-600',
       icon: Cloud,
       services: [
-        { name: 'Cloud DevOps', href: '/services/cloud-devops', description: 'Infrastructure automation' },
-        { name: 'Cloud FinOps Optimizer', href: '/services/cloud-finops-optimizer', description: 'Cost optimization' },
-        { name: 'FinOps Advisor', href: '/services/finops-advisor', description: 'Financial operations guidance' }
+        { name: 'Cloud DevOps', href: '/services?q=Cloud%20DevOps', description: 'Infrastructure automation' },
+        { name: 'Cloud Cost Optimizer', href: '/services?q=Cloud%20Cost%20Optimizer', description: 'Cost optimization' },
+        { name: 'FinOps Advisor', href: '/services?q=FinOps%20Advisor', description: 'Financial operations guidance' }
       ]
     },
     {
@@ -108,10 +108,10 @@ export function AppHeader() {
       color: 'from-green-500 to-emerald-600',
       icon: Rocket,
       services: [
-        { name: 'Digital Twin', href: '/services/digital-twin', description: 'Virtual simulation & monitoring' },
-        { name: 'IoT Edge Computing', href: '/services/iot-edge', description: 'Smart device networks' },
-        { name: 'Data Analytics', href: '/services/data-analytics', description: 'Advanced data processing' },
-        { name: 'IT Infrastructure', href: '/services/it-infrastructure', description: 'Enterprise infrastructure' }
+        { name: 'Digital Twin', href: '/services?q=Digital%20Twin', description: 'Virtual simulation & monitoring' },
+        { name: 'Predictive Maintenance', href: '/services?q=Predictive%20Maintenance', description: 'Smart device networks' },
+        { name: 'Data Analytics', href: '/services?q=Data%20Analytics', description: 'Advanced data processing' },
+        { name: 'IT Infrastructure', href: '/services?q=IT%20Infrastructure', description: 'Enterprise infrastructure' }
       ]
     },
     {
@@ -120,9 +120,9 @@ export function AppHeader() {
       color: 'from-red-500 to-orange-600',
       icon: Shield,
       services: [
-        { name: 'AI Compliance Copilot', href: '/services/ai-compliance-copilot', description: 'AI-powered security' },
-        { name: 'Zero Trust Architecture', href: '/services/zero-trust-network-architecture', description: 'Modern security framework' },
-        { name: 'Incident Response', href: '/services/incident-response-platform', description: 'Security incident management' }
+        { name: 'AI Compliance Copilot', href: '/services?q=AI%20Compliance%20Copilot', description: 'AI-powered security' },
+        { name: 'Zero Trust Architecture', href: '/services?q=Zero%20Trust', description: 'Modern security framework' },
+        { name: 'SOC-as-a-Service', href: '/services?q=SOC', description: 'Managed detection & response' }
       ]
     },
     {
