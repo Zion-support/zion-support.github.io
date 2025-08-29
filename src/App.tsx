@@ -43,6 +43,14 @@ const InvestorRelations = React.lazy(() => import('./pages/InvestorRelations'));
 const Press = React.lazy(() => import('./pages/Press'));
 const Legal = React.lazy(() => import('./pages/Legal'));
 const RevolutionaryServices2030 = React.lazy(() => import('./pages/RevolutionaryServices2030'));
+const Demo = React.lazy(() => import('./pages/Demo'));
+
+// AI Service pages
+const AIHealthcarePlatform = React.lazy(() => import('./pages/services/ai-healthcare-platform'));
+const AIContentCreation = React.lazy(() => import('./pages/services/ai-content-creation'));
+const AICybersecurity = React.lazy(() => import('./pages/services/ai-cybersecurity'));
+const QuantumComputing = React.lazy(() => import('./pages/services/quantum-computing'));
+const IoTEdgeComputing = React.lazy(() => import('./pages/services/iot-edge-computing'));
 
 // Enhanced services pages - only import existing ones
 const ComprehensivePricingGuide2027 = React.lazy(() => import('./pages/ComprehensivePricingGuide2027.tsx'));
@@ -90,26 +98,20 @@ const Marketplace = () => (
   <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 flex items-center justify-center">
     <SEO 
       title="Marketplace - Zion Tech Group"
-      description="Explore our marketplace of AI-powered technology solutions and services."
+      description="Discover and purchase cutting-edge AI solutions and technology services."
     />
     <div className="text-center text-white">
       <h1 className="text-4xl font-bold mb-4">Marketplace</h1>
-      <p className="text-xl text-gray-300">Explore our solutions</p>
+      <p className="text-xl text-gray-300">Coming Soon</p>
     </div>
   </div>
 );
 
-// Enhanced loading component with better UX
 const EnhancedLoadingSpinner = () => (
-  <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 flex items-center justify-center">
-    <div className="text-center">
+  <div className="min-h-screen bg-futuristic flex items-center justify-center">
+    <div className="text-center text-white">
       <LoadingSpinner size="lg" />
-      <div className="mt-6 text-xl font-medium text-white animate-pulse">
-        Loading amazing content...
-      </div>
-      <div className="mt-4 text-sm text-gray-400">
-        Powered by Zion Tech Group
-      </div>
+      <p className="mt-4 text-lg">Loading...</p>
     </div>
   </div>
 );
@@ -147,6 +149,10 @@ function App() {
                       <Route path="/white-papers" element={<WhitePapers />} />
                       <Route path="/webinars" element={<Webinars />} />
                       <Route path="/revolutionary-services-2030" element={<RevolutionaryServices2030 />} />
+                      <Route path="/demo" element={<Demo />} />
+                      <Route path="/community" element={<Community />} />
+                      <Route path="/support" element={<Support />} />
+                      <Route path="/schedule-demo" element={<ScheduleDemo />} />
                       <Route path="/services/enhanced" element={<EnhancedServicesLanding />} />
                       <Route path="/services/micro-saas" element={<MicroSaaSProducts />} />
                       <Route path="/services/comprehensive-advertising" element={<ComprehensiveServicesAdvertising />} />
@@ -161,9 +167,6 @@ function App() {
                       <Route path="/api-docs" element={<APIDocumentation />} />
                       <Route path="/developers" element={<Developers />} />
                       <Route path="/training" element={<Training />} />
-                      <Route path="/community" element={<Community />} />
-                      <Route path="/support" element={<Support />} />
-                      <Route path="/demo" element={<ScheduleDemo />} />
                       <Route path="/investors" element={<InvestorRelations />} />
                       <Route path="/press" element={<Press />} />
                       <Route path="/legal" element={<Legal />} />
@@ -174,6 +177,11 @@ function App() {
                       <Route path="/services/data-analytics" element={<DataAnalytics />} />
                       <Route path="/services/it-infrastructure" element={<ITInfrastructure />} />
                       <Route path="/services/ai-business-intelligence" element={<AIBusinessIntelligence />} />
+                      <Route path="/services/ai-healthcare-platform" element={<AIHealthcarePlatform />} />
+                      <Route path="/services/ai-content-creation" element={<AIContentCreation />} />
+                      <Route path="/services/ai-cybersecurity" element={<AICybersecurity />} />
+                      <Route path="/services/quantum-computing" element={<QuantumComputing />} />
+                      <Route path="/services/iot-edge-computing" element={<IoTEdgeComputing />} />
                       <Route path="/services/ai-legal-document-analyzer" element={<AILegalDocumentAnalyzer />} />
                       <Route path="/services/ai-real-estate-investment-analyzer" element={<AIRealEstateInvestmentAnalyzer />} />
                       <Route path="/services/ai-restaurant-management-system" element={<AIRestaurantManagementSystem />} />
