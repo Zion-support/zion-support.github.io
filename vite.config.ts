@@ -3,7 +3,7 @@ import react from '@vitejs/plugin-react'
 import { resolve } from 'path'
 
 // https://vite.dev/config/
-export default defineConfig(async () => ({
+export default defineConfig({
   plugins: [react()],
   resolve: {
     alias: {
@@ -97,14 +97,11 @@ export default defineConfig(async () => ({
   css: {
     devSourcemap: true,
     postcss: {
-      plugins: [
-        (await import('tailwindcss')).default,
-        (await import('autoprefixer')).default
-      ]
+      plugins: []
     }
   },
   define: {
     __APP_VERSION__: JSON.stringify(process.env.npm_package_version),
     __BUILD_TIME__: JSON.stringify(new Date().toISOString())
   }
-}))
+})
