@@ -78,6 +78,7 @@ const AIContractAnalysis = lazy(() => import('./pages/services/AI-Powered-Contra
 const AISupplyChainOptimizationNew = lazy(() => import('./pages/services/AI-Supply-Chain-Optimization'));
 const AICybersecurityThreatIntelligence = lazy(() => import('./pages/services/AI-Cybersecurity-Threat-Intelligence'));
 const AIHealthcareDiagnostics = lazy(() => import('./pages/services/AI-Healthcare-Diagnostics'));
+const RevolutionaryServices2030 = lazy(() => import('./pages/RevolutionaryServices2030'));
 
 function App() {
   return (
@@ -125,6 +126,8 @@ function App() {
                 <Route path="/investors" element={<InvestorRelations />} />
                 <Route path="/press" element={<Press />} />
                 <Route path="/legal" element={<Legal />} />
+                <Route path="/revolutionary-services-2030" element={<RevolutionaryServices2030 />} />
+                <Route path="/partnerships" element={<Partners />} />
                 
                 {/* Service Routes - only for existing pages */}
                 <Route path="/services/cloud-devops" element={<CloudDevOps />} />
