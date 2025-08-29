@@ -464,40 +464,6 @@ export function getPasswordStrengthIndicator(password) {
  * @param {object} requirements - Password requirements object
  * @returns {object} Validation result
  */
-export function validatePassword(password, requirements = {}) {
-  const {
-    minLength = 8,
-    requireUppercase = true,
-    requireLowercase = true,
-    requireNumbers = true,
-    requireSpecialChars = true,
-    maxLength = 128
-  } = requirements;
-
-  const errors = [];
-
-  if (password.length < minLength) {
-    errors.push(`Password must be at least ${minLength} characters long`);
-  }
-
-  if (password.length > maxLength) {
-    errors.push(`Password must be no more than ${maxLength} characters long`);
-  }
-
-  if (requireUppercase && !/[A-Z]/.test(password)) {
-    errors.push('Password must contain at least one uppercase letter');
-  }
-
-  if (requireLowercase && !/[a-z]/.test(password)) {
-    errors.push('Password must contain at least one lowercase letter');
-  }
-
-  if (requireNumbers && !/[0-9]/.test(password)) {
-    errors.push('Password must contain at least one number');
-  }
-
-  if (requireSpecialChars && !/[^A-Za-z0-9]/.test(password)) {
-    errors.push('Password must contain at least one special character');
   }
 
   return {

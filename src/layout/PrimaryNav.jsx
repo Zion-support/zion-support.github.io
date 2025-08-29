@@ -53,6 +53,7 @@ export function PrimaryNav() {
           <div className="hidden md:block order-1 flex-shrink-0">
             <ResponsiveNavigation />
           </div>
+        </div>
           
           {/* Actions container with responsive layout */}
           <div className="hidden md:flex items-center gap-2 order-2 flex-shrink-0 min-w-0">
@@ -106,12 +107,14 @@ export function PrimaryNav() {
                 </HoverCardContent>
               </HoverCard>
             </div>
+        </div>
             
             {/* Compact controls group */}
             <div className="flex items-center gap-1 border-l border-primary/20 pl-1 ml-1">
               <ModeToggle />
               <LanguageSelector />
             </div>
+        </div>
             
             {/* Auth links - flex wrap for very small screens */}
             <div className="flex items-center gap-1 flex-wrap">
@@ -125,6 +128,7 @@ export function PrimaryNav() {
                 </>)}
               {isLoggedIn && <UserMenu />}
             </div>
+        </div>
           
           {/* Mobile menu button */}
           <button className="md:hidden p-2 rounded focus:outline-none flex-shrink-0" onClick={() => setMobileMenuOpen(!mobileMenuOpen)} aria-expanded={mobileMenuOpen} aria-label={t('general.toggle_mobile_menu')}>
@@ -137,6 +141,7 @@ export function PrimaryNav() {
           <div className="relative bg-card border-t border-primary/20 max-h-[calc(100vh-4rem)] overflow-y-auto">
             <MobileMenu unreadCount={unreadCount} onClose={() => setMobileMenuOpen(false)}/>
           </div>
+        </div>
         </div>)}
       {isMobile && <MobileBottomNav unreadCount={unreadCount}/>}
     </>);

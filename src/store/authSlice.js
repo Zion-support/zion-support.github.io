@@ -46,7 +46,7 @@ export const signupUser = createAsyncThunk(
               token: 'mock-jwt-token'
             });
           } else {
-            reject(new Error('Invalid user data'));
+            rejectWithValue(new Error('Invalid user data'));
           }
         }, 1000);
       });
