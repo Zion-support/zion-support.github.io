@@ -27,13 +27,13 @@ import {
   MapPin
 } from 'lucide-react';
 import { SEO } from '../components/SEO';
-import { INNOVATIVE_MICRO_SAAS_SERVICES_2025 } from '../data/innovativeMicroSaasServices2025';
+import { COMPREHENSIVE_INNOVATIVE_SERVICES_2030 } from '../data/comprehensiveInnovativeServices2030';
 
 const ComprehensivePricing2025: React.FC = () => {
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [sortBy, setSortBy] = useState('price');
 
-  const allServices = INNOVATIVE_MICRO_SAAS_SERVICES_2025;
+  const allServices = COMPREHENSIVE_INNOVATIVE_SERVICES_2030;
 
   const categories = [
     { id: 'all', name: 'All Services', icon: '🚀' },

@@ -56,7 +56,7 @@ import {
   Network2
 } from 'lucide-react';
 import { SEO } from '../components/SEO';
-import { INNOVATIVE_MICRO_SAAS_SERVICES_2025 } from '../data/innovativeMicroSaasServices2025';
+import { COMPREHENSIVE_INNOVATIVE_SERVICES_2030 } from '../data/comprehensiveInnovativeServices2030';
 
 const EnhancedServicesShowcase2025: React.FC = () => {
   const [activeCategory, setActiveCategory] = useState('all');
@@ -65,7 +65,7 @@ const EnhancedServicesShowcase2025: React.FC = () => {
   const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
   const [selectedService, setSelectedService] = useState<any>(null);
 
-  const allServices = INNOVATIVE_MICRO_SAAS_SERVICES_2025;
+  const allServices = COMPREHENSIVE_INNOVATIVE_SERVICES_2030;
 
   // Enhanced categories with new services
   const categories = [
