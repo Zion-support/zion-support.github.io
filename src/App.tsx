@@ -47,6 +47,9 @@ const ScheduleDemo = React.lazy(() => import('./pages/ScheduleDemo'));
 const CloudDevOps = React.lazy(() => import('./pages/services/CloudDevOps'));
 const DigitalTransformation = React.lazy(() => import('./pages/services/DigitalTransformation'));
 const AISupplyChainOptimization = React.lazy(() => import('./pages/services/AISupplyChainOptimization'));
+const AIIncidentPostmortems = React.lazy(() => import('./pages/services/AIIncidentPostmortems'));
+const AIFinancialComplianceAssistant = React.lazy(() => import('./pages/services/AIFinancialComplianceAssistant'));
+const AIHealthcarePredictiveAnalytics = React.lazy(() => import('./pages/services/AIHealthcarePredictiveAnalytics'));
 
 // Enhanced loading component with better UX
 const EnhancedLoadingSpinner = React.memo(() => (
@@ -126,6 +129,9 @@ const App = React.memo(() => {
     { path: '/services/cloud-devops', element: <CloudDevOps /> },
     { path: '/services/digital-transformation', element: <DigitalTransformation /> },
     { path: '/services/ai-supply-chain-optimization', element: <AISupplyChainOptimization /> },
+    { path: '/services/ai-incident-postmortems', element: <AIIncidentPostmortems /> },
+    { path: '/services/ai-financial-compliance-assistant', element: <AIFinancialComplianceAssistant /> },
+    { path: '/services/ai-healthcare-predictive-analytics', element: <AIHealthcarePredictiveAnalytics /> },
   ], []);
 
   // Memoize the route elements to prevent unnecessary re-renders
