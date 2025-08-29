@@ -25,7 +25,11 @@ export default function ServicesAdvertisingPage() {
     { title: 'Privacy Request Portal (DSAR)', price: 'From $99/mo + usage', refs: ['https://transcend.io/pricing/', 'https://www.onetrust.com/pricing/'], href: '/services/gdpr-dsar-portal' },
     { title: 'CSP & Security Headers Manager', price: 'From $49/mo per domain', refs: ['https://securityheaders.com/'], href: '/services/security-headers-csp-manager' },
     { title: 'Checkout A/B Optimizer', price: 'From $99/mo', refs: ['https://www.optimizely.com/pricing/'], href: '/services/checkout-performance-optimizer' },
-    { title: 'Status & Incident Hub', price: 'From $59/mo', refs: ['https://betterstack.com/status/pricing'], href: '/services/status-incident-hub' }
+    { title: 'Status & Incident Hub', price: 'From $59/mo', refs: ['https://betterstack.com/status/pricing'], href: '/services/status-incident-hub' },
+    { title: 'AI RFP Response Copilot', price: 'From $129/mo', refs: ['https://www.rfpio.com/pricing/'], href: '/services/ai-rfp-response-copilot' },
+    { title: 'Consent & Preferences Center', price: 'From $79/mo', refs: ['https://www.onetrust.com/pricing/'], href: '/services/gdpr-consent-preferences-center' },
+    { title: 'Edge Cron Orchestrator', price: 'From $59/mo', refs: ['https://vercel.com/docs/cron-jobs'], href: '/services/edge-cron-orchestrator' },
+    { title: 'ML Feature Store Starter', price: 'From $149/mo', refs: ['https://www.feast.dev/'], href: '/services/ml-feature-store-starter' }
   ];
   const anchors = [
     { title: 'AI & ML', href: '#ai-evaluation-orchestrator' },
