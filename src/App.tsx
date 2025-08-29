@@ -106,6 +106,12 @@ const ComprehensiveServicesLanding = React.lazy(() => import('./pages/Comprehens
 // Services Sitemap
 const ServicesSitemap = React.lazy(() => import('./pages/ServicesSitemap'));
 
+// All Services Index
+const AllServicesIndex = React.lazy(() => import('./pages/AllServicesIndex'));
+
+// Pricing Comparison
+const PricingComparison = React.lazy(() => import('./pages/PricingComparison'));
+
 // Simple placeholder pages for missing ones
 const Community = React.lazy(() => import('./pages/Community'));
 const Documentation = React.lazy(() => import('./pages/Documentation'));
@@ -246,11 +252,17 @@ function App() {
               {/* Comprehensive Services Landing Route */}
               <Route path="/comprehensive-services" element={<ComprehensiveServicesLanding />} />
               
-              {/* Services Sitemap Route */}
-              <Route path="/services-sitemap" element={<ServicesSitemap />} />
-              
-              {/* Catch all route */}
-              <Route path="*" element={<Home />} />
+                      {/* Services Sitemap Route */}
+        <Route path="/services-sitemap" element={<ServicesSitemap />} />
+        
+        {/* All Services Index Route */}
+        <Route path="/all-services" element={<AllServicesIndex />} />
+        
+        {/* Pricing Comparison Route */}
+        <Route path="/pricing" element={<PricingComparison />} />
+        
+        {/* Catch all route */}
+        <Route path="/" element={<Home />} />
             </Routes>
           </Suspense>
         </main>
