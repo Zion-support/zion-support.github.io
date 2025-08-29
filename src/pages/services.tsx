@@ -154,6 +154,50 @@ const Services: React.FC = () => {
           </div>
         </div>
 
+        {/* New: Comprehensive Services Showcase */}
+        <div className="mt-24 text-left">
+          <h2 className="text-4xl font-bold mb-4">Comprehensive Services Showcase 2031</h2>
+          <p className="text-gray-300 mb-10 max-w-4xl">Explore our complete portfolio of revolutionary AI, IT infrastructure, and micro SAAS services designed for the future.</p>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20">
+              <h3 className="text-2xl font-bold mb-2">🚀 AI-Powered Micro SAAS</h3>
+              <p className="text-gray-300 mb-4">Revolutionary AI services that automate, optimize, and transform your business operations.</p>
+              <ul className="text-sm text-gray-300 mb-4 list-disc pl-5 space-y-1">
+                <li>AI Autonomous Code Reviewer</li>
+                <li>AI Quantum Financial Trading</li>
+                <li>AI Workflow Orchestrator</li>
+                <li>AI Healthcare Analytics</li>
+              </ul>
+              <p className="text-2xl font-bold text-blue-400 mb-4">$299 - $2,999/month</p>
+              <a href="/comprehensive-services-showcase-2031" className="text-cyan-300 hover:text-cyan-200 font-semibold">Explore AI Services →</a>
+            </div>
+            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20">
+              <h3 className="text-2xl font-bold mb-2">☁️ IT Infrastructure & Cloud</h3>
+              <p className="text-gray-300 mb-4">Enterprise-grade infrastructure solutions for modern, scalable, and secure operations.</p>
+              <ul className="text-sm text-gray-300 mb-4 list-disc pl-5 space-y-1">
+                <li>Cloud-Native Transformation</li>
+                <li>Zero Trust Security</li>
+                <li>Edge Computing Infrastructure</li>
+                <li>Quantum Computing Platform</li>
+              </ul>
+              <p className="text-2xl font-bold text-blue-400 mb-4">$25,000 - $300,000</p>
+              <a href="/comprehensive-services-showcase-2031" className="text-cyan-300 hover:text-cyan-200 font-semibold">Explore IT Services →</a>
+            </div>
+            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20">
+              <h3 className="text-2xl font-bold mb-2">🤖 Specialized AI Solutions</h3>
+              <p className="text-gray-300 mb-4">Cutting-edge AI solutions for specific industries and use cases.</p>
+              <ul className="text-sm text-gray-300 mb-4 list-disc pl-5 space-y-1">
+                <li>AI Strategy Consulting</li>
+                <li>AI Ethics & Governance</li>
+                <li>Computer Vision & NLP</li>
+                <li>Autonomous Systems</li>
+              </ul>
+              <p className="text-2xl font-bold text-blue-400 mb-4">$800 - $50,000</p>
+              <a href="/comprehensive-services-showcase-2031" className="text-cyan-300 hover:text-cyan-200 font-semibold">Explore AI Solutions →</a>
+            </div>
+          </div>
+        </div>
+
         {/* CTA and Contact */}
         <div className="mt-24 text-left">
           <div className="bg-white/5 rounded-2xl p-8 border border-white/10">
