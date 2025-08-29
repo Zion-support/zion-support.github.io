@@ -23,7 +23,25 @@
     "type-check:all": "npm run type-check && npm run type-check:backend",
     "prepare": "git config core.hooksPath .husky || true",
     "fix:all": "npm run lint --fix || true",
-    "install:all": "npm install && cd server && npm install"
+    "install:all": "npm install && cd server && npm install",
+    
+    "automation:start": "pm2 start ecosystem.config.cjs",
+    "automation:stop": "pm2 stop ecosystem.config.cjs",
+    "automation:restart": "pm2 restart ecosystem.config.cjs",
+    "automation:status": "pm2 status",
+    "automation:logs": "pm2 logs",
+    "automation:monit": "pm2 monit",
+    "automation:health": "node scripts/automation/intelligent-orchestrator.cjs health",
+    "automation:reports": "node scripts/automation/intelligent-orchestrator.cjs reports",
+    
+    "ai:review": "node scripts/automation/ai-code-reviewer.cjs",
+    "ai:test": "node scripts/automation/intelligent-test-generator.cjs",
+    "ai:optimize": "node scripts/automation/smart-performance-optimizer.cjs",
+    "ai:orchestrate": "node scripts/automation/intelligent-orchestrator.cjs",
+    
+    "test:coverage": "vitest --coverage",
+    "test:watch": "vitest --watch",
+    "test:ui": "vitest --ui"
   },
   "dependencies": {
     "@hookform/resolvers": "^5.2.1",

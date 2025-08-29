@@ -187,6 +187,62 @@ module.exports = {
         NODE_ENV: 'production',
         AUTOMATION_INTERVAL: '21600000' // 6 hours
       }
+    },
+
+    // AI-Powered Code Reviewer - runs every 2 hours (HIGH PRIORITY)
+    {
+      name: 'ai-code-reviewer',
+      script: './scripts/automation/ai-code-reviewer.cjs',
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      max_memory_restart: '1G',
+      env: {
+        NODE_ENV: 'production',
+        AUTOMATION_INTERVAL: '7200000' // 2 hours
+      }
+    },
+
+    // Intelligent Test Generator - runs every 4 hours
+    {
+      name: 'intelligent-test-generator',
+      script: './scripts/automation/intelligent-test-generator.cjs',
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      max_memory_restart: '1G',
+      env: {
+        NODE_ENV: 'production',
+        AUTOMATION_INTERVAL: '14400000' // 4 hours
+      }
+    },
+
+    // Smart Performance Optimizer - runs every 6 hours
+    {
+      name: 'smart-performance-optimizer',
+      script: './scripts/automation/smart-performance-optimizer.cjs',
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      max_memory_restart: '1G',
+      env: {
+        NODE_ENV: 'production',
+        AUTOMATION_INTERVAL: '21600000' // 6 hours
+      }
+    },
+
+    // Intelligent Automation Orchestrator - runs every hour (HIGHEST PRIORITY)
+    {
+      name: 'intelligent-orchestrator',
+      script: './scripts/automation/intelligent-orchestrator.cjs',
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      max_memory_restart: '1G',
+      env: {
+        NODE_ENV: 'production',
+        AUTOMATION_INTERVAL: '3600000' // 1 hour
+      }
     }
   ]
 };
