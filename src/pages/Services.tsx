@@ -1,62 +1,19 @@
-import React, { useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { Link } from 'react-router-dom';
-import { 
-  Brain, 
-  Cloud, 
-  Shield, 
-  Rocket, 
-  Zap, 
-  Users, 
-  Globe, 
-  Cpu,
-  Lock,
-  Heart,
-  Star,
+import { motion } from 'framer-motion';
+import {
   ArrowRight,
-  CheckCircle,
-  TrendingUp,
-  Code,
-  Database,
-  Network,
-  Smartphone,
-  BarChart3,
-  MessageSquare,
-  FileText,
-  ShoppingCart,
-  Headphones,
-  Mail,
-  Search,
-  HelpCircle,
-  ShieldCheck,
-  Globe2,
-  Leaf,
-  Sparkles,
-  Target,
-  DollarSign,
-  Clock,
-  Award,
-  Phone,
+  ChevronLeft,
+  ChevronRight,
   Mail as MailIcon,
   MapPin,
-  Infinity,
-  Building2,
-  Car,
-  Factory,
-  GraduationCap,
-  Scale,
-  Truck,
-  Wheat,
-  Zap2,
-  Brain2,
-  Cloud2,
-  Lock2,
-  ChevronLeft,
-  ChevronRight
+  Phone,
+  Rocket,
+  Search,
+  Star
 } from 'lucide-react';
+import { useState } from 'react';
+import { Link } from 'react-router-dom';
 import { SEO } from '../components/SEO';
 import { COMPREHENSIVE_SERVICES_INDEX_2030, SERVICE_CATEGORIES_2030, SERVICE_STATISTICS_2030 } from '../data/comprehensiveServicesIndex2030';
-import { COMPREHENSIVE_PRICING_GUIDE_2030 } from '../data/comprehensivePricingGuide2030';
 
 export default function Services() {
   const [activeCategory, setActiveCategory] = useState('all');
@@ -384,7 +341,6 @@ export default function Services() {
                     {category.icon} {category.name} ({category.count})
                   </button>
                 ))}
->>>>>>> 0e63d3ea6cae6932852da2c733a36c5ad5825e94
               </div>
             </motion.div>
           </div>
