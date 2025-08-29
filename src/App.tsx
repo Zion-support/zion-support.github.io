@@ -61,6 +61,9 @@ const AILegalDocumentAnalysis = React.lazy(() => import('./pages/services/ai-leg
 const AISupplyChainOptimization = React.lazy(() => import('./pages/services/ai-supply-chain-optimization'));
 const AIHealthcareAnalytics = React.lazy(() => import('./pages/services/ai-healthcare-analytics'));
 const AIFinancialTrading = React.lazy(() => import('./pages/services/ai-financial-trading'));
+
+// Ultimate Zion Services 2025
+const UltimateZionServicesShowcase2025 = React.lazy(() => import('./pages/UltimateZionServicesShowcase2025'));
 // Service pages - only import existing ones
 const CloudDevOps = React.lazy(() => import('./pages/services/CloudDevOps'));
 const DigitalTwin = React.lazy(() => import('./pages/services/DigitalTwin'));
@@ -119,6 +122,7 @@ function App() {
                 <Route path="/innovative-micro-saas-services-2025" element={<InnovativeMicroSAASServices2025 />} />
                 <Route path="/innovative-services-showcase-2027" element={<InnovativeServicesShowcase2027 />} />
                 <Route path="/comprehensive-services-landing-2027" element={<ComprehensiveServicesLanding2027 />} />
+                <Route path="/ultimate-zion-services-2025" element={<UltimateZionServicesShowcase2025 />} />
                 <Route path="/services/innovative-2025" element={<InnovativeServices2025 />} />
                 <Route path="/schedule-demo" element={<ScheduleDemo />} />
                 <Route path="/community" element={<Community />} />
