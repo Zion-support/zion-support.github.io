@@ -70,11 +70,14 @@ export const EnhancedFuturisticFooter: React.FC = () => {
       color: 'from-indigo-600 to-purple-600',
       links: [
         { name: 'AI Business Intelligence', href: '/services/ai-business-intelligence' },
-        { name: 'Cloud DevOps', href: '/services/cloud-devops' },
-        { name: 'Digital Twin', href: '/services/digital-twin' },
-        { name: 'IoT Edge Computing', href: '/services/iot-edge' },
-        { name: 'Cybersecurity Suite', href: '/services/ai-compliance-copilot' },
-        { name: 'Data Analytics', href: '/services/data-analytics' }
+        { name: 'AI Workflow Orchestrator', href: '/services/ai-workflow-orchestrator' },
+        { name: 'AI Customer Success Platform', href: '/services/ai-customer-success-platform' },
+        { name: 'AI Data Governance', href: '/services/data-analytics' },
+        { name: 'AI Healthcare Analytics', href: '/services/ai-healthcare-analytics-platform' },
+        { name: 'AI Project Management Platform', href: '/services/ai-project-management-platform' },
+        { name: 'AI Cybersecurity Threat Detection', href: '/services/ai-cybersecurity-threat-detection' },
+        { name: 'AI Financial Trading Platform', href: '/services/ai-financial-trading-platform' },
+        { name: 'AI Content Marketing Automation', href: '/services/ai-content-marketing-automation' }
       ]
     },
     {

@@ -1,6 +1,6 @@
+import { ArrowRight, Atom, BookOpen, Brain, Building, Building2, ChevronDown, Cloud, Code, Cpu, DollarSign, FileText, Globe, HeartHandshake, Heart, HelpCircle, Leaf, Lock, Mail, MapPin, Menu, MessageCircle, PenTool, Phone, Rocket, Scale, Search, Settings, Shield, ShoppingCart, Star, Target, TrendingUp, Users, X, Zap, User, Bell, Award, GraduationCap, LifeBuoy, BarChart3, Server, Satellite } from 'lucide-react';
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { Menu, X, Search, User, Bell, ChevronDown, Zap, Brain, Shield, Cloud, Rocket, Globe, Cpu, Lock, Heart, Users, ShoppingCart, BookOpen, MessageCircle, HelpCircle, DollarSign, Star, TrendingUp, Award, Settings, Phone, Mail, MapPin, Building, Target, BarChart3, Sparkles, GraduationCap, FileText, Crown, Database, Scale, Calendar, PhoneCall, Briefcase, Package, Search as SearchIcon, Book, Calendar as CalendarIcon, Smartphone } from 'lucide-react';
 import { ThemeToggle } from '../components/ThemeToggle';
 import { ZionLoadingSpinner } from '../components/ui/EnhancedLoadingSpinner';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -53,44 +53,102 @@ export function AppHeader({ onSidebarToggle, isSidebarOpen }: AppHeaderProps) {
     { name: 'Contact', href: '/contact', current: false },
     { name: 'Get Quote', href: '/request-quote', current: false },
   ];
-
-  const servicesDropdown = [
-    {
-      name: 'Service Categories',
-      icon: Settings,
-      color: 'from-blue-600 to-cyan-600',
-      services: [
-        { name: 'Services Overview', href: '/services-overview', description: 'Complete service portfolio', icon: BarChart3 },
-        { name: 'Services Catalog', href: '/services-catalog', description: 'Browse all services', icon: FileText },
-        { name: 'Services Comparison', href: '/services-comparison', description: 'Compare offerings', icon: TrendingUp },
-        { name: 'AI Services', href: '/ai-services', description: 'Artificial Intelligence solutions', icon: Brain },
-        { name: 'IT Services', href: '/it-services', description: 'Enterprise IT solutions', icon: Cloud },
-        { name: 'Micro SaaS', href: '/micro-saas', description: 'Software-as-a-Service products', icon: ShoppingCart }
-      ]
+  const services = [
+    { 
+      name: 'AI Business Intelligence', 
+      href: '/services/ai-business-intelligence', 
+      icon: Brain, 
+      description: 'Machine Learning & Data Science',
+      featured: true,
+      color: 'from-purple-500 to-cyan-500'
     },
-    {
-      name: 'Core Technologies',
-      icon: Cpu,
-      color: 'from-green-600 to-emerald-600',
-      services: [
-        { name: 'AI Business Intelligence', href: '/services/ai-business-intelligence', description: 'AI-powered analytics', icon: Brain },
-        { name: 'Cloud DevOps', href: '/services/cloud-devops', description: 'Cloud infrastructure', icon: Cloud },
-        { name: 'Digital Twin', href: '/services/digital-twin', description: 'Digital simulation', icon: Rocket },
-        { name: 'IoT Edge Computing', href: '/services/iot-edge', description: 'Internet of Things', icon: Cpu },
-        { name: 'Cybersecurity Suite', href: '/services/ai-compliance-copilot', description: 'Security solutions', icon: Shield },
-        { name: 'Data Analytics', href: '/services/data-analytics', description: 'Data processing', icon: Database }
-      ]
+    { 
+      name: 'AI Healthcare Analytics', 
+      href: '/services/ai-healthcare-analytics-platform', 
+      icon: Heart, 
+      description: 'Medical AI & Diagnostics',
+      featured: true,
+      color: 'from-red-500 to-pink-500'
     },
-    {
-      name: 'Innovation Showcase',
-      icon: Star,
-      color: 'from-purple-600 to-pink-600',
-      services: [
-        { name: 'Innovative Services 2025', href: '/innovative-services-showcase-2025', description: 'Latest innovations', icon: Star },
-        { name: 'Revolutionary Services 2030', href: '/revolutionary-services-2030', description: 'Future technologies', icon: Rocket },
-        { name: 'Comprehensive Services 2028', href: '/comprehensive-services-landing-2028', description: 'Complete portfolio', icon: BarChart3 },
-        { name: 'Emerging Tech 2030', href: '/emerging-tech-2030', description: 'Emerging technologies', icon: Zap }
-      ]
+    { 
+      name: 'AI Cybersecurity', 
+      href: '/services/ai-cybersecurity-threat-detection', 
+      icon: Shield, 
+      description: 'AI-Powered Security',
+      featured: true,
+      color: 'from-green-500 to-blue-500'
+    },
+    { 
+      name: 'Quantum Computing', 
+      href: '/services/quantum-computing', 
+      icon: Atom, 
+      description: 'Quantum AI & Optimization',
+      featured: true,
+      color: 'from-purple-500 to-pink-500'
+    },
+    { 
+      name: 'IoT Edge Computing', 
+      href: '/services/iot-edge', 
+      icon: Cpu, 
+      description: 'IoT & Real-time Processing',
+      featured: true,
+      color: 'from-blue-500 to-cyan-500'
+    },
+    { 
+      name: 'Digital Twin Platform', 
+      href: '/services/digital-twin', 
+      icon: Globe, 
+      description: 'Virtual Replicas & Simulation',
+      featured: true,
+      color: 'from-green-500 to-emerald-500'
+    },
+    { 
+      name: 'Cloud DevOps', 
+      href: '/services/cloud-devops', 
+      icon: Cloud, 
+      description: 'DevOps & Infrastructure',
+      featured: true,
+      color: 'from-blue-500 to-cyan-500'
+    },
+    { 
+      name: 'Micro SaaS Products', 
+      href: '/services/micro-saas', 
+      icon: ShoppingCart, 
+      description: 'AI automations with transparent pricing',
+      featured: true,
+      color: 'from-orange-500 to-red-500'
+    },
+    { 
+      name: 'Data Analytics', 
+      href: '/services/data-analytics', 
+      icon: BarChart3, 
+      description: 'Business Intelligence & Analytics',
+      featured: false,
+      color: 'from-blue-500 to-indigo-500'
+    },
+    { 
+      name: 'IT Infrastructure', 
+      href: '/services/it-infrastructure', 
+      icon: Server, 
+      description: 'Enterprise IT Solutions',
+      featured: false,
+      color: 'from-gray-500 to-slate-500'
+    },
+    { 
+      name: 'Green IT Solutions', 
+      href: '/services/green-it', 
+      icon: Leaf, 
+      description: 'Sustainable Technology',
+      featured: false,
+      color: 'from-green-500 to-emerald-500'
+    },
+    { 
+      name: 'Space Technology', 
+      href: '/services/space-tech', 
+      icon: Satellite, 
+      description: 'Aerospace & Space Tech',
+      featured: false,
+      color: 'from-indigo-500 to-purple-500'
     }
   ];
 
@@ -110,78 +168,115 @@ export function AppHeader({ onSidebarToggle, isSidebarOpen }: AppHeaderProps) {
     },
     {
       name: 'Enterprise Solutions',
-      icon: Building,
-      color: 'from-teal-600 to-blue-600',
-      services: [
-        { name: 'Healthcare Tech', href: '/services/healthcare-tech', description: 'Medical technology', icon: Heart },
-        { name: 'Blockchain Solutions', href: '/services/blockchain-enterprise-solutions', description: 'Blockchain technology', icon: Lock },
-        { name: 'Quantum Computing', href: '/services/quantum-computing', description: 'Quantum solutions', icon: Zap },
-        { name: 'Space Technology', href: '/services/space-tech', description: 'Aerospace solutions', icon: Rocket },
-        { name: 'Sustainability Tech', href: '/services/sustainability', description: 'Green technology', icon: Globe },
-        { name: 'Digital Transformation', href: '/services/digital-transformation', description: 'Business modernization', icon: TrendingUp }
-      ]
+      href: '/solutions',
+      icon: Building2,
+      description: 'Large-scale business transformations',
+      featured: true
     },
     {
-      name: 'Micro SaaS Products',
-      icon: ShoppingCart,
-      color: 'from-orange-600 to-red-600',
-      services: [
-        { name: 'AI Lead Scoring', href: '/services/ai-lead-scoring', description: 'Lead qualification', icon: Target },
-        { name: 'Website AI Chatbot', href: '/services/website-ai-chatbot', description: 'Customer support', icon: MessageCircle },
-        { name: 'AI SEO Optimizer', href: '/services/ai-seo-optimizer', description: 'SEO automation', icon: SearchIcon },
-        { name: 'SaaS Churn Predictor', href: '/services/saas-churn-predictor', description: 'Customer retention', icon: TrendingUp },
-        { name: 'API Monitoring', href: '/services/api-monitoring', description: 'API health tracking', icon: Smartphone },
-        { name: 'Returns Management', href: '/services/returns-management', description: 'E-commerce returns', icon: Package }
-      ]
+      name: 'AI Solutions',
+      href: '/solutions',
+      icon: Brain,
+      description: 'Artificial Intelligence & Machine Learning',
+      featured: true
+    },
+    {
+      name: 'Cybersecurity Solutions',
+      href: '/solutions',
+      icon: Shield,
+      description: 'Advanced security & threat protection',
+      featured: true
+    },
+    {
+      name: 'Cloud Solutions',
+      href: '/solutions',
+      icon: Cloud,
+      description: 'Cloud infrastructure & migration',
+      featured: false
+    },
+    {
+      name: 'Healthcare Solutions',
+      href: '/solutions',
+      icon: Heart,
+      description: 'Digital health transformation',
+      featured: true
+    },
+    {
+      name: 'Financial Solutions',
+      href: '/solutions',
+      icon: TrendingUp,
+      description: 'Fintech innovation & compliance',
+      featured: true
     }
   ];
 
-  const pricingDropdown = [
+  const resources = [
     {
-      name: 'Pricing Plans',
+      name: 'Blog & Insights',
+      href: '/blog',
+      icon: BookOpen,
+      description: 'Latest industry trends and insights',
+      featured: true
+    },
+    {
+      name: 'Case Studies',
+      href: '/case-studies',
+      icon: Target,
+      description: 'Real-world success stories',
+      featured: true
+    },
+    {
+      name: 'White Papers',
+      href: '/white-papers',
+      icon: FileText,
+      description: 'In-depth research and analysis',
+      featured: true
+    },
+    {
+      name: 'Webinars',
+      href: '/webinars',
+      icon: Users,
+      description: 'Expert-led learning sessions',
+      featured: true
+    },
+    {
+      name: 'Documentation',
+      href: '/docs',
+      icon: Code,
+      description: 'Technical guides and APIs',
+      featured: true
+    },
+    {
+      name: 'FAQ & Support',
+      href: '/faq',
+      icon: HelpCircle,
+      description: 'Get help and answers',
+      featured: true
+    },
+    {
+      name: 'Pricing Guide',
+      href: '/pricing',
       icon: DollarSign,
-      color: 'from-emerald-600 to-teal-600',
-      services: [
-        { name: 'Pricing Overview', href: '/pricing', description: 'Service pricing', icon: DollarSign },
-        { name: 'Pricing Guide', href: '/pricing-guide', description: 'Detailed pricing info', icon: FileText },
-        { name: 'Comprehensive Pricing 2026', href: '/comprehensive-pricing-guide-2026', description: 'Future pricing', icon: BarChart3 },
-        { name: 'Pricing Guide 2025', href: '/pricing-guide-2025', description: 'Current pricing', icon: TrendingUp }
-      ]
-    },
-    {
-      name: 'Get Started',
-      icon: Star,
-      color: 'from-cyan-600 to-blue-600',
-      services: [
-        { name: 'Request Quote', href: '/request-quote', description: 'Get custom pricing', icon: DollarSign },
-        { name: 'Schedule Demo', href: '/schedule-demo', description: 'Book a demo', icon: CalendarIcon },
-        { name: 'Contact Sales', href: '/contact', description: 'Speak with sales', icon: PhoneCall },
-        { name: 'Free Trial', href: '/signup', description: 'Start free trial', icon: Star }
-      ]
+      description: 'Transparent pricing plans',
+      featured: true
     }
   ];
 
-  const companyLinks = [
-    { name: 'About Us', href: '/about', description: 'Our story and mission', icon: Building },
-    { name: 'Our Team', href: '/team', description: 'Meet our experts', icon: Users },
-    { name: 'Careers', href: '/careers', description: 'Join our team', icon: Briefcase },
-    { name: 'Partners', href: '/partners', description: 'Strategic partnerships', icon: Building },
-    { name: 'News & Press', href: '/news', description: 'Latest updates', icon: FileText },
-    { name: 'Events', href: '/events', description: 'Upcoming events', icon: CalendarIcon },
-    { name: 'Case Studies', href: '/case-studies', description: 'Success stories', icon: Award },
-    { name: 'Marketplace', href: '/marketplace', description: 'Service marketplace', icon: ShoppingCart }
+  const quickLinks = [
+    { name: 'Services Overview', href: '/services', icon: Star, description: 'All our services' },
+    { name: 'AI Solutions', href: '/services/ai-business-intelligence', icon: Brain, description: 'AI-powered solutions' },
+    { name: 'Micro SaaS', href: '/services/micro-saas', icon: ShoppingCart, description: 'SaaS solutions' },
+    { name: 'Pricing', href: '/pricing', icon: DollarSign, description: 'Transparent pricing' },
+    { name: 'Request Quote', href: '/request-quote', icon: MessageCircle, description: 'Get custom pricing' },
   ];
-
-  const resourceLinks = [
-    { name: 'Help Center', href: '/help', description: 'Support and documentation', icon: HelpCircle },
-    { name: 'Documentation', href: '/documentation', description: 'Technical docs', icon: FileText },
-    { name: 'Training', href: '/training', description: 'Learning resources', icon: GraduationCap },
-    { name: 'Blog', href: '/blog', description: 'Latest insights', icon: BookOpen },
-    { name: 'Webinars', href: '/webinars', description: 'Educational events', icon: CalendarIcon },
-    { name: 'White Papers', href: '/white-papers', description: 'Research papers', icon: FileText },
-    { name: 'FAQ', href: '/faq', description: 'Common questions', icon: HelpCircle },
-    { name: 'Support Center', href: '/support', description: 'Technical support', icon: HelpCircle },
-    { name: 'Community', href: '/community', description: 'User community', icon: Users }
+  const supportLinks = [
+    { name: 'FAQ', href: '/faq', icon: HelpCircle },
+    { name: 'Blog', href: '/blog', icon: BookOpen },
+    { name: 'Help Center', href: '/help', icon: MessageCircle },
+    { name: 'Partners', href: '/partners', icon: Users },
+    { name: 'Documentation', href: '/docs', icon: BookOpen },
+    { name: 'Training', href: '/training', icon: GraduationCap },
+    { name: 'Support', href: '/help', icon: LifeBuoy },
   ];
 
   const handleNavClick = (nav: any) => {
