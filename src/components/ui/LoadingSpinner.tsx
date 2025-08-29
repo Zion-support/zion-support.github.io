@@ -1,22 +1,45 @@
-import React from 'react';
-import { motion } from 'framer-motion';
+import React, { useState, useEffect } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
 import { cn } from '../../utils/cn';
 
 interface LoadingSpinnerProps {
   size?: 'sm' | 'md' | 'lg' | 'xl';
-  color?: 'primary' | 'white' | 'gray';
-  className?: string;
-  showText?: boolean;
+  variant?: 'default' | 'pulse' | 'dots' | 'bars' | 'ripple';
   text?: string;
+  showProgress?: boolean;
+  progress?: number;
+  className?: string;
 }
 
-export default function LoadingSpinner({ 
-  size = 'md', 
-  color = 'primary',
-  className = '',
-  showText = false,
-  text = 'Loading...'
+export function LoadingSpinner({
+  size = 'md',
+  variant = 'default',
+  text,
+  showProgress = false,
+  progress = 0,
+  className = ''
 }: LoadingSpinnerProps) {
+  const [dots, setDots] = useState('');
+  const [currentProgress, setCurrentProgress] = useState(0);
+
+  useEffect(() => {
+    if (variant === 'dots') {
+      const interval = setInterval(() => {
+        setDots(prev => prev.length >= 3 ? '' : prev + '.');
+      }, 500);
+      return () => clearInterval(interval);
+    }
+  }, [variant]);
+
+  useEffect(() => {
+    if (showProgress && progress > currentProgress) {
+      const timer = setTimeout(() => {
+        setCurrentProgress(prev => Math.min(prev + 1, progress));
+      }, 50);
+      return () => clearTimeout(timer);
+    }
+  }, [progress, currentProgress, showProgress]);
+
   const sizeClasses = {
     sm: 'w-4 h-4',
     md: 'w-8 h-8',
@@ -24,30 +47,208 @@ export default function LoadingSpinner({
     xl: 'w-16 h-16'
   };
 
-  const colorClasses = {
-    primary: 'border-cyan-400 border-t-transparent',
-    white: 'border-white border-t-transparent',
-    gray: 'border-gray-400 border-t-transparent'
+  const renderSpinner = () => {
+    switch (variant) {
+      case 'pulse':
+        return (
+          <motion.div
+            className={`${sizeClasses[size]} bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full`}
+            animate={{
+              scale: [1, 1.2, 1],
+              opacity: [1, 0.7, 1]
+            }}
+            transition={{
+              duration: 1.5,
+              repeat: Infinity,
+              ease: "easeInOut"
+            }}
+          />
+        );
+
+      case 'dots':
+        return (
+          <div className="flex space-x-1">
+            {[0, 1, 2].map((i) => (
+              <motion.div
+                key={i}
+                className="w-2 h-2 bg-blue-500 rounded-full"
+                animate={{
+                  scale: [1, 1.5, 1],
+                  opacity: [0.5, 1, 0.5]
+                }}
+                transition={{
+                  duration: 1,
+                  repeat: Infinity,
+                  delay: i * 0.2,
+                  ease: "easeInOut"
+                }}
+              />
+            ))}
+          </div>
+        );
+
+      case 'bars':
+        return (
+          <div className="flex space-x-1">
+            {[0, 1, 2, 3].map((i) => (
+              <motion.div
+                key={i}
+                className="w-1 bg-gradient-to-t from-blue-500 to-cyan-500 rounded-full"
+                style={{ height: size === 'sm' ? '12px' : size === 'md' ? '16px' : size === 'lg' ? '24px' : '32px' }}
+                animate={{
+                  scaleY: [1, 2, 1]
+                }}
+                transition={{
+                  duration: 1,
+                  repeat: Infinity,
+                  delay: i * 0.1,
+                  ease: "easeInOut"
+                }}
+              />
+            ))}
+          </div>
+        );
+
+      case 'ripple':
+        return (
+          <div className="relative">
+            <motion.div
+              className={`${sizeClasses[size]} border-2 border-blue-500 rounded-full`}
+              animate={{
+                scale: [1, 1.5, 2],
+                opacity: [1, 0.5, 0]
+              }}
+              transition={{
+                duration: 2,
+                repeat: Infinity,
+                ease: "easeOut"
+              }}
+            />
+            <motion.div
+              className={`${sizeClasses[size]} border-2 border-cyan-500 rounded-full absolute top-0 left-0`}
+              animate={{
+                scale: [1, 1.3, 1.8],
+                opacity: [1, 0.7, 0]
+              }}
+              transition={{
+                duration: 2,
+                repeat: Infinity,
+                delay: 0.5,
+                ease: "easeOut"
+              }}
+            />
+          </div>
+        );
+
+      default:
+        return (
+          <motion.div
+            className={`${sizeClasses[size]} border-2 border-gray-300 border-t-blue-500 rounded-full`}
+            animate={{ rotate: 360 }}
+            transition={{
+              duration: 1,
+              repeat: Infinity,
+              ease: "linear"
+            }}
+          />
+        );
+    }
   };
 
   return (
-    <div className={cn('flex flex-col items-center justify-center', className)}>
-      <div className={cn(
-        'animate-spin rounded-full border-2',
-        sizeClasses[size],
-        colorClasses[color]
-      )} />
-      {showText && (
-        <motion.p
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 0.3 }}
-          className="mt-2 text-sm text-gray-500"
+    <div className={`flex flex-col items-center justify-center space-y-4 ${className}`}>
+      <AnimatePresence mode="wait">
+        <motion.div
+          key={variant}
+          initial={{ opacity: 0, scale: 0.8 }}
+          animate={{ opacity: 1, scale: 1 }}
+          exit={{ opacity: 0, scale: 0.8 }}
+          transition={{ duration: 0.3 }}
         >
-          {text}
+          {renderSpinner()}
+        </motion.div>
+      </AnimatePresence>
+
+      {text && (
+        <motion.p
+          initial={{ opacity: 0, y: 10 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.2 }}
+          className="text-sm text-gray-600 dark:text-gray-400 text-center max-w-xs"
+        >
+          {text}{variant === 'dots' ? dots : ''}
         </motion.p>
       )}
+
+      {showProgress && (
+        <motion.div
+          initial={{ opacity: 0, y: 10 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.4 }}
+          className="w-full max-w-xs"
+        >
+          <div className="w-full bg-gray-200 rounded-full h-2 dark:bg-gray-700">
+            <motion.div
+              className="bg-gradient-to-r from-blue-500 to-cyan-500 h-2 rounded-full"
+              initial={{ width: 0 }}
+              animate={{ width: `${currentProgress}%` }}
+              transition={{ duration: 0.5, ease: "easeOut" }}
+            />
+          </div>
+          <p className="text-xs text-gray-500 dark:text-gray-400 text-center mt-2">
+            {currentProgress}% Complete
+          </p>
+        </motion.div>
+      )}
     </div>
+  );
+}
+
+// Specialized loading components for different use cases
+export function PageLoadingSpinner() {
+  return (
+    <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+      <LoadingSpinner
+        size="xl"
+        variant="ripple"
+        text="Loading Zion Tech Group"
+        className="text-white"
+      />
+    </div>
+  );
+}
+
+export function SectionLoadingSpinner() {
+  return (
+    <div className="py-20 flex items-center justify-center">
+      <LoadingSpinner
+        size="lg"
+        variant="pulse"
+        text="Loading content"
+      />
+    </div>
+  );
+}
+
+export function InlineLoadingSpinner() {
+  return (
+    <LoadingSpinner
+      size="sm"
+      variant="default"
+      className="inline-flex"
+    />
+  );
+}
+
+export function ProgressLoadingSpinner({ progress }: { progress: number }) {
+  return (
+    <LoadingSpinner
+      size="md"
+      variant="bars"
+      text="Processing request"
+      showProgress={true}
+      progress={progress}
+    />
   );
 }
 
