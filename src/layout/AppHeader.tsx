@@ -37,8 +37,8 @@ export function AppHeader() {
   const mainNavigation = [
     { name: 'Home', href: '/', current: true },
     { name: 'Services', href: '/services-overview', current: false, hasDropdown: true },
-    { name: 'Solutions', href: '/ai-services', current: false, hasDropdown: true },
-    { name: 'Pricing', href: '/pricing-guide', current: false },
+    { name: 'Solutions', href: '/ai-solutions', current: false, hasDropdown: true },
+    { name: 'Pricing', href: '/pricing', current: false },
     { name: 'Company', href: '/about', current: false, hasDropdown: true },
     { name: 'Support', href: '/help', current: false, hasDropdown: true },
     { name: 'Contact', href: '/contact', current: false },
@@ -88,9 +88,9 @@ export function AppHeader() {
       color: 'from-blue-600 to-cyan-600',
       services: [
         { name: 'Services Overview', href: '/services-overview', description: 'Complete service portfolio' },
-        { name: 'AI Services', href: '/ai-services', description: 'AI-powered solutions' },
-        { name: 'IT Services', href: '/it-services', description: 'Enterprise IT solutions' },
-        { name: 'Micro SaaS', href: '/micro-saas', description: 'Scalable software solutions' }
+        { name: 'AI Services', href: '/ai-solutions', description: 'AI-powered solutions' },
+        { name: 'IT Services', href: '/services/it-infrastructure', description: 'Enterprise IT solutions' },
+        { name: 'Micro SaaS', href: '/services/micro-saas-solutions', description: 'Scalable software solutions' }
       ]
     },
     {
@@ -190,7 +190,7 @@ export function AppHeader() {
   const quickLinks = [
     { name: 'Innovative Services 2025', href: '/innovative-services-showcase-2025', icon: Star, description: 'Latest cutting-edge solutions' },
     { name: 'Services Showcase', href: '/revolutionary-services-showcase-2030', icon: TrendingUp, description: 'Future-ready services' },
-    { name: 'Pricing Guide 2030', href: '/pricing-2030', icon: DollarSign, description: 'Advanced pricing strategies' },
+    { name: 'Pricing Guide 2030', href: '/pricing', icon: DollarSign, description: 'Advanced pricing strategies' },
     { name: 'Request Quote', href: '/request-quote', icon: MessageCircle, description: 'Get custom pricing' },
   ];
 

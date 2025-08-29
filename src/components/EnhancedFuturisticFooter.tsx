@@ -206,7 +206,7 @@ export const EnhancedFuturisticFooter: React.FC = () => {
     { name: 'Enterprise Solutions', href: '/solutions/enterprise' },
     { name: 'Healthcare Solutions', href: '/solutions/healthcare' },
     { name: 'Research & Development', href: '/research-development' },
-    { name: 'Pricing Guide', href: '/pricing-guide' },
+    { name: 'Pricing Guide', href: '/pricing' },
     { name: 'Help Center', href: '/help' },
     { name: 'FAQ', href: '/faq' },
     { name: 'About Us', href: '/about' },
