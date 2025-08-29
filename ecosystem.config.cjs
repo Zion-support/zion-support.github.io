@@ -35,6 +35,48 @@ module.exports = {
       }
     },
 
+    // 🧠 NEW: Intelligent Predictive Monitor - runs every 5 minutes (HIGHEST PRIORITY)
+    {
+      name: 'intelligent-predictive-monitor',
+      script: './scripts/automation/intelligent-predictive-monitor.cjs',
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      max_memory_restart: '512M',
+      env: {
+        NODE_ENV: 'production',
+        AUTOMATION_INTERVAL: '300000' // 5 minutes
+      }
+    },
+
+    // 🤖 NEW: AI Code Optimizer - runs every hour
+    {
+      name: 'ai-code-optimizer',
+      script: './scripts/automation/ai-code-optimizer.cjs',
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      max_memory_restart: '1G',
+      env: {
+        NODE_ENV: 'production',
+        AUTOMATION_INTERVAL: '3600000' // 1 hour
+      }
+    },
+
+    // 📦 NEW: Smart Dependency Manager - runs every 6 hours
+    {
+      name: 'smart-dependency-manager',
+      script: './scripts/automation/smart-dependency-manager.cjs',
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      max_memory_restart: '512M',
+      env: {
+        NODE_ENV: 'production',
+        AUTOMATION_INTERVAL: '21600000' // 6 hours
+      }
+    },
+
     // Continuous console error fixer - runs every 15 minutes (HIGHEST PRIORITY)
     {
       name: 'console-error-fixer',
