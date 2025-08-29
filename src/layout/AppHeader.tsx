@@ -12,6 +12,38 @@ export function AppHeader() {
   const [scrolled, setScrolled] = useState(false);
   const [isSearching, setIsSearching] = useState(false);
 
+  // Prefetch lazily-loaded routes on hover for snappier navigation
+  const prefetchRoute = (path: string) => {
+    switch (path) {
+      case '/':
+        import('../pages/Home');
+        break;
+      case '/services-overview':
+        import('../pages/ServicesOverview');
+        break;
+      case '/ai-services':
+        import('../pages/AIServices');
+        break;
+      case '/it-services':
+        import('../pages/ITServices');
+        break;
+      case '/micro-saas':
+        import('../pages/MicroSaaS');
+        break;
+      case '/pricing-guide':
+        import('../pages/PricingGuide');
+        break;
+      case '/about':
+        import('../pages/About');
+        break;
+      case '/contact':
+        import('../pages/Contact');
+        break;
+      default:
+        break;
+    }
+  };
+
   useEffect(() => {
     const handleScroll = () => {
       setScrolled(window.scrollY > 10);
@@ -163,6 +195,7 @@ export function AppHeader() {
                     <Link
                       to={item.href}
                       className="text-slate-300 hover:text-white transition-colors py-2"
+                      onMouseEnter={() => prefetchRoute(item.href)}
                     >
                       {item.name}
                     </Link>

@@ -22,7 +22,7 @@ export function SEO({
   description,
   canonical,
   url,
-  image = '/images/zion-tech-group-og.jpg',
+  image = '/og-image.svg',
   type = 'website',
   publishedTime,
   modifiedTime,
