@@ -299,34 +299,357 @@ export const servicesCatalog: ServiceCategory[] = [
 				title: 'Smart Forms & Intake',
 				description: 'Conditional logic, AI validation, and workflow routing to accelerate onboarding and lead capture.',
 				category: 'Micro SaaS',
-				price: '$49',
+				price: '$99',
 				billing: 'month',
 				features: [
-					'AI field validation',
-					'Conditional branching',
-					'Webhook and Zapier integrations',
-					'Analytics and conversion funnels',
-					'Export to PDF/CSV'
+					'AI-powered form validation',
+					'Conditional logic and branching',
+					'Workflow automation',
+					'CRM integration',
+					'Analytics and insights'
 				],
-				ctaLabel: 'Launch Smart Forms',
-				href: 'https://ziontechgroup.com/services/smart-forms-intake'
+				ctaLabel: 'Build Smart Forms',
+				href: 'https://ziontechgroup.com/contact'
 			},
 			{
-				id: 'reviews-social-proof',
-				title: 'Reviews & Social Proof Widget',
-				description: 'Aggregate reviews, render trust badges, and add schema markup for higher CTR and SEO.',
+				id: 'ai-customer-success-platform',
+				title: 'AI Customer Success Platform',
+				description: 'Intelligent customer success platform that predicts churn, automates onboarding, and optimizes customer engagement.',
 				category: 'Micro SaaS',
-				price: '$19',
+				price: '$1,499',
 				billing: 'month',
 				features: [
-					'Integrations: Google, G2, Trustpilot',
-					'Carousel and badge components',
-					'Schema.org rich snippets',
-					'Moderation and alerts',
-					'Multi-brand support'
+					'AI-powered churn prediction',
+					'Automated onboarding workflows',
+					'Customer health scoring',
+					'Personalized engagement campaigns',
+					'ROI tracking and analytics'
 				],
-				ctaLabel: 'Boost Conversion',
-				href: 'https://ziontechgroup.com/services/reviews-widget'
+				ctaLabel: 'Optimize Customer Success',
+				href: 'https://ziontechgroup.com/contact'
+			},
+			{
+				id: 'ai-workflow-orchestrator',
+				title: 'AI Workflow Orchestrator',
+				description: 'Intelligent workflow automation platform that uses AI to optimize business processes and increase operational efficiency.',
+				category: 'Micro SaaS',
+				price: '$899',
+				billing: 'month',
+				features: [
+					'AI-powered process optimization',
+					'Visual workflow builder',
+					'Intelligent task routing',
+					'Process mining and analytics',
+					'Integration with 100+ tools'
+				],
+				ctaLabel: 'Automate Workflows',
+				href: 'https://ziontechgroup.com/contact'
+			},
+			{
+				id: 'ai-data-governance-platform',
+				title: 'AI Data Governance Platform',
+				description: 'Comprehensive data governance solution that uses AI to ensure data quality, compliance, and security.',
+				category: 'Micro SaaS',
+				price: '$2,499',
+				billing: 'month',
+				features: [
+					'AI-powered data quality assessment',
+					'Automated compliance monitoring',
+					'Data lineage tracking',
+					'Privacy impact assessments',
+					'Custom governance policies'
+				],
+				ctaLabel: 'Govern Your Data',
+				href: 'https://ziontechgroup.com/contact'
+			},
+			{
+				id: 'ai-cybersecurity-suite',
+				title: 'AI Cybersecurity Suite',
+				description: 'Advanced cybersecurity platform that uses AI to detect, prevent, and respond to cyber threats in real-time.',
+				category: 'Micro SaaS',
+				price: '$3,999',
+				billing: 'month',
+				features: [
+					'AI-powered threat detection',
+					'Behavioral analytics',
+					'Automated incident response',
+					'Real-time monitoring',
+					'24/7 security operations'
+				],
+				ctaLabel: 'Secure Your Business',
+				href: 'https://ziontechgroup.com/contact'
+			},
+			{
+				id: 'quantum-ai-platform',
+				title: 'Quantum AI Platform',
+				description: 'Revolutionary platform that combines quantum computing with AI to solve complex optimization problems.',
+				category: 'Micro SaaS',
+				price: '$5,999',
+				billing: 'month',
+				features: [
+					'Quantum algorithm optimization',
+					'AI model acceleration',
+					'Hybrid quantum-classical computing',
+					'Real-time optimization',
+					'Quantum machine learning'
+				],
+				ctaLabel: 'Explore Quantum AI',
+				href: 'https://ziontechgroup.com/contact'
+			},
+			{
+				id: 'ai-healthcare-analytics',
+				title: 'AI Healthcare Analytics Platform',
+				description: 'Advanced healthcare analytics platform that uses AI to improve patient outcomes and optimize operations.',
+				category: 'Micro SaaS',
+				price: '$3,499',
+				billing: 'month',
+				features: [
+					'AI-powered patient analytics',
+					'Predictive health modeling',
+					'Clinical decision support',
+					'Population health management',
+					'HIPAA compliance'
+				],
+				ctaLabel: 'Transform Healthcare',
+				href: 'https://ziontechgroup.com/contact'
+			},
+			{
+				id: 'edge-computing-platform',
+				title: 'Edge Computing Platform',
+				description: 'Next-generation edge computing platform that brings AI and computing power closer to data sources.',
+				category: 'Micro SaaS',
+				price: '$1,999',
+				billing: 'month',
+				features: [
+					'Distributed edge computing',
+					'AI model deployment',
+					'Real-time data processing',
+					'Edge device management',
+					'Multi-cloud integration'
+				],
+				ctaLabel: 'Deploy Edge AI',
+				href: 'https://ziontechgroup.com/contact'
+			},
+			{
+				id: 'ai-financial-trading-platform',
+				title: 'AI Financial Trading Platform',
+				description: 'Advanced financial trading platform that uses AI to analyze markets and execute trades automatically.',
+				category: 'Micro SaaS',
+				price: '$4,999',
+				billing: 'month',
+				features: [
+					'AI-powered market analysis',
+					'Predictive trading algorithms',
+					'Real-time market data',
+					'Automated trade execution',
+					'Risk management'
+				],
+				ctaLabel: 'Trade with AI',
+				href: 'https://ziontechgroup.com/contact'
+			},
+			{
+				id: 'ai-supply-chain-optimization',
+				title: 'AI Supply Chain Optimization Platform',
+				description: 'Intelligent supply chain platform that uses AI to optimize logistics and reduce costs.',
+				category: 'Micro SaaS',
+				price: '$2,999',
+				billing: 'month',
+				features: [
+					'AI-powered demand forecasting',
+					'Route optimization',
+					'Inventory management',
+					'Supplier risk assessment',
+					'Real-time tracking'
+				],
+				ctaLabel: 'Optimize Supply Chain',
+				href: 'https://ziontechgroup.com/contact'
+			},
+			{
+				id: 'ai-hr-platform',
+				title: 'AI HR Platform',
+				description: 'Comprehensive HR platform that uses AI to automate recruitment and optimize workforce management.',
+				category: 'Micro SaaS',
+				price: '$1,999',
+				billing: 'month',
+				features: [
+					'AI-powered recruitment',
+					'Employee engagement analytics',
+					'Performance management',
+					'Learning and development',
+					'Workforce planning'
+				],
+				ctaLabel: 'Transform HR',
+				href: 'https://ziontechgroup.com/contact'
+			},
+			{
+				id: 'ai-marketing-automation',
+				title: 'AI Marketing Automation Platform',
+				description: 'Intelligent marketing automation platform that uses AI to personalize campaigns and maximize ROI.',
+				category: 'Micro SaaS',
+				price: '$2,499',
+				billing: 'month',
+				features: [
+					'AI-powered campaign optimization',
+					'Personalized content delivery',
+					'Multi-channel automation',
+					'Lead scoring and nurturing',
+					'ROI tracking and analytics'
+				],
+				ctaLabel: 'Automate Marketing',
+				href: 'https://ziontechgroup.com/contact'
+			},
+			{
+				id: 'ai-legal-research-platform',
+				title: 'AI Legal Research Platform',
+				description: 'Advanced legal research platform that uses AI to analyze case law and automate legal research.',
+				category: 'Micro SaaS',
+				price: '$3,999',
+				billing: 'month',
+				features: [
+					'AI-powered case analysis',
+					'Legal document review',
+					'Precedent identification',
+					'Legal research automation',
+					'Compliance monitoring'
+				],
+				ctaLabel: 'Research with AI',
+				href: 'https://ziontechgroup.com/contact'
+			},
+			{
+				id: 'ai-education-platform',
+				title: 'AI Education Platform',
+				description: 'Intelligent education platform that uses AI to personalize learning experiences and optimize outcomes.',
+				category: 'Micro SaaS',
+				price: '$1,799',
+				billing: 'month',
+				features: [
+					'AI-powered personalized learning',
+					'Adaptive learning paths',
+					'Student performance analytics',
+					'Content recommendation',
+					'Automated assessment'
+				],
+				ctaLabel: 'Transform Education',
+				href: 'https://ziontechgroup.com/contact'
+			},
+			{
+				id: 'ai-project-management-platform',
+				title: 'AI Project Management Platform',
+				description: 'Intelligent project management platform that uses AI to optimize planning and resource allocation.',
+				category: 'Micro SaaS',
+				price: '$1,599',
+				billing: 'month',
+				features: [
+					'AI-powered project planning',
+					'Resource optimization',
+					'Risk assessment',
+					'Team collaboration tools',
+					'Time tracking'
+				],
+				ctaLabel: 'Manage Projects with AI',
+				href: 'https://ziontechgroup.com/contact'
+			},
+			{
+				id: 'ai-content-orchestrator',
+				title: 'AI Content Orchestrator Pro',
+				description: 'Enterprise-grade content management platform that uses AI to create, optimize, and distribute content.',
+				category: 'Micro SaaS',
+				price: '$4,999',
+				billing: 'month',
+				features: [
+					'AI-powered content creation',
+					'Multi-channel distribution',
+					'Workflow automation',
+					'Content optimization',
+					'Analytics and insights'
+				],
+				ctaLabel: 'Orchestrate Content',
+				href: 'https://ziontechgroup.com/contact'
+			},
+			{
+				id: 'ai-sales-automation-suite',
+				title: 'AI Sales Automation Suite',
+				description: 'Comprehensive sales automation platform that uses AI to optimize every stage of the sales funnel.',
+				category: 'Micro SaaS',
+				price: '$1,999',
+				billing: 'month',
+				features: [
+					'AI-powered lead scoring',
+					'Automated email sequences',
+					'Sales call scheduling',
+					'CRM integration',
+					'Performance analytics'
+				],
+				ctaLabel: 'Automate Sales',
+				href: 'https://ziontechgroup.com/contact'
+			},
+			{
+				id: 'ai-customer-support-platform',
+				title: 'AI Customer Support Platform',
+				description: 'Intelligent customer support platform that uses AI to provide instant responses and improve satisfaction.',
+				category: 'Micro SaaS',
+				price: '$1,499',
+				billing: 'month',
+				features: [
+					'AI-powered chatbot',
+					'Ticket routing automation',
+					'Knowledge base management',
+					'Customer sentiment analysis',
+					'Multi-language support'
+				],
+				ctaLabel: 'Support with AI',
+				href: 'https://ziontechgroup.com/contact'
+			},
+			{
+				id: 'ai-financial-analytics-platform',
+				title: 'AI Financial Analytics Platform',
+				description: 'Advanced financial analytics platform that uses AI to provide real-time insights and risk assessment.',
+				category: 'Micro SaaS',
+				price: '$2,499',
+				billing: 'month',
+				features: [
+					'Real-time financial monitoring',
+					'AI-powered risk assessment',
+					'Predictive financial modeling',
+					'Custom dashboard creation',
+					'Compliance reporting'
+				],
+				ctaLabel: 'Analyze Finances',
+				href: 'https://ziontechgroup.com/contact'
+			},
+			{
+				id: 'ai-learning-management-system',
+				title: 'AI Learning Management System',
+				description: 'Intelligent learning platform that uses AI to personalize learning experiences and track progress.',
+				category: 'Micro SaaS',
+				price: '$1,299',
+				billing: 'month',
+				features: [
+					'AI-powered content recommendations',
+					'Personalized learning paths',
+					'Progress tracking',
+					'Assessment automation',
+					'Multi-format content support'
+				],
+				ctaLabel: 'Learn with AI',
+				href: 'https://ziontechgroup.com/contact'
+			},
+			{
+				id: 'ai-legal-document-automation',
+				title: 'AI Legal Document Automation Platform',
+				description: 'Intelligent legal platform that uses AI to automate document creation and contract analysis.',
+				category: 'Micro SaaS',
+				price: '$2,199',
+				billing: 'month',
+				features: [
+					'AI-powered document generation',
+					'Contract analysis',
+					'Legal research automation',
+					'Compliance checking',
+					'Document templates'
+				],
+				ctaLabel: 'Automate Legal Docs',
+				href: 'https://ziontechgroup.com/contact'
 			}
 		]
 	},
@@ -335,191 +658,428 @@ export const servicesCatalog: ServiceCategory[] = [
 		slug: 'ai-solutions',
 		items: [
 			{
-				id: 'vector-search-starter',
-				title: 'Vector Search Starter',
-				description: 'Production-ready semantic search with multi-model embeddings, hybrid search, and relevance tuning.',
-				category: 'AI Solutions',
-				price: '$59',
-				billing: 'month',
-				features: [
-					'Multi-model embeddings',
-					'Hybrid + rerank search',
-					'SDKs and relevance tuning',
-					'Observability and quotas',
-					'Pinecone/Weaviate/Postgres integrations'
-				],
-				ctaLabel: 'Launch Search',
-				href: 'https://ziontechgroup.com/services/vector-search-starter'
-			},
-			{
-				id: 'autonomous-business-manager',
-				title: 'Autonomous Business Manager',
-				description: 'AI-powered business management system that autonomously handles operations, decision-making, and strategic planning.',
+				id: 'ai-business-intelligence',
+				title: 'AI Business Intelligence Platform',
+				description: 'Next-generation BI platform that uses AI to automatically analyze data and generate actionable insights.',
 				category: 'AI Solutions',
 				price: '$2,999',
 				billing: 'month',
 				features: [
-					'Autonomous decision making',
-					'Predictive business modeling',
-					'Resource optimization',
-					'Risk assessment',
-					'Continuous learning'
+					'AI-powered data analysis',
+					'Automated insight generation',
+					'Natural language queries',
+					'Predictive analytics',
+					'Custom dashboard creation'
 				],
-				ctaLabel: 'Request Demo',
+				ctaLabel: 'Get AI Insights',
 				href: 'https://ziontechgroup.com/contact'
 			},
 			{
-				id: 'consciousness-simulation-platform',
-				title: 'Consciousness Simulation Platform',
-				description: 'Advanced AI platform for simulating and understanding consciousness, enabling breakthrough research in cognitive science.',
+				id: 'ai-sales-copilot',
+				title: 'AI Sales Copilot',
+				description: 'Intelligent sales assistant that automates lead scoring, follow-ups, and sales process optimization.',
 				category: 'AI Solutions',
-				price: '$5,999',
+				price: '$1,299',
 				billing: 'month',
 				features: [
-					'Neural network simulation',
-					'Consciousness modeling',
-					'Research tools',
-					'Data visualization',
-					'Collaborative workspace'
+					'AI-powered lead scoring',
+					'Automated follow-up sequences',
+					'Sales performance analytics',
+					'CRM integration',
+					'Predictive sales forecasting'
 				],
-				ctaLabel: 'Research Access',
+				ctaLabel: 'Boost Sales with AI',
 				href: 'https://ziontechgroup.com/contact'
 			},
 			{
-				id: 'quantum-neural-network',
-				title: 'Quantum Neural Network Platform',
-				description: 'Revolutionary platform combining quantum computing with neural networks for unprecedented AI capabilities.',
-				category: 'AI Solutions',
-				price: '$8,999',
-				billing: 'month',
-				features: [
-					'Quantum neural processing',
-					'Hybrid classical-quantum',
-					'Advanced training algorithms',
-					'Quantum advantage',
-					'Research collaboration'
-				],
-				ctaLabel: 'Quantum Access',
-				href: 'https://ziontechgroup.com/contact'
-			},
-			{
-				id: 'ai-autonomous-vehicles',
-				title: 'AI Autonomous Vehicle Platform',
-				description: 'Complete autonomous vehicle management system with AI-driven navigation, safety, and fleet optimization.',
-				category: 'AI Solutions',
-				price: '$4,999',
-				billing: 'month',
-				features: [
-					'Autonomous navigation',
-					'Safety monitoring',
-					'Fleet management',
-					'Predictive maintenance',
-					'Regulatory compliance'
-				],
-				ctaLabel: 'Vehicle Integration',
-				href: 'https://ziontechgroup.com/contact'
-			},
-			{
-				id: 'enterprise-rag-search',
-				title: 'Enterprise RAG Search Platform',
-				description: 'Private, secure Retrieval-Augmented Generation over your docs, wikis, tickets, and data.',
-				category: 'AI Solutions',
-				price: '$3,499',
-				billing: 'month',
-				features: [
-					'Hybrid vector + keyword search',
-					'PII redaction and access control',
-					'Grounding citations',
-					'Plugins: Confluence, Google Drive, SharePoint',
-					'On-prem or VPC deployment'
-				],
-				ctaLabel: 'Launch Secure Chat',
-				href: 'https://ziontechgroup.com/services'
-			},
-			{
-				id: 'agentic-copilot-suite',
-				title: 'Agentic Copilot Suite (Sales, Support, DevOps)',
-				description: 'Task-driven AI agents that execute workflows across CRM, ticketing, CI/CD, and cloud.',
-				category: 'AI Solutions',
-				price: '$4,999',
-				billing: 'month',
-				features: [
-					'Guardrailed tool use',
-					'Human-in-the-loop approvals',
-					'Observability and audit trails',
-					'Connectors: Salesforce, Zendesk, GitHub, AWS',
-					'Okta and SSO ready'
-				],
-				ctaLabel: 'Deploy Copilots',
-				href: 'https://ziontechgroup.com/services'
-			},
-			// New AI Solutions
-			{
-				id: 'ai-legal-document-analyzer',
-				title: 'AI Legal Document Analyzer',
-				description: 'Advanced legal document analysis using AI to extract key information, identify risks, and generate summaries.',
+				id: 'ai-compliance-assistant',
+				title: 'AI Compliance Assistant',
+				description: 'Automated compliance monitoring and reporting using AI to ensure regulatory adherence.',
 				category: 'AI Solutions',
 				price: '$1,999',
 				billing: 'month',
 				features: [
-					'Contract analysis',
-					'Risk identification',
-					'Compliance checking',
-					'Document summarization',
-					'Legal research integration'
+					'Automated compliance monitoring',
+					'Regulatory change tracking',
+					'Risk assessment',
+					'Compliance reporting',
+					'Audit trail management'
 				],
-				ctaLabel: 'Analyze Documents',
+				ctaLabel: 'Ensure Compliance',
 				href: 'https://ziontechgroup.com/contact'
 			},
 			{
-				id: 'ai-medical-imaging-diagnosis',
-				title: 'AI Medical Imaging Diagnosis',
-				description: 'AI-powered medical imaging analysis for early disease detection, diagnosis, and treatment planning.',
+				id: 'ai-auto-email-responder',
+				title: 'AI Auto Email Responder',
+				description: 'Intelligent email automation that responds to customer inquiries and manages communication workflows.',
 				category: 'AI Solutions',
-				price: '$3,999',
+				price: '$799',
 				billing: 'month',
 				features: [
-					'Multi-modality imaging',
-					'Disease detection',
-					'Treatment recommendations',
-					'Radiologist assistance',
-					'Clinical workflow integration'
+					'AI-powered email responses',
+					'Natural language processing',
+					'Workflow automation',
+					'CRM integration',
+					'Performance analytics'
 				],
-				ctaLabel: 'Medical AI Demo',
+				ctaLabel: 'Automate Email',
 				href: 'https://ziontechgroup.com/contact'
 			},
 			{
-				id: 'ai-financial-fraud-detection',
-				title: 'AI Financial Fraud Detection',
-				description: 'Real-time fraud detection system using AI to identify suspicious transactions and prevent financial crimes.',
-				category: 'AI Solutions',
-				price: '$2,499',
-				billing: 'month',
-				features: [
-					'Real-time monitoring',
-					'Behavioral analysis',
-					'Risk scoring',
-					'Alert management',
-					'Compliance reporting'
-				],
-				ctaLabel: 'Detect Fraud',
-				href: 'https://ziontechgroup.com/contact'
-			},
-			{
-				id: 'ai-personalized-learning-platform',
-				title: 'AI Personalized Learning Platform',
-				description: 'Adaptive learning system that personalizes educational content based on individual learning styles and progress.',
+				id: 'ai-content-studio',
+				title: 'LLM Content Studio',
+				description: 'AI-powered content creation platform that generates high-quality, on-brand content for all channels.',
 				category: 'AI Solutions',
 				price: '$1,499',
 				billing: 'month',
 				features: [
-					'Learning path optimization',
-					'Content personalization',
-					'Progress tracking',
-					'Adaptive assessments',
-					'Analytics dashboard'
+					'AI content generation',
+					'Brand voice consistency',
+					'Multi-format support',
+					'SEO optimization',
+					'Content analytics'
 				],
-				ctaLabel: 'Personalize Learning',
+				ctaLabel: 'Create with AI',
+				href: 'https://ziontechgroup.com/contact'
+			},
+			{
+				id: 'ai-finops-advisor',
+				title: 'FinOps Advisor',
+				description: 'AI-powered financial operations optimization for cloud cost management and resource allocation.',
+				category: 'AI Solutions',
+				price: '$1,799',
+				billing: 'month',
+				features: [
+					'Cloud cost optimization',
+					'Resource allocation analysis',
+					'Cost forecasting',
+					'Budget management',
+					'ROI optimization'
+				],
+				ctaLabel: 'Optimize FinOps',
+				href: 'https://ziontechgroup.com/contact'
+			},
+			{
+				id: 'ai-lead-scoring',
+				title: 'AI Lead Scoring Platform',
+				description: 'Intelligent lead scoring using machine learning to prioritize sales opportunities and improve conversion rates.',
+				category: 'AI Solutions',
+				price: '$899',
+				billing: 'month',
+				features: [
+					'ML-powered lead scoring',
+					'Behavioral analysis',
+					'Conversion prediction',
+					'CRM integration',
+					'Performance tracking'
+				],
+				ctaLabel: 'Score Leads with AI',
+				href: 'https://ziontechgroup.com/contact'
+			},
+			{
+				id: 'ai-chatbot',
+				title: 'Website AI Chatbot',
+				description: 'Intelligent chatbot that provides 24/7 customer support and improves user engagement on your website.',
+				category: 'AI Solutions',
+				price: '$599',
+				billing: 'month',
+				features: [
+					'Natural language processing',
+					'24/7 availability',
+					'Multi-language support',
+					'CRM integration',
+					'Conversation analytics'
+				],
+				ctaLabel: 'Add AI Chatbot',
+				href: 'https://ziontechgroup.com/contact'
+			},
+			{
+				id: 'ai-rag-search',
+				title: 'RAG Search Platform',
+				description: 'AI-powered search with retrieval-augmented generation for accurate, contextual answers with citations.',
+				category: 'AI Solutions',
+				price: '$1,299',
+				billing: 'month',
+				features: [
+					'Retrieval-augmented generation',
+					'Contextual search',
+					'Citation tracking',
+					'Knowledge base integration',
+					'Search analytics'
+				],
+				ctaLabel: 'Implement RAG Search',
+				href: 'https://ziontechgroup.com/contact'
+			},
+			{
+				id: 'ai-mlops',
+				title: 'MLOps Pipeline Platform',
+				description: 'End-to-end machine learning operations platform for model development, deployment, and monitoring.',
+				category: 'AI Solutions',
+				price: '$2,499',
+				billing: 'month',
+				features: [
+					'Model development pipeline',
+					'Automated deployment',
+					'Performance monitoring',
+					'Model versioning',
+					'Drift detection'
+				],
+				ctaLabel: 'Deploy MLOps',
+				href: 'https://ziontechgroup.com/contact'
+			},
+			{
+				id: 'ai-ecommerce-personalization',
+				title: 'AI E-commerce Personalization',
+				description: 'Intelligent product recommendations and personalized shopping experiences to boost conversion rates.',
+				category: 'AI Solutions',
+				price: '$1,199',
+				billing: 'month',
+				features: [
+					'Product recommendations',
+					'Personalized search',
+					'Dynamic pricing',
+					'Customer segmentation',
+					'Conversion optimization'
+				],
+				ctaLabel: 'Personalize Shopping',
+				href: 'https://ziontechgroup.com/contact'
+			},
+			{
+				id: 'ai-returns-management',
+				title: 'AI Returns Management SaaS',
+				description: 'Intelligent returns processing and fraud detection to streamline operations and reduce costs.',
+				category: 'AI Solutions',
+				price: '$899',
+				billing: 'month',
+				features: [
+					'Automated returns processing',
+					'Fraud detection',
+					'Return analytics',
+					'Customer self-service',
+					'Integration with e-commerce platforms'
+				],
+				ctaLabel: 'Manage Returns with AI',
+				href: 'https://ziontechgroup.com/contact'
+			},
+			{
+				id: 'ai-vendor-risk',
+				title: 'AI Vendor Risk Management',
+				description: 'Intelligent vendor risk assessment and monitoring using AI to ensure supply chain security.',
+				category: 'AI Solutions',
+				price: '$1,599',
+				billing: 'month',
+				features: [
+					'AI-powered risk assessment',
+					'Continuous monitoring',
+					'Compliance tracking',
+					'Risk scoring',
+					'Automated alerts'
+				],
+				ctaLabel: 'Manage Vendor Risk',
+				href: 'https://ziontechgroup.com/contact'
+			},
+			{
+				id: 'ai-seo-optimizer',
+				title: 'AI SEO Optimizer',
+				description: 'AI-powered SEO optimization that improves search rankings and drives organic traffic growth.',
+				category: 'AI Solutions',
+				price: '$799',
+				billing: 'month',
+				features: [
+					'Keyword optimization',
+					'Content analysis',
+					'Technical SEO audit',
+					'Competitor analysis',
+					'Performance tracking'
+				],
+				ctaLabel: 'Optimize SEO with AI',
+				href: 'https://ziontechgroup.com/contact'
+			},
+			{
+				id: 'ai-churn-predictor',
+				title: 'AI Churn Predictor',
+				description: 'Predict customer churn using machine learning and implement proactive retention strategies.',
+				category: 'AI Solutions',
+				price: '$1,099',
+				billing: 'month',
+				features: [
+					'Churn prediction models',
+					'Risk scoring',
+					'Retention strategies',
+					'Customer segmentation',
+					'Intervention recommendations'
+				],
+				ctaLabel: 'Predict Churn',
+				href: 'https://ziontechgroup.com/contact'
+			},
+			{
+				id: 'ai-incident-postmortems',
+				title: 'AI Incident Postmortems',
+				description: 'Automated incident analysis and postmortem generation for improved incident response and learning.',
+				category: 'AI Solutions',
+				price: '$699',
+				billing: 'month',
+				features: [
+					'Automated incident analysis',
+					'Root cause identification',
+					'Postmortem generation',
+					'Knowledge base updates',
+					'Team learning insights'
+				],
+				ctaLabel: 'Analyze Incidents',
+				href: 'https://ziontechgroup.com/contact'
+			},
+			{
+				id: 'ai-api-monitoring',
+				title: 'AI API Monitoring SaaS',
+				description: 'Intelligent API monitoring and performance optimization using AI for proactive issue detection.',
+				category: 'AI Solutions',
+				price: '$599',
+				billing: 'month',
+				features: [
+					'Real-time API monitoring',
+					'Performance anomaly detection',
+					'Automated alerting',
+					'Performance optimization',
+					'Uptime tracking'
+				],
+				ctaLabel: 'Monitor APIs with AI',
+				href: 'https://ziontechgroup.com/contact'
+			},
+			{
+				id: 'ai-gdpr-compliance',
+				title: 'AI GDPR Cookie Compliance',
+				description: 'Automated GDPR compliance management with intelligent cookie consent and data protection.',
+				category: 'AI Solutions',
+				price: '$399',
+				billing: 'month',
+				features: [
+					'Cookie consent management',
+					'Data protection compliance',
+					'Privacy policy automation',
+					'Consent analytics',
+					'Regulatory updates'
+				],
+				ctaLabel: 'Ensure GDPR Compliance',
+				href: 'https://ziontechgroup.com/contact'
+			},
+			{
+				id: 'ai-proofreading',
+				title: 'AI Proofreading Studio',
+				description: 'Advanced proofreading and editing using AI to improve content quality and readability.',
+				category: 'AI Solutions',
+				price: '$299',
+				billing: 'month',
+				features: [
+					'AI-powered proofreading',
+					'Grammar and style checking',
+					'Content optimization',
+					'Multi-language support',
+					'Quality scoring'
+				],
+				ctaLabel: 'Proofread with AI',
+				href: 'https://ziontechgroup.com/contact'
+			},
+			{
+				id: 'ai-customer-feedback',
+				title: 'AI Customer Feedback Surveys',
+				description: 'Intelligent feedback collection and analysis using AI to improve customer satisfaction and product development.',
+				category: 'AI Solutions',
+				price: '$499',
+				billing: 'month',
+				features: [
+					'AI-powered survey design',
+					'Sentiment analysis',
+					'Feedback categorization',
+					'Actionable insights',
+					'Integration with CRM systems'
+				],
+				ctaLabel: 'Collect Feedback with AI',
+				href: 'https://ziontechgroup.com/contact'
+			},
+			{
+				id: 'ai-meeting-notes',
+				title: 'AI Meeting Notes & Summaries',
+				description: 'Automated meeting transcription, summarization, and action item extraction using AI.',
+				category: 'AI Solutions',
+				price: '$299',
+				billing: 'month',
+				features: [
+					'Automated transcription',
+					'AI summarization',
+					'Action item extraction',
+					'CRM integration',
+					'Meeting analytics'
+				],
+				ctaLabel: 'Automate Meeting Notes',
+				href: 'https://ziontechgroup.com/contact'
+			},
+			{
+				id: 'ai-smart-forms',
+				title: 'AI Smart Forms & Intake',
+				description: 'Intelligent form processing with AI validation, conditional logic, and workflow automation.',
+				category: 'AI Solutions',
+				price: '$199',
+				billing: 'month',
+				features: [
+					'AI-powered validation',
+					'Conditional logic',
+					'Workflow automation',
+					'Data extraction',
+					'Analytics and insights'
+				],
+				ctaLabel: 'Build Smart Forms',
+				href: 'https://ziontechgroup.com/contact'
+			},
+			{
+				id: 'ai-customer-success',
+				title: 'AI Customer Success Platform',
+				description: 'Comprehensive customer success platform using AI to predict churn and optimize customer engagement.',
+				category: 'AI Solutions',
+				price: '$1,499',
+				billing: 'month',
+				features: [
+					'Churn prediction',
+					'Customer health scoring',
+					'Engagement optimization',
+					'Success milestone tracking',
+					'ROI analytics'
+				],
+				ctaLabel: 'Optimize Customer Success',
+				href: 'https://ziontechgroup.com/contact'
+			},
+			{
+				id: 'ai-workflow-orchestrator',
+				title: 'AI Workflow Orchestrator',
+				description: 'Intelligent workflow automation platform that uses AI to optimize business processes and increase efficiency.',
+				category: 'AI Solutions',
+				price: '$899',
+				billing: 'month',
+				features: [
+					'AI-powered process optimization',
+					'Visual workflow builder',
+					'Intelligent task routing',
+					'Process mining',
+					'Performance analytics'
+				],
+				ctaLabel: 'Automate Workflows',
+				href: 'https://ziontechgroup.com/contact'
+			},
+			{
+				id: 'ai-data-governance',
+				title: 'AI Data Governance Platform',
+				description: 'Comprehensive data governance solution using AI to ensure data quality, compliance, and security.',
+				category: 'AI Solutions',
+				price: '$2,499',
+				billing: 'month',
+				features: [
+					'AI-powered data quality',
+					'Compliance monitoring',
+					'Data lineage tracking',
+					'Privacy impact assessment',
+					'Governance policies'
+				],
+				ctaLabel: 'Govern Your Data',
 				href: 'https://ziontechgroup.com/contact'
 			}
 		]
@@ -529,159 +1089,344 @@ export const servicesCatalog: ServiceCategory[] = [
 		slug: 'it-services',
 		items: [
 			{
-				id: 'email-deliverability-monitor',
-				title: 'Email Deliverability Monitor',
-				description: 'Inbox placement checks, DMARC/SPF/DKIM verification, and blocklist alerts with actionable guidance.',
+				id: 'cloud-migration-consulting',
+				title: 'Cloud Migration Consulting',
+				description: 'Expert guidance for migrating your infrastructure to the cloud with minimal downtime and maximum efficiency.',
 				category: 'IT Services',
-				price: '$39',
-				billing: 'month',
+				price: '$150',
+				billing: 'hour',
 				features: [
-					'DMARC/SPF/DKIM verification',
-					'Inbox placement tests',
-					'Blocklist monitoring',
-					'Domain reputation scoring',
-					'Alerting and weekly reports'
+					'Cloud readiness assessment',
+					'Migration strategy planning',
+					'Cost optimization analysis',
+					'Security and compliance review',
+					'Post-migration support'
 				],
-				ctaLabel: 'Improve Inbox Rate',
-				href: 'https://ziontechgroup.com/services/email-deliverability-monitor'
+				ctaLabel: 'Start Migration',
+				href: 'https://ziontechgroup.com/contact'
 			},
 			{
-				id: 'zero-trust-architecture',
-				title: 'Zero Trust Network Architecture',
-				description: 'Comprehensive zero trust security implementation with continuous verification and adaptive access control.',
+				id: 'cybersecurity-audit',
+				title: 'Cybersecurity Audit & Assessment',
+				description: 'Comprehensive security assessment to identify vulnerabilities and strengthen your cybersecurity posture.',
+				category: 'IT Services',
+				price: '$5,000',
+				billing: 'project',
+				features: [
+					'Vulnerability assessment',
+					'Penetration testing',
+					'Security policy review',
+					'Compliance gap analysis',
+					'Remediation roadmap'
+				],
+				ctaLabel: 'Secure Your Business',
+				href: 'https://ziontechgroup.com/contact'
+			},
+			{
+				id: 'network-infrastructure-design',
+				title: 'Network Infrastructure Design',
+				description: 'Custom network architecture design for optimal performance, security, and scalability.',
+				category: 'IT Services',
+				price: '$8,000',
+				billing: 'project',
+				features: [
+					'Network topology design',
+					'Security architecture',
+					'Performance optimization',
+					'Scalability planning',
+					'Implementation support'
+				],
+				ctaLabel: 'Design Network',
+				href: 'https://ziontechgroup.com/contact'
+			},
+			{
+				id: 'data-backup-recovery',
+				title: 'Data Backup & Disaster Recovery',
+				description: 'Comprehensive backup solutions and disaster recovery planning to protect your critical data.',
+				category: 'IT Services',
+				price: '$2,500',
+				billing: 'month',
+				features: [
+					'Automated backup systems',
+					'Disaster recovery planning',
+					'Regular testing and validation',
+					'24/7 monitoring',
+					'Quick recovery solutions'
+				],
+				ctaLabel: 'Protect Your Data',
+				href: 'https://ziontechgroup.com/contact'
+			},
+			{
+				id: 'it-project-management',
+				title: 'IT Project Management',
+				description: 'Professional project management services for complex IT implementations and digital transformations.',
+				category: 'IT Services',
+				price: '$125',
+				billing: 'hour',
+				features: [
+					'Project planning and scheduling',
+					'Risk management',
+					'Stakeholder communication',
+					'Progress tracking',
+					'Quality assurance'
+				],
+				ctaLabel: 'Manage IT Projects',
+				href: 'https://ziontechgroup.com/contact'
+			},
+			{
+				id: 'system-integration',
+				title: 'System Integration Services',
+				description: 'Seamless integration of disparate systems to improve data flow and operational efficiency.',
+				category: 'IT Services',
+				price: '$175',
+				billing: 'hour',
+				features: [
+					'API development and integration',
+					'Data mapping and transformation',
+					'Workflow automation',
+					'Testing and validation',
+					'Ongoing support'
+				],
+				ctaLabel: 'Integrate Systems',
+				href: 'https://ziontechgroup.com/contact'
+			},
+			{
+				id: 'it-consulting',
+				title: 'Strategic IT Consulting',
+				description: 'Strategic guidance to align your technology investments with business objectives and growth plans.',
+				category: 'IT Services',
+				price: '$200',
+				billing: 'hour',
+				features: [
+					'Technology strategy development',
+					'Digital transformation planning',
+					'Technology roadmap creation',
+					'Vendor selection assistance',
+					'ROI analysis'
+				],
+				ctaLabel: 'Get IT Strategy',
+				href: 'https://ziontechgroup.com/contact'
+			},
+			{
+				id: 'managed-it-services',
+				title: 'Managed IT Services',
+				description: 'Comprehensive IT management including monitoring, maintenance, and support for your technology infrastructure.',
+				category: 'IT Services',
+				price: '$3,500',
+				billing: 'month',
+				features: [
+					'24/7 monitoring and support',
+					'Proactive maintenance',
+					'Security management',
+					'Backup and recovery',
+					'Help desk support'
+				],
+				ctaLabel: 'Manage IT Infrastructure',
+				href: 'https://ziontechgroup.com/contact'
+			},
+			{
+				id: 'software-development',
+				title: 'Custom Software Development',
+				description: 'Tailored software solutions designed to meet your specific business requirements and workflows.',
+				category: 'IT Services',
+				price: '$100',
+				billing: 'hour',
+				features: [
+					'Requirements analysis',
+					'Custom development',
+					'Testing and quality assurance',
+					'Deployment and training',
+					'Maintenance and support'
+				],
+				ctaLabel: 'Develop Custom Software',
+				href: 'https://ziontechgroup.com/contact'
+			},
+			{
+				id: 'data-analytics-implementation',
+				title: 'Data Analytics Implementation',
+				description: 'Implementation of data analytics solutions to transform raw data into actionable business insights.',
 				category: 'IT Services',
 				price: '$15,000',
 				billing: 'project',
 				features: [
-					'Identity verification',
-					'Micro-segmentation',
-					'Continuous monitoring',
-					'Threat detection',
-					'Compliance reporting'
+					'Data warehouse design',
+					'ETL pipeline development',
+					'Dashboard creation',
+					'User training',
+					'Ongoing optimization'
 				],
-				ctaLabel: 'Security Assessment',
+				ctaLabel: 'Implement Analytics',
 				href: 'https://ziontechgroup.com/contact'
 			},
 			{
-				id: 'five-g-enterprise-network',
-				title: '5G Enterprise Network Solutions',
-				description: 'Custom 5G network infrastructure for enterprises with ultra-low latency and massive IoT connectivity.',
-				category: 'IT Services',
-				price: '$25,000',
-				billing: 'project',
-				features: [
-					'Private 5G networks',
-					'Network slicing',
-					'Edge computing',
-					'IoT integration',
-					'Performance optimization'
-				],
-				ctaLabel: 'Network Design',
-				href: 'https://ziontechgroup.com/contact'
-			},
-			{
-				id: 'quantum-edge-computing',
-				title: 'Quantum Edge Computing Platform',
-				description: 'Next-generation edge computing platform leveraging quantum principles for ultra-fast processing and decision making.',
-				category: 'IT Services',
-				price: '$35,000',
-				billing: 'project',
-				features: [
-					'Quantum edge processing',
-					'Real-time analytics',
-					'Distributed computing',
-					'Energy optimization',
-					'Scalable architecture'
-				],
-				ctaLabel: 'Edge Deployment',
-				href: 'https://ziontechgroup.com/contact'
-			}
-			,
-			{
-				id: 'platform-engineering-kubernetes',
-				title: 'Platform Engineering on Kubernetes',
-				description: 'Golden paths, IDP, and paved roads for developers with secure, standardized delivery.',
-				category: 'IT Services',
-				price: '$40,000',
-				billing: 'project',
-				features: [
-					'Backstage developer portal',
-					'GitOps with Argo CD or Flux',
-					'Policy-as-code (OPA/Gatekeeper)',
-					'Multi-cluster and multi-cloud',
-					'SRE playbooks and training'
-				],
-				ctaLabel: 'Build Your IDP',
-				href: 'https://ziontechgroup.com/services'
-			},
-			{
-				id: 'finops-cloud-cost-optimization',
-				title: 'FinOps Cloud Cost Optimization',
-				description: 'Reduce cloud spend 20–40% with rightsizing, reservations, and architectural optimizations.',
+				id: 'devops-implementation',
+				title: 'DevOps Implementation',
+				description: 'Implementation of DevOps practices to accelerate software delivery and improve operational efficiency.',
 				category: 'IT Services',
 				price: '$12,000',
 				billing: 'project',
 				features: [
-					'Cost anomaly detection',
-					'RI/Savings Plan strategy',
-					'Workload rightsizing',
-					'Kubernetes cost allocation',
-					'Executive reporting'
+					'CI/CD pipeline setup',
+					'Infrastructure as code',
+					'Monitoring and logging',
+					'Team training',
+					'Process optimization'
 				],
-				ctaLabel: 'Cut Cloud Costs',
-				href: 'https://ziontechgroup.com/services'
-			}
-			,
-			{
-				id: 'k8s-platform-ready',
-				title: 'Kubernetes Platform Ready',
-				description: 'Design and implement a production-grade Kubernetes platform with GitOps, observability, and security guardrails.',
-				category: 'IT Services',
-				price: '$24,000',
-				billing: 'project',
-				features: [
-					'Cluster design and HA',
-					'GitOps with Argo CD/Flux',
-					'Observability stack (Prom/Grafana/ELK)',
-					'Cost and security guardrails',
-					'Runbooks and enablement'
-				],
-				ctaLabel: 'Get K8s Ready',
-				href: 'https://ziontechgroup.com/services/k8s-platform-ready'
+				ctaLabel: 'Implement DevOps',
+				href: 'https://ziontechgroup.com/contact'
 			},
 			{
-				id: 'zero-trust-readiness',
-				title: 'Zero Trust Readiness Assessment',
-				description: 'Evaluate identity, device, network, and data posture with an actionable Zero Trust roadmap.',
+				id: 'cloud-optimization',
+				title: 'Cloud Cost Optimization',
+				description: 'Optimize your cloud infrastructure to reduce costs while maintaining performance and reliability.',
 				category: 'IT Services',
-				price: '$9,000',
+				price: '$3,000',
 				billing: 'project',
 				features: [
-					'Maturity model and gap analysis',
-					'Identity and device posture review',
-					'Network segmentation plan',
-					'Policy-as-code recommendations',
-					'Executive findings workshop'
+					'Cost analysis and audit',
+					'Resource optimization',
+					'Reserved instance planning',
+					'Performance tuning',
+					'Cost monitoring setup'
 				],
-				ctaLabel: 'Start Assessment',
-				href: 'https://ziontechgroup.com/services/zero-trust-assessment'
+				ctaLabel: 'Optimize Cloud Costs',
+				href: 'https://ziontechgroup.com/contact'
 			},
 			{
-				id: 'dwh-modernization',
-				title: 'Data Warehouse Modernization',
-				description: 'Migrate to Snowflake/BigQuery with ELT, lineage, and governance for trusted analytics.',
+				id: 'security-compliance',
+				title: 'Security Compliance Services',
+				description: 'Achieve and maintain compliance with industry standards like SOC 2, ISO 27001, and GDPR.',
 				category: 'IT Services',
-				price: '$35,000',
+				price: '$7,500',
 				billing: 'project',
 				features: [
-					'ELT pipelines and dbt',
-					'Lineage and data contracts',
-					'Cost/perf benchmarks',
-					'Role-based access control',
-					'Cut-over and training'
+					'Compliance gap analysis',
+					'Policy and procedure development',
+					'Security control implementation',
+					'Audit preparation',
+					'Ongoing compliance monitoring'
 				],
-				ctaLabel: 'Modernize DWH',
-				href: 'https://ziontechgroup.com/services/dwh-modernization'
+				ctaLabel: 'Achieve Compliance',
+				href: 'https://ziontechgroup.com/contact'
+			},
+			{
+				id: 'business-continuity',
+				title: 'Business Continuity Planning',
+				description: 'Comprehensive business continuity and disaster recovery planning to ensure operational resilience.',
+				category: 'IT Services',
+				price: '$10,000',
+				billing: 'project',
+				features: [
+					'Business impact analysis',
+					'Recovery strategy development',
+					'Plan documentation',
+					'Testing and validation',
+					'Staff training'
+				],
+				ctaLabel: 'Plan Continuity',
+				href: 'https://ziontechgroup.com/contact'
+			},
+			{
+				id: 'it-training',
+				title: 'IT Training & Certification',
+				description: 'Comprehensive training programs to enhance your team\'s technical skills and knowledge.',
+				category: 'IT Services',
+				price: '$2,000',
+				billing: 'day',
+				features: [
+					'Customized training programs',
+					'Hands-on workshops',
+					'Certification preparation',
+					'Ongoing support',
+					'Progress tracking'
+				],
+				ctaLabel: 'Train Your Team',
+				href: 'https://ziontechgroup.com/contact'
+			},
+			{
+				id: 'vendor-management',
+				title: 'IT Vendor Management',
+				description: 'Strategic vendor management to optimize costs, improve service quality, and reduce risks.',
+				category: 'IT Services',
+				price: '$150',
+				billing: 'hour',
+				features: [
+					'Vendor assessment and selection',
+					'Contract negotiation',
+					'Performance monitoring',
+					'Relationship management',
+					'Cost optimization'
+				],
+				ctaLabel: 'Manage Vendors',
+				href: 'https://ziontechgroup.com/contact'
+			},
+			{
+				id: 'digital-transformation',
+				title: 'Digital Transformation Consulting',
+				description: 'End-to-end digital transformation services to modernize your business operations and technology stack.',
+				category: 'IT Services',
+				price: '$25,000',
+				billing: 'project',
+				features: [
+					'Digital maturity assessment',
+					'Transformation roadmap',
+					'Technology modernization',
+					'Change management',
+					'Success measurement'
+				],
+				ctaLabel: 'Transform Digitally',
+				href: 'https://ziontechgroup.com/contact'
+			},
+			{
+				id: 'it-audit',
+				title: 'IT Audit & Assessment',
+				description: 'Comprehensive IT audit to evaluate your technology infrastructure, processes, and controls.',
+				category: 'IT Services',
+				price: '$8,000',
+				billing: 'project',
+				features: [
+					'Infrastructure assessment',
+					'Process evaluation',
+					'Control testing',
+					'Risk identification',
+					'Recommendation report'
+				],
+				ctaLabel: 'Audit IT Infrastructure',
+				href: 'https://ziontechgroup.com/contact'
+			},
+			{
+				id: 'performance-tuning',
+				title: 'Performance Tuning & Optimization',
+				description: 'Optimize your systems and applications for maximum performance and efficiency.',
+				category: 'IT Services',
+				price: '$125',
+				billing: 'hour',
+				features: [
+					'Performance analysis',
+					'Bottleneck identification',
+					'Optimization implementation',
+					'Testing and validation',
+					'Performance monitoring'
+				],
+				ctaLabel: 'Optimize Performance',
+				href: 'https://ziontechgroup.com/contact'
+			},
+			{
+				id: 'data-migration',
+				title: 'Data Migration Services',
+				description: 'Secure and efficient data migration between systems with minimal downtime and data loss.',
+				category: 'IT Services',
+				price: '$5,000',
+				billing: 'project',
+				features: [
+					'Data mapping and analysis',
+					'Migration planning',
+					'Data validation',
+					'Rollback procedures',
+					'Post-migration verification'
+				],
+				ctaLabel: 'Migrate Data',
+				href: 'https://ziontechgroup.com/contact'
 			}
 		]
 	},

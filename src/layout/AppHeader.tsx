@@ -74,6 +74,18 @@ export function AppHeader() {
     { name: 'AI Learning Management', href: '/innovative-services-showcase-2025', icon: GraduationCap, description: 'Personalized learning platform' },
     { name: 'AI Legal Automation', href: '/innovative-services-showcase-2025', icon: FileText, description: 'Legal document automation' },
     { name: 'AI Healthcare Analytics', href: '/innovative-services-showcase-2025', icon: Heart, description: 'Healthcare insights platform' },
+    { name: 'AI Customer Success', href: '/services/ai-customer-success-platform', icon: Users, description: 'Churn prediction & engagement' },
+    { name: 'AI Workflow Orchestrator', href: '/services/ai-workflow-orchestrator', icon: Settings, description: 'Process automation & optimization' },
+    { name: 'AI Data Governance', href: '/services/ai-data-governance-platform', icon: Shield, description: 'Data quality & compliance' },
+    { name: 'AI Cybersecurity Suite', href: '/services/ai-cybersecurity-suite', icon: Lock, description: 'Advanced threat detection' },
+    { name: 'Quantum AI Platform', href: '/services/quantum-ai-platform', icon: Star, description: 'Quantum computing + AI' },
+    { name: 'Edge Computing Platform', href: '/services/edge-computing-platform', icon: Cpu, description: 'Edge AI & real-time processing' },
+    { name: 'AI Financial Trading', href: '/services/ai-financial-trading-platform', icon: DollarSign, description: 'Algorithmic trading & analysis' },
+    { name: 'AI Supply Chain Optimization', href: '/services/ai-supply-chain-optimization', icon: Settings, description: 'Logistics & inventory optimization' },
+    { name: 'AI HR Platform', href: '/services/ai-hr-platform', icon: Users, description: 'Recruitment & workforce management' },
+    { name: 'AI Marketing Automation', href: '/services/ai-marketing-automation', icon: BarChart3, description: 'Campaign optimization & personalization' },
+    { name: 'AI Legal Research', href: '/services/ai-legal-research-platform', icon: FileText, description: 'Case law analysis & research' },
+    { name: 'AI Education Platform', href: '/services/ai-education-platform', icon: GraduationCap, description: 'Personalized learning & assessment' }
   ];
 
   const servicesCategories = [
@@ -100,7 +112,10 @@ export function AppHeader() {
         { name: 'LLM Content Studio', href: '/services/llm-content-studio', description: 'AI content generation' },
         { name: 'AI Sales Automation Suite', href: '/innovative-services-showcase-2025', description: 'Complete sales automation' },
         { name: 'AI Customer Support Platform', href: '/innovative-services-showcase-2025', description: 'Intelligent support system' },
-        { name: 'AI Financial Analytics', href: '/innovative-services-showcase-2025', description: 'Financial insights platform' }
+        { name: 'AI Financial Analytics', href: '/innovative-services-showcase-2025', description: 'Financial insights platform' },
+        { name: 'AI Customer Success Platform', href: '/services/ai-customer-success-platform', description: 'Churn prediction & engagement' },
+        { name: 'AI Workflow Orchestrator', href: '/services/ai-workflow-orchestrator', description: 'Process automation & optimization' },
+        { name: 'AI Data Governance Platform', href: '/services/ai-data-governance-platform', description: 'Data quality & compliance' }
       ]
     },
     {
@@ -112,7 +127,10 @@ export function AppHeader() {
         { name: 'Cloud FinOps Optimizer', href: '/services/cloud-finops-optimizer', description: 'Cost optimization' },
         { name: 'FinOps Advisor', href: '/services/finops-advisor', description: 'Financial operations' },
         { name: 'MLOps Pipeline', href: '/services/mlops-pipeline', description: 'ML operations platform' },
-        { name: 'Edge Computing Platform', href: '/services/edge-computing-platform', description: 'Edge AI & computing' }
+        { name: 'Edge Computing Platform', href: '/services/edge-computing-platform', description: 'Edge AI & computing' },
+        { name: 'Cloud Migration Consulting', href: '/services/cloud-migration-consulting', description: 'Migration strategy & planning' },
+        { name: 'DevOps Implementation', href: '/services/devops-implementation', description: 'CI/CD & automation' },
+        { name: 'Cloud Cost Optimization', href: '/services/cloud-optimization', description: 'Cost reduction & efficiency' }
       ]
     },
     {
@@ -124,7 +142,10 @@ export function AppHeader() {
         { name: 'IT Infrastructure', href: '/services/it-infrastructure', description: 'Enterprise infrastructure' },
         { name: 'Data Analytics', href: '/services/data-analytics', description: 'Business intelligence' },
         { name: 'IoT Edge Computing', href: '/services/iot-edge', description: 'IoT & edge solutions' },
-        { name: 'Blockchain Solutions', href: '/services/blockchain-enterprise-solutions', description: 'Enterprise blockchain' }
+        { name: 'Blockchain Solutions', href: '/services/blockchain-enterprise-solutions', description: 'Enterprise blockchain' },
+        { name: 'System Integration', href: '/services/system-integration', description: 'API development & integration' },
+        { name: 'Data Migration', href: '/services/data-migration', description: 'Secure data transfer' },
+        { name: 'Performance Tuning', href: '/services/performance-tuning', description: 'System optimization' }
       ]
     },
     {
@@ -135,7 +156,10 @@ export function AppHeader() {
         { name: 'AI Compliance Copilot', href: '/services/ai-compliance-copilot', description: 'AI-Powered Security' },
         { name: 'Zero Trust Architecture', href: '/services/zero-trust-network-architecture', description: 'Advanced security' },
         { name: 'AI Cybersecurity Suite', href: '/services/ai-cybersecurity-suite', description: 'Comprehensive security' },
-        { name: 'Quantum AI Platform', href: '/services/quantum-ai-platform', description: 'Quantum security' }
+        { name: 'Quantum AI Platform', href: '/services/quantum-ai-platform', description: 'Quantum security' },
+        { name: 'Cybersecurity Audit', href: '/services/cybersecurity-audit', description: 'Security assessment' },
+        { name: 'Security Compliance', href: '/services/security-compliance', description: 'SOC 2, ISO 27001, GDPR' },
+        { name: 'Business Continuity', href: '/services/business-continuity', description: 'Disaster recovery planning' }
       ]
     },
     {
@@ -147,7 +171,9 @@ export function AppHeader() {
         { name: 'Space Technology', href: '/services/space-tech', description: 'Space tech solutions' },
         { name: 'Green IT', href: '/services/green-it', description: 'Sustainable technology' },
         { name: 'Healthcare Technology', href: '/services/healthcare-tech', description: 'Healthcare solutions' },
-        { name: 'Sustainability', href: '/services/sustainability', description: 'Environmental solutions' }
+        { name: 'Sustainability', href: '/services/sustainability', description: 'Environmental solutions' },
+        { name: 'AI Healthcare Analytics', href: '/services/ai-healthcare-analytics', description: 'Patient outcomes & operations' },
+        { name: 'Edge Computing Platform', href: '/services/edge-computing-platform', description: 'Real-time processing' }
       ]
     },
     {
@@ -155,12 +181,37 @@ export function AppHeader() {
       icon: Briefcase,
       color: 'from-teal-600 to-cyan-600',
       services: [
-        { name: 'AI Supply Chain', href: '/innovative-services-showcase-2025', description: 'Supply chain optimization' },
-        { name: 'AI HR Platform', href: '/innovative-services-showcase-2025', description: 'HR automation' },
-        { name: 'AI Project Management', href: '/innovative-services-showcase-2025', description: 'Project optimization' },
-        { name: 'AI Marketing Automation', href: '/innovative-services-showcase-2025', description: 'Marketing optimization' },
-        { name: 'AI Learning Management', href: '/innovative-services-showcase-2025', description: 'Learning platform' },
-        { name: 'AI Legal Automation', href: '/innovative-services-showcase-2025', description: 'Legal automation' }
+        { name: 'AI Supply Chain', href: '/services/ai-supply-chain-optimization', description: 'Supply chain optimization' },
+        { name: 'AI HR Platform', href: '/services/ai-hr-platform', description: 'HR automation' },
+        { name: 'AI Project Management', href: '/services/ai-project-management-platform', description: 'Project optimization' },
+        { name: 'AI Marketing Automation', href: '/services/ai-marketing-automation', description: 'Marketing optimization' },
+        { name: 'AI Learning Management', href: '/services/ai-learning-management-system', description: 'Learning platform' },
+        { name: 'AI Legal Automation', href: '/services/ai-legal-document-automation', description: 'Legal automation' },
+        { name: 'AI Financial Trading', href: '/services/ai-financial-trading-platform', description: 'Algorithmic trading' },
+        { name: 'IT Consulting', href: '/services/it-consulting', description: 'Strategic technology guidance' },
+        { name: 'Digital Transformation', href: '/services/digital-transformation', description: 'End-to-end transformation' }
+      ]
+    },
+    {
+      name: 'Micro SaaS Solutions',
+      icon: ShoppingCart,
+      color: 'from-pink-600 to-rose-600',
+      services: [
+        { name: 'AI Lead Scoring', href: '/services/ai-lead-scoring', description: 'ML-powered lead prioritization' },
+        { name: 'AI Chatbot', href: '/services/website-ai-chatbot', description: '24/7 customer support' },
+        { name: 'RAG Search', href: '/services/rag-search', description: 'AI-powered search with citations' },
+        { name: 'MLOps Pipeline', href: '/services/mlops-pipeline', description: 'ML operations platform' },
+        { name: 'eCommerce Personalization', href: '/services/ecommerce-personalization', description: 'Product recommendations' },
+        { name: 'Returns Management', href: '/services/returns-management', description: 'AI-powered returns processing' },
+        { name: 'Vendor Risk Management', href: '/services/vendor-risk-management', description: 'Risk assessment & monitoring' },
+        { name: 'AI SEO Optimizer', href: '/services/ai-seo-optimizer', description: 'Search optimization' },
+        { name: 'Churn Predictor', href: '/services/saas-churn-predictor', description: 'Customer retention' },
+        { name: 'Incident Postmortems', href: '/services/ai-incident-postmortems', description: 'Automated analysis' },
+        { name: 'API Monitoring', href: '/services/api-monitoring', description: 'Performance monitoring' },
+        { name: 'GDPR Compliance', href: '/services/gdpr-cookie-compliance', description: 'Privacy compliance' },
+        { name: 'AI Proofreading', href: '/services/ai-proofreading-studio', description: 'Content quality' },
+        { name: 'Meeting Notes', href: '/services/ai-meeting-notes', description: 'Transcription & summaries' },
+        { name: 'Smart Forms', href: '/services/ai-smart-forms', description: 'Intelligent form processing' }
       ]
     }
   ];
