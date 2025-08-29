@@ -1,0 +1,577 @@
+{
+  "timestamp": "2025-08-29T12:19:03.418Z",
+  "summary": {
+    "total": 22,
+    "working": 18,
+    "broken": 4,
+    "rate": "81.82"
+  },
+  "internal": {
+    "total": 17,
+    "working": 15,
+    "broken": 2,
+    "results": [
+      {
+        "url": "https://app.ziontechgroup.com/enterprise",
+        "source": "enterprise/index.html",
+        "type": "html",
+        "status": "error",
+        "working": false,
+        "error": "getaddrinfo ENOTFOUND app.ziontechgroup.com"
+      },
+      {
+        "url": "https://ziontechgroup.com/favicon.ico",
+        "source": "index.html",
+        "type": "html",
+        "status": 200,
+        "working": true,
+        "headers": {
+          "accept-ranges": "bytes",
+          "age": "0",
+          "cache-control": "public,max-age=0,must-revalidate",
+          "cache-status": "\"Netlify Edge\"; fwd=stale",
+          "content-length": "849",
+          "content-type": "image/x-icon",
+          "date": "Fri, 29 Aug 2025 12:19:02 GMT",
+          "etag": "\"9dfd6782ab69a8ae03152694cb0a79ac-ssl\"",
+          "permissions-policy": "camera=(), microphone=(), geolocation=(), interest-cohort=()",
+          "referrer-policy": "strict-origin-when-cross-origin",
+          "server": "Netlify",
+          "strict-transport-security": "max-age=31536000",
+          "x-content-type-options": "nosniff",
+          "x-frame-options": "DENY",
+          "x-nf-request-id": "01K3TW8P5JVJ1TGR3MY2SZY8HJ",
+          "x-xss-protection": "1; mode=block"
+        }
+      },
+      {
+        "url": "https://ziontechgroup.com/js/react-vendor-C595l_pe.js",
+        "source": "index.html",
+        "type": "html",
+        "status": 200,
+        "working": true,
+        "headers": {
+          "accept-ranges": "bytes",
+          "age": "0",
+          "cache-control": "public,max-age=31536000,immutable",
+          "cache-status": "\"Netlify Edge\"; fwd=miss",
+          "content-length": "4702",
+          "content-type": "application/javascript",
+          "date": "Fri, 29 Aug 2025 12:19:02 GMT",
+          "etag": "\"5145a27f3d2aac50eb7224f1e42e41c4-ssl\"",
+          "permissions-policy": "camera=(), microphone=(), geolocation=(), interest-cohort=()",
+          "referrer-policy": "strict-origin-when-cross-origin",
+          "server": "Netlify",
+          "strict-transport-security": "max-age=31536000; includeSubDomains; preload",
+          "x-content-type-options": "nosniff",
+          "x-frame-options": "DENY",
+          "x-nf-request-id": "01K3TW8P4ZM72JJJ1E7QK5VJ68",
+          "x-xss-protection": "1; mode=block"
+        }
+      },
+      {
+        "url": "https://ziontechgroup.com/js/ui-vendor-CSCMe0GV.js",
+        "source": "index.html",
+        "type": "html",
+        "status": 200,
+        "working": true,
+        "headers": {
+          "accept-ranges": "bytes",
+          "age": "0",
+          "cache-control": "public,max-age=31536000,immutable",
+          "cache-status": "\"Netlify Edge\"; fwd=miss",
+          "content-length": "4702",
+          "content-type": "application/javascript",
+          "date": "Fri, 29 Aug 2025 12:19:02 GMT",
+          "etag": "\"5145a27f3d2aac50eb7224f1e42e41c4-ssl\"",
+          "permissions-policy": "camera=(), microphone=(), geolocation=(), interest-cohort=()",
+          "referrer-policy": "strict-origin-when-cross-origin",
+          "server": "Netlify",
+          "strict-transport-security": "max-age=31536000; includeSubDomains; preload",
+          "x-content-type-options": "nosniff",
+          "x-frame-options": "DENY",
+          "x-nf-request-id": "01K3TW8P5MS8NYB04Q6SZ1V7AQ",
+          "x-xss-protection": "1; mode=block"
+        }
+      },
+      {
+        "url": "https://ziontechgroup.com/js/animation-vendor-OjVpOdhX.js",
+        "source": "index.html",
+        "type": "html",
+        "status": 200,
+        "working": true,
+        "headers": {
+          "accept-ranges": "bytes",
+          "age": "0",
+          "cache-control": "public,max-age=31536000,immutable",
+          "cache-status": "\"Netlify Edge\"; fwd=miss",
+          "content-length": "4702",
+          "content-type": "application/javascript",
+          "date": "Fri, 29 Aug 2025 12:19:02 GMT",
+          "etag": "\"5145a27f3d2aac50eb7224f1e42e41c4-ssl\"",
+          "permissions-policy": "camera=(), microphone=(), geolocation=(), interest-cohort=()",
+          "referrer-policy": "strict-origin-when-cross-origin",
+          "server": "Netlify",
+          "strict-transport-security": "max-age=31536000; includeSubDomains; preload",
+          "x-content-type-options": "nosniff",
+          "x-frame-options": "DENY",
+          "x-nf-request-id": "01K3TW8P5C9YM3J7MRS9PKEVGR",
+          "x-xss-protection": "1; mode=block"
+        }
+      },
+      {
+        "url": "https://ziontechgroup.com/js/icons-vendor-DXzGVvUU.js",
+        "source": "index.html",
+        "type": "html",
+        "status": 200,
+        "working": true,
+        "headers": {
+          "accept-ranges": "bytes",
+          "age": "0",
+          "cache-control": "public,max-age=31536000,immutable",
+          "cache-status": "\"Netlify Edge\"; fwd=miss",
+          "content-length": "4702",
+          "content-type": "application/javascript",
+          "date": "Fri, 29 Aug 2025 12:19:02 GMT",
+          "etag": "\"5145a27f3d2aac50eb7224f1e42e41c4-ssl\"",
+          "permissions-policy": "camera=(), microphone=(), geolocation=(), interest-cohort=()",
+          "referrer-policy": "strict-origin-when-cross-origin",
+          "server": "Netlify",
+          "strict-transport-security": "max-age=31536000; includeSubDomains; preload",
+          "x-content-type-options": "nosniff",
+          "x-frame-options": "DENY",
+          "x-nf-request-id": "01K3TW8P5W3T0W2X8GHCVDNXAM",
+          "x-xss-protection": "1; mode=block"
+        }
+      },
+      {
+        "url": "https://ziontechgroup.com/js/utils-vendor-cTK6JKSN.js",
+        "source": "index.html",
+        "type": "html",
+        "status": 200,
+        "working": true,
+        "headers": {
+          "accept-ranges": "bytes",
+          "age": "0",
+          "cache-control": "public,max-age=31536000,immutable",
+          "cache-status": "\"Netlify Edge\"; fwd=miss",
+          "content-length": "4702",
+          "content-type": "application/javascript",
+          "date": "Fri, 29 Aug 2025 12:19:02 GMT",
+          "etag": "\"5145a27f3d2aac50eb7224f1e42e41c4-ssl\"",
+          "permissions-policy": "camera=(), microphone=(), geolocation=(), interest-cohort=()",
+          "referrer-policy": "strict-origin-when-cross-origin",
+          "server": "Netlify",
+          "strict-transport-security": "max-age=31536000; includeSubDomains; preload",
+          "x-content-type-options": "nosniff",
+          "x-frame-options": "DENY",
+          "x-nf-request-id": "01K3TW8P5AWJ09TXBRA3DMPDWA",
+          "x-xss-protection": "1; mode=block"
+        }
+      },
+      {
+        "url": "https://ziontechgroup.com/css/index-DEDC1Wrn.css",
+        "source": "index.html",
+        "type": "html",
+        "status": 200,
+        "working": true,
+        "headers": {
+          "accept-ranges": "bytes",
+          "age": "0",
+          "cache-control": "public,max-age=31536000,immutable",
+          "cache-status": "\"Netlify Edge\"; fwd=miss",
+          "content-length": "4702",
+          "content-type": "text/css",
+          "date": "Fri, 29 Aug 2025 12:19:02 GMT",
+          "etag": "\"5145a27f3d2aac50eb7224f1e42e41c4-ssl\"",
+          "permissions-policy": "camera=(), microphone=(), geolocation=(), interest-cohort=()",
+          "referrer-policy": "strict-origin-when-cross-origin",
+          "server": "Netlify",
+          "strict-transport-security": "max-age=31536000; includeSubDomains; preload",
+          "x-content-type-options": "nosniff",
+          "x-frame-options": "DENY",
+          "x-nf-request-id": "01K3TW8P5SJ0FJKJ43949PQJKK",
+          "x-xss-protection": "1; mode=block"
+        }
+      },
+      {
+        "url": "https://ziontechgroup.com/favicon.svg",
+        "source": "index.html",
+        "type": "html",
+        "status": 200,
+        "working": true,
+        "headers": {
+          "accept-ranges": "bytes",
+          "age": "0",
+          "cache-control": "public,max-age=0,must-revalidate",
+          "cache-status": "\"Netlify Edge\"; fwd=stale",
+          "content-length": "407",
+          "content-type": "image/svg+xml",
+          "date": "Fri, 29 Aug 2025 12:19:02 GMT",
+          "etag": "\"2bda4c151ba84210660665ee9672fcc7-ssl\"",
+          "permissions-policy": "camera=(), microphone=(), geolocation=(), interest-cohort=()",
+          "referrer-policy": "strict-origin-when-cross-origin",
+          "server": "Netlify",
+          "strict-transport-security": "max-age=31536000",
+          "x-content-type-options": "nosniff",
+          "x-frame-options": "DENY",
+          "x-nf-request-id": "01K3TW8P61HBHDF33CZHHWQN4S",
+          "x-xss-protection": "1; mode=block"
+        }
+      },
+      {
+        "url": "https://ziontechgroup.com/",
+        "source": "index.html",
+        "type": "html",
+        "status": 200,
+        "working": true,
+        "headers": {
+          "accept-ranges": "bytes",
+          "age": "0",
+          "cache-control": "public,max-age=0,must-revalidate",
+          "cache-status": "\"Netlify Edge\"; fwd=miss",
+          "content-length": "4702",
+          "content-type": "text/html; charset=UTF-8",
+          "date": "Fri, 29 Aug 2025 12:19:02 GMT",
+          "etag": "\"5145a27f3d2aac50eb7224f1e42e41c4-ssl\"",
+          "permissions-policy": "camera=(), microphone=(), geolocation=(), interest-cohort=()",
+          "referrer-policy": "strict-origin-when-cross-origin",
+          "server": "Netlify",
+          "strict-transport-security": "max-age=31536000; includeSubDomains; preload",
+          "x-content-type-options": "nosniff",
+          "x-frame-options": "DENY",
+          "x-nf-request-id": "01K3TW8P5249C4S2TK2H80QX5F",
+          "x-xss-protection": "1; mode=block"
+        }
+      },
+      {
+        "url": "https://ziontechgroup.com/logo192.png",
+        "source": "index.html",
+        "type": "html",
+        "status": 200,
+        "working": true,
+        "headers": {
+          "accept-ranges": "bytes",
+          "age": "0",
+          "cache-control": "public,max-age=0,must-revalidate",
+          "cache-status": "\"Netlify Edge\"; fwd=miss",
+          "content-length": "4702",
+          "content-type": "image/png",
+          "date": "Fri, 29 Aug 2025 12:19:02 GMT",
+          "etag": "\"5145a27f3d2aac50eb7224f1e42e41c4-ssl\"",
+          "permissions-policy": "camera=(), microphone=(), geolocation=(), interest-cohort=()",
+          "referrer-policy": "strict-origin-when-cross-origin",
+          "server": "Netlify",
+          "strict-transport-security": "max-age=31536000; includeSubDomains; preload",
+          "x-content-type-options": "nosniff",
+          "x-frame-options": "DENY",
+          "x-nf-request-id": "01K3TW8PHZDNNX08NKNZ0YZWGX",
+          "x-xss-protection": "1; mode=block"
+        }
+      },
+      {
+        "url": "https://ziontechgroup.com/manifest.json",
+        "source": "index.html",
+        "type": "html",
+        "status": 200,
+        "working": true,
+        "headers": {
+          "accept-ranges": "bytes",
+          "age": "1",
+          "cache-control": "public,max-age=0,must-revalidate",
+          "cache-status": "\"Netlify Edge\"; fwd=miss",
+          "content-length": "2732",
+          "content-type": "application/manifest+json",
+          "date": "Fri, 29 Aug 2025 12:19:03 GMT",
+          "etag": "\"bcf8a464e72b7cb4169d795bc602d9c2-ssl\"",
+          "permissions-policy": "camera=(), microphone=(), geolocation=(), interest-cohort=()",
+          "referrer-policy": "strict-origin-when-cross-origin",
+          "server": "Netlify",
+          "strict-transport-security": "max-age=31536000; includeSubDomains; preload",
+          "x-content-type-options": "nosniff",
+          "x-frame-options": "DENY",
+          "x-nf-request-id": "01K3TW8PJ6GSR0FPS49ZXD0X0S",
+          "x-xss-protection": "1; mode=block"
+        }
+      },
+      {
+        "url": "https://ziontechgroup.com/js/index-PvzLa5Jt.js",
+        "source": "index.html",
+        "type": "html",
+        "status": 200,
+        "working": true,
+        "headers": {
+          "accept-ranges": "bytes",
+          "age": "0",
+          "cache-control": "public,max-age=31536000,immutable",
+          "cache-status": "\"Netlify Edge\"; fwd=miss",
+          "content-length": "4702",
+          "content-type": "application/javascript",
+          "date": "Fri, 29 Aug 2025 12:19:02 GMT",
+          "etag": "\"5145a27f3d2aac50eb7224f1e42e41c4-ssl\"",
+          "permissions-policy": "camera=(), microphone=(), geolocation=(), interest-cohort=()",
+          "referrer-policy": "strict-origin-when-cross-origin",
+          "server": "Netlify",
+          "strict-transport-security": "max-age=31536000; includeSubDomains; preload",
+          "x-content-type-options": "nosniff",
+          "x-frame-options": "DENY",
+          "x-nf-request-id": "01K3TW8PHTJB1VXD5CV3RJTPMH",
+          "x-xss-protection": "1; mode=block"
+        }
+      },
+      {
+        "url": "https://ziontechgroup.com/about",
+        "source": "offline.html",
+        "type": "html",
+        "status": 200,
+        "working": true,
+        "headers": {
+          "accept-ranges": "bytes",
+          "age": "0",
+          "cache-control": "public,max-age=0,must-revalidate",
+          "cache-status": "\"Netlify Edge\"; fwd=miss",
+          "content-length": "4702",
+          "content-type": "text/html; charset=UTF-8",
+          "date": "Fri, 29 Aug 2025 12:19:02 GMT",
+          "etag": "\"5145a27f3d2aac50eb7224f1e42e41c4-ssl\"",
+          "permissions-policy": "camera=(), microphone=(), geolocation=(), interest-cohort=()",
+          "referrer-policy": "strict-origin-when-cross-origin",
+          "server": "Netlify",
+          "strict-transport-security": "max-age=31536000; includeSubDomains; preload",
+          "x-content-type-options": "nosniff",
+          "x-frame-options": "DENY",
+          "x-nf-request-id": "01K3TW8PJ064ZVQKDS4QEY9588",
+          "x-xss-protection": "1; mode=block"
+        }
+      },
+      {
+        "url": "https://ziontechgroup.com/services",
+        "source": "offline.html",
+        "type": "html",
+        "status": 301,
+        "working": true,
+        "headers": {
+          "age": "0",
+          "cache-control": "public,max-age=0,must-revalidate",
+          "cache-status": "\"Netlify Edge\"; fwd=miss",
+          "content-type": "text/plain",
+          "date": "Fri, 29 Aug 2025 12:19:02 GMT",
+          "location": "/services",
+          "netlify-vary": "query",
+          "server": "Netlify",
+          "strict-transport-security": "max-age=31536000",
+          "x-nf-request-id": "01K3TW8PHTD61CCM06XENSC1S2"
+        }
+      },
+      {
+        "url": "https://ziontechgroup.com/contact",
+        "source": "offline.html",
+        "type": "html",
+        "status": 200,
+        "working": true,
+        "headers": {
+          "accept-ranges": "bytes",
+          "age": "1",
+          "cache-control": "public,max-age=0,must-revalidate",
+          "cache-status": "\"Netlify Edge\"; fwd=miss",
+          "content-length": "4702",
+          "content-type": "text/html; charset=UTF-8",
+          "date": "Fri, 29 Aug 2025 12:19:03 GMT",
+          "etag": "\"5145a27f3d2aac50eb7224f1e42e41c4-ssl\"",
+          "permissions-policy": "camera=(), microphone=(), geolocation=(), interest-cohort=()",
+          "referrer-policy": "strict-origin-when-cross-origin",
+          "server": "Netlify",
+          "strict-transport-security": "max-age=31536000; includeSubDomains; preload",
+          "x-content-type-options": "nosniff",
+          "x-frame-options": "DENY",
+          "x-nf-request-id": "01K3TW8PJ8ZCTWSX3WF9174XVX",
+          "x-xss-protection": "1; mode=block"
+        }
+      },
+      {
+        "url": "https://app.ziontechgroup.com/request-quote",
+        "source": "request-quote/index.html",
+        "type": "html",
+        "status": "error",
+        "working": false,
+        "error": "getaddrinfo ENOTFOUND app.ziontechgroup.com"
+      }
+    ]
+  },
+  "external": {
+    "total": 5,
+    "working": 3,
+    "broken": 2,
+    "results": [
+      {
+        "url": "https://fonts.googleapis.com",
+        "source": "enterprise/index.html",
+        "type": "html",
+        "status": 404,
+        "working": false,
+        "headers": {
+          "content-type": "text/html; charset=utf-8",
+          "cache-control": "no-cache, no-store, max-age=0, must-revalidate",
+          "pragma": "no-cache",
+          "expires": "Mon, 01 Jan 1990 00:00:00 GMT",
+          "date": "Fri, 29 Aug 2025 12:19:03 GMT",
+          "content-length": "0",
+          "server": "ESF",
+          "x-xss-protection": "0",
+          "x-content-type-options": "nosniff",
+          "alt-svc": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000"
+        }
+      },
+      {
+        "url": "https://fonts.gstatic.com",
+        "source": "enterprise/index.html",
+        "type": "html",
+        "status": 404,
+        "working": false,
+        "headers": {
+          "cross-origin-resource-policy": "cross-origin",
+          "content-type": "text/html; charset=UTF-8",
+          "x-content-type-options": "nosniff",
+          "date": "Fri, 29 Aug 2025 12:19:03 GMT",
+          "server": "sffe",
+          "content-length": "1561",
+          "x-xss-protection": "0",
+          "alt-svc": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000"
+        }
+      },
+      {
+        "url": "https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600&display=swap",
+        "source": "enterprise/index.html",
+        "type": "html",
+        "status": 200,
+        "working": true,
+        "headers": {
+          "content-type": "text/css; charset=utf-8",
+          "vary": "Sec-Fetch-Dest, Sec-Fetch-Mode, Sec-Fetch-Site",
+          "access-control-allow-origin": "*",
+          "timing-allow-origin": "*",
+          "content-length": "0",
+          "expires": "Fri, 29 Aug 2025 12:19:03 GMT",
+          "date": "Fri, 29 Aug 2025 12:19:03 GMT",
+          "cache-control": "private, max-age=86400",
+          "cross-origin-resource-policy": "cross-origin",
+          "cross-origin-opener-policy": "same-origin-allow-popups",
+          "server": "ESF",
+          "x-xss-protection": "0",
+          "x-frame-options": "SAMEORIGIN",
+          "x-content-type-options": "nosniff",
+          "alt-svc": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000"
+        }
+      },
+      {
+        "url": "https://drive.google.com/uc?export=view&id=0B0iuzhpa3pD7X0RzZ2lmclN3Ymc",
+        "source": "enterprise/index.html",
+        "type": "html",
+        "status": 303,
+        "working": true,
+        "headers": {
+          "content-type": "application/binary",
+          "vary": "Origin",
+          "cache-control": "no-cache, no-store, max-age=0, must-revalidate",
+          "pragma": "no-cache",
+          "expires": "Mon, 01 Jan 1990 00:00:00 GMT",
+          "date": "Fri, 29 Aug 2025 12:19:03 GMT",
+          "location": "https://drive.usercontent.google.com/download?id=0B0iuzhpa3pD7X0RzZ2lmclN3Ymc&export=view",
+          "content-length": "0",
+          "strict-transport-security": "max-age=31536000",
+          "accept-ch": "Sec-CH-UA-Arch, Sec-CH-UA-Bitness, Sec-CH-UA-Full-Version, Sec-CH-UA-Full-Version-List, Sec-CH-UA-Model, Sec-CH-UA-WoW64, Sec-CH-UA-Form-Factors, Sec-CH-UA-Platform, Sec-CH-UA-Platform-Version",
+          "cross-origin-opener-policy": "same-origin",
+          "content-security-policy": "script-src 'report-sample' 'nonce-j3-cvUI8FTDX2yevJL98fw' 'unsafe-inline';object-src 'none';base-uri 'self';report-uri /_/DriveUntrustedContentHttp/cspreport;worker-src 'self', require-trusted-types-for 'script';report-uri /_/DriveUntrustedContentHttp/cspreport",
+          "permissions-policy": "ch-ua-arch=*, ch-ua-bitness=*, ch-ua-full-version=*, ch-ua-full-version-list=*, ch-ua-model=*, ch-ua-wow64=*, ch-ua-form-factors=*, ch-ua-platform=*, ch-ua-platform-version=*",
+          "server": "ESF",
+          "x-xss-protection": "0",
+          "x-frame-options": "SAMEORIGIN",
+          "x-content-type-options": "nosniff",
+          "alt-svc": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000"
+        }
+      },
+      {
+        "url": "https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap",
+        "source": "index.html",
+        "type": "html",
+        "status": 200,
+        "working": true,
+        "headers": {
+          "content-type": "text/css; charset=utf-8",
+          "vary": "Sec-Fetch-Dest, Sec-Fetch-Mode, Sec-Fetch-Site",
+          "access-control-allow-origin": "*",
+          "timing-allow-origin": "*",
+          "content-length": "0",
+          "expires": "Fri, 29 Aug 2025 12:19:03 GMT",
+          "date": "Fri, 29 Aug 2025 12:19:03 GMT",
+          "cache-control": "private, max-age=86400",
+          "cross-origin-resource-policy": "cross-origin",
+          "cross-origin-opener-policy": "same-origin-allow-popups",
+          "server": "ESF",
+          "x-xss-protection": "0",
+          "x-frame-options": "SAMEORIGIN",
+          "x-content-type-options": "nosniff",
+          "alt-svc": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000"
+        }
+      }
+    ]
+  },
+  "brokenLinks": {
+    "internal": [
+      {
+        "url": "https://app.ziontechgroup.com/enterprise",
+        "source": "enterprise/index.html",
+        "type": "html",
+        "status": "error",
+        "working": false,
+        "error": "getaddrinfo ENOTFOUND app.ziontechgroup.com"
+      },
+      {
+        "url": "https://app.ziontechgroup.com/request-quote",
+        "source": "request-quote/index.html",
+        "type": "html",
+        "status": "error",
+        "working": false,
+        "error": "getaddrinfo ENOTFOUND app.ziontechgroup.com"
+      }
+    ],
+    "external": [
+      {
+        "url": "https://fonts.googleapis.com",
+        "source": "enterprise/index.html",
+        "type": "html",
+        "status": 404,
+        "working": false,
+        "headers": {
+          "content-type": "text/html; charset=utf-8",
+          "cache-control": "no-cache, no-store, max-age=0, must-revalidate",
+          "pragma": "no-cache",
+          "expires": "Mon, 01 Jan 1990 00:00:00 GMT",
+          "date": "Fri, 29 Aug 2025 12:19:03 GMT",
+          "content-length": "0",
+          "server": "ESF",
+          "x-xss-protection": "0",
+          "x-content-type-options": "nosniff",
+          "alt-svc": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000"
+        }
+      },
+      {
+        "url": "https://fonts.gstatic.com",
+        "source": "enterprise/index.html",
+        "type": "html",
+        "status": 404,
+        "working": false,
+        "headers": {
+          "cross-origin-resource-policy": "cross-origin",
+          "content-type": "text/html; charset=UTF-8",
+          "x-content-type-options": "nosniff",
+          "date": "Fri, 29 Aug 2025 12:19:03 GMT",
+          "server": "sffe",
+          "content-length": "1561",
+          "x-xss-protection": "0",
+          "alt-svc": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000"
+        }
+      }
+    ]
+  }
+}

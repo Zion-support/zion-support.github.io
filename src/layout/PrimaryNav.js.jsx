@@ -1,6 +1,6 @@
 import { useState } from 'react';
-import Link from 'next/link';
-import { useRouter } from 'next/router';
+import { Link } from "react-router-dom";
+import { useNavigate, useLocation, useParams } from "react-router-dom";
 import { Logo } from '@/components/header/Logo';
 import { PointsBadge } from '@/components/loyalty/PointsBadge';
 import { UserMenu } from '@/components/header/UserMenu';
