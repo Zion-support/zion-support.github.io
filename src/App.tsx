@@ -70,7 +70,7 @@ const Team = lazy(() => import('./pages/Team').then(module => ({ default: module
 const Events = lazy(() => import('./pages/Events').then(module => ({ default: module.default })));
 const Help = lazy(() => import('./pages/Help').then(module => ({ default: module.default })));
 const Docs = lazy(() => import('./pages/Docs').then(module => ({ default: module.default })));
-const Sitemap = lazy(() => import('./pages/sitemap').then(module => ({ default: module.default })));
+const Sitemap = lazy(() => import('./pages/Sitemap').then(module => ({ default: module.default })));
 const Support = lazy(() => import('./pages/Support').then(module => ({ default: module.default })));
 const EnhancedServicesShowcase2025 = lazy(() => import('./pages/EnhancedServicesShowcase2025').then(module => ({ default: module.default })));
 const EnhancedServicesShowcase2030 = lazy(() => import('./pages/EnhancedServicesShowcase2030').then(module => ({ default: module.default })));
