@@ -1,20 +1,6 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { 
-  Search, 
-  Clock, 
-  Shield, 
-  Phone, 
-  Mail, 
-  MapPin, 
-  ExternalLink,
-  CheckCircle,
-  TrendingUp
-} from 'lucide-react';
-import { CLEAN_INNOVATIVE_MICRO_SAAS_SERVICES_2025 } from '../data/cleanInnovativeMicroSaasServices2025';
-import { ADDITIONAL_INNOVATIVE_SERVICES_2025 } from '../data/additionalInnovativeServices2025';
-import { EMERGING_TECH_SERVICES_2025 } from '../data/emergingTechServices2025';
-
+import { Search, Clock, Shield, Phone, Mail, MapPin, ExternalLink, CheckCircle, TrendingUp } from 'lucide-react';
 const ComprehensiveServicesShowcase2025 = () => {
   const [activeCategory, setActiveCategory] = useState('all');
   const [searchTerm, setSearchTerm] = useState('');
