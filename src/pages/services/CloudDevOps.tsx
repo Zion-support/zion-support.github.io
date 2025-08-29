@@ -1,89 +1,89 @@
 import React from 'react';
 import { SEO } from '../../components/SEO';
 import { motion } from 'framer-motion';
-import { Cpu, Database, Zap, Shield, Globe, Server, BarChart3, Settings, Users, Network, Smartphone, Tablet, Laptop, Cloud, RefreshCw, TrendingUp, AlertTriangle, Activity, FileText, CheckCircle, Eye, Monitor, Target, Layers, Box, Gauge, BarChart, Building } from 'lucide-react';
+import { Cloud, Zap, Shield, Cpu, Database, Server, GitBranch, Docker, Kubernetes, Aws, Azure, Gcp, Monitor, BarChart3, Settings, Users, Globe, Lock, RefreshCw, TrendingUp } from 'lucide-react';
 
-export default function DigitalTwin() {
+export default function CloudDevOps() {
   const features = [
     {
-      icon: Cpu,
-      title: 'Real-Time Simulation',
-      description: 'Live digital representation that mirrors physical systems in real-time',
+      icon: Cloud,
+      title: 'Multi-Cloud Strategy',
+      description: 'Optimize costs and performance across AWS, Azure, and Google Cloud Platform',
       color: 'from-blue-500 to-cyan-500'
     },
     {
-      icon: Database,
-      title: 'Data Integration',
-      description: 'Seamless connection with IoT sensors, SCADA systems, and enterprise data',
+      icon: Docker,
+      title: 'Container Orchestration',
+      description: 'Kubernetes and Docker expertise for scalable microservices architecture',
+      color: 'from-indigo-500 to-purple-500'
+    },
+    {
+      icon: GitBranch,
+      title: 'CI/CD Pipelines',
+      description: 'Automated deployment pipelines with GitLab, Jenkins, and GitHub Actions',
       color: 'from-green-500 to-emerald-500'
     },
     {
-      icon: Eye,
-      title: 'Predictive Analytics',
-      description: 'AI-powered insights for proactive maintenance and optimization',
-      color: 'from-purple-500 to-pink-500'
-    },
-    {
       icon: Monitor,
-      title: '3D Visualization',
-      description: 'Immersive 3D models with real-time data overlay and interaction',
+      title: 'Infrastructure Monitoring',
+      description: 'Real-time monitoring and alerting with Prometheus, Grafana, and ELK stack',
       color: 'from-yellow-500 to-orange-500'
     },
     {
-      icon: Target,
-      title: 'Performance Optimization',
-      description: 'Continuous improvement through simulation and scenario testing',
+      icon: Shield,
+      title: 'Security & Compliance',
+      description: 'DevSecOps practices with automated security scanning and compliance checks',
       color: 'from-red-500 to-pink-500'
     },
     {
-      icon: Layers,
-      title: 'Multi-Layer Architecture',
-      description: 'Scalable platform supporting multiple digital twin instances',
-      color: 'from-indigo-500 to-purple-500'
+      icon: Database,
+      title: 'Database Management',
+      description: 'Managed databases, backups, and disaster recovery solutions',
+      color: 'from-purple-500 to-pink-500'
     }
   ];
 
   const services = [
     {
-      title: 'Digital Twin Assessment',
-      description: 'Evaluation of current systems and digital twin readiness',
+      title: 'Cloud Migration',
+      description: 'Seamless migration from on-premises to cloud infrastructure',
+      price: 'From $5,000',
+      features: ['Infrastructure assessment', 'Migration planning', 'Data migration', 'Testing & validation']
+    },
+    {
+      title: 'DevOps Implementation',
+      description: 'Complete DevOps transformation with modern tools and practices',
       price: 'From $8,000',
-      features: ['System analysis', 'Data mapping', 'ROI assessment', 'Implementation plan']
+      features: ['CI/CD setup', 'Infrastructure as Code', 'Monitoring & logging', 'Team training']
     },
     {
-      title: 'Platform Development',
-      description: 'Custom digital twin platform for your specific use case',
-      price: 'From $25,000',
-      features: ['Custom development', 'Data integration', '3D modeling', 'User interface']
+      title: 'Cloud Optimization',
+      description: 'Cost optimization and performance tuning for existing cloud infrastructure',
+      price: 'From $3,000',
+      features: ['Cost analysis', 'Performance optimization', 'Resource scaling', 'Best practices']
     },
     {
-      title: 'IoT Integration',
-      description: 'Connect sensors and devices to your digital twin platform',
-      price: 'From $15,000',
-      features: ['Sensor deployment', 'Data collection', 'Real-time streaming', 'Edge computing']
-    },
-    {
-      title: 'Analytics & AI',
-      description: 'Advanced analytics and machine learning capabilities',
-      price: 'From $20,000',
-      features: ['Predictive models', 'Anomaly detection', 'Performance optimization', 'Insights dashboard']
+      title: '24/7 Managed Services',
+      description: 'Round-the-clock monitoring, maintenance, and support',
+      price: 'From $2,500/month',
+      features: ['Proactive monitoring', 'Incident response', 'Regular maintenance', 'Performance reports']
     }
   ];
 
-  const useCases = [
-         { name: 'Manufacturing', icon: Box, description: 'Production line optimization and predictive maintenance' },
-    { name: 'Smart Cities', icon: Globe, description: 'Urban infrastructure monitoring and planning' },
-    { name: 'Energy', icon: Zap, description: 'Power grid optimization and renewable energy management' },
-    { name: 'Healthcare', icon: Activity, description: 'Medical device monitoring and patient care optimization' },
-    { name: 'Transportation', icon: Network, description: 'Fleet management and traffic optimization' },
-    { name: 'Buildings', icon: Building, description: 'Facility management and energy efficiency' }
+  const technologies = [
+    { name: 'AWS', icon: Aws, description: 'Amazon Web Services' },
+    { name: 'Azure', icon: Azure, description: 'Microsoft Azure' },
+    { name: 'GCP', icon: Gcp, description: 'Google Cloud Platform' },
+    { name: 'Kubernetes', icon: Kubernetes, description: 'Container orchestration' },
+    { name: 'Docker', icon: Docker, description: 'Containerization' },
+    { name: 'Terraform', icon: Settings, description: 'Infrastructure as Code' }
   ];
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO 
-        title="Digital Twin Solutions - Zion Tech Group"
-        description="Transform your physical assets into intelligent digital twins. Real-time monitoring, predictive analytics, and optimization for modern enterprises."
+        title="Cloud DevOps Services - Zion Tech Group"
+        description="Transform your infrastructure with our comprehensive Cloud DevOps services. From cloud migration to CI/CD implementation, we help businesses scale efficiently."
       />
       
       {/* Hero Section */}
@@ -98,18 +98,18 @@ export default function DigitalTwin() {
           >
             <div className="flex justify-center mb-6">
               <div className="w-20 h-20 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-2xl flex items-center justify-center">
-                <Cpu className="w-10 h-10 text-white" />
+                <Cloud className="w-10 h-10 text-white" />
               </div>
             </div>
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
-              Digital Twin
+              Cloud DevOps
               <span className="block bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
-                Solutions
+                Excellence
               </span>
             </h1>
             <p className="text-xl text-slate-300 mb-8 max-w-3xl mx-auto">
-              Bridge the gap between physical and digital worlds with intelligent digital twins 
-              that provide real-time insights, predictive analytics, and optimization capabilities.
+              Transform your infrastructure with modern cloud technologies and DevOps practices. 
+              Scale efficiently, deploy faster, and maintain reliability with our expert team.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
               <motion.button
@@ -124,7 +124,7 @@ export default function DigitalTwin() {
                 whileTap={{ scale: 0.95 }}
                 className="px-8 py-4 border border-slate-600 text-white font-semibold rounded-lg hover:border-slate-500 hover:bg-slate-800/50 transition-all duration-300"
               >
-                View Demo
+                Learn More
               </motion.button>
             </div>
           </motion.div>
@@ -141,11 +141,11 @@ export default function DigitalTwin() {
             className="text-center mb-16"
           >
             <h2 className="text-4xl font-bold text-white mb-4">
-              Digital Twin Capabilities
+              Why Choose Our Cloud DevOps Services?
             </h2>
             <p className="text-xl text-slate-300 max-w-3xl mx-auto">
-              Our digital twin platform provides comprehensive capabilities to create, 
-              manage, and optimize digital representations of your physical assets.
+              We combine cutting-edge technology with proven methodologies to deliver 
+              scalable, secure, and efficient cloud infrastructure solutions.
             </p>
           </motion.div>
 
@@ -169,7 +169,7 @@ export default function DigitalTwin() {
         </div>
       </section>
 
-      {/* Use Cases */}
+      {/* Services & Pricing */}
       <section className="py-20 bg-slate-800/30">
         <div className="container mx-auto px-4">
           <motion.div
@@ -179,49 +179,10 @@ export default function DigitalTwin() {
             className="text-center mb-16"
           >
             <h2 className="text-4xl font-bold text-white mb-4">
-              Industry Applications
+              Our Cloud DevOps Services
             </h2>
             <p className="text-xl text-slate-300 max-w-3xl mx-auto">
-              Digital twins are transforming industries across the globe, providing 
-              unprecedented insights and optimization opportunities.
-            </p>
-          </motion.div>
-
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8">
-            {useCases.map((useCase, index) => (
-              <motion.div
-                key={useCase.name}
-                initial={{ opacity: 0, scale: 0.8 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="text-center group"
-              >
-                <div className="w-16 h-16 bg-slate-800 rounded-xl flex items-center justify-center mx-auto mb-4 group-hover:bg-slate-700 transition-all duration-300">
-                  <useCase.icon className="w-8 h-8 text-blue-400" />
-                </div>
-                <h3 className="text-lg font-semibold text-white mb-2">{useCase.name}</h3>
-                <p className="text-sm text-slate-400">{useCase.description}</p>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Services & Pricing */}
-      <section className="py-20">
-        <div className="container mx-auto px-4">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-4xl font-bold text-white mb-4">
-              Our Digital Twin Services
-            </h2>
-            <p className="text-xl text-slate-300 max-w-3xl mx-auto">
-              End-to-end digital twin solutions designed to meet your specific 
-              requirements and business objectives
+              Comprehensive solutions tailored to your business needs and budget
             </p>
           </motion.div>
 
@@ -236,11 +197,11 @@ export default function DigitalTwin() {
               >
                 <h3 className="text-xl font-semibold text-white mb-3">{service.title}</h3>
                 <p className="text-slate-300 mb-4">{service.description}</p>
-                <div className="text-2xl font-bold text-blue-400 mb-4">{service.price}</div>
+                <div className="text-2xl font-bold text-cyan-400 mb-4">{service.price}</div>
                 <ul className="space-y-2">
                   {service.features.map((feature, featureIndex) => (
                     <li key={featureIndex} className="flex items-center text-sm text-slate-300">
-                      <div className="w-2 h-2 bg-blue-400 rounded-full mr-3"></div>
+                      <div className="w-2 h-2 bg-cyan-400 rounded-full mr-3"></div>
                       {feature}
                     </li>
                   ))}
@@ -258,6 +219,43 @@ export default function DigitalTwin() {
         </div>
       </section>
 
+      {/* Technologies */}
+      <section className="py-20">
+        <div className="container mx-auto px-4">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-4xl font-bold text-white mb-4">
+              Technologies We Master
+            </h2>
+            <p className="text-xl text-slate-300 max-w-3xl mx-auto">
+              We work with the latest and most reliable cloud and DevOps technologies
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8">
+            {technologies.map((tech, index) => (
+              <motion.div
+                key={tech.name}
+                initial={{ opacity: 0, scale: 0.8 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                className="text-center group"
+              >
+                <div className="w-16 h-16 bg-slate-800 rounded-xl flex items-center justify-center mx-auto mb-4 group-hover:bg-slate-700 transition-all duration-300">
+                  <tech.icon className="w-8 h-8 text-cyan-400" />
+                </div>
+                <h3 className="text-lg font-semibold text-white mb-2">{tech.name}</h3>
+                <p className="text-sm text-slate-400">{tech.description}</p>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-blue-600/20 to-cyan-600/20">
         <div className="container mx-auto px-4 text-center">
@@ -267,11 +265,11 @@ export default function DigitalTwin() {
             transition={{ duration: 0.6 }}
           >
             <h2 className="text-4xl font-bold text-white mb-6">
-              Ready to Build Your Digital Twin?
+              Ready to Transform Your Infrastructure?
             </h2>
             <p className="text-xl text-slate-300 mb-8 max-w-3xl mx-auto">
-              Let's discuss how digital twin technology can transform your operations, 
-              improve efficiency, and provide competitive advantages in your industry.
+              Let's discuss how our Cloud DevOps services can help your business 
+              scale efficiently and stay ahead of the competition.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
               <motion.button

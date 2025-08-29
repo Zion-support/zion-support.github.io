@@ -50,6 +50,11 @@ const InnovativeServicesShowcase2025 = React.lazy(() => import('./pages/Innovati
 const CloudDevOps = React.lazy(() => import('./pages/services/CloudDevOps'));
 const DigitalTwin = React.lazy(() => import('./pages/services/DigitalTwin'));
 const DataAnalytics = React.lazy(() => import('./pages/services/DataAnalytics'));
+const IoTEdge = React.lazy(() => import('./pages/services/IoTEdge'));
+const BlockchainEnterpriseSolutions = React.lazy(() => import('./pages/services/BlockchainEnterpriseSolutions'));
+const HealthcareTech = React.lazy(() => import('./pages/services/HealthcareTech'));
+const Sustainability = React.lazy(() => import('./pages/services/Sustainability'));
+const ZeroTrustNetworkArchitecture = React.lazy(() => import('./pages/services/ZeroTrustNetworkArchitecture'));
 const ITInfrastructure = React.lazy(() => import('./pages/services/ITInfrastructure'));
 const AIBusinessIntelligence = React.lazy(() => import('./pages/services/AIBusinessIntelligence'));
 const AISalesCopilot = React.lazy(() => import('./pages/services/AISalesCopilot'));
@@ -67,6 +72,10 @@ const QuantumAIPlatform = React.lazy(() => import('./pages/services/QuantumAIPla
 const AIHealthcareAnalytics = React.lazy(() => import('./pages/services/AIHealthcareAnalytics'));
 
 // Simple placeholder pages for missing ones
+const Community = React.lazy(() => import('./pages/Community'));
+const Documentation = React.lazy(() => import('./pages/Documentation'));
+const Training = React.lazy(() => import('./pages/Training'));
+
 const Careers = () => (
   <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 flex items-center justify-center">
     <SEO 
@@ -109,6 +118,9 @@ function App() {
               <Route path="/blog/:slug" element={<BlogPost />} />
               <Route path="/faq" element={<FAQ />} />
               <Route path="/help" element={<Help />} />
+              <Route path="/community" element={<Community />} />
+              <Route path="/docs" element={<Documentation />} />
+              <Route path="/training" element={<Training />} />
               <Route path="/careers" element={<Careers />} />
               <Route path="/privacy" element={<Privacy />} />
               <Route path="/terms" element={<Terms />} />
@@ -135,6 +147,11 @@ function App() {
               <Route path="/services/cloud-devops" element={<CloudDevOps />} />
               <Route path="/services/digital-twin" element={<DigitalTwin />} />
               <Route path="/services/data-analytics" element={<DataAnalytics />} />
+              <Route path="/services/iot-edge" element={<IoTEdge />} />
+              <Route path="/services/blockchain-enterprise-solutions" element={<BlockchainEnterpriseSolutions />} />
+              <Route path="/services/healthcare-tech" element={<HealthcareTech />} />
+              <Route path="/services/sustainability" element={<Sustainability />} />
+              <Route path="/services/zero-trust-network-architecture" element={<ZeroTrustNetworkArchitecture />} />
               <Route path="/services/it-infrastructure" element={<ITInfrastructure />} />
               <Route path="/services/ai-business-intelligence" element={<AIBusinessIntelligence />} />
               <Route path="/services/ai-sales-copilot" element={<AISalesCopilot />} />
