@@ -187,6 +187,62 @@ module.exports = {
         NODE_ENV: 'production',
         AUTOMATION_INTERVAL: '21600000' // 6 hours
       }
+    },
+
+    // Intelligent Code Analyzer - runs daily (HIGHEST PRIORITY)
+    {
+      name: 'intelligent-code-analyzer',
+      script: './scripts/automation/intelligent-code-analyzer.cjs',
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      max_memory_restart: '1G',
+      env: {
+        NODE_ENV: 'production',
+        AUTOMATION_INTERVAL: '86400000' // 24 hours (daily)
+      }
+    },
+
+    // Intelligent Dependency Manager - runs daily
+    {
+      name: 'intelligent-dependency-manager',
+      script: './scripts/automation/intelligent-dependency-manager.cjs',
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      max_memory_restart: '1G',
+      env: {
+        NODE_ENV: 'production',
+        AUTOMATION_INTERVAL: '86400000' // 24 hours (daily)
+      }
+    },
+
+    // Intelligent Performance Optimizer - runs weekly
+    {
+      name: 'intelligent-performance-optimizer',
+      script: './scripts/automation/intelligent-performance-optimizer.cjs',
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      max_memory_restart: '1G',
+      env: {
+        NODE_ENV: 'production',
+        AUTOMATION_INTERVAL: '604800000' // 7 days (weekly)
+      }
+    },
+
+    // Intelligent Automation Orchestrator - runs daily (COORDINATES ALL)
+    {
+      name: 'intelligent-automation-orchestrator',
+      script: './scripts/automation/intelligent-automation-orchestrator.cjs',
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      max_memory_restart: '1G',
+      env: {
+        NODE_ENV: 'production',
+        AUTOMATION_INTERVAL: '86400000' // 24 hours (daily)
+      }
     }
   ]
 };
