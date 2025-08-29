@@ -99,11 +99,18 @@ git clone <repository-url>
 # Navigate to project directory
 cd zion-tech-group-website
 
-# Install dependencies
-npm install
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/your-org/zion-tech-group.git
+   cd zion-tech-group
+   ```
 
-# Start development server
-npm run dev
+2. **Install dependencies**
+   ```bash
+   npm install
+   # or
+   yarn install
+   ```
 
 # Build for production
 npm run build
@@ -140,7 +147,11 @@ The website is configured for deployment on `https://ziontechgroup.com` with:
 - **Sitemap**: XML sitemap for search engine indexing
 - **Accessibility**: ARIA labels and keyboard navigation support
 
-## 🤝 Contributing
+### Service Worker Capabilities
+- **Offline Support**: Works without internet
+- **Background Sync**: Offline action queuing
+- **Push Notifications**: Real-time updates
+- **App Installation**: Add to home screen
 
 1. Fork the repository
 2. Create a feature branch (`git checkout -b feature/amazing-feature`)
