@@ -90,6 +90,9 @@ const AIHealthcarePredictiveAnalytics = React.lazy(() => import('./pages/service
 const AIFinancialTradingRiskManagement = React.lazy(() => import('./pages/services/AIFinancialTradingRiskManagement'));
 const ComprehensiveAIServicesShowcase2025 = React.lazy(() => import('./pages/ComprehensiveAIServicesShowcase2025'));
 const ComprehensiveServicesAdvertising2030 = React.lazy(() => import('./pages/ComprehensiveServicesAdvertising'));
+// Support & Resource pages
+const Resources = React.lazy(() => import('./pages/Resources'));
+const Help = React.lazy(() => import('./pages/Help'));
 function App() {
   return (
     <ErrorBoundary>
@@ -169,6 +172,11 @@ function App() {
                 <Route path="/services/comprehensive-advertising-2030" element={<ComprehensiveServicesAdvertising2030 />} />
                 {/* Service Pages */}
                 <Route path="/services/ai-business-intelligence" element={<AIBusinessIntelligence />} />
+                {/* Support & Resource Routes */}
+                <Route path="/resources" element={<Resources />} />
+                <Route path="/help" element={<Help />} />
+                <Route path="/training" element={<Training />} />
+                <Route path="/support" element={<Support />} />
                 {/* Catch all route */}
                 <Route path="*" element={<Home />} />
               </Routes>
