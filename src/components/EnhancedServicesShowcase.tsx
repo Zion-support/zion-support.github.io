@@ -1,120 +1,110 @@
 import React, { useState } from 'react';
-import { motion } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { 
   Brain, 
   Shield, 
-  Cloud, 
-  Database, 
-  Globe, 
   Zap, 
+  Cloud, 
+  Globe, 
+  Rocket, 
+  Target, 
+  TrendingUp,
   ArrowRight,
   Star,
-  TrendingUp,
-  Users,
-  Clock,
-  CheckCircle
+  CheckCircle,
+  ChevronRight
 } from 'lucide-react';
-import { NEXT_GEN_INNOVATIVE_SERVICES_2025 } from '../data/nextGenInnovativeServices2025';
 
 interface Service {
   id: string;
   title: string;
   description: string;
   icon: React.ComponentType<any>;
-  gradient: string;
-  features: string[];
-  price: string;
-  roi: string;
-  marketSize: string;
-  path: string;
   category: string;
+  price: string;
+  features: string[];
+  gradient: string;
+  path: string;
+  badge?: string;
+  popular?: boolean;
 }
 
 const services: Service[] = [
   {
-    id: 'ai-analytics',
-    title: 'AI Predictive Analytics Engine',
-    description: 'Advanced machine learning algorithms for real-time business insights and forecasting',
+    id: 'ai-business-intelligence',
+    title: 'AI Business Intelligence Platform',
+    description: 'Advanced analytics and insights powered by artificial intelligence',
     icon: Brain,
-    gradient: 'from-zion-cyan to-zion-purple',
-    features: ['95% prediction accuracy', 'Real-time processing', 'Custom model training', 'Multi-dimensional forecasting'],
-    price: '$12,999/month',
-    roi: '450% ROI',
-    marketSize: '$23.1B Market',
-    path: '/services/ai-business-intelligence',
-    category: 'AI & Analytics'
+    category: 'AI & Analytics',
+    price: '$8,999/month',
+    features: ['Predictive Analytics', 'Real-time Insights', 'Custom Dashboards', 'AI-powered Reports'],
+    gradient: 'from-cyan-500 to-blue-600',
+    path: '/services/ai-business-intelligence-platform',
+    badge: 'Most Popular',
+    popular: true
   },
   {
-    id: 'quantum-optimization',
-    title: 'Quantum Optimization Suite',
-    description: 'Solve complex optimization problems with hybrid quantum-classical computing',
-    icon: Zap,
-    gradient: 'from-zion-purple to-zion-blue',
-    features: ['Quantum advantage', 'Custom algorithms', 'Hybrid computing', '800% ROI'],
-    price: '$25,999/month',
-    roi: '800% ROI',
-    marketSize: '$1.8B Market',
-    path: '/services/quantum-computing',
-    category: 'Quantum Computing'
-  },
-  {
-    id: 'zero-trust-security',
-    title: 'Zero Trust Security Platform',
-    description: 'Continuous verification with AI behavioral analysis and real-time threat detection',
+    id: 'ai-cybersecurity',
+    title: 'AI Cybersecurity Platform',
+    description: 'Next-generation cybersecurity using AI and machine learning',
     icon: Shield,
-    gradient: 'from-zion-blue to-zion-cyan',
-    features: ['Continuous verification', 'AI behavioral analysis', 'Real-time detection', '600% ROI'],
-    price: '$18,999/month',
-    roi: '600% ROI',
-    marketSize: '$18.5B Market',
-    path: '/services/cybersecurity',
-    category: 'Cybersecurity'
+    category: 'Cybersecurity',
+    price: '$6,999/month',
+    features: ['Threat Detection', 'Automated Response', 'Risk Assessment', '24/7 Monitoring'],
+    gradient: 'from-red-500 to-orange-600',
+    path: '/services/ai-cybersecurity-suite'
   },
   {
-    id: 'multi-cloud',
-    title: 'Multi-Cloud Orchestration',
-    description: 'Unified management across AWS, Azure, and Google Cloud with cost optimization',
+    id: 'quantum-ai',
+    title: 'Quantum AI Hybrid Platform',
+    description: 'Revolutionary platform combining quantum computing with advanced AI',
+    icon: Rocket,
+    category: 'Emerging Tech',
+    price: '$25,000/month',
+    features: ['Quantum Algorithms', 'AI Integration', 'Scalable Computing', 'Future-ready'],
+    gradient: 'from-purple-500 to-pink-600',
+    path: '/services/quantum-ai-platform',
+    badge: 'Revolutionary'
+  },
+  {
+    id: 'cloud-devops',
+    title: 'Cloud DevOps Platform',
+    description: 'Complete infrastructure automation and management solution',
     icon: Cloud,
-    gradient: 'from-zion-cyan to-zion-blue',
-    features: ['Unified management', 'Cost optimization', 'Performance monitoring', '700% ROI'],
-    price: '$15,999/month',
-    roi: '700% ROI',
-    marketSize: '$12.8B Market',
-    path: '/services/cloud-devops',
-    category: 'Cloud & DevOps'
+    category: 'Cloud & DevOps',
+    price: '$4,999/month',
+    features: ['CI/CD Pipelines', 'Infrastructure as Code', 'Monitoring', 'Auto-scaling'],
+    gradient: 'from-blue-500 to-indigo-600',
+    path: '/services/cloud-devops'
   },
   {
-    id: 'data-streaming',
-    title: 'Real-Time Data Streaming',
-    description: 'Process millions of events per second with AI analytics and enterprise scalability',
-    icon: Database,
-    gradient: 'from-zion-purple to-zion-cyan',
-    features: ['Millions of events/sec', 'AI analytics', 'Low latency', '500% ROI'],
-    price: '$13,999/month',
-    roi: '500% ROI',
-    marketSize: '$15.2B Market',
-    path: '/services/data-analytics',
-    category: 'Data & Analytics'
-  },
-  {
-    id: 'blockchain-enterprise',
-    title: 'Enterprise Blockchain Platform',
-    description: 'AI-powered governance and smart contracts with multi-chain support',
+    id: 'digital-twin',
+    title: 'Digital Twin Platform',
+    description: 'Virtual simulation and monitoring for physical systems',
     icon: Globe,
-    gradient: 'from-zion-blue to-zion-purple',
-    features: ['AI governance', 'Multi-chain support', 'Smart contracts', '600% ROI'],
-    price: '$22,999/month',
-    roi: '600% ROI',
-    marketSize: '$19.9B Market',
-    path: '/services/blockchain',
-    category: 'Blockchain & Web3'
+    category: 'Digital Innovation',
+    price: '$7,999/month',
+    features: ['Real-time Simulation', 'Predictive Maintenance', '3D Visualization', 'IoT Integration'],
+    gradient: 'from-green-500 to-emerald-600',
+    path: '/services/digital-twin'
+  },
+  {
+    id: 'blockchain',
+    title: 'Blockchain Enterprise Platform',
+    description: 'Secure, transparent distributed ledger technology',
+    icon: Target,
+    category: 'Blockchain',
+    price: '$5,999/month',
+    features: ['Smart Contracts', 'Supply Chain', 'Identity Management', 'DeFi Solutions'],
+    gradient: 'from-yellow-500 to-orange-600',
+    path: '/services/blockchain-enterprise-solutions'
   }
 ];
 
-const categories = ['All', 'AI & Analytics', 'Quantum Computing', 'Cybersecurity', 'Cloud & DevOps', 'Data & Analytics', 'Blockchain & Web3'];
+const categories = ['All', 'AI & Analytics', 'Cybersecurity', 'Emerging Tech', 'Cloud & DevOps', 'Digital Innovation', 'Blockchain'];
 
-export default function EnhancedServicesShowcase() {
+export const EnhancedServicesShowcase: React.FC = () => {
   const [selectedCategory, setSelectedCategory] = useState('All');
   const [hoveredService, setHoveredService] = useState<string | null>(null);
 
@@ -123,264 +113,197 @@ export default function EnhancedServicesShowcase() {
     : services.filter(service => service.category === selectedCategory);
 
   return (
-    <section className="py-20 relative overflow-hidden bg-gradient-to-br from-zion-slate via-zion-slate-dark to-zion-slate">
-      {/* Background decoration */}
-      <div className="absolute inset-0">
-        <div className="absolute top-0 left-1/4 w-96 h-96 bg-zion-cyan/5 rounded-full blur-3xl"></div>
-        <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-zion-purple/5 rounded-full blur-3xl"></div>
-      </div>
-
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        {/* Section Header */}
+    <section className="py-20 bg-gradient-to-br from-slate-900 via-purple-900/10 to-slate-900">
+      <div className="max-w-7xl mx-auto px-6">
+        {/* Header */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl sm:text-5xl font-bold text-white mb-6">
-            Cutting-Edge Technology Solutions
+          <h2 className="text-4xl md:text-5xl font-bold mb-6">
+            Our{' '}
+            <span className="bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent">
+              Revolutionary Services
+            </span>
           </h2>
-          <p className="text-xl text-zion-cyan max-w-3xl mx-auto">
-            Transform your business with our innovative AI-powered services designed for the future
+          <p className="text-xl text-slate-300 max-w-3xl mx-auto mb-8">
+            Experience the future of technology with our cutting-edge solutions designed to transform 
+            industries and drive unprecedented growth.
           </p>
-        </motion.div>
-
-        {/* Category Filter */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6, delay: 0.1 }}
-          className="flex flex-wrap justify-center gap-3 mb-12"
-        >
-          {categories.map((category, index) => (
-            <motion.button
-              key={category}
-              onClick={() => setSelectedCategory(category)}
-              className={`px-6 py-3 rounded-full font-medium transition-all duration-300 ${
-                selectedCategory === category
-                  ? 'bg-gradient-to-r from-zion-cyan to-zion-purple text-white shadow-lg shadow-zion-cyan/25'
-                  : 'bg-white/10 text-gray-300 hover:bg-white/20 border border-white/20'
-              }`}
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: index * 0.1 }}
-            >
-              {category}
-            </motion.button>
-          ))}
+          
+          {/* Category Filter */}
+          <div className="flex flex-wrap justify-center gap-3 mb-8">
+            {categories.map((category) => (
+              <motion.button
+                key={category}
+                onClick={() => setSelectedCategory(category)}
+                className={`px-6 py-3 rounded-full font-medium transition-all duration-300 ${
+                  selectedCategory === category
+                    ? 'bg-gradient-to-r from-cyan-500 to-blue-600 text-white shadow-lg shadow-cyan-500/25'
+                    : 'bg-slate-800/60 text-slate-300 hover:bg-slate-700/60 border border-slate-700/50'
+                }`}
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+              >
+                {category}
+              </motion.button>
+            ))}
+          </div>
         </motion.div>
 
         {/* Services Grid */}
-        <div className="grid lg:grid-cols-2 xl:grid-cols-3 gap-8">
+        <motion.div
+          layout
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+        >
           <AnimatePresence mode="wait">
             {filteredServices.map((service, index) => (
               <motion.div
                 key={service.id}
                 layout
-                initial={{ opacity: 0, y: 30 }}
-                animate={{ opacity: 1, y: 0 }}
-                exit={{ opacity: 0, y: -30 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="group relative"
+                initial={{ opacity: 0, y: 30, scale: 0.9 }}
+                animate={{ opacity: 1, y: 0, scale: 1 }}
+                exit={{ opacity: 0, y: -30, scale: 0.9 }}
+                transition={{ 
+                  duration: 0.5, 
+                  delay: index * 0.1,
+                  type: "spring",
+                  stiffness: 100
+                }}
+                whileHover={{ 
+                  y: -10,
+                  transition: { duration: 0.3 }
+                }}
                 onHoverStart={() => setHoveredService(service.id)}
                 onHoverEnd={() => setHoveredService(null)}
+                className="group relative"
               >
-                <motion.div
-                  className="relative bg-white/5 backdrop-blur-lg border border-white/20 rounded-3xl p-8 h-full overflow-hidden"
-                  whileHover={{ 
-                    y: -10,
-                    scale: 1.02,
-                    borderColor: 'rgba(34, 221, 210, 0.5)'
-                  }}
-                  transition={{ duration: 0.3 }}
-                >
-                  {/* Background gradient overlay */}
-                  <div className={`absolute inset-0 bg-gradient-to-br ${service.gradient} opacity-5 group-hover:opacity-10 transition-opacity duration-300`}></div>
-                  
+                {/* Service Card */}
+                <div className="relative bg-slate-800/60 backdrop-blur border border-slate-700/50 hover:border-cyan-500/50 transition-all duration-300 rounded-2xl p-6 h-full hover:shadow-2xl hover:shadow-cyan-500/10">
+                  {/* Popular Badge */}
+                  {service.popular && (
+                    <motion.div
+                      initial={{ opacity: 0, scale: 0.8 }}
+                      animate={{ opacity: 1, scale: 1 }}
+                      transition={{ delay: 0.2 }}
+                      className="absolute -top-3 -right-3 z-10"
+                    >
+                      <div className="bg-gradient-to-r from-yellow-400 to-orange-500 text-black text-xs font-bold px-3 py-1 rounded-full shadow-lg">
+                        ⭐ Most Popular
+                      </div>
+                    </motion.div>
+                  )}
+
+                  {/* Revolutionary Badge */}
+                  {service.badge === 'Revolutionary' && (
+                    <motion.div
+                      initial={{ opacity: 0, scale: 0.8 }}
+                      animate={{ opacity: 1, scale: 1 }}
+                      transition={{ delay: 0.2 }}
+                      className="absolute -top-3 -right-3 z-10"
+                    >
+                      <div className="bg-gradient-to-r from-purple-500 to-pink-500 text-white text-xs font-bold px-3 py-1 rounded-full shadow-lg">
+                        🚀 Revolutionary
+                      </div>
+                    </motion.div>
+                  )}
+
                   {/* Icon */}
                   <motion.div
-                    className={`w-16 h-16 rounded-2xl bg-gradient-to-r ${service.gradient} bg-opacity-20 flex items-center justify-center mb-6 relative z-10`}
-                    whileHover={{ rotate: 360 }}
-                    transition={{ duration: 0.6 }}
+                    className={`w-16 h-16 bg-gradient-to-br ${service.gradient} rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}
+                    whileHover={{ rotate: 5 }}
                   >
                     <service.icon className="w-8 h-8 text-white" />
                   </motion.div>
 
-                  {/* Category badge */}
-                  <div className="inline-block px-3 py-1 bg-zion-cyan/20 text-zion-cyan text-xs font-medium rounded-full mb-4">
+                  {/* Category */}
+                  <div className="text-sm text-cyan-400 font-medium mb-3">
                     {service.category}
                   </div>
 
                   {/* Title */}
-                  <h3 className="text-2xl font-bold text-white mb-4 group-hover:text-zion-cyan transition-colors duration-300">
+                  <h3 className="text-xl font-bold text-white mb-3 group-hover:text-cyan-300 transition-colors duration-300">
                     {service.title}
                   </h3>
 
                   {/* Description */}
-                  <p className="text-gray-300 mb-6 leading-relaxed">
+                  <p className="text-slate-300 text-sm mb-6 leading-relaxed">
                     {service.description}
                   </p>
 
                   {/* Features */}
                   <div className="space-y-2 mb-6">
-                    {service.features.map((feature, featureIndex) => (
+                    {service.features.slice(0, 3).map((feature, idx) => (
                       <motion.div
                         key={feature}
-                        className="flex items-center text-sm text-gray-300"
                         initial={{ opacity: 0, x: -20 }}
                         animate={{ opacity: 1, x: 0 }}
-                        transition={{ delay: featureIndex * 0.1 }}
+                        transition={{ delay: 0.3 + idx * 0.1 }}
+                        className="flex items-center text-sm text-slate-400"
                       >
-                        <CheckCircle className="w-4 h-4 text-zion-cyan mr-3 flex-shrink-0" />
+                        <CheckCircle className="w-4 h-4 text-cyan-400 mr-2 flex-shrink-0" />
                         {feature}
                       </motion.div>
                     ))}
                   </div>
 
-                  {/* Stats */}
-                  <div className="grid grid-cols-3 gap-4 mb-6">
-                    <div className="text-center">
-                      <p className="text-2xl font-bold text-zion-cyan">{service.price}</p>
-                      <p className="text-xs text-gray-400">Monthly</p>
-                    </div>
-                    <div className="text-center">
-                      <p className="text-2xl font-bold text-zion-purple">{service.roi}</p>
-                      <p className="text-xs text-gray-400">ROI</p>
-                    </div>
-                    <div className="text-center">
-                      <p className="text-2xl font-bold text-zion-blue">{service.marketSize}</p>
-                      <p className="text-xs text-gray-400">Market</p>
-                    </div>
+                  {/* Price */}
+                  <div className="text-2xl font-bold text-cyan-400 mb-2">
+                    {service.price}
+                  </div>
+                  <div className="text-sm text-slate-400 mb-6">
+                    Starting price • Enterprise support included
                   </div>
 
                   {/* CTA Button */}
                   <motion.div
-                    className="relative z-10"
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
+                    className="mt-auto"
                   >
                     <Link
                       to={service.path}
-                      className="inline-flex items-center w-full justify-center px-6 py-3 bg-gradient-to-r from-zion-cyan to-zion-purple text-white font-semibold rounded-xl hover:shadow-lg hover:shadow-zion-cyan/25 transition-all duration-300 border border-zion-cyan/30"
+                      className="group/btn inline-flex items-center w-full justify-center px-6 py-3 bg-gradient-to-r from-slate-700 to-slate-600 hover:from-cyan-600 hover:to-blue-600 text-white font-medium rounded-xl transition-all duration-300 border border-slate-600 hover:border-cyan-500"
                     >
                       Learn More
-                      <ArrowRight className="ml-2 w-5 h-5" />
+                      <ChevronRight className="ml-2 w-4 h-4 group-hover/btn:translate-x-1 transition-transform duration-300" />
                     </Link>
                   </motion.div>
 
-                  {/* Hover effect overlay */}
+                  {/* Hover Effect Overlay */}
                   <motion.div
-                    className="absolute inset-0 bg-gradient-to-br from-zion-cyan/5 to-zion-purple/5 rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                    className="absolute inset-0 bg-gradient-to-br from-cyan-500/5 to-blue-500/5 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"
                     initial={false}
+                    animate={{
+                      opacity: hoveredService === service.id ? 1 : 0
+                    }}
                   />
-                </motion.div>
+                </div>
               </motion.div>
             ))}
           </AnimatePresence>
-        </div>
+        </motion.div>
 
-        {/* Bottom CTA */}
+        {/* View All Services CTA */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.5 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.6, delay: 0.3 }}
           className="text-center mt-16"
         >
-          <div className="bg-white/5 backdrop-blur-lg border border-white/20 rounded-3xl p-8 max-w-4xl mx-auto">
-            <h3 className="text-3xl font-bold text-white mb-4">
-              Ready to Transform Your Business?
-            </h3>
-            <p className="text-xl text-gray-300 mb-8">
-              Join hundreds of companies already leveraging our cutting-edge technology solutions
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
-                to="/contact"
-                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-purple text-white font-semibold rounded-2xl hover:shadow-2xl hover:shadow-zion-cyan/25 transition-all duration-300 transform hover:-translate-y-1"
-              >
-                {category === 'all' ? 'All Services' : category}
-              </button>
-            ))}
-          </div>
-
-          {/* Search */}
-          <div className="relative">
-            <input
-              type="text"
-              placeholder="Search services..."
-              value={searchTerm}
-              onChange={(e) => setSearchTerm(e.target.value)}
-              className="w-64 px-4 py-2 bg-zion-slate-dark/50 border border-zion-slate/30 rounded-lg text-white placeholder-zion-slate-light focus:outline-none focus:border-zion-cyan focus:ring-2 focus:ring-zion-cyan/20"
-            />
-            <Search className="absolute right-3 top-2.5 w-5 h-5 text-zion-slate-light" />
-          </div>
-        </div>
-      </div>
-
-      {/* Services Grid */}
-      <div className="max-w-7xl mx-auto">
-        {filteredServices.length > 0 ? (
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {filteredServices.map((service, index) => (
-              <ServiceCard key={service.id} service={service} index={index} />
-            ))}
-          </div>
-        ) : (
-          <div className="text-center py-16">
-            <div className="text-zion-slate-light text-lg">No services found matching your criteria.</div>
-            <button
-              onClick={() => {
-                setSelectedCategory('all');
-                setSearchTerm('');
-              }}
-              className="mt-4 text-zion-cyan hover:text-zion-cyan-light transition-colors duration-300"
-            >
-              Clear filters
-            </button>
-          </div>
-        )}
-      </div>
-
-      {/* CTA Section */}
-      <div className="text-center mt-20">
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.4 }}
-          className="bg-gradient-to-r from-zion-slate-dark/80 to-zion-slate/80 backdrop-blur-xl border border-zion-cyan/20 rounded-2xl p-8 max-w-4xl mx-auto"
-        >
-          <h2 className="text-3xl font-bold text-white mb-4">
-            Ready to Transform Your Business?
-          </h2>
-          <p className="text-zion-slate-light mb-6 max-w-2xl mx-auto">
-            Our team of experts is ready to help you implement these cutting-edge solutions and drive innovation in your organization.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
-              to="/contact"
-              className="bg-gradient-to-r from-zion-cyan to-zion-blue text-white px-8 py-3 rounded-lg font-semibold hover:from-zion-cyan/90 hover:to-zion-blue/90 transition-all duration-300 flex items-center justify-center"
-            >
-              Get Started Today
-              <ArrowRight className="w-5 h-5 ml-2" />
-            </Link>
-            <Link
-              to="/about"
-              className="border border-zion-cyan/30 text-zion-cyan px-8 py-3 rounded-lg font-semibold hover:bg-zion-cyan/10 transition-all duration-300"
-            >
-              Learn More About Us
-            </Link>
-          </div>
+          <Link
+            to="/comprehensive-services"
+            className="group inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-semibold rounded-xl transition-all duration-300 transform hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/25"
+          >
+            View All Services
+            <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" />
+          </Link>
         </motion.div>
       </div>
-    </div>
+    </section>
   );
 };
-
-export default EnhancedServicesShowcase;

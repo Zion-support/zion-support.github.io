@@ -5,7 +5,7 @@ import { EnhancedFuturisticFooter } from './components/EnhancedFuturisticFooter'
 import { ChatAssistant } from './components/ChatAssistant';
 import { LoadingSpinner } from './components/ui/LoadingSpinner';
 import { SEO } from './components/SEO';
-import { PerformanceOptimizer } from './components/PerformanceOptimizer';
+import { EnhancedPerformanceOptimizer } from './components/EnhancedPerformanceOptimizer';
 import { ErrorBoundary } from './components/ErrorBoundary';
 import { AccessibilityEnhancer } from './components/AccessibilityEnhancer';
 
@@ -294,7 +294,7 @@ function App() {
         
         <EnhancedFuturisticFooter />
         <ChatAssistant />
-        <PerformanceOptimizer showMetrics={true} />
+        <EnhancedPerformanceOptimizer showMetrics={true} autoOptimize={true} showNotifications={true} />
         <AccessibilityEnhancer />
       </div>
     </ErrorBoundary>
