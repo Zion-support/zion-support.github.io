@@ -2,6 +2,7 @@ import React from 'react';
 import { SEO } from '../components/SEO';
 import { motion } from 'framer-motion';
 import { TrendingUp, Users, DollarSign, Clock, ArrowRight, CheckCircle } from 'lucide-react';
+
 function CaseStudies() {
   const caseStudies = [
     {
@@ -97,68 +98,62 @@ function CaseStudies() {
       challenge: 'Environmental impact reduction while maintaining operational efficiency',
       solution: 'AI-powered sustainability platform with green technology integration',
       results: [
-        '60% reduction in carbon footprint',
-        '25% improvement in energy efficiency',
+        '45% reduction in carbon footprint',
+        '30% improvement in energy efficiency',
         'Real-time environmental monitoring',
-        'Compliance with sustainability standards'
+        'Sustainable resource management'
       ],
-      technologies: ['AI/ML', 'IoT', 'Sustainability', 'Environmental Monitoring'],
-      duration: '9 months',
+      technologies: ['AI/ML', 'IoT', 'Sustainability', 'Energy Analytics'],
+      duration: '16 months',
       team: '18 specialists'
     }
   ];
-  const industries = [
-    'All Industries',
-    'Healthcare',
-    'Finance',
-    'Manufacturing',
-    'Government',
-    'Retail',
-    'Energy'
-  ];
+
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+    <div className="min-h-screen bg-slate-900">
       <SEO 
         title="Case Studies - Zion Tech Group"
-        description="Explore real-world success stories and transformative solutions delivered by Zion Tech Group across various industries."
+        description="Discover real-world success stories and transformative technology solutions delivered by Zion Tech Group across various industries."
+        keywords="case studies, success stories, technology solutions, AI, healthcare, finance, manufacturing, cybersecurity, digital transformation"
       />
+      
       {/* Hero Section */}
-      <section className="relative py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto text-center">
+      <section className="pt-32 pb-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
+            className="text-center"
           >
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
-              Success Stories &
-              <span className="bg-gradient-to-r from-blue-400 to-purple-600 bg-clip-text text-transparent">
-                {' '}Case Studies
-              </span>
+              Success Stories That
+              <span className="bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent"> Inspire</span>
             </h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Discover how our innovative solutions have transformed businesses across industries, 
-              delivering measurable results and driving growth.
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
+              Discover how our innovative technology solutions have transformed businesses 
+              across industries, delivering measurable results and driving growth.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a
-                href="#case-studies"
-                className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300"
-              >
-                View Case Studies
-              </a>
-              <a
-                href="/contact"
-                className="border border-gray-600 text-white px-8 py-3 rounded-lg font-semibold hover:border-gray-500 transition-all duration-300"
-              >
-                Start Your Project
-              </a>
+            <div className="flex flex-wrap justify-center gap-4 text-sm text-gray-400">
+              <span className="flex items-center">
+                <CheckCircle className="w-4 h-4 mr-2 text-green-400" />
+                500+ Projects Completed
+              </span>
+              <span className="flex items-center">
+                <CheckCircle className="w-4 h-4 mr-2 text-green-400" />
+                95% Client Satisfaction
+              </span>
+              <span className="flex items-center">
+                <CheckCircle className="w-4 h-4 mr-2 text-green-400" />
+                40% Average Efficiency Gain
+              </span>
             </div>
           </motion.div>
         </div>
       </section>
+
       {/* Case Studies Grid */}
-      <section id="case-studies" className="py-20 px-4 sm:px-6 lg:px-8">
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -170,75 +165,91 @@ function CaseStudies() {
               Featured Case Studies
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Real-world examples of how our technology solutions have solved complex 
-              challenges and delivered exceptional results.
+              Real-world examples of how our technology solutions have revolutionized 
+              business operations and delivered exceptional ROI.
             </p>
           </motion.div>
+
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
             {caseStudies.map((study, index) => (
               <motion.div
                 key={study.id}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700 hover:border-slate-600 transition-all duration-300"
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                className="bg-slate-800/50 backdrop-blur-sm border border-slate-700/50 rounded-2xl p-8 hover:border-blue-500/30 transition-all duration-300 group"
               >
-                <div className="flex items-center gap-4 mb-4">
-                  <span className="bg-blue-600 text-white px-3 py-1 rounded-full text-sm font-medium">
+                <div className="flex items-start justify-between mb-4">
+                  <span className="px-3 py-1 bg-blue-500/20 text-blue-400 text-sm font-medium rounded-full">
                     {study.industry}
                   </span>
-                  <span className="text-gray-400 text-sm">{study.duration}</span>
+                  <div className="flex items-center text-gray-400 text-sm">
+                    <Clock className="w-4 h-4 mr-1" />
+                    {study.duration}
+                  </div>
                 </div>
-                <h3 className="text-2xl font-bold text-white mb-3">
+
+                <h3 className="text-2xl font-bold text-white mb-3 group-hover:text-blue-400 transition-colors duration-300">
                   {study.title}
                 </h3>
-                <p className="text-gray-400 text-sm mb-4">
+                
+                <p className="text-gray-300 mb-4">
                   <strong>Client:</strong> {study.client}
                 </p>
+
                 <div className="mb-6">
-                  <h4 className="text-white font-semibold mb-2">Challenge:</h4>
-                  <p className="text-gray-300 text-sm mb-4">{study.challenge}</p>
-                  <h4 className="text-white font-semibold mb-2">Solution:</h4>
-                  <p className="text-gray-300 text-sm mb-4">{study.solution}</p>
+                  <h4 className="font-semibold text-white mb-2">Challenge:</h4>
+                  <p className="text-gray-300 text-sm">{study.challenge}</p>
                 </div>
+
                 <div className="mb-6">
-                  <h4 className="text-white font-semibold mb-3">Results:</h4>
+                  <h4 className="font-semibold text-white mb-2">Solution:</h4>
+                  <p className="text-gray-300 text-sm">{study.solution}</p>
+                </div>
+
+                <div className="mb-6">
+                  <h4 className="font-semibold text-white mb-4">Results:</h4>
                   <ul className="space-y-2">
                     {study.results.map((result, idx) => (
-                      <li key={idx} className="text-sm text-gray-300 flex items-start">
+                      <li key={idx} className="flex items-start">
                         <CheckCircle className="w-4 h-4 text-green-400 mr-2 mt-0.5 flex-shrink-0" />
-                        {result}
+                        <span className="text-gray-300 text-sm">{result}</span>
                       </li>
                     ))}
                   </ul>
                 </div>
+
                 <div className="mb-6">
-                  <h4 className="text-white font-semibold mb-2">Technologies:</h4>
+                  <h4 className="font-semibold text-white mb-2">Technologies Used:</h4>
                   <div className="flex flex-wrap gap-2">
                     {study.technologies.map((tech, idx) => (
-                      <span key={idx} className="bg-slate-700 text-gray-300 px-2 py-1 rounded text-xs">
+                      <span
+                        key={idx}
+                        className="px-2 py-1 bg-slate-700/50 text-gray-300 text-xs rounded-md"
+                      >
                         {tech}
                       </span>
                     ))}
                   </div>
                 </div>
-                <div className="flex items-center justify-between text-sm text-gray-400 mb-4">
-                  <span className="flex items-center gap-2">
-                    <Users className="w-4 h-4" />
-                    {study.team}
+
+                <div className="flex items-center justify-between">
+                  <span className="text-gray-400 text-sm">
+                    Team: {study.team}
                   </span>
+                  <a
+                    href={`/case-studies/${study.id}`}
+                    className="text-blue-400 hover:text-blue-300 font-medium transition-colors duration-300 flex items-center"
+                  >
+                    Read Full Case Study <ArrowRight className="w-4 h-4 ml-1" />
+                  </a>
                 </div>
-                <a
-                  href={`/case-studies/${study.id}`}
-                  className="text-blue-400 hover:text-blue-300 font-medium transition-colors duration-300 flex items-center"
-                >
-                  Read Full Case Study <ArrowRight className="w-4 h-4 ml-1" />
-                </a>
               </motion.div>
             ))}
           </div>
         </div>
       </section>
+
       {/* Statistics Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-800/30">
         <div className="max-w-7xl mx-auto">
@@ -277,6 +288,7 @@ function CaseStudies() {
           </div>
         </div>
       </section>
+
       {/* CTA Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
@@ -311,5 +323,6 @@ function CaseStudies() {
       </section>
     </div>
   );
-};
+}
+
 export default CaseStudies;

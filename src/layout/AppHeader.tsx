@@ -1,44 +1,124 @@
-import { ArrowRight, Atom, BookOpen, Brain, Building, Building2, ChevronDown, Cloud, Code, Cpu, DollarSign, FileText, Globe, HeartHandshake, Heart, HelpCircle, Leaf, Lock, Mail, MapPin, Menu, MessageCircle, PenTool, Phone, Rocket, Scale, Search, Settings, Shield, ShoppingCart, Star, Target, TrendingUp, Users, X, Zap, User, Bell, Award, GraduationCap, LifeBuoy } from 'lucide-react';
-import React, { useEffect, useState } from 'react';
-import { Link } from 'react-router-dom';
-import { ThemeToggle } from '../components/ThemeToggle';
-export function AppHeader() {
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const [searchQuery, setSearchQuery] = useState('');
-  const [servicesDropdownOpen, setServicesDropdownOpen] = useState(false);
-  const [solutionsDropdownOpen, setSolutionsDropdownOpen] = useState(false);
-  const [resourcesDropdownOpen, setResourcesDropdownOpen] = useState(false);
-  const [scrolled, setScrolled] = useState(false);
-  const [isSearching, setIsSearching] = useState(false);
+import React, { useState, useEffect, useRef } from 'react';
+import { Link, useLocation } from 'react-router-dom';
+import { motion, AnimatePresence } from 'framer-motion';
+import { 
+  Menu, 
+  X, 
+  ChevronDown, 
+  Search, 
+  User, 
+  ShoppingCart, 
+  Rocket, 
+  Brain, 
+  Heart, 
+  PenTool, 
+  Shield, 
+  Atom, 
+  Cpu, 
+  Globe, 
+  Cloud, 
+  Building,
+  Handshake,
+  Play
+} from 'lucide-react';
+
+// Animation variants
+const navVariants = {
+  hidden: { opacity: 0, y: -20 },
+  visible: { 
+    opacity: 1, 
+    y: 0,
+    transition: {
+      duration: 0.6,
+      ease: "easeOut"
+    }
+  }
+};
+
+const menuVariants = {
+  hidden: { opacity: 0, height: 0 },
+  visible: { 
+    opacity: 1, 
+    height: "auto",
+    transition: {
+      duration: 0.3,
+      ease: "easeOut"
+    }
+  }
+};
+
+const menuItemVariants = {
+  hidden: { opacity: 0, x: -20 },
+  visible: { 
+    opacity: 1, 
+    x: 0,
+    transition: {
+      duration: 0.3,
+      ease: "easeOut"
+    }
+  }
+};
+
+const dropdownVariants = {
+  hidden: { opacity: 0, y: -10, scale: 0.95 },
+  visible: { 
+    opacity: 1, 
+    y: 0, 
+    scale: 1,
+    transition: {
+      duration: 0.2,
+      ease: "easeOut"
+    }
+  }
+};
+
+export const AppHeader: React.FC = () => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
+  const [isDarkMode, setIsDarkMode] = useState(false);
+  const [isAccessibilityMode, setIsAccessibilityMode] = useState(false);
+  const [currentLanguage, setCurrentLanguage] = useState('en');
+  const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
+  const dropdownRefs = useRef<{ [key: string]: HTMLDivElement | null }>({});
+
+  const location = useLocation();
+
+  // Handle scroll effect
   useEffect(() => {
     const handleScroll = () => {
-      setScrolled(window.scrollY > 10);
+      setIsScrolled(window.scrollY > 20);
     };
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
-  const handleSearch = async (e: React.FormEvent) => {
-    e.preventDefault();
-    if (searchQuery.trim()) {
-      setIsSearching(true);
-      try {
-        await new Promise(resolve => setTimeout(resolve, 1000)); // Simulate search
-        window.location.href = `/search?q=${encodeURIComponent(searchQuery.trim())}`;
-      } finally {
-        setIsSearching(false);
+
+  // Close dropdowns when clicking outside
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (activeDropdown && !dropdownRefs.current[activeDropdown]?.contains(event.target as Node)) {
+        setActiveDropdown(null);
       }
-    }
-  };
-  const navigation = [
-    { name: 'Home', href: '/', current: true },
-    { name: 'Services', href: '/services', current: false, hasDropdown: true },
-    { name: 'Solutions', href: '/solutions', current: false, hasDropdown: true },
-    { name: 'Resources', href: '/resources', current: false, hasDropdown: true },
-    { name: 'About', href: '/about', current: false },
-    { name: 'Contact', href: '/contact', current: false },
+    };
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => document.removeEventListener('mousedown', handleClickOutside);
+  }, [activeDropdown]);
+
+  const mainNavItems = [
+    { name: 'Home', href: '/', current: location.pathname === '/' },
+    { name: 'Services', href: '/services', current: location.pathname === '/services', hasDropdown: true },
+    { name: 'Solutions', href: '/solutions', current: location.pathname === '/solutions', hasDropdown: true },
+    { name: 'Resources', href: '/resources', current: location.pathname === '/resources', hasDropdown: true },
+    { name: 'About', href: '/about', current: location.pathname === '/about' },
+    { name: 'Contact', href: '/contact', current: location.pathname === '/contact' },
   ];
+
+  const utilityNavItems = [
+    { name: 'Dashboard', href: '/dashboard', icon: User },
+    { name: 'Marketplace', href: '/marketplace', icon: ShoppingCart },
+    { name: 'Demo', href: '/demo', icon: Play },
+  ];
+
   const services = [
-=======
     { 
       name: 'Comprehensive Services 2026', 
       href: '/comprehensive-services-showcase-2026', 
@@ -85,7 +165,7 @@ export function AppHeader() {
       icon: Shield, 
       description: 'AI-Powered Security',
       featured: true,
-      color: 'from-green-500 to-blue-500'
+      color: 'from-purple-500 to-green-500'
     },
     { 
       name: 'Quantum Computing', 
@@ -133,554 +213,474 @@ export function AppHeader() {
       icon: Rocket, 
       description: 'Future Technology Solutions',
       featured: true,
-      color: 'from-indigo-500 to-purple-500'
+      color: 'from-purple-500 to-pink-500'
+    }
+  ];
+
+  const solutions = [
+    { 
+      name: 'Enterprise Solutions', 
+      href: '/solutions/enterprise', 
+      icon: Building, 
+      description: 'Large-scale business transformation',
+      color: 'from-blue-500 to-indigo-500'
     },
     { 
-      name: 'Pricing Guide 2026', 
-      href: '/comprehensive-pricing-guide-2026', 
-      icon: DollarSign, 
-      description: 'Complete Pricing & ROI Analysis',
-      featured: true,
+      name: 'Startup Solutions', 
+      href: '/solutions/startup', 
+      icon: Rocket, 
+      description: 'Rapid growth and scaling',
       color: 'from-green-500 to-emerald-500'
     },
     { 
-      name: 'AI Business Intelligence', 
-      href: '/services/ai-business-intelligence', 
-      icon: Brain, 
-      description: 'Machine Learning & Data Science',
-      featured: false,
-      color: 'from-purple-500 to-cyan-500'
+      name: 'Healthcare Solutions', 
+      href: '/solutions/healthcare', 
+      icon: Heart, 
+      description: 'Medical technology innovation',
+      color: 'from-red-500 to-pink-500'
     },
     { 
-      name: 'Cloud DevOps', 
-      href: '/services/cloud-devops', 
-      icon: Cloud, 
-      description: 'DevOps & Infrastructure',
-      featured: false,
+      name: 'Financial Solutions', 
+      href: '/solutions/financial', 
+      icon: Shield, 
+      description: 'Secure financial technology',
+      color: 'from-yellow-500 to-orange-500'
+    }
+  ];
+
+  const resources = [
+    { 
+      name: 'Documentation', 
+      href: '/docs', 
+      icon: PenTool, 
+      description: 'Technical guides and API docs',
       color: 'from-blue-500 to-cyan-500'
     },
     { 
-      name: 'Digital Twin Platform', 
-      href: '/services/digital-twin', 
-      icon: Globe, 
-      description: 'Virtual Replicas & Simulation',
-      featured: false,
+      name: 'Case Studies', 
+      href: '/case-studies', 
+      icon: Building, 
+      description: 'Success stories and implementations',
+      color: 'from-purple-500 to-pink-500'
+    },
+    { 
+      name: 'Blog', 
+      href: '/blog', 
+      icon: PenTool, 
+      description: 'Latest insights and trends',
       color: 'from-green-500 to-emerald-500'
+    },
+    { 
+      name: 'Webinars', 
+      href: '/webinars', 
+      icon: Play, 
+      description: 'Educational content and demos',
+      color: 'from-orange-500 to-red-500'
     }
   ];
-  const solutions = [
-    {
-      name: 'Enterprise Solutions',
-      href: '/solutions',
-      icon: Building2,
-      description: 'Large-scale business transformations',
-      featured: true
-    },
-    {
-      name: 'SMB Solutions',
-      href: '/solutions',
-      icon: Building,
-      description: 'Small to medium business growth',
-      featured: false
-    },
-    {
-      name: 'Startup Solutions',
-      href: '/solutions',
-      icon: Rocket,
-      description: 'Accelerate your startup growth',
-      featured: false
-    },
-    {
-      name: 'Government Solutions',
-      href: '/solutions',
-      icon: Shield,
-      description: 'Public sector innovation',
-      featured: false
-    },
-    {
-      name: 'Healthcare Solutions',
-      href: '/solutions',
-      icon: Heart,
-      description: 'Digital health transformation',
-      featured: true
-    },
-    {
-      name: 'Financial Solutions',
-      href: '/solutions',
-      icon: TrendingUp,
-      description: 'Fintech innovation & compliance',
-      featured: true
-    }
-  ];
-  const resources = [
-    {
-      name: 'Blog & Insights',
-      href: '/blog',
-      icon: BookOpen,
-      description: 'Latest industry trends and insights',
-      featured: true
-    },
-    {
-      name: 'Case Studies',
-      href: '/case-studies',
-      icon: Target,
-      description: 'Real-world success stories',
-      featured: true
-    },
-    {
-      name: 'White Papers',
-      href: '/white-papers',
-      icon: FileText,
-      description: 'In-depth research and analysis',
-      featured: true
-    },
-    {
-      name: 'Webinars',
-      href: '/webinars',
-      icon: Users,
-      description: 'Expert-led learning sessions',
-      featured: true
-    },
-    {
-      name: 'Documentation',
-      href: '/docs',
-      icon: Code,
-      description: 'Technical guides and APIs',
-      featured: true
-    },
-    {
-      name: 'FAQ & Support',
-      href: '/faq',
-      icon: HelpCircle,
-      description: 'Get help and answers',
-      featured: true
-    },
-    {
-      name: 'Pricing Guide 2025',
-      href: '/pricing-guide-2025',
-      icon: DollarSign,
-      description: 'Complete pricing information',
-      featured: true
-    }
-  ];
-  const quickLinks = [
-    { name: 'Innovative Services 2025', href: '/innovative-services-showcase-2025', icon: Star, description: 'Latest cutting-edge solutions' },
-    { name: 'Revolutionary Services 2030', href: '/revolutionary-services-showcase-2030', icon: TrendingUp, description: 'Future-ready services' },
-    { name: 'Emerging Tech 2030', href: '/emerging-tech-2030', icon: Rocket, description: 'Next-generation technologies' },
-    { name: 'Pricing Guide 2030', href: '/pricing-2030', icon: DollarSign, description: 'Advanced pricing strategies' },
-    { name: 'Request Quote', href: '/request-quote', icon: MessageCircle, description: 'Get custom pricing' },
-  ];
-  const supportLinks = [
-    { name: 'FAQ', href: '/faq', icon: HelpCircle },
-    { name: 'Blog', href: '/blog', icon: BookOpen },
-    { name: 'Help', href: '/help', icon: MessageCircle },
-    { name: 'Partners', href: '/partners', icon: Users },
-    { name: 'Documentation', href: '/docs', icon: BookOpen },
-    { name: 'Training', href: '/training', icon: GraduationCap },
-    { name: 'Support', href: '/support', icon: LifeBuoy },
-  ];
-  const contactInfo = {
-    phone: '+1 302 464 0950',
-    email: 'kleber@ziontechgroup.com',
-    address: '364 E Main St STE 1008 Middletown DE 19709'
+
+  const toggleDropdown = (dropdownName: string) => {
+    setActiveDropdown(activeDropdown === dropdownName ? null : dropdownName);
   };
+
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
+
+  const toggleTheme = () => {
+    setIsDarkMode(!isDarkMode);
+    // Add theme toggle logic here
+  };
+
+  const toggleAccessibility = () => {
+    setIsAccessibilityMode(!isAccessibilityMode);
+    // Add accessibility toggle logic here
+  };
+
+  const changeLanguage = (lang: string) => {
+    setCurrentLanguage(lang);
+    // Add language change logic here
+  };
+
   return (
-    <>
-      <header className={`sticky top-0 z-50 w-full transition-all duration-300 ${
-        scrolled 
-          ? 'bg-slate-900/95 backdrop-blur-xl border-b border-cyan-400/20 shadow-2xl shadow-cyan-400/10' 
-          : 'bg-slate-900/80 backdrop-blur-md border-b border-slate-700/20'
-      }`}>
-        <div className="container-responsive">
-          <div className="flex h-20 items-center justify-between">
-            {/* Logo */}
-            <div className="flex items-center">
-              <Link to="/" className="flex-shrink-0 group">
-                <div className="flex items-center space-x-3">
-                  <div className="relative">
-                    <div className="w-10 h-10 bg-gradient-to-br from-cyan-400 via-blue-500 to-purple-600 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                      <Zap className="w-6 h-6 text-white" />
-                    </div>
-                    <div className="absolute inset-0 bg-gradient-to-br from-cyan-400 via-blue-500 to-purple-600 rounded-lg blur-lg opacity-50 group-hover:opacity-75 transition-opacity duration-300"></div>
-                  </div>
-                  <h1 className="text-2xl font-bold bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent group-hover:scale-105 transition-transform duration-300">
-                    Zion Tech Group
-                  </h1>
-                </div>
-              </Link>
-            </div>
-            {/* Desktop Navigation */}
-            <nav className="hidden lg:flex items-center space-x-8">
-              {navigation.map((item) => (
-                <div key={item.name} className="relative">
-                  {item.hasDropdown ? (
-                    <div className="relative">
-                      <button
-                        onClick={() => {
-                          if (item.name === 'Services') {
-                            setServicesDropdownOpen(!servicesDropdownOpen);
-                            setSolutionsDropdownOpen(false);
-                            setResourcesDropdownOpen(false);
-                          } else if (item.name === 'Solutions') {
-                            setSolutionsDropdownOpen(!solutionsDropdownOpen);
-                            setServicesDropdownOpen(false);
-                            setResourcesDropdownOpen(false);
-                          } else if (item.name === 'Resources') {
-                            setResourcesDropdownOpen(!resourcesDropdownOpen);
-                            setServicesDropdownOpen(false);
-                            setSolutionsDropdownOpen(false);
-                          }
-                        }}
-                        className="flex items-center text-slate-300 hover:text-cyan-400 px-3 py-2 text-sm font-medium transition-all duration-200 relative group"
-                      >
-                        {item.name}
-                        <ChevronDown className={`ml-1 w-4 h-4 transition-transform duration-200 ${
-                          (item.name === 'Services' && servicesDropdownOpen) ||
-                          (item.name === 'Solutions' && solutionsDropdownOpen) ||
-                          (item.name === 'Resources' && resourcesDropdownOpen)
-                            ? 'rotate-180' : ''
-                        }`} />
-                      </button>
-                      {/* Services Dropdown */}
-                      {item.name === 'Services' && servicesDropdownOpen && (
-                        <div className="absolute top-full left-0 mt-2 w-[800px] bg-slate-800/95 backdrop-blur-xl rounded-2xl border border-slate-700/50 shadow-2xl shadow-black/50 overflow-hidden">
-                          <div className="p-6">
-                            <div className="grid grid-cols-2 gap-6">
-                              {services.map((service) => (
+    <motion.header
+      variants={navVariants}
+      initial="hidden"
+      animate="visible"
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+        isScrolled 
+          ? 'bg-zion-slate-dark/95 backdrop-blur-md border-b border-zion-cyan/20' 
+          : 'bg-transparent'
+      }`}
+    >
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex items-center justify-between h-16 lg:h-20">
+          {/* Logo */}
+          <motion.div
+            initial={{ opacity: 0, x: -20 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.6, delay: 0.1 }}
+            className="flex-shrink-0"
+          >
+            <Link to="/" className="flex items-center space-x-3 group">
+              <div className="w-10 h-10 bg-gradient-to-br from-zion-cyan to-zion-blue rounded-xl flex items-center justify-center shadow-lg group-hover:shadow-glow-blue-lg transition-all duration-300">
+                <Rocket className="w-6 h-6 text-white" />
+              </div>
+              <div>
+                <h1 className="text-xl font-bold font-orbitron gradient-text-neon">Zion Tech Group</h1>
+                <p className="text-xs text-zion-gray-light">Innovating Tomorrow</p>
+              </div>
+            </Link>
+          </motion.div>
+
+          {/* Desktop Navigation */}
+          <nav className="hidden lg:flex items-center space-x-8">
+            {mainNavItems.map((item) => (
+              <div key={item.name} className="relative">
+                {item.hasDropdown ? (
+                  <div className="relative" ref={(el) => dropdownRefs.current[item.name] = el}>
+                    <button
+                      onClick={() => toggleDropdown(item.name)}
+                      className={`flex items-center space-x-1 px-3 py-2 rounded-lg text-sm font-medium transition-all duration-200 ${
+                        item.current 
+                          ? 'text-zion-cyan bg-zion-cyan/10' 
+                          : 'text-zion-gray-light hover:text-white hover:bg-zion-slate-light/20'
+                      }`}
+                    >
+                      <span>{item.name}</span>
+                      <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${
+                        activeDropdown === item.name ? 'rotate-180' : ''
+                      }`} />
+                    </button>
+
+                    <AnimatePresence>
+                      {activeDropdown === item.name && (
+                        <motion.div
+                          variants={dropdownVariants}
+                          initial="hidden"
+                          animate="visible"
+                          exit="hidden"
+                          className="absolute top-full left-0 mt-2 w-80 bg-zion-slate-dark/95 backdrop-blur-md border border-zion-cyan/20 rounded-2xl shadow-xl overflow-hidden"
+                        >
+                          <div className="p-4">
+                            <div className="grid grid-cols-1 gap-2">
+                              {item.name === 'Services' && services.map((service) => (
                                 <Link
                                   key={service.name}
                                   to={service.href}
-                                  className={`group p-4 rounded-xl transition-all duration-300 hover:bg-slate-700/50 ${
-                                    service.featured ? 'ring-2 ring-cyan-400/50' : ''
-                                  }`}
-                                  onClick={() => setServicesDropdownOpen(false)}
+                                  className="group flex items-start space-x-3 p-3 rounded-xl hover:bg-zion-slate-light/20 transition-all duration-200"
+                                  onClick={() => setActiveDropdown(null)}
                                 >
-                                  <div className="flex items-start gap-3">
-                                    <div className={`p-2 rounded-lg bg-gradient-to-br ${service.color}`}>
-                                      {React.createElement(service.icon, { className: "w-5 h-5 text-white" })}
-                                    </div>
-                                    <div className="flex-1">
-                                      <h3 className="font-semibold text-white group-hover:text-cyan-400 transition-colors">
+                                  <div className={`w-10 h-10 bg-gradient-to-r ${service.color} rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-200`}>
+                                    <service.icon className="w-5 h-5 text-white" />
+                                  </div>
+                                  <div className="flex-1 min-w-0">
+                                    <div className="flex items-center space-x-2">
+                                      <span className="text-sm font-semibold text-white group-hover:text-zion-cyan transition-colors duration-200">
                                         {service.name}
-                                      </h3>
-                                      <p className="text-sm text-gray-400 mt-1">
-                                        {service.description}
-                                      </p>
+                                      </span>
                                       {service.featured && (
-                                        <span className="inline-flex items-center gap-1 mt-2 text-xs text-cyan-400">
-                                          <Star className="w-3 h-3" />
+                                        <span className="px-2 py-1 text-xs font-medium bg-zion-cyan/20 text-zion-cyan rounded-full">
                                           Featured
                                         </span>
                                       )}
                                     </div>
+                                    <p className="text-xs text-zion-gray-light mt-1 line-clamp-2">
+                                      {service.description}
+                                    </p>
                                   </div>
                                 </Link>
                               ))}
-                            </div>
-                            <div className="mt-6 pt-6 border-t border-slate-700/50">
-                              <Link
-                                to="/services"
-                                className="inline-flex items-center gap-2 text-cyan-400 hover:text-cyan-300 transition-colors font-medium"
-                                onClick={() => setServicesDropdownOpen(false)}
-                              >
-                                View All Services
-                                <ArrowRight className="w-4 h-4" />
-                              </Link>
-                            </div>
-                          </div>
-                        </div>
-                      )}
-                      {/* Solutions Dropdown */}
-                      {item.name === 'Solutions' && solutionsDropdownOpen && (
-                        <div className="absolute top-full left-0 mt-2 w-[600px] bg-slate-800/95 backdrop-blur-xl rounded-2xl border border-slate-700/50 shadow-2xl shadow-black/50 overflow-hidden">
-                          <div className="p-6">
-                            <div className="grid grid-cols-2 gap-4">
-                              {solutions.map((solution) => (
+
+                              {item.name === 'Solutions' && solutions.map((solution) => (
                                 <Link
                                   key={solution.name}
                                   to={solution.href}
-                                  className={`group p-4 rounded-xl transition-all duration-300 hover:bg-slate-700/50 ${
-                                    solution.featured ? 'ring-2 ring-cyan-400/50' : ''
-                                  }`}
-                                  onClick={() => setSolutionsDropdownOpen(false)}
+                                  className="group flex items-start space-x-3 p-3 rounded-xl hover:bg-zion-slate-light/20 transition-all duration-200"
+                                  onClick={() => setActiveDropdown(null)}
                                 >
-                                  <div className="flex items-start gap-3">
-                                    <div className="p-2 rounded-lg bg-gradient-to-br from-blue-500 to-cyan-500">
-                                      {React.createElement(solution.icon, { className: "w-5 h-5 text-white" })}
-                                    </div>
-                                    <div className="flex-1">
-                                      <h3 className="font-semibold text-white group-hover:text-cyan-400 transition-colors">
-                                        {solution.name}
-                                      </h3>
-                                      <p className="text-sm text-gray-400 mt-1">
-                                        {solution.description}
-                                      </p>
-                                      {solution.featured && (
-                                        <span className="inline-flex items-center gap-1 mt-2 text-xs text-cyan-400">
-                                          <Star className="w-3 h-3" />
-                                          Featured
-                                        </span>
-                                      )}
-                                    </div>
+                                  <div className={`w-10 h-10 bg-gradient-to-r ${solution.color} rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-200`}>
+                                    <solution.icon className="w-5 h-5 text-white" />
+                                  </div>
+                                  <div className="flex-1 min-w-0">
+                                    <span className="text-sm font-semibold text-white group-hover:text-zion-cyan transition-colors duration-200">
+                                      {solution.name}
+                                    </span>
+                                    <p className="text-xs text-zion-gray-light mt-1 line-clamp-2">
+                                      {solution.description}
+                                    </p>
                                   </div>
                                 </Link>
                               ))}
-                            </div>
-                          </div>
-                        </div>
-                      )}
-                      {/* Resources Dropdown */}
-                      {item.name === 'Resources' && resourcesDropdownOpen && (
-                        <div className="absolute top-full left-0 mt-2 w-[600px] bg-slate-800/95 backdrop-blur-xl rounded-2xl border border-slate-700/50 shadow-2xl shadow-black/50 overflow-hidden">
-                          <div className="p-6">
-                            <div className="grid grid-cols-2 gap-4">
-                              {resources.map((resource) => (
+
+                              {item.name === 'Resources' && resources.map((resource) => (
                                 <Link
                                   key={resource.name}
                                   to={resource.href}
-                                  className={`group p-4 rounded-xl transition-all duration-300 hover:bg-slate-700/50 ${
-                                    resource.featured ? 'ring-2 ring-cyan-400/50' : ''
-                                  }`}
-                                  onClick={() => setResourcesDropdownOpen(false)}
+                                  className="group flex items-start space-x-3 p-3 rounded-xl hover:bg-zion-slate-light/20 transition-all duration-200"
+                                  onClick={() => setActiveDropdown(null)}
                                 >
-                                  <div className="flex items-start gap-3">
-                                    <div className="p-2 rounded-lg bg-gradient-to-br from-purple-500 to-pink-500">
-                                      {React.createElement(resource.icon, { className: "w-5 h-5 text-white" })}
-                                    </div>
-                                    <div className="flex-1">
-                                      <h3 className="font-semibold text-white group-hover:text-cyan-400 transition-colors">
-                                        {resource.name}
-                                      </h3>
-                                      <p className="text-sm text-gray-400 mt-1">
-                                        {resource.description}
-                                      </p>
-                                      {resource.featured && (
-                                        <span className="inline-flex items-center gap-1 mt-2 text-xs text-cyan-400">
-                                          <Star className="w-3 h-3" />
-                                          Featured
-                                        </span>
-                                      )}
-                                    </div>
+                                  <div className={`w-10 h-10 bg-gradient-to-r ${resource.color} rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-200`}>
+                                    <resource.icon className="w-5 h-5 text-white" />
+                                  </div>
+                                  <div className="flex-1 min-w-0">
+                                    <span className="text-sm font-semibold text-white group-hover:text-zion-cyan transition-colors duration-200">
+                                      {resource.name}
+                                    </span>
+                                    <p className="text-xs text-zion-gray-light mt-1 line-clamp-2">
+                                      {resource.description}
+                                    </p>
                                   </div>
                                 </Link>
                               ))}
                             </div>
                           </div>
-                        </div>
+                        </motion.div>
                       )}
-                    </div>
-                  ) : (
-                    <Link
-                      to={item.href}
-                      className="text-slate-300 hover:text-cyan-400 px-3 py-2 text-sm font-medium transition-all duration-200 relative group"
-                    >
-                      {item.name}
-                    </Link>
-                  )}
-                </div>
-              ))}
-            </nav>
-            {/* Right side - Search, Actions, Mobile menu */}
-            <div className="flex items-center space-x-4">
-              {/* Search */}
-              <form onSubmit={handleSearch} className="hidden md:block">
-                <div className="relative">
-                  <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-4 h-4" />
-                  <input
-                    type="text"
-                    placeholder="Search..."
-                    value={searchQuery}
-                    onChange={(e) => setSearchQuery(e.target.value)}
-                    className="w-64 pl-10 pr-4 py-2 bg-slate-700/50 border border-slate-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent text-sm"
-                  />
-                </div>
-              </form>
-              {/* Contact Info */}
-              <div className="hidden lg:flex items-center space-x-4">
-                <a
-                  href={`tel:${contactInfo.phone}`}
-                  className="flex items-center gap-2 text-slate-300 hover:text-cyan-400 transition-colors text-sm"
-                >
-                  <Phone className="w-4 h-4" />
-                  <span className="hidden xl:inline">{contactInfo.phone}</span>
-                </a>
-                <a
-                  href={`mailto:${contactInfo.email}`}
-                  className="flex items-center gap-2 text-slate-300 hover:text-cyan-400 transition-colors text-sm"
-                >
-                  <Mail className="w-4 h-4" />
-                  <span className="hidden xl:inline">{contactInfo.email}</span>
-                </a>
+                    </AnimatePresence>
+                  </div>
+                ) : (
+                  <Link
+                    to={item.href}
+                    className={`px-3 py-2 rounded-lg text-sm font-medium transition-all duration-200 ${
+                      item.current 
+                        ? 'text-zion-cyan bg-zion-cyan/10' 
+                        : 'text-zion-gray-light hover:text-white hover:bg-zion-slate-light/20'
+                    }`}
+                  >
+                    {item.name}
+                  </Link>
+                )}
               </div>
-              {/* CTA Button */}
+            ))}
+          </nav>
+
+          {/* Right side - Search, User, Cart */}
+          <div className="hidden lg:flex items-center space-x-4">
+            {/* Search */}
+            <button className="p-2 text-zion-gray-light hover:text-white hover:bg-zion-slate-light/20 rounded-lg transition-all duration-200">
+              <Search className="w-5 h-5" />
+            </button>
+
+            {/* Utility Navigation */}
+            {utilityNavItems.map((item) => (
               <Link
-                to="/request-quote"
-                className="hidden md:inline-flex items-center px-4 py-2 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white text-sm font-medium rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-cyan-500/25"
+                key={item.name}
+                to={item.href}
+                className="p-2 text-zion-gray-light hover:text-white hover:bg-zion-slate-light/20 rounded-lg transition-all duration-200"
+                title={item.name}
               >
-                Get Quote
+                <item.icon className="w-5 h-5" />
               </Link>
-              {/* Theme Toggle */}
-              <ThemeToggle />
-              {/* Mobile menu button */}
+            ))}
+
+            {/* Theme Toggle */}
+            <button
+              onClick={toggleTheme}
+              className="p-2 text-zion-gray-light hover:text-white hover:bg-zion-slate-light/20 rounded-lg transition-all duration-200"
+              title={isDarkMode ? 'Switch to Light Mode' : 'Switch to Dark Mode'}
+            >
+              <div className="w-5 h-5">
+                {isDarkMode ? '🌞' : '🌙'}
+              </div>
+            </button>
+
+            {/* Accessibility Toggle */}
+            <button
+              onClick={toggleAccessibility}
+              className="p-2 text-zion-gray-light hover:text-white hover:bg-zion-slate-light/20 rounded-lg transition-all duration-200"
+              title={isAccessibilityMode ? 'Disable Accessibility' : 'Enable Accessibility'}
+            >
+              <div className="w-5 h-5">
+                {isAccessibilityMode ? '♿' : '♿'}
+              </div>
+            </button>
+
+            {/* Language Selector */}
+            <div className="relative">
               <button
-                onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-                className="lg:hidden p-2 rounded-lg text-slate-300 hover:text-white hover:bg-slate-700/50 transition-colors"
+                onClick={() => toggleDropdown('language')}
+                className="p-2 text-zion-gray-light hover:text-white hover:bg-zion-slate-light/20 rounded-lg transition-all duration-200"
+                title="Change Language"
               >
-                {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+                <span className="text-sm font-medium">{currentLanguage.toUpperCase()}</span>
               </button>
+
+              <AnimatePresence>
+                {activeDropdown === 'language' && (
+                  <motion.div
+                    variants={dropdownVariants}
+                    initial="hidden"
+                    animate="visible"
+                    exit="hidden"
+                    className="absolute top-full right-0 mt-2 w-32 bg-zion-slate-dark/95 backdrop-blur-md border border-zion-cyan/20 rounded-xl shadow-xl overflow-hidden"
+                  >
+                    <div className="p-2">
+                      {['en', 'es', 'fr', 'de'].map((lang) => (
+                        <button
+                          key={lang}
+                          onClick={() => {
+                            changeLanguage(lang);
+                            setActiveDropdown(null);
+                          }}
+                          className={`w-full text-left px-3 py-2 text-sm rounded-lg transition-all duration-200 ${
+                            currentLanguage === lang
+                              ? 'text-zion-cyan bg-zion-cyan/10'
+                              : 'text-zion-gray-light hover:text-white hover:bg-zion-slate-light/20'
+                          }`}
+                        >
+                          {lang === 'en' ? 'English' : lang === 'es' ? 'Español' : lang === 'fr' ? 'Français' : 'Deutsch'}
+                        </button>
+                      ))}
+                    </div>
+                  </motion.div>
+                )}
+              </AnimatePresence>
             </div>
+
+            {/* CTA Button */}
+            <Link
+              to="/request-quote"
+              className="glass-button bg-gradient-to-r from-zion-cyan to-zion-blue text-white hover:shadow-glow-blue-lg transform hover:scale-105 transition-all duration-300"
+            >
+              Get Quote
+            </Link>
+          </div>
+
+          {/* Mobile menu button */}
+          <div className="lg:hidden">
+            <button
+              onClick={toggleMenu}
+              className="p-2 text-zion-gray-light hover:text-white hover:bg-zion-slate-light/20 rounded-lg transition-all duration-200"
+            >
+              {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+            </button>
           </div>
         </div>
-        {/* Mobile menu */}
-        {mobileMenuOpen && (
-          <div className="lg:hidden bg-slate-800/95 backdrop-blur-xl border-t border-slate-700/50">
-            <div className="container-responsive py-6">
-              {/* Mobile Search */}
-              <form onSubmit={handleSearch} className="mb-6">
-                <div className="relative">
-                  <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-4 h-4" />
-                  <input
-                    type="text"
-                    placeholder="Search services, solutions..."
-                    value={searchQuery}
-                    onChange={(e) => setSearchQuery(e.target.value)}
-                    className="w-full pl-10 pr-4 py-3 bg-slate-700/50 border border-slate-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
-                  />
-                </div>
-              </form>
-              {/* Mobile Navigation */}
-              <nav className="space-y-4">
-                {navigation.map((item) => (
-                  <div key={item.name}>
-                    {item.hasDropdown ? (
-                      <div>
-                        <button
-                          onClick={() => {
-                            if (item.name === 'Services') setServicesDropdownOpen(!servicesDropdownOpen);
-                            else if (item.name === 'Solutions') setSolutionsDropdownOpen(!solutionsDropdownOpen);
-                            else if (item.name === 'Resources') setResourcesDropdownOpen(!resourcesDropdownOpen);
-                          }}
-                          className="flex items-center justify-between w-full text-left text-slate-300 hover:text-cyan-400 py-2 text-lg font-medium transition-colors"
-                        >
-                          {item.name}
-                          <ChevronDown className={`w-5 h-5 transition-transform duration-200 ${
-                            (item.name === 'Services' && servicesDropdownOpen) ||
-                            (item.name === 'Solutions' && solutionsDropdownOpen) ||
-                            (item.name === 'Resources' && resourcesDropdownOpen)
-                              ? 'rotate-180' : ''
-                          }`} />
-                        </button>
-                        {/* Mobile Services Dropdown */}
-                        {item.name === 'Services' && servicesDropdownOpen && (
-                          <div className="ml-4 mt-2 space-y-2">
-                            {services.slice(0, 6).map((service) => (
+      </div>
+
+      {/* Mobile Navigation */}
+      <AnimatePresence>
+        {isMenuOpen && (
+          <motion.div
+            variants={menuVariants}
+            initial="hidden"
+            animate="visible"
+            exit="hidden"
+            className="lg:hidden bg-zion-slate-dark/95 backdrop-blur-md border-t border-zion-cyan/20"
+          >
+            <div className="px-4 py-6 space-y-4">
+              {/* Mobile Navigation Items */}
+              {mainNavItems.map((item) => (
+                <motion.div key={item.name} variants={menuItemVariants}>
+                  {item.hasDropdown ? (
+                    <div>
+                      <button
+                        onClick={() => toggleDropdown(item.name)}
+                        className="w-full flex items-center justify-between px-3 py-2 text-left text-zion-gray-light hover:text-white hover:bg-zion-slate-light/20 rounded-lg transition-all duration-200"
+                      >
+                        <span>{item.name}</span>
+                        <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${
+                          activeDropdown === item.name ? 'rotate-180' : ''
+                        }`} />
+                      </button>
+
+                      <AnimatePresence>
+                        {activeDropdown === item.name && (
+                          <motion.div
+                            variants={dropdownVariants}
+                            initial="hidden"
+                            animate="visible"
+                            exit="hidden"
+                            className="ml-4 mt-2 space-y-2"
+                          >
+                            {item.name === 'Services' && services.map((service) => (
                               <Link
                                 key={service.name}
                                 to={service.href}
-                                className="block text-slate-400 hover:text-cyan-400 py-1 transition-colors"
-                                onClick={() => setMobileMenuOpen(false)}
+                                className="block px-3 py-2 text-sm text-zion-gray-light hover:text-white hover:bg-zion-slate-light/20 rounded-lg transition-all duration-200"
+                                onClick={() => {
+                                  setActiveDropdown(null);
+                                  setIsMenuOpen(false);
+                                }}
                               >
                                 {service.name}
                               </Link>
                             ))}
-                            <Link
-                              to="/services"
-                              className="block text-cyan-400 hover:text-cyan-300 py-1 font-medium"
-                              onClick={() => setMobileMenuOpen(false)}
-                            >
-                              View All Services →
-                            </Link>
-                          </div>
-                        )}
-                        {/* Mobile Solutions Dropdown */}
-                        {item.name === 'Solutions' && solutionsDropdownOpen && (
-                          <div className="ml-4 mt-2 space-y-2">
-                            {solutions.map((solution) => (
+
+                            {item.name === 'Solutions' && solutions.map((solution) => (
                               <Link
                                 key={solution.name}
                                 to={solution.href}
-                                className="block text-slate-400 hover:text-cyan-400 py-1 transition-colors"
-                                onClick={() => setMobileMenuOpen(false)}
+                                className="block px-3 py-2 text-sm text-zion-gray-light hover:text-white hover:bg-zion-slate-light/20 rounded-lg transition-all duration-200"
+                                onClick={() => {
+                                  setActiveDropdown(null);
+                                  setIsMenuOpen(false);
+                                }}
                               >
                                 {solution.name}
                               </Link>
                             ))}
-                          </div>
-                        )}
-                        {/* Mobile Resources Dropdown */}
-                        {item.name === 'Resources' && resourcesDropdownOpen && (
-                          <div className="ml-4 mt-2 space-y-2">
-                            {resources.map((resource) => (
+
+                            {item.name === 'Resources' && resources.map((resource) => (
                               <Link
                                 key={resource.name}
                                 to={resource.href}
-                                className="block text-slate-400 hover:text-cyan-400 py-1 transition-colors"
-                                onClick={() => setMobileMenuOpen(false)}
+                                className="block px-3 py-2 text-sm text-zion-gray-light hover:text-white hover:bg-zion-slate-light/20 rounded-lg transition-all duration-200"
+                                onClick={() => {
+                                  setActiveDropdown(null);
+                                  setIsMenuOpen(false);
+                                }}
                               >
                                 {resource.name}
                               </Link>
                             ))}
-                          </div>
+                          </motion.div>
                         )}
-                      </div>
-                    ) : (
-                      <Link
-                        to={item.href}
-                        className="block text-slate-300 hover:text-cyan-400 py-2 text-lg font-medium transition-colors"
-                        onClick={() => setMobileMenuOpen(false)}
-                      >
-                        {item.name}
-                      </Link>
-                    )}
-                  </div>
+                      </AnimatePresence>
+                    </div>
+                  ) : (
+                    <Link
+                      to={item.href}
+                      className="block px-3 py-2 text-zion-gray-light hover:text-white hover:bg-zion-slate-light/20 rounded-lg transition-all duration-200"
+                      onClick={() => setIsMenuOpen(false)}
+                    >
+                      {item.name}
+                    </Link>
+                  )}
+                </motion.div>
+              ))}
+
+              {/* Mobile Utility Items */}
+              <div className="pt-4 border-t border-zion-cyan/20">
+                {utilityNavItems.map((item) => (
+                  <motion.div key={item.name} variants={menuItemVariants}>
+                    <Link
+                      to={item.href}
+                      className="flex items-center space-x-3 px-3 py-2 text-zion-gray-light hover:text-white hover:bg-zion-slate-light/20 rounded-lg transition-all duration-200"
+                      onClick={() => setIsMenuOpen(false)}
+                    >
+                      <item.icon className="w-5 h-5" />
+                      <span>{item.name}</span>
+                    </Link>
+                  </motion.div>
                 ))}
-              </nav>
-              {/* Mobile Contact Info */}
-              <div className="mt-8 pt-6 border-t border-slate-700/50 space-y-3">
-                <a
-                  href={`tel:${contactInfo.phone}`}
-                  className="flex items-center gap-3 text-slate-300 hover:text-cyan-400 transition-colors"
-                >
-                  <Phone className="w-5 h-5" />
-                  {contactInfo.phone}
-                </a>
-                <a
-                  href={`mailto:${contactInfo.email}`}
-                  className="flex items-center gap-3 text-slate-300 hover:text-cyan-400 transition-colors"
-                >
-                  <Mail className="w-5 h-5" />
-                  {contactInfo.email}
-                </a>
-                <div className="flex items-start gap-3 text-slate-300">
-                  <MapPin className="w-5 h-5 mt-0.5 flex-shrink-0" />
-                  <span className="text-sm">{contactInfo.address}</span>
-                </div>
               </div>
+
               {/* Mobile CTA */}
-              <div className="mt-6">
+              <motion.div variants={menuItemVariants} className="pt-4">
                 <Link
                   to="/request-quote"
-                  className="block w-full text-center px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-medium rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-cyan-500/25"
-                  onClick={() => setMobileMenuOpen(false)}
+                  className="block w-full text-center glass-button bg-gradient-to-r from-zion-cyan to-zion-blue text-white hover:shadow-glow-blue-lg transform hover:scale-105 transition-all duration-300"
+                  onClick={() => setIsMenuOpen(false)}
                 >
-                  Get Your Quote
+                  Get Quote
                 </Link>
-              </div>
+              </motion.div>
             </div>
-          </div>
+          </motion.div>
         )}
-      </header>
-      {/* Click outside to close dropdowns */}
-      {(servicesDropdownOpen || solutionsDropdownOpen || resourcesDropdownOpen) && (
-        <div
-          className="fixed inset-0 z-40"
-          onClick={() => {
-            setServicesDropdownOpen(false);
-            setSolutionsDropdownOpen(false);
-            setResourcesDropdownOpen(false);
-          }}
-        />
-      )}
-    </>
+      </AnimatePresence>
+    </motion.header>
   );
-}
+};

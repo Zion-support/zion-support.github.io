@@ -1,7 +1,6 @@
 import React from 'react';
 import { SEO } from '@/components/SEO';
 import { motion } from 'framer-motion';
-import { SEO } from '@/components/SEO';
 import { 
   Brain, 
   Truck, 
@@ -36,6 +35,7 @@ import {
   Car,
   Train
 } from 'lucide-react';
+
 const AISupplyChainOptimization: React.FC = () => {
   const features = [
     "AI-powered demand forecasting and planning",
@@ -51,6 +51,7 @@ const AISupplyChainOptimization: React.FC = () => {
     "Sustainability and carbon footprint tracking",
     "Compliance and regulatory monitoring"
   ];
+
   const benefits = [
     "Reduce inventory costs by 25-40%",
     "Improve delivery times by 30-50%",
@@ -58,6 +59,7 @@ const AISupplyChainOptimization: React.FC = () => {
     "Reduce stockouts by 60%",
     "Lower transportation costs by 20-30%"
   ];
+
   const useCases = [
     "E-commerce fulfillment",
     "Manufacturing supply chains",
@@ -68,6 +70,7 @@ const AISupplyChainOptimization: React.FC = () => {
     "Pharmaceutical logistics",
     "Cold chain management"
   ];
+
   const pricing = [
     {
       name: "Starter",
@@ -98,216 +101,233 @@ const AISupplyChainOptimization: React.FC = () => {
         "Risk assessment tools",
         "Advanced analytics and reporting",
         "Priority support",
-        "API access (10,000 calls/month)"
+        "API access (10,000 calls/month)",
+        "Custom integrations (up to 5)",
+        "Training and onboarding"
       ],
       cta: "Start Free Trial",
       popular: true
     },
     {
       name: "Enterprise",
-      price: "$2,999",
-      period: "/month",
-      description: "For large organizations with global supply chains",
+      price: "Custom",
+      period: "",
+      description: "Tailored solutions for large enterprises with complex global supply chains",
       features: [
         "Unlimited AI demand forecasting",
         "Multi-warehouse optimization",
         "Global route optimization",
         "Advanced risk management",
         "Custom AI model training",
-        "White-label solutions",
         "Dedicated account manager",
-        "24/7 phone support",
-        "Unlimited API access"
+        "24/7 priority support",
+        "Unlimited API access",
+        "Custom integrations",
+        "On-site training and implementation",
+        "SLA guarantees",
+        "Custom reporting and dashboards"
       ],
       cta: "Contact Sales",
       popular: false
     }
   ];
+
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white">
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO 
-        title="AI Supply Chain Optimization Platform - Zion Tech Group"
-        description="Optimize your supply chain with AI-powered forecasting, inventory management, and logistics optimization. Reduce costs and improve efficiency."
+        title="AI Supply Chain Optimization - Zion Tech Group"
+        description="Transform your supply chain with AI-powered optimization solutions. Reduce costs, improve efficiency, and enhance visibility across your entire network."
+        keywords="AI supply chain, supply chain optimization, inventory management, logistics optimization, demand forecasting, supply chain AI"
       />
+
       {/* Hero Section */}
-      <section className="relative py-20 px-4 sm:px-6 lg:px-8">
+      <section className="pt-32 pb-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
-            <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-blue-600 to-cyan-600 text-white text-sm font-medium mb-6">
-              <Brain className="w-4 h-4 mr-2" />
-              AI-Powered Supply Chain
+            <div className="flex justify-center mb-6">
+              <div className="w-20 h-20 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-2xl flex items-center justify-center">
+                <Brain className="w-10 h-10 text-white" />
+              </div>
             </div>
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
               AI Supply Chain
-              <span className="bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
-                {" "}Optimization Platform
+              <span className="block text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">
+                Optimization
               </span>
             </h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Transform your supply chain operations with AI that predicts demand, optimizes inventory, and streamlines logistics. 
-              Reduce costs, improve efficiency, and gain competitive advantage in today's complex global markets.
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
+              Transform your supply chain operations with cutting-edge AI technology. 
+              Optimize inventory, streamline logistics, and reduce costs while improving 
+              customer satisfaction and operational efficiency.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="px-8 py-4 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-cyan-700 transition-all duration-200"
-              >
-                Start Free Trial
-              </motion.button>
-              <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="px-8 py-4 border border-gray-600 text-white font-semibold rounded-lg hover:bg-gray-800 transition-all duration-200"
-              >
-                Watch Demo
-              </motion.button>
+            <div className="flex flex-wrap justify-center gap-4 text-sm text-gray-400">
+              <span className="flex items-center">
+                <CheckCircle className="w-4 h-4 mr-2 text-green-400" />
+                25-40% Cost Reduction
+              </span>
+              <span className="flex items-center">
+                <CheckCircle className="w-4 h-4 mr-2 text-green-400" />
+                30-50% Faster Delivery
+              </span>
+              <span className="flex items-center">
+                <CheckCircle className="w-4 h-4 mr-2 text-green-400" />
+                35% Efficiency Increase
+              </span>
             </div>
           </motion.div>
         </div>
       </section>
+
       {/* Features Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
           >
             <h2 className="text-4xl font-bold text-white mb-4">
-              Comprehensive Supply Chain Intelligence
+              Powerful AI Features
             </h2>
-            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              Everything you need to optimize your entire supply chain from end to end
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Our AI-powered platform provides comprehensive supply chain optimization 
+              capabilities designed to transform your operations.
             </p>
           </motion.div>
-          <div className="grid md:grid-cols-2 gap-8">
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {features.map((feature, index) => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700 hover:border-blue-500 transition-all duration-300"
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                className="bg-slate-800/50 backdrop-blur-sm border border-slate-700/50 rounded-xl p-6 hover:border-blue-500/30 transition-all duration-300"
               >
-                <div className="w-12 h-12 bg-gradient-to-r from-blue-600 to-cyan-600 rounded-lg flex items-center justify-center mb-4">
-                  <CheckCircle className="w-6 h-6 text-white" />
+                <div className="flex items-start space-x-3">
+                  <div className="w-10 h-10 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-lg flex items-center justify-center flex-shrink-0">
+                    <Zap className="w-5 h-5 text-white" />
+                  </div>
+                  <p className="text-gray-300">{feature}</p>
                 </div>
-                <h3 className="text-lg font-semibold text-white mb-2">{feature}</h3>
               </motion.div>
             ))}
           </div>
         </div>
       </section>
+
       {/* Benefits Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-800/30">
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-800/30">
         <div className="max-w-7xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
           >
             <h2 className="text-4xl font-bold text-white mb-4">
-              Measurable Business Impact
+              Proven Results
             </h2>
-            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              See real improvements in your supply chain performance and bottom line
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Our AI solutions deliver measurable improvements across all aspects 
+              of your supply chain operations.
             </p>
           </motion.div>
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {benefits.map((benefit, index) => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
                 className="text-center"
               >
-                <div className="w-20 h-20 bg-gradient-to-r from-blue-600 to-cyan-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <TrendingUp className="w-10 h-10 text-white" />
+                <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-emerald-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <TrendingUp className="w-8 h-8 text-white" />
                 </div>
-                <p className="text-lg text-white font-medium">{benefit}</p>
+                <p className="text-xl font-semibold text-white">{benefit}</p>
               </motion.div>
             ))}
           </div>
         </div>
       </section>
+
       {/* Use Cases Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
           >
             <h2 className="text-4xl font-bold text-white mb-4">
-              Industry-Leading Solutions
+              Industry Applications
             </h2>
-            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              Proven solutions across diverse industries and supply chain complexities
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Our AI supply chain optimization solutions are designed to work across 
+              diverse industries and use cases.
             </p>
           </motion.div>
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {useCases.map((useCase, index) => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700 text-center hover:border-blue-500 transition-all duration-300"
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                className="bg-slate-800/50 backdrop-blur-sm border border-slate-700/50 rounded-xl p-6 text-center hover:border-blue-500/30 transition-all duration-300"
               >
-                <div className="w-16 h-16 bg-gradient-to-r from-blue-600 to-cyan-600 rounded-lg flex items-center justify-center mx-auto mb-4">
-                  <Package className="w-8 h-8 text-white" />
+                <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-purple-500 rounded-lg flex items-center justify-center mx-auto mb-4">
+                  <Package className="w-6 h-6 text-white" />
                 </div>
-                <h3 className="text-lg font-semibold text-white">{useCase}</h3>
+                <p className="text-gray-300 font-medium">{useCase}</p>
               </motion.div>
             ))}
           </div>
         </div>
       </section>
+
       {/* Pricing Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-800/30">
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-800/30">
         <div className="max-w-7xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
           >
             <h2 className="text-4xl font-bold text-white mb-4">
-              Flexible Pricing for Every Business
+              Pricing Plans
             </h2>
-            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              Scale your supply chain optimization as your business grows
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Choose the plan that best fits your business needs and scale as you grow.
             </p>
           </motion.div>
+
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {pricing.map((plan, index) => (
               <motion.div
-                key={index}
+                key={plan.name}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                className={`relative bg-gray-800/50 backdrop-blur-sm rounded-xl p-8 border ${
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                className={`bg-slate-800/50 backdrop-blur-sm border rounded-2xl p-8 ${
                   plan.popular 
-                    ? 'border-blue-500 ring-2 ring-blue-500/20' 
-                    : 'border-gray-700'
+                    ? 'border-blue-500/50 ring-2 ring-blue-500/20' 
+                    : 'border-slate-700/50'
                 }`}
               >
                 {plan.popular && (
-                  <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                    <span className="bg-gradient-to-r from-blue-600 to-cyan-600 text-white px-4 py-2 rounded-full text-sm font-medium">
+                  <div className="text-center mb-4">
+                    <span className="px-3 py-1 bg-blue-500/20 text-blue-400 text-sm font-medium rounded-full">
                       Most Popular
                     </span>
                   </div>
@@ -344,6 +364,7 @@ const AISupplyChainOptimization: React.FC = () => {
           </div>
         </div>
       </section>
+
       {/* CTA Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
@@ -381,6 +402,7 @@ const AISupplyChainOptimization: React.FC = () => {
           </motion.div>
         </div>
       </section>
+
       {/* Contact Info */}
       <section className="py-12 px-4 sm:px-6 lg:px-8 bg-gray-800/50">
         <div className="max-w-4xl mx-auto text-center">
@@ -397,4 +419,5 @@ const AISupplyChainOptimization: React.FC = () => {
     </div>
   );
 };
+
 export default AISupplyChainOptimization;

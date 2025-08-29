@@ -1,7 +1,12 @@
-import React from 'react';
+import React, { useState, useMemo } from 'react';
 import { SEO } from '../components/SEO';
 import { motion } from 'framer-motion';
-import { Calendar, User, Tag, ArrowRight, ExternalLink } from 'lucide-react';
+import { Calendar, User, Tag, ArrowRight, ExternalLink, Search } from 'lucide-react';
+
+export default function News() {
+  const [searchQuery, setSearchQuery] = useState('');
+  const [selectedCategory, setSelectedCategory] = useState('All News');
+
   const newsArticles = [
     {
       id: 1,
@@ -70,6 +75,7 @@ import { Calendar, User, Tag, ArrowRight, ExternalLink } from 'lucide-react';
       href: '/news/european-market-expansion'
     }
   ];
+
   const categories = [
     'All News',
     'Product Launch',
@@ -79,13 +85,44 @@ import { Calendar, User, Tag, ArrowRight, ExternalLink } from 'lucide-react';
     'Technology',
     'Business'
   ];
+
   const featuredArticle = newsArticles[0];
+
+  const filteredArticles = useMemo(() => {
+    let filtered = newsArticles;
+    
+    if (searchQuery) {
+      filtered = filtered.filter(article =>
+        article.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
+        article.excerpt.toLowerCase().includes(searchQuery.toLowerCase()) ||
+        article.category.toLowerCase().includes(searchQuery.toLowerCase())
+      );
+    }
+    
+    if (selectedCategory !== 'All News') {
+      filtered = filtered.filter(article => article.category === selectedCategory);
+    }
+    
+    return filtered;
+  }, [searchQuery, selectedCategory]);
+
+  const handleSearch = (e: React.FormEvent) => {
+    e.preventDefault();
+    // Search is handled by the filteredArticles useMemo
+  };
+
+  const clearFilters = () => {
+    setSearchQuery('');
+    setSelectedCategory('All News');
+  };
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO 
         title="News - Zion Tech Group"
         description="Stay updated with the latest news, product launches, research breakthroughs, and company updates from Zion Tech Group."
       />
+
       {/* Hero Section */}
       <section className="relative py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto text-center">
@@ -96,17 +133,64 @@ import { Calendar, User, Tag, ArrowRight, ExternalLink } from 'lucide-react';
           >
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
               Latest News &
-              <span className="bg-gradient-to-r from-blue-400 to-purple-600 bg-clip-text text-transparent">
-                {' '}Updates
+              <span className="block text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">
+                Updates
               </span>
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Stay informed about our latest innovations, research breakthroughs, 
-              product launches, and company milestones.
+              Stay informed about our latest innovations, product launches, 
+              research breakthroughs, and company milestones.
             </p>
           </motion.div>
         </div>
       </section>
+
+      {/* Search and Filters */}
+      <section className="py-12 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <div className="bg-slate-800/50 backdrop-blur-sm border border-slate-700/50 rounded-2xl p-6">
+            <form onSubmit={handleSearch} className="space-y-6">
+              {/* Search Bar */}
+              <div className="relative">
+                <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
+                <input
+                  type="text"
+                  placeholder="Search news articles..."
+                  value={searchQuery}
+                  onChange={(e) => setSearchQuery(e.target.value)}
+                  className="w-full pl-10 pr-4 py-3 bg-slate-700/50 border border-slate-600 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                />
+              </div>
+
+              {/* Category Filter */}
+              <div className="flex flex-wrap gap-3">
+                {categories.map((category) => (
+                  <button
+                    key={category}
+                    type="button"
+                    onClick={() => setSelectedCategory(category)}
+                    className={`px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200 ${
+                      selectedCategory === category
+                        ? 'bg-blue-600 text-white'
+                        : 'bg-slate-700/50 text-gray-300 hover:bg-slate-600/50 hover:text-white'
+                    }`}
+                  >
+                    {category}
+                  </button>
+                ))}
+                <button
+                  type="button"
+                  onClick={clearFilters}
+                  className="px-4 py-2 bg-slate-600 hover:bg-slate-500 text-white rounded-lg text-sm font-medium transition-colors duration-200"
+                >
+                  Clear Filters
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </section>
+
       {/* Featured Article */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -117,22 +201,23 @@ import { Calendar, User, Tag, ArrowRight, ExternalLink } from 'lucide-react';
             className="text-center mb-16"
           >
             <h2 className="text-4xl font-bold text-white mb-4">
-              Featured Story
+              Featured Article
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Our latest breakthrough in AI-powered healthcare analytics
+              Our latest breakthrough and most important announcement
             </p>
           </motion.div>
+
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-8 border border-slate-700 hover:border-slate-600 transition-all duration-300"
+            transition={{ duration: 0.8, delay: 0.2 }}
+            className="bg-slate-800/50 backdrop-blur-sm border border-slate-700/50 rounded-2xl p-8 hover:border-blue-500/30 transition-all duration-300"
           >
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
               <div>
-                <div className="flex items-center gap-4 mb-4">
-                  <span className="bg-blue-600 text-white px-3 py-1 rounded-full text-sm font-medium">
+                <div className="flex items-center space-x-4 mb-4">
+                  <span className="px-3 py-1 bg-blue-600/20 text-blue-400 text-sm font-medium rounded-full">
                     {featuredArticle.category}
                   </span>
                   <span className="text-gray-400 text-sm">{featuredArticle.readTime}</span>
@@ -140,40 +225,41 @@ import { Calendar, User, Tag, ArrowRight, ExternalLink } from 'lucide-react';
                 <h3 className="text-3xl font-bold text-white mb-4">
                   {featuredArticle.title}
                 </h3>
-                <p className="text-gray-300 text-lg mb-6">
+                <p className="text-gray-300 mb-6 text-lg">
                   {featuredArticle.excerpt}
                 </p>
-                <div className="flex items-center gap-4 text-sm text-gray-400 mb-6">
-                  <span className="flex items-center gap-2">
-                    <User className="w-4 h-4" />
+                <div className="flex items-center space-x-4 text-sm text-gray-400 mb-6">
+                  <span className="flex items-center">
+                    <User className="w-4 h-4 mr-2" />
                     {featuredArticle.author}
                   </span>
-                  <span className="flex items-center gap-2">
-                    <Calendar className="w-4 h-4" />
+                  <span className="flex items-center">
+                    <Calendar className="w-4 h-4 mr-2" />
                     {new Date(featuredArticle.date).toLocaleDateString()}
                   </span>
                 </div>
                 <a
                   href={featuredArticle.href}
-                  className="inline-flex items-center gap-2 bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300"
+                  className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-300"
                 >
-                  Read Full Article <ArrowRight className="w-4 h-4" />
+                  Read Full Article <ArrowRight className="w-4 h-4 ml-2" />
                 </a>
               </div>
-              <div className="bg-gradient-to-br from-blue-600/20 to-purple-600/20 rounded-xl p-8 text-center">
-                <div className="w-32 h-32 bg-gradient-to-r from-blue-600 to-purple-600 rounded-full mx-auto mb-4 flex items-center justify-center">
-                  <Tag className="w-16 h-16 text-white" />
+              <div className="relative">
+                <div className="w-full h-64 lg:h-80 bg-gradient-to-br from-blue-600/20 to-purple-600/20 rounded-xl flex items-center justify-center">
+                  <div className="text-center text-gray-400">
+                    <div className="w-16 h-16 bg-slate-700/50 rounded-full flex items-center justify-center mx-auto mb-4">
+                      <Tag className="w-8 h-8" />
+                    </div>
+                    <p className="text-sm">News Image</p>
+                  </div>
                 </div>
-                <p className="text-gray-300">Featured Article</p>
               </div>
-              <h1 className="text-5xl md:text-6xl font-bold text-white">
-                Latest
-                <span className="bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent"> News</span>
-              </h1>
             </div>
           </motion.div>
         </div>
       </section>
+
       {/* News Grid */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -184,54 +270,14 @@ import { Calendar, User, Tag, ArrowRight, ExternalLink } from 'lucide-react';
             className="text-center mb-16"
           >
             <h2 className="text-4xl font-bold text-white mb-4">
-              Latest News
+              Latest News ({filteredArticles.length})
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Stay updated with our latest developments, research breakthroughs, 
-              and company announcements.
+              Stay updated with our latest developments and industry insights
             </p>
           </motion.div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {newsArticles.slice(1).map((article, index) => (
-              <motion.div
-                key={article.id}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700 hover:border-slate-600 transition-all duration-300"
-              >
-                <div className="flex items-center gap-4 mb-4">
-                  <span className="bg-blue-600 text-white px-3 py-1 rounded-full text-sm font-medium">
-                    {article.category}
-                  </span>
-                  <span className="text-gray-400 text-sm">{article.readTime}</span>
-                </div>
-                <h3 className="text-xl font-semibold text-white mb-3">
-                  {article.title}
-                </h3>
-                <p className="text-gray-300 mb-4">
-                  {article.excerpt}
-                </p>
-                <div className="flex items-center gap-4 text-sm text-gray-400 mb-4">
-                  <span className="flex items-center gap-2">
-                    <User className="w-4 h-4" />
-                    {article.author}
-                  </span>
-                  <span className="flex items-center gap-2">
-                    <Calendar className="w-4 h-4" />
-                    {new Date(article.date).toLocaleDateString()}
-                  </span>
-                </div>
-                <a
-                  href={article.href}
-                  className="text-blue-400 hover:text-blue-300 font-medium transition-colors duration-300 flex items-center"
-                >
-                  Read More <ArrowRight className="w-4 h-4 ml-1" />
-                </a>
-              </motion.div>
-            ))}
-          </div>
-          {filteredArticles.length === 0 && (
+
+          {filteredArticles.length === 0 ? (
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
@@ -244,9 +290,55 @@ import { Calendar, User, Tag, ArrowRight, ExternalLink } from 'lucide-react';
               <h3 className="text-xl font-semibold text-white mb-2">No news articles found</h3>
               <p className="text-slate-400">Try adjusting your filters or search terms</p>
             </motion.div>
+          ) : (
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {filteredArticles.slice(1).map((article, index) => (
+                <motion.div
+                  key={article.id}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  className="bg-slate-800/50 backdrop-blur-sm border border-slate-700/50 rounded-xl p-6 hover:border-blue-500/30 transition-all duration-300 group"
+                >
+                  <div className="mb-4">
+                    <div className="flex items-center justify-between mb-3">
+                      <span className="px-2 py-1 bg-slate-700/50 text-gray-300 text-xs rounded-full">
+                        {article.category}
+                      </span>
+                      <span className="text-gray-400 text-xs">{article.readTime}</span>
+                    </div>
+                    <h3 className="text-xl font-bold text-white mb-3 group-hover:text-blue-400 transition-colors duration-300 line-clamp-2">
+                      {article.title}
+                    </h3>
+                    <p className="text-gray-300 text-sm line-clamp-3 mb-4">
+                      {article.excerpt}
+                    </p>
+                  </div>
+
+                  <div className="flex items-center justify-between text-sm text-gray-400 mb-4">
+                    <span className="flex items-center">
+                      <User className="w-4 h-4 mr-1" />
+                      {article.author}
+                    </span>
+                    <span className="flex items-center">
+                      <Calendar className="w-4 h-4 mr-1" />
+                      {new Date(article.date).toLocaleDateString()}
+                    </span>
+                  </div>
+
+                  <a
+                    href={article.href}
+                    className="inline-flex items-center text-blue-400 hover:text-blue-300 font-medium transition-colors duration-300"
+                  >
+                    Read More <ArrowRight className="w-4 h-4 ml-1" />
+                  </a>
+                </motion.div>
+              ))}
+            </div>
           )}
         </div>
       </section>
+
       {/* Newsletter Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-800/30">
         <div className="max-w-4xl mx-auto text-center">
@@ -275,6 +367,7 @@ import { Calendar, User, Tag, ArrowRight, ExternalLink } from 'lucide-react';
           </motion.div>
         </div>
       </section>
+
       {/* CTA Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
@@ -309,5 +402,6 @@ import { Calendar, User, Tag, ArrowRight, ExternalLink } from 'lucide-react';
       </section>
     </div>
   );
-};
+}
+
 export default News;

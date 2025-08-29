@@ -98,53 +98,172 @@ import {
   Cloud,
   CheckCircle
 } from 'lucide-react';
+import { SEO } from '../components/EnhancedSEO';
 
-// SEO Component
-const SEO: React.FC = () => (
-  <>
-    <title>Zion Tech Group - AI-Powered Solutions & Emerging Technologies</title>
-    <meta name="description" content="Transform your business with Zion Tech Group's cutting-edge AI solutions, quantum technology, and innovative IT services. Leading the future of technology." />
-    <meta name="keywords" content="AI solutions, quantum computing, cybersecurity, cloud services, digital transformation, IT consulting" />
-    <meta name="robots" content="index, follow" />
-    <meta property="og:title" content="Zion Tech Group - AI-Powered Solutions & Emerging Technologies" />
-    <meta property="og:description" content="Transform your business with Zion Tech Group's cutting-edge AI solutions, quantum technology, and innovative IT services." />
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://ziontechgroup.com" />
-    <meta property="og:image" content="/og-image.jpg" />
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Zion Tech Group - AI-Powered Solutions & Emerging Technologies" />
-    <meta name="twitter:description" content="Transform your business with Zion Tech Group's cutting-edge AI solutions, quantum technology, and innovative IT services." />
-    <link rel="canonical" href="https://ziontechgroup.com" />
-  </>
-);
+// Animation variants
+const containerVariants = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.1,
+      delayChildren: 0.2
+    }
+  }
+};
+
+const itemVariants = {
+  hidden: { opacity: 0, y: 20 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 0.6,
+      ease: "easeOut"
+    }
+  }
+};
+
+const fadeInUp = {
+  hidden: { opacity: 0, y: 30 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 0.8,
+      ease: "easeOut"
+    }
+  }
+};
+
+const scaleIn = {
+  hidden: { opacity: 0, scale: 0.8 },
+  visible: {
+    opacity: 1,
+    scale: 1,
+    transition: {
+      duration: 0.6,
+      ease: "easeOut"
+    }
+  }
+};
+
+// Featured services data
+const featuredServices = [
+  {
+    id: 1,
+    title: "AI-Powered Business Intelligence",
+    description: "Transform your data into actionable insights with our advanced AI analytics platform.",
+    icon: Brain,
+    href: "/services/ai-business-intelligence",
+    category: "AI & Analytics"
+  },
+  {
+    id: 2,
+    title: "Quantum Computing Solutions",
+    description: "Leverage the power of quantum computing for complex problem-solving and optimization.",
+    icon: Atom,
+    href: "/services/quantum-computing",
+    category: "Emerging Tech"
+  },
+  {
+    id: 3,
+    title: "Cybersecurity Suite",
+    description: "Comprehensive security solutions powered by AI threat detection and prevention.",
+    icon: Shield,
+    href: "/services/ai-cybersecurity-suite",
+    category: "Security"
+  },
+  {
+    id: 4,
+    title: "Digital Twin Technology",
+    description: "Create virtual replicas of physical systems for simulation and optimization.",
+    icon: Server,
+    href: "/services/digital-twin",
+    category: "IoT & Digital"
+  }
+];
+
+// Micro SaaS services data
+const microSaaSServices = [
+  {
+    id: 1,
+    title: "AI Content Generator",
+    description: "Automate content creation with AI-powered writing and design tools.",
+    icon: PenTool,
+    href: "/services/ai-content-generator",
+    category: "Content & Marketing"
+  },
+  {
+    id: 2,
+    title: "Uptime SLA Monitor",
+    description: "Real-time monitoring and alerting for your critical business applications.",
+    icon: Activity,
+    href: "/services/uptime-sla-monitor",
+    category: "Monitoring"
+  },
+  {
+    id: 3,
+    title: "SOC2 Compliance Tracker",
+    description: "Streamline compliance management with automated tracking and reporting.",
+    icon: ShieldCheck,
+    href: "/services/soc2-compliance-tracker",
+    category: "Compliance"
+  },
+  {
+    id: 4,
+    title: "AI Lead Scoring",
+    description: "Intelligent lead qualification and scoring using machine learning algorithms.",
+    icon: Target,
+    href: "/services/ai-lead-scoring",
+    category: "Sales & Marketing"
+  }
+];
 
 // Hero Section Component
 const HeroSection: React.FC = () => {
-  const [currentService, setCurrentService] = useState(0);
-  
-  const services = [
-    "AI-Powered Business Intelligence",
-    "Quantum Computing Solutions",
-    "Advanced Cybersecurity",
-    "Cloud & DevOps Excellence",
-    "Digital Transformation"
+  const [currentSlide, setCurrentSlide] = useState(0);
+
+  const heroSlides = [
+    {
+      title: "AI-Powered Innovation",
+      subtitle: "Transform your business with cutting-edge artificial intelligence solutions",
+      description: "From predictive analytics to automated workflows, we deliver AI solutions that drive real business value.",
+      icon: Brain,
+      cta: "Explore AI Services",
+      href: "/services/ai-services"
+    },
+    {
+      title: "Quantum Computing",
+      subtitle: "Next-generation computing power for complex problem-solving",
+      description: "Harness the power of quantum mechanics to solve previously unsolvable computational challenges.",
+      icon: Atom,
+      cta: "Learn More",
+      href: "/services/quantum-computing"
+    },
+    {
+      title: "Micro SaaS Solutions",
+      subtitle: "Scalable software solutions for modern businesses",
+      description: "Custom micro SaaS applications designed to streamline operations and boost productivity.",
+      icon: Code,
+      cta: "View Solutions",
+      href: "/micro-saas"
+    }
   ];
 
   useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentService((prev) => (prev + 1) % services.length);
-    }, 3000);
-    return () => clearInterval(interval);
-  }, [services.length]);
+    const timer = setInterval(() => {
+      setCurrentSlide((prev) => (prev + 1) % heroSlides.length);
+    }, 5000);
+    return () => clearInterval(timer);
+  }, [heroSlides.length]);
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      {/* Animated Background */}
-      <div className="absolute inset-0 bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
-        <div className="absolute inset-0 bg-grid-pattern opacity-10"></div>
-        <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-zion-cyan/5 via-transparent to-zion-purple/5"></div>
-      </div>
-
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
+      {/* Background Elements */}
+      <div className="absolute inset-0 bg-grid-pattern opacity-10"></div>
+      <div className="absolute inset-0 bg-gradient-to-t from-zion-cyan/5 via-transparent to-transparent"></div>
+      
       {/* Floating Elements */}
       <div className="absolute top-20 left-20 animate-float">
         <div className="w-4 h-4 bg-zion-cyan rounded-full opacity-40 shadow-glow-cyan"></div>
@@ -152,93 +271,63 @@ const HeroSection: React.FC = () => {
       <div className="absolute top-40 right-20 animate-float-delayed">
         <div className="w-3 h-3 bg-zion-purple rounded-full opacity-40 shadow-glow-purple"></div>
       </div>
-      <div className="absolute bottom-40 left-1/4 animate-float">
+      <div className="absolute bottom-20 left-1/4 animate-float">
         <div className="w-5 h-5 bg-zion-pink rounded-full opacity-30 shadow-glow-pink"></div>
       </div>
 
-      {/* Main Content */}
-      <div className="relative z-10 text-center px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto">
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          className="mb-8"
+          variants={containerVariants}
+          initial="hidden"
+          animate="visible"
+          className="space-y-8"
         >
-          <h1 className="text-4xl sm:text-5xl lg:text-7xl font-bold font-orbitron mb-6">
-            <span className="gradient-text">Revolutionizing</span>
-            <br />
-            <span className="text-white">Technology</span>
-            <br />
-            <span className="gradient-text-purple">Tomorrow</span>
-          </h1>
-          
-          <p className="text-xl sm:text-2xl text-zion-gray-light mb-8 max-w-4xl mx-auto leading-relaxed">
-            Pioneering the future with AI-powered solutions, quantum technology, and innovative IT services. 
-            Transform your business with our comprehensive tech ecosystem.
-          </p>
+          {/* Icon */}
+          <motion.div variants={itemVariants} className="flex justify-center">
+            <div className="w-20 h-20 bg-gradient-to-br from-zion-cyan to-zion-blue rounded-2xl flex items-center justify-center shadow-glow-blue-lg">
+              <heroSlides[currentSlide].icon className="w-10 h-10 text-white" />
+            </div>
+          </motion.div>
 
-          {/* Rotating Service Display */}
-          <div className="mb-8">
-            <AnimatePresence mode="wait">
-              <motion.div
-                key={currentService}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                exit={{ opacity: 0, y: -20 }}
-                transition={{ duration: 0.5 }}
-                className="text-2xl sm:text-3xl font-semibold text-zion-cyan"
-              >
-                {services[currentService]}
-              </motion.div>
-            </AnimatePresence>
-          </div>
+          {/* Main Content */}
+          <motion.div variants={itemVariants} className="space-y-6">
+            <h1 className="text-5xl md:text-7xl font-bold font-orbitron gradient-text-neon">
+              {heroSlides[currentSlide].title}
+            </h1>
+            <h2 className="text-2xl md:text-3xl font-semibold text-zion-gray-light">
+              {heroSlides[currentSlide].subtitle}
+            </h2>
+            <p className="text-lg md:text-xl text-zion-gray-light max-w-3xl mx-auto leading-relaxed">
+              {heroSlides[currentSlide].description}
+            </p>
+          </motion.div>
 
-          {/* CTA Buttons */}
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+          {/* CTA Button */}
+          <motion.div variants={itemVariants}>
             <Link
-              to="/services"
-              className="glass-button bg-gradient-to-r from-zion-cyan to-zion-blue text-white hover:shadow-glow-blue-lg transform hover:scale-105 transition-all duration-300 flex items-center space-x-2"
+              to={heroSlides[currentSlide].href}
+              className="glass-button bg-gradient-to-r from-zion-cyan to-zion-blue text-white hover:shadow-glow-blue-lg transform hover:scale-105 transition-all duration-300 inline-flex items-center space-x-2"
             >
-              <span>Explore Services</span>
+              <span>{heroSlides[currentSlide].cta}</span>
               <ArrowRight className="w-5 h-5" />
             </Link>
-            <Link
-              to="/contact"
-              className="glass-button bg-transparent border-2 border-zion-cyan text-zion-cyan hover:bg-zion-cyan hover:text-white transition-all duration-300 flex items-center space-x-2"
-            >
-              <span>Get Started</span>
-              <MessageCircle className="w-5 h-5" />
-            </Link>
-          </div>
-        </motion.div>
+          </motion.div>
 
-        {/* Stats */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.2 }}
-          className="grid grid-cols-2 md:grid-cols-4 gap-6 mt-16"
-        >
-          {[
-            { label: 'Happy Clients', value: '500+', icon: Heart },
-            { label: 'Projects Completed', value: '1000+', icon: CheckCircle },
-            { label: 'Team Members', value: '50+', icon: Users },
-            { label: 'Years Experience', value: '10+', icon: Award }
-          ].map((stat, index) => (
-            <motion.div
-              key={stat.label}
-              initial={{ opacity: 0, scale: 0.8 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.5, delay: 0.3 + index * 0.1 }}
-              className="text-center group"
-            >
-              <div className="w-16 h-16 bg-gradient-to-br from-zion-cyan/20 to-zion-blue/20 rounded-2xl flex items-center justify-center mb-4 mx-auto group-hover:scale-110 transition-transform duration-300">
-                <stat.icon className="w-8 h-8 text-zion-cyan" />
-              </div>
-              <div className="text-2xl font-bold text-white mb-2">{stat.value}</div>
-              <div className="text-sm text-zion-gray-light">{stat.label}</div>
-            </motion.div>
-          ))}
+          {/* Slide Indicators */}
+          <motion.div variants={itemVariants} className="flex justify-center space-x-2">
+            {heroSlides.map((_, index) => (
+              <button
+                key={index}
+                onClick={() => setCurrentSlide(index)}
+                className={`w-3 h-3 rounded-full transition-all duration-300 ${
+                  index === currentSlide 
+                    ? 'bg-zion-cyan scale-125' 
+                    : 'bg-zion-gray-light/50 hover:bg-zion-gray-light'
+                }`}
+                aria-label={`Go to slide ${index + 1}`}
+              />
+            ))}
+          </motion.div>
         </motion.div>
       </div>
     </section>
@@ -247,63 +336,37 @@ const HeroSection: React.FC = () => {
 
 // Quick Access Component
 const QuickAccess: React.FC = () => {
-  const quickLinks = [
-    { label: 'AI Solutions', href: '/ai-services', icon: Brain, color: 'from-purple-500 to-indigo-500' },
-    { label: 'Cloud Services', href: '/cloud-services', icon: Cloud, color: 'from-blue-500 to-cyan-500' },
-    { label: 'Cybersecurity', href: '/security', icon: Shield, color: 'from-red-500 to-pink-500' },
-    { label: 'Digital Transformation', href: '/digital-transformation', icon: Rocket, color: 'from-green-500 to-emerald-500' },
-    { label: 'Micro SaaS', href: '/micro-saas', icon: Code, color: 'from-yellow-500 to-orange-500' },
-    { label: 'IT Consulting', href: '/consulting', icon: Users, color: 'from-gray-500 to-slate-500' }
+  const quickActions = [
+    { label: 'Get Quote', href: '/request-quote', icon: MessageCircle, color: 'from-zion-cyan to-zion-blue' },
+    { label: 'Schedule Demo', href: '/schedule-demo', icon: Calendar, color: 'from-zion-purple to-zion-pink' },
+    { label: 'View Services', href: '/services', icon: Settings, color: 'from-zion-green to-zion-cyan' },
+    { label: 'Contact Us', href: '/contact', icon: MessageCircle, color: 'from-zion-orange to-zion-red' }
   ];
 
   return (
-    <section className="py-20 bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
+    <section className="py-16 bg-gradient-to-r from-zion-slate-dark to-zion-slate">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
+          variants={containerVariants}
+          initial="hidden"
+          whileInView="visible"
           viewport={{ once: true }}
-          transition={{ duration: 0.8 }}
-          className="text-center mb-16"
+          className="grid grid-cols-2 md:grid-cols-4 gap-4"
         >
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold font-orbitron mb-6">
-            <span className="gradient-text">Quick Access</span>
-            <br />
-            <span className="text-white">to Our Services</span>
-          </h2>
-          <p className="text-xl text-zion-gray-light max-w-3xl mx-auto">
-            Navigate directly to the services that matter most to your business transformation journey.
-          </p>
-        </motion.div>
-
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {quickLinks.map((link, index) => (
-            <motion.div
-              key={link.label}
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: index * 0.1 }}
-            >
+          {quickActions.map((action, index) => (
+            <motion.div key={action.label} variants={itemVariants}>
               <Link
-                to={link.href}
-                className="glass-card group hover:scale-105 transition-all duration-300 block"
+                to={action.href}
+                className="glass-card hover:scale-105 transition-all duration-300 text-center group"
               >
-                <div className={`w-16 h-16 bg-gradient-to-r ${link.color} rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}>
-                  <link.icon className="w-8 h-8 text-white" />
+                <div className={`w-12 h-12 bg-gradient-to-r ${action.color} rounded-xl flex items-center justify-center mx-auto mb-3 group-hover:scale-110 transition-transform duration-300`}>
+                  <action.icon className="w-6 h-6 text-white" />
                 </div>
-                <h3 className="text-xl font-semibold text-white mb-3 font-orbitron">{link.label}</h3>
-                <p className="text-zion-gray-light mb-4">
-                  Discover how our {link.label.toLowerCase()} can transform your business operations and drive innovation.
-                </p>
-                <div className="flex items-center text-zion-cyan group-hover:translate-x-2 transition-transform duration-300">
-                  <span className="text-sm font-semibold">Learn More</span>
-                  <ArrowRight className="w-4 h-4 ml-2" />
-                </div>
+                <span className="text-white font-semibold">{action.label}</span>
               </Link>
             </motion.div>
           ))}
-        </div>
+        </motion.div>
       </div>
     </section>
   );
@@ -313,74 +376,75 @@ const QuickAccess: React.FC = () => {
 const FeatureCTAs: React.FC = () => {
   const features = [
     {
-      title: 'AI-Powered Analytics',
-      description: 'Transform your data into actionable insights with our advanced AI analytics platform.',
+      title: "AI-Powered Solutions",
+      description: "Leverage the latest in artificial intelligence to automate and optimize your business processes.",
       icon: Brain,
-      color: 'from-purple-500 to-indigo-500',
-      href: '/services/ai-analytics'
+      cta: "Explore AI Services",
+      href: "/services/ai-services",
+      color: "from-zion-cyan to-zion-blue"
     },
     {
-      title: 'Quantum Computing',
-      description: 'Stay ahead of the curve with our cutting-edge quantum computing solutions.',
+      title: "Quantum Computing",
+      description: "Access next-generation computing power for complex problem-solving and optimization.",
       icon: Atom,
-      color: 'from-blue-500 to-cyan-500',
-      href: '/services/quantum-computing'
+      cta: "Learn More",
+      href: "/services/quantum-computing",
+      color: "from-zion-purple to-zion-pink"
     },
     {
-      title: 'Cybersecurity Suite',
-      description: 'Protect your digital assets with our comprehensive cybersecurity solutions.',
-      icon: Shield,
-      color: 'from-red-500 to-pink-500',
-      href: '/services/cybersecurity'
+      title: "Micro SaaS Platform",
+      description: "Custom software solutions designed to streamline operations and boost productivity.",
+      icon: Code,
+      cta: "View Solutions",
+      href: "/micro-saas",
+      color: "from-zion-green to-zion-cyan"
     }
   ];
 
   return (
-    <section className="py-20 bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
+    <section className="py-20 bg-gradient-to-br from-zion-slate via-zion-slate-dark to-zion-slate">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
+          variants={containerVariants}
+          initial="hidden"
+          whileInView="visible"
           viewport={{ once: true }}
-          transition={{ duration: 0.8 }}
           className="text-center mb-16"
         >
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold font-orbitron mb-6">
-            <span className="gradient-text">Featured</span>
-            <br />
-            <span className="text-white">Technologies</span>
-          </h2>
-          <p className="text-xl text-zion-gray-light max-w-3xl mx-auto">
-            Experience the power of next-generation technologies designed to revolutionize your business.
-          </p>
+          <motion.h2 variants={itemVariants} className="text-4xl md:text-5xl font-bold font-orbitron gradient-text-neon mb-6">
+            Revolutionary Services Preview
+          </motion.h2>
+          <motion.p variants={itemVariants} className="text-xl text-zion-gray-light max-w-3xl mx-auto">
+            Experience the future of technology with our cutting-edge solutions designed to transform your business.
+          </motion.p>
         </motion.div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+        <motion.div
+          variants={containerVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          className="grid grid-cols-1 md:grid-cols-3 gap-8"
+        >
           {features.map((feature, index) => (
-            <motion.div
-              key={feature.title}
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: index * 0.2 }}
-            >
-              <Link
-                to={feature.href}
-                className="glass-card group hover:scale-105 transition-all duration-300 block h-full"
-              >
-                <div className={`w-20 h-20 bg-gradient-to-r ${feature.color} rounded-3xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}>
-                  <feature.icon className="w-10 h-10 text-white" />
+            <motion.div key={feature.title} variants={itemVariants}>
+              <div className="glass-card text-center hover:scale-105 transition-all duration-300">
+                <div className={`w-16 h-16 bg-gradient-to-r ${feature.color} rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300`}>
+                  <feature.icon className="w-8 h-8 text-white" />
                 </div>
-                <h3 className="text-2xl font-semibold text-white mb-4 font-orbitron">{feature.title}</h3>
+                <h3 className="text-2xl font-bold text-white mb-4 font-orbitron">{feature.title}</h3>
                 <p className="text-zion-gray-light mb-6 leading-relaxed">{feature.description}</p>
-                <div className="flex items-center text-zion-cyan group-hover:translate-x-2 transition-transform duration-300">
-                  <span className="text-sm font-semibold">Explore Now</span>
-                  <ArrowRight className="w-4 h-4 ml-2" />
-                </div>
-              </Link>
+                <Link
+                  to={feature.href}
+                  className="glass-button bg-gradient-to-r from-zion-cyan to-zion-blue text-white hover:shadow-glow-blue-lg transform hover:scale-105 transition-all duration-300 inline-flex items-center space-x-2"
+                >
+                  <span>{feature.cta}</span>
+                  <ArrowRight className="w-4 h-4" />
+                </Link>
+              </div>
             </motion.div>
           ))}
-        </div>
+        </motion.div>
       </div>
     </section>
   );
@@ -391,64 +455,46 @@ const FeatureHighlights: React.FC = () => {
   const highlights = [
     {
       icon: Zap,
-      title: 'Lightning Fast',
-      description: 'Optimized performance that keeps your business running at peak efficiency.'
+      title: "Lightning Fast",
+      description: "Optimized performance for instant results and seamless user experience."
     },
     {
       icon: Shield,
-      title: 'Enterprise Security',
-      description: 'Bank-level security protocols to protect your sensitive data and operations.'
+      title: "Enterprise Security",
+      description: "Bank-grade security protocols to protect your sensitive data and operations."
     },
     {
       icon: Globe,
-      title: 'Global Reach',
-      description: '24/7 support and services available worldwide to meet your needs anytime.'
+      title: "Global Reach",
+      description: "Worldwide deployment capabilities with local compliance and support."
     },
     {
       icon: Cpu,
-      title: 'AI-Powered',
-      description: 'Intelligent automation and insights that adapt to your business requirements.'
+      title: "Scalable Architecture",
+      description: "Built to grow with your business, from startup to enterprise scale."
     }
   ];
 
   return (
-    <section className="py-20 bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
+    <section className="py-20 bg-gradient-to-br from-zion-slate-dark to-zion-slate">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
+          variants={containerVariants}
+          initial="hidden"
+          whileInView="visible"
           viewport={{ once: true }}
-          transition={{ duration: 0.8 }}
-          className="text-center mb-16"
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"
         >
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold font-orbitron mb-6">
-            <span className="gradient-text">Why Choose</span>
-            <br />
-            <span className="text-white">Zion Tech Group</span>
-          </h2>
-          <p className="text-xl text-zion-gray-light max-w-3xl mx-auto">
-            Discover the unique advantages that set us apart in the technology landscape.
-          </p>
-        </motion.div>
-
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {highlights.map((highlight, index) => (
-            <motion.div
-              key={highlight.title}
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: index * 0.1 }}
-              className="text-center group"
-            >
-              <div className="w-20 h-20 bg-gradient-to-br from-zion-cyan/20 to-zion-blue/20 rounded-3xl flex items-center justify-center mb-6 mx-auto group-hover:scale-110 transition-transform duration-300">
-                <highlight.icon className="w-10 h-10 text-zion-cyan" />
+            <motion.div key={highlight.title} variants={itemVariants} className="text-center">
+              <div className="w-16 h-16 bg-gradient-to-br from-zion-cyan/20 to-zion-blue/20 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
+                <highlight.icon className="w-8 h-8 text-zion-cyan" />
               </div>
-              <h3 className="text-xl font-semibold text-white mb-3 font-orbitron">{highlight.title}</h3>
-              <p className="text-zion-gray-light leading-relaxed">{highlight.description}</p>
+              <h3 className="text-xl font-bold text-white mb-3 font-orbitron">{highlight.title}</h3>
+              <p className="text-zion-gray-light text-sm leading-relaxed">{highlight.description}</p>
             </motion.div>
           ))}
-        </div>
+        </motion.div>
       </div>
     </section>
   );
@@ -458,95 +504,79 @@ const FeatureHighlights: React.FC = () => {
 const CategoriesSection: React.FC = () => {
   const categories = [
     {
-      title: 'AI & Machine Learning',
-      description: 'Cutting-edge artificial intelligence solutions for modern businesses.',
+      title: "AI & Machine Learning",
+      description: "Intelligent solutions that learn and adapt to your business needs.",
       icon: Brain,
-      color: 'from-purple-500 to-indigo-500',
-      href: '/services/ai-ml'
+      href: "/services/ai-services",
+      color: "from-zion-cyan to-zion-blue"
     },
     {
-      title: 'Cloud & Infrastructure',
-      description: 'Scalable cloud solutions and robust infrastructure management.',
-      icon: Cloud,
-      color: 'from-blue-500 to-cyan-500',
-      href: '/services/cloud-infrastructure'
-    },
-    {
-      title: 'Cybersecurity',
-      description: 'Comprehensive security solutions to protect your digital assets.',
+      title: "Cybersecurity",
+      description: "Advanced protection against evolving digital threats and vulnerabilities.",
       icon: Shield,
-      color: 'from-red-500 to-pink-500',
-      href: '/services/cybersecurity'
+      href: "/security",
+      color: "from-zion-red to-zion-orange"
     },
     {
-      title: 'Digital Transformation',
-      description: 'End-to-end digital transformation services for business growth.',
+      title: "Cloud & DevOps",
+      description: "Scalable infrastructure and streamlined development operations.",
+      icon: Cloud,
+      href: "/services/cloud-devops",
+      color: "from-zion-purple to-zion-pink"
+    },
+    {
+      title: "Digital Transformation",
+      description: "End-to-end modernization of your business processes and technology stack.",
       icon: Rocket,
-      color: 'from-green-500 to-emerald-500',
-      href: '/services/digital-transformation'
-    },
-    {
-      title: 'Micro SaaS Solutions',
-      description: 'Innovative software-as-a-service solutions for specific business needs.',
-      icon: Code,
-      color: 'from-yellow-500 to-orange-500',
-      href: '/services/micro-saas'
-    },
-    {
-      title: 'IT Consulting',
-      description: 'Expert IT consulting to optimize your technology strategy.',
-      icon: Users,
-      color: 'from-gray-500 to-slate-500',
-      href: '/services/it-consulting'
+      href: "/services/digital-transformation",
+      color: "from-zion-green to-zion-cyan"
     }
   ];
 
   return (
-    <section className="py-20 bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
+    <section className="py-20 bg-gradient-to-br from-zion-slate via-zion-slate-dark to-zion-slate">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
+          variants={containerVariants}
+          initial="hidden"
+          whileInView="visible"
           viewport={{ once: true }}
-          transition={{ duration: 0.8 }}
           className="text-center mb-16"
         >
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold font-orbitron mb-6">
-            <span className="gradient-text">Service</span>
-            <br />
-            <span className="text-white">Categories</span>
-          </h2>
-          <p className="text-xl text-zion-gray-light max-w-3xl mx-auto">
-            Explore our comprehensive range of technology services designed to meet every business need.
-          </p>
+          <motion.h2 variants={itemVariants} className="text-4xl md:text-5xl font-bold font-orbitron gradient-text-neon mb-6">
+            Service Categories
+          </motion.h2>
+          <motion.p variants={itemVariants} className="text-xl text-zion-gray-light max-w-3xl mx-auto">
+            Comprehensive solutions across all major technology domains to meet your business needs.
+          </motion.p>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <motion.div
+          variants={containerVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          className="grid grid-cols-1 md:grid-cols-2 gap-8"
+        >
           {categories.map((category, index) => (
-            <motion.div
-              key={category.title}
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: index * 0.1 }}
-            >
+            <motion.div key={category.title} variants={itemVariants}>
               <Link
                 to={category.href}
-                className="glass-card group hover:scale-105 transition-all duration-300 block h-full"
+                className="glass-card hover:scale-105 transition-all duration-300 group block"
               >
-                <div className={`w-20 h-20 bg-gradient-to-r ${category.color} rounded-3xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}>
-                  <category.icon className="w-10 h-10 text-white" />
-                </div>
-                <h3 className="text-2xl font-semibold text-white mb-4 font-orbitron">{category.title}</h3>
-                <p className="text-zion-gray-light mb-6 leading-relaxed">{category.description}</p>
-                <div className="flex items-center text-zion-cyan group-hover:translate-x-2 transition-transform duration-300">
-                  <span className="text-sm font-semibold">Learn More</span>
-                  <ArrowRight className="w-4 h-4 ml-2" />
+                <div className="flex items-start space-x-4">
+                  <div className={`w-16 h-16 bg-gradient-to-r ${category.color} rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300`}>
+                    <category.icon className="w-8 h-8 text-white" />
+                  </div>
+                  <div className="flex-1">
+                    <h3 className="text-2xl font-bold text-white mb-3 font-orbitron">{category.title}</h3>
+                    <p className="text-zion-gray-light leading-relaxed">{category.description}</p>
+                  </div>
                 </div>
               </Link>
             </motion.div>
           ))}
-        </div>
+        </motion.div>
       </div>
     </section>
   );
@@ -557,74 +587,61 @@ const BenefitsSection: React.FC = () => {
   const benefits = [
     {
       icon: TrendingUp,
-      title: 'Increased Efficiency',
-      description: 'Streamline operations and boost productivity with our optimized solutions.'
+      title: "Increased Efficiency",
+      description: "Streamline operations and boost productivity with automated workflows."
     },
     {
-      icon: Shield,
-      title: 'Enhanced Security',
-      description: 'Protect your business with enterprise-grade security measures.'
-    },
-    {
-      icon: Zap,
-      title: 'Faster Performance',
-      description: 'Experience lightning-fast response times and improved user experience.'
+      icon: DollarSign,
+      title: "Cost Reduction",
+      description: "Optimize resource allocation and reduce operational costs significantly."
     },
     {
       icon: Users,
-      title: 'Expert Support',
-      description: '24/7 expert support to ensure your systems run smoothly.'
+      title: "Enhanced User Experience",
+      description: "Deliver seamless, intuitive experiences that keep customers engaged."
     },
     {
-      icon: Globe,
-      title: 'Global Scalability',
-      description: 'Scale your operations globally with our cloud-based solutions.'
-    },
-    {
-      icon: Brain,
-      title: 'AI-Powered Insights',
-      description: 'Gain valuable insights through our intelligent analytics platform.'
+      icon: Lock,
+      title: "Improved Security",
+      description: "Protect your assets with enterprise-grade security measures."
     }
   ];
 
   return (
-    <section className="py-20 bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
+    <section className="py-20 bg-gradient-to-br from-zion-slate-dark to-zion-slate">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
+          variants={containerVariants}
+          initial="hidden"
+          whileInView="visible"
           viewport={{ once: true }}
-          transition={{ duration: 0.8 }}
           className="text-center mb-16"
         >
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold font-orbitron mb-6">
-            <span className="gradient-text">Key Benefits</span>
-            <br />
-            <span className="text-white">of Our Solutions</span>
-          </h2>
-          <p className="text-xl text-zion-gray-light max-w-3xl mx-auto">
-            Discover how our technology solutions can transform your business operations and drive growth.
-          </p>
+          <motion.h2 variants={itemVariants} className="text-4xl md:text-5xl font-bold font-orbitron gradient-text-neon mb-6">
+            Why Choose Zion Tech Group?
+          </motion.h2>
+          <motion.p variants={itemVariants} className="text-xl text-zion-gray-light max-w-3xl mx-auto">
+            Experience the advantages of working with a technology partner that truly understands your business.
+          </motion.p>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <motion.div
+          variants={containerVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"
+        >
           {benefits.map((benefit, index) => (
-            <motion.div
-              key={benefit.title}
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: index * 0.1 }}
-              className="glass-card text-center group hover:scale-105 transition-all duration-300"
-            >
-              <div className="w-20 h-20 bg-gradient-to-br from-zion-cyan/20 to-zion-blue/20 rounded-3xl flex items-center justify-center mb-6 mx-auto group-hover:scale-110 transition-transform duration-300">
-                <benefit.icon className="w-10 h-10 text-zion-cyan" />
+            <motion.div key={benefit.title} variants={itemVariants} className="text-center">
+              <div className="w-16 h-16 bg-gradient-to-br from-zion-cyan/20 to-zion-blue/20 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
+                <benefit.icon className="w-8 h-8 text-zion-cyan" />
               </div>
-              <h3 className="text-xl font-semibold text-white mb-3 font-orbitron">{benefit.title}</h3>
-              <p className="text-zion-gray-light leading-relaxed">{benefit.description}</p>
+              <h3 className="text-xl font-bold text-white mb-3 font-orbitron">{benefit.title}</h3>
+              <p className="text-zion-gray-light text-sm leading-relaxed">{benefit.description}</p>
             </motion.div>
           ))}
-        </div>
+        </motion.div>
       </div>
     </section>
   );
@@ -634,77 +651,71 @@ const BenefitsSection: React.FC = () => {
 const HowItWorksSection: React.FC = () => {
   const steps = [
     {
-      number: '01',
-      title: 'Discovery & Analysis',
-      description: 'We analyze your business needs and identify the best technology solutions.',
+      number: "01",
+      title: "Discovery & Analysis",
+      description: "We analyze your business needs and identify the best technology solutions.",
       icon: Search
     },
     {
-      number: '02',
-      title: 'Strategy & Planning',
-      description: 'Develop a comprehensive technology strategy tailored to your business goals.',
-      icon: Target
+      number: "02",
+      title: "Solution Design",
+      description: "Our experts design a customized solution tailored to your specific requirements.",
+      icon: PenTool
     },
     {
-      number: '03',
-      title: 'Implementation',
-      description: 'Execute the solution with precision and attention to detail.',
+      number: "03",
+      title: "Development & Testing",
+      description: "We build and thoroughly test your solution to ensure quality and reliability.",
       icon: Code
     },
     {
-      number: '04',
-      title: 'Optimization',
-      description: 'Continuously monitor and optimize for maximum performance and efficiency.',
-      icon: Settings
+      number: "04",
+      title: "Deployment & Support",
+      description: "Smooth deployment followed by ongoing support and maintenance services.",
+      icon: CheckCircle
     }
   ];
 
   return (
-    <section className="py-20 bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
+    <section className="py-20 bg-gradient-to-br from-zion-slate via-zion-slate-dark to-zion-slate">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
+          variants={containerVariants}
+          initial="hidden"
+          whileInView="visible"
           viewport={{ once: true }}
-          transition={{ duration: 0.8 }}
           className="text-center mb-16"
         >
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold font-orbitron mb-6">
-            <span className="gradient-text">How It</span>
-            <br />
-            <span className="text-white">Works</span>
-          </h2>
-          <p className="text-xl text-zion-gray-light max-w-3xl mx-auto">
-            Our proven process ensures successful implementation and optimal results for your business.
-          </p>
+          <motion.h2 variants={itemVariants} className="text-4xl md:text-5xl font-bold font-orbitron gradient-text-neon mb-6">
+            How It Works
+          </motion.h2>
+          <motion.p variants={itemVariants} className="text-xl text-zion-gray-light max-w-3xl mx-auto">
+            Our proven process ensures successful delivery of technology solutions that drive real business value.
+          </motion.p>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <motion.div
+          variants={containerVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"
+        >
           {steps.map((step, index) => (
-            <motion.div
-              key={step.title}
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: index * 0.1 }}
-              className="text-center relative"
-            >
-              {/* Connection Line */}
-              {index < steps.length - 1 && (
-                <div className="hidden lg:block absolute top-10 left-full w-full h-0.5 bg-gradient-to-r from-zion-cyan to-zion-blue transform -translate-y-1/2 z-0"></div>
-              )}
-              
-              <div className="relative z-10">
-                <div className="w-20 h-20 bg-gradient-to-br from-zion-cyan to-zion-blue rounded-3xl flex items-center justify-center mb-6 mx-auto group-hover:scale-110 transition-transform duration-300">
-                  <step.icon className="w-10 h-10 text-white" />
+            <motion.div key={step.number} variants={itemVariants} className="text-center relative">
+              <div className="glass-card relative">
+                <div className="absolute -top-4 left-1/2 transform -translate-x-1/2 w-8 h-8 bg-gradient-to-r from-zion-cyan to-zion-blue rounded-full flex items-center justify-center text-white font-bold text-sm">
+                  {step.number}
                 </div>
-                <div className="text-4xl font-bold text-zion-cyan mb-4 font-orbitron">{step.number}</div>
-                <h3 className="text-xl font-semibold text-white mb-3 font-orbitron">{step.title}</h3>
-                <p className="text-zion-gray-light leading-relaxed">{step.description}</p>
+                <div className="w-16 h-16 bg-gradient-to-br from-zion-cyan/20 to-zion-blue/20 rounded-2xl flex items-center justify-center mx-auto mb-4 mt-4 group-hover:scale-110 transition-transform duration-300">
+                  <step.icon className="w-8 h-8 text-zion-cyan" />
+                </div>
+                <h3 className="text-xl font-bold text-white mb-3 font-orbitron">{step.title}</h3>
+                <p className="text-zion-gray-light text-sm leading-relaxed">{step.description}</p>
               </div>
             </motion.div>
           ))}
-        </div>
+        </motion.div>
       </div>
     </section>
   );
@@ -725,60 +736,43 @@ const NewsletterSection: React.FC = () => {
   };
 
   return (
-    <section className="py-20 bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
+    <section className="py-20 bg-gradient-to-br from-zion-slate-dark to-zion-slate">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
+          variants={containerVariants}
+          initial="hidden"
+          whileInView="visible"
           viewport={{ once: true }}
-          transition={{ duration: 0.8 }}
-          className="mb-12"
+          className="space-y-8"
         >
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold font-orbitron mb-6">
-            <span className="gradient-text">Stay Updated</span>
-            <br />
-            <span className="text-white">with Innovation</span>
-          </h2>
-          <p className="text-xl text-zion-gray-light max-w-2xl mx-auto">
-            Get the latest insights on AI, technology trends, and industry updates delivered to your inbox.
-          </p>
-        </motion.div>
+          <motion.div variants={itemVariants}>
+            <h2 className="text-4xl md:text-5xl font-bold font-orbitron gradient-text-neon mb-6">
+              Stay Updated
+            </h2>
+            <p className="text-xl text-zion-gray-light max-w-2xl mx-auto">
+              Get the latest insights on AI, technology trends, and industry updates delivered to your inbox.
+            </p>
+          </motion.div>
 
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.8, delay: 0.2 }}
-        >
-          <form onSubmit={handleSubmit} className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
-            <div className="flex-1">
+          <motion.form variants={itemVariants} onSubmit={handleSubmit} className="max-w-md mx-auto">
+            <div className="flex space-x-3">
               <input
                 type="email"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 placeholder="Enter your email"
-                className="w-full px-4 py-3 bg-zion-slate-light/20 border border-zion-cyan/20 rounded-lg text-white placeholder-zion-gray-light focus:outline-none focus:border-zion-cyan/40 focus:ring-2 focus:ring-zion-cyan/20 transition-all duration-200"
+                className="flex-1 px-4 py-3 bg-zion-slate-light/20 border border-zion-cyan/20 rounded-lg text-white placeholder-zion-gray-light focus:outline-none focus:border-zion-cyan/40 focus:ring-2 focus:ring-zion-cyan/20 transition-all duration-200"
                 required
               />
+              <button
+                type="submit"
+                className="glass-button bg-gradient-to-r from-zion-cyan to-zion-blue text-white hover:shadow-glow-blue-lg transform hover:scale-105 transition-all duration-300"
+                disabled={isSubscribed}
+              >
+                {isSubscribed ? 'Subscribed!' : 'Subscribe'}
+              </button>
             </div>
-            <button
-              type="submit"
-              className="glass-button bg-gradient-to-r from-zion-cyan to-zion-blue text-white hover:shadow-glow-blue-lg transform hover:scale-105 transition-all duration-300 flex items-center justify-center space-x-2"
-              disabled={isSubscribed}
-            >
-              {isSubscribed ? (
-                <>
-                  <CheckCircle className="w-5 h-5" />
-                  <span>Subscribed!</span>
-                </>
-              ) : (
-                <>
-                  <span>Subscribe</span>
-                  <ArrowRight className="w-5 h-5" />
-                </>
-              )}
-            </button>
-          </form>
+          </motion.form>
         </motion.div>
       </div>
     </section>
@@ -787,169 +781,41 @@ const NewsletterSection: React.FC = () => {
 
 // Featured Listings Section Component
 const FeaturedListingsSection: React.FC = () => {
-  const featuredServices = [
-    {
-      title: 'AI Business Intelligence Platform',
-      description: 'Transform your data into actionable insights with our advanced AI analytics platform.',
-      price: 'From $2,999/month',
-      features: ['Real-time analytics', 'AI-powered insights', 'Custom dashboards', '24/7 support'],
-      icon: Brain,
-      color: 'from-purple-500 to-indigo-500',
-      href: '/services/ai-business-intelligence'
-    },
-    {
-      title: 'Quantum Computing Solutions',
-      description: 'Stay ahead of the curve with our cutting-edge quantum computing services.',
-      price: 'From $5,999/month',
-      features: ['Quantum algorithms', 'Performance optimization', 'Expert consultation', 'Custom solutions'],
-      icon: Atom,
-      color: 'from-blue-500 to-cyan-500',
-      href: '/services/quantum-computing'
-    },
-    {
-      title: 'Advanced Cybersecurity Suite',
-      description: 'Protect your digital assets with our comprehensive cybersecurity solutions.',
-      price: 'From $3,999/month',
-      features: ['Threat detection', 'Incident response', 'Security audits', 'Compliance support'],
-      icon: Shield,
-      color: 'from-red-500 to-pink-500',
-      href: '/services/cybersecurity'
-    }
-  ];
-
   return (
-    <section className="py-20 bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
+    <section className="py-20 bg-gradient-to-br from-zion-slate via-zion-slate-dark to-zion-slate">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
+          variants={containerVariants}
+          initial="hidden"
+          whileInView="visible"
           viewport={{ once: true }}
-          transition={{ duration: 0.8 }}
           className="text-center mb-16"
         >
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold font-orbitron mb-6">
-            <span className="gradient-text">Featured</span>
-            <br />
-            <span className="text-white">Services</span>
-          </h2>
-          <p className="text-xl text-zion-gray-light max-w-3xl mx-auto">
-            Explore our most popular and innovative service offerings designed to drive business transformation.
-          </p>
+          <motion.h2 variants={itemVariants} className="text-4xl md:text-5xl font-bold font-orbitron gradient-text-neon mb-6">
+            Featured Services
+          </motion.h2>
+          <motion.p variants={itemVariants} className="text-xl text-zion-gray-light max-w-3xl mx-auto">
+            Discover our most popular and innovative technology solutions.
+          </motion.p>
         </motion.div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+        <motion.div
+          variants={containerVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6"
+        >
           {featuredServices.map((service, index) => (
-            <motion.div
-              key={service.title}
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: index * 0.2 }}
-            >
+            <motion.div key={service.id} variants={itemVariants}>
               <Link
                 to={service.href}
-                className="glass-card group hover:scale-105 transition-all duration-300 block h-full"
+                className="glass-card hover:scale-105 transition-all duration-300 group block"
               >
-                <div className={`w-20 h-20 bg-gradient-to-r ${service.color} rounded-3xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}>
-                  <service.icon className="w-10 h-10 text-white" />
+                <div className="w-12 h-12 bg-gradient-to-br from-zion-cyan to-zion-blue rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
+                  <service.icon className="w-6 h-6 text-white" />
                 </div>
-                <h3 className="text-2xl font-semibold text-white mb-4 font-orbitron">{service.title}</h3>
-                <p className="text-zion-gray-light mb-6 leading-relaxed">{service.description}</p>
-                
-                <div className="mb-6">
-                  <div className="text-2xl font-bold text-zion-cyan mb-4">{service.price}</div>
-                  <ul className="space-y-2">
-                    {service.features.map((feature, featureIndex) => (
-                      <li key={featureIndex} className="flex items-center text-zion-gray-light">
-                        <CheckCircle className="w-4 h-4 text-zion-cyan mr-2 flex-shrink-0" />
-                        <span className="text-sm">{feature}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-                
-                <div className="flex items-center text-zion-cyan group-hover:translate-x-2 transition-transform duration-300">
-                  <span className="text-sm font-semibold">Learn More</span>
-                  <ArrowRight className="w-4 h-4 ml-2" />
-                </div>
-              </Link>
-            </motion.div>
-          ))}
-        </div>
-      </div>
-    </section>
-  );
-};
-
-// Services Showcase Component
-const ServicesShowcase: React.FC = () => {
-  const microSaaSServices = [
-    {
-      title: 'Smart Contract Lifecycle Manager',
-      description: 'Automate and manage smart contracts with AI-powered insights.',
-      icon: FileText,
-      color: 'from-green-500 to-emerald-500',
-      href: '/services/smart-contract-manager'
-    },
-    {
-      title: 'AI-Powered Project Management',
-      description: 'Streamline project workflows with intelligent automation.',
-      icon: Target,
-      color: 'from-blue-500 to-cyan-500',
-      href: '/services/ai-project-management'
-    },
-    {
-      title: 'Smart Customer Support',
-      description: 'Enhance customer experience with AI-driven support solutions.',
-      icon: MessageCircle,
-      color: 'from-purple-500 to-indigo-500',
-      href: '/services/smart-customer-support'
-    },
-    {
-      title: 'Data Governance Suite',
-      description: 'Ensure data quality and compliance with our governance platform.',
-      icon: Shield,
-      color: 'from-red-500 to-pink-500',
-      href: '/services/data-governance'
-    }
-  ];
-
-  return (
-    <section className="py-20 bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.8 }}
-          className="text-center mb-16"
-        >
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold font-orbitron mb-6">
-            <span className="gradient-text">Micro SaaS</span>
-            <br />
-            <span className="text-white">Solutions</span>
-          </h2>
-          <p className="text-xl text-zion-gray-light max-w-3xl mx-auto">
-            Discover our innovative micro SaaS solutions designed to address specific business challenges.
-          </p>
-        </motion.div>
-
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-          {microSaaSServices.map((service, index) => (
-            <motion.div
-              key={service.title}
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: index * 0.1 }}
-            >
-              <Link
-                to={service.href}
-                className="glass-card group hover:scale-105 transition-all duration-300 block h-full"
-              >
-                <div className={`w-16 h-16 bg-gradient-to-r ${service.color} rounded-2xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300`}>
-                  <service.icon className="w-8 h-8 text-white" />
-                </div>
+                <div className="text-xs text-zion-cyan mb-2 font-semibold">{service.category}</div>
                 <h3 className="text-lg font-semibold text-white mb-3 font-orbitron">{service.title}</h3>
                 <p className="text-zion-gray-light mb-4 text-sm leading-relaxed">{service.description}</p>
                 <div className="flex items-center text-zion-cyan group-hover:translate-x-2 transition-transform duration-300">
@@ -959,7 +825,59 @@ const ServicesShowcase: React.FC = () => {
               </Link>
             </motion.div>
           ))}
-        </div>
+        </motion.div>
+      </div>
+    </section>
+  );
+};
+
+// Services Showcase Component
+const ServicesShowcase: React.FC = () => {
+  return (
+    <section className="py-20 bg-gradient-to-br from-zion-slate-dark to-zion-slate">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <motion.div
+          variants={containerVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          className="text-center mb-16"
+        >
+          <motion.h2 variants={itemVariants} className="text-4xl md:text-5xl font-bold font-orbitron gradient-text-neon mb-6">
+            Micro SaaS Solutions
+          </motion.h2>
+          <motion.p variants={itemVariants} className="text-xl text-zion-gray-light max-w-3xl mx-auto">
+            Innovative software solutions designed to solve specific business challenges and boost productivity.
+          </motion.p>
+        </motion.div>
+
+        <motion.div
+          variants={containerVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6"
+        >
+          {microSaaSServices.map((service, index) => (
+            <motion.div key={service.id} variants={itemVariants}>
+              <Link
+                to={service.href}
+                className="glass-card hover:scale-105 transition-all duration-300 group block"
+              >
+                <div className="w-12 h-12 bg-gradient-to-br from-zion-purple to-zion-pink rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
+                  <service.icon className="w-6 h-6 text-white" />
+                </div>
+                <div className="text-xs text-zion-purple mb-2 font-semibold">{service.category}</div>
+                <h3 className="text-lg font-semibold text-white mb-3 font-orbitron">{service.title}</h3>
+                <p className="text-zion-gray-light mb-4 text-sm leading-relaxed">{service.description}</p>
+                <div className="flex items-center text-zion-purple group-hover:translate-x-2 transition-transform duration-300">
+                  <span className="text-xs font-semibold">Learn More</span>
+                  <ArrowRight className="w-3 h-3 ml-2" />
+                </div>
+              </Link>
+            </motion.div>
+          ))}
+        </motion.div>
       </div>
     </section>
   );

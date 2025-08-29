@@ -158,6 +158,7 @@ export function PrimaryNav() {
               )}
               {isLoggedIn && <UserMenu />}
             </div>
+          </div>
           
           {/* Mobile menu button */}
           <button
