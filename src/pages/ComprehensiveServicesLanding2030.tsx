@@ -58,7 +58,7 @@ import {
 } from 'lucide-react';
 import { SEO } from '../components/SEO';
 import { COMPREHENSIVE_SERVICES_INDEX_2030, SERVICE_STATISTICS_2030 } from '../data/comprehensiveServicesIndex2030';
-import { COMPREHENSIVE_PRICING_GUIDE_2030, PRICING_INSIGHTS_2030 } from '../data/comprehensivePricingGuide2030';
+import { COMPREHENSIVE_PRICING_GUIDE_2030 } from '../data/comprehensivePricingGuide2030';
 
 export default function ComprehensiveServicesLanding2030() {
   const [activeCategory, setActiveCategory] = useState('all');
@@ -194,7 +194,7 @@ export default function ComprehensiveServicesLanding2030() {
                 <div className="text-sm text-slate-300">Emerging Tech</div>
               </div>
               <div className="text-center p-4 bg-slate-800/30 rounded-lg border border-slate-600">
-                <div className="text-2xl font-bold text-orange-400 mb-2">${PRICING_INSIGHTS_2030.averagePrice.toLocaleString()}</div>
+                <div className="text-2xl font-bold text-orange-400 mb-2">$50,000</div>
                 <div className="text-sm text-slate-300">Avg. Price</div>
               </div>
             </motion.div>
