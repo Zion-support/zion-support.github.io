@@ -99,9 +99,12 @@ const AIIoTEdgeComputingPlatform = React.lazy(() => import('./pages/services/ai-
 
 // AI Services Showcase
 const AIServicesShowcase = React.lazy(() => import('./pages/AIServicesShowcase'));
-
-// Comprehensive Services Landing
 const ComprehensiveServicesLanding = React.lazy(() => import('./pages/ComprehensiveServicesLanding'));
+
+// New Advanced Services
+const AdvancedAIServices = React.lazy(() => import('./pages/services/AdvancedAIServices'));
+const ComprehensiveITServices = React.lazy(() => import('./pages/services/ComprehensiveITServices'));
+const InnovativeMicroSaas2025 = React.lazy(() => import('./pages/services/InnovativeMicroSaas2025'));
 
 // Services Sitemap
 const ServicesSitemap = React.lazy(() => import('./pages/ServicesSitemap'));
@@ -251,6 +254,11 @@ function App() {
               
               {/* Comprehensive Services Landing Route */}
               <Route path="/comprehensive-services" element={<ComprehensiveServicesLanding />} />
+
+              {/* New Advanced Services Routes */}
+              <Route path="/advanced-ai-services" element={<AdvancedAIServices />} />
+              <Route path="/comprehensive-it-services" element={<ComprehensiveITServices />} />
+              <Route path="/innovative-micro-saas-2025" element={<InnovativeMicroSaas2025 />} />
               
                       {/* Services Sitemap Route */}
         <Route path="/services-sitemap" element={<ServicesSitemap />} />

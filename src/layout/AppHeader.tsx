@@ -74,7 +74,9 @@ export function AppHeader() {
         { name: 'Services Overview', href: '/services-overview', description: 'Complete service portfolio' },
         { name: 'AI Services', href: '/ai-services', description: 'AI-powered solutions' },
         { name: 'IT Services', href: '/it-services', description: 'Enterprise IT solutions' },
-        { name: 'Micro SaaS', href: '/micro-saas', description: 'Scalable software solutions' }
+        { name: 'Micro SaaS', href: '/micro-saas', description: 'Scalable software solutions' },
+        { name: 'Advanced AI Services', href: '/advanced-ai-services', description: 'Cutting-edge AI solutions' },
+        { name: 'Comprehensive IT Services', href: '/comprehensive-it-services', description: 'Enterprise-grade IT solutions' }
       ]
     },
     {
@@ -88,7 +90,15 @@ export function AppHeader() {
         { name: 'AI Customer Success Platform', href: '/services/ai-customer-success-platform', description: 'Proactive Customer Engagement' },
         { name: 'AI Sales Copilot', href: '/services/ai-sales-copilot', description: 'AI-powered sales automation' },
         { name: 'AI Compliance Assistant', href: '/services/ai-compliance-assistant', description: 'Regulatory compliance automation' },
-        { name: 'LLM Content Studio', href: '/services/llm-content-studio', description: 'AI content generation' }
+        { name: 'LLM Content Studio', href: '/services/llm-content-studio', description: 'AI content generation' },
+        { name: 'AI Cybersecurity Threat Hunter', href: '/services/ai-cybersecurity-threat-hunter', description: 'Advanced threat detection' },
+        { name: 'AI Business Intelligence Platform', href: '/services/ai-business-intelligence-platform', description: 'Data-driven insights' },
+        { name: 'AI Customer Experience Platform', href: '/services/ai-customer-experience-platform', description: 'Personalized experiences' },
+        { name: 'AI Supply Chain Optimization', href: '/services/ai-supply-chain-optimization', description: 'Supply chain intelligence' },
+        { name: 'AI FinTech Platform', href: '/services/ai-fintech-platform', description: 'Financial technology solutions' },
+        { name: 'AI Healthcare Analytics', href: '/services/ai-healthcare-analytics-platform', description: 'Healthcare intelligence' },
+        { name: 'AI Manufacturing Intelligence', href: '/services/ai-manufacturing-intelligence', description: 'Smart manufacturing' },
+        { name: 'AI Retail Intelligence', href: '/services/ai-retail-intelligence', description: 'Retail optimization' }
       ]
     },
     {
@@ -98,7 +108,14 @@ export function AppHeader() {
       services: [
         { name: 'Cloud DevOps', href: '/services/cloud-devops', description: 'Infrastructure & Automation' },
         { name: 'Cloud FinOps Optimizer', href: '/services/cloud-finops-optimizer', description: 'Cost optimization' },
-        { name: 'FinOps Advisor', href: '/services/finops-advisor', description: 'Financial operations' }
+        { name: 'FinOps Advisor', href: '/services/finops-advisor', description: 'Financial operations' },
+        { name: 'Enterprise Cloud Migration', href: '/services/enterprise-cloud-migration', description: 'Cloud transformation' },
+        { name: 'DevOps CI/CD Automation', href: '/services/devops-cicd-automation', description: 'Automated workflows' },
+        { name: 'Data Center Modernization', href: '/services/enterprise-data-center-modernization', description: 'Infrastructure upgrade' },
+        { name: 'Network Security & SD-WAN', href: '/services/enterprise-network-security-sdwan', description: 'Secure networking' },
+        { name: 'Backup & Disaster Recovery', href: '/services/enterprise-backup-disaster-recovery', description: 'Data protection' },
+        { name: 'Identity & Access Management', href: '/services/enterprise-identity-access-management', description: 'Security management' },
+        { name: 'API Management Platform', href: '/services/enterprise-api-management-platform', description: 'API governance' }
       ]
     },
     {
@@ -128,6 +145,20 @@ export function AppHeader() {
       services: [
         { name: 'AI Compliance Copilot', href: '/services/ai-compliance-copilot', description: 'AI-Powered Security' },
         { name: 'Zero Trust Architecture', href: '/services/zero-trust-network-architecture', description: 'Advanced security' }
+      ]
+    },
+    {
+      name: 'Micro SaaS Solutions',
+      icon: ShoppingCart,
+      color: 'from-orange-600 to-red-600',
+      services: [
+        { name: 'AI Content Creation', href: '/services/ai-content-creation-platform', description: 'AI-powered content generation' },
+        { name: 'AI Video Editing', href: '/services/ai-video-editing-platform', description: 'Automated video editing' },
+        { name: 'AI Customer Support', href: '/services/ai-customer-support-automation', description: 'Automated customer service' },
+        { name: 'AI Email Marketing', href: '/services/ai-email-marketing-platform', description: 'Intelligent email campaigns' },
+        { name: 'AI Social Media Management', href: '/services/ai-social-media-management', description: 'Social media automation' },
+        { name: 'AI SEO Optimization', href: '/services/ai-seo-optimization-platform', description: 'Search engine optimization' },
+        { name: 'AI Project Management', href: '/services/ai-project-management', description: 'Intelligent project workflows' }
       ]
     }
   ];
@@ -168,6 +199,9 @@ export function AppHeader() {
 
   const quickLinks = [
     { name: 'Innovative Services 2025', href: '/innovative-services-showcase-2025', icon: Star, description: 'Latest cutting-edge solutions' },
+    { name: 'Advanced AI Services', href: '/advanced-ai-services', icon: Brain, description: 'Cutting-edge AI solutions' },
+    { name: 'Comprehensive IT Services', href: '/comprehensive-it-services', icon: Cloud, description: 'Enterprise-grade IT solutions' },
+    { name: 'Micro SaaS Solutions', href: '/innovative-micro-saas-2025', icon: ShoppingCart, description: 'Innovative software solutions' },
     { name: 'Services Showcase', href: '/revolutionary-services-showcase-2030', icon: TrendingUp, description: 'Future-ready services' },
     { name: 'Pricing Guide 2030', href: '/pricing-2030', icon: DollarSign, description: 'Advanced pricing strategies' },
     { name: 'Request Quote', href: '/request-quote', icon: MessageCircle, description: 'Get custom pricing' },

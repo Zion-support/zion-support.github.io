@@ -78,7 +78,16 @@ export const EnhancedFuturisticFooter: React.FC = () => {
         { name: 'AI Compliance Assistant', href: '/services/ai-compliance-assistant' },
         { name: 'AI Auto Email Responder', href: '/services/ai-auto-email-responder' },
         { name: 'LLM Content Studio', href: '/services/llm-content-studio' },
-        { name: 'AI Compliance Copilot', href: '/services/ai-compliance-copilot' }
+        { name: 'AI Compliance Copilot', href: '/services/ai-compliance-copilot' },
+        { name: 'Advanced AI Services', href: '/advanced-ai-services' },
+        { name: 'AI Cybersecurity Threat Hunter', href: '/services/ai-cybersecurity-threat-hunter' },
+        { name: 'AI Business Intelligence Platform', href: '/services/ai-business-intelligence-platform' },
+        { name: 'AI Customer Experience Platform', href: '/services/ai-customer-experience-platform' },
+        { name: 'AI Supply Chain Optimization', href: '/services/ai-supply-chain-optimization' },
+        { name: 'AI FinTech Platform', href: '/services/ai-fintech-platform' },
+        { name: 'AI Healthcare Analytics', href: '/services/ai-healthcare-analytics-platform' },
+        { name: 'AI Manufacturing Intelligence', href: '/services/ai-manufacturing-intelligence' },
+        { name: 'AI Retail Intelligence', href: '/services/ai-retail-intelligence' }
       ]
     },
     {
@@ -91,7 +100,15 @@ export const EnhancedFuturisticFooter: React.FC = () => {
         { name: 'Customer Feedback Surveys', href: '/services/mobile-feedback-surveys' },
         { name: 'Cloud FinOps Optimizer', href: '/services/cloud-finops-optimizer' },
         { name: 'FinOps Advisor', href: '/services/finops-advisor' },
-        { name: 'Digital Transformation', href: '/services/digital-transformation' }
+        { name: 'Digital Transformation', href: '/services/digital-transformation' },
+        { name: 'Comprehensive IT Services', href: '/comprehensive-it-services' },
+        { name: 'Enterprise Cloud Migration', href: '/services/enterprise-cloud-migration' },
+        { name: 'DevOps CI/CD Automation', href: '/services/devops-cicd-automation' },
+        { name: 'Data Center Modernization', href: '/services/enterprise-data-center-modernization' },
+        { name: 'Network Security & SD-WAN', href: '/services/enterprise-network-security-sdwan' },
+        { name: 'Backup & Disaster Recovery', href: '/services/enterprise-backup-disaster-recovery' },
+        { name: 'Identity & Access Management', href: '/services/enterprise-identity-access-management' },
+        { name: 'API Management Platform', href: '/services/enterprise-api-management-platform' }
       ]
     },
     {
@@ -122,11 +139,29 @@ export const EnhancedFuturisticFooter: React.FC = () => {
         { name: 'Digital Twin', href: '/services/digital-twin' },
         { name: 'Cloud DevOps', href: '/services/cloud-devops' }
       ]
+    },
+    {
+      title: 'Micro SaaS Solutions',
+      icon: ShoppingCart,
+      color: 'from-orange-600 to-red-600',
+      links: [
+        { name: 'Innovative Micro SaaS 2025', href: '/innovative-micro-saas-2025' },
+        { name: 'AI Content Creation', href: '/services/ai-content-creation-platform' },
+        { name: 'AI Video Editing', href: '/services/ai-video-editing-platform' },
+        { name: 'AI Customer Support', href: '/services/ai-customer-support-automation' },
+        { name: 'AI Email Marketing', href: '/services/ai-email-marketing-platform' },
+        { name: 'AI Social Media Management', href: '/services/ai-social-media-management' },
+        { name: 'AI SEO Optimization', href: '/services/ai-seo-optimization-platform' },
+        { name: 'AI Project Management', href: '/services/ai-project-management' }
+      ]
     }
   ];
 
   const quickLinks = [
     { name: 'Services Overview', href: '/services-overview' },
+    { name: 'Advanced AI Services', href: '/advanced-ai-services' },
+    { name: 'Comprehensive IT Services', href: '/comprehensive-it-services' },
+    { name: 'Innovative Micro SaaS 2025', href: '/innovative-micro-saas-2025' },
     { name: 'Pricing Guide', href: '/pricing-guide' },
     { name: 'Help Center', href: '/help' },
     { name: 'FAQ', href: '/faq' },
