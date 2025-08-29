@@ -66,7 +66,7 @@ import {
   MailIcon as EmailIcon
 } from 'lucide-react';
 import { SEO } from '../components/SEO';
-import { COMPREHENSIVE_INNOVATIVE_SERVICES_2030 } from '../data/comprehensiveInnovativeServices2030';
+import { COMPREHENSIVE_SERVICES_2030 } from '../data/comprehensiveServices2030';
 
 export default function ComprehensiveServicesShowcase2030() {
   const [activeCategory, setActiveCategory] = useState('all');

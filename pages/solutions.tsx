@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 import { ArrowRight, Brain, Cloud, Shield, BarChart3, Database, Rocket, Users, Building, Globe, Zap, CheckCircle, Star, TrendingUp, Clock, Target, Award } from 'lucide-react';
 
 export default function Solutions() {
@@ -141,13 +141,13 @@ export default function Solutions() {
 						</p>
 						<div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
 							<Link
-								to="/contact"
+								href="/contact"
 								className="w-full sm:w-auto rounded-md bg-blue-600 px-6 py-3 text-sm font-semibold text-white shadow-sm hover:bg-blue-500 transition-colors"
 							>
 								Get Custom Solution
 							</Link>
 							<Link
-								to="/case-studies"
+								href="/case-studies"
 								className="w-full sm:w-auto text-sm font-semibold leading-6 text-gray-900 hover:text-blue-600 transition-colors"
 							>
 								View Case Studies <span aria-hidden="true">→</span>
@@ -204,7 +204,7 @@ export default function Solutions() {
 									))}
 								</ul>
 								<Link
-									to={solution.href}
+									href={solution.href}
 									className="inline-flex items-center text-blue-600 hover:text-blue-500 font-medium group-hover:translate-x-1 transition-all duration-200"
 								>
 									Learn More <ArrowRight className="ml-2 h-4 w-4" />
@@ -241,7 +241,7 @@ export default function Solutions() {
 									))}
 								</ul>
 								<Link
-									to={solution.href}
+									href={solution.href}
 									className="inline-flex items-center text-blue-600 hover:text-blue-500 font-medium group-hover:translate-x-1 transition-all duration-200"
 								>
 									Learn More <ArrowRight className="ml-2 h-4 w-4" />
@@ -270,7 +270,7 @@ export default function Solutions() {
 								<h3 className="text-lg font-semibold text-gray-900 mb-2">{solution.title}</h3>
 								<p className="text-gray-600 mb-4 text-sm">{solution.description}</p>
 								<Link
-									to={solution.href}
+									href={solution.href}
 									className="inline-flex items-center text-blue-600 hover:text-blue-500 font-medium text-sm group-hover:translate-x-1 transition-all duration-200"
 								>
 									Learn More <ArrowRight className="ml-1 h-3 w-3" />
@@ -291,13 +291,13 @@ export default function Solutions() {
 						</p>
 						<div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
 							<Link
-								to="/contact"
+								href="/contact"
 								className="w-full sm:w-auto rounded-md bg-white px-6 py-3 text-sm font-semibold text-blue-600 shadow-sm hover:bg-gray-50 transition-colors"
 							>
 								Get Started
 							</Link>
 							<Link
-								to="/case-studies"
+								href="/case-studies"
 								className="w-full sm:w-auto text-sm font-semibold leading-6 text-white hover:text-blue-100 transition-colors"
 							>
 								View Success Stories <span aria-hidden="true">→</span>
