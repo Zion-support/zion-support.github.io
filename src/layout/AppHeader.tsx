@@ -120,14 +120,6 @@ export function AppHeader() {
 
   const services = [
     { 
-      name: '2025 Services Showcase', 
-      href: '/services/showcase-2025', 
-      icon: Rocket, 
-      description: 'Complete 2025 Portfolio',
-      featured: true,
-      color: 'from-cyan-500 to-blue-500'
-    },
-    { 
       name: 'All Services', 
       href: '/services', 
       icon: Brain, 
@@ -143,14 +135,6 @@ export function AppHeader() {
       featured: true,
       color: 'from-purple-500 to-cyan-500',
       badge: 'Popular'
-    },
-    { 
-      name: 'Innovative Services 2025', 
-      href: '/services/innovative-2025', 
-      icon: Rocket, 
-      description: 'Cutting-edge Micro SAAS',
-      featured: true,
-      color: 'from-purple-500 to-pink-500'
     },
     { 
       name: 'AI Healthcare Platform', 
@@ -203,60 +187,28 @@ export function AppHeader() {
       color: 'from-blue-500 to-indigo-500'
     },
     { 
-      name: 'Blockchain Web3 Platform', 
-      href: '/services/blockchain-web3-platform', 
-      icon: Globe2, 
-      description: 'Blockchain & Web3',
+      name: 'Data Analytics', 
+      href: '/services/data-analytics', 
+      icon: BarChart3, 
+      description: 'Business Intelligence & Analytics',
       featured: true,
-      color: 'from-yellow-500 to-orange-500'
+      color: 'from-green-500 to-blue-500'
     },
     { 
-      name: 'AI Healthcare Diagnostics Platform', 
-      href: '/services/ai-healthcare-diagnostics-platform', 
-      icon: Heart, 
-      description: 'AI Medical Diagnostics',
+      name: 'IT Infrastructure', 
+      href: '/services/it-infrastructure', 
+      icon: Server, 
+      description: 'Enterprise IT Solutions',
       featured: true,
-      color: 'from-pink-500 to-red-500'
+      color: 'from-gray-500 to-blue-500'
     },
     { 
-      name: 'AI Education Platform', 
-      href: '/services/ai-education-platform', 
-      icon: BookOpen, 
-      description: 'AI-Powered Learning',
+      name: 'Cloud DevOps', 
+      href: '/services/cloud-devops', 
+      icon: Cloud, 
+      description: 'Cloud & DevOps Services',
       featured: true,
-      color: 'from-blue-500 to-indigo-500'
-    },
-    { 
-      name: 'AI Metaverse Platform', 
-      href: '/services/ai-metaverse-platform', 
-      icon: Globe, 
-      description: 'AI Metaverse Solutions',
-      featured: true,
-      color: 'from-purple-500 to-indigo-500'
-    },
-    { 
-      name: 'AI Space Technology Platform', 
-      href: '/services/ai-space-technology-platform', 
-      icon: Rocket, 
-      description: 'AI Space Solutions',
-      featured: true,
-      color: 'from-indigo-500 to-purple-500'
-    },
-    { 
-      name: 'AI Green Technology Platform', 
-      href: '/services/ai-green-technology-platform', 
-      icon: Leaf, 
-      description: 'Sustainable AI Solutions',
-      featured: true,
-      color: 'from-green-500 to-emerald-500'
-    },
-    { 
-      name: 'AI Development Platform', 
-      href: '/services/ai-development-platform', 
-      icon: Code, 
-      description: 'AI Code Generation',
-      featured: true,
-      color: 'from-cyan-500 to-blue-500'
+      color: 'from-blue-500 to-cyan-500'
     },
     { 
       name: 'Micro SAAS Products', 
@@ -267,62 +219,21 @@ export function AppHeader() {
       color: 'from-orange-500 to-red-500',
       price: 'Starting at $99/month',
       category: 'Micro SaaS'
-    },
-    { 
-      name: 'Revolutionary Services 2030', 
-      href: '/revolutionary-services-2030', 
-      icon: Rocket, 
-      description: 'Future Technology Solutions',
-      featured: true,
-      color: 'from-indigo-500 to-purple-500'
-    },
-    { 
-      name: 'Comprehensive Services 2030', 
-      href: '/comprehensive-services-2030', 
-      icon: Brain, 
-      description: 'Complete AI & Tech Solutions',
-      featured: true,
-      color: 'from-cyan-500 to-purple-500'
     }
   ];
 
   const solutions = [
     { 
       name: 'Enterprise Solutions', 
-      href: '/solutions/enterprise', 
+      href: '/solutions', 
       icon: Building, 
       description: 'Large-scale business solutions',
       featured: true,
       color: 'from-blue-500 to-indigo-500'
     },
     { 
-      name: 'SMB Solutions', 
-      href: '/solutions/smb', 
-      icon: Building2, 
-      icon: Building2, 
-      description: 'Small & medium business solutions',
-      featured: true,
-      color: 'from-green-500 to-emerald-500'
-    },
-    { 
-      name: 'Startup Solutions', 
-      href: '/solutions/startup', 
-      icon: Rocket, 
-      description: 'Startup & growth solutions',
-      featured: true,
-      color: 'from-purple-500 to-pink-500'
-    },
-    { 
-      name: 'Government Solutions', 
-      href: '/solutions/government', 
-      icon: Shield, 
-      description: 'Public sector solutions',
-      featured: true,
-      color: 'from-gray-500 to-slate-500'
-    },
-    { 
       name: 'Healthcare Solutions', 
-      href: '/solutions/healthcare', 
+      href: '/solutions', 
       icon: Heart, 
       description: 'Healthcare & medical solutions',
       featured: true,
@@ -330,23 +241,15 @@ export function AppHeader() {
     },
     { 
       name: 'Financial Solutions', 
-      href: '/solutions/financial', 
+      href: '/solutions', 
       icon: DollarSign, 
       description: 'Fintech & banking solutions',
       featured: true,
       color: 'from-green-500 to-emerald-500'
     },
     { 
-      name: 'Education Solutions', 
-      href: '/solutions/education', 
-      icon: BookOpen, 
-      description: 'Educational technology solutions',
-      featured: true,
-      color: 'from-blue-500 to-indigo-500'
-    },
-    { 
       name: 'Manufacturing Solutions', 
-      href: '/solutions/manufacturing', 
+      href: '/solutions', 
       icon: Settings, 
       description: 'Industrial & manufacturing solutions',
       featured: true,
@@ -354,15 +257,31 @@ export function AppHeader() {
     },
     { 
       name: 'Retail Solutions', 
-      href: '/solutions/retail', 
+      href: '/solutions', 
       icon: ShoppingCart, 
       description: 'E-commerce & retail solutions',
       featured: true,
       color: 'from-purple-500 to-pink-500'
     },
     { 
+      name: 'Government Solutions', 
+      href: '/solutions', 
+      icon: Shield, 
+      description: 'Public sector solutions',
+      featured: true,
+      color: 'from-gray-500 to-slate-500'
+    },
+    { 
+      name: 'Education Solutions', 
+      href: '/solutions', 
+      icon: BookOpen, 
+      description: 'Educational technology solutions',
+      featured: true,
+      color: 'from-blue-500 to-indigo-500'
+    },
+    { 
       name: 'Transportation Solutions', 
-      href: '/solutions/transportation', 
+      href: '/solutions', 
       icon: Truck, 
       description: 'Logistics & transportation solutions',
       featured: true,

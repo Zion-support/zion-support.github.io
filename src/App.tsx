@@ -43,12 +43,6 @@ const Training = lazy(() => import('./pages/Training'));
 const Community = lazy(() => import('./pages/Community'));
 const Support = lazy(() => import('./pages/Support'));
 
-// Enhanced services pages - only import existing ones
-const ComprehensivePricingGuide2027 = lazy(() => import('./pages/ComprehensivePricingGuide2027.tsx'));
-const ComprehensivePricingGuide2030 = lazy(() => import('./pages/ComprehensivePricingGuide2030.tsx'));
-const ComprehensiveServicesLanding2025 = lazy(() => import('./pages/ComprehensiveServicesLanding2025.jsx'));
-const EnhancedServicesLanding = lazy(() => import('./pages/EnhancedServicesLanding.tsx'));
-
 // Service pages - only import existing ones
 const CloudDevOps = lazy(() => import('./pages/services/CloudDevOps'));
 const DigitalTwin = lazy(() => import('./pages/services/DigitalTwin'));
@@ -76,7 +70,7 @@ const Marketplace = () => (
   </div>
 );
 
-// New innovative services
+// New innovative services - only import existing ones
 const AIContractAnalysis = lazy(() => import('./pages/services/AI-Powered-Contract-Analysis'));
 const AISupplyChainOptimizationNew = lazy(() => import('./pages/services/AI-Supply-Chain-Optimization'));
 const AICybersecurityThreatIntelligence = lazy(() => import('./pages/services/AI-Cybersecurity-Threat-Intelligence'));
@@ -109,10 +103,6 @@ function App() {
                 <Route path="/pricing" element={<Pricing />} />
                 <Route path="/case-studies" element={<CaseStudies />} />
                 <Route path="/partners" element={<Partners />} />
-                <Route path="/services/enhanced" element={<EnhancedServicesLanding />} />
-                <Route path="/services/micro-saas" element={<MicroSaaSProducts />} />
-                <Route path="/pricing-guide-2027" element={<ComprehensivePricingGuide2027 />} />
-                <Route path="/pricing-guide-2030" element={<ComprehensivePricingGuide2030 />} />
                 <Route path="/request-quote" element={<RequestQuote />} />
                 <Route path="/dashboard" element={<Dashboard />} />
                 <Route path="/login" element={<Login />} />
@@ -136,6 +126,7 @@ function App() {
                 <Route path="/services/data-analytics" element={<DataAnalytics />} />
                 <Route path="/services/it-infrastructure" element={<ITInfrastructure />} />
                 <Route path="/services/ai-business-intelligence" element={<AIBusinessIntelligence />} />
+                <Route path="/services/micro-saas" element={<MicroSaaSProducts />} />
                 
                 {/* New innovative service routes */}
                 <Route path="/services/ai-contract-analysis" element={<AIContractAnalysis />} />
