@@ -1,5 +1,5 @@
 import React from 'react';
-import Head from 'next/head';
+import { Helmet } from 'react-helmet-async';
 import ModernHeader from './ModernHeader';
 import ModernFooter from './ModernFooter';
 
@@ -20,7 +20,7 @@ const ModernLayout: React.FC<ModernLayoutProps> = ({
 }) => {
   return (
     <>
-      <Head>
+      <Helmet>
         <title>{title}</title>
         <meta name="description" content={description} />
         <meta name="keywords" content={keywords} />
@@ -87,7 +87,7 @@ const ModernLayout: React.FC<ModernLayoutProps> = ({
             })
           }}
         />
-      </Head>
+      </Helmet>
       
       <div className="min-h-screen bg-white text-gray-900 flex flex-col">
         <ModernHeader />

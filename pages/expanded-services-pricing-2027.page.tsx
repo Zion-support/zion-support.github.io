@@ -1,5 +1,5 @@
 import type { NextPage } from 'next';
-import Head from 'next/head';
+import { Helmet } from 'react-helmet-async';
 import { useState, useMemo } from 'react';
 import { ALL_EXPANDED_SERVICES_PRICING } from '../data/expandedServicesPricing2027';
 
@@ -55,14 +55,14 @@ const ExpandedServicesPricingGuide2027: NextPage = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900">
-      <Head>
+      <Helmet>
         <title>Expanded Services Pricing Guide 2027 - Zion Tech Group</title>
         <meta name="description" content="Comprehensive pricing guide for our 2027 expanded innovative services. Compare pricing tiers, ROI analysis, and market positioning for cybersecurity, data analytics, cloud solutions, IoT, fintech, and healthcare technology services." />
         <meta name="keywords" content="Zion Tech Group, pricing guide 2027, service pricing, ROI analysis, market comparison, cybersecurity pricing, data analytics pricing, cloud solutions pricing" />
         <meta name="author" content="Zion Tech Group" />
         <meta name="robots" content="index, follow" />
         <link rel="canonical" href="https://ziontechgroup.com/expanded-services-pricing-2027" />
-      </Head>
+      </Helmet>
 
       <main className="container mx-auto px-4 py-16">
         {/* Hero Section */}

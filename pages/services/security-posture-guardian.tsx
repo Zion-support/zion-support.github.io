@@ -1,13 +1,13 @@
-import Head from 'next/head';
-import Link from 'next/link';
+import { Helmet } from 'react-helmet-async';
+import { Link } from 'react-router-dom';
 
 export default function SecurityPostureGuardian() {
   return (
     <div className="relative min-h-screen overflow-hidden bg-slate-950 text-white">
-      <Head>
+      <Helmet>
         <title>Security Posture Guardian — Services — Zion</title>
         <meta name="description" content="Continuously monitor misconfigurations, secrets, and drift with automated fixes." />
-      </Head>
+      </Helmet>
       <div aria-hidden className="pointer-events-none absolute inset-0 -z-10">
         <div className="absolute -top-24 -left-24 h-[38rem] w-[38rem] rounded-full bg-fuchsia-500/20 blur-3xl animate-float" />
         <div className="absolute top-1/4 -right-32 h-[30rem] w-[30rem] rounded-full bg-cyan-400/20 blur-3xl animate-float-slow" />

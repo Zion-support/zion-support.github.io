@@ -400,7 +400,7 @@ export const TeamCollaborationTools: React.FC<TeamCollaborationToolsProps> = ({
   const getFileTypeIcon = (type: string) => {
     switch (type) {
       case 'document': return <FileText className="w-5 h-5" />;
-      case 'image': return <Image className="w-5 h-5" />;
+      case 'image': return <img className="w-5 h-5" />;
       case 'video': return <Video className="w-5 h-5" />;
       case 'audio': return <File className="w-5 h-5" />;
       case 'archive': return <Folder className="w-5 h-5" />;

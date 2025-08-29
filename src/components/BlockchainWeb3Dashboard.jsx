@@ -180,7 +180,7 @@ export const BlockchainWeb3Dashboard = ({ className = '' }) => {
                       <p className="text-sm font-medium text-gray-600 dark:text-gray-400">NFTs</p>
                       <p className="text-2xl font-bold text-purple-600">{metrics.nftCount}</p>
                     </div>
-                    <Image className="w-8 h-8 text-purple-500"/>
+                    <img className="w-8 h-8 text-purple-500"/>
                   </div>
                 </div>
                 
