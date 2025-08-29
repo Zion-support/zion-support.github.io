@@ -45,10 +45,14 @@ export function AppHeader() {
 
   const services = [
     { name: 'AI & Analytics', href: '/services/ai-business-intelligence', icon: Brain, description: 'Machine Learning & Data Science' },
+    { name: 'AI Enterprise Architecture', href: '/services/ai-enterprise-architecture', icon: Building, description: 'AI-Powered Business Systems' },
+    { name: 'AI Digital Marketing Suite', href: '/services/ai-digital-marketing-suite', icon: Target, description: 'AI Marketing Automation' },
+    { name: 'AI Project Management', href: '/services/ai-project-management-platform', icon: Project, description: 'Intelligent Project Delivery' },
     { name: 'AI Workflow Orchestrator', href: '/services/ai-workflow-orchestrator', icon: Workflow, description: 'Intelligent Process Automation' },
     { name: 'AI Data Governance', href: '/services/ai-data-governance', icon: Shield, description: 'AI-Powered Data Protection' },
     { name: 'AI Customer Success', href: '/services/ai-customer-success-platform', icon: Users, description: 'Proactive Customer Engagement' },
     { name: 'Digital Twin', href: '/services/digital-twin', icon: Rocket, description: 'Simulation & Monitoring' },
+    { name: 'Quantum Cybersecurity', href: '/services/quantum-cybersecurity-solutions', icon: Shield, description: 'Next-Gen Security' },
     { name: 'Cybersecurity', href: '/services/ai-compliance-copilot', icon: Shield, description: 'AI-Powered Security' },
     { name: 'Cloud & DevOps', href: '/services/cloud-devops', icon: Cloud, description: 'Infrastructure & Automation' },
     { name: 'IoT & Edge', href: '/services/iot-edge', icon: Cpu, description: 'Smart Devices & Networks' },
@@ -78,11 +82,27 @@ export function AppHeader() {
       ]
     },
     {
+      name: 'Micro SaaS Solutions',
+      icon: ShoppingCart,
+      color: 'from-green-600 to-emerald-600',
+      services: [
+        { name: 'AI Project Management Platform', href: '/services/ai-project-management-platform', description: 'Intelligent Project Delivery' },
+        { name: 'AI Digital Marketing Suite', href: '/services/ai-digital-marketing-suite', description: 'AI Marketing Automation' },
+        { name: 'Micro SaaS Solutions', href: '/services/micro-saas-solutions', description: 'Productized SaaS for niches' },
+        { name: 'AI Auto Email Responder', href: '/services/ai-auto-email-responder', description: 'Faster replies, CRM logging' },
+        { name: 'Customer Feedback Surveys', href: '/services/mobile-feedback-surveys', description: 'NPS/CSAT with AI insights' },
+        { name: 'LLM Content Studio', href: '/services/llm-content-studio', description: 'On-brand AI content' }
+      ]
+    },
+    {
       name: 'AI & Analytics',
       icon: Brain,
       color: 'from-purple-600 to-pink-600',
       services: [
         { name: 'AI Business Intelligence', href: '/services/ai-business-intelligence', description: 'Machine Learning & Data Science' },
+        { name: 'AI Enterprise Architecture', href: '/services/ai-enterprise-architecture', description: 'AI-Powered Business Systems' },
+        { name: 'AI Digital Marketing Suite', href: '/services/ai-digital-marketing-suite', description: 'AI Marketing Automation' },
+        { name: 'AI Project Management Platform', href: '/services/ai-project-management-platform', description: 'Intelligent Project Delivery' },
         { name: 'AI Workflow Orchestrator', href: '/services/ai-workflow-orchestrator', description: 'Intelligent Process Automation' },
         { name: 'AI Data Governance', href: '/services/ai-data-governance', description: 'AI-Powered Data Protection' },
         { name: 'AI Customer Success Platform', href: '/services/ai-customer-success-platform', description: 'Proactive Customer Engagement' },
@@ -126,6 +146,7 @@ export function AppHeader() {
       icon: Shield,
       color: 'from-indigo-600 to-purple-600',
       services: [
+        { name: 'Quantum Cybersecurity Solutions', href: '/services/quantum-cybersecurity-solutions', description: 'Next-Gen Security' },
         { name: 'AI Compliance Copilot', href: '/services/ai-compliance-copilot', description: 'AI-Powered Security' },
         { name: 'Zero Trust Architecture', href: '/services/zero-trust-network-architecture', description: 'Advanced security' }
       ]

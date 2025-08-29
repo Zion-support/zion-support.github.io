@@ -70,7 +70,10 @@ export const EnhancedFuturisticFooter: React.FC = () => {
       icon: Brain,
       color: 'from-purple-600 to-pink-600',
       links: [
+        { name: 'AI Enterprise Architecture', href: '/services/ai-enterprise-architecture' },
         { name: 'AI Business Intelligence', href: '/services/ai-business-intelligence' },
+        { name: 'AI Digital Marketing Suite', href: '/services/ai-digital-marketing-suite' },
+        { name: 'AI Project Management Platform', href: '/services/ai-project-management-platform' },
         { name: 'AI Workflow Orchestrator', href: '/services/ai-workflow-orchestrator' },
         { name: 'AI Data Governance', href: '/services/ai-data-governance' },
         { name: 'AI Customer Success Platform', href: '/services/ai-customer-success-platform' },
@@ -79,6 +82,17 @@ export const EnhancedFuturisticFooter: React.FC = () => {
         { name: 'AI Auto Email Responder', href: '/services/ai-auto-email-responder' },
         { name: 'LLM Content Studio', href: '/services/llm-content-studio' },
         { name: 'AI Compliance Copilot', href: '/services/ai-compliance-copilot' }
+      ]
+    },
+    {
+      title: 'Cybersecurity & Security',
+      icon: Shield,
+      color: 'from-indigo-600 to-purple-600',
+      links: [
+        { name: 'Quantum Cybersecurity Solutions', href: '/services/quantum-cybersecurity-solutions' },
+        { name: 'AI Compliance Copilot', href: '/services/ai-compliance-copilot' },
+        { name: 'Zero Trust Network Architecture', href: '/services/zero-trust-network-architecture' },
+        { name: 'AI Compliance Assistant', href: '/services/ai-compliance-assistant' }
       ]
     },
     {

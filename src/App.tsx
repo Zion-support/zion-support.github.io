@@ -91,6 +91,12 @@ const AIDataGovernance = React.lazy(() => import('./pages/services/AIDataGoverna
 const EdgeComputingPlatform = React.lazy(() => import('./pages/services/EdgeComputingPlatform'));
 const AICustomerSuccessPlatform = React.lazy(() => import('./pages/services/AICustomerSuccessPlatform'));
 
+// New Innovative Services
+const AIEnterpriseArchitecture = React.lazy(() => import('./pages/services/AIEnterpriseArchitecture'));
+const AIDigitalMarketingSuite = React.lazy(() => import('./pages/services/AIDigitalMarketingSuite'));
+const AIProjectManagementPlatform = React.lazy(() => import('./pages/services/AIProjectManagementPlatform'));
+const QuantumCybersecuritySolutions = React.lazy(() => import('./pages/services/QuantumCybersecuritySolutions'));
+
 // Simple placeholder pages for missing ones
 const Community = React.lazy(() => import('./pages/Community'));
 const Documentation = React.lazy(() => import('./pages/Documentation'));
@@ -218,6 +224,12 @@ function App() {
               <Route path="/services/ai-data-governance" element={<AIDataGovernance />} />
               <Route path="/services/edge-computing-platform" element={<EdgeComputingPlatform />} />
               <Route path="/services/ai-customer-success-platform" element={<AICustomerSuccessPlatform />} />
+              
+              {/* New Innovative Services Routes */}
+              <Route path="/services/ai-enterprise-architecture" element={<AIEnterpriseArchitecture />} />
+              <Route path="/services/ai-digital-marketing-suite" element={<AIDigitalMarketingSuite />} />
+              <Route path="/services/ai-project-management-platform" element={<AIProjectManagementPlatform />} />
+              <Route path="/services/quantum-cybersecurity-solutions" element={<QuantumCybersecuritySolutions />} />
               
               {/* Catch all route */}
               <Route path="*" element={<Home />} />
