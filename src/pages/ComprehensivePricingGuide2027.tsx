@@ -736,10 +736,6 @@ const ComprehensivePricingGuide2027: React.FC = () => {
           <p className="text-xl text-slate-300 mb-8 max-w-2xl mx-auto">
             Contact our team to discuss pricing, implementation, and how our revolutionary services 
             can transform your business and drive unprecedented growth.
-      {/* Contact Section */}
-      <section className="py-16 bg-slate-900/50">
-        <div className="container mx-auto px-4 text-center">
-          <h2 className="text-3xl font-bold mb-6">Ready to Get Started?</h2>
           </p>
           
           <div className="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto mb-12">
