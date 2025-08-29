@@ -1,167 +1,191 @@
-# GitHub Actions Workflows
+# PM2 Automation System
 
-This directory contains comprehensive GitHub Actions workflows for the Zion Tech Group application.
+This directory contains configuration and documentation for the PM2-based automation system that has replaced all GitHub Actions workflows.
 
-## Workflows Overview
+## Automation Overview
 
-### 1. CI/CD Pipeline (`ci-cd.yml`)
-**Purpose**: Main continuous integration and deployment pipeline
-**Triggers**: Push to main/develop, pull requests, manual dispatch
-**Features**:
-- Code quality & security checks
-- Multi-platform build & testing
-- Performance testing with Lighthouse
-- Automated deployment to Vercel and GitHub Pages
-- Post-deployment health checks
+All previously GitHub Actions-based workflows have been successfully migrated to PM2 processes that run continuously and automatically, providing better performance, monitoring, and control.
 
-### 2. Security & Dependency Management (`security.yml`)
-**Purpose**: Security scanning and dependency management
-**Triggers**: Daily schedule, push to main/develop, pull requests, manual dispatch
-**Features**:
-- Dependency vulnerability scanning
-- Code security analysis with Semgrep
-- Container security scanning with Trivy
-- Automated dependency updates
-- Security policy compliance checks
+## PM2 Automation Processes
 
-### 3. Testing & Quality Assurance (`testing.yml`)
-**Purpose**: Comprehensive testing automation
-**Triggers**: Push to main/develop, pull requests, weekly schedule, manual dispatch
-**Features**:
-- Unit, integration, and E2E testing
-- Performance testing
-- Accessibility testing
-- Test coverage reporting
-- Quality gates enforcement
+### 🔄 Continuous Automation (Running 24/7)
 
-### 4. Release Management (`release.yml`)
-**Purpose**: Automated release process
-**Triggers**: Version tags, manual dispatch
-**Features**:
-- Automated version management
-- Release artifact creation
-- GitHub release creation
-- Automated deployment
-- Post-release tasks
+#### High Priority Processes
+- **console-error-fixer**: Runs every 15 minutes
+  - Automatically detects and fixes console errors
+  - JavaScript syntax error correction
+  - Real-time error monitoring and resolution
 
-### 5. Dependency Management (`dependencies.yml`)
-**Purpose**: Automated dependency updates
-**Triggers**: Daily schedule, manual dispatch
-**Features**:
-- Outdated package detection
-- Security vulnerability scanning
-- Automated update PR creation
-- Breaking change detection
-- Team notifications
+#### Regular Interval Processes
+- **link-checker**: Runs every 30 minutes
+  - Comprehensive link validation
+  - Broken link detection and reporting
+  - Link health monitoring
+
+- **continuous-improvement**: Runs every 2 hours
+  - Automated code improvements
+  - Performance optimizations
+  - Quality enhancement suggestions
+
+- **daily-build-test**: Runs every hour
+  - Build verification and testing
+  - Continuous integration tasks
+  - Test execution and reporting
+
+- **security-audit**: Runs every 4 hours
+  - Security vulnerability scanning
+  - Dependency security checks
+  - Code security analysis
+
+- **performance-monitor**: Runs every 2 hours
+  - Performance metrics collection
+  - Optimization opportunities identification
+  - Performance trend analysis
+
+- **quality-checks**: Runs every 3 hours
+  - Code quality assessment
+  - Linting and formatting checks
+  - Quality gate enforcement
+
+- **link-integrity**: Runs every 2 hours
+  - Link integrity verification
+  - Cross-reference validation
+  - Internal link consistency checks
+
+- **front-maximizer**: Runs every 4 hours
+  - Frontend optimization
+  - User experience improvements
+  - Interface enhancements
+
+- **sitemap-runner**: Runs every 6 hours
+  - Sitemap generation and updates
+  - SEO optimization
+  - Search engine compatibility
+
+- **dependency-updates**: Runs every 6 hours
+  - Package dependency monitoring
+  - Security updates
+  - Version compatibility checks
+
+## Main Applications
+
+- **zion-app**: Main frontend application with automatic restart
+- **zion-backend**: Backend server with automatic restart
+
+## PM2 Management Commands
+
+### Status and Monitoring
+```bash
+# Check all process status
+pm2 status
+
+# View real-time logs
+pm2 logs
+
+# View specific process logs
+pm2 logs [process-name]
+
+# Monitor processes in real-time
+pm2 monit
+```
+
+### Process Control
+```bash
+# Restart all processes
+pm2 restart all
+
+# Restart specific process
+pm2 restart [process-name]
+
+# Stop all processes
+pm2 stop all
+
+# Start all processes
+pm2 start ecosystem.config.cjs
+
+# Reload all processes
+pm2 reload all
+```
+
+### Configuration and Setup
+```bash
+# Save current PM2 configuration
+pm2 save
+
+# Setup PM2 to start on system boot
+pm2 startup
+
+# View PM2 configuration
+pm2 show [process-name]
+```
+
+## Benefits of PM2 over GitHub Actions
+
+### 1. **Continuous Operation**
+- Processes run continuously instead of being triggered by events
+- No waiting for GitHub Actions to trigger
+- Immediate response to issues
+
+### 2. **Real-time Monitoring**
+- Live status monitoring with `pm2 status`
+- Real-time log viewing
+- Immediate process control
+
+### 3. **Resource Efficiency**
+- Better resource utilization
+- Lower overhead compared to GitHub Actions
+- Optimized for continuous operation
+
+### 4. **Local Control**
+- Full control over automation without external dependencies
+- No GitHub API rate limits
+- Immediate troubleshooting and fixes
+
+### 5. **Cost Effectiveness**
+- No GitHub Actions minutes consumption
+- Runs on your own infrastructure
+- Predictable resource usage
+
+## Migration Status
+
+✅ **Completed Migrations:**
+- CI/CD Pipeline → PM2 continuous processes
+- Security Scanning → PM2 security-audit
+- Dependency Management → PM2 dependency-updates
+- Quality Assurance → PM2 quality-checks
+- Performance Monitoring → PM2 performance-monitor
+- Link Management → PM2 link-checker & link-integrity
+- Continuous Improvement → PM2 continuous-improvement
+- Build & Testing → PM2 daily-build-test
+- SEO Optimization → PM2 sitemap-runner
+- Frontend Optimization → PM2 front-maximizer
 
 ## Configuration
 
-### Environment Variables
-The workflows use the following environment variables:
-- `NODE_VERSION`: Node.js version (default: 20.18.1)
-- `NPM_VERSION`: npm version (default: 10.0.0)
+The PM2 configuration is defined in `ecosystem.config.cjs` at the project root, which includes:
+- Process definitions and settings
+- Environment variables
+- Resource limits
+- Restart policies
+- Monitoring configurations
 
-### Secrets Required
-The following secrets need to be configured in your repository:
-
-#### Vercel Deployment
-- `VERCEL_TOKEN`: Vercel authentication token
-- `VERCEL_ORG_ID`: Vercel organization ID
-- `VERCEL_PROJECT_ID`: Vercel project ID
-
-#### Code Coverage
-- `CODECOV_TOKEN`: Codecov authentication token
-
-#### Security Scanning
-- `GITHUB_TOKEN`: GitHub authentication token (automatically provided)
-
-## Usage
-
-### Manual Workflow Dispatch
-You can manually trigger workflows from the GitHub Actions tab:
-
-1. Go to **Actions** tab in your repository
-2. Select the workflow you want to run
-3. Click **Run workflow**
-4. Fill in the required parameters
-5. Click **Run workflow**
-
-### Scheduled Workflows
-- **Security scanning**: Daily at 2 AM UTC
-- **Dependency updates**: Daily at 4 AM UTC
-- **Testing**: Weekly on Sundays at 3 AM UTC
-
-### Branch Protection
-The workflows are designed to work with branch protection rules:
-- Require status checks to pass before merging
-- Require up-to-date branches before merging
-- Enforce review requirements
-
-## Customization
-
-### Adding New Workflows
-1. Create a new `.yml` file in `.github/workflows/`
-2. Follow the existing workflow structure
-3. Add appropriate triggers and jobs
-4. Test locally with `act` if possible
-
-### Modifying Existing Workflows
-1. Update the workflow file
-2. Test the changes
-3. Commit and push to trigger the workflow
-4. Monitor the execution
-
-### Environment-Specific Configurations
-You can create environment-specific configurations by:
-1. Adding environment blocks in workflows
-2. Using environment variables for configuration
-3. Creating environment-specific secrets
-
-## Monitoring & Troubleshooting
-
-### Workflow Status
-- Monitor workflow execution in the **Actions** tab
-- Check job logs for detailed information
-- Review artifacts for test results and reports
+## Support and Troubleshooting
 
 ### Common Issues
-1. **Build failures**: Check Node.js version compatibility
-2. **Test failures**: Review test output and fix issues
-3. **Deployment failures**: Verify secrets and permissions
-4. **Timeout issues**: Adjust timeout values if needed
+1. **Process Crashes**: Check logs with `pm2 logs [process-name]`
+2. **High Memory Usage**: Monitor with `pm2 monit`
+3. **Process Not Starting**: Verify ecosystem.config.cjs configuration
 
-### Performance Optimization
-- Use caching for dependencies
-- Parallel job execution where possible
-- Optimize build steps
-- Use appropriate runner types
+### Getting Help
+1. Check PM2 status: `pm2 status`
+2. Review process logs: `pm2 logs [process-name]`
+3. Check the main PM2 automation documentation in the project root
+4. Verify ecosystem.config.cjs configuration
 
-## Security Considerations
+## Future Enhancements
 
-### Secret Management
-- Never hardcode secrets in workflows
-- Use repository secrets for sensitive data
-- Rotate secrets regularly
-- Limit secret access to necessary workflows
-
-### Code Scanning
-- Enable automated security scanning
-- Review security alerts promptly
-- Fix vulnerabilities in a timely manner
-- Maintain security policy compliance
-
-## Support
-
-For questions or issues with GitHub Actions:
-1. Check the workflow logs for error details
-2. Review GitHub Actions documentation
-3. Contact the development team
-4. Create an issue with detailed information
-
-## Contributing
-
-When contributing to workflows:
-1. Follow the existing patterns and structure
-2. Test changes thoroughly
-3. Update documentation as needed
-4. Ensure security best practices are followed
+The PM2 automation system is designed to be easily extensible:
+- Add new automation processes
+- Modify timing intervals
+- Customize monitoring and alerting
+- Integrate with external monitoring tools
