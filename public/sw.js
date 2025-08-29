@@ -1,32 +1,35 @@
 const CACHE_NAME = 'zion-tech-group-v1.0.0';
-const STATIC_CACHE = 'zion-static-v1';
-const DYNAMIC_CACHE = 'zion-dynamic-v1';
+const STATIC_CACHE = 'zion-static-v1.0.0';
+const DYNAMIC_CACHE = 'zion-dynamic-v1.0.0';
 
-// Files to cache immediately
-const STATIC_FILES = [
+// Assets to cache immediately
+const STATIC_ASSETS = [
   '/',
   '/index.html',
   '/static/js/bundle.js',
   '/static/css/main.css',
   '/manifest.json',
   '/favicon.ico',
-  '/images/zion-logo.png'
+  '/images/zion-tech-group-logo.png',
+  '/images/hero-ai-solutions.jpg',
+  '/images/hero-it-services.jpg',
+  '/images/hero-green-it.jpg'
 ];
 
-// Install event - cache static files
+// Install event - cache static assets
 self.addEventListener('install', (event) => {
   event.waitUntil(
     caches.open(STATIC_CACHE)
       .then((cache) => {
-        console.log('Caching static files');
-        return cache.addAll(STATIC_FILES);
+        console.log('Caching static assets');
+        return cache.addAll(STATIC_ASSETS);
       })
       .then(() => {
-        console.log('Static files cached successfully');
+        console.log('Static assets cached successfully');
         return self.skipWaiting();
       })
       .catch((error) => {
-        console.error('Error caching static files:', error);
+        console.error('Error caching static assets:', error);
       })
   );
 });
@@ -46,13 +49,13 @@ self.addEventListener('activate', (event) => {
         );
       })
       .then(() => {
-        console.log('Service Worker activated');
+        console.log('Service worker activated');
         return self.clients.claim();
       })
   );
 });
 
-// Fetch event - serve from cache or network
+// Fetch event - implement caching strategies
 self.addEventListener('fetch', (event) => {
   const { request } = event;
   const url = new URL(request.url);
@@ -62,20 +65,19 @@ self.addEventListener('fetch', (event) => {
     return;
   }
 
-  // Skip non-HTTP(S) requests
+  // Skip chrome-extension and other non-http requests
   if (!url.protocol.startsWith('http')) {
     return;
   }
 
-  // Handle different types of requests
+  // Handle different types of requests with appropriate caching strategies
   if (isStaticAsset(request)) {
-    // Static assets - cache first strategy
     event.respondWith(cacheFirst(request, STATIC_CACHE));
   } else if (isAPIRequest(request)) {
-    // API requests - network first strategy
     event.respondWith(networkFirst(request, DYNAMIC_CACHE));
+  } else if (isImageRequest(request)) {
+    event.respondWith(cacheFirst(request, DYNAMIC_CACHE));
   } else {
-    // HTML pages - network first strategy
     event.respondWith(networkFirst(request, DYNAMIC_CACHE));
   }
 });
@@ -115,27 +117,32 @@ async function networkFirst(request, cacheName) {
     if (cachedResponse) {
       return cachedResponse;
     }
-    
-    // Return offline page for HTML requests
-    if (request.headers.get('accept')?.includes('text/html')) {
-      return caches.match('/offline.html');
-    }
-    
-    return new Response('Offline', { status: 503 });
+    return new Response('Offline content not available', { status: 503 });
   }
 }
 
-// Check if request is for a static asset
+// Helper functions to determine request types
 function isStaticAsset(request) {
   const url = new URL(request.url);
-  const staticExtensions = ['.js', '.css', '.png', '.jpg', '.jpeg', '.gif', '.svg', '.woff', '.woff2', '.ttf', '.eot'];
-  return staticExtensions.some(ext => url.pathname.endsWith(ext));
+  return STATIC_ASSETS.includes(url.pathname) ||
+         url.pathname.startsWith('/static/') ||
+         url.pathname.startsWith('/images/') ||
+         url.pathname.endsWith('.css') ||
+         url.pathname.endsWith('.js');
 }
 
-// Check if request is for an API
 function isAPIRequest(request) {
   const url = new URL(request.url);
-  return url.pathname.startsWith('/api/') || url.pathname.includes('analytics');
+  return url.pathname.startsWith('/api/') ||
+         url.pathname.startsWith('/services/') ||
+         url.pathname.includes('analytics') ||
+         url.pathname.includes('tracking');
+}
+
+function isImageRequest(request) {
+  const url = new URL(request.url);
+  return url.pathname.match(/\.(jpg|jpeg|png|gif|webp|svg)$/i) ||
+         url.pathname.startsWith('/images/');
 }
 
 // Background sync for offline actions
@@ -145,7 +152,6 @@ self.addEventListener('sync', (event) => {
   }
 });
 
-// Background sync implementation
 async function doBackgroundSync() {
   try {
     // Implement background sync logic here
@@ -162,12 +168,25 @@ self.addEventListener('push', (event) => {
     const data = event.data.json();
     const options = {
       body: data.body,
-      icon: '/images/zion-logo.png',
+      icon: '/images/zion-tech-group-logo.png',
       badge: '/images/badge.png',
       vibrate: [100, 50, 100],
       data: {
-        url: data.url
-      }
+        dateOfArrival: Date.now(),
+        primaryKey: 1
+      },
+      actions: [
+        {
+          action: 'explore',
+          title: 'Explore',
+          icon: '/images/explore.png'
+        },
+        {
+          action: 'close',
+          title: 'Close',
+          icon: '/images/close.png'
+        }
+      ]
     };
 
     event.waitUntil(
@@ -179,10 +198,10 @@ self.addEventListener('push', (event) => {
 // Notification click handling
 self.addEventListener('notificationclick', (event) => {
   event.notification.close();
-  
-  if (event.notification.data.url) {
+
+  if (event.action === 'explore') {
     event.waitUntil(
-      clients.openWindow(event.notification.data.url)
+      clients.openWindow('/')
     );
   }
 });
@@ -193,17 +212,21 @@ self.addEventListener('message', (event) => {
     self.skipWaiting();
   }
   
-  if (event.data && event.data.type === 'GET_VERSION') {
-    event.ports[0].postMessage({ version: CACHE_NAME });
+  if (event.data && event.data.type === 'CACHE_URLS') {
+    event.waitUntil(
+      caches.open(DYNAMIC_CACHE)
+        .then((cache) => {
+          return cache.addAll(event.data.urls);
+        })
+    );
   }
 });
 
 // Error handling
 self.addEventListener('error', (event) => {
-  console.error('Service Worker error:', event.error);
+  console.error('Service worker error:', event.error);
 });
 
-// Unhandled rejection handling
 self.addEventListener('unhandledrejection', (event) => {
-  console.error('Service Worker unhandled rejection:', event.reason);
+  console.error('Service worker unhandled rejection:', event.reason);
 });
