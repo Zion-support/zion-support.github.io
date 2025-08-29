@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { Menu, X, Search, User, Bell, ChevronDown, Zap, Brain, Shield, Cloud, Rocket, Globe, Cpu, Lock, Heart, Users, ShoppingCart, BookOpen, MessageCircle, HelpCircle, DollarSign, Star, TrendingUp, Award, Settings, Phone, Mail, MapPin, Building } from 'lucide-react';
+import { Menu, X, Search, User, Bell, ChevronDown, Zap, Brain, Shield, Cloud, Rocket, Globe, Cpu, Lock, Heart, Users, ShoppingCart, BookOpen, MessageCircle, HelpCircle, DollarSign, Star, TrendingUp, Award, Settings, Phone, Mail, MapPin, Building, Atom } from 'lucide-react';
 import { ThemeToggle } from '../components/ThemeToggle';
 import { ZionLoadingSpinner } from '../components/ui/EnhancedLoadingSpinner';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -46,17 +46,24 @@ export function AppHeader() {
   const services = [
     { name: 'AI & Analytics', href: '/services/ai-business-intelligence', icon: Brain, description: 'Machine Learning & Data Science' },
     { name: 'Digital Twin', href: '/services/digital-twin', icon: Rocket, description: 'Simulation & Monitoring' },
-    { name: 'Cybersecurity', href: '/services/ai-compliance-copilot', icon: Shield, description: 'AI-Powered Security' },
+    { name: 'Cybersecurity', href: '/services/ai-cybersecurity-suite', icon: Shield, description: 'AI-Powered Security' },
     { name: 'Cloud & DevOps', href: '/services/cloud-devops', icon: Cloud, description: 'Infrastructure & Automation' },
     { name: 'IoT & Edge', href: '/services/iot-edge', icon: Cpu, description: 'Smart Devices & Networks' },
     { name: 'Blockchain', href: '/services/blockchain-enterprise-solutions', icon: Lock, description: 'DeFi & Smart Contracts' },
-    { name: 'Healthcare Tech', href: '/services/healthcare-tech', icon: Heart, description: 'AI Medicine & Diagnostics' },
+    { name: 'Healthcare Tech', href: '/services/ai-healthcare-analytics', icon: Heart, description: 'AI Medicine & Diagnostics' },
     { name: 'Sustainability', href: '/services/sustainability', icon: Globe, description: 'Green IT Solutions' },
     { name: 'Micro SaaS', href: '/services/micro-saas-solutions', icon: ShoppingCart, description: 'Productized SaaS for niches' },
     { name: 'AI Auto Email', href: '/services/ai-auto-email-responder', icon: MessageCircle, description: 'Faster replies, CRM logging' },
     { name: 'Feedback Surveys', href: '/services/mobile-feedback-surveys', icon: Users, description: 'NPS/CSAT with AI insights' },
     { name: 'LLM Content Studio', href: '/services/llm-content-studio', icon: BookOpen, description: 'On-brand AI content' },
     { name: 'FinOps Advisor', href: '/services/finops-advisor', icon: DollarSign, description: 'Cloud cost optimization' },
+    { name: 'Quantum AI Platform', href: '/services/quantum-ai-platform', icon: Atom, description: 'Quantum Computing & AI' },
+    { name: 'Smart Manufacturing', href: '/services/smart-manufacturing-iot', icon: Cpu, description: 'IoT & Industry 4.0' },
+    { name: 'Legal Research AI', href: '/services/ai-legal-research', icon: BookOpen, description: 'AI-Powered Legal Research' },
+    { name: 'Marketing Automation', href: '/services/ai-marketing-automation', icon: TrendingUp, description: 'AI Marketing & Analytics' },
+    { name: 'HR Analytics', href: '/services/ai-hr-analytics', icon: Users, description: 'AI HR & Talent Management' },
+    { name: 'Financial Planning', href: '/services/ai-financial-planning', icon: DollarSign, description: 'AI Financial Advisory' },
+    { name: 'Supply Chain AI', href: '/services/ai-supply-chain-optimization', icon: Globe, description: 'AI Supply Chain Optimization' }
   ];
 
   const servicesCategories = [
@@ -79,7 +86,14 @@ export function AppHeader() {
         { name: 'AI Business Intelligence', href: '/services/ai-business-intelligence', description: 'Machine Learning & Data Science' },
         { name: 'AI Sales Copilot', href: '/services/ai-sales-copilot', description: 'AI-powered sales automation' },
         { name: 'AI Compliance Assistant', href: '/services/ai-compliance-assistant', description: 'Regulatory compliance automation' },
-        { name: 'LLM Content Studio', href: '/services/llm-content-studio', description: 'AI content generation' }
+        { name: 'LLM Content Studio', href: '/services/llm-content-studio', description: 'AI content generation' },
+        { name: 'AI Cybersecurity Suite', href: '/services/ai-cybersecurity-suite', description: 'AI-powered security platform' },
+        { name: 'AI Healthcare Analytics', href: '/services/ai-healthcare-analytics', description: 'Healthcare AI & analytics' },
+        { name: 'AI Legal Research', href: '/services/ai-legal-research', description: 'AI legal research platform' },
+        { name: 'AI Marketing Automation', href: '/services/ai-marketing-automation', description: 'AI marketing platform' },
+        { name: 'AI HR Analytics', href: '/services/ai-hr-analytics', description: 'AI HR analytics platform' },
+        { name: 'AI Financial Planning', href: '/services/ai-financial-planning', description: 'AI financial advisory' },
+        { name: 'AI Supply Chain', href: '/services/ai-supply-chain-optimization', description: 'AI supply chain optimization' }
       ]
     },
     {
@@ -98,17 +112,28 @@ export function AppHeader() {
       color: 'from-orange-600 to-red-600',
       services: [
         { name: 'Digital Twin', href: '/services/digital-twin', description: 'Simulation & Monitoring' },
-        { name: 'IT Infrastructure', href: '/services/it-infrastructure', description: 'Enterprise infrastructure' },
-        { name: 'Data Analytics', href: '/services/data-analytics', description: 'Business intelligence' }
+        { name: 'IoT Edge Computing', href: '/services/iot-edge', description: 'IoT & Edge solutions' },
+        { name: 'Smart Manufacturing IoT', href: '/services/smart-manufacturing-iot', description: 'Industry 4.0 solutions' }
       ]
     },
     {
-      name: 'Cybersecurity',
-      icon: Shield,
+      name: 'Emerging Technologies',
+      icon: Zap,
+      color: 'from-yellow-600 to-orange-600',
+      services: [
+        { name: 'Quantum AI Platform', href: '/services/quantum-ai-platform', description: 'Quantum computing & AI' },
+        { name: 'Blockchain Solutions', href: '/services/blockchain-enterprise-solutions', description: 'Blockchain & DeFi' },
+        { name: 'Space Technology', href: '/services/space-tech', description: 'Space tech solutions' }
+      ]
+    },
+    {
+      name: 'Industry Solutions',
+      icon: Building,
       color: 'from-indigo-600 to-purple-600',
       services: [
-        { name: 'AI Compliance Copilot', href: '/services/ai-compliance-copilot', description: 'AI-Powered Security' },
-        { name: 'Zero Trust Architecture', href: '/services/zero-trust-network-architecture', description: 'Advanced security' }
+        { name: 'Healthcare Technology', href: '/services/ai-healthcare-analytics', description: 'Healthcare AI solutions' },
+        { name: 'Sustainability', href: '/services/sustainability', description: 'Green IT solutions' },
+        { name: 'Manufacturing', href: '/services/smart-manufacturing-iot', description: 'Smart manufacturing' }
       ]
     }
   ];
@@ -154,61 +179,20 @@ export function AppHeader() {
     { name: 'Request Quote', href: '/request-quote', icon: MessageCircle, description: 'Get custom pricing' },
   ];
 
-  const companyCategories = [
-    {
-      name: 'About Us',
-      icon: Building,
-      color: 'from-blue-600 to-cyan-600',
-      items: [
-        { name: 'About Us', href: '/about', description: 'Our story and mission' },
-        { name: 'Team', href: '/team', description: 'Meet our experts' },
-        { name: 'Careers', href: '/careers', description: 'Join our team' },
-        { name: 'Partners', href: '/partners', description: 'Strategic partnerships' }
-      ]
-    },
-    {
-      name: 'Resources',
-      icon: BookOpen,
-      color: 'from-green-600 to-emerald-600',
-      items: [
-        { name: 'Blog', href: '/blog', description: 'Latest insights and news' },
-        { name: 'Press', href: '/press', description: 'Media resources' },
-        { name: 'Case Studies', href: '/case-studies', description: 'Success stories' },
-        { name: 'White Papers', href: '/white-papers', description: 'In-depth research' }
-      ]
-    }
-  ];
-
-  const supportCategories = [
-    {
-      name: 'Help & Support',
-      icon: HelpCircle,
-      color: 'from-blue-600 to-cyan-600',
-      items: [
-        { name: 'Help Center', href: '/help', description: 'Find answers to questions' },
-        { name: 'Support Portal', href: '/support', description: 'Technical assistance' },
-        { name: 'FAQ', href: '/faq', description: 'Frequently asked questions' },
-        { name: 'Contact Support', href: '/contact', description: 'Get in touch' }
-      ]
-    },
-    {
-      name: 'Resources',
-      icon: BookOpen,
-      color: 'from-green-600 to-emerald-600',
-      items: [
-        { name: 'Documentation', href: '/docs', description: 'Technical guides' },
-        { name: 'Training', href: '/training', description: 'Learning resources' },
-        { name: 'Webinars', href: '/webinars', description: 'Educational sessions' },
-        { name: 'Community', href: '/community', description: 'User community' }
-      ]
-    }
+  const companyLinks = [
+    { name: 'About Us', href: '/about', description: 'Our story and mission' },
+    { name: 'Leadership', href: '/leadership', description: 'Meet our team' },
+    { name: 'Careers', href: '/careers', description: 'Join our team' },
+    { name: 'Partners', href: '/partners', description: 'Strategic partnerships' },
+    { name: 'News & Blog', href: '/blog', description: 'Latest insights' }
   ];
 
   const supportLinks = [
-    { name: 'FAQ', href: '/faq', icon: HelpCircle },
-    { name: 'Blog', href: '/blog', icon: BookOpen },
-    { name: 'Support', href: '/support', icon: MessageCircle },
-    { name: 'Documentation', href: '/docs', icon: BookOpen },
+    { name: 'Help Center', href: '/help', description: 'Documentation & guides' },
+    { name: 'Support', href: '/support', description: 'Technical support' },
+    { name: 'Community', href: '/community', description: 'User community' },
+    { name: 'Training', href: '/training', description: 'Learning resources' },
+    { name: 'FAQ', href: '/faq', description: 'Frequently asked questions' }
   ];
 
   return (

@@ -58,7 +58,9 @@ import {
   Award,
   Users,
   TrendingUp,
-  CheckCircle
+  CheckCircle,
+  Building,
+  HelpCircle
 } from 'lucide-react';
 
 export const EnhancedFuturisticFooter: React.FC = () => {
@@ -75,7 +77,14 @@ export const EnhancedFuturisticFooter: React.FC = () => {
         { name: 'AI Compliance Assistant', href: '/services/ai-compliance-assistant' },
         { name: 'AI Auto Email Responder', href: '/services/ai-auto-email-responder' },
         { name: 'LLM Content Studio', href: '/services/llm-content-studio' },
-        { name: 'AI Compliance Copilot', href: '/services/ai-compliance-copilot' }
+        { name: 'AI Compliance Copilot', href: '/services/ai-compliance-copilot' },
+        { name: 'AI Cybersecurity Suite', href: '/services/ai-cybersecurity-suite' },
+        { name: 'AI Healthcare Analytics', href: '/services/ai-healthcare-analytics' },
+        { name: 'AI Legal Research', href: '/services/ai-legal-research' },
+        { name: 'AI Marketing Automation', href: '/services/ai-marketing-automation' },
+        { name: 'AI HR Analytics', href: '/services/ai-hr-analytics' },
+        { name: 'AI Financial Planning', href: '/services/ai-financial-planning' },
+        { name: 'AI Supply Chain', href: '/services/ai-supply-chain-optimization' }
       ]
     },
     {
@@ -88,7 +97,9 @@ export const EnhancedFuturisticFooter: React.FC = () => {
         { name: 'Customer Feedback Surveys', href: '/services/mobile-feedback-surveys' },
         { name: 'Cloud FinOps Optimizer', href: '/services/cloud-finops-optimizer' },
         { name: 'FinOps Advisor', href: '/services/finops-advisor' },
-        { name: 'Digital Transformation', href: '/services/digital-transformation' }
+        { name: 'Digital Transformation', href: '/services/digital-transformation' },
+        { name: 'Cloud DevOps', href: '/services/cloud-devops' },
+        { name: 'IT Infrastructure', href: '/services/it-infrastructure' }
       ]
     },
     {
@@ -98,23 +109,50 @@ export const EnhancedFuturisticFooter: React.FC = () => {
       links: [
         { name: 'IT Infrastructure', href: '/services/it-infrastructure' },
         { name: 'Digital Transformation', href: '/services/digital-transformation' },
-        { name: 'IT Consulting', href: '/services/it-consulting' },
-        { name: 'Onsite Support', href: '/services/onsite-support' },
-        { name: 'Green IT Solutions', href: '/services/green-it' },
-        { name: 'IoT Edge Computing', href: '/services/iot-edge' }
+        { name: 'Digital Twin', href: '/services/digital-twin' },
+        { name: 'IoT Edge Computing', href: '/services/iot-edge' },
+        { name: 'Smart Manufacturing IoT', href: '/services/smart-manufacturing-iot' },
+        { name: 'Sustainability', href: '/services/sustainability' }
       ]
     },
     {
-      title: 'Quantum & Emerging Tech',
-      icon: Crown,
-      color: 'from-indigo-600 to-purple-600',
+      title: 'Emerging Technologies',
+      icon: Sparkles,
+      color: 'from-yellow-600 to-orange-600',
       links: [
-        { name: 'Quantum Computing', href: '/services/quantum-computing' },
+        { name: 'Quantum AI Platform', href: '/services/quantum-ai-platform' },
         { name: 'Blockchain Solutions', href: '/services/blockchain-enterprise-solutions' },
         { name: 'Space Technology', href: '/services/space-tech' },
-        { name: 'Sustainability', href: '/services/sustainability' },
-        { name: 'Digital Twin', href: '/services/digital-twin' },
-        { name: 'Cloud DevOps', href: '/services/cloud-devops' }
+        { name: 'Zero Trust Architecture', href: '/services/zero-trust-network-architecture' },
+        { name: 'Healthcare Technology', href: '/services/ai-healthcare-analytics' }
+      ]
+    },
+    {
+      title: 'Company & Resources',
+      icon: Building,
+      color: 'from-indigo-600 to-purple-600',
+      links: [
+        { name: 'About Us', href: '/about' },
+        { name: 'Leadership', href: '/leadership' },
+        { name: 'Careers', href: '/careers' },
+        { name: 'Partners', href: '/partners' },
+        { name: 'Blog', href: '/blog' },
+        { name: 'Case Studies', href: '/case-studies' },
+        { name: 'Press', href: '/press' }
+      ]
+    },
+    {
+      title: 'Support & Help',
+      icon: HelpCircle,
+      color: 'from-red-600 to-pink-600',
+      links: [
+        { name: 'Help Center', href: '/help' },
+        { name: 'Support', href: '/support' },
+        { name: 'Community', href: '/community' },
+        { name: 'Training', href: '/training' },
+        { name: 'Documentation', href: '/docs' },
+        { name: 'FAQ', href: '/faq' },
+        { name: 'Contact Us', href: '/contact' }
       ]
     }
   ];
