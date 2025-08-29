@@ -45,8 +45,24 @@ export function AppHeader() {
 
   const services = [
     { 
-      name: 'AI & Analytics', 
+      name: 'All Services', 
       href: '/services', 
+      icon: Brain, 
+      description: 'Complete Service Catalog',
+      featured: true,
+      color: 'from-cyan-500 to-blue-500'
+    },
+    { 
+      name: 'Innovative Services 2025', 
+      href: '/services/innovative-2025', 
+      icon: Rocket, 
+      description: 'Cutting-edge Micro SAAS',
+      featured: true,
+      color: 'from-purple-500 to-pink-500'
+    },
+    { 
+      name: 'AI Business Intelligence', 
+      href: '/services/ai-business-intelligence', 
       icon: Brain, 
       description: 'Machine Learning & Data Science',
       featured: true,
