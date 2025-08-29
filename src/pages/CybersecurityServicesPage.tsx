@@ -1,4 +1,3 @@
-import { QuoteRequestForm } from '@/components/QuoteRequestForm';
 import { TestimonialsSection } from '@/components/TestimonialsSection';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';

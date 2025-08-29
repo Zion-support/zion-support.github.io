@@ -278,9 +278,7 @@ export const SEO: React.FC<SEOProps> = ({
       <meta name="google-analytics" content="your-ga-tracking-id" />
       <meta name="facebook-domain-verification" content="your-facebook-verification-code" />
       
-      {/* Performance hints */}
-      <link rel="preload" href="/fonts/orbitron-v19-latin-700.woff2" as="font" type="font/woff2" crossOrigin="anonymous" />
-      <link rel="preload" href="/fonts/rajdhani-v15-latin-500.woff2" as="font" type="font/woff2" crossOrigin="anonymous" />
+      {/* Performance hints - Removed unused font preloads */}
       
       {/* Critical CSS */}
       <style>

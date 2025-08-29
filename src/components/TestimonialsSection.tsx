@@ -1,15 +1,15 @@
-import React, { useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { 
-  Star, 
-  Quote, 
-  ChevronLeft, 
-  ChevronRight, 
-  CheckCircle,
+import { AnimatePresence, motion } from 'framer-motion';
+import {
   Award,
+  CheckCircle,
+  ChevronLeft,
+  ChevronRight,
+  Quote,
+  Star,
   TrendingUp,
   Users
 } from 'lucide-react';
+import React, { useState } from 'react';
 
 interface Testimonial {
   id: number;
@@ -121,7 +121,12 @@ export const TestimonialsSection: React.FC = () => {
     return () => clearInterval(interval);
   }, [isAutoPlaying, currentTestimonial]);
 
-  const current = testimonials[currentTestimonial];
+  // Ensure we have testimonials and current index is valid
+  if (testimonials.length === 0) {
+    return null;
+  }
+  
+  const current = testimonials[currentTestimonial] || testimonials[0];
 
   return (
     <section className="py-20 bg-zion-blue-dark">
@@ -156,12 +161,27 @@ export const TestimonialsSection: React.FC = () => {
               </p>
               {/* Author */}
               <div className="flex items-center">
-                <div className="w-12 h-12 bg-gradient-to-br from-zion-purple to-zion-cyan rounded-full flex items-center justify-center text-white font-semibold text-lg mr-4">
-                  {testimonial.avatar}
+                <div className="w-12 h-12 bg-gradient-to-br from-zion-purple to-zion-cyan rounded-full flex items-center justify-center text-white font-semibold text-lg mr-4 relative">
+                  {testimonial.avatar ? (
+                    <img 
+                      src={testimonial.avatar} 
+                      alt={`${testimonial.name} avatar`}
+                      className="w-full h-full rounded-full object-cover"
+                      onError={(e) => {
+                        const target = e.currentTarget as HTMLImageElement;
+                        target.style.display = 'none';
+                        const fallback = target.parentElement?.querySelector('.avatar-fallback') as HTMLElement;
+                        if (fallback) fallback.style.display = 'flex';
+                      }}
+                    />
+                  ) : null}
+                  <span className={`avatar-fallback ${testimonial.avatar ? 'hidden' : 'flex'} absolute inset-0 items-center justify-center`}>
+                    {testimonial.name.charAt(0)}
+                  </span>
                 </div>
                 <div>
                   <div className="text-white font-semibold">{testimonial.name}</div>
-                  <div className="text-zion-slate-light text-sm">{testimonial.role}</div>
+                  <div className="text-zion-slate-light text-sm">{testimonial.position}</div>
                   <div className="text-zion-cyan text-sm">{testimonial.company}</div>
                 </div>
               </div>
