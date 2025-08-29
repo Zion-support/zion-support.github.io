@@ -1,6 +1,5 @@
 import React from 'react';
 import { SEO } from '../components/SEO';
-<<<<<<< HEAD
 import { ultimateMicroSaasServices2025, ultimateITInfrastructureServices2025, ultimateAIServices2025 } from '../data/ultimateZionServices2025';
 import { specializedFinancialAIServices2025 } from '../data/specializedFinancialAIServices2025';
 import { specializedHealthcareAIServices2025 } from '../data/specializedHealthcareAIServices2025';
@@ -652,102 +651,10 @@ const ComprehensivePricingGuide2025: React.FC = () => {
         </section>
       </div>
     </>
-=======
-import { servicesCatalog } from '../data/servicesCatalog';
-import { MICRO_SAAS_SERVICES } from '../data/microSaasServices';
+  );
+};
 
-const ComprehensivePricingGuide2025: React.FC = () => {
-  const contactInfo = {
-    mobile: '+1 302 464 0950',
-    email: 'kleber@ziontechgroup.com',
-    address: '364 E Main St STE 1008 Middletown DE 19709',
-    website: 'https://ziontechgroup.com'
-  };
-
-  const pricingTiers = [
-    {
-      name: 'Starter',
-      price: '$29',
-      period: '/month',
-      description: 'Perfect for small businesses and startups',
-      features: [
-        'Basic features and functionality',
-        'Email support',
-        'Up to 3 users',
-        'Standard integrations',
-        'Community documentation'
-      ],
-      popular: false
-    },
-    {
-      name: 'Professional',
-      price: '$99',
-      period: '/month',
-      description: 'Ideal for growing businesses and teams',
-      features: [
-        'Advanced features and automation',
-        'Priority support',
-        'Up to 10 users',
-        'Advanced integrations',
-        'Custom workflows',
-        'Analytics dashboard'
-      ],
-      popular: true
-    },
-    {
-      name: 'Enterprise',
-      price: '$299',
-      period: '/month',
-      description: 'For large organizations with complex needs',
-      features: [
-        'Custom features and development',
-        '24/7 dedicated support',
-        'Unlimited users',
-        'Custom integrations',
-        'Advanced security',
-        'SLA guarantees',
-        'On-premise options'
-      ],
-      popular: false
-    }
-  ];
-
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      <SEO 
-        title="Comprehensive Pricing Guide 2025 - Zion Tech Group"
-        description="Explore our competitive pricing for AI, IT, and micro SaaS services. Get detailed pricing information, market analysis, and contact details for all our innovative solutions."
-      />
-      
-      {/* Hero Section */}
-      <section className="relative py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto text-center">
-          <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
-            Comprehensive Pricing Guide 2025
-          </h1>
-          <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
-            Transparent pricing for our complete portfolio of AI-powered solutions, IT services, and innovative micro SaaS platforms
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a 
-              href={`mailto:${contactInfo.email}?subject=Pricing Inquiry`}
-              className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-lg font-semibold transition-colors"
-            >
-              Get Custom Quote
-            </a>
-            <a 
-              href={`tel:${contactInfo.mobile}`}
-              className="bg-transparent border-2 border-blue-600 text-blue-400 hover:bg-blue-600 hover:text-white px-8 py-3 rounded-lg font-semibold transition-colors"
-            >
-              Call for Pricing
-            </a>
-          </div>
-        </div>
-      </section>
-
-      {/* Contact Information Banner */}
-      <section className="bg-blue-900/20 border-t border-b border-blue-500/30 py-6">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+export default ComprehensivePricingGuide2025;
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
             <div>
               <h3 className="text-blue-400 font-semibold mb-2">Mobile</h3>
@@ -1122,7 +1029,6 @@ const ComprehensivePricingGuide2025: React.FC = () => {
         </div>
       </section>
     </div>
->>>>>>> ac9ef977fea8906acb1644f1f59f25d69bc96976
   );
 };
 
