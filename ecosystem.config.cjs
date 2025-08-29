@@ -28,11 +28,8 @@ module.exports = {
         NODE_ENV: 'development',
         PORT: 5000
       }
-    }
-  ],
+    },
 
-  // Enhanced Automation Processes
-  automation: [
     // Core automation processes
     {
       name: 'console-error-fixer',

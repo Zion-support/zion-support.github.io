@@ -1,0 +1,14 @@
+{
+  "timestamp": "2025-08-29T14:18:28.708Z",
+  "totalChecks": 2,
+  "results": [
+    {
+      "type": "linting",
+      "result": "Linting failed"
+    },
+    {
+      "type": "type-check",
+      "result": "Type checking failed or not configured"
+    }
+  ]
+}

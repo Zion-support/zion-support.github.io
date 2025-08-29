@@ -1,0 +1,628 @@
+{
+  "timestamp": "2025-08-29T14:18:30.928Z",
+  "totalChecks": 2,
+  "results": [
+    {
+      "type": "bundle-size",
+      "result": "Build failed for size analysis"
+    },
+    {
+      "type": "code-analysis",
+      "result": "Found 153 potential performance issues"
+    }
+  ],
+  "issues": [
+    {
+      "file": "src/components/AIChatAssistant.jsx",
+      "issue": "Timer usage detected"
+    },
+    {
+      "file": "src/components/AIChatbot.jsx",
+      "issue": "Timer usage detected"
+    },
+    {
+      "file": "src/components/AIChatbotSystem.tsx",
+      "issue": "Timer usage detected"
+    },
+    {
+      "file": "src/components/AICodeGenerator.jsx",
+      "issue": "Timer usage detected"
+    },
+    {
+      "file": "src/components/AccessibilityEnhancer.tsx",
+      "issue": "Timer usage detected"
+    },
+    {
+      "file": "src/components/AccessibilityProvider.tsx",
+      "issue": "Timer usage detected"
+    },
+    {
+      "file": "src/components/AdvancedAIBusinessProcessAutomation.jsx",
+      "issue": "Timer usage detected"
+    },
+    {
+      "file": "src/components/AdvancedAICodeGenerator.jsx",
+      "issue": "Timer usage detected"
+    },
+    {
+      "file": "src/components/AdvancedAnalytics.jsx",
+      "issue": "Timer usage detected"
+    },
+    {
+      "file": "src/components/AdvancedBusinessIntelligence.jsx",
+      "issue": "Timer usage detected"
+    },
+    {
+      "file": "src/components/AdvancedDataVisualization.jsx",
+      "issue": "Timer usage detected"
+    },
+    {
+      "file": "src/components/AdvancedForm.jsx",
+      "issue": "Timer usage detected"
+    },
+    {
+      "file": "src/components/AdvancedPerformanceMonitor.jsx",
+      "issue": "Timer usage detected"
+    },
+    {
+      "file": "src/components/AdvancedSecurityDashboard.jsx",
+      "issue": "Timer usage detected"
+    },
+    {
+      "file": "src/components/AdvancedServiceRecommendation.jsx",
+      "issue": "Timer usage detected"
+    },
+    {
+      "file": "src/components/AnalyticsDashboard.jsx",
+      "issue": "Timer usage detected"
+    },
+    {
+      "file": "src/components/CategoryListingPage.jsx",
+      "issue": "Timer usage detected"
+    },
+    {
+      "file": "src/components/ChatAssistant/ChatAssistant.tsx",
+      "issue": "Timer usage detected"
+    },
+    {
+      "file": "src/components/ChatAssistant.tsx",
+      "issue": "Timer usage detected"
+    },
+    {
+      "file": "src/components/CollaborationPlatform.jsx",
+      "issue": "Timer usage detected"
+    },
+    {
+      "file": "src/components/CollaborativeTextEditor.jsx",
+      "issue": "Timer usage detected"
+    },
+    {
+      "file": "src/components/ContactForm.jsx",
+      "issue": "Timer usage detected"
+    },
+    {
+      "file": "src/components/ContentQualityAnalyzer.jsx",
+      "issue": "Timer usage detected"
+    },
+    {
+      "file": "src/components/DataVisualization.tsx",
+      "issue": "Timer usage detected"
+    },
+    {
+      "file": "src/components/DynamicListingPage.jsx",
+      "issue": "Timer usage detected"
+    },
+    {
+      "file": "src/components/EnhancedContact.jsx",
+      "issue": "Timer usage detected"
+    },
+    {
+      "file": "src/components/EnhancedContact.tsx",
+      "issue": "Timer usage detected"
+    },
+    {
+      "file": "src/components/EnhancedHero.jsx",
+      "issue": "Timer usage detected"
+    },
+    {
+      "file": "src/components/EnhancedHeroSection.tsx",
+      "issue": "Timer usage detected"
+    },
+    {
+      "file": "src/components/EnhancedStatsSection.tsx",
+      "issue": "Timer usage detected"
+    },
+    {
+      "file": "src/components/EnhancedTestimonialsSection.tsx",
+      "issue": "Timer usage detected"
+    },
+    {
+      "file": "src/components/EnterpriseDashboard.jsx",
+      "issue": "Timer usage detected"
+    },
+    {
+      "file": "src/components/ExpensiveComponent.jsx",
+      "issue": "Timer usage detected"
+    },
+    {
+      "file": "src/components/FloatingCTA.tsx",
+      "issue": "Timer usage detected"
+    },
+    {
+      "file": "src/components/Footer.jsx",
+      "issue": "Timer usage detected"
+    },
+    {
+      "file": "src/components/FooterNewsletter.tsx",
+      "issue": "Timer usage detected"
+    },
+    {
+      "file": "src/components/FuturisticServicesShowcase.tsx",
+      "issue": "Timer usage detected"
+    },
+    {
+      "file": "src/components/InteractiveHero.jsx",
+      "issue": "Timer usage detected"
+    },
+    {
+      "file": "src/components/InteractiveTestimonials.jsx",
+      "issue": "Timer usage detected"
+    },
+    {
+      "file": "src/components/InteractiveTestimonials.tsx",
+      "issue": "Timer usage detected"
+    },
+    {
+      "file": "src/components/LazyWrapper.jsx",
+      "issue": "Timer usage detected"
+    },
+    {
+      "file": "src/components/LinkHealthMonitor.jsx",
+      "issue": "Timer usage detected"
+    },
+    {
+      "file": "src/components/LinkMonitor.jsx",
+      "issue": "Timer usage detected"
+    },
+    {
+      "file": "src/components/NewsletterSection.tsx",
+      "issue": "Timer usage detected"
+    },
+    {
+      "file": "src/components/Notification.jsx",
+      "issue": "Timer usage detected"
+    },
+    {
+      "file": "src/components/NotificationSystem.tsx",
+      "issue": "Timer usage detected"
+    },
+    {
+      "file": "src/components/PerformanceMonitor.jsx",
+      "issue": "Timer usage detected"
+    },
+    {
+      "file": "src/components/PerformanceMonitor.tsx",
+      "issue": "Timer usage detected"
+    },
+    {
+      "file": "src/components/PerformanceOptimizedHero.jsx",
+      "issue": "Timer usage detected"
+    },
+    {
+      "file": "src/components/PerformanceOptimizer.jsx",
+      "issue": "Timer usage detected"
+    },
+    {
+      "file": "src/components/PerformanceOptimizer.tsx",
+      "issue": "Timer usage detected"
+    },
+    {
+      "file": "src/components/ProductActions.jsx",
+      "issue": "Timer usage detected"
+    },
+    {
+      "file": "src/components/QuoteFormSection.jsx",
+      "issue": "Timer usage detected"
+    },
+    {
+      "file": "src/components/QuoteRequestForm/ServiceTypeStep.jsx",
+      "issue": "Timer usage detected"
+    },
+    {
+      "file": "src/components/QuoteRequestForm.jsx",
+      "issue": "Timer usage detected"
+    },
+    {
+      "file": "src/components/SEOOptimizer.tsx",
+      "issue": "Timer usage detected"
+    },
+    {
+      "file": "src/components/SearchAndFilterSystem.tsx",
+      "issue": "Timer usage detected"
+    },
+    {
+      "file": "src/components/SecurityComplianceDashboard.jsx",
+      "issue": "Timer usage detected"
+    },
+    {
+      "file": "src/components/SiteHealthDashboard.jsx",
+      "issue": "Timer usage detected"
+    },
+    {
+      "file": "src/components/TestimonialCarousel.jsx",
+      "issue": "Timer usage detected"
+    },
+    {
+      "file": "src/components/conflicted/RequestQuote.jsx",
+      "issue": "Timer usage detected"
+    },
+    {
+      "file": "src/components/home/ITServiceRequestHero.jsx",
+      "issue": "Timer usage detected"
+    },
+    {
+      "file": "src/components/home/ITServiceRequestHero.tsx",
+      "issue": "Timer usage detected"
+    },
+    {
+      "file": "src/components/home/StatsSection.tsx",
+      "issue": "Timer usage detected"
+    },
+    {
+      "file": "src/components/integrations/IntegrationConnectionModal.jsx",
+      "issue": "Timer usage detected"
+    },
+    {
+      "file": "src/components/mobile-app/MobileEmailCapture.jsx",
+      "issue": "Timer usage detected"
+    },
+    {
+      "file": "src/components/mobile-app/QrCodeDownload.jsx",
+      "issue": "Timer usage detected"
+    },
+    {
+      "file": "src/components/mobile-app/SmartAppBanner.jsx",
+      "issue": "Timer usage detected"
+    },
+    {
+      "file": "src/components/profile/ServiceProviderRegistrationForm.jsx",
+      "issue": "Timer usage detected"
+    },
+    {
+      "file": "src/components/profile/TalentRegistrationForm.jsx",
+      "issue": "Timer usage detected"
+    },
+    {
+      "file": "src/components/ui/3d-card-gallery.jsx",
+      "issue": "Timer usage detected"
+    },
+    {
+      "file": "src/components/ui/AccessibilityProvider.jsx",
+      "issue": "Timer usage detected"
+    },
+    {
+      "file": "src/components/ui/EnhancedLoadingSpinner.tsx",
+      "issue": "Timer usage detected"
+    },
+    {
+      "file": "src/components/ui/EnhancedNotificationSystem.tsx",
+      "issue": "Timer usage detected"
+    },
+    {
+      "file": "src/components/ui/LoadingSpinner.tsx",
+      "issue": "Timer usage detected"
+    },
+    {
+      "file": "src/components/ui/accessibility-panel.jsx",
+      "issue": "Timer usage detected"
+    },
+    {
+      "file": "src/components/ui/accessibility.jsx",
+      "issue": "Timer usage detected"
+    },
+    {
+      "file": "src/components/ui/ai-chat-assistant.jsx",
+      "issue": "Timer usage detected"
+    },
+    {
+      "file": "src/components/ui/ai-search.jsx",
+      "issue": "Timer usage detected"
+    },
+    {
+      "file": "src/components/ui/analytics-dashboard.jsx",
+      "issue": "Timer usage detected"
+    },
+    {
+      "file": "src/components/ui/interactive-timeline.jsx",
+      "issue": "Timer usage detected"
+    },
+    {
+      "file": "src/components/ui/notification.jsx",
+      "issue": "Timer usage detected"
+    },
+    {
+      "file": "src/components/ui/performance-monitor.jsx",
+      "issue": "Timer usage detected"
+    },
+    {
+      "file": "src/components/unused/BrokenLinkFixer.jsx",
+      "issue": "Timer usage detected"
+    },
+    {
+      "file": "src/components/unused/ContentQualityEnhancer.jsx",
+      "issue": "Timer usage detected"
+    },
+    {
+      "file": "src/components/unused/WebsiteImprovementDashboard.jsx",
+      "issue": "Timer usage detected"
+    },
+    {
+      "file": "src/components/wallet/OnChainExport.jsx",
+      "issue": "Timer usage detected"
+    },
+    {
+      "file": "src/hooks/use-toast.js",
+      "issue": "Timer usage detected"
+    },
+    {
+      "file": "src/hooks/use-toast.ts",
+      "issue": "Timer usage detected"
+    },
+    {
+      "file": "src/hooks/useAICodeGeneration.js.jsx",
+      "issue": "Timer usage detected"
+    },
+    {
+      "file": "src/hooks/useAICodeGeneration.jsx",
+      "issue": "Timer usage detected"
+    },
+    {
+      "file": "src/hooks/useAccessibility.js.jsx",
+      "issue": "Timer usage detected"
+    },
+    {
+      "file": "src/hooks/useAnalytics.js.jsx",
+      "issue": "Timer usage detected"
+    },
+    {
+      "file": "src/hooks/useBlockchainWeb3.js.jsx",
+      "issue": "Timer usage detected"
+    },
+    {
+      "file": "src/hooks/useMachineLearning.js.jsx",
+      "issue": "Timer usage detected"
+    },
+    {
+      "file": "src/hooks/useRealTimeCollaboration.js.jsx",
+      "issue": "Timer usage detected"
+    },
+    {
+      "file": "src/hooks/useSearch.js.jsx",
+      "issue": "Timer usage detected"
+    },
+    {
+      "file": "src/hooks/useSecurityCompliance.js.jsx",
+      "issue": "Timer usage detected"
+    },
+    {
+      "file": "src/hooks/useVirtualScroll.js.jsx",
+      "issue": "Timer usage detected"
+    },
+    {
+      "file": "src/hooks/useVirtualScroll.jsx",
+      "issue": "Timer usage detected"
+    },
+    {
+      "file": "src/layout/AppHeader.tsx",
+      "issue": "Timer usage detected"
+    },
+    {
+      "file": "src/pages/AccountSettings.js.jsx",
+      "issue": "Timer usage detected"
+    },
+    {
+      "file": "src/pages/AccountSettings.jsx",
+      "issue": "Timer usage detected"
+    },
+    {
+      "file": "src/pages/ApiPlayground.tsx",
+      "issue": "Timer usage detected"
+    },
+    {
+      "file": "src/pages/Blog.js.jsx",
+      "issue": "Timer usage detected"
+    },
+    {
+      "file": "src/pages/BlogPost.tsx",
+      "issue": "Timer usage detected"
+    },
+    {
+      "file": "src/pages/CategoryDetail.js.jsx",
+      "issue": "Timer usage detected"
+    },
+    {
+      "file": "src/pages/CategoryDetail.jsx",
+      "issue": "Timer usage detected"
+    },
+    {
+      "file": "src/pages/Contact.jsx",
+      "issue": "Timer usage detected"
+    },
+    {
+      "file": "src/pages/Contact.tsx",
+      "issue": "Timer usage detected"
+    },
+    {
+      "file": "src/pages/EmergingTechShowcase2025.tsx",
+      "issue": "Timer usage detected"
+    },
+    {
+      "file": "src/pages/EquipmentDetail.jsx",
+      "issue": "Timer usage detected"
+    },
+    {
+      "file": "src/pages/EquipmentPage.js.jsx",
+      "issue": "Timer usage detected"
+    },
+    {
+      "file": "src/pages/EquipmentPage.jsx",
+      "issue": "Timer usage detected"
+    },
+    {
+      "file": "src/pages/ForgotPassword.js.jsx",
+      "issue": "Timer usage detected"
+    },
+    {
+      "file": "src/pages/ForgotPassword.jsx",
+      "issue": "Timer usage detected"
+    },
+    {
+      "file": "src/pages/ForgotPassword.tsx",
+      "issue": "Timer usage detected"
+    },
+    {
+      "file": "src/pages/ITOnsiteServicesPage.js.jsx",
+      "issue": "Timer usage detected"
+    },
+    {
+      "file": "src/pages/ITOnsiteServicesPage.jsx",
+      "issue": "Timer usage detected"
+    },
+    {
+      "file": "src/pages/Login.tsx",
+      "issue": "Timer usage detected"
+    },
+    {
+      "file": "src/pages/Marketplace.js.jsx",
+      "issue": "Timer usage detected"
+    },
+    {
+      "file": "src/pages/Marketplace.jsx",
+      "issue": "Timer usage detected"
+    },
+    {
+      "file": "src/pages/OpenAppRedirect.jsx",
+      "issue": "Timer usage detected"
+    },
+    {
+      "file": "src/pages/ProductPage.js.jsx",
+      "issue": "Timer usage detected"
+    },
+    {
+      "file": "src/pages/ProductPage.jsx",
+      "issue": "Timer usage detected"
+    },
+    {
+      "file": "src/pages/Profile.tsx",
+      "issue": "Timer usage detected"
+    },
+    {
+      "file": "src/pages/RequestQuote.tsx",
+      "issue": "Timer usage detected"
+    },
+    {
+      "file": "src/pages/Search.tsx",
+      "issue": "Timer usage detected"
+    },
+    {
+      "file": "src/pages/SearchPage.tsx",
+      "issue": "Timer usage detected"
+    },
+    {
+      "file": "src/pages/ServicesPage.js.jsx",
+      "issue": "Timer usage detected"
+    },
+    {
+      "file": "src/pages/ServicesPage.jsx",
+      "issue": "Timer usage detected"
+    },
+    {
+      "file": "src/pages/Signup.tsx",
+      "issue": "Timer usage detected"
+    },
+    {
+      "file": "src/pages/SystemStatus.tsx",
+      "issue": "Timer usage detected"
+    },
+    {
+      "file": "src/pages/TokenIntegrations.js.jsx",
+      "issue": "Timer usage detected"
+    },
+    {
+      "file": "src/pages/TokenIntegrations.jsx",
+      "issue": "Timer usage detected"
+    },
+    {
+      "file": "src/pages/TranslationManager.js.jsx",
+      "issue": "Timer usage detected"
+    },
+    {
+      "file": "src/pages/TranslationManager.jsx",
+      "issue": "Timer usage detected"
+    },
+    {
+      "file": "src/pages/UltimateHomepage2025.js.jsx",
+      "issue": "Timer usage detected"
+    },
+    {
+      "file": "src/pages/UltimateHomepage2025.jsx",
+      "issue": "Timer usage detected"
+    },
+    {
+      "file": "src/pages/UpdatePassword.js.jsx",
+      "issue": "Timer usage detected"
+    },
+    {
+      "file": "src/pages/UpdatePassword.jsx",
+      "issue": "Timer usage detected"
+    },
+    {
+      "file": "src/pages/VideoCall.js.jsx",
+      "issue": "Timer usage detected"
+    },
+    {
+      "file": "src/pages/VideoCall.jsx",
+      "issue": "Timer usage detected"
+    },
+    {
+      "file": "src/pages/admin/ReviewsModeration.js.jsx",
+      "issue": "Timer usage detected"
+    },
+    {
+      "file": "src/pages/admin/ReviewsModeration.jsx",
+      "issue": "Timer usage detected"
+    },
+    {
+      "file": "src/pages/contact.tsx",
+      "issue": "Timer usage detected"
+    },
+    {
+      "file": "src/services/auth.js",
+      "issue": "Timer usage detected"
+    },
+    {
+      "file": "src/store/authSlice.js",
+      "issue": "Timer usage detected"
+    },
+    {
+      "file": "src/utils/searchUtils.js.jsx",
+      "issue": "Timer usage detected"
+    },
+    {
+      "file": "src/utils/searchUtils.jsx",
+      "issue": "Timer usage detected"
+    },
+    {
+      "file": "pages/contact.tsx",
+      "issue": "Timer usage detected"
+    },
+    {
+      "file": "pages/login.tsx",
+      "issue": "Timer usage detected"
+    },
+    {
+      "file": "pages/signup.tsx",
+      "issue": "Timer usage detected"
+    }
+  ]
+}
