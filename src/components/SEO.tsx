@@ -143,7 +143,7 @@ export const SEO: React.FC<SEOProps> = ({
     
     // Preconnect to external domains
     { rel: 'preconnect', href: 'https://fonts.googleapis.com' },
-    { rel: 'preconnect', href: 'https://fonts.gstatic.com', crossOrigin: 'anonymous' },
+    { rel: 'preconnect', href: 'https://fonts.gstatic.com', crossorigin: 'anonymous' },
     
     // DNS prefetch
     { rel: 'dns-prefetch', href: '//fonts.googleapis.com' },
@@ -248,7 +248,6 @@ export const SEO: React.FC<SEOProps> = ({
       
       {/* Security headers */}
       <meta httpEquiv="X-Content-Type-Options" content="nosniff" />
-      <meta httpEquiv="X-Frame-Options" content="DENY" />
       <meta httpEquiv="X-XSS-Protection" content="1; mode=block" />
       <meta httpEquiv="Referrer-Policy" content="strict-origin-when-cross-origin" />
       
@@ -319,7 +318,7 @@ export function HomePageSEO() {
       title="AI Services, Quantum Computing & IT Solutions | Zion Tech Group"
       description="Comprehensive range of AI services, quantum computing solutions, and enterprise IT services. From autonomous business operations to advanced cybersecurity and cloud infrastructure."
       keywords="AI services, quantum computing services, IT infrastructure, cybersecurity services, cloud computing, business automation, machine learning services"
-      type="website"
+      ogType="website"
       structuredData={{
         "@context": "https://schema.org",
         "@type": "Service",
@@ -341,7 +340,7 @@ export function ContactPageSEO() {
       title="Contact Zion Tech Group | Get in Touch for AI & Quantum Solutions"
       description="Contact Zion Tech Group for AI-powered business solutions, quantum computing services, and IT consulting. Get expert advice on digital transformation and technology implementation."
       keywords="contact Zion Tech Group, AI consulting, quantum computing consulting, IT consulting, digital transformation consulting"
-      type="website"
+      ogType="website"
       structuredData={{
         "@context": "https://schema.org",
         "@type": "ContactPage",
@@ -381,9 +380,9 @@ export function BlogPostSEO({
     <SEO
       title={title}
       description={description}
-      image={image}
-      url={`https://ziontechgroup.com/blog/${slug}`}
-      type="article"
+      ogImage={image}
+      ogUrl={`https://ziontechgroup.com/blog/${slug}`}
+      ogType="article"
       structuredData={{
         "@context": "https://schema.org",
         "@type": "BlogPosting",

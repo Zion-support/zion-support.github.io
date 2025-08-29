@@ -1,20 +1,17 @@
-import React from 'react';
 import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
-import { 
-  Home, 
-  ArrowLeft, 
-  ArrowRight, 
-  MessageCircle, 
-  Search, 
-  HelpCircle,
-  Cloud,
-  Shield,
-  Brain,
-  Zap,
-  Users,
-  BarChart3
+import {
+    ArrowLeft,
+    ArrowRight,
+    Brain,
+    Cloud,
+    HelpCircle,
+    Home,
+    MessageCircle,
+    Search,
+    Shield,
+    Zap
 } from 'lucide-react';
+import { Link } from 'react-router-dom';
 import { SEO } from '../components/SEO';
 
 const popularCategories = [

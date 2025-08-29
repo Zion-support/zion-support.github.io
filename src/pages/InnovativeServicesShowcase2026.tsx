@@ -1,36 +1,21 @@
-import React, { useState, useMemo } from 'react';
 import { motion } from 'framer-motion';
 import {
-  Brain,
-  Shield,
-  Zap,
-  Cloud,
-  Lock,
-  Globe,
-  Cpu,
-  Database,
-  Network,
-  Smartphone,
-  BarChart3,
-  TrendingUp,
-  Users,
-  Building2,
-  Leaf,
-  Car,
-  Heart,
-  Scale,
-  Eye,
-  Search,
-  Filter,
-  Star,
-  CheckCircle,
-  ArrowRight,
-  Phone,
-  Mail,
-  MapPin,
-  ExternalLink
+    ArrowRight,
+    Cpu,
+    Database,
+    Filter,
+    Globe,
+    Leaf,
+    Mail,
+    MapPin,
+    Phone,
+    Search,
+    Shield,
+    Star,
+    TrendingUp,
+    Zap
 } from 'lucide-react';
-import { INNOVATIVE_SERVICES } from '../data/servicesData';
+import { useMemo, useState } from 'react';
 export default function InnovativeServicesShowcase2026() {
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [searchQuery, setSearchQuery] = useState('');

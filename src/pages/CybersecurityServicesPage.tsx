@@ -1218,6 +1218,7 @@ export default function CybersecurityServicesPage() {
           </div>
         </div>
       </div>
+      </div>
       {/* Call to Action */}
       <div className="py-16 bg-gradient-to-r from-red-600 to-red-800 text-white">
         <div className="container mx-auto px-4 text-center">
@@ -1281,7 +1282,6 @@ export default function CybersecurityServicesPage() {
             <p>&copy; 2024 ZionTech Group. All rights reserved. | <a href="https://ziontechgroup.com" target="_blank" rel="noopener noreferrer" className="text-red-400 hover:underline">ziontechgroup.com</a></p>
           </div>
         </div>
-      </div>
       </div>
       <TrustedBySection />
     </>
