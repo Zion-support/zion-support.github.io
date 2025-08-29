@@ -1,103 +1,117 @@
-import { ProductListing } from "@/types/listings";
-import { COMPREHENSIVE_INNOVATIVE_SERVICES_2030 } from "./comprehensiveInnovativeServices2030";
-import { ADVANCED_AI_SERVICES_2030 } from "./advancedAIServices2030";
-import { INNOVATIVE_MICRO_SAAS_SERVICES_2030 } from "./innovativeMicroSaasServices2030";
-import { CUTTING_EDGE_IT_INFRASTRUCTURE_2030 } from "./cuttingEdgeITInfrastructure2030";
-import { EMERGING_TECHNOLOGY_SERVICES_2030 } from "./emergingTechnologyServices2030";
-
 // Comprehensive Services Index 2030 - Zion Tech Group
-// This file combines all services for easy access and management
+// Complete catalog of all available services
 
-export const COMPREHENSIVE_SERVICES_INDEX_2030: ProductListing[] = [
-  ...COMPREHENSIVE_INNOVATIVE_SERVICES_2030,
-  ...ADVANCED_AI_SERVICES_2030,
-  ...INNOVATIVE_MICRO_SAAS_SERVICES_2030,
-  ...CUTTING_EDGE_IT_INFRASTRUCTURE_2030,
-  ...EMERGING_TECHNOLOGY_SERVICES_2030
+import { advancedAIServices2030 } from './advancedAIServices2030';
+import { specializedITInfrastructureServices2026 } from './specializedITInfrastructureServices2026';
+import { emergingTechServices2030 } from './emergingTechServices2030';
+
+export interface ServiceIndex {
+  id: string;
+  name: string;
+  category: string;
+  description: string;
+  price: number;
+  pricingModel: string;
+  innovationLevel: string;
+  marketSize: string;
+  tags: string[];
+  contactInfo: {
+    phone: string;
+    email: string;
+    website: string;
+    address: string;
+  };
+}
+
+// Zion Tech Group Contact Information
+const zionContact = {
+  phone: "+1 302 464 0950",
+  email: "kleber@ziontechgroup.com",
+  website: "https://ziontechgroup.com",
+  address: "364 E Main St STE 1008 Middletown DE 19709"
+};
+
+// Create comprehensive index from all service files
+export const COMPREHENSIVE_SERVICES_INDEX_2030: ServiceIndex[] = [
+  // Advanced AI Services 2030
+  ...advancedAIServices2030.map(service => ({
+    id: `ai-${service.id}`,
+    name: service.name,
+    category: service.category,
+    description: service.description,
+    price: service.price,
+    pricingModel: service.pricingModel,
+    innovationLevel: service.innovationLevel,
+    marketSize: service.marketSize,
+    tags: service.tags,
+    contactInfo: service.contactInfo
+  })),
+
+  // Specialized IT Infrastructure Services 2026
+  ...specializedITInfrastructureServices2026.map(service => ({
+    id: `it-${service.id}`,
+    name: service.name,
+    category: service.category,
+    description: service.description,
+    price: service.price,
+    pricingModel: service.pricingModel,
+    innovationLevel: service.innovationLevel,
+    marketSize: service.marketSize,
+    tags: service.tags,
+    contactInfo: service.contactInfo
+  })),
+
+  // Emerging Technology Services 2030
+  ...emergingTechServices2030.map(service => ({
+    id: `et-${service.id}`,
+    name: service.name,
+    category: service.category,
+    description: service.description,
+    price: service.price,
+    pricingModel: service.pricingModel,
+    innovationLevel: service.innovationLevel,
+    marketSize: service.marketSize,
+    tags: service.tags,
+    contactInfo: service.contactInfo
+  }))
 ];
 
-// Service Categories for easy filtering
+// Service Categories for filtering
 export const SERVICE_CATEGORIES_2030 = [
-  "AI & Business Intelligence",
-  "AI & Marketing",
-  "AI & Healthcare",
-  "AI & Legal Tech",
-  "AI & Real Estate",
-  "AI & Operations",
-  "AI & Green Tech",
-  "AI & Autonomous Systems",
-  "AI & FinTech",
-  "AI & Environmental Tech",
-  "AI & Content",
-  "AI & Customer Support",
-  "AI & HR",
-  "AI & Research",
-  "AI & Metaverse",
-  "AI & Space Tech",
-  "AI & Development",
-  "AI & Education",
-  "AI & Entertainment",
-  "Cybersecurity",
-  "Cloud & DevOps",
-  "Quantum Computing",
-  "IoT & Edge Computing",
-  "Blockchain & Web3",
-  "Digital Twin",
-  "Space Technology",
-  "Sustainable Technology",
-  "IT Infrastructure",
-  "Emerging Technology"
+  'AI & Development',
+  'AI & Business Intelligence',
+  'AI & Legal Tech',
+  'AI & Operations',
+  'AI & HR',
+  'AI & FinTech',
+  'AI & Content',
+  'AI & IoT',
+  'Cybersecurity',
+  'Cloud & DevOps',
+  'IoT & Edge Computing',
+  'Quantum Computing',
+  'Metaverse & AR/VR',
+  'Neuromorphic Computing',
+  'Biocomputing',
+  'Optical Computing',
+  'Swarm Robotics',
+  'Digital Twin',
+  'Brain-Computer Interface'
 ];
 
 // Service Statistics
 export const SERVICE_STATISTICS_2030 = {
   totalServices: COMPREHENSIVE_SERVICES_INDEX_2030.length,
   totalCategories: SERVICE_CATEGORIES_2030.length,
-  averagePrice: Math.round(
-    COMPREHENSIVE_SERVICES_INDEX_2030.reduce((sum, service) => sum + service.price, 0) / 
-    COMPREHENSIVE_SERVICES_INDEX_2030.length
-  ),
-  averageRating: Math.round(
-    (COMPREHENSIVE_SERVICES_INDEX_2030.reduce((sum, service) => sum + service.rating, 0) / 
-    COMPREHENSIVE_SERVICES_INDEX_2030.length) * 10
-  ) / 10,
-  featuredServices: COMPREHENSIVE_SERVICES_INDEX_2030.filter(service => service.featured).length,
-  aiServices: COMPREHENSIVE_SERVICES_INDEX_2030.filter(service => 
-    service.category.includes('AI') || service.aiScore > 90
-  ).length,
-  emergingTechServices: COMPREHENSIVE_SERVICES_INDEX_2030.filter(service => 
-    service.category === 'Emerging Technology'
-  ).length
+  averagePrice: Math.round(COMPREHENSIVE_SERVICES_INDEX_2030.reduce((sum, service) => sum + service.price, 0) / COMPREHENSIVE_SERVICES_INDEX_2030.length),
+  totalMarketSize: COMPREHENSIVE_SERVICES_INDEX_2030.reduce((sum, service) => {
+    const size = parseFloat(service.marketSize.replace(/[^0-9.]/g, ''));
+    return sum + size;
+  }, 0),
+  innovationBreakdown: {
+    revolutionary: COMPREHENSIVE_SERVICES_INDEX_2030.filter(s => s.innovationLevel === 'Revolutionary').length,
+    advanced: COMPREHENSIVE_SERVICES_INDEX_2030.filter(s => s.innovationLevel === 'Advanced').length
+  }
 };
 
-// Featured Services
-export const FEATURED_SERVICES_2030 = COMPREHENSIVE_SERVICES_INDEX_2030.filter(service => service.featured);
-
-// High-ROI Services (ROI > 500%)
-export const HIGH_ROI_SERVICES_2030 = COMPREHENSIVE_SERVICES_INDEX_2030.filter(service => {
-  const roi = service.roi;
-  if (typeof roi === 'string') {
-    const roiNumber = parseInt(roi.match(/\d+/)?.[0] || '0');
-    return roiNumber > 500;
-  }
-  return false;
-});
-
-// Quick Setup Services (< 8 weeks)
-export const QUICK_SETUP_SERVICES_2030 = COMPREHENSIVE_SERVICES_INDEX_2030.filter(service => {
-  const setupTime = service.setupTime;
-  if (typeof setupTime === 'string') {
-    const weeks = parseInt(setupTime.match(/\d+/)?.[0] || '0');
-    return weeks < 8;
-  }
-  return false;
-});
-
-// Export individual service arrays for specific use cases
-export {
-  COMPREHENSIVE_INNOVATIVE_SERVICES_2030,
-  ADVANCED_AI_SERVICES_2030,
-  INNOVATIVE_MICRO_SAAS_SERVICES_2030,
-  CUTTING_EDGE_IT_INFRASTRUCTURE_2030,
-  EMERGING_TECHNOLOGY_SERVICES_2030
-};
+export default COMPREHENSIVE_SERVICES_INDEX_2030;

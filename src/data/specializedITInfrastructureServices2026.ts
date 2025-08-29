@@ -1,621 +1,401 @@
-export interface SpecializedITInfrastructureService2026 {
-  id: string;
-  title: string;
-  description: string;
+// Specialized IT Infrastructure Services 2026 - Zion Tech Group
+// Advanced IT infrastructure and cloud solutions
+
+export interface ITInfrastructureService {
+  id: number;
+  name: string;
   category: string;
-  subcategory: string;
+  description: string;
+  pricing: string;
   price: number;
-  currency: string;
   pricingModel: string;
   features: string[];
   benefits: string[];
-  useCases: string[];
   targetAudience: string[];
   tags: string[];
-  estimatedDelivery: string;
-  supportLevel: string;
-  marketPrice: string;
-  roi: string;
-  innovationLevel: string;
   contactInfo: {
     phone: string;
     email: string;
     website: string;
+    address: string;
   };
-  technicalSpecs?: {
-    technology: string[];
-    integrations: string[];
-    apiEndpoints: number;
-    uptime: string;
-    security: string[];
-  };
-  competitors?: string[];
-  marketSize?: string;
+  marketPrice: string;
+  responseTime: string;
+  sla: string;
+  certifications: string[];
+  deliveryTime: string;
+  support: string;
+  innovationLevel: string;
+  marketSize: string;
+  compliance: string[];
+  integrations: string[];
+  freeTier: boolean;
+  trialPeriod: string;
+  setupTime: string;
+  roi: string;
 }
 
-export const SPECIALIZED_IT_INFRASTRUCTURE_SERVICES_2026: SpecializedITInfrastructureService2026[] = [
-  // 5G Enterprise Network Solutions
-  {
-    id: "5g-enterprise-network-solutions-2026",
-    title: "5G Enterprise Network Solutions 2026",
-    description: "Advanced 5G enterprise networking solutions that provide ultra-fast connectivity, low latency, and massive IoT device support for modern business operations.",
-    category: "IT & Infrastructure",
-    subcategory: "5G Networks",
-    price: 4500,
-    currency: "$",
-    pricingModel: "monthly",
-    features: [
-      "5G SA/NSA network deployment",
-      "Network slicing for QoS",
-      "Edge computing integration",
-      "IoT device management",
-      "Network security & monitoring",
-      "Performance optimization",
-      "Multi-site connectivity",
-      "Failover & redundancy",
-      "Analytics & reporting",
-      "24/7 support"
-    ],
-    benefits: [
-      "10x faster data transfer",
-      "Ultra-low latency (<1ms)",
-      "Massive IoT device support",
-      "Enhanced security features",
-      "Future-proof infrastructure"
-    ],
-    useCases: [
-      "Smart manufacturing",
-      "Autonomous vehicles",
-      "Remote surgery",
-      "AR/VR applications",
-      "Industrial IoT"
-    ],
-    targetAudience: [
-      "Manufacturing companies",
-      "Healthcare organizations",
-      "Automotive companies",
-      "Technology firms",
-      "Research institutions"
-    ],
-    tags: ["5G", "Networking", "IoT", "Edge Computing", "Enterprise"],
-    estimatedDelivery: "8-12 weeks",
-    supportLevel: "enterprise",
-    marketPrice: "$4,500 - $12,000/month",
-    roi: "250-400%",
-    innovationLevel: "Advanced",
-    contactInfo: {
-      phone: "+1 302 464 0950",
-      email: "kleber@ziontechgroup.com",
-      website: "https://ziontechgroup.com"
-    },
-    technicalSpecs: {
-      technology: ["5G Core", "RAN", "Network Slicing", "Edge Computing", "SDN/NFV"],
-      integrations: ["AWS", "Azure", "Google Cloud", "IoT Platforms", "Security Systems"],
-      apiEndpoints: 200,
-      uptime: "99.99%",
-      security: ["Zero Trust", "Network Security", "Encryption", "DDoS Protection"]
-    },
-    competitors: ["Verizon", "AT&T", "T-Mobile", "Ericsson", "Nokia"],
-    marketSize: "$67.8 billion by 2026"
-  },
+// Zion Tech Group Contact Information
+const zionContact = {
+  phone: "+1 302 464 0950",
+  email: "kleber@ziontechgroup.com",
+  website: "https://ziontechgroup.com",
+  address: "364 E Main St STE 1008 Middletown DE 19709"
+};
 
-  // Zero Trust Network Architecture
+export const specializedITInfrastructureServices2026: ITInfrastructureService[] = [
   {
-    id: "zero-trust-network-architecture-2026",
-    title: "Zero Trust Network Architecture 2026",
-    description: "Comprehensive zero trust security framework that implements strict access controls, continuous monitoring, and least-privilege access across all network resources.",
-    category: "IT & Security",
-    subcategory: "Zero Trust",
-    price: 3200,
-    currency: "$",
+    id: 1,
+    name: "Zero-Trust Network Access Platform",
+    category: "Cybersecurity",
+    description: "Advanced zero-trust security platform that provides secure access to applications and resources without traditional VPNs",
+    pricing: "Enterprise",
+    price: 1299,
     pricingModel: "monthly",
     features: [
-      "Identity verification",
-      "Device trust assessment",
-      "Network segmentation",
-      "Continuous monitoring",
-      "Access control policies",
+      "Identity-based access control",
+      "Continuous authentication",
+      "Micro-segmentation",
       "Threat detection",
       "Compliance reporting",
-      "Risk assessment",
-      "Incident response",
-      "Security analytics"
+      "Multi-factor authentication",
+      "Single sign-on",
+      "API security"
     ],
     benefits: [
-      "Reduce attack surface by 80%",
-      "Prevent lateral movement",
-      "Improve compliance posture",
-      "Real-time threat detection",
-      "Enhanced security visibility"
+      "Eliminates VPN vulnerabilities",
+      "Improved security posture",
+      "Better user experience",
+      "Reduced attack surface",
+      "Compliance adherence",
+      "Cost savings"
     ],
-    useCases: [
-      "Enterprise security",
-      "Remote work security",
-      "Cloud security",
-      "Compliance management",
-      "Threat prevention"
-    ],
-    targetAudience: [
-      "Large enterprises",
-      "Financial institutions",
-      "Healthcare organizations",
-      "Government agencies",
-      "Technology companies"
-    ],
-    tags: ["Zero Trust", "Security", "Network Security", "Access Control", "Compliance"],
-    estimatedDelivery: "6-10 weeks",
-    supportLevel: "enterprise",
-    marketPrice: "$3,200 - $8,500/month",
-    roi: "300-500%",
+    targetAudience: ["Large enterprises", "Financial institutions", "Healthcare organizations", "Government agencies"],
+    tags: ["Cybersecurity", "Zero Trust", "Network Security", "Access Control", "Compliance"],
+    contactInfo: zionContact,
+    marketPrice: "$1,000 - $1,800/month",
+    responseTime: "< 15 minutes",
+    sla: "99.9% uptime",
+    certifications: ["SOC 2", "ISO 27001", "FedRAMP", "HIPAA"],
+    deliveryTime: "2-4 weeks",
+    support: "24/7 dedicated support",
     innovationLevel: "Advanced",
-    contactInfo: {
-      phone: "+1 302 464 0950",
-      email: "kleber@ziontechgroup.com",
-      website: "https://ziontechgroup.com"
-    },
-    technicalSpecs: {
-      technology: ["Identity Management", "Network Segmentation", "Monitoring Tools", "Policy Engine"],
-      integrations: ["Active Directory", "LDAP", "SIEM", "EDR", "Firewalls"],
-      apiEndpoints: 150,
-      uptime: "99.9%",
-      security: ["SOC 2", "ISO 27001", "NIST", "Zero Trust Architecture"]
-    },
-    competitors: ["Palo Alto Networks", "Cisco", "Fortinet", "VMware", "Microsoft"],
-    marketSize: "$51.6 billion by 2026"
+    marketSize: "$18.5 billion",
+    compliance: ["SOC 2", "ISO 27001", "FedRAMP", "HIPAA", "GDPR"],
+    integrations: ["Active Directory", "Okta", "Azure AD", "AWS", "Azure", "GCP"],
+    freeTier: false,
+    trialPeriod: "30 days",
+    setupTime: "2-4 weeks",
+    roi: "400% within 12 months"
   },
-
-  // Hybrid Cloud Infrastructure
   {
-    id: "hybrid-cloud-infrastructure-2026",
-    title: "Hybrid Cloud Infrastructure 2026",
-    description: "Seamless hybrid cloud solution that combines on-premises infrastructure with public and private cloud services for optimal performance, cost, and security.",
-    category: "IT & Infrastructure",
-    subcategory: "Cloud Computing",
-    price: 3800,
-    currency: "$",
+    id: 2,
+    name: "Multi-Cloud Orchestration Platform",
+    category: "Cloud & DevOps",
+    description: "Intelligent multi-cloud management platform that optimizes costs, performance, and security across AWS, Azure, and GCP",
+    pricing: "Premium",
+    price: 899,
     pricingModel: "monthly",
     features: [
-      "Multi-cloud management",
-      "Hybrid connectivity",
-      "Data synchronization",
-      "Workload optimization",
-      "Cost management",
-      "Security & compliance",
-      "Disaster recovery",
+      "Unified cloud dashboard",
+      "Cost optimization",
       "Performance monitoring",
+      "Security management",
       "Automated scaling",
-      "Migration services"
-    ],
-    benefits: [
-      "Optimize costs by 30-40%",
-      "Improve performance",
-      "Enhanced security",
-      "Flexible deployment",
-      "Scalable infrastructure"
-    ],
-    useCases: [
-      "Application modernization",
-      "Data center consolidation",
-      "Disaster recovery",
-      "Compliance requirements",
-      "Performance optimization"
-    ],
-    targetAudience: [
-      "Enterprises",
-      "Technology companies",
-      "Financial services",
-      "Healthcare organizations",
-      "Government agencies"
-    ],
-    tags: ["Hybrid Cloud", "Cloud Computing", "Infrastructure", "Multi-cloud", "Migration"],
-    estimatedDelivery: "8-12 weeks",
-    supportLevel: "enterprise",
-    marketPrice: "$3,800 - $10,000/month",
-    roi: "250-400%",
-    innovationLevel: "Advanced",
-    contactInfo: {
-      phone: "+1 302 464 0950",
-      email: "kleber@ziontechgroup.com",
-      website: "https://ziontechgroup.com"
-    },
-    technicalSpecs: {
-      technology: ["AWS", "Azure", "GCP", "VMware", "OpenStack", "Kubernetes"],
-      integrations: ["On-premise Systems", "Cloud Services", "Storage Systems", "Networking"],
-      apiEndpoints: 300,
-      uptime: "99.9%",
-      security: ["SOC 2", "ISO 27001", "Encryption", "Access Control"]
-    },
-    competitors: ["AWS", "Microsoft Azure", "Google Cloud", "VMware", "IBM"],
-    marketSize: "$145.8 billion by 2026"
-  },
-
-  // Software-Defined Networking (SDN)
-  {
-    id: "software-defined-networking-sdn-2026",
-    title: "Software-Defined Networking (SDN) 2026",
-    description: "Advanced SDN solution that centralizes network control, automates configuration, and provides programmatic network management for improved agility and efficiency.",
-    category: "IT & Infrastructure",
-    subcategory: "Networking",
-    price: 2800,
-    currency: "$",
-    pricingModel: "monthly",
-    features: [
-      "Centralized network control",
-      "Programmatic configuration",
-      "Network automation",
-      "Traffic optimization",
-      "Security policies",
-      "Performance monitoring",
-      "Load balancing",
-      "Quality of Service",
-      "Network virtualization",
-      "API integration"
-    ],
-    benefits: [
-      "Reduce network management time by 60%",
-      "Improve network agility",
-      "Automate configuration",
-      "Enhanced security",
-      "Cost optimization"
-    ],
-    useCases: [
-      "Data center networking",
-      "Campus networks",
-      "WAN optimization",
-      "Network automation",
-      "Security implementation"
-    ],
-    targetAudience: [
-      "Network administrators",
-      "IT managers",
-      "System architects",
-      "Technology companies",
-      "Large enterprises"
-    ],
-    tags: ["SDN", "Networking", "Automation", "Network Management", "Virtualization"],
-    estimatedDelivery: "6-10 weeks",
-    supportLevel: "enterprise",
-    marketPrice: "$2,800 - $7,500/month",
-    roi: "200-350%",
-    innovationLevel: "Advanced",
-    contactInfo: {
-      phone: "+1 302 464 0950",
-      email: "kleber@ziontechgroup.com",
-      website: "https://ziontechgroup.com"
-    },
-    technicalSpecs: {
-      technology: ["OpenFlow", "OpenDaylight", "OVS", "Linux", "Python", "Java"],
-      integrations: ["Network Devices", "Management Systems", "Security Tools", "Monitoring"],
-      apiEndpoints: 200,
-      uptime: "99.9%",
-      security: ["Network Security", "Access Control", "Encryption", "Audit Logging"]
-    },
-    competitors: ["Cisco", "VMware", "Juniper", "Arista", "Brocade"],
-    marketSize: "$32.7 billion by 2026"
-  },
-
-  // Edge Computing Infrastructure
-  {
-    id: "edge-computing-infrastructure-2026",
-    title: "Edge Computing Infrastructure 2026",
-    description: "Distributed edge computing platform that brings computation and data storage closer to data sources, reducing latency and improving real-time processing capabilities.",
-    category: "IT & Infrastructure",
-    subcategory: "Edge Computing",
-    price: 2200,
-    currency: "$",
-    pricingModel: "monthly",
-    features: [
-      "Edge node deployment",
-      "Local data processing",
-      "Real-time analytics",
-      "Edge-to-cloud sync",
-      "Load balancing",
-      "Security at edge",
-      "Monitoring & alerting",
-      "Automated scaling",
-      "Edge application deployment",
-      "Performance optimization"
-    ],
-    benefits: [
-      "Reduce latency by 80-90%",
-      "Lower bandwidth costs",
-      "Improve reliability",
-      "Enable offline operation",
-      "Scalable architecture"
-    ],
-    useCases: [
-      "IoT applications",
-      "Real-time analytics",
-      "Content delivery",
-      "Industrial automation",
-      "Smart cities"
-    ],
-    targetAudience: [
-      "IoT companies",
-      "Manufacturing firms",
-      "Technology companies",
-      "Service providers",
-      "Enterprises"
-    ],
-    tags: ["Edge Computing", "IoT", "Real-time", "Distributed Systems", "Analytics"],
-    estimatedDelivery: "6-8 weeks",
-    supportLevel: "professional",
-    marketPrice: "$2,200 - $6,000/month",
-    roi: "200-350%",
-    innovationLevel: "Advanced",
-    contactInfo: {
-      phone: "+1 302 464 0950",
-      email: "kleber@ziontechgroup.com",
-      website: "https://ziontechgroup.com"
-    },
-    technicalSpecs: {
-      technology: ["Docker", "Kubernetes", "Edge Runtime", "Message Queues", "Databases"],
-      integrations: ["Cloud Platforms", "IoT Devices", "Monitoring Tools", "Security Systems"],
-      apiEndpoints: 150,
-      uptime: "99.8%",
-      security: ["Edge Security", "Data Encryption", "Access Control", "Device Authentication"]
-    },
-    competitors: ["AWS Greengrass", "Azure IoT Edge", "Google Cloud IoT", "FogHorn", "ClearBlade"],
-    marketSize: "$43.4 billion by 2026"
-  },
-
-  // Network Function Virtualization (NFV)
-  {
-    id: "network-function-virtualization-nfv-2026",
-    title: "Network Function Virtualization (NFV) 2026",
-    description: "NFV platform that virtualizes network functions, enabling flexible deployment, scaling, and management of network services on standard hardware.",
-    category: "IT & Infrastructure",
-    subcategory: "Network Virtualization",
-    price: 3500,
-    currency: "$",
-    pricingModel: "monthly",
-    features: [
-      "Network function virtualization",
-      "Service chaining",
-      "Automated deployment",
-      "Scalability management",
-      "Performance monitoring",
-      "Service orchestration",
       "Resource optimization",
-      "Fault tolerance",
-      "Security policies",
-      "Compliance management"
-    ],
-    benefits: [
-      "Reduce hardware costs by 40%",
-      "Improve service agility",
-      "Automate deployment",
-      "Enhanced scalability",
-      "Faster time to market"
-    ],
-    useCases: [
-      "Telecommunications",
-      "Service providers",
-      "Enterprise networks",
-      "Cloud services",
-      "5G networks"
-    ],
-    targetAudience: [
-      "Telecom operators",
-      "Service providers",
-      "Large enterprises",
-      "Technology companies",
-      "Network operators"
-    ],
-    tags: ["NFV", "Network Virtualization", "SDN", "Telecommunications", "Cloud"],
-    estimatedDelivery: "8-12 weeks",
-    supportLevel: "enterprise",
-    marketPrice: "$3,500 - $9,500/month",
-    roi: "250-400%",
-    innovationLevel: "Advanced",
-    contactInfo: {
-      phone: "+1 302 464 0950",
-      email: "kleber@ziontechgroup.com",
-      website: "https://ziontechgroup.com"
-    },
-    technicalSpecs: {
-      technology: ["OpenStack", "Kubernetes", "Docker", "OVS", "DPDK", "SR-IOV"],
-      integrations: ["Network Equipment", "Management Systems", "Orchestration Platforms"],
-      apiEndpoints: 250,
-      uptime: "99.9%",
-      security: ["Network Security", "Virtualization Security", "Access Control", "Encryption"]
-    },
-    competitors: ["VMware", "Cisco", "Juniper", "Nokia", "Ericsson"],
-    marketSize: "$28.9 billion by 2026"
-  },
-
-  // Intent-Based Networking
-  {
-    id: "intent-based-networking-2026",
-    title: "Intent-Based Networking 2026",
-    description: "AI-powered networking solution that translates business intent into network configuration, automatically implementing policies and ensuring compliance across the network.",
-    category: "IT & Infrastructure",
-    subcategory: "AI Networking",
-    price: 4200,
-    currency: "$",
-    pricingModel: "monthly",
-    features: [
-      "Intent translation",
-      "Automated configuration",
-      "Policy enforcement",
       "Compliance monitoring",
-      "AI-driven optimization",
-      "Real-time analytics",
-      "Predictive maintenance",
-      "Security automation",
-      "Performance tuning",
-      "Self-healing networks"
+      "Multi-cloud networking"
     ],
     benefits: [
-      "Reduce configuration errors by 90%",
-      "Automate network management",
-      "Improve compliance",
+      "30% reduction in cloud costs",
+      "Improved performance",
       "Enhanced security",
-      "Faster deployment"
+      "Simplified management",
+      "Better compliance",
+      "Reduced vendor lock-in"
     ],
-    useCases: [
-      "Enterprise networking",
-      "Data center automation",
-      "Compliance management",
-      "Security implementation",
-      "Network optimization"
-    ],
-    targetAudience: [
-      "Network administrators",
-      "IT managers",
-      "Security teams",
-      "Large enterprises",
-      "Technology companies"
-    ],
-    tags: ["Intent-Based Networking", "AI", "Automation", "Network Management", "Compliance"],
-    estimatedDelivery: "8-12 weeks",
-    supportLevel: "enterprise",
-    marketPrice: "$4,200 - $11,000/month",
-    roi: "300-500%",
-    innovationLevel: "Revolutionary",
-    contactInfo: {
-      phone: "+1 302 464 0950",
-      email: "kleber@ziontechgroup.com",
-      website: "https://ziontechgroup.com"
-    },
-    technicalSpecs: {
-      technology: ["Machine Learning", "AI", "Network APIs", "Policy Engine", "Analytics"],
-      integrations: ["Network Devices", "Management Systems", "Security Tools", "Monitoring"],
-      apiEndpoints: 300,
-      uptime: "99.9%",
-      security: ["AI Security", "Policy Enforcement", "Access Control", "Audit Logging"]
-    },
-    competitors: ["Cisco", "Juniper", "VMware", "Arista", "Extreme Networks"],
-    marketSize: "$18.7 billion by 2026"
-  },
-
-  // Network Automation Platform
-  {
-    id: "network-automation-platform-2026",
-    title: "Network Automation Platform 2026",
-    description: "Comprehensive network automation solution that streamlines network operations, reduces manual tasks, and improves network reliability through intelligent automation.",
-    category: "IT & Infrastructure",
-    subcategory: "Network Automation",
-    price: 1800,
-    currency: "$",
-    pricingModel: "monthly",
-    features: [
-      "Configuration automation",
-      "Deployment automation",
-      "Testing automation",
-      "Monitoring automation",
-      "Incident response",
-      "Change management",
-      "Compliance automation",
-      "Performance optimization",
-      "Security automation",
-      "Reporting automation"
-    ],
-    benefits: [
-      "Reduce manual tasks by 70%",
-      "Improve network reliability",
-      "Faster deployment",
-      "Enhanced compliance",
-      "Cost optimization"
-    ],
-    useCases: [
-      "Network deployment",
-      "Configuration management",
-      "Testing & validation",
-      "Compliance management",
-      "Incident response"
-    ],
-    targetAudience: [
-      "Network engineers",
-      "System administrators",
-      "IT managers",
-      "Technology companies",
-      "Enterprises"
-    ],
-    tags: ["Network Automation", "DevOps", "Configuration Management", "Testing", "Compliance"],
-    estimatedDelivery: "4-6 weeks",
-    supportLevel: "professional",
-    marketPrice: "$1,800 - $5,000/month",
-    roi: "200-350%",
+    targetAudience: ["Cloud-native companies", "Enterprises", "DevOps teams", "IT departments"],
+    tags: ["Cloud", "DevOps", "Multi-cloud", "Orchestration", "Cost Optimization"],
+    contactInfo: zionContact,
+    marketPrice: "$700 - $1,200/month",
+    responseTime: "< 30 minutes",
+    sla: "99.5% uptime",
+    certifications: ["SOC 2", "ISO 27001"],
+    deliveryTime: "1-2 weeks",
+    support: "Business hours + emergency support",
     innovationLevel: "Advanced",
-    contactInfo: {
-      phone: "+1 302 464 0950",
-      email: "kleber@ziontechgroup.com",
-      website: "https://ziontechgroup.com"
-    },
-    technicalSpecs: {
-      technology: ["Python", "Ansible", "Terraform", "Jenkins", "Git", "APIs"],
-      integrations: ["Network Devices", "Management Systems", "Monitoring Tools", "Security"],
-      apiEndpoints: 120,
-      uptime: "99.8%",
-      security: ["Access Control", "Audit Logging", "Encryption", "Role-based Security"]
-    },
-    competitors: ["Ansible", "Terraform", "Chef", "Puppet", "SaltStack"],
-    marketSize: "$15.3 billion by 2026"
+    marketSize: "$14.2 billion",
+    compliance: ["SOC 2", "ISO 27001", "GDPR"],
+    integrations: ["AWS", "Azure", "GCP", "Kubernetes", "Terraform", "Ansible"],
+    freeTier: true,
+    trialPeriod: "30 days",
+    setupTime: "1-2 weeks",
+    roi: "350% within 10 months"
   },
-
-  // Network Performance Monitoring
   {
-    id: "network-performance-monitoring-2026",
-    title: "Network Performance Monitoring 2026",
-    description: "Advanced network monitoring solution that provides real-time visibility into network performance, identifies bottlenecks, and optimizes network operations.",
-    category: "IT & Infrastructure",
-    subcategory: "Network Monitoring",
-    price: 1200,
-    currency: "$",
+    id: 3,
+    name: "Edge Computing Infrastructure",
+    category: "IoT & Edge Computing",
+    description: "Distributed edge computing platform that brings computation closer to data sources for real-time processing and reduced latency",
+    pricing: "Professional",
+    price: 649,
     pricingModel: "monthly",
     features: [
-      "Real-time monitoring",
-      "Performance analytics",
-      "Bottleneck detection",
-      "Capacity planning",
-      "Alert management",
-      "Historical analysis",
-      "Custom dashboards",
-      "API integration",
-      "Mobile access",
-      "Automated reporting"
+      "Edge node management",
+      "Real-time processing",
+      "Low latency communication",
+      "Distributed computing",
+      "Edge analytics",
+      "Security at edge",
+      "Scalable architecture",
+      "IoT integration"
     ],
     benefits: [
-      "Improve network performance by 40%",
-      "Reduce downtime",
-      "Proactive issue detection",
-      "Better capacity planning",
-      "Enhanced visibility"
+      "90% reduction in latency",
+      "Improved real-time processing",
+      "Reduced bandwidth costs",
+      "Enhanced user experience",
+      "Better scalability",
+      "Offline capabilities"
     ],
-    useCases: [
-      "Network monitoring",
+    targetAudience: ["IoT companies", "Manufacturing", "Smart cities", "Retail", "Healthcare"],
+    tags: ["Edge Computing", "IoT", "Real-time", "Distributed", "Low Latency"],
+    contactInfo: zionContact,
+    marketPrice: "$500 - $900/month",
+    responseTime: "< 1 hour",
+    sla: "99.0% uptime",
+    certifications: ["SOC 2", "ISO 27001"],
+    deliveryTime: "3-5 weeks",
+    support: "Business hours support",
+    innovationLevel: "Advanced",
+    marketSize: "$11.8 billion",
+    compliance: ["SOC 2", "ISO 27001", "GDPR"],
+    integrations: ["Kubernetes", "Docker", "MQTT", "CoAP", "AWS IoT", "Azure IoT"],
+    freeTier: true,
+    trialPeriod: "21 days",
+    setupTime: "3-5 weeks",
+    roi: "300% within 15 months"
+  },
+  {
+    id: 4,
+    name: "Hybrid Cloud Migration Platform",
+    category: "Cloud & DevOps",
+    description: "Comprehensive platform for seamless migration from on-premises to hybrid cloud environments with minimal downtime",
+    pricing: "Enterprise",
+    price: 1499,
+    pricingModel: "monthly",
+    features: [
+      "Migration planning",
+      "Automated migration",
+      "Data synchronization",
+      "Downtime minimization",
+      "Rollback capabilities",
       "Performance optimization",
+      "Cost analysis",
+      "Compliance validation"
+    ],
+    benefits: [
+      "90% reduction in migration time",
+      "Minimal business disruption",
+      "Cost optimization",
+      "Improved performance",
+      "Enhanced security",
+      "Better scalability"
+    ],
+    targetAudience: ["Enterprises", "Government agencies", "Healthcare", "Financial institutions"],
+    tags: ["Cloud Migration", "Hybrid Cloud", "DevOps", "Automation", "Transformation"],
+    contactInfo: zionContact,
+    marketPrice: "$1,200 - $2,000/month",
+    responseTime: "< 2 hours",
+    sla: "99.9% uptime",
+    certifications: ["SOC 2", "ISO 27001", "FedRAMP"],
+    deliveryTime: "4-8 weeks",
+    support: "24/7 dedicated support",
+    innovationLevel: "Advanced",
+    marketSize: "$16.7 billion",
+    compliance: ["SOC 2", "ISO 27001", "FedRAMP", "HIPAA", "GDPR"],
+    integrations: ["VMware", "Hyper-V", "AWS", "Azure", "GCP", "Kubernetes"],
+    freeTier: false,
+    trialPeriod: "30 days",
+    setupTime: "4-8 weeks",
+    roi: "450% within 18 months"
+  },
+  {
+    id: 5,
+    name: "DevSecOps Automation Platform",
+    category: "Cloud & DevOps",
+    description: "Integrated platform that automates security testing, compliance checking, and vulnerability scanning in CI/CD pipelines",
+    pricing: "Premium",
+    price: 799,
+    pricingModel: "monthly",
+    features: [
+      "Automated security scanning",
+      "Compliance checking",
+      "Vulnerability assessment",
+      "Policy enforcement",
+      "Security testing",
+      "Risk assessment",
+      "Audit reporting",
+      "Integration with CI/CD"
+    ],
+    benefits: [
+      "80% faster security testing",
+      "Improved compliance",
+      "Reduced security risks",
+      "Automated workflows",
+      "Better audit trails",
+      "Cost savings"
+    ],
+    targetAudience: ["DevOps teams", "Security teams", "Development teams", "Enterprises"],
+    tags: ["DevSecOps", "Security", "Automation", "CI/CD", "Compliance"],
+    contactInfo: zionContact,
+    marketPrice: "$600 - $1,100/month",
+    responseTime: "< 1 hour",
+    sla: "99.5% uptime",
+    certifications: ["SOC 2", "ISO 27001"],
+    deliveryTime: "1-2 weeks",
+    support: "Business hours + emergency support",
+    innovationLevel: "Advanced",
+    marketSize: "$12.3 billion",
+    compliance: ["SOC 2", "ISO 27001", "GDPR", "PCI DSS"],
+    integrations: ["Jenkins", "GitLab CI", "GitHub Actions", "Azure DevOps", "AWS CodePipeline"],
+    freeTier: true,
+    trialPeriod: "30 days",
+    setupTime: "1-2 weeks",
+    roi: "320% within 12 months"
+  },
+  {
+    id: 6,
+    name: "Data Center Infrastructure Management",
+    category: "IT Infrastructure",
+    description: "Comprehensive data center management platform for monitoring, optimization, and automation of physical and virtual infrastructure",
+    pricing: "Enterprise",
+    price: 1199,
+    pricingModel: "monthly",
+    features: [
+      "Infrastructure monitoring",
       "Capacity planning",
-      "Troubleshooting",
-      "Compliance reporting"
+      "Energy optimization",
+      "Automated management",
+      "Performance analytics",
+      "Predictive maintenance",
+      "Compliance monitoring",
+      "Disaster recovery"
     ],
-    targetAudience: [
-      "Network administrators",
-      "IT managers",
-      "System engineers",
-      "Technology companies",
-      "Enterprises"
+    benefits: [
+      "25% reduction in energy costs",
+      "Improved uptime",
+      "Better capacity utilization",
+      "Reduced operational costs",
+      "Enhanced compliance",
+      "Automated operations"
     ],
-    tags: ["Network Monitoring", "Performance", "Analytics", "Alerting", "Reporting"],
-    estimatedDelivery: "3-4 weeks",
-    supportLevel: "professional",
-    marketPrice: "$1,200 - $3,500/month",
-    roi: "150-250%",
-    innovationLevel: "Standard",
-    contactInfo: {
-      phone: "+1 302 464 0950",
-      email: "kleber@ziontechgroup.com",
-      website: "https://ziontechgroup.com"
-    },
-    technicalSpecs: {
-      technology: ["SNMP", "NetFlow", "Packet Analysis", "Analytics Engine", "Web Technologies"],
-      integrations: ["Network Devices", "Management Systems", "Ticketing Systems", "APIs"],
-      apiEndpoints: 80,
-      uptime: "99.8%",
-      security: ["Access Control", "Data Encryption", "Audit Logging", "Secure Communication"]
-    },
-    competitors: ["SolarWinds", "PRTG", "Nagios", "Zabbix", "Datadog"],
-    marketSize: "$12.8 billion by 2026"
+    targetAudience: ["Data centers", "Enterprises", "Colocation providers", "Cloud providers"],
+    tags: ["Data Center", "Infrastructure", "Monitoring", "Automation", "Optimization"],
+    contactInfo: zionContact,
+    marketPrice: "$900 - $1,500/month",
+    responseTime: "< 30 minutes",
+    sla: "99.9% uptime",
+    certifications: ["SOC 2", "ISO 27001", "Uptime Institute"],
+    deliveryTime: "3-6 weeks",
+    support: "24/7 dedicated support",
+    innovationLevel: "Advanced",
+    marketSize: "$15.9 billion",
+    compliance: ["SOC 2", "ISO 27001", "Uptime Institute", "TIA-942"],
+    integrations: ["VMware", "Hyper-V", "OpenStack", "Kubernetes", "Monitoring tools"],
+    freeTier: false,
+    trialPeriod: "30 days",
+    setupTime: "3-6 weeks",
+    roi: "380% within 16 months"
+  },
+  {
+    id: 7,
+    name: "Network Performance Optimization",
+    category: "IT Infrastructure",
+    description: "AI-powered network optimization platform that automatically adjusts network configurations for optimal performance and reliability",
+    pricing: "Professional",
+    price: 549,
+    pricingModel: "monthly",
+    features: [
+      "AI-powered optimization",
+      "Performance monitoring",
+      "Automated configuration",
+      "Traffic analysis",
+      "Bandwidth optimization",
+      "Quality of service",
+      "Network analytics",
+      "Predictive maintenance"
+    ],
+    benefits: [
+      "40% improvement in network performance",
+      "Reduced latency",
+      "Better bandwidth utilization",
+      "Automated optimization",
+      "Improved user experience",
+      "Cost savings"
+    ],
+    targetAudience: ["Network administrators", "IT departments", "Service providers", "Enterprises"],
+    tags: ["Network", "Performance", "AI", "Optimization", "Automation"],
+    contactInfo: zionContact,
+    marketPrice: "$400 - $700/month",
+    responseTime: "< 2 hours",
+    sla: "99.0% uptime",
+    certifications: ["SOC 2", "ISO 27001"],
+    deliveryTime: "1-2 weeks",
+    support: "Business hours support",
+    innovationLevel: "Advanced",
+    marketSize: "$10.4 billion",
+    compliance: ["SOC 2", "ISO 27001", "GDPR"],
+    integrations: ["Cisco", "Juniper", "Aruba", "VMware", "Monitoring platforms"],
+    freeTier: true,
+    trialPeriod: "21 days",
+    setupTime: "1-2 weeks",
+    roi: "280% within 10 months"
+  },
+  {
+    id: 8,
+    name: "Disaster Recovery as a Service",
+    category: "IT Infrastructure",
+    description: "Comprehensive disaster recovery solution that ensures business continuity with automated backup, replication, and recovery",
+    pricing: "Enterprise",
+    price: 999,
+    pricingModel: "monthly",
+    features: [
+      "Automated backup",
+      "Real-time replication",
+      "Instant recovery",
+      "Disaster testing",
+      "Compliance reporting",
+      "Multi-site replication",
+      "RTO/RPO optimization",
+      "Cloud integration"
+    ],
+    benefits: [
+      "99.9% recovery success rate",
+      "Minimal data loss",
+      "Fast recovery times",
+      "Reduced downtime",
+      "Compliance adherence",
+      "Cost-effective solution"
+    ],
+    targetAudience: ["Enterprises", "Financial institutions", "Healthcare", "Government agencies"],
+    tags: ["Disaster Recovery", "Business Continuity", "Backup", "Replication", "Recovery"],
+    contactInfo: zionContact,
+    marketPrice: "$800 - $1,300/month",
+    responseTime: "< 1 hour",
+    sla: "99.9% uptime",
+    certifications: ["SOC 2", "ISO 27001", "FedRAMP"],
+    deliveryTime: "2-4 weeks",
+    support: "24/7 emergency support",
+    innovationLevel: "Advanced",
+    marketSize: "$13.6 billion",
+    compliance: ["SOC 2", "ISO 27001", "FedRAMP", "HIPAA", "GDPR"],
+    integrations: ["VMware", "Hyper-V", "AWS", "Azure", "GCP", "Backup software"],
+    freeTier: false,
+    trialPeriod: "30 days",
+    setupTime: "2-4 weeks",
+    roi: "400% within 14 months"
   }
 ];
+
+export default specializedITInfrastructureServices2026;
