@@ -89,6 +89,7 @@ const AILegalDocumentAutomation = React.lazy(() => import('./pages/services/AILe
 const AIHealthcarePredictiveAnalytics = React.lazy(() => import('./pages/services/AIHealthcarePredictiveAnalytics'));
 const AIFinancialTradingRiskManagement = React.lazy(() => import('./pages/services/AIFinancialTradingRiskManagement'));
 const ComprehensiveAIServicesShowcase2025 = React.lazy(() => import('./pages/ComprehensiveAIServicesShowcase2025'));
+const ComprehensiveServicesAdvertising2030 = React.lazy(() => import('./pages/ComprehensiveServicesAdvertising'));
 function App() {
   return (
     <ErrorBoundary>
@@ -164,6 +165,8 @@ function App() {
                 <Route path="/pricing-guide-2025" element={<ComprehensivePricingGuide2025 />} />
                 {/* Schedule Demo */}
                 <Route path="/schedule-demo" element={<ScheduleDemo />} />
+                {/* Comprehensive Services Advertising 2030 */}
+                <Route path="/services/comprehensive-advertising-2030" element={<ComprehensiveServicesAdvertising2030 />} />
                 {/* Service Pages */}
                 <Route path="/services/ai-business-intelligence" element={<AIBusinessIntelligence />} />
                 {/* Catch all route */}
