@@ -207,7 +207,9 @@ const ComprehensivePricingGuide2027: React.FC = () => {
               </motion.div>
             ))}
           </div>
-        </section>
+          {/* close container */}
+        </div>
+      </section>
 
       {/* Search and Filters */}
       <section className="py-12 bg-slate-900/30">
