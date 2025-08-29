@@ -71,6 +71,9 @@ export const EnhancedFuturisticFooter: React.FC = () => {
       color: 'from-purple-600 to-pink-600',
       links: [
         { name: 'AI Business Intelligence', href: '/services/ai-business-intelligence' },
+        { name: 'AI Workflow Orchestrator', href: '/services/ai-workflow-orchestrator' },
+        { name: 'AI Data Governance', href: '/services/ai-data-governance' },
+        { name: 'AI Customer Success Platform', href: '/services/ai-customer-success-platform' },
         { name: 'AI Sales Copilot', href: '/services/ai-sales-copilot' },
         { name: 'AI Compliance Assistant', href: '/services/ai-compliance-assistant' },
         { name: 'AI Auto Email Responder', href: '/services/ai-auto-email-responder' },
@@ -92,10 +95,13 @@ export const EnhancedFuturisticFooter: React.FC = () => {
       ]
     },
     {
-      title: 'IoT & Digital Twin',
-      icon: Rocket,
-      color: 'from-green-600 to-emerald-600',
+      title: 'Edge & IoT Services',
+      icon: Server,
+      color: 'from-blue-600 to-cyan-600',
       links: [
+        { name: 'IoT & Edge Computing', href: '/services/iot-edge' },
+        { name: 'Edge Computing Platform', href: '/services/edge-computing-platform' },
+        { name: 'Digital Twin', href: '/services/digital-twin' },
         { name: 'IT Infrastructure', href: '/services/it-infrastructure' },
         { name: 'Digital Transformation', href: '/services/digital-transformation' },
         { name: 'IT Consulting', href: '/services/it-consulting' },
