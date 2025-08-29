@@ -179,6 +179,62 @@ module.exports = {
         NODE_ENV: 'production',
         AUTOMATION_INTERVAL: '1800000' // 30 minutes
       }
+    },
+
+    // NEW: AI-Powered Code Quality Analyzer
+    {
+      name: 'ai-code-analyzer',
+      script: './scripts/automation/ai-code-analyzer.cjs',
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      max_memory_restart: '1G',
+      env: {
+        NODE_ENV: 'production',
+        ANALYSIS_INTERVAL: '300000' // 5 minutes
+      },
+      error_file: 'logs/ai-code-analyzer-error.log',
+      out_file: 'logs/ai-code-analyzer-out.log',
+      log_file: 'logs/ai-code-analyzer-combined.log',
+      time: true
+    },
+
+    // NEW: Intelligent Dependency Health Monitor
+    {
+      name: 'dependency-health-monitor',
+      script: './scripts/automation/dependency-health-monitor.cjs',
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      max_memory_restart: '1G',
+      env: {
+        NODE_ENV: 'production',
+        CHECK_INTERVAL: '1800000', // 30 minutes
+        SECURITY_CHECK_INTERVAL: '3600000' // 1 hour
+      },
+      error_file: 'logs/dependency-monitor-error.log',
+      out_file: 'logs/dependency-monitor-out.log',
+      log_file: 'logs/dependency-monitor-combined.log',
+      time: true
+    },
+
+    // NEW: Smart Performance Optimizer
+    {
+      name: 'smart-performance-optimizer',
+      script: './scripts/automation/smart-performance-optimizer.cjs',
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      max_memory_restart: '1G',
+      env: {
+        NODE_ENV: 'production',
+        ANALYSIS_INTERVAL: '600000', // 10 minutes
+        BUILD_ANALYSIS_INTERVAL: '300000' // 5 minutes
+      },
+      error_file: 'logs/performance-optimizer-error.log',
+      out_file: 'logs/performance-optimizer-out.log',
+      log_file: 'logs/performance-optimizer-combined.log',
+      time: true
     }
   ],
 
