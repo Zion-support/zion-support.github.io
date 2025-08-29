@@ -1,67 +1,28 @@
-import React, { Suspense, useState, useEffect, useMemo, useCallback } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { Link } from 'react-router-dom';
-import { 
-  Users, 
-  TrendingUp, 
-  Award, 
-  Globe, 
-  Brain, 
-  Cloud, 
-  Shield, 
-  Zap,
+import { AnimatePresence, motion } from 'framer-motion';
+import {
   ArrowRight,
+  ArrowUpRight,
+  Atom,
+  Award,
+  Brain,
   CheckCircle,
-  Star,
-  Play,
+  CheckCircle2,
   ChevronLeft,
   ChevronRight,
-  Rocket,
-  Target,
-  Handshake,
-  Lightbulb,
-  Cpu,
-  Database,
-  Network,
-  Smartphone,
-  Lock,
-  BarChart3,
-  Code,
-  Server,
-  Chip,
-  Wifi,
-  ShieldCheck,
-  Globe2,
-  Bot,
-  Workflow,
-  Eye,
-  Sparkles,
-  Zap as ZapIcon,
-  Phone,
+  Clock,
+  Clock as ClockIcon,
+  Globe,
   Mail,
   MapPin,
-  Clock,
-  DollarSign,
-  Atom,
-  Leaf,
-  Gamepad2,
-  Coins,
-  Satellite,
-  Activity,
-  FileText,
-  MessageCircle,
-  Search,
-  BarChart,
-  Users2,
-  Settings,
-  Palette,
-  Zap as ZapIcon2,
-  ArrowUpRight,
+  Phone,
+  Rocket,
+  Sparkles,
   Star as StarIcon,
-  CheckCircle2,
-  Clock as ClockIcon,
-  TrendingUp as TrendingUpIcon
+  TrendingUp as TrendingUpIcon,
+  Zap
 } from 'lucide-react';
+import React, { useCallback, useEffect, useMemo, useState } from 'react';
+import { Link } from 'react-router-dom';
 
 // Optimized futuristic animated background component
 const FuturisticBackground = React.memo(() => {
@@ -216,7 +177,7 @@ const HeroSection = React.memo(({ onGetStarted }: { onGetStarted: () => void }) 
               >
                 <div className="flex items-center justify-center mb-6">
                   <div className="p-4 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 rounded-full">
-                    <heroSlides[currentSlide].icon className="w-12 h-12 text-cyan-400" />
+                    {React.createElement(heroSlides[currentSlide].icon, { className: "w-12 h-12 text-cyan-400" })}
                   </div>
                 </div>
                 
