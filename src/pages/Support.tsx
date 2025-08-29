@@ -1,4 +1,15 @@
 import React from 'react';
+
+export default function Support() {
+  return (
+    <div className="container mx-auto px-4 py-16">
+      <h1 className="text-3xl font-bold text-white mb-4">Support</h1>
+      <p className="text-zion-slate-light">Find help, documentation, and contact options.</p>
+    </div>
+  );
+}
+
+import React from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { 
