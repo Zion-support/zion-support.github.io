@@ -45,7 +45,7 @@ export function AppHeader() {
 
   const services = [
     { name: 'AI & Analytics', href: '/services/ai-business-intelligence', icon: Brain, description: 'Machine Learning & Data Science' },
-    { name: 'AI Workflow Orchestrator', href: '/services/ai-workflow-orchestrator', icon: Workflow, description: 'Intelligent Process Automation' },
+    { name: 'AI Workflow Orchestrator', href: '/services/ai-workflow-orchestrator', icon: Zap, description: 'Intelligent Process Automation' },
     { name: 'AI Data Governance', href: '/services/ai-data-governance', icon: Shield, description: 'AI-Powered Data Protection' },
     { name: 'AI Customer Success', href: '/services/ai-customer-success-platform', icon: Users, description: 'Proactive Customer Engagement' },
     { name: 'Digital Twin', href: '/services/digital-twin', icon: Rocket, description: 'Simulation & Monitoring' },
@@ -88,7 +88,10 @@ export function AppHeader() {
         { name: 'AI Customer Success Platform', href: '/services/ai-customer-success-platform', description: 'Proactive Customer Engagement' },
         { name: 'AI Sales Copilot', href: '/services/ai-sales-copilot', description: 'AI-powered sales automation' },
         { name: 'AI Compliance Assistant', href: '/services/ai-compliance-assistant', description: 'Regulatory compliance automation' },
-        { name: 'LLM Content Studio', href: '/services/llm-content-studio', description: 'AI content generation' }
+        { name: 'LLM Content Studio', href: '/services/llm-content-studio', description: 'AI content generation' },
+        { name: 'AI Cybersecurity Suite', href: '/services/ai-cybersecurity-suite', description: 'Advanced security solutions' },
+        { name: 'AI Healthcare Analytics', href: '/services/ai-healthcare-analytics', description: 'Healthcare data insights' },
+        { name: 'AI Workflow Automation', href: '/services/ai-workflow-automation', description: 'Process automation' }
       ]
     },
     {
@@ -98,7 +101,9 @@ export function AppHeader() {
       services: [
         { name: 'Cloud DevOps', href: '/services/cloud-devops', description: 'Infrastructure & Automation' },
         { name: 'Cloud FinOps Optimizer', href: '/services/cloud-finops-optimizer', description: 'Cost optimization' },
-        { name: 'FinOps Advisor', href: '/services/finops-advisor', description: 'Financial operations' }
+        { name: 'FinOps Advisor', href: '/services/finops-advisor', description: 'Financial operations' },
+        { name: 'Digital Transformation', href: '/services/digital-transformation', description: 'Business transformation' },
+        { name: 'IT Consulting', href: '/services/it-consulting', description: 'Strategic IT consulting' }
       ]
     },
     {
@@ -118,7 +123,10 @@ export function AppHeader() {
       services: [
         { name: 'Digital Twin', href: '/services/digital-twin', description: 'Simulation & Monitoring' },
         { name: 'IT Infrastructure', href: '/services/it-infrastructure', description: 'Enterprise infrastructure' },
-        { name: 'Data Analytics', href: '/services/data-analytics', description: 'Business intelligence' }
+        { name: 'Data Analytics', href: '/services/data-analytics', description: 'Business intelligence' },
+        { name: 'Blockchain Solutions', href: '/services/blockchain-enterprise-solutions', description: 'Enterprise blockchain' },
+        { name: 'Healthcare Technology', href: '/services/healthcare-tech', description: 'AI-powered healthcare' },
+        { name: 'Sustainability Solutions', href: '/services/sustainability', description: 'Green IT solutions' }
       ]
     },
     {
@@ -127,7 +135,19 @@ export function AppHeader() {
       color: 'from-indigo-600 to-purple-600',
       services: [
         { name: 'AI Compliance Copilot', href: '/services/ai-compliance-copilot', description: 'AI-Powered Security' },
-        { name: 'Zero Trust Architecture', href: '/services/zero-trust-network-architecture', description: 'Advanced security' }
+        { name: 'Zero Trust Architecture', href: '/services/zero-trust-network-architecture', description: 'Advanced security' },
+        { name: 'AI Cybersecurity Suite', href: '/services/ai-cybersecurity-suite', description: 'Comprehensive security' }
+      ]
+    },
+    {
+      name: 'Emerging Tech',
+      icon: Star,
+      color: 'from-yellow-600 to-orange-600',
+      services: [
+        { name: 'Quantum Computing', href: '/services/quantum-computing-solutions', description: 'Next-gen computing' },
+        { name: 'Quantum AI Platform', href: '/services/quantum-ai-platform', description: 'Quantum AI solutions' },
+        { name: 'Space Technology', href: '/services/space-tech', description: 'Space tech solutions' },
+        { name: 'Green IT', href: '/services/green-it', description: 'Sustainable technology' }
       ]
     }
   ];

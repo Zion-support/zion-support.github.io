@@ -2553,4 +2553,198 @@ export const SPECIALIZED_SERVICES = [
   }
 ];
 
+// Add new innovative services
+export const additionalInnovativeServices: ServiceItem[] = [
+  {
+    id: 'ai-powered-customer-success-automation',
+    title: 'AI-Powered Customer Success Automation',
+    description: 'Automated customer onboarding, health monitoring, and proactive engagement using AI to reduce churn and increase lifetime value.',
+    category: 'Micro SaaS',
+    price: '$399',
+    billing: 'month',
+    features: [
+      'Automated onboarding workflows',
+      'Customer health scoring',
+      'Predictive churn detection',
+      'Proactive engagement campaigns',
+      'Integration with major CRMs',
+      'Real-time analytics dashboard'
+    ],
+    ctaLabel: 'Start Free Trial',
+    href: 'https://ziontechgroup.com/contact',
+    external: false
+  },
+  {
+    id: 'quantum-inspired-optimization-engine',
+    title: 'Quantum-Inspired Optimization Engine',
+    description: 'Next-generation optimization platform using quantum-inspired algorithms for complex business problems like resource allocation and scheduling.',
+    category: 'Micro SaaS',
+    price: '$599',
+    billing: 'month',
+    features: [
+      'Quantum-inspired algorithms',
+      'Multi-objective optimization',
+      'Real-time constraint solving',
+      'API-first architecture',
+      'Custom algorithm development',
+      'Performance benchmarking'
+    ],
+    ctaLabel: 'Schedule Demo',
+    href: 'https://ziontechgroup.com/contact',
+    external: false
+  },
+  {
+    id: 'autonomous-data-pipeline-orchestrator',
+    title: 'Autonomous Data Pipeline Orchestrator',
+    description: 'Self-managing data pipelines that automatically optimize, scale, and maintain data workflows with minimal human intervention.',
+    category: 'Micro SaaS',
+    price: '$499',
+    billing: 'month',
+    features: [
+      'Auto-scaling infrastructure',
+      'Intelligent error handling',
+      'Performance optimization',
+      'Cost monitoring',
+      'Multi-cloud support',
+      'Real-time monitoring'
+    ],
+    ctaLabel: 'Deploy Now',
+    href: 'https://ziontechgroup.com/contact',
+    external: false
+  },
+  {
+    id: 'ai-powered-compliance-monitor',
+    title: 'AI-Powered Compliance Monitor',
+    description: 'Continuous compliance monitoring and automated reporting for GDPR, SOC2, HIPAA, and other regulatory frameworks.',
+    category: 'Micro SaaS',
+    price: '$299',
+    billing: 'month',
+    features: [
+      'Multi-framework compliance',
+      'Automated evidence collection',
+      'Real-time violation alerts',
+      'Audit-ready reports',
+      'Integration with major tools',
+      'Compliance scoring'
+    ],
+    ctaLabel: 'Start Compliance',
+    href: 'https://ziontechgroup.com/contact',
+    external: false
+  },
+  {
+    id: 'intelligent-workflow-automation-platform',
+    title: 'Intelligent Workflow Automation Platform',
+    description: 'AI-driven workflow automation that learns from user behavior to optimize business processes and eliminate manual tasks.',
+    category: 'Micro SaaS',
+    price: '$449',
+    billing: 'month',
+    features: [
+      'Behavioral learning',
+      'Process optimization',
+      'Integration connectors',
+      'Custom workflow builder',
+      'Analytics and insights',
+      'Mobile app support'
+    ],
+    ctaLabel: 'Automate Now',
+    href: 'https://ziontechgroup.com/contact',
+    external: false
+  },
+  {
+    id: 'predictive-maintenance-suite',
+    title: 'Predictive Maintenance Suite',
+    description: 'IoT-powered predictive maintenance platform that uses machine learning to predict equipment failures and optimize maintenance schedules.',
+    category: 'Micro SaaS',
+    price: '$349',
+    billing: 'month',
+    features: [
+      'ML-powered predictions',
+      'IoT device integration',
+      'Maintenance scheduling',
+      'Cost optimization',
+      'Real-time alerts',
+      'Performance analytics'
+    ],
+    ctaLabel: 'Predict Failures',
+    href: 'https://ziontechgroup.com/contact',
+    external: false
+  },
+  {
+    id: 'ai-powered-sales-intelligence-platform',
+    title: 'AI-Powered Sales Intelligence Platform',
+    description: 'Comprehensive sales intelligence platform that provides predictive lead scoring, market insights, and automated sales coaching.',
+    category: 'Micro SaaS',
+    price: '$399',
+    billing: 'month',
+    features: [
+      'Predictive lead scoring',
+      'Market intelligence',
+      'Sales coaching automation',
+      'Competitor analysis',
+      'Revenue forecasting',
+      'CRM integration'
+    ],
+    ctaLabel: 'Boost Sales',
+    href: 'https://ziontechgroup.com/contact',
+    external: false
+  },
+  {
+    id: 'autonomous-financial-operations-platform',
+    title: 'Autonomous Financial Operations Platform',
+    description: 'AI-driven financial operations platform that automates accounting, expense management, and financial reporting with intelligent insights.',
+    category: 'Micro SaaS',
+    price: '$549',
+    billing: 'month',
+    features: [
+      'Automated accounting',
+      'Expense management',
+      'Financial reporting',
+      'AI-powered insights',
+      'Multi-currency support',
+      'Compliance automation'
+    ],
+    ctaLabel: 'Optimize FinOps',
+    href: 'https://ziontechgroup.com/contact',
+    external: false
+  },
+  {
+    id: 'quantum-secure-communication-platform',
+    title: 'Quantum-Secure Communication Platform',
+    description: 'Future-proof communication platform using quantum-resistant encryption for ultra-secure messaging, file sharing, and collaboration.',
+    category: 'Micro SaaS',
+    price: '$199',
+    billing: 'month',
+    features: [
+      'Quantum-resistant encryption',
+      'Secure file sharing',
+      'Team collaboration',
+      'End-to-end encryption',
+      'Compliance ready',
+      'Multi-platform support'
+    ],
+    ctaLabel: 'Secure Communication',
+    href: 'https://ziontechgroup.com/contact',
+    external: false
+  },
+  {
+    id: 'ai-powered-customer-feedback-analytics',
+    title: 'AI-Powered Customer Feedback Analytics',
+    description: 'Advanced feedback analysis platform that uses NLP and sentiment analysis to extract actionable insights from customer feedback across all channels.',
+    category: 'Micro SaaS',
+    price: '$249',
+    billing: 'month',
+    features: [
+      'NLP-powered analysis',
+      'Sentiment tracking',
+      'Multi-channel integration',
+      'Actionable insights',
+      'Trend analysis',
+      'Automated reporting'
+    ],
+    ctaLabel: 'Analyze Feedback',
+    href: 'https://ziontechgroup.com/contact',
+    external: false
+  }
+];
+
 export default INNOVATIVE_MICRO_SAAS_SERVICES_2025;

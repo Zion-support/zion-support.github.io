@@ -58,7 +58,12 @@ import {
   Award,
   Users,
   TrendingUp,
-  CheckCircle
+  CheckCircle,
+  Settings,
+  ShoppingCart,
+  DollarSign,
+  MessageCircle,
+  Building
 } from 'lucide-react';
 
 export const EnhancedFuturisticFooter: React.FC = () => {
@@ -78,7 +83,10 @@ export const EnhancedFuturisticFooter: React.FC = () => {
         { name: 'AI Compliance Assistant', href: '/services/ai-compliance-assistant' },
         { name: 'AI Auto Email Responder', href: '/services/ai-auto-email-responder' },
         { name: 'LLM Content Studio', href: '/services/llm-content-studio' },
-        { name: 'AI Compliance Copilot', href: '/services/ai-compliance-copilot' }
+        { name: 'AI Compliance Copilot', href: '/services/ai-compliance-copilot' },
+        { name: 'AI Cybersecurity Suite', href: '/services/ai-cybersecurity-suite' },
+        { name: 'AI Healthcare Analytics', href: '/services/ai-healthcare-analytics' },
+        { name: 'AI Workflow Automation', href: '/services/ai-workflow-automation' }
       ]
     },
     {
@@ -91,77 +99,106 @@ export const EnhancedFuturisticFooter: React.FC = () => {
         { name: 'Customer Feedback Surveys', href: '/services/mobile-feedback-surveys' },
         { name: 'Cloud FinOps Optimizer', href: '/services/cloud-finops-optimizer' },
         { name: 'FinOps Advisor', href: '/services/finops-advisor' },
-        { name: 'Digital Transformation', href: '/services/digital-transformation' }
+        { name: 'Digital Transformation', href: '/services/digital-transformation' },
+        { name: 'IT Consulting', href: '/services/it-consulting' },
+        { name: 'Cloud DevOps', href: '/services/cloud-devops' }
       ]
     },
     {
       title: 'Edge & IoT Services',
-      icon: Server,
+      icon: Building, // Changed from Server to Building
       color: 'from-blue-600 to-cyan-600',
       links: [
         { name: 'IoT & Edge Computing', href: '/services/iot-edge' },
         { name: 'Edge Computing Platform', href: '/services/edge-computing-platform' },
         { name: 'Digital Twin', href: '/services/digital-twin' },
         { name: 'IT Infrastructure', href: '/services/it-infrastructure' },
-        { name: 'Digital Transformation', href: '/services/digital-transformation' },
-        { name: 'IT Consulting', href: '/services/it-consulting' },
-        { name: 'Onsite Support', href: '/services/onsite-support' },
-        { name: 'Green IT Solutions', href: '/services/green-it' },
-        { name: 'IoT Edge Computing', href: '/services/iot-edge' }
+        { name: 'Data Analytics', href: '/services/data-analytics' },
+        { name: 'Predictive Maintenance', href: '/services/predictive-maintenance-suite' }
       ]
     },
     {
-      title: 'Quantum & Emerging Tech',
-      icon: Crown,
+      title: 'Cybersecurity & Compliance',
+      icon: Shield,
       color: 'from-indigo-600 to-purple-600',
       links: [
-        { name: 'Quantum Computing', href: '/services/quantum-computing' },
+        { name: 'AI Compliance Copilot', href: '/services/ai-compliance-copilot' },
+        { name: 'Zero Trust Architecture', href: '/services/zero-trust-network-architecture' },
+        { name: 'AI Cybersecurity Suite', href: '/services/ai-cybersecurity-suite' },
+        { name: 'SOC 2 Compliance', href: '/services/soc2-compliance-automation-saas' },
+        { name: 'AI Compliance Assistant', href: '/services/ai-compliance-assistant' },
+        { name: 'Quantum-Secure Solutions', href: '/services/quantum-secure-communication-platform' }
+      ]
+    },
+    {
+      title: 'Emerging Technologies',
+      icon: Star,
+      color: 'from-yellow-600 to-orange-600',
+      links: [
+        { name: 'Quantum Computing', href: '/services/quantum-computing-solutions' },
+        { name: 'Quantum AI Platform', href: '/services/quantum-ai-platform' },
         { name: 'Blockchain Solutions', href: '/services/blockchain-enterprise-solutions' },
         { name: 'Space Technology', href: '/services/space-tech' },
-        { name: 'Sustainability', href: '/services/sustainability' },
-        { name: 'Digital Twin', href: '/services/digital-twin' },
-        { name: 'Cloud DevOps', href: '/services/cloud-devops' }
+        { name: 'Green IT Solutions', href: '/services/green-it' },
+        { name: 'Healthcare Technology', href: '/services/healthcare-tech' },
+        { name: 'Sustainability Solutions', href: '/services/sustainability' }
+      ]
+    },
+    {
+      title: 'Business Solutions',
+      icon: Rocket,
+      color: 'from-green-600 to-emerald-600',
+      links: [
+        { name: 'Micro SaaS Solutions', href: '/micro-saas' },
+        { name: 'AI Sales Intelligence', href: '/services/ai-powered-sales-intelligence-platform' },
+        { name: 'Customer Success Automation', href: '/services/ai-powered-customer-success-automation' },
+        { name: 'Workflow Automation', href: '/services/intelligent-workflow-automation-platform' },
+        { name: 'Financial Operations', href: '/services/autonomous-financial-operations-platform' },
+        { name: 'Supply Chain Optimization', href: '/services/autonomous-supply-chain-optimizer' }
       ]
     }
   ];
 
   const quickLinks = [
-    { name: 'Services Overview', href: '/services-overview' },
-    { name: 'Pricing Guide', href: '/pricing-guide' },
-    { name: 'Help Center', href: '/help' },
-    { name: 'FAQ', href: '/faq' },
-    { name: 'About Us', href: '/about' },
-    { name: 'Contact', href: '/contact' },
-    { name: 'Blog', href: '/blog' },
-    { name: 'Careers', href: '/careers' },
-    { name: 'Sitemap', href: '/sitemap' }
+    { name: 'Services Overview', href: '/services-overview', icon: Settings },
+    { name: 'AI Services', href: '/ai-services', icon: Brain },
+    { name: 'IT Services', href: '/it-services', icon: Building }, // Changed from Server to Building
+    { name: 'Micro SaaS', href: '/micro-saas', icon: ShoppingCart },
+    { name: 'Pricing Guide', href: '/pricing', icon: DollarSign },
+    { name: 'Request Quote', href: '/request-quote', icon: MessageCircle },
+    { name: 'Innovative Services 2025', href: '/innovative-services-showcase-2025', icon: Star },
+    { name: 'Revolutionary Services 2030', href: '/revolutionary-services-showcase-2030', icon: TrendingUp }
   ];
 
   const companyLinks = [
-    { name: 'About Us', href: '/about', description: 'Our story and mission' },
-    { name: 'Team', href: '/team', description: 'Meet our experts' },
-    { name: 'Careers', href: '/careers', description: 'Join our team' },
-    { name: 'Blog', href: '/blog', description: 'Latest insights' },
-    { name: 'Press', href: '/press', description: 'Media resources' },
-    { name: 'Partners', href: '/partners', description: 'Strategic partnerships' }
+    { name: 'About Us', href: '/about' },
+    { name: 'Team', href: '/team' },
+    { name: 'Careers', href: '/careers' },
+    { name: 'Partners', href: '/partners' },
+    { name: 'Blog', href: '/blog' },
+    { name: 'Case Studies', href: '/case-studies' },
+    { name: 'Press', href: '/press' },
+    { name: 'White Papers', href: '/white-papers' }
   ];
 
   const supportLinks = [
-    { name: 'Help Center', href: '/help', description: 'Find answers to questions' },
-    { name: 'Support Portal', href: '/support', description: 'Technical assistance' },
-    { name: 'FAQ', href: '/faq', description: 'Frequently asked questions' },
-    { name: 'Documentation', href: '/docs', description: 'Technical guides' },
-    { name: 'Training', href: '/training', description: 'Learning resources' },
-    { name: 'Webinars', href: '/webinars', description: 'Educational sessions' }
+    { name: 'Help Center', href: '/help' },
+    { name: 'Support', href: '/support' },
+    { name: 'Documentation', href: '/docs' },
+    { name: 'Training', href: '/training' },
+    { name: 'Community', href: '/community' },
+    { name: 'FAQ', href: '/faq' },
+    { name: 'Contact Support', href: '/contact' },
+    { name: 'Onsite Support', href: '/onsite-support' }
   ];
 
   const legalLinks = [
-    { name: 'Privacy Policy', href: '/privacy', description: 'Data protection' },
-    { name: 'Terms of Service', href: '/terms', description: 'Service terms' },
-    { name: 'Cookie Policy', href: '/cookies', description: 'Cookie usage' },
-    { name: 'Accessibility', href: '/accessibility', description: 'Accessibility statement' },
-    { name: 'Security', href: '/security', description: 'Security practices' },
-    { name: 'Compliance', href: '/compliance', description: 'Regulatory compliance' }
+    { name: 'Privacy Policy', href: '/privacy' },
+    { name: 'Terms of Service', href: '/terms' },
+    { name: 'Cookie Policy', href: '/cookies' },
+    { name: 'Accessibility', href: '/accessibility' },
+    { name: 'Security', href: '/security' },
+    { name: 'Compliance', href: '/compliance' }
   ];
 
   // Create missing pages for broken links
@@ -249,7 +286,7 @@ export const EnhancedFuturisticFooter: React.FC = () => {
                     className="flex items-center space-x-3 p-3 rounded-lg hover:bg-slate-800/50 transition-colors group"
                   >
                     <div className="w-8 h-8 rounded-lg bg-slate-800 flex items-center justify-center group-hover:bg-cyan-400/20 transition-colors">
-                      <Star className="w-4 h-4 text-cyan-400" />
+                      <link.icon className="w-4 h-4 text-cyan-400" />
                     </div>
                     <div>
                       <div className="font-medium text-white group-hover:text-cyan-400 transition-colors">
@@ -361,29 +398,83 @@ export const EnhancedFuturisticFooter: React.FC = () => {
           </div>
 
           {/* Contact Information */}
-          <div>
-            <h4 className="font-semibold text-white mb-4">Contact Us</h4>
-            <div className="space-y-3">
-              <a 
-                href="tel:+13024640950" 
-                className="flex items-center space-x-3 text-sm text-slate-300 hover:text-cyan-400 transition-colors"
-              >
-                <Phone className="w-4 h-4" />
-                <span>+1 302 464 0950</span>
-              </a>
-              <a 
-                href="mailto:kleber@ziontechgroup.com" 
-                className="flex items-center space-x-3 text-sm text-slate-300 hover:text-cyan-400 transition-colors"
-              >
-                <Mail className="w-4 h-4" />
-                <span>kleber@ziontechgroup.com</span>
-              </a>
-              <div className="flex items-start space-x-3 text-sm text-slate-300">
-                <MapPin className="w-4 h-4 mt-0.5 flex-shrink-0" />
-                <span>
-                  364 E Main St STE 1008<br />
-                  Middletown DE 19709
-                </span>
+          <div className="col-span-full lg:col-span-3 bg-slate-800/50 rounded-2xl p-6 border border-slate-700/50">
+            <div className="flex items-center space-x-3 mb-6">
+              <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-cyan-500 to-blue-600 flex items-center justify-center">
+                <Building className="w-5 h-5 text-white" />
+              </div>
+              <div>
+                <h3 className="text-lg font-semibold text-white">Zion Tech Group</h3>
+                <p className="text-sm text-slate-400">Innovating the Future of Technology</p>
+              </div>
+            </div>
+            
+            <div className="space-y-4">
+              <div className="flex items-start space-x-3">
+                <div className="w-6 h-6 rounded-lg bg-slate-700 flex items-center justify-center flex-shrink-0 mt-0.5">
+                  <Phone className="w-3 h-3 text-cyan-400" />
+                </div>
+                <div>
+                  <p className="text-sm text-slate-400">Phone</p>
+                  <a href="tel:+13024640950" className="text-white hover:text-cyan-400 transition-colors font-medium">
+                    +1 (302) 464-0950
+                  </a>
+                </div>
+              </div>
+              
+              <div className="flex items-start space-x-3">
+                <div className="w-6 h-6 rounded-lg bg-slate-700 flex items-center justify-center flex-shrink-0 mt-0.5">
+                  <Mail className="w-3 h-3 text-cyan-400" />
+                </div>
+                <div>
+                  <p className="text-sm text-slate-400">Email</p>
+                  <a href="mailto:kleber@ziontechgroup.com" className="text-white hover:text-cyan-400 transition-colors font-medium">
+                    kleber@ziontechgroup.com
+                  </a>
+                </div>
+              </div>
+              
+              <div className="flex items-start space-x-3">
+                <div className="w-6 h-6 rounded-lg bg-slate-700 flex items-center justify-center flex-shrink-0 mt-0.5">
+                  <MapPin className="w-3 h-3 text-cyan-400" />
+                </div>
+                <div>
+                  <p className="text-sm text-slate-400">Address</p>
+                  <p className="text-white font-medium">
+                    364 E Main St STE 1008<br />
+                    Middletown, DE 19709
+                  </p>
+                </div>
+              </div>
+              
+              <div className="flex items-start space-x-3">
+                <div className="w-6 h-6 rounded-lg bg-slate-700 flex items-center justify-center flex-shrink-0 mt-0.5">
+                  <Globe className="w-3 h-3 text-cyan-400" />
+                </div>
+                <div>
+                  <p className="text-sm text-slate-400">Website</p>
+                  <a href="https://ziontechgroup.com" className="text-white hover:text-cyan-400 transition-colors font-medium">
+                    ziontechgroup.com
+                  </a>
+                </div>
+              </div>
+            </div>
+            
+            <div className="mt-6 pt-6 border-t border-slate-700/50">
+              <p className="text-sm text-slate-400 mb-3">Follow us for updates</p>
+              <div className="flex space-x-3">
+                <a href="https://linkedin.com/company/ziontechgroup" className="w-8 h-8 rounded-lg bg-slate-700 hover:bg-cyan-500/20 flex items-center justify-center transition-colors group">
+                  <Linkedin className="w-4 h-4 text-slate-400 group-hover:text-cyan-400 transition-colors" />
+                </a>
+                <a href="https://twitter.com/ziontechgroup" className="w-8 h-8 rounded-lg bg-slate-700 hover:bg-cyan-500/20 flex items-center justify-center transition-colors group">
+                  <Twitter className="w-4 h-4 text-slate-400 group-hover:text-cyan-400 transition-colors" />
+                </a>
+                <a href="https://github.com/ziontechgroup" className="w-8 h-8 rounded-lg bg-slate-700 hover:bg-cyan-500/20 flex items-center justify-center transition-colors group">
+                  <Github className="w-4 h-4 text-slate-400 group-hover:text-cyan-400 transition-colors" />
+                </a>
+                <a href="https://youtube.com/@ziontechgroup" className="w-8 h-8 rounded-lg bg-slate-700 hover:bg-cyan-500/20 flex items-center justify-center transition-colors group">
+                  <Youtube className="w-4 h-4 text-slate-400 group-hover:text-cyan-400 transition-colors" />
+                </a>
               </div>
             </div>
           </div>

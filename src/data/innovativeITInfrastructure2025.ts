@@ -359,3 +359,197 @@ export const INNOVATIVE_IT_INFRASTRUCTURE_2025: InnovativeITInfrastructureServic
     marketSize: "$667.9 billion by 2025"
   }
 ];
+
+// Add new innovative IT infrastructure services
+export const additionalInnovativeITServices: ServiceItem[] = [
+  {
+    id: 'quantum-network-infrastructure',
+    title: 'Quantum Network Infrastructure',
+    description: 'Next-generation network infrastructure designed for quantum computing and quantum-secure communications with ultra-low latency and quantum encryption.',
+    category: 'IT Services',
+    price: '$25,000',
+    billing: 'project',
+    features: [
+      'Quantum-secure encryption',
+      'Ultra-low latency networks',
+      'Quantum key distribution',
+      'Future-proof architecture',
+      'Multi-site deployment',
+      '24/7 monitoring'
+    ],
+    ctaLabel: 'Quantum Network',
+    href: 'https://ziontechgroup.com/contact',
+    external: false
+  },
+  {
+    id: 'autonomous-data-center-management',
+    title: 'Autonomous Data Center Management',
+    description: 'AI-powered data center management system that autonomously optimizes cooling, power, and resource allocation for maximum efficiency and uptime.',
+    category: 'IT Services',
+    price: '$15,000',
+    billing: 'project',
+    features: [
+      'AI-powered optimization',
+      'Predictive maintenance',
+      'Energy efficiency',
+      'Automated scaling',
+      'Real-time monitoring',
+      'Cost optimization'
+    ],
+    ctaLabel: 'Optimize Data Center',
+    href: 'https://ziontechgroup.com/contact',
+    external: false
+  },
+  {
+    id: 'edge-computing-network-deployment',
+    title: 'Edge Computing Network Deployment',
+    description: 'Comprehensive edge computing network deployment that brings processing power closer to data sources for ultra-low latency applications.',
+    category: 'IT Services',
+    price: '$20,000',
+    billing: 'project',
+    features: [
+      'Edge node deployment',
+      'Network optimization',
+      'Load balancing',
+      'Security implementation',
+      'Performance monitoring',
+      'Scalable architecture'
+    ],
+    ctaLabel: 'Deploy Edge Network',
+    href: 'https://ziontechgroup.com/contact',
+    external: false
+  },
+  {
+    id: 'quantum-cloud-hybrid-platform',
+    title: 'Quantum Cloud Hybrid Platform',
+    description: 'Hybrid cloud platform that integrates quantum computing capabilities with traditional cloud infrastructure for unprecedented computational power.',
+    category: 'IT Services',
+    price: '$35,000',
+    billing: 'project',
+    features: [
+      'Quantum cloud integration',
+      'Hybrid infrastructure',
+      'Quantum algorithm deployment',
+      'Scalable architecture',
+      'Security compliance',
+      'Performance optimization'
+    ],
+    ctaLabel: 'Quantum Cloud',
+    href: 'https://ziontechgroup.com/contact',
+    external: false
+  },
+  {
+    id: 'autonomous-cybersecurity-operations-center',
+    title: 'Autonomous Cybersecurity Operations Center',
+    description: 'AI-driven security operations center that autonomously detects, analyzes, and responds to cybersecurity threats in real-time.',
+    category: 'IT Services',
+    price: '$30,000',
+    billing: 'project',
+    features: [
+      'AI threat detection',
+      'Automated response',
+      '24/7 monitoring',
+      'Incident management',
+      'Compliance reporting',
+      'Threat intelligence'
+    ],
+    ctaLabel: 'Secure Operations',
+    href: 'https://ziontechgroup.com/contact',
+    external: false
+  },
+  {
+    id: 'quantum-secure-storage-solution',
+    title: 'Quantum-Secure Storage Solution',
+    description: 'Future-proof storage solution using quantum-resistant encryption and quantum key distribution for ultra-secure data storage.',
+    category: 'IT Services',
+    price: '$18,000',
+    billing: 'project',
+    features: [
+      'Quantum-resistant encryption',
+      'Quantum key distribution',
+      'High availability',
+      'Data redundancy',
+      'Compliance ready',
+      'Scalable storage'
+    ],
+    ctaLabel: 'Quantum Storage',
+    href: 'https://ziontechgroup.com/contact',
+    external: false
+  },
+  {
+    id: 'autonomous-network-optimization',
+    title: 'Autonomous Network Optimization',
+    description: 'AI-powered network optimization system that continuously monitors and optimizes network performance, routing, and bandwidth allocation.',
+    category: 'IT Services',
+    price: '$12,000',
+    billing: 'project',
+    features: [
+      'AI-powered optimization',
+      'Real-time monitoring',
+      'Performance tuning',
+      'Bandwidth optimization',
+      'Traffic analysis',
+      'Automated configuration'
+    ],
+    ctaLabel: 'Optimize Network',
+    href: 'https://ziontechgroup.com/contact',
+    external: false
+  },
+  {
+    id: 'quantum-internet-protocol-stack',
+    title: 'Quantum Internet Protocol Stack',
+    description: 'Next-generation internet protocol stack designed for quantum networks, enabling quantum-secure communication and quantum internet applications.',
+    category: 'IT Services',
+    price: '$40,000',
+    billing: 'project',
+    features: [
+      'Quantum protocols',
+      'Quantum routing',
+      'Quantum security',
+      'Interoperability',
+      'Performance optimization',
+      'Future compatibility'
+    ],
+    ctaLabel: 'Quantum Internet',
+    href: 'https://ziontechgroup.com/contact',
+    external: false
+  },
+  {
+    id: 'autonomous-disaster-recovery-system',
+    title: 'Autonomous Disaster Recovery System',
+    description: 'AI-powered disaster recovery system that automatically detects failures, initiates recovery procedures, and ensures business continuity.',
+    category: 'IT Services',
+    price: '$22,000',
+    billing: 'project',
+    features: [
+      'AI failure detection',
+      'Automated recovery',
+      'Business continuity',
+      'Data protection',
+      'Testing automation',
+      'Compliance reporting'
+    ],
+    ctaLabel: 'Disaster Recovery',
+    href: 'https://ziontechgroup.com/contact',
+    external: false
+  },
+  {
+    id: 'quantum-secure-identity-management',
+    title: 'Quantum-Secure Identity Management',
+    description: 'Future-proof identity management system using quantum-resistant cryptography and quantum key distribution for ultra-secure authentication.',
+    category: 'IT Services',
+    price: '$16,000',
+    billing: 'project',
+    features: [
+      'Quantum-resistant crypto',
+      'Quantum key distribution',
+      'Multi-factor authentication',
+      'Access control',
+      'Compliance ready',
+      'Scalable architecture'
+    ],
+    ctaLabel: 'Quantum Identity',
+    href: 'https://ziontechgroup.com/contact',
+    external: false
+  }
+];

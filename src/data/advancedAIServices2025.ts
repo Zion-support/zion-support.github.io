@@ -359,3 +359,197 @@ export const ADVANCED_AI_SERVICES_2025: AdvancedAIService[] = [
     marketSize: "$25.8 billion by 2025"
   }
 ];
+
+// Add new advanced AI services
+export const additionalAdvancedAIServices: ServiceItem[] = [
+  {
+    id: 'autonomous-business-intelligence-platform',
+    title: 'Autonomous Business Intelligence Platform',
+    description: 'Self-learning BI platform that automatically discovers insights, generates reports, and provides actionable recommendations without human intervention.',
+    category: 'AI Solutions',
+    price: '$1,299',
+    billing: 'month',
+    features: [
+      'Autonomous data discovery',
+      'Self-generating reports',
+      'Predictive analytics',
+      'Natural language queries',
+      'Real-time insights',
+      'Multi-data source integration'
+    ],
+    ctaLabel: 'Get AI Insights',
+    href: 'https://ziontechgroup.com/contact',
+    external: false
+  },
+  {
+    id: 'quantum-machine-learning-framework',
+    title: 'Quantum Machine Learning Framework',
+    description: 'Next-generation ML framework that leverages quantum computing principles for faster training and superior model performance on complex datasets.',
+    category: 'AI Solutions',
+    price: '$2,499',
+    billing: 'month',
+    features: [
+      'Quantum-inspired algorithms',
+      'Hybrid classical-quantum training',
+      'Faster convergence',
+      'Superior accuracy',
+      'Custom model development',
+      'Enterprise deployment'
+    ],
+    ctaLabel: 'Quantum ML Access',
+    href: 'https://ziontechgroup.com/contact',
+    external: false
+  },
+  {
+    id: 'ai-powered-cybersecurity-threat-hunter',
+    title: 'AI-Powered Cybersecurity Threat Hunter',
+    description: 'Advanced threat detection system that uses AI to proactively identify, analyze, and neutralize cybersecurity threats before they impact your business.',
+    category: 'AI Solutions',
+    price: '$899',
+    billing: 'month',
+    features: [
+      'Proactive threat detection',
+      'Behavioral analysis',
+      'Automated response',
+      'Threat intelligence',
+      'Incident management',
+      'Compliance reporting'
+    ],
+    ctaLabel: 'Secure Your Business',
+    href: 'https://ziontechgroup.com/contact',
+    external: false
+  },
+  {
+    id: 'autonomous-supply-chain-optimizer',
+    title: 'Autonomous Supply Chain Optimizer',
+    description: 'AI-driven supply chain management that continuously optimizes inventory, logistics, and supplier relationships for maximum efficiency and cost savings.',
+    category: 'AI Solutions',
+    price: '$1,599',
+    billing: 'month',
+    features: [
+      'Real-time optimization',
+      'Predictive demand forecasting',
+      'Automated procurement',
+      'Cost optimization',
+      'Risk assessment',
+      'Multi-tier visibility'
+    ],
+    ctaLabel: 'Optimize Supply Chain',
+    href: 'https://ziontechgroup.com/contact',
+    external: false
+  },
+  {
+    id: 'ai-powered-customer-experience-orchestrator',
+    title: 'AI-Powered Customer Experience Orchestrator',
+    description: 'Intelligent CX platform that personalizes customer interactions across all touchpoints using real-time AI insights and predictive analytics.',
+    category: 'AI Solutions',
+    price: '$1,199',
+    billing: 'month',
+    features: [
+      'Real-time personalization',
+      'Predictive customer behavior',
+      'Omnichannel orchestration',
+      'Sentiment analysis',
+      'A/B testing automation',
+      'ROI optimization'
+    ],
+    ctaLabel: 'Transform CX',
+    href: 'https://ziontechgroup.com/contact',
+    external: false
+  },
+  {
+    id: 'autonomous-financial-trading-platform',
+    title: 'Autonomous Financial Trading Platform',
+    description: 'AI-powered trading platform that autonomously manages portfolios, executes trades, and optimizes investment strategies based on market conditions.',
+    category: 'AI Solutions',
+    price: '$3,999',
+    billing: 'month',
+    features: [
+      'Autonomous portfolio management',
+      'Real-time market analysis',
+      'Risk management',
+      'Performance optimization',
+      'Regulatory compliance',
+      'Multi-asset support'
+    ],
+    ctaLabel: 'Start Trading',
+    href: 'https://ziontechgroup.com/contact',
+    external: false
+  },
+  {
+    id: 'ai-powered-healthcare-diagnostics-engine',
+    title: 'AI-Powered Healthcare Diagnostics Engine',
+    description: 'Advanced medical diagnostics platform that uses AI to analyze medical images, patient data, and symptoms for accurate diagnosis and treatment recommendations.',
+    category: 'AI Solutions',
+    price: '$2,999',
+    billing: 'month',
+    features: [
+      'Medical image analysis',
+      'Symptom assessment',
+      'Treatment recommendations',
+      'Patient monitoring',
+      'Clinical decision support',
+      'HIPAA compliance'
+    ],
+    ctaLabel: 'Healthcare AI',
+    href: 'https://ziontechgroup.com/contact',
+    external: false
+  },
+  {
+    id: 'quantum-ai-drug-discovery-platform',
+    title: 'Quantum AI Drug Discovery Platform',
+    description: 'Revolutionary drug discovery platform combining quantum computing and AI to accelerate pharmaceutical research and development.',
+    category: 'AI Solutions',
+    price: '$5,999',
+    billing: 'month',
+    features: [
+      'Quantum molecular modeling',
+      'AI-powered screening',
+      'Drug interaction prediction',
+      'Clinical trial optimization',
+      'Regulatory compliance',
+      'Research collaboration'
+    ],
+    ctaLabel: 'Discover Drugs',
+    href: 'https://ziontechgroup.com/contact',
+    external: false
+  },
+  {
+    id: 'autonomous-energy-management-system',
+    title: 'Autonomous Energy Management System',
+    description: 'AI-driven energy management platform that optimizes energy consumption, predicts demand, and manages renewable energy sources for maximum efficiency.',
+    category: 'AI Solutions',
+    price: '$1,799',
+    billing: 'month',
+    features: [
+      'Energy consumption optimization',
+      'Demand prediction',
+      'Renewable integration',
+      'Cost optimization',
+      'Carbon footprint tracking',
+      'Grid management'
+    ],
+    ctaLabel: 'Manage Energy',
+    href: 'https://ziontechgroup.com/contact',
+    external: false
+  },
+  {
+    id: 'ai-powered-space-exploration-platform',
+    title: 'AI-Powered Space Exploration Platform',
+    description: 'Advanced space exploration platform using AI for satellite management, space debris tracking, and autonomous space mission planning.',
+    category: 'AI Solutions',
+    price: '$4,999',
+    billing: 'month',
+    features: [
+      'Satellite constellation management',
+      'Space debris tracking',
+      'Mission planning',
+      'Autonomous navigation',
+      'Data analysis',
+      'International collaboration'
+    ],
+    ctaLabel: 'Explore Space',
+    href: 'https://ziontechgroup.com/contact',
+    external: false
+  }
+];
