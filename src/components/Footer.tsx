@@ -104,7 +104,8 @@ const footerSections = [
       { name: 'AI Sales Copilot', path: '/services/ai-sales-copilot', icon: Users },
       { name: 'AI Marketing Automation', path: '/services/ai-marketing-automation', icon: TrendingUp },
       { name: 'AI Financial Analytics', path: '/services/ai-financial-analytics', icon: DollarSign },
-      { name: 'AI Customer Support Automation', path: '/services/ai-customer-support-automation', icon: MessageCircle }
+      { name: 'AI Customer Support Automation', path: '/services/ai-customer-support-automation', icon: MessageCircle },
+      { name: '2031 Cutting-Edge Services', path: '/zion-cutting-edge-services-2031', icon: Star }
     ]
   },
   {
@@ -164,6 +165,20 @@ const footerSections = [
       { name: 'Contact Support', path: '/contact', icon: MessageCircle },
       { name: 'Marketplace', path: '/marketplace', icon: ShoppingCart },
       { name: 'Sitemap', path: '/sitemap', icon: FileText }
+    ]
+  },
+  {
+    title: 'Latest Innovations',
+    icon: Sparkles,
+    links: [
+      { name: '2031 Cutting-Edge Services', path: '/zion-cutting-edge-services-2031', icon: Star },
+      { name: '2029 Cutting-Edge Services', path: '/zion-cutting-edge-services-2029', icon: Star },
+      { name: '2027 Services Overview', path: '/comprehensive-services-showcase-2027', icon: Star },
+      { name: '2026 Services Overview', path: '/ultimate-services-showcase-2026', icon: Star },
+      { name: 'Innovative Services 2025', path: '/innovative-services-2025', icon: Star },
+      { name: 'Comprehensive Pricing 2026', path: '/comprehensive-pricing-2026', icon: DollarSign },
+      { name: 'Comprehensive Pricing 2028', path: '/comprehensive-pricing-2028', icon: DollarSign },
+      { name: 'Comprehensive Pricing 2031', path: '/comprehensive-pricing-2031', icon: DollarSign }
     ]
   }
 ];
@@ -341,6 +356,53 @@ export function Footer() {
 
           {/* Divider */}
           <div className="border-t border-slate-700 my-12" />
+
+          {/* Contact Section */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="bg-gradient-to-r from-cyan-500/10 to-blue-500/10 border border-cyan-400/20 rounded-xl p-6 mb-8"
+          >
+            <div className="text-center">
+              <h3 className="text-xl font-semibold text-white mb-4">Contact Zion Tech Group</h3>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
+                <div className="flex items-center justify-center gap-2 text-gray-300">
+                  <Phone className="w-4 h-4 text-cyan-400" />
+                  <a href="tel:+13024640950" className="hover:text-white transition-colors">+1 302 464 0950</a>
+                </div>
+                <div className="flex items-center justify-center gap-2 text-gray-300">
+                  <Mail className="w-4 h-4 text-cyan-400" />
+                  <a href="mailto:kleber@ziontechgroup.com" className="hover:text-white transition-colors">kleber@ziontechgroup.com</a>
+                </div>
+                <div className="flex items-center justify-center gap-2 text-gray-300 md:col-span-2">
+                  <MapPin className="w-4 h-4 text-cyan-400" />
+                  <span>364 E Main St STE 1008 Middletown DE 19709</span>
+                </div>
+                <div className="flex items-center justify-center gap-2 text-gray-300 md:col-span-2">
+                  <Globe className="w-4 h-4 text-cyan-400" />
+                  <a href="https://ziontechgroup.com" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">ziontechgroup.com</a>
+                </div>
+              </div>
+              
+              {/* CTA Buttons */}
+              <div className="flex flex-col sm:flex-row gap-3 justify-center">
+                <a
+                  href="mailto:kleber@ziontechgroup.com?subject=Inquiry about Zion Tech Group Services"
+                  className="bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-6 py-3 rounded-lg font-medium hover:from-cyan-600 hover:to-blue-600 transition-all duration-300 text-center"
+                >
+                  Get Started
+                </a>
+                <a
+                  href="tel:+13024640950"
+                  className="bg-white/10 border border-cyan-400/20 text-white px-6 py-3 rounded-lg font-medium hover:bg-white/20 transition-all duration-300 text-center"
+                >
+                  Call Now
+                </a>
+              </div>
+            </div>
+          </motion.div>
 
           {/* Bottom Section */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">

@@ -42,6 +42,7 @@ export function AppHeader() {
     { name: 'AI Services', href: '/ai-services', current: false },
     { name: 'IT Services', href: '/it-services', current: false },
     { name: 'Micro SaaS', href: '/micro-saas', current: false },
+    { name: 'Pricing', href: '/pricing', current: false },
     { name: 'About', href: '/about', current: false },
     { name: 'Contact', href: '/contact', current: false },
     { name: 'Blog', href: '/blog', current: false },
@@ -51,7 +52,6 @@ export function AppHeader() {
     { name: 'Case Studies', href: '/case-studies', current: false },
     { name: 'Help', href: '/help', current: false },
     { name: 'FAQ', href: '/faq', current: false },
-    { name: 'Pricing', href: '/pricing', current: false },
     { name: 'Marketplace', href: '/marketplace', current: false },
   ];
 
@@ -61,6 +61,7 @@ export function AppHeader() {
     { name: '2026 Services Overview', href: '/ultimate-services-showcase-2026', icon: Star, description: 'Revolutionary AI & Quantum Solutions', category: 'Featured', featured: true, color: 'from-yellow-500 to-orange-500' },
     { name: '2027 Services Overview', href: '/comprehensive-services-showcase-2027', icon: Star, description: 'Cutting-edge Innovation & Emerging Tech', category: 'Featured', featured: true, color: 'from-purple-500 to-pink-500' },
     { name: '2029 Cutting-Edge Services', href: '/zion-cutting-edge-services-2029', icon: Star, description: 'Future-ready Technology Solutions', category: 'Featured', featured: true, color: 'from-indigo-500 to-purple-500' },
+    { name: '2031 Cutting-Edge Services', href: '/zion-cutting-edge-services-2031', icon: Star, description: 'Revolutionary AI & Quantum Solutions', category: 'Featured', featured: true, color: 'from-green-500 to-emerald-500' },
     
     // AI & Machine Learning
     { name: 'AI Business Intelligence', href: '/services/ai-business-intelligence', icon: Brain, description: 'Advanced analytics & ML insights', category: 'AI & ML', color: 'from-blue-500 to-indigo-500' },
@@ -99,6 +100,11 @@ export function AppHeader() {
     // Data & Analytics
     { name: 'Data Analytics', href: '/services/data-analytics', icon: BarChart3, description: 'Business intelligence & insights', category: 'Data & Analytics', color: 'from-blue-500 to-indigo-500' },
     { name: 'Business Intelligence', href: '/services/ai-business-intelligence', icon: TrendingUp, description: 'Performance metrics & reporting', category: 'Data & Analytics', color: 'from-green-500 to-teal-500' },
+    
+    // Pricing & Guides
+    { name: 'Comprehensive Pricing 2026', href: '/comprehensive-pricing-2026', icon: DollarSign, description: 'Complete pricing information', category: 'Pricing', color: 'from-green-500 to-emerald-500' },
+    { name: 'Comprehensive Pricing 2028', href: '/comprehensive-pricing-2028', icon: DollarSign, description: 'Advanced pricing solutions', category: 'Pricing', color: 'from-blue-500 to-indigo-500' },
+    { name: 'Comprehensive Pricing 2031', href: '/comprehensive-pricing-2031', icon: DollarSign, description: 'Revolutionary pricing guide', category: 'Pricing', color: 'from-purple-500 to-pink-500' },
     
     // Micro SaaS Solutions
     { name: 'Micro SaaS Platform', href: '/micro-saas', icon: ShoppingCart, description: 'Niche software solutions', category: 'Micro SaaS', color: 'from-purple-500 to-pink-500' },
@@ -441,8 +447,8 @@ export function AppHeader() {
 
               {/* Mobile Services */}
               <div className="space-y-2">
-                <div className="px-4 py-2 text-sm font-semibold text-cyan-400">Services</div>
-                {services.slice(0, 6).map((service) => (
+                <div className="px-4 py-2 text-sm font-semibold text-cyan-400">Featured Services</div>
+                {services.filter(service => service.featured).map((service) => (
                   <Link
                     key={service.name}
                     to={service.href}
@@ -458,6 +464,33 @@ export function AppHeader() {
                     </div>
                   </Link>
                 ))}
+                
+                <div className="px-4 py-2 text-sm font-semibold text-cyan-400">Popular Services</div>
+                {services.filter(service => !service.featured).slice(0, 4).map((service) => (
+                  <Link
+                    key={service.name}
+                    to={service.href}
+                    onClick={() => setMobileMenuOpen(false)}
+                    className="flex items-center space-x-3 px-4 py-3 text-gray-300 hover:text-white hover:bg-white/5 rounded-lg transition-all duration-300"
+                  >
+                    <div className={`w-8 h-8 rounded-lg bg-gradient-to-r ${service.color} flex items-center justify-center`}>
+                      <service.icon className="w-4 h-4 text-white" />
+                    </div>
+                    <div>
+                      <div className="text-sm font-medium">{service.name}</div>
+                      <div className="text-xs text-gray-400">{service.description}</div>
+                    </div>
+                  </Link>
+                ))}
+                
+                <Link
+                  to="/zion-cutting-edge-services-2031"
+                  onClick={() => setMobileMenuOpen(false)}
+                  className="block px-4 py-3 text-center text-green-400 font-medium hover:text-white transition-colors duration-300 border border-green-400/20 rounded-lg"
+                >
+                  🚀 2031 Cutting-Edge Services →
+                </Link>
+                
                 <Link
                   to="/services"
                   onClick={() => setMobileMenuOpen(false)}
