@@ -11,6 +11,7 @@ import { EnhancedAccessibilityPanel } from './components/EnhancedAccessibilityPa
 import { AdvancedPerformanceMonitor } from './components/AdvancedPerformanceMonitor';
 import { InteractiveUserExperience } from './components/InteractiveUserExperience';
 import { SecurityEnhancer } from './components/SecurityEnhancer';
+import { SkipLink } from './components/SkipLink';
 
 // Core pages - only import existing ones
 const Home = React.lazy(() => import('./pages/Home'));
@@ -157,9 +158,10 @@ const App = React.memo(() => {
     <EnhancedErrorBoundary>
       <Router>
         <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+          <SkipLink />
           {header}
           
-          <main className="flex-1">
+          <main id="main-content" className="flex-1" tabIndex={-1}>
             <Suspense fallback={<EnhancedLoadingSpinner />}>
               <Routes>
                 {routeElements}
