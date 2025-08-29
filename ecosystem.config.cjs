@@ -187,6 +187,57 @@ module.exports = {
         NODE_ENV: 'production',
         AUTOMATION_INTERVAL: '21600000' // 6 hours
       }
+    },
+
+    // NEW: AI-Powered Code Quality Enhancer
+    {
+      name: 'ai-code-quality-enhancer',
+      script: './scripts/automation/ai-code-quality-enhancer.cjs',
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      max_memory_restart: '1G',
+      env: {
+        NODE_ENV: 'production'
+      },
+      cron_restart: '*/20 * * * *', // Every 20 minutes
+      log_file: './logs/ai-code-quality-enhancer.log',
+      error_file: './logs/ai-code-quality-enhancer-error.log',
+      out_file: './logs/ai-code-quality-enhancer-out.log'
+    },
+
+    // NEW: Intelligent Performance Optimizer
+    {
+      name: 'intelligent-performance-optimizer',
+      script: './scripts/automation/intelligent-performance-optimizer.cjs',
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      max_memory_restart: '1G',
+      env: {
+        NODE_ENV: 'production'
+      },
+      cron_restart: '0 */4 * * *', // Every 4 hours
+      log_file: './logs/intelligent-performance-optimizer.log',
+      error_file: './logs/intelligent-performance-optimizer-error.log',
+      out_file: './logs/intelligent-performance-optimizer-out.log'
+    },
+
+    // NEW: Smart Testing Automation
+    {
+      name: 'smart-testing-automation',
+      script: './scripts/automation/smart-testing-automation.cjs',
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      max_memory_restart: '1G',
+      env: {
+        NODE_ENV: 'production'
+      },
+      cron_restart: '0 */6 * * *', // Every 6 hours
+      log_file: './logs/smart-testing-automation.log',
+      error_file: './logs/smart-testing-automation-error.log',
+      out_file: './logs/smart-testing-automation-out.log'
     }
   ]
 };
