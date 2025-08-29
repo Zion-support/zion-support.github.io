@@ -1,30 +1,5 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-
-const links = [
-  '/', '/about', '/services', '/contact', '/blog', '/partners', '/faq', '/careers',
-  '/privacy', '/terms', '/sitemap', '/pricing', '/marketplace', '/support', '/security',
-  '/status', '/accessibility', '/docs', '/white-papers', '/webinars', '/training', '/research',
-  '/search', '/categories', '/api-playground'
-];
-
-export default function Sitemap() {
-  return (
-    <div className="container mx-auto px-4 py-16">
-      <h1 className="text-3xl font-bold text-white mb-6">Sitemap</h1>
-      <ul className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3">
-        {links.map((href) => (
-          <li key={href}>
-            <Link to={href} className="text-zion-cyan hover:underline">{href}</Link>
-          </li>
-        ))}
-      </ul>
-    </div>
-  );
-}
-
-import React from 'react';
-import { Link } from 'react-router-dom';
 import { Sitemap, Home, Users, Settings, FileText, Shield, Mail, HelpCircle, Building, Briefcase, Brain, Cloud, Rocket, Heart, Globe, Lock, Cpu, Zap, Star, TrendingUp, MessageCircle, DollarSign, BookOpen, Phone, MapPin } from 'lucide-react';
 
 export default function SitemapPage() {

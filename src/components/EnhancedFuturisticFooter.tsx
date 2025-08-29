@@ -421,26 +421,29 @@ export const EnhancedFuturisticFooter: React.FC = () => {
                 <Globe className="w-5 h-5" />
               </a>
               <a 
-                href="https://linkedin.com" 
+                href="https://linkedin.com/company/ziontechgroup" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="text-slate-400 hover:text-cyan-400 transition-colors"
+                aria-label="LinkedIn"
               >
                 <Linkedin className="w-5 h-5" />
               </a>
               <a 
-                href="https://twitter.com" 
+                href="https://twitter.com/ziontechgroup" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="text-slate-400 hover:text-cyan-400 transition-colors"
+                aria-label="Twitter"
               >
                 <Twitter className="w-5 h-5" />
               </a>
               <a 
-                href="https://github.com" 
+                href="https://github.com/ziontechgroup" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="text-slate-400 hover:text-cyan-400 transition-colors"
+                aria-label="GitHub"
               >
                 <Github className="w-5 h-5" />
               </a>

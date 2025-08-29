@@ -1,45 +1,4 @@
 import React from 'react';
-import { SEO } from '@/components/SEO';
-
-const Services: React.FC = () => (
-  <div className="min-h-screen bg-slate-900 text-white">
-    <SEO title="Services - Zion Tech Group" description="Micro SaaS products, enterprise IT services, and AI solutions with transparent pricing and clear outcomes." />
-    <section className="container mx-auto px-4 py-12">
-      <h1 className="text-4xl font-bold mb-3">Services</h1>
-      <p className="text-slate-300 max-w-3xl">Explore our offerings across micro SaaS, IT services, and AI solutions. We deliver real outcomes, fast deployments, and measurable ROI.</p>
-    </section>
-    <section className="container mx-auto px-4 pb-16 grid md:grid-cols-3 gap-6">
-      <a href="/services-catalog" className="p-6 bg-slate-800 rounded-xl border border-slate-700 hover:border-cyan-600 transition">
-        <h3 className="font-semibold text-lg mb-1">Services Catalog</h3>
-        <p className="text-slate-300 text-sm">Browse all production-ready solutions with pricing.</p>
-      </a>
-      <a href="/services/website-ai-chatbot" className="p-6 bg-slate-800 rounded-xl border border-slate-700 hover:border-cyan-600 transition">
-        <h3 className="font-semibold text-lg mb-1">Website AI Chatbot</h3>
-        <p className="text-slate-300 text-sm">Qualify and book meetings 24/7.</p>
-      </a>
-      <a href="/services/api-monitoring" className="p-6 bg-slate-800 rounded-xl border border-slate-700 hover:border-cyan-600 transition">
-        <h3 className="font-semibold text-lg mb-1">API Monitoring & Status</h3>
-        <p className="text-slate-300 text-sm">SLA-grade checks, SLOs, and incident workflows.</p>
-      </a>
-      <a href="/services/gdpr-cookie-compliance" className="p-6 bg-slate-800 rounded-xl border border-slate-700 hover:border-cyan-600 transition">
-        <h3 className="font-semibold text-lg mb-1">GDPR & Cookie Compliance</h3>
-        <p className="text-slate-300 text-sm">Consent banners, scanners, and audit logs.</p>
-      </a>
-      <a href="/services/ai-proofreading-studio" className="p-6 bg-slate-800 rounded-xl border border-slate-700 hover:border-cyan-600 transition">
-        <h3 className="font-semibold text-lg mb-1">AI Proofreading Studio</h3>
-        <p className="text-slate-300 text-sm">Brand tone, compliance, and localization.</p>
-      </a>
-      <a href="/contact" className="p-6 bg-slate-800 rounded-xl border border-slate-700 hover:border-cyan-600 transition">
-        <h3 className="font-semibold text-lg mb-1">Talk to an Expert</h3>
-        <p className="text-slate-300 text-sm">Call +1 302 464 0950 or email kleber@ziontechgroup.com</p>
-      </a>
-    </section>
-  </div>
-);
-
-export default Services;
-
-import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { SEO } from '@/components/SEO';

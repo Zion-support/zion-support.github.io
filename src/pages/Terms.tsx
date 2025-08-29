@@ -1,15 +1,4 @@
 import React from 'react';
-
-export default function Terms() {
-  return (
-    <div className="container mx-auto px-4 py-16">
-      <h1 className="text-3xl font-bold text-white mb-4">Terms of Service</h1>
-      <p className="text-zion-slate-light">The terms governing the use of our services.</p>
-    </div>
-  );
-}
-
-import React from 'react';
 import { motion } from 'framer-motion';
 import { 
   FileText, 
