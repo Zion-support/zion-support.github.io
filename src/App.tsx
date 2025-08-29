@@ -40,7 +40,7 @@ const SolutionsEnterprise = lazy(() => import('./pages/solutions/Enterprise'));
 const SolutionsHealthcare = lazy(() => import('./pages/solutions/Healthcare'));
 
 // Enhanced services pages - only import existing ones
-const ComprehensivePricingGuide2027 = lazy(() => import('./pages/ComprehensivePricingGuide2027.tsx'));
+// const ComprehensivePricingGuide2027 = lazy(() => import('./pages/ComprehensivePricingGuide2027.tsx'));
 
 // Service pages - only import existing ones
 const CloudDevOps = lazy(() => import('./pages/services/CloudDevOps'));
@@ -100,7 +100,7 @@ const DigitalTransformation = lazy(() => import('./pages/services/DigitalTransfo
 
 // 2025 Innovative Services
 const InnovativeServicesLanding2025 = lazy(() => import('./pages/InnovativeServicesLanding2025'));
-const ComprehensiveServicesShowcase2025 = lazy(() => import('./pages/ComprehensiveServicesShowcase2025'));
+// const ComprehensiveServicesShowcase2025 = lazy(() => import('./pages/ComprehensiveServicesShowcase2025'));
 const ComprehensivePricingGuide2025 = lazy(() => import('./pages/ComprehensivePricingGuide2025'));
 
 // Additional missing imports
@@ -121,7 +121,7 @@ const AIAutonomousVehiclePlatform = lazy(() => import('./pages/services/AIAutono
 const AIMetaverseDevelopmentPlatform = lazy(() => import('./pages/services/AIMetaverseDevelopmentPlatform'));
 
 // Comprehensive services imports
-const ComprehensiveServicesShowcase2025Page = lazy(() => import('./pages/ComprehensiveServicesShowcase2025'));
+// const ComprehensiveServicesShowcase2025Page = lazy(() => import('./pages/ComprehensiveServicesShowcase2025'));
 const ComprehensiveServicesShowcase2027Page = lazy(() => import('./pages/ComprehensiveServicesShowcase2027'));
 const ComprehensiveServicesLanding2025 = lazy(() => import('./pages/ComprehensiveServicesLanding2025'));
 const ComprehensivePricing2026 = lazy(() => import('./pages/ComprehensivePricing2026'));
@@ -191,7 +191,7 @@ const ErrorFallback = ({ error, resetErrorBoundary }: { error: Error; resetError
   </div>
 );
 
-function App() {
+const App = () => {
   return (
     <HelmetProvider>
       <ErrorBoundary fallback={<ErrorFallback error={new Error()} resetErrorBoundary={() => {}} />}>
@@ -310,11 +310,11 @@ function App() {
                     
                     {/* 2025 Innovative Services Routes */}
                     <Route path="/innovative-services-landing-2025" element={<InnovativeServicesLanding2025 />} />
-                    <Route path="/comprehensive-services-showcase-2025" element={<ComprehensiveServicesShowcase2025 />} />
+                    {/* <Route path="/comprehensive-services-showcase-2025" element={<ComprehensiveServicesShowcase2025 />} /> */}
                     <Route path="/comprehensive-pricing-guide-2025" element={<ComprehensivePricingGuide2025 />} />
                     
                     {/* Comprehensive Services Routes */}
-                    <Route path="/comprehensive-services-showcase-2025" element={<ComprehensiveServicesShowcase2025Page />} />
+                    {/* <Route path="/comprehensive-services-showcase-2025" element={<ComprehensiveServicesShowcase2025Page />} /> */}
                     <Route path="/ultimate-services-showcase-2026" element={<UltimateServicesShowcase2026 />} />
                     <Route path="/comprehensive-services-showcase-2027" element={<ComprehensiveServicesShowcase2027Page />} />
                     <Route path="/comprehensive-services-landing-2025" element={<ComprehensiveServicesLanding2025 />} />
