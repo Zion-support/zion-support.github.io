@@ -111,7 +111,7 @@ const AIContentCreation = createLazyComponent(() => import('./pages/services/ai-
 const IoTEdgeComputing = createLazyComponent(() => import('./pages/services/iot-edge-computing'));
 const QuantumComputing = createLazyComponent(() => import('./pages/services/quantum-computing'));
 const DigitalTwin = createLazyComponent(() => import('./pages/services/DigitalTwin'));
-const DataAnalytics = createLazyComponent(() => import('./pages/DataAnalytics'));
+const DataAnalytics = createLazyComponent(() => import('./pages/services/AIDataAnalytics'));
 const API = createLazyComponent(() => import('./pages/API'));
 const DeveloperPortal = createLazyComponent(() => import('./pages/DeveloperPortal'));
 
