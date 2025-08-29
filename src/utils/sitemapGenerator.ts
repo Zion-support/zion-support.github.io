@@ -22,7 +22,7 @@ export class SitemapGenerator {
    * Generate XML sitemap content
    */
   generateXML(): string {
-    const { baseUrl, urls } = this.config;
+    const { baseUrl } = this.config;
     
     const xmlUrls = urls.map(url => {
       const lastmod = url.lastmod || new Date().toISOString().split('T')[0];
@@ -97,7 +97,7 @@ ${sitemapEntries}
    * Generate JSON-LD structured data for sitemap
    */
   generateStructuredData(): string {
-    const { baseUrl, urls } = this.config;
+    const { baseUrl } = this.config;
     
     const structuredData = {
       "@context": "https://schema.org",

@@ -440,6 +440,6 @@ export default function HelpCenter() {
       </div>
     </>
   );
-};
+}
 
 export default HelpCenter;

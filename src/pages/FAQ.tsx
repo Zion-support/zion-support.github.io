@@ -337,6 +337,6 @@ export default function FAQ() {
       </div>
     </>
   );
-};
+}
 
 export default FAQ;

@@ -19,7 +19,7 @@ class ApiError extends Error {
 }
 
 // Generic fetch wrapper with error handling
-async function apiRequest<T>(
+// // async function apiRequest<T>(
   endpoint: string,
   options: RequestInit = {}
 ): Promise<ApiResponse<T>> {

@@ -493,6 +493,6 @@ export default function DigitalTransformation() {
       </section>
     </div>
   );
-};
+}
 
 export default DigitalTransformation;

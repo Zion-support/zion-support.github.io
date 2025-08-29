@@ -10,10 +10,7 @@ import {
   Activity,
   BarChart3,
   TrendingUp,
-  Shield,
-  Database,
-  Smartphone,
-  Code,
+  Shield,Code,
   FileText,
   AlertCircle,
   CheckSquare,
@@ -32,44 +29,19 @@ import {
   TrendingUp2,
   Lightbulb,
   Briefcase,
-  Strategy,
-  Brain,
-  Compass,
+  Strategy,Compass,
   RefreshCw,
   TrendingUp3,
   Layers,
   Workflow,
   Scale,
-  Award,
-  Lock,
-  Wifi,
-  Bluetooth,
-  Radio,
-  Sensor,
+  Award,Sensor,
   Chip,
-  Circuit,
-  Orbit,
-  Planet,
-  Star,
-  Telescope,
-  Antenna,
-  Signal,
-  Navigation,
-  Earth,
-  Moon,
-  Sun,
-  Binary,
-  Network,
-  Database2,
-  Lock2,
+  Circuit,Planet,Telescope,Earth,2,2,
   Key2,
-  Fingerprint2,
-  Eye,
-  Brain2,
+  Fingerprint2,2,
   Cpu2,
-  Memory,
-  HardDrive,
-  Server2,
+  Memory,Server2,
   Phone,
   Mail,
   Calendar,
@@ -84,54 +56,15 @@ import {
   UserSettings,
   UserCog,
   UserShield,
-  UserStar,
-  UserHeart,
-  UserCheck2,
+  UserUserCheck2,
   UserX2,
   UserMinus2,
-  UserPlus2,
-  UserEdit2,
-  UserSearch2,
-  UserList2,
-  UserSettings2,
-  UserCog2,
-  UserShield2,
-  UserStar2,
-  UserHeart,
-  Monitor,
-  Eye,
-  Users,
+  UserPlus2,UserCog2,Monitor,Users,
   MousePointer,
   Clock,
-  MapPin,
-  Device,
-  Globe,
-  Smartphone,
-  Tablet,
-  Laptop,
-  Desktop,
-  Server,
-  Database,
-  HardDrive,
-  Cpu,
-  Network,
-  Wifi,
-  Bluetooth,
-  Radio,
-  Signal,
-  Antenna,
-  Satellite,
-  Orbit,
-  Star,
-  Navigation,
-  Moon,
-  Sun,
-  Binary,
-  Lock,
-  Key,
-  Fingerprint,
-  Brain,
-  Rocket,
+  MapPin,Globe,Tablet,
+  Laptop,Server,Cpu,Satellite,Key,
+  Fingerprint,Rocket,
   DollarSign,
   Search,
   Sparkles,
@@ -151,8 +84,7 @@ const Enterprise = () => {
       description: 'Advanced security features and compliance frameworks'
     },
     {
-      icon: Database,
-      title: 'Data Management',
+      icon:title: 'Data Management',
       description: 'Comprehensive data governance and management solutions'
     },
     {
@@ -193,8 +125,7 @@ const Enterprise = () => {
       description: 'Enterprise-wide process automation and optimization'
     },
     {
-      icon: Brain,
-      title: 'AI & Analytics',
+      icon:title: 'AI & Analytics',
       description: 'Advanced AI and analytics for enterprise insights'
     },
     {
@@ -252,8 +183,7 @@ const Enterprise = () => {
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-500 text-white font-semibold rounded-lg hover:from-purple-600 hover:to-pink-600 transition-all duration-200 flex items-center justify-center">
-                <Play className="w-5 h-5 mr-2" />
-                Start Enterprise Project
+                <Play className="w-5 h-5 mr-2" />t Enterprise Project
               </button>
               <button className="px-8 py-4 border border-purple-500/30 text-purple-400 font-semibold rounded-lg hover:bg-purple-500/10 transition-all duration-200 flex items-center justify-center">
                 <Settings className="w-5 h-5 mr-2" />
@@ -440,8 +370,7 @@ const Enterprise = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
-            <h2 className="text-4xl font-bold text-white mb-4">
-              Start Your Enterprise Project Today
+            <h2 className="text-4xl font-bold text-white mb-4">t Your Enterprise Project Today
             </h2>
             <p className="text-xl text-gray-300 mb-8">
               Join large organizations worldwide that use our enterprise solutions to 
@@ -449,7 +378,7 @@ const Enterprise = () => {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-500 text-white font-semibold rounded-lg hover:from-purple-600 hover:to-pink-600 transition-all duration-200 flex items-center justify-center">
-                Get Started Today
+                Getted Today
                 <ArrowRight className="w-5 h-5 ml-2" />
               </button>
               <button className="px-8 py-4 border border-purple-500/30 text-purple-400 font-semibold rounded-lg hover:bg-purple-500/10 transition-all duration-200">

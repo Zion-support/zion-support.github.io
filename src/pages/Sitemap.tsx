@@ -1,103 +1,100 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { 
-  Home, 
-  Users, 
-  Zap, 
-  MessageCircle, 
-  BookOpen, 
-  Briefcase, 
-  FileText, 
-  HelpCircle, 
-  ShoppingCart, 
-  DollarSign, 
-  Brain, 
-  Cloud, 
-  Shield, 
-  Atom, 
-  TrendingUp, 
-  BarChart3, 
-  Target, 
-  Server, 
-  Building, 
-  Cpu, 
-  Lock, 
-  Eye, 
-  Network, 
-  Satellite, 
-  Smartphone, 
-  Mail, 
-  Video, 
+import {
+  BarChart3,
+  ShoppingCart,
+  Building,
+  Star,
+  Target,
+  DollarSign,
+  Mail,
+  Video,
   Heart,
   Globe,
-  Star,
   ArrowRight
 } from 'lucide-react';
-      icon: BarChart3,
-      links: [
-        { name: 'Data Analytics', path: '/services/data-analytics', description: 'Business intelligence & insights' },
-        { name: 'AI Healthcare Analytics', path: '/services/ai-healthcare-analytics', description: 'Healthcare data analysis' },
-        { name: 'AI Financial Trading', path: '/services/ai-financial-trading', description: 'AI-powered trading' },
-      ]
-    },
-    {
-      title: 'Micro SaaS Solutions',
-      icon: ShoppingCart,
-      links: [
-        { name: 'Micro CRM', path: '/services/micro-crm', description: 'Customer relationship management' },
-        { name: 'Helpdesk Platform', path: '/services/helpdesk', description: 'Customer support system' },
-        { name: 'Website Analytics', path: '/services/website-analytics', description: 'Performance tracking & insights' },
-        { name: 'IT Helpdesk', path: '/services/it-helpdesk', description: 'IT support system' },
-        { name: 'Affiliate Tracking', path: '/services/affiliate-tracking', description: 'Affiliate program management' },
-        { name: 'Mobile Survey', path: '/services/mobile-survey', description: 'Mobile survey platform' },
-        { name: 'Email Sequencer', path: '/services/email-sequencer', description: 'Email automation' },
-        { name: 'Podcast Transcription', path: '/services/podcast-transcription', description: 'Audio transcription service' },
-        { name: 'Returns Management', path: '/services/returns-management', description: 'Returns processing system' },
-      ]
-    },
-    {
-      title: 'Industry Solutions',
-      icon: Building,
-      links: [
-        { name: 'Enterprise Solutions', path: '/solutions/enterprise', description: 'Enterprise-grade solutions' },
-        { name: 'Healthcare Solutions', path: '/solutions/healthcare', description: 'Healthcare industry solutions' },
-      ]
-    },
-    {
-      title: 'Specialized Services',
-      icon: Star,
-      links: [
-        { name: 'AI Legal Document Automation', path: '/services/ai-legal-document-automation', description: 'Legal document AI' },
-        { name: 'AI Content Creation Suite', path: '/services/ai-content-creation-suite', description: 'Content creation AI' },
-        { name: 'AI HR Platform', path: '/services/ai-hr-platform', description: 'HR automation platform' },
-        { name: 'AI Content Creation', path: '/services/ai-content-creation', description: 'AI content generation' },
-        { name: 'AI Cybersecurity', path: '/services/ai-cybersecurity', description: 'AI security solutions' },
-      ]
-    },
-    {
-      title: 'Advanced Service Showcases',
-      icon: Target,
-      links: [
-        { name: '2026 Services Overview', path: '/ultimate-services-showcase-2026', description: 'Revolutionary AI & Quantum Solutions' },
-        { name: '2027 Services Overview', path: '/comprehensive-services-showcase-2027', description: 'Cutting-edge Innovation & Emerging Tech' },
-        { name: '2029 Cutting-Edge Services', path: '/zion-cutting-edge-services-2029', description: 'Future-ready Technology Solutions' },
-        { name: 'Comprehensive Services 2025', path: '/comprehensive-services-showcase-2025', description: 'Comprehensive service overview' },
-        { name: 'Innovative Services 2025', path: '/innovative-services-showcase-2025', description: 'Innovative service showcase' },
-        { name: 'Ultimate Innovative Services 2025', path: '/ultimate-innovative-services-showcase-2025', description: 'Ultimate innovative services' },
-        { name: 'New Services 2025', path: '/new-services-showcase-2025', description: 'New service offerings' },
-      ]
-    },
-    {
-      title: 'Pricing & Guides',
-      icon: DollarSign,
-      links: [
-        { name: 'Comprehensive Pricing 2026', path: '/comprehensive-pricing-2026', description: '2026 pricing guide' },
-        { name: 'Comprehensive Pricing 2028', path: '/comprehensive-pricing-2028', description: '2028 pricing guide' },
-        { name: 'Comprehensive Pricing Guide 2027', path: '/comprehensive-pricing-guide-2027', description: '2027 pricing guide' },
-      ]
-    }
-  ];
+
+interface SitemapLink {
+  name: string;
+  path: string;
+  description: string;
+}
+
+interface SitemapSection {
+  title: string;
+  icon: any;
+  links: SitemapLink[];
+}
+
+const sitemapData: SitemapSection[] = [
+  {
+    title: 'Data Analytics & AI',
+    icon: BarChart3,
+    links: [
+      { name: 'Data Analytics', path: '/services/data-analytics', description: 'Business intelligence & insights' },
+      { name: 'AI Healthcare Analytics', path: '/services/ai-healthcare-analytics', description: 'Healthcare data analysis' },
+      { name: 'AI Financial Trading', path: '/services/ai-financial-trading', description: 'AI-powered trading' },
+    ]
+  },
+  {
+    title: 'Micro SaaS Solutions',
+    icon: ShoppingCart,
+    links: [
+      { name: 'Micro CRM', path: '/services/micro-crm', description: 'Customer relationship management' },
+      { name: 'Helpdesk Platform', path: '/services/helpdesk', description: 'Customer support system' },
+      { name: 'Website Analytics', path: '/services/website-analytics', description: 'Performance tracking & insights' },
+      { name: 'IT Helpdesk', path: '/services/it-helpdesk', description: 'IT support system' },
+      { name: 'Affiliate Tracking', path: '/services/affiliate-tracking', description: 'Affiliate program management' },
+      { name: 'Mobile Survey', path: '/services/mobile-survey', description: 'Mobile survey platform' },
+      { name: 'Email Sequencer', path: '/services/email-sequencer', description: 'Email automation' },
+      { name: 'Podcast Transcription', path: '/services/podcast-transcription', description: 'Audio transcription service' },
+      { name: 'Returns Management', path: '/services/returns-management', description: 'Returns processing system' },
+    ]
+  },
+  {
+    title: 'Industry Solutions',
+    icon: Building,
+    links: [
+      { name: 'Enterprise Solutions', path: '/solutions/enterprise', description: 'Enterprise-grade solutions' },
+      { name: 'Healthcare Solutions', path: '/solutions/healthcare', description: 'Healthcare industry solutions' },
+    ]
+  },
+  {
+    title: 'Specialized Services',
+    icon: Star,
+    links: [
+      { name: 'AI Legal Document Automation', path: '/services/ai-legal-document-automation', description: 'Legal document AI' },
+      { name: 'AI Content Creation Suite', path: '/services/ai-content-creation-suite', description: 'Content creation AI' },
+      { name: 'AI HR Platform', path: '/services/ai-hr-platform', description: 'HR automation platform' },
+      { name: 'AI Content Creation', path: '/services/ai-content-creation', description: 'AI content generation' },
+      { name: 'AI Cybersecurity', path: '/services/ai-cybersecurity', description: 'AI security solutions' },
+    ]
+  },
+  {
+    title: 'Advanced Service Showcases',
+    icon: Target,
+    links: [
+      { name: '2026 Services Overview', path: '/ultimate-services-showcase-2026', description: 'Revolutionary AI & Quantum Solutions' },
+      { name: '2027 Services Overview', path: '/comprehensive-services-showcase-2027', description: 'Cutting-edge Innovation & Emerging Tech' },
+      { name: '2029 Cutting-Edge Services', path: '/zion-cutting-edge-services-2029', description: 'Future-ready Technology Solutions' },
+      { name: 'Comprehensive Services 2025', path: '/comprehensive-services-showcase-2025', description: 'Comprehensive service overview' },
+      { name: 'Innovative Services 2025', path: '/innovative-services-showcase-2025', description: 'Innovative service showcase' },
+      { name: 'Ultimate Innovative Services 2025', path: '/ultimate-innovative-services-showcase-2025', description: 'Ultimate innovative services' },
+      { name: 'New Services 2025', path: '/new-services-showcase-2025', description: 'New service offerings' },
+    ]
+  },
+  {
+    title: 'Pricing & Guides',
+    icon: DollarSign,
+    links: [
+      { name: 'Comprehensive Pricing 2026', path: '/comprehensive-pricing-2026', description: '2026 pricing guide' },
+      { name: 'Comprehensive Pricing 2028', path: '/comprehensive-pricing-2028', description: '2028 pricing guide' },
+      { name: 'Comprehensive Pricing Guide 2027', path: '/comprehensive-pricing-guide-2027', description: '2027 pricing guide' },
+    ]
+  }
+];
+
 interface SitemapSection {
   title: string;
   icon: any;
@@ -131,107 +128,14 @@ const sitemapSections: SitemapSection[] = [
   },
   {
     title: 'AI & Machine Learning',
-    icon: Brain,
-    description: 'Artificial intelligence and machine learning solutions',
+    icon: Globe,
+    description: 'Artificial intelligence and machine learning services',
     links: [
-      { name: 'AI Business Intelligence', href: '/services/ai-business-intelligence', description: 'Advanced analytics & ML insights' },
-      { name: 'AI Compliance Assistant', href: '/services/ai-compliance-assistant', description: 'Automated regulatory compliance' },
-      { name: 'AI Sales Copilot', href: '/services/ai-sales-copilot', description: 'Intelligent sales optimization' },
-      { name: 'AI-Powered SEO', href: '/services/ai-seo', description: 'Machine learning SEO optimization' },
-      { name: 'AI Content Marketing Suite', href: '/services/ai-content-marketing-suite', description: 'Automated content creation' },
-      { name: 'AI Customer Support', href: '/services/ai-customer-support-automation', description: 'Intelligent support automation' },
-      { name: 'AI Project Management', href: '/services/ai-project-management', description: 'AI-driven project optimization' },
-      { name: 'AI Financial Analytics', href: '/services/ai-financial-analytics', description: 'Intelligent financial insights' },
-      { name: 'AI Marketing Automation', href: '/services/ai-marketing-automation', description: 'Automated marketing workflows' },
-      { name: 'AI Content Creation', href: '/services/ai-content-creation', description: 'AI-powered content generation' },
-      { name: 'AI Cybersecurity', href: '/services/ai-cybersecurity', description: 'AI-enhanced security solutions' },
-      { name: 'AI HR Platform', href: '/services/ai-hr-platform', description: 'Human resources automation' },
-      { name: 'AI Predictive Maintenance', href: '/services/ai-predictive-maintenance', description: 'Predictive analytics for maintenance' },
-      { name: 'AI Supply Chain Optimization', href: '/services/ai-supply-chain-optimization', description: 'Supply chain intelligence' },
-      { name: 'AI Healthcare Platform', href: '/services/ai-healthcare-platform', description: 'Healthcare AI solutions' },
-      { name: 'AI Legal Document Automation', href: '/services/ai-legal-document-automation', description: 'Legal document processing' },
-      { name: 'AI Healthcare Analytics', href: '/services/ai-healthcare-analytics', description: 'Healthcare data analytics' },
-      { name: 'AI Financial Trading', href: '/services/ai-financial-trading', description: 'Algorithmic trading solutions' },
-      { name: 'AI Autonomous Research Assistant', href: '/services/ai-autonomous-research-assistant', description: 'Research automation' },
-      { name: 'AI Workflow Orchestrator', href: '/services/ai-workflow-orchestrator', description: 'Workflow automation' },
-      { name: 'AI Data Governance Platform', href: '/services/ai-data-governance-platform', description: 'Data management solutions' },
-      { name: 'AI Customer Experience Analytics', href: '/services/ai-customer-experience-analytics', description: 'Customer insights' },
-      { name: 'AI Financial Risk Management', href: '/services/ai-financial-risk-management', description: 'Risk assessment tools' }
-    ]
-  },
-  {
-    title: 'Cloud & Infrastructure',
-    icon: Cloud,
-    description: 'Cloud computing and infrastructure solutions',
-    links: [
-      { name: 'Cloud DevOps', href: '/services/cloud-devops', description: 'Infrastructure automation & scaling' },
-      { name: 'IT Infrastructure', href: '/services/it-infrastructure', description: 'Enterprise infrastructure solutions' },
-      { name: 'FinOps Advisor', href: '/services/finops-advisor', description: 'Cloud cost optimization' },
-      { name: 'Cloud FinOps Optimizer', href: '/services/cloud-finops-optimizer', description: 'Financial operations automation' },
-      { name: 'IT Consulting', href: '/it-consulting', description: 'Technology strategy & planning' },
-      { name: 'Enterprise Solutions', href: '/solutions/enterprise', description: 'Large enterprise solutions' },
-      { name: 'Healthcare Solutions', href: '/solutions/healthcare', description: 'Healthcare industry solutions' }
-    ]
-  },
-  {
-    title: 'Cybersecurity & Privacy',
-    icon: Shield,
-    description: 'Security and privacy protection solutions',
-    links: [
-      { name: 'AI Cybersecurity Platform', href: '/services/ai-cybersecurity-platform', description: 'Advanced AI-powered security' },
-      { name: 'Security Headers & CSP', href: '/services/security-headers-csp', description: 'Web security hardening' },
-      { name: 'DSR Privacy Portal', href: '/services/dsr-portal', description: 'GDPR/CCPA compliance' },
-      { name: 'Zero Trust Network Access', href: '/services/zero-trust-network-access', description: 'Modern security architecture' }
-    ]
-  },
-  {
-    title: 'Emerging Technologies',
-    icon: Atom,
-    description: 'Cutting-edge and future technologies',
-    links: [
-      { name: 'Quantum Computing', href: '/services/quantum-computing', description: 'Next-gen computational power' },
-      { name: 'IoT Edge Computing', href: '/services/iot-edge-computing', description: 'Smart device networks' },
-      { name: 'AI Quantum Hybrid Platform', href: '/services/ai-quantum-hybrid-platform', description: 'Quantum-AI integration' },
-      { name: 'Space Technology', href: '/space-tech', description: 'Space-based solutions' },
-      { name: 'Digital Twin', href: '/services/digital-twin', description: 'Virtual system replicas' },
-      { name: 'Digital Transformation', href: '/services/digital-transformation', description: 'Strategic technology consulting' },
-      { name: 'Sustainable Technology', href: '/services/sustainable-technology', description: 'Green technology solutions' },
-      { name: 'Quantum Machine Learning', href: '/services/quantum-machine-learning', description: 'Quantum ML algorithms' }
-    ]
-  },
-  {
-    title: 'Micro SaaS Solutions',
-    icon: ShoppingCart,
-    description: 'Niche software-as-a-service solutions',
-    links: [
-      { name: 'Micro CRM', href: '/services/micro-crm', description: 'Customer relationship management' },
-      { name: 'Helpdesk Platform', href: '/services/helpdesk', description: 'Customer support system' },
-      { name: 'Website Analytics', href: '/services/website-analytics', description: 'Performance tracking & insights' },
-      { name: 'IT Helpdesk', href: '/services/it-helpdesk', description: 'IT support automation' },
-      { name: 'Affiliate Tracking', href: '/services/affiliate-tracking', description: 'Marketing performance tracking' },
-      { name: 'Mobile Survey', href: '/services/mobile-survey', description: 'Mobile-first survey platform' },
-      { name: 'Email Sequencer', href: '/services/email-sequencer', description: 'Email automation tools' },
-      { name: 'Podcast Transcription', href: '/services/podcast-transcription', description: 'Audio to text conversion' },
-      { name: 'Returns Management', href: '/services/returns-management', description: 'Product returns handling' },
-      { name: 'Interview Assessment AI', href: '/services/interview-assessment', description: 'AI-powered candidate evaluation' },
-      { name: 'LLM Content Studio', href: '/services/llm-content-studio', description: 'Content creation tools' },
-      { name: 'AI Auto Email Responder', href: '/services/ai-auto-email-responder', description: 'Automated email responses' },
-      { name: 'Customer Feedback Surveys', href: '/services/customer-feedback-surveys', description: 'Feedback collection tools' },
-      { name: 'AI Compliance Copilot', href: '/services/ai-compliance-copilot', description: 'Compliance assistance' },
-      { name: 'AI Autonomous Code Reviewer', href: '/services/ai-autonomous-code-reviewer', description: 'Code review automation' }
-    ]
-  },
-  {
-    title: 'Business Solutions',
-    icon: Building,
-    description: 'Industry-specific and business solutions',
-    links: [
-      { name: 'Marketplace', href: '/marketplace', description: 'Service marketplace' },
-      { name: 'Pricing', href: '/pricing', description: 'Service pricing information' },
-      { name: 'Data Analytics', href: '/services/data-analytics', description: 'Business intelligence & insights' },
-      { name: 'AI Solutions Hub', href: '/ai-solutions', description: 'AI solutions overview' },
-      { name: 'Micro SaaS Platform', href: '/micro-saas', description: 'Micro SaaS overview' },
-      { name: 'IT Services', href: '/it-services', description: 'IT services overview' }
+      { name: 'AI Business Intelligence', href: '/services/ai-business-intelligence', description: 'AI-powered analytics' },
+      { name: 'Machine Learning Solutions', href: '/services/machine-learning', description: 'Custom ML models' },
+      { name: 'Deep Learning', href: '/services/deep-learning', description: 'Neural network solutions' },
+      { name: 'Computer Vision', href: '/services/computer-vision', description: 'Image and video analysis' },
+      { name: 'Natural Language Processing', href: '/services/nlp', description: 'Text and language processing' }
     ]
   }
 ];
@@ -344,3 +248,6 @@ export function Sitemap() {
     </div>
   );
 }
+
+
+export default Sitemap;
