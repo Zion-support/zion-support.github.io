@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { ADVANCED_SERVICES, SERVICE_CATEGORIES, PRICING_TIERS } from '@/data/advancedServices';
 import { Button } from '@/components/ui/button';
-import { Input } from '@/components/ui/input';
+import { Input } from '@/components/ui/Input';
 import { Badge } from '@/components/ui/badge';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Search, Star, Clock, Globe, TrendingUp, Shield, Brain, Users, CheckCircle, Phone, Mail, MapPin, ExternalLink } from 'lucide-react';
