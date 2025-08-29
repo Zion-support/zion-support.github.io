@@ -76,6 +76,9 @@ const Careers = React.lazy(() => import('./pages/Careers'));
 const Marketplace = React.lazy(() => import('./pages/Marketplace'));
 const InnovativeMicroSAASServices2025 = React.lazy(() => import('./pages/InnovativeMicroSAASServices2025'));
 
+// Advanced innovative services 2030
+const AdvancedInnovativeServices2030 = React.lazy(() => import('./pages/AdvancedInnovativeServices2030'));
+
 function App() {
   return (
     <ErrorBoundary>
@@ -106,6 +109,7 @@ function App() {
                 <Route path="/white-papers" element={<WhitePapers />} />
                 <Route path="/webinars" element={<Webinars />} />
                 <Route path="/revolutionary-services-2030" element={<RevolutionaryServices2030 />} />
+                <Route path="/advanced-innovative-services-2030" element={<AdvancedInnovativeServices2030 />} />
                 <Route path="/services/enhanced" element={<EnhancedServicesLanding />} />
                 <Route path="/services/comprehensive-2030" element={<ComprehensiveServicesLanding2030 />} />
                 <Route path="/services/micro-saas" element={<MicroSaaSProducts />} />
