@@ -326,17 +326,7 @@
 
         // Listen for online/offline events
         window.addEventListener('online', () => {
-            const statusElement = document.getElementById('networkStatus');
-            const statusText = document.getElementById('statusText');
-            
-            statusText.textContent = '✅ Back Online!';
-            statusElement.classList.add('online');
-            statusElement.style.background = 'rgba(34, 197, 94, 0.2)';
-            statusElement.style.borderColor = 'rgba(34, 197, 94, 0.4)';
-            
-            setTimeout(() => {
-                window.location.reload();
-            }, 2000);
+            checkConnection();
         });
 
         window.addEventListener('offline', () => {

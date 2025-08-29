@@ -88,8 +88,6 @@ export default function Pricing() {
     'Priority feature development requests'
   ];
 
-  const savings = billingCycle === 'annual' ? 20 : 0;
-
   return (
     <>
       <SEO 
@@ -272,6 +270,4 @@ export default function Pricing() {
       </div>
     </>
   );
-};
-
-export default Pricing;
+}

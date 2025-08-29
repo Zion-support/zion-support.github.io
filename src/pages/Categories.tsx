@@ -1,14 +1,3 @@
-import React from 'react';
-
-export default function Categories() {
-  return (
-    <div className="container mx-auto px-4 py-16">
-      <h1 className="text-3xl font-bold text-white mb-4">Categories</h1>
-      <p className="text-zion-slate-light">Browse categories across services and solutions.</p>
-    </div>
-  );
-}
-
 import React, { useState } from 'react';
 import { Server, Users, Building, Database, Cloud, Shield, Brain, Zap, Globe, Cpu, Lock, BarChart3, Palette, Smartphone, Rocket, Target, Lightbulb, Code, Network, Eye, Star, ArrowRight } from 'lucide-react';
 

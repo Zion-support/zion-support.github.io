@@ -190,41 +190,8 @@ export const EnhancedSEO: React.FC<SEOProps> = ({
       <meta name="msapplication-config" content={msConfig} />
       
       {/* Structured Data */}
-      {structuredData && (
-        <script type="application/ld+json">
-          {JSON.stringify(structuredData)}
-        </script>
-      )}
-      
-      {/* Default Structured Data for Organization */}
       <script type="application/ld+json">
-        {JSON.stringify({
-          "@context": "https://schema.org",
-          "@type": "Organization",
-          "name": "Zion Tech Group",
-          "url": "https://ziontechgroup.com",
-          "logo": "https://ziontechgroup.com/images/logo.png",
-          "description": "Leading technology solutions provider specializing in AI, cybersecurity, cloud computing, and digital transformation.",
-          "address": {
-            "@type": "PostalAddress",
-            "streetAddress": "364 E Main St STE 1008",
-            "addressLocality": "Middletown",
-            "addressRegion": "DE",
-            "postalCode": "19709",
-            "addressCountry": "US"
-          },
-          "contactPoint": {
-            "@type": "ContactPoint",
-            "telephone": "+1-302-464-0950",
-            "contactType": "customer service",
-            "email": "kleber@ziontechgroup.com"
-          },
-          "sameAs": [
-            "https://www.linkedin.com/company/zion-tech-group",
-            "https://twitter.com/ziontechgroup",
-            "https://www.facebook.com/ziontechgroup"
-          ]
-        })}
+        {JSON.stringify(finalStructuredData)}
       </script>
       
       {/* Additional SEO optimizations */}

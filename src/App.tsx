@@ -17,10 +17,6 @@ import { AdvancedAnalytics } from './components/AdvancedAnalytics';
 import { SmartNotificationSystem } from './components/SmartNotificationSystem';
 import { ChatAssistant } from './components/ChatAssistant';
 import { ErrorBoundary } from './components/ErrorBoundary';
-import { EnhancedAccessibilityPanel } from './components/EnhancedAccessibilityPanel';
-import { AdvancedPerformanceMonitor } from './components/AdvancedPerformanceMonitor';
-import InteractiveUserExperience from './components/InteractiveUserExperience';
-import SecurityEnhancer from './components/SecurityEnhancer';
 
 // Lazy-loaded pages for better performance
 const Home = lazy(() => import('./pages/Home').then(module => ({ default: module.Home })));
@@ -444,48 +440,6 @@ function App() {
       </ErrorBoundary>
     </HelmetProvider>
   );
-
-  // Memoize the header and footer to prevent unnecessary re-renders
-  const header = useMemo(() => <AppHeader />, []);
-  const footer = useMemo(() => <Footer />, []);
-
-  // Memoize the chat assistant to prevent unnecessary re-renders
-  const chatAssistant = useMemo(() => <ChatAssistant />, []);
-
-  // Memoize the performance components to prevent unnecessary re-renders
-  const performanceComponents = useMemo(() => (
-    <>
-      {/* <PerformanceOptimizer />
-      <AdvancedPerformanceMonitor />
-      <InteractiveUserExperience />
-      <SecurityEnhancer />
-      <EnhancedAccessibilityPanel /> */}
-    </>
-  ), []);
-
-  return (
-    <EnhancedErrorBoundary>
-      <Router>
-        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-          {header}
-          
-          <main className="flex-1">
-            <Suspense fallback={<EnhancedLoadingSpinner />}>
-              <Routes>
-                {routeElements}
-              </Routes>
-            </Suspense>
-          </main>
-
-          {footer}
-          {chatAssistant}
-          {performanceComponents}
-        </div>
-      </Router>
-    </EnhancedErrorBoundary>
-  );
-});
-
-App.displayName = 'App';
+}
 
 export default App;

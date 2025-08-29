@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
 import { SEOHead } from '../components/seo/SEOHead';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
@@ -24,10 +24,7 @@ import {
   Database,
   Key,
   Monitor,
-  TrendingUp,
-  Clock,
-  Bot,
-  Sparkles
+  TrendingUp
 } from 'lucide-react';
 import { ENHANCED_SERVICES } from '@/data/enhancedServices';
 import { 
@@ -59,7 +56,6 @@ import { TrustedBySection } from '@/components/TrustedBySection';
 const CYBERSECURITY_SERVICES = COMPREHENSIVE_SERVICES.filter(service => 
   service.category === 'Cybersecurity'
 );
-
 const SECURITY_SERVICE_CATEGORIES = [
   {
     id: 'threat-detection',
@@ -76,15 +72,12 @@ const SECURITY_SERVICE_CATEGORIES = [
     services: CYBERSECURITY_SERVICES.filter(s => s.title.includes('Zero Trust'))
   }
 ];
-
 export default function CybersecurityServicesPage() {
   const [selectedCategory, setSelectedCategory] = useState('all');
-
   const getCategoryIcon = (category: string) => {
     const categoryData = SECURITY_SERVICE_CATEGORIES.find(cat => cat.id === category);
     return categoryData?.icon || Shield;
   };
-
   const getPricingModelLabel = (model: string) => {
     switch (model) {
       case 'one-time': return 'One-time';
@@ -94,7 +87,6 @@ export default function CybersecurityServicesPage() {
       default: return model;
     }
   };
-
   return (
     <>
       <SEOHead 
@@ -122,7 +114,6 @@ export default function CybersecurityServicesPage() {
             <div className="absolute top-40 right-20 w-24 h-24 bg-orange-500/10 rounded-full blur-xl animate-pulse" style={{ animationDelay: '2s' }} />
             <div className="absolute bottom-40 left-20 w-20 h-20 bg-red-600/10 rounded-full blur-xl animate-pulse" style={{ animationDelay: '4s' }} />
           </div>
-          
           <div className="relative z-10 max-w-6xl mx-auto text-center">
             <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
               <span className="bg-gradient-to-r from-red-500 via-orange-500 to-red-600 bg-clip-text text-transparent">
@@ -136,84 +127,263 @@ export default function CybersecurityServicesPage() {
               platform provides 24/7 protection against evolving cyber threats.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-              <Button asChild size="lg" className="bg-gradient-to-r from-red-500 to-orange-500 hover:from-red-600 hover:to-orange-600 text-white px-8 py-4 text-lg">
-                <Link to="/contact">Get Security Assessment</Link>
-              </Button>
-              <Button asChild variant="outline" size="lg" className="border-white/20 text-white hover:bg-white/10 px-8 py-4 text-lg">
-                <Link to="/services">View All Services</Link>
-              </Button>
+              <Link
+                to="/contact"
+                className="bg-gradient-to-r from-red-500 to-orange-500 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:from-red-600 hover:to-orange-600 transition-all duration-300 transform hover:scale-105"
+              >
+                Get Security Assessment
+                <ArrowRight className="inline ml-2 h-5 w-5" />
+              </Link>
+              <Link
+                to="/case-studies"
+                className="border-2 border-white text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-white hover:text-gray-900 transition-all duration-300"
+              >
+                View Case Studies
+              </Link>
             </div>
           </div>
         </section>
-
-        {/* Services Grid */}
-        <section className="py-20 px-4">
-          <div className="max-w-6xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-                Comprehensive Security Solutions
-              </h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                From threat detection to compliance management, we provide end-to-end cybersecurity protection
+        {/* Security Service Categories */}
+        <section className="py-16 bg-background">
+          <div className="container mx-auto px-4 md:px-6">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl font-bold tracking-tight mb-4">Security Service Categories</h2>
+              <p className="text-muted-foreground max-w-3xl mx-auto">
+                Comprehensive cybersecurity solutions designed to protect your business from all angles
               </p>
             </div>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {CYBERSECURITY_SERVICES.map((service, index) => (
-                <Card key={index} className="bg-zinc-800/50 border-zinc-700 hover:border-red-500/50 transition-all duration-300 hover:shadow-2xl hover:shadow-red-500/20">
-                  <CardHeader>
-                    <div className="flex items-center gap-3 mb-4">
-                      <div className="p-2 bg-red-500/20 rounded-lg">
-                        <Shield className="w-6 h-6 text-red-400" />
+            <div className="grid gap-6 md:grid-cols-2">
+              {SECURITY_SERVICE_CATEGORIES.map((category) => {
+                const IconComponent = category.icon;
+                return (
+                  <Card key={category.id} className="text-center hover:shadow-lg transition-shadow cursor-pointer border-red-500/20">
+                    <CardHeader>
+                      <div className="bg-red-500/10 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <IconComponent className="h-10 w-10 text-red-600" />
                       </div>
-                      <Badge variant="secondary" className="bg-red-500/20 text-red-400 border-red-500/30">
-                        {service.category}
+                      <CardTitle className="text-xl">{category.name}</CardTitle>
+                      <CardDescription>{category.description}</CardDescription>
+                    </CardHeader>
+                    <CardContent>
+                      <Badge variant="secondary" className="bg-red-500/20 text-red-600">
+                        {category.services.length} Services
                       </Badge>
+                    </CardContent>
+                  </Card>
+                );
+              })}
+            </div>
+          </div>
+        </section>
+        {/* Security Services Showcase */}
+        <section className="py-16 bg-muted/50">
+          <div className="container mx-auto px-4 md:px-6">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl font-bold tracking-tight mb-4">Security Services Showcase</h2>
+              <p className="text-muted-foreground max-w-3xl mx-auto">
+                Discover how our cybersecurity solutions can protect your business and ensure compliance
+              </p>
+            </div>
+            <Tabs value={selectedCategory} onValueChange={setSelectedCategory} className="w-full">
+              <TabsList className="grid w-full grid-cols-3 mb-8">
+                <TabsTrigger value="all">All Security Services</TabsTrigger>
+                {SECURITY_SERVICE_CATEGORIES.map((category) => (
+                  <TabsTrigger key={category.id} value={category.id}>
+                    {category.name}
+                  </TabsTrigger>
+                ))}
+              </TabsList>
+              <TabsContent value="all" className="space-y-6">
+                <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+                  {CYBERSECURITY_SERVICES.map((service) => (
+                    <SecurityServiceCard key={service.id} service={service} />
+                  ))}
+                </div>
+              </TabsContent>
+              {SECURITY_SERVICE_CATEGORIES.map((category) => (
+                <TabsContent key={category.id} value={category.id} className="space-y-6">
+                  <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+                    {category.services.map((service) => (
+                      <SecurityServiceCard key={service.id} service={service} />
+                    ))}
+                  </div>
+                </TabsContent>
+              ))}
+            </Tabs>
+          </div>
+        </section>
+        {/* Security Benefits Section */}
+        <section className="py-16 bg-background">
+          <div className="container mx-auto px-4 md:px-6">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl font-bold tracking-tight mb-4">Why Choose Our Security Solutions?</h2>
+              <p className="text-muted-foreground max-w-3xl mx-auto">
+                Enterprise-grade protection with the agility and pricing of a startup
+              </p>
+            </div>
+            <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
+              <div className="text-center">
+                <div className="bg-red-500/10 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <Eye className="h-8 w-8 text-red-600" />
+                </div>
+                <h3 className="font-semibold mb-2">24/7 Monitoring</h3>
+                <p className="text-muted-foreground text-sm">
+                  Round-the-clock security monitoring and threat detection
+                </p>
+              </div>
+              <div className="text-center">
+                <div className="bg-red-500/10 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <Brain className="h-8 w-8 text-red-600" />
+                </div>
+                <h3 className="font-semibold mb-2">AI-Powered Detection</h3>
+                <p className="text-muted-foreground text-sm">
+                  Advanced AI algorithms for faster threat identification
+                </p>
+              </div>
+              <div className="text-center">
+                <div className="bg-red-500/10 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <CheckCircle className="h-8 w-8 text-red-600" />
+                </div>
+                <h3 className="font-semibold mb-2">Compliance Ready</h3>
+                <p className="text-muted-foreground text-sm">
+                  Meet SOC2, GDPR, HIPAA, and other compliance requirements
+                </p>
+              </div>
+              <div className="text-center">
+                <div className="bg-red-500/10 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <Zap className="h-8 w-8 text-red-600" />
+                </div>
+                <h3 className="font-semibold mb-2">Rapid Response</h3>
+                <p className="text-muted-foreground text-sm">
+                  Automated incident response and threat mitigation
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+        {/* Security Implementation Process */}
+        <section className="py-16 bg-muted/50">
+          <div className="container mx-auto px-4 md:px-6">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl font-bold tracking-tight mb-4">Security Implementation Process</h2>
+              <p className="text-muted-foreground max-w-3xl mx-auto">
+                Our proven methodology ensures comprehensive security implementation and ongoing protection
+              </p>
+            </div>
+            <div className="grid gap-8 md:grid-cols-4">
+              <div className="text-center">
+                <div className="bg-red-600 text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 text-2xl font-bold">
+                  1
+                </div>
+                <h3 className="font-semibold mb-2">Assessment</h3>
+                <p className="text-muted-foreground text-sm">
+                  Comprehensive security audit and vulnerability assessment
+                </p>
+              </div>
+              <div className="text-center">
+                <div className="bg-red-600 text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 text-2xl font-bold">
+                  2
+                </div>
+                <h3 className="font-semibold mb-2">Strategy</h3>
+                <p className="text-muted-foreground text-sm">
+                  Develop security roadmap and compliance strategy
+                </p>
+              </div>
+              <div className="text-center">
+                <div className="bg-red-600 text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 text-2xl font-bold">
+                  3
+                </div>
+                <h3 className="font-semibold mb-2">Implementation</h3>
+                <p className="text-muted-foreground text-sm">
+                  Deploy security solutions and monitoring systems
+                </p>
+              </div>
+              <div className="text-center">
+                <div className="bg-red-600 text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 text-2xl font-bold">
+                  4
+                </div>
+                <h3 className="font-semibold mb-2">Monitoring</h3>
+                <p className="text-muted-foreground text-sm">
+                  24/7 security monitoring and ongoing support
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+        {/* Compliance & Standards */}
+        <section className="py-16 bg-background">
+          <div className="container mx-auto px-4 md:px-6">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl font-bold tracking-tight mb-4">Compliance & Standards</h2>
+              <p className="text-muted-foreground max-w-3xl mx-auto">
+                Our security solutions help you meet industry standards and regulatory requirements
+              </p>
+            </div>
+            <div className="grid gap-6 md:grid-cols-3 lg:grid-cols-6">
+              {[
+                { name: 'SOC2', icon: '🔒', description: 'Security Controls' },
+                { name: 'GDPR', icon: '🇪🇺', description: 'Data Protection' },
+                { name: 'HIPAA', icon: '🏥', description: 'Healthcare' },
+                { name: 'PCI DSS', icon: '💳', description: 'Payment Security' },
+                { name: 'ISO 27001', icon: '🌐', description: 'Information Security' },
+                { name: 'NIST', icon: '🇺🇸', description: 'Cybersecurity Framework' }
+              ].map((standard) => (
+                <Card key={standard.name} className="text-center hover:shadow-lg transition-shadow">
+                  <CardHeader>
+                    <div className="bg-gradient-to-r from-red-500 to-orange-500 p-4 rounded-lg w-16 h-16 mb-4 flex items-center justify-center">
+                      <service.icon className="h-8 w-8 text-white" />
                     </div>
-                    <CardTitle className="text-xl text-white">{service.title}</CardTitle>
+                    <CardTitle className="text-xl text-white">
+                      {service.title}
+                    </CardTitle>
                     <CardDescription className="text-gray-400">
                       {service.description}
                     </CardDescription>
                   </CardHeader>
                   <CardContent>
-                    <div className="space-y-4">
-                      <div className="flex items-center justify-between">
-                        <span className="text-gray-400">Starting from</span>
-                        <span className="text-2xl font-bold text-white">{service.pricing?.startingPrice || 'Contact Us'}</span>
-                      </div>
-                      <Button asChild className="w-full bg-gradient-to-r from-red-500 to-orange-500 hover:from-red-600 hover:to-orange-600">
-                        <Link to={`/services/${service.slug}`}>
-                          Learn More
-                          <ArrowRight className="w-4 h-4 ml-2" />
-                        </Link>
-                      </Button>
+                    <ul className="space-y-2 mb-6">
+                      {service.features.map((feature, featureIndex) => (
+                        <li key={featureIndex} className="flex items-center text-gray-300 text-sm">
+                          <CheckCircle className="h-4 w-4 text-green-400 mr-2 flex-shrink-0" />
+                          {feature}
+                        </li>
+                      ))}
+                    </ul>
+                    <div className="text-2xl font-bold text-red-400 mb-4">
+                      {service.price}
                     </div>
+                    <Button className="w-full bg-gradient-to-r from-red-500 to-orange-500 hover:from-red-600 hover:to-orange-600">
+                      Get Started
+                    </Button>
                   </CardContent>
                 </Card>
               ))}
             </div>
           </div>
         </section>
-
-        {/* Trusted By Section */}
-        <TrustedBySection />
-
-        {/* CTA Section */}
-        <section className="py-20 px-4 bg-gradient-to-r from-red-500/10 to-orange-500/10">
-          <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+        {/* Contact CTA */}
+        <section className="py-16 bg-zion-blue">
+          <div className="container mx-auto px-4 md:px-6 text-center">
+            <h2 className="text-3xl font-bold text-white mb-4">
               Ready to Secure Your Business?
             </h2>
-            <p className="text-xl text-gray-300 mb-8">
-              Get a comprehensive security assessment and discover how we can protect your digital assets
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+              Don't wait until it's too late. Get a comprehensive security assessment and protect your business today.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button asChild size="lg" className="bg-gradient-to-r from-red-500 to-orange-500 hover:from-red-600 hover:to-orange-600 text-white px-8 py-4 text-lg">
-                <Link to="/contact">Schedule Security Audit</Link>
-              </Button>
-              <Button asChild variant="outline" size="lg" className="border-white/20 text-white hover:bg-white/10 px-8 py-4 text-lg">
-                <Link to="/demo">Request Demo</Link>
-              </Button>
+              <Link
+                to="/contact"
+                className="bg-gradient-to-r from-red-500 to-orange-500 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:from-red-600 hover:to-orange-600 transition-all duration-300 transform hover:scale-105"
+              >
+                Schedule Security Assessment
+                <ArrowRight className="inline ml-2 h-5 w-5" />
+              </Link>
+              <Link
+                to="/case-studies"
+                className="border-2 border-white text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-white hover:text-gray-900 transition-all duration-300"
+              >
+                View Security Case Studies
+              </Link>
             </div>
           </div>
         </section>

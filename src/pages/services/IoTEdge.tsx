@@ -1,131 +1,89 @@
 import React from 'react';
-import { SEO } from '../../components/SEO';
 import { motion } from 'framer-motion';
-import { Cpu, Wifi, Database, Shield, Zap, Globe, Server, BarChart3, Settings, Monitor, Activity, Network, Smartphone, Tablet, Laptop, Cloud, Lock, RefreshCw, TrendingUp, AlertTriangle } from 'lucide-react';
+import { Cpu, Wifi, Zap, Database, Globe, BarChart3, ArrowRight, Shield, Cloud, Smartphone } from 'lucide-react';
 
 export default function IoTEdge() {
   const features = [
     {
       icon: Cpu,
       title: 'Edge Computing',
-      description: 'Process data locally for faster response times and reduced latency',
-      color: 'from-blue-500 to-cyan-500'
+      description: 'Process data closer to the source for faster response times'
     },
     {
       icon: Wifi,
-      title: '5G & IoT Networks',
-      description: 'High-speed connectivity for real-time data transmission and device management',
-      color: 'from-green-500 to-emerald-500'
-    },
-    {
-      icon: Shield,
-      title: 'Security First',
-      description: 'End-to-end encryption and secure device authentication protocols',
-      color: 'from-red-500 to-pink-500'
-    },
-    {
-      icon: Database,
-      title: 'Data Analytics',
-      description: 'Real-time insights and predictive analytics at the edge',
-      color: 'from-purple-500 to-pink-500'
-    },
-    {
-      icon: Monitor,
-      title: 'Remote Monitoring',
-      description: '24/7 device monitoring and proactive maintenance alerts',
-      color: 'from-yellow-500 to-orange-500'
+      title: 'IoT Connectivity',
+      description: 'Seamless device communication and data transmission'
     },
     {
       icon: Zap,
-      title: 'Low Power Solutions',
-      description: 'Energy-efficient IoT devices for extended battery life',
-      color: 'from-indigo-500 to-purple-500'
+      title: 'Real-time Processing',
+      description: 'Instant data analysis and decision making'
+    },
+    {
+      icon: Database,
+      title: 'Data Management',
+      description: 'Efficient storage and processing of IoT data streams'
     }
   ];
 
   const services = [
     {
-      title: 'IoT Strategy & Consulting',
-      description: 'Comprehensive IoT roadmap and implementation strategy',
-      price: 'From $3,000',
-      features: ['Technology assessment', 'Architecture design', 'Implementation plan', 'ROI analysis']
+      title: 'IoT Device Management',
+      description: 'Centralized management and monitoring of connected devices',
+      icon: Smartphone
     },
     {
-      title: 'Edge Device Development',
-      description: 'Custom IoT device design and manufacturing',
-      price: 'From $8,000',
-      features: ['Hardware design', 'Firmware development', 'Prototyping', 'Testing & validation']
+      title: 'Edge Analytics',
+      description: 'Real-time data processing and analytics at the edge',
+      icon: BarChart3
     },
     {
-      title: 'IoT Platform Development',
-      description: 'Scalable IoT platform for device management and data collection',
-      price: 'From $15,000',
-      features: ['Cloud platform', 'Device management', 'Data visualization', 'API development']
+      title: '5G Integration',
+      description: 'High-speed connectivity for IoT applications',
+      icon: Wifi
     },
     {
-      title: 'IoT Integration Services',
-      description: 'Seamless integration with existing systems and workflows',
-      price: 'From $5,000',
-      features: ['System integration', 'API development', 'Data migration', 'User training']
+      title: 'Security & Compliance',
+      description: 'End-to-end security for IoT ecosystems',
+      icon: Shield
     }
   ];
 
-  const industries = [
-    { name: 'Manufacturing', icon: Settings, description: 'Smart factories and predictive maintenance' },
-    { name: 'Healthcare', icon: Activity, description: 'Remote patient monitoring and medical devices' },
-    { name: 'Agriculture', icon: Globe, description: 'Precision farming and crop monitoring' },
-    { name: 'Smart Cities', icon: Network, description: 'Traffic management and environmental monitoring' },
-    { name: 'Retail', icon: Smartphone, description: 'Inventory tracking and customer analytics' },
-    { name: 'Energy', icon: Zap, description: 'Smart grid and renewable energy monitoring' }
-  ];
-
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      <SEO 
-        title="IoT Edge Services - Zion Tech Group"
-        description="Transform your business with cutting-edge IoT Edge solutions. From smart devices to real-time analytics, we help you harness the power of connected technology."
-      />
-      
+    <div className="min-h-screen bg-futuristic">
       {/* Hero Section */}
-      <section className="relative overflow-hidden py-20">
-        <div className="absolute inset-0 bg-gradient-to-r from-green-600/20 to-emerald-600/20"></div>
-        <div className="container mx-auto px-4 relative z-10">
+      <section className="relative pt-32 pb-20 overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-br from-blue-900/20 via-slate-900 to-slate-900"></div>
+        <div className="container-responsive relative z-10">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             className="text-center max-w-4xl mx-auto"
           >
-            <div className="flex justify-center mb-6">
-              <div className="w-20 h-20 bg-gradient-to-br from-green-500 to-emerald-500 rounded-2xl flex items-center justify-center">
-                <Cpu className="w-10 h-10 text-white" />
-              </div>
+            <div className="inline-flex items-center space-x-2 bg-blue-500/10 border border-blue-500/20 rounded-full px-4 py-2 mb-6">
+              <Cpu className="w-5 h-5 text-blue-400" />
+              <span className="text-blue-400 font-medium">IoT & Edge Computing</span>
             </div>
+            
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
-              IoT Edge
-              <span className="block bg-gradient-to-r from-green-400 to-emerald-400 bg-clip-text text-transparent">
-                Innovation
-              </span>
+              Connect, Process,
+              <span className="text-gradient"> Transform</span>
             </h1>
-            <p className="text-xl text-slate-300 mb-8 max-w-3xl mx-auto">
-              Connect, monitor, and optimize your business with intelligent IoT solutions. 
-              From edge computing to cloud analytics, we bring the future of technology to your doorstep.
+            
+            <p className="text-xl text-zion-slate-light mb-8 max-w-2xl mx-auto">
+              Harness the power of IoT and edge computing to create intelligent, 
+              connected systems that process data faster and more efficiently.
             </p>
-            <div className="flex flex-wrap justify-center gap-4">
-              <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="px-8 py-4 bg-gradient-to-r from-green-500 to-emerald-500 text-white font-semibold rounded-lg hover:from-green-600 hover:to-emerald-600 transition-all duration-300"
-              >
-                Get Started
-              </motion.button>
-              <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="px-8 py-4 border border-slate-600 text-white font-semibold rounded-lg hover:border-slate-500 hover:bg-slate-800/50 transition-all duration-300"
-              >
+            
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="btn-futuristic px-8 py-4 text-lg">
+                Start IoT Project
+                <ArrowRight className="w-5 h-5 ml-2" />
+              </button>
+              <button className="btn-outline px-8 py-4 text-lg">
                 Learn More
-              </motion.button>
+              </button>
             </div>
           </motion.div>
         </div>
@@ -133,124 +91,80 @@ export default function IoTEdge() {
 
       {/* Features Section */}
       <section className="py-20">
-        <div className="container mx-auto px-4">
+        <div className="container-responsive">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
             className="text-center mb-16"
           >
             <h2 className="text-4xl font-bold text-white mb-4">
-              Why Choose Our IoT Edge Services?
+              Why Choose IoT & Edge Computing?
             </h2>
-            <p className="text-xl text-slate-300 max-w-3xl mx-auto">
-              We combine cutting-edge IoT technology with proven edge computing solutions 
-              to deliver intelligent, scalable, and secure connected systems.
+            <p className="text-xl text-zion-slate-light max-w-2xl mx-auto">
+              Faster processing, reduced latency, and intelligent automation
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {features.map((feature, index) => (
               <motion.div
                 key={feature.title}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700 hover:border-slate-600 transition-all duration-300"
+                viewport={{ once: true }}
+                className="bg-white/5 backdrop-blur-xl border border-zion-cyan/20 rounded-2xl p-6 hover:border-zion-cyan/40 transition-all duration-300 group"
               >
-                <div className={`w-12 h-12 bg-gradient-to-br ${feature.color} rounded-lg flex items-center justify-center mb-4`}>
-                  <feature.icon className="w-6 h-6 text-white" />
+                <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-blue-600 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+                  <feature.icon className="w-8 h-8 text-white" />
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
-                <p className="text-slate-300">{feature.description}</p>
+                <p className="text-zion-slate-light">{feature.description}</p>
               </motion.div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Services & Pricing */}
-      <section className="py-20 bg-slate-800/30">
-        <div className="container mx-auto px-4">
+      {/* Services Section */}
+      <section className="py-20 bg-white/5">
+        <div className="container-responsive">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
             className="text-center mb-16"
           >
             <h2 className="text-4xl font-bold text-white mb-4">
-              Our IoT Edge Services
+              Our IoT & Edge Services
             </h2>
-            <p className="text-xl text-slate-300 max-w-3xl mx-auto">
-              Comprehensive solutions tailored to your business needs and industry requirements
+            <p className="text-xl text-zion-slate-light max-w-2xl mx-auto">
+              Comprehensive solutions for connected device ecosystems
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {services.map((service, index) => (
               <motion.div
                 key={service.title}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
+                initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
+                whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700 hover:border-slate-600 transition-all duration-300"
+                viewport={{ once: true }}
+                className="bg-white/5 backdrop-blur-xl border border-zion-cyan/20 rounded-2xl p-8 hover:border-zion-cyan/40 transition-all duration-300 group"
               >
-                <h3 className="text-xl font-semibold text-white mb-3">{service.title}</h3>
-                <p className="text-slate-300 mb-4">{service.description}</p>
-                <div className="text-2xl font-bold text-emerald-400 mb-4">{service.price}</div>
-                <ul className="space-y-2">
-                  {service.features.map((feature, featureIndex) => (
-                    <li key={featureIndex} className="flex items-center text-sm text-slate-300">
-                      <div className="w-2 h-2 bg-emerald-400 rounded-full mr-3"></div>
-                      {feature}
-                    </li>
-                  ))}
-                </ul>
-                <motion.button
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
-                  className="w-full mt-6 px-4 py-2 bg-gradient-to-r from-green-500 to-emerald-500 text-white font-semibold rounded-lg hover:from-green-600 hover:to-emerald-600 transition-all duration-300"
-                >
-                  Get Quote
-                </motion.button>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Industries */}
-      <section className="py-20">
-        <div className="container mx-auto px-4">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-4xl font-bold text-white mb-4">
-              Industries We Serve
-            </h2>
-            <p className="text-xl text-slate-300 max-w-3xl mx-auto">
-              Our IoT Edge solutions are designed to meet the unique challenges 
-              of various industries and business sectors
-            </p>
-          </motion.div>
-
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8">
-            {industries.map((industry, index) => (
-              <motion.div
-                key={industry.name}
-                initial={{ opacity: 0, scale: 0.8 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="text-center group"
-              >
-                <div className="w-16 h-16 bg-slate-800 rounded-xl flex items-center justify-center mx-auto mb-4 group-hover:bg-slate-700 transition-all duration-300">
-                  <industry.icon className="w-8 h-8 text-emerald-400" />
+                <div className="flex items-start space-x-4">
+                  <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-blue-600 rounded-xl flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-300">
+                    <service.icon className="w-8 h-8 text-white" />
+                  </div>
+                  <div>
+                    <h3 className="text-2xl font-semibold text-white mb-3">{service.title}</h3>
+                    <p className="text-zion-slate-light leading-relaxed">{service.description}</p>
+                  </div>
                 </div>
-                <h3 className="text-lg font-semibold text-white mb-2">{industry.name}</h3>
-                <p className="text-sm text-slate-400">{industry.description}</p>
               </motion.div>
             ))}
           </div>
@@ -258,35 +172,31 @@ export default function IoTEdge() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-green-600/20 to-emerald-600/20">
-        <div className="container mx-auto px-4 text-center">
+      <section className="py-20">
+        <div className="container-responsive">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+            className="bg-gradient-to-r from-blue-600 to-blue-700 rounded-3xl p-12 text-center relative overflow-hidden"
           >
-            <h2 className="text-4xl font-bold text-white mb-6">
-              Ready to Connect Your Business?
-            </h2>
-            <p className="text-xl text-slate-300 mb-8 max-w-3xl mx-auto">
-              Let's discuss how our IoT Edge services can transform your operations, 
-              improve efficiency, and create new opportunities for growth.
-            </p>
-            <div className="flex flex-wrap justify-center gap-4">
-              <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="px-8 py-4 bg-gradient-to-r from-green-500 to-emerald-500 text-white font-semibold rounded-lg hover:from-green-600 hover:to-emerald-600 transition-all duration-300"
-              >
-                Schedule Consultation
-              </motion.button>
-              <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="px-8 py-4 border border-slate-600 text-white font-semibold rounded-lg hover:border-slate-500 hover:bg-slate-800/50 transition-all duration-300"
-              >
-                View Case Studies
-              </motion.button>
+            <div className="absolute inset-0 bg-black/20"></div>
+            <div className="relative z-10">
+              <h2 className="text-4xl font-bold text-white mb-6">
+                Ready to Build the Future?
+              </h2>
+              <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
+                Transform your business with intelligent IoT solutions and edge computing capabilities.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <button className="bg-white text-blue-600 px-8 py-4 rounded-xl font-semibold hover:bg-gray-100 transition-colors duration-300">
+                  Start IoT Project
+                </button>
+                <button className="border-2 border-white text-white px-8 py-4 rounded-xl font-semibold hover:bg-white hover:text-blue-600 transition-colors duration-300">
+                  Contact IoT Team
+                </button>
+              </div>
             </div>
           </motion.div>
         </div>

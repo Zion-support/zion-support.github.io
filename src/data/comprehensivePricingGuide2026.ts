@@ -1,7 +1,7 @@
 // Comprehensive Pricing Guide 2026 - Zion Tech Group
-// Revolutionary Micro SAAS, IT Infrastructure, and AI Services
+// Detailed pricing structures for revolutionary micro SAAS, IT, and AI services
 
-export type PricingTier = {
+export interface PricingTier {
   name: string;
   price: number;
   currency: string;

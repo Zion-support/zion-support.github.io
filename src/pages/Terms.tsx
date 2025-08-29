@@ -448,15 +448,6 @@ export default function Terms() {
                 </div>
               </div>
             </div>
-
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="px-8 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-medium rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 shadow-lg shadow-cyan-500/25">
-                Contact Legal Team
-              </button>
-              <button className="px-8 py-3 border border-slate-600/30 text-white font-medium rounded-lg hover:bg-white/10 transition-all duration-300">
-                Download Terms
-              </button>
-            </div>
           </div>
         </div>
       </section>
@@ -594,6 +585,4 @@ export default function Terms() {
       </section>
     </div>
   );
-};
-
-export default Terms;
+}

@@ -500,7 +500,8 @@ const ComprehensivePricingGuide2027: React.FC = () => {
               </motion.div>
             )}
           </div>
-        </section>
+        </div>
+      </section>
 
       {/* Contact Section */}
       <section className="px-4 pb-20">

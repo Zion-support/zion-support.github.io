@@ -404,15 +404,6 @@ export default function Privacy() {
                 <p className="text-gray-300">364 E Main St STE 1008<br />Middletown DE 19709</p>
               </div>
             </div>
-
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="px-8 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-medium rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 shadow-lg shadow-cyan-500/25">
-                Contact Privacy Team
-              </button>
-              <button className="px-8 py-3 border border-slate-600/30 text-white font-medium rounded-lg hover:bg-white/10 transition-all duration-300">
-                Download Policy
-              </button>
-            </div>
           </div>
         </div>
       </section>
@@ -451,6 +442,4 @@ export default function Privacy() {
       </section>
     </div>
   );
-};
-
-export default Privacy;
+}

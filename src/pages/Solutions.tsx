@@ -24,6 +24,4 @@ export default function Solutions() {
       </section>
     </div>
   );
-};
-
-export default Solutions;
+}

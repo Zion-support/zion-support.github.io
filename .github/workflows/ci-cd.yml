@@ -1,15 +1,28 @@
-name: CI/CD Pipeline (DISABLED - Migrated to PM2)
-
+name: CI/CD Pipeline
 on:
-  # This workflow is disabled and migrated to PM2 automation
-  # The original workflow was handling CI/CD pipeline tasks
-  # Now handled by PM2 processes: daily-build-test, continuous-improvement
-  workflow_dispatch: # Only manual triggers allowed
-  # All automatic triggers removed
-
+  push:
+    branches: [ main, develop, feature/*, hotfix/* ]
+  pull_request:
+    branches: [ main, develop ]
+  workflow_dispatch:
+    inputs:
+      environment:
+        description: 'Environment to deploy to'
+        required: true
+        default: 'staging'
+        type: choice
+        options:
+        - staging
+        - production
+env:
+  NODE_VERSION: '20.18.1'
+  NPM_VERSION: '10.0.0'
 jobs:
-  disabled:
+  # Code Quality & Security
+  code-quality:
+    name: Code Quality & Security
     runs-on: ubuntu-latest
+    timeout-minutes: 15
     steps:
     - name: Checkout code
       uses: actions/checkout@v4

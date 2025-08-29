@@ -64,7 +64,7 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className = '
       key: 'services',
       href: '/services',
       name: 'Services',
-      matches: (path: string) => path.startsWith('/services') || path.startsWith('/ai-services') || path.startsWith('/it-services') || path.startsWith('/micro-saas') || path.startsWith('/comprehensive-services'),
+      matches: (path: string) => path.startsWith('/services'),
       children: [
         { key: 'cloud-devops', href: '/services/cloud-devops', name: 'Cloud & DevOps', matches: (p: string) => p.startsWith('/services/cloud-devops') },
         { key: 'digital-twin', href: '/services/digital-twin', name: 'Digital Twin', matches: (p: string) => p.startsWith('/services/digital-twin') },
