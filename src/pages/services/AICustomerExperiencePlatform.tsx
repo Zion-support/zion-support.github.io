@@ -1,153 +1,102 @@
 import React from 'react';
-import { SEO } from '../../components/SEO';
 import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
 import { 
-  Users, 
-  Brain, 
-  MessageSquare, 
   Heart, 
-  TrendingUp, 
+  Users, 
+  BarChart3, 
   CheckCircle, 
   ArrowRight, 
-  Mail, 
-  Phone, 
-  Globe, 
-  ExternalLink,
+  TrendingUp, 
+  Shield,
   Zap,
-  BarChart3,
-  Target,
-  Cpu,
-  Smartphone,
-  Monitor,
-  Activity,
+  Globe,
+  Phone,
+  Mail,
+  MapPin,
   Star,
-  Award,
-  Clock,
   Target,
   MessageCircle,
-  Bot,
-  Headphones
+  Eye
 } from 'lucide-react';
+import { SEO } from '../../components/SEO';
 
 export default function AICustomerExperiencePlatform() {
   const features = [
-    {
-      icon: Brain,
-      title: 'AI-Powered Personalization',
-      description: 'Intelligent customer journey mapping and personalized experiences based on behavior analysis',
-      color: 'from-purple-500 to-pink-500'
-    },
-    {
-      icon: MessageSquare,
-      title: 'Omnichannel Communication',
-      description: 'Seamless customer interactions across email, chat, social media, and voice channels',
-      color: 'from-blue-500 to-cyan-500'
-    },
-    {
-      icon: Heart,
-      title: 'Sentiment Analysis',
-      description: 'Real-time emotion detection and sentiment tracking to improve customer satisfaction',
-      color: 'from-green-500 to-emerald-500'
-    },
-    {
-      icon: Zap,
-      title: 'Predictive Analytics',
-      description: 'Anticipate customer needs and proactively address issues before they arise',
-      color: 'from-yellow-500 to-orange-500'
-    },
-    {
-      icon: Users,
-      title: 'Customer Journey Mapping',
-      description: 'Visualize and optimize every touchpoint in the customer experience',
-      color: 'from-red-500 to-pink-500'
-    },
-    {
-      icon: BarChart3,
-      title: 'Performance Analytics',
-      description: 'Comprehensive insights into customer satisfaction, engagement, and loyalty metrics',
-      color: 'from-indigo-500 to-purple-500'
-    }
-  ];
-
-  const services = [
-    {
-      title: 'Customer Experience Assessment',
-      description: 'Comprehensive analysis of current customer journey and experience optimization opportunities',
-      price: 'From $4,500',
-      features: ['Journey mapping', 'Pain point identification', 'Optimization strategy', 'ROI analysis']
-    },
-    {
-      title: 'AI Platform Implementation',
-      description: 'Full implementation of AI-powered customer experience platform',
-      price: 'From $12,000',
-      features: ['Platform setup', 'AI model training', 'Integration configuration', 'Team training']
-    },
-    {
-      title: 'Ongoing Optimization',
-      description: 'Continuous improvement and optimization of customer experience',
-      price: 'From $3,500/month',
-      features: ['Performance monitoring', 'AI model updates', 'Journey optimization', 'Analytics reports']
-    },
-    {
-      title: 'Enterprise CX Suite',
-      description: 'Complete enterprise customer experience management with advanced AI capabilities',
-      price: 'From $20,000',
-      features: ['Multi-brand management', 'Advanced AI models', 'Custom integrations', '24/7 support']
-    }
-  ];
-
-  const useCases = [
-    {
-      title: 'E-commerce Personalization',
-      description: 'Personalized product recommendations and shopping experiences',
-      benefits: ['Increase conversion rates by 35%', 'Improve customer retention', 'Boost average order value']
-    },
-    {
-      title: 'Customer Support Enhancement',
-      description: 'AI-powered support with intelligent routing and automated responses',
-      benefits: ['Reduce response time by 60%', 'Improve first-call resolution', 'Enhance customer satisfaction']
-    },
-    {
-      title: 'Marketing Campaign Optimization',
-      description: 'Data-driven marketing with personalized messaging and targeting',
-      benefits: ['Increase campaign ROI by 45%', 'Improve engagement rates', 'Reduce customer churn']
-    },
-    {
-      title: 'Product Development Insights',
-      description: 'Customer feedback analysis and product improvement recommendations',
-      benefits: ['Faster product iteration', 'Better feature prioritization', 'Improved market fit']
-    }
-  ];
-
-  const technologies = [
-    { name: 'Machine Learning', description: 'Advanced ML algorithms for customer behavior analysis' },
-    { name: 'Natural Language Processing', description: 'Intelligent text and voice interaction processing' },
-    { name: 'Predictive Analytics', description: 'Forecast customer needs and behavior patterns' },
-    { name: 'Real-time Processing', description: 'Instant customer interaction analysis and response' },
-    { name: 'API Integration', description: 'Seamless integration with existing business systems' },
-    { name: 'Cloud Infrastructure', description: 'Scalable and secure cloud-based platform' }
+    'CX assessment and mapping',
+    'AI platform implementation',
+    'Personalization engine',
+    'Performance optimization',
+    'A/B testing tools',
+    'Customer sentiment analysis',
+    'Real-time analytics dashboard',
+    'Multi-channel integration'
   ];
 
   const benefits = [
+    'Increase customer satisfaction by 40%',
+    'Improve conversion rates by 35%',
+    'Reduce churn by 25%',
+    'Personalized customer journeys',
+    'Real-time customer insights',
+    'Automated optimization'
+  ];
+
+  const useCases = [
+    'E-commerce personalization',
+    'SaaS platform optimization',
+    'Financial services CX',
+    'Healthcare patient experience',
+    'Retail customer engagement',
+    'Travel and hospitality'
+  ];
+
+  const pricingPlans = [
     {
-      title: 'Increased Customer Satisfaction',
-      description: 'Deliver personalized experiences that exceed customer expectations',
-      icon: Heart
+      name: 'Starter',
+      price: '$4,500',
+      period: '/month',
+      description: 'Perfect for small businesses starting CX transformation',
+      features: [
+        'Up to 10,000 customers',
+        'Basic personalization',
+        'Email support',
+        'Standard integrations',
+        'Basic analytics'
+      ],
+      popular: false
     },
     {
-      title: 'Higher Customer Lifetime Value',
-      description: 'Build stronger relationships and increase customer retention rates',
-      icon: TrendingUp
+      name: 'Professional',
+      price: '$7,500',
+      period: '/month',
+      description: 'Ideal for growing organizations',
+      features: [
+        'Up to 100,000 customers',
+        'Advanced personalization',
+        'Priority support',
+        'Custom integrations',
+        'Advanced analytics',
+        'A/B testing tools',
+        'Custom branding'
+      ],
+      popular: true
     },
     {
-      title: 'Improved Operational Efficiency',
-      description: 'Automate routine tasks and focus on high-value customer interactions',
-      icon: Zap
-    },
-    {
-      title: 'Data-Driven Insights',
-      description: 'Make informed decisions based on comprehensive customer analytics',
-      icon: BarChart3
+      name: 'Enterprise',
+      price: '$12,500',
+      period: '/month',
+      description: 'For large-scale CX transformation',
+      features: [
+        'Unlimited customers',
+        'Custom AI models',
+        '24/7 dedicated support',
+        'White-label options',
+        'Advanced security',
+        'SLA guarantees',
+        'Dedicated account manager'
+      ],
+      popular: false
     }
   ];
 
@@ -155,45 +104,46 @@ export default function AICustomerExperiencePlatform() {
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO 
         title="AI Customer Experience Platform - Zion Tech Group"
-        description="Transform your customer experience with AI-powered personalization, omnichannel communication, and predictive analytics. Increase satisfaction, retention, and revenue."
+        description="AI-powered personalization and customer journey optimization with predictive analytics. Increase customer satisfaction by 40% and improve conversion rates by 35%."
       />
       
       {/* Hero Section */}
-      <section className="relative overflow-hidden py-20">
-        <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 to-pink-600/20"></div>
-        <div className="container mx-auto px-4 relative z-10">
+      <section className="relative py-20 overflow-hidden">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="text-center max-w-4xl mx-auto"
+            transition={{ duration: 0.8 }}
+            className="text-center"
           >
-            <div className="flex justify-center mb-6">
-              <div className="w-20 h-20 bg-gradient-to-br from-purple-500 to-pink-500 rounded-2xl flex items-center justify-center">
-                <Users className="w-10 h-10 text-white" />
-              </div>
+            <div className="inline-flex items-center px-4 py-2 rounded-full bg-blue-900/20 border border-blue-500/30 text-blue-300 text-sm font-medium mb-6">
+              <Heart className="w-4 h-4 mr-2" />
+              AI-Powered CX
             </div>
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
-              AI Customer Experience Platform
+              AI Customer Experience
+              <span className="block text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">
+                Platform
+              </span>
             </h1>
-            <p className="text-xl text-gray-300 mb-8">
-              Revolutionize your customer experience with AI-powered personalization, omnichannel communication, and predictive analytics that drive loyalty and growth
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
+              Transform customer interactions with AI-powered personalization and journey optimization. 
+              Our platform increases customer satisfaction by 40% and improves conversion rates by 35%.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a 
-                href="https://ziontechgroup.com/contact" 
-                className="bg-gradient-to-r from-purple-500 to-pink-500 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-pink-600 transition-all duration-300 flex items-center justify-center gap-2"
+              <Link
+                to="/request-quote"
+                className="inline-flex items-center px-8 py-4 rounded-lg bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold hover:from-blue-700 hover:to-cyan-700 transition-all duration-200 transform hover:scale-105"
               >
-                Transform CX
-                <ArrowRight className="w-5 h-5" />
-              </a>
-              <a 
-                href="tel:+13024640950" 
-                className="border border-purple-500 text-purple-400 px-8 py-3 rounded-lg font-semibold hover:bg-purple-500 hover:text-white transition-all duration-300 flex items-center justify-center gap-2"
+                Get Started
+                <ArrowRight className="ml-2 w-5 h-5" />
+              </Link>
+              <Link
+                to="/contact"
+                className="inline-flex items-center px-8 py-4 rounded-lg border border-gray-600 text-gray-300 font-semibold hover:border-gray-500 hover:text-white transition-all duration-200"
               >
-                <Phone className="w-5 h-5" />
-                CX Consultation
-              </a>
+                Schedule Demo
+              </Link>
             </div>
           </motion.div>
         </div>
@@ -201,78 +151,76 @@ export default function AICustomerExperiencePlatform() {
 
       {/* Features Section */}
       <section className="py-20">
-        <div className="container mx-auto px-4">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
             className="text-center mb-16"
           >
             <h2 className="text-4xl font-bold text-white mb-4">
-              Powerful CX Features
+              Powerful Features for Exceptional CX
             </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Our AI platform delivers personalized, intelligent customer experiences across every touchpoint
+            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
+              Our platform combines cutting-edge AI with intuitive design to deliver 
+              powerful customer experience optimization capabilities.
             </p>
           </motion.div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {features.map((feature, index) => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="bg-gradient-to-br from-slate-800 to-slate-700 p-8 rounded-2xl border border-slate-600 hover:border-purple-500 transition-all duration-300"
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                viewport={{ once: true }}
+                className="bg-slate-800/50 rounded-xl p-6 border border-slate-700 hover:border-blue-500/50 transition-all duration-200"
               >
-                <div className={`w-16 h-16 bg-gradient-to-br ${feature.color} rounded-xl flex items-center justify-center mb-6`}>
-                  <feature.icon className="w-8 h-8 text-white" />
+                <div className="w-12 h-12 rounded-lg bg-gradient-to-r from-blue-600 to-cyan-600 flex items-center justify-center mb-4">
+                  <CheckCircle className="w-6 h-6 text-white" />
                 </div>
-                <h3 className="text-xl font-semibold text-white mb-4">{feature.title}</h3>
-                <p className="text-gray-300">{feature.description}</p>
+                <h3 className="text-lg font-semibold text-white mb-2">{feature}</h3>
               </motion.div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Services & Pricing Section */}
-      <section className="py-20 bg-gradient-to-r from-slate-800/50 to-slate-700/50">
-        <div className="container mx-auto px-4">
+      {/* Benefits Section */}
+      <section className="py-20 bg-slate-800/30">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
             className="text-center mb-16"
           >
             <h2 className="text-4xl font-bold text-white mb-4">
-              Customer Experience Solutions
+              Transform Your Customer Experience
             </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              From initial assessment to ongoing optimization, we provide end-to-end CX transformation
+            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
+              Experience significant improvements in customer satisfaction, conversion rates, 
+              and loyalty with our AI-powered CX platform.
             </p>
           </motion.div>
 
-          <div className="grid md:grid-cols-2 gap-8">
-            {services.map((service, index) => (
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {benefits.map((benefit, index) => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="bg-gradient-to-br from-slate-800 to-slate-700 p-8 rounded-2xl border border-slate-600"
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                viewport={{ once: true }}
+                className="text-center"
               >
-                <h3 className="text-2xl font-bold text-white mb-4">{service.title}</h3>
-                <p className="text-gray-300 mb-6">{service.description}</p>
-                <div className="text-3xl font-bold text-purple-400 mb-6">{service.price}</div>
-                <ul className="space-y-3">
-                  {service.features.map((feature, featureIndex) => (
-                    <li key={featureIndex} className="flex items-center gap-3 text-gray-300">
-                      <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0" />
-                      {feature}
-                    </li>
-                  ))}
-                </ul>
+                <div className="w-16 h-16 rounded-full bg-gradient-to-r from-blue-600 to-cyan-600 flex items-center justify-center mx-auto mb-4">
+                  <TrendingUp className="w-8 h-8 text-white" />
+                </div>
+                <h3 className="text-lg font-semibold text-white mb-2">{benefit}</h3>
               </motion.div>
             ))}
           </div>
@@ -281,111 +229,113 @@ export default function AICustomerExperiencePlatform() {
 
       {/* Use Cases Section */}
       <section className="py-20">
-        <div className="container mx-auto px-4">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
             className="text-center mb-16"
           >
             <h2 className="text-4xl font-bold text-white mb-4">
-              Real-World Applications
+              Perfect for Any Industry
             </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              See how AI-powered customer experience transforms different business functions
+            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
+              Our AI customer experience platform adapts to your specific business needs 
+              and industry requirements.
             </p>
           </motion.div>
 
-          <div className="grid md:grid-cols-2 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {useCases.map((useCase, index) => (
               <motion.div
                 key={index}
+                initial={{ opacity: 0, x: -20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                viewport={{ once: true }}
+                className="bg-slate-800/50 rounded-lg p-6 border border-slate-700 hover:border-blue-500/50 transition-all duration-200"
+              >
+                <div className="flex items-center mb-3">
+                  <div className="w-8 h-8 rounded-full bg-blue-600 flex items-center justify-center mr-3">
+                    <CheckCircle className="w-4 h-4 text-white" />
+                  </div>
+                  <h3 className="text-lg font-semibold text-white">{useCase}</h3>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Pricing Section */}
+      <section className="py-20 bg-slate-800/30">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-4xl font-bold text-white mb-4">
+              Flexible Pricing Plans
+            </h2>
+            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
+              Choose the plan that best fits your CX transformation needs and scale as you grow.
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {pricingPlans.map((plan, index) => (
+              <motion.div
+                key={index}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="bg-gradient-to-br from-slate-800 to-slate-700 p-8 rounded-2xl border border-slate-600"
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                viewport={{ once: true }}
+                className={`relative bg-slate-800/50 rounded-xl p-8 border ${
+                  plan.popular 
+                    ? 'border-blue-500/50 ring-2 ring-blue-500/20' 
+                    : 'border-slate-700'
+                }`}
               >
-                <h3 className="text-2xl font-bold text-white mb-4">{useCase.title}</h3>
-                <p className="text-gray-300 mb-6">{useCase.description}</p>
-                <div className="space-y-3">
-                  {useCase.benefits.map((benefit, benefitIndex) => (
-                    <div key={benefitIndex} className="flex items-center gap-3 text-green-400">
-                      <TrendingUp className="w-5 h-5 flex-shrink-0" />
-                      {benefit}
-                    </div>
+                {plan.popular && (
+                  <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
+                    <span className="bg-gradient-to-r from-blue-600 to-cyan-600 text-white px-4 py-2 rounded-full text-sm font-semibold">
+                      Most Popular
+                    </span>
+                  </div>
+                )}
+                
+                <div className="text-center mb-8">
+                  <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
+                  <p className="text-gray-400 mb-4">{plan.description}</p>
+                  <div className="flex items-baseline justify-center">
+                    <span className="text-4xl font-bold text-white">{plan.price}</span>
+                    <span className="text-gray-400 ml-1">{plan.period}</span>
+                  </div>
+                </div>
+
+                <ul className="space-y-3 mb-8">
+                  {plan.features.map((feature, featureIndex) => (
+                    <li key={featureIndex} className="flex items-center">
+                      <CheckCircle className="w-5 h-5 text-blue-400 mr-3 flex-shrink-0" />
+                      <span className="text-gray-300">{feature}</span>
+                    </li>
                   ))}
-                </div>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
+                </ul>
 
-      {/* Benefits Section */}
-      <section className="py-20 bg-gradient-to-r from-slate-800/50 to-slate-700/50">
-        <div className="container mx-auto px-4">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-4xl font-bold text-white mb-4">
-              Why Choose AI-Powered CX?
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Experience the advantages of intelligent customer experience management
-            </p>
-          </motion.div>
-
-          <div className="grid md:grid-cols-2 gap-8">
-            {benefits.map((benefit, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="bg-gradient-to-br from-slate-800 to-slate-700 p-8 rounded-2xl border border-slate-600"
-              >
-                <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-pink-500 rounded-xl flex items-center justify-center mb-6">
-                  <benefit.icon className="w-8 h-8 text-white" />
-                </div>
-                <h3 className="text-2xl font-bold text-white mb-4">{benefit.title}</h3>
-                <p className="text-gray-300">{benefit.description}</p>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Technologies Section */}
-      <section className="py-20">
-        <div className="container mx-auto px-4">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-4xl font-bold text-white mb-4">
-              Advanced AI Technologies
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Built on cutting-edge AI and machine learning technologies for exceptional customer experiences
-            </p>
-          </motion.div>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {technologies.map((tech, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="bg-gradient-to-br from-slate-800 to-slate-700 p-6 rounded-2xl border border-slate-600 text-center"
-              >
-                <h3 className="text-xl font-semibold text-white mb-3">{tech.name}</h3>
-                <p className="text-gray-300">{tech.description}</p>
+                <Link
+                  to="/request-quote"
+                  className={`w-full block text-center py-3 px-6 rounded-lg font-semibold transition-all duration-200 ${
+                    plan.popular
+                      ? 'bg-gradient-to-r from-blue-600 to-cyan-600 text-white hover:from-blue-700 hover:to-cyan-700'
+                      : 'bg-slate-700 text-white hover:bg-slate-600'
+                  }`}
+                >
+                  Get Started
+                </Link>
               </motion.div>
             ))}
           </div>
@@ -394,65 +344,96 @@ export default function AICustomerExperiencePlatform() {
 
       {/* CTA Section */}
       <section className="py-20">
-        <div className="container mx-auto px-4">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="bg-gradient-to-r from-purple-600 to-pink-600 rounded-3xl p-12 text-center"
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="text-center"
           >
-            <h2 className="text-4xl font-bold text-white mb-6">
+            <h2 className="text-4xl font-bold text-white mb-4">
               Ready to Transform Your Customer Experience?
             </h2>
-            <p className="text-xl text-purple-100 mb-8 max-w-3xl mx-auto">
-              Join hundreds of businesses that have revolutionized their customer experience with AI-powered personalization and insights
+            <p className="text-xl text-gray-300 max-w-2xl mx-auto mb-8">
+              Join hundreds of companies that have transformed their customer experience with our 
+              AI-powered CX platform.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a 
-                href="https://ziontechgroup.com/contact" 
-                className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300 flex items-center justify-center gap-2"
+              <Link
+                to="/request-quote"
+                className="inline-flex items-center px-8 py-4 rounded-lg bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold hover:from-blue-700 hover:to-cyan-700 transition-all duration-200 transform hover:scale-105"
               >
-                Start CX Transformation
-                <ArrowRight className="w-5 h-5" />
-              </a>
-              <a 
-                href="tel:+13024640950" 
-                className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300 flex items-center justify-center gap-2"
+                Start Free Trial
+                <ArrowRight className="ml-2 w-5 h-5" />
+              </Link>
+              <Link
+                to="/contact"
+                className="inline-flex items-center px-8 py-4 rounded-lg border border-gray-600 text-gray-300 font-semibold hover:border-gray-500 hover:text-white transition-all duration-200"
               >
-                <Phone className="w-5 h-5" />
-                Call +1 302 464 0950
-              </a>
+                Contact Sales
+              </Link>
             </div>
           </motion.div>
         </div>
       </section>
 
-      {/* Contact Information */}
-      <section className="py-16 bg-gradient-to-r from-slate-800 to-slate-700">
-        <div className="container mx-auto px-4">
-          <div className="grid md:grid-cols-3 gap-8 text-center">
-            <div className="flex flex-col items-center">
-              <Phone className="w-8 h-8 text-purple-400 mb-4" />
-              <h3 className="text-xl font-semibold text-white mb-2">Phone</h3>
-              <a href="tel:+13024640950" className="text-purple-400 hover:text-purple-300">
-                +1 302 464 0950
-              </a>
-            </div>
-            <div className="flex flex-col items-center">
-              <Mail className="w-8 h-8 text-purple-400 mb-4" />
-              <h3 className="text-xl font-semibold text-white mb-2">Email</h3>
-              <a href="mailto:kleber@ziontechgroup.com" className="text-purple-400 hover:text-purple-300">
-                kleber@ziontechgroup.com
-              </a>
-            </div>
-            <div className="flex flex-col items-center">
-              <Globe className="w-8 h-8 text-purple-400 mb-4" />
-              <h3 className="text-xl font-semibold text-white mb-2">Website</h3>
-              <a href="https://ziontechgroup.com" className="text-purple-400 hover:text-purple-300 flex items-center gap-2">
-                ziontechgroup.com
-                <ExternalLink className="w-4 h-4" />
-              </a>
-            </div>
+      {/* Contact Section */}
+      <section className="py-20 bg-slate-800/30">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <motion.div
+              initial={{ opacity: 0, x: -20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
+            >
+              <h2 className="text-4xl font-bold text-white mb-6">
+                Get in Touch
+              </h2>
+              <p className="text-xl text-gray-300 mb-8">
+                Ready to transform your customer experience with AI? 
+                Our experts are here to help you get started.
+              </p>
+              
+              <div className="space-y-4">
+                <div className="flex items-center">
+                  <Phone className="w-6 h-6 text-blue-400 mr-3" />
+                  <span className="text-gray-300">+1 302 464 0950</span>
+                </div>
+                <div className="flex items-center">
+                  <Mail className="w-6 h-6 text-blue-400 mr-3" />
+                  <span className="text-gray-300">kleber@ziontechgroup.com</span>
+                </div>
+                <div className="flex items-center">
+                  <MapPin className="w-6 h-6 text-blue-400 mr-3" />
+                  <span className="text-gray-300">364 E Main St STE 1008, Middletown DE 19709</span>
+                </div>
+              </div>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, x: 20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
+              className="bg-slate-800/50 rounded-xl p-8 border border-slate-700"
+            >
+              <h3 className="text-2xl font-bold text-white mb-6">
+                Request a Demo
+              </h3>
+              <p className="text-gray-300 mb-6">
+                See our AI customer experience platform in action. 
+                Schedule a personalized demo tailored to your business needs.
+              </p>
+              <Link
+                to="/contact"
+                className="inline-flex items-center px-6 py-3 rounded-lg bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold hover:from-blue-700 hover:to-cyan-700 transition-all duration-200"
+              >
+                Schedule Demo
+                <ArrowRight className="ml-2 w-4 h-4" />
+              </Link>
+            </motion.div>
           </div>
         </div>
       </section>
