@@ -6,9 +6,9 @@ import { EnhancedFuturisticFooter as Footer } from './components/EnhancedFuturis
 import { ChatAssistant } from './components/ChatAssistant';
 import LoadingSpinner from './components/ui/LoadingSpinner';
 import { SEO } from './components/SEO';
-// import { PerformanceOptimizer } from './components/PerformanceOptimizer';
-import { ErrorBoundary } from './components/ErrorBoundary';
-import { AccessibilityEnhancer } from './components/AccessibilityEnhancer';
+import { PerformanceOptimizer } from './components/PerformanceOptimizer';
+import { EnhancedErrorBoundary } from './components/EnhancedErrorBoundary';
+import { EnhancedAccessibility } from './components/EnhancedAccessibility';
 
 // Lazy load pages - only import existing ones
 const Home = React.lazy(() => import('./pages/Home'));
@@ -149,7 +149,7 @@ const AIFinancialPlanning = lazy(() => import('./pages/services/AIFinancialPlann
 
 function App() {
   return (
-    <ErrorBoundary>
+    <EnhancedErrorBoundary>
       <Router>
         <div className="min-h-screen bg-futuristic">
           <AppHeader />
@@ -304,11 +304,11 @@ function App() {
           
           <Footer />
           <ChatAssistant />
-          {/* <PerformanceOptimizer /> */}
-          <AccessibilityEnhancer />
+          <PerformanceOptimizer />
+          <EnhancedAccessibility />
         </div>
       </Router>
-    </ErrorBoundary>
+    </EnhancedErrorBoundary>
   );
 }
 
