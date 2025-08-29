@@ -1217,7 +1217,6 @@ export default function CybersecurityServicesPage() {
           </div>
         </div>
       </div>
-      </div>
       {/* Call to Action */}
       <div className="py-16 bg-gradient-to-r from-red-600 to-red-800 text-white">
         <div className="container mx-auto px-4 text-center">
