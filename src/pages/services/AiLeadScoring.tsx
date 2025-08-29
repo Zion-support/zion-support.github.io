@@ -1,31 +1,42 @@
 import React from 'react';
 import { SEO } from '@/components/SEO';
+import { TrendingUp, CheckCircle, Database, PlugZap } from 'lucide-react';
 
 const AiLeadScoring: React.FC = () => {
   return (
-    <div className="min-h-screen bg-slate-900 text-white">
-      <SEO title="AI Lead Scoring - Zion Tech Group" description="Prioritize leads with AI-driven scoring models integrated with your CRM." />
-      <section className="container mx-auto px-4 py-12">
-        <h1 className="text-4xl font-bold mb-4">AI Lead Scoring</h1>
-        <p className="text-slate-300 max-w-3xl">Boost conversion by ranking leads using machine learning on engagement, firmographics, and historical outcomes. Native integrations with HubSpot, Salesforce, and Pipedrive.</p>
-      </section>
-      <section className="container mx-auto px-4 pb-8 grid md:grid-cols-3 gap-6">
-        <div className="p-6 bg-slate-800 rounded-xl border border-slate-700">
-          <h3 className="font-semibold mb-2">Core Features</h3>
-          <ul className="list-disc ml-5 text-slate-300 space-y-1">
-            <li>Auto-training on CRM outcomes (won/lost)</li>
-            <li>Behavioral and intent signals enrichment</li>
-            <li>Bias detection and explainable insights</li>
-            <li>Priority queues for SDR workflows</li>
-          </ul>
+    <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white">
+      <SEO 
+        title="AI Lead Scoring - Zion Tech Group"
+        description="Explainable AI lead scoring with CRM integration, A/B tests, and lift tracking."
+        keywords="lead scoring, AI sales, CRM, B2B marketing"
+      />
+      <section className="mx-auto max-w-6xl px-6 py-16">
+        <div className="flex items-center gap-3 mb-6 text-cyan-300">
+          <TrendingUp className="h-5 w-5" />
+          <span className="text-sm font-semibold">AI LEAD SCORING</span>
         </div>
-        <div className="p-6 bg-slate-800 rounded-xl border border-slate-700">
-          <h3 className="font-semibold mb-2">Integrations</h3>
-          <ul className="list-disc ml-5 text-slate-300 space-y-1">
-            <li>HubSpot, Salesforce, Pipedrive</li>
-            <li>Segment, Clearbit, 6sense</li>
-            <li>Google Sheets, Snowflake, BigQuery</li>
-          </ul>
+        <h1 className="text-4xl font-bold">Prioritize the right leads with explainable AI</h1>
+        <p className="mt-3 text-slate-300 max-w-2xl">Ship an AI model that ranks leads by conversion probability and surfaces the why behind each score. Integrate with Salesforce, HubSpot, or custom CRMs.</p>
+
+        <div className="mt-10 grid gap-6 sm:grid-cols-2">
+          <div className="rounded-xl border border-white/10 bg-white/5 p-6">
+            <div className="mb-2 font-semibold">Features</div>
+            <ul className="space-y-2 text-sm text-slate-300">
+              <li className="flex items-center gap-2"><CheckCircle className="h-4 w-4 text-green-400"/> Explainable factors and reason codes</li>
+              <li className="flex items-center gap-2"><CheckCircle className="h-4 w-4 text-green-400"/> A/B and holdout testing</li>
+              <li className="flex items-center gap-2"><CheckCircle className="h-4 w-4 text-green-400"/> Lift and ROI dashboard</li>
+              <li className="flex items-center gap-2"><CheckCircle className="h-4 w-4 text-green-400"/> GDPR/PII handling patterns</li>
+            </ul>
+          </div>
+          <div className="rounded-xl border border-white/10 bg-white/5 p-6">
+            <div className="mb-2 font-semibold">Integrations</div>
+            <ul className="space-y-2 text-sm text-slate-300">
+              <li className="flex items-center gap-2"><PlugZap className="h-4 w-4 text-cyan-300"/> Salesforce, HubSpot, Pipedrive</li>
+              <li className="flex items-center gap-2"><Database className="h-4 w-4 text-cyan-300"/> Snowflake, BigQuery, Postgres</li>
+              <li className="flex items-center gap-2"><Database className="h-4 w-4 text-cyan-300"/> Secure S3/GCS data syncs</li>
+            </ul>
+            <div className="mt-4 text-sm font-semibold text-cyan-300">Pricing: $199–$799/month</div>
+          </div>
         </div>
         <div className="p-6 bg-slate-800 rounded-xl border border-slate-700">
           <h3 className="font-semibold mb-2">Pricing</h3>
