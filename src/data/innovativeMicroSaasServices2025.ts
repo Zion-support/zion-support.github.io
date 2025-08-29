@@ -812,1157 +812,981 @@ export const INNOVATIVE_MICRO_SAAS_SERVICES_2025: InnovativeMicroSaasService[] =
     },
     competitors: ["IBM Quantum", "Google Quantum", "Amazon Braket", "Microsoft Azure Quantum"],
     marketSize: "$2.1 billion by 2025"
-  }
-];
+  },
 
-// Additional specialized services
-export const SPECIALIZED_SERVICES = [
+  // AI-Powered Customer Experience & Support
   {
-    id: "quantum-financial-trading",
-    title: "Quantum Financial Trading Platform",
-    description: "Advanced trading platform using quantum algorithms for portfolio optimization, risk assessment, and high-frequency trading strategies.",
-    category: "Quantum Finance",
-    price: 8000,
-    marketPrice: "$8,000 - $25,000/month"
+    id: "ai-customer-experience-platform",
+    title: "AI Customer Experience Platform",
+    description: "Comprehensive customer experience platform that uses AI to personalize interactions, predict needs, and deliver exceptional service across all touchpoints.",
+    category: "AI & Customer Experience",
+    subcategory: "Customer Experience",
+    price: 2499,
+    currency: "$",
+    pricingModel: "monthly",
+    features: [
+      "AI-powered personalization",
+      "Predictive customer needs",
+      "Omnichannel support",
+      "Sentiment analysis",
+      "Customer journey mapping",
+      "Real-time recommendations",
+      "A/B testing automation",
+      "Performance analytics",
+      "Integration with CRM systems",
+      "Custom workflow automation"
+    ],
+    benefits: [
+      "Increase customer satisfaction by 45%",
+      "Reduce support costs by 30%",
+      "Improve conversion rates by 25%",
+      "Personalized customer journeys",
+      "Proactive issue resolution"
+    ],
+    useCases: [
+      "E-commerce personalization",
+      "Customer support automation",
+      "Marketing campaign optimization",
+      "Product recommendation engines",
+      "Customer feedback analysis"
+    ],
+    targetAudience: [
+      "Customer success managers",
+      "Marketing teams",
+      "Support teams",
+      "Product managers",
+      "Business analysts"
+    ],
+    tags: ["AI", "Customer Experience", "Personalization", "Support", "Analytics"],
+    estimatedDelivery: "8-10 weeks",
+    supportLevel: "enterprise",
+    marketPrice: "$2,499 - $7,999/month",
+    roi: "300-500%",
+    innovationLevel: "Advanced",
+    contactInfo: {
+      phone: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      website: "https://ziontechgroup.com"
+    },
+    technicalSpecs: {
+      technology: ["Python", "TensorFlow", "React", "Node.js", "MongoDB"],
+      integrations: ["Salesforce", "HubSpot", "Zendesk", "Shopify", "Intercom"],
+      apiEndpoints: 200,
+      uptime: "99.9%",
+      security: ["SOC 2", "GDPR", "CCPA", "End-to-end encryption"]
+    },
+    competitors: ["Intercom", "Zendesk", "Freshdesk", "Help Scout"],
+    marketSize: "$15.8 billion by 2025"
   },
+
+  // AI-Powered Financial Technology
   {
-    id: "ai-legal-assistant",
-    title: "AI Legal Assistant Platform",
-    description: "Intelligent legal research, contract analysis, and compliance monitoring platform for law firms and legal departments.",
-    category: "Legal Tech",
-    price: 2800,
-    marketPrice: "$2,800 - $7,500/month"
+    id: "ai-fintech-automation-platform",
+    title: "AI FinTech Automation Platform",
+    description: "Comprehensive financial technology platform that automates trading, risk management, and portfolio optimization using advanced AI algorithms.",
+    category: "AI & FinTech",
+    subcategory: "Financial Automation",
+    price: 3999,
+    currency: "$",
+    pricingModel: "monthly",
+    features: [
+      "AI-powered trading algorithms",
+      "Risk assessment automation",
+      "Portfolio optimization",
+      "Real-time market analysis",
+      "Compliance monitoring",
+      "Fraud detection",
+      "Performance analytics",
+      "Custom strategy builder",
+      "Multi-exchange support",
+      "Regulatory reporting"
+    ],
+    benefits: [
+      "Increase trading efficiency by 60%",
+      "Reduce risk exposure by 40%",
+      "Improve portfolio returns by 25%",
+      "Automated compliance",
+      "Real-time risk monitoring"
+    ],
+    useCases: [
+      "Algorithmic trading",
+      "Portfolio management",
+      "Risk assessment",
+      "Compliance automation",
+      "Market analysis"
+    ],
+    targetAudience: [
+      "Traders",
+      "Portfolio managers",
+      "Risk managers",
+      "Financial analysts",
+      "Compliance officers"
+    ],
+    tags: ["AI", "FinTech", "Trading", "Risk Management", "Compliance"],
+    estimatedDelivery: "10-12 weeks",
+    supportLevel: "enterprise",
+    marketPrice: "$3,999 - $12,999/month",
+    roi: "400-600%",
+    innovationLevel: "Advanced",
+    contactInfo: {
+      phone: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      website: "https://ziontechgroup.com"
+    },
+    technicalSpecs: {
+      technology: ["Python", "TensorFlow", "React", "Node.js", "PostgreSQL"],
+      integrations: ["Bloomberg", "Reuters", "Interactive Brokers", "TD Ameritrade", "E*TRADE"],
+      apiEndpoints: 300,
+      uptime: "99.99%",
+      security: ["SOC 2", "PCI DSS", "FINRA", "End-to-end encryption"]
+    },
+    competitors: ["Bloomberg", "Thomson Reuters", "FactSet", "Refinitiv"],
+    marketSize: "$45.2 billion by 2025"
   },
+
+  // AI-Powered Legal Technology
   {
-    id: "healthcare-ai-platform",
-    title: "Healthcare AI Platform",
-    description: "Comprehensive healthcare platform for diagnosis assistance, patient monitoring, drug discovery, and medical research.",
-    category: "Healthcare AI",
-    price: 4500,
-    marketPrice: "$4,500 - $12,000/month"
+    id: "ai-legal-tech-automation",
+    title: "AI Legal Tech Automation Platform",
+    description: "Advanced legal technology platform that automates contract analysis, legal research, and compliance monitoring using AI and natural language processing.",
+    category: "AI & Legal Tech",
+    subcategory: "Legal Automation",
+    price: 2999,
+    currency: "$",
+    pricingModel: "monthly",
+    features: [
+      "AI contract analysis",
+      "Legal research automation",
+      "Compliance monitoring",
+      "Risk assessment",
+      "Document generation",
+      "Case law analysis",
+      "Regulatory tracking",
+      "Performance analytics",
+      "Custom workflow automation",
+      "Integration with legal tools"
+    ],
+    benefits: [
+      "Reduce legal review time by 70%",
+      "Improve accuracy by 85%",
+      "Lower legal costs by 40%",
+      "Automated compliance",
+      "Risk mitigation"
+    ],
+    useCases: [
+      "Contract review",
+      "Legal research",
+      "Compliance monitoring",
+      "Risk assessment",
+      "Document automation"
+    ],
+    targetAudience: [
+      "Lawyers",
+      "Legal assistants",
+      "Compliance officers",
+      "Legal departments",
+      "Law firms"
+    ],
+    tags: ["AI", "Legal Tech", "Automation", "Compliance", "Risk Management"],
+    estimatedDelivery: "8-10 weeks",
+    supportLevel: "enterprise",
+    marketPrice: "$2,999 - $8,999/month",
+    roi: "350-500%",
+    innovationLevel: "Advanced",
+    contactInfo: {
+      phone: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      website: "https://ziontechgroup.com"
+    },
+    technicalSpecs: {
+      technology: ["Python", "TensorFlow", "React", "Node.js", "PostgreSQL"],
+      integrations: ["Clio", "PracticePanther", "MyCase", "LexisNexis", "Westlaw"],
+      apiEndpoints: 150,
+      uptime: "99.9%",
+      security: ["SOC 2", "GDPR", "HIPAA", "End-to-end encryption"]
+    },
+    competitors: ["LexisNexis", "Westlaw", "Clio", "PracticePanther"],
+    marketSize: "$25.6 billion by 2025"
   },
+
+  // AI-Powered Healthcare Technology
   {
-    id: "autonomous-logistics",
-    title: "Autonomous Logistics Platform",
-    description: "AI-powered logistics platform for route optimization, autonomous vehicles, warehouse automation, and supply chain management.",
-    category: "Logistics AI",
-    price: 3200,
-    marketPrice: "$3,200 - $8,500/month"
-  },
-  {
-    id: "ai-financial-fraud-detection",
-    title: "AI Financial Fraud Detection Platform",
-    description: "Advanced fraud detection system using machine learning to identify fraudulent transactions, money laundering, and financial crimes in real-time.",
-    category: "AI & Finance",
-    price: 2500,
-    marketPrice: "$2,500 - $6,500/month"
-  },
-  {
-    id: "quantum-cryptography",
-    title: "Quantum Cryptography Platform",
-    description: "Next-generation encryption platform using quantum key distribution for unbreakable security and future-proof cryptography.",
-    category: "Quantum Security",
-    price: 4500,
-    marketPrice: "$4,500 - $12,000/month"
-  },
-  {
-    id: "ai-healthcare-diagnostics",
+    id: "ai-healthcare-diagnostics-platform",
     title: "AI Healthcare Diagnostics Platform",
-    description: "Intelligent medical imaging analysis, disease prediction, and diagnostic assistance platform for healthcare providers.",
-    category: "Healthcare AI",
-    price: 3800,
-    marketPrice: "$3,800 - $9,500/month"
+    description: "Revolutionary healthcare platform that uses AI to analyze medical images, predict patient outcomes, and assist in diagnosis with high accuracy.",
+    category: "AI & Healthcare",
+    subcategory: "Medical Diagnostics",
+    price: 5999,
+    currency: "$",
+    pricingModel: "monthly",
+    features: [
+      "AI medical image analysis",
+      "Diagnostic assistance",
+      "Patient outcome prediction",
+      "Risk assessment",
+      "Clinical decision support",
+      "Integration with EHR systems",
+      "Performance analytics",
+      "Custom model training",
+      "Multi-modality support",
+      "Regulatory compliance"
+    ],
+    benefits: [
+      "Improve diagnostic accuracy by 90%",
+      "Reduce diagnosis time by 60%",
+      "Lower healthcare costs by 30%",
+      "Better patient outcomes",
+      "Enhanced clinical workflow"
+    ],
+    useCases: [
+      "Medical imaging analysis",
+      "Diagnostic assistance",
+      "Patient monitoring",
+      "Clinical research",
+      "Healthcare analytics"
+    ],
+    targetAudience: [
+      "Radiologists",
+      "Doctors",
+      "Healthcare providers",
+      "Medical researchers",
+      "Healthcare administrators"
+    ],
+    tags: ["AI", "Healthcare", "Diagnostics", "Medical Imaging", "Clinical Support"],
+    estimatedDelivery: "12-16 weeks",
+    supportLevel: "enterprise",
+    marketPrice: "$5,999 - $18,999/month",
+    roi: "500-800%",
+    innovationLevel: "Revolutionary",
+    contactInfo: {
+      phone: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      website: "https://ziontechgroup.com"
+    },
+    technicalSpecs: {
+      technology: ["Python", "TensorFlow", "PyTorch", "React", "Node.js"],
+      integrations: ["Epic", "Cerner", "Allscripts", "PACS", "DICOM"],
+      apiEndpoints: 250,
+      uptime: "99.99%",
+      security: ["SOC 2", "HIPAA", "FDA", "End-to-end encryption"]
+    },
+    competitors: ["IBM Watson Health", "Google Health", "Microsoft Healthcare", "Philips"],
+    marketSize: "$67.4 billion by 2025"
   },
+
+  // AI-Powered Education Technology
   {
-    id: "blockchain-identity-management",
-    title: "Blockchain Identity Management Platform",
-    description: "Decentralized identity verification and management system using blockchain for secure, privacy-preserving digital identities.",
-    category: "Blockchain",
-    price: 1200,
-    marketPrice: "$1,200 - $3,500/month"
+    id: "ai-education-personalization-platform",
+    title: "AI Education Personalization Platform",
+    description: "Innovative education platform that personalizes learning experiences, adapts content, and tracks student progress using advanced AI algorithms.",
+    category: "AI & Education",
+    subcategory: "Personalized Learning",
+    price: 1999,
+    currency: "$",
+    pricingModel: "monthly",
+    features: [
+      "AI-powered personalization",
+      "Adaptive learning algorithms",
+      "Progress tracking",
+      "Content recommendation",
+      "Performance analytics",
+      "Custom curriculum creation",
+      "Multi-subject support",
+      "Parent/teacher dashboard",
+      "Integration with LMS",
+      "Mobile app access"
+    ],
+    benefits: [
+      "Improve learning outcomes by 40%",
+      "Increase student engagement by 60%",
+      "Reduce learning time by 25%",
+      "Personalized education paths",
+      "Better resource utilization"
+    ],
+    useCases: [
+      "K-12 education",
+      "Higher education",
+      "Corporate training",
+      "Online learning",
+      "Special education"
+    ],
+    targetAudience: [
+      "Teachers",
+      "Educators",
+      "School administrators",
+      "Corporate trainers",
+      "Students"
+    ],
+    tags: ["AI", "Education", "Personalization", "Learning", "Analytics"],
+    estimatedDelivery: "6-8 weeks",
+    supportLevel: "enterprise",
+    marketPrice: "$1,999 - $5,999/month",
+    roi: "300-450%",
+    innovationLevel: "Advanced",
+    contactInfo: {
+      phone: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      website: "https://ziontechgroup.com"
+    },
+    technicalSpecs: {
+      technology: ["Python", "TensorFlow", "React", "Node.js", "MongoDB"],
+      integrations: ["Canvas", "Blackboard", "Moodle", "Google Classroom", "Microsoft Teams"],
+      apiEndpoints: 100,
+      uptime: "99.9%",
+      security: ["SOC 2", "FERPA", "COPPA", "End-to-end encryption"]
+    },
+    competitors: ["Coursera", "Udemy", "edX", "Khan Academy"],
+    marketSize: "$32.1 billion by 2025"
   },
+
+  // AI-Powered Real Estate Technology
   {
-    id: "ai-legal-contract-analysis",
-    title: "AI Legal Contract Analysis Platform",
-    description: "Intelligent contract review, risk assessment, and legal document analysis platform for law firms and legal departments.",
-    category: "Legal Tech",
-    price: 2200,
-    marketPrice: "$2,200 - $5,500/month"
+    id: "ai-real-estate-analytics-platform",
+    title: "AI Real Estate Analytics Platform",
+    description: "Advanced real estate platform that uses AI to analyze market trends, predict property values, and optimize investment decisions.",
+    category: "AI & Real Estate",
+    subcategory: "Market Analytics",
+    price: 2499,
+    currency: "$",
+    pricingModel: "monthly",
+    features: [
+      "AI market analysis",
+      "Property value prediction",
+      "Investment optimization",
+      "Risk assessment",
+      "Market trend analysis",
+      "Portfolio management",
+      "Performance analytics",
+      "Custom reporting",
+      "Integration with MLS",
+      "Mobile app access"
+    ],
+    benefits: [
+      "Improve investment returns by 35%",
+      "Reduce market research time by 70%",
+      "Increase deal flow by 50%",
+      "Better risk management",
+      "Data-driven decisions"
+    ],
+    useCases: [
+      "Property investment",
+      "Market analysis",
+      "Portfolio optimization",
+      "Risk assessment",
+      "Deal sourcing"
+    ],
+    targetAudience: [
+      "Real estate investors",
+      "Agents",
+      "Brokers",
+      "Property managers",
+      "Developers"
+    ],
+    tags: ["AI", "Real Estate", "Analytics", "Investment", "Market Analysis"],
+    estimatedDelivery: "8-10 weeks",
+    supportLevel: "enterprise",
+    marketPrice: "$2,499 - $7,999/month",
+    roi: "400-600%",
+    innovationLevel: "Advanced",
+    contactInfo: {
+      phone: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      website: "https://ziontechgroup.com"
+    },
+    technicalSpecs: {
+      technology: ["Python", "TensorFlow", "React", "Node.js", "PostgreSQL"],
+      integrations: ["MLS", "Zillow", "Redfin", "Realtor.com", "Property databases"],
+      apiEndpoints: 150,
+      uptime: "99.9%",
+      security: ["SOC 2", "GDPR", "CCPA", "End-to-end encryption"]
+    },
+    competitors: ["Zillow", "Redfin", "Realtor.com", "CoStar"],
+    marketSize: "$28.7 billion by 2025"
   },
+
+  // AI-Powered Marketing Technology
   {
-    id: "quantum-optimization",
-    title: "Quantum Optimization Platform",
-    description: "Quantum computing platform for solving complex optimization problems in logistics, finance, and scientific research.",
-    category: "Quantum Computing",
-    price: 5500,
-    marketPrice: "$5,500 - $18,000/month"
+    id: "ai-marketing-automation-platform",
+    title: "AI Marketing Automation Platform",
+    description: "Comprehensive marketing platform that uses AI to automate campaigns, personalize content, and optimize marketing performance across all channels.",
+    category: "AI & Marketing",
+    subcategory: "Marketing Automation",
+    price: 1999,
+    currency: "$",
+    pricingModel: "monthly",
+    features: [
+      "AI campaign automation",
+      "Content personalization",
+      "Multi-channel marketing",
+      "Performance optimization",
+      "Customer segmentation",
+      "A/B testing automation",
+      "ROI tracking",
+      "Integration with CRM",
+      "Custom workflow automation",
+      "Real-time analytics"
+    ],
+    benefits: [
+      "Increase conversion rates by 45%",
+      "Reduce marketing costs by 30%",
+      "Improve customer engagement by 60%",
+      "Automated optimization",
+      "Better ROI tracking"
+    ],
+    useCases: [
+      "Email marketing",
+      "Social media marketing",
+      "Content marketing",
+      "Campaign management",
+      "Customer engagement"
+    ],
+    targetAudience: [
+      "Marketing managers",
+      "Digital marketers",
+      "Content creators",
+      "Growth hackers",
+      "Business owners"
+    ],
+    tags: ["AI", "Marketing", "Automation", "Personalization", "Analytics"],
+    estimatedDelivery: "6-8 weeks",
+    supportLevel: "enterprise",
+    marketPrice: "$1,999 - $6,999/month",
+    roi: "350-500%",
+    innovationLevel: "Advanced",
+    contactInfo: {
+      phone: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      website: "https://ziontechgroup.com"
+    },
+    technicalSpecs: {
+      technology: ["Python", "TensorFlow", "React", "Node.js", "MongoDB"],
+      integrations: ["Salesforce", "HubSpot", "Mailchimp", "Facebook", "Google Ads"],
+      apiEndpoints: 200,
+      uptime: "99.9%",
+      security: ["SOC 2", "GDPR", "CCPA", "End-to-end encryption"]
+    },
+    competitors: ["HubSpot", "Marketo", "Pardot", "ActiveCampaign"],
+    marketSize: "$35.6 billion by 2025"
   },
+
+  // AI-Powered Supply Chain Technology
   {
-    id: "ai-content-moderation",
-    title: "AI Content Moderation Platform",
-    description: "Automated content moderation system using AI to detect and filter inappropriate content across digital platforms.",
-    category: "AI & Content",
-    price: 1500,
-    marketPrice: "$1,500 - $4,000/month"
+    id: "ai-supply-chain-optimization",
+    title: "AI Supply Chain Optimization Platform",
+    description: "Advanced supply chain platform that uses AI to optimize logistics, predict demand, and improve operational efficiency across the entire supply chain.",
+    category: "AI & Supply Chain",
+    subcategory: "Supply Chain Optimization",
+    price: 3999,
+    currency: "$",
+    pricingModel: "monthly",
+    features: [
+      "AI demand forecasting",
+      "Inventory optimization",
+      "Route optimization",
+      "Supplier management",
+      "Risk assessment",
+      "Performance analytics",
+      "Real-time monitoring",
+      "Integration with ERP",
+      "Custom optimization rules",
+      "Mobile app access"
+    ],
+    benefits: [
+      "Reduce supply chain costs by 25%",
+      "Improve delivery times by 40%",
+      "Increase inventory efficiency by 35%",
+      "Better risk management",
+      "Optimized operations"
+    ],
+    useCases: [
+      "Inventory management",
+      "Logistics optimization",
+      "Demand forecasting",
+      "Supplier management",
+      "Risk mitigation"
+    ],
+    targetAudience: [
+      "Supply chain managers",
+      "Logistics coordinators",
+      "Operations managers",
+      "Procurement specialists",
+      "Business analysts"
+    ],
+    tags: ["AI", "Supply Chain", "Optimization", "Logistics", "Analytics"],
+    estimatedDelivery: "10-12 weeks",
+    supportLevel: "enterprise",
+    marketPrice: "$3,999 - $11,999/month",
+    roi: "400-600%",
+    innovationLevel: "Advanced",
+    contactInfo: {
+      phone: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      website: "https://ziontechgroup.com"
+    },
+    technicalSpecs: {
+      technology: ["Python", "TensorFlow", "React", "Node.js", "PostgreSQL"],
+      integrations: ["SAP", "Oracle", "Microsoft Dynamics", "WMS", "TMS"],
+      apiEndpoints: 250,
+      uptime: "99.9%",
+      security: ["SOC 2", "ISO 27001", "GDPR", "End-to-end encryption"]
+    },
+    competitors: ["SAP", "Oracle", "Manhattan Associates", "JDA Software"],
+    marketSize: "$41.3 billion by 2025"
   },
+
+  // AI-Powered Customer Service Technology
   {
-    id: "iot-smart-city",
-    title: "IoT Smart City Platform",
-    description: "Comprehensive smart city solution integrating IoT sensors, AI analytics, and automation for urban infrastructure management.",
-    category: "IoT & Smart Cities",
-    price: 3500,
-    marketPrice: "$3,500 - $15,000/month"
-  },
-  {
-    id: "ai-voice-assistant",
-    title: "AI Voice Assistant Platform",
-    description: "Customizable voice AI platform for businesses to create branded voice assistants and conversational AI experiences.",
-    category: "AI & Voice",
-    price: 1800,
-    marketPrice: "$1,800 - $4,500/month"
-  },
-  {
-    id: "blockchain-nft-platform",
-    title: "Blockchain NFT Platform",
-    description: "Enterprise-grade NFT creation, management, and trading platform for digital assets and collectibles.",
-    category: "Blockchain & NFTs",
-    price: 2000,
-    marketPrice: "$2,000 - $6,000/month"
-  },
-  {
-    id: "ai-emotion-recognition",
-    title: "AI Emotion Recognition Platform",
-    description: "Advanced emotion detection and analysis platform using computer vision and AI for customer experience and security applications.",
-    category: "AI & Computer Vision",
-    price: 2800,
-    marketPrice: "$2,800 - $7,000/month"
-  },
-  {
-    id: "quantum-simulation",
-    title: "Quantum Simulation Platform",
-    description: "Quantum computing platform for molecular simulations, chemical reactions, and materials science research.",
-    category: "Quantum Computing",
-    price: 7000,
-    marketPrice: "$7,000 - $25,000/month"
-  },
-  {
-    id: "ai-predictive-analytics",
-    title: "AI Predictive Analytics Platform",
-    description: "Comprehensive predictive analytics platform using machine learning for business forecasting and decision-making.",
-    category: "AI & Analytics",
-    price: 2400,
-    marketPrice: "$2,400 - $6,000/month"
-  },
-  {
-    id: "blockchain-decentralized-finance",
-    title: "Blockchain DeFi Platform",
-    description: "Decentralized finance platform for lending, borrowing, and yield farming using smart contracts and blockchain technology.",
-    category: "Blockchain & DeFi",
-    price: 3000,
-    marketPrice: "$3,000 - $8,000/month"
-  },
-  {
-    id: "ai-automated-testing",
-    title: "AI Automated Testing Platform",
-    description: "Intelligent software testing platform using AI to automate test case generation, execution, and quality assurance.",
-    category: "AI & DevOps",
-    price: 1600,
-    marketPrice: "$1,600 - $4,200/month"
-  },
-  {
-    id: "iot-industrial-automation",
-    title: "IoT Industrial Automation Platform",
-    description: "Comprehensive industrial automation platform integrating IoT sensors, AI, and robotics for smart manufacturing.",
-    category: "IoT & Manufacturing",
-    price: 4200,
-    marketPrice: "$4,200 - $12,000/month"
-  },
-  {
-    id: "ai-personalization-engine",
-    title: "AI Personalization Engine",
-    description: "Advanced personalization platform using AI to deliver tailored experiences across websites, apps, and marketing campaigns.",
-    category: "AI & Personalization",
-    price: 1900,
-    marketPrice: "$1,900 - $4,800/month"
-  },
-  {
-    id: "quantum-ai-hybrid",
-    title: "Quantum-AI Hybrid Platform",
-    description: "Revolutionary platform combining quantum computing with artificial intelligence for next-generation problem-solving capabilities.",
-    category: "Quantum AI",
-    price: 8500,
-    marketPrice: "$8,500 - $35,000/month"
-  },
-  {
-    id: "blockchain-supply-chain-finance",
-    title: "Blockchain Supply Chain Finance Platform",
-    description: "Innovative platform using blockchain for supply chain financing, trade finance, and payment automation.",
-    category: "Blockchain & Finance",
-    price: 1800,
-    marketPrice: "$1,800 - $5,000/month"
-  },
-  {
-    id: "ai-cybersecurity-threat-intelligence",
-    title: "AI Cybersecurity Threat Intelligence Platform",
-    description: "Advanced threat intelligence platform using AI to detect, analyze, and respond to cybersecurity threats in real-time.",
-    category: "AI & Cybersecurity",
-    price: 3200,
-    marketPrice: "$3,200 - $8,500/month"
-  },
-  {
-    id: "iot-energy-management",
-    title: "IoT Energy Management Platform",
-    description: "Smart energy management platform using IoT sensors and AI to optimize energy consumption and reduce costs.",
-    category: "IoT & Energy",
-    price: 2100,
-    marketPrice: "$2,100 - $5,500/month"
-  },
-  {
-    id: "ai-customer-churn-prediction",
-    title: "AI Customer Churn Prediction Platform",
-    description: "Intelligent platform using machine learning to predict customer churn and implement retention strategies.",
-    category: "AI & Customer Analytics",
-    price: 1700,
-    marketPrice: "$1,700 - $4,500/month"
-  },
-  {
-    id: "quantum-cybersecurity",
-    title: "Quantum Cybersecurity Platform",
-    description: "Future-proof cybersecurity platform using quantum-resistant algorithms and quantum key distribution.",
-    category: "Quantum Security",
-    price: 5500,
-    marketPrice: "$5,500 - $18,000/month"
-  },
-  {
-    id: "blockchain-voting-system",
-    title: "Blockchain Voting System Platform",
-    description: "Secure and transparent voting platform using blockchain technology for elections and corporate governance.",
-    category: "Blockchain & Governance",
-    price: 2500,
-    marketPrice: "$2,500 - $7,000/month"
-  },
-  {
-    id: "ai-automated-customer-service",
-    title: "AI Automated Customer Service Platform",
-    description: "Intelligent customer service platform using AI chatbots and automation to provide 24/7 customer support.",
+    id: "ai-customer-service-automation",
+    title: "AI Customer Service Automation Platform",
+    description: "Intelligent customer service platform that uses AI to automate responses, route inquiries, and provide personalized support across all channels.",
     category: "AI & Customer Service",
-    price: 1400,
-    marketPrice: "$1,400 - $3,800/month"
+    subcategory: "Service Automation",
+    price: 1799,
+    currency: "$",
+    pricingModel: "monthly",
+    features: [
+      "AI chatbot automation",
+      "Intelligent routing",
+      "Sentiment analysis",
+      "Knowledge base management",
+      "Multi-channel support",
+      "Performance analytics",
+      "Integration with CRM",
+      "Custom workflow automation",
+      "Real-time monitoring",
+      "Mobile app access"
+    ],
+    benefits: [
+      "Reduce response time by 80%",
+      "Lower support costs by 40%",
+      "Improve customer satisfaction by 50%",
+      "24/7 availability",
+      "Scalable support"
+    ],
+    useCases: [
+      "Customer support",
+      "Help desk automation",
+      "FAQ management",
+      "Ticket routing",
+      "Customer engagement"
+    ],
+    targetAudience: [
+      "Customer service managers",
+      "Support agents",
+      "Help desk staff",
+      "Business owners",
+      "Customer success teams"
+    ],
+    tags: ["AI", "Customer Service", "Automation", "Chatbot", "Support"],
+    estimatedDelivery: "6-8 weeks",
+    supportLevel: "enterprise",
+    marketPrice: "$1,799 - $5,999/month",
+    roi: "300-450%",
+    innovationLevel: "Advanced",
+    contactInfo: {
+      phone: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      website: "https://ziontechgroup.com"
+    },
+    technicalSpecs: {
+      technology: ["Python", "TensorFlow", "React", "Node.js", "MongoDB"],
+      integrations: ["Zendesk", "Freshdesk", "Intercom", "Salesforce", "Slack"],
+      apiEndpoints: 150,
+      uptime: "99.9%",
+      security: ["SOC 2", "GDPR", "CCPA", "End-to-end encryption"]
+    },
+    competitors: ["Zendesk", "Intercom", "Freshdesk", "Help Scout"],
+    marketSize: "$23.8 billion by 2025"
   },
+
+  // AI-Powered Sales Technology
   {
-    id: "iot-healthcare-monitoring",
-    title: "IoT Healthcare Monitoring Platform",
-    description: "Comprehensive healthcare monitoring platform using IoT devices and AI for patient care and health management.",
-    category: "IoT & Healthcare",
-    price: 2800,
-    marketPrice: "$2,800 - $7,500/month"
-  },
-  {
-    id: "ai-sales-forecasting",
-    title: "AI Sales Forecasting Platform",
-    description: "Advanced sales forecasting platform using machine learning to predict sales trends and optimize revenue.",
+    id: "ai-sales-automation-platform",
+    title: "AI Sales Automation Platform",
+    description: "Advanced sales platform that uses AI to automate lead scoring, predict sales outcomes, and optimize the entire sales process.",
     category: "AI & Sales",
-    price: 2000,
-    marketPrice: "$2,000 - $5,200/month"
-  },
-  {
-    id: "quantum-drug-discovery",
-    title: "Quantum Drug Discovery Platform",
-    description: "Revolutionary platform using quantum computing for accelerated drug discovery and pharmaceutical research.",
-    category: "Quantum Healthcare",
-    price: 9000,
-    marketPrice: "$9,000 - $40,000/month"
-  },
-  {
-    id: "blockchain-real-estate",
-    title: "Blockchain Real Estate Platform",
-    description: "Innovative real estate platform using blockchain for property transactions, title management, and smart contracts.",
-    category: "Blockchain & Real Estate",
-    price: 2200,
-    marketPrice: "$2,200 - $6,500/month"
-  },
-  {
-    id: "ai-workflow-automation",
-    title: "AI Workflow Automation Platform",
-    description: "Intelligent workflow automation platform using AI to streamline business processes and improve efficiency.",
-    category: "AI & Automation",
-    price: 1600,
-    marketPrice: "$1,600 - $4,200/month"
-  },
-  {
-    id: "iot-agriculture",
-    title: "IoT Agriculture Platform",
-    description: "Smart agriculture platform using IoT sensors and AI for precision farming and crop optimization.",
-    category: "IoT & Agriculture",
-    price: 1900,
-    marketPrice: "$1,900 - $5,000/month"
-  },
-  {
-    id: "ai-recommendation-engine",
-    title: "AI Recommendation Engine",
-    description: "Advanced recommendation engine using machine learning to deliver personalized product and content recommendations.",
-    category: "AI & Recommendations",
-    price: 1800,
-    marketPrice: "$1,800 - $4,500/month"
-  },
-  {
-    id: "quantum-climate-modeling",
-    title: "Quantum Climate Modeling Platform",
-    description: "Advanced climate modeling platform using quantum computing for accurate weather predictions and climate research.",
-    category: "Quantum Climate",
-    price: 6500,
-    marketPrice: "$6,500 - $22,000/month"
-  },
-  {
-    id: "blockchain-intellectual-property",
-    title: "Blockchain Intellectual Property Platform",
-    description: "Secure platform using blockchain for intellectual property protection, patent management, and digital rights.",
-    category: "Blockchain & IP",
-    price: 1500,
-    marketPrice: "$1,500 - $4,200/month"
-  },
-  {
-    id: "ai-sentiment-analysis",
-    title: "AI Sentiment Analysis Platform",
-    description: "Comprehensive sentiment analysis platform using AI to analyze customer feedback and social media sentiment.",
-    category: "AI & Analytics",
-    price: 1200,
-    marketPrice: "$1,200 - $3,200/month"
-  },
-  {
-    id: "iot-transportation",
-    title: "IoT Transportation Platform",
-    description: "Smart transportation platform using IoT and AI for fleet management, traffic optimization, and logistics.",
-    category: "IoT & Transportation",
-    price: 2400,
-    marketPrice: "$2,400 - $6,500/month"
-  },
-  {
-    id: "ai-quality-assurance",
-    title: "AI Quality Assurance Platform",
-    description: "Intelligent quality assurance platform using AI for automated testing, defect detection, and quality monitoring.",
-    category: "AI & Quality",
-    price: 1900,
-    marketPrice: "$1,900 - $4,800/month"
-  },
-  {
-    id: "quantum-financial-modeling",
-    title: "Quantum Financial Modeling Platform",
-    description: "Advanced financial modeling platform using quantum computing for risk assessment and portfolio optimization.",
-    category: "Quantum Finance",
-    price: 7500,
-    marketPrice: "$7,500 - $28,000/month"
-  },
-  {
-    id: "blockchain-gaming",
-    title: "Blockchain Gaming Platform",
-    description: "Innovative gaming platform using blockchain for in-game assets, ownership verification, and decentralized gaming.",
-    category: "Blockchain & Gaming",
-    price: 1800,
-    marketPrice: "$1,800 - $5,200/month"
-  },
-  {
-    id: "ai-video-analytics",
-    title: "AI Video Analytics Platform",
-    description: "Advanced video analytics platform using AI for security monitoring, retail analytics, and content analysis.",
-    category: "AI & Computer Vision",
-    price: 2200,
-    marketPrice: "$2,200 - $5,800/month"
-  },
-  {
-    id: "iot-smart-building",
-    title: "IoT Smart Building Platform",
-    description: "Comprehensive smart building platform using IoT and AI for building automation and energy management.",
-    category: "IoT & Smart Buildings",
-    price: 2600,
-    marketPrice: "$2,600 - $7,000/month"
-  },
-  {
-    id: "ai-demand-forecasting",
-    title: "AI Demand Forecasting Platform",
-    description: "Intelligent demand forecasting platform using machine learning to optimize inventory and supply chain management.",
-    category: "AI & Supply Chain",
-    price: 2100,
-    marketPrice: "$2,100 - $5,500/month"
-  },
-  {
-    id: "quantum-materials-science",
-    title: "Quantum Materials Science Platform",
-    description: "Revolutionary platform using quantum computing for materials research, discovery, and development.",
-    category: "Quantum Materials",
-    price: 8000,
-    marketPrice: "$8,000 - $35,000/month"
-  },
-  {
-    id: "blockchain-healthcare",
-    title: "Blockchain Healthcare Platform",
-    description: "Secure healthcare platform using blockchain for patient records, medical data, and healthcare transactions.",
-    category: "Blockchain & Healthcare",
-    price: 2800,
-    marketPrice: "$2,800 - $7,500/month"
-  },
-  {
-    id: "ai-competitive-intelligence",
-    title: "AI Competitive Intelligence Platform",
-    description: "Advanced competitive intelligence platform using AI to monitor competitors and market trends.",
-    category: "AI & Market Intelligence",
-    price: 2500,
-    marketPrice: "$2,500 - $6,500/month"
-  },
-  {
-    id: "iot-environmental-monitoring",
-    title: "IoT Environmental Monitoring Platform",
-    description: "Comprehensive environmental monitoring platform using IoT sensors for pollution tracking and environmental protection.",
-    category: "IoT & Environment",
-    price: 2300,
-    marketPrice: "$2,300 - $6,000/month"
-  },
-  {
-    id: "ai-talent-acquisition",
-    title: "AI Talent Acquisition Platform",
-    description: "Intelligent talent acquisition platform using AI for candidate sourcing, screening, and recruitment automation.",
-    category: "AI & HR",
-    price: 2000,
-    marketPrice: "$2,000 - $5,200/month"
-  },
-  {
-    id: "quantum-optimization-algorithms",
-    title: "Quantum Optimization Algorithms Platform",
-    description: "Advanced platform using quantum algorithms for solving complex optimization problems across industries.",
-    category: "Quantum Optimization",
-    price: 6000,
-    marketPrice: "$6,000 - $20,000/month"
-  },
-  {
-    id: "blockchain-education",
-    title: "Blockchain Education Platform",
-    description: "Innovative education platform using blockchain for credential verification, certification, and learning records.",
-    category: "Blockchain & Education",
-    price: 1600,
-    marketPrice: "$1,600 - $4,200/month"
-  },
-  {
-    id: "ai-predictive-marketing",
-    title: "AI Predictive Marketing Platform",
-    description: "Advanced marketing platform using AI for customer behavior prediction and marketing campaign optimization.",
-    category: "AI & Marketing",
-    price: 2300,
-    marketPrice: "$2,300 - $6,000/month"
-  },
-  {
-    id: "iot-retail-analytics",
-    title: "IoT Retail Analytics Platform",
-    description: "Smart retail analytics platform using IoT and AI for customer behavior analysis and store optimization.",
-    category: "IoT & Retail",
-    price: 2000,
-    marketPrice: "$2,000 - $5,500/month"
-  },
-  {
-    id: "ai-risk-management",
-    title: "AI Risk Management Platform",
-    description: "Comprehensive risk management platform using AI for financial risk assessment and mitigation strategies.",
-    category: "AI & Risk Management",
-    price: 2800,
-    marketPrice: "$2,800 - $7,200/month"
-  },
-  {
-    id: "quantum-artificial-intelligence",
-    title: "Quantum Artificial Intelligence Platform",
-    description: "Revolutionary platform combining quantum computing with artificial intelligence for next-generation AI capabilities.",
-    category: "Quantum AI",
-    price: 9500,
-    marketPrice: "$9,500 - $45,000/month"
-  },
-  {
-    id: "blockchain-insurance",
-    title: "Blockchain Insurance Platform",
-    description: "Innovative insurance platform using blockchain for claims processing, fraud prevention, and policy management.",
-    category: "Blockchain & Insurance",
-    price: 2400,
-    marketPrice: "$2,400 - $6,500/month"
-  },
-  {
-    id: "ai-automated-reporting",
-    title: "AI Automated Reporting Platform",
-    description: "Intelligent reporting platform using AI to automate data analysis and report generation across business functions.",
-    category: "AI & Reporting",
-    price: 1700,
-    marketPrice: "$1,700 - $4,500/month"
-  },
-  {
-    id: "iot-manufacturing",
-    title: "IoT Manufacturing Platform",
-    description: "Comprehensive manufacturing platform using IoT and AI for smart factory operations and production optimization.",
-    category: "IoT & Manufacturing",
-    price: 3200,
-    marketPrice: "$3,200 - $8,500/month"
-  },
-  {
-    id: "ai-customer-segmentation",
-    title: "AI Customer Segmentation Platform",
-    description: "Advanced customer segmentation platform using machine learning for targeted marketing and personalized experiences.",
-    category: "AI & Marketing",
-    price: 1600,
-    marketPrice: "$1,600 - $4,200/month"
-  },
-  {
-    id: "quantum-machine-learning-optimization",
-    title: "Quantum Machine Learning Optimization Platform",
-    description: "Advanced platform using quantum computing to optimize machine learning algorithms and accelerate AI training.",
-    category: "Quantum ML",
-    price: 7000,
-    marketPrice: "$7,000 - $25,000/month"
-  },
-  {
-    id: "blockchain-logistics",
-    title: "Blockchain Logistics Platform",
-    description: "Innovative logistics platform using blockchain for supply chain transparency, tracking, and automation.",
-    category: "Blockchain & Logistics",
-    price: 2000,
-    marketPrice: "$2,000 - $5,500/month"
-  },
-  {
-    id: "ai-automated-data-entry",
-    title: "AI Automated Data Entry Platform",
-    description: "Intelligent data entry platform using AI to automate document processing and data extraction from various sources.",
-    category: "AI & Automation",
-    price: 1400,
-    marketPrice: "$1,400 - $3,800/month"
-  },
-  {
-    id: "iot-energy-storage",
-    title: "IoT Energy Storage Platform",
-    description: "Smart energy storage platform using IoT and AI for battery management and energy optimization.",
-    category: "IoT & Energy",
-    price: 2500,
-    marketPrice: "$2,500 - $6,500/month"
-  },
-  {
-    id: "ai-predictive-maintenance-advanced",
-    title: "AI Advanced Predictive Maintenance Platform",
-    description: "Next-generation predictive maintenance platform using advanced AI algorithms for industrial equipment optimization.",
-    category: "AI & Industrial IoT",
-    price: 2800,
-    marketPrice: "$2,800 - $7,500/month"
-  },
-  {
-    id: "quantum-cryptography-advanced",
-    title: "Advanced Quantum Cryptography Platform",
-    description: "State-of-the-art quantum cryptography platform using quantum key distribution for unbreakable security.",
-    category: "Quantum Security",
-    price: 6500,
-    marketPrice: "$6,500 - $22,000/month"
-  },
-  {
-    id: "blockchain-decentralized-storage",
-    title: "Blockchain Decentralized Storage Platform",
-    description: "Innovative decentralized storage platform using blockchain for secure, distributed data storage and management.",
-    category: "Blockchain & Storage",
-    price: 1800,
-    marketPrice: "$1,800 - $4,800/month"
-  },
-  {
-    id: "ai-automated-customer-feedback",
-    title: "AI Automated Customer Feedback Platform",
-    description: "Intelligent customer feedback platform using AI to analyze and respond to customer inquiries and feedback automatically.",
-    category: "AI & Customer Service",
-    price: 1500,
-    marketPrice: "$1,500 - $4,000/month"
-  },
-  {
-    id: "iot-smart-grid",
-    title: "IoT Smart Grid Platform",
-    description: "Comprehensive smart grid platform using IoT and AI for energy distribution optimization and grid management.",
-    category: "IoT & Smart Grid",
-    price: 3500,
-    marketPrice: "$3,500 - $12,000/month"
-  },
-  {
-    id: "ai-predictive-customer-service",
-    title: "AI Predictive Customer Service Platform",
-    description: "Advanced customer service platform using AI to predict customer needs and provide proactive support.",
-    category: "AI & Customer Experience",
-    price: 2200,
-    marketPrice: "$2,200 - $5,800/month"
-  },
-  {
-    id: "quantum-artificial-intelligence-research",
-    title: "Quantum AI Research Platform",
-    description: "Cutting-edge research platform combining quantum computing with artificial intelligence for scientific breakthroughs.",
-    category: "Quantum AI Research",
-    price: 12000,
-    marketPrice: "$12,000 - $60,000/month"
-  },
-  {
-    id: "blockchain-carbon-trading",
-    title: "Blockchain Carbon Trading Platform",
-    description: "Innovative carbon trading platform using blockchain for carbon credit management and environmental sustainability.",
-    category: "Blockchain & Sustainability",
-    price: 2000,
-    marketPrice: "$2,000 - $6,000/month"
-  },
-  {
-    id: "ai-automated-quality-control",
-    title: "AI Automated Quality Control Platform",
-    description: "Intelligent quality control platform using AI for automated inspection and quality assurance in manufacturing.",
-    category: "AI & Quality Control",
-    price: 2400,
-    marketPrice: "$2,400 - $6,500/month"
-  },
-  {
-    id: "iot-smart-agriculture-advanced",
-    title: "IoT Advanced Smart Agriculture Platform",
-    description: "Next-generation smart agriculture platform using advanced IoT sensors and AI for precision farming optimization.",
-    category: "IoT & Agriculture",
-    price: 2800,
-    marketPrice: "$2,800 - $7,500/month"
-  },
-  {
-    id: "ai-predictive-inventory-management",
-    title: "AI Predictive Inventory Management Platform",
-    description: "Advanced inventory management platform using AI for demand forecasting and inventory optimization.",
-    category: "AI & Supply Chain",
-    price: 1900,
-    marketPrice: "$1,900 - $5,000/month"
-  },
-  {
-    id: "quantum-financial-risk-assessment",
-    title: "Quantum Financial Risk Assessment Platform",
-    description: "Revolutionary financial risk assessment platform using quantum computing for advanced risk modeling and analysis.",
-    category: "Quantum Finance",
-    price: 8500,
-    marketPrice: "$8,500 - $35,000/month"
-  },
-  {
-    id: "blockchain-intellectual-property-protection",
-    title: "Blockchain IP Protection Platform",
-    description: "Advanced intellectual property protection platform using blockchain for patent management and digital rights protection.",
-    category: "Blockchain & IP",
-    price: 1800,
-    marketPrice: "$1,800 - $5,000/month"
-  },
-  {
-    id: "ai-automated-compliance-monitoring",
-    title: "AI Automated Compliance Monitoring Platform",
-    description: "Intelligent compliance monitoring platform using AI to automate regulatory compliance and risk management.",
-    category: "AI & Compliance",
-    price: 2600,
-    marketPrice: "$2,600 - $7,000/month"
-  },
-  {
-    id: "iot-smart-city-advanced",
-    title: "IoT Advanced Smart City Platform",
-    description: "Next-generation smart city platform using advanced IoT technologies and AI for comprehensive urban management.",
-    category: "IoT & Smart Cities",
-    price: 4500,
-    marketPrice: "$4,500 - $18,000/month"
-  },
-  {
-    id: "ai-predictive-maintenance-iot",
-    title: "AI IoT Predictive Maintenance Platform",
-    description: "Comprehensive IoT-based predictive maintenance platform using AI for industrial equipment optimization and monitoring.",
-    category: "AI & IoT",
-    price: 3200,
-    marketPrice: "$3,200 - $8,500/month"
-  },
-  {
-    id: "quantum-machine-learning-acceleration",
-    title: "Quantum ML Acceleration Platform",
-    description: "Advanced platform using quantum computing to accelerate machine learning training and optimization processes.",
-    category: "Quantum ML",
-    price: 7500,
-    marketPrice: "$7,500 - $28,000/month"
-  },
-  {
-    id: "blockchain-supply-chain-transparency-advanced",
-    title: "Advanced Blockchain Supply Chain Platform",
-    description: "Next-generation supply chain platform using advanced blockchain technology for comprehensive transparency and traceability.",
-    category: "Blockchain & Supply Chain",
-    price: 2800,
-    marketPrice: "$2,800 - $8,000/month"
-  },
-  {
-    id: "ai-automated-customer-onboarding",
-    title: "AI Automated Customer Onboarding Platform",
-    description: "Intelligent customer onboarding platform using AI to streamline the customer acquisition and setup process.",
-    category: "AI & Customer Experience",
-    price: 1800,
-    marketPrice: "$1,800 - $4,800/month"
-  },
-  {
-    id: "iot-industrial-internet",
-    title: "IoT Industrial Internet Platform",
-    description: "Comprehensive industrial internet platform using IoT and AI for smart manufacturing and industrial automation.",
-    category: "IoT & Industry 4.0",
-    price: 3800,
-    marketPrice: "$3,800 - $12,000/month"
-  },
-  {
-    id: "ai-predictive-customer-lifetime-value",
-    title: "AI Customer Lifetime Value Prediction Platform",
-    description: "Advanced platform using AI to predict customer lifetime value and optimize customer relationship management.",
-    category: "AI & Customer Analytics",
-    price: 2100,
-    marketPrice: "$2,100 - $5,500/month"
-  },
-  {
-    id: "quantum-artificial-intelligence-enterprise",
-    title: "Enterprise Quantum AI Platform",
-    description: "Enterprise-grade quantum artificial intelligence platform for large-scale AI applications and research.",
-    category: "Quantum AI Enterprise",
-    price: 15000,
-    marketPrice: "$15,000 - $75,000/month"
-  },
-  {
-    id: "blockchain-decentralized-governance",
-    title: "Blockchain Decentralized Governance Platform",
-    description: "Innovative governance platform using blockchain for decentralized decision-making and organizational management.",
-    category: "Blockchain & Governance",
-    price: 2200,
-    marketPrice: "$2,200 - $6,500/month"
-  },
-  {
-    id: "ai-automated-business-process-optimization",
-    title: "AI Business Process Optimization Platform",
-    description: "Intelligent business process optimization platform using AI to streamline operations and improve efficiency.",
-    category: "AI & Business Process",
-    price: 2400,
-    marketPrice: "$2,400 - $6,500/month"
-  },
-  {
-    id: "iot-smart-infrastructure",
-    title: "IoT Smart Infrastructure Platform",
-    description: "Comprehensive smart infrastructure platform using IoT and AI for infrastructure monitoring and management.",
-    category: "IoT & Infrastructure",
-    price: 3200,
-    marketPrice: "$3,200 - $10,000/month"
-  },
-  {
-    id: "ai-predictive-workforce-planning",
-    title: "AI Workforce Planning Platform",
-    description: "Advanced workforce planning platform using AI for talent forecasting and human resource optimization.",
-    category: "AI & HR",
-    price: 2300,
-    marketPrice: "$2,300 - $6,000/month"
-  },
-  {
-    id: "quantum-cybersecurity-advanced",
-    title: "Advanced Quantum Cybersecurity Platform",
-    description: "State-of-the-art quantum cybersecurity platform using quantum-resistant algorithms and advanced security protocols.",
-    category: "Quantum Security Advanced",
-    price: 8000,
-    marketPrice: "$8,000 - $35,000/month"
-  },
-  {
-    id: "blockchain-digital-asset-management",
-    title: "Blockchain Digital Asset Management Platform",
-    description: "Comprehensive digital asset management platform using blockchain for secure asset tracking and management.",
-    category: "Blockchain & Asset Management",
-    price: 2600,
-    marketPrice: "$2,600 - $7,500/month"
-  },
-  {
-    id: "ai-automated-customer-success",
-    title: "AI Customer Success Platform",
-    description: "Intelligent customer success platform using AI to optimize customer onboarding, support, and retention.",
-    category: "AI & Customer Success",
-    price: 2000,
-    marketPrice: "$2,000 - $5,200/month"
-  },
-  {
-    id: "iot-smart-energy-management",
-    title: "IoT Smart Energy Management Platform",
-    description: "Advanced energy management platform using IoT and AI for comprehensive energy optimization and sustainability.",
-    category: "IoT & Energy Management",
-    price: 3000,
-    marketPrice: "$3,000 - $8,500/month"
-  },
-  {
-    id: "ai-predictive-marketing-automation",
-    title: "AI Predictive Marketing Automation Platform",
-    description: "Advanced marketing automation platform using AI for predictive marketing and campaign optimization.",
-    category: "AI & Marketing Automation",
-    price: 2500,
-    marketPrice: "$2,500 - $6,500/month"
-  },
-  {
-    id: "quantum-artificial-intelligence-research-advanced",
-    title: "Advanced Quantum AI Research Platform",
-    description: "Cutting-edge quantum AI research platform for advanced scientific research and breakthrough discoveries.",
-    category: "Quantum AI Research Advanced",
-    price: 18000,
-    marketPrice: "$18,000 - $100,000/month"
-  },
-  {
-    id: "blockchain-carbon-credit-trading",
-    title: "Blockchain Carbon Credit Trading Platform",
-    description: "Innovative carbon credit trading platform using blockchain for environmental sustainability and carbon management.",
-    category: "Blockchain & Sustainability",
-    price: 2400,
-    marketPrice: "$2,400 - $7,000/month"
-  },
-  {
-    id: "ai-automated-customer-feedback-analysis",
-    title: "AI Customer Feedback Analysis Platform",
-    description: "Advanced customer feedback analysis platform using AI for comprehensive customer insight and sentiment analysis.",
-    category: "AI & Customer Analytics",
-    price: 1800,
-    marketPrice: "$1,800 - $4,800/month"
-  },
-  {
-    id: "iot-smart-transportation-advanced",
-    title: "IoT Advanced Smart Transportation Platform",
-    description: "Next-generation smart transportation platform using advanced IoT and AI for comprehensive transportation optimization.",
-    category: "IoT & Transportation",
-    price: 3800,
-    marketPrice: "$3,800 - $12,000/month"
-  },
-  {
-    id: "ai-predictive-customer-behavior",
-    title: "AI Customer Behavior Prediction Platform",
-    description: "Advanced customer behavior prediction platform using AI for comprehensive customer insight and behavior analysis.",
-    category: "AI & Customer Behavior",
-    price: 2200,
-    marketPrice: "$2,200 - $5,800/month"
-  },
-  {
-    id: "quantum-machine-learning-enterprise",
-    title: "Enterprise Quantum Machine Learning Platform",
-    description: "Enterprise-grade quantum machine learning platform for large-scale ML applications and research.",
-    category: "Quantum ML Enterprise",
-    price: 12000,
-    marketPrice: "$12,000 - $60,000/month"
-  },
-  {
-    id: "blockchain-decentralized-identity",
-    title: "Blockchain Decentralized Identity Platform",
-    description: "Advanced decentralized identity platform using blockchain for secure, privacy-preserving digital identity management.",
-    category: "Blockchain & Identity",
-    price: 2000,
-    marketPrice: "$2,000 - $6,000/month"
-  },
-  {
-    id: "ai-automated-customer-relationship-management",
-    title: "AI Customer Relationship Management Platform",
-    description: "Intelligent CRM platform using AI to optimize customer relationships and improve customer satisfaction.",
-    category: "AI & CRM",
-    price: 2400,
-    marketPrice: "$2,400 - $6,500/month"
-  },
-  {
-    id: "iot-smart-manufacturing-advanced",
-    title: "IoT Advanced Smart Manufacturing Platform",
-    description: "Next-generation smart manufacturing platform using advanced IoT and AI for comprehensive manufacturing optimization.",
-    category: "IoT & Manufacturing",
-    price: 4500,
-    marketPrice: "$4,500 - $15,000/month"
-  },
-  {
-    id: "ai-predictive-customer-satisfaction",
-    title: "AI Customer Satisfaction Prediction Platform",
-    description: "Advanced customer satisfaction prediction platform using AI for comprehensive customer insight and satisfaction analysis.",
-    category: "AI & Customer Satisfaction",
-    price: 2000,
-    marketPrice: "$2,000 - $5,200/month"
-  },
-  {
-    id: "quantum-artificial-intelligence-optimization",
-    title: "Quantum AI Optimization Platform",
-    description: "Advanced quantum AI optimization platform for complex optimization problems and AI algorithm enhancement.",
-    category: "Quantum AI Optimization",
-    price: 10000,
-    marketPrice: "$10,000 - $45,000/month"
-  },
-  {
-    id: "blockchain-supply-chain-finance-advanced",
-    title: "Advanced Blockchain Supply Chain Finance Platform",
-    description: "Next-generation supply chain finance platform using advanced blockchain technology for comprehensive financial management.",
-    category: "Blockchain & Supply Chain Finance",
-    price: 2800,
-    marketPrice: "$2,800 - $8,500/month"
-  },
-  {
-    id: "ai-automated-customer-support-optimization",
-    title: "AI Customer Support Optimization Platform",
-    description: "Advanced customer support optimization platform using AI for comprehensive support automation and optimization.",
-    category: "AI & Customer Support",
-    price: 2200,
-    marketPrice: "$2,200 - $5,800/month"
-  },
-  {
-    id: "iot-smart-energy-storage-advanced",
-    title: "IoT Advanced Smart Energy Storage Platform",
-    description: "Next-generation smart energy storage platform using advanced IoT and AI for comprehensive energy storage optimization.",
-    category: "IoT & Energy Storage",
-    price: 3500,
-    marketPrice: "$3,500 - $12,000/month"
-  },
-  {
-    id: "ai-predictive-customer-retention",
-    title: "AI Customer Retention Prediction Platform",
-    description: "Advanced customer retention prediction platform using AI for comprehensive customer retention analysis and optimization.",
-    category: "AI & Customer Retention",
-    price: 2100,
-    marketPrice: "$2,100 - $5,500/month"
-  },
-  {
-    id: "quantum-artificial-intelligence-research-enterprise",
-    title: "Enterprise Quantum AI Research Platform",
-    description: "Enterprise-grade quantum AI research platform for large-scale research applications and breakthrough discoveries.",
-    category: "Quantum AI Research Enterprise",
-    price: 25000,
-    marketPrice: "$25,000 - $150,000/month"
-  },
-  {
-    id: "blockchain-decentralized-storage-advanced",
-    title: "Advanced Blockchain Decentralized Storage Platform",
-    description: "Next-generation decentralized storage platform using advanced blockchain technology for comprehensive data storage and management.",
-    category: "Blockchain & Storage Advanced",
-    price: 2800,
-    marketPrice: "$2,800 - $8,500/month"
-  },
-  {
-    id: "ai-automated-customer-experience-optimization",
-    title: "AI Customer Experience Optimization Platform",
-    description: "Advanced customer experience optimization platform using AI for comprehensive customer experience enhancement and optimization.",
-    category: "AI & Customer Experience",
-    price: 2600,
-    marketPrice: "$2,600 - $7,000/month"
-  },
-  {
-    id: "iot-smart-grid-advanced",
-    title: "IoT Advanced Smart Grid Platform",
-    description: "Next-generation smart grid platform using advanced IoT and AI for comprehensive grid management and optimization.",
-    category: "IoT & Smart Grid",
-    price: 4500,
-    marketPrice: "$4,500 - $18,000/month"
-  },
-  {
-    id: "ai-predictive-customer-loyalty",
-    title: "AI Customer Loyalty Prediction Platform",
-    description: "Advanced customer loyalty prediction platform using AI for comprehensive customer loyalty analysis and optimization.",
-    category: "AI & Customer Loyalty",
-    price: 2300,
-    marketPrice: "$2,300 - $6,000/month"
-  },
-  {
-    id: "quantum-machine-learning-research",
-    title: "Quantum Machine Learning Research Platform",
-    description: "Advanced quantum machine learning research platform for cutting-edge ML research and algorithm development.",
-    category: "Quantum ML Research",
-    price: 9000,
-    marketPrice: "$9,000 - $40,000/month"
-  },
-  {
-    id: "blockchain-decentralized-governance-advanced",
-    title: "Advanced Blockchain Decentralized Governance Platform",
-    description: "Next-generation decentralized governance platform using advanced blockchain technology for comprehensive organizational management.",
-    category: "Quantum AI Research Enterprise",
-    price: 3200,
-    marketPrice: "$3,200 - $9,000/month"
-  }
-  ,
-  // Newly added diversified, real offerings for 2025
-  {
-    id: "ai-compliance-copilot",
-    title: "AI Compliance Copilot",
-    description: "Automate evidence collection, policy mapping, and control testing for SOC 2, ISO 27001, HIPAA and GDPR with human-in-the-loop reviews.",
-    category: "Security & Compliance",
-    price: 2500,
-    marketPrice: "$2,500 - $10,000/month"
-  },
-  {
-    id: "finops-cost-optimizer",
-    title: "Cloud FinOps Cost Optimizer",
-    description: "Continuous cloud cost monitoring, anomaly detection, rightsizing, and commitment planning across AWS, Azure, and GCP.",
-    category: "Cloud & FinOps",
-    price: 1800,
-    marketPrice: "$1,800 - $8,000/month"
-  },
-  {
-    id: "data-pipeline-observability",
-    title: "Data Pipeline Observability",
-    description: "End-to-end lineage, data quality checks, SLAs, and incident routing for modern data stacks (dbt, Airflow, Snowflake).",
-    category: "Data & Analytics",
-    price: 2200,
-    marketPrice: "$2,200 - $6,500/month"
-  },
-  {
-    id: "mlops-platform-setup",
-    title: "MLOps Platform Setup",
-    description: "Production-ready MLOps stack with model registry, CI/CD, feature store, monitoring, and rollback playbooks.",
-    category: "AI & MLOps",
-    price: 12000,
-    marketPrice: "$8,000 - $40,000/project or $2,000 - $6,000/month"
-  },
-  {
-    id: "incident-response-retainer",
-    title: "Incident Response Retainer",
-    description: "24/7 on-call IR team, tabletop exercises, threat hunting, and post-incident forensics with guaranteed SLAs.",
-    category: "Cybersecurity",
-    price: 5000,
-    marketPrice: "$3,000 - $20,000/month"
-  },
-  {
-    id: "cloud-migration-factory",
-    title: "Cloud Migration Factory",
-    description: "Factory model for migrating workloads to AWS/Azure/GCP with automated discovery, TCO modeling, and landing zone setup.",
-    category: "Cloud & DevOps",
-    price: 25000,
-    marketPrice: "$10,000 - $75,000/project"
-  },
-  {
-    id: "ai-code-review-bot",
-    title: "AI Code Review Bot",
-    description: "Language-model based static review that detects security issues, performance antipatterns, and proposes diffs in pull requests.",
-    category: "Developer Productivity",
-    price: 15,
-    marketPrice: "$12 - $49/developer/month"
-  },
-  {
-    id: "automated-penetration-testing",
-    title: "Automated Penetration Testing",
-    description: "Continuous automated pen-testing with authenticated scans, attack path mapping, and prioritized remediation guidance.",
-    category: "Security Testing",
-    price: 3000,
-    marketPrice: "$2,000 - $12,000/month"
-  },
-  {
-    id: "ecommerce-personalization-engine",
-    title: "E-commerce Personalization Engine",
-    description: "Behavioral segmentation, real-time recommendations, bundles, and pricing personalization for Shopify and headless commerce.",
-    category: "E-commerce & Growth",
-    price: 2400,
-    marketPrice: "$2,400 - $9,000/month"
-  },
-  {
-    id: "vendor-risk-assessment-platform",
-    title: "Vendor Risk Assessment Platform",
-    description: "Automate third-party risk questionnaires, evidence reviews, SLA tracking, and continuous monitoring of vendor posture.",
-    category: "GRC & Risk",
-    price: 1900,
-    marketPrice: "$1,500 - $7,000/month"
-  },
-  {
-    id: "email-deliverability-optimizer",
-    title: "Email Deliverability Optimizer",
-    description: "Warm-up automation, DMARC/DKIM/SPF health, reputation monitoring, and content scoring to lift inbox placement.",
-    category: "Marketing Technology",
-    price: 700,
-    marketPrice: "$500 - $4,000/month"
-  },
-  {
-    id: "data-governance-catalog",
-    title: "Data Governance Catalog",
-    description: "Unified glossary, PII discovery, access policies, and stewardship workflows integrated with Snowflake/BigQuery and Lakehouse.",
-    category: "Data Governance",
-    price: 2100,
-    marketPrice: "$1,000 - $8,000/month"
-  }
-  ,
-  {
-    id: "seo-technical-monitor",
-    title: "SEO Technical Monitor",
-    description: "Automated crawls, schema validation, Core Web Vitals, sitemap and robots checks with weekly reports.",
-    category: "Growth & SEO",
-    price: 39,
-    marketPrice: "$29 - $199/month"
-  },
-  {
-    id: "csp-security-headers-manager",
-    title: "CSP & Security Headers Manager",
-    description: "Continuously audits and deploys HTTP security headers and CSP across domains with safe rollouts.",
-    category: "Security",
-    price: 49,
-    marketPrice: "$29 - $149/domain/month"
-  },
-  {
-    id: "status-incident-hub",
-    title: "Status & Incident Hub",
-    description: "Hosted status pages, synthetic checks, on-call notifications, and incident postmortems.",
-    category: "SRE & Reliability",
-    price: 59,
-    marketPrice: "$29 - $299/month"
-  },
-  {
-    id: "checkout-ab-optimizer",
-    title: "Checkout A/B Optimizer",
-    description: "Low-code experiments for checkout steps, fields, copy, and payment options with KPI tracking.",
-    category: "E-commerce",
-    price: 99,
-    marketPrice: "$49 - $299/month"
-  },
-  {
-    id: "billing-dunning-recovery",
-    title: "Billing Dunning & Recovery",
-    description: "Smart retries, reminders, and card updater integrations to reduce failed payments and churn.",
-    category: "FinTech",
-    price: 79,
-    marketPrice: "$49 - $199/month + 0.5%–2% recovered"
-  },
-  {
-    id: "multilingual-ux-localizer",
-    title: "Multilingual UX Localizer",
-    description: "String extraction, machine translation + human review, and per-locale rollout controls.",
-    category: "Localization",
-    price: 69,
-    marketPrice: "$49 - $399/month"
-  },
-  {
-    id: "privacy-dsar-portal",
-    title: "Privacy Request Portal (DSAR)",
-    description: "Hosted data subject request intake with verification, workflow, and export/delete automation.",
-    category: "Privacy & Compliance",
-    price: 99,
-    marketPrice: "$79 - $499/month + usage"
-  },
-  {
-    id: "lead-enrichment-studio",
-    title: "Lead Enrichment Studio",
-    description: "Enrich leads with firmographics and intent, deduplicate, and score for routing to SDRs.",
-    category: "RevOps",
-    price: 89,
-    marketPrice: "$49 - $399/month + usage"
-  },
-  {
-    id: "contracts-clause-extractor",
-    title: "Contracts Clause Extractor",
-    description: "AI-powered clause extraction, risk flags, and playbook suggestions with bulk uploads.",
-    category: "Legal Tech",
-    price: 149,
-    marketPrice: "$99 - $799/month"
-  },
-  {
-    id: "meeting-notes-copilot",
-    title: "Meeting Notes Copilot",
-    description: "Auto-notes, action items, summaries and CRM sync for Zoom/Meet/Teams.",
-    category: "Productivity",
-    price: 39,
-    marketPrice: "$15 - $59/user/month"
-  },
-  {
-    id: "analytics-pulse",
-    title: "Analytics Pulse",
-    description: "Plug-and-play dashboards with anomaly alerts and goal tracking across GA4, Stripe, HubSpot.",
-    category: "Analytics",
-    price: 59,
-    marketPrice: "$29 - $199/month"
-  },
-  {
-    id: "onboarding-flow-kit",
-    title: "Onboarding Flow Kit",
-    description: "Guided walkthroughs, tooltips, checklists and in-app NPS with no-code targeting segments.",
-    category: "Product-Led Growth",
-    price: 69,
-    marketPrice: "$49 - $299/month"
-  },
-  {
-    id: "sales-prospecting-cadence",
-    title: "Sales Prospecting Cadence",
-    description: "Sequenced multi-channel outreach with AI personalization and reply intent classification.",
-    category: "Sales Tech",
-    price: 79,
-    marketPrice: "$39 - $199/user/month"
+    subcategory: "Sales Automation",
+    price: 2499,
+    currency: "$",
+    pricingModel: "monthly",
+    features: [
+      "AI lead scoring",
+      "Sales prediction",
+      "Pipeline optimization",
+      "Performance analytics",
+      "Integration with CRM",
+      "Custom workflow automation",
+      "Real-time insights",
+      "Mobile app access",
+      "Team collaboration tools",
+      "ROI tracking"
+    ],
+    benefits: [
+      "Increase sales conversion by 35%",
+      "Reduce sales cycle time by 30%",
+      "Improve lead quality by 50%",
+      "Better pipeline visibility",
+      "Optimized sales process"
+    ],
+    useCases: [
+      "Lead management",
+      "Sales forecasting",
+      "Pipeline optimization",
+      "Performance tracking",
+      "Team collaboration"
+    ],
+    targetAudience: [
+      "Sales managers",
+      "Sales representatives",
+      "Business development",
+      "Account executives",
+      "Sales operations"
+    ],
+    tags: ["AI", "Sales", "Automation", "Lead Scoring", "Analytics"],
+    estimatedDelivery: "8-10 weeks",
+    supportLevel: "enterprise",
+    marketPrice: "$2,499 - $7,999/month",
+    roi: "400-600%",
+    innovationLevel: "Advanced",
+    contactInfo: {
+      phone: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      website: "https://ziontechgroup.com"
+    },
+    technicalSpecs: {
+      technology: ["Python", "TensorFlow", "React", "Node.js", "PostgreSQL"],
+      integrations: ["Salesforce", "HubSpot", "Pipedrive", "Zoho CRM", "Microsoft Dynamics"],
+      apiEndpoints: 200,
+      uptime: "99.9%",
+      security: ["SOC 2", "GDPR", "CCPA", "End-to-end encryption"]
+    },
+    competitors: ["Salesforce", "HubSpot", "Pipedrive", "Zoho CRM"],
+    marketSize: "$38.9 billion by 2025"
+  },
+
+  // AI-Powered Project Management Technology
+  {
+    id: "ai-project-management-automation",
+    title: "AI Project Management Automation Platform",
+    description: "Intelligent project management platform that uses AI to automate task allocation, predict project outcomes, and optimize resource utilization.",
+    category: "AI & Project Management",
+    subcategory: "Project Automation",
+    price: 1999,
+    currency: "$",
+    pricingModel: "monthly",
+    features: [
+      "AI task allocation",
+      "Project outcome prediction",
+      "Resource optimization",
+      "Risk assessment",
+      "Performance analytics",
+      "Team collaboration tools",
+      "Integration with project tools",
+      "Custom workflow automation",
+      "Real-time monitoring",
+      "Mobile app access"
+    ],
+    benefits: [
+      "Improve project success rate by 40%",
+      "Reduce project delays by 35%",
+      "Optimize resource utilization by 30%",
+      "Better risk management",
+      "Enhanced collaboration"
+    ],
+    useCases: [
+      "Project planning",
+      "Task management",
+      "Resource allocation",
+      "Risk assessment",
+      "Performance tracking"
+    ],
+    targetAudience: [
+      "Project managers",
+      "Team leaders",
+      "Business analysts",
+      "Operations managers",
+      "Product managers"
+    ],
+    tags: ["AI", "Project Management", "Automation", "Resource Optimization", "Analytics"],
+    estimatedDelivery: "8-10 weeks",
+    supportLevel: "enterprise",
+    marketPrice: "$1,999 - $6,999/month",
+    roi: "350-500%",
+    innovationLevel: "Advanced",
+    contactInfo: {
+      phone: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      website: "https://ziontechgroup.com"
+    },
+    technicalSpecs: {
+      technology: ["Python", "TensorFlow", "React", "Node.js", "MongoDB"],
+      integrations: ["Jira", "Asana", "Trello", "Monday.com", "Microsoft Project"],
+      apiEndpoints: 150,
+      uptime: "99.9%",
+      security: ["SOC 2", "ISO 27001", "GDPR", "End-to-end encryption"]
+    },
+    competitors: ["Jira", "Asana", "Trello", "Monday.com"],
+    marketSize: "$29.4 billion by 2025"
+  },
+
+  // AI-Powered Business Automation Technology
+  {
+    id: "ai-business-automation-platform",
+    title: "AI Business Automation Platform",
+    description: "Comprehensive business automation platform that uses AI to automate workflows, optimize processes, and improve operational efficiency across all departments.",
+    category: "AI & Business Automation",
+    subcategory: "Process Automation",
+    price: 3499,
+    currency: "$",
+    pricingModel: "monthly",
+    features: [
+      "AI workflow automation",
+      "Process optimization",
+      "Document automation",
+      "Integration with business tools",
+      "Performance analytics",
+      "Custom workflow builder",
+      "Real-time monitoring",
+      "Mobile app access",
+      "Team collaboration tools",
+      "ROI tracking"
+    ],
+    benefits: [
+      "Increase operational efficiency by 45%",
+      "Reduce manual work by 60%",
+      "Lower operational costs by 30%",
+      "Better process visibility",
+      "Enhanced productivity"
+    ],
+    useCases: [
+      "Workflow automation",
+      "Process optimization",
+      "Document management",
+      "Business integration",
+      "Performance monitoring"
+    ],
+    targetAudience: [
+      "Operations managers",
+      "Business analysts",
+      "Process improvement specialists",
+      "IT managers",
+      "Business owners"
+    ],
+    tags: ["AI", "Business Automation", "Workflow", "Process Optimization", "Analytics"],
+    estimatedDelivery: "10-12 weeks",
+    supportLevel: "enterprise",
+    marketPrice: "$3,499 - $10,999/month",
+    roi: "450-650%",
+    innovationLevel: "Advanced",
+    contactInfo: {
+      phone: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      website: "https://ziontechgroup.com"
+    },
+    technicalSpecs: {
+      technology: ["Python", "TensorFlow", "React", "Node.js", "PostgreSQL"],
+      integrations: ["Salesforce", "HubSpot", "QuickBooks", "Slack", "Microsoft 365"],
+      apiEndpoints: 300,
+      uptime: "99.9%",
+      security: ["SOC 2", "ISO 27001", "GDPR", "End-to-end encryption"]
+    },
+    competitors: ["UiPath", "Automation Anywhere", "Blue Prism", "Microsoft Power Automate"],
+    marketSize: "$42.7 billion by 2025"
+  },
+
+  // AI-Powered Robotics Technology
+  {
+    id: "ai-robotics-automation-platform",
+    title: "AI Robotics Automation Platform",
+    description: "Advanced robotics platform that uses AI to control autonomous robots, optimize operations, and improve efficiency in manufacturing and logistics.",
+    category: "AI & Robotics",
+    subcategory: "Robotics Automation",
+    price: 5999,
+    currency: "$",
+    pricingModel: "monthly",
+    features: [
+      "AI robot control",
+      "Autonomous navigation",
+      "Task optimization",
+      "Performance monitoring",
+      "Integration with robotics hardware",
+      "Custom automation rules",
+      "Real-time analytics",
+      "Mobile app access",
+      "Team collaboration tools",
+      "Safety monitoring"
+    ],
+    benefits: [
+      "Increase operational efficiency by 50%",
+      "Reduce operational costs by 35%",
+      "Improve safety by 80%",
+      "24/7 operation capability",
+      "Scalable automation"
+    ],
+    useCases: [
+      "Manufacturing automation",
+      "Warehouse automation",
+      "Logistics optimization",
+      "Quality control",
+      "Safety monitoring"
+    ],
+    targetAudience: [
+      "Manufacturing managers",
+      "Operations directors",
+      "Robotics engineers",
+      "Logistics managers",
+      "Safety officers"
+    ],
+    tags: ["AI", "Robotics", "Automation", "Manufacturing", "Logistics"],
+    estimatedDelivery: "12-16 weeks",
+    supportLevel: "enterprise",
+    marketPrice: "$5,999 - $18,999/month",
+    roi: "500-800%",
+    innovationLevel: "Revolutionary",
+    contactInfo: {
+      phone: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      website: "https://ziontechgroup.com"
+    },
+    technicalSpecs: {
+      technology: ["Python", "TensorFlow", "ROS", "React", "Node.js"],
+      integrations: ["ABB", "KUKA", "FANUC", "Universal Robots", "Mobile robots"],
+      apiEndpoints: 400,
+      uptime: "99.99%",
+      security: ["SOC 2", "ISO 27001", "Safety standards", "End-to-end encryption"]
+    },
+    competitors: ["ABB", "KUKA", "FANUC", "Universal Robots"],
+    marketSize: "$58.3 billion by 2025"
+  },
+
+  // AI-Powered Space Technology
+  {
+    id: "ai-space-technology-platform",
+    title: "AI Space Technology Platform",
+    description: "Revolutionary space technology platform that uses AI to optimize satellite operations, analyze space data, and improve space mission efficiency.",
+    category: "AI & Space Tech",
+    subcategory: "Space Operations",
+    price: 8999,
+    currency: "$",
+    pricingModel: "monthly",
+    features: [
+      "AI satellite optimization",
+      "Space data analysis",
+      "Mission planning",
+      "Performance monitoring",
+      "Integration with space systems",
+      "Custom automation rules",
+      "Real-time analytics",
+      "Mobile app access",
+      "Team collaboration tools",
+      "Safety monitoring"
+    ],
+    benefits: [
+      "Improve mission success rate by 60%",
+      "Reduce operational costs by 40%",
+      "Optimize satellite performance by 50%",
+      "Better data analysis",
+      "Enhanced mission planning"
+    ],
+    useCases: [
+      "Satellite operations",
+      "Space mission planning",
+      "Space data analysis",
+      "Performance optimization",
+      "Safety monitoring"
+    ],
+    targetAudience: [
+      "Space engineers",
+      "Mission planners",
+      "Satellite operators",
+      "Space researchers",
+      "Aerospace companies"
+    ],
+    tags: ["AI", "Space Technology", "Satellite Operations", "Mission Planning", "Analytics"],
+    estimatedDelivery: "16-20 weeks",
+    supportLevel: "enterprise",
+    marketPrice: "$8,999 - $25,999/month",
+    roi: "600-900%",
+    innovationLevel: "Revolutionary",
+    contactInfo: {
+      phone: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      website: "https://ziontechgroup.com"
+    },
+    technicalSpecs: {
+      technology: ["Python", "TensorFlow", "Space systems", "React", "Node.js"],
+      integrations: ["Satellite systems", "Ground stations", "Mission control", "Space databases"],
+      apiEndpoints: 500,
+      uptime: "99.99%",
+      security: ["SOC 2", "Space security standards", "End-to-end encryption"]
+    },
+    competitors: ["SpaceX", "Blue Origin", "Boeing", "Lockheed Martin"],
+    marketSize: "$74.8 billion by 2025"
+  },
+
+  // AI-Powered Climate Technology
+  {
+    id: "ai-climate-technology-platform",
+    title: "AI Climate Technology Platform",
+    description: "Advanced climate technology platform that uses AI to analyze climate data, predict weather patterns, and optimize climate-related operations.",
+    category: "AI & Climate",
+    subcategory: "Climate Analysis",
+    price: 3999,
+    currency: "$",
+    pricingModel: "monthly",
+    features: [
+      "AI climate analysis",
+      "Weather prediction",
+      "Climate modeling",
+      "Performance monitoring",
+      "Integration with climate systems",
+      "Custom analysis rules",
+      "Real-time analytics",
+      "Mobile app access",
+      "Team collaboration tools",
+      "Data visualization"
+    ],
+    benefits: [
+      "Improve weather prediction accuracy by 70%",
+      "Reduce climate analysis time by 60%",
+      "Optimize climate operations by 45%",
+      "Better data insights",
+      "Enhanced decision making"
+    ],
+    useCases: [
+      "Weather forecasting",
+      "Climate research",
+      "Environmental monitoring",
+      "Agriculture optimization",
+      "Energy management"
+    ],
+    targetAudience: [
+      "Climate scientists",
+      "Meteorologists",
+      "Environmental researchers",
+      "Agriculture experts",
+      "Energy managers"
+    ],
+    tags: ["AI", "Climate Technology", "Weather Prediction", "Climate Modeling", "Analytics"],
+    estimatedDelivery: "12-16 weeks",
+    supportLevel: "enterprise",
+    marketPrice: "$3,999 - $12,999/month",
+    roi: "450-700%",
+    innovationLevel: "Advanced",
+    contactInfo: {
+      phone: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      website: "https://ziontechgroup.com"
+    },
+    technicalSpecs: {
+      technology: ["Python", "TensorFlow", "Climate models", "React", "Node.js"],
+      integrations: ["Weather APIs", "Climate databases", "Environmental sensors", "Satellite data"],
+      apiEndpoints: 300,
+      uptime: "99.9%",
+      security: ["SOC 2", "Environmental standards", "End-to-end encryption"]
+    },
+    competitors: ["The Weather Company", "AccuWeather", "Weather Underground", "Climate Corp"],
+    marketSize: "$36.2 billion by 2025"
   }
 ];
 
