@@ -53,6 +53,14 @@ export function AppHeader() {
       color: 'from-cyan-500 to-blue-500'
     },
     { 
+      name: 'Revolutionary Services 2030', 
+      href: '/comprehensive-services-showcase-2030', 
+      icon: Rocket, 
+      description: 'Future Technology Solutions',
+      featured: true,
+      color: 'from-indigo-500 to-purple-500'
+    },
+    { 
       name: 'Innovative Micro SAAS 2025', 
       href: '/innovative-micro-saas-services-2025', 
       icon: Rocket, 

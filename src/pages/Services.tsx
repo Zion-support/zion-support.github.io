@@ -30,7 +30,9 @@ import {
   Phone,
   Mail,
   MapPin,
-  ExternalLink
+  ExternalLink,
+  Atom,
+  Leaf
 } from 'lucide-react';
 import expandedServices2025 from '../data/expandedServices2025';
 
@@ -43,6 +45,41 @@ export default function Services() {
   };
 
   const serviceCategories = [
+    {
+      name: 'Revolutionary Services 2030',
+      icon: Rocket,
+      description: 'Cutting-edge AI-powered micro SAAS services and emerging technology solutions',
+      color: 'from-indigo-600 to-purple-600',
+      services: [
+        {
+          name: 'Quantum AI Optimization Platform',
+          description: 'Revolutionary platform combining quantum computing with AI for complex optimization problems',
+          features: ['Quantum Algorithm Optimization', 'AI-Powered Problem Solving', 'Real-time Quantum Simulation', 'Hybrid Processing'],
+          href: '/comprehensive-services-showcase-2030',
+          price: 'From $4,999/month',
+          rating: 5.0,
+          reviewCount: 89
+        },
+        {
+          name: 'AI Space Mission Planning',
+          description: 'Intelligent platform for planning and optimizing space missions using AI algorithms',
+          features: ['Trajectory Optimization', 'Mission Risk Assessment', 'Resource Optimization', '3D Visualization'],
+          href: '/comprehensive-services-showcase-2030',
+          price: 'From $3,999/month',
+          rating: 4.9,
+          reviewCount: 67
+        },
+        {
+          name: 'AI Climate Prediction Platform',
+          description: 'Advanced AI platform for predicting climate patterns and extreme weather events',
+          features: ['Climate Modeling', 'Weather Prediction', 'Risk Assessment', 'Satellite Data Analysis'],
+          href: '/comprehensive-services-showcase-2030',
+          price: 'From $2,999/month',
+          rating: 4.8,
+          reviewCount: 134
+        }
+      ]
+    },
     {
       name: 'AI & Analytics',
       icon: Brain,
@@ -450,6 +487,105 @@ export default function Services() {
                   <p className="text-gray-300">{reason.description}</p>
                 </motion.div>
               ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Revolutionary Services 2030 Showcase */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-indigo-900 via-purple-900 to-pink-900">
+          <div className="max-w-7xl mx-auto">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
+              className="text-center mb-16"
+            >
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+                Revolutionary Services 2030
+              </h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Experience the future of technology with our cutting-edge AI-powered micro SAAS services, 
+                quantum computing solutions, and emerging technology platforms.
+              </p>
+            </motion.div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.1 }}
+                viewport={{ once: true }}
+                className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20"
+              >
+                <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-500 rounded-xl flex items-center justify-center mb-4">
+                  <Atom className="w-8 h-8 text-white" />
+                </div>
+                <h3 className="text-xl font-bold text-white mb-2">Quantum AI Platform</h3>
+                <p className="text-gray-300 mb-4">
+                  Revolutionary platform combining quantum computing with AI to solve complex optimization problems.
+                </p>
+                <Link
+                  to="/comprehensive-services-showcase-2030"
+                  className="inline-flex items-center text-purple-400 hover:text-purple-300 transition-colors duration-300"
+                >
+                  Explore Quantum AI <ArrowRight className="w-4 h-4 ml-1" />
+                </Link>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.2 }}
+                viewport={{ once: true }}
+                className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20"
+              >
+                <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-xl flex items-center justify-center mb-4">
+                  <Rocket className="w-8 h-8 text-white" />
+                </div>
+                <h3 className="text-xl font-bold text-white mb-2">Space Technology</h3>
+                <p className="text-gray-300 mb-4">
+                  AI-powered space mission planning and satellite operations optimization platform.
+                </p>
+                <Link
+                  to="/comprehensive-services-showcase-2030"
+                  className="inline-flex items-center text-blue-400 hover:text-blue-300 transition-colors duration-300"
+                >
+                  Explore Space Tech <ArrowRight className="w-4 h-4 ml-1" />
+                </Link>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.3 }}
+                viewport={{ once: true }}
+                className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20"
+              >
+                <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-emerald-500 rounded-xl flex items-center justify-center mb-4">
+                  <Leaf className="w-8 h-8 text-white" />
+                </div>
+                <h3 className="text-xl font-bold text-white mb-2">Climate Tech</h3>
+                <p className="text-gray-300 mb-4">
+                  Advanced AI platform for predicting climate patterns and extreme weather events.
+                </p>
+                <Link
+                  to="/comprehensive-services-showcase-2030"
+                  className="inline-flex items-center text-green-400 hover:text-green-300 transition-colors duration-300"
+                >
+                  Explore Climate Tech <ArrowRight className="w-4 h-4 ml-1" />
+                </Link>
+              </motion.div>
+            </div>
+
+            <div className="text-center">
+              <Link
+                to="/comprehensive-services-showcase-2030"
+                className="bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 text-white font-semibold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 inline-flex items-center space-x-2"
+              >
+                <Rocket className="w-5 h-5" />
+                <span>View All Revolutionary Services</span>
+              </Link>
             </div>
           </div>
         </section>

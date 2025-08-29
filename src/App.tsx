@@ -42,6 +42,7 @@ const Demo = React.lazy(() => import('./pages/Demo'));
 const Careers = React.lazy(() => import('./pages/Careers'));
 const Marketplace = React.lazy(() => import('./pages/Marketplace'));
 const ComprehensiveServicesShowcase2026 = React.lazy(() => import('./pages/ComprehensiveServicesShowcase2026'));
+const ComprehensiveServicesShowcase2030 = React.lazy(() => import('./pages/ComprehensiveServicesShowcase2030'));
 const ComprehensivePricingGuide2026 = React.lazy(() => import('./pages/ComprehensivePricingGuide2026'));
 const ComprehensivePricingGuide2027 = React.lazy(() => import('./pages/ComprehensivePricingGuide2027'));
 const RevolutionaryServices2030 = React.lazy(() => import('./pages/RevolutionaryServices2030'));
@@ -182,6 +183,9 @@ function App() {
                 
                 {/* Revolutionary Services 2030 */}
                 <Route path="/revolutionary-services-2030" element={<RevolutionaryServices2030 />} />
+                
+                {/* Comprehensive Services Showcase 2030 */}
+                <Route path="/comprehensive-services-showcase-2030" element={<ComprehensiveServicesShowcase2030 />} />
                 
                 {/* Pricing Guide 2025 */}
                 <Route path="/pricing-guide-2025" element={<ComprehensivePricingGuide2025 />} />

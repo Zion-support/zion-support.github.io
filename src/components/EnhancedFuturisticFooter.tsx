@@ -88,6 +88,19 @@ export const EnhancedFuturisticFooter: React.FC = () => {
       ]
     },
     {
+      title: 'Revolutionary Services 2030',
+      icon: Rocket,
+      color: 'from-indigo-600 to-purple-600',
+      links: [
+        { name: 'Quantum AI Platform', href: '/services/quantum-ai-platform' },
+        { name: 'Space Mission Planning', href: '/services/ai-space-mission-planning' },
+        { name: 'Climate Prediction AI', href: '/services/ai-climate-prediction-platform' },
+        { name: 'Healthcare Predictive Analytics', href: '/services/ai-healthcare-predictive-analytics' },
+        { name: 'Financial Trading Risk Management', href: '/services/ai-financial-trading-risk-management' },
+        { name: 'Legal Document Automation', href: '/services/ai-legal-document-automation' }
+      ]
+    },
+    {
       title: 'Cloud & DevOps',
       icon: Zap,
       color: 'from-blue-600 to-cyan-600',
@@ -243,6 +256,38 @@ export const EnhancedFuturisticFooter: React.FC = () => {
                 </ul>
               </motion.div>
             ))}
+          </div>
+
+          {/* Quick Links Section */}
+          <div className="mb-16">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              className="text-center"
+            >
+              <h3 className="text-2xl font-bold text-white mb-8">Quick Links</h3>
+              <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4">
+                <Link to="/comprehensive-services-showcase-2030" className="text-gray-300 hover:text-white transition-colors text-sm">
+                  Services 2030
+                </Link>
+                <Link to="/pricing" className="text-gray-300 hover:text-white transition-colors text-sm">
+                  Pricing
+                </Link>
+                <Link to="/contact" className="text-gray-300 hover:text-white transition-colors text-sm">
+                  Contact
+                </Link>
+                <Link to="/about" className="text-gray-300 hover:text-white transition-colors text-sm">
+                  About
+                </Link>
+                <Link to="/blog" className="text-gray-300 hover:text-white transition-colors text-sm">
+                  Blog
+                </Link>
+                <Link to="/faq" className="text-gray-300 hover:text-white transition-colors text-sm">
+                  FAQ
+                </Link>
+              </div>
+            </motion.div>
           </div>
 
           {/* Contact and social section */}
