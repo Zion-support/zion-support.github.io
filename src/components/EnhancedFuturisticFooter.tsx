@@ -75,6 +75,23 @@ export const EnhancedFuturisticFooter: React.FC = () => {
 
   const footerSections = [
     {
+      title: 'Comprehensive Services 2026',
+      featured: true,
+      links: [
+        { name: 'All Services & Pricing', href: '/comprehensive-services-showcase-2026', featured: true },
+        { name: 'Pricing Guide 2026', href: '/comprehensive-pricing-guide-2026', featured: true },
+        { name: 'Micro SaaS Solutions', href: '/services/micro-saas', featured: true },
+        { name: 'AI Solutions', href: '/services/ai-business-intelligence', featured: true },
+        { name: 'IT Infrastructure', href: '/services/it-infrastructure', featured: true },
+        { name: 'Cloud DevOps', href: '/services/cloud-devops', featured: true },
+        { name: 'Data Analytics', href: '/services/data-analytics', featured: true },
+        { name: 'Digital Twin Platform', href: '/services/digital-twin', featured: true },
+        { name: 'Quantum Computing', href: '/services/quantum-computing', featured: true },
+        { name: 'Blockchain Solutions', href: '/services#blockchain', featured: true },
+        { name: 'IoT Edge Computing', href: '/services/iot-edge-computing', featured: true }
+      ]
+    },
+    {
       title: 'Revolutionary 2030 Services',
       featured: true,
       links: [
@@ -89,6 +106,22 @@ export const EnhancedFuturisticFooter: React.FC = () => {
         { name: 'AI Autonomous Operations', href: '/revolutionary-services-2030#ai-autonomous-business-operations-2030' },
         { name: 'Quantum AI Cybersecurity', href: '/revolutionary-services-2030#quantum-ai-cybersecurity-2030' },
         { name: 'AI Content Creation Studio', href: '/revolutionary-services-2030#ai-content-creation-studio-2030' }
+      ]
+    },
+    {
+      title: 'Pricing & Resources',
+      featured: true,
+      links: [
+        { name: 'Comprehensive Pricing Guide 2026', href: '/comprehensive-services-showcase-2026', featured: true },
+        { name: 'Pricing Guide 2025', href: '/pricing-guide-2025', featured: true },
+        { name: 'Pricing Guide 2030', href: '/pricing-guide-2030', featured: true },
+        { name: 'Request Quote', href: '/request-quote', featured: true },
+        { name: 'Schedule Demo', href: '/schedule-demo', featured: true },
+        { name: 'Case Studies', href: '/case-studies', featured: true },
+        { name: 'White Papers', href: '/white-papers', featured: true },
+        { name: 'Webinars', href: '/webinars', featured: true },
+        { name: 'Documentation', href: '/docs', featured: true },
+        { name: 'FAQ & Support', href: '/faq', featured: true }
       ]
     },
     {
