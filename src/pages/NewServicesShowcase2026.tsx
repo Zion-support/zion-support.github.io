@@ -60,7 +60,7 @@ import {
 } from 'lucide-react';
 import newServices2026 from '../data/newServices2026';
 
-export default function Services() {
+export default function NewServicesShowcase2026() {
   const contactInfo = {
     phone: '+1 302 464 0950',
     email: 'kleber@ziontechgroup.com',
@@ -71,7 +71,7 @@ export default function Services() {
   const stats = [
     {
       number: '10+',
-      label: 'AI Services',
+      label: 'New AI Services',
       description: 'Cutting-edge micro SAAS solutions'
     },
     {
@@ -117,9 +117,9 @@ export default function Services() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-indigo-900 to-slate-900">
       <SEO 
-        title="Comprehensive AI & IT Services | Zion Tech Group"
-        description="Discover our comprehensive suite of AI-powered micro SAAS services, IT solutions, and innovative technology services. Transform your business with intelligent solutions."
-        keywords="AI services, IT services, micro SAAS, AI real estate, AI healthcare, AI supply chain, AI legal, AI education, AI marketing, AI HR, AI sustainability"
+        title="New Innovative Micro SAAS Services 2026 | Zion Tech Group"
+        description="Discover our cutting-edge AI-powered micro SAAS services for 2026. From real estate analytics to healthcare predictions, transform your business with intelligent solutions."
+        keywords="AI micro SAAS, innovative services 2026, AI real estate, AI healthcare, AI supply chain, AI legal, AI education, AI marketing, AI HR, AI sustainability"
       />
       
       {/* Hero Section */}
@@ -132,22 +132,22 @@ export default function Services() {
           >
             <div className="inline-flex items-center px-4 py-2 rounded-full bg-indigo-100/10 border border-indigo-200/20 text-indigo-200 text-sm font-medium mb-8">
               <Sparkles className="w-4 h-4 mr-2" />
-              Revolutionary AI & IT Services
+              Revolutionary AI Services 2026
             </div>
             
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              Comprehensive
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 to-purple-400"> AI & IT Services</span>
+              New Innovative
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 to-purple-400"> Micro SAAS Services</span>
             </h1>
             
             <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-              Transform your business with our cutting-edge AI-powered micro SAAS services, IT solutions, and innovative technology services. 
-              From real estate analytics to healthcare predictions, we have the solutions you need.
+              Discover our cutting-edge AI-powered micro SAAS services for 2026. From real estate analytics to healthcare predictions, 
+              transform your business with intelligent solutions that deliver measurable results.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <a
-                href="/new-services-showcase-2026"
+                href={`mailto:${contactInfo.email}?subject=New Services 2026 Demo Request`}
                 className="inline-flex items-center px-8 py-4 rounded-lg bg-gradient-to-r from-indigo-600 to-purple-600 text-white font-semibold hover:from-indigo-700 hover:to-purple-700 transition-all duration-200 shadow-lg hover:shadow-xl"
               >
                 <Rocket className="w-5 h-5 mr-2" />
@@ -198,10 +198,10 @@ export default function Services() {
             className="text-center mb-16"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Why Choose Our Services?
+              Why Choose Our AI Services?
             </h2>
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              Experience the power of next-generation artificial intelligence and technology
+              Experience the power of next-generation artificial intelligence
             </p>
           </motion.div>
 
@@ -237,7 +237,7 @@ export default function Services() {
             className="text-center mb-16"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Our Revolutionary Services
+              Revolutionary AI Services
             </h2>
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
               Transform your business with our cutting-edge AI-powered solutions
@@ -346,7 +346,7 @@ export default function Services() {
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <a
-                href={`mailto:${contactInfo.email}?subject=Services Demo Request`}
+                href={`mailto:${contactInfo.email}?subject=New Services 2026 Demo Request`}
                 className="inline-flex items-center px-8 py-4 rounded-lg bg-gradient-to-r from-indigo-600 to-purple-600 text-white font-semibold hover:from-indigo-700 hover:to-purple-700 transition-all duration-200 shadow-lg hover:shadow-xl"
               >
                 <Rocket className="w-5 h-5 mr-2" />

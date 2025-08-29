@@ -100,6 +100,11 @@ const AILegalDocumentAutomation = React.lazy(() => import('./pages/services/AILe
 const AIHealthcarePredictiveAnalytics = React.lazy(() => import('./pages/services/AIHealthcarePredictiveAnalytics'));
 const AIFinancialTradingRiskManagement = React.lazy(() => import('./pages/services/AIFinancialTradingRiskManagement'));
 
+// New innovative services 2026
+const AIRealEstateInvestmentAnalyzer = React.lazy(() => import('./pages/services/AIRealEstateInvestmentAnalyzer'));
+const AISupplyChainRiskManagement = React.lazy(() => import('./pages/services/AISupplyChainRiskManagement'));
+const NewServicesShowcase2026 = React.lazy(() => import('./pages/NewServicesShowcase2026'));
+
 function App() {
   return (
     <ErrorBoundary>
@@ -197,6 +202,11 @@ function App() {
                   <Route path="/services/ai-legal-document-automation" element={<AILegalDocumentAutomation />} />
                   <Route path="/services/ai-healthcare-predictive-analytics" element={<AIHealthcarePredictiveAnalytics />} />
                   <Route path="/services/ai-financial-trading-risk-management" element={<AIFinancialTradingRiskManagement />} />
+
+                  {/* New innovative services 2026 */}
+                  <Route path="/services/ai-real-estate-investment-analyzer" element={<AIRealEstateInvestmentAnalyzer />} />
+                  <Route path="/services/ai-supply-chain-risk-management" element={<AISupplyChainRiskManagement />} />
+                  <Route path="/new-services-showcase-2026" element={<NewServicesShowcase2026 />} />
 
                   {/* Catch all route */}
                   <Route path="*" element={<Home />} />
