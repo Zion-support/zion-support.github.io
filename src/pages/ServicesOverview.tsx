@@ -9,6 +9,8 @@ const ServicesOverview: React.FC = () => {
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('All');
   const [sortBy, setSortBy] = useState('name');
+  const [page, setPage] = useState(1);
+  const pageSize = 18;
 
   const services = INNOVATIVE_MICRO_SAAS_SERVICES_2025;
 
@@ -60,6 +62,12 @@ const ServicesOverview: React.FC = () => {
 
     return filtered;
   }, [services, searchQuery, selectedCategory, sortBy]);
+
+  const totalPages = Math.max(1, Math.ceil(filteredServices.length / pageSize));
+  const pagedServices = useMemo(() => {
+    const start = (page - 1) * pageSize;
+    return filteredServices.slice(start, start + pageSize);
+  }, [filteredServices, page]);
 
   const featuredServices = services.filter(s => s.innovationLevel === 'Revolutionary').slice(0, 6);
 
@@ -246,7 +254,7 @@ const ServicesOverview: React.FC = () => {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-7xl mx-auto">
-            {filteredServices.map((service, index) => (
+            {pagedServices.map((service, index) => (
               <motion.div
                 key={service.id}
                 initial={{ opacity: 0, y: 20 }}
@@ -290,6 +298,25 @@ const ServicesOverview: React.FC = () => {
               <div className="text-6xl mb-4">🔍</div>
               <h3 className="text-xl font-semibold mb-2">No services found</h3>
               <p className="text-slate-400">Try adjusting your search or filter criteria</p>
+            </div>
+          )}
+          {filteredServices.length > 0 && (
+            <div className="mt-12 flex items-center justify-center gap-2">
+              <button
+                onClick={() => setPage((p) => Math.max(1, p - 1))}
+                disabled={page === 1}
+                className="px-3 py-2 rounded-lg bg-slate-800 border border-slate-700 disabled:opacity-50"
+              >
+                Prev
+              </button>
+              <div className="text-sm text-slate-300">Page {page} of {totalPages}</div>
+              <button
+                onClick={() => setPage((p) => Math.min(totalPages, p + 1))}
+                disabled={page === totalPages}
+                className="px-3 py-2 rounded-lg bg-slate-800 border border-slate-700 disabled:opacity-50"
+              >
+                Next
+              </button>
             </div>
           )}
         </div>

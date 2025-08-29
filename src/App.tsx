@@ -87,6 +87,13 @@ const WebsiteAiChatbot = React.lazy(() => import('./pages/services/WebsiteAiChat
 const RagSearch = React.lazy(() => import('./pages/services/RagSearch'));
 const MlopsPipeline = React.lazy(() => import('./pages/services/MlopsPipeline'));
 const EcommercePersonalization = React.lazy(() => import('./pages/services/EcommercePersonalization'));
+const ReturnsManagementSaaS = React.lazy(() => import('./pages/services/ReturnsManagementSaaS'));
+
+// Newly created service pages (this commit)
+const VendorRiskManagement = React.lazy(() => import('./pages/services/VendorRiskManagement'));
+const AISEOOptimizer = React.lazy(() => import('./pages/services/AISEOOptimizer'));
+const SaaSChurnPredictor = React.lazy(() => import('./pages/services/SaaSChurnPredictor'));
+const AIIncidentPostmortems = React.lazy(() => import('./pages/services/AIIncidentPostmortems'));
 
 // New services added in this iteration
 const APIMonitoringSaaS = React.lazy(() => import('./pages/services/APIMonitoringSaaS'));
@@ -243,6 +250,11 @@ function App() {
               <Route path="/services/ai-compliance-copilot" element={<AIComplianceCopilot />} />
               <Route path="/services/llm-content-studio" element={<LLMContentStudio />} />
               <Route path="/services/finops-advisor" element={<FinOpsAdvisor />} />
+              {/* New concrete services */}
+              <Route path="/services/vendor-risk-management" element={<VendorRiskManagement />} />
+              <Route path="/services/ai-seo-optimizer" element={<AISEOOptimizer />} />
+              <Route path="/services/saas-churn-predictor" element={<SaaSChurnPredictor />} />
+              <Route path="/services/ai-incident-postmortems" element={<AIIncidentPostmortems />} />
 
               {/* New concrete services */}
               <Route path="/services/ai-lead-scoring" element={<AiLeadScoring />} />
@@ -250,6 +262,7 @@ function App() {
               <Route path="/services/rag-search" element={<RagSearch />} />
               <Route path="/services/mlops-pipeline" element={<MlopsPipeline />} />
               <Route path="/services/ecommerce-personalization" element={<EcommercePersonalization />} />
+              <Route path="/services/returns-management" element={<ReturnsManagementSaaS />} />
               <Route path="/services/api-monitoring" element={<APIMonitoringSaaS />} />
               <Route path="/services/gdpr-cookie-compliance" element={<GDPRCookieCompliance />} />
               <Route path="/services/ai-proofreading-studio" element={<AIProofreadingStudio />} />

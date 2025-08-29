@@ -111,7 +111,8 @@ export function AppHeader() {
         { name: 'Digital Twin', href: '/services/digital-twin', description: 'Virtual simulation & monitoring' },
         { name: 'IoT Edge Computing', href: '/services/iot-edge', description: 'Smart device networks' },
         { name: 'Data Analytics', href: '/services/data-analytics', description: 'Advanced data processing' },
-        { name: 'IT Infrastructure', href: '/services/it-infrastructure', description: 'Enterprise infrastructure' }
+        { name: 'IT Infrastructure', href: '/services/it-infrastructure', description: 'Enterprise infrastructure' },
+        { name: 'Returns Management', href: '/services/returns-management', description: 'E-commerce RMA & logistics' }
       ]
     },
     {
