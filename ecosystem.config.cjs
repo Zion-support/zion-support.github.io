@@ -105,7 +105,58 @@ module.exports = {
       out_file: './logs/file-integrity-out.log'
     },
 
-    // NEW: Project Health Management Automations
+    // NEW: AI-Powered Code Quality Enhancer
+    {
+      name: 'ai-code-quality-enhancer',
+      script: './scripts/automation/ai-code-quality-enhancer.cjs',
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      max_memory_restart: '1G',
+      env: {
+        NODE_ENV: 'production'
+      },
+      cron_restart: '*/20 * * * *', // Every 20 minutes
+      log_file: './logs/ai-code-quality-enhancer.log',
+      error_file: './logs/ai-code-quality-enhancer-error.log',
+      out_file: './logs/ai-code-quality-enhancer-out.log'
+    },
+
+    // NEW: Intelligent Performance Optimizer
+    {
+      name: 'intelligent-performance-optimizer',
+      script: './scripts/automation/intelligent-performance-optimizer.cjs',
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      max_memory_restart: '1.5G',
+      env: {
+        NODE_ENV: 'production'
+      },
+      cron_restart: '*/30 * * * *', // Every 30 minutes
+      log_file: './logs/intelligent-performance-optimizer.log',
+      error_file: './logs/intelligent-performance-optimizer-error.log',
+      out_file: './logs/intelligent-performance-optimizer-out.log'
+    },
+
+    // NEW: Smart Security & Compliance Monitor
+    {
+      name: 'smart-security-compliance-monitor',
+      script: './scripts/automation/smart-security-compliance-monitor.cjs',
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      max_memory_restart: '1G',
+      env: {
+        NODE_ENV: 'production'
+      },
+      cron_restart: '*/25 * * * *', // Every 25 minutes
+      log_file: './logs/smart-security-compliance-monitor.log',
+      error_file: './logs/smart-security-compliance-monitor-error.log',
+      out_file: './logs/smart-security-compliance-monitor-out.log'
+    },
+
+    // Enhanced Project Health Management Automations
     {
       name: 'project-health-monitor',
       script: './scripts/automation/project-health-monitor.cjs',
