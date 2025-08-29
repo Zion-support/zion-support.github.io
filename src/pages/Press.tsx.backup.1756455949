@@ -1,4 +1,10 @@
 import React from 'react';
+<<<<<<< HEAD
+import { SEO } from '../components/SEO';
+
+import React, { useState } from 'react';
+=======
+>>>>>>> origin/cursor/website-audit-content-update-and-deployment-a874
 import { motion } from 'framer-motion';
 import { SEO } from '../components/SEO';
 import { 
