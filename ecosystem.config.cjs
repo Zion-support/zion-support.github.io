@@ -313,6 +313,48 @@ module.exports = {
         NODE_ENV: 'production',
         AUTOMATION_INTERVAL: '7200000' // 2 hours
       }
+    },
+
+    // 🆕 NEW: TypeScript Error Fixer - runs every 30 minutes (HIGH PRIORITY)
+    {
+      name: 'typescript-error-fixer',
+      script: './scripts/automation/typescript-error-fixer.cjs',
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      max_memory_restart: '1G',
+      env: {
+        NODE_ENV: 'production',
+        AUTOMATION_INTERVAL: '1800000' // 30 minutes
+      }
+    },
+
+    // 🆕 NEW: Project Health Monitor - runs every hour
+    {
+      name: 'project-health-monitor',
+      script: './scripts/automation/project-health-monitor.cjs',
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      max_memory_restart: '1G',
+      env: {
+        NODE_ENV: 'production',
+        AUTOMATION_INTERVAL: '3600000' // 1 hour
+      }
+    },
+
+    // 🆕 NEW: Error Fixing Orchestrator - runs every 15 minutes (HIGHEST PRIORITY)
+    {
+      name: 'error-fixing-orchestrator',
+      script: './scripts/automation/error-fixing-orchestrator.cjs',
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      max_memory_restart: '1G',
+      env: {
+        NODE_ENV: 'production',
+        AUTOMATION_INTERVAL: '900000' // 15 minutes
+      }
     }
   ]
 };
