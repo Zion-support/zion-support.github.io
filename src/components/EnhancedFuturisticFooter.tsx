@@ -140,12 +140,12 @@ export const EnhancedFuturisticFooter: React.FC = () => {
   ];
 
   const supportLinks = [
+    { name: 'Help Center', href: '/help', description: 'Find answers to questions' },
+    { name: 'Support Portal', href: '/support', description: 'Technical assistance' },
     { name: 'FAQ', href: '/faq', description: 'Frequently asked questions' },
-    { name: 'Support', href: '/support', description: 'Technical assistance' },
     { name: 'Documentation', href: '/docs', description: 'Technical guides' },
     { name: 'Training', href: '/training', description: 'Learning resources' },
-    { name: 'Webinars', href: '/webinars', description: 'Educational sessions' },
-    { name: 'Status', href: '/status', description: 'System status' }
+    { name: 'Webinars', href: '/webinars', description: 'Educational sessions' }
   ];
 
   const legalLinks = [
