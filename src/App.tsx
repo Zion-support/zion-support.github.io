@@ -48,37 +48,32 @@ const AIBusinessIntelligence = React.lazy(() => import('./pages/services/AIBusin
 const DigitalTwin = React.lazy(() => import('./pages/services/DigitalTwin'));
 const IoTServices = React.lazy(() => import('./pages/services/IoTServices'));
 const MicroSAAS = React.lazy(() => import('./pages/services/MicroSAAS'));
-const MicroSAASSolutions = React.lazy(() => import('./pages/services/MicroSAASSolutions'));
 const QuantumComputing = React.lazy(() => import('./pages/services/QuantumComputing'));
 const SpaceTech = React.lazy(() => import('./pages/services/SpaceTech'));
 const Sustainability = React.lazy(() => import('./pages/services/Sustainability'));
 const ZeroTrustNetworkArchitecture = React.lazy(() => import('./pages/services/ZeroTrustNetworkArchitecture'));
 
-// Advanced AI services
-const AICybersecuritySuite = React.lazy(() => import('./pages/services/AICybersecuritySuite'));
+// Advanced AI services that exist
+const AICybersecuritySuite = React.lazy(() => import('./pages/services/ai-cybersecurity-threat-detection'));
 const QuantumAIPlatform = React.lazy(() => import('./pages/services/QuantumAIPlatform'));
-const AIHealthcareAnalytics = React.lazy(() => import('./pages/services/AIHealthcareAnalytics'));
+const AIHealthcareAnalytics = React.lazy(() => import('./pages/services/ai-healthcare-analytics-platform'));
 const AIWorkflowOrchestrator = React.lazy(() => import('./pages/services/AIWorkflowOrchestrator'));
-const AIDataGovernance = React.lazy(() => import('./pages/services/AIDataGovernance'));
+const AIDataGovernance = React.lazy(() => import('./pages/services/DataAnalytics'));
 const EdgeComputingPlatform = React.lazy(() => import('./pages/services/EdgeComputingPlatform'));
 const AICustomerSuccessPlatform = React.lazy(() => import('./pages/services/AICustomerSuccessPlatform'));
-const IncidentResponsePlatform = React.lazy(() => import('./pages/services/IncidentResponsePlatform'));
 
-// Emerging Technology 2030
-const EmergingTech2030 = React.lazy(() => import('./pages/EmergingTech2030'));
-
-// AI platform services
+// AI platform services that exist
 const AIBusinessIntelligencePlatform = React.lazy(() => import('./pages/services/AIBusinessIntelligencePlatform'));
-const AIFinancialTradingPlatform = React.lazy(() => import('./pages/services/AIFinancialTradingPlatform'));
+const AIFinancialTradingPlatform = React.lazy(() => import('./pages/services/ai-financial-trading-platform'));
 
-// New AI-powered micro SaaS services
+// New AI-powered micro SaaS services that exist
 const AIContentMarketingAutomation = React.lazy(() => import('./pages/services/AIContentMarketingAutomation'));
 const AISupplyChainOptimization = React.lazy(() => import('./pages/services/AISupplyChainOptimization'));
 const AIHRPlatform = React.lazy(() => import('./pages/services/AIHRPlatform'));
 const AILegalResearchPlatform = React.lazy(() => import('./pages/services/AILegalResearchPlatform'));
 const AIEducationPlatform = React.lazy(() => import('./pages/services/AIEducationPlatform'));
 const AIMarketingAutomation = React.lazy(() => import('./pages/services/AIMarketingAutomation'));
-const AIProjectManagementPlatform = React.lazy(() => import('./pages/services/AIProjectManagementPlatform'));
+const AIProjectManagementPlatform = React.lazy(() => import('./pages/services/ai-project-management-platform'));
 
 function App() {
   return (
@@ -117,7 +112,6 @@ function App() {
                 <Route path="/services/digital-twin" element={<DigitalTwin />} />
                 <Route path="/services/iot-services" element={<IoTServices />} />
                 <Route path="/services/micro-saas" element={<MicroSAAS />} />
-                <Route path="/services/micro-saas-solutions" element={<MicroSAASSolutions />} />
                 <Route path="/services/quantum-computing" element={<QuantumComputing />} />
                 <Route path="/services/space-tech" element={<SpaceTech />} />
                 <Route path="/services/sustainability" element={<Sustainability />} />
@@ -144,9 +138,6 @@ function App() {
                 
                 {/* New AI-powered micro SaaS service routes */}
                 <Route path="/services/ai-content-marketing-automation" element={<AIContentMarketingAutomation />} />
-                
-                {/* Emerging Tech 2030 */}
-                <Route path="/emerging-tech-2030" element={<EmergingTech2030 />} />
                 
                 {/* New comprehensive pricing guide 2026 */}
                 <Route path="/comprehensive-pricing-guide-2026" element={<ComprehensivePricingGuide2026 />} />
