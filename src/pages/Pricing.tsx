@@ -16,7 +16,7 @@ import {
   Sparkles
 } from 'lucide-react';
 
-function Pricing() {
+export default function Pricing() {
   const services = [
     {
       name: 'AI Project Manager',
@@ -87,8 +87,6 @@ function Pricing() {
     'Team training and onboarding',
     'Priority feature development requests'
   ];
-
-  const savings = billingCycle === 'annual' ? 20 : 0;
 
   return (
     <>
@@ -272,6 +270,4 @@ function Pricing() {
       </div>
     </>
   );
-};
-
-export default Pricing;
+}

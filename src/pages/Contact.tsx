@@ -7,8 +7,7 @@ import {
 
 export default function Contact() {
   const [formData, setFormData] = useState({
-    firstName: '',
-    lastName: '',
+    name: '',
     email: '',
     company: '',
     subject: '',
@@ -330,36 +329,6 @@ export default function Contact() {
                   </motion.div>
                 ))}
               </div>
-
-              {/* Additional Info */}
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: 0.4 }}
-                className="mt-12 p-6 bg-slate-800/50 rounded-xl border border-slate-700"
-              >
-                <h3 className="text-xl font-semibold text-white mb-4">
-                  Why Choose Zion Tech Group?
-                </h3>
-                <ul className="space-y-3 text-gray-300">
-                  <li className="flex items-start">
-                    <CheckCircle className="w-5 h-5 text-green-400 mr-3 mt-0.5 flex-shrink-0" />
-                    Expert team with 15+ years of experience
-                  </li>
-                  <li className="flex items-start">
-                    <CheckCircle className="w-5 h-5 text-green-400 mr-3 mt-0.5 flex-shrink-0" />
-                    Proven track record of successful projects
-                  </li>
-                  <li className="flex items-start">
-                    <CheckCircle className="w-5 h-5 text-green-400 mr-3 mt-0.5 flex-shrink-0" />
-                    Cutting-edge technology solutions
-                  </li>
-                  <li className="flex items-start">
-                    <CheckCircle className="w-5 h-5 text-green-400 mr-3 mt-0.5 flex-shrink-0" />
-                    Dedicated support and maintenance
-                  </li>
-                </ul>
-              </motion.div>
             </motion.div>
           </div>
         </div>

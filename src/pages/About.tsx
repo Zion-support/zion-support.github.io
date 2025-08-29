@@ -371,9 +371,3 @@ export default function About() {
     </div>
   );
 }
-
-// Icon components
-const Innovation = ({ className }: { className?: string }) => <Lightbulb className={className} />;
-const Excellence = ({ className }: { className?: string }) => <Award className={className} />;
-const Partnership = ({ className }: { className?: string }) => <Users className={className} />;
-const Security = ({ className }: { className?: string }) => <Shield className={className} />;

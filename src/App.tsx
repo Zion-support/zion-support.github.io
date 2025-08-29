@@ -17,10 +17,6 @@ import { AdvancedAnalytics } from './components/AdvancedAnalytics';
 import { SmartNotificationSystem } from './components/SmartNotificationSystem';
 import { ChatAssistant } from './components/ChatAssistant';
 import { ErrorBoundary } from './components/ErrorBoundary';
-import { EnhancedAccessibilityPanel } from './components/EnhancedAccessibilityPanel';
-import { AdvancedPerformanceMonitor } from './components/AdvancedPerformanceMonitor';
-import InteractiveUserExperience from './components/InteractiveUserExperience';
-import SecurityEnhancer from './components/SecurityEnhancer';
 
 // Lazy-loaded pages for better performance
 const Home = lazy(() => import('./pages/Home').then(module => ({ default: module.Home })));
@@ -124,6 +120,11 @@ const SustainableTechnology = lazy(() => import('./pages/services/sustainable-te
 const AIPredictiveMaintenance = lazy(() => import('./pages/services/ai-predictive-maintenance'));
 const QuantumMachineLearning = lazy(() => import('./pages/services/quantum-machine-learning'));
 const AIContentCreation = lazy(() => import('./pages/services/ai-content-creation'));
+
+// New innovative AI services
+const AIQuantumComputingPlatform = lazy(() => import('./pages/services/AIQuantumComputingPlatform'));
+const AIAutonomousVehiclePlatform = lazy(() => import('./pages/services/AIAutonomousVehiclePlatform'));
+const AIMetaverseDevelopmentPlatform = lazy(() => import('./pages/services/AIMetaverseDevelopmentPlatform'));
 
 // Comprehensive services imports
 // const ComprehensiveServicesShowcase2025Page = lazy(() => import('./pages/ComprehensiveServicesShowcase2025'));
@@ -382,6 +383,11 @@ const App = () => {
                     <Route path="/services/quantum-machine-learning" element={<QuantumMachineLearning />} />
                     <Route path="/services/ai-content-creation" element={<AIContentCreation />} />
                     
+                    {/* New innovative AI services */}
+                    <Route path="/services/ai-quantum-computing-platform" element={<AIQuantumComputingPlatform />} />
+                    <Route path="/services/ai-autonomous-vehicle-platform" element={<AIAutonomousVehiclePlatform />} />
+                    <Route path="/services/ai-metaverse-development-platform" element={<AIMetaverseDevelopmentPlatform />} />
+                    
                     {/* Additional Pages */}
                     <Route path="/dashboard" element={<Dashboard />} />
                     <Route path="/login" element={<Login />} />
@@ -456,8 +462,6 @@ const App = () => {
       </ErrorBoundary>
     </HelmetProvider>
   );
-};
-
-App.displayName = 'App';
+}
 
 export default App;

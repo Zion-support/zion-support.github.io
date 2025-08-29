@@ -166,6 +166,7 @@ const AIServicesPage = () => {
         description="Comprehensive AI services including machine learning, natural language processing, and intelligent automation solutions."
         keywords="AI services, machine learning, natural language processing, intelligent automation"
       />
+      
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-800 text-white">
         <div className="max-w-7xl mx-auto px-6 py-20">
           <div className="text-center mb-16">
@@ -183,11 +184,13 @@ const AIServicesPage = () => {
               <h3 className="text-xl font-semibold text-white mb-3">Machine Learning</h3>
               <p className="text-gray-300 mb-4">Advanced ML algorithms and predictive analytics</p>
             </div>
+            
             <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-purple-400/20">
               <div className="text-4xl mb-4">💬</div>
               <h3 className="text-xl font-semibold text-white mb-3">NLP Solutions</h3>
               <p className="text-gray-300 mb-4">Natural language processing and understanding</p>
             </div>
+            
             <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-purple-400/20">
               <div className="text-4xl mb-4">⚡</div>
               <h3 className="text-xl font-semibold text-white mb-3">Intelligent Automation</h3>
@@ -288,4 +291,5 @@ const AIServicesPage = () => {
     </>
   );
 };
+
 export default AIServicesPage;

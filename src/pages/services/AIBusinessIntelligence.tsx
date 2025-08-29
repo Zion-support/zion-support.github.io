@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { motion } from 'framer-motion';
 import { 
   Brain, 
@@ -126,61 +126,6 @@ export default function AIBusinessIntelligence() {
       title: 'Risk Mitigation',
       description: 'Identify and address potential issues before they impact your business'
     }
-  ];
-
-  const pricingTiers = [
-    {
-      name: 'Starter',
-      price: '$2,500',
-      period: '/month',
-      description: 'Perfect for small businesses getting started with AI',
-      features: [
-        'Basic ML model training',
-        'Data preprocessing tools',
-        'Standard analytics dashboard',
-        'Email support',
-        '5GB data storage'
-      ],
-      popular: false
-    },
-    {
-      name: 'Professional',
-      price: '$7,500',
-      period: '/month',
-      description: 'Ideal for growing companies with advanced AI needs',
-      features: [
-        'Advanced ML algorithms',
-        'Real-time data processing',
-        'Custom analytics dashboards',
-        'Priority support',
-        '50GB data storage',
-        'API access',
-        'Custom model training'
-      ],
-      popular: true
-    },
-    {
-      name: 'Enterprise',
-      price: 'Custom',
-      period: '',
-      description: 'Tailored solutions for large-scale AI implementations',
-      features: [
-        'Custom AI model development',
-        'Unlimited data storage',
-        'Dedicated support team',
-        'On-premise deployment',
-        'Custom integrations',
-        'Training & certification',
-        'SLA guarantees'
-      ],
-      popular: false
-    }
-  ];
-
-  const technologies = [
-    'TensorFlow', 'PyTorch', 'Scikit-learn', 'Apache Spark', 'Kubernetes', 'Docker',
-    'AWS SageMaker', 'Azure ML', 'Google Cloud AI', 'Apache Kafka', 'Elasticsearch',
-    'PostgreSQL', 'MongoDB', 'Redis', 'Apache Airflow', 'MLflow', 'Kubeflow'
   ];
 
   return (
@@ -560,45 +505,6 @@ export default function AIBusinessIntelligence() {
               </button>
             </div>
           </motion.div>
-        </div>
-      </section>
-
-      {/* Contact Information */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-slate-800/30">
-        <div className="max-w-7xl mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
-            <div>
-              <div className="w-12 h-12 bg-gradient-to-br from-purple-500 to-pink-500 rounded-lg flex items-center justify-center mx-auto mb-4">
-                <Phone className="w-6 h-6 text-white" />
-              </div>
-              <h3 className="text-lg font-semibold text-white mb-2">Call Us</h3>
-              <a href="tel:+13024640950" className="text-purple-400 hover:text-purple-300 transition-colors">
-                +1 302 464 0950
-              </a>
-              <p className="text-sm text-slate-400 mt-2">Available 24/7 for urgent support</p>
-            </div>
-            <div>
-              <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-lg flex items-center justify-center mx-auto mb-4">
-                <Mail className="w-6 h-6 text-white" />
-              </div>
-              <h3 className="text-lg font-semibold text-white mb-2">Email Us</h3>
-              <a href="mailto:kleber@ziontechgroup.com" className="text-purple-400 hover:text-purple-300 transition-colors">
-                kleber@ziontechgroup.com
-              </a>
-              <p className="text-sm text-slate-400 mt-2">Response within 2 hours</p>
-            </div>
-            <div>
-              <div className="w-12 h-12 bg-gradient-to-br from-green-500 to-emerald-500 rounded-lg flex items-center justify-center mx-auto mb-4">
-                <MapPin className="w-6 h-6 text-white" />
-              </div>
-              <h3 className="text-lg font-semibold text-white mb-2">Visit Us</h3>
-              <p className="text-slate-300">
-                364 E Main St STE 1008<br />
-                Middletown DE 19709
-              </p>
-              <p className="text-sm text-slate-400 mt-2">Global remote support available</p>
-            </div>
-          </div>
         </div>
       </section>
     </div>

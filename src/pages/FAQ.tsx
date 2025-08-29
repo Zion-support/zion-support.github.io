@@ -237,68 +237,6 @@ export default function FAQ() {
           </div>
         </motion.div>
       </div>
-
-      {/* Contact Section */}
-      <div className="container mx-auto px-4 py-16">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.6 }}
-          className="max-w-4xl mx-auto text-center"
-        >
-          <div className="bg-gradient-to-r from-cyan-500/10 via-blue-500/10 to-purple-500/10 border border-slate-600/30 rounded-2xl p-8 backdrop-blur-md">
-            <h2 className="text-3xl font-bold text-white mb-4">
-              Still have questions?
-            </h2>
-            <p className="text-slate-300 mb-8 text-lg">
-              Can't find the answer you're looking for? Our team is here to help.
-            </p>
-            
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
-              <div className="flex flex-col items-center gap-3">
-                <div className="w-12 h-12 bg-cyan-500/20 rounded-lg flex items-center justify-center">
-                  <Mail className="w-6 h-6 text-cyan-400" />
-                </div>
-                <div>
-                  <h4 className="font-semibold text-white">Email Support</h4>
-                  <p className="text-slate-400 text-sm">support@ziontechgroup.com</p>
-                </div>
-              </div>
-              
-              <div className="flex flex-col items-center gap-3">
-                <div className="w-12 h-12 bg-blue-500/20 rounded-lg flex items-center justify-center">
-                  <Phone className="w-6 h-6 text-blue-400" />
-                </div>
-                <div>
-                  <h4 className="font-semibold text-white">Phone Support</h4>
-                  <p className="text-slate-400 text-sm">+1 (555) 123-4567</p>
-                </div>
-              </div>
-              
-              <div className="flex flex-col items-center gap-3">
-                <div className="w-12 h-12 bg-purple-500/20 rounded-lg flex items-center justify-center">
-                  <Clock className="w-6 h-6 text-purple-400" />
-                </div>
-                <div>
-                  <h4 className="font-semibold text-white">Response Time</h4>
-                  <p className="text-slate-400 text-sm">Within 24 hours</p>
-                </div>
-              </div>
-            </div>
-
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="px-8 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-medium rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 shadow-lg shadow-cyan-500/25">
-                Contact Support
-              </button>
-              <button className="px-8 py-3 border border-slate-600/30 text-white font-medium rounded-lg hover:bg-white/10 transition-all duration-300">
-                Schedule a Call
-              </button>
-            </div>
-          </div>
-        </motion.div>
-      </div>
     </div>
   );
-};
-
-export default FAQ;
+}
