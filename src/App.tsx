@@ -132,7 +132,8 @@ const AIServicesPage = React.lazy(() => import('./pages/AIServicesPage'));
 const MicroSaasServicesPage = React.lazy(() => import('./pages/MicroSaasServicesPage'));
 const ServicesCatalog = React.lazy(() => import('./pages/ServicesCatalog'));
 const ServicesComparisonPage = React.lazy(() => import('./pages/ServicesComparisonPage'));
-const InnovativeServicesShowcase2025 = React.lazy(() => import('./pages/InnovativeServicesShowcase2025'));
+// Temporarily disabled due to build issues
+// const InnovativeServicesShowcase2025 = React.lazy(() => import('./pages/InnovativeServicesShowcase2025'));
 const RevolutionaryServicesShowcase2030 = React.lazy(() => import('./pages/RevolutionaryServicesShowcase2030'));
 const ComprehensiveServicesLanding2028 = React.lazy(() => import('./pages/ComprehensiveServicesLanding2028'));
 const PricingGuide = React.lazy(() => import('./pages/PricingGuide'));
@@ -298,7 +299,8 @@ function App() {
                     <Route path="/services/ai-hr-talent-acquisition" element={<AIHRTalentAcquisition />} />
                     
                     {/* Special Showcase Routes */}
-                    <Route path="/innovative-services-showcase-2025" element={<InnovativeServicesShowcase2025 />} />
+                    {/* Temporarily disabled due to build issues */}
+                    {/* <Route path="/innovative-services-showcase-2025" element={<InnovativeServicesShowcase2025 />} /> */}
                     <Route path="/revolutionary-services-showcase-2030" element={<RevolutionaryServicesShowcase2030 />} />
                     <Route path="/comprehensive-services-landing-2028" element={<ComprehensiveServicesLanding2028 />} />
                     <Route path="/comprehensive-ai-services-showcase-2025" element={<ComprehensiveAIServicesShowcase2025 />} />

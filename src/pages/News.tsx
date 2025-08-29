@@ -2,6 +2,8 @@ import React from 'react';
 import { SEO } from '../components/SEO';
 import { motion } from 'framer-motion';
 import { Calendar, User, Tag, ArrowRight, ExternalLink } from 'lucide-react';
+
+export default function News() {
   const newsArticles = [
     {
       id: 1,
@@ -309,5 +311,4 @@ import { Calendar, User, Tag, ArrowRight, ExternalLink } from 'lucide-react';
       </section>
     </div>
   );
-};
-export default News;
+  }
