@@ -64,12 +64,21 @@ import {
 export const EnhancedFuturisticFooter: React.FC = () => {
   const currentYear = new Date().getFullYear();
 
+  const companyInfo = {
+    name: "Zion Tech Group",
+    phone: "+1 302 464 0950",
+    email: "kleber@ziontechgroup.com",
+    address: "364 E Main St STE 1008 Middletown DE 19709",
+    website: "https://ziontechgroup.com"
+  };
+
   const footerSections = [
     {
       title: 'AI & Analytics Services',
       icon: Brain,
       color: 'from-purple-600 to-pink-600',
       links: [
+        { name: 'Next-Gen Services 2026', href: '/next-gen-services-showcase-2026' },
         { name: 'AI Business Intelligence', href: '/services/ai-business-intelligence' },
         { name: 'AI Workflow Orchestrator', href: '/services/ai-workflow-orchestrator' },
         { name: 'AI Data Governance', href: '/services/ai-data-governance' },
@@ -452,7 +461,7 @@ export const EnhancedFuturisticFooter: React.FC = () => {
             <div className="text-sm text-slate-400 mb-2">
               © {currentYear} Zion Tech Group. All rights reserved.
             </div>
-            <div className="text-xs text-slate-500 space-x-4">
+            <div className="text-xs text-slate-500 space-x-4 mb-4">
               <span>ISO 27001 Certified</span>
               <span>•</span>
               <span>SOC 2 Type II Compliant</span>
@@ -460,6 +469,26 @@ export const EnhancedFuturisticFooter: React.FC = () => {
               <span>GDPR Compliant</span>
               <span>•</span>
               <span>24/7 Support Available</span>
+            </div>
+            {/* Contact Information */}
+            <div className="text-xs text-slate-500 space-y-2">
+              <div className="flex flex-col sm:flex-row items-center justify-center space-y-2 sm:space-y-0 sm:space-x-6">
+                <a href={`tel:${companyInfo.phone}`} className="flex items-center space-x-1 hover:text-cyan-400 transition-colors">
+                  <Phone className="w-3 h-3" />
+                  <span>{companyInfo.phone}</span>
+                </a>
+                <a href={`mailto:${companyInfo.email}`} className="flex items-center space-x-1 hover:text-cyan-400 transition-colors">
+                  <Mail className="w-3 h-3" />
+                  <span>{companyInfo.email}</span>
+                </a>
+                <a href={companyInfo.website} className="flex items-center space-x-1 hover:text-cyan-400 transition-colors">
+                  <Globe className="w-3 h-3" />
+                  <span>{companyInfo.website}</span>
+                </a>
+              </div>
+              <div className="text-slate-600">
+                {companyInfo.address}
+              </div>
             </div>
           </div>
         </div>

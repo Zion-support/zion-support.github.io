@@ -2550,6 +2550,184 @@ export const SPECIALIZED_SERVICES = [
     category: "Sales Tech",
     price: 79,
     marketPrice: "$39 - $199/user/month"
+  },
+  // New Innovative Services for 2025
+  {
+    id: "ai-powered-customer-churn-predictor",
+    title: "AI Customer Churn Predictor Pro",
+    description: "Predict customer churn with 95% accuracy using advanced machine learning algorithms and behavioral analysis.",
+    category: "AI & Analytics",
+    subcategory: "Customer Intelligence",
+    price: 399,
+    currency: "$",
+    pricingModel: "monthly",
+    features: [
+      "Real-time churn risk scoring",
+      "Behavioral pattern analysis",
+      "Predictive analytics dashboard",
+      "Automated retention campaigns",
+      "Customer lifetime value optimization",
+      "Integration with major CRMs"
+    ],
+    benefits: [
+      "Reduce churn by 30-50%",
+      "Improve customer retention",
+      "Optimize marketing spend",
+      "Increase customer lifetime value",
+      "Proactive customer success"
+    ],
+    useCases: [
+      "Subscription businesses",
+      "E-commerce platforms",
+      "SaaS companies",
+      "Financial services",
+      "Telecommunications"
+    ],
+    targetAudience: [
+      "Customer success managers",
+      "Marketing teams",
+      "Product managers",
+      "Business analysts",
+      "Executives"
+    ],
+    tags: ["AI", "Churn Prediction", "Customer Analytics", "Machine Learning", "Retention"],
+    estimatedDelivery: "4-6 weeks",
+    supportLevel: "premium",
+    marketPrice: "$299 - $799/month",
+    roi: "300-500%",
+    innovationLevel: "Advanced",
+    contactInfo: {
+      phone: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      website: "https://ziontechgroup.com"
+    },
+    technicalSpecs: {
+      technology: ["Python", "TensorFlow", "React", "Node.js", "PostgreSQL"],
+      integrations: ["Salesforce", "HubSpot", "Intercom", "Zendesk", "Stripe"],
+      apiEndpoints: 75,
+      uptime: "99.9%",
+      security: ["SOC 2", "GDPR", "End-to-end encryption", "Data anonymization"]
+    },
+    competitors: ["ChurnZero", "Gainsight", "Totango", "CustomerSuccessBox"],
+    marketSize: "$1.2 billion by 2025"
+  },
+  {
+    id: "quantum-encrypted-file-sharing",
+    title: "Quantum Encrypted File Sharing",
+    description: "Next-generation file sharing platform using quantum-resistant encryption for ultimate security.",
+    category: "Security",
+    subcategory: "File Security",
+    price: 299,
+    currency: "$",
+    pricingModel: "monthly",
+    features: [
+      "Quantum-resistant encryption",
+      "Zero-knowledge architecture",
+      "Advanced access controls",
+      "Audit trail and compliance",
+      "Cross-platform synchronization",
+      "Enterprise-grade security"
+    ],
+    benefits: [
+      "Future-proof security",
+      "Regulatory compliance",
+      "Data sovereignty",
+      "Advanced threat protection",
+      "Scalable architecture"
+    ],
+    useCases: [
+      "Financial services",
+      "Healthcare organizations",
+      "Legal firms",
+      "Government agencies",
+      "Enterprise collaboration"
+    ],
+    targetAudience: [
+      "Security professionals",
+      "IT administrators",
+      "Compliance officers",
+      "Legal teams",
+      "Enterprise users"
+    ],
+    tags: ["Quantum Security", "File Sharing", "Encryption", "Compliance", "Zero-Knowledge"],
+    estimatedDelivery: "8-10 weeks",
+    supportLevel: "enterprise",
+    marketPrice: "$199 - $599/month",
+    roi: "200-400%",
+    innovationLevel: "Cutting-Edge",
+    contactInfo: {
+      phone: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      website: "https://ziontechgroup.com"
+    },
+    technicalSpecs: {
+      technology: ["Rust", "WebAssembly", "React", "Node.js", "PostgreSQL"],
+      integrations: ["Active Directory", "Okta", "Azure AD", "Google Workspace", "Slack"],
+      apiEndpoints: 50,
+      uptime: "99.99%",
+      security: ["SOC 2", "ISO 27001", "GDPR", "Quantum-resistant algorithms"]
+    },
+    competitors: ["Box", "Dropbox", "OneDrive", "Google Drive"],
+    marketSize: "$8.5 billion by 2025"
+  },
+  {
+    id: "ai-powered-supply-chain-optimizer",
+    title: "AI Supply Chain Optimizer",
+    description: "Optimize your supply chain operations with AI-driven demand forecasting and inventory management.",
+    category: "AI & Analytics",
+    subcategory: "Supply Chain",
+    price: 599,
+    currency: "$",
+    pricingModel: "monthly",
+    features: [
+      "Demand forecasting with 90%+ accuracy",
+      "Inventory optimization algorithms",
+      "Supplier performance analytics",
+      "Real-time supply chain monitoring",
+      "Cost reduction recommendations",
+      "Sustainability tracking"
+    ],
+    benefits: [
+      "Reduce inventory costs by 20-40%",
+      "Improve forecast accuracy",
+      "Optimize supplier relationships",
+      "Enhance sustainability",
+      "Increase operational efficiency"
+    ],
+    useCases: [
+      "Manufacturing",
+      "Retail",
+      "E-commerce",
+      "Logistics",
+      "Distribution"
+    ],
+    targetAudience: [
+      "Supply chain managers",
+      "Operations directors",
+      "Procurement teams",
+      "Logistics coordinators",
+      "Business analysts"
+    ],
+    tags: ["AI", "Supply Chain", "Inventory Management", "Forecasting", "Optimization"],
+    estimatedDelivery: "10-12 weeks",
+    supportLevel: "enterprise",
+    marketPrice: "$399 - $1,299/month",
+    roi: "250-450%",
+    innovationLevel: "Advanced",
+    contactInfo: {
+      phone: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      website: "https://ziontechgroup.com"
+    },
+    technicalSpecs: {
+      technology: ["Python", "TensorFlow", "React", "Node.js", "MongoDB"],
+      integrations: ["SAP", "Oracle", "NetSuite", "Shopify", "WMS systems"],
+      apiEndpoints: 200,
+      uptime: "99.9%",
+      security: ["SOC 2", "ISO 27001", "GDPR", "End-to-end encryption"]
+    },
+    competitors: ["Kinaxis", "E2open", "Blue Yonder", "SAP IBP"],
+    marketSize: "$15.8 billion by 2025"
   }
 ];
 
