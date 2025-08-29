@@ -113,6 +113,13 @@ const AICustomerExperienceSupport = lazy(() => import('./pages/services/AICustom
 const AIMarketingAutomationPersonalization = lazy(() => import('./pages/services/AIMarketingAutomationPersonalization'));
 const ComprehensiveServicesShowcase2029 = lazy(() => import('./pages/ComprehensiveServicesShowcase2029'));
 const ComprehensiveServicesShowcase2031 = lazy(() => import('./pages/ComprehensiveServicesShowcase2031'));
+
+// 2032 Comprehensive Services Showcase
+const ComprehensiveServicesShowcase2032 = lazy(() => import('./pages/ComprehensiveServicesShowcase2032'));
+
+// New 2032 Service Pages
+const AIRealTimeBusinessIntelligence = lazy(() => import('./pages/services/AIRealTimeBusinessIntelligence'));
+
 const ITConsulting = lazy(() => import('./pages/ITConsulting'));
 const SpaceTech = lazy(() => import('./pages/SpaceTech'));
 const Sitemap = lazy(() => import('./pages/Sitemap'));
@@ -283,6 +290,15 @@ function App() {
                 <Route path="/services-2031" element={<ComprehensiveServicesShowcase2031 />} />
                 <Route path="/ai-services-2031" element={<ComprehensiveServicesShowcase2031 />} />
                 <Route path="/micro-saas-2031" element={<ComprehensiveServicesShowcase2031 />} />
+                
+                {/* 2032 Comprehensive Services Showcase */}
+                <Route path="/comprehensive-services-showcase-2032" element={<ComprehensiveServicesShowcase2032 />} />
+                <Route path="/services-2032" element={<ComprehensiveServicesShowcase2032 />} />
+                <Route path="/ai-services-2032" element={<ComprehensiveServicesShowcase2032 />} />
+                <Route path="/micro-saas-2032" element={<ComprehensiveServicesShowcase2032 />} />
+                
+                {/* New 2032 Service Routes */}
+                <Route path="/services/ai-real-time-business-intelligence" element={<AIRealTimeBusinessIntelligence />} />
                 
                 {/* Additional Pages */}
                 <Route path="/marketplace" element={<Marketplace />} />
