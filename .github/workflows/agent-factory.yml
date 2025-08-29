@@ -1,50 +1,25 @@
-name: Link Checker
+name: Link Checker (DISABLED - Migrated to PM2)
+
 on:
-  schedule:
-    - cron: '0 2 * * *'  # Run daily at 2 AM
-  workflow_dispatch:
+  # This workflow is disabled and migrated to PM2 automation
+  # The original workflow was handling link checking
+  # Now handled by PM2 processes: link-checker, link-integrity
+  workflow_dispatch: # Only manual triggers allowed
+  # All automatic triggers removed
+
 permissions:
   contents: read
   issues: write
+
 jobs:
-  check-links:
+  disabled:
     runs-on: ubuntu-latest
-    timeout-minutes: 30
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v4
-      - name: Setup Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: '20'
-          cache: 'npm'
-      - name: Install dependencies
-        run: npm ci
-      - name: Build project
-        run: npm run build
-      - name: Check for broken links
+      - name: Workflow Disabled
         run: |
-          echo "Checking for broken links in the built project..."
-          # Simple check for common issues
-          if [ -f dist/index.html ]; then
-            echo "✓ index.html found"
-          else
-            echo "✗ index.html not found"
-            exit 1
-          fi
-          # Check if there are any obvious broken references
-          if grep -r "404\|not found\|broken" dist/ 2>/dev/null; then
-            echo "⚠ Found potential broken references"
-          else
-            echo "✓ No obvious broken references found"
-          fi
-      - name: Create issue if problems found
-        if: failure()
-        uses: peter-evans/create-issue-from-file@v5
-        with:
-          title: "Build or link check failed"
-          content-filepath: .github/ISSUE_TEMPLATE/build-failure.md
-          labels: |
-            build-failure
-            automated
-            needs-review
+          echo "This workflow has been disabled and migrated to PM2 automation."
+          echo "Link checking tasks are now handled by:"
+          echo "- link-checker PM2 process (every 30 minutes)"
+          echo "- link-integrity PM2 process (every 2 hours)"
+          echo "PM2 ecosystem.config.cjs contains the full automation configuration."
+          exit 0

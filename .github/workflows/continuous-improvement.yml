@@ -1,56 +1,26 @@
-name: Continuous Improvement
+name: Continuous Improvement (DISABLED - Migrated to PM2)
 
 on:
-  schedule:
-    - cron: '0 2 * * 1'  # Weekly on Monday at 2 AM
-  workflow_dispatch:
+  # This workflow is disabled and migrated to PM2 automation
+  # The original workflow was handling continuous improvement tasks
+  # Now handled by PM2 processes: continuous-improvement, quality-checks, performance-monitor
+  workflow_dispatch: # Only manual triggers allowed
+  # All automatic triggers removed
 
 permissions:
   contents: write
   pull-requests: write
 
 jobs:
-  maintenance:
-    name: Repository Maintenance
+  disabled:
     runs-on: ubuntu-latest
-    timeout-minutes: 30
-    
     steps:
-      - name: Checkout
-        uses: actions/checkout@v4
-        with:
-          fetch-depth: 0
-          
-      - name: Setup Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: 20
-          cache: 'npm'
-          
-      - name: Install dependencies
-        run: npm ci
-      - name: Build project
-        run: npm run build
-      - name: Run code quality checks
+      - name: Workflow Disabled
         run: |
-          npm run lint -- --fix || true
-          npm run type-check || true
-      - name: Create Pull Request
-        id: cpr
-        uses: peter-evans/create-pull-request@v6
-        with:
-          token: ${{ secrets.GITHUB_TOKEN }}
-          commit-message: "chore(improvement): continuous improvement and code quality updates"
-          title: "chore(improvement): apply continuous improvement and code quality updates"
-          body: |
-            Automated improvement and code quality loop.
-
-            - Runs linting with auto-fix
-            - Runs type checking
-            - Builds project to ensure everything works
-          branch: automation/continuous-improvement
-          delete-branch: true
-          signoff: false
-          labels: |
-            automation
-            improvement
+          echo "This workflow has been disabled and migrated to PM2 automation."
+          echo "Continuous improvement tasks are now handled by:"
+          echo "- continuous-improvement PM2 process (every 2 hours)"
+          echo "- quality-checks PM2 process (every 3 hours)"
+          echo "- performance-monitor PM2 process (every 2 hours)"
+          echo "PM2 ecosystem.config.cjs contains the full automation configuration."
+          exit 0
