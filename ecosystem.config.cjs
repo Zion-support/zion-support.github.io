@@ -187,6 +187,62 @@ module.exports = {
         NODE_ENV: 'production',
         AUTOMATION_INTERVAL: '21600000' // 6 hours
       }
+    },
+
+    // NEW: AI-Powered Code Quality Analyzer - runs every 20 minutes
+    {
+      name: 'ai-code-analyzer',
+      script: './scripts/automation/ai-code-analyzer.cjs',
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      max_memory_restart: '1G',
+      env: {
+        NODE_ENV: 'production'
+      },
+      cron_restart: '*/20 * * * *' // Every 20 minutes
+    },
+
+    // NEW: Smart Build Optimizer - runs every 4 hours
+    {
+      name: 'smart-build-optimizer',
+      script: './scripts/automation/smart-build-optimizer.cjs',
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      max_memory_restart: '1G',
+      env: {
+        NODE_ENV: 'production'
+      },
+      cron_restart: '0 */4 * * *' // Every 4 hours
+    },
+
+    // NEW: Intelligent Dependency Manager - runs every 6 hours
+    {
+      name: 'intelligent-dependency-manager',
+      script: './scripts/automation/intelligent-dependency-manager.cjs',
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      max_memory_restart: '1G',
+      env: {
+        NODE_ENV: 'production'
+      },
+      cron_restart: '0 */6 * * *' // Every 6 hours
+    },
+
+    // NEW: Advanced Performance Monitor - runs every 2 minutes
+    {
+      name: 'advanced-performance-monitor',
+      script: './scripts/automation/advanced-performance-monitor.cjs',
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      max_memory_restart: '1G',
+      env: {
+        NODE_ENV: 'production'
+      },
+      cron_restart: '*/2 * * * *' // Every 2 minutes
     }
   ]
 };
