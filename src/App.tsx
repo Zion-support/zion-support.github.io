@@ -170,8 +170,7 @@ function App() {
               <Route path="/terms" element={<Terms />} />
               <Route path="/cookies" element={<Cookies />} />
               <Route path="/sitemap" element={<Sitemap />} />
-              <Route path="/accessibility" element={<Accessibility />} />
-              <Route path="/compliance" element={<Compliance />} />
+              {/** duplicates removed */}
               <Route path="/onsite-support" element={<OnsiteSupport />} />
               <Route path="/pricing" element={<ComprehensivePricingGuide2027 />} />
               <Route path="/pricing-2030" element={<ComprehensivePricingGuide2030 />} />
@@ -179,7 +178,7 @@ function App() {
               <Route path="/revolutionary-services-2030" element={<RevolutionaryServices2030 />} />
               <Route path="/comprehensive-services" element={<ComprehensiveServicesLanding2025 />} />
               <Route path="/services" element={<Services />} />
-              <Route path="/comprehensive-services" element={<ComprehensiveServices />} />
+              {/** duplicate comprehensive-services route removed */}
               <Route path="/services-overview" element={<ServicesOverview />} />
               
               <Route path="/revolutionary-services-showcase-2030" element={<RevolutionaryServicesShowcase2030 />} />
