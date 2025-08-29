@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Cloud, Server, Shield, Cpu, Cable, LifeBuoy, DollarSign, ExternalLink, Wrench, Database, Building } from 'lucide-react';
+import { Cloud, Server, Shield, Cpu, Cable, LifeBuoy, DollarSign, ExternalLink, Wrench, Database, Building, Network, Globe } from 'lucide-react';
 
 const ITServices: React.FC = () => {
   const offerings = [
@@ -19,6 +19,28 @@ const ITServices: React.FC = () => {
     { icon: Cloud, title: 'Cloud Landing Zones', desc: 'Secure multi-account landing zones with guardrails, budgets, CI/CD and golden patterns.', price: '$8,000 - $65,000+' },
     { icon: Server, title: 'Database Reliability Engineering', desc: 'HA/DR, performance tuning, migrations and observability for Postgres, MySQL and SQL Server.', price: '$4,000 - $45,000+' },
     { icon: Shield, title: 'Zero Trust Enablement', desc: 'Network segmentation, identity-aware proxies, device posture and continuous verification.', price: '$6,000 - $60,000+' }
+    ,
+    // New IT Services
+    { icon: Cpu, title: '5G Enterprise Solutions', desc: 'Private 5G networks, edge computing, and IoT integration for enterprise environments.', price: '$25,000 - $200,000+' },
+    { icon: Database, title: 'Data Mesh Architecture', desc: 'Distributed data architecture with domain-driven design and self-service data platforms.', price: '$15,000 - $120,000+' },
+    { icon: Cloud, title: 'Hybrid Cloud Management', desc: 'Seamless integration between on-premises and cloud environments with unified management.', price: '$12,000 - $100,000+' },
+    { icon: Server, title: 'Container Orchestration', desc: 'Advanced Kubernetes management with multi-cluster operations and GitOps workflows.', price: '$8,000 - $80,000+' },
+    { icon: Shield, title: 'Cloud Security Posture Management', desc: 'Continuous cloud security monitoring, compliance checking, and risk assessment.', price: '$5,000 - $45,000+' },
+    { icon: Network, title: 'Software-Defined Networking', desc: 'SDN implementation with network automation, virtualization, and centralized control.', price: '$18,000 - $150,000+' },
+    { icon: Database, title: 'Graph Database Solutions', desc: 'Knowledge graph implementation, relationship mapping, and complex query optimization.', price: '$10,000 - $85,000+' },
+    { icon: Cpu, title: 'High-Performance Computing', desc: 'HPC cluster design, parallel processing optimization, and scientific computing solutions.', price: '$50,000 - $500,000+' },
+    { icon: Globe, title: 'Global CDN & Edge Network', desc: 'Content delivery optimization, edge computing, and global performance acceleration.', price: '$8,000 - $75,000+' },
+    { icon: Shield, title: 'Quantum-Safe Cryptography', desc: 'Post-quantum cryptography implementation and quantum-resistant security protocols.', price: '$20,000 - $180,000+' },
+    { icon: Database, title: 'Real-Time Data Streaming', desc: 'Apache Kafka, event streaming, and real-time analytics infrastructure.', price: '$6,000 - $60,000+' },
+    { icon: Cloud, title: 'Serverless Architecture', desc: 'Event-driven serverless applications with auto-scaling and pay-per-use pricing.', price: '$4,000 - $40,000+' },
+    { icon: Server, title: 'Microservices Migration', desc: 'Legacy system modernization, microservices architecture, and API-first design.', price: '$25,000 - $250,000+' },
+    { icon: Shield, title: 'DevSecOps Implementation', desc: 'Security integration in CI/CD pipelines, automated security testing, and compliance automation.', price: '$8,000 - $80,000+' },
+    { icon: Database, title: 'Data Lakehouse Architecture', desc: 'Unified data architecture combining data lake flexibility with data warehouse performance.', price: '$20,000 - $180,000+' },
+    { icon: Network, title: 'Network Function Virtualization', desc: 'NFV implementation, virtual network functions, and network automation.', price: '$30,000 - $300,000+' },
+    { icon: Cpu, title: 'AI Infrastructure Platform', desc: 'GPU clusters, ML pipeline infrastructure, and AI model deployment platform.', price: '$40,000 - $400,000+' },
+    { icon: Globe, title: 'Multi-Region Disaster Recovery', desc: 'Global disaster recovery, multi-region failover, and business continuity planning.', price: '$35,000 - $350,000+' },
+    { icon: Shield, title: 'Compliance Automation Platform', desc: 'Automated compliance checking, audit preparation, and regulatory reporting.', price: '$12,000 - $120,000+' },
+    { icon: Database, title: 'Data Governance Framework', desc: 'Data quality management, metadata management, and data lineage tracking.', price: '$15,000 - $150,000+' }
   ];
 
   return (

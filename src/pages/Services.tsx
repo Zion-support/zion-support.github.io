@@ -67,7 +67,8 @@ import {
   Database,
   Network,
   Smartphone,
-  Server
+  Server,
+  Building
 } from 'lucide-react';
 
 export default function Services() {
@@ -131,6 +132,34 @@ export default function Services() {
           price: 'From $2,500',
           rating: 4.7,
           reviewCount: 203
+        },
+        // New AI Services
+        {
+          name: 'AI Cybersecurity Suite',
+          description: 'Comprehensive AI-powered cybersecurity with threat detection and automated response',
+          features: ['Threat Intelligence', 'Behavioral Analysis', 'Incident Response', 'Security Automation'],
+          href: '/services/ai-cybersecurity-suite',
+          price: 'From $8,500',
+          rating: 4.9,
+          reviewCount: 89
+        },
+        {
+          name: 'AI Healthcare Analytics',
+          description: 'Advanced healthcare data analytics and predictive modeling for improved patient outcomes',
+          features: ['Patient Risk Scoring', 'Treatment Optimization', 'Population Health Analytics', 'Clinical Decision Support'],
+          href: '/services/ai-healthcare-analytics',
+          price: 'From $12,000',
+          rating: 4.9,
+          reviewCount: 67
+        },
+        {
+          name: 'AI Customer Success Platform',
+          description: 'Intelligent customer success with predictive analytics and automated engagement',
+          features: ['Churn Prevention', 'Health Scoring', 'Automated Engagement', 'Predictive Analytics'],
+          href: '/services/ai-customer-success-platform',
+          price: 'From $299',
+          rating: 4.9,
+          reviewCount: 234
         }
       ]
     },
@@ -175,6 +204,25 @@ export default function Services() {
           price: 'From $4,500',
           rating: 4.8,
           reviewCount: 76
+        },
+        // New Cloud Services
+        {
+          name: 'Multi-Cloud Management',
+          description: 'Unified management across AWS, Azure, and Google Cloud with cost optimization',
+          features: ['Cross-Platform Monitoring', 'Cost Optimization', 'Security Compliance', 'Unified Dashboard'],
+          href: '/services/multi-cloud-management',
+          price: 'From $6,500',
+          rating: 4.8,
+          reviewCount: 112
+        },
+        {
+          name: 'Kubernetes Enterprise Platform',
+          description: 'Enterprise-grade Kubernetes management with advanced security and monitoring',
+          features: ['Multi-Cluster Management', 'Security Policies', 'Auto-scaling', 'Disaster Recovery'],
+          href: '/services/kubernetes-enterprise-platform',
+          price: 'From $9,000',
+          rating: 4.9,
+          reviewCount: 78
         }
       ]
     },
@@ -210,6 +258,25 @@ export default function Services() {
           price: 'From $6,500',
           rating: 4.7,
           reviewCount: 189
+        },
+        // New Digital Solutions
+        {
+          name: 'API Management Platform',
+          description: 'Comprehensive API lifecycle management with security and analytics',
+          features: ['API Gateway', 'Rate Limiting', 'Authentication', 'Analytics Dashboard'],
+          href: '/services/api-management-platform',
+          price: 'From $5,500',
+          rating: 4.8,
+          reviewCount: 134
+        },
+        {
+          name: 'Low-Code Development Platform',
+          description: 'Rapid application development with visual programming and pre-built components',
+          features: ['Visual Builder', 'Component Library', 'Workflow Automation', 'Multi-platform Deployment'],
+          href: '/services/low-code-development-platform',
+          price: 'From $7,500',
+          rating: 4.7,
+          reviewCount: 156
         }
       ]
     },
@@ -236,6 +303,25 @@ export default function Services() {
           price: 'From $18,000',
           rating: 4.9,
           reviewCount: 134
+        },
+        // New Cybersecurity Services
+        {
+          name: 'SOC as a Service',
+          description: '24/7 Security Operations Center with threat monitoring and incident response',
+          features: ['Threat Monitoring', 'Incident Response', 'Vulnerability Management', 'Security Reporting'],
+          href: '/services/soc-as-a-service',
+          price: 'From $15,000',
+          rating: 4.9,
+          reviewCount: 89
+        },
+        {
+          name: 'Penetration Testing Platform',
+          description: 'Automated security testing with continuous vulnerability assessment',
+          features: ['Automated Scanning', 'Manual Testing', 'Report Generation', 'Remediation Guidance'],
+          href: '/services/penetration-testing-platform',
+          price: 'From $8,500',
+          rating: 4.8,
+          reviewCount: 112
         }
       ]
     },
@@ -280,6 +366,79 @@ export default function Services() {
           price: 'From $299',
           rating: 4.9,
           reviewCount: 234
+        },
+        // New Business Tools
+        {
+          name: 'Contract Management System',
+          description: 'AI-powered contract lifecycle management with automated workflows',
+          features: ['Contract Templates', 'Approval Workflows', 'Compliance Monitoring', 'Risk Assessment'],
+          href: '/services/contract-management-system',
+          price: 'From $4,500',
+          rating: 4.8,
+          reviewCount: 167
+        },
+        {
+          name: 'Invoice Automation Platform',
+          description: 'Intelligent invoice processing with OCR and automated approval workflows',
+          features: ['OCR Processing', 'Automated Matching', 'Approval Workflows', 'Payment Integration'],
+          href: '/services/invoice-automation-platform',
+          price: 'From $3,200',
+          rating: 4.7,
+          reviewCount: 234
+        },
+        {
+          name: 'HR Management Suite',
+          description: 'Comprehensive HR management with AI-powered insights and automation',
+          features: ['Employee Onboarding', 'Performance Management', 'Payroll Integration', 'Analytics Dashboard'],
+          href: '/services/hr-management-suite',
+          price: 'From $5,500',
+          rating: 4.8,
+          reviewCount: 189
+        }
+      ]
+    },
+    // New Service Category
+    {
+      name: 'Industry Solutions',
+      icon: Building,
+      description: 'Specialized solutions for specific industries and verticals',
+      color: 'from-amber-600 to-orange-600',
+      services: [
+        {
+          name: 'Healthcare Technology Platform',
+          description: 'Comprehensive healthcare solutions with HIPAA compliance and patient management',
+          features: ['Patient Portal', 'Electronic Health Records', 'Telemedicine', 'HIPAA Compliance'],
+          href: '/services/healthcare-tech',
+          price: 'From $25,000',
+          rating: 4.9,
+          reviewCount: 67
+        },
+        {
+          name: 'Manufacturing Intelligence',
+          description: 'IoT-powered manufacturing analytics and predictive maintenance',
+          features: ['Equipment Monitoring', 'Predictive Maintenance', 'Quality Control', 'Production Analytics'],
+          href: '/services/manufacturing-intelligence',
+          price: 'From $18,000',
+          rating: 4.8,
+          reviewCount: 89
+        },
+        {
+          name: 'Retail Analytics Platform',
+          description: 'Advanced retail analytics with customer behavior insights and inventory optimization',
+          features: ['Customer Analytics', 'Inventory Management', 'Demand Forecasting', 'Omnichannel Insights'],
+          href: '/services/retail-analytics-platform',
+          price: 'From $12,000',
+          rating: 4.8,
+          reviewCount: 134
+        },
+        {
+          name: 'Financial Services Platform',
+          description: 'Secure financial services platform with compliance and risk management',
+          features: ['Risk Assessment', 'Compliance Monitoring', 'Fraud Detection', 'Regulatory Reporting'],
+          href: '/services/financial-services-platform',
+          price: 'From $35,000',
+          rating: 4.9,
+          reviewCount: 56
         }
       ]
     }
