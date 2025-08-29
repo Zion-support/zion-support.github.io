@@ -35,36 +35,81 @@ export function AppHeader() {
   };
 
   const mainNavigation = [
-    { name: 'Home', href: '/', current: true },
-    { name: 'Services', href: '/services-overview', current: false },
-    { name: 'Pricing', href: '/pricing-guide', current: false },
-    { name: 'Partners', href: '/partners', current: false },
-    { name: 'AI Services', href: '/ai-services', current: false },
-    { name: 'IT Services', href: '/it-services', current: false },
-    { name: 'Micro SaaS', href: '/micro-saas', current: false },
-    { name: 'About', href: '/about', current: false },
-    { name: 'Contact', href: '/contact', current: false },
+    { name: 'Home', href: '/', current: true, hasDropdown: false },
+    { name: 'Services', href: '/services-overview', current: false, hasDropdown: true },
+    { name: 'AI Services', href: '/ai-services', current: false, hasDropdown: false },
+    { name: 'IT Services', href: '/it-services', current: false, hasDropdown: false },
+    { name: 'Micro SaaS', href: '/micro-saas', current: false, hasDropdown: false },
+    { name: 'Pricing', href: '/pricing-guide', current: false, hasDropdown: false },
+    { name: 'About', href: '/about', current: false, hasDropdown: false },
+    { name: 'Contact', href: '/contact', current: false, hasDropdown: false },
   ];
 
-  const services = [
-    { name: 'AI & Analytics', href: '/services/ai-business-intelligence', icon: Brain, description: 'Machine Learning & Data Science' },
-    { name: 'Digital Twin', href: '/services/digital-twin', icon: Rocket, description: 'Simulation & Monitoring' },
-    { name: 'Cybersecurity', href: '/services/ai-compliance-copilot', icon: Shield, description: 'AI-Powered Security' },
-    { name: 'Cloud & DevOps', href: '/services/cloud-devops', icon: Cloud, description: 'Infrastructure & Automation' },
-    { name: 'IoT & Edge', href: '/services/iot-edge', icon: Cpu, description: 'Smart Devices & Networks' },
-    { name: 'Blockchain', href: '/services/blockchain-enterprise-solutions', icon: Lock, description: 'DeFi & Smart Contracts' },
-    { name: 'Healthcare Tech', href: '/services/healthcare-tech', icon: Heart, description: 'AI Medicine & Diagnostics' },
-    { name: 'Sustainability', href: '/services/sustainability', icon: Globe, description: 'Green IT Solutions' },
-    { name: 'Micro SaaS', href: '/services/micro-saas-solutions', icon: ShoppingCart, description: 'Productized SaaS for niches' },
-    { name: 'AI Auto Email', href: '/services/ai-auto-email-responder', icon: MessageCircle, description: 'Faster replies, CRM logging' },
-    { name: 'Feedback Surveys', href: '/services/mobile-feedback-surveys', icon: Users, description: 'NPS/CSAT with AI insights' },
-    { name: 'LLM Content Studio', href: '/services/llm-content-studio', icon: BookOpen, description: 'On-brand AI content' },
-    { name: 'FinOps Advisor', href: '/services/finops-advisor', icon: DollarSign, description: 'Cloud cost optimization' },
+  const servicesCategories = [
+    {
+      name: 'AI & Analytics',
+      description: 'Intelligent solutions for data-driven decisions',
+      color: 'from-purple-500 to-pink-600',
+      icon: Brain,
+      services: [
+        { name: 'AI Business Intelligence', href: '/services/ai-business-intelligence', description: 'Advanced analytics & insights' },
+        { name: 'AI Sales Copilot', href: '/services/ai-sales-copilot', description: 'Sales automation & optimization' },
+        { name: 'AI Compliance Assistant', href: '/services/ai-compliance-assistant', description: 'Regulatory compliance automation' },
+        { name: 'AI Auto Email Responder', href: '/services/ai-auto-email-responder', description: 'Smart email management' },
+        { name: 'LLM Content Studio', href: '/services/llm-content-studio', description: 'AI-powered content creation' }
+      ]
+    },
+    {
+      name: 'Cloud & DevOps',
+      description: 'Modern infrastructure & automation',
+      color: 'from-blue-500 to-cyan-600',
+      icon: Cloud,
+      services: [
+        { name: 'Cloud DevOps', href: '/services/cloud-devops', description: 'Infrastructure automation' },
+        { name: 'Cloud FinOps Optimizer', href: '/services/cloud-finops-optimizer', description: 'Cost optimization' },
+        { name: 'FinOps Advisor', href: '/services/finops-advisor', description: 'Financial operations guidance' }
+      ]
+    },
+    {
+      name: 'Digital Innovation',
+      description: 'Cutting-edge technology solutions',
+      color: 'from-green-500 to-emerald-600',
+      icon: Rocket,
+      services: [
+        { name: 'Digital Twin', href: '/services/digital-twin', description: 'Virtual simulation & monitoring' },
+        { name: 'IoT Edge Computing', href: '/services/iot-edge', description: 'Smart device networks' },
+        { name: 'Data Analytics', href: '/services/data-analytics', description: 'Advanced data processing' },
+        { name: 'IT Infrastructure', href: '/services/it-infrastructure', description: 'Enterprise infrastructure' }
+      ]
+    },
+    {
+      name: 'Cybersecurity',
+      description: 'Advanced security & compliance',
+      color: 'from-red-500 to-orange-600',
+      icon: Shield,
+      services: [
+        { name: 'AI Compliance Copilot', href: '/services/ai-compliance-copilot', description: 'AI-powered security' },
+        { name: 'Zero Trust Architecture', href: '/services/zero-trust-network-architecture', description: 'Modern security framework' },
+        { name: 'Incident Response', href: '/services/incident-response-platform', description: 'Security incident management' }
+      ]
+    },
+    {
+      name: 'Emerging Tech',
+      description: 'Future-ready solutions',
+      color: 'from-indigo-500 to-purple-600',
+      icon: Cpu,
+      services: [
+        { name: 'Quantum Computing', href: '/services/quantum-computing', description: 'Next-gen computing' },
+        { name: 'Blockchain Solutions', href: '/services/blockchain-enterprise-solutions', description: 'Distributed ledger tech' },
+        { name: 'Space Technology', href: '/services/space-tech', description: 'Space-based solutions' },
+        { name: 'Sustainability Tech', href: '/services/sustainability', description: 'Green technology solutions' }
+      ]
+    }
   ];
 
   const quickLinks = [
     { name: 'Innovative Services 2025', href: '/innovative-services-showcase-2025', icon: Star, description: 'Latest cutting-edge solutions' },
-    { name: 'Services Showcase', href: '/revolutionary-services-showcase-2030', icon: TrendingUp, description: 'Future-ready services' },
+    { name: 'Revolutionary Services 2030', href: '/revolutionary-services-showcase-2030', icon: TrendingUp, description: 'Future-ready services' },
     { name: 'Pricing Guide 2030', href: '/pricing-2030', icon: DollarSign, description: 'Advanced pricing strategies' },
     { name: 'Request Quote', href: '/request-quote', icon: MessageCircle, description: 'Get custom pricing' },
   ];
@@ -72,8 +117,8 @@ export function AppHeader() {
   const supportLinks = [
     { name: 'FAQ', href: '/faq', icon: HelpCircle },
     { name: 'Blog', href: '/blog', icon: BookOpen },
-    { name: 'Support', href: '/support', icon: MessageCircle },
-    { name: 'Documentation', href: '/docs', icon: BookOpen },
+    { name: 'Help', href: '/help', icon: MessageCircle },
+    { name: 'Partners', href: '/partners', icon: Users },
   ];
 
   return (
