@@ -2,8 +2,7 @@
 import React, { Suspense, useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-
->>>>>>> cursor/website-audit-content-update-and-deployment-c7b2
+import { Users, Rocket, TrendingUp, Star, Brain, Cloud, Shield, Globe, Heart } from 'lucide-react';
 import { SEO } from "@/components/SEO";
 import { HeroSection } from "@/components/HeroSection";
 import { LoadingSpinner } from "@/components/ui/LoadingSpinner";
