@@ -1,7 +1,6 @@
-import React, { useState } from 'react';
-import { motion } from 'framer-motion';
-import { 
-  Brain, 
+import React, { useState } from 'react.ts';
+import { motion  } from 'framer-motion.ts';
+import { Brain, 
   TrendingUp, 
   Shield, 
   Zap, 
@@ -42,10 +41,10 @@ import {
   Smartphone,
   Tablet,
   Laptop
-} from 'lucide-react';
-import { SEO } from '../../components/SEO';
+ } from 'lucide-react.ts';
+import { SEO  } from '../../components/SEO';
 
-export default function AICybersecurityPlatform() {
+export default function AICybersecurityPlatform(...args: any[]): any {
   const features = [
     {
       icon: Brain,
@@ -250,8 +249,8 @@ export default function AICybersecurityPlatform() {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {features.map((feature, index) => (
+          <div className="grid grid-cols-1 md: anygrid-cols-2 gap-8">
+            {features.map((feature, index)  => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
@@ -288,8 +287,8 @@ export default function AICybersecurityPlatform() {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {capabilities.map((capability, index) => (
+          <div className="grid grid-cols-1 md: anygrid-cols-2 gap-8">
+            {capabilities.map((capability, index)  => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
@@ -336,8 +335,8 @@ export default function AICybersecurityPlatform() {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {useCases.map((useCase, index) => (
+          <div className="grid grid-cols-1 md: anygrid-cols-2 gap-8">
+            {useCases.map((useCase, index)  => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
@@ -384,8 +383,8 @@ export default function AICybersecurityPlatform() {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {benefits.map((benefit, index) => (
+          <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-4 gap-8">
+            {benefits.map((benefit, index)  => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
@@ -422,8 +421,8 @@ export default function AICybersecurityPlatform() {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {pricing.map((plan, index) => (
+          <div className="grid grid-cols-1 md: anygrid-cols-3 gap-8">
+            {pricing.map((plan, index)  => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
@@ -492,7 +491,7 @@ export default function AICybersecurityPlatform() {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 md: anygrid-cols-4 gap-8">
             {[
               {
                 step: '01',
@@ -514,7 +513,7 @@ export default function AICybersecurityPlatform() {
                 title: 'Go Live',
                 description: 'Activate full protection with continuous monitoring and ongoing support'
               }
-            ].map((phase, index) => (
+            ].map((phase, index)  => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}

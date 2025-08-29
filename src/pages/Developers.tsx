@@ -1,7 +1,6 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import { 
-  Code, 
+import React from 'react.ts';
+import { Link  } from 'react-router-dom.ts';
+import { Code, 
   Zap, 
   Shield, 
   Cloud, 
@@ -38,10 +37,10 @@ import {
   Download,
   Play,
   ExternalLink
-} from 'lucide-react';
-import { SEO } from '../components/SEO';
+ } from 'lucide-react.ts';
+import { SEO  } from '../components/SEO';
 
-export default function Developers() {
+export default function Developers(...args: any[]): any {
   const apis = [
     {
       name: 'AI Analytics API',
@@ -229,8 +228,8 @@ export default function Developers() {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {quickStartSteps.map((step, index) => (
+          <div className="grid md: anygrid-cols-2 lg:grid-cols-4 gap-8">
+            {quickStartSteps.map((step, index)  => (
               <div key={index} className="text-center p-6 rounded-xl bg-slate-800/50 border border-slate-700/50 hover:border-cyan-400/30 transition-all duration-200 hover:scale-105">
                 <div className="w-16 h-16 bg-gradient-to-br from-cyan-400/20 to-blue-500/20 rounded-xl flex items-center justify-center mx-auto mb-4">
                   <div className="text-2xl font-bold text-cyan-400">{step.step}</div>
@@ -262,8 +261,8 @@ export default function Developers() {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-8">
-            {apis.map((api, index) => (
+          <div className="grid md: anygrid-cols-2 gap-8">
+            {apis.map((api, index)  => (
               <div key={index} className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 hover:border-cyan-400/30 transition-all duration-200 hover:scale-105">
                 <div className="flex items-start justify-between mb-4">
                   <div>
@@ -325,8 +324,8 @@ export default function Developers() {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {sdks.map((sdk, index) => (
+          <div className="grid md: anygrid-cols-2 lg:grid-cols-4 gap-8">
+            {sdks.map((sdk, index)  => (
               <div key={index} className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 hover:border-cyan-400/30 transition-all duration-200 hover:scale-105">
                 <div className="text-center mb-6">
                   <h3 className="text-xl font-semibold text-white mb-2">{sdk.name}</h3>
@@ -373,8 +372,8 @@ export default function Developers() {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {tools.map((tool, index) => (
+          <div className="grid md: anygrid-cols-2 lg:grid-cols-4 gap-8">
+            {tools.map((tool, index)  => (
               <Link
                 key={index}
                 to={tool.href}

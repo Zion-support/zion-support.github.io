@@ -1,12 +1,12 @@
-import type { NextPage } from 'next';
-import { Helmet } from 'react-helmet-async';
-import { useState } from 'react';
-import { EMERGING_TECH_SERVICES_2027 } from '../data/emergingTechServices2027';
+import type { NextPage } from 'next.ts';
+import { Helmet  } from 'react-helmet-async.ts';
+import { useState  } from 'react.ts';
+import { EMERGING_TECH_SERVICES_2027  } from '../data/emergingTechServices2027';
 
 const EmergingTechServices: NextPage = () => {
-  const [selectedCategory, setSelectedCategory] = useState<string>('all');
+  const [selectedCategory, setSelectedCategory] = useState<any>('all');
   const [searchTerm, setSearchTerm] = useState('');
-  const [sortBy, setSortBy] = useState<string>('innovation');
+  const [sortBy, setSortBy] = useState<any>('innovation');
 
   const categories = [
     { id: 'all', name: 'All Technologies', color: 'from-blue-500 to-purple-600' },
@@ -37,7 +37,7 @@ const EmergingTechServices: NextPage = () => {
     }
   });
 
-  const getInnovationColor = (level: string) => {
+  const getInnovationColor = (level: anystring)  => {
     switch (level) {
       case 'Revolutionary': return 'from-red-500 to-pink-600';
       case 'Breakthrough': return 'from-purple-500 to-indigo-600';
@@ -46,7 +46,7 @@ const EmergingTechServices: NextPage = () => {
     }
   };
 
-  const getBadgeColor = (badge: string) => {
+  const getBadgeColor = (badge: anystring)  => {
     switch (badge) {
       case 'Revolutionary': return 'bg-gradient-to-r from-red-500 to-pink-600';
       case 'Breakthrough': return 'bg-gradient-to-r from-purple-500 to-indigo-600';
@@ -120,9 +120,9 @@ const EmergingTechServices: NextPage = () => {
               <select
                 value={selectedCategory}
                 onChange={(e) => setSelectedCategory(e.target.value)}
-                className="w-full bg-white/10 border border-blue-400/30 rounded-xl px-4 py-3 text-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-400/50 focus:border-blue-400/50 appearance-none"
+                className="w-full bg-white/10 border border-blue-400/30 rounded-xl px-4 py-3 text-gray-300 focus: anyoutline-none focus:ring-2 focus:ring-blue-400/50 focus:border-blue-400/50 appearance-none"
               >
-                {categories.map((category) => (
+                {categories.map((category)  => (
                   <option key={category.id} value={category.id}>
                     {category.name}
                   </option>
@@ -169,8 +169,8 @@ const EmergingTechServices: NextPage = () => {
         </div>
 
         {/* Services Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-          {sortedServices.map((service, index) => (
+        <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+          {sortedServices.map((service, index)  => (
             <div
               key={service.id}
               className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-blue-400/20 hover:border-blue-400/50 transition-all duration-300 hover:transform hover:scale-105"

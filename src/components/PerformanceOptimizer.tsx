@@ -1,7 +1,6 @@
-import React, { useEffect, useState, useCallback, useMemo } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { 
-  Activity, 
+import React, { useEffect, useState, useCallback, useMemo } from 'react.ts';
+import { motion, AnimatePresence  } from 'framer-motion.ts';
+import { Activity, 
   Zap, 
   Gauge, 
   TrendingUp, 
@@ -20,35 +19,39 @@ import {
   BarChart3,
   Target,
   Rocket
-} from 'lucide-react';
+ } from 'lucide-react.ts';
 
 interface PerformanceMetrics {
+
   loadTime: number;
   memoryUsage: number;
   cpuUsage: number;
   networkLatency: number;
   bundleSize: number;
   lighthouseScore: number;
-  coreWebVitals: {
+coreWebVitals: {;
     lcp: number;
     fid: number;
     cls: number;
-  };
+  
+};
 }
 
 interface OptimizationSuggestion {
+
   id: string;
   title: string;
   description: string;
   impact: 'high' | 'medium' | 'low';
   category: 'performance' | 'accessibility' | 'seo' | 'mobile';
   implemented: boolean;
+
 }
 
-export function PerformanceOptimizer() {
+export function PerformanceOptimizer(...args: any[]): any {
   const [isOpen, setIsOpen] = useState(false);
-  const [metrics, setMetrics] = useState<PerformanceMetrics | null>(null);
-  const [suggestions, setSuggestions] = useState<OptimizationSuggestion[]>([]);
+  const [metrics, setMetrics] = useState<any>(null);
+  const [suggestions, setSuggestions] = useState<any>([]);
   const [isMonitoring, setIsMonitoring] = useState(false);
   const [autoOptimize, setAutoOptimize] = useState(false);
 
@@ -74,8 +77,8 @@ export function PerformanceOptimizer() {
       
       // Bundle size estimation
       const bundleSize = performance.getEntriesByType('resource')
-        .filter((entry: any) => entry.name.includes('.js') || entry.name.includes('.css'))
-        .reduce((total: number, entry: any) => total + (entry.transferSize || 0), 0) / 1024;
+        .filter((entry: anyany)  => entry.name.includes('.js') || entry.name.includes('.css'))
+        .reduce((total: anynumber, entry: any)  => total + (entry.transferSize || 0), 0) / 1024;
       
       // Core Web Vitals simulation
       const coreWebVitals = {
@@ -118,7 +121,7 @@ export function PerformanceOptimizer() {
   }, []);
 
   // Generate intelligent optimization suggestions
-  const generateSuggestions = useCallback((metrics: PerformanceMetrics) => {
+  const generateSuggestions = useCallback((metrics: anyPerformanceMetrics)  => {
     const newSuggestions: OptimizationSuggestion[] = [];
     
     if (metrics.loadTime > 3000) {
@@ -169,13 +172,13 @@ export function PerformanceOptimizer() {
   }, []);
 
   // Auto-optimization features
-  const implementOptimization = useCallback((suggestionId: string) => {
+  const implementOptimization = useCallback((suggestionId: anystring)  => {
     setSuggestions(prev => prev.map(s => 
-      s.id === suggestionId ? { ...s, implemented: true } : s
+      s.id === suggestionId ? { ...s, implemented: anytrue } : s
     ));
     
     // Simulate optimization implementation
-    setTimeout(() => {
+    setTimeout(()  => {
       measurePerformance();
     }, 1000);
   }, [measurePerformance]);
@@ -203,13 +206,13 @@ export function PerformanceOptimizer() {
     }
   }, [autoOptimize, suggestions, implementOptimization]);
 
-  const getPerformanceColor = (score: number) => {
+  const getPerformanceColor = (score: anynumber)  => {
     if (score >= 90) return 'text-green-500';
     if (score >= 70) return 'text-yellow-500';
     return 'text-red-500';
   };
 
-  const getImpactColor = (impact: string) => {
+  const getImpactColor = (impact: anystring)  => {
     switch (impact) {
       case 'high': return 'bg-red-100 text-red-800 border-red-200';
       case 'medium': return 'bg-yellow-100 text-yellow-800 border-yellow-200';

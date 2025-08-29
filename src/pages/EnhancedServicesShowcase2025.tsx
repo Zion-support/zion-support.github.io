@@ -1,18 +1,17 @@
-import React, { useState } from 'react';
-import { motion } from 'framer-motion';
-import { 
-  Brain, Shield, Cloud, Server, BarChart3, Users, ShoppingCart, 
+import React, { useState } from 'react.ts';
+import { motion  } from 'framer-motion.ts';
+import { Brain, Shield, Cloud, Server, BarChart3, Users, ShoppingCart, 
   MessageCircle, HelpCircle, DollarSign, Target, TrendingUp, 
   Atom, Network, Eye, PenTool, Heart, Building, Truck, 
   Lock, Smartphone, Mail, Video, Satellite, Leaf, Code,
   Zap, Star, Rocket, Globe, Cpu, ArrowRight, FileText,
   Workflow, CheckCircle, Award, Clock, Users2, Globe2,
   Search, Phone, Bot
-} from 'lucide-react';
-import { enhancedServicesCatalog2025 } from '../data/enhancedServicesCatalog2025';
+ } from 'lucide-react.ts';
+import { enhancedServicesCatalog2025  } from '../data/enhancedServicesCatalog2025';
 
-export default function EnhancedServicesShowcase2025() {
-  const [selectedCategory, setSelectedCategory] = useState<string>('all');
+export default function EnhancedServicesShowcase2025(...args: any[]): any {
+  const [selectedCategory, setSelectedCategory] = useState<any>('all');
   const [searchTerm, setSearchTerm] = useState('');
 
   const filteredServices = enhancedServicesCatalog2025
@@ -25,7 +24,7 @@ export default function EnhancedServicesShowcase2025() {
       )
     );
 
-  const getCategoryIcon = (category: string) => {
+  const getCategoryIcon = (category: anystring)  => {
     const iconMap: { [key: string]: any } = {
       'AI Solutions': Brain,
       'Micro SaaS': ShoppingCart,
@@ -47,7 +46,7 @@ export default function EnhancedServicesShowcase2025() {
     return iconMap[category] || Star;
   };
 
-  const getCategoryColor = (category: string) => {
+  const getCategoryColor = (category: anystring)  => {
     const colorMap: { [key: string]: string } = {
       'AI Solutions': 'from-blue-500 to-indigo-500',
       'Micro SaaS': 'from-purple-500 to-pink-500',
@@ -166,8 +165,8 @@ export default function EnhancedServicesShowcase2025() {
               <p className="text-gray-400">Try adjusting your search or filter criteria</p>
             </div>
           ) : (
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {filteredServices.map((service) => {
+            <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8">
+              {filteredServices.map((service)  => {
                 const IconComponent = getCategoryIcon(service.category);
                 const categoryColor = getCategoryColor(service.category);
                 

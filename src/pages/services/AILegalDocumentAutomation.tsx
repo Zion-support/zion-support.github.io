@@ -1,6 +1,6 @@
-import { FileText, Shield, Clock, Users, Check, ArrowRight, ExternalLink, Phone, Mail, Zap, Scale, Lock } from 'lucide-react';
+import { FileText, Shield, Clock, Users, Check, ArrowRight, ExternalLink, Phone, Mail, Zap, Scale, Lock  } from 'lucide-react.ts';
 
-export default function AILegalDocumentAutomation() {
+export default function AILegalDocumentAutomation(...args: any[]): any {
   const features = [
     'AI-powered contract generation and review',
     'Legal compliance checking and validation',
@@ -122,8 +122,8 @@ export default function AILegalDocumentAutomation() {
 
         <div className="mt-12">
           <h2 className="text-3xl font-bold text-zion-slate-dark mb-6 text-center">Use Cases</h2>
-          <div className="grid md:grid-cols-3 gap-6">
-            {useCases.map((useCase) => (
+          <div className="grid md: anygrid-cols-3 gap-6">
+            {useCases.map((useCase)  => (
               <div key={useCase} className="p-6 bg-white border border-zion-slate-light/20 rounded-xl shadow-sm">
                 <FileText className="w-6 h-6 text-zion-cyan mb-3" />
                 <div className="text-zion-slate-dark font-semibold">{useCase}</div>
@@ -134,8 +134,8 @@ export default function AILegalDocumentAutomation() {
 
         <div className="mt-16">
           <h2 className="text-3xl font-bold text-zion-slate-dark mb-6 text-center">Pricing Plans</h2>
-          <div className="grid md:grid-cols-3 gap-6">
-            {tiers.map((tier) => (
+          <div className="grid md: anygrid-cols-3 gap-6">
+            {tiers.map((tier)  => (
               <div key={tier.name} className="bg-white border border-zion-slate-light/20 rounded-xl p-6 shadow-md">
                 <div className="text-lg font-semibold mb-1">{tier.name}</div>
                 <div className="text-2xl font-bold text-zion-cyan mb-2">{tier.price}</div>

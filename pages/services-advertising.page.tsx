@@ -1,9 +1,9 @@
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
+import React from 'react.ts';
+import { Helmet  } from 'react-helmet-async.ts';
 
-import { ArrowRight, CheckCircle, ExternalLink, Phone, Mail, MapPin } from 'lucide-react';
-import { Link } from 'react-router-dom';
-export default function ServicesAdvertisingPage() {
+import { ArrowRight, CheckCircle, ExternalLink, Phone, Mail, MapPin  } from 'lucide-react.ts';
+import { Link  } from 'react-router-dom.ts';
+export default function ServicesAdvertisingPage(...args: any[]): any {
   const contact = {
     mobile: '+1 302 464 0950',
     email: 'kleber@ziontechgroup.com',
@@ -140,7 +140,7 @@ export default function ServicesAdvertisingPage() {
       { name: 'Little Warden', href: 'https://littlewarden.com/pricing' }
     ]
   } as const;
-  function ext(url: string) {
+  function ext(...args: any[]): any {
     return (
       <a className="text-cyan-400 underline" href={url} target="_blank" rel="noopener noreferrer">{new URL(url).host}/pricing</a>
     );
@@ -170,8 +170,8 @@ export default function ServicesAdvertisingPage() {
           </header>
           <section>
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6 text-center">Why Zion Tech Group</h2>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-              {benefits.map((b) => (
+            <div className="grid grid-cols-1 md: anygrid-cols-3 gap-6">
+              {benefits.map((b)  => (
                 <div key={b} className="p-6 rounded-2xl bg-black/40 border border-gray-700/60">
                   <div className="flex items-start gap-3">
                     <CheckCircle className="w-5 h-5 text-emerald-400 mt-1" />
@@ -244,7 +244,7 @@ export default function ServicesAdvertisingPage() {
           </section>
           <section>
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6 text-center">New in Q2 2025</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-6">
               {[
                 { name: 'AI Sales Playbook Generator', price: '$99/mo', href: '/services/ai-sales-playbook-generator' },
                 { name: 'Customer Journey Analytics Starter', price: '$79/mo', href: '/services/customer-journey-analytics-starter' },
@@ -265,7 +265,7 @@ export default function ServicesAdvertisingPage() {
                 { name: 'Edge Image Optimizer', price: '$39/mo', href: '/services/edge-image-optimizer' },
                 { name: 'Managed Kubernetes SRE', price: '$2,500/mo', href: '/services/managed-kubernetes-sre' },
                 { name: 'Zero Trust Rollout Coaching', price: '$4,000/engagement', href: '/services/zero-trust-rollout-coaching' }
-              ].map((o) => (
+              ].map((o)  => (
                 <a key={o.name} href={o.href} className="block p-6 rounded-2xl bg-black/40 border border-gray-700/60 hover:border-cyan-500/40">
                   <div className="text-sm text-gray-400 mb-1">From</div>
                   <div className="text-2xl font-bold text-white">{o.price}</div>

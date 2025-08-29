@@ -1,7 +1,6 @@
-import { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { 
-  Accessibility as AccessibilityIcon, 
+import { useState, useEffect  } from 'react.ts';
+import { motion, AnimatePresence  } from 'framer-motion.ts';
+import { Accessibility as AccessibilityIcon, 
   Type, 
   Eye, 
   Volume2, 
@@ -13,27 +12,29 @@ import {
   Sun,
   Moon,
   Settings
-} from 'lucide-react';
+ } from 'lucide-react.ts';
 
 interface AccessibilitySettings {
+
   fontSize: number;
   highContrast: boolean;
   reducedMotion: boolean;
   soundEnabled: boolean;
   theme: 'light' | 'dark' | 'auto';
+
 }
 
-export function Accessibility() {
+export function Accessibility(...args: any[]): any {
   const [isOpen, setIsOpen] = useState(false);
-  const [settings, setSettings] = useState<AccessibilitySettings>({
-    fontSize: 16,
+  const [settings, setSettings] = useState<any>({
+    fontSize: any16,
     highContrast: false,
     reducedMotion: false,
     soundEnabled: true,
     theme: 'auto'
   });
 
-  useEffect(() => {
+  useEffect(()  => {
     // Load settings from localStorage
     const savedSettings = localStorage.getItem('accessibility-settings');
     if (savedSettings) {
@@ -43,7 +44,7 @@ export function Accessibility() {
     }
 
     // Add keyboard shortcuts
-    const handleKeyDown = (e: KeyboardEvent) => {
+    const handleKeyDown = (e: anyKeyboardEvent)  => {
       if (e.ctrlKey) {
         switch (e.key) {
           case '=':
@@ -67,7 +68,7 @@ export function Accessibility() {
     return () => document.removeEventListener('keydown', handleKeyDown);
   }, []);
 
-  const applySettings = (newSettings: AccessibilitySettings) => {
+  const applySettings = (newSettings: anyAccessibilitySettings)  => {
     const root = document.documentElement;
     
     // Apply font size
@@ -99,7 +100,7 @@ export function Accessibility() {
     }
   };
 
-  const updateSetting = (key: keyof AccessibilitySettings, value: any) => {
+  const updateSetting = (key: anykeyof AccessibilitySettings, value: any)  => {
     const newSettings = { ...settings, [key]: value };
     setSettings(newSettings);
     applySettings(newSettings);

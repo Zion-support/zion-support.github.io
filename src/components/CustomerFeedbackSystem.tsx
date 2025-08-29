@@ -1,7 +1,6 @@
-import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { 
-  Star, 
+import React, { useState, useEffect } from 'react.ts';
+import { motion, AnimatePresence  } from 'framer-motion.ts';
+import { Star, 
   MessageCircle, 
   ThumbsUp, 
   ThumbsDown, 
@@ -16,9 +15,10 @@ import {
   Download,
   Filter,
   Search
-} from 'lucide-react';
+ } from 'lucide-react.ts';
 
 interface Feedback {
+
   id: string;
   customerName: string;
   rating: number;
@@ -30,20 +30,24 @@ interface Feedback {
   unhelpful: number;
   tags: string[];
   verified: boolean;
+
 }
 
 interface FeedbackStats {
+
   totalFeedback: number;
   averageRating: number;
   positivePercentage: number;
   responseRate: number;
-  topCategories: Array<{ category: string; count: number; percentage: number }>;
+  topCategories: Array<any>;
 }
 
-interface CustomerFeedbackSystemProps {
+interface CustomerFeedbackSystemProps extends React.PropsWithChildren<{}> {
+
   showStats?: boolean;
   showFilters?: boolean;
   maxFeedback?: number;
+
 }
 
 export const CustomerFeedbackSystem: React.FC<CustomerFeedbackSystemProps> = ({
@@ -51,30 +55,30 @@ export const CustomerFeedbackSystem: React.FC<CustomerFeedbackSystemProps> = ({
   showFilters = true,
   maxFeedback = 10
 }) => {
-  const [feedback, setFeedback] = useState<Feedback[]>([]);
-  const [filteredFeedback, setFilteredFeedback] = useState<Feedback[]>([]);
-  const [stats, setStats] = useState<FeedbackStats>({
+  const [feedback, setFeedback] = useState<any>([]);
+  const [filteredFeedback, setFilteredFeedback] = useState<any>([]);
+  const [stats, setStats] = useState<any>({
     totalFeedback: 0,
     averageRating: 0,
     positivePercentage: 0,
     responseRate: 0,
     topCategories: []
   });
-  const [selectedCategory, setSelectedCategory] = useState<string>('all');
-  const [selectedRating, setSelectedRating] = useState<number>(0);
+  const [selectedCategory, setSelectedCategory] = useState<any>('all');
+  const [selectedRating, setSelectedRating] = useState<any>(0);
   const [searchQuery, setSearchQuery] = useState('');
   const [showFeedbackForm, setShowFeedbackForm] = useState(false);
   const [newFeedback, setNewFeedback] = useState({
-    rating: 0,
+    rating: any0,
     comment: '',
     category: 'overall' as Feedback['category']
   });
 
   // Sample feedback data
-  useEffect(() => {
+  useEffect(()  => {
     const sampleFeedback: Feedback[] = [
       {
-        id: '1',
+        id: any'1',
         customerName: 'Sarah Johnson',
         rating: 5,
         comment: 'Exceptional AI consulting services! The team at Zion Tech Group delivered beyond our expectations. Their expertise in machine learning helped us optimize our processes significantly.',
@@ -145,7 +149,7 @@ export const CustomerFeedbackSystem: React.FC<CustomerFeedbackSystemProps> = ({
   }, []);
 
   // Calculate stats
-  useEffect(() => {
+  useEffect(()  => {
     if (feedback.length > 0) {
       const totalFeedback = feedback.length;
       const averageRating = feedback.reduce((sum, f) => sum + f.rating, 0) / totalFeedback;
@@ -155,15 +159,15 @@ export const CustomerFeedbackSystem: React.FC<CustomerFeedbackSystemProps> = ({
       const categoryCounts = feedback.reduce((acc, f) => {
         acc[f.category] = (acc[f.category] || 0) + 1;
         return acc;
-      }, {} as Record<string, number>);
+      }, {} as Record<string, any>);
 
       const topCategories = Object.entries(categoryCounts)
         .map(([category, count]) => ({
-          category: category.charAt(0).toUpperCase() + category.slice(1),
+          category: anycategory.charAt(0).toUpperCase() + category.slice(1),
           count,
           percentage: (count / totalFeedback) * 100
         }))
-        .sort((a, b) => b.count - a.count)
+        .sort((a, b)  => b.count - a.count)
         .slice(0, 4);
 
       setStats({
@@ -210,20 +214,20 @@ export const CustomerFeedbackSystem: React.FC<CustomerFeedbackSystemProps> = ({
       comment: newFeedback.comment,
       category: newFeedback.category,
       sentiment: newFeedback.rating >= 4 ? 'positive' : newFeedback.rating >= 3 ? 'neutral' : 'negative',
-      date: new Date().toISOString().split('T')[0],
+      date: anynew Date().toISOString().split('T')[0],
       helpful: 0,
       unhelpful: 0,
       tags: [],
       verified: false
     };
 
-    setFeedback(prev => [feedback, ...prev]);
+    setFeedback(prev  => [feedback, ...prev]);
     setNewFeedback({ rating: 0, comment: '', category: 'overall' });
     setShowFeedbackForm(false);
   };
 
   // Handle helpful/unhelpful votes
-  const handleVote = (feedbackId: string, type: 'helpful' | 'unhelpful') => {
+  const handleVote = (feedbackId: anystring, type: 'helpful' | 'unhelpful')  => {
     setFeedback(prev => prev.map(f => {
       if (f.id === feedbackId) {
         return {
@@ -237,7 +241,7 @@ export const CustomerFeedbackSystem: React.FC<CustomerFeedbackSystemProps> = ({
   };
 
   // Get sentiment color
-  const getSentimentColor = (sentiment: string) => {
+  const getSentimentColor = (sentiment: anystring)  => {
     switch (sentiment) {
       case 'positive': return 'text-green-400 bg-green-400/20';
       case 'negative': return 'text-red-400 bg-red-400/20';
@@ -246,7 +250,7 @@ export const CustomerFeedbackSystem: React.FC<CustomerFeedbackSystemProps> = ({
   };
 
   // Get category color
-  const getCategoryColor = (category: string) => {
+  const getCategoryColor = (category: anystring)  => {
     const colors = {
       'service': 'text-blue-400 bg-blue-400/20',
       'product': 'text-green-400 bg-green-400/20',
@@ -324,8 +328,8 @@ export const CustomerFeedbackSystem: React.FC<CustomerFeedbackSystemProps> = ({
       {showStats && (
         <div className="mb-8">
           <h3 className="text-xl font-semibold text-white mb-4">Top Categories</h3>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
-            {stats.topCategories.map((category, index) => (
+          <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-4 gap-4">
+            {stats.topCategories.map((category, index)  => (
               <motion.div
                 key={category.category}
                 initial={{ opacity: 0, scale: 0.9 }}

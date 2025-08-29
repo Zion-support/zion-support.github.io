@@ -2,13 +2,16 @@
 // Cutting-edge artificial intelligence and machine learning solutions
 
 export interface ServiceContact {
+
   phone: string;
   email: string;
   website: string;
   address: string;
+
 }
 
 export interface AIService {
+
   id: number;
   name: string;
   category: string;
@@ -37,6 +40,7 @@ export interface AIService {
   integrations: string[];
   freeTier: boolean;
   trialPeriod: string;
+
 }
 
 // Zion Tech Group Contact Information

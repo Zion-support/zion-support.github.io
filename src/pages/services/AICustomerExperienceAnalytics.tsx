@@ -1,7 +1,7 @@
-import React from 'react';
-import { Users, BarChart3, ArrowRight, Check, ExternalLink, Phone, Mail, Heart, TrendingUp, MessageSquare, Eye, Zap, Target, Globe } from 'lucide-react';
+import React from 'react.ts';
+import { Users, BarChart3, ArrowRight, Check, ExternalLink, Phone, Mail, Heart, TrendingUp, MessageSquare, Eye, Zap, Target, Globe  } from 'lucide-react.ts';
 
-export default function AICustomerExperienceAnalytics() {
+export default function AICustomerExperienceAnalytics(...args: any[]): any {
   const features = [
     'AI-powered customer journey mapping and analysis',
     'Real-time sentiment analysis and emotion detection',
@@ -91,8 +91,8 @@ export default function AICustomerExperienceAnalytics() {
           
           <div className="bg-white border border-zion-slate-light/20 rounded-xl p-6 shadow-md">
             <h3 className="text-2xl font-semibold text-zion-slate-dark mb-4">Pricing Plans</h3>
-            <div className="grid md:grid-cols-3 gap-4">
-              {tiers.map((t) => (
+            <div className="grid md: anygrid-cols-3 gap-4">
+              {tiers.map((t)  => (
                 <div key={t.name} className="rounded-lg p-4 border border-zion-slate-light/30">
                   <div className="text-lg font-semibold mb-1">{t.name}</div>
                   <div className="text-2xl font-bold text-zion-cyan mb-2">{t.price}</div>
@@ -109,8 +109,8 @@ export default function AICustomerExperienceAnalytics() {
       <section className="py-16 bg-zion-slate-light/10">
         <div className="max-w-6xl mx-auto px-6">
           <h2 className="text-3xl font-bold text-zion-slate-dark text-center mb-12">Use Cases & Industries</h2>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {useCases.map((useCase) => (
+          <div className="grid md: anygrid-cols-2 lg:grid-cols-3 gap-8">
+            {useCases.map((useCase)  => (
               <div key={useCase} className="bg-white rounded-xl p-6 shadow-md border border-zion-slate-light/20">
                 <Target className="w-12 h-12 text-zion-cyan mb-4" />
                 <h3 className="text-xl font-semibold text-zion-slate-dark mb-3">{useCase}</h3>

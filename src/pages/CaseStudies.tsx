@@ -1,7 +1,6 @@
-import React, { useState } from 'react';
-import { motion } from 'framer-motion';
-import { 
-  FileText, 
+import React, { useState } from 'react.ts';
+import { motion  } from 'framer-motion.ts';
+import { FileText, 
   Building, 
   Users, 
   TrendingUp, 
@@ -26,9 +25,9 @@ import {
   Clock,
   MapPin,
   Factory
-} from 'lucide-react';
+ } from 'lucide-react.ts';
 
-export default function CaseStudies() {
+export default function CaseStudies(...args: any[]): any {
   const [selectedIndustry, setSelectedIndustry] = useState('all');
   const [selectedService, setSelectedService] = useState('all');
   const [searchQuery, setSearchQuery] = useState('');
@@ -53,7 +52,7 @@ export default function CaseStudies() {
 
   const caseStudies = [
     {
-      id: 1,
+      id: any1,
       title: 'AI-Powered Healthcare Analytics Platform',
       company: 'MedTech Solutions Inc.',
       industry: 'healthcare',
@@ -155,7 +154,7 @@ export default function CaseStudies() {
   ];
 
   // Calculate counts
-  industries.forEach(industry => {
+  industries.forEach(industry  => {
     if (industry.id === 'all') {
       industry.count = caseStudies.length;
     } else {
@@ -223,9 +222,9 @@ export default function CaseStudies() {
               <select
                 value={selectedIndustry}
                 onChange={(e) => setSelectedIndustry(e.target.value)}
-                className="px-4 py-3 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                className="px-4 py-3 border border-gray-300 rounded-lg shadow-sm focus: anyoutline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
               >
-                {industries.map(industry => (
+                {industries.map(industry  => (
                   <option key={industry.id} value={industry.id}>
                     {industry.name} ({industry.count})
                   </option>
@@ -234,9 +233,9 @@ export default function CaseStudies() {
               <select
                 value={selectedService}
                 onChange={(e) => setSelectedService(e.target.value)}
-                className="px-4 py-3 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                className="px-4 py-3 border border-gray-300 rounded-lg shadow-sm focus: anyoutline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
               >
-                {services.map(service => (
+                {services.map(service  => (
                   <option key={service.id} value={service.id}>
                     {service.name} ({service.count})
                   </option>
@@ -250,8 +249,8 @@ export default function CaseStudies() {
         {filteredCaseStudies.filter(cs => cs.featured).length > 0 && (
           <div className="mb-12">
             <h2 className="text-2xl font-bold text-gray-900 mb-6">Featured Success Stories</h2>
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-              {filteredCaseStudies.filter(cs => cs.featured).map((cs, index) => (
+            <div className="grid grid-cols-1 lg: anygrid-cols-2 gap-8">
+              {filteredCaseStudies.filter(cs  => cs.featured).map((cs, index) => (
                 <motion.article
                   key={cs.id}
                   initial={{ opacity: 0, y: 20 }}

@@ -1,8 +1,7 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import { Helmet } from 'react-helmet-async';
-import { 
-  Code, 
+import React from 'react.ts';
+import { Link  } from 'react-router-dom.ts';
+import { Helmet  } from 'react-helmet-async.ts';
+import { Code, 
   Shield, 
   Zap, 
   TrendingUp, 
@@ -21,9 +20,9 @@ import {
   Globe,
   Smartphone,
   Database
-} from 'lucide-react';
+ } from 'lucide-react.ts';
 
-const AIAutonomousCodeReviewer: React.FC = () => {
+const AIAutonomousCodeReviewer: React.FC = (): JSX.Element => {
   const features = [
     {
       icon: Code,
@@ -193,8 +192,8 @@ const AIAutonomousCodeReviewer: React.FC = () => {
               </p>
             </div>
             
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {features.map((feature, index) => (
+            <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-4 gap-8">
+              {features.map((feature, index)  => (
                 <div key={index} className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20 hover:border-blue-400/40 transition-all duration-300">
                   <div className="bg-gradient-to-r from-blue-600 to-cyan-600 p-3 rounded-lg w-fit mb-4">
                     <feature.icon className="w-6 h-6 text-white" />
@@ -227,8 +226,8 @@ const AIAutonomousCodeReviewer: React.FC = () => {
               </p>
             </div>
             
-            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-              {supportedLanguages.map((language, index) => (
+            <div className="grid grid-cols-2 md: anygrid-cols-3 lg:grid-cols-4 gap-6">
+              {supportedLanguages.map((language, index)  => (
                 <div key={index} className="bg-white/10 backdrop-blur-lg rounded-lg p-4 border border-white/20 text-center hover:border-blue-400/40 transition-all duration-300">
                   <Code className="w-8 h-8 text-blue-400 mx-auto mb-2" />
                   <span className="text-white font-medium">{language}</span>
@@ -250,8 +249,8 @@ const AIAutonomousCodeReviewer: React.FC = () => {
               </p>
             </div>
             
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {integrations.map((integration, index) => (
+            <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8">
+              {integrations.map((integration, index)  => (
                 <div key={index} className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20 hover:border-blue-400/40 transition-all duration-300">
                   <div className="bg-gradient-to-r from-blue-600 to-cyan-600 p-3 rounded-lg w-fit mb-4">
                     <integration.icon className="w-6 h-6 text-white" />
@@ -276,8 +275,8 @@ const AIAutonomousCodeReviewer: React.FC = () => {
               </p>
             </div>
             
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              {useCases.map((useCase, index) => (
+            <div className="grid grid-cols-1 md: anygrid-cols-2 gap-8">
+              {useCases.map((useCase, index)  => (
                 <div key={index} className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20">
                   <div className="bg-gradient-to-r from-blue-600 to-cyan-600 p-3 rounded-lg w-fit mb-4">
                     <useCase.icon className="w-6 h-6 text-white" />
@@ -302,8 +301,8 @@ const AIAutonomousCodeReviewer: React.FC = () => {
               </p>
             </div>
             
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              {pricingPlans.map((plan, index) => (
+            <div className="grid grid-cols-1 md: anygrid-cols-3 gap-8">
+              {pricingPlans.map((plan, index)  => (
                 <div key={index} className={`relative bg-white/10 backdrop-blur-lg rounded-xl p-8 border transition-all duration-300 ${
                   plan.popular 
                     ? 'border-blue-400 bg-gradient-to-br from-blue-600/20 to-cyan-600/20' 

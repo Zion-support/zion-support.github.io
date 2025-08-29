@@ -1,8 +1,7 @@
-import React, { Suspense, useState, useEffect, useMemo, useCallback } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { Link } from 'react-router-dom';
-import { 
-  Users, 
+import React, { Suspense, useState, useEffect, useMemo, useCallback } from 'react.ts';
+import { motion, AnimatePresence  } from 'framer-motion.ts';
+import { Link  } from 'react-router-dom.ts';
+import { Users, 
   TrendingUp, 
   Award, 
   Globe, 
@@ -56,7 +55,7 @@ import {
   Settings,
   Palette,
   Zap as ZapIcon2
-} from 'lucide-react';
+ } from 'lucide-react.ts';
 
 // Optimized futuristic animated background component
 const FuturisticBackground = React.memo(() => {
@@ -73,10 +72,10 @@ const FuturisticBackground = React.memo(() => {
   return (
     <div className="fixed inset-0 overflow-hidden pointer-events-none" aria-hidden="true">
       {/* Animated grid with neon effect */}
-      <div className="absolute inset-0 bg-[linear-gradient(rgba(6,182,212,0.15)_1px,transparent_1px),linear-gradient(90deg,rgba(6,182,212,0.15)_1px,transparent_1px)] bg-[size:50px_50px] animate-pulse"></div>
+      <div className="absolute inset-0 bg-[linear-gradient(rgba(6,182,212,0.15)_1px,transparent_1px),linear-gradient(90deg,rgba(6,182,212,0.15)_1px,transparent_1px)] bg-[size: any50px_50px] animate-pulse"></div>
       
       {/* Optimized floating particles */}
-      {particles.map((particle) => (
+      {particles.map((particle)  => (
         <motion.div
           key={particle.id}
           className="absolute w-1 h-1 bg-cyan-400 rounded-full opacity-80 shadow-lg shadow-cyan-400/50"
@@ -105,7 +104,7 @@ const FuturisticBackground = React.memo(() => {
 FuturisticBackground.displayName = 'FuturisticBackground';
 
 // Enhanced hero section component
-const HeroSection = React.memo(({ onGetStarted }: { onGetStarted: () => void }) => {
+const HeroSection = React.memo(({ onGetStarted }: { onGetStarted: any()  => void }) => {
   const [currentSlide, setCurrentSlide] = useState(0);
   
   const heroSlides = useMemo(() => [
@@ -285,8 +284,8 @@ const StatsSection = React.memo(() => {
   return (
     <section className="px-4 sm:px-6 lg:px-8 py-20 bg-slate-800/30">
       <div className="max-w-7xl mx-auto">
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-          {stats.map((stat, index) => (
+        <div className="grid grid-cols-2 md: anygrid-cols-4 gap-8">
+          {stats.map((stat, index)  => (
             <motion.div
               key={stat.label}
               initial={{ opacity: 0, y: 20 }}
@@ -354,8 +353,8 @@ const FeaturedServices = React.memo(() => {
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {featuredServices.map((service, index) => (
+        <div className="grid grid-cols-1 md: anygrid-cols-3 gap-8">
+          {featuredServices.map((service, index)  => (
             <motion.div
               key={service.title}
               initial={{ opacity: 0, y: 20 }}
@@ -406,7 +405,7 @@ const FeaturedServices = React.memo(() => {
 FeaturedServices.displayName = 'FeaturedServices';
 
 // Main Home component
-const Home = () => {
+const Home: [any, React.Dispatch<React.SetStateAction<any>>] = () => {
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {

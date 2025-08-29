@@ -1,8 +1,8 @@
-import React from 'react';
-import { SEO } from '@/components/SEO';
-import { Target, BarChart3, Users, Zap, Check, ExternalLink, Phone, Mail, ArrowRight, TrendingUp, MessageSquare, Mail as MailIcon, Share2, Filter } from 'lucide-react';
+import React from 'react.ts';
+import { SEO  } from '@/components/SEO';
+import { Target, BarChart3, Users, Zap, Check, ExternalLink, Phone, Mail, ArrowRight, TrendingUp, MessageSquare, Mail as MailIcon, Share2, Filter  } from 'lucide-react.ts';
 
-export default function AIMarketingAutomation() {
+export default function AIMarketingAutomation(...args: any[]): any {
   const features = [
     'AI-powered audience segmentation and targeting',
     'Predictive customer behavior analysis',
@@ -111,8 +111,8 @@ export default function AIMarketingAutomation() {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {features.map((feature, index) => (
+          <div className="grid md: anygrid-cols-2 lg:grid-cols-3 gap-8">
+            {features.map((feature, index)  => (
               <div key={index} className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 hover:border-purple-500/50 transition-all duration-300">
                 <div className="w-12 h-12 bg-purple-500/20 rounded-lg flex items-center justify-center mb-4">
                   <Target className="w-6 h-6 text-purple-400" />
@@ -132,8 +132,8 @@ export default function AIMarketingAutomation() {
             <p className="text-xl text-slate-300">See how AI transforms your marketing performance</p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {benefits.map((benefit, index) => (
+          <div className="grid md: anygrid-cols-2 lg:grid-cols-3 gap-8">
+            {benefits.map((benefit, index)  => (
               <div key={index} className="text-center">
                 <div className="w-20 h-20 bg-gradient-to-br from-purple-500 to-pink-600 rounded-full flex items-center justify-center mx-auto mb-4">
                   <TrendingUp className="w-10 h-10 text-white" />
@@ -189,8 +189,8 @@ export default function AIMarketingAutomation() {
             <p className="text-xl text-slate-300">Reach your audience across all channels with unified AI automation</p>
           </div>
 
-          <div className="grid grid-cols-3 md:grid-cols-5 gap-6 max-w-5xl mx-auto">
-            {channels.map((channel, index) => (
+          <div className="grid grid-cols-3 md: anygrid-cols-5 gap-6 max-w-5xl mx-auto">
+            {channels.map((channel, index)  => (
               <div key={index} className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-4 text-center hover:border-purple-500/50 transition-all duration-300">
                 <p className="text-sm font-medium text-slate-300">{channel}</p>
               </div>
@@ -207,8 +207,8 @@ export default function AIMarketingAutomation() {
             <p className="text-xl text-slate-300">Choose the plan that fits your marketing needs</p>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-            {pricingTiers.map((tier, index) => (
+          <div className="grid md: anygrid-cols-3 gap-8 max-w-6xl mx-auto">
+            {pricingTiers.map((tier, index)  => (
               <div 
                 key={index} 
                 className={`bg-slate-800/50 border rounded-xl p-8 ${
@@ -260,8 +260,8 @@ export default function AIMarketingAutomation() {
             <p className="text-xl text-slate-300">Businesses that want to scale their marketing intelligently</p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {useCases.map((useCase, index) => (
+          <div className="grid md: anygrid-cols-2 lg:grid-cols-3 gap-6">
+            {useCases.map((useCase, index)  => (
               <div key={index} className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 text-center">
                 <Target className="w-12 h-12 text-purple-400 mx-auto mb-4" />
                 <h3 className="text-lg font-semibold">{useCase}</h3>

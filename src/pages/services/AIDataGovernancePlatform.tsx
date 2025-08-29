@@ -1,6 +1,6 @@
-import { Database, Shield, BarChart3, ArrowRight, Check, ExternalLink, Phone, Mail, Lock, Eye, Users, FileText, Zap, Globe } from 'lucide-react';
+import { Database, Shield, BarChart3, ArrowRight, Check, ExternalLink, Phone, Mail, Lock, Eye, Users, FileText, Zap, Globe  } from 'lucide-react.ts';
 
-export default function AIDataGovernancePlatform() {
+export default function AIDataGovernancePlatform(...args: any[]): any {
   const features = [
     'AI-powered data discovery and classification',
     'Automated data quality assessment and monitoring',
@@ -90,8 +90,8 @@ export default function AIDataGovernancePlatform() {
           
           <div className="bg-white border border-zion-slate-light/20 rounded-xl p-6 shadow-md">
             <h3 className="text-2xl font-semibold text-zion-slate-dark mb-4">Pricing Plans</h3>
-            <div className="grid md:grid-cols-3 gap-4">
-              {tiers.map((t) => (
+            <div className="grid md: anygrid-cols-3 gap-4">
+              {tiers.map((t)  => (
                 <div key={t.name} className="rounded-lg p-4 border border-zion-slate-light/30">
                   <div className="text-lg font-semibold mb-1">{t.name}</div>
                   <div className="text-2xl font-bold text-zion-cyan mb-2">{t.price}</div>
@@ -112,12 +112,12 @@ export default function AIDataGovernancePlatform() {
           </div>
         </div>
 
-        <div className="mt-12 grid md:grid-cols-3 gap-6">
+        <div className="mt-12 grid md: anygrid-cols-3 gap-6">
           {[
             { icon: Lock, title: 'Data Protection', desc: 'Advanced encryption and access controls for sensitive data' },
             { icon: Eye, title: 'Privacy Compliance', desc: 'Automated compliance with global privacy regulations' },
             { icon: FileText, title: 'Audit Ready', desc: 'Comprehensive audit trails and compliance reporting' }
-          ].map((item) => (
+          ].map((item)  => (
             <div key={item.title} className="p-6 bg-white border border-zion-slate-light/20 rounded-xl shadow-sm">
               <item.icon className="w-6 h-6 text-zion-cyan mb-3" />
               <div className="text-zion-slate-dark font-semibold mb-2">{item.title}</div>
@@ -128,8 +128,8 @@ export default function AIDataGovernancePlatform() {
 
         <div className="mt-14 bg-gradient-to-r from-zion-cyan/5 to-zion-blue/5 rounded-xl p-8">
           <h3 className="text-2xl font-bold text-zion-slate-dark mb-4">Compliance Frameworks Supported</h3>
-          <div className="grid md:grid-cols-2 gap-4">
-            {complianceFrameworks.map((framework) => (
+          <div className="grid md: anygrid-cols-2 gap-4">
+            {complianceFrameworks.map((framework)  => (
               <div key={framework} className="flex items-center">
                 <Shield className="w-5 h-5 text-zion-cyan mr-3" />
                 <span className="text-zion-slate-dark">{framework}</span>

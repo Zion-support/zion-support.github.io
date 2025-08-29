@@ -1,10 +1,10 @@
-import React, { useState, useMemo } from 'react';
-import { motion } from 'framer-motion';
-import { Search, Filter, ArrowRight, Star, TrendingUp, Zap, Shield, Globe, Cpu, Database, Lock, Leaf, Phone, Mail, MapPin } from 'lucide-react';
-import { SEO } from '@/components/SEO';
-import { INNOVATIVE_MICRO_SAAS_SERVICES_2026 } from '../data/innovativeMicroSaasServices2026';
+import React, { useState, useMemo } from 'react.ts';
+import { motion  } from 'framer-motion.ts';
+import { Search, Filter, ArrowRight, Star, TrendingUp, Zap, Shield, Globe, Cpu, Database, Lock, Leaf, Phone, Mail, MapPin  } from 'lucide-react.ts';
+import { SEO  } from '@/components/SEO';
+import { INNOVATIVE_MICRO_SAAS_SERVICES_2026  } from '../data/innovativeMicroSaasServices2026';
 
-const InnovativeServicesShowcase2026: React.FC = () => {
+const InnovativeServicesShowcase2026: React.FC = (): JSX.Element => {
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('All');
   const [sortBy, setSortBy] = useState('innovation');
@@ -45,7 +45,7 @@ const InnovativeServicesShowcase2026: React.FC = () => {
     return filtered;
   }, [searchQuery, selectedCategory, sortBy]);
 
-  const getCategoryIcon = (category: string) => {
+  const getCategoryIcon = (category: anystring)  => {
     switch (category) {
       case 'AI & Automation':
         return <Cpu className="w-5 h-5" />;
@@ -70,7 +70,7 @@ const InnovativeServicesShowcase2026: React.FC = () => {
     }
   };
 
-  const getInnovationBadge = (level: string) => {
+  const getInnovationBadge = (level: anystring)  => {
     const colors = {
       'Revolutionary': 'bg-gradient-to-r from-purple-600 to-pink-600',
       'Advanced': 'bg-gradient-to-r from-blue-600 to-cyan-600',
@@ -151,9 +151,9 @@ const InnovativeServicesShowcase2026: React.FC = () => {
                 <select
                   value={selectedCategory}
                   onChange={(e) => setSelectedCategory(e.target.value)}
-                  className="bg-slate-800 border border-slate-600 rounded-lg px-3 py-2 text-white focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20 outline-none"
+                  className="bg-slate-800 border border-slate-600 rounded-lg px-3 py-2 text-white focus: anyborder-cyan-400 focus:ring-2 focus:ring-cyan-400/20 outline-none"
                 >
-                  {categories.map(category => (
+                  {categories.map(category  => (
                     <option key={category} value={category}>{category}</option>
                   ))}
                 </select>
@@ -180,8 +180,8 @@ const InnovativeServicesShowcase2026: React.FC = () => {
       {/* Services Grid */}
       <section className="pb-20">
         <div className="container mx-auto px-4">
-          <div className="grid gap-8 grid-cols-1 lg:grid-cols-2 xl:grid-cols-3">
-            {filteredServices.map((service, index) => (
+          <div className="grid gap-8 grid-cols-1 lg: anygrid-cols-2 xl:grid-cols-3">
+            {filteredServices.map((service, index)  => (
               <motion.div
                 key={service.id}
                 initial={{ opacity: 0, y: 20 }}

@@ -1,7 +1,7 @@
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
+import { Helmet  } from 'react-helmet-async.ts';
+import { Link  } from 'react-router-dom.ts';
 
-export default function AISalesAssistant() {
+export default function AISalesAssistant(...args: any[]): any {
   return (
     <div className="relative min-h-screen overflow-hidden bg-slate-950 text-white">
       <Head>

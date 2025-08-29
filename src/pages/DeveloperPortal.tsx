@@ -1,9 +1,9 @@
-import React from 'react';
-import { SEO } from '../components/SEO';
-import { motion } from 'framer-motion';
-import { Code, Terminal, BookOpen, Download, Play, Users, Cpu, Network, BarChart3, Activity, Rocket, ExternalLink, Github, Globe, Shield, Zap, Database, Brain, Cloud, Lock } from 'lucide-react';
+import React from 'react.ts';
+import { SEO  } from '../components/SEO';
+import { motion  } from 'framer-motion.ts';
+import { Code, Terminal, BookOpen, Download, Play, Users, Cpu, Network, BarChart3, Activity, Rocket, ExternalLink, Github, Globe, Shield, Zap, Database, Brain, Cloud, Lock  } from 'lucide-react.ts';
 
-const DeveloperPortal: React.FC = () => {
+const DeveloperPortal: React.FC = (): JSX.Element => {
   const tools = [
     {
       icon: Code,
@@ -147,8 +147,8 @@ const DeveloperPortal: React.FC = () => {
             </p>
           </motion.div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {tools.map((tool, index) => (
+          <div className="grid md: anygrid-cols-2 lg:grid-cols-4 gap-8">
+            {tools.map((tool, index)  => (
               <motion.div
                 key={tool.title}
                 initial={{ opacity: 0, y: 20 }}
@@ -187,8 +187,8 @@ const DeveloperPortal: React.FC = () => {
             </p>
           </motion.div>
 
-          <div className="grid md:grid-cols-2 gap-8">
-            {resources.map((resource, index) => (
+          <div className="grid md: anygrid-cols-2 gap-8">
+            {resources.map((resource, index)  => (
               <motion.div
                 key={resource.title}
                 initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
@@ -235,8 +235,8 @@ const DeveloperPortal: React.FC = () => {
             </p>
           </motion.div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {community.map((platform, index) => (
+          <div className="grid md: anygrid-cols-2 lg:grid-cols-4 gap-8">
+            {community.map((platform, index)  => (
               <motion.div
                 key={platform.name}
                 initial={{ opacity: 0, y: 20 }}

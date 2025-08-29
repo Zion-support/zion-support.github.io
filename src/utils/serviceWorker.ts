@@ -15,7 +15,7 @@ export class ServiceWorkerManager {
     return ServiceWorkerManager.instance;
   }
 
-  async register(): Promise<ServiceWorkerRegistration | null> {
+  async register(): Promise<any> {
     if (!this.isSupported) {
       console.log('Service Worker not supported');
       return null;
@@ -50,7 +50,7 @@ export class ServiceWorkerManager {
 
       return registration;
     } catch (error) {
-      console.error('Service Worker registration failed:', error);
+      console.error('Service Worker registration failed: any', error);
       return null;
     }
   }
@@ -58,7 +58,7 @@ export class ServiceWorkerManager {
   private handleUpdates(registration: ServiceWorkerRegistration) {
     try {
       // Check for updates
-      registration.addEventListener('updatefound', () => {
+      registration.addEventListener('updatefound', ()  => {
         const newWorker = registration.installing;
         if (newWorker) {
           newWorker.addEventListener('statechange', () => {
@@ -83,7 +83,7 @@ export class ServiceWorkerManager {
             window.location.reload();
           }
         } catch (error) {
-          console.error('Error handling controller change:', error);
+          console.error('Error handling controller change: any', error);
         }
       });
     } catch (error) {
@@ -92,7 +92,7 @@ export class ServiceWorkerManager {
   }
 
   private handleMessages() {
-    navigator.serviceWorker.addEventListener('message', (event) => {
+    navigator.serviceWorker.addEventListener('message', (event)  => {
       try {
         console.log('Message from Service Worker:', event.data);
         
@@ -173,7 +173,7 @@ export class ServiceWorkerManager {
     }
   }
 
-  async unregister(): Promise<boolean> {
+  async unregister(): Promise<any> {
     if (!this.swRegistration) return false;
 
     try {
@@ -189,13 +189,13 @@ export class ServiceWorkerManager {
     }
   }
 
-  async getRegistration(): Promise<ServiceWorkerRegistration | null> {
+  async getRegistration(): Promise<any> {
     if (!this.isSupported) return null;
     const registration = await navigator.serviceWorker.getRegistration();
     return registration || null;
   }
 
-  async getController(): Promise<ServiceWorker | null> {
+  async getController(): Promise<any> {
     if (!this.isSupported) return null;
     return navigator.serviceWorker.controller;
   }
@@ -205,7 +205,7 @@ export class ServiceWorkerManager {
   }
 
   // Cache management
-  async clearCaches(): Promise<void> {
+  async clearCaches(): Promise<any> {
     if (!this.isSupported) return;
 
     try {
@@ -219,7 +219,7 @@ export class ServiceWorkerManager {
     }
   }
 
-  async getCacheSize(): Promise<number> {
+  async getCacheSize(): Promise<any> {
     if (!this.isSupported) return 0;
 
     try {
@@ -247,7 +247,7 @@ export class ServiceWorkerManager {
   }
 
   // Background sync
-  async requestBackgroundSync(tag: string): Promise<boolean> {
+  async requestBackgroundSync(tag: string): Promise<any> {
     if (!this.isSupported || !('sync' in navigator.serviceWorker)) {
       return false;
     }
@@ -267,7 +267,7 @@ export class ServiceWorkerManager {
   }
 
   // Push notifications
-  async requestNotificationPermission(): Promise<NotificationPermission> {
+  async requestNotificationPermission(): Promise<any> {
     if (!this.isSupported || !('Notification' in window)) {
       return 'denied';
     }
@@ -282,7 +282,7 @@ export class ServiceWorkerManager {
     }
   }
 
-  async subscribeToPushNotifications(): Promise<PushSubscription | null> {
+  async subscribeToPushNotifications(): Promise<any> {
     if (!this.isSupported || !('PushManager' in window)) {
       return null;
     }
@@ -337,6 +337,6 @@ export const registerServiceWorker = () => serviceWorkerManager.register();
 export const unregisterServiceWorker = () => serviceWorkerManager.unregister();
 export const clearCaches = () => serviceWorkerManager.clearCaches();
 export const getCacheSize = () => serviceWorkerManager.getCacheSize();
-export const requestBackgroundSync = (tag: string) => serviceWorkerManager.requestBackgroundSync(tag);
+export const requestBackgroundSync = (tag: anystring)  => serviceWorkerManager.requestBackgroundSync(tag);
 export const requestNotificationPermission = () => serviceWorkerManager.requestNotificationPermission();
 export const subscribeToPushNotifications = () => serviceWorkerManager.subscribeToPushNotifications();

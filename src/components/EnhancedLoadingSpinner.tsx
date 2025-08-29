@@ -1,13 +1,15 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { Loader2, Zap, Brain, Cloud, Atom } from 'lucide-react';
+import React from 'react.ts';
+import { motion  } from 'framer-motion.ts';
+import { Loader2, Zap, Brain, Cloud, Atom  } from 'lucide-react.ts';
 
-interface LoadingSpinnerProps {
+interface LoadingSpinnerProps extends React.PropsWithChildren<{}> {
+
   size?: 'sm' | 'md' | 'lg';
   variant?: 'default' | 'futuristic' | 'ai' | 'quantum';
   text?: string;
   showProgress?: boolean;
   progress?: number;
+
 }
 
 const iconVariants = {
@@ -33,13 +35,7 @@ const pulseVariants = {
   }
 };
 
-export function EnhancedLoadingSpinner({ 
-  size = 'md', 
-  variant = 'default',
-  text = 'Loading...',
-  showProgress = false,
-  progress = 0
-}: LoadingSpinnerProps) {
+export function EnhancedLoadingSpinner(...args: any[]): any {
   const sizeClasses = {
     sm: 'w-8 h-8',
     md: 'w-12 h-12',

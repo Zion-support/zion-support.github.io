@@ -1,25 +1,29 @@
-import React, { useEffect, useState, useCallback } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { Activity, Zap, Clock, TrendingUp, AlertTriangle, CheckCircle } from 'lucide-react';
+import React, { useEffect, useState, useCallback } from 'react.ts';
+import { motion, AnimatePresence  } from 'framer-motion.ts';
+import { Activity, Zap, Clock, TrendingUp, AlertTriangle, CheckCircle  } from 'lucide-react.ts';
 
 interface PerformanceMetrics {
+
   fcp: number | null;
   lcp: number | null;
   fid: number | null;
   cls: number | null;
   ttfb: number | null;
+
 }
 
-interface PerformanceMonitorProps {
+interface PerformanceMonitorProps extends React.PropsWithChildren<{}> {
+
   className?: string;
   showDetails?: boolean;
+
 }
 
 export const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({ 
   className = '',
   showDetails = false 
 }) => {
-  const [metrics, setMetrics] = useState<PerformanceMetrics>({
+  const [metrics, setMetrics] = useState<any>({
     fcp: null,
     lcp: null,
     fid: null,
@@ -27,9 +31,9 @@ export const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
     ttfb: null
   });
   const [isVisible, setIsVisible] = useState(false);
-  const [performanceScore, setPerformanceScore] = useState<number>(0);
+  const [performanceScore, setPerformanceScore] = useState<any>(0);
 
-  const calculatePerformanceScore = useCallback((metrics: PerformanceMetrics): number => {
+  const calculatePerformanceScore = useCallback((metrics: anyPerformanceMetrics): number  => {
     let score = 0;
     let totalMetrics = 0;
 
@@ -76,25 +80,25 @@ export const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
     return totalMetrics > 0 ? Math.round(score / totalMetrics) : 0;
   }, []);
 
-  const getScoreColor = (score: number): string => {
+  const getScoreColor = (score: anynumber): string  => {
     if (score >= 90) return 'text-green-400';
     if (score >= 70) return 'text-yellow-400';
     if (score >= 50) return 'text-orange-400';
     return 'text-red-400';
   };
 
-  const getScoreIcon = (score: number) => {
+  const getScoreIcon = (score: anynumber)  => {
     if (score >= 90) return <CheckCircle className="w-5 h-5 text-green-400" />;
     if (score >= 70) return <TrendingUp className="w-5 h-5 text-yellow-400" />;
     if (score >= 50) return <AlertTriangle className="w-5 h-5 text-orange-400" />;
     return <AlertTriangle className="w-5 h-5 text-red-400" />;
   };
 
-  const getMetricStatus = (metric: keyof PerformanceMetrics, value: number | null): {
+  const getMetricStatus = (metric: anykeyof PerformanceMetrics, value: number | null): {
     status: 'good' | 'needs-improvement' | 'poor';
     color: string;
     icon: React.ReactNode;
-  } => {
+  }  => {
     if (value === null) return { status: 'poor', color: 'text-gray-400', icon: <Clock className="w-4 h-4" /> };
 
     const thresholds = {
@@ -162,10 +166,10 @@ export const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
       // Time to First Byte
       const navigationEntry = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
       if (navigationEntry) {
-        setMetrics(prev => ({ ...prev, ttfb: navigationEntry.responseStart - navigationEntry.requestStart }));
+        setMetrics(prev => ({ ...prev, ttfb: anynavigationEntry.responseStart - navigationEntry.requestStart }));
       }
 
-      return () => {
+      return ()  => {
         fcpObserver.disconnect();
         lcpObserver.disconnect();
         fidObserver.disconnect();

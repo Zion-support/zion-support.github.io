@@ -1,8 +1,7 @@
-import React, { useState, useEffect } from 'react';
-import { Link, useLocation } from 'react-router-dom';
-import { motion, AnimatePresence } from 'framer-motion';
-import { 
-  Menu, 
+import React, { useState, useEffect } from 'react.ts';
+import { Link, useLocation  } from 'react-router-dom.ts';
+import { motion, AnimatePresence  } from 'framer-motion.ts';
+import { Menu, 
   X, 
   ChevronDown, 
   Brain, 
@@ -19,9 +18,9 @@ import {
   Phone,
   Mail,
   MapPin
-} from 'lucide-react';
+ } from 'lucide-react.ts';
 
-export function Header() {
+export function Header(...args: any[]): any {
   const [isOpen, setIsOpen] = useState(false);
   const [isServicesOpen, setIsServicesOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
@@ -63,7 +62,7 @@ export function Header() {
     }
   ];
 
-  const isActive = (path: string) => location.pathname === path;
+  const isActive = (path: anystring)  => location.pathname === path;
 
   return (
     <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${

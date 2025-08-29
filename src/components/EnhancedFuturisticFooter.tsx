@@ -1,8 +1,7 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import { motion } from 'framer-motion';
-import { 
-  Phone, 
+import React from 'react.ts';
+import { Link  } from 'react-router-dom.ts';
+import { motion  } from 'framer-motion.ts';
+import { Phone, 
   Mail, 
   MapPin, 
   Globe, 
@@ -68,9 +67,9 @@ import {
   Sun,
   Moon,
   Infinity
-} from 'lucide-react';
+ } from 'lucide-react.ts';
 
-export const EnhancedFuturisticFooter: React.FC = () => {
+export const EnhancedFuturisticFooter: React.FC = (): JSX.Element => {
   const currentYear = new Date().getFullYear();
 
   const footerSections = [

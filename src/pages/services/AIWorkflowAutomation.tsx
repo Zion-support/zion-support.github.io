@@ -1,6 +1,6 @@
-import { Workflow, Zap, Check, ExternalLink, Phone, Mail, ArrowRight, Brain, Clock, BarChart3 } from 'lucide-react';
+import { Workflow, Zap, Check, ExternalLink, Phone, Mail, ArrowRight, Brain, Clock, BarChart3  } from 'lucide-react.ts';
 
-export default function AIWorkflowAutomation() {
+export default function AIWorkflowAutomation(...args: any[]): any {
   const features = [
     'Intelligent process mapping and optimization',
     'AI-powered decision trees and conditional logic',
@@ -69,8 +69,8 @@ export default function AIWorkflowAutomation() {
           </div>
           <div className="bg-white border border-gray-200 rounded-xl p-6 shadow-lg">
             <h3 className="text-2xl font-semibold text-gray-900 mb-4">Competitive Pricing</h3>
-            <div className="grid md:grid-cols-3 gap-4">
-              {tiers.map((t) => (
+            <div className="grid md: anygrid-cols-3 gap-4">
+              {tiers.map((t)  => (
                 <div key={t.name} className="rounded-lg p-4 border border-gray-200 hover:border-blue-300 transition-colors">
                   <div className="text-lg font-semibold mb-1">{t.name}</div>
                   <div className="text-2xl font-bold text-blue-600 mb-2">{t.price}</div>
@@ -91,8 +91,8 @@ export default function AIWorkflowAutomation() {
           </div>
         </div>
 
-        <div className="mt-12 grid md:grid-cols-3 gap-6">
-          {['AI-powered optimization', 'Real-time analytics', 'Multi-platform support'].map((t) => (
+        <div className="mt-12 grid md: anygrid-cols-3 gap-6">
+          {['AI-powered optimization', 'Real-time analytics', 'Multi-platform support'].map((t)  => (
             <div key={t} className="p-6 bg-white border border-gray-200 rounded-xl shadow-sm hover:shadow-md transition-shadow">
               <Brain className="w-6 h-6 text-blue-600 mb-3" />
               <div className="text-gray-900 font-semibold">{t}</div>
@@ -102,8 +102,8 @@ export default function AIWorkflowAutomation() {
 
         <div className="mt-16 bg-gray-50 rounded-xl p-8">
           <h3 className="text-2xl font-bold text-gray-900 mb-6 text-center">Popular Use Cases</h3>
-          <div className="grid md:grid-cols-2 gap-6">
-            {useCases.map((useCase) => (
+          <div className="grid md: anygrid-cols-2 gap-6">
+            {useCases.map((useCase)  => (
               <div key={useCase} className="flex items-center p-4 bg-white rounded-lg border border-gray-200">
                 <Zap className="w-5 h-5 text-blue-600 mr-3" />
                 <span className="text-gray-700">{useCase}</span>

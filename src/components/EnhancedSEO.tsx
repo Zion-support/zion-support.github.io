@@ -1,7 +1,8 @@
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
+import React from 'react.ts';
+import { Helmet  } from 'react-helmet-async.ts';
 
-interface SEOProps {
+interface SEOProps extends React.PropsWithChildren<{}> {
+
   title: string;
   description: string;
   keywords?: string[];
@@ -14,22 +15,10 @@ interface SEOProps {
   section?: string;
   tags?: string[];
   structuredData?: any;
+
 }
 
-export function EnhancedSEO({
-  title,
-  description,
-  keywords = [],
-  author = 'Zion Tech Group',
-  image = '/images/zion-tech-group-og.jpg',
-  url = window.location.href,
-  type = 'website',
-  publishedTime,
-  modifiedTime,
-  section,
-  tags = [],
-  structuredData
-}: SEOProps) {
+export function EnhancedSEO(...args: any[]): any {
   const defaultKeywords = [
     'AI services',
     'IT consulting',

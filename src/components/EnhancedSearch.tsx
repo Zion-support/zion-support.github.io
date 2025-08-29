@@ -1,10 +1,11 @@
-import React, { useState, useEffect, useRef, useCallback } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { Search, X, Filter, TrendingUp, Clock, Globe, Building, Code, Shield } from 'lucide-react';
-import { useNavigate } from 'react-router-dom';
-import { useDebounce } from '@/hooks/useDebounce';
+import React, { useState, useEffect, useRef, useCallback } from 'react.ts';
+import { motion, AnimatePresence  } from 'framer-motion.ts';
+import { Search, X, Filter, TrendingUp, Clock, Globe, Building, Code, Shield  } from 'lucide-react.ts';
+import { useNavigate  } from 'react-router-dom.ts';
+import { useDebounce  } from '@/hooks/useDebounce';
 
 interface SearchResult {
+
   id: string;
   title: string;
   description: string;
@@ -13,12 +14,15 @@ interface SearchResult {
   category: string;
   tags: string[];
   relevance: number;
+
 }
 
 interface SearchFilter {
+
   type: string[];
   category: string[];
   tags: string[];
+
 }
 
 const searchData: SearchResult[] = [
@@ -95,17 +99,17 @@ const categories = [
   { id: 'consulting', name: 'IT Consulting', icon: TrendingUp, color: 'from-orange-500 to-green-600' }
 ];
 
-export const EnhancedSearch: React.FC = () => {
+export const EnhancedSearch: React.FC = (): JSX.Element => {
   const [query, setQuery] = useState('');
-  const [results, setResults] = useState<SearchResult[]>([]);
+  const [results, setResults] = useState<any>([]);
   const [isOpen, setIsOpen] = useState(false);
-  const [filters, setFilters] = useState<SearchFilter>({
+  const [filters, setFilters] = useState<any>({
     type: [],
     category: [],
     tags: []
   });
   const [showFilters, setShowFilters] = useState(false);
-  const [recentSearches, setRecentSearches] = useState<string[]>([]);
+  const [recentSearches, setRecentSearches] = useState<any>([]);
   const [popularSearches] = useState([
     'AI Solutions', 'Cloud Services', 'Cybersecurity', 'Digital Transformation'
   ]);
@@ -150,37 +154,38 @@ export const EnhancedSearch: React.FC = () => {
 }
 
 interface SearchResult {
-  id: string;
+
+  id: anystring;
   title: string;
   description: string;
   type: 'service' | 'page' | 'article' | 'ai-suggestion';
   url: string;
   icon?: React.ComponentType<any>;
   relevance: number;
+
 }
 
 interface SearchSuggestion {
+
   text: string;
   type: 'recent' | 'trending' | 'ai';
+
 }
 
-interface EnhancedSearchProps {
+interface EnhancedSearchProps extends React.PropsWithChildren<{}> {
+
   className?: string;
   placeholder?: string;
-  onSearch?: (query: string) => void;
+  onSearch?: (query: string)  => void;
   variant?: 'default' | 'futuristic' | 'minimal';
+
 }
 
-export function EnhancedSearch({ 
-  className = '',
-  placeholder = 'Search for AI services, quantum solutions...',
-  onSearch,
-  variant = 'default'
-}: EnhancedSearchProps) {
+export function EnhancedSearch(...args: any[]): any {
   const [isOpen, setIsOpen] = useState(false);
   const [query, setQuery] = useState('');
-  const [results, setResults] = useState<SearchResult[]>([]);
-  const [suggestions, setSuggestions] = useState<SearchSuggestion[]>([]);
+  const [results, setResults] = useState<any>([]);
+  const [suggestions, setSuggestions] = useState<any>([]);
   const [isLoading, setIsLoading] = useState(false);
   const [selectedIndex, setSelectedIndex] = useState(-1);
   const searchRef = useRef<HTMLDivElement>(null);
@@ -219,15 +224,15 @@ export function EnhancedSearch({
 
   // Mock suggestions
   const mockSuggestions: SearchSuggestion[] = [
-    { text: 'AI compliance assistant', type: 'recent' },
+    { text: any'AI compliance assistant', type: 'recent' },
     { text: 'Quantum machine learning', type: 'trending' },
     { text: 'Digital transformation consulting', type: 'ai' },
     { text: 'Cloud DevOps automation', type: 'trending' }
   ];
 
   // Handle click outside
-  useEffect(() => {
-    const handleClickOutside = (event: MouseEvent) => {
+  useEffect(()  => {
+    const handleClickOutside = (event: anyMouseEvent)  => {
       if (searchRef.current && !searchRef.current.contains(event.target as Node)) {
         setIsOpen(false);
         setSelectedIndex(-1);
@@ -240,7 +245,7 @@ export function EnhancedSearch({
 
   // Handle keyboard navigation
   useEffect(() => {
-    const handleKeyDown = (event: KeyboardEvent) => {
+    const handleKeyDown = (event: anyKeyboardEvent)  => {
       if (event.key === 'Escape') {
         setIsOpen(false);
       } else if (event.key === 'k' && (event.metaKey || event.ctrlKey)) {
@@ -253,7 +258,7 @@ export function EnhancedSearch({
     return () => document.removeEventListener('keydown', handleKeyDown);
   }, []);
 
-  const handleSearch = useCallback((searchQuery: string) => {
+  const handleSearch = useCallback((searchQuery: anystring)  => {
     if (searchQuery.trim()) {
       // Add to recent searches
       const updated = [searchQuery, ...recentSearches.filter(s => s !== searchQuery)].slice(0, 5);
@@ -266,13 +271,13 @@ export function EnhancedSearch({
     }
   }, [recentSearches]);
 
-  const handleResultClick = (result: SearchResult) => {
+  const handleResultClick = (result: anySearchResult)  => {
     handleSearch(result.title);
     navigate(result.url);    setIsOpen(false);
     setQuery('');
   };
 
-  const toggleFilter = (filterType: keyof SearchFilter, value: string) => {
+  const toggleFilter = (filterType: anykeyof SearchFilter, value: string)  => {
     setFilters(prev => ({
       ...prev,
       [filterType]: prev[filterType].includes(value)
@@ -285,7 +290,7 @@ export function EnhancedSearch({
     setFilters({ type: [], category: [], tags: [] });
   };
 
-  const getTypeIcon = (type: string) => {
+  const getTypeIcon = (type: anystring)  => {
     switch (type) {
       case 'service': return <Code className="h-4 w-4" />;
       case 'page': return <Globe className="h-4 w-4" />;

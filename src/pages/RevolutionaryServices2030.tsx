@@ -1,8 +1,7 @@
-import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { Link } from 'react-router-dom';
-import { 
-  Brain, 
+import React, { useState, useEffect } from 'react.ts';
+import { motion, AnimatePresence  } from 'framer-motion.ts';
+import { Link  } from 'react-router-dom.ts';
+import { Brain, 
   Rocket, 
   Zap, 
   Cpu, 
@@ -32,13 +31,13 @@ import {
   Palette,
   Gamepad2,
   Music
-} from 'lucide-react';
-import { SEO } from "@/components/SEO";
-import { REVOLUTIONARY_SERVICES_2030 } from "@/data/revolutionaryServices2030";
-import { EMERGING_TECH_SERVICES_2030 } from "@/data/emergingTechServices2030";
-import { REVOLUTIONARY_PRICING_GUIDE_2030 } from "@/data/revolutionaryPricingGuide2030";
+ } from 'lucide-react.ts';
+import { SEO  } from '@/components/SEO';
+import { REVOLUTIONARY_SERVICES_2030  } from '@/data/revolutionaryServices2030';
+import { EMERGING_TECH_SERVICES_2030  } from '@/data/emergingTechServices2030';
+import { REVOLUTIONARY_PRICING_GUIDE_2030  } from '@/data/revolutionaryPricingGuide2030';
 
-export default function RevolutionaryServices2030() {
+export default function RevolutionaryServices2030(...args: any[]): any {
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [selectedPriceRange, setSelectedPriceRange] = useState('all');
   const [sortBy, setSortBy] = useState('featured');
@@ -98,7 +97,7 @@ export default function RevolutionaryServices2030() {
     }
   });
 
-  const getServiceIcon = (category: string) => {
+  const getServiceIcon = (category: anystring)  => {
     switch (category) {
       case 'AI Services':
         return Brain;
@@ -111,7 +110,7 @@ export default function RevolutionaryServices2030() {
     }
   };
 
-  const getServiceColor = (category: string) => {
+  const getServiceColor = (category: anystring)  => {
     switch (category) {
       case 'AI Services':
         return 'from-zion-cyan to-zion-purple';
@@ -258,9 +257,9 @@ export default function RevolutionaryServices2030() {
               <select
                 value={sortBy}
                 onChange={(e) => setSortBy(e.target.value)}
-                className="px-4 py-2 bg-gray-800 text-gray-300 rounded-lg border border-gray-700 focus:border-zion-cyan focus:outline-none"
+                className="px-4 py-2 bg-gray-800 text-gray-300 rounded-lg border border-gray-700 focus: anyborder-zion-cyan focus:outline-none"
               >
-                {sortOptions.map((option) => (
+                {sortOptions.map((option)  => (
                   <option key={option.id} value={option.id}>
                     {option.name}
                   </option>
@@ -270,9 +269,9 @@ export default function RevolutionaryServices2030() {
           </div>
 
           {/* Services Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8">
             <AnimatePresence>
-              {sortedServices.map((service, index) => {
+              {sortedServices.map((service, index)  => {
                 const IconComponent = getServiceIcon(service.category);
                 const colorClass = getServiceColor(service.category);
                 

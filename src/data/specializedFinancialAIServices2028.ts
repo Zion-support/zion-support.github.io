@@ -1,4 +1,4 @@
-import { ProductListing } from "@/types/listings";
+import { ProductListing  } from '@/types/listings';
 
 // Specialized Financial AI Services 2028 - Zion Tech Group
 // Advanced AI-powered financial solutions for modern enterprises

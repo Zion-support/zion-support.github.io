@@ -1,7 +1,7 @@
-import React from 'react';
-import { SEO } from '../components/SEO';
+import React from 'react.ts';
+import { SEO  } from '../components/SEO';
 
-export default function ServicesComparisonPage() {
+export default function ServicesComparisonPage(...args: any[]): any {
   return (
     <>
       <SEO

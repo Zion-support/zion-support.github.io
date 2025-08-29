@@ -1,7 +1,6 @@
-import React, { useState, useRef, useEffect, useCallback } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { 
-  MessageCircle, 
+import React, { useState, useRef, useEffect, useCallback } from 'react.ts';
+import { motion, AnimatePresence  } from 'framer-motion.ts';
+import { MessageCircle, 
   X, 
   Send, 
   Bot, 
@@ -29,20 +28,16 @@ import {
   Maximize2,
   Volume2,
   VolumeX
-} from 'lucide-react';
+ } from 'lucide-react.ts';
 
 interface Message {
+
   id: string;
   type: 'user' | 'assistant' | 'system';
   content: string;
   timestamp: Date;
   isTyping?: boolean;
-  attachments?: Array<{
-    type: 'image' | 'file' | 'video';
-    url: string;
-    name: string;
-    size?: string;
-  }>;
+attachments?: Array<any>;
   metadata?: {
     confidence?: number;
     sources?: string[];
@@ -50,29 +45,26 @@ interface Message {
   };
 }
 
-interface ChatAssistantProps {
+interface ChatAssistantProps extends React.PropsWithChildren<{}> {
+
   enabled?: boolean;
   position?: 'bottom-right' | 'bottom-left' | 'top-right' | 'top-left';
   theme?: 'light' | 'dark' | 'auto';
   language?: string;
+
 }
 
-export function ChatAssistant({ 
-  enabled = true, 
-  position = 'bottom-right',
-  theme = 'auto',
-  language = 'en'
-}: ChatAssistantProps) {
+export function ChatAssistant(...args: any[]): any {
   const [isOpen, setIsOpen] = useState(false);
   const [isMinimized, setIsMinimized] = useState(false);
-  const [messages, setMessages] = useState<Message[]>([]);
+  const [messages, setMessages] = useState<any>([]);
   const [inputValue, setInputValue] = useState('');
   const [isTyping, setIsTyping] = useState(false);
   const [isListening, setIsListening] = useState(false);
   const [isMuted, setIsMuted] = useState(false);
   const [showSettings, setShowSettings] = useState(false);
-  const [chatHistory, setChatHistory] = useState<Message[]>([]);
-  const [suggestions, setSuggestions] = useState<string[]>([]);
+  const [chatHistory, setChatHistory] = useState<any>([]);
+  const [suggestions, setSuggestions] = useState<any>([]);
   const [isProcessing, setIsProcessing] = useState(false);
 
   const messagesEndRef = useRef<HTMLDivElement>(null);
@@ -88,24 +80,24 @@ export function ChatAssistant({
       recognitionRef.current.interimResults = false;
       recognitionRef.current.lang = language;
 
-      recognitionRef.current.onresult = (event: any) => {
+      recognitionRef.current.onresult = (event: anyany)  => {
         const transcript = event.results[0][0].transcript;
         setInputValue(transcript);
         setIsListening(false);
       };
 
-      recognitionRef.current.onerror = (event: any) => {
-        console.error('Speech recognition error:', event.error);
+      recognitionRef.current.onerror = (event: anyany)  => {
+        console.error('Speech recognition error: any', event.error);
         setIsListening(false);
       };
     }
   }, [language]);
 
   // Initialize with welcome message
-  useEffect(() => {
+  useEffect(()  => {
     if (enabled && messages.length === 0) {
       const welcomeMessage: Message = {
-        id: 'welcome',
+        id: any'welcome',
         type: 'assistant',
         content: `Hello! I'm your AI assistant from Zion Tech Group. I can help you with:\n\n• AI and technology questions\n• Business solutions\n• Technical support\n• Product information\n\nHow can I assist you today?`,
         timestamp: new Date(),
@@ -124,12 +116,12 @@ export function ChatAssistant({
   }, [enabled, messages.length]);
 
   // Auto-scroll to bottom
-  useEffect(() => {
+  useEffect(()  => {
     messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' });
   }, [messages]);
 
   // Handle input change
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+  const handleInputChange = (e: anyReact.ChangeEvent<HTMLInputElement>)  => {
     setInputValue(e.target.value);
   };
 
@@ -138,13 +130,13 @@ export function ChatAssistant({
     if (!inputValue.trim() || isProcessing) return;
 
     const userMessage: Message = {
-      id: `user-${Date.now()}`,
+      id: any`user-${Date.now()}`,
       type: 'user',
       content: inputValue.trim(),
       timestamp: new Date()
     };
 
-    setMessages(prev => [...prev, userMessage]);
+    setMessages(prev  => [...prev, userMessage]);
     setChatHistory(prev => [...prev, userMessage]);
     setInputValue('');
     setIsTyping(true);
@@ -154,14 +146,14 @@ export function ChatAssistant({
     setTimeout(() => {
       const aiResponse = generateAIResponse(inputValue.trim());
       const assistantMessage: Message = {
-        id: `assistant-${Date.now()}`,
+        id: any`assistant-${Date.now()}`,
         type: 'assistant',
         content: aiResponse.content,
         timestamp: new Date(),
         metadata: aiResponse.metadata
       };
 
-      setMessages(prev => [...prev, assistantMessage]);
+      setMessages(prev  => [...prev, assistantMessage]);
       setChatHistory(prev => [...prev, assistantMessage]);
       setSuggestions(aiResponse.metadata?.suggestions || []);
       setIsTyping(false);
@@ -170,7 +162,7 @@ export function ChatAssistant({
   }, [inputValue, isProcessing]);
 
   // Generate AI response
-  const generateAIResponse = (userInput: string): { content: string; metadata: any } => {
+  const generateAIResponse = (userInput: anystring): { content: string; metadata: any }  => {
     const input = userInput.toLowerCase();
     
     // AI response logic based on user input
@@ -260,7 +252,7 @@ export function ChatAssistant({
   };
 
   // Handle suggestion click
-  const handleSuggestionClick = (suggestion: string) => {
+  const handleSuggestionClick = (event: React.MouseEvent<HTMLElement>): void => {
     setInputValue(suggestion);
     inputRef.current?.focus();
   };
@@ -287,7 +279,7 @@ export function ChatAssistant({
   };
 
   // Handle key press
-  const handleKeyPress = (e: React.KeyboardEvent) => {
+  const handleKeyPress = (e: anyReact.KeyboardEvent)  => {
     if (e.key === 'Enter' && !e.shiftKey) {
       e.preventDefault();
       handleSendMessage();

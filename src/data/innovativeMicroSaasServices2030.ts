@@ -2,13 +2,16 @@
 // Cutting-edge, real-world micro SAAS solutions with market data and pricing
 
 export interface ServiceContact {
+
   phone: string;
   email: string;
   website: string;
   address: string;
+
 }
 
 export interface MicroSaasService {
+
   id: number;
   name: string;
   category: string;
@@ -35,6 +38,7 @@ export interface MicroSaasService {
   useCases: string[];
   technologies: string[];
   compliance: string[];
+
 }
 
 // Zion Tech Group Contact Information

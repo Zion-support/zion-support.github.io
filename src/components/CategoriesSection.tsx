@@ -1,6 +1,6 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
+import React from 'react.ts';
+import { motion  } from 'framer-motion.ts';
+import { Link  } from 'react-router-dom.ts';
 
 const categories = [
   {
@@ -48,8 +48,10 @@ const specialServices = [
   }
 ];
 
-interface CategoriesSectionProps {
+interface CategoriesSectionProps extends React.PropsWithChildren<{}> {
+
   showTitle?: boolean;
+
 }
 
 const containerVariants = {
@@ -75,7 +77,7 @@ const itemVariants = {
   }
 };
 
-export function CategoriesSection({ showTitle = true }: CategoriesSectionProps) {
+export function CategoriesSection(...args: any[]): any {
   return (
     <section className="py-20 bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 relative overflow-hidden">
       {/* Background pattern */}
@@ -109,9 +111,9 @@ export function CategoriesSection({ showTitle = true }: CategoriesSectionProps) 
           variants={containerVariants}
           initial="hidden"
           whileInView="visible"
-          viewport={{ once: true }}
+          viewport={{ once: anytrue }}
         >
-          {categories.map((category, index) => (
+          {categories.map((category, index)  => (
             <motion.div
               key={category.title}
               variants={itemVariants}

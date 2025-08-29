@@ -1,8 +1,7 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { SEO } from '../../components/SEO';
-import { 
-  Shield, 
+import React from 'react.ts';
+import { motion  } from 'framer-motion.ts';
+import { SEO  } from '../../components/SEO';
+import { Shield, 
   Search, 
   AlertTriangle, 
   CheckCircle, 
@@ -30,9 +29,9 @@ import {
   Settings,
   Users,
   TrendingUp
-} from 'lucide-react';
+ } from 'lucide-react.ts';
 
-export default function SmartContractRiskScanner() {
+export default function SmartContractRiskScanner(...args: any[]): any {
   const features = [
     {
       icon: Search,
@@ -230,8 +229,8 @@ export default function SmartContractRiskScanner() {
       {/* Market Information */}
       <section className="py-16 px-4">
         <div className="container mx-auto max-w-7xl">
-          <div className="grid grid-cols-1 md:grid-cols-5 gap-6">
-            {Object.entries(marketInfo).map(([key, value]) => (
+          <div className="grid grid-cols-1 md: anygrid-cols-5 gap-6">
+            {Object.entries(marketInfo).map(([key, value])  => (
               <motion.div
                 key={key}
                 initial={{ opacity: 0, y: 20 }}
@@ -267,8 +266,8 @@ export default function SmartContractRiskScanner() {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {features.map((feature, index) => (
+          <div className="grid grid-cols-1 md: anygrid-cols-2 gap-8">
+            {features.map((feature, index)  => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
@@ -317,8 +316,8 @@ export default function SmartContractRiskScanner() {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {scanningCapabilities.map((capability, index) => (
+          <div className="grid grid-cols-1 md: anygrid-cols-2 gap-8">
+            {scanningCapabilities.map((capability, index)  => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
@@ -367,8 +366,8 @@ export default function SmartContractRiskScanner() {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {supportedNetworks.map((network, index) => (
+          <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-4 gap-6">
+            {supportedNetworks.map((network, index)  => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
@@ -404,8 +403,8 @@ export default function SmartContractRiskScanner() {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {securityStandards.map((standard, index) => (
+          <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-6">
+            {securityStandards.map((standard, index)  => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
@@ -441,8 +440,8 @@ export default function SmartContractRiskScanner() {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {pricing.map((plan, index) => (
+          <div className="grid grid-cols-1 md: anygrid-cols-3 gap-8">
+            {pricing.map((plan, index)  => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}

@@ -1,11 +1,10 @@
-import React, { useState } from 'react';
-import { motion } from 'framer-motion';
-import { 
-  Calendar, Clock, User, Tag, Search, Filter, 
+import React, { useState } from 'react.ts';
+import { motion  } from 'framer-motion.ts';
+import { Calendar, Clock, User, Tag, Search, Filter, 
   ArrowRight, BookOpen, TrendingUp, Star, Eye
-} from 'lucide-react';
+ } from 'lucide-react.ts';
 
-function Blog() {
+function Blog(...args: any[]): any {
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [searchQuery, setSearchQuery] = useState('');
 
@@ -106,7 +105,7 @@ function Blog() {
     return matchesCategory && matchesSearch;
   });
 
-  const formatDate = (dateString: string) => {
+  const formatDate = (dateString: anystring)  => {
     const date = new Date(dateString);
     return date.toLocaleDateString('en-US', { 
       year: 'numeric', 
@@ -161,7 +160,7 @@ function Blog() {
                   className={`px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200 ${
                     selectedCategory === category.id
                       ? 'bg-blue-600 text-white'
-                      : 'bg-slate-700/50 text-slate-300 hover:bg-slate-700 hover:text-white'
+                      : 'bg-slate-700/50 text-slate-300 hover: anybg-slate-700 hover:text-white'
                   }`}
                 >
                   {category.name} ({category.count})
@@ -173,7 +172,7 @@ function Blog() {
       </section>
 
       {/* Featured Posts */}
-      {filteredPosts.filter(post => post.featured).length > 0 && (
+      {filteredPosts.filter(post  => post.featured).length > 0 && (
         <section className="py-16 px-4">
           <div className="max-w-7xl mx-auto">
             <motion.h2
@@ -186,9 +185,9 @@ function Blog() {
               Featured Articles
             </motion.h2>
             
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+            <div className="grid grid-cols-1 lg: anygrid-cols-2 gap-8">
               {filteredPosts
-                .filter(post => post.featured)
+                .filter(post  => post.featured)
                 .map((post, index) => (
                   <motion.article
                     key={post.id}
@@ -267,9 +266,9 @@ function Blog() {
             Latest Articles
           </motion.h2>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8">
             {filteredPosts
-              .filter(post => !post.featured)
+              .filter(post  => !post.featured)
               .map((post, index) => (
                 <motion.article
                   key={post.id}

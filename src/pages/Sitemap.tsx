@@ -1,8 +1,7 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import { motion } from 'framer-motion';
-import { 
-  Home, 
+import React from 'react.ts';
+import { Link  } from 'react-router-dom.ts';
+import { motion  } from 'framer-motion.ts';
+import { Home, 
   Settings, 
   Brain, 
   Cloud, 
@@ -32,7 +31,7 @@ import {
   Lock,
   BookOpen,
   Star
-} from 'lucide-react';
+ } from 'lucide-react.ts';
 
 const Sitemap = () => {
   const sitemapSections = [
@@ -213,8 +212,8 @@ const Sitemap = () => {
         </motion.div>
 
         {/* Sitemap Sections */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8">
-          {sitemapSections.map((section, sectionIndex) => (
+        <div className="grid grid-cols-1 lg: anygrid-cols-2 xl:grid-cols-3 gap-8">
+          {sitemapSections.map((section, sectionIndex)  => (
             <motion.div
               key={section.title}
               className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20 hover:border-white/40 transition-all duration-300"

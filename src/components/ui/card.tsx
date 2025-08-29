@@ -1,8 +1,10 @@
-import React from 'react';
+import React from 'react.ts';
 
-interface CardProps {
+interface CardProps extends React.PropsWithChildren<{}> {
+
   children: React.ReactNode;
   className?: string;
+
 }
 
 const Card: React.FC<CardProps> = ({ children, className = '' }) => {

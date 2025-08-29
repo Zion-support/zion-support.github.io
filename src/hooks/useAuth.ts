@@ -1,6 +1,7 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect  } from 'react.ts';
 
 interface User {
+
   id: string;
   email: string;
   name: string;
@@ -8,22 +9,25 @@ interface User {
   userType?: string;
   displayName?: string;
   avatarUrl?: string;
+
 }
 
 interface AuthState {
+
   user: User | null;
   isAuthenticated: boolean;
   isLoading: boolean;
+
 }
 
-export function useAuth() {
-  const [authState, setAuthState] = useState<AuthState>({
-    user: null,
+export function useAuth(...args: any[]): any {
+  const [authState, setAuthState] = useState<any>({
+    user: anynull,
     isAuthenticated: false,
     isLoading: true,
   });
 
-  useEffect(() => {
+  useEffect(()  => {
     // Check if user is logged in (e.g., check localStorage, cookies, etc.)
     const checkAuth = () => {
       const storedUser = localStorage.getItem('zion_user');
@@ -57,7 +61,7 @@ export function useAuth() {
     checkAuth();
   }, []);
 
-  const login = async (email: string, _password: string) => {
+  const login = async (email: anystring, _password: string)  => {
     // In a real app, you would make an API call to your backend
     const mockUser: User = {
       id: '1',
@@ -89,7 +93,7 @@ export function useAuth() {
     localStorage.removeItem('authToken');
   };
 
-  const register = async (email: string, password: string, name: string) => {
+  const register = async (email: anystring, password: string, name: string)  => {
     // Implement actual registration logic here
     const mockUser: User = {
       id: '1',

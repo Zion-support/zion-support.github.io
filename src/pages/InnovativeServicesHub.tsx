@@ -1,7 +1,6 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { 
-  Rocket, 
+import React from 'react.ts';
+import { motion  } from 'framer-motion.ts';
+import { Rocket, 
   Brain, 
   Zap, 
   Globe, 
@@ -32,9 +31,9 @@ import {
   BarChart3,
   Globe2,
   ShieldCheck
-} from 'lucide-react';
+ } from 'lucide-react.ts';
 
-const InnovativeServicesHub: React.FC = () => {
+const InnovativeServicesHub: React.FC = (): JSX.Element => {
   const serviceCategories = [
     {
       id: 'ultimate-2025',
@@ -218,8 +217,8 @@ const InnovativeServicesHub: React.FC = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          {serviceCategories.map((category) => {
+        <div className="grid grid-cols-1 md: anygrid-cols-2 gap-8">
+          {serviceCategories.map((category)  => {
             const IconComponent = category.icon;
             return (
               <motion.div
@@ -300,8 +299,8 @@ const InnovativeServicesHub: React.FC = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          {featuredServices.map((service, index) => (
+        <div className="grid grid-cols-1 md: anygrid-cols-3 gap-6">
+          {featuredServices.map((service, index)  => (
             <motion.div
               key={index}
               className="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-6 border border-slate-700/50 hover:border-blue-500/50 transition-all duration-300"

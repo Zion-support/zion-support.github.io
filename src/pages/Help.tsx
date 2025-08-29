@@ -1,7 +1,6 @@
-import React, { useState } from 'react';
-import { motion } from 'framer-motion';
-import { 
-  Search, 
+import React, { useState } from 'react.ts';
+import { motion  } from 'framer-motion.ts';
+import { Search, 
   BookOpen, 
   MessageCircle, 
   Phone, 
@@ -23,12 +22,12 @@ import {
   Users,
   Globe,
   Rocket
-} from 'lucide-react';
-import { SEO } from '../components/SEO';
+ } from 'lucide-react.ts';
+import { SEO  } from '../components/SEO';
 
-export default function Help() {
+export default function Help(...args: any[]): any {
   const [searchQuery, setSearchQuery] = useState('');
-  const [expandedCategory, setExpandedCategory] = useState<string | null>(null);
+  const [expandedCategory, setExpandedCategory] = useState<any>(null);
 
   const helpCategories = [
     {
@@ -257,8 +256,8 @@ export default function Help() {
             <p className="text-gray-300">Get immediate assistance through our support channels</p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {quickLinks.map((link, index) => (
+          <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-4 gap-6">
+            {quickLinks.map((link, index)  => (
               <motion.a
                 key={index}
                 href={link.url}
@@ -372,8 +371,8 @@ export default function Help() {
                     className="border-t border-slate-700/50"
                   >
                     <div className="p-6">
-                      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                        {category.articles.map((article, articleIndex) => (
+                      <div className="grid grid-cols-1 md: anygrid-cols-2 gap-4">
+                        {category.articles.map((article, articleIndex)  => (
                           <a
                             key={articleIndex}
                             href={article.url}
@@ -415,7 +414,7 @@ export default function Help() {
             <p className="text-gray-300">Explore more helpful resources and materials</p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md: anygrid-cols-3 gap-8">
             {[
               {
                 icon: BookOpen,
@@ -438,7 +437,7 @@ export default function Help() {
                 url: '/help/downloads',
                 color: 'from-purple-500 to-purple-600'
               }
-            ].map((resource, index) => (
+            ].map((resource, index)  => (
               <motion.a
                 key={index}
                 href={resource.url}

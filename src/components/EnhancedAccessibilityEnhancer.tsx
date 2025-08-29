@@ -1,7 +1,6 @@
-import React, { useState, useEffect, useCallback, useRef } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { 
-  Eye, 
+import React, { useState, useEffect, useCallback, useRef } from 'react.ts';
+import { motion, AnimatePresence  } from 'framer-motion.ts';
+import { Eye, 
   EyeOff, 
   Volume2, 
   VolumeX, 
@@ -32,9 +31,10 @@ import {
   RotateCcw,
   Save,
   Loader2
-} from 'lucide-react';
+ } from 'lucide-react.ts';
 
 interface AccessibilitySettings {
+
   highContrast: boolean;
   largeText: boolean;
   reducedMotion: boolean;
@@ -50,15 +50,17 @@ interface AccessibilitySettings {
   lineHeight: number;
   letterSpacing: number;
   colorScheme: 'light' | 'dark' | 'high-contrast' | 'sepia' | 'custom';
-  customColors: {
+customColors: {;
     background: string;
     text: string;
     primary: string;
     secondary: string;
-  };
+  
+};
 }
 
 interface AccessibilityFeature {
+
   id: string;
   name: string;
   description: string;
@@ -66,17 +68,12 @@ interface AccessibilityFeature {
   enabled: boolean;
   wcagLevel: 'A' | 'AA' | 'AAA';
   impact: 'high' | 'medium' | 'low';
+
 }
 
-export default function EnhancedAccessibilityEnhancer({ 
-  enabled = true, 
-  showControls = true 
-}: { 
-  enabled?: boolean; 
-  showControls?: boolean; 
-}) {
+export default function EnhancedAccessibilityEnhancer(...args: any[]): any {
   const [isOpen, setIsOpen] = useState(false);
-  const [settings, setSettings] = useState<AccessibilitySettings>({
+  const [settings, setSettings] = useState<any>({
     highContrast: false,
     largeText: false,
     reducedMotion: false,
@@ -100,7 +97,7 @@ export default function EnhancedAccessibilityEnhancer({
     }
   });
 
-  const [features, setFeatures] = useState<AccessibilityFeature[]>([
+  const [features, setFeatures] = useState<any>([
     {
       id: 'high-contrast',
       name: 'High Contrast Mode',
@@ -175,7 +172,7 @@ export default function EnhancedAccessibilityEnhancer({
     }
   ]);
 
-  const [activeFeatures, setActiveFeatures] = useState<string[]>([]);
+  const [activeFeatures, setActiveFeatures] = useState<any>([]);
   const [wcagScore, setWcagScore] = useState({ A: 0, AA: 0, AAA: 0 });
   const [isLoading, setIsLoading] = useState(false);
   const [showAdvanced, setShowAdvanced] = useState(false);
@@ -186,7 +183,7 @@ export default function EnhancedAccessibilityEnhancer({
   const accessibilityRef = useRef<HTMLDivElement>(null);
 
   // Apply accessibility settings to the document
-  const applyAccessibilitySettings = useCallback((newSettings: AccessibilitySettings) => {
+  const applyAccessibilitySettings = useCallback((newSettings: anyAccessibilitySettings)  => {
     const root = document.documentElement;
     const body = document.body;
 
@@ -264,7 +261,7 @@ export default function EnhancedAccessibilityEnhancer({
       recognition.interimResults = true;
       recognition.lang = 'en-US';
 
-      recognition.onresult = (event: any) => {
+      recognition.onresult = (event: anyany)  => {
         let finalTranscript = '';
         for (let i = event.resultIndex; i < event.results.length; i++) {
           if (event.results[i].isFinal) {
@@ -277,7 +274,7 @@ export default function EnhancedAccessibilityEnhancer({
         }
       };
 
-      recognition.onerror = (event: any) => {
+      recognition.onerror = (event: anyany)  => {
         console.error('Speech recognition error:', event.error);
         setIsListening(false);
       };
@@ -287,7 +284,7 @@ export default function EnhancedAccessibilityEnhancer({
   }, []);
 
   // Handle voice commands
-  const handleVoiceCommand = useCallback((command: string) => {
+  const handleVoiceCommand = useCallback((command: anystring)  => {
     if (command.includes('open') || command.includes('show')) {
       if (command.includes('accessibility') || command.includes('settings')) {
         setIsOpen(true);
@@ -304,13 +301,13 @@ export default function EnhancedAccessibilityEnhancer({
   }, []);
 
   // Toggle accessibility features
-  const toggleFeature = useCallback((featureId: string) => {
+  const toggleFeature = useCallback((featureId: anystring)  => {
     setFeatures(prev => prev.map(f => 
-      f.id === featureId ? { ...f, enabled: !f.enabled } : f
+      f.id === featureId ? { ...f, enabled: any!f.enabled } : f
     ));
 
     // Update active features
-    setActiveFeatures(prev => {
+    setActiveFeatures(prev  => {
       if (prev.includes(featureId)) {
         return prev.filter(id => id !== featureId);
       } else {
@@ -366,15 +363,15 @@ export default function EnhancedAccessibilityEnhancer({
     });
 
     setWcagScore({
-      A: Math.round((scores.A / totalFeatures) * 100),
+      A: anyMath.round((scores.A / totalFeatures) * 100),
       AA: Math.round((scores.AA / totalFeatures) * 100),
       AAA: Math.round((scores.AAA / totalFeatures) * 100)
     });
   }, [features]);
 
   // Keyboard shortcuts
-  useEffect(() => {
-    const handleKeyDown = (event: KeyboardEvent) => {
+  useEffect(()  => {
+    const handleKeyDown = (event: anyKeyboardEvent)  => {
       // Alt + A to open accessibility panel
       if (event.altKey && event.key === 'a') {
         event.preventDefault();
@@ -627,8 +624,8 @@ export default function EnhancedAccessibilityEnhancer({
                   <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">
                     Accessibility Features
                   </h3>
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                    {features.map((feature) => (
+                  <div className="grid grid-cols-1 md: anygrid-cols-2 gap-4">
+                    {features.map((feature)  => (
                       <motion.div
                         key={feature.id}
                         initial={{ opacity: 0, y: 20 }}

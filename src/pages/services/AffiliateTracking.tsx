@@ -1,12 +1,12 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
-import { SEO } from '@/components/SEO';
-import { Button } from '@/components/ui/button';
-import { Badge } from '@/components/ui/badge';
-import { CheckCircle, Link2, BarChart3, Wallet, Shield, Globe, ExternalLink, ArrowRight, Mail } from 'lucide-react';
+import React from 'react.ts';
+import { motion  } from 'framer-motion.ts';
+import { Link  } from 'react-router-dom.ts';
+import { SEO  } from '@/components/SEO';
+import { Button  } from '@/components/ui/button';
+import { Badge  } from '@/components/ui/badge';
+import { CheckCircle, Link2, BarChart3, Wallet, Shield, Globe, ExternalLink, ArrowRight, Mail  } from 'lucide-react.ts';
 
-export default function AffiliateTracking() {
+export default function AffiliateTracking(...args: any[]): any {
   const features: { title: string; description: string }[] = [
     {
       title: 'Multi-channel attribution',
@@ -117,8 +117,8 @@ export default function AffiliateTracking() {
       {/* Feature grid */}
       <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {features.map((f) => (
+          <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8">
+            {features.map((f)  => (
               <motion.div
                 key={f.title}
                 initial={{ opacity: 0, y: 20 }}
@@ -166,8 +166,8 @@ export default function AffiliateTracking() {
       {/* Plans */}
       <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {plans.map((plan, i) => (
+          <div className="grid grid-cols-1 md: anygrid-cols-3 gap-8">
+            {plans.map((plan, i)  => (
               <motion.div
                 key={plan.name}
                 initial={{ opacity: 0, y: 20 }}

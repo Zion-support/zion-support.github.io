@@ -1,7 +1,6 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { 
-  Shield, 
+import React from 'react.ts';
+import { motion  } from 'framer-motion.ts';
+import { Shield, 
   CheckCircle, 
   Award, 
   FileText, 
@@ -21,10 +20,10 @@ import {
   Clock,
   AlertTriangle,
   Info
-} from 'lucide-react';
-import { SEO } from '../components/SEO';
+ } from 'lucide-react.ts';
+import { SEO  } from '../components/SEO';
 
-export default function Compliance() {
+export default function Compliance(...args: any[]): any {
   const complianceFrameworks = [
     {
       title: 'SOC 2 Type II',
@@ -303,8 +302,8 @@ export default function Compliance() {
             Compliance Frameworks & Certifications
           </motion.h2>
           
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-            {complianceFrameworks.map((framework, index) => (
+          <div className="grid grid-cols-1 lg: anygrid-cols-2 gap-8">
+            {complianceFrameworks.map((framework, index)  => (
               <motion.div
                 key={framework.title}
                 initial={{ opacity: 0, y: 20 }}
@@ -372,8 +371,8 @@ export default function Compliance() {
           Industry Standards & Best Practices
         </motion.h2>
         
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-          {industryStandards.map((standard, index) => (
+        <div className="grid grid-cols-1 lg: anygrid-cols-2 gap-8">
+          {industryStandards.map((standard, index)  => (
             <motion.div
               key={standard.title}
               initial={{ opacity: 0, y: 20 }}
@@ -414,8 +413,8 @@ export default function Compliance() {
             Compliance Processes & Procedures
           </motion.h2>
           
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-            {complianceProcesses.map((process, index) => (
+          <div className="grid grid-cols-1 lg: anygrid-cols-2 gap-8">
+            {complianceProcesses.map((process, index)  => (
               <motion.div
                 key={process.title}
                 initial={{ opacity: 0, y: 20 }}
@@ -459,8 +458,8 @@ export default function Compliance() {
           Compliance Tools & Resources
         </motion.h2>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-          {complianceTools.map((tool, index) => (
+        <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-4 gap-6">
+          {complianceTools.map((tool, index)  => (
             <motion.div
               key={tool.title}
               initial={{ opacity: 0, y: 20 }}
@@ -493,8 +492,8 @@ export default function Compliance() {
             Compliance Support & Inquiries
           </motion.h2>
           
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-            {contactInfo.map((contact, index) => (
+          <div className="grid grid-cols-1 lg: anygrid-cols-2 gap-8">
+            {contactInfo.map((contact, index)  => (
               <motion.div
                 key={contact.title}
                 initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}

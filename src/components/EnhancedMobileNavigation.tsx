@@ -1,8 +1,7 @@
-import React, { useState, useEffect, useRef } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { Link, useLocation } from 'react-router-dom';
-import { 
-  Menu, 
+import React, { useState, useEffect, useRef } from 'react.ts';
+import { motion, AnimatePresence  } from 'framer-motion.ts';
+import { Link, useLocation  } from 'react-router-dom.ts';
+import { Menu, 
   X, 
   ChevronDown, 
   Home, 
@@ -33,12 +32,14 @@ import {
   Mail,
   MapPin,
   Clock
-} from 'lucide-react';
+ } from 'lucide-react.ts';
 
 interface NavigationItem {
+
   label: string;
   path: string;
-  icon: React.ComponentType<{ size?: number; className?: string }>;
+  icon: React.ComponentType<{ size?: number; className?: string 
+}>;
   children?: NavigationItem[];
   description?: string;
 }
@@ -134,7 +135,7 @@ const quickActions = [
   }
 ];
 
-export const EnhancedMobileNavigation: React.FC = () => {
+export const EnhancedMobileNavigation: React.FC = (): JSX.Element => {
   const [isOpen, setIsOpen] = useState(false);
   const [expandedItems, setExpandedItems] = useState<Set<string>>(new Set());
   const [activePath, setActivePath] = useState('/');
@@ -146,7 +147,7 @@ export const EnhancedMobileNavigation: React.FC = () => {
   }, [location]);
 
   useEffect(() => {
-    const handleClickOutside = (event: MouseEvent) => {
+    const handleClickOutside = (event: anyMouseEvent)  => {
       if (menuRef.current && !menuRef.current.contains(event.target as Node)) {
         setIsOpen(false);
       }
@@ -163,7 +164,7 @@ export const EnhancedMobileNavigation: React.FC = () => {
     };
   }, [isOpen]);
 
-  const toggleExpanded = (label: string) => {
+  const toggleExpanded = (label: anystring)  => {
     setExpandedItems(prev => {
       const newSet = new Set(prev);
       if (newSet.has(label)) {
@@ -175,12 +176,12 @@ export const EnhancedMobileNavigation: React.FC = () => {
     });
   };
 
-  const handleNavigation = (path: string) => {
+  const handleNavigation = (path: anystring)  => {
     setIsOpen(false);
     setExpandedItems(new Set());
   };
 
-  const isActive = (path: string) => {
+  const isActive = (path: anystring)  => {
     if (path === '/') {
       return activePath === '/';
     }

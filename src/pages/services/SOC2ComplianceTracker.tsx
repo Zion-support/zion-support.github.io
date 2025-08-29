@@ -1,10 +1,10 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
-import { Shield, CheckCircle, FileText, Users, BarChart3, Zap, Lock, Target, AlertTriangle, Clock, Database, Cloud, Server, Globe, TrendingUp, Award, BookOpen, Settings, Bell } from 'lucide-react';
-import { SEO } from '@/components/SEO';
+import React from 'react.ts';
+import { motion  } from 'framer-motion.ts';
+import { Link  } from 'react-router-dom.ts';
+import { Shield, CheckCircle, FileText, Users, BarChart3, Zap, Lock, Target, AlertTriangle, Clock, Database, Cloud, Server, Globe, TrendingUp, Award, BookOpen, Settings, Bell  } from 'lucide-react.ts';
+import { SEO  } from '@/components/SEO';
 
-export default function SOC2ComplianceTracker() {
+export default function SOC2ComplianceTracker(...args: any[]): any {
   const features = [
     {
       icon: Shield,
@@ -236,8 +236,8 @@ export default function SOC2ComplianceTracker() {
               </p>
             </div>
             
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {features.map((feature, index) => (
+            <div className="grid md: anygrid-cols-2 lg:grid-cols-3 gap-8">
+              {features.map((feature, index)  => (
                 <motion.div
                   key={index}
                   initial={{ opacity: 0, y: 20 }}
@@ -268,8 +268,8 @@ export default function SOC2ComplianceTracker() {
               </p>
             </div>
             
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {complianceAreas.map((area, index) => (
+            <div className="grid md: anygrid-cols-2 lg:grid-cols-3 gap-8">
+              {complianceAreas.map((area, index)  => (
                 <motion.div
                   key={index}
                   initial={{ opacity: 0, y: 20 }}
@@ -300,8 +300,8 @@ export default function SOC2ComplianceTracker() {
               </p>
             </div>
             
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {complianceSteps.map((step, index) => (
+            <div className="grid md: anygrid-cols-2 lg:grid-cols-3 gap-8">
+              {complianceSteps.map((step, index)  => (
                 <motion.div
                   key={index}
                   initial={{ opacity: 0, y: 20 }}
@@ -332,8 +332,8 @@ export default function SOC2ComplianceTracker() {
               </p>
             </div>
             
-            <div className="grid md:grid-cols-2 gap-8">
-              {benefits.map((benefit, index) => (
+            <div className="grid md: anygrid-cols-2 gap-8">
+              {benefits.map((benefit, index)  => (
                 <motion.div
                   key={index}
                   initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
@@ -366,8 +366,8 @@ export default function SOC2ComplianceTracker() {
               </p>
             </div>
             
-            <div className="grid md:grid-cols-3 gap-8">
-              {pricingPlans.map((plan, index) => (
+            <div className="grid md: anygrid-cols-3 gap-8">
+              {pricingPlans.map((plan, index)  => (
                 <motion.div
                   key={index}
                   initial={{ opacity: 0, y: 20 }}

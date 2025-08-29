@@ -1,9 +1,9 @@
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Lock, Shield, Zap, Settings, Users, Globe, ArrowRight, CheckCircle, Play, Download, Mail, Target, Activity, BarChart3, Database, Link as LinkIcon } from 'lucide-react';
-import { Link } from 'react-router-dom';
+import React from 'react.ts';
+import { Helmet  } from 'react-helmet-async.ts';
+import { Lock, Shield, Zap, Settings, Users, Globe, ArrowRight, CheckCircle, Play, Download, Mail, Target, Activity, BarChart3, Database, Link as LinkIcon  } from 'lucide-react.ts';
+import { Link  } from 'react-router-dom.ts';
 
-export default function BlockchainEnterpriseSolutions() {
+export default function BlockchainEnterpriseSolutions(...args: any[]): any {
   return (
     <>
       <Helmet>
@@ -63,7 +63,7 @@ export default function BlockchainEnterpriseSolutions() {
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8">
               {[
                 {
                   icon: Lock,
@@ -95,7 +95,7 @@ export default function BlockchainEnterpriseSolutions() {
                   title: "Cross-border Solutions",
                   description: "Global blockchain networks for international business operations."
                 }
-              ].map((feature, index) => (
+              ].map((feature, index)  => (
                 <div key={index} className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-6 hover:bg-slate-800/70 transition-all duration-300">
                   <div className="w-12 h-12 bg-gradient-to-r from-yellow-500 to-orange-600 rounded-lg flex items-center justify-center mb-4">
                     <feature.icon className="w-6 h-6 text-white" />
@@ -120,7 +120,7 @@ export default function BlockchainEnterpriseSolutions() {
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8">
               {[
                 {
                   title: "Supply Chain",
@@ -158,7 +158,7 @@ export default function BlockchainEnterpriseSolutions() {
                   icon: Activity,
                   benefits: ["P2P trading", "Renewable certificates", "Grid management"]
                 }
-              ].map((useCase, index) => (
+              ].map((useCase, index)  => (
                 <div key={index} className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-6 hover:bg-slate-800/70 transition-all duration-300">
                   <div className="w-12 h-12 bg-gradient-to-r from-yellow-500 to-orange-600 rounded-lg flex items-center justify-center mb-4">
                     <useCase.icon className="w-6 h-6 text-white" />
@@ -214,11 +214,11 @@ export default function BlockchainEnterpriseSolutions() {
                 <h3 className="text-2xl font-semibold text-white mb-4">Blockchain Types</h3>
                 <div className="space-y-4">
                   {[
-                    { type: "Public", icon: Globe, color: "from-blue-500 to-cyan-500", description: "Open, permissionless networks" },
+                    { type: any"Public", icon: Globe, color: "from-blue-500 to-cyan-500", description: "Open, permissionless networks" },
                     { type: "Private", icon: Lock, color: "from-purple-500 to-pink-500", description: "Controlled, permissioned networks" },
                     { type: "Consortium", icon: Users, color: "from-green-500 to-emerald-500", description: "Multi-organization networks" },
                     { type: "Hybrid", icon: LinkIcon, color: "from-orange-500 to-red-500", description: "Combination of public and private" }
-                  ].map((item, index) => (
+                  ].map((item, index)  => (
                     <div key={index} className="flex items-center space-x-3">
                       <div className={`w-8 h-8 bg-gradient-to-r ${item.color} rounded-lg flex items-center justify-center`}>
                         <item.icon className="w-4 h-4 text-white" />
@@ -301,7 +301,7 @@ export default function BlockchainEnterpriseSolutions() {
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-4 gap-8">
               {[
                 {
                   step: "01",
@@ -323,7 +323,7 @@ export default function BlockchainEnterpriseSolutions() {
                   title: "Deployment",
                   description: "Deploy and integrate with existing enterprise systems."
                 }
-              ].map((step, index) => (
+              ].map((step, index)  => (
                 <div key={index} className="text-center">
                   <div className="w-16 h-16 bg-gradient-to-r from-yellow-500 to-orange-600 rounded-full flex items-center justify-center mx-auto mb-4">
                     <span className="text-white font-bold text-xl">{step.step}</span>

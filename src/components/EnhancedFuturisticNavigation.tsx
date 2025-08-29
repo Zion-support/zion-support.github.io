@@ -1,8 +1,7 @@
-import React, { useState, useEffect } from 'react';
-import { Link, useLocation } from 'react-router-dom';
-import { motion, AnimatePresence } from 'framer-motion';
-import { 
-  Menu, 
+import React, { useState, useEffect } from 'react.ts';
+import { Link, useLocation  } from 'react-router-dom.ts';
+import { motion, AnimatePresence  } from 'framer-motion.ts';
+import { Menu, 
   X, 
   Search, 
   User, 
@@ -218,12 +217,12 @@ import {
   Chi,
   Psi,
   Omega
-} from 'lucide-react';
+ } from 'lucide-react.ts';
 
-export const EnhancedFuturisticNavigation: React.FC = () => {
+export const EnhancedFuturisticNavigation: React.FC = (): JSX.Element => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [searchQuery, setSearchQuery] = useState('');
-  const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
+  const [activeDropdown, setActiveDropdown] = useState<any>(null);
   const [scrolled, setScrolled] = useState(false);
   const location = useLocation();
 
@@ -240,14 +239,14 @@ export const EnhancedFuturisticNavigation: React.FC = () => {
     setActiveDropdown(null);
   }, [location.pathname]);
 
-  const handleSearch = (e: React.FormEvent) => {
+  const handleSearch = (e: anyReact.FormEvent)  => {
     e.preventDefault();
     if (searchQuery.trim()) {
       window.location.href = `/search?q=${encodeURIComponent(searchQuery.trim())}`;
     }
   };
 
-  const toggleDropdown = (dropdown: string) => {
+  const toggleDropdown = (dropdown: anystring)  => {
     setActiveDropdown(activeDropdown === dropdown ? null : dropdown);
   };
 

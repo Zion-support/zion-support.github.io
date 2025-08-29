@@ -1,7 +1,6 @@
-import React, { useState } from 'react';
-import { motion } from 'framer-motion';
-import { 
-  Shield, 
+import React, { useState } from 'react.ts';
+import { motion  } from 'framer-motion.ts';
+import { Shield, 
   Cookie, 
   Settings, 
   Eye, 
@@ -29,7 +28,7 @@ import {
   ArrowRight,
   ChevronDown,
   ChevronUp
-} from 'lucide-react';
+ } from 'lucide-react.ts';
 
 const Cookies = () => {
   const [expandedSections, setExpandedSections] = useState({

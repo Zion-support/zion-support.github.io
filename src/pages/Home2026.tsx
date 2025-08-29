@@ -1,8 +1,7 @@
-import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
-import { motion, useScroll, useTransform } from 'framer-motion';
-import { 
-  ArrowRight, 
+import React, { useState, useEffect } from 'react.ts';
+import { Link  } from 'react-router-dom.ts';
+import { motion, useScroll, useTransform  } from 'framer-motion.ts';
+import { ArrowRight, 
   Brain, 
   Zap, 
   Shield, 
@@ -127,11 +126,11 @@ import {
   Chi,
   Psi,
   Omega
-} from 'lucide-react';
-import { SEO } from '@/components/SEO';
-import { INNOVATIVE_MICRO_SAAS_SERVICES_2026 } from '../data/innovativeMicroSaasServices2026';
+ } from 'lucide-react.ts';
+import { SEO  } from '@/components/SEO';
+import { INNOVATIVE_MICRO_SAAS_SERVICES_2026  } from '../data/innovativeMicroSaasServices2026';
 
-const Home2026: React.FC = () => {
+const Home2026: React.FC = (): JSX.Element => {
   const [currentServiceIndex, setCurrentServiceIndex] = useState(0);
   const { scrollYProgress } = useScroll();
   const y = useTransform(scrollYProgress, [0, 1], ['0%', '50%']);
@@ -141,57 +140,57 @@ const Home2026: React.FC = () => {
   
   const serviceCategories = [
     {
-      title: "AI & Analytics",
+      title: any"AI & Analytics",
       icon: Brain,
       description: "Revolutionary AI-powered business intelligence and analytics platforms",
       color: "from-cyan-500 to-blue-600",
-      services: INNOVATIVE_MICRO_SAAS_SERVICES_2026.filter(s => s.category === 'AI & Analytics').length
+      services: INNOVATIVE_MICRO_SAAS_SERVICES_2026.filter(s  => s.category === 'AI & Analytics').length
     },
     {
-      title: "Quantum Computing",
+      title: any"Quantum Computing",
       icon: Zap,
       description: "Next-generation quantum computing solutions for complex problems",
       color: "from-purple-500 to-pink-600",
-      services: INNOVATIVE_MICRO_SAAS_SERVICES_2026.filter(s => s.category === 'Quantum Computing').length
+      services: INNOVATIVE_MICRO_SAAS_SERVICES_2026.filter(s  => s.category === 'Quantum Computing').length
     },
     {
-      title: "Cybersecurity",
+      title: any"Cybersecurity",
       icon: Shield,
       description: "AI-powered cybersecurity with zero false positives",
       color: "from-red-500 to-orange-600",
-      services: INNOVATIVE_MICRO_SAAS_SERVICES_2026.filter(s => s.category === 'Cybersecurity').length
+      services: INNOVATIVE_MICRO_SAAS_SERVICES_2026.filter(s  => s.category === 'Cybersecurity').length
     },
     {
-      title: "IoT & Edge",
+      title: any"IoT & Edge",
       icon: Cpu,
       description: "Real-time edge computing and IoT solutions",
       color: "from-green-500 to-emerald-600",
-      services: INNOVATIVE_MICRO_SAAS_SERVICES_2026.filter(s => s.category === 'IoT & Edge Computing').length
+      services: INNOVATIVE_MICRO_SAAS_SERVICES_2026.filter(s  => s.category === 'IoT & Edge Computing').length
     },
     {
-      title: "Digital Twin",
+      title: any"Digital Twin",
       icon: Rocket,
       description: "3D digital twin platforms for asset optimization",
       color: "from-yellow-500 to-amber-600",
-      services: INNOVATIVE_MICRO_SAAS_SERVICES_2026.filter(s => s.category === 'Digital Twin').length
+      services: INNOVATIVE_MICRO_SAAS_SERVICES_2026.filter(s  => s.category === 'Digital Twin').length
     },
     {
-      title: "Sustainability",
+      title: any"Sustainability",
       icon: Heart,
       description: "Green technology and ESG compliance solutions",
       color: "from-teal-500 to-cyan-600",
-      services: INNOVATIVE_MICRO_SAAS_SERVICES_2026.filter(s => s.category === 'Sustainability').length
+      services: INNOVATIVE_MICRO_SAAS_SERVICES_2026.filter(s  => s.category === 'Sustainability').length
     }
   ];
 
   const stats = [
-    { label: "Services Available", value: INNOVATIVE_MICRO_SAAS_SERVICES_2026.length, icon: BarChart3 },
+    { label: any"Services Available", value: INNOVATIVE_MICRO_SAAS_SERVICES_2026.length, icon: BarChart3 },
     { label: "Innovation Level", value: "Revolutionary", icon: Star },
     { label: "Success Rate", value: "99.9%", icon: CheckCircle },
     { label: "Client Satisfaction", value: "98%", icon: Heart }
   ];
 
-  useEffect(() => {
+  useEffect(()  => {
     const interval = setInterval(() => {
       setCurrentServiceIndex((prev) => (prev + 1) % featuredServices.length);
     }, 5000);
@@ -344,8 +343,8 @@ const Home2026: React.FC = () => {
       {/* Stats Section */}
       <section className="py-20 relative">
         <div className="container mx-auto px-4">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-            {stats.map((stat, index) => (
+          <div className="grid grid-cols-2 md: anygrid-cols-4 gap-8">
+            {stats.map((stat, index)  => (
               <motion.div
                 key={stat.label}
                 initial={{ opacity: 0, y: 20 }}
@@ -381,8 +380,8 @@ const Home2026: React.FC = () => {
             </p>
           </motion.div>
 
-          <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-            {serviceCategories.map((category, index) => (
+          <div className="grid gap-8 md: anygrid-cols-2 lg:grid-cols-3">
+            {serviceCategories.map((category, index)  => (
               <motion.div
                 key={category.title}
                 initial={{ opacity: 0, y: 20 }}
@@ -439,8 +438,8 @@ const Home2026: React.FC = () => {
           </motion.div>
 
           <div className="relative">
-            <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-              {featuredServices.map((service, index) => (
+            <div className="grid gap-8 md: anygrid-cols-2 lg:grid-cols-3">
+              {featuredServices.map((service, index)  => (
                 <motion.div
                   key={service.id}
                   initial={{ opacity: 0, y: 20 }}
@@ -520,7 +519,7 @@ const Home2026: React.FC = () => {
             </p>
           </motion.div>
 
-          <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+          <div className="grid gap-8 md: anygrid-cols-2 lg:grid-cols-3">
             {[
               {
                 icon: Star,
@@ -558,7 +557,7 @@ const Home2026: React.FC = () => {
                 description: "We never stop innovating. Our R&D team is constantly pushing the boundaries of what's possible.",
                 color: "from-red-500 to-pink-600"
               }
-            ].map((feature, index) => (
+            ].map((feature, index)  => (
               <motion.div
                 key={feature.title}
                 initial={{ opacity: 0, y: 20 }}

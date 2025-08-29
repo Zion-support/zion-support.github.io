@@ -1,9 +1,8 @@
-import React from 'react';
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "../ui/card";
-import { Button } from "../ui/button";
-import { Badge } from "../ui/badge";
-import { 
-  Building, 
+import React from 'react.ts';
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle  } from '../ui/card';
+import { Button  } from '../ui/button';
+import { Badge  } from '../ui/badge';
+import { Building, 
   Users, 
   BarChart3, 
   MessageSquare, 
@@ -31,8 +30,8 @@ import {
   Smartphone,
   Settings,
   BarChart
-} from "lucide-react";
-export default function MicroSAASServicesPage() {
+ } from 'lucide-react.ts';
+export default function MicroSAASServicesPage(...args: any[]): any {
   const microSAASServices = [
     {
       id: "crm-saas",
@@ -462,8 +461,8 @@ export default function MicroSAASServicesPage() {
       {/* Services Grid */}
       <div className="py-16">
         <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {filteredServices.map((service) => (
+          <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8">
+            {filteredServices.map((service)  => (
               <Card key={service.id} className="group overflow-hidden transition-all duration-300 hover:shadow-2xl hover:shadow-zion-purple/20 hover:scale-105 border-zion-blue-light/20 bg-zion-blue-dark/50 backdrop-blur-sm">
                 <CardHeader className="pb-4">
                   <div className="flex justify-between items-start mb-4">

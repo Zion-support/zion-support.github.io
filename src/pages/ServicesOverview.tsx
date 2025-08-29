@@ -1,7 +1,6 @@
-import React, { useState, useMemo } from 'react';
-import { motion } from 'framer-motion';
-import { 
-  Search, 
+import React, { useState, useMemo } from 'react.ts';
+import { motion  } from 'framer-motion.ts';
+import { Search, 
   Filter, 
   Brain, 
   Shield, 
@@ -78,9 +77,9 @@ import {
   CheckCircle2,
   XCircle,
   Info as InfoIcon
-} from 'lucide-react';
-import { SEO } from '../components/SEO';
-import { servicesCatalog } from '../data/servicesCatalog';
+ } from 'lucide-react.ts';
+import { SEO  } from '../components/SEO';
+import { servicesCatalog  } from '../data/servicesCatalog';
 
 // Enhanced category definitions with better organization
 const serviceCategories = [
@@ -143,15 +142,15 @@ const serviceCategories = [
 ];
 
 // Enhanced service features display
-const ServiceCard = ({ service, viewMode }: { service: any; viewMode: 'grid' | 'list' }) => {
+const ServiceCard = ({ service, viewMode }: { service: anyany; viewMode: 'grid' | 'list' })  => {
   const [expanded, setExpanded] = useState(false);
   
-  const getCategoryIcon = (category: string) => {
+  const getCategoryIcon = (category: anystring)  => {
     const cat = serviceCategories.find(c => c.id === category);
     return cat ? cat.icon : Grid;
   };
 
-  const getCategoryColor = (category: string) => {
+  const getCategoryColor = (category: anystring)  => {
     const cat = serviceCategories.find(c => c.id === category);
     return cat ? cat.color : 'from-gray-600 to-gray-700';
   };
@@ -193,7 +192,7 @@ const ServiceCard = ({ service, viewMode }: { service: any; viewMode: 'grid' | '
               Key Features
             </h4>
             <div className="space-y-2">
-              {service.features.slice(0, 3).map((feature: string, idx: number) => (
+              {service.features.slice(0, 3).map((feature: anystring, idx: number)  => (
                 <div key={idx} className="flex items-center space-x-2">
                   <CheckCircle className="w-3 h-3 text-green-500 flex-shrink-0" />
                   <span className="text-sm text-gray-600">{feature}</span>
@@ -208,7 +207,7 @@ const ServiceCard = ({ service, viewMode }: { service: any; viewMode: 'grid' | '
                   {expanded ? <ChevronDown className="w-4 h-4 ml-1" /> : <ChevronRight className="w-4 h-4 ml-1" />}
                 </button>
               )}
-              {expanded && service.features.slice(3).map((feature: string, idx: number) => (
+              {expanded && service.features.slice(3).map((feature: anystring, idx: number)  => (
                 <div key={idx + 3} className="flex items-center space-x-2">
                   <CheckCircle className="w-3 h-3 text-green-500 flex-shrink-0" />
                   <span className="text-sm text-gray-600">{feature}</span>
@@ -253,8 +252,8 @@ const ServiceCard = ({ service, viewMode }: { service: any; viewMode: 'grid' | '
           <p className="text-gray-600 mb-4">{service.description}</p>
 
           {/* Features */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
-            {service.features.slice(0, 4).map((feature: string, idx: number) => (
+          <div className="grid grid-cols-1 md: anygrid-cols-2 gap-2">
+            {service.features.slice(0, 4).map((feature: string, idx: number)  => (
               <div key={idx} className="flex items-center space-x-2">
                 <CheckCircle className="w-4 h-4 text-green-500 flex-shrink-0" />
                 <span className="text-sm text-gray-600">{feature}</span>
@@ -288,10 +287,10 @@ const ServicesSidebar = ({
   onCategoryChange, 
   categoriesWithCounts 
 }: { 
-  selectedCategory: string; 
-  onCategoryChange: (category: string) => void; 
-  categoriesWithCounts: any[];
-}) => {
+  selectedCategory: anystring; 
+  onCategoryChange: (category: string)  => void; 
+  categoriesWithCounts: anyany[];
+})  => {
   return (
     <div className="bg-white rounded-2xl shadow-lg p-6 border border-gray-100">
       <h3 className="text-lg font-semibold text-gray-900 mb-4 flex items-center">
@@ -342,10 +341,10 @@ const ServicesSidebar = ({
   );
 };
 
-export default function ServicesOverview() {
+export default function ServicesOverview(...args: any[]): any {
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('all');
-  const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
+  const [viewMode, setViewMode] = useState<any>('grid');
   const [showAdvancedFilters, setShowAdvancedFilters] = useState(false);
 
   // Flatten all services from the catalog
@@ -530,8 +529,8 @@ export default function ServicesOverview() {
               {/* Services Grid/List */}
               {filteredServices.length > 0 ? (
                 viewMode === 'grid' ? (
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    {filteredServices.map((service, index) => (
+                  <div className="grid grid-cols-1 md: anygrid-cols-2 gap-6">
+                    {filteredServices.map((service, index)  => (
                       <ServiceCard key={service.id} service={service} viewMode={viewMode} />
                     ))}
                   </div>

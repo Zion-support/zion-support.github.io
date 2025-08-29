@@ -1,8 +1,8 @@
-import React from 'react';
-import { SEO } from '@/components/SEO';
-import { MessageCircle, Bot, Zap, Check, ExternalLink, Phone, Mail, ArrowRight, Clock, Users, TrendingUp, Headphones, Shield } from 'lucide-react';
+import React from 'react.ts';
+import { SEO  } from '@/components/SEO';
+import { MessageCircle, Bot, Zap, Check, ExternalLink, Phone, Mail, ArrowRight, Clock, Users, TrendingUp, Headphones, Shield  } from 'lucide-react.ts';
 
-export default function AICustomerSupportAutomation() {
+export default function AICustomerSupportAutomation(...args: any[]): any {
   const features = [
     '24/7 AI chatbot with human-like conversations',
     'Multi-language support (50+ languages)',
@@ -112,8 +112,8 @@ export default function AICustomerSupportAutomation() {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {features.map((feature, index) => (
+          <div className="grid md: anygrid-cols-2 lg:grid-cols-3 gap-8">
+            {features.map((feature, index)  => (
               <div key={index} className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 hover:border-green-500/50 transition-all duration-300">
                 <div className="w-12 h-12 bg-green-500/20 rounded-lg flex items-center justify-center mb-4">
                   <Bot className="w-6 h-6 text-green-400" />
@@ -133,8 +133,8 @@ export default function AICustomerSupportAutomation() {
             <p className="text-xl text-slate-300">See how AI transforms your customer support operations</p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {benefits.map((benefit, index) => (
+          <div className="grid md: anygrid-cols-2 lg:grid-cols-3 gap-8">
+            {benefits.map((benefit, index)  => (
               <div key={index} className="text-center">
                 <div className="w-20 h-20 bg-gradient-to-br from-green-500 to-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
                   <TrendingUp className="w-10 h-10 text-white" />
@@ -190,8 +190,8 @@ export default function AICustomerSupportAutomation() {
             <p className="text-xl text-slate-300">Choose the plan that fits your support volume and needs</p>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-            {pricingTiers.map((tier, index) => (
+          <div className="grid md: anygrid-cols-3 gap-8 max-w-6xl mx-auto">
+            {pricingTiers.map((tier, index)  => (
               <div 
                 key={index} 
                 className={`bg-slate-800/50 border rounded-xl p-8 ${
@@ -243,8 +243,8 @@ export default function AICustomerSupportAutomation() {
             <p className="text-xl text-slate-300">Works with your existing tools and platforms</p>
           </div>
 
-          <div className="grid grid-cols-3 md:grid-cols-5 gap-6 max-w-4xl mx-auto">
-            {integrations.map((integration, index) => (
+          <div className="grid grid-cols-3 md: anygrid-cols-5 gap-6 max-w-4xl mx-auto">
+            {integrations.map((integration, index)  => (
               <div key={index} className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-4 text-center hover:border-green-500/50 transition-all duration-300">
                 <p className="text-sm font-medium text-slate-300">{integration}</p>
               </div>
@@ -261,8 +261,8 @@ export default function AICustomerSupportAutomation() {
             <p className="text-xl text-slate-300">Businesses that want to scale their customer support intelligently</p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {useCases.map((useCase, index) => (
+          <div className="grid md: anygrid-cols-2 lg:grid-cols-3 gap-6">
+            {useCases.map((useCase, index)  => (
               <div key={index} className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 text-center">
                 <Users className="w-12 h-12 text-green-400 mx-auto mb-4" />
                 <h3 className="text-lg font-semibold">{useCase}</h3>

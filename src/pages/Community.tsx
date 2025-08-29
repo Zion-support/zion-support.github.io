@@ -1,8 +1,7 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import { motion } from 'framer-motion';
-import { 
-  Users, 
+import React from 'react.ts';
+import { Link  } from 'react-router-dom.ts';
+import { motion  } from 'framer-motion.ts';
+import { Users, 
   MessageCircle, 
   Star, 
   TrendingUp, 
@@ -22,10 +21,10 @@ import {
   Award,
   CheckCircle,
   ArrowRight
-} from 'lucide-react';
-import { SEO } from '../components/SEO';
+ } from 'lucide-react.ts';
+import { SEO  } from '../components/SEO';
 
-export default function Community() {
+export default function Community(...args: any[]): any {
   const communityStats = [
     { label: 'Active Members', value: '15,000+', icon: Users, color: 'from-blue-500 to-cyan-500' },
     { label: 'Discussions', value: '50,000+', icon: MessageCircle, color: 'from-purple-500 to-pink-500' },
@@ -213,8 +212,8 @@ export default function Community() {
 
       {/* Community Stats */}
       <div className="container mx-auto px-4 py-16">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
-          {communityStats.map((stat, index) => (
+        <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-4 gap-6 mb-16">
+          {communityStats.map((stat, index)  => (
             <motion.div
               key={stat.label}
               initial={{ opacity: 0, y: 20 }}
@@ -244,8 +243,8 @@ export default function Community() {
             Community Forums
           </motion.h2>
           
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-            {communityForums.map((forum, index) => (
+          <div className="grid grid-cols-1 lg: anygrid-cols-2 gap-8">
+            {communityForums.map((forum, index)  => (
               <motion.div
                 key={forum.title}
                 initial={{ opacity: 0, y: 20 }}
@@ -308,8 +307,8 @@ export default function Community() {
           Upcoming Events
         </motion.h2>
         
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-16">
-          {upcomingEvents.map((event, index) => (
+        <div className="grid grid-cols-1 lg: anygrid-cols-3 gap-8 mb-16">
+          {upcomingEvents.map((event, index)  => (
             <motion.div
               key={event.title}
               initial={{ opacity: 0, y: 20 }}
@@ -377,8 +376,8 @@ export default function Community() {
             Featured Discussions
           </motion.h2>
           
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-            {featuredDiscussions.map((discussion, index) => (
+          <div className="grid grid-cols-1 lg: anygrid-cols-3 gap-8">
+            {featuredDiscussions.map((discussion, index)  => (
               <motion.div
                 key={discussion.title}
                 initial={{ opacity: 0, y: 20 }}
@@ -448,8 +447,8 @@ export default function Community() {
           Community Resources
         </motion.h2>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
-          {communityResources.map((resource, index) => (
+        <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-4 gap-6 mb-16">
+          {communityResources.map((resource, index)  => (
             <motion.div
               key={resource.title}
               initial={{ opacity: 0, y: 20 }}

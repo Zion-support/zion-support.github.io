@@ -1,10 +1,10 @@
 
 
-import React, { useState } from 'react';
-import { motion } from 'framer-motion';
-import { Video, Calendar, Clock, Users, Play, Download, Search, Filter, Star, ExternalLink, ArrowRight, BookOpen, Brain, Cloud, Shield, Database, Zap, Globe, Target, TrendingUp, Award, CheckCircle } from 'lucide-react';
+import React, { useState } from 'react.ts';
+import { motion  } from 'framer-motion.ts';
+import { Video, Calendar, Clock, Users, Play, Download, Search, Filter, Star, ExternalLink, ArrowRight, BookOpen, Brain, Cloud, Shield, Database, Zap, Globe, Target, TrendingUp, Award, CheckCircle  } from 'lucide-react.ts';
 
-export default function Webinars() {
+export default function Webinars(...args: any[]): any {
   const [searchQuery, setSearchQuery] = useState('');
   const [activeCategory, setActiveCategory] = useState('all');
   const [filterType, setFilterType] = useState('all');
@@ -28,7 +28,7 @@ export default function Webinars() {
 
   const webinars = [
     {
-      id: 1,
+      id: any1,
       title: 'AI-Powered Business Transformation: Real-World Success Stories',
       description: 'Join industry experts as they share real-world case studies of successful AI implementations and the lessons learned along the way.',
       category: 'ai-ml',
@@ -64,7 +64,7 @@ export default function Webinars() {
   ];
 
   // Update counts
-  React.useEffect(() => {
+  React.useEffect(()  => {
     categories.forEach(cat => {
       cat.count = webinars.filter(w => w.category === cat.id).length;
     });
@@ -89,7 +89,7 @@ export default function Webinars() {
     return matchesSearch && matchesCategory && matchesType;
   });
 
-  const formatDate = (dateString: string) => {
+  const formatDate = (dateString: anystring)  => {
     return new Date(dateString).toLocaleDateString('en-US', {
       weekday: 'long',
       year: 'numeric',
@@ -98,7 +98,7 @@ export default function Webinars() {
     });
   };
 
-  const formatTimeUntil = (dateString: string) => {
+  const formatTimeUntil = (dateString: anystring)  => {
     const now = new Date();
     const webinarDate = new Date(dateString);
     const diffTime = webinarDate.getTime() - now.getTime();
@@ -111,7 +111,7 @@ export default function Webinars() {
     return `${Math.ceil(diffDays / 30)} months`;
   };
 
-  const getCategoryIcon = (categoryId: string) => {
+  const getCategoryIcon = (categoryId: anystring)  => {
     return categories.find(c => c.id === categoryId)?.icon || <Video className="w-5 h-5" />;
   };
 
@@ -227,8 +227,8 @@ export default function Webinars() {
                 </button>
               </div>
             ) : (
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                {filteredWebinars.map((webinar) => (
+              <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8">
+                {filteredWebinars.map((webinar)  => (
                   <motion.div
                     key={webinar.id}
                     initial={{ opacity: 0, y: 20 }}

@@ -1,8 +1,7 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { SEO } from '../../components/SEO';
-import { 
-  Users, 
+import React from 'react.ts';
+import { motion  } from 'framer-motion.ts';
+import { SEO  } from '../../components/SEO';
+import { Users, 
   TrendingUp, 
   Target, 
   Zap, 
@@ -28,9 +27,9 @@ import {
   Home,
   DollarSign,
   Heart
-} from 'lucide-react';
+ } from 'lucide-react.ts';
 
-export default function AISalesCopilot() {
+export default function AISalesCopilot(...args: any[]): any {
   const features = [
     {
       icon: Users,
@@ -227,8 +226,8 @@ export default function AISalesCopilot() {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {features.map((feature, index) => (
+          <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8">
+            {features.map((feature, index)  => (
               <motion.div
                 key={feature.title}
                 initial={{ opacity: 0, y: 20 }}
@@ -281,8 +280,8 @@ export default function AISalesCopilot() {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {benefits.map((benefit, index) => (
+          <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8">
+            {benefits.map((benefit, index)  => (
               <motion.div
                 key={benefit.title}
                 initial={{ opacity: 0, y: 20 }}
@@ -335,8 +334,8 @@ export default function AISalesCopilot() {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {salesProcess.map((stage, index) => (
+          <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8">
+            {salesProcess.map((stage, index)  => (
               <motion.div
                 key={stage.stage}
                 initial={{ opacity: 0, y: 20 }}
@@ -389,8 +388,8 @@ export default function AISalesCopilot() {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {useCases.map((useCase, index) => (
+          <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8">
+            {useCases.map((useCase, index)  => (
               <motion.div
                 key={useCase.industry}
                 initial={{ opacity: 0, y: 20 }}

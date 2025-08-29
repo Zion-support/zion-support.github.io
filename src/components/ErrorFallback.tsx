@@ -1,8 +1,10 @@
-import React from 'react';
+import React from 'react.ts';
 
-interface ErrorFallbackProps {
-  error: Error;
-  resetErrorBoundary: () => void;
+interface ErrorFallbackProps extends React.PropsWithChildren<{}> {
+
+  error: anyError;
+  resetErrorBoundary: ()  => void;
+
 }
 
 export const ErrorFallback: React.FC<ErrorFallbackProps> = ({ error, resetErrorBoundary }) => {

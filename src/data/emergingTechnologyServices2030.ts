@@ -1,4 +1,4 @@
-import { ProductListing } from "@/types/listings";
+import { ProductListing  } from '@/types/listings';
 
 // Emerging Technology Services 2030 - Zion Tech Group
 // Next-generation technology solutions for the future

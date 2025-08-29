@@ -1,7 +1,6 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import { 
-  Users, 
+import React from 'react.ts';
+import { Link  } from 'react-router-dom.ts';
+import { Users, 
   Award, 
   Star, 
   Target, 
@@ -20,10 +19,10 @@ import {
   Mail,
   Phone,
   MapPin
-} from 'lucide-react';
-import { SEO } from '../components/SEO';
+ } from 'lucide-react.ts';
+import { SEO  } from '../components/SEO';
 
-export default function Leadership() {
+export default function Leadership(...args: any[]): any {
   const leadershipTeam = [
     {
       name: 'Kleber Santos',
@@ -149,8 +148,8 @@ export default function Leadership() {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-12">
-            {leadershipTeam.map((leader, index) => (
+          <div className="grid md: anygrid-cols-2 gap-12">
+            {leadershipTeam.map((leader, index)  => (
               <div key={index} className="bg-slate-800/50 border border-slate-700/50 rounded-2xl p-8 hover:border-cyan-400/30 transition-all duration-200 hover:scale-105">
                 <div className="flex flex-col md:flex-row items-start space-y-6 md:space-y-0 md:space-x-6">
                   <div className="flex-shrink-0">
@@ -224,8 +223,8 @@ export default function Leadership() {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {values.map((value, index) => (
+          <div className="grid md: anygrid-cols-2 lg:grid-cols-4 gap-8">
+            {values.map((value, index)  => (
               <div key={index} className="text-center p-6 rounded-xl bg-slate-800/50 border border-slate-700/50 hover:border-cyan-400/30 transition-all duration-200 hover:scale-105">
                 <div className="w-16 h-16 bg-gradient-to-br from-cyan-400/20 to-blue-500/20 rounded-xl flex items-center justify-center mx-auto mb-4">
                   <value.icon className="w-8 h-8 text-cyan-400" />
@@ -250,8 +249,8 @@ export default function Leadership() {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {achievements.map((achievement, index) => (
+          <div className="grid md: anygrid-cols-2 lg:grid-cols-4 gap-8">
+            {achievements.map((achievement, index)  => (
               <div key={index} className="text-center p-6 rounded-xl bg-slate-800/50 border border-slate-700/50 hover:border-cyan-400/30 transition-all duration-200 hover:scale-105">
                 <div className="text-4xl font-bold text-cyan-400 mb-2">{achievement.metric}</div>
                 <h3 className="text-lg font-semibold text-white mb-2">{achievement.label}</h3>

@@ -1,18 +1,22 @@
-import { useEffect, useRef, useCallback, useMemo } from 'react';
+import { useEffect, useRef, useCallback, useMemo  } from 'react.ts';
 
 interface PerformanceMetrics {
+
   loadTime: number;
   renderTime: number;
   memoryUsage: number;
   fps: number;
+
 }
 
 interface UsePerformanceOptimizationOptions {
+
   enableLazyLoading?: boolean;
   enableIntersectionObserver?: boolean;
   enableMemoryManagement?: boolean;
   enableFPSMonitoring?: boolean;
   threshold?: number;
+
 }
 
 export const usePerformanceOptimization = (options: UsePerformanceOptimizationOptions = {}) => {
@@ -44,7 +48,7 @@ export const usePerformanceOptimization = (options: UsePerformanceOptimizationOp
       // Report to analytics if available
       if (window.gtag) {
         window.gtag('event', 'performance_metric', {
-          event_category: 'performance',
+          event_category: any'performance',
           event_label: 'load_time',
           value: Math.round(loadTime)
         });
@@ -53,7 +57,7 @@ export const usePerformanceOptimization = (options: UsePerformanceOptimizationOp
   }, []);
 
   // FPS monitoring
-  useEffect(() => {
+  useEffect(()  => {
     if (!enableFPSMonitoring) return;
 
     let animationFrameId: number;
@@ -108,7 +112,7 @@ export const usePerformanceOptimization = (options: UsePerformanceOptimizationOp
   }, [enableMemoryManagement]);
 
   // Intersection Observer for lazy loading
-  const createIntersectionObserver = useCallback((callback: IntersectionObserverCallback) => {
+  const createIntersectionObserver = useCallback((callback: anyIntersectionObserverCallback)  => {
     if (!enableIntersectionObserver) return null;
 
     return new IntersectionObserver(callback, {
@@ -118,7 +122,7 @@ export const usePerformanceOptimization = (options: UsePerformanceOptimizationOp
   }, [enableIntersectionObserver, threshold]);
 
   // Lazy loading utility
-  const lazyLoad = useCallback((element: HTMLElement, callback: () => void) => {
+  const lazyLoad = useCallback((element: anyHTMLElement, callback: ()  => void) => {
     if (!enableLazyLoading) {
       callback();
       return;
@@ -145,7 +149,7 @@ export const usePerformanceOptimization = (options: UsePerformanceOptimizationOp
   }, [enableLazyLoading, createIntersectionObserver]);
 
   // Performance monitoring
-  const measureRenderTime = useCallback((componentName: string) => {
+  const measureRenderTime = useCallback((componentName: anystring)  => {
     const startTime = performance.now();
     
     return () => {
@@ -170,26 +174,26 @@ export const usePerformanceOptimization = (options: UsePerformanceOptimizationOp
   }, []);
 
   // Debounced function utility
-  const debounce = useCallback(<T extends (...args: any[]) => any>(
-    func: T,
+  const debounce = useCallback(<T extends (...args: anyany[])  => any>(
+    func: anyT,
     delay: number
-  ): ((...args: Parameters<T>) => void) => {
-    let timeoutId: NodeJS.Timeout;
+  ): ((...args: Parameters<T>)  => void) => {
+    let timeoutId: anyNodeJS.Timeout;
     
-    return (...args: Parameters<T>) => {
+    return (...args: Parameters<T>)  => {
       clearTimeout(timeoutId);
       timeoutId = setTimeout(() => func(...args), delay);
     };
   }, []);
 
   // Throttled function utility
-  const throttle = useCallback(<T extends (...args: any[]) => any>(
-    func: T,
+  const throttle = useCallback(<T extends (...args: anyany[])  => any>(
+    func: anyT,
     delay: number
-  ): ((...args: Parameters<T>) => void) => {
+  ): ((...args: Parameters<T>)  => void) => {
     let lastCall = 0;
     
-    return (...args: Parameters<T>) => {
+    return (...args: anyParameters<T>)  => {
       const now = Date.now();
       if (now - lastCall >= delay) {
         lastCall = now;
@@ -210,14 +214,14 @@ export const usePerformanceOptimization = (options: UsePerformanceOptimizationOp
 
   // Memoized performance data
   const performanceData = useMemo(() => ({
-    metrics: getMetrics(),
+    metrics: anygetMetrics(),
     isLowFPS: metricsRef.current.fps < 30,
     isHighMemory: metricsRef.current.memoryUsage > 100,
     isSlowRender: metricsRef.current.renderTime > 16
   }), [getMetrics]);
 
   // Cleanup on unmount
-  useEffect(() => {
+  useEffect(()  => {
     return cleanup;
   }, [cleanup]);
 
@@ -236,6 +240,8 @@ export const usePerformanceOptimization = (options: UsePerformanceOptimizationOp
 // Type declaration for gtag
 declare global {
   interface Window {
-    gtag?: (...args: any[]) => void;
-  }
+
+    gtag?: (...args: anyany[])  => void;
+  
+}
 }

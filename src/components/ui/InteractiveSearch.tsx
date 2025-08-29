@@ -1,9 +1,11 @@
-import React, { useState } from 'react';
+import React, { useState } from 'react.ts';
 
-interface InteractiveSearchProps {
+interface InteractiveSearchProps extends React.PropsWithChildren<{}> {
+
   placeholder?: string;
-  onSearch: (query: string) => void;
+  onSearch: any(query: string)  => void;
   className?: string;
+
 }
 
 const InteractiveSearch: React.FC<InteractiveSearchProps> = ({ 
@@ -13,7 +15,7 @@ const InteractiveSearch: React.FC<InteractiveSearchProps> = ({
 }) => {
   const [query, setQuery] = useState('');
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = (e: anyReact.FormEvent)  => {
     e.preventDefault();
     if (query.trim()) {
       onSearch(query.trim());

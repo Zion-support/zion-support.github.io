@@ -1,8 +1,7 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import { motion } from 'framer-motion';
-import { 
-  Twitter, 
+import React from 'react.ts';
+import { Link  } from 'react-router-dom.ts';
+import { motion  } from 'framer-motion.ts';
+import { Twitter, 
   Linkedin, 
   Facebook, 
   Instagram, 
@@ -58,20 +57,24 @@ import {
   ExternalLink,
   ChevronDown,
   Copyright
-} from 'lucide-react';
-import { AnimatePresence } from 'framer-motion';
+ } from 'lucide-react.ts';
+import { AnimatePresence  } from 'framer-motion.ts';
 
 interface FooterLink {
+
   name: string;
   path: string;
   icon: any;
   external?: boolean;
+
 }
 
 interface FooterSection {
+
   title: string;
   icon: any;
   links: FooterLink[];
+
 }
 
 const footerSections = [
@@ -177,7 +180,7 @@ const socialLinks = [
   { name: 'YouTube', icon: TestTube, href: 'https://youtube.com/ziontechgroup', color: 'hover:text-red-600' }
 ];
 
-export function Footer() {
+export function Footer(...args: any[]): any {
   const [expandedSections, setExpandedSections] = React.useState<Set<string>>(new Set());
   const [showScrollTop, setShowScrollTop] = React.useState(false);
 
@@ -192,7 +195,7 @@ export function Footer() {
   }, []);
 
   // Toggle section expansion (for mobile)
-  const toggleSection = (title: string) => {
+  const toggleSection = (title: anystring)  => {
     setExpandedSections(prev => {
       const newSet = new Set(prev);
       if (newSet.has(title)) {
@@ -213,7 +216,7 @@ export function Footer() {
   };
 
   // Handle link click
-  const handleLinkClick = (link: FooterLink) => {
+  const handleLinkClick = (link: anyFooterLink)  => {
     if (link.external) {
       window.open(link.path, '_blank', 'noopener,noreferrer');
     } else {
@@ -346,7 +349,7 @@ export function Footer() {
                         href={item.href} 
                         target={item.href.startsWith('mailto:') || item.href.startsWith('tel:') ? '_self' : '_blank'}
                         rel="noopener noreferrer"
-                        className="hover:text-white transition-colors"
+                        className="hover: anytext-white transition-colors"
                       >
                         {item.text}
                       </a>
@@ -357,7 +360,7 @@ export function Footer() {
             </div>
 
             {/* Footer Sections */}
-            {footerSections.map((section, index) => (
+            {footerSections.map((section, index)  => (
               <motion.div
                 key={section.title}
                 initial={{ opacity: 0, y: 20 }}
@@ -385,9 +388,9 @@ export function Footer() {
                 {/* Links */}
                 <AnimatePresence>
                   <div className={`space-y-3 ${
-                    expandedSections.has(section.title) ? 'block' : 'hidden lg:block'
+                    expandedSections.has(section.title) ? 'block' : 'hidden lg: anyblock'
                   }`}>
-                    {section.links.map((link) => (
+                    {section.links.map((link)  => (
                       <motion.div
                         key={link.name}
                         initial={{ opacity: 0, x: -10 }}

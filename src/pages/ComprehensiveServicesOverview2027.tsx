@@ -1,9 +1,8 @@
 
-import React, { useState, useEffect } from 'react';
-import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
-import { 
-  Brain, 
+import React, { useState, useEffect } from 'react.ts';
+import { motion  } from 'framer-motion.ts';
+import { Link  } from 'react-router-dom.ts';
+import { Brain, 
   Shield, 
   TrendingUp, 
   Zap, 
@@ -88,9 +87,9 @@ import {
   Video,
   Truck,
   Briefcase
-} from 'lucide-react';
-import { Button } from '@/components/ui/button';
-import { Badge } from '@/components/ui/badge';
+ } from 'lucide-react.ts';
+import { Button  } from '@/components/ui/button';
+import { Badge  } from '@/components/ui/badge';
 
 // Sample data for demonstration
 const MICRO_SAAS_SERVICES = [
@@ -162,14 +161,14 @@ const pricingModels = [
   { id: 'usage-based', name: 'Usage-based' }
 ];
 
-export default function ComprehensiveServicesOverview2027() {
+export default function ComprehensiveServicesOverview2027(...args: any[]): any {
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [selectedPricing, setSelectedPricing] = useState('all');
   const [searchQuery, setSearchQuery] = useState('');
   const [filteredServices, setFilteredServices] = useState(MICRO_SAAS_SERVICES);
-  const [sortBy, setSortBy] = useState<'rating' | 'price' | 'aiScore' | 'newest'>('rating');
-  const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
-  const [expandedService, setExpandedService] = useState<string | null>(null);
+  const [sortBy, setSortBy] = useState<any>('rating');
+  const [viewMode, setViewMode] = useState<any>('grid');
+  const [expandedService, setExpandedService] = useState<any>(null);
 
   useEffect(() => {
     let filtered = MICRO_SAAS_SERVICES;
@@ -205,7 +204,7 @@ export default function ComprehensiveServicesOverview2027() {
     setFilteredServices(filtered);
   }, [selectedCategory, selectedPricing, searchQuery, sortBy]);
 
-  const ServiceCard = ({ service }: { service: any }) => (
+  const ServiceCard = ({ service }: { service: anyany })  => (
     <motion.div
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
@@ -381,10 +380,10 @@ export default function ComprehensiveServicesOverview2027() {
         {/* Services Grid */}
         <div className={`grid gap-8 ${
           viewMode === 'grid' 
-            ? 'grid-cols-1 md:grid-cols-2 lg:grid-cols-3' 
+            ? 'grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3' 
             : 'grid-cols-1'
         }`}>
-          {filteredServices.map((service) => (
+          {filteredServices.map((service)  => (
             <ServiceCard key={service.id} service={service} />
           ))}
         </div>

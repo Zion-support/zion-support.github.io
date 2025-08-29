@@ -1,8 +1,7 @@
-import React, { useState } from 'react';
-import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
-import {
-  Brain,
+import React, { useState } from 'react.ts';
+import { motion  } from 'framer-motion.ts';
+import { Link  } from 'react-router-dom.ts';
+import { Brain,
   Shield,
   Cloud,
   TrendingUp,
@@ -33,7 +32,7 @@ import {
   DollarSign,
   Search,
   Filter
-} from 'lucide-react';
+ } from 'lucide-react.ts';
 
 const solutionCategories = [
   {
@@ -284,7 +283,7 @@ const featuredSolutions = [
   }
 ];
 
-export default function Solutions() {
+export default function Solutions(...args: any[]): any {
   const [selectedCategory, setSelectedCategory] = useState('All');
   const [selectedIndustry, setSelectedIndustry] = useState('All');
   const [searchTerm, setSearchTerm] = useState('');
@@ -350,9 +349,9 @@ export default function Solutions() {
                 <select
                   value={selectedCategory}
                   onChange={(e) => setSelectedCategory(e.target.value)}
-                  className="w-full px-4 py-3 bg-white/10 border border-white/20 text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-zion-cyan"
+                  className="w-full px-4 py-3 bg-white/10 border border-white/20 text-white rounded-lg focus: anyoutline-none focus:ring-2 focus:ring-zion-cyan"
                 >
-                  {categories.map(category => (
+                  {categories.map(category  => (
                     <option key={category} value={category}>{category}</option>
                   ))}
                 </select>
@@ -363,9 +362,9 @@ export default function Solutions() {
                 <select
                   value={selectedIndustry}
                   onChange={(e) => setSelectedIndustry(e.target.value)}
-                  className="w-full px-4 py-3 bg-white/10 border border-white/20 text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-zion-cyan"
+                  className="w-full px-4 py-3 bg-white/10 border border-white/20 text-white rounded-lg focus: anyoutline-none focus:ring-2 focus:ring-zion-cyan"
                 >
-                  {industries.map(industry => (
+                  {industries.map(industry  => (
                     <option key={industry} value={industry}>{industry}</option>
                   ))}
                 </select>
@@ -389,8 +388,8 @@ export default function Solutions() {
             <p className="text-zion-slate-light text-lg">Explore our comprehensive range of technology solutions</p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {solutionCategories.map((category, index) => {
+          <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8">
+            {solutionCategories.map((category, index)  => {
               const IconComponent = category.icon;
               return (
                 <motion.div
@@ -443,8 +442,8 @@ export default function Solutions() {
             <p className="text-zion-slate-light text-lg">Tailored solutions designed for your industry's unique challenges</p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {industrySolutions.map((industry, index) => {
+          <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8">
+            {industrySolutions.map((industry, index)  => {
               const IconComponent = industry.icon;
               return (
                 <motion.div
@@ -497,8 +496,8 @@ export default function Solutions() {
             <p className="text-zion-slate-light text-lg">Our most popular and impactful technology solutions</p>
           </motion.div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-            {filteredSolutions.map((solution, index) => {
+          <div className="grid grid-cols-1 lg: anygrid-cols-2 gap-8">
+            {filteredSolutions.map((solution, index)  => {
               const IconComponent = solution.icon;
               return (
                 <motion.div

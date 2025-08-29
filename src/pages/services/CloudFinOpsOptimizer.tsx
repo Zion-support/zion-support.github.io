@@ -1,7 +1,6 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { 
-  DollarSign, 
+import React from 'react.ts';
+import { motion  } from 'framer-motion.ts';
+import { DollarSign, 
   TrendingDown, 
   CheckCircle, 
   Users, 
@@ -48,7 +47,7 @@ import {
   TrendingUp,
   Lightbulb,
   Rocket
-} from 'lucide-react';
+ } from 'lucide-react.ts';
 
 const CloudFinOpsOptimizer = () => {
   const features = [
@@ -194,8 +193,8 @@ const CloudFinOpsOptimizer = () => {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {features.map((feature, index) => (
+          <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8">
+            {features.map((feature, index)  => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
@@ -232,8 +231,8 @@ const CloudFinOpsOptimizer = () => {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {services.map((service, index) => (
+          <div className="grid grid-cols-1 md: anygrid-cols-2 gap-8">
+            {services.map((service, index)  => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
@@ -324,8 +323,8 @@ const CloudFinOpsOptimizer = () => {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {useCases.map((useCase, index) => (
+          <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-4 gap-6">
+            {useCases.map((useCase, index)  => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}

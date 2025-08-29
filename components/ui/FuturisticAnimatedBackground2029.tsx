@@ -1,10 +1,12 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useRef } from 'react.ts';
 
-interface FuturisticAnimatedBackground2029Props {
+interface FuturisticAnimatedBackground2029Props extends React.PropsWithChildren<{}> {
+
   className?: string;
+
 }
 
-export default function FuturisticAnimatedBackground2029({ className = '' }: FuturisticAnimatedBackground2029Props) {
+export default function FuturisticAnimatedBackground2029(...args: any[]): any {
   const canvasRef = useRef<HTMLCanvasElement>(null);
 
   useEffect(() => {

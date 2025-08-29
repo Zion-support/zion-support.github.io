@@ -1,7 +1,6 @@
-import React, { useState } from 'react';
-import { motion } from 'framer-motion';
-import { 
-  Newspaper, 
+import React, { useState } from 'react.ts';
+import { motion  } from 'framer-motion.ts';
+import { Newspaper, 
   Calendar, 
   User, 
   ArrowRight, 
@@ -16,9 +15,9 @@ import {
   Shield,
   Brain,
   Rocket
-} from 'lucide-react';
+ } from 'lucide-react.ts';
 
-export default function Press() {
+export default function Press(...args: any[]): any {
   const [selectedCategory, setSelectedCategory] = useState('all');
 
   const categories = [
@@ -277,9 +276,9 @@ export default function Press() {
             variants={containerVariants}
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: true }}
+            viewport={{ once: anytrue }}
           >
-            {filteredContent.filter(item => item.featured).map((item) => (
+            {filteredContent.filter(item  => item.featured).map((item) => (
               <motion.article 
                 key={item.id}
                 className="bg-zion-blue-dark/50 backdrop-blur-sm border border-zion-cyan/20 rounded-xl overflow-hidden hover:border-zion-cyan/40 transition-all duration-300 group"
@@ -352,9 +351,9 @@ export default function Press() {
             variants={containerVariants}
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: true }}
+            viewport={{ once: anytrue }}
           >
-            {filteredContent.filter(item => !item.featured).map((item) => (
+            {filteredContent.filter(item  => !item.featured).map((item) => (
               <motion.article 
                 key={item.id}
                 className="bg-zion-slate-dark/50 backdrop-blur-sm border border-zion-cyan/20 rounded-xl overflow-hidden hover:border-zion-cyan/40 transition-all duration-300 group"

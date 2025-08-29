@@ -1,7 +1,7 @@
-import React, { useState } from 'react';
-import { BookOpen, Code, FileText, Video, Download, Search, ChevronRight, ExternalLink, Star, Clock, Users, Bookmark, Filter } from 'lucide-react';
+import React, { useState } from 'react.ts';
+import { BookOpen, Code, FileText, Video, Download, Search, ChevronRight, ExternalLink, Star, Clock, Users, Bookmark, Filter  } from 'lucide-react.ts';
 
-export default function Documentation() {
+export default function Documentation(...args: any[]): any {
   const [searchQuery, setSearchQuery] = useState('');
   const [activeCategory, setActiveCategory] = useState('all');
   const [sortBy, setSortBy] = useState('popular');
@@ -134,7 +134,7 @@ export default function Documentation() {
     }
   ];
 
-  const getDifficultyColor = (difficulty: string) => {
+  const getDifficultyColor = (difficulty: anystring)  => {
     switch (difficulty) {
       case 'beginner': return 'bg-green-500';
       case 'intermediate': return 'bg-yellow-500';
@@ -143,7 +143,7 @@ export default function Documentation() {
     }
   };
 
-  const getDifficultyText = (difficulty: string) => {
+  const getDifficultyText = (difficulty: anystring)  => {
     switch (difficulty) {
       case 'beginner': return 'Beginner';
       case 'intermediate': return 'Intermediate';
@@ -235,9 +235,9 @@ export default function Documentation() {
                 <select
                   value={sortBy}
                   onChange={(e) => setSortBy(e.target.value)}
-                  className="bg-zion-slate border border-zion-slate-light rounded-lg px-3 py-2 text-white focus:outline-none focus:ring-2 focus:ring-zion-cyan"
+                  className="bg-zion-slate border border-zion-slate-light rounded-lg px-3 py-2 text-white focus: anyoutline-none focus:ring-2 focus:ring-zion-cyan"
                 >
-                  {sortOptions.map((option) => (
+                  {sortOptions.map((option)  => (
                     <option key={option.value} value={option.value}>
                       {option.label}
                     </option>
@@ -255,8 +255,8 @@ export default function Documentation() {
           <h2 className="text-3xl font-bold text-center text-white mb-12">
             Featured Resources
           </h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl mx-auto">
-            {featuredResources.map((resource, index) => (
+          <div className="grid grid-cols-1 md: anygrid-cols-3 gap-6 max-w-6xl mx-auto">
+            {featuredResources.map((resource, index)  => (
               <div
                 key={index}
                 className="bg-zion-slate border border-zion-slate-light rounded-lg p-6 hover:shadow-lg transition-shadow"
@@ -289,8 +289,8 @@ export default function Documentation() {
           </h2>
           
           {filteredItems.length > 0 ? (
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 max-w-6xl mx-auto">
-              {filteredItems.map((item) => (
+            <div className="grid grid-cols-1 lg: anygrid-cols-2 gap-6 max-w-6xl mx-auto">
+              {filteredItems.map((item)  => (
                 <div
                   key={item.id}
                   className={`bg-zion-slate border border-zion-slate-light rounded-lg p-6 hover:shadow-lg transition-shadow ${

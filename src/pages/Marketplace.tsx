@@ -1,7 +1,7 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React from 'react.ts';
+import { Link  } from 'react-router-dom.ts';
 
-const Marketplace: React.FC = () => (
+const Marketplace: React.FC = (): JSX.Element => (
 	<div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 py-12">
 		<div className="max-w-3xl mx-auto px-4 text-white">
 			<h1 className="text-4xl font-bold mb-6">Marketplace</h1>

@@ -1,8 +1,7 @@
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
-import { motion } from 'framer-motion';
-import { 
-  Mail, 
+import React, { useState } from 'react.ts';
+import { Link  } from 'react-router-dom.ts';
+import { motion  } from 'framer-motion.ts';
+import { Mail, 
   ArrowLeft, 
   CheckCircle, 
   AlertCircle, 
@@ -14,21 +13,21 @@ import {
   Rocket,
   ArrowRight,
   RefreshCw
-} from 'lucide-react';
+ } from 'lucide-react.ts';
 
-const ForgotPassword: React.FC = () => {
+const ForgotPassword: React.FC = (): JSX.Element => {
   const [email, setEmail] = useState('');
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState('');
   const [success, setSuccess] = useState('');
-  const [step, setStep] = useState<'email' | 'verification' | 'reset'>('email');
+  const [step, setStep] = useState<any>('email');
   const [verificationCode, setVerificationCode] = useState('');
   const [newPassword, setNewPassword] = useState('');
   const [confirmPassword, setConfirmPassword] = useState('');
   const [showPassword, setShowPassword] = useState(false);
   const [showConfirmPassword, setShowConfirmPassword] = useState(false);
 
-  const handleEmailSubmit = async (e: React.FormEvent) => {
+  const handleEmailSubmit = async (e: anyReact.FormEvent)  => {
     e.preventDefault();
     if (!email || !/\S+@\S+\.\S+/.test(email)) {
       setError('Please enter a valid email address');
@@ -51,7 +50,7 @@ const ForgotPassword: React.FC = () => {
     }
   };
 
-  const handleVerificationSubmit = async (e: React.FormEvent) => {
+  const handleVerificationSubmit = async (e: anyReact.FormEvent)  => {
     e.preventDefault();
     if (!verificationCode || verificationCode.length !== 6) {
       setError('Please enter the 6-digit verification code');
@@ -74,7 +73,7 @@ const ForgotPassword: React.FC = () => {
     }
   };
 
-  const handlePasswordReset = async (e: React.FormEvent) => {
+  const handlePasswordReset = async (e: anyReact.FormEvent)  => {
     e.preventDefault();
     if (!newPassword || newPassword.length < 8) {
       setError('Password must be at least 8 characters long');
@@ -103,7 +102,7 @@ const ForgotPassword: React.FC = () => {
     }
   };
 
-  const getPasswordStrength = (password: string) => {
+  const getPasswordStrength = (password: anystring)  => {
     if (password.length === 0) return { score: 0, label: '', color: '' };
     if (password.length < 8) return { score: 1, label: 'Weak', color: 'text-red-400' };
     if (password.length < 12) return { score: 2, label: 'Fair', color: 'text-yellow-400' };

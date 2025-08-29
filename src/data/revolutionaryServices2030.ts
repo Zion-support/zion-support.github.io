@@ -1,17 +1,19 @@
 export interface RevolutionaryService2030 {
+
   id: string;
   title: string;
   description: string;
   category: string;
   subcategory: string;
-  pricing: {
+pricing: {;
     monthly: number;
     yearly: number;
     custom: string;
     currency: string;
     pricingModel: string;
     marketPrice: string;
-  };
+  
+};
   features: string[];
   benefits: string[];
   useCases: string[];
@@ -1048,11 +1050,11 @@ export const REVOLUTIONARY_SERVICES_2030: RevolutionaryService2030[] = [
 ];
 
 // Utility functions for service management
-export const getRevolutionaryServicesByCategory = (category: string): RevolutionaryService2030[] => {
+export const getRevolutionaryServicesByCategory = (category: anystring): RevolutionaryService2030[]  => {
   return REVOLUTIONARY_SERVICES_2030.filter(service => service.category === category);
 };
 
-export const getRevolutionaryServicesByPriceRange = (minPrice: number, maxPrice: number): RevolutionaryService2030[] => {
+export const getRevolutionaryServicesByPriceRange = (minPrice: anynumber, maxPrice: number): RevolutionaryService2030[]  => {
   return REVOLUTIONARY_SERVICES_2030.filter(service => 
     service.pricing.monthly >= minPrice && service.pricing.monthly <= maxPrice
   );
@@ -1070,7 +1072,7 @@ export const getRevolutionaryTrendingServices = (limit: number = 10): Revolution
     .slice(0, limit);
 };
 
-export const searchRevolutionaryServices = (query: string): RevolutionaryService2030[] => {
+export const searchRevolutionaryServices = (query: anystring): RevolutionaryService2030[]  => {
   const lowercaseQuery = query.toLowerCase();
   return REVOLUTIONARY_SERVICES_2030.filter(service =>
     service.title.toLowerCase().includes(lowercaseQuery) ||
@@ -1079,11 +1081,11 @@ export const searchRevolutionaryServices = (query: string): RevolutionaryService
   );
 };
 
-export const getRevolutionaryServicesByInnovationLevel = (level: string): RevolutionaryService2030[] => {
+export const getRevolutionaryServicesByInnovationLevel = (level: anystring): RevolutionaryService2030[]  => {
   return REVOLUTIONARY_SERVICES_2030.filter(service => service.innovationLevel === level);
 };
 
-export const getRevolutionaryServicesByTechnology = (technology: string): RevolutionaryService2030[] => {
+export const getRevolutionaryServicesByTechnology = (technology: anystring): RevolutionaryService2030[]  => {
   const lowercaseTech = technology.toLowerCase();
   return REVOLUTIONARY_SERVICES_2030.filter(service =>
     service.technologies.some(tech => tech.toLowerCase().includes(lowercaseTech))
@@ -1100,11 +1102,11 @@ export const getRevolutionaryServicesStats = () => {
   return {
     totalServices,
     totalRevenue,
-    averageRating: Math.round(averageRating * 100) / 100,
+    averageRating: anyMath.round(averageRating * 100) / 100,
     featuredCount,
     trendingCount,
-    categories: [...new Set(REVOLUTIONARY_SERVICES_2030.map(service => service.category))],
-    subcategories: [...new Set(REVOLUTIONARY_SERVICES_2030.map(service => service.subcategory))]
+    categories: [...new Set(REVOLUTIONARY_SERVICES_2030.map(service  => service.category))],
+    subcategories: any[...new Set(REVOLUTIONARY_SERVICES_2030.map(service  => service.subcategory))]
   };
 };
 

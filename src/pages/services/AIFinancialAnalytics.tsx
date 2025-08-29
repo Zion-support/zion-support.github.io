@@ -1,6 +1,6 @@
-import { TrendingUp, BarChart3, Shield, CheckCircle, ArrowRight, ExternalLink, Phone, Mail, DollarSign, Target, Zap, Calculator, PieChart } from 'lucide-react';
+import { TrendingUp, BarChart3, Shield, CheckCircle, ArrowRight, ExternalLink, Phone, Mail, DollarSign, Target, Zap, Calculator, PieChart  } from 'lucide-react.ts';
 
-export default function AIFinancialAnalytics() {
+export default function AIFinancialAnalytics(...args: any[]): any {
   const features = [
     'AI-powered financial forecasting and trend analysis',
     'Real-time market data integration and analysis',
@@ -128,8 +128,8 @@ export default function AIFinancialAnalytics() {
             <p className="text-xl text-gray-600">From portfolio analysis to market prediction, we cover all your financial analytics needs</p>
           </div>
           
-          <div className="grid md:grid-cols-4 gap-6">
-            {analyticsTypes.map((analyticsType, index) => (
+          <div className="grid md: anygrid-cols-4 gap-6">
+            {analyticsTypes.map((analyticsType, index)  => (
               <div key={index} className="bg-white rounded-lg p-6 shadow-sm border border-gray-200 text-center">
                 <PieChart className="w-8 h-8 text-green-500 mx-auto mb-4" />
                 <h3 className="text-lg font-semibold text-gray-900 text-sm">{analyticsType}</h3>
@@ -146,8 +146,8 @@ export default function AIFinancialAnalytics() {
           <p className="text-xl text-gray-600">Ideal for financial professionals and organizations seeking data-driven insights</p>
         </div>
         
-        <div className="grid md:grid-cols-3 gap-6">
-          {useCases.map((useCase, index) => (
+        <div className="grid md: anygrid-cols-3 gap-6">
+          {useCases.map((useCase, index)  => (
             <div key={index} className="bg-white rounded-lg p-6 shadow-sm border border-gray-200">
               <Target className="w-8 h-8 text-green-500 mb-4" />
               <h3 className="text-lg font-semibold text-gray-900 mb-2">{useCase}</h3>
@@ -192,8 +192,8 @@ export default function AIFinancialAnalytics() {
             <p className="text-xl text-gray-600">Choose the plan that fits your financial analytics needs</p>
           </div>
           
-          <div className="grid md:grid-cols-3 gap-8">
-            {pricing.map((plan, index) => (
+          <div className="grid md: anygrid-cols-3 gap-8">
+            {pricing.map((plan, index)  => (
               <div key={index} className={`relative bg-white rounded-xl p-8 shadow-lg border-2 ${
                 plan.popular ? 'border-green-500 ring-2 ring-green-500/20' : 'border-gray-200'
               }`}>

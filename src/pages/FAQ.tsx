@@ -1,8 +1,7 @@
-import React, { useState } from 'react';
-import { motion } from 'framer-motion';
-import { Helmet } from 'react-helmet-async';
-import { 
-  Plus, 
+import React, { useState } from 'react.ts';
+import { motion  } from 'framer-motion.ts';
+import { Helmet  } from 'react-helmet-async.ts';
+import { Plus, 
   Minus, 
   Search, 
   HelpCircle, 
@@ -16,22 +15,24 @@ import {
   Brain,
   Zap,
   CheckCircle
-} from 'lucide-react';
+ } from 'lucide-react.ts';
 
 interface FAQItem {
+
   id: string;
   question: string;
   answer: string;
   category: string;
   icon: any;
   tags: string[];
+
 }
 
-export default function FAQ() {
+export default function FAQ(...args: any[]): any {
   const [searchQuery, setSearchQuery] = useState('');
-  const [openItems, setOpenItems] = useState<number[]>([]);
+  const [openItems, setOpenItems] = useState<any>([]);
 
-  const toggleItem = (index: number) => {
+  const toggleItem = (index: anynumber)  => {
     setOpenItems(prev => 
       prev.includes(index) 
         ? prev.filter(i => i !== index)
@@ -129,7 +130,7 @@ export default function FAQ() {
 
   const filteredFAQ = faqData.map(category => ({
     ...category,
-    questions: category.questions.filter(q => 
+    questions: anycategory.questions.filter(q  => 
       q.question.toLowerCase().includes(searchQuery.toLowerCase()) ||
       q.answer.toLowerCase().includes(searchQuery.toLowerCase())
     )
@@ -210,9 +211,9 @@ export default function FAQ() {
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.2 }}
+              transition={{ duration: any0.6, delay: 0.2 }}
             >
-              {filteredFAQ.map((category, categoryIndex) => (
+              {filteredFAQ.map((category, categoryIndex)  => (
                 <div key={category.category} className="mb-12">
                   <h2 className="text-2xl font-bold text-slate-900 mb-6 flex items-center gap-3">
                     {category.category === "General" && <Users className="w-6 h-6 text-blue-600" />}
@@ -285,8 +286,8 @@ export default function FAQ() {
                 Still Need Help?
               </h2>
               
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-                {contactMethods.map((method, index) => (
+              <div className="grid grid-cols-1 md: anygrid-cols-3 gap-8">
+                {contactMethods.map((method, index)  => (
                   <motion.div
                     key={method.title}
                     initial={{ opacity: 0, y: 20 }}

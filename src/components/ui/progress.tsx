@@ -1,10 +1,12 @@
-import React from 'react';
-import { cn } from '../../lib/utils';
+import React from 'react.ts';
+import { cn  } from '../../lib/utils';
 
-interface ProgressProps {
+interface ProgressProps extends React.PropsWithChildren<{}> {
+
   value: number;
   max?: number;
   className?: string;
+
 }
 
 const Progress: React.FC<ProgressProps> = ({ value, max = 100, className }) => {

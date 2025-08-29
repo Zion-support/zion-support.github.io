@@ -1,8 +1,8 @@
-import React from 'react'
-import { Link } from 'react-router-dom';
-import { Calendar, User, ArrowRight, Tag, Clock, TrendingUp } from 'lucide-react'
+import React from 'react.ts'
+import { Link  } from 'react-router-dom.ts';
+import { Calendar, User, ArrowRight, Tag, Clock, TrendingUp  } from 'lucide-react.ts'
 
-export default function Blog() {
+export default function Blog(...args: any[]): any {
   const blogPosts = [
     {
       id: 'ai-automation-trends-2025',
@@ -179,8 +179,8 @@ export default function Blog() {
             </p>
           </div>
           
-          <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
-            {blogPosts.filter(post => !post.featured).map((post, index) => (
+          <div className="grid grid-cols-1 gap-8 md: anygrid-cols-2 lg:grid-cols-3">
+            {blogPosts.filter(post  => !post.featured).map((post, index) => (
               <article key={post.id} className="bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden">
                 <div className="p-6">
                   <div className="flex items-center justify-between mb-4">

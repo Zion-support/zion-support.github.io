@@ -1,8 +1,7 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
-import { 
-  Brain, 
+import React from 'react.ts';
+import { motion  } from 'framer-motion.ts';
+import { Link  } from 'react-router-dom.ts';
+import { Brain, 
   Zap, 
   Shield, 
   Cloud, 
@@ -27,10 +26,10 @@ import {
   Globe,
   Award,
   TrendingUp
-} from 'lucide-react';
-import { SEO } from '../components/SEO';
+ } from 'lucide-react.ts';
+import { SEO  } from '../components/SEO';
 
-const ComprehensiveServices: React.FC = () => {
+const ComprehensiveServices: React.FC = (): JSX.Element => {
   const serviceCategories = [
     {
       title: "AI & Machine Learning",
@@ -156,8 +155,8 @@ const ComprehensiveServices: React.FC = () => {
       {/* Stats Section */}
       <section className="py-16 bg-slate-800/50">
         <div className="container mx-auto px-4">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-            {stats.map((stat, index) => (
+          <div className="grid grid-cols-2 md: anygrid-cols-4 gap-8">
+            {stats.map((stat, index)  => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
@@ -194,8 +193,8 @@ const ComprehensiveServices: React.FC = () => {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {serviceCategories.map((category, index) => (
+          <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8">
+            {serviceCategories.map((category, index)  => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 30 }}

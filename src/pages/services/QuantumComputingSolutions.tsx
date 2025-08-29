@@ -1,8 +1,7 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import { motion } from 'framer-motion';
-import { 
-  Atom, 
+import React from 'react.ts';
+import { Link  } from 'react-router-dom.ts';
+import { motion  } from 'framer-motion.ts';
+import { Atom, 
   Zap, 
   CheckCircle, 
   BarChart3, 
@@ -17,10 +16,10 @@ import {
   Shield,
   TrendingUp,
   Layers
-} from 'lucide-react';
-import { SEO } from '@/components/SEO';
+ } from 'lucide-react.ts';
+import { SEO  } from '@/components/SEO';
 
-export default function QuantumComputingSolutions() {
+export default function QuantumComputingSolutions(...args: any[]): any {
   const features = [
     'Quantum algorithm optimization and development',
     'Quantum machine learning and AI acceleration',
@@ -191,8 +190,8 @@ export default function QuantumComputingSolutions() {
             </p>
           </motion.div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {quantumApplications.map((app, index) => (
+          <div className="grid grid-cols-1 md: anygrid-cols-2 gap-8">
+            {quantumApplications.map((app, index)  => (
               <motion.div
                 key={index}
                 className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-8 hover:border-cyan-500/50 transition-all duration-300 hover:transform hover:scale-105"
@@ -243,8 +242,8 @@ export default function QuantumComputingSolutions() {
             </p>
           </motion.div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {features.map((feature, index) => (
+          <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-4 gap-6">
+            {features.map((feature, index)  => (
               <motion.div
                 key={index}
                 className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 hover:border-cyan-500/50 transition-all duration-300 hover:transform hover:scale-105"
@@ -281,8 +280,8 @@ export default function QuantumComputingSolutions() {
             </p>
           </motion.div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {benefits.map((benefit, index) => (
+          <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8">
+            {benefits.map((benefit, index)  => (
               <motion.div
                 key={index}
                 className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6"
@@ -322,8 +321,8 @@ export default function QuantumComputingSolutions() {
             </p>
           </motion.div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {researchAreas.map((area, index) => (
+          <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-4 gap-6">
+            {researchAreas.map((area, index)  => (
               <motion.div
                 key={index}
                 className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 hover:border-cyan-500/50 transition-all duration-300"
@@ -360,8 +359,8 @@ export default function QuantumComputingSolutions() {
             </p>
           </motion.div>
           
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {pricing.map((plan, index) => (
+          <div className="grid grid-cols-1 md: anygrid-cols-3 gap-8">
+            {pricing.map((plan, index)  => (
               <motion.div
                 key={index}
                 className={`relative bg-slate-800/50 border rounded-xl p-8 ${
@@ -433,8 +432,8 @@ export default function QuantumComputingSolutions() {
             </p>
           </motion.div>
           
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-            {quantumTechnologies.map((tech, index) => (
+          <div className="grid grid-cols-2 md: anygrid-cols-4 gap-4">
+            {quantumTechnologies.map((tech, index)  => (
               <motion.a
                 key={index}
                 href={tech.url}

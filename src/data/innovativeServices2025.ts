@@ -1,4 +1,5 @@
 export interface InnovativeService2025 {
+
   id: string;
   title: string;
   description: string;
@@ -17,11 +18,12 @@ export interface InnovativeService2025 {
   marketPrice: string;
   roi: string;
   innovationLevel: string;
-  contactInfo: {
+contactInfo: {;
     phone: string;
     email: string;
     website: string;
-  };
+  
+};
   technicalSpecs?: {
     technology: string[];
     integrations: string[];
@@ -686,11 +688,11 @@ export const INNOVATIVE_SERVICES_2025: InnovativeService2025[] = [
 ];
 
 // Helper functions
-export const getServicesByCategory = (category: string): InnovativeService2025[] => {
+export const getServicesByCategory = (category: anystring): InnovativeService2025[]  => {
   return INNOVATIVE_SERVICES_2025.filter(service => service.category === category);
 };
 
-export const getServicesByPriceRange = (minPrice: number, maxPrice: number): InnovativeService2025[] => {
+export const getServicesByPriceRange = (minPrice: anynumber, maxPrice: number): InnovativeService2025[]  => {
   return INNOVATIVE_SERVICES_2025.filter(service => service.price >= minPrice && service.price <= maxPrice);
 };
 
@@ -700,6 +702,6 @@ export const getTopRatedServices = (limit: number = 5): InnovativeService2025[] 
     .slice(0, limit);
 };
 
-export const getServicesByAIScore = (minScore: number): InnovativeService2025[] => {
+export const getServicesByAIScore = (minScore: anynumber): InnovativeService2025[]  => {
   return INNOVATIVE_SERVICES_2025.filter(service => service.aiScore >= minScore);
 };

@@ -1,7 +1,6 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { 
-  FileText, 
+import React from 'react.ts';
+import { motion  } from 'framer-motion.ts';
+import { FileText, 
   Shield, 
   Users, 
   Globe, 
@@ -13,10 +12,10 @@ import {
   Phone,
   MapPin,
   Calendar
-} from 'lucide-react';
-import { SEO } from '../components/SEO';
+ } from 'lucide-react.ts';
+import { SEO  } from '../components/SEO';
 
-export default function Terms() {
+export default function Terms(...args: any[]): any {
   const termsSections = [
     {
       icon: Users,
@@ -153,8 +152,8 @@ export default function Terms() {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {termsSections.map((section, index) => (
+          <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-4 gap-8">
+            {termsSections.map((section, index)  => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
@@ -191,8 +190,8 @@ export default function Terms() {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {userObligations.map((obligation, index) => (
+          <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8">
+            {userObligations.map((obligation, index)  => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
@@ -284,8 +283,8 @@ export default function Terms() {
           </motion.div>
 
           <div className="max-w-4xl mx-auto">
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              {serviceLevels.map((level, index) => (
+            <div className="grid grid-cols-1 md: anygrid-cols-3 gap-8">
+              {serviceLevels.map((level, index)  => (
                 <motion.div
                   key={index}
                   initial={{ opacity: 0, y: 20 }}

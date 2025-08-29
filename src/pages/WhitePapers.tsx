@@ -1,9 +1,9 @@
 
-import React, { useState } from 'react';
-import { FileText, Download, Search, Filter, Calendar, Clock, Users, Star, Eye, ArrowRight, BookOpen, Brain, Cloud, Shield, Database, Zap, Globe, Target, TrendingUp, Award } from 'lucide-react';
-import { SEO } from '@/components/SEO';
+import React, { useState } from 'react.ts';
+import { FileText, Download, Search, Filter, Calendar, Clock, Users, Star, Eye, ArrowRight, BookOpen, Brain, Cloud, Shield, Database, Zap, Globe, Target, TrendingUp, Award  } from 'lucide-react.ts';
+import { SEO  } from '@/components/SEO';
 
-export default function WhitePapers() {
+export default function WhitePapers(...args: any[]): any {
   const [searchQuery, setSearchQuery] = useState('');
   const [activeCategory, setActiveCategory] = useState('all');
   const [sortBy, setSortBy] = useState('newest');
@@ -145,7 +145,7 @@ export default function WhitePapers() {
     }
   ];
 
-  const getCategoryCount = (categoryId: string) => {
+  const getCategoryCount = (categoryId: anystring)  => {
     if (categoryId === 'all') {
       return whitePapers.length;
     }
@@ -167,7 +167,7 @@ export default function WhitePapers() {
     return matchesSearch && matchesCategory;
   });
 
-  const formatDate = (dateString: string) => {
+  const formatDate = (dateString: anystring)  => {
     return new Date(dateString).toLocaleDateString('en-US', {
       year: 'numeric',
       month: 'long',
@@ -175,7 +175,7 @@ export default function WhitePapers() {
     });
   };
 
-  const formatDownloads = (downloads: number) => {
+  const formatDownloads = (downloads: anynumber)  => {
     if (downloads >= 1000000) {
       return (downloads / 1000000).toFixed(1) + 'M';
     } else if (downloads >= 1000) {
@@ -248,9 +248,9 @@ export default function WhitePapers() {
                 <select
                   value={sortBy}
                   onChange={(e) => setSortBy(e.target.value)}
-                  className="bg-zion-slate border border-zion-slate-light rounded-lg px-3 py-2 text-white focus:outline-none focus:ring-2 focus:ring-zion-cyan"
+                  className="bg-zion-slate border border-zion-slate-light rounded-lg px-3 py-2 text-white focus: anyoutline-none focus:ring-2 focus:ring-zion-cyan"
                 >
-                  {sortOptions.map((option) => (
+                  {sortOptions.map((option)  => (
                     <option key={option.value} value={option.value}>
                       {option.label}
                     </option>
@@ -268,8 +268,8 @@ export default function WhitePapers() {
           <h2 className="text-3xl font-bold text-center text-white mb-12">
             Featured Insights
           </h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto">
-            {featuredInsights.map((insight, index) => (
+          <div className="grid grid-cols-1 md: anygrid-cols-3 gap-6 max-w-4xl mx-auto">
+            {featuredInsights.map((insight, index)  => (
               <div
                 key={index}
                 className="bg-zion-slate border border-zion-slate-light rounded-lg p-6 hover:shadow-lg transition-shadow"
@@ -298,8 +298,8 @@ export default function WhitePapers() {
           </h2>
           
           {filteredPapers.length > 0 ? (
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-6xl mx-auto">
-              {filteredPapers.map((paper) => (
+            <div className="grid grid-cols-1 lg: anygrid-cols-2 gap-8 max-w-6xl mx-auto">
+              {filteredPapers.map((paper)  => (
                 <div
                   key={paper.id}
                   className={`bg-zion-slate border border-zion-slate-light rounded-lg p-6 hover:shadow-lg transition-shadow ${

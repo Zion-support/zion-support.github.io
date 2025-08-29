@@ -1,24 +1,24 @@
-import { Suspense, lazy } from 'react';
-import { Routes, Route } from 'react-router-dom';
-import { motion, AnimatePresence } from 'framer-motion';
-import { HelmetProvider } from 'react-helmet-async';
+import { Suspense, lazy  } from 'react.ts';
+import { Routes, Route  } from 'react-router-dom.ts';
+import { motion, AnimatePresence  } from 'framer-motion.ts';
+import { HelmetProvider  } from 'react-helmet-async.ts';
 
 // Layout Components
-import { AppHeader } from './layout/AppHeader';
-import { Footer } from './components/Footer';
+import { AppHeader  } from './layout/AppHeader';
+import { Footer  } from './components/Footer';
 
 // Enhanced Components
-import { PerformanceOptimizer } from './components/PerformanceOptimizer';
+import { PerformanceOptimizer  } from './components/PerformanceOptimizer';
 import EnhancedAccessibilityEnhancer from './components/EnhancedAccessibilityEnhancer';
-import { MobileExperienceEnhancer } from './components/MobileExperienceEnhancer';
-import { EnhancedSEO } from './components/EnhancedSEO';
-import { ServiceWorker } from './components/ServiceWorker';
-import { FloatingActionButton } from './components/FloatingActionButton';
-import { AdvancedAnalytics } from './components/AdvancedAnalytics';
-import { SmartNotificationSystem } from './components/SmartNotificationSystem';
-import { ChatAssistant } from './components/ChatAssistant';
-import { ErrorBoundary } from './components/ErrorBoundary';
-import { ErrorFallback } from './components/ErrorFallback';
+import { MobileExperienceEnhancer  } from './components/MobileExperienceEnhancer';
+import { EnhancedSEO  } from './components/EnhancedSEO';
+import { ServiceWorker  } from './components/ServiceWorker';
+import { FloatingActionButton  } from './components/FloatingActionButton';
+import { AdvancedAnalytics  } from './components/AdvancedAnalytics';
+import { SmartNotificationSystem  } from './components/SmartNotificationSystem';
+import { ChatAssistant  } from './components/ChatAssistant';
+import { ErrorBoundary  } from './components/ErrorBoundary';
+import { ErrorFallback  } from './components/ErrorFallback';
 import LoadingSpinner from './components/ui/LoadingSpinner';
 
 // Lazy-loaded pages for better performance
@@ -198,7 +198,7 @@ const AICustomerExperienceSupport = lazy(() => import('./pages/services/AICustom
 const AIMarketingAutomationPersonalization = lazy(() => import('./pages/services/AIMarketingAutomationPersonalization'));
 const AIQuantumFinancialTrading = lazy(() => import('./pages/services/AIQuantumFinancialTrading'));
 
-function App() {
+function App(...args: any[]): any {
   return (
     <HelmetProvider>
       <ErrorBoundary fallback={<ErrorFallback error={new Error()} resetErrorBoundary={() => {}} />}>

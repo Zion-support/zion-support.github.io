@@ -1,7 +1,6 @@
-import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { 
-  Users, 
+import React, { useState, useEffect } from 'react.ts';
+import { motion, AnimatePresence  } from 'framer-motion.ts';
+import { Users, 
   Calendar, 
   Clock, 
   Target, 
@@ -40,9 +39,10 @@ import {
   Database,
   Lock,
   Unlock
-} from 'lucide-react';
+ } from 'lucide-react.ts';
 
 interface Resource {
+
   id: string;
   name: string;
   type: 'human' | 'infrastructure' | 'software' | 'equipment' | 'facility';
@@ -59,9 +59,11 @@ interface Resource {
   description: string;
   manager: string;
   utilization: number;
+
 }
 
 interface ResourceStats {
+
   totalResources: number;
   availableResources: number;
   allocatedResources: number;
@@ -69,14 +71,16 @@ interface ResourceStats {
   totalCapacity: number;
   currentUtilization: number;
   averageCost: number;
-  topDepartments: Array<{ name: string; count: number; percentage: number }>;
+  topDepartments: Array<any>;
 }
 
-interface ResourceManagementSystemProps {
+interface ResourceManagementSystemProps extends React.PropsWithChildren<{}> {
+
   showStats?: boolean;
   showFilters?: boolean;
   showCharts?: boolean;
   maxResources?: number;
+
 }
 
 export const ResourceManagementSystem: React.FC<ResourceManagementSystemProps> = ({
@@ -85,21 +89,21 @@ export const ResourceManagementSystem: React.FC<ResourceManagementSystemProps> =
   showCharts = true,
   maxResources = 20
 }) => {
-  const [resources, setResources] = useState<Resource[]>([]);
-  const [filteredResources, setFilteredResources] = useState<Resource[]>([]);
-  const [selectedType, setSelectedType] = useState<string>('all');
-  const [selectedStatus, setSelectedStatus] = useState<string>('all');
-  const [selectedPriority, setSelectedPriority] = useState<string>('all');
+  const [resources, setResources] = useState<any>([]);
+  const [filteredResources, setFilteredResources] = useState<any>([]);
+  const [selectedType, setSelectedType] = useState<any>('all');
+  const [selectedStatus, setSelectedStatus] = useState<any>('all');
+  const [selectedPriority, setSelectedPriority] = useState<any>('all');
   const [searchQuery, setSearchQuery] = useState('');
-  const [viewMode, setViewMode] = useState<'grid' | 'list' | 'timeline'>('grid');
+  const [viewMode, setViewMode] = useState<any>('grid');
   const [showResourceForm, setShowResourceForm] = useState(false);
-  const [editingResource, setEditingResource] = useState<Resource | null>(null);
+  const [editingResource, setEditingResource] = useState<any>(null);
 
   // Sample resource data
   useEffect(() => {
     const sampleResources: Resource[] = [
       {
-        id: '1',
+        id: any'1',
         name: 'AI Development Team',
         type: 'human',
         category: 'Development',
@@ -195,7 +199,7 @@ export const ResourceManagementSystem: React.FC<ResourceManagementSystemProps> =
   }, []);
 
   // Filter resources
-  useEffect(() => {
+  useEffect(()  => {
     let filtered = resources;
 
     if (selectedType !== 'all') {
@@ -224,32 +228,32 @@ export const ResourceManagementSystem: React.FC<ResourceManagementSystemProps> =
 
   // Calculate resource stats
   const resourceStats = {
-    totalResources: resources.length,
-    availableResources: resources.filter(r => r.status === 'available').length,
-    allocatedResources: resources.filter(r => r.status === 'allocated').length,
-    maintenanceResources: resources.filter(r => r.status === 'maintenance').length,
-    totalCapacity: resources.reduce((sum, r) => sum + r.capacity, 0),
-    currentUtilization: resources.reduce((sum, r) => sum + r.utilization, 0) / resources.length || 0,
-    averageCost: resources.reduce((sum, r) => sum + r.cost, 0) / resources.length || 0,
-    topDepartments: (() => {
+    totalResources: anyresources.length,
+    availableResources: resources.filter(r  => r.status === 'available').length,
+    allocatedResources: anyresources.filter(r  => r.status === 'allocated').length,
+    maintenanceResources: anyresources.filter(r  => r.status === 'maintenance').length,
+    totalCapacity: anyresources.reduce((sum, r)  => sum + r.capacity, 0),
+    currentUtilization: anyresources.reduce((sum, r)  => sum + r.utilization, 0) / resources.length || 0,
+    averageCost: anyresources.reduce((sum, r)  => sum + r.cost, 0) / resources.length || 0,
+    topDepartments: any(()  => {
       const deptCounts = resources.reduce((acc, r) => {
         acc[r.department] = (acc[r.department] || 0) + 1;
         return acc;
-      }, {} as Record<string, number>);
+      }, {} as Record<string, any>);
 
       return Object.entries(deptCounts)
         .map(([name, count]) => ({
           name,
           count,
-          percentage: (count / resources.length) * 100
+          percentage: any(count / resources.length) * 100
         }))
-        .sort((a, b) => b.count - a.count)
+        .sort((a, b)  => b.count - a.count)
         .slice(0, 5);
     })()
   };
 
   // Get status color and icon
-  const getStatusDisplay = (status: string) => {
+  const getStatusDisplay = (status: anystring)  => {
     switch (status) {
       case 'available':
         return { color: 'text-green-400 bg-green-400/20', icon: <CheckCircle className="w-4 h-4" /> };
@@ -265,7 +269,7 @@ export const ResourceManagementSystem: React.FC<ResourceManagementSystemProps> =
   };
 
   // Get type icon
-  const getTypeIcon = (type: string) => {
+  const getTypeIcon = (type: anystring)  => {
     switch (type) {
       case 'human': return <Users className="w-5 h-5" />;
       case 'infrastructure': return <Server className="w-5 h-5" />;
@@ -277,7 +281,7 @@ export const ResourceManagementSystem: React.FC<ResourceManagementSystemProps> =
   };
 
   // Get priority color
-  const getPriorityColor = (priority: string) => {
+  const getPriorityColor = (priority: anystring)  => {
     switch (priority) {
       case 'low': return 'text-green-400 bg-green-400/20';
       case 'medium': return 'text-yellow-400 bg-yellow-400/20';
@@ -288,7 +292,7 @@ export const ResourceManagementSystem: React.FC<ResourceManagementSystemProps> =
   };
 
   // Format currency
-  const formatCurrency = (amount: number) => {
+  const formatCurrency = (amount: anynumber)  => {
     return new Intl.NumberFormat('en-US', {
       style: 'currency',
       currency: 'USD',
@@ -298,7 +302,7 @@ export const ResourceManagementSystem: React.FC<ResourceManagementSystemProps> =
   };
 
   // Get utilization color
-  const getUtilizationColor = (utilization: number) => {
+  const getUtilizationColor = (utilization: anynumber)  => {
     if (utilization >= 90) return 'text-red-400';
     if (utilization >= 75) return 'text-yellow-400';
     if (utilization >= 50) return 'text-blue-400';
@@ -434,8 +438,8 @@ export const ResourceManagementSystem: React.FC<ResourceManagementSystemProps> =
       {showStats && (
         <div className="mb-8">
           <h3 className="text-xl font-semibold text-white mb-4">Top Departments by Resources</h3>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-4">
-            {resourceStats.topDepartments.map((dept, index) => (
+          <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-5 gap-4">
+            {resourceStats.topDepartments.map((dept, index)  => (
               <motion.div
                 key={dept.name}
                 initial={{ opacity: 0, scale: 0.9 }}

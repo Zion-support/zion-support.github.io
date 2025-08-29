@@ -1,7 +1,6 @@
-import React, { useState } from 'react';
-import { motion } from 'framer-motion';
-import { 
-  Calculator, 
+import React, { useState } from 'react.ts';
+import { motion  } from 'framer-motion.ts';
+import { Calculator, 
   Send, 
   CheckCircle, 
   AlertCircle, 
@@ -35,9 +34,10 @@ import {
   Square,
   Info,
   HelpCircle
-} from 'lucide-react';
+ } from 'lucide-react.ts';
 
 interface QuoteForm {
+
   // Company Information
   companyName: string;
   industry: string;
@@ -71,6 +71,7 @@ interface QuoteForm {
   existingPartners: string;
   successMetrics: string;
   additionalNotes: string;
+
 }
 
 const industries = [
@@ -152,8 +153,8 @@ const teamSizes = [
   '100+ people'
 ];
 
-export default function RequestQuote() {
-  const [formData, setFormData] = useState<QuoteForm>({
+export default function RequestQuote(...args: any[]): any {
+  const [formData, setFormData] = useState<any>({
     companyName: '',
     industry: '',
     companySize: '',
@@ -182,12 +183,12 @@ export default function RequestQuote() {
 
   const [currentStep, setCurrentStep] = useState(1);
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
-  const [expandedSection, setExpandedSection] = useState<string | null>(null);
+  const [submitStatus, setSubmitStatus] = useState<any>('idle');
+  const [expandedSection, setExpandedSection] = useState<any>(null);
 
   const totalSteps = 4;
 
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+  const handleInputChange = (e: anyReact.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>)  => {
     const { name, value } = e.target;
     setFormData(prev => ({
       ...prev,
@@ -195,16 +196,16 @@ export default function RequestQuote() {
     }));
   };
 
-  const handleServiceToggle = (service: string) => {
+  const handleServiceToggle = (service: anystring)  => {
     setFormData(prev => ({
       ...prev,
-      services: prev.services.includes(service)
-        ? prev.services.filter(s => s !== service)
+      services: anyprev.services.includes(service)
+        ? prev.services.filter(s  => s !== service)
         : [...prev.services, service]
     }));
   };
 
-  const toggleSection = (section: string) => {
+  const toggleSection = (section: anystring)  => {
     setExpandedSection(expandedSection === section ? null : section);
   };
 
@@ -220,7 +221,7 @@ export default function RequestQuote() {
     }
   };
 
-  const handleSubmit = async (e: React.FormEvent) => {
+  const handleSubmit = async (e: anyReact.FormEvent)  => {
     e.preventDefault();
     setIsSubmitting(true);
     
@@ -263,7 +264,7 @@ export default function RequestQuote() {
     }, 2000);
   };
 
-  const isStepValid = (step: number) => {
+  const isStepValid = (step: anynumber)  => {
     switch (step) {
       case 1:
         return formData.companyName && formData.industry && formData.firstName && formData.lastName && formData.email;
@@ -278,7 +279,7 @@ export default function RequestQuote() {
     }
   };
 
-  const getStepIcon = (step: number) => {
+  const getStepIcon = (step: anynumber)  => {
     switch (step) {
       case 1: return <Building className="h-5 w-5" />;
       case 2: return <Target className="h-5 w-5" />;
@@ -288,7 +289,7 @@ export default function RequestQuote() {
     }
   };
 
-  const getStepTitle = (step: number) => {
+  const getStepTitle = (step: anynumber)  => {
     switch (step) {
       case 1: return 'Company & Contact';
       case 2: return 'Project Details';
@@ -325,7 +326,7 @@ export default function RequestQuote() {
           transition={{ duration: 0.6, delay: 0.1 }}
         >
           <div className="flex items-center justify-between max-w-4xl mx-auto">
-            {Array.from({ length: totalSteps }, (_, index) => (
+            {Array.from({ length: anytotalSteps }, (_, index)  => (
               <div key={index + 1} className="flex items-center">
                 <div className={`flex items-center justify-center w-12 h-12 rounded-full border-2 transition-all duration-300 ${
                   currentStep > index + 1
@@ -892,7 +893,7 @@ export default function RequestQuote() {
               <div className="w-16 h-16 bg-gradient-to-br from-zion-purple to-zion-cyan rounded-2xl flex items-center justify-center mx-auto mb-4">
                 <Award className="h-8 w-8 text-white" />
               </div>
-              <h3 className="text-white font-semibold text-lg mb-3">Proven Track Record</h3>
+              <h3 className="text-white font-semibold text-lg mb-3">Proven Track Record<string, any>
               <p className="text-zion-slate-light">
                 Successfully delivered 150+ projects with 98% client satisfaction rate.
               </p>

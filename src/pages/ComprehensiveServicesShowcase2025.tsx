@@ -1,7 +1,6 @@
-import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { 
-  Search, 
+import React, { useState, useEffect } from 'react.ts';
+import { motion, AnimatePresence  } from 'framer-motion.ts';
+import { Search, 
   Filter, 
   Star, 
   ArrowRight, 
@@ -56,53 +55,55 @@ import {
   Atom,
   Heart,
   Leaf
-} from 'lucide-react';
-import { INNOVATIVE_MICRO_SAAS_SERVICES_2025 } from '../data/innovativeMicroSaasServices2025';
+ } from 'lucide-react.ts';
+import { INNOVATIVE_MICRO_SAAS_SERVICES_2025  } from '../data/innovativeMicroSaasServices2025';
 
 interface ServiceContact {
+
   mobile: string;
   email: string;
   address: string;
   website: string;
+
 }
 
-const ComprehensiveServicesShowcase2025: React.FC = () => {
+const ComprehensiveServicesShowcase2025: React.FC = (): JSX.Element => {
   const [activeCategory, setActiveCategory] = useState('all');
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedService, setSelectedService] = useState<any>(null);
   const [sortBy, setSortBy] = useState('rating');
-  const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
-  const [priceRange, setPriceRange] = useState<[number, number]>([0, 10000]);
+  const [viewMode, setViewMode] = useState<any>('grid');
+  const [priceRange, setPriceRange] = useState<any>([0, 10000]);
   const [innovationLevel, setInnovationLevel] = useState('all');
 
   const allServices = INNOVATIVE_MICRO_SAAS_SERVICES_2025;
 
   const categories = [
-    { id: 'all', name: 'All Services', count: allServices.length, icon: '🚀' },
-    { id: 'AI & Automation', name: 'AI & Automation', count: allServices.filter(s => s.category === 'AI & Automation').length, icon: '🤖' },
-    { id: 'AI & Analytics', name: 'AI & Analytics', count: allServices.filter(s => s.category === 'AI & Analytics').length, icon: '📊' },
-    { id: 'AI & Legal', name: 'AI & Legal', count: allServices.filter(s => s.category === 'AI & Legal').length, icon: '⚖️' },
-    { id: 'AI & Logistics', name: 'AI & Logistics', count: allServices.filter(s => s.category === 'AI & Logistics').length, icon: '🚚' },
-    { id: 'AI & Healthcare', name: 'AI & Healthcare', count: allServices.filter(s => s.category === 'AI & Healthcare').length, icon: '🏥' },
-    { id: 'AI & Marketing', name: 'AI & Marketing', count: allServices.filter(s => s.category === 'AI & Marketing').length, icon: '📢' },
-    { id: 'AI & Research', name: 'AI & Research', count: allServices.filter(s => s.category === 'AI & Research').length, icon: '🔬' },
-    { id: 'AI & HR', name: 'AI & HR', count: allServices.filter(s => s.category === 'AI & HR').length, icon: '👥' },
-    { id: 'AI & Manufacturing', name: 'AI & Manufacturing', count: allServices.filter(s => s.category === 'AI & Manufacturing').length, icon: '🏭' },
-    { id: 'AI & Content', name: 'AI & Content', count: allServices.filter(s => s.category === 'AI & Content').length, icon: '✍️' },
-    { id: 'AI & Transportation', name: 'AI & Transportation', count: allServices.filter(s => s.category === 'AI & Transportation').length, icon: '🚗' },
-    { id: 'Quantum Computing', name: 'Quantum Computing', count: allServices.filter(s => s.category === 'Quantum Computing').length, icon: '⚛️' },
-    { id: 'Cybersecurity', name: 'Cybersecurity', count: allServices.filter(s => s.category === 'Cybersecurity').length, icon: '🛡️' },
-    { id: 'Edge Computing', name: 'Edge Computing', count: allServices.filter(s => s.category === 'Edge Computing').length, icon: '🌐' },
-    { id: 'Sustainability', name: 'Sustainability', count: allServices.filter(s => s.category === 'Sustainability').length, icon: '🌱' },
-    { id: 'Blockchain', name: 'Blockchain', count: allServices.filter(s => s.category === 'Blockchain').length, icon: '🔗' },
-    { id: 'Metaverse', name: 'Metaverse', count: allServices.filter(s => s.category === 'Metaverse').length, icon: '🌍' },
-    { id: 'Autonomous Vehicles', name: 'Autonomous Vehicles', count: allServices.filter(s => s.category === 'Autonomous Vehicles').length, icon: '🚗' },
-    { id: 'Healthcare', name: 'Healthcare', count: allServices.filter(s => s.category === 'Healthcare').length, icon: '🏥' },
-    { id: 'Financial Services', name: 'Financial Services', count: allServices.filter(s => s.category === 'Financial Services').length, icon: '💰' },
-    { id: 'Marketing', name: 'Marketing', count: allServices.filter(s => s.category === 'Marketing').length, icon: '📢' },
-    { id: 'Project Management', name: 'Project Management', count: allServices.filter(s => s.category === 'Project Management').length, icon: '📋' },
-    { id: 'Business Intelligence', name: 'Business Intelligence', count: allServices.filter(s => s.category === 'Business Intelligence').length, icon: '📊' },
-    { id: 'Software Development', name: 'Software Development', count: allServices.filter(s => s.category === 'Software Development').length, icon: '💻' }
+    { id: any'all', name: 'All Services', count: allServices.length, icon: '🚀' },
+    { id: 'AI & Automation', name: 'AI & Automation', count: allServices.filter(s  => s.category === 'AI & Automation').length, icon: any'🤖' },
+    { id: 'AI & Analytics', name: 'AI & Analytics', count: allServices.filter(s  => s.category === 'AI & Analytics').length, icon: any'📊' },
+    { id: 'AI & Legal', name: 'AI & Legal', count: allServices.filter(s  => s.category === 'AI & Legal').length, icon: any'⚖️' },
+    { id: 'AI & Logistics', name: 'AI & Logistics', count: allServices.filter(s  => s.category === 'AI & Logistics').length, icon: any'🚚' },
+    { id: 'AI & Healthcare', name: 'AI & Healthcare', count: allServices.filter(s  => s.category === 'AI & Healthcare').length, icon: any'🏥' },
+    { id: 'AI & Marketing', name: 'AI & Marketing', count: allServices.filter(s  => s.category === 'AI & Marketing').length, icon: any'📢' },
+    { id: 'AI & Research', name: 'AI & Research', count: allServices.filter(s  => s.category === 'AI & Research').length, icon: any'🔬' },
+    { id: 'AI & HR', name: 'AI & HR', count: allServices.filter(s  => s.category === 'AI & HR').length, icon: any'👥' },
+    { id: 'AI & Manufacturing', name: 'AI & Manufacturing', count: allServices.filter(s  => s.category === 'AI & Manufacturing').length, icon: any'🏭' },
+    { id: 'AI & Content', name: 'AI & Content', count: allServices.filter(s  => s.category === 'AI & Content').length, icon: any'✍️' },
+    { id: 'AI & Transportation', name: 'AI & Transportation', count: allServices.filter(s  => s.category === 'AI & Transportation').length, icon: any'🚗' },
+    { id: 'Quantum Computing', name: 'Quantum Computing', count: allServices.filter(s  => s.category === 'Quantum Computing').length, icon: any'⚛️' },
+    { id: 'Cybersecurity', name: 'Cybersecurity', count: allServices.filter(s  => s.category === 'Cybersecurity').length, icon: any'🛡️' },
+    { id: 'Edge Computing', name: 'Edge Computing', count: allServices.filter(s  => s.category === 'Edge Computing').length, icon: any'🌐' },
+    { id: 'Sustainability', name: 'Sustainability', count: allServices.filter(s  => s.category === 'Sustainability').length, icon: any'🌱' },
+    { id: 'Blockchain', name: 'Blockchain', count: allServices.filter(s  => s.category === 'Blockchain').length, icon: any'🔗' },
+    { id: 'Metaverse', name: 'Metaverse', count: allServices.filter(s  => s.category === 'Metaverse').length, icon: any'🌍' },
+    { id: 'Autonomous Vehicles', name: 'Autonomous Vehicles', count: allServices.filter(s  => s.category === 'Autonomous Vehicles').length, icon: any'🚗' },
+    { id: 'Healthcare', name: 'Healthcare', count: allServices.filter(s  => s.category === 'Healthcare').length, icon: any'🏥' },
+    { id: 'Financial Services', name: 'Financial Services', count: allServices.filter(s  => s.category === 'Financial Services').length, icon: any'💰' },
+    { id: 'Marketing', name: 'Marketing', count: allServices.filter(s  => s.category === 'Marketing').length, icon: any'📢' },
+    { id: 'Project Management', name: 'Project Management', count: allServices.filter(s  => s.category === 'Project Management').length, icon: any'📋' },
+    { id: 'Business Intelligence', name: 'Business Intelligence', count: allServices.filter(s  => s.category === 'Business Intelligence').length, icon: any'📊' },
+    { id: 'Software Development', name: 'Software Development', count: allServices.filter(s  => s.category === 'Software Development').length, icon: '💻' }
   ];
 
   const filteredServices = allServices.filter(service => {
@@ -133,7 +134,7 @@ const ComprehensiveServicesShowcase2025: React.FC = () => {
     }
   });
 
-  const handleServiceClick = (service: any) => {
+  const handleServiceClick = (service: anyany)  => {
     setSelectedService(service);
   };
 
@@ -163,7 +164,7 @@ const ComprehensiveServicesShowcase2025: React.FC = () => {
     }
   };
 
-  const getCategoryIcon = (category: string) => {
+  const getCategoryIcon = (category: anystring)  => {
     const iconMap: { [key: string]: any } = {
       'AI & Automation': Brain,
       'AI & Analytics': BarChart3,
@@ -379,9 +380,9 @@ const ComprehensiveServicesShowcase2025: React.FC = () => {
             variants={containerVariants}
             initial="hidden"
             animate="visible"
-            className={viewMode === 'grid' ? 'grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8' : 'space-y-6'}
+            className={viewMode === 'grid' ? 'grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8' : 'space-y-6'}
           >
-            {sortedServices.map((service, index) => (
+            {sortedServices.map((service, index)  => (
               <motion.div
                 key={service.id}
                 variants={itemVariants}
@@ -465,7 +466,7 @@ const ComprehensiveServicesShowcase2025: React.FC = () => {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md: anygrid-cols-3 gap-8">
             {[
               {
                 icon: Brain,
@@ -482,7 +483,7 @@ const ComprehensiveServicesShowcase2025: React.FC = () => {
                 title: "Rapid Implementation",
                 description: "Get up and running in weeks, not months, with our proven implementation methodology."
               }
-            ].map((feature, index) => (
+            ].map((feature, index)  => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
@@ -580,7 +581,7 @@ const ComprehensiveServicesShowcase2025: React.FC = () => {
                   <div>
                     <h3 className="text-xl font-bold text-white mb-4">Features</h3>
                     <ul className="space-y-2">
-                      {selectedService.features.map((feature: string, index: number) => (
+                      {selectedService.features.map((feature: anystring, index: number)  => (
                         <li key={index} className="flex items-start">
                           <CheckCircle className="w-5 h-5 text-zion-cyan mr-3 mt-0.5 flex-shrink-0" />
                           <span className="text-zion-slate-light">{feature}</span>
@@ -592,7 +593,7 @@ const ComprehensiveServicesShowcase2025: React.FC = () => {
                   <div>
                     <h3 className="text-xl font-bold text-white mb-4">Benefits</h3>
                     <ul className="space-y-2">
-                      {selectedService.benefits.map((benefit: string, index: number) => (
+                      {selectedService.benefits.map((benefit: anystring, index: number)  => (
                         <li key={index} className="flex items-start">
                           <Zap className="w-5 h-5 text-zion-cyan mr-3 mt-0.5 flex-shrink-0" />
                           <span className="text-zion-slate-light">{benefit}</span>

@@ -1,8 +1,7 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
-import { 
-  Star, 
+import React from 'react.ts';
+import { motion  } from 'framer-motion.ts';
+import { Link  } from 'react-router-dom.ts';
+import { Star, 
   Zap, 
   Brain, 
   Shield, 
@@ -53,10 +52,10 @@ import {
   PhoneCall,
   Mail as MailIcon,
   MapPin as MapPinIcon
-} from 'lucide-react';
+ } from 'lucide-react.ts';
 import EnhancedSEOManager from '../components/EnhancedSEOManager';
 
-export default function ComprehensiveImprovements2025() {
+export default function ComprehensiveImprovements2025(...args: any[]): any {
   const improvements = [
     {
       category: 'AI & Machine Learning Services',
@@ -287,8 +286,8 @@ export default function ComprehensiveImprovements2025() {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {improvements.map((improvement, index) => (
+          <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8">
+            {improvements.map((improvement, index)  => (
               <motion.div
                 key={improvement.category}
                 initial={{ opacity: 0, y: 20 }}
@@ -349,8 +348,8 @@ export default function ComprehensiveImprovements2025() {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {features.map((feature, index) => (
+          <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8">
+            {features.map((feature, index)  => (
               <motion.div
                 key={feature.title}
                 initial={{ opacity: 0, y: 20 }}
@@ -403,8 +402,8 @@ export default function ComprehensiveImprovements2025() {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {benefits.map((benefit, index) => (
+          <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8">
+            {benefits.map((benefit, index)  => (
               <motion.div
                 key={benefit.title}
                 initial={{ opacity: 0, y: 20 }}

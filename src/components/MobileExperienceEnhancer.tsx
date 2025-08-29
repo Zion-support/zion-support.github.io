@@ -1,7 +1,6 @@
-import React, { useState, useEffect, useCallback, useRef } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { 
-  Smartphone, 
+import React, { useState, useEffect, useCallback, useRef } from 'react.ts';
+import { motion, AnimatePresence  } from 'framer-motion.ts';
+import { Smartphone, 
   Tablet, 
   Monitor, 
   RotateCw, 
@@ -45,9 +44,10 @@ import {
   Clock,
   DoubleArrow,
   Move
-} from 'lucide-react';
+ } from 'lucide-react.ts';
 
 interface MobileSettings {
+
   touchGestures: boolean;
   orientationLock: boolean;
   mobileOptimizations: boolean;
@@ -63,9 +63,11 @@ interface MobileSettings {
   deviceOrientation: 'portrait' | 'landscape' | 'auto';
   touchSensitivity: 'low' | 'medium' | 'high';
   hapticIntensity: 'light' | 'medium' | 'strong';
+
 }
 
 interface MobileFeature {
+
   id: string;
   name: string;
   description: string;
@@ -73,20 +75,25 @@ interface MobileFeature {
   enabled: boolean;
   priority: 'high' | 'medium' | 'low';
   impact: 'high' | 'medium' | 'low';
+
 }
 
 interface TouchGesture {
+
   type: 'swipe' | 'pinch' | 'rotate' | 'longPress' | 'doubleTap' | 'shake';
   direction?: 'left' | 'right' | 'up' | 'down';
   timestamp: number;
-  coordinates: { x: number; y: number };
+  coordinates: { x: number; y: number 
+};
   intensity?: number;
 }
 
 interface DeviceInfo {
+
   type: 'mobile' | 'tablet' | 'desktop';
   platform: 'ios' | 'android' | 'web' | 'unknown';
-  screenSize: { width: number; height: number };
+  screenSize: { width: number; height: number 
+};
   pixelRatio: number;
   orientation: 'portrait' | 'landscape';
   touchSupport: boolean;
@@ -95,13 +102,9 @@ interface DeviceInfo {
   batteryLevel: number;
 }
 
-export function MobileExperienceEnhancer({ 
-  enabled = true 
-}: { 
-  enabled?: boolean; 
-}) {
+export function MobileExperienceEnhancer(...args: any[]): any {
   const [isOpen, setIsOpen] = useState(false);
-  const [settings, setSettings] = useState<MobileSettings>({
+  const [settings, setSettings] = useState<any>({
     touchGestures: true,
     orientationLock: false,
     mobileOptimizations: true,
@@ -119,7 +122,7 @@ export function MobileExperienceEnhancer({
     hapticIntensity: 'medium'
   });
 
-  const [features, setFeatures] = useState<MobileFeature[]>([
+  const [features, setFeatures] = useState<any>([
     {
       id: 'touch-gestures',
       name: 'Touch Gestures',
@@ -194,12 +197,12 @@ export function MobileExperienceEnhancer({
     }
   ]);
 
-  const [deviceInfo, setDeviceInfo] = useState<DeviceInfo | null>(null);
-  const [touchGestures, setTouchGestures] = useState<TouchGesture[]>([]);
+  const [deviceInfo, setDeviceInfo] = useState<any>(null);
+  const [touchGestures, setTouchGestures] = useState<any>([]);
   const [isOptimizing, setIsOptimizing] = useState(false);
   const [showAdvanced, setShowAdvanced] = useState(false);
   const [mobileScore, setMobileScore] = useState(0);
-  const [activeGestures, setActiveGestures] = useState<string[]>([]);
+  const [activeGestures, setActiveGestures] = useState<any>([]);
 
   const mobileRef = useRef<HTMLDivElement>(null);
   const touchStartRef = useRef<{ x: number; y: number; time: number } | null>(null);
@@ -234,7 +237,7 @@ export function MobileExperienceEnhancer({
       const deviceInfo: DeviceInfo = {
         type,
         platform,
-        screenSize: { width: screen.width, height: screen.height },
+        screenSize: any{ width: screen.width, height: screen.height },
         pixelRatio: window.devicePixelRatio || 1,
         orientation: screen.width > screen.height ? 'landscape' : 'portrait',
         touchSupport: 'ontouchstart' in window,
@@ -247,8 +250,8 @@ export function MobileExperienceEnhancer({
       
       // Get battery level if available
       if ('getBattery' in navigator) {
-        (navigator as any).getBattery().then((battery: any) => {
-          setDeviceInfo(prev => prev ? { ...prev, batteryLevel: battery.level * 100 } : null);
+        (navigator as any).getBattery().then((battery: any)  => {
+          setDeviceInfo(prev => prev ? { ...prev, batteryLevel: anybattery.level * 100 } : null);
         });
       }
     };
@@ -257,7 +260,7 @@ export function MobileExperienceEnhancer({
     window.addEventListener('resize', detectDevice);
     window.addEventListener('orientationchange', detectDevice);
     
-    return () => {
+    return ()  => {
       window.removeEventListener('resize', detectDevice);
       window.removeEventListener('orientationchange', detectDevice);
     };
@@ -267,7 +270,7 @@ export function MobileExperienceEnhancer({
   useEffect(() => {
     if (!settings.touchGestures) return;
     
-    const handleTouchStart = (e: TouchEvent) => {
+    const handleTouchStart = (e: anyTouchEvent)  => {
       if (e.touches.length === 1) {
         const touch = e.touches[0];
         touchStartRef.current = {
@@ -278,7 +281,7 @@ export function MobileExperienceEnhancer({
       }
     };
     
-    const handleTouchEnd = (e: TouchEvent) => {
+    const handleTouchEnd = (e: anyTouchEvent)  => {
       if (!touchStartRef.current || e.touches.length !== 0) return;
       
       const touch = e.changedTouches[0];
@@ -304,20 +307,20 @@ export function MobileExperienceEnhancer({
       }
       
       const gesture: TouchGesture = {
-        type: gestureType,
+        type: anygestureType,
         direction,
         timestamp: Date.now(),
         coordinates: { x: touch.clientX, y: touch.clientY },
         intensity: Math.sqrt(deltaX * deltaX + deltaY * deltaY)
       };
       
-      setTouchGestures(prev => [...prev.slice(-9), gesture]);
+      setTouchGestures(prev  => [...prev.slice(-9), gesture]);
       handleGesture(gesture);
       
       touchStartRef.current = null;
     };
     
-    const handleGesture = (gesture: TouchGesture) => {
+    const handleGesture = (gesture: anyTouchGesture)  => {
       // Handle different gesture types
       switch (gesture.type) {
         case 'swipe':
@@ -348,10 +351,10 @@ export function MobileExperienceEnhancer({
       }, 3000);
     };
     
-    document.addEventListener('touchstart', handleTouchStart, { passive: true });
+    document.addEventListener('touchstart', handleTouchStart, { passive: anytrue });
     document.addEventListener('touchend', handleTouchEnd, { passive: true });
     
-    return () => {
+    return ()  => {
       document.removeEventListener('touchstart', handleTouchStart);
       document.removeEventListener('touchend', handleTouchEnd);
     };
@@ -400,7 +403,7 @@ export function MobileExperienceEnhancer({
   }, [settings, features]);
 
   // Toggle mobile features
-  const toggleFeature = useCallback((featureId: string) => {
+  const toggleFeature = useCallback((featureId: anystring)  => {
     setFeatures(prev => prev.map(f => 
       f.id === featureId ? { ...f, enabled: !f.enabled } : f
     ));
@@ -442,7 +445,7 @@ export function MobileExperienceEnhancer({
   // Reset to default settings
   const resetSettings = useCallback(() => {
     const defaultSettings: MobileSettings = {
-      touchGestures: true,
+      touchGestures: anytrue,
       orientationLock: false,
       mobileOptimizations: true,
       pwaFeatures: true,
@@ -466,7 +469,7 @@ export function MobileExperienceEnhancer({
   }, []);
 
   // Calculate mobile score on mount and when features change
-  useEffect(() => {
+  useEffect(()  => {
     const enabledFeatures = features.filter(f => f.enabled).length;
     const totalFeatures = features.length;
     const score = Math.round((enabledFeatures / totalFeatures) * 100);
@@ -669,8 +672,8 @@ export function MobileExperienceEnhancer({
                   <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">
                     Mobile Features
                   </h3>
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                    {features.map((feature) => (
+                  <div className="grid grid-cols-1 md: anygrid-cols-2 gap-4">
+                    {features.map((feature)  => (
                       <motion.div
                         key={feature.id}
                         initial={{ opacity: 0, y: 20 }}
@@ -725,8 +728,8 @@ export function MobileExperienceEnhancer({
                     <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">
                       Recent Touch Gestures
                     </h3>
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-                      {touchGestures.slice(-6).reverse().map((gesture, index) => (
+                    <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-4">
+                      {touchGestures.slice(-6).reverse().map((gesture, index)  => (
                         <div
                           key={index}
                           className="p-4 bg-white dark:bg-zion-slate-800 rounded-xl border border-gray-200 dark:border-zion-slate-700"

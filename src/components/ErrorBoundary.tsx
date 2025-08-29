@@ -1,7 +1,6 @@
-import React, { Component, ErrorInfo, ReactNode } from 'react';
-import { motion } from 'framer-motion';
-import { 
-  AlertTriangle, 
+import React, { Component, ErrorInfo, ReactNode } from 'react.ts';
+import { motion  } from 'framer-motion.ts';
+import { AlertTriangle, 
   RefreshCw, 
   Home, 
   Bug, 
@@ -12,21 +11,25 @@ import {
   Info,
   Zap,
   CheckCircle
-} from 'lucide-react';
+ } from 'lucide-react.ts';
 
-interface Props {
-  children: ReactNode;
+interface Props extends React.PropsWithChildren<{}> {
+
+  children: anyReactNode;
   fallback?: ReactNode;
-  onError?: (error: Error, errorInfo: ErrorInfo) => void;
+  onError?: (error: Error, errorInfo: ErrorInfo)  => void;
   showDetails?: boolean;
+
 }
 
 interface State {
+
   hasError: boolean;
   error: Error | null;
   errorInfo: ErrorInfo | null;
   showStack: boolean;
   errorId: string;
+
 }
 
 export class ErrorBoundary extends Component<Props, State> {
@@ -66,7 +69,7 @@ export class ErrorBoundary extends Component<Props, State> {
     this.logErrorToService(error, errorInfo);
   }
 
-  private logErrorToService = (error: Error, errorInfo: ErrorInfo) => {
+  private logErrorToService = (error: anyError, errorInfo: ErrorInfo)  => {
     try {
       // Example: Send to error logging service
       const errorData = {
@@ -110,8 +113,7 @@ export class ErrorBoundary extends Component<Props, State> {
   private handleCopyError = () => {
     if (this.state.error && this.state.errorInfo) {
       const errorText = `
-Error Details:
-Message: ${this.state.error.message}
+Error Details: anyMessage: ${this.state.error.message}
 Stack: ${this.state.error.stack}
 Component Stack: ${this.state.errorInfo.componentStack}
 Error ID: ${this.state.errorId}
@@ -120,7 +122,7 @@ URL: ${window.location.href}
 User Agent: ${navigator.userAgent}
       `.trim();
 
-      navigator.clipboard.writeText(errorText).then(() => {
+      navigator.clipboard.writeText(errorText).then(()  => {
         // Show success feedback
         const button = document.querySelector('[data-copy-button]') as HTMLButtonElement;
         if (button) {
@@ -330,10 +332,10 @@ User Agent: ${navigator.userAgent}
 
 // Higher-order component for functional components
 export function withErrorBoundary<P extends object>(
-  Component: React.ComponentType<P>,
+  Component: anyReact.ComponentType<P>,
   errorBoundaryProps?: Omit<Props, 'children'>
 ) {
-  return function WrappedComponent(props: P) {
+  return function WrappedComponent(...args: any[]): any {
     return (
       <ErrorBoundary {...errorBoundaryProps}>
         <Component {...props} />
@@ -343,8 +345,8 @@ export function withErrorBoundary<P extends object>(
 }
 
 // Hook for functional components to catch errors
-export function useErrorHandler() {
-  return React.useCallback((error: Error, errorInfo?: ErrorInfo) => {
+export function useErrorHandler(...args: any[]): any {
+  return React.useCallback((error: Error, errorInfo?: ErrorInfo)  => {
     console.error('Error caught by useErrorHandler:', error, errorInfo);
     
     // You can add custom error handling logic here

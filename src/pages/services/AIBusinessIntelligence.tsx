@@ -1,8 +1,7 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { SEO } from '../../components/SEO';
-import { 
-  Brain, 
+import React from 'react.ts';
+import { motion  } from 'framer-motion.ts';
+import { SEO  } from '../../components/SEO';
+import { Brain, 
   BarChart3, 
   TrendingUp, 
   Users, 
@@ -20,9 +19,9 @@ import {
   PieChart,
   LineChart,
   Activity
-} from 'lucide-react';
+ } from 'lucide-react.ts';
 
-export default function AIBusinessIntelligence() {
+export default function AIBusinessIntelligence(...args: any[]): any {
   const features = [
     {
       icon: Brain,
@@ -160,8 +159,8 @@ export default function AIBusinessIntelligence() {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {features.map((feature, index) => (
+          <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8">
+            {features.map((feature, index)  => (
               <motion.div
                 key={feature.title}
                 initial={{ opacity: 0, y: 20 }}
@@ -264,8 +263,8 @@ export default function AIBusinessIntelligence() {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {useCases.map((useCase, index) => (
+          <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-6">
+            {useCases.map((useCase, index)  => (
               <motion.div
                 key={useCase.industry}
                 initial={{ opacity: 0, y: 20 }}

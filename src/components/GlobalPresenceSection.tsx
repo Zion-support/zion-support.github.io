@@ -1,5 +1,5 @@
-import React from 'react';
-import { motion } from 'framer-motion';
+import React from 'react.ts';
+import { motion  } from 'framer-motion.ts';
 
 const globalOffices = [
   {
@@ -39,7 +39,7 @@ const globalStats = [
   { label: "24/7 Support", value: "Global", icon: "⏰" }
 ];
 
-export function GlobalPresenceSection() {
+export function GlobalPresenceSection(...args: any[]): any {
   return (
     <section className="py-20 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <div className="max-w-7xl mx-auto px-6">
@@ -64,9 +64,9 @@ export function GlobalPresenceSection() {
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.6, delay: 0.2 }}
+          transition={{ duration: any0.6, delay: 0.2 }}
         >
-          {globalStats.map((stat, index) => (
+          {globalStats.map((stat, index)  => (
             <div key={stat.label} className="text-center">
               <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-purple-600 rounded-2xl flex items-center justify-center mx-auto mb-4">
                 <span className="text-2xl">{stat.icon}</span>
@@ -89,8 +89,8 @@ export function GlobalPresenceSection() {
             Strategic Global Locations
           </h3>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {globalOffices.map((office, index) => (
+          <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-4 gap-8">
+            {globalOffices.map((office, index)  => (
               <motion.div
                 key={office.city}
                 className="bg-slate-800 border border-slate-700 rounded-xl p-6 text-center hover:border-blue-500/50 transition-all duration-300 hover:shadow-lg hover:shadow-blue-500/25 group"

@@ -1,7 +1,6 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { 
-  Users, 
+import React from 'react.ts';
+import { motion  } from 'framer-motion.ts';
+import { Users, 
   MapPin, 
   Clock, 
   CheckCircle, 
@@ -27,10 +26,10 @@ import {
   Info, 
   ArrowRight,
   Globe
-} from 'lucide-react';
-import { SEO } from '../components/SEO';
+ } from 'lucide-react.ts';
+import { SEO  } from '../components/SEO';
 
-export default function OnsiteSupport() {
+export default function OnsiteSupport(...args: any[]): any {
   const supportServices = [
     {
       title: 'Technical Support',
@@ -284,8 +283,8 @@ export default function OnsiteSupport() {
             Our Onsite Support Services
           </motion.h2>
           
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-            {supportServices.map((service, index) => (
+          <div className="grid grid-cols-1 lg: anygrid-cols-2 gap-8">
+            {supportServices.map((service, index)  => (
               <motion.div
                 key={service.title}
                 initial={{ opacity: 0, y: 20 }}
@@ -328,8 +327,8 @@ export default function OnsiteSupport() {
           Service Coverage Areas
         </motion.h2>
         
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-          {coverageAreas.map((area, index) => (
+        <div className="grid grid-cols-1 lg: anygrid-cols-3 gap-8">
+          {coverageAreas.map((area, index)  => (
             <motion.div
               key={area.title}
               initial={{ opacity: 0, y: 20 }}
@@ -347,8 +346,8 @@ export default function OnsiteSupport() {
               
               <div className="space-y-4">
                 <div className="space-y-3">
-                  <h4 className="text-slate-300 font-medium">Coverage:</h4>
-                  {area.areas.map((location, idx) => (
+                  <h4 className="text-slate-300 font-medium">Coverage: any</h4>
+                  {area.areas.map((location, idx)  => (
                     <div key={idx} className="flex items-center space-x-3">
                       <CheckCircle className="w-4 h-4 text-blue-400 flex-shrink-0" />
                       <span className="text-slate-300 text-sm">{location}</span>
@@ -378,8 +377,8 @@ export default function OnsiteSupport() {
             Support Tiers & Pricing
           </motion.h2>
           
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-            {supportTiers.map((tier, index) => (
+          <div className="grid grid-cols-1 lg: anygrid-cols-3 gap-8">
+            {supportTiers.map((tier, index)  => (
               <motion.div
                 key={tier.title}
                 initial={{ opacity: 0, y: 20 }}
@@ -397,8 +396,8 @@ export default function OnsiteSupport() {
                 
                 <div className="space-y-4">
                   <div className="space-y-3">
-                    <h4 className="text-slate-300 font-medium">Features:</h4>
-                    {tier.features.map((feature, idx) => (
+                    <h4 className="text-slate-300 font-medium">Features: any</h4>
+                    {tier.features.map((feature, idx)  => (
                       <div key={idx} className="flex items-center space-x-3">
                         <CheckCircle className="w-4 h-4 text-green-400 flex-shrink-0" />
                         <span className="text-slate-300 text-sm">{feature}</span>
@@ -428,8 +427,8 @@ export default function OnsiteSupport() {
           Our Response Process
         </motion.h2>
         
-        <div className="grid grid-cols-1 md:grid-cols-5 gap-6">
-          {responseProcess.map((step, index) => (
+        <div className="grid grid-cols-1 md: anygrid-cols-5 gap-6">
+          {responseProcess.map((step, index)  => (
             <motion.div
               key={step.step}
               initial={{ opacity: 0, y: 20 }}
@@ -538,8 +537,8 @@ export default function OnsiteSupport() {
           Get Onsite Support
         </motion.h2>
         
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-          {contactInfo.map((contact, index) => (
+        <div className="grid grid-cols-1 lg: anygrid-cols-2 gap-8">
+          {contactInfo.map((contact, index)  => (
             <motion.div
               key={contact.title}
               initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}

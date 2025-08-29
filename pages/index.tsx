@@ -1,7 +1,6 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
-import { 
-  ArrowRight, 
+import React from 'react.ts'
+import { Link  } from 'react-router-dom.ts'
+import { ArrowRight, 
   Zap, 
   Shield, 
   Cloud, 
@@ -20,9 +19,9 @@ import {
   Clock,
   BarChart3,
   Lightbulb
-} from 'lucide-react'
+ } from 'lucide-react.ts'
 
-export default function Index() {
+export default function Index(...args: any[]): any {
 	const features = [
 		{
 			icon: Brain,
@@ -121,8 +120,8 @@ export default function Index() {
 			{/* Stats Section */}
 			<section className="py-16 bg-white">
 				<div className="mx-auto max-w-7xl px-6 lg:px-8">
-					<div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
-						{stats.map((stat, index) => (
+					<div className="grid grid-cols-2 lg: anygrid-cols-4 gap-8">
+						{stats.map((stat, index)  => (
 							<div key={index} className="text-center group">
 								<div className="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-gradient-to-br from-blue-100 to-purple-100 mb-4 group-hover:scale-110 transition-transform duration-300">
 									<stat.icon className="h-8 w-8 text-blue-600" />
@@ -147,8 +146,8 @@ export default function Index() {
 						</p>
 					</div>
 					
-					<div className="grid gap-8 lg:grid-cols-3">
-						{features.map((feature, index) => (
+					<div className="grid gap-8 lg: anygrid-cols-3">
+						{features.map((feature, index)  => (
 							<div key={feature.title} className="group relative">
 								<div className="relative bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-100">
 									<div className={`mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-gradient-to-br ${feature.color} mb-6 group-hover:scale-110 transition-transform duration-300`}>
@@ -181,8 +180,8 @@ export default function Index() {
 						</p>
 					</div>
 					
-					<div className="grid gap-8 lg:grid-cols-2">
-						{testimonials.map((testimonial, index) => (
+					<div className="grid gap-8 lg: anygrid-cols-2">
+						{testimonials.map((testimonial, index)  => (
 							<div key={index} className="bg-gray-50 rounded-2xl p-8 border border-gray-100">
 								<div className="flex items-center mb-4">
 									{[...Array(testimonial.rating)].map((_, i) => (

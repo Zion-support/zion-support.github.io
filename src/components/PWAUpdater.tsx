@@ -1,7 +1,7 @@
-import React, { useEffect, useState } from 'react';
-import { RefreshCw, X, CheckCircle } from 'lucide-react';
+import React, { useEffect, useState } from 'react.ts';
+import { RefreshCw, X, CheckCircle  } from 'lucide-react.ts';
 
-export function PWAUpdater() {
+export function PWAUpdater(...args: any[]): any {
   const [updateAvailable, setUpdateAvailable] = useState(false);
   const [isUpdating, setIsUpdating] = useState(false);
 

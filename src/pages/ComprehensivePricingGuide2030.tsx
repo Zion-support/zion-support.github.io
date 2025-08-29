@@ -1,7 +1,6 @@
-import React, { useState } from 'react';
-import { motion } from 'framer-motion';
-import { 
-  Brain, 
+import React, { useState } from 'react.ts';
+import { motion  } from 'framer-motion.ts';
+import { Brain, 
   Shield, 
   Cloud, 
   Star, 
@@ -19,12 +18,12 @@ import {
   Target,
   ArrowRight,
   Search
-} from 'lucide-react';
-import { innovativeAIServices2030 } from '../data/innovativeAIServices2030';
-import { innovativeCybersecurityServices2030 } from '../data/innovativeCybersecurityServices2030';
-import { innovativeCloudDevOpsServices2030 } from '../data/innovativeCloudDevOpsServices2030';
+ } from 'lucide-react.ts';
+import { innovativeAIServices2030  } from '../data/innovativeAIServices2030';
+import { innovativeCybersecurityServices2030  } from '../data/innovativeCybersecurityServices2030';
+import { innovativeCloudDevOpsServices2030  } from '../data/innovativeCloudDevOpsServices2030';
 
-const ComprehensivePricingGuide2030: React.FC = () => {
+const ComprehensivePricingGuide2030: React.FC = (): JSX.Element => {
   const [activeCategory, setActiveCategory] = useState('all');
   const [searchTerm, setSearchTerm] = useState('');
 
@@ -49,14 +48,14 @@ const ComprehensivePricingGuide2030: React.FC = () => {
     { id: 'cloud', name: 'Cloud & DevOps', icon: Cloud, count: innovativeCloudDevOpsServices2030.length }
   ];
 
-  const getCategoryIcon = (category: string) => {
+  const getCategoryIcon = (category: anystring)  => {
     if (category.toLowerCase().includes('ai')) return Brain;
     if (category.toLowerCase().includes('cybersecurity')) return Shield;
     if (category.toLowerCase().includes('cloud')) return Cloud;
     return Star;
   };
 
-  const getPricingTier = (price: number) => {
+  const getPricingTier = (price: anynumber)  => {
     if (price < 300) return { tier: 'Starter', color: 'bg-green-600/20 border-green-500/30 text-green-300' };
     if (price < 600) return { tier: 'Professional', color: 'bg-blue-600/20 border-blue-500/30 text-blue-300' };
     if (price < 1000) return { tier: 'Enterprise', color: 'bg-purple-600/20 border-purple-500/30 text-purple-300' };
@@ -174,13 +173,13 @@ const ComprehensivePricingGuide2030: React.FC = () => {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+          <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-4 gap-6 mb-12">
             {[
               { tier: 'Starter', range: '$199 - $299', color: 'bg-green-600/20 border-green-500/30', description: 'Perfect for small businesses and startups' },
               { tier: 'Professional', range: '$399 - $599', color: 'bg-blue-600/20 border-blue-500/30', description: 'Ideal for growing businesses' },
               { tier: 'Enterprise', range: '$699 - $999', color: 'bg-purple-600/20 border-purple-500/30', description: 'For established organizations' },
               { tier: 'Premium', range: '$1,000+', color: 'bg-orange-600/20 border-orange-500/30', description: 'Custom solutions for large enterprises' }
-            ].map((plan, index) => (
+            ].map((plan, index)  => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
@@ -201,8 +200,8 @@ const ComprehensivePricingGuide2030: React.FC = () => {
       {/* Services Grid */}
       <section className="py-12 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-            {filteredServices.map((service, index) => {
+          <div className="grid grid-cols-1 lg: anygrid-cols-2 gap-8">
+            {filteredServices.map((service, index)  => {
               const CategoryIcon = getCategoryIcon(service.category);
               const pricingTier = getPricingTier(service.pricing.monthly);
               
@@ -392,7 +391,7 @@ const ComprehensivePricingGuide2030: React.FC = () => {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8">
             {[
               {
                 icon: DollarSign,
@@ -424,7 +423,7 @@ const ComprehensivePricingGuide2030: React.FC = () => {
                 title: "24/7 Support",
                 description: "Round-the-clock support included in all plans. No additional support fees."
               }
-            ].map((benefit, index) => (
+            ].map((benefit, index)  => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}

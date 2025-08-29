@@ -1,8 +1,7 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
-import { 
-  Smartphone, 
+import React from 'react.ts';
+import { motion  } from 'framer-motion.ts';
+import { Link  } from 'react-router-dom.ts';
+import { Smartphone, 
   Download, 
   Zap, 
   Shield, 
@@ -38,10 +37,10 @@ import {
   Wifi as WifiIcon,
   Battery as BatteryIcon,
   Signal
-} from 'lucide-react';
-import { SEO } from '../components/SEO';
+ } from 'lucide-react.ts';
+import { SEO  } from '../components/SEO';
 
-const MobileLaunch: React.FC = () => {
+const MobileLaunch: React.FC = (): JSX.Element => {
   const features = [
     {
       title: "AI-Powered Insights",
@@ -264,8 +263,8 @@ const MobileLaunch: React.FC = () => {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {features.map((feature, index) => (
+          <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-4 gap-8">
+            {features.map((feature, index)  => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 30 }}
@@ -302,8 +301,8 @@ const MobileLaunch: React.FC = () => {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {appScreens.map((screen, index) => (
+          <div className="grid grid-cols-1 md: anygrid-cols-2 gap-8">
+            {appScreens.map((screen, index)  => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, x: index % 2 === 0 ? -30 : 30 }}
@@ -349,8 +348,8 @@ const MobileLaunch: React.FC = () => {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
-            {downloadOptions.map((option, index) => (
+          <div className="grid grid-cols-1 md: anygrid-cols-3 gap-8 max-w-4xl mx-auto">
+            {downloadOptions.map((option, index)  => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 30 }}
@@ -401,8 +400,8 @@ const MobileLaunch: React.FC = () => {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-5 gap-6 max-w-4xl mx-auto">
-            {systemRequirements.map((req, index) => (
+          <div className="grid grid-cols-1 md: anygrid-cols-5 gap-6 max-w-4xl mx-auto">
+            {systemRequirements.map((req, index)  => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, scale: 0.8 }}

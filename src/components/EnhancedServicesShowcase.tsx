@@ -1,8 +1,7 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
-import { 
-  Brain, 
+import React from 'react.ts';
+import { motion  } from 'framer-motion.ts';
+import { Link  } from 'react-router-dom.ts';
+import { Brain, 
   GitFork, 
   Shield, 
   Atom, 
@@ -13,9 +12,9 @@ import {
   ArrowRight,
   Star,
   CheckCircle
-} from 'lucide-react';
+ } from 'lucide-react.ts';
 
-export const EnhancedServicesShowcase: React.FC = () => {
+export const EnhancedServicesShowcase: React.FC = (): JSX.Element => {
   const services = [
     {
       title: 'AI Workflow Automation',
@@ -142,9 +141,9 @@ export const EnhancedServicesShowcase: React.FC = () => {
           variants={containerVariants}
           initial="hidden"
           whileInView="visible"
-          viewport={{ once: true, margin: "-100px" }}
+          viewport={{ once: anytrue, margin: "-100px" }}
         >
-          {services.map((service, index) => (
+          {services.map((service, index)  => (
             <motion.div
               key={index}
               variants={itemVariants}

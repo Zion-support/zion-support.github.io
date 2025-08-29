@@ -1,8 +1,7 @@
-import React, { useState } from 'react';
-import { motion } from 'framer-motion';
-import { Helmet } from 'react-helmet-async';
-import { 
-  MessageCircle, 
+import React, { useState } from 'react.ts';
+import { motion  } from 'framer-motion.ts';
+import { Helmet  } from 'react-helmet-async.ts';
+import { MessageCircle, 
   Mail, 
   Phone, 
   Clock, 
@@ -28,9 +27,9 @@ import {
   MessageSquare,
   VideoCall,
   Mailbox
-} from 'lucide-react';
+ } from 'lucide-react.ts';
 
-const Support = () => {
+const Support: [any, React.Dispatch<React.SetStateAction<any>>] = () => {
   const [selectedCategory, setSelectedCategory] = useState('general');
   const [contactMethod, setContactMethod] = useState('email');
 
@@ -258,8 +257,8 @@ const Support = () => {
                 How Can We Help You?
               </h2>
               
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-                {supportMethods.map((method, index) => (
+              <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-4 gap-6">
+                {supportMethods.map((method, index)  => (
                   <motion.div
                     key={method.id}
                     initial={{ opacity: 0, y: 20 }}
@@ -298,8 +297,8 @@ const Support = () => {
                 Quick Actions
               </h2>
               
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-                {quickActions.map((action, index) => (
+              <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-4 gap-6">
+                {quickActions.map((action, index)  => (
                   <motion.div
                     key={action.title}
                     initial={{ opacity: 0, y: 20 }}
@@ -334,8 +333,8 @@ const Support = () => {
                 Support Categories
               </h2>
               
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                {supportCategories.map((category, index) => (
+              <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-6">
+                {supportCategories.map((category, index)  => (
                   <motion.div
                     key={category.id}
                     initial={{ opacity: 0, y: 20 }}
@@ -414,9 +413,9 @@ const Support = () => {
                         required
                         value={selectedCategory}
                         onChange={(e) => setSelectedCategory(e.target.value)}
-                        className="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                        className="w-full px-4 py-3 border border-slate-300 rounded-lg focus: anyring-2 focus:ring-blue-500 focus:border-transparent"
                       >
-                        {supportCategories.map((category) => (
+                        {supportCategories.map((category)  => (
                           <option key={category.id} value={category.id}>
                             {category.name}
                           </option>

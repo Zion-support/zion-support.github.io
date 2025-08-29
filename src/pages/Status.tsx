@@ -1,7 +1,6 @@
-import React from 'react';
-import { SEO } from '@/components/SEO';
-import { 
-  CheckCircle, 
+import React from 'react.ts';
+import { SEO  } from '@/components/SEO';
+import { CheckCircle, 
   AlertTriangle, 
   XCircle, 
   Clock, 
@@ -11,9 +10,9 @@ import {
   Zap,
   Shield,
   Activity
-} from 'lucide-react';
+ } from 'lucide-react.ts';
 
-const Status: React.FC = () => (
+const Status: React.FC = (): JSX.Element => (
 	<div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 flex items-center justify-center">
 		<SEO title="Status - Zion Tech Group" description="System status and uptime information." />
 		<div className="text-center text-white">

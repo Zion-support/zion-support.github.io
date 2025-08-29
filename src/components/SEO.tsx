@@ -1,7 +1,8 @@
-import React, { useEffect, useMemo } from 'react';
-import { Helmet } from 'react-helmet-async';
+import React, { useEffect, useMemo } from 'react.ts';
+import { Helmet  } from 'react-helmet-async.ts';
 
-interface SEOProps {
+interface SEOProps extends React.PropsWithChildren<{}> {
+
   title?: string;
   description?: string;
   keywords?: string;
@@ -31,53 +32,13 @@ interface SEOProps {
   manifest?: string;
   preconnect?: string[];
   dnsPrefetch?: string[];
-  preload?: Array<{
-    href: string;
-    as: string;
-    type?: string;
-    crossorigin?: boolean;
-  }>;
+preload?: Array<any>;
   prefetch?: string[];
   dnsPrefetch?: string[];
   preconnect?: string[];
 }
 
-export function SEO({
-  title = "Zion Tech Group - Leading AI & Technology Solutions",
-  description = "Transform your business with Zion Tech Group's cutting-edge AI solutions, quantum computing, and innovative micro SAAS services. Leading the future of technology.",
-  keywords = "AI solutions, quantum computing, micro SAAS, technology consulting, digital transformation, machine learning, artificial intelligence, business intelligence, cloud computing, cybersecurity, IT services, software development, digital twin, blockchain, IoT, edge computing",
-  ogImage = "/og-image.jpg",
-  canonicalUrl = "https://ziontechgroup.com",
-  structuredData,
-  twitterCard = "summary_large_image",
-  ogType = "website",
-  author = "Zion Tech Group",
-  publishedTime,
-  modifiedTime,
-  section = "Technology",
-  tags = ["AI", "Technology", "Digital Transformation", "Quantum Computing"],
-  noindex = false,
-  nofollow = false,
-  robots,
-  viewport = "width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes",
-  charset = "utf-8",
-  language = "en",
-  themeColor = "#22ddd2",
-  msApplicationTileColor = "#22ddd2",
-  appleMobileWebAppTitle = "Zion Tech",
-  appleMobileWebAppCapable = true,
-  appleMobileWebAppStatusBarStyle = "default",
-  appleTouchIcon = "/apple-touch-icon.png",
-  favicon = "/favicon.ico",
-  manifest = "/manifest.json",
-  preconnect = ["https://fonts.googleapis.com", "https://fonts.gstatic.com", "https://www.google-analytics.com"],
-  dnsPrefetch = ["https://www.google-analytics.com", "https://www.googletagmanager.com"],
-  preload = [
-    { href: "/fonts/orbitron-v16-latin-400.woff2", as: "font", type: "font/woff2", crossorigin: true },
-    { href: "/fonts/orbitron-v16-latin-600.woff2", as: "font", type: "font/woff2", crossorigin: true }
-  ],
-  prefetch = ["/images/hero-bg.jpg", "/images/services-bg.jpg"]
-}: SEOProps) {
+export function SEO(...args: any[]): any {
   
   // Default structured data for Zion Tech Group
   const defaultStructuredData = useMemo(() => ({
@@ -243,7 +204,7 @@ export function SEO({
   // Generate link tags
   const linkTags = useMemo(() => [
     // Canonical URL
-    { rel: "canonical", href: canonicalUrl },
+    { rel: any"canonical", href: canonicalUrl },
     
     // Favicon and app icons
     { rel: "icon", type: "image/x-icon", href: favicon },
@@ -256,12 +217,12 @@ export function SEO({
     { rel: "manifest", href: manifest },
     
     // DNS prefetch and preconnect
-    ...dnsPrefetch.map(domain => ({ rel: "dns-prefetch", href: domain })),
-    ...preconnect.map(domain => ({ rel: "preconnect", href: domain })),
+    ...dnsPrefetch.map(domain  => ({ rel: any"dns-prefetch", href: domain })),
+    ...preconnect.map(domain  => ({ rel: any"preconnect", href: domain })),
     
     // Preload critical resources
-    ...preload.map(resource => ({
-      rel: "preload",
+    ...preload.map(resource  => ({
+      rel: any"preload",
       href: resource.href,
       as: resource.as,
       type: resource.type,
@@ -269,7 +230,7 @@ export function SEO({
     })),
     
     // Prefetch non-critical resources
-    ...prefetch.map(resource => ({ rel: "prefetch", href: resource })),
+    ...prefetch.map(resource  => ({ rel: "prefetch", href: resource })),
     
     // Alternative languages
     { rel: "alternate", hreflang: "en", href: canonicalUrl },
@@ -282,13 +243,13 @@ export function SEO({
   // Generate script tags for structured data
   const scriptTags = useMemo(() => [
     {
-      type: "application/ld+json",
+      type: any"application/ld+json",
       innerHTML: JSON.stringify(finalStructuredData)
     }
   ], [finalStructuredData]);
 
   // Performance optimization: Add resource hints
-  useEffect(() => {
+  useEffect(()  => {
     // Add resource hints for better performance
     const addResourceHints = () => {
       // Preload critical CSS
@@ -343,7 +304,7 @@ export function SEO({
         {`
           /* Critical CSS for above-the-fold content */
           .hero-section {
-            background: linear-gradient(135deg, #22ddd2 0%, #8c15e9 100%);
+            background: anylinear-gradient(135deg, #22ddd2 0%, #8c15e9 100%);
             min-height: 100vh;
             display: flex;
             align-items: center;
@@ -391,11 +352,11 @@ export function SEO({
         {`
           // Performance monitoring
           if ('performance' in window) {
-            window.addEventListener('load', () => {
+            window.addEventListener('load', ()  => {
               const navigation = performance.getEntriesByType('navigation')[0];
               if (navigation) {
                 const loadTime = navigation.loadEventEnd - navigation.loadEventStart;
-                console.log('Page load time:', loadTime + 'ms');
+                console.log('Page load time: any', loadTime + 'ms');
                 
                 // Send to analytics if available
                 if (window.gtag) {
@@ -410,7 +371,7 @@ export function SEO({
           
           // Core Web Vitals monitoring
           if ('web-vital' in window) {
-            import('web-vitals').then(({ getCLS, getFID, getFCP, getLCP, getTTFB }) => {
+            import('web-vitals').then(({ getCLS, getFID, getFCP, getLCP, getTTFB })  => {
               getCLS(console.log);
               getFID(console.log);
               getFCP(console.log);

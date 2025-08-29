@@ -1,8 +1,7 @@
-import React, { useState, useEffect, useCallback } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { Link } from 'react-router-dom';
-import { 
-  ArrowRight, 
+import React, { useState, useEffect, useCallback } from 'react.ts';
+import { motion, AnimatePresence  } from 'framer-motion.ts';
+import { Link  } from 'react-router-dom.ts';
+import { ArrowRight, 
   Play, 
   Star, 
   Shield, 
@@ -14,19 +13,20 @@ import {
   Users,
   Globe,
   Rocket
-} from 'lucide-react';
+ } from 'lucide-react.ts';
 
-interface HeroProps {
+interface HeroProps extends React.PropsWithChildren<{}> {
+
   title?: string;
   subtitle?: string;
   description?: string;
   ctaText?: string;
   ctaLink?: string;
-  features?: Array<{
-    icon: React.ComponentType<any>;
+features?: Array<any>;
     text: string;
     color: string;
-  }>;
+  
+}>;
 }
 
 const PerformanceOptimizedHero: React.FC<HeroProps> = ({
@@ -36,12 +36,12 @@ const PerformanceOptimizedHero: React.FC<HeroProps> = ({
   ctaText = "Explore Our Services",
   ctaLink = "/services",
   features = [
-    { icon: Brain, text: "AI-Powered Solutions", color: "from-purple-500 to-pink-500" },
+    { icon: anyBrain, text: "AI-Powered Solutions", color: "from-purple-500 to-pink-500" },
     { icon: Cloud, text: "Cloud Infrastructure", color: "from-blue-500 to-cyan-500" },
     { icon: Shield, text: "Cybersecurity", color: "from-green-500 to-emerald-500" },
     { icon: Zap, text: "Digital Transformation", color: "from-yellow-500 to-orange-500" }
   ]
-}) => {
+})  => {
   const [currentFeature, setCurrentFeature] = useState(0);
   const [isVisible, setIsVisible] = useState(false);
 

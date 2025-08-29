@@ -1,8 +1,7 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { SEO } from '../../components/SEO';
-import {
-  BarChart3,
+import React from 'react.ts';
+import { motion  } from 'framer-motion.ts';
+import { SEO  } from '../../components/SEO';
+import { BarChart3,
   Brain,
   Target,
   Zap,
@@ -24,9 +23,9 @@ import {
   PieChart,
   LineChart,
   Activity
-} from 'lucide-react';
+ } from 'lucide-react.ts';
 
-export default function AIDataAnalytics() {
+export default function AIDataAnalytics(...args: any[]): any {
   const features = [
     {
       icon: Brain,
@@ -197,8 +196,8 @@ export default function AIDataAnalytics() {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {features.map((feature, index) => (
+          <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8">
+            {features.map((feature, index)  => (
               <motion.div
                 key={feature.title}
                 initial={{ opacity: 0, y: 20 }}
@@ -301,8 +300,8 @@ export default function AIDataAnalytics() {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {analyticsTypes.map((analyticsType, index) => (
+          <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-6">
+            {analyticsTypes.map((analyticsType, index)  => (
               <motion.div
                 key={analyticsType.type}
                 initial={{ opacity: 0, y: 20 }}
@@ -341,8 +340,8 @@ export default function AIDataAnalytics() {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {useCases.map((useCase, index) => (
+          <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-6">
+            {useCases.map((useCase, index)  => (
               <motion.div
                 key={useCase.industry}
                 initial={{ opacity: 0, y: 20 }}

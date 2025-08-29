@@ -1,7 +1,6 @@
-import React, { useEffect, useState, useRef } from 'react';
-import { motion, AnimatePresence, useScroll, useTransform } from 'framer-motion';
-import { 
-  Sparkles, 
+import React, { useEffect, useState, useRef } from 'react.ts';
+import { motion, AnimatePresence, useScroll, useTransform  } from 'framer-motion.ts';
+import { Sparkles, 
   Zap, 
   Star, 
   Palette, 
@@ -9,9 +8,10 @@ import {
   Layers,
   Settings,
   X
-} from 'lucide-react';
+ } from 'lucide-react.ts';
 
 interface UISettings {
+
   glassmorphism: boolean;
   particleEffects: boolean;
   smoothScrolling: boolean;
@@ -19,11 +19,12 @@ interface UISettings {
   modernShadows: boolean;
   colorThemes: boolean;
   depthLayers: boolean;
+
 }
 
-export const ModernUIEnhancer: React.FC = () => {
+export const ModernUIEnhancer: React.FC = (): JSX.Element => {
   const [isOpen, setIsOpen] = useState(false);
-  const [settings, setSettings] = useState<UISettings>({
+  const [settings, setSettings] = useState<any>({
     glassmorphism: true,
     particleEffects: true,
     smoothScrolling: true,
@@ -34,7 +35,7 @@ export const ModernUIEnhancer: React.FC = () => {
   });
   
   const [activeTheme, setActiveTheme] = useState('default');
-  const [particles, setParticles] = useState<Array<{ id: number; x: number; y: number; vx: number; vy: number }>>([]);
+  const [particles, setParticles] = useState<Array<any>>([]);
   const containerRef = useRef<HTMLDivElement>(null);
   const { scrollY } = useScroll();
   const y = useTransform(scrollY, [0, 1000], [0, -200]);
@@ -397,11 +398,11 @@ export const ModernUIEnhancer: React.FC = () => {
     root.className = root.className.replace(/ui-enhanced|glassmorphism-enabled|enhanced-animations|modern-shadows|depth-layers|color-themes|theme-\w+/g, '');
   };
 
-  const toggleSetting = (setting: keyof UISettings) => {
+  const toggleSetting = (setting: anykeyof UISettings)  => {
     setSettings(prev => ({ ...prev, [setting]: !prev[setting] }));
   };
 
-  const changeTheme = (theme: string) => {
+  const changeTheme = (theme: anystring)  => {
     setActiveTheme(theme);
   };
 

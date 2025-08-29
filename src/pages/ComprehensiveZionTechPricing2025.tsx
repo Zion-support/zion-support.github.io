@@ -1,9 +1,9 @@
-import React, { useState } from 'react';
-import { ENHANCED_ZION_TECH_SERVICES_2025, getEnhancedServiceCategories } from '../data/enhancedZionTechServices2025';
+import React, { useState } from 'react.ts';
+import { ENHANCED_ZION_TECH_SERVICES_2025, getEnhancedServiceCategories  } from '../data/enhancedZionTechServices2025';
 
-const ComprehensiveZionTechPricing2025: React.FC = () => {
-  const [selectedCategory, setSelectedCategory] = useState<string>('All');
-  const [billingCycle, setBillingCycle] = useState<'monthly' | 'yearly'>('monthly');
+const ComprehensiveZionTechPricing2025: React.FC = (): JSX.Element => {
+  const [selectedCategory, setSelectedCategory] = useState<any>('All');
+  const [billingCycle, setBillingCycle] = useState<any>('monthly');
 
   const categories = ['All', ...getEnhancedServiceCategories()];
   
@@ -11,14 +11,14 @@ const ComprehensiveZionTechPricing2025: React.FC = () => {
     selectedCategory === 'All' || service.category === selectedCategory
   );
 
-  const getPrice = (service: any) => {
+  const getPrice = (service: anyany)  => {
     if (billingCycle === 'yearly' && service.pricing?.yearly) {
       return service.pricing.yearly;
     }
     return service.price;
   };
 
-  const getSavings = (service: any) => {
+  const getSavings = (service: anyany)  => {
     if (billingCycle === 'yearly' && service.pricing?.yearly) {
       return (service.price * 12 - service.pricing.yearly).toLocaleString();
     }
@@ -108,8 +108,8 @@ const ComprehensiveZionTechPricing2025: React.FC = () => {
 
       {/* Pricing Grid */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {filteredServices.map((service) => (
+        <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8">
+          {filteredServices.map((service)  => (
             <div key={service.id} className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 hover:bg-white/10 transition-all duration-300 hover:scale-105">
               {/* Service Header */}
               <div className="text-center mb-6">

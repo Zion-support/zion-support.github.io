@@ -1,7 +1,7 @@
 // React import removed as it's not needed in modern React
-import { SEO } from '@/components/SEO';
+import { SEO  } from '@/components/SEO';
 
-export default function HealthcareSolutions() {
+export default function HealthcareSolutions(...args: any[]): any {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white">
       <SEO title="Healthcare Solutions - Zion Tech Group" description="Clinical AI, patient analytics, secure interoperability, and compliance-ready platforms." />

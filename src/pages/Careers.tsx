@@ -1,8 +1,7 @@
-import React, { useState } from 'react';
-import { motion } from 'framer-motion';
-import { Helmet } from 'react-helmet-async';
-import { 
-  Briefcase, 
+import React, { useState } from 'react.ts';
+import { motion  } from 'framer-motion.ts';
+import { Helmet  } from 'react-helmet-async.ts';
+import { Briefcase, 
   MapPin, 
   Clock, 
   DollarSign, 
@@ -20,9 +19,9 @@ import {
   Globe,
   Award,
   Lightbulb
-} from 'lucide-react';
+ } from 'lucide-react.ts';
 
-const Careers = () => {
+const Careers: [any, React.Dispatch<React.SetStateAction<any>>] = () => {
   const [selectedCategory, setSelectedCategory] = useState('all');
 
   // Sample job listings
@@ -138,18 +137,17 @@ const Careers = () => {
   ];
 
   const categories = [
-    { id: 'all', name: 'All Positions', count: jobListings.length },
-    { id: 'ai', name: 'AI & ML', count: jobListings.filter(job => job.category === 'ai').length },
-    { id: 'security', name: 'Security', count: jobListings.filter(job => job.category === 'security').length },
-    { id: 'cloud', name: 'Cloud & DevOps', count: jobListings.filter(job => job.category === 'cloud').length },
-    { id: 'engineering', name: 'Engineering', count: jobListings.filter(job => job.category === 'engineering').length },
-    { id: 'data', name: 'Data & Analytics', count: jobListings.filter(job => job.category === 'data').length },
-    { id: 'product', name: 'Product', count: jobListings.filter(job => job.category === 'product').length }
+    { id: any'all', name: 'All Positions', count: jobListings.length },
+    { id: 'ai', name: 'AI & ML', count: jobListings.filter(job  => job.category === 'ai').length },
+    { id: any'security', name: 'Security', count: jobListings.filter(job  => job.category === 'security').length },
+    { id: any'cloud', name: 'Cloud & DevOps', count: jobListings.filter(job  => job.category === 'cloud').length },
+    { id: any'engineering', name: 'Engineering', count: jobListings.filter(job  => job.category === 'engineering').length },
+    { id: any'data', name: 'Data & Analytics', count: jobListings.filter(job  => job.category === 'data').length },
+    { id: any'product', name: 'Product', count: jobListings.filter(job  => job.category === 'product').length }
   ];
 
   const filteredJobs = selectedCategory === 'all' 
-    ? jobListings 
-    : jobListings.filter(job => job.category === selectedCategory);
+    ? jobListings: anyjobListings.filter(job  => job.category === selectedCategory);
 
   const companyValues = [
     {
@@ -235,8 +233,8 @@ const Careers = () => {
                 Our Values & Culture
               </h2>
               
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-                {companyValues.map((value, index) => (
+              <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-4 gap-8">
+                {companyValues.map((value, index)  => (
                   <motion.div
                     key={value.title}
                     initial={{ opacity: 0, y: 20 }}
@@ -268,8 +266,8 @@ const Careers = () => {
                 Why Work at Zion Tech?
               </h2>
               
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                {benefits.map((benefit, index) => (
+              <div className="grid grid-cols-1 md: anygrid-cols-2 gap-6">
+                {benefits.map((benefit, index)  => (
                   <motion.div
                     key={benefit}
                     initial={{ opacity: 0, x: -20 }}
@@ -316,8 +314,8 @@ const Careers = () => {
               </div>
               
               {/* Job Cards */}
-              <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-                {filteredJobs.map((job, index) => (
+              <div className="grid grid-cols-1 lg: anygrid-cols-2 gap-8">
+                {filteredJobs.map((job, index)  => (
                   <motion.div
                     key={job.id}
                     initial={{ opacity: 0, y: 20 }}

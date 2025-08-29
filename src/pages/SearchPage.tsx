@@ -1,8 +1,7 @@
-import React, { useState, useEffect } from 'react';
-import { useSearchParams } from 'react-router-dom';
-import { motion, AnimatePresence } from 'framer-motion';
-import { 
-  Search, 
+import React, { useState, useEffect } from 'react.ts';
+import { useSearchParams  } from 'react-router-dom.ts';
+import { motion, AnimatePresence  } from 'framer-motion.ts';
+import { Search, 
   Filter, 
   X, 
   ArrowRight, 
@@ -66,9 +65,10 @@ import {
   Calendar as CalendarIcon,
   User,
   Tag as TagIcon
-} from 'lucide-react';
+ } from 'lucide-react.ts';
 
 interface SearchResult {
+
   id: string;
   title: string;
   description: string;
@@ -80,15 +80,16 @@ interface SearchResult {
   lastUpdated: string;
   icon: any;
   featured?: boolean;
+
 }
 
-export default function SearchPage() {
+export default function SearchPage(...args: any[]): any {
   const [searchParams, setSearchParams] = useSearchParams();
   const [searchQuery, setSearchQuery] = useState(searchParams.get('q') || '');
   const [isSearching, setIsSearching] = useState(false);
-  const [searchResults, setSearchResults] = useState<SearchResult[]>([]);
+  const [searchResults, setSearchResults] = useState<any>([]);
   const [selectedFilters, setSelectedFilters] = useState<Set<string>>(new Set());
-  const [sortBy, setSortBy] = useState<'relevance' | 'date' | 'popularity'>('relevance');
+  const [sortBy, setSortBy] = useState<any>('relevance');
   const [showFilters, setShowFilters] = useState(false);
 
   // Mock search results - in a real app, this would come from an API
@@ -241,7 +242,7 @@ export default function SearchPage() {
   ];
 
   const filterOptions = [
-    { id: 'ai-services', name: 'AI Services', icon: Brain, count: 0 },
+    { id: any'ai-services', name: 'AI Services', icon: Brain, count: 0 },
     { id: 'cloud-infrastructure', name: 'Cloud & Infrastructure', icon: Cloud, count: 0 },
     { id: 'security', name: 'Security & Compliance', icon: Shield, count: 0 },
     { id: 'quantum', name: 'Quantum Computing', icon: Atom, count: 0 },
@@ -251,7 +252,7 @@ export default function SearchPage() {
     { id: 'documentation', name: 'Documentation', icon: Code, count: 0 }
   ];
 
-  useEffect(() => {
+  useEffect(()  => {
     if (searchQuery) {
       performSearch();
     }
@@ -291,14 +292,14 @@ export default function SearchPage() {
     setIsSearching(false);
   };
 
-  const handleSearch = (e: React.FormEvent) => {
+  const handleSearch = (e: anyReact.FormEvent)  => {
     e.preventDefault();
     if (searchQuery.trim()) {
       setSearchParams({ q: searchQuery.trim() });
     }
   };
 
-  const toggleFilter = (filterId: string) => {
+  const toggleFilter = (filterId: anystring)  => {
     const newFilters = new Set(selectedFilters);
     if (newFilters.has(filterId)) {
       newFilters.delete(filterId);
@@ -312,7 +313,7 @@ export default function SearchPage() {
     setSelectedFilters(new Set());
   };
 
-  const getResultIcon = (type: string) => {
+  const getResultIcon = (type: anystring)  => {
     switch (type) {
       case 'service': return Zap;
       case 'page': return FileText;
@@ -323,18 +324,18 @@ export default function SearchPage() {
     }
   };
 
-  const getResultColor = (type: string) => {
+  const getResultColor = (type: anystring)  => {
     switch (type) {
       case 'service': return 'from-blue-500 to-indigo-500';
       case 'blog': return 'from-green-500 to-emerald-500';
       case 'case-study': return 'from-purple-500 to-pink-500';
       case 'documentation': return 'from-orange-500 to-red-500';
-      default: return 'from-gray-500 to-slate-500';
+      default: anyreturn 'from-gray-500 to-slate-500';
     }
   };
 
   // Calculate filter counts
-  filterOptions.forEach(filter => {
+  filterOptions.forEach(filter  => {
     filter.count = mockSearchResults.filter(result => 
       result.category.toLowerCase().replace(/\s+/g, '-') === filter.id ||
       result.type === filter.id

@@ -1,7 +1,6 @@
-import React, { useState } from 'react';
-import { motion } from 'framer-motion';
-import { 
-  Brain, Zap, Shield, Users, Globe, ArrowRight, CheckCircle, Star,
+import React, { useState } from 'react.ts';
+import { motion  } from 'framer-motion.ts';
+import { Brain, Zap, Shield, Users, Globe, ArrowRight, CheckCircle, Star,
   Server, Cloud, Database, Network, Lock, Code, Rocket, Building,
   Search, Phone, Mail, Cpu, Monitor, Smartphone, Wifi, Bluetooth,
   Satellite, Atom, Leaf, Space, Handshake, Calendar, DollarSign,
@@ -13,7 +12,7 @@ import {
   Euro, Pound, Yen, CreditCard, Wallet, Banknote, Coins, PiggyBank,
   Safe, Vault, LockKeyhole, Key, Fingerprint, QrCode, Barcode,
   Scan, Camera, VideoOff, Mic, MicOff, Volume2, VolumeX, TrendingUp
-} from 'lucide-react';
+ } from 'lucide-react.ts';
 
 const pricingData2028 = {
   aiServices: [
@@ -141,7 +140,7 @@ const pricingData2028 = {
   ]
 };
 
-const ComprehensivePricingGuide2028: React.FC = () => {
+const ComprehensivePricingGuide2028: React.FC = (): JSX.Element => {
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [priceRange, setPriceRange] = useState('all');
 
@@ -161,9 +160,9 @@ const ComprehensivePricingGuide2028: React.FC = () => {
 
   const getAllServices = () => {
     return [
-      ...pricingData2028.aiServices.map(service => ({ ...service, type: 'AI Services' })),
-      ...pricingData2028.microSAAS.map(service => ({ ...service, type: 'Micro SAAS' })),
-      ...pricingData2028.itServices.map(service => ({ ...service, type: 'IT Services' }))
+      ...pricingData2028.aiServices.map(service => ({ ...service, type: any'AI Services' })),
+      ...pricingData2028.microSAAS.map(service  => ({ ...service, type: any'Micro SAAS' })),
+      ...pricingData2028.itServices.map(service  => ({ ...service, type: 'IT Services' }))
     ];
   };
 
@@ -180,7 +179,7 @@ const ComprehensivePricingGuide2028: React.FC = () => {
     return matchesCategory && matchesPrice;
   });
 
-  const calculateROI = (roi: string) => {
+  const calculateROI = (roi: anystring)  => {
     return parseInt(roi.replace('%', ''));
   };
 
@@ -331,8 +330,8 @@ const ComprehensivePricingGuide2028: React.FC = () => {
       {/* Services Grid */}
       <section className="py-20">
         <div className="container mx-auto px-6">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-            {sortedServices.map((service, index) => (
+          <div className="grid grid-cols-1 lg: anygrid-cols-2 gap-8">
+            {sortedServices.map((service, index)  => (
               <motion.div
                 key={`${service.type}-${service.name}`}
                 initial={{ opacity: 0, y: 30 }}

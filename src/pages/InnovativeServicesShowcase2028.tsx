@@ -1,7 +1,6 @@
-import React, { useState, useEffect } from 'react';
-import { motion } from 'framer-motion';
-import { 
-  Brain, 
+import React, { useState, useEffect } from 'react.ts';
+import { motion  } from 'framer-motion.ts';
+import { Brain, 
   Shield, 
   Cloud, 
   Zap, 
@@ -38,13 +37,13 @@ import {
   Eye as EyeIcon,
   Sparkles as SparklesIcon,
   Zap as ZapIcon
-} from 'lucide-react';
-import { ADVANCED_AI_SERVICES_2028 } from '../data/advancedAIServices2028';
-import { COMPREHENSIVE_IT_INFRASTRUCTURE_2028 } from '../data/comprehensiveITInfrastructure2028';
-import { INNOVATIVE_MICRO_SAAS_SERVICES_2028 } from '../data/innovativeMicroSaasServices2028';
-import { comprehensivePricingGuide2028 } from '../data/comprehensivePricingGuide2028';
+ } from 'lucide-react.ts';
+import { ADVANCED_AI_SERVICES_2028  } from '../data/advancedAIServices2028';
+import { COMPREHENSIVE_IT_INFRASTRUCTURE_2028  } from '../data/comprehensiveITInfrastructure2028';
+import { INNOVATIVE_MICRO_SAAS_SERVICES_2028  } from '../data/innovativeMicroSaasServices2028';
+import { comprehensivePricingGuide2028  } from '../data/comprehensivePricingGuide2028';
 
-const InnovativeServicesShowcase2028: React.FC = () => {
+const InnovativeServicesShowcase2028: React.FC = (): JSX.Element => {
   const [activeCategory, setActiveCategory] = useState('all');
   const [searchTerm, setSearchTerm] = useState('');
 
@@ -200,9 +199,9 @@ const InnovativeServicesShowcase2028: React.FC = () => {
             variants={containerVariants}
             initial="hidden"
             animate="visible"
-            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+            className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8"
           >
-            {filteredServices.map((service, index) => (
+            {filteredServices.map((service, index)  => (
               <motion.div
                 key={service.id}
                 variants={itemVariants}
@@ -285,8 +284,8 @@ const InnovativeServicesShowcase2028: React.FC = () => {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {comprehensivePricingGuide2028.slice(0, 3).map((item, index) => (
+          <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8">
+            {comprehensivePricingGuide2028.slice(0, 3).map((item, index)  => (
               <motion.div
                 key={item.id}
                 initial={{ opacity: 0, y: 20 }}

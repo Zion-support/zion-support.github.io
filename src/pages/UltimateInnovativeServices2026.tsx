@@ -1,8 +1,7 @@
-import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { Link } from 'react-router-dom';
-import { 
-  Brain, 
+import React, { useState, useEffect } from 'react.ts';
+import { motion, AnimatePresence  } from 'framer-motion.ts';
+import { Link  } from 'react-router-dom.ts';
+import { Brain, 
   Cloud, 
   Shield, 
   Server, 
@@ -55,16 +54,16 @@ import {
   Smartphone,
   Globe2,
   Leaf
-} from 'lucide-react';
-import { SEO } from "@/components/SEO";
-import { ULTIMATE_INNOVATIVE_SERVICES_2026 } from "@/data/ultimateInnovativeServices2026";
+ } from 'lucide-react.ts';
+import { SEO  } from '@/components/SEO';
+import { ULTIMATE_INNOVATIVE_SERVICES_2026  } from '@/data/ultimateInnovativeServices2026';
 
-export default function UltimateInnovativeServices2026() {
+export default function UltimateInnovativeServices2026(...args: any[]): any {
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [selectedPriceRange, setSelectedPriceRange] = useState('all');
   const [sortBy, setSortBy] = useState('featured');
-  const [expandedService, setExpandedService] = useState<string | null>(null);
+  const [expandedService, setExpandedService] = useState<any>(null);
 
   const categories = [
     { id: 'all', name: 'All Services', icon: Zap, color: 'from-zion-cyan to-zion-blue' },
@@ -96,12 +95,12 @@ export default function UltimateInnovativeServices2026() {
     { id: 'roi', name: 'ROI Potential' }
   ];
 
-  const getCategoryIcon = (category: string) => {
+  const getCategoryIcon = (category: anystring)  => {
     const cat = categories.find(c => c.id === category);
     return cat ? cat.icon : Zap;
   };
 
-  const getCategoryColor = (category: string) => {
+  const getCategoryColor = (category: anystring)  => {
     const cat = categories.find(c => c.id === category);
     return cat ? cat.color : 'from-zion-cyan to-zion-blue';
   };
@@ -140,7 +139,7 @@ export default function UltimateInnovativeServices2026() {
     }
   });
 
-  const toggleServiceExpansion = (serviceId: string) => {
+  const toggleServiceExpansion = (serviceId: anystring)  => {
     setExpandedService(expandedService === serviceId ? null : serviceId);
   };
 
@@ -224,9 +223,9 @@ export default function UltimateInnovativeServices2026() {
               <select
                 value={selectedCategory}
                 onChange={(e) => setSelectedCategory(e.target.value)}
-                className="w-full px-4 py-3 bg-white/10 backdrop-blur-sm border border-zion-slate-300 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent"
+                className="w-full px-4 py-3 bg-white/10 backdrop-blur-sm border border-zion-slate-300 rounded-lg text-white focus: anyoutline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent"
               >
-                {categories.map(category => (
+                {categories.map(category  => (
                   <option key={category.id} value={category.id} className="bg-zion-slate-800 text-white">
                     {category.name}
                   </option>
@@ -239,9 +238,9 @@ export default function UltimateInnovativeServices2026() {
               <select
                 value={selectedPriceRange}
                 onChange={(e) => setSelectedPriceRange(e.target.value)}
-                className="w-full px-4 py-3 bg-white/10 backdrop-blur-sm border border-zion-slate-300 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent"
+                className="w-full px-4 py-3 bg-white/10 backdrop-blur-sm border border-zion-slate-300 rounded-lg text-white focus: anyoutline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent"
               >
-                {priceRanges.map(range => (
+                {priceRanges.map(range  => (
                   <option key={range.id} value={range.id} className="bg-zion-slate-800 text-white">
                     {range.name}
                   </option>
@@ -252,8 +251,8 @@ export default function UltimateInnovativeServices2026() {
 
           {/* Sort Options */}
           <div className="mt-6 flex flex-wrap items-center gap-4">
-            <span className="text-zion-slate-300">Sort by:</span>
-            {sortOptions.map(option => (
+            <span className="text-zion-slate-300">Sort by: any</span>
+            {sortOptions.map(option  => (
               <button
                 key={option.id}
                 onClick={() => setSortBy(option.id)}
@@ -282,9 +281,9 @@ export default function UltimateInnovativeServices2026() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8">
             <AnimatePresence>
-              {sortedServices.map((service, index) => (
+              {sortedServices.map((service, index)  => (
                 <motion.div
                   key={service.id}
                   initial={{ opacity: 0, y: 20 }}

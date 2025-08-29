@@ -1,7 +1,6 @@
-import React, { useState, useEffect, useCallback } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { 
-  BarChart3, 
+import React, { useState, useEffect, useCallback } from 'react.ts';
+import { motion, AnimatePresence  } from 'framer-motion.ts';
+import { BarChart3, 
   TrendingUp, 
   Users, 
   Eye, 
@@ -19,31 +18,34 @@ import {
   Monitor,
   Smartphone,
   Tablet
-} from 'lucide-react';
+ } from 'lucide-react.ts';
 
 interface AnalyticsData {
+
   pageViews: number;
   uniqueVisitors: number;
   sessionDuration: number;
   bounceRate: number;
   conversionRate: number;
-  topPages: Array<{ path: string; views: number }>;
-  userAgents: Array<{ device: string; count: number }>;
-  referrers: Array<{ source: string; count: number }>;
+  topPages: Array<any>;
+  userAgents: Array<any>;
+  referrers: Array<any>;
   timeOnPage: number;
   scrollDepth: number;
   clickEvents: number;
   formSubmissions: number;
 }
 
-interface Props {
+interface Props extends React.PropsWithChildren<{}> {
+
   enabled?: boolean;
   showMetrics?: boolean;
+
 }
 
-export function AdvancedAnalytics({ enabled = true, showMetrics = true }: Props) {
+export function AdvancedAnalytics(...args: any[]): any {
   const [isVisible, setIsVisible] = useState(false);
-  const [analyticsData, setAnalyticsData] = useState<AnalyticsData>({
+  const [analyticsData, setAnalyticsData] = useState<any>({
     pageViews: 0,
     uniqueVisitors: 0,
     sessionDuration: 0,
@@ -57,7 +59,7 @@ export function AdvancedAnalytics({ enabled = true, showMetrics = true }: Props)
     clickEvents: 0,
     formSubmissions: 0
   });
-  const [sessionStart, setSessionStart] = useState<number>(Date.now());
+  const [sessionStart, setSessionStart] = useState<any>(Date.now());
   const [isTracking, setIsTracking] = useState(false);
 
   // Initialize analytics tracking
@@ -105,7 +107,7 @@ export function AdvancedAnalytics({ enabled = true, showMetrics = true }: Props)
     };
 
     // Track form submissions
-    const trackFormSubmissions = (e: Event) => {
+    const trackFormSubmissions = (e: anyEvent)  => {
       if (e.target instanceof HTMLFormElement) {
         setAnalyticsData(prev => ({
           ...prev,
@@ -201,11 +203,11 @@ export function AdvancedAnalytics({ enabled = true, showMetrics = true }: Props)
         const duration = Math.round((Date.now() - sessionStart) / 1000);
         setAnalyticsData(prev => ({
           ...prev,
-          sessionDuration: duration
+          sessionDuration: anyduration
         }));
       }, 1000);
 
-      return () => clearInterval(interval);
+      return ()  => clearInterval(interval);
     }
   }, [isTracking, sessionStart]);
 

@@ -1,8 +1,8 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import { Zap, GitFork, Cloud, Shield, CheckCircle, BarChart3, Sparkles, ArrowRight, Cpu, Database, Server } from 'lucide-react';
+import React from 'react.ts';
+import { Link  } from 'react-router-dom.ts';
+import { Zap, GitFork, Cloud, Shield, CheckCircle, BarChart3, Sparkles, ArrowRight, Cpu, Database, Server  } from 'lucide-react.ts';
 
-export default function AIDevOpsAutomationPlatform() {
+export default function AIDevOpsAutomationPlatform(...args: any[]): any {
   const features = [
     'AI-powered CI/CD pipeline optimization and failure prediction',
     'Automated infrastructure provisioning with Terraform and CloudFormation',

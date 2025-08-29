@@ -1,8 +1,8 @@
-import { defineConfig } from 'vite'
+import { defineConfig  } from 'vite.ts'
 import react from '@vitejs/plugin-react'
-import { resolve } from 'path'
+import { resolve  } from 'path.ts'
 
-// https://vite.dev/config/
+// https: any//vite.dev/config/
 export default defineConfig({
   plugins: [react()],
   root: '.',
@@ -25,7 +25,7 @@ export default defineConfig({
         },
         chunkFileNames: 'js/[name]-[hash].js',
         entryFileNames: 'js/[name]-[hash].js',
-        assetFileNames: (assetInfo) => {
+        assetFileNames: (assetInfo)  => {
           const info = assetInfo.name.split('.');
           const ext = info[info.length - 1];
           if (/png|jpe?g|svg|gif|tiff|bmp|ico/i.test(ext)) {
@@ -38,7 +38,7 @@ export default defineConfig({
         }
       }
     },
-    terserOptions: {
+    terserOptions: any{
       compress: {
         drop_console: true,
         drop_debugger: true,
@@ -90,7 +90,7 @@ export default defineConfig({
         target: 'http://localhost:5000',
         changeOrigin: true,
         secure: false,
-        rewrite: (path) => path.replace(/^\/api/, '/api')
+        rewrite: (path)  => path.replace(/^\/api/, '/api')
       }
     }
   },

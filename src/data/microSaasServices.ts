@@ -1,4 +1,5 @@
 export interface MicroSaasService {
+
   id: string;
   title: string;
   description: string;
@@ -25,12 +26,13 @@ export interface MicroSaasService {
   featured: boolean;
   location: string;
   availability: string;
-  author: {
+author: {;
     name: string;
     id: string;
     avatarUrl?: string;
     verified: boolean;
-  };
+  
+};
   images: string[];
   createdAt: string;
 }

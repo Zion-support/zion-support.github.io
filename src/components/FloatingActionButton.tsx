@@ -1,7 +1,6 @@
-import React, { useState, useCallback } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { 
-  Plus, 
+import React, { useState, useCallback } from 'react.ts';
+import { motion, AnimatePresence  } from 'framer-motion.ts';
+import { Plus, 
   MessageCircle, 
   Phone, 
   Mail, 
@@ -16,13 +15,15 @@ import {
   Bookmark,
   Download,
   Search
-} from 'lucide-react';
+ } from 'lucide-react.ts';
 
-interface FloatingActionButtonProps {
+interface FloatingActionButtonProps extends React.PropsWithChildren<{}> {
+
   enabled?: boolean;
+
 }
 
-export function FloatingActionButton({ enabled = true }: FloatingActionButtonProps) {
+export function FloatingActionButton(...args: any[]): any {
   const [isExpanded, setIsExpanded] = useState(false);
   const [isVisible, setIsVisible] = useState(true);
 
@@ -48,21 +49,21 @@ export function FloatingActionButton({ enabled = true }: FloatingActionButtonPro
   // Quick actions
   const quickActions = [
     {
-      icon: MessageCircle,
+      icon: anyMessageCircle,
       label: 'Chat Support',
-      action: () => {
+      action: ()  => {
         // Trigger chat support
         const chatButton = document.querySelector('[data-chat-trigger]') as HTMLElement;
         if (chatButton) chatButton.click();
       },
-      color: 'from-blue-500 to-blue-600',
+      color: any'from-blue-500 to-blue-600',
       delay: 0.1
     },
     {
       icon: Phone,
       label: 'Call Us',
-      action: () => {
-        window.location.href = 'tel:+1-555-0123';
+      action: ()  => {
+        window.location.href = 'tel: any+1-555-0123';
       },
       color: 'from-green-500 to-green-600',
       delay: 0.2
@@ -70,8 +71,8 @@ export function FloatingActionButton({ enabled = true }: FloatingActionButtonPro
     {
       icon: Mail,
       label: 'Email',
-      action: () => {
-        window.location.href = 'mailto:contact@ziontechgroup.com';
+      action: ()  => {
+        window.location.href = 'mailto: anycontact@ziontechgroup.com';
       },
       color: 'from-purple-500 to-purple-600',
       delay: 0.3
@@ -79,20 +80,20 @@ export function FloatingActionButton({ enabled = true }: FloatingActionButtonPro
     {
       icon: Search,
       label: 'Search',
-      action: () => {
+      action: ()  => {
         const searchInput = document.querySelector('[data-search-input]') as HTMLInputElement;
         if (searchInput) {
           searchInput.focus();
           searchInput.click();
         }
       },
-      color: 'from-orange-500 to-orange-600',
+      color: any'from-orange-500 to-orange-600',
       delay: 0.4
     },
     {
       icon: Bookmark,
       label: 'Bookmark',
-      action: () => {
+      action: ()  => {
         if (navigator.share) {
           navigator.share({
             title: 'Zion Tech Group',
@@ -106,13 +107,13 @@ export function FloatingActionButton({ enabled = true }: FloatingActionButtonPro
           window.open(bookmarkUrl, '_blank');
         }
       },
-      color: 'from-red-500 to-red-600',
+      color: any'from-red-500 to-red-600',
       delay: 0.5
     },
     {
       icon: Download,
       label: 'Download App',
-      action: () => {
+      action: ()  => {
         // Trigger app download or PWA install
         const installButton = document.querySelector('[data-pwa-install]') as HTMLElement;
         if (installButton) {

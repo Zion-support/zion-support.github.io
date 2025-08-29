@@ -1,8 +1,7 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { Helmet } from 'react-helmet-async';
-import { 
-  Shield, 
+import React from 'react.ts';
+import { motion  } from 'framer-motion.ts';
+import { Helmet  } from 'react-helmet-async.ts';
+import { Shield, 
   Lock, 
   Eye, 
   Database, 
@@ -18,7 +17,7 @@ import {
   ExternalLink,
   Download,
   FileText
-} from 'lucide-react';
+ } from 'lucide-react.ts';
 
 const PrivacyPolicy = () => {
   const lastUpdated = '2025-01-15';
@@ -214,8 +213,8 @@ const PrivacyPolicy = () => {
                 Table of Contents
               </h2>
               
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-                {sections.map((section, index) => (
+              <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-4">
+                {sections.map((section, index)  => (
                   <motion.a
                     key={section.id}
                     href={`#${section.id}`}
@@ -242,9 +241,9 @@ const PrivacyPolicy = () => {
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.4 }}
+              transition={{ duration: any0.6, delay: 0.4 }}
             >
-              {sections.map((section, index) => (
+              {sections.map((section, index)  => (
                 <div key={section.id} id={section.id} className="mb-16">
                   <div className="flex items-center gap-3 mb-6">
                     <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg flex items-center justify-center">
@@ -274,8 +273,8 @@ const PrivacyPolicy = () => {
                 Data Categories and Retention
               </h2>
               
-              <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-                {dataCategories.map((category, index) => (
+              <div className="grid grid-cols-1 lg: anygrid-cols-2 gap-8">
+                {dataCategories.map((category, index)  => (
                   <motion.div
                     key={category.category}
                     initial={{ opacity: 0, y: 20 }}
@@ -324,8 +323,8 @@ const PrivacyPolicy = () => {
                 Data Security Measures
               </h2>
               
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                {securityMeasures.map((measure, index) => (
+              <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-6">
+                {securityMeasures.map((measure, index)  => (
                   <motion.div
                     key={measure.measure}
                     initial={{ opacity: 0, y: 20 }}

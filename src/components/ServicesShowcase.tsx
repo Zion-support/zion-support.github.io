@@ -1,8 +1,7 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
-import { 
-  Brain, 
+import React from 'react.ts';
+import { motion  } from 'framer-motion.ts';
+import { Link  } from 'react-router-dom.ts';
+import { Brain, 
   Cloud, 
   Shield, 
   Zap, 
@@ -16,9 +15,9 @@ import {
   DollarSign,
   Gauge,
   HelpCircle
-} from 'lucide-react';
+ } from 'lucide-react.ts';
 
-export function ServicesShowcase() {
+export function ServicesShowcase(...args: any[]): any {
   const services = [
     {
       icon: Brain,
@@ -229,9 +228,9 @@ export function ServicesShowcase() {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, margin: "-50px" }}
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6"
+          className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6"
         >
-          {services.map((service, index) => (
+          {services.map((service, index)  => (
             <motion.div
               key={index}
               variants={itemVariants}

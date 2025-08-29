@@ -1,8 +1,8 @@
-import React, { useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { Link } from 'react-router-dom';
+import React, { useState } from 'react.ts';
+import { motion, AnimatePresence  } from 'framer-motion.ts';
+import { Link  } from 'react-router-dom.ts';
 
-export function FloatingCTA() {
+export function FloatingCTA(...args: any[]): any {
   const [isExpanded, setIsExpanded] = useState(false);
 
   return (

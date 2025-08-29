@@ -1,7 +1,7 @@
-import React from 'react';
-import { SEO } from '@/components/SEO';
+import React from 'react.ts';
+import { SEO  } from '@/components/SEO';
 
-export function SitemapPage() {
+export function SitemapPage(...args: any[]): any {
   const sitemapData = [
     {
       title: 'Main Pages',
@@ -62,8 +62,8 @@ export function SitemapPage() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-          {sitemapData.map((section, sectionIndex) => (
+        <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-4 gap-8">
+          {sitemapData.map((section, sectionIndex)  => (
             <div key={sectionIndex} className="bg-slate-800/50 rounded-lg p-6 border border-slate-700">
               <h2 className="text-xl font-semibold mb-4 text-cyan-400">
                 {section.title}

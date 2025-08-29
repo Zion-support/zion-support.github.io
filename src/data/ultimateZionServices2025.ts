@@ -2,13 +2,16 @@
 // Revolutionary Micro SAAS, IT Infrastructure, and AI Services
 
 export interface ServiceContact {
+
   phone: string;
   email: string;
   website: string;
   address: string;
+
 }
 
 export interface MicroSaasService {
+
   id: number;
   name: string;
   category: string;
@@ -34,9 +37,11 @@ export interface MicroSaasService {
   growthRate: string;
   useCases: string[];
   technologies: string[];
+
 }
 
 export interface ITService {
+
   id: number;
   name: string;
   category: string;
@@ -59,9 +64,11 @@ export interface ITService {
   compliance: string[];
   useCases: string[];
   technologies: string[];
+
 }
 
 export interface AIService {
+
   id: number;
   name: string;
   category: string;
@@ -85,6 +92,7 @@ export interface AIService {
   marketSize: string;
   ethicalAI: string[];
   technologies: string[];
+
 }
 
 // Zion Tech Group Contact Information

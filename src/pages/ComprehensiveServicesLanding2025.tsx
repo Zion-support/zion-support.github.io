@@ -1,8 +1,7 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
-import { 
-  Search, 
+import React from 'react.ts';
+import { motion  } from 'framer-motion.ts';
+import { Link  } from 'react-router-dom.ts';
+import { Search, 
   Filter, 
   Star, 
   TrendingUp, 
@@ -38,12 +37,12 @@ import {
   MapPin,
   Globe as GlobeIcon,
   ExternalLink
-} from 'lucide-react';
-import { SEO } from '../components/SEO';
-import { INNOVATIVE_SERVICES_2025 } from '../data/innovativeServices2025';
+ } from 'lucide-react.ts';
+import { SEO  } from '../components/SEO';
+import { INNOVATIVE_SERVICES_2025  } from '../data/innovativeServices2025';
 
-const ComprehensiveServicesLanding2025: React.FC = () => {
-  const getCategoryIcon = (category: string) => {
+const ComprehensiveServicesLanding2025: React.FC = (): JSX.Element => {
+  const getCategoryIcon = (category: anystring)  => {
     switch (category) {
       case 'AI & Automation':
         return <Brain className="w-8 h-8" />;
@@ -70,7 +69,7 @@ const ComprehensiveServicesLanding2025: React.FC = () => {
     }
   };
 
-  const getCategoryColor = (category: string) => {
+  const getCategoryColor = (category: anystring)  => {
     switch (category) {
       case 'AI & Automation':
         return 'from-purple-500 to-pink-500';
@@ -100,7 +99,7 @@ const ComprehensiveServicesLanding2025: React.FC = () => {
   const categories = Array.from(new Set(INNOVATIVE_SERVICES_2025.map(service => service.category)));
   const servicesByCategory = categories.map(category => ({
     category,
-    services: INNOVATIVE_SERVICES_2025.filter(service => service.category === category),
+    services: anyINNOVATIVE_SERVICES_2025.filter(service  => service.category === category),
     icon: getCategoryIcon(category),
     color: getCategoryColor(category)
   }));
@@ -191,8 +190,8 @@ const ComprehensiveServicesLanding2025: React.FC = () => {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {servicesByCategory.map((categoryData, index) => (
+          <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8">
+            {servicesByCategory.map((categoryData, index)  => (
               <motion.div
                 key={categoryData.category}
                 initial={{ opacity: 0, y: 20 }}
@@ -257,8 +256,8 @@ const ComprehensiveServicesLanding2025: React.FC = () => {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {INNOVATIVE_SERVICES_2025.slice(0, 6).map((service, index) => (
+          <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8">
+            {INNOVATIVE_SERVICES_2025.slice(0, 6).map((service, index)  => (
               <motion.div
                 key={service.id}
                 initial={{ opacity: 0, y: 20 }}
@@ -368,10 +367,10 @@ const ComprehensiveServicesLanding2025: React.FC = () => {
               },
               {
                 icon: <Shield className="w-8 h-8" />,
-                title: 'Enterprise Security',
+                title: any'Enterprise Security',
                 description: 'Bank-grade security with compliance certifications and best practices'
               }
-            ].map((feature, index) => (
+            ].map((feature, index)  => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}

@@ -1,7 +1,6 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { 
-  Users, 
+import React from 'react.ts';
+import { motion  } from 'framer-motion.ts';
+import { Users, 
   Building, 
   Globe, 
   Star, 
@@ -17,9 +16,9 @@ import {
   Phone,
   Mail,
   MapPin
-} from 'lucide-react';
+ } from 'lucide-react.ts';
 
-export default function Partners() {
+export default function Partners(...args: any[]): any {
   const partnerCategories = [
     {
       title: 'Technology Partners',
@@ -104,8 +103,8 @@ export default function Partners() {
                 </div>
               </div>
 
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-                {category.partners.map((partner, partnerIndex) => (
+              <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-4 gap-6">
+                {category.partners.map((partner, partnerIndex)  => (
                   <motion.div
                     key={partner.name}
                     initial={{ opacity: 0, scale: 0.9 }}
@@ -140,8 +139,8 @@ export default function Partners() {
           className="mt-16 bg-white rounded-xl shadow-sm border border-gray-200 p-8"
         >
           <h2 className="text-2xl font-bold text-gray-900 text-center mb-8">Partner Benefits</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {benefits.map((benefit, index) => (
+          <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-4 gap-6">
+            {benefits.map((benefit, index)  => (
               <motion.div
                 key={benefit.title}
                 initial={{ opacity: 0, y: 20 }}

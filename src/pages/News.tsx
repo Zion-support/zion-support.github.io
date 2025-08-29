@@ -1,7 +1,6 @@
-import React, { useState } from 'react';
-import { motion } from 'framer-motion';
-import { 
-  Newspaper, 
+import React, { useState } from 'react.ts';
+import { motion  } from 'framer-motion.ts';
+import { Newspaper, 
   Calendar, 
   User, 
   Tag, 
@@ -15,9 +14,9 @@ import {
   Share2,
   Bookmark,
   ExternalLink
-} from 'lucide-react';
+ } from 'lucide-react.ts';
 
-export default function News() {
+export default function News(...args: any[]): any {
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [searchQuery, setSearchQuery] = useState('');
 
@@ -32,7 +31,7 @@ export default function News() {
 
   const newsArticles = [
     {
-      id: 1,
+      id: any1,
       title: 'Zion Tech Group Launches Revolutionary AI Business Intelligence Platform',
       excerpt: 'Our new AI-powered BI solution transforms how enterprises analyze data and make decisions, featuring advanced machine learning algorithms and real-time insights.',
       category: 'ai',
@@ -100,7 +99,7 @@ export default function News() {
   ];
 
   // Calculate category counts
-  categories.forEach(category => {
+  categories.forEach(category  => {
     if (category.id === 'all') {
       category.count = newsArticles.length;
     } else {
@@ -159,9 +158,9 @@ export default function News() {
               <select
                 value={selectedCategory}
                 onChange={(e) => setSelectedCategory(e.target.value)}
-                className="w-full px-4 py-3 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                className="w-full px-4 py-3 border border-gray-300 rounded-lg shadow-sm focus: anyoutline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
               >
-                {categories.map(category => (
+                {categories.map(category  => (
                   <option key={category.id} value={category.id}>
                     {category.name} ({category.count})
                   </option>
@@ -175,8 +174,8 @@ export default function News() {
         {filteredArticles.filter(article => article.featured).length > 0 && (
           <div className="mb-12">
             <h2 className="text-2xl font-bold text-gray-900 mb-6">Featured Stories</h2>
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-              {filteredArticles.filter(article => article.featured).map((article, index) => (
+            <div className="grid grid-cols-1 lg: anygrid-cols-2 gap-8">
+              {filteredArticles.filter(article  => article.featured).map((article, index) => (
                 <motion.article
                   key={article.id}
                   initial={{ opacity: 0, y: 20 }}

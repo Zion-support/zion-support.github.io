@@ -1,16 +1,18 @@
 export interface ComprehensivePricingItem2028 {
+
   id: string;
   title: string;
   description: string;
   category: string;
   subcategory: string;
-  pricing: {
-    starter: {
+pricing: {;
+starter: {;
       price: string;
       billing: string;
       features: string[];
       limitations: string[];
-    };
+    
+};
     professional: {
       price: string;
       billing: string;

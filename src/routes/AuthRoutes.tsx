@@ -1,8 +1,8 @@
 
-import { Route, Routes } from "react-router-dom";
+import { Route, Routes  } from 'react-router-dom.ts';
 import Login from "@/pages/Login";
 import Signup from "@/pages/Signup";
-import { ProtectedRoute } from "@/components/ProtectedRoute";
+import { ProtectedRoute  } from '@/components/ProtectedRoute';
 
 const AuthRoutes = () => {
   return (

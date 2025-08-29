@@ -1,7 +1,6 @@
-import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { 
-  Brain, 
+import React, { useState, useEffect } from 'react.ts';
+import { motion, AnimatePresence  } from 'framer-motion.ts';
+import { Brain, 
   Zap, 
   Shield, 
   TrendingUp, 
@@ -13,29 +12,31 @@ import {
   Star,
   CheckCircle,
   Rocket
-} from 'lucide-react';
-import { Link } from 'react-router-dom';
+ } from 'lucide-react.ts';
+import { Link  } from 'react-router-dom.ts';
 
 interface AIService {
+
   id: string;
   name: string;
   description: string;
   category: string;
   features: string[];
-  pricing: {
+pricing: {;
     starter: number;
     professional: number;
     enterprise: number;
-  };
+  
+};
   icon: React.ComponentType<any>;
   route: string;
   status: 'active' | 'beta' | 'coming-soon';
 }
 
-const AdvancedAIServicesHub: React.FC = () => {
-  const [selectedCategory, setSelectedCategory] = useState<string>('all');
-  const [searchQuery, setSearchQuery] = useState<string>('');
-  const [sortBy, setSortBy] = useState<'name' | 'price' | 'popularity'>('popularity');
+const AdvancedAIServicesHub: React.FC = (): JSX.Element => {
+  const [selectedCategory, setSelectedCategory] = useState<any>('all');
+  const [searchQuery, setSearchQuery] = useState<any>('');
+  const [sortBy, setSortBy] = useState<any>('popularity');
 
   const aiServices: AIService[] = [
     {
@@ -216,10 +217,10 @@ const AdvancedAIServicesHub: React.FC = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.4 }}
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+          className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8"
         >
           <AnimatePresence>
-            {sortedServices.map((service, index) => (
+            {sortedServices.map((service, index)  => (
               <motion.div
                 key={service.id}
                 initial={{ opacity: 0, y: 20 }}

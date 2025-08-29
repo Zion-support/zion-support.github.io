@@ -1,7 +1,7 @@
-import React from 'react';
+import React from 'react.ts';
 import UltimateZionServicesShowcase from '../components/UltimateZionServicesShowcase';
 
-const UltimateZionServicesLanding: React.FC = () => {
+const UltimateZionServicesLanding: React.FC = (): JSX.Element => {
   return (
     <div>
       <UltimateZionServicesShowcase />

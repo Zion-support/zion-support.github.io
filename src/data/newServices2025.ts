@@ -1,4 +1,5 @@
 export interface NewService {
+
   id: string;
   title: string;
   description: string;
@@ -11,6 +12,7 @@ export interface NewService {
   benefits: string[];
   tags: string[];
   marketPrice: string;
+
 }
 
 export const NEW_SERVICES_2025: NewService[] = [

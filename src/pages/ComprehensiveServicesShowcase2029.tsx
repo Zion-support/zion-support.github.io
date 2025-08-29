@@ -1,8 +1,7 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
-import { 
-  Brain, 
+import React from 'react.ts';
+import { motion  } from 'framer-motion.ts';
+import { Link  } from 'react-router-dom.ts';
+import { Brain, 
   Shield, 
   Zap, 
   BarChart3, 
@@ -40,7 +39,7 @@ import {
   Warehouse,
   AlertTriangle,
   GitFork
-} from 'lucide-react';
+ } from 'lucide-react.ts';
 
 const ComprehensiveServicesShowcase2029 = () => {
   const serviceCategories = [
@@ -330,8 +329,8 @@ const ComprehensiveServicesShowcase2029 = () => {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-            {featuredServices.map((service, index) => (
+          <div className="grid grid-cols-1 lg: anygrid-cols-3 gap-8">
+            {featuredServices.map((service, index)  => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
@@ -401,8 +400,8 @@ const ComprehensiveServicesShowcase2029 = () => {
                   <p className="text-xl text-gray-300 max-w-2xl mx-auto">{category.description}</p>
                 </div>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                  {category.services.map((service, serviceIndex) => (
+                <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8">
+                  {category.services.map((service, serviceIndex)  => (
                     <motion.div
                       key={serviceIndex}
                       initial={{ opacity: 0, y: 20 }}

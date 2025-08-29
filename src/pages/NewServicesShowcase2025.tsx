@@ -1,15 +1,14 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import { motion } from 'framer-motion';
-import { 
-  Zap, Bot, TrendingUp, Target, MessageCircle, BarChart3, 
+import React from 'react.ts';
+import { Link  } from 'react-router-dom.ts';
+import { motion  } from 'framer-motion.ts';
+import { Zap, Bot, TrendingUp, Target, MessageCircle, BarChart3, 
   DollarSign, Users, Check, ArrowRight, ExternalLink, Phone, Mail,
   Calendar, Shield, Filter, Headphones, Calculator, PieChart,
   ArrowRight, ExternalLink, Phone, Mail, Globe, TrendingUp, Shield, Leaf, Cpu, Atom, Wifi, CheckCircle, Star
-} from 'lucide-react';
-import { SEO } from '@/components/SEO';
+ } from 'lucide-react.ts';
+import { SEO  } from '@/components/SEO';
 
-export default function NewServicesShowcase2025() {
+export default function NewServicesShowcase2025(...args: any[]): any {
   const newServices = [
     {
       name: 'AI Supply Chain Risk Management',
@@ -117,8 +116,8 @@ export default function NewServicesShowcase2025() {
           <p className="text-xl text-gray-600">Transform your business with our latest AI-powered solutions</p>
         </div>
         
-        <div className="grid lg:grid-cols-2 gap-8">
-          {newServices.map((service, index) => (
+        <div className="grid lg: anygrid-cols-2 gap-8">
+          {newServices.map((service, index)  => (
             <div key={index} className="bg-white border border-gray-200 rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
               <div className={`bg-gradient-to-r ${service.color} p-8 text-white`}>
                 <div className="flex items-center mb-4">
@@ -178,8 +177,8 @@ export default function NewServicesShowcase2025() {
             <p className="text-xl text-gray-600">Our AI services are designed for organizations across all sectors</p>
           </div>
           
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {industries.map((industry, index) => (
+          <div className="grid md: anygrid-cols-2 lg:grid-cols-4 gap-6">
+            {industries.map((industry, index)  => (
               <div key={index} className="bg-white p-6 rounded-xl shadow-sm border border-gray-100 hover:shadow-md transition-shadow">
                 <div className="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mb-4">
                   <Globe className="w-6 h-6 text-purple-600" />

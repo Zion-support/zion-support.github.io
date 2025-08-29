@@ -1,7 +1,7 @@
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
+import { Helmet  } from 'react-helmet-async.ts';
+import { Link  } from 'react-router-dom.ts';
 
-export default function GovernedAIAgents() {
+export default function GovernedAIAgents(...args: any[]): any {
   return (
     <div className="relative min-h-screen overflow-hidden bg-slate-950 text-white">
       <Head>

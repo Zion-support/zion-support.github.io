@@ -1,9 +1,9 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
-import { Shield, Eye, Lock, Database, Users, ArrowRight } from 'lucide-react'
+import React from 'react.ts'
+import { Link  } from 'react-router-dom.ts'
+import { Shield, Eye, Lock, Database, Users, ArrowRight  } from 'lucide-react.ts'
 
 
-export default function Privacy() {
+export default function Privacy(...args: any[]): any {
 	return (
 		<>
 			{/* Hero Section */}

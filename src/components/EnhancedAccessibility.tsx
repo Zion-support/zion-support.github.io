@@ -1,7 +1,6 @@
-import React, { useState, useEffect, useCallback } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { 
-  Eye, 
+import React, { useState, useEffect, useCallback } from 'react.ts';
+import { motion, AnimatePresence  } from 'framer-motion.ts';
+import { Eye, 
   EyeOff, 
   Volume2, 
   VolumeX, 
@@ -19,9 +18,10 @@ import {
   Keyboard,
   MousePointer,
   Smartphone
-} from 'lucide-react';
+ } from 'lucide-react.ts';
 
 interface AccessibilitySettings {
+
   highContrast: boolean;
   largeText: boolean;
   reducedMotion: boolean;
@@ -30,12 +30,15 @@ interface AccessibilitySettings {
   focusIndicator: boolean;
   colorBlind: boolean;
   dyslexia: boolean;
+
 }
 
-interface EnhancedAccessibilityProps {
+interface EnhancedAccessibilityProps extends React.PropsWithChildren<{}> {
+
   enabled?: boolean;
   showControls?: boolean;
   className?: string;
+
 }
 
 export const EnhancedAccessibility: React.FC<EnhancedAccessibilityProps> = ({
@@ -44,7 +47,7 @@ export const EnhancedAccessibility: React.FC<EnhancedAccessibilityProps> = ({
   className = ''
 }) => {
   const [isOpen, setIsOpen] = useState(false);
-  const [settings, setSettings] = useState<AccessibilitySettings>({
+  const [settings, setSettings] = useState<any>({
     highContrast: false,
     largeText: false,
     reducedMotion: false,
@@ -54,11 +57,11 @@ export const EnhancedAccessibility: React.FC<EnhancedAccessibilityProps> = ({
     colorBlind: false,
     dyslexia: false
   });
-  const [currentFocus, setCurrentFocus] = useState<HTMLElement | null>(null);
-  const [announcements, setAnnouncements] = useState<string[]>([]);
+  const [currentFocus, setCurrentFocus] = useState<any>(null);
+  const [announcements, setAnnouncements] = useState<any>([]);
 
   // Apply accessibility settings to document
-  const applySettings = useCallback((newSettings: AccessibilitySettings) => {
+  const applySettings = useCallback((newSettings: anyAccessibilitySettings)  => {
     const root = document.documentElement;
     
     // High contrast
@@ -132,7 +135,7 @@ export const EnhancedAccessibility: React.FC<EnhancedAccessibilityProps> = ({
   }, [applySettings]);
 
   // Screen reader announcements
-  const announce = useCallback((message: string) => {
+  const announce = useCallback((message: anystring)  => {
     const announcement = document.createElement('div');
     announcement.setAttribute('aria-live', 'polite');
     announcement.setAttribute('aria-atomic', 'true');
@@ -153,7 +156,7 @@ export const EnhancedAccessibility: React.FC<EnhancedAccessibilityProps> = ({
   useEffect(() => {
     if (!settings.keyboardNavigation) return;
 
-    const handleKeyDown = (e: KeyboardEvent) => {
+    const handleKeyDown = (e: anyKeyboardEvent)  => {
       const target = e.target as HTMLElement;
       
       // Skip if in input/textarea
@@ -201,7 +204,7 @@ export const EnhancedAccessibility: React.FC<EnhancedAccessibilityProps> = ({
   useEffect(() => {
     if (!settings.focusIndicator) return;
 
-    const handleFocusIn = (e: FocusEvent) => {
+    const handleFocusIn = (e: anyFocusEvent)  => {
       const target = e.target as HTMLElement;
       target.style.outline = '2px solid #3b82f6';
       target.style.outlineOffset = '2px';
@@ -214,7 +217,7 @@ export const EnhancedAccessibility: React.FC<EnhancedAccessibilityProps> = ({
       }
     };
 
-    const handleFocusOut = (e: FocusEvent) => {
+    const handleFocusOut = (e: anyFocusEvent)  => {
       const target = e.target as HTMLElement;
       target.style.outline = '';
       target.style.outlineOffset = '';
@@ -234,11 +237,11 @@ export const EnhancedAccessibility: React.FC<EnhancedAccessibilityProps> = ({
     const skipLink = document.createElement('a');
     skipLink.href = '#main-content';
     skipLink.textContent = 'Skip to main content';
-    skipLink.className = 'skip-link sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-blue-600 text-white px-4 py-2 rounded z-50';
+    skipLink.className = 'skip-link sr-only focus: anynot-sr-only focus:absolute focus:top-4 focus:left-4 bg-blue-600 text-white px-4 py-2 rounded z-50';
     
     document.body.insertBefore(skipLink, document.body.firstChild);
     
-    return () => {
+    return ()  => {
       if (skipLink.parentNode) {
         skipLink.parentNode.removeChild(skipLink);
       }
@@ -248,10 +251,10 @@ export const EnhancedAccessibility: React.FC<EnhancedAccessibilityProps> = ({
   // Quick accessibility actions
   const quickActions = [
     {
-      icon: Contrast,
+      icon: anyContrast,
       label: 'Toggle High Contrast',
-      action: () => {
-        const newSettings = { ...settings, highContrast: !settings.highContrast };
+      action: ()  => {
+        const newSettings = { ...settings, highContrast: any!settings.highContrast };
         applySettings(newSettings);
         announce(`High contrast ${newSettings.highContrast ? 'enabled' : 'disabled'}`);
       },
@@ -260,8 +263,8 @@ export const EnhancedAccessibility: React.FC<EnhancedAccessibilityProps> = ({
     {
       icon: Type,
       label: 'Toggle Large Text',
-      action: () => {
-        const newSettings = { ...settings, largeText: !settings.largeText };
+      action: ()  => {
+        const newSettings = { ...settings, largeText: any!settings.largeText };
         applySettings(newSettings);
         announce(`Large text ${newSettings.largeText ? 'enabled' : 'disabled'}`);
       },
@@ -270,7 +273,7 @@ export const EnhancedAccessibility: React.FC<EnhancedAccessibilityProps> = ({
     {
       icon: ZoomIn,
       label: 'Increase Zoom',
-      action: () => {
+      action: ()  => {
         const currentZoom = parseFloat(getComputedStyle(document.documentElement).fontSize) / 16;
         const newZoom = Math.min(currentZoom + 0.1, 2.0);
         document.documentElement.style.fontSize = `${newZoom * 16}px`;
@@ -278,9 +281,9 @@ export const EnhancedAccessibility: React.FC<EnhancedAccessibilityProps> = ({
       }
     },
     {
-      icon: ZoomOut,
+      icon: anyZoomOut,
       label: 'Decrease Zoom',
-      action: () => {
+      action: ()  => {
         const currentZoom = parseFloat(getComputedStyle(document.documentElement).fontSize) / 16;
         const newZoom = Math.max(currentZoom - 0.1, 0.5);
         document.documentElement.style.fontSize = `${newZoom * 16}px`;
@@ -288,9 +291,9 @@ export const EnhancedAccessibility: React.FC<EnhancedAccessibilityProps> = ({
       }
     },
     {
-      icon: RotateCcw,
+      icon: anyRotateCcw,
       label: 'Reset Zoom',
-      action: () => {
+      action: ()  => {
         document.documentElement.style.fontSize = '16px';
         announce('Zoom reset to 100%');
       }
@@ -376,8 +379,8 @@ export const EnhancedAccessibility: React.FC<EnhancedAccessibilityProps> = ({
               </div>
 
               {/* Settings Grid */}
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
-                {Object.entries(settings).map(([key, value]) => {
+              <div className="grid grid-cols-1 md: anygrid-cols-2 gap-4 mb-6">
+                {Object.entries(settings).map(([key, value])  => {
                   const label = key.replace(/([A-Z])/g, ' $1').replace(/^./, str => str.toUpperCase());
                   const Icon = key === 'highContrast' ? Contrast : 
                               key === 'largeText' ? Type : 

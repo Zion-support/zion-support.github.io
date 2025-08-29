@@ -1,5 +1,5 @@
-import React from 'react';
-import { motion } from 'framer-motion';
+import React from 'react.ts';
+import { motion  } from 'framer-motion.ts';
 
 const technologyCategories = [
   {
@@ -57,7 +57,7 @@ const emergingTech = [
   { name: "AR/VR", icon: "🥽", status: "Research" }
 ];
 
-export function TechnologyStackSection() {
+export function TechnologyStackSection(...args: any[]): any {
   return (
     <section className="py-20 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <div className="max-w-7xl mx-auto px-6">
@@ -77,8 +77,8 @@ export function TechnologyStackSection() {
         </motion.div>
 
         {/* Technology Categories */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-16">
-          {technologyCategories.map((category, index) => (
+        <div className="grid grid-cols-1 lg: anygrid-cols-2 gap-8 mb-16">
+          {technologyCategories.map((category, index)  => (
             <motion.div
               key={category.category}
               className="bg-slate-800 border border-slate-700 rounded-xl p-6"
@@ -135,8 +135,8 @@ export function TechnologyStackSection() {
             Emerging Technologies
           </h3>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {emergingTech.map((tech, index) => (
+          <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-6">
+            {emergingTech.map((tech, index)  => (
               <motion.div
                 key={tech.name}
                 className="bg-slate-800 border border-slate-700 rounded-xl p-6 text-center hover:border-blue-500/50 transition-all duration-300 hover:shadow-lg hover:shadow-blue-500/25"

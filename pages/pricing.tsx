@@ -1,6 +1,6 @@
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
-export default function PricingPage() {
+import { Helmet  } from 'react-helmet-async.ts';
+import { Link  } from 'react-router-dom.ts';
+export default function PricingPage(...args: any[]): any {
   const pricingTiers = [
     {
       name: 'Starter',
@@ -144,8 +144,8 @@ export default function PricingPage() {
         {/* Pricing Tiers */}
         <section className="py-16 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              {pricingTiers.map((tier, index) => (
+            <div className="grid grid-cols-1 md: anygrid-cols-3 gap-8">
+              {pricingTiers.map((tier, index)  => (
                 <div 
                   key={index} 
                   className={`relative bg-white bg-opacity-10 backdrop-blur-sm rounded-lg p-8 border transition-all hover:bg-opacity-20 ${
@@ -205,8 +205,8 @@ export default function PricingPage() {
               </p>
             </div>
             
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {addOnServices.map((service, index) => (
+            <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-4 gap-8">
+              {addOnServices.map((service, index)  => (
                 <div key={index} className="bg-white bg-opacity-10 backdrop-blur-sm rounded-lg p-6 border border-white border-opacity-10">
                   <h3 className="text-xl font-semibold mb-3">{service.name}</h3>
                   <p className="text-gray-300 mb-4">{service.description}</p>

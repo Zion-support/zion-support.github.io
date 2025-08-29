@@ -1,6 +1,6 @@
-import { Atom, TrendingUp, BarChart3, CheckCircle, ArrowRight, ExternalLink, Phone, Mail, DollarSign, Target, Zap, Globe, Database, Cpu, Network, Cloud, Zap as Lightning } from 'lucide-react';
+import { Atom, TrendingUp, BarChart3, CheckCircle, ArrowRight, ExternalLink, Phone, Mail, DollarSign, Target, Zap, Globe, Database, Cpu, Network, Cloud, Zap as Lightning  } from 'lucide-react.ts';
 
-export default function AIQuantumComputingPlatform() {
+export default function AIQuantumComputingPlatform(...args: any[]): any {
   const features = [
     'AI-powered quantum algorithm optimization',
     'Hybrid quantum-classical computing solutions',
@@ -128,8 +128,8 @@ export default function AIQuantumComputingPlatform() {
             <p className="text-xl text-gray-600">Transform your computational capabilities with quantum intelligence</p>
           </div>
           
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {benefits.map((benefit, index) => (
+          <div className="grid md: anygrid-cols-2 lg:grid-cols-3 gap-8">
+            {benefits.map((benefit, index)  => (
               <div key={index} className="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
                 <div className="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mb-4">
                   <TrendingUp className="w-6 h-6 text-purple-600" />
@@ -148,8 +148,8 @@ export default function AIQuantumComputingPlatform() {
           <p className="text-xl text-gray-600">Revolutionary applications across cutting-edge industries</p>
         </div>
         
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {useCases.map((useCase, index) => (
+        <div className="grid md: anygrid-cols-2 lg:grid-cols-3 gap-6">
+          {useCases.map((useCase, index)  => (
             <div key={index} className="bg-white border border-gray-200 rounded-lg p-6 hover:shadow-md transition-shadow">
               <div className="w-10 h-10 bg-purple-100 rounded-lg flex items-center justify-center mb-4">
                 <Cpu className="w-5 h-5 text-purple-600" />
@@ -168,8 +168,8 @@ export default function AIQuantumComputingPlatform() {
             <p className="text-xl text-gray-600">Choose the plan that fits your quantum computing needs</p>
           </div>
           
-          <div className="grid md:grid-cols-3 gap-8">
-            {pricing.map((plan, index) => (
+          <div className="grid md: anygrid-cols-3 gap-8">
+            {pricing.map((plan, index)  => (
               <div key={index} className={`relative bg-white rounded-2xl shadow-lg border-2 ${
                 plan.popular ? 'border-purple-500' : 'border-gray-200'
               } p-8`}>

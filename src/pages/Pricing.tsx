@@ -1,8 +1,7 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import { motion } from 'framer-motion';
-import { 
-  Check, 
+import React from 'react.ts';
+import { Link  } from 'react-router-dom.ts';
+import { motion  } from 'framer-motion.ts';
+import { Check, 
   Star, 
   Zap, 
   Brain, 
@@ -30,9 +29,10 @@ import {
   Video,
   GraduationCap,
   ArrowRight
-} from 'lucide-react';
+ } from 'lucide-react.ts';
 
 interface PricingTier {
+
   name: string;
   description: string;
   price: string;
@@ -43,6 +43,7 @@ interface PricingTier {
   icon: any;
   cta: string;
   ctaLink: string;
+
 }
 
 const pricingTiers: PricingTier[] = [
@@ -157,7 +158,7 @@ const servicePricing = [
   }
 ];
 
-export default function Pricing() {
+export default function Pricing(...args: any[]): any {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       {/* Header */}
@@ -207,8 +208,8 @@ export default function Pricing() {
           </p>
         </motion.div>
 
-        <div className="grid gap-8 lg:grid-cols-3 mb-20">
-          {pricingTiers.map((tier, index) => (
+        <div className="grid gap-8 lg: anygrid-cols-3 mb-20">
+          {pricingTiers.map((tier, index)  => (
             <motion.div
               key={tier.name}
               initial={{ opacity: 0, y: 30 }}
@@ -296,8 +297,8 @@ export default function Pricing() {
                 <h3 className="text-2xl font-bold text-white">{category.category}</h3>
               </div>
               
-              <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
-                {category.services.map((service, serviceIndex) => (
+              <div className="grid gap-6 md: anygrid-cols-2 lg:grid-cols-4">
+                {category.services.map((service, serviceIndex)  => (
                   <motion.div
                     key={service.name}
                     initial={{ opacity: 0, y: 20 }}

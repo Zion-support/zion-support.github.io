@@ -1,7 +1,6 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { 
-  Shield, 
+import React from 'react.ts';
+import { motion  } from 'framer-motion.ts';
+import { Shield, 
   Lock, 
   Eye, 
   Database, 
@@ -13,10 +12,10 @@ import {
   Mail,
   Phone,
   MapPin
-} from 'lucide-react';
-import { SEO } from '../components/SEO';
+ } from 'lucide-react.ts';
+import { SEO  } from '../components/SEO';
 
-export default function Privacy() {
+export default function Privacy(...args: any[]): any {
   const privacyPrinciples = [
     {
       icon: Shield,
@@ -163,8 +162,8 @@ export default function Privacy() {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {privacyPrinciples.map((principle, index) => (
+          <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-4 gap-8">
+            {privacyPrinciples.map((principle, index)  => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
@@ -201,8 +200,8 @@ export default function Privacy() {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {dataCategories.map((category, index) => (
+          <div className="grid grid-cols-1 md: anygrid-cols-2 gap-8">
+            {dataCategories.map((category, index)  => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
@@ -244,8 +243,8 @@ export default function Privacy() {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {dataUses.map((use, index) => (
+          <div className="grid grid-cols-1 md: anygrid-cols-2 gap-8">
+            {dataUses.map((use, index)  => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
@@ -279,8 +278,8 @@ export default function Privacy() {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {userRights.map((right, index) => (
+          <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8">
+            {userRights.map((right, index)  => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}

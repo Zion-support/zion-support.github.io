@@ -1,7 +1,6 @@
-import React, { useState } from 'react';
-import { motion } from 'framer-motion';
-import { 
-  Brain, Shield, Cloud, Server, BarChart3, Users, ShoppingCart, 
+import React, { useState } from 'react.ts';
+import { motion  } from 'framer-motion.ts';
+import { Brain, Shield, Cloud, Server, BarChart3, Users, ShoppingCart, 
   MessageCircle, HelpCircle, DollarSign, Target, TrendingUp, 
   Atom, Network, Eye, PenTool, Heart, Building, Truck, 
   Lock, Smartphone, Mail, Video, Satellite, Leaf, Code,
@@ -9,14 +8,13 @@ import {
   CheckCircle, Clock, Users as UsersIcon, Zap as ZapIcon,
   Award, TrendingUp as TrendingUpIcon, Globe as GlobeIcon,
   Calculator, PieChart, BarChart
-} from 'lucide-react';
-import { 
-  revolutionaryMicroSaasServices2025, 
+ } from 'lucide-react.ts';
+import { revolutionaryMicroSaasServices2025, 
   advancedITInfrastructureServices2025, 
   revolutionaryAIServices2025 
-} from '../data/comprehensiveServices2025';
+ } from '../data/comprehensiveServices2025';
 
-export default function ComprehensivePricingGuide2025() {
+export default function ComprehensivePricingGuide2025(...args: any[]): any {
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [selectedPricingModel, setSelectedPricingModel] = useState('all');
 
@@ -216,8 +214,8 @@ export default function ComprehensivePricingGuide2025() {
             </p>
           </motion.div>
 
-          <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-            {services.map((service, index) => (
+          <div className="grid gap-8 md: anygrid-cols-2 lg:grid-cols-3">
+            {services.map((service, index)  => (
               <motion.div
                 key={service.id}
                 initial={{ opacity: 0, y: 30 }}

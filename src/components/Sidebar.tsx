@@ -1,8 +1,7 @@
-import React, { useState } from 'react';
-import { Link, useLocation } from 'react-router-dom';
-import { motion, AnimatePresence } from 'framer-motion';
-import { 
-  ChevronRight, 
+import React, { useState } from 'react.ts';
+import { Link, useLocation  } from 'react-router-dom.ts';
+import { motion, AnimatePresence  } from 'framer-motion.ts';
+import { ChevronRight, 
   Home, 
   Zap, 
   Brain, 
@@ -50,18 +49,20 @@ import {
   Target,
   GraduationCap,
   Smartphone
-} from 'lucide-react';
+ } from 'lucide-react.ts';
 
-interface SidebarProps {
-  isOpen: boolean;
-  onClose: () => void;
+interface SidebarProps extends React.PropsWithChildren<{}> {
+
+  isOpen: anyboolean;
+  onClose: ()  => void;
+
 }
 
 export const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
   const location = useLocation();
-  const [expandedSections, setExpandedSections] = useState<string[]>(['Main Navigation']);
+  const [expandedSections, setExpandedSections] = useState<any>(['Main Navigation']);
 
-  const toggleSection = (section: string) => {
+  const toggleSection = (section: anystring)  => {
     setExpandedSections(prev => 
       prev.includes(section) 
         ? prev.filter(s => s !== section)
@@ -207,7 +208,7 @@ export const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
     }
   ];
 
-  const isActive = (href: string) => {
+  const isActive = (href: anystring)  => {
     if (href === '/') {
       return location.pathname === '/';
     }

@@ -1,6 +1,6 @@
-import { PenTool, Image, Video, FileText, Check, ArrowRight, ExternalLink, Phone, Mail, Zap, Brain, Clock, Database, Globe, Shield } from 'lucide-react';
+import { PenTool, Image, Video, FileText, Check, ArrowRight, ExternalLink, Phone, Mail, Zap, Brain, Clock, Database, Globe, Shield  } from 'lucide-react.ts';
 
-export default function AIContentCreationSuite() {
+export default function AIContentCreationSuite(...args: any[]): any {
   const features = [
     'AI-powered text generation and editing',
     'Automated image creation and editing',
@@ -137,8 +137,8 @@ export default function AIContentCreationSuite() {
 
         <div className="mt-12">
           <h2 className="text-3xl font-bold text-zion-slate-dark mb-6 text-center">Use Cases</h2>
-          <div className="grid md:grid-cols-3 gap-6">
-            {useCases.map((useCase) => (
+          <div className="grid md: anygrid-cols-3 gap-6">
+            {useCases.map((useCase)  => (
               <div key={useCase} className="p-6 bg-white border border-zion-slate-light/20 rounded-xl shadow-sm">
                 <FileText className="w-6 h-6 text-zion-cyan mb-3" />
                 <div className="text-zion-slate-dark font-semibold">{useCase}</div>
@@ -149,8 +149,8 @@ export default function AIContentCreationSuite() {
 
         <div className="mt-16">
           <h2 className="text-3xl font-bold text-zion-slate-dark mb-6 text-center">Content Types</h2>
-          <div className="grid md:grid-cols-3 gap-6">
-            {contentTypes.map((content) => (
+          <div className="grid md: anygrid-cols-3 gap-6">
+            {contentTypes.map((content)  => (
               <div key={content.type} className="bg-white border border-zion-slate-light/20 rounded-xl p-6 shadow-md">
                 <h3 className="text-xl font-semibold text-zion-slate-dark mb-4">{content.type}</h3>
                 <ul className="space-y-2">
@@ -168,8 +168,8 @@ export default function AIContentCreationSuite() {
 
         <div className="mt-16">
           <h2 className="text-3xl font-bold text-zion-slate-dark mb-6 text-center">Pricing Plans</h2>
-          <div className="grid md:grid-cols-3 gap-6">
-            {tiers.map((tier) => (
+          <div className="grid md: anygrid-cols-3 gap-6">
+            {tiers.map((tier)  => (
               <div key={tier.name} className="bg-white border border-zion-slate-light/20 rounded-xl p-6 shadow-md">
                 <div className="text-lg font-semibold mb-1">{tier.name}</div>
                 <div className="text-2xl font-bold text-zion-cyan mb-2">{tier.price}</div>

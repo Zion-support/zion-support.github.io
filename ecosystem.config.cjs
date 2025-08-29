@@ -35,6 +35,160 @@ module.exports = {
       }
     },
 
+    // PM2 Sync Automation - runs continuously
+    {
+      name: 'pm2-sync-automation',
+      script: './scripts/automation/pm2-sync-automation.cjs',
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      max_memory_restart: '512M',
+      env: {
+        NODE_ENV: 'production',
+        AUTOMATION_INTERVAL: '300000' // 5 minutes
+      }
+    },
+
+    // PM2 Sync Monitor - runs continuously
+    {
+      name: 'pm2-sync-monitor',
+      script: './scripts/automation/pm2-sync-monitor.cjs',
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      max_memory_restart: '512M',
+      env: {
+        NODE_ENV: 'production',
+        AUTOMATION_INTERVAL: '60000' // 1 minute
+      }
+    },
+
+    // Build Automation - runs continuously
+    {
+      name: 'build-automation',
+      script: './scripts/automation/build-automation.cjs',
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      max_memory_restart: '512M',
+      env: {
+        NODE_ENV: 'production',
+        AUTOMATION_INTERVAL: '1800000' // 30 minutes
+      }
+    },
+
+    // Build Health Monitor - runs continuously
+    {
+      name: 'build-health-monitor',
+      script: './scripts/automation/build-health-monitor.cjs',
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      max_memory_restart: '512M',
+      env: {
+        NODE_ENV: 'production',
+        AUTOMATION_INTERVAL: '300000' // 5 minutes
+      }
+    },
+
+    // Code Quality Monitor - runs continuously
+    {
+      name: 'code-quality-monitor',
+      script: './scripts/automation/code-quality-monitor.cjs',
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      max_memory_restart: '512M',
+      env: {
+        NODE_ENV: 'production',
+        AUTOMATION_INTERVAL: '900000' // 15 minutes
+      }
+    },
+
+    // Dependency Monitor - runs continuously
+    {
+      name: 'dependency-monitor',
+      script: './scripts/automation/dependency-monitor.cjs',
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      max_memory_restart: '512M',
+      env: {
+        NODE_ENV: 'production',
+        AUTOMATION_INTERVAL: '1800000' // 30 minutes
+      }
+    },
+
+    // File Integrity Monitor - runs continuously
+    {
+      name: 'file-integrity-monitor',
+      script: './scripts/automation/file-integrity-monitor.cjs',
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      max_memory_restart: '512M',
+      env: {
+        NODE_ENV: 'production',
+        AUTOMATION_INTERVAL: '900000' // 15 minutes
+      }
+    },
+
+    // Project Health Dashboard - runs continuously
+    {
+      name: 'project-health-dashboard',
+      script: './scripts/automation/project-health-dashboard.cjs',
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      max_memory_restart: '512M',
+      env: {
+        NODE_ENV: 'production',
+        AUTOMATION_INTERVAL: '300000' // 5 minutes
+      }
+    },
+
+    // Project Health Monitor - runs continuously
+    {
+      name: 'project-health-monitor',
+      script: './scripts/automation/project-health-monitor.cjs',
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      max_memory_restart: '512M',
+      env: {
+        NODE_ENV: 'production',
+        AUTOMATION_INTERVAL: '300000' // 5 minutes
+      }
+    },
+
+    // TypeScript Syntax Fixer - runs continuously
+    {
+      name: 'typescript-syntax-fixer',
+      script: './scripts/automation/typescript-syntax-fixer.cjs',
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      max_memory_restart: '512M',
+      env: {
+        NODE_ENV: 'production',
+        AUTOMATION_INTERVAL: '900000' // 15 minutes
+      }
+    },
+
+    // Dependency Manager - runs continuously
+    {
+      name: 'dependency-manager',
+      script: './scripts/automation/dependency-manager.cjs',
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      max_memory_restart: '512M',
+      env: {
+        NODE_ENV: 'production',
+        AUTOMATION_INTERVAL: '1800000' // 30 minutes
+      }
+    },
+
     // Continuous console error fixer - runs every 15 minutes (HIGHEST PRIORITY)
     {
       name: 'console-error-fixer',

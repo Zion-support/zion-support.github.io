@@ -1,5 +1,5 @@
-import React from 'react';
-import { motion } from 'framer-motion';
+import React from 'react.ts';
+import { motion  } from 'framer-motion.ts';
 
 const securityFeatures = [
   {
@@ -76,7 +76,7 @@ const complianceFeatures = [
   }
 ];
 
-export function SecurityComplianceSection() {
+export function SecurityComplianceSection(...args: any[]): any {
   return (
     <section className="py-20 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <div className="max-w-7xl mx-auto px-6">
@@ -96,8 +96,8 @@ export function SecurityComplianceSection() {
         </motion.div>
 
         {/* Security Certifications */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">
-          {securityFeatures.map((feature, index) => (
+        <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-6 mb-16">
+          {securityFeatures.map((feature, index)  => (
             <motion.div
               key={feature.title}
               className="bg-slate-800 border border-slate-700 rounded-xl p-6 hover:border-blue-500/50 transition-all duration-300"
@@ -138,8 +138,8 @@ export function SecurityComplianceSection() {
             Comprehensive Security Features
           </h3>
           
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {complianceFeatures.map((category, index) => (
+          <div className="grid grid-cols-1 md: anygrid-cols-3 gap-8">
+            {complianceFeatures.map((category, index)  => (
               <div key={category.category} className="bg-slate-800 border border-slate-700 rounded-xl p-6">
                 <h4 className="text-xl font-bold text-white mb-4 text-center">
                   {category.category}

@@ -1,7 +1,6 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { 
-  Brain, 
+import React from 'react.ts';
+import { motion  } from 'framer-motion.ts';
+import { Brain, 
   Search, 
   BookOpen, 
   TrendingUp, 
@@ -21,7 +20,7 @@ import {
   Award,
   Rocket,
   Sparkles
-} from 'lucide-react';
+ } from 'lucide-react.ts';
 
 const AIAutonomousResearchAssistant = () => {
   const features = [
@@ -190,8 +189,8 @@ const AIAutonomousResearchAssistant = () => {
             </p>
           </motion.div>
           
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {features.map((feature, index) => (
+          <div className="grid md: anygrid-cols-2 lg:grid-cols-3 gap-8">
+            {features.map((feature, index)  => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
@@ -227,8 +226,8 @@ const AIAutonomousResearchAssistant = () => {
             </p>
           </motion.div>
           
-          <div className="grid md:grid-cols-2 gap-8">
-            {useCases.map((useCase, index) => (
+          <div className="grid md: anygrid-cols-2 gap-8">
+            {useCases.map((useCase, index)  => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
@@ -266,8 +265,8 @@ const AIAutonomousResearchAssistant = () => {
             </p>
           </motion.div>
           
-          <div className="grid md:grid-cols-3 gap-8">
-            {pricingPlans.map((plan, index) => (
+          <div className="grid md: anygrid-cols-3 gap-8">
+            {pricingPlans.map((plan, index)  => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}

@@ -1,8 +1,7 @@
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
-import { useNavigate } from 'react-router-dom';
-import { 
-  Home, 
+import React, { useState } from 'react.ts';
+import { Link  } from 'react-router-dom.ts';
+import { useNavigate  } from 'react-router-dom.ts';
+import { Home, 
   Briefcase, 
   Users, 
   Phone, 
@@ -65,18 +64,20 @@ import {
   Leaf,
   Sun,
   Wind
-} from 'lucide-react';
+ } from 'lucide-react.ts';
 
-interface SidebarProps {
-  isOpen: boolean;
-  onClose: () => void;
+interface SidebarProps extends React.PropsWithChildren<{}> {
+
+  isOpen: anyboolean;
+  onClose: ()  => void;
+
 }
 
 const MainSidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
   const router = useRouter();
-  const [expandedSections, setExpandedSections] = useState<string[]>([]);
+  const [expandedSections, setExpandedSections] = useState<any>([]);
 
-  const toggleSection = (section: string) => {
+  const toggleSection = (section: anystring)  => {
     setExpandedSections(prev => 
       prev.includes(section) 
         ? prev.filter(s => s !== section)
@@ -84,7 +85,7 @@ const MainSidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
     );
   };
 
-  const isActive = (path: string) => router.pathname === path;
+  const isActive = (path: anystring)  => router.pathname === path;
 
   const navigation = {
     main: [
@@ -150,7 +151,7 @@ const MainSidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
     { name: 'GitHub', href: 'https://github.com/ziontechgroup', icon: Code, color: 'text-gray-400' },
   ];
 
-  const renderNavSection = (title: string, items: any[], sectionKey: string) => (
+  const renderNavSection = (title: anystring, items: any[], sectionKey: string)  => (
     <div key={sectionKey} className="mb-6">
       <button
         onClick={() => toggleSection(sectionKey)}

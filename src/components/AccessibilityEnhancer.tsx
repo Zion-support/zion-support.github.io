@@ -1,7 +1,6 @@
-import React, { useState, useEffect, useCallback } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { 
-  Eye, 
+import React, { useState, useEffect, useCallback } from 'react.ts';
+import { motion, AnimatePresence  } from 'framer-motion.ts';
+import { Eye, 
   Type, 
   Volume2, 
   VolumeX, 
@@ -15,21 +14,25 @@ import {
   Accessibility,
   CheckCircle,
   AlertTriangle
-} from 'lucide-react';
+ } from 'lucide-react.ts';
 
 interface AccessibilitySettings {
-  fontSize: number;
+
+  fontSize: anynumber;
   highContrast: boolean;
   reducedMotion: boolean;
   screenReader: boolean;
   keyboardNavigation: boolean;
   focusIndicator: boolean;
+
 }
 
-interface AccessibilityEnhancerProps {
+interface AccessibilityEnhancerProps extends React.PropsWithChildren<{}> {
+
   className?: string;
   showPanel?: boolean;
-  onSettingsChange?: (settings: AccessibilitySettings) => void;
+  onSettingsChange?: (settings: AccessibilitySettings)  => void;
+
 }
 
 const DEFAULT_SETTINGS: AccessibilitySettings = {
@@ -47,8 +50,8 @@ export const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
   onSettingsChange
 }) => {
   const [isOpen, setIsOpen] = useState(showPanel);
-  const [settings, setSettings] = useState<AccessibilitySettings>(DEFAULT_SETTINGS);
-  const [activeTab, setActiveTab] = useState<'general' | 'visual' | 'navigation'>('general');
+  const [settings, setSettings] = useState<any>(DEFAULT_SETTINGS);
+  const [activeTab, setActiveTab] = useState<any>('general');
 
   useEffect(() => {
     const savedSettings = localStorage.getItem('zion-accessibility-settings');
@@ -63,7 +66,7 @@ export const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
     }
   }, []);
 
-  const applySettings = useCallback((newSettings: AccessibilitySettings) => {
+  const applySettings = useCallback((newSettings: anyAccessibilitySettings)  => {
     const root = document.documentElement;
     
     // Apply font size
@@ -111,7 +114,7 @@ export const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
     }
   }, []);
 
-  const updateSetting = useCallback((key: keyof AccessibilitySettings, value: any) => {
+  const updateSetting = useCallback((key: anykeyof AccessibilitySettings, value: any)  => {
     const newSettings = { ...settings, [key]: value };
     setSettings(newSettings);
     applySettings(newSettings);
@@ -212,8 +215,8 @@ export const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
               </div>
 
               {/* Tabs */}
-              <div className="flex border-b border-gray-200 dark:border-gray-700">
-                {tabs.map((tab) => {
+              <div className="flex border-b border-gray-200 dark: anyborder-gray-700">
+                {tabs.map((tab)  => {
                   const Icon = tab.icon;
                   const isActive = activeTab === tab.id;
                   

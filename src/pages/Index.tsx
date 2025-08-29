@@ -1,6 +1,6 @@
-import React from 'react';
+import React from 'react.ts';
 
-const Home: React.FC = () => {
+const Home: React.FC = (): JSX.Element => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900">
       {/* Hero Section */}

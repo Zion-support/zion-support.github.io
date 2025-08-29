@@ -1,19 +1,23 @@
-import React, { Component, ErrorInfo, ReactNode } from 'react';
-import { motion } from 'framer-motion';
-import { AlertTriangle, RefreshCw, Home, ArrowLeft, Bug, Shield, Zap } from 'lucide-react';
+import React, { Component, ErrorInfo, ReactNode } from 'react.ts';
+import { motion  } from 'framer-motion.ts';
+import { AlertTriangle, RefreshCw, Home, ArrowLeft, Bug, Shield, Zap  } from 'lucide-react.ts';
 
-interface Props {
-  children: ReactNode;
+interface Props extends React.PropsWithChildren<{}> {
+
+  children: anyReactNode;
   fallback?: ReactNode;
-  onError?: (error: Error, errorInfo: ErrorInfo) => void;
+  onError?: (error: Error, errorInfo: ErrorInfo)  => void;
   showDetails?: boolean;
+
 }
 
 interface State {
+
   hasError: boolean;
   error: Error | null;
   errorInfo: ErrorInfo | null;
   errorId: string | null;
+
 }
 
 export class EnhancedErrorBoundary extends Component<Props, State> {
@@ -76,7 +80,7 @@ export class EnhancedErrorBoundary extends Component<Props, State> {
     if (error && errorInfo) {
       const errorReport = {
         errorId,
-        message: error.message,
+        message: anyerror.message,
         stack: error.stack,
         componentStack: errorInfo.componentStack,
         timestamp: new Date().toISOString(),
@@ -89,7 +93,7 @@ export class EnhancedErrorBoundary extends Component<Props, State> {
       
       // For now, just copy to clipboard
       navigator.clipboard.writeText(JSON.stringify(errorReport, null, 2))
-        .then(() => alert('Error details copied to clipboard'))
+        .then(()  => alert('Error details copied to clipboard'))
         .catch(() => alert('Failed to copy error details'));
     }
   };

@@ -1,8 +1,7 @@
-import React, { useState } from 'react';
-import { motion } from 'framer-motion';
-import { Helmet } from 'react-helmet-async';
-import { 
-  Search, 
+import React, { useState } from 'react.ts';
+import { motion  } from 'framer-motion.ts';
+import { Helmet  } from 'react-helmet-async.ts';
+import { Search, 
   BookOpen, 
   Video, 
   FileText, 
@@ -32,9 +31,9 @@ import {
   Calendar,
   MapPin,
   DollarSign
-} from 'lucide-react';
+ } from 'lucide-react.ts';
 
-export default function HelpCenter() {
+export default function HelpCenter(...args: any[]): any {
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('all');
 
@@ -186,8 +185,7 @@ export default function HelpCenter() {
   ];
 
   const filteredCategories = selectedCategory === 'all' 
-    ? helpCategories 
-    : helpCategories.filter(cat => cat.id === selectedCategory);
+    ? helpCategories: anyhelpCategories.filter(cat  => cat.id === selectedCategory);
 
   const filteredArticles = filteredCategories.flatMap(cat => cat.articles);
 
@@ -248,8 +246,8 @@ export default function HelpCenter() {
                 Need Help Right Now?
               </h2>
               
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-                {supportOptions.map((option, index) => (
+              <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-4 gap-6">
+                {supportOptions.map((option, index)  => (
                   <motion.div
                     key={option.title}
                     initial={{ opacity: 0, y: 20 }}
@@ -290,12 +288,12 @@ export default function HelpCenter() {
                   className={`px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200 ${
                     selectedCategory === 'all'
                       ? 'bg-blue-600 text-white'
-                      : 'bg-slate-100 text-slate-700 hover:bg-slate-200'
+                      : 'bg-slate-100 text-slate-700 hover: anybg-slate-200'
                   }`}
                 >
                   All Categories
                 </button>
-                {helpCategories.map((category) => (
+                {helpCategories.map((category)  => (
                   <button
                     key={category.id}
                     onClick={() => setSelectedCategory(category.id)}
@@ -310,8 +308,8 @@ export default function HelpCenter() {
                 ))}
               </div>
               
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                {filteredCategories.map((category, index) => (
+              <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8">
+                {filteredCategories.map((category, index)  => (
                   <motion.div
                     key={category.id}
                     initial={{ opacity: 0, y: 20 }}
@@ -371,8 +369,8 @@ export default function HelpCenter() {
                 Video Tutorials
               </h2>
               
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-                {videoTutorials.map((tutorial, index) => (
+              <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-4 gap-6">
+                {videoTutorials.map((tutorial, index)  => (
                   <motion.div
                     key={tutorial.title}
                     initial={{ opacity: 0, y: 20 }}

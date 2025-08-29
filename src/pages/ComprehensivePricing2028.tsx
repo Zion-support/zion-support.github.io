@@ -1,8 +1,7 @@
-import React, { useState } from 'react';
-import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
-import { 
-  CheckCircle, 
+import React, { useState } from 'react.ts';
+import { motion  } from 'framer-motion.ts';
+import { Link  } from 'react-router-dom.ts';
+import { CheckCircle, 
   Star, 
   Zap, 
   Brain, 
@@ -33,11 +32,11 @@ import {
   X,
   ChevronDown,
   ChevronUp
-} from 'lucide-react';
+ } from 'lucide-react.ts';
 
-const ComprehensivePricing2028 = () => {
+const ComprehensivePricing2028: [any, React.Dispatch<React.SetStateAction<any>>] = () => {
   const [selectedCategory, setSelectedCategory] = useState('all');
-  const [expandedService, setExpandedService] = useState<string | null>(null);
+  const [expandedService, setExpandedService] = useState<any>(null);
 
   const serviceCategories = [
     { id: 'all', name: 'All Services', icon: <Sparkles className="w-5 h-5" /> },
@@ -123,10 +122,9 @@ const ComprehensivePricing2028 = () => {
   ];
 
   const filteredServices = selectedCategory === 'all' 
-    ? services 
-    : services.filter(service => service.category === selectedCategory);
+    ? services: anyservices.filter(service  => service.category === selectedCategory);
 
-  const getColorClasses = (color: string) => {
+  const getColorClasses = (color: anystring)  => {
     const colorMap: { [key: string]: string } = {
       blue: 'from-blue-500 to-cyan-500',
       green: 'from-green-500 to-emerald-500',
@@ -138,7 +136,7 @@ const ComprehensivePricing2028 = () => {
     return colorMap[color] || 'from-gray-500 to-gray-600';
   };
 
-  const getBorderColor = (color: string) => {
+  const getBorderColor = (color: anystring)  => {
     const colorMap: { [key: string]: string } = {
       blue: 'border-blue-500/30',
       green: 'border-green-500/30',
@@ -206,8 +204,8 @@ const ComprehensivePricing2028 = () => {
       {/* Services Grid */}
       <section className="py-20 px-4">
         <div className="max-w-7xl mx-auto">
-          <div className="grid lg:grid-cols-2 gap-8">
-            {filteredServices.map((service, index) => (
+          <div className="grid lg: anygrid-cols-2 gap-8">
+            {filteredServices.map((service, index)  => (
               <motion.div
                 key={service.id}
                 initial={{ opacity: 0, y: 20 }}

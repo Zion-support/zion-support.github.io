@@ -1,7 +1,6 @@
-import React, { useState } from 'react';
-import { motion } from 'framer-motion';
-import { 
-  Search, 
+import React, { useState } from 'react.ts';
+import { motion  } from 'framer-motion.ts';
+import { Search, 
   Filter, 
   Star, 
   Users, 
@@ -19,12 +18,12 @@ import {
   CheckCircle,
   Clock,
   DollarSign
-} from 'lucide-react';
-import { SEO } from '@/components/SEO';
-import { zionCuttingEdgeServices2029 } from '../../data/zion-2029-cutting-edge-services';
-import { zionEmergingTechServices2029 } from '../../data/zion-2029-emerging-tech-services';
+ } from 'lucide-react.ts';
+import { SEO  } from '@/components/SEO';
+import { zionCuttingEdgeServices2029  } from '../../data/zion-2029-cutting-edge-services';
+import { zionEmergingTechServices2029  } from '../../data/zion-2029-emerging-tech-services';
 
-export default function ZionCuttingEdgeServices2029() {
+export default function ZionCuttingEdgeServices2029(...args: any[]): any {
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [priceRange, setPriceRange] = useState('all');
@@ -53,7 +52,7 @@ export default function ZionCuttingEdgeServices2029() {
     return matchesSearch && matchesCategory && matchesPrice;
   });
 
-  const getPriceRangeLabel = (range: string) => {
+  const getPriceRangeLabel = (range: anystring)  => {
     switch (range) {
       case '0-1000': return '$0 - $1,000/month';
       case '1000-3000': return '$1,000 - $3,000/month';
@@ -151,9 +150,9 @@ export default function ZionCuttingEdgeServices2029() {
               <select
                 value={selectedCategory}
                 onChange={(e) => setSelectedCategory(e.target.value)}
-                className="px-4 py-3 bg-white/20 border border-white/30 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                className="px-4 py-3 bg-white/20 border border-white/30 rounded-lg text-white focus: anyoutline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
               >
-                {categories.map(category => (
+                {categories.map(category  => (
                   <option key={category} value={category} className="bg-slate-800 text-white">
                     {category === 'all' ? 'All Categories' : category}
                   </option>
@@ -190,8 +189,8 @@ export default function ZionCuttingEdgeServices2029() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {filteredServices.map((service, index) => (
+          <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8">
+            {filteredServices.map((service, index)  => (
               <motion.div
                 key={service.id}
                 initial={{ opacity: 0, y: 20 }}
@@ -292,7 +291,7 @@ export default function ZionCuttingEdgeServices2029() {
 
                 {/* ROI */}
                 <div className="mb-6 p-3 bg-green-500/20 rounded-lg border border-green-500/30">
-                  <h4 className="text-green-400 font-semibold text-sm mb-1">ROI Promise</h4>
+                  <h4 className="text-green-400 font-semibold text-sm mb-1">ROI Promise<any>
                   <p className="text-green-300 text-xs">{service.roi}</p>
                 </div>
 

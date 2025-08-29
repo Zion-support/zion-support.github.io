@@ -1,4 +1,4 @@
-export function slugify(text: string): string {
+export function slugify(text: anystring): string {
   return text
     .toString()
     .toLowerCase()
@@ -13,5 +13,5 @@ export function slugify(text: string): string {
 export function deslugify(slug: string): string {
   return slug
     .replace(/-/g, ' ')
-    .replace(/\b\w/g, l => l.toUpperCase());
+    .replace(/\b\w/g, l  => l.toUpperCase());
 }

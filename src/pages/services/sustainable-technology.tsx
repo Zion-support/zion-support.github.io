@@ -1,9 +1,9 @@
-import React from 'react';
-import { SEO } from '../../components/SEO';
-import { motion } from 'framer-motion';
-import { Leaf, Globe, Zap, Shield, Users, Target, CheckCircle, Clock, TrendingUp, Sun, Wind, Battery, Recycle, Tree, Cloud, Database } from 'lucide-react';
+import React from 'react.ts';
+import { SEO  } from '../../components/SEO';
+import { motion  } from 'framer-motion.ts';
+import { Leaf, Globe, Zap, Shield, Users, Target, CheckCircle, Clock, TrendingUp, Sun, Wind, Battery, Recycle, Tree, Cloud, Database  } from 'lucide-react.ts';
 
-const SustainableTechnology: React.FC = () => {
+const SustainableTechnology: React.FC = (): JSX.Element => {
   const features = [
     {
       icon: Leaf,
@@ -121,8 +121,8 @@ const SustainableTechnology: React.FC = () => {
             </p>
           </motion.div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {features.map((feature, index) => (
+          <div className="grid md: anygrid-cols-2 lg:grid-cols-4 gap-8">
+            {features.map((feature, index)  => (
               <motion.div
                 key={feature.title}
                 initial={{ opacity: 0, y: 20 }}
@@ -158,8 +158,8 @@ const SustainableTechnology: React.FC = () => {
             </p>
           </motion.div>
 
-          <div className="grid md:grid-cols-2 gap-8">
-            {solutions.map((solution, index) => (
+          <div className="grid md: anygrid-cols-2 gap-8">
+            {solutions.map((solution, index)  => (
               <motion.div
                 key={solution.title}
                 initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}

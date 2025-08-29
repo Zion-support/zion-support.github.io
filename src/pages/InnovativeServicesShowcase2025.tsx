@@ -1,12 +1,11 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { 
-  Brain, Database, Users, Truck, Shield, Briefcase, Cpu, Wrench, Leaf, Atom,
+import React from 'react.ts';
+import { motion  } from 'framer-motion.ts';
+import { Brain, Database, Users, Truck, Shield, Briefcase, Cpu, Wrench, Leaf, Atom,
   ArrowRight, ExternalLink, Phone, Mail, Zap, Target, Clock, Globe, Check
-} from 'lucide-react';
-import { SEO } from '@/components/SEO';
+ } from 'lucide-react.ts';
+import { SEO  } from '@/components/SEO';
 
-export default function InnovativeServicesShowcase2025() {
+export default function InnovativeServicesShowcase2025(...args: any[]): any {
   const services = [
     {
       id: 'ai-workflow-orchestrator',
@@ -260,8 +259,8 @@ export default function InnovativeServicesShowcase2025() {
           </div>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {services.map((service, index) => (
+        <div className="grid md: anygrid-cols-2 lg:grid-cols-3 gap-8">
+          {services.map((service, index)  => (
             <motion.div
               key={service.id}
               initial={{ opacity: 0, y: 20 }}
@@ -328,7 +327,7 @@ export default function InnovativeServicesShowcase2025() {
       <section className="py-16 bg-gradient-to-r from-zion-cyan/5 to-zion-blue/5">
         <div className="max-w-4xl mx-auto px-6 text-center">
           <h2 className="text-3xl font-bold text-zion-slate-dark mb-6">Why Choose Zion Tech Group?</h2>
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid md: anygrid-cols-3 gap-8">
             {[
               {
                 icon: Brain,
@@ -345,7 +344,7 @@ export default function InnovativeServicesShowcase2025() {
                 title: 'Rapid Implementation',
                 description: 'Quick deployment and onboarding with minimal disruption to your operations.'
               }
-            ].map((item, index) => (
+            ].map((item, index)  => (
               <motion.div
                 key={item.title}
                 initial={{ opacity: 0, y: 20 }}

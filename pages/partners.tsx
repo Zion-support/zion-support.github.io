@@ -1,7 +1,6 @@
-import { Helmet } from 'react-helmet-async';
-import { motion } from 'framer-motion'
-import { 
-  Handshake, 
+import { Helmet  } from 'react-helmet-async.ts';
+import { motion  } from 'framer-motion.ts'
+import { Handshake, 
   Shield, 
   Cloud, 
   Brain, 
@@ -13,9 +12,9 @@ import {
   Database,
   Lock,
   Rocket
-} from 'lucide-react'
+ } from 'lucide-react.ts'
 
-export default function Partners() {
+export default function Partners(...args: any[]): any {
   const title = 'Partners — Zion Tech Group'
   const description = 'Strategic partnerships with leading technology providers, cloud platforms, and cybersecurity experts to deliver comprehensive solutions.'
   
@@ -177,8 +176,8 @@ export default function Partners() {
               </p>
             </motion.div>
             
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {benefits.map((benefit, index) => (
+            <div className="grid md: anygrid-cols-2 lg:grid-cols-4 gap-8">
+              {benefits.map((benefit, index)  => (
                 <motion.div
                   key={benefit.title}
                   initial={{ opacity: 0, y: 20 }}
@@ -234,8 +233,8 @@ export default function Partners() {
                     </div>
                   </div>
                   
-                  <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-                    {category.partners.map((partner, partnerIndex) => (
+                  <div className="grid md: anygrid-cols-2 lg:grid-cols-4 gap-6">
+                    {category.partners.map((partner, partnerIndex)  => (
                       <motion.div
                         key={partner.name}
                         initial={{ opacity: 0, scale: 0.9 }}
@@ -280,8 +279,8 @@ export default function Partners() {
               </p>
             </motion.div>
             
-            <div className="grid md:grid-cols-3 gap-8">
-              {partnershipLevels.map((level, index) => (
+            <div className="grid md: anygrid-cols-3 gap-8">
+              {partnershipLevels.map((level, index)  => (
                 <motion.div
                   key={level.name}
                   initial={{ opacity: 0, y: 20 }}

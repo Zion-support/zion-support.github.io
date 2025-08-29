@@ -1,8 +1,7 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { SEO } from '../../components/SEO';
-import { 
-  Shield, 
+import React from 'react.ts';
+import { motion  } from 'framer-motion.ts';
+import { SEO  } from '../../components/SEO';
+import { Shield, 
   CheckCircle, 
   AlertTriangle, 
   FileText, 
@@ -22,9 +21,9 @@ import {
   Filter,
   Download,
   Share2
-} from 'lucide-react';
+ } from 'lucide-react.ts';
 
-export default function AIComplianceAssistant() {
+export default function AIComplianceAssistant(...args: any[]): any {
   const features = [
     {
       icon: Shield,
@@ -221,8 +220,8 @@ export default function AIComplianceAssistant() {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {features.map((feature, index) => (
+          <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8">
+            {features.map((feature, index)  => (
               <motion.div
                 key={feature.title}
                 initial={{ opacity: 0, y: 20 }}
@@ -275,8 +274,8 @@ export default function AIComplianceAssistant() {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {benefits.map((benefit, index) => (
+          <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8">
+            {benefits.map((benefit, index)  => (
               <motion.div
                 key={benefit.title}
                 initial={{ opacity: 0, y: 20 }}
@@ -329,8 +328,8 @@ export default function AIComplianceAssistant() {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {regulations.map((regulation, index) => (
+          <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8">
+            {regulations.map((regulation, index)  => (
               <motion.div
                 key={regulation.name}
                 initial={{ opacity: 0, y: 20 }}
@@ -383,8 +382,8 @@ export default function AIComplianceAssistant() {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {useCases.map((useCase, index) => (
+          <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8">
+            {useCases.map((useCase, index)  => (
               <motion.div
                 key={useCase.industry}
                 initial={{ opacity: 0, y: 20 }}

@@ -1,9 +1,10 @@
-import React, { useState, useEffect } from 'react';
-import { motion } from 'framer-motion';
-import { CheckCircle, AlertCircle, XCircle, Clock, Activity, Server, Database, Globe, Shield, Zap, BarChart3, TrendingUp } from 'lucide-react';
-import { SEO } from '../components/SEO';
+import React, { useState, useEffect } from 'react.ts';
+import { motion  } from 'framer-motion.ts';
+import { CheckCircle, AlertCircle, XCircle, Clock, Activity, Server, Database, Globe, Shield, Zap, BarChart3, TrendingUp  } from 'lucide-react.ts';
+import { SEO  } from '../components/SEO';
 
 interface ServiceStatus {
+
   id: string;
   name: string;
   status: 'operational' | 'degraded' | 'outage' | 'maintenance';
@@ -12,9 +13,11 @@ interface ServiceStatus {
   lastUpdated: string;
   description: string;
   icon: React.ComponentType<any>;
+
 }
 
 interface Incident {
+
   id: string;
   title: string;
   description: string;
@@ -23,6 +26,7 @@ interface Incident {
   startTime: string;
   endTime?: string;
   affectedServices: string[];
+
 }
 
 const services: ServiceStatus[] = [
@@ -101,7 +105,7 @@ const incidents: Incident[] = [
   }
 ];
 
-const getStatusColor = (status: ServiceStatus['status']) => {
+const getStatusColor = (status: anyServiceStatus['status'])  => {
   switch (status) {
     case 'operational':
       return 'text-green-400 bg-green-400/10 border-green-400/20';
@@ -116,7 +120,7 @@ const getStatusColor = (status: ServiceStatus['status']) => {
   }
 };
 
-const getStatusIcon = (status: ServiceStatus['status']) => {
+const getStatusIcon = (status: anyServiceStatus['status'])  => {
   switch (status) {
     case 'operational':
       return CheckCircle;
@@ -131,7 +135,7 @@ const getStatusIcon = (status: ServiceStatus['status']) => {
   }
 };
 
-const getSeverityColor = (severity: Incident['severity']) => {
+const getSeverityColor = (severity: anyIncident['severity'])  => {
   switch (severity) {
     case 'low':
       return 'text-blue-400 bg-blue-400/10 border-blue-400/20';
@@ -146,7 +150,7 @@ const getSeverityColor = (severity: Incident['severity']) => {
   }
 };
 
-export default function SystemStatus() {
+export default function SystemStatus(...args: any[]): any {
   const [lastUpdated, setLastUpdated] = useState(new Date());
 
   useEffect(() => {
@@ -249,9 +253,9 @@ export default function SystemStatus() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.8 }}
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
+          className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-6"
         >
-          {services.map((service, index) => (
+          {services.map((service, index)  => (
             <motion.div
               key={service.id}
               initial={{ opacity: 0, y: 20 }}

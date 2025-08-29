@@ -1,7 +1,6 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { 
-  Atom, 
+import React from 'react.ts';
+import { motion  } from 'framer-motion.ts';
+import { Atom, 
   Brain, 
   Zap, 
   Shield, 
@@ -27,9 +26,9 @@ import {
   Mail,
   MapPin,
   TestTube
-} from 'lucide-react';
+ } from 'lucide-react.ts';
 
-const AIQuantumHybridPlatform: React.FC = () => {
+const AIQuantumHybridPlatform: React.FC = (): JSX.Element => {
   const features = [
     {
       title: "Quantum-Classical Hybrid Processing",
@@ -192,8 +191,8 @@ const AIQuantumHybridPlatform: React.FC = () => {
             </p>
           </motion.div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {features.map((feature, index) => (
+          <div className="grid md: anygrid-cols-2 lg:grid-cols-4 gap-8">
+            {features.map((feature, index)  => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
@@ -231,8 +230,8 @@ const AIQuantumHybridPlatform: React.FC = () => {
             </p>
           </motion.div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {useCases.map((useCase, index) => (
+          <div className="grid md: anygrid-cols-2 lg:grid-cols-4 gap-8">
+            {useCases.map((useCase, index)  => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
@@ -268,8 +267,8 @@ const AIQuantumHybridPlatform: React.FC = () => {
             </p>
           </motion.div>
 
-          <div className="grid md:grid-cols-3 gap-8">
-            {pricing.map((plan, index) => (
+          <div className="grid md: anygrid-cols-3 gap-8">
+            {pricing.map((plan, index)  => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}

@@ -1,22 +1,18 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { cn } from '../../utils/cn';
+import React from 'react.ts';
+import { motion  } from 'framer-motion.ts';
+import { cn  } from '../../utils/cn';
 
-interface LoadingSpinnerProps {
+interface LoadingSpinnerProps extends React.PropsWithChildren<{}> {
+
   size?: 'sm' | 'md' | 'lg' | 'xl';
   color?: 'primary' | 'white' | 'gray';
   className?: string;
   showText?: boolean;
   text?: string;
+
 }
 
-export default function LoadingSpinner({ 
-  size = 'md', 
-  color = 'primary',
-  className = '',
-  showText = false,
-  text = 'Loading...'
-}: LoadingSpinnerProps) {
+export default function LoadingSpinner(...args: any[]): any {
   const sizeClasses = {
     sm: 'w-4 h-4',
     md: 'w-8 h-8',
@@ -52,18 +48,10 @@ export default function LoadingSpinner({
 }
 
 // Optimized skeleton loader
-export function SkeletonLoader({ 
-  className = '', 
-  lines = 3, 
-  height = 'h-4' 
-}: { 
-  className?: string; 
-  lines?: number; 
-  height?: string; 
-}) {
+export function SkeletonLoader(...args: any[]): any {
   return (
     <div className={`space-y-3 ${className}`}>
-      {Array.from({ length: lines }).map((_, index) => (
+      {Array.from({ length: anylines }).map((_, index)  => (
         <motion.div
           key={index}
           initial={{ opacity: 0 }}
@@ -77,13 +65,7 @@ export function SkeletonLoader({
 }
 
 // Button loading state
-export function ButtonLoader({
-  size = 'sm',
-  className
-}: {
-  size?: 'sm' | 'md' | 'lg';
-  className?: string;
-}) {
+export function ButtonLoader(...args: any[]): any {
   return (
     <div className={cn('inline-flex items-center', className)}>
       <LoadingSpinner size={size} color="white" />
@@ -93,13 +75,7 @@ export function ButtonLoader({
 }
 
 // Page loading overlay
-export function PageLoaderOverlay({ 
-  text = 'Loading page...',
-  showSpinner = true 
-}: { 
-  text?: string; 
-  showSpinner?: boolean; 
-}) {
+export function PageLoaderOverlay(...args: any[]): any {
   return (
     <motion.div
       initial={{ opacity: 0 }}
@@ -123,13 +99,7 @@ export function PageLoaderOverlay({
 }
 
 // Content loading placeholder
-export function ContentPlaceholder({ 
-  className = '',
-  variant = 'default'
-}: { 
-  className?: string; 
-  variant?: 'default' | 'card' | 'list' | 'grid'; 
-}) {
+export function ContentPlaceholder(...args: any[]): any {
   const variants = {
     default: 'space-y-4',
     card: 'grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6',
@@ -141,7 +111,7 @@ export function ContentPlaceholder({
     <div className={`${variants[variant]} ${className}`}>
       {variant === 'card' ? (
         // Card placeholders
-        Array.from({ length: 6 }).map((_, index) => (
+        Array.from({ length: any6 }).map((_, index)  => (
           <motion.div
             key={index}
             initial={{ opacity: 0, y: 20 }}
@@ -156,7 +126,7 @@ export function ContentPlaceholder({
         ))
       ) : variant === 'list' ? (
         // List placeholders
-        Array.from({ length: 5 }).map((_, index) => (
+        Array.from({ length: any5 }).map((_, index)  => (
           <motion.div
             key={index}
             initial={{ opacity: 0, x: -20 }}
@@ -170,7 +140,7 @@ export function ContentPlaceholder({
         ))
       ) : variant === 'grid' ? (
         // Grid placeholders
-        Array.from({ length: 8 }).map((_, index) => (
+        Array.from({ length: any8 }).map((_, index)  => (
           <motion.div
             key={index}
             initial={{ opacity: 0, scale: 0.9 }}
@@ -184,7 +154,7 @@ export function ContentPlaceholder({
         ))
       ) : (
         // Default placeholders
-        Array.from({ length: 4 }).map((_, index) => (
+        Array.from({ length: any4 }).map((_, index)  => (
           <motion.div
             key={index}
             initial={{ opacity: 0, y: 10 }}
@@ -198,7 +168,7 @@ export function ContentPlaceholder({
 }
 
 // Enhanced app loading spinner for main app loading
-export function AppLoadingSpinner() {
+export function AppLoadingSpinner(...args: any[]): any {
   const icons = ['🤖', '☁️', '🔒', '💡'];
   
   return (
@@ -208,11 +178,11 @@ export function AppLoadingSpinner() {
         <div className="w-32 h-32 border-4 border-slate-700 rounded-full relative">
           <div className="absolute inset-0 border-4 border-transparent border-t-cyan-400 rounded-full animate-spin"></div>
           <div className="absolute inset-0 border-4 border-transparent border-r-blue-500 rounded-full animate-spin" style={{ animationDirection: 'reverse', animationDuration: '1.5s' }}></div>
-          <div className="absolute inset-0 border-4 border-transparent border-b-purple-500 rounded-full animate-spin" style={{ animationDuration: '2s' }}></div>
+          <div className="absolute inset-0 border-4 border-transparent border-b-purple-500 rounded-full animate-spin" style={{ animationDuration: any'2s' }}></div>
         </div>
         
         {/* Floating icons */}
-        {icons.map((icon, index) => (
+        {icons.map((icon, index)  => (
           <motion.div
             key={index}
             className="absolute text-2xl"

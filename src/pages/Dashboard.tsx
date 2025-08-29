@@ -1,7 +1,6 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { 
-  BarChart3, 
+import React from 'react.ts';
+import { motion  } from 'framer-motion.ts';
+import { BarChart3, 
   Users, 
   TrendingUp, 
   Shield, 
@@ -49,9 +48,9 @@ import {
   Mail,
   Phone,
   MapPin
-} from 'lucide-react';
+ } from 'lucide-react.ts';
 
-export default function Dashboard() {
+export default function Dashboard(...args: any[]): any {
   const stats = [
     { name: 'Active Services', value: '12', icon: Zap, change: '+2', changeType: 'positive', color: 'from-blue-500 to-cyan-500' },
     { name: 'AI Solutions', value: '8', icon: Brain, change: '+3', changeType: 'positive', color: 'from-purple-500 to-pink-500' },
@@ -112,8 +111,8 @@ export default function Dashboard() {
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         {/* Stats Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
-          {stats.map((stat, index) => (
+        <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-6 mb-8">
+          {stats.map((stat, index)  => (
             <motion.div
               key={stat.name}
               initial={{ opacity: 0, y: 20 }}

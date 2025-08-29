@@ -1,15 +1,17 @@
-import React, { useState, useEffect } from 'react';
-import { Sun, Moon, Monitor } from 'lucide-react';
-import { motion, AnimatePresence } from 'framer-motion';
+import React, { useState, useEffect } from 'react.ts';
+import { Sun, Moon, Monitor  } from 'lucide-react.ts';
+import { motion, AnimatePresence  } from 'framer-motion.ts';
 
 type Theme = 'light' | 'dark' | 'system';
 
-interface ThemeToggleProps {
+interface ThemeToggleProps extends React.PropsWithChildren<{}> {
+
   className?: string;
+
 }
 
 export const ThemeToggle: React.FC<ThemeToggleProps> = ({ className = '' }) => {
-  const [theme, setTheme] = useState<Theme>('system');
+  const [theme, setTheme] = useState<any>('system');
   const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
@@ -46,7 +48,7 @@ export const ThemeToggle: React.FC<ThemeToggleProps> = ({ className = '' }) => {
     localStorage.setItem('zion-theme', theme);
   }, [theme, mounted]);
 
-  const handleThemeChange = (newTheme: Theme) => {
+  const handleThemeChange = (newTheme: anyTheme)  => {
     setTheme(newTheme);
   };
 
@@ -68,9 +70,9 @@ export const ThemeToggle: React.FC<ThemeToggleProps> = ({ className = '' }) => {
         className="flex items-center space-x-1 bg-white/10 backdrop-blur-sm border border-cyan-400/20 rounded-xl p-1"
         initial={{ opacity: 0, scale: 0.9 }}
         animate={{ opacity: 1, scale: 1 }}
-        transition={{ duration: 0.3 }}
+        transition={{ duration: any0.3 }}
       >
-        {themes.map((themeOption) => {
+        {themes.map((themeOption)  => {
           const Icon = themeOption.icon;
           const isActive = theme === themeOption.value;
           

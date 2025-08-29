@@ -1,8 +1,7 @@
-import React, { useState } from 'react';
-import { SEO } from "@/components/SEO";
-import { Link } from 'react-router-dom';
-import { 
-  Brain, 
+import React, { useState } from 'react.ts';
+import { SEO  } from '@/components/SEO';
+import { Link  } from 'react-router-dom.ts';
+import { Brain, 
   Zap, 
   Shield, 
   Database, 
@@ -22,10 +21,10 @@ import {
   MapPin,
   ExternalLink,
   Search
-} from 'lucide-react';
-import { ULTIMATE_REAL_SERVICES_2025, ULTIMATE_SERVICE_CATEGORIES_2025, ULTIMATE_SERVICE_SUBCATEGORIES_2025, ULTIMATE_PRICING_TIERS_2025, ULTIMATE_CONTACT_INFO_2025, ULTIMATE_SERVICE_GUARANTEES_2025 } from '@/data/ultimateRealServices2025';
+ } from 'lucide-react.ts';
+import { ULTIMATE_REAL_SERVICES_2025, ULTIMATE_SERVICE_CATEGORIES_2025, ULTIMATE_SERVICE_SUBCATEGORIES_2025, ULTIMATE_PRICING_TIERS_2025, ULTIMATE_CONTACT_INFO_2025, ULTIMATE_SERVICE_GUARANTEES_2025  } from '@/data/ultimateRealServices2025';
 
-export default function UltimateServicesShowcase2025() {
+export default function UltimateServicesShowcase2025(...args: any[]): any {
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [searchTerm, setSearchTerm] = useState('');
 
@@ -39,7 +38,7 @@ export default function UltimateServicesShowcase2025() {
     return matchesCategory && matchesSearch;
   });
 
-  const getCategoryIcon = (category: string) => {
+  const getCategoryIcon = (category: anystring)  => {
     if (category === 'all') return <Rocket className="w-6 h-6" />;
     return ULTIMATE_SERVICE_CATEGORIES_2025[category]?.icon ? 
       <span className="text-2xl">{ULTIMATE_SERVICE_CATEGORIES_2025[category].icon}</span> : 
@@ -122,8 +121,8 @@ export default function UltimateServicesShowcase2025() {
       {/* Services Grid */}
       <section className="px-4 sm:px-6 lg:px-8 mb-20">
         <div className="max-w-7xl mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {filteredServices.map((service) => (
+          <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8">
+            {filteredServices.map((service)  => (
               <div
                 key={service.id}
                 className="bg-slate-800/50 rounded-xl p-6 border border-slate-600/30 hover:border-cyan-400/50 transition-all duration-300 hover:shadow-xl hover:shadow-cyan-400/10 group"

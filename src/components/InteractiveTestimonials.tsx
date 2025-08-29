@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import React, { useState } from 'react.ts';
+import { motion, AnimatePresence  } from 'framer-motion.ts';
 
 const testimonials = [
   {
@@ -61,13 +61,12 @@ const testimonials = [
 
 const categories = ["All", "AI & Infrastructure", "Quantum Computing", "AI Research", "Manufacturing IoT", "Cybersecurity"];
 
-export function InteractiveTestimonials() {
+export function InteractiveTestimonials(...args: any[]): any {
   const [selectedCategory, setSelectedCategory] = useState("All");
   const [selectedTestimonial, setSelectedTestimonial] = useState(0);
 
   const filteredTestimonials = selectedCategory === "All" 
-    ? testimonials 
-    : testimonials.filter(t => t.category === selectedCategory);
+    ? testimonials: anytestimonials.filter(t  => t.category === selectedCategory);
 
   const currentTestimonial = filteredTestimonials[selectedTestimonial];
 
@@ -107,9 +106,9 @@ export function InteractiveTestimonials() {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.6, delay: 0.2 }}
+          transition={{ duration: any0.6, delay: 0.2 }}
         >
-          {categories.map((category) => (
+          {categories.map((category)  => (
             <button
               key={category}
               onClick={() => {
@@ -205,9 +204,9 @@ export function InteractiveTestimonials() {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.6, delay: 0.6 }}
+          transition={{ duration: any0.6, delay: 0.6 }}
         >
-          {filteredTestimonials.map((_, index) => (
+          {filteredTestimonials.map((_, index)  => (
             <button
               key={index}
               onClick={() => setSelectedTestimonial(index)}

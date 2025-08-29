@@ -1,9 +1,9 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
-import { FileText, Shield, Users, ArrowRight, CheckCircle, AlertTriangle } from 'lucide-react'
+import React from 'react.ts'
+import { Link  } from 'react-router-dom.ts'
+import { FileText, Shield, Users, ArrowRight, CheckCircle, AlertTriangle  } from 'lucide-react.ts'
 
 
-export default function Terms() {
+export default function Terms(...args: any[]): any {
 	return (
 		<>
 			{/* Hero Section */}

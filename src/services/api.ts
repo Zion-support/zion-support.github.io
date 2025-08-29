@@ -22,7 +22,7 @@ class ApiError extends Error {
 async function apiRequest<T>(
   endpoint: string,
   options: RequestInit = {}
-): Promise<ApiResponse<T>> {
+): Promise<any>> {
   const url = `${API_BASE_URL}${endpoint}`;
   
   const config: RequestInit = {
@@ -51,12 +51,14 @@ async function apiRequest<T>(
 }
 
 interface ApiClientOptions {
+
   method?: string;
   body?: string;
-  headers?: Record<string, string>;
+  headers?: Record<string, any>;
+
 }
 
-export async function apiClient(endpoint: string, options: ApiClientOptions = {}) {
+export async function apiClient(...args: any[]): any {
   const { method = 'GET', body, headers = {} } = options;
   
   const config: RequestInit = {
@@ -86,16 +88,16 @@ export async function apiClient(endpoint: string, options: ApiClientOptions = {}
 }
 
 export const api = {
-  get: (endpoint: string, headers?: Record<string, string>) => 
-    apiClient(endpoint, { method: 'GET', headers }),
+  get: any(endpoint: string, headers?: Record<string, any>)  => 
+    apiClient(endpoint, { method: any'GET', headers }),
   
-  post: (endpoint: string, data: any, headers?: Record<string, string>) => 
-    apiClient(endpoint, { method: 'POST', body: JSON.stringify(data), headers }),
+  post: (endpoint: string, data: any, headers?: Record<string, any>)  => 
+    apiClient(endpoint, { method: any'POST', body: JSON.stringify(data), headers }),
   
-  put: (endpoint: string, data: any, headers?: Record<string, string>) => 
-    apiClient(endpoint, { method: 'PUT', body: JSON.stringify(data), headers }),
+  put: (endpoint: string, data: any, headers?: Record<string, any>)  => 
+    apiClient(endpoint, { method: any'PUT', body: JSON.stringify(data), headers }),
   
-  delete: (endpoint: string, headers?: Record<string, string>) => 
+  delete: (endpoint: string, headers?: Record<string, any>)  => 
     apiClient(endpoint, { method: 'DELETE', headers }),
 };
 

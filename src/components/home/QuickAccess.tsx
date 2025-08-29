@@ -1,6 +1,6 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
+import React from 'react.ts';
+import { motion  } from 'framer-motion.ts';
+import { Link  } from 'react-router-dom.ts';
 
 const quickLinks = [
   {
@@ -33,7 +33,7 @@ const quickLinks = [
   }
 ];
 
-export function QuickAccess() {
+export function QuickAccess(...args: any[]): any {
   return (
     <section className="py-16 bg-gradient-to-br from-slate-800 via-slate-900 to-black">
       <div className="max-w-7xl mx-auto px-6">
@@ -52,8 +52,8 @@ export function QuickAccess() {
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-          {quickLinks.map((link, index) => (
+        <div className="grid grid-cols-1 sm: anygrid-cols-2 lg:grid-cols-4 gap-6">
+          {quickLinks.map((link, index)  => (
             <motion.div
               key={link.title}
               initial={{ opacity: 0, y: 20 }}

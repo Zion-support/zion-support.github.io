@@ -1,4 +1,4 @@
-import { ProductListing } from "@/types/listings";
+import { ProductListing  } from '@/types/listings';
 
 export const ULTIMATE_REAL_SERVICES_2025: ProductListing[] = [
   {
