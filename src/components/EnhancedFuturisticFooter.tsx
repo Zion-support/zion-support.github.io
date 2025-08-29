@@ -121,6 +121,7 @@ export const EnhancedFuturisticFooter: React.FC = () => {
         { name: 'AI Research Assistant', href: '/services#ai-research-assistant-platform', featured: true },
         { name: 'AI Financial Advisory', href: '/services#ai-financial-advisory-platform', featured: true },
         { name: 'AI Threat Detection', href: '/services#ai-threat-detection-platform', featured: true },
+        { name: 'Innovative Services 2025', href: '/services/innovative-2025', featured: true },
         { name: 'AI Research & Discovery', href: '/services#ai-research', featured: true },
         { name: 'AI Green Technology', href: '/services#ai-green-tech', featured: true },
         { name: 'AI Metaverse Platform', href: '/services#ai-metaverse', featured: true },
@@ -178,6 +179,7 @@ export const EnhancedFuturisticFooter: React.FC = () => {
       links: [
         { name: 'Pricing Guide 2025', href: '/pricing-guide-2025', featured: true },
         { name: 'Pricing Guide 2030', href: '/pricing-guide-2030', featured: true },
+        { name: 'Innovative Services 2025', href: '/services/innovative-2025', featured: true },
         { name: 'Blog & Insights', href: '/blog', featured: false },
         { name: 'FAQ & Help Center', href: '/faq', featured: false },
         { name: 'Documentation', href: '/docs', featured: false },
@@ -225,7 +227,8 @@ export const EnhancedFuturisticFooter: React.FC = () => {
 
   const quickActions = [
     { name: 'Request Quote', href: '/request-quote', icon: MessageCircle, featured: true },
-    { name: 'View Pricing', href: '/pricing', icon: DollarSign, featured: false },
+    { name: 'Pricing Guide 2025', href: '/pricing-guide-2025', icon: DollarSign, featured: true },
+    { name: 'Innovative Services', href: '/services/innovative-2025', icon: Sparkles, featured: true },
     { name: 'Schedule Demo', href: '/demo', icon: Play, featured: false },
     { name: 'Get Support', href: '/support', icon: HelpCircle, featured: false },
     { name: 'Join Community', href: '/community', icon: Users, featured: false },
