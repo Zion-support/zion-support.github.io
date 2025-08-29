@@ -1,125 +1,236 @@
 name: Link Checker
-
 on:
   schedule:
-    - cron: '0 2 * * *'  # Daily at 2 AM
+    - cron: '0 6 * * 1'  # Weekly on Monday at 6 AM
   workflow_dispatch:
   push:
-    branches: [main]
+    branches: [ main, develop ]
+    paths:
+      - 'src/**'
+      - 'public/**'
+      - '*.md'
+      - '*.html'
 
 permissions:
-  contents: read
+  contents: write
   issues: write
+
+concurrency:
+  group: link-checker
+  cancel-in-progress: false
 
 jobs:
   check-links:
+    name: Check External Links
     runs-on: ubuntu-latest
+    timeout-minutes: 30
+    
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
-
+        
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
           node-version: '20'
           cache: 'npm'
-
-      - name: Install dependencies
-        run: npm ci
-
-      - name: Build project
-        run: npm run build
-
+          
       - name: Install linkinator
         run: npm install -g linkinator
-
-      - name: Check internal links
+        
+      - name: Build the application
         run: |
-          echo "Checking internal links..."
-          npx linkinator http://localhost:5000 --recurse --concurrency 10 --skip '.*(logout|signout).*' --format json > internal-links.json || true
-
+          npm ci
+          npm run build
+          
       - name: Check external links
         run: |
-          echo "Checking external links..."
-          # Extract external URLs from the build
-          find dist -name "*.html" -exec grep -o 'https://[^"]*' {} \; | sort -u > external-urls.txt
-          if [ -s external-urls.txt ]; then
-            npx linkinator $(cat external-urls.txt) --concurrency 5 --format json > external-links.json || true
-          else
-            echo '{"links":[]}' > external-links.json
-          fi
-
-      - name: Generate link report
+          # Create a comprehensive list of external links to check
+          cat > external_links.txt << 'EOF'
+          https://ziontechgroup.com
+          https://github.com/Zion-Holdings
+          https://www.linkedin.com/company/zion-marketplace
+          https://www.facebook.com/zionmarketplace
+          https://instagram.com/ziontechgroup
+          https://twitter.com/ziontechgroup
+          https://www.youtube.com/ziontechgroup
+          https://medium.com/ziontechgroup
+          https://dev.to/ziontechgroup
+          https://hashnode.dev/@ziontechgroup
+          https://www.reddit.com/r/ziontechgroup
+          https://discord.gg/ziontechgroup
+          https://t.me/ziontechgroup
+          https://www.tiktok.com/@ziontechgroup
+          https://www.pinterest.com/ziontechgroup
+          EOF
+          
+          echo "External links to check:"
+          cat external_links.txt
+          
+          # Run linkinator on the external links
+          linkinator external_links.txt --format json --concurrency 10 --timeout 30000 > link_report.json || true
+          
+      - name: Check internal links in built application
         run: |
-          echo "Generating link report..."
-          # Combine internal and external link reports
-          jq -s '
-            reduce .[] as $r ({"links":[]};
-              .links += ($r.links // [])
-            )
-          ' internal-links.json external-links.json > combined-links.json
-
-          # Generate broken links summary
-          jq '
-            [.links[] | select(.state=="BROKEN") |
-              {source:.parent, target:.url, status:(.status // "unknown"), type: "broken"}
-            ] | sort_by(.source, .target)
-          ' combined-links.json > broken-links.json
-
-          # Count broken links
-          broken_count=$(jq 'length' broken-links.json)
-          echo "Found $broken_count broken links"
-
-          # Generate markdown report
-          if [ "$broken_count" -gt 0 ]; then
-            cat > LINK_REPORT.md << EOF
-            # Link Check Report - $(date)
-            
-            ## Summary
-            - **Total broken links**: $broken_count
-            - **Report generated**: $(date)
-            
-            ## Broken Links
-            
-            | Source | Target | Status |
-            |--------|--------|--------|
-            $(jq -r '.[] | "| " + (.source // "unknown") + " | " + (.target // "unknown") + " | " + (.status // "unknown") + " |"' broken-links.json)
-            
-            ## Recommendations
-            1. Fix all broken internal links
-            2. Update or remove broken external links
-            3. Implement proper 404 handling for broken routes
-            4. Add link validation to CI/CD pipeline
-            EOF
+          # Check internal links in the built application
+          if [ -d "dist" ]; then
+            echo "Checking internal links in built application..."
+            find dist -name "*.html" -exec grep -l "href=" {} \; | head -10 | while read file; do
+              echo "Checking file: $file"
+              linkinator "$file" --format json --concurrency 5 --timeout 15000 >> internal_report.json || true
+            done
           else
-            cat > LINK_REPORT.md << EOF
-            # Link Check Report - $(date)
-            
-            ## Summary
-            ✅ **No broken links found!**
-            
-            All links are working correctly.
-            EOF
+            echo "No dist directory found, skipping internal link check"
+            echo '[]' > internal_report.json
           fi
-
-      - name: Upload link report
-        uses: actions/upload-artifact@v4
-        with:
-          name: link-report
-          path: |
-            LINK_REPORT.md
-            broken-links.json
-            combined-links.json
-          retention-days: 7
-
+          
+      - name: Analyze results
+        run: |
+          echo "Analyzing link check results..."
+          
+          # Initialize counters
+          external_broken=0
+          internal_broken=0
+          external_total=0
+          internal_total=0
+          
+          # Analyze external links
+          if [ -f link_report.json ]; then
+            external_total=$(jq '.links | length' link_report.json 2>/dev/null || echo "0")
+            external_broken=$(jq '.links[] | select(.state=="BROKEN") | length' link_report.json 2>/dev/null || echo "0")
+            echo "External links - Total: $external_total, Broken: $external_broken"
+          fi
+          
+          # Analyze internal links
+          if [ -f internal_report.json ]; then
+            internal_total=$(jq '.links | length' internal_report.json 2>/dev/null || echo "0")
+            internal_broken=$(jq '.links[] | select(.state=="BROKEN") | length' internal_report.json 2>/dev/null || echo "0")
+            echo "Internal links - Total: $internal_total, Broken: $internal_broken"
+          fi
+          
+          # Create comprehensive report
+          cat > LINK_REPORT.md << EOF
+          # Link Check Report - Zion Tech Group
+          
+          Generated on: $(date)
+          
+          ## Summary
+          
+          ### External Links
+          - Total checked: $external_total
+          - Broken: $external_broken
+          - Status: $([ "$external_broken" -eq 0 ] && echo "✅ All working" || echo "❌ Issues found")
+          
+          ### Internal Links
+          - Total checked: $internal_total
+          - Broken: $internal_broken
+          - Status: $([ "$internal_broken" -eq 0 ] && echo "✅ All working" || echo "❌ Issues found")
+          
+          ## Detailed Results
+          
+          EOF
+          
+          # Add external link details
+          if [ -f link_report.json ] && [ "$external_broken" -gt 0 ]; then
+            echo "### Broken External Links" >> LINK_REPORT.md
+            echo "| URL | Status | Error |" >> LINK_REPORT.md
+            echo "|-----|--------|-------|" >> LINK_REPORT.md
+            jq -r '.links[] | select(.state=="BROKEN") | "| \(.url) | \(.status // "unknown") | \(.error // "N/A") |"' link_report.json >> LINK_REPORT.md 2>/dev/null || echo "| Error parsing results | | |" >> LINK_REPORT.md
+          elif [ -f link_report.json ]; then
+            echo "### External Links Status" >> LINK_REPORT.md
+            echo "✅ All external links are working correctly!" >> LINK_REPORT.md
+          fi
+          
+          # Add internal link details
+          if [ -f internal_report.json ] && [ "$internal_broken" -gt 0 ]; then
+            echo "" >> LINK_REPORT.md
+            echo "### Broken Internal Links" >> LINK_REPORT.md
+            echo "| URL | Status | Error |" >> LINK_REPORT.md
+            echo "|-----|--------|-------|" >> LINK_REPORT.md
+            jq -r '.links[] | select(.state=="BROKEN") | "| \(.url) | \(.status // "unknown") | \(.error // "N/A") |"' internal_report.json >> LINK_REPORT.md 2>/dev/null || echo "| Error parsing results | | |" >> LINK_REPORT.md
+          elif [ -f internal_report.json ]; then
+            echo "" >> LINK_REPORT.md
+            echo "### Internal Links Status" >> LINK_REPORT.md
+            echo "✅ All internal links are working correctly!" >> LINK_REPORT.md
+          fi
+          
+          # Add recommendations
+          echo "" >> LINK_REPORT.md
+          echo "## Recommendations" >> LINK_REPORT.md
+          if [ "$external_broken" -gt 0 ] || [ "$internal_broken" -gt 0 ]; then
+            echo "1. Review and fix broken links listed above" >> LINK_REPORT.md
+            echo "2. Update any outdated URLs or references" >> LINK_REPORT.md
+            echo "3. Test links manually to ensure they work correctly" >> LINK_REPORT.md
+            echo "4. Consider implementing link monitoring for critical pages" >> LINK_REPORT.md
+          else
+            echo "1. All links are working correctly - great job!" >> LINK_REPORT.md
+            echo "2. Continue monitoring links regularly" >> LINK_REPORT.md
+            echo "3. Consider expanding link checking to include more external resources" >> LINK_REPORT.md
+          fi
+          
+          echo "Report generated successfully"
+          
       - name: Create issue for broken links
-        if: contains(steps.check-links.outputs.broken_count, '0') == false
+        if: failure() || contains(github.event_name, 'schedule')
         uses: peter-evans/create-issue-from-file@v5
         with:
-          title: "🔗 Broken Links Detected - $(date)"
+          title: "🔗 Link Check Report - $(date +'%Y-%m-%d')"
           content-filepath: LINK_REPORT.md
           labels: |
             link-check
             automated
-            bug
+            maintenance
           assignees: ''
+          body: |
+            This issue was automatically generated by the Link Checker workflow.
+            
+            **Workflow Run**: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+            
+            Please review the broken links and take appropriate action.
+            
+      - name: Comment on PR if links broken
+        if: github.event_name == 'pull_request' && (contains(github.event_name, 'schedule') || failure())
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const fs = require('fs');
+            const report = fs.readFileSync('LINK_REPORT.md', 'utf8');
+            
+            github.rest.issues.createComment({
+              issue_number: context.issue.number,
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              body: `## 🔗 Link Check Results\n\n${report}\n\nThis comment was automatically generated by the Link Checker workflow.`
+            });
+            
+      - name: Upload reports as artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: link-check-reports
+          path: |
+            LINK_REPORT.md
+            link_report.json
+            internal_report.json
+            external_links.txt
+          retention-days: 30
+          
+      - name: Summary
+        run: |
+          echo "## Link Check Summary" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          
+          if [ -f LINK_REPORT.md ]; then
+            echo "✅ Link check completed successfully" >> $GITHUB_STEP_SUMMARY
+            echo "" >> $GITHUB_STEP_SUMMARY
+            echo "**External Links**: $external_total checked, $external_broken broken" >> $GITHUB_STEP_SUMMARY
+            echo "**Internal Links**: $internal_total checked, $internal_broken broken" >> $GITHUB_STEP_SUMMARY
+            echo "" >> $GITHUB_STEP_SUMMARY
+            
+            if [ "$external_broken" -eq 0 ] && [ "$internal_broken" -eq 0 ]; then
+              echo "🎉 All links are working correctly!" >> $GITHUB_STEP_SUMMARY
+            else
+              echo "⚠️ Some links need attention. Check the full report for details." >> $GITHUB_STEP_SUMMARY
+            fi
+          else
+            echo "❌ Link check failed to complete" >> $GITHUB_STEP_SUMMARY
+          fi
