@@ -23,6 +23,9 @@ const Terms = React.lazy(() => import('./pages/Terms'));
 const Cookies = React.lazy(() => import('./pages/Cookies'));
 const Partners = React.lazy(() => import('./pages/Partners'));
 const Pricing = React.lazy(() => import('./pages/Pricing'));
+const RequestQuote = React.lazy(() => import('./pages/RequestQuote'));
+const ComprehensiveServicesShowcase2026 = React.lazy(() => import('./pages/ComprehensiveServicesShowcase2026'));
+const CaseStudies = React.lazy(() => import('./pages/CaseStudies'));
 
 // Service pages - only import existing ones
 const DigitalTwin = React.lazy(() => import('./pages/services/DigitalTwin'));
@@ -33,6 +36,14 @@ const QuantumComputing = React.lazy(() => import('./pages/services/QuantumComput
 const SpaceTech = React.lazy(() => import('./pages/services/SpaceTech'));
 const Sustainability = React.lazy(() => import('./pages/services/Sustainability'));
 const ZeroTrustNetworkArchitecture = React.lazy(() => import('./pages/services/ZeroTrustNetworkArchitecture'));
+
+// New AI service pages
+const AIBusinessIntelligence = React.lazy(() => import('./pages/services/AIBusinessIntelligence'));
+const AIHealthcarePlatform = React.lazy(() => import('./pages/services/AIHealthcarePlatform'));
+const AIContentCreation = React.lazy(() => import('./pages/services/AIContentCreation'));
+const AICybersecurity = React.lazy(() => import('./pages/services/AICybersecurity'));
+const IoTEdgeComputing = React.lazy(() => import('./pages/services/IoTEdgeComputing'));
+const CloudDevOps = React.lazy(() => import('./pages/services/CloudDevOps'));
 
 // New AI-powered micro SaaS services
 const AIContentMarketingAutomation = React.lazy(() => import('./pages/services/AIContentMarketingAutomation'));
@@ -70,6 +81,9 @@ function App() {
                 <Route path="/solutions" element={<Solutions />} />
                 <Route path="/dashboard" element={<Dashboard />} />
                 <Route path="/login" element={<Login />} />
+                <Route path="/request-quote" element={<RequestQuote />} />
+                <Route path="/comprehensive-services-showcase-2026" element={<ComprehensiveServicesShowcase2026 />} />
+                <Route path="/case-studies" element={<CaseStudies />} />
                 
                 {/* Service Routes - only for existing pages */}
                 <Route path="/services/digital-twin" element={<DigitalTwin />} />
@@ -80,6 +94,14 @@ function App() {
                 <Route path="/services/space-tech" element={<SpaceTech />} />
                 <Route path="/services/sustainability" element={<Sustainability />} />
                 <Route path="/services/zero-trust-network-architecture" element={<ZeroTrustNetworkArchitecture />} />
+                
+                {/* New AI service routes */}
+                <Route path="/services/ai-business-intelligence" element={<AIBusinessIntelligence />} />
+                <Route path="/services/ai-healthcare-platform" element={<AIHealthcarePlatform />} />
+                <Route path="/services/ai-content-creation" element={<AIContentCreation />} />
+                <Route path="/services/ai-cybersecurity" element={<AICybersecurity />} />
+                <Route path="/services/iot-edge-computing" element={<IoTEdgeComputing />} />
+                <Route path="/services/cloud-devops" element={<CloudDevOps />} />
                 
                 {/* New AI-powered micro SaaS service routes */}
                 <Route path="/services/ai-content-marketing-automation" element={<AIContentMarketingAutomation />} />

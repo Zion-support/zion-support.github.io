@@ -1,66 +1,66 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Cloud, Brain, Zap, Users, Target, ArrowRight, CheckCircle, Star, Lightbulb, Database, Cpu, Globe, Rocket, GitBranch, Server, Activity, Code } from 'lucide-react';
+import { PenTool, Brain, Zap, Users, Target, ArrowRight, CheckCircle, Star, Lightbulb, Database, Cpu, Globe, Rocket, FileText, Image, Video, Music } from 'lucide-react';
 
-export default function CloudDevOps() {
+export default function AIContentCreation() {
   const features = [
     {
-      icon: Cloud,
-      title: "Cloud Infrastructure",
-      description: "Scalable cloud solutions with automated provisioning and management"
-    },
-    {
-      icon: GitBranch,
-      title: "CI/CD Pipelines",
-      description: "Automated build, test, and deployment workflows"
-    },
-    {
       icon: Brain,
-      title: "AI-Powered Operations",
-      description: "Intelligent monitoring, alerting, and incident response"
+      title: "AI-Powered Writing",
+      description: "Advanced language models for high-quality content generation"
     },
     {
-      icon: Server,
-      title: "Infrastructure as Code",
-      description: "Version-controlled infrastructure management and deployment"
+      icon: PenTool,
+      title: "Creative Content",
+      description: "Generate engaging articles, blogs, and marketing copy"
+    },
+    {
+      icon: Image,
+      title: "Visual Content",
+      description: "Create stunning images, graphics, and visual assets"
+    },
+    {
+      icon: Video,
+      title: "Video Production",
+      description: "AI-generated video content and editing automation"
     },
     {
       icon: Zap,
-      title: "Automated Scaling",
-      description: "Dynamic resource allocation based on demand and performance"
+      title: "Real-time Generation",
+      description: "Instant content creation with customizable templates"
     },
     {
       icon: Target,
-      title: "Performance Optimization",
-      description: "Continuous monitoring and optimization of cloud resources"
+      title: "Audience Optimization",
+      description: "Content tailored to your target audience and SEO"
     }
   ];
 
   const benefits = [
-    "Deploy applications 10x faster with automation",
-    "Reduce infrastructure costs by 40%",
-    "Improve system reliability by 99.9%",
-    "Enable rapid scaling and recovery",
-    "Reduce manual operations by 80%",
-    "Accelerate time-to-market significantly"
+    "Increase content production by 300%",
+    "Reduce content creation time by 80%",
+    "Improve SEO rankings by 65%",
+    "Lower content costs by 50%",
+    "Enhance engagement rates by 75%",
+    "Scale content marketing effortlessly"
   ];
 
   const useCases = [
     {
+      industry: "Marketing",
+      applications: ["Blog Posts", "Social Media", "Email Campaigns", "Landing Pages"]
+    },
+    {
       industry: "E-commerce",
-      applications: ["Auto-scaling", "Load Balancing", "CDN Management", "Database Optimization"]
+      applications: ["Product Descriptions", "Category Pages", "Reviews", "Marketing Copy"]
     },
     {
-      industry: "SaaS Platforms",
-      applications: ["Multi-tenancy", "API Management", "User Provisioning", "Performance Monitoring"]
+      industry: "Education",
+      applications: ["Course Content", "Study Materials", "Tutorials", "Assessments"]
     },
     {
-      industry: "Financial Services",
-      applications: ["Compliance Automation", "Security Scanning", "Audit Logging", "Disaster Recovery"]
-    },
-    {
-      industry: "Healthcare",
-      applications: ["HIPAA Compliance", "Data Backup", "Access Control", "Monitoring Systems"]
+      industry: "Publishing",
+      applications: ["Articles", "Newsletters", "Books", "Research Papers"]
     }
   ];
 
@@ -72,20 +72,20 @@ export default function CloudDevOps() {
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-4xl mx-auto text-center">
             <div className="inline-flex items-center gap-2 bg-blue-500/10 border border-blue-500/20 rounded-full px-4 py-2 mb-6">
-              <Cloud className="w-5 h-5 text-blue-400" />
-              <span className="text-blue-300 text-sm font-medium">Cloud DevOps</span>
+              <PenTool className="w-5 h-5 text-blue-400" />
+              <span className="text-blue-300 text-sm font-medium">AI-Powered Content</span>
             </div>
             
             <h1 className="text-4xl lg:text-6xl font-bold text-white mb-6">
-              Cloud DevOps
+              AI Content
               <span className="block bg-gradient-to-r from-blue-400 via-indigo-400 to-purple-400 bg-clip-text text-transparent">
-                Platform
+                Creation Platform
               </span>
             </h1>
             
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Accelerate your development and operations with our comprehensive Cloud DevOps platform. 
-              Automate deployments, optimize infrastructure, and scale with confidence.
+              Revolutionize your content strategy with our AI-powered creation platform. Generate high-quality, 
+              engaging content at scale while maintaining your brand voice and SEO optimization.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -112,10 +112,10 @@ export default function CloudDevOps() {
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
-              Advanced DevOps Features
+              Advanced Content Creation Features
             </h2>
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              Our platform combines cutting-edge cloud technologies with DevOps best practices
+              Our platform combines cutting-edge AI with creative expertise to deliver unprecedented content generation capabilities
             </p>
           </div>
           
@@ -139,11 +139,11 @@ export default function CloudDevOps() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <div>
               <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">
-                Transform Your Development Operations
+                Transform Your Content Strategy with AI
               </h2>
               <p className="text-xl text-gray-300 mb-8">
-                Our Cloud DevOps Platform delivers measurable improvements across all aspects of software development 
-                and operations, from code deployment to infrastructure management.
+                Our AI Content Creation Platform delivers measurable improvements across all aspects of content marketing, 
+                from creation to distribution and optimization.
               </p>
               
               <div className="space-y-4">
@@ -160,20 +160,20 @@ export default function CloudDevOps() {
               <div className="bg-gradient-to-br from-blue-500/20 to-indigo-500/20 rounded-2xl p-8 border border-blue-500/30">
                 <div className="grid grid-cols-2 gap-6">
                   <div className="text-center">
-                    <div className="text-3xl font-bold text-blue-400 mb-2">10x</div>
-                    <div className="text-sm text-gray-300">Faster Deployment</div>
+                    <div className="text-3xl font-bold text-blue-400 mb-2">300%</div>
+                    <div className="text-sm text-gray-300">Content Production</div>
                   </div>
                   <div className="text-center">
-                    <div className="text-3xl font-bold text-indigo-400 mb-2">40%</div>
+                    <div className="text-3xl font-bold text-indigo-400 mb-2">80%</div>
+                    <div className="text-sm text-gray-300">Time Savings</div>
+                  </div>
+                  <div className="text-center">
+                    <div className="text-3xl font-bold text-purple-400 mb-2">65%</div>
+                    <div className="text-sm text-gray-300">SEO Improvement</div>
+                  </div>
+                  <div className="text-center">
+                    <div className="text-3xl font-bold text-blue-400 mb-2">50%</div>
                     <div className="text-sm text-gray-300">Cost Reduction</div>
-                  </div>
-                  <div className="text-center">
-                    <div className="text-3xl font-bold text-purple-400 mb-2">99.9%</div>
-                    <div className="text-sm text-gray-300">Reliability</div>
-                  </div>
-                  <div className="text-center">
-                    <div className="text-3xl font-bold text-blue-400 mb-2">80%</div>
-                    <div className="text-sm text-gray-300">Automation</div>
                   </div>
                 </div>
               </div>
@@ -190,7 +190,7 @@ export default function CloudDevOps() {
               Industry Applications
             </h2>
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              Discover how Cloud DevOps transforms operations across various industries
+              Discover how AI Content Creation transforms operations across various industries
             </p>
           </div>
           
@@ -198,7 +198,7 @@ export default function CloudDevOps() {
             {useCases.map((useCase, index) => (
               <div key={index} className="group p-6 bg-slate-800/50 border border-slate-700/50 rounded-xl hover:border-blue-500/50 transition-all duration-300 hover:bg-slate-800/80">
                 <div className="p-3 bg-gradient-to-br from-blue-500 to-indigo-600 rounded-lg w-fit mb-4">
-                  <Code className="w-6 h-6 text-white" />
+                  <FileText className="w-6 h-6 text-white" />
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-4">{useCase.industry}</h3>
                 <ul className="space-y-2">
@@ -220,23 +220,23 @@ export default function CloudDevOps() {
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
-              Advanced Cloud Technology
+              Advanced Content Technology
             </h2>
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              Built with cutting-edge technologies for maximum performance and reliability
+              Built with cutting-edge AI technologies for maximum creativity and quality
             </p>
           </div>
           
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             {[
-              { icon: Cloud, name: "Multi-Cloud", description: "AWS, Azure, GCP support" },
-              { icon: GitBranch, name: "GitOps", description: "Git-based deployments" },
-              { icon: Server, name: "Kubernetes", description: "Container orchestration" },
-              { icon: Globe, name: "Global CDN", description: "Worldwide content delivery" },
-              { icon: Shield, name: "Security", description: "DevSecOps integration" },
-              { icon: Zap, name: "Performance", description: "High-speed operations" },
-              { icon: Users, name: "Collaboration", description: "Team-based workflows" },
-              { icon: Rocket, name: "Innovation", description: "Continuous advancement" }
+              { icon: Brain, name: "Natural Language", description: "Advanced language models" },
+              { icon: Image, name: "Computer Vision", description: "AI image generation" },
+              { icon: Video, name: "Video AI", description: "Automated video creation" },
+              { icon: Globe, name: "Multi-language", description: "Global content support" },
+              { icon: Shield, name: "Quality Control", description: "Content validation & review" },
+              { icon: Zap, name: "Performance", description: "High-speed generation" },
+              { icon: Users, name: "Collaboration", description: "Team-based creation" },
+              { icon: Rocket, name: "Innovation", description: "Continuous AI advancement" }
             ].map((tech, index) => (
               <div key={index} className="text-center group">
                 <div className="p-4 bg-gradient-to-br from-blue-500/20 to-indigo-500/20 rounded-xl border border-blue-500/30 mb-4 group-hover:border-blue-500/50 transition-all duration-300">
@@ -254,10 +254,10 @@ export default function CloudDevOps() {
       <section className="py-20 bg-gradient-to-r from-blue-900/50 via-indigo-900/50 to-purple-900/50">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">
-            Ready to Transform Your DevOps?
+            Ready to Transform Your Content Creation?
           </h2>
           <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
-            Join the DevOps revolution and accelerate your development with our intelligent cloud platform.
+            Join the AI content revolution and scale your content marketing with our intelligent creation platform.
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
