@@ -138,14 +138,12 @@ export const EnhancedFuturisticFooter: React.FC = () => {
       title: 'Business Solutions',
       featured: true,
       links: [
-<<<<<<< HEAD
         { name: 'Quantum AI Platform', href: '/services/quantum-ai-platform' },
         { name: 'AI Healthcare Analytics', href: '/services/ai-healthcare-analytics' },
         { name: 'AI Cybersecurity Suite', href: '/services/ai-cybersecurity-suite' },
         { name: 'Edge Computing Platform', href: '/services/edge-computing-platform' },
         { name: 'Blockchain Solutions', href: '/services/blockchain-enterprise-solutions' },
-        { name: 'Space Technology', href: '/services/space-tech' }
-=======
+        { name: 'Space Technology', href: '/services/space-tech' },
         { name: 'Micro SaaS Products', href: '/services/micro-saas', featured: true },
         { name: 'Enterprise Solutions', href: '/solutions', featured: true },
         { name: 'AI Workflow Automation', href: '/services/ai-workflow-automation', featured: true },
