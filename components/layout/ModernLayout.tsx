@@ -89,9 +89,9 @@ const ModernLayout: React.FC<ModernLayoutProps> = ({
         />
       </Head>
       
-      <div className="min-h-screen bg-black text-white flex flex-col">
+      <div className="min-h-screen bg-white text-gray-900 flex flex-col">
         <ModernHeader />
-        <main className="flex-1">
+        <main className="flex-1 pt-20">
           {children}
         </main>
         <ModernFooter />

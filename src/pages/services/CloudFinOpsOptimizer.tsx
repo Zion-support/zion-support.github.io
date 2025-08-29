@@ -1,119 +1,379 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-import { Cloud, DollarSign, Gauge, CheckCircle, BarChart3, ArrowRight } from 'lucide-react';
+import { motion } from 'framer-motion';
+import { 
+  DollarSign, 
+  TrendingDown, 
+  CheckCircle, 
+  Users, 
+  Clock, 
+  ArrowRight,
+  Play,
+  Settings,
+  Target,
+  Cpu,
+  Activity,
+  Sparkles,
+  Search,
+  Zap,
+  Globe,
+  Building,
+  BarChart3,
+  TrendingUp,
+  Network,
+  Key,
+  Fingerprint,
+  Monitor,
+  AlertTriangle,
+  ShieldCheck,
+  Globe2,
+  Server,
+  Database,
+  Smartphone,
+  Code,
+  FileText,
+  AlertCircle,
+  CheckSquare,
+  Calculator,
+  PieChart,
+  LineChart,
+  Target2,
+  Wallet,
+  PiggyBank,
+  CreditCard,
+  Receipt,
+  Cloud,
+  Zap,
+  Gauge,
+  BarChart4,
+  TrendingUp,
+  Lightbulb,
+  Rocket
+} from 'lucide-react';
 
-export default function CloudFinOpsOptimizer() {
-  const capabilities = [
-    'Multi-cloud cost visibility (AWS, Azure, GCP)',
-    'Idle/underutilized resource detection and rightsizing',
-    'Reserved Instances/Savings Plans recommendations',
-    'Anomaly detection and budget alerts',
+const CloudFinOpsOptimizer = () => {
+  const features = [
+    {
+      icon: Cloud,
+      title: 'Multi-Cloud Optimization',
+      description: 'Optimize costs across AWS, Azure, GCP, and hybrid environments'
+    },
+    {
+      icon: Zap2,
+      title: 'Automated Optimization',
+      description: 'AI-powered recommendations and automated cost reduction actions'
+    },
+    {
+      icon: Gauge,
+      title: 'Performance Monitoring',
+      description: 'Real-time performance metrics with cost correlation analysis'
+    },
+    {
+      icon: BarChart4,
+      title: 'Advanced Analytics',
+      description: 'Deep insights into spending patterns and optimization opportunities'
+    },
+    {
+      icon: TrendingUp2,
+      title: 'Predictive Modeling',
+      description: 'Forecast future costs and identify optimization trends'
+    },
+    {
+      icon: Lightbulb,
+      title: 'Smart Recommendations',
+      description: 'Intelligent suggestions for cost savings and efficiency improvements'
+    }
   ];
 
-  const outcomes = [
-    'Cut cloud spend by 15–35% in 90 days',
-    'Continuous optimization via policies and guardrails',
-    'Showback/chargeback for business units',
-    'FinOps maturity reporting for executives',
+  const benefits = [
+    'Reduce cloud costs by 40-60%',
+    'Improve resource efficiency by 50%',
+    'Automate 80% of optimization tasks',
+    'Achieve 95% cost predictability',
+    'Enable real-time cost monitoring',
+    'Maximize cloud ROI and performance'
   ];
 
-  const references = [
-    { label: 'FinOps Foundation', url: 'https://www.finops.org/' },
-    { label: 'AWS Cost Explorer', url: 'https://aws.amazon.com/aws-cost-management/aws-cost-explorer/' },
-    { label: 'Azure Cost Management', url: 'https://azure.microsoft.com/en-us/products/cost-management' },
-    { label: 'GCP Billing', url: 'https://cloud.google.com/billing' },
+  const services = [
+    {
+      icon: Calculator,
+      title: 'Cost Analysis Engine',
+      description: 'Advanced algorithms for comprehensive cost analysis and optimization'
+    },
+    {
+      icon: Rocket,
+      title: 'Automated Actions',
+      description: 'Intelligent automation for rightsizing, scheduling, and optimization'
+    },
+    {
+      icon: BarChart3,
+      title: 'Real-time Dashboards',
+      description: 'Live monitoring and reporting of cloud costs and performance'
+    },
+    {
+      icon: Target,
+      title: 'Goal Setting & Tracking',
+      description: 'Set cost targets and track progress with automated alerts'
+    }
+  ];
+
+  const useCases = [
+    {
+      industry: 'Enterprise',
+      description: 'Optimize large-scale multi-cloud environments'
+    },
+    {
+      industry: 'Startups',
+      description: 'Scale efficiently while controlling costs'
+    },
+    {
+      industry: 'E-commerce',
+      description: 'Balance performance with cost optimization'
+    },
+    {
+      industry: 'SaaS Platforms',
+      description: 'Optimize costs for multi-tenant applications'
+    }
   ];
 
   return (
-    <div className="min-h-screen bg-futuristic">
-      <section className="relative overflow-hidden py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto text-center">
-          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-            Cloud <span className="bg-gradient-to-r from-emerald-400 to-teal-500 bg-clip-text text-transparent">FinOps Optimizer</span>
-          </h1>
-          <p className="text-xl text-slate-300 mb-8 max-w-3xl mx-auto">
-            Reduce waste, forecast accurately, and align cloud spend with business value.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link to="/contact" className="inline-flex items-center px-8 py-3 bg-gradient-to-r from-emerald-500 to-teal-600 text-white font-semibold rounded-lg hover:from-emerald-600 hover:to-teal-700 transition-all duration-200">
-              Start Optimization
-              <ArrowRight className="ml-2 h-5 w-5" />
-            </Link>
-            <a href="https://ziontechgroup.com" target="_blank" rel="noreferrer" className="inline-flex items-center px-8 py-3 border border-emerald-500 text-emerald-400 font-semibold rounded-lg hover:bg-emerald-500 hover:text-white transition-all duration-200">
-              Learn More
-            </a>
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+      {/* Hero Section */}
+      <section className="relative pt-32 pb-20 overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-r from-amber-500/10 to-orange-500/10"></div>
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="text-center"
+          >
+            <div className="inline-flex items-center px-4 py-2 bg-amber-500/10 border border-amber-500/20 rounded-full text-amber-400 text-sm font-medium mb-6">
+              <Cloud className="w-4 h-4 mr-2" />
+              Cloud Financial Optimization
+            </div>
+            
+            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
+              Cloud
+              <span className="bg-gradient-to-r from-amber-400 to-orange-500 bg-clip-text text-transparent"> FinOps Optimizer</span>
+            </h1>
+            
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
+              Automate cloud cost optimization with our intelligent FinOps platform 
+              that maximizes efficiency while maintaining performance and reliability.
+            </p>
+            
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="px-8 py-4 bg-gradient-to-r from-amber-500 to-orange-500 text-white font-semibold rounded-lg hover:from-amber-600 hover:to-orange-600 transition-all duration-200 flex items-center justify-center">
+                <Play className="w-5 h-5 mr-2" />
+                Start Free Trial
+              </button>
+              <button className="px-8 py-4 border border-amber-500/30 text-amber-400 font-semibold rounded-lg hover:bg-amber-500/10 transition-all duration-200 flex items-center justify-center">
+                <Settings className="w-5 h-5 mr-2" />
+                Schedule Demo
+              </button>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Features Section */}
+      <section className="py-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-4xl font-bold text-white mb-4">
+              Intelligent Optimization Features
+            </h2>
+            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
+              Our platform provides advanced automation and intelligence to 
+              optimize your cloud costs and performance.
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {features.map((feature, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 hover:border-amber-500/30 transition-all duration-200"
+              >
+                <div className="w-12 h-12 bg-gradient-to-r from-amber-500 to-orange-500 rounded-lg flex items-center justify-center mb-4">
+                  <feature.icon className="w-6 h-6 text-white" />
+                </div>
+                <h3 className="text-xl font-semibold text-white mb-2">{feature.title}</h3>
+                <p className="text-gray-300">{feature.description}</p>
+              </motion.div>
+            ))}
           </div>
         </div>
       </section>
 
-      <section className="py-16 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-3 gap-8">
-          <div className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-8">
-            <div className="flex items-center mb-4">
-              <div className="p-3 bg-gradient-to-r from-emerald-500 to-teal-600 rounded-lg">
-                <Cloud className="h-8 w-8 text-white" />
-              </div>
-              <h3 className="ml-3 text-xl font-semibold text-white">Capabilities</h3>
-            </div>
-            <ul className="space-y-3">
-              {capabilities.map((c) => (
-                <li key={c} className="flex items-center text-slate-300">
-                  <CheckCircle className="h-5 w-5 text-emerald-400 mr-3" />
-                  {c}
-                </li>
-              ))}
-            </ul>
-          </div>
+      {/* Services Section */}
+      <section className="py-20 bg-slate-800/30">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-4xl font-bold text-white mb-4">
+              Core Optimization Services
+            </h2>
+            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
+              From intelligent analysis to automated optimization, we provide 
+              comprehensive solutions for cloud cost management.
+            </p>
+          </motion.div>
 
-          <div className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-8">
-            <div className="flex items-center mb-4">
-              <div className="p-3 bg-gradient-to-r from-teal-500 to-cyan-600 rounded-lg">
-                <Gauge className="h-8 w-8 text-white" />
-              </div>
-              <h3 className="ml-3 text-xl font-semibold text-white">Outcomes</h3>
-            </div>
-            <ul className="space-y-3">
-              {outcomes.map((o) => (
-                <li key={o} className="flex items-center text-slate-300">
-                  <CheckCircle className="h-5 w-5 text-cyan-400 mr-3" />
-                  {o}
-                </li>
-              ))}
-            </ul>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {services.map((service, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 hover:border-amber-500/30 transition-all duration-200"
+              >
+                <div className="flex items-start space-x-4">
+                  <div className="w-12 h-12 bg-gradient-to-r from-amber-500 to-orange-500 rounded-lg flex items-center justify-center flex-shrink-0">
+                    <service.icon className="w-6 h-6 text-white" />
+                  </div>
+                  <div>
+                    <h3 className="text-xl font-semibold text-white mb-2">{service.title}</h3>
+                    <p className="text-gray-300">{service.description}</p>
+                  </div>
+                </div>
+              </motion.div>
+            ))}
           </div>
+        </div>
+      </section>
 
-          <div className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-8">
-            <div className="flex items-center mb-4">
-              <div className="p-3 bg-gradient-to-r from-amber-500 to-orange-600 rounded-lg">
-                <DollarSign className="h-8 w-8 text-white" />
-              </div>
-              <h3 className="ml-3 text-xl font-semibold text-white">Pricing</h3>
+      {/* Benefits Section */}
+      <section className="py-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-4xl font-bold text-white mb-4">
+              Transform Your Cloud Economics
+            </h2>
+            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
+              Experience measurable improvements in cost efficiency, automation, and ROI optimization.
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div className="space-y-6">
+              {benefits.slice(0, 3).map((benefit, index) => (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, x: -20 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                  className="flex items-start space-x-3"
+                >
+                  <CheckCircle className="w-6 h-6 text-amber-400 mt-1 flex-shrink-0" />
+                  <span className="text-gray-300 text-lg">{benefit}</span>
+                </motion.div>
+              ))}
             </div>
-            <ul className="space-y-3 text-slate-300">
-              <li>Essentials: From $1,200/month + 10% of verified savings</li>
-              <li>Growth: From $3,500/month + 8% of verified savings</li>
-              <li>Enterprise: Custom + SSO, multi-org, audit controls</li>
-            </ul>
-            <div className="mt-6 text-sm text-slate-400">
-              See market refs: <a className="text-emerald-400 hover:underline" href="https://www.finops.org/framework/" target="_blank" rel="noreferrer">FinOps Framework</a>
+            <div className="space-y-6">
+              {benefits.slice(3).map((benefit, index) => (
+                <motion.div
+                  key={index + 3}
+                  initial={{ opacity: 0, x: 20 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                  className="flex items-start space-x-3"
+                >
+                  <CheckCircle className="w-6 h-6 text-amber-400 mt-1 flex-shrink-0" />
+                  <span className="text-gray-300 text-lg">{benefit}</span>
+                </motion.div>
+              ))}
             </div>
           </div>
         </div>
       </section>
 
-      <section className="py-12 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto bg-slate-800/50 border border-slate-700/50 rounded-xl p-8">
-          <h3 className="text-2xl font-semibold text-white mb-4">Integrations</h3>
-          <div className="flex flex-wrap gap-3 text-slate-300">
-            <a href="https://aws.amazon.com/" target="_blank" rel="noreferrer" className="px-4 py-2 bg-slate-900/60 border border-slate-700/60 rounded-lg hover:text-white hover:border-emerald-500">AWS</a>
-            <a href="https://azure.microsoft.com/" target="_blank" rel="noreferrer" className="px-4 py-2 bg-slate-900/60 border border-slate-700/60 rounded-lg hover:text-white hover:border-emerald-500">Azure</a>
-            <a href="https://cloud.google.com/" target="_blank" rel="noreferrer" className="px-4 py-2 bg-slate-900/60 border border-slate-700/60 rounded-lg hover:text-white hover:border-emerald-500">GCP</a>
-            <a href="https://www.datadoghq.com/" target="_blank" rel="noreferrer" className="px-4 py-2 bg-slate-900/60 border border-slate-700/60 rounded-lg hover:text-white hover:border-emerald-500">Datadog</a>
-            <a href="https://www.grafana.com/" target="_blank" rel="noreferrer" className="px-4 py-2 bg-slate-900/60 border border-slate-700/60 rounded-lg hover:text-white hover:border-emerald-500">Grafana</a>
+      {/* Use Cases Section */}
+      <section className="py-20 bg-slate-800/30">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-4xl font-bold text-white mb-4">
+              Industry Applications
+            </h2>
+            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
+              Our optimization solutions adapt to various industries, providing 
+              tailored automation for your specific cloud needs.
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {useCases.map((useCase, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 text-center hover:border-amber-500/30 transition-all duration-200"
+              >
+                <div className="w-16 h-16 bg-gradient-to-r from-amber-500 to-orange-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <Target className="w-8 h-8 text-white" />
+                </div>
+                <h3 className="text-xl font-semibold text-white mb-2">{useCase.industry}</h3>
+                <p className="text-gray-300 text-sm">{useCase.description}</p>
+              </motion.div>
+            ))}
           </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="py-20 bg-gradient-to-r from-amber-500/10 to-orange-500/10">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+          >
+            <h2 className="text-4xl font-bold text-white mb-4">
+              Optimize Your Cloud Costs Today
+            </h2>
+            <p className="text-xl text-gray-300 mb-8">
+              Join organizations worldwide that use our optimization platform to 
+              achieve maximum cloud efficiency and cost savings.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="px-8 py-4 bg-gradient-to-r from-amber-500 to-orange-500 text-white font-semibold rounded-lg hover:from-amber-600 hover:to-orange-600 transition-all duration-200 flex items-center justify-center">
+                Get Started Today
+                <ArrowRight className="w-5 h-5 ml-2" />
+              </button>
+              <button className="px-8 py-4 border border-amber-500/30 text-amber-400 font-semibold rounded-lg hover:bg-amber-500/10 transition-all duration-200">
+                Contact Sales
+              </button>
+            </div>
+          </motion.div>
         </div>
       </section>
     </div>
   );
-}
+};
+
+export default CloudFinOpsOptimizer;
 

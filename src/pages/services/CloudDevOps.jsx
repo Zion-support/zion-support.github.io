@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Cloud, Zap, Database, Server, GitBranch, Cpu, Globe, Shield } from 'lucide-react';
+import { Cloud, Zap, Database, Server, GitFork, Cpu, Globe, Shield } from 'lucide-react';
 import { SEO } from '@/components/SEO';
 
 const CloudDevOps = () => {
@@ -18,7 +18,7 @@ const CloudDevOps = () => {
       features: ["Terraform", "AWS CloudFormation", "Azure ARM", "Kubernetes"]
     },
     {
-      icon: GitBranch,
+      icon: GitFork,
       title: "CI/CD Pipelines",
       description: "Automated build, test, and deployment pipelines for faster, more reliable releases.",
       features: ["Jenkins", "GitHub Actions", "GitLab CI", "Azure DevOps"]

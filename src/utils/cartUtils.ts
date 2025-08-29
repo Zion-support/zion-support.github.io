@@ -51,7 +51,7 @@ export const mergeCartItems = (existingItems: CartItem[], newItems: CartItem[]):
   
   newItems.forEach(newItem => {
     const existingIndex = merged.findIndex(item => item.id === newItem.id);
-    if (existingIndex >= 0) {
+    if (existingIndex >= 0 && merged[existingIndex]) {
       merged[existingIndex].quantity += newItem.quantity;
     } else {
       merged.push(newItem);
