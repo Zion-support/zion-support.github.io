@@ -69,7 +69,7 @@ class ResourceMonitor {
 
   private monitorElement(element: HTMLElement) {
     // Monitor scripts
-    if (element.tagName === 'SCRIPT' && element.src) {
+    if (element.tagName === 'SCRIPT' && (element as HTMLScriptElement).src) {
       this.monitorScript(element as HTMLScriptElement);
     }
     

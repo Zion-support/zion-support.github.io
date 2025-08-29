@@ -1,4 +1,4 @@
-import { MarketplaceItem } from '@/data/marketplaceData';
+import { MarketplaceItem } from '@/data/marketplaceData.js';
 
 const sampleTitles = [
   'AI-Powered Analytics Platform',
@@ -88,7 +88,7 @@ export function generateRandomListing(): MarketplaceItem {
     reviews: Math.floor(Math.random() * 200) + 10,
     views: Math.floor(Math.random() * 5000) + 100,
     likes: Math.floor(Math.random() * 300) + 20,
-    image: image || 'https://images.unsplash.com/photo-1451187580459-43490279c0fa?ixlib=rb-4.0.3&auto=format&fit=crop&w=2072&q=80',
+    image: 'https://images.unsplash.com/photo-1451187580459-43490279c0fa?ixlib=rb-4.0.3&auto=format&fit=crop&w=2072&q=80',
     tags: sampleTags[randomIndex] || ['Technology', 'Solution'],
     featured: Math.random() > 0.7,
     seller: {
