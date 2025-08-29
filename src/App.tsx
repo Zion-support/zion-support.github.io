@@ -88,6 +88,12 @@ const RagSearch = React.lazy(() => import('./pages/services/RagSearch'));
 const MlopsPipeline = React.lazy(() => import('./pages/services/MlopsPipeline'));
 const EcommercePersonalization = React.lazy(() => import('./pages/services/EcommercePersonalization'));
 
+// Newly created service pages (this commit)
+const VendorRiskManagement = React.lazy(() => import('./pages/services/VendorRiskManagement'));
+const AISEOOptimizer = React.lazy(() => import('./pages/services/AISEOOptimizer'));
+const SaaSChurnPredictor = React.lazy(() => import('./pages/services/SaaSChurnPredictor'));
+const AIIncidentPostmortems = React.lazy(() => import('./pages/services/AIIncidentPostmortems'));
+
 // New services added in this iteration
 const APIMonitoringSaaS = React.lazy(() => import('./pages/services/APIMonitoringSaaS'));
 const GDPRCookieCompliance = React.lazy(() => import('./pages/services/GDPRCookieCompliance'));
@@ -243,6 +249,11 @@ function App() {
               <Route path="/services/ai-compliance-copilot" element={<AIComplianceCopilot />} />
               <Route path="/services/llm-content-studio" element={<LLMContentStudio />} />
               <Route path="/services/finops-advisor" element={<FinOpsAdvisor />} />
+              {/* New concrete services */}
+              <Route path="/services/vendor-risk-management" element={<VendorRiskManagement />} />
+              <Route path="/services/ai-seo-optimizer" element={<AISEOOptimizer />} />
+              <Route path="/services/saas-churn-predictor" element={<SaaSChurnPredictor />} />
+              <Route path="/services/ai-incident-postmortems" element={<AIIncidentPostmortems />} />
 
               {/* New concrete services */}
               <Route path="/services/ai-lead-scoring" element={<AiLeadScoring />} />
