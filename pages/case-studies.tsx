@@ -1,5 +1,5 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+import Link from 'next/link'
 import { TrendingUp, Users, Clock, ArrowRight, Star, Award, Building, Zap } from 'lucide-react'
 
 
@@ -138,7 +138,7 @@ export default function CaseStudies() {
 									</div>
 								</div>
 								<Link
-									to="/contact"
+									href="/contact"
 									className="inline-flex items-center text-blue-600 hover:text-blue-500 font-medium"
 								>
 									Learn More <ArrowRight className="ml-2 h-4 w-4" />
@@ -196,7 +196,7 @@ export default function CaseStudies() {
 									</div>
 								</div>
 								<Link
-									to="/contact"
+									href="/contact"
 									className="inline-flex items-center text-blue-600 hover:text-blue-500 font-medium"
 								>
 									View Details <ArrowRight className="ml-2 h-4 w-4" />
@@ -297,13 +297,13 @@ export default function CaseStudies() {
 						</p>
 						<div className="mt-10 flex items-center justify-center gap-x-6">
 							<Link
-								to="/contact"
+								href="/contact"
 								className="rounded-md bg-white px-3.5 py-2.5 text-sm font-semibold text-blue-600 shadow-sm hover:bg-gray-100 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
 							>
 								Get Started Today
 							</Link>
 							<Link
-								to="/services"
+								href="/services"
 								className="text-sm font-semibold leading-6 text-white hover:text-blue-100"
 							>
 								Explore Our Services →

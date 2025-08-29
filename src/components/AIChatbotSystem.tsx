@@ -8,22 +8,12 @@ import {
   Sparkles,
   X,
   Settings,
-  Volume2,
-  VolumeX,
   Mic,
   MicOff,
   Paperclip,
-  Image,
-  FileText,
-  Download,
-  Share2,
   RefreshCw,
   ThumbsUp,
   ThumbsDown,
-  Star,
-  Zap,
-  Brain,
-  Globe,
   Clock,
   CheckCircle,
   AlertCircle
@@ -54,7 +44,6 @@ interface AIChatbotSystemProps {
 export const AIChatbotSystem: React.FC<AIChatbotSystemProps> = ({
   showHeader = true,
   showSettings = true,
-  maxMessages = 50,
   autoScroll = true
 }) => {
   const [messages, setMessages] = useState<ChatMessage[]>([]);
@@ -70,7 +59,7 @@ export const AIChatbotSystem: React.FC<AIChatbotSystemProps> = ({
     responseSpeed: 'normal'
   });
   const [isListening, setIsListening] = useState(false);
-  const [chatHistory, setChatHistory] = useState<ChatMessage[]>([]);
+
   const messagesEndRef = useRef<HTMLDivElement>(null);
 
   // Sample welcome message

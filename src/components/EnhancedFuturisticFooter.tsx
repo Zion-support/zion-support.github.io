@@ -95,8 +95,6 @@ export const EnhancedFuturisticFooter: React.FC = () => {
       title: 'AI & Analytics Services',
       featured: true,
       links: [
-        { name: 'All Services', href: '/services', featured: true },
-        { name: 'Innovative Services 2025', href: '/services/innovative-2025', featured: true },
         { name: 'AI Business Intelligence', href: '/services#ai-business-intelligence', featured: true },
         { name: 'AI Healthcare Diagnostics', href: '/services#ai-healthcare', featured: true },
         { name: 'AI Legal Tech Platform', href: '/services#ai-legal-tech', featured: true },
@@ -174,7 +172,8 @@ export const EnhancedFuturisticFooter: React.FC = () => {
         { name: 'Developer Portal', href: '/developers', featured: false },
         { name: 'Training & Certification', href: '/training', featured: false },
         { name: 'Community Forum', href: '/community', featured: false },
-        { name: 'Success Stories', href: '/case-studies', featured: false }
+        { name: 'Success Stories', href: '/case-studies', featured: false },
+        { name: 'White Papers', href: '/white-papers', featured: false }
       ]
     },
     {
@@ -186,8 +185,8 @@ export const EnhancedFuturisticFooter: React.FC = () => {
         { name: 'Careers', href: '/careers', featured: false },
         { name: 'Contact Us', href: '/contact', featured: true },
         { name: 'Request Quote', href: '/request-quote', featured: true },
-        { name: 'Schedule Demo', href: '/schedule-demo', featured: false },
-        { name: 'Partnerships', href: '/partnerships', featured: false },
+        { name: 'Schedule Demo', href: '/demo', featured: false },
+        { name: 'Partnerships', href: '/partners', featured: false },
         { name: 'Investor Relations', href: '/investors', featured: false },
         { name: 'Press & Media', href: '/press', featured: false },
         { name: 'Legal & Privacy', href: '/legal', featured: false }

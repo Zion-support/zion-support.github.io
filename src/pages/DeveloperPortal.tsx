@@ -1,118 +1,133 @@
 import React from 'react';
-import SEO from '../components/SEO';
+import { SEO } from '../components/SEO';
 import { motion } from 'framer-motion';
-import {
-  Code,
-  BookOpen,
-  Zap,
-  Shield,
-  Users,
-  MessageSquare,
-  Github,
-  ExternalLink,
-  Terminal,
-  Webhook,
-  Key,
-  Mail,
-  ArrowRight,
-  Check,
-  Star,
-  Download,
-  Play,
-  Settings,
-  Database,
-  Globe,
+import { 
+  Code, 
+  BookOpen, 
+  Zap, 
+  Shield, 
+  Database, 
+  Cloud, 
+  Brain, 
   Lock,
-  Rocket,
-  Crown,
-  Sparkles,
-  ChevronRight,
-  Clock,
+  Key,
+  Terminal,
+  Globe,
+  Server,
+  Cpu,
+  Network,
   BarChart3,
-  Target,
+  MessageSquare,
+  FileText,
+  Play,
+  Download,
+  Github,
+  Users,
+  Rocket,
+  Lightbulb,
   Award,
-  Lightbulb
+  Clock,
+  CheckCircle,
+  ExternalLink,
+  Bug,
+  Trophy
 } from 'lucide-react';
 
-const DeveloperPortal: React.FC = () => {
-  const tools = [
+export default function DeveloperPortal() {
+  const developerTools = [
     {
-      icon: Code,
-      title: 'Code Examples',
-      description: 'Ready-to-use code snippets in multiple languages',
-      category: 'Development'
-    },
-    {
+      name: 'API Playground',
+      description: 'Interactive API testing environment with real-time responses',
       icon: Terminal,
-      title: 'API Playground',
-      description: 'Test APIs directly in your browser',
-      category: 'Testing'
+      color: 'from-green-500 to-emerald-600',
+      href: '/api-playground',
+      featured: true
     },
     {
-      icon: BookOpen,
-      title: 'Documentation',
-      description: 'Comprehensive guides and tutorials',
-      category: 'Learning'
-    },
-    {
+      name: 'SDK Downloads',
+      description: 'Official SDKs for multiple programming languages',
       icon: Download,
-      title: 'SDKs & Libraries',
-      description: 'Official client libraries for all platforms',
-      category: 'Integration'
+      color: 'from-blue-500 to-cyan-600',
+      href: '/api-docs',
+      featured: true
+    },
+    {
+      name: 'Code Examples',
+      description: 'Ready-to-use code snippets and integration examples',
+      icon: Code,
+      color: 'from-purple-500 to-pink-600',
+      href: '/code-examples',
+      featured: false
+    },
+    {
+      name: 'Testing Tools',
+      description: 'Comprehensive testing and debugging utilities',
+      icon: Bug,
+      color: 'from-orange-500 to-red-600',
+      href: '/testing-tools',
+      featured: false
     }
   ];
 
-  const resources = [
+  const learningResources = [
     {
       title: 'Getting Started Guide',
-      description: 'Quick start tutorial for new developers',
-      icon: '🚀',
-      difficulty: 'Beginner'
+      description: 'Step-by-step tutorial for new developers',
+      duration: '15 min read',
+      level: 'Beginner',
+      icon: Rocket,
+      color: 'from-cyan-500 to-blue-600'
     },
     {
       title: 'API Reference',
-      description: 'Complete endpoint documentation',
-      icon: '📚',
-      difficulty: 'All Levels'
+      description: 'Complete API documentation with examples',
+      duration: 'Reference',
+      level: 'All Levels',
+      icon: BookOpen,
+      color: 'from-green-500 to-emerald-600'
     },
     {
       title: 'Best Practices',
-      description: 'Development guidelines and patterns',
-      icon: '⭐',
-      difficulty: 'Intermediate'
+      description: 'Development guidelines and optimization tips',
+      duration: '20 min read',
+      level: 'Intermediate',
+      icon: Lightbulb,
+      color: 'from-yellow-500 to-orange-600'
     },
     {
-      title: 'Code Samples',
-      description: 'Real-world implementation examples',
-      icon: '💻',
-      difficulty: 'All Levels'
+      title: 'Troubleshooting',
+      description: 'Common issues and their solutions',
+      duration: '10 min read',
+      level: 'All Levels',
+      icon: CheckCircle,
+      color: 'from-purple-500 to-pink-600'
     }
   ];
 
-  const community = [
+  const communityFeatures = [
     {
       name: 'Developer Forum',
-      description: 'Get help from our community',
-      members: '2.5K+',
-      icon: '💬'
+      description: 'Connect with other developers and share knowledge',
+      icon: Users,
+      color: 'from-blue-500 to-cyan-600'
     },
     {
-      name: 'GitHub Discussions',
-      description: 'Open source collaboration',
-      members: '1.8K+',
-      icon: '🐙'
+      name: 'Code Reviews',
+      description: 'Get feedback on your implementations',
+      icon: Code,
+      color: 'from-green-500 to-emerald-600'
     },
     {
-      name: 'Discord Server',
-      description: 'Real-time developer chat',
-      members: '3.2K+',
-      icon: '🎮'
+      name: 'Hackathons',
+      description: 'Participate in coding challenges and win prizes',
+      icon: Trophy,
+      color: 'from-yellow-500 to-orange-600'
     },
     {
-      name: 'Stack Overflow',
-      description: 'Q&A platform integration',
-      members: '5K+',
-      icon: '📝'
+      name: 'Office Hours',
+      description: 'Live Q&A sessions with our engineering team',
+      icon: Clock,
+      color: 'from-purple-500 to-pink-600'
     }
   ];
 
@@ -120,250 +135,138 @@ const DeveloperPortal: React.FC = () => {
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO 
         title="Developer Portal - Zion Tech Group"
-        description="Access developer tools, documentation, SDKs, and community resources. Build amazing applications with Zion Tech Group's developer platform."
+        description="Access comprehensive developer resources, tools, and documentation for Zion Tech Group's AI-powered services. Join our developer community and build amazing applications."
       />
       
       {/* Hero Section */}
-      <section className="relative py-32 bg-gradient-to-br from-zion-slate-dark via-zion-blue-dark to-zion-blue overflow-hidden">
-        <div className="absolute inset-0 opacity-10">
-          <div className="absolute top-20 left-20 w-64 h-64 border border-zion-cyan rounded-full animate-pulse"></div>
-          <div className="absolute bottom-20 right-20 w-48 h-48 border border-zion-purple rounded-full animate-pulse delay-1000"></div>
-        </div>
-
-        <div className="container mx-auto px-4 text-center relative z-10">
-          <div className="flex justify-center mb-8">
-            <div className="w-24 h-24 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-2xl flex items-center justify-center">
-              <Code className="w-12 h-12 text-white" />
+      <section className="pt-32 pb-20">
+        <div className="container-responsive text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+          >
+            <div className="inline-flex items-center gap-2 px-4 py-2 bg-cyan-500/10 border border-cyan-500/20 rounded-full text-cyan-400 text-sm font-medium mb-6">
+              <Code className="w-4 h-4" />
+              Developer Resources
             </div>
-          </div>
-
-          <h1 className="text-6xl md:text-7xl font-bold text-white mb-8 leading-tight">
-            Developer{' '}
-            <span className="bg-gradient-to-r from-zion-cyan to-zion-purple bg-clip-text text-transparent">
-              Portal
-            </span>
-          </h1>
-          <p className="text-xl md:text-2xl text-zion-slate-light mb-12 max-w-4xl mx-auto leading-relaxed">
-            Build amazing applications with our powerful APIs, comprehensive documentation,
-            and developer tools. Everything you need to integrate Zion Tech Group's services.
-          </p>
-
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-purple text-white rounded-xl font-semibold text-lg hover:scale-105 transition-all duration-300 shadow-2xl hover:shadow-zion-cyan/25">
-              Get Started
-            </button>
-            <button className="px-8 py-4 border border-zion-cyan text-zion-cyan rounded-xl font-semibold text-lg hover:bg-zion-cyan hover:text-white transition-all duration-300">
-              View Documentation
-            </button>
-          </div>
+            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
+              Developer Portal
+            </h1>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
+              Everything you need to build, deploy, and scale applications with our AI-powered services. Access tools, documentation, and join our thriving developer community.
+            </p>
+            <div className="flex flex-wrap justify-center gap-4">
+              <a
+                href="#tools"
+                className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-medium rounded-lg transition-all duration-300 transform hover:scale-105"
+              >
+                <Rocket className="w-4 h-4" />
+                Explore Tools
+              </a>
+              <a
+                href="/api-docs"
+                className="inline-flex items-center gap-2 px-6 py-3 bg-slate-700/50 hover:bg-slate-600/50 text-white font-medium rounded-lg transition-all duration-300 border border-slate-600"
+              >
+                <BookOpen className="w-4 h-4" />
+                View API Docs
+              </a>
+            </div>
+          </motion.div>
         </div>
       </section>
 
-      {/* Tools Section */}
-      <section className="py-16 px-4">
-        <div className="max-w-7xl mx-auto">
+      {/* Developer Tools Section */}
+      <section id="tools" className="py-20">
+        <div className="container-responsive">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
             className="text-center mb-16"
           >
-            <h2 className="text-4xl font-bold text-white mb-4">
-              Developer Tools
-            </h2>
+            <h2 className="text-4xl font-bold text-white mb-4">Developer Tools</h2>
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              Powerful tools to accelerate your development workflow
+              Powerful tools and utilities to accelerate your development workflow
             </p>
           </motion.div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {tools.map((tool, index) => (
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {developerTools.map((tool, index) => (
               <motion.div
-                key={tool.title}
+                key={tool.name}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 hover:border-green-400/30 transition-all duration-200 hover:scale-105"
+                viewport={{ once: true }}
+                className={`bg-slate-800/50 backdrop-blur-sm border border-slate-700/50 rounded-2xl p-6 group hover:bg-slate-700/50 transition-all duration-300 ${
+                  tool.featured ? 'ring-2 ring-cyan-400/50' : ''
+                }`}
               >
-                {/* Step Number */}
-                <div className="absolute -top-4 left-6">
-                  <div className="w-8 h-8 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-full flex items-center justify-center text-white font-bold text-sm">
-                    {step.step}
-                  </div>
+                <div className={`w-16 h-16 bg-gradient-to-br ${tool.color} rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300`}>
+                  <tool.icon className="w-8 h-8 text-white" />
                 </div>
-
-                <div className="mt-4 text-center">
-                  <div className="w-16 h-16 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-2xl flex items-center justify-center mx-auto mb-4">
-                    <step.icon className="w-8 h-8 text-white" />
-                  </div>
-
-                  <h3 className="text-lg font-bold text-white mb-3">{step.title}</h3>
-                  <p className="text-zion-slate-light text-sm mb-4 leading-relaxed">{step.description}</p>
-
-                  <button className="bg-zion-cyan/20 text-zion-cyan border border-zion-cyan px-4 py-2 rounded-lg hover:bg-zion-cyan hover:text-white transition-all duration-300 text-sm font-medium">
-                    {step.action}
-                  </button>
-                </div>
-                <span className="inline-block px-2 py-1 bg-green-500/20 text-green-400 text-xs rounded-full mb-3">
-                  {tool.category}
-                </span>
-                <h3 className="text-xl font-semibold text-white mb-2">{tool.title}</h3>
-                <p className="text-gray-300">{tool.description}</p>
+                <h3 className="text-xl font-semibold text-white mb-2">{tool.name}</h3>
+                <p className="text-gray-400 text-sm mb-4">{tool.description}</p>
+                {tool.featured && (
+                  <span className="inline-flex items-center gap-1 mb-4 text-xs text-cyan-400">
+                    <Award className="w-3 h-3" />
+                    Featured
+                  </span>
+                )}
+                <a
+                  href={tool.href}
+                  className="inline-flex items-center gap-2 text-cyan-400 hover:text-cyan-300 transition-colors text-sm font-medium"
+                >
+                  Learn More
+                  <ExternalLink className="w-4 h-4" />
+                </a>
               </motion.div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Resources Section */}
-      <section className="py-16 px-4 bg-slate-800/30">
-        <div className="max-w-7xl mx-auto">
+      {/* Learning Resources Section */}
+      <section className="py-20 bg-slate-800/30">
+        <div className="container-responsive">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
             className="text-center mb-16"
           >
-            <h2 className="text-4xl font-bold text-white mb-4">
-              Learning Resources
-            </h2>
+            <h2 className="text-4xl font-bold text-white mb-4">Learning Resources</h2>
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              Comprehensive guides and tutorials for all skill levels
+              Comprehensive guides and tutorials to help you master our platform
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
-            {apiFeatures.map((feature, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="bg-zion-slate-dark/50 backdrop-blur-sm border border-zion-cyan/20 rounded-xl p-6 hover:border-zion-cyan/40 transition-all duration-300"
-              >
-                <div className={`w-16 h-16 bg-gradient-to-r ${feature.color} rounded-2xl flex items-center justify-center mx-auto mb-6`}>
-                  <feature.icon className="w-8 h-8 text-white" />
-                </div>
-
-                <h3 className="text-lg font-bold text-white mb-3 text-center">{feature.title}</h3>
-                <p className="text-zion-slate-light text-sm mb-4 text-center leading-relaxed">{feature.description}</p>
-
-                <div className="flex items-center justify-between">
-                  <span className={`px-2 py-1 rounded-full text-xs font-medium ${
-                    feature.status === 'Stable' ? 'bg-green-500/20 text-green-400' : 'bg-yellow-500/20 text-yellow-400'
-                  }`}>
-                    {feature.status}
-                  </span>
-
-                  <button className="text-zion-cyan hover:text-white transition-colors duration-300 text-sm">
-                    View Docs
-                  </button>
-                </div>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Code Examples */}
-      <section className="py-20 bg-zion-slate-dark">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-              Code Examples
-            </h2>
-            <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
-              Get started quickly with these ready-to-use code examples in your preferred language.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
-            {codeExamples.map((example, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="bg-zion-blue-dark/50 backdrop-blur-sm border border-zion-cyan/20 rounded-xl overflow-hidden hover:border-zion-cyan/40 transition-all duration-300"
-              >
-                <div className="p-6">
-                  <div className="flex items-center gap-3 mb-4">
-                    <example.icon className="w-6 h-6 text-zion-cyan" />
-                    <h3 className="text-lg font-bold text-white">{example.language}</h3>
-                  </div>
-
-                  <div className="bg-zion-slate-dark/80 rounded-lg p-4 mb-4">
-                    <pre className="text-zion-slate-light text-sm overflow-x-auto">
-                      <code>{example.code}</code>
-                    </pre>
-                  </div>
-
-                  <button className="w-full bg-zion-cyan/20 text-zion-cyan border border-zion-cyan py-2 px-4 rounded-lg hover:bg-zion-cyan hover:text-white transition-all duration-300 text-sm font-medium">
-                    Copy Code
-                  </button>
-                </div>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Resources */}
-      <section className="py-20 bg-zion-blue-dark">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-              Developer Resources
-            </h2>
-            <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
-              Comprehensive documentation, tools, and community resources to help you succeed.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
-            {resources.map((resource, index) => (
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {learningResources.map((resource, index) => (
               <motion.div
                 key={resource.title}
-                initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
-                whileInView={{ opacity: 1, x: 0 }}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 hover:border-green-400/30 transition-all duration-200"
+                viewport={{ once: true }}
+                className="bg-slate-800/50 backdrop-blur-sm border border-slate-700/50 rounded-2xl p-6 group hover:bg-slate-700/50 transition-all duration-300"
               >
-                <div className="flex items-start space-x-4">
-                  <div className="text-4xl">{resource.icon}</div>
-                  <div className="flex-1">
-                    <div className="flex items-center justify-between mb-2">
-                      <h3 className="text-xl font-semibold text-white">{resource.title}</h3>
-                      <span className={`px-2 py-1 rounded-full text-xs ${
-                        resource.difficulty === 'Beginner' ? 'bg-green-500/20 text-green-400' :
-                        resource.difficulty === 'Intermediate' ? 'bg-yellow-500/20 text-yellow-400' :
-                        'bg-blue-500/20 text-blue-400'
-                      }`}>
-                        {resource.difficulty}
-                      </span>
-                    </div>
-                    <p className="text-gray-300">{resource.description}</p>
-                  </div>
+                <div className={`w-16 h-16 bg-gradient-to-br ${resource.color} rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300`}>
+                  <resource.icon className="w-8 h-8 text-white" />
                 </div>
-
-                <h3 className="text-lg font-bold text-white mb-3 text-center">{resource.title}</h3>
-                <p className="text-zion-slate-light text-sm mb-4 text-center leading-relaxed">{resource.description}</p>
-
-                <div className="flex items-center justify-between">
-                  <span className={`px-2 py-1 rounded-full text-xs font-medium ${
-                    resource.badge === 'Complete' ? 'bg-green-500/20 text-green-400' :
-                    resource.badge === 'Beginner' ? 'bg-blue-500/20 text-blue-400' :
-                    resource.badge === 'Examples' ? 'bg-purple-500/20 text-purple-400' :
-                    resource.badge === 'Download' ? 'bg-orange-500/20 text-orange-400' :
-                    resource.badge === 'Community' ? 'bg-indigo-500/20 text-indigo-400' :
-                    'bg-green-500/20 text-green-400'
-                  }`}>
-                    {resource.badge}
+                <h3 className="text-xl font-semibold text-white mb-2">{resource.title}</h3>
+                <p className="text-gray-400 text-sm mb-4">{resource.description}</p>
+                <div className="flex items-center justify-between text-xs text-gray-500">
+                  <span className="flex items-center gap-1">
+                    <Clock className="w-3 h-3" />
+                    {resource.duration}
                   </span>
-
-                  <button className="text-zion-cyan hover:text-white transition-colors duration-300 text-sm group-hover:translate-x-1 transition-transform duration-300">
-                    View Resource
-                  </button>
+                  <span className="px-2 py-1 bg-slate-700/50 rounded-full">
+                    {resource.level}
+                  </span>
                 </div>
               </motion.div>
             ))}
@@ -371,85 +274,122 @@ const DeveloperPortal: React.FC = () => {
         </div>
       </section>
 
-      {/* Quick Start Section */}
-      <section className="py-16 px-4 bg-slate-800/30">
-        <div className="max-w-4xl mx-auto">
+      {/* Community Section */}
+      <section className="py-20">
+        <div className="container-responsive">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-            className="text-center mb-12"
+            viewport={{ once: true }}
+            className="text-center mb-16"
           >
-            <h2 className="text-4xl font-bold text-white mb-4">
-              Quick Start
-            </h2>
-            <p className="text-xl text-gray-300">
-              Get up and running in minutes
+            <h2 className="text-4xl font-bold text-white mb-4">Join Our Community</h2>
+            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
+              Connect with fellow developers, share knowledge, and grow together
             </p>
           </motion.div>
 
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-            className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-8"
-          >
-            <div className="space-y-6">
-              <div className="flex items-center space-x-4">
-                <div className="w-8 h-8 bg-green-500 rounded-full flex items-center justify-center text-white font-bold">1</div>
-                <div>
-                  <h3 className="text-lg font-semibold text-white">Get Your API Key</h3>
-                  <p className="text-gray-300">Sign up and generate your API key from the dashboard</p>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {communityFeatures.map((feature, index) => (
+              <motion.div
+                key={feature.name}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                viewport={{ once: true }}
+                className="bg-slate-800/50 backdrop-blur-sm border border-slate-700/50 rounded-2xl p-6 text-center group hover:bg-slate-700/50 transition-all duration-300"
+              >
+                <div className={`w-16 h-16 bg-gradient-to-br ${feature.color} rounded-xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300`}>
+                  <feature.icon className="w-8 h-8 text-white" />
                 </div>
-              </div>
-              <div className="flex items-center space-x-4">
-                <div className="w-8 h-8 bg-green-500 rounded-full flex items-center justify-center text-white font-bold">2</div>
-                <div>
-                  <h3 className="text-lg font-semibold text-white">Install SDK</h3>
-                  <p className="text-gray-300">Choose your preferred language and install the SDK</p>
-                </div>
-              </div>
-              <div className="flex items-center space-x-4">
-                <div className="w-8 h-8 bg-green-500 rounded-full flex items-center justify-center text-white font-bold">3</div>
-                <div>
-                  <h3 className="text-lg font-semibold text-white">Make Your First API Call</h3>
-                  <p className="text-gray-300">Test the API with our interactive playground</p>
-                </div>
-              </div>
-            </div>
-            
-            <div className="mt-8 text-center">
-              <button className="px-8 py-4 bg-gradient-to-r from-green-500 to-emerald-600 text-white font-semibold rounded-lg hover:from-green-400 hover:to-emerald-500 transition-all duration-200 hover:scale-105 shadow-lg shadow-green-500/20">
-                Start Building Now
-              </button>
-            </div>
-          </motion.div>
+                <h3 className="text-xl font-semibold text-white mb-2">{feature.name}</h3>
+                <p className="text-gray-400 text-sm">{feature.description}</p>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Stats Section */}
+      <section className="py-20 bg-slate-800/30">
+        <div className="container-responsive">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 text-center">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+            >
+              <div className="text-4xl font-bold text-cyan-400 mb-2">10K+</div>
+              <div className="text-gray-400">Active Developers</div>
+            </motion.div>
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.1 }}
+              viewport={{ once: true }}
+            >
+              <div className="text-4xl font-bold text-blue-400 mb-2">50+</div>
+              <div className="text-gray-400">API Endpoints</div>
+            </motion.div>
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+              viewport={{ once: true }}
+            >
+              <div className="text-4xl font-bold text-green-400 mb-2">99.9%</div>
+              <div className="text-gray-400">Uptime SLA</div>
+            </motion.div>
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.3 }}
+              viewport={{ once: true }}
+            >
+              <div className="text-4xl font-bold text-purple-400 mb-2">24/7</div>
+              <div className="text-gray-400">Developer Support</div>
+            </motion.div>
+          </div>
         </div>
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-zion-slate-dark to-zion-blue-dark">
-        <div className="container mx-auto px-4 text-center">
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-            Ready to Build Something Amazing?
-          </h2>
-          <p className="text-xl text-zion-slate-light mb-8 max-w-3xl mx-auto">
-            Join thousands of developers who are already building innovative applications
-            with our powerful APIs and services.
-          </p>
-
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-purple text-white rounded-xl font-semibold text-lg hover:scale-105 transition-all duration-300 shadow-2xl hover:shadow-zion-cyan/25">
-              Get API Keys
-            </button>
-            <button className="px-8 py-4 border border-zion-cyan text-zion-cyan rounded-xl font-semibold text-lg hover:bg-zion-cyan hover:text-white transition-all duration-300">
-              Join Community
-            </button>
-          </div>
+      <section className="py-20">
+        <div className="container-responsive text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+            className="bg-gradient-to-r from-cyan-500/10 to-blue-500/10 border border-cyan-500/20 rounded-3xl p-12"
+          >
+            <h2 className="text-4xl font-bold text-white mb-4">Ready to Start Building?</h2>
+            <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
+              Join thousands of developers creating innovative applications with our platform
+            </p>
+            <div className="flex flex-wrap justify-center gap-4">
+              <a
+                href="/request-quote"
+                className="inline-flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-medium rounded-lg transition-all duration-300 transform hover:scale-105"
+              >
+                <Zap className="w-5 h-5" />
+                Get Started
+              </a>
+              <a
+                href="https://github.com/ziontechgroup"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 px-8 py-4 bg-slate-700/50 hover:bg-slate-600/50 text-white font-medium rounded-lg transition-all duration-300 border border-slate-600"
+              >
+                <Github className="w-5 h-5" />
+                View on GitHub
+              </a>
+            </div>
+          </motion.div>
         </div>
       </section>
     </div>
   );
-};
-
-export default DeveloperPortal;
+}

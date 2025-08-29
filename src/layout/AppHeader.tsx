@@ -1,4 +1,4 @@
-import { ArrowRight, Atom, BookOpen, Brain, Building, Building2, ChevronDown, Cloud, Code, Cpu, DollarSign, Eye, FileText, Globe, Handshake, Heart, HelpCircle, Leaf, Lock, Mail, MapPin, Menu, MessageCircle, Phone, Rocket, Scale, Search, Settings, Shield, ShoppingCart, Star, Target, TrendingUp, Users, X, Zap } from 'lucide-react';
+import { ArrowRight, Atom, BookOpen, Brain, Building, Building2, ChevronDown, Cloud, Code, Cpu, DollarSign, FileText, Globe, HeartHandshake, Heart, HelpCircle, Leaf, Lock, Mail, MapPin, Menu, MessageCircle, PenTool, Phone, Rocket, Scale, Search, Settings, Shield, ShoppingCart, Star, Target, TrendingUp, Users, X, Zap } from 'lucide-react';
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { ThemeToggle } from '../components/ThemeToggle';
@@ -41,9 +41,19 @@ export function AppHeader() {
     { name: 'Resources', href: '/resources', current: false, hasDropdown: true },
     { name: 'About', href: '/about', current: false },
     { name: 'Contact', href: '/contact', current: false },
+    { name: 'Pricing', href: '/pricing', current: false },
+    { name: 'Partners', href: '/partners', current: false },
   ];
 
   const services = [
+    { 
+      name: '2025 Services Showcase', 
+      href: '/services/showcase-2025', 
+      icon: Rocket, 
+      description: 'Complete 2025 Portfolio',
+      featured: true,
+      color: 'from-cyan-500 to-blue-500'
+    },
     { 
       name: 'All Services', 
       href: '/services', 
@@ -51,6 +61,14 @@ export function AppHeader() {
       description: 'Complete Service Catalog',
       featured: true,
       color: 'from-cyan-500 to-blue-500'
+    },
+    { 
+      name: 'AI Business Intelligence', 
+      href: '/services/ai-business-intelligence',
+      icon: Brain, 
+      description: 'Machine Learning & Data Science',
+      featured: true,
+      color: 'from-purple-500 to-cyan-500'
     },
     { 
       name: 'Innovative Services 2025', 
@@ -61,100 +79,124 @@ export function AppHeader() {
       color: 'from-purple-500 to-pink-500'
     },
     { 
-      name: 'AI Business Intelligence', 
-      href: '/services/ai-business-intelligence', 
-      icon: Brain, 
-      description: 'Machine Learning & Data Science',
-      featured: true,
-      color: 'from-purple-500 to-cyan-500'
-    },
-    { 
-      name: 'AI & Legal Tech', 
-      href: '/services', 
-      icon: Scale, 
-      description: 'Document Analysis & Compliance',
-      featured: true,
-      color: 'from-blue-500 to-indigo-500'
-    },
-    { 
-      name: 'AI & Healthcare', 
-      href: '/services', 
-      icon: Heart, 
-      description: 'Medical AI & Diagnostics',
-      featured: true,
-      color: 'from-red-500 to-pink-500'
-    },
-    { 
-      name: 'AI & Research', 
-      href: '/services', 
-      icon: Eye, 
-      description: 'Scientific Research & Discovery',
-      featured: true,
-      color: 'from-purple-500 to-violet-500'
-    },
-    { 
-      name: 'AI & Green Tech', 
-      href: '/services', 
-      icon: Leaf, 
-      description: 'Sustainability Solutions',
-      featured: true,
-      color: 'from-green-500 to-emerald-500'
-    },
-    { 
-      name: 'AI & Metaverse', 
-      href: '/services', 
-      icon: Globe, 
-      description: 'Virtual Reality & Gaming',
-      featured: true,
-      color: 'from-purple-500 to-indigo-500'
-    },
-    { 
-      name: 'AI & Blockchain', 
-      href: '/services', 
-      icon: Lock, 
-      description: 'DeFi & Smart Contracts',
-      featured: true,
-      color: 'from-green-500 to-emerald-500'
-    },
-    { 
-      name: 'AI & Edge Computing', 
-      href: '/services', 
-      icon: Cpu, 
-      description: 'IoT & Real-time Processing',
-      featured: true,
-      color: 'from-blue-500 to-cyan-500'
-    },
-    { 
-      name: 'Quantum Computing', 
-      href: '/services', 
-      icon: Atom, 
-      description: 'Quantum AI & Optimization',
-      featured: true,
-      color: 'from-purple-500 to-pink-500'
-    },
-    { 
-      name: 'AI & Space Tech', 
-      href: '/services', 
-      icon: Rocket, 
-      description: 'Satellite Operations & Missions',
+      name: 'Quantum AI Cybersecurity', 
+      href: '/services/quantum-ai-cybersecurity-platform', 
+      icon: Shield, 
+      description: 'Quantum Security & AI',
       featured: true,
       color: 'from-indigo-500 to-purple-500'
     },
     { 
-      name: 'Cybersecurity', 
-      href: '/services', 
-      icon: Shield, 
-      description: 'AI-Powered Security',
+      name: 'AI Content Creation Studio', 
+      href: '/services/ai-content-creation-studio', 
+      icon: PenTool, 
+      description: 'AI Content Generation',
       featured: true,
-      color: 'from-green-500 to-blue-500'
+      color: 'from-blue-500 to-indigo-500'
     },
     { 
-      name: 'Cloud Services', 
-      href: '/services', 
+      name: 'AI Sales Intelligence', 
+      href: '/services/ai-sales-intelligence-platform', 
+      icon: TrendingUp, 
+      description: 'Sales AI & Analytics',
+      featured: true,
+      color: 'from-green-500 to-emerald-500'
+    },
+    { 
+      name: 'AI Customer Support', 
+      href: '/services/ai-customer-support-automation', 
+      icon: MessageCircle, 
+      description: 'AI Support Automation',
+      featured: true,
+      color: 'from-blue-500 to-purple-500'
+    },
+    { 
+      name: 'AI Data Analytics & BI', 
+      href: '/services/ai-data-analytics-bi', 
+      icon: BarChart3, 
+      description: 'Business Intelligence',
+      featured: true,
+      color: 'from-cyan-500 to-blue-500'
+    },
+    { 
+      name: 'Cloud Infrastructure & DevOps', 
+      href: '/services/cloud-infrastructure-devops', 
       icon: Cloud, 
-      description: 'DevOps & Infrastructure',
+      description: 'Cloud & DevOps Solutions',
       featured: true,
       color: 'from-blue-500 to-cyan-500'
+    },
+    { 
+      name: 'IoT Edge Computing', 
+      href: '/services/iot-edge-computing-platform', 
+      icon: Cpu, 
+      description: 'IoT & Edge Solutions',
+      featured: true,
+      color: 'from-teal-500 to-cyan-500'
+    },
+    { 
+      name: 'Digital Twin Platform', 
+      href: '/services/digital-twin-platform', 
+      icon: Globe, 
+      description: 'Digital Twin Solutions',
+      featured: true,
+      color: 'from-blue-500 to-indigo-500'
+    },
+    { 
+      name: 'Blockchain Web3 Platform', 
+      href: '/services/blockchain-web3-platform', 
+      icon: Globe2, 
+      description: 'Blockchain & Web3',
+      featured: true,
+      color: 'from-yellow-500 to-orange-500'
+    },
+    { 
+      name: 'AI Healthcare Diagnostics', 
+      href: '/services/ai-healthcare-diagnostics-platform', 
+      icon: Heart, 
+      description: 'AI Medical Diagnostics',
+      featured: true,
+      color: 'from-pink-500 to-red-500'
+    },
+    { 
+      name: 'AI Education Platform', 
+      href: '/services/ai-education-platform', 
+      icon: BookOpen, 
+      description: 'AI-Powered Learning',
+      featured: true,
+      color: 'from-blue-500 to-indigo-500'
+    },
+    { 
+      name: 'AI Metaverse Platform', 
+      href: '/services/ai-metaverse-platform', 
+      icon: Globe, 
+      description: 'AI Metaverse Solutions',
+      featured: true,
+      color: 'from-purple-500 to-indigo-500'
+    },
+    { 
+      name: 'AI Space Technology', 
+      href: '/services/ai-space-technology-platform', 
+      icon: Rocket, 
+      description: 'AI Space Solutions',
+      featured: true,
+      color: 'from-indigo-500 to-purple-500'
+    },
+    { 
+      name: 'AI Green Technology', 
+      href: '/services/ai-green-technology-platform', 
+      icon: Leaf, 
+      description: 'Sustainable AI Solutions',
+      featured: true,
+      color: 'from-green-500 to-emerald-500'
+    },
+    { 
+      name: 'AI Development Platform', 
+      href: '/services/ai-development-platform', 
+      icon: Code, 
+      description: 'AI Code Generation',
+      featured: true,
+      color: 'from-cyan-500 to-blue-500'
     },
     { 
       name: 'Micro SaaS Products', 
@@ -165,84 +207,28 @@ export function AppHeader() {
       color: 'from-orange-500 to-red-500'
     },
     { 
-      name: 'AI & FinTech', 
-      href: '/services', 
-      icon: DollarSign, 
-      description: 'Financial Technology & Risk Management',
-      featured: true,
-      color: 'from-emerald-500 to-green-500'
-    },
-    { 
-      name: 'AI & Operations', 
-      href: '/services', 
-      icon: Settings, 
-      description: 'Supply Chain & Process Optimization',
-      featured: true,
-      color: 'from-gray-500 to-slate-500'
-    },
-    { 
-      name: 'AI & Development', 
-      href: '/services', 
-      icon: Code, 
-      description: 'Quality Assurance & Testing',
-      featured: true,
-      color: 'from-cyan-500 to-blue-500'
-    },
-    { 
-      name: 'Quantum AI Trading', 
-      href: '/services#quantum-ai-trading', 
-      icon: Atom, 
-      description: 'Quantum-Powered Trading Platform',
-      featured: true,
-      color: 'from-purple-500 to-indigo-500'
-    },
-    { 
-      name: 'Neural Interface', 
-      href: '/services#neural-interface', 
-      icon: Brain, 
-      description: 'Brain-Computer Interface',
-      featured: true,
-      color: 'from-pink-500 to-purple-500'
-    },
-    { 
-      name: 'Holographic Workspace', 
-      href: '/services#holographic-workspace', 
-      icon: Eye, 
-      description: '3D Holographic Collaboration',
-      featured: true,
-      color: 'from-blue-500 to-cyan-500'
-    },
-    { 
-      name: 'BioDigital Twin', 
-      href: '/services#biodigital-twin', 
-      icon: Heart, 
-      description: 'Digital Twin for Health',
-      featured: true,
-      color: 'from-red-500 to-pink-500'
-    },
-    { 
-      name: 'Space Debris Tracking', 
-      href: '/services#space-debris-tracking', 
+      name: 'Revolutionary Services 2030', 
+      href: '/revolutionary-services-2030', 
       icon: Rocket, 
-      description: 'AI-Powered Space Safety',
+      description: 'Future Technology Solutions',
       featured: true,
       color: 'from-indigo-500 to-purple-500'
     },
     { 
-      name: 'AI Ethics Guardian', 
-      href: '/services#ai-ethics-guardian', 
-      icon: Shield, 
-      description: 'AI Ethics & Governance',
+      name: 'Comprehensive Services 2025', 
+      href: '/comprehensive-services-showcase-2025', 
+      icon: Star, 
+      description: 'Complete Service Portfolio',
       featured: true,
-      color: 'from-green-500 to-blue-500'
+      color: 'from-yellow-500 to-orange-500'
     },
     { 
-      name: 'Metaverse Builder', 
-      href: '/services#metaverse-builder', 
-      icon: Globe, 
-      description: 'Build Immersive Virtual Worlds',
+      name: 'Innovative AI Services 2025', 
+      href: '/innovative-ai-services-2025', 
+      icon: Brain, 
+      description: 'Cutting-edge AI Solutions',
       featured: true,
-      color: 'from-purple-500 to-indigo-500'
+      color: 'from-purple-500 to-pink-500'
     }
   ];
 
@@ -311,28 +297,28 @@ export function AppHeader() {
       href: '/white-papers',
       icon: FileText,
       description: 'In-depth research and analysis',
-      featured: false
+      featured: true
     },
     {
       name: 'Webinars',
       href: '/webinars',
       icon: Users,
       description: 'Expert-led learning sessions',
-      featured: false
+      featured: true
     },
     {
       name: 'Documentation',
       href: '/docs',
       icon: Code,
       description: 'Technical guides and APIs',
-      featured: false
+      featured: true
     },
     {
       name: 'FAQ & Support',
       href: '/faq',
       icon: HelpCircle,
       description: 'Get help and answers',
-      featured: false
+      featured: true
     }
   ];
 
@@ -341,7 +327,7 @@ export function AppHeader() {
     { name: 'Request Quote', href: '/request-quote', icon: MessageCircle },
     { name: 'Pricing', href: '/pricing', icon: DollarSign },
     { name: 'Careers', href: '/careers', icon: Users },
-    { name: 'Partners', href: '/partners', icon: Handshake },
+                  { name: 'Partners', href: '/partners', icon: HeartHandshake },
     { name: 'Privacy', href: '/privacy', icon: Shield },
     { name: 'Terms', href: '/terms', icon: BookOpen },
   ];
