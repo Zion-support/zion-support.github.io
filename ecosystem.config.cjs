@@ -35,7 +35,49 @@ module.exports = {
       }
     },
 
-    // Continuous console error fixer - runs every 15 minutes (HIGHEST PRIORITY)
+    // NEW: AI-Powered Code Quality Analyzer - runs every 4 hours
+    {
+      name: 'ai-code-analyzer',
+      script: './scripts/automation/ai-code-analyzer.cjs',
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      max_memory_restart: '1G',
+      env: {
+        NODE_ENV: 'production',
+        AUTOMATION_INTERVAL: '14400000' // 4 hours
+      }
+    },
+
+    // NEW: Smart Dependency Health Monitor - runs every 6 hours
+    {
+      name: 'smart-dependency-monitor',
+      script: './scripts/automation/smart-dependency-monitor.cjs',
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      max_memory_restart: '1G',
+      env: {
+        NODE_ENV: 'production',
+        AUTOMATION_INTERVAL: '21600000' // 6 hours
+      }
+    },
+
+    // NEW: Intelligent Build Optimizer - runs every 2 hours
+    {
+      name: 'intelligent-build-optimizer',
+      script: './scripts/automation/intelligent-build-optimizer.cjs',
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      max_memory_restart: '1G',
+      env: {
+        NODE_ENV: 'production',
+        AUTOMATION_INTERVAL: '7200000' // 2 hours
+      }
+    },
+
+    // Enhanced: Continuous console error fixer - runs every 15 minutes (HIGHEST PRIORITY)
     {
       name: 'console-error-fixer',
       script: './scripts/automation/console-error-fixer.cjs',
@@ -49,10 +91,10 @@ module.exports = {
       }
     },
 
-    // Continuous link checker - runs every 30 minutes
+    // Enhanced: Continuous link checker - runs every 30 minutes
     {
       name: 'link-checker',
-      script: './scripts/automation/link-checker.cjs',
+      script: './scripts/automation/enhanced-link-checker.cjs',
       instances: 1,
       autorestart: true,
       watch: false,
@@ -63,7 +105,7 @@ module.exports = {
       }
     },
 
-    // Continuous improvement - runs every 2 hours
+    // Enhanced: Continuous improvement - runs every 2 hours
     {
       name: 'continuous-improvement',
       script: './scripts/automation/continuous-improvement.cjs',
@@ -77,35 +119,35 @@ module.exports = {
       }
     },
 
-    // Continuous build and test - runs every hour
+    // Enhanced: Continuous build and test - runs every hour
     {
       name: 'daily-build-test',
-      script: './scripts/automation/daily-build-test.cjs',
+      script: './scripts/automation/enhanced-ci-cd-automation.cjs',
       instances: 1,
       autorestart: true,
       watch: false,
-      max_memory_restart: '512M',
+      max_memory_restart: '1G',
       env: {
         NODE_ENV: 'production',
         AUTOMATION_INTERVAL: '3600000' // 1 hour
       }
     },
 
-    // Continuous security audit - runs every 4 hours
+    // Enhanced: Continuous security audit - runs every 4 hours
     {
       name: 'security-audit',
-      script: './scripts/automation/security-audit.cjs',
+      script: './scripts/automation/enhanced-security-automation.cjs',
       instances: 1,
       autorestart: true,
       watch: false,
-      max_memory_restart: '512M',
+      max_memory_restart: '1G',
       env: {
         NODE_ENV: 'production',
         AUTOMATION_INTERVAL: '14400000' // 4 hours
       }
     },
 
-    // Continuous dependency updates - runs every 6 hours
+    // Enhanced: Continuous dependency updates - runs every 6 hours
     {
       name: 'dependency-updates',
       script: './scripts/automation/dependency-updates.cjs',
@@ -119,35 +161,35 @@ module.exports = {
       }
     },
 
-    // Continuous performance monitoring - runs every 2 hours
+    // Enhanced: Continuous performance monitoring - runs every 2 hours
     {
       name: 'performance-monitor',
       script: './scripts/automation/performance-monitor.cjs',
       instances: 1,
       autorestart: true,
       watch: false,
-      max_memory_restart: '512M',
+      max_memory_restart: '1G',
       env: {
         NODE_ENV: 'production',
         AUTOMATION_INTERVAL: '7200000' // 2 hours
       }
     },
 
-    // Continuous quality checks - runs every 3 hours
+    // Enhanced: Continuous quality checks - runs every 3 hours
     {
       name: 'quality-checks',
-      script: './scripts/automation/quality-checks.cjs',
+      script: './scripts/automation/enhanced-testing-automation.cjs',
       instances: 1,
       autorestart: true,
       watch: false,
-      max_memory_restart: '512M',
+      max_memory_restart: '1G',
       env: {
         NODE_ENV: 'production',
         AUTOMATION_INTERVAL: '10800000' // 3 hours
       }
     },
 
-    // Continuous link integrity checker - runs every 2 hours
+    // Enhanced: Continuous link integrity checker - runs every 2 hours
     {
       name: 'link-integrity',
       script: './scripts/automation/link-integrity.cjs',
@@ -161,7 +203,7 @@ module.exports = {
       }
     },
 
-    // Continuous front maximizer - runs every 4 hours
+    // Enhanced: Continuous front maximizer - runs every 4 hours
     {
       name: 'front-maximizer',
       script: './scripts/automation/front-maximizer.cjs',
@@ -175,7 +217,7 @@ module.exports = {
       }
     },
 
-    // Continuous sitemap runner - runs every 6 hours
+    // Enhanced: Continuous sitemap runner - runs every 6 hours
     {
       name: 'sitemap-runner',
       script: './scripts/automation/sitemap-runner.cjs',
