@@ -75,7 +75,8 @@ export const EnhancedFuturisticFooter: React.FC = () => {
         { name: 'AI Compliance Assistant', href: '/services/ai-compliance-assistant' },
         { name: 'AI Auto Email Responder', href: '/services/ai-auto-email-responder' },
         { name: 'LLM Content Studio', href: '/services/llm-content-studio' },
-        { name: 'AI Compliance Copilot', href: '/services/ai-compliance-copilot' }
+        { name: 'AI Compliance Copilot', href: '/services/ai-compliance-copilot' },
+        { name: 'AI Healthcare Analytics', href: '/services/ai-healthcare-analytics' }
       ]
     },
     {
@@ -83,29 +84,29 @@ export const EnhancedFuturisticFooter: React.FC = () => {
       icon: Zap,
       color: 'from-blue-600 to-cyan-600',
       links: [
-        { name: 'Micro SaaS Solutions', href: '/services/micro-saas-solutions' },
-        { name: 'AI Business Intelligence', href: '/services/ai-business-intelligence' },
-        { name: 'Customer Feedback Surveys', href: '/services/mobile-feedback-surveys' },
+        { name: 'Cloud DevOps', href: '/services/cloud-devops' },
         { name: 'Cloud FinOps Optimizer', href: '/services/cloud-finops-optimizer' },
         { name: 'FinOps Advisor', href: '/services/finops-advisor' },
-        { name: 'Digital Transformation', href: '/services/digital-transformation' }
+        { name: 'IT Infrastructure', href: '/services/it-infrastructure' },
+        { name: 'Digital Transformation', href: '/services/digital-transformation' },
+        { name: 'IT Consulting', href: '/services/it-consulting' }
       ]
     },
     {
-      title: 'IoT & Digital Twin',
+      title: 'IoT & Digital Solutions',
       icon: Rocket,
       color: 'from-green-600 to-emerald-600',
       links: [
-        { name: 'IT Infrastructure', href: '/services/it-infrastructure' },
-        { name: 'Digital Transformation', href: '/services/digital-transformation' },
-        { name: 'IT Consulting', href: '/services/it-consulting' },
+        { name: 'Digital Twin', href: '/services/digital-twin' },
+        { name: 'IoT Edge Computing', href: '/services/iot-edge' },
+        { name: 'Data Analytics', href: '/services/data-analytics' },
         { name: 'Onsite Support', href: '/services/onsite-support' },
         { name: 'Green IT Solutions', href: '/services/green-it' },
-        { name: 'IoT Edge Computing', href: '/services/iot-edge' }
+        { name: 'Micro SaaS Solutions', href: '/services/micro-saas-solutions' }
       ]
     },
     {
-      title: 'Quantum & Emerging Tech',
+      title: 'Emerging Technologies',
       icon: Crown,
       color: 'from-indigo-600 to-purple-600',
       links: [
@@ -113,8 +114,8 @@ export const EnhancedFuturisticFooter: React.FC = () => {
         { name: 'Blockchain Solutions', href: '/services/blockchain-enterprise-solutions' },
         { name: 'Space Technology', href: '/services/space-tech' },
         { name: 'Sustainability', href: '/services/sustainability' },
-        { name: 'Digital Twin', href: '/services/digital-twin' },
-        { name: 'Cloud DevOps', href: '/services/cloud-devops' }
+        { name: 'AI Cybersecurity Suite', href: '/services/ai-cybersecurity-suite' },
+        { name: 'Quantum AI Platform', href: '/services/quantum-ai-platform' }
       ]
     }
   ];
@@ -127,7 +128,9 @@ export const EnhancedFuturisticFooter: React.FC = () => {
     { name: 'About Us', href: '/about' },
     { name: 'Contact', href: '/contact' },
     { name: 'Blog', href: '/blog' },
-    { name: 'Careers', href: '/careers' }
+    { name: 'Careers', href: '/careers' },
+    { name: 'Marketplace', href: '/marketplace' },
+    { name: 'Partners', href: '/partners' }
   ];
 
   const companyLinks = [
@@ -157,8 +160,15 @@ export const EnhancedFuturisticFooter: React.FC = () => {
     { name: 'Compliance', href: '/compliance', description: 'Regulatory compliance' }
   ];
 
+  const innovativeServices = [
+    { name: 'Innovative Services 2025', href: '/innovative-services-showcase-2025', description: 'Cutting-edge solutions' },
+    { name: 'Revolutionary Services 2030', href: '/revolutionary-services-showcase-2030', description: 'Future-ready services' },
+    { name: 'Pricing Guide 2030', href: '/pricing-2030', description: 'Advanced pricing' },
+    { name: 'Request Quote', href: '/request-quote', description: 'Custom pricing' }
+  ];
+
   return (
-    <footer className="bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white border-t border-cyan-400/20">
+    <footer className="bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white border-t border-cyan-400/20 relative">
       {/* Main Footer Content */}
       <div className="container mx-auto px-4 py-16">
         {/* Top Section - Services & Quick Access */}
@@ -227,14 +237,11 @@ export const EnhancedFuturisticFooter: React.FC = () => {
                     className="flex items-center space-x-3 p-3 rounded-lg hover:bg-slate-800/50 transition-colors group"
                   >
                     <div className="w-8 h-8 rounded-lg bg-slate-800 flex items-center justify-center group-hover:bg-cyan-400/20 transition-colors">
-                      <link.icon className="w-4 h-4 text-cyan-400" />
+                      <Star className="w-4 h-4 text-cyan-400" />
                     </div>
                     <div>
                       <div className="font-medium text-white group-hover:text-cyan-400 transition-colors">
                         {link.name}
-                      </div>
-                      <div className="text-xs text-slate-400">
-                        {link.description}
                       </div>
                     </div>
                   </Link>
@@ -283,6 +290,43 @@ export const EnhancedFuturisticFooter: React.FC = () => {
                     </Link>
                   ))}
                 </div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+
+        {/* Innovative Services Section */}
+        <div className="mb-16">
+          <motion.h3 
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.6 }}
+            className="text-2xl font-bold mb-8 text-center bg-gradient-to-r from-yellow-400 to-orange-500 bg-clip-text text-transparent"
+          >
+            Innovative & Future Services
+          </motion.h3>
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
+            {innovativeServices.map((service, index) => (
+              <motion.div
+                key={service.name}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.7 + index * 0.1 }}
+              >
+                <Link
+                  to={service.href}
+                  className="block p-4 rounded-xl bg-slate-800/50 hover:bg-slate-800/70 transition-colors group border border-slate-700/50 hover:border-cyan-400/30"
+                >
+                  <div className="flex items-center space-x-3 mb-3">
+                    <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-yellow-400 to-orange-500 flex items-center justify-center">
+                      <Star className="w-4 h-4 text-white" />
+                    </div>
+                    <h4 className="font-semibold text-white group-hover:text-cyan-400 transition-colors">
+                      {service.name}
+                    </h4>
+                  </div>
+                  <p className="text-sm text-slate-400">{service.description}</p>
+                </Link>
               </motion.div>
             ))}
           </div>
@@ -445,16 +489,16 @@ export const EnhancedFuturisticFooter: React.FC = () => {
 
       {/* Floating Elements */}
       <div className="absolute top-10 left-10 opacity-20">
-        <Brain className="w-8 h-8 text-zion-cyan animate-bounce" />
+        <Brain className="w-8 h-8 text-cyan-400 animate-bounce" />
       </div>
       <div className="absolute top-20 right-20 opacity-20">
-        <Rocket className="w-8 h-8 text-zion-purple animate-pulse" />
+        <Rocket className="w-8 h-8 text-purple-400 animate-pulse" />
       </div>
       <div className="absolute bottom-20 left-20 opacity-20">
-        <Brain className="w-8 h-8 text-zion-cyan animate-spin" />
+        <Shield className="w-8 h-8 text-cyan-400 animate-spin" />
       </div>
       <div className="absolute bottom-10 right-10 opacity-20">
-        <Shield className="w-8 h-8 text-zion-purple animate-bounce delay-1000" />
+        <Star className="w-8 h-8 text-purple-400 animate-bounce delay-1000" />
       </div>
     </footer>
   );

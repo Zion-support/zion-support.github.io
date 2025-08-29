@@ -69,7 +69,8 @@ export function AppHeader() {
         { name: 'AI Business Intelligence', href: '/services/ai-business-intelligence', description: 'Machine Learning & Data Science' },
         { name: 'AI Sales Copilot', href: '/services/ai-sales-copilot', description: 'AI-powered sales automation' },
         { name: 'AI Compliance Assistant', href: '/services/ai-compliance-assistant', description: 'Regulatory compliance automation' },
-        { name: 'LLM Content Studio', href: '/services/llm-content-studio', description: 'AI content generation' }
+        { name: 'LLM Content Studio', href: '/services/llm-content-studio', description: 'AI content generation' },
+        { name: 'AI Healthcare Analytics', href: '/services/ai-healthcare-analytics', description: 'Healthcare AI solutions' }
       ]
     },
     {
@@ -79,7 +80,8 @@ export function AppHeader() {
       services: [
         { name: 'Cloud DevOps', href: '/services/cloud-devops', description: 'Infrastructure & Automation' },
         { name: 'Cloud FinOps Optimizer', href: '/services/cloud-finops-optimizer', description: 'Cost optimization' },
-        { name: 'FinOps Advisor', href: '/services/finops-advisor', description: 'Financial operations' }
+        { name: 'FinOps Advisor', href: '/services/finops-advisor', description: 'Financial operations' },
+        { name: 'IT Infrastructure', href: '/services/it-infrastructure', description: 'Enterprise infrastructure' }
       ]
     },
     {
@@ -88,8 +90,9 @@ export function AppHeader() {
       color: 'from-green-600 to-emerald-600',
       services: [
         { name: 'Digital Twin', href: '/services/digital-twin', description: 'Simulation & Monitoring' },
-        { name: 'IT Infrastructure', href: '/services/it-infrastructure', description: 'Enterprise infrastructure' },
-        { name: 'Data Analytics', href: '/services/data-analytics', description: 'Business intelligence' }
+        { name: 'Digital Transformation', href: '/services/digital-transformation', description: 'Business transformation' },
+        { name: 'Data Analytics', href: '/services/data-analytics', description: 'Business intelligence' },
+        { name: 'IT Consulting', href: '/services/it-consulting', description: 'Strategic IT guidance' }
       ]
     },
     {
@@ -98,13 +101,24 @@ export function AppHeader() {
       color: 'from-red-600 to-orange-600',
       services: [
         { name: 'AI Compliance Copilot', href: '/services/ai-compliance-copilot', description: 'AI-Powered Security' },
-        { name: 'Zero Trust Architecture', href: '/services/zero-trust-network-architecture', description: 'Advanced security' }
+        { name: 'Zero Trust Architecture', href: '/services/zero-trust-network-architecture', description: 'Advanced security' },
+        { name: 'AI Cybersecurity Suite', href: '/services/ai-cybersecurity-suite', description: 'Comprehensive security' }
+      ]
+    },
+    {
+      name: 'Emerging Tech',
+      icon: Star,
+      color: 'from-indigo-600 to-purple-600',
+      services: [
+        { name: 'Quantum Computing', href: '/services/quantum-computing', description: 'Next-gen computing' },
+        { name: 'Space Technology', href: '/services/space-tech', description: 'Space tech solutions' },
+        { name: 'Quantum AI Platform', href: '/services/quantum-ai-platform', description: 'Quantum AI integration' }
       ]
     },
     {
       name: 'Business Tools',
       icon: ShoppingCart,
-      color: 'from-indigo-600 to-purple-600',
+      color: 'from-yellow-600 to-orange-600',
       services: [
         { name: 'Micro SaaS Solutions', href: '/services/micro-saas-solutions', description: 'Productized SaaS for niches' },
         { name: 'AI Auto Email Responder', href: '/services/ai-auto-email-responder', description: 'Faster replies, CRM logging' },
@@ -118,6 +132,8 @@ export function AppHeader() {
     { name: 'Services Showcase', href: '/revolutionary-services-showcase-2030', icon: TrendingUp, description: 'Future-ready services' },
     { name: 'Pricing Guide 2030', href: '/pricing-2030', icon: DollarSign, description: 'Advanced pricing strategies' },
     { name: 'Request Quote', href: '/request-quote', icon: MessageCircle, description: 'Get custom pricing' },
+    { name: 'Marketplace', href: '/marketplace', icon: ShoppingCart, description: 'Explore our solutions' },
+    { name: 'Partners', href: '/partners', icon: Users, description: 'Strategic partnerships' }
   ];
 
   const supportLinks = [
@@ -125,6 +141,8 @@ export function AppHeader() {
     { name: 'Blog', href: '/blog', icon: BookOpen },
     { name: 'Support', href: '/support', icon: MessageCircle },
     { name: 'Documentation', href: '/docs', icon: BookOpen },
+    { name: 'Training', href: '/training', icon: Award },
+    { name: 'Help Center', href: '/help', icon: HelpCircle }
   ];
 
   return (
@@ -224,7 +242,7 @@ export function AppHeader() {
               className="bg-slate-900/95 backdrop-blur-xl border-b border-cyan-400/20"
             >
               <div className="container mx-auto px-4 py-8">
-                <div className="grid grid-cols-1 lg:grid-cols-5 gap-8">
+                <div className="grid grid-cols-1 lg:grid-cols-6 gap-8">
                   {servicesCategories.map((category) => (
                     <div key={category.name} className="space-y-4">
                       <div className="flex items-center space-x-3">
@@ -233,7 +251,7 @@ export function AppHeader() {
                         </div>
                         <div>
                           <h3 className="font-semibold text-white">{category.name}</h3>
-                          <p className="text-sm text-slate-400">{category.description}</p>
+                          <p className="text-sm text-slate-400">Innovative solutions</p>
                         </div>
                       </div>
                       <div className="space-y-2">
@@ -259,7 +277,7 @@ export function AppHeader() {
                 {/* Quick Links Section */}
                 <div className="mt-8 pt-8 border-t border-slate-700">
                   <h3 className="text-lg font-semibold text-white mb-4">Quick Access</h3>
-                  <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
+                  <div className="grid grid-cols-1 md:grid-cols-6 gap-4">
                     {quickLinks.map((link) => (
                       <Link
                         key={link.name}
@@ -275,6 +293,29 @@ export function AppHeader() {
                           </div>
                           <div className="text-sm text-slate-400">
                             {link.description}
+                          </div>
+                        </div>
+                      </Link>
+                    ))}
+                  </div>
+                </div>
+
+                {/* Support Links Section */}
+                <div className="mt-6 pt-6 border-t border-slate-700">
+                  <h3 className="text-lg font-semibold text-white mb-4">Support & Resources</h3>
+                  <div className="grid grid-cols-1 md:grid-cols-6 gap-4">
+                    {supportLinks.map((link) => (
+                      <Link
+                        key={link.name}
+                        to={link.href}
+                        className="flex items-center space-x-3 p-3 rounded-lg hover:bg-slate-800/50 transition-colors group"
+                      >
+                        <div className="w-8 h-8 rounded-lg bg-slate-800 flex items-center justify-center group-hover:bg-cyan-400/20 transition-colors">
+                          <link.icon className="w-4 h-4 text-cyan-400" />
+                        </div>
+                        <div>
+                          <div className="font-medium text-white group-hover:text-cyan-400 transition-colors">
+                            {link.name}
                           </div>
                         </div>
                       </Link>
@@ -382,6 +423,24 @@ export function AppHeader() {
                   </div>
                 </div>
 
+                {/* Mobile Support Links */}
+                <div className="mt-6 pt-6 border-t border-slate-700">
+                  <h3 className="font-medium text-white mb-4">Support & Resources</h3>
+                  <div className="space-y-2">
+                    {supportLinks.map((link) => (
+                      <Link
+                        key={link.name}
+                        to={link.href}
+                        onClick={() => setMobileMenuOpen(false)}
+                        className="flex items-center space-x-3 p-2 rounded-lg hover:bg-slate-800 transition-colors"
+                      >
+                        <link.icon className="w-5 h-5 text-cyan-400" />
+                        <span className="text-slate-300">{link.name}</span>
+                      </Link>
+                    ))}
+                  </div>
+                </div>
+
                 {/* Mobile Contact Info */}
                 <div className="mt-8 pt-8 border-t border-slate-700">
                   <h3 className="font-medium text-white mb-4">Contact Us</h3>
@@ -396,7 +455,10 @@ export function AppHeader() {
                     </a>
                     <div className="flex items-start space-x-3">
                       <MapPin className="w-4 h-4 mt-0.5" />
-                      <span>364 E Main St STE 1008<br />Middletown DE 19709</span>
+                      <span>
+                        364 E Main St STE 1008<br />
+                        Middletown DE 19709
+                      </span>
                     </div>
                   </div>
                 </div>
