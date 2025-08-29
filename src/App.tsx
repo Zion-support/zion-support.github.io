@@ -35,6 +35,7 @@ const ServicesOverview = React.lazy(() => import('./pages/ServicesOverview'));
 const PricingGuide = React.lazy(() => import('./pages/PricingGuide'));
 const Help = React.lazy(() => import('./pages/Help'));
 const Partners = React.lazy(() => import('./pages/Partners'));
+const ServicesComparisonPage = React.lazy(() => import('./pages/ServicesComparisonPage'));
 const Team = React.lazy(() => import('./pages/Team'));
 const Press = React.lazy(() => import('./pages/Press'));
 const Webinars = React.lazy(() => import('./pages/Webinars'));
@@ -176,6 +177,9 @@ function App() {
               <Route path="/pricing" element={<ComprehensivePricingGuide2027 />} />
               <Route path="/pricing-2030" element={<ComprehensivePricingGuide2030 />} />
               <Route path="/pricing-guide" element={<PricingGuide />} />
+              <Route path="/services-comparison" element={<ServicesComparisonPage />} />
+              <Route path="/services" element={<Services />} />
+              <Route path="/services-overview" element={<ServicesOverview />} />
               <Route path="/revolutionary-services-2030" element={<RevolutionaryServices2030 />} />
               <Route path="/comprehensive-services" element={<ComprehensiveServicesLanding2025 />} />
               <Route path="/services" element={<Services />} />
@@ -202,6 +206,8 @@ function App() {
               <Route path="/login" element={<Login />} />
               <Route path="/marketplace" element={<Marketplace />} />
               <Route path="/partners" element={<Partners />} />
+              <Route path="/team" element={<Team />} />
+              <Route path="/press" element={<Press />} />
               
               {/* Service Routes - only for existing pages */}
               <Route path="/services/cloud-devops" element={<CloudDevOps />} />
