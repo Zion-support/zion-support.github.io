@@ -19,6 +19,7 @@ import AccountSettings from "@/pages/AccountSettings";
 import ProjectRoom from "@/pages/ProjectRoom";
 import VideoCall from "@/pages/VideoCall";
 import Services from "@/pages/Services";
+import ServicesCatalog from "@/pages/ServicesCatalog";
 import ComprehensiveServices from "@/pages/ComprehensiveServices";
 const ContentRoutes = () => {
     return (<Routes>
@@ -28,6 +29,7 @@ const ContentRoutes = () => {
       <Route path="/about" element={<About />}/>
       <Route path="/contact" element={<Contact />}/>
       <Route path="/services" element={<Services />}/>
+      <Route path="/services-catalog" element={<ServicesCatalog />}/>
       <Route path="/comprehensive-services" element={<ComprehensiveServices />}/>
       <Route path="/privacy" element={<Privacy />}/>
       <Route path="/cookies" element={<Cookies />}/>
